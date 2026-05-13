@@ -1,9 +1,12 @@
 {
-  "short_name": "Accreditation Prep",
-  "name": "Hospital Accreditation Prep",
-  "description": "NABH 6th Edition compliance scoring, gap analysis and CAPA tracker for Indian hospitals",
-  "id": "com.mktech.nabhcompliance",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
     {
       "src": "logo192.png",
       "type": "image/png",
@@ -12,15 +15,11 @@
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "any maskable"
+      "sizes": "512x512"
     }
   ],
-  "start_url": "/nabh-compliance/",
-  "scope": "/nabh-compliance/",
+  "start_url": ".",
   "display": "standalone",
-  "theme_color": "#050e1a",
-  "background_color": "#050e1a",
-  "orientation": "portrait",
-  "categories": ["medical", "education", "productivity"]
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
