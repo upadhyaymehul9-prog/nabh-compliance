@@ -3,7 +3,8 @@ import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient(
   "https://tbptllgcjtiiqspxqcde.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRicHRsbGdjanRpaXFzcHhxY2RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY2NjkzNjAsImV4cCI6MjA5MjI0NTM2MH0.4CPgNp6ytVNRmTU0FJbu2io94QJmsAow5im-vGtoRAU"
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRicHRsbGdjanRpaXFzcHhxY2RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY2NjkzNjAsImV4cCI6MjA5MjI0NTM2MH0.4CPgNp6ytVNRmTU0FJbu2io94QJmsAow5im-vGtoRAU",
+  { auth: { flowType: "implicit" } }
 );
 
 // ── NABH 6th Edition official chapter order ─────────────────────────────
@@ -64,7 +65,7 @@ function LoginScreen({ onLogin, initialError }) {
     try{
       if(mode==="login"){const{data,error:err}=await supabase.auth.signInWithPassword({email,password:pass});if(err)throw err;onLogin(data.user);}
       else if(mode==="signup"){const{data,error:err}=await supabase.auth.signUp({email,password:pass});if(err)throw err;if(data.session)onLogin(data.user);else{setMsg("Account created. You can now sign in.");setMode("login");}}
-      else if(mode==="reset"){if(!email.trim())throw new Error("Enter your email address first.");const{error:err}=await supabase.auth.resetPasswordForEmail(email,{redirectTo:"https://upadhyaymehul9-prog.github.io/nabh-compliance"});if(err)throw err;setMsg("Password reset email sent! Check your inbox.");setMode("login");}
+      else if(mode==="reset"){if(!email.trim())throw new Error("Enter your email address first.");const{error:err}=await supabase.auth.resetPasswordForEmail(email,{redirectTo:"https://upadhyaymehul9-prog.github.io/nabh-compliance/"});if(err)throw err;setMsg("Password reset email sent! Check your inbox.");setMode("login");}
     }catch(e){setError(e.message);}
     setLoading(false);
   };
@@ -72,7 +73,7 @@ function LoginScreen({ onLogin, initialError }) {
     setError("");setLoading(true);
     const{error:err}=await supabase.auth.signInWithOAuth({
       provider:"google",
-      options:{redirectTo:"https://upadhyaymehul9-prog.github.io/nabh-compliance"}
+      options:{redirectTo:"https://upadhyaymehul9-prog.github.io/nabh-compliance/"}
     });
     if(err){setError(err.message);setLoading(false);}
   };
@@ -2280,6 +2281,19 @@ export default function App() {
         return; // Skip the normal session check
       }
     }
+    // Check for token_hash + type=recovery in query params (Supabase email template sends SiteURL?token_hash=...&type=recovery)
+    const urlParams=new URLSearchParams(window.location.search);
+    const tokenHash=urlParams.get("token_hash");
+    const urlType=urlParams.get("type");
+    const isRecoveryLink=tokenHash&&urlType==="recovery";
+    if(isRecoveryLink){
+      window.history.replaceState(null,"",window.location.pathname);
+      supabase.auth.verifyOtp({token_hash:tokenHash,type:"recovery"}).then(({data,error})=>{
+        if(error){setAuthErrorMsg("⚠️ Password reset link is invalid or expired. Request a new one.");setAuthState("login");}
+        else{if(data?.user)setUser(data.user);setAuthState("recovery");}
+      });
+      return;
+    }
     supabase.auth.getSession().then(({data:{session}})=>{
       if(session?.user){setUser(session.user);setAuthState("setup");}
       else setAuthState("login");
@@ -2290,7 +2304,7 @@ export default function App() {
         setAuthState("recovery");
         return;
       }
-      if(session?.user){setUser(session.user);setAuthState(s=>s==="loading"?"setup":s==="recovery"?"recovery":s);}
+      if(session?.user){setUser(session.user);setAuthState(s=>s==="recovery"?s:s==="loading"?"setup":s);}
       else{setUser(null);setAuthState("login");setContext(null);}
     });
     return()=>subscription.unsubscribe();
@@ -2340,6 +2354,8 @@ export default function App() {
     {id:"checklists",label:"Checklists",icon:"✅"},
     {id:"audits",label:"Audits",icon:"🔍"},
     {id:"drills",label:"Drills",icon:"🚨"},
+    {id:"licenses",label:"Licenses",icon:"📋"},
+    {id:"tracer",label:"Tracer",icon:"🩺"},
     {id:"profile",label:"Profile",icon:"👤"},
   ];
 
@@ -2394,6 +2410,8 @@ export default function App() {
         {screen==="checklists"&&<ChecklistsScreen/>}
         {screen==="audits"&&<AuditsScreen hospitalId={context?.hospitalId}/>}
         {screen==="drills"&&<MockDrillsScreen hospitalId={context?.hospitalId}/>}
+        {screen==="licenses"&&<StatutoryLicensesScreen hospitalId={context?.hospitalId}/>}
+        {screen==="tracer"&&<PatientTracerScreen hospitalId={context?.hospitalId}/>}
         {screen==="profile"&&<ProfileScreen user={user} context={context} onContextUpdate={setContext}/>}
       </div>
 
@@ -2762,3 +2780,589 @@ function CommitteeCalendarScreen({ hospitalId }) {
   );
 }
 
+
+// ── STATUTORY LICENSE TRACKER ─────────────────────────────────
+const LICENSE_TEMPLATES = [
+  {name:"Fire NOC",authority:"Fire Department / Municipality",type:"Safety"},
+  {name:"BMW Authorization",authority:"State Pollution Control Board",type:"Waste"},
+  {name:"PCB Consent to Operate",authority:"State Pollution Control Board",type:"Environmental"},
+  {name:"CGWA Water Withdrawal",authority:"Central Ground Water Authority",type:"Environmental"},
+  {name:"Lift License",authority:"State Electrical Inspectorate",type:"Infrastructure"},
+  {name:"Clinical Establishment Registration",authority:"State Health Department",type:"Regulatory"},
+  {name:"Blood Bank License",authority:"CDSCO / State Drugs Controller",type:"Clinical"},
+  {name:"Pharmacy License",authority:"State Drugs Controller",type:"Clinical"},
+  {name:"AERB Radiation Safety",authority:"Atomic Energy Regulatory Board",type:"Radiation"},
+  {name:"NABH Accreditation Certificate",authority:"NABH / QCI",type:"Accreditation"},
+  {name:"NABL Accreditation (Lab)",authority:"NABL",type:"Accreditation"},
+  {name:"Narcotics License",authority:"State Drugs Controller / NCB",type:"Clinical"},
+  {name:"Trade License",authority:"Municipality / Local Body",type:"Regulatory"},
+  {name:"Biomedical Equipment Calibration",authority:"Internal / NABL Lab",type:"Quality"},
+  {name:"Building Completion Certificate",authority:"Municipality",type:"Infrastructure"},
+  {name:"Water Potability Certificate",authority:"Municipality / Accredited Lab",type:"Safety"},
+  {name:"Sewage Treatment Plant Certificate",authority:"State PCB",type:"Environmental"},
+  {name:"Medical Gas Pipeline Certificate",authority:"State Electrical Inspectorate",type:"Safety"},
+  {name:"Boiler Certificate",authority:"State Boiler Inspectorate",type:"Infrastructure"},
+  {name:"Diesel Generator Clearance",authority:"State PCB / Municipality",type:"Environmental"},
+];
+
+function StatutoryLicensesScreen({ hospitalId }) {
+  const [licenses,setLicenses]=useState([]);
+  const [loading,setLoading]=useState(true);
+  const [saving,setSaving]=useState(false);
+  const [editId,setEditId]=useState(null);
+  const [showAdd,setShowAdd]=useState(false);
+  const [form,setForm]=useState({license_name:"",issuing_authority:"",license_type:"",license_number:"",issue_date:"",expiry_date:"",evidence_url:"",notes:""});
+  const [filter,setFilter]=useState("all");
+
+  useEffect(()=>{load();},[hospitalId]);
+
+  const load=async()=>{
+    setLoading(true);
+    const{data}=await supabase.from("statutory_licenses").select("*").eq("hospital_id",hospitalId).order("expiry_date",{ascending:true});
+    setLicenses(data||[]);setLoading(false);
+  };
+
+  const getStatus=(expiry)=>{
+    if(!expiry)return{label:"No Expiry Set",color:T.muted,bg:"transparent"};
+    const d=new Date(expiry),now=new Date(),diff=Math.ceil((d-now)/(1000*60*60*24));
+    if(diff<0)return{label:"EXPIRED",color:T.red,bg:T.redD};
+    if(diff<=30)return{label:`Expires in ${diff}d`,color:T.orange,bg:T.orangeD};
+    if(diff<=90)return{label:`Expires in ${diff}d`,color:T.gold,bg:T.goldD};
+    return{label:"Valid",color:T.green,bg:T.greenD};
+  };
+
+  const save=async()=>{
+    if(!form.license_name.trim())return;
+    setSaving(true);
+    if(editId){
+      await supabase.from("statutory_licenses").update({...form,updated_at:new Date().toISOString()}).eq("id",editId);
+    } else {
+      await supabase.from("statutory_licenses").insert({...form,hospital_id:hospitalId});
+    }
+    setSaving(false);setEditId(null);setShowAdd(false);
+    setForm({license_name:"",issuing_authority:"",license_type:"",license_number:"",issue_date:"",expiry_date:"",evidence_url:"",notes:""});
+    load();
+  };
+
+  const del=async(id)=>{
+    if(!window.confirm("Delete this license record?"))return;
+    await supabase.from("statutory_licenses").delete().eq("id",id);
+    load();
+  };
+
+  const startEdit=(l)=>{
+    setEditId(l.id);
+    setForm({license_name:l.license_name||"",issuing_authority:l.issuing_authority||"",license_type:l.license_type||"",license_number:l.license_number||"",issue_date:l.issue_date||"",expiry_date:l.expiry_date||"",evidence_url:l.evidence_url||"",notes:l.notes||""});
+    setShowAdd(true);
+  };
+
+  const addTemplate=(t)=>{
+    setForm(f=>({...f,license_name:t.name,issuing_authority:t.authority,license_type:t.type}));
+  };
+
+  const expired=licenses.filter(l=>getStatus(l.expiry_date).label==="EXPIRED").length;
+  const expiring=licenses.filter(l=>getStatus(l.expiry_date).color===T.orange).length;
+  const valid=licenses.filter(l=>getStatus(l.expiry_date).color===T.green).length;
+
+  const filtered=filter==="all"?licenses:filter==="expired"?licenses.filter(l=>getStatus(l.expiry_date).label==="EXPIRED"):filter==="expiring"?licenses.filter(l=>getStatus(l.expiry_date).color===T.orange):licenses.filter(l=>getStatus(l.expiry_date).color===T.green);
+
+  const inp={width:"100%",padding:"8px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12,boxSizing:"border-box"};
+
+  if(loading)return<div style={{textAlign:"center",padding:40,color:T.muted}}>Loading…</div>;
+
+  return(
+    <div>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:14,flexWrap:"wrap",gap:8}}>
+        <div>
+          <div style={{fontSize:14,fontWeight:700,color:T.gold}}>📋 Statutory License Tracker</div>
+          <div style={{fontSize:10,color:T.muted}}>Track all mandatory licenses — get alerted before expiry</div>
+        </div>
+        <button onClick={()=>{setShowAdd(true);setEditId(null);setForm({license_name:"",issuing_authority:"",license_type:"",license_number:"",issue_date:"",expiry_date:"",evidence_url:"",notes:""}); }} style={{padding:"7px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:11,fontWeight:700,cursor:"pointer"}}>+ Add License</button>
+      </div>
+
+      {/* Summary cards */}
+      <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(120px,1fr))",gap:10,marginBottom:16}}>
+        {[["Total",licenses.length,T.blue],["Valid",valid,T.green],["Expiring Soon",expiring,T.orange],["Expired",expired,T.red]].map(([label,count,color])=>(
+          <div key={label} style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",textAlign:"center"}}>
+            <div style={{fontSize:22,fontWeight:800,color}}>{count}</div>
+            <div style={{fontSize:9,color:T.muted,marginTop:2}}>{label}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Filter */}
+      <div style={{display:"flex",gap:6,marginBottom:12}}>
+        {[["all","All"],["valid","Valid"],["expiring","Expiring"],["expired","Expired"]].map(([val,label])=>(
+          <button key={val} onClick={()=>setFilter(val)} style={{padding:"4px 12px",borderRadius:6,border:`1px solid ${filter===val?T.gold:T.border}`,background:filter===val?T.goldD:"transparent",color:filter===val?T.goldL:T.muted,fontSize:9,cursor:"pointer"}}>{label}</button>
+        ))}
+      </div>
+
+      {/* Add/Edit form */}
+      {showAdd&&(
+        <div style={{background:T.panel,border:`1px solid ${T.gold}40`,borderRadius:12,padding:18,marginBottom:16}}>
+          <div style={{fontSize:12,fontWeight:700,color:T.gold,marginBottom:12}}>{editId?"Edit License":"Add New License"}</div>
+
+          {/* Quick templates */}
+          {!editId&&(
+            <div style={{marginBottom:14}}>
+              <div style={{fontSize:9,color:T.muted,marginBottom:6,letterSpacing:1}}>QUICK ADD FROM TEMPLATE</div>
+              <div style={{display:"flex",flexWrap:"wrap",gap:5}}>
+                {LICENSE_TEMPLATES.map(t=>(
+                  <button key={t.name} onClick={()=>addTemplate(t)} style={{padding:"3px 8px",borderRadius:5,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:9,cursor:"pointer"}}>{t.name}</button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
+            <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>LICENSE NAME *</div><input style={inp} value={form.license_name} onChange={e=>setForm(f=>({...f,license_name:e.target.value}))}/></div>
+            <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>ISSUING AUTHORITY</div><input style={inp} value={form.issuing_authority} onChange={e=>setForm(f=>({...f,issuing_authority:e.target.value}))}/></div>
+            <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>LICENSE NUMBER</div><input style={inp} value={form.license_number} onChange={e=>setForm(f=>({...f,license_number:e.target.value}))}/></div>
+            <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>TYPE</div>
+              <select style={inp} value={form.license_type} onChange={e=>setForm(f=>({...f,license_type:e.target.value}))}>
+                <option value="">Select type…</option>
+                {["Safety","Waste","Environmental","Clinical","Regulatory","Infrastructure","Radiation","Accreditation","Quality"].map(t=><option key={t} value={t}>{t}</option>)}
+              </select>
+            </div>
+            <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>ISSUE DATE</div><input style={inp} type="date" value={form.issue_date} onChange={e=>setForm(f=>({...f,issue_date:e.target.value}))}/></div>
+            <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>EXPIRY DATE</div><input style={inp} type="date" value={form.expiry_date} onChange={e=>setForm(f=>({...f,expiry_date:e.target.value}))}/></div>
+            <div style={{gridColumn:"span 2"}}><div style={{fontSize:9,color:T.muted,marginBottom:4}}>EVIDENCE LINK (Google Drive / OneDrive URL)</div><input style={inp} placeholder="https://drive.google.com/…" value={form.evidence_url} onChange={e=>setForm(f=>({...f,evidence_url:e.target.value}))}/></div>
+            <div style={{gridColumn:"span 2"}}><div style={{fontSize:9,color:T.muted,marginBottom:4}}>NOTES</div><input style={inp} placeholder="Renewal in progress, contact person, etc." value={form.notes} onChange={e=>setForm(f=>({...f,notes:e.target.value}))}/></div>
+          </div>
+          <div style={{display:"flex",gap:8,marginTop:12}}>
+            <button onClick={save} disabled={saving||!form.license_name.trim()} style={{padding:"8px 20px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:11,fontWeight:700,cursor:"pointer",opacity:saving?0.6:1}}>{saving?"Saving…":"Save License"}</button>
+            <button onClick={()=>{setShowAdd(false);setEditId(null);}} style={{padding:"8px 16px",borderRadius:8,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:11,cursor:"pointer"}}>Cancel</button>
+          </div>
+        </div>
+      )}
+
+      {/* License list */}
+      {filtered.length===0?(
+        <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"30px",textAlign:"center",color:T.muted,fontSize:11}}>
+          {licenses.length===0?"No licenses added yet. Click '+ Add License' to start tracking.":"No licenses in this filter."}
+        </div>
+      ):(
+        <div style={{display:"grid",gap:8}}>
+          {filtered.map(l=>{
+            const st=getStatus(l.expiry_date);
+            return(
+              <div key={l.id} style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",display:"flex",gap:12,alignItems:"center",flexWrap:"wrap"}}>
+                <div style={{flex:1,minWidth:180}}>
+                  <div style={{fontSize:12,fontWeight:700,color:T.white}}>{l.license_name}</div>
+                  <div style={{fontSize:10,color:T.muted,marginTop:2}}>{l.issuing_authority||"—"}{l.license_number&&<span style={{marginLeft:8,color:T.blue}}>#{l.license_number}</span>}</div>
+                  {l.notes&&<div style={{fontSize:9,color:T.muted,marginTop:3}}>{l.notes}</div>}
+                </div>
+                <div style={{textAlign:"center",minWidth:80}}>
+                  <div style={{fontSize:9,color:T.muted}}>EXPIRY</div>
+                  <div style={{fontSize:11,color:T.text,marginTop:2}}>{l.expiry_date?new Date(l.expiry_date).toLocaleDateString("en-IN",{day:"2-digit",month:"short",year:"numeric"}):"Not set"}</div>
+                </div>
+                <div style={{padding:"4px 10px",borderRadius:8,background:st.bg,border:`1px solid ${st.color}30`,fontSize:9,fontWeight:700,color:st.color,minWidth:90,textAlign:"center"}}>{st.label}</div>
+                {l.license_type&&<div style={{padding:"3px 8px",borderRadius:6,background:T.blueD,border:`1px solid ${T.blue}30`,fontSize:8,color:T.blue}}>{l.license_type}</div>}
+                <div style={{display:"flex",gap:6,alignItems:"center"}}>
+                  {l.evidence_url&&<a href={l.evidence_url} target="_blank" rel="noopener noreferrer" style={{padding:"4px 10px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:9,textDecoration:"none",fontWeight:600}}>📎 View</a>}
+                  <button onClick={()=>startEdit(l)} style={{padding:"4px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:9,cursor:"pointer"}}>Edit</button>
+                  <button onClick={()=>del(l.id)} style={{padding:"4px 10px",borderRadius:6,border:`1px solid ${T.red}30`,background:"transparent",color:T.red,fontSize:9,cursor:"pointer"}}>Delete</button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── PATIENT TRACER ─────────────────────────────────────────────
+const TRACER_TYPES = {
+  "General IPD": {
+    icon:"🛏️",
+    color:"#4fc3f7",
+    desc:"General inpatient admission tracer",
+    questions:[
+      {id:"t1",q:"Was the patient triaged and initial assessment completed within 30 minutes of admission?",oe:"AAC.1"},
+      {id:"t2",q:"Is a complete nursing assessment documented within 8 hours of admission?",oe:"AAC.2"},
+      {id:"t3",q:"Has a medical history and physical examination been completed and documented by a doctor?",oe:"AAC.3"},
+      {id:"t4",q:"Is the care plan documented with goals, interventions, and responsible staff?",oe:"COP.1"},
+      {id:"t5",q:"Is informed consent obtained and documented before any invasive procedure?",oe:"PRE.4"},
+      {id:"t6",q:"Are the patient's rights and responsibilities communicated and acknowledged?",oe:"PRE.1"},
+      {id:"t7",q:"Is medication reconciliation done and documented at admission?",oe:"MOM.1"},
+      {id:"t8",q:"Are all medications prescribed with generic name, dose, route, frequency?",oe:"MOM.3"},
+      {id:"t9",q:"Is the patient's pain assessed and documented using a validated scale?",oe:"COP.2"},
+      {id:"t10",q:"Is fall risk assessment done and prevention measures documented?",oe:"PSQ.1"},
+      {id:"t11",q:"Is pressure sore risk assessed (Braden/Waterlow scale)?",oe:"COP.3"},
+      {id:"t12",q:"Are hand hygiene observations documented for this patient's care team?",oe:"IPC.1"},
+      {id:"t13",q:"Is the discharge plan initiated within 24 hours of admission?",oe:"AAC.5"},
+      {id:"t14",q:"Is patient/family education documented with language and literacy noted?",oe:"PRE.5"},
+      {id:"t15",q:"Are all investigations ordered with clinical indication documented?",oe:"AAC.4"},
+    ]
+  },
+  "Surgical Tracer": {
+    icon:"🔪",
+    color:"#e05a5a",
+    desc:"Pre-op, intra-op, and post-op documentation audit",
+    questions:[
+      {id:"s1",q:"Is pre-operative assessment completed and documented?",oe:"COP.8"},
+      {id:"s2",q:"Is anaesthesia pre-assessment done and signed by anaesthetist?",oe:"COP.9"},
+      {id:"s3",q:"Is surgical consent obtained by the operating surgeon (not delegated)?",oe:"PRE.4"},
+      {id:"s4",q:"Is anaesthesia consent separately obtained by the anaesthetist?",oe:"PRE.4"},
+      {id:"s5",q:"Is the WHO Surgical Safety Checklist completed (Sign-In, Time-Out, Sign-Out)?",oe:"COP.10"},
+      {id:"s6",q:"Is the operative note completed within 24 hours of surgery?",oe:"COP.11"},
+      {id:"s7",q:"Is post-operative monitoring documented (vitals, pain, drainage)?",oe:"COP.12"},
+      {id:"s8",q:"Are prophylactic antibiotics given as per protocol (1 hour pre-incision)?",oe:"IPC.4"},
+      {id:"s9",q:"Is the site marking documented pre-operatively for laterality?",oe:"PSQ.3"},
+      {id:"s10",q:"Is blood availability confirmed pre-operatively for major surgeries?",oe:"COP.8"},
+      {id:"s11",q:"Is VTE prophylaxis assessed and documented?",oe:"COP.3"},
+      {id:"s12",q:"Is implant register updated if any implant was used?",oe:"COP.11"},
+      {id:"s13",q:"Is the specimen sent to histopathology with proper labeling?",oe:"AAC.4"},
+      {id:"s14",q:"Is immediate post-op note written in OT itself?",oe:"COP.11"},
+      {id:"s15",q:"Is patient transferred to recovery room with documented handover?",oe:"COP.12"},
+    ]
+  },
+  "ICU Tracer": {
+    icon:"🫀",
+    color:"#f4a441",
+    desc:"Critical care bundle compliance and documentation",
+    questions:[
+      {id:"i1",q:"Is ICU admission note with APACHE II score documented?",oe:"COP.5"},
+      {id:"i2",q:"Are daily ICU rounds documented with goals of care?",oe:"COP.5"},
+      {id:"i3",q:"Is VAP bundle compliance documented (HOB elevation, oral care, cuff pressure)?",oe:"IPC.5"},
+      {id:"i4",q:"Is CLABSI bundle documented for all central lines (insertion + daily care)?",oe:"IPC.6"},
+      {id:"i5",q:"Is CAUTI prevention bundle documented for all urinary catheters?",oe:"IPC.7"},
+      {id:"i6",q:"Are ventilator settings and changes documented with rationale?",oe:"COP.5"},
+      {id:"i7",q:"Is sedation/analgesia scale used and documented (RASS/VAS)?",oe:"COP.2"},
+      {id:"i8",q:"Is daily spontaneous breathing trial documented for ventilated patients?",oe:"COP.5"},
+      {id:"i9",q:"Is family communication documented at least once in 24 hours?",oe:"PRE.3"},
+      {id:"i10",q:"Is fluid balance charted every 6 hours?",oe:"COP.5"},
+      {id:"i11",q:"Are blood glucose monitoring results documented per protocol?",oe:"COP.6"},
+      {id:"i12",q:"Is DVT prophylaxis assessed and documented?",oe:"COP.3"},
+      {id:"i13",q:"Is restraint use (if any) documented with consent and hourly monitoring?",oe:"COP.7"},
+      {id:"i14",q:"Is end-of-life care plan documented for terminal patients?",oe:"COP.4"},
+      {id:"i15",q:"Is ICU transfer note written when patient is shifted to ward?",oe:"AAC.5"},
+    ]
+  },
+  "Emergency Tracer": {
+    icon:"🚨",
+    color:"#e05a5a",
+    desc:"Emergency department triage and documentation",
+    questions:[
+      {id:"e1",q:"Is triage done within 5 minutes of arrival using validated triage scale?",oe:"AAC.1"},
+      {id:"e2",q:"Is triage category documented and consistent with patient condition?",oe:"AAC.1"},
+      {id:"e3",q:"Are vitals documented at arrival and at regular intervals?",oe:"AAC.2"},
+      {id:"e4",q:"Is MLC (Medico-Legal Case) identification and reporting documented?",oe:"ROM.6"},
+      {id:"e5",q:"Is police intimation documented for MLC cases?",oe:"ROM.6"},
+      {id:"e6",q:"Is time of doctor assessment from arrival documented?",oe:"AAC.1"},
+      {id:"e7",q:"Is ABCDE assessment documented for critical patients?",oe:"COP.1"},
+      {id:"e8",q:"Is informed consent obtained before any procedure?",oe:"PRE.4"},
+      {id:"e9",q:"Is drug allergy checked before administering medications?",oe:"MOM.5"},
+      {id:"e10",q:"Is reason for admission or discharge documented?",oe:"AAC.3"},
+      {id:"e11",q:"Is social history (domestic violence, child abuse) screened if applicable?",oe:"PRE.1"},
+      {id:"e12",q:"Is LAMA (Leave Against Medical Advice) documented with informed refusal?",oe:"PRE.1"},
+      {id:"e13",q:"Is disaster/mass casualty procedure documentation available?",oe:"FMS.7"},
+      {id:"e14",q:"Is crash cart checked and documented as per protocol?",oe:"FMS.3"},
+      {id:"e15",q:"Is referral documentation complete if patient transferred to another facility?",oe:"AAC.6"},
+    ]
+  },
+  "Maternity Tracer": {
+    icon:"🤱",
+    color:"#c084e8",
+    desc:"Labour room and maternity care documentation",
+    questions:[
+      {id:"m1",q:"Is antenatal history documented completely on admission?",oe:"COP.13"},
+      {id:"m2",q:"Is partograph initiated and maintained from active labour?",oe:"COP.13"},
+      {id:"m3",q:"Is fetal heart rate monitoring documented every 30 minutes in active labour?",oe:"COP.13"},
+      {id:"m4",q:"Is consent for delivery (normal/caesarean) documented?",oe:"PRE.4"},
+      {id:"m5",q:"Is oxytocin administration documented with dose, rate, and monitoring?",oe:"MOM.3"},
+      {id:"m6",q:"Is birth register updated with all mandatory fields?",oe:"IMS.2"},
+      {id:"m7",q:"Is APGAR score documented at 1 and 5 minutes?",oe:"COP.14"},
+      {id:"m8",q:"Is vitamin K prophylaxis given and documented for newborn?",oe:"COP.14"},
+      {id:"m9",q:"Is breast feeding initiation documented within 1 hour of birth?",oe:"COP.14"},
+      {id:"m10",q:"Is blood loss quantified and documented in delivery note?",oe:"COP.13"},
+      {id:"m11",q:"Is PPH prevention protocol (oxytocin) documented?",oe:"COP.13"},
+      {id:"m12",q:"Is newborn screening documented as per national programme?",oe:"COP.14"},
+      {id:"m13",q:"Is placental disposal documented per BMW rules?",oe:"IPC.9"},
+      {id:"m14",q:"Is maternal death reporting (if any) done as per protocol?",oe:"PSQ.6"},
+      {id:"m15",q:"Is discharge summary for mother and baby both documented?",oe:"AAC.5"},
+    ]
+  },
+  "Medication Tracer": {
+    icon:"💊",
+    color:"#4caf7d",
+    desc:"Medication management and high-alert drug compliance",
+    questions:[
+      {id:"med1",q:"Are LASA (Look-Alike Sound-Alike) drugs identified and separately stored?",oe:"MOM.2"},
+      {id:"med2",q:"Are high-alert medications labeled and stored with double-check protocol?",oe:"MOM.2"},
+      {id:"med3",q:"Are narcotics/controlled substances in a locked cabinet with dual custody?",oe:"MOM.6"},
+      {id:"med4",q:"Is narcotics register maintained with all mandatory columns?",oe:"MOM.6"},
+      {id:"med5",q:"Is medication administration documented with time, dose, route, and nurse signature?",oe:"MOM.5"},
+      {id:"med6",q:"Are medication errors reported through incident reporting system?",oe:"MOM.7"},
+      {id:"med7",q:"Are near-miss medication events also captured in incident reports?",oe:"PSQ.4"},
+      {id:"med8",q:"Is expiry date checked before dispensing — no expired drugs in wards?",oe:"MOM.3"},
+      {id:"med9",q:"Is medication reconciliation done at discharge?",oe:"MOM.1"},
+      {id:"med10",q:"Are PRN (as needed) medications administered with documented indication?",oe:"MOM.5"},
+      {id:"med11",q:"Is IV fluid administration documented with rate and total volume?",oe:"MOM.5"},
+      {id:"med12",q:"Are adverse drug reactions documented and reported to pharmacovigilance?",oe:"MOM.7"},
+      {id:"med13",q:"Is patient counselling on medications documented at discharge?",oe:"PRE.5"},
+      {id:"med14",q:"Are antibiotic prescriptions following hospital antibiotic policy?",oe:"IPC.4"},
+      {id:"med15",q:"Is chemotherapy (if any) prescribed and administered per double-check protocol?",oe:"MOM.4"},
+    ]
+  },
+  "Blood Transfusion": {
+    icon:"🩸",
+    color:"#e05a5a",
+    desc:"Blood bank and transfusion safety compliance",
+    questions:[
+      {id:"b1",q:"Is consent for blood transfusion obtained separately?",oe:"PRE.4"},
+      {id:"b2",q:"Is blood request form complete with clinical indication?",oe:"COP.15"},
+      {id:"b3",q:"Is pre-transfusion blood grouping and cross-matching documented?",oe:"COP.15"},
+      {id:"b4",q:"Is bedside verification (2-person check) documented before starting transfusion?",oe:"PSQ.3"},
+      {id:"b5",q:"Are vital signs documented before, during (15 min), and after transfusion?",oe:"COP.15"},
+      {id:"b6",q:"Is transfusion reaction protocol available and followed?",oe:"COP.15"},
+      {id:"b7",q:"Are transfusion reactions reported through haemovigilance system?",oe:"PSQ.4"},
+      {id:"b8",q:"Is blood issue time and transfusion completion time documented?",oe:"COP.15"},
+      {id:"b9",q:"Is blood returned to blood bank if not transfused within 30 min?",oe:"COP.15"},
+      {id:"b10",q:"Is blood bag discarded as per BMW rules after transfusion?",oe:"IPC.9"},
+    ]
+  },
+  "Document Tracer": {
+    icon:"📄",
+    color:"#90caf9",
+    desc:"Medical record completeness and documentation standards",
+    questions:[
+      {id:"d1",q:"Is the admission note completed within 24 hours with all mandatory fields?",oe:"IMS.1"},
+      {id:"d2",q:"Are all entries dated, timed, and signed with designation?",oe:"IMS.3"},
+      {id:"d3",q:"Are corrections made by crossing out (not erasing) with date/sign?",oe:"IMS.3"},
+      {id:"d4",q:"Is the discharge summary completed within 24 hours of discharge?",oe:"AAC.5"},
+      {id:"d5",q:"Does the discharge summary contain all 10 mandatory elements?",oe:"AAC.5"},
+      {id:"d6",q:"Are medical records stored securely with access control?",oe:"IMS.5"},
+      {id:"d7",q:"Are medical records available within 30 minutes for emergency access?",oe:"IMS.5"},
+      {id:"d8",q:"Is patient identity verified using at least 2 identifiers on all documents?",oe:"PSQ.2"},
+      {id:"d9",q:"Are all diagnostic reports signed by the reporting doctor?",oe:"IMS.2"},
+      {id:"d10",q:"Is the medical record complete before filing (deficiency tracking)?",oe:"IMS.4"},
+    ]
+  }
+};
+
+function PatientTracerScreen({ hospitalId }) {
+  const [view,setView]=useState("list"); // list | new | conduct | history
+  const [tracerType,setTracerType]=useState("General IPD");
+  const [tracers,setTracers]=useState([]);
+  const [loading,setLoading]=useState(true);
+  const [activeTracer,setActiveTracer]=useState(null);
+  const [responses,setResponses]=useState({});
+  const [meta,setMeta]=useState({patient_ref:"",conducted_by:"",conducted_date:new Date().toISOString().split("T")[0],notes:""});
+  const [saving,setSaving]=useState(false);
+
+  useEffect(()=>{loadTracers();},[hospitalId]);
+
+  const loadTracers=async()=>{
+    setLoading(true);
+    const{data}=await supabase.from("patient_tracers").select("*").eq("hospital_id",hospitalId).order("created_at",{ascending:false});
+    setTracers(data||[]);setLoading(false);
+  };
+
+  const startNew=()=>{
+    setResponses({});
+    setMeta({patient_ref:"",conducted_by:"",conducted_date:new Date().toISOString().split("T")[0],notes:""});
+    setActiveTracer(null);
+    setView("new");
+  };
+
+  const startConduct=()=>{
+    setView("conduct");
+  };
+
+  const setResp=(qid,val)=>setResponses(r=>({...r,[qid]:val}));
+
+  const calcScore=()=>{
+    const qs=TRACER_TYPES[tracerType].questions;
+    const answered=qs.filter(q=>responses[q.id]==="yes"||responses[q.id]==="partial"||responses[q.id]==="no");
+    if(answered.length===0)return 0;
+    const score=qs.reduce((sum,q)=>sum+(responses[q.id]==="yes"?1:responses[q.id]==="partial"?0.5:0),0);
+    return Math.round((score/qs.length)*100);
+  };
+
+  const saveTracer=async()=>{
+    setSaving(true);
+    const pct=calcScore();
+    await supabase.from("patient_tracers").insert({
+      hospital_id:hospitalId,
+      tracer_type:tracerType,
+      patient_ref:meta.patient_ref,
+      conducted_date:meta.conducted_date,
+      conducted_by:meta.conducted_by,
+      responses,
+      score_pct:pct,
+      notes:meta.notes
+    });
+    setSaving(false);
+    loadTracers();
+    setView("list");
+  };
+
+  const scoreColor=(pct)=>pct>=80?T.green:pct>=60?T.orange:T.red;
+
+  const inp={width:"100%",padding:"8px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12,boxSizing:"border-box"};
+
+  if(loading)return<div style={{textAlign:"center",padding:40,color:T.muted}}>Loading…</div>;
+
+  // LIST VIEW
+  if(view==="list")return(
+    <div>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:14,flexWrap:"wrap",gap:8}}>
+        <div>
+          <div style={{fontSize:14,fontWeight:700,color:T.gold}}>🩺 Patient Tracer</div>
+          <div style={{fontSize:10,color:T.muted}}>Simulate assessor patient file review — identify gaps before they do</div>
+        </div>
+        <button onClick={startNew} style={{padding:"7px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:11,fontWeight:700,cursor:"pointer"}}>+ New Tracer</button>
+      </div>
+
+      {/* Tracer type cards */}
+      <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(160px,1fr))",gap:10,marginBottom:20}}>
+        {Object.entries(TRACER_TYPES).map(([type,data])=>{
+          const done=tracers.filter(t=>t.tracer_type===type);
+          const avg=done.length>0?Math.round(done.reduce((s,t)=>s+t.score_pct,0)/done.length):null;
+          return(
+            <div key={type} style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px",cursor:"pointer"}} onClick={()=>{setTracerType(type);startNew();}}>
+              <div style={{fontSize:20,marginBottom:6}}>{data.icon}</div>
+              <div style={{fontSize:11,fontWeight:700,color:T.white,marginBottom:3}}>{type}</div>
+              <div style={{fontSize:9,color:T.muted,marginBottom:8,lineHeight:1.4}}>{data.questions.length} questions</div>
+              {avg!==null?(
+                <div style={{fontSize:10,fontWeight:700,color:scoreColor(avg)}}>{avg}% avg ({done.length} done)</div>
+              ):(
+                <div style={{fontSize:9,color:T.muted}}>Not conducted yet</div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {/* History */}
+      {tracers.length>0&&(
+        <>
+          <div style={{fontSize:11,fontWeight:700,color:T.gold,marginBottom:10}}>Recent Tracers</div>
+          <div style={{display:"grid",gap:8}}>
+            {tracers.slice(0,10).map(t=>(
+              <div key={t.id} style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",display:"flex",gap:12,alignItems:"center",flexWrap:"wrap"}}>
+                <div style={{fontSize:18}}>{TRACER_TYPES[t.tracer_type]?.icon||"🩺"}</div>
+                <div style={{flex:1,minWidth:150}}>
+                  <div style={{fontSize:11,fontWeight:700,color:T.white}}>{t.tracer_type}</div>
+                  <div style={{fontSize:9,color:T.muted}}>{t.patient_ref&&`Patient: ${t.patient_ref} · `}{t.conducted_by&&`By: ${t.conducted_by} · `}{new Date(t.conducted_date).toLocaleDateString("en-IN")}</div>
+                </div>
+                <div style={{textAlign:"center"}}>
+                  <div style={{fontSize:18,fontWeight:800,color:scoreColor(t.score_pct)}}>{t.score_pct}%</div>
+                  <div style={{fontSize:8,color:T.muted}}>Score</div>
+                </div>
+                <div style={{padding:"3px 10px",borderRadius:7,background:t.score_pct>=80?T.greenD:t.score_pct>=60?T.orangeD:T.redD,color:scoreColor(t.score_pct),fontSize:9,fontWeight:700}}>
+                  {t.score_pct>=80?"READY":t.score_pct>=60?"PARTIAL":"NOT READY"}
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
+      {tracers.length===0&&(
+        <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"30px",textAlign:"center",color:T.muted,fontSize:11}}>
+          No tracers conducted yet. Click a tracer type above or '+ New Tracer' to start.
+        </div>
+      )}
+    </div>
+  );
+
+  // NEW TRACER — select type + meta
+  if(view==="new")return(
+    <div>
+      <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:16}}>
+        <button onClick={()=>setView("list")} style={{padding:"4px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:10,cursor:"pointer"}}>← Back</button>
+        <div style={{fontSize:13,fontWeight:700,color:T.gold}}>New Patient Tracer</div>
+      </div>
+
+      {/* Select tracer type */}
+      <div style={{fontSize:9,color:T.muted,marginBottom:8,letterSpacing:1}}>SELECT TRACER TYPE</div>
+      <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(140px,1fr))",gap:8,marginBottom:18}}>
+        {Object.entries(TRACER_TYPES).map(([type,data])=>(
+          <div key={type} onClick={()=>setTracerType(type)} style={{background:tracerType===type?`${data.color}15`:T.panel,border:`1px solid ${tracerType===type?data.color:T.border}`,borderRadius:9,padding:"10px",cursor:"pointer",textAlign:"center"}}>
+            <div style={{fontSize:18,marginBottom:4}}>{data.icon}</div>
+            <div style={{fontSize:10,fontWeight:700,color:tracerType===type?data.color:T.text}}>{type}</div>
+            <div style={{fontSize:8,color:T.muted,marginTop:2}}>{data.questions.length}Q</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Meta info */}
+      <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:16,marginBottom:14}}>
+        <div style={{fontSize:11,fontWeight:700,color:T.gold,marginBottom:12}}>Tracer Details (Optional)</div>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
+          <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>PATIENT REF / FILE NO.</div><input style={inp} placeholder="e.g. IPD/2026/1234" value={meta.patient_ref} onChange={e=>setMeta(m=>({...m,patient_ref:e.target.value}))}/></div>
+          <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>CONDUCTED BY</div><input style={inp} placeholder="Name / Designation" value={meta.conducted_by} onChange={e=>setMeta(m=>({...m,conducted_by:e.target.value}))}/></div>
+          <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>DATE</div><input style={inp} type="date" value={meta.conducted_date} onChange={e=>setMeta(m=>({...m,conducted_date:e.target.value}))}/></div>
+          <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>NOTES</div><input style={inp} placeholder="Any observations…" value={meta.notes} onChange={e=>setMeta(m=>({...m,notes:e.target.value}))}/></div>
+        </div>
+      </div>
+
+      <button onClick={startConduct} style={{width:"100%",padding:"12px",borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer"}}>
+        Start {tracerType} Tracer ({TRACER_TYPES[tracerType].questions.length} questions) →
+      </button>
+    </div>
+  );
+
+  // CONDUCT TRACER — answer questions
+  if(view==="conduct"){
+    const tdata=TRACER_TYPES[tracerType];
+    const answered=tdata.questions.filter(q=>responses[q.id]).length;
+    const pct=calcScore();
+
+    return(
+      <div>
+        <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:12,flexWrap:"wrap"}}>
+          <button onClick={()=>setView("new")} style={{padding:"4px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:10,cursor:"pointer"}}>← Back</button>
+          <div style={{flex:1}}>
+            <div style={{fontSize:13,fontWeight:700,color:tdata.color}}>{tdata.icon} {tracerType}</div>
+            <div style={{fontSize:9,color:T.muted}}>{answered}/{tdata.questions.length} answered · Score: {pct}%</div>
+          </div>
+          <button onClick={saveTracer} disabled={saving} style={{padding:"7px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:11,fontWeight:700,cursor:"pointer",opacity:saving?0.6:1}}>{saving?"Saving…":"Save & Finish"}</button>
+        </div>
+
+        {/* Progress bar */}
+        <div style={{background:T.border,borderRadius:4,height:6,marginBottom:16}}>
+          <div style={{height:6,borderRadius:4,background:`linear-gradient(90deg,${tdata.color},${T.gold})`,width:`${(answered/tdata.questions.length)*100}%`,transition:"width 0.3s"}}/>
+        </div>
+
+        <div style={{display:"grid",gap:8}}>
+          {tdata.questions.map((q,idx)=>{
+            const resp=responses[q.id];
+            return(
+              <div key={q.id} style={{background:T.panel,border:`1px solid ${resp?"#0f2640":T.border}`,borderRadius:10,padding:"12px 16px"}}>
+                <div style={{display:"flex",gap:10,alignItems:"flex-start"}}>
+                  <div style={{width:22,height:22,borderRadius:11,background:resp==="yes"?T.greenD:resp==="partial"?T.orangeD:resp==="no"?T.redD:T.panel2,border:`1px solid ${resp==="yes"?T.green:resp==="partial"?T.orange:resp==="no"?T.red:T.border}`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:9,fontWeight:700,color:resp==="yes"?T.green:resp==="partial"?T.orange:resp==="no"?T.red:T.muted,flexShrink:0,marginTop:1}}>{idx+1}</div>
+                  <div style={{flex:1}}>
+                    <div style={{fontSize:11,color:T.white,lineHeight:1.5,marginBottom:8}}>{q.q}</div>
+                    <div style={{fontSize:8,color:T.muted,marginBottom:8}}>OE: {q.oe}</div>
+                    <div style={{display:"flex",gap:8}}>
+                      {[["yes","✓ Yes",T.green],["partial","~ Partial",T.orange],["no","✗ No",T.red]].map(([val,label,color])=>(
+                        <button key={val} onClick={()=>setResp(q.id,resp===val?null:val)}
+                          style={{padding:"5px 14px",borderRadius:7,border:`1px solid ${resp===val?color:T.border}`,background:resp===val?`${color}20`:"transparent",color:resp===val?color:T.muted,fontSize:10,fontWeight:resp===val?700:400,cursor:"pointer"}}>
+                          {label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div style={{marginTop:16,background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"14px 18px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+          <div>
+            <div style={{fontSize:11,color:T.text}}>{answered} of {tdata.questions.length} questions answered</div>
+            <div style={{fontSize:9,color:T.muted,marginTop:2}}>Score: <span style={{color:scoreColor(pct),fontWeight:700}}>{pct}%</span> — {pct>=80?"Ready for assessment":pct>=60?"Needs improvement":"Critical gaps found"}</div>
+          </div>
+          <button onClick={saveTracer} disabled={saving} style={{padding:"9px 22px",borderRadius:9,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:12,fontWeight:700,cursor:"pointer",opacity:saving?0.6:1}}>{saving?"Saving…":"Save & Finish"}</button>
+        </div>
+      </div>
+    );
+  }
+
+  return null;
+}
