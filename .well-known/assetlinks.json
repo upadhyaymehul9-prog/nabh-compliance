@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.mktech.nabhcompliance",
+        "sha256_cert_fingerprints": ["5D:E1:A0:4B:14:D2:7F:52:87:E6:5C:71:90:2E:1F:49:86:95:CB:50:15:44:8D:45:DF:85:C3:E6:CE:4F:C3:C5"]
+      }
+    }]
