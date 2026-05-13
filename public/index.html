@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#040d1a" />
+    <meta name="description" content="NABH 6th Edition Compliance Engine — Track all 639 OEs, manage gaps, run audits, and stay accreditation-ready." />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>NABH Compliance Engine — 6th Edition</title>
+    <script>
+      // Show pricing page to first-time visitors only
+      // Skip if: returning user (has seen pricing), direct app link (?app=1), or logged in before
+      (function() {
+        var seen = sessionStorage.getItem('nabh_seen_pricing');
+        var isAppLink = window.location.search.indexOf('app=1') !== -1;
+        var isReturning = localStorage.getItem('nabh_returning');
+        if (!seen && !isAppLink && !isReturning) {
+          sessionStorage.setItem('nabh_seen_pricing', '1');
+          window.location.replace('./pricing.html');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
