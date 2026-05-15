@@ -2661,10 +2661,11 @@ function MockDrillsScreen({ hospitalId }) {
 function CommitteeCalendarScreen({ hospitalId }) {
   const [committees,setCommittees]=useState([]);
   const [meetings,setMeetings]=useState([]);
+  const [drillMeetings,setDrillMeetings]=useState([]);
   const [year,setYear]=useState(new Date().getFullYear());
   const [loading,setLoading]=useState(true);
   const [viewMode,setViewMode]=useState("committee");
-  const [popup,setPopup]=useState(null); // {committeeId, monthNum, dateVal, saving}
+  const [popup,setPopup]=useState(null); // {committeeId, monthNum, dateVal, saving, isDrill}
 
   const MONTHS=["Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar"];
   const MONTH_NUMS=[4,5,6,7,8,9,10,11,12,1,2,3];
@@ -2688,10 +2689,11 @@ function CommitteeCalendarScreen({ hospitalId }) {
   useEffect(()=>{
     Promise.all([
       supabase.from("committees").select("id,name,frequency,chapter_ref").order("name"),
-      supabase.from("committee_meetings").select("committee_id,meeting_date").eq("hospital_id",hospitalId)
-    ]).then(([{data:c,error:e1},{data:m,error:e2}])=>{
+      supabase.from("committee_meetings").select("committee_id,meeting_date").eq("hospital_id",hospitalId),
+      supabase.from("mock_drill_records").select("drill_id,drill_date").eq("hospital_id",hospitalId)
+    ]).then(([{data:c,error:e1},{data:m},{data:dm}])=>{
       if(e1)console.error("committees error:",e1);
-      setCommittees(c||[]);setMeetings(m||[]);setLoading(false);
+      setCommittees(c||[]);setMeetings(m||[]);setDrillMeetings(dm||[]);setLoading(false);
     });
   },[hospitalId]);
 
@@ -2724,33 +2726,51 @@ function CommitteeCalendarScreen({ hospitalId }) {
     return mYear===year+1&&mMonth===monthNum;
   })||null;
 
-  const getMeetingDay=(committeeId,monthNum)=>{
-    const rec=getMeetingRecord(committeeId,monthNum);
-    return rec?new Date(rec.meeting_date).getDate():null;
+  const getDrillRecord=(drillId,monthNum)=>drillMeetings.find(m=>{
+    if(m.drill_id!==drillId)return false;
+    const d=new Date(m.drill_date);const mYear=d.getFullYear();const mMonth=d.getMonth()+1;
+    if(monthNum>=4)return mYear===year&&mMonth===monthNum;
+    return mYear===year+1&&mMonth===monthNum;
+  })||null;
+
+  const getMeetingDay=(id,monthNum,isDrill)=>{
+    if(isDrill){const rec=getDrillRecord(id,monthNum);return rec?new Date(rec.drill_date).getDate():null;}
+    const rec=getMeetingRecord(id,monthNum);return rec?new Date(rec.meeting_date).getDate():null;
   };
 
-  const openPopup=(committeeId,monthNum)=>{
-    const rec=getMeetingRecord(committeeId,monthNum);
+  const openPopup=(committeeId,monthNum,isDrill=false)=>{
+    const rec=isDrill?getDrillRecord(committeeId,monthNum):getMeetingRecord(committeeId,monthNum);
+    const dateField=isDrill?"drill_date":"meeting_date";
     const targetYear=monthNum>=4?year:year+1;
-    const defaultDate=rec?new Date(rec.meeting_date).toISOString().split("T")[0]:`${targetYear}-${String(monthNum).padStart(2,"0")}-01`;
-    setPopup({committeeId,monthNum,dateVal:defaultDate,saving:false});
+    const defaultDate=rec?new Date(rec[dateField]).toISOString().split("T")[0]:`${targetYear}-${String(monthNum).padStart(2,"0")}-01`;
+    setPopup({committeeId,monthNum,dateVal:defaultDate,saving:false,isDrill});
   };
 
   const saveDate=async()=>{
     if(!popup||popup.saving)return;
     setPopup(p=>({...p,saving:true}));
-    const{committeeId,monthNum,dateVal}=popup;
+    const{committeeId,monthNum,dateVal,isDrill}=popup;
     const targetYear=monthNum>=4?year:year+1;
     const monthStart=`${targetYear}-${String(monthNum).padStart(2,"0")}-01`;
     const nextM=monthNum===12?1:monthNum+1;const nextY=monthNum===12?targetYear+1:targetYear;
     const monthEnd=`${nextY}-${String(nextM).padStart(2,"0")}-01`;
-    await supabase.from("committee_meetings").delete().eq("committee_id",committeeId).eq("hospital_id",hospitalId).gte("meeting_date",monthStart).lt("meeting_date",monthEnd);
-    if(dateVal){
-      const{error:insErr}=await supabase.from("committee_meetings").insert({committee_id:committeeId,hospital_id:hospitalId,meeting_date:dateVal});
-      if(insErr){setPopup(p=>({...p,saving:false,error:insErr.message}));return;}
+    if(isDrill){
+      await supabase.from("mock_drill_records").delete().eq("drill_id",committeeId).eq("hospital_id",hospitalId).gte("drill_date",monthStart).lt("drill_date",monthEnd);
+      if(dateVal){
+        const{error:insErr}=await supabase.from("mock_drill_records").insert({drill_id:committeeId,hospital_id:hospitalId,drill_date:dateVal});
+        if(insErr){setPopup(p=>({...p,saving:false,error:insErr.message}));return;}
+      }
+      const{data}=await supabase.from("mock_drill_records").select("drill_id,drill_date").eq("hospital_id",hospitalId);
+      setDrillMeetings(data||[]);
+    }else{
+      await supabase.from("committee_meetings").delete().eq("committee_id",committeeId).eq("hospital_id",hospitalId).gte("meeting_date",monthStart).lt("meeting_date",monthEnd);
+      if(dateVal){
+        const{error:insErr}=await supabase.from("committee_meetings").insert({committee_id:committeeId,hospital_id:hospitalId,meeting_date:dateVal});
+        if(insErr){setPopup(p=>({...p,saving:false,error:insErr.message}));return;}
+      }
+      const{data}=await supabase.from("committee_meetings").select("committee_id,meeting_date").eq("hospital_id",hospitalId);
+      setMeetings(data||[]);
     }
-    const{data}=await supabase.from("committee_meetings").select("committee_id,meeting_date").eq("hospital_id",hospitalId);
-    setMeetings(data||[]);
     setPopup(null);
   };
 
@@ -2864,14 +2884,14 @@ function CommitteeCalendarScreen({ hospitalId }) {
                   {MONTH_NUMS.map((mn,mi)=>{
                     const isPlanned=d.months.includes(mn);
                     const past=isPast(mn);
-                    const dayNum=getMeetingDay(d.id,mn);
+                    const dayNum=getMeetingDay(d.id,mn,true);
                     const isDone=!!dayNum;
                     let bg="transparent",txt="",brd="none";
                     if(isDone){bg=d.color;txt=dayNum;brd=`1px solid ${d.color}`;}
                     else if(isPlanned&&!past){bg="#1A2A1A";txt="·";brd=`1px dashed ${d.color}`;}
                     else if(isPlanned&&past){bg="#2A2A3A";txt="?";}
                     return(
-                      <td key={mi} onClick={()=>openPopup(d.id,mn)} style={{padding:"2px",textAlign:"center",border:`1px solid ${T.border}`,cursor:"pointer"}}>
+                      <td key={mi} onClick={()=>openPopup(d.id,mn,true)} style={{padding:"2px",textAlign:"center",border:`1px solid ${T.border}`,cursor:"pointer"}}>
                         <div style={{width:24,height:24,borderRadius:3,background:bg,margin:"0 auto",display:"flex",alignItems:"center",justifyContent:"center",fontSize:7,color:"#fff",fontWeight:700,border:brd}}>{txt}</div>
                       </td>
                     );
