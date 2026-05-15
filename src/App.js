@@ -1108,9 +1108,9 @@ function KPIsScreen({ hospitalId }) {
   const filtered=kpis.filter(k=>k.category===tab&&(!search||k.name.toLowerCase().includes(search.toLowerCase())||(k.dept||"").toLowerCase().includes(search.toLowerCase())));
   const depts=[...new Set(kpis.filter(k=>k.category==="dept_specific").map(k=>k.dept))].sort();
 
-  const getKpiHistory=(kpiId)=>kpiData.filter(d=>d.kpi_id===kpiId).sort((a,b)=>b.year-a.year||b.month-a.month);
+  const getKpiHistory=(kpiId)=>kpiData.filter(d=>String(d.kpi_id)===String(kpiId)).sort((a,b)=>b.year-a.year||b.month-a.month);
   const getLatest=(kpiId)=>getKpiHistory(kpiId)[0];
-  const monthsTracked=(kpiId)=>new Set(kpiData.filter(d=>d.kpi_id===kpiId).map(d=>`${d.year}-${d.month}`)).size;
+  const monthsTracked=(kpiId)=>new Set(kpiData.filter(d=>String(d.kpi_id)===String(kpiId)).map(d=>`${d.year}-${d.month}`)).size;
 
   const trackingStatus=(kpiId)=>{
     const n=monthsTracked(kpiId);
@@ -1130,7 +1130,7 @@ function KPIsScreen({ hospitalId }) {
     if(!f||f.value===""){alert("Enter a value to save.");return;}
     setSaving(kpi.id);
     // check if entry for this month/year exists
-    const existing=kpiData.find(d=>d.kpi_id===kpi.id&&d.month===parseInt(f.month)&&d.year===parseInt(f.year));
+    const existing=kpiData.find(d=>String(d.kpi_id)===String(kpi.id)&&d.month===parseInt(f.month)&&d.year===parseInt(f.year));
     let error;
     if(existing){
       ({error}=await supabase.from("kpi_data").update({
