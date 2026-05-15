@@ -2660,7 +2660,7 @@ function MockDrillsScreen({ hospitalId }) {
 // ── COMMITTEE CALENDAR ────────────────────────────────────────
 function CommitteeCalendarScreen({ hospitalId }) {
   const [committees,setCommittees]=useState([]);
-  const [meetings,setMeetings]=useState([]);
+  const [schedule,setSchedule]=useState([]); // committee_schedule (planning)
   const [drillMeetings,setDrillMeetings]=useState([]);
   const [year,setYear]=useState(new Date().getFullYear());
   const [loading,setLoading]=useState(true);
@@ -2689,21 +2689,30 @@ function CommitteeCalendarScreen({ hospitalId }) {
   useEffect(()=>{
     Promise.all([
       supabase.from("committees").select("id,name,frequency,chapter_ref").order("name"),
-      supabase.from("committee_meetings").select("committee_id,meeting_date").eq("hospital_id",hospitalId),
+      supabase.from("committee_schedule").select("id,committee_id,planned_date").eq("hospital_id",hospitalId),
       supabase.from("mock_drill_records").select("drill_id,drill_date").eq("hospital_id",hospitalId)
-    ]).then(([{data:c,error:e1},{data:m},{data:dm}])=>{
+    ]).then(([{data:c,error:e1},{data:s},{data:dm}])=>{
       if(e1)console.error("committees error:",e1);
-      setCommittees(c||[]);setMeetings(m||[]);setDrillMeetings(dm||[]);setLoading(false);
+      setCommittees(c||[]);setSchedule(s||[]);setDrillMeetings(dm||[]);setLoading(false);
     });
   },[hospitalId]);
 
-  const hasMeeting=(committeeId,monthNum)=>meetings.some(m=>{
-    if(m.committee_id!==committeeId)return false;
-    const d=new Date(m.meeting_date);
-    const mYear=d.getFullYear(); const mMonth=d.getMonth()+1;
+  const matchesYearMonth=(dateStr,monthNum)=>{
+    const d=new Date(dateStr);const mYear=d.getFullYear();const mMonth=d.getMonth()+1;
     if(monthNum>=4)return mYear===year&&mMonth===monthNum;
     return mYear===year+1&&mMonth===monthNum;
-  });
+  };
+
+  const hasScheduled=(committeeId,monthNum)=>schedule.some(s=>s.committee_id===committeeId&&matchesYearMonth(s.planned_date,monthNum));
+
+  const getScheduledRecord=(committeeId,monthNum)=>schedule.find(s=>s.committee_id===committeeId&&matchesYearMonth(s.planned_date,monthNum))||null;
+
+  const getDrillRecord=(drillId,monthNum)=>drillMeetings.find(m=>m.drill_id===drillId&&matchesYearMonth(m.drill_date,monthNum))||null;
+
+  const getMeetingDay=(id,monthNum,isDrill)=>{
+    if(isDrill){const rec=getDrillRecord(id,monthNum);return rec?new Date(rec.drill_date).getDate():null;}
+    const rec=getScheduledRecord(id,monthNum);return rec?new Date(rec.planned_date).getDate():null;
+  };
 
   const freqMonths=(freq)=>{
     if(!freq)return[4,7,10,1];
@@ -2719,28 +2728,9 @@ function CommitteeCalendarScreen({ hospitalId }) {
   const now=new Date();
   const isPast=(monthNum)=>{const mYear=monthNum>=4?year:year+1;return new Date(mYear,monthNum,1)<now;};
 
-  const getMeetingRecord=(committeeId,monthNum)=>meetings.find(m=>{
-    if(m.committee_id!==committeeId)return false;
-    const d=new Date(m.meeting_date);const mYear=d.getFullYear();const mMonth=d.getMonth()+1;
-    if(monthNum>=4)return mYear===year&&mMonth===monthNum;
-    return mYear===year+1&&mMonth===monthNum;
-  })||null;
-
-  const getDrillRecord=(drillId,monthNum)=>drillMeetings.find(m=>{
-    if(m.drill_id!==drillId)return false;
-    const d=new Date(m.drill_date);const mYear=d.getFullYear();const mMonth=d.getMonth()+1;
-    if(monthNum>=4)return mYear===year&&mMonth===monthNum;
-    return mYear===year+1&&mMonth===monthNum;
-  })||null;
-
-  const getMeetingDay=(id,monthNum,isDrill)=>{
-    if(isDrill){const rec=getDrillRecord(id,monthNum);return rec?new Date(rec.drill_date).getDate():null;}
-    const rec=getMeetingRecord(id,monthNum);return rec?new Date(rec.meeting_date).getDate():null;
-  };
-
   const openPopup=(committeeId,monthNum,isDrill=false)=>{
-    const rec=isDrill?getDrillRecord(committeeId,monthNum):getMeetingRecord(committeeId,monthNum);
-    const dateField=isDrill?"drill_date":"meeting_date";
+    const rec=isDrill?getDrillRecord(committeeId,monthNum):getScheduledRecord(committeeId,monthNum);
+    const dateField=isDrill?"drill_date":"planned_date";
     const targetYear=monthNum>=4?year:year+1;
     const defaultDate=rec?new Date(rec[dateField]).toISOString().split("T")[0]:`${targetYear}-${String(monthNum).padStart(2,"0")}-01`;
     setPopup({committeeId,monthNum,dateVal:defaultDate,saving:false,isDrill});
@@ -2760,22 +2750,31 @@ function CommitteeCalendarScreen({ hospitalId }) {
         const{error:insErr}=await supabase.from("mock_drill_records").insert({drill_id:committeeId,hospital_id:hospitalId,drill_date:dateVal});
         if(insErr){setPopup(p=>({...p,saving:false,error:insErr.message}));return;}
       }
-      const{data}=await supabase.from("mock_drill_records").select("drill_id,drill_date").eq("hospital_id",hospitalId);
-      setDrillMeetings(data||[]);
+      // optimistic update for drills
+      setDrillMeetings(prev=>{
+        const filtered=prev.filter(m=>!(m.drill_id===committeeId&&matchesYearMonth(m.drill_date,monthNum)));
+        return dateVal?[...filtered,{drill_id:committeeId,drill_date:dateVal}]:filtered;
+      });
     }else{
-      await supabase.from("committee_meetings").delete().eq("committee_id",committeeId).eq("hospital_id",hospitalId).gte("meeting_date",monthStart).lt("meeting_date",monthEnd);
+      // delete existing scheduled entry for this committee+month
+      const existing=getScheduledRecord(committeeId,monthNum);
+      if(existing?.id){await supabase.from("committee_schedule").delete().eq("id",existing.id);}
+      else{await supabase.from("committee_schedule").delete().eq("committee_id",committeeId).eq("hospital_id",hospitalId).gte("planned_date",monthStart).lt("planned_date",monthEnd);}
       if(dateVal){
-        const{error:insErr}=await supabase.from("committee_meetings").insert({committee_id:committeeId,hospital_id:hospitalId,meeting_date:dateVal});
+        const{error:insErr}=await supabase.from("committee_schedule").insert({committee_id:committeeId,hospital_id:hospitalId,planned_date:dateVal});
         if(insErr){setPopup(p=>({...p,saving:false,error:insErr.message}));return;}
       }
-      const{data}=await supabase.from("committee_meetings").select("committee_id,meeting_date").eq("hospital_id",hospitalId);
-      setMeetings(data||[]);
+      // optimistic update for committees
+      setSchedule(prev=>{
+        const filtered=prev.filter(s=>!(s.committee_id===committeeId&&matchesYearMonth(s.planned_date,monthNum)));
+        return dateVal?[...filtered,{committee_id:committeeId,planned_date:dateVal}]:filtered;
+      });
     }
     setPopup(null);
   };
 
   const totalExpected=committees.reduce((sum,c)=>sum+freqMonths(c.frequency).length,0);
-  const totalDone=committees.reduce((sum,c)=>sum+MONTH_NUMS.filter(m=>hasMeeting(c.id,m)).length,0);
+  const totalDone=committees.reduce((sum,c)=>sum+MONTH_NUMS.filter(m=>hasScheduled(c.id,m)).length,0);
   const pct=totalExpected>0?Math.round((totalDone/totalExpected)*100):0;
 
   if(loading)return <div style={{textAlign:"center",padding:40,color:T.muted}}>Loading…</div>;
@@ -2837,7 +2836,7 @@ function CommitteeCalendarScreen({ hospitalId }) {
             <tbody>
               {committees.length===0&&<tr><td colSpan={16} style={{textAlign:"center",padding:30,color:T.muted,fontSize:11}}>No committees loading — check connection.</td></tr>}
               {committees.map((c,ci)=>{
-                const done=MONTH_NUMS.filter(m=>hasMeeting(c.id,m)).length;
+                const done=MONTH_NUMS.filter(m=>hasScheduled(c.id,m)).length;
                 const exp=freqMonths(c.frequency).length;
                 return(
                   <tr key={c.id} style={{background:ci%2===0?T.panel:T.panel2}}>
@@ -2847,10 +2846,10 @@ function CommitteeCalendarScreen({ hospitalId }) {
                     </td>
                     <td style={{padding:"3px",textAlign:"center",fontSize:7,color:T.muted,border:`1px solid ${T.border}`}}>{c.frequency?.charAt(0).toUpperCase()||"Q"}</td>
                     {MONTH_NUMS.map((mn,mi)=>{
-                      const isDone=hasMeeting(c.id,mn);
+                      const dayNum=getMeetingDay(c.id,mn);
+                      const isDone=!!dayNum||hasScheduled(c.id,mn);
                       const isExp=freqMonths(c.frequency).includes(mn);
                       const past=isPast(mn);
-                      const dayNum=getMeetingDay(c.id,mn);
                       let bg="transparent",txt="",brd="none";
                       if(isDone){bg=T.green;txt=dayNum||"✓";}
                       else if(isExp&&!past){bg="#1A3A5A";txt="·";brd=`1px dashed ${T.gold}`;}
