@@ -2660,8 +2660,7 @@ function MockDrillsScreen({ hospitalId }) {
 // ── COMMITTEE CALENDAR ────────────────────────────────────────
 function CommitteeCalendarScreen({ hospitalId }) {
   const [committees,setCommittees]=useState([]);
-  const [schedule,setSchedule]=useState([]); // committee_schedule (planning)
-  const [drillMeetings,setDrillMeetings]=useState([]);
+  const [calendarPlan,setCalendarPlan]=useState([]); // calendar_plan table (planning only)
   const [year,setYear]=useState(new Date().getFullYear());
   const [loading,setLoading]=useState(true);
   const [viewMode,setViewMode]=useState("committee");
@@ -2689,11 +2688,10 @@ function CommitteeCalendarScreen({ hospitalId }) {
   useEffect(()=>{
     Promise.all([
       supabase.from("committees").select("id,name,frequency,chapter_ref").order("name"),
-      supabase.from("committee_schedule").select("id,committee_id,planned_date").eq("hospital_id",hospitalId),
-      supabase.from("mock_drill_records").select("drill_id,drill_date").eq("hospital_id",hospitalId)
-    ]).then(([{data:c,error:e1},{data:s},{data:dm}])=>{
+      supabase.from("calendar_plan").select("id,item_type,item_id,planned_date").eq("hospital_id",hospitalId)
+    ]).then(([{data:c,error:e1},{data:cp}])=>{
       if(e1)console.error("committees error:",e1);
-      setCommittees(c||[]);setSchedule(s||[]);setDrillMeetings(dm||[]);setLoading(false);
+      setCommittees(c||[]);setCalendarPlan(cp||[]);setLoading(false);
     });
   },[hospitalId]);
 
@@ -2703,15 +2701,14 @@ function CommitteeCalendarScreen({ hospitalId }) {
     return mYear===year+1&&mMonth===monthNum;
   };
 
-  const hasScheduled=(committeeId,monthNum)=>schedule.some(s=>s.committee_id===committeeId&&matchesYearMonth(s.planned_date,monthNum));
+  const getPlanRecord=(itemId,monthNum,itemType)=>
+    calendarPlan.find(p=>p.item_id===itemId&&p.item_type===itemType&&matchesYearMonth(p.planned_date,monthNum))||null;
 
-  const getScheduledRecord=(committeeId,monthNum)=>schedule.find(s=>s.committee_id===committeeId&&matchesYearMonth(s.planned_date,monthNum))||null;
-
-  const getDrillRecord=(drillId,monthNum)=>drillMeetings.find(m=>m.drill_id===drillId&&matchesYearMonth(m.drill_date,monthNum))||null;
+  const hasScheduled=(committeeId,monthNum)=>!!getPlanRecord(committeeId,monthNum,"committee");
 
   const getMeetingDay=(id,monthNum,isDrill)=>{
-    if(isDrill){const rec=getDrillRecord(id,monthNum);return rec?new Date(rec.drill_date).getDate():null;}
-    const rec=getScheduledRecord(id,monthNum);return rec?new Date(rec.planned_date).getDate():null;
+    const rec=getPlanRecord(id,monthNum,isDrill?"drill":"committee");
+    return rec?new Date(rec.planned_date).getDate():null;
   };
 
   const freqMonths=(freq)=>{
@@ -2728,48 +2725,38 @@ function CommitteeCalendarScreen({ hospitalId }) {
   const now=new Date();
   const isPast=(monthNum)=>{const mYear=monthNum>=4?year:year+1;return new Date(mYear,monthNum,1)<now;};
 
-  const openPopup=(committeeId,monthNum,isDrill=false)=>{
-    const rec=isDrill?getDrillRecord(committeeId,monthNum):getScheduledRecord(committeeId,monthNum);
-    const dateField=isDrill?"drill_date":"planned_date";
+  const openPopup=(itemId,monthNum,isDrill=false)=>{
+    const itemType=isDrill?"drill":"committee";
+    const rec=getPlanRecord(itemId,monthNum,itemType);
     const targetYear=monthNum>=4?year:year+1;
-    const defaultDate=rec?new Date(rec[dateField]).toISOString().split("T")[0]:`${targetYear}-${String(monthNum).padStart(2,"0")}-01`;
-    setPopup({committeeId,monthNum,dateVal:defaultDate,saving:false,isDrill});
+    const defaultDate=rec?new Date(rec.planned_date).toISOString().split("T")[0]:`${targetYear}-${String(monthNum).padStart(2,"0")}-01`;
+    setPopup({committeeId:itemId,monthNum,dateVal:defaultDate,saving:false,isDrill});
   };
 
   const saveDate=async()=>{
     if(!popup||popup.saving)return;
     setPopup(p=>({...p,saving:true}));
-    const{committeeId,monthNum,dateVal,isDrill}=popup;
-    const targetYear=monthNum>=4?year:year+1;
-    const monthStart=`${targetYear}-${String(monthNum).padStart(2,"0")}-01`;
-    const nextM=monthNum===12?1:monthNum+1;const nextY=monthNum===12?targetYear+1:targetYear;
-    const monthEnd=`${nextY}-${String(nextM).padStart(2,"0")}-01`;
-    if(isDrill){
-      await supabase.from("mock_drill_records").delete().eq("drill_id",committeeId).eq("hospital_id",hospitalId).gte("drill_date",monthStart).lt("drill_date",monthEnd);
-      if(dateVal){
-        const{error:insErr}=await supabase.from("mock_drill_records").insert({drill_id:committeeId,hospital_id:hospitalId,drill_date:dateVal});
-        if(insErr){setPopup(p=>({...p,saving:false,error:insErr.message}));return;}
-      }
-      // optimistic update for drills
-      setDrillMeetings(prev=>{
-        const filtered=prev.filter(m=>!(m.drill_id===committeeId&&matchesYearMonth(m.drill_date,monthNum)));
-        return dateVal?[...filtered,{drill_id:committeeId,drill_date:dateVal}]:filtered;
-      });
-    }else{
-      // delete existing scheduled entry for this committee+month
-      const existing=getScheduledRecord(committeeId,monthNum);
-      if(existing?.id){await supabase.from("committee_schedule").delete().eq("id",existing.id);}
-      else{await supabase.from("committee_schedule").delete().eq("committee_id",committeeId).eq("hospital_id",hospitalId).gte("planned_date",monthStart).lt("planned_date",monthEnd);}
-      if(dateVal){
-        const{error:insErr}=await supabase.from("committee_schedule").insert({committee_id:committeeId,hospital_id:hospitalId,planned_date:dateVal});
-        if(insErr){setPopup(p=>({...p,saving:false,error:insErr.message}));return;}
-      }
-      // optimistic update for committees
-      setSchedule(prev=>{
-        const filtered=prev.filter(s=>!(s.committee_id===committeeId&&matchesYearMonth(s.planned_date,monthNum)));
-        return dateVal?[...filtered,{committee_id:committeeId,planned_date:dateVal}]:filtered;
-      });
+    const{committeeId:itemId,monthNum,dateVal,isDrill}=popup;
+    const itemType=isDrill?"drill":"committee";
+    const existing=getPlanRecord(itemId,monthNum,itemType);
+    // delete existing plan entry for this item+month
+    if(existing?.id){
+      await supabase.from("calendar_plan").delete().eq("id",existing.id);
     }
+    if(dateVal){
+      const d=new Date(dateVal);
+      const planYear=d.getFullYear();const planMonth=d.getMonth()+1;
+      const{error:insErr}=await supabase.from("calendar_plan").insert({
+        hospital_id:hospitalId,item_type:itemType,item_id:itemId,
+        planned_date:dateVal,year:planYear,month:planMonth
+      });
+      if(insErr){setPopup(p=>({...p,saving:false,error:insErr.message}));return;}
+    }
+    // optimistic local update
+    setCalendarPlan(prev=>{
+      const filtered=prev.filter(p=>!(p.item_id===itemId&&p.item_type===itemType&&matchesYearMonth(p.planned_date,monthNum)));
+      return dateVal?[...filtered,{item_id:itemId,item_type:itemType,planned_date:dateVal}]:filtered;
+    });
     setPopup(null);
   };
 
