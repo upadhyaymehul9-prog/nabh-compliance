@@ -1370,8 +1370,8 @@ function AuditsScreen({ hospitalId }) {
     const catMatch=catFilter==="ALL"||(a.audit_category||"clinical")===catFilter;
     return coreMatch&&catMatch;
   });
-  const getRecords=(auditId)=>auditRecords.filter(r=>r.audit_id===auditId);
-  const getCustomRecords=(customAuditId)=>customRecords.filter(r=>r.custom_audit_id===customAuditId);
+  const getRecords=(auditId)=>auditRecords.filter(r=>String(r.audit_id)===String(auditId));
+  const getCustomRecords=(customAuditId)=>customRecords.filter(r=>String(r.custom_audit_id)===String(customAuditId));
   const totalAudits=audits.length;
   const completedAudits=new Set(auditRecords.filter(r=>r.status==="completed"&&new Date(r.audit_date)>new Date(Date.now()-365*24*60*60*1000)).map(r=>r.audit_id)).size;
 
