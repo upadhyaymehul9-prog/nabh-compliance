@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, Tooltip, ReferenceLine, ResponsiveContainer, CartesianGrid } from "recharts";
+import { LineChart, Line, BarChart, Bar, XAxis, YAxis, Tooltip, ReferenceLine, ResponsiveContainer, CartesianGrid } from "recharts";
 
 const supabase = createClient(
   "https://tbptllgcjtiiqspxqcde.supabase.co",
@@ -36,6 +37,7 @@ const lvColor = l => l==="CORE"?"#e05a5a":l==="Commitment"?"#4fc3f7":l==="Achiev
 const chColor = {AAC:"#4fc3f7",COP:"#f4a441",MOM:"#e05a5a",PRE:"#4caf7d",IPC:"#c084e8",PSQ:"#ff8a65",ROM:"#80cbc4",FMS:"#a5d6a7",HRM:"#f0d070",IMS:"#90caf9"};
 const sevColor = s => s==="CRITICAL"?T.red:s==="HIGH"?T.orange:s==="MEDIUM"?T.gold:T.green;
 const MONTHS_SHORT = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const MONTHS_SHORT = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
 function Ring({ pct=0, size=110, stroke=9, color=T.green, label }) {
   const r=(size-stroke)/2,circ=2*Math.PI*r,dash=(pct/100)*circ;
@@ -53,6 +55,35 @@ function Ring({ pct=0, size=110, stroke=9, color=T.green, label }) {
       </div>
     </div>
   );
+}
+
+function KpiTrendChart({ history, target, unit }) {
+  if (!history || history.length === 0) return (
+    <div style={{background:T.panel2,borderRadius:8,padding:"20px",textAlign:"center",border:`1px solid ${T.border}`,marginBottom:12}}>
+      <div style={{fontSize:28,marginBottom:8}}>📈</div>
+      <div style={{fontSize:11,color:T.muted}}>No data yet. Enter monthly values above to see your trend chart.</div>
+    </div>
+  );
+  const chartData=[...history].sort((a,b)=>a.year!==b.year?a.year-b.year:a.month-b.month).slice(-12).map(d=>({name:`${MONTHS_SHORT[d.month-1]} ${String(d.year).slice(2)}`,value:d.value,capa:d.capa_required}));
+  const vals=chartData.map(d=>d.value);const minVal=Math.min(...vals);const maxVal=Math.max(...vals);const pad=Math.max((maxVal-minVal)*0.2,1);
+  const yMin=Math.max(0,Math.floor((minVal-pad)*10)/10);const yMax=Math.ceil((Math.max(maxVal,parseFloat(target)||0)+pad)*10)/10;
+  const CustomDot=(props)=>{const{cx,cy,payload}=props;if(!payload.capa)return <circle cx={cx} cy={cy} r={3} fill={T.gold}/>;return <circle cx={cx} cy={cy} r={5} fill={T.orange} stroke={T.bg} strokeWidth={1.5}/>;};
+  const TT=({active,payload,label})=>{if(!active||!payload||!payload.length)return null;const d=payload[0].payload;return(<div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:8,padding:"8px 12px",fontSize:10}}><div style={{color:T.gold,fontWeight:700,marginBottom:4}}>{label}</div><div style={{color:T.white}}>Value: <strong style={{color:T.goldL}}>{d.value} {unit}</strong></div>{target&&<div style={{color:T.green,marginTop:2}}>Target: {target}</div>}{d.capa&&<div style={{color:T.orange,marginTop:2}}>CAPA raised</div>}</div>);};
+  return(<div style={{background:T.panel2,border:`1px solid ${T.border}`,borderRadius:8,padding:"12px 8px 8px 0",marginBottom:12}}><div style={{fontSize:9,color:T.gold,letterSpacing:1,marginBottom:8,paddingLeft:12,display:"flex",gap:12}}><span>TREND — last {chartData.length} months</span>{target&&<span style={{color:T.green}}>Target: {target} {unit}</span>}</div><ResponsiveContainer width="100%" height={160}><LineChart data={chartData} margin={{top:4,right:16,left:0,bottom:0}}><CartesianGrid strokeDasharray="2 4" stroke={T.border} vertical={false}/><XAxis dataKey="name" tick={{fontSize:8,fill:T.muted}} axisLine={false} tickLine={false}/><YAxis domain={[yMin,yMax]} tick={{fontSize:8,fill:T.muted}} axisLine={false} tickLine={false} width={36}/><Tooltip content={<TT/>}/>{target&&<ReferenceLine y={parseFloat(target)} stroke={T.green} strokeDasharray="4 3" strokeWidth={1.5}/>}<Line type="monotone" dataKey="value" stroke={T.gold} strokeWidth={2.5} dot={<CustomDot/>} activeDot={{r:5,fill:T.goldL}}/></LineChart></ResponsiveContainer><div style={{display:"flex",gap:14,paddingLeft:12,marginTop:6,fontSize:8,color:T.muted}}><span style={{color:T.gold}}>Value</span>{target&&<span style={{color:T.green}}>-- Target</span>}<span style={{color:T.orange}}>o CAPA</span></div></div>);
+}
+
+function AuditComplianceChart({ records }) {
+  if (!records || records.length === 0) return (
+    <div style={{background:T.panel2,borderRadius:8,padding:"20px",textAlign:"center",border:`1px solid ${T.border}`,marginBottom:12}}>
+      <div style={{fontSize:28,marginBottom:8}}>📊</div>
+      <div style={{fontSize:11,color:T.muted}}>No records yet. Record an audit to see compliance trends.</div>
+    </div>
+  );
+  const getBarColor=(pct)=>pct>=80?T.green:pct>=60?T.orange:T.red;
+  const chartData=[...records].filter(r=>r.sample_size>0&&r.compliant_count!==null).sort((a,b)=>new Date(a.audit_date)-new Date(b.audit_date)).slice(-12).map(r=>({name:new Date(r.audit_date).toLocaleDateString("en-IN",{day:"2-digit",month:"short"}),pct:Math.round((r.compliant_count/r.sample_size)*100),capa:r.capa_raised}));
+  if(chartData.length===0)return(<div style={{background:T.panel2,borderRadius:8,padding:"12px",textAlign:"center",border:`1px solid ${T.border}`,fontSize:10,color:T.muted,marginBottom:12}}>Enter sample size and compliant count when recording audits to see charts.</div>);
+  const TT=({active,payload,label})=>{if(!active||!payload||!payload.length)return null;const d=payload[0].payload;return(<div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:8,padding:"8px 12px",fontSize:10}}><div style={{color:T.gold,fontWeight:700,marginBottom:4}}>{label}</div><div style={{color:getBarColor(d.pct),fontWeight:700,fontSize:13}}>{d.pct}%</div>{d.capa&&<div style={{color:T.orange,marginTop:3}}>CAPA raised</div>}</div>);};
+  return(<div style={{background:T.panel2,border:`1px solid ${T.border}`,borderRadius:8,padding:"12px 8px 8px 0",marginBottom:12}}><div style={{fontSize:9,color:T.gold,letterSpacing:1,marginBottom:8,paddingLeft:12,display:"flex",gap:12}}><span>COMPLIANCE TREND — last {chartData.length} audits</span><span style={{color:T.green}}>Target: 80%</span></div><ResponsiveContainer width="100%" height={150}><BarChart data={chartData} margin={{top:4,right:16,left:0,bottom:0}}><CartesianGrid strokeDasharray="2 4" stroke={T.border} vertical={false}/><XAxis dataKey="name" tick={{fontSize:8,fill:T.muted}} axisLine={false} tickLine={false}/><YAxis domain={[0,100]} tick={{fontSize:8,fill:T.muted}} axisLine={false} tickLine={false} width={30} tickFormatter={v=>`${v}%`}/><Tooltip content={<TT/>}/><ReferenceLine y={80} stroke={T.green} strokeDasharray="4 3" strokeWidth={1.5}/><Bar dataKey="pct" radius={[3,3,0,0]} shape={(props)=>{const{x,y,width,height,value}=props;return <rect x={x} y={y} width={Math.max(width,4)} height={Math.max(height,1)} rx={3} fill={getBarColor(value)} fillOpacity={0.85}/>;}} /></BarChart></ResponsiveContainer><div style={{display:"flex",gap:14,paddingLeft:12,marginTop:6,fontSize:8,color:T.muted}}><span style={{color:T.green}}>Good (80%+)</span><span style={{color:T.orange}}>Fair (60-79%)</span><span style={{color:T.red}}>Critical</span></div></div>);
 }
 
 function KpiTrendChart({ history, target, unit }) {
@@ -1153,6 +1184,13 @@ function KPIsScreen({ hospitalId }) {
     setSaving(null);
   };
 
+  const deleteKpiEntry=async(entryId)=>{
+    if(!window.confirm("Delete this entry?"))return;
+    const{error}=await supabase.from("kpi_data").delete().eq("id",entryId);
+    if(!error){setKpiData(p=>p.filter(d=>d.id!==entryId));}
+    else{alert("Error: "+error.message);}
+  };
+
   // Overall KPI tracking summary
   const tracked=kpis.filter(k=>monthsTracked(k.id)>=3).length;
   const total=kpis.length;
@@ -1298,6 +1336,7 @@ function KPIsScreen({ hospitalId }) {
                             <span style={{fontSize:12,fontWeight:700,color:T.white}}>{d.value} {k.unit}</span>
                             <span style={{fontSize:9,color:d.trend==="improving"?T.green:d.trend==="worsening"?T.red:T.muted}}>{d.trend==="improving"?"📈":d.trend==="worsening"?"📉":"➡️"} {d.trend}</span>
                             {d.capa_required&&<span style={{fontSize:9,color:T.orange}}>⚠️ CAPA</span>}
+                            <button onClick={()=>deleteKpiEntry(d.id,k.id)} style={{marginLeft:"auto",padding:"2px 8px",borderRadius:5,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:9,cursor:"pointer"}}>Delete</button>
                           </div>
                         ))}
                       </div>
