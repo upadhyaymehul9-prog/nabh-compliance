@@ -35,7 +35,7 @@ const T = {
 const lvColor = l => l==="CORE"?"#e05a5a":l==="Commitment"?"#4fc3f7":l==="Achievement"?"#4caf7d":"#c9a84c";
 const chColor = {AAC:"#4fc3f7",COP:"#f4a441",MOM:"#e05a5a",PRE:"#4caf7d",IPC:"#c084e8",PSQ:"#ff8a65",ROM:"#80cbc4",FMS:"#a5d6a7",HRM:"#f0d070",IMS:"#90caf9"};
 const sevColor = s => s==="CRITICAL"?T.red:s==="HIGH"?T.orange:s==="MEDIUM"?T.gold:T.green;
-const MONTHS_SHORT = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
 const MONTHS_SHORT = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
 function Ring({ pct=0, size=110, stroke=9, color=T.green, label }) {
