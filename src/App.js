@@ -2745,7 +2745,10 @@ function CommitteeCalendarScreen({ hospitalId }) {
     const nextM=monthNum===12?1:monthNum+1;const nextY=monthNum===12?targetYear+1:targetYear;
     const monthEnd=`${nextY}-${String(nextM).padStart(2,"0")}-01`;
     await supabase.from("committee_meetings").delete().eq("committee_id",committeeId).eq("hospital_id",hospitalId).gte("meeting_date",monthStart).lt("meeting_date",monthEnd);
-    if(dateVal){await supabase.from("committee_meetings").insert({committee_id:committeeId,hospital_id:hospitalId,meeting_date:dateVal});}
+    if(dateVal){
+      const{error:insErr}=await supabase.from("committee_meetings").insert({committee_id:committeeId,hospital_id:hospitalId,meeting_date:dateVal});
+      if(insErr){setPopup(p=>({...p,saving:false,error:insErr.message}));return;}
+    }
     const{data}=await supabase.from("committee_meetings").select("committee_id,meeting_date").eq("hospital_id",hospitalId);
     setMeetings(data||[]);
     setPopup(null);
@@ -2773,8 +2776,9 @@ function CommitteeCalendarScreen({ hospitalId }) {
           <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"22px 26px",minWidth:270,boxShadow:"0 8px 40px #000c"}} onClick={e=>e.stopPropagation()}>
             <div style={{fontSize:13,fontWeight:700,color:T.gold,marginBottom:4}}>Set Meeting Date</div>
             <div style={{fontSize:10,color:T.muted,marginBottom:14}}>{MONTHS[MONTH_NUMS.indexOf(popup.monthNum)]} {popup.monthNum>=4?year:year+1}</div>
-            <input type="date" value={popup.dateVal} onChange={e=>setPopup(p=>({...p,dateVal:e.target.value}))}
+            <input type="date" value={popup.dateVal} onChange={e=>setPopup(p=>({...p,dateVal:e.target.value,error:null}))}
               style={{width:"100%",padding:"9px 11px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,marginBottom:14,boxSizing:"border-box"}}/>
+            {popup.error&&<div style={{fontSize:10,color:T.red,marginBottom:10}}>{popup.error}</div>}
             <div style={{display:"flex",gap:8}}>
               <button onClick={saveDate} disabled={popup.saving} style={{flex:1,padding:"9px",borderRadius:7,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontWeight:700,fontSize:13,cursor:"pointer",opacity:popup.saving?0.6:1}}>{popup.saving?"Saving…":"Save"}</button>
               <button onClick={()=>setPopup(null)} style={{padding:"9px 16px",borderRadius:7,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:13,cursor:"pointer"}}>Cancel</button>
@@ -2860,11 +2864,14 @@ function CommitteeCalendarScreen({ hospitalId }) {
                   {MONTH_NUMS.map((mn,mi)=>{
                     const isPlanned=d.months.includes(mn);
                     const past=isPast(mn);
+                    const dayNum=getMeetingDay(d.id,mn);
+                    const isDone=!!dayNum;
                     let bg="transparent",txt="",brd="none";
-                    if(isPlanned&&!past){bg=d.color;txt="📅";brd=`1px solid ${d.color}`;}
+                    if(isDone){bg=d.color;txt=dayNum;brd=`1px solid ${d.color}`;}
+                    else if(isPlanned&&!past){bg="#1A2A1A";txt="·";brd=`1px dashed ${d.color}`;}
                     else if(isPlanned&&past){bg="#2A2A3A";txt="?";}
                     return(
-                      <td key={mi} style={{padding:"2px",textAlign:"center",border:`1px solid ${T.border}`}}>
+                      <td key={mi} onClick={()=>openPopup(d.id,mn)} style={{padding:"2px",textAlign:"center",border:`1px solid ${T.border}`,cursor:"pointer"}}>
                         <div style={{width:24,height:24,borderRadius:3,background:bg,margin:"0 auto",display:"flex",alignItems:"center",justifyContent:"center",fontSize:7,color:"#fff",fontWeight:700,border:brd}}>{txt}</div>
                       </td>
                     );
