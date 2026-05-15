@@ -2481,6 +2481,11 @@ function MockDrillsScreen({ hospitalId }) {
   const [expanded,setExpanded]=useState(null);
   const [loading,setLoading]=useState(true);
 
+  const deleteRecord=async(id)=>{
+    await supabase.from("mock_drill_records").delete().eq("id",id);
+    setRecords(prev=>prev.filter(r=>r.id!==id));
+  };
+
   useEffect(()=>{
     Promise.all([
       supabase.from("mock_drills").select("*").order("frequency_per_year",{ascending:false}),
@@ -2638,10 +2643,11 @@ function MockDrillsScreen({ hospitalId }) {
                     <div>
                       <div style={{fontSize:9,fontWeight:700,color:T.gold,marginBottom:6}}>DRILL HISTORY</div>
                       {recs.slice(0,5).map(r=>(
-                        <div key={r.id} style={{background:T.panel2,borderRadius:7,padding:"8px 12px",marginBottom:5,fontSize:9,color:T.muted,display:"flex",gap:10,alignItems:"flex-start"}}>
+                        <div key={r.id} style={{background:T.panel2,borderRadius:7,padding:"8px 12px",marginBottom:5,fontSize:9,color:T.muted,display:"flex",gap:10,alignItems:"center"}}>
                           <div style={{fontWeight:700,color:T.text,minWidth:80}}>{r.drill_date}</div>
-                          <div>{r.location&&`📍 ${r.location} · `}{r.total_participants&&`👥 ${r.total_participants} participants · `}{r.conducted_by&&`👤 ${r.conducted_by}`}</div>
+                          <div style={{flex:1}}>{r.location&&`📍 ${r.location} · `}{r.total_participants&&`👥 ${r.total_participants} participants · `}{r.conducted_by&&`👤 ${r.conducted_by}`}</div>
                           {r.corrective_actions&&<div style={{color:T.orange}}>⚡ CAPA raised</div>}
+                          <button onClick={()=>deleteRecord(r.id)} style={{padding:"2px 8px",borderRadius:5,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:9,cursor:"pointer",flexShrink:0}}>Delete</button>
                         </div>
                       ))}
                     </div>
