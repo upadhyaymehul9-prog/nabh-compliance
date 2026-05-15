@@ -2664,6 +2664,7 @@ function CommitteeCalendarScreen({ hospitalId }) {
   const [year,setYear]=useState(new Date().getFullYear());
   const [loading,setLoading]=useState(true);
   const [viewMode,setViewMode]=useState("committee");
+  const [popup,setPopup]=useState(null); // {committeeId, monthNum, dateVal, saving}
 
   const MONTHS=["Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar"];
   const MONTH_NUMS=[4,5,6,7,8,9,10,11,12,1,2,3];
@@ -2715,6 +2716,41 @@ function CommitteeCalendarScreen({ hospitalId }) {
 
   const now=new Date();
   const isPast=(monthNum)=>{const mYear=monthNum>=4?year:year+1;return new Date(mYear,monthNum,1)<now;};
+
+  const getMeetingRecord=(committeeId,monthNum)=>meetings.find(m=>{
+    if(m.committee_id!==committeeId)return false;
+    const d=new Date(m.meeting_date);const mYear=d.getFullYear();const mMonth=d.getMonth()+1;
+    if(monthNum>=4)return mYear===year&&mMonth===monthNum;
+    return mYear===year+1&&mMonth===monthNum;
+  })||null;
+
+  const getMeetingDay=(committeeId,monthNum)=>{
+    const rec=getMeetingRecord(committeeId,monthNum);
+    return rec?new Date(rec.meeting_date).getDate():null;
+  };
+
+  const openPopup=(committeeId,monthNum)=>{
+    const rec=getMeetingRecord(committeeId,monthNum);
+    const targetYear=monthNum>=4?year:year+1;
+    const defaultDate=rec?new Date(rec.meeting_date).toISOString().split("T")[0]:`${targetYear}-${String(monthNum).padStart(2,"0")}-01`;
+    setPopup({committeeId,monthNum,dateVal:defaultDate,saving:false});
+  };
+
+  const saveDate=async()=>{
+    if(!popup||popup.saving)return;
+    setPopup(p=>({...p,saving:true}));
+    const{committeeId,monthNum,dateVal}=popup;
+    const targetYear=monthNum>=4?year:year+1;
+    const monthStart=`${targetYear}-${String(monthNum).padStart(2,"0")}-01`;
+    const nextM=monthNum===12?1:monthNum+1;const nextY=monthNum===12?targetYear+1:targetYear;
+    const monthEnd=`${nextY}-${String(nextM).padStart(2,"0")}-01`;
+    await supabase.from("committee_meetings").delete().eq("committee_id",committeeId).eq("hospital_id",hospitalId).gte("meeting_date",monthStart).lt("meeting_date",monthEnd);
+    if(dateVal){await supabase.from("committee_meetings").insert({committee_id:committeeId,hospital_id:hospitalId,meeting_date:dateVal});}
+    const{data}=await supabase.from("committee_meetings").select("committee_id,meeting_date").eq("hospital_id",hospitalId);
+    setMeetings(data||[]);
+    setPopup(null);
+  };
+
   const totalExpected=committees.reduce((sum,c)=>sum+freqMonths(c.frequency).length,0);
   const totalDone=committees.reduce((sum,c)=>sum+MONTH_NUMS.filter(m=>hasMeeting(c.id,m)).length,0);
   const pct=totalExpected>0?Math.round((totalDone/totalExpected)*100):0;
@@ -2732,16 +2768,31 @@ function CommitteeCalendarScreen({ hospitalId }) {
 
   return(
     <div>
-      <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:10,flexWrap:"wrap",gap:8}}>
+      {popup&&(
+        <div style={{position:"fixed",inset:0,zIndex:1000,display:"flex",alignItems:"center",justifyContent:"center",background:"rgba(0,0,0,0.55)"}} onClick={()=>setPopup(null)}>
+          <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"22px 26px",minWidth:270,boxShadow:"0 8px 40px #000c"}} onClick={e=>e.stopPropagation()}>
+            <div style={{fontSize:13,fontWeight:700,color:T.gold,marginBottom:4}}>Set Meeting Date</div>
+            <div style={{fontSize:10,color:T.muted,marginBottom:14}}>{MONTHS[MONTH_NUMS.indexOf(popup.monthNum)]} {popup.monthNum>=4?year:year+1}</div>
+            <input type="date" value={popup.dateVal} onChange={e=>setPopup(p=>({...p,dateVal:e.target.value}))}
+              style={{width:"100%",padding:"9px 11px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,marginBottom:14,boxSizing:"border-box"}}/>
+            <div style={{display:"flex",gap:8}}>
+              <button onClick={saveDate} disabled={popup.saving} style={{flex:1,padding:"9px",borderRadius:7,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontWeight:700,fontSize:13,cursor:"pointer",opacity:popup.saving?0.6:1}}>{popup.saving?"Saving…":"Save"}</button>
+              <button onClick={()=>setPopup(null)} style={{padding:"9px 16px",borderRadius:7,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:13,cursor:"pointer"}}>Cancel</button>
+            </div>
+          </div>
+        </div>
+      )}
+      <div style={{display:"grid",gridTemplateColumns:"1fr auto 1fr",alignItems:"center",marginBottom:10,gap:8}}>
         <div>
           <div style={{fontSize:13,fontWeight:700,color:T.gold}}>{viewMode==="committee"?"Committee Calendar":"Mock Drill Calendar"}</div>
           <div style={{fontSize:10,color:T.muted}}>FY {year}–{year+1}{viewMode==="committee"?` · ${totalDone}/${totalExpected} done · ${pct}%`:""}</div>
         </div>
-        <div style={{display:"flex",gap:6,alignItems:"center",flexWrap:"wrap"}}>
-          <div style={{display:"flex",borderRadius:7,border:`1px solid ${T.border}`,overflow:"hidden"}}>
-            <button onClick={()=>setViewMode("committee")} style={{padding:"4px 10px",fontSize:9,cursor:"pointer",background:viewMode==="committee"?T.goldD:"transparent",border:"none",color:viewMode==="committee"?T.goldL:T.muted}}>🏛️ Committees</button>
-            <button onClick={()=>setViewMode("drill")} style={{padding:"4px 10px",fontSize:9,cursor:"pointer",background:viewMode==="drill"?T.goldD:"transparent",border:"none",color:viewMode==="drill"?T.goldL:T.muted}}>🚨 Drills</button>
-          </div>
+        <div style={{display:"flex",borderRadius:8,border:`1px solid ${T.border}`,overflow:"hidden"}}>
+          <button onClick={()=>setViewMode("committee")} style={{padding:"7px 18px",fontSize:14,fontWeight:700,cursor:"pointer",background:viewMode==="committee"?T.goldD:"transparent",border:"none",color:viewMode==="committee"?T.goldL:T.muted,letterSpacing:0.2}}>🏛️ Committees</button>
+          <div style={{width:1,background:T.border}}/>
+          <button onClick={()=>setViewMode("drill")} style={{padding:"7px 18px",fontSize:14,fontWeight:700,cursor:"pointer",background:viewMode==="drill"?T.goldD:"transparent",border:"none",color:viewMode==="drill"?T.goldL:T.muted,letterSpacing:0.2}}>🚨 Drills</button>
+        </div>
+        <div style={{display:"flex",gap:6,alignItems:"center",justifyContent:"flex-end"}}>
           <button onClick={()=>setYear(y=>y-1)} style={{padding:"3px 8px",borderRadius:5,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:10,cursor:"pointer"}}>◀</button>
           <div style={{fontSize:10,fontWeight:700,color:T.gold,padding:"3px 10px",borderRadius:5,border:`1px solid ${T.gold}`,background:T.goldD}}>FY {year}–{year+1}</div>
           <button onClick={()=>setYear(y=>y+1)} style={{padding:"3px 8px",borderRadius:5,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:10,cursor:"pointer"}}>▶</button>
@@ -2775,12 +2826,13 @@ function CommitteeCalendarScreen({ hospitalId }) {
                       const isDone=hasMeeting(c.id,mn);
                       const isExp=freqMonths(c.frequency).includes(mn);
                       const past=isPast(mn);
+                      const dayNum=getMeetingDay(c.id,mn);
                       let bg="transparent",txt="",brd="none";
-                      if(isDone){bg=T.green;txt="✓";}
+                      if(isDone){bg=T.green;txt=dayNum||"✓";}
                       else if(isExp&&!past){bg="#1A3A5A";txt="·";brd=`1px dashed ${T.gold}`;}
                       else if(isExp&&past){bg=T.red;txt="✗";}
                       return(
-                        <td key={mi} style={{padding:"2px",textAlign:"center",border:`1px solid ${T.border}`}}>
+                        <td key={mi} onClick={()=>openPopup(c.id,mn)} style={{padding:"2px",textAlign:"center",border:`1px solid ${T.border}`,cursor:"pointer"}}>
                           <div style={{width:24,height:24,borderRadius:3,background:bg,margin:"0 auto",display:"flex",alignItems:"center",justifyContent:"center",fontSize:8,color:"#fff",fontWeight:700,border:brd}}>{txt}</div>
                         </td>
                       );
