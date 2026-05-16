@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nabh-compliance/static/css/main.e6c13ad2.css",
-    "main.js": "/nabh-compliance/static/js/main.3a036585.js",
+    "main.js": "/nabh-compliance/static/js/main.b307a222.js",
     "static/js/453.24a10743.chunk.js": "/nabh-compliance/static/js/453.24a10743.chunk.js",
     "index.html": "/nabh-compliance/index.html",
     "main.e6c13ad2.css.map": "/nabh-compliance/static/css/main.e6c13ad2.css.map",
-    "main.3a036585.js.map": "/nabh-compliance/static/js/main.3a036585.js.map",
+    "main.b307a222.js.map": "/nabh-compliance/static/js/main.b307a222.js.map",
     "453.24a10743.chunk.js.map": "/nabh-compliance/static/js/453.24a10743.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.3a036585.js"
+    "static/js/main.b307a222.js"
   ]
 }
