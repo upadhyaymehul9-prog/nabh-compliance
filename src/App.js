@@ -356,6 +356,8 @@ function LoginScreen({ onLogin, initialError }) {
     });
     if(err){setError(err.message);setLoading(false);}
   };
+  if(mode==='terms') return <TermsScreen onBack={()=>setMode('login')}/>;
+  if(mode==='privacy') return <PrivacyScreen onBack={()=>setMode('login')}/>;
   return (
     <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"Segoe UI,system-ui,sans-serif"}}>
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:16,padding:"40px 36px",width:360}}>
@@ -367,6 +369,10 @@ function LoginScreen({ onLogin, initialError }) {
         </div>
         {error&&<div style={{background:T.redD,border:`1px solid ${T.red}40`,borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:11,color:T.red}}>{error}</div>}
         {msg&&<div style={{background:T.greenD,border:`1px solid ${T.green}40`,borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:11,color:T.green}}>{msg}</div>}
+        <div style={{textAlign:'center',padding:'0 0 20px 0',marginBottom:20,borderBottom:'1px solid #0f2640'}}>
+          <div style={{fontFamily:'Georgia,serif',fontSize:13,fontStyle:'italic',color:'#c8dcea',lineHeight:1.8}}>"An investment in knowledge pays the best interest."</div>
+          <div style={{fontSize:10,color:'#3a5870',marginTop:6,letterSpacing:2}}>— BENJAMIN FRANKLIN</div>
+        </div>
         <div style={{marginBottom:14}}>
           <div style={{fontSize:10,color:T.muted,marginBottom:6}}>EMAIL</div>
           <input value={email} onChange={e=>setEmail(e.target.value)} placeholder="admin@hospital.com" type="email"
@@ -396,6 +402,11 @@ function LoginScreen({ onLogin, initialError }) {
             <div style={{textAlign:"center",marginTop:12,fontSize:11,color:T.muted}}>
               <span onClick={()=>{setMode("reset");setError("");setMsg("");}} style={{color:T.blue,cursor:"pointer"}}>Forgot password?</span>
             </div>
+            <div style={{display:'flex',gap:20,justifyContent:'center',marginTop:14,flexWrap:'wrap'}}>
+              <a href="mailto:upadhyay.mehul9@gmail.com" style={{fontSize:10,color:'#3a5870',textDecoration:'none',letterSpacing:1,textTransform:'uppercase'}}>Contact Us</a>
+              <span onClick={()=>setMode('terms')} style={{fontSize:10,color:'#3a5870',cursor:'pointer',letterSpacing:1,textTransform:'uppercase'}}>Terms & Conditions</span>
+              <span onClick={()=>setMode('privacy')} style={{fontSize:10,color:'#3a5870',cursor:'pointer',letterSpacing:1,textTransform:'uppercase'}}>Privacy Policy</span>
+            </div>
           </>
         )}
         <div style={{textAlign:"center",marginTop:10,fontSize:11,color:T.muted}}>
@@ -413,6 +424,56 @@ function LoginScreen({ onLogin, initialError }) {
     </div>
   );
 }
+function TermsScreen({onBack}){return(
+    <div style={{minHeight:'100vh',background:'#050e1a',color:'#c8dcea',fontFamily:'Segoe UI,sans-serif',padding:'40px 24px',maxWidth:720,margin:'0 auto'}}>
+      <button onClick={onBack} style={{background:'transparent',border:'1px solid #0f2640',color:'#3a5870',padding:'6px 16px',borderRadius:6,cursor:'pointer',fontSize:11,marginBottom:32}}>← Back to Login</button>
+      <div style={{color:'#c9a84c',fontSize:10,letterSpacing:3,marginBottom:8,textTransform:'uppercase'}}>AccredReady</div>
+      <h1 style={{fontFamily:'Georgia,serif',fontSize:28,fontWeight:300,color:'#eef4f9',marginBottom:6}}>Terms & Conditions</h1>
+      <div style={{fontSize:10,color:'#3a5870',letterSpacing:1,marginBottom:32}}>Effective Date: 19 May 2026</div>
+      {[
+        ['1. Acceptance','By using AccredReady at accredready.in, you agree to these terms. If you disagree, do not use the platform.'],
+        ['2. What AccredReady Is','AccredReady is an independent educational preparation tool for healthcare accreditation. It is not affiliated with, endorsed by, or officially connected to any accreditation body including any government authority.'],
+        ['3. Your Account','You are responsible for keeping your login credentials secure. You agree to provide accurate information. We may suspend accounts that violate these terms.'],
+        ['4. Subscription & Payment','Plans: ₹499/month (Starter), ₹999/month (Professional), ₹2,999/month (Consultant). 14-day free trial for new users — no payment required. Payment via UPI or bank transfer. Cancel anytime by emailing upadhyay.mehul9@gmail.com. No refunds for partial months used.'],
+        ['5. Acceptable Use','You agree not to share your account, attempt to access other users data, copy or reproduce platform content, or use the platform for any unlawful purpose.'],
+        ['6. Intellectual Property','All content, design, and code is owned by AccredReady / Dr. Mehul Upadhyay. No reproduction without written permission.'],
+        ['7. Disclaimer','AccredReady does not guarantee accreditation outcomes. All accreditation decisions rest with the relevant accreditation body. Always verify content against official published standards.'],
+        ['8. Limitation of Liability','AccredReady is not liable for any indirect, incidental, or consequential damages arising from use of the platform.'],
+        ['9. Governing Law','These terms are governed by Indian law. Disputes are subject to courts in Gujarat, India.'],
+        ['10. Changes','We may update these terms. Continued use after changes means acceptance.'],
+        ['11. Contact','Email: upadhyay.mehul9@gmail.com'],
+      ].map(([title,body])=>(
+        <div key={title} style={{marginBottom:20}}>
+          <div style={{fontSize:11,fontWeight:700,color:'#c9a84c',letterSpacing:1,textTransform:'uppercase',marginBottom:6}}>{title}</div>
+          <div style={{fontSize:13,color:'#c8dcea',lineHeight:1.8}}>{body}</div>
+        </div>
+      ))}
+    </div>
+  );}
+function PrivacyScreen({onBack}){return(
+    <div style={{minHeight:'100vh',background:'#050e1a',color:'#c8dcea',fontFamily:'Segoe UI,sans-serif',padding:'40px 24px',maxWidth:720,margin:'0 auto'}}>
+      <button onClick={onBack} style={{background:'transparent',border:'1px solid #0f2640',color:'#3a5870',padding:'6px 16px',borderRadius:6,cursor:'pointer',fontSize:11,marginBottom:32}}>← Back to Login</button>
+      <div style={{color:'#c9a84c',fontSize:10,letterSpacing:3,marginBottom:8,textTransform:'uppercase'}}>AccredReady</div>
+      <h1 style={{fontFamily:'Georgia,serif',fontSize:28,fontWeight:300,color:'#eef4f9',marginBottom:6}}>Privacy Policy</h1>
+      <div style={{fontSize:10,color:'#3a5870',letterSpacing:1,marginBottom:32}}>Effective Date: 19 May 2026</div>
+      {[
+        ['1. What We Collect','Name and email address from Google or email signup. Hospital or facility name and data you enter including scores, KPIs, committees, and audit records. Basic usage logs for platform improvement.'],
+        ['2. How We Use It','To operate and maintain your account. To provide platform features. To send service emails only — not marketing.'],
+        ['3. Data Storage','Your data is stored on Supabase (PostgreSQL on AWS) with industry-standard encryption. We do not store data outside secured cloud infrastructure.'],
+        ['4. Data Sharing','We do not sell or share your data. The only exceptions are Supabase for infrastructure and Google for authentication — both necessary to operate the platform.'],
+        ['5. Your Rights','Access your data anytime from your account. Request correction of inaccurate data. Request full deletion — we remove all data within 30 days. Email upadhyay.mehul9@gmail.com to exercise any right.'],
+        ['6. Cookies','We use session cookies for authentication only. No tracking or advertising cookies are used.'],
+        ['7. Children','AccredReady is for healthcare professionals only. We do not knowingly collect data from anyone under 18 years of age.'],
+        ['8. Changes','We may update this policy. Registered users will be notified of significant changes by email.'],
+        ['9. Contact','Email: upadhyay.mehul9@gmail.com'],
+      ].map(([title,body])=>(
+        <div key={title} style={{marginBottom:20}}>
+          <div style={{fontSize:11,fontWeight:700,color:'#c9a84c',letterSpacing:1,textTransform:'uppercase',marginBottom:6}}>{title}</div>
+          <div style={{fontSize:13,color:'#c8dcea',lineHeight:1.8}}>{body}</div>
+        </div>
+      ))}
+    </div>
+  );}
 
 function SetupScreen({ user, onReady }) {
   const [hospital,setHospital]=useState(null);
@@ -921,7 +982,14 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
 
 function GapFixScreen({ assessmentId, gaps, onRefresh }) {
   const [sevFilter,setSevFilter]=useState("ALL"); const [capas,setCapas]=useState({}); const [saving,setSaving]=useState({});
-  const filtered=(gaps||[]).filter(g=>sevFilter==="ALL"||g.severity===sevFilter);
+  const [search, setSearch] = useState('');
+  const filteredGaps = (gaps||[]).filter(g => {
+    const matchesSev = sevFilter === 'ALL' || g.severity === sevFilter;
+    const matchesSearch = !search ||
+      g.oe_id?.toLowerCase().includes(search.toLowerCase()) ||
+      g.text?.toLowerCase().includes(search.toLowerCase());
+    return matchesSev && matchesSearch;
+  });
   const submitCapa=async(oeId)=>{
     const c=capas[oeId];if(!c?.finding||!c?.action)return;setSaving(p=>({...p,[oeId]:true}));
     await supabase.from("capa").upsert({assessment_id:assessmentId,oe_id:oeId,finding:c.finding,root_cause:c.root_cause||"",action_planned:c.action,action_type:c.action_type||"Process",responsible_person:c.person||"",target_date:c.date||null,status:"open"},{onConflict:"assessment_id,oe_id"});
@@ -929,13 +997,19 @@ function GapFixScreen({ assessmentId, gaps, onRefresh }) {
   };
   return (
     <div>
+      <input
+        value={search}
+        onChange={e=>setSearch(e.target.value)}
+        placeholder="Search gaps by OE ID or text (e.g. 'AAC.1.a', 'hand hygiene')..."
+        style={{width:'100%',padding:'10px 14px',borderRadius:8,border:'1px solid #0f2640',background:'#081525',color:'#eef4f9',fontSize:12,marginBottom:10,boxSizing:'border-box'}}
+      />
       <div style={{display:"flex",gap:8,marginBottom:14}}>
         {["ALL","CRITICAL","HIGH","MEDIUM","LOW"].map(s=><button key={s} onClick={()=>setSevFilter(s)} style={{padding:"5px 14px",borderRadius:8,fontSize:10,cursor:"pointer",background:sevFilter===s?`${sevColor(s)}20`:"transparent",border:`1px solid ${sevFilter===s?sevColor(s):T.border}`,color:sevFilter===s?sevColor(s):T.muted}}>{s}</button>)}
-        <div style={{marginLeft:"auto",fontSize:11,color:T.muted,alignSelf:"center"}}>{filtered.length} gaps</div>
+        <div style={{marginLeft:"auto",fontSize:11,color:T.muted,alignSelf:"center"}}>{filteredGaps.length} gaps</div>
       </div>
-      {filtered.length===0&&<div style={{textAlign:"center",color:T.muted,padding:"40px",fontSize:12}}>{(gaps||[]).length===0?"No gaps found. Score OEs first.":"No gaps at this severity level."}</div>}
+      {filteredGaps.length===0&&<div style={{textAlign:"center",color:T.muted,padding:"40px",fontSize:12}}>{(gaps||[]).length===0?"No gaps found. Score OEs first.":"No gaps at this severity level."}</div>}
       <div style={{display:"grid",gap:10}}>
-        {filtered.map(g=>{
+        {filteredGaps.map(g=>{
           const c=capas[g.oe_id]||{}; const expanded=c.expanded;
           return (
             <div key={g.oe_id} style={{background:T.panel,border:`1px solid ${sevColor(g.severity)}25`,borderRadius:12,overflow:"hidden"}}>
