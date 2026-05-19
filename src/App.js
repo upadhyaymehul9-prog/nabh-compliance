@@ -1471,6 +1471,24 @@ function KPIsScreen({ hospitalId }) {
     return Math.abs(value-bv)<0.001;
   };
 
+  const getResultColor=(result,target)=>{
+    if(!target)return '#c9a84c';
+    const t=target.trim();
+    if(t.includes('Decreasing')||t.includes('benchmark')||t.includes(';')||t.includes('1:')||t.includes('varies')||t.includes('trend'))return '#c9a84c';
+    const ltMatch=t.match(/^<\s*([\d.]+)/);
+    if(ltMatch)return result<parseFloat(ltMatch[1])?'#4caf7d':'#e05a5a';
+    const gtMatch=t.match(/^>\s*([\d.]+)/);
+    if(gtMatch)return result>parseFloat(gtMatch[1])?'#4caf7d':'#e05a5a';
+    return '#c9a84c';
+  };
+
+  const getResultLabel=(result,target)=>{
+    const color=getResultColor(result,target);
+    if(color==='#4caf7d')return '✅ Within target';
+    if(color==='#e05a5a')return '❌ Outside target';
+    return '📊 Compare with baseline';
+  };
+
   const calcAndSave=async(kpi)=>{
     const f=dataForm[kpi.id];
     if(!f||f.calc_num===""||f.calc_den===""){alert("Enter numerator and denominator.");return;}
@@ -1640,8 +1658,13 @@ function KPIsScreen({ hospitalId }) {
                       {saving===k.id?"Saving…":"🧮 Calculate & Save"}
                     </button>
                     {calcResult[k.id]!==undefined&&(
-                      <div style={{marginTop:8,fontSize:13,fontWeight:700,color:isWithinTarget(calcResult[k.id],k)?T.green:T.red}}>
-                        Result: {calcResult[k.id].toFixed(2)} {k.unit}
+                      <div style={{marginTop:8}}>
+                        <div style={{fontSize:13,fontWeight:700,color:getResultColor(calcResult[k.id],k.target)}}>
+                          Result: {calcResult[k.id].toFixed(2)} {k.unit}
+                        </div>
+                        <div style={{fontSize:10,color:getResultColor(calcResult[k.id],k.target),marginTop:2}}>
+                          {getResultLabel(calcResult[k.id],k.target)}
+                        </div>
                       </div>
                     )}
                   </div>
