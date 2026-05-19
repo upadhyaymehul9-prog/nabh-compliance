@@ -2,7 +2,7 @@
   "name": "nabh-compliance",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://upadhyaymehul9-prog.github.io/nabh-compliance",
+  "homepage": "https://accredready.in",
   "dependencies": {
     "@supabase/supabase-js": "^2.103.3",
     "@testing-library/dom": "^10.4.1",
