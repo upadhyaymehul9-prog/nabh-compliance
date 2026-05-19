@@ -1418,7 +1418,7 @@ function CommitteesScreen({ hospitalId }) {
 }
 
 // ── KPIs — with monthly data entry ───────────────────────────
-function KPIsScreen({ hospitalId }) {
+function KPIsScreen({ hospitalId, user }) {
   const [kpis,setKpis]=useState([]);
   const [kpiData,setKpiData]=useState([]); // existing monthly data
   const [loading,setLoading]=useState(true);
@@ -1429,6 +1429,9 @@ function KPIsScreen({ hospitalId }) {
   const [saving,setSaving]=useState(null);
   const [saveSuccess,setSaveSuccess]=useState(null);
   const [calcResult,setCalcResult]=useState({});
+  const [customTargets,setCustomTargets]=useState({});
+  const [editingTarget,setEditingTarget]=useState(null);
+  const [customTargetInput,setCustomTargetInput]=useState('');
 
   const now=new Date(); const curMonth=now.getMonth()+1; const curYear=now.getFullYear();
   const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -1436,11 +1439,18 @@ function KPIsScreen({ hospitalId }) {
   useEffect(()=>{
     supabase.from("kpis").select("*, source, source_doc").order("kpi_no").then(({data})=>setKpis(data||[]));
     if(hospitalId){
-      supabase.from("kpi_data").select("*").eq("hospital_id",hospitalId)
-        .order("year",{ascending:false}).order("month",{ascending:false})
-        .then(({data})=>{setKpiData(data||[]);setLoading(false);});
+      const loadData=async()=>{
+        const[{data:kdData},{data:ctData}]=await Promise.all([
+          supabase.from("kpi_data").select("*").eq("hospital_id",hospitalId).order("year",{ascending:false}).order("month",{ascending:false}),
+          user?.id?supabase.from("kpi_custom_targets").select("*").eq("user_id",user.id).eq("hospital_id",hospitalId):Promise.resolve({data:null})
+        ]);
+        setKpiData(kdData||[]);
+        if(ctData){const ctMap={};ctData.forEach(ct=>{ctMap[ct.kpi_id]=ct.custom_target;});setCustomTargets(ctMap);}
+        setLoading(false);
+      };
+      loadData();
     } else { setLoading(false); }
-  },[hospitalId]);
+  },[hospitalId,user]);
 
   const filtered=kpis.filter(k=>k.category===tab&&(!search||k.name.toLowerCase().includes(search.toLowerCase())||(k.dept||"").toLowerCase().includes(search.toLowerCase())));
   const depts=[...new Set(kpis.filter(k=>k.category==="dept_specific").map(k=>k.dept))].sort();
@@ -1460,6 +1470,16 @@ function KPIsScreen({ hospitalId }) {
     if(!dataForm[kpi.id]){
       setDataForm(f=>({...f,[kpi.id]:{month:curMonth,year:curYear,value:"",trend:"stable",capa_required:false,capa_notes:"",evidence_url:"",calc_num:"",calc_den:""}}));
     }
+  };
+
+  const saveCustomTarget=async(kpi)=>{
+    await supabase.from("kpi_custom_targets").upsert({
+      user_id:user.id,hospital_id:hospitalId,kpi_id:kpi.id,
+      custom_target:customTargetInput,updated_at:new Date().toISOString()
+    },{onConflict:"user_id,hospital_id,kpi_id"});
+    setCustomTargets(prev=>({...prev,[kpi.id]:customTargetInput}));
+    setEditingTarget(null);
+    setCustomTargetInput('');
   };
 
   const isWithinTarget=(value,kpi)=>{
@@ -1617,9 +1637,24 @@ function KPIsScreen({ hospitalId }) {
                     <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
                       <span style={{fontSize:10,color:T.muted}}>📋 {k.standard_ref}</span>
                       <span style={{fontSize:10,color:T.green,fontWeight:600}}>🎯 {k.target}</span>
+                      {customTargets[k.id]?(
+                        <span style={{fontSize:10,color:'#4caf7d',marginLeft:6}}>
+                          🎯 Custom: {customTargets[k.id]}
+                          <span onClick={e=>{e.stopPropagation();setEditingTarget(k.id);setCustomTargetInput(customTargets[k.id]);}} style={{cursor:'pointer',marginLeft:4,color:'#c9a84c'}}>✏️</span>
+                        </span>
+                      ):(
+                        <span onClick={e=>{e.stopPropagation();setEditingTarget(k.id);setCustomTargetInput('');}} style={{fontSize:10,color:'#3a5870',cursor:'pointer',marginLeft:6}}>+ Set custom target</span>
+                      )}
                       <span style={{fontSize:10,color:T.muted}}>📅 {k.frequency}</span>
                       {latest&&<span style={{fontSize:10,color:T.blue}}>Latest: {latest.value} ({MONTHS[latest.month-1]} {latest.year})</span>}
                     </div>
+                    {editingTarget===k.id&&(
+                      <div style={{display:'flex',gap:6,marginTop:6,alignItems:'center'}} onClick={e=>e.stopPropagation()}>
+                        <input value={customTargetInput} onChange={e=>setCustomTargetInput(e.target.value)} placeholder="e.g. <3% or >85%" style={{flex:1,padding:'4px 8px',borderRadius:6,border:'1px solid #0f2640',background:'#081525',color:'#eef4f9',fontSize:11}}/>
+                        <button onClick={()=>saveCustomTarget(k)} style={{padding:'4px 10px',borderRadius:6,background:'#c9a84c',border:'none',color:'#050e1a',fontSize:11,fontWeight:700,cursor:'pointer'}}>Save</button>
+                        <button onClick={()=>setEditingTarget(null)} style={{padding:'4px 8px',borderRadius:6,background:'transparent',border:'1px solid #3a5870',color:'#3a5870',fontSize:11,cursor:'pointer'}}>Cancel</button>
+                      </div>
+                    )}
                   </div>
                   <span style={{fontSize:14,color:T.muted}}>{isOpen?"▲":"▼"}</span>
                 </div>
@@ -1657,16 +1692,16 @@ function KPIsScreen({ hospitalId }) {
                     <button onClick={()=>calcAndSave(k)} disabled={saving===k.id} style={{padding:"7px 18px",borderRadius:7,background:T.blueD,border:`1px solid ${T.blue}`,color:T.blue,fontSize:11,fontWeight:700,cursor:"pointer"}}>
                       {saving===k.id?"Saving…":"🧮 Calculate & Save"}
                     </button>
-                    {calcResult[k.id]!==undefined&&(
+                    {calcResult[k.id]!==undefined&&(()=>{const effectiveTarget=customTargets[k.id]||k.target;return(
                       <div style={{marginTop:8}}>
-                        <div style={{fontSize:13,fontWeight:700,color:getResultColor(calcResult[k.id],k.target)}}>
+                        <div style={{fontSize:13,fontWeight:700,color:getResultColor(calcResult[k.id],effectiveTarget)}}>
                           Result: {calcResult[k.id].toFixed(2)} {k.unit}
                         </div>
-                        <div style={{fontSize:10,color:getResultColor(calcResult[k.id],k.target),marginTop:2}}>
-                          {getResultLabel(calcResult[k.id],k.target)}
+                        <div style={{fontSize:10,color:getResultColor(calcResult[k.id],effectiveTarget),marginTop:2}}>
+                          {getResultLabel(calcResult[k.id],effectiveTarget)}
                         </div>
                       </div>
-                    )}
+                    );})()}
                   </div>
 
                   {/* DATA ENTRY */}
@@ -3631,7 +3666,7 @@ export default function App() {
         {screen==="gaps"&&<GapFixScreen assessmentId={context?.assessmentId} gaps={gaps} onRefresh={()=>loadData(context)}/>}
         {screen==="committees"&&<CommitteesScreen hospitalId={context?.hospitalId}/>}
         {screen==="committee-calendar"&&<CommitteeCalendarScreen hospitalId={context?.hospitalId}/>}
-        {screen==="kpis"&&<KPIsScreen hospitalId={context?.hospitalId}/>}
+        {screen==="kpis"&&<KPIsScreen hospitalId={context?.hospitalId} user={user}/>}
         {screen==="checklists"&&<ChecklistsScreen hospitalId={context?.hospitalId}/>}
         {screen==="audits"&&<AuditsScreen hospitalId={context?.hospitalId}/>}
         {screen==="drills"&&<MockDrillsScreen hospitalId={context?.hospitalId}/>}
