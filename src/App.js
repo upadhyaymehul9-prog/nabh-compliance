@@ -3986,7 +3986,7 @@ function CommitteeCalendarScreen({ hospitalId }) {
                       </td>
                     );
                   })}
-                  <td style={{padding:"3px",textAlign:"center",fontSize:8,fontWeight:700,color:T.gold,border:`1px solid ${T.border}`}}>{d.months.length}</td>
+                  {(()=>{const actualDone=MONTH_NUMS.filter(m=>!!getMeetingDay(d.id,m,true)).length;const exp=d.months.length;return(<td style={{padding:"3px",textAlign:"center",fontSize:8,fontWeight:700,color:actualDone>=exp?T.green:actualDone>0?T.orange:T.red,border:`1px solid ${T.border}`}}>{actualDone>0?`${actualDone}/${exp}`:"—"}</td>);})()}
                 </tr>
               ))}
             </tbody>
