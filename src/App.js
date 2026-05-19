@@ -1428,12 +1428,13 @@ function KPIsScreen({ hospitalId }) {
   const [dataForm,setDataForm]=useState({}); // {kpiId: {month,year,value,trend,capa_required,capa_notes}}
   const [saving,setSaving]=useState(null);
   const [saveSuccess,setSaveSuccess]=useState(null);
+  const [calcResult,setCalcResult]=useState({});
 
   const now=new Date(); const curMonth=now.getMonth()+1; const curYear=now.getFullYear();
   const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
   useEffect(()=>{
-    supabase.from("kpis").select("*").order("kpi_no").then(({data})=>setKpis(data||[]));
+    supabase.from("kpis").select("*, source, source_doc").order("kpi_no").then(({data})=>setKpis(data||[]));
     if(hospitalId){
       supabase.from("kpi_data").select("*").eq("hospital_id",hospitalId)
         .order("year",{ascending:false}).order("month",{ascending:false})
@@ -1457,8 +1458,44 @@ function KPIsScreen({ hospitalId }) {
 
   const initForm=(kpi)=>{
     if(!dataForm[kpi.id]){
-      setDataForm(f=>({...f,[kpi.id]:{month:curMonth,year:curYear,value:"",trend:"stable",capa_required:false,capa_notes:"",evidence_url:""}}));
+      setDataForm(f=>({...f,[kpi.id]:{month:curMonth,year:curYear,value:"",trend:"stable",capa_required:false,capa_notes:"",evidence_url:"",calc_num:"",calc_den:""}}));
     }
+  };
+
+  const isWithinTarget=(value,kpi)=>{
+    const bv=parseFloat(kpi.benchmark_value);
+    if(isNaN(bv))return true;
+    const target=kpi.target||"";
+    if(target.startsWith("≥")||target.startsWith(">=")||target.startsWith(">"))return value>=bv;
+    if(target.startsWith("≤")||target.startsWith("<=")||target.startsWith("<"))return value<=bv;
+    return Math.abs(value-bv)<0.001;
+  };
+
+  const calcAndSave=async(kpi)=>{
+    const f=dataForm[kpi.id];
+    if(!f||f.calc_num===""||f.calc_den===""){alert("Enter numerator and denominator.");return;}
+    const num=parseFloat(f.calc_num);
+    const den=parseFloat(f.calc_den);
+    if(isNaN(num)||isNaN(den)||den===0){alert("Enter valid non-zero denominator.");return;}
+    const isPercent=(kpi.unit||"").toLowerCase().includes("%");
+    const result=isPercent?(num/den)*100:num/den;
+    setCalcResult(r=>({...r,[kpi.id]:result}));
+    setSaving(kpi.id);
+    const{error}=await supabase.from("kpi_data").upsert({
+      hospital_id:hospitalId,kpi_id:kpi.id,
+      numerator:num,denominator:den,
+      value:parseFloat(result.toFixed(4)),
+      benchmark:kpi.benchmark_value||null,
+      month:curMonth,year:curYear,
+      trend:"stable",capa_required:false
+    },{onConflict:"hospital_id,kpi_id,month,year"});
+    if(!error){
+      const{data}=await supabase.from("kpi_data").select("*").eq("hospital_id",hospitalId).order("year",{ascending:false}).order("month",{ascending:false});
+      setKpiData(data||[]);
+      setSaveSuccess(kpi.id);
+      setTimeout(()=>setSaveSuccess(null),2000);
+    } else { alert("Error: "+error.message); }
+    setSaving(null);
   };
 
   const saveKpiData=async(kpi)=>{
@@ -1470,14 +1507,16 @@ function KPIsScreen({ hospitalId }) {
     let error;
     if(existing){
       ({error}=await supabase.from("kpi_data").update({
-        value:parseFloat(f.value),trend:f.trend,capa_required:f.capa_required,capa_notes:f.capa_notes||null,evidence_url:f.evidence_url||null
+        value:parseFloat(f.value),trend:f.trend,capa_required:f.capa_required,capa_notes:f.capa_notes||null,evidence_url:f.evidence_url||null,
+        numerator:f.calc_num!==""?parseFloat(f.calc_num):null,denominator:f.calc_den!==""?parseFloat(f.calc_den):null
       }).eq("id",existing.id));
     } else {
       ({error}=await supabase.from("kpi_data").insert({
         hospital_id:hospitalId,kpi_id:kpi.id,
         month:parseInt(f.month),year:parseInt(f.year),
         value:parseFloat(f.value),benchmark:kpi.benchmark_value||null,
-        trend:f.trend,capa_required:f.capa_required,capa_notes:f.capa_notes||null,evidence_url:f.evidence_url||null
+        trend:f.trend,capa_required:f.capa_required,capa_notes:f.capa_notes||null,evidence_url:f.evidence_url||null,
+        numerator:f.calc_num!==""?parseFloat(f.calc_num):null,denominator:f.calc_den!==""?parseFloat(f.calc_den):null
       }));
     }
     if(!error){
@@ -1543,7 +1582,7 @@ function KPIsScreen({ hospitalId }) {
           const history=getKpiHistory(k.id);
           const latest=getLatest(k.id);
           const status=trackingStatus(k.id);
-          const f=dataForm[k.id]||{month:curMonth,year:curYear,value:"",trend:"stable",capa_required:false,capa_notes:"",evidence_url:""};
+          const f=dataForm[k.id]||{month:curMonth,year:curYear,value:"",trend:"stable",capa_required:false,capa_notes:"",evidence_url:"",calc_num:"",calc_den:""};
 
           return (
             <div key={k.id} style={{background:T.panel,border:`1px solid ${k.is_mandatory?`${T.gold}25`:T.border}`,borderRadius:10,overflow:"hidden"}}>
@@ -1568,6 +1607,8 @@ function KPIsScreen({ hospitalId }) {
                 </div>
               </div>
 
+              {(k.source||k.source_doc)&&<div style={{fontSize:10,color:'#3a5870',marginTop:6,fontStyle:'italic',padding:"0 16px 10px"}}>📚 Source: {k.source} — {k.source_doc}</div>}
+
               {isOpen&&(
                 <div style={{borderTop:`1px solid ${T.border}`,padding:"14px 16px",display:"grid",gap:12}}>
                   {/* KPI definition */}
@@ -1581,6 +1622,29 @@ function KPIsScreen({ hospitalId }) {
                     <div style={{background:T.greenD,border:`1px solid ${T.green}30`,borderRadius:8,padding:"8px 12px",flex:1}}><div style={{fontSize:9,color:T.muted,marginBottom:3}}>TARGET</div><div style={{fontSize:11,color:T.green,fontWeight:700}}>{k.target}</div></div>
                   </div>
                   {k.remarks&&<div style={{fontSize:10,color:T.muted,fontStyle:"italic",lineHeight:1.5}}>💡 {k.remarks}</div>}
+
+                  {/* CALCULATOR */}
+                  <div style={{borderTop:`1px solid ${T.border}`,paddingTop:12}}>
+                    <div style={{fontSize:10,fontWeight:700,color:T.blue,marginBottom:10,letterSpacing:1}}>🧮 CALCULATOR</div>
+                    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:8}}>
+                      <div>
+                        <div style={{fontSize:8,color:T.muted,marginBottom:3}}>NUMERATOR — {k.numerator}</div>
+                        <input type="number" step="0.01" value={f.calc_num||""} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,calc_num:e.target.value}}))} placeholder="Enter value" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+                      </div>
+                      <div>
+                        <div style={{fontSize:8,color:T.muted,marginBottom:3}}>DENOMINATOR — {k.denominator}</div>
+                        <input type="number" step="0.01" value={f.calc_den||""} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,calc_den:e.target.value}}))} placeholder="Enter value" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+                      </div>
+                    </div>
+                    <button onClick={()=>calcAndSave(k)} disabled={saving===k.id} style={{padding:"7px 18px",borderRadius:7,background:T.blueD,border:`1px solid ${T.blue}`,color:T.blue,fontSize:11,fontWeight:700,cursor:"pointer"}}>
+                      {saving===k.id?"Saving…":"🧮 Calculate & Save"}
+                    </button>
+                    {calcResult[k.id]!==undefined&&(
+                      <div style={{marginTop:8,fontSize:13,fontWeight:700,color:isWithinTarget(calcResult[k.id],k)?T.green:T.red}}>
+                        Result: {calcResult[k.id].toFixed(2)} {k.unit}
+                      </div>
+                    )}
+                  </div>
 
                   {/* DATA ENTRY */}
                   <div style={{borderTop:`1px solid ${T.border}`,paddingTop:12}}>
