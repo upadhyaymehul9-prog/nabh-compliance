@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — NABH Compliance Engine</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #040d1a;
+    --bg2: #08192e;
+    --gold: #c9a84c;
+    --goldL: #f0d070;
+    --goldD: rgba(201,168,76,0.10);
+    --border: rgba(201,168,76,0.18);
+    --text: #e8e0cc;
+    --muted: #7a8a9a;
+    --green: #2d8a5e;
+    --red: #c0392b;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Background grid */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Nav */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(90deg, var(--bg), var(--bg2));
+    border-bottom: 1px solid var(--border);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.6);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .nav-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--gold), var(--goldL));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .nav-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 15px;
+    color: var(--goldL);
+    line-height: 1.2;
+  }
+
+  .nav-subtitle {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .nav-cta {
+    background: linear-gradient(135deg, var(--gold), var(--goldL));
+    color: var(--bg);
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .nav-cta:hover { opacity: 0.85; }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 80px 24px 60px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--goldD);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 6vw, 52px);
+    line-height: 1.15;
+    color: var(--goldL);
+    margin-bottom: 16px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero p {
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 520px;
+    margin: 0 auto 12px;
+  }
+
+  .hero-disclaimer {
+    font-size: 12px;
+    color: var(--muted);
+    opacity: 0.7;
+  }
+
+  /* Pricing card */
+  .pricing-wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    margin: 0 auto 80px;
+    padding: 0 24px;
+  }
+
+  .card {
+    background: linear-gradient(145deg, #0a1f38, #061528);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.08);
+    animation: fadeUp 0.6s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--goldL), var(--gold));
+  }
+
+  .card-glow {
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .plan-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+
+  .plan-name {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .plan-desc {
+    font-size: 13px;
+    color: var(--muted);
+    max-width: 260px;
+    line-height: 1.5;
+  }
+
+  .plan-badge {
+    background: var(--goldD);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--gold);
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+  }
+
+  .price-block {
+    margin-bottom: 32px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .price-main {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+
+  .price-currency {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--goldL);
+    line-height: 1;
+  }
+
+  .price-amount {
+    font-family: 'DM Serif Display', serif;
+    font-size: 64px;
+    line-height: 1;
+    color: var(--goldL);
+    letter-spacing: -2px;
+  }
+
+  .price-period {
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  .price-note {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .price-note strong {
+    color: var(--green);
+    font-weight: 600;
+  }
+
+  .trial-banner {
+    background: rgba(45,138,94,0.12);
+    border: 1px solid rgba(45,138,94,0.3);
+    border-radius: 10px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .trial-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .trial-text {
+    font-size: 13px;
+    color: #5ec994;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .trial-text span {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  /* Features */
+  .features-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+
+  .features-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.4;
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .feature-item:nth-child(1) { animation-delay: 0.1s; }
+  .feature-item:nth-child(2) { animation-delay: 0.15s; }
+  .feature-item:nth-child(3) { animation-delay: 0.2s; }
+  .feature-item:nth-child(4) { animation-delay: 0.25s; }
+  .feature-item:nth-child(5) { animation-delay: 0.3s; }
+  .feature-item:nth-child(6) { animation-delay: 0.35s; }
+  .feature-item:nth-child(7) { animation-delay: 0.4s; }
+  .feature-item:nth-child(8) { animation-delay: 0.45s; }
+  .feature-item:nth-child(9) { animation-delay: 0.5s; }
+  .feature-item:nth-child(10) { animation-delay: 0.55s; }
+
+  .feature-check {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgba(45,138,94,0.15);
+    border: 1px solid rgba(45,138,94,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--gold), var(--goldL));
+    border: none;
+    color: var(--bg);
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .cta-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(201,168,76,0.3);
+  }
+
+  .cta-sub {
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  /* Expert upsell */
+  .expert-card {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    margin: 0 auto 80px;
+    padding: 0 24px;
+    animation: fadeUp 0.7s ease 0.3s both;
+  }
+
+  .expert-inner {
+    background: rgba(201,168,76,0.04);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .expert-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--goldD);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .expert-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--goldL);
+    margin-bottom: 4px;
+  }
+
+  .expert-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .expert-desc a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* Stats */
+  .stats {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    padding: 40px 24px 60px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    color: var(--goldL);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* Footer */
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 24px;
+    font-size: 11px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+  }
+
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 480px) {
+    .card { padding: 28px 20px; }
+    .plan-header { flex-direction: column; gap: 10px; }
+    .stats { gap: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://upadhyaymehul9-prog.github.io/nabh-compliance/" class="nav-logo">
+    <div class="nav-icon">⚕</div>
+    <div>
+      <div class="nav-title">NABH Compliance Engine</div>
+      <div class="nav-subtitle">6th Edition · India</div>
+    </div>
+  </a>
+  <a href="https://upadhyaymehul9-prog.github.io/nabh-compliance/?app=1" class="nav-cta">Sign In →</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">⭐ Simple, transparent pricing</div>
+  <h1>One plan.<br><em>Everything included.</em></h1>
+  <p>Track all 639 NABH 6th Edition OEs, manage gaps, run audits, and stay accreditation-ready — for free during beta, then less than a cup of chai a day.</p>
+  <p class="hero-disclaimer">Free during beta. ₹99/month after launch. No contracts.</p>
+</section>
+
+<div class="pricing-wrapper">
+  <div class="card">
+    <div class="card-glow"></div>
+
+    <div class="plan-header">
+      <div>
+        <div class="plan-name">Basic Plan</div>
+        <div class="plan-desc">Everything your quality team needs to prepare for NABH accreditation.</div>
+      </div>
+      <div class="plan-badge">MOST POPULAR</div>
+    </div>
+
+    <div class="price-block">
+      <div class="price-main">
+        <span class="price-currency">₹</span>
+        <span class="price-amount">99</span>
+        <span class="price-period">/ month</span>
+      </div>
+      <div class="price-note">
+        <strong>Free during beta</strong> — paid plan launches soon
+      </div>
+    </div>
+
+    <div class="trial-banner">
+      <div class="trial-icon">🎁</div>
+      <div class="trial-text">
+        Free access during beta period
+        <span>Full access now. ₹99/month after beta launch. No card needed.</span>
+      </div>
+    </div>
+
+    <div class="features-title">Everything included</div>
+    <ul class="features-list">
+      <li class="feature-item">
+        <div class="feature-check">✓</div>
+        <span>All <strong>639 OEs</strong> across 10 NABH 6th Edition chapters with achieve tips</span>
+      </li>
+      <li class="feature-item">
+        <div class="feature-check">✓</div>
+        <span><strong>Real-time compliance score</strong> with CORE / Overall / Readiness verdict</span>
+      </li>
+      <li class="feature-item">
+        <div class="feature-check">✓</div>
+        <span><strong>Gap analysis</strong> — CRITICAL, HIGH, MEDIUM, LOW gaps auto-identified</span>
+      </li>
+      <li class="feature-item">
+        <div class="feature-check">✓</div>
+        <span><strong>CAPA workflow</strong> — log findings, assign responsible person, set target dates</span>
+      </li>
+      <li class="feature-item">
+        <div class="feature-check">✓</div>
+        <span><strong>26 committees</strong> with formation guides, quorum rules, and agenda templates</span>
+      </li>
+      <li class="feature-item">
+        <div class="feature-check">✓</div>
+        <span><strong>12 mandatory audits</strong> with step-by-step conduct guides</span>
+      </li>
+      <li class="feature-item">
+        <div class="feature-check">✓</div>
+        <span><strong>50 KPIs</strong> with targets, formulas, and NABH references</span>
+      </li>
+      <li class="feature-item">
+        <div class="feature-check">✓</div>
+        <span><strong>19 department checklists</strong> covering all hospital departments</span>
+      </li>
+      <li class="feature-item">
+        <div class="feature-check">✓</div>
+        <span><strong>Evidence linking</strong> — attach Drive/OneDrive links to each OE</span>
+      </li>
+      <li class="feature-item">
+        <div class="feature-check">✓</div>
+        <span><strong>Chapter heatmap</strong> and top gap dashboard for management review</span>
+      </li>
+    </ul>
+
+    <a href="https://upadhyaymehul9-prog.github.io/nabh-compliance/?app=1" class="cta-btn">
+      Start Free — Beta Access →
+    </a>
+    <div class="cta-sub">Free during beta · ₹99/month at launch · No card needed</div>
+  </div>
+</div>
+
+<div class="expert-card">
+  <div class="expert-inner">
+    <div class="expert-icon">👨‍⚕️</div>
+    <div>
+      <div class="expert-title">Need hands-on NABH guidance?</div>
+      <div class="expert-desc">
+        Our Basic plan guides your quality team independently. If you need a certified NABH consultant to visit, train staff, and prepare documents — we can connect you with verified experts.
+        <br><br>
+        <a href="mailto:dr.mehul_ku@yahoo.com?subject=NABH Expert Consultation Request">Contact us for expert referral →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat">
+    <div class="stat-number">639</div>
+    <div class="stat-label">OEs Covered</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number">26</div>
+    <div class="stat-label">Committees</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number">6th</div>
+    <div class="stat-label">Edition</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number">24/7</div>
+    <div class="stat-label">Access</div>
+  </div>
+</div>
+
+<footer>
+  NABH Compliance Engine — Independent educational tool — Not affiliated with NABH/QCI
+  <br style="margin-bottom:6px">
+  Built by <a href="mailto:dr.mehul_ku@yahoo.com">Dr. Mehul Upadhyay</a> · Ankleshwar, Gujarat
+</footer>
+
+<script>localStorage.setItem("nabh_returning","1");</script>
+</body>
+</html>
