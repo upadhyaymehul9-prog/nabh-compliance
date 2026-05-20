@@ -342,7 +342,6 @@ function LoginScreen({ onLogin, initialError }) {
       if(mode==="login"){const{data,error:err}=await supabase.auth.signInWithPassword({email,password:pass});if(err)throw err;onLogin(data.user);}
       else if(mode==="signup"){const{data,error:err}=await supabase.auth.signUp({email,password:pass});if(err)throw err;
         // Notify admin of new signup
-        try{new Image().src="https://script.google.com/macros/s/AKfycbwPC0nFw6b3BEcm73MydatfCFJG5Q5aeHAym4jL3Omil4J6c5LuR404-L-omdKVpBpg/exec?email="+encodeURIComponent(email);}catch(ex){}
         if(data.session)onLogin(data.user);else{setMsg("Account created. You can now sign in.");setMode("login");}}
       else if(mode==="reset"){if(!email.trim())throw new Error("Enter your email address first.");const{error:err}=await supabase.auth.resetPasswordForEmail(email,{redirectTo:"https://upadhyaymehul9-prog.github.io/nabh-compliance/"});if(err)throw err;setMsg("Password reset email sent! Check your inbox.");setMode("login");}
     }catch(e){setError(e.message);}
@@ -475,6 +474,189 @@ function PrivacyScreen({onBack}){return(
     </div>
   );}
 
+// ── ONBOARDING WIZARD (first-time users only, 1 step) ────────────────────
+function OnboardingScreen({ hospitalName, onDone }) {
+  const [nabh_status, setNabhStatus] = useState("");
+
+  const NABH_STATUSES = [
+    { id: "exploring",   icon: "🔍", label: "Just Exploring",       desc: "Want to understand NABH requirements" },
+    { id: "preparing",   icon: "📋", label: "Preparing to Apply",   desc: "Planning to apply within 6–12 months" },
+    { id: "applied",     icon: "📨", label: "Application Submitted", desc: "Already submitted NABH application" },
+    { id: "assessment",  icon: "🏥", label: "Assessment Scheduled",  desc: "Assessors visiting soon" },
+    { id: "consultant",  icon: "🤝", label: "NABH Consultant",       desc: "Managing multiple hospitals" },
+  ];
+
+  return (
+    <div style={{ minHeight: "100vh", background: T.bg, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Segoe UI,system-ui,sans-serif", padding: 16 }}>
+      <div style={{ background: T.panel, border: `1px solid ${T.border}`, borderRadius: 16, padding: "36px", width: 460, maxWidth: "100%" }}>
+        <div style={{ marginBottom: 24 }}>
+          <div style={{ fontSize: 8, letterSpacing: 3, color: T.gold, marginBottom: 8 }}>ACCREDREADY · SETUP</div>
+          <div style={{ fontSize: 20, fontWeight: 700, color: T.white, marginBottom: 4 }}>Welcome, {hospitalName}! 🎉</div>
+          <div style={{ fontSize: 11, color: T.muted, lineHeight: 1.6 }}>One quick question to personalise your experience.</div>
+        </div>
+
+        <div style={{ fontSize: 13, fontWeight: 700, color: T.white, marginBottom: 4 }}>Where are you in your NABH journey?</div>
+        <div style={{ fontSize: 10, color: T.muted, marginBottom: 16 }}>We'll tailor your dashboard based on your stage.</div>
+        <div style={{ display: "grid", gap: 8 }}>
+          {NABH_STATUSES.map(s => (
+            <div key={s.id} onClick={() => setNabhStatus(s.id)}
+              style={{ padding: "12px 16px", borderRadius: 10, border: `1px solid ${nabh_status === s.id ? T.gold : T.border}`, background: nabh_status === s.id ? T.goldD : T.panel2, cursor: "pointer", display: "flex", alignItems: "center", gap: 12, transition: "all 0.15s" }}>
+              <div style={{ fontSize: 20, flexShrink: 0 }}>{s.icon}</div>
+              <div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: nabh_status === s.id ? T.goldL : T.white }}>{s.label}</div>
+                <div style={{ fontSize: 10, color: T.muted, marginTop: 2 }}>{s.desc}</div>
+              </div>
+              {nabh_status === s.id && <div style={{ marginLeft: "auto", color: T.gold, fontSize: 16 }}>✓</div>}
+            </div>
+          ))}
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "flex-end", marginTop: 24 }}>
+          <button onClick={() => onDone({ nabh_status })} disabled={!nabh_status}
+            style={{ padding: "10px 24px", borderRadius: 9, background: nabh_status ? `linear-gradient(135deg,${T.gold},#f0d070)` : T.border, border: "none", color: nabh_status ? T.bg : T.muted, fontSize: 12, fontWeight: 700, cursor: nabh_status ? "pointer" : "default", transition: "all 0.2s" }}>
+            Continue →
+          </button>
+        </div>
+
+        <div style={{ textAlign: "center", marginTop: 14 }}>
+          <button onClick={() => onDone({ nabh_status: "preparing" })}
+            style={{ background: "transparent", border: "none", color: T.muted, fontSize: 10, cursor: "pointer", textDecoration: "underline" }}>
+            Skip →
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── PROGRAMME SELECTOR ────────────────────────────────────────────────────
+function ProgrammeSelector({ user, ctx, onSelect }) {
+  const [comingSoonModal, setComingSoonModal] = useState(null);
+  const [notifyDone, setNotifyDone] = useState(false);
+  const [notifyLoading, setNotifyLoading] = useState(false);
+
+  const programmes = [
+    {
+      key: "hco_full",
+      title: "NABH Hospital Accreditation",
+      subtitle: "HCO Full Accreditation",
+      badge: "6th Edition",
+      tags: ["51+ beds", "639 OEs"],
+      desc: "Full NABH accreditation for hospitals with 51 or more beds. The gold standard in Indian hospital accreditation.",
+      available: true,
+      icon: "🏥",
+      color: T.gold,
+    },
+    {
+      key: "hco_elc",
+      title: "Entry Level Certification",
+      subtitle: "Hospital Entry Level",
+      badge: "Coming Soon",
+      tags: ["51+ beds", "Stepping Stone to HCO"],
+      desc: "Entry-level certification for 51+ bed hospitals — a structured first step toward full HCO accreditation.",
+      available: false,
+      icon: "🎯",
+      color: T.blue,
+    },
+    {
+      key: "shco_full",
+      title: "SHCO Full Accreditation",
+      subtitle: "Small Hospital Full",
+      badge: "3rd Edition · Coming Soon",
+      tags: ["≤50 beds", "408 OEs"],
+      desc: "Full NABH accreditation for small hospitals with up to 50 beds. Comprehensive quality programme.",
+      available: false,
+      icon: "🏨",
+      color: T.orange,
+    },
+    {
+      key: "shco_elc",
+      title: "SHCO Entry Level Certification",
+      subtitle: "Small Hospital ELC",
+      badge: "Available",
+      tags: ["≤50 beds", "Docs & Licenses"],
+      desc: "Entry-level certification for hospitals with up to 50 beds. Document and license based — no OE scoring required.",
+      available: true,
+      icon: "📋",
+      color: T.green,
+    },
+  ];
+
+  const handleNotify = async (programme) => {
+    setNotifyLoading(true);
+    await supabase.from("programme_interest").insert({ user_id: user.id, programme });
+    setNotifyLoading(false);
+    setNotifyDone(true);
+  };
+
+  return (
+    <div style={{ minHeight: "100vh", background: T.bg, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Segoe UI,system-ui,sans-serif", padding: 24 }}>
+      <div style={{ width: "100%", maxWidth: 860 }}>
+        <div style={{ textAlign: "center", marginBottom: 36 }}>
+          <div style={{ width: 52, height: 52, borderRadius: 14, background: `linear-gradient(135deg,${T.gold},#f0d070)`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 26, margin: "0 auto 16px" }}>⚕</div>
+          <div style={{ fontSize: 9, letterSpacing: 3, color: T.gold, marginBottom: 8 }}>ACCREDREADY</div>
+          <div style={{ fontSize: 26, fontWeight: 700, color: T.white, fontFamily: "Georgia,serif", marginBottom: 8 }}>Select Your Programme</div>
+          <div style={{ fontSize: 12, color: T.muted }}>Choose the accreditation programme you are working towards. You can switch anytime.</div>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 16 }}>
+          {programmes.map(p => (
+            <div key={p.key}
+              onClick={() => p.available ? onSelect(p.key, ctx) : setComingSoonModal(p)}
+              style={{ background: T.panel, border: `1.5px solid ${T.border}`, borderRadius: 14, padding: "24px", cursor: "pointer", position: "relative", transition: "border-color 0.18s, background 0.18s" }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = p.color; e.currentTarget.style.background = T.panel2; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = T.border; e.currentTarget.style.background = T.panel; }}
+            >
+              <div style={{ position: "absolute", top: 14, right: 14, fontSize: 8, fontWeight: 700, letterSpacing: 1, padding: "3px 9px", borderRadius: 20, background: p.available ? `${p.color}20` : `${T.muted}18`, color: p.available ? p.color : T.muted, border: `1px solid ${p.available ? p.color : T.muted}40` }}>{p.badge}</div>
+              <div style={{ fontSize: 30, marginBottom: 12 }}>{p.icon}</div>
+              <div style={{ fontSize: 15, fontWeight: 800, color: T.white, marginBottom: 3 }}>{p.title}</div>
+              <div style={{ fontSize: 10, color: p.color, fontWeight: 600, marginBottom: 10 }}>{p.subtitle}</div>
+              <div style={{ display: "flex", gap: 6, marginBottom: 14, flexWrap: "wrap" }}>
+                {p.tags.map(tag => (
+                  <span key={tag} style={{ fontSize: 9, padding: "2px 8px", borderRadius: 8, background: T.panel2, border: `1px solid ${T.border}`, color: T.muted }}>{tag}</span>
+                ))}
+              </div>
+              <div style={{ fontSize: 11, color: T.text, lineHeight: 1.7, marginBottom: 16 }}>{p.desc}</div>
+              {p.available ? (
+                <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 11, fontWeight: 700, color: p.color }}>Open Dashboard <span>→</span></div>
+              ) : (
+                <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 11, color: T.muted }}><span>🔔</span> Notify me when available</div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {comingSoonModal && (
+        <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.72)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 1000, padding: 20 }}
+          onClick={() => { setComingSoonModal(null); setNotifyDone(false); }}>
+          <div style={{ background: T.panel, border: `1px solid ${T.border}`, borderRadius: 16, padding: "36px", width: 380, maxWidth: "100%" }} onClick={e => e.stopPropagation()}>
+            <div style={{ textAlign: "center", marginBottom: 20 }}>
+              <div style={{ fontSize: 40, marginBottom: 12 }}>🚧</div>
+              <div style={{ fontSize: 18, fontWeight: 700, color: T.white, marginBottom: 8 }}>{comingSoonModal.title}</div>
+              <div style={{ fontSize: 11, color: T.muted, lineHeight: 1.7 }}>This programme is coming soon. We're actively building it — register your interest and we'll notify you when it launches.</div>
+            </div>
+            {notifyDone ? (
+              <div style={{ textAlign: "center", padding: "14px", background: T.greenD, border: `1px solid ${T.green}40`, borderRadius: 10, color: T.green, fontSize: 12, fontWeight: 700 }}>
+                ✓ You're on the list! We'll notify you when it launches.
+              </div>
+            ) : (
+              <button onClick={() => handleNotify(comingSoonModal.key)} disabled={notifyLoading}
+                style={{ width: "100%", padding: "12px", borderRadius: 10, background: `linear-gradient(135deg,${T.gold},#f0d070)`, border: "none", color: T.bg, fontSize: 13, fontWeight: 700, cursor: "pointer", opacity: notifyLoading ? 0.7 : 1 }}>
+                {notifyLoading ? "Saving…" : "🔔 Notify me when available"}
+              </button>
+            )}
+            <button onClick={() => { setComingSoonModal(null); setNotifyDone(false); }}
+              style={{ width: "100%", marginTop: 10, padding: "10px", borderRadius: 10, background: "transparent", border: `1px solid ${T.border}`, color: T.muted, fontSize: 12, cursor: "pointer" }}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function SetupScreen({ user, onReady }) {
   const [hospital,setHospital]=useState(null);
   const [assessments,setAssessments]=useState([]);
@@ -483,19 +665,18 @@ function SetupScreen({ user, onReady }) {
   const [newAss,setNewAss]=useState("");
   const [loading,setLoading]=useState(true);
   const [error,setError]=useState("");
+  const [showOnboarding,setShowOnboarding]=useState(false);
 
   useEffect(()=>{init();},[]);
 
   const init=async()=>{
     setLoading(true);
-    // Load user's hospital (one per account)
     const{data:hosp}=await supabase.from("hospitals").select("*").limit(1).single();
     if(hosp){
       setHospital(hosp);
       const{data:ass}=await supabase.from("assessments").select("*").eq("hospital_id",hosp.id).order("created_at",{ascending:false});
       const assData=ass||[];
       setAssessments(assData);
-      // If only one assessment exists, auto-proceed
       if(assData.length===1){
         onReady({hospitalId:hosp.id,assessmentId:assData[0].id,hospitalName:hosp.name,assessmentName:assData[0].name});
         return;
@@ -512,6 +693,22 @@ function SetupScreen({ user, onReady }) {
     if(err){setError(err.message);setLoading(false);return;}
     await supabase.from("profiles").upsert({id:user.id,hospital_id:data.id,role:"admin",name:user.email});
     setHospital(data);setAssessments([]);setNewHosp("");setLoading(false);
+    setShowOnboarding(true);
+  };
+
+  const handleOnboardingDone=async({nabh_status})=>{
+    setShowOnboarding(false);
+    setLoading(true);
+    if(hospital){
+      await supabase.from("hospitals").update({nabh_status:nabh_status||"preparing"}).eq("id",hospital.id);
+    }
+    const assName=`NABH Assessment ${new Date().getFullYear()}`;
+    const{data:ass,error:assErr}=await supabase.from("assessments").insert({
+      hospital_id:hospital.id,name:assName,created_by:user.id,status:"in_progress"
+    }).select().single();
+    if(assErr){setError(assErr.message);setLoading(false);return;}
+    setLoading(false);
+    onReady({hospitalId:hospital.id,assessmentId:ass.id,hospitalName:hospital.name,assessmentName:assName});
   };
 
   const createAssessment=async()=>{
@@ -534,17 +731,20 @@ function SetupScreen({ user, onReady }) {
     </div>
   );
 
+  if(showOnboarding&&hospital) return (
+    <OnboardingScreen hospitalName={hospital.name} onDone={handleOnboardingDone}/>
+  );
+
   return (
     <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"Segoe UI,system-ui,sans-serif"}}>
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:16,padding:"36px",width:420}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:4}}>
-          <div style={{fontSize:8,letterSpacing:3,color:T.gold}}>NABH COMPLIANCE ENGINE</div>
+          <div style={{fontSize:8,letterSpacing:3,color:T.gold}}>ACCREDREADY</div>
           <button onClick={()=>supabase.auth.signOut()} style={{fontSize:10,color:T.muted,background:"transparent",border:`1px solid ${T.border}`,borderRadius:6,padding:"3px 10px",cursor:"pointer"}}>Sign out</button>
         </div>
 
         {error&&<div style={{background:T.redD,border:`1px solid ${T.red}40`,borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:11,color:T.red,marginTop:12}}>{error}</div>}
 
-        {/* No hospital yet — create one */}
         {!hospital&&(
           <>
             <div style={{fontSize:18,fontWeight:700,color:T.white,margin:"16px 0 8px"}}>Welcome! Set up your hospital</div>
@@ -558,7 +758,6 @@ function SetupScreen({ user, onReady }) {
           </>
         )}
 
-        {/* Hospital exists — select or create assessment */}
         {hospital&&(
           <>
             <div style={{fontSize:18,fontWeight:700,color:T.white,margin:"16px 0 4px"}}>{hospital.name}</div>
@@ -2905,6 +3104,7 @@ export default function App() {
   const [oes,setOes]=useState([]);
   const [standards,setStandards]=useState([]);
   const [loading,setLoading]=useState(false);
+  const [selectedProgramme, setSelectedProgramme] = useState("hco");
   const [shcoMode, setShcoMode] = useState('elc');
   const [shcoElcTab, setShcoElcTab] = useState('overview');
   const [shcoElcProgress, setShcoElcProgress] = useState({});
@@ -2993,13 +3193,22 @@ export default function App() {
     setLoading(false);
   },[]);
 
-  const handleReady=(ctx)=>{setContext(ctx);setAuthState("app");loadData(ctx);};
+  const handleReady=(ctx)=>{setContext(ctx);setAuthState("programme");};
   const handleSignOut=async()=>{await supabase.auth.signOut();};
+  const GAS_URL="https://script.google.com/macros/s/AKfycbwPC0nFw6b3BEcm73MydatfCFJG5Q5aeHAym4jL3Omil4J6c5LuR404-L-omdKVpBpg/exec";
+  const handleProgrammeSelect=(key,ctx)=>{
+    const resolvedCtx=ctx||context;
+    const programme=key==="hco_full"?"hco":key==="shco_elc"?"shco-elc":key;
+    try{fetch(GAS_URL,{method:"POST",body:JSON.stringify({email:user?.email,hospital_name:resolvedCtx?.hospitalName,programme})});}catch(ex){}
+    if(key==="hco_full"){setSelectedProgramme("hco");setScreen("dashboard");setAuthState("app");loadData(resolvedCtx);}
+    else if(key==="shco_elc"){setSelectedProgramme("shco-elc");setScreen("shco");setAuthState("app");loadData(resolvedCtx);}
+  };
 
   if(authState==="loading") return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",color:T.gold,fontFamily:"Segoe UI,sans-serif",fontSize:14}}>Loading…</div>;
   if(authState==="recovery") return <RecoveryScreen user={user} onDone={()=>{setUser(null);setAuthState("login");setContext(null);}}/>;
   if(authState==="login") return <LoginScreen onLogin={u=>{setUser(u);setAuthState("setup");}} initialError={authErrorMsg}/>;
   if(authState==="setup") return <SetupScreen user={user} onReady={handleReady}/>;
+  if(authState==="programme") return <ProgrammeSelector user={user} ctx={context} onSelect={handleProgrammeSelect}/>;
 
   const readinessColor=decision.readiness==="NOT READY"?T.red:decision.readiness==="RISKY"?T.orange:T.green;
   const verdictColor=decision.verdict==="FAIL"?T.red:decision.verdict==="PASS"?T.green:decision.verdict==="PARTIAL"?T.orange:T.blue;
@@ -3602,22 +3811,23 @@ export default function App() {
   );
   };
 
-  const NAV=[
-    {id:"dashboard",label:"Dashboard",icon:"📊"},
-    {id:"scoring",label:"Score OEs",icon:"✏️"},
-    {id:"gaps",label:"Fix Gaps",icon:"🔧"},
-    {id:"committees",label:"Committees",icon:"🏛️"},
-    {id:"committee-calendar",label:"Cal",icon:"📅"},
-    {id:"kpis",label:"KPIs",icon:"📈"},
-    {id:"checklists",label:"Checklists",icon:"✅"},
-    {id:"audits",label:"Audits",icon:"🔍"},
-    {id:"drills",label:"Drills",icon:"🚨"},
-    {id:"licenses",label:"Licenses",icon:"📋"},
-    {id:"tracer",label:"Tracer",icon:"🩺"},
-    {id:"pricing",label:"Pricing",icon:"💎"},
-    {id:"profile",label:"Profile",icon:"👤"},
-    {id:"shco",label:"SHCO",icon:"🏥"},
+  const ALL_NAV=[
+    {id:"dashboard",label:"Dashboard",icon:"📊",programmes:["hco"]},
+    {id:"scoring",label:"Score OEs",icon:"✏️",programmes:["hco"]},
+    {id:"gaps",label:"Fix Gaps",icon:"🔧",programmes:["hco"]},
+    {id:"committees",label:"Committees",icon:"🏛️",programmes:["hco"]},
+    {id:"committee-calendar",label:"Cal",icon:"📅",programmes:["hco"]},
+    {id:"kpis",label:"KPIs",icon:"📈",programmes:["hco"]},
+    {id:"checklists",label:"Checklists",icon:"✅",programmes:["hco"]},
+    {id:"audits",label:"Audits",icon:"🔍",programmes:["hco"]},
+    {id:"drills",label:"Drills",icon:"🚨",programmes:["hco"]},
+    {id:"licenses",label:"Licenses",icon:"📋",programmes:["hco"]},
+    {id:"tracer",label:"Tracer",icon:"🩺",programmes:["hco"]},
+    {id:"shco",label:"SHCO",icon:"🏥",programmes:["shco-elc"]},
+    {id:"pricing",label:"Pricing",icon:"💎",programmes:["hco","shco-elc"]},
+    {id:"profile",label:"Profile",icon:"👤",programmes:["hco","shco-elc"]},
   ];
+  const NAV=ALL_NAV.filter(n=>n.programmes.includes(selectedProgramme));
 
   return (
     <div style={{fontFamily:"Segoe UI,system-ui,sans-serif",background:T.bg,minHeight:"100vh",color:T.text}}>
@@ -3643,7 +3853,7 @@ export default function App() {
               <button key={n.id} onClick={()=>setScreen(n.id)} style={{padding:"4px 9px",borderRadius:7,border:`1px solid ${screen===n.id?T.gold:T.border}`,background:screen===n.id?T.goldD:"transparent",color:screen===n.id?T.goldL:T.muted,fontSize:9,cursor:"pointer"}}>{n.icon} {n.label}</button>
             ))}
           </div>
-          <button onClick={()=>setAuthState("setup")} style={{padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:9,cursor:"pointer"}}>Switch</button>
+          <button onClick={()=>setAuthState("programme")} style={{padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:9,cursor:"pointer"}}>Switch</button>
           <a href="https://drive.google.com/drive/folders/1DOfGmHg_dO5blXw_3Mz07dtre6IKYYlI" target="_blank" rel="noopener noreferrer" style={{padding:"4px 9px",borderRadius:7,background:T.goldD,border:`1px solid ${T.gold}`,color:T.goldL,fontSize:9,fontWeight:700,textDecoration:"none",whiteSpace:"nowrap"}}>📁 Docs</a>
           <button onClick={handleSignOut} style={{padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:9,cursor:"pointer"}}>Sign out</button>
         </div>
