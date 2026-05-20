@@ -3105,6 +3105,7 @@ export default function App() {
   const [standards,setStandards]=useState([]);
   const [loading,setLoading]=useState(false);
   const [selectedProgramme, setSelectedProgramme] = useState("hco");
+  const [webhookFired, setWebhookFired] = useState(false);
   const [shcoMode, setShcoMode] = useState('elc');
   const [shcoElcTab, setShcoElcTab] = useState('overview');
   const [shcoElcProgress, setShcoElcProgress] = useState({});
@@ -3199,7 +3200,7 @@ export default function App() {
   const handleProgrammeSelect=(key,ctx)=>{
     const resolvedCtx=ctx||context;
     const programme=key==="hco_full"?"hco":key==="shco_elc"?"shco-elc":key;
-    try{fetch(GAS_URL,{method:"POST",body:JSON.stringify({email:user?.email,hospital_name:resolvedCtx?.hospitalName,programme})});}catch(ex){}
+    if(!webhookFired){try{fetch(GAS_URL,{method:"POST",body:JSON.stringify({email:user?.email,hospital_name:resolvedCtx?.hospitalName,programme})});}catch(ex){}setWebhookFired(true);}
     if(key==="hco_full"){setSelectedProgramme("hco");setScreen("dashboard");setAuthState("app");loadData(resolvedCtx);}
     else if(key==="shco_elc"){setSelectedProgramme("shco-elc");setScreen("shco");setAuthState("app");loadData(resolvedCtx);}
   };
