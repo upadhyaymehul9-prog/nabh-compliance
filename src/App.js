@@ -678,7 +678,7 @@ function SetupScreen({ user, onReady }) {
       const assData=ass||[];
       setAssessments(assData);
       if(assData.length===1){
-        onReady({hospitalId:hosp.id,assessmentId:assData[0].id,hospitalName:hosp.name,assessmentName:assData[0].name,userEmail:user.email});
+        onReady({hospitalId:hosp.id,assessmentId:assData[0].id,hospitalName:hosp.name,assessmentName:assData[0].name,userEmail:user.email,userId:user.id});
         return;
       }
       if(assData.length>0)setSelAss(assData[0].id);
@@ -708,7 +708,7 @@ function SetupScreen({ user, onReady }) {
     }).select().single();
     if(assErr){setError(assErr.message);setLoading(false);return;}
     setLoading(false);
-    onReady({hospitalId:hospital.id,assessmentId:ass.id,hospitalName:hospital.name,assessmentName:assName,userEmail:user.email});
+    onReady({hospitalId:hospital.id,assessmentId:ass.id,hospitalName:hospital.name,assessmentName:assName,userEmail:user.email,userId:user.id});
   };
 
   const createAssessment=async()=>{
@@ -722,7 +722,7 @@ function SetupScreen({ user, onReady }) {
   const proceed=()=>{
     if(!hospital||!selAss)return;
     const ass=assessments.find(a=>a.id===selAss);
-    onReady({hospitalId:hospital.id,assessmentId:selAss,hospitalName:hospital.name,assessmentName:ass?.name,userEmail:user.email});
+    onReady({hospitalId:hospital.id,assessmentId:selAss,hospitalName:hospital.name,assessmentName:ass?.name,userEmail:user.email,userId:user.id});
   };
 
   if(loading) return (
@@ -3105,7 +3105,6 @@ export default function App() {
   const [standards,setStandards]=useState([]);
   const [loading,setLoading]=useState(false);
   const [selectedProgramme, setSelectedProgramme] = useState("hco");
-  const [webhookFired, setWebhookFired] = useState(false);
   const [shcoMode, setShcoMode] = useState('elc');
   const [shcoElcTab, setShcoElcTab] = useState('overview');
   const [shcoElcProgress, setShcoElcProgress] = useState({});
@@ -3197,20 +3196,30 @@ export default function App() {
   const handleReady=(ctx)=>{setContext(ctx);setAuthState("programme");};
   const handleSignOut=async()=>{await supabase.auth.signOut();};
   const GAS_URL="https://script.google.com/macros/s/AKfycbwPC0nFw6b3BEcm73MydatfCFJG5Q5aeHAym4jL3Omil4J6c5LuR404-L-omdKVpBpg/exec";
-  const handleProgrammeSelect=(key,ctx)=>{
+  const handleProgrammeSelect=async(key,ctx)=>{
     const resolvedCtx=ctx||context;
     const programme=key==="hco_full"?"hco":key==="shco_elc"?"shco-elc":key;
     const email=resolvedCtx?.userEmail||user?.email;
-    console.log("[ProgrammeSelect] key:",key,"programme:",programme,"email:",email,"hospital:",resolvedCtx?.hospitalName,"webhookFired:",webhookFired);
-    if(!webhookFired){
-      console.log("[Webhook] Firing for:",email,"programme:",programme);
-      fetch(GAS_URL,{method:"POST",body:JSON.stringify({email,hospital_name:resolvedCtx?.hospitalName,programme})})
-        .then(r=>{console.log("[Webhook] Response status:",r.status);})
-        .catch(ex=>{console.error("[Webhook] Fetch error:",ex);});
-      setWebhookFired(true);
-    }
+    const userId=resolvedCtx?.userId||user?.id;
+    console.log("[ProgrammeSelect] key:",key,"programme:",programme,"email:",email,"userId:",userId,"hospital:",resolvedCtx?.hospitalName);
+    // Route immediately — don't block on Supabase check
     if(key==="hco_full"){setSelectedProgramme("hco");setScreen("dashboard");setAuthState("app");loadData(resolvedCtx);}
     else if(key==="shco_elc"){setSelectedProgramme("shco-elc");setScreen("shco");setAuthState("app");loadData(resolvedCtx);}
+    // Fire webhook only if no prior row in programme_interest for this user
+    if(userId){
+      const{data:existing}=await supabase.from("programme_interest").select("id").eq("user_id",userId).limit(1);
+      if(!existing||existing.length===0){
+        console.log("[Webhook] No prior record found — firing for:",email,"programme:",programme);
+        fetch(GAS_URL,{method:"POST",body:JSON.stringify({email,hospital_name:resolvedCtx?.hospitalName,programme})})
+          .then(r=>{console.log("[Webhook] Response status:",r.status);})
+          .catch(ex=>{console.error("[Webhook] Fetch error:",ex);});
+        await supabase.from("programme_interest").insert({user_id:userId,programme});
+      }else{
+        console.log("[Webhook] Skipped — prior record exists for user:",userId);
+      }
+    }else{
+      console.warn("[Webhook] Skipped — userId not available");
+    }
   };
 
   if(authState==="loading") return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",color:T.gold,fontFamily:"Segoe UI,sans-serif",fontSize:14}}>Loading…</div>;
