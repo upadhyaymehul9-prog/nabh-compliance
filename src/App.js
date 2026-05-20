@@ -678,7 +678,7 @@ function SetupScreen({ user, onReady }) {
       const assData=ass||[];
       setAssessments(assData);
       if(assData.length===1){
-        onReady({hospitalId:hosp.id,assessmentId:assData[0].id,hospitalName:hosp.name,assessmentName:assData[0].name});
+        onReady({hospitalId:hosp.id,assessmentId:assData[0].id,hospitalName:hosp.name,assessmentName:assData[0].name,userEmail:user.email});
         return;
       }
       if(assData.length>0)setSelAss(assData[0].id);
@@ -708,7 +708,7 @@ function SetupScreen({ user, onReady }) {
     }).select().single();
     if(assErr){setError(assErr.message);setLoading(false);return;}
     setLoading(false);
-    onReady({hospitalId:hospital.id,assessmentId:ass.id,hospitalName:hospital.name,assessmentName:assName});
+    onReady({hospitalId:hospital.id,assessmentId:ass.id,hospitalName:hospital.name,assessmentName:assName,userEmail:user.email});
   };
 
   const createAssessment=async()=>{
@@ -722,7 +722,7 @@ function SetupScreen({ user, onReady }) {
   const proceed=()=>{
     if(!hospital||!selAss)return;
     const ass=assessments.find(a=>a.id===selAss);
-    onReady({hospitalId:hospital.id,assessmentId:selAss,hospitalName:hospital.name,assessmentName:ass?.name});
+    onReady({hospitalId:hospital.id,assessmentId:selAss,hospitalName:hospital.name,assessmentName:ass?.name,userEmail:user.email});
   };
 
   if(loading) return (
@@ -3200,7 +3200,15 @@ export default function App() {
   const handleProgrammeSelect=(key,ctx)=>{
     const resolvedCtx=ctx||context;
     const programme=key==="hco_full"?"hco":key==="shco_elc"?"shco-elc":key;
-    if(!webhookFired){try{fetch(GAS_URL,{method:"POST",body:JSON.stringify({email:user?.email,hospital_name:resolvedCtx?.hospitalName,programme})});}catch(ex){}setWebhookFired(true);}
+    const email=resolvedCtx?.userEmail||user?.email;
+    console.log("[ProgrammeSelect] key:",key,"programme:",programme,"email:",email,"hospital:",resolvedCtx?.hospitalName,"webhookFired:",webhookFired);
+    if(!webhookFired){
+      console.log("[Webhook] Firing for:",email,"programme:",programme);
+      fetch(GAS_URL,{method:"POST",body:JSON.stringify({email,hospital_name:resolvedCtx?.hospitalName,programme})})
+        .then(r=>{console.log("[Webhook] Response status:",r.status);})
+        .catch(ex=>{console.error("[Webhook] Fetch error:",ex);});
+      setWebhookFired(true);
+    }
     if(key==="hco_full"){setSelectedProgramme("hco");setScreen("dashboard");setAuthState("app");loadData(resolvedCtx);}
     else if(key==="shco_elc"){setSelectedProgramme("shco-elc");setScreen("shco");setAuthState("app");loadData(resolvedCtx);}
   };
