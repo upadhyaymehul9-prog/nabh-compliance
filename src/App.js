@@ -341,7 +341,6 @@ function LoginScreen({ onLogin, initialError }) {
     try{
       if(mode==="login"){const{data,error:err}=await supabase.auth.signInWithPassword({email,password:pass});if(err)throw err;onLogin(data.user);}
       else if(mode==="signup"){const{data,error:err}=await supabase.auth.signUp({email,password:pass});if(err)throw err;
-        // Notify admin of new signup
         if(data.session)onLogin(data.user);else{setMsg("Account created. You can now sign in.");setMode("login");}}
       else if(mode==="reset"){if(!email.trim())throw new Error("Enter your email address first.");const{error:err}=await supabase.auth.resetPasswordForEmail(email,{redirectTo:"https://upadhyaymehul9-prog.github.io/nabh-compliance/"});if(err)throw err;setMsg("Password reset email sent! Check your inbox.");setMode("login");}
     }catch(e){setError(e.message);}
@@ -532,7 +531,7 @@ function OnboardingScreen({ hospitalName, onDone }) {
 // ── PROGRAMME SELECTOR ────────────────────────────────────────────────────
 function ProgrammeSelector({ user, ctx, onSelect }) {
   const [comingSoonModal, setComingSoonModal] = useState(null);
-  const [notifyDone, setNotifyDone] = useState(false);
+  const [notifyDone, setNotifyDone] = useState({});
   const [notifyLoading, setNotifyLoading] = useState(false);
 
   const programmes = [
@@ -584,9 +583,10 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
 
   const handleNotify = async (programme) => {
     setNotifyLoading(true);
-    await supabase.from("programme_interest").insert({ user_id: user.id, programme });
+    const { error } = await supabase.from("programme_interest")
+      .upsert({ user_id: user.id, programme }, { onConflict: "user_id,programme", ignoreDuplicates: true });
     setNotifyLoading(false);
-    setNotifyDone(true);
+    if (!error) setNotifyDone(prev => ({ ...prev, [programme]: true }));
   };
 
   return (
@@ -629,14 +629,14 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
 
       {comingSoonModal && (
         <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.72)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 1000, padding: 20 }}
-          onClick={() => { setComingSoonModal(null); setNotifyDone(false); }}>
+          onClick={() => { setComingSoonModal(null); }}>
           <div style={{ background: T.panel, border: `1px solid ${T.border}`, borderRadius: 16, padding: "36px", width: 380, maxWidth: "100%" }} onClick={e => e.stopPropagation()}>
             <div style={{ textAlign: "center", marginBottom: 20 }}>
               <div style={{ fontSize: 40, marginBottom: 12 }}>🚧</div>
               <div style={{ fontSize: 18, fontWeight: 700, color: T.white, marginBottom: 8 }}>{comingSoonModal.title}</div>
               <div style={{ fontSize: 11, color: T.muted, lineHeight: 1.7 }}>This programme is coming soon. We're actively building it — register your interest and we'll notify you when it launches.</div>
             </div>
-            {notifyDone ? (
+            {notifyDone[comingSoonModal.key] ? (
               <div style={{ textAlign: "center", padding: "14px", background: T.greenD, border: `1px solid ${T.green}40`, borderRadius: 10, color: T.green, fontSize: 12, fontWeight: 700 }}>
                 ✓ You're on the list! We'll notify you when it launches.
               </div>
@@ -646,7 +646,7 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
                 {notifyLoading ? "Saving…" : "🔔 Notify me when available"}
               </button>
             )}
-            <button onClick={() => { setComingSoonModal(null); setNotifyDone(false); }}
+            <button onClick={() => { setComingSoonModal(null); }}
               style={{ width: "100%", marginTop: 10, padding: "10px", borderRadius: 10, background: "transparent", border: `1px solid ${T.border}`, color: T.muted, fontSize: 12, cursor: "pointer" }}>
               Close
             </button>
@@ -707,6 +707,12 @@ function SetupScreen({ user, onReady }) {
       hospital_id:hospital.id,name:assName,created_by:user.id,status:"in_progress"
     }).select().single();
     if(assErr){setError(assErr.message);setLoading(false);return;}
+    // Fire welcome email – non-blocking; won't break onboarding if the function is absent
+    supabase.functions.invoke("send-welcome-email",{body:{
+      email:user.email,
+      hospitalName:hospital.name,
+      nabh_status:nabh_status||"preparing"
+    }}).catch(()=>{});
     setLoading(false);
     onReady({hospitalId:hospital.id,assessmentId:ass.id,hospitalName:hospital.name,assessmentName:assName,userEmail:user.email,userId:user.id});
   };
@@ -3169,6 +3175,33 @@ export default function App() {
     return()=>subscription.unsubscribe();
   },[]);
 
+  // Load SHCO ELC progress from DB when entering that programme
+  useEffect(()=>{
+    if(selectedProgramme!=="shco-elc"||!context?.assessmentId)return;
+    supabase.from("shco_elc_progress")
+      .select("doc_progress,lic_progress")
+      .eq("assessment_id",context.assessmentId)
+      .maybeSingle()
+      .then(({data})=>{
+        if(data?.doc_progress)setShcoElcProgress(data.doc_progress);
+        if(data?.lic_progress)setShcoLicProgress(data.lic_progress);
+      });
+  },[selectedProgramme,context?.assessmentId]);
+
+  // Persist doc progress whenever it changes
+  useEffect(()=>{
+    if(selectedProgramme!=="shco-elc"||!context?.assessmentId||Object.keys(shcoElcProgress).length===0)return;
+    supabase.from("shco_elc_progress")
+      .upsert({assessment_id:context.assessmentId,doc_progress:shcoElcProgress},{onConflict:"assessment_id"});
+  },[shcoElcProgress]);// eslint-disable-line react-hooks/exhaustive-deps
+
+  // Persist lic progress whenever it changes
+  useEffect(()=>{
+    if(selectedProgramme!=="shco-elc"||!context?.assessmentId||Object.keys(shcoLicProgress).length===0)return;
+    supabase.from("shco_elc_progress")
+      .upsert({assessment_id:context.assessmentId,lic_progress:shcoLicProgress},{onConflict:"assessment_id"});
+  },[shcoLicProgress]);// eslint-disable-line react-hooks/exhaustive-deps
+
   const loadData=useCallback(async(ctx)=>{
     if(!ctx?.assessmentId)return;
     setLoading(true);const aid=ctx.assessmentId;
@@ -3198,7 +3231,7 @@ export default function App() {
   const handleProgrammeSelect=(key,ctx)=>{
     const resolvedCtx=ctx||context;
     if(key==="hco_full"){setSelectedProgramme("hco");setScreen("dashboard");setAuthState("app");loadData(resolvedCtx);}
-    else if(key==="shco_elc"){setSelectedProgramme("shco-elc");setScreen("shco");setAuthState("app");loadData(resolvedCtx);}
+    else if(key==="shco_elc"){setSelectedProgramme("shco-elc");setScreen("shco");setAuthState("app");}
   };
 
   if(authState==="loading") return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",color:T.gold,fontFamily:"Segoe UI,sans-serif",fontSize:14}}>Loading…</div>;
@@ -3843,8 +3876,8 @@ export default function App() {
             <div style={{fontSize:12,fontWeight:700,color:T.white}}>{context?.hospitalName||"Compliance Engine"}{context?.assessmentName&&<span style={{fontSize:9,color:T.muted,marginLeft:6}}>{context.assessmentName}</span>}</div>
           </div>
           {loading&&<div style={{fontSize:9,color:T.muted}}>Refreshing…</div>}
-          <div style={{padding:"3px 10px",borderRadius:20,background:`${readinessColor}15`,border:`1px solid ${readinessColor}40`,fontSize:9,fontWeight:700,color:readinessColor}}>{decision.readiness==="NOT READY"?"❌":decision.readiness==="RISKY"?"⚠️":"✅"} {decision.readiness||"—"}</div>
-          <div style={{padding:"3px 10px",borderRadius:20,background:`${verdictColor}20`,border:`1px solid ${verdictColor}40`,fontSize:10,fontWeight:800,color:verdictColor}}>{decision.verdict==="PARTIAL"?"⚠️":""}{decision.verdict||"—"}</div>
+          {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${readinessColor}15`,border:`1px solid ${readinessColor}40`,fontSize:9,fontWeight:700,color:readinessColor}}>{decision.readiness==="NOT READY"?"❌":decision.readiness==="RISKY"?"⚠️":"✅"} {decision.readiness||"—"}</div>}
+          {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${verdictColor}20`,border:`1px solid ${verdictColor}40`,fontSize:10,fontWeight:800,color:verdictColor}}>{decision.verdict==="PARTIAL"?"⚠️":""}{decision.verdict||"—"}</div>}
           <div style={{display:"flex",gap:3,flexWrap:"wrap"}}>
             {NAV.map(n=>(
               <button key={n.id} onClick={()=>setScreen(n.id)} style={{padding:"4px 9px",borderRadius:7,border:`1px solid ${screen===n.id?T.gold:T.border}`,background:screen===n.id?T.goldD:"transparent",color:screen===n.id?T.goldL:T.muted,fontSize:9,cursor:"pointer"}}>{n.icon} {n.label}</button>
@@ -3856,7 +3889,7 @@ export default function App() {
         </div>
       </div>
 
-      {(!decision.core_pass&&(decision.core_failures||0)>0)&&(
+      {selectedProgramme==="hco"&&(!decision.core_pass&&(decision.core_failures||0)>0)&&(
         <div style={{background:T.redD,padding:"8px 20px",display:"flex",gap:10,alignItems:"center"}}>
           <span style={{fontSize:16}}>🚨</span>
           <span style={{fontSize:11,fontWeight:700,color:T.red}}>
