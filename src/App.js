@@ -1120,12 +1120,10 @@ function Dashboard({ decision, gaps, onNav, hospitalName, assessmentName }) {
   return (
     <div>
       <VerdictBanner decision={decision}/>
-      <div style={{display:'flex',justifyContent:'flex-end',marginBottom:12}}>
-        <button onClick={generatePDF} disabled={pdfLoading}
-          style={{padding:'5px 14px',borderRadius:8,border:`1px solid ${T.gold}`,background:'transparent',color:T.gold,fontSize:10,fontWeight:700,cursor:pdfLoading?'default':'pointer',opacity:pdfLoading?0.6:1}}>
-          {pdfLoading?'⏳ Generating…':'⬇ Export PDF Report'}
-        </button>
-      </div>
+      <button onClick={generatePDF} disabled={pdfLoading}
+        style={{position:'fixed',bottom:20,right:20,zIndex:1000,padding:'8px 16px',borderRadius:9,border:`1px solid ${T.gold}`,background:T.bg,color:T.gold,fontSize:10,fontWeight:700,cursor:pdfLoading?'default':'pointer',opacity:pdfLoading?0.6:1,boxShadow:'0 2px 12px rgba(0,0,0,0.5)'}}>
+        {pdfLoading?'⏳ Generating…':'⬇ Export PDF'}
+      </button>
       {/* 4-Pillar Readiness */}
       <div style={{background:T.panel,border:`1px solid ${allReady?T.green:T.border}`,borderRadius:12,padding:"14px 16px",marginTop:14,marginBottom:14}}>
         <div style={{fontSize:9,letterSpacing:2,color:T.muted,marginBottom:10}}>ASSESSMENT READINESS — 4 PILLARS</div>
