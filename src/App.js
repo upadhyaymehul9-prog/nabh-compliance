@@ -898,9 +898,46 @@ function Dashboard({ decision, gaps, onNav }) {
   const statusLabel=s=>s==="READY"?"✅ Ready":s==="IN_PROGRESS"?"⚠️ In Progress":"❌ Not Started";
   const allReady=pillars.every(p=>p.status==="READY");
 
+  // ── Next Actions ───────────────────────────────────────────────
+  const nextActions=(()=>{
+    const items=[];
+    const coreIssues=(decision.core_unscored||0)+(decision.core_scored_failures||0);
+    if(decision.rule1_core===false&&coreIssues>0)
+      items.push({sev:3,color:T.red,text:`⚠️ ${coreIssues} CORE OE${coreIssues>1?"s":""} need attention — assessment will be rejected`,nav:"scoring"});
+    const scored=decision.scored_count||0;
+    if(scored<639)
+      items.push({sev:2,color:T.orange,text:`📝 Score remaining OEs — ${scored} of 639 scored so far`,nav:"scoring"});
+    if((gaps||[]).length>0)
+      items.push({sev:2,color:T.orange,text:`🔧 ${gaps.length} gap${gaps.length>1?"s":""} need corrective action`,nav:"gaps"});
+    if(!decision.kpi_ready){
+      const kt=decision.kpi_tracked||0;
+      items.push({sev:1,color:T.gold,text:kt===0?"📈 KPI tracking not started — assessors verify 3 months of data":`📈 KPI tracking incomplete — ${kt}/${decision.kpi_total||50} KPIs tracked`,nav:"kpis"});
+    }
+    if(!decision.comm_ready){
+      const ca=decision.comm_active||0;
+      items.push({sev:1,color:T.gold,text:ca===0?"🏛️ No committee meetings recorded":`🏛️ Committees not ready — ${ca}/26 active`,nav:"committees"});
+    }
+    items.push({sev:1,color:T.gold,text:"🚨 Mock drill records missing",nav:"drills"});
+    items.sort((a,b)=>b.sev-a.sev);
+    return items.slice(0,4);
+  })();
+
   return (
     <div>
       <VerdictBanner decision={decision}/>
+      {/* Next Actions */}
+      <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"14px 16px",marginTop:14,marginBottom:14}}>
+        <div style={{fontSize:9,letterSpacing:2,color:T.muted,marginBottom:10}}>WHAT TO DO NEXT</div>
+        {nextActions.length===0
+          ?<div style={{fontSize:11,color:T.green,textAlign:"center",padding:"8px 0"}}>✅ All key actions completed — you're on track!</div>
+          :nextActions.map((item,i)=>(
+            <div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"8px 10px",borderRadius:8,borderLeft:`3px solid ${item.color}`,background:`${item.color}10`,marginBottom:i<nextActions.length-1?6:0}}>
+              <div style={{flex:1,fontSize:11,color:T.text,lineHeight:1.4}}>{item.text}</div>
+              <button onClick={()=>onNav(item.nav)} style={{padding:"3px 9px",borderRadius:6,border:`1px solid ${item.color}40`,background:"transparent",color:item.color,fontSize:11,cursor:"pointer",flexShrink:0}}>→</button>
+            </div>
+          ))
+        }
+      </div>
       {/* 4-Pillar Readiness */}
       <div style={{background:T.panel,border:`1px solid ${allReady?T.green:T.border}`,borderRadius:12,padding:"14px 16px",marginTop:14,marginBottom:14}}>
         <div style={{fontSize:9,letterSpacing:2,color:T.muted,marginBottom:10}}>ASSESSMENT READINESS — 4 PILLARS</div>
