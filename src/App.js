@@ -3120,6 +3120,7 @@ export default function App() {
   const [shcoDocFilter, setShcoDocFilter] = useState('all');
   const [shcoDocPart, setShcoDocPart] = useState('all');
   const [pdfLoading, setPdfLoading] = useState(false);
+  const [showMoreMenu, setShowMoreMenu] = useState(false);
 
   const generatePDF = async () => {
     setPdfLoading(true);
@@ -3422,6 +3423,14 @@ export default function App() {
     supabase.from("shco_elc_progress")
       .upsert({assessment_id:context.assessmentId,lic_progress:shcoLicProgress},{onConflict:"assessment_id"});
   },[shcoLicProgress]);// eslint-disable-line react-hooks/exhaustive-deps
+
+  // Close ••• dropdown on outside click
+  useEffect(()=>{
+    if(!showMoreMenu)return;
+    const handler=()=>setShowMoreMenu(false);
+    document.addEventListener("click",handler);
+    return()=>document.removeEventListener("click",handler);
+  },[showMoreMenu]);
 
   const loadData=useCallback(async(ctx)=>{
     if(!ctx?.assessmentId)return;
@@ -4063,22 +4072,25 @@ export default function App() {
   };
 
   const ALL_NAV=[
-    {id:"dashboard",label:"Dashboard",icon:"📊",programmes:["hco"]},
-    {id:"scoring",label:"Score OEs",icon:"✏️",programmes:["hco"]},
-    {id:"gaps",label:"Fix Gaps",icon:"🔧",programmes:["hco"]},
-    {id:"committees",label:"Committees",icon:"🏛️",programmes:["hco"]},
-    {id:"committee-calendar",label:"Cal",icon:"📅",programmes:["hco"]},
-    {id:"kpis",label:"KPIs",icon:"📈",programmes:["hco"]},
-    {id:"checklists",label:"Checklists",icon:"✅",programmes:["hco"]},
-    {id:"audits",label:"Audits",icon:"🔍",programmes:["hco"]},
-    {id:"drills",label:"Drills",icon:"🚨",programmes:["hco"]},
-    {id:"licenses",label:"Licenses",icon:"📋",programmes:["hco"]},
-    {id:"tracer",label:"Tracer",icon:"🩺",programmes:["hco"]},
+    {id:"dashboard",label:"Dashboard",icon:"📊",programmes:["hco"],primary:true},
+    {id:"scoring",label:"Score OEs",icon:"✏️",programmes:["hco"],primary:true},
+    {id:"gaps",label:"Fix Gaps",icon:"🔧",programmes:["hco"],primary:true},
+    {id:"audits",label:"Audits",icon:"🔍",programmes:["hco"],primary:true},
+    {id:"drills",label:"Drills",icon:"🚨",programmes:["hco"],primary:true},
+    {id:"committees",label:"Committees",icon:"🏛️",programmes:["hco"],primary:false},
+    {id:"kpis",label:"KPIs",icon:"📈",programmes:["hco"],primary:false},
+    {id:"checklists",label:"Checklists",icon:"✅",programmes:["hco"],primary:false},
+    {id:"committee-calendar",label:"Cal",icon:"📅",programmes:["hco"],primary:false},
+    {id:"licenses",label:"Licenses",icon:"📋",programmes:["hco"],primary:false},
+    {id:"tracer",label:"Tracer",icon:"🩺",programmes:["hco"],primary:false},
+    {id:"pricing",label:"Pricing",icon:"💎",programmes:["hco","shco-elc"],primary:false},
+    {id:"profile",label:"Profile",icon:"👤",programmes:["hco","shco-elc"],primary:false},
     {id:"shco",label:"SHCO",icon:"🏥",programmes:["shco-elc"]},
-    {id:"pricing",label:"Pricing",icon:"💎",programmes:["hco","shco-elc"]},
-    {id:"profile",label:"Profile",icon:"👤",programmes:["hco","shco-elc"]},
   ];
   const NAV=ALL_NAV.filter(n=>n.programmes.includes(selectedProgramme));
+  const PRIMARY_NAV=NAV.filter(n=>n.primary);
+  const SECONDARY_NAV=NAV.filter(n=>!n.primary);
+  const secondaryActive=SECONDARY_NAV.some(n=>n.id===screen);
 
   return (
     <div style={{fontFamily:"Segoe UI,system-ui,sans-serif",background:T.bg,minHeight:"100vh",color:T.text}}>
@@ -4099,10 +4111,31 @@ export default function App() {
           {loading&&<div style={{fontSize:9,color:T.muted}}>Refreshing…</div>}
           {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${readinessColor}15`,border:`1px solid ${readinessColor}40`,fontSize:9,fontWeight:700,color:readinessColor}}>{decision.readiness==="NOT READY"?"❌":decision.readiness==="RISKY"?"⚠️":"✅"} {decision.readiness||"—"}</div>}
           {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${verdictColor}20`,border:`1px solid ${verdictColor}40`,fontSize:10,fontWeight:800,color:verdictColor}}>{decision.verdict==="PARTIAL"?"⚠️":""}{decision.verdict||"—"}</div>}
-          <div style={{display:"flex",gap:3,flexWrap:"wrap"}}>
-            {NAV.map(n=>(
+          <div style={{display:"flex",gap:3,flexWrap:"wrap",position:"relative"}}>
+            {PRIMARY_NAV.map(n=>(
               <button key={n.id} onClick={()=>setScreen(n.id)} style={{padding:"4px 9px",borderRadius:7,border:`1px solid ${screen===n.id?T.gold:T.border}`,background:screen===n.id?T.goldD:"transparent",color:screen===n.id?T.goldL:T.muted,fontSize:9,cursor:"pointer"}}>{n.icon} {n.label}</button>
             ))}
+            {SECONDARY_NAV.length>0&&(
+              <div style={{position:"relative"}}>
+                <button
+                  onClick={e=>{e.stopPropagation();setShowMoreMenu(v=>!v);}}
+                  style={{padding:"4px 9px",borderRadius:7,border:`1px solid ${secondaryActive||showMoreMenu?T.gold:T.border}`,background:secondaryActive||showMoreMenu?T.goldD:"transparent",color:secondaryActive||showMoreMenu?T.goldL:T.muted,fontSize:9,cursor:"pointer",letterSpacing:2}}
+                >•••</button>
+                {showMoreMenu&&(
+                  <div
+                    onClick={e=>e.stopPropagation()}
+                    style={{position:"absolute",top:"calc(100% + 6px)",right:0,background:"#08192e",border:`1px solid ${T.gold}40`,borderRadius:10,padding:10,display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:6,zIndex:300,minWidth:220,boxShadow:"0 8px 30px rgba(0,0,0,0.7)"}}>
+                    {SECONDARY_NAV.map(n=>(
+                      <button key={n.id} onClick={()=>{setScreen(n.id);setShowMoreMenu(false);}}
+                        style={{padding:"7px 4px",borderRadius:7,border:`1px solid ${screen===n.id?T.gold:T.border}`,background:screen===n.id?T.goldD:"transparent",color:screen===n.id?T.goldL:T.muted,fontSize:9,cursor:"pointer",display:"flex",flexDirection:"column",alignItems:"center",gap:3}}>
+                        <span style={{fontSize:14}}>{n.icon}</span>
+                        <span>{n.label}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
           <button onClick={()=>setAuthState("programme")} style={{padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:9,cursor:"pointer"}}>Switch</button>
           <a href="https://drive.google.com/drive/folders/1DOfGmHg_dO5blXw_3Mz07dtre6IKYYlI" target="_blank" rel="noopener noreferrer" style={{padding:"4px 9px",borderRadius:7,background:T.goldD,border:`1px solid ${T.gold}`,color:T.goldL,fontSize:9,fontWeight:700,textDecoration:"none",whiteSpace:"nowrap"}}>📁 Docs</a>
