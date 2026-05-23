@@ -554,6 +554,67 @@ const CHAPTER_ORDER = {
   "IMS": 10, // Information Management System
 };
 
+// ── Chapter-level achieve guidance (fallback when per-OE DB tips absent) ──
+const OE_TIPS = {
+  HRM: [
+    "Nurse-patient ratio standards: ICU ventilated 1:1, ICU non-ventilated 1:2, general ward 1:6 — document and monitor daily on duty roster",
+    "Maintain valid nursing registration certificates for all nursing staff — set expiry reminders 3 months in advance",
+    "Annual competency assessment is mandatory for all clinical staff — document assessment tool, assessor signature, and outcome",
+    "Training records required for: BLS/CPR, Fire Safety, BMW handling, IPC practices, LASA medications, Code Blue response, Patient Rights, Needle Stick Injury, Disaster Management",
+    "Duty roster must explicitly show skill mix and competency-based deployment — assessors verify that competent staff are allocated to high-risk areas",
+    "Staff orientation records must cover hospital policies, patient safety goals, emergency procedures, and departmental SOPs",
+    "Maintain a Training Calendar with planned vs completed sessions — track attendance ≥80% compliance per staff per year",
+  ],
+  MOM: [
+    "Implement FIFO (First In First Out) and FEFO (First Expired First Out) for all medications — label shelves and train pharmacy staff",
+    "Temperature monitoring: narcotics and controlled substances at 15–30°C ambient; refrigerated medications at 2–8°C cold chain with twice-daily log",
+    "Narcotic register: record receipt, issue, balance, patient name, date, and prescriber name in ink — no erasures, corrections must be countersigned",
+    "LASA (Look-Alike Sound-Alike) medications must be physically segregated with tall-man lettering labels on bins and shelves",
+    "High-alert medications (insulin, heparin, concentrated electrolytes, chemotherapy) require double-check policy with two-nurse verification before administration",
+    "Medical supplies and consumables: organized storage with expiry date tracking, stock-out prevention through par-level reorder triggers",
+    "Adverse Drug Reaction (ADR) and medication error reporting: maintain register, conduct RCA for every significant event, submit monthly data to pharmacy committee",
+    "Emergency medications list must be standardized, reviewed annually by P&T committee, and available in all clinical areas including OT and ICU",
+  ],
+  IPC: [
+    "Hand hygiene monitoring: observe and record WHO 5 Moments compliance monthly per department — target ≥80%, display results publicly",
+    "PPE protocol: gloves + mask for all patient contact, add gown and goggles for aerosol-generating procedures and isolation patients — risk-tiered approach",
+    "BMW segregation: Yellow bag — infectious/anatomical waste; Red bag — recyclable contaminated; Blue/White translucent — glass/sharps; Black bag — general waste",
+    "Sterilization validation: biological indicator (Geobacillus stearothermophilus) run weekly for autoclaves; chemical indicator (Type 5 or 6) every cycle",
+    "HAI surveillance: microbiological cultures from OT, ICU, NICU, Labour Room every 3 months — document results, trend, and corrective action",
+    "Bundle care protocols: VAP (Ventilator-Associated Pneumonia) bundle, CLABSI (Central Line) bundle, CAUTI (Catheter UTI) bundle — compliance monitored daily",
+    "AMR surveillance: flag CRE (Carbapenem-Resistant Enterobacteriaceae), MRSA, VRE — isolate immediately, notify infection control team, document outbreak response",
+    "Pre-exposure prophylaxis: hepatitis B vaccination for all healthcare workers — maintain records with dose dates and titre levels",
+  ],
+  FMS: [
+    "MRI safety zone system: Zone 1 — public area unrestricted; Zone 2 — supervised by MRI staff; Zone 3 — restricted, controlled access, no ferromagnetic objects; Zone 4 — magnet room, highest risk, screened personnel only",
+    "OT machine daily checklist: anesthesia machine leak test + O2/N2O pressure check; defibrillator battery status + pad expiry date; suction pre-surgery function check; cautery grounding plate placement verification",
+    "Fire safety: monthly mock drills with attendance record and debriefing; exit route maps posted at every 20 metres; all staff trained on RACE (Rescue-Alarm-Contain-Evacuate) and PASS (Pull-Aim-Squeeze-Sweep)",
+    "Emergency crash cart: daily checklist with seal intact verification; drug and consumable expiry checked monthly; AED pads and battery status weekly; designated nurse responsible per shift",
+    "Medical gas management: pipeline pressure gauges monitored daily; cylinder stock maintained above minimum; no flammable materials near O2 outlets",
+    "Facility inspection rounds: documented monthly rounds covering patient areas, OT, ICU, pharmacy, kitchen, and laundry — findings with CAPA and closure dates",
+    "Equipment maintenance: preventive maintenance schedule for all clinical equipment; maintenance log, calibration certificate, and next-service date displayed on equipment",
+  ],
+  COP: [
+    "MLC documentation: assign unique MLC number to every case; police intimation in writing within 24 hours per local rules; injury diagram mandatory for trauma; maintain chain of custody for specimens; handover memo to police with receiving officer signature",
+    "WHO Surgical Safety Checklist: Sign In (before anesthesia induction) — patient identity + site + consent + allergies; Time Out (before incision) — entire team pauses + confirms; Sign Out (before patient leaves OT) — instrument/swab/specimen count confirmed",
+    "Patient identification: use two identifiers (name + date of birth or UHID) at every care transition — medication administration, blood transfusion, specimen collection, surgical procedures",
+    "Fall risk assessment: Morse Fall Scale on admission, post-fall, and every 24 hours for high-risk patients — documented with interventions (bed rails, call bell, non-slip footwear, signage)",
+    "Pressure injury prevention: Braden Scale assessment on admission and daily for high-risk patients — document score, intervention (turning schedule, pressure-relieving mattress), and outcome",
+    "Informed consent: separate consent for surgery, anesthesia, blood transfusion, and high-risk procedures — patient-readable language, witness signature, and physician explanation documented",
+    "Discharge summary: completed within 24 hours of discharge with diagnosis, procedures, medications, follow-up instructions, and emergency contact — copy given to patient",
+    "Critical value reporting: lab notifies clinical team immediately for defined critical values — document time of result, time notified, and action taken in medical record",
+  ],
+  PSQ: [
+    "Internal audits: minimum 6 types annually — clinical audit, medication audit, nursing care audit, hand hygiene compliance audit, documentation completeness audit, crash cart audit",
+    "CAPA process: root cause analysis (5-Why or fishbone) for every significant audit finding; action assigned to named responsible person with target date; effectiveness review documented at next audit cycle",
+    "KPI monitoring: monthly data collection for all defined indicators; trend analysis (run chart or control chart); results presented at departmental review meetings; staff awareness session based on findings",
+    "Sentinel event reporting: define sentinel events (wrong-site surgery, patient fall with injury, medication error causing harm) — mandatory reporting within 24 hours, RCA within 30 days",
+    "Patient safety goals: track compliance monthly for each of the 6 NABH patient safety goals — correct identification, effective communication, medication safety, surgical safety, infection prevention, fall prevention",
+    "Quality committee: meets at least monthly; reviews audit results, KPI data, incident reports, and CAPA status — minutes documented and circulated to department heads",
+    "Patient satisfaction survey: collect and analyze minimum quarterly; calculate satisfaction score; display results; take CAPA for scores below threshold",
+  ],
+};
+
 const T = {
   bg:"#050e1a", panel:"#081525", panel2:"#0c1e35", border:"#0f2640",
   gold:"#c9a84c", goldL:"#f0d070", goldD:"rgba(201,168,76,0.10)",
@@ -1474,6 +1535,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
                     })()}
                     {showTip[oe.id]&&(()=>{
                       const tips=oe.achieveTips;
+                      const chapterTips=OE_TIPS[oe.chapter]||null;
                       const lvlTips = oe.level==="CORE"
                         ? ["CORE element — assessed at EVERY NABH visit, not just final","Score <4 on any CORE = automatic FAIL regardless of overall score","Prioritise this OE above all others in your improvement plan","Assessors will examine records, observe practice, and interview staff"]
                         : oe.level==="Achievement"
@@ -1481,11 +1543,12 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
                         : oe.level==="Excellence"
                         ? ["Excellence level — assessed at Re-accreditation only","Demonstrate innovation and leadership beyond basic compliance","Benchmark against national/international best practices","Document formal recognition or external validation"]
                         : ["Commitment level — assessed at Final Assessment","Document the policy/SOP and evidence of implementation","Staff must be able to demonstrate knowledge when interviewed","Audit trail: records should show consistent compliance"];
-                      const displayTips = tips || lvlTips;
+                      const displayTips = tips || chapterTips || lvlTips;
+                      const tipLabel = tips?"HOW TO ACHIEVE THIS OE":chapterTips?"CHAPTER GUIDANCE — "+oe.chapter:"GENERAL GUIDANCE — "+oe.level.toUpperCase();
                       return (
                         <div style={{marginTop:10,background:T.blueD,border:`1px solid ${T.blue}20`,borderRadius:8,padding:"12px 14px"}}>
                           <div style={{fontSize:9,letterSpacing:2,color:T.blue,marginBottom:8}}>
-                            {tips?"HOW TO ACHIEVE THIS OE":"GENERAL GUIDANCE — "+oe.level.toUpperCase()}
+                            {tipLabel}
                           </div>
                           {displayTips.map((tip,i)=>(
                             <div key={i} style={{display:"flex",gap:8,marginBottom:6,alignItems:"flex-start"}}>
@@ -1493,7 +1556,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
                               <div style={{fontSize:11,color:T.text,lineHeight:1.6,paddingTop:1}}>{tip}</div>
                             </div>
                           ))}
-                          {!tips&&<div style={{fontSize:9,color:T.muted,marginTop:6,fontStyle:"italic"}}>Specific achieve tips not available for this OE — general {oe.level} guidance shown.</div>}
+                          {!tips&&!chapterTips&&<div style={{fontSize:9,color:T.muted,marginTop:6,fontStyle:"italic"}}>Specific achieve tips not available for this OE — general {oe.level} guidance shown.</div>}
                         </div>
                       );
                     })()}
