@@ -554,7 +554,7 @@ const CHAPTER_ORDER = {
   "IMS": 10, // Information Management System
 };
 
-const T = {
+const DARK_THEME = {
   bg:"#050e1a", panel:"#081525", panel2:"#0c1e35", border:"#0f2640",
   gold:"#c9a84c", goldL:"#f0d070", goldD:"rgba(201,168,76,0.10)",
   red:"#e05a5a", redD:"rgba(224,90,90,0.10)",
@@ -563,6 +563,22 @@ const T = {
   blue:"#4fc3f7", blueD:"rgba(79,195,247,0.08)",
   muted:"#3a5870", text:"#c8dcea", white:"#eef4f9",
 };
+
+const LIGHT_THEME = {
+  bg:"#e8f2fb", panel:"#ddeef8", panel2:"#c8e2f5", border:"#a8cce0",
+  gold:"#1565c0", goldL:"#1565c0", goldD:"rgba(21,101,192,0.10)",
+  red:"#d32f2f", redD:"rgba(211,47,47,0.10)",
+  orange:"#e65100", orangeD:"rgba(230,81,0,0.10)",
+  green:"#2e7d32", greenD:"rgba(46,125,50,0.10)",
+  blue:"#1976d2", blueD:"rgba(25,118,210,0.10)",
+  muted:"#4a6f8a", text:"#0d1f33", white:"#0a1828",
+  panelShadow:"0 2px 8px rgba(0,0,0,0.08)",
+  headerBg:"#c8e2f5",
+};
+
+// Mutable reference — App() reassigns this before each render so all
+// component functions that close over T see the correct theme values.
+let T = DARK_THEME;
 
 const lvColor = l => l==="CORE"?"#e05a5a":l==="Commitment"?"#4fc3f7":l==="Achievement"?"#4caf7d":"#c9a84c";
 const chColor = {AAC:"#4fc3f7",COP:"#f4a441",MOM:"#e05a5a",PRE:"#4caf7d",IPC:"#c084e8",PSQ:"#ff8a65",ROM:"#80cbc4",FMS:"#a5d6a7",HRM:"#f0d070",IMS:"#90caf9"};
@@ -1312,7 +1328,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
     onRefresh();
   };
   const scoreBtn=(oeId,oeLevel,oeDoc,score,label,color)=>(
-    <button key={score} onClick={()=>handleScore(oeId,oeLevel,oeDoc,score)} style={{padding:"5px 10px",borderRadius:7,fontSize:11,fontWeight:700,cursor:"pointer",background:localScores[oeId]===score?`${color}30`:"transparent",border:`1px solid ${localScores[oeId]===score?color:`${color}30`}`,color:localScores[oeId]===score?color:T.muted,transition:"all 0.15s"}}>{label}</button>
+    <button key={score} onClick={()=>handleScore(oeId,oeLevel,oeDoc,score)} style={{padding:"5px 10px",borderRadius:7,fontSize:11,fontWeight:700,cursor:"pointer",background:localScores[oeId]===score?`${color}30`:T.panel2,border:`1px solid ${localScores[oeId]===score?color:`${color}40`}`,color:localScores[oeId]===score?color:T.muted,transition:"all 0.15s"}}>{label}</button>
   );
 
   const validUrl=(s)=>{try{const u=new URL(s);return u.protocol==="http:"||u.protocol==="https:";}catch{return false;}};
@@ -1365,7 +1381,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 14px",marginBottom:14}}>
         <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search OEs by ID or text (e.g. 'hand hygiene', 'COP.1.a', 'fall risk')..." style={{width:"100%",padding:"9px 12px",borderRadius:8,border:`1px solid ${search?T.gold:T.border}`,background:T.panel2,color:T.text,fontSize:12,marginBottom:10,boxSizing:"border-box"}}/>
         <div style={{display:"flex",gap:8,flexWrap:"wrap",alignItems:"center"}}>
-          <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>{levels.map(l=><button key={l} onClick={()=>setFilter(l)} style={{padding:"5px 12px",borderRadius:8,fontSize:10,cursor:"pointer",background:filter===l?T.goldD:"transparent",border:`1px solid ${filter===l?T.gold:T.border}`,color:filter===l?T.goldL:T.muted}}>{l}</button>)}</div>
+          <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>{levels.map(l=><button key={l} onClick={()=>setFilter(l)} style={{padding:"5px 12px",borderRadius:8,fontSize:10,cursor:"pointer",background:filter===l?T.goldD:T.panel2,border:`1px solid ${filter===l?T.gold:T.border}`,color:filter===l?T.goldL:T.muted}}>{l}</button>)}</div>
           <select value={chFilter} onChange={e=>setChFilter(e.target.value)} style={{padding:"5px 10px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:10}}>{chapters.map(c=><option key={c} value={c}>{c}</option>)}</select>
           {(search||filter!=="ALL"||chFilter!=="ALL")&&(<button onClick={()=>{setSearch("");setFilter("ALL");setChFilter("ALL");}} style={{padding:"4px 10px",borderRadius:6,fontSize:9,cursor:"pointer",background:T.redD,border:`1px solid ${T.red}30`,color:T.red}}>X Clear</button>)}
           <span style={{fontSize:9,color:T.muted,marginLeft:"auto"}}>{filtered.length} OEs shown</span>
@@ -1388,9 +1404,9 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
             <div key={g.id}>
               {g.id !== "_unknown" && (
                 <div style={{
-                  background: T.panel2,
-                  border: `1px solid ${T.gold}40`,
-                  borderLeft: `3px solid ${T.gold}`,
+                  background: T.headerBg||T.panel2,
+                  border: T.headerBg?`1px solid ${T.gold}30`:`1px solid ${T.gold}40`,
+                  borderLeft: T.headerBg?`4px solid ${T.gold}`:`3px solid ${T.gold}`,
                   borderRadius: 8,
                   padding: "10px 14px",
                   marginTop: 14,
@@ -1409,11 +1425,11 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
                 const currentScore=localScores[oe.id]; const isSaving=saving[oe.id];
                 const scoreColor=!currentScore?T.muted:currentScore<=2?T.red:currentScore===3?T.orange:T.green;
                 return (
-                  <div key={oe.id} style={{background:T.panel,border:`1px solid ${oe.level==="CORE"?`${T.red}30`:T.border}`,borderRadius:10,padding:"14px 16px",opacity:isSaving?0.7:1}}>
+                  <div key={oe.id} style={{background:T.panel,border:`1px solid ${oe.level==="CORE"?`${T.red}30`:T.border}`,borderRadius:10,padding:"14px 16px",opacity:isSaving?0.7:1,boxShadow:T.panelShadow||""}}>
                     <div style={{display:"flex",gap:10,alignItems:"flex-start",marginBottom:10}}>
                       <div style={{flexShrink:0}}>
                         <span style={{fontFamily:"monospace",fontSize:11,fontWeight:700,color:lvColor(oe.level)}}>{oe.id}</span>{" "}
-                        <span style={{fontSize:9,padding:"2px 7px",borderRadius:5,background:oe.level==="CORE"?T.redD:T.blueD,color:oe.level==="CORE"?T.red:T.blue}}>{oe.level}</span>
+                        <span style={{fontSize:9,padding:"2px 7px",borderRadius:5,background:`${lvColor(oe.level)}22`,color:lvColor(oe.level)}}>{oe.level}</span>
                         {oe.doc&&<span style={{fontSize:9,padding:"2px 6px",borderRadius:5,background:T.goldD,color:T.gold,marginLeft:4}}>DOC*</span>}
                       </div>
                       <div style={{fontSize:10,color:T.text,lineHeight:1.5,flex:1}}>{oe.text}</div>
@@ -3451,6 +3467,18 @@ export default function App() {
   const [hcoDocPart, setHcoDocPart] = useState('all');
   const [pdfLoading, setPdfLoading] = useState(false);
   const [showMoreMenu, setShowMoreMenu] = useState(false);
+  const [theme, setTheme] = useState('dark');
+
+  // Reassign module-level T so all component closures see the correct theme
+  T = theme === 'light' ? LIGHT_THEME : DARK_THEME;
+
+  const toggleTheme = async () => {
+    const next = theme === 'dark' ? 'light' : 'dark';
+    setTheme(next);
+    if (user?.id) {
+      await supabase.from("profiles").upsert({ id: user.id, theme_preference: next }, { onConflict: "id" });
+    }
+  };
 
   const generatePDF = async () => {
     setPdfLoading(true);
@@ -3727,6 +3755,13 @@ export default function App() {
     return()=>subscription.unsubscribe();
   },[]);
 
+  // Load theme preference when user logs in
+  useEffect(()=>{
+    if(!user?.id)return;
+    supabase.from("profiles").select("theme_preference").eq("id",user.id).maybeSingle()
+      .then(({data})=>{if(data?.theme_preference)setTheme(data.theme_preference);});
+  },[user?.id]);
+
   // Load SHCO ELC progress from DB when entering that programme
   useEffect(()=>{
     if(selectedProgramme!=="shco-elc"||!context?.assessmentId)return;
@@ -3832,11 +3867,6 @@ export default function App() {
   const verdictColor=decision.verdict==="FAIL"?T.red:decision.verdict==="PASS"?T.green:decision.verdict==="PARTIAL"?T.orange:T.blue;
 
   const renderSHCOTab = () => {
-  const T = {
-    bg:"#050e1a", panel:"#081525", panel2:"#0c1e35", border:"#0f2640",
-    gold:"#c9a84c", red:"#e05a5a", orange:"#f4a441", green:"#4caf7d",
-    blue:"#4fc3f7", muted:"#3a5870", text:"#c8dcea", white:"#eef4f9"
-  };
 
   // ── Fee Calculator Logic ──
   const calcFee = (beds) => {
@@ -4431,11 +4461,6 @@ export default function App() {
 
   // ── HCO ELC TAB ──────────────────────────────────────────────────────────
   const renderHCOTab = () => {
-  const T = {
-    bg:"#050e1a", panel:"#081525", panel2:"#0c1e35", border:"#0f2640",
-    gold:"#c9a84c", red:"#e05a5a", orange:"#f4a441", green:"#4caf7d",
-    blue:"#4fc3f7", muted:"#3a5870", text:"#c8dcea", white:"#eef4f9"
-  };
 
   const gst = Math.round(HCO_FEE.base * HCO_FEE.gstRate);
   const totalFee = HCO_FEE.base + gst;
@@ -4954,41 +4979,54 @@ export default function App() {
   const secondaryActive=SECONDARY_NAV.some(n=>n.id===screen);
 
   return (
-    <div style={{fontFamily:"Segoe UI,system-ui,sans-serif",background:T.bg,minHeight:"100vh",color:T.text}}>
+    <div data-theme={theme} style={{fontFamily:"Segoe UI,system-ui,sans-serif",background:T.bg,minHeight:"100vh",color:T.text}}>
       <style>{`
         *{box-sizing:border-box}
         ::-webkit-scrollbar{width:4px}
         ::-webkit-scrollbar-track{background:${T.bg}}
         ::-webkit-scrollbar-thumb{background:${T.border};border-radius:2px}
         button,select,textarea,input{font-family:inherit}
+        ${theme==='light'?`
+          [data-theme="light"] body{background:#e8f2fb}
+        `:''}
       `}</style>
-      <div style={{background:"linear-gradient(90deg,#040d1a,#08192e)",borderBottom:`1px solid ${T.border}`,padding:"10px 20px",position:"sticky",top:0,zIndex:200,boxShadow:"0 2px 20px rgba(0,0,0,0.6)"}}>
+      <div style={{background:theme==='light'?"#1565c0":"linear-gradient(90deg,#040d1a,#08192e)",borderBottom:`1px solid ${theme==='light'?"#0d47a1":T.border}`,padding:"10px 20px",position:"sticky",top:0,zIndex:200,boxShadow:theme==='light'?"0 2px 12px rgba(21,101,192,0.4)":"0 2px 20px rgba(0,0,0,0.6)"}}>
         <div style={{maxWidth:1200,margin:"0 auto",display:"flex",alignItems:"center",gap:10,flexWrap:"wrap"}}>
-          <div style={{width:32,height:32,borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:17,flexShrink:0}}>⚕</div>
+          <div style={{width:32,height:32,borderRadius:8,background:theme==='light'?"rgba(255,255,255,0.15)":`linear-gradient(135deg,${T.gold},#f0d070)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:17,flexShrink:0,border:theme==='light'?"1px solid rgba(255,255,255,0.3)":"none",color:"#ffffff"}}>⚕</div>
           <div style={{flex:1,minWidth:100}}>
-            <div style={{fontSize:7,letterSpacing:3,color:T.gold}}>NABH 6TH EDITION</div>
-            <div style={{fontSize:12,fontWeight:700,color:T.white}}>{context?.hospitalName||"Compliance Engine"}{context?.assessmentName&&<span style={{fontSize:9,color:T.muted,marginLeft:6}}>{context.assessmentName}</span>}</div>
+            <div style={{fontSize:7,letterSpacing:3,color:theme==='light'?"rgba(255,255,255,0.7)":T.gold}}>NABH 6TH EDITION</div>
+            <div style={{fontSize:12,fontWeight:700,color:"#ffffff"}}>{context?.hospitalName||"Compliance Engine"}{context?.assessmentName&&<span style={{fontSize:9,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted,marginLeft:6}}>{context.assessmentName}</span>}</div>
           </div>
-          {loading&&<div style={{fontSize:9,color:T.muted}}>Refreshing…</div>}
-          {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${readinessColor}15`,border:`1px solid ${readinessColor}40`,fontSize:9,fontWeight:700,color:readinessColor}}>{decision.readiness==="NOT READY"?"❌":decision.readiness==="RISKY"?"⚠️":"✅"} {decision.readiness||"—"}</div>}
-          {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${verdictColor}20`,border:`1px solid ${verdictColor}40`,fontSize:10,fontWeight:800,color:verdictColor}}>{decision.verdict==="PARTIAL"?"⚠️":""}{decision.verdict||"—"}</div>}
+          {loading&&<div style={{fontSize:9,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted}}>Refreshing…</div>}
+          {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${readinessColor}25`,border:`1px solid ${readinessColor}60`,fontSize:9,fontWeight:700,color:theme==='light'?"#ffffff":readinessColor}}>{decision.readiness==="NOT READY"?"❌":decision.readiness==="RISKY"?"⚠️":"✅"} {decision.readiness||"—"}</div>}
+          {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${verdictColor}25`,border:`1px solid ${verdictColor}60`,fontSize:10,fontWeight:800,color:theme==='light'?"#ffffff":verdictColor}}>{decision.verdict==="PARTIAL"?"⚠️":""}{decision.verdict||"—"}</div>}
           <div style={{display:"flex",gap:3,flexWrap:"wrap",position:"relative"}}>
             {PRIMARY_NAV.map(n=>(
-              <button key={n.id} onClick={()=>setScreen(n.id)} style={{padding:"4px 9px",borderRadius:7,border:`1px solid ${screen===n.id?T.gold:T.border}`,background:screen===n.id?T.goldD:"transparent",color:screen===n.id?T.goldL:T.muted,fontSize:9,cursor:"pointer"}}>{n.icon} {n.label}</button>
+              <button key={n.id} onClick={()=>setScreen(n.id)} style={{
+                padding:"4px 9px",borderRadius:7,fontSize:9,cursor:"pointer",
+                background:screen===n.id?(theme==='light'?"rgba(255,255,255,0.25)":T.goldD):"transparent",
+                border:`1px solid ${screen===n.id?(theme==='light'?"rgba(255,255,255,0.6)":T.gold):(theme==='light'?"rgba(255,255,255,0.3)":T.border)}`,
+                color:"#ffffff",
+                fontWeight:screen===n.id?700:400,
+              }}>{n.icon} {n.label}</button>
             ))}
             {SECONDARY_NAV.length>0&&(
               <div style={{position:"relative"}}>
                 <button
                   onClick={e=>{e.stopPropagation();setShowMoreMenu(v=>!v);}}
-                  style={{padding:"4px 9px",borderRadius:7,border:`1px solid ${secondaryActive||showMoreMenu?T.gold:T.border}`,background:secondaryActive||showMoreMenu?T.goldD:"transparent",color:secondaryActive||showMoreMenu?T.goldL:T.muted,fontSize:9,cursor:"pointer",letterSpacing:2}}
+                  style={{padding:"4px 9px",borderRadius:7,fontSize:9,cursor:"pointer",letterSpacing:2,
+                    background:(secondaryActive||showMoreMenu)?(theme==='light'?"rgba(255,255,255,0.25)":T.goldD):"transparent",
+                    border:`1px solid ${(secondaryActive||showMoreMenu)?(theme==='light'?"rgba(255,255,255,0.6)":T.gold):(theme==='light'?"rgba(255,255,255,0.3)":T.border)}`,
+                    color:"#ffffff",
+                  }}
                 >•••</button>
                 {showMoreMenu&&(
                   <div
                     onClick={e=>e.stopPropagation()}
-                    style={{position:"absolute",top:"calc(100% + 6px)",right:0,background:"#08192e",border:`1px solid ${T.gold}40`,borderRadius:10,padding:10,display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:6,zIndex:300,minWidth:220,boxShadow:"0 8px 30px rgba(0,0,0,0.7)"}}>
+                    style={{position:"absolute",top:"calc(100% + 6px)",right:0,background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:10,display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:6,zIndex:300,minWidth:220,boxShadow:"0 8px 30px rgba(0,0,0,0.15)"}}>
                     {SECONDARY_NAV.map(n=>(
                       <button key={n.id} onClick={()=>{setScreen(n.id);setShowMoreMenu(false);}}
-                        style={{padding:"7px 4px",borderRadius:7,border:`1px solid ${screen===n.id?T.gold:T.border}`,background:screen===n.id?T.goldD:"transparent",color:screen===n.id?T.goldL:T.muted,fontSize:9,cursor:"pointer",display:"flex",flexDirection:"column",alignItems:"center",gap:3}}>
+                        style={{padding:"7px 4px",borderRadius:7,border:`1px solid ${screen===n.id?T.gold:T.border}`,background:screen===n.id?T.goldD:T.panel2,color:screen===n.id?T.gold:T.text,fontSize:9,cursor:"pointer",display:"flex",flexDirection:"column",alignItems:"center",gap:3,fontWeight:screen===n.id?700:400}}>
                         <span style={{fontSize:14}}>{n.icon}</span>
                         <span>{n.label}</span>
                       </button>
@@ -4998,9 +5036,10 @@ export default function App() {
               </div>
             )}
           </div>
-          <button onClick={()=>setAuthState("programme")} style={{padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:9,cursor:"pointer"}}>Switch</button>
-          <a href="https://drive.google.com/drive/folders/1DOfGmHg_dO5blXw_3Mz07dtre6IKYYlI" target="_blank" rel="noopener noreferrer" style={{padding:"4px 9px",borderRadius:7,background:T.goldD,border:`1px solid ${T.gold}`,color:T.goldL,fontSize:9,fontWeight:700,textDecoration:"none",whiteSpace:"nowrap"}}>📁 Docs</a>
-          <button onClick={handleSignOut} style={{padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:9,cursor:"pointer"}}>Sign out</button>
+          <button onClick={()=>setAuthState("programme")} style={{padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.3)":T.border}`,color:"#ffffff",fontSize:9,cursor:"pointer"}}>Switch</button>
+          <a href="https://drive.google.com/drive/folders/1DOfGmHg_dO5blXw_3Mz07dtre6IKYYlI" target="_blank" rel="noopener noreferrer" style={{padding:"4px 9px",borderRadius:7,background:theme==='light'?"rgba(255,255,255,0.15)":T.goldD,border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.gold}`,color:"#ffffff",fontSize:9,fontWeight:700,textDecoration:"none",whiteSpace:"nowrap"}}>📁 Docs</a>
+          <button onClick={toggleTheme} title={theme==='dark'?'Switch to light mode':'Switch to dark mode'} style={{padding:"4px 9px",borderRadius:7,background:theme==='light'?"rgba(255,255,255,0.2)":"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.border}`,color:"#ffffff",fontSize:13,cursor:"pointer",lineHeight:1}}>{theme==='dark'?'☀️':'🌙'}</button>
+          <button onClick={handleSignOut} style={{padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.3)":T.border}`,color:"#ffffff",fontSize:9,cursor:"pointer"}}>Sign out</button>
         </div>
       </div>
 
