@@ -669,29 +669,29 @@ function KpiTrendChart({ history, target, unit }) {
   if (!history || history.length === 0) return (
     <div style={{background:T.panel2,borderRadius:8,padding:"20px",textAlign:"center",border:`1px solid ${T.border}`,marginBottom:12}}>
       <div style={{fontSize:28,marginBottom:8}}>📈</div>
-      <div style={{fontSize:11,color:T.muted}}>No data yet. Enter monthly values above to see your trend chart.</div>
+      <div style={{fontSize:13,color:T.muted}}>No data yet. Enter monthly values above to see your trend chart.</div>
     </div>
   );
   const chartData=[...history].sort((a,b)=>a.year!==b.year?a.year-b.year:a.month-b.month).slice(-12).map(d=>({name:`${MONTHS_SHORT[d.month-1]} ${String(d.year).slice(2)}`,value:d.value,capa:d.capa_required}));
   const vals=chartData.map(d=>d.value);const minVal=Math.min(...vals);const maxVal=Math.max(...vals);const pad=Math.max((maxVal-minVal)*0.2,1);
   const yMin=Math.max(0,Math.floor((minVal-pad)*10)/10);const yMax=Math.ceil((Math.max(maxVal,parseFloat(target)||0)+pad)*10)/10;
   const CustomDot=(props)=>{const{cx,cy,payload}=props;if(!payload.capa)return <circle cx={cx} cy={cy} r={3} fill={T.gold}/>;return <circle cx={cx} cy={cy} r={5} fill={T.orange} stroke={T.bg} strokeWidth={1.5}/>;};
-  const TT=({active,payload,label})=>{if(!active||!payload||!payload.length)return null;const d=payload[0].payload;return(<div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:8,padding:"8px 12px",fontSize:10}}><div style={{color:T.gold,fontWeight:700,marginBottom:4}}>{label}</div><div style={{color:T.white}}>Value: <strong style={{color:T.goldL}}>{d.value} {unit}</strong></div>{target&&<div style={{color:T.green,marginTop:2}}>Target: {target}</div>}{d.capa&&<div style={{color:T.orange,marginTop:2}}>CAPA raised</div>}</div>);};
-  return(<div style={{background:T.panel2,border:`1px solid ${T.border}`,borderRadius:8,padding:"12px 8px 8px 0",marginBottom:12}}><div style={{fontSize:9,color:T.gold,letterSpacing:1,marginBottom:8,paddingLeft:12,display:"flex",gap:12}}><span>TREND — last {chartData.length} months</span>{target&&<span style={{color:T.green}}>Target: {target} {unit}</span>}</div><ResponsiveContainer width="100%" height={160}><LineChart data={chartData} margin={{top:4,right:16,left:0,bottom:0}}><CartesianGrid strokeDasharray="2 4" stroke={T.border} vertical={false}/><XAxis dataKey="name" tick={{fontSize:8,fill:T.muted}} axisLine={false} tickLine={false}/><YAxis domain={[yMin,yMax]} tick={{fontSize:8,fill:T.muted}} axisLine={false} tickLine={false} width={36}/><Tooltip content={<TT/>}/>{target&&<ReferenceLine y={parseFloat(target)} stroke={T.green} strokeDasharray="4 3" strokeWidth={1.5}/>}<Line type="monotone" dataKey="value" stroke={T.gold} strokeWidth={2.5} dot={<CustomDot/>} activeDot={{r:5,fill:T.goldL}}/></LineChart></ResponsiveContainer><div style={{display:"flex",gap:14,paddingLeft:12,marginTop:6,fontSize:8,color:T.muted}}><span style={{color:T.gold}}>Value</span>{target&&<span style={{color:T.green}}>-- Target</span>}<span style={{color:T.orange}}>o CAPA</span></div></div>);
+  const TT=({active,payload,label})=>{if(!active||!payload||!payload.length)return null;const d=payload[0].payload;return(<div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:8,padding:"8px 12px",fontSize:12}}><div style={{color:T.gold,fontWeight:700,marginBottom:4}}>{label}</div><div style={{color:T.white}}>Value: <strong style={{color:T.goldL}}>{d.value} {unit}</strong></div>{target&&<div style={{color:T.green,marginTop:2}}>Target: {target}</div>}{d.capa&&<div style={{color:T.orange,marginTop:2}}>CAPA raised</div>}</div>);};
+  return(<div style={{background:T.panel2,border:`1px solid ${T.border}`,borderRadius:8,padding:"12px 8px 8px 0",marginBottom:12}}><div style={{fontSize:11,color:T.gold,letterSpacing:1,marginBottom:8,paddingLeft:12,display:"flex",gap:12}}><span>TREND — last {chartData.length} months</span>{target&&<span style={{color:T.green}}>Target: {target} {unit}</span>}</div><ResponsiveContainer width="100%" height={160}><LineChart data={chartData} margin={{top:4,right:16,left:0,bottom:0}}><CartesianGrid strokeDasharray="2 4" stroke={T.border} vertical={false}/><XAxis dataKey="name" tick={{fontSize:8,fill:T.muted}} axisLine={false} tickLine={false}/><YAxis domain={[yMin,yMax]} tick={{fontSize:8,fill:T.muted}} axisLine={false} tickLine={false} width={36}/><Tooltip content={<TT/>}/>{target&&<ReferenceLine y={parseFloat(target)} stroke={T.green} strokeDasharray="4 3" strokeWidth={1.5}/>}<Line type="monotone" dataKey="value" stroke={T.gold} strokeWidth={2.5} dot={<CustomDot/>} activeDot={{r:5,fill:T.goldL}}/></LineChart></ResponsiveContainer><div style={{display:"flex",gap:14,paddingLeft:12,marginTop:6,fontSize:8,color:T.muted}}><span style={{color:T.gold}}>Value</span>{target&&<span style={{color:T.green}}>-- Target</span>}<span style={{color:T.orange}}>o CAPA</span></div></div>);
 }
 
 function AuditComplianceChart({ records }) {
   if (!records || records.length === 0) return (
     <div style={{background:T.panel2,borderRadius:8,padding:"20px",textAlign:"center",border:`1px solid ${T.border}`,marginBottom:12}}>
       <div style={{fontSize:28,marginBottom:8}}>📊</div>
-      <div style={{fontSize:11,color:T.muted}}>No records yet. Record an audit to see compliance trends.</div>
+      <div style={{fontSize:13,color:T.muted}}>No records yet. Record an audit to see compliance trends.</div>
     </div>
   );
   const getBarColor=(pct)=>pct>=80?T.green:pct>=60?T.orange:T.red;
   const chartData=[...records].filter(r=>r.sample_size>0&&r.compliant_count!==null).sort((a,b)=>new Date(a.audit_date)-new Date(b.audit_date)).slice(-12).map(r=>({name:new Date(r.audit_date).toLocaleDateString("en-IN",{day:"2-digit",month:"short"}),pct:Math.round((r.compliant_count/r.sample_size)*100),capa:r.capa_raised}));
-  if(chartData.length===0)return(<div style={{background:T.panel2,borderRadius:8,padding:"12px",textAlign:"center",border:`1px solid ${T.border}`,fontSize:10,color:T.muted,marginBottom:12}}>Enter sample size and compliant count when recording audits to see charts.</div>);
-  const TT=({active,payload,label})=>{if(!active||!payload||!payload.length)return null;const d=payload[0].payload;return(<div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:8,padding:"8px 12px",fontSize:10}}><div style={{color:T.gold,fontWeight:700,marginBottom:4}}>{label}</div><div style={{color:getBarColor(d.pct),fontWeight:700,fontSize:13}}>{d.pct}%</div>{d.capa&&<div style={{color:T.orange,marginTop:3}}>CAPA raised</div>}</div>);};
-  return(<div style={{background:T.panel2,border:`1px solid ${T.border}`,borderRadius:8,padding:"12px 8px 8px 0",marginBottom:12}}><div style={{fontSize:9,color:T.gold,letterSpacing:1,marginBottom:8,paddingLeft:12,display:"flex",gap:12}}><span>COMPLIANCE TREND — last {chartData.length} audits</span><span style={{color:T.green}}>Target: 80%</span></div><ResponsiveContainer width="100%" height={150}><BarChart data={chartData} margin={{top:4,right:16,left:0,bottom:0}}><CartesianGrid strokeDasharray="2 4" stroke={T.border} vertical={false}/><XAxis dataKey="name" tick={{fontSize:8,fill:T.muted}} axisLine={false} tickLine={false}/><YAxis domain={[0,100]} tick={{fontSize:8,fill:T.muted}} axisLine={false} tickLine={false} width={30} tickFormatter={v=>`${v}%`}/><Tooltip content={<TT/>}/><ReferenceLine y={80} stroke={T.green} strokeDasharray="4 3" strokeWidth={1.5}/><Bar dataKey="pct" radius={[3,3,0,0]} shape={(props)=>{const{x,y,width,height,value}=props;return <rect x={x} y={y} width={Math.max(width,4)} height={Math.max(height,1)} rx={3} fill={getBarColor(value)} fillOpacity={0.85}/>;}} /></BarChart></ResponsiveContainer><div style={{display:"flex",gap:14,paddingLeft:12,marginTop:6,fontSize:8,color:T.muted}}><span style={{color:T.green}}>Good (80%+)</span><span style={{color:T.orange}}>Fair (60-79%)</span><span style={{color:T.red}}>Critical</span></div></div>);
+  if(chartData.length===0)return(<div style={{background:T.panel2,borderRadius:8,padding:"12px",textAlign:"center",border:`1px solid ${T.border}`,fontSize:12,color:T.muted,marginBottom:12}}>Enter sample size and compliant count when recording audits to see charts.</div>);
+  const TT=({active,payload,label})=>{if(!active||!payload||!payload.length)return null;const d=payload[0].payload;return(<div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:8,padding:"8px 12px",fontSize:12}}><div style={{color:T.gold,fontWeight:700,marginBottom:4}}>{label}</div><div style={{color:getBarColor(d.pct),fontWeight:700,fontSize:15}}>{d.pct}%</div>{d.capa&&<div style={{color:T.orange,marginTop:3}}>CAPA raised</div>}</div>);};
+  return(<div style={{background:T.panel2,border:`1px solid ${T.border}`,borderRadius:8,padding:"12px 8px 8px 0",marginBottom:12}}><div style={{fontSize:11,color:T.gold,letterSpacing:1,marginBottom:8,paddingLeft:12,display:"flex",gap:12}}><span>COMPLIANCE TREND — last {chartData.length} audits</span><span style={{color:T.green}}>Target: 80%</span></div><ResponsiveContainer width="100%" height={150}><BarChart data={chartData} margin={{top:4,right:16,left:0,bottom:0}}><CartesianGrid strokeDasharray="2 4" stroke={T.border} vertical={false}/><XAxis dataKey="name" tick={{fontSize:8,fill:T.muted}} axisLine={false} tickLine={false}/><YAxis domain={[0,100]} tick={{fontSize:8,fill:T.muted}} axisLine={false} tickLine={false} width={30} tickFormatter={v=>`${v}%`}/><Tooltip content={<TT/>}/><ReferenceLine y={80} stroke={T.green} strokeDasharray="4 3" strokeWidth={1.5}/><Bar dataKey="pct" radius={[3,3,0,0]} shape={(props)=>{const{x,y,width,height,value}=props;return <rect x={x} y={y} width={Math.max(width,4)} height={Math.max(height,1)} rx={3} fill={getBarColor(value)} fillOpacity={0.85}/>;}} /></BarChart></ResponsiveContainer><div style={{display:"flex",gap:14,paddingLeft:12,marginTop:6,fontSize:8,color:T.muted}}><span style={{color:T.green}}>Good (80%+)</span><span style={{color:T.orange}}>Fair (60-79%)</span><span style={{color:T.red}}>Critical</span></div></div>);
 }
 
 function LoginScreen({ onLogin, initialError }) {
@@ -728,60 +728,60 @@ function LoginScreen({ onLogin, initialError }) {
           <div style={{width:48,height:48,borderRadius:12,background:`linear-gradient(135deg,${T.gold},#f0d070)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:24,margin:"0 auto 12px"}}>⚕</div>
           <div style={{fontSize:8,letterSpacing:3,color:T.gold,marginBottom:4}}>NABH 6TH EDITION</div>
           <div style={{fontSize:18,fontWeight:700,color:T.white}}>Compliance Engine</div>
-          <div style={{fontSize:11,color:T.muted,marginTop:4}}>Hospital Accreditation Platform</div>
+          <div style={{fontSize:13,color:T.muted,marginTop:4}}>Hospital Accreditation Platform</div>
         </div>
-        {error&&<div style={{background:T.redD,border:`1px solid ${T.red}40`,borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:11,color:T.red}}>{error}</div>}
-        {msg&&<div style={{background:T.greenD,border:`1px solid ${T.green}40`,borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:11,color:T.green}}>{msg}</div>}
+        {error&&<div style={{background:T.redD,border:`1px solid ${T.red}40`,borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:13,color:T.red}}>{error}</div>}
+        {msg&&<div style={{background:T.greenD,border:`1px solid ${T.green}40`,borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:13,color:T.green}}>{msg}</div>}
         <div style={{textAlign:'center',padding:'0 0 20px 0',marginBottom:20,borderBottom:'1px solid #0f2640'}}>
-          <div style={{fontFamily:'Georgia,serif',fontSize:13,fontStyle:'italic',color:'#c8dcea',lineHeight:1.8}}>"An investment in knowledge pays the best interest."</div>
-          <div style={{fontSize:10,color:'#3a5870',marginTop:6,letterSpacing:2}}>— BENJAMIN FRANKLIN</div>
+          <div style={{fontFamily:'Georgia,serif',fontSize:15,fontStyle:'italic',color:'#c8dcea',lineHeight:1.8}}>"An investment in knowledge pays the best interest."</div>
+          <div style={{fontSize:12,color:'#3a5870',marginTop:6,letterSpacing:2}}>— BENJAMIN FRANKLIN</div>
         </div>
         <div style={{marginBottom:14}}>
-          <div style={{fontSize:10,color:T.muted,marginBottom:6}}>EMAIL</div>
+          <div style={{fontSize:12,color:T.muted,marginBottom:6}}>EMAIL</div>
           <input value={email} onChange={e=>setEmail(e.target.value)} placeholder="admin@hospital.com" type="email"
-            style={{width:"100%",padding:"10px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,boxSizing:"border-box"}}/>
+            style={{width:"100%",padding:"10px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:15,boxSizing:"border-box"}}/>
         </div>
         {mode!=="reset"&&<div style={{marginBottom:20}}>
-          <div style={{fontSize:10,color:T.muted,marginBottom:6}}>PASSWORD</div>
+          <div style={{fontSize:12,color:T.muted,marginBottom:6}}>PASSWORD</div>
           <input value={pass} onChange={e=>setPass(e.target.value)} placeholder="••••••••" type="password" onKeyDown={e=>e.key==="Enter"&&handle()}
-            style={{width:"100%",padding:"10px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,boxSizing:"border-box"}}/>
+            style={{width:"100%",padding:"10px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:15,boxSizing:"border-box"}}/>
         </div>}
-        {mode==="reset"&&<div style={{marginBottom:20,fontSize:11,color:T.muted,lineHeight:1.6}}>Enter your email above and we'll send you a password reset link.</div>}
-        <button onClick={handle} disabled={loading} style={{width:"100%",padding:"12px",borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer",opacity:loading?0.7:1}}>
+        {mode==="reset"&&<div style={{marginBottom:20,fontSize:13,color:T.muted,lineHeight:1.6}}>Enter your email above and we'll send you a password reset link.</div>}
+        <button onClick={handle} disabled={loading} style={{width:"100%",padding:"12px",borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:15,fontWeight:700,cursor:"pointer",opacity:loading?0.7:1}}>
           {loading?"Please wait…":mode==="login"?"Sign In →":mode==="signup"?"Create Account →":"Send Reset Email →"}
         </button>
         {mode==="login"&&(
           <>
             <div style={{display:"flex",alignItems:"center",gap:10,margin:"16px 0"}}>
               <div style={{flex:1,height:1,background:T.border}}/>
-              <div style={{fontSize:10,color:T.muted,letterSpacing:1}}>OR</div>
+              <div style={{fontSize:12,color:T.muted,letterSpacing:1}}>OR</div>
               <div style={{flex:1,height:1,background:T.border}}/>
             </div>
             <button onClick={signInWithGoogle} disabled={loading}
-              style={{width:"100%",padding:"11px",borderRadius:10,background:T.panel2,border:`1px solid ${T.border}`,color:T.text,fontSize:13,fontWeight:600,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",gap:10,opacity:loading?0.7:1}}>
+              style={{width:"100%",padding:"11px",borderRadius:10,background:T.panel2,border:`1px solid ${T.border}`,color:T.text,fontSize:15,fontWeight:600,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",gap:10,opacity:loading?0.7:1}}>
               <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.08 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-3.58-13.46-8.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
               Continue with Google
             </button>
-            <div style={{textAlign:"center",marginTop:12,fontSize:11,color:T.muted}}>
+            <div style={{textAlign:"center",marginTop:12,fontSize:13,color:T.muted}}>
               <span onClick={()=>{setMode("reset");setError("");setMsg("");}} style={{color:T.blue,cursor:"pointer"}}>Forgot password?</span>
             </div>
             <div style={{display:'flex',gap:20,justifyContent:'center',marginTop:14,flexWrap:'wrap'}}>
-              <a href="mailto:upadhyay.mehul9@gmail.com" style={{fontSize:10,color:'#3a5870',textDecoration:'none',letterSpacing:1,textTransform:'uppercase'}}>Contact Us</a>
-              <span onClick={()=>setMode('terms')} style={{fontSize:10,color:'#3a5870',cursor:'pointer',letterSpacing:1,textTransform:'uppercase'}}>Terms & Conditions</span>
-              <span onClick={()=>setMode('privacy')} style={{fontSize:10,color:'#3a5870',cursor:'pointer',letterSpacing:1,textTransform:'uppercase'}}>Privacy Policy</span>
+              <a href="mailto:upadhyay.mehul9@gmail.com" style={{fontSize:12,color:'#3a5870',textDecoration:'none',letterSpacing:1,textTransform:'uppercase'}}>Contact Us</a>
+              <span onClick={()=>setMode('terms')} style={{fontSize:12,color:'#3a5870',cursor:'pointer',letterSpacing:1,textTransform:'uppercase'}}>Terms & Conditions</span>
+              <span onClick={()=>setMode('privacy')} style={{fontSize:12,color:'#3a5870',cursor:'pointer',letterSpacing:1,textTransform:'uppercase'}}>Privacy Policy</span>
             </div>
           </>
         )}
-        <div style={{textAlign:"center",marginTop:10,fontSize:11,color:T.muted}}>
+        <div style={{textAlign:"center",marginTop:10,fontSize:13,color:T.muted}}>
           {mode==="login"?"Don't have an account? ":mode==="signup"?"Already have an account? ":"Remember your password? "}
           <span onClick={()=>{setMode(mode==="login"?"signup":"login");setError("");setMsg("");}} style={{color:T.gold,cursor:"pointer",fontWeight:600}}>
             {mode==="login"?"Sign up":mode==="reset"?"Sign in":"Sign in"}
           </span>
         </div>
-        <div style={{textAlign:"center",marginTop:10,fontSize:9,color:T.muted}}>Independent educational tool — Not affiliated with NABH/QCI</div>
+        <div style={{textAlign:"center",marginTop:10,fontSize:11,color:T.muted}}>Independent educational tool — Not affiliated with NABH/QCI</div>
         <div style={{textAlign:"center",marginTop:10,paddingBottom:4}}>
-          <span style={{fontSize:10,color:T.muted}}>14-day free trial · No credit card · </span>
-          <a href="https://upadhyaymehul9-prog.github.io/nabh-compliance/#pricing" onClick={e=>{e.preventDefault();window.open("https://wa.me/918511180957","_blank");}} style={{fontSize:10,color:T.gold,cursor:"pointer",textDecoration:"none",fontWeight:600}}>💎 View Pricing Plans →</a>
+          <span style={{fontSize:12,color:T.muted}}>14-day free trial · No credit card · </span>
+          <a href="https://upadhyaymehul9-prog.github.io/nabh-compliance/#pricing" onClick={e=>{e.preventDefault();window.open("https://wa.me/918511180957","_blank");}} style={{fontSize:12,color:T.gold,cursor:"pointer",textDecoration:"none",fontWeight:600}}>💎 View Pricing Plans →</a>
         </div>
       </div>
     </div>
@@ -789,10 +789,10 @@ function LoginScreen({ onLogin, initialError }) {
 }
 function TermsScreen({onBack}){return(
     <div style={{minHeight:'100vh',background:'#050e1a',color:'#c8dcea',fontFamily:'Segoe UI,sans-serif',padding:'40px 24px',maxWidth:720,margin:'0 auto'}}>
-      <button onClick={onBack} style={{background:'transparent',border:'1px solid #0f2640',color:'#3a5870',padding:'6px 16px',borderRadius:6,cursor:'pointer',fontSize:11,marginBottom:32}}>← Back to Login</button>
-      <div style={{color:'#c9a84c',fontSize:10,letterSpacing:3,marginBottom:8,textTransform:'uppercase'}}>AccredReady</div>
+      <button onClick={onBack} style={{background:'transparent',border:'1px solid #0f2640',color:'#3a5870',padding:'6px 16px',borderRadius:6,cursor:'pointer',fontSize:13,marginBottom:32}}>← Back to Login</button>
+      <div style={{color:'#c9a84c',fontSize:12,letterSpacing:3,marginBottom:8,textTransform:'uppercase'}}>AccredReady</div>
       <h1 style={{fontFamily:'Georgia,serif',fontSize:28,fontWeight:300,color:'#eef4f9',marginBottom:6}}>Terms & Conditions</h1>
-      <div style={{fontSize:10,color:'#3a5870',letterSpacing:1,marginBottom:32}}>Effective Date: 19 May 2026</div>
+      <div style={{fontSize:12,color:'#3a5870',letterSpacing:1,marginBottom:32}}>Effective Date: 19 May 2026</div>
       {[
         ['1. Acceptance','By using AccredReady at accredready.in, you agree to these terms. If you disagree, do not use the platform.'],
         ['2. What AccredReady Is','AccredReady is an independent educational preparation tool for healthcare accreditation. It is not affiliated with, endorsed by, or officially connected to any accreditation body including any government authority.'],
@@ -807,18 +807,18 @@ function TermsScreen({onBack}){return(
         ['11. Contact','Email: upadhyay.mehul9@gmail.com'],
       ].map(([title,body])=>(
         <div key={title} style={{marginBottom:20}}>
-          <div style={{fontSize:11,fontWeight:700,color:'#c9a84c',letterSpacing:1,textTransform:'uppercase',marginBottom:6}}>{title}</div>
-          <div style={{fontSize:13,color:'#c8dcea',lineHeight:1.8}}>{body}</div>
+          <div style={{fontSize:13,fontWeight:700,color:'#c9a84c',letterSpacing:1,textTransform:'uppercase',marginBottom:6}}>{title}</div>
+          <div style={{fontSize:15,color:'#c8dcea',lineHeight:1.8}}>{body}</div>
         </div>
       ))}
     </div>
   );}
 function PrivacyScreen({onBack}){return(
     <div style={{minHeight:'100vh',background:'#050e1a',color:'#c8dcea',fontFamily:'Segoe UI,sans-serif',padding:'40px 24px',maxWidth:720,margin:'0 auto'}}>
-      <button onClick={onBack} style={{background:'transparent',border:'1px solid #0f2640',color:'#3a5870',padding:'6px 16px',borderRadius:6,cursor:'pointer',fontSize:11,marginBottom:32}}>← Back to Login</button>
-      <div style={{color:'#c9a84c',fontSize:10,letterSpacing:3,marginBottom:8,textTransform:'uppercase'}}>AccredReady</div>
+      <button onClick={onBack} style={{background:'transparent',border:'1px solid #0f2640',color:'#3a5870',padding:'6px 16px',borderRadius:6,cursor:'pointer',fontSize:13,marginBottom:32}}>← Back to Login</button>
+      <div style={{color:'#c9a84c',fontSize:12,letterSpacing:3,marginBottom:8,textTransform:'uppercase'}}>AccredReady</div>
       <h1 style={{fontFamily:'Georgia,serif',fontSize:28,fontWeight:300,color:'#eef4f9',marginBottom:6}}>Privacy Policy</h1>
-      <div style={{fontSize:10,color:'#3a5870',letterSpacing:1,marginBottom:32}}>Effective Date: 19 May 2026</div>
+      <div style={{fontSize:12,color:'#3a5870',letterSpacing:1,marginBottom:32}}>Effective Date: 19 May 2026</div>
       {[
         ['1. What We Collect','Name and email address from Google or email signup. Hospital or facility name and data you enter including scores, KPIs, committees, and audit records. Basic usage logs for platform improvement.'],
         ['2. How We Use It','To operate and maintain your account. To provide platform features. To send service emails only — not marketing.'],
@@ -831,8 +831,8 @@ function PrivacyScreen({onBack}){return(
         ['9. Contact','Email: upadhyay.mehul9@gmail.com'],
       ].map(([title,body])=>(
         <div key={title} style={{marginBottom:20}}>
-          <div style={{fontSize:11,fontWeight:700,color:'#c9a84c',letterSpacing:1,textTransform:'uppercase',marginBottom:6}}>{title}</div>
-          <div style={{fontSize:13,color:'#c8dcea',lineHeight:1.8}}>{body}</div>
+          <div style={{fontSize:13,fontWeight:700,color:'#c9a84c',letterSpacing:1,textTransform:'uppercase',marginBottom:6}}>{title}</div>
+          <div style={{fontSize:15,color:'#c8dcea',lineHeight:1.8}}>{body}</div>
         </div>
       ))}
     </div>
@@ -1097,7 +1097,7 @@ function SetupScreen({ user, onReady }) {
   };
 
   if(loading) return (
-    <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",color:T.gold,fontFamily:"Segoe UI,sans-serif",fontSize:14}}>
+    <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",color:T.gold,fontFamily:"Segoe UI,sans-serif",fontSize:16}}>
       Setting up your workspace…
     </div>
   );
@@ -1111,20 +1111,20 @@ function SetupScreen({ user, onReady }) {
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:16,padding:"36px",width:420}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:4}}>
           <div style={{fontSize:8,letterSpacing:3,color:T.gold}}>ACCREDREADY</div>
-          <button onClick={()=>supabase.auth.signOut()} style={{fontSize:10,color:T.muted,background:"transparent",border:`1px solid ${T.border}`,borderRadius:6,padding:"3px 10px",cursor:"pointer"}}>Sign out</button>
+          <button onClick={()=>supabase.auth.signOut()} style={{fontSize:12,color:T.muted,background:"transparent",border:`1px solid ${T.border}`,borderRadius:6,padding:"3px 10px",cursor:"pointer"}}>Sign out</button>
         </div>
 
-        {error&&<div style={{background:T.redD,border:`1px solid ${T.red}40`,borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:11,color:T.red,marginTop:12}}>{error}</div>}
+        {error&&<div style={{background:T.redD,border:`1px solid ${T.red}40`,borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:13,color:T.red,marginTop:12}}>{error}</div>}
 
         {!hospital&&(
           <>
             <div style={{fontSize:18,fontWeight:700,color:T.white,margin:"16px 0 8px"}}>Welcome! Set up your hospital</div>
-            <div style={{fontSize:11,color:T.muted,marginBottom:20,lineHeight:1.6}}>Each account is linked to one hospital. Enter your hospital name to get started.</div>
-            <div style={{fontSize:10,color:T.muted,marginBottom:8,letterSpacing:1}}>HOSPITAL NAME</div>
+            <div style={{fontSize:13,color:T.muted,marginBottom:20,lineHeight:1.6}}>Each account is linked to one hospital. Enter your hospital name to get started.</div>
+            <div style={{fontSize:12,color:T.muted,marginBottom:8,letterSpacing:1}}>HOSPITAL NAME</div>
             <div style={{display:"flex",gap:8}}>
               <input value={newHosp} onChange={e=>setNewHosp(e.target.value)} placeholder="e.g. HMP Foundation Hospital" onKeyDown={e=>e.key==="Enter"&&createHospital()}
-                style={{flex:1,padding:"10px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,boxSizing:"border-box"}}/>
-              <button onClick={createHospital} disabled={!newHosp.trim()} style={{padding:"10px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:12,fontWeight:700,cursor:newHosp.trim()?"pointer":"default",opacity:newHosp.trim()?1:0.5}}>Create</button>
+                style={{flex:1,padding:"10px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:15,boxSizing:"border-box"}}/>
+              <button onClick={createHospital} disabled={!newHosp.trim()} style={{padding:"10px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:14,fontWeight:700,cursor:newHosp.trim()?"pointer":"default",opacity:newHosp.trim()?1:0.5}}>Create</button>
             </div>
           </>
         )}
@@ -1132,21 +1132,21 @@ function SetupScreen({ user, onReady }) {
         {hospital&&(
           <>
             <div style={{fontSize:18,fontWeight:700,color:T.white,margin:"16px 0 4px"}}>{hospital.name}</div>
-            <div style={{fontSize:10,color:T.green,marginBottom:20}}>✓ Hospital registered</div>
+            <div style={{fontSize:12,color:T.green,marginBottom:20}}>✓ Hospital registered</div>
 
-            <div style={{fontSize:10,color:T.muted,marginBottom:8,letterSpacing:1}}>ASSESSMENT</div>
+            <div style={{fontSize:12,color:T.muted,marginBottom:8,letterSpacing:1}}>ASSESSMENT</div>
             {assessments.length>0&&(
               <select value={selAss} onChange={e=>setSelAss(e.target.value)}
-                style={{width:"100%",padding:"10px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,marginBottom:10,boxSizing:"border-box"}}>
+                style={{width:"100%",padding:"10px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:15,marginBottom:10,boxSizing:"border-box"}}>
                 {assessments.map(a=><option key={a.id} value={a.id}>{a.name}</option>)}
               </select>
             )}
             <div style={{display:"flex",gap:8,marginBottom:16}}>
               <input value={newAss} onChange={e=>setNewAss(e.target.value)} placeholder="Or create new assessment…" onKeyDown={e=>e.key==="Enter"&&createAssessment()}
-                style={{flex:1,padding:"9px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12,boxSizing:"border-box"}}/>
-              <button onClick={createAssessment} disabled={!newAss.trim()} style={{padding:"9px 16px",borderRadius:8,background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold,fontSize:12,cursor:"pointer"}}>Add</button>
+                style={{flex:1,padding:"9px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14,boxSizing:"border-box"}}/>
+              <button onClick={createAssessment} disabled={!newAss.trim()} style={{padding:"9px 16px",borderRadius:8,background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold,fontSize:14,cursor:"pointer"}}>Add</button>
             </div>
-            <button onClick={proceed} disabled={!selAss} style={{width:"100%",padding:"12px",borderRadius:10,background:selAss?`linear-gradient(135deg,${T.gold},#f0d070)`:T.border,border:"none",color:selAss?T.bg:T.muted,fontSize:13,fontWeight:700,cursor:selAss?"pointer":"default"}}>
+            <button onClick={proceed} disabled={!selAss} style={{width:"100%",padding:"12px",borderRadius:10,background:selAss?`linear-gradient(135deg,${T.gold},#f0d070)`:T.border,border:"none",color:selAss?T.bg:T.muted,fontSize:15,fontWeight:700,cursor:selAss?"pointer":"default"}}>
               Open Assessment →
             </button>
           </>
@@ -1168,7 +1168,7 @@ function VerdictBanner({ decision }) {
       <div style={{padding:"18px 22px"}}>
         <div style={{display:"flex",gap:20,alignItems:"center",flexWrap:"wrap"}}>
           <div style={{textAlign:"center",minWidth:100}}>
-            <div style={{fontSize:9,letterSpacing:3,color:T.muted,marginBottom:4}}>VERDICT</div>
+            <div style={{fontSize:11,letterSpacing:3,color:T.muted,marginBottom:4}}>VERDICT</div>
             <div style={{fontSize:34,fontWeight:900,color:vColor,fontFamily:"Georgia,serif",letterSpacing:2,lineHeight:1}}>{decision.verdict||"—"}</div>
           </div>
           <div style={{width:1,height:60,background:T.border}}/>
@@ -1181,10 +1181,10 @@ function VerdictBanner({ decision }) {
           <Ring pct={decision.total_core>0?Math.round(((decision.total_core-(decision.core_failures||0))/decision.total_core)*100):0} color={decision.core_pass?T.green:T.red} label="CORE" size={90} stroke={7}/>
           <Ring pct={Math.round(((decision.scored_count||0)/639)*100)} color={T.blue} label="SCORED" size={90} stroke={7}/>
           <div style={{flex:1,minWidth:160}}>
-            <div style={{fontSize:11,color:T.text,lineHeight:1.7}}>{decision.scored_count>0?`Scored ${decision.scored_count} of ${decision.total_oes||639} OEs. Overall ${decision.overall_pct||0}% compliance.`:decision.summary||"No data yet. Start scoring OEs."}</div>
+            <div style={{fontSize:13,color:T.text,lineHeight:1.7}}>{decision.scored_count>0?`Scored ${decision.scored_count} of ${decision.total_oes||639} OEs. Overall ${decision.overall_pct||0}% compliance.`:decision.summary||"No data yet. Start scoring OEs."}</div>
             <div style={{display:"flex",gap:6,marginTop:8,flexWrap:"wrap"}}>
               {[["Rule 1: CORE",decision.rule1_core],["Rule 2: Overall ≥80%",decision.rule2_overall],["Rule 3: Chapters",decision.rule3_chapters],["Rule 4: Standards",decision.rule4_standards]].map(([label,pass])=>(
-                <span key={label} style={{fontSize:9,padding:"2px 8px",borderRadius:8,background:pass?T.greenD:T.redD,color:pass?T.green:T.red,border:`1px solid ${pass?T.green:T.red}30`}}>{pass?"✓":"✗"} {label}</span>
+                <span key={label} style={{fontSize:11,padding:"2px 8px",borderRadius:8,background:pass?T.greenD:T.redD,color:pass?T.green:T.red,border:`1px solid ${pass?T.green:T.red}30`}}>{pass?"✓":"✗"} {label}</span>
               ))}
             </div>
           </div>
@@ -1195,8 +1195,8 @@ function VerdictBanner({ decision }) {
               <div key={i} style={{display:"flex",gap:10,alignItems:"flex-start",background:r.severity==="CRITICAL"?T.redD:r.severity==="HIGH"?T.orangeD:T.goldD,border:`1px solid ${sevColor(r.severity)}25`,borderRadius:8,padding:"9px 14px"}}>
                 <span style={{fontSize:16,flexShrink:0}}>{r.severity==="CRITICAL"?"🚨":r.severity==="HIGH"?"⚠️":"📌"}</span>
                 <div>
-                  <span style={{fontSize:9,padding:"1px 7px",borderRadius:5,background:`${sevColor(r.severity)}20`,color:sevColor(r.severity),marginRight:8,fontWeight:700}}>{r.severity}</span>
-                  <span style={{fontSize:11,color:T.text,lineHeight:1.6}}>{r.message}</span>
+                  <span style={{fontSize:11,padding:"1px 7px",borderRadius:5,background:`${sevColor(r.severity)}20`,color:sevColor(r.severity),marginRight:8,fontWeight:700}}>{r.severity}</span>
+                  <span style={{fontSize:13,color:T.text,lineHeight:1.6}}>{r.message}</span>
                 </div>
               </div>
             ))}
@@ -1210,13 +1210,13 @@ function VerdictBanner({ decision }) {
 function ChapterHeatmap({ breakdown }) {
   if(!breakdown||Object.keys(breakdown).length===0) return (
     <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"16px 18px"}}>
-      <div style={{fontSize:9,letterSpacing:2,color:T.muted,marginBottom:12}}>CHAPTER HEATMAP</div>
-      <div style={{fontSize:11,color:T.muted,textAlign:"center",padding:"20px 0"}}>No scores yet. Start scoring OEs to see chapter breakdown.</div>
+      <div style={{fontSize:11,letterSpacing:2,color:T.muted,marginBottom:12}}>CHAPTER HEATMAP</div>
+      <div style={{fontSize:13,color:T.muted,textAlign:"center",padding:"20px 0"}}>No scores yet. Start scoring OEs to see chapter breakdown.</div>
     </div>
   );
   return (
     <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"16px 18px"}}>
-      <div style={{fontSize:9,letterSpacing:2,color:T.muted,marginBottom:12}}>CHAPTER HEATMAP</div>
+      <div style={{fontSize:11,letterSpacing:2,color:T.muted,marginBottom:12}}>CHAPTER HEATMAP</div>
       <div style={{display:"grid",gridTemplateColumns:"repeat(5,1fr)",gap:8}}>
         {Object.entries(breakdown).sort(([a],[b])=>(CHAPTER_ORDER[a]||99)-(CHAPTER_ORDER[b]||99)).map(([ch,data])=>{
           const pct=typeof data==="number"?data:(data?.pct||0);
@@ -1226,9 +1226,9 @@ function ChapterHeatmap({ breakdown }) {
           const brd=pct>=80?T.green:pct>=70?T.orange:T.red;
           return (
             <div key={ch} style={{background:bg,border:`1px solid ${brd}25`,borderRadius:8,padding:"10px 8px",textAlign:"center"}}>
-              <div style={{fontSize:13,fontWeight:800,color:col,marginBottom:3}}>{ch}</div>
+              <div style={{fontSize:15,fontWeight:800,color:col,marginBottom:3}}>{ch}</div>
               <div style={{height:3,background:`${brd}20`,borderRadius:2,marginBottom:5}}><div style={{width:`${pct}%`,height:"100%",background:brd,borderRadius:2}}/></div>
-              <div style={{fontSize:13,fontWeight:700,color:brd}}>{pct}%</div>
+              <div style={{fontSize:15,fontWeight:700,color:brd}}>{pct}%</div>
               <div style={{fontSize:8,color:T.muted,marginTop:1}}>{pass?"✓ Pass":"✗ Fail"}</div>
             </div>
           );
@@ -1291,25 +1291,25 @@ function Dashboard({ decision, gaps, onNav }) {
       <VerdictBanner decision={decision}/>
       {/* Next Actions */}
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"14px 16px",marginTop:14,marginBottom:14}}>
-        <div style={{fontSize:9,letterSpacing:2,color:T.muted,marginBottom:10}}>WHAT TO DO NEXT</div>
+        <div style={{fontSize:11,letterSpacing:2,color:T.muted,marginBottom:10}}>WHAT TO DO NEXT</div>
         {nextActions.length===0
-          ?<div style={{fontSize:11,color:T.green,textAlign:"center",padding:"8px 0"}}>✅ All key actions completed — you're on track!</div>
+          ?<div style={{fontSize:13,color:T.green,textAlign:"center",padding:"8px 0"}}>✅ All key actions completed — you're on track!</div>
           :nextActions.map((item,i)=>(
             <div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"8px 10px",borderRadius:8,borderLeft:`3px solid ${item.color}`,background:`${item.color}10`,marginBottom:i<nextActions.length-1?6:0}}>
-              <div style={{flex:1,fontSize:11,color:T.text,lineHeight:1.4}}>{item.text}</div>
-              <button onClick={()=>onNav(item.nav)} style={{padding:"3px 9px",borderRadius:6,border:`1px solid ${item.color}40`,background:"transparent",color:item.color,fontSize:11,cursor:"pointer",flexShrink:0}}>→</button>
+              <div style={{flex:1,fontSize:13,color:T.text,lineHeight:1.4}}>{item.text}</div>
+              <button onClick={()=>onNav(item.nav)} style={{padding:"3px 9px",borderRadius:6,border:`1px solid ${item.color}40`,background:"transparent",color:item.color,fontSize:13,cursor:"pointer",flexShrink:0}}>→</button>
             </div>
           ))
         }
       </div>
       {/* 4-Pillar Readiness */}
       <div style={{background:T.panel,border:`1px solid ${allReady?T.green:T.border}`,borderRadius:12,padding:"14px 16px",marginTop:14,marginBottom:14}}>
-        <div style={{fontSize:9,letterSpacing:2,color:T.muted,marginBottom:10}}>ASSESSMENT READINESS — 4 PILLARS</div>
+        <div style={{fontSize:11,letterSpacing:2,color:T.muted,marginBottom:10}}>ASSESSMENT READINESS — 4 PILLARS</div>
         <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10}}>
           {pillars.map(p=>(
             <div key={p.key} onClick={()=>onNav(p.nav)} style={{background:T.panel2,border:`1px solid ${statusColor(p.status)}30`,borderRadius:10,padding:"12px 10px",cursor:"pointer",textAlign:"center"}}>
               <div style={{fontSize:20,marginBottom:4}}>{p.icon}</div>
-              <div style={{fontSize:10,fontWeight:700,color:T.white,marginBottom:4}}>{p.label}</div>
+              <div style={{fontSize:12,fontWeight:700,color:T.white,marginBottom:4}}>{p.label}</div>
               <div style={{fontSize:18,fontWeight:800,color:statusColor(p.status),marginBottom:2}}>{Math.round(p.pct)}%</div>
               <div style={{fontSize:8,color:T.muted,marginBottom:4}}>{p.detail}</div>
               <div style={{fontSize:8,color:statusColor(p.status)}}>{statusLabel(p.status)}</div>
@@ -1319,24 +1319,24 @@ function Dashboard({ decision, gaps, onNav }) {
             </div>
           ))}
         </div>
-        {!allReady&&<div style={{marginTop:10,padding:"8px 12px",background:T.redD,borderRadius:8,fontSize:10,color:T.red}}>⚠️ NABH assessors verify all 4 pillars — OE scores, KPI data (≥3 months), committee meeting minutes, and clinical audit records. App shows PASS only when all 4 pillars are ready.</div>}
+        {!allReady&&<div style={{marginTop:10,padding:"8px 12px",background:T.redD,borderRadius:8,fontSize:12,color:T.red}}>⚠️ NABH assessors verify all 4 pillars — OE scores, KPI data (≥3 months), committee meeting minutes, and clinical audit records. App shows PASS only when all 4 pillars are ready.</div>}
       </div>
       <ChapterHeatmap breakdown={decision.chapter_breakdown}/>
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"16px 18px",marginTop:14}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:12}}>
-          <div style={{fontSize:9,letterSpacing:2,color:T.muted}}>TOP 5 GAPS BY PRIORITY</div>
-          <button onClick={()=>onNav("gaps")} style={{fontSize:10,color:T.gold,background:"transparent",border:`1px solid ${T.gold}30`,borderRadius:10,padding:"3px 10px",cursor:"pointer"}}>View all →</button>
+          <div style={{fontSize:11,letterSpacing:2,color:T.muted}}>TOP 5 GAPS BY PRIORITY</div>
+          <button onClick={()=>onNav("gaps")} style={{fontSize:12,color:T.gold,background:"transparent",border:`1px solid ${T.gold}30`,borderRadius:10,padding:"3px 10px",cursor:"pointer"}}>View all →</button>
         </div>
-        {top5.length===0&&<div style={{fontSize:11,color:T.muted,textAlign:"center",padding:"16px 0"}}>No gaps yet. Score some OEs first.</div>}
+        {top5.length===0&&<div style={{fontSize:13,color:T.muted,textAlign:"center",padding:"16px 0"}}>No gaps yet. Score some OEs first.</div>}
         {top5.map((g,i)=>(
           <div key={g.oe_id} style={{display:"flex",gap:10,alignItems:"center",padding:"8px 0",borderBottom:i<4?`1px solid ${T.border}`:"none"}}>
-            <div style={{width:22,height:22,borderRadius:6,background:g.level==="CORE"?T.redD:T.orangeD,border:`1px solid ${g.level==="CORE"?T.red:T.orange}40`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:9,fontWeight:800,color:g.level==="CORE"?T.red:T.orange,flexShrink:0}}>{i+1}</div>
+            <div style={{width:22,height:22,borderRadius:6,background:g.level==="CORE"?T.redD:T.orangeD,border:`1px solid ${g.level==="CORE"?T.red:T.orange}40`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,fontWeight:800,color:g.level==="CORE"?T.red:T.orange,flexShrink:0}}>{i+1}</div>
             <div style={{flex:1}}>
               <div style={{display:"flex",gap:6,alignItems:"center",marginBottom:2}}>
-                <span style={{fontSize:10,fontWeight:700,color:lvColor(g.level),fontFamily:"monospace"}}>{g.oe_id}</span>
+                <span style={{fontSize:12,fontWeight:700,color:lvColor(g.level),fontFamily:"monospace"}}>{g.oe_id}</span>
                 {g.level==="CORE"&&<span style={{fontSize:8,padding:"1px 5px",borderRadius:4,background:T.redD,color:T.red}}>CORE</span>}
               </div>
-              <div style={{fontSize:10,color:T.muted,lineHeight:1.3}}>{(g.oe_text||"").slice(0,70)}…</div>
+              <div style={{fontSize:12,color:T.muted,lineHeight:1.3}}>{(g.oe_text||"").slice(0,70)}…</div>
             </div>
             <div style={{textAlign:"center",flexShrink:0}}>
               <div style={{fontSize:16,fontWeight:800,color:g.score<=2?T.red:g.score===3?T.orange:T.green}}>{g.score}</div>
@@ -1389,7 +1389,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
     onRefresh();
   };
   const scoreBtn=(oeId,oeLevel,oeDoc,score,label,color)=>(
-    <button key={score} onClick={()=>handleScore(oeId,oeLevel,oeDoc,score)} style={{padding:"5px 10px",borderRadius:7,fontSize:11,fontWeight:700,cursor:"pointer",background:localScores[oeId]===score?`${color}30`:T.panel2,border:`1px solid ${localScores[oeId]===score?color:`${color}40`}`,color:localScores[oeId]===score?color:T.muted,transition:"all 0.15s"}}>{label}</button>
+    <button key={score} onClick={()=>handleScore(oeId,oeLevel,oeDoc,score)} style={{padding:"5px 10px",borderRadius:7,fontSize:13,fontWeight:700,cursor:"pointer",background:localScores[oeId]===score?`${color}30`:T.panel2,border:`1px solid ${localScores[oeId]===score?color:`${color}40`}`,color:localScores[oeId]===score?color:T.muted,transition:"all 0.15s"}}>{label}</button>
   );
 
   const validUrl=(s)=>{try{const u=new URL(s);return u.protocol==="http:"||u.protocol==="https:";}catch{return false;}};
@@ -1427,25 +1427,25 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
   return (
     <div>
       {toast&&<div style={{position:"fixed",top:80,right:16,zIndex:999,maxWidth:360,background:toast.sev==="CRITICAL"?T.redD:toast.sev==="SUCCESS"?T.greenD:toast.sev==="HIGH"?T.orangeD:T.goldD,border:`1px solid ${toast.sev==="CRITICAL"?T.red:toast.sev==="SUCCESS"?T.green:toast.sev==="HIGH"?T.orange:T.gold}50`,borderRadius:10,padding:"12px 16px",boxShadow:"0 8px 32px rgba(0,0,0,0.5)"}}>
-        <div style={{fontSize:10,fontWeight:700,marginBottom:4,color:toast.sev==="CRITICAL"?T.red:toast.sev==="SUCCESS"?T.green:toast.sev==="HIGH"?T.orange:T.gold}}>{toast.sev==="CRITICAL"?"🚨":toast.sev==="SUCCESS"?"✅":toast.sev==="HIGH"?"⚠️":"📄"} {toast.type?.replace(/_/g," ")}</div>
-        <div style={{fontSize:11,color:T.text,lineHeight:1.5}}>{toast.msg}</div>
+        <div style={{fontSize:12,fontWeight:700,marginBottom:4,color:toast.sev==="CRITICAL"?T.red:toast.sev==="SUCCESS"?T.green:toast.sev==="HIGH"?T.orange:T.gold}}>{toast.sev==="CRITICAL"?"🚨":toast.sev==="SUCCESS"?"✅":toast.sev==="HIGH"?"⚠️":"📄"} {toast.type?.replace(/_/g," ")}</div>
+        <div style={{fontSize:13,color:T.text,lineHeight:1.5}}>{toast.msg}</div>
       </div>}
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",marginBottom:12}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
-          <div style={{fontSize:11,color:T.text}}>Scored: <strong style={{color:T.gold}}>{scored}</strong> / {oes.length} OEs</div>
-          <div style={{fontSize:10,color:T.muted}}>{Math.round(scored/Math.max(oes.length,1)*100)}% complete</div>
+          <div style={{fontSize:13,color:T.text}}>Scored: <strong style={{color:T.gold}}>{scored}</strong> / {oes.length} OEs</div>
+          <div style={{fontSize:12,color:T.muted}}>{Math.round(scored/Math.max(oes.length,1)*100)}% complete</div>
         </div>
         <div style={{height:4,background:T.border,borderRadius:2}}>
           <div style={{width:`${Math.round(scored/Math.max(oes.length,1)*100)}%`,height:"100%",background:`linear-gradient(90deg,${T.gold},${T.green})`,borderRadius:2,transition:"width 0.5s"}}/>
         </div>
       </div>
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 14px",marginBottom:14}}>
-        <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search OEs by ID or text (e.g. 'hand hygiene', 'COP.1.a', 'fall risk')..." style={{width:"100%",padding:"9px 12px",borderRadius:8,border:`1px solid ${search?T.gold:T.border}`,background:T.panel2,color:T.text,fontSize:12,marginBottom:10,boxSizing:"border-box"}}/>
+        <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search OEs by ID or text (e.g. 'hand hygiene', 'COP.1.a', 'fall risk')..." style={{width:"100%",padding:"9px 12px",borderRadius:8,border:`1px solid ${search?T.gold:T.border}`,background:T.panel2,color:T.text,fontSize:14,marginBottom:10,boxSizing:"border-box"}}/>
         <div style={{display:"flex",gap:8,flexWrap:"wrap",alignItems:"center"}}>
-          <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>{levels.map(l=><button key={l} onClick={()=>setFilter(l)} style={{padding:"5px 12px",borderRadius:8,fontSize:10,cursor:"pointer",background:filter===l?T.goldD:T.panel2,border:`1px solid ${filter===l?T.gold:T.border}`,color:filter===l?T.goldL:T.muted}}>{l}</button>)}</div>
-          <select value={chFilter} onChange={e=>setChFilter(e.target.value)} style={{padding:"5px 10px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:10}}>{chapters.map(c=><option key={c} value={c}>{c}</option>)}</select>
-          {(search||filter!=="ALL"||chFilter!=="ALL")&&(<button onClick={()=>{setSearch("");setFilter("ALL");setChFilter("ALL");}} style={{padding:"4px 10px",borderRadius:6,fontSize:9,cursor:"pointer",background:T.redD,border:`1px solid ${T.red}30`,color:T.red}}>X Clear</button>)}
-          <span style={{fontSize:9,color:T.muted,marginLeft:"auto"}}>{filtered.length} OEs shown</span>
+          <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>{levels.map(l=><button key={l} onClick={()=>setFilter(l)} style={{padding:"5px 12px",borderRadius:8,fontSize:12,cursor:"pointer",background:filter===l?T.goldD:T.panel2,border:`1px solid ${filter===l?T.gold:T.border}`,color:filter===l?T.goldL:T.muted}}>{l}</button>)}</div>
+          <select value={chFilter} onChange={e=>setChFilter(e.target.value)} style={{padding:"5px 10px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12}}>{chapters.map(c=><option key={c} value={c}>{c}</option>)}</select>
+          {(search||filter!=="ALL"||chFilter!=="ALL")&&(<button onClick={()=>{setSearch("");setFilter("ALL");setChFilter("ALL");}} style={{padding:"4px 10px",borderRadius:6,fontSize:11,cursor:"pointer",background:T.redD,border:`1px solid ${T.red}30`,color:T.red}}>X Clear</button>)}
+          <span style={{fontSize:11,color:T.muted,marginLeft:"auto"}}>{filtered.length} OEs shown</span>
         </div>
       </div>
       <div style={{display:"grid",gap:8}}>
@@ -1489,11 +1489,11 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
                   <div key={oe.id} style={{background:T.panel,border:`1px solid ${oe.level==="CORE"?`${T.red}30`:T.border}`,borderRadius:10,padding:"14px 16px",opacity:isSaving?0.7:1,boxShadow:T.panelShadow||""}}>
                     <div style={{display:"flex",gap:10,alignItems:"flex-start",marginBottom:10}}>
                       <div style={{flexShrink:0}}>
-                        <span style={{fontFamily:"monospace",fontSize:11,fontWeight:700,color:lvColor(oe.level)}}>{oe.id}</span>{" "}
-                        <span style={{fontSize:9,padding:"2px 7px",borderRadius:5,background:`${lvColor(oe.level)}22`,color:lvColor(oe.level)}}>{oe.level}</span>
-                        {oe.doc&&<span style={{fontSize:9,padding:"2px 6px",borderRadius:5,background:T.goldD,color:T.gold,marginLeft:4}}>DOC*</span>}
+                        <span style={{fontFamily:"monospace",fontSize:13,fontWeight:700,color:lvColor(oe.level)}}>{oe.id}</span>{" "}
+                        <span style={{fontSize:11,padding:"2px 7px",borderRadius:5,background:`${lvColor(oe.level)}22`,color:lvColor(oe.level)}}>{oe.level}</span>
+                        {oe.doc&&<span style={{fontSize:11,padding:"2px 6px",borderRadius:5,background:T.goldD,color:T.gold,marginLeft:4}}>DOC*</span>}
                       </div>
-                      <div style={{fontSize:10,color:T.text,lineHeight:1.5,flex:1}}>{oe.text}</div>
+                      <div style={{fontSize:12,color:T.text,lineHeight:1.5,flex:1}}>{oe.text}</div>
                       <div style={{fontSize:22,fontWeight:800,color:scoreColor,flexShrink:0,minWidth:30,textAlign:"center"}}>{isSaving?"…":currentScore||"—"}</div>
                     </div>
                     <div style={{display:"flex",gap:6,flexWrap:"wrap",alignItems:"center"}}>
@@ -1503,7 +1503,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
                       {scoreBtn(oe.id,oe.level,oe.doc,4,"4 – Full",T.green)}
                       {scoreBtn(oe.id,oe.level,oe.doc,5,"5 – Excellent",T.blue)}
                       <button onClick={()=>setShowTip(p=>({...p,[oe.id]:!p[oe.id]}))}
-                        style={{marginLeft:"auto",padding:"4px 10px",borderRadius:7,fontSize:10,cursor:"pointer",
+                        style={{marginLeft:"auto",padding:"4px 10px",borderRadius:7,fontSize:12,cursor:"pointer",
                           background:showTip[oe.id]?T.blueD:"transparent",
                           border:`1px solid ${showTip[oe.id]?T.blue:T.muted}`,
                           color:showTip[oe.id]?T.blue:T.muted}}>
@@ -1517,33 +1517,33 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
                       return (
                         <div style={{marginTop:10,background:links.length>0?T.greenD:T.orangeD,border:`1px solid ${links.length>0?T.green:T.orange}30`,borderRadius:8,padding:"10px 12px"}}>
                           <div style={{display:"flex",gap:8,alignItems:"center",flexWrap:"wrap",marginBottom:links.length>0||isOpen?8:0}}>
-                            <span style={{fontSize:10,fontWeight:700,color:links.length>0?T.green:T.orange,letterSpacing:1}}>
+                            <span style={{fontSize:12,fontWeight:700,color:links.length>0?T.green:T.orange,letterSpacing:1}}>
                               {links.length>0?`📎 EVIDENCE (${links.length})`:"⚠️ DOCUMENTATION REQUIRED"}
                             </span>
-                            {links.length===0&&<span style={{fontSize:10,color:T.muted}}>This OE requires evidence — paste a Drive/OneDrive/Dropbox link.</span>}
-                            <button onClick={()=>setLinkInputOpen(p=>({...p,[oe.id]:!p[oe.id]}))} style={{marginLeft:"auto",padding:"3px 10px",borderRadius:6,fontSize:10,cursor:"pointer",background:isOpen?T.panel2:`${T.gold}20`,border:`1px solid ${T.gold}40`,color:T.gold,fontWeight:700}}>
+                            {links.length===0&&<span style={{fontSize:12,color:T.muted}}>This OE requires evidence — paste a Drive/OneDrive/Dropbox link.</span>}
+                            <button onClick={()=>setLinkInputOpen(p=>({...p,[oe.id]:!p[oe.id]}))} style={{marginLeft:"auto",padding:"3px 10px",borderRadius:6,fontSize:12,cursor:"pointer",background:isOpen?T.panel2:`${T.gold}20`,border:`1px solid ${T.gold}40`,color:T.gold,fontWeight:700}}>
                               {isOpen?"✕ Cancel":"+ Add link"}
                             </button>
                           </div>
                           {links.length>0&&(
                             <div style={{display:"flex",gap:5,flexWrap:"wrap",marginBottom:isOpen?8:0}}>
                               {links.map((l,i)=>(
-                                <div key={i} style={{display:"flex",alignItems:"center",gap:5,padding:"4px 4px 4px 10px",borderRadius:6,background:T.panel2,border:`1px solid ${T.green}30`,fontSize:10}}>
+                                <div key={i} style={{display:"flex",alignItems:"center",gap:5,padding:"4px 4px 4px 10px",borderRadius:6,background:T.panel2,border:`1px solid ${T.green}30`,fontSize:12}}>
                                   <a href={l.url} target="_blank" rel="noopener noreferrer" style={{color:T.text,textDecoration:"none",maxWidth:200,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>📄 {l.label||domainOf(l.url)}</a>
-                                  <span style={{fontSize:9,color:T.muted}}>· {domainOf(l.url)}</span>
-                                  <button onClick={()=>removeLink(oe.id,i)} disabled={busy} style={{padding:"2px 7px",borderRadius:5,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:9,cursor:"pointer"}}>✕</button>
+                                  <span style={{fontSize:11,color:T.muted}}>· {domainOf(l.url)}</span>
+                                  <button onClick={()=>removeLink(oe.id,i)} disabled={busy} style={{padding:"2px 7px",borderRadius:5,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:11,cursor:"pointer"}}>✕</button>
                                 </div>
                               ))}
                             </div>
                           )}
                           {isOpen&&(
                             <div style={{display:"grid",gap:6,paddingTop:6,borderTop:`1px dashed ${T.border}`}}>
-                              <input value={linkUrl[oe.id]||""} onChange={e=>setLinkUrl(p=>({...p,[oe.id]:e.target.value}))} placeholder="https://drive.google.com/..." style={{padding:"7px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:T.panel,color:T.text,fontSize:11}}/>
+                              <input value={linkUrl[oe.id]||""} onChange={e=>setLinkUrl(p=>({...p,[oe.id]:e.target.value}))} placeholder="https://drive.google.com/..." style={{padding:"7px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:T.panel,color:T.text,fontSize:13}}/>
                               <div style={{display:"flex",gap:6}}>
-                                <input value={linkLabel[oe.id]||""} onChange={e=>setLinkLabel(p=>({...p,[oe.id]:e.target.value}))} placeholder="Optional label (e.g., 'IPC Policy v3')" style={{flex:1,padding:"7px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:T.panel,color:T.text,fontSize:11}}/>
-                                <button onClick={()=>saveLink(oe.id)} disabled={busy} style={{padding:"6px 14px",borderRadius:6,background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold,fontSize:11,fontWeight:700,cursor:busy?"not-allowed":"pointer",opacity:busy?0.5:1}}>{busy?"Saving…":"Save link"}</button>
+                                <input value={linkLabel[oe.id]||""} onChange={e=>setLinkLabel(p=>({...p,[oe.id]:e.target.value}))} placeholder="Optional label (e.g., 'IPC Policy v3')" style={{flex:1,padding:"7px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:T.panel,color:T.text,fontSize:13}}/>
+                                <button onClick={()=>saveLink(oe.id)} disabled={busy} style={{padding:"6px 14px",borderRadius:6,background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold,fontSize:13,fontWeight:700,cursor:busy?"not-allowed":"pointer",opacity:busy?0.5:1}}>{busy?"Saving…":"Save link"}</button>
                               </div>
-                              <div style={{fontSize:9,color:T.muted}}>Paste any URL — Google Drive, OneDrive, Dropbox, internal HIS, etc. Files stay in your storage; only the link is saved here.</div>
+                              <div style={{fontSize:11,color:T.muted}}>Paste any URL — Google Drive, OneDrive, Dropbox, internal HIS, etc. Files stay in your storage; only the link is saved here.</div>
                             </div>
                           )}
                         </div>
@@ -1563,16 +1563,16 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
                       const tipLabel = tips?"HOW TO ACHIEVE THIS OE":chapterTips?"CHAPTER GUIDANCE — "+oe.chapter:"GENERAL GUIDANCE — "+oe.level.toUpperCase();
                       return (
                         <div style={{marginTop:10,background:T.blueD,border:`1px solid ${T.blue}20`,borderRadius:8,padding:"12px 14px"}}>
-                          <div style={{fontSize:9,letterSpacing:2,color:T.blue,marginBottom:8}}>
+                          <div style={{fontSize:11,letterSpacing:2,color:T.blue,marginBottom:8}}>
                             {tipLabel}
                           </div>
                           {displayTips.map((tip,i)=>(
                             <div key={i} style={{display:"flex",gap:8,marginBottom:6,alignItems:"flex-start"}}>
-                              <div style={{width:18,height:18,borderRadius:"50%",background:`${T.blue}20`,border:`1px solid ${T.blue}40`,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,fontSize:9,color:T.blue,fontWeight:700}}>{i+1}</div>
-                              <div style={{fontSize:11,color:T.text,lineHeight:1.6,paddingTop:1}}>{tip}</div>
+                              <div style={{width:18,height:18,borderRadius:"50%",background:`${T.blue}20`,border:`1px solid ${T.blue}40`,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,fontSize:11,color:T.blue,fontWeight:700}}>{i+1}</div>
+                              <div style={{fontSize:13,color:T.text,lineHeight:1.6,paddingTop:1}}>{tip}</div>
                             </div>
                           ))}
-                          {!tips&&!chapterTips&&<div style={{fontSize:9,color:T.muted,marginTop:6,fontStyle:"italic"}}>Specific achieve tips not available for this OE — general {oe.level} guidance shown.</div>}
+                          {!tips&&!chapterTips&&<div style={{fontSize:11,color:T.muted,marginTop:6,fontStyle:"italic"}}>Specific achieve tips not available for this OE — general {oe.level} guidance shown.</div>}
                         </div>
                       );
                     })()}
@@ -1583,7 +1583,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
             </div>
           ));
         })()}
-        {filtered.length===0&&<div style={{textAlign:"center",color:T.muted,padding:"30px",fontSize:12}}>{search?"No OEs match your search. Try different keywords or clear filters.":"No OEs match this filter."}</div>}
+        {filtered.length===0&&<div style={{textAlign:"center",color:T.muted,padding:"30px",fontSize:14}}>{search?"No OEs match your search. Try different keywords or clear filters.":"No OEs match this filter."}</div>}
       </div>
     </div>
   );
@@ -1610,13 +1610,13 @@ function GapFixScreen({ assessmentId, gaps, onRefresh }) {
         value={search}
         onChange={e=>setSearch(e.target.value)}
         placeholder="Search gaps by OE ID or text (e.g. 'AAC.1.a', 'hand hygiene')..."
-        style={{width:'100%',padding:'10px 14px',borderRadius:8,border:'1px solid #0f2640',background:'#081525',color:'#eef4f9',fontSize:12,marginBottom:10,boxSizing:'border-box'}}
+        style={{width:'100%',padding:'10px 14px',borderRadius:8,border:'1px solid #0f2640',background:'#081525',color:'#eef4f9',fontSize:14,marginBottom:10,boxSizing:'border-box'}}
       />
       <div style={{display:"flex",gap:8,marginBottom:14}}>
-        {["ALL","CRITICAL","HIGH","MEDIUM","LOW"].map(s=><button key={s} onClick={()=>setSevFilter(s)} style={{padding:"5px 14px",borderRadius:8,fontSize:10,cursor:"pointer",background:sevFilter===s?`${sevColor(s)}20`:"transparent",border:`1px solid ${sevFilter===s?sevColor(s):T.border}`,color:sevFilter===s?sevColor(s):T.muted}}>{s}</button>)}
-        <div style={{marginLeft:"auto",fontSize:11,color:T.muted,alignSelf:"center"}}>{filteredGaps.length} gaps</div>
+        {["ALL","CRITICAL","HIGH","MEDIUM","LOW"].map(s=><button key={s} onClick={()=>setSevFilter(s)} style={{padding:"5px 14px",borderRadius:8,fontSize:12,cursor:"pointer",background:sevFilter===s?`${sevColor(s)}20`:"transparent",border:`1px solid ${sevFilter===s?sevColor(s):T.border}`,color:sevFilter===s?sevColor(s):T.muted}}>{s}</button>)}
+        <div style={{marginLeft:"auto",fontSize:13,color:T.muted,alignSelf:"center"}}>{filteredGaps.length} gaps</div>
       </div>
-      {filteredGaps.length===0&&<div style={{textAlign:"center",color:T.muted,padding:"40px",fontSize:12}}>{(gaps||[]).length===0?"No gaps found. Score OEs first.":"No gaps at this severity level."}</div>}
+      {filteredGaps.length===0&&<div style={{textAlign:"center",color:T.muted,padding:"40px",fontSize:14}}>{(gaps||[]).length===0?"No gaps found. Score OEs first.":"No gaps at this severity level."}</div>}
       <div style={{display:"grid",gap:10}}>
         {filteredGaps.map(g=>{
           const c=capas[g.oe_id]||{}; const expanded=c.expanded;
@@ -1627,29 +1627,29 @@ function GapFixScreen({ assessmentId, gaps, onRefresh }) {
                 <div style={{display:"flex",gap:10,alignItems:"flex-start",marginBottom:8}}>
                   <div style={{flex:1}}>
                     <div style={{display:"flex",gap:8,alignItems:"center",marginBottom:4,flexWrap:"wrap"}}>
-                      <span style={{fontFamily:"monospace",fontSize:11,fontWeight:700,color:lvColor(g.level)}}>{g.oe_id}</span>
-                      <span style={{fontSize:9,padding:"2px 7px",borderRadius:5,background:`${sevColor(g.severity)}15`,color:sevColor(g.severity)}}>{g.severity}</span>
-                      {g.level==="CORE"&&<span style={{fontSize:9,padding:"2px 6px",borderRadius:5,background:T.redD,color:T.red}}>CORE</span>}
-                      {g.gap_closed&&<span style={{fontSize:9,padding:"2px 6px",borderRadius:5,background:T.greenD,color:T.green}}>✓ CLOSED</span>}
+                      <span style={{fontFamily:"monospace",fontSize:13,fontWeight:700,color:lvColor(g.level)}}>{g.oe_id}</span>
+                      <span style={{fontSize:11,padding:"2px 7px",borderRadius:5,background:`${sevColor(g.severity)}15`,color:sevColor(g.severity)}}>{g.severity}</span>
+                      {g.level==="CORE"&&<span style={{fontSize:11,padding:"2px 6px",borderRadius:5,background:T.redD,color:T.red}}>CORE</span>}
+                      {g.gap_closed&&<span style={{fontSize:11,padding:"2px 6px",borderRadius:5,background:T.greenD,color:T.green}}>✓ CLOSED</span>}
                     </div>
-                    <div style={{fontSize:10,color:T.text,lineHeight:1.5,marginBottom:6}}>{g.oe_text}</div>
-                    <div style={{fontSize:10,color:T.muted,fontStyle:"italic"}}>{g.message}</div>
+                    <div style={{fontSize:12,color:T.text,lineHeight:1.5,marginBottom:6}}>{g.oe_text}</div>
+                    <div style={{fontSize:12,color:T.muted,fontStyle:"italic"}}>{g.message}</div>
                   </div>
                   <div style={{textAlign:"center",flexShrink:0}}>
                     <div style={{fontSize:22,fontWeight:800,color:g.score<=2?T.red:g.score===3?T.orange:T.green}}>{g.score}</div>
                     <div style={{fontSize:7,color:T.muted}}>/ 5</div>
                   </div>
                 </div>
-                <button onClick={()=>setCapas(p=>({...p,[g.oe_id]:{...c,expanded:!expanded}}))} style={{fontSize:10,color:T.gold,background:"transparent",border:`1px solid ${T.gold}30`,borderRadius:8,padding:"4px 14px",cursor:"pointer"}}>{expanded?"▲ Hide CAPA":"▼ Add CAPA"}</button>
+                <button onClick={()=>setCapas(p=>({...p,[g.oe_id]:{...c,expanded:!expanded}}))} style={{fontSize:12,color:T.gold,background:"transparent",border:`1px solid ${T.gold}30`,borderRadius:8,padding:"4px 14px",cursor:"pointer"}}>{expanded?"▲ Hide CAPA":"▼ Add CAPA"}</button>
                 {expanded&&(
                   <div style={{marginTop:12,display:"grid",gap:8}}>
-                    {c.saved&&<div style={{fontSize:10,color:T.green,padding:"6px 10px",background:T.greenD,borderRadius:6}}>✓ CAPA saved</div>}
-                    <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>FINDING *</div><textarea value={c.finding||""} onChange={e=>setCapas(p=>({...p,[g.oe_id]:{...c,finding:e.target.value}}))} rows={2} placeholder="Describe the non-compliance finding…" style={{width:"100%",padding:"8px 10px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:11,resize:"vertical",boxSizing:"border-box"}}/></div>
-                    <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>ACTION PLANNED *</div><textarea value={c.action||""} onChange={e=>setCapas(p=>({...p,[g.oe_id]:{...c,action:e.target.value}}))} rows={2} placeholder="Corrective action to be taken…" style={{width:"100%",padding:"8px 10px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:11,resize:"vertical",boxSizing:"border-box"}}/></div>
+                    {c.saved&&<div style={{fontSize:12,color:T.green,padding:"6px 10px",background:T.greenD,borderRadius:6}}>✓ CAPA saved</div>}
+                    <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>FINDING *</div><textarea value={c.finding||""} onChange={e=>setCapas(p=>({...p,[g.oe_id]:{...c,finding:e.target.value}}))} rows={2} placeholder="Describe the non-compliance finding…" style={{width:"100%",padding:"8px 10px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,resize:"vertical",boxSizing:"border-box"}}/></div>
+                    <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>ACTION PLANNED *</div><textarea value={c.action||""} onChange={e=>setCapas(p=>({...p,[g.oe_id]:{...c,action:e.target.value}}))} rows={2} placeholder="Corrective action to be taken…" style={{width:"100%",padding:"8px 10px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,resize:"vertical",boxSizing:"border-box"}}/></div>
                     <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
-                      <div style={{flex:1,minWidth:140}}><div style={{fontSize:9,color:T.muted,marginBottom:4}}>RESPONSIBLE PERSON</div><input value={c.person||""} onChange={e=>setCapas(p=>({...p,[g.oe_id]:{...c,person:e.target.value}}))} placeholder="Name / Designation" style={{width:"100%",padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:11,boxSizing:"border-box"}}/></div>
-                      <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>TARGET DATE</div><input type="date" value={c.date||""} onChange={e=>setCapas(p=>({...p,[g.oe_id]:{...c,date:e.target.value}}))} style={{padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:11}}/></div>
-                      <button onClick={()=>submitCapa(g.oe_id)} disabled={saving[g.oe_id]||!c.finding||!c.action} style={{marginTop:14,padding:"7px 20px",borderRadius:10,background:`linear-gradient(135deg,${T.green},#3d9e6e)`,border:"none",color:T.bg,fontSize:12,fontWeight:700,cursor:c.finding&&c.action?"pointer":"default",opacity:c.finding&&c.action?1:0.5}}>{saving[g.oe_id]?"Saving…":"Save CAPA →"}</button>
+                      <div style={{flex:1,minWidth:140}}><div style={{fontSize:11,color:T.muted,marginBottom:4}}>RESPONSIBLE PERSON</div><input value={c.person||""} onChange={e=>setCapas(p=>({...p,[g.oe_id]:{...c,person:e.target.value}}))} placeholder="Name / Designation" style={{width:"100%",padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,boxSizing:"border-box"}}/></div>
+                      <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>TARGET DATE</div><input type="date" value={c.date||""} onChange={e=>setCapas(p=>({...p,[g.oe_id]:{...c,date:e.target.value}}))} style={{padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13}}/></div>
+                      <button onClick={()=>submitCapa(g.oe_id)} disabled={saving[g.oe_id]||!c.finding||!c.action} style={{marginTop:14,padding:"7px 20px",borderRadius:10,background:`linear-gradient(135deg,${T.green},#3d9e6e)`,border:"none",color:T.bg,fontSize:14,fontWeight:700,cursor:c.finding&&c.action?"pointer":"default",opacity:c.finding&&c.action?1:0.5}}>{saving[g.oe_id]?"Saving…":"Save CAPA →"}</button>
                     </div>
                   </div>
                 )}
@@ -1754,8 +1754,8 @@ function CommitteesScreen({ hospitalId }) {
     setMeetings(m=>m.filter(x=>x.id!==id));
   };
 
-  const inp={width:"100%",padding:"7px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:T.panel,color:T.text,fontSize:11,boxSizing:"border-box"};
-  const lbl={fontSize:9,color:T.muted,marginBottom:3,letterSpacing:1};
+  const inp={width:"100%",padding:"7px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:T.panel,color:T.text,fontSize:13,boxSizing:"border-box"};
+  const lbl={fontSize:11,color:T.muted,marginBottom:3,letterSpacing:1};
 
   const totalActive=new Set(meetings.filter(m=>{
     const d=new Date(m.meeting_date); const now=new Date();
@@ -1769,30 +1769,30 @@ function CommitteesScreen({ hospitalId }) {
       {/* 4-pillar summary bar */}
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",marginBottom:14,display:"flex",gap:16,alignItems:"center",flexWrap:"wrap"}}>
         <div style={{flex:1}}>
-          <div style={{fontSize:9,color:T.muted,marginBottom:3,letterSpacing:1}}>COMMITTEE FUNCTIONING</div>
-          <div style={{fontSize:12,color:totalActive>=20?T.green:totalActive>0?T.orange:T.red,fontWeight:700}}>
-            {totalActive}/26 committees active <span style={{fontSize:9,color:T.muted}}>(met in last 12 months)</span>
+          <div style={{fontSize:11,color:T.muted,marginBottom:3,letterSpacing:1}}>COMMITTEE FUNCTIONING</div>
+          <div style={{fontSize:14,color:totalActive>=20?T.green:totalActive>0?T.orange:T.red,fontWeight:700}}>
+            {totalActive}/26 committees active <span style={{fontSize:11,color:T.muted}}>(met in last 12 months)</span>
           </div>
           <div style={{height:4,background:T.border,borderRadius:2,marginTop:6}}>
             <div style={{height:"100%",borderRadius:2,background:totalActive>=20?T.green:totalActive>0?T.orange:T.red,width:`${Math.min(100,(totalActive/26)*100)}%`,transition:"width 0.5s"}}/>
           </div>
         </div>
         <div style={{display:"flex",gap:8}}>
-          <button onClick={()=>setView("reference")} style={{padding:"5px 14px",borderRadius:8,fontSize:10,cursor:"pointer",background:view==="reference"?T.goldD:"transparent",border:`1px solid ${view==="reference"?T.gold:T.border}`,color:view==="reference"?T.goldL:T.muted}}>📋 Reference</button>
-          <button onClick={()=>setView("mom")} style={{padding:"5px 14px",borderRadius:8,fontSize:10,cursor:"pointer",background:view==="mom"?T.goldD:"transparent",border:`1px solid ${view==="mom"?T.gold:T.border}`,color:view==="mom"?T.goldL:T.muted}}>📝 Meeting Records {meetings.length>0&&<span style={{marginLeft:4,background:T.gold,color:T.bg,borderRadius:4,padding:"0 5px",fontSize:8}}>{meetings.length}</span>}</button>
+          <button onClick={()=>setView("reference")} style={{padding:"5px 14px",borderRadius:8,fontSize:12,cursor:"pointer",background:view==="reference"?T.goldD:"transparent",border:`1px solid ${view==="reference"?T.gold:T.border}`,color:view==="reference"?T.goldL:T.muted}}>📋 Reference</button>
+          <button onClick={()=>setView("mom")} style={{padding:"5px 14px",borderRadius:8,fontSize:12,cursor:"pointer",background:view==="mom"?T.goldD:"transparent",border:`1px solid ${view==="mom"?T.gold:T.border}`,color:view==="mom"?T.goldL:T.muted}}>📝 Meeting Records {meetings.length>0&&<span style={{marginLeft:4,background:T.gold,color:T.bg,borderRadius:4,padding:"0 5px",fontSize:8}}>{meetings.length}</span>}</button>
         </div>
       </div>
 
-      {momSuccess&&<div style={{background:T.greenD,border:`1px solid ${T.green}30`,borderRadius:8,padding:"10px 14px",marginBottom:12,fontSize:11,color:T.green}}>✅ Meeting minutes saved successfully.</div>}
+      {momSuccess&&<div style={{background:T.greenD,border:`1px solid ${T.green}30`,borderRadius:8,padding:"10px 14px",marginBottom:12,fontSize:13,color:T.green}}>✅ Meeting minutes saved successfully.</div>}
 
       {/* REFERENCE VIEW */}
       {view==="reference"&&(
         <div>
           <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",marginBottom:14}}>
             <div style={{display:"flex",gap:10,alignItems:"center",flexWrap:"wrap"}}>
-              <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search committees…" style={{flex:1,minWidth:180,padding:"8px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12}}/>
-              {["ALL","NEW","JCI"].map(f=><button key={f} onClick={()=>setFilter(f)} style={{padding:"5px 12px",borderRadius:8,fontSize:10,cursor:"pointer",background:filter===f?T.goldD:"transparent",border:`1px solid ${filter===f?T.gold:T.border}`,color:filter===f?T.goldL:T.muted}}>{f==="NEW"?"🆕 New 6th":f==="JCI"?"🌐 JCI":"All"}</button>)}
-              <div style={{fontSize:11,color:T.muted}}>{filtered.length}/{committees.length}</div>
+              <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search committees…" style={{flex:1,minWidth:180,padding:"8px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14}}/>
+              {["ALL","NEW","JCI"].map(f=><button key={f} onClick={()=>setFilter(f)} style={{padding:"5px 12px",borderRadius:8,fontSize:12,cursor:"pointer",background:filter===f?T.goldD:"transparent",border:`1px solid ${filter===f?T.gold:T.border}`,color:filter===f?T.goldL:T.muted}}>{f==="NEW"?"🆕 New 6th":f==="JCI"?"🌐 JCI":"All"}</button>)}
+              <div style={{fontSize:13,color:T.muted}}>{filtered.length}/{committees.length}</div>
             </div>
           </div>
           <div style={{display:"grid",gap:8}}>
@@ -1806,27 +1806,27 @@ function CommitteesScreen({ hospitalId }) {
                     <div style={{display:"flex",gap:10,alignItems:"flex-start"}}>
                       <div style={{flex:1}}>
                         <div style={{display:"flex",gap:8,alignItems:"center",marginBottom:5,flexWrap:"wrap"}}>
-                          <span style={{fontSize:13,fontWeight:700,color:T.white}}>{c.name}</span>
+                          <span style={{fontSize:15,fontWeight:700,color:T.white}}>{c.name}</span>
                           {c.is_new_in_6th&&<span style={{fontSize:8,padding:"2px 7px",borderRadius:5,background:`${T.gold}20`,color:T.gold,fontWeight:700}}>NEW 6TH</span>}
                           {c.is_jci&&<span style={{fontSize:8,padding:"2px 7px",borderRadius:5,background:T.blueD,color:T.blue}}>JCI</span>}
                           {mCount>0?<span style={{fontSize:8,padding:"2px 7px",borderRadius:5,background:T.greenD,color:T.green}}>✓ {mCount} meeting{mCount>1?"s":""} recorded</span>
                             :<span style={{fontSize:8,padding:"2px 7px",borderRadius:5,background:T.redD,color:T.red}}>No meetings recorded</span>}
                         </div>
                         <div style={{display:"flex",gap:12,flexWrap:"wrap"}}>
-                          <span style={{fontSize:10,color:T.muted}}>📋 {c.chapter_ref}</span>
-                          <span style={{fontSize:10,color:T.muted}}>🔄 {c.frequency}</span>
-                          <span style={{fontSize:10,color:T.muted}}>👤 {c.chair}</span>
-                          {last&&<span style={{fontSize:10,color:T.green}}>Last: {last}</span>}
+                          <span style={{fontSize:12,color:T.muted}}>📋 {c.chapter_ref}</span>
+                          <span style={{fontSize:12,color:T.muted}}>🔄 {c.frequency}</span>
+                          <span style={{fontSize:12,color:T.muted}}>👤 {c.chair}</span>
+                          {last&&<span style={{fontSize:12,color:T.green}}>Last: {last}</span>}
                         </div>
                       </div>
-                      <button onClick={e=>{e.stopPropagation();setShowMOMForm(c.id);setMOMForm(emptyMOM());setView("reference");}} style={{padding:"4px 10px",borderRadius:6,fontSize:9,cursor:"pointer",background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold,flexShrink:0}}>+ Add MOM</button>
-                      <span style={{fontSize:14,color:T.muted}}>{isOpen?"▲":"▼"}</span>
+                      <button onClick={e=>{e.stopPropagation();setShowMOMForm(c.id);setMOMForm(emptyMOM());setView("reference");}} style={{padding:"4px 10px",borderRadius:6,fontSize:11,cursor:"pointer",background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold,flexShrink:0}}>+ Add MOM</button>
+                      <span style={{fontSize:16,color:T.muted}}>{isOpen?"▲":"▼"}</span>
                     </div>
                   </div>
                   {/* MOM Form inline */}
                   {showMOMForm===c.id&&(
                     <div style={{borderTop:`1px solid ${T.gold}40`,padding:"16px",background:T.panel2}}>
-                      <div style={{fontSize:11,fontWeight:700,color:T.gold,marginBottom:12,letterSpacing:1}}>📝 ADD MEETING MINUTES — {c.name}</div>
+                      <div style={{fontSize:13,fontWeight:700,color:T.gold,marginBottom:12,letterSpacing:1}}>📝 ADD MEETING MINUTES — {c.name}</div>
                       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:10}}>
                         {[["Meeting Date *","date","meeting_date"],["Meeting No.","text","meeting_no"],["Venue","text","venue"],["Chairperson *","text","chairperson"]].map(([l,t,k])=>(
                           <div key={k}><div style={lbl}>{l}</div><input type={t} value={momForm[k]} onChange={e=>setMOMForm(f=>({...f,[k]:e.target.value}))} style={inp}/></div>
@@ -1835,24 +1835,24 @@ function CommitteesScreen({ hospitalId }) {
                         <div><div style={lbl}>Total Members</div><input type="number" value={momForm.members_total} onChange={e=>setMOMForm(f=>({...f,members_total:e.target.value}))} style={inp}/></div>
                       </div>
                       <div style={{display:"flex",gap:16,marginBottom:12}}>
-                        <label style={{display:"flex",alignItems:"center",gap:6,fontSize:11,color:T.text,cursor:"pointer"}}>
+                        <label style={{display:"flex",alignItems:"center",gap:6,fontSize:13,color:T.text,cursor:"pointer"}}>
                           <input type="checkbox" checked={momForm.quorum_met} onChange={e=>setMOMForm(f=>({...f,quorum_met:e.target.checked}))}/> Quorum Met
                         </label>
-                        <label style={{display:"flex",alignItems:"center",gap:6,fontSize:11,color:T.text,cursor:"pointer"}}>
+                        <label style={{display:"flex",alignItems:"center",gap:6,fontSize:13,color:T.text,cursor:"pointer"}}>
                           <input type="checkbox" checked={momForm.previous_capa_reviewed} onChange={e=>setMOMForm(f=>({...f,previous_capa_reviewed:e.target.checked}))}/> Previous CAPA Reviewed
                         </label>
                       </div>
                       {/* Agenda items */}
                       <div style={{marginBottom:12}}>
                         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
-                          <div style={{fontSize:10,fontWeight:700,color:T.gold,letterSpacing:1}}>AGENDA ITEMS</div>
-                          <button onClick={addAgendaItem} style={{padding:"3px 10px",borderRadius:6,fontSize:9,cursor:"pointer",background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold}}>+ Add Item</button>
+                          <div style={{fontSize:12,fontWeight:700,color:T.gold,letterSpacing:1}}>AGENDA ITEMS</div>
+                          <button onClick={addAgendaItem} style={{padding:"3px 10px",borderRadius:6,fontSize:11,cursor:"pointer",background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold}}>+ Add Item</button>
                         </div>
                         {momForm.agenda_items.map((ag,i)=>(
                           <div key={i} style={{background:T.panel,borderRadius:8,padding:"10px",marginBottom:8,border:`1px solid ${T.border}`}}>
                             <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:6}}>
-                              <div style={{fontSize:9,color:T.gold,fontWeight:700}}>ITEM {i+1}</div>
-                              {momForm.agenda_items.length>1&&<button onClick={()=>removeAgenda(i)} style={{fontSize:9,color:T.red,background:"transparent",border:"none",cursor:"pointer"}}>✕ Remove</button>}
+                              <div style={{fontSize:11,color:T.gold,fontWeight:700}}>ITEM {i+1}</div>
+                              {momForm.agenda_items.length>1&&<button onClick={()=>removeAgenda(i)} style={{fontSize:11,color:T.red,background:"transparent",border:"none",cursor:"pointer"}}>✕ Remove</button>}
                             </div>
                             <div style={{display:"grid",gap:6}}>
                               {[["Agenda Item","item"],["Discussion","discussion"],["Decision","decision"]].map(([l,k])=>(
@@ -1879,42 +1879,42 @@ function CommitteesScreen({ hospitalId }) {
                         <input style={inp} placeholder="https://drive.google.com/…" value={momForm.evidence_url} onChange={e=>setMOMForm(f=>({...f,evidence_url:e.target.value}))}/>
                       </div>
                       <div style={{display:"flex",gap:8}}>
-                        <button onClick={()=>saveMOM(c.id)} disabled={saving} style={{padding:"8px 20px",borderRadius:8,background:T.green,border:"none",color:T.bg,fontSize:11,fontWeight:700,cursor:"pointer"}}>{saving?"Saving…":"💾 Save Meeting Minutes"}</button>
-                        <button onClick={()=>{setShowMOMForm(null);setMOMForm(emptyMOM());}} style={{padding:"8px 16px",borderRadius:8,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:11,cursor:"pointer"}}>Cancel</button>
+                        <button onClick={()=>saveMOM(c.id)} disabled={saving} style={{padding:"8px 20px",borderRadius:8,background:T.green,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer"}}>{saving?"Saving…":"💾 Save Meeting Minutes"}</button>
+                        <button onClick={()=>{setShowMOMForm(null);setMOMForm(emptyMOM());}} style={{padding:"8px 16px",borderRadius:8,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:13,cursor:"pointer"}}>Cancel</button>
                       </div>
                     </div>
                   )}
                   {isOpen&&(
                     <div style={{borderTop:`1px solid ${T.border}`,padding:"14px 16px",display:"grid",gap:12}}>
-                      <div><div style={{fontSize:9,color:T.muted,marginBottom:5,letterSpacing:1}}>SCOPE</div><div style={{fontSize:11,color:T.text,lineHeight:1.6}}>{c.scope}</div></div>
+                      <div><div style={{fontSize:11,color:T.muted,marginBottom:5,letterSpacing:1}}>SCOPE</div><div style={{fontSize:13,color:T.text,lineHeight:1.6}}>{c.scope}</div></div>
                       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
-                        <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>COORDINATOR</div><div style={{fontSize:11,color:T.text}}>{c.coordinator}</div></div>
-                        <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>MEMBERS</div><div style={{fontSize:11,color:T.text,lineHeight:1.5}}>{c.members}</div></div>
+                        <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>COORDINATOR</div><div style={{fontSize:13,color:T.text}}>{c.coordinator}</div></div>
+                        <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>MEMBERS</div><div style={{fontSize:13,color:T.text,lineHeight:1.5}}>{c.members}</div></div>
                       </div>
-                      {docs.length>0&&<div><div style={{fontSize:9,color:T.muted,marginBottom:7,letterSpacing:1}}>REQUIRED DOCUMENTS</div><div style={{display:"flex",gap:5,flexWrap:"wrap"}}>{docs.map((d,i)=><span key={i} style={{fontSize:10,padding:"3px 10px",borderRadius:6,background:T.goldD,border:`1px solid ${T.gold}30`,color:T.gold}}>📄 {d}</span>)}</div></div>}
-                      {c.linked_oes?.length>0&&<div><div style={{fontSize:9,color:T.muted,marginBottom:5}}>LINKED OEs</div><div style={{display:"flex",gap:4,flexWrap:"wrap"}}>{c.linked_oes.map(oe=><span key={oe} style={{fontSize:9,padding:"2px 7px",borderRadius:5,background:T.blueD,color:T.blue,fontFamily:"monospace"}}>{oe}</span>)}</div></div>}
+                      {docs.length>0&&<div><div style={{fontSize:11,color:T.muted,marginBottom:7,letterSpacing:1}}>REQUIRED DOCUMENTS</div><div style={{display:"flex",gap:5,flexWrap:"wrap"}}>{docs.map((d,i)=><span key={i} style={{fontSize:12,padding:"3px 10px",borderRadius:6,background:T.goldD,border:`1px solid ${T.gold}30`,color:T.gold}}>📄 {d}</span>)}</div></div>}
+                      {c.linked_oes?.length>0&&<div><div style={{fontSize:11,color:T.muted,marginBottom:5}}>LINKED OEs</div><div style={{display:"flex",gap:4,flexWrap:"wrap"}}>{c.linked_oes.map(oe=><span key={oe} style={{fontSize:11,padding:"2px 7px",borderRadius:5,background:T.blueD,color:T.blue,fontFamily:"monospace"}}>{oe}</span>)}</div></div>}
                       {c.formation_guide&&(()=>{
                         const fg=typeof c.formation_guide==="string"?JSON.parse(c.formation_guide):c.formation_guide;
                         const isGuideOpen=guideOpen===c.id;
                         return (
                           <div style={{borderTop:`1px dashed ${T.border}`,paddingTop:10,marginTop:2}}>
-                            <div onClick={()=>setGuideOpen(isGuideOpen?null:c.id)} style={{cursor:"pointer",display:"flex",alignItems:"center",gap:6,fontSize:10,color:T.gold,letterSpacing:1,fontWeight:700}}>
+                            <div onClick={()=>setGuideOpen(isGuideOpen?null:c.id)} style={{cursor:"pointer",display:"flex",alignItems:"center",gap:6,fontSize:12,color:T.gold,letterSpacing:1,fontWeight:700}}>
                               <span>{isGuideOpen?"▲":"▼"}</span><span>📖 FORMATION GUIDE — HOW TO CONSTITUTE & RUN</span>
                             </div>
                             {isGuideOpen&&(
                               <div style={{display:"grid",gap:12,marginTop:11,padding:"12px 14px",background:T.panel2,borderRadius:8,border:`1px solid ${T.gold}20`}}>
                                 <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
-                                  <div><div style={{fontSize:9,color:T.gold,marginBottom:4,letterSpacing:1,fontWeight:700}}>QUORUM</div><div style={{fontSize:11,color:T.text,lineHeight:1.5}}>{fg.quorum}</div></div>
-                                  <div><div style={{fontSize:9,color:T.gold,marginBottom:4,letterSpacing:1,fontWeight:700}}>TERM</div><div style={{fontSize:11,color:T.text,lineHeight:1.5}}>{fg.term}</div></div>
+                                  <div><div style={{fontSize:11,color:T.gold,marginBottom:4,letterSpacing:1,fontWeight:700}}>QUORUM</div><div style={{fontSize:13,color:T.text,lineHeight:1.5}}>{fg.quorum}</div></div>
+                                  <div><div style={{fontSize:11,color:T.gold,marginBottom:4,letterSpacing:1,fontWeight:700}}>TERM</div><div style={{fontSize:13,color:T.text,lineHeight:1.5}}>{fg.term}</div></div>
                                 </div>
                                 {Array.isArray(fg.agenda_template)&&fg.agenda_template.length>0&&(
                                   <div>
-                                    <div style={{fontSize:9,color:T.gold,marginBottom:6,letterSpacing:1,fontWeight:700}}>AGENDA TEMPLATE ({fg.agenda_template.length} ITEMS)</div>
+                                    <div style={{fontSize:11,color:T.gold,marginBottom:6,letterSpacing:1,fontWeight:700}}>AGENDA TEMPLATE ({fg.agenda_template.length} ITEMS)</div>
                                     <div style={{display:"grid",gap:4}}>
                                       {fg.agenda_template.map((item,i)=>(
                                         <div key={i} style={{display:"flex",gap:8,alignItems:"flex-start",padding:"6px 9px",background:T.panel,borderRadius:5,border:`1px solid ${T.border}`}}>
-                                          <span style={{fontSize:9,color:T.gold,fontWeight:700,minWidth:14}}>{i+1}.</span>
-                                          <span style={{fontSize:10,color:T.text,lineHeight:1.5}}>{item}</span>
+                                          <span style={{fontSize:11,color:T.gold,fontWeight:700,minWidth:14}}>{i+1}.</span>
+                                          <span style={{fontSize:12,color:T.text,lineHeight:1.5}}>{item}</span>
                                         </div>
                                       ))}
                                     </div>
@@ -1922,18 +1922,18 @@ function CommitteesScreen({ hospitalId }) {
                                 )}
                                 {Array.isArray(fg.induction_first_90_days)&&fg.induction_first_90_days.length>0&&(
                                   <div>
-                                    <div style={{fontSize:9,color:T.gold,marginBottom:6,letterSpacing:1,fontWeight:700}}>FIRST 90 DAYS — INDUCTION ROADMAP</div>
+                                    <div style={{fontSize:11,color:T.gold,marginBottom:6,letterSpacing:1,fontWeight:700}}>FIRST 90 DAYS — INDUCTION ROADMAP</div>
                                     <div style={{display:"grid",gap:5}}>
                                       {fg.induction_first_90_days.map((step,i)=>(
-                                        <div key={i} style={{padding:"7px 10px",background:T.panel,borderRadius:5,borderLeft:`3px solid ${T.gold}`,fontSize:10,color:T.text,lineHeight:1.55}}>{step}</div>
+                                        <div key={i} style={{padding:"7px 10px",background:T.panel,borderRadius:5,borderLeft:`3px solid ${T.gold}`,fontSize:12,color:T.text,lineHeight:1.55}}>{step}</div>
                                       ))}
                                     </div>
                                   </div>
                                 )}
                                 {fg.escalation_path&&(
                                   <div style={{padding:"10px 12px",background:T.redD,borderRadius:6,border:`1px solid ${T.red}30`}}>
-                                    <div style={{fontSize:9,color:T.red,marginBottom:5,letterSpacing:1,fontWeight:700}}>⚠️ ESCALATION PATH</div>
-                                    <div style={{fontSize:10,color:T.text,lineHeight:1.55}}>{fg.escalation_path}</div>
+                                    <div style={{fontSize:11,color:T.red,marginBottom:5,letterSpacing:1,fontWeight:700}}>⚠️ ESCALATION PATH</div>
+                                    <div style={{fontSize:12,color:T.text,lineHeight:1.55}}>{fg.escalation_path}</div>
                                   </div>
                                 )}
                               </div>
@@ -1944,18 +1944,18 @@ function CommitteesScreen({ hospitalId }) {
                       {/* Past meetings for this committee */}
                       {meetings.filter(m=>m.committee_id===c.id).length>0&&(
                         <div style={{borderTop:`1px dashed ${T.border}`,paddingTop:10}}>
-                          <div style={{fontSize:9,color:T.muted,marginBottom:8,letterSpacing:1}}>MEETING HISTORY ({meetings.filter(m=>m.committee_id===c.id).length})</div>
+                          <div style={{fontSize:11,color:T.muted,marginBottom:8,letterSpacing:1}}>MEETING HISTORY ({meetings.filter(m=>m.committee_id===c.id).length})</div>
                           {meetings.filter(m=>m.committee_id===c.id).map(m=>(
                             <div key={m.id} style={{background:T.panel2,borderRadius:8,padding:"10px 12px",marginBottom:6,border:`1px solid ${T.green}20`}}>
                               <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start"}}>
                                 <div>
-                                  <div style={{fontSize:11,fontWeight:700,color:T.white}}>{m.meeting_date} {m.meeting_no&&<span style={{color:T.muted,fontSize:9}}>— {m.meeting_no}</span>}</div>
-                                  <div style={{fontSize:10,color:T.muted,marginTop:2}}>Chair: {m.chairperson} | {m.members_present}/{m.members_total} members | Quorum: {m.quorum_met?"✅":"❌"}</div>
-                                  {m.agenda_items?.length>0&&<div style={{fontSize:9,color:T.muted,marginTop:3}}>{m.agenda_items.length} agenda items · {m.previous_capa_reviewed?"CAPA reviewed":"CAPA not reviewed"}</div>}
+                                  <div style={{fontSize:13,fontWeight:700,color:T.white}}>{m.meeting_date} {m.meeting_no&&<span style={{color:T.muted,fontSize:11}}>— {m.meeting_no}</span>}</div>
+                                  <div style={{fontSize:12,color:T.muted,marginTop:2}}>Chair: {m.chairperson} | {m.members_present}/{m.members_total} members | Quorum: {m.quorum_met?"✅":"❌"}</div>
+                                  {m.agenda_items?.length>0&&<div style={{fontSize:11,color:T.muted,marginTop:3}}>{m.agenda_items.length} agenda items · {m.previous_capa_reviewed?"CAPA reviewed":"CAPA not reviewed"}</div>}
                                 </div>
                                 <div style={{display:"flex",gap:6,alignItems:"center"}}>
-                                  {m.evidence_url&&<a href={m.evidence_url} target="_blank" rel="noopener noreferrer" style={{padding:"3px 9px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:9,textDecoration:"none",fontWeight:600}}>📎 Minutes</a>}
-                                  <button onClick={()=>deleteMeeting(m.id)} style={{fontSize:9,color:T.red,background:"transparent",border:`1px solid ${T.red}30`,borderRadius:4,padding:"2px 7px",cursor:"pointer"}}>Delete</button>
+                                  {m.evidence_url&&<a href={m.evidence_url} target="_blank" rel="noopener noreferrer" style={{padding:"3px 9px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:11,textDecoration:"none",fontWeight:600}}>📎 Minutes</a>}
+                                  <button onClick={()=>deleteMeeting(m.id)} style={{fontSize:11,color:T.red,background:"transparent",border:`1px solid ${T.red}30`,borderRadius:4,padding:"2px 7px",cursor:"pointer"}}>Delete</button>
                                 </div>
                               </div>
                             </div>
@@ -1977,8 +1977,8 @@ function CommitteesScreen({ hospitalId }) {
           {meetings.length===0?(
             <div style={{textAlign:"center",padding:40,color:T.muted}}>
               <div style={{fontSize:32,marginBottom:12}}>📝</div>
-              <div style={{fontSize:13,marginBottom:6}}>No meeting minutes recorded yet.</div>
-              <div style={{fontSize:11}}>Switch to Reference view and click "+ Add MOM" on any committee.</div>
+              <div style={{fontSize:15,marginBottom:6}}>No meeting minutes recorded yet.</div>
+              <div style={{fontSize:13}}>Switch to Reference view and click "+ Add MOM" on any committee.</div>
             </div>
           ):(
             <div style={{display:"grid",gap:8}}>
@@ -1988,33 +1988,33 @@ function CommitteesScreen({ hospitalId }) {
                   <div key={m.id} style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"14px 16px"}}>
                     <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:8}}>
                       <div>
-                        <div style={{fontSize:12,fontWeight:700,color:T.white}}>{comm?.name||m.committee_id}</div>
-                        <div style={{fontSize:10,color:T.muted,marginTop:2}}>{m.meeting_date} {m.meeting_no&&`— ${m.meeting_no}`} | {m.venue||"Venue not specified"}</div>
+                        <div style={{fontSize:14,fontWeight:700,color:T.white}}>{comm?.name||m.committee_id}</div>
+                        <div style={{fontSize:12,color:T.muted,marginTop:2}}>{m.meeting_date} {m.meeting_no&&`— ${m.meeting_no}`} | {m.venue||"Venue not specified"}</div>
                       </div>
                       <div style={{display:"flex",gap:6,alignItems:"center"}}>
-                        <span style={{fontSize:9,padding:"2px 8px",borderRadius:4,background:m.quorum_met?T.greenD:T.redD,color:m.quorum_met?T.green:T.red}}>Quorum {m.quorum_met?"Met":"Not Met"}</span>
-                        {m.evidence_url&&<a href={m.evidence_url} target="_blank" rel="noopener noreferrer" style={{padding:"3px 9px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:9,textDecoration:"none",fontWeight:600}}>📎 Minutes</a>}
-                        <button onClick={()=>deleteMeeting(m.id)} style={{fontSize:9,color:T.red,background:"transparent",border:`1px solid ${T.red}30`,borderRadius:4,padding:"2px 7px",cursor:"pointer"}}>Delete</button>
+                        <span style={{fontSize:11,padding:"2px 8px",borderRadius:4,background:m.quorum_met?T.greenD:T.redD,color:m.quorum_met?T.green:T.red}}>Quorum {m.quorum_met?"Met":"Not Met"}</span>
+                        {m.evidence_url&&<a href={m.evidence_url} target="_blank" rel="noopener noreferrer" style={{padding:"3px 9px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:11,textDecoration:"none",fontWeight:600}}>📎 Minutes</a>}
+                        <button onClick={()=>deleteMeeting(m.id)} style={{fontSize:11,color:T.red,background:"transparent",border:`1px solid ${T.red}30`,borderRadius:4,padding:"2px 7px",cursor:"pointer"}}>Delete</button>
                       </div>
                     </div>
                     <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8,marginBottom:8}}>
-                      <div style={{background:T.panel2,borderRadius:6,padding:"7px 10px"}}><div style={{fontSize:8,color:T.muted}}>CHAIRPERSON</div><div style={{fontSize:10,color:T.text}}>{m.chairperson}</div></div>
-                      <div style={{background:T.panel2,borderRadius:6,padding:"7px 10px"}}><div style={{fontSize:8,color:T.muted}}>ATTENDANCE</div><div style={{fontSize:10,color:T.text}}>{m.members_present||"—"}/{m.members_total||"—"} members</div></div>
-                      <div style={{background:T.panel2,borderRadius:6,padding:"7px 10px"}}><div style={{fontSize:8,color:T.muted}}>NEXT MEETING</div><div style={{fontSize:10,color:T.text}}>{m.next_meeting_date||"Not set"}</div></div>
+                      <div style={{background:T.panel2,borderRadius:6,padding:"7px 10px"}}><div style={{fontSize:8,color:T.muted}}>CHAIRPERSON</div><div style={{fontSize:12,color:T.text}}>{m.chairperson}</div></div>
+                      <div style={{background:T.panel2,borderRadius:6,padding:"7px 10px"}}><div style={{fontSize:8,color:T.muted}}>ATTENDANCE</div><div style={{fontSize:12,color:T.text}}>{m.members_present||"—"}/{m.members_total||"—"} members</div></div>
+                      <div style={{background:T.panel2,borderRadius:6,padding:"7px 10px"}}><div style={{fontSize:8,color:T.muted}}>NEXT MEETING</div><div style={{fontSize:12,color:T.text}}>{m.next_meeting_date||"Not set"}</div></div>
                     </div>
                     {m.agenda_items?.length>0&&(
                       <div>
-                        <div style={{fontSize:9,color:T.muted,marginBottom:5,letterSpacing:1}}>AGENDA & DECISIONS ({m.agenda_items.length} items)</div>
+                        <div style={{fontSize:11,color:T.muted,marginBottom:5,letterSpacing:1}}>AGENDA & DECISIONS ({m.agenda_items.length} items)</div>
                         {m.agenda_items.map((ag,i)=>(
                           <div key={i} style={{background:T.panel2,borderRadius:6,padding:"7px 10px",marginBottom:4,borderLeft:`2px solid ${T.gold}`}}>
-                            <div style={{fontSize:10,fontWeight:700,color:T.text}}>{i+1}. {ag.item}</div>
-                            {ag.decision&&<div style={{fontSize:9,color:T.green,marginTop:2}}>Decision: {ag.decision}</div>}
-                            {ag.action_owner&&<div style={{fontSize:9,color:T.blue,marginTop:1}}>Action: {ag.action_owner} by {ag.target_date||"—"}</div>}
+                            <div style={{fontSize:12,fontWeight:700,color:T.text}}>{i+1}. {ag.item}</div>
+                            {ag.decision&&<div style={{fontSize:11,color:T.green,marginTop:2}}>Decision: {ag.decision}</div>}
+                            {ag.action_owner&&<div style={{fontSize:11,color:T.blue,marginTop:1}}>Action: {ag.action_owner} by {ag.target_date||"—"}</div>}
                           </div>
                         ))}
                       </div>
                     )}
-                    {m.minutes_approved_by&&<div style={{fontSize:9,color:T.muted,marginTop:6}}>Minutes approved by: {m.minutes_approved_by} on {m.minutes_approved_date||"—"}</div>}
+                    {m.minutes_approved_by&&<div style={{fontSize:11,color:T.muted,marginTop:6}}>Minutes approved by: {m.minutes_approved_by} on {m.minutes_approved_date||"—"}</div>}
                   </div>
                 );
               })}
@@ -2186,7 +2186,7 @@ function KPIsScreen({ hospitalId, user }) {
   const tracked=kpis.filter(k=>monthsTracked(k.id)>=3).length;
   const total=kpis.length;
 
-  const inp={padding:"6px 9px",borderRadius:6,border:`1px solid ${T.border}`,background:T.panel,color:T.text,fontSize:11};
+  const inp={padding:"6px 9px",borderRadius:6,border:`1px solid ${T.border}`,background:T.panel,color:T.text,fontSize:13};
 
   if(loading) return <div style={{textAlign:"center",color:T.muted,padding:40}}>Loading KPIs…</div>;
 
@@ -2196,10 +2196,10 @@ function KPIsScreen({ hospitalId, user }) {
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",marginBottom:14}}>
         <div style={{display:"flex",gap:16,alignItems:"center",flexWrap:"wrap"}}>
           <div style={{flex:1}}>
-            <div style={{fontSize:9,color:T.muted,marginBottom:3,letterSpacing:1}}>KPI TRACKING STATUS</div>
-            <div style={{fontSize:12,color:tracked>=total*0.8?T.green:tracked>0?T.orange:T.red,fontWeight:700}}>
+            <div style={{fontSize:11,color:T.muted,marginBottom:3,letterSpacing:1}}>KPI TRACKING STATUS</div>
+            <div style={{fontSize:14,color:tracked>=total*0.8?T.green:tracked>0?T.orange:T.red,fontWeight:700}}>
               {tracked}/{total} KPIs with ≥3 months data
-              <span style={{fontSize:9,color:T.muted,marginLeft:6}}>(minimum required for NABH assessment)</span>
+              <span style={{fontSize:11,color:T.muted,marginLeft:6}}>(minimum required for NABH assessment)</span>
             </div>
             <div style={{height:4,background:T.border,borderRadius:2,marginTop:6}}>
               <div style={{height:"100%",borderRadius:2,background:tracked>=total*0.8?T.green:tracked>0?T.orange:T.red,width:`${Math.min(100,(tracked/total)*100)}%`,transition:"width 0.5s"}}/>
@@ -2207,7 +2207,7 @@ function KPIsScreen({ hospitalId, user }) {
           </div>
           <div style={{textAlign:"right"}}>
             <div style={{fontSize:20,fontWeight:700,color:T.gold}}>{Math.round((tracked/total)*100)}%</div>
-            <div style={{fontSize:9,color:T.muted}}>KPI readiness</div>
+            <div style={{fontSize:11,color:T.muted}}>KPI readiness</div>
           </div>
         </div>
       </div>
@@ -2216,12 +2216,12 @@ function KPIsScreen({ hospitalId, user }) {
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",marginBottom:14}}>
         <div style={{display:"flex",gap:8,marginBottom:10}}>
           {[["hospital","🏥 Hospital-wide (32)"],["dept_specific","🏬 Dept-specific (18)"]].map(([k,l])=>(
-            <button key={k} onClick={()=>{setTab(k);setSearch("");}} style={{padding:"6px 14px",borderRadius:8,fontSize:10,cursor:"pointer",background:tab===k?T.goldD:"transparent",border:`1px solid ${tab===k?T.gold:T.border}`,color:tab===k?T.goldL:T.muted}}>{l}</button>
+            <button key={k} onClick={()=>{setTab(k);setSearch("");}} style={{padding:"6px 14px",borderRadius:8,fontSize:12,cursor:"pointer",background:tab===k?T.goldD:"transparent",border:`1px solid ${tab===k?T.gold:T.border}`,color:tab===k?T.goldL:T.muted}}>{l}</button>
           ))}
         </div>
-        <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search KPIs…" style={{width:"100%",padding:"8px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12,boxSizing:"border-box"}}/>
+        <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search KPIs…" style={{width:"100%",padding:"8px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14,boxSizing:"border-box"}}/>
       </div>
-      {tab==="dept_specific"&&!search&&<div style={{display:"flex",gap:5,flexWrap:"wrap",marginBottom:10}}>{depts.map(d=><button key={d} onClick={()=>setSearch(d)} style={{padding:"3px 10px",borderRadius:6,fontSize:9,cursor:"pointer",background:T.blueD,border:`1px solid ${T.blue}30`,color:T.blue}}>{d}</button>)}</div>}
+      {tab==="dept_specific"&&!search&&<div style={{display:"flex",gap:5,flexWrap:"wrap",marginBottom:10}}>{depts.map(d=><button key={d} onClick={()=>setSearch(d)} style={{padding:"3px 10px",borderRadius:6,fontSize:11,cursor:"pointer",background:T.blueD,border:`1px solid ${T.blue}30`,color:T.blue}}>{d}</button>)}</div>}
 
       <div style={{display:"grid",gap:8}}>
         {filtered.map(k=>{
@@ -2235,59 +2235,59 @@ function KPIsScreen({ hospitalId, user }) {
             <div key={k.id} style={{background:T.panel,border:`1px solid ${k.is_mandatory?`${T.gold}25`:T.border}`,borderRadius:10,overflow:"hidden"}}>
               <div style={{padding:"12px 16px",cursor:"pointer"}} onClick={()=>{setExpanded(isOpen?null:k.id);if(!isOpen)initForm(k);}}>
                 <div style={{display:"flex",gap:10,alignItems:"flex-start"}}>
-                  <div style={{width:28,height:28,borderRadius:6,background:T.goldD,border:`1px solid ${T.gold}30`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:10,fontWeight:800,color:T.gold,flexShrink:0}}>{k.kpi_no}</div>
+                  <div style={{width:28,height:28,borderRadius:6,background:T.goldD,border:`1px solid ${T.gold}30`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,fontWeight:800,color:T.gold,flexShrink:0}}>{k.kpi_no}</div>
                   <div style={{flex:1}}>
                     <div style={{display:"flex",gap:7,alignItems:"center",marginBottom:3,flexWrap:"wrap"}}>
-                      <span style={{fontSize:12,fontWeight:700,color:T.white}}>{k.name}</span>
+                      <span style={{fontSize:14,fontWeight:700,color:T.white}}>{k.name}</span>
                       {k.is_mandatory&&<span style={{fontSize:8,padding:"2px 6px",borderRadius:4,background:`${T.red}20`,color:T.red}}>MANDATORY</span>}
                       {k.dept&&<span style={{fontSize:8,padding:"2px 6px",borderRadius:4,background:T.blueD,color:T.blue}}>{k.dept}</span>}
                       <span style={{fontSize:8,padding:"2px 6px",borderRadius:4,background:`${status.color}20`,color:status.color}}>📊 {status.label}</span>
                     </div>
                     <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
-                      <span style={{fontSize:10,color:T.muted}}>📋 {k.standard_ref}</span>
-                      <span style={{fontSize:10,color:T.green,fontWeight:600}}>🎯 {k.target}</span>
+                      <span style={{fontSize:12,color:T.muted}}>📋 {k.standard_ref}</span>
+                      <span style={{fontSize:12,color:T.green,fontWeight:600}}>🎯 {k.target}</span>
                       {customTargets[k.id]?(
-                        <span style={{fontSize:10,color:'#4caf7d',marginLeft:6}}>
+                        <span style={{fontSize:12,color:'#4caf7d',marginLeft:6}}>
                           🎯 Custom: {customTargets[k.id]}
                           <span onClick={e=>{e.stopPropagation();setEditingTarget(k.id);setCustomTargetInput(customTargets[k.id]);}} style={{cursor:'pointer',marginLeft:4,color:'#c9a84c'}}>✏️</span>
                         </span>
                       ):(
-                        <span onClick={e=>{e.stopPropagation();setEditingTarget(k.id);setCustomTargetInput('');}} style={{fontSize:10,color:'#3a5870',cursor:'pointer',marginLeft:6}}>+ Set custom target</span>
+                        <span onClick={e=>{e.stopPropagation();setEditingTarget(k.id);setCustomTargetInput('');}} style={{fontSize:12,color:'#3a5870',cursor:'pointer',marginLeft:6}}>+ Set custom target</span>
                       )}
-                      <span style={{fontSize:10,color:T.muted}}>📅 {k.frequency}</span>
-                      {latest&&<span style={{fontSize:10,color:T.blue}}>Latest: {latest.value} ({MONTHS[latest.month-1]} {latest.year})</span>}
+                      <span style={{fontSize:12,color:T.muted}}>📅 {k.frequency}</span>
+                      {latest&&<span style={{fontSize:12,color:T.blue}}>Latest: {latest.value} ({MONTHS[latest.month-1]} {latest.year})</span>}
                     </div>
                     {editingTarget===k.id&&(
                       <div style={{display:'flex',gap:6,marginTop:6,alignItems:'center'}} onClick={e=>e.stopPropagation()}>
-                        <input value={customTargetInput} onChange={e=>setCustomTargetInput(e.target.value)} placeholder="e.g. <3% or >85%" style={{flex:1,padding:'4px 8px',borderRadius:6,border:'1px solid #0f2640',background:'#081525',color:'#eef4f9',fontSize:11}}/>
-                        <button onClick={()=>saveCustomTarget(k)} style={{padding:'4px 10px',borderRadius:6,background:'#c9a84c',border:'none',color:'#050e1a',fontSize:11,fontWeight:700,cursor:'pointer'}}>Save</button>
-                        <button onClick={()=>setEditingTarget(null)} style={{padding:'4px 8px',borderRadius:6,background:'transparent',border:'1px solid #3a5870',color:'#3a5870',fontSize:11,cursor:'pointer'}}>Cancel</button>
+                        <input value={customTargetInput} onChange={e=>setCustomTargetInput(e.target.value)} placeholder="e.g. <3% or >85%" style={{flex:1,padding:'4px 8px',borderRadius:6,border:'1px solid #0f2640',background:'#081525',color:'#eef4f9',fontSize:13}}/>
+                        <button onClick={()=>saveCustomTarget(k)} style={{padding:'4px 10px',borderRadius:6,background:'#c9a84c',border:'none',color:'#050e1a',fontSize:13,fontWeight:700,cursor:'pointer'}}>Save</button>
+                        <button onClick={()=>setEditingTarget(null)} style={{padding:'4px 8px',borderRadius:6,background:'transparent',border:'1px solid #3a5870',color:'#3a5870',fontSize:13,cursor:'pointer'}}>Cancel</button>
                       </div>
                     )}
                   </div>
-                  <span style={{fontSize:14,color:T.muted}}>{isOpen?"▲":"▼"}</span>
+                  <span style={{fontSize:16,color:T.muted}}>{isOpen?"▲":"▼"}</span>
                 </div>
               </div>
 
-              {(k.source||k.source_doc)&&<div style={{fontSize:10,color:'#3a5870',marginTop:6,fontStyle:'italic',padding:"0 16px 10px"}}>📚 Source: {k.source} — {k.source_doc}</div>}
+              {(k.source||k.source_doc)&&<div style={{fontSize:12,color:'#3a5870',marginTop:6,fontStyle:'italic',padding:"0 16px 10px"}}>📚 Source: {k.source} — {k.source_doc}</div>}
 
               {isOpen&&(
                 <div style={{borderTop:`1px solid ${T.border}`,padding:"14px 16px",display:"grid",gap:12}}>
                   {/* KPI definition */}
-                  <div style={{fontSize:11,color:T.text,lineHeight:1.6}}>{k.definition}</div>
+                  <div style={{fontSize:13,color:T.text,lineHeight:1.6}}>{k.definition}</div>
                   <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
-                    <div style={{background:T.panel2,borderRadius:8,padding:"10px 12px"}}><div style={{fontSize:9,color:T.muted,marginBottom:4}}>NUMERATOR</div><div style={{fontSize:11,color:T.text}}>{k.numerator}</div></div>
-                    <div style={{background:T.panel2,borderRadius:8,padding:"10px 12px"}}><div style={{fontSize:9,color:T.muted,marginBottom:4}}>DENOMINATOR</div><div style={{fontSize:11,color:T.text}}>{k.denominator}</div></div>
+                    <div style={{background:T.panel2,borderRadius:8,padding:"10px 12px"}}><div style={{fontSize:11,color:T.muted,marginBottom:4}}>NUMERATOR</div><div style={{fontSize:13,color:T.text}}>{k.numerator}</div></div>
+                    <div style={{background:T.panel2,borderRadius:8,padding:"10px 12px"}}><div style={{fontSize:11,color:T.muted,marginBottom:4}}>DENOMINATOR</div><div style={{fontSize:13,color:T.text}}>{k.denominator}</div></div>
                   </div>
                   <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
-                    <div style={{background:T.goldD,border:`1px solid ${T.gold}30`,borderRadius:8,padding:"8px 12px",flex:1}}><div style={{fontSize:9,color:T.muted,marginBottom:3}}>FORMULA</div><div style={{fontSize:11,color:T.gold,fontWeight:700}}>{k.formula} → {k.unit}</div></div>
-                    <div style={{background:T.greenD,border:`1px solid ${T.green}30`,borderRadius:8,padding:"8px 12px",flex:1}}><div style={{fontSize:9,color:T.muted,marginBottom:3}}>TARGET</div><div style={{fontSize:11,color:T.green,fontWeight:700}}>{k.target}</div></div>
+                    <div style={{background:T.goldD,border:`1px solid ${T.gold}30`,borderRadius:8,padding:"8px 12px",flex:1}}><div style={{fontSize:11,color:T.muted,marginBottom:3}}>FORMULA</div><div style={{fontSize:13,color:T.gold,fontWeight:700}}>{k.formula} → {k.unit}</div></div>
+                    <div style={{background:T.greenD,border:`1px solid ${T.green}30`,borderRadius:8,padding:"8px 12px",flex:1}}><div style={{fontSize:11,color:T.muted,marginBottom:3}}>TARGET</div><div style={{fontSize:13,color:T.green,fontWeight:700}}>{k.target}</div></div>
                   </div>
-                  {k.remarks&&<div style={{fontSize:10,color:T.muted,fontStyle:"italic",lineHeight:1.5}}>💡 {k.remarks}</div>}
+                  {k.remarks&&<div style={{fontSize:12,color:T.muted,fontStyle:"italic",lineHeight:1.5}}>💡 {k.remarks}</div>}
 
                   {/* CALCULATOR */}
                   <div style={{borderTop:`1px solid ${T.border}`,paddingTop:12}}>
-                    <div style={{fontSize:10,fontWeight:700,color:T.blue,marginBottom:10,letterSpacing:1}}>🧮 CALCULATOR</div>
+                    <div style={{fontSize:12,fontWeight:700,color:T.blue,marginBottom:10,letterSpacing:1}}>🧮 CALCULATOR</div>
                     <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:8}}>
                       <div>
                         <div style={{fontSize:8,color:T.muted,marginBottom:3}}>NUMERATOR — {k.numerator}</div>
@@ -2298,15 +2298,15 @@ function KPIsScreen({ hospitalId, user }) {
                         <input type="number" step="0.01" value={f.calc_den||""} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,calc_den:e.target.value}}))} placeholder="Enter value" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
                       </div>
                     </div>
-                    <button onClick={()=>calcAndSave(k)} disabled={saving===k.id} style={{padding:"7px 18px",borderRadius:7,background:T.blueD,border:`1px solid ${T.blue}`,color:T.blue,fontSize:11,fontWeight:700,cursor:"pointer"}}>
+                    <button onClick={()=>calcAndSave(k)} disabled={saving===k.id} style={{padding:"7px 18px",borderRadius:7,background:T.blueD,border:`1px solid ${T.blue}`,color:T.blue,fontSize:13,fontWeight:700,cursor:"pointer"}}>
                       {saving===k.id?"Saving…":"🧮 Calculate & Save"}
                     </button>
                     {calcResult[k.id]!==undefined&&(()=>{const effectiveTarget=customTargets[k.id]||k.target;return(
                       <div style={{marginTop:8}}>
-                        <div style={{fontSize:13,fontWeight:700,color:getResultColor(calcResult[k.id],effectiveTarget)}}>
+                        <div style={{fontSize:15,fontWeight:700,color:getResultColor(calcResult[k.id],effectiveTarget)}}>
                           Result: {calcResult[k.id].toFixed(2)} {k.unit}
                         </div>
-                        <div style={{fontSize:10,color:getResultColor(calcResult[k.id],effectiveTarget),marginTop:2}}>
+                        <div style={{fontSize:12,color:getResultColor(calcResult[k.id],effectiveTarget),marginTop:2}}>
                           {getResultLabel(calcResult[k.id],effectiveTarget)}
                         </div>
                       </div>
@@ -2315,7 +2315,7 @@ function KPIsScreen({ hospitalId, user }) {
 
                   {/* DATA ENTRY */}
                   <div style={{borderTop:`1px solid ${T.border}`,paddingTop:12}}>
-                    <div style={{fontSize:10,fontWeight:700,color:T.gold,marginBottom:10,letterSpacing:1}}>📥 ENTER MONTHLY DATA</div>
+                    <div style={{fontSize:12,fontWeight:700,color:T.gold,marginBottom:10,letterSpacing:1}}>📥 ENTER MONTHLY DATA</div>
                     <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8,marginBottom:8}}>
                       <div>
                         <div style={{fontSize:8,color:T.muted,marginBottom:3}}>MONTH</div>
@@ -2344,7 +2344,7 @@ function KPIsScreen({ hospitalId, user }) {
                         </select>
                       </div>
                       <div style={{display:"flex",alignItems:"flex-end"}}>
-                        <label style={{display:"flex",alignItems:"center",gap:6,fontSize:11,color:T.text,cursor:"pointer",paddingBottom:2}}>
+                        <label style={{display:"flex",alignItems:"center",gap:6,fontSize:13,color:T.text,cursor:"pointer",paddingBottom:2}}>
                           <input type="checkbox" checked={f.capa_required} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,capa_required:e.target.checked}}))}/> CAPA Required
                         </label>
                       </div>
@@ -2359,7 +2359,7 @@ function KPIsScreen({ hospitalId, user }) {
                       <div style={{fontSize:8,color:T.muted,marginBottom:3}}>EVIDENCE LINK — Data Sheet (Google Drive / OneDrive URL)</div>
                       <input value={f.evidence_url||""} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,evidence_url:e.target.value}}))} placeholder="https://drive.google.com/…" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
                     </div>
-                    <button onClick={()=>saveKpiData(k)} disabled={saving===k.id} style={{padding:"7px 18px",borderRadius:7,background:saveSuccess===k.id?T.green:T.goldD,border:`1px solid ${saveSuccess===k.id?T.green:T.gold}`,color:saveSuccess===k.id?T.bg:T.gold,fontSize:11,fontWeight:700,cursor:"pointer"}}>
+                    <button onClick={()=>saveKpiData(k)} disabled={saving===k.id} style={{padding:"7px 18px",borderRadius:7,background:saveSuccess===k.id?T.green:T.goldD,border:`1px solid ${saveSuccess===k.id?T.green:T.gold}`,color:saveSuccess===k.id?T.bg:T.gold,fontSize:13,fontWeight:700,cursor:"pointer"}}>
                       {saving===k.id?"Saving…":saveSuccess===k.id?"✅ Saved!":"💾 Save Entry"}
                     </button>
                   </div>
@@ -2368,15 +2368,15 @@ function KPIsScreen({ hospitalId, user }) {
                   {history.length>0&&(
                     <div style={{borderTop:`1px solid ${T.border}`,paddingTop:12}}>
                       <KpiTrendChart history={history} target={k.benchmark_value||k.target} unit={k.unit}/>
-                      <div style={{fontSize:9,color:T.muted,marginBottom:8,letterSpacing:1,marginTop:12}}>TRACKING HISTORY ({history.length} entries)</div>
+                      <div style={{fontSize:11,color:T.muted,marginBottom:8,letterSpacing:1,marginTop:12}}>TRACKING HISTORY ({history.length} entries)</div>
                       <div style={{display:"grid",gap:4}}>
                         {history.slice(0,6).map(d=>(
                           <div key={d.id} style={{display:"flex",gap:10,alignItems:"center",padding:"6px 10px",background:T.panel2,borderRadius:6,border:`1px solid ${d.capa_required?`${T.orange}30`:T.border}`}}>
-                            <span style={{fontSize:10,color:T.muted,minWidth:60}}>{MONTHS[d.month-1]} {d.year}</span>
-                            <span style={{fontSize:12,fontWeight:700,color:T.white}}>{d.value} {k.unit}</span>
-                            <span style={{fontSize:9,color:d.trend==="improving"?T.green:d.trend==="worsening"?T.red:T.muted}}>{d.trend==="improving"?"📈":d.trend==="worsening"?"📉":"➡️"} {d.trend}</span>
-                            {d.capa_required&&<span style={{fontSize:9,color:T.orange}}>⚠️ CAPA</span>}
-                            <button onClick={()=>deleteKpiEntry(d.id,k.id)} style={{marginLeft:"auto",padding:"2px 8px",borderRadius:5,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:9,cursor:"pointer"}}>Delete</button>
+                            <span style={{fontSize:12,color:T.muted,minWidth:60}}>{MONTHS[d.month-1]} {d.year}</span>
+                            <span style={{fontSize:14,fontWeight:700,color:T.white}}>{d.value} {k.unit}</span>
+                            <span style={{fontSize:11,color:d.trend==="improving"?T.green:d.trend==="worsening"?T.red:T.muted}}>{d.trend==="improving"?"📈":d.trend==="worsening"?"📉":"➡️"} {d.trend}</span>
+                            {d.capa_required&&<span style={{fontSize:11,color:T.orange}}>⚠️ CAPA</span>}
+                            <button onClick={()=>deleteKpiEntry(d.id,k.id)} style={{marginLeft:"auto",padding:"2px 8px",borderRadius:5,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:11,cursor:"pointer"}}>Delete</button>
                           </div>
                         ))}
                       </div>
@@ -2387,7 +2387,7 @@ function KPIsScreen({ hospitalId, user }) {
             </div>
           );
         })}
-        {filtered.length===0&&<div style={{textAlign:"center",color:T.muted,padding:30,fontSize:12}}>No KPIs match.</div>}
+        {filtered.length===0&&<div style={{textAlign:"center",color:T.muted,padding:30,fontSize:14}}>No KPIs match.</div>}
       </div>
     </div>
   );
@@ -2569,8 +2569,8 @@ function AuditsScreen({ hospitalId }) {
     {value:"other",label:"📋 Other"},
   ];
 
-  const inp={padding:"6px 9px",borderRadius:6,border:`1px solid ${T.border}`,background:T.panel,color:T.text,fontSize:11};
-  const lbl={fontSize:9,color:T.muted,marginBottom:3,letterSpacing:1};
+  const inp={padding:"6px 9px",borderRadius:6,border:`1px solid ${T.border}`,background:T.panel,color:T.text,fontSize:13};
+  const lbl={fontSize:11,color:T.muted,marginBottom:3,letterSpacing:1};
 
   if(loading) return <div style={{textAlign:"center",color:T.muted,padding:40}}>Loading audits…</div>;
 
@@ -2578,18 +2578,18 @@ function AuditsScreen({ hospitalId }) {
   const LearnTab=()=>(
     <div style={{display:"grid",gap:12}}>
       <div style={{background:T.panel,border:`1px solid ${T.gold}40`,borderRadius:12,padding:"18px 20px"}}>
-        <div style={{fontSize:9,letterSpacing:3,color:T.gold,marginBottom:8}}>WHAT IS AN AUDIT?</div>
-        <div style={{fontSize:13,fontWeight:700,color:T.white,marginBottom:10,lineHeight:1.5}}>
+        <div style={{fontSize:11,letterSpacing:3,color:T.gold,marginBottom:8}}>WHAT IS AN AUDIT?</div>
+        <div style={{fontSize:15,fontWeight:700,color:T.white,marginBottom:10,lineHeight:1.5}}>
           An audit is a systematic process of measuring current practice against a defined standard, identifying gaps, taking corrective action, and re-measuring to confirm improvement.
         </div>
-        <div style={{fontSize:11,color:T.text,lineHeight:1.8}}>
+        <div style={{fontSize:13,color:T.text,lineHeight:1.8}}>
           Audit is not just data collection. The improvement action and re-audit are mandatory parts of the cycle. A single data collection without follow-up action is <span style={{color:T.orange}}>not a complete audit</span>.
         </div>
       </div>
 
       {/* Audit Cycle */}
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"18px 20px"}}>
-        <div style={{fontSize:9,letterSpacing:3,color:T.gold,marginBottom:14}}>THE AUDIT CYCLE — 5 STEPS</div>
+        <div style={{fontSize:11,letterSpacing:3,color:T.gold,marginBottom:14}}>THE AUDIT CYCLE — 5 STEPS</div>
         <div style={{display:"grid",gap:8}}>
           {[
             {step:1,color:T.blue,icon:"🎯",title:"Choose Topic & Set Standard",desc:"Identify what you want to measure. Define the standard — e.g. 'Hand hygiene compliance should be ≥85%'. Standard can come from NABH, hospital policy, or evidence-based guidelines."},
@@ -2599,15 +2599,15 @@ function AuditsScreen({ hospitalId }) {
             {step:5,color:T.green,icon:"✅",title:"Re-audit — Confirm Improvement",desc:"After allowing time for the change to embed (usually 3–6 months), repeat the audit. Compare new compliance % with baseline. This is the proof of improvement NABH assessors look for."},
           ].map(s=>(
             <div key={s.step} style={{display:"flex",gap:12,alignItems:"flex-start",padding:"12px 14px",background:T.panel2,borderRadius:8,border:`1px solid ${s.color}20`}}>
-              <div style={{width:32,height:32,borderRadius:"50%",background:`${s.color}20`,border:`2px solid ${s.color}40`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:14,flexShrink:0}}>{s.icon}</div>
+              <div style={{width:32,height:32,borderRadius:"50%",background:`${s.color}20`,border:`2px solid ${s.color}40`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:16,flexShrink:0}}>{s.icon}</div>
               <div>
-                <div style={{fontSize:11,fontWeight:700,color:s.color,marginBottom:4}}>Step {s.step}: {s.title}</div>
-                <div style={{fontSize:10,color:T.text,lineHeight:1.6}}>{s.desc}</div>
+                <div style={{fontSize:13,fontWeight:700,color:s.color,marginBottom:4}}>Step {s.step}: {s.title}</div>
+                <div style={{fontSize:12,color:T.text,lineHeight:1.6}}>{s.desc}</div>
               </div>
             </div>
           ))}
         </div>
-        <div style={{marginTop:12,padding:"10px 14px",background:T.greenD,border:`1px solid ${T.green}30`,borderRadius:8,fontSize:10,color:T.text,lineHeight:1.6}}>
+        <div style={{marginTop:12,padding:"10px 14px",background:T.greenD,border:`1px solid ${T.green}30`,borderRadius:8,fontSize:12,color:T.text,lineHeight:1.6}}>
           <span style={{fontWeight:700,color:T.green}}>Key message for NABH: </span>
           Assessors want to see the full cycle — not just records of audits done, but evidence that findings led to action and action led to improvement. Two complete cycles on the same topic is stronger than ten single-cycle audits.
         </div>
@@ -2615,8 +2615,8 @@ function AuditsScreen({ hospitalId }) {
 
       {/* Types */}
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"18px 20px"}}>
-        <div style={{fontSize:9,letterSpacing:3,color:T.gold,marginBottom:12}}>TYPES OF AUDIT — NO FIXED NUMBER</div>
-        <div style={{fontSize:11,color:T.text,lineHeight:1.7,marginBottom:12}}>
+        <div style={{fontSize:11,letterSpacing:3,color:T.gold,marginBottom:12}}>TYPES OF AUDIT — NO FIXED NUMBER</div>
+        <div style={{fontSize:13,color:T.text,lineHeight:1.7,marginBottom:12}}>
           NABH does not mandate a fixed number of audits. Audit can cover any area that is beneficial to patients and the hospital. What matters is: <span style={{color:T.gold,fontWeight:700}}>quality of the cycle, not quantity of audits.</span>
         </div>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>
@@ -2631,8 +2631,8 @@ function AuditsScreen({ hospitalId }) {
             {cat:"Pharmacy Audit",icon:"💊",desc:"Prescription accuracy, drug storage, expiry management, HIGH alert medication compliance"},
           ].map(t=>(
             <div key={t.cat} style={{padding:"10px 12px",background:T.panel2,borderRadius:8,border:`1px solid ${T.border}`}}>
-              <div style={{fontSize:11,fontWeight:700,color:T.white,marginBottom:3}}>{t.icon} {t.cat}</div>
-              <div style={{fontSize:10,color:T.muted,lineHeight:1.5}}>{t.desc}</div>
+              <div style={{fontSize:13,fontWeight:700,color:T.white,marginBottom:3}}>{t.icon} {t.cat}</div>
+              <div style={{fontSize:12,color:T.muted,lineHeight:1.5}}>{t.desc}</div>
             </div>
           ))}
         </div>
@@ -2640,7 +2640,7 @@ function AuditsScreen({ hospitalId }) {
 
       {/* Common mistakes */}
       <div style={{background:T.panel,border:`1px solid ${T.red}30`,borderRadius:12,padding:"18px 20px"}}>
-        <div style={{fontSize:9,letterSpacing:3,color:T.red,marginBottom:12}}>COMMON AUDIT MISTAKES TO AVOID</div>
+        <div style={{fontSize:11,letterSpacing:3,color:T.red,marginBottom:12}}>COMMON AUDIT MISTAKES TO AVOID</div>
         <div style={{display:"grid",gap:6}}>
           {[
             "Doing the audit but taking no corrective action — assessors will reject this",
@@ -2652,8 +2652,8 @@ function AuditsScreen({ hospitalId }) {
             "Avoid applying the same methodology (e.g. PDCA) to every audit — use the approach that best fits the problem",
           ].map((m,i)=>(
             <div key={i} style={{display:"flex",gap:8,alignItems:"flex-start",padding:"7px 10px",background:T.redD,borderRadius:6}}>
-              <span style={{color:T.red,fontSize:12,flexShrink:0}}>✗</span>
-              <span style={{fontSize:10,color:T.text,lineHeight:1.5}}>{m}</span>
+              <span style={{color:T.red,fontSize:14,flexShrink:0}}>✗</span>
+              <span style={{fontSize:12,color:T.text,lineHeight:1.5}}>{m}</span>
             </div>
           ))}
         </div>
@@ -2666,10 +2666,10 @@ function AuditsScreen({ hospitalId }) {
     <div>
       <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:12,flexWrap:"wrap",gap:8}}>
         <div>
-          <div style={{fontSize:13,fontWeight:700,color:T.white}}>My Hospital Audits</div>
-          <div style={{fontSize:10,color:T.muted,marginTop:2}}>{customAudits.length} custom audit{customAudits.length!==1?"s":""} · Any type, any number · Your hospital's own audit programme</div>
+          <div style={{fontSize:15,fontWeight:700,color:T.white}}>My Hospital Audits</div>
+          <div style={{fontSize:12,color:T.muted,marginTop:2}}>{customAudits.length} custom audit{customAudits.length!==1?"s":""} · Any type, any number · Your hospital's own audit programme</div>
         </div>
-        <button onClick={()=>setShowCreateForm(p=>!p)} style={{padding:"7px 16px",borderRadius:8,background:T.goldD,border:`1px solid ${T.gold}`,color:T.goldL,fontSize:11,fontWeight:700,cursor:"pointer"}}>
+        <button onClick={()=>setShowCreateForm(p=>!p)} style={{padding:"7px 16px",borderRadius:8,background:T.goldD,border:`1px solid ${T.gold}`,color:T.goldL,fontSize:13,fontWeight:700,cursor:"pointer"}}>
           {showCreateForm?"✕ Cancel":"+ Create New Audit"}
         </button>
       </div>
@@ -2677,7 +2677,7 @@ function AuditsScreen({ hospitalId }) {
       {/* Create form */}
       {showCreateForm&&(
         <div style={{background:T.panel,border:`1px solid ${T.gold}40`,borderRadius:12,padding:"18px 20px",marginBottom:14}}>
-          <div style={{fontSize:11,fontWeight:700,color:T.gold,marginBottom:14,letterSpacing:1}}>📋 NEW AUDIT</div>
+          <div style={{fontSize:13,fontWeight:700,color:T.gold,marginBottom:14,letterSpacing:1}}>📋 NEW AUDIT</div>
           <div style={{display:"grid",gap:10}}>
             <div>
               <div style={lbl}>AUDIT NAME *</div>
@@ -2691,7 +2691,7 @@ function AuditsScreen({ hospitalId }) {
                 </select>
               </div>
               <div style={{display:"flex",alignItems:"flex-end",paddingBottom:4}}>
-                <label style={{display:"flex",alignItems:"center",gap:6,fontSize:11,color:T.text,cursor:"pointer"}}>
+                <label style={{display:"flex",alignItems:"center",gap:6,fontSize:13,color:T.text,cursor:"pointer"}}>
                   <input type="checkbox" checked={createForm.is_core} onChange={e=>setCreateForm(f=>({...f,is_core:e.target.checked}))}/> Mark as CORE (critical audit)
                 </label>
               </div>
@@ -2703,17 +2703,17 @@ function AuditsScreen({ hospitalId }) {
               {createForm.parameters.map((p,i)=>(
                 <div key={i} style={{display:"flex",gap:6,marginBottom:5,alignItems:"center"}}>
                   <input value={p} onChange={e=>{const ps=[...createForm.parameters];ps[i]=e.target.value;setCreateForm(f=>({...f,parameters:ps}));}} style={{...inp,flex:1}} placeholder={`Parameter ${i+1}`}/>
-                  <button onClick={()=>setCreateForm(f=>({...f,parameters:f.parameters.filter((_,j)=>j!==i)}))} style={{padding:"4px 9px",borderRadius:5,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:11,cursor:"pointer"}}>✕</button>
+                  <button onClick={()=>setCreateForm(f=>({...f,parameters:f.parameters.filter((_,j)=>j!==i)}))} style={{padding:"4px 9px",borderRadius:5,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:13,cursor:"pointer"}}>✕</button>
                 </div>
               ))}
               <div style={{display:"flex",gap:6,marginTop:4}}>
                 <input value={newParam} onChange={e=>setNewParam(e.target.value)} onKeyDown={e=>{if(e.key==="Enter"&&newParam.trim()){setCreateForm(f=>({...f,parameters:[...f.parameters,newParam.trim()]}));setNewParam("");}}} placeholder="Type parameter and press Enter…" style={{...inp,flex:1}}/>
-                <button onClick={()=>{if(newParam.trim()){setCreateForm(f=>({...f,parameters:[...f.parameters,newParam.trim()]}));setNewParam("");}}} style={{padding:"4px 12px",borderRadius:6,background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold,fontSize:10,cursor:"pointer"}}>+ Add</button>
+                <button onClick={()=>{if(newParam.trim()){setCreateForm(f=>({...f,parameters:[...f.parameters,newParam.trim()]}));setNewParam("");}}} style={{padding:"4px 12px",borderRadius:6,background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold,fontSize:12,cursor:"pointer"}}>+ Add</button>
               </div>
-              <div style={{fontSize:9,color:T.muted,marginTop:4}}>Parameters become checkboxes during audit recording. Leave empty if you prefer free-text findings only.</div>
+              <div style={{fontSize:11,color:T.muted,marginTop:4}}>Parameters become checkboxes during audit recording. Leave empty if you prefer free-text findings only.</div>
             </div>
 
-            <button onClick={createCustomAudit} disabled={savingCreate||!createForm.name.trim()} style={{padding:"9px 20px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:12,fontWeight:700,cursor:"pointer",opacity:savingCreate||!createForm.name.trim()?0.5:1,marginTop:4}}>
+            <button onClick={createCustomAudit} disabled={savingCreate||!createForm.name.trim()} style={{padding:"9px 20px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:14,fontWeight:700,cursor:"pointer",opacity:savingCreate||!createForm.name.trim()?0.5:1,marginTop:4}}>
               {savingCreate?"Creating…":"✓ Create Audit"}
             </button>
           </div>
@@ -2723,8 +2723,8 @@ function AuditsScreen({ hospitalId }) {
       {customAudits.length===0&&!showCreateForm&&(
         <div style={{textAlign:"center",padding:"40px 20px",color:T.muted}}>
           <div style={{fontSize:32,marginBottom:12}}>📋</div>
-          <div style={{fontSize:13,color:T.text,marginBottom:6}}>No custom audits yet</div>
-          <div style={{fontSize:11,lineHeight:1.6}}>Create your hospital's own audit programme. You can add clinical, nursing, financial, structural — any type of audit relevant to your hospital.</div>
+          <div style={{fontSize:15,color:T.text,marginBottom:6}}>No custom audits yet</div>
+          <div style={{fontSize:13,lineHeight:1.6}}>Create your hospital's own audit programme. You can add clinical, nursing, financial, structural — any type of audit relevant to your hospital.</div>
         </div>
       )}
 
@@ -2741,10 +2741,10 @@ function AuditsScreen({ hospitalId }) {
             <div key={a.id} style={{background:T.panel,border:`1px solid ${a.is_core?`${T.red}30`:T.border}`,borderRadius:10,overflow:"hidden"}}>
               {deleteConfirm===a.id&&(
                 <div style={{background:T.redD,padding:"10px 16px",display:"flex",gap:10,alignItems:"center",justifyContent:"space-between"}}>
-                  <span style={{fontSize:11,color:T.red}}>Delete "{a.name}" and all its records?</span>
+                  <span style={{fontSize:13,color:T.red}}>Delete "{a.name}" and all its records?</span>
                   <div style={{display:"flex",gap:6}}>
-                    <button onClick={()=>deleteCustomAudit(a.id)} style={{padding:"4px 12px",borderRadius:6,background:T.red,border:"none",color:"#fff",fontSize:11,cursor:"pointer"}}>Delete</button>
-                    <button onClick={()=>setDeleteConfirm(null)} style={{padding:"4px 12px",borderRadius:6,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:11,cursor:"pointer"}}>Cancel</button>
+                    <button onClick={()=>deleteCustomAudit(a.id)} style={{padding:"4px 12px",borderRadius:6,background:T.red,border:"none",color:"#fff",fontSize:13,cursor:"pointer"}}>Delete</button>
+                    <button onClick={()=>setDeleteConfirm(null)} style={{padding:"4px 12px",borderRadius:6,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:13,cursor:"pointer"}}>Cancel</button>
                   </div>
                 </div>
               )}
@@ -2755,22 +2755,22 @@ function AuditsScreen({ hospitalId }) {
                   </div>
                   <div style={{flex:1}}>
                     <div style={{display:"flex",gap:8,alignItems:"center",marginBottom:4,flexWrap:"wrap"}}>
-                      <span style={{fontSize:12,fontWeight:700,color:T.white}}>{a.name}</span>
+                      <span style={{fontSize:14,fontWeight:700,color:T.white}}>{a.name}</span>
                       {a.is_core&&<span style={{fontSize:8,padding:"2px 6px",borderRadius:4,background:`${T.red}20`,color:T.red}}>CORE</span>}
                       {hasRecentRecord?<span style={{fontSize:8,padding:"2px 6px",borderRadius:4,background:T.greenD,color:T.green}}>✓ {records.length} record{records.length!==1?"s":""}</span>
                         :<span style={{fontSize:8,padding:"2px 6px",borderRadius:4,background:T.redD,color:T.red}}>No records</span>}
                       {customRecordSuccess===a.id&&<span style={{fontSize:8,padding:"2px 6px",borderRadius:4,background:T.greenD,color:T.green}}>✅ Saved!</span>}
                     </div>
                     <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
-                      <span style={{fontSize:10,color:T.muted}}>{catLabel}</span>
-                      {params.length>0&&<span style={{fontSize:10,color:T.muted}}>📝 {params.length} parameters</span>}
-                      {avgCompliance!==null&&<span style={{fontSize:10,color:avgCompliance>=80?T.green:avgCompliance>=60?T.orange:T.red,fontWeight:700}}>Avg: {avgCompliance}%</span>}
+                      <span style={{fontSize:12,color:T.muted}}>{catLabel}</span>
+                      {params.length>0&&<span style={{fontSize:12,color:T.muted}}>📝 {params.length} parameters</span>}
+                      {avgCompliance!==null&&<span style={{fontSize:12,color:avgCompliance>=80?T.green:avgCompliance>=60?T.orange:T.red,fontWeight:700}}>Avg: {avgCompliance}%</span>}
                     </div>
                   </div>
                   <div style={{display:"flex",gap:5,alignItems:"center"}}>
-                    <button onClick={e=>{e.stopPropagation();setShowCustomRecord(a.id);setCustomRecordForm({status:"completed"});}} style={{padding:"4px 10px",borderRadius:6,fontSize:9,cursor:"pointer",background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold}}>+ Record</button>
-                    <button onClick={e=>{e.stopPropagation();setDeleteConfirm(a.id);}} style={{padding:"4px 8px",borderRadius:6,fontSize:9,cursor:"pointer",background:"transparent",border:`1px solid ${T.red}30`,color:T.red}}>🗑</button>
-                    <span style={{fontSize:14,color:T.muted}}>{isOpen?"▲":"▼"}</span>
+                    <button onClick={e=>{e.stopPropagation();setShowCustomRecord(a.id);setCustomRecordForm({status:"completed"});}} style={{padding:"4px 10px",borderRadius:6,fontSize:11,cursor:"pointer",background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold}}>+ Record</button>
+                    <button onClick={e=>{e.stopPropagation();setDeleteConfirm(a.id);}} style={{padding:"4px 8px",borderRadius:6,fontSize:11,cursor:"pointer",background:"transparent",border:`1px solid ${T.red}30`,color:T.red}}>🗑</button>
+                    <span style={{fontSize:16,color:T.muted}}>{isOpen?"▲":"▼"}</span>
                   </div>
                 </div>
               </div>
@@ -2778,7 +2778,7 @@ function AuditsScreen({ hospitalId }) {
               {/* Record form */}
               {showCustomRecord===a.id&&(
                 <div style={{borderTop:`1px solid ${T.gold}40`,padding:"16px",background:T.panel2}}>
-                  <div style={{fontSize:11,fontWeight:700,color:T.gold,marginBottom:12,letterSpacing:1}}>📋 RECORD AUDIT — {a.name}</div>
+                  <div style={{fontSize:13,fontWeight:700,color:T.gold,marginBottom:12,letterSpacing:1}}>📋 RECORD AUDIT — {a.name}</div>
                   <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:10}}>
                     {[["Audit Date *","date","audit_date"],["Auditor Name","text","auditor_name"],["Department","text","department"]].map(([l,t,k])=>(
                       <div key={k}><div style={lbl}>{l}</div><input type={t} value={customRecordForm[k]||""} onChange={e=>setCustomRecordForm(f=>({...f,[k]:e.target.value}))} style={{...inp,width:"100%",boxSizing:"border-box"}}/></div>
@@ -2796,20 +2796,20 @@ function AuditsScreen({ hospitalId }) {
                   {/* Checklist parameters */}
                   {params.length>0&&(
                     <div style={{marginBottom:12}}>
-                      <div style={{fontSize:10,fontWeight:700,color:T.gold,marginBottom:8,letterSpacing:1}}>CHECKLIST — TICK COMPLIANT ITEMS</div>
+                      <div style={{fontSize:12,fontWeight:700,color:T.gold,marginBottom:8,letterSpacing:1}}>CHECKLIST — TICK COMPLIANT ITEMS</div>
                       <div style={{display:"grid",gap:5}}>
                         {params.map((p,i)=>{
                           const isDone=customRecordForm[`param_${i}`];
                           return(
                             <div key={i} onClick={()=>setCustomRecordForm(f=>({...f,[`param_${i}`]:!f[`param_${i}`]}))}
                               style={{display:"flex",gap:10,alignItems:"center",padding:"8px 12px",background:isDone?T.greenD:T.panel,border:`1px solid ${isDone?T.green:T.border}30`,borderRadius:7,cursor:"pointer"}}>
-                              <div style={{width:16,height:16,borderRadius:3,border:`2px solid ${isDone?T.green:T.muted}`,background:isDone?T.green:"transparent",display:"flex",alignItems:"center",justifyContent:"center",fontSize:9,color:T.bg,flexShrink:0}}>{isDone?"✓":""}</div>
-                              <span style={{fontSize:11,color:isDone?T.green:T.text}}>{p}</span>
+                              <div style={{width:16,height:16,borderRadius:3,border:`2px solid ${isDone?T.green:T.muted}`,background:isDone?T.green:"transparent",display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,color:T.bg,flexShrink:0}}>{isDone?"✓":""}</div>
+                              <span style={{fontSize:13,color:isDone?T.green:T.text}}>{p}</span>
                             </div>
                           );
                         })}
                       </div>
-                      <div style={{fontSize:10,color:T.muted,marginTop:6}}>
+                      <div style={{fontSize:12,color:T.muted,marginTop:6}}>
                         Compliant: {params.filter((_,i)=>customRecordForm[`param_${i}`]).length}/{params.length}
                         {params.length>0&&<span style={{marginLeft:8,fontWeight:700,color:Math.round(params.filter((_,i)=>customRecordForm[`param_${i}`]).length/params.length*100)>=80?T.green:T.orange}}>
                           ({Math.round(params.filter((_,i)=>customRecordForm[`param_${i}`]).length/params.length*100)}%)
@@ -2828,7 +2828,7 @@ function AuditsScreen({ hospitalId }) {
                   <div style={{marginBottom:10}}><div style={lbl}>FINDINGS</div><textarea value={customRecordForm.findings||""} onChange={e=>setCustomRecordForm(f=>({...f,findings:e.target.value}))} rows={2} placeholder="Key findings from this audit…" style={{...inp,width:"100%",resize:"vertical",boxSizing:"border-box"}}/></div>
 
                   <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:10}}>
-                    <label style={{display:"flex",alignItems:"center",gap:6,fontSize:11,color:T.text,cursor:"pointer"}}>
+                    <label style={{display:"flex",alignItems:"center",gap:6,fontSize:13,color:T.text,cursor:"pointer"}}>
                       <input type="checkbox" checked={customRecordForm.capa_raised||false} onChange={e=>setCustomRecordForm(f=>({...f,capa_raised:e.target.checked}))}/> CAPA Required
                     </label>
                   </div>
@@ -2847,8 +2847,8 @@ function AuditsScreen({ hospitalId }) {
                   </div>
 
                   <div style={{display:"flex",gap:8}}>
-                    <button onClick={()=>saveCustomRecord(a)} disabled={savingCustomRecord} style={{padding:"8px 20px",borderRadius:8,background:T.green,border:"none",color:T.bg,fontSize:11,fontWeight:700,cursor:"pointer"}}>{savingCustomRecord?"Saving…":"💾 Save Record"}</button>
-                    <button onClick={()=>{setShowCustomRecord(null);setCustomRecordForm({});}} style={{padding:"8px 16px",borderRadius:8,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:11,cursor:"pointer"}}>Cancel</button>
+                    <button onClick={()=>saveCustomRecord(a)} disabled={savingCustomRecord} style={{padding:"8px 20px",borderRadius:8,background:T.green,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer"}}>{savingCustomRecord?"Saving…":"💾 Save Record"}</button>
+                    <button onClick={()=>{setShowCustomRecord(null);setCustomRecordForm({});}} style={{padding:"8px 16px",borderRadius:8,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:13,cursor:"pointer"}}>Cancel</button>
                   </div>
                 </div>
               )}
@@ -2858,30 +2858,30 @@ function AuditsScreen({ hospitalId }) {
                 <div style={{borderTop:`1px solid ${T.border}`,padding:"14px 16px"}}>
                   {params.length>0&&(
                     <div style={{marginBottom:12}}>
-                      <div style={{fontSize:9,color:T.muted,marginBottom:6,letterSpacing:1}}>CHECKLIST PARAMETERS ({params.length})</div>
+                      <div style={{fontSize:11,color:T.muted,marginBottom:6,letterSpacing:1}}>CHECKLIST PARAMETERS ({params.length})</div>
                       <div style={{display:"flex",gap:5,flexWrap:"wrap"}}>
-                        {params.map((p,i)=><span key={i} style={{fontSize:10,padding:"3px 9px",borderRadius:6,background:T.panel2,border:`1px solid ${T.border}`,color:T.text}}>📌 {p}</span>)}
+                        {params.map((p,i)=><span key={i} style={{fontSize:12,padding:"3px 9px",borderRadius:6,background:T.panel2,border:`1px solid ${T.border}`,color:T.text}}>📌 {p}</span>)}
                       </div>
                     </div>
                   )}
                   {records.length>0&&(
                     <div>
-                      <div style={{fontSize:9,color:T.muted,marginBottom:6,letterSpacing:1}}>AUDIT RECORDS ({records.length})</div>
+                      <div style={{fontSize:11,color:T.muted,marginBottom:6,letterSpacing:1}}>AUDIT RECORDS ({records.length})</div>
                       {records.map(r=>{
                         const compPct=r.sample_size>0?Math.round((r.compliant_count/r.sample_size)*100):null;
                         return(
                           <div key={r.id} style={{background:T.panel2,borderRadius:8,padding:"10px 12px",marginBottom:6,border:`1px solid ${compPct!==null?(compPct>=80?`${T.green}20`:`${T.orange}20`):T.border}`}}>
                             <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start"}}>
                               <div>
-                                <div style={{fontSize:11,fontWeight:700,color:T.white}}>{r.audit_date}</div>
-                                <div style={{fontSize:10,color:T.muted,marginTop:2}}>{r.auditor_name&&`Auditor: ${r.auditor_name}`}{r.department&&` · ${r.department}`}</div>
-                                {compPct!==null&&<div style={{fontSize:11,fontWeight:700,color:compPct>=80?T.green:T.orange,marginTop:3}}>Compliance: {compPct}% ({r.compliant_count}/{r.sample_size})</div>}
-                                {r.findings&&<div style={{fontSize:9,color:T.text,marginTop:3,lineHeight:1.4}}>{r.findings}</div>}
-                                {r.capa_raised&&<div style={{fontSize:9,color:T.orange,marginTop:2}}>⚠️ CAPA: {r.capa_notes} — Due: {r.capa_target_date||"—"}</div>}
+                                <div style={{fontSize:13,fontWeight:700,color:T.white}}>{r.audit_date}</div>
+                                <div style={{fontSize:12,color:T.muted,marginTop:2}}>{r.auditor_name&&`Auditor: ${r.auditor_name}`}{r.department&&` · ${r.department}`}</div>
+                                {compPct!==null&&<div style={{fontSize:13,fontWeight:700,color:compPct>=80?T.green:T.orange,marginTop:3}}>Compliance: {compPct}% ({r.compliant_count}/{r.sample_size})</div>}
+                                {r.findings&&<div style={{fontSize:11,color:T.text,marginTop:3,lineHeight:1.4}}>{r.findings}</div>}
+                                {r.capa_raised&&<div style={{fontSize:11,color:T.orange,marginTop:2}}>⚠️ CAPA: {r.capa_notes} — Due: {r.capa_target_date||"—"}</div>}
                               </div>
                               <div style={{display:"flex",gap:6,alignItems:"flex-start"}}>
-                                {r.evidence_url&&<a href={r.evidence_url} target="_blank" rel="noopener noreferrer" style={{padding:"3px 9px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:9,textDecoration:"none",fontWeight:600}}>📎 Report</a>}
-                                <button onClick={()=>deleteCustomRecord(r.id)} style={{fontSize:9,color:T.red,background:"transparent",border:`1px solid ${T.red}30`,borderRadius:4,padding:"2px 7px",cursor:"pointer"}}>Delete</button>
+                                {r.evidence_url&&<a href={r.evidence_url} target="_blank" rel="noopener noreferrer" style={{padding:"3px 9px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:11,textDecoration:"none",fontWeight:600}}>📎 Report</a>}
+                                <button onClick={()=>deleteCustomRecord(r.id)} style={{fontSize:11,color:T.red,background:"transparent",border:`1px solid ${T.red}30`,borderRadius:4,padding:"2px 7px",cursor:"pointer"}}>Delete</button>
                               </div>
                             </div>
                           </div>
@@ -2889,7 +2889,7 @@ function AuditsScreen({ hospitalId }) {
                       })}
                     </div>
                   )}
-                  {records.length===0&&<div style={{fontSize:11,color:T.muted,textAlign:"center",padding:"16px 0"}}>No records yet. Click "+ Record" to log your first audit.</div>}
+                  {records.length===0&&<div style={{fontSize:13,color:T.muted,textAlign:"center",padding:"16px 0"}}>No records yet. Click "+ Record" to log your first audit.</div>}
                 </div>
               )}
             </div>
@@ -2909,11 +2909,11 @@ function AuditsScreen({ hospitalId }) {
           {id:"learn",label:"📖 What is Audit?"},
         ].map(t=>(
           <button key={t.id} onClick={()=>setMainTab(t.id)}
-            style={{padding:"7px 16px",borderRadius:8,fontSize:11,fontWeight:600,cursor:"pointer",
+            style={{padding:"7px 16px",borderRadius:8,fontSize:13,fontWeight:600,cursor:"pointer",
               background:mainTab===t.id?T.goldD:"transparent",
               border:`1px solid ${mainTab===t.id?T.gold:T.border}`,
               color:mainTab===t.id?T.goldL:T.muted}}>
-            {t.label}{t.count!==undefined&&<span style={{marginLeft:5,fontSize:9,opacity:0.7}}>({t.count})</span>}
+            {t.label}{t.count!==undefined&&<span style={{marginLeft:5,fontSize:11,opacity:0.7}}>({t.count})</span>}
           </button>
         ))}
       </div>
@@ -2927,18 +2927,18 @@ function AuditsScreen({ hospitalId }) {
           <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",marginBottom:14}}>
             <div style={{display:"flex",gap:16,alignItems:"center",flexWrap:"wrap"}}>
               <div style={{flex:1}}>
-                <div style={{fontSize:9,color:T.muted,marginBottom:3,letterSpacing:1}}>NABH AUDIT PROGRAMME — LAST 12 MONTHS</div>
-                <div style={{fontSize:12,color:completedAudits>0?T.green:T.orange,fontWeight:700}}>
+                <div style={{fontSize:11,color:T.muted,marginBottom:3,letterSpacing:1}}>NABH AUDIT PROGRAMME — LAST 12 MONTHS</div>
+                <div style={{fontSize:14,color:completedAudits>0?T.green:T.orange,fontWeight:700}}>
                   {completedAudits} of {totalAudits} NABH audits have records in last 12 months
                 </div>
-                <div style={{fontSize:10,color:T.muted,marginTop:3}}>NABH has no fixed minimum number — focus on completing the full audit cycle for each audit conducted.</div>
+                <div style={{fontSize:12,color:T.muted,marginTop:3}}>NABH has no fixed minimum number — focus on completing the full audit cycle for each audit conducted.</div>
                 <div style={{height:4,background:T.border,borderRadius:2,marginTop:6}}>
                   <div style={{height:"100%",borderRadius:2,background:completedAudits>0?T.green:T.orange,width:`${Math.min(100,(completedAudits/Math.max(totalAudits,1))*100)}%`,transition:"width 0.5s"}}/>
                 </div>
               </div>
               <div style={{textAlign:"right"}}>
                 <div style={{fontSize:20,fontWeight:700,color:T.gold}}>{completedAudits}/{totalAudits}</div>
-                <div style={{fontSize:9,color:T.muted}}>With records</div>
+                <div style={{fontSize:11,color:T.muted}}>With records</div>
               </div>
             </div>
           </div>
@@ -2946,19 +2946,19 @@ function AuditsScreen({ hospitalId }) {
           {/* Category tabs */}
           <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"10px 14px",marginBottom:6,display:"flex",gap:8,flexWrap:"wrap"}}>
             {[["ALL","📋 All Categories"],["clinical","🏥 Clinical Audit"],["nursing","💉 Nursing Audit"],["qip","🎯 Quality Improvement Project"]].map(([f,l])=>(
-              <button key={f} onClick={()=>setCatFilter(f)} style={{padding:"5px 14px",borderRadius:8,fontSize:10,cursor:"pointer",background:catFilter===f?T.goldD:"transparent",border:`1px solid ${catFilter===f?T.gold:T.border}`,color:catFilter===f?T.goldL:T.muted}}>{l}
-                {f!=="ALL"&&<span style={{marginLeft:4,fontSize:9,color:catFilter===f?T.gold:T.muted}}>({audits.filter(a=>(a.audit_category||"clinical")===f).length})</span>}
+              <button key={f} onClick={()=>setCatFilter(f)} style={{padding:"5px 14px",borderRadius:8,fontSize:12,cursor:"pointer",background:catFilter===f?T.goldD:"transparent",border:`1px solid ${catFilter===f?T.gold:T.border}`,color:catFilter===f?T.goldL:T.muted}}>{l}
+                {f!=="ALL"&&<span style={{marginLeft:4,fontSize:11,color:catFilter===f?T.gold:T.muted}}>({audits.filter(a=>(a.audit_category||"clinical")===f).length})</span>}
               </button>
             ))}
           </div>
           {catFilter==="qip"&&(
-            <div style={{background:T.goldD,border:`1px solid ${T.gold}40`,borderRadius:8,padding:"8px 14px",marginBottom:8,fontSize:10,color:T.goldL}}>
+            <div style={{background:T.goldD,border:`1px solid ${T.gold}40`,borderRadius:8,padding:"8px 14px",marginBottom:8,fontSize:12,color:T.goldL}}>
               ⭐ <b>NABH Mandatory:</b> Minimum 2 Quality Improvement Projects per year. Each QIP must be presented to the Quality Management Committee.
             </div>
           )}
           <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"10px 14px",marginBottom:14,display:"flex",gap:8}}>
             {[["ALL",`All (${filtered.length})`],["CORE",`🔴 CORE (${filtered.filter(a=>a.is_core).length})`],["NON_CORE",`🟡 Non-CORE (${filtered.filter(a=>!a.is_core).length})`]].map(([f,l])=>(
-              <button key={f} onClick={()=>setFilter(f)} style={{padding:"5px 14px",borderRadius:8,fontSize:10,cursor:"pointer",background:filter===f?T.goldD:"transparent",border:`1px solid ${filter===f?T.gold:T.border}`,color:filter===f?T.goldL:T.muted}}>{l}</button>
+              <button key={f} onClick={()=>setFilter(f)} style={{padding:"5px 14px",borderRadius:8,fontSize:12,cursor:"pointer",background:filter===f?T.goldD:"transparent",border:`1px solid ${filter===f?T.gold:T.border}`,color:filter===f?T.goldL:T.muted}}>{l}</button>
             ))}
           </div>
 
@@ -2975,12 +2975,12 @@ function AuditsScreen({ hospitalId }) {
                   <div style={{padding:"12px 16px",cursor:"pointer"}} onClick={()=>setExpanded(isOpen?null:a.id)}>
                     <div style={{display:"flex",gap:10,alignItems:"flex-start"}}>
                       <div style={{width:44,height:44,borderRadius:8,background:a.is_core?T.redD:T.goldD,border:`1px solid ${a.is_core?T.red:T.gold}30`,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,flexDirection:"column"}}>
-                        <span style={{fontSize:9,fontWeight:800,color:a.is_core?T.red:T.gold}}>{a.audit_code}</span>
+                        <span style={{fontSize:11,fontWeight:800,color:a.is_core?T.red:T.gold}}>{a.audit_code}</span>
                         {a.is_core&&<span style={{fontSize:7,color:T.red}}>CORE</span>}
                       </div>
                       <div style={{flex:1}}>
                         <div style={{display:"flex",gap:8,alignItems:"center",marginBottom:4,flexWrap:"wrap"}}>
-                          <span style={{fontSize:12,fontWeight:700,color:T.white}}>{a.name}</span>
+                          <span style={{fontSize:14,fontWeight:700,color:T.white}}>{a.name}</span>
                           {a.is_core&&<span style={{fontSize:8,padding:"2px 6px",borderRadius:4,background:`${T.red}20`,color:T.red}}>CORE</span>}
                           {hasRecentRecord?<span style={{fontSize:8,padding:"2px 6px",borderRadius:4,background:T.greenD,color:T.green}}>✓ {records.length} record{records.length>1?"s":""}</span>
                             :<span style={{fontSize:8,padding:"2px 6px",borderRadius:4,background:T.redD,color:T.red}}>No records</span>}
@@ -2988,20 +2988,20 @@ function AuditsScreen({ hospitalId }) {
                           {compPctAvg!==null&&<span style={{fontSize:8,padding:"2px 6px",borderRadius:4,background:compPctAvg>=80?T.greenD:T.orangeD,color:compPctAvg>=80?T.green:T.orange,fontWeight:700}}>Avg {compPctAvg}%</span>}
                         </div>
                         <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
-                          <span style={{fontSize:10,color:T.muted}}>📋 {a.nabh_ref}</span>
-                          <span style={{fontSize:10,color:T.muted}}>📅 {a.frequency}</span>
-                          <span style={{fontSize:10,color:T.muted}}>👤 {a.who_does_it}</span>
+                          <span style={{fontSize:12,color:T.muted}}>📋 {a.nabh_ref}</span>
+                          <span style={{fontSize:12,color:T.muted}}>📅 {a.frequency}</span>
+                          <span style={{fontSize:12,color:T.muted}}>👤 {a.who_does_it}</span>
                         </div>
                       </div>
-                      {doneCount>0&&<span style={{fontSize:10,color:T.green,flexShrink:0}}>{doneCount}/{params.length} ✓</span>}
-                      <button onClick={e=>{e.stopPropagation();setShowRecordForm(a.id);setRecordForm(emptyRecord());}} style={{padding:"4px 10px",borderRadius:6,fontSize:9,cursor:"pointer",background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold,flexShrink:0}}>+ Record Audit</button>
-                      <span style={{fontSize:14,color:T.muted}}>{isOpen?"▲":"▼"}</span>
+                      {doneCount>0&&<span style={{fontSize:12,color:T.green,flexShrink:0}}>{doneCount}/{params.length} ✓</span>}
+                      <button onClick={e=>{e.stopPropagation();setShowRecordForm(a.id);setRecordForm(emptyRecord());}} style={{padding:"4px 10px",borderRadius:6,fontSize:11,cursor:"pointer",background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold,flexShrink:0}}>+ Record Audit</button>
+                      <span style={{fontSize:16,color:T.muted}}>{isOpen?"▲":"▼"}</span>
                     </div>
                   </div>
 
                   {showRecordForm===a.id&&(
                     <div style={{borderTop:`1px solid ${T.gold}40`,padding:"16px",background:T.panel2}}>
-                      <div style={{fontSize:11,fontWeight:700,color:T.gold,marginBottom:12,letterSpacing:1}}>📋 RECORD AUDIT — {a.name}</div>
+                      <div style={{fontSize:13,fontWeight:700,color:T.gold,marginBottom:12,letterSpacing:1}}>📋 RECORD AUDIT — {a.name}</div>
                       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:10}}>
                         {[["Audit Date *","date","audit_date"],["Auditor Name","text","auditor_name"],["Department","text","department"],["Status","select","status"]].map(([l,t,k])=>(
                           <div key={k}><div style={lbl}>{l}</div>
@@ -3015,7 +3015,7 @@ function AuditsScreen({ hospitalId }) {
                       </div>
                       <div style={{marginBottom:10}}><div style={lbl}>FINDINGS</div><textarea value={recordForm.findings} onChange={e=>setRecordForm(f=>({...f,findings:e.target.value}))} rows={2} style={{...inp,width:"100%",resize:"vertical",boxSizing:"border-box"}}/></div>
                       <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:10}}>
-                        <label style={{display:"flex",alignItems:"center",gap:6,fontSize:11,color:T.text,cursor:"pointer"}}>
+                        <label style={{display:"flex",alignItems:"center",gap:6,fontSize:13,color:T.text,cursor:"pointer"}}>
                           <input type="checkbox" checked={recordForm.capa_raised} onChange={e=>setRecordForm(f=>({...f,capa_raised:e.target.checked}))}/> CAPA Required
                         </label>
                       </div>
@@ -3031,8 +3031,8 @@ function AuditsScreen({ hospitalId }) {
                         <input value={recordForm.evidence_url} onChange={e=>setRecordForm(f=>({...f,evidence_url:e.target.value}))} placeholder="https://drive.google.com/…" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
                       </div>
                       <div style={{display:"flex",gap:8}}>
-                        <button onClick={()=>saveRecord(a.id)} disabled={saving} style={{padding:"8px 20px",borderRadius:8,background:T.green,border:"none",color:T.bg,fontSize:11,fontWeight:700,cursor:"pointer"}}>{saving?"Saving…":"💾 Save Record"}</button>
-                        <button onClick={()=>{setShowRecordForm(null);setRecordForm(emptyRecord());}} style={{padding:"8px 16px",borderRadius:8,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:11,cursor:"pointer"}}>Cancel</button>
+                        <button onClick={()=>saveRecord(a.id)} disabled={saving} style={{padding:"8px 20px",borderRadius:8,background:T.green,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer"}}>{saving?"Saving…":"💾 Save Record"}</button>
+                        <button onClick={()=>{setShowRecordForm(null);setRecordForm(emptyRecord());}} style={{padding:"8px 16px",borderRadius:8,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:13,cursor:"pointer"}}>Cancel</button>
                       </div>
                     </div>
                   )}
@@ -3042,22 +3042,22 @@ function AuditsScreen({ hospitalId }) {
                       {records.length>0&&(
                         <div>
                           <AuditComplianceChart records={records}/>
-                          <div style={{fontSize:9,color:T.muted,marginBottom:6,letterSpacing:1,marginTop:12}}>AUDIT RECORDS ({records.length})</div>
+                          <div style={{fontSize:11,color:T.muted,marginBottom:6,letterSpacing:1,marginTop:12}}>AUDIT RECORDS ({records.length})</div>
                           {records.map(r=>{
                             const rPct=r.sample_size>0?Math.round((r.compliant_count/r.sample_size)*100):null;
                             return(
                               <div key={r.id} style={{background:T.panel2,borderRadius:8,padding:"10px 12px",marginBottom:6,border:`1px solid ${rPct!==null?(rPct>=80?`${T.green}20`:`${T.orange}20`):T.border}`}}>
                                 <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start"}}>
                                   <div>
-                                    <div style={{fontSize:11,fontWeight:700,color:T.white}}>{r.audit_date}</div>
-                                    <div style={{fontSize:10,color:T.muted,marginTop:2}}>{r.auditor_name&&`Auditor: ${r.auditor_name}`}{r.department&&` · ${r.department}`}</div>
-                                    {rPct!==null&&<div style={{fontSize:11,fontWeight:700,color:rPct>=80?T.green:T.orange,marginTop:3}}>Compliance: {rPct}% ({r.compliant_count}/{r.sample_size})</div>}
-                                    {r.findings&&<div style={{fontSize:9,color:T.text,marginTop:3,lineHeight:1.4}}>{r.findings}</div>}
-                                    {r.capa_raised&&<div style={{fontSize:9,color:T.orange,marginTop:2}}>⚠️ CAPA: {r.capa_notes} — Due: {r.capa_target_date||"—"}</div>}
+                                    <div style={{fontSize:13,fontWeight:700,color:T.white}}>{r.audit_date}</div>
+                                    <div style={{fontSize:12,color:T.muted,marginTop:2}}>{r.auditor_name&&`Auditor: ${r.auditor_name}`}{r.department&&` · ${r.department}`}</div>
+                                    {rPct!==null&&<div style={{fontSize:13,fontWeight:700,color:rPct>=80?T.green:T.orange,marginTop:3}}>Compliance: {rPct}% ({r.compliant_count}/{r.sample_size})</div>}
+                                    {r.findings&&<div style={{fontSize:11,color:T.text,marginTop:3,lineHeight:1.4}}>{r.findings}</div>}
+                                    {r.capa_raised&&<div style={{fontSize:11,color:T.orange,marginTop:2}}>⚠️ CAPA: {r.capa_notes} — Due: {r.capa_target_date||"—"}</div>}
                                   </div>
                                   <div style={{display:"flex",gap:6,alignItems:"flex-start"}}>
-                                    {r.evidence_url&&<a href={r.evidence_url} target="_blank" rel="noopener noreferrer" style={{padding:"3px 9px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:9,textDecoration:"none",fontWeight:600}}>📎 Report</a>}
-                                    <button onClick={()=>deleteRecord(r.id)} style={{fontSize:9,color:T.red,background:"transparent",border:`1px solid ${T.red}30`,borderRadius:4,padding:"2px 7px",cursor:"pointer"}}>Delete</button>
+                                    {r.evidence_url&&<a href={r.evidence_url} target="_blank" rel="noopener noreferrer" style={{padding:"3px 9px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:11,textDecoration:"none",fontWeight:600}}>📎 Report</a>}
+                                    <button onClick={()=>deleteRecord(r.id)} style={{fontSize:11,color:T.red,background:"transparent",border:`1px solid ${T.red}30`,borderRadius:4,padding:"2px 7px",cursor:"pointer"}}>Delete</button>
                                   </div>
                                 </div>
                               </div>
@@ -3070,31 +3070,31 @@ function AuditsScreen({ hospitalId }) {
                         const isGuideOpen=guideOpen===a.id;
                         return (
                           <div style={{borderTop:`1px dashed ${T.border}`,paddingTop:10,marginTop:2}}>
-                            <div onClick={()=>setGuideOpen(isGuideOpen?null:a.id)} style={{cursor:"pointer",display:"flex",alignItems:"center",gap:6,fontSize:10,color:T.gold,letterSpacing:1,fontWeight:700}}>
+                            <div onClick={()=>setGuideOpen(isGuideOpen?null:a.id)} style={{cursor:"pointer",display:"flex",alignItems:"center",gap:6,fontSize:12,color:T.gold,letterSpacing:1,fontWeight:700}}>
                               <span>{isGuideOpen?"▲":"▼"}</span><span>📖 HOW TO CONDUCT THIS AUDIT</span>
                             </div>
                             {isGuideOpen&&(
                               <div style={{display:"grid",gap:10,marginTop:10,padding:"12px 14px",background:T.panel2,borderRadius:8,border:`1px solid ${T.gold}20`}}>
                                 {Array.isArray(cg.preparation)&&cg.preparation.length>0&&(
-                                  <div><div style={{fontSize:9,color:T.gold,marginBottom:6,letterSpacing:1,fontWeight:700}}>PREPARATION</div>
+                                  <div><div style={{fontSize:11,color:T.gold,marginBottom:6,letterSpacing:1,fontWeight:700}}>PREPARATION</div>
                                     <div style={{display:"grid",gap:4}}>{cg.preparation.map((step,i)=>(
                                       <div key={i} style={{display:"flex",gap:8,padding:"6px 9px",background:T.panel,borderRadius:5,border:`1px solid ${T.border}`}}>
-                                        <span style={{fontSize:9,color:T.gold,fontWeight:700,minWidth:14}}>{i+1}.</span>
-                                        <span style={{fontSize:10,color:T.text,lineHeight:1.5}}>{step}</span>
+                                        <span style={{fontSize:11,color:T.gold,fontWeight:700,minWidth:14}}>{i+1}.</span>
+                                        <span style={{fontSize:12,color:T.text,lineHeight:1.5}}>{step}</span>
                                       </div>
                                     ))}</div>
                                   </div>
                                 )}
                                 {Array.isArray(cg.execution_steps)&&cg.execution_steps.length>0&&(
-                                  <div><div style={{fontSize:9,color:T.gold,marginBottom:6,letterSpacing:1,fontWeight:700}}>EXECUTION</div>
+                                  <div><div style={{fontSize:11,color:T.gold,marginBottom:6,letterSpacing:1,fontWeight:700}}>EXECUTION</div>
                                     <div style={{display:"grid",gap:5}}>{cg.execution_steps.map((step,i)=>(
-                                      <div key={i} style={{padding:"7px 10px",background:T.panel,borderRadius:5,borderLeft:`3px solid ${T.gold}`,fontSize:10,color:T.text,lineHeight:1.55}}>{step}</div>
+                                      <div key={i} style={{padding:"7px 10px",background:T.panel,borderRadius:5,borderLeft:`3px solid ${T.gold}`,fontSize:12,color:T.text,lineHeight:1.55}}>{step}</div>
                                     ))}</div>
                                   </div>
                                 )}
-                                {cg.sample_size_calculation&&<div style={{padding:"10px 12px",background:T.blueD,borderRadius:6}}><div style={{fontSize:9,color:T.blue,marginBottom:4,fontWeight:700}}>📊 SAMPLE SIZE</div><div style={{fontSize:10,color:T.text}}>{cg.sample_size_calculation}</div></div>}
-                                {cg.reporting_template&&<div style={{padding:"10px 12px",background:T.greenD,borderRadius:6}}><div style={{fontSize:9,color:T.green,marginBottom:4,fontWeight:700}}>📄 REPORTING</div><div style={{fontSize:10,color:T.text}}>{cg.reporting_template}</div></div>}
-                                {cg.re_audit_timeline&&<div style={{padding:"10px 12px",background:T.orangeD,borderRadius:6}}><div style={{fontSize:9,color:T.orange,marginBottom:4,fontWeight:700}}>🔁 RE-AUDIT</div><div style={{fontSize:10,color:T.text}}>{cg.re_audit_timeline}</div></div>}
+                                {cg.sample_size_calculation&&<div style={{padding:"10px 12px",background:T.blueD,borderRadius:6}}><div style={{fontSize:11,color:T.blue,marginBottom:4,fontWeight:700}}>📊 SAMPLE SIZE</div><div style={{fontSize:12,color:T.text}}>{cg.sample_size_calculation}</div></div>}
+                                {cg.reporting_template&&<div style={{padding:"10px 12px",background:T.greenD,borderRadius:6}}><div style={{fontSize:11,color:T.green,marginBottom:4,fontWeight:700}}>📄 REPORTING</div><div style={{fontSize:12,color:T.text}}>{cg.reporting_template}</div></div>}
+                                {cg.re_audit_timeline&&<div style={{padding:"10px 12px",background:T.orangeD,borderRadius:6}}><div style={{fontSize:11,color:T.orange,marginBottom:4,fontWeight:700}}>🔁 RE-AUDIT</div><div style={{fontSize:12,color:T.text}}>{cg.re_audit_timeline}</div></div>}
                               </div>
                             )}
                           </div>
@@ -3105,7 +3105,7 @@ function AuditsScreen({ hospitalId }) {
                 </div>
               );
             })}
-            {filtered.length===0&&<div style={{textAlign:"center",color:T.muted,padding:30,fontSize:12}}>No audits match this filter.</div>}
+            {filtered.length===0&&<div style={{textAlign:"center",color:T.muted,padding:30,fontSize:14}}>No audits match this filter.</div>}
           </div>
         </div>
       )}
@@ -3151,9 +3151,9 @@ function ChecklistsScreen({ hospitalId }) {
   return (
     <div style={{display:"grid",gridTemplateColumns:"210px 1fr",gap:12,alignItems:"start"}}>
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:8}}>
-        <div style={{fontSize:9,letterSpacing:2,color:T.muted,padding:"5px 8px",marginBottom:4}}>DEPARTMENTS</div>
+        <div style={{fontSize:11,letterSpacing:2,color:T.muted,padding:"5px 8px",marginBottom:4}}>DEPARTMENTS</div>
         {checklists.map(c=>(
-          <button key={c.id} onClick={()=>setSelected(c)} style={{width:"100%",textAlign:"left",padding:"7px 10px",borderRadius:7,marginBottom:3,cursor:"pointer",background:selected?.id===c.id?T.goldD:"transparent",border:`1px solid ${selected?.id===c.id?T.gold:T.border}`,color:selected?.id===c.id?T.goldL:T.text,fontSize:11,display:"flex",gap:6,alignItems:"center"}}>
+          <button key={c.id} onClick={()=>setSelected(c)} style={{width:"100%",textAlign:"left",padding:"7px 10px",borderRadius:7,marginBottom:3,cursor:"pointer",background:selected?.id===c.id?T.goldD:"transparent",border:`1px solid ${selected?.id===c.id?T.gold:T.border}`,color:selected?.id===c.id?T.goldL:T.text,fontSize:13,display:"flex",gap:6,alignItems:"center"}}>
             <span>{c.icon||"📋"}</span><span style={{flex:1}}>{c.dept}</span>
             {links[c.id]&&<span style={{fontSize:8,color:T.green}}>📎</span>}
           </button>
@@ -3164,8 +3164,8 @@ function ChecklistsScreen({ hospitalId }) {
           <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"14px 16px",marginBottom:10}}>
             <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
               <div>
-                <div style={{fontSize:14,fontWeight:700,color:T.white}}>{selected.icon} {selected.dept}</div>
-                <div style={{fontSize:10,color:T.muted,marginTop:2}}>NABH: {selected.nabh_chapter} · {items.length} items</div>
+                <div style={{fontSize:16,fontWeight:700,color:T.white}}>{selected.icon} {selected.dept}</div>
+                <div style={{fontSize:12,color:T.muted,marginTop:2}}>NABH: {selected.nabh_chapter} · {items.length} items</div>
               </div>
               <div style={{textAlign:"center"}}>
                 <div style={{fontSize:22,fontWeight:800,color:pct===100?T.green:pct>50?T.gold:T.red}}>{pct}%</div>
@@ -3175,19 +3175,19 @@ function ChecklistsScreen({ hospitalId }) {
             <div style={{height:4,background:T.border,borderRadius:2,marginBottom:12}}><div style={{width:`${pct}%`,height:"100%",background:pct===100?T.green:pct>50?T.gold:T.red,borderRadius:2,transition:"width 0.3s"}}/></div>
             {/* Evidence link */}
             <div>
-              <div style={{fontSize:9,color:T.muted,marginBottom:4,letterSpacing:1}}>EVIDENCE LINK — Completed Checklist (Google Drive / OneDrive URL)</div>
+              <div style={{fontSize:11,color:T.muted,marginBottom:4,letterSpacing:1}}>EVIDENCE LINK — Completed Checklist (Google Drive / OneDrive URL)</div>
               <div style={{display:"flex",gap:8,alignItems:"center"}}>
                 <input
                   value={links[selected.id]||""}
                   onChange={e=>setLinks(l=>({...l,[selected.id]:e.target.value}))}
                   onBlur={e=>saveLink(selected.id,e.target.value)}
                   placeholder="https://drive.google.com/… (auto-saves on exit)"
-                  style={{flex:1,padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:11}}
+                  style={{flex:1,padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13}}
                 />
-                {savingLink===selected.id&&<span style={{fontSize:9,color:T.muted}}>Saving…</span>}
+                {savingLink===selected.id&&<span style={{fontSize:11,color:T.muted}}>Saving…</span>}
                 {links[selected.id]&&savingLink!==selected.id&&(
                   <a href={links[selected.id]} target="_blank" rel="noopener noreferrer"
-                    style={{padding:"6px 12px",borderRadius:7,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:10,textDecoration:"none",fontWeight:600,whiteSpace:"nowrap"}}>📎 View</a>
+                    style={{padding:"6px 12px",borderRadius:7,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:12,textDecoration:"none",fontWeight:600,whiteSpace:"nowrap"}}>📎 View</a>
                 )}
               </div>
             </div>
@@ -3198,16 +3198,16 @@ function ChecklistsScreen({ hospitalId }) {
               return (
                 <div key={i} onClick={()=>setChecked(p=>({...p,[key]:!done}))}
                   style={{background:T.panel,border:`1px solid ${done?`${T.green}40`:T.border}`,borderRadius:8,padding:"9px 13px",cursor:"pointer",display:"flex",gap:10,alignItems:"flex-start",opacity:done?0.7:1}}>
-                  <div style={{width:17,height:17,borderRadius:4,border:`2px solid ${done?T.green:T.muted}`,background:done?T.green:"transparent",flexShrink:0,display:"flex",alignItems:"center",justifyContent:"center",fontSize:10,color:T.bg,marginTop:1}}>{done?"✓":""}</div>
+                  <div style={{width:17,height:17,borderRadius:4,border:`2px solid ${done?T.green:T.muted}`,background:done?T.green:"transparent",flexShrink:0,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,color:T.bg,marginTop:1}}>{done?"✓":""}</div>
                   <div style={{flex:1}}>
-                    <div style={{fontSize:11,color:done?T.muted:T.text,textDecoration:done?"line-through":"none",lineHeight:1.5}}>{item.t}</div>
-                    <div style={{fontSize:9,color:T.muted,marginTop:2}}>Ref: {item.ref}</div>
+                    <div style={{fontSize:13,color:done?T.muted:T.text,textDecoration:done?"line-through":"none",lineHeight:1.5}}>{item.t}</div>
+                    <div style={{fontSize:11,color:T.muted,marginTop:2}}>Ref: {item.ref}</div>
                   </div>
                 </div>
               );
             })}
           </div>
-          {pct===100&&<div style={{background:T.greenD,border:`1px solid ${T.green}40`,borderRadius:10,padding:"12px 16px",marginTop:10,textAlign:"center"}}><div style={{fontSize:13,color:T.green,fontWeight:700}}>✅ All items verified for {selected.dept}</div></div>}
+          {pct===100&&<div style={{background:T.greenD,border:`1px solid ${T.green}40`,borderRadius:10,padding:"12px 16px",marginTop:10,textAlign:"center"}}><div style={{fontSize:15,color:T.green,fontWeight:700}}>✅ All items verified for {selected.dept}</div></div>}
         </div>
       )}
     </div>
@@ -3225,17 +3225,17 @@ function PricingScreen() {
     <div style={{maxWidth:"100%",overflowX:"hidden"}}>
       {/* Header */}
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"20px 24px",marginBottom:20,textAlign:"center"}}>
-        <div style={{fontSize:9,letterSpacing:3,color:T.gold,marginBottom:6}}>PRICING</div>
+        <div style={{fontSize:11,letterSpacing:3,color:T.gold,marginBottom:6}}>PRICING</div>
         <div style={{fontSize:20,fontWeight:800,color:T.white,marginBottom:6}}>Simple, transparent pricing</div>
-        <div style={{fontSize:11,color:T.muted}}>14-day free trial on all plans · No credit card required · Pay via UPI</div>
+        <div style={{fontSize:13,color:T.muted}}>14-day free trial on all plans · No credit card required · Pay via UPI</div>
       </div>
 
       {/* Trial banner */}
       <div style={{background:`linear-gradient(135deg,${T.goldD},rgba(201,168,76,0.05))`,border:`1px solid ${T.gold}40`,borderRadius:12,padding:"14px 20px",marginBottom:20,display:"flex",alignItems:"center",gap:14}}>
         <div style={{fontSize:28}}>🎁</div>
         <div>
-          <div style={{fontSize:13,fontWeight:700,color:T.goldL}}>You're on a 14-day free trial</div>
-          <div style={{fontSize:11,color:T.muted,marginTop:3}}>Full access to all features during trial. No payment needed until trial ends. To upgrade, contact us on WhatsApp.</div>
+          <div style={{fontSize:15,fontWeight:700,color:T.goldL}}>You're on a 14-day free trial</div>
+          <div style={{fontSize:13,color:T.muted,marginTop:3}}>Full access to all features during trial. No payment needed until trial ends. To upgrade, contact us on WhatsApp.</div>
         </div>
       </div>
 
@@ -3246,23 +3246,23 @@ function PricingScreen() {
             {plan.popular&&<div style={{position:"absolute",top:-11,left:"50%",transform:"translateX(-50%)",background:T.gold,color:T.bg,fontSize:8,fontWeight:800,padding:"3px 14px",borderRadius:20,letterSpacing:1,whiteSpace:"nowrap"}}>MOST POPULAR</div>}
             <div style={{textAlign:"center",marginBottom:16}}>
               <div style={{fontSize:26,marginBottom:8}}>{plan.icon}</div>
-              <div style={{fontSize:14,fontWeight:800,color:T.white,marginBottom:4}}>{plan.name}</div>
-              <div style={{fontSize:9,color:T.muted,marginBottom:12}}>{plan.users}</div>
+              <div style={{fontSize:16,fontWeight:800,color:T.white,marginBottom:4}}>{plan.name}</div>
+              <div style={{fontSize:11,color:T.muted,marginBottom:12}}>{plan.users}</div>
               <div style={{display:"flex",alignItems:"baseline",justifyContent:"center",gap:2}}>
                 <span style={{fontSize:28,fontWeight:800,color:plan.color}}>{plan.price}</span>
-                <span style={{fontSize:10,color:T.muted}}>{plan.period}</span>
+                <span style={{fontSize:12,color:T.muted}}>{plan.period}</span>
               </div>
             </div>
             <div style={{borderTop:`1px solid ${T.border}`,paddingTop:14,marginBottom:16}}>
               {plan.features.map((f,i)=>(
                 <div key={i} style={{display:"flex",gap:8,alignItems:"flex-start",marginBottom:8}}>
-                  <span style={{fontSize:10,color:plan.color,flexShrink:0,marginTop:1}}>✓</span>
-                  <span style={{fontSize:10,color:T.text,lineHeight:1.4}}>{f}</span>
+                  <span style={{fontSize:12,color:plan.color,flexShrink:0,marginTop:1}}>✓</span>
+                  <span style={{fontSize:12,color:T.text,lineHeight:1.4}}>{f}</span>
                 </div>
               ))}
             </div>
             <a href="https://wa.me/918511180957" target="_blank" rel="noopener noreferrer"
-              style={{display:"block",textAlign:"center",padding:"10px",borderRadius:8,background:plan.popular?`linear-gradient(135deg,${T.gold},#f0d070)`:T.panel2,border:`1px solid ${plan.popular?T.gold:T.border}`,color:plan.popular?T.bg:T.muted,fontSize:11,fontWeight:plan.popular?700:400,textDecoration:"none",cursor:"pointer"}}>
+              style={{display:"block",textAlign:"center",padding:"10px",borderRadius:8,background:plan.popular?`linear-gradient(135deg,${T.gold},#f0d070)`:T.panel2,border:`1px solid ${plan.popular?T.gold:T.border}`,color:plan.popular?T.bg:T.muted,fontSize:13,fontWeight:plan.popular?700:400,textDecoration:"none",cursor:"pointer"}}>
               {plan.popular?"💬 Upgrade Now":"💬 Contact to Upgrade"}
             </a>
           </div>
@@ -3271,28 +3271,28 @@ function PricingScreen() {
 
       {/* Contact box */}
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"18px 24px"}}>
-        <div style={{fontSize:11,fontWeight:700,color:T.white,marginBottom:12}}>How to upgrade</div>
+        <div style={{fontSize:13,fontWeight:700,color:T.white,marginBottom:12}}>How to upgrade</div>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
           <div style={{background:T.panel2,borderRadius:8,padding:"12px 14px"}}>
-            <div style={{fontSize:9,color:T.muted,marginBottom:4,letterSpacing:1}}>STEP 1</div>
-            <div style={{fontSize:11,color:T.text}}>WhatsApp us your plan choice at <span style={{color:T.green,fontWeight:700}}>+91 85111 80957</span></div>
+            <div style={{fontSize:11,color:T.muted,marginBottom:4,letterSpacing:1}}>STEP 1</div>
+            <div style={{fontSize:13,color:T.text}}>WhatsApp us your plan choice at <span style={{color:T.green,fontWeight:700}}>+91 85111 80957</span></div>
           </div>
           <div style={{background:T.panel2,borderRadius:8,padding:"12px 14px"}}>
-            <div style={{fontSize:9,color:T.muted,marginBottom:4,letterSpacing:1}}>STEP 2</div>
-            <div style={{fontSize:11,color:T.text}}>Pay via UPI — we'll send the UPI ID on WhatsApp</div>
+            <div style={{fontSize:11,color:T.muted,marginBottom:4,letterSpacing:1}}>STEP 2</div>
+            <div style={{fontSize:13,color:T.text}}>Pay via UPI — we'll send the UPI ID on WhatsApp</div>
           </div>
           <div style={{background:T.panel2,borderRadius:8,padding:"12px 14px"}}>
-            <div style={{fontSize:9,color:T.muted,marginBottom:4,letterSpacing:1}}>STEP 3</div>
-            <div style={{fontSize:11,color:T.text}}>Your account is activated within 2 hours of payment</div>
+            <div style={{fontSize:11,color:T.muted,marginBottom:4,letterSpacing:1}}>STEP 3</div>
+            <div style={{fontSize:13,color:T.text}}>Your account is activated within 2 hours of payment</div>
           </div>
           <div style={{background:T.panel2,borderRadius:8,padding:"12px 14px"}}>
-            <div style={{fontSize:9,color:T.muted,marginBottom:4,letterSpacing:1}}>INVOICE</div>
-            <div style={{fontSize:11,color:T.text}}>Invoice provided for all payments. GST invoice available on request.</div>
+            <div style={{fontSize:11,color:T.muted,marginBottom:4,letterSpacing:1}}>INVOICE</div>
+            <div style={{fontSize:13,color:T.text}}>Invoice provided for all payments. GST invoice available on request.</div>
           </div>
         </div>
         <div style={{marginTop:14,padding:"10px 14px",background:T.goldD,borderRadius:8,border:`1px solid ${T.gold}30`,textAlign:"center"}}>
-          <div style={{fontSize:10,color:T.muted}}>Questions? We respond within 2 hours on WhatsApp</div>
-          <a href="https://wa.me/918511180957" target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:T.gold,fontWeight:700,textDecoration:"none"}}>💬 +91 85111 80957</a>
+          <div style={{fontSize:12,color:T.muted}}>Questions? We respond within 2 hours on WhatsApp</div>
+          <a href="https://wa.me/918511180957" target="_blank" rel="noopener noreferrer" style={{fontSize:14,color:T.gold,fontWeight:700,textDecoration:"none"}}>💬 +91 85111 80957</a>
         </div>
       </div>
     </div>
@@ -3359,8 +3359,8 @@ function ProfileScreen({ user, context, onContextUpdate }) {
   return (
     <div>
       {toast&&<div style={{position:"fixed",top:80,right:16,zIndex:999,maxWidth:360,background:toast.sev==="CRITICAL"?T.redD:T.greenD,border:`1px solid ${toast.sev==="CRITICAL"?T.red:T.green}50`,borderRadius:10,padding:"12px 16px",boxShadow:"0 8px 32px rgba(0,0,0,0.5)"}}>
-        <div style={{fontSize:10,fontWeight:700,marginBottom:4,color:toast.sev==="CRITICAL"?T.red:T.green}}>{toast.sev==="CRITICAL"?"🚨":"✅"} {toast.type}</div>
-        <div style={{fontSize:11,color:T.text,lineHeight:1.5}}>{toast.msg}</div>
+        <div style={{fontSize:12,fontWeight:700,marginBottom:4,color:toast.sev==="CRITICAL"?T.red:T.green}}>{toast.sev==="CRITICAL"?"🚨":"✅"} {toast.type}</div>
+        <div style={{fontSize:13,color:T.text,lineHeight:1.5}}>{toast.msg}</div>
       </div>}
 
       <div style={{display:"grid",gap:14}}>
@@ -3369,32 +3369,32 @@ function ProfileScreen({ user, context, onContextUpdate }) {
           <div style={{display:"flex",gap:14,alignItems:"center",marginBottom:14}}>
             <div style={{width:48,height:48,borderRadius:"50%",background:`linear-gradient(135deg,${T.gold},#f0d070)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:22,flexShrink:0}}>👤</div>
             <div style={{flex:1}}>
-              <div style={{fontSize:9,letterSpacing:2,color:T.gold,marginBottom:2}}>ACCOUNT</div>
-              <div style={{fontSize:14,fontWeight:700,color:T.white}}>{user?.email}</div>
+              <div style={{fontSize:11,letterSpacing:2,color:T.gold,marginBottom:2}}>ACCOUNT</div>
+              <div style={{fontSize:16,fontWeight:700,color:T.white}}>{user?.email}</div>
             </div>
           </div>
-          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:14,fontSize:11}}>
-            <div><div style={{fontSize:9,color:T.muted,marginBottom:3}}>MEMBER SINCE</div><div style={{color:T.text}}>{memberSince}</div></div>
-            <div><div style={{fontSize:9,color:T.muted,marginBottom:3}}>ROLE</div><div style={{color:T.text}}>{profile?.role||"admin"}</div></div>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:14,fontSize:13}}>
+            <div><div style={{fontSize:11,color:T.muted,marginBottom:3}}>MEMBER SINCE</div><div style={{color:T.text}}>{memberSince}</div></div>
+            <div><div style={{fontSize:11,color:T.muted,marginBottom:3}}>ROLE</div><div style={{color:T.text}}>{profile?.role||"admin"}</div></div>
           </div>
         </div>
 
         {/* Hospital + Display name */}
         <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"16px 18px"}}>
-          <div style={{fontSize:9,letterSpacing:2,color:T.gold,marginBottom:12}}>YOUR HOSPITAL & DISPLAY NAME</div>
+          <div style={{fontSize:11,letterSpacing:2,color:T.gold,marginBottom:12}}>YOUR HOSPITAL & DISPLAY NAME</div>
           <div style={{display:"grid",gap:12}}>
             <div>
-              <div style={{fontSize:9,color:T.muted,marginBottom:5}}>HOSPITAL NAME — shown in app header and reports</div>
+              <div style={{fontSize:11,color:T.muted,marginBottom:5}}>HOSPITAL NAME — shown in app header and reports</div>
               <div style={{display:"flex",gap:8}}>
-                <input value={hospitalName} onChange={e=>setHospitalName(e.target.value)} placeholder="e.g., HMP Foundation, Ankleshwar" style={{flex:1,padding:"8px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12}}/>
-                <button onClick={saveHospital} disabled={savingHospital||hospitalName===context?.hospitalName} style={{padding:"7px 16px",borderRadius:8,border:`1px solid ${T.gold}40`,background:T.goldD,color:T.gold,fontSize:11,fontWeight:700,cursor:savingHospital||hospitalName===context?.hospitalName?"not-allowed":"pointer",opacity:savingHospital||hospitalName===context?.hospitalName?0.5:1}}>{savingHospital?"Saving…":"Save"}</button>
+                <input value={hospitalName} onChange={e=>setHospitalName(e.target.value)} placeholder="e.g., HMP Foundation, Ankleshwar" style={{flex:1,padding:"8px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14}}/>
+                <button onClick={saveHospital} disabled={savingHospital||hospitalName===context?.hospitalName} style={{padding:"7px 16px",borderRadius:8,border:`1px solid ${T.gold}40`,background:T.goldD,color:T.gold,fontSize:13,fontWeight:700,cursor:savingHospital||hospitalName===context?.hospitalName?"not-allowed":"pointer",opacity:savingHospital||hospitalName===context?.hospitalName?0.5:1}}>{savingHospital?"Saving…":"Save"}</button>
               </div>
             </div>
             <div>
-              <div style={{fontSize:9,color:T.muted,marginBottom:5}}>YOUR DISPLAY NAME — optional, used in audit logs</div>
+              <div style={{fontSize:11,color:T.muted,marginBottom:5}}>YOUR DISPLAY NAME — optional, used in audit logs</div>
               <div style={{display:"flex",gap:8}}>
-                <input value={displayName} onChange={e=>setDisplayName(e.target.value)} placeholder="e.g., Dr. Mehul Upadhyay" style={{flex:1,padding:"8px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12}}/>
-                <button onClick={saveProfile} disabled={savingProfile} style={{padding:"7px 16px",borderRadius:8,border:`1px solid ${T.gold}40`,background:T.goldD,color:T.gold,fontSize:11,fontWeight:700,cursor:savingProfile?"not-allowed":"pointer",opacity:savingProfile?0.5:1}}>{savingProfile?"Saving…":"Save"}</button>
+                <input value={displayName} onChange={e=>setDisplayName(e.target.value)} placeholder="e.g., Dr. Mehul Upadhyay" style={{flex:1,padding:"8px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14}}/>
+                <button onClick={saveProfile} disabled={savingProfile} style={{padding:"7px 16px",borderRadius:8,border:`1px solid ${T.gold}40`,background:T.goldD,color:T.gold,fontSize:13,fontWeight:700,cursor:savingProfile?"not-allowed":"pointer",opacity:savingProfile?0.5:1}}>{savingProfile?"Saving…":"Save"}</button>
               </div>
             </div>
           </div>
@@ -3402,32 +3402,32 @@ function ProfileScreen({ user, context, onContextUpdate }) {
 
         {/* Change password */}
         <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"16px 18px"}}>
-          <div style={{fontSize:9,letterSpacing:2,color:T.gold,marginBottom:12}}>🔒 CHANGE PASSWORD</div>
+          <div style={{fontSize:11,letterSpacing:2,color:T.gold,marginBottom:12}}>🔒 CHANGE PASSWORD</div>
           <div style={{display:"grid",gap:10}}>
             <div>
-              <div style={{fontSize:9,color:T.muted,marginBottom:4}}>CURRENT PASSWORD</div>
-              <input type="password" value={pwCurrent} onChange={e=>setPwCurrent(e.target.value)} autoComplete="current-password" style={{width:"100%",padding:"8px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12}}/>
+              <div style={{fontSize:11,color:T.muted,marginBottom:4}}>CURRENT PASSWORD</div>
+              <input type="password" value={pwCurrent} onChange={e=>setPwCurrent(e.target.value)} autoComplete="current-password" style={{width:"100%",padding:"8px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14}}/>
             </div>
             <div>
-              <div style={{fontSize:9,color:T.muted,marginBottom:4}}>NEW PASSWORD (min 6 characters)</div>
-              <input type="password" value={pwNew} onChange={e=>setPwNew(e.target.value)} autoComplete="new-password" style={{width:"100%",padding:"8px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12}}/>
+              <div style={{fontSize:11,color:T.muted,marginBottom:4}}>NEW PASSWORD (min 6 characters)</div>
+              <input type="password" value={pwNew} onChange={e=>setPwNew(e.target.value)} autoComplete="new-password" style={{width:"100%",padding:"8px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14}}/>
             </div>
             <div>
-              <div style={{fontSize:9,color:T.muted,marginBottom:4}}>CONFIRM NEW PASSWORD</div>
-              <input type="password" value={pwConfirm} onChange={e=>setPwConfirm(e.target.value)} autoComplete="new-password" style={{width:"100%",padding:"8px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12}}/>
+              <div style={{fontSize:11,color:T.muted,marginBottom:4}}>CONFIRM NEW PASSWORD</div>
+              <input type="password" value={pwConfirm} onChange={e=>setPwConfirm(e.target.value)} autoComplete="new-password" style={{width:"100%",padding:"8px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14}}/>
             </div>
-            <button onClick={changePassword} disabled={pwBusy} style={{padding:"9px 16px",borderRadius:8,border:`1px solid ${T.gold}40`,background:T.goldD,color:T.gold,fontSize:11,fontWeight:700,cursor:pwBusy?"not-allowed":"pointer",opacity:pwBusy?0.5:1,marginTop:4}}>{pwBusy?"Updating…":"Update Password"}</button>
-            <div style={{fontSize:9,color:T.muted,lineHeight:1.5,marginTop:2}}>You will stay signed in after change. Use the new password next time you sign in on any device.</div>
+            <button onClick={changePassword} disabled={pwBusy} style={{padding:"9px 16px",borderRadius:8,border:`1px solid ${T.gold}40`,background:T.goldD,color:T.gold,fontSize:13,fontWeight:700,cursor:pwBusy?"not-allowed":"pointer",opacity:pwBusy?0.5:1,marginTop:4}}>{pwBusy?"Updating…":"Update Password"}</button>
+            <div style={{fontSize:11,color:T.muted,lineHeight:1.5,marginTop:2}}>You will stay signed in after change. Use the new password next time you sign in on any device.</div>
           </div>
         </div>
 
         {/* Sign out */}
         <div style={{background:T.panel,border:`1px solid ${T.red}30`,borderRadius:10,padding:"14px 18px",display:"flex",justifyContent:"space-between",alignItems:"center",gap:12,flexWrap:"wrap"}}>
           <div>
-            <div style={{fontSize:11,fontWeight:700,color:T.red,marginBottom:3}}>Sign out</div>
-            <div style={{fontSize:10,color:T.muted}}>End your current session on this device.</div>
+            <div style={{fontSize:13,fontWeight:700,color:T.red,marginBottom:3}}>Sign out</div>
+            <div style={{fontSize:12,color:T.muted}}>End your current session on this device.</div>
           </div>
-          <button onClick={()=>supabase.auth.signOut()} style={{padding:"7px 18px",borderRadius:8,border:`1px solid ${T.red}50`,background:T.redD,color:T.red,fontSize:11,fontWeight:700,cursor:"pointer"}}>Sign out</button>
+          <button onClick={()=>supabase.auth.signOut()} style={{padding:"7px 18px",borderRadius:8,border:`1px solid ${T.red}50`,background:T.redD,color:T.red,fontSize:13,fontWeight:700,cursor:"pointer"}}>Sign out</button>
         </div>
       </div>
     </div>
@@ -3460,42 +3460,42 @@ function RecoveryScreen({ user, onDone }) {
         <div style={{display:"flex",gap:12,alignItems:"center",marginBottom:18}}>
           <div style={{width:42,height:42,borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:20}}>🔐</div>
           <div>
-            <div style={{fontSize:9,letterSpacing:3,color:T.gold,marginBottom:2}}>NABH 6TH EDITION</div>
+            <div style={{fontSize:11,letterSpacing:3,color:T.gold,marginBottom:2}}>NABH 6TH EDITION</div>
             <div style={{fontSize:15,fontWeight:700,color:T.white}}>Set New Password</div>
           </div>
         </div>
 
         {!done ? (
           <>
-            <div style={{fontSize:11,color:T.text,lineHeight:1.6,marginBottom:18,padding:"10px 12px",background:T.panel2,borderRadius:8,border:`1px solid ${T.border}`}}>
+            <div style={{fontSize:13,color:T.text,lineHeight:1.6,marginBottom:18,padding:"10px 12px",background:T.panel2,borderRadius:8,border:`1px solid ${T.border}`}}>
               You arrived here via a password reset link for <strong style={{color:T.gold}}>{user?.email||"your account"}</strong>. Set your new password below.
             </div>
 
             <div style={{display:"grid",gap:12}}>
               <div>
-                <div style={{fontSize:9,color:T.muted,marginBottom:5,letterSpacing:1}}>NEW PASSWORD (min 6 characters)</div>
-                <input type="password" value={pwNew} onChange={e=>setPwNew(e.target.value)} autoFocus autoComplete="new-password" style={{width:"100%",padding:"9px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13}}/>
+                <div style={{fontSize:11,color:T.muted,marginBottom:5,letterSpacing:1}}>NEW PASSWORD (min 6 characters)</div>
+                <input type="password" value={pwNew} onChange={e=>setPwNew(e.target.value)} autoFocus autoComplete="new-password" style={{width:"100%",padding:"9px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:15}}/>
               </div>
               <div>
-                <div style={{fontSize:9,color:T.muted,marginBottom:5,letterSpacing:1}}>CONFIRM NEW PASSWORD</div>
-                <input type="password" value={pwConfirm} onChange={e=>setPwConfirm(e.target.value)} onKeyDown={e=>{if(e.key==="Enter")submit();}} autoComplete="new-password" style={{width:"100%",padding:"9px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13}}/>
+                <div style={{fontSize:11,color:T.muted,marginBottom:5,letterSpacing:1}}>CONFIRM NEW PASSWORD</div>
+                <input type="password" value={pwConfirm} onChange={e=>setPwConfirm(e.target.value)} onKeyDown={e=>{if(e.key==="Enter")submit();}} autoComplete="new-password" style={{width:"100%",padding:"9px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:15}}/>
               </div>
 
-              {err&&<div style={{padding:"8px 12px",background:T.redD,border:`1px solid ${T.red}40`,borderRadius:7,color:T.red,fontSize:11}}>⚠️ {err}</div>}
+              {err&&<div style={{padding:"8px 12px",background:T.redD,border:`1px solid ${T.red}40`,borderRadius:7,color:T.red,fontSize:13}}>⚠️ {err}</div>}
 
-              <button onClick={submit} disabled={busy} style={{padding:"11px 16px",borderRadius:8,border:`1px solid ${T.gold}`,background:`linear-gradient(135deg,${T.gold},#f0d070)`,color:T.bg,fontSize:12,fontWeight:800,cursor:busy?"not-allowed":"pointer",opacity:busy?0.6:1,marginTop:4}}>{busy?"Updating…":"Set Password & Continue"}</button>
+              <button onClick={submit} disabled={busy} style={{padding:"11px 16px",borderRadius:8,border:`1px solid ${T.gold}`,background:`linear-gradient(135deg,${T.gold},#f0d070)`,color:T.bg,fontSize:14,fontWeight:800,cursor:busy?"not-allowed":"pointer",opacity:busy?0.6:1,marginTop:4}}>{busy?"Updating…":"Set Password & Continue"}</button>
             </div>
 
-            <div style={{marginTop:18,paddingTop:14,borderTop:`1px solid ${T.border}`,fontSize:10,color:T.muted,textAlign:"center"}}>
-              Didn't request this? <button onClick={async()=>{await supabase.auth.signOut();window.location.reload();}} style={{background:"transparent",border:"none",color:T.blue,fontSize:10,cursor:"pointer",textDecoration:"underline",padding:0}}>Cancel and sign out</button>
+            <div style={{marginTop:18,paddingTop:14,borderTop:`1px solid ${T.border}`,fontSize:12,color:T.muted,textAlign:"center"}}>
+              Didn't request this? <button onClick={async()=>{await supabase.auth.signOut();window.location.reload();}} style={{background:"transparent",border:"none",color:T.blue,fontSize:12,cursor:"pointer",textDecoration:"underline",padding:0}}>Cancel and sign out</button>
             </div>
           </>
         ) : (
           <div style={{textAlign:"center",padding:"20px 0"}}>
             <div style={{fontSize:36,marginBottom:10}}>✅</div>
-            <div style={{fontSize:14,color:T.green,fontWeight:700,marginBottom:6}}>Password Updated</div>
-            <div style={{fontSize:11,color:T.text,lineHeight:1.6,marginBottom:18}}>Your password has been set. Sign in with your new password to continue.</div>
-            <button onClick={async()=>{await supabase.auth.signOut();if(onDone)onDone();}} style={{padding:"10px 28px",borderRadius:8,border:`1px solid ${T.gold}`,background:T.goldD,color:T.gold,fontSize:12,fontWeight:700,cursor:"pointer"}}>Continue to Sign In</button>
+            <div style={{fontSize:16,color:T.green,fontWeight:700,marginBottom:6}}>Password Updated</div>
+            <div style={{fontSize:13,color:T.text,lineHeight:1.6,marginBottom:18}}>Your password has been set. Sign in with your new password to continue.</div>
+            <button onClick={async()=>{await supabase.auth.signOut();if(onDone)onDone();}} style={{padding:"10px 28px",borderRadius:8,border:`1px solid ${T.gold}`,background:T.goldD,color:T.gold,fontSize:14,fontWeight:700,cursor:"pointer"}}>Continue to Sign In</button>
           </div>
         )}
       </div>
@@ -3920,7 +3920,7 @@ export default function App() {
     else if(key==="hco_elc"){setSelectedProgramme("hco-elc");setScreen("hco-elc");setAuthState("app");}
   };
 
-  if(authState==="loading") return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",color:T.gold,fontFamily:"Segoe UI,sans-serif",fontSize:14}}>Loading…</div>;
+  if(authState==="loading") return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",color:T.gold,fontFamily:"Segoe UI,sans-serif",fontSize:16}}>Loading…</div>;
   if(authState==="recovery") return <RecoveryScreen user={user} onDone={()=>{setUser(null);setAuthState("login");setContext(null);}}/>;
   if(authState==="login") return <LoginScreen onLogin={u=>{setUser(u);setAuthState("setup");}} initialError={authErrorMsg}/>;
   if(authState==="setup") return <SetupScreen user={user} onReady={handleReady}/>;
@@ -3981,7 +3981,7 @@ export default function App() {
     const color = upload === 'Portal' ? T.blue : upload === 'Mobile' ? T.orange : T.gold;
     const label = upload === 'Portal' ? '🌐 Portal' : upload === 'Mobile' ? '📱 Mobile' : '🔄 Both';
     return (
-      <span style={{fontSize:10,padding:'2px 6px',borderRadius:10,background:color+'22',color,border:`1px solid ${color}44`,whiteSpace:'nowrap'}}>
+      <span style={{fontSize:12,padding:'2px 6px',borderRadius:10,background:color+'22',color,border:`1px solid ${color}44`,whiteSpace:'nowrap'}}>
         {label}
       </span>
     );
@@ -3998,7 +3998,7 @@ export default function App() {
     <div style={{padding:16}}>
       <div style={{background:T.panel,border:`1px solid ${T.gold}44`,borderRadius:12,padding:20,marginBottom:16}}>
         <div style={{color:T.gold,fontWeight:700,fontSize:16,marginBottom:8}}>🏆 SHCO Full Accreditation — 3rd Edition (August 2022)</div>
-        <div style={{color:T.text,fontSize:13,lineHeight:1.6}}>
+        <div style={{color:T.text,fontSize:15,lineHeight:1.6}}>
           Full accreditation for Small Healthcare Organisations. Assessed against 408 Objective Elements across 71 standards in 10 chapters.
         </div>
         <div style={{display:'flex',gap:12,flexWrap:'wrap',marginTop:16}}>
@@ -4010,36 +4010,36 @@ export default function App() {
           ].map(s => (
             <div key={s.label} style={{background:T.panel2,borderRadius:8,padding:'10px 16px',textAlign:'center',border:`1px solid ${T.border}`}}>
               <div style={{color:T.gold,fontWeight:700,fontSize:20}}>{s.val}</div>
-              <div style={{color:T.muted,fontSize:11}}>{s.label}</div>
+              <div style={{color:T.muted,fontSize:13}}>{s.label}</div>
             </div>
           ))}
         </div>
       </div>
 
       {/* ELC 2nd Edition OE Summary */}
-      <div style={{color:T.blue,fontWeight:600,fontSize:13,marginBottom:10}}>ELC 2nd Edition — 189 OEs (Entry Level reference)</div>
+      <div style={{color:T.blue,fontWeight:600,fontSize:15,marginBottom:10}}>ELC 2nd Edition — 189 OEs (Entry Level reference)</div>
       <div style={{display:'grid',gap:6,marginBottom:20}}>
         {SHCO_ELC_OE_SUMMARY.map(c => (
           <div key={c.ch} style={{background:T.panel,borderRadius:8,padding:'8px 12px',border:`1px solid ${T.border}`}}>
             <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:4}}>
               <div>
-                <span style={{color:T.gold,fontWeight:700,fontSize:11,marginRight:6}}>{c.ch}</span>
-                <span style={{color:T.text,fontSize:11}}>{c.name}</span>
+                <span style={{color:T.gold,fontWeight:700,fontSize:13,marginRight:6}}>{c.ch}</span>
+                <span style={{color:T.text,fontSize:13}}>{c.name}</span>
               </div>
-              <span style={{color:T.blue,fontSize:11,fontWeight:600}}>{c.oes} OEs</span>
+              <span style={{color:T.blue,fontSize:13,fontWeight:600}}>{c.oes} OEs</span>
             </div>
             <div style={{display:'flex',gap:6,flexWrap:'wrap'}}>
-              <span style={{fontSize:10,padding:'1px 6px',borderRadius:8,background:T.green+'22',color:T.green}}>Core: {c.core}</span>
-              <span style={{fontSize:10,padding:'1px 6px',borderRadius:8,background:T.orange+'22',color:T.orange}}>Commitment: {c.commitment}</span>
-              <span style={{fontSize:10,padding:'1px 6px',borderRadius:8,background:T.gold+'22',color:T.gold}}>Excellence: {c.excellence}</span>
+              <span style={{fontSize:12,padding:'1px 6px',borderRadius:8,background:T.green+'22',color:T.green}}>Core: {c.core}</span>
+              <span style={{fontSize:12,padding:'1px 6px',borderRadius:8,background:T.orange+'22',color:T.orange}}>Commitment: {c.commitment}</span>
+              <span style={{fontSize:12,padding:'1px 6px',borderRadius:8,background:T.gold+'22',color:T.gold}}>Excellence: {c.excellence}</span>
             </div>
           </div>
         ))}
-        <div style={{color:T.muted,fontSize:11,textAlign:'center',marginTop:4}}>Source: NABH ELC Standards — 2nd Edition (Jan 2026)</div>
+        <div style={{color:T.muted,fontSize:13,textAlign:'center',marginTop:4}}>Source: NABH ELC Standards — 2nd Edition (Jan 2026)</div>
       </div>
 
       {/* Chapter breakdown */}
-      <div style={{color:T.gold,fontWeight:600,fontSize:13,marginBottom:10}}>Chapter Breakdown — 3rd Edition</div>
+      <div style={{color:T.gold,fontWeight:600,fontSize:15,marginBottom:10}}>Chapter Breakdown — 3rd Edition</div>
       <div style={{display:'grid',gap:6}}>
         {[
           {ch:'AAC',name:'Access, Assessment & Continuity',stds:8,oes:48},
@@ -4055,10 +4055,10 @@ export default function App() {
         ].map(c => (
           <div key={c.ch} style={{background:T.panel,borderRadius:8,padding:'10px 14px',display:'flex',justifyContent:'space-between',alignItems:'center',border:`1px solid ${T.border}`}}>
             <div>
-              <span style={{color:T.gold,fontWeight:700,fontSize:12,marginRight:8}}>{c.ch}</span>
-              <span style={{color:T.text,fontSize:12}}>{c.name}</span>
+              <span style={{color:T.gold,fontWeight:700,fontSize:14,marginRight:8}}>{c.ch}</span>
+              <span style={{color:T.text,fontSize:14}}>{c.name}</span>
             </div>
-            <div style={{display:'flex',gap:12,fontSize:11}}>
+            <div style={{display:'flex',gap:12,fontSize:13}}>
               <span style={{color:T.muted}}>{c.stds} Stds</span>
               <span style={{color:T.blue,fontWeight:600}}>{c.oes} OEs</span>
             </div>
@@ -4067,8 +4067,8 @@ export default function App() {
       </div>
 
       <div style={{marginTop:16,background:T.panel2,borderRadius:10,padding:14,border:`1px solid ${T.orange}44`}}>
-        <div style={{color:T.orange,fontWeight:600,fontSize:13,marginBottom:6}}>⚠️ OE Scoring — Coming Soon</div>
-        <div style={{color:T.text,fontSize:12,lineHeight:1.6}}>
+        <div style={{color:T.orange,fontWeight:600,fontSize:15,marginBottom:6}}>⚠️ OE Scoring — Coming Soon</div>
+        <div style={{color:T.text,fontSize:14,lineHeight:1.6}}>
           The 408 OEs from the 3rd Edition SHCO standards are ready in the database. OE-level scoring for Full Accreditation will be enabled in the next update.
           <br/><br/>
           To prepare: Score each OE on 1–5 scale. NABH requires all 10 chapters ≥ 80%, no OE ≤ 2, and no chapter below threshold.
@@ -4085,8 +4085,8 @@ export default function App() {
 
         {/* 2nd Edition notice */}
         <div style={{background:'#1a0a00',border:`1px solid ${T.orange}`,borderRadius:10,padding:14}}>
-          <div style={{color:T.orange,fontWeight:700,fontSize:13,marginBottom:4}}>📋 2nd Edition Active — March 2026</div>
-          <div style={{color:T.text,fontSize:12,lineHeight:1.6}}>
+          <div style={{color:T.orange,fontWeight:700,fontSize:15,marginBottom:4}}>📋 2nd Edition Active — March 2026</div>
+          <div style={{color:T.text,fontSize:14,lineHeight:1.6}}>
             ELC now uses the unified 2nd Edition standards (Jan 2026). New applicants from March 2026 must apply via <strong style={{color:T.gold}}>nabh.qcin.org</strong>.
             1st Edition (149 OEs) is no longer valid for new applications.
           </div>
@@ -4094,7 +4094,7 @@ export default function App() {
 
         {/* Readiness Summary */}
         <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
-          <div style={{color:T.white,fontWeight:700,fontSize:14,marginBottom:14}}>📊 ELC Readiness</div>
+          <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:14}}>📊 ELC Readiness</div>
           <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:12}}>
             {[
               {label:'Documents',pct:docsPct,done:docsDone,total:docsApplicable,color:docsPct>=80?T.green:docsPct>=50?T.orange:T.red},
@@ -4108,10 +4108,10 @@ export default function App() {
                     <circle cx="18" cy="18" r="15.9" fill="none" stroke={s.color} strokeWidth="3"
                       strokeDasharray={`${s.pct} ${100-s.pct}`} strokeDashoffset="0" strokeLinecap="round"/>
                   </svg>
-                  <div style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',color:s.color,fontWeight:700,fontSize:14}}>{s.pct}%</div>
+                  <div style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',color:s.color,fontWeight:700,fontSize:16}}>{s.pct}%</div>
                 </div>
-                <div style={{color:T.text,fontSize:12,fontWeight:600}}>{s.label}</div>
-                {s.done !== null && <div style={{color:T.muted,fontSize:10}}>{s.done}/{s.total}</div>}
+                <div style={{color:T.text,fontSize:14,fontWeight:600}}>{s.label}</div>
+                {s.done !== null && <div style={{color:T.muted,fontSize:12}}>{s.done}/{s.total}</div>}
               </div>
             ))}
           </div>
@@ -4119,46 +4119,46 @@ export default function App() {
 
         {/* Fee Calculator */}
         <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
-          <div style={{color:T.white,fontWeight:700,fontSize:14,marginBottom:12}}>💰 Certification Fee Calculator</div>
+          <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:12}}>💰 Certification Fee Calculator</div>
           <div style={{display:'flex',gap:10,alignItems:'center',marginBottom:12}}>
             <input
               type="number" min="1" max="50" placeholder="Enter bed count (1–50)"
               value={shcoBeds} onChange={e => setShcoBeds(e.target.value)}
-              style={{flex:1,padding:'8px 12px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.white,fontSize:13}}
+              style={{flex:1,padding:'8px 12px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.white,fontSize:15}}
             />
           </div>
           {feeResult ? (
             <div style={{background:T.panel2,borderRadius:10,padding:14,border:`1px solid ${T.gold}44`}}>
-              <div style={{color:T.muted,fontSize:11,marginBottom:8}}>{feeResult.slab.label}</div>
+              <div style={{color:T.muted,fontSize:13,marginBottom:8}}>{feeResult.slab.label}</div>
               <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8,marginBottom:10}}>
                 <div>
-                  <div style={{color:T.muted,fontSize:10}}>Certification Fee</div>
+                  <div style={{color:T.muted,fontSize:12}}>Certification Fee</div>
                   <div style={{color:T.gold,fontWeight:700,fontSize:16}}>₹{feeResult.base.toLocaleString('en-IN')}</div>
                   {feeResult.savingVsOriginal > 0 && (
-                    <div style={{color:T.green,fontSize:10}}>Saving ₹{feeResult.savingVsOriginal.toLocaleString('en-IN')} (till {feeResult.slab.discountTill})</div>
+                    <div style={{color:T.green,fontSize:12}}>Saving ₹{feeResult.savingVsOriginal.toLocaleString('en-IN')} (till {feeResult.slab.discountTill})</div>
                   )}
                 </div>
                 <div>
-                  <div style={{color:T.muted,fontSize:10}}>GST (18%)</div>
-                  <div style={{color:T.text,fontWeight:600,fontSize:14}}>₹{feeResult.gst.toLocaleString('en-IN')}</div>
+                  <div style={{color:T.muted,fontSize:12}}>GST (18%)</div>
+                  <div style={{color:T.text,fontWeight:600,fontSize:16}}>₹{feeResult.gst.toLocaleString('en-IN')}</div>
                 </div>
               </div>
               <div style={{borderTop:`1px solid ${T.border}`,paddingTop:10,display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-                <span style={{color:T.white,fontWeight:700,fontSize:13}}>Total Payable</span>
+                <span style={{color:T.white,fontWeight:700,fontSize:15}}>Total Payable</span>
                 <span style={{color:T.green,fontWeight:700,fontSize:18}}>₹{feeResult.total.toLocaleString('en-IN')}</span>
               </div>
-              <div style={{marginTop:8,fontSize:11,color:T.muted}}>
+              <div style={{marginTop:8,fontSize:13,color:T.muted}}>
                 Focus assessment: ₹15,000 + GST | Re-issue of certificate: ₹6,000 + GST
               </div>
             </div>
           ) : shcoBeds ? (
-            <div style={{color:T.red,fontSize:12}}>ELC is only for SHCOs with 1–50 beds.</div>
+            <div style={{color:T.red,fontSize:14}}>ELC is only for SHCOs with 1–50 beds.</div>
           ) : null}
         </div>
 
         {/* Assessment Matrix */}
         <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
-          <div style={{color:T.white,fontWeight:700,fontSize:14,marginBottom:12}}>📐 What Gets Assessed — By Cycle</div>
+          <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:12}}>📐 What Gets Assessed — By Cycle</div>
           <div style={{display:'grid',gap:8}}>
             {[
               {cycle:'New Applicant — Cycle 1',beds:'1–50 beds',assessed:'Core only (124 OEs)',color:T.green},
@@ -4168,10 +4168,10 @@ export default function App() {
             ].map((r,i) => (
               <div key={i} style={{background:T.panel2,borderRadius:8,padding:'10px 14px',border:`1px solid ${r.color}33`,display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:6}}>
                 <div>
-                  <div style={{color:r.color,fontWeight:600,fontSize:12}}>{r.cycle}</div>
-                  <div style={{color:T.muted,fontSize:11}}>{r.beds}</div>
+                  <div style={{color:r.color,fontWeight:600,fontSize:14}}>{r.cycle}</div>
+                  <div style={{color:T.muted,fontSize:13}}>{r.beds}</div>
                 </div>
-                <div style={{color:T.text,fontSize:12,fontWeight:500}}>{r.assessed}</div>
+                <div style={{color:T.text,fontSize:14,fontWeight:500}}>{r.assessed}</div>
               </div>
             ))}
           </div>
@@ -4193,25 +4193,25 @@ export default function App() {
             {label:`⏳ Pending: ${SHCO_ELC_DOCS.length - docsDone - docsNA}`,color:T.orange},
             {label:`➖ N/A: ${docsNA}`,color:T.muted},
           ].map(s => (
-            <div key={s.label} style={{padding:'4px 10px',borderRadius:20,background:s.color+'22',color:s.color,fontSize:11,border:`1px solid ${s.color}44`}}>{s.label}</div>
+            <div key={s.label} style={{padding:'4px 10px',borderRadius:20,background:s.color+'22',color:s.color,fontSize:13,border:`1px solid ${s.color}44`}}>{s.label}</div>
           ))}
         </div>
 
         {/* Filters */}
         <div style={{display:'flex',gap:8,marginBottom:14,flexWrap:'wrap'}}>
           <select value={shcoDocPart} onChange={e => setShcoDocPart(e.target.value)}
-            style={{padding:'6px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12}}>
+            style={{padding:'6px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14}}>
             <option value="all">All Parts</option>
             {parts.map(p => <option key={p} value={p}>Part {p}</option>)}
           </select>
           <select value={shcoDocFilter} onChange={e => setShcoDocFilter(e.target.value)}
-            style={{padding:'6px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12}}>
+            style={{padding:'6px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14}}>
             <option value="all">All Status</option>
             <option value="pending">Pending</option>
             <option value="ready">Ready</option>
             <option value="na">N/A</option>
           </select>
-          <div style={{marginLeft:'auto',color:T.muted,fontSize:11,display:'flex',alignItems:'center'}}>{filteredDocs.length} items</div>
+          <div style={{marginLeft:'auto',color:T.muted,fontSize:13,display:'flex',alignItems:'center'}}>{filteredDocs.length} items</div>
         </div>
 
         {/* Document list grouped by section */}
@@ -4220,9 +4220,9 @@ export default function App() {
           if (!secDocs.length) return null;
           return (
             <div key={sec} style={{marginBottom:16}}>
-              <div style={{color:T.gold,fontWeight:600,fontSize:12,marginBottom:8,display:'flex',alignItems:'center',gap:8}}>
+              <div style={{color:T.gold,fontWeight:600,fontSize:14,marginBottom:8,display:'flex',alignItems:'center',gap:8}}>
                 <span>Part {secDocs[0].part} — {sec}</span>
-                <span style={{color:T.muted,fontWeight:400,fontSize:11}}>({secDocs.length})</span>
+                <span style={{color:T.muted,fontWeight:400,fontSize:13}}>({secDocs.length})</span>
               </div>
               <div style={{display:'flex',flexDirection:'column',gap:6}}>
                 {secDocs.map(doc => {
@@ -4234,8 +4234,8 @@ export default function App() {
                       opacity: s==='na' ? 0.6 : 1
                     }}>
                       <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:8,marginBottom:6}}>
-                        <div style={{color:T.text,fontSize:12,lineHeight:1.5,flex:1}}>
-                          <span style={{color:T.muted,fontSize:10,marginRight:6}}>#{doc.id}</span>
+                        <div style={{color:T.text,fontSize:14,lineHeight:1.5,flex:1}}>
+                          <span style={{color:T.muted,fontSize:12,marginRight:6}}>#{doc.id}</span>
                           {doc.text}
                         </div>
                         <div style={{flexShrink:0}}>{uploadBadge(doc.upload)}</div>
@@ -4244,7 +4244,7 @@ export default function App() {
                         {['pending','ready','na'].map(status => (
                           <button key={status} onClick={() => setDocStatus(doc.id, status)}
                             style={{
-                              padding:'3px 10px',borderRadius:6,border:'none',cursor:'pointer',fontSize:11,fontWeight:600,
+                              padding:'3px 10px',borderRadius:6,border:'none',cursor:'pointer',fontSize:13,fontWeight:600,
                               background: s===status ? (status==='ready'?T.green:status==='na'?T.muted:T.orange)+'33' : T.panel2,
                               color: s===status ? (status==='ready'?T.green:status==='na'?T.muted:T.orange) : T.muted,
                               outline: s===status ? `1px solid ${status==='ready'?T.green:status==='na'?T.muted:T.orange}` : 'none',
@@ -4277,12 +4277,12 @@ export default function App() {
             {label:`⏳ Pending: ${SHCO_ELC_LICENSES.length - licDone - licNA}`,color:T.orange},
             {label:`➖ N/A: ${licNA}`,color:T.muted},
           ].map(s => (
-            <div key={s.label} style={{padding:'4px 10px',borderRadius:20,background:s.color+'22',color:s.color,fontSize:11,border:`1px solid ${s.color}44`}}>{s.label}</div>
+            <div key={s.label} style={{padding:'4px 10px',borderRadius:20,background:s.color+'22',color:s.color,fontSize:13,border:`1px solid ${s.color}44`}}>{s.label}</div>
           ))}
         </div>
 
         {/* Mandatory licenses */}
-        <div style={{color:T.red,fontWeight:700,fontSize:13,marginBottom:10}}>🔴 Mandatory Licenses ({mandatory.length})</div>
+        <div style={{color:T.red,fontWeight:700,fontSize:15,marginBottom:10}}>🔴 Mandatory Licenses ({mandatory.length})</div>
         <div style={{display:'flex',flexDirection:'column',gap:6,marginBottom:20}}>
           {mandatory.map(lic => {
             const s = licStatus(lic.id);
@@ -4292,12 +4292,12 @@ export default function App() {
                 border:`1px solid ${s==='obtained'?T.green:T.border}`,
                 opacity: s==='na' ? 0.6 : 1
               }}>
-                <div style={{color:T.text,fontSize:12,marginBottom:6}}>{lic.name}</div>
+                <div style={{color:T.text,fontSize:14,marginBottom:6}}>{lic.name}</div>
                 <div style={{display:'flex',gap:6}}>
                   {['pending','obtained','na'].map(status => (
                     <button key={status} onClick={() => setLicStatus(lic.id, status)}
                       style={{
-                        padding:'3px 10px',borderRadius:6,border:'none',cursor:'pointer',fontSize:11,fontWeight:600,
+                        padding:'3px 10px',borderRadius:6,border:'none',cursor:'pointer',fontSize:13,fontWeight:600,
                         background: s===status ? (status==='obtained'?T.green:status==='na'?T.muted:T.orange)+'33' : T.panel2,
                         color: s===status ? (status==='obtained'?T.green:status==='na'?T.muted:T.orange) : T.muted,
                         outline: s===status ? `1px solid ${status==='obtained'?T.green:status==='na'?T.muted:T.orange}` : 'none',
@@ -4312,8 +4312,8 @@ export default function App() {
         </div>
 
         {/* AERB licenses */}
-        <div style={{color:T.orange,fontWeight:700,fontSize:13,marginBottom:6}}>⚡ AERB Licenses ({aerb.length}) — Mark N/A if service not available</div>
-        <div style={{color:T.muted,fontSize:11,marginBottom:10}}>These are applicable only if your SHCO provides the specific imaging/radiation service.</div>
+        <div style={{color:T.orange,fontWeight:700,fontSize:15,marginBottom:6}}>⚡ AERB Licenses ({aerb.length}) — Mark N/A if service not available</div>
+        <div style={{color:T.muted,fontSize:13,marginBottom:10}}>These are applicable only if your SHCO provides the specific imaging/radiation service.</div>
         <div style={{display:'flex',flexDirection:'column',gap:6}}>
           {aerb.map(lic => {
             const s = licStatus(lic.id);
@@ -4324,14 +4324,14 @@ export default function App() {
                 opacity: s==='na' ? 0.5 : 1
               }}>
                 <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:8,marginBottom:6}}>
-                  <div style={{color:T.text,fontSize:12,flex:1}}>{lic.name}</div>
-                  <div style={{color:T.muted,fontSize:10,flexShrink:0,textAlign:'right',maxWidth:120}}>{lic.appl}</div>
+                  <div style={{color:T.text,fontSize:14,flex:1}}>{lic.name}</div>
+                  <div style={{color:T.muted,fontSize:12,flexShrink:0,textAlign:'right',maxWidth:120}}>{lic.appl}</div>
                 </div>
                 <div style={{display:'flex',gap:6}}>
                   {['pending','obtained','na'].map(status => (
                     <button key={status} onClick={() => setLicStatus(lic.id, status)}
                       style={{
-                        padding:'3px 10px',borderRadius:6,border:'none',cursor:'pointer',fontSize:11,fontWeight:600,
+                        padding:'3px 10px',borderRadius:6,border:'none',cursor:'pointer',fontSize:13,fontWeight:600,
                         background: s===status ? (status==='obtained'?T.green:status==='na'?T.muted:T.orange)+'33' : T.panel2,
                         color: s===status ? (status==='obtained'?T.green:status==='na'?T.muted:T.orange) : T.muted,
                         outline: s===status ? `1px solid ${status==='obtained'?T.green:status==='na'?T.muted:T.orange}` : 'none',
@@ -4352,8 +4352,8 @@ export default function App() {
   const renderProcess = () => (
     <div style={{padding:16}}>
       <div style={{background:'#0a1200',border:`1px solid ${T.green}44`,borderRadius:10,padding:12,marginBottom:16}}>
-        <div style={{color:T.green,fontWeight:600,fontSize:12,marginBottom:4}}>⚠️ Key Change — 2nd Edition</div>
-        <div style={{color:T.text,fontSize:12}}>Desktop Assessment now has a <strong>single NC closure cycle only</strong>. There is no second chance to respond. Submit complete NC responses the first time.</div>
+        <div style={{color:T.green,fontWeight:600,fontSize:14,marginBottom:4}}>⚠️ Key Change — 2nd Edition</div>
+        <div style={{color:T.text,fontSize:14}}>Desktop Assessment now has a <strong>single NC closure cycle only</strong>. There is no second chance to respond. Submit complete NC responses the first time.</div>
       </div>
 
       <div style={{display:'flex',flexDirection:'column',gap:0}}>
@@ -4361,7 +4361,7 @@ export default function App() {
           <div key={step.step} style={{display:'flex',gap:12}}>
             {/* Timeline line */}
             <div style={{display:'flex',flexDirection:'column',alignItems:'center',width:32,flexShrink:0}}>
-              <div style={{width:32,height:32,borderRadius:'50%',background:T.gold,display:'flex',alignItems:'center',justifyContent:'center',fontWeight:700,fontSize:13,color:T.bg,flexShrink:0}}>
+              <div style={{width:32,height:32,borderRadius:'50%',background:T.gold,display:'flex',alignItems:'center',justifyContent:'center',fontWeight:700,fontSize:15,color:T.bg,flexShrink:0}}>
                 {step.step}
               </div>
               {idx < SHCO_ELC_PROCESS.length - 1 && (
@@ -4370,12 +4370,12 @@ export default function App() {
             </div>
             {/* Step content */}
             <div style={{background:T.panel,borderRadius:10,padding:'12px 14px',marginBottom:10,flex:1,border:`1px solid ${T.border}`}}>
-              <div style={{color:T.white,fontWeight:700,fontSize:13,marginBottom:4}}>{step.name}</div>
+              <div style={{color:T.white,fontWeight:700,fontSize:15,marginBottom:4}}>{step.name}</div>
               {step.url && (
-                <div style={{color:T.blue,fontSize:11,marginBottom:6}}>🔗 {step.url}</div>
+                <div style={{color:T.blue,fontSize:13,marginBottom:6}}>🔗 {step.url}</div>
               )}
-              <div style={{color:T.text,fontSize:12,lineHeight:1.6,marginBottom:6}}>{step.desc}</div>
-              <div style={{color:T.muted,fontSize:11}}>📄 Output: <span style={{color:T.gold}}>{step.output}</span></div>
+              <div style={{color:T.text,fontSize:14,lineHeight:1.6,marginBottom:6}}>{step.desc}</div>
+              <div style={{color:T.muted,fontSize:13}}>📄 Output: <span style={{color:T.gold}}>{step.output}</span></div>
             </div>
           </div>
         ))}
@@ -4388,15 +4388,15 @@ export default function App() {
     <div style={{padding:16}}>
       <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.gold}44`,marginBottom:16}}>
         <div style={{color:T.gold,fontWeight:700,fontSize:15,marginBottom:8}}>🚀 The Journey: ELC → Full SHCO Accreditation</div>
-        <div style={{color:T.text,fontSize:12,lineHeight:1.7}}>
+        <div style={{color:T.text,fontSize:14,lineHeight:1.7}}>
           Entry Level Certification is the first step. After 2 years, SHCOs can upgrade to Full SHCO Accreditation (3rd Edition) — a significantly more rigorous programme that opens doors to premium empanelments, higher CGHS reimbursements, and community trust.
         </div>
       </div>
 
       {/* Comparison table */}
-      <div style={{color:T.gold,fontWeight:600,fontSize:13,marginBottom:10}}>ELC vs Full Accreditation — Key Differences</div>
+      <div style={{color:T.gold,fontWeight:600,fontSize:15,marginBottom:10}}>ELC vs Full Accreditation — Key Differences</div>
       <div style={{overflowX:'auto',marginBottom:16}}>
-        <table style={{width:'100%',borderCollapse:'collapse',fontSize:12}}>
+        <table style={{width:'100%',borderCollapse:'collapse',fontSize:14}}>
           <thead>
             <tr>
               {['Parameter','ELC (2nd Ed.)','Full Accreditation (3rd Ed.)'].map(h => (
@@ -4422,11 +4422,11 @@ export default function App() {
             ))}
           </tbody>
         </table>
-        <div style={{color:T.muted,fontSize:10,marginTop:4}}>* Discounted fee till 30 Sep 2026</div>
+        <div style={{color:T.muted,fontSize:12,marginTop:4}}>* Discounted fee till 30 Sep 2026</div>
       </div>
 
       {/* Upgrade timeline */}
-      <div style={{color:T.gold,fontWeight:600,fontSize:13,marginBottom:10}}>Recommended Timeline</div>
+      <div style={{color:T.gold,fontWeight:600,fontSize:15,marginBottom:10}}>Recommended Timeline</div>
       {[
         {phase:'Month 1–3',action:'Start ELC preparation — documents, licenses, questionnaire',color:T.blue},
         {phase:'Month 4',action:'Submit ELC application on nabh.qcin.org',color:T.blue},
@@ -4437,14 +4437,14 @@ export default function App() {
         {phase:'Month 19–24',action:'Apply for Full SHCO Accreditation via portal.nabh.co',color:T.gold},
       ].map((p,i) => (
         <div key={i} style={{display:'flex',gap:12,marginBottom:8,alignItems:'flex-start'}}>
-          <div style={{minWidth:90,color:p.color,fontWeight:600,fontSize:11,paddingTop:2}}>{p.phase}</div>
-          <div style={{flex:1,background:T.panel,borderRadius:8,padding:'8px 12px',border:`1px solid ${p.color}33`,color:T.text,fontSize:12}}>{p.action}</div>
+          <div style={{minWidth:90,color:p.color,fontWeight:600,fontSize:13,paddingTop:2}}>{p.phase}</div>
+          <div style={{flex:1,background:T.panel,borderRadius:8,padding:'8px 12px',border:`1px solid ${p.color}33`,color:T.text,fontSize:14}}>{p.action}</div>
         </div>
       ))}
 
       <div style={{marginTop:16,background:T.panel2,borderRadius:10,padding:14,border:`1px solid ${T.gold}44`}}>
-        <div style={{color:T.gold,fontWeight:700,fontSize:13,marginBottom:6}}>💼 For Consultants (Rajesh Model)</div>
-        <div style={{color:T.text,fontSize:12,lineHeight:1.7}}>
+        <div style={{color:T.gold,fontWeight:700,fontSize:15,marginBottom:6}}>💼 For Consultants (Rajesh Model)</div>
+        <div style={{color:T.text,fontSize:14,lineHeight:1.7}}>
           Managing 10+ SHCOs? Track each SHCO independently. Use the Document Tracker and License Tracker per facility.
           The goal: get all SHCOs ELC-certified within 8 months, then upsell to Full Accreditation.
           At ₹2,999/month, 10 SHCOs = ₹29,990/month recurring — fully justified by the preparation support you're providing.
@@ -4489,8 +4489,8 @@ export default function App() {
               outline: shcoMode === m.key ? `2px solid ${T.gold}` : `1px solid ${T.border}`,
               textAlign:'center'
             }}>
-            <div style={{color: shcoMode === m.key ? T.gold : T.text, fontWeight:700, fontSize:12}}>{m.label}</div>
-            <div style={{color:T.muted, fontSize:10, marginTop:2}}>{m.sub}</div>
+            <div style={{color: shcoMode === m.key ? T.gold : T.text, fontWeight:700, fontSize:14}}>{m.label}</div>
+            <div style={{color:T.muted, fontSize:12, marginTop:2}}>{m.sub}</div>
           </button>
         ))}
       </div>
@@ -4505,7 +4505,7 @@ export default function App() {
               <button key={tab.key} onClick={() => setShcoElcTab(tab.key)}
                 style={{
                   padding:'8px 14px', border:'none', cursor:'pointer', whiteSpace:'nowrap',
-                  background:'transparent', fontSize:12, fontWeight:600,
+                  background:'transparent', fontSize:14, fontWeight:600,
                   color: shcoElcTab === tab.key ? T.gold : T.muted,
                   borderBottom: shcoElcTab === tab.key ? `2px solid ${T.gold}` : '2px solid transparent',
                 }}>
@@ -4557,7 +4557,7 @@ export default function App() {
     const color = upload === 'Portal' ? T.blue : upload === 'Mobile' ? T.orange : T.gold;
     const label = upload === 'Portal' ? '🌐 Portal' : upload === 'Mobile' ? '📱 Mobile' : '🔄 Both';
     return (
-      <span style={{fontSize:10,padding:'2px 6px',borderRadius:10,background:color+'22',color,border:`1px solid ${color}44`,whiteSpace:'nowrap'}}>
+      <span style={{fontSize:12,padding:'2px 6px',borderRadius:10,background:color+'22',color,border:`1px solid ${color}44`,whiteSpace:'nowrap'}}>
         {label}
       </span>
     );
@@ -4567,7 +4567,7 @@ export default function App() {
     <div style={{padding:16}}>
       <div style={{background:T.panel,border:`1px solid ${T.gold}44`,borderRadius:12,padding:20,marginBottom:16}}>
         <div style={{color:T.gold,fontWeight:700,fontSize:16,marginBottom:8}}>🏆 NABH Full Hospital Accreditation — 6th Edition</div>
-        <div style={{color:T.text,fontSize:13,lineHeight:1.6}}>
+        <div style={{color:T.text,fontSize:15,lineHeight:1.6}}>
           Full accreditation for Healthcare Organisations (HCOs). Assessed against 639 Objective Elements across 10 chapters under the 6th Edition NABH Hospital Standards.
         </div>
         <div style={{display:'flex',gap:12,flexWrap:'wrap',marginTop:16}}>
@@ -4579,12 +4579,12 @@ export default function App() {
           ].map(s => (
             <div key={s.label} style={{background:T.panel2,borderRadius:8,padding:'10px 16px',textAlign:'center',border:`1px solid ${T.border}`}}>
               <div style={{color:T.gold,fontWeight:700,fontSize:20}}>{s.val}</div>
-              <div style={{color:T.muted,fontSize:11}}>{s.label}</div>
+              <div style={{color:T.muted,fontSize:13}}>{s.label}</div>
             </div>
           ))}
         </div>
       </div>
-      <div style={{color:T.gold,fontWeight:600,fontSize:13,marginBottom:10}}>Chapter Breakdown — 6th Edition</div>
+      <div style={{color:T.gold,fontWeight:600,fontSize:15,marginBottom:10}}>Chapter Breakdown — 6th Edition</div>
       <div style={{display:'grid',gap:6}}>
         {[
           {ch:'AAC',name:'Access, Assessment & Continuity of Care',oes:72},
@@ -4600,16 +4600,16 @@ export default function App() {
         ].map(c => (
           <div key={c.ch} style={{background:T.panel,borderRadius:8,padding:'10px 14px',display:'flex',justifyContent:'space-between',alignItems:'center',border:`1px solid ${T.border}`}}>
             <div>
-              <span style={{color:T.gold,fontWeight:700,fontSize:12,marginRight:8}}>{c.ch}</span>
-              <span style={{color:T.text,fontSize:12}}>{c.name}</span>
+              <span style={{color:T.gold,fontWeight:700,fontSize:14,marginRight:8}}>{c.ch}</span>
+              <span style={{color:T.text,fontSize:14}}>{c.name}</span>
             </div>
-            <span style={{color:T.blue,fontWeight:600,fontSize:12}}>{c.oes} OEs</span>
+            <span style={{color:T.blue,fontWeight:600,fontSize:14}}>{c.oes} OEs</span>
           </div>
         ))}
       </div>
       <div style={{marginTop:16,background:T.panel2,borderRadius:10,padding:14,border:`1px solid ${T.orange}44`}}>
-        <div style={{color:T.orange,fontWeight:600,fontSize:13,marginBottom:6}}>⚠️ Key Differences vs ELC</div>
-        <div style={{color:T.text,fontSize:12,lineHeight:1.7}}>
+        <div style={{color:T.orange,fontWeight:600,fontSize:15,marginBottom:6}}>⚠️ Key Differences vs ELC</div>
+        <div style={{color:T.text,fontSize:14,lineHeight:1.7}}>
           Full accreditation requires implementation of all 639 OEs vs simplified ELC standards. Requires pre-assessment, final assessment + surveillance at 24 months. Validity is 4 years (vs 2 years for ELC).
           Apply via <strong style={{color:T.gold}}>portal.nabh.co</strong> (not HOPE portal). Assessment team is 2–3 assessors vs 1–2 for ELC.
         </div>
@@ -4620,7 +4620,7 @@ export default function App() {
   const renderOverview = () => (
     <div style={{padding:16,display:'flex',flexDirection:'column',gap:16}}>
       <div style={{background:'#0a0a1a',border:`1px solid ${T.blue}`,borderRadius:10,padding:14}}>
-        <div style={{color:T.blue,fontWeight:700,fontSize:13,marginBottom:6}}>✅ HCO ELC Eligibility Criteria</div>
+        <div style={{color:T.blue,fontWeight:700,fontSize:15,marginBottom:6}}>✅ HCO ELC Eligibility Criteria</div>
         <div style={{display:'flex',flexDirection:'column',gap:6}}>
           {[
             {icon:'🏥',text:'More than 50 sanctioned beds (hospitals with ≤50 beds must apply as SHCO)'},
@@ -4630,15 +4630,15 @@ export default function App() {
             {icon:'📋',text:'Must comply with all applicable NABH standards and laws of the land'},
           ].map((e,i) => (
             <div key={i} style={{display:'flex',gap:8,alignItems:'flex-start'}}>
-              <span style={{fontSize:14}}>{e.icon}</span>
-              <span style={{color:T.text,fontSize:12,lineHeight:1.5}}>{e.text}</span>
+              <span style={{fontSize:16}}>{e.icon}</span>
+              <span style={{color:T.text,fontSize:14,lineHeight:1.5}}>{e.text}</span>
             </div>
           ))}
         </div>
       </div>
 
       <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
-        <div style={{color:T.white,fontWeight:700,fontSize:14,marginBottom:14}}>📊 ELC Readiness</div>
+        <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:14}}>📊 ELC Readiness</div>
         <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:12}}>
           {[
             {label:'Documents',pct:docsPct,done:docsDone,total:docsApplicable,color:docsPct>=80?T.green:docsPct>=50?T.orange:T.red},
@@ -4652,34 +4652,34 @@ export default function App() {
                   <circle cx="18" cy="18" r="15.9" fill="none" stroke={s.color} strokeWidth="3"
                     strokeDasharray={`${s.pct} ${100-s.pct}`} strokeDashoffset="0" strokeLinecap="round"/>
                 </svg>
-                <div style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',color:s.color,fontWeight:700,fontSize:14}}>{s.pct}%</div>
+                <div style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',color:s.color,fontWeight:700,fontSize:16}}>{s.pct}%</div>
               </div>
-              <div style={{color:T.text,fontSize:12,fontWeight:600}}>{s.label}</div>
-              {s.done !== null && <div style={{color:T.muted,fontSize:10}}>{s.done}/{s.total}</div>}
+              <div style={{color:T.text,fontSize:14,fontWeight:600}}>{s.label}</div>
+              {s.done !== null && <div style={{color:T.muted,fontSize:12}}>{s.done}/{s.total}</div>}
             </div>
           ))}
         </div>
       </div>
 
       <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
-        <div style={{color:T.white,fontWeight:700,fontSize:14,marginBottom:12}}>💰 HCO ELC Certification Fee</div>
+        <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:12}}>💰 HCO ELC Certification Fee</div>
         <div style={{background:T.panel2,borderRadius:10,padding:14,border:`1px solid ${T.gold}44`}}>
-          <div style={{color:T.muted,fontSize:11,marginBottom:10}}>{HCO_FEE.label}</div>
+          <div style={{color:T.muted,fontSize:13,marginBottom:10}}>{HCO_FEE.label}</div>
           <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8,marginBottom:10}}>
             <div>
-              <div style={{color:T.muted,fontSize:10}}>Certification Fee</div>
+              <div style={{color:T.muted,fontSize:12}}>Certification Fee</div>
               <div style={{color:T.gold,fontWeight:700,fontSize:20}}>₹{HCO_FEE.base.toLocaleString('en-IN')}</div>
             </div>
             <div>
-              <div style={{color:T.muted,fontSize:10}}>GST (18%)</div>
+              <div style={{color:T.muted,fontSize:12}}>GST (18%)</div>
               <div style={{color:T.text,fontWeight:600,fontSize:16}}>₹{gst.toLocaleString('en-IN')}</div>
             </div>
           </div>
           <div style={{borderTop:`1px solid ${T.border}`,paddingTop:10,display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-            <span style={{color:T.white,fontWeight:700,fontSize:13}}>Total Payable</span>
+            <span style={{color:T.white,fontWeight:700,fontSize:15}}>Total Payable</span>
             <span style={{color:T.green,fontWeight:700,fontSize:20}}>₹{totalFee.toLocaleString('en-IN')}</span>
           </div>
-          <div style={{marginTop:8,fontSize:11,color:T.muted}}>
+          <div style={{marginTop:8,fontSize:13,color:T.muted}}>
             {HCO_FEE.note}<br/>
             Focus assessment: ₹15,000 + GST | Re-issue of certificate: ₹6,000 + GST | Fee is non-refundable.
           </div>
@@ -4687,9 +4687,9 @@ export default function App() {
       </div>
 
       <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
-        <div style={{color:T.white,fontWeight:700,fontSize:14,marginBottom:12}}>🏥 HCO vs SHCO — Which applies to you?</div>
+        <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:12}}>🏥 HCO vs SHCO — Which applies to you?</div>
         <div style={{overflowX:'auto'}}>
-          <table style={{width:'100%',borderCollapse:'collapse',fontSize:12}}>
+          <table style={{width:'100%',borderCollapse:'collapse',fontSize:14}}>
             <thead>
               <tr>
                 {['Parameter','HCO ELC','SHCO ELC'].map(h => (
@@ -4719,19 +4719,19 @@ export default function App() {
       </div>
 
       <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
-        <div style={{color:T.white,fontWeight:700,fontSize:14,marginBottom:12}}>📖 HCO ELC — 10 Assessment Chapters</div>
+        <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:12}}>📖 HCO ELC — 10 Assessment Chapters</div>
         <div style={{display:'grid',gap:6}}>
           {HCO_ELC_CHAPTER_SUMMARY.map(c => (
             <div key={c.ch} style={{background:T.panel2,borderRadius:8,padding:'10px 12px',border:`1px solid ${T.border}`}}>
               <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:3}}>
-                <span style={{color:T.gold,fontWeight:700,fontSize:12,minWidth:36}}>{c.ch}</span>
-                <span style={{color:T.text,fontSize:12,fontWeight:600}}>{c.name}</span>
+                <span style={{color:T.gold,fontWeight:700,fontSize:14,minWidth:36}}>{c.ch}</span>
+                <span style={{color:T.text,fontSize:14,fontWeight:600}}>{c.name}</span>
               </div>
-              <div style={{color:T.muted,fontSize:11,lineHeight:1.4,paddingLeft:44}}>{c.desc}</div>
+              <div style={{color:T.muted,fontSize:13,lineHeight:1.4,paddingLeft:44}}>{c.desc}</div>
             </div>
           ))}
         </div>
-        <div style={{marginTop:10,color:T.muted,fontSize:11,textAlign:'center'}}>Source: NABH Guidebook on Entry-Level Certification for HCOs/SHCOs (Section 4.1)</div>
+        <div style={{marginTop:10,color:T.muted,fontSize:13,textAlign:'center'}}>Source: NABH Guidebook on Entry-Level Certification for HCOs/SHCOs (Section 4.1)</div>
       </div>
     </div>
   );
@@ -4747,32 +4747,32 @@ export default function App() {
             {label:`➖ N/A: ${docsNA}`,color:T.muted},
             {label:`Total: ${HCO_ELC_DOCS.length}`,color:T.blue},
           ].map(s => (
-            <div key={s.label} style={{padding:'4px 10px',borderRadius:20,background:s.color+'22',color:s.color,fontSize:11,border:`1px solid ${s.color}44`}}>{s.label}</div>
+            <div key={s.label} style={{padding:'4px 10px',borderRadius:20,background:s.color+'22',color:s.color,fontSize:13,border:`1px solid ${s.color}44`}}>{s.label}</div>
           ))}
         </div>
         <div style={{display:'flex',gap:8,marginBottom:14,flexWrap:'wrap'}}>
           <select value={hcoDocPart} onChange={e => setHcoDocPart(e.target.value)}
-            style={{padding:'6px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12}}>
+            style={{padding:'6px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14}}>
             <option value="all">All Parts</option>
             {parts.map(p => <option key={p} value={p}>Part {p}</option>)}
           </select>
           <select value={hcoDocFilter} onChange={e => setHcoDocFilter(e.target.value)}
-            style={{padding:'6px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12}}>
+            style={{padding:'6px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14}}>
             <option value="all">All Status</option>
             <option value="pending">Pending</option>
             <option value="ready">Ready</option>
             <option value="na">N/A</option>
           </select>
-          <div style={{marginLeft:'auto',color:T.muted,fontSize:11,display:'flex',alignItems:'center'}}>{filteredDocs.length} items</div>
+          <div style={{marginLeft:'auto',color:T.muted,fontSize:13,display:'flex',alignItems:'center'}}>{filteredDocs.length} items</div>
         </div>
         {sections.map(sec => {
           const secDocs = filteredDocs.filter(d => d.section === sec);
           if (!secDocs.length) return null;
           return (
             <div key={sec} style={{marginBottom:16}}>
-              <div style={{color:T.gold,fontWeight:600,fontSize:12,marginBottom:8,display:'flex',alignItems:'center',gap:8}}>
+              <div style={{color:T.gold,fontWeight:600,fontSize:14,marginBottom:8,display:'flex',alignItems:'center',gap:8}}>
                 <span>Part {secDocs[0].part} — {sec}</span>
-                <span style={{color:T.muted,fontWeight:400,fontSize:11}}>({secDocs.length})</span>
+                <span style={{color:T.muted,fontWeight:400,fontSize:13}}>({secDocs.length})</span>
               </div>
               <div style={{display:'flex',flexDirection:'column',gap:6}}>
                 {secDocs.map(doc => {
@@ -4780,8 +4780,8 @@ export default function App() {
                   return (
                     <div key={doc.id} style={{background:T.panel,borderRadius:8,padding:'10px 12px',border:`1px solid ${s==='ready'?T.green:T.border}`,opacity:s==='na'?0.6:1}}>
                       <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:8,marginBottom:6}}>
-                        <div style={{color:T.text,fontSize:12,lineHeight:1.5,flex:1}}>
-                          <span style={{color:T.muted,fontSize:10,marginRight:6}}>#{doc.id}</span>
+                        <div style={{color:T.text,fontSize:14,lineHeight:1.5,flex:1}}>
+                          <span style={{color:T.muted,fontSize:12,marginRight:6}}>#{doc.id}</span>
                           {doc.text}
                         </div>
                         <div style={{flexShrink:0}}>{uploadBadge(doc.upload)}</div>
@@ -4790,7 +4790,7 @@ export default function App() {
                         {['pending','ready','na'].map(status => (
                           <button key={status} onClick={() => setDocStatus(doc.id, status)}
                             style={{
-                              padding:'3px 10px',borderRadius:6,border:'none',cursor:'pointer',fontSize:11,fontWeight:600,
+                              padding:'3px 10px',borderRadius:6,border:'none',cursor:'pointer',fontSize:13,fontWeight:600,
                               background: s===status ? (status==='ready'?T.green:status==='na'?T.muted:T.orange)+'33' : T.panel2,
                               color: s===status ? (status==='ready'?T.green:status==='na'?T.muted:T.orange) : T.muted,
                               outline: s===status ? `1px solid ${status==='ready'?T.green:status==='na'?T.muted:T.orange}` : 'none',
@@ -4821,28 +4821,28 @@ export default function App() {
             {label:`⏳ Pending: ${HCO_ELC_LICENSES.length - licDone - licNA}`,color:T.orange},
             {label:`➖ N/A: ${licNA}`,color:T.muted},
           ].map(s => (
-            <div key={s.label} style={{padding:'4px 10px',borderRadius:20,background:s.color+'22',color:s.color,fontSize:11,border:`1px solid ${s.color}44`}}>{s.label}</div>
+            <div key={s.label} style={{padding:'4px 10px',borderRadius:20,background:s.color+'22',color:s.color,fontSize:13,border:`1px solid ${s.color}44`}}>{s.label}</div>
           ))}
         </div>
         <div style={{background:'#0a0d00',border:`1px solid ${T.green}44`,borderRadius:8,padding:10,marginBottom:14}}>
-          <div style={{color:T.green,fontSize:12,fontWeight:600,marginBottom:2}}>⚠️ HCO-Specific: PCB License Required</div>
-          <div style={{color:T.text,fontSize:11}}>Unlike SHCOs, HCOs ({'>'} 50 beds) must have the Pollution Control Board License for water and Air Pollution. Mark as N/A only if NABH formally exempts your facility.</div>
+          <div style={{color:T.green,fontSize:14,fontWeight:600,marginBottom:2}}>⚠️ HCO-Specific: PCB License Required</div>
+          <div style={{color:T.text,fontSize:13}}>Unlike SHCOs, HCOs ({'>'} 50 beds) must have the Pollution Control Board License for water and Air Pollution. Mark as N/A only if NABH formally exempts your facility.</div>
         </div>
-        <div style={{color:T.red,fontWeight:700,fontSize:13,marginBottom:10}}>🔴 Mandatory Licenses ({mandatory.length})</div>
+        <div style={{color:T.red,fontWeight:700,fontSize:15,marginBottom:10}}>🔴 Mandatory Licenses ({mandatory.length})</div>
         <div style={{display:'flex',flexDirection:'column',gap:6,marginBottom:20}}>
           {mandatory.map(lic => {
             const s = licStatus(lic.id);
             return (
               <div key={lic.id} style={{background:T.panel,borderRadius:8,padding:'10px 12px',border:`1px solid ${s==='obtained'?T.green:T.border}`,opacity:s==='na'?0.6:1}}>
                 <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:8,marginBottom:6}}>
-                  <div style={{color:T.text,fontSize:12,flex:1}}>{lic.name}</div>
-                  <div style={{color:T.muted,fontSize:10,flexShrink:0}}>{lic.appl}</div>
+                  <div style={{color:T.text,fontSize:14,flex:1}}>{lic.name}</div>
+                  <div style={{color:T.muted,fontSize:12,flexShrink:0}}>{lic.appl}</div>
                 </div>
                 <div style={{display:'flex',gap:6}}>
                   {['pending','obtained','na'].map(status => (
                     <button key={status} onClick={() => setLicStatus(lic.id, status)}
                       style={{
-                        padding:'3px 10px',borderRadius:6,border:'none',cursor:'pointer',fontSize:11,fontWeight:600,
+                        padding:'3px 10px',borderRadius:6,border:'none',cursor:'pointer',fontSize:13,fontWeight:600,
                         background: s===status ? (status==='obtained'?T.green:status==='na'?T.muted:T.orange)+'33' : T.panel2,
                         color: s===status ? (status==='obtained'?T.green:status==='na'?T.muted:T.orange) : T.muted,
                         outline: s===status ? `1px solid ${status==='obtained'?T.green:status==='na'?T.muted:T.orange}` : 'none',
@@ -4855,22 +4855,22 @@ export default function App() {
             );
           })}
         </div>
-        <div style={{color:T.orange,fontWeight:700,fontSize:13,marginBottom:6}}>⚡ AERB Licenses ({aerb.length}) — Mark N/A if service not available</div>
-        <div style={{color:T.muted,fontSize:11,marginBottom:10}}>Applicable only if your HCO provides the specific imaging/radiation service. If expired, document of renewal application must also be uploaded via portal.</div>
+        <div style={{color:T.orange,fontWeight:700,fontSize:15,marginBottom:6}}>⚡ AERB Licenses ({aerb.length}) — Mark N/A if service not available</div>
+        <div style={{color:T.muted,fontSize:13,marginBottom:10}}>Applicable only if your HCO provides the specific imaging/radiation service. If expired, document of renewal application must also be uploaded via portal.</div>
         <div style={{display:'flex',flexDirection:'column',gap:6}}>
           {aerb.map(lic => {
             const s = licStatus(lic.id);
             return (
               <div key={lic.id} style={{background:T.panel,borderRadius:8,padding:'10px 12px',border:`1px solid ${s==='obtained'?T.green:T.border}`,opacity:s==='na'?0.5:1}}>
                 <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:8,marginBottom:6}}>
-                  <div style={{color:T.text,fontSize:12,flex:1}}>{lic.name}</div>
-                  <div style={{color:T.muted,fontSize:10,flexShrink:0,textAlign:'right',maxWidth:120}}>{lic.appl}</div>
+                  <div style={{color:T.text,fontSize:14,flex:1}}>{lic.name}</div>
+                  <div style={{color:T.muted,fontSize:12,flexShrink:0,textAlign:'right',maxWidth:120}}>{lic.appl}</div>
                 </div>
                 <div style={{display:'flex',gap:6}}>
                   {['pending','obtained','na'].map(status => (
                     <button key={status} onClick={() => setLicStatus(lic.id, status)}
                       style={{
-                        padding:'3px 10px',borderRadius:6,border:'none',cursor:'pointer',fontSize:11,fontWeight:600,
+                        padding:'3px 10px',borderRadius:6,border:'none',cursor:'pointer',fontSize:13,fontWeight:600,
                         background: s===status ? (status==='obtained'?T.green:status==='na'?T.muted:T.orange)+'33' : T.panel2,
                         color: s===status ? (status==='obtained'?T.green:status==='na'?T.muted:T.orange) : T.muted,
                         outline: s===status ? `1px solid ${status==='obtained'?T.green:status==='na'?T.muted:T.orange}` : 'none',
@@ -4890,8 +4890,8 @@ export default function App() {
   const renderProcess = () => (
     <div style={{padding:16}}>
       <div style={{background:'#0a0a1a',border:`1px solid ${T.blue}44`,borderRadius:10,padding:12,marginBottom:16}}>
-        <div style={{color:T.blue,fontWeight:600,fontSize:12,marginBottom:4}}>💡 Key Points for HCO Applicants</div>
-        <div style={{color:T.text,fontSize:12,lineHeight:1.6}}>
+        <div style={{color:T.blue,fontWeight:600,fontSize:14,marginBottom:4}}>💡 Key Points for HCO Applicants</div>
+        <div style={{color:T.text,fontSize:14,lineHeight:1.6}}>
           • Two rounds of NC closure at both DA and Onsite stages (unlike SHCO 2nd Edition which gives only one).<br/>
           • Registration details on HOPE portal cannot be edited after submission — fill accurately.<br/>
           • Cannot use both web portal and mobile app simultaneously — save on portal first.<br/>
@@ -4903,7 +4903,7 @@ export default function App() {
         {HCO_ELC_PROCESS.map((step, idx) => (
           <div key={step.step} style={{display:'flex',gap:12}}>
             <div style={{display:'flex',flexDirection:'column',alignItems:'center',width:32,flexShrink:0}}>
-              <div style={{width:32,height:32,borderRadius:'50%',background:T.gold,display:'flex',alignItems:'center',justifyContent:'center',fontWeight:700,fontSize:13,color:T.bg,flexShrink:0}}>
+              <div style={{width:32,height:32,borderRadius:'50%',background:T.gold,display:'flex',alignItems:'center',justifyContent:'center',fontWeight:700,fontSize:15,color:T.bg,flexShrink:0}}>
                 {step.step}
               </div>
               {idx < HCO_ELC_PROCESS.length - 1 && (
@@ -4911,9 +4911,9 @@ export default function App() {
               )}
             </div>
             <div style={{flex:1,paddingBottom:20}}>
-              <div style={{color:T.white,fontWeight:700,fontSize:13,marginBottom:4}}>{step.name}</div>
-              <div style={{color:T.text,fontSize:12,lineHeight:1.6,marginBottom:6}}>{step.desc}</div>
-              <div style={{color:T.green,fontSize:11}}>→ {step.output}</div>
+              <div style={{color:T.white,fontWeight:700,fontSize:15,marginBottom:4}}>{step.name}</div>
+              <div style={{color:T.text,fontSize:14,lineHeight:1.6,marginBottom:6}}>{step.desc}</div>
+              <div style={{color:T.green,fontSize:13}}>→ {step.output}</div>
             </div>
           </div>
         ))}
@@ -4925,11 +4925,11 @@ export default function App() {
     <div style={{padding:16}}>
       <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.gold}44`,marginBottom:16}}>
         <div style={{color:T.gold,fontWeight:700,fontSize:15,marginBottom:8}}>🚀 The Journey: HCO ELC → Full NABH Accreditation</div>
-        <div style={{color:T.text,fontSize:12,lineHeight:1.7}}>
+        <div style={{color:T.text,fontSize:14,lineHeight:1.7}}>
           Entry Level Certification is the first step. After ELC, HCOs can upgrade to Full NABH Hospital Accreditation (6th Edition) — 639 OEs, 4-year validity, and the gold standard in Indian hospital accreditation. Apply via portal.nabh.co at least 6 months before ELC expiry.
         </div>
       </div>
-      <div style={{color:T.gold,fontWeight:600,fontSize:13,marginBottom:10}}>Recommended Timeline</div>
+      <div style={{color:T.gold,fontWeight:600,fontSize:15,marginBottom:10}}>Recommended Timeline</div>
       {[
         {phase:'Now – Month 2',action:'Gap analysis: compare current practices against HCO ELC standards. Identify missing documents and expired licenses.',color:T.blue},
         {phase:'Month 2–4',action:'Collect all 223 documents and 26 licenses. Train SPOC on HOPE portal and mobile app.',color:T.blue},
@@ -4941,13 +4941,13 @@ export default function App() {
         {phase:'Month 18',action:'Apply for Full NABH Hospital Accreditation via portal.nabh.co — 6 months before ELC expiry.',color:T.gold},
       ].map((p,i) => (
         <div key={i} style={{display:'flex',gap:12,marginBottom:8,alignItems:'flex-start'}}>
-          <div style={{minWidth:90,color:p.color,fontWeight:600,fontSize:11,paddingTop:2}}>{p.phase}</div>
-          <div style={{flex:1,background:T.panel,borderRadius:8,padding:'8px 12px',border:`1px solid ${p.color}33`,color:T.text,fontSize:12}}>{p.action}</div>
+          <div style={{minWidth:90,color:p.color,fontWeight:600,fontSize:13,paddingTop:2}}>{p.phase}</div>
+          <div style={{flex:1,background:T.panel,borderRadius:8,padding:'8px 12px',border:`1px solid ${p.color}33`,color:T.text,fontSize:14}}>{p.action}</div>
         </div>
       ))}
       <div style={{marginTop:16,background:T.panel2,borderRadius:10,padding:14,border:`1px solid ${T.gold}44`}}>
-        <div style={{color:T.gold,fontWeight:700,fontSize:13,marginBottom:6}}>💼 Post-Accreditation Obligations</div>
-        <div style={{color:T.text,fontSize:12,lineHeight:1.7}}>
+        <div style={{color:T.gold,fontWeight:700,fontSize:15,marginBottom:6}}>💼 Post-Accreditation Obligations</div>
+        <div style={{color:T.text,fontSize:14,lineHeight:1.7}}>
           After ELC certificate: No surveillance visits (certification programme). Apply for renewal at least 6 months before expiry.
           If renewal not applied 3 months before expiry, NABH presumes disinterest and certificate expires — HCO must re-apply fresh.
           Accredited HCO must use NABH mark only as per guidelines and maintain all standards continuously.
@@ -4989,8 +4989,8 @@ export default function App() {
               outline: hcoMode === m.key ? `2px solid ${T.gold}` : `1px solid ${T.border}`,
               textAlign:'center'
             }}>
-            <div style={{color: hcoMode === m.key ? T.gold : T.text, fontWeight:700, fontSize:12}}>{m.label}</div>
-            <div style={{color:T.muted, fontSize:10, marginTop:2}}>{m.sub}</div>
+            <div style={{color: hcoMode === m.key ? T.gold : T.text, fontWeight:700, fontSize:14}}>{m.label}</div>
+            <div style={{color:T.muted, fontSize:12, marginTop:2}}>{m.sub}</div>
           </button>
         ))}
       </div>
@@ -5004,7 +5004,7 @@ export default function App() {
               <button key={tab.key} onClick={() => setHcoElcTab(tab.key)}
                 style={{
                   padding:'8px 14px', border:'none', cursor:'pointer', whiteSpace:'nowrap',
-                  background:'transparent', fontSize:12, fontWeight:600,
+                  background:'transparent', fontSize:14, fontWeight:600,
                   color: hcoElcTab === tab.key ? T.gold : T.muted,
                   borderBottom: hcoElcTab === tab.key ? `2px solid ${T.gold}` : '2px solid transparent',
                 }}>
@@ -5058,15 +5058,15 @@ export default function App() {
           <div style={{width:32,height:32,borderRadius:8,background:theme==='light'?"rgba(255,255,255,0.15)":`linear-gradient(135deg,${T.gold},#f0d070)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:17,flexShrink:0,border:theme==='light'?"1px solid rgba(255,255,255,0.3)":"none",color:"#ffffff"}}>⚕</div>
           <div style={{flex:1,minWidth:100}}>
             <div style={{fontSize:7,letterSpacing:3,color:theme==='light'?"rgba(255,255,255,0.7)":T.gold}}>NABH 6TH EDITION</div>
-            <div style={{fontSize:12,fontWeight:700,color:"#ffffff"}}>{context?.hospitalName||"Compliance Engine"}{context?.assessmentName&&<span style={{fontSize:9,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted,marginLeft:6}}>{context.assessmentName}</span>}</div>
+            <div style={{fontSize:14,fontWeight:700,color:"#ffffff"}}>{context?.hospitalName||"Compliance Engine"}{context?.assessmentName&&<span style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted,marginLeft:6}}>{context.assessmentName}</span>}</div>
           </div>
-          {loading&&<div style={{fontSize:9,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted}}>Refreshing…</div>}
-          {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${readinessColor}25`,border:`1px solid ${readinessColor}60`,fontSize:9,fontWeight:700,color:theme==='light'?"#ffffff":readinessColor}}>{decision.readiness==="NOT READY"?"❌":decision.readiness==="RISKY"?"⚠️":"✅"} {decision.readiness||"—"}</div>}
-          {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${verdictColor}25`,border:`1px solid ${verdictColor}60`,fontSize:10,fontWeight:800,color:theme==='light'?"#ffffff":verdictColor}}>{decision.verdict==="PARTIAL"?"⚠️":""}{decision.verdict||"—"}</div>}
+          {loading&&<div style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted}}>Refreshing…</div>}
+          {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${readinessColor}25`,border:`1px solid ${readinessColor}60`,fontSize:11,fontWeight:700,color:theme==='light'?"#ffffff":readinessColor}}>{decision.readiness==="NOT READY"?"❌":decision.readiness==="RISKY"?"⚠️":"✅"} {decision.readiness||"—"}</div>}
+          {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${verdictColor}25`,border:`1px solid ${verdictColor}60`,fontSize:12,fontWeight:800,color:theme==='light'?"#ffffff":verdictColor}}>{decision.verdict==="PARTIAL"?"⚠️":""}{decision.verdict||"—"}</div>}
           <div style={{display:"flex",gap:3,flexWrap:"wrap",position:"relative"}}>
             {PRIMARY_NAV.map(n=>(
               <button key={n.id} onClick={()=>setScreen(n.id)} style={{
-                padding:"4px 9px",borderRadius:7,fontSize:9,cursor:"pointer",
+                padding:"4px 9px",borderRadius:7,fontSize:11,cursor:"pointer",
                 background:screen===n.id?(theme==='light'?"rgba(255,255,255,0.25)":T.goldD):"transparent",
                 border:`1px solid ${screen===n.id?(theme==='light'?"rgba(255,255,255,0.6)":T.gold):(theme==='light'?"rgba(255,255,255,0.3)":T.border)}`,
                 color:"#ffffff",
@@ -5077,7 +5077,7 @@ export default function App() {
               <div style={{position:"relative"}}>
                 <button
                   onClick={e=>{e.stopPropagation();setShowMoreMenu(v=>!v);}}
-                  style={{padding:"4px 9px",borderRadius:7,fontSize:9,cursor:"pointer",letterSpacing:2,
+                  style={{padding:"4px 9px",borderRadius:7,fontSize:11,cursor:"pointer",letterSpacing:2,
                     background:(secondaryActive||showMoreMenu)?(theme==='light'?"rgba(255,255,255,0.25)":T.goldD):"transparent",
                     border:`1px solid ${(secondaryActive||showMoreMenu)?(theme==='light'?"rgba(255,255,255,0.6)":T.gold):(theme==='light'?"rgba(255,255,255,0.3)":T.border)}`,
                     color:"#ffffff",
@@ -5089,8 +5089,8 @@ export default function App() {
                     style={{position:"absolute",top:"calc(100% + 6px)",right:0,background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:10,display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:6,zIndex:300,minWidth:220,boxShadow:"0 8px 30px rgba(0,0,0,0.15)"}}>
                     {SECONDARY_NAV.map(n=>(
                       <button key={n.id} onClick={()=>{setScreen(n.id);setShowMoreMenu(false);}}
-                        style={{padding:"7px 4px",borderRadius:7,border:`1px solid ${screen===n.id?T.gold:T.border}`,background:screen===n.id?T.goldD:T.panel2,color:screen===n.id?T.gold:T.text,fontSize:9,cursor:"pointer",display:"flex",flexDirection:"column",alignItems:"center",gap:3,fontWeight:screen===n.id?700:400}}>
-                        <span style={{fontSize:14}}>{n.icon}</span>
+                        style={{padding:"7px 4px",borderRadius:7,border:`1px solid ${screen===n.id?T.gold:T.border}`,background:screen===n.id?T.goldD:T.panel2,color:screen===n.id?T.gold:T.text,fontSize:11,cursor:"pointer",display:"flex",flexDirection:"column",alignItems:"center",gap:3,fontWeight:screen===n.id?700:400}}>
+                        <span style={{fontSize:16}}>{n.icon}</span>
                         <span>{n.label}</span>
                       </button>
                     ))}
@@ -5099,17 +5099,17 @@ export default function App() {
               </div>
             )}
           </div>
-          <button onClick={()=>setAuthState("programme")} style={{padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.3)":T.border}`,color:"#ffffff",fontSize:9,cursor:"pointer"}}>Switch</button>
-          <a href="https://drive.google.com/drive/folders/1DOfGmHg_dO5blXw_3Mz07dtre6IKYYlI" target="_blank" rel="noopener noreferrer" style={{padding:"4px 9px",borderRadius:7,background:theme==='light'?"rgba(255,255,255,0.15)":T.goldD,border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.gold}`,color:"#ffffff",fontSize:9,fontWeight:700,textDecoration:"none",whiteSpace:"nowrap"}}>📁 Docs</a>
-          <button onClick={toggleTheme} title={theme==='dark'?'Switch to light mode':'Switch to dark mode'} style={{padding:"4px 9px",borderRadius:7,background:theme==='light'?"rgba(255,255,255,0.2)":"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.border}`,color:"#ffffff",fontSize:13,cursor:"pointer",lineHeight:1}}>{theme==='dark'?'☀️':'🌙'}</button>
-          <button onClick={handleSignOut} style={{padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.3)":T.border}`,color:"#ffffff",fontSize:9,cursor:"pointer"}}>Sign out</button>
+          <button onClick={()=>setAuthState("programme")} style={{padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.3)":T.border}`,color:"#ffffff",fontSize:11,cursor:"pointer"}}>Switch</button>
+          <a href="https://drive.google.com/drive/folders/1DOfGmHg_dO5blXw_3Mz07dtre6IKYYlI" target="_blank" rel="noopener noreferrer" style={{padding:"4px 9px",borderRadius:7,background:theme==='light'?"rgba(255,255,255,0.15)":T.goldD,border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.gold}`,color:"#ffffff",fontSize:11,fontWeight:700,textDecoration:"none",whiteSpace:"nowrap"}}>📁 Docs</a>
+          <button onClick={toggleTheme} title={theme==='dark'?'Switch to light mode':'Switch to dark mode'} style={{padding:"4px 9px",borderRadius:7,background:theme==='light'?"rgba(255,255,255,0.2)":"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.border}`,color:"#ffffff",fontSize:15,cursor:"pointer",lineHeight:1}}>{theme==='dark'?'☀️':'🌙'}</button>
+          <button onClick={handleSignOut} style={{padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.3)":T.border}`,color:"#ffffff",fontSize:11,cursor:"pointer"}}>Sign out</button>
         </div>
       </div>
 
       {selectedProgramme==="hco"&&(!decision.core_pass&&(decision.core_failures||0)>0)&&(
         <div style={{background:T.redD,padding:"8px 20px",display:"flex",gap:10,alignItems:"center"}}>
           <span style={{fontSize:16}}>🚨</span>
-          <span style={{fontSize:11,fontWeight:700,color:T.red}}>
+          <span style={{fontSize:13,fontWeight:700,color:T.red}}>
             CORE FAILURE: {decision.core_failures} element{decision.core_failures>1?"s":""} at risk
             {decision.core_unscored>0&&` (${decision.core_unscored} unscored, ${decision.core_scored_failures||0} scored below 4)`}
             {" "}— assessment will be rejected.
@@ -5120,7 +5120,7 @@ export default function App() {
       <div style={{maxWidth:1200,margin:"0 auto",padding:"16px"}}>
         {screen==="dashboard"&&<Dashboard decision={decision} gaps={gaps} onNav={setScreen}/>}
         {screen==="dashboard"&&<button onClick={generatePDF} disabled={pdfLoading}
-          style={{position:'fixed',bottom:20,right:20,zIndex:9999,padding:'8px 16px',borderRadius:9,border:`1px solid ${T.gold}`,background:T.bg,color:T.gold,fontSize:10,fontWeight:700,cursor:pdfLoading?'default':'pointer',opacity:pdfLoading?0.6:1,boxShadow:'0 2px 12px rgba(0,0,0,0.5)'}}>
+          style={{position:'fixed',bottom:20,right:20,zIndex:9999,padding:'8px 16px',borderRadius:9,border:`1px solid ${T.gold}`,background:T.bg,color:T.gold,fontSize:12,fontWeight:700,cursor:pdfLoading?'default':'pointer',opacity:pdfLoading?0.6:1,boxShadow:'0 2px 12px rgba(0,0,0,0.5)'}}>
           {pdfLoading?'⏳ Generating…':'⬇ Export PDF'}
         </button>}
         {screen==="scoring"&&<ScoringScreen assessmentId={context?.assessmentId} oes={oes} standards={standards} onRefresh={()=>loadData(context)}/>}
@@ -5139,7 +5139,7 @@ export default function App() {
         {screen==="hco-elc"&&renderHCOTab()}
       </div>
 
-      <div style={{textAlign:"center",padding:"14px",color:T.muted,fontSize:9,borderTop:`1px solid ${T.border}`,marginTop:20}}>
+      <div style={{textAlign:"center",padding:"14px",color:T.muted,fontSize:11,borderTop:`1px solid ${T.border}`,marginTop:20}}>
         NABH Compliance Engine — Independent educational tool — Not affiliated with NABH/QCI | Dr. Mehul Upadhyay
       </div>
     </div>
@@ -5221,22 +5221,22 @@ function MockDrillsScreen({ hospitalId }) {
   if(view==="record"&&selectedDrill)return(
     <div>
       <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:14}}>
-        <button onClick={()=>{setView("tracker");setSelectedDrill(null);}} style={{padding:"5px 12px",borderRadius:7,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:11,cursor:"pointer"}}>← Back</button>
-        <div style={{fontSize:14,fontWeight:700,color:T.gold}}>Record Drill: {selectedDrill.name}</div>
+        <button onClick={()=>{setView("tracker");setSelectedDrill(null);}} style={{padding:"5px 12px",borderRadius:7,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:13,cursor:"pointer"}}>← Back</button>
+        <div style={{fontSize:16,fontWeight:700,color:T.gold}}>Record Drill: {selectedDrill.name}</div>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:10}}>
         {[["Drill Date *","date","drill_date"],["Drill Time","time","drill_time"],["Location","text","location"],["Conducted By","text","conducted_by"],["Supervised By","text","supervised_by"],["Participants Category","text","participants_category"],["Total Participants","number","total_participants"]].map(([l,t,k])=>(
           <div key={k}>
-            <div style={{fontSize:9,color:T.muted,marginBottom:3}}>{l}</div>
+            <div style={{fontSize:11,color:T.muted,marginBottom:3}}>{l}</div>
             <input type={t} value={form[k]} onChange={e=>setForm(p=>({...p,[k]:e.target.value}))}
-              style={{width:"100%",padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:11}}/>
+              style={{width:"100%",padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13}}/>
           </div>
         ))}
         {[["Pre-Briefing","pre_briefing"],["Status","status"],["Debriefing","debriefing"]].map(([l,k])=>(
           <div key={k}>
-            <div style={{fontSize:9,color:T.muted,marginBottom:3}}>{l}</div>
+            <div style={{fontSize:11,color:T.muted,marginBottom:3}}>{l}</div>
             <select value={form[k]} onChange={e=>setForm(p=>({...p,[k]:e.target.value}))}
-              style={{width:"100%",padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:11}}>
+              style={{width:"100%",padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13}}>
               {k==="status"?<><option value="completed">Completed</option><option value="planned">Planned</option><option value="missed">Missed</option></>
               :<><option value="Done">Done</option><option value="Not Done">Not Done</option><option value="Not Required">Not Required</option></>}
             </select>
@@ -5245,28 +5245,28 @@ function MockDrillsScreen({ hospitalId }) {
       </div>
       {[["Scenario Description","scenario_desc"],["Drill Description & Response","drill_description"],["Corrective Actions","corrective_actions"],["Preventive Actions","preventive_actions"],["Additional Points","additional_points"]].map(([l,k])=>(
         <div key={k} style={{marginBottom:8}}>
-          <div style={{fontSize:9,color:T.muted,marginBottom:3}}>{l}</div>
+          <div style={{fontSize:11,color:T.muted,marginBottom:3}}>{l}</div>
           <textarea value={form[k]} onChange={e=>setForm(p=>({...p,[k]:e.target.value}))} rows={2}
-            style={{width:"100%",padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:11,resize:"vertical"}}/>
+            style={{width:"100%",padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,resize:"vertical"}}/>
         </div>
       ))}
       <div style={{marginBottom:10}}>
-        <div style={{fontSize:9,color:T.muted,marginBottom:5}}>Deviations / Observations (one per line)</div>
+        <div style={{fontSize:11,color:T.muted,marginBottom:5}}>Deviations / Observations (one per line)</div>
         {form.observations.map((o,i)=>(
           <input key={i} value={o} onChange={e=>{const obs=[...form.observations];obs[i]=e.target.value;setForm(p=>({...p,observations:obs}));}}
             placeholder={`Observation ${i+1}`}
-            style={{width:"100%",padding:"6px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:11,marginBottom:4}}/>
+            style={{width:"100%",padding:"6px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,marginBottom:4}}/>
         ))}
         <button onClick={()=>setForm(p=>({...p,observations:[...p.observations,""]}))}
-          style={{fontSize:10,color:T.gold,background:"transparent",border:"none",cursor:"pointer"}}>+ Add observation</button>
+          style={{fontSize:12,color:T.gold,background:"transparent",border:"none",cursor:"pointer"}}>+ Add observation</button>
       </div>
       <div style={{marginBottom:12}}>
-        <div style={{fontSize:9,color:T.muted,marginBottom:4}}>EVIDENCE LINK — Drill Record/Photo (Google Drive / OneDrive URL)</div>
+        <div style={{fontSize:11,color:T.muted,marginBottom:4}}>EVIDENCE LINK — Drill Record/Photo (Google Drive / OneDrive URL)</div>
         <input value={form.evidence_url||""} onChange={e=>setForm(p=>({...p,evidence_url:e.target.value}))} placeholder="https://drive.google.com/…"
-          style={{width:"100%",padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:11}}/>
+          style={{width:"100%",padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13}}/>
       </div>
       <button onClick={saveRecord} disabled={saving||!form.drill_date}
-        style={{padding:"10px 24px",borderRadius:9,background:T.goldD,border:`1px solid ${T.gold}`,color:T.goldL,fontSize:12,fontWeight:700,cursor:"pointer"}}>
+        style={{padding:"10px 24px",borderRadius:9,background:T.goldD,border:`1px solid ${T.gold}`,color:T.goldL,fontSize:14,fontWeight:700,cursor:"pointer"}}>
         {saving?"Saving…":"💾 Save Drill Record"}
       </button>
     </div>
@@ -5277,15 +5277,15 @@ function MockDrillsScreen({ hospitalId }) {
     <div>
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"14px 18px",marginBottom:14,display:"flex",gap:20,alignItems:"center",flexWrap:"wrap"}}>
         <div>
-          <div style={{fontSize:9,letterSpacing:2,color:T.muted,marginBottom:2}}>MOCK DRILL READINESS</div>
+          <div style={{fontSize:11,letterSpacing:2,color:T.muted,marginBottom:2}}>MOCK DRILL READINESS</div>
           <div style={{fontSize:28,fontWeight:800,color:pct===100?T.green:pct>50?T.gold:T.red}}>{pct}%</div>
-          <div style={{fontSize:10,color:T.muted}}>{onTrack}/{totalDrills} drills on track</div>
+          <div style={{fontSize:12,color:T.muted}}>{onTrack}/{totalDrills} drills on track</div>
         </div>
         <div style={{flex:1,minWidth:200}}>
           <div style={{height:8,background:T.border,borderRadius:4,marginBottom:8}}>
             <div style={{width:`${pct}%`,height:"100%",background:pct===100?T.green:pct>50?T.gold:T.red,borderRadius:4,transition:"width 0.5s"}}/>
           </div>
-          <div style={{display:"flex",gap:16,fontSize:9,color:T.muted}}>
+          <div style={{display:"flex",gap:16,fontSize:11,color:T.muted}}>
             <span>🔴 {drills.filter(d=>drillStatus(d)==="NOT_STARTED").length} Not Started</span>
             <span>⚠️ {drills.filter(d=>drillStatus(d)==="OVERDUE").length} Overdue</span>
             <span>✅ {onTrack} On Track</span>
@@ -5306,35 +5306,35 @@ function MockDrillsScreen({ hospitalId }) {
                   <div style={{fontSize:7,fontWeight:800,color:"#ffffff",textAlign:"center",lineHeight:1.2}}>{drill.code||"DRILL"}</div>
                 </div>
                 <div style={{flex:1}}>
-                  <div style={{fontSize:12,fontWeight:700,color:T.white}}>{drill.name}</div>
-                  <div style={{fontSize:9,color:T.muted,marginTop:2}}>
+                  <div style={{fontSize:14,fontWeight:700,color:T.white}}>{drill.name}</div>
+                  <div style={{fontSize:11,color:T.muted,marginTop:2}}>
                     🔁 {drill.frequency} &nbsp;|&nbsp; 📋 NABH: {drill.nabh_ref}
                     {last&&<span style={{marginLeft:8}}>Last: {last.drill_date}</span>}
                     {!last&&<span style={{marginLeft:8,color:T.red}}>Never conducted</span>}
                   </div>
                 </div>
-                <div style={{fontSize:9,fontWeight:700,color:statusColor(st),padding:"3px 10px",borderRadius:20,background:`${statusColor(st)}15`,border:`1px solid ${statusColor(st)}40`,whiteSpace:"nowrap"}}>{statusLabel(st)}</div>
+                <div style={{fontSize:11,fontWeight:700,color:statusColor(st),padding:"3px 10px",borderRadius:20,background:`${statusColor(st)}15`,border:`1px solid ${statusColor(st)}40`,whiteSpace:"nowrap"}}>{statusLabel(st)}</div>
                 <button onClick={e=>{e.stopPropagation();setSelectedDrill(drill);setForm({drill_date:"",drill_time:"",location:"",conducted_by:"",supervised_by:"",participants_category:"",total_participants:"",pre_briefing:"Done",scenario_desc:"",drill_description:"",observations:["","",""],debriefing:"Done",corrective_actions:"",preventive_actions:"",additional_points:"",status:"completed",evidence_url:""});setView("record");}}
-                  style={{padding:"5px 12px",borderRadius:7,background:T.goldD,border:`1px solid ${T.gold}`,color:T.goldL,fontSize:10,fontWeight:700,cursor:"pointer",whiteSpace:"nowrap"}}>+ Record</button>
-                <div style={{color:T.muted,fontSize:11}}>{isOpen?"▲":"▼"}</div>
+                  style={{padding:"5px 12px",borderRadius:7,background:T.goldD,border:`1px solid ${T.gold}`,color:T.goldL,fontSize:12,fontWeight:700,cursor:"pointer",whiteSpace:"nowrap"}}>+ Record</button>
+                <div style={{color:T.muted,fontSize:13}}>{isOpen?"▲":"▼"}</div>
               </div>
               {isOpen&&(
                 <div style={{borderTop:`1px solid ${T.border}`,padding:"12px 14px"}}>
-                  <div style={{fontSize:10,color:T.muted,marginBottom:8,lineHeight:1.6}}>{drill.description}</div>
+                  <div style={{fontSize:12,color:T.muted,marginBottom:8,lineHeight:1.6}}>{drill.description}</div>
                   {recs.length>0&&(
                     <div>
-                      <div style={{fontSize:9,fontWeight:700,color:T.gold,marginBottom:6}}>DRILL HISTORY</div>
+                      <div style={{fontSize:11,fontWeight:700,color:T.gold,marginBottom:6}}>DRILL HISTORY</div>
                       {recs.slice(0,5).map(r=>(
-                        <div key={r.id} style={{background:T.panel2,borderRadius:7,padding:"8px 12px",marginBottom:5,fontSize:9,color:T.muted,display:"flex",gap:10,alignItems:"center"}}>
+                        <div key={r.id} style={{background:T.panel2,borderRadius:7,padding:"8px 12px",marginBottom:5,fontSize:11,color:T.muted,display:"flex",gap:10,alignItems:"center"}}>
                           <div style={{fontWeight:700,color:T.text,minWidth:80}}>{r.drill_date}</div>
                           <div style={{flex:1}}>{r.location&&`📍 ${r.location} · `}{r.total_participants&&`👥 ${r.total_participants} participants · `}{r.conducted_by&&`👤 ${r.conducted_by}`}</div>
                           {r.corrective_actions&&<div style={{color:T.orange}}>⚡ CAPA raised</div>}
-                          <button onClick={()=>deleteRecord(r.id)} style={{padding:"2px 8px",borderRadius:5,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:9,cursor:"pointer",flexShrink:0}}>Delete</button>
+                          <button onClick={()=>deleteRecord(r.id)} style={{padding:"2px 8px",borderRadius:5,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:11,cursor:"pointer",flexShrink:0}}>Delete</button>
                         </div>
                       ))}
                     </div>
                   )}
-                  {recs.length===0&&<div style={{fontSize:10,color:T.red,padding:"8px 0"}}>No drills recorded yet — click "+ Record" to add the first drill.</div>}
+                  {recs.length===0&&<div style={{fontSize:12,color:T.red,padding:"8px 0"}}>No drills recorded yet — click "+ Record" to add the first drill.</div>}
                 </div>
               )}
             </div>
@@ -5456,7 +5456,7 @@ function CommitteeCalendarScreen({ hospitalId }) {
 
   const tableHdr=(
     <thead><tr>
-      <th style={{padding:"6px 8px",textAlign:"left",fontSize:9,color:T.gold,background:T.panel,border:`1px solid ${T.border}`,minWidth:150,position:"sticky",left:0,zIndex:1}}>Name</th>
+      <th style={{padding:"6px 8px",textAlign:"left",fontSize:11,color:T.gold,background:T.panel,border:`1px solid ${T.border}`,minWidth:150,position:"sticky",left:0,zIndex:1}}>Name</th>
       <th style={{padding:"6px 2px",textAlign:"center",fontSize:7,color:T.muted,background:T.panel,border:`1px solid ${T.border}`,minWidth:22}}>Freq</th>
       {MONTHS.map(m=><th key={m} style={{padding:"5px 2px",textAlign:"center",fontSize:7.5,color:T.gold,background:T.panel,border:`1px solid ${T.border}`,minWidth:32}}>{m}</th>)}
       <th style={{padding:"6px 2px",textAlign:"center",fontSize:7,color:T.muted,background:T.panel,border:`1px solid ${T.border}`,minWidth:34}}>Done</th>
@@ -5468,32 +5468,32 @@ function CommitteeCalendarScreen({ hospitalId }) {
       {popup&&(
         <div style={{position:"fixed",inset:0,zIndex:1000,display:"flex",alignItems:"center",justifyContent:"center",background:"rgba(0,0,0,0.55)"}} onClick={()=>setPopup(null)}>
           <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"22px 26px",minWidth:270,boxShadow:"0 8px 40px #000c"}} onClick={e=>e.stopPropagation()}>
-            <div style={{fontSize:13,fontWeight:700,color:T.gold,marginBottom:4}}>Set Meeting Date</div>
-            <div style={{fontSize:10,color:T.muted,marginBottom:14}}>{MONTHS[MONTH_NUMS.indexOf(popup.monthNum)]} {popup.monthNum>=4?year:year+1}</div>
+            <div style={{fontSize:15,fontWeight:700,color:T.gold,marginBottom:4}}>Set Meeting Date</div>
+            <div style={{fontSize:12,color:T.muted,marginBottom:14}}>{MONTHS[MONTH_NUMS.indexOf(popup.monthNum)]} {popup.monthNum>=4?year:year+1}</div>
             <input type="date" value={popup.dateVal} onChange={e=>setPopup(p=>({...p,dateVal:e.target.value,error:null}))}
-              style={{width:"100%",padding:"9px 11px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,marginBottom:14,boxSizing:"border-box"}}/>
-            {popup.error&&<div style={{fontSize:10,color:T.red,marginBottom:10}}>{popup.error}</div>}
+              style={{width:"100%",padding:"9px 11px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:15,marginBottom:14,boxSizing:"border-box"}}/>
+            {popup.error&&<div style={{fontSize:12,color:T.red,marginBottom:10}}>{popup.error}</div>}
             <div style={{display:"flex",gap:8}}>
-              <button onClick={saveDate} disabled={popup.saving} style={{flex:1,padding:"9px",borderRadius:7,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontWeight:700,fontSize:13,cursor:"pointer",opacity:popup.saving?0.6:1}}>{popup.saving?"Saving…":"Save"}</button>
-              <button onClick={()=>setPopup(null)} style={{padding:"9px 16px",borderRadius:7,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:13,cursor:"pointer"}}>Cancel</button>
+              <button onClick={saveDate} disabled={popup.saving} style={{flex:1,padding:"9px",borderRadius:7,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontWeight:700,fontSize:15,cursor:"pointer",opacity:popup.saving?0.6:1}}>{popup.saving?"Saving…":"Save"}</button>
+              <button onClick={()=>setPopup(null)} style={{padding:"9px 16px",borderRadius:7,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:15,cursor:"pointer"}}>Cancel</button>
             </div>
           </div>
         </div>
       )}
       <div style={{display:"grid",gridTemplateColumns:"1fr auto 1fr",alignItems:"center",marginBottom:10,gap:8}}>
         <div>
-          <div style={{fontSize:13,fontWeight:700,color:T.gold}}>{viewMode==="committee"?"Committee Calendar":"Mock Drill Calendar"}</div>
-          <div style={{fontSize:10,color:T.muted}}>FY {year}–{year+1}{viewMode==="committee"?` · ${totalDone}/${totalExpected} done · ${pct}%`:""}</div>
+          <div style={{fontSize:15,fontWeight:700,color:T.gold}}>{viewMode==="committee"?"Committee Calendar":"Mock Drill Calendar"}</div>
+          <div style={{fontSize:12,color:T.muted}}>FY {year}–{year+1}{viewMode==="committee"?` · ${totalDone}/${totalExpected} done · ${pct}%`:""}</div>
         </div>
         <div style={{display:"flex",borderRadius:8,border:`1px solid ${T.border}`,overflow:"hidden"}}>
-          <button onClick={()=>setViewMode("committee")} style={{padding:"7px 18px",fontSize:14,fontWeight:700,cursor:"pointer",background:viewMode==="committee"?T.goldD:"transparent",border:"none",color:viewMode==="committee"?T.goldL:T.muted,letterSpacing:0.2}}>🏛️ Committees</button>
+          <button onClick={()=>setViewMode("committee")} style={{padding:"7px 18px",fontSize:16,fontWeight:700,cursor:"pointer",background:viewMode==="committee"?T.goldD:"transparent",border:"none",color:viewMode==="committee"?T.goldL:T.muted,letterSpacing:0.2}}>🏛️ Committees</button>
           <div style={{width:1,background:T.border}}/>
-          <button onClick={()=>setViewMode("drill")} style={{padding:"7px 18px",fontSize:14,fontWeight:700,cursor:"pointer",background:viewMode==="drill"?T.goldD:"transparent",border:"none",color:viewMode==="drill"?T.goldL:T.muted,letterSpacing:0.2}}>🚨 Drills</button>
+          <button onClick={()=>setViewMode("drill")} style={{padding:"7px 18px",fontSize:16,fontWeight:700,cursor:"pointer",background:viewMode==="drill"?T.goldD:"transparent",border:"none",color:viewMode==="drill"?T.goldL:T.muted,letterSpacing:0.2}}>🚨 Drills</button>
         </div>
         <div style={{display:"flex",gap:6,alignItems:"center",justifyContent:"flex-end"}}>
-          <button onClick={()=>setYear(y=>y-1)} style={{padding:"3px 8px",borderRadius:5,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:10,cursor:"pointer"}}>◀</button>
-          <div style={{fontSize:10,fontWeight:700,color:T.gold,padding:"3px 10px",borderRadius:5,border:`1px solid ${T.gold}`,background:T.goldD}}>FY {year}–{year+1}</div>
-          <button onClick={()=>setYear(y=>y+1)} style={{padding:"3px 8px",borderRadius:5,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:10,cursor:"pointer"}}>▶</button>
+          <button onClick={()=>setYear(y=>y-1)} style={{padding:"3px 8px",borderRadius:5,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:12,cursor:"pointer"}}>◀</button>
+          <div style={{fontSize:12,fontWeight:700,color:T.gold,padding:"3px 10px",borderRadius:5,border:`1px solid ${T.gold}`,background:T.goldD}}>FY {year}–{year+1}</div>
+          <button onClick={()=>setYear(y=>y+1)} style={{padding:"3px 8px",borderRadius:5,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:12,cursor:"pointer"}}>▶</button>
         </div>
       </div>
 
@@ -5509,7 +5509,7 @@ function CommitteeCalendarScreen({ hospitalId }) {
           <table style={{borderCollapse:"collapse",width:"100%",minWidth:860}}>
             {tableHdr}
             <tbody>
-              {committees.length===0&&<tr><td colSpan={16} style={{textAlign:"center",padding:30,color:T.muted,fontSize:11}}>No committees loading — check connection.</td></tr>}
+              {committees.length===0&&<tr><td colSpan={16} style={{textAlign:"center",padding:30,color:T.muted,fontSize:13}}>No committees loading — check connection.</td></tr>}
               {committees.map((c,ci)=>{
                 const done=MONTH_NUMS.filter(m=>hasScheduled(c.id,m)).length;
                 const exp=freqMonths(c.frequency).length;
@@ -5667,7 +5667,7 @@ function StatutoryLicensesScreen({ hospitalId }) {
 
   const filtered=filter==="all"?licenses:filter==="expired"?licenses.filter(l=>getStatus(l.expiry_date).label==="EXPIRED"):filter==="expiring"?licenses.filter(l=>getStatus(l.expiry_date).color===T.orange):licenses.filter(l=>getStatus(l.expiry_date).color===T.green);
 
-  const inp={width:"100%",padding:"8px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12,boxSizing:"border-box"};
+  const inp={width:"100%",padding:"8px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14,boxSizing:"border-box"};
 
   if(loading)return<div style={{textAlign:"center",padding:40,color:T.muted}}>Loading…</div>;
 
@@ -5675,10 +5675,10 @@ function StatutoryLicensesScreen({ hospitalId }) {
     <div>
       <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:14,flexWrap:"wrap",gap:8}}>
         <div>
-          <div style={{fontSize:14,fontWeight:700,color:T.gold}}>📋 Statutory License Tracker</div>
-          <div style={{fontSize:10,color:T.muted}}>Track all mandatory licenses — get alerted before expiry</div>
+          <div style={{fontSize:16,fontWeight:700,color:T.gold}}>📋 Statutory License Tracker</div>
+          <div style={{fontSize:12,color:T.muted}}>Track all mandatory licenses — get alerted before expiry</div>
         </div>
-        <button onClick={()=>{setShowAdd(true);setEditId(null);setForm({license_name:"",issuing_authority:"",license_type:"",license_number:"",issue_date:"",expiry_date:"",evidence_url:"",notes:""}); }} style={{padding:"7px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:11,fontWeight:700,cursor:"pointer"}}>+ Add License</button>
+        <button onClick={()=>{setShowAdd(true);setEditId(null);setForm({license_name:"",issuing_authority:"",license_type:"",license_number:"",issue_date:"",expiry_date:"",evidence_url:"",notes:""}); }} style={{padding:"7px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer"}}>+ Add License</button>
       </div>
 
       {/* Summary cards */}
@@ -5686,7 +5686,7 @@ function StatutoryLicensesScreen({ hospitalId }) {
         {[["Total",licenses.length,T.blue],["Valid",valid,T.green],["Expiring Soon",expiring,T.orange],["Expired",expired,T.red]].map(([label,count,color])=>(
           <div key={label} style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",textAlign:"center"}}>
             <div style={{fontSize:22,fontWeight:800,color}}>{count}</div>
-            <div style={{fontSize:9,color:T.muted,marginTop:2}}>{label}</div>
+            <div style={{fontSize:11,color:T.muted,marginTop:2}}>{label}</div>
           </div>
         ))}
       </div>
@@ -5694,52 +5694,52 @@ function StatutoryLicensesScreen({ hospitalId }) {
       {/* Filter */}
       <div style={{display:"flex",gap:6,marginBottom:12}}>
         {[["all","All"],["valid","Valid"],["expiring","Expiring"],["expired","Expired"]].map(([val,label])=>(
-          <button key={val} onClick={()=>setFilter(val)} style={{padding:"4px 12px",borderRadius:6,border:`1px solid ${filter===val?T.gold:T.border}`,background:filter===val?T.goldD:"transparent",color:filter===val?T.goldL:T.muted,fontSize:9,cursor:"pointer"}}>{label}</button>
+          <button key={val} onClick={()=>setFilter(val)} style={{padding:"4px 12px",borderRadius:6,border:`1px solid ${filter===val?T.gold:T.border}`,background:filter===val?T.goldD:"transparent",color:filter===val?T.goldL:T.muted,fontSize:11,cursor:"pointer"}}>{label}</button>
         ))}
       </div>
 
       {/* Add/Edit form */}
       {showAdd&&(
         <div style={{background:T.panel,border:`1px solid ${T.gold}40`,borderRadius:12,padding:18,marginBottom:16}}>
-          <div style={{fontSize:12,fontWeight:700,color:T.gold,marginBottom:12}}>{editId?"Edit License":"Add New License"}</div>
+          <div style={{fontSize:14,fontWeight:700,color:T.gold,marginBottom:12}}>{editId?"Edit License":"Add New License"}</div>
 
           {/* Quick templates */}
           {!editId&&(
             <div style={{marginBottom:14}}>
-              <div style={{fontSize:9,color:T.muted,marginBottom:6,letterSpacing:1}}>QUICK ADD FROM TEMPLATE</div>
+              <div style={{fontSize:11,color:T.muted,marginBottom:6,letterSpacing:1}}>QUICK ADD FROM TEMPLATE</div>
               <div style={{display:"flex",flexWrap:"wrap",gap:5}}>
                 {LICENSE_TEMPLATES.map(t=>(
-                  <button key={t.name} onClick={()=>addTemplate(t)} style={{padding:"3px 8px",borderRadius:5,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:9,cursor:"pointer"}}>{t.name}</button>
+                  <button key={t.name} onClick={()=>addTemplate(t)} style={{padding:"3px 8px",borderRadius:5,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:11,cursor:"pointer"}}>{t.name}</button>
                 ))}
               </div>
             </div>
           )}
 
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
-            <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>LICENSE NAME *</div><input style={inp} value={form.license_name} onChange={e=>setForm(f=>({...f,license_name:e.target.value}))}/></div>
-            <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>ISSUING AUTHORITY</div><input style={inp} value={form.issuing_authority} onChange={e=>setForm(f=>({...f,issuing_authority:e.target.value}))}/></div>
-            <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>LICENSE NUMBER</div><input style={inp} value={form.license_number} onChange={e=>setForm(f=>({...f,license_number:e.target.value}))}/></div>
-            <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>TYPE</div>
+            <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>LICENSE NAME *</div><input style={inp} value={form.license_name} onChange={e=>setForm(f=>({...f,license_name:e.target.value}))}/></div>
+            <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>ISSUING AUTHORITY</div><input style={inp} value={form.issuing_authority} onChange={e=>setForm(f=>({...f,issuing_authority:e.target.value}))}/></div>
+            <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>LICENSE NUMBER</div><input style={inp} value={form.license_number} onChange={e=>setForm(f=>({...f,license_number:e.target.value}))}/></div>
+            <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>TYPE</div>
               <select style={inp} value={form.license_type} onChange={e=>setForm(f=>({...f,license_type:e.target.value}))}>
                 <option value="">Select type…</option>
                 {["Safety","Waste","Environmental","Clinical","Regulatory","Infrastructure","Radiation","Accreditation","Quality"].map(t=><option key={t} value={t}>{t}</option>)}
               </select>
             </div>
-            <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>ISSUE DATE</div><input style={inp} type="date" value={form.issue_date} onChange={e=>setForm(f=>({...f,issue_date:e.target.value}))}/></div>
-            <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>EXPIRY DATE</div><input style={inp} type="date" value={form.expiry_date} onChange={e=>setForm(f=>({...f,expiry_date:e.target.value}))}/></div>
-            <div style={{gridColumn:"span 2"}}><div style={{fontSize:9,color:T.muted,marginBottom:4}}>EVIDENCE LINK (Google Drive / OneDrive URL)</div><input style={inp} placeholder="https://drive.google.com/…" value={form.evidence_url} onChange={e=>setForm(f=>({...f,evidence_url:e.target.value}))}/></div>
-            <div style={{gridColumn:"span 2"}}><div style={{fontSize:9,color:T.muted,marginBottom:4}}>NOTES</div><input style={inp} placeholder="Renewal in progress, contact person, etc." value={form.notes} onChange={e=>setForm(f=>({...f,notes:e.target.value}))}/></div>
+            <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>ISSUE DATE</div><input style={inp} type="date" value={form.issue_date} onChange={e=>setForm(f=>({...f,issue_date:e.target.value}))}/></div>
+            <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>EXPIRY DATE</div><input style={inp} type="date" value={form.expiry_date} onChange={e=>setForm(f=>({...f,expiry_date:e.target.value}))}/></div>
+            <div style={{gridColumn:"span 2"}}><div style={{fontSize:11,color:T.muted,marginBottom:4}}>EVIDENCE LINK (Google Drive / OneDrive URL)</div><input style={inp} placeholder="https://drive.google.com/…" value={form.evidence_url} onChange={e=>setForm(f=>({...f,evidence_url:e.target.value}))}/></div>
+            <div style={{gridColumn:"span 2"}}><div style={{fontSize:11,color:T.muted,marginBottom:4}}>NOTES</div><input style={inp} placeholder="Renewal in progress, contact person, etc." value={form.notes} onChange={e=>setForm(f=>({...f,notes:e.target.value}))}/></div>
           </div>
           <div style={{display:"flex",gap:8,marginTop:12}}>
-            <button onClick={save} disabled={saving||!form.license_name.trim()} style={{padding:"8px 20px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:11,fontWeight:700,cursor:"pointer",opacity:saving?0.6:1}}>{saving?"Saving…":"Save License"}</button>
-            <button onClick={()=>{setShowAdd(false);setEditId(null);}} style={{padding:"8px 16px",borderRadius:8,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:11,cursor:"pointer"}}>Cancel</button>
+            <button onClick={save} disabled={saving||!form.license_name.trim()} style={{padding:"8px 20px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer",opacity:saving?0.6:1}}>{saving?"Saving…":"Save License"}</button>
+            <button onClick={()=>{setShowAdd(false);setEditId(null);}} style={{padding:"8px 16px",borderRadius:8,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:13,cursor:"pointer"}}>Cancel</button>
           </div>
         </div>
       )}
 
       {/* License list */}
       {filtered.length===0?(
-        <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"30px",textAlign:"center",color:T.muted,fontSize:11}}>
+        <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"30px",textAlign:"center",color:T.muted,fontSize:13}}>
           {licenses.length===0?"No licenses added yet. Click '+ Add License' to start tracking.":"No licenses in this filter."}
         </div>
       ):(
@@ -5749,20 +5749,20 @@ function StatutoryLicensesScreen({ hospitalId }) {
             return(
               <div key={l.id} style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",display:"flex",gap:12,alignItems:"center",flexWrap:"wrap"}}>
                 <div style={{flex:1,minWidth:180}}>
-                  <div style={{fontSize:12,fontWeight:700,color:T.white}}>{l.license_name}</div>
-                  <div style={{fontSize:10,color:T.muted,marginTop:2}}>{l.issuing_authority||"—"}{l.license_number&&<span style={{marginLeft:8,color:T.blue}}>#{l.license_number}</span>}</div>
-                  {l.notes&&<div style={{fontSize:9,color:T.muted,marginTop:3}}>{l.notes}</div>}
+                  <div style={{fontSize:14,fontWeight:700,color:T.white}}>{l.license_name}</div>
+                  <div style={{fontSize:12,color:T.muted,marginTop:2}}>{l.issuing_authority||"—"}{l.license_number&&<span style={{marginLeft:8,color:T.blue}}>#{l.license_number}</span>}</div>
+                  {l.notes&&<div style={{fontSize:11,color:T.muted,marginTop:3}}>{l.notes}</div>}
                 </div>
                 <div style={{textAlign:"center",minWidth:80}}>
-                  <div style={{fontSize:9,color:T.muted}}>EXPIRY</div>
-                  <div style={{fontSize:11,color:T.text,marginTop:2}}>{l.expiry_date?new Date(l.expiry_date).toLocaleDateString("en-IN",{day:"2-digit",month:"short",year:"numeric"}):"Not set"}</div>
+                  <div style={{fontSize:11,color:T.muted}}>EXPIRY</div>
+                  <div style={{fontSize:13,color:T.text,marginTop:2}}>{l.expiry_date?new Date(l.expiry_date).toLocaleDateString("en-IN",{day:"2-digit",month:"short",year:"numeric"}):"Not set"}</div>
                 </div>
-                <div style={{padding:"4px 10px",borderRadius:8,background:st.bg,border:`1px solid ${st.color}30`,fontSize:9,fontWeight:700,color:st.color,minWidth:90,textAlign:"center"}}>{st.label}</div>
+                <div style={{padding:"4px 10px",borderRadius:8,background:st.bg,border:`1px solid ${st.color}30`,fontSize:11,fontWeight:700,color:st.color,minWidth:90,textAlign:"center"}}>{st.label}</div>
                 {l.license_type&&<div style={{padding:"3px 8px",borderRadius:6,background:T.blueD,border:`1px solid ${T.blue}30`,fontSize:8,color:T.blue}}>{l.license_type}</div>}
                 <div style={{display:"flex",gap:6,alignItems:"center"}}>
-                  {l.evidence_url&&<a href={l.evidence_url} target="_blank" rel="noopener noreferrer" style={{padding:"4px 10px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:9,textDecoration:"none",fontWeight:600}}>📎 View</a>}
-                  <button onClick={()=>startEdit(l)} style={{padding:"4px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:9,cursor:"pointer"}}>Edit</button>
-                  <button onClick={()=>del(l.id)} style={{padding:"4px 10px",borderRadius:6,border:`1px solid ${T.red}30`,background:"transparent",color:T.red,fontSize:9,cursor:"pointer"}}>Delete</button>
+                  {l.evidence_url&&<a href={l.evidence_url} target="_blank" rel="noopener noreferrer" style={{padding:"4px 10px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:11,textDecoration:"none",fontWeight:600}}>📎 View</a>}
+                  <button onClick={()=>startEdit(l)} style={{padding:"4px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:11,cursor:"pointer"}}>Edit</button>
+                  <button onClick={()=>del(l.id)} style={{padding:"4px 10px",borderRadius:6,border:`1px solid ${T.red}30`,background:"transparent",color:T.red,fontSize:11,cursor:"pointer"}}>Delete</button>
                 </div>
               </div>
             );
@@ -6002,7 +6002,7 @@ function PatientTracerScreen({ hospitalId }) {
 
   const scoreColor=(pct)=>pct>=80?T.green:pct>=60?T.orange:T.red;
 
-  const inp={width:"100%",padding:"8px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:12,boxSizing:"border-box"};
+  const inp={width:"100%",padding:"8px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14,boxSizing:"border-box"};
 
   if(loading)return<div style={{textAlign:"center",padding:40,color:T.muted}}>Loading…</div>;
 
@@ -6011,10 +6011,10 @@ function PatientTracerScreen({ hospitalId }) {
     <div>
       <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:14,flexWrap:"wrap",gap:8}}>
         <div>
-          <div style={{fontSize:14,fontWeight:700,color:T.gold}}>🩺 Patient Tracer</div>
-          <div style={{fontSize:10,color:T.muted}}>Simulate assessor patient file review — identify gaps before they do</div>
+          <div style={{fontSize:16,fontWeight:700,color:T.gold}}>🩺 Patient Tracer</div>
+          <div style={{fontSize:12,color:T.muted}}>Simulate assessor patient file review — identify gaps before they do</div>
         </div>
-        <button onClick={startNew} style={{padding:"7px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:11,fontWeight:700,cursor:"pointer"}}>+ New Tracer</button>
+        <button onClick={startNew} style={{padding:"7px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer"}}>+ New Tracer</button>
       </div>
 
       {/* Tracer type cards */}
@@ -6025,12 +6025,12 @@ function PatientTracerScreen({ hospitalId }) {
           return(
             <div key={type} style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px",cursor:"pointer"}} onClick={()=>{setTracerType(type);startNew();}}>
               <div style={{fontSize:20,marginBottom:6}}>{data.icon}</div>
-              <div style={{fontSize:11,fontWeight:700,color:T.white,marginBottom:3}}>{type}</div>
-              <div style={{fontSize:9,color:T.muted,marginBottom:8,lineHeight:1.4}}>{data.questions.length} questions</div>
+              <div style={{fontSize:13,fontWeight:700,color:T.white,marginBottom:3}}>{type}</div>
+              <div style={{fontSize:11,color:T.muted,marginBottom:8,lineHeight:1.4}}>{data.questions.length} questions</div>
               {avg!==null?(
-                <div style={{fontSize:10,fontWeight:700,color:scoreColor(avg)}}>{avg}% avg ({done.length} done)</div>
+                <div style={{fontSize:12,fontWeight:700,color:scoreColor(avg)}}>{avg}% avg ({done.length} done)</div>
               ):(
-                <div style={{fontSize:9,color:T.muted}}>Not conducted yet</div>
+                <div style={{fontSize:11,color:T.muted}}>Not conducted yet</div>
               )}
             </div>
           );
@@ -6040,20 +6040,20 @@ function PatientTracerScreen({ hospitalId }) {
       {/* History */}
       {tracers.length>0&&(
         <>
-          <div style={{fontSize:11,fontWeight:700,color:T.gold,marginBottom:10}}>Recent Tracers</div>
+          <div style={{fontSize:13,fontWeight:700,color:T.gold,marginBottom:10}}>Recent Tracers</div>
           <div style={{display:"grid",gap:8}}>
             {tracers.slice(0,10).map(t=>(
               <div key={t.id} style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",display:"flex",gap:12,alignItems:"center",flexWrap:"wrap"}}>
                 <div style={{fontSize:18}}>{TRACER_TYPES[t.tracer_type]?.icon||"🩺"}</div>
                 <div style={{flex:1,minWidth:150}}>
-                  <div style={{fontSize:11,fontWeight:700,color:T.white}}>{t.tracer_type}</div>
-                  <div style={{fontSize:9,color:T.muted}}>{t.patient_ref&&`Patient: ${t.patient_ref} · `}{t.conducted_by&&`By: ${t.conducted_by} · `}{new Date(t.conducted_date).toLocaleDateString("en-IN")}</div>
+                  <div style={{fontSize:13,fontWeight:700,color:T.white}}>{t.tracer_type}</div>
+                  <div style={{fontSize:11,color:T.muted}}>{t.patient_ref&&`Patient: ${t.patient_ref} · `}{t.conducted_by&&`By: ${t.conducted_by} · `}{new Date(t.conducted_date).toLocaleDateString("en-IN")}</div>
                 </div>
                 <div style={{textAlign:"center"}}>
                   <div style={{fontSize:18,fontWeight:800,color:scoreColor(t.score_pct)}}>{t.score_pct}%</div>
                   <div style={{fontSize:8,color:T.muted}}>Score</div>
                 </div>
-                <div style={{padding:"3px 10px",borderRadius:7,background:t.score_pct>=80?T.greenD:t.score_pct>=60?T.orangeD:T.redD,color:scoreColor(t.score_pct),fontSize:9,fontWeight:700}}>
+                <div style={{padding:"3px 10px",borderRadius:7,background:t.score_pct>=80?T.greenD:t.score_pct>=60?T.orangeD:T.redD,color:scoreColor(t.score_pct),fontSize:11,fontWeight:700}}>
                   {t.score_pct>=80?"READY":t.score_pct>=60?"PARTIAL":"NOT READY"}
                 </div>
               </div>
@@ -6063,7 +6063,7 @@ function PatientTracerScreen({ hospitalId }) {
       )}
 
       {tracers.length===0&&(
-        <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"30px",textAlign:"center",color:T.muted,fontSize:11}}>
+        <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"30px",textAlign:"center",color:T.muted,fontSize:13}}>
           No tracers conducted yet. Click a tracer type above or '+ New Tracer' to start.
         </div>
       )}
@@ -6074,17 +6074,17 @@ function PatientTracerScreen({ hospitalId }) {
   if(view==="new")return(
     <div>
       <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:16}}>
-        <button onClick={()=>setView("list")} style={{padding:"4px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:10,cursor:"pointer"}}>← Back</button>
-        <div style={{fontSize:13,fontWeight:700,color:T.gold}}>New Patient Tracer</div>
+        <button onClick={()=>setView("list")} style={{padding:"4px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:12,cursor:"pointer"}}>← Back</button>
+        <div style={{fontSize:15,fontWeight:700,color:T.gold}}>New Patient Tracer</div>
       </div>
 
       {/* Select tracer type */}
-      <div style={{fontSize:9,color:T.muted,marginBottom:8,letterSpacing:1}}>SELECT TRACER TYPE</div>
+      <div style={{fontSize:11,color:T.muted,marginBottom:8,letterSpacing:1}}>SELECT TRACER TYPE</div>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(140px,1fr))",gap:8,marginBottom:18}}>
         {Object.entries(TRACER_TYPES).map(([type,data])=>(
           <div key={type} onClick={()=>setTracerType(type)} style={{background:tracerType===type?`${data.color}15`:T.panel,border:`1px solid ${tracerType===type?data.color:T.border}`,borderRadius:9,padding:"10px",cursor:"pointer",textAlign:"center"}}>
             <div style={{fontSize:18,marginBottom:4}}>{data.icon}</div>
-            <div style={{fontSize:10,fontWeight:700,color:tracerType===type?data.color:T.text}}>{type}</div>
+            <div style={{fontSize:12,fontWeight:700,color:tracerType===type?data.color:T.text}}>{type}</div>
             <div style={{fontSize:8,color:T.muted,marginTop:2}}>{data.questions.length}Q</div>
           </div>
         ))}
@@ -6092,16 +6092,16 @@ function PatientTracerScreen({ hospitalId }) {
 
       {/* Meta info */}
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:16,marginBottom:14}}>
-        <div style={{fontSize:11,fontWeight:700,color:T.gold,marginBottom:12}}>Tracer Details (Optional)</div>
+        <div style={{fontSize:13,fontWeight:700,color:T.gold,marginBottom:12}}>Tracer Details (Optional)</div>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
-          <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>PATIENT REF / FILE NO.</div><input style={inp} placeholder="e.g. IPD/2026/1234" value={meta.patient_ref} onChange={e=>setMeta(m=>({...m,patient_ref:e.target.value}))}/></div>
-          <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>CONDUCTED BY</div><input style={inp} placeholder="Name / Designation" value={meta.conducted_by} onChange={e=>setMeta(m=>({...m,conducted_by:e.target.value}))}/></div>
-          <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>DATE</div><input style={inp} type="date" value={meta.conducted_date} onChange={e=>setMeta(m=>({...m,conducted_date:e.target.value}))}/></div>
-          <div><div style={{fontSize:9,color:T.muted,marginBottom:4}}>NOTES</div><input style={inp} placeholder="Any observations…" value={meta.notes} onChange={e=>setMeta(m=>({...m,notes:e.target.value}))}/></div>
+          <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>PATIENT REF / FILE NO.</div><input style={inp} placeholder="e.g. IPD/2026/1234" value={meta.patient_ref} onChange={e=>setMeta(m=>({...m,patient_ref:e.target.value}))}/></div>
+          <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>CONDUCTED BY</div><input style={inp} placeholder="Name / Designation" value={meta.conducted_by} onChange={e=>setMeta(m=>({...m,conducted_by:e.target.value}))}/></div>
+          <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>DATE</div><input style={inp} type="date" value={meta.conducted_date} onChange={e=>setMeta(m=>({...m,conducted_date:e.target.value}))}/></div>
+          <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>NOTES</div><input style={inp} placeholder="Any observations…" value={meta.notes} onChange={e=>setMeta(m=>({...m,notes:e.target.value}))}/></div>
         </div>
       </div>
 
-      <button onClick={startConduct} style={{width:"100%",padding:"12px",borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer"}}>
+      <button onClick={startConduct} style={{width:"100%",padding:"12px",borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:15,fontWeight:700,cursor:"pointer"}}>
         Start {tracerType} Tracer ({TRACER_TYPES[tracerType].questions.length} questions) →
       </button>
     </div>
@@ -6116,12 +6116,12 @@ function PatientTracerScreen({ hospitalId }) {
     return(
       <div>
         <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:12,flexWrap:"wrap"}}>
-          <button onClick={()=>setView("new")} style={{padding:"4px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:10,cursor:"pointer"}}>← Back</button>
+          <button onClick={()=>setView("new")} style={{padding:"4px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:12,cursor:"pointer"}}>← Back</button>
           <div style={{flex:1}}>
-            <div style={{fontSize:13,fontWeight:700,color:tdata.color}}>{tdata.icon} {tracerType}</div>
-            <div style={{fontSize:9,color:T.muted}}>{answered}/{tdata.questions.length} answered · Score: {pct}%</div>
+            <div style={{fontSize:15,fontWeight:700,color:tdata.color}}>{tdata.icon} {tracerType}</div>
+            <div style={{fontSize:11,color:T.muted}}>{answered}/{tdata.questions.length} answered · Score: {pct}%</div>
           </div>
-          <button onClick={saveTracer} disabled={saving} style={{padding:"7px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:11,fontWeight:700,cursor:"pointer",opacity:saving?0.6:1}}>{saving?"Saving…":"Save & Finish"}</button>
+          <button onClick={saveTracer} disabled={saving} style={{padding:"7px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer",opacity:saving?0.6:1}}>{saving?"Saving…":"Save & Finish"}</button>
         </div>
 
         {/* Progress bar */}
@@ -6135,14 +6135,14 @@ function PatientTracerScreen({ hospitalId }) {
             return(
               <div key={q.id} style={{background:T.panel,border:`1px solid ${resp?"#0f2640":T.border}`,borderRadius:10,padding:"12px 16px"}}>
                 <div style={{display:"flex",gap:10,alignItems:"flex-start"}}>
-                  <div style={{width:22,height:22,borderRadius:11,background:resp==="yes"?T.greenD:resp==="partial"?T.orangeD:resp==="no"?T.redD:T.panel2,border:`1px solid ${resp==="yes"?T.green:resp==="partial"?T.orange:resp==="no"?T.red:T.border}`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:9,fontWeight:700,color:resp==="yes"?T.green:resp==="partial"?T.orange:resp==="no"?T.red:T.muted,flexShrink:0,marginTop:1}}>{idx+1}</div>
+                  <div style={{width:22,height:22,borderRadius:11,background:resp==="yes"?T.greenD:resp==="partial"?T.orangeD:resp==="no"?T.redD:T.panel2,border:`1px solid ${resp==="yes"?T.green:resp==="partial"?T.orange:resp==="no"?T.red:T.border}`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,fontWeight:700,color:resp==="yes"?T.green:resp==="partial"?T.orange:resp==="no"?T.red:T.muted,flexShrink:0,marginTop:1}}>{idx+1}</div>
                   <div style={{flex:1}}>
-                    <div style={{fontSize:11,color:T.white,lineHeight:1.5,marginBottom:8}}>{q.q}</div>
+                    <div style={{fontSize:13,color:T.white,lineHeight:1.5,marginBottom:8}}>{q.q}</div>
                     <div style={{fontSize:8,color:T.muted,marginBottom:8}}>OE: {q.oe}</div>
                     <div style={{display:"flex",gap:8}}>
                       {[["yes","✓ Yes",T.green],["partial","~ Partial",T.orange],["no","✗ No",T.red]].map(([val,label,color])=>(
                         <button key={val} onClick={()=>setResp(q.id,resp===val?null:val)}
-                          style={{padding:"5px 14px",borderRadius:7,border:`1px solid ${resp===val?color:T.border}`,background:resp===val?`${color}20`:"transparent",color:resp===val?color:T.muted,fontSize:10,fontWeight:resp===val?700:400,cursor:"pointer"}}>
+                          style={{padding:"5px 14px",borderRadius:7,border:`1px solid ${resp===val?color:T.border}`,background:resp===val?`${color}20`:"transparent",color:resp===val?color:T.muted,fontSize:12,fontWeight:resp===val?700:400,cursor:"pointer"}}>
                           {label}
                         </button>
                       ))}
@@ -6156,10 +6156,10 @@ function PatientTracerScreen({ hospitalId }) {
 
         <div style={{marginTop:16,background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"14px 18px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
           <div>
-            <div style={{fontSize:11,color:T.text}}>{answered} of {tdata.questions.length} questions answered</div>
-            <div style={{fontSize:9,color:T.muted,marginTop:2}}>Score: <span style={{color:scoreColor(pct),fontWeight:700}}>{pct}%</span> — {pct>=80?"Ready for assessment":pct>=60?"Needs improvement":"Critical gaps found"}</div>
+            <div style={{fontSize:13,color:T.text}}>{answered} of {tdata.questions.length} questions answered</div>
+            <div style={{fontSize:11,color:T.muted,marginTop:2}}>Score: <span style={{color:scoreColor(pct),fontWeight:700}}>{pct}%</span> — {pct>=80?"Ready for assessment":pct>=60?"Needs improvement":"Critical gaps found"}</div>
           </div>
-          <button onClick={saveTracer} disabled={saving} style={{padding:"9px 22px",borderRadius:9,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:12,fontWeight:700,cursor:"pointer",opacity:saving?0.6:1}}>{saving?"Saving…":"Save & Finish"}</button>
+          <button onClick={saveTracer} disabled={saving} style={{padding:"9px 22px",borderRadius:9,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:14,fontWeight:700,cursor:"pointer",opacity:saving?0.6:1}}>{saving?"Saving…":"Save & Finish"}</button>
         </div>
       </div>
     );
