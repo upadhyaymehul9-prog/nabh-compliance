@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delete Your Account — AccredReady</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: #050e1a;
+      color: #c8dcea;
+      line-height: 1.75;
+      font-size: 15px;
+    }
+    a { color: #c9a84c; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: linear-gradient(90deg, #040d1a, #08192e);
+      border-bottom: 1px solid #0f2640;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.6);
+    }
+    .logo {
+      width: 34px; height: 34px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #c9a84c, #f0d070);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: #050e1a; font-weight: 900;
+      flex-shrink: 0;
+    }
+    .brand-sub { font-size: 8px; letter-spacing: 3px; color: #c9a84c; text-transform: uppercase; }
+    .brand-name { font-size: 15px; font-weight: 700; color: #ffffff; }
+    header nav { margin-left: auto; }
+    header nav a {
+      font-size: 12px; color: #c8dcea;
+      padding: 5px 12px; border-radius: 6px;
+      border: 1px solid #0f2640;
+    }
+    header nav a:hover { border-color: #c9a84c; color: #c9a84c; text-decoration: none; }
+
+    .hero {
+      background: linear-gradient(180deg, #08192e 0%, #050e1a 100%);
+      border-bottom: 1px solid #0f2640;
+      padding: 52px 24px 44px;
+      text-align: center;
+    }
+    .hero-tag {
+      display: inline-block;
+      font-size: 10px; letter-spacing: 3px; font-weight: 700;
+      color: #e05a5a; background: rgba(224,90,90,0.10);
+      border: 1px solid rgba(224,90,90,0.25);
+      border-radius: 20px; padding: 4px 14px; margin-bottom: 16px;
+    }
+    .hero h1 { font-size: 32px; font-weight: 800; color: #eef4f9; margin-bottom: 10px; }
+    .hero p { color: #7a9db8; font-size: 14px; }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 44px 24px 80px;
+    }
+
+    section { margin-bottom: 40px; }
+
+    h2 {
+      font-size: 13px; font-weight: 700; letter-spacing: 2px;
+      color: #c9a84c; text-transform: uppercase;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #0f2640;
+    }
+
+    p { margin-bottom: 12px; color: #c8dcea; }
+
+    /* Step card */
+    .steps { display: grid; gap: 12px; margin-bottom: 12px; }
+    .step {
+      display: flex; gap: 16px; align-items: flex-start;
+      background: #081525;
+      border: 1px solid #0f2640;
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+    .step-num {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.35);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 800; color: #c9a84c;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .step-body { flex: 1; }
+    .step-title { font-size: 14px; font-weight: 700; color: #eef4f9; margin-bottom: 4px; }
+    .step-desc { font-size: 13px; color: #7a9db8; line-height: 1.6; }
+    .step-desc code {
+      background: #0a1e35; border: 1px solid #1a3a55;
+      border-radius: 4px; padding: 1px 6px; font-size: 12px; color: #c9a84c;
+      font-family: "Consolas", "Courier New", monospace;
+    }
+
+    /* What gets deleted list */
+    ul {
+      list-style: none;
+      display: grid; gap: 8px;
+      margin-bottom: 12px;
+    }
+    ul li {
+      padding: 10px 14px;
+      background: #0d0a0a;
+      border: 1px solid rgba(224,90,90,0.18);
+      border-radius: 8px;
+      font-size: 14px;
+      color: #c8dcea;
+      display: flex; gap: 10px; align-items: flex-start;
+    }
+    ul li::before { content: "✕"; color: #e05a5a; font-weight: 900; flex-shrink: 0; font-size: 11px; margin-top: 2px; }
+
+    .highlight {
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+    }
+    .highlight p { color: #e8d9a0; margin-bottom: 0; font-size: 14px; }
+
+    .warning-box {
+      background: rgba(224,90,90,0.08);
+      border: 1px solid rgba(224,90,90,0.30);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+    }
+    .warning-box p { color: #f0a0a0; margin-bottom: 0; font-size: 14px; }
+
+    .method-header {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 14px;
+    }
+    .method-badge {
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      padding: 3px 10px; border-radius: 20px;
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.30);
+      color: #c9a84c;
+    }
+    .method-badge.alt {
+      background: rgba(79,195,247,0.10);
+      border-color: rgba(79,195,247,0.30);
+      color: #4fc3f7;
+    }
+
+    .contact-box {
+      background: #081525;
+      border: 1px solid rgba(201,168,76,0.30);
+      border-radius: 10px;
+      padding: 20px 22px;
+    }
+    .contact-box p { font-size: 13px; color: #7a9db8; margin-bottom: 8px; }
+    .contact-box a { font-size: 16px; font-weight: 700; color: #c9a84c; }
+    .contact-box .subject { font-size: 12px; color: #4fc3f7; margin-top: 8px; margin-bottom: 0; }
+
+    .timeline {
+      display: flex; gap: 0; margin-bottom: 16px; position: relative;
+    }
+    .timeline::before {
+      content: ""; position: absolute;
+      top: 18px; left: 18px; right: 18px; height: 2px;
+      background: linear-gradient(90deg, #c9a84c, #4fc3f7, #e05a5a);
+      z-index: 0;
+    }
+    .tl-item {
+      flex: 1; text-align: center; position: relative; z-index: 1;
+    }
+    .tl-dot {
+      width: 36px; height: 36px; border-radius: 50%;
+      margin: 0 auto 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; font-weight: 800;
+    }
+    .tl-dot.gold { background: rgba(201,168,76,0.20); border: 2px solid #c9a84c; color: #c9a84c; }
+    .tl-dot.blue { background: rgba(79,195,247,0.15); border: 2px solid #4fc3f7; color: #4fc3f7; }
+    .tl-dot.red  { background: rgba(224,90,90,0.15);  border: 2px solid #e05a5a; color: #e05a5a; }
+    .tl-label { font-size: 11px; font-weight: 700; color: #eef4f9; margin-bottom: 3px; }
+    .tl-sub   { font-size: 10px; color: #7a9db8; line-height: 1.4; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 11px;
+      color: #2a4560;
+      border-top: 1px solid #0f2640;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">⚕</div>
+  <div>
+    <div class="brand-sub">NABH 6th Edition</div>
+    <div class="brand-name">AccredReady</div>
+  </div>
+  <nav>
+    <a href="/">← Back to App</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-tag">ACCOUNT MANAGEMENT</div>
+  <h1>Delete Your Account</h1>
+  <p>Two ways to permanently remove your AccredReady account and all associated data.</p>
+</div>
+
+<main>
+
+  <section>
+    <h2>Before You Delete</h2>
+    <div class="warning-box">
+      <p>
+        ⚠️ <strong>Deletion is permanent and irreversible.</strong> Once confirmed, there is no recovery option.
+        We recommend exporting a PDF report of your compliance data before proceeding —
+        use the <strong>⬇ Export PDF</strong> button on the Dashboard screen.
+      </p>
+    </div>
+    <div class="highlight">
+      <p>
+        If you only want to sign out of a device, use <strong>Profile → Sign out</strong> instead.
+        Your data will remain intact and accessible when you sign in again.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What Gets Deleted</h2>
+    <p>The following data is permanently and immediately removed from our database:</p>
+    <ul>
+      <li>Your hospital profile and name</li>
+      <li>All assessments linked to your hospital</li>
+      <li>All OE scores and evidence links</li>
+      <li>All CAPA (Corrective and Preventive Action) records</li>
+      <li>All KPI data entries and custom KPI targets</li>
+      <li>All internal audit records and custom audit templates</li>
+      <li>All mock drill records</li>
+      <li>All committee meeting logs</li>
+      <li>All committee calendar plans</li>
+      <li>All checklist progress records</li>
+      <li>All statutory license records</li>
+      <li>All patient tracer records</li>
+      <li>Your authentication account (email address and password)</li>
+    </ul>
+    <p style="font-size:13px; color:#7a9db8;">
+      Any residual data in Supabase's automated backup snapshots is purged within 30 days as those
+      backup windows expire. No manual retention occurs after that point.
+    </p>
+  </section>
+
+  <section>
+    <h2>Deletion Timeline</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot gold">1</div>
+        <div class="tl-label">Immediate</div>
+        <div class="tl-sub">All live data removed from database</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot blue">7</div>
+        <div class="tl-label">7 Days</div>
+        <div class="tl-sub">Email requests processed within 7 business days</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot red">30</div>
+        <div class="tl-label">30 Days</div>
+        <div class="tl-sub">Residual backup snapshots fully purged</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Method 1 — In-App (Instant)</h2>
+    <div class="method-header">
+      <span class="method-badge">RECOMMENDED</span>
+      <span style="font-size:13px; color:#7a9db8;">Available to all signed-in users</span>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-title">Open the app and sign in</div>
+          <div class="step-desc">Go to <a href="/">accredready.in</a> and sign in with your email and password.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-title">Navigate to Profile</div>
+          <div class="step-desc">
+            In the top navigation bar, click <code>•••</code> (More menu), then select
+            <code>👤 Profile</code>.
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-title">Scroll to Danger Zone</div>
+          <div class="step-desc">
+            Scroll to the bottom of the Profile page to find the
+            <code>⚠️ DANGER ZONE</code> section.
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-title">Click "Delete Account"</div>
+          <div class="step-desc">
+            Click the <code>Delete Account</code> button. A confirmation modal will appear
+            describing everything that will be deleted.
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <div class="step-title">Confirm deletion</div>
+          <div class="step-desc">
+            Click <code>Yes, delete everything</code> to confirm. All data is deleted immediately
+            and you are signed out. The process is complete — no further steps needed.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Method 2 — Email Request</h2>
+    <div class="method-header">
+      <span class="method-badge alt">ALTERNATIVE</span>
+      <span style="font-size:13px; color:#7a9db8;">Use if you cannot access the app</span>
+    </div>
+    <p>
+      If you are unable to sign in to the app, send an email to us and we will delete your account
+      manually within <strong style="color:#eef4f9;">7 business days</strong>.
+    </p>
+    <div class="contact-box">
+      <p>Send your request to:</p>
+      <a href="mailto:dr.mehul_ku@yahoo.com?subject=Account%20Deletion%20Request">dr.mehul_ku@yahoo.com</a>
+      <p class="subject">Use subject line: <strong style="color:#eef4f9;">Account Deletion Request</strong></p>
+      <p style="margin-top:12px; font-size:13px; color:#7a9db8;">
+        Include the email address registered with your AccredReady account. We may ask for a
+        brief verification to confirm account ownership before proceeding.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>After Deletion</h2>
+    <p>
+      Once deleted, your email address is free to be used for a new AccredReady account at any
+      time. Previous data will not be restored — a new account starts completely fresh.
+    </p>
+    <p>
+      If you have questions about your data or this process, review our
+      <a href="/privacy.html">Privacy Policy</a> or contact us at
+      <a href="mailto:dr.mehul_ku@yahoo.com">dr.mehul_ku@yahoo.com</a>.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  AccredReady — Independent educational tool — Not affiliated with NABH / QCI &nbsp;|&nbsp;
+  <a href="/privacy.html">Privacy Policy</a>
+</footer>
+
+</body>
+</html>

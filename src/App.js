@@ -720,7 +720,6 @@ function LoginScreen({ onLogin, initialError }) {
     if(err){setError(err.message);setLoading(false);}
   };
   if(mode==='terms') return <TermsScreen onBack={()=>setMode('login')}/>;
-  if(mode==='privacy') return <PrivacyScreen onBack={()=>setMode('login')}/>;
   return (
     <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"Segoe UI,system-ui,sans-serif"}}>
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:16,padding:"40px 36px",width:360}}>
@@ -750,6 +749,7 @@ function LoginScreen({ onLogin, initialError }) {
         <button onClick={handle} disabled={loading} style={{width:"100%",padding:"12px",borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:15,fontWeight:700,cursor:"pointer",opacity:loading?0.7:1}}>
           {loading?"Please wait…":mode==="login"?"Sign In →":mode==="signup"?"Create Account →":"Send Reset Email →"}
         </button>
+        <div style={{fontSize:11,color:T.muted,textAlign:"center",marginTop:8}}>🔒 Secured by Supabase · No spam, ever</div>
         {mode==="login"&&(
           <>
             <div style={{display:"flex",alignItems:"center",gap:10,margin:"16px 0"}}>
@@ -768,7 +768,7 @@ function LoginScreen({ onLogin, initialError }) {
             <div style={{display:'flex',gap:20,justifyContent:'center',marginTop:14,flexWrap:'wrap'}}>
               <a href="mailto:upadhyay.mehul9@gmail.com" style={{fontSize:12,color:'#3a5870',textDecoration:'none',letterSpacing:1,textTransform:'uppercase'}}>Contact Us</a>
               <span onClick={()=>setMode('terms')} style={{fontSize:12,color:'#3a5870',cursor:'pointer',letterSpacing:1,textTransform:'uppercase'}}>Terms & Conditions</span>
-              <span onClick={()=>setMode('privacy')} style={{fontSize:12,color:'#3a5870',cursor:'pointer',letterSpacing:1,textTransform:'uppercase'}}>Privacy Policy</span>
+              <a href="/privacy.html" target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:'#3a5870',letterSpacing:1,textTransform:'uppercase',textDecoration:'none'}}>Privacy Policy</a>
             </div>
           </>
         )}
@@ -813,31 +813,6 @@ function TermsScreen({onBack}){return(
       ))}
     </div>
   );}
-function PrivacyScreen({onBack}){return(
-    <div style={{minHeight:'100vh',background:'#050e1a',color:'#c8dcea',fontFamily:'Segoe UI,sans-serif',padding:'40px 24px',maxWidth:720,margin:'0 auto'}}>
-      <button onClick={onBack} style={{background:'transparent',border:'1px solid #0f2640',color:'#3a5870',padding:'6px 16px',borderRadius:6,cursor:'pointer',fontSize:13,marginBottom:32}}>← Back to Login</button>
-      <div style={{color:'#c9a84c',fontSize:12,letterSpacing:3,marginBottom:8,textTransform:'uppercase'}}>AccredReady</div>
-      <h1 style={{fontFamily:'Georgia,serif',fontSize:28,fontWeight:300,color:'#eef4f9',marginBottom:6}}>Privacy Policy</h1>
-      <div style={{fontSize:12,color:'#3a5870',letterSpacing:1,marginBottom:32}}>Effective Date: 19 May 2026</div>
-      {[
-        ['1. What We Collect','Name and email address from Google or email signup. Hospital or facility name and data you enter including scores, KPIs, committees, and audit records. Basic usage logs for platform improvement.'],
-        ['2. How We Use It','To operate and maintain your account. To provide platform features. To send service emails only — not marketing.'],
-        ['3. Data Storage','Your data is stored on Supabase (PostgreSQL on AWS) with industry-standard encryption. We do not store data outside secured cloud infrastructure.'],
-        ['4. Data Sharing','We do not sell or share your data. The only exceptions are Supabase for infrastructure and Google for authentication — both necessary to operate the platform.'],
-        ['5. Your Rights','Access your data anytime from your account. Request correction of inaccurate data. Request full deletion — we remove all data within 30 days. Email upadhyay.mehul9@gmail.com to exercise any right.'],
-        ['6. Cookies','We use session cookies for authentication only. No tracking or advertising cookies are used.'],
-        ['7. Children','AccredReady is for healthcare professionals only. We do not knowingly collect data from anyone under 18 years of age.'],
-        ['8. Changes','We may update this policy. Registered users will be notified of significant changes by email.'],
-        ['9. Contact','Email: upadhyay.mehul9@gmail.com'],
-      ].map(([title,body])=>(
-        <div key={title} style={{marginBottom:20}}>
-          <div style={{fontSize:13,fontWeight:700,color:'#c9a84c',letterSpacing:1,textTransform:'uppercase',marginBottom:6}}>{title}</div>
-          <div style={{fontSize:15,color:'#c8dcea',lineHeight:1.8}}>{body}</div>
-        </div>
-      ))}
-    </div>
-  );}
-
 // ── ONBOARDING WIZARD (first-time users only, 1 step) ────────────────────
 function OnboardingScreen({ hospitalName, onDone }) {
   const [nabh_status, setNabhStatus] = useState("");
@@ -3311,6 +3286,9 @@ function ProfileScreen({ user, context, onContextUpdate }) {
   const [pwConfirm,setPwConfirm]=useState("");
   const [pwBusy,setPwBusy]=useState(false);
   const [toast,setToast]=useState(null);
+  const [showDeleteModal,setShowDeleteModal]=useState(false);
+  const [deleteLoading,setDeleteLoading]=useState(false);
+  const [deleteError,setDeleteError]=useState(null);
 
   useEffect(()=>{
     if(!user)return;
@@ -3354,6 +3332,64 @@ function ProfileScreen({ user, context, onContextUpdate }) {
     showToast("SAVED","Password changed successfully. Use the new password next time you sign in.");
   };
 
+  const handleDeleteAccount=async()=>{
+    if(!context?.hospitalId||!user){setDeleteError("Missing account context. Please refresh and try again.");return;}
+    setDeleteLoading(true);
+    setDeleteError(null);
+    try{
+      const{data:{session}}=await supabase.auth.getSession();
+      const accessToken=session?.access_token;
+      if(!accessToken)throw new Error("No active session — please sign in again.");
+
+      // Fetch all assessment IDs for this hospital
+      const{data:assessments}=await supabase.from("assessments").select("id").eq("hospital_id",context.hospitalId);
+      const assessmentIds=(assessments||[]).map(a=>a.id);
+
+      // Delete assessment-scoped tables
+      if(assessmentIds.length>0){
+        await supabase.from("scores").delete().in("assessment_id",assessmentIds);
+        await supabase.from("capa").delete().in("assessment_id",assessmentIds);
+      }
+
+      // Delete hospital-scoped tables
+      const hid=context.hospitalId;
+      await supabase.from("kpi_data").delete().eq("hospital_id",hid);
+      await supabase.from("audit_records").delete().eq("hospital_id",hid);
+      await supabase.from("mock_drill_records").delete().eq("hospital_id",hid);
+      await supabase.from("checklist_links").delete().eq("hospital_id",hid);
+      await supabase.from("committee_meetings").delete().eq("hospital_id",hid);
+      await supabase.from("calendar_plan").delete().eq("hospital_id",hid);
+      await supabase.from("statutory_licenses").delete().eq("hospital_id",hid);
+      await supabase.from("custom_audits").delete().eq("hospital_id",hid);
+      await supabase.from("patient_tracers").delete().eq("hospital_id",hid);
+      await supabase.from("kpi_custom_targets").delete().eq("hospital_id",hid);
+
+      // Delete assessments, then hospital
+      await supabase.from("assessments").delete().eq("hospital_id",hid);
+      await supabase.from("hospitals").delete().eq("id",hid);
+
+      // Delete the auth user account
+      const res=await fetch("https://tbptllgcjtiiqspxqcde.supabase.co/auth/v1/user",{
+        method:"DELETE",
+        headers:{
+          "Authorization":`Bearer ${accessToken}`,
+          "apikey":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRicHRsbGdjanRpaXFzcHhxY2RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY2NjkzNjAsImV4cCI6MjA5MjI0NTM2MH0.4CPgNp6ytVNRmTU0FJbu2io94QJmsAow5im-vGtoRAU",
+          "Content-Type":"application/json"
+        }
+      });
+      if(!res.ok){
+        const err=await res.json().catch(()=>({}));
+        throw new Error(err.message||`Auth deletion failed (${res.status})`);
+      }
+
+      // Sign out — auth state listener returns to LoginScreen
+      await supabase.auth.signOut();
+    }catch(e){
+      setDeleteError(e.message||"An unexpected error occurred. Please try again.");
+      setDeleteLoading(false);
+    }
+  };
+
   const memberSince=user?.created_at?new Date(user.created_at).toLocaleDateString("en-IN",{year:"numeric",month:"long",day:"numeric"}):"—";
 
   return (
@@ -3362,6 +3398,30 @@ function ProfileScreen({ user, context, onContextUpdate }) {
         <div style={{fontSize:12,fontWeight:700,marginBottom:4,color:toast.sev==="CRITICAL"?T.red:T.green}}>{toast.sev==="CRITICAL"?"🚨":"✅"} {toast.type}</div>
         <div style={{fontSize:13,color:T.text,lineHeight:1.5}}>{toast.msg}</div>
       </div>}
+
+      {showDeleteModal&&(
+        <div style={{position:"fixed",inset:0,zIndex:2000,background:"rgba(0,0,0,0.75)",display:"flex",alignItems:"center",justifyContent:"center",padding:16}}>
+          <div style={{background:T.panel,border:`2px solid ${T.red}60`,borderRadius:14,padding:"28px 24px",maxWidth:420,width:"100%",boxShadow:"0 16px 64px rgba(0,0,0,0.7)"}}>
+            <div style={{fontSize:22,marginBottom:8,textAlign:"center"}}>⚠️</div>
+            <div style={{fontSize:17,fontWeight:800,color:T.red,marginBottom:10,textAlign:"center"}}>Delete Account</div>
+            <div style={{fontSize:13,color:T.text,lineHeight:1.7,marginBottom:16,padding:"12px 14px",background:T.redD,borderRadius:8,border:`1px solid ${T.red}30`}}>
+              This will permanently delete your <strong>hospital profile</strong>, all <strong>scores</strong>, <strong>CAPA records</strong>, <strong>KPI data</strong>, <strong>audit records</strong>, and your <strong>login</strong>. <br/><br/>
+              <span style={{color:T.red,fontWeight:700}}>This cannot be undone.</span>
+            </div>
+            {deleteError&&<div style={{fontSize:12,color:T.red,background:T.redD,border:`1px solid ${T.red}30`,borderRadius:7,padding:"8px 12px",marginBottom:12}}>{deleteError}</div>}
+            <div style={{display:"flex",gap:10,justifyContent:"flex-end"}}>
+              <button onClick={()=>{setShowDeleteModal(false);setDeleteError(null);}} disabled={deleteLoading}
+                style={{padding:"9px 20px",borderRadius:8,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:13,fontWeight:700,cursor:deleteLoading?"not-allowed":"pointer",opacity:deleteLoading?0.5:1}}>
+                Cancel
+              </button>
+              <button onClick={handleDeleteAccount} disabled={deleteLoading}
+                style={{padding:"9px 20px",borderRadius:8,border:`1px solid ${T.red}70`,background:T.redD,color:T.red,fontSize:13,fontWeight:800,cursor:deleteLoading?"not-allowed":"pointer",opacity:deleteLoading?0.7:1}}>
+                {deleteLoading?"Deleting…":"Yes, delete everything"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div style={{display:"grid",gap:14}}>
         {/* Account info */}
@@ -3428,6 +3488,21 @@ function ProfileScreen({ user, context, onContextUpdate }) {
             <div style={{fontSize:12,color:T.muted}}>End your current session on this device.</div>
           </div>
           <button onClick={()=>supabase.auth.signOut()} style={{padding:"7px 18px",borderRadius:8,border:`1px solid ${T.red}50`,background:T.redD,color:T.red,fontSize:13,fontWeight:700,cursor:"pointer"}}>Sign out</button>
+        </div>
+
+        {/* Delete Account */}
+        <div style={{background:T.panel,border:`2px solid ${T.red}40`,borderRadius:10,padding:"16px 18px"}}>
+          <div style={{fontSize:11,letterSpacing:2,color:T.red,marginBottom:10}}>⚠️ DANGER ZONE</div>
+          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",gap:12,flexWrap:"wrap"}}>
+            <div>
+              <div style={{fontSize:13,fontWeight:700,color:T.text,marginBottom:3}}>Delete Account</div>
+              <div style={{fontSize:12,color:T.muted,maxWidth:320}}>Permanently removes your hospital, all scores, CAPAs, KPI data, audit records, and login. This cannot be undone.</div>
+            </div>
+            <button onClick={()=>{setShowDeleteModal(true);setDeleteError(null);}}
+              style={{padding:"7px 18px",borderRadius:8,border:`1px solid ${T.red}60`,background:T.redD,color:T.red,fontSize:13,fontWeight:700,cursor:"pointer",flexShrink:0}}>
+              Delete Account
+            </button>
+          </div>
         </div>
       </div>
     </div>
