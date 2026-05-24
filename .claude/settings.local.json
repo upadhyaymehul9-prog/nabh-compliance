@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(node -e ':*)",
+      "Bash(node --use-system-ca -e ':*)",
+      "Bash(node:*)",
+      "Bash(git pull:*)",
+      "Bash(git restore:*)",
+      "Bash(rm src/HCO_ELC_Tab.js)",
+      "Bash(npm install:*)",
+      "Bash(npm ls:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
