@@ -1369,6 +1369,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
 
   const validUrl=(s)=>{try{const u=new URL(s);return u.protocol==="http:"||u.protocol==="https:";}catch{return false;}};
   const domainOf=(s)=>{try{return new URL(s).hostname.replace(/^www\./,"");}catch{return s;}};
+  const safeHref=(s)=>(typeof s==="string"&&/^https?:\/\//i.test(s))?s:"#";
 
   const saveLink=async(oeId)=>{
     const url=(linkUrl[oeId]||"").trim();
@@ -1504,7 +1505,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
                             <div style={{display:"flex",gap:5,flexWrap:"wrap",marginBottom:isOpen?8:0}}>
                               {links.map((l,i)=>(
                                 <div key={i} style={{display:"flex",alignItems:"center",gap:5,padding:"4px 4px 4px 10px",borderRadius:6,background:T.panel2,border:`1px solid ${T.green}30`,fontSize:12}}>
-                                  <a href={l.url} target="_blank" rel="noopener noreferrer" style={{color:T.text,textDecoration:"none",maxWidth:200,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>📄 {l.label||domainOf(l.url)}</a>
+                                  <a href={safeHref(l.url)} target="_blank" rel="noopener noreferrer" style={{color:T.text,textDecoration:"none",maxWidth:200,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>📄 {l.label||domainOf(l.url)}</a>
                                   <span style={{fontSize:11,color:T.muted}}>· {domainOf(l.url)}</span>
                                   <button onClick={()=>removeLink(oe.id,i)} disabled={busy} style={{padding:"2px 7px",borderRadius:5,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:11,cursor:"pointer"}}>✕</button>
                                 </div>
@@ -1773,7 +1774,7 @@ function CommitteesScreen({ hospitalId }) {
           <div style={{display:"grid",gap:8}}>
             {filtered.map(c=>{
               const isOpen=expanded===c.id;
-              const docs=Array.isArray(c.required_docs)?c.required_docs:(c.required_docs?JSON.parse(c.required_docs):[]);
+              const docs=Array.isArray(c.required_docs)?c.required_docs:(c.required_docs?((s)=>{try{return JSON.parse(s);}catch(e){return[];}})(c.required_docs):[]);
               const mCount=meetingCount(c.id); const last=lastMeeting(c.id);
               return (
                 <div key={c.id} style={{background:T.panel,border:`1px solid ${c.is_new_in_6th?`${T.gold}30`:T.border}`,borderRadius:10,overflow:"hidden"}}>
@@ -1869,7 +1870,7 @@ function CommitteesScreen({ hospitalId }) {
                       {docs.length>0&&<div><div style={{fontSize:11,color:T.muted,marginBottom:7,letterSpacing:1}}>REQUIRED DOCUMENTS</div><div style={{display:"flex",gap:5,flexWrap:"wrap"}}>{docs.map((d,i)=><span key={i} style={{fontSize:12,padding:"3px 10px",borderRadius:6,background:T.goldD,border:`1px solid ${T.gold}30`,color:T.gold}}>📄 {d}</span>)}</div></div>}
                       {c.linked_oes?.length>0&&<div><div style={{fontSize:11,color:T.muted,marginBottom:5}}>LINKED OEs</div><div style={{display:"flex",gap:4,flexWrap:"wrap"}}>{c.linked_oes.map(oe=><span key={oe} style={{fontSize:11,padding:"2px 7px",borderRadius:5,background:T.blueD,color:T.blue,fontFamily:"monospace"}}>{oe}</span>)}</div></div>}
                       {c.formation_guide&&(()=>{
-                        const fg=typeof c.formation_guide==="string"?JSON.parse(c.formation_guide):c.formation_guide;
+                        const fg=typeof c.formation_guide==="string"?(()=>{try{return JSON.parse(c.formation_guide);}catch(e){return{};}})():c.formation_guide;
                         const isGuideOpen=guideOpen===c.id;
                         return (
                           <div style={{borderTop:`1px dashed ${T.border}`,paddingTop:10,marginTop:2}}>
@@ -1929,7 +1930,7 @@ function CommitteesScreen({ hospitalId }) {
                                   {m.agenda_items?.length>0&&<div style={{fontSize:11,color:T.muted,marginTop:3}}>{m.agenda_items.length} agenda items · {m.previous_capa_reviewed?"CAPA reviewed":"CAPA not reviewed"}</div>}
                                 </div>
                                 <div style={{display:"flex",gap:6,alignItems:"center"}}>
-                                  {m.evidence_url&&<a href={m.evidence_url} target="_blank" rel="noopener noreferrer" style={{padding:"3px 9px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:11,textDecoration:"none",fontWeight:600}}>📎 Minutes</a>}
+                                  {m.evidence_url&&<a href={/^https?:\/\//i.test(m.evidence_url)?m.evidence_url:"#"} target="_blank" rel="noopener noreferrer" style={{padding:"3px 9px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:11,textDecoration:"none",fontWeight:600}}>📎 Minutes</a>}
                                   <button onClick={()=>deleteMeeting(m.id)} style={{fontSize:11,color:T.red,background:"transparent",border:`1px solid ${T.red}30`,borderRadius:4,padding:"2px 7px",cursor:"pointer"}}>Delete</button>
                                 </div>
                               </div>
@@ -1968,7 +1969,7 @@ function CommitteesScreen({ hospitalId }) {
                       </div>
                       <div style={{display:"flex",gap:6,alignItems:"center"}}>
                         <span style={{fontSize:11,padding:"2px 8px",borderRadius:4,background:m.quorum_met?T.greenD:T.redD,color:m.quorum_met?T.green:T.red}}>Quorum {m.quorum_met?"Met":"Not Met"}</span>
-                        {m.evidence_url&&<a href={m.evidence_url} target="_blank" rel="noopener noreferrer" style={{padding:"3px 9px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:11,textDecoration:"none",fontWeight:600}}>📎 Minutes</a>}
+                        {m.evidence_url&&<a href={/^https?:\/\//i.test(m.evidence_url)?m.evidence_url:"#"} target="_blank" rel="noopener noreferrer" style={{padding:"3px 9px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:11,textDecoration:"none",fontWeight:600}}>📎 Minutes</a>}
                         <button onClick={()=>deleteMeeting(m.id)} style={{fontSize:11,color:T.red,background:"transparent",border:`1px solid ${T.red}30`,borderRadius:4,padding:"2px 7px",cursor:"pointer"}}>Delete</button>
                       </div>
                     </div>
@@ -2494,7 +2495,7 @@ function AuditsScreen({ hospitalId }) {
   const saveCustomRecord=async(audit)=>{
     if(!customRecordForm.audit_date){alert("Audit date is required.");return;}
     setSavingCustomRecord(true);
-    const params=Array.isArray(audit.parameters)?audit.parameters:JSON.parse(audit.parameters||"[]");
+    const params=Array.isArray(audit.parameters)?audit.parameters:(()=>{try{return JSON.parse(audit.parameters||"[]");}catch(e){return[];}})();
     const checkedParams=params.filter((_,i)=>customRecordForm[`param_${i}`]);
     const compliantCount=checkedParams.length;
     const sampleSize=params.length||parseInt(customRecordForm.sample_size)||0;
@@ -2706,7 +2707,7 @@ function AuditsScreen({ hospitalId }) {
       <div style={{display:"grid",gap:8}}>
         {customAudits.map(a=>{
           const isOpen=customExpanded===a.id;
-          const params=Array.isArray(a.parameters)?a.parameters:JSON.parse(a.parameters||"[]");
+          const params=Array.isArray(a.parameters)?a.parameters:(()=>{try{return JSON.parse(a.parameters||"[]");}catch(e){return[];}})();
           const records=getCustomRecords(a.id);
           const hasRecentRecord=records.some(r=>new Date(r.audit_date)>new Date(Date.now()-365*24*60*60*1000));
           const catLabel=AUDIT_CATEGORIES.find(c=>c.value===a.audit_category)?.label||a.audit_category;
@@ -2855,7 +2856,7 @@ function AuditsScreen({ hospitalId }) {
                                 {r.capa_raised&&<div style={{fontSize:11,color:T.orange,marginTop:2}}>⚠️ CAPA: {r.capa_notes} — Due: {r.capa_target_date||"—"}</div>}
                               </div>
                               <div style={{display:"flex",gap:6,alignItems:"flex-start"}}>
-                                {r.evidence_url&&<a href={r.evidence_url} target="_blank" rel="noopener noreferrer" style={{padding:"3px 9px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:11,textDecoration:"none",fontWeight:600}}>📎 Report</a>}
+                                {r.evidence_url&&<a href={/^https?:\/\//i.test(r.evidence_url)?r.evidence_url:"#"} target="_blank" rel="noopener noreferrer" style={{padding:"3px 9px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:11,textDecoration:"none",fontWeight:600}}>📎 Report</a>}
                                 <button onClick={()=>deleteCustomRecord(r.id)} style={{fontSize:11,color:T.red,background:"transparent",border:`1px solid ${T.red}30`,borderRadius:4,padding:"2px 7px",cursor:"pointer"}}>Delete</button>
                               </div>
                             </div>
@@ -2940,7 +2941,7 @@ function AuditsScreen({ hospitalId }) {
           <div style={{display:"grid",gap:8}}>
             {filtered.map(a=>{
               const isOpen=expanded===a.id;
-              const params=Array.isArray(a.parameters)?a.parameters:JSON.parse(a.parameters||"[]");
+              const params=Array.isArray(a.parameters)?a.parameters:(()=>{try{return JSON.parse(a.parameters||"[]");}catch(e){return[];}})();
               const doneCount=params.filter((_,i)=>checked[`${a.id}-${i}`]).length;
               const records=getRecords(a.id);
               const hasRecentRecord=records.some(r=>new Date(r.audit_date)>new Date(Date.now()-365*24*60*60*1000));
@@ -3031,7 +3032,7 @@ function AuditsScreen({ hospitalId }) {
                                     {r.capa_raised&&<div style={{fontSize:11,color:T.orange,marginTop:2}}>⚠️ CAPA: {r.capa_notes} — Due: {r.capa_target_date||"—"}</div>}
                                   </div>
                                   <div style={{display:"flex",gap:6,alignItems:"flex-start"}}>
-                                    {r.evidence_url&&<a href={r.evidence_url} target="_blank" rel="noopener noreferrer" style={{padding:"3px 9px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:11,textDecoration:"none",fontWeight:600}}>📎 Report</a>}
+                                    {r.evidence_url&&<a href={/^https?:\/\//i.test(r.evidence_url)?r.evidence_url:"#"} target="_blank" rel="noopener noreferrer" style={{padding:"3px 9px",borderRadius:6,background:T.greenD,border:`1px solid ${T.green}40`,color:T.green,fontSize:11,textDecoration:"none",fontWeight:600}}>📎 Report</a>}
                                     <button onClick={()=>deleteRecord(r.id)} style={{fontSize:11,color:T.red,background:"transparent",border:`1px solid ${T.red}30`,borderRadius:4,padding:"2px 7px",cursor:"pointer"}}>Delete</button>
                                   </div>
                                 </div>
@@ -3041,7 +3042,7 @@ function AuditsScreen({ hospitalId }) {
                         </div>
                       )}
                       {a.conduct_guide&&(()=>{
-                        const cg=typeof a.conduct_guide==="string"?JSON.parse(a.conduct_guide):a.conduct_guide;
+                        const cg=typeof a.conduct_guide==="string"?(()=>{try{return JSON.parse(a.conduct_guide);}catch(e){return{};}})():a.conduct_guide;
                         const isGuideOpen=guideOpen===a.id;
                         return (
                           <div style={{borderTop:`1px dashed ${T.border}`,paddingTop:10,marginTop:2}}>
@@ -3119,7 +3120,7 @@ function ChecklistsScreen({ hospitalId }) {
     setSavingLink(null);
   };
 
-  const items=selected?(Array.isArray(selected.items)?selected.items:JSON.parse(selected.items||"[]")):[];
+  const items=selected?(Array.isArray(selected.items)?selected.items:(()=>{try{return JSON.parse(selected.items||"[]");}catch(e){return[];}})()):[];
   const doneCount=items.filter((_,i)=>checked[`${selected?.id}-${i}`]).length;
   const pct=items.length>0?Math.round(doneCount/items.length*100):0;
   if(loading) return <div style={{textAlign:"center",color:T.muted,padding:40}}>Loading checklists…</div>;
@@ -3337,8 +3338,8 @@ function ProfileScreen({ user, context, onContextUpdate }) {
     setDeleteLoading(true);
     setDeleteError(null);
     try{
-      const{data:{session}}=await supabase.auth.getSession();
-      const accessToken=session?.access_token;
+      const{data}=await supabase.auth.getSession();
+      const accessToken=data?.session?.access_token;
       if(!accessToken)throw new Error("No active session — please sign in again.");
 
       // Fetch all assessment IDs for this hospital
@@ -3386,6 +3387,7 @@ function ProfileScreen({ user, context, onContextUpdate }) {
       await supabase.auth.signOut();
     }catch(e){
       setDeleteError(e.message||"An unexpected error occurred. Please try again.");
+    }finally{
       setDeleteLoading(false);
     }
   };
