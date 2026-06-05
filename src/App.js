@@ -3370,18 +3370,8 @@ function ProfileScreen({ user, context, onContextUpdate }) {
       await supabase.from("hospitals").delete().eq("id",hid);
 
       // Delete the auth user account
-      const res=await fetch("https://tbptllgcjtiiqspxqcde.supabase.co/auth/v1/user",{
-        method:"DELETE",
-        headers:{
-          "Authorization":`Bearer ${accessToken}`,
-          "apikey":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRicHRsbGdjanRpaXFzcHhxY2RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY2NjkzNjAsImV4cCI6MjA5MjI0NTM2MH0.4CPgNp6ytVNRmTU0FJbu2io94QJmsAow5im-vGtoRAU",
-          "Content-Type":"application/json"
-        }
-      });
-      if(!res.ok){
-        const err=await res.json().catch(()=>({}));
-        throw new Error(err.message||`Auth deletion failed (${res.status})`);
-      }
+      const { error: deleteAuthError } = await supabase.rpc("delete_user");
+      if(deleteAuthError) throw new Error(deleteAuthError.message||"Auth deletion failed. Please contact support.");
 
       // Sign out — auth state listener returns to LoginScreen
       await supabase.auth.signOut();
@@ -3607,6 +3597,7 @@ export default function App() {
   const [hcoDocPart, setHcoDocPart] = useState('all');
   const [pdfLoading, setPdfLoading] = useState(false);
   const [showMoreMenu, setShowMoreMenu] = useState(false);
+  const [showUserMenu, setShowUserMenu] = useState(false);
   const [theme, setTheme] = useState('dark');
 
   // Reassign module-level T so all component closures see the correct theme
@@ -3963,6 +3954,14 @@ export default function App() {
     document.addEventListener("click",handler);
     return()=>document.removeEventListener("click",handler);
   },[showMoreMenu]);
+
+  // Close user menu on outside click
+  useEffect(()=>{
+    if(!showUserMenu)return;
+    const handler=()=>setShowUserMenu(false);
+    document.addEventListener("click",handler);
+    return()=>document.removeEventListener("click",handler);
+  },[showUserMenu]);
 
   const loadData=useCallback(async(ctx)=>{
     if(!ctx?.assessmentId)return;
@@ -5115,7 +5114,7 @@ export default function App() {
   ];
   const NAV=ALL_NAV.filter(n=>n.programmes.includes(selectedProgramme));
   const PRIMARY_NAV=NAV.filter(n=>n.primary);
-  const SECONDARY_NAV=NAV.filter(n=>!n.primary);
+  const SECONDARY_NAV=NAV.filter(n=>!n.primary&&n.id!=="pricing"&&n.id!=="profile");
   const secondaryActive=SECONDARY_NAV.some(n=>n.id===screen);
 
   return (
@@ -5163,11 +5162,11 @@ export default function App() {
                 {showMoreMenu&&(
                   <div
                     onClick={e=>e.stopPropagation()}
-                    style={{position:"absolute",top:"calc(100% + 6px)",right:0,background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:10,display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:6,zIndex:300,minWidth:220,boxShadow:"0 8px 30px rgba(0,0,0,0.15)"}}>
+                    style={{position:"absolute",top:"calc(100% + 6px)",right:0,background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"6px 0",display:"flex",flexDirection:"column",zIndex:300,minWidth:220,boxShadow:"0 8px 30px rgba(0,0,0,0.15)"}}>
                     {SECONDARY_NAV.map(n=>(
                       <button key={n.id} onClick={()=>{setScreen(n.id);setShowMoreMenu(false);}}
-                        style={{padding:"7px 4px",borderRadius:7,border:`1px solid ${screen===n.id?T.gold:T.border}`,background:screen===n.id?T.goldD:T.panel2,color:screen===n.id?T.gold:T.text,fontSize:11,cursor:"pointer",display:"flex",flexDirection:"column",alignItems:"center",gap:3,fontWeight:screen===n.id?700:400}}>
-                        <span style={{fontSize:16}}>{n.icon}</span>
+                        style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen===n.id?T.gold:"transparent"}`,background:screen===n.id?T.goldD:"transparent",color:screen===n.id?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",flexDirection:"row",alignItems:"center",gap:10,fontWeight:screen===n.id?700:400,width:"100%",textAlign:"left"}}>
+                        <span style={{width:20,fontSize:15}}>{n.icon}</span>
                         <span>{n.label}</span>
                       </button>
                     ))}
@@ -5179,7 +5178,23 @@ export default function App() {
           <button onClick={()=>setAuthState("programme")} style={{padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.3)":T.border}`,color:"#ffffff",fontSize:11,cursor:"pointer"}}>Switch</button>
           <a href="https://drive.google.com/drive/folders/1DOfGmHg_dO5blXw_3Mz07dtre6IKYYlI" target="_blank" rel="noopener noreferrer" style={{padding:"4px 9px",borderRadius:7,background:theme==='light'?"rgba(255,255,255,0.15)":T.goldD,border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.gold}`,color:"#ffffff",fontSize:11,fontWeight:700,textDecoration:"none",whiteSpace:"nowrap"}}>📁 Docs</a>
           <button onClick={toggleTheme} title={theme==='dark'?'Switch to light mode':'Switch to dark mode'} style={{padding:"4px 9px",borderRadius:7,background:theme==='light'?"rgba(255,255,255,0.2)":"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.border}`,color:"#ffffff",fontSize:15,cursor:"pointer",lineHeight:1}}>{theme==='dark'?'☀️':'🌙'}</button>
-          <button onClick={handleSignOut} style={{padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.3)":T.border}`,color:"#ffffff",fontSize:11,cursor:"pointer"}}>Sign out</button>
+          <div style={{position:"relative"}}>
+            <button onClick={e=>{e.stopPropagation();setShowUserMenu(v=>!v);}} style={{width:30,height:30,borderRadius:"50%",background:theme==='light'?"rgba(255,255,255,0.2)":T.goldD,border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.gold}`,color:"#ffffff",fontSize:16,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",padding:0}}>👤</button>
+            {showUserMenu&&(
+              <div onClick={e=>e.stopPropagation()} style={{position:"absolute",top:"calc(100% + 6px)",right:0,background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"6px 0",display:"flex",flexDirection:"column",zIndex:300,minWidth:160,boxShadow:"0 8px 30px rgba(0,0,0,0.15)"}}>
+                <button onClick={()=>{setScreen("profile");setShowUserMenu(false);}} style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen==="profile"?T.gold:"transparent"}`,background:screen==="profile"?T.goldD:"transparent",color:screen==="profile"?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:10,width:"100%",textAlign:"left"}}>
+                  <span style={{width:20,fontSize:15}}>👤</span><span>Profile</span>
+                </button>
+                <button onClick={()=>{setScreen("pricing");setShowUserMenu(false);}} style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen==="pricing"?T.gold:"transparent"}`,background:screen==="pricing"?T.goldD:"transparent",color:screen==="pricing"?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:10,width:"100%",textAlign:"left"}}>
+                  <span style={{width:20,fontSize:15}}>💎</span><span>Pricing</span>
+                </button>
+                <div style={{height:1,background:T.border,margin:"4px 0"}}/>
+                <button onClick={handleSignOut} style={{padding:"9px 16px",border:"none",borderLeft:"3px solid transparent",background:"transparent",color:T.red,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:10,width:"100%",textAlign:"left"}}>
+                  <span style={{width:20,fontSize:15}}>🚪</span><span>Sign out</span>
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
