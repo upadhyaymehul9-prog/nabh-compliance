@@ -695,35 +695,33 @@ function AuditComplianceChart({ records }) {
 }
 
 function UpgradeWall({ daysUsed, onSignOut }) {
+  const features=["Full NABH compliance tracking","Unlimited OE scoring","KPI tracking and audit management","Committee calendar and mock drills","PDF gap reports","No setup fee. Cancel anytime."];
   return (
     <div style={{minHeight:"100vh",background:"#050e1a",display:"flex",alignItems:"center",justifyContent:"center",padding:20,fontFamily:"Segoe UI,system-ui,sans-serif"}}>
-      <div style={{maxWidth:480,width:"100%",textAlign:"center"}}>
+      <div style={{maxWidth:440,width:"100%",textAlign:"center"}}>
         <div style={{fontSize:48,marginBottom:16}}>🔒</div>
         <div style={{fontSize:11,letterSpacing:3,color:"#c9a84c",marginBottom:8}}>ACCREDREADY</div>
         <div style={{fontSize:26,fontWeight:800,color:"#eef4f9",marginBottom:8}}>Your Free Trial Has Ended</div>
-        <div style={{fontSize:14,color:"#3a5870",marginBottom:32}}>Your 14-day free trial expired. Upgrade to continue accessing your NABH compliance data.</div>
-        <div style={{display:"grid",gap:12,marginBottom:28}}>
-          {[
-            {name:"Starter",price:"₹499",period:"/month",desc:"1 hospital, full OE scoring, gap analysis",color:"#4fc3f7"},
-            {name:"Professional",price:"₹999",period:"/month",desc:"Everything + KPIs, audits, mock drills, PDF reports",color:"#c9a84c",popular:true},
-            {name:"Consultant",price:"₹2,999",period:"/month",desc:"Multiple hospitals, priority support",color:"#4caf7d"},
-          ].map(p=>(
-            <div key={p.name} style={{background:"#081525",border:`1px solid ${p.popular?"#c9a84c40":"#0f2640"}`,borderRadius:12,padding:"16px 20px",display:"flex",justifyContent:"space-between",alignItems:"center",position:"relative"}}>
-              {p.popular&&<div style={{position:"absolute",top:-10,right:16,background:"#c9a84c",color:"#050e1a",fontSize:10,fontWeight:800,padding:"2px 10px",borderRadius:10}}>POPULAR</div>}
-              <div style={{textAlign:"left"}}>
-                <div style={{fontSize:15,fontWeight:700,color:p.color}}>{p.name}</div>
-                <div style={{fontSize:11,color:"#3a5870",marginTop:2}}>{p.desc}</div>
+        <div style={{fontSize:14,color:"#3a5870",marginBottom:28}}>Your 14-day free trial expired. Upgrade to continue accessing your NABH compliance data.</div>
+        <div style={{background:"#081525",border:"1px solid #c9a84c",borderRadius:14,padding:"24px 22px",marginBottom:20,textAlign:"center"}}>
+          <div style={{fontSize:12,letterSpacing:2,color:"#c9a84c",fontWeight:700,marginBottom:8}}>ACCREDREADY</div>
+          <div style={{display:"flex",alignItems:"baseline",justifyContent:"center",gap:4,marginBottom:4}}>
+            <span style={{fontSize:38,fontWeight:800,color:"#eef4f9"}}>₹499</span>
+            <span style={{fontSize:14,color:"#3a5870"}}>/month</span>
+          </div>
+          <div style={{fontSize:12,color:"#3a5870",marginBottom:20}}>Per hospital · All features included</div>
+          <div style={{textAlign:"left",marginBottom:0}}>
+            {features.map((f,i)=>(
+              <div key={i} style={{display:"flex",gap:10,alignItems:"flex-start",marginBottom:9}}>
+                <span style={{color:"#c9a84c",flexShrink:0,fontWeight:700}}>✓</span>
+                <span style={{fontSize:13,color:"#c8dcea",lineHeight:1.5}}>{f}</span>
               </div>
-              <div style={{textAlign:"right",flexShrink:0,marginLeft:12}}>
-                <div style={{fontSize:20,fontWeight:800,color:"#eef4f9"}}>{p.price}</div>
-                <div style={{fontSize:10,color:"#3a5870"}}>{p.period}</div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-        <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20want%20to%20upgrade%20my%20AccredReady%20plan.%20Hospital%3A%20" target="_blank" rel="noopener noreferrer"
-          style={{display:"block",padding:"14px",borderRadius:12,background:"#25D366",color:"#ffffff",fontSize:16,fontWeight:800,textDecoration:"none",marginBottom:12,boxShadow:"0 4px 20px rgba(37,211,102,0.4)"}}>
-          💬 WhatsApp to Upgrade
+        <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20want%20to%20subscribe%20to%20AccredReady%20for%20Rs.%20499%2Fmonth" target="_blank" rel="noopener noreferrer"
+          style={{display:"block",padding:"14px",borderRadius:12,background:"linear-gradient(135deg,#c9a84c,#f0d070)",color:"#050e1a",fontSize:16,fontWeight:800,textDecoration:"none",marginBottom:12,boxShadow:"0 4px 20px rgba(201,168,76,0.4)"}}>
+          💬 Get Started — WhatsApp Us
         </a>
         <button onClick={onSignOut} style={{background:"transparent",border:"none",color:"#3a5870",fontSize:12,cursor:"pointer"}}>Sign out</button>
       </div>
@@ -3229,84 +3227,37 @@ function ChecklistsScreen({ hospitalId }) {
 
 // ── PRICING ──────────────────────────────────────────
 function PricingScreen() {
-  const plans=[
-    {name:"Starter",price:"₹499",period:"/month",color:T.blue,icon:"🏥",users:"1 hospital · 3 users",features:["639 OEs with scoring & tips","26 Committee tracking + MOM","50 KPI monitoring with trends","35 Clinical & nursing audits","Mock drill management","Statutory license tracker","Evidence document links","Patient tracer tool"]},
-    {name:"Professional",price:"₹999",period:"/month",color:T.gold,icon:"⭐",users:"1 hospital · Unlimited users",popular:true,features:["Everything in Starter","Unlimited team members","Priority support","Advanced gap analysis","Full audit trend charts","Complete audit history","KPI trend analytics","Early access to new features"]},
-    {name:"Consultant",price:"₹2,999",period:"/month",color:T.green,icon:"🏆",users:"Up to 5 hospitals",features:["Everything in Professional","Manage 5 hospitals","Single login dashboard","Ideal for NABH consultants","Bulk hospital onboarding","Client progress tracking","5× saving vs individual plans","Dedicated support channel"]},
-  ];
+  const features=["Full NABH compliance tracking","Unlimited OE scoring","KPI tracking and audit management","Committee calendar and mock drills","PDF gap reports","No setup fee. Cancel anytime."];
   return (
-    <div style={{maxWidth:"100%",overflowX:"hidden"}}>
-      {/* Header */}
+    <div style={{maxWidth:520,margin:"0 auto",padding:16}}>
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"20px 24px",marginBottom:20,textAlign:"center"}}>
         <div style={{fontSize:11,letterSpacing:3,color:T.gold,marginBottom:6}}>PRICING</div>
         <div style={{fontSize:20,fontWeight:800,color:T.white,marginBottom:6}}>Simple, transparent pricing</div>
-        <div style={{fontSize:13,color:T.muted}}>14-day free trial on all plans · No credit card required · Pay via UPI</div>
+        <div style={{fontSize:13,color:T.muted}}>14-day free trial · No credit card required · Pay via UPI</div>
       </div>
-
-      {/* Trial banner */}
-      <div style={{background:`linear-gradient(135deg,${T.goldD},rgba(201,168,76,0.05))`,border:`1px solid ${T.gold}40`,borderRadius:12,padding:"14px 20px",marginBottom:20,display:"flex",alignItems:"center",gap:14}}>
-        <div style={{fontSize:28}}>🎁</div>
-        <div>
-          <div style={{fontSize:15,fontWeight:700,color:T.goldL}}>You're on a 14-day free trial</div>
-          <div style={{fontSize:13,color:T.muted,marginTop:3}}>Full access to all features during trial. No payment needed until trial ends. To upgrade, contact us on WhatsApp.</div>
+      <div style={{background:T.panel,border:`1px solid ${T.gold}`,borderRadius:14,padding:"28px 24px",marginBottom:20,textAlign:"center"}}>
+        <div style={{fontSize:13,letterSpacing:2,color:T.gold,fontWeight:700,marginBottom:8}}>ACCREDREADY</div>
+        <div style={{display:"flex",alignItems:"baseline",justifyContent:"center",gap:4,marginBottom:4}}>
+          <span style={{fontSize:38,fontWeight:800,color:T.white}}>₹499</span>
+          <span style={{fontSize:14,color:T.muted}}>/month</span>
         </div>
-      </div>
-
-      {/* Plan cards */}
-      <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(260px,1fr))",gap:14,marginBottom:20}}>
-        {plans.map(plan=>(
-          <div key={plan.name} style={{background:plan.popular?`linear-gradient(145deg,${T.panel},#0f2235)`:T.panel,border:`1px solid ${plan.popular?T.gold:T.border}`,borderRadius:14,padding:"22px 18px",position:"relative"}}>
-            {plan.popular&&<div style={{position:"absolute",top:-11,left:"50%",transform:"translateX(-50%)",background:T.gold,color:T.bg,fontSize:8,fontWeight:800,padding:"3px 14px",borderRadius:20,letterSpacing:1,whiteSpace:"nowrap"}}>MOST POPULAR</div>}
-            <div style={{textAlign:"center",marginBottom:16}}>
-              <div style={{fontSize:26,marginBottom:8}}>{plan.icon}</div>
-              <div style={{fontSize:16,fontWeight:800,color:T.white,marginBottom:4}}>{plan.name}</div>
-              <div style={{fontSize:11,color:T.muted,marginBottom:12}}>{plan.users}</div>
-              <div style={{display:"flex",alignItems:"baseline",justifyContent:"center",gap:2}}>
-                <span style={{fontSize:28,fontWeight:800,color:plan.color}}>{plan.price}</span>
-                <span style={{fontSize:12,color:T.muted}}>{plan.period}</span>
-              </div>
+        <div style={{fontSize:12,color:T.muted,marginBottom:24}}>Per hospital · All features included</div>
+        <div style={{textAlign:"left",marginBottom:24}}>
+          {features.map((f,i)=>(
+            <div key={i} style={{display:"flex",gap:10,alignItems:"flex-start",marginBottom:10}}>
+              <span style={{color:T.gold,flexShrink:0,fontWeight:700}}>✓</span>
+              <span style={{fontSize:13,color:T.text,lineHeight:1.5}}>{f}</span>
             </div>
-            <div style={{borderTop:`1px solid ${T.border}`,paddingTop:14,marginBottom:16}}>
-              {plan.features.map((f,i)=>(
-                <div key={i} style={{display:"flex",gap:8,alignItems:"flex-start",marginBottom:8}}>
-                  <span style={{fontSize:12,color:plan.color,flexShrink:0,marginTop:1}}>✓</span>
-                  <span style={{fontSize:12,color:T.text,lineHeight:1.4}}>{f}</span>
-                </div>
-              ))}
-            </div>
-            <a href="https://wa.me/918511180957" target="_blank" rel="noopener noreferrer"
-              style={{display:"block",textAlign:"center",padding:"10px",borderRadius:8,background:plan.popular?`linear-gradient(135deg,${T.gold},#f0d070)`:T.panel2,border:`1px solid ${plan.popular?T.gold:T.border}`,color:plan.popular?T.bg:T.muted,fontSize:13,fontWeight:plan.popular?700:400,textDecoration:"none",cursor:"pointer"}}>
-              {plan.popular?"💬 Upgrade Now":"💬 Contact to Upgrade"}
-            </a>
-          </div>
-        ))}
+          ))}
+        </div>
+        <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20want%20to%20subscribe%20to%20AccredReady%20for%20Rs.%20499%2Fmonth" target="_blank" rel="noopener noreferrer"
+          style={{display:"block",padding:"14px",borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,color:T.bg,fontSize:15,fontWeight:800,textDecoration:"none",boxShadow:`0 4px 20px ${T.gold}40`}}>
+          💬 Get Started — WhatsApp Us
+        </a>
       </div>
-
-      {/* Contact box */}
-      <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"18px 24px"}}>
-        <div style={{fontSize:13,fontWeight:700,color:T.white,marginBottom:12}}>How to upgrade</div>
-        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
-          <div style={{background:T.panel2,borderRadius:8,padding:"12px 14px"}}>
-            <div style={{fontSize:11,color:T.muted,marginBottom:4,letterSpacing:1}}>STEP 1</div>
-            <div style={{fontSize:13,color:T.text}}>WhatsApp us your plan choice at <span style={{color:T.green,fontWeight:700}}>+91 85111 80957</span></div>
-          </div>
-          <div style={{background:T.panel2,borderRadius:8,padding:"12px 14px"}}>
-            <div style={{fontSize:11,color:T.muted,marginBottom:4,letterSpacing:1}}>STEP 2</div>
-            <div style={{fontSize:13,color:T.text}}>Pay via UPI — we'll send the UPI ID on WhatsApp</div>
-          </div>
-          <div style={{background:T.panel2,borderRadius:8,padding:"12px 14px"}}>
-            <div style={{fontSize:11,color:T.muted,marginBottom:4,letterSpacing:1}}>STEP 3</div>
-            <div style={{fontSize:13,color:T.text}}>Your account is activated within 2 hours of payment</div>
-          </div>
-          <div style={{background:T.panel2,borderRadius:8,padding:"12px 14px"}}>
-            <div style={{fontSize:11,color:T.muted,marginBottom:4,letterSpacing:1}}>INVOICE</div>
-            <div style={{fontSize:13,color:T.text}}>Invoice provided for all payments. GST invoice available on request.</div>
-          </div>
-        </div>
-        <div style={{marginTop:14,padding:"10px 14px",background:T.goldD,borderRadius:8,border:`1px solid ${T.gold}30`,textAlign:"center"}}>
-          <div style={{fontSize:12,color:T.muted}}>Questions? We respond within 2 hours on WhatsApp</div>
-          <a href="https://wa.me/918511180957" target="_blank" rel="noopener noreferrer" style={{fontSize:14,color:T.gold,fontWeight:700,textDecoration:"none"}}>💬 +91 85111 80957</a>
-        </div>
+      <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"16px 20px",textAlign:"center"}}>
+        <div style={{fontSize:12,color:T.muted,marginBottom:6}}>Questions? We respond within 2 hours on WhatsApp</div>
+        <a href="https://wa.me/918511180957" target="_blank" rel="noopener noreferrer" style={{fontSize:14,color:T.gold,fontWeight:700,textDecoration:"none"}}>💬 +91 85111 80957</a>
       </div>
     </div>
   );
