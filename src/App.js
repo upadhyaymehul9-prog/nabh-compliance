@@ -510,16 +510,206 @@ const HCO_ELC_LICENSES = [
 ];
 
 const HCO_ELC_CHAPTER_SUMMARY = [
-  {ch:"AAI",name:"Access, Assessment & Information",desc:"Key safety and process elements in continuum of patient care within hospital till discharge"},
-  {ch:"COP",name:"Care of Patients",desc:"Emergency care, ambulance services, clinical care in consonance with clinical requirements"},
-  {ch:"HIC",name:"Hospital Infection Control",desc:"Effective infection control programme to reduce/eliminate infection risks to patients, visitors and staff"},
-  {ch:"MOM",name:"Management of Medication",desc:"Emergency medications standardized and available; monitoring post-administration; adverse drug event reporting"},
-  {ch:"PRE",name:"Patient Rights & Education",desc:"Defined patient/family rights and responsibilities; staff trained to protect patient rights"},
-  {ch:"CQI",name:"Continuous Quality Improvement",desc:"Continual quality improvement and patient safety programme involving all areas and staff"},
-  {ch:"ROM",name:"Responsibilities of Management",desc:"Governance of organisation in professional and ethical manner; defined management responsibilities"},
-  {ch:"FMS",name:"Facility Management & Safety",desc:"Safe and secure environment for patients, families, staff and visitors; regular facility inspection rounds"},
-  {ch:"HRM",name:"Human Resource Management",desc:"Acquire, provide, retain and maintain competent people in right numbers to meet patient needs"},
-  {ch:"IMS",name:"Information Management System",desc:"Medical record requirements; continuity of care and communication between care providers"},
+  {ch:"AAC",name:"Access, Assessment and Continuity of Care",oes:28,desc:"Defines scope of services, registration, initial assessment, laboratory/imaging services, discharge process"},
+  {ch:"COP",name:"Care of Patients",oes:42,desc:"Uniform care delivery, emergency services, ICU, obstetric, paediatric, anaesthesia, surgical and rehabilitation care"},
+  {ch:"MOM",name:"Management of Medication",oes:29,desc:"Safe pharmacy services, medication storage, prescription, dispensing, administration and high-risk medication management"},
+  {ch:"PRE",name:"Patient Rights and Education",oes:17,desc:"Patient and family rights, informed consent, patient education and feedback mechanisms"},
+  {ch:"IPC",name:"Infection Prevention and Control",oes:12,desc:"Infection prevention programme, hand hygiene, biomedical waste management, sterilization practices"},
+  {ch:"PSQ",name:"Patient Safety and Quality Improvement",oes:8,desc:"Quality improvement programme, patient safety goals, key indicators monitoring and clinical audits"},
+  {ch:"ROM",name:"Responsibilities of Management",oes:13,desc:"Governance, statutory compliance, ethical management, outsourced services and sustainability"},
+  {ch:"FMS",name:"Facility Management and Safety",oes:13,desc:"Infrastructure safety, equipment maintenance, utility systems, fire and emergency preparedness"},
+  {ch:"HRM",name:"Human Resource Management",oes:15,desc:"Staff mix, training, performance appraisal, occupational health and staff welfare"},
+  {ch:"IMS",name:"Information Management System",oes:11,desc:"Medical record management, confidentiality, document control and digital health"},
+];
+
+const HCO_ELC_OE_LIST = [
+  {code:"AAC1a",chapter:"AAC",text:"The healthcare services being provided are defined."},
+  {code:"AAC1b",chapter:"AAC",text:"The defined services are prominently displayed."},
+  {code:"AAC1c",chapter:"AAC",text:"Each defined healthcare service should have outpatient, inpatient and emergency covered by qualified medical staff."},
+  {code:"AAC2a",chapter:"AAC",text:"Written guidance governs the process that addresses registering and admitting out-patients, day care, in-patients and emergency patients."},
+  {code:"AAC2b",chapter:"AAC",text:"A unique identification number is generated at the end of the registration."},
+  {code:"AAC2c",chapter:"AAC",text:"There is an appropriate mechanism for transfer (in and out) or referral of patients."},
+  {code:"AAC3a",chapter:"AAC",text:"The initial assessment of out-patients, day-care, in-patients and emergency patients is done in a standardised manner."},
+  {code:"AAC3b",chapter:"AAC",text:"The initial assessment for in-patients results in a documented care plan."},
+  {code:"AAC4a",chapter:"AAC",text:"During all phases of care, there is a qualified individual identified as responsible for the patient's care."},
+  {code:"AAC4b",chapter:"AAC",text:"Patients are reassessed at appropriate intervals to determine their response to treatment and to plan further treatment or discharge."},
+  {code:"AAC4c",chapter:"AAC",text:"The organisation lays down the guidelines and implements process to identify early warning signs of change or deterioration in clinical conditions."},
+  {code:"AAC4d",chapter:"AAC",text:"The organisation implements standardized hand over communication during each staffing shift, between shifts and during transfers between units."},
+  {code:"AAC5a",chapter:"AAC",text:"Scope of laboratory services is commensurate to the services provided by the organisation."},
+  {code:"AAC5b",chapter:"AAC",text:"Requisition for tests, collection of specimens, identification, handling, safe transportation, processing and disposal is performed as per written guidance."},
+  {code:"AAC5c",chapter:"AAC",text:"Laboratory reports are available in standardized manner within a defined time frame and critical results are intimated immediately."},
+  {code:"AAC5d",chapter:"AAC",text:"There is an established laboratory safety program with laboratory personnel trained in safe practices."},
+  {code:"AAC5e",chapter:"AAC",text:"There is an established laboratory quality assurance program."},
+  {code:"AAC6a",chapter:"AAC",text:"Imaging services comply with legal and other regulatory requirements."},
+  {code:"AAC6b",chapter:"AAC",text:"Scope of imaging services is commensurate to the services provided by the organisation."},
+  {code:"AAC6c",chapter:"AAC",text:"Imaging reports are available in standardised manner within a defined time frame and critical results are intimated immediately."},
+  {code:"AAC6d",chapter:"AAC",text:"There is an established imaging safety program with imaging personnel trained in safe practices."},
+  {code:"AAC6e",chapter:"AAC",text:"There is an established imaging services quality assurance program."},
+  {code:"AAC6f",chapter:"AAC",text:"Services not available at the organisation are outsourced to an organisation based on its quality assurance system."},
+  {code:"AAC7a",chapter:"AAC",text:"The organisation has a process for discharge of all patients including medico-legal cases."},
+  {code:"AAC7b",chapter:"AAC",text:"The discharge summary contains the patient's name, unique identification number, diagnosis and significant findings."},
+  {code:"AAC7c",chapter:"AAC",text:"Discharge summary contains follow up advice, medication and other instructions in an understandable manner."},
+  {code:"AAC7d",chapter:"AAC",text:"Discharge summary incorporates instructions about when and how to obtain urgent care."},
+  {code:"AAC7e",chapter:"AAC",text:"In case of death the summary of the case also includes the cause of death."},
+  {code:"COP1a",chapter:"COP",text:"Care shall be provided in consonance with applicable laws and regulations."},
+  {code:"COP1b",chapter:"COP",text:"The care and treatment is provided following written guidance."},
+  {code:"COP1c",chapter:"COP",text:"Care delivery is uniform for a given clinical condition when similar case is encountered."},
+  {code:"COP1d",chapter:"COP",text:"Nursing care and procedures are performed in consonance with the established protocols."},
+  {code:"COP1e",chapter:"COP",text:"Transfusion services are provided as per the scope of services of the organisation."},
+  {code:"COP1f",chapter:"COP",text:"Transfusion of blood and blood components is managed by written guidance."},
+  {code:"COP1g",chapter:"COP",text:"Informed consent should be taken for transfusion of blood and blood products."},
+  {code:"COP2b",chapter:"COP",text:"The organisation manages medico-legal cases and provides emergency care in a consistent manner."},
+  {code:"COP2c",chapter:"COP",text:"Cardio-pulmonary resuscitation services are provided uniformly across the organisation."},
+  {code:"COP2d",chapter:"COP",text:"Initiation of appropriate care is guided by a system of triage."},
+  {code:"COP2e",chapter:"COP",text:"All patients in emergency are reassessed as appropriate for the change of status."},
+  {code:"COP2f",chapter:"COP",text:"Admission or discharge to home/transfer to another organisation is documented for all emergency patients."},
+  {code:"COP2g",chapter:"COP",text:"The organisation has a system in place for the management of patients found dead on arrival."},
+  {code:"COP2h",chapter:"COP",text:"Appropriately manned and equipped ambulance is available and checked regularly."},
+  {code:"COP3a",chapter:"COP",text:"The care of patient in intensive care units and high dependency units is in consonance with the defined scope."},
+  {code:"COP3b",chapter:"COP",text:"The organisation shall implement a quality-assurance programme for its intensive care/high dependency units."},
+  {code:"COP3c",chapter:"COP",text:"The organisation has a mechanism to counsel the patient and/or family members on the treatment plan."},
+  {code:"COP3d",chapter:"COP",text:"End of life care is provided in a compassionate and considerate manner."},
+  {code:"COP4b",chapter:"COP",text:"Obstetric care includes ante-natal check ups, maternal nutrition assessment, immunisation and emergency obstetric care."},
+  {code:"COP4c",chapter:"COP",text:"The organisation caring for obstetric cases has the facility to take care of neonatal emergencies."},
+  {code:"COP5a",chapter:"COP",text:"Paediatric and neonatal services are organized and provided safely by doctors and nurses having age-specific competencies."},
+  {code:"COP5b",chapter:"COP",text:"Paediatric assessment includes growth, developmental, nutritional and immunisation status."},
+  {code:"COP5c",chapter:"COP",text:"The organisation has measures in place to prevent child/neonate abduction and abuse."},
+  {code:"COP6a",chapter:"COP",text:"Procedural sedation is provided in a consistent manner and is administered as per defined written guidance."},
+  {code:"COP6b",chapter:"COP",text:"Competent and trained persons perform and monitor sedation after informed consent."},
+  {code:"COP7a",chapter:"COP",text:"There is written guidance for administration of anaesthesia."},
+  {code:"COP7b",chapter:"COP",text:"The pre-anaesthesia assessment results in the formulation of an anaesthesia plan documented in the patient record."},
+  {code:"COP7c",chapter:"COP",text:"Patients are monitored while under anaesthesia."},
+  {code:"COP7d",chapter:"COP",text:"Post anaesthesia monitoring is documented and patients are discharged from recovery as per defined criteria."},
+  {code:"COP7e",chapter:"COP",text:"Intraoperative adverse anaesthesia events are recorded and analyzed."},
+  {code:"COP8a",chapter:"COP",text:"Clinical procedures as well as procedures done in operation theatres are done in a safe and consistent manner."},
+  {code:"COP8b",chapter:"COP",text:"Surgical patients have a preoperative assessment and a documented pre-operative diagnosis."},
+  {code:"COP8c",chapter:"COP",text:"An informed consent is obtained by a surgeon from the patient before surgery."},
+  {code:"COP8d",chapter:"COP",text:"Care is taken to prevent adverse events like wrong site, wrong patient and wrong surgery."},
+  {code:"COP8e",chapter:"COP",text:"Procedures/operation notes, post procedure monitoring and post-operative care are documented."},
+  {code:"COP9a",chapter:"COP",text:"The organisation identifies and manages vulnerable patients."},
+  {code:"COP9b",chapter:"COP",text:"The organisation identifies and manages patients who are at risk of fall, pressure ulcer and malnutrition."},
+  {code:"COP10a",chapter:"COP",text:"Patients in pain are effectively managed."},
+  {code:"COP10b",chapter:"COP",text:"Scope of rehabilitation services at a minimum is commensurate to the services provided."},
+  {code:"COP10c",chapter:"COP",text:"Patients admitted to the organisation are screened for nutritional risk."},
+  {code:"COP10d",chapter:"COP",text:"Nutritional assessment shall be done by a dietician for all patients found at risk."},
+  {code:"MOM1a",chapter:"MOM",text:"Pharmacy services and safe medication usage are implemented following written guidance."},
+  {code:"MOM1b",chapter:"MOM",text:"The organisation shall review and update the hospital formulary as per scope of services."},
+  {code:"MOM2a",chapter:"MOM",text:"Medications are stored in a clean, safe and secure environment and storage conditions are monitored."},
+  {code:"MOM2b",chapter:"MOM",text:"Written guidance exists for storage of high risk medications including look alike sound alike medications."},
+  {code:"MOM2c",chapter:"MOM",text:"Beyond expiry date medications are not stored or used."},
+  {code:"MOM2d",chapter:"MOM",text:"List of emergency medicines is defined, stored, and available all the time."},
+  {code:"MOM3a",chapter:"MOM",text:"The organisation ensures that only authorized personnel can write prescriptions/medication orders."},
+  {code:"MOM3b",chapter:"MOM",text:"The organisation adheres to the determined minimum requirements of a valid prescription/medication order."},
+  {code:"MOM3c",chapter:"MOM",text:"Drug allergies and previous adverse drug reactions are ascertained before prescribing medication."},
+  {code:"MOM3d",chapter:"MOM",text:"Medication orders are clear, legible, dated and signed and include name of the patient."},
+  {code:"MOM3e",chapter:"MOM",text:"Reconciliation of medications occurs at transition points of patient care."},
+  {code:"MOM3f",chapter:"MOM",text:"Audit of medication orders/prescription is carried out to check for safe and rational prescribing."},
+  {code:"MOM3g",chapter:"MOM",text:"Near miss, medication errors and adverse drug events are defined, documented, analyzed and used for improvement."},
+  {code:"MOM4a",chapter:"MOM",text:"The organisation defines a list of high-risk medications and process to prescribe, dispense and administer them safely."},
+  {code:"MOM4b",chapter:"MOM",text:"Dispensed medications are labelled."},
+  {code:"MOM5a",chapter:"MOM",text:"Medications are administered by those who are permitted by law to do so."},
+  {code:"MOM5b",chapter:"MOM",text:"Prior to administration, medication orders including patient, dosage, route and time are verified."},
+  {code:"MOM5c",chapter:"MOM",text:"Prepared medication is labelled before preparation of a second drug."},
+  {code:"MOM5d",chapter:"MOM",text:"Measures to avoid catheter and tubing mis-connections during medication administration are implemented."},
+  {code:"MOM5e",chapter:"MOM",text:"Medication administration is documented."},
+  {code:"MOM5f",chapter:"MOM",text:"Patients are monitored after medication administration."},
+  {code:"MOM5g",chapter:"MOM",text:"Near miss, medication errors and adverse drug events are defined, documented and analyzed."},
+  {code:"MOM6a",chapter:"MOM",text:"Narcotic drugs and psychotropic substances are stored safely as per statutory requirements."},
+  {code:"MOM6b",chapter:"MOM",text:"Narcotic drugs and psychotropic substances are prescribed, dispensed and administered as per statutory requirements."},
+  {code:"MOM6c",chapter:"MOM",text:"Chemotherapy and radio-pharmaceuticals are prepared properly and safely and administered with caution."},
+  {code:"MOM6d",chapter:"MOM",text:"A proper record shall be kept of the usage, administration and disposal of narcotic and psychotropic substances."},
+  {code:"MOM7a",chapter:"MOM",text:"Written guidance addresses procurement and usage of implantable prostheses and medical devices."},
+  {code:"MOM7b",chapter:"MOM",text:"Patient and family are counselled for the usage of the implantable prosthesis or medical device."},
+  {code:"MOM7c",chapter:"MOM",text:"The batch and serial number of the implantable prosthesis and medical device is recorded in the patient record."},
+  {code:"PRE1a",chapter:"PRE",text:"Patient and family rights and responsibilities are displayed and they are made aware of the same."},
+  {code:"PRE1b",chapter:"PRE",text:"Patient and family rights include respecting beliefs and values."},
+  {code:"PRE1c",chapter:"PRE",text:"Patient and family rights include respect for personal dignity and privacy during examination and treatment."},
+  {code:"PRE1d",chapter:"PRE",text:"Patient and family rights include protection from neglect or abuse."},
+  {code:"PRE1e",chapter:"PRE",text:"Patient and family rights include treating patient information as confidential."},
+  {code:"PRE1f",chapter:"PRE",text:"Patient and family rights include the refusal of treatment and right to seek second opinion."},
+  {code:"PRE1g",chapter:"PRE",text:"Patient and family rights include informed consent before transfusion of blood and blood products."},
+  {code:"PRE1h",chapter:"PRE",text:"Patient and family rights include a right to complain and information on how to do so."},
+  {code:"PRE1i",chapter:"PRE",text:"Patient and family rights include information on the expected cost of the treatment."},
+  {code:"PRE1j",chapter:"PRE",text:"Patient and family rights include access to their clinical records."},
+  {code:"PRE1k",chapter:"PRE",text:"Patient and family rights include information on the name of the treating doctor and care team."},
+  {code:"PRE2a",chapter:"PRE",text:"The patient and/or family members are explained about the proposed care, its risks and alternatives before consent."},
+  {code:"PRE2b",chapter:"PRE",text:"The organisation obtains informed consent from the patient and/or family for the defined procedures and treatments."},
+  {code:"PRE2c",chapter:"PRE",text:"Informed consent process adheres to statutory norms."},
+  {code:"PRE2d",chapter:"PRE",text:"Patients and families are educated on plan of care, preventive aspects, possible complications and home care."},
+  {code:"PRE2e",chapter:"PRE",text:"Communication with patients and/or family is done effectively."},
+  {code:"PRE2f",chapter:"PRE",text:"The organisation has a mechanism to capture patient feedback and to redress grievances."},
+  {code:"IPC1a",chapter:"IPC",text:"The infection prevention and control programme is documented and is periodically updated."},
+  {code:"IPC1b",chapter:"IPC",text:"The organisation adheres to hand hygiene, standard precautions and transmission-based precautions."},
+  {code:"IPC1c",chapter:"IPC",text:"The organisation adheres to safe injection and infusion practices."},
+  {code:"IPC1d",chapter:"IPC",text:"The organisation establishes and implements the antimicrobial usage policy."},
+  {code:"IPC1e",chapter:"IPC",text:"Appropriate pre and post exposure prophylaxis is provided to all concerned staff."},
+  {code:"IPC1f",chapter:"IPC",text:"The organisation performs surveillance to capture and monitor infection rates and takes corrective action."},
+  {code:"IPC2a",chapter:"IPC",text:"Biomedical waste (BMW) is handled appropriately and safely."},
+  {code:"IPC2b",chapter:"IPC",text:"The organisation has appropriate engineering controls to prevent infections."},
+  {code:"IPC2c",chapter:"IPC",text:"Cleaning and disinfection practices are defined and monitored as appropriate."},
+  {code:"IPC2d",chapter:"IPC",text:"Instruments/devices cleaning, disinfection and sterilization practices are monitored."},
+  {code:"IPC2e",chapter:"IPC",text:"The organisation adheres to laundry and linen management processes."},
+  {code:"IPC2f",chapter:"IPC",text:"The organisation adheres to kitchen sanitation and food handling guidelines."},
+  {code:"PSQ1a",chapter:"PSQ",text:"A comprehensive quality improvement and patient safety programme is established and implemented."},
+  {code:"PSQ1b",chapter:"PSQ",text:"The organisation adapts and implements Patient Safety Goals."},
+  {code:"PSQ1c",chapter:"PSQ",text:"There is an established process to monitor and improve the quality of care and patient safety."},
+  {code:"PSQ1d",chapter:"PSQ",text:"Clinical audits are performed to improve the quality of patient care."},
+  {code:"PSQ2a",chapter:"PSQ",text:"The organisation identifies and monitors key indicators to oversee infection prevention and control."},
+  {code:"PSQ2b",chapter:"PSQ",text:"The organisation identifies and monitors key indicators to oversee patient safety."},
+  {code:"PSQ2c",chapter:"PSQ",text:"The organisation identifies and monitors key indicators to oversee clinical and managerial performance."},
+  {code:"PSQ2d",chapter:"PSQ",text:"Clinical audits are performed to improve quality of patient care with the involvement of clinicians."},
+  {code:"ROM1a",chapter:"ROM",text:"Those responsible for governance are identified and their roles and responsibilities are defined."},
+  {code:"ROM1b",chapter:"ROM",text:"The organisation is registered with appropriate authorities and complies with the applicable laws and regulations."},
+  {code:"ROM2a",chapter:"ROM",text:"The management makes public the mission statement of the organisation."},
+  {code:"ROM2b",chapter:"ROM",text:"The leaders/management guide the organisation to function in an ethical manner."},
+  {code:"ROM2c",chapter:"ROM",text:"The organisation billing process is accurate and ethical."},
+  {code:"ROM3a",chapter:"ROM",text:"Designated committees oversee infection prevention and control, quality improvement and other key functions."},
+  {code:"ROM3b",chapter:"ROM",text:"Management ensures that it has a documented agreement for all outsourced services."},
+  {code:"ROM3c",chapter:"ROM",text:"The organisation has a mechanism to report a violation of patient and family rights."},
+  {code:"ROM3d",chapter:"ROM",text:"Staff well-being is promoted."},
+  {code:"ROM4a",chapter:"ROM",text:"Those responsible for governance address the organisation sustainability through long term planning."},
+  {code:"ROM4b",chapter:"ROM",text:"The organisation takes initiatives towards an energy efficient and environment-friendly facility."},
+  {code:"ROM4c",chapter:"ROM",text:"Those responsible for governance address the organisation social responsibility."},
+  {code:"ROM4d",chapter:"ROM",text:"Staff well-being is promoted through defined programmes."},
+  {code:"FMS1a",chapter:"FMS",text:"The organisation has appropriate infrastructure for patient safety and is maintained in a clean and hygienic condition."},
+  {code:"FMS1b",chapter:"FMS",text:"Facility inspection rounds to ensure safety are conducted at least once a month."},
+  {code:"FMS1c",chapter:"FMS",text:"Organisation identifies areas which need additional security and access control measures."},
+  {code:"FMS1d",chapter:"FMS",text:"Internal and external signage shall be displayed in a language understood by the patients and staff."},
+  {code:"FMS1e",chapter:"FMS",text:"Hazardous materials are identified and used safely within the organisation."},
+  {code:"FMS2a",chapter:"FMS",text:"The operational and maintenance plan for engineering support services and utility systems are implemented as per written guidance."},
+  {code:"FMS2b",chapter:"FMS",text:"Medical equipment is maintained, inspected and calibrated and there are documented records."},
+  {code:"FMS3a",chapter:"FMS",text:"Potable water and electricity are available round the clock."},
+  {code:"FMS3b",chapter:"FMS",text:"Medical gases and vacuum systems are handled safely and are available round the clock."},
+  {code:"FMS4a",chapter:"FMS",text:"The organisation has plans and provisions for identification, early detection and suppression of fire."},
+  {code:"FMS4b",chapter:"FMS",text:"There is a maintenance plan for fire related equipment and infrastructure."},
+  {code:"FMS4c",chapter:"FMS",text:"The organisation has a documented and displayed safe exit plan in case of fire."},
+  {code:"FMS4d",chapter:"FMS",text:"Mock drills are held at least twice in a year."},
+  {code:"HRM1a",chapter:"HRM",text:"The mix of staff is commensurate with the volume and scope of services."},
+  {code:"HRM1b",chapter:"HRM",text:"The job specification and job description are defined for each category of staff."},
+  {code:"HRM1c",chapter:"HRM",text:"The organisation defines and implements a code of conduct for its staff."},
+  {code:"HRM2a",chapter:"HRM",text:"Written guidance governs training and development policy for the staff."},
+  {code:"HRM2b",chapter:"HRM",text:"Staff are provided with induction training."},
+  {code:"HRM2c",chapter:"HRM",text:"Staff are regularly trained on patient care activities based on their specific job requirements."},
+  {code:"HRM2d",chapter:"HRM",text:"Staff are regularly trained in safety and quality related aspects."},
+  {code:"HRM2e",chapter:"HRM",text:"Staff are trained in handling disaster, fire and non-fire emergencies."},
+  {code:"HRM3a",chapter:"HRM",text:"Performance appraisal is done for staff within the organisation at defined intervals."},
+  {code:"HRM3b",chapter:"HRM",text:"Process for disciplinary and grievance handling is defined and implemented."},
+  {code:"HRM4a",chapter:"HRM",text:"Health problems of the staff, including occupational health hazards, are taken care of by the organisation."},
+  {code:"HRM4b",chapter:"HRM",text:"The organisation has measures in place for prevention and handling of workplace violence."},
+  {code:"HRM4c",chapter:"HRM",text:"Medical and nursing professionals are granted privileges to admit and care for patients."},
+  {code:"HRM5a",chapter:"HRM",text:"Personal files are maintained in respect of all staff."},
+  {code:"HRM5b",chapter:"HRM",text:"Staff records include credentials, training, competency assessment and performance appraisal."},
+  {code:"IMS1a",chapter:"IMS",text:"The organisation identifies, captures and disseminates the information needs of all staff."},
+  {code:"IMS1b",chapter:"IMS",text:"Use of telemedicine is as per applicable guidelines."},
+  {code:"IMS1c",chapter:"IMS",text:"The organisation shall make efforts to use digital health technology to improve care."},
+  {code:"IMS2a",chapter:"IMS",text:"Every medical record has a unique identifier."},
+  {code:"IMS2b",chapter:"IMS",text:"The medical record provides a complete, up-to-date and chronological account of the patient's care."},
+  {code:"IMS2c",chapter:"IMS",text:"Every medical record entry is signed, named, dated and timed by those authorized to make entries."},
+  {code:"IMS2d",chapter:"IMS",text:"Medical records are reviewed periodically."},
+  {code:"IMS3a",chapter:"IMS",text:"The organisation maintains confidentiality, integrity and security of information and records."},
+  {code:"IMS3b",chapter:"IMS",text:"The organisation discloses privileged health information as authorized by the patient or as required by law."},
+  {code:"IMS3c",chapter:"IMS",text:"Written guidance is available for document control."},
+  {code:"IMS3d",chapter:"IMS",text:"Written guidance is available for retention and destruction of the patient's clinical records."},
 ];
 
 const HCO_ELC_PROCESS = [
@@ -3610,6 +3800,8 @@ export default function App() {
   const [hcoLicProgress, setHcoLicProgress] = useState({});
   const [hcoDocFilter, setHcoDocFilter] = useState('all');
   const [hcoDocPart, setHcoDocPart] = useState('all');
+  const [hcoOeSearch, setHcoOeSearch] = useState('');
+  const [hcoOeChapter, setHcoOeChapter] = useState('all');
   const [pdfLoading, setPdfLoading] = useState(false);
   const [showMoreMenu, setShowMoreMenu] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -4820,19 +5012,20 @@ export default function App() {
       </div>
 
       <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
-        <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:12}}>📖 HCO ELC — 10 Assessment Chapters</div>
+        <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:12}}>📖 HCO ELC — 10 Chapters · 188 OEs (2nd Edition, Jan 2026)</div>
         <div style={{display:'grid',gap:6}}>
           {HCO_ELC_CHAPTER_SUMMARY.map(c => (
             <div key={c.ch} style={{background:T.panel2,borderRadius:8,padding:'10px 12px',border:`1px solid ${T.border}`}}>
               <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:3}}>
                 <span style={{color:T.gold,fontWeight:700,fontSize:14,minWidth:36}}>{c.ch}</span>
-                <span style={{color:T.text,fontSize:14,fontWeight:600}}>{c.name}</span>
+                <span style={{color:T.text,fontSize:14,fontWeight:600,flex:1}}>{c.name}</span>
+                <span style={{color:T.blue,fontWeight:600,fontSize:13,whiteSpace:'nowrap'}}>{c.oes} OEs</span>
               </div>
               <div style={{color:T.muted,fontSize:13,lineHeight:1.4,paddingLeft:44}}>{c.desc}</div>
             </div>
           ))}
         </div>
-        <div style={{marginTop:10,color:T.muted,fontSize:13,textAlign:'center'}}>Source: NABH Guidebook on Entry-Level Certification for HCOs/SHCOs (Section 4.1)</div>
+        <div style={{marginTop:10,color:T.muted,fontSize:13,textAlign:'center'}}>Source: NABH ELC Standards for HCOs — 2nd Edition (Effective January 2026)</div>
       </div>
     </div>
   );
@@ -5057,8 +5250,73 @@ export default function App() {
     </div>
   );
 
+  const renderOEBrowser = () => {
+    const q = hcoOeSearch.toLowerCase().trim();
+    const filtered = HCO_ELC_OE_LIST.filter(oe => {
+      const chapterMatch = hcoOeChapter === 'all' || oe.chapter === hcoOeChapter;
+      const textMatch = !q || oe.code.toLowerCase().includes(q) || oe.text.toLowerCase().includes(q);
+      return chapterMatch && textMatch;
+    });
+    const chapters = HCO_ELC_CHAPTER_SUMMARY.map(c => c.ch);
+    const grouped = chapters.map(ch => ({
+      ch,
+      name: HCO_ELC_CHAPTER_SUMMARY.find(c => c.ch === ch)?.name || ch,
+      oes: filtered.filter(oe => oe.chapter === ch),
+    })).filter(g => g.oes.length > 0);
+    return (
+      <div style={{padding:16}}>
+        <div style={{marginBottom:12,display:'flex',gap:8,flexDirection:'column'}}>
+          <input
+            value={hcoOeSearch} onChange={e => setHcoOeSearch(e.target.value)}
+            placeholder="Search by OE code or text…"
+            style={{width:'100%',padding:'9px 12px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14,boxSizing:'border-box'}}
+          />
+          <div style={{display:'flex',gap:6,flexWrap:'wrap'}}>
+            <button onClick={() => setHcoOeChapter('all')}
+              style={{padding:'4px 10px',borderRadius:20,border:`1px solid ${hcoOeChapter==='all'?T.gold:T.border}`,background:hcoOeChapter==='all'?T.gold+'22':'transparent',color:hcoOeChapter==='all'?T.gold:T.muted,fontSize:12,cursor:'pointer'}}>
+              All ({HCO_ELC_OE_LIST.length})
+            </button>
+            {HCO_ELC_CHAPTER_SUMMARY.map(c => (
+              <button key={c.ch} onClick={() => setHcoOeChapter(c.ch)}
+                style={{padding:'4px 10px',borderRadius:20,border:`1px solid ${hcoOeChapter===c.ch?T.gold:T.border}`,background:hcoOeChapter===c.ch?T.gold+'22':'transparent',color:hcoOeChapter===c.ch?T.gold:T.muted,fontSize:12,cursor:'pointer'}}>
+                {c.ch} ({c.oes})
+              </button>
+            ))}
+          </div>
+        </div>
+        {filtered.length === 0 ? (
+          <div style={{color:T.muted,fontSize:14,textAlign:'center',padding:24}}>No OEs match your search.</div>
+        ) : (
+          <div style={{display:'flex',flexDirection:'column',gap:16}}>
+            {grouped.map(g => (
+              <div key={g.ch}>
+                <div style={{color:T.gold,fontWeight:700,fontSize:14,marginBottom:6,display:'flex',alignItems:'center',gap:8}}>
+                  <span>{g.ch}</span>
+                  <span style={{color:T.muted,fontWeight:400,fontSize:13}}>{g.name}</span>
+                  <span style={{marginLeft:'auto',color:T.blue,fontSize:12}}>{g.oes.length} OEs</span>
+                </div>
+                <div style={{display:'flex',flexDirection:'column',gap:4}}>
+                  {g.oes.map(oe => (
+                    <div key={oe.code} style={{background:T.panel2,borderRadius:8,padding:'9px 12px',border:`1px solid ${T.border}`,display:'flex',gap:10,alignItems:'flex-start'}}>
+                      <span style={{color:T.gold,fontWeight:700,fontSize:13,minWidth:52,flexShrink:0}}>{oe.code}</span>
+                      <span style={{color:T.text,fontSize:14,lineHeight:1.5}}>{oe.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+        <div style={{marginTop:12,color:T.muted,fontSize:12,textAlign:'center'}}>
+          {filtered.length} of {HCO_ELC_OE_LIST.length} OEs — NABH HCO ELC 2nd Edition (Jan 2026)
+        </div>
+      </div>
+    );
+  };
+
   const HCO_ELC_TABS = [
     {key:'overview', label:'📊 Overview'},
+    {key:'oes', label:'📑 OE Browser'},
     {key:'docs', label:'📂 Documents'},
     {key:'licenses', label:'📋 Licenses'},
     {key:'process', label:'🗺️ Process'},
@@ -5068,6 +5326,7 @@ export default function App() {
   const renderHCOELCTab = () => {
     switch(hcoElcTab) {
       case 'overview': return renderOverview();
+      case 'oes': return renderOEBrowser();
       case 'docs': return renderDocTracker();
       case 'licenses': return renderLicenseTracker();
       case 'process': return renderProcess();
@@ -5080,7 +5339,7 @@ export default function App() {
     <div style={{background:T.bg,minHeight:'100vh',color:T.text}}>
       <div style={{padding:'16px 16px 0',display:'flex',gap:8}}>
         {[
-          {key:'elc', label:'📋 ELC Prep', sub:'Entry Level Certification (>50 beds)'},
+          {key:'elc', label:'📋 ELC Prep', sub:'NABH ELC 2nd Edition — Effective January 2026'},
           {key:'full', label:'🏆 Full Accreditation', sub:'6th Edition — 639 OEs'},
         ].map(m => (
           <button key={m.key} onClick={() => setHcoMode(m.key)}
