@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHCO Accreditation Software India – AccredReady</title>
+  <meta name="description" content="AccredReady is India's dedicated SHCO accreditation software. Manage compliance for Small Healthcare Organizations under NABH SHCO Full Accreditation and Entry Level Certification. Fee calculator included." />
+  <meta name="keywords" content="SHCO accreditation software, SHCO NABH compliance, small healthcare organization accreditation, SHCO full accreditation, SHCO entry level certification, NABH SHCO India" />
+  <link rel="canonical" href="https://accredready.in/shco-accreditation-software.html" />
+  <meta property="og:title" content="SHCO Accreditation Software India – AccredReady" />
+  <meta property="og:description" content="Dedicated SHCO accreditation software for small healthcare organizations. 408 OEs, fee calculator, compliance tracking — get NABH SHCO accredited faster." />
+  <meta property="og:url" content="https://accredready.in/shco-accreditation-software.html" />
+  <meta property="og:image" content="https://accredready.in/logo512.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #040d1a; --accent: #2563eb; --accent2: #38bdf8;
+      --purple: #a78bfa; --white: #f8fafc; --muted: #94a3b8; --card: #0f1f38;
+    }
+    body { background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; line-height: 1.6; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); position: sticky; top: 0; background: rgba(4,13,26,0.95); backdrop-filter: blur(12px); z-index: 100; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--accent2); text-decoration: none; }
+    .nav-cta { background: var(--accent); color: white; padding: 0.55rem 1.4rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+
+    .hero { max-width: 860px; margin: 0 auto; padding: 4.5rem 2rem 3.5rem; text-align: center; }
+    .badge { display: inline-block; background: rgba(167,139,250,0.1); border: 1px solid rgba(167,139,250,0.3); color: var(--purple); padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.15; margin-bottom: 1.25rem; }
+    h1 span { color: var(--accent2); }
+    .hero-sub { font-size: 1.1rem; color: var(--muted); max-width: 600px; margin: 0 auto 2.5rem; }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: var(--accent); color: white; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; box-shadow: 0 4px 24px rgba(37,99,235,0.35); display: inline-block; }
+    .btn-secondary { background: transparent; color: var(--white); padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 1rem; border: 1px solid rgba(255,255,255,0.2); display: inline-block; }
+
+    section { max-width: 1000px; margin: 0 auto; padding: 3.5rem 2rem; }
+    h2 { font-family: 'Syne', sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-bottom: 1rem; }
+    h2 span { color: var(--accent2); }
+    .section-sub { color: var(--muted); margin-bottom: 2.5rem; }
+
+    /* PROGRAMME CARDS */
+    .programme-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    @media(max-width:600px) { .programme-grid { grid-template-columns: 1fr; } }
+    .prog-card { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 2rem; }
+    .prog-card.elc { border-color: rgba(56,189,248,0.2); }
+    .prog-card.full { border-color: rgba(167,139,250,0.2); }
+    .prog-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; }
+    .prog-card.elc .prog-label { color: var(--accent2); }
+    .prog-card.full .prog-label { color: var(--purple); }
+    .prog-title { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; }
+    .prog-oe { font-family: 'Syne', sans-serif; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.25rem; }
+    .prog-card.elc .prog-oe { color: var(--accent2); }
+    .prog-card.full .prog-oe { color: var(--purple); }
+    .prog-desc { color: var(--muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; }
+    .prog-features { list-style: none; }
+    .prog-features li { padding: 0.35rem 0; font-size: 0.88rem; color: var(--muted); display: flex; gap: 0.5rem; }
+    .prog-features li::before { content: "→"; flex-shrink: 0; }
+
+    /* WHO IS IT FOR */
+    .who-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .who-card { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 1.5rem; text-align: center; }
+    .who-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+    .who-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem; }
+    .who-desc { color: var(--muted); font-size: 0.85rem; }
+
+    .cta-banner { background: linear-gradient(135deg, #0a1f3d, #1e3a8a); border: 1px solid rgba(37,99,235,0.3); border-radius: 16px; padding: 3rem 2rem; text-align: center; }
+    .cta-banner h2 { margin-bottom: 0.75rem; }
+    .cta-banner p { color: var(--muted); margin-bottom: 2rem; }
+
+    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer a { color: var(--muted); text-decoration: none; margin: 0 0.75rem; }
+    footer a:hover { color: var(--accent2); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://accredready.in" class="logo">AccredReady</a>
+  <a href="https://accredready.in" class="nav-cta">Start Free Trial</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">SHCO Accreditation</div>
+  <h1>NABH Accreditation Software<br/>for <span>Small Healthcare Organizations</span></h1>
+  <p class="hero-sub">AccredReady has a dedicated SHCO module covering both SHCO Entry Level Certification and SHCO Full Accreditation. Built specifically for nursing homes, clinics, and small hospitals pursuing NABH.</p>
+  <div class="hero-btns">
+    <a href="https://accredready.in" class="btn-primary">Start Free Trial →</a>
+    <a href="https://accredready.in/nabh-accreditation-software.html" class="btn-secondary">Full Feature List</a>
+  </div>
+</div>
+
+<section>
+  <h2>Two SHCO Programmes, <span>One Platform</span></h2>
+  <p class="section-sub">AccredReady supports both NABH SHCO pathways. Switch between them with a single click.</p>
+  <div class="programme-grid">
+    <div class="prog-card elc">
+      <div class="prog-label">Entry Level</div>
+      <div class="prog-title">SHCO Entry Level Certification</div>
+      <div class="prog-oe">~180</div>
+      <div style="color:var(--muted); font-size:0.8rem; margin-bottom:1rem;">Objective Elements</div>
+      <div class="prog-desc">The starting point for small healthcare organizations new to NABH. Focuses on core patient safety and quality standards.</div>
+      <ul class="prog-features">
+        <li>Simplified OE set for first-time applicants</li>
+        <li>Core safety standards</li>
+        <li>Faster path to NABH certification</li>
+        <li>Foundation for Full Accreditation</li>
+      </ul>
+    </div>
+    <div class="prog-card full">
+      <div class="prog-label">Full Accreditation</div>
+      <div class="prog-title">SHCO Full Accreditation</div>
+      <div class="prog-oe">408</div>
+      <div style="color:var(--muted); font-size:0.8rem; margin-bottom:1rem;">Objective Elements</div>
+      <div class="prog-desc">Complete NABH accreditation for established SHCOs. Comprehensive standards covering all aspects of care delivery.</div>
+      <ul class="prog-features">
+        <li>All 408 SHCO OEs tracked</li>
+        <li>Full compliance scoring</li>
+        <li>Complete audit toolkit</li>
+        <li>Fee calculator for NABH application</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Who Is SHCO Accreditation <span>For?</span></h2>
+  <p class="section-sub">NABH SHCO programme is designed for smaller healthcare facilities that don't qualify under the HCO programme.</p>
+  <div class="who-grid">
+    <div class="who-card">
+      <div class="who-icon">🏥</div>
+      <div class="who-title">Nursing Homes</div>
+      <div class="who-desc">Small inpatient facilities with limited beds seeking formal quality recognition</div>
+    </div>
+    <div class="who-card">
+      <div class="who-icon">🏨</div>
+      <div class="who-title">Day Care Centers</div>
+      <div class="who-desc">Surgical and medical day care facilities requiring NABH compliance</div>
+    </div>
+    <div class="who-card">
+      <div class="who-icon">👨‍⚕️</div>
+      <div class="who-title">Specialty Clinics</div>
+      <div class="who-desc">Eye clinics, dental centers, dialysis units, and other specialty outpatient facilities</div>
+    </div>
+    <div class="who-card">
+      <div class="who-icon">🔬</div>
+      <div class="who-title">Diagnostic Centers</div>
+      <div class="who-desc">Radiology, pathology, and imaging centers seeking NABH quality certification</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>SHCO-Specific Features in <span>AccredReady</span></h2>
+  <p class="section-sub">Not a stripped-down version. A purpose-built SHCO compliance toolkit.</p>
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:1.25rem;">
+    <div style="background:var(--card); border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:1.5rem;">
+      <div style="font-size:1.5rem; margin-bottom:0.75rem;">🧮</div>
+      <div style="font-family:'Syne',sans-serif; font-weight:700; margin-bottom:0.5rem;">NABH Fee Calculator</div>
+      <div style="color:var(--muted); font-size:0.9rem;">Calculate your exact NABH application fee based on your facility type, bed strength, and programme. No surprises when you apply.</div>
+    </div>
+    <div style="background:var(--card); border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:1.5rem;">
+      <div style="font-size:1.5rem; margin-bottom:0.75rem;">📋</div>
+      <div style="font-family:'Syne',sans-serif; font-weight:700; margin-bottom:0.5rem;">Programme Switcher</div>
+      <div style="color:var(--muted); font-size:0.9rem;">Toggle between ELC and Full Accreditation mode. OE list, scoring, and requirements automatically adapt to your chosen programme.</div>
+    </div>
+    <div style="background:var(--card); border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:1.5rem;">
+      <div style="font-size:1.5rem; margin-bottom:0.75rem;">📊</div>
+      <div style="font-family:'Syne',sans-serif; font-weight:700; margin-bottom:0.5rem;">Gap Analysis Report</div>
+      <div style="color:var(--muted); font-size:0.9rem;">Generate a PDF gap report specific to SHCO standards. Know exactly what's missing before the NABH assessor arrives.</div>
+    </div>
+    <div style="background:var(--card); border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:1.5rem;">
+      <div style="font-size:1.5rem; margin-bottom:0.75rem;">📄</div>
+      <div style="font-family:'Syne',sans-serif; font-weight:700; margin-bottom:0.5rem;">Document Tracker</div>
+      <div style="color:var(--muted); font-size:0.9rem;">Track all 223 mandatory SHCO documents and 26 statutory licenses. Never miss a required document during assessment.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cta-banner">
+    <h2>Get Your SHCO <span>Accreditation-Ready</span></h2>
+    <p>Join SHCOs across India using AccredReady to achieve NABH certification faster and with less stress.</p>
+    <a href="https://accredready.in" class="btn-primary">Start Free Trial — No Credit Card →</a>
+  </div>
+</section>
+
+<footer>
+  <p style="margin-bottom:0.75rem;">
+    <a href="https://accredready.in">Home</a>
+    <a href="https://accredready.in/nabh-accreditation-software.html">NABH Software</a>
+    <a href="https://accredready.in/nabh-6th-edition-checklist.html">NABH Checklist</a>
+    <a href="https://accredready.in/hospital-quality-management.html">Quality Management</a>
+    <a href="https://accredready.in/privacy.html">Privacy Policy</a>
+  </p>
+  <p>© 2026 AccredReady by MK Tech. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
