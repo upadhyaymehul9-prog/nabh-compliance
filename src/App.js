@@ -243,11 +243,11 @@ const SHCO_FEE_SLABS = [
 ];
 
 const SHCO_ELC_PROCESS = [
-  {step:1,name:"Register on HOPE Portal",url:"nabh.qcin.org",desc:"Go to nabh.qcin.org → Register → Fill hospital details",output:"Login credentials + application ID"},
-  {step:2,name:"Fill 7-Part Questionnaire",url:"nabh.qcin.org",desc:"Complete all 7 parts of the HOPE questionnaire online — General Info, Physical Infrastructure, Statutory, Clinical, Staffing, Quality, Documentation",output:"Completed questionnaire submission"},
-  {step:3,name:"Upload Documents",url:"nabh.qcin.org",desc:"Upload portal documents via web portal + mobile app documents via HOPE mobile app",output:"Document submission complete"},
-  {step:4,name:"Pay Fee",url:"nabh.qcin.org",desc:"Pay applicable certification fee based on bed strength (+ 18% GST). Discount valid till 30 Sep 2026.",output:"Payment receipt + application confirmed"},
-  {step:5,name:"Desktop Assessment (DA)",url:"",desc:"NABH desk team reviews all submitted documents. NCs raised online. You get ONE chance to respond — no second round.",output:"NC closure letter"},
+  {step:1,name:"Register on HOPE Portal",url:"hope.qcin.org",desc:"Go to hope.qcin.org → Register → Fill hospital details",output:"Login credentials + application ID"},
+  {step:2,name:"Fill 7-Part Questionnaire",url:"hope.qcin.org",desc:"Complete all 7 parts of the HOPE questionnaire online — General Info, Physical Infrastructure, Statutory, Clinical, Staffing, Quality, Documentation",output:"Completed questionnaire submission"},
+  {step:3,name:"Upload Documents",url:"hope.qcin.org",desc:"Upload portal documents via web portal + mobile app documents via HOPE mobile app",output:"Document submission complete"},
+  {step:4,name:"Pay Fee",url:"hope.qcin.org",desc:"Pay applicable certification fee based on bed strength (+ applicable GST). Discount valid till 30 Sep 2026.",output:"Payment receipt + application confirmed"},
+  {step:5,name:"Desktop Assessment (DA)",url:"",desc:"NABH desk team reviews all submitted documents. NCs raised online. Two rounds of NC closure available at DA stage.",output:"NC closure letter"},
   {step:6,name:"Onsite Assessment",url:"",desc:"Date allotted after successful DA NC closure. Assessor visits physically. NCs raised on-site.",output:"Onsite assessment report"},
   {step:7,name:"Certification Committee",url:"",desc:"Final report submitted to Certification Committee. Committee approves or rejects.",output:"Approval / Rejection letter"},
   {step:8,name:"Digital Certificate",url:"",desc:"Printable digital certificate issued. Valid for 2 years. Apply for renewal 6 months before expiry.",output:"NABH ELC Certificate"},
@@ -721,7 +721,7 @@ const HCO_ELC_PROCESS = [
   {step:4,name:"Pay Fee",url:"hope.qcin.org",desc:"Pay HCO ELC fee of ₹52,000 + applicable GST. Fee is non-refundable and non-transferable. Once paid, application moves to DA team.",output:"Payment receipt + Permanent Application Number"},
   {step:5,name:"Desktop Assessment (DA)",url:"",desc:"NABH DA team reviews all submitted documents online. NCs raised with remarks. HCO submits NC reply + supporting document upload. Two rounds of NC closure cycle available at DA stage.",output:"DA NC closure → Date allotment for onsite assessment"},
   {step:6,name:"Onsite Assessment",url:"",desc:"Physical visit by NABH assessor. Assessment activities: document review, patient care area visit, functional interviews, facility tours. Assessor uploads report within 7 days. HCO gets two NC closure cycles.",output:"Onsite assessment report + NC closure"},
-  {step:7,name:"Certification Committee",url:"",desc:"After all NCs closed, case placed before Certification Committee. Committee recommendations are final. If rejected, HCO can appeal to Chairman NABH after paying appeal fee.",output:"Approval letter / Rejection letter"},
+  {step:7,name:"Certification Committee",url:"",desc:"After all NCs closed, case placed before Certification Committee. Committee recommendations are final. If rejected, appeal facility is available after paying appeal fee.",output:"Approval letter / Rejection letter"},
   {step:8,name:"Digital Certificate",url:"",desc:"Printable digital certificate issued with unique certificate number, hospital name, effective date, expiry date. Valid for 2 years. No surveillance assessment under certification programmes. Apply for renewal 6 months before expiry.",output:"NABH HCO ELC Certificate (2-year validity)"},
 ];
 
@@ -4381,7 +4381,7 @@ export default function App() {
         <div style={{background:'#1a0a00',border:`1px solid ${T.orange}`,borderRadius:10,padding:14}}>
           <div style={{color:T.orange,fontWeight:700,fontSize:15,marginBottom:4}}>📋 2nd Edition Active — March 2026</div>
           <div style={{color:T.text,fontSize:14,lineHeight:1.6}}>
-            ELC now uses the unified 2nd Edition standards (Jan 2026). New applicants from March 2026 must apply via <strong style={{color:T.gold}}>nabh.qcin.org</strong>.
+            ELC now uses the unified 2nd Edition standards (Jan 2026). New applicants from March 2026 must apply via <strong style={{color:T.gold}}>hope.qcin.org</strong>.
             1st Edition (149 OEs) is no longer valid for new applications.
           </div>
         </div>
@@ -4433,16 +4433,13 @@ export default function App() {
                   )}
                 </div>
                 <div>
-                  <div style={{color:T.muted,fontSize:12}}>GST (18%)</div>
+                  <div style={{color:T.muted,fontSize:12}}>GST (applicable rate)</div>
                   <div style={{color:T.text,fontWeight:600,fontSize:16}}>₹{feeResult.gst.toLocaleString('en-IN')}</div>
                 </div>
               </div>
               <div style={{borderTop:`1px solid ${T.border}`,paddingTop:10,display:'flex',justifyContent:'space-between',alignItems:'center'}}>
                 <span style={{color:T.white,fontWeight:700,fontSize:15}}>Total Payable</span>
                 <span style={{color:T.green,fontWeight:700,fontSize:18}}>₹{feeResult.total.toLocaleString('en-IN')}</span>
-              </div>
-              <div style={{marginTop:8,fontSize:13,color:T.muted}}>
-                Focus assessment: ₹15,000 + GST | Re-issue of certificate: ₹6,000 + GST
               </div>
             </div>
           ) : shcoBeds ? (
@@ -4723,8 +4720,8 @@ export default function App() {
       <div style={{color:T.gold,fontWeight:600,fontSize:15,marginBottom:10}}>Recommended Timeline</div>
       {[
         {phase:'Month 1–3',action:'Start ELC preparation — documents, licenses, questionnaire',color:T.blue},
-        {phase:'Month 4',action:'Submit ELC application on nabh.qcin.org',color:T.blue},
-        {phase:'Month 5–6',action:'Desktop Assessment + NC closure (one chance only)',color:T.orange},
+        {phase:'Month 4',action:'Submit ELC application on hope.qcin.org',color:T.blue},
+        {phase:'Month 5–6',action:'Desktop Assessment + NC closure (two rounds available)',color:T.orange},
         {phase:'Month 6–7',action:'Onsite Assessment',color:T.orange},
         {phase:'Month 8',action:'Certification Committee — ELC Certificate received',color:T.green},
         {phase:'Month 8–18',action:'Implement SHCO 3rd Edition standards (408 OEs) for full accreditation',color:T.gold},
@@ -4878,16 +4875,16 @@ export default function App() {
       <div style={{color:T.gold,fontWeight:600,fontSize:15,marginBottom:10}}>Chapter Breakdown — 6th Edition</div>
       <div style={{display:'grid',gap:6}}>
         {[
-          {ch:'AAC',name:'Access, Assessment & Continuity of Care',oes:72},
-          {ch:'COP',name:'Care of Patients',oes:117},
-          {ch:'MOM',name:'Management of Medication',oes:67},
-          {ch:'PRE',name:'Patient Rights & Education',oes:47},
-          {ch:'HIC',name:'Hospital Infection Control',oes:48},
-          {ch:'PSQ',name:'Patient Safety & Quality Improvement',oes:34},
-          {ch:'ROM',name:'Responsibilities of Management',oes:51},
-          {ch:'FMS',name:'Facility Management & Safety',oes:61},
-          {ch:'HRM',name:'Human Resource Management',oes:62},
-          {ch:'IMS',name:'Information Management System',oes:40},
+          {ch:'AAC',name:'Access, Assessment & Continuity of Care',oes:87},
+          {ch:'COP',name:'Care of Patients',oes:135},
+          {ch:'MOM',name:'Management of Medication',oes:68},
+          {ch:'PRE',name:'Patient Rights & Education',oes:52},
+          {ch:'IPC',name:'Infection Prevention & Control',oes:49},
+          {ch:'PSQ',name:'Patient Safety & Quality Improvement',oes:46},
+          {ch:'ROM',name:'Responsibilities of Management',oes:37},
+          {ch:'FMS',name:'Facility Management & Safety',oes:43},
+          {ch:'HRM',name:'Human Resource Management',oes:76},
+          {ch:'IMS',name:'Information Management System',oes:45},
         ].map(c => (
           <div key={c.ch} style={{background:T.panel,borderRadius:8,padding:'10px 14px',display:'flex',justifyContent:'space-between',alignItems:'center',border:`1px solid ${T.border}`}}>
             <div>
