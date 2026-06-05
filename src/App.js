@@ -5572,17 +5572,17 @@ function CommitteeCalendarScreen({ hospitalId }) {
           </div>
         </div>
       )}
-      <div style={{display:"grid",gridTemplateColumns:"1fr auto 1fr",alignItems:"center",marginBottom:10,gap:8}}>
-        <div>
+      <div style={{display:"flex",flexWrap:"wrap",alignItems:"center",marginBottom:10,gap:8}}>
+        <div style={{flex:"1 1 160px"}}>
           <div style={{fontSize:15,fontWeight:700,color:T.gold}}>{viewMode==="committee"?"Committee Calendar":"Mock Drill Calendar"}</div>
           <div style={{fontSize:12,color:T.muted}}>FY {year}–{year+1}{viewMode==="committee"?` · ${totalDone}/${totalExpected} done · ${pct}%`:""}</div>
         </div>
-        <div style={{display:"flex",borderRadius:8,border:`1px solid ${T.border}`,overflow:"hidden"}}>
-          <button onClick={()=>setViewMode("committee")} style={{padding:"7px 18px",fontSize:16,fontWeight:700,cursor:"pointer",background:viewMode==="committee"?T.goldD:"transparent",border:"none",color:viewMode==="committee"?T.goldL:T.muted,letterSpacing:0.2}}>🏛️ Committees</button>
-          <div style={{width:1,background:T.border}}/>
-          <button onClick={()=>setViewMode("drill")} style={{padding:"7px 18px",fontSize:16,fontWeight:700,cursor:"pointer",background:viewMode==="drill"?T.goldD:"transparent",border:"none",color:viewMode==="drill"?T.goldL:T.muted,letterSpacing:0.2}}>🚨 Drills</button>
+        <div style={{display:"flex",borderRadius:8,border:`1px solid ${T.border}`,overflow:"hidden",flex:"1 1 220px",width:"100%"}}>
+          <button onClick={()=>setViewMode("committee")} style={{flex:1,padding:"7px 10px",fontSize:13,fontWeight:700,cursor:"pointer",background:viewMode==="committee"?T.goldD:"transparent",border:"none",color:viewMode==="committee"?T.goldL:T.muted,whiteSpace:"nowrap"}}>🏛️ Committees</button>
+          <div style={{width:1,background:T.border,flexShrink:0}}/>
+          <button onClick={()=>setViewMode("drill")} style={{flex:1,padding:"7px 10px",fontSize:13,fontWeight:700,cursor:"pointer",background:viewMode==="drill"?T.goldD:"transparent",border:"none",color:viewMode==="drill"?T.goldL:T.muted,whiteSpace:"nowrap"}}>🚨 Drills</button>
         </div>
-        <div style={{display:"flex",gap:6,alignItems:"center",justifyContent:"flex-end"}}>
+        <div style={{display:"flex",gap:6,alignItems:"center",justifyContent:"flex-end",flex:"0 0 auto"}}>
           <button onClick={()=>setYear(y=>y-1)} style={{padding:"3px 8px",borderRadius:5,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:12,cursor:"pointer"}}>◀</button>
           <div style={{fontSize:12,fontWeight:700,color:T.gold,padding:"3px 10px",borderRadius:5,border:`1px solid ${T.gold}`,background:T.goldD}}>FY {year}–{year+1}</div>
           <button onClick={()=>setYear(y=>y+1)} style={{padding:"3px 8px",borderRadius:5,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:12,cursor:"pointer"}}>▶</button>
