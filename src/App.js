@@ -4695,7 +4695,7 @@ export default function App() {
 
   const renderOverview = () => (
     <div style={{padding:16,display:'flex',flexDirection:'column',gap:16}}>
-      <div style={{background:'#0a0a1a',border:`1px solid ${T.blue}`,borderRadius:10,padding:14}}>
+      <div style={{background:T.blueD,border:`1px solid ${T.blue}`,borderRadius:10,padding:14}}>
         <div style={{color:T.blue,fontWeight:700,fontSize:15,marginBottom:6}}>✅ HCO ELC Eligibility Criteria</div>
         <div style={{display:'flex',flexDirection:'column',gap:6}}>
           {[
