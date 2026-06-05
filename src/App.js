@@ -5170,13 +5170,18 @@ export default function App() {
                         <span>{n.label}</span>
                       </button>
                     ))}
+                    <a href="https://drive.google.com/drive/folders/1DOfGmHg_dO5blXw_3Mz07dtre6IKYYlI" target="_blank" rel="noopener noreferrer" onClick={()=>setShowMoreMenu(false)}
+                      style={{padding:"9px 16px",borderLeft:"3px solid transparent",background:"transparent",color:T.gold,fontSize:13,display:"flex",alignItems:"center",gap:10,textDecoration:"none",fontWeight:700,width:"100%"}}>
+                      <span style={{fontSize:15,width:20,textAlign:"center"}}>📁</span>
+                      <span>Docs</span>
+                    </a>
                   </div>
                 )}
               </div>
             )}
           </div>
           <button onClick={()=>setAuthState("programme")} style={{padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.3)":T.border}`,color:"#ffffff",fontSize:11,cursor:"pointer"}}>Switch</button>
-          <a href="https://drive.google.com/drive/folders/1DOfGmHg_dO5blXw_3Mz07dtre6IKYYlI" target="_blank" rel="noopener noreferrer" style={{padding:"4px 9px",borderRadius:7,background:theme==='light'?"rgba(255,255,255,0.15)":T.goldD,border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.gold}`,color:"#ffffff",fontSize:11,fontWeight:700,textDecoration:"none",whiteSpace:"nowrap"}}>📁 Docs</a>
+
           <button onClick={toggleTheme} title={theme==='dark'?'Switch to light mode':'Switch to dark mode'} style={{padding:"4px 9px",borderRadius:7,background:theme==='light'?"rgba(255,255,255,0.2)":"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.border}`,color:"#ffffff",fontSize:15,cursor:"pointer",lineHeight:1}}>{theme==='dark'?'☀️':'🌙'}</button>
           <div style={{position:"relative"}}>
             <button onClick={e=>{e.stopPropagation();setShowUserMenu(v=>!v);}} style={{width:30,height:30,borderRadius:"50%",background:theme==='light'?"rgba(255,255,255,0.2)":T.goldD,border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.gold}`,color:"#ffffff",fontSize:16,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",padding:0}}>👤</button>
@@ -5231,6 +5236,10 @@ export default function App() {
         {screen==="hco-elc"&&renderHCOTab()}
       </div>
 
+      <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20have%20a%20suggestion%20for%20AccredReady%3A%20" target="_blank" rel="noopener noreferrer"
+        style={{position:"fixed",bottom:80,right:20,zIndex:9998,display:"flex",alignItems:"center",gap:8,padding:"10px 16px",borderRadius:24,background:"#25D366",color:"#ffffff",fontSize:13,fontWeight:700,textDecoration:"none",boxShadow:"0 4px 16px rgba(37,211,102,0.5)"}}>
+        <span style={{fontSize:18}}>💬</span> Suggest
+      </a>
       <div style={{textAlign:"center",padding:"14px",color:T.muted,fontSize:11,borderTop:`1px solid ${T.border}`,marginTop:20}}>
         NABH Compliance Engine — Independent educational tool — Not affiliated with NABH/QCI | Dr. Mehul Upadhyay
       </div>
