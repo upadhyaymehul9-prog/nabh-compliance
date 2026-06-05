@@ -694,6 +694,43 @@ function AuditComplianceChart({ records }) {
   return(<div style={{background:T.panel2,border:`1px solid ${T.border}`,borderRadius:8,padding:"12px 8px 8px 0",marginBottom:12}}><div style={{fontSize:11,color:T.gold,letterSpacing:1,marginBottom:8,paddingLeft:12,display:"flex",gap:12}}><span>COMPLIANCE TREND — last {chartData.length} audits</span><span style={{color:T.green}}>Target: 80%</span></div><ResponsiveContainer width="100%" height={150}><BarChart data={chartData} margin={{top:4,right:16,left:0,bottom:0}}><CartesianGrid strokeDasharray="2 4" stroke={T.border} vertical={false}/><XAxis dataKey="name" tick={{fontSize:8,fill:T.muted}} axisLine={false} tickLine={false}/><YAxis domain={[0,100]} tick={{fontSize:8,fill:T.muted}} axisLine={false} tickLine={false} width={30} tickFormatter={v=>`${v}%`}/><Tooltip content={<TT/>}/><ReferenceLine y={80} stroke={T.green} strokeDasharray="4 3" strokeWidth={1.5}/><Bar dataKey="pct" radius={[3,3,0,0]} shape={(props)=>{const{x,y,width,height,value}=props;return <rect x={x} y={y} width={Math.max(width,4)} height={Math.max(height,1)} rx={3} fill={getBarColor(value)} fillOpacity={0.85}/>;}} /></BarChart></ResponsiveContainer><div style={{display:"flex",gap:14,paddingLeft:12,marginTop:6,fontSize:8,color:T.muted}}><span style={{color:T.green}}>Good (80%+)</span><span style={{color:T.orange}}>Fair (60-79%)</span><span style={{color:T.red}}>Critical</span></div></div>);
 }
 
+function UpgradeWall({ daysUsed, onSignOut }) {
+  return (
+    <div style={{minHeight:"100vh",background:"#050e1a",display:"flex",alignItems:"center",justifyContent:"center",padding:20,fontFamily:"Segoe UI,system-ui,sans-serif"}}>
+      <div style={{maxWidth:480,width:"100%",textAlign:"center"}}>
+        <div style={{fontSize:48,marginBottom:16}}>🔒</div>
+        <div style={{fontSize:11,letterSpacing:3,color:"#c9a84c",marginBottom:8}}>ACCREDREADY</div>
+        <div style={{fontSize:26,fontWeight:800,color:"#eef4f9",marginBottom:8}}>Your Free Trial Has Ended</div>
+        <div style={{fontSize:14,color:"#3a5870",marginBottom:32}}>Your 14-day free trial expired. Upgrade to continue accessing your NABH compliance data.</div>
+        <div style={{display:"grid",gap:12,marginBottom:28}}>
+          {[
+            {name:"Starter",price:"₹499",period:"/month",desc:"1 hospital, full OE scoring, gap analysis",color:"#4fc3f7"},
+            {name:"Professional",price:"₹999",period:"/month",desc:"Everything + KPIs, audits, mock drills, PDF reports",color:"#c9a84c",popular:true},
+            {name:"Consultant",price:"₹2,999",period:"/month",desc:"Multiple hospitals, priority support",color:"#4caf7d"},
+          ].map(p=>(
+            <div key={p.name} style={{background:"#081525",border:`1px solid ${p.popular?"#c9a84c40":"#0f2640"}`,borderRadius:12,padding:"16px 20px",display:"flex",justifyContent:"space-between",alignItems:"center",position:"relative"}}>
+              {p.popular&&<div style={{position:"absolute",top:-10,right:16,background:"#c9a84c",color:"#050e1a",fontSize:10,fontWeight:800,padding:"2px 10px",borderRadius:10}}>POPULAR</div>}
+              <div style={{textAlign:"left"}}>
+                <div style={{fontSize:15,fontWeight:700,color:p.color}}>{p.name}</div>
+                <div style={{fontSize:11,color:"#3a5870",marginTop:2}}>{p.desc}</div>
+              </div>
+              <div style={{textAlign:"right",flexShrink:0,marginLeft:12}}>
+                <div style={{fontSize:20,fontWeight:800,color:"#eef4f9"}}>{p.price}</div>
+                <div style={{fontSize:10,color:"#3a5870"}}>{p.period}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20want%20to%20upgrade%20my%20AccredReady%20plan.%20Hospital%3A%20" target="_blank" rel="noopener noreferrer"
+          style={{display:"block",padding:"14px",borderRadius:12,background:"#25D366",color:"#ffffff",fontSize:16,fontWeight:800,textDecoration:"none",marginBottom:12,boxShadow:"0 4px 20px rgba(37,211,102,0.4)"}}>
+          💬 WhatsApp to Upgrade
+        </a>
+        <button onClick={onSignOut} style={{background:"transparent",border:"none",color:"#3a5870",fontSize:12,cursor:"pointer"}}>Sign out</button>
+      </div>
+    </div>
+  );
+}
+
 function LoginScreen({ onLogin, initialError }) {
   const [email,setEmail]=useState(""); const [pass,setPass]=useState("");
   const [mode,setMode]=useState("login"); const [error,setError]=useState(initialError||"");
@@ -1018,7 +1055,7 @@ function SetupScreen({ user, onReady }) {
       const assData=ass||[];
       setAssessments(assData);
       if(assData.length===1){
-        onReady({hospitalId:hosp.id,assessmentId:assData[0].id,hospitalName:hosp.name,assessmentName:assData[0].name,userEmail:user.email,userId:user.id});
+        onReady({hospitalId:hosp.id,assessmentId:assData[0].id,hospitalName:hosp.name,assessmentName:assData[0].name,userEmail:user.email,userId:user.id,plan:hosp.plan});
         return;
       }
       if(assData.length>0)setSelAss(assData[0].id);
@@ -1054,7 +1091,7 @@ function SetupScreen({ user, onReady }) {
       nabh_status:nabh_status||"preparing"
     }}).catch(()=>{});
     setLoading(false);
-    onReady({hospitalId:hospital.id,assessmentId:ass.id,hospitalName:hospital.name,assessmentName:assName,userEmail:user.email,userId:user.id});
+    onReady({hospitalId:hospital.id,assessmentId:ass.id,hospitalName:hospital.name,assessmentName:assName,userEmail:user.email,userId:user.id,plan:hospital.plan});
   };
 
   const createAssessment=async()=>{
@@ -4002,6 +4039,16 @@ export default function App() {
   if(authState==="setup") return <SetupScreen user={user} onReady={handleReady}/>;
   if(authState==="programme") return <ProgrammeSelector user={user} ctx={context} onSelect={handleProgrammeSelect}/>;
 
+  const trialDays = 14;
+  const createdAt = user?.created_at ? new Date(user.created_at) : new Date();
+  const daysUsed = Math.floor((Date.now() - createdAt.getTime()) / (1000 * 60 * 60 * 24));
+  const daysLeft = Math.max(0, trialDays - daysUsed);
+  const trialExpired = daysUsed >= trialDays && (!context?.plan || context.plan === 'trial');
+  const isTrialActive = !trialExpired && (!context?.plan || context.plan === 'trial');
+  const isPaid = context?.plan && context.plan !== 'trial';
+
+  if(trialExpired) return <UpgradeWall daysUsed={daysUsed} onSignOut={handleSignOut}/>;
+
   const readinessColor=decision.readiness==="NOT READY"?T.red:decision.readiness==="RISKY"?T.orange:T.green;
   const verdictColor=decision.verdict==="FAIL"?T.red:decision.verdict==="PASS"?T.green:decision.verdict==="PARTIAL"?T.orange:T.blue;
 
@@ -5202,6 +5249,13 @@ export default function App() {
           </div>
         </div>
       </div>
+
+      {isTrialActive && daysLeft <= 5 && (
+        <div style={{background:"#1a0a00",borderBottom:"1px solid #f4a44140",padding:"8px 20px",display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:8}}>
+          <span style={{fontSize:13,color:"#f4a441",fontWeight:700}}>⏳ Trial expires in {daysLeft} day{daysLeft!==1?"s":""} — upgrade to keep your data.</span>
+          <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20want%20to%20upgrade%20AccredReady" target="_blank" rel="noopener noreferrer" style={{padding:"5px 14px",borderRadius:8,background:"#f4a441",color:"#050e1a",fontSize:12,fontWeight:800,textDecoration:"none"}}>Upgrade Now</a>
+        </div>
+      )}
 
       {selectedProgramme==="hco"&&(!decision.core_pass&&(decision.core_failures||0)>0)&&(
         <div style={{background:T.redD,padding:"8px 20px",display:"flex",gap:10,alignItems:"center"}}>
