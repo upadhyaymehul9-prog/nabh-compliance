@@ -733,6 +733,7 @@ function LoginScreen({ onLogin, initialError }) {
   const [email,setEmail]=useState(""); const [pass,setPass]=useState("");
   const [mode,setMode]=useState("login"); const [error,setError]=useState(initialError||"");
   const [loading,setLoading]=useState(false); const [msg,setMsg]=useState("");
+  const [showPricing,setShowPricing]=useState(false);
   useEffect(()=>{
     if(initialError)setError(initialError);
   },[initialError]);
@@ -816,9 +817,35 @@ function LoginScreen({ onLogin, initialError }) {
         <div style={{textAlign:"center",marginTop:10,fontSize:11,color:T.muted}}>Independent educational tool — Not affiliated with NABH/QCI</div>
         <div style={{textAlign:"center",marginTop:10,paddingBottom:4}}>
           <span style={{fontSize:12,color:T.muted}}>14-day free trial · No credit card · </span>
-          <a href="https://upadhyaymehul9-prog.github.io/nabh-compliance/#pricing" onClick={e=>{e.preventDefault();window.open("https://wa.me/918511180957","_blank");}} style={{fontSize:12,color:T.gold,cursor:"pointer",textDecoration:"none",fontWeight:600}}>💎 View Pricing Plans →</a>
+          <button onClick={()=>setShowPricing(true)} style={{fontSize:12,color:T.gold,cursor:"pointer",fontWeight:600,background:"none",border:"none",padding:0,fontFamily:"inherit"}}>💎 View Pricing Plans →</button>
         </div>
       </div>
+      {showPricing&&(
+        <div onClick={()=>setShowPricing(false)} style={{position:"fixed",inset:0,zIndex:2000,background:"rgba(0,0,0,0.75)",display:"flex",alignItems:"center",justifyContent:"center",padding:20}}>
+          <div onClick={e=>e.stopPropagation()} style={{background:"#081525",border:"1px solid #c9a84c",borderRadius:16,padding:"28px 24px",maxWidth:400,width:"100%",textAlign:"center",position:"relative"}}>
+            <button onClick={()=>setShowPricing(false)} style={{position:"absolute",top:12,right:14,background:"none",border:"none",color:"#3a5870",fontSize:18,cursor:"pointer",lineHeight:1}}>✕</button>
+            <div style={{fontSize:11,letterSpacing:3,color:"#c9a84c",marginBottom:8}}>ACCREDREADY</div>
+            <div style={{display:"flex",alignItems:"baseline",justifyContent:"center",gap:4,marginBottom:4}}>
+              <span style={{fontSize:38,fontWeight:800,color:"#eef4f9"}}>₹499</span>
+              <span style={{fontSize:14,color:"#3a5870"}}>/month</span>
+            </div>
+            <div style={{fontSize:12,color:"#3a5870",marginBottom:20}}>Per hospital · All features included</div>
+            <div style={{textAlign:"left",marginBottom:22}}>
+              {["Full NABH compliance tracking","Unlimited OE scoring","KPI tracking and audit management","Committee calendar and mock drills","PDF gap reports","No setup fee. Cancel anytime."].map((f,i)=>(
+                <div key={i} style={{display:"flex",gap:10,alignItems:"flex-start",marginBottom:9}}>
+                  <span style={{color:"#c9a84c",flexShrink:0,fontWeight:700}}>✓</span>
+                  <span style={{fontSize:13,color:"#c8dcea",lineHeight:1.5}}>{f}</span>
+                </div>
+              ))}
+            </div>
+            <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20want%20to%20subscribe%20to%20AccredReady%20for%20Rs.%20499%2Fmonth" target="_blank" rel="noopener noreferrer"
+              style={{display:"block",padding:"13px",borderRadius:10,background:"linear-gradient(135deg,#c9a84c,#f0d070)",color:"#050e1a",fontSize:15,fontWeight:800,textDecoration:"none",boxShadow:"0 4px 20px rgba(201,168,76,0.4)"}}>
+              💬 Get Started — WhatsApp Us
+            </a>
+            <div style={{fontSize:11,color:"#3a5870",marginTop:12}}>14-day free trial · Sign up to begin</div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
