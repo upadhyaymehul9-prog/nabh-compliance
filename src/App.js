@@ -510,13 +510,13 @@ const HCO_ELC_LICENSES = [
 ];
 
 const HCO_ELC_CHAPTER_SUMMARY = [
-  {ch:"AAC",name:"Access, Assessment and Continuity of Care",oes:28,desc:"Defines scope of services, registration, initial assessment, laboratory/imaging services, discharge process"},
-  {ch:"COP",name:"Care of Patients",oes:42,desc:"Uniform care delivery, emergency services, ICU, obstetric, paediatric, anaesthesia, surgical and rehabilitation care"},
-  {ch:"MOM",name:"Management of Medication",oes:29,desc:"Safe pharmacy services, medication storage, prescription, dispensing, administration and high-risk medication management"},
+  {ch:"AAC",name:"Access, Assessment and Continuity of Care",oes:29,desc:"Defines scope of services, registration, initial assessment, laboratory/imaging services, discharge process"},
+  {ch:"COP",name:"Care of Patients",oes:44,desc:"Uniform care delivery, emergency services, ICU, obstetric, paediatric, anaesthesia, surgical and rehabilitation care"},
+  {ch:"MOM",name:"Management of Medication",oes:28,desc:"Safe pharmacy services, medication storage, prescription, dispensing, administration and high-risk medication management"},
   {ch:"PRE",name:"Patient Rights and Education",oes:17,desc:"Patient and family rights, informed consent, patient education and feedback mechanisms"},
   {ch:"IPC",name:"Infection Prevention and Control",oes:12,desc:"Infection prevention programme, hand hygiene, biomedical waste management, sterilization practices"},
   {ch:"PSQ",name:"Patient Safety and Quality Improvement",oes:8,desc:"Quality improvement programme, patient safety goals, key indicators monitoring and clinical audits"},
-  {ch:"ROM",name:"Responsibilities of Management",oes:13,desc:"Governance, statutory compliance, ethical management, outsourced services and sustainability"},
+  {ch:"ROM",name:"Responsibilities of Management",oes:12,desc:"Governance, statutory compliance, ethical management, outsourced services and sustainability"},
   {ch:"FMS",name:"Facility Management and Safety",oes:13,desc:"Infrastructure safety, equipment maintenance, utility systems, fire and emergency preparedness"},
   {ch:"HRM",name:"Human Resource Management",oes:15,desc:"Staff mix, training, performance appraisal, occupational health and staff welfare"},
   {ch:"IMS",name:"Information Management System",oes:11,desc:"Medical record management, confidentiality, document control and digital health"},
@@ -540,6 +540,7 @@ const HCO_ELC_OE_LIST = [
   {code:"AAC5c",chapter:"AAC",text:"Laboratory reports are available in standardized manner within a defined time frame and critical results are intimated immediately."},
   {code:"AAC5d",chapter:"AAC",text:"There is an established laboratory safety program with laboratory personnel trained in safe practices."},
   {code:"AAC5e",chapter:"AAC",text:"There is an established laboratory quality assurance program."},
+  {code:"AAC5f",chapter:"AAC",text:"Laboratory tests not available in the organisation are outsourced to an organisation based on its quality assurance system."},
   {code:"AAC6a",chapter:"AAC",text:"Imaging services comply with legal and other regulatory requirements."},
   {code:"AAC6b",chapter:"AAC",text:"Scope of imaging services is commensurate to the services provided by the organisation."},
   {code:"AAC6c",chapter:"AAC",text:"Imaging reports are available in standardised manner within a defined time frame and critical results are intimated immediately."},
@@ -558,6 +559,7 @@ const HCO_ELC_OE_LIST = [
   {code:"COP1e",chapter:"COP",text:"Transfusion services are provided as per the scope of services of the organisation."},
   {code:"COP1f",chapter:"COP",text:"Transfusion of blood and blood components is managed by written guidance."},
   {code:"COP1g",chapter:"COP",text:"Informed consent should be taken for transfusion of blood and blood products."},
+  {code:"COP2a",chapter:"COP",text:"The organisation provides emergency services commensurate with its scope of services."},
   {code:"COP2b",chapter:"COP",text:"The organisation manages medico-legal cases and provides emergency care in a consistent manner."},
   {code:"COP2c",chapter:"COP",text:"Cardio-pulmonary resuscitation services are provided uniformly across the organisation."},
   {code:"COP2d",chapter:"COP",text:"Initiation of appropriate care is guided by a system of triage."},
@@ -565,10 +567,12 @@ const HCO_ELC_OE_LIST = [
   {code:"COP2f",chapter:"COP",text:"Admission or discharge to home/transfer to another organisation is documented for all emergency patients."},
   {code:"COP2g",chapter:"COP",text:"The organisation has a system in place for the management of patients found dead on arrival."},
   {code:"COP2h",chapter:"COP",text:"Appropriately manned and equipped ambulance is available and checked regularly."},
+  {code:"COP2i",chapter:"COP",text:"The organisation plans and implements mechanisms for the care of patients during community emergencies, epidemics and other disasters."},
   {code:"COP3a",chapter:"COP",text:"The care of patient in intensive care units and high dependency units is in consonance with the defined scope."},
   {code:"COP3b",chapter:"COP",text:"The organisation shall implement a quality-assurance programme for its intensive care/high dependency units."},
   {code:"COP3c",chapter:"COP",text:"The organisation has a mechanism to counsel the patient and/or family members on the treatment plan."},
   {code:"COP3d",chapter:"COP",text:"End of life care is provided in a compassionate and considerate manner."},
+  {code:"COP4a",chapter:"COP",text:"Organisation provides safe obstetric care as per defined scope of services."},
   {code:"COP4b",chapter:"COP",text:"Obstetric care includes ante-natal check ups, maternal nutrition assessment, immunisation and emergency obstetric care."},
   {code:"COP4c",chapter:"COP",text:"The organisation caring for obstetric cases has the facility to take care of neonatal emergencies."},
   {code:"COP5a",chapter:"COP",text:"Paediatric and neonatal services are organized and provided safely by doctors and nurses having age-specific competencies."},
@@ -604,7 +608,6 @@ const HCO_ELC_OE_LIST = [
   {code:"MOM3d",chapter:"MOM",text:"Medication orders are clear, legible, dated and signed and include name of the patient."},
   {code:"MOM3e",chapter:"MOM",text:"Reconciliation of medications occurs at transition points of patient care."},
   {code:"MOM3f",chapter:"MOM",text:"Audit of medication orders/prescription is carried out to check for safe and rational prescribing."},
-  {code:"MOM3g",chapter:"MOM",text:"Near miss, medication errors and adverse drug events are defined, documented, analyzed and used for improvement."},
   {code:"MOM4a",chapter:"MOM",text:"The organisation defines a list of high-risk medications and process to prescribe, dispense and administer them safely."},
   {code:"MOM4b",chapter:"MOM",text:"Dispensed medications are labelled."},
   {code:"MOM5a",chapter:"MOM",text:"Medications are administered by those who are permitted by law to do so."},
@@ -652,8 +655,8 @@ const HCO_ELC_OE_LIST = [
   {code:"IPC2f",chapter:"IPC",text:"The organisation adheres to kitchen sanitation and food handling guidelines."},
   {code:"PSQ1a",chapter:"PSQ",text:"A comprehensive quality improvement and patient safety programme is established and implemented."},
   {code:"PSQ1b",chapter:"PSQ",text:"The organisation adapts and implements Patient Safety Goals."},
-  {code:"PSQ1c",chapter:"PSQ",text:"There is an established process to monitor and improve the quality of care and patient safety."},
-  {code:"PSQ1d",chapter:"PSQ",text:"Clinical audits are performed to improve the quality of patient care."},
+  {code:"PSQ1c",chapter:"PSQ",text:"There is an established process in the organisation to monitor and improve quality of nursing care."},
+  {code:"PSQ1d",chapter:"PSQ",text:"The organisation has a designated individual to oversee the hospital-wide quality and patient safety programme."},
   {code:"PSQ2a",chapter:"PSQ",text:"The organisation identifies and monitors key indicators to oversee infection prevention and control."},
   {code:"PSQ2b",chapter:"PSQ",text:"The organisation identifies and monitors key indicators to oversee patient safety."},
   {code:"PSQ2c",chapter:"PSQ",text:"The organisation identifies and monitors key indicators to oversee clinical and managerial performance."},
@@ -666,7 +669,6 @@ const HCO_ELC_OE_LIST = [
   {code:"ROM3a",chapter:"ROM",text:"Designated committees oversee infection prevention and control, quality improvement and other key functions."},
   {code:"ROM3b",chapter:"ROM",text:"Management ensures that it has a documented agreement for all outsourced services."},
   {code:"ROM3c",chapter:"ROM",text:"The organisation has a mechanism to report a violation of patient and family rights."},
-  {code:"ROM3d",chapter:"ROM",text:"Staff well-being is promoted."},
   {code:"ROM4a",chapter:"ROM",text:"Those responsible for governance address the organisation sustainability through long term planning."},
   {code:"ROM4b",chapter:"ROM",text:"The organisation takes initiatives towards an energy efficient and environment-friendly facility."},
   {code:"ROM4c",chapter:"ROM",text:"Those responsible for governance address the organisation social responsibility."},
@@ -696,9 +698,9 @@ const HCO_ELC_OE_LIST = [
   {code:"HRM3b",chapter:"HRM",text:"Process for disciplinary and grievance handling is defined and implemented."},
   {code:"HRM4a",chapter:"HRM",text:"Health problems of the staff, including occupational health hazards, are taken care of by the organisation."},
   {code:"HRM4b",chapter:"HRM",text:"The organisation has measures in place for prevention and handling of workplace violence."},
-  {code:"HRM4c",chapter:"HRM",text:"Medical and nursing professionals are granted privileges to admit and care for patients."},
   {code:"HRM5a",chapter:"HRM",text:"Personal files are maintained in respect of all staff."},
   {code:"HRM5b",chapter:"HRM",text:"Staff records include credentials, training, competency assessment and performance appraisal."},
+  {code:"HRM5c",chapter:"HRM",text:"Medical and nursing professionals are granted privileges to admit and care for patients in consonance with their qualification, training, experience and registration."},
   {code:"IMS1a",chapter:"IMS",text:"The organisation identifies, captures and disseminates the information needs of all staff."},
   {code:"IMS1b",chapter:"IMS",text:"Use of telemedicine is as per applicable guidelines."},
   {code:"IMS1c",chapter:"IMS",text:"The organisation shall make efforts to use digital health technology to improve care."},
@@ -5012,7 +5014,7 @@ export default function App() {
       </div>
 
       <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
-        <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:12}}>📖 HCO ELC — 10 Chapters · 188 OEs (2nd Edition, Jan 2026)</div>
+        <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:12}}>📖 HCO ELC — 10 Chapters · 189 OEs (2nd Edition, Jan 2026)</div>
         <div style={{display:'grid',gap:6}}>
           {HCO_ELC_CHAPTER_SUMMARY.map(c => (
             <div key={c.ch} style={{background:T.panel2,borderRadius:8,padding:'10px 12px',border:`1px solid ${T.border}`}}>
