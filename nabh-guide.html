@@ -34,10 +34,10 @@
       },
       {
         "@type": "Question",
-        "name": "What is NABH certificate?",
+        "name": "What is NABH certificate validity?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "NABH certificate is an accreditation certificate awarded to hospitals and healthcare organizations that meet NABH quality standards. It is valid for 3 years and signals to patients that the hospital meets national quality benchmarks."
+          "text": "NABH certificate validity depends on the programme: HCO Full Accreditation is valid for 3 years, SHCO Full Accreditation is valid for 4 years, and Entry Level Certification (HCO or SHCO) is valid for 2 years. All require a mid-cycle surveillance assessment."
         }
       },
       {
@@ -64,15 +64,11 @@
     nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); position: sticky; top: 0; background: rgba(4,13,26,0.95); backdrop-filter: blur(12px); z-index: 100; }
     .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--accent2); text-decoration: none; }
     .nav-cta { background: var(--accent); color: white; padding: 0.55rem 1.4rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem; }
-
-    /* HERO */
     .hero { max-width: 860px; margin: 0 auto; padding: 4rem 2rem 3rem; text-align: center; }
     .badge { display: inline-block; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3); color: var(--gold); padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1.5rem; }
     h1 { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.25rem; }
     h1 span { color: var(--accent2); }
     .hero-sub { font-size: 1.05rem; color: var(--muted); max-width: 620px; margin: 0 auto 2rem; }
-
-    /* TOC */
     .toc { max-width: 700px; margin: 0 auto 3rem; background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.75rem; }
     .toc-title { font-family: 'Syne', sans-serif; font-weight: 700; margin-bottom: 1rem; font-size: 1rem; color: var(--accent2); }
     .toc-list { list-style: none; }
@@ -80,8 +76,6 @@
     .toc-list a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
     .toc-list a:hover { color: var(--accent2); }
     .toc-list a::before { content: "→ "; }
-
-    /* CONTENT */
     .content { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
     .section { margin-bottom: 3.5rem; }
     .section-anchor { display: block; margin-top: -80px; padding-top: 80px; }
@@ -90,42 +84,29 @@
     h3 { font-family: 'Syne', sans-serif; font-size: 1.15rem; font-weight: 600; margin: 1.5rem 0 0.75rem; color: var(--accent2); }
     p { color: var(--muted); margin-bottom: 1rem; font-size: 0.97rem; }
     strong { color: var(--white); }
-
-    /* HIGHLIGHT BOX */
     .highlight { background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
     .highlight p { margin: 0; color: var(--white); }
-
-    /* ANSWER BOX - for featured snippet targeting */
     .answer-box { background: var(--card); border-left: 4px solid var(--accent2); border-radius: 0 10px 10px 0; padding: 1.25rem 1.5rem; margin: 1rem 0 1.5rem; }
     .answer-label { font-size: 0.75rem; color: var(--accent2); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
     .answer-text { color: var(--white); font-size: 1rem; font-weight: 500; }
-
-    /* TABLE */
     .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
     table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
     th { background: rgba(37,99,235,0.15); color: var(--accent2); padding: 0.75rem 1rem; text-align: left; font-family: 'Syne', sans-serif; font-weight: 600; font-size: 0.85rem; }
     td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.06); color: var(--muted); }
     tr:hover td { background: rgba(255,255,255,0.02); }
-
-    /* STEPS */
     .steps { list-style: none; counter-reset: steps; }
     .steps li { counter-increment: steps; display: flex; gap: 1rem; margin-bottom: 1.25rem; align-items: flex-start; }
     .steps li::before { content: counter(steps); background: var(--accent); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; margin-top: 2px; }
     .step-content { flex: 1; }
     .step-title { font-weight: 600; color: var(--white); margin-bottom: 0.25rem; }
     .step-desc { color: var(--muted); font-size: 0.9rem; }
-
-    /* CTA INLINE */
     .cta-inline { background: linear-gradient(135deg, #0a1f3d, #1e3a8a); border: 1px solid rgba(37,99,235,0.3); border-radius: 12px; padding: 2rem; margin: 2.5rem 0; text-align: center; }
     .cta-inline h3 { color: var(--white); font-family: 'Syne', sans-serif; font-size: 1.2rem; margin-bottom: 0.5rem; }
     .cta-inline p { color: var(--muted); margin-bottom: 1.25rem; font-size: 0.9rem; }
     .btn-primary { background: var(--accent); color: white; padding: 0.8rem 1.75rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: inline-block; box-shadow: 0 4px 20px rgba(37,99,235,0.35); }
-
-    /* FAQ */
     .faq-item { border-bottom: 1px solid rgba(255,255,255,0.07); padding: 1.25rem 0; }
     .faq-q { font-family: 'Syne', sans-serif; font-weight: 600; margin-bottom: 0.6rem; font-size: 1rem; }
     .faq-a { color: var(--muted); font-size: 0.92rem; }
-
     footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
     footer a { color: var(--muted); text-decoration: none; margin: 0 0.75rem; }
     footer a:hover { color: var(--accent2); }
@@ -150,7 +131,7 @@
     <ul class="toc-list">
       <li><a href="#full-form">NABH Full Form & Meaning</a></li>
       <li><a href="#login">NABH Login Portal</a></li>
-      <li><a href="#certificate">NABH Certificate</a></li>
+      <li><a href="#certificate">NABH Certificate & Validity</a></li>
       <li><a href="#accreditation">NABH Accreditation Process</a></li>
       <li><a href="#programmes">NABH Programmes (HCO & SHCO)</a></li>
       <li><a href="#standards">NABH 6th Edition Standards</a></li>
@@ -193,7 +174,6 @@
       <li style="margin-bottom: 0.5rem;">Renew existing accreditation</li>
     </ul>
     <p>If you're having trouble with NABH login, contact NABH directly at their helpdesk. For help preparing your hospital's compliance documentation before applying, AccredReady can help.</p>
-
     <div class="cta-inline">
       <h3>Prepare Before You Apply to NABH</h3>
       <p>AccredReady helps you organize all 639 compliance requirements before logging into the NABH portal — so your application is strong from day one.</p>
@@ -204,12 +184,16 @@
   <!-- CERTIFICATE -->
   <div class="section">
     <span class="section-anchor" id="certificate"></span>
-    <h2>NABH <span>Certificate</span></h2>
+    <h2>NABH <span>Certificate & Validity</span></h2>
     <div class="answer-box">
-      <div class="answer-label">Quick Answer</div>
-      <div class="answer-text">NABH certificate is valid for <strong>3 years</strong> and requires surveillance assessments every 18 months</div>
+      <div class="answer-label">Certificate Validity — Programme-wise</div>
+      <div class="answer-text">
+        HCO Full Accreditation: <strong>3 years</strong> &nbsp;|&nbsp;
+        SHCO Full Accreditation: <strong>4 years</strong> &nbsp;|&nbsp;
+        Entry Level (HCO/SHCO): <strong>2 years</strong>
+      </div>
     </div>
-    <p>The NABH accreditation certificate is awarded after a successful on-site assessment by trained NABH assessors. It signifies that your hospital meets national quality and safety standards.</p>
+    <p>The NABH accreditation certificate is awarded after a successful on-site assessment by trained NABH assessors. All programmes require a mid-cycle surveillance assessment to maintain accreditation status.</p>
 
     <h3>Benefits of NABH Certificate</h3>
     <div class="table-wrap">
@@ -220,7 +204,7 @@
         <tr><td>Patient Trust</td><td>Recognized quality signal for patients</td></tr>
         <tr><td>Staff Development</td><td>Improves clinical processes and staff competency</td></tr>
         <tr><td>Reduced Errors</td><td>Systematic approach reduces medical errors</td></tr>
-        <tr><td>Validity</td><td>3 years with surveillance at 18 months</td></tr>
+        <tr><td>Validity</td><td>2 years (ELC) | 3 years (HCO Full) | 4 years (SHCO Full)</td></tr>
       </table>
     </div>
   </div>
@@ -231,54 +215,14 @@
     <h2>NABH <span>Accreditation Process</span></h2>
     <p>The NABH accreditation process has 8 defined steps from application to certificate award:</p>
     <ol class="steps">
-      <li>
-        <div class="step-content">
-          <div class="step-title">Self Assessment</div>
-          <div class="step-desc">Hospital conducts internal gap analysis against NABH standards. AccredReady automates this step.</div>
-        </div>
-      </li>
-      <li>
-        <div class="step-content">
-          <div class="step-title">Application Submission</div>
-          <div class="step-desc">Submit application on nabh.co with required documents and application fee.</div>
-        </div>
-      </li>
-      <li>
-        <div class="step-content">
-          <div class="step-title">Document Review</div>
-          <div class="step-desc">NABH reviews submitted documents for completeness and eligibility.</div>
-        </div>
-      </li>
-      <li>
-        <div class="step-content">
-          <div class="step-title">Pre-Assessment (Optional)</div>
-          <div class="step-desc">Optional pre-assessment visit to identify major gaps before formal assessment.</div>
-        </div>
-      </li>
-      <li>
-        <div class="step-content">
-          <div class="step-title">On-Site Assessment</div>
-          <div class="step-desc">NABH assessors visit and evaluate compliance against all Objective Elements.</div>
-        </div>
-      </li>
-      <li>
-        <div class="step-content">
-          <div class="step-title">Accreditation Committee Review</div>
-          <div class="step-desc">Assessment report reviewed by NABH Accreditation Committee.</div>
-        </div>
-      </li>
-      <li>
-        <div class="step-content">
-          <div class="step-title">Accreditation Decision</div>
-          <div class="step-desc">Certificate awarded, deferred with conditions, or rejected based on compliance score.</div>
-        </div>
-      </li>
-      <li>
-        <div class="step-content">
-          <div class="step-title">Surveillance & Renewal</div>
-          <div class="step-desc">Surveillance assessment at 18 months, renewal assessment at 3 years.</div>
-        </div>
-      </li>
+      <li><div class="step-content"><div class="step-title">Self Assessment</div><div class="step-desc">Hospital conducts internal gap analysis against NABH standards. AccredReady automates this step.</div></div></li>
+      <li><div class="step-content"><div class="step-title">Application Submission</div><div class="step-desc">Submit application on nabh.co with required documents and application fee.</div></div></li>
+      <li><div class="step-content"><div class="step-title">Document Review</div><div class="step-desc">NABH reviews submitted documents for completeness and eligibility.</div></div></li>
+      <li><div class="step-content"><div class="step-title">Pre-Assessment (Optional)</div><div class="step-desc">Optional pre-assessment visit to identify major gaps before formal assessment.</div></div></li>
+      <li><div class="step-content"><div class="step-title">On-Site Assessment</div><div class="step-desc">NABH assessors visit and evaluate compliance against all Objective Elements.</div></div></li>
+      <li><div class="step-content"><div class="step-title">Accreditation Committee Review</div><div class="step-desc">Assessment report reviewed by NABH Accreditation Committee.</div></div></li>
+      <li><div class="step-content"><div class="step-title">Accreditation Decision</div><div class="step-desc">Certificate awarded, deferred with conditions, or rejected based on compliance score.</div></div></li>
+      <li><div class="step-content"><div class="step-title">Surveillance & Renewal</div><div class="step-desc">Mid-cycle surveillance assessment required. Renewal before certificate expiry.</div></div></li>
     </ol>
   </div>
 
@@ -289,11 +233,11 @@
     <p>NABH offers different accreditation programmes based on hospital size and type:</p>
     <div class="table-wrap">
       <table>
-        <tr><th>Programme</th><th>For</th><th>OEs</th><th>Best For</th></tr>
-        <tr><td><strong>HCO Full Accreditation</strong></td><td>Hospitals 50+ beds</td><td>639</td><td>Large hospitals seeking full NABH</td></tr>
-        <tr><td><strong>HCO Entry Level (ELC)</strong></td><td>Hospitals 50+ beds</td><td>~300</td><td>First-time applicants, stepping stone</td></tr>
-        <tr><td><strong>SHCO Full Accreditation</strong></td><td>Small hospitals, clinics</td><td>408</td><td>Nursing homes, specialty clinics</td></tr>
-        <tr><td><strong>SHCO Entry Level (ELC)</strong></td><td>Small hospitals, clinics</td><td>~180</td><td>Small facilities starting NABH journey</td></tr>
+        <tr><th>Programme</th><th>For</th><th>OEs</th><th>Validity</th></tr>
+        <tr><td><strong>HCO Full Accreditation</strong></td><td>Hospitals 50+ beds</td><td>639</td><td>3 years</td></tr>
+        <tr><td><strong>HCO Entry Level (ELC)</strong></td><td>Hospitals 50+ beds</td><td>~300</td><td>2 years</td></tr>
+        <tr><td><strong>SHCO Full Accreditation</strong></td><td>Small hospitals, clinics</td><td>408</td><td>4 years</td></tr>
+        <tr><td><strong>SHCO Entry Level (ELC)</strong></td><td>Small hospitals, clinics</td><td>~180</td><td>2 years</td></tr>
       </table>
     </div>
   </div>
@@ -335,7 +279,7 @@
     <ul style="color: var(--muted); padding-left: 1.5rem; margin-bottom: 1rem;">
       <li style="margin-bottom: 0.5rem;">1,000+ hospitals hold active NABH accreditation</li>
       <li style="margin-bottom: 0.5rem;">Maharashtra, Karnataka, and Tamil Nadu have the highest concentration</li>
-      <li style="margin-bottom: 0.5rem;">Gujarat has growing number of NABH accredited hospitals including Surat, Ahmedabad, Vadodara</li>
+      <li style="margin-bottom: 0.5rem;">Gujarat has a growing number of NABH accredited hospitals including Surat, Ahmedabad, Vadodara</li>
       <li style="margin-bottom: 0.5rem;">Thousands more are in preparation stage</li>
     </ul>
     <p>If your hospital is preparing for NABH accreditation, AccredReady helps you get assessment-ready systematically.</p>
@@ -347,44 +291,13 @@
     <h2>How to <span>Prepare for NABH</span></h2>
     <p>Preparing for NABH accreditation is a 6-18 month process depending on your hospital's current compliance level. Here's the proven approach:</p>
     <ol class="steps">
-      <li>
-        <div class="step-content">
-          <div class="step-title">Gap Analysis</div>
-          <div class="step-desc">Assess current compliance against all 639 OEs. Identify Critical, Partial, and Full compliance areas. AccredReady automates this.</div>
-        </div>
-      </li>
-      <li>
-        <div class="step-content">
-          <div class="step-title">Policy & SOP Development</div>
-          <div class="step-desc">Develop or update all mandatory policies and SOPs. NABH requires documented evidence for most OEs.</div>
-        </div>
-      </li>
-      <li>
-        <div class="step-content">
-          <div class="step-title">Staff Training</div>
-          <div class="step-desc">Train all staff on NABH standards relevant to their department. Document training records.</div>
-        </div>
-      </li>
-      <li>
-        <div class="step-content">
-          <div class="step-title">Internal Audits</div>
-          <div class="step-desc">Conduct regular internal audits across all departments. Fix non-compliances with CAPA.</div>
-        </div>
-      </li>
-      <li>
-        <div class="step-content">
-          <div class="step-title">Mock Drills</div>
-          <div class="step-desc">Conduct all mandatory mock drills — fire, code blue, disaster, and others.</div>
-        </div>
-      </li>
-      <li>
-        <div class="step-content">
-          <div class="step-title">KPI Monitoring</div>
-          <div class="step-desc">Track all 50 NABH-required KPIs monthly. Demonstrate improvement trends.</div>
-        </div>
-      </li>
+      <li><div class="step-content"><div class="step-title">Gap Analysis</div><div class="step-desc">Assess current compliance against all 639 OEs. Identify Critical, Partial, and Full compliance areas. AccredReady automates this.</div></div></li>
+      <li><div class="step-content"><div class="step-title">Policy & SOP Development</div><div class="step-desc">Develop or update all mandatory policies and SOPs. NABH requires documented evidence for most OEs.</div></div></li>
+      <li><div class="step-content"><div class="step-title">Staff Training</div><div class="step-desc">Train all staff on NABH standards relevant to their department. Document training records.</div></div></li>
+      <li><div class="step-content"><div class="step-title">Internal Audits</div><div class="step-desc">Conduct regular internal audits across all departments. Fix non-compliances with CAPA.</div></div></li>
+      <li><div class="step-content"><div class="step-title">Mock Drills</div><div class="step-desc">Conduct all mandatory mock drills — fire, code blue, disaster, and others.</div></div></li>
+      <li><div class="step-content"><div class="step-title">KPI Monitoring</div><div class="step-desc">Track all 50 NABH-required KPIs monthly. Demonstrate improvement trends.</div></div></li>
     </ol>
-
     <div class="cta-inline">
       <h3>AccredReady Makes NABH Preparation Systematic</h3>
       <p>India's only software built specifically for NABH preparation — by a certified NABH Quality Manager with 15 years of hospital experience.</p>
@@ -396,7 +309,6 @@
   <div class="section">
     <span class="section-anchor" id="faq"></span>
     <h2>Frequently Asked <span>Questions</span></h2>
-
     <div class="faq-item">
       <div class="faq-q">What is the full form of NABH in medical?</div>
       <div class="faq-a">In medical context, NABH full form is National Accreditation Board for Hospitals & Healthcare Providers. It is India's premier hospital accreditation body under the Quality Council of India.</div>
@@ -406,12 +318,16 @@
       <div class="faq-a">NABH નું પૂર્ણ સ્વરૂપ છે: નેશનલ એક્રેડિટેશન બોર્ડ ફોર હોસ્પિટલ્સ એન્ડ હેલ્થકેર પ્રોવાઇડર્સ (National Accreditation Board for Hospitals and Healthcare Providers).</div>
     </div>
     <div class="faq-item">
+      <div class="faq-q">How long is NABH certificate valid?</div>
+      <div class="faq-a">NABH certificate validity depends on the programme: HCO Full Accreditation is valid for 3 years, SHCO Full Accreditation is valid for 4 years, and Entry Level Certification (HCO or SHCO) is valid for 2 years. All require a mid-cycle surveillance assessment.</div>
+    </div>
+    <div class="faq-item">
       <div class="faq-q">How long does NABH accreditation take?</div>
       <div class="faq-a">NABH accreditation typically takes 6-18 months from starting preparation to receiving the certificate, depending on the hospital's current compliance level and the programme type chosen.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">What is the NABH accreditation fee?</div>
-      <div class="faq-a">NABH accreditation fees vary by hospital size, bed strength, and programme type. Fees range from approximately ₹50,000 for small SHCOs to several lakhs for large hospitals. AccredReady's SHCO module includes a fee calculator.</div>
+      <div class="faq-a">NABH accreditation fees vary by hospital size, bed strength, and programme type. Fees range from approximately ₹1-3 lakhs for Entry Level to ₹5-10 lakhs for Full Accreditation. AccredReady's SHCO module includes a fee calculator.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Are there NABH accredited hospitals in Surat?</div>
