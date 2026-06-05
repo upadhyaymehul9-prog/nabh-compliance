@@ -5236,7 +5236,7 @@ export default function App() {
         {screen==="hco-elc"&&renderHCOTab()}
       </div>
 
-      <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20have%20a%20suggestion%20for%20AccredReady%3A%20" target="_blank" rel="noopener noreferrer"
+      <a href="https://wa.me/918511180957?text=Hi%2C%20I%20have%20a%20suggestion%20for%20AccredReady%3A%20" target="_blank" rel="noopener noreferrer"
         style={{position:"fixed",bottom:80,right:20,zIndex:9998,display:"flex",alignItems:"center",gap:8,padding:"10px 16px",borderRadius:24,background:"#25D366",color:"#ffffff",fontSize:13,fontWeight:700,textDecoration:"none",boxShadow:"0 4px 16px rgba(37,211,102,0.5)"}}>
         <span style={{fontSize:18}}>💬</span> Suggest
       </a>
