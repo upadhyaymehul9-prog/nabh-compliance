@@ -5003,6 +5003,8 @@ export default function App() {
   const [hcoOeTips, setHcoOeTips] = useState({});
   const [hcoOeTipsLoading, setHcoOeTipsLoading] = useState({});
   const [hcoOeLevels, setHcoOeLevels] = useState({});
+  const [elcScores, setElcScores] = useState({});
+  const [elcScoreSaving, setElcScoreSaving] = useState({});
   const [pdfLoading, setPdfLoading] = useState(false);
   const [showMoreMenu, setShowMoreMenu] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -5354,6 +5356,20 @@ export default function App() {
         setHcoOeLevels(map);
       });
   },[selectedProgramme]);
+
+  // Load existing ELC scores for this hospital
+  useEffect(()=>{
+    if(selectedProgramme!=="hco-elc"||!context?.hospitalId)return;
+    supabase.from("elc_scores")
+      .select("oe_code,status")
+      .eq("hospital_id",context.hospitalId)
+      .then(({data})=>{
+        if(!data)return;
+        const map={};
+        data.forEach(r=>{ map[r.oe_code]=r.status; });
+        setElcScores(map);
+      });
+  },[selectedProgramme,context?.hospitalId]);
 
   // Persist HCO doc progress whenever it changes
   useEffect(()=>{
@@ -6456,6 +6472,18 @@ export default function App() {
   const toElcDotCode = code => code.replace(/^([A-Z]+)(\d+)([a-z]+)$/, '$1.$2.$3');
   const elcLevelColor = lvl => lvl === 'CORE' ? '#e05a5a' : lvl === 'Commitment' ? '#f4a441' : '#c9a84c';
 
+  const setElcScore = async (code, status) => {
+    const prev = elcScores[code];
+    setElcScores(p => ({...p, [code]: status}));
+    setElcScoreSaving(p => ({...p, [code]: true}));
+    const { error } = await supabase.from("elc_scores").upsert(
+      { hospital_id: context.hospitalId, oe_code: code, status, updated_at: new Date().toISOString(), updated_by: user.id },
+      { onConflict: "hospital_id,oe_code" }
+    );
+    if (error) setElcScores(p => ({...p, [code]: prev}));
+    setElcScoreSaving(p => ({...p, [code]: false}));
+  };
+
   const toggleElcOe = async (code) => {
     const isOpen = hcoOeExpanded[code];
     setHcoOeExpanded(p => ({...p, [code]: !isOpen}));
@@ -6492,8 +6520,56 @@ export default function App() {
       name: HCO_ELC_CHAPTER_SUMMARY.find(c => c.ch === ch)?.name || ch,
       oes: filtered.filter(oe => oe.chapter === ch),
     })).filter(g => g.oes.length > 0);
+
+    // Progress calculations
+    const total = HCO_ELC_OE_LIST.length;
+    const totalScored = HCO_ELC_OE_LIST.filter(oe => elcScores[oe.code]).length;
+    const coreCodes   = HCO_ELC_OE_LIST.filter(oe => hcoOeLevels[oe.code] === 'CORE');
+    const commCodes   = HCO_ELC_OE_LIST.filter(oe => hcoOeLevels[oe.code] === 'Commitment');
+    const exclCodes   = HCO_ELC_OE_LIST.filter(oe => hcoOeLevels[oe.code] === 'Excellence');
+    const coreMet     = coreCodes.filter(oe => elcScores[oe.code] === 'met').length;
+    const commMet     = commCodes.filter(oe => elcScores[oe.code] === 'met').length;
+    const exclMet     = exclCodes.filter(oe => elcScores[oe.code] === 'met').length;
+    const coreTotal   = coreCodes.length || 124;
+    const commTotal   = commCodes.length || 36;
+    const exclTotal   = exclCodes.length || 29;
+    const pct = Math.round((totalScored / total) * 100);
+    const coreNotMet  = coreTotal - coreMet;
+
+    let verdict = null, verdictColor = T.muted;
+    if (exclMet === exclTotal && commMet === commTotal && coreMet === coreTotal) {
+      verdict = '✓ Ready for Excellence'; verdictColor = T.gold;
+    } else if (commMet === commTotal && coreMet === coreTotal) {
+      verdict = '✓ Ready for 2nd Cycle'; verdictColor = T.green;
+    } else if (coreMet === coreTotal) {
+      verdict = '✓ Ready for 1st Cycle Certification'; verdictColor = T.green;
+    } else {
+      verdict = `${coreNotMet} CORE OE${coreNotMet !== 1 ? 's' : ''} not yet met`; verdictColor = T.muted;
+    }
+
+    const SCORE_BTNS = [
+      {s:'met',    label:'✓ Met',     color:'#4caf7d'},
+      {s:'partial',label:'~ Partial', color:'#f4a441'},
+      {s:'not_met',label:'✗ Not Met', color:'#e05a5a'},
+    ];
+
     return (
       <div style={{padding:16}}>
+
+        {/* Progress summary */}
+        <div style={{background:T.panel2,border:`1px solid ${T.border}`,borderRadius:10,padding:'12px 14px',marginBottom:14}}>
+          <div style={{display:'flex',gap:8,flexWrap:'wrap',alignItems:'center',marginBottom:8}}>
+            <span style={{fontSize:13,fontWeight:700,color:T.white}}>{totalScored}/{total} scored</span>
+            <span style={{fontSize:12,color:'#e05a5a'}}>CORE {coreMet}/{coreTotal}</span>
+            <span style={{fontSize:12,color:'#f4a441'}}>Commitment {commMet}/{commTotal}</span>
+            <span style={{fontSize:12,color:'#c9a84c'}}>Excellence {exclMet}/{exclTotal}</span>
+            <span style={{marginLeft:'auto',fontSize:11,fontWeight:700,color:verdictColor}}>{verdict}</span>
+          </div>
+          <div style={{height:6,borderRadius:3,background:T.border,overflow:'hidden'}}>
+            <div style={{height:'100%',width:`${pct}%`,background:T.green,borderRadius:3,transition:'width 0.3s'}}/>
+          </div>
+        </div>
+
         <div style={{marginBottom:12,display:'flex',gap:8,flexDirection:'column'}}>
           <input
             value={hcoOeSearch} onChange={e => setHcoOeSearch(e.target.value)}
@@ -6513,6 +6589,7 @@ export default function App() {
             ))}
           </div>
         </div>
+
         {filtered.length === 0 ? (
           <div style={{color:T.muted,fontSize:14,textAlign:'center',padding:24}}>No OEs match your search.</div>
         ) : (
@@ -6526,26 +6603,48 @@ export default function App() {
                 </div>
                 <div style={{display:'flex',flexDirection:'column',gap:4}}>
                   {g.oes.map(oe => {
-                    const isOpen = !!hcoOeExpanded[oe.code];
-                    const tips = hcoOeTips[oe.code];
-                    const loading = !!hcoOeTipsLoading[oe.code];
-                    const lvl = hcoOeLevels[oe.code] || tips?.oe_level || null;
+                    const isOpen   = !!hcoOeExpanded[oe.code];
+                    const tips     = hcoOeTips[oe.code];
+                    const loading  = !!hcoOeTipsLoading[oe.code];
+                    const lvl      = hcoOeLevels[oe.code] || tips?.oe_level || null;
                     const lvlColor = lvl ? elcLevelColor(lvl) : T.muted;
+                    const scoreVal = elcScores[oe.code] || null;
+                    const saving   = !!elcScoreSaving[oe.code];
+                    const rowBorder = scoreVal === 'met' ? '#4caf7d' : scoreVal === 'partial' ? '#f4a441' : scoreVal === 'not_met' ? '#e05a5a' : isOpen ? T.blue : T.border;
                     return (
-                      <div key={oe.code} style={{background:T.panel2,borderRadius:8,border:`1px solid ${isOpen?T.blue:T.border}`,overflow:'hidden',transition:'border-color 0.15s'}}>
-                        <div
-                          onClick={() => toggleElcOe(oe.code)}
-                          style={{padding:'9px 12px',display:'flex',gap:10,alignItems:'flex-start',cursor:'pointer'}}
-                        >
-                          <div style={{display:'flex',flexDirection:'column',gap:4,flexShrink:0,minWidth:72,alignItems:'flex-start'}}>
-                            <span style={{color:T.gold,fontWeight:700,fontSize:13}}>{oe.code}</span>
-                            {lvl && (
-                              <span style={{fontSize:9,fontWeight:700,letterSpacing:0.5,padding:'1px 6px',borderRadius:4,background:`${lvlColor}20`,color:lvlColor,border:`1px solid ${lvlColor}40`}}>{lvl}</span>
-                            )}
+                      <div key={oe.code} style={{background:T.panel2,borderRadius:8,border:`1px solid ${rowBorder}`,overflow:'hidden',transition:'border-color 0.15s'}}>
+                        {/* Row header — click left area to expand, buttons on right */}
+                        <div style={{padding:'9px 12px',display:'flex',gap:10,alignItems:'center'}}>
+                          <div onClick={() => toggleElcOe(oe.code)} style={{display:'flex',gap:10,alignItems:'flex-start',flex:1,cursor:'pointer',minWidth:0}}>
+                            <div style={{display:'flex',flexDirection:'column',gap:4,flexShrink:0,minWidth:68,alignItems:'flex-start'}}>
+                              <span style={{color:T.gold,fontWeight:700,fontSize:13}}>{oe.code}</span>
+                              {lvl && (
+                                <span style={{fontSize:9,fontWeight:700,letterSpacing:0.5,padding:'1px 6px',borderRadius:4,background:`${lvlColor}20`,color:lvlColor,border:`1px solid ${lvlColor}40`}}>{lvl}</span>
+                              )}
+                            </div>
+                            <span style={{color:T.text,fontSize:13,lineHeight:1.5,flex:1,minWidth:0}}>{oe.text}</span>
+                            <span style={{color:T.muted,fontSize:12,flexShrink:0,paddingTop:2}}>{isOpen?'▲':'▼'}</span>
                           </div>
-                          <span style={{color:T.text,fontSize:14,lineHeight:1.5,flex:1}}>{oe.text}</span>
-                          <span style={{color:T.muted,fontSize:13,flexShrink:0,paddingTop:1}}>{isOpen?'▲':'▼'}</span>
+                          {/* Scoring buttons */}
+                          <div style={{display:'flex',gap:3,flexShrink:0,alignItems:'center'}}>
+                            {SCORE_BTNS.map(({s,label,color}) => {
+                              const active = scoreVal === s;
+                              return (
+                                <button key={s}
+                                  onClick={e => { e.stopPropagation(); if(!saving) setElcScore(oe.code, s); }}
+                                  style={{padding:'3px 7px',borderRadius:5,fontSize:10,fontWeight:700,cursor:saving?'wait':'pointer',
+                                    background: active ? color : 'transparent',
+                                    border: `1px solid ${active ? color : T.border}`,
+                                    color: active ? '#fff' : T.muted,
+                                    opacity: saving ? 0.5 : 1,
+                                    whiteSpace:'nowrap'}}>
+                                  {label}
+                                </button>
+                              );
+                            })}
+                          </div>
                         </div>
+                        {/* Tips panel */}
                         {isOpen && (
                           <div style={{padding:'0 12px 12px'}}>
                             {loading ? (
