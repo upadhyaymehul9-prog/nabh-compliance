@@ -5610,7 +5610,7 @@ export default function App() {
         {/* 2nd Edition notice */}
         <div style={{background:'#1a0a00',border:`1px solid ${T.orange}`,borderRadius:10,padding:14}}>
           <div style={{color:T.orange,fontWeight:700,fontSize:15,marginBottom:4}}>📋 2nd Edition Active — March 2026</div>
-          <div style={{color:T.text,fontSize:14,lineHeight:1.6}}>
+          <div style={{color:'#c8dcea',fontSize:14,lineHeight:1.6}}>
             ELC now uses the unified 2nd Edition standards (Jan 2026). New applicants from March 2026 must apply via <strong style={{color:T.gold}}>hope.qcin.org</strong>.
             1st Edition (149 OEs) is no longer valid for new applications.
           </div>
@@ -5874,7 +5874,7 @@ export default function App() {
     <div style={{padding:16}}>
       <div style={{background:'#0a1200',border:`1px solid ${T.green}44`,borderRadius:10,padding:12,marginBottom:16}}>
         <div style={{color:T.green,fontWeight:600,fontSize:14,marginBottom:4}}>⚠️ Key Change — 2nd Edition</div>
-        <div style={{color:T.text,fontSize:14}}>Desktop Assessment now has a <strong>single NC closure cycle only</strong>. There is no second chance to respond. Submit complete NC responses the first time.</div>
+        <div style={{color:'#c8dcea',fontSize:14}}>Desktop Assessment now has a <strong style={{color:'#eef4f9'}}>single NC closure cycle only</strong>. There is no second chance to respond. Submit complete NC responses the first time.</div>
       </div>
 
       <div style={{display:'flex',flexDirection:'column',gap:0}}>
