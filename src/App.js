@@ -6160,27 +6160,71 @@ export default function App() {
       </div>
 
       <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
-        <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:14}}>📊 ELC Readiness</div>
-        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:12}}>
-          {[
-            {label:'Documents',pct:docsPct,done:docsDone,total:docsApplicable,color:docsPct>=80?T.green:docsPct>=50?T.orange:T.red},
-            {label:'Licenses',pct:licPct,done:licDone,total:licApplicable,color:licPct>=80?T.green:licPct>=50?T.orange:T.red},
-            {label:'Overall',pct:overallPct,done:null,total:null,color:overallPct>=80?T.green:overallPct>=50?T.orange:T.red},
-          ].map(s => (
-            <div key={s.label} style={{background:T.panel2,borderRadius:10,padding:12,textAlign:'center',border:`1px solid ${T.border}`}}>
-              <div style={{position:'relative',width:64,height:64,margin:'0 auto 8px'}}>
-                <svg viewBox="0 0 36 36" style={{width:64,height:64,transform:'rotate(-90deg)'}}>
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke={T.border} strokeWidth="3"/>
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke={s.color} strokeWidth="3"
-                    strokeDasharray={`${s.pct} ${100-s.pct}`} strokeDashoffset="0" strokeLinecap="round"/>
-                </svg>
-                <div style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',color:s.color,fontWeight:700,fontSize:16}}>{s.pct}%</div>
+        <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:14}}>📊 OE Compliance Summary</div>
+        {(()=>{
+          const oeTotal    = HCO_ELC_OE_LIST.length;
+          const oeMet      = HCO_ELC_OE_LIST.filter(oe => elcScores[oe.code] === 'met').length;
+          const oePartial  = HCO_ELC_OE_LIST.filter(oe => elcScores[oe.code] === 'partial').length;
+          const oeNotMet   = HCO_ELC_OE_LIST.filter(oe => elcScores[oe.code] === 'not_met').length;
+          const oeUnscored = oeTotal - oeMet - oePartial - oeNotMet;
+          const oeCoreCodes = HCO_ELC_OE_LIST.filter(oe => hcoOeLevels[oe.code] === 'CORE');
+          const oeCommCodes = HCO_ELC_OE_LIST.filter(oe => hcoOeLevels[oe.code] === 'Commitment');
+          const oeExclCodes = HCO_ELC_OE_LIST.filter(oe => hcoOeLevels[oe.code] === 'Excellence');
+          const oeCoreMet  = oeCoreCodes.filter(oe => elcScores[oe.code] === 'met').length;
+          const oeCommMet  = oeCommCodes.filter(oe => elcScores[oe.code] === 'met').length;
+          const oeExclMet  = oeExclCodes.filter(oe => elcScores[oe.code] === 'met').length;
+          const oeCoreTotal= oeCoreCodes.length || 124;
+          const oeCommTotal= oeCommCodes.length || 36;
+          const oeExclTotal= oeExclCodes.length || 29;
+          const oeMetPct   = Math.round((oeMet / oeTotal) * 100);
+          const oeCoreNotMet = oeCoreTotal - oeCoreMet;
+          let oeVerdict, oeVerdictColor;
+          if (oeMet === oeTotal) { oeVerdict = '✓ Ready for Excellence'; oeVerdictColor = T.gold; }
+          else if (oeCoreMet === oeCoreTotal && oeCommMet === oeCommTotal) { oeVerdict = '✓ Ready for 2nd Cycle'; oeVerdictColor = T.green; }
+          else if (oeCoreMet === oeCoreTotal) { oeVerdict = '✓ Ready for 1st Cycle Certification'; oeVerdictColor = T.green; }
+          else { oeVerdict = `${oeCoreNotMet} CORE OE${oeCoreNotMet!==1?'s':''} not yet met`; oeVerdictColor = T.muted; }
+          return (
+            <>
+              {/* Row 1 — overall counts */}
+              <div style={{display:'flex',gap:10,flexWrap:'wrap',marginBottom:10}}>
+                {[
+                  {label:`✓ Met`,val:oeMet,color:'#4caf7d'},
+                  {label:`~ Partial`,val:oePartial,color:'#f4a441'},
+                  {label:`✗ Not Met`,val:oeNotMet,color:'#e05a5a'},
+                  {label:`— Unscored`,val:oeUnscored,color:T.muted},
+                ].map(({label,val,color})=>(
+                  <div key={label} style={{background:T.panel2,borderRadius:8,padding:'8px 14px',border:`1px solid ${T.border}`,textAlign:'center',flex:1,minWidth:70}}>
+                    <div style={{fontSize:18,fontWeight:800,color}}>{val}</div>
+                    <div style={{fontSize:11,color,fontWeight:600}}>{label}</div>
+                    <div style={{fontSize:10,color:T.muted}}>of {oeTotal}</div>
+                  </div>
+                ))}
               </div>
-              <div style={{color:T.text,fontSize:14,fontWeight:600}}>{s.label}</div>
-              {s.done !== null && <div style={{color:T.muted,fontSize:12}}>{s.done}/{s.total}</div>}
-            </div>
-          ))}
-        </div>
+              {/* Progress bar */}
+              <div style={{height:7,borderRadius:4,background:T.border,overflow:'hidden',marginBottom:12}}>
+                <div style={{height:'100%',width:`${oeMetPct}%`,background:'#4caf7d',borderRadius:4,transition:'width 0.3s'}}/>
+              </div>
+              {/* Row 2 — level breakdown */}
+              <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:8,marginBottom:12}}>
+                {[
+                  {label:'CORE',total:oeCoreTotal,met:oeCoreMet,color:'#e05a5a'},
+                  {label:'Commitment',total:oeCommTotal,met:oeCommMet,color:'#f4a441'},
+                  {label:'Excellence',total:oeExclTotal,met:oeExclMet,color:'#c9a84c'},
+                ].map(({label,total:t,met,color})=>(
+                  <div key={label} style={{background:T.panel2,borderRadius:8,padding:'8px 10px',border:`1px solid ${T.border}`,textAlign:'center'}}>
+                    <div style={{fontSize:10,fontWeight:700,color,letterSpacing:0.5,marginBottom:4}}>{label}</div>
+                    <div style={{fontSize:16,fontWeight:800,color:'#4caf7d'}}>{met}</div>
+                    <div style={{fontSize:11,color:T.muted}}>Met / {t}</div>
+                  </div>
+                ))}
+              </div>
+              {/* Row 3 — cycle readiness badge */}
+              <div style={{padding:'10px 14px',borderRadius:8,background:`${oeVerdictColor}18`,border:`1px solid ${oeVerdictColor}44`,textAlign:'center'}}>
+                <span style={{fontSize:13,fontWeight:700,color:oeVerdictColor}}>{oeVerdict}</span>
+              </div>
+            </>
+          );
+        })()}
       </div>
 
       <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
@@ -6522,24 +6566,33 @@ export default function App() {
     })).filter(g => g.oes.length > 0);
 
     // Progress calculations
-    const total = HCO_ELC_OE_LIST.length;
-    const totalScored = HCO_ELC_OE_LIST.filter(oe => elcScores[oe.code]).length;
+    const total       = HCO_ELC_OE_LIST.length;
+    const totalMet    = HCO_ELC_OE_LIST.filter(oe => elcScores[oe.code] === 'met').length;
+    const totalPartial= HCO_ELC_OE_LIST.filter(oe => elcScores[oe.code] === 'partial').length;
+    const totalNotMet = HCO_ELC_OE_LIST.filter(oe => elcScores[oe.code] === 'not_met').length;
+    const totalUnscored = total - totalMet - totalPartial - totalNotMet;
     const coreCodes   = HCO_ELC_OE_LIST.filter(oe => hcoOeLevels[oe.code] === 'CORE');
     const commCodes   = HCO_ELC_OE_LIST.filter(oe => hcoOeLevels[oe.code] === 'Commitment');
     const exclCodes   = HCO_ELC_OE_LIST.filter(oe => hcoOeLevels[oe.code] === 'Excellence');
     const coreMet     = coreCodes.filter(oe => elcScores[oe.code] === 'met').length;
+    const corePartial = coreCodes.filter(oe => elcScores[oe.code] === 'partial').length;
+    const coreNM      = coreCodes.filter(oe => elcScores[oe.code] === 'not_met').length;
     const commMet     = commCodes.filter(oe => elcScores[oe.code] === 'met').length;
+    const commPartial = commCodes.filter(oe => elcScores[oe.code] === 'partial').length;
+    const commNM      = commCodes.filter(oe => elcScores[oe.code] === 'not_met').length;
     const exclMet     = exclCodes.filter(oe => elcScores[oe.code] === 'met').length;
+    const exclPartial = exclCodes.filter(oe => elcScores[oe.code] === 'partial').length;
+    const exclNM      = exclCodes.filter(oe => elcScores[oe.code] === 'not_met').length;
     const coreTotal   = coreCodes.length || 124;
     const commTotal   = commCodes.length || 36;
     const exclTotal   = exclCodes.length || 29;
-    const pct = Math.round((totalScored / total) * 100);
-    const coreNotMet  = coreTotal - coreMet;
+    const metPct      = Math.round((totalMet / total) * 100);
+    const coreNotMet  = coreTotal - coreMet; // includes partial + not_met + unscored
 
     let verdict = null, verdictColor = T.muted;
-    if (exclMet === exclTotal && commMet === commTotal && coreMet === coreTotal) {
+    if (totalMet === total) {
       verdict = '✓ Ready for Excellence'; verdictColor = T.gold;
-    } else if (commMet === commTotal && coreMet === coreTotal) {
+    } else if (coreMet === coreTotal && commMet === commTotal) {
       verdict = '✓ Ready for 2nd Cycle'; verdictColor = T.green;
     } else if (coreMet === coreTotal) {
       verdict = '✓ Ready for 1st Cycle Certification'; verdictColor = T.green;
@@ -6558,15 +6611,32 @@ export default function App() {
 
         {/* Progress summary */}
         <div style={{background:T.panel2,border:`1px solid ${T.border}`,borderRadius:10,padding:'12px 14px',marginBottom:14}}>
-          <div style={{display:'flex',gap:8,flexWrap:'wrap',alignItems:'center',marginBottom:8}}>
-            <span style={{fontSize:13,fontWeight:700,color:T.white}}>{totalScored}/{total} scored</span>
-            <span style={{fontSize:12,color:'#e05a5a'}}>CORE {coreMet}/{coreTotal}</span>
-            <span style={{fontSize:12,color:'#f4a441'}}>Commitment {commMet}/{commTotal}</span>
-            <span style={{fontSize:12,color:'#c9a84c'}}>Excellence {exclMet}/{exclTotal}</span>
+          {/* Row 1 — counts */}
+          <div style={{display:'flex',gap:10,flexWrap:'wrap',alignItems:'center',marginBottom:8}}>
+            <span style={{fontSize:12,fontWeight:700,color:'#4caf7d'}}>✓ {totalMet} Met</span>
+            <span style={{fontSize:12,fontWeight:700,color:'#f4a441'}}>~ {totalPartial} Partial</span>
+            <span style={{fontSize:12,fontWeight:700,color:'#e05a5a'}}>✗ {totalNotMet} Not Met</span>
+            <span style={{fontSize:12,fontWeight:700,color:T.muted}}>— {totalUnscored} Unscored</span>
             <span style={{marginLeft:'auto',fontSize:11,fontWeight:700,color:verdictColor}}>{verdict}</span>
           </div>
-          <div style={{height:6,borderRadius:3,background:T.border,overflow:'hidden'}}>
-            <div style={{height:'100%',width:`${pct}%`,background:T.green,borderRadius:3,transition:'width 0.3s'}}/>
+          {/* Progress bar — fill = met / 189 */}
+          <div style={{height:7,borderRadius:4,background:T.border,overflow:'hidden',marginBottom:10}}>
+            <div style={{height:'100%',width:`${metPct}%`,background:'#4caf7d',borderRadius:4,transition:'width 0.3s'}}/>
+          </div>
+          {/* Row 2 — level breakdown */}
+          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:8}}>
+            {[
+              {label:'CORE',total:coreTotal,met:coreMet,partial:corePartial,nm:coreNM,color:'#e05a5a'},
+              {label:'Commitment',total:commTotal,met:commMet,partial:commPartial,nm:commNM,color:'#f4a441'},
+              {label:'Excellence',total:exclTotal,met:exclMet,partial:exclPartial,nm:exclNM,color:'#c9a84c'},
+            ].map(({label,total:t,met,partial,nm,color}) => (
+              <div key={label} style={{background:T.panel,borderRadius:7,padding:'7px 9px',border:`1px solid ${T.border}`}}>
+                <div style={{fontSize:10,fontWeight:700,color,marginBottom:4,letterSpacing:0.5}}>{label} (/{t})</div>
+                <div style={{fontSize:11,color:'#4caf7d'}}>✓ {met} Met</div>
+                <div style={{fontSize:11,color:'#f4a441'}}>~ {partial} Partial</div>
+                <div style={{fontSize:11,color:'#e05a5a'}}>✗ {nm} Not Met</div>
+              </div>
+            ))}
           </div>
         </div>
 
