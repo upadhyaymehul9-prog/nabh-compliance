@@ -5323,16 +5323,15 @@ export default function App() {
     setHcoOeExpanded(p => ({...p, [code]: !isOpen}));
     if (!isOpen && hcoOeTips[code] === undefined && !hcoOeTipsLoading[code]) {
       setHcoOeTipsLoading(p => ({...p, [code]: true}));
-      const dotCode = toElcDotCode(code);
       const { data } = await supabase
         .from('achieve_tips')
         .select('tip_1, tip_2, tip_3, tip_4, oe_level')
-        .eq('oe_code', dotCode)
+        .eq('oe_code', code)
         .eq('programme', 'ELC')
         .limit(1)
         .maybeSingle();
       // Merge preloaded level in case DB tips row exists but oe_level differs
-      const merged = data ? {...data, oe_level: data.oe_level || hcoOeLevels[dotCode] || null} : null;
+      const merged = data ? {...data, oe_level: data.oe_level || hcoOeLevels[code] || null} : null;
       setHcoOeTips(p => ({...p, [code]: merged}));
       setHcoOeTipsLoading(p => ({...p, [code]: false}));
     }
@@ -5388,8 +5387,7 @@ export default function App() {
                     const isOpen = !!hcoOeExpanded[oe.code];
                     const tips = hcoOeTips[oe.code];
                     const loading = !!hcoOeTipsLoading[oe.code];
-                    const dotCode = toElcDotCode(oe.code);
-                    const lvl = hcoOeLevels[dotCode] || tips?.oe_level || null;
+                    const lvl = hcoOeLevels[oe.code] || tips?.oe_level || null;
                     const lvlColor = lvl ? elcLevelColor(lvl) : T.muted;
                     return (
                       <div key={oe.code} style={{background:T.panel2,borderRadius:8,border:`1px solid ${isOpen?T.blue:T.border}`,overflow:'hidden',transition:'border-color 0.15s'}}>
