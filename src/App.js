@@ -6160,7 +6160,31 @@ export default function App() {
       </div>
 
       <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
-        <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:14}}>📊 OE Compliance Summary</div>
+        <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:14}}>📊 ELC Readiness</div>
+        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:12}}>
+          {[
+            {label:'Documents',pct:docsPct,done:docsDone,total:docsApplicable,color:docsPct>=80?T.green:docsPct>=50?T.orange:T.red},
+            {label:'Licenses',pct:licPct,done:licDone,total:licApplicable,color:licPct>=80?T.green:licPct>=50?T.orange:T.red},
+            {label:'Overall',pct:overallPct,done:null,total:null,color:overallPct>=80?T.green:overallPct>=50?T.orange:T.red},
+          ].map(s => (
+            <div key={s.label} style={{background:T.panel2,borderRadius:10,padding:12,textAlign:'center',border:`1px solid ${T.border}`}}>
+              <div style={{position:'relative',width:64,height:64,margin:'0 auto 8px'}}>
+                <svg viewBox="0 0 36 36" style={{width:64,height:64,transform:'rotate(-90deg)'}}>
+                  <circle cx="18" cy="18" r="15.9" fill="none" stroke={T.border} strokeWidth="3"/>
+                  <circle cx="18" cy="18" r="15.9" fill="none" stroke={s.color} strokeWidth="3"
+                    strokeDasharray={`${s.pct} ${100-s.pct}`} strokeDashoffset="0" strokeLinecap="round"/>
+                </svg>
+                <div style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',color:s.color,fontWeight:700,fontSize:16}}>{s.pct}%</div>
+              </div>
+              <div style={{color:T.text,fontSize:14,fontWeight:600}}>{s.label}</div>
+              {s.done !== null && <div style={{color:T.muted,fontSize:12}}>{s.done}/{s.total}</div>}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
+        <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:14}}>📋 OE Compliance Summary</div>
         {(()=>{
           const oeTotal    = HCO_ELC_OE_LIST.length;
           const oeMet      = HCO_ELC_OE_LIST.filter(oe => elcScores[oe.code] === 'met').length;
@@ -6448,7 +6472,7 @@ export default function App() {
     <div style={{padding:16}}>
       <div style={{background:'#0a0a1a',border:`1px solid ${T.blue}44`,borderRadius:10,padding:12,marginBottom:16}}>
         <div style={{color:T.blue,fontWeight:600,fontSize:14,marginBottom:4}}>💡 Key Points for HCO Applicants</div>
-        <div style={{color:T.text,fontSize:14,lineHeight:1.6}}>
+        <div style={{color:'#c8dcea',fontSize:14,lineHeight:1.6}}>
           • Two rounds of NC closure at both DA and Onsite stages (unlike SHCO 2nd Edition which gives only one).<br/>
           • Registration details on HOPE portal cannot be edited after submission — fill accurately.<br/>
           • Cannot use both web portal and mobile app simultaneously — save on portal first.<br/>
@@ -6524,6 +6548,18 @@ export default function App() {
       { hospital_id: context.hospitalId, oe_code: code, status, updated_at: new Date().toISOString(), updated_by: user.id },
       { onConflict: "hospital_id,oe_code" }
     );
+    if (error) setElcScores(p => ({...p, [code]: prev}));
+    setElcScoreSaving(p => ({...p, [code]: false}));
+  };
+
+  const clearElcScore = async (code) => {
+    const prev = elcScores[code];
+    setElcScores(p => { const n = {...p}; delete n[code]; return n; });
+    setElcScoreSaving(p => ({...p, [code]: true}));
+    const { error } = await supabase.from("elc_scores")
+      .delete()
+      .eq("hospital_id", context.hospitalId)
+      .eq("oe_code", code);
     if (error) setElcScores(p => ({...p, [code]: prev}));
     setElcScoreSaving(p => ({...p, [code]: false}));
   };
@@ -6712,6 +6748,15 @@ export default function App() {
                                 </button>
                               );
                             })}
+                            {scoreVal && (
+                              <button
+                                onClick={e => { e.stopPropagation(); if(!saving) clearElcScore(oe.code); }}
+                                style={{padding:'3px 7px',borderRadius:5,fontSize:10,fontWeight:700,cursor:saving?'wait':'pointer',
+                                  background:'transparent',border:`1px solid ${T.border}`,color:T.muted,
+                                  opacity:saving?0.5:1,whiteSpace:'nowrap'}}>
+                                ✕ Clear
+                              </button>
+                            )}
                           </div>
                         </div>
                         {/* Tips panel */}
