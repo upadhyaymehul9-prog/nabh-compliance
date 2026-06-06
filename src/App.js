@@ -6407,7 +6407,7 @@ export default function App() {
         </div>
         <div style={{background:'#0a0d00',border:`1px solid ${T.green}44`,borderRadius:8,padding:10,marginBottom:14}}>
           <div style={{color:T.green,fontSize:14,fontWeight:600,marginBottom:2}}>⚠️ HCO-Specific: PCB License Required</div>
-          <div style={{color:T.text,fontSize:13}}>Unlike SHCOs, HCOs ({'>'} 50 beds) must have the Pollution Control Board License for water and Air Pollution. Mark as N/A only if NABH formally exempts your facility.</div>
+          <div style={{color:'#c8dcea',fontSize:13}}>Unlike SHCOs, HCOs ({'>'} 50 beds) must have the Pollution Control Board License for water and Air Pollution. Mark as N/A only if NABH formally exempts your facility.</div>
         </div>
         <div style={{color:T.red,fontWeight:700,fontSize:15,marginBottom:10}}>🔴 Mandatory Licenses ({mandatory.length})</div>
         <div style={{display:'flex',flexDirection:'column',gap:6,marginBottom:20}}>
