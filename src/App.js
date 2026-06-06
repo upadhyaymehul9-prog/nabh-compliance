@@ -3864,6 +3864,7 @@ export default function App() {
   const [hcoOeExpanded, setHcoOeExpanded] = useState({});
   const [hcoOeTips, setHcoOeTips] = useState({});
   const [hcoOeTipsLoading, setHcoOeTipsLoading] = useState({});
+  const [hcoOeLevels, setHcoOeLevels] = useState({});
   const [pdfLoading, setPdfLoading] = useState(false);
   const [showMoreMenu, setShowMoreMenu] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -4201,6 +4202,20 @@ export default function App() {
         if(data?.lic_progress)setHcoLicProgress(data.lic_progress);
       });
   },[selectedProgramme,context?.assessmentId]);
+
+  // Preload ELC oe_level badges for all OEs on entering hco-elc
+  useEffect(()=>{
+    if(selectedProgramme!=="hco-elc")return;
+    supabase.from("achieve_tips")
+      .select("oe_code,oe_level")
+      .eq("programme","ELC")
+      .then(({data})=>{
+        if(!data)return;
+        const map={};
+        data.forEach(r=>{ map[r.oe_code]=r.oe_level; });
+        setHcoOeLevels(map);
+      });
+  },[selectedProgramme]);
 
   // Persist HCO doc progress whenever it changes
   useEffect(()=>{
@@ -5316,7 +5331,9 @@ export default function App() {
         .eq('programme', 'ELC')
         .limit(1)
         .maybeSingle();
-      setHcoOeTips(p => ({...p, [code]: data || null}));
+      // Merge preloaded level in case DB tips row exists but oe_level differs
+      const merged = data ? {...data, oe_level: data.oe_level || hcoOeLevels[dotCode] || null} : null;
+      setHcoOeTips(p => ({...p, [code]: merged}));
       setHcoOeTipsLoading(p => ({...p, [code]: false}));
     }
   };
@@ -5371,7 +5388,8 @@ export default function App() {
                     const isOpen = !!hcoOeExpanded[oe.code];
                     const tips = hcoOeTips[oe.code];
                     const loading = !!hcoOeTipsLoading[oe.code];
-                    const lvl = tips?.oe_level;
+                    const dotCode = toElcDotCode(oe.code);
+                    const lvl = hcoOeLevels[dotCode] || tips?.oe_level || null;
                     const lvlColor = lvl ? elcLevelColor(lvl) : T.muted;
                     return (
                       <div key={oe.code} style={{background:T.panel2,borderRadius:8,border:`1px solid ${isOpen?T.blue:T.border}`,overflow:'hidden',transition:'border-color 0.15s'}}>
