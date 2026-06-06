@@ -1218,6 +1218,64 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
             </div>
           ))}
         </div>
+
+        {/* ── Coming Soon divider ── */}
+        <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "32px 0 20px" }}>
+          <div style={{ flex: 1, height: 1, background: T.border }} />
+          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 3, color: T.muted, textTransform: "uppercase" }}>Coming Soon</div>
+          <div style={{ flex: 1, height: 1, background: T.border }} />
+        </div>
+
+        {/* ── Coming Soon cards ── */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16, opacity: 0.82 }}>
+          {[
+            {
+              key: "eye_hospital",
+              icon: "👁️",
+              title: "Eye Hospital Accreditation",
+              subtitle: "Ophthalmology Accreditation",
+              color: T.blue,
+              tags: ["Ophthalmology", "Day Care"],
+              desc: "Dedicated NABH accreditation pathway for eye hospitals and ophthalmology day-care centres.",
+            },
+            {
+              key: "ayush_hospital",
+              icon: "🌿",
+              title: "AYUSH Hospital",
+              subtitle: "Ayurveda · Homeopathy · Unani",
+              color: T.green,
+              tags: ["Ayurveda", "Homeopathy", "Unani"],
+              desc: "NABH accreditation for AYUSH hospitals including Ayurveda, Homeopathy, and Unani systems.",
+            },
+            {
+              key: "dental_clinic",
+              icon: "🦷",
+              title: "Dental Clinic",
+              subtitle: "Dental Accreditation",
+              color: T.orange,
+              tags: ["Dental", "Oral Health"],
+              desc: "NABH accreditation standards for dental clinics and oral health care centres.",
+            },
+          ].map(cs => (
+            <div key={cs.key} style={{ background: T.panel, border: `1.5px solid ${T.border}`, borderRadius: 14, padding: "24px", cursor: "default", position: "relative" }}>
+              <div style={{ position: "absolute", top: 14, right: 14, fontSize: 8, fontWeight: 700, letterSpacing: 1, padding: "3px 9px", borderRadius: 20, background: `${T.muted}18`, color: T.muted, border: `1px solid ${T.muted}40` }}>Coming Soon</div>
+              <div style={{ width: 44, height: 44, borderRadius: 12, background: T.panel2, border: `1px solid ${T.border}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, marginBottom: 12 }}>{cs.icon}</div>
+              <div style={{ fontSize: 15, fontWeight: 800, color: T.white, marginBottom: 3 }}>{cs.title}</div>
+              <div style={{ fontSize: 10, color: cs.color, fontWeight: 600, marginBottom: 10 }}>{cs.subtitle}</div>
+              <div style={{ display: "flex", gap: 6, marginBottom: 14, flexWrap: "wrap" }}>
+                {cs.tags.map(tag => (
+                  <span key={tag} style={{ fontSize: 9, padding: "2px 8px", borderRadius: 8, background: T.panel2, border: `1px solid ${T.border}`, color: T.muted }}>{tag}</span>
+                ))}
+              </div>
+              <div style={{ fontSize: 11, color: T.text, lineHeight: 1.7, marginBottom: 16 }}>{cs.desc}</div>
+              <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 11, color: T.muted }}><span>🔔</span> Notify me when available</div>
+            </div>
+          ))}
+        </div>
+
+        <div style={{ textAlign: "center", marginTop: 18, fontSize: 10, color: T.muted }}>
+          All upcoming programmes will be included in your existing subscription at no extra cost.
+        </div>
       </div>
 
       {comingSoonModal && (
@@ -3803,6 +3861,9 @@ export default function App() {
   const [hcoDocPart, setHcoDocPart] = useState('all');
   const [hcoOeSearch, setHcoOeSearch] = useState('');
   const [hcoOeChapter, setHcoOeChapter] = useState('all');
+  const [hcoOeExpanded, setHcoOeExpanded] = useState({});
+  const [hcoOeTips, setHcoOeTips] = useState({});
+  const [hcoOeTipsLoading, setHcoOeTipsLoading] = useState({});
   const [pdfLoading, setPdfLoading] = useState(false);
   const [showMoreMenu, setShowMoreMenu] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -5239,6 +5300,27 @@ export default function App() {
     </div>
   );
 
+  const toElcDotCode = code => code.replace(/^([A-Z]+)(\d+)([a-z]+)$/, '$1.$2.$3');
+  const elcLevelColor = lvl => lvl === 'CORE' ? '#e05a5a' : lvl === 'Commitment' ? '#f4a441' : '#c9a84c';
+
+  const toggleElcOe = async (code) => {
+    const isOpen = hcoOeExpanded[code];
+    setHcoOeExpanded(p => ({...p, [code]: !isOpen}));
+    if (!isOpen && hcoOeTips[code] === undefined && !hcoOeTipsLoading[code]) {
+      setHcoOeTipsLoading(p => ({...p, [code]: true}));
+      const dotCode = toElcDotCode(code);
+      const { data } = await supabase
+        .from('achieve_tips')
+        .select('tip_1, tip_2, tip_3, tip_4, oe_level')
+        .eq('oe_code', dotCode)
+        .eq('programme', 'ELC')
+        .limit(1)
+        .maybeSingle();
+      setHcoOeTips(p => ({...p, [code]: data || null}));
+      setHcoOeTipsLoading(p => ({...p, [code]: false}));
+    }
+  };
+
   const renderOEBrowser = () => {
     const q = hcoOeSearch.toLowerCase().trim();
     const filtered = HCO_ELC_OE_LIST.filter(oe => {
@@ -5285,12 +5367,47 @@ export default function App() {
                   <span style={{marginLeft:'auto',color:T.blue,fontSize:12}}>{g.oes.length} OEs</span>
                 </div>
                 <div style={{display:'flex',flexDirection:'column',gap:4}}>
-                  {g.oes.map(oe => (
-                    <div key={oe.code} style={{background:T.panel2,borderRadius:8,padding:'9px 12px',border:`1px solid ${T.border}`,display:'flex',gap:10,alignItems:'flex-start'}}>
-                      <span style={{color:T.gold,fontWeight:700,fontSize:13,minWidth:52,flexShrink:0}}>{oe.code}</span>
-                      <span style={{color:T.text,fontSize:14,lineHeight:1.5}}>{oe.text}</span>
-                    </div>
-                  ))}
+                  {g.oes.map(oe => {
+                    const isOpen = !!hcoOeExpanded[oe.code];
+                    const tips = hcoOeTips[oe.code];
+                    const loading = !!hcoOeTipsLoading[oe.code];
+                    const lvl = tips?.oe_level;
+                    const lvlColor = lvl ? elcLevelColor(lvl) : T.muted;
+                    return (
+                      <div key={oe.code} style={{background:T.panel2,borderRadius:8,border:`1px solid ${isOpen?T.blue:T.border}`,overflow:'hidden',transition:'border-color 0.15s'}}>
+                        <div
+                          onClick={() => toggleElcOe(oe.code)}
+                          style={{padding:'9px 12px',display:'flex',gap:10,alignItems:'flex-start',cursor:'pointer'}}
+                        >
+                          <div style={{display:'flex',flexDirection:'column',gap:4,flexShrink:0,minWidth:72,alignItems:'flex-start'}}>
+                            <span style={{color:T.gold,fontWeight:700,fontSize:13}}>{oe.code}</span>
+                            {lvl && (
+                              <span style={{fontSize:9,fontWeight:700,letterSpacing:0.5,padding:'1px 6px',borderRadius:4,background:`${lvlColor}20`,color:lvlColor,border:`1px solid ${lvlColor}40`}}>{lvl}</span>
+                            )}
+                          </div>
+                          <span style={{color:T.text,fontSize:14,lineHeight:1.5,flex:1}}>{oe.text}</span>
+                          <span style={{color:T.muted,fontSize:13,flexShrink:0,paddingTop:1}}>{isOpen?'▲':'▼'}</span>
+                        </div>
+                        {isOpen && (
+                          <div style={{padding:'0 12px 12px'}}>
+                            {loading ? (
+                              <div style={{fontSize:12,color:T.muted,padding:'8px 0'}}>Loading…</div>
+                            ) : tips ? (
+                              <div style={{marginTop:4,background:T.blueD,border:`1px solid ${T.blue}20`,borderRadius:8,padding:'12px 14px'}}>
+                                <div style={{fontSize:11,letterSpacing:2,color:T.blue,marginBottom:8}}>HOW TO ACHIEVE THIS OE</div>
+                                {[tips.tip_1, tips.tip_2, tips.tip_3, tips.tip_4].map((tip, i) => (
+                                  <div key={i} style={{display:'flex',gap:8,marginBottom:6,alignItems:'flex-start'}}>
+                                    <div style={{width:18,height:18,borderRadius:'50%',background:`${T.blue}20`,border:`1px solid ${T.blue}40`,display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,fontSize:11,color:T.blue,fontWeight:700}}>{i+1}</div>
+                                    <div style={{fontSize:13,color:T.text,lineHeight:1.6,paddingTop:1}}>{tip}</div>
+                                  </div>
+                                ))}
+                              </div>
+                            ) : null}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             ))}
