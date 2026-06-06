@@ -522,6 +522,1144 @@ const HCO_ELC_CHAPTER_SUMMARY = [
   {ch:"IMS",name:"Information Management System",oes:11,desc:"Medical record management, confidentiality, document control and digital health"},
 ];
 
+const ELC_OE_TIPS = {
+  'AAC1a': {
+    tip_1: 'Define all healthcare services your facility provides in a formal written document approved by the medical director, covering OPD, IPD, emergency, diagnostics and support services.',
+    tip_2: 'Maintain a Service Scope Register listing every specialty, procedure and ancillary service offered, updated whenever services are added or removed.',
+    tip_3: 'Audit the service list quarterly against actual billing data and active departments to confirm no service is rendered outside the approved scope.',
+    tip_4: 'Train department heads to review the defined service list at onboarding and whenever the scope changes, so all staff know exactly what services the hospital offers.'
+  },
+  'AAC1b': {
+    tip_1: 'Display the complete list of healthcare services on notice boards at reception, OPD waiting area and main entrance in languages patients understand.',
+    tip_2: 'Post laminated signage boards listing specialties, timings and consulting doctors at every patient-facing area and update them within 48 hours of any change.',
+    tip_3: 'Check during monthly facility rounds that all service display boards are current, legible, undamaged and match the approved service scope register.',
+    tip_4: 'Instruct housekeeping and front-desk staff to report damaged or outdated display boards immediately so corrections are made before the next patient visit.'
+  },
+  'AAC1c': {
+    tip_1: 'Ensure every defined clinical service has at least one qualified medical officer covering OPD slots, IPD rounds and emergency call duty at all times.',
+    tip_2: 'Maintain a coverage matrix document showing each service, the assigned qualified doctor, duty roster and on-call backup for OPD, IPD and emergency.',
+    tip_3: 'Verify monthly that no service gap exists by cross-checking the duty roster against the service scope list and flagging any uncovered shifts to HR.',
+    tip_4: 'Brief resident doctors and nursing staff at each shift handover about which specialist is on call for each service so emergency escalation is immediate.'
+  },
+  'AAC2a': {
+    tip_1: 'Establish a written SOP covering the full registration and admission workflow for OPD, day-care, IPD and emergency patients, including steps, responsible staff and timelines.',
+    tip_2: 'Keep the registration SOP accessible at the front desk and admission counter; include a patient flow chart on the wall showing each step visually.',
+    tip_3: 'Audit patient registration records monthly to confirm all mandatory fields are captured and the process follows the written SOP without deviation.',
+    tip_4: 'Train all reception and admission staff on the SOP during induction and refresh annually, with role-play exercises covering OPD, emergency and day-care scenarios.'
+  },
+  'AAC2b': {
+    tip_1: 'Configure the hospital information system to auto-generate a unique patient identification number at the point of registration completion before any clinical activity begins.',
+    tip_2: 'Print or display the unique ID on the wristband, prescription header, lab requisition and all patient documents so it links every record to one patient.',
+    tip_3: 'Review registration logs weekly to detect any duplicate IDs or registrations completed without a unique number and fix the root cause immediately.',
+    tip_4: 'Train front-desk staff that no patient may proceed to clinical areas until a unique ID has been generated and attached to all their documents.'
+  },
+  'AAC2c': {
+    tip_1: 'Define a clear transfer and referral procedure covering internal transfers between units, outward referrals to higher centres and inward transfers from other facilities, including documentation and consent steps.',
+    tip_2: 'Use a standardised transfer form capturing patient condition, reason for transfer, treatment given, receiving facility details and accompanying personnel.',
+    tip_3: 'Review all transfer and referral records monthly to verify documentation completeness, patient stability at transfer and availability of referral acceptance confirmation.',
+    tip_4: 'Train ward nurses and casualty staff on transfer SOP including how to stabilise the patient, fill the transfer form correctly and communicate with the receiving team.'
+  },
+  'AAC3a': {
+    tip_1: 'Implement a standardised initial assessment form for OPD, day-care, IPD and emergency that captures chief complaint, history, vitals, physical exam and provisional diagnosis in a consistent format.',
+    tip_2: 'Use printed or electronic structured assessment templates for each patient category so every clinician collects the same minimum data set at first contact.',
+    tip_3: 'Audit 10 records per week across patient types to check that initial assessments are complete, signed and completed within defined timeframes.',
+    tip_4: 'Orient all new doctors and nurses to the assessment templates during induction; hold quarterly case-based sessions to reinforce consistent documentation practice.'
+  },
+  'AAC3b': {
+    tip_1: 'Require that every admitted patient has a documented care plan in the medical record within the time frame defined by hospital policy, covering diagnosis, planned investigations, treatment goals and expected discharge date.',
+    tip_2: 'Use a dedicated care plan section in the case sheet that is signed by the treating doctor, specifying investigations, medications, procedures and review schedule.',
+    tip_3: 'Conduct weekly medical record audits to confirm every in-patient file contains a completed and updated care plan with no gaps beyond the defined timeframe.',
+    tip_4: 'Train junior doctors that writing a care plan is mandatory at admission, not optional, and include care plan documentation in their competency assessment checklist.'
+  },
+  'AAC4a': {
+    tip_1: 'Assign a named primary treating doctor for every admitted patient at the time of admission and document that doctor\'\'s name prominently in the case sheet and on the bed-head ticket.',
+    tip_2: 'Display the treating doctor\'\'s name on the patient\'\'s bedside card and record it in the admission register so all staff and family know who is responsible.',
+    tip_3: 'Check during weekly medical record review that every in-patient record shows a named responsible doctor; escalate gaps to the medical superintendent immediately.',
+    tip_4: 'Brief nursing staff at each shift that they must know the name of the responsible doctor for every patient in their ward to ensure correct escalation.'
+  },
+  'AAC4b': {
+    tip_1: 'Establish a policy requiring documented reassessment of every in-patient at defined intervals, with findings, response to treatment and updated management plan noted in the case sheet.',
+    tip_2: 'Use a structured reassessment note template that prompts recording of current vitals, symptom changes, investigation results and any plan modifications.',
+    tip_3: 'Audit 10 case sheets per week to verify reassessment notes are present at the required intervals, are signed and contain clinical content not just routine entries.',
+    tip_4: 'Train residents and nurses that timely reassessment documentation is a patient safety measure; include it in daily rounds checklists and handover briefings.'
+  },
+  'AAC4c': {
+    tip_1: 'Implement an early warning score system such as NEWS2 or a locally adapted equivalent so any deteriorating patient triggers a defined escalation response.',
+    tip_2: 'Document early warning scores on observation charts at every nursing round; ensure the escalation protocol with contact numbers is posted at each nursing station.',
+    tip_3: 'Review all rapid-response or code blue activations monthly to assess whether early warning signs were identified and acted upon promptly.',
+    tip_4: 'Train all ward nurses and resident doctors to calculate early warning scores, interpret the result and initiate escalation without waiting for senior approval.'
+  },
+  'AAC4d': {
+    tip_1: 'Implement a structured handover tool such as SBAR for all shift changes and inter-unit transfers so critical patient information is communicated consistently.',
+    tip_2: 'Record each handover in the nursing notes or handover register, capturing patient status, pending tasks, risk alerts and the name of the incoming staff member.',
+    tip_3: 'Observe and score at least two handovers per week per ward using a checklist; share findings at the monthly nursing quality meeting.',
+    tip_4: 'Train all nursing and resident medical staff on the SBAR handover format during induction and simulate a high-risk transfer scenario in quarterly drills.'
+  },
+  'AAC5a': {
+    tip_1: 'Ensure the laboratory offers tests that match the clinical services provided by the hospital; any gap must be filled by an outsourced arrangement with a NABL-accredited lab.',
+    tip_2: 'Maintain a laboratory services catalogue listing all available tests, turnaround times and reference ranges, updated whenever a new test is added or dropped.',
+    tip_3: 'Review the test catalogue against clinical service scope annually and after any new department opens to confirm laboratory coverage is adequate.',
+    tip_4: 'Inform doctors at departmental meetings about the current test menu, any new tests added and the process for ordering tests not available in-house.'
+  },
+  'AAC5b': {
+    tip_1: 'Follow written procedures for every stage of specimen management: test requisition, collection technique, patient and sample labelling, safe transport, processing steps and final disposal.',
+    tip_2: 'Use pre-printed specimen requisition forms with patient ID, test name, collection time and collector name; label all specimens at the bedside before transport.',
+    tip_3: 'Conduct monthly observation audits in the lab and wards to verify staff follow the specimen SOP; record findings and correct deviations within 24 hours.',
+    tip_4: 'Train phlebotomists and ward nurses on specimen collection, labelling and rejection criteria at induction; revalidate competency every year with a practical assessment.'
+  },
+  'AAC5c': {
+    tip_1: 'Define turnaround times for all test categories, display them in the lab and ensure critical values are telephoned to the treating team immediately and documented.',
+    tip_2: 'Record all critical value notifications in a dedicated register showing the test result, time called, staff who called, recipient name and time of acknowledgement.',
+    tip_3: 'Audit critical value notification records monthly to confirm all results were communicated within the defined window and that acknowledgement was documented.',
+    tip_4: 'Train lab staff on critical value thresholds for each test and the mandatory protocol for immediately calling the ward and documenting the communication.'
+  },
+  'AAC5d': {
+    tip_1: 'Implement a laboratory safety programme covering chemical and biological hazard handling, PPE use, needle-stick injury protocol, spill management and waste segregation.',
+    tip_2: 'Maintain a lab safety manual at the workstation along with a safety incident log, PPE inventory record and up-to-date MSDS sheets for all hazardous chemicals.',
+    tip_3: 'Conduct monthly safety observation rounds in the lab and review all needle-stick or exposure incidents within 24 hours to implement corrective actions.',
+    tip_4: 'Train all laboratory staff on safety protocols during induction; repeat annual refresher with a scenario-based exercise covering spill response and exposure reporting.'
+  },
+  'AAC5e': {
+    tip_1: 'Run an internal quality assurance programme in the laboratory including daily internal quality controls, participation in external quality assessment schemes and periodic equipment calibration.',
+    tip_2: 'Document all QC results, EQA reports, instrument calibration records and corrective actions in a QA register accessible to the lab in-charge.',
+    tip_3: 'Review QC trends weekly and EQA results each cycle; escalate persistent failures to the quality committee with a root cause analysis and action plan.',
+    tip_4: 'Train lab staff on the importance of running controls before patient samples, interpreting Levey-Jennings charts and reporting QC failures immediately.'
+  },
+  'AAC5f': {
+    tip_1: 'Select outsourced labs based on documented evidence of quality assurance such as NABL accreditation or equivalent; review credentials before signing any service agreement.',
+    tip_2: 'Maintain a file for each outsourced lab containing the MoU, quality certification, contact details and a record of periodic performance reviews.',
+    tip_3: 'Review outsourced lab turnaround times and report quality quarterly; raise concerns formally if results are frequently delayed or discrepant.',
+    tip_4: 'Inform clinical staff which tests are outsourced, the expected turnaround time and the process for urgent outsourced tests so patient care is not delayed.'
+  },
+  'AAC6a': {
+    tip_1: 'Obtain and maintain all regulatory licences required for imaging services including AERB registration for X-ray and CT, and ensure renewals are tracked with a 90-day advance alert.',
+    tip_2: 'Keep a compliance register in the radiology department listing each licence, issuing authority, issue date, expiry date and current status.',
+    tip_3: 'Audit the licence register quarterly and cross-check with equipment inventory to confirm no imaging equipment is operated without a valid licence.',
+    tip_4: 'Brief radiology in-charge and technicians that operating imaging equipment with an expired or absent licence is a legal violation that must be reported immediately.'
+  },
+  'AAC6b': {
+    tip_1: 'Define the scope of imaging services to match the clinical specialties offered by the hospital; any imaging not available in-house must have an outsourcing arrangement in place.',
+    tip_2: 'Publish an imaging services catalogue listing modalities available such as X-ray, ultrasound, CT, MRI, and display it in the radiology waiting area.',
+    tip_3: 'Review the imaging scope annually against clinical service growth and confirm that new imaging services are added only with proper equipment, staff and licences.',
+    tip_4: 'Educate clinicians at departmental meetings about available imaging modalities, turnaround times and the referral process for imaging not offered in-house.'
+  },
+  'AAC6c': {
+    tip_1: 'Set defined turnaround times for each imaging type, display them in radiology and ensure critical imaging findings are communicated to the treating doctor immediately.',
+    tip_2: 'Record all critical imaging findings in a communication log showing the finding, time reported, radiologist or technician name, recipient and time of acknowledgement.',
+    tip_3: 'Review the imaging communication log monthly to confirm all critical findings were conveyed within the defined time window and that acknowledgement was recorded.',
+    tip_4: 'Train radiologists, technicians and ward staff on which imaging findings are classified critical and the mandatory immediate verbal-then-written communication protocol.'
+  },
+  'AAC6d': {
+    tip_1: 'Implement a radiation safety programme covering patient and staff dose monitoring, proper use of protective equipment, pregnancy screening before imaging and radiation incident reporting.',
+    tip_2: 'Post radiation safety instructions and dose monitoring records in the imaging room; maintain a staff dosimetry register with monthly TLD badge readings.',
+    tip_3: 'Review dosimetry reports monthly and investigate any reading above the reference level; conduct quarterly safety walk-throughs of all imaging areas.',
+    tip_4: 'Train all radiology staff on radiation protection principles, correct use of lead aprons and shields, and the protocol for reporting any radiation incident or near-miss.'
+  },
+  'AAC6e': {
+    tip_1: 'Establish a quality assurance programme for imaging covering equipment calibration, image quality testing, reject analysis and participation in external quality assessment.',
+    tip_2: 'Maintain a QA register in radiology documenting calibration dates, phantom image results, reject analysis findings and corrective actions taken.',
+    tip_3: 'Review imaging QA records monthly and flag any equipment showing drift in image quality or calibration failure to the biomedical team for immediate action.',
+    tip_4: 'Train radiographers to perform daily equipment warm-up checks, document results and report any image quality concern to the radiology in-charge before patient use.'
+  },
+  'AAC6f': {
+    tip_1: 'Establish formal agreements with quality-assured external imaging centres for any modality not available in-house; verify their quality credentials before finalising the arrangement.',
+    tip_2: 'Keep a file for each outsourced imaging provider containing the agreement, quality certification, contact details and a log of referred cases and received reports.',
+    tip_3: 'Review outsourced imaging report turnaround times and quality quarterly; escalate persistent delays or quality issues to management for contract review.',
+    tip_4: 'Communicate to clinical staff which imaging investigations are outsourced, the expected report time and the escalation path if a report is critically delayed.'
+  },
+  'AAC7a': {
+    tip_1: 'Establish a documented discharge process covering all patient categories including medical, surgical, day-care and medico-legal cases, with clear steps for documentation, billing and medication counselling.',
+    tip_2: 'Use a discharge checklist in every case sheet that confirms summary completion, medication reconciliation, follow-up appointment and patient education are done before the patient leaves.',
+    tip_3: 'Audit 10 discharge files weekly to verify the checklist was completed, the summary is present and signed, and medico-legal cases have police intimation documented.',
+    tip_4: 'Train ward nurses and medical officers on the discharge SOP at induction; use a simulated discharge exercise in orientation to practise all documentation steps.'
+  },
+  'AAC7b': {
+    tip_1: 'Ensure every discharge summary includes the patient\'\'s full name, unique hospital ID number, final diagnosis and a concise summary of significant clinical findings and investigations.',
+    tip_2: 'Use a standardised discharge summary template with mandatory fields for name, UHID, diagnosis and findings; the system should not allow saving without these fields.',
+    tip_3: 'Audit 10 discharge summaries weekly to verify all four mandatory elements are present and accurate; return incomplete summaries to the treating doctor within 24 hours.',
+    tip_4: 'Train resident doctors that an unsigned or incomplete discharge summary must not be given to the patient; demonstrate the correct template format during clinical induction.'
+  },
+  'AAC7c': {
+    tip_1: 'Include clear follow-up instructions, discharge medication list with dosing schedule and any dietary or activity restrictions in every discharge summary in plain, patient-friendly language.',
+    tip_2: 'Print a separate patient instruction sheet accompanying the discharge summary that spells out medicines, follow-up date, diet instructions and warning symptoms to watch for.',
+    tip_3: 'Randomly review 5 discharge summaries per week to confirm follow-up advice, medications and instructions are present, legible and written in understandable language.',
+    tip_4: 'Train ward staff to explain discharge instructions verbally to patients or caregivers before they leave, confirm understanding and document that counselling was done.'
+  },
+  'AAC7d': {
+    tip_1: 'Include specific guidance in every discharge summary about when symptoms warrant an urgent return visit and how the patient can access emergency care at your facility or elsewhere.',
+    tip_2: 'Add a printed emergency contact section on the discharge summary listing the hospital emergency number and the specific warning signs that require immediate attention.',
+    tip_3: 'Review 5 discharge summaries per week to confirm the urgent care section is completed and the emergency contact details are accurate and legible.',
+    tip_4: 'Instruct discharge counsellors to verbally explain urgent-return criteria to every patient and caregiver and document that this counselling was provided before departure.'
+  },
+  'AAC7e': {
+    tip_1: 'For every patient who dies in the hospital, complete a death summary that includes the primary cause of death, contributing conditions and a brief account of the clinical course.',
+    tip_2: 'Use a separate death summary or a clearly marked section in the discharge summary template that requires entry of primary cause, contributing causes and clinical narrative.',
+    tip_3: 'Review all death summaries within 72 hours of each death to verify cause of death is documented, the summary is signed and the record is complete before filing.',
+    tip_4: 'Train medical officers on correct cause-of-death documentation using ICD coding principles and the hospital death summary format during clinical orientation.'
+  },
+  'COP1a': {
+    tip_1: 'Verify that all clinical care activities comply with applicable statutes, Medical Council guidelines, clinical establishment regulations and any specialty-specific legal requirements before delivering care.',
+    tip_2: 'Maintain a legal compliance register listing all applicable laws and regulations with their current compliance status, responsible owner and renewal dates.',
+    tip_3: 'Conduct a half-yearly legal and regulatory compliance audit across all clinical departments; document findings and track corrective actions to closure.',
+    tip_4: 'Brief department heads at quarterly medical staff meetings on any new laws or regulatory changes affecting clinical practice so care adjustments are made promptly.'
+  },
+  'COP1b': {
+    tip_1: 'Ensure all clinical treatment follows approved written protocols, clinical pathways or treatment guidelines reviewed and signed off by the medical committee.',
+    tip_2: 'File all approved clinical protocols in a central repository accessible to all treating doctors; post specialty-specific protocols at nursing stations and in clinical areas.',
+    tip_3: 'Audit clinical records monthly to verify that care delivered matches the applicable protocol and that any deviation is documented with a clinical rationale.',
+    tip_4: 'Orient new clinical staff to relevant treatment protocols during induction and conduct protocol-based case discussions at monthly department meetings to reinforce adherence.'
+  },
+  'COP1c': {
+    tip_1: 'Develop condition-specific clinical pathways so that all patients with the same diagnosis receive the same standard sequence of assessment, investigations, treatment and monitoring.',
+    tip_2: 'Post the clinical pathway flowchart in the relevant ward and include it in the patient case sheet so every team member follows the same plan.',
+    tip_3: 'Compare outcomes data for the same diagnosis across different treating doctors monthly to detect care variability and discuss findings at the quality committee.',
+    tip_4: 'Train clinicians that using clinical pathways is not optional; run quarterly case reviews comparing actual care to the pathway and highlight positive compliance examples.'
+  },
+  'COP1d': {
+    tip_1: 'Implement nursing care protocols for all routine and specialty procedures so nurses follow the same evidence-based steps every time regardless of shift or unit.',
+    tip_2: 'Maintain a nursing procedure manual at each nursing station with step-by-step protocols for all common care activities, updated when evidence or equipment changes.',
+    tip_3: 'Conduct monthly nursing procedure observation audits where a senior nurse watches a procedure being performed and scores it against the written protocol.',
+    tip_4: 'Train new nurses on procedure protocols during induction, require a supervised competency demonstration before independent practice and document the assessment result.'
+  },
+  'COP1e': {
+    tip_1: 'Provide transfusion services only within the defined scope of the organisation; ensure blood bank or blood storage facilities are licensed and staffed appropriately.',
+    tip_2: 'Maintain a blood bank services scope document listing product types available, storage capacity, licensed categories and emergency access procedures.',
+    tip_3: 'Audit the blood bank licence, staffing and scope compliance every six months; verify that no products outside the approved scope are being issued.',
+    tip_4: 'Brief clinical staff on the types of blood products available in-house, the ordering process and how to arrange products not available locally through the nearest blood bank.'
+  },
+  'COP1f': {
+    tip_1: 'Follow a written transfusion guideline covering indications, pre-transfusion testing, cross-matching, issue, bedside verification, administration rate, monitoring and adverse reaction management.',
+    tip_2: 'Use a pre-transfusion checklist attached to every blood product bag verifying patient identity, blood group, cross-match, product details and prescribing doctor\'\'s order.',
+    tip_3: 'Review all transfusion records monthly for completeness of pre-checks, monitoring entries and any adverse reactions; present findings at the transfusion committee.',
+    tip_4: 'Train nurses who administer blood products on the full transfusion protocol including bedside identity check, monitoring intervals, stopping criteria and reaction reporting.'
+  },
+  'COP1g': {
+    tip_1: 'Obtain written informed consent from the patient or legal guardian before every blood or blood component transfusion, explaining the purpose, risks and alternatives.',
+    tip_2: 'Use a dedicated transfusion consent form that describes the product, purpose, potential adverse effects and alternatives; file it in the case sheet before administration.',
+    tip_3: 'Audit 10 transfusion records monthly to confirm a signed consent form is present in every file before the first unit was administered; flag gaps to the treating doctor.',
+    tip_4: 'Train nursing and medical staff that starting a transfusion without a signed consent form is a patient rights violation; include it as a mandatory pre-transfusion checklist item.'
+  },
+  'COP2a': {
+    tip_1: 'Ensure the emergency department is resourced with equipment, medications, trained staff and protocols matching the scope of emergency services the hospital has committed to provide.',
+    tip_2: 'Maintain an emergency services capability document listing available equipment, drug trolleys, specialist on-call coverage and escalation pathways for each emergency type.',
+    tip_3: 'Review emergency department readiness monthly by checking equipment functionality, crash cart contents, drug availability and on-call roster for adequacy.',
+    tip_4: 'Train emergency staff on the specific emergency services the hospital is equipped to handle and the protocols for immediate referral when a case is beyond scope.'
+  },
+  'COP2b': {
+    tip_1: 'Define a protocol for medico-legal cases that ensures emergency care is provided first without waiting for legal formalities, followed by mandatory police intimation and documentation.',
+    tip_2: 'Use a medico-legal case register to record every MLC with patient details, nature of injury, time of arrival, treating doctor, police station informed and certificate issued.',
+    tip_3: 'Review the MLC register weekly to confirm all cases are documented, police intimation was timely and case management followed the defined protocol consistently.',
+    tip_4: 'Train emergency doctors, nurses and admissions staff on MLC identification, mandatory reporting obligations and the hospital MLC documentation procedure at induction.'
+  },
+  'COP2c': {
+    tip_1: 'Implement a uniform CPR protocol throughout the organisation so any patient requiring resuscitation receives the same standard of care regardless of location in the hospital.',
+    tip_2: 'Post the resuscitation protocol and crash cart inventory checklist at every nursing station and ensure crash carts are sealed, checked daily and restocked after each use.',
+    tip_3: 'Conduct unannounced crash cart checks at least monthly; review all resuscitation events within 48 hours to assess adherence to the CPR protocol.',
+    tip_4: 'Train all clinical staff including nurses and ward boys in basic life support; require annual BLS recertification as a condition of continued employment in clinical areas.'
+  },
+  'COP2d': {
+    tip_1: 'Implement a triage system in the emergency department that categorises every incoming patient by clinical urgency and assigns care priority accordingly before any administrative processes.',
+    tip_2: 'Display the triage criteria and colour-coded priority levels at the emergency reception; document triage category, time and assigned nurse for every patient on arrival.',
+    tip_3: 'Review triage records monthly to assess time-to-triage compliance, category distribution and any triage under- or over-categorisation identified during clinical review.',
+    tip_4: 'Train emergency nurses on the triage tool, triage categories and the decision rules for each level during induction; conduct quarterly scenario-based triage refresher sessions.'
+  },
+  'COP2e': {
+    tip_1: 'Reassess all emergency patients at defined intervals based on their triage category and document vital signs, symptom changes and response to treatment in the emergency record.',
+    tip_2: 'Use a structured emergency observation chart that prompts repeat vitals and clinical notes at triage-category-specific intervals during the patient\'\'s stay in the emergency area.',
+    tip_3: 'Audit emergency records weekly to verify reassessments are documented at the required intervals and that any deterioration triggered an appropriate clinical response.',
+    tip_4: 'Train emergency nurses that reassessment documentation is mandatory, not optional, and demonstrate how to complete the observation chart correctly during nursing orientation.'
+  },
+  'COP2f': {
+    tip_1: 'Document the outcome of every emergency patient visit, whether the patient was admitted, discharged home or transferred to another facility, including the time and authorising clinician.',
+    tip_2: 'Record admission or discharge or transfer decisions in the emergency register with patient ID, decision time, destination, transporting person and any referral documents issued.',
+    tip_3: 'Review the emergency register weekly to confirm no patient was discharged or transferred without documented authorisation and a completed clinical record.',
+    tip_4: 'Train emergency nursing and medical staff that every patient who leaves the emergency area must have their disposition formally recorded before departure.'
+  },
+  'COP2g': {
+    tip_1: 'Establish a written protocol for patients found dead on arrival covering confirmation of death by a qualified doctor, documentation requirements, family notification and medico-legal obligations.',
+    tip_2: 'Maintain a death on arrival register recording the date, time, patient details, certifying doctor, family informed time and police notification where legally required.',
+    tip_3: 'Review all death-on-arrival records monthly to confirm the protocol was followed, documentation is complete and all mandatory notifications were made.',
+    tip_4: 'Train emergency doctors and nurses on the dead-on-arrival protocol at induction, emphasising that proper documentation and legal obligations apply even when death precedes arrival.'
+  },
+  'COP2h': {
+    tip_1: 'Ensure any ambulance operated by or affiliated with the hospital is staffed with trained personnel, equipped with required emergency medications and devices and checked for readiness before every shift.',
+    tip_2: 'Maintain an ambulance readiness checklist completed at the start of every shift covering equipment inventory, drug expiry, oxygen level, vehicle fitness and driver licence validity.',
+    tip_3: 'Review completed ambulance checklists weekly and arrange unannounced spot checks monthly to verify equipment is functional and staff are competent.',
+    tip_4: 'Train ambulance staff on equipment use, emergency protocols, patient loading and communication procedures; document training and require annual competency reassessment.'
+  },
+  'COP2i': {
+    tip_1: 'Develop and implement a hospital disaster management plan covering mass casualty events, epidemic surges and natural disasters, including surge capacity, staff roles and external coordination.',
+    tip_2: 'Keep the disaster management plan document accessible to all department heads; display emergency contact trees and code activation procedures at nursing stations.',
+    tip_3: 'Conduct at least two disaster or mass casualty mock drills per year and evaluate staff response against the plan, documenting gaps and corrective actions.',
+    tip_4: 'Train all staff on their specific disaster role during induction and brief them on updated plans annually; appoint a disaster coordinator for each major department.'
+  },
+  'COP3a': {
+    tip_1: 'Define the scope of ICU and HDU care in a written policy specifying admission and discharge criteria, monitoring standards, staffing ratios and available interventions.',
+    tip_2: 'Post the ICU and HDU scope and admission criteria at the unit entrance and in the medical staff handbook so all clinicians apply consistent admission decisions.',
+    tip_3: 'Review ICU and HDU admissions monthly to verify they meet the documented admission criteria and that scope boundaries were not exceeded without formal extension.',
+    tip_4: 'Orient ICU and HDU staff on the defined scope, admission criteria and available interventions at induction; update them whenever the scope is formally revised.'
+  },
+  'COP3b': {
+    tip_1: 'Implement a quality assurance programme for ICU and HDU that tracks key clinical indicators such as VAP rate, CAUTI rate, ventilator days and mortality benchmarked against standards.',
+    tip_2: 'Maintain an ICU QA dashboard updated monthly showing indicator values, targets and trend charts; review at the quality committee meeting each month.',
+    tip_3: 'Analyse ICU QA data monthly to identify adverse trends, conduct root cause analysis for significant deviations and implement targeted improvement actions.',
+    tip_4: 'Engage ICU medical and nursing staff in reviewing their unit\'\'s quality data monthly; use the findings as teaching cases to reinforce best practice at the bedside.'
+  },
+  'COP3c': {
+    tip_1: 'Establish a process for counselling patients and families in ICU and HDU at admission and at regular intervals to explain the treatment plan, prognosis and available options.',
+    tip_2: 'Document all family counselling sessions in the case sheet noting date, time, topics discussed, who was present and the family\'\'s response or questions.',
+    tip_3: 'Audit ICU records monthly to verify that counselling documentation is present for every admission within 24 hours and at weekly intervals thereafter.',
+    tip_4: 'Train ICU doctors and nurses on effective counselling techniques for critical care families, emphasising clear language, empathy and confirming understanding.'
+  },
+  'COP3d': {
+    tip_1: 'Provide end-of-life care that addresses physical comfort, pain control, emotional support and dignified surroundings for patients and their families at all times.',
+    tip_2: 'Document the end-of-life care plan in the case sheet covering symptom management, family support measures, DNR decisions if applicable and chaplaincy or counselling services offered.',
+    tip_3: 'Review end-of-life case records quarterly to assess quality of symptom management, family support and documentation completeness; discuss learnings at the ethics committee.',
+    tip_4: 'Train clinical staff on palliative and end-of-life care principles, communication with grieving families and the hospital\'\'s policy on DNR and withholding of treatment.'
+  },
+  'COP4a': {
+    tip_1: 'Provide obstetric care within a clearly defined scope that matches your hospital\'\'s staffing, infrastructure and emergency capability; document the scope and obtain regulatory approval.',
+    tip_2: 'Display the obstetric services scope and emergency maternity contact numbers in the labour room and antenatal clinic; maintain relevant licences in a compliance file.',
+    tip_3: 'Review obstetric service delivery annually against the defined scope and maternal and neonatal outcome indicators to ensure care standards are being met.',
+    tip_4: 'Orient obstetricians, midwives and labour room nurses on the defined obstetric scope and the escalation protocol for cases that exceed the facility\'\'s capability.'
+  },
+  'COP4b': {
+    tip_1: 'Provide comprehensive antenatal care including scheduled check-ups, maternal nutrition screening, immunisation with Td and other recommended vaccines and protocols for obstetric emergencies.',
+    tip_2: 'Use a standard antenatal record card for each patient tracking all ANC visits, investigations done, immunisations given, nutrition status and risk flags.',
+    tip_3: 'Audit antenatal records monthly to verify ANC visit frequency, immunisation coverage, nutrition assessment and emergency preparedness documentation for all enrolled patients.',
+    tip_4: 'Train nursing staff in the ANC clinic on maternal nutrition counselling, vaccine schedules and early identification of high-risk pregnancies requiring specialist review.'
+  },
+  'COP4c': {
+    tip_1: 'Ensure facilities managing obstetric cases can immediately stabilise and manage neonatal emergencies including resuscitation, hypothermia prevention and early transfer to a NICU if needed.',
+    tip_2: 'Maintain a neonatal resuscitation kit and a functional radiant warmer in every delivery area; post the neonatal resuscitation protocol on the labour room wall.',
+    tip_3: 'Check neonatal emergency equipment readiness at every shift handover; review all neonatal adverse events monthly to assess preparedness and response quality.',
+    tip_4: 'Train all labour room staff in neonatal resuscitation and stabilisation annually; ensure at least one NRP-certified staff member is present at every delivery.'
+  },
+  'COP5a': {
+    tip_1: 'Staff paediatric and neonatal units only with doctors and nurses who have demonstrated age-specific competencies in growth assessment, drug dosing, equipment use and clinical care.',
+    tip_2: 'Maintain a competency record for each paediatric and neonatal staff member listing the skills assessed, assessment date, assessor name and review due date.',
+    tip_3: 'Audit paediatric clinical records and directly observe staff practices quarterly to verify age-appropriate assessment and management techniques are being applied correctly.',
+    tip_4: 'Provide age-specific competency training for all new paediatric and neonatal staff and schedule annual reassessment; link competency status to ward posting decisions.'
+  },
+  'COP5b': {
+    tip_1: 'Include growth monitoring with weight-for-age and height-for-age charts, developmental milestone screening, nutritional status assessment and immunisation history in every paediatric assessment.',
+    tip_2: 'Use a structured paediatric assessment form with dedicated sections for growth parameters, developmental milestones, nutritional status and vaccination history.',
+    tip_3: 'Audit 10 paediatric records monthly to verify all four assessment domains are documented; flag incomplete records to the paediatric department head for correction.',
+    tip_4: 'Train paediatric nurses and doctors on how to plot growth charts, assess developmental milestones and screen for malnutrition using standard tools at induction.'
+  },
+  'COP5c': {
+    tip_1: 'Implement physical security measures to prevent child and neonate abduction including restricted access to maternity and paediatric wards, identity bands and staff recognition protocols.',
+    tip_2: 'Attach matching identity bands to the neonate and mother at birth; document band numbers in the birth record and verify them at every handover and feeding.',
+    tip_3: 'Test the access control system and abduction response protocol with a surprise drill once a year; review all security incidents in paediatric areas within 24 hours.',
+    tip_4: 'Train all maternity and paediatric staff on abduction prevention protocols, how to respond to a suspicious person in the ward and who to alert immediately.'
+  },
+  'COP6a': {
+    tip_1: 'Administer procedural sedation only under a written protocol that defines indications, pre-procedure assessment, monitoring requirements, recovery criteria and emergency response.',
+    tip_2: 'Use a procedural sedation checklist documenting patient assessment, consent, drug name and dose, monitoring values and recovery room discharge criteria for every sedation event.',
+    tip_3: 'Review all procedural sedation records monthly to verify protocol adherence, monitoring documentation and occurrence of any adverse sedation events.',
+    tip_4: 'Train all staff who participate in procedural sedation on the protocol, drug interactions, airway management and emergency reversal agent availability before they are permitted to sedate independently.'
+  },
+  'COP6b': {
+    tip_1: 'Assign procedural sedation only to competent and trained clinicians; obtain written informed consent from the patient before every sedation procedure and document it in the case sheet.',
+    tip_2: 'Maintain a sedation competency register listing each certified provider, skills validated, certification date and renewal due date.',
+    tip_3: 'Audit sedation records quarterly to confirm sedation was administered only by listed competent providers and that consent forms are present for every procedure.',
+    tip_4: 'Train clinical staff that sedation can only be performed by those with documented competency and that no sedation should begin without a signed consent form in the file.'
+  },
+  'COP7a': {
+    tip_1: 'Create a comprehensive anaesthesia management policy covering pre-operative assessment requirements, drug selection, monitoring standards, emergency protocols and post-anaesthesia recovery.',
+    tip_2: 'File all anaesthesia protocols in the OT and recovery room with easy access for all anaesthetists; include a quick-reference card for common emergency scenarios.',
+    tip_3: 'Review anaesthesia records monthly for documentation completeness and adherence to protocols; present findings including adverse events at the anaesthesia peer review meeting.',
+    tip_4: 'Orient new anaesthetists and nurse anaesthetists to the anaesthesia policy during credentialling; include protocol-based case discussions in monthly departmental meetings.'
+  },
+  'COP7b': {
+    tip_1: 'Complete a structured pre-anaesthesia assessment for every patient and document a written anaesthesia plan in the case sheet covering technique, drugs, monitoring and anticipated risks.',
+    tip_2: 'Use a standardised pre-anaesthesia assessment form that captures ASA grade, airway assessment, allergy history, medication review and signed anaesthesia plan.',
+    tip_3: 'Audit pre-anaesthesia documentation for all surgical cases weekly to verify the assessment and plan are present, complete and signed before the patient enters the OT.',
+    tip_4: 'Train anaesthesia staff to complete the pre-anaesthesia form on the ward the evening before elective surgery and ensure emergency cases have at minimum a brief pre-assessment note.'
+  },
+  'COP7c': {
+    tip_1: 'Monitor every anaesthetised patient continuously for SpO2, ECG, NIBP, EtCO2 where applicable and temperature, recording values at defined intervals throughout the procedure.',
+    tip_2: 'Use an intraoperative anaesthesia monitoring chart that prompts recording of all vital parameters at 5-minute intervals with space for drug doses and event notes.',
+    tip_3: 'Review anaesthesia charts monthly to verify continuous monitoring was maintained and documented throughout every case; investigate any gaps as potential safety events.',
+    tip_4: 'Train OT nursing staff to assist anaesthetists with monitoring equipment setup and alert them immediately if any monitoring alarm sounds during a procedure.'
+  },
+  'COP7d': {
+    tip_1: 'Record all post-anaesthesia observations in a recovery room chart and discharge patients from recovery only when they meet the defined Modified Aldrete or equivalent discharge score.',
+    tip_2: 'Use a post-anaesthesia recovery chart with Aldrete or PAD score at defined intervals; only a qualified nurse or anaesthetist can authorise discharge from recovery.',
+    tip_3: 'Audit recovery room records weekly to verify all patients met discharge criteria before leaving and that the authorising clinician\'\'s signature is present.',
+    tip_4: 'Train recovery room nurses on the discharge scoring tool, how to calculate it correctly and the escalation protocol if a patient fails to meet discharge criteria.'
+  },
+  'COP7e': {
+    tip_1: 'Record every intraoperative adverse anaesthesia event including unexpected desaturation, anaphylaxis, failed intubation or cardiac arrest in the anaesthesia record and the incident reporting system.',
+    tip_2: 'Maintain an anaesthesia adverse event log separate from the routine record; document event type, time, immediate action taken and patient outcome.',
+    tip_3: 'Review all anaesthesia adverse events at the monthly anaesthesia peer review meeting; conduct root cause analysis for serious events and track corrective actions to closure.',
+    tip_4: 'Train anaesthesia staff to report all intraoperative adverse events without delay and treat them as learning opportunities rather than errors that invite blame.'
+  },
+  'COP8a': {
+    tip_1: 'Perform all surgical and clinical procedures following written safety protocols including pre-procedure timeout, equipment checks, sterile field maintenance and post-procedure monitoring.',
+    tip_2: 'Complete and file a surgical safety checklist for every OT case covering sign-in, timeout and sign-out phases, signed by the surgeon, anaesthetist and scrub nurse.',
+    tip_3: 'Audit completed surgical safety checklists weekly to verify all three phases were completed for every case and that no procedure started before timeout was done.',
+    tip_4: 'Train all OT staff on the surgical safety checklist process; conduct a quarterly simulation where the full timeout is practised as a team to reinforce compliance.'
+  },
+  'COP8b': {
+    tip_1: 'Complete and document a pre-operative assessment for every surgical patient covering history, examination, investigations, risk stratification, allergies and pre-operative diagnosis before the case begins.',
+    tip_2: 'Use a pre-operative assessment proforma in the surgical case sheet that must be completed and signed by the operating surgeon before the patient is taken to the OT.',
+    tip_3: 'Audit surgical records weekly to verify every case has a completed pre-operative assessment with documented diagnosis before the OT record commences.',
+    tip_4: 'Train surgical residents that a case should not be listed for operation until the pre-operative assessment form is complete, signed and available in the patient\'\'s file.'
+  },
+  'COP8c': {
+    tip_1: 'Obtain written informed consent from the patient before every surgical procedure, explained by the operating surgeon in the patient\'\'s preferred language covering risks, benefits and alternatives.',
+    tip_2: 'Use a procedure-specific consent form that describes the operation, anaesthesia type, significant risks and alternatives; it must be signed by patient or guardian and the surgeon.',
+    tip_3: 'Audit surgical files weekly to confirm a properly completed and signed consent form is present for every case before the patient was taken to the OT.',
+    tip_4: 'Train surgeons that consent must be obtained personally by the operating surgeon, not delegated to a junior doctor, and must be documented before the patient reaches the OT.'
+  },
+  'COP8d': {
+    tip_1: 'Implement wrong-site, wrong-patient and wrong-procedure prevention measures including surgical site marking by the operating surgeon, pre-operative patient identity verification and OT timeout.',
+    tip_2: 'Require the operating surgeon to mark the surgical site with an indelible pen in the pre-operative area before the patient is transferred to the OT.',
+    tip_3: 'Verify site marking and patient identity using two identifiers at each handover point: ward to pre-op, pre-op to OT and at timeout; document each verification.',
+    tip_4: 'Train all OT staff that they have the authority and responsibility to halt a procedure if site marking is absent or identity verification is incomplete until the issue is resolved.'
+  },
+  'COP8e': {
+    tip_1: 'Document the operative note, post-procedure monitoring observations and post-operative care plan in the patient record immediately after every surgical or clinical procedure.',
+    tip_2: 'Use an operation note template capturing pre-operative diagnosis, procedure performed, findings, specimen sent, complications and post-operative instructions, signed by the surgeon.',
+    tip_3: 'Audit operation notes weekly to verify they are completed within the required timeframe, contain all mandatory elements and are signed by the operating surgeon.',
+    tip_4: 'Train surgical residents to complete the operation note in the OT before moving to the next case; demonstrate the correct format using a completed example during orientation.'
+  },
+  'COP9a': {
+    tip_1: 'Define categories of vulnerable patients such as elderly, disabled, children, victims of abuse and those with mental health needs; implement specific care and safeguarding protocols for each group.',
+    tip_2: 'Flag vulnerable patients in the medical record with a designated indicator; document the vulnerability type, specific care modifications and any safeguarding actions taken.',
+    tip_3: 'Audit records of identified vulnerable patients monthly to verify appropriate care modifications and safeguarding actions were implemented and documented.',
+    tip_4: 'Train all clinical staff to identify vulnerable patient indicators, apply the correct care protocol and escalate any safeguarding concern to the designated responsible officer.'
+  },
+  'COP9b': {
+    tip_1: 'Screen every admitted patient for fall risk, pressure ulcer risk and malnutrition risk using validated tools within 24 hours of admission and reassess at defined intervals.',
+    tip_2: 'Document screening results in the case sheet and initiate a prevention plan for any patient scoring above the risk threshold, listing specific interventions and frequency.',
+    tip_3: 'Audit 10 in-patient records weekly to verify risk screening was completed at admission, reassessed at intervals and prevention plans are documented for at-risk patients.',
+    tip_4: 'Train nursing staff on the Morse fall scale, Braden pressure ulcer scale and a nutritional screening tool at induction; require supervised practice before independent use.'
+  },
+  'COP10a': {
+    tip_1: 'Assess every patient for pain using a validated pain scale at admission, at regular intervals and after any pain-relieving intervention, adjusting the management plan based on scores.',
+    tip_2: 'Document pain scores in the vital signs chart alongside BP and temperature; include analgesic doses, route, time and effect assessment in the medication administration record.',
+    tip_3: 'Audit vital sign charts weekly to confirm pain scores are recorded at required intervals and that high pain scores triggered a documented clinical response.',
+    tip_4: 'Train all nursing staff on validated pain assessment tools for different patient populations including children and non-verbal patients, and on the escalation pathway for uncontrolled pain.'
+  },
+  'COP10b': {
+    tip_1: 'Ensure rehabilitation services are available at a scope commensurate with the clinical specialties offered, including physiotherapy, occupational therapy and speech therapy where needed.',
+    tip_2: 'Maintain a rehabilitation services scope document listing available therapies, qualified therapists, referral process and available equipment.',
+    tip_3: 'Review rehabilitation referral patterns and outcomes quarterly to confirm services meet patient needs and scope limitations do not result in unmet rehabilitation requirements.',
+    tip_4: 'Train clinical teams to refer appropriate patients for rehabilitation early in the admission process and to document rehabilitation goals and progress in the case sheet.'
+  },
+  'COP10c': {
+    tip_1: 'Screen every admitted patient for nutritional risk using a validated tool such as NRS-2002 or MNA within 24 hours of admission and document the result in the case sheet.',
+    tip_2: 'Record the nutritional screening score in the case sheet; flag patients who screen positive for a dietician referral and document the referral in the notes.',
+    tip_3: 'Audit 10 in-patient records weekly to verify nutritional screening was completed at admission and that at-risk patients received a dietician referral within 24 hours.',
+    tip_4: 'Train nursing staff on how to use the chosen nutritional screening tool correctly; include a practical exercise in orientation so nurses are confident before independent use.'
+  },
+  'COP10d': {
+    tip_1: 'Refer all patients identified as nutritionally at risk to a qualified dietician for a full nutritional assessment and individualised dietary prescription within a defined timeframe.',
+    tip_2: 'Document the dietician\'\'s nutritional assessment, diagnosis, dietary prescription and monitoring plan in the case sheet; update it at each review visit.',
+    tip_3: 'Audit dietician assessment records monthly to verify at-risk patients received timely assessment, a dietary plan was documented and follow-up reviews occurred.',
+    tip_4: 'Train nursing staff and junior doctors to promptly refer at-risk patients to the dietician and to support dietary plan implementation during nursing rounds.'
+  },
+  'MOM1a': {
+    tip_1: 'Establish a pharmacy services policy covering procurement, storage, dispensing, administration and disposal of medications, reviewed and updated annually by the pharmacy and therapeutics committee.',
+    tip_2: 'Keep the pharmacy policy manual at the dispensing counter and in each clinical area; ensure current version date is visible and superseded copies are removed.',
+    tip_3: 'Audit pharmacy practices monthly against the written policy, checking storage conditions, labelling, dispensing accuracy and documentation to identify gaps.',
+    tip_4: 'Train all pharmacy staff on the medication management policy during induction; hold quarterly refresher sessions on any updated sections or newly identified risks.'
+  },
+  'MOM1b': {
+    tip_1: 'Review the hospital formulary at least annually against current clinical services, evidence-based guidelines and any new regulatory approvals; update and circulate to all prescribers.',
+    tip_2: 'Maintain the formulary as a controlled document with a version number, review date and sign-off by the pharmacy and therapeutics committee; make it available in print and digitally.',
+    tip_3: 'Track non-formulary drug requests each quarter; analyse patterns and use data to update the formulary so it reflects actual prescribing needs and current evidence.',
+    tip_4: 'Inform all prescribers at departmental meetings whenever the formulary is updated, highlighting additions, deletions and any therapeutic substitutions that affect their practice.'
+  },
+  'MOM2a': {
+    tip_1: 'Store all medications in clean, secure, well-lit areas with appropriate temperature, humidity and lighting conditions; lock controlled substances and restrict access to authorised personnel.',
+    tip_2: 'Maintain daily temperature monitoring logs for all medication storage areas including refrigerators; document any excursion and the corrective action taken.',
+    tip_3: 'Conduct monthly medication storage audits across all wards, satellite pharmacies and emergency areas to verify storage conditions, security and orderly arrangement.',
+    tip_4: 'Train all staff who store medications on correct storage requirements, temperature monitoring procedures and what to do if a storage excursion is detected.'
+  },
+  'MOM2b': {
+    tip_1: 'Create a separate written protocol for high-alert medications and look-alike sound-alike drugs covering storage segregation, distinct labelling, double-checking requirements and restricted access.',
+    tip_2: 'Label all high-alert medications with a distinctive sticker and store them in a separately designated section with a LASA warning; post the LASA drug list at dispensing areas.',
+    tip_3: 'Audit high-alert medication storage areas monthly to verify segregation, labelling and access control are maintained; report any non-compliance to the pharmacy in-charge.',
+    tip_4: 'Train pharmacy and nursing staff to recognise high-alert and LASA medications, apply the required additional checks before dispensing or administering and report any near-miss.'
+  },
+  'MOM2c': {
+    tip_1: 'Check expiry dates of all medications in all storage areas at least monthly; remove and segregate any expired drug immediately and return or destroy it per the disposal SOP.',
+    tip_2: 'Use a first-expiry first-out labelling system for all stock; maintain a monthly expiry check log signed by the pharmacist responsible for each storage area.',
+    tip_3: 'Conduct surprise checks in satellite pharmacies and ward drug trolleys every quarter to detect expired drugs; document findings and corrective actions.',
+    tip_4: 'Train ward nurses and pharmacy staff that using an expired medication is a medication error; show them how to check expiry dates and what to do when one is found.'
+  },
+  'MOM2d': {
+    tip_1: 'Define a list of essential emergency medications for each clinical area, store them in a sealed and labelled emergency trolley and ensure they are available 24 hours a day.',
+    tip_2: 'Attach a sealed drug inventory list to every emergency trolley listing each drug, dose, quantity and expiry date; re-seal and document after every use.',
+    tip_3: 'Check all emergency drug trolleys at every shift handover for intact seal; perform a full inventory count after any use or broken seal and document the check.',
+    tip_4: 'Train all clinical staff to know the location of the emergency drug trolley in their area, recognise the seal integrity check and report any broken seal immediately.'
+  },
+  'MOM3a': {
+    tip_1: 'Establish a written policy specifying who is authorised to write prescriptions and medication orders in the hospital, linked to qualifications, registration and clinical privileges.',
+    tip_2: 'Maintain a list of authorised prescribers with their specimen signatures on file in the pharmacy; update the list within 48 hours of any staff change.',
+    tip_3: 'Audit a sample of prescriptions monthly to verify they were written only by authorised prescribers; flag any order written by an unregistered or unauthorised person.',
+    tip_4: 'Inform all pharmacy and nursing staff of the current list of authorised prescribers and train them to reject any medication order that is not from an authorised source.'
+  },
+  'MOM3b': {
+    tip_1: 'Define minimum requirements for a valid prescription: patient name, UHID, date, drug name in generic form, dose, route, frequency, duration and prescriber\'\'s name and signature.',
+    tip_2: 'Post the valid prescription requirements at every prescribing workstation and pharmacy dispensing counter; use prescription pads or electronic templates that enforce these fields.',
+    tip_3: 'Audit 20 prescriptions weekly to check all mandatory elements are present; return incomplete orders to the prescriber for correction before dispensing.',
+    tip_4: 'Train all prescribers during medical staff orientation on the hospital\'\'s minimum prescription requirements and the consequences of dispensing against an incomplete order.'
+  },
+  'MOM3c': {
+    tip_1: 'Check and document the patient\'\'s allergy status and history of adverse drug reactions in the medical record before writing any prescription, and prominently flag any known allergy.',
+    tip_2: 'Use an allergy alert sticker or prominent box on the case sheet cover and prescription chart; record the specific drug, type of reaction and severity for each allergy.',
+    tip_3: 'Audit 10 case sheets weekly to verify allergy documentation is present, legible and that no medication was prescribed to which the patient has a known adverse reaction.',
+    tip_4: 'Train prescribers and nurses to ask every patient about allergies at admission, document the response even if there are no known allergies and alert the pharmacist for high-risk prescriptions.'
+  },
+  'MOM3d': {
+    tip_1: 'Ensure every medication order is written clearly in block capitals or typed, includes the patient\'\'s name and UHID, is dated, timed and signed by the prescribing doctor.',
+    tip_2: 'Use pre-printed prescription stationery or electronic order forms that include patient identification fields and require date, time and prescriber signature before submission.',
+    tip_3: 'Audit 20 medication orders weekly for legibility, completeness, date, time and signature; return non-compliant orders to the prescriber for correction before dispensing.',
+    tip_4: 'Train all prescribers that ambiguous handwriting on medication orders is a patient safety risk; demonstrate the required standard using examples of acceptable and unacceptable orders.'
+  },
+  'MOM3e': {
+    tip_1: 'Reconcile all medications at every transition point including admission, transfer between units and discharge by comparing current medications with new orders and resolving discrepancies.',
+    tip_2: 'Use a medication reconciliation form at each transition point listing pre-admission drugs, current hospital orders, changes made and the reason for each change.',
+    tip_3: 'Audit medication reconciliation forms for all admissions and transfers weekly to verify reconciliation was performed, discrepancies were resolved and the form is in the case sheet.',
+    tip_4: 'Train nursing and medical staff that medication reconciliation is a mandatory safety step at every transition point and must be completed before new orders are implemented.'
+  },
+  'MOM3f': {
+    tip_1: 'Conduct regular audits of prescription and medication orders to assess safety, rationality, compliance with the formulary and adherence to prescribing guidelines.',
+    tip_2: 'Document prescription audit findings in a monthly audit report including metrics such as polypharmacy rates, generic prescribing percentage and high-alert drug order compliance.',
+    tip_3: 'Review prescription audit results at the pharmacy and therapeutics committee each month and implement targeted feedback to departments showing recurring prescribing issues.',
+    tip_4: 'Share de-identified prescription audit findings with clinical departments as educational cases; recognise departments demonstrating consistent improvement in prescribing quality.'
+  },
+  'MOM4a': {
+    tip_1: 'Define a hospital high-risk medication list covering anticoagulants, insulin, concentrated electrolytes and opioids, and document specific prescribing, dispensing and administration safety steps for each.',
+    tip_2: 'Post the high-risk medication list with associated safety protocols in the pharmacy, every nursing station and any satellite supply point where these drugs are kept.',
+    tip_3: 'Audit high-risk medication handling monthly checking that prescribed doses are verified, second nurse check is documented, and administration follows the safety protocol.',
+    tip_4: 'Train pharmacy and nursing staff on the high-risk drug list, required double-check process before dispensing or administering and the protocol for reporting a high-risk medication error.'
+  },
+  'MOM4b': {
+    tip_1: 'Label every dispensed medication with patient name, UHID, drug name, dose, route, frequency, start date and pharmacist\'\'s name before the medication leaves the pharmacy.',
+    tip_2: 'Use pre-printed or computer-generated dispensing labels that include all required fields; never dispatch a medicine in an unlabelled or partially labelled container.',
+    tip_3: 'Audit dispensed medication labels monthly for completeness, accuracy and legibility; record deficiencies and retrain the responsible pharmacist promptly.',
+    tip_4: 'Train pharmacy staff that a medication without a complete and accurate label must not be dispensed; demonstrate label printing and verification during pharmacy induction.'
+  },
+  'MOM5a': {
+    tip_1: 'Ensure medications are administered only by doctors, nurses or technicians who are legally authorised and have documented competency to administer the specific medication type and route.',
+    tip_2: 'Maintain an authorised medication administrators list by staff category and route including IV, IM, oral, epidural; make it available at each nursing station.',
+    tip_3: 'Audit medication administration records monthly to confirm each administration was performed by an authorised and competent staff member; flag any exceptions.',
+    tip_4: 'Train nurses during induction on which medications and routes they are authorised to administer, the competency assessment process and the restriction on delegating to unqualified staff.'
+  },
+  'MOM5b': {
+    tip_1: 'Verify five rights before every medication administration: right patient using two identifiers, right drug, right dose, right route and right time, documented in the medication administration record.',
+    tip_2: 'Use a bedside medication administration record with pre-populated order details so the nurse can check and sign each administration against the original prescription.',
+    tip_3: 'Observe nurses administering medications monthly to confirm five-rights verification is performed at the bedside each time; document observation findings.',
+    tip_4: 'Train all nurses on the five-rights verification process at induction and reinforce through quarterly competency spot checks observed by the nursing supervisor.'
+  },
+  'MOM5c': {
+    tip_1: 'Label any prepared medication with drug name, concentration, volume, patient name and preparation time before beginning the preparation of any second medication.',
+    tip_2: 'Use pre-printed or handwritten labels applied to syringes and IV bags immediately after preparation; never prepare a second drug until the first is labelled.',
+    tip_3: 'Observe medication preparation practices in clinical areas monthly to verify labelling is performed before preparing the next drug; document and act on any non-compliance.',
+    tip_4: 'Train nurses and pharmacists that preparing two drugs simultaneously without labelling the first is a major medication safety risk; use a simulation exercise to demonstrate why during orientation.'
+  },
+  'MOM5d': {
+    tip_1: 'Implement physical and system controls to prevent incorrect connections between IV lines, enteral tubes, urinary catheters and epidural catheters during medication administration.',
+    tip_2: 'Use colour-coded connectors and route-specific labelling on all tubing; post a tubing connection safety guide at IV preparation areas and nursing stations.',
+    tip_3: 'Conduct monthly audits of tubing setups in ICU and general wards to verify no mixed connections are present; report any near-miss or wrong connection as a safety incident.',
+    tip_4: 'Train all nurses on catheter and tubing mis-connection risks at induction using real equipment; emphasise tracing all lines from patient to container before any infusion is started.'
+  },
+  'MOM5e': {
+    tip_1: 'Document every medication administration in the patient\'\'s medication administration record immediately after giving the drug, including drug name, dose, route, time and administering nurse\'\'s signature.',
+    tip_2: 'Use a pre-printed or electronic MAR with all prescribed drugs listed; sign each drug after administration and record the time; never pre-sign before giving the drug.',
+    tip_3: 'Audit MARs weekly to check for unsigned entries, pre-signing, missed doses not explained and legibility; provide immediate feedback to the responsible nurse.',
+    tip_4: 'Train nurses at induction that documentation of administration must happen at the bedside immediately after giving the drug, not from memory at the end of the shift.'
+  },
+  'MOM5f': {
+    tip_1: 'Observe and document patient response after administering high-risk or new medications including vital signs, therapeutic effect, onset of side effects and allergic reactions.',
+    tip_2: 'Record post-medication monitoring findings in the nursing notes or designated monitoring chart, noting the drug given, time of administration and observations at defined intervals.',
+    tip_3: 'Audit nursing notes for patients on high-risk medications weekly to verify monitoring was performed and documented at the required intervals after each administration.',
+    tip_4: 'Train nurses on the specific monitoring requirements for each high-risk medication class: what to observe, how soon, how often and when to escalate an abnormal finding.'
+  },
+  'MOM5g': {
+    tip_1: 'Define near-miss events, medication errors and adverse drug events clearly; implement a reporting system that encourages staff to report without fear of blame for near-misses.',
+    tip_2: 'Maintain a medication safety incident log recording every reported event with type, drug involved, contributing factors, patient harm level and actions taken.',
+    tip_3: 'Analyse all medication incident reports monthly for patterns; conduct root cause analysis for serious events and track corrective action implementation to closure.',
+    tip_4: 'Train all clinical staff on the definitions of near-miss, error and adverse event and how to complete an incident report; celebrate near-miss reporting as a safety culture indicator.'
+  },
+  'MOM6a': {
+    tip_1: 'Store narcotic drugs and psychotropic substances in a double-locked cabinet with access restricted to authorised personnel as required by the Narcotic Drugs and Psychotropic Substances Act.',
+    tip_2: 'Maintain a narcotic drug register with details of stock received, issued, administered and balance, signed after each transaction by an authorised nurse or pharmacist.',
+    tip_3: 'Conduct weekly narcotic stock reconciliation by counting physical stock against the register; investigate any discrepancy immediately and report as per statutory requirements.',
+    tip_4: 'Train all authorised nursing and pharmacy staff on NDPS Act storage requirements, register maintenance and the legal consequences of non-compliance at induction.'
+  },
+  'MOM6b': {
+    tip_1: 'Prescribe, dispense and administer narcotic drugs and psychotropic substances only as per the NDPS Act requirements including authorised prescriber, controlled prescription format and witness for administration.',
+    tip_2: 'Use NDPS-compliant prescription pads for narcotic orders; record each dispensed quantity in the narcotic register and require a second witness signature for every administration.',
+    tip_3: 'Audit narcotic prescription and administration records monthly for statutory compliance; check that all dispensed quantities match administered amounts with no unexplained discrepancies.',
+    tip_4: 'Train authorised prescribers and nurses on NDPS Act requirements for prescribing, dispensing and administration of narcotic substances, including witness and documentation obligations.'
+  },
+  'MOM6c': {
+    tip_1: 'Prepare chemotherapy and radiopharmaceuticals in a designated controlled environment by trained pharmacists using appropriate protective equipment, following written preparation protocols.',
+    tip_2: 'Maintain a chemotherapy preparation log recording drug name, dose calculated, patient UHID, preparer name, preparation time and pharmacist check before dispensing.',
+    tip_3: 'Audit chemotherapy preparation records monthly to verify protocol adherence, double-check documentation and PPE compliance; review all preparation errors as safety incidents.',
+    tip_4: 'Train chemotherapy pharmacy staff on safe preparation techniques, hazardous drug spill response and PPE use; require annual competency reassessment before independent preparation.'
+  },
+  'MOM6d': {
+    tip_1: 'Keep a complete and contemporaneous record of every transaction involving narcotic and psychotropic drugs including receipt, dispensing, administration to patient and disposal of unused portions.',
+    tip_2: 'Use a multi-column narcotic register capturing date, patient name, UHID, quantity issued, quantity administered, remaining balance, prescriber and administering nurse.',
+    tip_3: 'Reconcile the narcotic register with physical stock count weekly; escalate any discrepancy to the pharmacy in-charge and medical superintendent for investigation within 24 hours.',
+    tip_4: 'Train all staff authorised to handle narcotic and psychotropic substances on proper register maintenance procedures and the legal obligation to account for every dose.'
+  },
+  'MOM7a': {
+    tip_1: 'Establish a written policy governing procurement, quality verification, storage, selection and usage of implantable prostheses and medical devices, including vendor qualification criteria.',
+    tip_2: 'Maintain a device procurement register listing each implant type, vendor name, quality certification, batch number, device specifications and procurement date.',
+    tip_3: 'Audit device procurement records quarterly to confirm only quality-verified devices from approved vendors are used; check for expired or recalled device batches.',
+    tip_4: 'Train purchasing staff on device quality requirements, how to verify vendor credentials and the process for quarantining any device batch subject to a recall or safety alert.'
+  },
+  'MOM7b': {
+    tip_1: 'Counsel patients and families about the type of implant or device proposed, its purpose, expected benefits, risks, alternatives and cost before obtaining consent for the procedure.',
+    tip_2: 'Document implant counselling in the case sheet noting the topics discussed, who conducted the counselling, family member present and patient\'\'s confirmation of understanding.',
+    tip_3: 'Audit implant procedure records monthly to verify counselling documentation is present before the procedure date and that consent was obtained after counselling.',
+    tip_4: 'Train surgeons and nursing staff on what information must be provided to the patient about an implant or device; use a counselling checklist to ensure consistency.'
+  },
+  'MOM7c': {
+    tip_1: 'Record the batch number, serial number, lot number and manufacturer details of every implant or medical device in the patient\'\'s case sheet at the time of implantation.',
+    tip_2: 'Attach the device traceability sticker or label from the device packaging directly into the patient\'\'s case sheet or operative note so the information is permanently linked.',
+    tip_3: 'Audit operative records monthly to confirm device traceability details are documented for every implant case; investigate missing entries and implement process corrections.',
+    tip_4: 'Train OT nurses and surgeons to peel and affix the device traceability sticker from every implant packaging into the case sheet before the patient leaves the OT.'
+  },
+  'PRE1a': {
+    tip_1: 'Display a comprehensive patient rights and responsibilities charter in all key patient-facing areas including entrance, OPD, wards and emergency, in languages patients understand.',
+    tip_2: 'Provide a printed patient rights and responsibilities leaflet to every patient or caregiver at registration; document in the admission form that it was given and explained.',
+    tip_3: 'Verify during monthly facility rounds that rights and responsibilities displays are current, undamaged, legible and present in all required locations.',
+    tip_4: 'Train all front-desk, nursing and clinical staff to explain patient rights and responsibilities to patients at admission or first contact, using the hospital leaflet as a guide.'
+  },
+  'PRE1b': {
+    tip_1: 'Implement care practices that respect each patient\'\'s personal beliefs, cultural practices and value systems, including dietary preferences, prayer requirements and modesty considerations.',
+    tip_2: 'Include a beliefs and values section in the admission form where staff document any specific patient preferences or cultural requirements that should be respected during care.',
+    tip_3: 'Review patient complaint records monthly for any grievances related to disrespect of beliefs or values; use findings to improve staff practices.',
+    tip_4: 'Train all staff on cultural sensitivity and religious diversity at induction, using local examples to demonstrate how to accommodate common patient preferences respectfully.'
+  },
+  'PRE1c': {
+    tip_1: 'Ensure patient dignity is maintained during all examinations and treatments by using curtains, screens or private rooms, and asking for patient consent before exposing any body part.',
+    tip_2: 'Post a patient dignity and privacy notice in all clinical areas reminding staff and patients of the right to privacy; make screens available at every examination point.',
+    tip_3: 'Include privacy and dignity observations in monthly facility inspection rounds; note any area where screens are broken, curtains missing or privacy practices are inadequate.',
+    tip_4: 'Train all clinical staff that maintaining privacy is a patient right; include a practical session on correct curtain and screen use during nursing induction.'
+  },
+  'PRE1d': {
+    tip_1: 'Establish a written policy prohibiting all forms of patient neglect, physical abuse, verbal abuse and discrimination; define the reporting and investigation process clearly.',
+    tip_2: 'Display the anti-abuse policy and reporting mechanism in patient care areas; ensure patients know they can report concerns anonymously through the complaint box or helpline.',
+    tip_3: 'Review all patient abuse or neglect complaints monthly; investigate every allegation, document findings and take corrective action including disciplinary steps when confirmed.',
+    tip_4: 'Train all staff at induction that patient abuse or neglect is a serious violation; use scenario-based exercises to help staff recognise and respond to warning signs.'
+  },
+  'PRE1e': {
+    tip_1: 'Treat all patient health information as strictly confidential; ensure records are accessible only to treating team members and authorised personnel as defined in the confidentiality policy.',
+    tip_2: 'Place patient records in secure locations, use password-protected electronic systems and ensure paper records are not left open in public areas.',
+    tip_3: 'Conduct quarterly information security audits to check that electronic records require login, paper files are secured and no patient information is visible in public areas.',
+    tip_4: 'Train all staff including administrative staff that discussing or displaying patient information in public areas or to unauthorised persons is a breach of patient rights and may be legally actionable.'
+  },
+  'PRE1f': {
+    tip_1: 'Inform every patient of their right to refuse any proposed treatment and their right to seek a second opinion from another doctor without fear of affecting the quality of their care.',
+    tip_2: 'Document refusal of treatment in the case sheet using a standard refusal form signed by the patient or guardian, with the clinical team\'\'s response and alternative plan noted.',
+    tip_3: 'Review cases of documented treatment refusal monthly to ensure the patient\'\'s decision was respected, alternatives were offered and no coercive practice occurred.',
+    tip_4: 'Train clinical staff to handle treatment refusal professionally, counsel the patient on consequences without pressure and document the informed refusal and alternatives discussed.'
+  },
+  'PRE1g': {
+    tip_1: 'Obtain a separate written informed consent from the patient or legal guardian specifically for blood and blood product transfusion before any transfusion is initiated.',
+    tip_2: 'Use a dedicated blood transfusion consent form explaining the blood product, purpose, risks including transfusion reactions and alternatives; file it before the first unit is administered.',
+    tip_3: 'Audit transfusion files monthly to verify a signed transfusion consent is present for every patient who received blood products during the audit period.',
+    tip_4: 'Train nursing and medical staff that blood transfusion consent is a separate mandatory requirement from general surgical consent and must be obtained before the transfusion begins.'
+  },
+  'PRE1h': {
+    tip_1: 'Establish a patient complaint mechanism including a suggestion and complaint box, dedicated helpline, online feedback form and a named grievance officer accessible to all patients.',
+    tip_2: 'Display the complaint process prominently in all patient areas listing available channels, the grievance officer\'\'s name and the timeframe for acknowledgement and resolution.',
+    tip_3: 'Track all complaints in a register, acknowledge every complaint within 24 hours and report resolution rates and recurring themes to management monthly.',
+    tip_4: 'Train all staff to direct patients with complaints to the correct channel, never dismiss a complaint and ensure no patient faces negative consequences for raising a concern.'
+  },
+  'PRE1i': {
+    tip_1: 'Provide patients with a written estimate of the expected cost of their treatment at admission including bed charges, investigations, surgical fees and medication costs where possible.',
+    tip_2: 'Issue a cost estimate letter or billing summary at admission; update it proactively when the treatment plan changes significantly and before any major additional expenditure.',
+    tip_3: 'Review patient billing complaints monthly; identify cases where actual bills exceeded estimates without prior notice and implement process changes to prevent recurrence.',
+    tip_4: 'Train front-desk and billing staff to explain the cost estimate clearly to patients or families at admission and to proactively communicate when costs are expected to change.'
+  },
+  'PRE1j': {
+    tip_1: 'Allow patients or their authorised representatives to access and obtain copies of their clinical records upon request, following the hospital\'\'s defined record access procedure.',
+    tip_2: 'Post the procedure for requesting medical records in patient areas; maintain a log of all record requests with request date, requester identity, records provided and date of provision.',
+    tip_3: 'Review record access request logs monthly to verify all requests were fulfilled within the defined timeframe and that no patient was denied their clinical records without a lawful reason.',
+    tip_4: 'Train admissions and medical records staff on the patient\'\'s right to access clinical records, the steps to process a request and the documentation required for authorised release.'
+  },
+  'PRE1k': {
+    tip_1: 'Inform every patient of the name of their treating doctor and the names of key team members caring for them at admission and whenever the team changes.',
+    tip_2: 'Display the treating doctor\'\'s name and the names of responsible nurses on the patient\'\'s bedside card; update it immediately when the treating team changes.',
+    tip_3: 'Check that bedside identification cards are current and accurate during monthly ward rounds; flag and correct any discrepancy with the actual treating team.',
+    tip_4: 'Train nursing staff to introduce themselves by name at every shift start and to introduce the treating doctor by name to new patients and families on admission.'
+  },
+  'PRE2a': {
+    tip_1: 'Explain the proposed care plan, its risks, potential complications and available alternatives to the patient or family in a language they understand before obtaining consent.',
+    tip_2: 'Document in the case sheet that pre-consent explanation was provided, what was explained, who was present and whether the patient or family had any questions.',
+    tip_3: 'Audit consent documentation monthly to verify that evidence of explanation before consent is recorded in every case where a consent form was obtained.',
+    tip_4: 'Train all clinical staff that obtaining a signature without adequate explanation is not informed consent; use simulation exercises to practise patient-appropriate explanation techniques.'
+  },
+  'PRE2b': {
+    tip_1: 'Obtain written informed consent from patients or legal guardians for all procedures and treatments listed in the hospital\'\'s defined consent policy before any procedure begins.',
+    tip_2: 'Maintain a hospital-approved list of procedures requiring formal written consent; use procedure-specific consent forms that describe the intervention, risks and alternatives.',
+    tip_3: 'Audit all case files for consent form completeness monthly; check that the form is signed, dated and present in the file before the documented procedure date.',
+    tip_4: 'Train clinical staff on which procedures require formal consent, how to complete the consent form correctly and that consent must be obtained by the performing clinician.'
+  },
+  'PRE2c': {
+    tip_1: 'Ensure the consent process follows all applicable statutory and regulatory requirements including age of consent, consent for minors and legally incapacitated patients and documentation standards.',
+    tip_2: 'Review all high-risk procedure consent forms to confirm they meet legal requirements: patient identity, diagnosis, procedure details, risks explained, patient signature and witness signature.',
+    tip_3: 'Audit consent practices quarterly against current legal requirements; seek legal and ethics input whenever there is doubt about whether a specific situation meets statutory norms.',
+    tip_4: 'Train clinical staff on the legal requirements for valid informed consent, including capacity assessment, substitute decision-making for incapacitated patients and documentation standards.'
+  },
+  'PRE2d': {
+    tip_1: 'Educate every patient and family on their diagnosis, the care plan, how to prevent complications, possible risks and what care will be needed after discharge before the patient goes home.',
+    tip_2: 'Document patient and family education in the case sheet noting topics covered, format used such as verbal or leaflet, understanding confirmed and any questions answered.',
+    tip_3: 'Audit patient education documentation monthly to verify it is present in every in-patient record before discharge and that home-care and preventive guidance is included.',
+    tip_4: 'Train nurses and doctors on effective patient education techniques including teach-back method; use standard educational materials for common conditions to ensure consistency.'
+  },
+  'PRE2e': {
+    tip_1: 'Communicate with patients and families using clear, simple language, professional interpreters when needed and written materials in the patient\'\'s language to ensure understanding.',
+    tip_2: 'Document each significant communication with patients or families in the case sheet noting the content, medium used, interpreter if applicable and the patient\'\'s response.',
+    tip_3: 'Review patient communication-related complaints monthly to identify language or clarity barriers and implement targeted improvements such as additional translated materials.',
+    tip_4: 'Train clinical and administrative staff on effective patient communication including how to access interpreter services and how to confirm patient understanding using teach-back.'
+  },
+  'PRE2f': {
+    tip_1: 'Implement a patient feedback mechanism using surveys, suggestion boxes, exit interviews and a formal complaint process with a designated grievance officer and defined resolution timelines.',
+    tip_2: 'Collect and record patient feedback systematically; log all complaints with date, nature of complaint, action taken and resolution date in a grievance register.',
+    tip_3: 'Analyse feedback and complaint data monthly; present recurring themes, resolution rates and patient satisfaction trends at the quality committee meeting.',
+    tip_4: 'Train all patient-facing staff on how to encourage feedback, direct formal complaints to the grievance officer and ensure no patient or family member faces any negative consequence for complaining.'
+  },
+  'IPC1a': {
+    tip_1: 'Develop a comprehensive infection prevention and control programme document covering surveillance, outbreak response, precaution types, training schedule and review frequency, updated at least annually.',
+    tip_2: 'File the current IPC programme document in the infection control office and make it accessible to all department heads; mark the review date clearly on the cover.',
+    tip_3: 'Review the IPC programme comprehensively once a year and after any significant outbreak or regulatory change; document the review meeting minutes and any programme amendments.',
+    tip_4: 'Brief all clinical department heads on the IPC programme content at annual orientation and notify them of any updates via a written circular within two weeks of change.'
+  },
+  'IPC1b': {
+    tip_1: 'Implement the five moments of hand hygiene using alcohol-based hand rub or soap and water, enforce standard precautions for all patients and apply transmission-based precautions for known infectious cases.',
+    tip_2: 'Post WHO five-moment hand hygiene posters and precaution signage at every patient zone entry point, hand hygiene station and isolation room door.',
+    tip_3: 'Conduct monthly hand hygiene observation audits in all clinical areas using the WHO observation tool; share compliance rates with department heads and the infection control committee.',
+    tip_4: 'Train all clinical and support staff on hand hygiene five moments and precaution types at induction; repeat annual training and monitor compliance improvement over time.'
+  },
+  'IPC1c': {
+    tip_1: 'Follow safe injection and infusion practices for every parenteral procedure including one needle one syringe policy, aseptic technique for IV preparation and single-use vials where mandated.',
+    tip_2: 'Post safe injection practice guidelines at all injection preparation areas; maintain a needle-stick injury register and report all sharps injuries to infection control within 24 hours.',
+    tip_3: 'Conduct monthly observation audits of injection preparation and administration practices; document any unsafe practice as an incident and follow up with retraining.',
+    tip_4: 'Train all nursing staff on safe injection practices, aseptic non-touch technique and the consequences of reusing needles or multi-dose vials incorrectly during nursing induction.'
+  },
+  'IPC1d': {
+    tip_1: 'Establish an antimicrobial stewardship programme with a written policy specifying antibiotic prescribing criteria, restricted antibiotic approval process and regular antibiogram review.',
+    tip_2: 'Post the hospital antibiogram and antimicrobial prescribing guidelines in clinical areas and the pharmacy; circulate updates to all prescribers when the antibiogram is refreshed.',
+    tip_3: 'Review antibiotic prescription patterns monthly with the infection control team and microbiologist; audit restricted antibiotic approvals and report findings to the antimicrobial stewardship committee.',
+    tip_4: 'Train all prescribers on the antimicrobial policy, how to interpret the antibiogram and the process for requesting approval to use restricted antibiotics at clinical induction.'
+  },
+  'IPC1e': {
+    tip_1: 'Provide pre-exposure prophylaxis for identified occupational exposures such as Hepatitis B vaccination for all clinical staff and post-exposure prophylaxis for needle-stick and mucosal exposures.',
+    tip_2: 'Maintain a vaccination and exposure prophylaxis register for all staff listing vaccine given, date, next dose and any exposure incidents with prophylaxis provided.',
+    tip_3: 'Audit staff vaccination records quarterly to confirm all new staff received mandatory pre-exposure vaccinations and that all reported exposures received timely post-exposure prophylaxis.',
+    tip_4: 'Train all staff on the types of occupational exposures covered by the prophylaxis policy, how to report an exposure immediately and where to access post-exposure care at any time.'
+  },
+  'IPC1f': {
+    tip_1: 'Conduct active surveillance to detect and monitor healthcare-associated infections including CAUTI, CLABSI, VAP and SSI rates, and implement corrective actions when rates exceed defined thresholds.',
+    tip_2: 'Maintain an infection surveillance register updated weekly with HAI case counts per unit, calculate rates per device-day or patient-day and graph trends monthly.',
+    tip_3: 'Present HAI surveillance data at the infection control committee every month; investigate any rate exceeding the defined benchmark and track improvement actions to closure.',
+    tip_4: 'Train infection control link nurses in each department on how to identify and report suspected HAI cases; review surveillance methodology annually for accuracy and completeness.'
+  },
+  'IPC2a': {
+    tip_1: 'Segregate biomedical waste at the point of generation into colour-coded bags and containers as per BMW Rules; ensure timely collection, storage in the common facility and authorised disposal.',
+    tip_2: 'Display BMW segregation charts at every generation point; maintain a daily waste quantity log and BMW manifests for all handovers to the authorised collection agency.',
+    tip_3: 'Conduct monthly BMW audits checking segregation compliance, container condition, storage area hygiene and manifests; report non-compliance to the infection control and environmental officer.',
+    tip_4: 'Train all clinical and support staff on BMW segregation categories, colour coding, what goes into each container and the legal consequences of incorrect segregation at induction.'
+  },
+  'IPC2b': {
+    tip_1: 'Install and maintain engineering controls such as negative pressure isolation rooms, appropriate ventilation in procedure areas, laminar airflow in OT and HEPA filtration where required.',
+    tip_2: 'Maintain an engineering controls register listing each system, its location, design specification, maintenance schedule and most recent performance test result.',
+    tip_3: 'Test ventilation and engineering control performance quarterly; review any failure findings with the infection control team and rectify deficiencies before resuming procedures in affected areas.',
+    tip_4: 'Inform clinical staff which areas have special engineering controls, why they matter for infection prevention and what to do if a control system appears to malfunction.'
+  },
+  'IPC2c': {
+    tip_1: 'Define cleaning and disinfection schedules and methods for all patient care areas specifying frequency, disinfectant type and concentration, contact time and responsible staff for each area type.',
+    tip_2: 'Use cleaning checklists in every patient area with date, time, method and signature for each completed cleaning cycle; keep checklists visible for inspection.',
+    tip_3: 'Audit cleaning practices and checklist completion weekly; conduct environmental surface cultures in high-risk areas quarterly and share results with housekeeping and infection control teams.',
+    tip_4: 'Train housekeeping staff on correct dilution and use of approved disinfectants, cleaning sequence from clean to dirty areas and the increased frequency required in isolation rooms.'
+  },
+  'IPC2d': {
+    tip_1: 'Follow validated decontamination processes for all reusable instruments and devices covering pre-cleaning, cleaning, packaging, sterilisation and sterility maintenance until use.',
+    tip_2: 'Maintain a sterilisation log for every autoclave load recording cycle number, date, items, sterilisation parameters, indicator result and authorising technician.',
+    tip_3: 'Test sterilisation effectiveness using biological indicators weekly and check chemical indicators with every load; quarantine and investigate any failed indicator immediately.',
+    tip_4: 'Train CSSD staff on the full decontamination cycle, correct use of indicators, instrument inspection criteria and the protocol for releasing a failed steriliser load.'
+  },
+  'IPC2e': {
+    tip_1: 'Collect, transport, launder, dry, fold and store linen using defined procedures that prevent cross-contamination between soiled and clean linen at every stage.',
+    tip_2: 'Use colour-coded bags for soiled linen collection; maintain a linen processing log and keep laundry area segregated into soiled and clean zones with no flow reversal.',
+    tip_3: 'Inspect laundry practices and facilities monthly for segregation compliance, washing temperature, chemical concentration and linen condition; document findings.',
+    tip_4: 'Train laundry staff on safe linen handling procedures including protective equipment use when handling soiled linen, correct wash cycles and storage conditions at induction.'
+  },
+  'IPC2f': {
+    tip_1: 'Follow kitchen sanitation standards covering food storage temperatures, preparation hygiene, equipment cleaning schedules, pest control and health checks for food handlers.',
+    tip_2: 'Maintain kitchen sanitation logs for temperature monitoring, cleaning schedules, pest control visits and food handler health check records; file them in the dietary department.',
+    tip_3: 'Conduct monthly kitchen hygiene audits using a structured checklist; test food samples for bacterial contamination quarterly and act on any out-of-specification result.',
+    tip_4: 'Train kitchen and dietary staff on food safety principles, personal hygiene requirements, correct food storage temperatures and how to respond to a foodborne illness report.'
+  },
+  'PSQ1a': {
+    tip_1: 'Establish a documented quality improvement and patient safety programme covering governance structure, annual objectives, improvement project methodology, indicator monitoring and reporting cycle.',
+    tip_2: 'Maintain the quality programme document as a controlled file accessible to all department quality leads; display the programme summary and annual quality goals on the notice board.',
+    tip_3: 'Review progress against quality programme objectives quarterly at the quality committee; report outcomes to hospital management and publish a summary to clinical staff.',
+    tip_4: 'Orient all new staff to the quality and patient safety programme during induction; assign each department a quality focal point responsible for implementing local improvement actions.'
+  },
+  'PSQ1b': {
+    tip_1: 'Implement all applicable NABH Patient Safety Goals including correct patient identification, effective communication, safe medication use, surgical safety and fall prevention with local adaptations.',
+    tip_2: 'Post the adopted patient safety goals in all clinical areas and nursing stations; maintain a goals implementation register tracking status and evidence for each goal.',
+    tip_3: 'Monitor compliance with each patient safety goal monthly using specific indicators; report non-compliant areas to the quality committee for corrective action.',
+    tip_4: 'Train all clinical staff on each patient safety goal during induction and at annual refresher sessions; use patient safety incident data to illustrate why each goal matters.'
+  },
+  'PSQ1c': {
+    tip_1: 'Establish a nursing quality improvement programme covering nursing-sensitive indicators such as medication errors, falls, pressure ulcers, needle-stick injuries and patient satisfaction with nursing care.',
+    tip_2: 'Maintain a nursing quality dashboard updated monthly with indicator values, targets and trend analysis; review at the nursing leadership meeting.',
+    tip_3: 'Analyse nursing quality indicator data monthly; identify wards with persistent compliance gaps, investigate root causes and implement targeted nursing improvement plans.',
+    tip_4: 'Engage ward nursing staff in monthly quality data review; use their practical insights to design workable improvement actions and recognise wards that demonstrate improvement.'
+  },
+  'PSQ1d': {
+    tip_1: 'Appoint a designated quality officer or head of quality department with defined responsibilities for overseeing the hospital-wide quality and patient safety programme.',
+    tip_2: 'Document the quality officer\'\'s roles, responsibilities and authority in a formal job description or committee terms of reference; make the appointment visible to all staff.',
+    tip_3: 'Verify at each accreditation readiness review that the designated quality officer is actively functioning, participating in meetings and maintaining programme documentation.',
+    tip_4: 'Ensure the quality officer has protected time, management access and necessary resources; brief all department heads to cooperate with quality oversight activities.'
+  },
+  'PSQ2a': {
+    tip_1: 'Identify and monitor key infection control indicators including CAUTI rate, CLABSI rate, VAP rate, SSI rate and hand hygiene compliance as part of the hospital quality programme.',
+    tip_2: 'Update the infection control indicator dashboard monthly with calculated rates per device-day or patient-day; present data with trend analysis at the infection control committee.',
+    tip_3: 'Investigate any indicator exceeding the defined threshold within one week; conduct a root cause analysis and implement corrective actions tracked to closure.',
+    tip_4: 'Share infection control indicator results with all clinical department heads at monthly meetings; use the data to motivate hand hygiene and bundle compliance improvement.'
+  },
+  'PSQ2b': {
+    tip_1: 'Define and track patient safety indicators including sentinel events, near-misses, wrong-site surgeries, falls with injury, medication errors and patient identification failures.',
+    tip_2: 'Maintain a patient safety indicator log updated monthly; calculate rates, review trends and document all actions taken in response to adverse events or indicators above threshold.',
+    tip_3: 'Review patient safety indicators at the quality committee monthly; conduct root cause analysis for all sentinel events and track corrective actions to verified closure.',
+    tip_4: 'Train department heads to report patient safety events promptly, participate in root cause analysis and implement corrective actions; cultivate a no-blame reporting culture.'
+  },
+  'PSQ2c': {
+    tip_1: 'Identify and monitor key clinical indicators such as mortality rate, re-admission rate, surgical complication rate and managerial indicators such as patient satisfaction scores and complaint resolution time.',
+    tip_2: 'Maintain a combined clinical and managerial performance dashboard updated monthly; circulate reports to department heads and present at management review meetings.',
+    tip_3: 'Analyse clinical and managerial indicator trends quarterly; benchmark against national or state data where available and present improvement proposals to the quality committee.',
+    tip_4: 'Engage department heads in interpreting their unit\'\'s indicator data monthly; train them to distinguish between common cause and special cause variation to prioritise appropriate responses.'
+  },
+  'PSQ2d': {
+    tip_1: 'Conduct structured clinical audits in each department involving clinicians in data collection, analysis and action planning to improve patient care quality.',
+    tip_2: 'Maintain a clinical audit register listing each audit topic, audit lead, sample size, findings and corrective actions; track re-audit dates to verify improvement.',
+    tip_3: 'Review clinical audit outputs at the quality committee quarterly; verify audits are completed on schedule, findings are shared with relevant clinicians and actions are implemented.',
+    tip_4: 'Train department heads and clinical staff on how to design and conduct a clinical audit, analyse results and use findings to change practice; include clinical audit in annual training plans.'
+  },
+  'ROM1a': {
+    tip_1: 'Identify the governing body or board of the organisation by name, define its composition, meeting frequency, quorum requirements, roles and responsibilities in a formal governance document.',
+    tip_2: 'Maintain governance documents including bylaws, board resolutions and meeting minutes in a secure file accessible to quality and management as evidence of governance activity.',
+    tip_3: 'Verify at each management review that the governing body has met at defined intervals, quorum was maintained and decisions are documented in formal minutes.',
+    tip_4: 'Ensure all governing body members understand their roles and responsibilities; conduct an orientation for new members covering the organisation\'\'s mission, scope and governance obligations.'
+  },
+  'ROM1b': {
+    tip_1: 'Register the organisation with all applicable regulatory bodies and maintain current compliance with all relevant laws covering clinical establishment, fire safety, labour, pharmacy and biomedical waste.',
+    tip_2: 'Maintain a statutory compliance register listing every applicable licence with the issuing authority, issue date, expiry date and current status; flag renewals 90 days in advance.',
+    tip_3: 'Audit the compliance register quarterly to confirm all licences are valid, renewals are in progress where needed and no area is operating without required approvals.',
+    tip_4: 'Assign a compliance officer to track all regulatory requirements, file renewals in time and brief management on any new laws affecting the organisation\'\'s operations.'
+  },
+  'ROM2a': {
+    tip_1: 'Publish the organisation\'\'s mission statement and core values prominently at the main entrance, reception area, patient waiting areas and on the hospital website.',
+    tip_2: 'Display the mission statement on high-quality signage in reception and patient areas; include it in the staff handbook and patient information materials.',
+    tip_3: 'Check during monthly facility rounds that mission statement displays are present, undamaged and accurately reflect the current approved version.',
+    tip_4: 'Communicate the mission statement to all new staff during induction and explain how it guides daily work; conduct annual values alignment discussions at department meetings.'
+  },
+  'ROM2b': {
+    tip_1: 'Develop and implement a code of ethics for the organisation covering conflict of interest, referral practices, billing transparency, patient rights and research ethics, reviewed and approved by the governing body.',
+    tip_2: 'Circulate the code of ethics to all staff; maintain a signed acknowledgement register confirming each staff member has read and understood the ethical standards expected.',
+    tip_3: 'Review ethics policy compliance annually; investigate any reported ethics violation promptly and document findings and actions in the ethics committee records.',
+    tip_4: 'Train all staff on the code of ethics at induction; discuss specific ethical scenarios relevant to their role so they can apply the principles in everyday situations.'
+  },
+  'ROM2c': {
+    tip_1: 'Ensure the billing process is based on actual services rendered using pre-disclosed rates; prevent unbundling, upcoding or charging for services not delivered.',
+    tip_2: 'Display a publicly accessible rate card for common services, consultations and procedures at the billing counter and on the hospital website.',
+    tip_3: 'Audit a sample of patient bills monthly to verify charges match the prescribed rate card and the services documented in the clinical record with no unjustified additions.',
+    tip_4: 'Train billing staff on the ethical billing policy, the importance of charging only for services rendered and the process for handling a patient\'\'s query about their bill.'
+  },
+  'ROM3a': {
+    tip_1: 'Establish functioning committees for infection control, quality improvement, pharmacy and therapeutics, and other key functions with defined terms of reference, membership and meeting schedules.',
+    tip_2: 'Maintain committee records including terms of reference, membership lists, meeting minutes and action trackers for each committee; file them accessibly for review.',
+    tip_3: 'Verify at each quality review that all designated committees have met at their required frequency, quorum was maintained and meeting actions are being tracked to completion.',
+    tip_4: 'Orient new committee members on their committee\'\'s terms of reference, scope of authority and expected contribution; share past meeting minutes to provide continuity of context.'
+  },
+  'ROM3b': {
+    tip_1: 'Ensure all outsourced services are covered by a written agreement specifying scope, quality standards, performance expectations, confidentiality obligations and review process.',
+    tip_2: 'Maintain a register of all outsourced service agreements with service type, provider name, agreement start and end date, quality requirements and last review date.',
+    tip_3: 'Review outsourced service performance against contractual quality standards annually; renew agreements only if quality standards have been met and document the review decision.',
+    tip_4: 'Train the department heads who manage outsourced services on the contractual standards expected, how to raise a performance concern with the vendor and escalation to management.'
+  },
+  'ROM3c': {
+    tip_1: 'Establish a formal mechanism for patients and staff to report violations of patient rights, with a confidential reporting pathway, named officer to receive reports and defined investigation and resolution process.',
+    tip_2: 'Display the patient rights violation reporting mechanism prominently in all patient areas including how to contact the designated officer, email or phone number.',
+    tip_3: 'Review all reported patient rights violations monthly; investigate each report within a defined timeframe, document findings and outcomes and report to the management committee.',
+    tip_4: 'Train all staff that patient rights violations must be reported without delay and that no staff member should discourage a patient or colleague from making a rights complaint.'
+  },
+  'ROM4a': {
+    tip_1: 'Develop a long-term strategic plan updated at least every three years addressing financial sustainability, infrastructure development, service expansion and human resource planning.',
+    tip_2: 'Document the strategic plan with specific goals, timelines, resource requirements and measurable targets; present it to the governing body for formal approval and periodic review.',
+    tip_3: 'Review strategic plan progress annually at the governing body meeting; measure achievement of targets and update the plan to reflect changing organisational priorities.',
+    tip_4: 'Communicate key elements of the strategic plan to all department heads so they can align their departmental plans with the organisation\'\'s long-term sustainability goals.'
+  },
+  'ROM4b': {
+    tip_1: 'Implement energy and environment efficiency initiatives including LED lighting, solar panels, water conservation, waste reduction and green procurement policies.',
+    tip_2: 'Maintain records of energy consumption, water usage, waste quantities and environmental initiative progress; report metrics at the annual management review.',
+    tip_3: 'Review environmental and energy performance indicators annually; set reduction targets and track progress quarter by quarter against the previous year\'\'s baseline.',
+    tip_4: 'Create awareness among all staff about the organisation\'\'s environmental commitments; encourage staff to suggest practical energy-saving or waste-reduction measures in their work area.'
+  },
+  'ROM4c': {
+    tip_1: 'Define corporate social responsibility activities such as free camps, community health education, support for underprivileged patients and environmental outreach as part of the organisation\'\'s annual plan.',
+    tip_2: 'Document all social responsibility activities with dates, beneficiaries reached, resources used and outcomes achieved; compile an annual CSR report reviewed by the governing body.',
+    tip_3: 'Review CSR activity progress quarterly against the annual plan; report outcomes to the governing body and use data to plan future community engagement activities.',
+    tip_4: 'Engage staff in CSR activities by communicating the organisation\'\'s social responsibility goals and creating opportunities for staff to volunteer in community health programmes.'
+  },
+  'ROM4d': {
+    tip_1: 'Implement staff well-being programmes addressing physical health, mental health, work-life balance, occupational hazard protection and recognition of staff contribution.',
+    tip_2: 'Document well-being programme activities including health screenings, counselling services, staff recognition events and grievance resolution in an annual staff welfare report.',
+    tip_3: 'Survey staff well-being and satisfaction annually; review results at the HR committee and implement targeted interventions for issues identified in the survey.',
+    tip_4: 'Train managers to recognise signs of staff burnout or distress and refer staff to available support services; communicate well-being resources to all staff at induction.'
+  },
+  'FMS1a': {
+    tip_1: 'Maintain all patient care areas in a clean, hygienic and structurally safe condition with adequate space, lighting, ventilation and functional equipment as required by patient safety standards.',
+    tip_2: 'Use a facility condition register to record maintenance requests, completion dates and responsible staff; keep the register updated after every facility inspection round.',
+    tip_3: 'Conduct monthly facility inspection rounds across all patient care areas and document findings, corrective actions and completion status in a structured inspection report.',
+    tip_4: 'Train housekeeping and maintenance staff on the cleaning and maintenance standards required in patient care areas; brief them on any new area-specific requirements quarterly.'
+  },
+  'FMS1b': {
+    tip_1: 'Conduct a structured facility safety inspection round at least once a month covering all patient care, utility and support areas to identify and address safety hazards.',
+    tip_2: 'Use a standardised monthly inspection checklist that covers infrastructure, electrical safety, fire equipment, emergency exits, signage and housekeeping; file completed checklists.',
+    tip_3: 'Review monthly facility inspection reports at the safety committee meeting; track all identified hazards to corrective action completion before the next inspection.',
+    tip_4: 'Train the facility safety inspection team on what to look for during rounds, how to use the checklist and how to classify and escalate hazards by severity.'
+  },
+  'FMS1c': {
+    tip_1: 'Identify areas requiring additional security such as labour room, neonatal unit, ICU, pharmacy, server room and cash office; implement access control appropriate to the risk level of each area.',
+    tip_2: 'Maintain an access control register listing each restricted area, the security measure in place such as key card, lock or guard, and authorised personnel.',
+    tip_3: 'Test access control measures for all high-security areas monthly; review any access breach incident within 24 hours and strengthen controls where gaps are identified.',
+    tip_4: 'Brief all staff on which areas require restricted access, why it matters for patient and staff safety and the consequences of sharing access codes or keys with unauthorised persons.'
+  },
+  'FMS1d': {
+    tip_1: 'Install clear, consistent internal and external signage in languages understood by the majority of patients and staff, covering directions, department locations, emergency exits and hazard warnings.',
+    tip_2: 'Maintain a signage inventory listing all required signs, their location, language and condition; update the inventory whenever the facility layout or services change.',
+    tip_3: 'Inspect all internal and external signage during monthly facility rounds for visibility, accuracy, damage and language appropriateness; replace non-compliant signs within two weeks.',
+    tip_4: 'Survey patient and visitor feedback on signage clarity annually; use results to improve sign placement, language or design in areas where navigation difficulties are frequently reported.'
+  },
+  'FMS1e': {
+    tip_1: 'Identify all hazardous materials used in the hospital including chemicals, gases, cytotoxics and disinfectants; store, handle and dispose of them following written safety procedures and legal requirements.',
+    tip_2: 'Maintain a hazardous materials inventory with MSDS for each substance, approved storage location, required PPE and disposal method; keep MSDS accessible at point of use.',
+    tip_3: 'Inspect hazardous material storage areas monthly to verify MSDS availability, correct storage conditions, PPE availability and absence of leaks or improper labelling.',
+    tip_4: 'Train all staff who handle hazardous materials on correct use, storage requirements, PPE selection, spill response and disposal procedures; document training completion.'
+  },
+  'FMS2a': {
+    tip_1: 'Implement written maintenance plans for all engineering support systems including HVAC, electrical panels, plumbing, lifts, medical gases and backup power; execute maintenance on schedule.',
+    tip_2: 'Use a planned preventive maintenance register for all utility systems listing equipment, maintenance frequency, last service date, next due date and servicing technician.',
+    tip_3: 'Verify maintenance completion records monthly; flag any overdue maintenance items and confirm they are addressed before the system is used for patient care.',
+    tip_4: 'Train engineering and maintenance staff on the planned maintenance schedule, how to document completed work and the escalation protocol when a critical system fails unexpectedly.'
+  },
+  'FMS2b': {
+    tip_1: 'Maintain, inspect and calibrate all medical equipment on a documented schedule; keep calibration certificates and maintenance records available for every device in use.',
+    tip_2: 'Use a medical equipment maintenance register listing each device, serial number, maintenance schedule, last service date, calibration due date and certificate reference.',
+    tip_3: 'Audit medical equipment records quarterly to confirm all devices are within calibration validity, maintenance is current and out-of-service equipment is tagged and removed from use.',
+    tip_4: 'Train biomedical technicians to complete maintenance and calibration records accurately; train clinical staff to perform daily pre-use checks and report faulty equipment immediately.'
+  },
+  'FMS3a': {
+    tip_1: 'Ensure potable water and uninterrupted electrical power are available 24 hours a day by maintaining backup systems including generators, UPS and stored water reserves.',
+    tip_2: 'Log daily generator testing, fuel levels, UPS battery status and water reserve volumes in a utilities availability register signed by the maintenance in-charge.',
+    tip_3: 'Test backup generator auto-changeover and UPS systems monthly; review the utilities register weekly for any gaps in availability and respond to supply interruptions immediately.',
+    tip_4: 'Train maintenance staff on backup system operation, how to respond to power or water supply failure and the escalation protocol for prolonged outages affecting patient care.'
+  },
+  'FMS3b': {
+    tip_1: 'Handle medical gases including oxygen, nitrous oxide and medical air and vacuum systems safely; ensure supply is continuous, cylinders are secured and manifold systems are inspected regularly.',
+    tip_2: 'Maintain a medical gas inventory log recording cylinder stock, pressure levels, supplier delivery records and inspection dates for manifold and distribution systems.',
+    tip_3: 'Inspect medical gas storage areas and distribution points monthly; check cylinder security, valve condition, area ventilation and leakage detection devices.',
+    tip_4: 'Train all staff who handle medical gas cylinders on safe storage, correct connection, cylinder securing, leak detection and the emergency protocol for a gas supply failure.'
+  },
+  'FMS4a': {
+    tip_1: 'Install and maintain fire detection systems including smoke detectors and alarm panels, suppression systems such as sprinklers or CO2 systems and fire extinguishers throughout the facility.',
+    tip_2: 'Maintain a fire safety equipment register listing each device, type, location, installation date, last inspection date and next service due date.',
+    tip_3: 'Test fire alarms and detection systems monthly; verify extinguisher pressure gauges and sprinkler head integrity quarterly; document all tests in the fire safety register.',
+    tip_4: 'Train all staff on how to raise a fire alarm, use the correct extinguisher type and the location of the nearest fire point in their work area during induction.'
+  },
+  'FMS4b': {
+    tip_1: 'Maintain all fire-related equipment and infrastructure including extinguishers, hose reels, hydrants, alarm panels, emergency lighting and fire doors on a documented preventive maintenance schedule.',
+    tip_2: 'Use a fire equipment maintenance register with equipment ID, location, maintenance type, last service date, engineer name and next due date; retain service certificates.',
+    tip_3: 'Audit the fire equipment maintenance register quarterly to confirm all items are serviced on schedule; escalate overdue maintenance items to the facility manager for immediate action.',
+    tip_4: 'Train maintenance staff responsible for fire equipment on the manufacturer\'\'s maintenance requirements, how to identify faulty equipment and the reporting protocol for failed items.'
+  },
+  'FMS4c': {
+    tip_1: 'Document and display a safe exit or evacuation plan for every floor and area of the hospital, showing the nearest emergency exits, assembly points and evacuation route.',
+    tip_2: 'Post emergency exit floor plans at eye level near staircase entries and ward exits; mark evacuation routes on floors with non-slip reflective tape and ensure exits are never obstructed.',
+    tip_3: 'Inspect evacuation route signage, exit door functionality and assembly point markings monthly during facility safety rounds; rectify any obstruction or damaged sign within 24 hours.',
+    tip_4: 'Familiarise all staff with the evacuation plan for their specific work area at induction; include the nearest exit and assembly point location in the induction checklist for every department.'
+  },
+  'FMS4d': {
+    tip_1: 'Conduct at least two fire safety mock drills per year across the entire facility; evaluate staff response, evacuation efficiency and equipment handling during each drill.',
+    tip_2: 'Document each mock drill with date, area covered, scenario used, number of staff participating, observations and corrective actions identified.',
+    tip_3: 'Review mock drill reports to identify recurring gaps in evacuation speed, staff response or equipment handling; track improvement between successive drills.',
+    tip_4: 'Debrief all staff who participated in the drill immediately afterwards; explain what went well and what needs to improve so learning is immediate and applied in the next drill.'
+  },
+  'HRM1a': {
+    tip_1: 'Plan and maintain a staffing complement that matches the volume of patients, range of services and operational hours across all departments, ensuring no critical care area is under-staffed.',
+    tip_2: 'Maintain a staffing plan document specifying the required number and category of staff per unit per shift, updated annually or whenever service volume changes significantly.',
+    tip_3: 'Review actual staffing against the approved staffing plan monthly; flag any persistent shortfall to HR and management for recruitment or redeployment action.',
+    tip_4: 'Ensure department heads review their shift rosters daily and escalate to HR immediately whenever actual staffing falls below the minimum required for safe patient care.'
+  },
+  'HRM1b': {
+    tip_1: 'Create written job descriptions and job specifications for every category of staff defining the purpose of the role, key responsibilities, required qualifications, experience and reporting relationship.',
+    tip_2: 'File approved job descriptions in HR records and provide a copy to each staff member at appointment; update the job description whenever the role changes significantly.',
+    tip_3: 'Audit HR files annually to verify every position has a current, signed job description; identify positions without job descriptions and create them within 30 days.',
+    tip_4: 'Use job descriptions during staff induction to clarify expectations; revisit the job description at performance appraisal time to assess role delivery against documented responsibilities.'
+  },
+  'HRM1c': {
+    tip_1: 'Develop a written code of conduct defining expected professional behaviour, dress standards, patient interaction norms, use of hospital resources and disciplinary consequences for violation.',
+    tip_2: 'Provide every staff member with a copy of the code of conduct at joining; maintain a signed acknowledgement in each staff member\'\'s HR file.',
+    tip_3: 'Review reported code of conduct violations monthly; investigate each case using the defined process, document the outcome and track repeat violations for pattern analysis.',
+    tip_4: 'Train all new staff on the code of conduct during induction using specific examples of acceptable and unacceptable behaviour relevant to their role and department.'
+  },
+  'HRM2a': {
+    tip_1: 'Define a training and development policy specifying mandatory training types, minimum training hours per year, eligible staff, approval process and record-keeping requirements.',
+    tip_2: 'Maintain a training policy document approved by management as a controlled file; update it whenever training requirements change and circulate updates to department heads.',
+    tip_3: 'Audit training programme delivery quarterly against the training policy to confirm training types, frequency and participation meet the defined requirements.',
+    tip_4: 'Communicate the training policy to all department heads at the start of each year; include training completion as a metric in their annual performance evaluation.'
+  },
+  'HRM2b': {
+    tip_1: 'Provide every new employee with a structured induction training programme before they begin independent work, covering hospital policies, safety rules, patient rights, infection control and their specific role.',
+    tip_2: 'Use a standardised induction checklist for every new staff member documenting each topic covered, date, trainer name and new employee signature of completion.',
+    tip_3: 'Audit induction records for all staff who joined in the past quarter to verify induction was completed before the staff member began independent clinical or operational duties.',
+    tip_4: 'Assign a named induction mentor to every new staff member; the mentor guides the inductee through the checklist and confirms all required topics were understood.'
+  },
+  'HRM2c': {
+    tip_1: 'Provide each clinical staff member with regular job-specific training covering new techniques, updated protocols, equipment use and clinical skill refreshers relevant to their role.',
+    tip_2: 'Maintain individual training records for each staff member listing all training attended, training dates, competency assessments and outcomes.',
+    tip_3: 'Audit training attendance records quarterly to confirm all clinical staff are meeting minimum training hour requirements; follow up with department heads where compliance is low.',
+    tip_4: 'Schedule job-specific training sessions in advance and include them in the department calendar; report completion rates to HR and management at each monthly meeting.'
+  },
+  'HRM2d': {
+    tip_1: 'Train all staff regularly on safety and quality topics including hand hygiene, fire safety, medication safety, patient identification, incident reporting and patient rights.',
+    tip_2: 'Document all safety and quality training in a central training register showing staff name, designation, training topic, date and outcome of any associated competency test.',
+    tip_3: 'Review safety and quality training completion rates quarterly and target departments with low compliance for prioritised follow-up training sessions.',
+    tip_4: 'Use real incident or near-miss cases from the hospital as case studies in safety and quality training; anonymise cases before use to maximise learning impact.'
+  },
+  'HRM2e': {
+    tip_1: 'Train all staff on disaster response, fire evacuation procedures and non-fire emergencies such as medical gas failure, power outage and bomb threat using scenario-based exercises.',
+    tip_2: 'Maintain disaster and emergency training records for all staff with training date, scenario covered, competency assessment result and trainer name.',
+    tip_3: 'Evaluate training effectiveness by conducting unannounced drills and assessing staff response accuracy; use the gap analysis to update training content for the next cycle.',
+    tip_4: 'Include disaster and emergency response training in every new staff induction before deployment to any clinical or critical area; repeat the training at minimum annually.'
+  },
+  'HRM3a': {
+    tip_1: 'Conduct performance appraisals for all staff at defined intervals, at minimum annually, using standardised appraisal forms that assess both technical performance and professional behaviour.',
+    tip_2: 'File completed and signed appraisal forms in each staff member\'\'s HR file; document development plans, training needs and agreed performance targets for the next period.',
+    tip_3: 'Audit HR files annually to confirm all staff have a completed appraisal on record within the defined period; follow up with department heads where appraisals are overdue.',
+    tip_4: 'Train all managers on how to conduct a fair, structured performance appraisal including how to give constructive feedback and how to create a meaningful development plan.'
+  },
+  'HRM3b': {
+    tip_1: 'Define and communicate a fair disciplinary process for misconduct and a separate grievance handling process for staff complaints, with clear steps, timelines and appeal rights.',
+    tip_2: 'Document all disciplinary proceedings and grievance complaints with dates, parties involved, evidence considered, decision and any appeal in a confidential HR file.',
+    tip_3: 'Review all open disciplinary or grievance cases monthly to ensure they are progressing within defined timeframes and that decisions are documented before the case is closed.',
+    tip_4: 'Train HR staff and managers on how to conduct a fair disciplinary enquiry or grievance investigation, how to document findings and how to communicate decisions professionally.'
+  },
+  'HRM4a': {
+    tip_1: 'Provide all staff with access to occupational health services including pre-employment health screening, immunisation, management of work-related injuries and periodic health monitoring.',
+    tip_2: 'Maintain an occupational health register for all staff recording pre-employment screening results, vaccinations, injury incidents and health review dates.',
+    tip_3: 'Review occupational health records for all staff annually; follow up on any health monitoring due dates, pending vaccinations or untreated work-related health issues.',
+    tip_4: 'Inform all new staff at induction about available occupational health services, how to access them and the importance of reporting any work-related injury or illness promptly.'
+  },
+  'HRM4b': {
+    tip_1: 'Establish a workplace violence prevention programme covering identification of violence risks, reporting mechanisms, security measures, support for affected staff and zero-tolerance policy.',
+    tip_2: 'Maintain a workplace violence incident register logging each reported incident with date, nature of incident, perpetrator type, immediate response and follow-up action.',
+    tip_3: 'Review all reported workplace violence incidents monthly; analyse patterns by location, shift or type and implement targeted preventive measures based on findings.',
+    tip_4: 'Train all staff on recognising escalating aggression, de-escalation techniques, how to raise an alarm and the reporting process for any violent or threatening incident.'
+  },
+  'HRM5a': {
+    tip_1: 'Create and maintain a personal file for every staff member from the date of appointment containing their application, appointment letter, credentials, training records and HR correspondence.',
+    tip_2: 'Organise HR personal files with a standard structure so each file contains the same set of documents in the same order; keep files locked and accessible only to authorised HR staff.',
+    tip_3: 'Audit a sample of HR personal files quarterly to confirm all required documents are present, current and correctly filed; report and rectify any gaps within 30 days.',
+    tip_4: 'Assign an HR officer responsible for maintaining personal file completeness; train them on what documents each file must contain and how to obtain missing items from staff.'
+  },
+  'HRM5b': {
+    tip_1: 'Ensure each staff member\'\'s HR file includes verified copies of educational credentials, registration certificates, training completion records, competency assessments and latest performance appraisal.',
+    tip_2: 'Use a personal file checklist for each staff category listing every required document; sign off the checklist after verifying each item is present in the file.',
+    tip_3: 'Audit HR files for clinical staff quarterly to confirm credentials are verified with original, registration is current and training records are complete to date.',
+    tip_4: 'Train HR staff to collect and verify all credentials at the time of joining, request renewal certificates before expiry and update training records within two weeks of completion.'
+  },
+  'HRM5c': {
+    tip_1: 'Grant clinical privileges to doctors and nurses based on documented assessment of their qualifications, training, relevant experience and current registration status, reviewed and approved by the credentials committee.',
+    tip_2: 'Maintain a clinical privilege register for each medical and nursing professional listing the procedures and areas they are authorised to practise in, with review dates.',
+    tip_3: 'Audit the privilege register annually to confirm privileges are current, supported by verified credentials and that no practitioner is performing procedures outside their granted scope.',
+    tip_4: 'Train nursing managers and department heads to verify that any new practitioner has been granted appropriate privileges before allowing them to independently manage patients.'
+  },
+  'IMS1a': {
+    tip_1: 'Identify the information needs of each staff category, establish communication channels for disseminating policies, clinical alerts and operational updates, and verify that information reaches all intended recipients.',
+    tip_2: 'Maintain a communication log or newsletter register showing what information was shared, the channel used, target audience and date; confirm receipt by acknowledgement or read receipt.',
+    tip_3: 'Survey staff annually on whether they receive accurate and timely information needed for their work; use results to improve information dissemination channels.',
+    tip_4: 'Train department heads to cascade important information to all their staff within 48 hours of receipt; use a confirmation mechanism so the quality team can verify cascade completion.'
+  },
+  'IMS1b': {
+    tip_1: 'If telemedicine services are provided, ensure they comply with applicable national telemedicine guidelines covering patient consent, doctor registration, prescription standards and record keeping.',
+    tip_2: 'Maintain a telemedicine practice register recording each consultation with patient ID, consulting doctor, platform used, consent documented and prescription issued.',
+    tip_3: 'Audit telemedicine records quarterly to verify compliance with applicable guidelines, including consent, documentation quality and prescription standards.',
+    tip_4: 'Train doctors who provide telemedicine consultations on the applicable national guidelines, consent requirements and documentation standards before they begin providing the service.'
+  },
+  'IMS1c': {
+    tip_1: 'Adopt digital health tools such as electronic medical records, clinical decision support, digital appointment systems and patient portals to improve care quality and efficiency.',
+    tip_2: 'Document the digital health technology implementation plan listing each tool, implementation date, clinical area covered, training delivered and benefits measured.',
+    tip_3: 'Review digital health technology performance annually including system uptime, user adoption rate and measurable quality improvements attributable to the technology.',
+    tip_4: 'Train all staff who use digital health systems during implementation and provide refresher training after each system update; appoint a superuser in each department to support peers.'
+  },
+  'IMS2a': {
+    tip_1: 'Assign a unique identifier to every patient medical record at registration and ensure this identifier is printed on every document in the file and used to link all records related to that patient.',
+    tip_2: 'Configure the HIS to require a unique patient ID before any record can be created or retrieved; print the ID on wristbands, case sheets, lab and imaging requisitions.',
+    tip_3: 'Audit a sample of medical records weekly to confirm every document in the file carries the correct unique patient identifier and that no record exists without one.',
+    tip_4: 'Train front-desk and clinical staff that the unique patient identifier must appear on every piece of documentation and must be verified at every point of care delivery.'
+  },
+  'IMS2b': {
+    tip_1: 'Maintain each patient\'\'s medical record as a complete, accurate and chronologically ordered account of all care received, with no missing dates, gaps in timeline or incomplete entries.',
+    tip_2: 'Use a structured record format with date-ordered sections for history, examination, investigation results, treatment and progress notes so all records follow the same order.',
+    tip_3: 'Conduct weekly medical record quality audits checking for completeness, chronological order, missing entries and unsigned notes; provide feedback to record authors.',
+    tip_4: 'Train all clinical staff that incomplete or out-of-order records compromise care continuity and medico-legal protection; demonstrate the correct documentation standard during induction.'
+  },
+  'IMS2c': {
+    tip_1: 'Require every entry in the medical record to be signed by the author with their printed name, designation, date and time of entry immediately after the entry is made.',
+    tip_2: 'Use printed name stamps or a signature legend sheet in each case file listing all authorised entry makers with their specimen signatures for identification purposes.',
+    tip_3: 'Audit 10 medical records weekly to check that all entries have a signature, printed name, date and time; flag unsigned or undated entries to the department head.',
+    tip_4: 'Train all clinical staff that making an unsigned or undated entry in a medical record is a documentation violation that may affect the patient\'\'s legal protection and the clinician\'\'s accountability.'
+  },
+  'IMS2d': {
+    tip_1: 'Review medical records periodically to assess completeness, accuracy, timeliness of documentation and compliance with record-keeping standards; use findings to drive improvement.',
+    tip_2: 'Conduct structured medical record audits using a standardised tool at least monthly; document findings, scores and corrective actions in a records audit register.',
+    tip_3: 'Report medical record audit findings to the medical records committee monthly; track improvement in documentation quality indicators over successive audit cycles.',
+    tip_4: 'Share de-identified medical record audit results with clinical staff at department meetings; recognise departments with consistently high documentation quality scores.'
+  },
+  'IMS3a': {
+    tip_1: 'Implement access controls, audit trails, secure storage and data backup systems to protect patient information from unauthorised access, modification, loss or breach.',
+    tip_2: 'Maintain a data security register documenting access rights by user role, backup schedule, last backup date, audit trail review dates and any security incident reported.',
+    tip_3: 'Review information security controls quarterly including access logs, backup completion records and any breach or attempted breach; escalate security incidents immediately.',
+    tip_4: 'Train all staff on information security responsibilities including password management, not sharing login credentials, locking screens when away and reporting suspected breaches immediately.'
+  },
+  'IMS3b': {
+    tip_1: 'Disclose patient health information only when authorised by the patient in writing or as required by applicable law such as court order, notifiable disease reporting or medico-legal obligations.',
+    tip_2: 'Maintain a disclosure log recording every instance of health information released, the requester, the legal or consent basis, what was disclosed and the date.',
+    tip_3: 'Audit the disclosure log quarterly to confirm all disclosures had documented authorisation or legal basis; investigate any disclosure without a documented justification.',
+    tip_4: 'Train medical records and clinical staff on the legal basis for health information disclosure, how to handle a request from police, courts or external agencies and how to document each disclosure.'
+  },
+  'IMS3c': {
+    tip_1: 'Implement a document control system that ensures all policies and procedures are uniquely numbered, version-controlled, reviewed on schedule, approved before use and archived when superseded.',
+    tip_2: 'Maintain a document control register listing every controlled document with document number, title, current version, review date, approving authority and distribution list.',
+    tip_3: 'Audit the document control register quarterly to confirm all documents are within review validity, obsolete versions are withdrawn and current versions are accessible to users.',
+    tip_4: 'Train all document owners on the document control procedure including how to initiate a review, submit for approval, update the version number and withdraw the old version from circulation.'
+  },
+  'IMS3d': {
+    tip_1: 'Define the retention period for each type of clinical record as required by applicable laws and hospital policy; store records securely for the full retention period before authorised destruction.',
+    tip_2: 'Maintain a records retention schedule listing each record type, retention period, storage location and destruction method; obtain management approval before any records are destroyed.',
+    tip_3: 'Audit the records retention schedule annually to verify records due for destruction are processed only per the approved schedule and that active records are not inadvertently destroyed.',
+    tip_4: 'Train medical records staff on retention periods for each record type, secure storage requirements and the authorised destruction procedure including documentation required before and after destruction.'
+  }
+};
+
+
 const HCO_ELC_OE_LIST = [
   {code:"AAC1a",chapter:"AAC",text:"The healthcare services being provided are defined."},
   {code:"AAC1b",chapter:"AAC",text:"The defined services are prominently displayed."},
@@ -5322,18 +6460,22 @@ export default function App() {
     const isOpen = hcoOeExpanded[code];
     setHcoOeExpanded(p => ({...p, [code]: !isOpen}));
     if (!isOpen && hcoOeTips[code] === undefined && !hcoOeTipsLoading[code]) {
-      setHcoOeTipsLoading(p => ({...p, [code]: true}));
-      const { data } = await supabase
-        .from('achieve_tips')
-        .select('tip_1, tip_2, tip_3, tip_4, oe_level')
-        .eq('oe_code', code)
-        .eq('programme', 'ELC')
-        .limit(1)
-        .maybeSingle();
-      // Merge preloaded level in case DB tips row exists but oe_level differs
-      const merged = data ? {...data, oe_level: data.oe_level || hcoOeLevels[code] || null} : null;
-      setHcoOeTips(p => ({...p, [code]: merged}));
-      setHcoOeTipsLoading(p => ({...p, [code]: false}));
+      const local = ELC_OE_TIPS[code];
+      if (local) {
+        setHcoOeTips(p => ({...p, [code]: {...local, oe_level: hcoOeLevels[code] || null}}));
+      } else {
+        setHcoOeTipsLoading(p => ({...p, [code]: true}));
+        const { data } = await supabase
+          .from('achieve_tips')
+          .select('tip_1, tip_2, tip_3, tip_4, oe_level')
+          .eq('oe_code', code)
+          .eq('programme', 'ELC')
+          .limit(1)
+          .maybeSingle();
+        const merged = data ? {...data, oe_level: data.oe_level || hcoOeLevels[code] || null} : null;
+        setHcoOeTips(p => ({...p, [code]: merged}));
+        setHcoOeTipsLoading(p => ({...p, [code]: false}));
+      }
     }
   };
 
