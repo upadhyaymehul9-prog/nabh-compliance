@@ -6513,9 +6513,8 @@ export default function App() {
           const oeCoreNotMet = oeCoreTotal - oeCoreMet;
           let oeVerdict, oeVerdictColor;
           if (oeMet === oeTotal) { oeVerdict = '✓ Ready for Excellence'; oeVerdictColor = T.gold; }
-          else if (oeCoreMet === oeCoreTotal && oeCommMet === oeCommTotal) { oeVerdict = '✓ Ready for 2nd Cycle'; oeVerdictColor = T.green; }
-          else if (oeCoreMet === oeCoreTotal) { oeVerdict = '✓ Ready for 1st Cycle Certification'; oeVerdictColor = T.green; }
-          else { oeVerdict = `${oeCoreNotMet} CORE OE${oeCoreNotMet!==1?'s':''} not yet met`; oeVerdictColor = T.muted; }
+          else if (oeCoreMet === oeCoreTotal && oeCommMet === oeCommTotal) { oeVerdict = '✓ Ready for 1st Cycle Certification'; oeVerdictColor = T.green; }
+          else { const oeCoreLeft=oeCoreTotal-oeCoreMet,oeCommLeft=oeCommTotal-oeCommMet,oeParts=[];if(oeCoreLeft>0)oeParts.push(`${oeCoreLeft} Core OE${oeCoreLeft!==1?'s':''}`);if(oeCommLeft>0)oeParts.push(`${oeCommLeft} Commitment OE${oeCommLeft!==1?'s':''}`);oeVerdict=`${oeParts.join(' + ')} not yet met for 1st Cycle`;oeVerdictColor=T.muted; }
           return (
             <>
               {/* Row 1 — overall counts */}
@@ -6939,11 +6938,14 @@ export default function App() {
     if (totalMet === total) {
       verdict = '✓ Ready for Excellence'; verdictColor = T.gold;
     } else if (coreMet === coreTotal && commMet === commTotal) {
-      verdict = '✓ Ready for 2nd Cycle'; verdictColor = T.green;
-    } else if (coreMet === coreTotal) {
       verdict = '✓ Ready for 1st Cycle Certification'; verdictColor = T.green;
     } else {
-      verdict = `${coreNotMet} CORE OE${coreNotMet !== 1 ? 's' : ''} not yet met`; verdictColor = T.muted;
+      const coreLeft = coreTotal - coreMet;
+      const commLeft = commTotal - commMet;
+      const parts = [];
+      if (coreLeft > 0) parts.push(`${coreLeft} Core OE${coreLeft !== 1 ? 's' : ''}`);
+      if (commLeft > 0) parts.push(`${commLeft} Commitment OE${commLeft !== 1 ? 's' : ''}`);
+      verdict = `${parts.join(' + ')} not yet met for 1st Cycle`; verdictColor = T.muted;
     }
 
     const SCORE_BTNS = [
