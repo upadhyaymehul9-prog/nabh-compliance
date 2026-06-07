@@ -4988,6 +4988,7 @@ export default function App() {
   const [shcoElcTab, setShcoElcTab] = useState('overview');
   const [shcoElcProgress, setShcoElcProgress] = useState({});
   const [shcoLicProgress, setShcoLicProgress] = useState({});
+  const [shcoElcScores, setShcoElcScores] = useState({});
   const [shcoBeds, setShcoBeds] = useState('');
   const [shcoDocFilter, setShcoDocFilter] = useState('all');
   const [shcoDocPart, setShcoDocPart] = useState('all');
@@ -5357,17 +5358,33 @@ export default function App() {
       });
   },[selectedProgramme]);
 
-  // Load existing ELC scores for this hospital
+  // Load existing HCO ELC scores for this hospital
   useEffect(()=>{
     if(selectedProgramme!=="hco-elc"||!context?.hospitalId)return;
     supabase.from("elc_scores")
       .select("oe_code,status")
       .eq("hospital_id",context.hospitalId)
+      .eq("programme","HCO_ELC")
       .then(({data})=>{
         if(!data)return;
         const map={};
         data.forEach(r=>{ map[r.oe_code]=r.status; });
         setElcScores(map);
+      });
+  },[selectedProgramme,context?.hospitalId]);
+
+  // Load existing SHCO ELC scores for this hospital
+  useEffect(()=>{
+    if(selectedProgramme!=="shco-elc"||!context?.hospitalId)return;
+    supabase.from("elc_scores")
+      .select("oe_code,status")
+      .eq("hospital_id",context.hospitalId)
+      .eq("programme","SHCO_ELC")
+      .then(({data})=>{
+        if(!data)return;
+        const map={};
+        data.forEach(r=>{ map[r.oe_code]=r.status; });
+        setShcoElcScores(map);
       });
   },[selectedProgramme,context?.hospitalId]);
 
@@ -5639,6 +5656,70 @@ export default function App() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* OE Compliance Summary */}
+        <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
+          <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:14}}>📋 OE Compliance Summary</div>
+          {(()=>{
+            const shcoCoreTotal = SHCO_ELC_OE_SUMMARY.reduce((a,c)=>a+c.core,0);
+            const shcoCommTotal = SHCO_ELC_OE_SUMMARY.reduce((a,c)=>a+c.commitment,0);
+            const shcoExclTotal = SHCO_ELC_OE_SUMMARY.reduce((a,c)=>a+c.excellence,0);
+            const shcoOeTotal   = shcoCoreTotal + shcoCommTotal + shcoExclTotal;
+            const shcoScoreVals = Object.values(shcoElcScores);
+            const shcoMet       = shcoScoreVals.filter(s=>s==='met').length;
+            const shcoPartial   = shcoScoreVals.filter(s=>s==='partial').length;
+            const shcoNotMet    = shcoScoreVals.filter(s=>s==='not_met').length;
+            const shcoUnscored  = shcoOeTotal - shcoMet - shcoPartial - shcoNotMet;
+            const shcoMetPct    = shcoOeTotal > 0 ? Math.round((shcoMet/shcoOeTotal)*100) : 0;
+            // Per-level met counts (requires oe_code→level mapping; 0 until individual OE scoring)
+            const shcoCoreMet   = 0;
+            const shcoCommMet   = 0;
+            const shcoExclMet   = 0;
+            const shcoCoreNotMet= shcoCoreTotal - shcoCoreMet;
+            let shcoVerdict, shcoVerdictColor;
+            if(shcoMet===shcoOeTotal&&shcoMet>0){shcoVerdict='✓ Ready for Excellence';shcoVerdictColor=T.gold;}
+            else if(shcoCoreMet===shcoCoreTotal&&shcoCommMet===shcoCommTotal&&shcoCoreTotal>0){shcoVerdict='✓ Ready for 2nd Cycle';shcoVerdictColor=T.green;}
+            else if(shcoCoreMet===shcoCoreTotal&&shcoCoreTotal>0){shcoVerdict='✓ Ready for 1st Cycle Certification';shcoVerdictColor=T.green;}
+            else{shcoVerdict=`${shcoCoreNotMet} CORE OE${shcoCoreNotMet!==1?'s':''} not yet met`;shcoVerdictColor=T.muted;}
+            return(
+              <>
+                <div style={{display:'flex',gap:10,flexWrap:'wrap',marginBottom:10}}>
+                  {[
+                    {label:'✓ Met',val:shcoMet,color:'#4caf7d'},
+                    {label:'~ Partial',val:shcoPartial,color:'#f4a441'},
+                    {label:'✗ Not Met',val:shcoNotMet,color:'#e05a5a'},
+                    {label:'— Unscored',val:shcoUnscored,color:T.muted},
+                  ].map(({label,val,color})=>(
+                    <div key={label} style={{background:T.panel2,borderRadius:8,padding:'8px 14px',border:`1px solid ${T.border}`,textAlign:'center',flex:1,minWidth:70}}>
+                      <div style={{fontSize:18,fontWeight:800,color}}>{val}</div>
+                      <div style={{fontSize:11,color,fontWeight:600}}>{label}</div>
+                      <div style={{fontSize:10,color:T.muted}}>of {shcoOeTotal}</div>
+                    </div>
+                  ))}
+                </div>
+                <div style={{height:7,borderRadius:4,background:T.border,overflow:'hidden',marginBottom:12}}>
+                  <div style={{height:'100%',width:`${shcoMetPct}%`,background:'#4caf7d',borderRadius:4,transition:'width 0.3s'}}/>
+                </div>
+                <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:8,marginBottom:12}}>
+                  {[
+                    {label:'CORE',total:shcoCoreTotal,met:shcoCoreMet,color:'#e05a5a'},
+                    {label:'Commitment',total:shcoCommTotal,met:shcoCommMet,color:'#f4a441'},
+                    {label:'Excellence',total:shcoExclTotal,met:shcoExclMet,color:'#c9a84c'},
+                  ].map(({label,total:t,met,color})=>(
+                    <div key={label} style={{background:T.panel2,borderRadius:8,padding:'8px 10px',border:`1px solid ${T.border}`,textAlign:'center'}}>
+                      <div style={{fontSize:10,fontWeight:700,color,letterSpacing:0.5,marginBottom:4}}>{label}</div>
+                      <div style={{fontSize:16,fontWeight:800,color:'#4caf7d'}}>{met}</div>
+                      <div style={{fontSize:11,color:T.muted}}>Met / {t}</div>
+                    </div>
+                  ))}
+                </div>
+                <div style={{padding:'10px 14px',borderRadius:8,background:`${shcoVerdictColor}18`,border:`1px solid ${shcoVerdictColor}44`,textAlign:'center'}}>
+                  <span style={{fontSize:13,fontWeight:700,color:shcoVerdictColor}}>{shcoVerdict}</span>
+                </div>
+              </>
+            );
+          })()}
         </div>
 
         {/* Fee Calculator */}
