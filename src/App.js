@@ -4989,7 +4989,6 @@ export default function App() {
   const [shcoElcProgress, setShcoElcProgress] = useState({});
   const [shcoLicProgress, setShcoLicProgress] = useState({});
   const [shcoElcScores, setShcoElcScores] = useState({});
-  const [shcoOeLevels, setShcoOeLevels] = useState({});
   const [shcoElcScoreSaving, setShcoElcScoreSaving] = useState({});
   const [shcoOeSearch, setShcoOeSearch] = useState('');
   const [shcoOeChapter, setShcoOeChapter] = useState('all');
@@ -5351,9 +5350,9 @@ export default function App() {
       });
   },[selectedProgramme,context?.assessmentId]);
 
-  // Preload ELC oe_level badges for all OEs on entering hco-elc
+  // Preload ELC oe_level badges — shared by both HCO and SHCO ELC (same unified 2nd Edition levels)
   useEffect(()=>{
-    if(selectedProgramme!=="hco-elc")return;
+    if(selectedProgramme!=="hco-elc"&&selectedProgramme!=="shco-elc")return;
     supabase.from("achieve_tips")
       .select("oe_code,oe_level")
       .eq("programme","ELC")
@@ -5395,19 +5394,6 @@ export default function App() {
       });
   },[selectedProgramme,context?.hospitalId]);
 
-  // Load SHCO ELC OE level badges (CORE/Commitment/Excellence) from achieve_tips
-  useEffect(()=>{
-    if(selectedProgramme!=="shco-elc")return;
-    supabase.from("achieve_tips")
-      .select("oe_code,oe_level")
-      .eq("programme","SHCO_ELC")
-      .then(({data})=>{
-        if(!data)return;
-        const map={};
-        data.forEach(r=>{ map[r.oe_code]=r.oe_level; });
-        setShcoOeLevels(map);
-      });
-  },[selectedProgramme]);
 
   // Persist HCO doc progress whenever it changes
   useEffect(()=>{
@@ -5693,10 +5679,10 @@ export default function App() {
             const shcoNotMet    = shcoScoreVals.filter(s=>s==='not_met').length;
             const shcoUnscored  = shcoOeTotal - shcoMet - shcoPartial - shcoNotMet;
             const shcoMetPct    = shcoOeTotal > 0 ? Math.round((shcoMet/shcoOeTotal)*100) : 0;
-            // Per-level met counts using shcoOeLevels map (populated once achieve_tips has SHCO_ELC rows)
-            const shcoCoreMet = HCO_ELC_OE_LIST.filter(oe => shcoOeLevels[oe.code]==='CORE' && shcoElcScores[oe.code]==='met').length;
-            const shcoCommMet = HCO_ELC_OE_LIST.filter(oe => shcoOeLevels[oe.code]==='Commitment' && shcoElcScores[oe.code]==='met').length;
-            const shcoExclMet = HCO_ELC_OE_LIST.filter(oe => shcoOeLevels[oe.code]==='Excellence' && shcoElcScores[oe.code]==='met').length;
+            // Per-level met counts — uses shared hcoOeLevels (same unified 2nd Edition levels)
+            const shcoCoreMet = HCO_ELC_OE_LIST.filter(oe => hcoOeLevels[oe.code]==='CORE' && shcoElcScores[oe.code]==='met').length;
+            const shcoCommMet = HCO_ELC_OE_LIST.filter(oe => hcoOeLevels[oe.code]==='Commitment' && shcoElcScores[oe.code]==='met').length;
+            const shcoExclMet = HCO_ELC_OE_LIST.filter(oe => hcoOeLevels[oe.code]==='Excellence' && shcoElcScores[oe.code]==='met').length;
             const shcoCoreNotMet= shcoCoreTotal - shcoCoreMet;
             let shcoVerdict, shcoVerdictColor;
             if(shcoMet===shcoOeTotal&&shcoMet>0){shcoVerdict='✓ Ready for Excellence';shcoVerdictColor=T.gold;}
@@ -6105,26 +6091,12 @@ export default function App() {
     setShcoElcScoreSaving(p=>({...p,[code]:false}));
   };
 
-  const toggleShcoElcOe = async (code) => {
+  const toggleShcoElcOe = (code) => {
     const isOpen = shcoOeExpanded[code];
     setShcoOeExpanded(p=>({...p,[code]:!isOpen}));
-    if(!isOpen && shcoOeTips[code]===undefined && !shcoOeTipsLoading[code]){
+    if(!isOpen && shcoOeTips[code]===undefined){
       const local = ELC_OE_TIPS[code];
-      if(local){
-        setShcoOeTips(p=>({...p,[code]:{...local,oe_level:shcoOeLevels[code]||null}}));
-      } else {
-        setShcoOeTipsLoading(p=>({...p,[code]:true}));
-        const {data} = await supabase
-          .from('achieve_tips')
-          .select('tip_1,tip_2,tip_3,tip_4,oe_level')
-          .eq('oe_code',code)
-          .eq('programme','SHCO_ELC')
-          .limit(1)
-          .maybeSingle();
-        const merged = data ? {...data,oe_level:data.oe_level||shcoOeLevels[code]||null} : null;
-        setShcoOeTips(p=>({...p,[code]:merged}));
-        setShcoOeTipsLoading(p=>({...p,[code]:false}));
-      }
+      setShcoOeTips(p=>({...p,[code]:local?{...local,oe_level:hcoOeLevels[code]||null}:null}));
     }
   };
 
@@ -6146,9 +6118,9 @@ export default function App() {
     const totalPartial = HCO_ELC_OE_LIST.filter(oe=>shcoElcScores[oe.code]==='partial').length;
     const totalNotMet  = HCO_ELC_OE_LIST.filter(oe=>shcoElcScores[oe.code]==='not_met').length;
     const totalUnscored= total - totalMet - totalPartial - totalNotMet;
-    const coreCodes    = HCO_ELC_OE_LIST.filter(oe=>shcoOeLevels[oe.code]==='CORE');
-    const commCodes    = HCO_ELC_OE_LIST.filter(oe=>shcoOeLevels[oe.code]==='Commitment');
-    const exclCodes    = HCO_ELC_OE_LIST.filter(oe=>shcoOeLevels[oe.code]==='Excellence');
+    const coreCodes    = HCO_ELC_OE_LIST.filter(oe=>hcoOeLevels[oe.code]==='CORE');
+    const commCodes    = HCO_ELC_OE_LIST.filter(oe=>hcoOeLevels[oe.code]==='Commitment');
+    const exclCodes    = HCO_ELC_OE_LIST.filter(oe=>hcoOeLevels[oe.code]==='Excellence');
     const coreMet      = coreCodes.filter(oe=>shcoElcScores[oe.code]==='met').length;
     const corePartial  = coreCodes.filter(oe=>shcoElcScores[oe.code]==='partial').length;
     const coreNM       = coreCodes.filter(oe=>shcoElcScores[oe.code]==='not_met').length;
@@ -6243,7 +6215,7 @@ export default function App() {
                     const isOpen   = !!shcoOeExpanded[oe.code];
                     const tips     = shcoOeTips[oe.code];
                     const loading  = !!shcoOeTipsLoading[oe.code];
-                    const lvl      = shcoOeLevels[oe.code]||tips?.oe_level||null;
+                    const lvl      = hcoOeLevels[oe.code]||tips?.oe_level||null;
                     const lvlColor = lvl ? shcoElcLevelColor(lvl) : T.muted;
                     const scoreVal = shcoElcScores[oe.code]||null;
                     const saving   = !!shcoElcScoreSaving[oe.code];
