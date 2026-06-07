@@ -6050,15 +6050,6 @@ export default function App() {
           <div style={{flex:1,background:T.panel,borderRadius:8,padding:'8px 12px',border:`1px solid ${p.color}33`,color:T.text,fontSize:14}}>{p.action}</div>
         </div>
       ))}
-
-      <div style={{marginTop:16,background:T.panel2,borderRadius:10,padding:14,border:`1px solid ${T.gold}44`}}>
-        <div style={{color:T.gold,fontWeight:700,fontSize:15,marginBottom:6}}>💼 For Consultants (Rajesh Model)</div>
-        <div style={{color:T.text,fontSize:14,lineHeight:1.7}}>
-          Managing 10+ SHCOs? Track each SHCO independently. Use the Document Tracker and License Tracker per facility.
-          The goal: get all SHCOs ELC-certified within 8 months, then upsell to Full Accreditation.
-          At ₹2,999/month, 10 SHCOs = ₹29,990/month recurring — fully justified by the preparation support you're providing.
-        </div>
-      </div>
     </div>
   );
 
