@@ -4989,6 +4989,13 @@ export default function App() {
   const [shcoElcProgress, setShcoElcProgress] = useState({});
   const [shcoLicProgress, setShcoLicProgress] = useState({});
   const [shcoElcScores, setShcoElcScores] = useState({});
+  const [shcoOeLevels, setShcoOeLevels] = useState({});
+  const [shcoElcScoreSaving, setShcoElcScoreSaving] = useState({});
+  const [shcoOeSearch, setShcoOeSearch] = useState('');
+  const [shcoOeChapter, setShcoOeChapter] = useState('all');
+  const [shcoOeExpanded, setShcoOeExpanded] = useState({});
+  const [shcoOeTips, setShcoOeTips] = useState({});
+  const [shcoOeTipsLoading, setShcoOeTipsLoading] = useState({});
   const [shcoBeds, setShcoBeds] = useState('');
   const [shcoDocFilter, setShcoDocFilter] = useState('all');
   const [shcoDocPart, setShcoDocPart] = useState('all');
@@ -5388,6 +5395,20 @@ export default function App() {
       });
   },[selectedProgramme,context?.hospitalId]);
 
+  // Load SHCO ELC OE level badges (CORE/Commitment/Excellence) from achieve_tips
+  useEffect(()=>{
+    if(selectedProgramme!=="shco-elc")return;
+    supabase.from("achieve_tips")
+      .select("oe_code,oe_level")
+      .eq("programme","SHCO_ELC")
+      .then(({data})=>{
+        if(!data)return;
+        const map={};
+        data.forEach(r=>{ map[r.oe_code]=r.oe_level; });
+        setShcoOeLevels(map);
+      });
+  },[selectedProgramme]);
+
   // Persist HCO doc progress whenever it changes
   useEffect(()=>{
     if(selectedProgramme!=="hco-elc"||!context?.assessmentId||Object.keys(hcoElcProgress).length===0)return;
@@ -5672,10 +5693,10 @@ export default function App() {
             const shcoNotMet    = shcoScoreVals.filter(s=>s==='not_met').length;
             const shcoUnscored  = shcoOeTotal - shcoMet - shcoPartial - shcoNotMet;
             const shcoMetPct    = shcoOeTotal > 0 ? Math.round((shcoMet/shcoOeTotal)*100) : 0;
-            // Per-level met counts (requires oe_code→level mapping; 0 until individual OE scoring)
-            const shcoCoreMet   = 0;
-            const shcoCommMet   = 0;
-            const shcoExclMet   = 0;
+            // Per-level met counts using shcoOeLevels map (populated once achieve_tips has SHCO_ELC rows)
+            const shcoCoreMet = HCO_ELC_OE_LIST.filter(oe => shcoOeLevels[oe.code]==='CORE' && shcoElcScores[oe.code]==='met').length;
+            const shcoCommMet = HCO_ELC_OE_LIST.filter(oe => shcoOeLevels[oe.code]==='Commitment' && shcoElcScores[oe.code]==='met').length;
+            const shcoExclMet = HCO_ELC_OE_LIST.filter(oe => shcoOeLevels[oe.code]==='Excellence' && shcoElcScores[oe.code]==='met').length;
             const shcoCoreNotMet= shcoCoreTotal - shcoCoreMet;
             let shcoVerdict, shcoVerdictColor;
             if(shcoMet===shcoOeTotal&&shcoMet>0){shcoVerdict='✓ Ready for Excellence';shcoVerdictColor=T.gold;}
@@ -6056,8 +6077,251 @@ export default function App() {
   );
 
   // ── ELC sub-tab router ──
+  // ── SHCO ELC OE Scoring ─────────────────────────────────────────────────
+  const shcoElcLevelColor = lvl => lvl==='CORE'?'#e05a5a':lvl==='Commitment'?'#f4a441':'#c9a84c';
+
+  const setShcoElcScore = async (code, status) => {
+    const prev = shcoElcScores[code];
+    setShcoElcScores(p=>({...p,[code]:status}));
+    setShcoElcScoreSaving(p=>({...p,[code]:true}));
+    const {error} = await supabase.from("elc_scores").upsert(
+      {hospital_id:context.hospitalId,oe_code:code,status,programme:"SHCO_ELC",updated_at:new Date().toISOString(),updated_by:user.id},
+      {onConflict:"hospital_id,oe_code,programme"}
+    );
+    if(error) setShcoElcScores(p=>({...p,[code]:prev}));
+    setShcoElcScoreSaving(p=>({...p,[code]:false}));
+  };
+
+  const clearShcoElcScore = async (code) => {
+    const prev = shcoElcScores[code];
+    setShcoElcScores(p=>{const n={...p};delete n[code];return n;});
+    setShcoElcScoreSaving(p=>({...p,[code]:true}));
+    const {error} = await supabase.from("elc_scores")
+      .delete()
+      .eq("hospital_id",context.hospitalId)
+      .eq("oe_code",code)
+      .eq("programme","SHCO_ELC");
+    if(error) setShcoElcScores(p=>({...p,[code]:prev}));
+    setShcoElcScoreSaving(p=>({...p,[code]:false}));
+  };
+
+  const toggleShcoElcOe = async (code) => {
+    const isOpen = shcoOeExpanded[code];
+    setShcoOeExpanded(p=>({...p,[code]:!isOpen}));
+    if(!isOpen && shcoOeTips[code]===undefined && !shcoOeTipsLoading[code]){
+      const local = ELC_OE_TIPS[code];
+      if(local){
+        setShcoOeTips(p=>({...p,[code]:{...local,oe_level:shcoOeLevels[code]||null}}));
+      } else {
+        setShcoOeTipsLoading(p=>({...p,[code]:true}));
+        const {data} = await supabase
+          .from('achieve_tips')
+          .select('tip_1,tip_2,tip_3,tip_4,oe_level')
+          .eq('oe_code',code)
+          .eq('programme','SHCO_ELC')
+          .limit(1)
+          .maybeSingle();
+        const merged = data ? {...data,oe_level:data.oe_level||shcoOeLevels[code]||null} : null;
+        setShcoOeTips(p=>({...p,[code]:merged}));
+        setShcoOeTipsLoading(p=>({...p,[code]:false}));
+      }
+    }
+  };
+
+  const renderSHCOOEBrowser = () => {
+    const q = shcoOeSearch.toLowerCase().trim();
+    const filtered = HCO_ELC_OE_LIST.filter(oe => {
+      const chMatch = shcoOeChapter==='all' || oe.chapter===shcoOeChapter;
+      const txMatch = !q || oe.code.toLowerCase().includes(q) || oe.text.toLowerCase().includes(q);
+      return chMatch && txMatch;
+    });
+    const grouped = SHCO_ELC_OE_SUMMARY.map(c=>({
+      ch:c.ch,
+      name:HCO_ELC_CHAPTER_SUMMARY.find(h=>h.ch===c.ch)?.name||c.name,
+      oes:filtered.filter(oe=>oe.chapter===c.ch),
+    })).filter(g=>g.oes.length>0);
+
+    const total        = HCO_ELC_OE_LIST.length;
+    const totalMet     = HCO_ELC_OE_LIST.filter(oe=>shcoElcScores[oe.code]==='met').length;
+    const totalPartial = HCO_ELC_OE_LIST.filter(oe=>shcoElcScores[oe.code]==='partial').length;
+    const totalNotMet  = HCO_ELC_OE_LIST.filter(oe=>shcoElcScores[oe.code]==='not_met').length;
+    const totalUnscored= total - totalMet - totalPartial - totalNotMet;
+    const coreCodes    = HCO_ELC_OE_LIST.filter(oe=>shcoOeLevels[oe.code]==='CORE');
+    const commCodes    = HCO_ELC_OE_LIST.filter(oe=>shcoOeLevels[oe.code]==='Commitment');
+    const exclCodes    = HCO_ELC_OE_LIST.filter(oe=>shcoOeLevels[oe.code]==='Excellence');
+    const coreMet      = coreCodes.filter(oe=>shcoElcScores[oe.code]==='met').length;
+    const corePartial  = coreCodes.filter(oe=>shcoElcScores[oe.code]==='partial').length;
+    const coreNM       = coreCodes.filter(oe=>shcoElcScores[oe.code]==='not_met').length;
+    const commMet      = commCodes.filter(oe=>shcoElcScores[oe.code]==='met').length;
+    const commPartial  = commCodes.filter(oe=>shcoElcScores[oe.code]==='partial').length;
+    const commNM       = commCodes.filter(oe=>shcoElcScores[oe.code]==='not_met').length;
+    const exclMet      = exclCodes.filter(oe=>shcoElcScores[oe.code]==='met').length;
+    const exclPartial  = exclCodes.filter(oe=>shcoElcScores[oe.code]==='partial').length;
+    const exclNM       = exclCodes.filter(oe=>shcoElcScores[oe.code]==='not_met').length;
+    const coreTotal    = coreCodes.length||122;
+    const commTotal    = commCodes.length||35;
+    const exclTotal    = exclCodes.length||32;
+    const metPct       = Math.round((totalMet/total)*100);
+    const coreNotMet   = coreTotal - coreMet;
+
+    let verdict=null, verdictColor=T.muted;
+    if(totalMet===total){verdict='✓ Ready for Excellence';verdictColor=T.gold;}
+    else if(coreMet===coreTotal&&commMet===commTotal){verdict='✓ Ready for 2nd Cycle';verdictColor=T.green;}
+    else if(coreMet===coreTotal){verdict='✓ Ready for 1st Cycle Certification';verdictColor=T.green;}
+    else{verdict=`${coreNotMet} CORE OE${coreNotMet!==1?'s':''} not yet met`;verdictColor=T.muted;}
+
+    const SCORE_BTNS=[
+      {s:'met',    label:'✓ Met',    color:'#4caf7d'},
+      {s:'partial',label:'~ Partial',color:'#f4a441'},
+      {s:'not_met',label:'✗ Not Met',color:'#e05a5a'},
+    ];
+
+    return (
+      <div style={{padding:16}}>
+        {/* Progress summary */}
+        <div style={{background:T.panel2,border:`1px solid ${T.border}`,borderRadius:10,padding:'12px 14px',marginBottom:14}}>
+          <div style={{display:'flex',gap:10,flexWrap:'wrap',alignItems:'center',marginBottom:8}}>
+            <span style={{fontSize:12,fontWeight:700,color:'#4caf7d'}}>✓ {totalMet} Met</span>
+            <span style={{fontSize:12,fontWeight:700,color:'#f4a441'}}>~ {totalPartial} Partial</span>
+            <span style={{fontSize:12,fontWeight:700,color:'#e05a5a'}}>✗ {totalNotMet} Not Met</span>
+            <span style={{fontSize:12,fontWeight:700,color:T.muted}}>— {totalUnscored} Unscored</span>
+            <span style={{marginLeft:'auto',fontSize:11,fontWeight:700,color:verdictColor}}>{verdict}</span>
+          </div>
+          <div style={{height:7,borderRadius:4,background:T.border,overflow:'hidden',marginBottom:10}}>
+            <div style={{height:'100%',width:`${metPct}%`,background:'#4caf7d',borderRadius:4,transition:'width 0.3s'}}/>
+          </div>
+          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:8}}>
+            {[
+              {label:'CORE',total:coreTotal,met:coreMet,partial:corePartial,nm:coreNM,color:'#e05a5a'},
+              {label:'Commitment',total:commTotal,met:commMet,partial:commPartial,nm:commNM,color:'#f4a441'},
+              {label:'Excellence',total:exclTotal,met:exclMet,partial:exclPartial,nm:exclNM,color:'#c9a84c'},
+            ].map(({label,total:t,met,partial,nm,color})=>(
+              <div key={label} style={{background:T.panel,borderRadius:7,padding:'7px 9px',border:`1px solid ${T.border}`}}>
+                <div style={{fontSize:10,fontWeight:700,color,marginBottom:4,letterSpacing:0.5}}>{label} (/{t})</div>
+                <div style={{fontSize:11,color:'#4caf7d'}}>✓ {met} Met</div>
+                <div style={{fontSize:11,color:'#f4a441'}}>~ {partial} Partial</div>
+                <div style={{fontSize:11,color:'#e05a5a'}}>✗ {nm} Not Met</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Search + chapter filter */}
+        <div style={{marginBottom:12,display:'flex',gap:8,flexDirection:'column'}}>
+          <input
+            value={shcoOeSearch} onChange={e=>setShcoOeSearch(e.target.value)}
+            placeholder="Search by OE code or text…"
+            style={{width:'100%',padding:'9px 12px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14,boxSizing:'border-box'}}
+          />
+          <div style={{display:'flex',gap:6,flexWrap:'wrap'}}>
+            <button onClick={()=>setShcoOeChapter('all')}
+              style={{padding:'4px 10px',borderRadius:20,border:`1px solid ${shcoOeChapter==='all'?T.gold:T.border}`,background:shcoOeChapter==='all'?T.gold+'22':'transparent',color:shcoOeChapter==='all'?T.gold:T.muted,fontSize:12,cursor:'pointer'}}>
+              All ({HCO_ELC_OE_LIST.length})
+            </button>
+            {SHCO_ELC_OE_SUMMARY.map(c=>(
+              <button key={c.ch} onClick={()=>setShcoOeChapter(c.ch)}
+                style={{padding:'4px 10px',borderRadius:20,border:`1px solid ${shcoOeChapter===c.ch?T.gold:T.border}`,background:shcoOeChapter===c.ch?T.gold+'22':'transparent',color:shcoOeChapter===c.ch?T.gold:T.muted,fontSize:12,cursor:'pointer'}}>
+                {c.ch} ({c.oes})
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {filtered.length===0 ? (
+          <div style={{color:T.muted,fontSize:14,textAlign:'center',padding:24}}>No OEs match your search.</div>
+        ) : (
+          <div style={{display:'flex',flexDirection:'column',gap:16}}>
+            {grouped.map(g=>(
+              <div key={g.ch}>
+                <div style={{color:T.gold,fontWeight:700,fontSize:14,marginBottom:6,display:'flex',alignItems:'center',gap:8}}>
+                  <span>{g.ch}</span>
+                  <span style={{color:T.muted,fontWeight:400,fontSize:13}}>{g.name}</span>
+                  <span style={{marginLeft:'auto',color:T.blue,fontSize:12}}>{g.oes.length} OEs</span>
+                </div>
+                <div style={{display:'flex',flexDirection:'column',gap:4}}>
+                  {g.oes.map(oe=>{
+                    const isOpen   = !!shcoOeExpanded[oe.code];
+                    const tips     = shcoOeTips[oe.code];
+                    const loading  = !!shcoOeTipsLoading[oe.code];
+                    const lvl      = shcoOeLevels[oe.code]||tips?.oe_level||null;
+                    const lvlColor = lvl ? shcoElcLevelColor(lvl) : T.muted;
+                    const scoreVal = shcoElcScores[oe.code]||null;
+                    const saving   = !!shcoElcScoreSaving[oe.code];
+                    const rowBorder= scoreVal==='met'?'#4caf7d':scoreVal==='partial'?'#f4a441':scoreVal==='not_met'?'#e05a5a':isOpen?T.blue:T.border;
+                    return (
+                      <div key={oe.code} style={{background:T.panel2,borderRadius:8,border:`1px solid ${rowBorder}`,overflow:'hidden',transition:'border-color 0.15s'}}>
+                        <div style={{padding:'9px 12px',display:'flex',gap:10,alignItems:'center'}}>
+                          <div onClick={()=>toggleShcoElcOe(oe.code)} style={{display:'flex',gap:10,alignItems:'flex-start',flex:1,cursor:'pointer',minWidth:0}}>
+                            <div style={{display:'flex',flexDirection:'column',gap:4,flexShrink:0,minWidth:68,alignItems:'flex-start'}}>
+                              <span style={{color:T.gold,fontWeight:700,fontSize:13}}>{oe.code}</span>
+                              {lvl&&(
+                                <span style={{fontSize:9,fontWeight:700,letterSpacing:0.5,padding:'1px 6px',borderRadius:4,background:`${lvlColor}20`,color:lvlColor,border:`1px solid ${lvlColor}40`}}>{lvl}</span>
+                              )}
+                            </div>
+                            <span style={{color:T.text,fontSize:13,lineHeight:1.5,flex:1,minWidth:0}}>{oe.text}</span>
+                            <span style={{color:T.muted,fontSize:12,flexShrink:0,paddingTop:2}}>{isOpen?'▲':'▼'}</span>
+                          </div>
+                          <div style={{display:'flex',gap:3,flexShrink:0,alignItems:'center'}}>
+                            {SCORE_BTNS.map(({s,label,color})=>{
+                              const active=scoreVal===s;
+                              return(
+                                <button key={s}
+                                  onClick={e=>{e.stopPropagation();if(!saving)setShcoElcScore(oe.code,s);}}
+                                  style={{padding:'3px 7px',borderRadius:5,fontSize:10,fontWeight:700,cursor:saving?'wait':'pointer',
+                                    background:active?color:'transparent',
+                                    border:`1px solid ${active?color:T.border}`,
+                                    color:active?'#fff':T.muted,
+                                    opacity:saving?0.5:1,whiteSpace:'nowrap'}}>
+                                  {label}
+                                </button>
+                              );
+                            })}
+                            {scoreVal&&(
+                              <button
+                                onClick={e=>{e.stopPropagation();if(!saving)clearShcoElcScore(oe.code);}}
+                                style={{padding:'3px 7px',borderRadius:5,fontSize:10,fontWeight:700,cursor:saving?'wait':'pointer',
+                                  background:'transparent',border:`1px solid ${T.border}`,color:T.muted,
+                                  opacity:saving?0.5:1,whiteSpace:'nowrap'}}>
+                                ✕ Clear
+                              </button>
+                            )}
+                          </div>
+                        </div>
+                        {isOpen&&(
+                          <div style={{padding:'0 12px 12px'}}>
+                            {loading?(
+                              <div style={{fontSize:12,color:T.muted,padding:'8px 0'}}>Loading…</div>
+                            ):tips?(
+                              <div style={{marginTop:4,background:T.blueD,border:`1px solid ${T.blue}20`,borderRadius:8,padding:'12px 14px'}}>
+                                <div style={{fontSize:11,letterSpacing:2,color:T.blue,marginBottom:8}}>HOW TO ACHIEVE THIS OE</div>
+                                {[tips.tip_1,tips.tip_2,tips.tip_3,tips.tip_4].map((tip,i)=>(
+                                  <div key={i} style={{display:'flex',gap:8,marginBottom:6,alignItems:'flex-start'}}>
+                                    <div style={{width:18,height:18,borderRadius:'50%',background:`${T.blue}20`,border:`1px solid ${T.blue}40`,display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,fontSize:11,color:T.blue,fontWeight:700}}>{i+1}</div>
+                                    <div style={{fontSize:13,color:T.text,lineHeight:1.6,paddingTop:1}}>{tip}</div>
+                                  </div>
+                                ))}
+                              </div>
+                            ):null}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+        <div style={{marginTop:12,color:T.muted,fontSize:12,textAlign:'center'}}>
+          {filtered.length} of {HCO_ELC_OE_LIST.length} OEs — NABH SHCO ELC 2nd Edition (Jan 2026)
+        </div>
+      </div>
+    );
+  };
+
   const ELC_TABS = [
     {key:'overview', label:'📊 Overview'},
+    {key:'oes', label:'📑 OE Browser'},
     {key:'docs', label:'📂 Documents'},
     {key:'licenses', label:'📋 Licenses'},
     {key:'process', label:'🗺️ Process'},
@@ -6067,6 +6331,7 @@ export default function App() {
   const renderELCTab = () => {
     switch(shcoElcTab) {
       case 'overview': return renderOverview();
+      case 'oes': return renderSHCOOEBrowser();
       case 'docs': return renderDocTracker();
       case 'licenses': return renderLicenseTracker();
       case 'process': return renderProcess();
