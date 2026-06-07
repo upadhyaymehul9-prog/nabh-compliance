@@ -5596,7 +5596,7 @@ export default function App() {
           {ch:'PRE',name:'Patient Rights & Education',stds:6,oes:39},
           {ch:'HIC',name:'Hospital Infection Control',stds:6,oes:36},
           {ch:'PSQ',name:'Patient Safety & Quality',stds:5,oes:28},
-          {ch:'ROM',name:'Responsibilities of Management',stds:4,oes:19},
+          {ch:'ROM',name:'Responsibility of Management',stds:4,oes:19},
           {ch:'FMS',name:'Facility Management & Safety',stds:5,oes:29},
           {ch:'HRM',name:'Human Resource Management',stds:9,oes:45},
           {ch:'IMS',name:'Information Management System',stds:6,oes:30},
