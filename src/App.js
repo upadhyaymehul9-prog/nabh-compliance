@@ -6626,8 +6626,8 @@ export default function App() {
     setElcScores(p => ({...p, [code]: status}));
     setElcScoreSaving(p => ({...p, [code]: true}));
     const { error } = await supabase.from("elc_scores").upsert(
-      { hospital_id: context.hospitalId, oe_code: code, status, updated_at: new Date().toISOString(), updated_by: user.id },
-      { onConflict: "hospital_id,oe_code" }
+      { hospital_id: context.hospitalId, oe_code: code, status, programme: "HCO_ELC", updated_at: new Date().toISOString(), updated_by: user.id },
+      { onConflict: "hospital_id,oe_code,programme" }
     );
     if (error) setElcScores(p => ({...p, [code]: prev}));
     setElcScoreSaving(p => ({...p, [code]: false}));
@@ -6640,7 +6640,8 @@ export default function App() {
     const { error } = await supabase.from("elc_scores")
       .delete()
       .eq("hospital_id", context.hospitalId)
-      .eq("oe_code", code);
+      .eq("oe_code", code)
+      .eq("programme", "HCO_ELC");
     if (error) setElcScores(p => ({...p, [code]: prev}));
     setElcScoreSaving(p => ({...p, [code]: false}));
   };
