@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, Tooltip, ReferenceLine, ResponsiveContainer, CartesianGrid } from "recharts";
 import jsPDF from 'jspdf';
@@ -5017,12 +5017,6 @@ export default function App() {
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [theme, setTheme] = useState('dark');
 
-  // Refs so the back-button handler (registered once) always reads current values
-  const screenRef = useRef(screen);
-  useEffect(() => { screenRef.current = screen; }, [screen]);
-  const selectedProgrammeRef = useRef(selectedProgramme);
-  useEffect(() => { selectedProgrammeRef.current = selectedProgramme; }, [selectedProgramme]);
-
   // Reassign module-level T so all component closures see the correct theme
   T = theme === 'light' ? LIGHT_THEME : DARK_THEME;
 
@@ -5431,32 +5425,27 @@ export default function App() {
     return()=>document.removeEventListener("click",handler);
   },[showUserMenu]);
 
-  // Browser back button: navigate to the home screen for the current programme,
-  // or stay put if already there. Never exits the app.
-  // Listener registered once on mount ([] deps); refs keep values current.
+  // Trap the browser back button — when back is detected, immediately go forward to undo it.
+  // Uses history.forward() instead of pushState so it works reliably across all browsers.
   useEffect(() => {
-    // Seed a dummy history entry so there is always something to consume on back.
+    // Seed one dummy entry so forward() always has a destination to go to.
     window.history.pushState({page: 'app'}, '', window.location.pathname);
 
+    let isReturning = false;
     const handlePopState = () => {
-      // Re-seed immediately so the NEXT back press is also trapped.
-      window.history.pushState({page: 'app'}, '', window.location.pathname);
-
-      // Determine the home screen for the current programme.
-      const prog = selectedProgrammeRef.current;
-      const home = prog === 'shco-elc' ? 'shco'
-                 : prog === 'hco-elc'  ? 'hco-elc'
-                 : 'dashboard';
-
-      // Navigate home if not already there.
-      if (screenRef.current !== home) {
-        setScreen(home);
+      if (isReturning) {
+        // This popstate was fired by our own forward() call — ignore it.
+        isReturning = false;
+        return;
       }
+      // User pressed back — undo it immediately.
+      isReturning = true;
+      window.history.forward();
     };
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   const loadData=useCallback(async(ctx)=>{
     if(!ctx?.assessmentId)return;
