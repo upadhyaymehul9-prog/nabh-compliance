@@ -5465,8 +5465,10 @@ export default function App() {
   if(authState==="programme") return <ProgrammeSelector user={user} ctx={context} onSelect={handleProgrammeSelect}/>;
 
   const trialDays = 14;
-  const createdAt = user?.created_at ? new Date(user.created_at) : new Date();
-  const daysUsed = Math.floor((Date.now() - createdAt.getTime()) / (1000 * 60 * 60 * 24));
+  const OFFICIAL_TRIAL_START = new Date('2026-06-06T00:00:00.000Z');
+  const userSignup = user?.created_at ? new Date(user.created_at) : new Date();
+  const effectiveStart = userSignup < OFFICIAL_TRIAL_START ? OFFICIAL_TRIAL_START : userSignup;
+  const daysUsed = Math.floor((Date.now() - effectiveStart.getTime()) / (1000 * 60 * 60 * 24));
   const daysLeft = Math.max(0, trialDays - daysUsed);
   const trialExpired = daysUsed >= trialDays && (!context?.plan || context.plan === 'trial');
   const isTrialActive = !trialExpired && (!context?.plan || context.plan === 'trial');
