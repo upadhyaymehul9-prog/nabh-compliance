@@ -5425,6 +5425,21 @@ export default function App() {
     return()=>document.removeEventListener("click",handler);
   },[showUserMenu]);
 
+  // Keep browser back button inside the app
+  useEffect(() => {
+    window.history.pushState({}, '', window.location.pathname);
+    const handlePopState = (e) => {
+      window.history.pushState({}, '', window.location.pathname);
+      if (selectedProgramme) {
+        setSelectedProgramme(null);
+      } else if (authState !== 'dashboard') {
+        setAuthState('dashboard');
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [selectedProgramme, authState]);
+
   const loadData=useCallback(async(ctx)=>{
     if(!ctx?.assessmentId)return;
     setLoading(true);const aid=ctx.assessmentId;
