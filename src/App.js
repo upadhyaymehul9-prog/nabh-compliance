@@ -5425,11 +5425,24 @@ export default function App() {
     return()=>document.removeEventListener("click",handler);
   },[showUserMenu]);
 
-  // Trap the browser back button — never exit the app, never change app state.
+  // Trap the browser back button — when back is detected, immediately go forward to undo it.
+  // Uses history.forward() instead of pushState so it works reliably across all browsers.
   useEffect(() => {
-    const pushDummy = () => window.history.pushState({page: 'app'}, '', window.location.pathname);
-    pushDummy(); // seed one entry ahead so first back press has something to consume
-    const handlePopState = () => pushDummy(); // immediately re-seed; nothing else changes
+    // Seed one dummy entry so forward() always has a destination to go to.
+    window.history.pushState({page: 'app'}, '', window.location.pathname);
+
+    let isReturning = false;
+    const handlePopState = () => {
+      if (isReturning) {
+        // This popstate was fired by our own forward() call — ignore it.
+        isReturning = false;
+        return;
+      }
+      // User pressed back — undo it immediately.
+      isReturning = true;
+      window.history.forward();
+    };
+
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
