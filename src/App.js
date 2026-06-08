@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, Tooltip, ReferenceLine, ResponsiveContainer, CartesianGrid } from "recharts";
 import jsPDF from 'jspdf';
@@ -5017,10 +5017,6 @@ export default function App() {
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [theme, setTheme] = useState('dark');
 
-  // Ref so the back-button handler always reads current selectedProgramme without re-registering
-  const selectedProgrammeRef = useRef(selectedProgramme);
-  useEffect(() => { selectedProgrammeRef.current = selectedProgramme; }, [selectedProgramme]);
-
   // Reassign module-level T so all component closures see the correct theme
   T = theme === 'light' ? LIGHT_THEME : DARK_THEME;
 
@@ -5429,23 +5425,14 @@ export default function App() {
     return()=>document.removeEventListener("click",handler);
   },[showUserMenu]);
 
-  // Keep browser back button inside the app.
-  // Registered once on mount ([] deps) — no listener gaps from re-registration.
-  // selectedProgrammeRef keeps the handler current without re-registering.
+  // Trap the browser back button — never exit the app, never change app state.
   useEffect(() => {
     const pushDummy = () => window.history.pushState({page: 'app'}, '', window.location.pathname);
-    pushDummy(); // ensure there is always a forward entry to consume before exiting
-
-    const handlePopState = () => {
-      pushDummy(); // immediately replenish so the next back press is also trapped
-      if (selectedProgrammeRef.current) {
-        setSelectedProgramme(null);
-      }
-    };
-
+    pushDummy(); // seed one entry ahead so first back press has something to consume
+    const handlePopState = () => pushDummy(); // immediately re-seed; nothing else changes
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   const loadData=useCallback(async(ctx)=>{
     if(!ctx?.assessmentId)return;
