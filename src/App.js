@@ -5427,18 +5427,25 @@ export default function App() {
 
   // Keep browser back button inside the app
   useEffect(() => {
-    window.history.pushState({}, '', window.location.pathname);
-    const handlePopState = (e) => {
-      window.history.pushState({}, '', window.location.pathname);
+    // Always maintain at least one history entry ahead
+    const pushDummy = () => window.history.pushState({page: 'app'}, '', window.location.pathname);
+
+    pushDummy(); // initial push
+
+    const handlePopState = () => {
+      // Immediately push again to prevent future exits
+      pushDummy();
+
+      // Navigate within app
       if (selectedProgramme) {
         setSelectedProgramme(null);
-      } else if (authState !== 'dashboard') {
-        setAuthState('dashboard');
       }
+      // Always stay on dashboard — never exit
     };
+
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, [selectedProgramme, authState]);
+  }, [selectedProgramme]);
 
   const loadData=useCallback(async(ctx)=>{
     if(!ctx?.assessmentId)return;
