@@ -5021,6 +5021,7 @@ export default function App() {
   const [tracerType, setTracerType] = useState('General IPD');
   const [auditMainTab, setAuditMainTab] = useState('nabh');
   const [committeesView, setCommitteesView] = useState('reference');
+  const [showLicenseAdd, setShowLicenseAdd] = useState(false);
 
   // Reassign module-level T so all component closures see the correct theme
   T = theme === 'light' ? LIGHT_THEME : DARK_THEME;
@@ -5435,8 +5436,8 @@ export default function App() {
   const navStackRef = useRef([]);
 
   useEffect(() => {
-    currentNavStateRef.current = { screen, committeesView, auditMainTab, drillsView, selectedDrill, tracerView, tracerType };
-  }, [screen, committeesView, auditMainTab, drillsView, selectedDrill, tracerView, tracerType]);
+    currentNavStateRef.current = { screen, committeesView, auditMainTab, drillsView, selectedDrill, tracerView, tracerType, showLicenseAdd };
+  }, [screen, committeesView, auditMainTab, drillsView, selectedDrill, tracerView, tracerType, showLicenseAdd]);
 
   useEffect(() => { navStackRef.current = navStack; }, [navStack]);
 
@@ -5450,6 +5451,7 @@ export default function App() {
     if (newState.selectedDrill !== undefined) setSelectedDrill(newState.selectedDrill);
     if (newState.tracerView !== undefined) setTracerView(newState.tracerView);
     if (newState.tracerType !== undefined) setTracerType(newState.tracerType);
+    if (newState.showLicenseAdd !== undefined) setShowLicenseAdd(newState.showLicenseAdd);
   }, []);
 
   const goBack = useCallback(() => {
@@ -5464,6 +5466,7 @@ export default function App() {
     setSelectedDrill(prev.selectedDrill);
     setTracerView(prev.tracerView);
     setTracerType(prev.tracerType);
+    if (prev.showLicenseAdd !== undefined) setShowLicenseAdd(prev.showLicenseAdd);
   }, []);
 
   // Browser back button → navigate within app
@@ -7363,7 +7366,7 @@ export default function App() {
         {screen==="checklists"&&<ChecklistsScreen hospitalId={context?.hospitalId}/>}
         {screen==="audits"&&<AuditsScreen hospitalId={context?.hospitalId} auditMainTab={auditMainTab} navigate={navigate}/>}
         {screen==="drills"&&<MockDrillsScreen hospitalId={context?.hospitalId} drillsView={drillsView} selectedDrill={selectedDrill} navigate={navigate} goBack={goBack} setDrillsView={setDrillsView} setSelectedDrill={setSelectedDrill}/>}
-        {screen==="licenses"&&<StatutoryLicensesScreen hospitalId={context?.hospitalId}/>}
+        {screen==="licenses"&&<StatutoryLicensesScreen hospitalId={context?.hospitalId} showAdd={showLicenseAdd} navigate={navigate} setShowAdd={setShowLicenseAdd}/>}
         {screen==="tracer"&&<PatientTracerScreen hospitalId={context?.hospitalId} tracerView={tracerView} tracerType={tracerType} navigate={navigate} goBack={goBack} setTracerView={setTracerView} setTracerType={setTracerType}/>}
         {screen==="pricing"&&<PricingScreen/>}
         {screen==="profile"&&<ProfileScreen user={user} context={context} onContextUpdate={setContext}/>}
@@ -7840,12 +7843,11 @@ const LICENSE_TEMPLATES = [
   {name:"Diesel Generator Clearance",authority:"State PCB / Municipality",type:"Environmental"},
 ];
 
-function StatutoryLicensesScreen({ hospitalId }) {
+function StatutoryLicensesScreen({ hospitalId, showAdd, navigate, setShowAdd }) {
   const [licenses,setLicenses]=useState([]);
   const [loading,setLoading]=useState(true);
   const [saving,setSaving]=useState(false);
   const [editId,setEditId]=useState(null);
-  const [showAdd,setShowAdd]=useState(false);
   const [form,setForm]=useState({license_name:"",issuing_authority:"",license_type:"",license_number:"",issue_date:"",expiry_date:"",evidence_url:"",notes:""});
   const [filter,setFilter]=useState("all");
 
@@ -7888,7 +7890,7 @@ function StatutoryLicensesScreen({ hospitalId }) {
   const startEdit=(l)=>{
     setEditId(l.id);
     setForm({license_name:l.license_name||"",issuing_authority:l.issuing_authority||"",license_type:l.license_type||"",license_number:l.license_number||"",issue_date:l.issue_date||"",expiry_date:l.expiry_date||"",evidence_url:l.evidence_url||"",notes:l.notes||""});
-    setShowAdd(true);
+    navigate({ showLicenseAdd: true });
   };
 
   const addTemplate=(t)=>{
@@ -7912,7 +7914,7 @@ function StatutoryLicensesScreen({ hospitalId }) {
           <div style={{fontSize:16,fontWeight:700,color:T.gold}}>📋 Statutory License Tracker</div>
           <div style={{fontSize:12,color:T.muted}}>Track all mandatory licenses — get alerted before expiry</div>
         </div>
-        <button onClick={()=>{setShowAdd(true);setEditId(null);setForm({license_name:"",issuing_authority:"",license_type:"",license_number:"",issue_date:"",expiry_date:"",evidence_url:"",notes:""}); }} style={{padding:"7px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer"}}>+ Add License</button>
+        <button onClick={()=>{navigate({ showLicenseAdd: true });setEditId(null);setForm({license_name:"",issuing_authority:"",license_type:"",license_number:"",issue_date:"",expiry_date:"",evidence_url:"",notes:""});}} style={{padding:"7px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer"}}>+ Add License</button>
       </div>
 
       {/* Summary cards */}
