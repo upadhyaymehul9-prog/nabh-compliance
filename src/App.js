@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, Tooltip, ReferenceLine, ResponsiveContainer, CartesianGrid } from "recharts";
 import jsPDF from 'jspdf';
@@ -3089,7 +3089,7 @@ function GapFixScreen({ assessmentId, gaps, onRefresh }) {
 
 
 // ── COMMITTEES — with full MOM ─────────────────────────────
-function CommitteesScreen({ hospitalId }) {
+function CommitteesScreen({ hospitalId, committeesView, navigate }) {
   const [committees,setCommittees]=useState([]);
   const [meetings,setMeetings]=useState([]);
   const [loading,setLoading]=useState(true);
@@ -3097,7 +3097,6 @@ function CommitteesScreen({ hospitalId }) {
   const [filter,setFilter]=useState("ALL");
   const [expanded,setExpanded]=useState(null);
   const [guideOpen,setGuideOpen]=useState(null);
-  const [view,setView]=useState("reference"); // reference | mom
   const [showMOMForm,setShowMOMForm]=useState(null); // committee_id
   const [saving,setSaving]=useState(false);
   const [momSuccess,setMomSuccess]=useState(false);
@@ -3203,15 +3202,15 @@ function CommitteesScreen({ hospitalId }) {
           </div>
         </div>
         <div style={{display:"flex",gap:8}}>
-          <button onClick={()=>setView("reference")} style={{padding:"5px 14px",borderRadius:8,fontSize:12,cursor:"pointer",background:view==="reference"?T.goldD:"transparent",border:`1px solid ${view==="reference"?T.gold:T.border}`,color:view==="reference"?T.goldL:T.muted}}>📋 Reference</button>
-          <button onClick={()=>setView("mom")} style={{padding:"5px 14px",borderRadius:8,fontSize:12,cursor:"pointer",background:view==="mom"?T.goldD:"transparent",border:`1px solid ${view==="mom"?T.gold:T.border}`,color:view==="mom"?T.goldL:T.muted}}>📝 Meeting Records {meetings.length>0&&<span style={{marginLeft:4,background:T.gold,color:T.bg,borderRadius:4,padding:"0 5px",fontSize:8}}>{meetings.length}</span>}</button>
+          <button onClick={()=>navigate({ committeesView: 'reference' })} style={{padding:"5px 14px",borderRadius:8,fontSize:12,cursor:"pointer",background:committeesView==="reference"?T.goldD:"transparent",border:`1px solid ${committeesView==="reference"?T.gold:T.border}`,color:committeesView==="reference"?T.goldL:T.muted}}>📋 Reference</button>
+          <button onClick={()=>navigate({ committeesView: 'mom' })} style={{padding:"5px 14px",borderRadius:8,fontSize:12,cursor:"pointer",background:committeesView==="mom"?T.goldD:"transparent",border:`1px solid ${committeesView==="mom"?T.gold:T.border}`,color:committeesView==="mom"?T.goldL:T.muted}}>📝 Meeting Records {meetings.length>0&&<span style={{marginLeft:4,background:T.gold,color:T.bg,borderRadius:4,padding:"0 5px",fontSize:8}}>{meetings.length}</span>}</button>
         </div>
       </div>
 
       {momSuccess&&<div style={{background:T.greenD,border:`1px solid ${T.green}30`,borderRadius:8,padding:"10px 14px",marginBottom:12,fontSize:13,color:T.green}}>✅ Meeting minutes saved successfully.</div>}
 
       {/* REFERENCE VIEW */}
-      {view==="reference"&&(
+      {committeesView==="reference"&&(
         <div>
           <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",marginBottom:14}}>
             <div style={{display:"flex",gap:10,alignItems:"center",flexWrap:"wrap"}}>
@@ -3244,7 +3243,7 @@ function CommitteesScreen({ hospitalId }) {
                           {last&&<span style={{fontSize:12,color:T.green}}>Last: {last}</span>}
                         </div>
                       </div>
-                      <button onClick={e=>{e.stopPropagation();setShowMOMForm(c.id);setMOMForm(emptyMOM());setView("reference");}} style={{padding:"4px 10px",borderRadius:6,fontSize:11,cursor:"pointer",background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold,flexShrink:0}}>+ Add MOM</button>
+                      <button onClick={e=>{e.stopPropagation();setShowMOMForm(c.id);setMOMForm(emptyMOM());}} style={{padding:"4px 10px",borderRadius:6,fontSize:11,cursor:"pointer",background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold,flexShrink:0}}>+ Add MOM</button>
                       <span style={{fontSize:16,color:T.muted}}>{isOpen?"▲":"▼"}</span>
                     </div>
                   </div>
@@ -3397,7 +3396,7 @@ function CommitteesScreen({ hospitalId }) {
       )}
 
       {/* MOM RECORDS VIEW */}
-      {view==="mom"&&(
+      {committeesView==="mom"&&(
         <div>
           {meetings.length===0?(
             <div style={{textAlign:"center",padding:40,color:T.muted}}>
@@ -3819,8 +3818,7 @@ function KPIsScreen({ hospitalId, user }) {
 }
 
 // ── AUDITS — 3 tabs: NABH Audits | My Audits | What is Audit ─────────────────────────────────────
-function AuditsScreen({ hospitalId }) {
-  const [mainTab,setMainTab]=useState("nabh"); // nabh | mine | learn
+function AuditsScreen({ hospitalId, auditMainTab, navigate }) {
 
   // ── NABH AUDITS state ──
   const [audits,setAudits]=useState([]);
@@ -4333,20 +4331,20 @@ function AuditsScreen({ hospitalId }) {
           {id:"mine",label:"➕ My Audits",count:customAudits.length},
           {id:"learn",label:"📖 What is Audit?"},
         ].map(t=>(
-          <button key={t.id} onClick={()=>setMainTab(t.id)}
+          <button key={t.id} onClick={()=>navigate({ auditMainTab: t.id })}
             style={{padding:"7px 16px",borderRadius:8,fontSize:13,fontWeight:600,cursor:"pointer",
-              background:mainTab===t.id?T.goldD:"transparent",
-              border:`1px solid ${mainTab===t.id?T.gold:T.border}`,
-              color:mainTab===t.id?T.goldL:T.muted}}>
+              background:auditMainTab===t.id?T.goldD:"transparent",
+              border:`1px solid ${auditMainTab===t.id?T.gold:T.border}`,
+              color:auditMainTab===t.id?T.goldL:T.muted}}>
             {t.label}{t.count!==undefined&&<span style={{marginLeft:5,fontSize:11,opacity:0.7}}>({t.count})</span>}
           </button>
         ))}
       </div>
 
-      {mainTab==="learn"&&<LearnTab/>}
-      {mainTab==="mine"&&<MyAuditsTab/>}
+      {auditMainTab==="learn"&&<LearnTab/>}
+      {auditMainTab==="mine"&&<MyAuditsTab/>}
 
-      {mainTab==="nabh"&&(
+      {auditMainTab==="nabh"&&(
         <div>
           {/* Summary — fixed framing */}
           <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",marginBottom:14}}>
@@ -5016,6 +5014,13 @@ export default function App() {
   const [showMoreMenu, setShowMoreMenu] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [theme, setTheme] = useState('dark');
+  const [navStack, setNavStack] = useState([]);
+  const [drillsView, setDrillsView] = useState('tracker');
+  const [selectedDrill, setSelectedDrill] = useState(null);
+  const [tracerView, setTracerView] = useState('list');
+  const [tracerType, setTracerType] = useState('General IPD');
+  const [auditMainTab, setAuditMainTab] = useState('nabh');
+  const [committeesView, setCommitteesView] = useState('reference');
 
   // Reassign module-level T so all component closures see the correct theme
   T = theme === 'light' ? LIGHT_THEME : DARK_THEME;
@@ -5425,27 +5430,52 @@ export default function App() {
     return()=>document.removeEventListener("click",handler);
   },[showUserMenu]);
 
-  // Trap the browser back button — when back is detected, immediately go forward to undo it.
-  // Uses history.forward() instead of pushState so it works reliably across all browsers.
+  // NavStack refs — kept in sync via effects so goBack/navigate closures always read current values
+  const currentNavStateRef = useRef(null);
+  const navStackRef = useRef([]);
+
   useEffect(() => {
-    // Seed one dummy entry so forward() always has a destination to go to.
-    window.history.pushState({page: 'app'}, '', window.location.pathname);
+    currentNavStateRef.current = { screen, committeesView, auditMainTab, drillsView, selectedDrill, tracerView, tracerType };
+  }, [screen, committeesView, auditMainTab, drillsView, selectedDrill, tracerView, tracerType]);
 
-    let isReturning = false;
+  useEffect(() => { navStackRef.current = navStack; }, [navStack]);
+
+  const navigate = useCallback((newState) => {
+    const snap = currentNavStateRef.current || {};
+    setNavStack(prev => [...prev, snap]);
+    if (newState.screen !== undefined) setScreen(newState.screen);
+    if (newState.committeesView !== undefined) setCommitteesView(newState.committeesView);
+    if (newState.auditMainTab !== undefined) setAuditMainTab(newState.auditMainTab);
+    if (newState.drillsView !== undefined) setDrillsView(newState.drillsView);
+    if (newState.selectedDrill !== undefined) setSelectedDrill(newState.selectedDrill);
+    if (newState.tracerView !== undefined) setTracerView(newState.tracerView);
+    if (newState.tracerType !== undefined) setTracerType(newState.tracerType);
+  }, []);
+
+  const goBack = useCallback(() => {
+    const stack = navStackRef.current;
+    if (stack.length === 0) return;
+    const prev = stack[stack.length - 1];
+    setNavStack(stack.slice(0, -1));
+    setScreen(prev.screen);
+    setCommitteesView(prev.committeesView);
+    setAuditMainTab(prev.auditMainTab);
+    setDrillsView(prev.drillsView);
+    setSelectedDrill(prev.selectedDrill);
+    setTracerView(prev.tracerView);
+    setTracerType(prev.tracerType);
+  }, []);
+
+  // Browser back button → navigate within app
+  useEffect(() => {
+    window.history.pushState({ idx: 0 }, '', window.location.pathname);
     const handlePopState = () => {
-      if (isReturning) {
-        // This popstate was fired by our own forward() call — ignore it.
-        isReturning = false;
-        return;
-      }
-      // User pressed back — undo it immediately.
-      isReturning = true;
-      window.history.forward();
+      window.history.pushState({ idx: 0 }, '', window.location.pathname);
+      goBack();
     };
-
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
+  }, [goBack]);
 
   const loadData=useCallback(async(ctx)=>{
     if(!ctx?.assessmentId)return;
@@ -7239,7 +7269,7 @@ export default function App() {
           {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${verdictColor}25`,border:`1px solid ${verdictColor}60`,fontSize:12,fontWeight:800,color:theme==='light'?"#ffffff":verdictColor}}>{decision.verdict==="PARTIAL"?"⚠️":""}{decision.verdict||"—"}</div>}
           <div style={{display:"flex",gap:3,flexWrap:"wrap",position:"relative"}}>
             {PRIMARY_NAV.map(n=>(
-              <button key={n.id} onClick={()=>setScreen(n.id)} style={{
+              <button key={n.id} onClick={()=>navigate({ screen: n.id })} style={{
                 padding:"4px 9px",borderRadius:7,fontSize:11,cursor:"pointer",
                 background:screen===n.id?(theme==='light'?"rgba(255,255,255,0.25)":T.goldD):"transparent",
                 border:`1px solid ${screen===n.id?(theme==='light'?"rgba(255,255,255,0.6)":T.gold):(theme==='light'?"rgba(255,255,255,0.3)":T.border)}`,
@@ -7262,7 +7292,7 @@ export default function App() {
                     onClick={e=>e.stopPropagation()}
                     style={{position:"absolute",top:"calc(100% + 6px)",left:0,background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"6px 0",display:"flex",flexDirection:"column",zIndex:300,minWidth:220,boxShadow:"0 8px 30px rgba(0,0,0,0.15)"}}>
                     {SECONDARY_NAV.map(n=>(
-                      <button key={n.id} onClick={()=>{setScreen(n.id);setShowMoreMenu(false);}}
+                      <button key={n.id} onClick={()=>{navigate({ screen: n.id });setShowMoreMenu(false);}}
                         style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen===n.id?T.gold:"transparent"}`,background:screen===n.id?T.goldD:"transparent",color:screen===n.id?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",flexDirection:"row",alignItems:"center",gap:10,fontWeight:screen===n.id?700:400,width:"100%",textAlign:"left"}}>
                         <span style={{width:20,fontSize:15}}>{n.icon}</span>
                         <span>{n.label}</span>
@@ -7285,10 +7315,10 @@ export default function App() {
             <button onClick={e=>{e.stopPropagation();setShowUserMenu(v=>!v);}} style={{width:30,height:30,borderRadius:"50%",background:theme==='light'?"rgba(255,255,255,0.2)":T.goldD,border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.gold}`,color:"#ffffff",fontSize:16,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",padding:0}}>👤</button>
             {showUserMenu&&(
               <div onClick={e=>e.stopPropagation()} style={{position:"absolute",top:"calc(100% + 6px)",right:0,background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"6px 0",display:"flex",flexDirection:"column",zIndex:300,minWidth:160,boxShadow:"0 8px 30px rgba(0,0,0,0.15)"}}>
-                <button onClick={()=>{setScreen("profile");setShowUserMenu(false);}} style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen==="profile"?T.gold:"transparent"}`,background:screen==="profile"?T.goldD:"transparent",color:screen==="profile"?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:10,width:"100%",textAlign:"left"}}>
+                <button onClick={()=>{navigate({ screen: "profile" });setShowUserMenu(false);}} style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen==="profile"?T.gold:"transparent"}`,background:screen==="profile"?T.goldD:"transparent",color:screen==="profile"?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:10,width:"100%",textAlign:"left"}}>
                   <span style={{width:20,fontSize:15}}>👤</span><span>Profile</span>
                 </button>
-                <button onClick={()=>{setScreen("pricing");setShowUserMenu(false);}} style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen==="pricing"?T.gold:"transparent"}`,background:screen==="pricing"?T.goldD:"transparent",color:screen==="pricing"?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:10,width:"100%",textAlign:"left"}}>
+                <button onClick={()=>{navigate({ screen: "pricing" });setShowUserMenu(false);}} style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen==="pricing"?T.gold:"transparent"}`,background:screen==="pricing"?T.goldD:"transparent",color:screen==="pricing"?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:10,width:"100%",textAlign:"left"}}>
                   <span style={{width:20,fontSize:15}}>💎</span><span>Pricing</span>
                 </button>
                 <div style={{height:1,background:T.border,margin:"4px 0"}}/>
@@ -7320,21 +7350,21 @@ export default function App() {
       )}
 
       <div style={{maxWidth:1200,margin:"0 auto",padding:"16px"}}>
-        {screen==="dashboard"&&<Dashboard decision={decision} gaps={gaps} onNav={setScreen}/>}
+        {screen==="dashboard"&&<Dashboard decision={decision} gaps={gaps} onNav={id=>navigate({screen:id})}/>}
         {screen==="dashboard"&&<button onClick={generatePDF} disabled={pdfLoading}
           style={{position:'fixed',bottom:20,right:20,zIndex:9999,padding:'8px 16px',borderRadius:9,border:`1px solid ${T.gold}`,background:T.bg,color:T.gold,fontSize:12,fontWeight:700,cursor:pdfLoading?'default':'pointer',opacity:pdfLoading?0.6:1,boxShadow:'0 2px 12px rgba(0,0,0,0.5)'}}>
           {pdfLoading?'⏳ Generating…':'⬇ Export PDF'}
         </button>}
         {screen==="scoring"&&<ScoringScreen assessmentId={context?.assessmentId} oes={oes} standards={standards} onRefresh={()=>loadData(context)}/>}
         {screen==="gaps"&&<GapFixScreen assessmentId={context?.assessmentId} gaps={gaps} onRefresh={()=>loadData(context)}/>}
-        {screen==="committees"&&<CommitteesScreen hospitalId={context?.hospitalId}/>}
+        {screen==="committees"&&<CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate}/>}
         {screen==="committee-calendar"&&<CommitteeCalendarScreen hospitalId={context?.hospitalId}/>}
         {screen==="kpis"&&<KPIsScreen hospitalId={context?.hospitalId} user={user}/>}
         {screen==="checklists"&&<ChecklistsScreen hospitalId={context?.hospitalId}/>}
-        {screen==="audits"&&<AuditsScreen hospitalId={context?.hospitalId}/>}
-        {screen==="drills"&&<MockDrillsScreen hospitalId={context?.hospitalId}/>}
+        {screen==="audits"&&<AuditsScreen hospitalId={context?.hospitalId} auditMainTab={auditMainTab} navigate={navigate}/>}
+        {screen==="drills"&&<MockDrillsScreen hospitalId={context?.hospitalId} drillsView={drillsView} selectedDrill={selectedDrill} navigate={navigate} goBack={goBack} setDrillsView={setDrillsView} setSelectedDrill={setSelectedDrill}/>}
         {screen==="licenses"&&<StatutoryLicensesScreen hospitalId={context?.hospitalId}/>}
-        {screen==="tracer"&&<PatientTracerScreen hospitalId={context?.hospitalId}/>}
+        {screen==="tracer"&&<PatientTracerScreen hospitalId={context?.hospitalId} tracerView={tracerView} tracerType={tracerType} navigate={navigate} goBack={goBack} setTracerView={setTracerView} setTracerType={setTracerType}/>}
         {screen==="pricing"&&<PricingScreen/>}
         {screen==="profile"&&<ProfileScreen user={user} context={context} onContextUpdate={setContext}/>}
         {screen==="shco"&&renderSHCOTab()}
@@ -7353,11 +7383,9 @@ export default function App() {
 }
 
 // ── MOCK DRILLS ───────────────────────────────────────────────
-function MockDrillsScreen({ hospitalId }) {
+function MockDrillsScreen({ hospitalId, drillsView, selectedDrill, navigate, goBack, setDrillsView, setSelectedDrill }) {
   const [drills,setDrills]=useState([]);
   const [records,setRecords]=useState([]);
-  const [view,setView]=useState("tracker"); // tracker | calendar | record
-  const [selectedDrill,setSelectedDrill]=useState(null);
   const [form,setForm]=useState({drill_date:"",drill_time:"",location:"",conducted_by:"",supervised_by:"",participants_category:"",total_participants:"",pre_briefing:"Done",scenario_desc:"",drill_description:"",observations:["","",""],debriefing:"Done",corrective_actions:"",preventive_actions:"",additional_points:"",status:"completed",evidence_url:""});
   const [saving,setSaving]=useState(false);
   const [expanded,setExpanded]=useState(null);
@@ -7418,16 +7446,16 @@ function MockDrillsScreen({ hospitalId }) {
       evidence_url:form.evidence_url||null
     });
     const {data:r}=await supabase.from("mock_drill_records").select("*").eq("hospital_id",hospitalId).order("drill_date",{ascending:false});
-    setRecords(r||[]);setSaving(false);setView("tracker");setSelectedDrill(null);
+    setRecords(r||[]);setSaving(false);setDrillsView("tracker");setSelectedDrill(null);
   };
 
   if(loading)return <div style={{textAlign:"center",padding:40,color:T.muted}}>Loading…</div>;
 
   // RECORD FORM
-  if(view==="record"&&selectedDrill)return(
+  if(drillsView==="record"&&selectedDrill)return(
     <div>
       <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:14}}>
-        <button onClick={()=>{setView("tracker");setSelectedDrill(null);}} style={{padding:"5px 12px",borderRadius:7,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:13,cursor:"pointer"}}>← Back</button>
+        <button onClick={goBack} style={{padding:"5px 12px",borderRadius:7,background:"transparent",border:`1px solid ${T.border}`,color:T.muted,fontSize:13,cursor:"pointer"}}>← Back</button>
         <div style={{fontSize:16,fontWeight:700,color:T.gold}}>Record Drill: {selectedDrill.name}</div>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:10}}>
@@ -7520,7 +7548,7 @@ function MockDrillsScreen({ hospitalId }) {
                   </div>
                 </div>
                 <div style={{fontSize:11,fontWeight:700,color:statusColor(st),padding:"3px 10px",borderRadius:20,background:`${statusColor(st)}15`,border:`1px solid ${statusColor(st)}40`,whiteSpace:"nowrap"}}>{statusLabel(st)}</div>
-                <button onClick={e=>{e.stopPropagation();setSelectedDrill(drill);setForm({drill_date:"",drill_time:"",location:"",conducted_by:"",supervised_by:"",participants_category:"",total_participants:"",pre_briefing:"Done",scenario_desc:"",drill_description:"",observations:["","",""],debriefing:"Done",corrective_actions:"",preventive_actions:"",additional_points:"",status:"completed",evidence_url:""});setView("record");}}
+                <button onClick={e=>{e.stopPropagation();setForm({drill_date:"",drill_time:"",location:"",conducted_by:"",supervised_by:"",participants_category:"",total_participants:"",pre_briefing:"Done",scenario_desc:"",drill_description:"",observations:["","",""],debriefing:"Done",corrective_actions:"",preventive_actions:"",additional_points:"",status:"completed",evidence_url:""});navigate({ drillsView: 'record', selectedDrill: drill });}}
                   style={{padding:"5px 12px",borderRadius:7,background:T.goldD,border:`1px solid ${T.gold}`,color:T.goldL,fontSize:12,fontWeight:700,cursor:"pointer",whiteSpace:"nowrap"}}>+ Record</button>
                 <div style={{color:T.muted,fontSize:13}}>{isOpen?"▲":"▼"}</div>
               </div>
@@ -8149,9 +8177,7 @@ const TRACER_TYPES = {
   }
 };
 
-function PatientTracerScreen({ hospitalId }) {
-  const [view,setView]=useState("list"); // list | new | conduct | history
-  const [tracerType,setTracerType]=useState("General IPD");
+function PatientTracerScreen({ hospitalId, tracerView, tracerType, navigate, goBack, setTracerView, setTracerType }) {
   const [tracers,setTracers]=useState([]);
   const [loading,setLoading]=useState(true);
   const [activeTracer,setActiveTracer]=useState(null);
@@ -8167,15 +8193,15 @@ function PatientTracerScreen({ hospitalId }) {
     setTracers(data||[]);setLoading(false);
   };
 
-  const startNew=()=>{
+  const startNew=(typeOverride)=>{
     setResponses({});
     setMeta({patient_ref:"",conducted_by:"",conducted_date:new Date().toISOString().split("T")[0],notes:""});
     setActiveTracer(null);
-    setView("new");
+    navigate(typeOverride ? { tracerType: typeOverride, tracerView: 'new' } : { tracerView: 'new' });
   };
 
   const startConduct=()=>{
-    setView("conduct");
+    navigate({ tracerView: 'conduct' });
   };
 
   const setResp=(qid,val)=>setResponses(r=>({...r,[qid]:val}));
@@ -8203,7 +8229,7 @@ function PatientTracerScreen({ hospitalId }) {
     });
     setSaving(false);
     loadTracers();
-    setView("list");
+    setTracerView("list");
   };
 
   const scoreColor=(pct)=>pct>=80?T.green:pct>=60?T.orange:T.red;
@@ -8213,7 +8239,7 @@ function PatientTracerScreen({ hospitalId }) {
   if(loading)return<div style={{textAlign:"center",padding:40,color:T.muted}}>Loading…</div>;
 
   // LIST VIEW
-  if(view==="list")return(
+  if(tracerView==="list")return(
     <div>
       <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:14,flexWrap:"wrap",gap:8}}>
         <div>
@@ -8229,7 +8255,7 @@ function PatientTracerScreen({ hospitalId }) {
           const done=tracers.filter(t=>t.tracer_type===type);
           const avg=done.length>0?Math.round(done.reduce((s,t)=>s+t.score_pct,0)/done.length):null;
           return(
-            <div key={type} style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px",cursor:"pointer"}} onClick={()=>{setTracerType(type);startNew();}}>
+            <div key={type} style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px",cursor:"pointer"}} onClick={()=>startNew(type)}>
               <div style={{fontSize:20,marginBottom:6}}>{data.icon}</div>
               <div style={{fontSize:13,fontWeight:700,color:T.white,marginBottom:3}}>{type}</div>
               <div style={{fontSize:11,color:T.muted,marginBottom:8,lineHeight:1.4}}>{data.questions.length} questions</div>
@@ -8277,10 +8303,10 @@ function PatientTracerScreen({ hospitalId }) {
   );
 
   // NEW TRACER — select type + meta
-  if(view==="new")return(
+  if(tracerView==="new")return(
     <div>
       <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:16}}>
-        <button onClick={()=>setView("list")} style={{padding:"4px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:12,cursor:"pointer"}}>← Back</button>
+        <button onClick={goBack} style={{padding:"4px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:12,cursor:"pointer"}}>← Back</button>
         <div style={{fontSize:15,fontWeight:700,color:T.gold}}>New Patient Tracer</div>
       </div>
 
@@ -8288,7 +8314,7 @@ function PatientTracerScreen({ hospitalId }) {
       <div style={{fontSize:11,color:T.muted,marginBottom:8,letterSpacing:1}}>SELECT TRACER TYPE</div>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(140px,1fr))",gap:8,marginBottom:18}}>
         {Object.entries(TRACER_TYPES).map(([type,data])=>(
-          <div key={type} onClick={()=>setTracerType(type)} style={{background:tracerType===type?`${data.color}15`:T.panel,border:`1px solid ${tracerType===type?data.color:T.border}`,borderRadius:9,padding:"10px",cursor:"pointer",textAlign:"center"}}>
+          <div key={type} onClick={()=>setTracerType(type)} style={{background:tracerType===type?`${data.color}15`:T.panel,border:`1px solid ${tracerType===type?data.color:T.border}`,borderRadius:9,padding:"10px",cursor:"pointer",textAlign:"center"}} >
             <div style={{fontSize:18,marginBottom:4}}>{data.icon}</div>
             <div style={{fontSize:12,fontWeight:700,color:tracerType===type?data.color:T.text}}>{type}</div>
             <div style={{fontSize:8,color:T.muted,marginTop:2}}>{data.questions.length}Q</div>
@@ -8314,7 +8340,7 @@ function PatientTracerScreen({ hospitalId }) {
   );
 
   // CONDUCT TRACER — answer questions
-  if(view==="conduct"){
+  if(tracerView==="conduct"){
     const tdata=TRACER_TYPES[tracerType];
     const answered=tdata.questions.filter(q=>responses[q.id]).length;
     const pct=calcScore();
@@ -8322,7 +8348,7 @@ function PatientTracerScreen({ hospitalId }) {
     return(
       <div>
         <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:12,flexWrap:"wrap"}}>
-          <button onClick={()=>setView("new")} style={{padding:"4px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:12,cursor:"pointer"}}>← Back</button>
+          <button onClick={goBack} style={{padding:"4px 10px",borderRadius:6,border:`1px solid ${T.border}`,background:"transparent",color:T.muted,fontSize:12,cursor:"pointer"}}>← Back</button>
           <div style={{flex:1}}>
             <div style={{fontSize:15,fontWeight:700,color:tdata.color}}>{tdata.icon} {tracerType}</div>
             <div style={{fontSize:11,color:T.muted}}>{answered}/{tdata.questions.length} answered · Score: {pct}%</div>
