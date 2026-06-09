@@ -244,19 +244,13 @@ const SHCO_ELC_PROCESS = [
   {step:1,name:"Register on HOPE Portal",url:"nabh.qcin.org",desc:"Go to nabh.qcin.org → Register → Fill hospital details",output:"Login credentials + application ID"},
   {step:2,name:"Fill 7-Part Questionnaire",url:"nabh.qcin.org",desc:"Complete all 7 parts of the HOPE questionnaire online — General Info, Physical Infrastructure, Statutory, Clinical, Staffing, Quality, Documentation",output:"Completed questionnaire submission"},
   {step:3,name:"Upload Documents",url:"nabh.qcin.org",desc:"Upload portal documents via web portal + mobile app documents via HOPE mobile app",output:"Document submission complete"},
-  {step:4,name:"Pay Fee",url:"nabh.qcin.org",desc:"Pay applicable certification fee based on bed strength (+ 18% GST). Discount valid till 30 Sep 2026.",output:"Payment receipt + application confirmed"},
+  {step:4,name:"Pay Fee",url:"nabh.qcin.org",desc:"Pay applicable certification fee based on bed strength (+ 18% GST). See nabh.co for current fee structure.",output:"Payment receipt + application confirmed"},
   {step:5,name:"Desktop Assessment (DA)",url:"",desc:"NABH desk team reviews all submitted documents. NCs raised online. You get ONE chance to respond — no second round.",output:"NC closure letter"},
   {step:6,name:"Onsite Assessment",url:"",desc:"Date allotted after successful DA NC closure. Assessor visits physically. NCs raised on-site.",output:"Onsite assessment report"},
   {step:7,name:"Certification Committee",url:"",desc:"Final report submitted to Certification Committee. Committee approves or rejects.",output:"Approval / Rejection letter"},
   {step:8,name:"Digital Certificate",url:"",desc:"Printable digital certificate issued. Valid for 2 years. Apply for renewal 6 months before expiry.",output:"NABH ELC Certificate"},
 ];
 
-// Fee slabs (corrected per official NABH May 2026)
-const SHCO_FEE_SLABS = [
-  {label:"Up to 5 beds",beds:[1,5],fee:21000,discounted:null,discountTill:null},
-  {label:"6–20 beds",beds:[6,20],fee:40000,discounted:30000,discountTill:"30 Sep 2026"},
-  {label:"21–50 beds",beds:[21,50],fee:80000,discounted:48000,discountTill:"30 Sep 2026"},
-];
 
 // ── STEP 2: STATE VARIABLES (paste inside App function with other useState) ──
 // const [shcoMode, setShcoMode] = useState('elc'); // 'elc' | 'full'
@@ -277,20 +271,7 @@ const renderSHCOTab = () => {
     blue:"#4fc3f7", muted:"#3a5870", text:"#c8dcea", white:"#eef4f9"
   };
 
-  // ── Fee Calculator Logic ──
-  const calcFee = (beds) => {
-    const n = parseInt(beds);
-    if (!n || n < 1 || n > 50) return null;
-    const slab = SHCO_FEE_SLABS.find(s => n >= s.beds[0] && n <= s.beds[1]);
-    if (!slab) return null;
-    const base = slab.discounted || slab.fee;
-    const gst = Math.round(base * 0.18);
-    const total = base + gst;
-    const savingVsOriginal = slab.discounted ? (slab.fee - slab.discounted) : 0;
-    return { slab, base, gst, total, savingVsOriginal };
-  };
-
-  // ── ELC Doc Progress ──
+// ── ELC Doc Progress ──
   const docStatus = (id) => shcoElcProgress[id] || 'pending';
   const licStatus = (id) => shcoLicProgress[id] || 'pending';
 
@@ -403,7 +384,6 @@ const renderSHCOTab = () => {
 
   // ── OVERVIEW sub-tab ──
   const renderOverview = () => {
-    const feeResult = calcFee(shcoBeds);
     return (
       <div style={{padding:16,display:'flex',flexDirection:'column',gap:16}}>
 
@@ -441,43 +421,18 @@ const renderSHCOTab = () => {
           </div>
         </div>
 
-        {/* Fee Calculator */}
+        {/* Fee Reference */}
         <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
-          <div style={{color:T.white,fontWeight:700,fontSize:14,marginBottom:12}}>💰 Certification Fee Calculator</div>
-          <div style={{display:'flex',gap:10,alignItems:'center',marginBottom:12}}>
-            <input
-              type="number" min="1" max="50" placeholder="Enter bed count (1–50)"
-              value={shcoBeds} onChange={e => setShcoBeds(e.target.value)}
-              style={{flex:1,padding:'8px 12px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.white,fontSize:13}}
-            />
-          </div>
-          {feeResult ? (
-            <div style={{background:T.panel2,borderRadius:10,padding:14,border:`1px solid ${T.gold}44`}}>
-              <div style={{color:T.muted,fontSize:11,marginBottom:8}}>{feeResult.slab.label}</div>
-              <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8,marginBottom:10}}>
-                <div>
-                  <div style={{color:T.muted,fontSize:10}}>Certification Fee</div>
-                  <div style={{color:T.gold,fontWeight:700,fontSize:16}}>₹{feeResult.base.toLocaleString('en-IN')}</div>
-                  {feeResult.savingVsOriginal > 0 && (
-                    <div style={{color:T.green,fontSize:10}}>Saving ₹{feeResult.savingVsOriginal.toLocaleString('en-IN')} (till {feeResult.slab.discountTill})</div>
-                  )}
-                </div>
-                <div>
-                  <div style={{color:T.muted,fontSize:10}}>GST (18%)</div>
-                  <div style={{color:T.text,fontWeight:600,fontSize:14}}>₹{feeResult.gst.toLocaleString('en-IN')}</div>
-                </div>
-              </div>
-              <div style={{borderTop:`1px solid ${T.border}`,paddingTop:10,display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-                <span style={{color:T.white,fontWeight:700,fontSize:13}}>Total Payable</span>
-                <span style={{color:T.green,fontWeight:700,fontSize:18}}>₹{feeResult.total.toLocaleString('en-IN')}</span>
-              </div>
-              <div style={{marginTop:8,fontSize:11,color:T.muted}}>
-                Focus assessment: ₹15,000 + GST | Re-issue of certificate: ₹6,000 + GST
-              </div>
+          <div style={{color:T.white,fontWeight:700,fontSize:14,marginBottom:12}}>💰 Certification Fee</div>
+          <div style={{background:T.panel2,borderRadius:10,padding:14,border:`1px solid ${T.gold}44`}}>
+            <div style={{color:T.muted,fontSize:13,marginBottom:10}}>Fees vary by bed strength and are updated periodically by NABH.</div>
+            <a href="https://nabh.co/accreditations-certifications-and-empanelments/" target="_blank" rel="noopener noreferrer" style={{color:T.blue,fontWeight:600,fontSize:13,textDecoration:'underline'}}>
+              View current fee structure on the official NABH website →
+            </a>
+            <div style={{fontSize:11,color:T.muted,marginTop:10}}>
+              18% GST applicable. Fee is non-refundable and non-transferable. Focus assessment and re-issue charges apply separately.
             </div>
-          ) : shcoBeds ? (
-            <div style={{color:T.red,fontSize:12}}>ELC is only for SHCOs with 1–50 beds.</div>
-          ) : null}
+          </div>
         </div>
 
         {/* Assessment Matrix */}
@@ -757,7 +712,7 @@ const renderSHCOTab = () => {
               ['Objective Elements',189,408],
               ['Validity','2 years','4 years'],
               ['Process','Desktop + Onsite','Desktop + Onsite + Surveillance'],
-              ['Fee (6–20 beds)','₹30,000 + GST*','₹40,000 + GST'],
+              ['Fee','See nabh.co','See nabh.co'],
               ['Portal','nabh.qcin.org','portal.nabh.co'],
               ['Assessors','1–2','2–3'],
             ].map((row, i) => (
@@ -769,7 +724,6 @@ const renderSHCOTab = () => {
             ))}
           </tbody>
         </table>
-        <div style={{color:T.muted,fontSize:10,marginTop:4}}>* Discounted fee till 30 Sep 2026</div>
       </div>
 
       {/* Upgrade timeline */}
