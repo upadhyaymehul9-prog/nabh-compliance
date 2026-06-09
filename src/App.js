@@ -236,17 +236,12 @@ const SHCO_ELC_OE_SUMMARY = [
   {ch:"IMS",name:"Information Management System",standards:3,oes:11,core:8,commitment:2,excellence:1},
 ];
 
-const SHCO_FEE_SLABS = [
-  {label:"Up to 5 beds",beds:[1,5],fee:21000,discounted:null,discountTill:null},
-  {label:"6–20 beds",beds:[6,20],fee:40000,discounted:30000,discountTill:"30 Sep 2026"},
-  {label:"21–50 beds",beds:[21,50],fee:80000,discounted:48000,discountTill:"30 Sep 2026"},
-];
 
 const SHCO_ELC_PROCESS = [
   {step:1,name:"Register on HOPE Portal",url:"hope.qcin.org",desc:"Go to hope.qcin.org → Register → Fill hospital details",output:"Login credentials + application ID"},
   {step:2,name:"Fill 7-Part Questionnaire",url:"hope.qcin.org",desc:"Complete all 7 parts of the HOPE questionnaire online — General Info, Physical Infrastructure, Statutory, Clinical, Staffing, Quality, Documentation",output:"Completed questionnaire submission"},
   {step:3,name:"Upload Documents",url:"hope.qcin.org",desc:"Upload portal documents via web portal + mobile app documents via HOPE mobile app",output:"Document submission complete"},
-  {step:4,name:"Pay Fee",url:"hope.qcin.org",desc:"Pay applicable certification fee based on bed strength (+ applicable GST). Discount valid till 30 Sep 2026.",output:"Payment receipt + application confirmed"},
+  {step:4,name:"Pay Fee",url:"hope.qcin.org",desc:"Pay the applicable certification fee based on your bed strength. For current fees, visit the official NABH website (nabh.co).",output:"Payment receipt + application confirmed"},
   {step:5,name:"Desktop Assessment (DA)",url:"",desc:"NABH desk team reviews all submitted documents. NCs raised online. Two rounds of NC closure available at DA stage.",output:"NC closure letter"},
   {step:6,name:"Onsite Assessment",url:"",desc:"Date allotted after successful DA NC closure. Assessor visits physically. NCs raised on-site.",output:"Onsite assessment report"},
   {step:7,name:"Certification Committee",url:"",desc:"Final report submitted to Certification Committee. Committee approves or rejects.",output:"Approval / Rejection letter"},
@@ -1856,7 +1851,7 @@ const HCO_ELC_PROCESS = [
   {step:1,name:"Register on HOPE Portal",url:"hope.qcin.org",desc:"Go to www.hope.qcin.org → Click Register → Fill Hospital User Registration Form (Hospital name, SPOC details, State, total sanctioned beds)",output:"Login credentials sent to registered email"},
   {step:2,name:"Fill 7-Part Questionnaire",url:"hope.qcin.org",desc:"Complete all 7 parts on the web portal: General Info, Physical Infrastructure, Statutory Compliances, Clinical Services, Hospital Staffing, Quality Improvement Process, Documentation. Save progress at each step.",output:"Completed questionnaire submission (cannot edit after Final Submit)"},
   {step:3,name:"Upload Documents",url:"hope.qcin.org",desc:"Portal documents → upload via web portal (Upload any file icon). Mobile documents → upload via HOPE Android app (View Uploaded File icon). Save on portal first. Cannot use both simultaneously.",output:"Document submission complete"},
-  {step:4,name:"Pay Fee",url:"hope.qcin.org",desc:"Pay HCO ELC fee based on bed strength (w.e.f. June 2025): 51–100 beds ₹96,000 | 101–300 beds ₹1,20,000 — plus applicable GST. Fee is non-refundable and non-transferable. Once paid, application moves to DA team.",output:"Payment receipt + Permanent Application Number"},
+  {step:4,name:"Pay Fee",url:"hope.qcin.org",desc:"Pay the applicable certification fee based on your bed strength (18% GST extra). For current fees, visit the official NABH website (nabh.co). Fee is non-refundable and non-transferable. Once paid, application moves to DA team.",output:"Payment receipt + Permanent Application Number"},
   {step:5,name:"Desktop Assessment (DA)",url:"",desc:"NABH DA team reviews all submitted documents online. NCs raised with remarks. HCO submits NC reply + supporting document upload. Two rounds of NC closure cycle available at DA stage.",output:"DA NC closure → Date allotment for onsite assessment"},
   {step:6,name:"Onsite Assessment",url:"",desc:"Physical visit by NABH assessor. Assessment activities: document review, patient care area visit, functional interviews, facility tours. Assessor uploads report within 7 days. HCO gets two NC closure cycles.",output:"Onsite assessment report + NC closure"},
   {step:7,name:"Certification Committee",url:"",desc:"After all NCs closed, case placed before Certification Committee. Committee recommendations are final. If rejected, appeal facility is available after paying appeal fee.",output:"Approval letter / Rejection letter"},
@@ -1864,13 +1859,7 @@ const HCO_ELC_PROCESS = [
 ];
 
 const HCO_FEE = {
-  gstRate: 0.18,
   label: "HCO Entry Level Certification (>50 sanctioned beds)",
-  note: "Fee is non-refundable and non-transferable. w.e.f. June 2025. Source: NABH HOPE ELC fee schedule.",
-  slabs: [
-    { beds: "51–100 beds",  base: 96000 },
-    { beds: "101–300 beds", base: 120000 },
-  ],
 };
 
 // ── NABH 6th Edition official chapter order ─────────────────────────────
@@ -4997,7 +4986,6 @@ export default function App() {
   const [shcoOeExpanded, setShcoOeExpanded] = useState({});
   const [shcoOeTips, setShcoOeTips] = useState({});
   const [shcoOeTipsLoading, setShcoOeTipsLoading] = useState({});
-  const [shcoBeds, setShcoBeds] = useState('');
   const [shcoDocFilter, setShcoDocFilter] = useState('all');
   const [shcoDocPart, setShcoDocPart] = useState('all');
   const [hcoMode, setHcoMode] = useState('elc');
@@ -5540,19 +5528,6 @@ export default function App() {
 
   const renderSHCOTab = () => {
 
-  // ── Fee Calculator Logic ──
-  const calcFee = (beds) => {
-    const n = parseInt(beds);
-    if (!n || n < 1 || n > 50) return null;
-    const slab = SHCO_FEE_SLABS.find(s => n >= s.beds[0] && n <= s.beds[1]);
-    if (!slab) return null;
-    const base = slab.discounted || slab.fee;
-    const gst = Math.round(base * 0.18);
-    const total = base + gst;
-    const savingVsOriginal = slab.discounted ? (slab.fee - slab.discounted) : 0;
-    return { slab, base, gst, total, savingVsOriginal };
-  };
-
   // ── ELC Doc Progress ──
   const docStatus = (id) => shcoElcProgress[id] || 'pending';
   const licStatus = (id) => shcoLicProgress[id] || 'pending';
@@ -5688,7 +5663,6 @@ export default function App() {
 
   // ── OVERVIEW sub-tab ──
   const renderOverview = () => {
-    const feeResult = calcFee(shcoBeds);
     return (
       <div style={{padding:16,display:'flex',flexDirection:'column',gap:16}}>
 
@@ -5790,40 +5764,23 @@ export default function App() {
           })()}
         </div>
 
-        {/* Fee Calculator */}
+        {/* Fee Reference */}
         <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
-          <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:12}}>💰 Certification Fee Calculator</div>
-          <div style={{display:'flex',gap:10,alignItems:'center',marginBottom:12}}>
-            <input
-              type="number" min="1" max="50" placeholder="Enter bed count (1–50)"
-              value={shcoBeds} onChange={e => setShcoBeds(e.target.value)}
-              style={{flex:1,padding:'8px 12px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.white,fontSize:15}}
-            />
-          </div>
-          {feeResult ? (
-            <div style={{background:T.panel2,borderRadius:10,padding:14,border:`1px solid ${T.gold}44`}}>
-              <div style={{color:T.muted,fontSize:13,marginBottom:8}}>{feeResult.slab.label}</div>
-              <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8,marginBottom:10}}>
-                <div>
-                  <div style={{color:T.muted,fontSize:12}}>Certification Fee</div>
-                  <div style={{color:T.gold,fontWeight:700,fontSize:16}}>₹{feeResult.base.toLocaleString('en-IN')}</div>
-                  {feeResult.savingVsOriginal > 0 && (
-                    <div style={{color:T.green,fontSize:12}}>Saving ₹{feeResult.savingVsOriginal.toLocaleString('en-IN')} (till {feeResult.slab.discountTill})</div>
-                  )}
-                </div>
-                <div>
-                  <div style={{color:T.muted,fontSize:12}}>GST (applicable rate)</div>
-                  <div style={{color:T.text,fontWeight:600,fontSize:16}}>₹{feeResult.gst.toLocaleString('en-IN')}</div>
-                </div>
-              </div>
-              <div style={{borderTop:`1px solid ${T.border}`,paddingTop:10,display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-                <span style={{color:T.white,fontWeight:700,fontSize:15}}>Total Payable</span>
-                <span style={{color:T.green,fontWeight:700,fontSize:18}}>₹{feeResult.total.toLocaleString('en-IN')}</span>
-              </div>
+          <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:12}}>💰 Certification Fee</div>
+          <div style={{background:T.panel2,borderRadius:10,padding:14,border:`1px solid ${T.gold}44`}}>
+            <div style={{color:T.muted,fontSize:14,marginBottom:10}}>Fees vary by bed strength and are updated periodically by NABH.</div>
+            <a
+              href="https://nabh.co/accreditations-certifications-and-empanelments/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{color:T.blue,fontWeight:600,fontSize:14,textDecoration:'underline'}}
+            >
+              View current fee structure on the official NABH website →
+            </a>
+            <div style={{fontSize:12,color:T.muted,marginTop:10}}>
+              18% GST applicable. Fee is non-refundable and non-transferable. Focus assessment and re-issue charges apply separately.
             </div>
-          ) : shcoBeds ? (
-            <div style={{color:T.red,fontSize:14}}>ELC is only for SHCOs with 1–50 beds.</div>
-          ) : null}
+          </div>
         </div>
 
         {/* Assessment Matrix */}
@@ -6080,7 +6037,7 @@ export default function App() {
               ['Objective Elements',189,408],
               ['Validity','2 years','4 years'],
               ['Process','Desktop + Onsite','Desktop + Onsite + Surveillance'],
-              ['Fee (6–20 beds)','₹30,000 + GST*','₹40,000 + GST'],
+              ['Fee','See nabh.co','See nabh.co'],
               ['Portal','hope.qcin.org','portal.nabh.co'],
               ['Assessors','1–2','2–3'],
             ].map((row, i) => (
@@ -6623,31 +6580,18 @@ export default function App() {
       <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
         <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:12}}>💰 HCO ELC Certification Fee</div>
         <div style={{background:T.panel2,borderRadius:10,padding:14,border:`1px solid ${T.gold}44`}}>
-          <div style={{color:T.muted,fontSize:13,marginBottom:10}}>{HCO_FEE.label} — fee by bed strength (w.e.f. June 2025)</div>
-          <table style={{width:'100%',borderCollapse:'collapse',fontSize:13,marginBottom:10}}>
-            <thead>
-              <tr>
-                {['Bed Strength','Fee (excl. GST)','GST @ 18%','Total Payable'].map(h => (
-                  <th key={h} style={{padding:'7px 10px',background:T.panel,color:T.gold,fontWeight:600,textAlign:'left',border:`1px solid ${T.border}`,fontSize:12}}>{h}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {HCO_FEE.slabs.map((s,i) => {
-                const g = Math.round(s.base * HCO_FEE.gstRate);
-                return (
-                  <tr key={i} style={{background: i%2===0 ? T.panel : T.panel2}}>
-                    <td style={{padding:'7px 10px',color:T.muted,border:`1px solid ${T.border}`}}>{s.beds}</td>
-                    <td style={{padding:'7px 10px',color:T.gold,fontWeight:700,border:`1px solid ${T.border}`}}>₹{s.base.toLocaleString('en-IN')}</td>
-                    <td style={{padding:'7px 10px',color:T.text,border:`1px solid ${T.border}`}}>₹{g.toLocaleString('en-IN')}</td>
-                    <td style={{padding:'7px 10px',color:T.green,fontWeight:700,border:`1px solid ${T.border}`}}>₹{(s.base+g).toLocaleString('en-IN')}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-          <div style={{fontSize:13,color:T.muted}}>
-            {HCO_FEE.note}
+          <div style={{color:T.muted,fontSize:13,marginBottom:10}}>{HCO_FEE.label}</div>
+          <div style={{color:T.muted,fontSize:13,marginBottom:10}}>Fees vary by bed strength and are updated periodically by NABH.</div>
+          <a
+            href="https://nabh.co/accreditations-certifications-and-empanelments/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{color:T.blue,fontWeight:600,fontSize:13,textDecoration:'underline'}}
+          >
+            View current fee structure on the official NABH website →
+          </a>
+          <div style={{fontSize:12,color:T.muted,marginTop:10}}>
+            18% GST applicable. Fee is non-refundable and non-transferable. Focus assessment and re-issue charges apply separately.
           </div>
         </div>
       </div>
@@ -6666,7 +6610,7 @@ export default function App() {
             <tbody>
               {[
                 ['Sanctioned Beds','>50 beds','≤50 beds'],
-                ['ELC Fee','₹96k–₹1.2L + GST (by beds)','₹21,000–₹48,000 + GST'],
+                ['ELC Fee','See nabh.co','See nabh.co'],
                 ['Certification Validity','2 Years','2 Years'],
                 ['Portal','hope.qcin.org','hope.qcin.org'],
                 ['Upgrade Path','NABH 6th Ed. (639 OEs)','NABH Hospital (408 OEs)'],
@@ -6900,7 +6844,7 @@ export default function App() {
       {[
         {phase:'Now – Month 2',action:'Gap analysis: compare current practices against HCO ELC standards. Identify missing documents and expired licenses.',color:T.blue},
         {phase:'Month 2–4',action:'Collect all 223 documents and 26 licenses. Train SPOC on HOPE portal and mobile app.',color:T.blue},
-        {phase:'Month 4–5',action:'Register on hope.qcin.org. Fill all 7 parts. Upload portal + mobile app documents. Pay fee based on bed strength (₹96,000 for 51–100 beds; ₹1,20,000 for 101–300 beds) + applicable GST.',color:T.orange},
+        {phase:'Month 4–5',action:'Register on hope.qcin.org. Fill all 7 parts. Upload portal + mobile app documents. Pay the applicable certification fee (see nabh.co for current rates) + 18% GST.',color:T.orange},
         {phase:'Month 5–6',action:'Desktop Assessment — respond to NC rounds (two cycles available). Submit complete evidence first time.',color:T.orange},
         {phase:'Month 6–8',action:'Onsite Assessment by NABH assessor. Close onsite NCs (two cycles). Submit feedback.',color:T.orange},
         {phase:'Month 8–9',action:'Certification Committee decision. Receive HCO ELC Certificate (2-year validity).',color:T.green},
