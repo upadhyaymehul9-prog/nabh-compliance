@@ -2,6 +2,7 @@
 User-agent: *
 Allow: /
 Allow: /nabh-full-form.html
+Allow: /nabh-accreditation-cost.html
 Allow: /blog/
 Allow: /blog/nabh-accreditation-preparation-guide
 Allow: /blog/importance-of-nabh-accreditation
