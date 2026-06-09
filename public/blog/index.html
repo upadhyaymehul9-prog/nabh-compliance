@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — NABH Accreditation Guides & Hospital Quality Resources | AccredReady</title>
+  <meta name="description" content="Practical guides, checklists, and insights for hospital quality teams preparing for NABH accreditation in India. Written by the AccredReady team." />
+  <meta name="keywords" content="NABH blog, NABH accreditation guide, hospital quality management, NABH 6th edition, NABH checklist" />
+  <link rel="canonical" href="https://accredready.in/blog" />
+  <meta property="og:title" content="Blog — NABH Accreditation Guides & Hospital Quality Resources" />
+  <meta property="og:description" content="Practical guides, checklists, and insights for hospital quality teams preparing for NABH accreditation in India." />
+  <meta property="og:url" content="https://accredready.in/blog" />
+  <meta property="og:image" content="https://accredready.in/logo512.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "AccredReady Blog",
+    "description": "Practical guides and resources for NABH accreditation and hospital quality management in India.",
+    "url": "https://accredready.in/blog",
+    "publisher": { "@type": "Organization", "name": "AccredReady", "url": "https://accredready.in" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #040d1a; --accent: #2563eb; --accent2: #38bdf8;
+      --gold: #f59e0b; --white: #f8fafc; --muted: #94a3b8; --card: #0f1f38;
+      --green: #4ade80;
+    }
+    body { background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; line-height: 1.7; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); position: sticky; top: 0; background: rgba(4,13,26,0.95); backdrop-filter: blur(12px); z-index: 100; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--accent2); text-decoration: none; }
+    .nav-cta { background: var(--accent); color: white; padding: 0.55rem 1.4rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+    .hero { max-width: 860px; margin: 0 auto; padding: 4rem 2rem 3rem; text-align: center; }
+    .badge { display: inline-block; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3); color: var(--gold); padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1.5rem; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+    h1 span { color: var(--accent2); }
+    .hero-sub { font-size: 1.05rem; color: var(--muted); max-width: 580px; margin: 0 auto; }
+
+    /* Filter tabs */
+    .filters { max-width: 900px; margin: 0 auto 2.5rem; padding: 0 2rem; display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .filter-btn { background: transparent; border: 1px solid rgba(255,255,255,0.12); color: var(--muted); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.82rem; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all 0.2s; }
+    .filter-btn:hover, .filter-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
+
+    /* Post grid */
+    .posts { max-width: 900px; margin: 0 auto; padding: 0 2rem 5rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+
+    /* Featured post spans full width */
+    .post-card { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 1.75rem; text-decoration: none; display: flex; flex-direction: column; gap: 0.75rem; transition: border-color 0.2s, transform 0.2s; }
+    .post-card:hover { border-color: rgba(56,189,248,0.35); transform: translateY(-2px); }
+    .post-card.featured { grid-column: 1 / -1; flex-direction: row; gap: 2rem; align-items: flex-start; }
+    @media (max-width: 600px) { .post-card.featured { flex-direction: column; } }
+
+    .post-tag { display: inline-block; background: rgba(37,99,235,0.15); border: 1px solid rgba(37,99,235,0.3); color: var(--accent2); padding: 0.2rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; width: fit-content; }
+    .post-tag.green { background: rgba(74,222,128,0.1); border-color: rgba(74,222,128,0.25); color: var(--green); }
+    .post-tag.gold { background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.3); color: var(--gold); }
+
+    .post-body { flex: 1; display: flex; flex-direction: column; gap: 0.6rem; }
+    .post-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--white); line-height: 1.35; }
+    .post-card.featured .post-title { font-size: 1.4rem; }
+    .post-excerpt { color: var(--muted); font-size: 0.9rem; line-height: 1.6; flex: 1; }
+    .post-meta { display: flex; gap: 1rem; color: var(--muted); font-size: 0.8rem; margin-top: auto; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.06); }
+    .read-more { color: var(--accent2); font-size: 0.85rem; font-weight: 600; margin-top: 0.25rem; }
+
+    .featured-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--gold); margin-bottom: 0.5rem; }
+
+    /* Empty state for future posts */
+    .coming-soon { background: var(--card); border: 1px dashed rgba(255,255,255,0.1); border-radius: 14px; padding: 2rem; text-align: center; color: var(--muted); font-size: 0.9rem; }
+
+    /* Newsletter */
+    .newsletter { max-width: 900px; margin: 0 auto 3rem; padding: 0 2rem; }
+    .newsletter-inner { background: linear-gradient(135deg, #0a1f3d, #1e3a8a); border: 1px solid rgba(37,99,235,0.3); border-radius: 14px; padding: 2.25rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .newsletter-text h2 { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .newsletter-text p { color: var(--muted); font-size: 0.9rem; margin: 0; }
+    .newsletter-form { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .newsletter-form input { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 0.65rem 1rem; color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; outline: none; width: 220px; }
+    .newsletter-form input::placeholder { color: var(--muted); }
+    .newsletter-form input:focus { border-color: var(--accent2); }
+    .btn-primary { background: var(--accent); color: white; padding: 0.65rem 1.4rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-block; border: none; cursor: pointer; }
+
+    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer a { color: var(--muted); text-decoration: none; margin: 0 0.75rem; }
+    footer a:hover { color: var(--accent2); }
+    footer p { margin-bottom: 0.75rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://accredready.in" class="logo">AccredReady</a>
+  <a href="https://accredready.in" class="nav-cta">Try AccredReady Free</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">NABH & Hospital Quality</div>
+  <h1>The <span>AccredReady Blog</span></h1>
+  <p class="hero-sub">Practical guides, checklists, and insights for hospital quality teams preparing for NABH accreditation in India.</p>
+</div>
+
+<div class="filters">
+  <button class="filter-btn active">All Articles</button>
+  <button class="filter-btn">Preparation Guides</button>
+  <button class="filter-btn">NABH Standards</button>
+  <button class="filter-btn">Checklists</button>
+  <button class="filter-btn">KPIs & Indicators</button>
+  <button class="filter-btn">Infection Control</button>
+</div>
+
+<div class="posts">
+
+  <!-- Featured post -->
+  <a href="https://accredready.in/blog/nabh-accreditation-preparation-guide" class="post-card featured">
+    <div class="post-body">
+      <div class="featured-label">Featured</div>
+      <div class="post-tag">Preparation Guide</div>
+      <div class="post-title">How to Prepare for NABH Accreditation in 2026 — Step-by-Step Hospital Guide</div>
+      <div class="post-excerpt">A practical, step-by-step roadmap for hospital teams — from initial gap assessment and SOP development through staff training, internal audits, and the final NABH on-site evaluation. Covers all 6 chapters of the NABH 6th Edition standards.</div>
+      <div class="post-meta">
+        <span>June 9, 2026</span>
+        <span>8 min read</span>
+        <span>For Hospital Quality Teams</span>
+      </div>
+      <div class="read-more">Read article →</div>
+    </div>
+  </a>
+
+  <!-- Post 2 -->
+  <a href="https://accredready.in/blog/importance-of-nabh-accreditation.html" class="post-card">
+    <div class="post-tag gold">Why NABH</div>
+    <div class="post-title">Why NABH Accreditation Matters More Than Ever for Indian Hospitals</div>
+    <div class="post-excerpt">From patient safety to insurance empanelment — a plain-language guide to why NABH accreditation is no longer optional for Indian hospitals in 2026.</div>
+    <div class="post-meta">
+      <span>June 2026</span>
+      <span>6 min read</span>
+    </div>
+    <div class="read-more">Read article →</div>
+  </a>
+
+  <!-- Post 3 -->
+  <a href="https://accredready.in/blog/nabh-internal-audit-checklist" class="post-card">
+    <div class="post-tag">Checklist</div>
+    <div class="post-title">NABH Internal Audit Checklist — Complete Guide for Hospitals</div>
+    <div class="post-excerpt">How to run an effective NABH internal audit — chapter-by-chapter checklists, how to score measurable elements, managing corrective actions, and what records assessors expect.</div>
+    <div class="post-meta">
+      <span>June 2026</span>
+      <span>10 min read</span>
+    </div>
+    <div class="read-more">Read article →</div>
+  </a>
+
+  <!-- Post 4 -->
+  <a href="https://accredready.in/blog/nabh-kpi-indicators" class="post-card">
+    <div class="post-tag green">KPIs & Indicators</div>
+    <div class="post-title">50 NABH Quality Indicators Every Hospital Must Track in 2026</div>
+    <div class="post-excerpt">The complete reference list of NABH quality indicators — clinical, patient safety, infection control, medication, and HR — with measurement formulas and assessor tips.</div>
+    <div class="post-meta">
+      <span>June 2026</span>
+      <span>12 min read</span>
+    </div>
+    <div class="read-more">Read article →</div>
+  </a>
+
+  <!-- Placeholder cards — coming soon -->
+  <!-- Post 5 -->
+  <a href="https://accredready.in/blog/nabh-hospital-infection-control" class="post-card">
+    <div class="post-tag">Infection Control</div>
+    <div class="post-title">NABH Hospital Infection Control (HIC) — Complete Compliance Guide 2026</div>
+    <div class="post-excerpt">Everything your IPC team needs — hand hygiene audits, HAI surveillance, biomedical waste, sterilization monitoring, antibiotic stewardship, and the most common HIC non-conformances to fix before assessment.</div>
+    <div class="post-meta">
+      <span>June 2026</span>
+      <span>11 min read</span>
+    </div>
+    <div class="read-more">Read article →</div>
+  </a>
+
+  <!-- Post 6 -->
+  <a href="https://accredready.in/blog/nabh-pre-patient-rights" class="post-card">
+    <div class="post-tag gold">Patient Rights</div>
+    <div class="post-title">NABH Patient Rights & Education (PRE) — Complete Chapter Guide 2026</div>
+    <div class="post-excerpt">Rights charter display, informed consent timing, patient education with teach-back, grievance redressal, confidentiality, and vulnerable patient protections — everything the PRE chapter requires.</div>
+    <div class="post-meta">
+      <span>June 2026</span>
+      <span>10 min read</span>
+    </div>
+    <div class="read-more">Read article →</div>
+  </a>
+
+</div>
+
+<div class="newsletter">
+  <div class="newsletter-inner">
+    <div class="newsletter-text">
+      <h2>New articles, direct to your inbox</h2>
+      <p>NABH guides and hospital quality tips — no spam, unsubscribe anytime.</p>
+    </div>
+    <form class="newsletter-form" onsubmit="return false;">
+      <input type="email" placeholder="your@hospital.com" />
+      <button type="submit" class="btn-primary">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 AccredReady · NABH Compliance Software for Indian Hospitals</p>
+  <div>
+    <a href="https://accredready.in">Home</a>
+    <a href="https://accredready.in/nabh-guide">NABH Guide</a>
+    <a href="https://accredready.in/blog">Blog</a>
+    <a href="https://accredready.in/privacy">Privacy</a>
+  </div>
+</footer>
+
+</body>
+</html>

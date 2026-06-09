@@ -32,7 +32,8 @@
       "Bash(where tesseract:*)",
       "Read(//c/Program Files/Tesseract-OCR/**)",
       "Read(//c/Program Files \\(x86\\)/Tesseract-OCR/**)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(git stash:*)"
     ]
   }
 }
