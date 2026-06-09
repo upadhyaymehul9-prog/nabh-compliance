@@ -1,3 +1,14 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Allow: /blog/
+Allow: /blog/nabh-accreditation-preparation-guide
+Allow: /blog/importance-of-nabh-accreditation
+Allow: /blog/nabh-internal-audit-checklist
+Allow: /blog/nabh-kpi-indicators
+Allow: /blog/nabh-hospital-infection-control
+Allow: /blog/nabh-pre-patient-rights
+Disallow: /static/
+Disallow: /build/
+
+Sitemap: https://accredready.in/sitemap.xml
