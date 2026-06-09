@@ -33,6 +33,19 @@
       "Read(//c/Program Files/Tesseract-OCR/**)",
       "Read(//c/Program Files \\(x86\\)/Tesseract-OCR/**)",
       "Bash(python:*)",
+      "Bash(git checkout:*)",
+      "Bash(pdftotext:*)",
+      "Bash(grep -n \"^CORE\\\\|^Commitment\\\\|^Excellence\\\\|^Standard$\\\\|^Standard\\\\n\" \"C:\\\\Users\\\\ADMIN\\\\Desktop\\\\NABH APP\\\\entry level\\\\elc_extracted.txt\")",
+      "Bash(supabase:*)",
+      "Bash(echo \"EXIT:$?\")",
+      "Read(//c/Users/ADMIN/.supabase/**)",
+      "Read(//c/Users/ADMIN/AppData/Roaming/supabase/**)",
+      "Bash(where pdftotext:*)",
+      "Bash(where mutool:*)",
+      "Bash(where python:*)",
+      "Bash(where python3:*)",
+      "Read(//c/Users/ADMIN/Desktop/NABH APP/**)",
+      "Bash(awk 'NR>=3092 && NR<=3455 && /\\\\bview\\\\b/' src/App.js)",
       "Bash(git stash:*)"
     ]
   }
