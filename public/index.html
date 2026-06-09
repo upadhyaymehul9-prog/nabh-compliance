@@ -82,6 +82,91 @@
 
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      #resources-section {
+        background: #040d1a;
+        border-top: 1px solid rgba(255,255,255,0.06);
+        padding: 4rem 2rem;
+        font-family: 'DM Sans', sans-serif;
+      }
+      #resources-section .rs-inner {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      #resources-section .rs-badge {
+        display: inline-block;
+        background: rgba(245,158,11,0.1);
+        border: 1px solid rgba(245,158,11,0.3);
+        color: #f59e0b;
+        padding: 0.3rem 1rem;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+      #resources-section h2 {
+        font-family: 'Syne', sans-serif;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 800;
+        color: #f8fafc;
+        margin-bottom: 0.5rem;
+      }
+      #resources-section h2 span { color: #38bdf8; }
+      #resources-section .rs-sub {
+        color: #94a3b8;
+        font-size: 0.97rem;
+        margin-bottom: 2.5rem;
+      }
+      #resources-section .rs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1rem;
+      }
+      #resources-section .rs-card {
+        background: #0f1f38;
+        border: 1px solid rgba(255,255,255,0.07);
+        border-radius: 12px;
+        padding: 1.25rem 1.5rem;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        transition: border-color 0.2s, transform 0.2s;
+      }
+      #resources-section .rs-card:hover {
+        border-color: rgba(56,189,248,0.4);
+        transform: translateY(-2px);
+      }
+      #resources-section .rs-card-label {
+        font-size: 0.72rem;
+        color: #38bdf8;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      #resources-section .rs-card-title {
+        font-family: 'Syne', sans-serif;
+        font-size: 0.97rem;
+        font-weight: 700;
+        color: #f8fafc;
+        line-height: 1.4;
+      }
+      #resources-section .rs-card-desc {
+        font-size: 0.83rem;
+        color: #94a3b8;
+        line-height: 1.5;
+      }
+      #resources-section .rs-arrow {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        color: #2563eb;
+        font-weight: 600;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -102,6 +187,48 @@
       </nav>
     </div>
     <div id="root"></div>
+
+    <!-- Resources / Learn Section -->
+    <section id="resources-section">
+      <div class="rs-inner">
+        <div class="rs-badge">Free Resources</div>
+        <h2>Learn About <span>NABH Accreditation</span></h2>
+        <p class="rs-sub">In-depth guides, checklists, and references to help your hospital achieve accreditation.</p>
+        <div class="rs-grid">
+          <a href="/nabh-guide.html" class="rs-card">
+            <span class="rs-card-label">Guide</span>
+            <span class="rs-card-title">NABH Accreditation Guide</span>
+            <span class="rs-card-desc">Full form, login, certificate process, and how to prepare for assessment.</span>
+            <span class="rs-arrow">Read guide →</span>
+          </a>
+          <a href="/nabh-internal-audit-checklist.html" class="rs-card">
+            <span class="rs-card-label">Checklist</span>
+            <span class="rs-card-title">NABH Internal Audit Checklist</span>
+            <span class="rs-card-desc">35-chapter audit checklist covering all NABH 6th Edition standards.</span>
+            <span class="rs-arrow">View checklist →</span>
+          </a>
+          <a href="/nabh-kpi-indicators.html" class="rs-card">
+            <span class="rs-card-label">Reference</span>
+            <span class="rs-card-title">NABH KPI Indicators</span>
+            <span class="rs-card-desc">Key performance indicators required for NABH compliance and reporting.</span>
+            <span class="rs-arrow">Explore KPIs →</span>
+          </a>
+          <a href="/nabh-shco-checklist.html" class="rs-card">
+            <span class="rs-card-label">Checklist</span>
+            <span class="rs-card-title">NABH SHCO Checklist</span>
+            <span class="rs-card-desc">Small Healthcare Organisation accreditation checklist and standards.</span>
+            <span class="rs-arrow">View checklist →</span>
+          </a>
+          <a href="/blog/index.html" class="rs-card">
+            <span class="rs-card-label">Blog</span>
+            <span class="rs-card-title">NABH Blog & Articles</span>
+            <span class="rs-card-desc">Practical articles on infection control, patient rights, audit prep, and more.</span>
+            <span class="rs-arrow">Read articles →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Crisp Chat Widget -->
     <script type="text/javascript">
       window.$crisp=[];
