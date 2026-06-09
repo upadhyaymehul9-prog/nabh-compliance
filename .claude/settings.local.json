@@ -46,7 +46,9 @@
       "Bash(where python3:*)",
       "Read(//c/Users/ADMIN/Desktop/NABH APP/**)",
       "Bash(awk 'NR>=3092 && NR<=3455 && /\\\\bview\\\\b/' src/App.js)",
-      "Bash(git stash:*)"
+      "Bash(git stash:*)",
+      "Bash(grep -n \"₹\\\\|fee\\\\|cost\\\\|lakh\" /c/Users/ADMIN/Desktop/nabh-compliance/public/blog/*.html)",
+      "Bash(xargs ls:*)"
     ]
   }
 }
