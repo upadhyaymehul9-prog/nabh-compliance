@@ -3810,6 +3810,89 @@ function KPIsScreen({ hospitalId, user }) {
   );
 }
 
+// ── AUDITS — shared constants & styles ────────────────────────────────────────────────────────────
+
+const AUDIT_CATEGORIES=[
+  {value:"clinical",label:"🏥 Clinical Audit"},
+  {value:"nursing",label:"💉 Nursing Audit"},
+  {value:"qip",label:"🎯 Quality Improvement Project"},
+  {value:"financial",label:"💰 Financial Audit"},
+  {value:"structural",label:"🏗️ Structural Audit"},
+  {value:"process",label:"⚙️ Process Audit"},
+  {value:"outcome",label:"📊 Outcome Audit"},
+  {value:"pharmacy",label:"💊 Pharmacy Audit"},
+  {value:"dietary",label:"🍽️ Dietary Audit"},
+  {value:"other",label:"📋 Other"},
+];
+
+// Defined once at module level. Getter properties read the current T at spread/access time
+// so theme changes are reflected correctly without recreating this object inside components.
+const inp={
+  get padding(){return"6px 9px"},
+  get borderRadius(){return 6},
+  get border(){return`1px solid ${T.border}`},
+  get background(){return T.panel},
+  get color(){return T.text},
+  get fontSize(){return 13},
+};
+const lbl={
+  get fontSize(){return 11},
+  get color(){return T.muted},
+  get marginBottom(){return 3},
+  get letterSpacing(){return 1},
+};
+
+// ── CREATE AUDIT FORM — stable component so typing doesn't cause AuditsScreen to re-render ────────
+function CreateAuditForm({ onSubmit, saving }) {
+  const [name,setName]=useState("");
+  const [audit_category,setAuditCategory]=useState("clinical");
+  const [is_core,setIsCore]=useState(false);
+  const [parameters,setParameters]=useState([]);
+  const [newParam,setNewParam]=useState("");
+
+  return (
+    <div style={{background:T.panel,border:`1px solid ${T.gold}40`,borderRadius:12,padding:"18px 20px",marginBottom:14}}>
+      <div style={{fontSize:13,fontWeight:700,color:T.gold,marginBottom:14,letterSpacing:1}}>📋 NEW AUDIT</div>
+      <div style={{display:"grid",gap:10}}>
+        <div>
+          <div style={lbl}>AUDIT NAME *</div>
+          <input value={name} onChange={e=>setName(e.target.value)} placeholder="e.g. Hand Hygiene Compliance Audit, OT Checklist Audit…" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+        </div>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
+          <div>
+            <div style={lbl}>CATEGORY</div>
+            <select value={audit_category} onChange={e=>setAuditCategory(e.target.value)} style={{...inp,width:"100%"}}>
+              {AUDIT_CATEGORIES.map(c=><option key={c.value} value={c.value}>{c.label}</option>)}
+            </select>
+          </div>
+          <div style={{display:"flex",alignItems:"flex-end",paddingBottom:4}}>
+            <label style={{display:"flex",alignItems:"center",gap:6,fontSize:13,color:T.text,cursor:"pointer"}}>
+              <input type="checkbox" checked={is_core} onChange={e=>setIsCore(e.target.checked)}/> Mark as CORE (critical audit)
+            </label>
+          </div>
+        </div>
+        <div>
+          <div style={lbl}>CHECKLIST PARAMETERS (optional — add items to check during audit)</div>
+          {parameters.map((p,i)=>(
+            <div key={i} style={{display:"flex",gap:6,marginBottom:5,alignItems:"center"}}>
+              <input value={p} onChange={e=>{const ps=[...parameters];ps[i]=e.target.value;setParameters(ps);}} style={{...inp,flex:1}} placeholder={`Parameter ${i+1}`}/>
+              <button onClick={()=>setParameters(f=>f.filter((_,j)=>j!==i))} style={{padding:"4px 9px",borderRadius:5,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:13,cursor:"pointer"}}>✕</button>
+            </div>
+          ))}
+          <div style={{display:"flex",gap:6,marginTop:4}}>
+            <input value={newParam} onChange={e=>setNewParam(e.target.value)} onKeyDown={e=>{if(e.key==="Enter"&&newParam.trim()){setParameters(f=>[...f,newParam.trim()]);setNewParam("");}}} placeholder="Type parameter and press Enter…" style={{...inp,flex:1}}/>
+            <button onClick={()=>{if(newParam.trim()){setParameters(f=>[...f,newParam.trim()]);setNewParam("");}}} style={{padding:"4px 12px",borderRadius:6,background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold,fontSize:12,cursor:"pointer"}}>+ Add</button>
+          </div>
+          <div style={{fontSize:11,color:T.muted,marginTop:4}}>Parameters become checkboxes during audit recording. Leave empty if you prefer free-text findings only.</div>
+        </div>
+        <button onClick={()=>onSubmit({name,audit_category,is_core,parameters})} disabled={saving||!name.trim()} style={{padding:"9px 20px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:14,fontWeight:700,cursor:"pointer",opacity:saving||!name.trim()?0.5:1,marginTop:4}}>
+          {saving?"Creating…":"✓ Create Audit"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
 // ── AUDITS — 3 tabs: NABH Audits | My Audits | What is Audit ─────────────────────────────────────
 function AuditsScreen({ hospitalId, auditMainTab, navigate }) {
 
@@ -3830,8 +3913,6 @@ function AuditsScreen({ hospitalId, auditMainTab, navigate }) {
   const [customAudits,setCustomAudits]=useState([]);
   const [customRecords,setCustomRecords]=useState([]);
   const [showCreateForm,setShowCreateForm]=useState(false);
-  const [createForm,setCreateForm]=useState({name:"",audit_category:"clinical",is_core:false,parameters:[]});
-  const [newParam,setNewParam]=useState("");
   const [savingCreate,setSavingCreate]=useState(false);
   const [customExpanded,setCustomExpanded]=useState(null);
   const [showCustomRecord,setShowCustomRecord]=useState(null);
@@ -3906,19 +3987,17 @@ function AuditsScreen({ hospitalId, auditMainTab, navigate }) {
   };
 
   // ── CUSTOM AUDIT functions ──
-  const createCustomAudit=async()=>{
-    if(!createForm.name.trim()){alert("Audit name is required.");return;}
+  const createCustomAudit=async(formData)=>{
     setSavingCreate(true);
     const{data,error}=await supabase.from("custom_audits").insert({
       hospital_id:hospitalId,
-      name:createForm.name.trim(),
-      audit_category:createForm.audit_category,
-      is_core:createForm.is_core,
-      parameters:createForm.parameters,
+      name:formData.name.trim(),
+      audit_category:formData.audit_category,
+      is_core:formData.is_core,
+      parameters:formData.parameters,
     }).select().single();
     if(!error){
       setCustomAudits(p=>[data,...p]);
-      setCreateForm({name:"",audit_category:"clinical",is_core:false,parameters:[]});
       setShowCreateForm(false);
     } else { alert("Error: "+error.message); }
     setSavingCreate(false);
@@ -3972,21 +4051,6 @@ function AuditsScreen({ hospitalId, auditMainTab, navigate }) {
     setCustomRecords(r=>r.filter(x=>x.id!==id));
   };
 
-  const AUDIT_CATEGORIES=[
-    {value:"clinical",label:"🏥 Clinical Audit"},
-    {value:"nursing",label:"💉 Nursing Audit"},
-    {value:"qip",label:"🎯 Quality Improvement Project"},
-    {value:"financial",label:"💰 Financial Audit"},
-    {value:"structural",label:"🏗️ Structural Audit"},
-    {value:"process",label:"⚙️ Process Audit"},
-    {value:"outcome",label:"📊 Outcome Audit"},
-    {value:"pharmacy",label:"💊 Pharmacy Audit"},
-    {value:"dietary",label:"🍽️ Dietary Audit"},
-    {value:"other",label:"📋 Other"},
-  ];
-
-  const inp={padding:"6px 9px",borderRadius:6,border:`1px solid ${T.border}`,background:T.panel,color:T.text,fontSize:13};
-  const lbl={fontSize:11,color:T.muted,marginBottom:3,letterSpacing:1};
 
   if(loading) return <div style={{textAlign:"center",color:T.muted,padding:40}}>Loading audits…</div>;
 
@@ -4091,50 +4155,7 @@ function AuditsScreen({ hospitalId, auditMainTab, navigate }) {
       </div>
 
       {/* Create form */}
-      {showCreateForm&&(
-        <div style={{background:T.panel,border:`1px solid ${T.gold}40`,borderRadius:12,padding:"18px 20px",marginBottom:14}}>
-          <div style={{fontSize:13,fontWeight:700,color:T.gold,marginBottom:14,letterSpacing:1}}>📋 NEW AUDIT</div>
-          <div style={{display:"grid",gap:10}}>
-            <div>
-              <div style={lbl}>AUDIT NAME *</div>
-              <input value={createForm.name} onChange={e=>setCreateForm(f=>({...f,name:e.target.value}))} placeholder="e.g. Hand Hygiene Compliance Audit, OT Checklist Audit…" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
-            </div>
-            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
-              <div>
-                <div style={lbl}>CATEGORY</div>
-                <select value={createForm.audit_category} onChange={e=>setCreateForm(f=>({...f,audit_category:e.target.value}))} style={{...inp,width:"100%"}}>
-                  {AUDIT_CATEGORIES.map(c=><option key={c.value} value={c.value}>{c.label}</option>)}
-                </select>
-              </div>
-              <div style={{display:"flex",alignItems:"flex-end",paddingBottom:4}}>
-                <label style={{display:"flex",alignItems:"center",gap:6,fontSize:13,color:T.text,cursor:"pointer"}}>
-                  <input type="checkbox" checked={createForm.is_core} onChange={e=>setCreateForm(f=>({...f,is_core:e.target.checked}))}/> Mark as CORE (critical audit)
-                </label>
-              </div>
-            </div>
-
-            {/* Parameters */}
-            <div>
-              <div style={lbl}>CHECKLIST PARAMETERS (optional — add items to check during audit)</div>
-              {createForm.parameters.map((p,i)=>(
-                <div key={i} style={{display:"flex",gap:6,marginBottom:5,alignItems:"center"}}>
-                  <input value={p} onChange={e=>{const ps=[...createForm.parameters];ps[i]=e.target.value;setCreateForm(f=>({...f,parameters:ps}));}} style={{...inp,flex:1}} placeholder={`Parameter ${i+1}`}/>
-                  <button onClick={()=>setCreateForm(f=>({...f,parameters:f.parameters.filter((_,j)=>j!==i)}))} style={{padding:"4px 9px",borderRadius:5,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:13,cursor:"pointer"}}>✕</button>
-                </div>
-              ))}
-              <div style={{display:"flex",gap:6,marginTop:4}}>
-                <input value={newParam} onChange={e=>setNewParam(e.target.value)} onKeyDown={e=>{if(e.key==="Enter"&&newParam.trim()){setCreateForm(f=>({...f,parameters:[...f.parameters,newParam.trim()]}));setNewParam("");}}} placeholder="Type parameter and press Enter…" style={{...inp,flex:1}}/>
-                <button onClick={()=>{if(newParam.trim()){setCreateForm(f=>({...f,parameters:[...f.parameters,newParam.trim()]}));setNewParam("");}}} style={{padding:"4px 12px",borderRadius:6,background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold,fontSize:12,cursor:"pointer"}}>+ Add</button>
-              </div>
-              <div style={{fontSize:11,color:T.muted,marginTop:4}}>Parameters become checkboxes during audit recording. Leave empty if you prefer free-text findings only.</div>
-            </div>
-
-            <button onClick={createCustomAudit} disabled={savingCreate||!createForm.name.trim()} style={{padding:"9px 20px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:14,fontWeight:700,cursor:"pointer",opacity:savingCreate||!createForm.name.trim()?0.5:1,marginTop:4}}>
-              {savingCreate?"Creating…":"✓ Create Audit"}
-            </button>
-          </div>
-        </div>
-      )}
+      {showCreateForm&&<CreateAuditForm onSubmit={createCustomAudit} saving={savingCreate}/>}
 
       {customAudits.length===0&&!showCreateForm&&(
         <div style={{textAlign:"center",padding:"40px 20px",color:T.muted}}>
@@ -4185,7 +4206,7 @@ function AuditsScreen({ hospitalId, auditMainTab, navigate }) {
                   </div>
                   <div style={{display:"flex",gap:5,alignItems:"center"}}>
                     <button onClick={e=>{e.stopPropagation();setShowCustomRecord(a.id);setCustomRecordForm({status:"completed"});}} style={{padding:"4px 10px",borderRadius:6,fontSize:11,cursor:"pointer",background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold}}>+ Record</button>
-                    <button onClick={e=>{e.stopPropagation();setDeleteConfirm(a.id);}} style={{padding:"4px 8px",borderRadius:6,fontSize:11,cursor:"pointer",background:"transparent",border:`1px solid ${T.red}30`,color:T.red}}>🗑</button>
+                    <button onClick={e=>{e.stopPropagation();setDeleteConfirm(a.id);}} style={{padding:"4px 10px",borderRadius:6,fontSize:12,cursor:"pointer",background:"transparent",border:`1px solid ${T.red}50`,color:T.red,fontWeight:600}}>Delete</button>
                     <span style={{fontSize:16,color:T.muted}}>{isOpen?"▲":"▼"}</span>
                   </div>
                 </div>
@@ -4334,8 +4355,8 @@ function AuditsScreen({ hospitalId, auditMainTab, navigate }) {
         ))}
       </div>
 
-      {auditMainTab==="learn"&&<LearnTab/>}
-      {auditMainTab==="mine"&&<MyAuditsTab/>}
+      {auditMainTab==="learn"&&LearnTab()}
+      {auditMainTab==="mine"&&MyAuditsTab()}
 
       {auditMainTab==="nabh"&&(
         <div>
@@ -6231,24 +6252,28 @@ export default function App() {
                     const rowBorder= scoreVal==='met'?'#4caf7d':scoreVal==='partial'?'#f4a441':scoreVal==='not_met'?'#e05a5a':isOpen?T.blue:T.border;
                     return (
                       <div key={oe.code} style={{background:T.panel2,borderRadius:8,border:`1px solid ${rowBorder}`,overflow:'hidden',transition:'border-color 0.15s'}}>
-                        <div style={{padding:'9px 12px',display:'flex',gap:10,alignItems:'center'}}>
-                          <div onClick={()=>toggleShcoElcOe(oe.code)} style={{display:'flex',gap:10,alignItems:'flex-start',flex:1,cursor:'pointer',minWidth:0}}>
-                            <div style={{display:'flex',flexDirection:'column',gap:4,flexShrink:0,minWidth:68,alignItems:'flex-start'}}>
-                              <span style={{color:T.gold,fontWeight:700,fontSize:13}}>{oe.code}</span>
-                              {lvl&&(
-                                <span style={{fontSize:9,fontWeight:700,letterSpacing:0.5,padding:'1px 6px',borderRadius:4,background:`${lvlColor}20`,color:lvlColor,border:`1px solid ${lvlColor}40`}}>{lvl}</span>
-                              )}
+                        <div style={{padding:'10px 12px'}}>
+                          {/* Row 1: OE code + level badge + current score */}
+                          <div style={{display:'flex',gap:8,alignItems:'center',marginBottom:6}}>
+                            <span style={{color:T.gold,fontWeight:700,fontSize:13,fontFamily:'monospace'}}>{oe.code}</span>
+                            {lvl&&(
+                              <span style={{fontSize:9,fontWeight:700,letterSpacing:0.5,padding:'1px 6px',borderRadius:4,background:`${lvlColor}20`,color:lvlColor,border:`1px solid ${lvlColor}40`}}>{lvl}</span>
+                            )}
+                            <div style={{marginLeft:'auto',display:'flex',gap:8,alignItems:'center'}}>
+                              {scoreVal&&<span style={{fontSize:11,fontWeight:700,color:scoreVal==='met'?'#4caf7d':scoreVal==='partial'?'#f4a441':'#e05a5a'}}>{scoreVal==='met'?'✓ Met':scoreVal==='partial'?'~ Partial':'✗ Not Met'}</span>}
+                              <span onClick={()=>toggleShcoElcOe(oe.code)} style={{cursor:'pointer',color:T.muted,fontSize:12,userSelect:'none'}}>{isOpen?'▲':'▼'}</span>
                             </div>
-                            <span style={{color:T.text,fontSize:13,lineHeight:1.5,flex:1,minWidth:0}}>{oe.text}</span>
-                            <span style={{color:T.muted,fontSize:12,flexShrink:0,paddingTop:2}}>{isOpen?'▲':'▼'}</span>
                           </div>
-                          <div style={{display:'flex',gap:3,flexShrink:0,alignItems:'center'}}>
+                          {/* Row 2: OE text */}
+                          <div onClick={()=>toggleShcoElcOe(oe.code)} style={{color:T.text,fontSize:13,lineHeight:1.5,marginBottom:10,cursor:'pointer'}}>{oe.text}</div>
+                          {/* Row 3: scoring buttons */}
+                          <div style={{display:'flex',gap:4,flexWrap:'wrap',alignItems:'center'}}>
                             {SCORE_BTNS.map(({s,label,color})=>{
                               const active=scoreVal===s;
                               return(
                                 <button key={s}
                                   onClick={e=>{e.stopPropagation();if(!saving)setShcoElcScore(oe.code,s);}}
-                                  style={{padding:'3px 7px',borderRadius:5,fontSize:10,fontWeight:700,cursor:saving?'wait':'pointer',
+                                  style={{padding:'4px 10px',borderRadius:5,fontSize:11,fontWeight:700,cursor:saving?'wait':'pointer',
                                     background:active?color:'transparent',
                                     border:`1px solid ${active?color:T.border}`,
                                     color:active?'#fff':T.muted,
@@ -6260,7 +6285,7 @@ export default function App() {
                             {scoreVal&&(
                               <button
                                 onClick={e=>{e.stopPropagation();if(!saving)clearShcoElcScore(oe.code);}}
-                                style={{padding:'3px 7px',borderRadius:5,fontSize:10,fontWeight:700,cursor:saving?'wait':'pointer',
+                                style={{padding:'4px 10px',borderRadius:5,fontSize:11,fontWeight:700,cursor:saving?'wait':'pointer',
                                   background:'transparent',border:`1px solid ${T.border}`,color:T.muted,
                                   opacity:saving?0.5:1,whiteSpace:'nowrap'}}>
                                 ✕ Clear
@@ -7053,26 +7078,28 @@ export default function App() {
                     const rowBorder = scoreVal === 'met' ? '#4caf7d' : scoreVal === 'partial' ? '#f4a441' : scoreVal === 'not_met' ? '#e05a5a' : isOpen ? T.blue : T.border;
                     return (
                       <div key={oe.code} style={{background:T.panel2,borderRadius:8,border:`1px solid ${rowBorder}`,overflow:'hidden',transition:'border-color 0.15s'}}>
-                        {/* Row header — click left area to expand, buttons on right */}
-                        <div style={{padding:'9px 12px',display:'flex',gap:10,alignItems:'center'}}>
-                          <div onClick={() => toggleElcOe(oe.code)} style={{display:'flex',gap:10,alignItems:'flex-start',flex:1,cursor:'pointer',minWidth:0}}>
-                            <div style={{display:'flex',flexDirection:'column',gap:4,flexShrink:0,minWidth:68,alignItems:'flex-start'}}>
-                              <span style={{color:T.gold,fontWeight:700,fontSize:13}}>{oe.code}</span>
-                              {lvl && (
-                                <span style={{fontSize:9,fontWeight:700,letterSpacing:0.5,padding:'1px 6px',borderRadius:4,background:`${lvlColor}20`,color:lvlColor,border:`1px solid ${lvlColor}40`}}>{lvl}</span>
-                              )}
+                        <div style={{padding:'10px 12px'}}>
+                          {/* Row 1: OE code + level badge + current score */}
+                          <div style={{display:'flex',gap:8,alignItems:'center',marginBottom:6}}>
+                            <span style={{color:T.gold,fontWeight:700,fontSize:13,fontFamily:'monospace'}}>{oe.code}</span>
+                            {lvl && (
+                              <span style={{fontSize:9,fontWeight:700,letterSpacing:0.5,padding:'1px 6px',borderRadius:4,background:`${lvlColor}20`,color:lvlColor,border:`1px solid ${lvlColor}40`}}>{lvl}</span>
+                            )}
+                            <div style={{marginLeft:'auto',display:'flex',gap:8,alignItems:'center'}}>
+                              {scoreVal && <span style={{fontSize:11,fontWeight:700,color:scoreVal==='met'?'#4caf7d':scoreVal==='partial'?'#f4a441':'#e05a5a'}}>{scoreVal==='met'?'✓ Met':scoreVal==='partial'?'~ Partial':'✗ Not Met'}</span>}
+                              <span onClick={()=>toggleElcOe(oe.code)} style={{cursor:'pointer',color:T.muted,fontSize:12,userSelect:'none'}}>{isOpen?'▲':'▼'}</span>
                             </div>
-                            <span style={{color:T.text,fontSize:13,lineHeight:1.5,flex:1,minWidth:0}}>{oe.text}</span>
-                            <span style={{color:T.muted,fontSize:12,flexShrink:0,paddingTop:2}}>{isOpen?'▲':'▼'}</span>
                           </div>
-                          {/* Scoring buttons */}
-                          <div style={{display:'flex',gap:3,flexShrink:0,alignItems:'center'}}>
+                          {/* Row 2: OE text */}
+                          <div onClick={()=>toggleElcOe(oe.code)} style={{color:T.text,fontSize:13,lineHeight:1.5,marginBottom:10,cursor:'pointer'}}>{oe.text}</div>
+                          {/* Row 3: scoring buttons */}
+                          <div style={{display:'flex',gap:4,flexWrap:'wrap',alignItems:'center'}}>
                             {SCORE_BTNS.map(({s,label,color}) => {
                               const active = scoreVal === s;
                               return (
                                 <button key={s}
                                   onClick={e => { e.stopPropagation(); if(!saving) setElcScore(oe.code, s); }}
-                                  style={{padding:'3px 7px',borderRadius:5,fontSize:10,fontWeight:700,cursor:saving?'wait':'pointer',
+                                  style={{padding:'4px 10px',borderRadius:5,fontSize:11,fontWeight:700,cursor:saving?'wait':'pointer',
                                     background: active ? color : 'transparent',
                                     border: `1px solid ${active ? color : T.border}`,
                                     color: active ? '#fff' : T.muted,
@@ -7085,7 +7112,7 @@ export default function App() {
                             {scoreVal && (
                               <button
                                 onClick={e => { e.stopPropagation(); if(!saving) clearElcScore(oe.code); }}
-                                style={{padding:'3px 7px',borderRadius:5,fontSize:10,fontWeight:700,cursor:saving?'wait':'pointer',
+                                style={{padding:'4px 10px',borderRadius:5,fontSize:11,fontWeight:700,cursor:saving?'wait':'pointer',
                                   background:'transparent',border:`1px solid ${T.border}`,color:T.muted,
                                   opacity:saving?0.5:1,whiteSpace:'nowrap'}}>
                                 ✕ Clear
@@ -7093,7 +7120,7 @@ export default function App() {
                             )}
                           </div>
                         </div>
-                        {/* Tips panel */}
+                        {/* Row 4: Tips panel */}
                         {isOpen && (
                           <div style={{padding:'0 12px 12px'}}>
                             {loading ? (
