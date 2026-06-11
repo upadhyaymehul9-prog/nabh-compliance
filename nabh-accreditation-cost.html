@@ -54,758 +54,378 @@
     ]
   }
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --navy: #040d1a; --accent: #2563eb; --accent2: #38bdf8;
-      --gold: #f59e0b; --white: #f8fafc; --muted: #94a3b8; --card: #0f1f38;
-      --green: #4ade80;
+
+  <!-- Tailwind via CDN + shared design-system token config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:    '#040d1a', ink2: '#0a1f3d', panel: '#0f1f38', panel2: '#0a1838',
+            blue:   '#38bdf8', brand: '#2563eb', gold: '#f59e0b', purple: '#a78bfa',
+            teal:   '#2dd4bf', paper: '#f8fafc', muted: '#94a3b8', good: '#4ade80',
+            bad:    '#f87171', line: 'rgba(255,255,255,0.08)',
+          },
+          fontFamily: {
+            head: ['Syne', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            body: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer components {
+      .tbl { @apply w-full border-collapse text-[0.9rem]; }
+      .tbl th { @apply whitespace-nowrap bg-brand/15 px-4 py-3 text-left font-head text-[0.82rem] font-semibold text-blue; }
+      .tbl td { @apply border-b border-white/5 px-4 py-3 align-top text-muted; }
+      .tbl strong { @apply text-paper; }
+      .amount { @apply whitespace-nowrap font-head font-bold text-paper; }
+      .rebate-price { @apply whitespace-nowrap font-head font-semibold text-good; }
     }
-    body { background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; line-height: 1.7; }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); position: sticky; top: 0; background: rgba(4,13,26,0.95); backdrop-filter: blur(12px); z-index: 100; }
-    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--accent2); text-decoration: none; }
-    .nav-cta { background: var(--accent); color: white; padding: 0.55rem 1.4rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem; }
-    .hero { max-width: 860px; margin: 0 auto; padding: 4rem 2rem 3rem; text-align: center; }
-    .badge { display: inline-block; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3); color: var(--gold); padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1.5rem; }
-    h1 { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.25rem; }
-    h1 span { color: var(--accent2); }
-    .hero-sub { font-size: 1.05rem; color: var(--muted); max-width: 640px; margin: 0 auto 2rem; }
-    .toc { max-width: 700px; margin: 0 auto 3rem; background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.75rem; }
-    .toc-title { font-family: 'Syne', sans-serif; font-weight: 700; margin-bottom: 1rem; font-size: 1rem; color: var(--accent2); }
-    .toc-list { list-style: none; }
-    .toc-list li { padding: 0.35rem 0; }
-    .toc-list a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
-    .toc-list a:hover { color: var(--accent2); }
-    .toc-list a::before { content: "→ "; }
-    .content { max-width: 860px; margin: 0 auto; padding: 0 2rem 4rem; }
-    .section { margin-bottom: 3.5rem; }
-    .section-anchor { display: block; margin-top: -80px; padding-top: 80px; }
-    h2 { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
-    h2 span { color: var(--accent2); }
-    h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.75rem; color: var(--accent2); }
-    p { color: var(--muted); margin-bottom: 1rem; font-size: 0.97rem; }
-    strong { color: var(--white); }
-    .highlight { background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
-    .highlight p { margin: 0; color: var(--white); }
-    .rebate-banner { background: rgba(74,222,128,0.08); border: 1px solid rgba(74,222,128,0.25); border-radius: 10px; padding: 1rem 1.5rem; margin: 1.25rem 0; display: flex; gap: 0.75rem; align-items: flex-start; }
-    .rebate-banner-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
-    .rebate-banner p { margin: 0; color: var(--green); font-size: 0.92rem; }
-    .rebate-banner strong { color: #86efac; }
-    .gst-note { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); border-radius: 8px; padding: 0.75rem 1.25rem; margin: 1rem 0; font-size: 0.88rem; color: #fbbf24; }
-    .source-note { font-size: 0.78rem; color: #64748b; margin-top: 0.5rem; font-style: italic; }
-    .table-wrap { overflow-x: auto; margin: 1.25rem 0; }
-    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-    th { background: rgba(37,99,235,0.15); color: var(--accent2); padding: 0.75rem 1rem; text-align: left; font-family: 'Syne', sans-serif; font-weight: 600; font-size: 0.82rem; white-space: nowrap; }
-    td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.06); color: var(--muted); }
-    td strong { color: var(--white); }
-    tr:hover td { background: rgba(255,255,255,0.02); }
-    .amount { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--white); white-space: nowrap; }
-    .rebate-price { color: var(--green); font-weight: 600; font-family: 'Syne', sans-serif; white-space: nowrap; }
-    .original-price { text-decoration: line-through; color: #475569; font-size: 0.82rem; margin-right: 0.4rem; }
-    .misc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.75rem; margin: 1.25rem 0; }
-    .misc-card { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 1rem 1.25rem; }
-    .misc-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
-    .misc-amount { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--white); }
-    .misc-sub { font-size: 0.78rem; color: #64748b; margin-top: 0.2rem; }
-    .programme-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.25rem; }
-    .prog-badge { display: inline-block; padding: 0.2rem 0.7rem; border-radius: 50px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
-    .prog-badge.hco { background: rgba(37,99,235,0.2); color: #93c5fd; border: 1px solid rgba(37,99,235,0.3); }
-    .prog-badge.shco { background: rgba(56,189,248,0.15); color: var(--accent2); border: 1px solid rgba(56,189,248,0.25); }
-    .prog-badge.elc { background: rgba(74,222,128,0.12); color: var(--green); border: 1px solid rgba(74,222,128,0.25); }
-    .prog-badge.eye { background: rgba(167,139,250,0.15); color: #c4b5fd; border: 1px solid rgba(167,139,250,0.25); }
-    .prog-badge.dental { background: rgba(251,191,36,0.12); color: #fde68a; border: 1px solid rgba(251,191,36,0.2); }
-    .prog-badge.ayush { background: rgba(52,211,153,0.12); color: #6ee7b7; border: 1px solid rgba(52,211,153,0.2); }
-    .effective-date { font-size: 0.78rem; color: #64748b; font-style: italic; }
-    .cta-inline { background: linear-gradient(135deg, #0a1f3d, #1e3a8a); border: 1px solid rgba(37,99,235,0.3); border-radius: 12px; padding: 2rem; margin: 2.5rem 0; text-align: center; }
-    .cta-inline h3 { color: var(--white); font-family: 'Syne', sans-serif; font-size: 1.2rem; margin-bottom: 0.5rem; }
-    .cta-inline p { color: var(--muted); margin-bottom: 1.25rem; font-size: 0.9rem; }
-    .btn-primary { background: var(--accent); color: white; padding: 0.8rem 1.75rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: inline-block; box-shadow: 0 4px 20px rgba(37,99,235,0.35); }
-    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.07); padding: 1.25rem 0; }
-    .faq-q { font-family: 'Syne', sans-serif; font-weight: 600; margin-bottom: 0.6rem; font-size: 1rem; }
-    .faq-a { color: var(--muted); font-size: 0.92rem; }
-    .summary-box { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem 1.75rem; margin: 1.5rem 0; }
-    .summary-row { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); gap: 1rem; }
-    .summary-row:last-child { border-bottom: none; }
-    .summary-prog { font-size: 0.92rem; color: var(--muted); }
-    .summary-range { font-family: 'Syne', sans-serif; font-size: 0.92rem; font-weight: 700; color: var(--white); text-align: right; }
-    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
-    footer a { color: var(--muted); text-decoration: none; margin: 0 0.75rem; }
-    footer a:hover { color: var(--accent2); }
+  </style>
+  <style>
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
-<body>
 
-<nav>
-  <a href="https://accredready.in" class="logo">AccredReady</a>
-  <a href="https://accredready.in" class="nav-cta">Try AccredReady Free</a>
-</nav>
+<body class="bg-ink text-paper font-body leading-[1.7] antialiased">
 
-<div class="hero">
-  <div class="badge">Official Fee Structure 2025–26</div>
-  <h1>NABH Accreditation<br/><span>Cost & Fee Structure</span></h1>
-  <p class="hero-sub">Official NABH fees for all programmes — HCO, SHCO, HOPE Entry Level, Eye Care, Dental, and AYUSH. Updated w.e.f. April 2024 and June 2025. All figures exclude 18% GST.</p>
-</div>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Skip to content</a>
 
-<div class="content">
+  <!-- NAV -->
+  <nav class="sticky top-0 z-[100] flex items-center justify-between border-b border-line bg-ink/95 px-5 py-4 backdrop-blur-md sm:px-8">
+    <a href="https://accredready.in" class="rounded font-head text-xl font-extrabold text-blue outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">AccredReady</a>
+    <a href="https://accredready.in" class="rounded-md bg-brand px-5 py-2 text-sm font-medium text-white outline-none transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">Try AccredReady Free</a>
+  </nav>
 
-  <div class="toc">
-    <div class="toc-title">📋 Fee Tables on This Page</div>
-    <ul class="toc-list">
-      <li><a href="#overview">Fee Overview — All Programmes</a></li>
-      <li><a href="#hco">HCO Full Accreditation</a></li>
-      <li><a href="#shco">SHCO Full Accreditation</a></li>
-      <li><a href="#hco-elc">HCO ELC — Entry Level (Hospitals)</a></li>
-      <li><a href="#shco-elc">SHCO ELC — Entry Level (Small HCO)</a></li>
-      <li><a href="#eye">Eye Care (ECO)</a></li>
-      <li><a href="#dental">Dental (DHSP)</a></li>
-      <li><a href="#ayush">AYUSH Full Accreditation</a></li>
-      <li><a href="#ayush-elc">AYUSH ELC (Centre & Hospital)</a></li>
-      <li><a href="#gst">GST & Additional Charges</a></li>
-      <li><a href="#faq">FAQs</a></li>
-    </ul>
-  </div>
+  <main id="main">
 
-  <div class="gst-note">
-    ⚠️ <strong>All fees below are exclusive of 18% GST.</strong> GST is applicable on application fees, annual fees, virtual assessment fees, focus assessment fees, and re-issue fees. Always verify current fees at nabh.co before applying.
-  </div>
+    <!-- HERO -->
+    <header class="mx-auto max-w-3xl px-5 pb-10 pt-16 text-center sm:px-8">
+      <span class="mb-6 inline-block rounded-full border border-gold/30 bg-gold/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-gold">Official Fee Structure 2025–26</span>
+      <h1 class="mb-5 font-head text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold leading-[1.2]">NABH Accreditation<br/><span class="text-blue">Cost &amp; Fee Structure</span></h1>
+      <p class="mx-auto max-w-2xl text-[1.05rem] text-muted">Official NABH fees for all programmes — HCO, SHCO, HOPE Entry Level, Eye Care, Dental, and AYUSH. Updated w.e.f. April 2024 and June 2025. All figures exclude 18% GST.</p>
+    </header>
 
-  <!-- OVERVIEW -->
-  <div class="section">
-    <span class="section-anchor" id="overview"></span>
-    <h2>Fee Overview — <span>All Programmes</span></h2>
-    <p>Quick reference for total annual cost (application + annual fee) across all NABH programmes, before GST:</p>
-    <div class="summary-box">
-      <div class="summary-row">
-        <span class="summary-prog">HCO Full Accreditation (≤100 beds)</span>
-        <span class="summary-range">₹40,000 + ₹2,00,000 / year</span>
+    <div class="mx-auto max-w-3xl px-5 pb-16 sm:px-8">
+
+      <!-- TOC -->
+      <nav aria-label="Fee tables on this page" class="mx-auto mb-8 rounded-xl border border-white/10 bg-panel p-7">
+        <h2 class="mb-4 font-head text-base font-bold text-blue">📋 Fee Tables on This Page</h2>
+        <ul class="space-y-1.5 text-sm">
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#overview">Fee Overview — All Programmes</a></li>
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#hco">HCO Full Accreditation</a></li>
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#shco">SHCO Full Accreditation</a></li>
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#hco-elc">HCO ELC — Entry Level (Hospitals)</a></li>
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#shco-elc">SHCO ELC — Entry Level (Small HCO)</a></li>
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#eye">Eye Care (ECO)</a></li>
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#dental">Dental (DHSP)</a></li>
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#ayush">AYUSH Full Accreditation</a></li>
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#ayush-elc">AYUSH ELC (Centre &amp; Hospital)</a></li>
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#gst">GST &amp; Additional Charges</a></li>
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#faq">FAQs</a></li>
+        </ul>
+      </nav>
+
+      <div class="my-4 rounded-lg border border-gold/20 bg-gold/10 px-5 py-3 text-[0.88rem] text-[#fbbf24]">
+        ⚠️ <strong class="font-semibold">All fees below are exclusive of 18% GST.</strong> GST is applicable on application fees, annual fees, virtual assessment fees, focus assessment fees, and re-issue fees. Always verify current fees at nabh.co before applying.
       </div>
-      <div class="summary-row">
-        <span class="summary-prog">HCO Full Accreditation (101–300 beds)</span>
-        <span class="summary-range">₹75,000 + ₹3,00,000 / year</span>
+
+      <!-- OVERVIEW -->
+      <section id="overview" class="mb-14 scroll-mt-24">
+        <h2 class="mb-4 border-b border-line pb-3 font-head text-2xl font-bold">Fee Overview — <span class="text-blue">All Programmes</span></h2>
+        <p class="mb-4 text-[0.97rem] text-muted">Quick reference for total annual cost (application + annual fee) across all NABH programmes, before GST:</p>
+        <div class="my-6 rounded-xl border border-white/10 bg-panel px-6 py-5">
+          <dl>
+            <div class="flex items-center justify-between gap-4 border-b border-white/5 py-2.5"><dt class="text-[0.92rem] text-muted">HCO Full Accreditation (≤100 beds)</dt><dd class="text-right font-head text-[0.92rem] font-bold text-paper">₹40,000 + ₹2,00,000 / year</dd></div>
+            <div class="flex items-center justify-between gap-4 border-b border-white/5 py-2.5"><dt class="text-[0.92rem] text-muted">HCO Full Accreditation (101–300 beds)</dt><dd class="text-right font-head text-[0.92rem] font-bold text-paper">₹75,000 + ₹3,00,000 / year</dd></div>
+            <div class="flex items-center justify-between gap-4 border-b border-white/5 py-2.5"><dt class="text-[0.92rem] text-muted">HCO Full Accreditation (301–500 beds)</dt><dd class="text-right font-head text-[0.92rem] font-bold text-paper">₹1,00,000 + ₹4,00,000 / year</dd></div>
+            <div class="flex items-center justify-between gap-4 border-b border-white/5 py-2.5"><dt class="text-[0.92rem] text-muted">HCO Full Accreditation (501+ beds)</dt><dd class="text-right font-head text-[0.92rem] font-bold text-paper">₹1,50,000 + ₹5,00,000 / year</dd></div>
+            <div class="flex items-center justify-between gap-4 border-b border-white/5 py-2.5"><dt class="text-[0.92rem] text-muted">SHCO Full Accreditation (≤50 beds)</dt><dd class="text-right font-head text-[0.92rem] font-bold text-paper">₹25,000 + ₹1,50,000 / year</dd></div>
+            <div class="flex items-center justify-between gap-4 border-b border-white/5 py-2.5"><dt class="text-[0.92rem] text-muted">HCO ELC (51–100 beds, rebate till Sep 2026)</dt><dd class="text-right font-head text-[0.92rem] font-bold text-paper">₹96,000 / 2-year cycle</dd></div>
+            <div class="flex items-center justify-between gap-4 border-b border-white/5 py-2.5"><dt class="text-[0.92rem] text-muted">HCO ELC (101–300 beds, rebate till Sep 2026)</dt><dd class="text-right font-head text-[0.92rem] font-bold text-paper">₹1,20,000 / 2-year cycle</dd></div>
+            <div class="flex items-center justify-between gap-4 border-b border-white/5 py-2.5"><dt class="text-[0.92rem] text-muted">SHCO ELC (≤5 beds)</dt><dd class="text-right font-head text-[0.92rem] font-bold text-paper">₹21,000 / 2-year cycle</dd></div>
+            <div class="flex items-center justify-between gap-4 border-b border-white/5 py-2.5"><dt class="text-[0.92rem] text-muted">SHCO ELC (6–20 beds, rebate till Sep 2026)</dt><dd class="text-right font-head text-[0.92rem] font-bold text-paper">₹30,000 / 2-year cycle</dd></div>
+            <div class="flex items-center justify-between gap-4 border-b border-white/5 py-2.5"><dt class="text-[0.92rem] text-muted">AYUSH ELC Centre (flat)</dt><dd class="text-right font-head text-[0.92rem] font-bold text-paper">₹11,000 / 2-year cycle</dd></div>
+            <div class="flex items-center justify-between gap-4 border-b border-white/5 py-2.5"><dt class="text-[0.92rem] text-muted">AYUSH ELC Hospital (≤50 beds)</dt><dd class="text-right font-head text-[0.92rem] font-bold text-paper">₹21,000 / 2-year cycle</dd></div>
+            <div class="flex items-center justify-between gap-4 border-b border-white/5 py-2.5"><dt class="text-[0.92rem] text-muted">Eye Care ECO (≤5,000 surgeries)</dt><dd class="text-right font-head text-[0.92rem] font-bold text-paper">₹5,000 + ₹50,000 / year</dd></div>
+            <div class="flex items-center justify-between gap-4 border-b border-white/5 py-2.5"><dt class="text-[0.92rem] text-muted">Dental DHSP (1–3 chairs)</dt><dd class="text-right font-head text-[0.92rem] font-bold text-paper">₹5,000 + ₹15,000 / year</dd></div>
+            <div class="flex items-center justify-between gap-4 py-2.5"><dt class="text-[0.92rem] text-muted">AYUSH (10–50 beds)</dt><dd class="text-right font-head text-[0.92rem] font-bold text-paper">₹20,000 + ₹75,000 / year</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- HCO FULL -->
+      <section id="hco" class="mb-14 scroll-mt-24">
+        <h2 class="mb-2 border-b border-line pb-3 font-head text-2xl font-bold"><span class="mr-2 inline-block rounded-full border border-brand/30 bg-brand/20 px-3 py-1 align-middle text-[0.7rem] font-bold uppercase tracking-wider text-[#93c5fd]">HCO</span>HCO Full <span class="text-blue">Accreditation</span></h2>
+        <p class="mb-2 text-[0.78rem] italic text-[#64748b]">w.e.f. 01 April 2024</p>
+        <p class="mb-4 text-[0.97rem] text-muted">For hospitals and healthcare organisations with 50+ sanctioned beds pursuing full NABH accreditation under the 6th Edition standards (639 Objective Elements).</p>
+        <div class="my-5 overflow-x-auto">
+          <table class="tbl">
+            <thead><tr><th>Bed Strength</th><th>Application Fee</th><th>Annual Fee</th><th>Total (Year 1)</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Up to 100 beds</strong></td><td class="amount">₹40,000</td><td class="amount">₹2,00,000</td><td class="amount">₹2,40,000</td></tr>
+              <tr><td><strong>101–300 beds</strong></td><td class="amount">₹75,000</td><td class="amount">₹3,00,000</td><td class="amount">₹3,75,000</td></tr>
+              <tr><td><strong>301–500 beds</strong></td><td class="amount">₹1,00,000</td><td class="amount">₹4,00,000</td><td class="amount">₹5,00,000</td></tr>
+              <tr><td><strong>501+ beds</strong></td><td class="amount">₹1,50,000</td><td class="amount">₹5,00,000</td><td class="amount">₹6,50,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-2 text-[0.78rem] italic text-[#64748b]">Source: NABH official fee schedule w.e.f. 01.04.2024. All amounts exclude 18% GST. Certificate validity: 3 years (mid-cycle surveillance required).</p>
+        <h3 class="mb-3 mt-6 font-head text-lg font-semibold text-blue">Additional HCO Charges</h3>
+        <div class="my-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
+          <div class="rounded-xl border border-white/10 bg-panel px-5 py-4"><div class="mb-1 text-[0.72rem] uppercase tracking-wide text-muted">Virtual Assessment</div><div class="font-head text-lg font-bold text-paper">₹5,000–₹15,000</div><div class="mt-0.5 text-[0.78rem] text-[#64748b]">Per virtual assessment visit</div></div>
+          <div class="rounded-xl border border-white/10 bg-panel px-5 py-4"><div class="mb-1 text-[0.72rem] uppercase tracking-wide text-muted">Focus Assessment</div><div class="font-head text-lg font-bold text-paper">₹15,000</div><div class="mt-0.5 text-[0.78rem] text-[#64748b]">For targeted re-assessment</div></div>
+          <div class="rounded-xl border border-white/10 bg-panel px-5 py-4"><div class="mb-1 text-[0.72rem] uppercase tracking-wide text-muted">Certificate Re-issue</div><div class="font-head text-lg font-bold text-paper">₹6,000</div><div class="mt-0.5 text-[0.78rem] text-[#64748b]">For lost/damaged certificate</div></div>
+        </div>
+        <div class="my-4 rounded-lg border border-gold/20 bg-gold/10 px-5 py-3 text-[0.88rem] text-[#fbbf24]">+ 18% GST applicable on all charges above.</div>
+      </section>
+
+      <!-- SHCO FULL -->
+      <section id="shco" class="mb-14 scroll-mt-24">
+        <h2 class="mb-2 border-b border-line pb-3 font-head text-2xl font-bold"><span class="mr-2 inline-block rounded-full border border-blue/25 bg-blue/15 px-3 py-1 align-middle text-[0.7rem] font-bold uppercase tracking-wider text-blue">SHCO</span>SHCO Full <span class="text-blue">Accreditation</span></h2>
+        <p class="mb-4 text-[0.97rem] text-muted">For Small Healthcare Organisations with up to 50 sanctioned beds — clinics, nursing homes, day-care centres.</p>
+        <div class="my-5 overflow-x-auto">
+          <table class="tbl">
+            <thead><tr><th>Programme</th><th>Application Fee</th><th>Annual Fee</th><th>Total (Year 1)</th></tr></thead>
+            <tbody>
+              <tr><td><strong>SHCO Full Accreditation</strong><br/><span class="text-[0.8rem] text-[#64748b]">Up to 50 beds</span></td><td class="amount">₹25,000</td><td class="amount">₹1,50,000</td><td class="amount">₹1,75,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-2 text-[0.78rem] italic text-[#64748b]">Certificate validity: 4 years (mid-cycle surveillance required). All amounts exclude 18% GST.</p>
+        <h3 class="mb-3 mt-6 font-head text-lg font-semibold text-blue">Additional SHCO Charges</h3>
+        <div class="my-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
+          <div class="rounded-xl border border-white/10 bg-panel px-5 py-4"><div class="mb-1 text-[0.72rem] uppercase tracking-wide text-muted">Virtual Assessment</div><div class="font-head text-lg font-bold text-paper">₹3,000</div><div class="mt-0.5 text-[0.78rem] text-[#64748b]">Per virtual assessment</div></div>
+          <div class="rounded-xl border border-white/10 bg-panel px-5 py-4"><div class="mb-1 text-[0.72rem] uppercase tracking-wide text-muted">Focus Assessment</div><div class="font-head text-lg font-bold text-paper">₹15,000</div><div class="mt-0.5 text-[0.78rem] text-[#64748b]">For targeted re-assessment</div></div>
+          <div class="rounded-xl border border-white/10 bg-panel px-5 py-4"><div class="mb-1 text-[0.72rem] uppercase tracking-wide text-muted">Certificate Re-issue</div><div class="font-head text-lg font-bold text-paper">₹6,000</div><div class="mt-0.5 text-[0.78rem] text-[#64748b]">For lost/damaged certificate</div></div>
+        </div>
+        <div class="my-4 rounded-lg border border-gold/20 bg-gold/10 px-5 py-3 text-[0.88rem] text-[#fbbf24]">+ 18% GST applicable on all charges above.</div>
+      </section>
+
+      <!-- HCO ELC -->
+      <section id="hco-elc" class="mb-14 scroll-mt-24">
+        <h2 class="mb-2 border-b border-line pb-3 font-head text-2xl font-bold"><span class="mr-2 inline-block rounded-full border border-good/25 bg-good/10 px-3 py-1 align-middle text-[0.7rem] font-bold uppercase tracking-wider text-good">HCO ELC</span>HCO Entry Level <span class="text-blue">Certification</span></h2>
+        <p class="mb-2 text-[0.78rem] italic text-[#64748b]">w.e.f. June 2025 — 2-year certification cycle</p>
+        <p class="mb-4 text-[0.97rem] text-muted">For hospitals with 50+ sanctioned beds pursuing entry-level certification via the HOPE (Healthcare Organisation for Patient Excellence) portal before progressing to Full NABH Accreditation.</p>
+        <div class="my-5 flex items-start gap-3 rounded-lg border border-good/25 bg-good/[0.08] px-5 py-4">
+          <span class="flex-shrink-0 text-lg" aria-hidden="true">🎯</span>
+          <p class="text-[0.92rem] text-good"><strong class="text-[#86efac]">Rebate available till 30 September 2026</strong> on the 51–100 and 101–300 bed slabs. Original (non-rebated) fees apply after that date. No rebate on 301–500 and 501+ slabs.</p>
+        </div>
+        <div class="my-5 overflow-x-auto">
+          <table class="tbl">
+            <thead><tr><th>Bed Strength</th><th>Regular Fee</th><th>Rebated Fee (till Sep 2026)</th><th>Cycle</th></tr></thead>
+            <tbody>
+              <tr><td><strong>51–100 beds</strong></td><td class="amount">₹1,60,000</td><td><span class="rebate-price">₹96,000</span></td><td>2 years</td></tr>
+              <tr><td><strong>101–300 beds</strong></td><td class="amount">₹2,00,000</td><td><span class="rebate-price">₹1,20,000</span></td><td>2 years</td></tr>
+              <tr><td><strong>301–500 beds</strong></td><td class="amount">₹2,00,000</td><td><span class="text-[0.82rem] text-muted">No rebate</span></td><td>2 years</td></tr>
+              <tr><td><strong>501+ beds</strong></td><td class="amount">₹2,50,000</td><td><span class="text-[0.82rem] text-muted">No rebate</span></td><td>2 years</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-2 text-[0.78rem] italic text-[#64748b]">All amounts exclude 18% GST. Fees cover the full 2-year certification cycle. Source: NABH HOPE ELC fee schedule w.e.f. June 2025.</p>
+        <h3 class="mb-3 mt-6 font-head text-lg font-semibold text-blue">Additional HCO ELC Charges</h3>
+        <div class="my-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <div class="rounded-xl border border-white/10 bg-panel px-5 py-4"><div class="mb-1 text-[0.72rem] uppercase tracking-wide text-muted">Focus Assessment</div><div class="font-head text-lg font-bold text-paper">₹15,000</div><div class="mt-0.5 text-[0.78rem] text-[#64748b]">+ 18% GST</div></div>
+          <div class="rounded-xl border border-white/10 bg-panel px-5 py-4"><div class="mb-1 text-[0.72rem] uppercase tracking-wide text-muted">Certificate Re-issue</div><div class="font-head text-lg font-bold text-paper">₹6,000</div><div class="mt-0.5 text-[0.78rem] text-[#64748b]">+ 18% GST</div></div>
+        </div>
+      </section>
+
+      <!-- SHCO ELC -->
+      <section id="shco-elc" class="mb-14 scroll-mt-24">
+        <h2 class="mb-2 border-b border-line pb-3 font-head text-2xl font-bold"><span class="mr-2 inline-block rounded-full border border-good/25 bg-good/10 px-3 py-1 align-middle text-[0.7rem] font-bold uppercase tracking-wider text-good">SHCO ELC</span>SHCO Entry Level <span class="text-blue">Certification</span></h2>
+        <p class="mb-2 text-[0.78rem] italic text-[#64748b]">w.e.f. June 2025 — 2-year certification cycle</p>
+        <p class="mb-4 text-[0.97rem] text-muted">For Small Healthcare Organisations with up to 50 sanctioned beds pursuing entry-level certification before progressing to SHCO Full Accreditation.</p>
+        <div class="my-5 flex items-start gap-3 rounded-lg border border-good/25 bg-good/[0.08] px-5 py-4">
+          <span class="flex-shrink-0 text-lg" aria-hidden="true">🎯</span>
+          <p class="text-[0.92rem] text-good"><strong class="text-[#86efac]">Rebate available till 30 September 2026</strong> on the 6–20 and 21–50 bed slabs. The ≤5 bed slab has no rebate (already at base price).</p>
+        </div>
+        <div class="my-5 overflow-x-auto">
+          <table class="tbl">
+            <thead><tr><th>Bed Strength</th><th>Regular Fee</th><th>Rebated Fee (till Sep 2026)</th><th>Cycle</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Up to 5 beds</strong></td><td class="amount">₹21,000</td><td><span class="text-[0.82rem] text-muted">No rebate</span></td><td>2 years</td></tr>
+              <tr><td><strong>6–20 beds</strong></td><td class="amount">₹40,000</td><td><span class="rebate-price">₹30,000</span></td><td>2 years</td></tr>
+              <tr><td><strong>21–50 beds</strong></td><td class="amount">₹80,000</td><td><span class="rebate-price">₹48,000</span></td><td>2 years</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-2 text-[0.78rem] italic text-[#64748b]">All amounts exclude 18% GST. Fees cover the full 2-year certification cycle. Source: NABH HOPE ELC fee schedule w.e.f. June 2025.</p>
+        <h3 class="mb-3 mt-6 font-head text-lg font-semibold text-blue">Additional SHCO ELC Charges</h3>
+        <div class="my-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <div class="rounded-xl border border-white/10 bg-panel px-5 py-4"><div class="mb-1 text-[0.72rem] uppercase tracking-wide text-muted">Focus Assessment</div><div class="font-head text-lg font-bold text-paper">₹15,000</div><div class="mt-0.5 text-[0.78rem] text-[#64748b]">+ 18% GST</div></div>
+          <div class="rounded-xl border border-white/10 bg-panel px-5 py-4"><div class="mb-1 text-[0.72rem] uppercase tracking-wide text-muted">Certificate Re-issue</div><div class="font-head text-lg font-bold text-paper">₹6,000</div><div class="mt-0.5 text-[0.78rem] text-[#64748b]">+ 18% GST</div></div>
+        </div>
+        <div class="my-6 rounded-xl border border-brand/30 bg-brand/10 px-6 py-5">
+          <p class="text-paper">💡 ELC is a stepping stone — not permanent accreditation. After the 2-year cycle, hospitals progress to HCO or SHCO Full Accreditation. AccredReady tracks ELC compliance and helps plan your upgrade path.</p>
+        </div>
+      </section>
+
+      <!-- EYE CARE -->
+      <section id="eye" class="mb-14 scroll-mt-24">
+        <h2 class="mb-2 border-b border-line pb-3 font-head text-2xl font-bold"><span class="mr-2 inline-block rounded-full border border-purple/25 bg-purple/15 px-3 py-1 align-middle text-[0.7rem] font-bold uppercase tracking-wider text-purple">ECO</span>Eye Care <span class="text-blue">Accreditation</span></h2>
+        <p class="mb-4 text-[0.97rem] text-muted">For standalone eye care organisations (ECO). Slabs are based on number of surgeries performed per year.</p>
+        <div class="my-5 overflow-x-auto">
+          <table class="tbl">
+            <thead><tr><th>Annual Surgery Volume</th><th>Application Fee</th><th>Annual Fee</th><th>Total (Year 1)</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Up to 5,000 surgeries</strong></td><td class="amount">₹5,000</td><td class="amount">₹50,000</td><td class="amount">₹55,000</td></tr>
+              <tr><td><strong>5,001–10,000 surgeries</strong></td><td class="amount">₹10,000</td><td class="amount">₹1,50,000</td><td class="amount">₹1,60,000</td></tr>
+              <tr><td><strong>10,001+ surgeries</strong></td><td class="amount">₹20,000</td><td class="amount">₹2,00,000</td><td class="amount">₹2,20,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="my-4 rounded-lg border border-gold/20 bg-gold/10 px-5 py-3 text-[0.88rem] text-[#fbbf24]">+ 18% GST applicable on all charges.</div>
+      </section>
+
+      <!-- DENTAL -->
+      <section id="dental" class="mb-14 scroll-mt-24">
+        <h2 class="mb-2 border-b border-line pb-3 font-head text-2xl font-bold"><span class="mr-2 inline-block rounded-full border border-gold/20 bg-gold/[0.12] px-3 py-1 align-middle text-[0.7rem] font-bold uppercase tracking-wider text-[#fde68a]">DHSP</span>Dental <span class="text-blue">Accreditation</span></h2>
+        <p class="mb-4 text-[0.97rem] text-muted">For Dental Healthcare Service Providers (DHSP). Fee slabs are based on the number of dental chairs in the facility.</p>
+        <div class="my-5 overflow-x-auto">
+          <table class="tbl">
+            <thead><tr><th>Dental Chairs</th><th>Application Fee</th><th>Annual Fee</th><th>Total (Year 1)</th></tr></thead>
+            <tbody>
+              <tr><td><strong>1–3 chairs</strong></td><td class="amount">₹5,000</td><td class="amount">₹15,000</td><td class="amount">₹20,000</td></tr>
+              <tr><td><strong>4–10 chairs</strong></td><td class="amount">₹15,000</td><td class="amount">₹40,000</td><td class="amount">₹55,000</td></tr>
+              <tr><td><strong>11–15 chairs</strong></td><td class="amount">₹20,000</td><td class="amount">₹60,000</td><td class="amount">₹80,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="my-4 rounded-lg border border-gold/20 bg-gold/10 px-5 py-3 text-[0.88rem] text-[#fbbf24]">+ 18% GST applicable on all charges.</div>
+      </section>
+
+      <!-- AYUSH FULL -->
+      <section id="ayush" class="mb-14 scroll-mt-24">
+        <h2 class="mb-2 border-b border-line pb-3 font-head text-2xl font-bold"><span class="mr-2 inline-block rounded-full border border-teal/20 bg-teal/[0.12] px-3 py-1 align-middle text-[0.7rem] font-bold uppercase tracking-wider text-[#6ee7b7]">AYUSH</span>AYUSH Full <span class="text-blue">Accreditation</span></h2>
+        <p class="mb-4 text-[0.97rem] text-muted">For AYUSH (Ayurveda, Yoga, Unani, Siddha, Homeopathy) hospitals seeking full accreditation. Slabs are based on sanctioned bed strength.</p>
+        <div class="my-5 overflow-x-auto">
+          <table class="tbl">
+            <thead><tr><th>Bed Strength</th><th>Application Fee</th><th>Annual Fee</th><th>Total (Year 1)</th></tr></thead>
+            <tbody>
+              <tr><td><strong>10–50 beds</strong></td><td class="amount">₹20,000</td><td class="amount">₹75,000</td><td class="amount">₹95,000</td></tr>
+              <tr><td><strong>51–100 beds</strong></td><td class="amount">₹30,000</td><td class="amount">₹1,25,000</td><td class="amount">₹1,55,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="my-4 rounded-lg border border-gold/20 bg-gold/10 px-5 py-3 text-[0.88rem] text-[#fbbf24]">+ 18% GST applicable on all charges.</div>
+      </section>
+
+      <!-- AYUSH ELC -->
+      <section id="ayush-elc" class="mb-14 scroll-mt-24">
+        <h2 class="mb-2 border-b border-line pb-3 font-head text-2xl font-bold"><span class="mr-2 inline-block rounded-full border border-teal/20 bg-teal/[0.12] px-3 py-1 align-middle text-[0.7rem] font-bold uppercase tracking-wider text-[#6ee7b7]">AYUSH ELC</span>AYUSH Entry Level <span class="text-blue">Certification</span></h2>
+        <p class="mb-2 text-[0.78rem] italic text-[#64748b]">2-year certification cycle</p>
+        <p class="mb-4 text-[0.97rem] text-muted">AYUSH Entry Level Certification is available in two variants — <strong class="text-paper">Centre</strong> (standalone AYUSH treatment centres) and <strong class="text-paper">Hospital</strong> (AYUSH hospitals with inpatient beds). Both cover a 2-year cycle with no annual surveillance required.</p>
+        <h3 class="mb-3 mt-6 font-head text-lg font-semibold text-blue">AYUSH ELC — Centre</h3>
+        <p class="mb-4 text-[0.97rem] text-muted">For standalone AYUSH treatment centres without inpatient beds. Flat fee regardless of size.</p>
+        <div class="my-5 overflow-x-auto">
+          <table class="tbl">
+            <thead><tr><th>Type</th><th>2-Year Cycle Fee</th></tr></thead>
+            <tbody><tr><td><strong>AYUSH ELC Centre (flat)</strong></td><td class="amount">₹11,000</td></tr></tbody>
+          </table>
+        </div>
+        <h3 class="mb-3 mt-6 font-head text-lg font-semibold text-blue">AYUSH ELC — Hospital</h3>
+        <p class="mb-4 text-[0.97rem] text-muted">For AYUSH hospitals with sanctioned inpatient beds. Fee is slab-based on bed strength.</p>
+        <div class="my-5 overflow-x-auto">
+          <table class="tbl">
+            <thead><tr><th>Bed Strength</th><th>2-Year Cycle Fee</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Up to 50 beds</strong></td><td class="amount">₹21,000</td></tr>
+              <tr><td><strong>51–100 beds</strong></td><td class="amount">₹75,000</td></tr>
+              <tr><td><strong>101+ beds</strong></td><td class="amount">₹1,00,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-2 text-[0.78rem] italic text-[#64748b]">All amounts exclude 18% GST. Fees cover the full 2-year certification cycle.</p>
+        <h3 class="mb-3 mt-6 font-head text-lg font-semibold text-blue">Additional AYUSH ELC Charges</h3>
+        <div class="my-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <div class="rounded-xl border border-white/10 bg-panel px-5 py-4"><div class="mb-1 text-[0.72rem] uppercase tracking-wide text-muted">Focus Assessment</div><div class="font-head text-lg font-bold text-paper">₹15,000</div><div class="mt-0.5 text-[0.78rem] text-[#64748b]">+ 18% GST</div></div>
+          <div class="rounded-xl border border-white/10 bg-panel px-5 py-4"><div class="mb-1 text-[0.72rem] uppercase tracking-wide text-muted">Certificate Re-issue</div><div class="font-head text-lg font-bold text-paper">₹6,000</div><div class="mt-0.5 text-[0.78rem] text-[#64748b]">+ 18% GST</div></div>
+        </div>
+        <div class="my-4 rounded-lg border border-gold/20 bg-gold/10 px-5 py-3 text-[0.88rem] text-[#fbbf24]">+ 18% GST applicable on all charges above.</div>
+      </section>
+
+      <!-- GST & ADDITIONAL -->
+      <section id="gst" class="mb-14 scroll-mt-24">
+        <h2 class="mb-4 border-b border-line pb-3 font-head text-2xl font-bold">GST &amp; <span class="text-blue">Additional Charges</span></h2>
+        <p class="mb-4 text-[0.97rem] text-muted"><strong class="text-paper">18% GST is levied on all NABH fees</strong> — application, annual, virtual assessment, focus assessment, and re-issue. Below is an example of how GST impacts the total outgo for a 100-bed hospital:</p>
+        <div class="my-5 overflow-x-auto">
+          <table class="tbl">
+            <thead><tr><th>Fee Component</th><th>Base Amount</th><th>GST @ 18%</th><th>Total Payable</th></tr></thead>
+            <tbody>
+              <tr><td>Application Fee (≤100 beds HCO)</td><td>₹40,000</td><td>₹7,200</td><td class="amount">₹47,200</td></tr>
+              <tr><td>Annual Fee (≤100 beds HCO)</td><td>₹2,00,000</td><td>₹36,000</td><td class="amount">₹2,36,000</td></tr>
+              <tr><td><strong>Total Year 1 (≤100 beds HCO)</strong></td><td><strong>₹2,40,000</strong></td><td><strong>₹43,200</strong></td><td class="amount"><strong>₹2,83,200</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="mb-3 mt-6 font-head text-lg font-semibold text-blue">Additional Charges — All Programmes</h3>
+        <div class="my-5 overflow-x-auto">
+          <table class="tbl">
+            <thead><tr><th>Charge</th><th>HCO Full</th><th>SHCO Full</th><th>HCO ELC</th><th>SHCO ELC</th><th>AYUSH ELC</th></tr></thead>
+            <tbody>
+              <tr><td>Virtual Assessment Fee</td><td>₹5,000–₹15,000</td><td>₹3,000</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr><td>Focus Assessment Fee</td><td>₹15,000</td><td>₹15,000</td><td>₹15,000</td><td>₹15,000</td><td>₹15,000</td></tr>
+              <tr><td>Certificate Re-issue Fee</td><td>₹6,000</td><td>₹6,000</td><td>₹6,000</td><td>₹6,000</td><td>₹6,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="my-6 rounded-xl border border-brand/30 bg-brand/10 px-6 py-5">
+          <p class="text-paper">⚠️ The NABH fee structure is subject to revision. Always confirm current fees at <strong>nabh.co</strong> or contact NABH directly before submitting your application. The figures on this page are updated as of April 2024 (HCO/SHCO Full) and June 2025 (HCO ELC, SHCO ELC, AYUSH ELC).</p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="mb-10 scroll-mt-24">
+        <h2 class="mb-4 border-b border-line pb-3 font-head text-2xl font-bold">Frequently Asked <span class="text-blue">Questions</span></h2>
+        <div class="divide-y divide-white/10">
+          <div class="py-5"><h3 class="mb-2 font-head font-semibold">What is the total NABH accreditation cost for a 100-bed hospital?</h3><p class="text-[0.92rem] text-muted">For HCO Full Accreditation, a hospital with up to 100 beds pays ₹40,000 (application) + ₹2,00,000 (annual fee) = ₹2,40,000 before GST. With 18% GST, the total Year 1 outgo is ₹2,83,200. Annual renewal (without reapplication) is ₹2,36,000 with GST.</p></div>
+          <div class="py-5"><h3 class="mb-2 font-head font-semibold">How much does NABH accreditation cost for a small clinic?</h3><p class="text-[0.92rem] text-muted">For SHCO Full Accreditation (up to 50 beds): ₹25,000 application + ₹1,50,000 annual = ₹1,75,000 before GST, or ₹2,06,500 with 18% GST. For even smaller facilities, the HOPE Entry Level Certification starts at ₹21,000 (up to 5 beds) for a 2-year cycle.</p></div>
+          <div class="py-5"><h3 class="mb-2 font-head font-semibold">Is NABH accreditation fee refundable?</h3><p class="text-[0.92rem] text-muted">NABH accreditation fees are generally non-refundable. Application fees are not returned if the application is withdrawn or rejected. Always verify the refund policy with NABH directly before applying.</p></div>
+          <div class="py-5"><h3 class="mb-2 font-head font-semibold">What is the NABH Entry Level Certification fee for a 50-bed hospital?</h3><p class="text-[0.92rem] text-muted">For the HOPE Entry Level Certification (w.e.f. June 2025), a hospital with 21–50 beds pays ₹48,000 for a 2-year cycle (rebate valid till September 30, 2026), plus 18% GST. For 51–100 beds, the fee is ₹96,000 for the 2-year cycle.</p></div>
+          <div class="py-5"><h3 class="mb-2 font-head font-semibold">Does NABH fee include the assessor visit cost?</h3><p class="text-[0.92rem] text-muted">The annual fee covers the standard assessment visit. However, virtual assessment (₹3,000–₹15,000) and focus assessment (₹15,000) are charged separately, as are any additional visits. Travel and accommodation costs for assessors, if applicable, may also be billed separately.</p></div>
+          <div class="py-5"><h3 class="mb-2 font-head font-semibold">What is the NABH fee for a dental clinic?</h3><p class="text-[0.92rem] text-muted">For Dental (DHSP) accreditation: 1–3 chairs pay ₹5,000 application + ₹15,000 annual = ₹20,000/year before GST. 4–10 chairs: ₹15,000 + ₹40,000 = ₹55,000. 11–15 chairs: ₹20,000 + ₹60,000 = ₹80,000. Add 18% GST to all figures.</p></div>
+          <div class="py-5"><h3 class="mb-2 font-head font-semibold">How often do NABH fees change?</h3><p class="text-[0.92rem] text-muted">NABH revises its fee schedule periodically. The current HCO/SHCO fees are effective from 01 April 2024, and the HOPE ELC fees from June 2025. Always verify current fees at nabh.co before applying, as this page reflects the most recently published schedule.</p></div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <div class="my-10 rounded-xl border border-brand/30 bg-gradient-to-br from-ink2 to-[#1e3a8a] p-8 text-center">
+        <h3 class="mb-2 font-head text-xl font-bold text-paper">Prepare for NABH Without Hiring a Consultant</h3>
+        <p class="mb-5 text-sm text-muted">AccredReady is India's only software built specifically for NABH compliance — covering all 639 OEs with evidence guidance, internal audit tools, KPI tracking, and mock drill management. Hospitals using AccredReady report 40–60% faster preparation time.</p>
+        <a href="https://accredready.in" class="inline-block rounded-lg bg-brand px-7 py-3 font-semibold text-white shadow-[0_4px_20px_rgba(37,99,235,0.35)] outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start Free — No Credit Card Required →</a>
       </div>
-      <div class="summary-row">
-        <span class="summary-prog">HCO Full Accreditation (301–500 beds)</span>
-        <span class="summary-range">₹1,00,000 + ₹4,00,000 / year</span>
-      </div>
-      <div class="summary-row">
-        <span class="summary-prog">HCO Full Accreditation (501+ beds)</span>
-        <span class="summary-range">₹1,50,000 + ₹5,00,000 / year</span>
-      </div>
-      <div class="summary-row">
-        <span class="summary-prog">SHCO Full Accreditation (≤50 beds)</span>
-        <span class="summary-range">₹25,000 + ₹1,50,000 / year</span>
-      </div>
-      <div class="summary-row">
-        <span class="summary-prog">HCO ELC (51–100 beds, rebate till Sep 2026)</span>
-        <span class="summary-range">₹96,000 / 2-year cycle</span>
-      </div>
-      <div class="summary-row">
-        <span class="summary-prog">HCO ELC (101–300 beds, rebate till Sep 2026)</span>
-        <span class="summary-range">₹1,20,000 / 2-year cycle</span>
-      </div>
-      <div class="summary-row">
-        <span class="summary-prog">SHCO ELC (≤5 beds)</span>
-        <span class="summary-range">₹21,000 / 2-year cycle</span>
-      </div>
-      <div class="summary-row">
-        <span class="summary-prog">SHCO ELC (6–20 beds, rebate till Sep 2026)</span>
-        <span class="summary-range">₹30,000 / 2-year cycle</span>
-      </div>
-      <div class="summary-row">
-        <span class="summary-prog">AYUSH ELC Centre (flat)</span>
-        <span class="summary-range">₹11,000 / 2-year cycle</span>
-      </div>
-      <div class="summary-row">
-        <span class="summary-prog">AYUSH ELC Hospital (≤50 beds)</span>
-        <span class="summary-range">₹21,000 / 2-year cycle</span>
-      </div>
-      <div class="summary-row">
-        <span class="summary-prog">Eye Care ECO (≤5,000 surgeries)</span>
-        <span class="summary-range">₹5,000 + ₹50,000 / year</span>
-      </div>
-      <div class="summary-row">
-        <span class="summary-prog">Dental DHSP (1–3 chairs)</span>
-        <span class="summary-range">₹5,000 + ₹15,000 / year</span>
-      </div>
-      <div class="summary-row">
-        <span class="summary-prog">AYUSH (10–50 beds)</span>
-        <span class="summary-range">₹20,000 + ₹75,000 / year</span>
-      </div>
-    </div>
-  </div>
 
-  <!-- HCO FULL -->
-  <div class="section">
-    <span class="section-anchor" id="hco"></span>
-    <h2><span class="prog-badge hco" style="font-size:0.75rem;font-family:'Syne',sans-serif;margin-right:0.5rem;">HCO</span>HCO Full <span>Accreditation</span></h2>
-    <p class="effective-date">w.e.f. 01 April 2024</p>
-    <p>For hospitals and healthcare organisations with 50+ sanctioned beds pursuing full NABH accreditation under the 6th Edition standards (639 Objective Elements).</p>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Bed Strength</th>
-            <th>Application Fee</th>
-            <th>Annual Fee</th>
-            <th>Total (Year 1)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Up to 100 beds</strong></td>
-            <td class="amount">₹40,000</td>
-            <td class="amount">₹2,00,000</td>
-            <td class="amount">₹2,40,000</td>
-          </tr>
-          <tr>
-            <td><strong>101–300 beds</strong></td>
-            <td class="amount">₹75,000</td>
-            <td class="amount">₹3,00,000</td>
-            <td class="amount">₹3,75,000</td>
-          </tr>
-          <tr>
-            <td><strong>301–500 beds</strong></td>
-            <td class="amount">₹1,00,000</td>
-            <td class="amount">₹4,00,000</td>
-            <td class="amount">₹5,00,000</td>
-          </tr>
-          <tr>
-            <td><strong>501+ beds</strong></td>
-            <td class="amount">₹1,50,000</td>
-            <td class="amount">₹5,00,000</td>
-            <td class="amount">₹6,50,000</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
-    <p class="source-note">Source: NABH official fee schedule w.e.f. 01.04.2024. All amounts exclude 18% GST. Certificate validity: 3 years (mid-cycle surveillance required).</p>
+  </main>
 
-    <h3>Additional HCO Charges</h3>
-    <div class="misc-grid">
-      <div class="misc-card">
-        <div class="misc-label">Virtual Assessment</div>
-        <div class="misc-amount">₹5,000–₹15,000</div>
-        <div class="misc-sub">Per virtual assessment visit</div>
-      </div>
-      <div class="misc-card">
-        <div class="misc-label">Focus Assessment</div>
-        <div class="misc-amount">₹15,000</div>
-        <div class="misc-sub">For targeted re-assessment</div>
-      </div>
-      <div class="misc-card">
-        <div class="misc-label">Certificate Re-issue</div>
-        <div class="misc-amount">₹6,000</div>
-        <div class="misc-sub">For lost/damaged certificate</div>
-      </div>
-    </div>
-    <div class="gst-note">+ 18% GST applicable on all charges above.</div>
-  </div>
-
-  <!-- SHCO FULL -->
-  <div class="section">
-    <span class="section-anchor" id="shco"></span>
-    <h2><span class="prog-badge shco" style="font-size:0.75rem;font-family:'Syne',sans-serif;margin-right:0.5rem;">SHCO</span>SHCO Full <span>Accreditation</span></h2>
-    <p>For Small Healthcare Organisations with up to 50 sanctioned beds — clinics, nursing homes, day-care centres.</p>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Programme</th>
-            <th>Application Fee</th>
-            <th>Annual Fee</th>
-            <th>Total (Year 1)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>SHCO Full Accreditation</strong><br/><span style="font-size:0.8rem;color:#64748b;">Up to 50 beds</span></td>
-            <td class="amount">₹25,000</td>
-            <td class="amount">₹1,50,000</td>
-            <td class="amount">₹1,75,000</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="source-note">Certificate validity: 4 years (mid-cycle surveillance required). All amounts exclude 18% GST.</p>
-
-    <h3>Additional SHCO Charges</h3>
-    <div class="misc-grid">
-      <div class="misc-card">
-        <div class="misc-label">Virtual Assessment</div>
-        <div class="misc-amount">₹3,000</div>
-        <div class="misc-sub">Per virtual assessment</div>
-      </div>
-      <div class="misc-card">
-        <div class="misc-label">Focus Assessment</div>
-        <div class="misc-amount">₹15,000</div>
-        <div class="misc-sub">For targeted re-assessment</div>
-      </div>
-      <div class="misc-card">
-        <div class="misc-label">Certificate Re-issue</div>
-        <div class="misc-amount">₹6,000</div>
-        <div class="misc-sub">For lost/damaged certificate</div>
-      </div>
-    </div>
-    <div class="gst-note">+ 18% GST applicable on all charges above.</div>
-  </div>
-
-  <!-- HCO ELC -->
-  <div class="section">
-    <span class="section-anchor" id="hco-elc"></span>
-    <h2><span class="prog-badge elc" style="font-size:0.75rem;font-family:'Syne',sans-serif;margin-right:0.5rem;">HCO ELC</span>HCO Entry Level <span>Certification</span></h2>
-    <p class="effective-date">w.e.f. June 2025 — 2-year certification cycle</p>
-    <p>For hospitals with 50+ sanctioned beds pursuing entry-level certification via the HOPE (Healthcare Organisation for Patient Excellence) portal before progressing to Full NABH Accreditation.</p>
-
-    <div class="rebate-banner">
-      <div class="rebate-banner-icon">🎯</div>
-      <p><strong>Rebate available till 30 September 2026</strong> on the 51–100 and 101–300 bed slabs. Original (non-rebated) fees apply after that date. No rebate on 301–500 and 501+ slabs.</p>
-    </div>
-
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Bed Strength</th>
-            <th>Regular Fee</th>
-            <th>Rebated Fee (till Sep 2026)</th>
-            <th>Cycle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>51–100 beds</strong></td>
-            <td class="amount">₹1,60,000</td>
-            <td><span class="rebate-price">₹96,000</span></td>
-            <td>2 years</td>
-          </tr>
-          <tr>
-            <td><strong>101–300 beds</strong></td>
-            <td class="amount">₹2,00,000</td>
-            <td><span class="rebate-price">₹1,20,000</span></td>
-            <td>2 years</td>
-          </tr>
-          <tr>
-            <td><strong>301–500 beds</strong></td>
-            <td class="amount">₹2,00,000</td>
-            <td><span style="color:var(--muted);font-size:0.82rem;">No rebate</span></td>
-            <td>2 years</td>
-          </tr>
-          <tr>
-            <td><strong>501+ beds</strong></td>
-            <td class="amount">₹2,50,000</td>
-            <td><span style="color:var(--muted);font-size:0.82rem;">No rebate</span></td>
-            <td>2 years</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="source-note">All amounts exclude 18% GST. Fees cover the full 2-year certification cycle. Source: NABH HOPE ELC fee schedule w.e.f. June 2025.</p>
-
-    <h3>Additional HCO ELC Charges</h3>
-    <div class="misc-grid">
-      <div class="misc-card">
-        <div class="misc-label">Focus Assessment</div>
-        <div class="misc-amount">₹15,000</div>
-        <div class="misc-sub">+ 18% GST</div>
-      </div>
-      <div class="misc-card">
-        <div class="misc-label">Certificate Re-issue</div>
-        <div class="misc-amount">₹6,000</div>
-        <div class="misc-sub">+ 18% GST</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SHCO ELC -->
-  <div class="section">
-    <span class="section-anchor" id="shco-elc"></span>
-    <h2><span class="prog-badge elc" style="font-size:0.75rem;font-family:'Syne',sans-serif;margin-right:0.5rem;">SHCO ELC</span>SHCO Entry Level <span>Certification</span></h2>
-    <p class="effective-date">w.e.f. June 2025 — 2-year certification cycle</p>
-    <p>For Small Healthcare Organisations with up to 50 sanctioned beds pursuing entry-level certification before progressing to SHCO Full Accreditation.</p>
-
-    <div class="rebate-banner">
-      <div class="rebate-banner-icon">🎯</div>
-      <p><strong>Rebate available till 30 September 2026</strong> on the 6–20 and 21–50 bed slabs. The ≤5 bed slab has no rebate (already at base price).</p>
-    </div>
-
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Bed Strength</th>
-            <th>Regular Fee</th>
-            <th>Rebated Fee (till Sep 2026)</th>
-            <th>Cycle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Up to 5 beds</strong></td>
-            <td class="amount">₹21,000</td>
-            <td><span style="color:var(--muted);font-size:0.82rem;">No rebate</span></td>
-            <td>2 years</td>
-          </tr>
-          <tr>
-            <td><strong>6–20 beds</strong></td>
-            <td class="amount">₹40,000</td>
-            <td><span class="rebate-price">₹30,000</span></td>
-            <td>2 years</td>
-          </tr>
-          <tr>
-            <td><strong>21–50 beds</strong></td>
-            <td class="amount">₹80,000</td>
-            <td><span class="rebate-price">₹48,000</span></td>
-            <td>2 years</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="source-note">All amounts exclude 18% GST. Fees cover the full 2-year certification cycle. Source: NABH HOPE ELC fee schedule w.e.f. June 2025.</p>
-
-    <h3>Additional SHCO ELC Charges</h3>
-    <div class="misc-grid">
-      <div class="misc-card">
-        <div class="misc-label">Focus Assessment</div>
-        <div class="misc-amount">₹15,000</div>
-        <div class="misc-sub">+ 18% GST</div>
-      </div>
-      <div class="misc-card">
-        <div class="misc-label">Certificate Re-issue</div>
-        <div class="misc-amount">₹6,000</div>
-        <div class="misc-sub">+ 18% GST</div>
-      </div>
-    </div>
-
-    <div class="highlight">
-      <p>💡 ELC is a stepping stone — not permanent accreditation. After the 2-year cycle, hospitals progress to HCO or SHCO Full Accreditation. AccredReady tracks ELC compliance and helps plan your upgrade path.</p>
-    </div>
-  </div>
-
-  <!-- EYE CARE -->
-  <div class="section">
-    <span class="section-anchor" id="eye"></span>
-    <h2><span class="prog-badge eye" style="font-size:0.75rem;font-family:'Syne',sans-serif;margin-right:0.5rem;">ECO</span>Eye Care <span>Accreditation</span></h2>
-    <p>For standalone eye care organisations (ECO). Slabs are based on number of surgeries performed per year.</p>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Annual Surgery Volume</th>
-            <th>Application Fee</th>
-            <th>Annual Fee</th>
-            <th>Total (Year 1)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Up to 5,000 surgeries</strong></td>
-            <td class="amount">₹5,000</td>
-            <td class="amount">₹50,000</td>
-            <td class="amount">₹55,000</td>
-          </tr>
-          <tr>
-            <td><strong>5,001–10,000 surgeries</strong></td>
-            <td class="amount">₹10,000</td>
-            <td class="amount">₹1,50,000</td>
-            <td class="amount">₹1,60,000</td>
-          </tr>
-          <tr>
-            <td><strong>10,001+ surgeries</strong></td>
-            <td class="amount">₹20,000</td>
-            <td class="amount">₹2,00,000</td>
-            <td class="amount">₹2,20,000</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="gst-note">+ 18% GST applicable on all charges.</div>
-  </div>
-
-  <!-- DENTAL -->
-  <div class="section">
-    <span class="section-anchor" id="dental"></span>
-    <h2><span class="prog-badge dental" style="font-size:0.75rem;font-family:'Syne',sans-serif;margin-right:0.5rem;">DHSP</span>Dental <span>Accreditation</span></h2>
-    <p>For Dental Healthcare Service Providers (DHSP). Fee slabs are based on the number of dental chairs in the facility.</p>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Dental Chairs</th>
-            <th>Application Fee</th>
-            <th>Annual Fee</th>
-            <th>Total (Year 1)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>1–3 chairs</strong></td>
-            <td class="amount">₹5,000</td>
-            <td class="amount">₹15,000</td>
-            <td class="amount">₹20,000</td>
-          </tr>
-          <tr>
-            <td><strong>4–10 chairs</strong></td>
-            <td class="amount">₹15,000</td>
-            <td class="amount">₹40,000</td>
-            <td class="amount">₹55,000</td>
-          </tr>
-          <tr>
-            <td><strong>11–15 chairs</strong></td>
-            <td class="amount">₹20,000</td>
-            <td class="amount">₹60,000</td>
-            <td class="amount">₹80,000</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="gst-note">+ 18% GST applicable on all charges.</div>
-  </div>
-
-  <!-- AYUSH FULL -->
-  <div class="section">
-    <span class="section-anchor" id="ayush"></span>
-    <h2><span class="prog-badge ayush" style="font-size:0.75rem;font-family:'Syne',sans-serif;margin-right:0.5rem;">AYUSH</span>AYUSH Full <span>Accreditation</span></h2>
-    <p>For AYUSH (Ayurveda, Yoga, Unani, Siddha, Homeopathy) hospitals seeking full accreditation. Slabs are based on sanctioned bed strength.</p>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Bed Strength</th>
-            <th>Application Fee</th>
-            <th>Annual Fee</th>
-            <th>Total (Year 1)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>10–50 beds</strong></td>
-            <td class="amount">₹20,000</td>
-            <td class="amount">₹75,000</td>
-            <td class="amount">₹95,000</td>
-          </tr>
-          <tr>
-            <td><strong>51–100 beds</strong></td>
-            <td class="amount">₹30,000</td>
-            <td class="amount">₹1,25,000</td>
-            <td class="amount">₹1,55,000</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="gst-note">+ 18% GST applicable on all charges.</div>
-  </div>
-
-  <!-- AYUSH ELC -->
-  <div class="section">
-    <span class="section-anchor" id="ayush-elc"></span>
-    <h2><span class="prog-badge ayush" style="font-size:0.75rem;font-family:'Syne',sans-serif;margin-right:0.5rem;">AYUSH ELC</span>AYUSH Entry Level <span>Certification</span></h2>
-    <p class="effective-date">2-year certification cycle</p>
-    <p>AYUSH Entry Level Certification is available in two variants — <strong>Centre</strong> (standalone AYUSH treatment centres) and <strong>Hospital</strong> (AYUSH hospitals with inpatient beds). Both cover a 2-year cycle with no annual surveillance required.</p>
-
-    <h3>AYUSH ELC — Centre</h3>
-    <p>For standalone AYUSH treatment centres without inpatient beds. Flat fee regardless of size.</p>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Type</th>
-            <th>2-Year Cycle Fee</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>AYUSH ELC Centre (flat)</strong></td>
-            <td class="amount">₹11,000</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>AYUSH ELC — Hospital</h3>
-    <p>For AYUSH hospitals with sanctioned inpatient beds. Fee is slab-based on bed strength.</p>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Bed Strength</th>
-            <th>2-Year Cycle Fee</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Up to 50 beds</strong></td>
-            <td class="amount">₹21,000</td>
-          </tr>
-          <tr>
-            <td><strong>51–100 beds</strong></td>
-            <td class="amount">₹75,000</td>
-          </tr>
-          <tr>
-            <td><strong>101+ beds</strong></td>
-            <td class="amount">₹1,00,000</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="source-note">All amounts exclude 18% GST. Fees cover the full 2-year certification cycle.</p>
-
-    <h3>Additional AYUSH ELC Charges</h3>
-    <div class="misc-grid">
-      <div class="misc-card">
-        <div class="misc-label">Focus Assessment</div>
-        <div class="misc-amount">₹15,000</div>
-        <div class="misc-sub">+ 18% GST</div>
-      </div>
-      <div class="misc-card">
-        <div class="misc-label">Certificate Re-issue</div>
-        <div class="misc-amount">₹6,000</div>
-        <div class="misc-sub">+ 18% GST</div>
-      </div>
-    </div>
-    <div class="gst-note">+ 18% GST applicable on all charges above.</div>
-  </div>
-
-  <!-- GST & ADDITIONAL -->
-  <div class="section">
-    <span class="section-anchor" id="gst"></span>
-    <h2>GST & <span>Additional Charges</span></h2>
-    <p><strong>18% GST is levied on all NABH fees</strong> — application, annual, virtual assessment, focus assessment, and re-issue. Below is an example of how GST impacts the total outgo for a 100-bed hospital:</p>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Fee Component</th>
-            <th>Base Amount</th>
-            <th>GST @ 18%</th>
-            <th>Total Payable</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Application Fee (≤100 beds HCO)</td>
-            <td>₹40,000</td>
-            <td>₹7,200</td>
-            <td class="amount">₹47,200</td>
-          </tr>
-          <tr>
-            <td>Annual Fee (≤100 beds HCO)</td>
-            <td>₹2,00,000</td>
-            <td>₹36,000</td>
-            <td class="amount">₹2,36,000</td>
-          </tr>
-          <tr>
-            <td><strong>Total Year 1 (≤100 beds HCO)</strong></td>
-            <td><strong>₹2,40,000</strong></td>
-            <td><strong>₹43,200</strong></td>
-            <td class="amount"><strong>₹2,83,200</strong></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>Additional Charges — All Programmes</h3>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Charge</th>
-            <th>HCO Full</th>
-            <th>SHCO Full</th>
-            <th>HCO ELC</th>
-            <th>SHCO ELC</th>
-            <th>AYUSH ELC</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Virtual Assessment Fee</td>
-            <td>₹5,000–₹15,000</td>
-            <td>₹3,000</td>
-            <td>—</td>
-            <td>—</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>Focus Assessment Fee</td>
-            <td>₹15,000</td>
-            <td>₹15,000</td>
-            <td>₹15,000</td>
-            <td>₹15,000</td>
-            <td>₹15,000</td>
-          </tr>
-          <tr>
-            <td>Certificate Re-issue Fee</td>
-            <td>₹6,000</td>
-            <td>₹6,000</td>
-            <td>₹6,000</td>
-            <td>₹6,000</td>
-            <td>₹6,000</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="highlight">
-      <p>⚠️ The NABH fee structure is subject to revision. Always confirm current fees at <strong>nabh.co</strong> or contact NABH directly before submitting your application. The figures on this page are updated as of April 2024 (HCO/SHCO Full) and June 2025 (HCO ELC, SHCO ELC, AYUSH ELC).</p>
-    </div>
-  </div>
-
-  <!-- FAQ -->
-  <div class="section">
-    <span class="section-anchor" id="faq"></span>
-    <h2>Frequently Asked <span>Questions</span></h2>
-    <div class="faq-item">
-      <div class="faq-q">What is the total NABH accreditation cost for a 100-bed hospital?</div>
-      <div class="faq-a">For HCO Full Accreditation, a hospital with up to 100 beds pays ₹40,000 (application) + ₹2,00,000 (annual fee) = ₹2,40,000 before GST. With 18% GST, the total Year 1 outgo is ₹2,83,200. Annual renewal (without reapplication) is ₹2,36,000 with GST.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How much does NABH accreditation cost for a small clinic?</div>
-      <div class="faq-a">For SHCO Full Accreditation (up to 50 beds): ₹25,000 application + ₹1,50,000 annual = ₹1,75,000 before GST, or ₹2,06,500 with 18% GST. For even smaller facilities, the HOPE Entry Level Certification starts at ₹21,000 (up to 5 beds) for a 2-year cycle.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Is NABH accreditation fee refundable?</div>
-      <div class="faq-a">NABH accreditation fees are generally non-refundable. Application fees are not returned if the application is withdrawn or rejected. Always verify the refund policy with NABH directly before applying.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What is the NABH Entry Level Certification fee for a 50-bed hospital?</div>
-      <div class="faq-a">For the HOPE Entry Level Certification (w.e.f. June 2025), a hospital with 21–50 beds pays ₹48,000 for a 2-year cycle (rebate valid till September 30, 2026), plus 18% GST. For 51–100 beds, the fee is ₹96,000 for the 2-year cycle.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Does NABH fee include the assessor visit cost?</div>
-      <div class="faq-a">The annual fee covers the standard assessment visit. However, virtual assessment (₹3,000–₹15,000) and focus assessment (₹15,000) are charged separately, as are any additional visits. Travel and accommodation costs for assessors, if applicable, may also be billed separately.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What is the NABH fee for a dental clinic?</div>
-      <div class="faq-a">For Dental (DHSP) accreditation: 1–3 chairs pay ₹5,000 application + ₹15,000 annual = ₹20,000/year before GST. 4–10 chairs: ₹15,000 + ₹40,000 = ₹55,000. 11–15 chairs: ₹20,000 + ₹60,000 = ₹80,000. Add 18% GST to all figures.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How often do NABH fees change?</div>
-      <div class="faq-a">NABH revises its fee schedule periodically. The current HCO/SHCO fees are effective from 01 April 2024, and the HOPE ELC fees from June 2025. Always verify current fees at nabh.co before applying, as this page reflects the most recently published schedule.</div>
-    </div>
-  </div>
-
-  <!-- CTA -->
-  <div class="cta-inline">
-    <h3>Prepare for NABH Without Hiring a Consultant</h3>
-    <p>AccredReady is India's only software built specifically for NABH compliance — covering all 639 OEs with evidence guidance, internal audit tools, KPI tracking, and mock drill management. Hospitals using AccredReady report 40–60% faster preparation time.</p>
-    <a href="https://accredready.in" class="btn-primary">Start Free — No Credit Card Required →</a>
-  </div>
-
-</div>
-
-<footer>
-  <p style="margin-bottom:0.75rem;">
-    <a href="https://accredready.in">Home</a>
-    <a href="https://accredready.in/nabh-guide.html">NABH Guide</a>
-    <a href="https://accredready.in/nabh-6th-edition-checklist.html">NABH Checklist</a>
-    <a href="https://accredready.in/nabh-internal-audit-checklist.html">Internal Audit</a>
-    <a href="https://accredready.in/nabh-kpi-indicators.html">KPI Indicators</a>
-    <a href="https://accredready.in/blog/index.html">Blog</a>
-    <a href="https://accredready.in/privacy.html">Privacy Policy</a>
-  </p>
-  <p>© 2026 AccredReady by MK Tech. All rights reserved. Fee data sourced from NABH official schedule; verify at nabh.co before applying.</p>
-</footer>
+  <!-- FOOTER -->
+  <footer class="border-t border-line px-5 py-8 text-center text-sm text-muted sm:px-8">
+    <nav aria-label="Footer" class="mb-3 flex flex-wrap justify-center gap-x-6 gap-y-2">
+      <a href="https://accredready.in" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
+      <a href="https://accredready.in/nabh-guide.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Guide</a>
+      <a href="https://accredready.in/nabh-6th-edition-checklist.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Checklist</a>
+      <a href="https://accredready.in/nabh-internal-audit-checklist.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Internal Audit</a>
+      <a href="https://accredready.in/nabh-kpi-indicators.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">KPI Indicators</a>
+      <a href="https://accredready.in/blog/index.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Blog</a>
+      <a href="https://accredready.in/privacy.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
+    </nav>
+    <p>© 2026 AccredReady by MK Tech. All rights reserved. Fee data sourced from NABH official schedule; verify at nabh.co before applying.</p>
+  </footer>
 
 </body>
 </html>

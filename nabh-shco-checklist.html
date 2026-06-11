@@ -21,203 +21,221 @@
     "datePublished": "2026-06-06"
   }
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind via CDN + shared design-system token config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:    '#040d1a', ink2: '#0a1f3d', panel: '#0f1f38', panel2: '#0a1838',
+            blue:   '#38bdf8', brand: '#2563eb', gold: '#f59e0b', purple: '#a78bfa',
+            teal:   '#2dd4bf', orange: '#fb923c', paper: '#f8fafc', muted: '#94a3b8',
+            good:   '#4ade80', bad: '#f87171', line: 'rgba(255,255,255,0.08)',
+          },
+          fontFamily: {
+            head: ['Syne', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            body: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer components {
+      .tbl { @apply w-full border-collapse text-[0.9rem]; }
+      .tbl th { @apply bg-panel px-4 py-3 text-left font-head font-bold text-paper; }
+      .tbl td { @apply border-b border-white/5 px-4 py-2.5 align-top text-[#cbd5e1]; }
+      .tbl strong { @apply text-paper; }
+      .chk { @apply flex items-start gap-3 border-b border-white/5 py-2 text-[0.9rem] text-[#cbd5e1] last:border-0; }
+      .chk .box { @apply flex-shrink-0 text-good; }
+      .core { @apply ml-auto flex-shrink-0 rounded bg-bad/15 px-1.5 py-0.5 text-[0.7rem] font-bold text-bad; }
+    }
+  </style>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --navy:#040d1a; --accent:#2563eb; --accent2:#38bdf8; --gold:#f59e0b; --white:#f8fafc; --muted:#94a3b8; --card:#0f1f38; --green:#4ade80; --red:#f87171; }
-    body { background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; line-height: 1.7; }
-    nav { display:flex; justify-content:space-between; align-items:center; padding:1.25rem 2rem; border-bottom:1px solid rgba(255,255,255,0.06); position:sticky; top:0; background:rgba(4,13,26,0.95); backdrop-filter:blur(12px); z-index:100; }
-    .logo { font-family:'Syne',sans-serif; font-weight:800; font-size:1.4rem; color:var(--accent2); text-decoration:none; }
-    .nav-cta { background:var(--accent); color:white; padding:0.55rem 1.4rem; border-radius:6px; text-decoration:none; font-weight:500; font-size:0.9rem; }
-    .hero { max-width:860px; margin:0 auto; padding:4rem 2rem 3rem; text-align:center; }
-    .badge { display:inline-block; background:rgba(37,99,235,0.15); border:1px solid rgba(37,99,235,0.4); color:var(--accent2); padding:0.3rem 1rem; border-radius:50px; font-size:0.8rem; font-weight:500; text-transform:uppercase; margin-bottom:1.5rem; }
-    h1 { font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,3rem); font-weight:800; line-height:1.15; margin-bottom:1.25rem; }
-    h1 span, h2 span { color:var(--accent2); }
-    .hero-sub { font-size:1.1rem; color:var(--muted); max-width:620px; margin:0 auto 2rem; }
-    .article { max-width:860px; margin:0 auto; padding:0 2rem 4rem; }
-    h2 { font-family:'Syne',sans-serif; font-size:1.6rem; font-weight:700; margin:2.5rem 0 1rem; }
-    h3 { font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:700; margin:1.75rem 0 0.6rem; color:var(--accent2); }
-    p { color:#cbd5e1; margin-bottom:1rem; font-size:0.97rem; }
-    .checklist-section { background:var(--card); border:1px solid rgba(255,255,255,0.07); border-radius:12px; padding:1.5rem; margin:1rem 0; }
-    .checklist-section h4 { font-family:'Syne',sans-serif; font-weight:700; margin-bottom:1rem; color:var(--accent2); font-size:0.95rem; letter-spacing:0.05em; text-transform:uppercase; }
-    .checklist-item { display:flex; gap:0.75rem; padding:0.5rem 0; border-bottom:1px solid rgba(255,255,255,0.04); font-size:0.9rem; color:#cbd5e1; }
-    .checklist-item:last-child { border:none; }
-    .check { color:var(--green); flex-shrink:0; margin-top:2px; }
-    .core-tag { background:rgba(248,113,113,0.15); color:var(--red); font-size:0.7rem; font-weight:700; padding:0.15rem 0.4rem; border-radius:4px; margin-left:auto; flex-shrink:0; }
-    .info-box { background:rgba(37,99,235,0.1); border:1px solid rgba(37,99,235,0.3); border-radius:10px; padding:1.25rem 1.5rem; margin:1.5rem 0; }
-    .info-box p { color:var(--white); margin:0; }
-    table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.9rem; }
-    th { background:var(--card); padding:0.75rem 1rem; text-align:left; font-family:'Syne',sans-serif; font-weight:700; border-bottom:2px solid rgba(255,255,255,0.1); }
-    td { padding:0.65rem 1rem; border-bottom:1px solid rgba(255,255,255,0.05); color:#cbd5e1; }
-    .cta-banner { background:linear-gradient(135deg,#0f1f38,#0a1838); border:1px solid rgba(37,99,235,0.3); border-radius:16px; padding:3rem 2rem; text-align:center; margin:3rem 0; }
-    .btn-primary { background:var(--accent); color:white; padding:0.85rem 2rem; border-radius:8px; text-decoration:none; font-weight:600; font-size:1rem; display:inline-block; margin-top:1rem; }
-    footer { text-align:center; padding:2rem; border-top:1px solid rgba(255,255,255,0.06); color:var(--muted); font-size:0.85rem; }
-    footer a { color:var(--muted); text-decoration:none; margin:0 0.75rem; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
-<body>
 
-<nav>
-  <a href="https://accredready.in" class="logo">AccredReady</a>
-  <a href="https://accredready.in" class="nav-cta">Start Free Trial</a>
-</nav>
+<body class="bg-ink text-paper font-body leading-[1.7] antialiased">
 
-<div class="hero">
-  <div class="badge">Hospital Checklist · NABH SHCO</div>
-  <h1>NABH SHCO Checklist:<br><span>Complete Small Hospital Guide 2026</span></h1>
-  <p class="hero-sub">The most complete NABH SHCO preparation checklist. Covers all 408 OEs, mandatory committees, documents, and common failure points — written by a certified NABH Quality Manager.</p>
-</div>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Skip to content</a>
 
-<div class="article">
+  <!-- NAV -->
+  <nav class="sticky top-0 z-[100] flex items-center justify-between border-b border-line bg-ink/95 px-5 py-4 backdrop-blur-md sm:px-8">
+    <a href="https://accredready.in" class="rounded font-head text-xl font-extrabold text-blue outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">AccredReady</a>
+    <a href="https://accredready.in" class="rounded-md bg-brand px-5 py-2 text-sm font-medium text-white outline-none transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">Start Free Trial</a>
+  </nav>
 
-  <h2>What is the NABH SHCO Programme?</h2>
-  <p>The Small Healthcare Organisation (SHCO) programme is NABH's accreditation pathway for hospitals with up to 50 beds. It is not a simplified version of the main HCO programme — it is a purpose-built set of standards that recognises the operational realities of smaller hospitals while maintaining non-negotiable patient safety requirements.</p>
-  <p>The SHCO programme has 408 Objective Elements (vs 639 for Full HCO Accreditation). The 4-level compliance structure (CORE, Commitment, Achievement, Excellence) still applies, and the same 4 passing rules must be satisfied. What changes is the scope of some standards — proportionate to a smaller organisation's capacity.</p>
+  <main id="main">
 
-  <div class="info-box">
-    <p>📌 <strong>Key Numbers:</strong> SHCO Full Accreditation = 408 OEs. SHCO Entry Level Certification = subset of SHCO standards. Both programmes use NABH 6th Edition as the base. AccredReady covers both SHCO Full and SHCO ELC with a dedicated module.</p>
-  </div>
+    <!-- HERO -->
+    <header class="mx-auto max-w-3xl px-5 pb-10 pt-16 text-center sm:px-8">
+      <span class="mb-6 inline-block rounded-full border border-brand/40 bg-brand/15 px-4 py-1 text-xs font-medium uppercase tracking-wider text-blue">Hospital Checklist · NABH SHCO</span>
+      <h1 class="mb-5 font-head text-[clamp(1.8rem,4vw,3rem)] font-extrabold leading-[1.15]">NABH SHCO Checklist:<br><span class="text-blue">Complete Small Hospital Guide 2026</span></h1>
+      <p class="mx-auto max-w-2xl text-lg text-muted">The most complete NABH SHCO preparation checklist. Covers all 408 OEs, mandatory committees, documents, and common failure points — written by a certified NABH Quality Manager.</p>
+    </header>
 
-  <h2>NABH SHCO <span>Preparation Checklist</span></h2>
-  <p>Use this checklist to assess your hospital's readiness. Items marked CORE are non-negotiable — failure on any CORE item = automatic assessment fail.</p>
+    <article class="mx-auto max-w-3xl px-5 pb-16 sm:px-8 [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:font-head [&_h2]:text-2xl [&_h2]:font-bold [&_h2_span]:text-blue [&_h3]:mb-2 [&_h3]:mt-7 [&_h3]:font-head [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-blue [&_p]:mb-4 [&_p]:text-[0.97rem] [&_p]:text-[#cbd5e1] [&_strong]:text-paper">
 
-  <div class="checklist-section">
-    <h4>📋 Governance & Leadership</h4>
-    <div class="checklist-item"><span class="check">☐</span><span>Governing body constitution document with roles defined</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Hospital organogram updated and displayed</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Quality policy signed by top management</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Quality Manager appointed with defined responsibilities</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Annual quality improvement plan documented</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Governing body meeting minutes for last 12 months</span><span class="core-tag">CORE</span></div>
-  </div>
+      <h2>What is the NABH SHCO Programme?</h2>
+      <p>The Small Healthcare Organisation (SHCO) programme is NABH's accreditation pathway for hospitals with up to 50 beds. It is not a simplified version of the main HCO programme — it is a purpose-built set of standards that recognises the operational realities of smaller hospitals while maintaining non-negotiable patient safety requirements.</p>
+      <p>The SHCO programme has 408 Objective Elements (vs 639 for Full HCO Accreditation). The 4-level compliance structure (CORE, Commitment, Achievement, Excellence) still applies, and the same 4 passing rules must be satisfied. What changes is the scope of some standards — proportionate to a smaller organisation's capacity.</p>
 
-  <div class="checklist-section">
-    <h4>🏥 Patient Care & Access</h4>
-    <div class="checklist-item"><span class="check">☐</span><span>OPD registration process documented and implemented</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Triage protocol for emergency patients</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Initial assessment form for all admitted patients</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Discharge summary format with all required components</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Referral and transfer policy with documentation</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Do-Not-Resuscitate (DNR) policy</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>High-risk patient identification protocol</span><span class="core-tag">CORE</span></div>
-  </div>
+      <div class="my-6 rounded-xl border border-brand/30 bg-brand/10 px-6 py-5"><p class="!mb-0 !text-paper">📌 <strong>Key Numbers:</strong> SHCO Full Accreditation = 408 OEs. SHCO Entry Level Certification = subset of SHCO standards. Both programmes use NABH 6th Edition as the base. AccredReady covers both SHCO Full and SHCO ELC with a dedicated module.</p></div>
 
-  <div class="checklist-section">
-    <h4>💊 Medication Management</h4>
-    <div class="checklist-item"><span class="check">☐</span><span>Hospital formulary available and updated</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>High-alert medication list displayed in pharmacy and wards</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Look-alike sound-alike (LASA) drug protocol</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Medication storage conditions documented and monitored</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Adverse Drug Reaction (ADR) reporting system functional</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Narcotic drug register maintained per NDPS Act</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Medication reconciliation process at admission and discharge</span></div>
-  </div>
+      <h2>NABH SHCO <span>Preparation Checklist</span></h2>
+      <p>Use this checklist to assess your hospital's readiness. Items marked CORE are non-negotiable — failure on any CORE item = automatic assessment fail.</p>
 
-  <div class="checklist-section">
-    <h4>🦠 Infection Prevention & Control</h4>
-    <div class="checklist-item"><span class="check">☐</span><span>Hand hygiene compliance data for last 3 months</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>WHO 5 Moments of Hand Hygiene training records</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Biomedical waste authorisation from SPCB</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>BMW colour-coded bin system implemented in all areas</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Sterilisation monitoring records (biological + chemical indicators)</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Needle-stick injury protocol and post-exposure prophylaxis available</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>HAI surveillance data (at least SSI and CAUTI rates)</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Linen management SOP with separate clean/dirty pathways</span></div>
-  </div>
+      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
+        <h3 class="!mt-0 !mb-4 !text-[0.95rem] !uppercase !tracking-wider !text-blue">📋 Governance &amp; Leadership</h3>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Governing body constitution document with roles defined</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Hospital organogram updated and displayed</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Quality policy signed by top management</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Quality Manager appointed with defined responsibilities</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Annual quality improvement plan documented</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Governing body meeting minutes for last 12 months</span><span class="core">CORE</span></div>
+      </div>
 
-  <div class="checklist-section">
-    <h4>🔒 Patient Safety</h4>
-    <div class="checklist-item"><span class="check">☐</span><span>Incident reporting system with anonymised reporting option</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Patient identification protocol (2 identifiers minimum)</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Surgical safety checklist (WHO) in use for all procedures</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Fall risk assessment tool implemented in wards</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Pressure injury prevention protocol</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Critical results communication protocol (panic values)</span><span class="core-tag">CORE</span></div>
-  </div>
+      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
+        <h3 class="!mt-0 !mb-4 !text-[0.95rem] !uppercase !tracking-wider !text-blue">🏥 Patient Care &amp; Access</h3>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>OPD registration process documented and implemented</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Triage protocol for emergency patients</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Initial assessment form for all admitted patients</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Discharge summary format with all required components</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Referral and transfer policy with documentation</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Do-Not-Resuscitate (DNR) policy</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>High-risk patient identification protocol</span><span class="core">CORE</span></div>
+      </div>
 
-  <div class="checklist-section">
-    <h4>🏗️ Facility & Safety</h4>
-    <div class="checklist-item"><span class="check">☐</span><span>Valid Fire NOC from fire department</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Fire evacuation drill records (minimum 2 per year)</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Fire extinguisher maintenance records</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Medical gas pipeline system maintenance records</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Biomedical equipment calibration and maintenance records</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Electrical safety inspection records</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Disaster management plan with mass casualty protocol</span></div>
-  </div>
+      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
+        <h3 class="!mt-0 !mb-4 !text-[0.95rem] !uppercase !tracking-wider !text-blue">💊 Medication Management</h3>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Hospital formulary available and updated</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>High-alert medication list displayed in pharmacy and wards</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Look-alike sound-alike (LASA) drug protocol</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Medication storage conditions documented and monitored</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Adverse Drug Reaction (ADR) reporting system functional</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Narcotic drug register maintained per NDPS Act</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Medication reconciliation process at admission and discharge</span></div>
+      </div>
 
-  <div class="checklist-section">
-    <h4>👥 Human Resources</h4>
-    <div class="checklist-item"><span class="check">☐</span><span>Credential files for all doctors (qualification + registration)</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Clinical privileges defined for each doctor</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Annual training plan with training records</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>POSH committee constituted (mandatory under law)</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Pre-employment health checkup records for all staff</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Staff hepatitis B vaccination records</span><span class="core-tag">CORE</span></div>
-  </div>
+      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
+        <h3 class="!mt-0 !mb-4 !text-[0.95rem] !uppercase !tracking-wider !text-blue">🦠 Infection Prevention &amp; Control</h3>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Hand hygiene compliance data for last 3 months</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>WHO 5 Moments of Hand Hygiene training records</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Biomedical waste authorisation from SPCB</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>BMW colour-coded bin system implemented in all areas</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Sterilisation monitoring records (biological + chemical indicators)</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Needle-stick injury protocol and post-exposure prophylaxis available</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>HAI surveillance data (at least SSI and CAUTI rates)</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Linen management SOP with separate clean/dirty pathways</span></div>
+      </div>
 
-  <div class="checklist-section">
-    <h4>📂 Medical Records & Information</h4>
-    <div class="checklist-item"><span class="check">☐</span><span>Uniform medical record format across all departments</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Medical record completion within 24 hours of discharge</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Patient confidentiality policy implemented</span><span class="core-tag">CORE</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>Medical records retention policy (minimum 3 years)</span></div>
-    <div class="checklist-item"><span class="check">☐</span><span>MRD in-charge appointed with defined responsibilities</span></div>
-  </div>
+      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
+        <h3 class="!mt-0 !mb-4 !text-[0.95rem] !uppercase !tracking-wider !text-blue">🔒 Patient Safety</h3>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Incident reporting system with anonymised reporting option</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Patient identification protocol (2 identifiers minimum)</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Surgical safety checklist (WHO) in use for all procedures</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Fall risk assessment tool implemented in wards</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Pressure injury prevention protocol</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Critical results communication protocol (panic values)</span><span class="core">CORE</span></div>
+      </div>
 
-  <h2>Mandatory Committees for <span>SHCO Accreditation</span></h2>
-  <p>NABH requires specific committees to be functional — not just on paper. Each committee must have: constitution order, defined TORs, regular meetings, and documented minutes.</p>
+      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
+        <h3 class="!mt-0 !mb-4 !text-[0.95rem] !uppercase !tracking-wider !text-blue">🏗️ Facility &amp; Safety</h3>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Valid Fire NOC from fire department</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Fire evacuation drill records (minimum 2 per year)</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Fire extinguisher maintenance records</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Medical gas pipeline system maintenance records</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Biomedical equipment calibration and maintenance records</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Electrical safety inspection records</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Disaster management plan with mass casualty protocol</span></div>
+      </div>
 
-  <table>
-    <thead><tr><th>Committee</th><th>Minimum Frequency</th><th>Key Requirement</th></tr></thead>
-    <tbody>
-      <tr><td>Quality Assurance Committee</td><td>Monthly</td><td>Reviews KPIs, CAPA status, incident reports</td></tr>
-      <tr><td>Infection Control Committee</td><td>Quarterly</td><td>HAI data review, IPC policy updates</td></tr>
-      <tr><td>Pharmacy & Therapeutics Committee</td><td>Quarterly</td><td>Formulary review, ADR analysis</td></tr>
-      <tr><td>Medical Records Committee</td><td>Quarterly</td><td>Record completion rates, MRD audits</td></tr>
-      <tr><td>POSH Committee</td><td>As needed (annual report mandatory)</td><td>POSH Act 2013 compliance</td></tr>
-      <tr><td>Biomedical Waste Committee</td><td>Quarterly</td><td>BMW data review, compliance monitoring</td></tr>
-      <tr><td>Credentialing & Privileging Committee</td><td>Annual (for each doctor)</td><td>Review and renewal of clinical privileges</td></tr>
-    </tbody>
-  </table>
+      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
+        <h3 class="!mt-0 !mb-4 !text-[0.95rem] !uppercase !tracking-wider !text-blue">👥 Human Resources</h3>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Credential files for all doctors (qualification + registration)</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Clinical privileges defined for each doctor</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Annual training plan with training records</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>POSH committee constituted (mandatory under law)</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Pre-employment health checkup records for all staff</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Staff hepatitis B vaccination records</span><span class="core">CORE</span></div>
+      </div>
 
-  <h2>SHCO Fee Calculator</h2>
-  <p>NABH SHCO assessment fees are based on bed strength. The fee structure includes application fees, assessment fees, and annual surveillance fees. AccredReady includes a built-in SHCO fee calculator that gives you an estimate based on your bed count — available in the SHCO module after login.</p>
-  <p>Official SHCO fee structure: <strong>Application fee ₹25,000 + Annual fee ₹1,50,000</strong> (Full Accreditation, up to 50 beds), plus 18% GST on both. Additional charges: Virtual assessment ₹3,000 + GST, Focus assessment ₹15,000 + GST, Certificate re-issue ₹6,000 + GST. For SHCO ELC (Entry Level), fees range from ₹21,000 (up to 5 beds) to ₹48,000 (21–50 beds) for a 2-year cycle. Always verify current fees on nabh.co before applying.</p>
+      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
+        <h3 class="!mt-0 !mb-4 !text-[0.95rem] !uppercase !tracking-wider !text-blue">📂 Medical Records &amp; Information</h3>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Uniform medical record format across all departments</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Medical record completion within 24 hours of discharge</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Patient confidentiality policy implemented</span><span class="core">CORE</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Medical records retention policy (minimum 3 years)</span></div>
+        <div class="chk"><span class="box" aria-hidden="true">☐</span><span>MRD in-charge appointed with defined responsibilities</span></div>
+      </div>
 
-  <div class="cta-banner">
-    <h2>Track Your SHCO Checklist with <span>AccredReady</span></h2>
-    <p style="color:var(--muted); margin-top:0.75rem; max-width:500px; margin-left:auto; margin-right:auto;">AccredReady's SHCO module covers all 408 OEs, all mandatory committees, the fee calculator, and gives you a real-time readiness score. Know exactly where your hospital stands today.</p>
-    <a href="https://accredready.in" class="btn-primary">Start Free Trial →</a>
-  </div>
+      <h2>Mandatory Committees for <span>SHCO Accreditation</span></h2>
+      <p>NABH requires specific committees to be functional — not just on paper. Each committee must have: constitution order, defined TORs, regular meetings, and documented minutes.</p>
+      <div class="my-6 overflow-x-auto">
+        <table class="tbl">
+          <thead><tr><th>Committee</th><th>Minimum Frequency</th><th>Key Requirement</th></tr></thead>
+          <tbody>
+            <tr><td>Quality Assurance Committee</td><td>Monthly</td><td>Reviews KPIs, CAPA status, incident reports</td></tr>
+            <tr><td>Infection Control Committee</td><td>Quarterly</td><td>HAI data review, IPC policy updates</td></tr>
+            <tr><td>Pharmacy &amp; Therapeutics Committee</td><td>Quarterly</td><td>Formulary review, ADR analysis</td></tr>
+            <tr><td>Medical Records Committee</td><td>Quarterly</td><td>Record completion rates, MRD audits</td></tr>
+            <tr><td>POSH Committee</td><td>As needed (annual report mandatory)</td><td>POSH Act 2013 compliance</td></tr>
+            <tr><td>Biomedical Waste Committee</td><td>Quarterly</td><td>BMW data review, compliance monitoring</td></tr>
+            <tr><td>Credentialing &amp; Privileging Committee</td><td>Annual (for each doctor)</td><td>Review and renewal of clinical privileges</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-  <h2>Frequently Asked Questions</h2>
+      <h2>SHCO Fee Calculator</h2>
+      <p>NABH SHCO assessment fees are based on bed strength. The fee structure includes application fees, assessment fees, and annual surveillance fees. AccredReady includes a built-in SHCO fee calculator that gives you an estimate based on your bed count — available in the SHCO module after login.</p>
+      <p>Official SHCO fee structure: <strong>Application fee ₹25,000 + Annual fee ₹1,50,000</strong> (Full Accreditation, up to 50 beds), plus 18% GST on both. Additional charges: Virtual assessment ₹3,000 + GST, Focus assessment ₹15,000 + GST, Certificate re-issue ₹6,000 + GST. For SHCO ELC (Entry Level), fees range from ₹21,000 (up to 5 beds) to ₹48,000 (21–50 beds) for a 2-year cycle. Always verify current fees on nabh.co before applying.</p>
 
-  <h3>What is the bed limit for SHCO programme?</h3>
-  <p>The SHCO programme is designed for hospitals with up to 50 operational beds. Hospitals exceeding 50 beds must apply under the main HCO programme. Bed count is verified during the application process.</p>
+      <div class="my-10 rounded-2xl border border-brand/30 bg-gradient-to-br from-panel to-panel2 px-6 py-12 text-center">
+        <h2 class="!mt-0">Track Your SHCO Checklist with <span>AccredReady</span></h2>
+        <p class="mx-auto mt-3 max-w-lg !text-muted">AccredReady's SHCO module covers all 408 OEs, all mandatory committees, the fee calculator, and gives you a real-time readiness score. Know exactly where your hospital stands today.</p>
+        <a href="https://accredready.in" class="mt-4 inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start Free Trial →</a>
+      </div>
 
-  <h3>Can a nursing home apply for SHCO accreditation?</h3>
-  <p>Yes. Nursing homes, maternity homes, day-care surgical centres, and small specialty hospitals with up to 50 beds are eligible for the SHCO programme, provided they have valid Clinical Establishment Registration and other statutory requirements.</p>
+      <h2>Frequently Asked Questions</h2>
+      <h3>What is the bed limit for SHCO programme?</h3>
+      <p>The SHCO programme is designed for hospitals with up to 50 operational beds. Hospitals exceeding 50 beds must apply under the main HCO programme. Bed count is verified during the application process.</p>
+      <h3>Can a nursing home apply for SHCO accreditation?</h3>
+      <p>Yes. Nursing homes, maternity homes, day-care surgical centres, and small specialty hospitals with up to 50 beds are eligible for the SHCO programme, provided they have valid Clinical Establishment Registration and other statutory requirements.</p>
+      <h3>How is SHCO different from HCO accreditation?</h3>
+      <p>SHCO has 408 OEs vs 639 for HCO Full Accreditation. Some standards are proportionately simplified for smaller organisations. However, CORE OEs carry the same weight and the same 4-rule passing criteria apply. SHCO accreditation carries the same NABH branding and is internationally recognised through ISQua.</p>
+      <h3>How often does NABH conduct SHCO assessments?</h3>
+      <p>After initial accreditation (valid 4 years for SHCO Full, 2 years for ELC), NABH conducts annual surveillance assessments to verify continued compliance. A renewal assessment is required before expiry to maintain accreditation.</p>
 
-  <h3>How is SHCO different from HCO accreditation?</h3>
-  <p>SHCO has 408 OEs vs 639 for HCO Full Accreditation. Some standards are proportionately simplified for smaller organisations. However, CORE OEs carry the same weight and the same 4-rule passing criteria apply. SHCO accreditation carries the same NABH branding and is internationally recognised through ISQua.</p>
+    </article>
+  </main>
 
-  <h3>How often does NABH conduct SHCO assessments?</h3>
-  <p>After initial accreditation (valid 3 years for Full, 2 years for ELC), NABH conducts annual surveillance assessments to verify continued compliance. A renewal assessment is required before expiry to maintain accreditation.</p>
+  <!-- FOOTER -->
+  <footer class="border-t border-line px-5 py-8 text-center text-sm text-muted sm:px-8">
+    <nav aria-label="Footer" class="mb-3 flex flex-wrap justify-center gap-x-6 gap-y-2">
+      <a href="https://accredready.in" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
+      <a href="https://accredready.in/nabh-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Software</a>
+      <a href="https://accredready.in/nabh-6th-edition-standards.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">6th Edition Guide</a>
+      <a href="https://accredready.in/shco-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Software</a>
+      <a href="https://accredready.in/nabh-entry-level-certification.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Entry Level Guide</a>
+      <a href="https://accredready.in/privacy.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
+    </nav>
+    <p>© 2026 AccredReady by MK Tech. Written by Dr. Mehul Upadhyay, NABH Quality Manager.</p>
+  </footer>
 
-</div>
-
-<footer>
-  <p style="margin-bottom:0.75rem;">
-    <a href="https://accredready.in">Home</a>
-    <a href="https://accredready.in/nabh-accreditation-software.html">NABH Software</a>
-    <a href="https://accredready.in/nabh-6th-edition-standards.html">6th Edition Guide</a>
-    <a href="https://accredready.in/shco-accreditation-software.html">SHCO Software</a>
-    <a href="https://accredready.in/nabh-entry-level-certification.html">Entry Level Guide</a>
-    <a href="https://accredready.in/privacy.html">Privacy Policy</a>
-  </p>
-  <p>© 2026 AccredReady by MK Tech. Written by Dr. Mehul Upadhyay, NABH Quality Manager.</p>
-</footer>
 </body>
 </html>

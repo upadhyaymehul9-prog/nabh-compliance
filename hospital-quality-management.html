@@ -11,144 +11,148 @@
   <meta property="og:description" content="Complete hospital quality management software aligned with NABH standards. KPIs, audits, committees, mock drills — one platform for all quality activities." />
   <meta property="og:url" content="https://accredready.in/hospital-quality-management" />
   <meta property="og:image" content="https://accredready.in/logo512.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind via CDN + shared design-system token config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:    '#040d1a', ink2: '#0a1f3d', panel: '#0f1f38', panel2: '#0a1838',
+            blue:   '#38bdf8', brand: '#2563eb', gold: '#f59e0b', purple: '#a78bfa',
+            teal:   '#2dd4bf', paper: '#f8fafc', muted: '#94a3b8', good: '#4ade80',
+            bad:    '#f87171', line: 'rgba(255,255,255,0.08)',
+          },
+          fontFamily: {
+            head: ['Syne', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            body: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --navy: #040d1a; --accent: #2563eb; --accent2: #38bdf8;
-      --teal: #2dd4bf; --white: #f8fafc; --muted: #94a3b8; --card: #0f1f38;
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
     }
-    body { background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; line-height: 1.6; }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); position: sticky; top: 0; background: rgba(4,13,26,0.95); backdrop-filter: blur(12px); z-index: 100; }
-    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--accent2); text-decoration: none; }
-    .nav-cta { background: var(--accent); color: white; padding: 0.55rem 1.4rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem; }
-
-    .hero { max-width: 860px; margin: 0 auto; padding: 4.5rem 2rem 3.5rem; text-align: center; }
-    .badge { display: inline-block; background: rgba(45,212,191,0.1); border: 1px solid rgba(45,212,191,0.3); color: var(--teal); padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; }
-    h1 { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.15; margin-bottom: 1.25rem; }
-    h1 span { color: var(--accent2); }
-    .hero-sub { font-size: 1.1rem; color: var(--muted); max-width: 620px; margin: 0 auto 2.5rem; }
-    .btn-primary { background: var(--accent); color: white; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; display: inline-block; box-shadow: 0 4px 24px rgba(37,99,235,0.35); }
-
-    section { max-width: 1000px; margin: 0 auto; padding: 3.5rem 2rem; }
-    h2 { font-family: 'Syne', sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-bottom: 1rem; }
-    h2 span { color: var(--accent2); }
-    .section-sub { color: var(--muted); margin-bottom: 2.5rem; }
-
-    /* KPI GRID */
-    .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; }
-    .kpi-card { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 1.25rem; }
-    .kpi-dept { font-size: 0.75rem; color: var(--teal); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
-    .kpi-name { font-weight: 500; font-size: 0.9rem; }
-
-    /* MODULE LIST */
-    .module-list { display: grid; gap: 1px; background: rgba(255,255,255,0.05); border-radius: 12px; overflow: hidden; }
-    .module-item { background: var(--card); padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1rem; }
-    .module-item:hover { background: #132236; }
-    .mod-icon { font-size: 1.5rem; flex-shrink: 0; }
-    .mod-title { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 0.95rem; }
-    .mod-desc { color: var(--muted); font-size: 0.85rem; margin-top: 0.2rem; }
-
-    .cta-banner { background: linear-gradient(135deg, #0a1f3d, #1e3a8a); border: 1px solid rgba(37,99,235,0.3); border-radius: 16px; padding: 3rem 2rem; text-align: center; }
-    .cta-banner h2 { margin-bottom: 0.75rem; }
-    .cta-banner p { color: var(--muted); margin-bottom: 2rem; }
-
-    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
-    footer a { color: var(--muted); text-decoration: none; margin: 0 0.75rem; }
-    footer a:hover { color: var(--accent2); }
   </style>
 </head>
-<body>
 
-<nav>
-  <a href="https://accredready.in" class="logo">AccredReady</a>
-  <a href="https://accredready.in" class="nav-cta">Start Free Trial</a>
-</nav>
+<body class="bg-ink text-paper font-body leading-relaxed antialiased">
 
-<div class="hero">
-  <div class="badge">Quality Management</div>
-  <h1>Hospital Quality Management<br/><span>Built on NABH Standards</span></h1>
-  <p class="hero-sub">AccredReady is not just accreditation software — it's a complete quality management system for Indian hospitals. From KPI monitoring to committee governance, everything aligned with NABH 6th Edition.</p>
-  <a href="https://accredready.in" class="btn-primary">Start Free Trial →</a>
-</div>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Skip to content</a>
 
-<section>
-  <h2>Complete Quality Management <span>Modules</span></h2>
-  <p class="section-sub">Every quality function your hospital needs — in one integrated platform.</p>
-  <div class="module-list">
-    <div class="module-item">
-      <div class="mod-icon">📊</div>
-      <div><div class="mod-title">50 KPI Dashboard</div><div class="mod-desc">Track all NABH-required KPIs with auto-calculation, color-coded RAG status, and monthly trend analysis across departments</div></div>
-    </div>
-    <div class="module-item">
-      <div class="mod-icon">🔍</div>
-      <div><div class="mod-title">35 Internal Audit Templates</div><div class="mod-desc">Department-wise audit checklists covering all NABH chapters. Score, document findings, and generate CAPA reports</div></div>
-    </div>
-    <div class="module-item">
-      <div class="mod-icon">🏛️</div>
-      <div><div class="mod-title">26 Committee Management</div><div class="mod-desc">Templates and trackers for all mandatory NABH committees — minutes, attendance, action items, and compliance documentation</div></div>
-    </div>
-    <div class="module-item">
-      <div class="mod-icon">🚨</div>
-      <div><div class="mod-title">13 Mock Drill Types</div><div class="mod-desc">Schedule, conduct, and document fire drills, code blue, disaster, and other mandatory emergency preparedness exercises</div></div>
-    </div>
-    <div class="module-item">
-      <div class="mod-icon">🦠</div>
-      <div><div class="mod-title">Infection Control Tracking</div><div class="mod-desc">HIC chapter compliance, infection rate monitoring, bundle compliance, and antibiotic stewardship documentation</div></div>
-    </div>
-    <div class="module-item">
-      <div class="mod-icon">🧑‍⚕️</div>
-      <div><div class="mod-title">Patient Tracer Tool</div><div class="mod-desc">Trace patient care episodes across departments to verify compliance with care pathway standards — exactly like NABH assessors</div></div>
-    </div>
-    <div class="module-item">
-      <div class="mod-icon">📋</div>
-      <div><div class="mod-title">29 Department Checklists</div><div class="mod-desc">Ready-to-use compliance checklists for every hospital department — OT, ICU, Pharmacy, Lab, Radiology, and more</div></div>
-    </div>
-    <div class="module-item">
-      <div class="mod-icon">📄</div>
-      <div><div class="mod-title">Statutory License Tracker</div><div class="mod-desc">Track all mandatory hospital licenses with renewal dates and compliance status. Never miss a license renewal again</div></div>
-    </div>
-  </div>
-</section>
+  <!-- NAV -->
+  <nav class="sticky top-0 z-[100] flex items-center justify-between border-b border-line bg-ink/95 px-5 py-4 backdrop-blur-md sm:px-8">
+    <a href="https://accredready.in" class="rounded font-head text-xl font-extrabold text-blue outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">AccredReady</a>
+    <a href="https://accredready.in" class="rounded-md bg-brand px-5 py-2 text-sm font-medium text-white outline-none transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">Start Free Trial</a>
+  </nav>
 
-<section>
-  <h2>Sample KPIs Tracked in <span>AccredReady</span></h2>
-  <p class="section-sub">50 NABH-aligned KPIs across all departments, auto-calculated from your inputs.</p>
-  <div class="kpi-grid">
-    <div class="kpi-card"><div class="kpi-dept">Clinical</div><div class="kpi-name">Medication Error Rate</div></div>
-    <div class="kpi-card"><div class="kpi-dept">Clinical</div><div class="kpi-name">Fall Rate per 1000 Bed Days</div></div>
-    <div class="kpi-card"><div class="kpi-dept">Infection Control</div><div class="kpi-name">CLABSI Rate</div></div>
-    <div class="kpi-card"><div class="kpi-dept">Infection Control</div><div class="kpi-name">CAUTI Rate</div></div>
-    <div class="kpi-card"><div class="kpi-dept">Operations</div><div class="kpi-name">Bed Occupancy Rate</div></div>
-    <div class="kpi-card"><div class="kpi-dept">Operations</div><div class="kpi-name">ALOS (Average Length of Stay)</div></div>
-    <div class="kpi-card"><div class="kpi-dept">Surgery</div><div class="kpi-name">Surgical Site Infection Rate</div></div>
-    <div class="kpi-card"><div class="kpi-dept">Emergency</div><div class="kpi-name">Door-to-Doctor Time</div></div>
-    <div class="kpi-card"><div class="kpi-dept">Patient Experience</div><div class="kpi-name">Patient Satisfaction Score</div></div>
-    <div class="kpi-card"><div class="kpi-dept">Quality</div><div class="kpi-name">Unplanned Readmission Rate</div></div>
-    <div class="kpi-card"><div class="kpi-dept">HR</div><div class="kpi-name">Staff Training Compliance %</div></div>
-    <div class="kpi-card"><div class="kpi-dept">Pharmacy</div><div class="kpi-name">Dispensing Error Rate</div></div>
-  </div>
-</section>
+  <main id="main">
 
-<section>
-  <div class="cta-banner">
-    <h2>Run Your Hospital's Quality Program <span>Digitally</span></h2>
-    <p>Replace paper-based quality management with AccredReady. Start free, scale as you grow.</p>
-    <a href="https://accredready.in" class="btn-primary">Start Free Trial →</a>
-  </div>
-</section>
+    <!-- HERO -->
+    <header class="mx-auto max-w-3xl px-5 pb-14 pt-16 text-center sm:px-8">
+      <span class="mb-6 inline-block rounded-full border border-teal/30 bg-teal/10 px-4 py-1 text-xs font-medium uppercase tracking-wider text-teal">Quality Management</span>
+      <h1 class="mb-5 font-head text-[clamp(1.8rem,4.5vw,3rem)] font-extrabold leading-[1.15]">Hospital Quality Management<br/><span class="text-blue">Built on NABH Standards</span></h1>
+      <p class="mx-auto mb-10 max-w-2xl text-lg text-muted">AccredReady is not just accreditation software — it's a complete quality management system for Indian hospitals. From KPI monitoring to committee governance, everything aligned with NABH 6th Edition.</p>
+      <a href="https://accredready.in" class="inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white shadow-[0_4px_24px_rgba(37,99,235,0.35)] outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start Free Trial →</a>
+    </header>
 
-<footer>
-  <p style="margin-bottom:0.75rem;">
-    <a href="https://accredready.in">Home</a>
-    <a href="https://accredready.in/nabh-accreditation-software.html">NABH Software</a>
-    <a href="https://accredready.in/nabh-6th-edition-checklist.html">NABH Checklist</a>
-    <a href="https://accredready.in/shco-accreditation-software.html">SHCO Software</a>
-    <a href="https://accredready.in/privacy.html">Privacy Policy</a>
-  </p>
-  <p>© 2026 AccredReady by MK Tech. All rights reserved.</p>
-</footer>
+    <!-- MODULES -->
+    <section class="mx-auto max-w-5xl px-5 py-14 sm:px-8">
+      <h2 class="mb-4 font-head text-[clamp(1.5rem,3vw,2rem)] font-bold">Complete Quality Management <span class="text-blue">Modules</span></h2>
+      <p class="mb-10 text-muted">Every quality function your hospital needs — in one integrated platform.</p>
+      <div class="overflow-hidden rounded-xl border border-line">
+        <ul class="divide-y divide-line">
+          <li class="flex items-start gap-4 bg-panel px-5 py-5 transition-colors hover:bg-[#132236] motion-reduce:transition-none">
+            <span class="flex-shrink-0 text-2xl" aria-hidden="true">📊</span>
+            <div><h3 class="font-head text-[0.95rem] font-semibold">50 KPI Dashboard</h3><p class="mt-0.5 text-[0.85rem] text-muted">Track all NABH-required KPIs with auto-calculation, color-coded RAG status, and monthly trend analysis across departments</p></div>
+          </li>
+          <li class="flex items-start gap-4 bg-panel px-5 py-5 transition-colors hover:bg-[#132236] motion-reduce:transition-none">
+            <span class="flex-shrink-0 text-2xl" aria-hidden="true">🔍</span>
+            <div><h3 class="font-head text-[0.95rem] font-semibold">35 Internal Audit Templates</h3><p class="mt-0.5 text-[0.85rem] text-muted">Department-wise audit checklists covering all NABH chapters. Score, document findings, and generate CAPA reports</p></div>
+          </li>
+          <li class="flex items-start gap-4 bg-panel px-5 py-5 transition-colors hover:bg-[#132236] motion-reduce:transition-none">
+            <span class="flex-shrink-0 text-2xl" aria-hidden="true">🏛️</span>
+            <div><h3 class="font-head text-[0.95rem] font-semibold">26 Committee Management</h3><p class="mt-0.5 text-[0.85rem] text-muted">Templates and trackers for all mandatory NABH committees — minutes, attendance, action items, and compliance documentation</p></div>
+          </li>
+          <li class="flex items-start gap-4 bg-panel px-5 py-5 transition-colors hover:bg-[#132236] motion-reduce:transition-none">
+            <span class="flex-shrink-0 text-2xl" aria-hidden="true">🚨</span>
+            <div><h3 class="font-head text-[0.95rem] font-semibold">13 Mock Drill Types</h3><p class="mt-0.5 text-[0.85rem] text-muted">Schedule, conduct, and document fire drills, code blue, disaster, and other mandatory emergency preparedness exercises</p></div>
+          </li>
+          <li class="flex items-start gap-4 bg-panel px-5 py-5 transition-colors hover:bg-[#132236] motion-reduce:transition-none">
+            <span class="flex-shrink-0 text-2xl" aria-hidden="true">🦠</span>
+            <div><h3 class="font-head text-[0.95rem] font-semibold">Infection Control Tracking</h3><p class="mt-0.5 text-[0.85rem] text-muted">HIC chapter compliance, infection rate monitoring, bundle compliance, and antibiotic stewardship documentation</p></div>
+          </li>
+          <li class="flex items-start gap-4 bg-panel px-5 py-5 transition-colors hover:bg-[#132236] motion-reduce:transition-none">
+            <span class="flex-shrink-0 text-2xl" aria-hidden="true">🧑‍⚕️</span>
+            <div><h3 class="font-head text-[0.95rem] font-semibold">Patient Tracer Tool</h3><p class="mt-0.5 text-[0.85rem] text-muted">Trace patient care episodes across departments to verify compliance with care pathway standards — exactly like NABH assessors</p></div>
+          </li>
+          <li class="flex items-start gap-4 bg-panel px-5 py-5 transition-colors hover:bg-[#132236] motion-reduce:transition-none">
+            <span class="flex-shrink-0 text-2xl" aria-hidden="true">📋</span>
+            <div><h3 class="font-head text-[0.95rem] font-semibold">29 Department Checklists</h3><p class="mt-0.5 text-[0.85rem] text-muted">Ready-to-use compliance checklists for every hospital department — OT, ICU, Pharmacy, Lab, Radiology, and more</p></div>
+          </li>
+          <li class="flex items-start gap-4 bg-panel px-5 py-5 transition-colors hover:bg-[#132236] motion-reduce:transition-none">
+            <span class="flex-shrink-0 text-2xl" aria-hidden="true">📄</span>
+            <div><h3 class="font-head text-[0.95rem] font-semibold">Statutory License Tracker</h3><p class="mt-0.5 text-[0.85rem] text-muted">Track all mandatory hospital licenses with renewal dates and compliance status. Never miss a license renewal again</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SAMPLE KPIs -->
+    <section class="mx-auto max-w-5xl px-5 py-14 sm:px-8">
+      <h2 class="mb-4 font-head text-[clamp(1.5rem,3vw,2rem)] font-bold">Sample KPIs Tracked in <span class="text-blue">AccredReady</span></h2>
+      <p class="mb-10 text-muted">50 NABH-aligned KPIs across all departments, auto-calculated from your inputs.</p>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-teal">Clinical</div><div class="text-sm font-medium">Medication Error Rate</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-teal">Clinical</div><div class="text-sm font-medium">Fall Rate per 1000 Bed Days</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-teal">Infection Control</div><div class="text-sm font-medium">CLABSI Rate</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-teal">Infection Control</div><div class="text-sm font-medium">CAUTI Rate</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-teal">Operations</div><div class="text-sm font-medium">Bed Occupancy Rate</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-teal">Operations</div><div class="text-sm font-medium">ALOS (Average Length of Stay)</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-teal">Surgery</div><div class="text-sm font-medium">Surgical Site Infection Rate</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-teal">Emergency</div><div class="text-sm font-medium">Door-to-Doctor Time</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-teal">Patient Experience</div><div class="text-sm font-medium">Patient Satisfaction Score</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-teal">Quality</div><div class="text-sm font-medium">Unplanned Readmission Rate</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-teal">HR</div><div class="text-sm font-medium">Staff Training Compliance %</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1.5 text-xs font-semibold uppercase tracking-wider text-teal">Pharmacy</div><div class="text-sm font-medium">Dispensing Error Rate</div></div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="px-5 py-8 sm:px-8">
+      <div class="mx-auto max-w-4xl rounded-2xl border border-brand/30 bg-gradient-to-br from-ink2 to-[#1e3a8a] px-6 py-12 text-center">
+        <h2 class="mb-3 font-head text-[clamp(1.5rem,3vw,2rem)] font-bold">Run Your Hospital's Quality Program <span class="text-blue">Digitally</span></h2>
+        <p class="mb-8 text-muted">Replace paper-based quality management with AccredReady. Start free, scale as you grow.</p>
+        <a href="https://accredready.in" class="inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white shadow-[0_4px_24px_rgba(37,99,235,0.35)] outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start Free Trial →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-line px-5 py-8 text-center text-sm text-muted sm:px-8">
+    <nav aria-label="Footer" class="mb-3 flex flex-wrap justify-center gap-x-6 gap-y-2">
+      <a href="https://accredready.in" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
+      <a href="https://accredready.in/nabh-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Software</a>
+      <a href="https://accredready.in/nabh-6th-edition-checklist.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Checklist</a>
+      <a href="https://accredready.in/shco-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Software</a>
+      <a href="https://accredready.in/privacy.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
+    </nav>
+    <p>© 2026 AccredReady by MK Tech. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>

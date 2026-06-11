@@ -22,265 +22,190 @@
     "description": "Complete guide to NABH 6th Edition standards covering all 10 chapters, 639 Objective Elements, and compliance levels."
   }
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --navy: #040d1a; --blue: #0a1f3d; --accent: #2563eb; --accent2: #38bdf8;
-      --gold: #f59e0b; --white: #f8fafc; --muted: #94a3b8; --card: #0f1f38;
-      --green: #4ade80; --red: #f87171; --orange: #fb923c;
+
+  <!-- Tailwind via CDN + shared design-system token config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:    '#040d1a', ink2: '#0a1f3d', panel: '#0f1f38', panel2: '#0a1838',
+            blue:   '#38bdf8', brand: '#2563eb', gold: '#f59e0b', purple: '#a78bfa',
+            teal:   '#2dd4bf', orange: '#fb923c', paper: '#f8fafc', muted: '#94a3b8',
+            good:   '#4ade80', bad: '#f87171', line: 'rgba(255,255,255,0.08)',
+          },
+          fontFamily: {
+            head: ['Syne', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            body: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer components {
+      .tbl { @apply w-full border-collapse text-[0.9rem]; }
+      .tbl th { @apply bg-panel px-4 py-3 text-left font-head font-bold text-paper; }
+      .tbl td { @apply border-b border-white/5 px-4 py-2.5 align-top text-[#cbd5e1]; }
+      .tbl strong { @apply text-paper; }
     }
+  </style>
+  <style>
     html { scroll-behavior: smooth; }
-    body { background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; line-height: 1.7; }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); position: sticky; top: 0; background: rgba(4,13,26,0.95); backdrop-filter: blur(12px); z-index: 100; }
-    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--accent2); text-decoration: none; }
-    .nav-cta { background: var(--accent); color: white; padding: 0.55rem 1.4rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem; }
-    .hero { max-width: 860px; margin: 0 auto; padding: 4rem 2rem 3rem; text-align: center; }
-    .badge { display: inline-block; background: rgba(37,99,235,0.15); border: 1px solid rgba(37,99,235,0.4); color: var(--accent2); padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; }
-    h1 { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; line-height: 1.15; margin-bottom: 1.25rem; }
-    h1 span, h2 span { color: var(--accent2); }
-    .hero-sub { font-size: 1.1rem; color: var(--muted); max-width: 620px; margin: 0 auto 2rem; }
-    .article { max-width: 860px; margin: 0 auto; padding: 0 2rem 4rem; }
-    h2 { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 700; margin: 2.5rem 0 1rem; }
-    h3 { font-family: 'Syne', sans-serif; font-size: 1.15rem; font-weight: 700; margin: 1.75rem 0 0.6rem; color: var(--accent2); }
-    p { color: #cbd5e1; margin-bottom: 1rem; font-size: 0.97rem; }
-    .chapter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-    .chapter-card { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 1.25rem; }
-    .chapter-code { font-family: 'Syne', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--accent2); letter-spacing: 0.1em; margin-bottom: 0.35rem; }
-    .chapter-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.3rem; }
-    .chapter-oe { font-size: 0.82rem; color: var(--muted); }
-    .level-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-    .level-card { background: var(--card); border-radius: 10px; padding: 1.25rem; border-left: 4px solid; }
-    .level-card.core { border-color: var(--red); }
-    .level-card.commit { border-color: var(--orange); }
-    .level-card.achieve { border-color: var(--green); }
-    .level-card.excel { border-color: var(--gold); }
-    .level-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.4rem; }
-    .level-count { font-size: 1.5rem; font-weight: 800; font-family: 'Syne', sans-serif; margin-bottom: 0.3rem; }
-    .level-desc { font-size: 0.85rem; color: var(--muted); }
-    .info-box { background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
-    .info-box p { color: var(--white); margin: 0; }
-    .warn-box { background: rgba(251,146,60,0.1); border: 1px solid rgba(251,146,60,0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
-    .warn-box p { color: var(--white); margin: 0; }
-    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
-    th { background: var(--card); padding: 0.75rem 1rem; text-align: left; font-family: 'Syne', sans-serif; font-weight: 700; border-bottom: 2px solid rgba(255,255,255,0.1); }
-    td { padding: 0.65rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
-    tr:hover td { background: rgba(255,255,255,0.02); }
-    .cta-banner { background: linear-gradient(135deg, #0f1f38, #0a1838); border: 1px solid rgba(37,99,235,0.3); border-radius: 16px; padding: 3rem 2rem; text-align: center; margin: 3rem 0; }
-    .btn-primary { background: var(--accent); color: white; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; display: inline-block; margin-top: 1rem; }
-    footer { text-align: center; padding: 2rem; border-top: 1px solid rgba(255,255,255,0.06); color: var(--muted); font-size: 0.85rem; }
-    footer a { color: var(--muted); text-decoration: none; margin: 0 0.75rem; }
-    footer a:hover { color: var(--accent2); }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
-<body>
 
-<nav>
-  <a href="https://accredready.in" class="logo">AccredReady</a>
-  <a href="https://accredready.in" class="nav-cta">Start Free Trial</a>
-</nav>
+<body class="bg-ink text-paper font-body leading-[1.7] antialiased">
 
-<div class="hero">
-  <div class="badge">Expert Guide · NABH 6th Edition</div>
-  <h1>NABH 6th Edition Standards:<br><span>Complete Guide for Indian Hospitals</span></h1>
-  <p class="hero-sub">Written by a certified NABH Quality Manager. Everything your hospital needs to understand, prepare for, and achieve NABH accreditation under the 6th Edition.</p>
-</div>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Skip to content</a>
 
-<div class="article">
+  <!-- NAV -->
+  <nav class="sticky top-0 z-[100] flex items-center justify-between border-b border-line bg-ink/95 px-5 py-4 backdrop-blur-md sm:px-8">
+    <a href="https://accredready.in" class="rounded font-head text-xl font-extrabold text-blue outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">AccredReady</a>
+    <a href="https://accredready.in" class="rounded-md bg-brand px-5 py-2 text-sm font-medium text-white outline-none transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">Start Free Trial</a>
+  </nav>
 
-  <h2>What is NABH 6th Edition?</h2>
-  <p>The National Accreditation Board for Hospitals and Healthcare Providers (NABH) released its 6th Edition of hospital accreditation standards, replacing the 5th Edition. The 6th Edition represents a significant shift in how Indian hospitals are evaluated — moving from a documentation-heavy compliance model to an outcomes-focused, patient-safety-first approach.</p>
-  <p>The 6th Edition is structured around 10 chapters covering the full spectrum of hospital operations — from how patients access care (AAC) to how the institution manages information (IMS). Every hospital seeking NABH Full Accreditation must demonstrate compliance across all 639 Objective Elements.</p>
+  <main id="main">
 
-  <div class="info-box">
-    <p>📌 <strong>Key fact:</strong> NABH 6th Edition has 639 Objective Elements (OEs) across 10 chapters. Each OE is classified as CORE, Commitment, Achievement, or Excellence — and each level has specific scoring requirements to pass accreditation.</p>
-  </div>
+    <!-- HERO -->
+    <header class="mx-auto max-w-3xl px-5 pb-10 pt-16 text-center sm:px-8">
+      <span class="mb-6 inline-block rounded-full border border-brand/40 bg-brand/15 px-4 py-1 text-xs font-medium uppercase tracking-wider text-blue">Expert Guide · NABH 6th Edition</span>
+      <h1 class="mb-5 font-head text-[clamp(1.8rem,4vw,3rem)] font-extrabold leading-[1.15]">NABH 6th Edition Standards:<br><span class="text-blue">Complete Guide for Indian Hospitals</span></h1>
+      <p class="mx-auto max-w-2xl text-lg text-muted">Written by a certified NABH Quality Manager. Everything your hospital needs to understand, prepare for, and achieve NABH accreditation under the 6th Edition.</p>
+    </header>
 
-  <h2>The 10 Chapters of <span>NABH 6th Edition</span></h2>
-  <p>Every chapter represents a domain of hospital function. A hospital cannot selectively comply — all 10 chapters are evaluated during the NABH assessment.</p>
+    <article class="mx-auto max-w-3xl px-5 pb-16 sm:px-8 [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:font-head [&_h2]:text-2xl [&_h2]:font-bold [&_h2_span]:text-blue [&_h3]:mb-2 [&_h3]:mt-7 [&_h3]:font-head [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-blue [&_p]:mb-4 [&_p]:text-[0.97rem] [&_p]:text-[#cbd5e1] [&_strong]:text-paper">
 
-  <div class="chapter-grid">
-    <div class="chapter-card">
-      <div class="chapter-code">AAC</div>
-      <div class="chapter-name">Access, Assessment & Continuity of Care</div>
-      <div class="chapter-oe">Patient registration, triage, clinical assessment, discharge planning</div>
-    </div>
-    <div class="chapter-card">
-      <div class="chapter-code">COP</div>
-      <div class="chapter-name">Care of Patients</div>
-      <div class="chapter-oe">High-risk care, surgical safety, medication management, patient rights</div>
-    </div>
-    <div class="chapter-card">
-      <div class="chapter-code">MOM</div>
-      <div class="chapter-name">Management of Medication</div>
-      <div class="chapter-oe">Formulary, storage, dispensing, high-alert medications, ADR reporting</div>
-    </div>
-    <div class="chapter-card">
-      <div class="chapter-code">PRE</div>
-      <div class="chapter-name">Patient Rights & Education</div>
-      <div class="chapter-oe">Consent processes, patient rights charter, grievance redressal, health education</div>
-    </div>
-    <div class="chapter-card">
-      <div class="chapter-code">IPC</div>
-      <div class="chapter-name">Infection Prevention & Control</div>
-      <div class="chapter-oe">HAI surveillance, hand hygiene, sterilisation, biomedical waste, CSSD</div>
-    </div>
-    <div class="chapter-card">
-      <div class="chapter-code">PSQ</div>
-      <div class="chapter-name">Patient Safety & Quality Improvement</div>
-      <div class="chapter-oe">Incident reporting, sentinel events, root cause analysis, quality indicators</div>
-    </div>
-    <div class="chapter-card">
-      <div class="chapter-code">ROM</div>
-      <div class="chapter-name">Responsibilities of Management</div>
-      <div class="chapter-oe">Governing body, leadership accountability, strategic planning, ethics</div>
-    </div>
-    <div class="chapter-card">
-      <div class="chapter-code">FMS</div>
-      <div class="chapter-name">Facility Management & Safety</div>
-      <div class="chapter-oe">Fire safety, electrical safety, medical gases, biomedical equipment, disaster plan</div>
-    </div>
-    <div class="chapter-card">
-      <div class="chapter-code">HRM</div>
-      <div class="chapter-name">Human Resource Management</div>
-      <div class="chapter-oe">Credentialing, privileging, staff training, performance appraisal, health records</div>
-    </div>
-    <div class="chapter-card">
-      <div class="chapter-code">IMS</div>
-      <div class="chapter-name">Information Management System</div>
-      <div class="chapter-oe">Medical records, data confidentiality, clinical data analysis, MRD management</div>
-    </div>
-  </div>
+      <h2>What is NABH 6th Edition?</h2>
+      <p>The National Accreditation Board for Hospitals and Healthcare Providers (NABH) released its 6th Edition of hospital accreditation standards, replacing the 5th Edition. The 6th Edition represents a significant shift in how Indian hospitals are evaluated — moving from a documentation-heavy compliance model to an outcomes-focused, patient-safety-first approach.</p>
+      <p>The 6th Edition is structured around 10 chapters covering the full spectrum of hospital operations — from how patients access care (AAC) to how the institution manages information (IMS). Every hospital seeking NABH Full Accreditation must demonstrate compliance across all 639 Objective Elements.</p>
 
-  <h2>The 4 Compliance Levels Explained</h2>
-  <p>Every Objective Element in NABH 6th Edition carries one of four compliance levels. This is the most critical thing to understand — because failing CORE OEs means automatic disqualification, regardless of your overall score.</p>
+      <div class="my-6 rounded-xl border border-brand/30 bg-brand/10 px-6 py-5"><p class="!mb-0 !text-paper">📌 <strong>Key fact:</strong> NABH 6th Edition has 639 Objective Elements (OEs) across 10 chapters. Each OE is classified as CORE, Commitment, Achievement, or Excellence — and each level has specific scoring requirements to pass accreditation.</p></div>
 
-  <div class="level-grid">
-    <div class="level-card core">
-      <div class="level-title" style="color:var(--red)">CORE</div>
-      <div class="level-count" style="color:var(--red)">105</div>
-      <div class="level-desc">Non-negotiable. Must score ≥4/5. A single CORE OE below 4 = assessment FAIL, regardless of overall percentage.</div>
-    </div>
-    <div class="level-card commit">
-      <div class="level-title" style="color:var(--orange)">Commitment</div>
-      <div class="level-count" style="color:var(--orange)">457</div>
-      <div class="level-desc">Standard compliance. Forms the bulk of your score. No OE should score ≤2 in any standard.</div>
-    </div>
-    <div class="level-card achieve">
-      <div class="level-title" style="color:var(--green)">Achievement</div>
-      <div class="level-count" style="color:var(--green)">60</div>
-      <div class="level-desc">Higher-level excellence. Expected for hospitals demonstrating mature quality systems.</div>
-    </div>
-    <div class="level-card excel">
-      <div class="level-title" style="color:var(--gold)">Excellence</div>
-      <div class="level-count" style="color:var(--gold)">17</div>
-      <div class="level-desc">Best-in-class. Hospitals scoring high on Excellence OEs demonstrate world-class quality.</div>
-    </div>
-  </div>
+      <h2>The 10 Chapters of <span>NABH 6th Edition</span></h2>
+      <p>Every chapter represents a domain of hospital function. A hospital cannot selectively comply — all 10 chapters are evaluated during the NABH assessment.</p>
 
-  <div class="warn-box">
-    <p>⚠️ <strong>The 4 Rules for NABH Pass:</strong> (1) No CORE OE below score 4. (2) Overall score ≥ 80% of 639×5. (3) Every chapter average ≥ 80%. (4) No standard has any OE ≤ 2. All 4 rules must be satisfied simultaneously.</p>
-  </div>
+      <div class="my-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1 font-head text-[0.8rem] font-bold tracking-widest text-blue">AAC</div><div class="mb-1 text-[0.95rem] font-semibold">Access, Assessment &amp; Continuity of Care</div><div class="text-[0.82rem] text-muted">Patient registration, triage, clinical assessment, discharge planning</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1 font-head text-[0.8rem] font-bold tracking-widest text-blue">COP</div><div class="mb-1 text-[0.95rem] font-semibold">Care of Patients</div><div class="text-[0.82rem] text-muted">High-risk care, surgical safety, medication management, patient rights</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1 font-head text-[0.8rem] font-bold tracking-widest text-blue">MOM</div><div class="mb-1 text-[0.95rem] font-semibold">Management of Medication</div><div class="text-[0.82rem] text-muted">Formulary, storage, dispensing, high-alert medications, ADR reporting</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1 font-head text-[0.8rem] font-bold tracking-widest text-blue">PRE</div><div class="mb-1 text-[0.95rem] font-semibold">Patient Rights &amp; Education</div><div class="text-[0.82rem] text-muted">Consent processes, patient rights charter, grievance redressal, health education</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1 font-head text-[0.8rem] font-bold tracking-widest text-blue">IPC</div><div class="mb-1 text-[0.95rem] font-semibold">Infection Prevention &amp; Control</div><div class="text-[0.82rem] text-muted">HAI surveillance, hand hygiene, sterilisation, biomedical waste, CSSD</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1 font-head text-[0.8rem] font-bold tracking-widest text-blue">PSQ</div><div class="mb-1 text-[0.95rem] font-semibold">Patient Safety &amp; Quality Improvement</div><div class="text-[0.82rem] text-muted">Incident reporting, sentinel events, root cause analysis, quality indicators</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1 font-head text-[0.8rem] font-bold tracking-widest text-blue">ROM</div><div class="mb-1 text-[0.95rem] font-semibold">Responsibilities of Management</div><div class="text-[0.82rem] text-muted">Governing body, leadership accountability, strategic planning, ethics</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1 font-head text-[0.8rem] font-bold tracking-widest text-blue">FMS</div><div class="mb-1 text-[0.95rem] font-semibold">Facility Management &amp; Safety</div><div class="text-[0.82rem] text-muted">Fire safety, electrical safety, medical gases, biomedical equipment, disaster plan</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1 font-head text-[0.8rem] font-bold tracking-widest text-blue">HRM</div><div class="mb-1 text-[0.95rem] font-semibold">Human Resource Management</div><div class="text-[0.82rem] text-muted">Credentialing, privileging, staff training, performance appraisal, health records</div></div>
+        <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-1 font-head text-[0.8rem] font-bold tracking-widest text-blue">IMS</div><div class="mb-1 text-[0.95rem] font-semibold">Information Management System</div><div class="text-[0.82rem] text-muted">Medical records, data confidentiality, clinical data analysis, MRD management</div></div>
+      </div>
 
-  <h2>What Changed from 5th to <span>6th Edition?</span></h2>
-  <p>The 6th Edition is not a minor update. Hospitals that prepared for 5th Edition assessment will find significant structural changes. Key differences:</p>
+      <h2>The 4 Compliance Levels Explained</h2>
+      <p>Every Objective Element in NABH 6th Edition carries one of four compliance levels. This is the most critical thing to understand — because failing CORE OEs means automatic disqualification, regardless of your overall score.</p>
 
-  <table>
-    <thead>
-      <tr><th>Aspect</th><th>5th Edition</th><th>6th Edition</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Total OEs</td><td>~600</td><td>639</td></tr>
-      <tr><td>Chapter structure</td><td>10 chapters</td><td>10 chapters (reorganised)</td></tr>
-      <tr><td>CORE OEs</td><td>Fewer, less strict</td><td>105 CORE OEs, strict ≥4 rule</td></tr>
-      <tr><td>SHCO programme</td><td>Separate older standards</td><td>Integrated 408 OEs, aligned with HCO</td></tr>
-      <tr><td>Digital health</td><td>Minimal coverage</td><td>IMS chapter expanded for digital records</td></tr>
-      <tr><td>IPC standards</td><td>Basic BMW and hand hygiene</td><td>Full HAI surveillance, CSSD standards, carbapenem-resistant organism protocols</td></tr>
-      <tr><td>Patient safety</td><td>Incident reporting only</td><td>Full PSQ chapter with RCA, sentinel event protocols, quality indicators</td></tr>
-    </tbody>
-  </table>
+      <div class="my-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-xl border-l-4 border-bad bg-panel p-5"><div class="mb-1 font-head font-bold text-bad">CORE</div><div class="mb-1 font-head text-2xl font-extrabold text-bad">105</div><div class="text-[0.85rem] text-muted">Non-negotiable. Must score ≥4/5. A single CORE OE below 4 = assessment FAIL, regardless of overall percentage.</div></div>
+        <div class="rounded-xl border-l-4 border-orange bg-panel p-5"><div class="mb-1 font-head font-bold text-orange">Commitment</div><div class="mb-1 font-head text-2xl font-extrabold text-orange">457</div><div class="text-[0.85rem] text-muted">Standard compliance. Forms the bulk of your score. No OE should score ≤2 in any standard.</div></div>
+        <div class="rounded-xl border-l-4 border-good bg-panel p-5"><div class="mb-1 font-head font-bold text-good">Achievement</div><div class="mb-1 font-head text-2xl font-extrabold text-good">60</div><div class="text-[0.85rem] text-muted">Higher-level excellence. Expected for hospitals demonstrating mature quality systems.</div></div>
+        <div class="rounded-xl border-l-4 border-gold bg-panel p-5"><div class="mb-1 font-head font-bold text-gold">Excellence</div><div class="mb-1 font-head text-2xl font-extrabold text-gold">17</div><div class="text-[0.85rem] text-muted">Best-in-class. Hospitals scoring high on Excellence OEs demonstrate world-class quality.</div></div>
+      </div>
 
-  <h2>How NABH Assessment Works</h2>
-  <p>Understanding the assessment process helps hospitals prepare systematically rather than reactively.</p>
+      <div class="my-6 rounded-xl border border-orange/30 bg-orange/10 px-6 py-5"><p class="!mb-0 !text-paper">⚠️ <strong>The 4 Rules for NABH Pass:</strong> (1) No CORE OE below score 4. (2) Overall score ≥ 80% of 639×5. (3) Every chapter average ≥ 80%. (4) No standard has any OE ≤ 2. All 4 rules must be satisfied simultaneously.</p></div>
 
-  <h3>Stage 1 — Application & Desktop Review</h3>
-  <p>The hospital submits an application to NABH with required documents. NABH conducts a desktop assessment reviewing policies, SOPs, and documentary evidence before scheduling an on-site visit. The desktop review primarily checks HRM chapter documents — staff credentials, training records, and governance documents.</p>
+      <h2>What Changed from 5th to <span>6th Edition?</span></h2>
+      <p>The 6th Edition is not a minor update. Hospitals that prepared for 5th Edition assessment will find significant structural changes. Key differences:</p>
 
-  <h3>Stage 2 — Pre-Assessment Visit</h3>
-  <p>NABH assigns assessors who conduct a pre-assessment visit. This is a gap-finding exercise, not a pass/fail evaluation. Assessors identify major non-compliances and give the hospital time to address them. Many hospitals underestimate this stage — assessors form strong impressions here that carry into the final assessment.</p>
+      <div class="my-6 overflow-x-auto">
+        <table class="tbl">
+          <thead><tr><th>Aspect</th><th>5th Edition</th><th>6th Edition</th></tr></thead>
+          <tbody>
+            <tr><td>Total OEs</td><td>~600</td><td>639</td></tr>
+            <tr><td>Chapter structure</td><td>10 chapters</td><td>10 chapters (reorganised)</td></tr>
+            <tr><td>CORE OEs</td><td>Fewer, less strict</td><td>105 CORE OEs, strict ≥4 rule</td></tr>
+            <tr><td>SHCO programme</td><td>Separate older standards</td><td>Integrated 408 OEs, aligned with HCO</td></tr>
+            <tr><td>Digital health</td><td>Minimal coverage</td><td>IMS chapter expanded for digital records</td></tr>
+            <tr><td>IPC standards</td><td>Basic BMW and hand hygiene</td><td>Full HAI surveillance, CSSD standards, carbapenem-resistant organism protocols</td></tr>
+            <tr><td>Patient safety</td><td>Incident reporting only</td><td>Full PSQ chapter with RCA, sentinel event protocols, quality indicators</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-  <h3>Stage 3 — Final Assessment</h3>
-  <p>The final assessment is a comprehensive 2-3 day evaluation by a team of NABH-trained assessors. They use a patient tracer methodology — following the patient journey from OPD registration through admission, surgery, and discharge — to evaluate compliance in real settings, not just on paper.</p>
+      <h2>How NABH Assessment Works</h2>
+      <p>Understanding the assessment process helps hospitals prepare systematically rather than reactively.</p>
+      <h3>Stage 1 — Application &amp; Desktop Review</h3>
+      <p>The hospital submits an application to NABH with required documents. NABH conducts a desktop assessment reviewing policies, SOPs, and documentary evidence before scheduling an on-site visit. The desktop review primarily checks HRM chapter documents — staff credentials, training records, and governance documents.</p>
+      <h3>Stage 2 — Pre-Assessment Visit</h3>
+      <p>NABH assigns assessors who conduct a pre-assessment visit. This is a gap-finding exercise, not a pass/fail evaluation. Assessors identify major non-compliances and give the hospital time to address them. Many hospitals underestimate this stage — assessors form strong impressions here that carry into the final assessment.</p>
+      <h3>Stage 3 — Final Assessment</h3>
+      <p>The final assessment is a comprehensive 2-3 day evaluation by a team of NABH-trained assessors. They use a patient tracer methodology — following the patient journey from OPD registration through admission, surgery, and discharge — to evaluate compliance in real settings, not just on paper.</p>
+      <h3>Stage 4 — Accreditation Decision</h3>
+      <p>Post-assessment, NABH reviews the assessment report. If all 4 compliance rules are met, accreditation is granted for 3 years. If critical non-compliances are found, NABH may grant conditional accreditation with a timeline for corrections, or defer accreditation entirely.</p>
 
-  <h3>Stage 4 — Accreditation Decision</h3>
-  <p>Post-assessment, NABH reviews the assessment report. If all 4 compliance rules are met, accreditation is granted for 3 years. If critical non-compliances are found, NABH may grant conditional accreditation with a timeline for corrections, or defer accreditation entirely.</p>
+      <h2>Common Reasons Hospitals Fail NABH Assessment</h2>
+      <p>Based on real assessment experience, these are the most common failure points:</p>
+      <h3>1. CORE OE gaps identified on assessment day</h3>
+      <p>Hospitals often track compliance chapter-wise but fail to specifically identify and prioritise all 105 CORE OEs. One CORE OE scored below 4 — even if everything else is perfect — results in automatic fail. The most commonly failed CORE OEs are in IPC (hand hygiene compliance data), MOM (high-alert medication protocols), and PSQ (incident reporting system).</p>
+      <h3>2. Chapter average below 80%</h3>
+      <p>A hospital may have a strong overall score but one weak chapter — typically ROM (governance documentation) or IMS (medical records completeness) — pulling the chapter average below 80%. This triggers an automatic fail even if the overall score exceeds 80%.</p>
+      <h3>3. Documentation vs practice gap</h3>
+      <p>NABH assessors are trained to identify when policies exist on paper but are not followed in practice. Assessors interview nurses, wardboys, and reception staff directly. A policy that staff cannot explain or demonstrate in practice scores 1-2 regardless of how well-written it is.</p>
+      <h3>4. KPI data not available for 3 months pre-assessment</h3>
+      <p>NABH requires hospitals to demonstrate trend data for quality indicators — not just a snapshot. Hospitals that start tracking KPIs close to the assessment date will not have the minimum 3-month data required. Start KPI tracking at least 6 months before your planned assessment date.</p>
 
-  <h2>Common Reasons Hospitals Fail NABH Assessment</h2>
-  <p>Based on real assessment experience, these are the most common failure points:</p>
+      <h2>Preparing Your Hospital: A Practical Roadmap</h2>
+      <h3>12 months before assessment</h3>
+      <p>Form the NABH Core Committee with department heads. Assign OE ownership to each department. Begin KPI data collection. Conduct baseline gap assessment across all 639 OEs to know your starting position.</p>
+      <h3>6-9 months before assessment</h3>
+      <p>Complete all CORE OE gaps first. Develop or update SOPs for each standard. Conduct training for all staff on patient safety, hand hygiene, and fire safety. Run mock drills for fire, mass casualty, and code blue scenarios.</p>
+      <h3>3-6 months before assessment</h3>
+      <p>Conduct internal audits for all 10 chapters. Run mock NABH assessment using patient tracer methodology. Address all findings via formal CAPA. Submit application to NABH.</p>
+      <h3>Pre-assessment period</h3>
+      <p>Prepare all documentary evidence chapter-wise. Ensure all 26 mandatory committees are functional with meeting minutes. Verify all statutory licenses are current. Brief staff on assessment process and patient rights.</p>
 
-  <h3>1. CORE OE gaps identified on assessment day</h3>
-  <p>Hospitals often track compliance chapter-wise but fail to specifically identify and prioritise all 105 CORE OEs. One CORE OE scored below 4 — even if everything else is perfect — results in automatic fail. The most commonly failed CORE OEs are in IPC (hand hygiene compliance data), MOM (high-alert medication protocols), and PSQ (incident reporting system).</p>
+      <div class="my-10 rounded-2xl border border-brand/30 bg-gradient-to-br from-panel to-panel2 px-6 py-12 text-center">
+        <h2 class="!mt-0">Track All 639 OEs with <span>AccredReady</span></h2>
+        <p class="mx-auto mt-3 max-w-lg !text-muted">Built by a certified NABH Quality Manager. AccredReady gives your hospital a real-time compliance score, flags CORE OE gaps instantly, and tells you exactly what to fix before assessors arrive.</p>
+        <a href="https://accredready.in" class="mt-4 inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start Free Trial →</a>
+      </div>
 
-  <h3>2. Chapter average below 80%</h3>
-  <p>A hospital may have a strong overall score but one weak chapter — typically ROM (governance documentation) or IMS (medical records completeness) — pulling the chapter average below 80%. This triggers an automatic fail even if the overall score exceeds 80%.</p>
+      <h2>Frequently Asked Questions</h2>
+      <h3>How many OEs are there in NABH 6th Edition?</h3>
+      <p>NABH 6th Edition has 639 Objective Elements across 10 chapters: 105 CORE, 457 Commitment, 60 Achievement, and 17 Excellence OEs.</p>
+      <h3>What is the passing score for NABH accreditation?</h3>
+      <p>There is no single passing score. A hospital must simultaneously satisfy all 4 rules: no CORE OE below 4, overall score ≥80%, every chapter average ≥80%, and no standard with any OE ≤2.</p>
+      <h3>How long is NABH accreditation valid?</h3>
+      <p>NABH Full Accreditation is valid for 3 years. NABH Entry Level Certification is valid for 2 years. Hospitals must apply for renewal before expiry and undergo re-assessment.</p>
+      <h3>Can a small hospital get NABH accreditation?</h3>
+      <p>Yes. NABH has the Small Healthcare Organisation (SHCO) programme specifically designed for hospitals with up to 50 beds. The SHCO programme has 408 OEs and a simplified assessment process. NABH Entry Level Certification is also available as a stepping stone to Full Accreditation.</p>
+      <h3>What is the difference between NABH Entry Level and Full Accreditation?</h3>
+      <p>Entry Level Certification (ELC) covers a subset of NABH standards focused on basic patient safety and quality. It is designed for hospitals beginning their quality journey. Full Accreditation covers all 639 OEs and represents comprehensive quality compliance. ELC hospitals can upgrade to Full Accreditation after demonstrating sustained compliance.</p>
 
-  <h3>3. Documentation vs practice gap</h3>
-  <p>NABH assessors are trained to identify when policies exist on paper but are not followed in practice. Assessors interview nurses, wardboys, and reception staff directly. A policy that staff cannot explain or demonstrate in practice scores 1-2 regardless of how well-written it is.</p>
+    </article>
+  </main>
 
-  <h3>4. KPI data not available for 3 months pre-assessment</h3>
-  <p>NABH requires hospitals to demonstrate trend data for quality indicators — not just a snapshot. Hospitals that start tracking KPIs close to the assessment date will not have the minimum 3-month data required. Start KPI tracking at least 6 months before your planned assessment date.</p>
-
-  <h2>Preparing Your Hospital: A Practical Roadmap</h2>
-
-  <h3>12 months before assessment</h3>
-  <p>Form the NABH Core Committee with department heads. Assign OE ownership to each department. Begin KPI data collection. Conduct baseline gap assessment across all 639 OEs to know your starting position.</p>
-
-  <h3>6-9 months before assessment</h3>
-  <p>Complete all CORE OE gaps first. Develop or update SOPs for each standard. Conduct training for all staff on patient safety, hand hygiene, and fire safety. Run mock drills for fire, mass casualty, and code blue scenarios.</p>
-
-  <h3>3-6 months before assessment</h3>
-  <p>Conduct internal audits for all 10 chapters. Run mock NABH assessment using patient tracer methodology. Address all findings via formal CAPA. Submit application to NABH.</p>
-
-  <h3>Pre-assessment period</h3>
-  <p>Prepare all documentary evidence chapter-wise. Ensure all 26 mandatory committees are functional with meeting minutes. Verify all statutory licenses are current. Brief staff on assessment process and patient rights.</p>
-
-  <div class="cta-banner">
-    <h2>Track All 639 OEs with <span>AccredReady</span></h2>
-    <p style="color:var(--muted); margin-top:0.75rem; max-width:500px; margin-left:auto; margin-right:auto;">Built by a certified NABH Quality Manager. AccredReady gives your hospital a real-time compliance score, flags CORE OE gaps instantly, and tells you exactly what to fix before assessors arrive.</p>
-    <a href="https://accredready.in" class="btn-primary">Start Free Trial →</a>
-  </div>
-
-  <h2>Frequently Asked Questions</h2>
-
-  <h3>How many OEs are there in NABH 6th Edition?</h3>
-  <p>NABH 6th Edition has 639 Objective Elements across 10 chapters: 105 CORE, 457 Commitment, 60 Achievement, and 17 Excellence OEs.</p>
-
-  <h3>What is the passing score for NABH accreditation?</h3>
-  <p>There is no single passing score. A hospital must simultaneously satisfy all 4 rules: no CORE OE below 4, overall score ≥80%, every chapter average ≥80%, and no standard with any OE ≤2.</p>
-
-  <h3>How long is NABH accreditation valid?</h3>
-  <p>NABH Full Accreditation is valid for 3 years. NABH Entry Level Certification is valid for 2 years. Hospitals must apply for renewal before expiry and undergo re-assessment.</p>
-
-  <h3>Can a small hospital get NABH accreditation?</h3>
-  <p>Yes. NABH has the Small Healthcare Organisation (SHCO) programme specifically designed for hospitals with up to 50 beds. The SHCO programme has 408 OEs and a simplified assessment process. NABH Entry Level Certification is also available as a stepping stone to Full Accreditation.</p>
-
-  <h3>What is the difference between NABH Entry Level and Full Accreditation?</h3>
-  <p>Entry Level Certification (ELC) covers a subset of NABH standards focused on basic patient safety and quality. It is designed for hospitals beginning their quality journey. Full Accreditation covers all 639 OEs and represents comprehensive quality compliance. ELC hospitals can upgrade to Full Accreditation after demonstrating sustained compliance.</p>
-
-</div>
-
-<footer>
-  <p style="margin-bottom:0.75rem;">
-    <a href="https://accredready.in">Home</a>
-    <a href="https://accredready.in/nabh-accreditation-software.html">NABH Software</a>
-    <a href="https://accredready.in/nabh-6th-edition-checklist.html">NABH Checklist</a>
-    <a href="https://accredready.in/shco-accreditation-software.html">SHCO Software</a>
-    <a href="https://accredready.in/nabh-internal-audit-checklist.html">Internal Audit</a>
-    <a href="https://accredready.in/privacy.html">Privacy Policy</a>
-  </p>
-  <p>© 2026 AccredReady by MK Tech. Written by Dr. Mehul Upadhyay, NABH Quality Manager.</p>
-</footer>
+  <!-- FOOTER -->
+  <footer class="border-t border-line px-5 py-8 text-center text-sm text-muted sm:px-8">
+    <nav aria-label="Footer" class="mb-3 flex flex-wrap justify-center gap-x-6 gap-y-2">
+      <a href="https://accredready.in" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
+      <a href="https://accredready.in/nabh-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Software</a>
+      <a href="https://accredready.in/nabh-6th-edition-checklist.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Checklist</a>
+      <a href="https://accredready.in/shco-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Software</a>
+      <a href="https://accredready.in/nabh-internal-audit-checklist.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Internal Audit</a>
+      <a href="https://accredready.in/privacy.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
+    </nav>
+    <p>© 2026 AccredReady by MK Tech. Written by Dr. Mehul Upadhyay, NABH Quality Manager.</p>
+  </footer>
 
 </body>
 </html>

@@ -62,333 +62,261 @@
     ]
   }
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --navy: #040d1a; --accent: #2563eb; --accent2: #38bdf8;
-      --gold: #f59e0b; --white: #f8fafc; --muted: #94a3b8; --card: #0f1f38;
-      --green: #4ade80;
+
+  <!-- Tailwind via CDN + shared design-system token config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:    '#040d1a', ink2: '#0a1f3d', panel: '#0f1f38', panel2: '#0a1838',
+            blue:   '#38bdf8', brand: '#2563eb', gold: '#f59e0b', purple: '#a78bfa',
+            teal:   '#2dd4bf', paper: '#f8fafc', muted: '#94a3b8', good: '#4ade80',
+            bad:    '#f87171', line: 'rgba(255,255,255,0.08)',
+          },
+          fontFamily: {
+            head: ['Syne', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            body: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <!-- Shared component styles (token-based) compiled by the Tailwind CDN -->
+  <style type="text/tailwindcss">
+    @layer components {
+      .tbl { @apply w-full border-collapse text-[0.9rem]; }
+      .tbl th { @apply bg-brand/15 px-4 py-3 text-left font-head text-[0.85rem] font-semibold text-blue; }
+      .tbl td { @apply border-b border-white/5 px-4 py-3 align-top text-muted; }
+      .tbl strong { @apply text-paper; }
     }
-    body { background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; line-height: 1.7; }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); position: sticky; top: 0; background: rgba(4,13,26,0.95); backdrop-filter: blur(12px); z-index: 100; }
-    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--accent2); text-decoration: none; }
-    .nav-cta { background: var(--accent); color: white; padding: 0.55rem 1.4rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem; }
-    .hero { max-width: 860px; margin: 0 auto; padding: 4rem 2rem 3rem; text-align: center; }
-    .badge { display: inline-block; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3); color: var(--gold); padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1.5rem; }
-    h1 { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.25rem; }
-    h1 span { color: var(--accent2); }
-    .hero-sub { font-size: 1.05rem; color: var(--muted); max-width: 620px; margin: 0 auto 2rem; }
-    .toc { max-width: 700px; margin: 0 auto 3rem; background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.75rem; }
-    .toc-title { font-family: 'Syne', sans-serif; font-weight: 700; margin-bottom: 1rem; font-size: 1rem; color: var(--accent2); }
-    .toc-list { list-style: none; }
-    .toc-list li { padding: 0.35rem 0; }
-    .toc-list a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
-    .toc-list a:hover { color: var(--accent2); }
-    .toc-list a::before { content: "→ "; }
-    .content { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
-    .section { margin-bottom: 3.5rem; }
-    .section-anchor { display: block; margin-top: -80px; padding-top: 80px; }
-    h2 { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
-    h2 span { color: var(--accent2); }
-    h3 { font-family: 'Syne', sans-serif; font-size: 1.15rem; font-weight: 600; margin: 1.5rem 0 0.75rem; color: var(--accent2); }
-    p { color: var(--muted); margin-bottom: 1rem; font-size: 0.97rem; }
-    strong { color: var(--white); }
-    .highlight { background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
-    .highlight p { margin: 0; color: var(--white); }
-    .answer-box { background: var(--card); border-left: 4px solid var(--accent2); border-radius: 0 10px 10px 0; padding: 1.25rem 1.5rem; margin: 1rem 0 1.5rem; }
-    .answer-label { font-size: 0.75rem; color: var(--accent2); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
-    .answer-text { color: var(--white); font-size: 1rem; font-weight: 500; line-height: 1.6; }
-    .table-wrap { overflow-x: auto; margin: 1.5rem 0; }
-    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-    th { background: rgba(37,99,235,0.15); color: var(--accent2); padding: 0.75rem 1rem; text-align: left; font-family: 'Syne', sans-serif; font-weight: 600; font-size: 0.85rem; }
-    td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.06); color: var(--muted); }
-    tr:hover td { background: rgba(255,255,255,0.02); }
-    .lang-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-    .lang-card { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 1.25rem; }
-    .lang-label { font-size: 0.72rem; color: var(--accent2); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
-    .lang-text { color: var(--white); font-size: 0.9rem; font-weight: 500; line-height: 1.5; }
-    .breakdown-box { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.75rem; margin: 1.5rem 0; }
-    .breakdown-row { display: flex; gap: 1rem; align-items: flex-start; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
-    .breakdown-row:last-child { border-bottom: none; }
-    .breakdown-letter { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--accent2); width: 32px; flex-shrink: 0; line-height: 1; }
-    .breakdown-word { font-weight: 600; color: var(--white); font-size: 0.97rem; }
-    .breakdown-desc { color: var(--muted); font-size: 0.85rem; margin-top: 0.2rem; }
-    .cta-inline { background: linear-gradient(135deg, #0a1f3d, #1e3a8a); border: 1px solid rgba(37,99,235,0.3); border-radius: 12px; padding: 2rem; margin: 2.5rem 0; text-align: center; }
-    .cta-inline h3 { color: var(--white); font-family: 'Syne', sans-serif; font-size: 1.2rem; margin-bottom: 0.5rem; }
-    .cta-inline p { color: var(--muted); margin-bottom: 1.25rem; font-size: 0.9rem; }
-    .btn-primary { background: var(--accent); color: white; padding: 0.8rem 1.75rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: inline-block; box-shadow: 0 4px 20px rgba(37,99,235,0.35); }
-    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.07); padding: 1.25rem 0; }
-    .faq-q { font-family: 'Syne', sans-serif; font-weight: 600; margin-bottom: 0.6rem; font-size: 1rem; }
-    .faq-a { color: var(--muted); font-size: 0.92rem; }
-    .related-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.25rem; }
-    .related-link { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 0.4rem 0.9rem; text-decoration: none; color: var(--muted); font-size: 0.85rem; transition: border-color 0.2s, color 0.2s; }
-    .related-link:hover { border-color: rgba(56,189,248,0.4); color: var(--accent2); }
-    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
-    footer a { color: var(--muted); text-decoration: none; margin: 0 0.75rem; }
-    footer a:hover { color: var(--accent2); }
+  </style>
+  <style>
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
-<body>
 
-<nav>
-  <a href="https://accredready.in" class="logo">AccredReady</a>
-  <a href="https://accredready.in" class="nav-cta">Try AccredReady Free</a>
-</nav>
+<body class="bg-ink text-paper font-body leading-[1.7] antialiased">
 
-<div class="hero">
-  <div class="badge">NABH Explained 2026</div>
-  <h1>NABH Full Form &<br/><span>What It Means for Hospitals</span></h1>
-  <p class="hero-sub">NABH stands for <strong style="color:#f8fafc;">National Accreditation Board for Hospitals & Healthcare Providers</strong> — India's national body for hospital quality accreditation under QCI.</p>
-</div>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Skip to content</a>
 
-<div class="content">
-  <div class="toc">
-    <div class="toc-title">📖 On This Page</div>
-    <ul class="toc-list">
-      <li><a href="#full-form">NABH Full Form — Letter by Letter</a></li>
-      <li><a href="#languages">NABH Full Form in Hindi, Gujarati & Other Languages</a></li>
-      <li><a href="#medical">NABH Full Form in Medical Context</a></li>
-      <li><a href="#about">What is NABH? — History & Purpose</a></li>
-      <li><a href="#related">Related Abbreviations (QCI, NABL, JCI)</a></li>
-      <li><a href="#programmes">NABH Accreditation Programmes</a></li>
-      <li><a href="#faq">FAQs</a></li>
-    </ul>
-  </div>
+  <!-- NAV -->
+  <nav class="sticky top-0 z-[100] flex items-center justify-between border-b border-line bg-ink/95 px-5 py-4 backdrop-blur-md sm:px-8">
+    <a href="https://accredready.in" class="rounded font-head text-xl font-extrabold text-blue outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">AccredReady</a>
+    <a href="https://accredready.in" class="rounded-md bg-brand px-5 py-2 text-sm font-medium text-white outline-none transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">Try AccredReady Free</a>
+  </nav>
 
-  <!-- LETTER BY LETTER -->
-  <div class="section">
-    <span class="section-anchor" id="full-form"></span>
-    <h2>NABH Full Form — <span>Letter by Letter</span></h2>
-    <div class="answer-box">
-      <div class="answer-label">Full Form</div>
-      <div class="answer-text"><strong>N</strong>ational <strong>A</strong>ccreditation <strong>B</strong>oard for <strong>H</strong>ospitals & Healthcare Providers</div>
-    </div>
-    <div class="breakdown-box">
-      <div class="breakdown-row">
-        <div class="breakdown-letter">N</div>
-        <div>
-          <div class="breakdown-word">National</div>
-          <div class="breakdown-desc">Operates at the national level across all Indian states and union territories.</div>
+  <main id="main">
+
+    <!-- HERO -->
+    <header class="mx-auto max-w-3xl px-5 pb-10 pt-16 text-center sm:px-8">
+      <span class="mb-6 inline-block rounded-full border border-gold/30 bg-gold/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-gold">NABH Explained 2026</span>
+      <h1 class="mb-5 font-head text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold leading-[1.2]">NABH Full Form &amp;<br/><span class="text-blue">What It Means for Hospitals</span></h1>
+      <p class="mx-auto max-w-2xl text-[1.05rem] text-muted">NABH stands for <strong class="text-paper">National Accreditation Board for Hospitals &amp; Healthcare Providers</strong> — India's national body for hospital quality accreditation under QCI.</p>
+    </header>
+
+    <div class="mx-auto max-w-3xl px-5 pb-16 sm:px-8">
+
+      <!-- TOC -->
+      <nav aria-label="On this page" class="mx-auto mb-12 rounded-xl border border-white/10 bg-panel p-7">
+        <h2 class="mb-4 font-head text-base font-bold text-blue">📖 On This Page</h2>
+        <ul class="space-y-1.5 text-sm">
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#full-form">NABH Full Form — Letter by Letter</a></li>
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#languages">NABH Full Form in Hindi, Gujarati &amp; Other Languages</a></li>
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#medical">NABH Full Form in Medical Context</a></li>
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#about">What is NABH? — History &amp; Purpose</a></li>
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#related">Related Abbreviations (QCI, NABL, JCI)</a></li>
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#programmes">NABH Accreditation Programmes</a></li>
+          <li><a class="rounded text-muted outline-none transition-colors before:content-['→_'] hover:text-blue focus-visible:ring-2 focus-visible:ring-blue motion-reduce:transition-none" href="#faq">FAQs</a></li>
+        </ul>
+      </nav>
+
+      <!-- LETTER BY LETTER -->
+      <section id="full-form" class="mb-14 scroll-mt-24">
+        <h2 class="mb-4 border-b border-line pb-3 font-head text-2xl font-bold">NABH Full Form — <span class="text-blue">Letter by Letter</span></h2>
+        <div class="my-4 rounded-r-xl border-l-4 border-blue bg-panel px-6 py-5">
+          <div class="mb-2 text-xs font-semibold uppercase tracking-wider text-blue">Full Form</div>
+          <div class="text-base font-medium text-paper"><strong>N</strong>ational <strong>A</strong>ccreditation <strong>B</strong>oard for <strong>H</strong>ospitals &amp; Healthcare Providers</div>
         </div>
-      </div>
-      <div class="breakdown-row">
-        <div class="breakdown-letter">A</div>
-        <div>
-          <div class="breakdown-word">Accreditation</div>
-          <div class="breakdown-desc">Formal recognition that a hospital meets defined quality and safety standards.</div>
+        <div class="my-6 rounded-xl border border-white/10 bg-panel p-7">
+          <div class="flex items-start gap-4 border-b border-white/5 py-3">
+            <div class="w-8 flex-shrink-0 font-head text-2xl font-extrabold leading-none text-blue">N</div>
+            <div><div class="font-semibold text-paper">National</div><div class="mt-0.5 text-[0.85rem] text-muted">Operates at the national level across all Indian states and union territories.</div></div>
+          </div>
+          <div class="flex items-start gap-4 border-b border-white/5 py-3">
+            <div class="w-8 flex-shrink-0 font-head text-2xl font-extrabold leading-none text-blue">A</div>
+            <div><div class="font-semibold text-paper">Accreditation</div><div class="mt-0.5 text-[0.85rem] text-muted">Formal recognition that a hospital meets defined quality and safety standards.</div></div>
+          </div>
+          <div class="flex items-start gap-4 border-b border-white/5 py-3">
+            <div class="w-8 flex-shrink-0 font-head text-2xl font-extrabold leading-none text-blue">B</div>
+            <div><div class="font-semibold text-paper">Board</div><div class="mt-0.5 text-[0.85rem] text-muted">A constituent board of QCI — has its own governance structure and accreditation committees.</div></div>
+          </div>
+          <div class="flex items-start gap-4 py-3">
+            <div class="w-8 flex-shrink-0 font-head text-2xl font-extrabold leading-none text-blue">H</div>
+            <div><div class="font-semibold text-paper">Hospitals &amp; Healthcare Providers</div><div class="mt-0.5 text-[0.85rem] text-muted">Covers all types of healthcare organizations — large hospitals, small clinics, blood banks, dental clinics, and more.</div></div>
+          </div>
         </div>
-      </div>
-      <div class="breakdown-row">
-        <div class="breakdown-letter">B</div>
-        <div>
-          <div class="breakdown-word">Board</div>
-          <div class="breakdown-desc">A constituent board of QCI — has its own governance structure and accreditation committees.</div>
+      </section>
+
+      <!-- LANGUAGES -->
+      <section id="languages" class="mb-14 scroll-mt-24">
+        <h2 class="mb-4 border-b border-line pb-3 font-head text-2xl font-bold">NABH Full Form in <span class="text-blue">Different Languages</span></h2>
+        <p class="mb-4 text-[0.97rem] text-muted">The NABH full form is the same across all Indian languages — only the script differs:</p>
+        <div class="my-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-2 text-[0.72rem] font-semibold uppercase tracking-wider text-blue">English</div><div class="text-[0.9rem] font-medium leading-snug text-paper">National Accreditation Board for Hospitals &amp; Healthcare Providers</div></div>
+          <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-2 text-[0.72rem] font-semibold uppercase tracking-wider text-blue">Hindi</div><div class="text-[0.9rem] font-medium leading-snug text-paper">नेशनल एक्रीडिटेशन बोर्ड फॉर हॉस्पिटल्स एंड हेल्थकेयर प्रोवाइडर्स</div></div>
+          <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-2 text-[0.72rem] font-semibold uppercase tracking-wider text-blue">Gujarati</div><div class="text-[0.9rem] font-medium leading-snug text-paper">નેશનલ એક્રેડિટેશન બોર્ડ ફોર હોસ્પિટલ્સ એન્ડ હેલ્થકેર પ્રોવાઇડર્સ</div></div>
+          <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-2 text-[0.72rem] font-semibold uppercase tracking-wider text-blue">Tamil</div><div class="text-[0.9rem] font-medium leading-snug text-paper">நேஷனல் அக்ரெடிட்டேஷன் போர்ட் ஃபார் ஹாஸ்பிட்டல்ஸ் அண்ட் ஹெல்த்கேர் புரோவைடர்ஸ்</div></div>
+          <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-2 text-[0.72rem] font-semibold uppercase tracking-wider text-blue">Marathi</div><div class="text-[0.9rem] font-medium leading-snug text-paper">नॅशनल अॅक्रेडिटेशन बोर्ड फॉर हॉस्पिटल्स अँड हेल्थकेअर प्रोव्हायडर्स</div></div>
+          <div class="rounded-xl border border-white/10 bg-panel p-5"><div class="mb-2 text-[0.72rem] font-semibold uppercase tracking-wider text-blue">Telugu</div><div class="text-[0.9rem] font-medium leading-snug text-paper">నేషనల్ అక్రెడిటేషన్ బోర్డ్ ఫర్ హాస్పిటల్స్ అండ్ హెల్త్‌కేర్ ప్రొవైడర్స్</div></div>
         </div>
-      </div>
-      <div class="breakdown-row">
-        <div class="breakdown-letter">H</div>
-        <div>
-          <div class="breakdown-word">Hospitals & Healthcare Providers</div>
-          <div class="breakdown-desc">Covers all types of healthcare organizations — large hospitals, small clinics, blood banks, dental clinics, and more.</div>
+        <div class="my-6 rounded-xl border border-brand/30 bg-brand/10 px-6 py-5">
+          <p class="text-paper">Note: The abbreviation "NABH" is universally used in all Indian languages — only the transliteration of the full form changes. Official NABH documents and certificates are issued in English.</p>
         </div>
-      </div>
-    </div>
-  </div>
+      </section>
 
-  <!-- LANGUAGES -->
-  <div class="section">
-    <span class="section-anchor" id="languages"></span>
-    <h2>NABH Full Form in <span>Different Languages</span></h2>
-    <p>The NABH full form is the same across all Indian languages — only the script differs:</p>
-    <div class="lang-grid">
-      <div class="lang-card">
-        <div class="lang-label">English</div>
-        <div class="lang-text">National Accreditation Board for Hospitals & Healthcare Providers</div>
-      </div>
-      <div class="lang-card">
-        <div class="lang-label">Hindi</div>
-        <div class="lang-text">नेशनल एक्रीडिटेशन बोर्ड फॉर हॉस्पिटल्स एंड हेल्थकेयर प्रोवाइडर्स</div>
-      </div>
-      <div class="lang-card">
-        <div class="lang-label">Gujarati</div>
-        <div class="lang-text">નેશનલ એક્રેડિટેશન બોર્ડ ફોર હોસ્પિટલ્સ એન્ડ હેલ્થકેર પ્રોવાઇડર્સ</div>
-      </div>
-      <div class="lang-card">
-        <div class="lang-label">Tamil</div>
-        <div class="lang-text">நேஷனல் அக்ரெடிட்டேஷன் போர்ட் ஃபார் ஹாஸ்பிட்டல்ஸ் அண்ட் ஹெல்த்கேர் புரோவைடர்ஸ்</div>
-      </div>
-      <div class="lang-card">
-        <div class="lang-label">Marathi</div>
-        <div class="lang-text">नॅशनल अॅक्रेडिटेशन बोर्ड फॉर हॉस्पिटल्स अँड हेल्थकेअर प्रोव्हायडर्स</div>
-      </div>
-      <div class="lang-card">
-        <div class="lang-label">Telugu</div>
-        <div class="lang-text">నేషనల్ అక్రెడిటేషన్ బోర్డ్ ఫర్ హాస్పిటల్స్ అండ్ హెల్త్‌కేర్ ప్రొవైడర్స్</div>
-      </div>
-    </div>
-    <div class="highlight">
-      <p>Note: The abbreviation "NABH" is universally used in all Indian languages — only the transliteration of the full form changes. Official NABH documents and certificates are issued in English.</p>
-    </div>
-  </div>
+      <!-- MEDICAL CONTEXT -->
+      <section id="medical" class="mb-14 scroll-mt-24">
+        <h2 class="mb-4 border-b border-line pb-3 font-head text-2xl font-bold">NABH Full Form in <span class="text-blue">Medical Context</span></h2>
+        <p class="mb-4 text-[0.97rem] text-muted">In medical and healthcare management, NABH refers specifically to the accreditation body — not a disease, drug, or clinical term. It is used in the following contexts:</p>
+        <div class="my-6 overflow-x-auto">
+          <table class="tbl">
+            <tr><th>Context</th><th>What NABH Means</th></tr>
+            <tr><td><strong>Hospital Administration</strong></td><td>The accreditation body hospitals must satisfy to earn NABH certification</td></tr>
+            <tr><td><strong>Nursing Education</strong></td><td>NABH standards cover nursing care quality, staffing ratios, and competency assessment</td></tr>
+            <tr><td><strong>Medical Coding / Billing</strong></td><td>NABH accreditation is often required for insurance empanelment and CGHS billing</td></tr>
+            <tr><td><strong>Quality Management</strong></td><td>The framework (6th Edition) that hospital quality managers implement and audit against</td></tr>
+            <tr><td><strong>Government Health Schemes</strong></td><td>Mandatory for empanelment under Ayushman Bharat, CGHS, ECHS, and state schemes</td></tr>
+          </table>
+        </div>
+        <p class="text-[0.97rem] text-muted">When a doctor or nurse asks "Is this hospital NABH accredited?" — they are asking whether the hospital has been formally assessed and certified by the National Accreditation Board for Hospitals &amp; Healthcare Providers.</p>
+      </section>
 
-  <!-- MEDICAL CONTEXT -->
-  <div class="section">
-    <span class="section-anchor" id="medical"></span>
-    <h2>NABH Full Form in <span>Medical Context</span></h2>
-    <p>In medical and healthcare management, NABH refers specifically to the accreditation body — not a disease, drug, or clinical term. It is used in the following contexts:</p>
-    <div class="table-wrap">
-      <table>
-        <tr><th>Context</th><th>What NABH Means</th></tr>
-        <tr><td><strong>Hospital Administration</strong></td><td>The accreditation body hospitals must satisfy to earn NABH certification</td></tr>
-        <tr><td><strong>Nursing Education</strong></td><td>NABH standards cover nursing care quality, staffing ratios, and competency assessment</td></tr>
-        <tr><td><strong>Medical Coding / Billing</strong></td><td>NABH accreditation is often required for insurance empanelment and CGHS billing</td></tr>
-        <tr><td><strong>Quality Management</strong></td><td>The framework (6th Edition) that hospital quality managers implement and audit against</td></tr>
-        <tr><td><strong>Government Health Schemes</strong></td><td>Mandatory for empanelment under Ayushman Bharat, CGHS, ECHS, and state schemes</td></tr>
-      </table>
-    </div>
-    <p>When a doctor or nurse asks "Is this hospital NABH accredited?" — they are asking whether the hospital has been formally assessed and certified by the National Accreditation Board for Hospitals & Healthcare Providers.</p>
-  </div>
+      <!-- ABOUT NABH -->
+      <section id="about" class="mb-14 scroll-mt-24">
+        <h2 class="mb-4 border-b border-line pb-3 font-head text-2xl font-bold">What is NABH? — <span class="text-blue">History &amp; Purpose</span></h2>
+        <p class="mb-4 text-[0.97rem] text-muted">NABH was established in <strong class="text-paper">2006</strong> as a constituent board of the <strong class="text-paper">Quality Council of India (QCI)</strong>, which was set up jointly by the Government of India and Indian industry bodies.</p>
+        <h3 class="mb-3 mt-6 font-head text-lg font-semibold text-blue">Why was NABH created?</h3>
+        <p class="mb-4 text-[0.97rem] text-muted">Before NABH, India had no nationally recognised standard for hospital quality. Patients had no reliable way to assess hospital safety, and government health schemes lacked objective empanelment criteria. NABH was created to:</p>
+        <ul class="mb-4 list-disc space-y-2 pl-6 text-[0.97rem] text-muted">
+          <li>Set measurable quality and safety standards for Indian hospitals</li>
+          <li>Provide a formal accreditation framework comparable to international standards (JCI)</li>
+          <li>Enable government empanelment based on verified quality criteria</li>
+          <li>Promote continuous quality improvement in Indian healthcare</li>
+        </ul>
+        <h3 class="mb-3 mt-6 font-head text-lg font-semibold text-blue">NABH Key Facts</h3>
+        <div class="my-6 overflow-x-auto">
+          <table class="tbl">
+            <tr><th>Attribute</th><th>Detail</th></tr>
+            <tr><td>Established</td><td>2006</td></tr>
+            <tr><td>Parent Body</td><td>Quality Council of India (QCI)</td></tr>
+            <tr><td>Current Standards</td><td>NABH 6th Edition (HCO)</td></tr>
+            <tr><td>Total Accredited Hospitals</td><td>1,000+ (as of 2026)</td></tr>
+            <tr><td>Accreditation Programmes</td><td>HCO Full, HCO ELC, SHCO Full, SHCO ELC, Blood Banks, Dental, Laboratories</td></tr>
+            <tr><td>Official Website</td><td>nabh.co</td></tr>
+            <tr><td>International Recognition</td><td>ISQua accredited accreditor</td></tr>
+          </table>
+        </div>
+        <div class="my-6 rounded-xl border border-brand/30 bg-brand/10 px-6 py-5">
+          <p class="text-paper">NABH is accredited by ISQua (International Society for Quality in Health Care) — meaning NABH's own standards and processes meet international benchmarks. An NABH-accredited hospital is globally recognized for quality.</p>
+        </div>
+      </section>
 
-  <!-- ABOUT NABH -->
-  <div class="section">
-    <span class="section-anchor" id="about"></span>
-    <h2>What is NABH? — <span>History & Purpose</span></h2>
-    <p>NABH was established in <strong>2006</strong> as a constituent board of the <strong>Quality Council of India (QCI)</strong>, which was set up jointly by the Government of India and Indian industry bodies.</p>
+      <!-- RELATED ABBREVIATIONS -->
+      <section id="related" class="mb-14 scroll-mt-24">
+        <h2 class="mb-4 border-b border-line pb-3 font-head text-2xl font-bold">Related Abbreviations — <span class="text-blue">QCI, NABL, JCI</span></h2>
+        <p class="mb-4 text-[0.97rem] text-muted">NABH is often confused with or compared to similar bodies. Here's a quick comparison:</p>
+        <div class="my-6 overflow-x-auto">
+          <table class="tbl">
+            <tr><th>Abbreviation</th><th>Full Form</th><th>Scope</th></tr>
+            <tr><td><strong>NABH</strong></td><td>National Accreditation Board for Hospitals &amp; Healthcare Providers</td><td>Hospital &amp; healthcare facility accreditation in India</td></tr>
+            <tr><td><strong>NABL</strong></td><td>National Accreditation Board for Testing and Calibration Laboratories</td><td>Medical and testing laboratory accreditation in India</td></tr>
+            <tr><td><strong>QCI</strong></td><td>Quality Council of India</td><td>Parent body of NABH and NABL; India's national accreditation body</td></tr>
+            <tr><td><strong>JCI</strong></td><td>Joint Commission International</td><td>International hospital accreditation (US-based, global recognition)</td></tr>
+            <tr><td><strong>ISQua</strong></td><td>International Society for Quality in Health Care</td><td>Accredits accreditation bodies like NABH globally</td></tr>
+            <tr><td><strong>CGHS</strong></td><td>Central Government Health Scheme</td><td>Health coverage for central govt. employees — requires NABH empanelment</td></tr>
+          </table>
+        </div>
+        <p class="text-[0.97rem] text-muted">Key distinction: <strong class="text-paper">NABH</strong> accredits hospitals. <strong class="text-paper">NABL</strong> accredits laboratories. Both are under <strong class="text-paper">QCI</strong>. A hospital can (and often should) have both NABH and NABL accreditations.</p>
+      </section>
 
-    <h3>Why was NABH created?</h3>
-    <p>Before NABH, India had no nationally recognised standard for hospital quality. Patients had no reliable way to assess hospital safety, and government health schemes lacked objective empanelment criteria. NABH was created to:</p>
-    <ul style="color: var(--muted); padding-left: 1.5rem; margin-bottom: 1rem;">
-      <li style="margin-bottom: 0.5rem;">Set measurable quality and safety standards for Indian hospitals</li>
-      <li style="margin-bottom: 0.5rem;">Provide a formal accreditation framework comparable to international standards (JCI)</li>
-      <li style="margin-bottom: 0.5rem;">Enable government empanelment based on verified quality criteria</li>
-      <li style="margin-bottom: 0.5rem;">Promote continuous quality improvement in Indian healthcare</li>
-    </ul>
+      <!-- PROGRAMMES -->
+      <section id="programmes" class="mb-14 scroll-mt-24">
+        <h2 class="mb-4 border-b border-line pb-3 font-head text-2xl font-bold">NABH <span class="text-blue">Accreditation Programmes</span></h2>
+        <p class="mb-4 text-[0.97rem] text-muted">Once you know what NABH full form means, the next step is understanding which programme applies to your hospital:</p>
+        <div class="my-6 overflow-x-auto">
+          <table class="tbl">
+            <tr><th>Programme</th><th>For</th><th>Standards</th><th>Validity</th></tr>
+            <tr><td><strong>HCO Full Accreditation</strong></td><td>Hospitals 50+ beds</td><td>639 Objective Elements (6th Edition)</td><td>3 years</td></tr>
+            <tr><td><strong>HCO Entry Level (ELC)</strong></td><td>Hospitals 50+ beds (first step)</td><td>Simplified entry level standards</td><td>2 years</td></tr>
+            <tr><td><strong>SHCO Full Accreditation</strong></td><td>Small hospitals, clinics (&lt;50 beds)</td><td>408 Objective Elements</td><td>4 years</td></tr>
+            <tr><td><strong>SHCO Entry Level (ELC)</strong></td><td>Small hospitals, clinics (first step)</td><td>Simplified entry level standards</td><td>2 years</td></tr>
+          </table>
+        </div>
+        <div class="my-10 rounded-xl border border-brand/30 bg-gradient-to-br from-ink2 to-[#1e3a8a] p-8 text-center">
+          <h3 class="mb-2 font-head text-xl font-bold text-paper">Track NABH Compliance Digitally</h3>
+          <p class="mb-5 text-sm text-muted">AccredReady is India's only software built specifically for NABH preparation — covering all 639 OEs with evidence guidance, audit tools, and KPI tracking.</p>
+          <a href="https://accredready.in" class="inline-block rounded-lg bg-brand px-7 py-3 font-semibold text-white shadow-[0_4px_20px_rgba(37,99,235,0.35)] outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start Free on AccredReady →</a>
+        </div>
+      </section>
 
-    <h3>NABH Key Facts</h3>
-    <div class="table-wrap">
-      <table>
-        <tr><th>Attribute</th><th>Detail</th></tr>
-        <tr><td>Established</td><td>2006</td></tr>
-        <tr><td>Parent Body</td><td>Quality Council of India (QCI)</td></tr>
-        <tr><td>Current Standards</td><td>NABH 6th Edition (HCO)</td></tr>
-        <tr><td>Total Accredited Hospitals</td><td>1,000+ (as of 2026)</td></tr>
-        <tr><td>Accreditation Programmes</td><td>HCO Full, HCO ELC, SHCO Full, SHCO ELC, Blood Banks, Dental, Laboratories</td></tr>
-        <tr><td>Official Website</td><td>nabh.co</td></tr>
-        <tr><td>International Recognition</td><td>ISQua accredited accreditor</td></tr>
-      </table>
-    </div>
-    <div class="highlight">
-      <p>NABH is accredited by ISQua (International Society for Quality in Health Care) — meaning NABH's own standards and processes meet international benchmarks. An NABH-accredited hospital is globally recognized for quality.</p>
-    </div>
-  </div>
+      <!-- FAQ -->
+      <section id="faq" class="mb-14 scroll-mt-24">
+        <h2 class="mb-4 border-b border-line pb-3 font-head text-2xl font-bold">Frequently Asked <span class="text-blue">Questions</span></h2>
+        <div class="divide-y divide-white/10">
+          <div class="py-5"><h3 class="mb-2 font-head font-semibold">What is the full form of NABH?</h3><p class="text-[0.92rem] text-muted">NABH full form is <strong class="text-paper">National Accreditation Board for Hospitals &amp; Healthcare Providers</strong>. It is India's national hospital quality accreditation body, a constituent board of the Quality Council of India (QCI).</p></div>
+          <div class="py-5"><h3 class="mb-2 font-head font-semibold">What is NABH full form in Hindi?</h3><p class="text-[0.92rem] text-muted">NABH का पूरा नाम है: <strong class="text-paper">नेशनल एक्रीडिटेशन बोर्ड फॉर हॉस्पिटल्स एंड हेल्थकेयर प्रोवाइडर्स</strong>. यह भारत की राष्ट्रीय अस्पताल मान्यता संस्था है, जो क्वालिटी काउंसिल ऑफ इंडिया (QCI) के अंतर्गत कार्य करती है।</p></div>
+          <div class="py-5"><h3 class="mb-2 font-head font-semibold">What is NABH full form in Gujarati?</h3><p class="text-[0.92rem] text-muted">NABH નું પૂર્ણ સ્વરૂપ: <strong class="text-paper">નેશનલ એક્રેડિટેશન બોર્ડ ફોર હોસ્પિટલ્સ એન્ડ હેલ્થકેર પ્રોવાઇડર્સ</strong>. આ ભારતની રાષ્ટ્રીય હોસ્પિટલ માન્યતા સંસ્થા છે.</p></div>
+          <div class="py-5"><h3 class="mb-2 font-head font-semibold">What is NABH full form in Tamil?</h3><p class="text-[0.92rem] text-muted">தமிழில்: <strong class="text-paper">நேஷனல் அக்ரெடிட்டேஷன் போர்ட் ஃபார் ஹாஸ்பிட்டல்ஸ் அண்ட் ஹெல்த்கேர் புரோவைடர்ஸ்</strong>. இது இந்தியாவின் தேசிய மருத்துவமனை தரநிர்ணய அமைப்பு.</p></div>
+          <div class="py-5"><h3 class="mb-2 font-head font-semibold">Who governs NABH?</h3><p class="text-[0.92rem] text-muted">NABH is governed by the Quality Council of India (QCI), which was set up jointly by the Government of India and Indian industry associations. QCI oversees multiple accreditation boards including NABH (hospitals) and NABL (laboratories).</p></div>
+          <div class="py-5"><h3 class="mb-2 font-head font-semibold">What is the difference between NABH and NABL?</h3><p class="text-[0.92rem] text-muted">NABH (National Accreditation Board for Hospitals) accredits hospitals and healthcare facilities. NABL (National Accreditation Board for Testing and Calibration Laboratories) accredits medical and testing laboratories. Both are under QCI. A hospital should ideally have NABH accreditation, while its in-house lab should have NABL accreditation.</p></div>
+          <div class="py-5"><h3 class="mb-2 font-head font-semibold">Is NABH accreditation mandatory for hospitals?</h3><p class="text-[0.92rem] text-muted">NABH accreditation is not universally mandatory, but it is required for empanelment under CGHS (Central Government Health Scheme), ECHS (Ex-Servicemen Contributory Health Scheme), Ayushman Bharat, and most state government health schemes. Many private insurance companies also prefer or mandate it.</p></div>
+          <div class="py-5"><h3 class="mb-2 font-head font-semibold">How is NABH different from JCI?</h3><p class="text-[0.92rem] text-muted">NABH is India's national accreditation standard while JCI (Joint Commission International) is a US-based international standard. Both are ISQua-accredited. NABH is aligned to Indian healthcare context and regulations. Most Indian hospitals pursue NABH first; hospitals targeting international patients may additionally seek JCI.</p></div>
+        </div>
+      </section>
 
-  <!-- RELATED ABBREVIATIONS -->
-  <div class="section">
-    <span class="section-anchor" id="related"></span>
-    <h2>Related Abbreviations — <span>QCI, NABL, JCI</span></h2>
-    <p>NABH is often confused with or compared to similar bodies. Here's a quick comparison:</p>
-    <div class="table-wrap">
-      <table>
-        <tr><th>Abbreviation</th><th>Full Form</th><th>Scope</th></tr>
-        <tr><td><strong>NABH</strong></td><td>National Accreditation Board for Hospitals & Healthcare Providers</td><td>Hospital & healthcare facility accreditation in India</td></tr>
-        <tr><td><strong>NABL</strong></td><td>National Accreditation Board for Testing and Calibration Laboratories</td><td>Medical and testing laboratory accreditation in India</td></tr>
-        <tr><td><strong>QCI</strong></td><td>Quality Council of India</td><td>Parent body of NABH and NABL; India's national accreditation body</td></tr>
-        <tr><td><strong>JCI</strong></td><td>Joint Commission International</td><td>International hospital accreditation (US-based, global recognition)</td></tr>
-        <tr><td><strong>ISQua</strong></td><td>International Society for Quality in Health Care</td><td>Accredits accreditation bodies like NABH globally</td></tr>
-        <tr><td><strong>CGHS</strong></td><td>Central Government Health Scheme</td><td>Health coverage for central govt. employees — requires NABH empanelment</td></tr>
-      </table>
-    </div>
-    <p>Key distinction: <strong>NABH</strong> accredits hospitals. <strong>NABL</strong> accredits laboratories. Both are under <strong>QCI</strong>. A hospital can (and often should) have both NABH and NABL accreditations.</p>
-  </div>
+      <!-- RELATED PAGES -->
+      <section class="mb-4">
+        <h2 class="mb-4 border-b border-line pb-3 font-head text-2xl font-bold">Related <span class="text-blue">Resources</span></h2>
+        <p class="mb-4 text-[0.97rem] text-muted">Learn more about NABH accreditation with these detailed guides:</p>
+        <div class="mt-5 flex flex-wrap gap-2.5">
+          <a href="/nabh-guide.html" class="rounded-md border border-white/10 bg-panel px-4 py-2 text-[0.85rem] text-muted outline-none transition-colors hover:border-blue/40 hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">NABH Accreditation Guide →</a>
+          <a href="/nabh-internal-audit-checklist.html" class="rounded-md border border-white/10 bg-panel px-4 py-2 text-[0.85rem] text-muted outline-none transition-colors hover:border-blue/40 hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">NABH Internal Audit Checklist →</a>
+          <a href="/nabh-kpi-indicators.html" class="rounded-md border border-white/10 bg-panel px-4 py-2 text-[0.85rem] text-muted outline-none transition-colors hover:border-blue/40 hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">NABH KPI Indicators →</a>
+          <a href="/nabh-shco-checklist.html" class="rounded-md border border-white/10 bg-panel px-4 py-2 text-[0.85rem] text-muted outline-none transition-colors hover:border-blue/40 hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">NABH SHCO Checklist →</a>
+          <a href="/nabh-6th-edition-checklist.html" class="rounded-md border border-white/10 bg-panel px-4 py-2 text-[0.85rem] text-muted outline-none transition-colors hover:border-blue/40 hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">NABH 6th Edition Checklist →</a>
+          <a href="/blog/index.html" class="rounded-md border border-white/10 bg-panel px-4 py-2 text-[0.85rem] text-muted outline-none transition-colors hover:border-blue/40 hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">NABH Blog &amp; Articles →</a>
+        </div>
+      </section>
 
-  <!-- PROGRAMMES -->
-  <div class="section">
-    <span class="section-anchor" id="programmes"></span>
-    <h2>NABH <span>Accreditation Programmes</span></h2>
-    <p>Once you know what NABH full form means, the next step is understanding which programme applies to your hospital:</p>
-    <div class="table-wrap">
-      <table>
-        <tr><th>Programme</th><th>For</th><th>Standards</th><th>Validity</th></tr>
-        <tr><td><strong>HCO Full Accreditation</strong></td><td>Hospitals 50+ beds</td><td>639 Objective Elements (6th Edition)</td><td>3 years</td></tr>
-        <tr><td><strong>HCO Entry Level (ELC)</strong></td><td>Hospitals 50+ beds (first step)</td><td>Simplified entry level standards</td><td>2 years</td></tr>
-        <tr><td><strong>SHCO Full Accreditation</strong></td><td>Small hospitals, clinics (&lt;50 beds)</td><td>408 Objective Elements</td><td>4 years</td></tr>
-        <tr><td><strong>SHCO Entry Level (ELC)</strong></td><td>Small hospitals, clinics (first step)</td><td>Simplified entry level standards</td><td>2 years</td></tr>
-      </table>
     </div>
-    <div class="cta-inline">
-      <h3>Track NABH Compliance Digitally</h3>
-      <p>AccredReady is India's only software built specifically for NABH preparation — covering all 639 OEs with evidence guidance, audit tools, and KPI tracking.</p>
-      <a href="https://accredready.in" class="btn-primary">Start Free on AccredReady →</a>
-    </div>
-  </div>
+  </main>
 
-  <!-- FAQ -->
-  <div class="section">
-    <span class="section-anchor" id="faq"></span>
-    <h2>Frequently Asked <span>Questions</span></h2>
-    <div class="faq-item">
-      <div class="faq-q">What is the full form of NABH?</div>
-      <div class="faq-a">NABH full form is <strong>National Accreditation Board for Hospitals & Healthcare Providers</strong>. It is India's national hospital quality accreditation body, a constituent board of the Quality Council of India (QCI).</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What is NABH full form in Hindi?</div>
-      <div class="faq-a">NABH का पूरा नाम है: <strong>नेशनल एक्रीडिटेशन बोर्ड फॉर हॉस्पिटल्स एंड हेल्थकेयर प्रोवाइडर्स</strong>. यह भारत की राष्ट्रीय अस्पताल मान्यता संस्था है, जो क्वालिटी काउंसिल ऑफ इंडिया (QCI) के अंतर्गत कार्य करती है।</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What is NABH full form in Gujarati?</div>
-      <div class="faq-a">NABH નું પૂર્ણ સ્વરૂપ: <strong>નેશનલ એક્રેડિટેશન બોર્ડ ફોર હોસ્પિટલ્સ એન્ડ હેલ્થકેર પ્રોવાઇડર્સ</strong>. આ ભારતની રાષ્ટ્રીય હોસ્પિટલ માન્યતા સંસ્થા છે.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What is NABH full form in Tamil?</div>
-      <div class="faq-a">தமிழில்: <strong>நேஷனல் அக்ரெடிட்டேஷன் போர்ட் ஃபார் ஹாஸ்பிட்டல்ஸ் அண்ட் ஹெல்த்கேர் புரோவைடர்ஸ்</strong>. இது இந்தியாவின் தேசிய மருத்துவமனை தரநிர்ணய அமைப்பு.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Who governs NABH?</div>
-      <div class="faq-a">NABH is governed by the Quality Council of India (QCI), which was set up jointly by the Government of India and Indian industry associations. QCI oversees multiple accreditation boards including NABH (hospitals) and NABL (laboratories).</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What is the difference between NABH and NABL?</div>
-      <div class="faq-a">NABH (National Accreditation Board for Hospitals) accredits hospitals and healthcare facilities. NABL (National Accreditation Board for Testing and Calibration Laboratories) accredits medical and testing laboratories. Both are under QCI. A hospital should ideally have NABH accreditation, while its in-house lab should have NABL accreditation.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Is NABH accreditation mandatory for hospitals?</div>
-      <div class="faq-a">NABH accreditation is not universally mandatory, but it is required for empanelment under CGHS (Central Government Health Scheme), ECHS (Ex-Servicemen Contributory Health Scheme), Ayushman Bharat, and most state government health schemes. Many private insurance companies also prefer or mandate it.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How is NABH different from JCI?</div>
-      <div class="faq-a">NABH is India's national accreditation standard while JCI (Joint Commission International) is a US-based international standard. Both are ISQua-accredited. NABH is aligned to Indian healthcare context and regulations. Most Indian hospitals pursue NABH first; hospitals targeting international patients may additionally seek JCI.</div>
-    </div>
-  </div>
-
-  <!-- RELATED PAGES -->
-  <div class="section">
-    <h2>Related <span>Resources</span></h2>
-    <p>Learn more about NABH accreditation with these detailed guides:</p>
-    <div class="related-links">
-      <a href="/nabh-guide.html" class="related-link">NABH Accreditation Guide →</a>
-      <a href="/nabh-internal-audit-checklist.html" class="related-link">NABH Internal Audit Checklist →</a>
-      <a href="/nabh-kpi-indicators.html" class="related-link">NABH KPI Indicators →</a>
-      <a href="/nabh-shco-checklist.html" class="related-link">NABH SHCO Checklist →</a>
-      <a href="/nabh-6th-edition-checklist.html" class="related-link">NABH 6th Edition Checklist →</a>
-      <a href="/blog/index.html" class="related-link">NABH Blog & Articles →</a>
-    </div>
-  </div>
-
-</div>
-
-<footer>
-  <p style="margin-bottom:0.75rem;">
-    <a href="https://accredready.in">Home</a>
-    <a href="https://accredready.in/nabh-accreditation-software.html">NABH Software</a>
-    <a href="https://accredready.in/nabh-6th-edition-checklist.html">NABH Checklist</a>
-    <a href="https://accredready.in/nabh-guide.html">NABH Guide</a>
-    <a href="https://accredready.in/shco-accreditation-software.html">SHCO Software</a>
-    <a href="https://accredready.in/privacy.html">Privacy Policy</a>
-  </p>
-  <p>© 2026 AccredReady by MK Tech. All rights reserved.</p>
-</footer>
+  <!-- FOOTER -->
+  <footer class="border-t border-line px-5 py-8 text-center text-sm text-muted sm:px-8">
+    <nav aria-label="Footer" class="mb-3 flex flex-wrap justify-center gap-x-6 gap-y-2">
+      <a href="https://accredready.in" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
+      <a href="https://accredready.in/nabh-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Software</a>
+      <a href="https://accredready.in/nabh-6th-edition-checklist.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Checklist</a>
+      <a href="https://accredready.in/nabh-guide.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Guide</a>
+      <a href="https://accredready.in/shco-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Software</a>
+      <a href="https://accredready.in/privacy.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
+    </nav>
+    <p>© 2026 AccredReady by MK Tech. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
