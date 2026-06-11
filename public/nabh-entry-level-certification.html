@@ -21,216 +21,178 @@
     "datePublished": "2026-06-06"
   }
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind via CDN + shared design-system token config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:    '#040d1a', ink2: '#0a1f3d', panel: '#0f1f38', panel2: '#0a1838',
+            blue:   '#38bdf8', brand: '#2563eb', gold: '#f59e0b', purple: '#a78bfa',
+            teal:   '#2dd4bf', orange: '#fb923c', paper: '#f8fafc', muted: '#94a3b8',
+            good:   '#4ade80', bad: '#f87171', line: 'rgba(255,255,255,0.08)',
+          },
+          fontFamily: {
+            head: ['Syne', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            body: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer components {
+      .tbl { @apply w-full border-collapse text-[0.9rem]; }
+      .tbl th { @apply bg-panel px-4 py-3 text-left font-head font-bold text-paper; }
+      .tbl td { @apply border-b border-white/5 px-4 py-2.5 align-top text-[#cbd5e1]; }
+      .tbl strong { @apply text-paper; }
+    }
+  </style>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --navy:#040d1a; --accent:#2563eb; --accent2:#38bdf8; --gold:#f59e0b; --white:#f8fafc; --muted:#94a3b8; --card:#0f1f38; --green:#4ade80; --red:#f87171; }
-    body { background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; line-height: 1.7; }
-    nav { display:flex; justify-content:space-between; align-items:center; padding:1.25rem 2rem; border-bottom:1px solid rgba(255,255,255,0.06); position:sticky; top:0; background:rgba(4,13,26,0.95); backdrop-filter:blur(12px); z-index:100; }
-    .logo { font-family:'Syne',sans-serif; font-weight:800; font-size:1.4rem; color:var(--accent2); text-decoration:none; }
-    .nav-cta { background:var(--accent); color:white; padding:0.55rem 1.4rem; border-radius:6px; text-decoration:none; font-weight:500; font-size:0.9rem; }
-    .hero { max-width:860px; margin:0 auto; padding:4rem 2rem 3rem; text-align:center; }
-    .badge { display:inline-block; background:rgba(37,99,235,0.15); border:1px solid rgba(37,99,235,0.4); color:var(--accent2); padding:0.3rem 1rem; border-radius:50px; font-size:0.8rem; font-weight:500; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:1.5rem; }
-    h1 { font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,3rem); font-weight:800; line-height:1.15; margin-bottom:1.25rem; }
-    h1 span, h2 span { color:var(--accent2); }
-    .hero-sub { font-size:1.1rem; color:var(--muted); max-width:620px; margin:0 auto 2rem; }
-    .article { max-width:860px; margin:0 auto; padding:0 2rem 4rem; }
-    h2 { font-family:'Syne',sans-serif; font-size:1.6rem; font-weight:700; margin:2.5rem 0 1rem; }
-    h3 { font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:700; margin:1.75rem 0 0.6rem; color:var(--accent2); }
-    p { color:#cbd5e1; margin-bottom:1rem; font-size:0.97rem; }
-    .info-box { background:rgba(37,99,235,0.1); border:1px solid rgba(37,99,235,0.3); border-radius:10px; padding:1.25rem 1.5rem; margin:1.5rem 0; }
-    .info-box p { color:var(--white); margin:0; }
-    .green-box { background:rgba(74,222,128,0.08); border:1px solid rgba(74,222,128,0.3); border-radius:10px; padding:1.25rem 1.5rem; margin:1.5rem 0; }
-    .green-box p { color:var(--white); margin:0; }
-    .steps { counter-reset: step; }
-    .step { display:flex; gap:1.25rem; margin-bottom:1.5rem; align-items:flex-start; }
-    .step-num { background:var(--accent); color:white; font-family:'Syne',sans-serif; font-weight:800; font-size:1rem; min-width:2.25rem; height:2.25rem; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:0.1rem; }
-    .step-content h4 { font-family:'Syne',sans-serif; font-weight:700; margin-bottom:0.35rem; }
-    .step-content p { margin:0; font-size:0.92rem; }
-    table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.9rem; }
-    th { background:var(--card); padding:0.75rem 1rem; text-align:left; font-family:'Syne',sans-serif; font-weight:700; border-bottom:2px solid rgba(255,255,255,0.1); }
-    td { padding:0.65rem 1rem; border-bottom:1px solid rgba(255,255,255,0.05); color:#cbd5e1; }
-    .compare-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin:1.5rem 0; }
-    @media(max-width:600px){.compare-grid{grid-template-columns:1fr;}}
-    .compare-card { background:var(--card); border-radius:10px; padding:1.5rem; }
-    .compare-card h4 { font-family:'Syne',sans-serif; font-weight:700; margin-bottom:1rem; font-size:1rem; }
-    .compare-card ul { list-style:none; }
-    .compare-card ul li { padding:0.35rem 0; font-size:0.9rem; color:#cbd5e1; display:flex; gap:0.5rem; }
-    .cta-banner { background:linear-gradient(135deg,#0f1f38,#0a1838); border:1px solid rgba(37,99,235,0.3); border-radius:16px; padding:3rem 2rem; text-align:center; margin:3rem 0; }
-    .btn-primary { background:var(--accent); color:white; padding:0.85rem 2rem; border-radius:8px; text-decoration:none; font-weight:600; font-size:1rem; display:inline-block; margin-top:1rem; }
-    footer { text-align:center; padding:2rem; border-top:1px solid rgba(255,255,255,0.06); color:var(--muted); font-size:0.85rem; }
-    footer a { color:var(--muted); text-decoration:none; margin:0 0.75rem; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
-<body>
 
-<nav>
-  <a href="https://accredready.in" class="logo">AccredReady</a>
-  <a href="https://accredready.in" class="nav-cta">Start Free Trial</a>
-</nav>
+<body class="bg-ink text-paper font-body leading-[1.7] antialiased">
 
-<div class="hero">
-  <div class="badge">Hospital Guide · NABH Entry Level</div>
-  <h1>NABH Entry Level Certification:<br><span>Complete Guide for 2026</span></h1>
-  <p class="hero-sub">Everything Indian hospitals need to know about NABH Entry Level Certification — eligibility, PMJAY benefits, documents required, fees, and preparation strategy.</p>
-</div>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Skip to content</a>
 
-<div class="article">
+  <!-- NAV -->
+  <nav class="sticky top-0 z-[100] flex items-center justify-between border-b border-line bg-ink/95 px-5 py-4 backdrop-blur-md sm:px-8">
+    <a href="https://accredready.in" class="rounded font-head text-xl font-extrabold text-blue outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">AccredReady</a>
+    <a href="https://accredready.in" class="rounded-md bg-brand px-5 py-2 text-sm font-medium text-white outline-none transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">Start Free Trial</a>
+  </nav>
 
-  <h2>What is NABH Entry Level Certification?</h2>
-  <p>NABH Entry Level Certification (ELC) is a foundational accreditation programme designed for hospitals that are beginning their quality improvement journey. It covers a subset of NABH standards focused on essential patient safety, basic quality systems, and critical compliance requirements — without the full burden of 639 OE compliance required for Full Accreditation.</p>
-  <p>ELC is particularly relevant for small and medium hospitals in India because it serves as a recognised stepping stone to Full Accreditation, and more importantly, it qualifies hospitals for enhanced reimbursements under government schemes like PMJAY (Ayushman Bharat).</p>
+  <main id="main">
 
-  <div class="green-box">
-    <p>💰 <strong>PMJAY Incentive:</strong> Hospitals with NABH Entry Level Certification receive higher claim rates under Pradhan Mantri Jan Arogya Yojana (PMJAY/Ayushman Bharat). In many states, the differential is 10-15% higher reimbursement per claim — making ELC financially self-funding within months of achievement.</p>
-  </div>
+    <!-- HERO -->
+    <header class="mx-auto max-w-3xl px-5 pb-10 pt-16 text-center sm:px-8">
+      <span class="mb-6 inline-block rounded-full border border-brand/40 bg-brand/15 px-4 py-1 text-xs font-medium uppercase tracking-wider text-blue">Hospital Guide · NABH Entry Level</span>
+      <h1 class="mb-5 font-head text-[clamp(1.8rem,4vw,3rem)] font-extrabold leading-[1.15]">NABH Entry Level Certification:<br><span class="text-blue">Complete Guide for 2026</span></h1>
+      <p class="mx-auto max-w-2xl text-lg text-muted">Everything Indian hospitals need to know about NABH Entry Level Certification — eligibility, PMJAY benefits, documents required, fees, and preparation strategy.</p>
+    </header>
 
-  <h2>ELC vs Full Accreditation: <span>Key Differences</span></h2>
+    <article class="mx-auto max-w-3xl px-5 pb-16 sm:px-8 [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:font-head [&_h2]:text-2xl [&_h2]:font-bold [&_h2_span]:text-blue [&_h3]:mb-2 [&_h3]:mt-7 [&_h3]:font-head [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-blue [&_p]:mb-4 [&_p]:text-[0.97rem] [&_p]:text-[#cbd5e1] [&_strong]:text-paper">
 
-  <div class="compare-grid">
-    <div class="compare-card">
-      <h4 style="color:var(--accent2)">Entry Level Certification</h4>
-      <ul>
-        <li><span style="color:var(--green)">✓</span> Subset of NABH standards</li>
-        <li><span style="color:var(--green)">✓</span> Faster to achieve (6-12 months)</li>
-        <li><span style="color:var(--green)">✓</span> Lower assessment fee</li>
-        <li><span style="color:var(--green)">✓</span> Valid for 2 years</li>
-        <li><span style="color:var(--green)">✓</span> PMJAY enhanced rates</li>
-        <li><span style="color:var(--green)">✓</span> Suitable for hospitals ≥30 beds</li>
-        <li><span style="color:var(--red)">✗</span> Not equivalent to Full Accreditation</li>
-        <li><span style="color:var(--red)">✗</span> Limited international recognition</li>
-      </ul>
-    </div>
-    <div class="compare-card">
-      <h4 style="color:var(--gold)">Full Accreditation</h4>
-      <ul>
-        <li><span style="color:var(--green)">✓</span> All 639 OEs evaluated</li>
-        <li><span style="color:var(--green)">✓</span> Full international recognition (ISQua)</li>
-        <li><span style="color:var(--green)">✓</span> Valid for 3 years</li>
-        <li><span style="color:var(--green)">✓</span> Maximum PMJAY rates</li>
-        <li><span style="color:var(--green)">✓</span> Medical tourism credibility</li>
-        <li><span style="color:var(--red)">✗</span> 18-24 months preparation typically</li>
-        <li><span style="color:var(--red)">✗</span> Higher assessment cost</li>
-        <li><span style="color:var(--red)">✗</span> All 10 chapters must comply</li>
-      </ul>
-    </div>
-  </div>
+      <h2>What is NABH Entry Level Certification?</h2>
+      <p>NABH Entry Level Certification (ELC) is a foundational accreditation programme designed for hospitals that are beginning their quality improvement journey. It covers a subset of NABH standards focused on essential patient safety, basic quality systems, and critical compliance requirements — without the full burden of 639 OE compliance required for Full Accreditation.</p>
+      <p>ELC is particularly relevant for small and medium hospitals in India because it serves as a recognised stepping stone to Full Accreditation, and more importantly, it qualifies hospitals for enhanced reimbursements under government schemes like PMJAY (Ayushman Bharat).</p>
 
-  <h2>Who Should Apply for <span>Entry Level Certification?</span></h2>
-  <p>ELC is designed for hospitals that meet these criteria:</p>
-  <p>Hospitals with a minimum of 30 operational beds (for HCO ELC). Hospitals that are currently empanelled or seeking empanelment under PMJAY/state health insurance schemes. Hospitals that have basic quality systems in place — documented policies, trained staff, functional committees — but have not yet completed the full 639 OE compliance journey. Hospitals in Tier 2 and Tier 3 cities where Full Accreditation timelines are challenging due to resource constraints.</p>
+      <div class="my-6 rounded-xl border border-good/30 bg-good/[0.08] px-6 py-5"><p class="!mb-0 !text-paper">💰 <strong>PMJAY Incentive:</strong> Hospitals with NABH Entry Level Certification receive higher claim rates under Pradhan Mantri Jan Arogya Yojana (PMJAY/Ayushman Bharat). In many states, the differential is 10-15% higher reimbursement per claim — making ELC financially self-funding within months of achievement.</p></div>
 
-  <div class="info-box">
-    <p>📋 <strong>SHCO ELC:</strong> Small Healthcare Organisations (up to 50 beds) have a dedicated ELC pathway under the SHCO programme. SHCO ELC has different eligibility criteria and a separate fee structure. See our <a href="https://accredready.in/shco-accreditation-software.html" style="color:var(--accent2)">SHCO Accreditation Guide</a>.</p>
-  </div>
-
-  <h2>Documents Required for ELC Application</h2>
-  <p>Prepare these documents before submitting your ELC application to NABH:</p>
-
-  <table>
-    <thead><tr><th>Category</th><th>Documents Required</th></tr></thead>
-    <tbody>
-      <tr><td>Statutory & Legal</td><td>Clinical Establishment Registration, Fire NOC, Biomedical Waste Authorization, PCB consent, AERB registration (if applicable)</td></tr>
-      <tr><td>Governance</td><td>Hospital organogram, appointment letters of key officials, governing body details</td></tr>
-      <tr><td>Clinical</td><td>List of services offered, bed strength certificate, OT register, list of empanelled doctors with qualifications</td></tr>
-      <tr><td>Quality</td><td>Committee formation orders (minimum 5 mandatory committees), internal audit records, incident reports</td></tr>
-      <tr><td>HR</td><td>Staff list with qualifications, training records for last 12 months, nursing staff ratio documentation</td></tr>
-      <tr><td>IPC</td><td>Hand hygiene compliance data (minimum 3 months), biomedical waste records, sterilisation logs</td></tr>
-      <tr><td>Patient Safety</td><td>Patient satisfaction survey results, grievance register, consent forms</td></tr>
-    </tbody>
-  </table>
-
-  <h2>Step-by-Step ELC Process</h2>
-
-  <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <div class="step-content">
-        <h4>Baseline Assessment</h4>
-        <p>Conduct an internal gap assessment against ELC standards. Identify which OEs are compliant, partially compliant, and non-compliant. Prioritise CORE OEs first — these are non-negotiable for passing.</p>
+      <h2>ELC vs Full Accreditation: <span>Key Differences</span></h2>
+      <div class="my-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div class="rounded-xl border border-white/10 bg-panel p-6">
+          <h3 class="!mt-0 !mb-4 !text-blue">Entry Level Certification</h3>
+          <ul class="space-y-1.5 text-[0.9rem] text-[#cbd5e1]">
+            <li class="flex gap-2"><span class="text-good" aria-hidden="true">✓</span>Subset of NABH standards</li>
+            <li class="flex gap-2"><span class="text-good" aria-hidden="true">✓</span>Faster to achieve (6-12 months)</li>
+            <li class="flex gap-2"><span class="text-good" aria-hidden="true">✓</span>Lower assessment fee</li>
+            <li class="flex gap-2"><span class="text-good" aria-hidden="true">✓</span>Valid for 2 years</li>
+            <li class="flex gap-2"><span class="text-good" aria-hidden="true">✓</span>PMJAY enhanced rates</li>
+            <li class="flex gap-2"><span class="text-good" aria-hidden="true">✓</span>Suitable for hospitals ≥30 beds</li>
+            <li class="flex gap-2"><span class="text-bad" aria-hidden="true">✗</span>Not equivalent to Full Accreditation</li>
+            <li class="flex gap-2"><span class="text-bad" aria-hidden="true">✗</span>Limited international recognition</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-panel p-6">
+          <h3 class="!mt-0 !mb-4 !text-gold">Full Accreditation</h3>
+          <ul class="space-y-1.5 text-[0.9rem] text-[#cbd5e1]">
+            <li class="flex gap-2"><span class="text-good" aria-hidden="true">✓</span>All 639 OEs evaluated</li>
+            <li class="flex gap-2"><span class="text-good" aria-hidden="true">✓</span>Full international recognition (ISQua)</li>
+            <li class="flex gap-2"><span class="text-good" aria-hidden="true">✓</span>Valid for 3 years</li>
+            <li class="flex gap-2"><span class="text-good" aria-hidden="true">✓</span>Maximum PMJAY rates</li>
+            <li class="flex gap-2"><span class="text-good" aria-hidden="true">✓</span>Medical tourism credibility</li>
+            <li class="flex gap-2"><span class="text-bad" aria-hidden="true">✗</span>18-24 months preparation typically</li>
+            <li class="flex gap-2"><span class="text-bad" aria-hidden="true">✗</span>Higher assessment cost</li>
+            <li class="flex gap-2"><span class="text-bad" aria-hidden="true">✗</span>All 10 chapters must comply</li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <div class="step-content">
-        <h4>Form the Quality Committee</h4>
-        <p>Constitute a NABH Quality Committee with a Quality Manager, Medical Superintendent, Nursing Superintendent, and department representatives. This committee drives the accreditation preparation and remains the ongoing governance body post-accreditation.</p>
+
+      <h2>Who Should Apply for <span>Entry Level Certification?</span></h2>
+      <p>ELC is designed for hospitals that meet these criteria:</p>
+      <p>Hospitals with a minimum of 30 operational beds (for HCO ELC). Hospitals that are currently empanelled or seeking empanelment under PMJAY/state health insurance schemes. Hospitals that have basic quality systems in place — documented policies, trained staff, functional committees — but have not yet completed the full 639 OE compliance journey. Hospitals in Tier 2 and Tier 3 cities where Full Accreditation timelines are challenging due to resource constraints.</p>
+
+      <div class="my-6 rounded-xl border border-brand/30 bg-brand/10 px-6 py-5"><p class="!mb-0 !text-paper">📋 <strong>SHCO ELC:</strong> Small Healthcare Organisations (up to 50 beds) have a dedicated ELC pathway under the SHCO programme. SHCO ELC has different eligibility criteria and a separate fee structure. See our <a href="https://accredready.in/shco-accreditation-software.html" class="rounded text-blue underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-blue">SHCO Accreditation Guide</a>.</p></div>
+
+      <h2>Documents Required for ELC Application</h2>
+      <p>Prepare these documents before submitting your ELC application to NABH:</p>
+      <div class="my-6 overflow-x-auto">
+        <table class="tbl">
+          <thead><tr><th>Category</th><th>Documents Required</th></tr></thead>
+          <tbody>
+            <tr><td>Statutory &amp; Legal</td><td>Clinical Establishment Registration, Fire NOC, Biomedical Waste Authorization, PCB consent, AERB registration (if applicable)</td></tr>
+            <tr><td>Governance</td><td>Hospital organogram, appointment letters of key officials, governing body details</td></tr>
+            <tr><td>Clinical</td><td>List of services offered, bed strength certificate, OT register, list of empanelled doctors with qualifications</td></tr>
+            <tr><td>Quality</td><td>Committee formation orders (minimum 5 mandatory committees), internal audit records, incident reports</td></tr>
+            <tr><td>HR</td><td>Staff list with qualifications, training records for last 12 months, nursing staff ratio documentation</td></tr>
+            <tr><td>IPC</td><td>Hand hygiene compliance data (minimum 3 months), biomedical waste records, sterilisation logs</td></tr>
+            <tr><td>Patient Safety</td><td>Patient satisfaction survey results, grievance register, consent forms</td></tr>
+          </tbody>
+        </table>
       </div>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <div class="step-content">
-        <h4>Develop & Implement SOPs</h4>
-        <p>Write or update Standard Operating Procedures for all key clinical and administrative processes. SOPs must be reviewed, approved, and signed. More importantly, staff must be trained on them and able to demonstrate compliance during assessment.</p>
+
+      <h2>Step-by-Step ELC Process</h2>
+      <ol class="my-6 space-y-5">
+        <li class="flex items-start gap-4"><span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-brand font-head font-extrabold text-white">1</span><div><h3 class="!mt-0 !mb-1 !text-paper">Baseline Assessment</h3><p class="!mb-0 !text-[0.92rem]">Conduct an internal gap assessment against ELC standards. Identify which OEs are compliant, partially compliant, and non-compliant. Prioritise CORE OEs first — these are non-negotiable for passing.</p></div></li>
+        <li class="flex items-start gap-4"><span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-brand font-head font-extrabold text-white">2</span><div><h3 class="!mt-0 !mb-1 !text-paper">Form the Quality Committee</h3><p class="!mb-0 !text-[0.92rem]">Constitute a NABH Quality Committee with a Quality Manager, Medical Superintendent, Nursing Superintendent, and department representatives. This committee drives the accreditation preparation and remains the ongoing governance body post-accreditation.</p></div></li>
+        <li class="flex items-start gap-4"><span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-brand font-head font-extrabold text-white">3</span><div><h3 class="!mt-0 !mb-1 !text-paper">Develop &amp; Implement SOPs</h3><p class="!mb-0 !text-[0.92rem]">Write or update Standard Operating Procedures for all key clinical and administrative processes. SOPs must be reviewed, approved, and signed. More importantly, staff must be trained on them and able to demonstrate compliance during assessment.</p></div></li>
+        <li class="flex items-start gap-4"><span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-brand font-head font-extrabold text-white">4</span><div><h3 class="!mt-0 !mb-1 !text-paper">Start KPI Data Collection</h3><p class="!mb-0 !text-[0.92rem]">Begin tracking mandatory quality indicators immediately. NABH requires at minimum 3 months of KPI data at the time of assessment. Key indicators: medication error rate, surgical site infection rate, hand hygiene compliance %, patient fall rate, and mortality rate.</p></div></li>
+        <li class="flex items-start gap-4"><span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-brand font-head font-extrabold text-white">5</span><div><h3 class="!mt-0 !mb-1 !text-paper">Conduct Internal Audits</h3><p class="!mb-0 !text-[0.92rem]">Run structured internal audits for each chapter. Document findings formally and raise CAPAs (Corrective and Preventive Actions) for each gap. NABH assessors will ask to see CAPA records as evidence of a functioning quality system.</p></div></li>
+        <li class="flex items-start gap-4"><span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-brand font-head font-extrabold text-white">6</span><div><h3 class="!mt-0 !mb-1 !text-paper">Apply on NABH Portal</h3><p class="!mb-0 !text-[0.92rem]">Submit the application on nabh.co with all required documents. Pay the application fee online. NABH will acknowledge and assign an assessor team within 30-45 days.</p></div></li>
+        <li class="flex items-start gap-4"><span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-brand font-head font-extrabold text-white">7</span><div><h3 class="!mt-0 !mb-1 !text-paper">Pre-Assessment &amp; Final Assessment</h3><p class="!mb-0 !text-[0.92rem]">NABH will conduct a desktop review followed by an on-site assessment. The ELC assessment is typically 1-2 days. Address all pre-assessment findings before the final date. Ensure all staff are present and briefed.</p></div></li>
+      </ol>
+
+      <h2>PMJAY &amp; Financial Benefits of ELC</h2>
+      <p>The financial case for NABH Entry Level Certification is strong for hospitals empanelled under PMJAY or state health schemes. Government schemes provide differentiated reimbursement rates based on accreditation status:</p>
+      <p>Non-accredited hospitals receive base package rates. NABH ELC hospitals receive enhanced rates — typically 10-15% higher. NABH Full Accreditation hospitals receive the highest rates. For a hospital processing 200 PMJAY claims per month at an average package of ₹15,000, a 10% enhancement means ₹3 lakh additional monthly revenue — more than enough to justify the ELC investment.</p>
+      <p>Beyond PMJAY, ELC hospitals gain credibility for insurance empanelment with private insurers, state government referrals, and medical tourism tie-ups.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <h3>What is the fee for NABH Entry Level Certification?</h3>
+      <p>HOPE Entry Level Certification fees (w.e.f. June 2025, 2-year cycle, excluding 18% GST): <strong>Up to 5 beds — ₹21,000 | 6–20 beds — ₹30,000 | 21–50 beds — ₹48,000 | 51–100 beds — ₹96,000 | 101–300 beds — ₹1,20,000.</strong> A rebate is available on the 6–20 and 21–50 bed slabs until 30 September 2026. There are no separate annual surveillance fees under ELC — the fee covers the full 2-year certification cycle. See the <a href="/nabh-accreditation-cost.html" class="rounded text-blue underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-blue">complete NABH fee structure</a> for all programmes.</p>
+      <h3>How long does ELC preparation take?</h3>
+      <p>For a hospital starting from scratch, realistic ELC preparation takes 9-12 months. Hospitals with existing quality systems can achieve ELC in 6 months. Rushing the process typically results in failed assessments or CAPAs that delay certification by months.</p>
+      <h3>Can ELC be upgraded to Full Accreditation?</h3>
+      <p>Yes. NABH ELC is explicitly designed as a stepping stone to Full Accreditation. ELC hospitals can apply for Full Accreditation upgrade during their ELC validity period. The upgrade pathway gives credit for existing compliance evidence.</p>
+      <h3>Does ELC cover all 639 OEs?</h3>
+      <p>No. ELC covers a defined subset of NABH standards focused on essential patient safety and quality requirements. The exact OE list for ELC is available on the NABH website. AccredReady's ELC module tracks specifically the OEs required for ELC, separate from Full Accreditation OEs.</p>
+
+      <div class="my-10 rounded-2xl border border-brand/30 bg-gradient-to-br from-panel to-panel2 px-6 py-12 text-center">
+        <h2 class="!mt-0">Prepare for ELC with <span>AccredReady</span></h2>
+        <p class="mx-auto mt-3 max-w-lg !text-muted">AccredReady has a dedicated HCO ELC module with 223 documents, 26 licenses, and compliance tracking built specifically for Entry Level Certification. Start free.</p>
+        <a href="https://accredready.in" class="mt-4 inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start Free Trial →</a>
       </div>
-    </div>
-    <div class="step">
-      <div class="step-num">4</div>
-      <div class="step-content">
-        <h4>Start KPI Data Collection</h4>
-        <p>Begin tracking mandatory quality indicators immediately. NABH requires at minimum 3 months of KPI data at the time of assessment. Key indicators: medication error rate, surgical site infection rate, hand hygiene compliance %, patient fall rate, and mortality rate.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">5</div>
-      <div class="step-content">
-        <h4>Conduct Internal Audits</h4>
-        <p>Run structured internal audits for each chapter. Document findings formally and raise CAPAs (Corrective and Preventive Actions) for each gap. NABH assessors will ask to see CAPA records as evidence of a functioning quality system.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">6</div>
-      <div class="step-content">
-        <h4>Apply on NABH Portal</h4>
-        <p>Submit the application on nabh.co with all required documents. Pay the application fee online. NABH will acknowledge and assign an assessor team within 30-45 days.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">7</div>
-      <div class="step-content">
-        <h4>Pre-Assessment & Final Assessment</h4>
-        <p>NABH will conduct a desktop review followed by an on-site assessment. The ELC assessment is typically 1-2 days. Address all pre-assessment findings before the final date. Ensure all staff are present and briefed.</p>
-      </div>
-    </div>
-  </div>
 
-  <h2>PMJAY & Financial Benefits of ELC</h2>
-  <p>The financial case for NABH Entry Level Certification is strong for hospitals empanelled under PMJAY or state health schemes. Government schemes provide differentiated reimbursement rates based on accreditation status:</p>
-  <p>Non-accredited hospitals receive base package rates. NABH ELC hospitals receive enhanced rates — typically 10-15% higher. NABH Full Accreditation hospitals receive the highest rates. For a hospital processing 200 PMJAY claims per month at an average package of ₹15,000, a 10% enhancement means ₹3 lakh additional monthly revenue — more than enough to justify the ELC investment.</p>
-  <p>Beyond PMJAY, ELC hospitals gain credibility for insurance empanelment with private insurers, state government referrals, and medical tourism tie-ups.</p>
+    </article>
+  </main>
 
-  <h2>Frequently Asked Questions</h2>
+  <!-- FOOTER -->
+  <footer class="border-t border-line px-5 py-8 text-center text-sm text-muted sm:px-8">
+    <nav aria-label="Footer" class="mb-3 flex flex-wrap justify-center gap-x-6 gap-y-2">
+      <a href="https://accredready.in" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
+      <a href="https://accredready.in/nabh-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Software</a>
+      <a href="https://accredready.in/nabh-6th-edition-standards.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">6th Edition Guide</a>
+      <a href="https://accredready.in/shco-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Software</a>
+      <a href="https://accredready.in/privacy.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
+    </nav>
+    <p>© 2026 AccredReady by MK Tech. Written by Dr. Mehul Upadhyay, NABH Quality Manager.</p>
+  </footer>
 
-  <h3>What is the fee for NABH Entry Level Certification?</h3>
-  <p>HOPE Entry Level Certification fees (w.e.f. June 2025, 2-year cycle, excluding 18% GST): <strong>Up to 5 beds — ₹21,000 | 6–20 beds — ₹30,000 | 21–50 beds — ₹48,000 | 51–100 beds — ₹96,000 | 101–300 beds — ₹1,20,000.</strong> A rebate is available on the 6–20 and 21–50 bed slabs until 30 September 2026. There are no separate annual surveillance fees under ELC — the fee covers the full 2-year certification cycle. See the <a href="/nabh-accreditation-cost.html" style="color:var(--accent2);">complete NABH fee structure</a> for all programmes.</p>
-
-  <h3>How long does ELC preparation take?</h3>
-  <p>For a hospital starting from scratch, realistic ELC preparation takes 9-12 months. Hospitals with existing quality systems can achieve ELC in 6 months. Rushing the process typically results in failed assessments or CAPAs that delay certification by months.</p>
-
-  <h3>Can ELC be upgraded to Full Accreditation?</h3>
-  <p>Yes. NABH ELC is explicitly designed as a stepping stone to Full Accreditation. ELC hospitals can apply for Full Accreditation upgrade during their ELC validity period. The upgrade pathway gives credit for existing compliance evidence.</p>
-
-  <h3>Does ELC cover all 639 OEs?</h3>
-  <p>No. ELC covers a defined subset of NABH standards focused on essential patient safety and quality requirements. The exact OE list for ELC is available on the NABH website. AccredReady's ELC module tracks specifically the OEs required for ELC, separate from Full Accreditation OEs.</p>
-
-  <div class="cta-banner">
-    <h2>Prepare for ELC with <span>AccredReady</span></h2>
-    <p style="color:var(--muted); margin-top:0.75rem; max-width:500px; margin-left:auto; margin-right:auto;">AccredReady has a dedicated HCO ELC module with 223 documents, 26 licenses, and compliance tracking built specifically for Entry Level Certification. Start free.</p>
-    <a href="https://accredready.in" class="btn-primary">Start Free Trial →</a>
-  </div>
-
-</div>
-
-<footer>
-  <p style="margin-bottom:0.75rem;">
-    <a href="https://accredready.in">Home</a>
-    <a href="https://accredready.in/nabh-accreditation-software.html">NABH Software</a>
-    <a href="https://accredready.in/nabh-6th-edition-standards.html">6th Edition Guide</a>
-    <a href="https://accredready.in/shco-accreditation-software.html">SHCO Software</a>
-    <a href="https://accredready.in/privacy.html">Privacy Policy</a>
-  </p>
-  <p>© 2026 AccredReady by MK Tech. Written by Dr. Mehul Upadhyay, NABH Quality Manager.</p>
-</footer>
 </body>
 </html>

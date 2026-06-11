@@ -43,252 +43,243 @@
     ]
   }
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind via CDN + shared design-system token config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:    '#040d1a',   // page background
+            ink2:   '#0a1f3d',   // raised background / gradients
+            panel:  '#0f1f38',   // cards
+            panel2: '#0a1838',   // featured card
+            blue:   '#38bdf8',   // accent (links, highlights)
+            brand:  '#2563eb',   // primary CTA
+            gold:   '#f59e0b',   // secondary highlight
+            paper:  '#f8fafc',   // primary text
+            muted:  '#94a3b8',   // secondary text (AA on ink)
+            good:   '#4ade80',
+            bad:    '#f87171',
+            line:   'rgba(255,255,255,0.08)',
+          },
+          fontFamily: {
+            head: ['Syne', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            body: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --navy: #040d1a;
-      --blue: #0a1f3d;
-      --accent: #2563eb;
-      --accent2: #38bdf8;
-      --gold: #f59e0b;
-      --white: #f8fafc;
-      --muted: #94a3b8;
-      --card: #0f1f38;
-    }
     html { scroll-behavior: smooth; }
-    body { background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; line-height: 1.6; }
-
-    /* NAV */
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); position: sticky; top: 0; background: rgba(4,13,26,0.95); backdrop-filter: blur(12px); z-index: 100; }
-    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--accent2); text-decoration: none; }
-    .nav-cta { background: var(--accent); color: white; padding: 0.55rem 1.4rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: opacity 0.2s; }
-    .nav-cta:hover { opacity: 0.85; }
-
-    /* HERO */
-    .hero { max-width: 900px; margin: 0 auto; padding: 5rem 2rem 4rem; text-align: center; }
-    .badge { display: inline-block; background: rgba(37,99,235,0.15); border: 1px solid rgba(37,99,235,0.4); color: var(--accent2); padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; }
-    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 800; line-height: 1.15; margin-bottom: 1.25rem; }
-    h1 span { color: var(--accent2); }
-    .hero-sub { font-size: 1.15rem; color: var(--muted); max-width: 620px; margin: 0 auto 2.5rem; }
-    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn-primary { background: var(--accent); color: white; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 24px rgba(37,99,235,0.35); }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(37,99,235,0.5); }
-    .btn-secondary { background: transparent; color: var(--white); padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 1rem; border: 1px solid rgba(255,255,255,0.2); transition: border-color 0.2s; }
-    .btn-secondary:hover { border-color: var(--accent2); color: var(--accent2); }
-
-    /* STATS */
-    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1px; background: rgba(255,255,255,0.06); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .stat { background: var(--navy); padding: 2rem 1.5rem; text-align: center; }
-    .stat-num { font-family: 'Syne', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--accent2); }
-    .stat-label { font-size: 0.85rem; color: var(--muted); margin-top: 0.25rem; }
-
-    /* SECTION */
-    section { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
-    h2 { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; margin-bottom: 1rem; }
-    h2 span { color: var(--accent2); }
-    .section-sub { color: var(--muted); font-size: 1.05rem; margin-bottom: 3rem; max-width: 600px; }
-
-    /* FEATURES GRID */
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-    .feature-card { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.75rem; transition: border-color 0.2s, transform 0.2s; }
-    .feature-card:hover { border-color: rgba(56,189,248,0.3); transform: translateY(-3px); }
-    .feat-icon { font-size: 2rem; margin-bottom: 1rem; }
-    .feat-title { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .feat-desc { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
-
-    /* PROBLEMS */
-    .problems-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-    @media(max-width:640px) { .problems-grid { grid-template-columns: 1fr; } }
-    .problem-col h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
-    .problem-col.bad h3 { color: #f87171; }
-    .problem-col.good h3 { color: #4ade80; }
-    .problem-item { display: flex; gap: 0.75rem; margin-bottom: 0.85rem; font-size: 0.95rem; color: var(--muted); align-items: flex-start; }
-    .problem-item .icon { flex-shrink: 0; margin-top: 2px; }
-
-    /* PRICING */
-    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
-    .price-card { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 2rem; position: relative; }
-    .price-card.featured { border-color: var(--accent); background: linear-gradient(135deg, #0f1f38, #0a1838); }
-    .price-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: white; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.9rem; border-radius: 50px; white-space: nowrap; }
-    .price-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; }
-    .price-amount { font-family: 'Syne', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--accent2); }
-    .price-period { color: var(--muted); font-size: 0.85rem; }
-    .price-features { list-style: none; margin: 1.5rem 0; }
-    .price-features li { padding: 0.4rem 0; font-size: 0.9rem; color: var(--muted); display: flex; gap: 0.5rem; }
-    .price-features li::before { content: "✓"; color: #4ade80; flex-shrink: 0; }
-    .price-cta { display: block; text-align: center; background: var(--accent); color: white; padding: 0.75rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: opacity 0.2s; }
-    .price-cta:hover { opacity: 0.85; }
-    .price-card:not(.featured) .price-cta { background: transparent; border: 1px solid rgba(255,255,255,0.2); }
-
-    /* FAQ */
-    .faq { max-width: 780px; margin: 0 auto; }
-    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 1.5rem 0; }
-    .faq-q { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 1.05rem; margin-bottom: 0.75rem; }
-    .faq-a { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
-
-    /* CTA BANNER */
-    .cta-banner { background: linear-gradient(135deg, #0a1f3d, #1e3a8a); border: 1px solid rgba(37,99,235,0.3); border-radius: 16px; padding: 3.5rem 2rem; text-align: center; margin: 2rem auto; max-width: 800px; }
-    .cta-banner h2 { margin-bottom: 0.75rem; }
-    .cta-banner p { color: var(--muted); margin-bottom: 2rem; }
-
-    /* FOOTER */
-    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
-    footer a { color: var(--muted); text-decoration: none; margin: 0 0.75rem; }
-    footer a:hover { color: var(--accent2); }
+    /* Respect users who prefer less motion (point 5). */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
-<body>
 
-<nav>
-  <a href="https://accredready.in" class="logo">AccredReady</a>
-  <a href="https://accredready.in" class="nav-cta">Start Free Trial</a>
-</nav>
+<body class="bg-ink text-paper font-body leading-relaxed antialiased">
 
-<div class="hero">
-  <div class="badge">NABH 6th Edition Compliant</div>
-  <h1>India's Most Complete<br/><span>NABH Accreditation Software</span></h1>
-  <p class="hero-sub">Stop managing NABH compliance in spreadsheets. AccredReady gives your quality team a single platform to track all 639 OEs, run audits, manage committees, and get assessment-ready — faster.</p>
-  <div class="hero-btns">
-    <a href="https://accredready.in" class="btn-primary">Start Free Trial →</a>
-    <a href="https://accredready.in/nabh-6th-edition-checklist.html" class="btn-secondary">View NABH Checklist</a>
-  </div>
-</div>
+  <!-- Skip link for keyboard users -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Skip to content</a>
 
-<div class="stats">
-  <div class="stat"><div class="stat-num">639</div><div class="stat-label">Objective Elements</div></div>
-  <div class="stat"><div class="stat-num">35</div><div class="stat-label">Internal Audit Types</div></div>
-  <div class="stat"><div class="stat-num">50</div><div class="stat-label">KPIs Tracked</div></div>
-  <div class="stat"><div class="stat-num">26</div><div class="stat-label">Committee Templates</div></div>
-  <div class="stat"><div class="stat-num">4</div><div class="stat-label">NABH Programmes</div></div>
-</div>
+  <!-- NAV -->
+  <nav class="sticky top-0 z-[100] flex items-center justify-between border-b border-line bg-ink/95 px-5 py-4 backdrop-blur-md sm:px-8">
+    <a href="https://accredready.in" class="rounded font-head text-xl font-extrabold text-blue outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">AccredReady</a>
+    <a href="https://accredready.in" class="rounded-md bg-brand px-5 py-2 text-sm font-medium text-white outline-none transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">Start Free Trial</a>
+  </nav>
 
-<section>
-  <h2>Everything Your Quality Team <span>Actually Needs</span></h2>
-  <p class="section-sub">Built by a practicing NABH Quality Manager. Every feature solves a real accreditation challenge.</p>
-  <div class="features">
-    <div class="feature-card">
-      <div class="feat-icon">📋</div>
-      <div class="feat-title">639 OE Compliance Tracker</div>
-      <div class="feat-desc">Track all Objective Elements across 10 NABH chapters. Each OE has 4 achieve tips, evidence guidance, and compliance scoring.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feat-icon">🔍</div>
-      <div class="feat-title">35 Internal Audit Templates</div>
-      <div class="feat-desc">Ready-to-use audit checklists for every department. Run, score, and generate CAPA reports in minutes.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feat-icon">📊</div>
-      <div class="feat-title">50 KPI Dashboard</div>
-      <div class="feat-desc">Track all NABH-required KPIs with auto-calculation, color-coded thresholds, and monthly trend analysis.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feat-icon">🏥</div>
-      <div class="feat-title">4 NABH Programmes</div>
-      <div class="feat-desc">Supports HCO Full, HCO ELC, SHCO Full, and SHCO ELC — automatically adapts standards to your programme type.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feat-icon">🚨</div>
-      <div class="feat-title">Mock Drill Tracker</div>
-      <div class="feat-desc">Schedule and document 13 types of mock drills. Track participation, outcomes, and corrective actions.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feat-icon">📄</div>
-      <div class="feat-title">PDF Gap Report</div>
-      <div class="feat-desc">Generate a branded gap analysis report instantly. Share with management or use as pre-assessment checklist.</div>
-    </div>
-  </div>
-</section>
+  <main id="main">
 
-<section>
-  <h2>The Old Way vs <span>The AccredReady Way</span></h2>
-  <p class="section-sub">See why hospitals are switching from manual compliance tracking to AccredReady.</p>
-  <div class="problems-grid">
-    <div class="problem-col bad">
-      <h3>❌ Without AccredReady</h3>
-      <div class="problem-item"><span class="icon">•</span><span>Multiple Excel files across departments, no single source of truth</span></div>
-      <div class="problem-item"><span class="icon">•</span><span>Manually tracking 639 OEs in spreadsheets — error-prone and time-consuming</span></div>
-      <div class="problem-item"><span class="icon">•</span><span>No visibility into compliance score until assessment day</span></div>
-      <div class="problem-item"><span class="icon">•</span><span>Audit findings scattered in paper files, CAPAs not tracked</span></div>
-      <div class="problem-item"><span class="icon">•</span><span>KPIs calculated manually each month</span></div>
-      <div class="problem-item"><span class="icon">•</span><span>Panic mode 2 weeks before NABH assessment</span></div>
-    </div>
-    <div class="problem-col good">
-      <h3>✅ With AccredReady</h3>
-      <div class="problem-item"><span class="icon">•</span><span>One dashboard. All 639 OEs. Real-time compliance score.</span></div>
-      <div class="problem-item"><span class="icon">•</span><span>4 actionable tips per OE — know exactly what to do to achieve compliance</span></div>
-      <div class="problem-item"><span class="icon">•</span><span>Verdict engine tells you Ready / Needs Work / Critical before assessors arrive</span></div>
-      <div class="problem-item"><span class="icon">•</span><span>Digital audit trails with built-in CAPA tracking</span></div>
-      <div class="problem-item"><span class="icon">•</span><span>Auto-calculated KPIs with color-coded thresholds</span></div>
-      <div class="problem-item"><span class="icon">•</span><span>Always assessment-ready. No panic. No surprises.</span></div>
-    </div>
-  </div>
-</section>
+    <!-- HERO -->
+    <header class="mx-auto max-w-4xl px-5 pb-16 pt-20 text-center sm:px-8">
+      <span class="mb-6 inline-block rounded-full border border-brand/40 bg-brand/15 px-4 py-1 text-xs font-medium uppercase tracking-wider text-blue">NABH 6th Edition Compliant</span>
+      <h1 class="mb-5 font-head text-[clamp(2rem,5vw,3.4rem)] font-extrabold leading-[1.15]">India's Most Complete<br/><span class="text-blue">NABH Accreditation Software</span></h1>
+      <p class="mx-auto mb-10 max-w-2xl text-lg text-muted">Stop managing NABH compliance in spreadsheets. AccredReady gives your quality team a single platform to track all 639 OEs, run audits, manage committees, and get assessment-ready — faster.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://accredready.in" class="rounded-lg bg-brand px-8 py-3.5 font-semibold text-white shadow-[0_4px_24px_rgba(37,99,235,0.35)] outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start Free Trial →</a>
+        <a href="https://accredready.in/nabh-6th-edition-checklist.html" class="rounded-lg border border-white/20 px-8 py-3.5 font-medium text-paper outline-none transition-colors hover:border-blue hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">View NABH Checklist</a>
+      </div>
+    </header>
 
-<section>
-  <h2>Simple, Transparent <span>Pricing</span></h2>
-  <p class="section-sub">No hidden fees. Cancel anytime. Start free.</p>
-  <div class="pricing-grid">
-    <div class="price-card featured">
-      <div class="price-badge">All Features Included</div>
-      <div class="price-name">AccredReady</div>
-      <div class="price-amount">₹499</div>
-      <div class="price-period">per month · per hospital</div>
-      <ul class="price-features">
-        <li>639 OE Compliance Tracker</li>
-        <li>KPI Dashboard</li>
-        <li>All 35 Audit Templates</li>
-        <li>Mock Drill Tracker</li>
-        <li>PDF Gap Report</li>
-        <li>Committee Management</li>
-        <li>14-day free trial · No setup fee · Cancel anytime</li>
-      </ul>
-      <a href="https://accredready.in" class="price-cta">Get Started</a>
-    </div>
-  </div>
-</section>
+    <!-- STATS -->
+    <section aria-label="Platform at a glance" class="grid grid-cols-2 gap-px border-y border-line bg-line sm:grid-cols-3 lg:grid-cols-5">
+      <div class="bg-ink px-6 py-8 text-center"><div class="font-head text-4xl font-extrabold text-blue">639</div><div class="mt-1 text-sm text-muted">Objective Elements</div></div>
+      <div class="bg-ink px-6 py-8 text-center"><div class="font-head text-4xl font-extrabold text-blue">35</div><div class="mt-1 text-sm text-muted">Internal Audit Types</div></div>
+      <div class="bg-ink px-6 py-8 text-center"><div class="font-head text-4xl font-extrabold text-blue">50</div><div class="mt-1 text-sm text-muted">KPIs Tracked</div></div>
+      <div class="bg-ink px-6 py-8 text-center"><div class="font-head text-4xl font-extrabold text-blue">26</div><div class="mt-1 text-sm text-muted">Committee Templates</div></div>
+      <div class="bg-ink px-6 py-8 text-center"><div class="font-head text-4xl font-extrabold text-blue">4</div><div class="mt-1 text-sm text-muted">NABH Programmes</div></div>
+    </section>
 
-<section>
-  <div class="faq">
-    <h2 style="text-align:center; margin-bottom:2.5rem;">Frequently Asked <span>Questions</span></h2>
-    <div class="faq-item">
-      <div class="faq-q">Is AccredReady based on NABH 6th Edition standards?</div>
-      <div class="faq-a">Yes. AccredReady is built entirely on NABH 6th Edition standards, including all 639 Objective Elements across 10 chapters. The platform is updated whenever NABH releases guidance changes.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Can I use AccredReady for SHCO accreditation?</div>
-      <div class="faq-a">Absolutely. AccredReady has a dedicated SHCO module covering SHCO Full Accreditation (408 OEs) and SHCO Entry Level Certification, with a fee calculator for SHCO applications.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Is there a mobile app?</div>
-      <div class="faq-a">Yes. AccredReady is available on Android via Google Play Store (search "AccredReady") and works as a Progressive Web App on any device.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Who built AccredReady?</div>
-      <div class="faq-a">AccredReady was built by Dr. Mehul Upadhyay, a certified NABH Quality Manager with 15+ years of hospital operations experience, including international exposure. Every feature is designed from real accreditation experience.</div>
-    </div>
-  </div>
-</section>
+    <!-- FEATURES -->
+    <section class="mx-auto max-w-6xl px-5 py-16 sm:px-8">
+      <h2 class="mb-4 font-head text-[clamp(1.6rem,3vw,2.2rem)] font-bold">Everything Your Quality Team <span class="text-blue">Actually Needs</span></h2>
+      <p class="mb-12 max-w-xl text-muted">Built by a practicing NABH Quality Manager. Every feature solves a real accreditation challenge.</p>
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-xl border border-white/10 bg-panel p-7 transition-[border-color,transform] hover:-translate-y-1 hover:border-blue/30 motion-reduce:transform-none motion-reduce:transition-none">
+          <div class="mb-4 text-3xl" aria-hidden="true">📋</div>
+          <h3 class="mb-2 font-head text-lg font-bold">639 OE Compliance Tracker</h3>
+          <p class="text-sm text-muted">Track all Objective Elements across 10 NABH chapters. Each OE has 4 achieve tips, evidence guidance, and compliance scoring.</p>
+        </article>
+        <article class="rounded-xl border border-white/10 bg-panel p-7 transition-[border-color,transform] hover:-translate-y-1 hover:border-blue/30 motion-reduce:transform-none motion-reduce:transition-none">
+          <div class="mb-4 text-3xl" aria-hidden="true">🔍</div>
+          <h3 class="mb-2 font-head text-lg font-bold">35 Internal Audit Templates</h3>
+          <p class="text-sm text-muted">Ready-to-use audit checklists for every department. Run, score, and generate CAPA reports in minutes.</p>
+        </article>
+        <article class="rounded-xl border border-white/10 bg-panel p-7 transition-[border-color,transform] hover:-translate-y-1 hover:border-blue/30 motion-reduce:transform-none motion-reduce:transition-none">
+          <div class="mb-4 text-3xl" aria-hidden="true">📊</div>
+          <h3 class="mb-2 font-head text-lg font-bold">50 KPI Dashboard</h3>
+          <p class="text-sm text-muted">Track all NABH-required KPIs with auto-calculation, color-coded thresholds, and monthly trend analysis.</p>
+        </article>
+        <article class="rounded-xl border border-white/10 bg-panel p-7 transition-[border-color,transform] hover:-translate-y-1 hover:border-blue/30 motion-reduce:transform-none motion-reduce:transition-none">
+          <div class="mb-4 text-3xl" aria-hidden="true">🏥</div>
+          <h3 class="mb-2 font-head text-lg font-bold">4 NABH Programmes</h3>
+          <p class="text-sm text-muted">Supports HCO Full, HCO ELC, SHCO Full, and SHCO ELC — automatically adapts standards to your programme type.</p>
+        </article>
+        <article class="rounded-xl border border-white/10 bg-panel p-7 transition-[border-color,transform] hover:-translate-y-1 hover:border-blue/30 motion-reduce:transform-none motion-reduce:transition-none">
+          <div class="mb-4 text-3xl" aria-hidden="true">🚨</div>
+          <h3 class="mb-2 font-head text-lg font-bold">Mock Drill Tracker</h3>
+          <p class="text-sm text-muted">Schedule and document 13 types of mock drills. Track participation, outcomes, and corrective actions.</p>
+        </article>
+        <article class="rounded-xl border border-white/10 bg-panel p-7 transition-[border-color,transform] hover:-translate-y-1 hover:border-blue/30 motion-reduce:transform-none motion-reduce:transition-none">
+          <div class="mb-4 text-3xl" aria-hidden="true">📄</div>
+          <h3 class="mb-2 font-head text-lg font-bold">PDF Gap Report</h3>
+          <p class="text-sm text-muted">Generate a branded gap analysis report instantly. Share with management or use as pre-assessment checklist.</p>
+        </article>
+      </div>
+    </section>
 
-<section>
-  <div class="cta-banner">
-    <h2>Ready to Get <span>Accreditation-Ready?</span></h2>
-    <p>Join hospitals across India using AccredReady to achieve and maintain NABH accreditation.</p>
-    <a href="https://accredready.in" class="btn-primary">Start Your Free Trial →</a>
-  </div>
-</section>
+    <!-- OLD WAY VS NEW WAY -->
+    <section class="mx-auto max-w-6xl px-5 py-16 sm:px-8">
+      <h2 class="mb-4 font-head text-[clamp(1.6rem,3vw,2.2rem)] font-bold">The Old Way vs <span class="text-blue">The AccredReady Way</span></h2>
+      <p class="mb-12 max-w-xl text-muted">See why hospitals are switching from manual compliance tracking to AccredReady.</p>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div>
+          <h3 class="mb-5 border-b border-line pb-3 font-head text-lg font-bold text-bad">❌ Without AccredReady</h3>
+          <ul class="space-y-3.5 text-[0.95rem] text-muted">
+            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>Multiple Excel files across departments, no single source of truth</span></li>
+            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>Manually tracking 639 OEs in spreadsheets — error-prone and time-consuming</span></li>
+            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>No visibility into compliance score until assessment day</span></li>
+            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>Audit findings scattered in paper files, CAPAs not tracked</span></li>
+            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>KPIs calculated manually each month</span></li>
+            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>Panic mode 2 weeks before NABH assessment</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="mb-5 border-b border-line pb-3 font-head text-lg font-bold text-good">✅ With AccredReady</h3>
+          <ul class="space-y-3.5 text-[0.95rem] text-muted">
+            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>One dashboard. All 639 OEs. Real-time compliance score.</span></li>
+            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>4 actionable tips per OE — know exactly what to do to achieve compliance</span></li>
+            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>Verdict engine tells you Ready / Needs Work / Critical before assessors arrive</span></li>
+            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>Digital audit trails with built-in CAPA tracking</span></li>
+            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>Auto-calculated KPIs with color-coded thresholds</span></li>
+            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>Always assessment-ready. No panic. No surprises.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<footer>
-  <p style="margin-bottom:0.75rem;">
-    <a href="https://accredready.in">Home</a>
-    <a href="https://accredready.in/nabh-6th-edition-checklist.html">NABH Checklist</a>
-    <a href="https://accredready.in/shco-accreditation-software.html">SHCO Software</a>
-    <a href="https://accredready.in/hospital-quality-management.html">Quality Management</a>
-    <a href="https://accredready.in/privacy.html">Privacy Policy</a>
-  </p>
-  <p>© 2026 AccredReady by MK Tech. All rights reserved.</p>
-</footer>
+    <!-- PRICING -->
+    <section class="mx-auto max-w-6xl px-5 py-16 sm:px-8">
+      <h2 class="mb-4 font-head text-[clamp(1.6rem,3vw,2.2rem)] font-bold">Simple, Transparent <span class="text-blue">Pricing</span></h2>
+      <p class="mb-12 max-w-xl text-muted">No hidden fees. Cancel anytime. Start free — or get an expert gap assessment.</p>
+      <div class="mx-auto grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2">
+
+        <!-- Software subscription -->
+        <div class="relative rounded-xl border border-brand bg-gradient-to-br from-panel to-panel2 p-8">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-brand px-3.5 py-1 text-xs font-semibold text-white">All Features Included</span>
+          <h3 class="mb-2 font-head text-lg font-bold">AccredReady</h3>
+          <div class="font-head text-5xl font-extrabold text-blue">₹499</div>
+          <div class="text-sm text-muted">per month · per hospital</div>
+          <ul class="my-6 space-y-2 text-sm text-muted">
+            <li class="flex gap-2"><span class="flex-shrink-0 text-good" aria-hidden="true">✓</span>639 OE Compliance Tracker</li>
+            <li class="flex gap-2"><span class="flex-shrink-0 text-good" aria-hidden="true">✓</span>KPI Dashboard</li>
+            <li class="flex gap-2"><span class="flex-shrink-0 text-good" aria-hidden="true">✓</span>All 35 Audit Templates</li>
+            <li class="flex gap-2"><span class="flex-shrink-0 text-good" aria-hidden="true">✓</span>Mock Drill Tracker</li>
+            <li class="flex gap-2"><span class="flex-shrink-0 text-good" aria-hidden="true">✓</span>PDF Gap Report</li>
+            <li class="flex gap-2"><span class="flex-shrink-0 text-good" aria-hidden="true">✓</span>Committee Management</li>
+            <li class="flex gap-2"><span class="flex-shrink-0 text-good" aria-hidden="true">✓</span>14-day free trial · No setup fee · Cancel anytime</li>
+          </ul>
+          <a href="https://accredready.in" class="block rounded-lg bg-brand px-4 py-3 text-center text-[0.95rem] font-semibold text-white outline-none transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">Get Started</a>
+        </div>
+
+        <!-- Gap Assessment Report (one-time service) -->
+        <div class="relative rounded-xl border border-gold/50 bg-panel p-8">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-gold px-3.5 py-1 text-xs font-semibold text-ink">Expert Service</span>
+          <h3 class="mb-2 font-head text-lg font-bold">Gap Assessment Report</h3>
+          <div class="font-head text-5xl font-extrabold text-gold">₹20,000</div>
+          <div class="text-sm text-muted">one-time · per hospital</div>
+          <ul class="my-6 space-y-2 text-sm text-muted">
+            <li class="flex gap-2"><span class="flex-shrink-0 text-gold" aria-hidden="true">✓</span>Expert-led review against all 639 OEs</li>
+            <li class="flex gap-2"><span class="flex-shrink-0 text-gold" aria-hidden="true">✓</span>Chapter-wise compliance scoring</li>
+            <li class="flex gap-2"><span class="flex-shrink-0 text-gold" aria-hidden="true">✓</span>Prioritized gap list with CORE flags</li>
+            <li class="flex gap-2"><span class="flex-shrink-0 text-gold" aria-hidden="true">✓</span>Action roadmap to assessment-readiness</li>
+            <li class="flex gap-2"><span class="flex-shrink-0 text-gold" aria-hidden="true">✓</span>Branded PDF report for management</li>
+            <li class="flex gap-2"><span class="flex-shrink-0 text-gold" aria-hidden="true">✓</span>Conducted by a certified NABH Quality Manager</li>
+          </ul>
+          <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20want%20the%20Gap%20Assessment%20Report%20(Rs.%2020%2C000)%20for%20my%20hospital" target="_blank" rel="noopener noreferrer" class="block rounded-lg border border-gold px-4 py-3 text-center text-[0.95rem] font-semibold text-gold outline-none transition-colors hover:bg-gold hover:text-ink focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">Request Gap Assessment</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mx-auto max-w-3xl px-5 py-16 sm:px-8">
+      <h2 class="mb-10 text-center font-head text-[clamp(1.6rem,3vw,2.2rem)] font-bold">Frequently Asked <span class="text-blue">Questions</span></h2>
+      <div class="divide-y divide-line">
+        <div class="py-6">
+          <h3 class="mb-3 font-head text-base font-semibold">Is AccredReady based on NABH 6th Edition standards?</h3>
+          <p class="text-[0.95rem] leading-relaxed text-muted">Yes. AccredReady is built entirely on NABH 6th Edition standards, including all 639 Objective Elements across 10 chapters. The platform is updated whenever NABH releases guidance changes.</p>
+        </div>
+        <div class="py-6">
+          <h3 class="mb-3 font-head text-base font-semibold">Can I use AccredReady for SHCO accreditation?</h3>
+          <p class="text-[0.95rem] leading-relaxed text-muted">Absolutely. AccredReady has a dedicated SHCO module covering SHCO Full Accreditation (408 OEs) and SHCO Entry Level Certification, with a fee calculator for SHCO applications.</p>
+        </div>
+        <div class="py-6">
+          <h3 class="mb-3 font-head text-base font-semibold">Is there a mobile app?</h3>
+          <p class="text-[0.95rem] leading-relaxed text-muted">Yes. AccredReady is available on Android via Google Play Store (search "AccredReady") and works as a Progressive Web App on any device.</p>
+        </div>
+        <div class="py-6">
+          <h3 class="mb-3 font-head text-base font-semibold">Who built AccredReady?</h3>
+          <p class="text-[0.95rem] leading-relaxed text-muted">AccredReady was built by Dr. Mehul Upadhyay, a certified NABH Quality Manager with 15+ years of hospital operations experience, including international exposure. Every feature is designed from real accreditation experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="px-5 py-8 sm:px-8">
+      <div class="mx-auto max-w-3xl rounded-2xl border border-brand/30 bg-gradient-to-br from-ink2 to-[#1e3a8a] px-6 py-14 text-center">
+        <h2 class="mb-3 font-head text-[clamp(1.6rem,3vw,2.2rem)] font-bold">Ready to Get <span class="text-blue">Accreditation-Ready?</span></h2>
+        <p class="mb-8 text-muted">Join hospitals across India using AccredReady to achieve and maintain NABH accreditation.</p>
+        <a href="https://accredready.in" class="inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white shadow-[0_4px_24px_rgba(37,99,235,0.35)] outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start Your Free Trial →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-line px-5 py-8 text-center text-sm text-muted sm:px-8">
+    <nav aria-label="Footer" class="mb-3 flex flex-wrap justify-center gap-x-6 gap-y-2">
+      <a href="https://accredready.in" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
+      <a href="https://accredready.in/nabh-6th-edition-checklist.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Checklist</a>
+      <a href="https://accredready.in/shco-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Software</a>
+      <a href="https://accredready.in/hospital-quality-management.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Quality Management</a>
+      <a href="https://accredready.in/privacy.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
+    </nav>
+    <p>© 2026 AccredReady by MK Tech. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>

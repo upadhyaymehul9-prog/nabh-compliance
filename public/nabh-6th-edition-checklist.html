@@ -23,172 +23,173 @@
     "url": "https://accredready.in/nabh-6th-edition-checklist.html"
   }
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind via CDN + shared design-system token config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:    '#040d1a', ink2: '#0a1f3d', panel: '#0f1f38', panel2: '#0a1838',
+            blue:   '#38bdf8', brand: '#2563eb', gold: '#f59e0b', paper: '#f8fafc',
+            muted:  '#94a3b8', good: '#4ade80', bad: '#f87171', line: 'rgba(255,255,255,0.08)',
+          },
+          fontFamily: {
+            head: ['Syne', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            body: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --navy: #040d1a; --blue: #0a1f3d; --accent: #2563eb; --accent2: #38bdf8;
-      --green: #4ade80; --white: #f8fafc; --muted: #94a3b8; --card: #0f1f38;
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
     }
-    body { background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; line-height: 1.6; }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); position: sticky; top: 0; background: rgba(4,13,26,0.95); backdrop-filter: blur(12px); z-index: 100; }
-    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--accent2); text-decoration: none; }
-    .nav-cta { background: var(--accent); color: white; padding: 0.55rem 1.4rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem; }
-
-    .hero { max-width: 860px; margin: 0 auto; padding: 4rem 2rem 3rem; text-align: center; }
-    .badge { display: inline-block; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.3); color: var(--green); padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; }
-    h1 { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.15; margin-bottom: 1.25rem; }
-    h1 span { color: var(--accent2); }
-    .hero-sub { font-size: 1.1rem; color: var(--muted); max-width: 600px; margin: 0 auto 2.5rem; }
-    .btn-primary { background: var(--accent); color: white; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; display: inline-block; box-shadow: 0 4px 24px rgba(37,99,235,0.35); }
-
-    section { max-width: 1000px; margin: 0 auto; padding: 3.5rem 2rem; }
-    h2 { font-family: 'Syne', sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-bottom: 1rem; }
-    h2 span { color: var(--accent2); }
-    .section-sub { color: var(--muted); margin-bottom: 2.5rem; }
-
-    /* CHAPTER TABLE */
-    .chapter-grid { display: grid; gap: 1rem; }
-    .chapter-row { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 1.25rem 1.5rem; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1.25rem; transition: border-color 0.2s; }
-    .chapter-row:hover { border-color: rgba(56,189,248,0.3); }
-    .chapter-num { font-family: 'Syne', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--accent2); background: rgba(56,189,248,0.1); padding: 0.3rem 0.7rem; border-radius: 6px; white-space: nowrap; }
-    .chapter-name { font-weight: 500; font-size: 0.95rem; }
-    .chapter-oe { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--accent2); font-size: 1.1rem; white-space: nowrap; }
-    .chapter-oe span { font-size: 0.75rem; color: var(--muted); font-family: 'DM Sans', sans-serif; font-weight: 400; display: block; text-align: right; }
-
-    /* INFO CARDS */
-    .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
-    .info-card { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.75rem; }
-    .info-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.75rem; color: var(--accent2); }
-    .info-text { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
-
-    .cta-banner { background: linear-gradient(135deg, #0a1f3d, #1e3a8a); border: 1px solid rgba(37,99,235,0.3); border-radius: 16px; padding: 3rem 2rem; text-align: center; }
-    .cta-banner h2 { margin-bottom: 0.75rem; }
-    .cta-banner p { color: var(--muted); margin-bottom: 2rem; }
-
-    footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
-    footer a { color: var(--muted); text-decoration: none; margin: 0 0.75rem; }
-    footer a:hover { color: var(--accent2); }
   </style>
 </head>
-<body>
 
-<nav>
-  <a href="https://accredready.in" class="logo">AccredReady</a>
-  <a href="https://accredready.in" class="nav-cta">Track All OEs Free →</a>
-</nav>
+<body class="bg-ink text-paper font-body leading-relaxed antialiased">
 
-<div class="hero">
-  <div class="badge">Free Resource</div>
-  <h1>NABH 6th Edition Checklist<br/><span>All 639 Objective Elements</span></h1>
-  <p class="hero-sub">The complete chapter-by-chapter breakdown of NABH 6th Edition standards. Use AccredReady to track your compliance against every single OE — digitally, in real time.</p>
-  <a href="https://accredready.in" class="btn-primary">Track Your Compliance in AccredReady →</a>
-</div>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Skip to content</a>
 
-<section>
-  <h2>NABH 6th Edition — <span>Chapter-wise OE Breakdown</span></h2>
-  <p class="section-sub">NABH 6th Edition has 10 chapters covering all aspects of hospital operations. Here's the complete OE distribution:</p>
-  <div class="chapter-grid">
-    <div class="chapter-row">
-      <div class="chapter-num">Ch 1</div>
-      <div class="chapter-name">Access, Assessment and Continuity of Care (AAC)</div>
-      <div class="chapter-oe">78 <span>OEs</span></div>
-    </div>
-    <div class="chapter-row">
-      <div class="chapter-num">Ch 2</div>
-      <div class="chapter-name">Care of Patients (COP)</div>
-      <div class="chapter-oe">72 <span>OEs</span></div>
-    </div>
-    <div class="chapter-row">
-      <div class="chapter-num">Ch 3</div>
-      <div class="chapter-name">Management of Medication (MOM)</div>
-      <div class="chapter-oe">45 <span>OEs</span></div>
-    </div>
-    <div class="chapter-row">
-      <div class="chapter-num">Ch 4</div>
-      <div class="chapter-name">Patient Rights and Education (PRE)</div>
-      <div class="chapter-oe">42 <span>OEs</span></div>
-    </div>
-    <div class="chapter-row">
-      <div class="chapter-num">Ch 5</div>
-      <div class="chapter-name">Hospital Infection Control (HIC)</div>
-      <div class="chapter-oe">54 <span>OEs</span></div>
-    </div>
-    <div class="chapter-row">
-      <div class="chapter-num">Ch 6</div>
-      <div class="chapter-name">Continuous Quality Improvement (CQI)</div>
-      <div class="chapter-oe">48 <span>OEs</span></div>
-    </div>
-    <div class="chapter-row">
-      <div class="chapter-num">Ch 7</div>
-      <div class="chapter-name">Responsibilities of Management (ROM)</div>
-      <div class="chapter-oe">63 <span>OEs</span></div>
-    </div>
-    <div class="chapter-row">
-      <div class="chapter-num">Ch 8</div>
-      <div class="chapter-name">Facility Management and Safety (FMS)</div>
-      <div class="chapter-oe">72 <span>OEs</span></div>
-    </div>
-    <div class="chapter-row">
-      <div class="chapter-num">Ch 9</div>
-      <div class="chapter-name">Human Resource Management (HRM)</div>
-      <div class="chapter-oe">51 <span>OEs</span></div>
-    </div>
-    <div class="chapter-row">
-      <div class="chapter-num">Ch 10</div>
-      <div class="chapter-name">Information Management System (IMS)</div>
-      <div class="chapter-oe">54 <span>OEs</span></div>
-    </div>
-    <div class="chapter-row" style="background: rgba(37,99,235,0.1); border-color: rgba(37,99,235,0.3);">
-      <div class="chapter-num" style="background: rgba(37,99,235,0.2); color: white;">TOTAL</div>
-      <div class="chapter-name" style="font-weight: 700;">All Chapters Combined</div>
-      <div class="chapter-oe" style="font-size: 1.4rem;">639 <span>OEs</span></div>
-    </div>
-  </div>
-</section>
+  <!-- NAV -->
+  <nav class="sticky top-0 z-[100] flex items-center justify-between border-b border-line bg-ink/95 px-5 py-4 backdrop-blur-md sm:px-8">
+    <a href="https://accredready.in" class="rounded font-head text-xl font-extrabold text-blue outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">AccredReady</a>
+    <a href="https://accredready.in" class="rounded-md bg-brand px-5 py-2 text-sm font-medium text-white outline-none transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">Track All OEs Free →</a>
+  </nav>
 
-<section>
-  <h2>What Are <span>Objective Elements (OEs)?</span></h2>
-  <p class="section-sub">Understanding the building blocks of NABH accreditation.</p>
-  <div class="info-grid">
-    <div class="info-card">
-      <div class="info-title">Definition</div>
-      <div class="info-text">Objective Elements (OEs) are the specific, measurable criteria that NABH assessors evaluate during accreditation. Each OE requires documented evidence of compliance through policies, procedures, records, or observed practices.</div>
-    </div>
-    <div class="info-card">
-      <div class="info-title">Scoring</div>
-      <div class="info-text">Each OE is scored as Fully Compliant (10), Partially Compliant (5), or Non-Compliant (0). Your overall chapter score and total score determines accreditation eligibility and any conditions imposed.</div>
-    </div>
-    <div class="info-card">
-      <div class="info-title">Evidence Requirements</div>
-      <div class="info-text">OEs require different types of evidence: documented policies, implementation records, staff competency records, patient tracer evidence, or direct observation. AccredReady guides you on what evidence to collect for each OE.</div>
-    </div>
-    <div class="info-card">
-      <div class="info-title">AccredReady Approach</div>
-      <div class="info-text">For every OE, AccredReady provides 4 specific achieve tips — concrete actions that move you from non-compliant to fully compliant, written by a practicing NABH Quality Manager.</div>
-    </div>
-  </div>
-</section>
+  <main id="main">
 
-<section>
-  <div class="cta-banner">
-    <h2>Stop Tracking OEs in <span>Excel</span></h2>
-    <p>AccredReady gives you a digital dashboard for all 639 OEs with real-time scoring, achieve tips, and gap reports.</p>
-    <a href="https://accredready.in" class="btn-primary">Start Free — No Credit Card Needed →</a>
-  </div>
-</section>
+    <!-- HERO -->
+    <header class="mx-auto max-w-3xl px-5 pb-12 pt-16 text-center sm:px-8">
+      <span class="mb-6 inline-block rounded-full border border-good/30 bg-good/10 px-4 py-1 text-xs font-medium uppercase tracking-wider text-good">Free Resource</span>
+      <h1 class="mb-5 font-head text-[clamp(1.8rem,4.5vw,3rem)] font-extrabold leading-[1.15]">NABH 6th Edition Checklist<br/><span class="text-blue">All 639 Objective Elements</span></h1>
+      <p class="mx-auto mb-10 max-w-xl text-lg text-muted">The complete chapter-by-chapter breakdown of NABH 6th Edition standards. Use AccredReady to track your compliance against every single OE — digitally, in real time.</p>
+      <a href="https://accredready.in" class="inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white shadow-[0_4px_24px_rgba(37,99,235,0.35)] outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Track Your Compliance in AccredReady →</a>
+    </header>
 
-<footer>
-  <p style="margin-bottom:0.75rem;">
-    <a href="https://accredready.in">Home</a>
-    <a href="https://accredready.in/nabh-accreditation-software.html">NABH Software</a>
-    <a href="https://accredready.in/shco-accreditation-software.html">SHCO Software</a>
-    <a href="https://accredready.in/hospital-quality-management.html">Quality Management</a>
-    <a href="https://accredready.in/privacy.html">Privacy Policy</a>
-  </p>
-  <p>© 2026 AccredReady by MK Tech. All rights reserved.</p>
-</footer>
+    <!-- CHAPTER TABLE -->
+    <section class="mx-auto max-w-5xl px-5 py-14 sm:px-8">
+      <h2 class="mb-4 font-head text-[clamp(1.5rem,3vw,2rem)] font-bold">NABH 6th Edition — <span class="text-blue">Chapter-wise OE Breakdown</span></h2>
+      <p class="mb-10 text-muted">NABH 6th Edition has 10 chapters covering all aspects of hospital operations. Here's the complete OE distribution:</p>
+      <div class="grid gap-3">
+        <!-- Each row: chapter code, name, OE count. Wraps cleanly at 360px. -->
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-white/10 bg-panel px-5 py-4 transition-colors hover:border-blue/30 motion-reduce:transition-none">
+          <span class="rounded-md bg-blue/10 px-2.5 py-1 font-head text-xs font-bold text-blue">Ch 1</span>
+          <span class="min-w-0 flex-1 text-[0.95rem] font-medium">Access, Assessment and Continuity of Care (AAC)</span>
+          <span class="font-head text-lg font-bold text-blue">87 <span class="font-body text-xs font-normal text-muted">OEs</span></span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-white/10 bg-panel px-5 py-4 transition-colors hover:border-blue/30 motion-reduce:transition-none">
+          <span class="rounded-md bg-blue/10 px-2.5 py-1 font-head text-xs font-bold text-blue">Ch 2</span>
+          <span class="min-w-0 flex-1 text-[0.95rem] font-medium">Care of Patients (COP)</span>
+          <span class="font-head text-lg font-bold text-blue">136 <span class="font-body text-xs font-normal text-muted">OEs</span></span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-white/10 bg-panel px-5 py-4 transition-colors hover:border-blue/30 motion-reduce:transition-none">
+          <span class="rounded-md bg-blue/10 px-2.5 py-1 font-head text-xs font-bold text-blue">Ch 3</span>
+          <span class="min-w-0 flex-1 text-[0.95rem] font-medium">Management of Medication (MOM)</span>
+          <span class="font-head text-lg font-bold text-blue">68 <span class="font-body text-xs font-normal text-muted">OEs</span></span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-white/10 bg-panel px-5 py-4 transition-colors hover:border-blue/30 motion-reduce:transition-none">
+          <span class="rounded-md bg-blue/10 px-2.5 py-1 font-head text-xs font-bold text-blue">Ch 4</span>
+          <span class="min-w-0 flex-1 text-[0.95rem] font-medium">Patient Rights and Education (PRE)</span>
+          <span class="font-head text-lg font-bold text-blue">52 <span class="font-body text-xs font-normal text-muted">OEs</span></span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-white/10 bg-panel px-5 py-4 transition-colors hover:border-blue/30 motion-reduce:transition-none">
+          <span class="rounded-md bg-blue/10 px-2.5 py-1 font-head text-xs font-bold text-blue">Ch 5</span>
+          <span class="min-w-0 flex-1 text-[0.95rem] font-medium">Infection Prevention and Control (IPC)</span>
+          <span class="font-head text-lg font-bold text-blue">49 <span class="font-body text-xs font-normal text-muted">OEs</span></span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-white/10 bg-panel px-5 py-4 transition-colors hover:border-blue/30 motion-reduce:transition-none">
+          <span class="rounded-md bg-blue/10 px-2.5 py-1 font-head text-xs font-bold text-blue">Ch 6</span>
+          <span class="min-w-0 flex-1 text-[0.95rem] font-medium">Patient Safety and Quality Improvement (PSQ)</span>
+          <span class="font-head text-lg font-bold text-blue">46 <span class="font-body text-xs font-normal text-muted">OEs</span></span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-white/10 bg-panel px-5 py-4 transition-colors hover:border-blue/30 motion-reduce:transition-none">
+          <span class="rounded-md bg-blue/10 px-2.5 py-1 font-head text-xs font-bold text-blue">Ch 7</span>
+          <span class="min-w-0 flex-1 text-[0.95rem] font-medium">Responsibilities of Management (ROM)</span>
+          <span class="font-head text-lg font-bold text-blue">37 <span class="font-body text-xs font-normal text-muted">OEs</span></span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-white/10 bg-panel px-5 py-4 transition-colors hover:border-blue/30 motion-reduce:transition-none">
+          <span class="rounded-md bg-blue/10 px-2.5 py-1 font-head text-xs font-bold text-blue">Ch 8</span>
+          <span class="min-w-0 flex-1 text-[0.95rem] font-medium">Facility Management and Safety (FMS)</span>
+          <span class="font-head text-lg font-bold text-blue">43 <span class="font-body text-xs font-normal text-muted">OEs</span></span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-white/10 bg-panel px-5 py-4 transition-colors hover:border-blue/30 motion-reduce:transition-none">
+          <span class="rounded-md bg-blue/10 px-2.5 py-1 font-head text-xs font-bold text-blue">Ch 9</span>
+          <span class="min-w-0 flex-1 text-[0.95rem] font-medium">Human Resource Management (HRM)</span>
+          <span class="font-head text-lg font-bold text-blue">76 <span class="font-body text-xs font-normal text-muted">OEs</span></span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-white/10 bg-panel px-5 py-4 transition-colors hover:border-blue/30 motion-reduce:transition-none">
+          <span class="rounded-md bg-blue/10 px-2.5 py-1 font-head text-xs font-bold text-blue">Ch 10</span>
+          <span class="min-w-0 flex-1 text-[0.95rem] font-medium">Information Management System (IMS)</span>
+          <span class="font-head text-lg font-bold text-blue">45 <span class="font-body text-xs font-normal text-muted">OEs</span></span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-brand/30 bg-brand/10 px-5 py-4">
+          <span class="rounded-md bg-brand/20 px-2.5 py-1 font-head text-xs font-bold text-white">TOTAL</span>
+          <span class="min-w-0 flex-1 text-[0.95rem] font-bold">All Chapters Combined</span>
+          <span class="font-head text-2xl font-bold text-blue">639 <span class="font-body text-xs font-normal text-muted">OEs</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT ARE OEs -->
+    <section class="mx-auto max-w-5xl px-5 py-14 sm:px-8">
+      <h2 class="mb-4 font-head text-[clamp(1.5rem,3vw,2rem)] font-bold">What Are <span class="text-blue">Objective Elements (OEs)?</span></h2>
+      <p class="mb-10 text-muted">Understanding the building blocks of NABH accreditation.</p>
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <article class="rounded-xl border border-white/10 bg-panel p-7">
+          <h3 class="mb-3 font-head text-base font-bold text-blue">Definition</h3>
+          <p class="text-sm leading-relaxed text-muted">Objective Elements (OEs) are the specific, measurable criteria that NABH assessors evaluate during accreditation. Each OE requires documented evidence of compliance through policies, procedures, records, or observed practices.</p>
+        </article>
+        <article class="rounded-xl border border-white/10 bg-panel p-7">
+          <h3 class="mb-3 font-head text-base font-bold text-blue">Scoring</h3>
+          <p class="text-sm leading-relaxed text-muted">Each OE is scored as Fully Compliant (10), Partially Compliant (5), or Non-Compliant (0). Your overall chapter score and total score determines accreditation eligibility and any conditions imposed.</p>
+        </article>
+        <article class="rounded-xl border border-white/10 bg-panel p-7">
+          <h3 class="mb-3 font-head text-base font-bold text-blue">Evidence Requirements</h3>
+          <p class="text-sm leading-relaxed text-muted">OEs require different types of evidence: documented policies, implementation records, staff competency records, patient tracer evidence, or direct observation. AccredReady guides you on what evidence to collect for each OE.</p>
+        </article>
+        <article class="rounded-xl border border-white/10 bg-panel p-7">
+          <h3 class="mb-3 font-head text-base font-bold text-blue">AccredReady Approach</h3>
+          <p class="text-sm leading-relaxed text-muted">For every OE, AccredReady provides 4 specific achieve tips — concrete actions that move you from non-compliant to fully compliant, written by a practicing NABH Quality Manager.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="px-5 py-8 sm:px-8">
+      <div class="mx-auto max-w-4xl rounded-2xl border border-brand/30 bg-gradient-to-br from-ink2 to-[#1e3a8a] px-6 py-12 text-center">
+        <h2 class="mb-3 font-head text-[clamp(1.5rem,3vw,2rem)] font-bold">Stop Tracking OEs in <span class="text-blue">Excel</span></h2>
+        <p class="mb-8 text-muted">AccredReady gives you a digital dashboard for all 639 OEs with real-time scoring, achieve tips, and gap reports.</p>
+        <a href="https://accredready.in" class="inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white shadow-[0_4px_24px_rgba(37,99,235,0.35)] outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start Free — No Credit Card Needed →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-line px-5 py-8 text-center text-sm text-muted sm:px-8">
+    <nav aria-label="Footer" class="mb-3 flex flex-wrap justify-center gap-x-6 gap-y-2">
+      <a href="https://accredready.in" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
+      <a href="https://accredready.in/nabh-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Software</a>
+      <a href="https://accredready.in/shco-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Software</a>
+      <a href="https://accredready.in/hospital-quality-management.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Quality Management</a>
+      <a href="https://accredready.in/privacy.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
+    </nav>
+    <p>© 2026 AccredReady by MK Tech. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
