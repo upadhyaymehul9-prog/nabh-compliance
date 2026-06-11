@@ -2181,7 +2181,7 @@ function TermsScreen({onBack}){return(
         ['1. Acceptance','By using AccredReady at accredready.in, you agree to these terms. If you disagree, do not use the platform.'],
         ['2. What AccredReady Is','AccredReady is an independent educational preparation tool for healthcare accreditation. It is not affiliated with, endorsed by, or officially connected to any accreditation body including any government authority.'],
         ['3. Your Account','You are responsible for keeping your login credentials secure. You agree to provide accurate information. We may suspend accounts that violate these terms.'],
-        ['4. Subscription & Payment','Plans: ₹499/month (Starter), ₹999/month (Professional), ₹2,999/month (Consultant). 14-day free trial for new users — no payment required. Payment via UPI or bank transfer. Cancel anytime by emailing upadhyay.mehul9@gmail.com. No refunds for partial months used.'],
+        ['4. Subscription & Payment','Plan: ₹499/month per hospital, all features included. 14-day free trial for new users — no payment required. Payment via UPI or bank transfer. Cancel anytime by emailing upadhyay.mehul9@gmail.com. No refunds for partial months used.'],
         ['5. Acceptable Use','You agree not to share your account, attempt to access other users data, copy or reproduce platform content, or use the platform for any unlawful purpose.'],
         ['6. Intellectual Property','All content, design, and code is owned by AccredReady / Dr. Mehul Upadhyay. No reproduction without written permission.'],
         ['7. Disclaimer','AccredReady does not guarantee accreditation outcomes. All accreditation decisions rest with the relevant accreditation body. Always verify content against official published standards.'],
@@ -2510,7 +2510,7 @@ function SetupScreen({ user, onReady }) {
   const proceed=()=>{
     if(!hospital||!selAss)return;
     const ass=assessments.find(a=>a.id===selAss);
-    onReady({hospitalId:hospital.id,assessmentId:selAss,hospitalName:hospital.name,assessmentName:ass?.name,userEmail:user.email,userId:user.id});
+    onReady({hospitalId:hospital.id,assessmentId:selAss,hospitalName:hospital.name,assessmentName:ass?.name,userEmail:user.email,userId:user.id,plan:hospital.plan});
   };
 
   if(loading) return (

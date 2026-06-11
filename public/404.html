@@ -10,15 +10,11 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>NABH Compliance Engine — 6th Edition</title>
     <script>
-      // Show pricing page to first-time visitors only
-      // Skip if: returning user (has seen pricing), direct app link (?app=1), or logged in before
+      // GitHub Pages serves this file for any unmatched path. Recover the
+      // visitor into the app at the site root instead of a dead end.
       (function() {
-        var seen = sessionStorage.getItem('nabh_seen_pricing');
-        var isAppLink = window.location.search.indexOf('app=1') !== -1;
-        var isReturning = localStorage.getItem('nabh_returning');
-        if (!seen && !isAppLink && !isReturning) {
-          sessionStorage.setItem('nabh_seen_pricing', '1');
-          window.location.replace('./pricing.html');
+        if (window.location.pathname !== '/') {
+          window.location.replace('/');
         }
       })();
     </script>
