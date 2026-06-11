@@ -6444,7 +6444,7 @@ export default function App() {
           {[
             {label:'Chapters',val:'10'},
             {label:'Total OEs',val:'639'},
-            {label:'Validity',val:'4 Years'},
+            {label:'Validity',val:'3 Years'},
             {label:'Surveillance',val:'24 Months'},
           ].map(s => (
             <div key={s.label} style={{background:T.panel2,borderRadius:8,padding:'10px 16px',textAlign:'center',border:`1px solid ${T.border}`}}>
@@ -6480,7 +6480,7 @@ export default function App() {
       <div style={{marginTop:16,background:T.panel2,borderRadius:10,padding:14,border:`1px solid ${T.orange}44`}}>
         <div style={{color:T.orange,fontWeight:600,fontSize:15,marginBottom:6}}>⚠️ Key Differences vs ELC</div>
         <div style={{color:T.text,fontSize:14,lineHeight:1.7}}>
-          Full accreditation requires implementation of all 639 OEs vs simplified ELC standards. Requires pre-assessment, final assessment + surveillance at 24 months. Validity is 4 years (vs 2 years for ELC).
+          Full accreditation requires implementation of all 639 OEs vs simplified ELC standards. Requires pre-assessment, final assessment + surveillance at 24 months. Validity is 3 years (vs 2 years for ELC).
           Apply via <strong style={{color:T.gold}}>portal.nabh.co</strong> (not HOPE portal). Assessment team is 2–3 assessors vs 1–2 for ELC.
         </div>
       </div>
@@ -6862,7 +6862,7 @@ export default function App() {
       <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.gold}44`,marginBottom:16}}>
         <div style={{color:T.gold,fontWeight:700,fontSize:15,marginBottom:8}}>🚀 The Journey: HCO ELC → Full NABH Accreditation</div>
         <div style={{color:T.text,fontSize:14,lineHeight:1.7}}>
-          Entry Level Certification is the first step. After ELC, HCOs can upgrade to Full NABH Hospital Accreditation (6th Edition) — 639 OEs, 4-year validity, and the gold standard in Indian hospital accreditation. Apply via portal.nabh.co at least 6 months before ELC expiry.
+          Entry Level Certification is the first step. After ELC, HCOs can upgrade to Full NABH Hospital Accreditation (6th Edition) — 639 OEs, 3-year validity, and the gold standard in Indian hospital accreditation. Apply via portal.nabh.co at least 6 months before ELC expiry.
         </div>
       </div>
       <div style={{color:T.gold,fontWeight:600,fontSize:15,marginBottom:10}}>Recommended Timeline</div>
