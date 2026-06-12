@@ -24,29 +24,20 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Tailwind via CDN + shared design-system token config -->
+  <!-- Tailwind via CDN + AccredReady design-system tokens -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ink:    '#040d1a', ink2: '#0a1f3d', panel: '#0f1f38', panel2: '#0a1838',
-            blue:   '#38bdf8', brand: '#2563eb', gold: '#f59e0b', purple: '#a78bfa',
-            teal:   '#2dd4bf', orange: '#fb923c', paper: '#f8fafc', muted: '#94a3b8',
-            good:   '#4ade80', bad: '#f87171', line: 'rgba(255,255,255,0.08)',
-          },
-          fontFamily: {
-            head: ['Syne', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-            body: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
+      theme: { extend: {
+        colors: { ink:'#0B1B2B', paper:'#FBFDFD', verify:'#0E8A5F', verifydark:'#0A6B4A', signal:'#D97706', alert:'#DC2626', slate:'#4B5D6E', hairline:'#DCE6E4', mint:'#EBF4F0' },
+        fontFamily: { display:['"Bricolage Grotesque"','sans-serif'], body:['"IBM Plex Sans"','sans-serif'], mono:['"IBM Plex Mono"','monospace'] }
+      }}
     };
   </script>
   <style>
+    body { background:#FBFDFD; }
     html { scroll-behavior: smooth; }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -59,117 +50,119 @@
   </style>
 </head>
 
-<body class="bg-ink text-paper font-body leading-[1.7] antialiased">
+<body class="font-body text-ink leading-[1.7] antialiased">
 
-  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Skip to content</a>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-lg focus:bg-verify focus:px-4 focus:py-2 focus:text-white focus:outline-none">Skip to content</a>
 
   <!-- NAV -->
-  <nav class="sticky top-0 z-[100] flex items-center justify-between border-b border-line bg-ink/95 px-5 py-4 backdrop-blur-md sm:px-8">
-    <a href="https://accredready.in" class="rounded font-head text-xl font-extrabold text-blue outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">AccredReady</a>
-    <a href="https://accredready.in" class="rounded-md bg-brand px-5 py-2 text-sm font-medium text-white outline-none transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">Start Free Trial</a>
+  <nav class="sticky top-0 z-[100] border-b border-hairline bg-paper/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="https://accredready.in" class="rounded font-display text-[22px] font-bold tracking-[-0.01em] text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2">AccredReady</a>
+      <a href="https://accredready.in" class="rounded-xl bg-verify px-5 py-2.5 text-[15px] font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 motion-reduce:transform-none motion-reduce:transition-none">Start free trial</a>
+    </div>
   </nav>
 
   <main id="main">
 
     <!-- HERO -->
     <header class="mx-auto max-w-3xl px-5 pb-10 pt-16 text-center sm:px-8">
-      <span class="mb-6 inline-block rounded-full border border-brand/40 bg-brand/15 px-4 py-1 text-xs font-medium uppercase tracking-wider text-blue">Quality Guide · Internal Audits</span>
-      <h1 class="mb-5 font-head text-[clamp(1.8rem,4vw,3rem)] font-extrabold leading-[1.15]">NABH Internal Audit Checklist:<br><span class="text-blue">Complete Guide for Quality Teams</span></h1>
-      <p class="mx-auto max-w-2xl text-lg text-muted">How to conduct effective NABH internal audits, what to check in each chapter, how to raise CAPAs, and how to use audit findings to ensure your hospital passes the NABH assessment.</p>
+      <span class="mb-6 inline-flex items-center gap-2 rounded-lg border border-verify/20 bg-mint px-3 py-1.5 font-mono text-[13px] uppercase tracking-wide text-verify"><span class="h-1.5 w-1.5 rounded-full bg-verify"></span>Quality Guide · Internal Audits</span>
+      <h1 class="mb-5 font-display text-[clamp(1.8rem,4vw,3rem)] font-bold leading-[1.1] tracking-[-0.02em]">NABH Internal Audit Checklist:<br>Complete Guide for Quality Teams</h1>
+      <p class="mx-auto max-w-2xl text-lg text-slate">How to conduct effective NABH internal audits, what to check in each chapter, how to raise CAPAs, and how to use audit findings to ensure your hospital passes the NABH assessment.</p>
     </header>
 
-    <article class="mx-auto max-w-3xl px-5 pb-16 sm:px-8 [&>h2]:mb-4 [&>h2]:mt-10 [&>h2]:font-head [&>h2]:text-2xl [&>h2]:font-bold [&_h2_span]:text-blue [&>h3]:mb-2 [&>h3]:mt-7 [&>h3]:font-head [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-blue [&>p]:mb-4 [&>p]:text-[0.97rem] [&>p]:text-[#cbd5e1] [&_strong]:text-paper">
+    <article class="mx-auto max-w-3xl px-5 pb-16 sm:px-8 [&>h2]:mb-4 [&>h2]:mt-10 [&>h2]:font-display [&>h2]:text-2xl [&>h2]:font-bold [&_h2_span]:text-ink [&>h3]:mb-2 [&>h3]:mt-7 [&>h3]:font-display [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-ink [&>p]:mb-4 [&>p]:text-[0.97rem] [&>p]:text-slate [&_strong]:text-ink">
 
       <h2>Why Internal Audits Are Critical for NABH</h2>
       <p>NABH assessors do not just look at whether you have policies — they evaluate whether your quality system is self-correcting. A hospital with documented internal audit records and closed CAPAs signals a functioning quality system. A hospital with no internal audits signals one that only prepares when assessors are coming.</p>
       <p>NABH assessors will specifically ask: "Show me your last internal audit report." If you cannot produce one, it reflects on your entire quality programme — not just on one OE.</p>
       <p>Internal audits serve three purposes: identifying gaps before assessors do, training your team to think in NABH terms, and generating the CAPA trail that demonstrates continuous improvement.</p>
 
-      <div class="my-6 rounded-xl border border-brand/30 bg-brand/10 px-6 py-5"><p class="!mb-0 !text-paper">📋 <strong>Minimum audit frequency:</strong> NABH recommends internal audits for each chapter at least once before the assessment, and annually for accredited hospitals. AccredReady includes 35 structured internal audit templates covering all 10 chapters — ready to use without building from scratch.</p></div>
+      <div class="my-6 rounded-xl border border-verify/30 bg-mint px-6 py-5"><p class="!mb-0 !text-ink">📋 <strong>Minimum audit frequency:</strong> NABH recommends internal audits for each chapter at least once before the assessment, and annually for accredited hospitals. AccredReady includes 35 structured internal audit templates covering all 10 chapters — ready to use without building from scratch.</p></div>
 
       <h2>Chapter-wise Internal Audit <span>Checklist</span></h2>
       <p>Use these checklists during your internal audits. For each item, score 1-5 and document evidence.</p>
 
-      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
-        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-brand/20 px-2.5 py-1 font-head text-[0.8rem] font-bold text-blue">AAC</span><h3 class="!m-0 !text-paper">Access, Assessment &amp; Continuity of Care</h3></div>
-        <ul class="space-y-0 text-[0.88rem] text-[#cbd5e1]">
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is there a documented OPD registration process? Observe the actual process — does it match the SOP?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are emergency patients triaged within defined timeframes? Check triage register for last 30 cases.</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are initial clinical assessments completed within 24 hours of admission? Audit 10 random case files.</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are discharge summaries complete with all required components? Check completion within 24 hours post-discharge.</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is there evidence of care continuity during patient transfers between departments?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is the referral policy followed when patients are transferred to other hospitals?</li>
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">AAC</span><h3 class="!m-0 !text-ink">Access, Assessment &amp; Continuity of Care</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is there a documented OPD registration process? Observe the actual process — does it match the SOP?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are emergency patients triaged within defined timeframes? Check triage register for last 30 cases.</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are initial clinical assessments completed within 24 hours of admission? Audit 10 random case files.</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are discharge summaries complete with all required components? Check completion within 24 hours post-discharge.</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is there evidence of care continuity during patient transfers between departments?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is the referral policy followed when patients are transferred to other hospitals?</li>
         </ul>
       </div>
 
-      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
-        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-brand/20 px-2.5 py-1 font-head text-[0.8rem] font-bold text-blue">COP</span><h3 class="!m-0 !text-paper">Care of Patients</h3></div>
-        <ul class="space-y-0 text-[0.88rem] text-[#cbd5e1]">
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is the WHO Surgical Safety Checklist in use for all procedures? Observe actual OT practice.</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are high-risk patients (falls, pressure injury, restraints) identified and managed per protocol?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is informed consent documented for all invasive procedures? Check 10 recent OT case files.</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is the resuscitation equipment checked and documented daily?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are blood transfusion records complete with pre-transfusion checks documented?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is patient pain assessed using a validated scale on admission and during care?</li>
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">COP</span><h3 class="!m-0 !text-ink">Care of Patients</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is the WHO Surgical Safety Checklist in use for all procedures? Observe actual OT practice.</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are high-risk patients (falls, pressure injury, restraints) identified and managed per protocol?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is informed consent documented for all invasive procedures? Check 10 recent OT case files.</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is the resuscitation equipment checked and documented daily?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are blood transfusion records complete with pre-transfusion checks documented?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is patient pain assessed using a validated scale on admission and during care?</li>
         </ul>
       </div>
 
-      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
-        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-brand/20 px-2.5 py-1 font-head text-[0.8rem] font-bold text-blue">MOM</span><h3 class="!m-0 !text-paper">Management of Medication</h3></div>
-        <ul class="space-y-0 text-[0.88rem] text-[#cbd5e1]">
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is the high-alert medication list displayed prominently in pharmacy, ICU, and wards?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are LASA drugs segregated and labelled in pharmacy storage?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is medication prescribed legibly with dose, route, and frequency clearly stated?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are narcotic drugs stored securely with dual-key access? Check register for last 30 days.</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are medication errors reported through the incident system? Check for last 3 months.</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is the formulary accessible to prescribers? When was it last reviewed?</li>
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">MOM</span><h3 class="!m-0 !text-ink">Management of Medication</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is the high-alert medication list displayed prominently in pharmacy, ICU, and wards?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are LASA drugs segregated and labelled in pharmacy storage?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is medication prescribed legibly with dose, route, and frequency clearly stated?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are narcotic drugs stored securely with dual-key access? Check register for last 30 days.</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are medication errors reported through the incident system? Check for last 3 months.</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is the formulary accessible to prescribers? When was it last reviewed?</li>
         </ul>
       </div>
 
-      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
-        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-brand/20 px-2.5 py-1 font-head text-[0.8rem] font-bold text-blue">IPC</span><h3 class="!m-0 !text-paper">Infection Prevention &amp; Control</h3></div>
-        <ul class="space-y-0 text-[0.88rem] text-[#cbd5e1]">
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Observe hand hygiene practice in wards — are staff using alcohol rub correctly at 5 moments?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Check BMW bins in all areas — correct colour coding, lid closure, not overfilled?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Review sterilisation records — are biological indicators used weekly for steam autoclaves?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is the IPC committee meeting regularly with minutes documented?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are HAI surveillance data being collected and reported monthly?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is the sharps disposal process correct? Check for recapping of needles (should be zero).</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is there a bundle protocol for CAUTI, CLABSI prevention in ICU?</li>
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">IPC</span><h3 class="!m-0 !text-ink">Infection Prevention &amp; Control</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Observe hand hygiene practice in wards — are staff using alcohol rub correctly at 5 moments?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Check BMW bins in all areas — correct colour coding, lid closure, not overfilled?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Review sterilisation records — are biological indicators used weekly for steam autoclaves?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is the IPC committee meeting regularly with minutes documented?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are HAI surveillance data being collected and reported monthly?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is the sharps disposal process correct? Check for recapping of needles (should be zero).</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is there a bundle protocol for CAUTI, CLABSI prevention in ICU?</li>
         </ul>
       </div>
 
-      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
-        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-brand/20 px-2.5 py-1 font-head text-[0.8rem] font-bold text-blue">PSQ</span><h3 class="!m-0 !text-paper">Patient Safety &amp; Quality</h3></div>
-        <ul class="space-y-0 text-[0.88rem] text-[#cbd5e1]">
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is there an active incident reporting system? How many incidents reported in last quarter?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are incidents analysed and CAPAs raised and closed? Review last 5 incident reports.</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are quality indicators (KPIs) being tracked monthly with data visible to management?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is there a patient satisfaction survey system? Are results analysed and actioned?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Has a Root Cause Analysis been done for any sentinel event in last 12 months?</li>
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">PSQ</span><h3 class="!m-0 !text-ink">Patient Safety &amp; Quality</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is there an active incident reporting system? How many incidents reported in last quarter?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are incidents analysed and CAPAs raised and closed? Review last 5 incident reports.</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are quality indicators (KPIs) being tracked monthly with data visible to management?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is there a patient satisfaction survey system? Are results analysed and actioned?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Has a Root Cause Analysis been done for any sentinel event in last 12 months?</li>
         </ul>
       </div>
 
-      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
-        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-brand/20 px-2.5 py-1 font-head text-[0.8rem] font-bold text-blue">FMS</span><h3 class="!m-0 !text-paper">Facility Management &amp; Safety</h3></div>
-        <ul class="space-y-0 text-[0.88rem] text-[#cbd5e1]">
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are fire extinguishers within date and accessible? Physical check of all floors.</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are fire exit routes clearly marked and unobstructed?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Have fire evacuation drills been conducted in last 6 months? Check records.</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are medical gas cylinders stored correctly (secured, segregated full/empty)?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is the electrical earthing tested annually? Any pending electrical safety issues?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are biomedical equipment calibration records up to date?</li>
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">FMS</span><h3 class="!m-0 !text-ink">Facility Management &amp; Safety</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are fire extinguishers within date and accessible? Physical check of all floors.</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are fire exit routes clearly marked and unobstructed?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Have fire evacuation drills been conducted in last 6 months? Check records.</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are medical gas cylinders stored correctly (secured, segregated full/empty)?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is the electrical earthing tested annually? Any pending electrical safety issues?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are biomedical equipment calibration records up to date?</li>
         </ul>
       </div>
 
-      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
-        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-brand/20 px-2.5 py-1 font-head text-[0.8rem] font-bold text-blue">HRM</span><h3 class="!m-0 !text-paper">Human Resource Management</h3></div>
-        <ul class="space-y-0 text-[0.88rem] text-[#cbd5e1]">
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are credential files complete for all doctors — qualification certificates + registration?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are clinical privileges defined and signed for each practitioner?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Is there documented evidence of orientation training for all new staff?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are mandatory trainings completed — fire safety, hand hygiene, BLS, POSH?</li>
-          <li class="flex gap-2.5 border-b border-white/5 py-2 last:border-0"><span class="flex-shrink-0 text-blue" aria-hidden="true">→</span>Are staff health records maintained including hepatitis B vaccination status?</li>
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">HRM</span><h3 class="!m-0 !text-ink">Human Resource Management</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are credential files complete for all doctors — qualification certificates + registration?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are clinical privileges defined and signed for each practitioner?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Is there documented evidence of orientation training for all new staff?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are mandatory trainings completed — fire safety, hand hygiene, BLS, POSH?</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Are staff health records maintained including hepatitis B vaccination status?</li>
         </ul>
       </div>
 
@@ -177,10 +170,10 @@
       <p>Every audit finding must be classified by severity and converted into a formal CAPA. This is what NABH assessors look for — not just that you found problems, but that you fixed them systematically.</p>
 
       <div class="my-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <div class="rounded-xl border-t-[3px] border-bad bg-panel p-5"><div class="mb-1 font-head font-bold text-bad">Critical NC</div><div class="text-[0.85rem] text-muted">Immediate patient safety risk. Close within 7 days. Requires root cause analysis. Example: No crash cart in ICU, expired medications in use.</div></div>
-        <div class="rounded-xl border-t-[3px] border-orange bg-panel p-5"><div class="mb-1 font-head font-bold text-orange">Major NC</div><div class="text-[0.85rem] text-muted">Systemic compliance failure. Close within 30 days. Example: No hand hygiene compliance data, missing fire drill records.</div></div>
-        <div class="rounded-xl border-t-[3px] border-gold bg-panel p-5"><div class="mb-1 font-head font-bold text-gold">Minor NC</div><div class="text-[0.85rem] text-muted">Isolated gap without systemic pattern. Close within 60 days. Example: One incomplete discharge summary, single missing equipment log.</div></div>
-        <div class="rounded-xl border-t-[3px] border-blue bg-panel p-5"><div class="mb-1 font-head font-bold text-blue">Observation</div><div class="text-[0.85rem] text-muted">Opportunity for improvement. No mandatory closure date. Example: Consider digital medication tracking, explore electronic records.</div></div>
+        <div class="rounded-xl border border-hairline border-t-[3px] border-t-alert bg-white p-5"><div class="mb-1 font-mono font-medium uppercase tracking-wide text-alert">Critical NC</div><div class="text-[0.85rem] text-slate">Immediate patient safety risk. Close within 7 days. Requires root cause analysis. Example: No crash cart in ICU, expired medications in use.</div></div>
+        <div class="rounded-xl border border-hairline border-t-[3px] border-t-signal bg-white p-5"><div class="mb-1 font-mono font-medium uppercase tracking-wide text-signal">Major NC</div><div class="text-[0.85rem] text-slate">Systemic compliance failure. Close within 30 days. Example: No hand hygiene compliance data, missing fire drill records.</div></div>
+        <div class="rounded-xl border border-hairline border-t-[3px] border-t-ink bg-white p-5"><div class="mb-1 font-mono font-medium uppercase tracking-wide text-ink">Minor NC</div><div class="text-[0.85rem] text-slate">Isolated gap without systemic pattern. Close within 60 days. Example: One incomplete discharge summary, single missing equipment log.</div></div>
+        <div class="rounded-xl border border-hairline border-t-[3px] border-t-slate bg-white p-5"><div class="mb-1 font-mono font-medium uppercase tracking-wide text-slate">Observation</div><div class="text-[0.85rem] text-slate">Opportunity for improvement. No mandatory closure date. Example: Consider digital medication tracking, explore electronic records.</div></div>
       </div>
 
       <h3>What a Good CAPA Record Looks Like</h3>
@@ -195,26 +188,28 @@
       <h3>Raising CAPAs but not closing them</h3>
       <p>An open CAPA is worse than no CAPA in NABH's view. It shows a system that identifies problems but doesn't solve them. Close every CAPA with documented evidence before the assessment, not just verbal confirmation that it was done.</p>
 
-      <div class="my-10 rounded-2xl border border-brand/30 bg-gradient-to-br from-panel to-panel2 px-6 py-12 text-center">
-        <h2 class="!mt-0">Run Internal Audits with <span>AccredReady</span></h2>
-        <p class="mx-auto mt-3 max-w-lg !text-muted">AccredReady includes 35 structured audit templates, a digital CAPA tracker, and closure monitoring — so your quality team always knows what's open, overdue, and closed.</p>
-        <a href="https://accredready.in" class="mt-4 inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start Free Trial →</a>
+      <div class="my-10 rounded-2xl bg-ink px-6 py-12 text-center">
+        <h2 class="!mt-0 !text-white">Run Internal Audits with <span class="!text-white">AccredReady</span></h2>
+        <p class="mx-auto mt-3 max-w-lg !text-white/70">AccredReady includes 35 structured audit templates, a digital CAPA tracker, and closure monitoring — so your quality team always knows what's open, overdue, and closed.</p>
+        <a href="https://accredready.in" class="mt-4 inline-block rounded-xl bg-verify px-8 py-3.5 font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start free trial →</a>
       </div>
 
     </article>
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-line px-5 py-8 text-center text-sm text-muted sm:px-8">
-    <nav aria-label="Footer" class="mb-3 flex flex-wrap justify-center gap-x-6 gap-y-2">
-      <a href="https://accredready.in" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
-      <a href="https://accredready.in/nabh-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Software</a>
-      <a href="https://accredready.in/nabh-6th-edition-standards.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">6th Edition Guide</a>
-      <a href="https://accredready.in/nabh-shco-checklist.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Checklist</a>
-      <a href="https://accredready.in/nabh-kpi-indicators.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">KPI Guide</a>
-      <a href="https://accredready.in/privacy.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
-    </nav>
-    <p>© 2026 AccredReady by MK Tech. Written by Dr. Mehul Upadhyay, NABH Quality Manager.</p>
+  <footer class="bg-ink text-white/70">
+    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+      <nav aria-label="Footer" class="flex flex-wrap justify-center gap-x-7 gap-y-3 text-[14px]">
+        <a href="https://accredready.in" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
+        <a href="https://accredready.in/nabh-accreditation-software.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Software</a>
+        <a href="https://accredready.in/nabh-6th-edition-standards.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">6th Edition Guide</a>
+        <a href="https://accredready.in/nabh-shco-checklist.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Checklist</a>
+        <a href="https://accredready.in/nabh-kpi-indicators.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">KPI Guide</a>
+        <a href="https://accredready.in/privacy.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
+      </nav>
+      <p class="mt-8 text-center font-mono text-[12px] text-white/45">© 2026 AccredReady by MK Tech. Written by Dr. Mehul Upadhyay, NABH Quality Manager.</p>
+    </div>
   </footer>
 
 </body>
