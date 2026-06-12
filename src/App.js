@@ -2136,6 +2136,15 @@ function LoginScreen({ onLogin, initialError }) {
             {mode==="login"?"Sign up":mode==="reset"?"Sign in":"Sign in"}
           </span>
         </div>
+        {/* Hidden inside the installed app (TWA/PWA) — those users already have it */}
+        {!window.matchMedia("(display-mode: standalone)").matches&&(
+          <div style={{textAlign:"center",marginTop:14}}>
+            <div style={{fontSize:11,color:T.muted,marginBottom:6}}>Or get the Android app</div>
+            <a href="https://play.google.com/store/apps/details?id=com.mktech.nabhcompliance" target="_blank" rel="noopener noreferrer" style={{display:"inline-block"}}>
+              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style={{height:44,width:"auto",display:"block"}}/>
+            </a>
+          </div>
+        )}
         <div style={{textAlign:"center",marginTop:10,fontSize:11,color:T.muted}}>Independent educational tool — Not affiliated with NABH/QCI</div>
         <div style={{textAlign:"center",marginTop:10,paddingBottom:4}}>
           <span style={{fontSize:12,color:T.muted}}>14-day free trial · No credit card · </span>
