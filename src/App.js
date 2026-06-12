@@ -2056,6 +2056,7 @@ function LoginScreen({ onLogin, initialError }) {
   const [mode,setMode]=useState("login"); const [error,setError]=useState(initialError||"");
   const [loading,setLoading]=useState(false); const [msg,setMsg]=useState("");
   const [showPricing,setShowPricing]=useState(false);
+  const [showContact,setShowContact]=useState(false);
   useEffect(()=>{
     if(initialError)setError(initialError);
   },[initialError]);
@@ -2124,7 +2125,7 @@ function LoginScreen({ onLogin, initialError }) {
               <span onClick={()=>{setMode("reset");setError("");setMsg("");}} style={{color:T.blue,cursor:"pointer"}}>Forgot password?</span>
             </div>
             <div style={{display:'flex',gap:20,justifyContent:'center',marginTop:14,flexWrap:'wrap'}}>
-              <a href="mailto:upadhyay.mehul9@gmail.com" style={{fontSize:12,color:'#3a5870',textDecoration:'none',letterSpacing:1,textTransform:'uppercase'}}>Contact Us</a>
+              <span onClick={()=>setShowContact(true)} style={{fontSize:12,color:'#3a5870',cursor:'pointer',letterSpacing:1,textTransform:'uppercase'}}>Contact Us</span>
               <span onClick={()=>setMode('terms')} style={{fontSize:12,color:'#3a5870',cursor:'pointer',letterSpacing:1,textTransform:'uppercase'}}>Terms & Conditions</span>
               <a href="/privacy.html" target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:'#3a5870',letterSpacing:1,textTransform:'uppercase',textDecoration:'none'}}>Privacy Policy</a>
             </div>
@@ -2177,6 +2178,41 @@ function LoginScreen({ onLogin, initialError }) {
           </div>
         </div>
       )}
+      {showContact&&<ContactModal onClose={()=>setShowContact(false)}/>}
+    </div>
+  );
+}
+function ContactModal({onClose}){
+  const [name,setName]=useState("");const [email,setEmail]=useState("");const [phone,setPhone]=useState("");const [message,setMessage]=useState("");
+  const [loading,setLoading]=useState(false);const [success,setSuccess]=useState(false);const [err,setErr]=useState(false);
+  const submit=async(e)=>{
+    e.preventDefault();setLoading(true);setSuccess(false);setErr(false);
+    try{
+      const res=await fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({access_key:"2aaadfc3-c669-4b2b-92b8-6d6bee4faee1",name,email,phone,message})});
+      const json=await res.json();
+      if(res.ok&&json.success){setSuccess(true);setName("");setEmail("");setPhone("");setMessage("");}
+      else setErr(true);
+    }catch{setErr(true);}
+    setLoading(false);
+  };
+  const inp={width:"100%",boxSizing:"border-box",padding:"10px 12px",background:"#0d2035",border:"1px solid #1e3a52",borderRadius:8,color:"#eef4f9",fontSize:15,outline:"none",fontFamily:"inherit"};
+  const lbl={display:"block",color:"#7a9db8",fontSize:13,marginBottom:5};
+  return(
+    <div onClick={onClose} style={{position:"fixed",inset:0,zIndex:3000,background:"rgba(0,0,0,0.75)",display:"flex",alignItems:"center",justifyContent:"center",padding:20}}>
+      <div onClick={e=>e.stopPropagation()} style={{background:"#081525",border:"1px solid #1e3a52",borderRadius:16,padding:"28px 24px",maxWidth:420,width:"100%",position:"relative",maxHeight:"90vh",overflowY:"auto"}}>
+        <button onClick={onClose} style={{position:"absolute",top:12,right:14,background:"none",border:"none",color:"#7a9db8",fontSize:20,cursor:"pointer",lineHeight:1}}>✕</button>
+        <div style={{fontSize:11,letterSpacing:3,color:"#c9a84c",marginBottom:8,textTransform:"uppercase"}}>AccredReady</div>
+        <div style={{fontSize:20,fontWeight:700,color:"#eef4f9",marginBottom:18}}>Contact Us</div>
+        {success&&<div style={{color:"#0E8A5F",fontSize:15,padding:14,background:"#EBF4F0",borderRadius:8,marginBottom:16}}>Thank you! We'll get back to you soon.</div>}
+        {err&&<div style={{color:"#DC2626",fontSize:14,padding:12,background:"#fef2f2",borderRadius:8,marginBottom:16}}>Something went wrong, please try again.</div>}
+        <form onSubmit={submit}>
+          <div style={{marginBottom:14}}><label style={lbl}>Name *</label><input type="text" required value={name} onChange={e=>setName(e.target.value)} style={inp}/></div>
+          <div style={{marginBottom:14}}><label style={lbl}>Email *</label><input type="email" required value={email} onChange={e=>setEmail(e.target.value)} style={inp}/></div>
+          <div style={{marginBottom:14}}><label style={lbl}>Mobile *</label><input type="tel" required value={phone} onChange={e=>setPhone(e.target.value)} style={inp}/></div>
+          <div style={{marginBottom:18}}><label style={lbl}>Message *</label><textarea required rows={4} value={message} onChange={e=>setMessage(e.target.value)} style={{...inp,resize:"vertical"}}/></div>
+          <button type="submit" disabled={loading} style={{width:"100%",padding:12,background:"#0E8A5F",border:"none",borderRadius:10,color:"#fff",fontSize:15,fontWeight:600,cursor:"pointer",opacity:loading?0.7:1,fontFamily:"inherit"}}>{loading?"Sending…":"Send Message"}</button>
+        </form>
+      </div>
     </div>
   );
 }
