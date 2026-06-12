@@ -24,40 +24,31 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Tailwind via CDN + shared design-system token config -->
+  <!-- Tailwind via CDN + AccredReady design-system tokens -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ink:    '#040d1a', ink2: '#0a1f3d', panel: '#0f1f38', panel2: '#0a1838',
-            blue:   '#38bdf8', brand: '#2563eb', gold: '#f59e0b', purple: '#a78bfa',
-            teal:   '#2dd4bf', orange: '#fb923c', paper: '#f8fafc', muted: '#94a3b8',
-            good:   '#4ade80', bad: '#f87171', line: 'rgba(255,255,255,0.08)',
-          },
-          fontFamily: {
-            head: ['Syne', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-            body: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
+      theme: { extend: {
+        colors: { ink:'#0B1B2B', paper:'#FBFDFD', verify:'#0E8A5F', verifydark:'#0A6B4A', signal:'#D97706', alert:'#DC2626', slate:'#4B5D6E', hairline:'#DCE6E4', mint:'#EBF4F0' },
+        fontFamily: { display:['"Bricolage Grotesque"','sans-serif'], body:['"IBM Plex Sans"','sans-serif'], mono:['"IBM Plex Mono"','monospace'] }
+      }}
     };
   </script>
   <style type="text/tailwindcss">
     @layer components {
       .tbl { @apply w-full border-collapse text-[0.9rem]; }
-      .tbl th { @apply bg-panel px-4 py-3 text-left font-head font-bold text-paper; }
-      .tbl td { @apply border-b border-white/5 px-4 py-2.5 align-top text-[#cbd5e1]; }
-      .tbl strong { @apply text-paper; }
-      .chk { @apply flex items-start gap-3 border-b border-white/5 py-2 text-[0.9rem] text-[#cbd5e1] last:border-0; }
-      .chk .box { @apply flex-shrink-0 text-good; }
-      .core { @apply ml-auto flex-shrink-0 rounded bg-bad/15 px-1.5 py-0.5 text-[0.7rem] font-bold text-bad; }
+      .tbl th { @apply bg-mint px-4 py-3 text-left font-mono text-[0.78rem] font-medium uppercase tracking-wide text-ink; }
+      .tbl td { @apply border-b border-hairline px-4 py-2.5 align-top text-slate; }
+      .tbl strong { @apply text-ink; }
+      .chk { @apply flex items-start gap-3 border-b border-hairline py-2 text-[0.9rem] text-slate last:border-0; }
+      .chk .box { @apply flex-shrink-0 text-verify; }
+      .core { @apply ml-auto flex-shrink-0 rounded bg-[#FDEAEA] px-1.5 py-0.5 font-mono text-[0.7rem] font-medium text-alert; }
     }
   </style>
   <style>
+    body { background:#FBFDFD; }
     html { scroll-behavior: smooth; }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -70,38 +61,40 @@
   </style>
 </head>
 
-<body class="bg-ink text-paper font-body leading-[1.7] antialiased">
+<body class="font-body text-ink leading-[1.7] antialiased">
 
-  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Skip to content</a>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-lg focus:bg-verify focus:px-4 focus:py-2 focus:text-white focus:outline-none">Skip to content</a>
 
   <!-- NAV -->
-  <nav class="sticky top-0 z-[100] flex items-center justify-between border-b border-line bg-ink/95 px-5 py-4 backdrop-blur-md sm:px-8">
-    <a href="https://accredready.in" class="rounded font-head text-xl font-extrabold text-blue outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">AccredReady</a>
-    <a href="https://accredready.in" class="rounded-md bg-brand px-5 py-2 text-sm font-medium text-white outline-none transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">Start Free Trial</a>
+  <nav class="sticky top-0 z-[100] border-b border-hairline bg-paper/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="https://accredready.in" class="rounded font-display text-[22px] font-bold tracking-[-0.01em] text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2">AccredReady</a>
+      <a href="https://accredready.in" class="rounded-xl bg-verify px-5 py-2.5 text-[15px] font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 motion-reduce:transform-none motion-reduce:transition-none">Start free trial</a>
+    </div>
   </nav>
 
   <main id="main">
 
     <!-- HERO -->
     <header class="mx-auto max-w-3xl px-5 pb-10 pt-16 text-center sm:px-8">
-      <span class="mb-6 inline-block rounded-full border border-brand/40 bg-brand/15 px-4 py-1 text-xs font-medium uppercase tracking-wider text-blue">Hospital Checklist · NABH SHCO</span>
-      <h1 class="mb-5 font-head text-[clamp(1.8rem,4vw,3rem)] font-extrabold leading-[1.15]">NABH SHCO Checklist:<br><span class="text-blue">Complete Small Hospital Guide 2026</span></h1>
-      <p class="mx-auto max-w-2xl text-lg text-muted">The most complete NABH SHCO preparation checklist. Covers all 408 OEs, mandatory committees, documents, and common failure points.</p>
+      <span class="mb-6 inline-flex items-center gap-2 rounded-lg border border-verify/20 bg-mint px-3 py-1.5 font-mono text-[13px] uppercase tracking-wide text-verify"><span class="h-1.5 w-1.5 rounded-full bg-verify"></span>Hospital Checklist · NABH SHCO</span>
+      <h1 class="mb-5 font-display text-[clamp(1.8rem,4vw,3rem)] font-bold leading-[1.1] tracking-[-0.02em]">NABH SHCO Checklist:<br>Complete Small Hospital Guide 2026</h1>
+      <p class="mx-auto max-w-2xl text-lg text-slate">The most complete NABH SHCO preparation checklist. Covers all 408 OEs, mandatory committees, documents, and common failure points.</p>
     </header>
 
-    <article class="mx-auto max-w-3xl px-5 pb-16 sm:px-8 [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:font-head [&_h2]:text-2xl [&_h2]:font-bold [&_h2_span]:text-blue [&_h3]:mb-2 [&_h3]:mt-7 [&_h3]:font-head [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-blue [&_p]:mb-4 [&_p]:text-[0.97rem] [&_p]:text-[#cbd5e1] [&_strong]:text-paper">
+    <article class="mx-auto max-w-3xl px-5 pb-16 sm:px-8 [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-bold [&_h2_span]:text-ink [&_h3]:mb-2 [&_h3]:mt-7 [&_h3]:font-display [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-ink [&_p]:mb-4 [&_p]:text-[0.97rem] [&_p]:text-slate [&_strong]:text-ink">
 
       <h2>What is the NABH SHCO Programme?</h2>
       <p>The Small Healthcare Organisation (SHCO) programme is NABH's accreditation pathway for hospitals with up to 50 beds. It is not a simplified version of the main HCO programme — it is a purpose-built set of standards that recognises the operational realities of smaller hospitals while maintaining non-negotiable patient safety requirements.</p>
       <p>The SHCO programme has 408 Objective Elements (vs 639 for Full HCO Accreditation). The 4-level compliance structure (CORE, Commitment, Achievement, Excellence) still applies, and the same 4 passing rules must be satisfied. What changes is the scope of some standards — proportionate to a smaller organisation's capacity.</p>
 
-      <div class="my-6 rounded-xl border border-brand/30 bg-brand/10 px-6 py-5"><p class="!mb-0 !text-paper">📌 <strong>Key Numbers:</strong> SHCO Full Accreditation = 408 OEs. SHCO Entry Level Certification = subset of SHCO standards. Both programmes use NABH 6th Edition as the base. AccredReady covers both SHCO Full and SHCO ELC with a dedicated module.</p></div>
+      <div class="my-6 rounded-xl border border-verify/30 bg-mint px-6 py-5"><p class="!mb-0 !text-ink">📌 <strong>Key Numbers:</strong> SHCO Full Accreditation = 408 OEs. SHCO Entry Level Certification = subset of SHCO standards. Both programmes use NABH 6th Edition as the base. AccredReady covers both SHCO Full and SHCO ELC with a dedicated module.</p></div>
 
       <h2>NABH SHCO <span>Preparation Checklist</span></h2>
       <p>Use this checklist to assess your hospital's readiness. Items marked CORE are non-negotiable — failure on any CORE item = automatic assessment fail.</p>
 
-      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
-        <h3 class="!mt-0 !mb-4 !text-[0.95rem] !uppercase !tracking-wider !text-blue">📋 Governance &amp; Leadership</h3>
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <h3 class="!mt-0 !mb-4 !font-mono !text-[0.85rem] !font-medium !uppercase !tracking-wider !text-verify">📋 Governance &amp; Leadership</h3>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Governing body constitution document with roles defined</span></div>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Hospital organogram updated and displayed</span></div>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Quality policy signed by top management</span></div>
@@ -110,8 +103,8 @@
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Governing body meeting minutes for last 12 months</span><span class="core">CORE</span></div>
       </div>
 
-      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
-        <h3 class="!mt-0 !mb-4 !text-[0.95rem] !uppercase !tracking-wider !text-blue">🏥 Patient Care &amp; Access</h3>
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <h3 class="!mt-0 !mb-4 !font-mono !text-[0.85rem] !font-medium !uppercase !tracking-wider !text-verify">🏥 Patient Care &amp; Access</h3>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>OPD registration process documented and implemented</span></div>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Triage protocol for emergency patients</span><span class="core">CORE</span></div>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Initial assessment form for all admitted patients</span><span class="core">CORE</span></div>
@@ -121,8 +114,8 @@
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>High-risk patient identification protocol</span><span class="core">CORE</span></div>
       </div>
 
-      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
-        <h3 class="!mt-0 !mb-4 !text-[0.95rem] !uppercase !tracking-wider !text-blue">💊 Medication Management</h3>
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <h3 class="!mt-0 !mb-4 !font-mono !text-[0.85rem] !font-medium !uppercase !tracking-wider !text-verify">💊 Medication Management</h3>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Hospital formulary available and updated</span></div>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>High-alert medication list displayed in pharmacy and wards</span><span class="core">CORE</span></div>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Look-alike sound-alike (LASA) drug protocol</span><span class="core">CORE</span></div>
@@ -132,8 +125,8 @@
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Medication reconciliation process at admission and discharge</span></div>
       </div>
 
-      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
-        <h3 class="!mt-0 !mb-4 !text-[0.95rem] !uppercase !tracking-wider !text-blue">🦠 Infection Prevention &amp; Control</h3>
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <h3 class="!mt-0 !mb-4 !font-mono !text-[0.85rem] !font-medium !uppercase !tracking-wider !text-verify">🦠 Infection Prevention &amp; Control</h3>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Hand hygiene compliance data for last 3 months</span><span class="core">CORE</span></div>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>WHO 5 Moments of Hand Hygiene training records</span><span class="core">CORE</span></div>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Biomedical waste authorisation from SPCB</span><span class="core">CORE</span></div>
@@ -144,8 +137,8 @@
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Linen management SOP with separate clean/dirty pathways</span></div>
       </div>
 
-      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
-        <h3 class="!mt-0 !mb-4 !text-[0.95rem] !uppercase !tracking-wider !text-blue">🔒 Patient Safety</h3>
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <h3 class="!mt-0 !mb-4 !font-mono !text-[0.85rem] !font-medium !uppercase !tracking-wider !text-verify">🔒 Patient Safety</h3>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Incident reporting system with anonymised reporting option</span><span class="core">CORE</span></div>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Patient identification protocol (2 identifiers minimum)</span><span class="core">CORE</span></div>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Surgical safety checklist (WHO) in use for all procedures</span><span class="core">CORE</span></div>
@@ -154,8 +147,8 @@
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Critical results communication protocol (panic values)</span><span class="core">CORE</span></div>
       </div>
 
-      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
-        <h3 class="!mt-0 !mb-4 !text-[0.95rem] !uppercase !tracking-wider !text-blue">🏗️ Facility &amp; Safety</h3>
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <h3 class="!mt-0 !mb-4 !font-mono !text-[0.85rem] !font-medium !uppercase !tracking-wider !text-verify">🏗️ Facility &amp; Safety</h3>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Valid Fire NOC from fire department</span><span class="core">CORE</span></div>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Fire evacuation drill records (minimum 2 per year)</span><span class="core">CORE</span></div>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Fire extinguisher maintenance records</span></div>
@@ -165,8 +158,8 @@
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Disaster management plan with mass casualty protocol</span></div>
       </div>
 
-      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
-        <h3 class="!mt-0 !mb-4 !text-[0.95rem] !uppercase !tracking-wider !text-blue">👥 Human Resources</h3>
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <h3 class="!mt-0 !mb-4 !font-mono !text-[0.85rem] !font-medium !uppercase !tracking-wider !text-verify">👥 Human Resources</h3>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Credential files for all doctors (qualification + registration)</span><span class="core">CORE</span></div>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Clinical privileges defined for each doctor</span><span class="core">CORE</span></div>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Annual training plan with training records</span></div>
@@ -175,8 +168,8 @@
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Staff hepatitis B vaccination records</span><span class="core">CORE</span></div>
       </div>
 
-      <div class="my-4 rounded-xl border border-white/10 bg-panel p-6">
-        <h3 class="!mt-0 !mb-4 !text-[0.95rem] !uppercase !tracking-wider !text-blue">📂 Medical Records &amp; Information</h3>
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <h3 class="!mt-0 !mb-4 !font-mono !text-[0.85rem] !font-medium !uppercase !tracking-wider !text-verify">📂 Medical Records &amp; Information</h3>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Uniform medical record format across all departments</span></div>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Medical record completion within 24 hours of discharge</span></div>
         <div class="chk"><span class="box" aria-hidden="true">☐</span><span>Patient confidentiality policy implemented</span><span class="core">CORE</span></div>
@@ -205,10 +198,10 @@
       <p>NABH SHCO assessment fees are based on bed strength. The fee structure includes application fees, assessment fees, and annual surveillance fees. AccredReady includes a built-in SHCO fee calculator that gives you an estimate based on your bed count — available in the SHCO module after login.</p>
       <p>Official SHCO fee structure: <strong>Application fee ₹25,000 + Annual fee ₹1,50,000</strong> (Full Accreditation, up to 50 beds), plus 18% GST on both. Additional charges: Virtual assessment ₹3,000 + GST, Focus assessment ₹15,000 + GST, Certificate re-issue ₹6,000 + GST. For SHCO ELC (Entry Level), fees range from ₹21,000 (up to 5 beds) to ₹48,000 (21–50 beds) for a 2-year cycle. Always verify current fees on nabh.co before applying.</p>
 
-      <div class="my-10 rounded-2xl border border-brand/30 bg-gradient-to-br from-panel to-panel2 px-6 py-12 text-center">
-        <h2 class="!mt-0">Track Your SHCO Checklist with <span>AccredReady</span></h2>
-        <p class="mx-auto mt-3 max-w-lg !text-muted">AccredReady's SHCO module covers all 408 OEs, all mandatory committees, the fee calculator, and gives you a real-time readiness score. Know exactly where your hospital stands today.</p>
-        <a href="https://accredready.in" class="mt-4 inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start Free Trial →</a>
+      <div class="my-10 rounded-2xl bg-ink px-6 py-12 text-center">
+        <h2 class="!mt-0 !text-white">Track Your SHCO Checklist with <span class="!text-white">AccredReady</span></h2>
+        <p class="mx-auto mt-3 max-w-lg !text-white/70">AccredReady's SHCO module covers all 408 OEs, all mandatory committees, the fee calculator, and gives you a real-time readiness score. Know exactly where your hospital stands today.</p>
+        <a href="https://accredready.in" class="mt-4 inline-block rounded-xl bg-verify px-8 py-3.5 font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start free trial →</a>
       </div>
 
       <h2>Frequently Asked Questions</h2>
@@ -225,16 +218,18 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-line px-5 py-8 text-center text-sm text-muted sm:px-8">
-    <nav aria-label="Footer" class="mb-3 flex flex-wrap justify-center gap-x-6 gap-y-2">
-      <a href="https://accredready.in" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
-      <a href="https://accredready.in/nabh-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Software</a>
-      <a href="https://accredready.in/nabh-6th-edition-standards.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">6th Edition Guide</a>
-      <a href="https://accredready.in/shco-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Software</a>
-      <a href="https://accredready.in/nabh-entry-level-certification.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Entry Level Guide</a>
-      <a href="https://accredready.in/privacy.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
-    </nav>
-    <p>© 2026 AccredReady by MK Tech. Written by Dr. Mehul Upadhyay, NABH Quality Manager.</p>
+  <footer class="bg-ink text-white/70">
+    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+      <nav aria-label="Footer" class="flex flex-wrap justify-center gap-x-7 gap-y-3 text-[14px]">
+        <a href="https://accredready.in" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
+        <a href="https://accredready.in/nabh-accreditation-software.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Software</a>
+        <a href="https://accredready.in/nabh-6th-edition-standards.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">6th Edition Guide</a>
+        <a href="https://accredready.in/shco-accreditation-software.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Software</a>
+        <a href="https://accredready.in/nabh-entry-level-certification.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Entry Level Guide</a>
+        <a href="https://accredready.in/privacy.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
+      </nav>
+      <p class="mt-8 text-center font-mono text-[12px] text-white/45">© 2026 AccredReady by MK Tech. Written by Dr. Mehul Upadhyay, NABH Quality Manager.</p>
+    </div>
   </footer>
 
 </body>
