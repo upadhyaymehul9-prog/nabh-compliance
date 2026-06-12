@@ -7384,6 +7384,7 @@ function MockDrillsScreen({ hospitalId, drillsView, selectedDrill, navigate, goB
   const [form,setForm]=useState({drill_date:"",drill_time:"",location:"",conducted_by:"",supervised_by:"",participants_category:"",total_participants:"",pre_briefing:"Done",scenario_desc:"",drill_description:"",observations:["","",""],debriefing:"Done",corrective_actions:"",preventive_actions:"",additional_points:"",status:"completed",evidence_url:""});
   const [saving,setSaving]=useState(false);
   const [expanded,setExpanded]=useState(null);
+  const [expandedRec,setExpandedRec]=useState(null);
   const [loading,setLoading]=useState(true);
 
   const deleteRecord=async(id)=>{
@@ -7425,21 +7426,22 @@ function MockDrillsScreen({ hospitalId, drillsView, selectedDrill, navigate, goB
     if(!form.drill_date||!selectedDrill)return;
     setSaving(true);
     const obs=form.observations.filter(o=>o.trim());
-    await supabase.from("mock_drill_records").insert({
+    const {error}=await supabase.from("mock_drill_records").insert({
       hospital_id:hospitalId,drill_id:selectedDrill.id,
-      drill_date:form.drill_date,drill_time:form.drill_time,
-      location:form.location,conducted_by:form.conducted_by,
-      supervised_by:form.supervised_by,
-      participants_category:form.participants_category,
+      drill_date:form.drill_date,drill_time:form.drill_time||null,
+      location:form.location||null,conducted_by:form.conducted_by||null,
+      supervised_by:form.supervised_by||null,
+      participants_category:form.participants_category||null,
       total_participants:form.total_participants?parseInt(form.total_participants):null,
-      pre_briefing:form.pre_briefing,scenario_desc:form.scenario_desc,
-      drill_description:form.drill_description,
+      pre_briefing:form.pre_briefing,scenario_desc:form.scenario_desc||null,
+      drill_description:form.drill_description||null,
       observations:obs,debriefing:form.debriefing,
-      corrective_actions:form.corrective_actions,
-      preventive_actions:form.preventive_actions,
-      additional_points:form.additional_points,status:form.status,
+      corrective_actions:form.corrective_actions||null,
+      preventive_actions:form.preventive_actions||null,
+      additional_points:form.additional_points||null,status:form.status,
       evidence_url:form.evidence_url||null
     });
+    if(error){alert("Error saving drill record: "+error.message);setSaving(false);return;}
     const {data:r}=await supabase.from("mock_drill_records").select("*").eq("hospital_id",hospitalId).order("drill_date",{ascending:false});
     setRecords(r||[]);setSaving(false);setDrillsView("tracker");setSelectedDrill(null);
   };
@@ -7553,14 +7555,49 @@ function MockDrillsScreen({ hospitalId, drillsView, selectedDrill, navigate, goB
                   {recs.length>0&&(
                     <div>
                       <div style={{fontSize:11,fontWeight:700,color:T.gold,marginBottom:6}}>DRILL HISTORY</div>
-                      {recs.slice(0,5).map(r=>(
-                        <div key={r.id} style={{background:T.panel2,borderRadius:7,padding:"8px 12px",marginBottom:5,fontSize:11,color:T.muted,display:"flex",gap:10,alignItems:"center"}}>
-                          <div style={{fontWeight:700,color:T.text,minWidth:80}}>{r.drill_date}</div>
-                          <div style={{flex:1}}>{r.location&&`📍 ${r.location} · `}{r.total_participants&&`👥 ${r.total_participants} participants · `}{r.conducted_by&&`👤 ${r.conducted_by}`}</div>
-                          {r.corrective_actions&&<div style={{color:T.orange}}>⚡ CAPA raised</div>}
-                          <button onClick={()=>deleteRecord(r.id)} style={{padding:"2px 8px",borderRadius:5,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:11,cursor:"pointer",flexShrink:0}}>Delete</button>
+                      {recs.slice(0,5).map(r=>{
+                        const recOpen=expandedRec===r.id;
+                        const obsList=Array.isArray(r.observations)?r.observations.filter(o=>o&&String(o).trim()):[];
+                        const shortFields=[["TIME",r.drill_time],["LOCATION",r.location],["CONDUCTED BY",r.conducted_by],["SUPERVISED BY",r.supervised_by],["PARTICIPANTS CATEGORY",r.participants_category],["TOTAL PARTICIPANTS",r.total_participants],["PRE-BRIEFING",r.pre_briefing],["DEBRIEFING",r.debriefing],["STATUS",r.status]].filter(([,v])=>v!==null&&v!==undefined&&String(v).trim()!=="");
+                        const longFields=[["SCENARIO DESCRIPTION",r.scenario_desc],["DRILL DESCRIPTION & RESPONSE",r.drill_description],["CORRECTIVE ACTIONS",r.corrective_actions],["PREVENTIVE ACTIONS",r.preventive_actions],["ADDITIONAL POINTS",r.additional_points]].filter(([,v])=>v&&String(v).trim());
+                        return(
+                        <div key={r.id} style={{background:T.panel2,borderRadius:7,marginBottom:5,overflow:"hidden",border:`1px solid ${recOpen?`${T.gold}40`:"transparent"}`}}>
+                          <div style={{padding:"8px 12px",fontSize:11,color:T.muted,display:"flex",gap:10,alignItems:"center",cursor:"pointer"}} onClick={()=>setExpandedRec(recOpen?null:r.id)}>
+                            <div style={{fontWeight:700,color:T.text,minWidth:80}}>{r.drill_date}</div>
+                            <div style={{flex:1}}>{r.location&&`📍 ${r.location} · `}{r.total_participants&&`👥 ${r.total_participants} participants · `}{r.conducted_by&&`👤 ${r.conducted_by}`}</div>
+                            {r.corrective_actions&&<div style={{color:T.orange}}>⚡ CAPA raised</div>}
+                            <button onClick={e=>{e.stopPropagation();deleteRecord(r.id);}} style={{padding:"2px 8px",borderRadius:5,background:"transparent",border:`1px solid ${T.red}40`,color:T.red,fontSize:11,cursor:"pointer",flexShrink:0}}>Delete</button>
+                            <div style={{fontSize:11}}>{recOpen?"▲":"▼"}</div>
+                          </div>
+                          {recOpen&&(
+                            <div style={{borderTop:`1px solid ${T.border}`,padding:"12px 14px",display:"grid",gap:12}}>
+                              {shortFields.length>0&&(
+                                <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(150px,1fr))",gap:10}}>
+                                  {shortFields.map(([l,v])=>(
+                                    <div key={l}><div style={{fontSize:10,color:T.muted,letterSpacing:1,marginBottom:3}}>{l}</div><div style={{fontSize:13,color:T.text}}>{String(v)}</div></div>
+                                  ))}
+                                </div>
+                              )}
+                              {longFields.map(([l,v])=>(
+                                <div key={l}><div style={{fontSize:10,color:T.muted,letterSpacing:1,marginBottom:3}}>{l}</div><div style={{fontSize:13,color:T.text,lineHeight:1.6,whiteSpace:"pre-wrap"}}>{v}</div></div>
+                              ))}
+                              {obsList.length>0&&(
+                                <div>
+                                  <div style={{fontSize:10,color:T.muted,letterSpacing:1,marginBottom:3}}>DEVIATIONS / OBSERVATIONS</div>
+                                  <ul style={{margin:0,paddingLeft:18}}>{obsList.map((o,i)=><li key={i} style={{fontSize:13,color:T.text,lineHeight:1.6}}>{o}</li>)}</ul>
+                                </div>
+                              )}
+                              {r.evidence_url&&(
+                                <div>
+                                  <div style={{fontSize:10,color:T.muted,letterSpacing:1,marginBottom:3}}>EVIDENCE</div>
+                                  <a href={r.evidence_url} target="_blank" rel="noopener noreferrer" style={{fontSize:13,color:T.blue,wordBreak:"break-all"}}>{r.evidence_url}</a>
+                                </div>
+                              )}
+                            </div>
+                          )}
                         </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   )}
                   {recs.length===0&&<div style={{fontSize:12,color:T.red,padding:"8px 0"}}>No drills recorded yet — click "+ Record" to add the first drill.</div>}
@@ -8191,7 +8228,7 @@ function PatientTracerScreen({ hospitalId, tracerView, tracerType, navigate, goB
     setResponses({});
     setMeta({patient_ref:"",conducted_by:"",conducted_date:new Date().toISOString().split("T")[0],notes:""});
     setActiveTracer(null);
-    navigate(typeOverride ? { tracerType: typeOverride, tracerView: 'new' } : { tracerView: 'new' });
+    navigate(typeof typeOverride==="string"&&TRACER_TYPES[typeOverride] ? { tracerType: typeOverride, tracerView: 'new' } : { tracerView: 'new' });
   };
 
   const startConduct=()=>{
@@ -8240,7 +8277,7 @@ function PatientTracerScreen({ hospitalId, tracerView, tracerType, navigate, goB
           <div style={{fontSize:16,fontWeight:700,color:T.gold}}>🩺 Patient Tracer</div>
           <div style={{fontSize:12,color:T.muted}}>Simulate assessor patient file review — identify gaps before they do</div>
         </div>
-        <button onClick={startNew} style={{padding:"7px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer"}}>+ New Tracer</button>
+        <button onClick={()=>startNew()} style={{padding:"7px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:13,fontWeight:700,cursor:"pointer"}}>+ New Tracer</button>
       </div>
 
       {/* Tracer type cards */}
@@ -8328,7 +8365,7 @@ function PatientTracerScreen({ hospitalId, tracerView, tracerType, navigate, goB
       </div>
 
       <button onClick={startConduct} style={{width:"100%",padding:"12px",borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:15,fontWeight:700,cursor:"pointer"}}>
-        Start {tracerType} Tracer ({TRACER_TYPES[tracerType].questions.length} questions) →
+        Start {tracerType.replace(/ Tracer$/,"")} Tracer ({TRACER_TYPES[tracerType].questions.length} questions) →
       </button>
     </div>
   );

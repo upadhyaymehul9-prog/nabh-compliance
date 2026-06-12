@@ -50,7 +50,13 @@
       "Bash(grep -n \"₹\\\\|fee\\\\|cost\\\\|lakh\" /c/Users/ADMIN/Desktop/nabh-compliance/public/blog/*.html)",
       "Bash(xargs ls:*)",
       "WebFetch(domain:accredready.in)",
-      "Bash(git rm *)"
+      "Bash(git rm *)",
+      "PowerShell(Test-Path *)",
+      "PowerShell(New-Item *)",
+      "PowerShell(Set-Location *)",
+      "PowerShell(npm start *)",
+      "PowerShell(Get-CimInstance *)",
+      "PowerShell(Out-File *)"
     ]
   }
 }
