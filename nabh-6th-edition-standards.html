@@ -196,11 +196,43 @@
         <a href="https://accredready.in/nabh-6th-edition-checklist.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Checklist</a>
         <a href="https://accredready.in/shco-accreditation-software.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Software</a>
         <a href="https://accredready.in/nabh-internal-audit-checklist.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Internal Audit</a>
+        <button onclick="document.getElementById('contactModal').style.display='flex'" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink" style="background:none;border:none;color:inherit;font-size:inherit;cursor:pointer;font-family:inherit;padding:0;">Contact Us</button>
         <a href="https://accredready.in/privacy.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
       </nav>
       <p class="mt-8 text-center font-mono text-[12px] text-white/45">© 2026 AccredReady by MK Tech. Written by Dr. Mehul Upadhyay, NABH Quality Manager.</p>
     </div>
   </footer>
 
+  <!-- Contact Modal -->
+  <div id="contactModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.75);align-items:center;justify-content:center;padding:20px;">
+    <div onclick="event.stopPropagation()" style="background:#081525;border:1px solid #1e3a52;border-radius:16px;padding:28px 24px;max-width:420px;width:100%;position:relative;max-height:90vh;overflow-y:auto;">
+      <button onclick="document.getElementById('contactModal').style.display='none';document.getElementById('cSuccess').style.display='none';document.getElementById('cError').style.display='none';document.getElementById('cForm').reset();" style="position:absolute;top:12px;right:14px;background:none;border:none;color:#7a9db8;font-size:20px;cursor:pointer;line-height:1;">&#x2715;</button>
+      <div style="font-size:11px;letter-spacing:3px;color:#c9a84c;margin-bottom:8px;text-transform:uppercase;">AccredReady</div>
+      <div style="font-size:20px;font-weight:700;color:#eef4f9;margin-bottom:18px;">Contact Us</div>
+      <div id="cSuccess" style="display:none;color:#0E8A5F;font-size:15px;padding:14px;background:#EBF4F0;border-radius:8px;margin-bottom:16px;">Thank you! We'll get back to you soon.</div>
+      <div id="cError" style="display:none;color:#DC2626;font-size:14px;padding:12px;background:#fef2f2;border-radius:8px;margin-bottom:16px;">Something went wrong, please try again.</div>
+      <form id="cForm" onsubmit="submitContact(event)">
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Name *</label><input type="text" name="name" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Email *</label><input type="email" name="email" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Mobile *</label><input type="tel" name="phone" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:18px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Message *</label><textarea name="message" required rows="4" style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;resize:vertical;font-family:inherit;"></textarea></div>
+        <button type="submit" id="cSubmit" style="width:100%;padding:12px;background:#0E8A5F;border:none;border-radius:10px;color:#fff;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;">Send Message</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.getElementById('contactModal').addEventListener('click',function(e){if(e.target===this){this.style.display='none';document.getElementById('cSuccess').style.display='none';document.getElementById('cError').style.display='none';document.getElementById('cForm').reset();}});
+    async function submitContact(e){
+      e.preventDefault();var btn=document.getElementById('cSubmit');btn.disabled=true;btn.textContent='Sending…';
+      document.getElementById('cSuccess').style.display='none';document.getElementById('cError').style.display='none';
+      var f=e.target;
+      try{var r=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({access_key:'2aaadfc3-c669-4b2b-92b8-6d6bee4faee1',name:f.name.value,email:f.email.value,phone:f.phone.value,message:f.message.value})});
+        var j=await r.json();
+        if(r.ok&&j.success){document.getElementById('cSuccess').style.display='block';f.reset();}
+        else document.getElementById('cError').style.display='block';
+      }catch(err){document.getElementById('cError').style.display='block';}
+      btn.disabled=false;btn.textContent='Send Message';
+    }
+  </script>
 </body>
 </html>
