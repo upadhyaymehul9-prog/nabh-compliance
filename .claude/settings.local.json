@@ -56,7 +56,8 @@
       "PowerShell(Set-Location *)",
       "PowerShell(npm start *)",
       "PowerShell(Get-CimInstance *)",
-      "PowerShell(Out-File *)"
+      "PowerShell(Out-File *)",
+      "PowerShell(Set-Location C:\\\\Users\\\\SERVER\\\\Desktop\\\\nabh-compliance; git stash pop stash@{0})"
     ]
   }
 }
