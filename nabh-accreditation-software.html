@@ -46,244 +46,391 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Tailwind via CDN + shared design-system token config -->
+  <!-- Tailwind via CDN + AccredReady design-system tokens -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ink:    '#040d1a',   // page background
-            ink2:   '#0a1f3d',   // raised background / gradients
-            panel:  '#0f1f38',   // cards
-            panel2: '#0a1838',   // featured card
-            blue:   '#38bdf8',   // accent (links, highlights)
-            brand:  '#2563eb',   // primary CTA
-            gold:   '#f59e0b',   // secondary highlight
-            paper:  '#f8fafc',   // primary text
-            muted:  '#94a3b8',   // secondary text (AA on ink)
-            good:   '#4ade80',
-            bad:    '#f87171',
-            line:   'rgba(255,255,255,0.08)',
-          },
-          fontFamily: {
-            head: ['Syne', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-            body: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
+      theme: { extend: {
+        colors: { ink:'#0B1B2B', paper:'#FBFDFD', verify:'#0E8A5F', verifydark:'#0A6B4A', signal:'#D97706', alert:'#DC2626', slate:'#4B5D6E', hairline:'#DCE6E4', mint:'#EBF4F0' },
+        fontFamily: { display:['"Bricolage Grotesque"','sans-serif'], body:['"IBM Plex Sans"','sans-serif'], mono:['"IBM Plex Mono"','monospace'] }
+      }}
     };
   </script>
   <style>
-    html { scroll-behavior: smooth; }
-    /* Respect users who prefer less motion (point 5). */
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
+    body { background:#FBFDFD; }
+    .grid-bg {
+      background-image: linear-gradient(#0B1B2B08 1px, transparent 1px), linear-gradient(90deg, #0B1B2B08 1px, transparent 1px);
+      background-size: 24px 24px;
     }
+    /* Spreadsheet texture for "old way" column */
+    .sheet-bg {
+      background-image: linear-gradient(#0B1B2B0A 1px, transparent 1px), linear-gradient(90deg, #0B1B2B0A 1px, transparent 1px);
+      background-size: 28px 32px;
+    }
+    /* Score ring */
+    .ring { --p:0; background: conic-gradient(#0E8A5F calc(var(--p)*1%), #EBF4F0 0); transition: --p 0.9s ease-out; }
+    @property --p { syntax:'<number>'; inherits:false; initial-value:0; }
+    .bar-fill { width:0; transition: width .7s ease-out; }
+    /* FAQ accordion marker */
+    details > summary { list-style:none; }
+    details > summary::-webkit-details-marker { display:none; }
+    details[open] .faq-chev { transform: rotate(180deg); }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior:auto; }
+      .ring, .bar-fill, .faq-chev { transition:none; }
+    }
+    html { scroll-behavior:smooth; }
   </style>
 </head>
 
-<body class="bg-ink text-paper font-body leading-relaxed antialiased">
+<body class="font-body text-ink antialiased">
 
-  <!-- Skip link for keyboard users -->
-  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Skip to content</a>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-lg focus:bg-verify focus:px-4 focus:py-2 focus:text-white focus:outline-none">Skip to content</a>
 
-  <!-- NAV -->
-  <nav class="sticky top-0 z-[100] flex items-center justify-between border-b border-line bg-ink/95 px-5 py-4 backdrop-blur-md sm:px-8">
-    <a href="https://accredready.in" class="rounded font-head text-xl font-extrabold text-blue outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">AccredReady</a>
-    <a href="https://accredready.in" class="rounded-md bg-brand px-5 py-2 text-sm font-medium text-white outline-none transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">Start Free Trial</a>
+  <!-- ============ NAV ============ -->
+  <nav id="nav" class="sticky top-0 z-50 border-b border-hairline bg-paper/90 backdrop-blur transition-shadow">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="https://accredready.in" class="font-display text-[22px] font-bold tracking-[-0.01em] text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 rounded">AccredReady</a>
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="#features" class="text-[15px] text-slate hover:text-ink">Features</a>
+        <a href="#pricing" class="text-[15px] text-slate hover:text-ink">Pricing</a>
+        <a href="https://accredready.in/nabh-guide.html" class="text-[15px] text-slate hover:text-ink">Resources</a>
+        <a href="https://accredready.in/blog/index.html" class="text-[15px] text-slate hover:text-ink">Blog</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://accredready.in" class="hidden text-[15px] font-semibold text-verify hover:text-verifydark sm:inline focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 rounded px-1">Sign in</a>
+        <a href="https://accredready.in" class="rounded-xl bg-verify px-5 py-2.5 text-[15px] font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 motion-reduce:transform-none motion-reduce:transition-none">Start free trial</a>
+      </div>
+    </div>
   </nav>
 
   <main id="main">
 
-    <!-- HERO -->
-    <header class="mx-auto max-w-4xl px-5 pb-16 pt-20 text-center sm:px-8">
-      <span class="mb-6 inline-block rounded-full border border-brand/40 bg-brand/15 px-4 py-1 text-xs font-medium uppercase tracking-wider text-blue">NABH 6th Edition Compliant</span>
-      <h1 class="mb-5 font-head text-[clamp(2rem,5vw,3.4rem)] font-extrabold leading-[1.15]">India's Most Complete<br/><span class="text-blue">NABH Accreditation Software</span></h1>
-      <p class="mx-auto mb-10 max-w-2xl text-lg text-muted">Stop managing NABH compliance in spreadsheets. AccredReady gives your quality team a single platform to track all 639 OEs, run audits, manage committees, and get assessment-ready — faster.</p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="https://accredready.in" class="rounded-lg bg-brand px-8 py-3.5 font-semibold text-white shadow-[0_4px_24px_rgba(37,99,235,0.35)] outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start Free Trial →</a>
-        <a href="https://accredready.in/nabh-6th-edition-checklist.html" class="rounded-lg border border-white/20 px-8 py-3.5 font-medium text-paper outline-none transition-colors hover:border-blue hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">View NABH Checklist</a>
-        <a href="https://play.google.com/store/apps/details?id=com.mktech.nabhcompliance" target="_blank" rel="noopener noreferrer" class="rounded outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="h-[52px] w-auto" height="52"/></a>
-      </div>
-    </header>
+    <!-- ============ HERO ============ -->
+    <section class="grid-bg relative overflow-hidden">
+      <div class="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-8 lg:pb-28 lg:pt-24">
+        <div class="grid items-center gap-14 lg:grid-cols-[55fr_45fr] lg:gap-10">
 
-    <!-- STATS -->
-    <section aria-label="Platform at a glance" class="grid grid-cols-2 gap-px border-y border-line bg-line sm:grid-cols-3 lg:grid-cols-5">
-      <div class="bg-ink px-6 py-8 text-center"><div class="font-head text-4xl font-extrabold text-blue">639</div><div class="mt-1 text-sm text-muted">Objective Elements</div></div>
-      <div class="bg-ink px-6 py-8 text-center"><div class="font-head text-4xl font-extrabold text-blue">35</div><div class="mt-1 text-sm text-muted">Internal Audit Types</div></div>
-      <div class="bg-ink px-6 py-8 text-center"><div class="font-head text-4xl font-extrabold text-blue">50</div><div class="mt-1 text-sm text-muted">KPIs Tracked</div></div>
-      <div class="bg-ink px-6 py-8 text-center"><div class="font-head text-4xl font-extrabold text-blue">26</div><div class="mt-1 text-sm text-muted">Committee Templates</div></div>
-      <div class="bg-ink px-6 py-8 text-center"><div class="font-head text-4xl font-extrabold text-blue">4</div><div class="mt-1 text-sm text-muted">NABH Programmes</div></div>
-    </section>
+          <!-- Left: message -->
+          <div>
+            <span class="inline-flex items-center gap-2 rounded-lg border border-verify/20 bg-mint px-3 py-1.5 font-mono text-[13px] uppercase tracking-wide text-verify">
+              <span class="h-1.5 w-1.5 rounded-full bg-verify"></span>
+              NABH 6th Edition &middot; 639 OEs
+            </span>
 
-    <!-- FEATURES -->
-    <section class="mx-auto max-w-6xl px-5 py-16 sm:px-8">
-      <h2 class="mb-4 font-head text-[clamp(1.6rem,3vw,2.2rem)] font-bold">Everything Your Quality Team <span class="text-blue">Actually Needs</span></h2>
-      <p class="mb-12 max-w-xl text-muted">Built by a practicing NABH Quality Manager. Every feature solves a real accreditation challenge.</p>
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <article class="rounded-xl border border-white/10 bg-panel p-7 transition-[border-color,transform] hover:-translate-y-1 hover:border-blue/30 motion-reduce:transform-none motion-reduce:transition-none">
-          <div class="mb-4 text-3xl" aria-hidden="true">📋</div>
-          <h3 class="mb-2 font-head text-lg font-bold">639 OE Compliance Tracker</h3>
-          <p class="text-sm text-muted">Track all Objective Elements across 10 NABH chapters. Each OE has 4 achieve tips, evidence guidance, and compliance scoring.</p>
-        </article>
-        <article class="rounded-xl border border-white/10 bg-panel p-7 transition-[border-color,transform] hover:-translate-y-1 hover:border-blue/30 motion-reduce:transform-none motion-reduce:transition-none">
-          <div class="mb-4 text-3xl" aria-hidden="true">🔍</div>
-          <h3 class="mb-2 font-head text-lg font-bold">35 Internal Audit Templates</h3>
-          <p class="text-sm text-muted">Ready-to-use audit checklists for every department. Run, score, and generate CAPA reports in minutes.</p>
-        </article>
-        <article class="rounded-xl border border-white/10 bg-panel p-7 transition-[border-color,transform] hover:-translate-y-1 hover:border-blue/30 motion-reduce:transform-none motion-reduce:transition-none">
-          <div class="mb-4 text-3xl" aria-hidden="true">📊</div>
-          <h3 class="mb-2 font-head text-lg font-bold">50 KPI Dashboard</h3>
-          <p class="text-sm text-muted">Track all NABH-required KPIs with auto-calculation, color-coded thresholds, and monthly trend analysis.</p>
-        </article>
-        <article class="rounded-xl border border-white/10 bg-panel p-7 transition-[border-color,transform] hover:-translate-y-1 hover:border-blue/30 motion-reduce:transform-none motion-reduce:transition-none">
-          <div class="mb-4 text-3xl" aria-hidden="true">🏥</div>
-          <h3 class="mb-2 font-head text-lg font-bold">4 NABH Programmes</h3>
-          <p class="text-sm text-muted">Supports HCO Full, HCO ELC, SHCO Full, and SHCO ELC — automatically adapts standards to your programme type.</p>
-        </article>
-        <article class="rounded-xl border border-white/10 bg-panel p-7 transition-[border-color,transform] hover:-translate-y-1 hover:border-blue/30 motion-reduce:transform-none motion-reduce:transition-none">
-          <div class="mb-4 text-3xl" aria-hidden="true">🚨</div>
-          <h3 class="mb-2 font-head text-lg font-bold">Mock Drill Tracker</h3>
-          <p class="text-sm text-muted">Schedule and document 13 types of mock drills. Track participation, outcomes, and corrective actions.</p>
-        </article>
-        <article class="rounded-xl border border-white/10 bg-panel p-7 transition-[border-color,transform] hover:-translate-y-1 hover:border-blue/30 motion-reduce:transform-none motion-reduce:transition-none">
-          <div class="mb-4 text-3xl" aria-hidden="true">📄</div>
-          <h3 class="mb-2 font-head text-lg font-bold">PDF Gap Report</h3>
-          <p class="text-sm text-muted">Generate a branded gap analysis report instantly. Share with management or use as pre-assessment checklist.</p>
-        </article>
-      </div>
-    </section>
+            <h1 class="mt-6 font-display text-[40px] font-bold leading-[1.05] tracking-[-0.02em] lg:text-[56px]">
+              Walk into your NABH assessment already knowing the verdict.
+            </h1>
 
-    <!-- OLD WAY VS NEW WAY -->
-    <section class="mx-auto max-w-6xl px-5 py-16 sm:px-8">
-      <h2 class="mb-4 font-head text-[clamp(1.6rem,3vw,2.2rem)] font-bold">The Old Way vs <span class="text-blue">The AccredReady Way</span></h2>
-      <p class="mb-12 max-w-xl text-muted">See why hospitals are switching from manual compliance tracking to AccredReady.</p>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-        <div>
-          <h3 class="mb-5 border-b border-line pb-3 font-head text-lg font-bold text-bad">❌ Without AccredReady</h3>
-          <ul class="space-y-3.5 text-[0.95rem] text-muted">
-            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>Multiple Excel files across departments, no single source of truth</span></li>
-            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>Manually tracking 639 OEs in spreadsheets — error-prone and time-consuming</span></li>
-            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>No visibility into compliance score until assessment day</span></li>
-            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>Audit findings scattered in paper files, CAPAs not tracked</span></li>
-            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>KPIs calculated manually each month</span></li>
-            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>Panic mode 2 weeks before NABH assessment</span></li>
-          </ul>
+            <p class="mt-6 max-w-xl text-[17px] leading-relaxed text-slate lg:text-[19px]">
+              Stop tracking 639 Objective Elements in spreadsheets. AccredReady scores every OE, shows exactly what to fix, and tells you Ready or Not — before the assessors do.
+            </p>
+
+            <div class="mt-9 flex flex-wrap items-center gap-4">
+              <a href="https://accredready.in" class="rounded-xl bg-verify px-7 py-4 text-[16px] font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 motion-reduce:transform-none motion-reduce:transition-none">
+                Start free trial
+              </a>
+              <a href="https://accredready.in/nabh-6th-edition-checklist.html" class="rounded-xl border-[1.5px] border-ink px-7 py-[14px] text-[16px] font-semibold text-ink transition-colors duration-150 hover:bg-mint focus:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2">
+                View the NABH checklist
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.mktech.nabhcompliance" target="_blank" rel="noopener noreferrer" class="rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="h-[52px] w-auto" height="52"/></a>
+            </div>
+
+            <p class="mt-7 flex items-center gap-2 text-[14px] text-slate">
+              <svg class="h-4 w-4 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+              Built by a certified NABH Quality Manager &middot; 14-day free trial &middot; ₹499/month after
+            </p>
+          </div>
+
+          <!-- Right: the live scorecard (signature element) -->
+          <div class="relative">
+            <div class="rounded-2xl border border-hairline bg-white p-6 shadow-[0_8px_30px_rgba(11,27,43,0.08)] lg:p-7">
+
+              <div class="flex items-center justify-between border-b border-hairline pb-5">
+                <div>
+                  <p class="font-mono text-[12px] uppercase tracking-wide text-slate">Assessment readiness</p>
+                  <p class="mt-0.5 font-display text-[18px] font-semibold">City Care Hospital</p>
+                </div>
+                <div class="ring grid h-[88px] w-[88px] place-items-center rounded-full" id="scoreRing">
+                  <div class="grid h-[68px] w-[68px] place-items-center rounded-full bg-white">
+                    <span class="font-display text-[22px] font-bold" id="scoreNum">0%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-3 pt-5">
+                <div class="flex items-center gap-3">
+                  <span class="w-9 font-mono text-[12px] text-slate">AAC</span>
+                  <div class="h-2 flex-1 overflow-hidden rounded-full bg-mint"><div class="bar-fill h-full rounded-full bg-verify" data-w="92%"></div></div>
+                  <span class="w-9 text-right font-mono text-[12px] text-ink">92%</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="w-9 font-mono text-[12px] text-slate">COP</span>
+                  <div class="h-2 flex-1 overflow-hidden rounded-full bg-mint"><div class="bar-fill h-full rounded-full bg-verify" data-w="85%"></div></div>
+                  <span class="w-9 text-right font-mono text-[12px] text-ink">85%</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="w-9 font-mono text-[12px] text-slate">IPC</span>
+                  <div class="h-2 flex-1 overflow-hidden rounded-full bg-mint"><div class="bar-fill h-full rounded-full bg-signal" data-w="64%"></div></div>
+                  <span class="w-9 text-right font-mono text-[12px] text-signal">64%</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="w-9 font-mono text-[12px] text-slate">FMS</span>
+                  <div class="h-2 flex-1 overflow-hidden rounded-full bg-mint"><div class="bar-fill h-full rounded-full bg-verify" data-w="89%"></div></div>
+                  <span class="w-9 text-right font-mono text-[12px] text-ink">89%</span>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-2 pt-5">
+                <span class="inline-flex items-center gap-1.5 rounded-lg bg-mint px-2.5 py-1 font-mono text-[12px] font-medium text-verify">&#9679; 512 Met</span>
+                <span class="inline-flex items-center gap-1.5 rounded-lg bg-[#FCF0DF] px-2.5 py-1 font-mono text-[12px] font-medium text-signal">&#9679; 86 Partial</span>
+                <span class="inline-flex items-center gap-1.5 rounded-lg bg-[#FDEAEA] px-2.5 py-1 font-mono text-[12px] font-medium text-alert">&#9679; 41 Not Met</span>
+              </div>
+
+              <div class="mt-5 flex items-center justify-between rounded-xl bg-ink px-4 py-3.5">
+                <div>
+                  <p class="font-mono text-[11px] uppercase tracking-wide text-white/50">Verdict engine</p>
+                  <p class="text-[15px] font-semibold text-white">Needs Work — 41 OEs to fix</p>
+                </div>
+                <span class="rounded-lg bg-white px-2.5 py-1.5 font-mono text-[12px] font-medium text-verify">View gaps →</span>
+              </div>
+
+            </div>
+            <div class="absolute inset-6 -z-10 rounded-full bg-verify/10 blur-3xl" aria-hidden="true"></div>
+          </div>
+
         </div>
-        <div>
-          <h3 class="mb-5 border-b border-line pb-3 font-head text-lg font-bold text-good">✅ With AccredReady</h3>
-          <ul class="space-y-3.5 text-[0.95rem] text-muted">
-            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>One dashboard. All 639 OEs. Real-time compliance score.</span></li>
-            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>4 actionable tips per OE — know exactly what to do to achieve compliance</span></li>
-            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>Verdict engine tells you Ready / Needs Work / Critical before assessors arrive</span></li>
-            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>Digital audit trails with built-in CAPA tracking</span></li>
-            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>Auto-calculated KPIs with color-coded thresholds</span></li>
-            <li class="flex gap-3"><span aria-hidden="true" class="mt-0.5 flex-shrink-0">•</span><span>Always assessment-ready. No panic. No surprises.</span></li>
-          </ul>
+      </div>
+    </section>
+
+    <!-- ============ TRUST / BY THE NUMBERS ============ -->
+    <section aria-label="Platform at a glance" class="border-y border-hairline bg-white">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 divide-y divide-hairline px-6 sm:grid-cols-4 sm:divide-x sm:divide-y-0 lg:px-8">
+        <div class="px-4 py-8 text-center sm:py-10"><div class="font-mono text-[32px] font-medium text-ink">639</div><div class="mt-1 text-[14px] text-slate">Objective Elements</div></div>
+        <div class="px-4 py-8 text-center sm:py-10"><div class="font-mono text-[32px] font-medium text-ink">35</div><div class="mt-1 text-[14px] text-slate">Internal Audits</div></div>
+        <div class="px-4 py-8 text-center sm:py-10"><div class="font-mono text-[32px] font-medium text-ink">50</div><div class="mt-1 text-[14px] text-slate">KPIs Tracked</div></div>
+        <div class="px-4 py-8 text-center sm:py-10"><div class="font-mono text-[32px] font-medium text-ink">26</div><div class="mt-1 text-[14px] text-slate">Committee Templates</div></div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section id="features" class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
+      <h2 class="font-display text-[28px] font-semibold leading-[1.15] lg:text-[36px]">Everything your quality team actually needs</h2>
+      <p class="mt-3 max-w-2xl text-[17px] text-slate">Built by a practicing NABH Quality Manager. Every feature solves a real accreditation challenge — no fluff.</p>
+
+      <div class="mt-12 grid gap-px overflow-hidden rounded-2xl border border-hairline bg-hairline sm:grid-cols-2 lg:grid-cols-3">
+        <!-- 639 OE -->
+        <article class="bg-white p-7 transition-colors duration-150 hover:bg-mint/40">
+          <svg class="h-7 w-7 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4v-.5A1.5 1.5 0 0 1 10.5 2h3A1.5 1.5 0 0 1 15 3.5V4"/><path d="m8.5 13 2.2 2.2 4.8-4.7"/></svg>
+          <p class="mt-4 font-mono text-[12px] uppercase tracking-wide text-slate">639 OE</p>
+          <h3 class="mt-1 font-display text-[20px] font-semibold">OE Compliance Tracker</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-slate">Track every Objective Element across 10 NABH chapters. Each OE carries 4 achieve-tips, evidence guidance, and live scoring.</p>
+        </article>
+        <!-- 35 audits -->
+        <article class="bg-white p-7 transition-colors duration-150 hover:bg-mint/40">
+          <svg class="h-7 w-7 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m20 20-3.6-3.6"/></svg>
+          <p class="mt-4 font-mono text-[12px] uppercase tracking-wide text-slate">35 Audits</p>
+          <h3 class="mt-1 font-display text-[20px] font-semibold">Internal Audit Templates</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-slate">Ready-to-use audit checklists for every department. Run, score, and generate CAPA reports in minutes.</p>
+        </article>
+        <!-- 50 KPI -->
+        <article class="bg-white p-7 transition-colors duration-150 hover:bg-mint/40">
+          <svg class="h-7 w-7 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 21h18"/><rect x="5" y="11" width="3" height="8" rx="0.5"/><rect x="10.5" y="6" width="3" height="13" rx="0.5"/><rect x="16" y="14" width="3" height="5" rx="0.5"/></svg>
+          <p class="mt-4 font-mono text-[12px] uppercase tracking-wide text-slate">50 KPI</p>
+          <h3 class="mt-1 font-display text-[20px] font-semibold">KPI Dashboard</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-slate">Track all NABH-required KPIs with auto-calculation, colour-coded thresholds, and monthly trend analysis.</p>
+        </article>
+        <!-- Programmes (no number, per copy) -->
+        <article class="bg-white p-7 transition-colors duration-150 hover:bg-mint/40">
+          <svg class="h-7 w-7 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M9 21v-4h6v4"/><path d="M8 7h.01M12 7h.01M16 7h.01M8 11h.01M12 11h.01M16 11h.01"/></svg>
+          <p class="mt-4 font-mono text-[12px] uppercase tracking-wide text-slate">Programmes</p>
+          <h3 class="mt-1 font-display text-[20px] font-semibold">NABH Programmes</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-slate">HCO Full, HCO ELC, SHCO Full, and SHCO ELC supported today, with more programmes being added.</p>
+        </article>
+        <!-- Mock drills -->
+        <article class="bg-white p-7 transition-colors duration-150 hover:bg-mint/40">
+          <svg class="h-7 w-7 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg>
+          <p class="mt-4 font-mono text-[12px] uppercase tracking-wide text-slate">13 Drills</p>
+          <h3 class="mt-1 font-display text-[20px] font-semibold">Mock Drill Tracker</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-slate">Schedule and document 13 types of mock drills. Track participation, outcomes, and corrective actions.</p>
+        </article>
+        <!-- PDF gap report -->
+        <article class="bg-white p-7 transition-colors duration-150 hover:bg-mint/40">
+          <svg class="h-7 w-7 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 16h6"/></svg>
+          <p class="mt-4 font-mono text-[12px] uppercase tracking-wide text-slate">PDF</p>
+          <h3 class="mt-1 font-display text-[20px] font-semibold">Gap Report</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-slate">Generate a branded gap-analysis report instantly. Share with management or use as a pre-assessment checklist.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ OLD WAY VS ACCREDREADY ============ -->
+    <section class="bg-mint/40 py-20 lg:py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 class="font-display text-[28px] font-semibold leading-[1.15] lg:text-[36px]">The old way vs AccredReady</h2>
+        <p class="mt-3 max-w-2xl text-[17px] text-slate">See why hospitals are switching from manual compliance tracking to AccredReady.</p>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2">
+          <!-- Old way: spreadsheet texture -->
+          <div class="sheet-bg rounded-2xl border border-hairline bg-white p-7">
+            <p class="font-mono text-[12px] uppercase tracking-wide text-slate">Spreadsheets</p>
+            <h3 class="mt-1 font-display text-[20px] font-semibold text-ink">Without AccredReady</h3>
+            <ul class="mt-5 space-y-3.5 text-[15px] text-slate">
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-alert" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="m15 9-6 6M9 9l6 6"/></svg><span>Multiple Excel files across departments, no single source of truth</span></li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-alert" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="m15 9-6 6M9 9l6 6"/></svg><span>Manually tracking 639 OEs in spreadsheets — error-prone and time-consuming</span></li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-alert" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="m15 9-6 6M9 9l6 6"/></svg><span>No visibility into compliance score until assessment day</span></li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-alert" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="m15 9-6 6M9 9l6 6"/></svg><span>Audit findings scattered in paper files, CAPAs not tracked</span></li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-alert" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="m15 9-6 6M9 9l6 6"/></svg><span>KPIs calculated manually each month</span></li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-alert" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="m15 9-6 6M9 9l6 6"/></svg><span>Panic mode two weeks before the NABH assessment</span></li>
+            </ul>
+          </div>
+          <!-- AccredReady: clean -->
+          <div class="rounded-2xl border border-verify/40 bg-white p-7 shadow-[0_1px_3px_rgba(11,27,43,0.06)]">
+            <p class="font-mono text-[12px] uppercase tracking-wide text-verify">AccredReady</p>
+            <h3 class="mt-1 font-display text-[20px] font-semibold text-ink">With AccredReady</h3>
+            <ul class="mt-5 space-y-3.5 text-[15px] text-ink">
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="m8.5 12 2.5 2.5 4.5-5"/></svg><span>One dashboard. All 639 OEs. Real-time compliance score.</span></li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="m8.5 12 2.5 2.5 4.5-5"/></svg><span>4 actionable tips per OE — know exactly what to do to achieve compliance</span></li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="m8.5 12 2.5 2.5 4.5-5"/></svg><span>Verdict engine tells you Ready / Needs Work / Critical before assessors arrive</span></li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="m8.5 12 2.5 2.5 4.5-5"/></svg><span>Digital audit trails with built-in CAPA tracking</span></li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="m8.5 12 2.5 2.5 4.5-5"/></svg><span>Auto-calculated KPIs with colour-coded thresholds</span></li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="m8.5 12 2.5 2.5 4.5-5"/></svg><span>Always assessment-ready. No panic. No surprises.</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- PRICING -->
-    <section class="mx-auto max-w-6xl px-5 py-16 sm:px-8">
-      <h2 class="mb-4 font-head text-[clamp(1.6rem,3vw,2.2rem)] font-bold">Simple, Transparent <span class="text-blue">Pricing</span></h2>
-      <p class="mb-12 max-w-xl text-muted">No hidden fees. Cancel anytime. Start free — or get an expert gap assessment.</p>
-      <div class="mx-auto grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2">
+    <!-- ============ PRICING ============ -->
+    <section id="pricing" class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
+      <div class="text-center">
+        <h2 class="font-display text-[28px] font-semibold leading-[1.15] lg:text-[36px]">Simple, transparent pricing</h2>
+        <p class="mx-auto mt-3 max-w-xl text-[17px] text-slate">No hidden fees. Cancel anytime. Start free — or get an expert gap assessment.</p>
+      </div>
 
+      <div class="mx-auto mt-12 grid max-w-3xl items-start gap-6 sm:grid-cols-2">
         <!-- Software subscription -->
-        <div class="relative rounded-xl border border-brand bg-gradient-to-br from-panel to-panel2 p-8">
-          <span class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-brand px-3.5 py-1 text-xs font-semibold text-white">All Features Included</span>
-          <h3 class="mb-2 font-head text-lg font-bold">AccredReady</h3>
-          <div class="font-head text-5xl font-extrabold text-blue">₹499</div>
-          <div class="text-sm text-muted">per month · per hospital</div>
-          <ul class="my-6 space-y-2 text-sm text-muted">
-            <li class="flex gap-2"><span class="flex-shrink-0 text-good" aria-hidden="true">✓</span>639 OE Compliance Tracker</li>
-            <li class="flex gap-2"><span class="flex-shrink-0 text-good" aria-hidden="true">✓</span>KPI Dashboard</li>
-            <li class="flex gap-2"><span class="flex-shrink-0 text-good" aria-hidden="true">✓</span>All 35 Audit Templates</li>
-            <li class="flex gap-2"><span class="flex-shrink-0 text-good" aria-hidden="true">✓</span>Mock Drill Tracker</li>
-            <li class="flex gap-2"><span class="flex-shrink-0 text-good" aria-hidden="true">✓</span>PDF Gap Report</li>
-            <li class="flex gap-2"><span class="flex-shrink-0 text-good" aria-hidden="true">✓</span>Committee Management</li>
-            <li class="flex gap-2"><span class="flex-shrink-0 text-good" aria-hidden="true">✓</span>14-day free trial · No setup fee · Cancel anytime</li>
+        <div class="rounded-2xl border-2 border-verify bg-white p-8 shadow-[0_1px_3px_rgba(11,27,43,0.06)]">
+          <p class="font-mono text-[12px] uppercase tracking-wide text-verify">All features included</p>
+          <div class="mt-3 flex items-baseline gap-1">
+            <span class="font-display text-[44px] font-bold text-ink">₹499</span>
+            <span class="text-[15px] text-slate">/month · per hospital</span>
+          </div>
+          <ul class="mt-6 space-y-2.5 text-[15px] text-ink">
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4.5 4.5L19 7"/></svg>639 OE Compliance Tracker</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4.5 4.5L19 7"/></svg>KPI Dashboard</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4.5 4.5L19 7"/></svg>All 35 Audit Templates</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4.5 4.5L19 7"/></svg>Mock Drill Tracker</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4.5 4.5L19 7"/></svg>PDF Gap Report</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4.5 4.5L19 7"/></svg>Committee Management</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4.5 4.5L19 7"/></svg>14-day free trial · No setup fee · Cancel anytime</li>
           </ul>
-          <a href="https://accredready.in" class="block rounded-lg bg-brand px-4 py-3 text-center text-[0.95rem] font-semibold text-white outline-none transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">Get Started</a>
+          <a href="https://accredready.in" class="mt-7 block rounded-xl bg-verify px-4 py-3.5 text-center text-[16px] font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 motion-reduce:transform-none motion-reduce:transition-none">Get started</a>
         </div>
 
-        <!-- Gap Assessment Report (one-time service) -->
-        <div class="relative rounded-xl border border-gold/50 bg-panel p-8">
-          <span class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-gold px-3.5 py-1 text-xs font-semibold text-ink">Expert Service</span>
-          <h3 class="mb-2 font-head text-lg font-bold">Gap Assessment Report</h3>
-          <div class="font-head text-5xl font-extrabold text-gold">₹20,000</div>
-          <div class="text-sm text-muted">one-time · per hospital</div>
-          <ul class="my-6 space-y-2 text-sm text-muted">
-            <li class="flex gap-2"><span class="flex-shrink-0 text-gold" aria-hidden="true">✓</span>Expert-led review against all 639 OEs</li>
-            <li class="flex gap-2"><span class="flex-shrink-0 text-gold" aria-hidden="true">✓</span>Chapter-wise compliance scoring</li>
-            <li class="flex gap-2"><span class="flex-shrink-0 text-gold" aria-hidden="true">✓</span>Prioritized gap list with CORE flags</li>
-            <li class="flex gap-2"><span class="flex-shrink-0 text-gold" aria-hidden="true">✓</span>Action roadmap to assessment-readiness</li>
-            <li class="flex gap-2"><span class="flex-shrink-0 text-gold" aria-hidden="true">✓</span>Branded PDF report for management</li>
-            <li class="flex gap-2"><span class="flex-shrink-0 text-gold" aria-hidden="true">✓</span>Conducted by a certified NABH Quality Manager</li>
+        <!-- Gap Assessment (quiet secondary) -->
+        <div class="rounded-2xl border border-hairline bg-white p-8 shadow-[0_1px_3px_rgba(11,27,43,0.06)]">
+          <p class="font-mono text-[12px] uppercase tracking-wide text-slate">Expert service</p>
+          <div class="mt-3 flex items-baseline gap-1">
+            <span class="font-display text-[44px] font-bold text-ink">₹20,000</span>
+            <span class="text-[15px] text-slate">one-time · per hospital</span>
+          </div>
+          <ul class="mt-6 space-y-2.5 text-[15px] text-ink">
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4.5 4.5L19 7"/></svg>Expert-led review against all 639 OEs</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4.5 4.5L19 7"/></svg>Chapter-wise compliance scoring</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4.5 4.5L19 7"/></svg>Prioritized gap list with CORE flags</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4.5 4.5L19 7"/></svg>Action roadmap to assessment-readiness</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4.5 4.5L19 7"/></svg>Branded PDF report for management</li>
+            <li class="flex gap-2.5"><svg class="mt-0.5 h-5 w-5 shrink-0 text-verify" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4.5 4.5L19 7"/></svg>Conducted by a certified NABH Quality Manager</li>
           </ul>
-          <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20want%20the%20Gap%20Assessment%20Report%20(Rs.%2020%2C000)%20for%20my%20hospital" target="_blank" rel="noopener noreferrer" class="block rounded-lg border border-gold px-4 py-3 text-center text-[0.95rem] font-semibold text-gold outline-none transition-colors hover:bg-gold hover:text-ink focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transition-none">Request Gap Assessment</a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="mx-auto max-w-3xl px-5 py-16 sm:px-8">
-      <h2 class="mb-10 text-center font-head text-[clamp(1.6rem,3vw,2.2rem)] font-bold">Frequently Asked <span class="text-blue">Questions</span></h2>
-      <div class="divide-y divide-line">
-        <div class="py-6">
-          <h3 class="mb-3 font-head text-base font-semibold">Is AccredReady based on NABH 6th Edition standards?</h3>
-          <p class="text-[0.95rem] leading-relaxed text-muted">Yes. AccredReady is built entirely on NABH 6th Edition standards, including all 639 Objective Elements across 10 chapters. The platform is updated whenever NABH releases guidance changes.</p>
-        </div>
-        <div class="py-6">
-          <h3 class="mb-3 font-head text-base font-semibold">Can I use AccredReady for SHCO accreditation?</h3>
-          <p class="text-[0.95rem] leading-relaxed text-muted">Absolutely. AccredReady has a dedicated SHCO module covering SHCO Full Accreditation (408 OEs) and SHCO Entry Level Certification, with a fee calculator for SHCO applications.</p>
-        </div>
-        <div class="py-6">
-          <h3 class="mb-3 font-head text-base font-semibold">Is there a mobile app?</h3>
-          <p class="text-[0.95rem] leading-relaxed text-muted">Yes. AccredReady is available on Android via Google Play Store (search "AccredReady") and works as a Progressive Web App on any device.</p>
-        </div>
-        <div class="py-6">
-          <h3 class="mb-3 font-head text-base font-semibold">Who built AccredReady?</h3>
-          <p class="text-[0.95rem] leading-relaxed text-muted">AccredReady was built by Dr. Mehul Upadhyay, a certified NABH Quality Manager with 15+ years of hospital operations experience, including international exposure. Every feature is designed from real accreditation experience.</p>
+          <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20want%20the%20Gap%20Assessment%20Report%20(Rs.%2020%2C000)%20for%20my%20hospital" target="_blank" rel="noopener noreferrer" class="mt-7 block rounded-xl border-[1.5px] border-ink px-4 py-3.5 text-center text-[16px] font-semibold text-ink transition-colors duration-150 hover:bg-mint focus:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2">Request gap assessment</a>
         </div>
       </div>
     </section>
 
-    <!-- CTA BANNER -->
-    <section class="px-5 py-8 sm:px-8">
-      <div class="mx-auto max-w-3xl rounded-2xl border border-brand/30 bg-gradient-to-br from-ink2 to-[#1e3a8a] px-6 py-14 text-center">
-        <h2 class="mb-3 font-head text-[clamp(1.6rem,3vw,2.2rem)] font-bold">Ready to Get <span class="text-blue">Accreditation-Ready?</span></h2>
-        <p class="mb-8 text-muted">Join hospitals across India using AccredReady to achieve and maintain NABH accreditation.</p>
-        <a href="https://accredready.in" class="inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white shadow-[0_4px_24px_rgba(37,99,235,0.35)] outline-none transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start Your Free Trial →</a>
+    <!-- ============ FAQ ============ -->
+    <section class="mx-auto max-w-3xl px-6 py-20 lg:px-8 lg:py-24">
+      <h2 class="text-center font-display text-[28px] font-semibold leading-[1.15] lg:text-[36px]">Frequently asked questions</h2>
+      <div class="mt-10 divide-y divide-hairline border-y border-hairline">
+        <details class="group py-2">
+          <summary class="flex cursor-pointer items-center justify-between gap-4 py-4 font-display text-[18px] font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 rounded">
+            Is AccredReady based on NABH 6th Edition standards?
+            <svg class="faq-chev h-5 w-5 shrink-0 text-slate transition-transform duration-150" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p class="pb-5 text-[15px] leading-relaxed text-slate">Yes. AccredReady is built entirely on NABH 6th Edition standards, including all 639 Objective Elements across 10 chapters. The platform is updated whenever NABH releases guidance changes.</p>
+        </details>
+        <details class="group py-2">
+          <summary class="flex cursor-pointer items-center justify-between gap-4 py-4 font-display text-[18px] font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 rounded">
+            Can I use AccredReady for SHCO accreditation?
+            <svg class="faq-chev h-5 w-5 shrink-0 text-slate transition-transform duration-150" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p class="pb-5 text-[15px] leading-relaxed text-slate">Absolutely. AccredReady has a dedicated SHCO module covering SHCO Full Accreditation (408 OEs) and SHCO Entry Level Certification, with a fee calculator for SHCO applications.</p>
+        </details>
+        <details class="group py-2">
+          <summary class="flex cursor-pointer items-center justify-between gap-4 py-4 font-display text-[18px] font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 rounded">
+            Is there a mobile app?
+            <svg class="faq-chev h-5 w-5 shrink-0 text-slate transition-transform duration-150" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p class="pb-5 text-[15px] leading-relaxed text-slate">Yes. AccredReady is available on Android via Google Play Store (search "AccredReady") and works as a Progressive Web App on any device.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="bg-ink">
+      <div class="mx-auto max-w-3xl px-6 py-20 text-center lg:px-8 lg:py-24">
+        <h2 class="font-display text-[28px] font-semibold leading-[1.15] text-white lg:text-[36px]">Be assessment-ready before assessors arrive.</h2>
+        <p class="mx-auto mt-3 max-w-xl text-[17px] text-white/70">Join hospitals across India using AccredReady to achieve and maintain NABH accreditation.</p>
+        <a href="https://accredready.in" class="mt-8 inline-block rounded-xl bg-verify px-7 py-4 text-[16px] font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 motion-reduce:transform-none motion-reduce:transition-none">Start your free trial</a>
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-line px-5 py-8 text-center text-sm text-muted sm:px-8">
-    <nav aria-label="Footer" class="mb-3 flex flex-wrap justify-center gap-x-6 gap-y-2">
-      <a href="https://accredready.in" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
-      <a href="https://accredready.in/nabh-6th-edition-checklist.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Checklist</a>
-      <a href="https://accredready.in/shco-accreditation-software.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Software</a>
-      <a href="https://accredready.in/hospital-quality-management.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Quality Management</a>
-      <a href="https://accredready.in/privacy.html" class="rounded outline-none hover:text-blue focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
-    </nav>
-    <div class="mb-3 flex justify-center">
-      <a href="https://play.google.com/store/apps/details?id=com.mktech.nabhcompliance" target="_blank" rel="noopener noreferrer" class="rounded outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="h-[52px] w-auto" height="52"/></a>
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-ink text-white/70">
+    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+      <nav aria-label="Footer" class="flex flex-wrap justify-center gap-x-7 gap-y-3 text-[14px]">
+        <a href="https://accredready.in" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
+        <a href="https://accredready.in/nabh-6th-edition-checklist.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Checklist</a>
+        <a href="https://accredready.in/shco-accreditation-software.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Software</a>
+        <a href="https://accredready.in/hospital-quality-management.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Quality Management</a>
+        <a href="https://accredready.in/nabh-accreditation-cost.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Accreditation Cost</a>
+        <a href="https://accredready.in/privacy.html" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
+      </nav>
+      <div class="mt-8 flex justify-center">
+        <a href="https://play.google.com/store/apps/details?id=com.mktech.nabhcompliance" target="_blank" rel="noopener noreferrer" class="rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="h-[52px] w-auto" height="52"/></a>
+      </div>
+      <p class="mt-6 text-center font-mono text-[12px] text-white/45">© 2026 AccredReady by MK Tech · Independent educational tool, not affiliated with NABH/QCI</p>
     </div>
-    <p>© 2026 AccredReady by MK Tech. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Sticky nav shadow on scroll
+    (function(){
+      var nav = document.getElementById('nav');
+      var onScroll = function(){ nav.classList.toggle('shadow-[0_2px_12px_rgba(11,27,43,0.06)]', window.scrollY > 8); };
+      onScroll(); window.addEventListener('scroll', onScroll, { passive:true });
+    })();
+    // Hero scorecard animation (respects reduced motion)
+    window.addEventListener('load', function(){
+      var ring = document.getElementById('scoreRing');
+      var num = document.getElementById('scoreNum');
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced) { ring.style.setProperty('--p', 87); num.textContent = '87%'; }
+      else {
+        requestAnimationFrame(function(){ ring.style.setProperty('--p', 87); });
+        var v = 0;
+        var t = setInterval(function(){ v += 3; if (v >= 87) { v = 87; clearInterval(t); } num.textContent = v + '%'; }, 30);
+      }
+      document.querySelectorAll('.bar-fill').forEach(function(b, i){
+        if (reduced) { b.style.width = b.dataset.w; }
+        else { setTimeout(function(){ b.style.width = b.dataset.w; }, 200 + i * 80); }
+      });
+    });
+  </script>
 
 </body>
 </html>
