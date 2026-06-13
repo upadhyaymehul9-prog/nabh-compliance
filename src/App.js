@@ -2084,15 +2084,15 @@ function LoginScreen({ onLogin, initialError }) {
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:16,padding:"40px 36px",width:360}}>
         <div style={{textAlign:"center",marginBottom:28}}>
           <div style={{width:48,height:48,borderRadius:12,background:`linear-gradient(135deg,${T.gold},#f0d070)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:24,margin:"0 auto 12px"}}>⚕</div>
-          <div style={{fontSize:8,letterSpacing:3,color:T.gold,marginBottom:4}}>NABH 6TH EDITION</div>
-          <div style={{fontSize:18,fontWeight:700,color:T.white}}>Compliance Engine</div>
+          <div style={{fontSize:8,letterSpacing:3,color:T.gold,marginBottom:4}}>NABH ACCREDITATION</div>
+          <div style={{fontSize:18,fontWeight:700,color:T.white}}>Compliance &amp; Preparation Platform</div>
           <div style={{fontSize:13,color:T.muted,marginTop:4}}>Hospital Accreditation Platform</div>
         </div>
         {error&&<div style={{background:T.redD,border:`1px solid ${T.red}40`,borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:13,color:T.red}}>{error}</div>}
         {msg&&<div style={{background:T.greenD,border:`1px solid ${T.green}40`,borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:13,color:T.green}}>{msg}</div>}
         <div style={{textAlign:'center',padding:'0 0 20px 0',marginBottom:20,borderBottom:'1px solid #0f2640'}}>
-          <div style={{fontFamily:'Georgia,serif',fontSize:15,fontStyle:'italic',color:'#c8dcea',lineHeight:1.8}}>"An investment in knowledge pays the best interest."</div>
-          <div style={{fontSize:12,color:'#3a5870',marginTop:6,letterSpacing:2}}>— BENJAMIN FRANKLIN</div>
+          <div style={{fontFamily:'Georgia,serif',fontSize:15,fontStyle:'italic',color:'#c8dcea',lineHeight:1.8}}>"Quality is not an act, it is a habit."</div>
+          <div style={{fontSize:12,color:'#3a5870',marginTop:6,letterSpacing:2}}>— ARISTOTLE</div>
         </div>
         <div style={{marginBottom:14}}>
           <div style={{fontSize:12,color:T.muted,marginBottom:6}}>EMAIL</div>
