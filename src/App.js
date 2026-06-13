@@ -5302,7 +5302,7 @@ export default function App() {
         doc.setPage(i);
         doc.setFontSize(7); doc.setTextColor('#3a5870');
         doc.text(`Page ${i} of ${nPages}`,W-60,H-18,{align:'right'});
-        if(i>1) doc.text('NABH Compliance Engine - accredready.in',60,H-18);
+        if(i>1) doc.text('NABH Accreditation Platform - accredready.in',60,H-18);
       }
 
       const cleanName=cleanHospital.replace(/[^a-zA-Z0-9]/g,'_');
@@ -7302,7 +7302,7 @@ export default function App() {
           <div style={{width:32,height:32,borderRadius:8,background:theme==='light'?"rgba(255,255,255,0.15)":`linear-gradient(135deg,${T.gold},#f0d070)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:17,flexShrink:0,border:theme==='light'?"1px solid rgba(255,255,255,0.3)":"none",color:"#ffffff"}}>⚕</div>
           <div style={{flex:1,minWidth:100}}>
             <div style={{fontSize:7,letterSpacing:3,color:theme==='light'?"rgba(255,255,255,0.7)":T.gold}}>NABH 6TH EDITION</div>
-            <div style={{fontSize:14,fontWeight:700,color:"#ffffff"}}>{context?.hospitalName||"Compliance Engine"}{context?.assessmentName&&<span style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted,marginLeft:6}}>{context.assessmentName}</span>}</div>
+            <div style={{fontSize:14,fontWeight:700,color:"#ffffff"}}>{context?.hospitalName||"AccredReady"}{context?.assessmentName&&<span style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted,marginLeft:6}}>{context.assessmentName}</span>}</div>
           </div>
           {loading&&<div style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted}}>Refreshing…</div>}
           {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${readinessColor}25`,border:`1px solid ${readinessColor}60`,fontSize:11,fontWeight:700,color:theme==='light'?"#ffffff":readinessColor}}>{decision.readiness==="NOT READY"?"❌":decision.readiness==="RISKY"?"⚠️":"✅"} {decision.readiness||"—"}</div>}
@@ -7416,7 +7416,7 @@ export default function App() {
         <span style={{fontSize:18}}>💬</span> Suggest
       </a>
       <div style={{textAlign:"center",padding:"14px",color:T.muted,fontSize:11,borderTop:`1px solid ${T.border}`,marginTop:20}}>
-        NABH Compliance Engine — Independent educational tool — Not affiliated with NABH/QCI | Dr. Mehul Upadhyay
+        NABH Accreditation Platform — Independent educational tool — Not affiliated with NABH/QCI
       </div>
     </div>
   );
