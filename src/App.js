@@ -2228,7 +2228,7 @@ function TermsScreen({onBack}){return(
         ['3. Your Account','You are responsible for keeping your login credentials secure. You agree to provide accurate information. We may suspend accounts that violate these terms.'],
         ['4. Subscription & Payment','Plan: ₹499/month per hospital, all features included. 14-day free trial for new users — no payment required. Payment via UPI or bank transfer. Cancel anytime by emailing upadhyay.mehul9@gmail.com. No refunds for partial months used.'],
         ['5. Acceptable Use','You agree not to share your account, attempt to access other users data, copy or reproduce platform content, or use the platform for any unlawful purpose.'],
-        ['6. Intellectual Property','All content, design, and code is owned by AccredReady / Dr. Mehul Upadhyay. No reproduction without written permission.'],
+        ['6. Intellectual Property','All content, design, and code is owned by AccredReady. No reproduction without written permission.'],
         ['7. Disclaimer','AccredReady does not guarantee accreditation outcomes. All accreditation decisions rest with the relevant accreditation body. Always verify content against official published standards.'],
         ['8. Limitation of Liability','AccredReady is not liable for any indirect, incidental, or consequential damages arising from use of the platform.'],
         ['9. Governing Law','These terms are governed by Indian law. Disputes are subject to courts in Gujarat, India.'],
@@ -4904,7 +4904,7 @@ function ProfileScreen({ user, context, onContextUpdate }) {
             <div>
               <div style={{fontSize:11,color:T.muted,marginBottom:5}}>YOUR DISPLAY NAME — optional, used in audit logs</div>
               <div style={{display:"flex",gap:8}}>
-                <input value={displayName} onChange={e=>setDisplayName(e.target.value)} placeholder="e.g., Dr. Mehul Upadhyay" style={{flex:1,padding:"8px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14}}/>
+                <input value={displayName} onChange={e=>setDisplayName(e.target.value)} placeholder="e.g., Dr. Sharma" style={{flex:1,padding:"8px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14}}/>
                 <button onClick={saveProfile} disabled={savingProfile} style={{padding:"7px 16px",borderRadius:8,border:`1px solid ${T.gold}40`,background:T.goldD,color:T.gold,fontSize:13,fontWeight:700,cursor:savingProfile?"not-allowed":"pointer",opacity:savingProfile?0.5:1}}>{savingProfile?"Saving…":"Save"}</button>
               </div>
             </div>
