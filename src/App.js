@@ -2053,17 +2053,22 @@ function UpgradeWall({ daysUsed, onSignOut }) {
 
 function LoginScreen({ onLogin, initialError }) {
   const [email,setEmail]=useState(""); const [pass,setPass]=useState(""); const [whatsapp,setWhatsapp]=useState("");
+  const [rememberMe,setRememberMe]=useState(false);
   const [mode,setMode]=useState("login"); const [error,setError]=useState(initialError||"");
   const [loading,setLoading]=useState(false); const [msg,setMsg]=useState("");
   const [showPricing,setShowPricing]=useState(false);
   const [showContact,setShowContact]=useState(false);
+  useEffect(()=>{
+    const saved=localStorage.getItem('savedEmail');
+    if(saved){setEmail(saved);setRememberMe(true);}
+  },[]);
   useEffect(()=>{
     if(initialError)setError(initialError);
   },[initialError]);
   const handle=async()=>{
     setError("");setMsg("");setLoading(true);
     try{
-      if(mode==="login"){const{data,error:err}=await supabase.auth.signInWithPassword({email,password:pass});if(err)throw err;onLogin(data.user);}
+      if(mode==="login"){const{data,error:err}=await supabase.auth.signInWithPassword({email,password:pass});if(err)throw err;if(rememberMe){localStorage.setItem('savedEmail',email);}else{localStorage.removeItem('savedEmail');}onLogin(data.user);}
       else if(mode==="signup"){const{data,error:err}=await supabase.auth.signUp({email,password:pass});if(err)throw err;
         if(whatsapp.trim()&&data.user){await supabase.from("profiles").upsert({id:data.user.id,whatsapp_number:whatsapp.trim()},{onConflict:"id"});}
         if(data.session)onLogin(data.user);else{setMsg("Account created. You can now sign in.");setMode("login");}}
@@ -2111,6 +2116,10 @@ function LoginScreen({ onLogin, initialError }) {
             style={{width:"100%",padding:"10px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:15,boxSizing:"border-box"}}/>
         </div>}
         {mode==="reset"&&<div style={{marginBottom:20,fontSize:13,color:T.muted,lineHeight:1.6}}>Enter your email above and we'll send you a password reset link.</div>}
+        {mode==="login"&&<div style={{display:'flex',alignItems:'center',gap:8,margin:'8px 0 16px'}}>
+          <input type="checkbox" id="rememberMe" checked={rememberMe} onChange={e=>setRememberMe(e.target.checked)} style={{width:16,height:16,accentColor:T.gold,cursor:'pointer'}}/>
+          <label htmlFor="rememberMe" style={{color:T.muted,fontSize:13,cursor:'pointer'}}>Remember me</label>
+        </div>}
         <button onClick={handle} disabled={loading} style={{width:"100%",padding:"12px",borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:15,fontWeight:700,cursor:"pointer",opacity:loading?0.7:1}}>
           {loading?"Please wait…":mode==="login"?"Sign In →":mode==="signup"?"Create Account →":"Send Reset Email →"}
         </button>
