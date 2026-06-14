@@ -5036,6 +5036,42 @@ function RecoveryScreen({ user, onDone }) {
 }
 
 // ── ROOT APP ──────────────────────────────────────────
+const TOUR_STEPS=[
+  {title:"Welcome to AccredReady 🎉",body:"Your complete NABH accreditation toolkit. This 60-second tour shows you exactly what to do.",target:null},
+  {title:"Choose Your Programme",body:"Start by selecting HCO Full, HCO ELC, SHCO Full, or SHCO ELC — matching your hospital's accreditation goal.",target:"programme-selector"},
+  {title:"Score Your OEs",body:"Go to Score OEs → score each Objective Element Met / Partial / Not Met. This drives your entire readiness verdict.",target:"tab-oe"},
+  {title:"Your Readiness Verdict",body:"The Dashboard shows your live PASS/FAIL verdict and chapter-wise heatmap as you score more OEs.",target:"tab-dashboard"},
+  {title:"Committees & Audits",body:"26 mandatory committees and 35 audit checklists — formation guides included. Run these before your survey.",target:"tab-committees"},
+  {title:"KPIs & Patient Tracer",body:"Track 50 KPIs and run 8 types of patient tracers. Surveyors will ask for this data.",target:"tab-kpis"},
+  {title:"You're ready to start! 🚀",body:"Begin with Score OEs → score your first chapter. Your Gap Report PDF auto-generates as you score.",target:null},
+];
+
+function WalktourOverlay({tourStep,setTourStep,dismissTour}){
+  if(tourStep===null)return null;
+  const step=TOUR_STEPS[tourStep];
+  const isLast=tourStep===TOUR_STEPS.length-1;
+  return(
+    <div style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.75)",zIndex:10000,display:"flex",alignItems:"center",justifyContent:"center",padding:16}}>
+      <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:16,padding:"28px",width:"100%",maxWidth:420,boxShadow:"0 20px 60px rgba(0,0,0,0.5)"}}>
+        <div style={{display:"flex",justifyContent:"center",gap:6,marginBottom:20}}>
+          {TOUR_STEPS.map((_,i)=>(
+            <div key={i} style={{width:8,height:8,borderRadius:4,background:i===tourStep?T.gold:T.muted,transition:"background 0.2s"}}/>
+          ))}
+        </div>
+        <div style={{fontSize:20,fontWeight:700,color:T.gold,marginBottom:12,textAlign:"center"}}>{step.title}</div>
+        <div style={{fontSize:15,color:T.text,lineHeight:1.6,textAlign:"center",marginBottom:28}}>{step.body}</div>
+        <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+          <button onClick={dismissTour} style={{background:"transparent",border:"none",color:T.muted,fontSize:13,cursor:"pointer",padding:"8px 4px"}}>Skip Tour</button>
+          <button onClick={()=>{isLast?dismissTour():setTourStep(s=>s+1);}}
+            style={{padding:"10px 22px",borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:15,fontWeight:700,cursor:"pointer"}}>
+            {isLast?"Get Started →":"Next →"}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const [authState,setAuthState]=useState("loading");
   const [user,setUser]=useState(null);
@@ -5086,6 +5122,7 @@ export default function App() {
   const [auditMainTab, setAuditMainTab] = useState('nabh');
   const [committeesView, setCommitteesView] = useState('reference');
   const [showLicenseAdd, setShowLicenseAdd] = useState(false);
+  const [tourStep, setTourStep] = useState(null);
 
   // Reassign module-level T so all component closures see the correct theme
   T = theme === 'light' ? LIGHT_THEME : DARK_THEME;
@@ -5097,6 +5134,13 @@ export default function App() {
       await supabase.from("profiles").upsert({ id: user.id, theme_preference: next }, { onConflict: "id" });
     }
   };
+
+  const dismissTour = useCallback(async () => {
+    setTourStep(null);
+    if (context?.hospitalId) {
+      await supabase.from("hospitals").update({walkthrough_dismissed:true}).eq("id",context.hospitalId);
+    }
+  },[context?.hospitalId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const generatePDF = async () => {
     setPdfLoading(true);
@@ -5566,6 +5610,10 @@ export default function App() {
       setOes(sorted.map(oe=>({id:oe.id,chapter:oe.chapter_id,level:oe.level,text:oe.text,doc:oe.doc_required,standard:oe.standard_id,achieveTips:oe.achieve_tips||null,score:scoreMap[oe.id]||null,evidenceLinks:linksMap[oe.id]||[]})));
     }
     setLoading(false);
+    if(ctx?.hospitalId){
+      const{data:hospWt}=await supabase.from("hospitals").select("walkthrough_dismissed").eq("id",ctx.hospitalId).maybeSingle();
+      if(hospWt&&!hospWt.walkthrough_dismissed)setTourStep(0);
+    }
   },[]);
 
   const handleReady=(ctx)=>{setContext(ctx);setAuthState("programme");};
@@ -7421,6 +7469,9 @@ export default function App() {
         style={{position:"fixed",bottom:80,right:20,zIndex:9998,display:"flex",alignItems:"center",gap:8,padding:"10px 16px",borderRadius:24,background:"#25D366",color:"#ffffff",fontSize:13,fontWeight:700,textDecoration:"none",boxShadow:"0 4px 16px rgba(37,211,102,0.5)"}}>
         <span style={{fontSize:18}}>💬</span> Suggest
       </a>
+      <button onClick={()=>setTourStep(0)} title="Replay app tour"
+        style={{position:"fixed",bottom:148,right:20,zIndex:9997,width:48,height:48,borderRadius:24,background:T.gold,border:"none",color:T.bg,fontSize:22,fontWeight:900,cursor:"pointer",boxShadow:`0 4px 16px rgba(201,168,76,0.5)`,display:"flex",alignItems:"center",justifyContent:"center",lineHeight:1}}>?</button>
+      <WalktourOverlay tourStep={tourStep} setTourStep={setTourStep} dismissTour={dismissTour}/>
       <div style={{textAlign:"center",padding:"14px",color:T.muted,fontSize:11,borderTop:`1px solid ${T.border}`,marginTop:20}}>
         NABH Accreditation Platform — Independent educational tool — Not affiliated with NABH/QCI
       </div>
