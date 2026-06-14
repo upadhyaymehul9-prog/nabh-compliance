@@ -5041,8 +5041,8 @@ const TOUR_STEPS=[
   {title:"Choose Your Programme",body:"Start by selecting HCO Full, HCO ELC, SHCO Full, or SHCO ELC — matching your hospital's accreditation goal.",target:"programme-selector"},
   {title:"Score Your OEs",body:"Go to Score OEs → score each Objective Element Met / Partial / Not Met. This drives your entire readiness verdict.",target:"tab-oe"},
   {title:"Your Readiness Verdict",body:"The Dashboard shows your live PASS/FAIL verdict and chapter-wise heatmap as you score more OEs.",target:"tab-dashboard"},
-  {title:"Committees & Audits",body:"26 mandatory committees and 35 audit checklists — formation guides included. Run these before your survey.",target:"tab-committees"},
-  {title:"KPIs & Patient Tracer",body:"Track 50 KPIs and run 8 types of patient tracers. Surveyors will ask for this data.",target:"tab-kpis"},
+  {title:"Committees & Audits",body:"Mandatory committees and audit checklists — formation guides included. Run these before your survey.",target:"tab-committees"},
+  {title:"KPIs & Patient Tracer",body:"Track KPIs and run patient tracers across all types. Surveyors will ask for this data.",target:"tab-kpis"},
   {title:"You're ready to start! 🚀",body:"Begin with Score OEs → score your first chapter. Your Gap Report PDF auto-generates as you score.",target:null},
 ];
 
@@ -5137,8 +5137,13 @@ export default function App() {
 
   const dismissTour = useCallback(async () => {
     setTourStep(null);
+    console.log("[Tour] dismissTour called. context.hospitalId =", context?.hospitalId);
     if (context?.hospitalId) {
-      await supabase.from("hospitals").update({walkthrough_dismissed:true}).eq("id",context.hospitalId);
+      console.log("[Tour] Running UPDATE hospitals SET walkthrough_dismissed=true WHERE id=", context.hospitalId);
+      const { error } = await supabase.from("hospitals").update({walkthrough_dismissed:true}).eq("id",context.hospitalId);
+      console.log("[Tour] UPDATE result — error:", error);
+    } else {
+      console.warn("[Tour] dismissTour: hospitalId is missing — skipping DB update");
     }
   },[context?.hospitalId]); // eslint-disable-line react-hooks/exhaustive-deps
 
