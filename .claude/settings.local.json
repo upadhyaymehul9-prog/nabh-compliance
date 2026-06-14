@@ -61,7 +61,8 @@
       "Bash(mv nabh-audit-types:*)",
       "Bash(mv nabh-facility-round:*)",
       "Bash(mv nabh-clinic-branding:*)",
-      "Bash(mv clinic-revenue-retention:*)"
+      "Bash(mv clinic-revenue-retention:*)",
+      "Bash(mv nabh-affordable-software:*)"
     ]
   }
 }
