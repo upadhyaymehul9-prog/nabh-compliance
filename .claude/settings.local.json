@@ -57,7 +57,11 @@
       "PowerShell(npm start *)",
       "PowerShell(Get-CimInstance *)",
       "PowerShell(Out-File *)",
-      "PowerShell(Set-Location C:\\\\Users\\\\SERVER\\\\Desktop\\\\nabh-compliance; git stash pop stash@{0})"
+      "PowerShell(Set-Location C:\\\\Users\\\\SERVER\\\\Desktop\\\\nabh-compliance; git stash pop stash@{0})",
+      "Bash(mv nabh-audit-types:*)",
+      "Bash(mv nabh-facility-round:*)",
+      "Bash(mv nabh-clinic-branding:*)",
+      "Bash(mv clinic-revenue-retention:*)"
     ]
   }
 }
