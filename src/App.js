@@ -2071,6 +2071,7 @@ function LoginScreen({ onLogin, initialError }) {
       if(mode==="login"){const{data,error:err}=await supabase.auth.signInWithPassword({email,password:pass});if(err)throw err;if(rememberMe){localStorage.setItem('savedEmail',email);}else{localStorage.removeItem('savedEmail');}onLogin(data.user);}
       else if(mode==="signup"){const{data,error:err}=await supabase.auth.signUp({email,password:pass});if(err)throw err;
         if(whatsapp.trim()&&data.user){await supabase.from("profiles").upsert({id:data.user.id,whatsapp_number:whatsapp.trim()},{onConflict:"id"});}
+        await fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({access_key:"2aaadfc3-c669-4b2b-92b8-6d6bee4faee1",subject:"New AccredReady Signup",name:"New User",email,message:`New signup:\nEmail: ${email}${whatsapp.trim()?`\nWhatsApp: ${whatsapp.trim()}`:""}`,})});
         if(data.session)onLogin(data.user);else{setMsg("Account created. You can now sign in.");setMode("login");}}
       else if(mode==="reset"){if(!email.trim())throw new Error("Enter your email address first.");const{error:err}=await supabase.auth.resetPasswordForEmail(email,{redirectTo:"https://upadhyaymehul9-prog.github.io/nabh-compliance/"});if(err)throw err;setMsg("Password reset email sent! Check your inbox.");setMode("login");}
     }catch(e){setError(e.message);}
@@ -2531,7 +2532,10 @@ function SetupScreen({ user, onReady }) {
   const createHospital=async()=>{
     if(!newHosp.trim())return;
     setLoading(true);setError("");
-    const{data,error:err}=await supabase.from("hospitals").insert({name:newHosp.trim(),nabh_status:"preparing"}).select().single();
+    const{data:prof}=await supabase.from("profiles").select("whatsapp_number").eq("id",user.id).maybeSingle();
+    const hospInsert={name:newHosp.trim(),nabh_status:"preparing"};
+    if(prof?.whatsapp_number)hospInsert.whatsapp=prof.whatsapp_number;
+    const{data,error:err}=await supabase.from("hospitals").insert(hospInsert).select().single();
     if(err){setError(err.message);setLoading(false);return;}
     await supabase.from("profiles").upsert({id:user.id,hospital_id:data.id,role:"admin",name:user.email});
     setHospital(data);setAssessments([]);setNewHosp("");setLoading(false);
