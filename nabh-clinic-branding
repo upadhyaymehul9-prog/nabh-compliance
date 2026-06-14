@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build a Trusted, Professional, World-Class Clinic – Branding Guide</title>
+  <meta name="description" content="Step-by-step branding and growth plan for small clinics. Build a trusted, professional, world-class clinic with the right brand essentials, clinic touchpoints, and brand tone." />
+  <meta name="keywords" content="clinic branding, small clinic branding, doctor clinic brand, professional clinic, clinic growth plan, clinic marketing, world-class clinic, clinic identity" />
+  <link rel="canonical" href="https://accredready.in/nabh-clinic-branding" />
+  <meta property="og:title" content="Build a Trusted, Professional, World-Class Clinic – Branding Guide" />
+  <meta property="og:description" content="A step-by-step branding and growth plan for small clinics. Cover brand essentials, clinic touchpoints, and brand tone to build a trusted, professional clinic." />
+  <meta property="og:url" content="https://accredready.in/nabh-clinic-branding" />
+  <meta property="og:image" content="https://accredready.in/logo512.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Build a Trusted, Professional, World-Class Clinic: Branding Guide",
+    "publisher": {"@type": "Organization", "name": "AccredReady", "url": "https://accredready.in"},
+    "datePublished": "2026-06-14"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { ink:'#0B1B2B', paper:'#FBFDFD', verify:'#0E8A5F', verifydark:'#0A6B4A', signal:'#D97706', alert:'#DC2626', slate:'#4B5D6E', hairline:'#DCE6E4', mint:'#EBF4F0' },
+        fontFamily: { display:['"Bricolage Grotesque"','sans-serif'], body:['"IBM Plex Sans"','sans-serif'], mono:['"IBM Plex Mono"','monospace'] }
+      }}
+    };
+  </script>
+  <style>
+    body { background:#FBFDFD; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-body text-ink leading-[1.7] antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-lg focus:bg-verify focus:px-4 focus:py-2 focus:text-white focus:outline-none">Skip to content</a>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-[100] border-b border-hairline bg-paper/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="https://accredready.in" class="rounded font-display text-[22px] font-bold tracking-[-0.01em] text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2">AccredReady</a>
+      <a href="https://accredready.in" class="rounded-xl bg-verify px-5 py-2.5 text-[15px] font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 motion-reduce:transform-none motion-reduce:transition-none">Start free trial</a>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <header class="mx-auto max-w-3xl px-5 pb-10 pt-16 text-center sm:px-8">
+      <span class="mb-6 inline-flex items-center gap-2 rounded-lg border border-verify/20 bg-mint px-3 py-1.5 font-mono text-[13px] uppercase tracking-wide text-verify"><span class="h-1.5 w-1.5 rounded-full bg-verify"></span>Clinic Growth · Branding</span>
+      <h1 class="mb-5 font-display text-[clamp(1.8rem,4vw,3rem)] font-bold leading-[1.1] tracking-[-0.02em]">Build a Trusted. Professional.<br>World-Class Clinic.</h1>
+      <p class="mx-auto max-w-2xl text-lg text-slate">A step-by-step branding and growth plan for small clinics. Patients judge your clinic before they meet you — your brand is the first consultation they have with you.</p>
+    </header>
+
+    <article class="mx-auto max-w-3xl px-5 pb-16 sm:px-8 [&>h2]:mb-4 [&>h2]:mt-10 [&>h2]:font-display [&>h2]:text-2xl [&>h2]:font-bold [&_h2_span]:text-ink [&>h3]:mb-2 [&>h3]:mt-7 [&>h3]:font-display [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-ink [&>p]:mb-4 [&>p]:text-[0.97rem] [&>p]:text-slate [&_strong]:text-ink">
+
+      <h2>Why Small Clinics <span>Need a Brand Strategy</span></h2>
+      <p>Most small clinics rely entirely on word-of-mouth referrals and footfall. This works — until it doesn't. When a new clinic opens nearby, when a doctor retires, or when patients start searching for doctors online, a clinic with no brand presence loses patients it never even knew it was competing for.</p>
+      <p>Branding is not about spending money on marketing. It is about making every interaction with your clinic — from the signboard outside to the discharge note handed to the patient — feel consistent, professional, and trustworthy. A well-branded clinic retains patients, generates referrals, and commands premium positioning in its area.</p>
+
+      <div class="my-6 rounded-xl border border-verify/30 bg-mint px-6 py-5"><p class="!mb-0 !text-ink">🏥 <strong>Your brand is the sum of every patient experience.</strong> The waiting room cleanliness, the staff uniform, the way calls are answered, the prescription format, the discharge summary — all of these communicate your brand before any advertisement does.</p></div>
+
+      <h2>Your Brand Essentials <span>Checklist</span></h2>
+      <p>These are the foundational elements every clinic must have in place before any marketing or growth activity. Without these basics, no amount of promotion will create sustained trust.</p>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">01</span><h3 class="!m-0 !text-ink">Clinic Name &amp; Visual Identity</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>A clear, memorable clinic name that communicates your specialty or approach</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>A professional logo used consistently across all touchpoints — signboard, letterhead, prescriptions</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>A defined colour palette and typography that looks professional across print and digital materials</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>A professional signboard with clear visibility, lighting, and accurate contact details</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">02</span><h3 class="!m-0 !text-ink">Online Presence</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>A verified and complete Google Business Profile with accurate hours, address, and phone</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>A simple website or landing page listing your specialties, timing, and location</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Active monitoring and response to patient reviews — both positive and negative</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Presence on Practo, JustDial, or other local health directories relevant to your area</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">03</span><h3 class="!m-0 !text-ink">Staff Presentation &amp; Communication</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Consistent uniform or dress code for all staff — reception, clinical, and housekeeping</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Defined scripts for how calls are answered, how patients are greeted, how complaints are handled</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Name badges and designation clarity for all staff visible to patients</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Training on patient communication — empathy, clarity, escalation, no medical jargon</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">04</span><h3 class="!m-0 !text-ink">Physical Environment</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Clean, well-lit waiting area with adequate seating, water facility, and clear signage</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Functional and clean washroom available for patients</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Clear patient flow from entry to registration to consultation to exit — no confusing dead ends</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Visible doctor credentials, registration certificate, and clinic registration displayed prominently</li>
+        </ul>
+      </div>
+
+      <h2>Clinic Brand <span>Touchpoints</span></h2>
+      <p>Every interaction a patient has with your clinic — before, during, and after their visit — is a brand touchpoint. Each one either builds or erodes trust. Map each touchpoint and define what the ideal experience looks like.</p>
+
+      <div class="my-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div class="rounded-xl border border-hairline bg-white p-5">
+          <div class="mb-2 font-display font-bold text-ink">Before the Visit</div>
+          <ul class="space-y-1 text-[0.85rem] text-slate">
+            <li class="flex gap-2"><span class="text-verify">→</span>Google search result and reviews</li>
+            <li class="flex gap-2"><span class="text-verify">→</span>Phone call to book appointment</li>
+            <li class="flex gap-2"><span class="text-verify">→</span>WhatsApp appointment confirmation</li>
+            <li class="flex gap-2"><span class="text-verify">→</span>Visibility and appearance of clinic signboard</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-hairline bg-white p-5">
+          <div class="mb-2 font-display font-bold text-ink">During the Visit</div>
+          <ul class="space-y-1 text-[0.85rem] text-slate">
+            <li class="flex gap-2"><span class="text-verify">→</span>Reception greeting and registration process</li>
+            <li class="flex gap-2"><span class="text-verify">→</span>Waiting room experience and wait time</li>
+            <li class="flex gap-2"><span class="text-verify">→</span>Consultation room cleanliness and privacy</li>
+            <li class="flex gap-2"><span class="text-verify">→</span>Doctor's communication style and time given</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-hairline bg-white p-5">
+          <div class="mb-2 font-display font-bold text-ink">At Checkout</div>
+          <ul class="space-y-1 text-[0.85rem] text-slate">
+            <li class="flex gap-2"><span class="text-verify">→</span>Prescription format — professional, legible, branded letterhead</li>
+            <li class="flex gap-2"><span class="text-verify">→</span>Billing transparency — no hidden charges, receipt provided</li>
+            <li class="flex gap-2"><span class="text-verify">→</span>Follow-up appointment booked before patient leaves</li>
+            <li class="flex gap-2"><span class="text-verify">→</span>Patient education material or written instructions given</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-hairline bg-white p-5">
+          <div class="mb-2 font-display font-bold text-ink">After the Visit</div>
+          <ul class="space-y-1 text-[0.85rem] text-slate">
+            <li class="flex gap-2"><span class="text-verify">→</span>Follow-up call or WhatsApp message to check on patient</li>
+            <li class="flex gap-2"><span class="text-verify">→</span>Reminder for next appointment or investigation</li>
+            <li class="flex gap-2"><span class="text-verify">→</span>Request for Google review at the right moment</li>
+            <li class="flex gap-2"><span class="text-verify">→</span>Festive or health awareness messages to stay in touch</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Brand Tone <span>Guide for Clinics</span></h2>
+      <p>The way your clinic communicates — in person, on WhatsApp, on your signboard, and online — should feel consistent. Define your brand tone clearly so every team member speaks in the same voice.</p>
+
+      <div class="my-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div class="rounded-xl border border-hairline border-t-[3px] border-t-verify bg-white p-5"><div class="mb-1 font-mono text-[0.75rem] font-medium uppercase tracking-wide text-verify">Be</div><div class="mb-1 font-semibold text-ink">Warm &amp; Empathetic</div><div class="text-[0.85rem] text-slate">Patients come when they are unwell and anxious. Every word should reassure. Avoid clinical coldness or dismissive responses.</div></div>
+        <div class="rounded-xl border border-hairline border-t-[3px] border-t-signal bg-white p-5"><div class="mb-1 font-mono text-[0.75rem] font-medium uppercase tracking-wide text-signal">Be</div><div class="mb-1 font-semibold text-ink">Clear &amp; Simple</div><div class="text-[0.85rem] text-slate">No medical jargon in patient-facing communication. Explain in plain language. If a patient has to ask what you meant, you didn't communicate.</div></div>
+        <div class="rounded-xl border border-hairline border-t-[3px] border-t-ink bg-white p-5"><div class="mb-1 font-mono text-[0.75rem] font-medium uppercase tracking-wide text-ink">Be</div><div class="mb-1 font-semibold text-ink">Consistent &amp; Professional</div><div class="text-[0.85rem] text-slate">Every staff member should represent the clinic the same way. One unprofessional interaction can undo ten positive ones.</div></div>
+      </div>
+
+      <h3>The Branding Mistake Most Clinics Make</h3>
+      <p>Most small clinics invest in branding only when they are launching or renovating. They create a nice logo and signboard, then stop there. But branding is a system, not a one-time project. The prescription you issue today, the way your receptionist answers the phone tomorrow, the Google review you respond to next week — these are all live branding moments. Build a system, not a look.</p>
+      <p>The clinics that build lasting patient loyalty are the ones that make every person who walks in feel that this place is safe, professional, and genuinely cares. That impression is built brick by brick, visit by visit — and AccredReady helps you build the quality systems that make that consistency possible.</p>
+
+      <div class="my-10 rounded-2xl bg-ink px-6 py-12 text-center">
+        <h2 class="!mt-0 !text-white">Build Your World-Class Clinic with <span class="!text-white">AccredReady</span></h2>
+        <p class="mx-auto mt-3 max-w-lg !text-white/70">AccredReady gives small clinics the quality systems, documentation tools, and compliance frameworks to operate like a world-class facility — and earn the accreditation that backs up your brand promise.</p>
+        <a href="https://accredready.in" class="mt-4 inline-block rounded-xl bg-verify px-8 py-3.5 font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start free trial →</a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-white/70">
+    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+      <nav aria-label="Footer" class="flex flex-wrap justify-center gap-x-7 gap-y-3 text-[14px]">
+        <a href="https://accredready.in" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
+        <a href="https://accredready.in/nabh-accreditation-software" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Software</a>
+        <a href="https://accredready.in/nabh-6th-edition-standards" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">6th Edition Guide</a>
+        <a href="https://accredready.in/nabh-shco-checklist" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Checklist</a>
+        <a href="https://accredready.in/nabh-kpi-indicators" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">KPI Guide</a>
+        <button onclick="document.getElementById('contactModal').style.display='flex'" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink" style="background:none;border:none;color:inherit;font-size:inherit;cursor:pointer;font-family:inherit;padding:0;">Contact Us</button>
+        <a href="https://accredready.in/privacy" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
+      </nav>
+      <p class="mt-8 text-center font-mono text-[12px] text-white/45">© 2026 AccredReady by MK Tech.</p>
+    </div>
+  </footer>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.75);align-items:center;justify-content:center;padding:20px;">
+    <div onclick="event.stopPropagation()" style="background:#081525;border:1px solid #1e3a52;border-radius:16px;padding:28px 24px;max-width:420px;width:100%;position:relative;max-height:90vh;overflow-y:auto;">
+      <button onclick="document.getElementById('contactModal').style.display='none';document.getElementById('cSuccess').style.display='none';document.getElementById('cError').style.display='none';document.getElementById('cForm').reset();" style="position:absolute;top:12px;right:14px;background:none;border:none;color:#7a9db8;font-size:20px;cursor:pointer;line-height:1;">&#x2715;</button>
+      <div style="font-size:11px;letter-spacing:3px;color:#c9a84c;margin-bottom:8px;text-transform:uppercase;">AccredReady</div>
+      <div style="font-size:20px;font-weight:700;color:#eef4f9;margin-bottom:18px;">Contact Us</div>
+      <div id="cSuccess" style="display:none;color:#0E8A5F;font-size:15px;padding:14px;background:#EBF4F0;border-radius:8px;margin-bottom:16px;">Thank you! We'll get back to you soon.</div>
+      <div id="cError" style="display:none;color:#DC2626;font-size:14px;padding:12px;background:#fef2f2;border-radius:8px;margin-bottom:16px;">Something went wrong, please try again.</div>
+      <form id="cForm" onsubmit="submitContact(event)">
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Name *</label><input type="text" name="name" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Email *</label><input type="email" name="email" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Mobile *</label><input type="tel" name="phone" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:18px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Message *</label><textarea name="message" required rows="4" style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;resize:vertical;font-family:inherit;"></textarea></div>
+        <button type="submit" id="cSubmit" style="width:100%;padding:12px;background:#0E8A5F;border:none;border-radius:10px;color:#fff;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;">Send Message</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.getElementById('contactModal').addEventListener('click',function(e){if(e.target===this){this.style.display='none';document.getElementById('cSuccess').style.display='none';document.getElementById('cError').style.display='none';document.getElementById('cForm').reset();}});
+    async function submitContact(e){
+      e.preventDefault();var btn=document.getElementById('cSubmit');btn.disabled=true;btn.textContent='Sending…';
+      document.getElementById('cSuccess').style.display='none';document.getElementById('cError').style.display='none';
+      var f=e.target;
+      try{var r=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({access_key:'2aaadfc3-c669-4b2b-92b8-6d6bee4faee1',name:f.name.value,email:f.email.value,phone:f.phone.value,message:f.message.value})});
+        var j=await r.json();
+        if(r.ok&&j.success){document.getElementById('cSuccess').style.display='block';f.reset();}
+        else document.getElementById('cError').style.display='block';
+      }catch(err){document.getElementById('cError').style.display='block';}
+      btn.disabled=false;btn.textContent='Send Message';
+    }
+  </script>
+</body>
+</html>

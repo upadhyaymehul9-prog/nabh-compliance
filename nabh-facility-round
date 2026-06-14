@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facility Round in Hospital as per NABH Standard – Complete Guide</title>
+  <meta name="description" content="Complete guide to conducting facility rounds in NABH accredited hospitals. What is a facility round, why it matters, impact on support services, and how to make rounds systematic." />
+  <meta name="keywords" content="NABH facility round, hospital facility round, NABH support services audit, facility round checklist, NABH hospital round, hospital walkthrough NABH" />
+  <link rel="canonical" href="https://accredready.in/nabh-facility-round" />
+  <meta property="og:title" content="Facility Round in Hospital as per NABH Standard" />
+  <meta property="og:description" content="A proactive step towards excellence in support services. Learn what facility rounds are, why NABH expects them, and how they impact housekeeping, maintenance, dietary, waste management, and more." />
+  <meta property="og:url" content="https://accredready.in/nabh-facility-round" />
+  <meta property="og:image" content="https://accredready.in/logo512.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Facility Round in Hospital as per NABH Standard: Complete Guide",
+    "publisher": {"@type": "Organization", "name": "AccredReady", "url": "https://accredready.in"},
+    "datePublished": "2026-06-14"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { ink:'#0B1B2B', paper:'#FBFDFD', verify:'#0E8A5F', verifydark:'#0A6B4A', signal:'#D97706', alert:'#DC2626', slate:'#4B5D6E', hairline:'#DCE6E4', mint:'#EBF4F0' },
+        fontFamily: { display:['"Bricolage Grotesque"','sans-serif'], body:['"IBM Plex Sans"','sans-serif'], mono:['"IBM Plex Mono"','monospace'] }
+      }}
+    };
+  </script>
+  <style>
+    body { background:#FBFDFD; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-body text-ink leading-[1.7] antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-lg focus:bg-verify focus:px-4 focus:py-2 focus:text-white focus:outline-none">Skip to content</a>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-[100] border-b border-hairline bg-paper/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="https://accredready.in" class="rounded font-display text-[22px] font-bold tracking-[-0.01em] text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2">AccredReady</a>
+      <a href="https://accredready.in" class="rounded-xl bg-verify px-5 py-2.5 text-[15px] font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 motion-reduce:transform-none motion-reduce:transition-none">Start free trial</a>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <header class="mx-auto max-w-3xl px-5 pb-10 pt-16 text-center sm:px-8">
+      <span class="mb-6 inline-flex items-center gap-2 rounded-lg border border-verify/20 bg-mint px-3 py-1.5 font-mono text-[13px] uppercase tracking-wide text-verify"><span class="h-1.5 w-1.5 rounded-full bg-verify"></span>Quality Guide · Facility Management</span>
+      <h1 class="mb-5 font-display text-[clamp(1.8rem,4vw,3rem)] font-bold leading-[1.1] tracking-[-0.02em]">Facility Round in Hospital<br>as per NABH Standard</h1>
+      <p class="mx-auto max-w-2xl text-lg text-slate">A proactive step towards excellence in support services. When leaders walk the floor, problems get noticed, people feel valued, and patients get safer care.</p>
+    </header>
+
+    <article class="mx-auto max-w-3xl px-5 pb-16 sm:px-8 [&>h2]:mb-4 [&>h2]:mt-10 [&>h2]:font-display [&>h2]:text-2xl [&>h2]:font-bold [&_h2_span]:text-ink [&>h3]:mb-2 [&>h3]:mt-7 [&>h3]:font-display [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-ink [&>p]:mb-4 [&>p]:text-[0.97rem] [&>p]:text-slate [&_strong]:text-ink">
+
+      <h2>What Is a <span>Facility Round?</span></h2>
+      <p>A facility round is a structured walk-through conducted by hospital leaders — quality managers, department heads, or senior administration — to assess the performance, safety, cleanliness, and functionality of support services and infrastructure across the entire hospital.</p>
+      <p>Unlike departmental audits that look at documents and records, facility rounds are observational. They assess what is actually happening on the ground — whether corridors are clean, whether fire exits are clear, whether biomedical waste bins are correctly used, and whether maintenance issues are being addressed promptly.</p>
+
+      <div class="my-6 rounded-xl border border-verify/30 bg-mint px-6 py-5"><p class="!mb-0 !text-ink">🏥 <strong>Round Today, Safe Tomorrow.</strong> NABH expects hospital leaders to be visible on the floor — not just in committee meetings. Facility rounds are how leadership translates policy into practice and demonstrates commitment to quality at every level.</p></div>
+
+      <h2>Why Facility Rounds <span>Are Important</span></h2>
+      <ul class="my-4 space-y-3 text-[0.97rem] text-slate">
+        <li class="flex gap-2.5 rounded-lg border border-hairline bg-white px-4 py-3"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Ensures real-time assessment of support services — not just what's on paper but what's happening now</li>
+        <li class="flex gap-2.5 rounded-lg border border-hairline bg-white px-4 py-3"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Identifies gaps, risks, and non-conformities before they become patient safety incidents</li>
+        <li class="flex gap-2.5 rounded-lg border border-hairline bg-white px-4 py-3"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Ensures timely action and continuous improvement through immediate escalation</li>
+        <li class="flex gap-2.5 rounded-lg border border-hairline bg-white px-4 py-3"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Reinforces accountability and ownership among frontline support staff</li>
+        <li class="flex gap-2.5 rounded-lg border border-hairline bg-white px-4 py-3"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Ensures preparedness for emergencies — equipment availability and staff readiness</li>
+      </ul>
+
+      <h2>Impact of <span>Facility Rounds</span></h2>
+      <p>A well-conducted facility round programme creates measurable impact across six dimensions of hospital performance:</p>
+
+      <div class="my-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div class="rounded-xl border border-hairline bg-white p-5">
+          <div class="mb-1 font-display font-bold text-ink">Regulatory Compliance</div>
+          <div class="text-[0.85rem] text-slate">Meets NABH standards and legal requirements. Rounds generate observable evidence that the hospital actively monitors its physical environment and support functions.</div>
+        </div>
+        <div class="rounded-xl border border-hairline bg-white p-5">
+          <div class="mb-1 font-display font-bold text-ink">Risk Identification</div>
+          <div class="text-[0.85rem] text-slate">Early detection of potential risks and hazards — slippery floors, overloaded electrical sockets, blocked fire exits — before they cause harm.</div>
+        </div>
+        <div class="rounded-xl border border-hairline bg-white p-5">
+          <div class="mb-1 font-display font-bold text-ink">Process Improvement</div>
+          <div class="text-[0.85rem] text-slate">Enhances systems, processes, and work efficiency by surfacing bottlenecks and inefficiencies that don't show up in data or reports.</div>
+        </div>
+        <div class="rounded-xl border border-hairline bg-white p-5">
+          <div class="mb-1 font-display font-bold text-ink">Accountability &amp; Ownership</div>
+          <div class="text-[0.85rem] text-slate">Clearly defined responsibilities and follow-up. Staff know that leadership is watching and that issues raised in rounds are tracked to resolution.</div>
+        </div>
+        <div class="rounded-xl border border-hairline bg-white p-5">
+          <div class="mb-1 font-display font-bold text-ink">Resource Optimisation</div>
+          <div class="text-[0.85rem] text-slate">Better utilisation of manpower, materials, and infrastructure by identifying waste, idle equipment, and understaffed areas in real time.</div>
+        </div>
+        <div class="rounded-xl border border-hairline bg-white p-5">
+          <div class="mb-1 font-display font-bold text-ink">Leadership Engagement</div>
+          <div class="text-[0.85rem] text-slate">Builds trust, motivates staff, and aligns teams. When leaders are present on the floor, staff engagement and adherence to protocols improves measurably.</div>
+        </div>
+      </div>
+
+      <h2>Facility Rounds Across <span>Support Services</span></h2>
+      <p>Each support service department has specific aspects that must be checked during facility rounds. NABH assessors look for evidence that these checks happen regularly and findings are documented.</p>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">HK</span><h3 class="!m-0 !text-ink">Housekeeping</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Ensures cleanliness, hygiene, and infection control across all patient and public areas</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Check cleaning frequency registers, chemical dilution records, and staff technique</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Observe actual mopping technique — wet mopping with correct disinfectant, not dry sweeping</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">ME</span><h3 class="!m-0 !text-ink">Maintenance &amp; Engineering</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Ensures safety of building, equipment, and utilities across all departments</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Check preventive maintenance schedules for lifts, generators, HVAC, and autoclaves</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Identify any pending breakdown work orders and escalate overdue items</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">DT</span><h3 class="!m-0 !text-ink">Dietary Services</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Ensures safe, hygienic, and timely food service for patients and staff</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Check kitchen hygiene, food temperature logs, pest control records</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Verify special diet accuracy — diabetic, renal, and therapeutic diet compliance</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">LN</span><h3 class="!m-0 !text-ink">Laundry Services</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Ensures clean, hygienic linen and uniform to prevent cross-infection</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Check linen segregation at ward level — soiled vs. clean storage, colour-coded bags</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Review washing temperature records and turnaround time from wards</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">WM</span><h3 class="!m-0 !text-ink">Waste Management</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Ensures safe segregation, handling, storage, and disposal of biomedical and general waste</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Observe colour coding at point of generation — yellow, red, white, black bins</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Check that bins are not overfilled (&gt;3/4 capacity), lids are closed, no sharps in general waste</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">SC</span><h3 class="!m-0 !text-ink">Security Services</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Ensures safety and security of patients, staff, and visitors at all times</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Check access control at entry points, visitor passes, and restricted area compliance</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Verify CCTV coverage of critical areas and functionality of recording systems</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">TR</span><h3 class="!m-0 !text-ink">Transport Services</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Ensures safe and timely patient transport within and outside the facility</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Check wheelchair and stretcher availability, cleanliness, and functional brakes</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Verify ambulance equipment checklist, vehicle hygiene, and crew training records</li>
+        </ul>
+      </div>
+
+      <h2>Positive Impact of <span>Regular Facility Rounds</span></h2>
+
+      <div class="my-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div class="rounded-xl border border-hairline border-t-[3px] border-t-verify bg-white p-5">
+          <div class="mb-1 font-display font-bold text-verify">Healthy Environment</div>
+          <div class="text-[0.85rem] text-slate">Clean, hygienic, and well-maintained infrastructure. Adequate ventilation, lighting, and safety measures. Promotes a healing and comfortable environment for patients.</div>
+        </div>
+        <div class="rounded-xl border border-hairline border-t-[3px] border-t-signal bg-white p-5">
+          <div class="mb-1 font-display font-bold text-signal">Patient Safety</div>
+          <div class="text-[0.85rem] text-slate">Reduces risk of infections and accidents. Ensures availability and functionality of critical services. Ensures emergency preparedness and prevents untoward incidents.</div>
+        </div>
+        <div class="rounded-xl border border-hairline border-t-[3px] border-t-ink bg-white p-5">
+          <div class="mb-1 font-display font-bold text-ink">Better Outcomes</div>
+          <div class="text-[0.85rem] text-slate">Clean, safe, and well-functioning services support quality treatment. Timely and uninterrupted support services enhance patient satisfaction and trust, leading to better clinical outcomes.</div>
+        </div>
+      </div>
+
+      <h3>What a Good Facility Round Record Looks Like</h3>
+      <p>Each facility round should be documented with: the date and time, areas covered, team conducting the round, specific observations made (compliant and non-compliant), immediate actions taken, items escalated for follow-up, and the name of the person responsible for closure. NABH assessors will ask to see facility round records — a well-maintained log demonstrates active leadership engagement.</p>
+      <p>Rounds conducted but not documented are rounds that did not happen, in NABH's view. The written record is the evidence. Use a structured round form so nothing is missed and every area is consistently assessed.</p>
+
+      <div class="my-10 rounded-2xl bg-ink px-6 py-12 text-center">
+        <h2 class="!mt-0 !text-white">Conduct Facility Rounds with <span class="!text-white">AccredReady</span></h2>
+        <p class="mx-auto mt-3 max-w-lg !text-white/70">AccredReady includes structured facility round checklists for all support service departments, digital observation tracking, and follow-up monitoring — so every round generates evidence your quality team can present to NABH assessors.</p>
+        <a href="https://accredready.in" class="mt-4 inline-block rounded-xl bg-verify px-8 py-3.5 font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start free trial →</a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-white/70">
+    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+      <nav aria-label="Footer" class="flex flex-wrap justify-center gap-x-7 gap-y-3 text-[14px]">
+        <a href="https://accredready.in" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
+        <a href="https://accredready.in/nabh-accreditation-software" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Software</a>
+        <a href="https://accredready.in/nabh-6th-edition-standards" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">6th Edition Guide</a>
+        <a href="https://accredready.in/nabh-shco-checklist" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Checklist</a>
+        <a href="https://accredready.in/nabh-kpi-indicators" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">KPI Guide</a>
+        <button onclick="document.getElementById('contactModal').style.display='flex'" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink" style="background:none;border:none;color:inherit;font-size:inherit;cursor:pointer;font-family:inherit;padding:0;">Contact Us</button>
+        <a href="https://accredready.in/privacy" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
+      </nav>
+      <p class="mt-8 text-center font-mono text-[12px] text-white/45">© 2026 AccredReady by MK Tech.</p>
+    </div>
+  </footer>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.75);align-items:center;justify-content:center;padding:20px;">
+    <div onclick="event.stopPropagation()" style="background:#081525;border:1px solid #1e3a52;border-radius:16px;padding:28px 24px;max-width:420px;width:100%;position:relative;max-height:90vh;overflow-y:auto;">
+      <button onclick="document.getElementById('contactModal').style.display='none';document.getElementById('cSuccess').style.display='none';document.getElementById('cError').style.display='none';document.getElementById('cForm').reset();" style="position:absolute;top:12px;right:14px;background:none;border:none;color:#7a9db8;font-size:20px;cursor:pointer;line-height:1;">&#x2715;</button>
+      <div style="font-size:11px;letter-spacing:3px;color:#c9a84c;margin-bottom:8px;text-transform:uppercase;">AccredReady</div>
+      <div style="font-size:20px;font-weight:700;color:#eef4f9;margin-bottom:18px;">Contact Us</div>
+      <div id="cSuccess" style="display:none;color:#0E8A5F;font-size:15px;padding:14px;background:#EBF4F0;border-radius:8px;margin-bottom:16px;">Thank you! We'll get back to you soon.</div>
+      <div id="cError" style="display:none;color:#DC2626;font-size:14px;padding:12px;background:#fef2f2;border-radius:8px;margin-bottom:16px;">Something went wrong, please try again.</div>
+      <form id="cForm" onsubmit="submitContact(event)">
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Name *</label><input type="text" name="name" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Email *</label><input type="email" name="email" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Mobile *</label><input type="tel" name="phone" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:18px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Message *</label><textarea name="message" required rows="4" style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;resize:vertical;font-family:inherit;"></textarea></div>
+        <button type="submit" id="cSubmit" style="width:100%;padding:12px;background:#0E8A5F;border:none;border-radius:10px;color:#fff;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;">Send Message</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.getElementById('contactModal').addEventListener('click',function(e){if(e.target===this){this.style.display='none';document.getElementById('cSuccess').style.display='none';document.getElementById('cError').style.display='none';document.getElementById('cForm').reset();}});
+    async function submitContact(e){
+      e.preventDefault();var btn=document.getElementById('cSubmit');btn.disabled=true;btn.textContent='Sending…';
+      document.getElementById('cSuccess').style.display='none';document.getElementById('cError').style.display='none';
+      var f=e.target;
+      try{var r=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({access_key:'2aaadfc3-c669-4b2b-92b8-6d6bee4faee1',name:f.name.value,email:f.email.value,phone:f.phone.value,message:f.message.value})});
+        var j=await r.json();
+        if(r.ok&&j.success){document.getElementById('cSuccess').style.display='block';f.reset();}
+        else document.getElementById('cError').style.display='block';
+      }catch(err){document.getElementById('cError').style.display='block';}
+      btn.disabled=false;btn.textContent='Send Message';
+    }
+  </script>
+</body>
+</html>

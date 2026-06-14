@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Types of Audit in a NABH Accredited Hospital – Complete Guide</title>
+  <meta name="description" content="Complete guide to all types of audits in NABH accredited hospitals — clinical, nursing, patient safety, infection control, quality indicator, facility, departmental, HR, support services, and statutory audits." />
+  <meta name="keywords" content="NABH audit types, clinical audit NABH, nursing audit, patient safety audit, infection control audit, hospital audit, NABH accreditation audit, quality indicator audit" />
+  <link rel="canonical" href="https://accredready.in/nabh-audit-types" />
+  <meta property="og:title" content="Types of Audit in a NABH Accredited Hospital" />
+  <meta property="og:description" content="10 major audit types every NABH hospital must conduct — clinical, nursing, patient safety, IPC, quality indicators, facility safety, departmental, HR, support services, and statutory compliance." />
+  <meta property="og:url" content="https://accredready.in/nabh-audit-types" />
+  <meta property="og:image" content="https://accredready.in/logo512.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Types of Audit in a NABH Accredited Hospital: Complete Guide",
+    "publisher": {"@type": "Organization", "name": "AccredReady", "url": "https://accredready.in"},
+    "datePublished": "2026-06-14"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { ink:'#0B1B2B', paper:'#FBFDFD', verify:'#0E8A5F', verifydark:'#0A6B4A', signal:'#D97706', alert:'#DC2626', slate:'#4B5D6E', hairline:'#DCE6E4', mint:'#EBF4F0' },
+        fontFamily: { display:['"Bricolage Grotesque"','sans-serif'], body:['"IBM Plex Sans"','sans-serif'], mono:['"IBM Plex Mono"','monospace'] }
+      }}
+    };
+  </script>
+  <style>
+    body { background:#FBFDFD; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-body text-ink leading-[1.7] antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-lg focus:bg-verify focus:px-4 focus:py-2 focus:text-white focus:outline-none">Skip to content</a>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-[100] border-b border-hairline bg-paper/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="https://accredready.in" class="rounded font-display text-[22px] font-bold tracking-[-0.01em] text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2">AccredReady</a>
+      <a href="https://accredready.in" class="rounded-xl bg-verify px-5 py-2.5 text-[15px] font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 motion-reduce:transform-none motion-reduce:transition-none">Start free trial</a>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <header class="mx-auto max-w-3xl px-5 pb-10 pt-16 text-center sm:px-8">
+      <span class="mb-6 inline-flex items-center gap-2 rounded-lg border border-verify/20 bg-mint px-3 py-1.5 font-mono text-[13px] uppercase tracking-wide text-verify"><span class="h-1.5 w-1.5 rounded-full bg-verify"></span>Quality Guide · Audit Types</span>
+      <h1 class="mb-5 font-display text-[clamp(1.8rem,4vw,3rem)] font-bold leading-[1.1] tracking-[-0.02em]">Types of Audit in a<br>NABH Accredited Hospital</h1>
+      <p class="mx-auto max-w-2xl text-lg text-slate">Audits are a key component of quality management and patient safety in NABH accredited hospitals. They help assess compliance, identify gaps, reduce risks, and drive continuous improvement in patient care and hospital operations.</p>
+    </header>
+
+    <article class="mx-auto max-w-3xl px-5 pb-16 sm:px-8 [&>h2]:mb-4 [&>h2]:mt-10 [&>h2]:font-display [&>h2]:text-2xl [&>h2]:font-bold [&_h2_span]:text-ink [&>h3]:mb-2 [&>h3]:mt-7 [&>h3]:font-display [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-ink [&>p]:mb-4 [&>p]:text-[0.97rem] [&>p]:text-slate [&_strong]:text-ink">
+
+      <h2>Why Audits Are <span>Non-Negotiable in NABH Hospitals</span></h2>
+      <p>NABH does not just assess whether policies exist on paper — it evaluates whether your quality system is actively self-correcting. A hospital that conducts structured audits across all clinical and support functions demonstrates a culture of accountability. One that only audits when assessors arrive signals a reactive, compliance-only mindset.</p>
+      <p>The audit cycle — Plan, Conduct, Identify Gaps, Corrective Action, Re-Audit, Sustain Improvement — must be embedded in the hospital's routine operations, not treated as a pre-assessment exercise.</p>
+
+      <div class="my-6 rounded-xl border border-verify/30 bg-mint px-6 py-5"><p class="!mb-0 !text-ink">📋 <strong>Audit. Assess. Improve. Excel.</strong> NABH expects hospitals to maintain structured audit programmes across all 10 audit categories. AccredReady provides ready-to-use audit templates for all these areas — so your team spends time auditing, not building forms.</p></div>
+
+      <h2>The 10 Major Types of <span>Audits in NABH Hospitals</span></h2>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">01</span><h3 class="!m-0 !text-ink">Clinical Audits</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Medical Record Audit — completeness, legibility, consent, discharge summaries</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Prescription Audit — dose, route, frequency, legibility, abbreviation compliance</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Antibiotic Stewardship Audit — appropriate use, de-escalation, culture correlation</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Surgical Case Audit — site marking, time-out, post-op notes, complication tracking</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Mortality &amp; Morbidity Audit — review of adverse outcomes and contributing factors</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>ICU Clinical Audit, Blood Transfusion Audit, Pain Assessment Audit, Consent Audit</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">02</span><h3 class="!m-0 !text-ink">Nursing Audits</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Nursing Documentation Audit — care plans, vitals charting, nursing notes completeness</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Medication Administration Audit — 5 rights compliance, documentation, wastage records</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>IV Therapy Audit — insertion date, site condition, flushing documentation</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Handover Audit — SBAR use, verbal and written handover completeness</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Fall Prevention Audit, Pressure Injury Prevention Audit, Catheter Care Audit</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Patient Education Audit — discharge teaching documentation and comprehension</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">03</span><h3 class="!m-0 !text-ink">Patient Safety Audits</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>IPSG Audit — all 6 International Patient Safety Goals compliance</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Patient Identification Audit — wristband use, two-identifier verification at every step</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Medication Safety Audit — high-alert meds, LASA segregation, sound-alike protocols</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Surgical Safety Checklist Audit — WHO checklist compliance in every OT procedure</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Time-Out Compliance Audit, Fall Risk Assessment Audit, Pressure Injury Prevention Audit</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">04</span><h3 class="!m-0 !text-ink">Infection Control Audits</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Hand Hygiene Audit — 5 moments compliance, technique observation, rub availability</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Biomedical Waste Audit — colour coding, bin fill level, labelling, transport records</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Injection Safety Audit — single-use compliance, sharps disposal, no recapping</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Central Line Bundle Audit, Ventilator Bundle Audit, Catheter Bundle Audit</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Environmental Cleaning Audit — terminal cleaning, high-touch surfaces, wet mopping</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Sterilisation Process Audit, CSSD Audit, PPE Compliance Audit</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">05</span><h3 class="!m-0 !text-ink">Quality Indicator Audits</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Nursing Quality Indicators — falls rate, pressure injury rate, medication error rate</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Medication Error Audit — near-miss tracking, error classification, CAPA closure</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Patient Satisfaction Audit — survey completion rates, score trends, action taken</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Readmission Audit — 30-day unplanned readmissions, root cause analysis</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Mortality Rate Analysis, Turnaround Time Audit, Incident Reporting Audit</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">06</span><h3 class="!m-0 !text-ink">Facility &amp; Safety Audits</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Fire Safety Audit — extinguisher expiry, exit signage, unobstructed evacuation routes</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Emergency Preparedness Audit — mock drill records, code response teams, equipment</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Electrical Safety Audit — earthing certification, no exposed wiring, UPS functionality</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Medical Gas Audit — cylinder storage, manifold pressure, pipeline labelling</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Water Quality Audit, Lift Safety Audit, Radiation Safety Audit, Hazardous Material Audit</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Disaster Management Audit — disaster plan documentation and drills</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">07</span><h3 class="!m-0 !text-ink">Departmental Audits</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span><strong>Laboratory:</strong> NABL Compliance Audit, Sample Collection Audit, Critical Value Reporting Audit</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span><strong>Pharmacy:</strong> Drug Storage Audit — temperature logs, expiry checks, narcotics register</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span><strong>Pharmacy:</strong> Expiry Audit, Controlled Drug Audit — dual-key access, daily reconciliation</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span><strong>Radiology:</strong> Radiation Safety Audit, Equipment Calibration Audit</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span><strong>Blood Bank:</strong> Blood Storage Audit, Transfusion Reaction Audit</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">08</span><h3 class="!m-0 !text-ink">HR &amp; Training Audits</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Credentialing Audit — qualification certificates, registration, reference checks for all doctors</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Privileging Audit — clinical privilege forms signed and updated for every practitioner</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Staff Competency Audit — competency assessment records for all clinical staff</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Mandatory Training Compliance Audit — fire safety, hand hygiene, BLS, POSH training records</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Induction Training Audit, License Verification Audit — hepatitis B vaccination status</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">09</span><h3 class="!m-0 !text-ink">Support Services Audits</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Housekeeping Audit — cleaning schedules, chemical use, staff technique compliance</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Laundry Audit — linen segregation, washing temperature, turnaround time</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Dietary Audit — food safety, menu compliance, special diet accuracy, hygiene</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Security Audit — access control, visitor management, CCTV coverage</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Ambulance Audit — equipment checklist, vehicle hygiene, paramedic credentials</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Maintenance Audit — preventive maintenance schedules, breakdown response times</li>
+        </ul>
+      </div>
+
+      <div class="my-4 rounded-xl border border-hairline bg-white p-6">
+        <div class="mb-4 flex items-center gap-3"><span class="rounded-md bg-mint px-2.5 py-1 font-mono text-[0.8rem] font-medium text-verify">10</span><h3 class="!m-0 !text-ink">Statutory &amp; Regulatory Audits</h3></div>
+        <ul class="space-y-0 text-[0.88rem] text-slate">
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Biomedical Waste Management Audit — BMW rules compliance, authorisation renewal</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Fire NOC Compliance Audit — valid fire NOC, compliance with NOC conditions</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>PNDT Audit — PC-PNDT register maintenance, form F completion, machine registration</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Pharmacy Act Compliance Audit — licensed pharmacist on duty, dispensing records</li>
+          <li class="flex gap-2.5 border-b border-hairline py-2 last:border-0"><span class="flex-shrink-0 text-verify" aria-hidden="true">→</span>Sapur Law Compliance Audit, Pollution Control Compliance Audit</li>
+        </ul>
+      </div>
+
+      <h2>The Audit Cycle: <span>How to Make Audits Systematic</span></h2>
+      <p>Conducting audits once and filing the report is not what NABH expects. The audit cycle must be a living process that continuously improves the hospital's quality systems.</p>
+
+      <div class="my-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div class="rounded-xl border border-hairline border-t-[3px] border-t-verify bg-white p-5"><div class="mb-1 font-mono text-[0.75rem] font-medium uppercase tracking-wide text-verify">Step 1–2</div><div class="mb-1 font-semibold text-ink">Plan &amp; Conduct</div><div class="text-[0.85rem] text-slate">Identify areas and objectives. Collect data and assess compliance against NABH standards.</div></div>
+        <div class="rounded-xl border border-hairline border-t-[3px] border-t-signal bg-white p-5"><div class="mb-1 font-mono text-[0.75rem] font-medium uppercase tracking-wide text-signal">Step 3–4</div><div class="mb-1 font-semibold text-ink">Identify &amp; Correct</div><div class="text-[0.85rem] text-slate">Analyse findings and root causes. Implement corrective and preventive actions with closure evidence.</div></div>
+        <div class="rounded-xl border border-hairline border-t-[3px] border-t-ink bg-white p-5"><div class="mb-1 font-mono text-[0.75rem] font-medium uppercase tracking-wide text-ink">Step 5–6</div><div class="mb-1 font-semibold text-ink">Re-Audit &amp; Sustain</div><div class="text-[0.85rem] text-slate">Verify effectiveness of corrections. Monitor and drive excellence as a continuing practice.</div></div>
+      </div>
+
+      <h2>Benefits of a <span>Structured Audit Programme</span></h2>
+      <ul class="my-4 space-y-2 text-[0.97rem] text-slate">
+        <li class="flex gap-2.5"><span class="flex-shrink-0 text-verify" aria-hidden="true">✓</span>Improves patient safety and quality of care at every touchpoint</li>
+        <li class="flex gap-2.5"><span class="flex-shrink-0 text-verify" aria-hidden="true">✓</span>Ensures continuous compliance with NABH standards between assessments</li>
+        <li class="flex gap-2.5"><span class="flex-shrink-0 text-verify" aria-hidden="true">✓</span>Identifies risks and reduces errors before they become incidents</li>
+        <li class="flex gap-2.5"><span class="flex-shrink-0 text-verify" aria-hidden="true">✓</span>Enhances operational efficiency across clinical and support departments</li>
+        <li class="flex gap-2.5"><span class="flex-shrink-0 text-verify" aria-hidden="true">✓</span>Promotes a culture of accountability and excellence in daily work</li>
+        <li class="flex gap-2.5"><span class="flex-shrink-0 text-verify" aria-hidden="true">✓</span>Supports data-driven decision making at the leadership level</li>
+      </ul>
+      <p><em>"Quality Audits Today, Excellence in Care Tomorrow."</em> A hospital that audits rigorously and closes findings systematically never needs to scramble before an assessment — because it is always ready.</p>
+
+      <div class="my-10 rounded-2xl bg-ink px-6 py-12 text-center">
+        <h2 class="!mt-0 !text-white">Run All 10 Audit Types with <span class="!text-white">AccredReady</span></h2>
+        <p class="mx-auto mt-3 max-w-lg !text-white/70">AccredReady includes structured audit templates for all 10 audit categories, a digital CAPA tracker, and closure monitoring — so your quality team always knows what's open, overdue, and ready for assessment.</p>
+        <a href="https://accredready.in" class="mt-4 inline-block rounded-xl bg-verify px-8 py-3.5 font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start free trial →</a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-white/70">
+    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+      <nav aria-label="Footer" class="flex flex-wrap justify-center gap-x-7 gap-y-3 text-[14px]">
+        <a href="https://accredready.in" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
+        <a href="https://accredready.in/nabh-accreditation-software" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Software</a>
+        <a href="https://accredready.in/nabh-6th-edition-standards" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">6th Edition Guide</a>
+        <a href="https://accredready.in/nabh-shco-checklist" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">SHCO Checklist</a>
+        <a href="https://accredready.in/nabh-kpi-indicators" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">KPI Guide</a>
+        <button onclick="document.getElementById('contactModal').style.display='flex'" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink" style="background:none;border:none;color:inherit;font-size:inherit;cursor:pointer;font-family:inherit;padding:0;">Contact Us</button>
+        <a href="https://accredready.in/privacy" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
+      </nav>
+      <p class="mt-8 text-center font-mono text-[12px] text-white/45">© 2026 AccredReady by MK Tech.</p>
+    </div>
+  </footer>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.75);align-items:center;justify-content:center;padding:20px;">
+    <div onclick="event.stopPropagation()" style="background:#081525;border:1px solid #1e3a52;border-radius:16px;padding:28px 24px;max-width:420px;width:100%;position:relative;max-height:90vh;overflow-y:auto;">
+      <button onclick="document.getElementById('contactModal').style.display='none';document.getElementById('cSuccess').style.display='none';document.getElementById('cError').style.display='none';document.getElementById('cForm').reset();" style="position:absolute;top:12px;right:14px;background:none;border:none;color:#7a9db8;font-size:20px;cursor:pointer;line-height:1;">&#x2715;</button>
+      <div style="font-size:11px;letter-spacing:3px;color:#c9a84c;margin-bottom:8px;text-transform:uppercase;">AccredReady</div>
+      <div style="font-size:20px;font-weight:700;color:#eef4f9;margin-bottom:18px;">Contact Us</div>
+      <div id="cSuccess" style="display:none;color:#0E8A5F;font-size:15px;padding:14px;background:#EBF4F0;border-radius:8px;margin-bottom:16px;">Thank you! We'll get back to you soon.</div>
+      <div id="cError" style="display:none;color:#DC2626;font-size:14px;padding:12px;background:#fef2f2;border-radius:8px;margin-bottom:16px;">Something went wrong, please try again.</div>
+      <form id="cForm" onsubmit="submitContact(event)">
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Name *</label><input type="text" name="name" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Email *</label><input type="email" name="email" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Mobile *</label><input type="tel" name="phone" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:18px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Message *</label><textarea name="message" required rows="4" style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;resize:vertical;font-family:inherit;"></textarea></div>
+        <button type="submit" id="cSubmit" style="width:100%;padding:12px;background:#0E8A5F;border:none;border-radius:10px;color:#fff;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;">Send Message</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.getElementById('contactModal').addEventListener('click',function(e){if(e.target===this){this.style.display='none';document.getElementById('cSuccess').style.display='none';document.getElementById('cError').style.display='none';document.getElementById('cForm').reset();}});
+    async function submitContact(e){
+      e.preventDefault();var btn=document.getElementById('cSubmit');btn.disabled=true;btn.textContent='Sending…';
+      document.getElementById('cSuccess').style.display='none';document.getElementById('cError').style.display='none';
+      var f=e.target;
+      try{var r=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({access_key:'2aaadfc3-c669-4b2b-92b8-6d6bee4faee1',name:f.name.value,email:f.email.value,phone:f.phone.value,message:f.message.value})});
+        var j=await r.json();
+        if(r.ok&&j.success){document.getElementById('cSuccess').style.display='block';f.reset();}
+        else document.getElementById('cError').style.display='block';
+      }catch(err){document.getElementById('cError').style.display='block';}
+      btn.disabled=false;btn.textContent='Send Message';
+    }
+  </script>
+</body>
+</html>
