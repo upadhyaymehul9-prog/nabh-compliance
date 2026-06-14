@@ -5042,7 +5042,7 @@ const TOUR_STEPS=[
   {title:"Score Your OEs",body:"Go here to score each Objective Element — Met / Partial / Not Met. This drives your entire readiness verdict.",targetId:"tour-target-score",tabToActivate:"Score OEs"},
   {title:"Fix Gaps",body:"All your Not Met OEs appear here with corrective actions. Assign owner and target date.",targetId:"tour-target-fixgaps",tabToActivate:"Fix Gaps"},
   {title:"Audits & Drills",body:"Run mandatory clinical audits and mock drills before your survey. Checklists included.",targetId:"tour-target-audits",tabToActivate:"Audits"},
-  {title:"KPIs & Committees",body:"Track KPIs and manage all mandatory committees with formation guides.",targetId:"tour-target-kpis",tabToActivate:"KPIs"},
+  {title:"KPIs & Committees",body:"Track KPIs and manage all mandatory committees with formation guides.",targetId:"tour-target-more",tabToActivate:null},
   {title:"You're ready to start! 🚀",body:"Begin with Score OEs → complete your first chapter. Your Gap Report PDF updates as you score.",targetId:null,tabToActivate:null},
 ];
 
@@ -7446,13 +7446,13 @@ export default function App() {
                     border:`1px solid ${(secondaryActive||showMoreMenu)?(theme==='light'?"rgba(255,255,255,0.6)":T.gold):(theme==='light'?"rgba(255,255,255,0.3)":T.border)}`,
                     color:"#ffffff",
                   }}
-                >•••</button>
+                id="tour-target-more">•••</button>
                 {showMoreMenu&&(
                   <div
                     onClick={e=>e.stopPropagation()}
                     style={{position:"absolute",top:"calc(100% + 6px)",left:0,background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"6px 0",display:"flex",flexDirection:"column",zIndex:300,minWidth:220,boxShadow:"0 8px 30px rgba(0,0,0,0.15)"}}>
                     {SECONDARY_NAV.map(n=>(
-                      <button key={n.id} id={n.id==="kpis"?"tour-target-kpis":undefined} onClick={()=>{navigate({ screen: n.id });setShowMoreMenu(false);}}
+                      <button key={n.id} onClick={()=>{navigate({ screen: n.id });setShowMoreMenu(false);}}
                         style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen===n.id?T.gold:"transparent"}`,background:screen===n.id?T.goldD:"transparent",color:screen===n.id?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",flexDirection:"row",alignItems:"center",gap:10,fontWeight:screen===n.id?700:400,width:"100%",textAlign:"left"}}>
                         <span style={{width:20,fontSize:15}}>{n.icon}</span>
                         <span>{n.label}</span>
