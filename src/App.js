@@ -5037,34 +5037,66 @@ function RecoveryScreen({ user, onDone }) {
 
 // ── ROOT APP ──────────────────────────────────────────
 const TOUR_STEPS=[
-  {title:"Welcome to AccredReady 🎉",body:"Your complete NABH accreditation toolkit. This 60-second tour shows you exactly what to do.",target:null},
-  {title:"Choose Your Programme",body:"Start by selecting HCO Full, HCO ELC, SHCO Full, or SHCO ELC — matching your hospital's accreditation goal.",target:"programme-selector"},
-  {title:"Score Your OEs",body:"Go to Score OEs → score each Objective Element Met / Partial / Not Met. This drives your entire readiness verdict.",target:"tab-oe"},
-  {title:"Your Readiness Verdict",body:"The Dashboard shows your live PASS/FAIL verdict and chapter-wise heatmap as you score more OEs.",target:"tab-dashboard"},
-  {title:"Committees & Audits",body:"Mandatory committees and audit checklists — formation guides included. Run these before your survey.",target:"tab-committees"},
-  {title:"KPIs & Patient Tracer",body:"Track KPIs and run patient tracers across all types. Surveyors will ask for this data.",target:"tab-kpis"},
-  {title:"You're ready to start! 🚀",body:"Begin with Score OEs → score your first chapter. Your Gap Report PDF auto-generates as you score.",target:null},
+  {title:"Welcome to AccredReady 🎉",body:"Your complete NABH accreditation toolkit. This 60-second tour shows you exactly where everything is.",targetId:null,tabToActivate:null},
+  {title:"Your Readiness Verdict",body:"Dashboard shows your live PASS/FAIL verdict and compliance % across all 4 NABH rules.",targetId:"tour-target-dashboard",tabToActivate:"Dashboard"},
+  {title:"Score Your OEs",body:"Go here to score each Objective Element — Met / Partial / Not Met. This drives your entire readiness verdict.",targetId:"tour-target-score",tabToActivate:"Score OEs"},
+  {title:"Fix Gaps",body:"All your Not Met OEs appear here with corrective actions. Assign owner and target date.",targetId:"tour-target-fixgaps",tabToActivate:"Fix Gaps"},
+  {title:"Audits & Drills",body:"Run mandatory clinical audits and mock drills before your survey. Checklists included.",targetId:"tour-target-audits",tabToActivate:"Audits"},
+  {title:"KPIs & Committees",body:"Track KPIs and manage all mandatory committees with formation guides.",targetId:"tour-target-kpis",tabToActivate:"KPIs"},
+  {title:"You're ready to start! 🚀",body:"Begin with Score OEs → complete your first chapter. Your Gap Report PDF updates as you score.",targetId:null,tabToActivate:null},
 ];
 
-function WalktourOverlay({tourStep,setTourStep,dismissTour}){
-  if(tourStep===null)return null;
-  const step=TOUR_STEPS[tourStep];
-  const isLast=tourStep===TOUR_STEPS.length-1;
+function WalktourOverlay({step,totalSteps,onNext,onSkip,spotlightRect}){
+  const isLast=step===totalSteps-1;
+  const s=TOUR_STEPS[step];
+  const CARD_HEIGHT=200;
+  const windowHeight=window.innerHeight;
+  const cardStyle={
+    position:'fixed',
+    left:'50%',
+    transform:'translateX(-50%)',
+    width:'90%',
+    maxWidth:420,
+    background:T.panel,
+    border:`1px solid ${T.border}`,
+    borderRadius:16,
+    padding:'24px 28px',
+    zIndex:10001,
+    boxShadow:'0 8px 40px rgba(0,0,0,0.6)',
+  };
+  if(spotlightRect){
+    const spaceBelow=windowHeight-spotlightRect.top-spotlightRect.height;
+    if(spaceBelow>=CARD_HEIGHT+24){cardStyle.top=spotlightRect.top+spotlightRect.height+16;}
+    else{cardStyle.top=Math.max(8,spotlightRect.top-CARD_HEIGHT-16);}
+  }else{
+    cardStyle.top='50%';
+    cardStyle.transform='translate(-50%, -50%)';
+  }
   return(
-    <div style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.75)",zIndex:10000,display:"flex",alignItems:"center",justifyContent:"center",padding:16}}>
-      <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:16,padding:"28px",width:"100%",maxWidth:420,boxShadow:"0 20px 60px rgba(0,0,0,0.5)"}}>
-        <div style={{display:"flex",justifyContent:"center",gap:6,marginBottom:20}}>
+    <div style={{position:'fixed',inset:0,zIndex:10000}}>
+      {spotlightRect?(
+        <>
+          <div style={{position:'fixed',top:0,left:0,right:0,height:spotlightRect.top,background:'rgba(0,0,0,0.82)'}}/>
+          <div style={{position:'fixed',top:spotlightRect.top+spotlightRect.height,left:0,right:0,bottom:0,background:'rgba(0,0,0,0.82)'}}/>
+          <div style={{position:'fixed',top:spotlightRect.top,left:0,width:spotlightRect.left,height:spotlightRect.height,background:'rgba(0,0,0,0.82)'}}/>
+          <div style={{position:'fixed',top:spotlightRect.top,left:spotlightRect.left+spotlightRect.width,right:0,height:spotlightRect.height,background:'rgba(0,0,0,0.82)'}}/>
+          <div style={{position:'fixed',top:spotlightRect.top-4,left:spotlightRect.left-4,width:spotlightRect.width+8,height:spotlightRect.height+8,border:`3px solid ${T.gold}`,borderRadius:10,pointerEvents:'none',zIndex:10002,boxShadow:`0 0 20px ${T.gold}66`}}/>
+        </>
+      ):(
+        <div style={{position:'fixed',inset:0,background:'rgba(0,0,0,0.82)'}}/>
+      )}
+      <div style={cardStyle}>
+        <div style={{display:'flex',justifyContent:'center',gap:6,marginBottom:16}}>
           {TOUR_STEPS.map((_,i)=>(
-            <div key={i} style={{width:8,height:8,borderRadius:4,background:i===tourStep?T.gold:T.muted,transition:"background 0.2s"}}/>
+            <div key={i} style={{width:8,height:8,borderRadius:'50%',background:i===step?T.gold:T.muted,transition:'background 0.2s'}}/>
           ))}
         </div>
-        <div style={{fontSize:20,fontWeight:700,color:T.gold,marginBottom:12,textAlign:"center"}}>{step.title}</div>
-        <div style={{fontSize:15,color:T.text,lineHeight:1.6,textAlign:"center",marginBottom:28}}>{step.body}</div>
-        <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-          <button onClick={dismissTour} style={{background:"transparent",border:"none",color:T.muted,fontSize:13,cursor:"pointer",padding:"8px 4px"}}>Skip Tour</button>
-          <button onClick={()=>{isLast?dismissTour():setTourStep(s=>s+1);}}
-            style={{padding:"10px 22px",borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:15,fontWeight:700,cursor:"pointer"}}>
-            {isLast?"Get Started →":"Next →"}
+        <div style={{fontSize:19,fontWeight:700,color:T.gold,marginBottom:10,textAlign:'center'}}>{s.title}</div>
+        <div style={{fontSize:14,color:T.text,lineHeight:1.65,textAlign:'center',marginBottom:24}}>{s.body}</div>
+        <div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+          <button onClick={onSkip} style={{background:'none',border:'none',color:T.muted,cursor:'pointer',fontSize:13,padding:'8px 4px'}}>Skip Tour</button>
+          <button onClick={onNext} style={{background:T.gold,color:'#000',border:'none',borderRadius:8,padding:'10px 22px',fontWeight:700,fontSize:14,cursor:'pointer'}}>
+            {isLast?'Get Started':'Next →'}
           </button>
         </div>
       </div>
@@ -5123,6 +5155,7 @@ export default function App() {
   const [committeesView, setCommitteesView] = useState('reference');
   const [showLicenseAdd, setShowLicenseAdd] = useState(false);
   const [tourStep, setTourStep] = useState(null);
+  const [spotlightRect, setSpotlightRect] = useState(null);
 
   // Reassign module-level T so all component closures see the correct theme
   T = theme === 'light' ? LIGHT_THEME : DARK_THEME;
@@ -5136,6 +5169,7 @@ export default function App() {
   };
 
   const dismissTour = useCallback(async () => {
+    setSpotlightRect(null);
     setTourStep(null);
     console.log("[Tour] dismissTour called. context.hospitalId =", context?.hospitalId);
     if (context?.hospitalId) {
@@ -5146,6 +5180,32 @@ export default function App() {
       console.warn("[Tour] dismissTour: hospitalId is missing — skipping DB update");
     }
   },[context?.hospitalId]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const nextTourStep = useCallback(() => {
+    setTourStep(prev => {
+      if (prev === null) return null;
+      if (prev >= TOUR_STEPS.length - 1) { dismissTour(); return null; }
+      return prev + 1;
+    });
+  }, [dismissTour]);
+
+  const TAB_TO_SCREEN = {'Dashboard':'dashboard','Score OEs':'scoring','Fix Gaps':'gaps','Audits':'audits','KPIs':'kpis'};
+  useEffect(() => {
+    if (tourStep === null) { setSpotlightRect(null); return; }
+    const step = TOUR_STEPS[tourStep];
+    if (step.tabToActivate) { setScreen(TAB_TO_SCREEN[step.tabToActivate] || screen); }
+    const timer = setTimeout(() => {
+      if (step.targetId) {
+        const el = document.getElementById(step.targetId);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          setSpotlightRect({top:rect.top,left:rect.left,width:rect.width,height:rect.height});
+          el.scrollIntoView({behavior:'smooth',block:'center'});
+        } else { setSpotlightRect(null); }
+      } else { setSpotlightRect(null); }
+    }, 350);
+    return () => clearTimeout(timer);
+  }, [tourStep]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const generatePDF = async () => {
     setPdfLoading(true);
@@ -7367,15 +7427,16 @@ export default function App() {
           {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${readinessColor}25`,border:`1px solid ${readinessColor}60`,fontSize:11,fontWeight:700,color:theme==='light'?"#ffffff":readinessColor}}>{decision.readiness==="NOT READY"?"❌":decision.readiness==="RISKY"?"⚠️":"✅"} {decision.readiness||"—"}</div>}
           {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${verdictColor}25`,border:`1px solid ${verdictColor}60`,fontSize:12,fontWeight:800,color:theme==='light'?"#ffffff":verdictColor}}>{decision.verdict==="PARTIAL"?"⚠️":""}{decision.verdict||"—"}</div>}
           <div style={{display:"flex",gap:3,flexWrap:"wrap",position:"relative"}}>
-            {PRIMARY_NAV.map(n=>(
-              <button key={n.id} onClick={()=>navigate({ screen: n.id })} style={{
+            {PRIMARY_NAV.map(n=>{const _tourIds={dashboard:"tour-target-dashboard",scoring:"tour-target-score",gaps:"tour-target-fixgaps",audits:"tour-target-audits"};return(
+              <button key={n.id} id={_tourIds[n.id]||undefined} onClick={()=>navigate({ screen: n.id })} style={{
                 padding:"4px 9px",borderRadius:7,fontSize:11,cursor:"pointer",
                 background:screen===n.id?(theme==='light'?"rgba(255,255,255,0.25)":T.goldD):"transparent",
                 border:`1px solid ${screen===n.id?(theme==='light'?"rgba(255,255,255,0.6)":T.gold):(theme==='light'?"rgba(255,255,255,0.3)":T.border)}`,
                 color:"#ffffff",
                 fontWeight:screen===n.id?700:400,
               }}>{n.icon} {n.label}</button>
-            ))}
+            );})}
+
             {SECONDARY_NAV.length>0&&(
               <div style={{position:"relative"}}>
                 <button
@@ -7391,7 +7452,7 @@ export default function App() {
                     onClick={e=>e.stopPropagation()}
                     style={{position:"absolute",top:"calc(100% + 6px)",left:0,background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"6px 0",display:"flex",flexDirection:"column",zIndex:300,minWidth:220,boxShadow:"0 8px 30px rgba(0,0,0,0.15)"}}>
                     {SECONDARY_NAV.map(n=>(
-                      <button key={n.id} onClick={()=>{navigate({ screen: n.id });setShowMoreMenu(false);}}
+                      <button key={n.id} id={n.id==="kpis"?"tour-target-kpis":undefined} onClick={()=>{navigate({ screen: n.id });setShowMoreMenu(false);}}
                         style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen===n.id?T.gold:"transparent"}`,background:screen===n.id?T.goldD:"transparent",color:screen===n.id?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",flexDirection:"row",alignItems:"center",gap:10,fontWeight:screen===n.id?700:400,width:"100%",textAlign:"left"}}>
                         <span style={{width:20,fontSize:15}}>{n.icon}</span>
                         <span>{n.label}</span>
@@ -7476,7 +7537,7 @@ export default function App() {
       </a>
       <button onClick={()=>setTourStep(0)} title="Replay app tour"
         style={{position:"fixed",bottom:148,right:20,zIndex:9997,width:48,height:48,borderRadius:24,background:T.gold,border:"none",color:T.bg,fontSize:22,fontWeight:900,cursor:"pointer",boxShadow:`0 4px 16px rgba(201,168,76,0.5)`,display:"flex",alignItems:"center",justifyContent:"center",lineHeight:1}}>?</button>
-      <WalktourOverlay tourStep={tourStep} setTourStep={setTourStep} dismissTour={dismissTour}/>
+      {tourStep!==null&&<WalktourOverlay step={tourStep} totalSteps={TOUR_STEPS.length} onNext={nextTourStep} onSkip={dismissTour} spotlightRect={spotlightRect}/>}
       <div style={{textAlign:"center",padding:"14px",color:T.muted,fontSize:11,borderTop:`1px solid ${T.border}`,marginTop:20}}>
         NABH Accreditation Platform — Independent educational tool — Not affiliated with NABH/QCI
       </div>
