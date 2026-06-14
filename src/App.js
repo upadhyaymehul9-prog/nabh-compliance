@@ -2052,7 +2052,7 @@ function UpgradeWall({ daysUsed, onSignOut }) {
 }
 
 function LoginScreen({ onLogin, initialError }) {
-  const [email,setEmail]=useState(""); const [pass,setPass]=useState("");
+  const [email,setEmail]=useState(""); const [pass,setPass]=useState(""); const [whatsapp,setWhatsapp]=useState("");
   const [mode,setMode]=useState("login"); const [error,setError]=useState(initialError||"");
   const [loading,setLoading]=useState(false); const [msg,setMsg]=useState("");
   const [showPricing,setShowPricing]=useState(false);
@@ -2065,6 +2065,7 @@ function LoginScreen({ onLogin, initialError }) {
     try{
       if(mode==="login"){const{data,error:err}=await supabase.auth.signInWithPassword({email,password:pass});if(err)throw err;onLogin(data.user);}
       else if(mode==="signup"){const{data,error:err}=await supabase.auth.signUp({email,password:pass});if(err)throw err;
+        if(whatsapp.trim()&&data.user){await supabase.from("profiles").upsert({id:data.user.id,whatsapp_number:whatsapp.trim()},{onConflict:"id"});}
         if(data.session)onLogin(data.user);else{setMsg("Account created. You can now sign in.");setMode("login");}}
       else if(mode==="reset"){if(!email.trim())throw new Error("Enter your email address first.");const{error:err}=await supabase.auth.resetPasswordForEmail(email,{redirectTo:"https://upadhyaymehul9-prog.github.io/nabh-compliance/"});if(err)throw err;setMsg("Password reset email sent! Check your inbox.");setMode("login");}
     }catch(e){setError(e.message);}
@@ -2099,6 +2100,11 @@ function LoginScreen({ onLogin, initialError }) {
           <input value={email} onChange={e=>setEmail(e.target.value)} placeholder="admin@hospital.com" type="email"
             style={{width:"100%",padding:"10px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:15,boxSizing:"border-box"}}/>
         </div>
+        {mode==="signup"&&<div style={{marginBottom:14}}>
+          <div style={{fontSize:12,color:T.muted,marginBottom:6}}>WHATSAPP NUMBER (OPTIONAL)</div>
+          <input value={whatsapp} onChange={e=>setWhatsapp(e.target.value)} placeholder="+91 98765 43210" type="tel"
+            style={{width:"100%",padding:"10px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:15,boxSizing:"border-box"}}/>
+        </div>}
         {mode!=="reset"&&<div style={{marginBottom:20}}>
           <div style={{fontSize:12,color:T.muted,marginBottom:6}}>PASSWORD</div>
           <input value={pass} onChange={e=>setPass(e.target.value)} placeholder="••••••••" type="password" onKeyDown={e=>e.key==="Enter"&&handle()}
