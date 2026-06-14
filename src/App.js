@@ -1954,7 +1954,7 @@ const LIGHT_THEME = {
   orange:"#e65100", orangeD:"rgba(230,81,0,0.10)",
   green:"#2e7d32", greenD:"rgba(46,125,50,0.10)",
   blue:"#1976d2", blueD:"rgba(25,118,210,0.10)",
-  muted:"#4a6f8a", text:"#0d1f33", white:"#0a1828",
+  muted:"#1e3a52", text:"#0d1f33", white:"#0a1828",
   panelShadow:"0 2px 8px rgba(0,0,0,0.08)",
   headerBg:"#c8e2f5",
 };
@@ -2097,8 +2097,8 @@ function LoginScreen({ onLogin, initialError }) {
         {error&&<div style={{background:T.redD,border:`1px solid ${T.red}40`,borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:13,color:T.red}}>{error}</div>}
         {msg&&<div style={{background:T.greenD,border:`1px solid ${T.green}40`,borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:13,color:T.green}}>{msg}</div>}
         <div style={{textAlign:'center',padding:'0 0 20px 0',marginBottom:20,borderBottom:'1px solid #0f2640'}}>
-          <div style={{fontFamily:'Georgia,serif',fontSize:15,fontStyle:'italic',color:'#c8dcea',lineHeight:1.8}}>"Quality is not an act, it is a habit."</div>
-          <div style={{fontSize:12,color:'#3a5870',marginTop:6,letterSpacing:2}}>— ARISTOTLE</div>
+          <div style={{fontFamily:'Georgia,serif',fontSize:15,fontStyle:'italic',color:T.text,lineHeight:1.8}}>"Quality is not an act, it is a habit."</div>
+          <div style={{fontSize:12,color:T.muted,marginTop:6,letterSpacing:2}}>— ARISTOTLE</div>
         </div>
         <div style={{marginBottom:14}}>
           <div style={{fontSize:12,color:T.muted,marginBottom:6}}>EMAIL</div>
