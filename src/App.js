@@ -5642,15 +5642,19 @@ export default function App() {
       doc.text('Chapter-wise Compliance',60,y); y+=10;
       doc.setDrawColor('#0f2640'); doc.line(60,y,W-60,y); y+=20;
 
+      // Chapter table — fixed column x positions (content 60..535 = 475pt)
+      // Ch:40 | Name:200 | Relevant:50 | Scored:50 | Compliance:60 | Status:75
+      const chC1=64,chC2=108,chC3=312,chC4=368,chC5=424,chC6=530;
+
       // Header row
       doc.setFillColor('#081525'); doc.rect(60,y-13,W-120,20,'F');
       doc.setFontSize(8); doc.setTextColor('#c9a84c');
-      doc.text('CHAPTER',74,y-2);
-      doc.text('NAME',130,y-2);
-      doc.text('RELEVANT',W-190,y-2);
-      doc.text('SCORED',W-140,y-2);
-      doc.text('COMPLIANCE',W-92,y-2);
-      doc.text('STATUS',W-32,y-2,{align:'right'});
+      doc.text('CH',chC1,y-2);
+      doc.text('CHAPTER NAME',chC2,y-2);
+      doc.text('RELEV.',chC3,y-2);
+      doc.text('SCORED',chC4,y-2);
+      doc.text('COMPLIANCE',chC5,y-2);
+      doc.text('STATUS',chC6,y-2,{align:'right'});
       y+=14;
 
       chStats.forEach(c=>{
@@ -5659,19 +5663,23 @@ export default function App() {
         const pass   = pctVal!==null&&pctVal>=80;
         const rowBg  = pctVal===null ? '#0a1520' : pass ? '#061810' : pctVal>=60 ? '#14100a' : '#180606';
         const valCol = pctVal===null ? '#3a5870' : pass ? '#4caf7d' : pctVal>=60 ? '#f4a441' : '#e05a5a';
-        doc.setFillColor(rowBg); doc.rect(60,y-12,W-120,20,'F');
+        // Pre-wrap chapter name to fit 200pt column at 8pt
+        doc.setFontSize(8);
+        const nameLines = doc.splitTextToSize(c.name, 200);
+        const chRowH = Math.max(20, nameLines.length*10+6);
+        doc.setFillColor(rowBg); doc.rect(60,y-12,W-120,chRowH,'F');
         doc.setFontSize(9); doc.setTextColor('#c9a84c');
-        doc.text(c.key,74,y-1);
+        doc.text(c.key,chC1,y-1);
         doc.setFontSize(8); doc.setTextColor('#c8dcea');
-        doc.text(c.name.slice(0,36),130,y-1);
+        nameLines.forEach((line,i)=>doc.text(line,chC2,y-1+i*10));
         doc.setFontSize(8); doc.setTextColor('#8aadcc');
-        doc.text(String(c.relevantCount),W-190,y-1);
-        doc.text(String(c.scoredCount),W-140,y-1);
+        doc.text(String(c.relevantCount),chC3,y-1);
+        doc.text(String(c.scoredCount),chC4,y-1);
         doc.setTextColor(valCol);
-        doc.text(pctVal!==null?`${pctVal}%`:'—',W-92,y-1);
+        doc.text(pctVal!==null?`${pctVal}%`:'—',chC5,y-1);
         doc.setFontSize(7);
-        doc.text(pctVal===null?'UNSCORED':pass?'PASS':'FAIL',W-32,y-1,{align:'right'});
-        y+=22;
+        doc.text(pctVal===null?'UNSCORED':pass?'PASS':'FAIL',chC6,y-1,{align:'right'});
+        y+=chRowH+2;
       });
 
       // ── PAGE 3+: WEAK OEs GROUPED BY CHAPTER ───────────────────────────
@@ -6032,7 +6040,15 @@ export default function App() {
     const {data:fresh}=await supabase.from("shco_full_capa").select("*").eq("hospital_id",context.hospitalId);
     if(fresh){const m={};fresh.forEach(c=>{m[c.oe_code]=c;});setShcoFullCapaDb(m);}
     setShcoFullCapaSaving(p=>({...p,[oeCode]:false}));
-    setShcoFullCapaForm(p=>({...p,[oeCode]:{...p[oeCode],saved:true}}));
+    setShcoFullCapaForm(p=>({...p,[oeCode]:{...p[oeCode],saved:true,expanded:false}}));
+  };
+
+  const deleteShcoFullCapa = async (oeCode) => {
+    if(!window.confirm('Delete this CAPA? This cannot be undone.')) return;
+    await supabase.from("shco_full_capa").delete()
+      .eq("hospital_id",context.hospitalId).eq("oe_code",oeCode);
+    setShcoFullCapaDb(p=>{const n={...p};delete n[oeCode];return n;});
+    setShcoFullCapaForm(p=>{const n={...p};delete n[oeCode];return n;});
   };
 
   // Load existing SHCO ELC scores for this hospital
@@ -7484,38 +7500,56 @@ export default function App() {
                       </div>
                     </div>
 
-                    {/* Toggle CAPA */}
-                    <button onClick={()=>setShcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,expanded:!expanded}}))}
-                      style={{fontSize:12,color:T.gold,background:'transparent',border:`1px solid ${T.gold}30`,borderRadius:8,padding:'4px 14px',cursor:'pointer'}}>
-                      {expanded ? '▲ Hide CAPA' : hasSaved ? '▼ Edit CAPA' : '▼ Add CAPA'}
-                    </button>
+                    {/* CAPA action buttons */}
+                    <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+                      {!expanded && hasSaved ? (
+                        <>
+                          <button
+                            onClick={()=>setShcoFullCapaForm(p=>({...p,[g.oe_code]:{
+                              ...fc, expanded:true,
+                              finding: fc.finding!==undefined ? fc.finding : (dbC?.finding||''),
+                              action:  fc.action!==undefined  ? fc.action  : (dbC?.action_planned||''),
+                              person:  fc.person!==undefined  ? fc.person  : (dbC?.responsible_person||''),
+                              date:    fc.date!==undefined    ? fc.date    : (dbC?.target_date||''),
+                            }}))}
+                            style={{fontSize:12,color:T.gold,background:'transparent',border:`1px solid ${T.gold}44`,borderRadius:8,padding:'4px 14px',cursor:'pointer'}}>
+                            ✏️ Edit CAPA
+                          </button>
+                          <button
+                            onClick={()=>deleteShcoFullCapa(g.oe_code)}
+                            style={{fontSize:12,color:T.red,background:'transparent',border:`1px solid ${T.red}44`,borderRadius:8,padding:'4px 14px',cursor:'pointer'}}>
+                            🗑 Delete CAPA
+                          </button>
+                        </>
+                      ) : expanded ? (
+                        <button
+                          onClick={()=>setShcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,expanded:false}}))}
+                          style={{fontSize:12,color:T.muted,background:'transparent',border:`1px solid ${T.border}`,borderRadius:8,padding:'4px 14px',cursor:'pointer'}}>
+                          ▲ Hide CAPA
+                        </button>
+                      ) : (
+                        <button
+                          onClick={()=>setShcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,expanded:true}}))}
+                          style={{fontSize:12,color:T.gold,background:'transparent',border:`1px solid ${T.gold}44`,borderRadius:8,padding:'4px 14px',cursor:'pointer'}}>
+                          ▼ Add CAPA
+                        </button>
+                      )}
+                    </div>
 
                     {/* CAPA form */}
                     {expanded&&(
                       <div style={{marginTop:12,display:'grid',gap:8}}>
                         {fc.saved&&<div style={{fontSize:12,color:T.green,padding:'6px 10px',background:T.green+'14',borderRadius:6}}>✓ CAPA saved successfully</div>}
-                        {/* Pre-fill from DB if exists */}
-                        {dbC&&!fc.finding&&!fc.action&&(()=>{
-                          // Pre-populate form from DB on first expand
-                          setTimeout(()=>setShcoFullCapaForm(p=>({...p,[g.oe_code]:{
-                            ...p[g.oe_code],
-                            finding: p[g.oe_code]?.finding ?? dbC.finding,
-                            action:  p[g.oe_code]?.action  ?? dbC.action_planned,
-                            person:  p[g.oe_code]?.person  ?? dbC.responsible_person,
-                            date:    p[g.oe_code]?.date    ?? (dbC.target_date||''),
-                          }})),0);
-                          return null;
-                        })()}
                         <div>
                           <div style={{fontSize:11,color:T.muted,marginBottom:4}}>FINDING *</div>
-                          <textarea value={fc.finding||(dbC?.finding||'')}
+                          <textarea value={fc.finding!==undefined ? fc.finding : (dbC?.finding||'')}
                             onChange={e=>setShcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,finding:e.target.value,saved:false}}))}
                             rows={2} placeholder="Describe the non-compliance finding…"
                             style={{width:'100%',padding:'8px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,resize:'vertical',boxSizing:'border-box'}}/>
                         </div>
                         <div>
                           <div style={{fontSize:11,color:T.muted,marginBottom:4}}>ACTION PLANNED *</div>
-                          <textarea value={fc.action||(dbC?.action_planned||'')}
+                          <textarea value={fc.action!==undefined ? fc.action : (dbC?.action_planned||'')}
                             onChange={e=>setShcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,action:e.target.value,saved:false}}))}
                             rows={2} placeholder="Corrective action to be taken…"
                             style={{width:'100%',padding:'8px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,resize:'vertical',boxSizing:'border-box'}}/>
@@ -7523,23 +7557,22 @@ export default function App() {
                         <div style={{display:'flex',gap:8,flexWrap:'wrap',alignItems:'flex-end'}}>
                           <div style={{flex:1,minWidth:140}}>
                             <div style={{fontSize:11,color:T.muted,marginBottom:4}}>RESPONSIBLE PERSON</div>
-                            <input value={fc.person||(dbC?.responsible_person||'')}
+                            <input value={fc.person!==undefined ? fc.person : (dbC?.responsible_person||'')}
                               onChange={e=>setShcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,person:e.target.value,saved:false}}))}
                               placeholder="Name / Designation"
                               style={{width:'100%',padding:'7px 10px',borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,boxSizing:'border-box'}}/>
                           </div>
                           <div>
                             <div style={{fontSize:11,color:T.muted,marginBottom:4}}>TARGET DATE</div>
-                            <input type="date" value={fc.date||(dbC?.target_date||'')}
+                            <input type="date" value={fc.date!==undefined ? fc.date : (dbC?.target_date||'')}
                               onChange={e=>setShcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,date:e.target.value,saved:false}}))}
                               style={{padding:'7px 10px',borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13}}/>
                           </div>
                           <button onClick={()=>saveShcoFullCapa(g.oe_code)}
-                            disabled={shcoFullCapaSaving[g.oe_code]||!(fc.finding||(dbC?.finding||''))||(!(fc.action||(dbC?.action_planned||'')))}
+                            disabled={shcoFullCapaSaving[g.oe_code]||!(fc.finding!==undefined?fc.finding:dbC?.finding)||!(fc.action!==undefined?fc.action:dbC?.action_planned)}
                             style={{padding:'7px 20px',borderRadius:10,background:`linear-gradient(135deg,${T.green},#3d9e6e)`,
                               border:'none',color:T.bg,fontSize:14,fontWeight:700,
-                              cursor:(fc.finding||(dbC?.finding||''))&&(fc.action||(dbC?.action_planned||''))?'pointer':'default',
-                              opacity:(fc.finding||(dbC?.finding||''))&&(fc.action||(dbC?.action_planned||''))?1:0.5}}>
+                              cursor:'pointer',opacity:1}}>
                             {shcoFullCapaSaving[g.oe_code]?'Saving…':'Save CAPA →'}
                           </button>
                         </div>
