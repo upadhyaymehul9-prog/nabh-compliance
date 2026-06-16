@@ -2346,10 +2346,10 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
       key: "shco_full",
       title: "SHCO Full Accreditation",
       subtitle: "Small Hospital Full",
-      badge: "3rd Edition · Coming Soon",
+      badge: "3rd Edition",
       tags: ["≤50 beds", "408 OEs"],
       desc: "Full NABH accreditation for small hospitals with up to 50 beds. Comprehensive quality programme.",
-      available: false,
+      available: true,
       icon: "🏨",
       color: T.orange,
     },
@@ -5169,6 +5169,12 @@ export default function App() {
   const [showLicenseAdd, setShowLicenseAdd] = useState(false);
   const [tourStep, setTourStep] = useState(null);
   const [spotlightRect, setSpotlightRect] = useState(null);
+  const [shcoFullOes, setShcoFullOes] = useState([]);
+  const [shcoFullScores, setShcoFullScores] = useState({});
+  const [shcoFullScoreSaving, setShcoFullScoreSaving] = useState({});
+  const [shcoFullChapter, setShcoFullChapter] = useState('all');
+  const [shcoFullLevel, setShcoFullLevel] = useState('all');
+  const [shcoFullLoading, setShcoFullLoading] = useState(false);
 
   // Reassign module-level T so all component closures see the correct theme
   T = theme === 'light' ? LIGHT_THEME : DARK_THEME;
@@ -5571,6 +5577,20 @@ export default function App() {
       });
   },[selectedProgramme,context?.hospitalId]);
 
+  // Load SHCO Full OEs + scores
+  useEffect(()=>{
+    if(selectedProgramme!=="shco-full"||!context?.hospitalId)return;
+    setShcoFullLoading(true);
+    Promise.all([
+      supabase.from("shco_full_oes").select("*").order("oe_code"),
+      supabase.from("shco_full_scores").select("oe_code,score").eq("hospital_id",context.hospitalId),
+    ]).then(([{data:oeData},{data:scoreData}])=>{
+      if(oeData)setShcoFullOes(oeData);
+      if(scoreData){const m={};scoreData.forEach(s=>{m[s.oe_code]=s.score;});setShcoFullScores(m);}
+      setShcoFullLoading(false);
+    });
+  },[selectedProgramme,context?.hospitalId]);
+
   // Load existing SHCO ELC scores for this hospital
   useEffect(()=>{
     if(selectedProgramme!=="shco-elc"||!context?.hospitalId)return;
@@ -5699,6 +5719,7 @@ export default function App() {
   const handleProgrammeSelect=(key,ctx)=>{
     const resolvedCtx=ctx||context;
     if(key==="hco_full"){setSelectedProgramme("hco");setScreen("dashboard");setAuthState("app");loadData(resolvedCtx);}
+    else if(key==="shco_full"){setSelectedProgramme("shco-full");setScreen("shco-full");setAuthState("app");}
     else if(key==="shco_elc"){setSelectedProgramme("shco-elc");setScreen("shco");setAuthState("app");}
     else if(key==="hco_elc"){setSelectedProgramme("hco-elc");setScreen("hco-elc");setAuthState("app");}
   };
@@ -6572,6 +6593,202 @@ export default function App() {
   );
   };
 
+  // ── SHCO FULL ACCREDITATION DASHBOARD ────────────────────────────────────
+  const renderSHCOFullTab = () => {
+    const CHAPTERS = [
+      {key:'AAC',name:'Access, Assessment & Continuity of Care'},
+      {key:'COP',name:'Care of Patients'},
+      {key:'MOM',name:'Management of Medication'},
+      {key:'PRE',name:'Patient Rights & Education'},
+      {key:'HIC',name:'Hospital Infection Control'},
+      {key:'PSQ',name:'Patient Safety & Quality Improvement'},
+      {key:'ROM',name:'Responsibilities of Management'},
+      {key:'FMS',name:'Facility Management & Safety'},
+      {key:'HRM',name:'Human Resource Management'},
+      {key:'IMS',name:'Information Management System'},
+    ];
+    const LEVELS = ['Core','Commitment','Achievement','Excellence'];
+    const levelColor = (l) => l==='Core'?T.red:l==='Commitment'?T.orange:l==='Achievement'?T.gold:T.blue;
+
+    const handleScore = async (oeCode, score) => {
+      setShcoFullScores(prev=>({...prev,[oeCode]:score}));
+      setShcoFullScoreSaving(prev=>({...prev,[oeCode]:true}));
+      await supabase.from("shco_full_scores").upsert(
+        {hospital_id:context.hospitalId,oe_code:oeCode,score},
+        {onConflict:"hospital_id,oe_code"}
+      );
+      setShcoFullScoreSaving(prev=>({...prev,[oeCode]:false}));
+    };
+
+    const scoredCount = shcoFullOes.filter(oe=>shcoFullScores[oe.oe_code]).length;
+    const total = shcoFullOes.length;
+    const scoredScores = shcoFullOes.filter(oe=>shcoFullScores[oe.oe_code]).map(oe=>shcoFullScores[oe.oe_code]);
+    const overallAvg = scoredScores.length>0 ? scoredScores.reduce((a,b)=>a+b,0)/scoredScores.length : 0;
+    const overallPct = Math.round(overallAvg/5*100);
+
+    const coreOes = shcoFullOes.filter(oe=>oe.level==='Core');
+    const coreFails = coreOes.filter(oe=>(shcoFullScores[oe.oe_code]||0)<4);
+    const coreUnscored = coreOes.filter(oe=>!shcoFullScores[oe.oe_code]).length;
+
+    const chapterStats = CHAPTERS.map(c=>{
+      const chOes = shcoFullOes.filter(oe=>oe.chapter===c.key);
+      const chScored = chOes.filter(oe=>shcoFullScores[oe.oe_code]);
+      const chAvg = chScored.length>0 ? chScored.reduce((a,oe)=>a+shcoFullScores[oe.oe_code],0)/chScored.length : 0;
+      const chPct = Math.round(chAvg/5*100);
+      return {...c, total:chOes.length, scored:chScored.length, pct:chPct, pass:chScored.length===chOes.length&&chPct>=80};
+    });
+    const chapsFailing = chapterStats.filter(c=>c.scored===c.total&&c.total>0&&!c.pass);
+
+    let verdict, verdictColor;
+    if(shcoFullLoading||total===0){verdict='Loading OEs…';verdictColor=T.muted;}
+    else if(scoredCount<total){verdict=`${total-scoredCount} OEs unscored`;verdictColor=T.orange;}
+    else if(coreFails.length>0){verdict=`CORE FAIL — ${coreFails.length} Core OE${coreFails.length>1?'s':''} below 4`;verdictColor=T.red;}
+    else if(overallPct<80){verdict=`Below threshold — ${overallPct}% overall (need 80%)`;verdictColor=T.red;}
+    else if(chapsFailing.length>0){verdict=`${chapsFailing.length} chapter${chapsFailing.length>1?'s':''} below 80%`;verdictColor=T.orange;}
+    else{verdict='✓ READY FOR ACCREDITATION';verdictColor=T.green;}
+
+    const filteredOes = shcoFullOes.filter(oe=>{
+      const chMatch = shcoFullChapter==='all'||oe.chapter===shcoFullChapter;
+      const lvlMatch = shcoFullLevel==='all'||oe.level===shcoFullLevel;
+      return chMatch&&lvlMatch;
+    });
+
+    // Group filtered OEs by standard_code
+    const byStandard = filteredOes.reduce((acc,oe)=>{
+      if(!acc[oe.standard_code])acc[oe.standard_code]={std:oe.standard_text,oes:[]};
+      acc[oe.standard_code].oes.push(oe);
+      return acc;
+    },{});
+
+    return (
+      <div style={{background:T.bg,minHeight:'100vh',color:T.text,fontFamily:'Segoe UI,system-ui,sans-serif'}}>
+        {/* Header stats */}
+        <div style={{padding:'16px 16px 0'}}>
+          <div style={{background:T.panel,border:`1px solid ${T.orange}44`,borderRadius:12,padding:16,marginBottom:12}}>
+            <div style={{color:T.orange,fontWeight:700,fontSize:15,marginBottom:10}}>🏨 SHCO Full Accreditation — 3rd Edition</div>
+            <div style={{display:'flex',gap:10,flexWrap:'wrap'}}>
+              {[
+                {label:'Total OEs',val:total,color:T.text},
+                {label:'Scored',val:scoredCount,color:scoredCount===total&&total>0?T.green:T.orange},
+                {label:'Overall',val:`${overallPct}%`,color:overallPct>=80?T.green:overallPct>=60?T.orange:T.red},
+                {label:'Core Fails',val:coreFails.length+(coreUnscored>0?`+${coreUnscored}?`:''),color:coreFails.length>0||coreUnscored>0?T.red:T.green},
+              ].map(s=>(
+                <div key={s.label} style={{background:T.panel2,borderRadius:8,padding:'8px 14px',textAlign:'center',border:`1px solid ${T.border}`,flex:1,minWidth:70}}>
+                  <div style={{fontSize:18,fontWeight:800,color:s.color}}>{s.val}</div>
+                  <div style={{fontSize:11,color:T.muted}}>{s.label}</div>
+                </div>
+              ))}
+            </div>
+            <div style={{marginTop:10,padding:'8px 12px',borderRadius:8,background:`${verdictColor}18`,border:`1px solid ${verdictColor}44`,textAlign:'center'}}>
+              <span style={{fontSize:13,fontWeight:700,color:verdictColor}}>{verdict}</span>
+            </div>
+            {/* Chapter health row */}
+            {!shcoFullLoading&&total>0&&(
+              <div style={{marginTop:10,display:'flex',gap:4,flexWrap:'wrap'}}>
+                {chapterStats.map(c=>{
+                  const col=c.scored===0?T.muted:c.pass?T.green:c.pct>=60?T.orange:T.red;
+                  return(
+                    <div key={c.key} title={`${c.key}: ${c.scored}/${c.total} scored, ${c.pct}%`}
+                      style={{padding:'3px 8px',borderRadius:6,background:`${col}22`,border:`1px solid ${col}55`,fontSize:11,fontWeight:700,color:col,cursor:'pointer'}}
+                      onClick={()=>setShcoFullChapter(c.key==='all'?'all':c.key)}>
+                      {c.key} {c.scored===c.total&&c.total>0?c.pct+'%':'…'}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+
+          {/* Chapter tabs */}
+          <div style={{display:'flex',overflowX:'auto',gap:0,borderBottom:`1px solid ${T.border}`,marginBottom:10}}>
+            {[{key:'all',label:'All Chapters'},...CHAPTERS.map(c=>({key:c.key,label:c.key}))].map(tab=>(
+              <button key={tab.key} onClick={()=>setShcoFullChapter(tab.key)}
+                style={{padding:'7px 12px',border:'none',cursor:'pointer',whiteSpace:'nowrap',background:'transparent',
+                  fontSize:13,fontWeight:600,
+                  color:shcoFullChapter===tab.key?T.orange:T.muted,
+                  borderBottom:shcoFullChapter===tab.key?`2px solid ${T.orange}`:'2px solid transparent'}}>
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Level filter pills */}
+          <div style={{display:'flex',gap:6,flexWrap:'wrap',marginBottom:12}}>
+            {['all',...LEVELS].map(lv=>(
+              <button key={lv} onClick={()=>setShcoFullLevel(lv)}
+                style={{padding:'4px 12px',borderRadius:20,border:`1px solid ${shcoFullLevel===lv?(lv==='all'?T.gold:levelColor(lv)):T.border}`,
+                  background:shcoFullLevel===lv?(lv==='all'?T.gold+'22':levelColor(lv)+'22'):'transparent',
+                  color:shcoFullLevel===lv?(lv==='all'?T.gold:levelColor(lv)):T.muted,
+                  fontSize:12,fontWeight:600,cursor:'pointer'}}>
+                {lv==='all'?'All Levels':lv}
+              </button>
+            ))}
+            <span style={{marginLeft:'auto',fontSize:12,color:T.muted,alignSelf:'center'}}>{filteredOes.length} OEs</span>
+          </div>
+        </div>
+
+        {/* OE list grouped by standard */}
+        <div style={{padding:'0 16px 80px'}}>
+          {shcoFullLoading ? (
+            <div style={{textAlign:'center',padding:40,color:T.muted}}>Loading OEs…</div>
+          ) : Object.keys(byStandard).length===0 ? (
+            <div style={{textAlign:'center',padding:40,color:T.muted}}>No OEs match the current filter.</div>
+          ) : (
+            Object.entries(byStandard).map(([stdCode,{std,oes:stdOes}])=>{
+              const stdScored = stdOes.filter(oe=>shcoFullScores[oe.oe_code]).length;
+              const stdAvg = stdScored>0 ? stdOes.filter(oe=>shcoFullScores[oe.oe_code]).reduce((a,oe)=>a+shcoFullScores[oe.oe_code],0)/stdScored : 0;
+              const stdPct = Math.round(stdAvg/5*100);
+              const stdCol = stdScored===0?T.muted:stdPct>=80?T.green:stdPct>=60?T.orange:T.red;
+              return (
+                <div key={stdCode} style={{marginBottom:16}}>
+                  <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:'10px 14px',marginBottom:6,display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:10}}>
+                    <div>
+                      <span style={{color:T.orange,fontWeight:800,fontSize:13,marginRight:8}}>{stdCode}</span>
+                      <span style={{color:T.text,fontSize:13,lineHeight:1.5}}>{std}</span>
+                    </div>
+                    {stdScored>0&&<span style={{fontSize:12,fontWeight:700,color:stdCol,whiteSpace:'nowrap'}}>{stdPct}%</span>}
+                  </div>
+                  {stdOes.map(oe=>{
+                    const sc = shcoFullScores[oe.oe_code]||0;
+                    const saving = shcoFullScoreSaving[oe.oe_code];
+                    const lc = levelColor(oe.level);
+                    const rowBorder = sc>=4?T.green:sc>=3?T.gold:sc>=1?T.red:T.border;
+                    return (
+                      <div key={oe.oe_code} style={{background:T.panel2,border:`1px solid ${rowBorder}`,borderRadius:8,padding:'10px 12px',marginBottom:6,marginLeft:8}}>
+                        <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:6,flexWrap:'wrap'}}>
+                          <span style={{fontSize:12,fontWeight:700,color:T.muted}}>{oe.oe_code}</span>
+                          <span style={{fontSize:11,padding:'2px 8px',borderRadius:10,background:lc+'22',color:lc,border:`1px solid ${lc}44`,fontWeight:700}}>{oe.level}</span>
+                          {sc>0&&<span style={{fontSize:12,fontWeight:700,color:sc>=4?T.green:sc>=3?T.gold:T.red}}>{'★'.repeat(sc)}{'☆'.repeat(5-sc)}</span>}
+                          {saving&&<span style={{fontSize:11,color:T.muted}}>saving…</span>}
+                        </div>
+                        <div style={{fontSize:13,color:T.text,lineHeight:1.6,marginBottom:8}}>{oe.text}</div>
+                        <div style={{display:'flex',gap:5,flexWrap:'wrap'}}>
+                          {[1,2,3,4,5].map(n=>{
+                            const labels=['None','Partial','Mostly','Full','Excellent'];
+                            const colors=[T.red,T.orange,T.gold,T.green,T.blue];
+                            return(
+                              <button key={n} onClick={()=>handleScore(oe.oe_code,n)}
+                                style={{padding:'4px 10px',borderRadius:7,fontSize:12,fontWeight:700,cursor:'pointer',
+                                  background:sc===n?`${colors[n-1]}30`:T.panel,
+                                  border:`1px solid ${sc===n?colors[n-1]:colors[n-1]+'40'}`,
+                                  color:sc===n?colors[n-1]:T.muted,transition:'all 0.15s'}}>
+                                {n} – {labels[n-1]}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })
+          )}
+        </div>
+      </div>
+    );
+  };
+
   // ── HCO ELC TAB ──────────────────────────────────────────────────────────
   const renderHCOTab = () => {
 
@@ -7407,10 +7624,11 @@ export default function App() {
     {id:"committee-calendar",label:"Cal",icon:"📅",programmes:["hco"],primary:false},
     {id:"licenses",label:"Licenses",icon:"📋",programmes:["hco"],primary:false},
     {id:"tracer",label:"Tracer",icon:"🩺",programmes:["hco"],primary:false},
-    {id:"pricing",label:"Pricing",icon:"💎",programmes:["hco","shco-elc","hco-elc"],primary:false},
-    {id:"profile",label:"Profile",icon:"👤",programmes:["hco","shco-elc","hco-elc"],primary:false},
+    {id:"pricing",label:"Pricing",icon:"💎",programmes:["hco","shco-elc","hco-elc","shco-full"],primary:false},
+    {id:"profile",label:"Profile",icon:"👤",programmes:["hco","shco-elc","hco-elc","shco-full"],primary:false},
     {id:"shco",label:"SHCO",icon:"🏥",programmes:["shco-elc"]},
     {id:"hco-elc",label:"HCO ELC",icon:"🎯",programmes:["hco-elc"]},
+    {id:"shco-full",label:"Score OEs",icon:"✏️",programmes:["shco-full"],primary:true},
   ];
   const NAV=ALL_NAV.filter(n=>n.programmes.includes(selectedProgramme));
   const PRIMARY_NAV=NAV.filter(n=>n.primary);
@@ -7433,7 +7651,7 @@ export default function App() {
         <div style={{maxWidth:1200,margin:"0 auto",display:"flex",alignItems:"center",gap:10,flexWrap:"wrap"}}>
           <div style={{width:32,height:32,borderRadius:8,background:theme==='light'?"rgba(255,255,255,0.15)":`linear-gradient(135deg,${T.gold},#f0d070)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:17,flexShrink:0,border:theme==='light'?"1px solid rgba(255,255,255,0.3)":"none",color:"#ffffff"}}>⚕</div>
           <div style={{flex:1,minWidth:100}}>
-            <div style={{fontSize:7,letterSpacing:3,color:theme==='light'?"rgba(255,255,255,0.7)":T.gold}}>NABH 6TH EDITION</div>
+            <div style={{fontSize:7,letterSpacing:3,color:theme==='light'?"rgba(255,255,255,0.7)":T.gold}}>{selectedProgramme==="shco-full"?"NABH SHCO 3RD EDITION":selectedProgramme==="shco-elc"?"NABH SHCO ELC":selectedProgramme==="hco-elc"?"NABH HCO ELC":"NABH 6TH EDITION"}</div>
             <div style={{fontSize:14,fontWeight:700,color:"#ffffff"}}>{context?.hospitalName||"AccredReady"}{context?.assessmentName&&<span style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted,marginLeft:6}}>{context.assessmentName}</span>}</div>
           </div>
           {loading&&<div style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted}}>Refreshing…</div>}
@@ -7521,6 +7739,14 @@ export default function App() {
           </span>
         </div>
       )}
+      {selectedProgramme==="shco-full"&&shcoFullOes.filter(oe=>oe.level==='Core'&&(shcoFullScores[oe.oe_code]||0)<4).length>0&&(
+        <div style={{background:T.redD,padding:"8px 20px",display:"flex",gap:10,alignItems:"center"}}>
+          <span style={{fontSize:16}}>🚨</span>
+          <span style={{fontSize:13,fontWeight:700,color:T.red}}>
+            CORE FAILURE: {shcoFullOes.filter(oe=>oe.level==='Core'&&(shcoFullScores[oe.oe_code]||0)<4).length} Core OE{shcoFullOes.filter(oe=>oe.level==='Core'&&(shcoFullScores[oe.oe_code]||0)<4).length>1?"s":""} below 4 — accreditation will be at risk.
+          </span>
+        </div>
+      )}
 
       <div style={{maxWidth:1200,margin:"0 auto",padding:"16px"}}>
         {screen==="dashboard"&&<Dashboard decision={decision} gaps={gaps} onNav={id=>navigate({screen:id})}/>}
@@ -7541,6 +7767,7 @@ export default function App() {
         {screen==="pricing"&&<PricingScreen/>}
         {screen==="profile"&&<ProfileScreen user={user} context={context} onContextUpdate={setContext}/>}
         {screen==="shco"&&renderSHCOTab()}
+        {screen==="shco-full"&&renderSHCOFullTab()}
         {screen==="hco-elc"&&renderHCOTab()}
       </div>
 
