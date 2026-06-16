@@ -6842,7 +6842,8 @@ export default function App() {
                     <span style={{color:T.orange,fontWeight:800,fontSize:14}}>{c.key}</span>
                     <span style={{fontSize:13,fontWeight:700,color:col}}>{c.avg!==null?c.avg.toFixed(1)+' / 5':'—'}</span>
                   </div>
-                  <div style={{fontSize:10,color:T.muted,marginBottom:4}}>{c.scoredCount}/{c.relevantCount} scored · {c.totalCount} total OEs</div>
+                  <div style={{fontSize:10,color:T.muted,marginBottom:2}}>{c.scoredCount} of {c.relevantCount} relevant scored</div>
+                  <div style={{fontSize:10,color:T.muted,marginBottom:4}}>{c.totalCount} total OEs in chapter</div>
                   <div style={{height:4,borderRadius:2,background:T.border,overflow:'hidden',marginBottom:4}}>
                     <div style={{height:'100%',width:`${c.relevantCount>0?Math.round(c.scoredCount/c.relevantCount*100):0}%`,background:col,borderRadius:2,transition:'width 0.3s'}}/>
                   </div>
