@@ -5179,6 +5179,11 @@ export default function App() {
   const [shcoFullTab, setShcoFullTab] = useState('dashboard');
   const [shcoFullSearch, setShcoFullSearch] = useState('');
   const [shcoFullPdfLoading, setShcoFullPdfLoading] = useState(false);
+  const [shcoFullGapFilter, setShcoFullGapFilter] = useState('ALL');
+  const [shcoFullGapSearch, setShcoFullGapSearch] = useState('');
+  const [shcoFullCapaForm, setShcoFullCapaForm] = useState({});
+  const [shcoFullCapaSaving, setShcoFullCapaSaving] = useState({});
+  const [shcoFullCapaDb, setShcoFullCapaDb] = useState({});
 
   // Reassign module-level T so all component closures see the correct theme
   T = theme === 'light' ? LIGHT_THEME : DARK_THEME;
@@ -5913,19 +5918,36 @@ export default function App() {
       });
   },[selectedProgramme,context?.hospitalId]);
 
-  // Load SHCO Full OEs + scores
+  // Load SHCO Full OEs + scores + CAPAs
   useEffect(()=>{
     if(selectedProgramme!=="shco-full"||!context?.hospitalId)return;
     setShcoFullLoading(true);
     Promise.all([
       supabase.from("shco_full_oes").select("*").order("oe_code"),
       supabase.from("shco_full_scores").select("oe_code,score").eq("hospital_id",context.hospitalId),
-    ]).then(([{data:oeData},{data:scoreData}])=>{
+      supabase.from("shco_full_capa").select("*").eq("hospital_id",context.hospitalId),
+    ]).then(([{data:oeData},{data:scoreData},{data:capaData}])=>{
       if(oeData)setShcoFullOes(oeData);
       if(scoreData){const m={};scoreData.forEach(s=>{m[s.oe_code]=s.score;});setShcoFullScores(m);}
+      if(capaData){const m={};capaData.forEach(c=>{m[c.oe_code]=c;});setShcoFullCapaDb(m);}
       setShcoFullLoading(false);
     });
   },[selectedProgramme,context?.hospitalId]);
+
+  const saveShcoFullCapa = async (oeCode) => {
+    const f = shcoFullCapaForm[oeCode];
+    if(!f?.finding||!f?.action||!context?.hospitalId) return;
+    setShcoFullCapaSaving(p=>({...p,[oeCode]:true}));
+    await supabase.from("shco_full_capa").upsert({
+      hospital_id:context.hospitalId, oe_code:oeCode,
+      finding:f.finding, action_planned:f.action,
+      responsible_person:f.person||'', target_date:f.date||null, status:'open',
+    },{onConflict:"hospital_id,oe_code"});
+    const {data:fresh}=await supabase.from("shco_full_capa").select("*").eq("hospital_id",context.hospitalId);
+    if(fresh){const m={};fresh.forEach(c=>{m[c.oe_code]=c;});setShcoFullCapaDb(m);}
+    setShcoFullCapaSaving(p=>({...p,[oeCode]:false}));
+    setShcoFullCapaForm(p=>({...p,[oeCode]:{...p[oeCode],saved:true}}));
+  };
 
   // Load existing SHCO ELC scores for this hospital
   useEffect(()=>{
@@ -7297,6 +7319,155 @@ export default function App() {
       </div>
     );
 
+    // ── Fix Gaps sub-render ────────────────────────────────────────────────
+    const gapSeverity = oe => {
+      const sc = shcoFullScores[oe.oe_code]||0;
+      if(sc===0) return null; // unscored — not a gap
+      if(oe.level==='Core') return sc<=3 ? 'CRITICAL' : null;
+      if(oe.level==='Commitment') return sc<=2 ? 'HIGH' : sc===3 ? 'MEDIUM' : null;
+      return sc<=3 ? 'LOW' : null; // Achievement / Excellence
+    };
+
+    const allGaps = shcoFullOes
+      .map(oe=>({oe, sev:gapSeverity(oe)}))
+      .filter(({sev})=>sev!==null)
+      .map(({oe,sev})=>({
+        oe_code: oe.oe_code, oe_text: oe.oe_text, level: oe.level,
+        standard_code: oe.standard_code, severity: sev,
+        score: shcoFullScores[oe.oe_code]||0,
+      }));
+
+    const renderFixGaps = () => {
+      const q = shcoFullGapSearch.toLowerCase().trim();
+      const filtered = allGaps.filter(g=>{
+        const matchSev = shcoFullGapFilter==='ALL' || g.severity===shcoFullGapFilter;
+        const matchQ   = !q || g.oe_code.toLowerCase().includes(q) || g.oe_text.toLowerCase().includes(q);
+        return matchSev && matchQ;
+      });
+
+      return (
+        <div style={{padding:'12px 16px 80px'}}>
+          {/* Search */}
+          <input value={shcoFullGapSearch} onChange={e=>setShcoFullGapSearch(e.target.value)}
+            placeholder="Search gaps by OE code (e.g. AAC.1.a) or keyword…"
+            style={{width:'100%',padding:'10px 14px',borderRadius:8,border:`1px solid ${T.border}`,
+              background:T.panel2,color:T.text,fontSize:14,marginBottom:10,boxSizing:'border-box'}}/>
+
+          {/* Severity filter + count */}
+          <div style={{display:'flex',gap:8,marginBottom:14,flexWrap:'wrap',alignItems:'center'}}>
+            {['ALL','CRITICAL','HIGH','MEDIUM','LOW'].map(s=>(
+              <button key={s} onClick={()=>setShcoFullGapFilter(s)}
+                style={{padding:'5px 14px',borderRadius:8,fontSize:12,cursor:'pointer',
+                  background:shcoFullGapFilter===s?`${sevColor(s)}20`:'transparent',
+                  border:`1px solid ${shcoFullGapFilter===s?sevColor(s):T.border}`,
+                  color:shcoFullGapFilter===s?sevColor(s):T.muted}}>{s}</button>
+            ))}
+            <div style={{marginLeft:'auto',fontSize:13,color:T.muted}}>{allGaps.length} gaps</div>
+          </div>
+
+          {filtered.length===0 && (
+            <div style={{textAlign:'center',color:T.muted,padding:'40px',fontSize:14}}>
+              {allGaps.length===0 ? 'No gaps found. Score OEs first.' : 'No gaps at this severity level.'}
+            </div>
+          )}
+
+          <div style={{display:'grid',gap:10}}>
+            {filtered.map(g=>{
+              const fc   = shcoFullCapaForm[g.oe_code]||{};
+              const dbC  = shcoFullCapaDb[g.oe_code];
+              const expanded = fc.expanded;
+              const hasSaved = dbC || fc.saved;
+              return (
+                <div key={g.oe_code} style={{background:T.panel,border:`1px solid ${sevColor(g.severity)}25`,borderRadius:12,overflow:'hidden'}}>
+                  <div style={{height:3,background:sevColor(g.severity)}}/>
+                  <div style={{padding:'14px 16px'}}>
+                    {/* Header row */}
+                    <div style={{display:'flex',gap:10,alignItems:'flex-start',marginBottom:8}}>
+                      <div style={{flex:1}}>
+                        <div style={{display:'flex',gap:8,alignItems:'center',marginBottom:4,flexWrap:'wrap'}}>
+                          <span style={{fontFamily:'monospace',fontSize:13,fontWeight:700,color:lvColor(g.level)}}>{g.oe_code}</span>
+                          <span style={{fontSize:11,padding:'2px 7px',borderRadius:5,background:`${sevColor(g.severity)}15`,color:sevColor(g.severity),fontWeight:700}}>{g.severity}</span>
+                          <span style={{fontSize:11,padding:'2px 6px',borderRadius:5,background:`${lvColor(g.level)}18`,color:lvColor(g.level)}}>{g.level}</span>
+                          {hasSaved&&<span style={{fontSize:11,padding:'2px 6px',borderRadius:5,background:T.green+'22',color:T.green}}>✓ CAPA saved</span>}
+                        </div>
+                        <div style={{fontSize:12,color:T.text,lineHeight:1.5}}>{g.oe_text}</div>
+                      </div>
+                      <div style={{textAlign:'center',flexShrink:0}}>
+                        <div style={{fontSize:22,fontWeight:800,color:g.score<=2?T.red:g.score===3?T.orange:T.green}}>{g.score}</div>
+                        <div style={{fontSize:7,color:T.muted}}>/ 5</div>
+                      </div>
+                    </div>
+
+                    {/* Toggle CAPA */}
+                    <button onClick={()=>setShcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,expanded:!expanded}}))}
+                      style={{fontSize:12,color:T.gold,background:'transparent',border:`1px solid ${T.gold}30`,borderRadius:8,padding:'4px 14px',cursor:'pointer'}}>
+                      {expanded ? '▲ Hide CAPA' : hasSaved ? '▼ Edit CAPA' : '▼ Add CAPA'}
+                    </button>
+
+                    {/* CAPA form */}
+                    {expanded&&(
+                      <div style={{marginTop:12,display:'grid',gap:8}}>
+                        {fc.saved&&<div style={{fontSize:12,color:T.green,padding:'6px 10px',background:T.green+'14',borderRadius:6}}>✓ CAPA saved successfully</div>}
+                        {/* Pre-fill from DB if exists */}
+                        {dbC&&!fc.finding&&!fc.action&&(()=>{
+                          // Pre-populate form from DB on first expand
+                          setTimeout(()=>setShcoFullCapaForm(p=>({...p,[g.oe_code]:{
+                            ...p[g.oe_code],
+                            finding: p[g.oe_code]?.finding ?? dbC.finding,
+                            action:  p[g.oe_code]?.action  ?? dbC.action_planned,
+                            person:  p[g.oe_code]?.person  ?? dbC.responsible_person,
+                            date:    p[g.oe_code]?.date    ?? (dbC.target_date||''),
+                          }})),0);
+                          return null;
+                        })()}
+                        <div>
+                          <div style={{fontSize:11,color:T.muted,marginBottom:4}}>FINDING *</div>
+                          <textarea value={fc.finding||(dbC?.finding||'')}
+                            onChange={e=>setShcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,finding:e.target.value,saved:false}}))}
+                            rows={2} placeholder="Describe the non-compliance finding…"
+                            style={{width:'100%',padding:'8px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,resize:'vertical',boxSizing:'border-box'}}/>
+                        </div>
+                        <div>
+                          <div style={{fontSize:11,color:T.muted,marginBottom:4}}>ACTION PLANNED *</div>
+                          <textarea value={fc.action||(dbC?.action_planned||'')}
+                            onChange={e=>setShcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,action:e.target.value,saved:false}}))}
+                            rows={2} placeholder="Corrective action to be taken…"
+                            style={{width:'100%',padding:'8px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,resize:'vertical',boxSizing:'border-box'}}/>
+                        </div>
+                        <div style={{display:'flex',gap:8,flexWrap:'wrap',alignItems:'flex-end'}}>
+                          <div style={{flex:1,minWidth:140}}>
+                            <div style={{fontSize:11,color:T.muted,marginBottom:4}}>RESPONSIBLE PERSON</div>
+                            <input value={fc.person||(dbC?.responsible_person||'')}
+                              onChange={e=>setShcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,person:e.target.value,saved:false}}))}
+                              placeholder="Name / Designation"
+                              style={{width:'100%',padding:'7px 10px',borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,boxSizing:'border-box'}}/>
+                          </div>
+                          <div>
+                            <div style={{fontSize:11,color:T.muted,marginBottom:4}}>TARGET DATE</div>
+                            <input type="date" value={fc.date||(dbC?.target_date||'')}
+                              onChange={e=>setShcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,date:e.target.value,saved:false}}))}
+                              style={{padding:'7px 10px',borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13}}/>
+                          </div>
+                          <button onClick={()=>saveShcoFullCapa(g.oe_code)}
+                            disabled={shcoFullCapaSaving[g.oe_code]||!(fc.finding||(dbC?.finding||''))||(!(fc.action||(dbC?.action_planned||'')))}
+                            style={{padding:'7px 20px',borderRadius:10,background:`linear-gradient(135deg,${T.green},#3d9e6e)`,
+                              border:'none',color:T.bg,fontSize:14,fontWeight:700,
+                              cursor:(fc.finding||(dbC?.finding||''))&&(fc.action||(dbC?.action_planned||''))?'pointer':'default',
+                              opacity:(fc.finding||(dbC?.finding||''))&&(fc.action||(dbC?.action_planned||''))?1:0.5}}>
+                            {shcoFullCapaSaving[g.oe_code]?'Saving…':'Save CAPA →'}
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      );
+    };
+
     return (
       <div style={{background:T.bg,minHeight:'100vh',color:T.text,fontFamily:'Segoe UI,system-ui,sans-serif'}}>
         {/* Tab header */}
@@ -7304,6 +7475,7 @@ export default function App() {
           {[
             {key:'dashboard',label:'📊 Dashboard'},
             {key:'scoring',  label:'✏️ Score OEs'},
+            {key:'fixgaps',  label:`🔧 Fix Gaps${allGaps.length>0?' ('+allGaps.length+')':''}`},
           ].map(tab=>(
             <button key={tab.key} onClick={()=>setShcoFullTab(tab.key)}
               style={{padding:'12px 16px',border:'none',cursor:'pointer',background:'transparent',fontSize:13,fontWeight:600,
@@ -7319,7 +7491,7 @@ export default function App() {
             {shcoFullPdfLoading ? '⏳ Generating…' : '⬇ Download Gap Report'}
           </button>
         </div>
-        {shcoFullTab==='dashboard' ? renderDashboard() : renderScoreOEs()}
+        {shcoFullTab==='dashboard' ? renderDashboard() : shcoFullTab==='scoring' ? renderScoreOEs() : renderFixGaps()}
       </div>
     );
   };
