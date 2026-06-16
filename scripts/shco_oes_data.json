@@ -1,0 +1,3674 @@
+[
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.1",
+    "standard_text": "The organization defines and displays the healthcare services that it provides.",
+    "oe_code": "AAC.1.a",
+    "level": "Commitment",
+    "text": "The healthcare services being provided are defined and are in consonance with the needs of the community."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.1",
+    "standard_text": "The organization defines and displays the healthcare services that it provides.",
+    "oe_code": "AAC.1.b",
+    "level": "Commitment",
+    "text": "Each defined healthcare service should have diagnostic and treatment services with suitably qualified personnel who provide out-patient, in-patient and emergency cover."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.1",
+    "standard_text": "The organization defines and displays the healthcare services that it provides.",
+    "oe_code": "AAC.1.c",
+    "level": "Commitment",
+    "text": "Scope of healthcare services of each department is defined."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.1",
+    "standard_text": "The organization defines and displays the healthcare services that it provides.",
+    "oe_code": "AAC.1.d",
+    "level": "Commitment",
+    "text": "The organization's defined healthcare services are prominently displayed."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.2",
+    "standard_text": "The organization has a well-defined registration, admission and transfer process.",
+    "oe_code": "AAC.2.a",
+    "level": "Commitment",
+    "text": "The organization has a mechanism for registering and admitting patients"
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.2",
+    "standard_text": "The organization has a well-defined registration, admission and transfer process.",
+    "oe_code": "AAC.2.b",
+    "level": "Core",
+    "text": "Aunique identification number is generated at the end of registration."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.2",
+    "standard_text": "The organization has a well-defined registration, admission and transfer process.",
+    "oe_code": "AAC.2.c",
+    "level": "Commitment",
+    "text": "Patients are accepted only if the organization can provide the required service"
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.2",
+    "standard_text": "The organization has a well-defined registration, admission and transfer process.",
+    "oe_code": "AAC.2.d",
+    "level": "Commitment",
+    "text": "The organization has a mechanism to address management of patients during non-availability of beds."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.2",
+    "standard_text": "The organization has a well-defined registration, admission and transfer process.",
+    "oe_code": "AAC.2.e",
+    "level": "Achievement",
+    "text": "Access to the healthcare services in the organization is prioritized according to the clinical needs of the patient."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.2",
+    "standard_text": "The organization has a well-defined registration, admission and transfer process.",
+    "oe_code": "AAC.2.f",
+    "level": "Commitment",
+    "text": "Transfer–in and transfer-out / referral of patients to the organization is done appropriately."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.3",
+    "standard_text": "Patients cared for by the organization undergo an established initial assessment and regular re-assessment",
+    "oe_code": "AAC.3.a",
+    "level": "Core",
+    "text": "The initial assessment for the out–patients, day-care, in-patients and emergency patients is done."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.3",
+    "standard_text": "Patients cared for by the organization undergo an established initial assessment and regular re-assessment",
+    "oe_code": "AAC.3.b",
+    "level": "Achievement",
+    "text": "The initial assessment results in a documented care plan."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.3",
+    "standard_text": "Patients cared for by the organization undergo an established initial assessment and regular re-assessment",
+    "oe_code": "AAC.3.c",
+    "level": "Core",
+    "text": "Patients are reassessed at appropriate intervals to determine their response to treatment and to plan further treatment or discharge."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.3",
+    "standard_text": "Patients cared for by the organization undergo an established initial assessment and regular re-assessment",
+    "oe_code": "AAC.3.d",
+    "level": "Commitment",
+    "text": "Out-patients are informed of their next follow-up, where appropriate."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.3",
+    "standard_text": "Patients cared for by the organization undergo an established initial assessment and regular re-assessment",
+    "oe_code": "AAC.3.e",
+    "level": "Commitment",
+    "text": "The organization lays down guidelines and implements processes to identify early warning signs of change or deterioration in clinical conditions for initiating prompt intervention."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.4",
+    "standard_text": "Laboratory services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.4.a",
+    "level": "Commitment",
+    "text": "Scope of the laboratory services is commensurate to the services provided by the organization."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.4",
+    "standard_text": "Laboratory services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.4.b",
+    "level": "Commitment",
+    "text": "The infrastructure (physical and equipment) and human resources are adequate to provide the defined scope of services"
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.4",
+    "standard_text": "Laboratory services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.4.c",
+    "level": "Commitment",
+    "text": "Requisition for tests, collection, identification, handling, safe transportation, processing and disposal of specimens is performed according to written guidance."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.4",
+    "standard_text": "Laboratory services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.4.d",
+    "level": "Commitment",
+    "text": "Laboratory results are available within a defined time frame."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.4",
+    "standard_text": "Laboratory services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.4.e",
+    "level": "Commitment",
+    "text": "Critical results are intimated to the person concerned at the earliest."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.4",
+    "standard_text": "Laboratory services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.4.f",
+    "level": "Commitment",
+    "text": "Laboratory tests not available in the organization are outsourced to organization(s) based on their quality assurance system."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.4",
+    "standard_text": "Laboratory services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.4.g",
+    "level": "Commitment",
+    "text": "The laboratory quality assurance programme is implemented."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.4",
+    "standard_text": "Laboratory services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.4.h",
+    "level": "Commitment",
+    "text": "The programme includes periodic calibration and maintenance of all equipment."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.5",
+    "standard_text": "Imaging services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.5.a",
+    "level": "Core",
+    "text": "Imaging services comply with legal and other requirements."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.5",
+    "standard_text": "Imaging services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.5.b",
+    "level": "Commitment",
+    "text": "Scope of the imaging services is commensurate to the services provided by the organization."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.5",
+    "standard_text": "Imaging services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.5.c",
+    "level": "Commitment",
+    "text": "The infrastructure (physical and equipment) and human resources are adequate to provide for its defined scope of services."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.5",
+    "standard_text": "Imaging services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.5.d",
+    "level": "Commitment",
+    "text": "Imaging results are available in the standardised manner within a defined time frame"
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.5",
+    "standard_text": "Imaging services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.5.e",
+    "level": "Commitment",
+    "text": "Critical results are intimated immediately to the personnel concerned."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.5",
+    "standard_text": "Imaging services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.5.f",
+    "level": "Commitment",
+    "text": "Imaging tests not available in the organization are outsourced to organization(s) based on their quality assurance system."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.5",
+    "standard_text": "Imaging services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.5.g",
+    "level": "Commitment",
+    "text": "The quality assurance programme for imaging services is implemented."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.5",
+    "standard_text": "Imaging services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.5.h",
+    "level": "Achievement",
+    "text": "The programme addresses periodic internal / external peer review of imaging protocols and results using appropriate sampling."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.5",
+    "standard_text": "Imaging services are provided as per the scope of services of the organization and adhere to best practices.",
+    "oe_code": "AAC.5.i",
+    "level": "Commitment",
+    "text": "The programme includes periodic calibration and maintenance of all equipment."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.6",
+    "standard_text": "There is an established safety programme in the laboratory and imaging services",
+    "oe_code": "AAC.6.a",
+    "level": "Commitment",
+    "text": "The laboratory-safety programme is implemented."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.6",
+    "standard_text": "There is an established safety programme in the laboratory and imaging services",
+    "oe_code": "AAC.6.b",
+    "level": "Commitment",
+    "text": "Laboratory personnel are appropriately trained in safe practices and are provided with appropriate safety measures."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.6",
+    "standard_text": "There is an established safety programme in the laboratory and imaging services",
+    "oe_code": "AAC.6.c",
+    "level": "Commitment",
+    "text": "Patients are appropriately screened for safety / risk before imaging."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.6",
+    "standard_text": "There is an established safety programme in the laboratory and imaging services",
+    "oe_code": "AAC.6.d",
+    "level": "Commitment",
+    "text": "Imaging personnel and patients use appropriate radiation safety and monitoring devices where applicable, and are trained in imaging safety practices and radiation-safety measures."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.6",
+    "standard_text": "There is an established safety programme in the laboratory and imaging services",
+    "oe_code": "AAC.6.e",
+    "level": "Commitment",
+    "text": "Imaging signage is prominently displayed in all appropriate locations."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.7",
+    "standard_text": "Patient care is continuous and multidisciplinary in nature.",
+    "oe_code": "AAC.7.a",
+    "level": "Commitment",
+    "text": "During all phases of care, there is a qualified individual identified as responsible for the patient's care."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.7",
+    "standard_text": "Patient care is continuous and multidisciplinary in nature.",
+    "oe_code": "AAC.7.b",
+    "level": "Commitment",
+    "text": "Information about the patient's care and response to treatment is shared among medical, nursing and other care-providers, including referrals to other departments."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.7",
+    "standard_text": "Patient care is continuous and multidisciplinary in nature.",
+    "oe_code": "AAC.7.c",
+    "level": "Core",
+    "text": "The organization implements standardised hand-over communication during each staffing shift, between shifts and during transfers between units/ departments."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.7",
+    "standard_text": "Patient care is continuous and multidisciplinary in nature.",
+    "oe_code": "AAC.7.d",
+    "level": "Commitment",
+    "text": "Patient transfer within the organization is done safely."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.8",
+    "standard_text": "The organization has an established discharge process, and defines the content of the discharge summary.",
+    "oe_code": "AAC.8.a",
+    "level": "Commitment",
+    "text": "Adischarge summary is given to all the patients leaving the organization (including patients leaving against medical advice)."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.8",
+    "standard_text": "The organization has an established discharge process, and defines the content of the discharge summary.",
+    "oe_code": "AAC.8.b",
+    "level": "Commitment",
+    "text": "Discharge summary contains the patient's name, unique identification number, date of admission and date of discharge."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.8",
+    "standard_text": "The organization has an established discharge process, and defines the content of the discharge summary.",
+    "oe_code": "AAC.8.c",
+    "level": "Commitment",
+    "text": "Discharge summary contains the reasons for admission, significant findings and diagnosis, the patient's condition at the time of discharge, information regarding investigation results, any procedure performed, medication administered and other treatment given."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.8",
+    "standard_text": "The organization has an established discharge process, and defines the content of the discharge summary.",
+    "oe_code": "AAC.8.d",
+    "level": "Commitment",
+    "text": "Discharge summary contains follow-up advice, medication and other instructions in an understandable manner."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.8",
+    "standard_text": "The organization has an established discharge process, and defines the content of the discharge summary.",
+    "oe_code": "AAC.8.e",
+    "level": "Achievement",
+    "text": "Discharge summary incorporates instructions about when and how to obtain urgent care."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.8",
+    "standard_text": "The organization has an established discharge process, and defines the content of the discharge summary.",
+    "oe_code": "AAC.8.f",
+    "level": "Commitment",
+    "text": "In case of death, the summary of the case also includes the cause of death."
+  },
+  {
+    "chapter": "AAC",
+    "chapter_name": "Access, Assessment and Continuity of Care",
+    "standard_code": "AAC.8",
+    "standard_text": "The organization has an established discharge process, and defines the content of the discharge summary.",
+    "oe_code": "AAC.8.g",
+    "level": "Excellence",
+    "text": "The organisation adheres to planned discharge and identify special needs regarding care following discharge."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.1",
+    "standard_text": "Uniform care to patients is provided in all settings of the organization and is guided by written guidance, and the applicable laws and regulations",
+    "oe_code": "COP.1.a",
+    "level": "Core",
+    "text": "The organization has a uniform process for identification of patients and at a minimum, uses two identifiers."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.1",
+    "standard_text": "Uniform care to patients is provided in all settings of the organization and is guided by written guidance, and the applicable laws and regulations",
+    "oe_code": "COP.1.b",
+    "level": "Commitment",
+    "text": "Care shall be provided in consonance with applicable laws and regulations."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.1",
+    "standard_text": "Uniform care to patients is provided in all settings of the organization and is guided by written guidance, and the applicable laws and regulations",
+    "oe_code": "COP.1.c",
+    "level": "Achievement",
+    "text": "The organization adopts evidence-based clinical practice guidelines and/or clinical protocols to guide uniform patient care."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.1",
+    "standard_text": "Uniform care to patients is provided in all settings of the organization and is guided by written guidance, and the applicable laws and regulations",
+    "oe_code": "COP.1.d",
+    "level": "Commitment",
+    "text": "Care delivery is uniform for a given clinical condition when similar care is provided in more than one setting."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.1",
+    "standard_text": "Uniform care to patients is provided in all settings of the organization and is guided by written guidance, and the applicable laws and regulations",
+    "oe_code": "COP.1.e",
+    "level": "Excellence",
+    "text": "Telemedicine facility is provided safely and securely based on written guidance."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.2",
+    "standard_text": "Emergency services including ambulance, and management of disasters, are provided in accordance with written guidance, applicable laws and regulations.",
+    "oe_code": "COP.2.a",
+    "level": "Commitment",
+    "text": "There shall be an identified area in the organization, which is easily accessible to receive and manage emergency patients, with adequate and appropriate resources."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.2",
+    "standard_text": "Emergency services including ambulance, and management of disasters, are provided in accordance with written guidance, applicable laws and regulations.",
+    "oe_code": "COP.2.b",
+    "level": "Core",
+    "text": "The organization manages medico-legal cases and provides emergency care in consonance with statutory requirements and in accordance with written guidance."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.2",
+    "standard_text": "Emergency services including ambulance, and management of disasters, are provided in accordance with written guidance, applicable laws and regulations.",
+    "oe_code": "COP.2.c",
+    "level": "Commitment",
+    "text": "Initiation of appropriate care is guided by a system of triage."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.2",
+    "standard_text": "Emergency services including ambulance, and management of disasters, are provided in accordance with written guidance, applicable laws and regulations.",
+    "oe_code": "COP.2.d",
+    "level": "Commitment",
+    "text": "Patients waiting in the emergency are reassessed as appropriate for the change in status."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.2",
+    "standard_text": "Emergency services including ambulance, and management of disasters, are provided in accordance with written guidance, applicable laws and regulations.",
+    "oe_code": "COP.2.e",
+    "level": "Commitment",
+    "text": "Admission, discharge to home or transfer to another organization is documented, and a discharge note shall be given to the patient."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.2",
+    "standard_text": "Emergency services including ambulance, and management of disasters, are provided in accordance with written guidance, applicable laws and regulations.",
+    "oe_code": "COP.2.f",
+    "level": "Achievement",
+    "text": "The organization shall implement a quality assurance programme."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.2",
+    "standard_text": "Emergency services including ambulance, and management of disasters, are provided in accordance with written guidance, applicable laws and regulations.",
+    "oe_code": "COP.2.g",
+    "level": "Commitment",
+    "text": "The organization has systems in place for the management of patients found dead on arrival and patients who die within a few minutes of arrival."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.2",
+    "standard_text": "Emergency services including ambulance, and management of disasters, are provided in accordance with written guidance, applicable laws and regulations.",
+    "oe_code": "COP.2.h",
+    "level": "Commitment",
+    "text": "The organization has access to ambulance services commensurate with the scope of services provided by it."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.2",
+    "standard_text": "Emergency services including ambulance, and management of disasters, are provided in accordance with written guidance, applicable laws and regulations.",
+    "oe_code": "COP.2.i",
+    "level": "Commitment",
+    "text": "The ambulance(s) is fit for purpose, is operated by trained personnel, is appropriately equipped, and ensures that emergency medications are available in the ambulance."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.2",
+    "standard_text": "Emergency services including ambulance, and management of disasters, are provided in accordance with written guidance, applicable laws and regulations.",
+    "oe_code": "COP.2.j",
+    "level": "Excellence",
+    "text": "The emergency department identifies opportunities to initiate treatment at the earliest, when the patient is in transit to the organization."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.2",
+    "standard_text": "Emergency services including ambulance, and management of disasters, are provided in accordance with written guidance, applicable laws and regulations.",
+    "oe_code": "COP.2.k",
+    "level": "Commitment",
+    "text": "The organization manages potential community emergencies, epidemics and other disasters as per a documented plan."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.3",
+    "standard_text": "Cardio-pulmonary resuscitation services are provided uniformly across the organization.",
+    "oe_code": "COP.3.a",
+    "level": "Commitment",
+    "text": "Resuscitation services are available to patients at all times."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.3",
+    "standard_text": "Cardio-pulmonary resuscitation services are provided uniformly across the organization.",
+    "oe_code": "COP.3.b",
+    "level": "Commitment",
+    "text": "During cardiopulmonary resuscitation, assigned roles and responsibilities are complied with, and the events during cardiopulmonary resuscitation are recorded."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.3",
+    "standard_text": "Cardio-pulmonary resuscitation services are provided uniformly across the organization.",
+    "oe_code": "COP.3.c",
+    "level": "Commitment",
+    "text": "The equipment and medications for use during cardiopulmonary resuscitation are available in various areas of the organization."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.3",
+    "standard_text": "Cardio-pulmonary resuscitation services are provided uniformly across the organization.",
+    "oe_code": "COP.3.d",
+    "level": "Commitment",
+    "text": "Amultidisciplinary committee does a post-event analysis of all cardiopulmonary resuscitations, and corrective and preventive measures are taken based on this."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.4",
+    "standard_text": "Nursing care is provided to patients in the organization in consonance with clinical protocols.",
+    "oe_code": "COP.4.a",
+    "level": "Core",
+    "text": "Nursing care is aligned and integrated with overall patient care, and is documented in the patient record*."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.4",
+    "standard_text": "Nursing care is provided to patients in the organization in consonance with clinical protocols.",
+    "oe_code": "COP.4.b",
+    "level": "Commitment",
+    "text": "Assignment of patient care is done as per current good clinical / nursing practice guidelines."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.4",
+    "standard_text": "Nursing care is provided to patients in the organization in consonance with clinical protocols.",
+    "oe_code": "COP.4.c",
+    "level": "Commitment",
+    "text": "Nurses are provided with appropriate and adequate equipment for providing safe and efficient nursing services."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.4",
+    "standard_text": "Nursing care is provided to patients in the organization in consonance with clinical protocols.",
+    "oe_code": "COP.4.d",
+    "level": "Excellence",
+    "text": "The organization develops and implements nursing clinical practice guidelines reflecting current standards of practice*."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.5",
+    "standard_text": "Transfusion services are provided as per the scope of services of the organization, safely.",
+    "oe_code": "COP.5.a",
+    "level": "Commitment",
+    "text": "Transfusion services are commensurate with the services provided by the organization, and are governed by the applicable laws and regulations."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.5",
+    "standard_text": "Transfusion services are provided as per the scope of services of the organization, safely.",
+    "oe_code": "COP.5.b",
+    "level": "Core",
+    "text": "Transfusion of blood and blood components is done safely."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.5",
+    "standard_text": "Transfusion services are provided as per the scope of services of the organization, safely.",
+    "oe_code": "COP.5.c",
+    "level": "Commitment",
+    "text": "Blood and blood components are used rationally*."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.5",
+    "standard_text": "Transfusion services are provided as per the scope of services of the organization, safely.",
+    "oe_code": "COP.5.d",
+    "level": "Commitment",
+    "text": "Informed consent is obtained for transfusion of blood and blood products, and for donation."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.5",
+    "standard_text": "Transfusion services are provided as per the scope of services of the organization, safely.",
+    "oe_code": "COP.5.e",
+    "level": "Commitment",
+    "text": "Blood/blood components are available for use in emergency situations within a defined time frame."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.5",
+    "standard_text": "Transfusion services are provided as per the scope of services of the organization, safely.",
+    "oe_code": "COP.5.f",
+    "level": "Achievement",
+    "text": "Post-transfusion form is collected, reactions if any identified and are analysed for corrective and preventive actions."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.6",
+    "standard_text": "Organization provides care in the intensive care and high dependency units, in a systematic manner.",
+    "oe_code": "COP.6.a",
+    "level": "Commitment",
+    "text": "The defined admission and discharge criteria for its intensive care and high dependency units are implemented, and defined procedures for the situation of bed shortages are followed."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.6",
+    "standard_text": "Organization provides care in the intensive care and high dependency units, in a systematic manner.",
+    "oe_code": "COP.6.b",
+    "level": "Commitment",
+    "text": "The care is provided in intensive care and high dependency units based on written guidance by adequately available staff and equipment."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.6",
+    "standard_text": "Organization provides care in the intensive care and high dependency units, in a systematic manner.",
+    "oe_code": "COP.6.c",
+    "level": "Commitment",
+    "text": "Infection control practices are documented and followed. *."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.6",
+    "standard_text": "Organization provides care in the intensive care and high dependency units, in a systematic manner.",
+    "oe_code": "COP.6.d",
+    "level": "Achievement",
+    "text": "The organization shall implement a quality-assurance programme."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.6",
+    "standard_text": "Organization provides care in the intensive care and high dependency units, in a systematic manner.",
+    "oe_code": "COP.6.e",
+    "level": "Commitment",
+    "text": "The organisation has a mechanism to counsel the patient and / or family periodically."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.6",
+    "standard_text": "Organization provides care in the intensive care and high dependency units, in a systematic manner.",
+    "oe_code": "COP.6.f",
+    "level": "Commitment",
+    "text": "End of life care is provided in a consistent manner in the organization, and is in consonance with legal requirements."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.7",
+    "standard_text": "Organization provides safe obstetric care.",
+    "oe_code": "COP.7.a",
+    "level": "Commitment",
+    "text": "Obstetric services are organised and provided safely"
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.7",
+    "standard_text": "Organization provides safe obstetric care.",
+    "oe_code": "COP.7.b",
+    "level": "Commitment",
+    "text": "The organization identifies and provides care to high risk obstetric cases with competent doctors and nurses, and where needed, refers them to another appropriate centre"
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.7",
+    "standard_text": "Organization provides safe obstetric care.",
+    "oe_code": "COP.7.c",
+    "level": "Commitment",
+    "text": "Antenatal assessment also includes maternal nutrition*."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.7",
+    "standard_text": "Organization provides safe obstetric care.",
+    "oe_code": "COP.7.d",
+    "level": "Commitment",
+    "text": "Appropriate peri-natal and post-natal monitoring is performed."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.7",
+    "standard_text": "Organization provides safe obstetric care.",
+    "oe_code": "COP.7.e",
+    "level": "Commitment",
+    "text": "The organization caring for high risk obstetric cases has the human resources and facilities to take care of neonates of such cases."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.8",
+    "standard_text": "Organization provides safe paediatric services.",
+    "oe_code": "COP.8.a",
+    "level": "Commitment",
+    "text": "Paediatric services are organised and provided safely."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.8",
+    "standard_text": "Organization provides safe paediatric services.",
+    "oe_code": "COP.8.b",
+    "level": "Commitment",
+    "text": "Neonatal care is in consonance with the national/ international guidelines"
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.8",
+    "standard_text": "Organization provides safe paediatric services.",
+    "oe_code": "COP.8.c",
+    "level": "Commitment",
+    "text": "Those who care for children have age-specific competency."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.8",
+    "standard_text": "Organization provides safe paediatric services.",
+    "oe_code": "COP.8.d",
+    "level": "Commitment",
+    "text": "Provisions are made for special care of children."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.8",
+    "standard_text": "Organization provides safe paediatric services.",
+    "oe_code": "COP.8.e",
+    "level": "Commitment",
+    "text": "Patient assessment includes nutritional, growth, developmental and immunisation assessment."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.8",
+    "standard_text": "Organization provides safe paediatric services.",
+    "oe_code": "COP.8.f",
+    "level": "Commitment",
+    "text": "The organization has measures in place to prevent child/neonate abduction and abuse."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.9",
+    "standard_text": "Procedural sedation is provided consistently and safely.",
+    "oe_code": "COP.9.a",
+    "level": "Commitment",
+    "text": "Procedural sedation is administered in a consistent manner."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.9",
+    "standard_text": "Procedural sedation is provided consistently and safely.",
+    "oe_code": "COP.9.b",
+    "level": "Commitment",
+    "text": "Informed consent for administration of procedural sedation is obtained."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.9",
+    "standard_text": "Procedural sedation is provided consistently and safely.",
+    "oe_code": "COP.9.c",
+    "level": "Commitment",
+    "text": "Competent and trained persons perform and monitor sedation."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.9",
+    "standard_text": "Procedural sedation is provided consistently and safely.",
+    "oe_code": "COP.9.d",
+    "level": "Commitment",
+    "text": "Intra-procedure monitoring includes at a minimum the heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation, and level of sedation."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.9",
+    "standard_text": "Procedural sedation is provided consistently and safely.",
+    "oe_code": "COP.9.e",
+    "level": "Commitment",
+    "text": "Post procedure monitoring is documented, and patients are discharged from the recovery area based on objective criteria."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.10",
+    "standard_text": "Anaesthesia services are provided consistently and safely.",
+    "oe_code": "COP.10.a",
+    "level": "Commitment",
+    "text": "Anaesthesia services are administered in a consistent and safe manner."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.10",
+    "standard_text": "Anaesthesia services are provided consistently and safely.",
+    "oe_code": "COP.10.b",
+    "level": "Core",
+    "text": "The pre-anaesthesia assessment results in the formulation of an anaesthesia plan which is documented*."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.10",
+    "standard_text": "Anaesthesia services are provided consistently and safely.",
+    "oe_code": "COP.10.c",
+    "level": "Commitment",
+    "text": "Apre-induction assessment is performed and documented."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.10",
+    "standard_text": "Anaesthesia services are provided consistently and safely.",
+    "oe_code": "COP.10.d",
+    "level": "Commitment",
+    "text": "Informed consent for administration of anaesthesia, is obtained."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.10",
+    "standard_text": "Anaesthesia services are provided consistently and safely.",
+    "oe_code": "COP.10.e",
+    "level": "Core",
+    "text": "Patients are monitored while under anaesthesia*."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.10",
+    "standard_text": "Anaesthesia services are provided consistently and safely.",
+    "oe_code": "COP.10.f",
+    "level": "Commitment",
+    "text": "Post anaesthesia monitoring is documented, and patients are discharged from the recovery area based on objective criteria*."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.10",
+    "standard_text": "Anaesthesia services are provided consistently and safely.",
+    "oe_code": "COP.10.g",
+    "level": "Commitment",
+    "text": "The type of anaesthesia and anaesthetic medications used are documented in the patient record."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.10",
+    "standard_text": "Anaesthesia services are provided consistently and safely.",
+    "oe_code": "COP.10.h",
+    "level": "Achievement",
+    "text": "Intra-operative adverse anaesthesia events are recorded and monitored."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.11",
+    "standard_text": "Clinical procedures, as well as procedures in the operation theatre are performed in a safe and consistent manner.",
+    "oe_code": "COP.11.a",
+    "level": "Commitment",
+    "text": "Clinical procedures as well as procedures done in operation theatres are done in a consistent and safe manner."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.11",
+    "standard_text": "Clinical procedures, as well as procedures in the operation theatre are performed in a safe and consistent manner.",
+    "oe_code": "COP.11.b",
+    "level": "Commitment",
+    "text": "Surgical patients have a preoperative assessment, a documented pre-operative diagnosis, and pre-operative instructions provided before surgery and documented."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.11",
+    "standard_text": "Clinical procedures, as well as procedures in the operation theatre are performed in a safe and consistent manner.",
+    "oe_code": "COP.11.c",
+    "level": "Commitment",
+    "text": "Informed consent is obtained by the doctor prior to the procedure."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.11",
+    "standard_text": "Clinical procedures, as well as procedures in the operation theatre are performed in a safe and consistent manner.",
+    "oe_code": "COP.11.d",
+    "level": "Core",
+    "text": "Care is taken to prevent adverse events like wrong site, wrong patient and wrong surgery."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.11",
+    "standard_text": "Clinical procedures, as well as procedures in the operation theatre are performed in a safe and consistent manner.",
+    "oe_code": "COP.11.e",
+    "level": "Commitment",
+    "text": "The procedure is done adhering to standard precautions."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.11",
+    "standard_text": "Clinical procedures, as well as procedures in the operation theatre are performed in a safe and consistent manner.",
+    "oe_code": "COP.11.f",
+    "level": "Commitment",
+    "text": "Procedures / operation notes, post procedure monitoring and post-operative care plan are documented accurately in the patient record."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.11",
+    "standard_text": "Clinical procedures, as well as procedures in the operation theatre are performed in a safe and consistent manner.",
+    "oe_code": "COP.11.g",
+    "level": "Commitment",
+    "text": "Appropriate facilities, equipment, instruments and supplies are available in the operating theatre."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.11",
+    "standard_text": "Clinical procedures, as well as procedures in the operation theatre are performed in a safe and consistent manner.",
+    "oe_code": "COP.11.h",
+    "level": "Achievement",
+    "text": "The organization shall implement a quality assurance programme."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.11",
+    "standard_text": "Clinical procedures, as well as procedures in the operation theatre are performed in a safe and consistent manner.",
+    "oe_code": "COP.11.i",
+    "level": "Core",
+    "text": "The organ transplant program shall be in consonance with the legal requirements and shall be conducted ethically."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.11",
+    "standard_text": "Clinical procedures, as well as procedures in the operation theatre are performed in a safe and consistent manner.",
+    "oe_code": "COP.11.j",
+    "level": "Core",
+    "text": "The organization shall take measures to create awareness regarding organ donation."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.12",
+    "standard_text": "The organization identifies and manages patients who are at higher risk of morbidity and mortality.",
+    "oe_code": "COP.12.a",
+    "level": "Commitment",
+    "text": "The organization identifies and manages vulnerable patients."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.12",
+    "standard_text": "The organization identifies and manages patients who are at higher risk of morbidity and mortality.",
+    "oe_code": "COP.12.b",
+    "level": "Commitment",
+    "text": "The organization provides for a safe and secure environment for the vulnerable patient."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.12",
+    "standard_text": "The organization identifies and manages patients who are at higher risk of morbidity and mortality.",
+    "oe_code": "COP.12.c",
+    "level": "Core",
+    "text": "The organization identifies and manages patients who are at risk of fall."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.12",
+    "standard_text": "The organization identifies and manages patients who are at higher risk of morbidity and mortality.",
+    "oe_code": "COP.12.d",
+    "level": "Core",
+    "text": "The organization identifies and manages patients who are at risk of developing / worsening of pressure ulcers."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.12",
+    "standard_text": "The organization identifies and manages patients who are at higher risk of morbidity and mortality.",
+    "oe_code": "COP.12.e",
+    "level": "Core",
+    "text": "The organization identifies and manages patients who are at risk of developing / worsening of developing deep vein thrombosis."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.12",
+    "standard_text": "The organization identifies and manages patients who are at higher risk of morbidity and mortality.",
+    "oe_code": "COP.12.f",
+    "level": "Commitment",
+    "text": "The organization identifies and manages patients who need restraints."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.13",
+    "standard_text": "Pain management, rehabilitation services and nutritional therapy are provided to the patients in a safe, collaborative and consistent manner.",
+    "oe_code": "COP.13.a",
+    "level": "Commitment",
+    "text": "Patients in pain are effectively managed"
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.13",
+    "standard_text": "Pain management, rehabilitation services and nutritional therapy are provided to the patients in a safe, collaborative and consistent manner.",
+    "oe_code": "COP.13.b",
+    "level": "Commitment",
+    "text": "Pain alleviation measures or medications are initiated and titrated according to the patient's need and response."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.13",
+    "standard_text": "Pain management, rehabilitation services and nutritional therapy are provided to the patients in a safe, collaborative and consistent manner.",
+    "oe_code": "COP.13.c",
+    "level": "Commitment",
+    "text": "Scope of rehabilitation services at a minimum is commensurate to the services provided by the organization. *."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.13",
+    "standard_text": "Pain management, rehabilitation services and nutritional therapy are provided to the patients in a safe, collaborative and consistent manner.",
+    "oe_code": "COP.13.d",
+    "level": "Commitment",
+    "text": "Care providers collaboratively plan rehabilitation services."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.13",
+    "standard_text": "Pain management, rehabilitation services and nutritional therapy are provided to the patients in a safe, collaborative and consistent manner.",
+    "oe_code": "COP.13.e",
+    "level": "Commitment",
+    "text": "Patients admitted to the organization are screened for nutritional risk, and assessment is done for patients found at risk during nutritional screening."
+  },
+  {
+    "chapter": "COP",
+    "chapter_name": "Care of Patients",
+    "standard_code": "COP.13",
+    "standard_text": "Pain management, rehabilitation services and nutritional therapy are provided to the patients in a safe, collaborative and consistent manner.",
+    "oe_code": "COP.13.f",
+    "level": "Commitment",
+    "text": "The therapeutic diet is planned and provided collaboratively."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.1",
+    "standard_text": "Multidisciplinary committee guides pharmacy services and management of medication.",
+    "oe_code": "MOM.1.a",
+    "level": "Commitment",
+    "text": "The organisation develops , updates and implements a list of medications appropriate for the patients and as per the scope of the organisation's clinical services."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.1",
+    "standard_text": "Multidisciplinary committee guides pharmacy services and management of medication.",
+    "oe_code": "MOM.1.b",
+    "level": "Core",
+    "text": "Pharmacy services and medication usage are implemented following written guidance through a multidisciplinary committee."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.1",
+    "standard_text": "Multidisciplinary committee guides pharmacy services and management of medication.",
+    "oe_code": "MOM.1.c",
+    "level": "Commitment",
+    "text": "The organisation adheres to the procedure for the acquisition of formulary medications and medications not listed in the formulary"
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.1",
+    "standard_text": "Multidisciplinary committee guides pharmacy services and management of medication.",
+    "oe_code": "MOM.1.d",
+    "level": "Commitment",
+    "text": "There is a procedure to obtain medication when the pharmacy is closed."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.1",
+    "standard_text": "Multidisciplinary committee guides pharmacy services and management of medication.",
+    "oe_code": "MOM.1.e",
+    "level": "Commitment",
+    "text": "Implantable prosthesis and medical devices are used in accordance with laid down criteria."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.1",
+    "standard_text": "Multidisciplinary committee guides pharmacy services and management of medication.",
+    "oe_code": "MOM.1.f",
+    "level": "Excellence",
+    "text": "The clinicians adhere to the current formulary."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.2",
+    "standard_text": "Medications are stored appropriately and are available where required.",
+    "oe_code": "MOM.2.a",
+    "level": "Core",
+    "text": "Medications are stored in a clean, safe and secure environment; and incorporating the manufacturer's recommendation(s)."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.2",
+    "standard_text": "Medications are stored appropriately and are available where required.",
+    "oe_code": "MOM.2.b",
+    "level": "Commitment",
+    "text": "Sound inventory control practices guide storage of the medications throughout the organisation."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.2",
+    "standard_text": "Medications are stored appropriately and are available where required.",
+    "oe_code": "MOM.2.c",
+    "level": "Core",
+    "text": "The organisation defines a list and mechanism for storage of high-risk medication(s) including look - alike sound-alike medications"
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.2",
+    "standard_text": "Medications are stored appropriately and are available where required.",
+    "oe_code": "MOM.2.d",
+    "level": "Achievement",
+    "text": "High-risk medications are stored in areas of the organisation where it is clinically necessary."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.2",
+    "standard_text": "Medications are stored appropriately and are available where required.",
+    "oe_code": "MOM.2.e",
+    "level": "Commitment",
+    "text": "The list of emergency medications is defined and is stored uniformly."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.2",
+    "standard_text": "Medications are stored appropriately and are available where required.",
+    "oe_code": "MOM.2.f",
+    "level": "Core",
+    "text": "Emergency medications are available all the time and are replenished promptly when used."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.3",
+    "standard_text": "Medications are prescribed safely and rationally.",
+    "oe_code": "MOM.3.a",
+    "level": "Commitment",
+    "text": "Medication prescription is in consonance with good practices/guidelines for the rational prescription of medications."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.3",
+    "standard_text": "Medications are prescribed safely and rationally.",
+    "oe_code": "MOM.3.b",
+    "level": "Core",
+    "text": "The organisation adheres to the determined minimum requirements of a prescription."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.3",
+    "standard_text": "Medications are prescribed safely and rationally.",
+    "oe_code": "MOM.3.c",
+    "level": "Commitment",
+    "text": "Drug allergies and previous adverse drug reactions are ascertained before prescribing."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.3",
+    "standard_text": "Medications are prescribed safely and rationally.",
+    "oe_code": "MOM.3.d",
+    "level": "Excellence",
+    "text": "The organisation has a mechanism to assist the clinician in prescribing appropriate medication."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.3",
+    "standard_text": "Medications are prescribed safely and rationally.",
+    "oe_code": "MOM.3.e",
+    "level": "Core",
+    "text": "Implementation of verbal orders ensures safe medication management practices."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.3",
+    "standard_text": "Medications are prescribed safely and rationally.",
+    "oe_code": "MOM.3.f",
+    "level": "Achievement",
+    "text": "Audit of medication orders/prescription is carried out to check for safe and rational prescription of medications."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.3",
+    "standard_text": "Medications are prescribed safely and rationally.",
+    "oe_code": "MOM.3.g",
+    "level": "Achievement",
+    "text": "Corrective and/or preventive action(s) is taken based on the audit, where appropriate."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.3",
+    "standard_text": "Medications are prescribed safely and rationally.",
+    "oe_code": "MOM.3.h",
+    "level": "Core",
+    "text": "Reconciliation of medications occurs at transition points of patient care."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.4",
+    "standard_text": "Medications orders are written in a uniform manner.",
+    "oe_code": "MOM.4.a",
+    "level": "Commitment",
+    "text": "The organisation ensures that only authorised personnel write orders."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.4",
+    "standard_text": "Medications orders are written in a uniform manner.",
+    "oe_code": "MOM.4.b",
+    "level": "Commitment",
+    "text": "Medication orders are written in a uniform location in the medical records, which also reflects the patient's name and unique identification number."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.4",
+    "standard_text": "Medications orders are written in a uniform manner.",
+    "oe_code": "MOM.4.c",
+    "level": "Commitment",
+    "text": "Medication orders are legible, dated, timed and signed."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.4",
+    "standard_text": "Medications orders are written in a uniform manner.",
+    "oe_code": "MOM.4.d",
+    "level": "Commitment",
+    "text": "Medication orders contain the name of the medicine, route of administration, strength to be administered and frequency/time of administration."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.5",
+    "standard_text": "Medications are prescribed safely and rationally.",
+    "oe_code": "MOM.5.a",
+    "level": "Commitment",
+    "text": "Dispensing of medications is done safely."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.5",
+    "standard_text": "Medications are prescribed safely and rationally.",
+    "oe_code": "MOM.5.b",
+    "level": "Commitment",
+    "text": "Medication recalls are handled effectively."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.5",
+    "standard_text": "Medications are prescribed safely and rationally.",
+    "oe_code": "MOM.5.c",
+    "level": "Commitment",
+    "text": "Near-expiry medications are handled effectively."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.5",
+    "standard_text": "Medications are prescribed safely and rationally.",
+    "oe_code": "MOM.5.d",
+    "level": "Core",
+    "text": "Dispensed medications are labelled."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.5",
+    "standard_text": "Medications are prescribed safely and rationally.",
+    "oe_code": "MOM.5.e",
+    "level": "Core",
+    "text": "High-risk medication orders are verified before dispensing."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.5",
+    "standard_text": "Medications are prescribed safely and rationally.",
+    "oe_code": "MOM.5.f",
+    "level": "Commitment",
+    "text": "Return of medications to the pharmacy is addressed."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.6",
+    "standard_text": "Medications are administered safely.",
+    "oe_code": "MOM.6.a",
+    "level": "Commitment",
+    "text": "Administration of medication is done in a safe manner*."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.6",
+    "standard_text": "Medications are administered safely.",
+    "oe_code": "MOM.6.b",
+    "level": "Commitment",
+    "text": "Prepared medication is labelled before preparation of a second drug."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.6",
+    "standard_text": "Medications are administered safely.",
+    "oe_code": "MOM.6.c",
+    "level": "Commitment",
+    "text": "The patient is identified before administration."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.6",
+    "standard_text": "Medications are administered safely.",
+    "oe_code": "MOM.6.d",
+    "level": "Core",
+    "text": "Medication is verified from the medication order and physically inspected before administration."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.6",
+    "standard_text": "Medications are administered safely.",
+    "oe_code": "MOM.6.e",
+    "level": "Commitment",
+    "text": "Strength, route and timing is verified from the order before administration."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.6",
+    "standard_text": "Medications are administered safely.",
+    "oe_code": "MOM.6.f",
+    "level": "Core",
+    "text": "Measures to avoid catheter and tubing mis-connections during medication administration are implemented."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.6",
+    "standard_text": "Medications are administered safely.",
+    "oe_code": "MOM.6.g",
+    "level": "Commitment",
+    "text": "Medication administration is documented."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.6",
+    "standard_text": "Medications are administered safely.",
+    "oe_code": "MOM.6.h",
+    "level": "Commitment",
+    "text": "Measures to govern patient's self-administration of medications are implemented."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.6",
+    "standard_text": "Medications are administered safely.",
+    "oe_code": "MOM.6.i",
+    "level": "Achievement",
+    "text": "Measures to govern patient's medications brought from outside the organisation are implemented."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.7",
+    "standard_text": "Patients are monitored after medication administration.",
+    "oe_code": "MOM.7.a",
+    "level": "Commitment",
+    "text": "Patients are monitored after medication administration."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.7",
+    "standard_text": "Patients are monitored after medication administration.",
+    "oe_code": "MOM.7.b",
+    "level": "Commitment",
+    "text": "Medications are changed where appropriate based on the monitoring."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.7",
+    "standard_text": "Patients are monitored after medication administration.",
+    "oe_code": "MOM.7.c",
+    "level": "Core",
+    "text": "The organisation captures near miss, medication error and adverse drug reaction."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.7",
+    "standard_text": "Patients are monitored after medication administration.",
+    "oe_code": "MOM.7.d",
+    "level": "Commitment",
+    "text": "Near miss, medication error and adverse drug reaction are reported and analysed within a specified time frame."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.7",
+    "standard_text": "Patients are monitored after medication administration.",
+    "oe_code": "MOM.7.e",
+    "level": "Commitment",
+    "text": "Corrective and/or preventive action(s) are taken based on the analysis."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.8",
+    "standard_text": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents are used in a safe manner.",
+    "oe_code": "MOM.8.a",
+    "level": "Commitment",
+    "text": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents are used safely."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.8",
+    "standard_text": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents are used in a safe manner.",
+    "oe_code": "MOM.8.b",
+    "level": "Commitment",
+    "text": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents are prescribed by appropriate caregivers."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.8",
+    "standard_text": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents are used in a safe manner.",
+    "oe_code": "MOM.8.c",
+    "level": "Commitment",
+    "text": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents drugs are stored securely."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.8",
+    "standard_text": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents are used in a safe manner.",
+    "oe_code": "MOM.8.d",
+    "level": "Commitment",
+    "text": "Chemotherapy and radioactive agents are prepared properly and safely, and administered by qualified personnel."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.8",
+    "standard_text": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents are used in a safe manner.",
+    "oe_code": "MOM.8.e",
+    "level": "Commitment",
+    "text": "Aproper record is kept of the usage, administration and disposal of narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents."
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.9",
+    "standard_text": "Implantable prosthesis and medical devices are used in accordance with laid down criteria",
+    "oe_code": "MOM.9.a",
+    "level": "Commitment",
+    "text": "Written guidance address procurement and usage of implantable prostheses"
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.9",
+    "standard_text": "Implantable prosthesis and medical devices are used in accordance with laid down criteria",
+    "oe_code": "MOM.9.b",
+    "level": "Commitment",
+    "text": "Patient and his/her family are counselled for the usage of the implantable prosthesis and medical devises including precautions if any"
+  },
+  {
+    "chapter": "MOM",
+    "chapter_name": "Management of Medication",
+    "standard_code": "MOM.9",
+    "standard_text": "Implantable prosthesis and medical devices are used in accordance with laid down criteria",
+    "oe_code": "MOM.9.c",
+    "level": "Commitment",
+    "text": "The batch and the serial number of the implantable prosthesis and medical devises are recorded in the patients' medical records, the master logbook and the discharge summary"
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.1",
+    "standard_text": "The organisation protects and promotes patient and family rights and informs them about their responsibilities during care.",
+    "oe_code": "PRE.1.a",
+    "level": "Commitment",
+    "text": "Patient and family rights and responsibilities are documented, displayed, and they are made aware of the same."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.1",
+    "standard_text": "The organisation protects and promotes patient and family rights and informs them about their responsibilities during care.",
+    "oe_code": "PRE.1.b",
+    "level": "Achievement",
+    "text": "Patient and family rights and responsibilities are actively promoted."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.1",
+    "standard_text": "The organisation protects and promotes patient and family rights and informs them about their responsibilities during care.",
+    "oe_code": "PRE.1.c",
+    "level": "Core",
+    "text": "The organisation protects patient and family rights."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.1",
+    "standard_text": "The organisation protects and promotes patient and family rights and informs them about their responsibilities during care.",
+    "oe_code": "PRE.1.d",
+    "level": "Core",
+    "text": "The organisation has a mechanism to report a violation of patient and family rights."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.1",
+    "standard_text": "The organisation protects and promotes patient and family rights and informs them about their responsibilities during care.",
+    "oe_code": "PRE.1.e",
+    "level": "Core",
+    "text": "Violation of patient and family rights are monitored, analysed and corrective/preventive action taken by the top leadership of the organisation."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.2",
+    "standard_text": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oe_code": "PRE.2.a",
+    "level": "Commitment",
+    "text": "Patients and family rights include respecting values and beliefs, any special preferences, cultural needs, and responding to requests for spiritual needs."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.2",
+    "standard_text": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oe_code": "PRE.2.b",
+    "level": "Commitment",
+    "text": "Patient and family rights include respect for personal dignity and privacy during examination, procedures and treatment."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.2",
+    "standard_text": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oe_code": "PRE.2.c",
+    "level": "Commitment",
+    "text": "Patient and family rights include protection from neglect or abuse."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.2",
+    "standard_text": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oe_code": "PRE.2.d",
+    "level": "Core",
+    "text": "Patient and family rights include treating patient information as confidential."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.2",
+    "standard_text": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oe_code": "PRE.2.e",
+    "level": "Commitment",
+    "text": "Patient and family rights include the refusal of treatment."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.2",
+    "standard_text": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oe_code": "PRE.2.f",
+    "level": "Commitment",
+    "text": "Patient and family rights include a right to seek an additional opinion regarding clinical care."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.2",
+    "standard_text": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oe_code": "PRE.2.g",
+    "level": "Core",
+    "text": "Patient and family rights include informed consent before the transfusion of blood and blood components, anaesthesia, surgery, initiation of any research protocol and any other invasive/high-risk procedures/treatment."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.2",
+    "standard_text": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oe_code": "PRE.2.h",
+    "level": "Commitment",
+    "text": "Patient and family rights include a right to complain and information on how to voice a complaint."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.2",
+    "standard_text": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oe_code": "PRE.2.i",
+    "level": "Commitment",
+    "text": "Patient and family rights include information on the expected cost of the treatment."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.2",
+    "standard_text": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oe_code": "PRE.2.j",
+    "level": "Commitment",
+    "text": "Patient and family rights include access to their clinical records."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.2",
+    "standard_text": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oe_code": "PRE.2.k",
+    "level": "Commitment",
+    "text": "Patient and family rights include information on the name of the treating doctor, care plan, progress and information on their health care needs."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.2",
+    "standard_text": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oe_code": "PRE.2.l",
+    "level": "Commitment",
+    "text": "Patient rights include determining what information regarding their care would be provided to self and family."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.2",
+    "standard_text": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oe_code": "PRE.2.m",
+    "level": "Commitment",
+    "text": "The patient and/or family members are explained about the proposed care, including the risks, alternatives and benefits."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.2",
+    "standard_text": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oe_code": "PRE.2.n",
+    "level": "Commitment",
+    "text": "The patient and/or family members are explained about the expected results and complications."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.2",
+    "standard_text": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oe_code": "PRE.2.o",
+    "level": "Achievement",
+    "text": "The care plan is prepared and modified in consultation with the patient and/or family members."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.2",
+    "standard_text": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oe_code": "PRE.2.p",
+    "level": "Achievement",
+    "text": "The patient and/or family members are provided multidisciplinary counselling when appropriate"
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.3",
+    "standard_text": "Informed consent is obtained from the patient or family about their care.",
+    "oe_code": "PRE.3.a",
+    "level": "Core",
+    "text": "The organisation obtains informed consent from the patient or family for situations where informed consent is required. Informed consent process adhered to statutory norms."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.3",
+    "standard_text": "Informed consent is obtained from the patient or family about their care.",
+    "oe_code": "PRE.3.b",
+    "level": "Core",
+    "text": "Informed consent includes information regarding the procedure; it's risks, benefits, alternatives and as to who will perform the procedure in a language that they can understand."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.3",
+    "standard_text": "Informed consent is obtained from the patient or family about their care.",
+    "oe_code": "PRE.3.c",
+    "level": "Commitment",
+    "text": "The organisation describes who can give consent when a patient is incapable of independent decision making and implements the same."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.3",
+    "standard_text": "Informed consent is obtained from the patient or family about their care.",
+    "oe_code": "PRE.3.d",
+    "level": "Core",
+    "text": "Informed consent is taken by the person performing the procedure."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.4",
+    "standard_text": "Patient and families have a right to information, education and communication about their healthcare needs.",
+    "oe_code": "PRE.4.a",
+    "level": "Core",
+    "text": "Patient and/or family are educated in a language and format that they can understand."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.4",
+    "standard_text": "Patient and families have a right to information, education and communication about their healthcare needs.",
+    "oe_code": "PRE.4.b",
+    "level": "Commitment",
+    "text": "Patient and/or family are educated about the safe and effective use of medication and the potential side effects of the medication, when appropriate."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.4",
+    "standard_text": "Patient and families have a right to information, education and communication about their healthcare needs.",
+    "oe_code": "PRE.4.c",
+    "level": "Commitment",
+    "text": "Patient and/or family are educated about food-drug interaction and about diet, nutrition and immunisations"
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.4",
+    "standard_text": "Patient and families have a right to information, education and communication about their healthcare needs.",
+    "oe_code": "PRE.4.d",
+    "level": "Commitment",
+    "text": "Patient and/or family are educated about their specific disease process, complications and prevention strategies."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.4",
+    "standard_text": "Patient and families have a right to information, education and communication about their healthcare needs.",
+    "oe_code": "PRE.4.e",
+    "level": "Commitment",
+    "text": "Patient and/or family are educated about preventing healthcare associated infections."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.4",
+    "standard_text": "Patient and families have a right to information, education and communication about their healthcare needs.",
+    "oe_code": "PRE.4.f",
+    "level": "Excellence",
+    "text": "Communication with the patients and/or families is done effectively."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.5",
+    "standard_text": "Patients and families have a right to information on expected costs.",
+    "oe_code": "PRE.5.a",
+    "level": "Core",
+    "text": "The patient and/or family members are made aware of the pricing policy in different settings (out-patient, emergency, ICU and in-patient)."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.5",
+    "standard_text": "Patients and families have a right to information on expected costs.",
+    "oe_code": "PRE.5.b",
+    "level": "Commitment",
+    "text": "The relevant tariff list is available to patients."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.5",
+    "standard_text": "Patients and families have a right to information on expected costs.",
+    "oe_code": "PRE.5.c",
+    "level": "Commitment",
+    "text": "The patient and/or family members are explained about the expected costs."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.5",
+    "standard_text": "Patients and families have a right to information on expected costs.",
+    "oe_code": "PRE.5.d",
+    "level": "Achievement",
+    "text": "Patient and/or family are informed about the financial implications when there is a change in the care plan."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.6",
+    "standard_text": "The organisation has a mechanism to capture patient's feedback and to redress complaints.",
+    "oe_code": "PRE.6.a",
+    "level": "Commitment",
+    "text": "The organisation has a mechanism to capture feedback from patients, which includes patient satisfaction."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.6",
+    "standard_text": "The organisation has a mechanism to capture patient's feedback and to redress complaints.",
+    "oe_code": "PRE.6.b",
+    "level": "Excellence",
+    "text": "The organisation has a mechanism to capture the patient experience."
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.6",
+    "standard_text": "The organisation has a mechanism to capture patient's feedback and to redress complaints.",
+    "oe_code": "PRE.6.c",
+    "level": "Core",
+    "text": "The organisation redresses patient complaints as per the defined mechanism. Patient and/or family members are made aware of the procedure for giving feedback and/or lodging complaints"
+  },
+  {
+    "chapter": "PRE",
+    "chapter_name": "Patient Rights and Education",
+    "standard_code": "PRE.6",
+    "standard_text": "The organisation has a mechanism to capture patient's feedback and to redress complaints.",
+    "oe_code": "PRE.6.d",
+    "level": "Achievement",
+    "text": "Feedback and complaints are reviewed and/or analysed within a defined time frame. Corrective and/or preventive action(s) are taken based on the analysis where appropriate."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.1",
+    "standard_text": "The organisation has a comprehensive and coordinated Hospital Infection Prevention and Control (HIC) programme aimed at reducing/eliminating risks to patients, visitors, providers of care and community.",
+    "oe_code": "HIC.1.a",
+    "level": "Core",
+    "text": "The hospital infection prevention and control programme is documented, which aims at preventing and reducing the risk of healthcare associated infections in the hospital."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.1",
+    "standard_text": "The organisation has a comprehensive and coordinated Hospital Infection Prevention and Control (HIC) programme aimed at reducing/eliminating risks to patients, visitors, providers of care and community.",
+    "oe_code": "HIC.1.b",
+    "level": "Achievement",
+    "text": "The infection prevention and control programme is reviewed based on infection control assessment tool."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.1",
+    "standard_text": "The organisation has a comprehensive and coordinated Hospital Infection Prevention and Control (HIC) programme aimed at reducing/eliminating risks to patients, visitors, providers of care and community.",
+    "oe_code": "HIC.1.c",
+    "level": "Commitment",
+    "text": "The organisation has a multidisciplinary infection control committee and an infection control team, which coordinate the implementation of all infection prevention and control activities."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.1",
+    "standard_text": "The organisation has a comprehensive and coordinated Hospital Infection Prevention and Control (HIC) programme aimed at reducing/eliminating risks to patients, visitors, providers of care and community.",
+    "oe_code": "HIC.1.d",
+    "level": "Commitment",
+    "text": "The organisation implements information, education and communication programme for infection prevention and control activities for the community and participates in managing community outbreaks and pandemics."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.1",
+    "standard_text": "The organisation has a comprehensive and coordinated Hospital Infection Prevention and Control (HIC) programme aimed at reducing/eliminating risks to patients, visitors, providers of care and community.",
+    "oe_code": "HIC.1.e",
+    "level": "Core",
+    "text": "The management makes available resources required for the infection control programme."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.1",
+    "standard_text": "The organisation has a comprehensive and coordinated Hospital Infection Prevention and Control (HIC) programme aimed at reducing/eliminating risks to patients, visitors, providers of care and community.",
+    "oe_code": "HIC.1.f",
+    "level": "Achievement",
+    "text": "Isolation/barrier nursing facilities are available."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.2",
+    "standard_text": "The organisation implements the infection prevention and control programme in clinical areas.",
+    "oe_code": "HIC.2.a",
+    "level": "Core",
+    "text": "The organisation adheres to standard precautions at all times."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.2",
+    "standard_text": "The organisation implements the infection prevention and control programme in clinical areas.",
+    "oe_code": "HIC.2.b",
+    "level": "Core",
+    "text": "The organisation adheres to hand-hygiene guidelines."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.2",
+    "standard_text": "The organisation implements the infection prevention and control programme in clinical areas.",
+    "oe_code": "HIC.2.c",
+    "level": "Commitment",
+    "text": "The organisation adheres to transmission-based precautions."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.2",
+    "standard_text": "The organisation implements the infection prevention and control programme in clinical areas.",
+    "oe_code": "HIC.2.d",
+    "level": "Core",
+    "text": "The organisation adheres to safe injection and infusion practices."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.2",
+    "standard_text": "The organisation implements the infection prevention and control programme in clinical areas.",
+    "oe_code": "HIC.2.e",
+    "level": "Commitment",
+    "text": "Appropriate antimicrobial usage policy is established and documented."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.2",
+    "standard_text": "The organisation implements the infection prevention and control programme in clinical areas.",
+    "oe_code": "HIC.2.f",
+    "level": "Core",
+    "text": "The organisation implements the antimicrobial usage policy and monitors the rational use of antimicrobial agents."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.2",
+    "standard_text": "The organisation implements the infection prevention and control programme in clinical areas.",
+    "oe_code": "HIC.2.g",
+    "level": "Excellence",
+    "text": "The organisation implements an antibiotic stewardship programme."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.3",
+    "standard_text": "The organisation implements the infection prevention and control programme in support services.",
+    "oe_code": "HIC.3.a",
+    "level": "Commitment",
+    "text": "The organisation has appropriate engineering controls to prevent infections."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.3",
+    "standard_text": "The organisation implements the infection prevention and control programme in support services.",
+    "oe_code": "HIC.3.b",
+    "level": "Commitment",
+    "text": "The organisation designs and implements a plan to reduce the risk of infection during construction and renovation."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.3",
+    "standard_text": "The organisation implements the infection prevention and control programme in support services.",
+    "oe_code": "HIC.3.c",
+    "level": "Core",
+    "text": "The organisation adheres to housekeeping procedures."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.3",
+    "standard_text": "The organisation implements the infection prevention and control programme in support services.",
+    "oe_code": "HIC.3.d",
+    "level": "Core",
+    "text": "Biomedical waste (BMW) is handled appropriately and safely"
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.3",
+    "standard_text": "The organisation implements the infection prevention and control programme in support services.",
+    "oe_code": "HIC.3.e",
+    "level": "Commitment",
+    "text": "The organisation adheres to laundry and linen management processes."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.3",
+    "standard_text": "The organisation implements the infection prevention and control programme in support services.",
+    "oe_code": "HIC.3.f",
+    "level": "Commitment",
+    "text": "The organisation adheres to kitchen sanitation and food-handling issues."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.4",
+    "standard_text": "The organisation takes actions to prevent or reduce healthcare associated infections (HAI) in patients and staff working in the hospital.",
+    "oe_code": "HIC.4.a",
+    "level": "Commitment",
+    "text": "The organisation takes action to prevent catheter-associated urinary tract Infections."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.4",
+    "standard_text": "The organisation takes actions to prevent or reduce healthcare associated infections (HAI) in patients and staff working in the hospital.",
+    "oe_code": "HIC.4.b",
+    "level": "Commitment",
+    "text": "The organisation takes action to prevent infection-related ventilator associated complication/ventilator-associated pneumonia."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.4",
+    "standard_text": "The organisation takes actions to prevent or reduce healthcare associated infections (HAI) in patients and staff working in the hospital.",
+    "oe_code": "HIC.4.c",
+    "level": "Commitment",
+    "text": "The organisation takes action to prevent catheter linked blood stream infections"
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.4",
+    "standard_text": "The organisation takes actions to prevent or reduce healthcare associated infections (HAI) in patients and staff working in the hospital.",
+    "oe_code": "HIC.4.d",
+    "level": "Commitment",
+    "text": "The organisation takes action to prevent surgical site infections."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.4",
+    "standard_text": "The organisation takes actions to prevent or reduce healthcare associated infections (HAI) in patients and staff working in the hospital.",
+    "oe_code": "HIC.4.e",
+    "level": "Commitment",
+    "text": "The organisation implements occupational health and safety practices to reduce the risk of transmitting microorganisms among health care providers."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.4",
+    "standard_text": "The organisation takes actions to prevent or reduce healthcare associated infections (HAI) in patients and staff working in the hospital.",
+    "oe_code": "HIC.4.f",
+    "level": "Commitment",
+    "text": "Appropriate post-exposure prophylaxis is provided to all staff members concerned."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.5",
+    "standard_text": "The organisation performs surveillance to capture and monitor infection prevention and control data.",
+    "oe_code": "HIC.5.a",
+    "level": "Core",
+    "text": "The scope of surveillance incorporates tracking and analysing of infection risks, rates and trends."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.5",
+    "standard_text": "The organisation performs surveillance to capture and monitor infection prevention and control data.",
+    "oe_code": "HIC.5.b",
+    "level": "Core",
+    "text": "Surveillance includes monitoring compliance with hand-hygiene guidelines."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.5",
+    "standard_text": "The organisation performs surveillance to capture and monitor infection prevention and control data.",
+    "oe_code": "HIC.5.c",
+    "level": "Achievement",
+    "text": "Surveillance includes mechanisms to capture the occurrence of multi-drug- resistant organisms and highly virulent infections."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.5",
+    "standard_text": "The organisation performs surveillance to capture and monitor infection prevention and control data.",
+    "oe_code": "HIC.5.d",
+    "level": "Commitment",
+    "text": "The organisation identifies and takes appropriate action to control outbreaks of infections."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.5",
+    "standard_text": "The organisation performs surveillance to capture and monitor infection prevention and control data.",
+    "oe_code": "HIC.5.e",
+    "level": "Core",
+    "text": "Surveillance activities include monitoring the effectiveness of the housekeeping services"
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.5",
+    "standard_text": "The organisation performs surveillance to capture and monitor infection prevention and control data.",
+    "oe_code": "HIC.5.f",
+    "level": "Commitment",
+    "text": "Surveillance data is analysed, and appropriate corrective and preventive actions are taken and feedback regarding the same is provided regularly to the appropriate health care team."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.6",
+    "standard_text": "Infection prevention measures include sterilisation and/or disinfection of instruments, equipment and devices.",
+    "oe_code": "HIC.6.a",
+    "level": "Commitment",
+    "text": "The organisation provides adequate space and appropriate zoning for sterilisation activities."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.6",
+    "standard_text": "Infection prevention measures include sterilisation and/or disinfection of instruments, equipment and devices.",
+    "oe_code": "HIC.6.b",
+    "level": "Core",
+    "text": "Cleaning, packing, disinfection and/or sterilisation, storing and the issue of items is done as per the written guidance."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.6",
+    "standard_text": "Infection prevention measures include sterilisation and/or disinfection of instruments, equipment and devices.",
+    "oe_code": "HIC.6.c",
+    "level": "Commitment",
+    "text": "Reprocessing of single-use instruments, equipment and devices are done as per written guidance."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.6",
+    "standard_text": "Infection prevention measures include sterilisation and/or disinfection of instruments, equipment and devices.",
+    "oe_code": "HIC.6.d",
+    "level": "Commitment",
+    "text": "Regular validation tests for sterilisation are carried out and documented."
+  },
+  {
+    "chapter": "HIC",
+    "chapter_name": "Hospital Infection Control",
+    "standard_code": "HIC.6",
+    "standard_text": "Infection prevention measures include sterilisation and/or disinfection of instruments, equipment and devices.",
+    "oe_code": "HIC.6.e",
+    "level": "Commitment",
+    "text": "The established recall procedure is implemented when a breakdown in the sterilisation system is identified."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.1",
+    "standard_text": "The organisation implements a patient-safety programme and a structured quality improvement programme.",
+    "oe_code": "PSQ.1.a",
+    "level": "Core",
+    "text": "The patient safety programme is developed, implemented and maintained by a multi-disciplinary committee."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.1",
+    "standard_text": "The organisation implements a patient-safety programme and a structured quality improvement programme.",
+    "oe_code": "PSQ.1.b",
+    "level": "Commitment",
+    "text": "The patient-safety programme identifies opportunities for improvement based on review at pre-defined intervals."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.1",
+    "standard_text": "The organisation implements a patient-safety programme and a structured quality improvement programme.",
+    "oe_code": "PSQ.1.c",
+    "level": "Core",
+    "text": "The organisation performs proactive analysis of patient safety risks and makes improvement accordingly."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.1",
+    "standard_text": "The organisation implements a patient-safety programme and a structured quality improvement programme.",
+    "oe_code": "PSQ.1.d",
+    "level": "Core",
+    "text": "The organisation adapts and implements national/international patient-safety goals/solutions."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.1",
+    "standard_text": "The organisation implements a patient-safety programme and a structured quality improvement programme.",
+    "oe_code": "PSQ.1.e",
+    "level": "Core",
+    "text": "Acomprehensive quality improvement programme is developed, implemented and maintained by a multi-disciplinary committee."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.1",
+    "standard_text": "The organisation implements a patient-safety programme and a structured quality improvement programme.",
+    "oe_code": "PSQ.1.f",
+    "level": "Commitment",
+    "text": "There is a designated individual for coordinating and implementing the quality improvement programme."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.1",
+    "standard_text": "The organisation implements a patient-safety programme and a structured quality improvement programme.",
+    "oe_code": "PSQ.1.g",
+    "level": "Commitment",
+    "text": "The quality improvement programme identifies opportunities for improvement based on review at pre-defined intervals."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.1",
+    "standard_text": "The organisation implements a patient-safety programme and a structured quality improvement programme.",
+    "oe_code": "PSQ.1.h",
+    "level": "Commitment",
+    "text": "Audits are conducted at regular intervals as a means of continuous monitoring"
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.1",
+    "standard_text": "The organisation implements a patient-safety programme and a structured quality improvement programme.",
+    "oe_code": "PSQ.1.i",
+    "level": "Core",
+    "text": "There is an established process in the organisation to monitor and improve quality of nursing care."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.2",
+    "standard_text": "The organisation identifies key indicators to monitor the structures, processes and outcomes which are used as tools for continual improvement.",
+    "oe_code": "PSQ.2.a",
+    "level": "Commitment",
+    "text": "The organisation identifies and monitors key indicators to oversee the clinical structures, processes and outcomes."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.2",
+    "standard_text": "The organisation identifies key indicators to monitor the structures, processes and outcomes which are used as tools for continual improvement.",
+    "oe_code": "PSQ.2.b",
+    "level": "Core",
+    "text": "The organisation identifies and monitors the key indicators to oversee infection control activities."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.2",
+    "standard_text": "The organisation identifies key indicators to monitor the structures, processes and outcomes which are used as tools for continual improvement.",
+    "oe_code": "PSQ.2.c",
+    "level": "Commitment",
+    "text": "The organisation identifies and monitors the key indicators to oversee the managerial structures, processes and outcomes."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.2",
+    "standard_text": "The organisation identifies key indicators to monitor the structures, processes and outcomes which are used as tools for continual improvement.",
+    "oe_code": "PSQ.2.d",
+    "level": "Core",
+    "text": "The organisation identifies and monitors the key indicators to oversee patient safety activities."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.2",
+    "standard_text": "The organisation identifies key indicators to monitor the structures, processes and outcomes which are used as tools for continual improvement.",
+    "oe_code": "PSQ.2.e",
+    "level": "Commitment",
+    "text": "Data is regularly verified by the quality team and is analysed to identify the opportunities for improvement."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.3",
+    "standard_text": "There is an established system for clinical audit and quality improvement programmes.",
+    "oe_code": "PSQ.3.a",
+    "level": "Commitment",
+    "text": "Clinical audits are performed to improve the quality of patient care and documented."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.3",
+    "standard_text": "There is an established system for clinical audit and quality improvement programmes.",
+    "oe_code": "PSQ.3.b",
+    "level": "Commitment",
+    "text": "The parameters to be audited are defined by the organisation."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.3",
+    "standard_text": "There is an established system for clinical audit and quality improvement programmes.",
+    "oe_code": "PSQ.3.c",
+    "level": "Commitment",
+    "text": "Medical and nursing staff participates in this system."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.3",
+    "standard_text": "There is an established system for clinical audit and quality improvement programmes.",
+    "oe_code": "PSQ.3.d",
+    "level": "Commitment",
+    "text": "Remedial measures are implemented."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.3",
+    "standard_text": "There is an established system for clinical audit and quality improvement programmes.",
+    "oe_code": "PSQ.3.e",
+    "level": "Core",
+    "text": "The organisation undertakes quality improvement projects."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.4",
+    "standard_text": "The patient safety and quality improvement programme are supported by the management.",
+    "oe_code": "PSQ.4.a",
+    "level": "Achievement",
+    "text": "The management creates a culture of safety."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.4",
+    "standard_text": "The patient safety and quality improvement programme are supported by the management.",
+    "oe_code": "PSQ.4.b",
+    "level": "Commitment",
+    "text": "The leaders at all levels in the organisation are aware of the intent of the patient safety quality improvement program and the approach to its implementation."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.4",
+    "standard_text": "The patient safety and quality improvement programme are supported by the management.",
+    "oe_code": "PSQ.4.c",
+    "level": "Commitment",
+    "text": "The management makes available adequate resources required for patient safety and quality improvement programme, earmarks adequate funds from its annual budget in this regard."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.4",
+    "standard_text": "The patient safety and quality improvement programme are supported by the management.",
+    "oe_code": "PSQ.4.d",
+    "level": "Excellence",
+    "text": "The management uses the feedback obtained from the workforce to improve patient safety and quality improvement programme."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.5",
+    "standard_text": "Incidents are collected and analysed to ensure continual quality improvement",
+    "oe_code": "PSQ.5.a",
+    "level": "Core",
+    "text": "The organisation implements an incident management system."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.5",
+    "standard_text": "Incidents are collected and analysed to ensure continual quality improvement",
+    "oe_code": "PSQ.5.b",
+    "level": "Commitment",
+    "text": "The organisation has a mechanism to identify sentinel events."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.5",
+    "standard_text": "Incidents are collected and analysed to ensure continual quality improvement",
+    "oe_code": "PSQ.5.c",
+    "level": "Commitment",
+    "text": "The organisation has an established process for analysis of incidents."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.5",
+    "standard_text": "Incidents are collected and analysed to ensure continual quality improvement",
+    "oe_code": "PSQ.5.d",
+    "level": "Commitment",
+    "text": "Corrective and preventive actions are taken based on the findings of such analysis."
+  },
+  {
+    "chapter": "PSQ",
+    "chapter_name": "Patient Safety and Quality Improvement",
+    "standard_code": "PSQ.5",
+    "standard_text": "Incidents are collected and analysed to ensure continual quality improvement",
+    "oe_code": "PSQ.5.e",
+    "level": "Excellence",
+    "text": "The organization shall have a process for informing various stakeholders in case of a near miss / adverse event / sentinel event."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.1",
+    "standard_text": "The organisation identifies those responsible for governance and their roles are defined.",
+    "oe_code": "ROM.1.a",
+    "level": "Core",
+    "text": "Those responsible for governance are identified, and their roles and responsibilities are defined and documented."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.1",
+    "standard_text": "The organisation identifies those responsible for governance and their roles are defined.",
+    "oe_code": "ROM.1.b",
+    "level": "Commitment",
+    "text": "Those responsible for governance lay down the organisation's vision, mission and values and make them public."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.1",
+    "standard_text": "The organisation identifies those responsible for governance and their roles are defined.",
+    "oe_code": "ROM.1.c",
+    "level": "Achievement",
+    "text": "Those responsible for governance monitor and measure the performance of the organisation against the stated mission."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.1",
+    "standard_text": "The organisation identifies those responsible for governance and their roles are defined.",
+    "oe_code": "ROM.1.d",
+    "level": "Commitment",
+    "text": "Those responsible for governance appoint the senior leaders in the organisation."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.1",
+    "standard_text": "The organisation identifies those responsible for governance and their roles are defined.",
+    "oe_code": "ROM.1.e",
+    "level": "Core",
+    "text": "Those responsible for governance support the ethical management framework of the organisation."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.2",
+    "standard_text": "The organisation is headed by a leader who shall be responsible for operating the organisation on a day-to-day basis.",
+    "oe_code": "ROM.2.a",
+    "level": "Commitment",
+    "text": "The person heading the organisation has requisite and appropriate administrative qualifications."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.2",
+    "standard_text": "The organisation is headed by a leader who shall be responsible for operating the organisation on a day-to-day basis.",
+    "oe_code": "ROM.2.b",
+    "level": "Commitment",
+    "text": "The person heading the organisation has requisite and appropriate administrative experience."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.2",
+    "standard_text": "The organisation is headed by a leader who shall be responsible for operating the organisation on a day-to-day basis.",
+    "oe_code": "ROM.2.c",
+    "level": "Core",
+    "text": "The leader is responsible for and complies with the laid-down and applicable legislations, regulations and notifications."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.2",
+    "standard_text": "The organisation is headed by a leader who shall be responsible for operating the organisation on a day-to-day basis.",
+    "oe_code": "ROM.2.d",
+    "level": "Achievement",
+    "text": "The performance of the organisation's leader is reviewed for effectiveness."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.3",
+    "standard_text": "The organisation displays professionalism in its functioning.",
+    "oe_code": "ROM.3.a",
+    "level": "Commitment",
+    "text": "Those responsible for governance approve the strategic and operational plans and the organisation's annual budget."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.3",
+    "standard_text": "The organisation displays professionalism in its functioning.",
+    "oe_code": "ROM.3.b",
+    "level": "Achievement",
+    "text": "The organisation coordinates the functioning with departments and external agencies and monitors the progress in achieving the defined goals and objectives."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.3",
+    "standard_text": "The organisation displays professionalism in its functioning.",
+    "oe_code": "ROM.3.c",
+    "level": "Commitment",
+    "text": "The functioning of committees is reviewed for their effectiveness."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.3",
+    "standard_text": "The organisation displays professionalism in its functioning.",
+    "oe_code": "ROM.3.d",
+    "level": "Achievement",
+    "text": "The organisation documents the service standards that are measurable and monitors them."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.3",
+    "standard_text": "The organisation displays professionalism in its functioning.",
+    "oe_code": "ROM.3.e",
+    "level": "Commitment",
+    "text": "The organization documents staff rights and responsibilities."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.4",
+    "standard_text": "Management ensures that patient-safety aspects and risk- management issues are an integral part of patient care and hospital management.",
+    "oe_code": "ROM.4.a",
+    "level": "Core",
+    "text": "Management ensures proactive risk management across the organisation."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.4",
+    "standard_text": "Management ensures that patient-safety aspects and risk- management issues are an integral part of patient care and hospital management.",
+    "oe_code": "ROM.4.b",
+    "level": "Excellence",
+    "text": "Management ensures integration between quality improvement, risk management and strategic planning within the organisation."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.4",
+    "standard_text": "Management ensures that patient-safety aspects and risk- management issues are an integral part of patient care and hospital management.",
+    "oe_code": "ROM.4.c",
+    "level": "Commitment",
+    "text": "Management ensures implementation of systems for internal and external reporting of system and process failures."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.4",
+    "standard_text": "Management ensures that patient-safety aspects and risk- management issues are an integral part of patient care and hospital management.",
+    "oe_code": "ROM.4.d",
+    "level": "Core",
+    "text": "Management ensures that it has a documented agreement for all outsourced services that include service parameters."
+  },
+  {
+    "chapter": "ROM",
+    "chapter_name": "Responsibilities of Management",
+    "standard_code": "ROM.4",
+    "standard_text": "Management ensures that patient-safety aspects and risk- management issues are an integral part of patient care and hospital management.",
+    "oe_code": "ROM.4.e",
+    "level": "Achievement",
+    "text": "Management monitors the quality of the outsourced services and improvements are made as required."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.1",
+    "standard_text": "The organisation's environment and facilities operate in a planned manner and promotes environment-friendly measures.",
+    "oe_code": "FMS.1.a",
+    "level": "Commitment",
+    "text": "Facilities and space provisions are appropriate to the scope of services."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.1",
+    "standard_text": "The organisation's environment and facilities operate in a planned manner and promotes environment-friendly measures.",
+    "oe_code": "FMS.1.b",
+    "level": "Commitment",
+    "text": "As-built and updated drawings are maintained as per statutory requirements."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.1",
+    "standard_text": "The organisation's environment and facilities operate in a planned manner and promotes environment-friendly measures.",
+    "oe_code": "FMS.1.c",
+    "level": "Core",
+    "text": "There are internal and external sign postings in the organisation in a manner understood by the patient, families and community."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.1",
+    "standard_text": "The organisation's environment and facilities operate in a planned manner and promotes environment-friendly measures.",
+    "oe_code": "FMS.1.d",
+    "level": "Core",
+    "text": "Potable water and electricity are available round the clock."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.1",
+    "standard_text": "The organisation's environment and facilities operate in a planned manner and promotes environment-friendly measures.",
+    "oe_code": "FMS.1.e",
+    "level": "Commitment",
+    "text": "Alternate sources for electricity and water are provided as a backup for any failure/shortage and their functioning is tested at a predefined frequency."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.1",
+    "standard_text": "The organisation's environment and facilities operate in a planned manner and promotes environment-friendly measures.",
+    "oe_code": "FMS.1.f",
+    "level": "Excellence",
+    "text": "The organisation takes initiatives towards an energy-efficient and environment friendly hospital."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.2",
+    "standard_text": "The organisation's environment and facilities operate to ensure the safety of patients, their families, staff and visitors.",
+    "oe_code": "FMS.2.a",
+    "level": "Core",
+    "text": "Patient-safety devices and infrastructure are installed across the organisation and inspected periodically."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.2",
+    "standard_text": "The organisation's environment and facilities operate to ensure the safety of patients, their families, staff and visitors.",
+    "oe_code": "FMS.2.b",
+    "level": "Commitment",
+    "text": "The organisation has facilities for the differently-abled."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.2",
+    "standard_text": "The organisation's environment and facilities operate to ensure the safety of patients, their families, staff and visitors.",
+    "oe_code": "FMS.2.c",
+    "level": "Achievement",
+    "text": "Operational planning identifies areas which need to have extra security and describes access to different areas in the hospital by staff, patients, and visitors."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.2",
+    "standard_text": "The organisation's environment and facilities operate to ensure the safety of patients, their families, staff and visitors.",
+    "oe_code": "FMS.2.d",
+    "level": "Core",
+    "text": "Facility inspection rounds to ensure safety are conducted at least once a month."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.2",
+    "standard_text": "The organisation's environment and facilities operate to ensure the safety of patients, their families, staff and visitors.",
+    "oe_code": "FMS.2.e",
+    "level": "Achievement",
+    "text": "Organisation conducts electrical safety audits for the facility."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.2",
+    "standard_text": "The organisation's environment and facilities operate to ensure the safety of patients, their families, staff and visitors.",
+    "oe_code": "FMS.2.f",
+    "level": "Commitment",
+    "text": "There is a procedure which addresses the identification and disposal of material(s) not in use in the organisation."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.2",
+    "standard_text": "The organisation's environment and facilities operate to ensure the safety of patients, their families, staff and visitors.",
+    "oe_code": "FMS.2.g",
+    "level": "Core",
+    "text": "Hazardous materials are identified and used safely within the organisation."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.3",
+    "standard_text": "The organisation has a programme for medical and support service equipment management.",
+    "oe_code": "FMS.3.a",
+    "level": "Commitment",
+    "text": "The organisation plans for medical and support service equipment in accordance with its services and strategic plan."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.3",
+    "standard_text": "The organisation has a programme for medical and support service equipment management.",
+    "oe_code": "FMS.3.b",
+    "level": "Commitment",
+    "text": "Medical equipment and support service equipment are inventoried, and proper logs are maintained as required."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.3",
+    "standard_text": "The organisation has a programme for medical and support service equipment management.",
+    "oe_code": "FMS.3.c",
+    "level": "Core",
+    "text": "The documented operational and maintenance (preventive and breakdown) plan for medical and support service equipment is implemented."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.3",
+    "standard_text": "The organisation has a programme for medical and support service equipment management.",
+    "oe_code": "FMS.3.d",
+    "level": "Commitment",
+    "text": "Medical and support service equipment are periodically inspected and calibrated for their proper functioning."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.3",
+    "standard_text": "The organisation has a programme for medical and support service equipment management.",
+    "oe_code": "FMS.3.e",
+    "level": "Commitment",
+    "text": "Qualified and trained personnel operate and maintain medical and support service equipment."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.3",
+    "standard_text": "The organisation has a programme for medical and support service equipment management.",
+    "oe_code": "FMS.3.f",
+    "level": "Achievement",
+    "text": "There is monitoring of medical equipment and medical devices related to adverse events, and compliance hazard notices on recalls."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.3",
+    "standard_text": "The organisation has a programme for medical and support service equipment management.",
+    "oe_code": "FMS.3.g",
+    "level": "Achievement",
+    "text": "Downtime for critical equipment breakdown is monitored from reporting to inspection and implementation of corrective actions."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.4",
+    "standard_text": "The organisation has a programme for medical gases, vacuum and compressed air",
+    "oe_code": "FMS.4.a",
+    "level": "Commitment",
+    "text": "Written guidance governs the implementation of procurement, handling, storage, distribution, usage and replenishment of medical gases."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.4",
+    "standard_text": "The organisation has a programme for medical gases, vacuum and compressed air",
+    "oe_code": "FMS.4.b",
+    "level": "Core",
+    "text": "Medical gases are handled, stored, distributed and used in a safe manner"
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.4",
+    "standard_text": "The organisation has a programme for medical gases, vacuum and compressed air",
+    "oe_code": "FMS.4.c",
+    "level": "Core",
+    "text": "Alternate sources for medical gases, vacuum and compressed air are provided for, in case of failure and their functioning is tested at a predefined frequency"
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.4",
+    "standard_text": "The organisation has a programme for medical gases, vacuum and compressed air",
+    "oe_code": "FMS.4.d",
+    "level": "Commitment",
+    "text": "There is an operational, inspection, testing and maintenance plan for piped medical gas, compressed air and vacuum installation."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.5",
+    "standard_text": "The organisation has plans for fire and non-fire emergencies within the facilities.",
+    "oe_code": "FMS.5.a",
+    "level": "Core",
+    "text": "The organisation has plans and provisions for early detection, abatement and containment of the fire, and non-fire emergencies."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.5",
+    "standard_text": "The organisation has plans for fire and non-fire emergencies within the facilities.",
+    "oe_code": "FMS.5.b",
+    "level": "Commitment",
+    "text": "The organisation has a documented and displayed exit plan in case of fire and non-fire emergencies"
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.5",
+    "standard_text": "The organisation has plans for fire and non-fire emergencies within the facilities.",
+    "oe_code": "FMS.5.c",
+    "level": "Commitment",
+    "text": "Mock drills are held at least twice a year."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.5",
+    "standard_text": "The organisation has plans for fire and non-fire emergencies within the facilities.",
+    "oe_code": "FMS.5.d",
+    "level": "Commitment",
+    "text": "There is a maintenance plan for fire-related equipment and infrastructure."
+  },
+  {
+    "chapter": "FMS",
+    "chapter_name": "Facility Management and Safety",
+    "standard_code": "FMS.5",
+    "standard_text": "The organisation has plans for fire and non-fire emergencies within the facilities.",
+    "oe_code": "FMS.5.e",
+    "level": "Achievement",
+    "text": "The organisation has a service continuity plan in case of fire and non-fire emergencies."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.1",
+    "standard_text": "The organisation has a documented system of human resource planning.",
+    "oe_code": "HRM.1.a",
+    "level": "Excellence",
+    "text": "Human resource planning supports the organisation's current and future ability to meet the care, treatment and service needs of the patient."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.1",
+    "standard_text": "The organisation has a documented system of human resource planning.",
+    "oe_code": "HRM.1.b",
+    "level": "Core",
+    "text": "Written guidance governs the process of recruitment"
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.1",
+    "standard_text": "The organisation has a documented system of human resource planning.",
+    "oe_code": "HRM.1.c",
+    "level": "Core",
+    "text": "The organisation maintains an adequate number and mix of staff to meet the care, treatment and service needs of the patient."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.1",
+    "standard_text": "The organisation has a documented system of human resource planning.",
+    "oe_code": "HRM.1.d",
+    "level": "Achievement",
+    "text": "The organisation has contingency plans to manage long- and short-term workforce shortages, including unplanned shortages"
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.1",
+    "standard_text": "The organisation has a documented system of human resource planning.",
+    "oe_code": "HRM.1.e",
+    "level": "Commitment",
+    "text": "The reporting relationships, job specification and job description are defined for each category of staff."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.1",
+    "standard_text": "The organisation has a documented system of human resource planning.",
+    "oe_code": "HRM.1.f",
+    "level": "Commitment",
+    "text": "The organisation performs a background check of new staff."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.1",
+    "standard_text": "The organisation has a documented system of human resource planning.",
+    "oe_code": "HRM.1.g",
+    "level": "Core",
+    "text": "The organisation defines and implements a code of conduct for its staff."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.1",
+    "standard_text": "The organisation has a documented system of human resource planning.",
+    "oe_code": "HRM.1.h",
+    "level": "Achievement",
+    "text": "Exit interviews are conducted and used as a tool to improve human resource practices"
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.1",
+    "standard_text": "The organisation has a documented system of human resource planning.",
+    "oe_code": "HRM.1.i",
+    "level": "Commitment",
+    "text": "Written guidance governs disciplinary and grievance handling mechanisms."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.2",
+    "standard_text": "Staff are provided induction training and on-going professional training for development.",
+    "oe_code": "HRM.2.a",
+    "level": "Core",
+    "text": "Staff are provided with induction training."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.2",
+    "standard_text": "Staff are provided induction training and on-going professional training for development.",
+    "oe_code": "HRM.2.b",
+    "level": "Core",
+    "text": "Written guidance governs training and development policy for the staff through an on-going programme for professional training and development of the staff."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.2",
+    "standard_text": "Staff are provided induction training and on-going professional training for development.",
+    "oe_code": "HRM.2.c",
+    "level": "Commitment",
+    "text": "Staff are appropriately trained based on their specific job description"
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.2",
+    "standard_text": "Staff are provided induction training and on-going professional training for development.",
+    "oe_code": "HRM.2.d",
+    "level": "Core",
+    "text": "Staff involved in direct patient care are provided training on cardiopulmonary resuscitation at the time of induction and periodically thereafter."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.2",
+    "standard_text": "Staff are provided induction training and on-going professional training for development.",
+    "oe_code": "HRM.2.e",
+    "level": "Excellence",
+    "text": "Evaluation of training effectiveness is done by the organisation"
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.3",
+    "standard_text": "Staff are trained in safety and quality-related aspects.",
+    "oe_code": "HRM.3.a",
+    "level": "Commitment",
+    "text": "Staff are trained in the organisation's safety programme"
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.3",
+    "standard_text": "Staff are trained in safety and quality-related aspects.",
+    "oe_code": "HRM.3.b",
+    "level": "Commitment",
+    "text": "Staff are provided training in the detection, handling, minimisation and elimination of identified risks within the organisation's environment."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.3",
+    "standard_text": "Staff are trained in safety and quality-related aspects.",
+    "oe_code": "HRM.3.c",
+    "level": "Commitment",
+    "text": "Staff members are made aware of procedures to follow in the event of an incident"
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.3",
+    "standard_text": "Staff are trained in safety and quality-related aspects.",
+    "oe_code": "HRM.3.d",
+    "level": "Commitment",
+    "text": "Staff are trained in occupational safety aspects."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.3",
+    "standard_text": "Staff are trained in safety and quality-related aspects.",
+    "oe_code": "HRM.3.e",
+    "level": "Core",
+    "text": "Staff are trained in the organisation's disaster management plan"
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.3",
+    "standard_text": "Staff are trained in safety and quality-related aspects.",
+    "oe_code": "HRM.3.f",
+    "level": "Core",
+    "text": "Staff are trained in handling fire and non-fire emergencies."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.3",
+    "standard_text": "Staff are trained in safety and quality-related aspects.",
+    "oe_code": "HRM.3.g",
+    "level": "Commitment",
+    "text": "Staff are trained in the organisation's quality improvement programme."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.4",
+    "standard_text": "An appraisal system for evaluating the performance of staff exists as an integral part of the human resource management process.",
+    "oe_code": "HRM.4.a",
+    "level": "Commitment",
+    "text": "Performance appraisal is done for staff within the organisation and staff are made aware of the same at the time of induction."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.4",
+    "standard_text": "An appraisal system for evaluating the performance of staff exists as an integral part of the human resource management process.",
+    "oe_code": "HRM.4.b",
+    "level": "Commitment",
+    "text": "Performance is evaluated based on pre-determined criteria."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.4",
+    "standard_text": "An appraisal system for evaluating the performance of staff exists as an integral part of the human resource management process.",
+    "oe_code": "HRM.4.c",
+    "level": "Excellence",
+    "text": "The appraisal system is used as a tool for further development."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.4",
+    "standard_text": "An appraisal system for evaluating the performance of staff exists as an integral part of the human resource management process.",
+    "oe_code": "HRM.4.d",
+    "level": "Commitment",
+    "text": "Performance appraisal is carried out at defined intervals and is documented"
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.5",
+    "standard_text": "The organisation promotes staff well-being and addresses their health and safety needs.",
+    "oe_code": "HRM.5.a",
+    "level": "Commitment",
+    "text": "Staff well-being is promoted through identification of health problems of the staff, including occupational health hazards, in accordance with the organisation's policy."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.5",
+    "standard_text": "The organisation promotes staff well-being and addresses their health and safety needs.",
+    "oe_code": "HRM.5.b",
+    "level": "Core",
+    "text": "Health checks of staff are done at least once a year and the findings/results are documented."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.5",
+    "standard_text": "The organisation promotes staff well-being and addresses their health and safety needs.",
+    "oe_code": "HRM.5.c",
+    "level": "Commitment",
+    "text": "Organisation provides treatment to staff who sustain workplace-related injuries"
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.5",
+    "standard_text": "The organisation promotes staff well-being and addresses their health and safety needs.",
+    "oe_code": "HRM.5.d",
+    "level": "Core",
+    "text": "The organisation has measures in place for preventing and handling workplace violence."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.6",
+    "standard_text": "There is documented personal information for each staff member.",
+    "oe_code": "HRM.6.a",
+    "level": "Commitment",
+    "text": "Personal files are maintained with respect to all staff, and their confidentiality is ensured"
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.6",
+    "standard_text": "There is documented personal information for each staff member.",
+    "oe_code": "HRM.6.b",
+    "level": "Commitment",
+    "text": "The personal files contain personal information regarding the staff's qualification, job description, proof of formal engagement verification of credentials and health status."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.6",
+    "standard_text": "There is documented personal information for each staff member.",
+    "oe_code": "HRM.6.c",
+    "level": "Commitment",
+    "text": "Records of in-service training and education are contained in the personal files."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.6",
+    "standard_text": "There is documented personal information for each staff member.",
+    "oe_code": "HRM.6.d",
+    "level": "Commitment",
+    "text": "Personal files contain results of all evaluations and remarks."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.7",
+    "standard_text": "There is a process for credentialing and privileging of medical professionals, permitted to provide patient care without supervision.",
+    "oe_code": "HRM.7.a",
+    "level": "Core",
+    "text": "Medical professionals permitted by law, regulation and the organisation to provide patient care without supervision are identified."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.7",
+    "standard_text": "There is a process for credentialing and privileging of medical professionals, permitted to provide patient care without supervision.",
+    "oe_code": "HRM.7.b",
+    "level": "Commitment",
+    "text": "The education, registration, training, experience and other information of medical professionals are identified, verified, documented and updated periodically."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.7",
+    "standard_text": "There is a process for credentialing and privileging of medical professionals, permitted to provide patient care without supervision.",
+    "oe_code": "HRM.7.c",
+    "level": "Core",
+    "text": "Medical professionals are granted privileges to admit and care for the patients in consonance with their qualification, training, experience and registration."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.7",
+    "standard_text": "There is a process for credentialing and privileging of medical professionals, permitted to provide patient care without supervision.",
+    "oe_code": "HRM.7.d",
+    "level": "Commitment",
+    "text": "The requisite services to be provided by the medical professionals are known to them as well as the various departments/units of the organisation."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.8",
+    "standard_text": "There is a process for credentialing and privileging of nursing professionals, permitted to provide patient care without supervision",
+    "oe_code": "HRM.8.a",
+    "level": "Core",
+    "text": "Nursing staff permitted by law, regulation and the organisation to provide patient care without supervision are identified."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.8",
+    "standard_text": "There is a process for credentialing and privileging of nursing professionals, permitted to provide patient care without supervision",
+    "oe_code": "HRM.8.b",
+    "level": "Commitment",
+    "text": "The education, registration, training, experience and other information of nursing staff are identified, verified, documented and updated periodically."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.8",
+    "standard_text": "There is a process for credentialing and privileging of nursing professionals, permitted to provide patient care without supervision",
+    "oe_code": "HRM.8.c",
+    "level": "Core",
+    "text": "Nursing staff are granted privileges in consonance with their qualification, training, experience and registration"
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.8",
+    "standard_text": "There is a process for credentialing and privileging of nursing professionals, permitted to provide patient care without supervision",
+    "oe_code": "HRM.8.d",
+    "level": "Commitment",
+    "text": "The requisite services to be provided by the nursing staff are known to them as well as the various departments/units of the organisation."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.9",
+    "standard_text": "There is a process for credentialing and privileging of para-clinical professionals, permitted to provide patient care without supervision.",
+    "oe_code": "HRM.9.a",
+    "level": "Core",
+    "text": "Para-clinical professionals permitted by law, regulation and the organisation to provide patient care without supervision are identified"
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.9",
+    "standard_text": "There is a process for credentialing and privileging of para-clinical professionals, permitted to provide patient care without supervision.",
+    "oe_code": "HRM.9.b",
+    "level": "Commitment",
+    "text": "The education, registration, training and experience of para-clinical professionals are appropriately verified, documented and updated periodically."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.9",
+    "standard_text": "There is a process for credentialing and privileging of para-clinical professionals, permitted to provide patient care without supervision.",
+    "oe_code": "HRM.9.c",
+    "level": "Core",
+    "text": "Para-clinical professionals are granted privileges in consonance with their qualification, training, experience and registration."
+  },
+  {
+    "chapter": "HRM",
+    "chapter_name": "Human Resource Management",
+    "standard_code": "HRM.9",
+    "standard_text": "There is a process for credentialing and privileging of para-clinical professionals, permitted to provide patient care without supervision.",
+    "oe_code": "HRM.9.d",
+    "level": "Commitment",
+    "text": "The requisite services to be provided by the para-clinical professionals are known to them as well as the various departments/units of the organisation."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.1",
+    "standard_text": "Information needs of the stakeholders are met and data is captured and analyzed appropriately",
+    "oe_code": "IMS.1.a",
+    "level": "Core",
+    "text": "The organization identifies, captures and disseminates the information needs of the patients, visitors, staff, management, external agencies and community."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.1",
+    "standard_text": "Information needs of the stakeholders are met and data is captured and analyzed appropriately",
+    "oe_code": "IMS.1.b",
+    "level": "Commitment",
+    "text": "Information management and technology acquisitions and maintenance plan are in consonance with the identified information needs."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.1",
+    "standard_text": "Information needs of the stakeholders are met and data is captured and analyzed appropriately",
+    "oe_code": "IMS.1.c",
+    "level": "Commitment",
+    "text": "The organisation stores and retrieves data according to its information needs."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.1",
+    "standard_text": "Information needs of the stakeholders are met and data is captured and analyzed appropriately",
+    "oe_code": "IMS.1.d",
+    "level": "Commitment",
+    "text": "The organization contributes to external databases in accordance with the law and regulations."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.1",
+    "standard_text": "Information needs of the stakeholders are met and data is captured and analyzed appropriately",
+    "oe_code": "IMS.1.e",
+    "level": "Commitment",
+    "text": "Processes for data collection are standardized and data is analysed to meet the information needs."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.2",
+    "standard_text": "The patients cared for by the organisation have a complete and accurate medical record.",
+    "oe_code": "IMS.2.a",
+    "level": "Core",
+    "text": "The unique identifier is assigned to the medical record"
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.2",
+    "standard_text": "The patients cared for by the organisation have a complete and accurate medical record.",
+    "oe_code": "IMS.2.b",
+    "level": "Core",
+    "text": "The contents of medical record are identified, documented and provides a complete, up-to-date and chronological account of patient care."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.2",
+    "standard_text": "The patients cared for by the organisation have a complete and accurate medical record.",
+    "oe_code": "IMS.2.c",
+    "level": "Commitment",
+    "text": "Authorized staff make the entry in the medical record, author of the entry can be identified."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.2",
+    "standard_text": "The patients cared for by the organisation have a complete and accurate medical record.",
+    "oe_code": "IMS.2.d",
+    "level": "Commitment",
+    "text": "Entry in the medical record is named, signed, dated and timed."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.2",
+    "standard_text": "The patients cared for by the organisation have a complete and accurate medical record.",
+    "oe_code": "IMS.2.e",
+    "level": "Commitment",
+    "text": "The medical record has only authorised abbreviations."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.3",
+    "standard_text": "The medical record reflects the continuity of care.",
+    "oe_code": "IMS.3.a",
+    "level": "Commitment",
+    "text": "The medical record contains information regarding reasons for admission, diagnosis and plan of care."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.3",
+    "standard_text": "The medical record reflects the continuity of care.",
+    "oe_code": "IMS.3.b",
+    "level": "Commitment",
+    "text": "The medical record contains the details of assessments, re-assessments, consultations, results of investigations, operative and other procedures, and the details of the care provided."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.3",
+    "standard_text": "The medical record reflects the continuity of care.",
+    "oe_code": "IMS.3.c",
+    "level": "Commitment",
+    "text": "When patient is transferred to another hospital, the medical record contains the details of the transfer."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.3",
+    "standard_text": "The medical record reflects the continuity of care.",
+    "oe_code": "IMS.3.d",
+    "level": "Commitment",
+    "text": "The medical record contains a copy of the discharge summary"
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.3",
+    "standard_text": "The medical record reflects the continuity of care.",
+    "oe_code": "IMS.3.e",
+    "level": "Commitment",
+    "text": "In case of death, the medical record contains a copy of the cause of death certificate."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.3",
+    "standard_text": "The medical record reflects the continuity of care.",
+    "oe_code": "IMS.3.f",
+    "level": "Commitment",
+    "text": "Care providers have access to current and past medical record."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.4",
+    "standard_text": "The organisation maintains confidentiality, integrity and security of records, data and information.",
+    "oe_code": "IMS.4.a",
+    "level": "Core",
+    "text": "The organization maintains the confidentiality of records, data and information."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.4",
+    "standard_text": "The organisation maintains confidentiality, integrity and security of records, data and information.",
+    "oe_code": "IMS.4.b",
+    "level": "Core",
+    "text": "The organization maintains the integrity of records, data and information."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.4",
+    "standard_text": "The organisation maintains confidentiality, integrity and security of records, data and information.",
+    "oe_code": "IMS.4.c",
+    "level": "Core",
+    "text": "The organization maintains the security of records, data and information."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.4",
+    "standard_text": "The organisation maintains confidentiality, integrity and security of records, data and information.",
+    "oe_code": "IMS.4.d",
+    "level": "Commitment",
+    "text": "The organization discloses privileged health information as authorized by patient and/ or as required by law."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.4",
+    "standard_text": "The organisation maintains confidentiality, integrity and security of records, data and information.",
+    "oe_code": "IMS.4.e",
+    "level": "Commitment",
+    "text": "Request for access to information in the medical records by patients/physicians and other public agencies are addressed consistently."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.5",
+    "standard_text": "The organization ensures availability of current and relevant documents, records, data and information and provides for retention of the same.",
+    "oe_code": "IMS.5.a",
+    "level": "Core",
+    "text": "The organization has an effective process for document control."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.5",
+    "standard_text": "The organization ensures availability of current and relevant documents, records, data and information and provides for retention of the same.",
+    "oe_code": "IMS.5.b",
+    "level": "Core",
+    "text": "The organization retains patient's clinical records, data and information, according to its requirements."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.5",
+    "standard_text": "The organization ensures availability of current and relevant documents, records, data and information and provides for retention of the same.",
+    "oe_code": "IMS.5.c",
+    "level": "Commitment",
+    "text": "The retention process provides expected confidentiality and security."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.5",
+    "standard_text": "The organization ensures availability of current and relevant documents, records, data and information and provides for retention of the same.",
+    "oe_code": "IMS.5.d",
+    "level": "Commitment",
+    "text": "The destruction of medical records, data and information is in accordance with the laid-down policy."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.6",
+    "standard_text": "The organisation regularly carries out a review of medical records.",
+    "oe_code": "IMS.6.a",
+    "level": "Core",
+    "text": "The medical records are reviewed periodically."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.6",
+    "standard_text": "The organisation regularly carries out a review of medical records.",
+    "oe_code": "IMS.6.b",
+    "level": "Commitment",
+    "text": "The review uses a representative sample of both active and discharged patients, based on statistical principles."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.6",
+    "standard_text": "The organisation regularly carries out a review of medical records.",
+    "oe_code": "IMS.6.c",
+    "level": "Commitment",
+    "text": "The review is conducted by identified individuals."
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.6",
+    "standard_text": "The organisation regularly carries out a review of medical records.",
+    "oe_code": "IMS.6.d",
+    "level": "Commitment",
+    "text": "The review of records is based on identified parameters"
+  },
+  {
+    "chapter": "IMS",
+    "chapter_name": "Information Management System",
+    "standard_code": "IMS.6",
+    "standard_text": "The organisation regularly carries out a review of medical records.",
+    "oe_code": "IMS.6.e",
+    "level": "Commitment",
+    "text": "Appropriate corrective and preventive measures are undertaken on the deficiencies pointed out in the review."
+  }
+]

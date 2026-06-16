@@ -5179,6 +5179,7 @@ export default function App() {
   const [shcoFullTab, setShcoFullTab] = useState('dashboard');
   const [shcoFullSearch, setShcoFullSearch] = useState('');
   const [shcoFullPdfLoading, setShcoFullPdfLoading] = useState(false);
+  const [shcoFullShowTip, setShcoFullShowTip] = useState({});
   const [shcoFullGapFilter, setShcoFullGapFilter] = useState('ALL');
   const [shcoFullGapSearch, setShcoFullGapSearch] = useState('');
   const [shcoFullCapaForm, setShcoFullCapaForm] = useState({});
@@ -7398,8 +7399,40 @@ export default function App() {
                           :<span style={{fontSize:11,color:T.muted}}>Not scored</span>
                         }
                         {saving&&<span style={{fontSize:11,color:T.muted,fontStyle:'italic'}}>saving…</span>}
+                        <button onClick={()=>setShcoFullShowTip(p=>({...p,[oe.oe_code]:!p[oe.oe_code]}))}
+                          style={{marginLeft:'auto',padding:'3px 10px',borderRadius:7,fontSize:11,cursor:'pointer',
+                            background:shcoFullShowTip[oe.oe_code]?T.blue+'22':'transparent',
+                            border:`1px solid ${shcoFullShowTip[oe.oe_code]?T.blue:T.muted}`,
+                            color:shcoFullShowTip[oe.oe_code]?T.blue:T.muted}}>
+                          {shcoFullShowTip[oe.oe_code]?'▲ Hide':'? How to achieve'}
+                        </button>
                       </div>
                       <div style={{fontSize:13,color:T.text,lineHeight:1.6,marginBottom:8}}>{oe.text}</div>
+                      {shcoFullShowTip[oe.oe_code]&&(()=>{
+                        const tips = oe.achieve_tips;
+                        const lvlTips = oe.level==='Core'
+                          ? ['This is a Core OE — assessors will examine records, observe practice directly, and interview staff on every visit.','Ensure 100% of patient files show evidence of compliance, with no exceptions — even one missing record is a finding.','Conduct a monthly internal audit specifically for this OE and display the trend chart in the department.','Prepare staff with a 2-minute verbal response explaining the process — assessors routinely ask nurses and doctors directly.']
+                          : oe.level==='Achievement'
+                          ? ['Collect before/after data to demonstrate measurable improvement — a chart or table showing trend over 3 months is ideal.','Ensure the quality committee has reviewed and minuted this indicator at least once in the last quarter.','Show actual outcome numbers (e.g., percentage compliance, incident rates) not just that a system is in place.','Achievement OEs are assessed at Surveillance — begin collecting data from Day 1 of accreditation.']
+                          : oe.level==='Excellence'
+                          ? ['Excellence OEs are assessed at Re-accreditation — document innovation and leadership beyond basic compliance.','Benchmark against national or international standards and record the comparison formally.','Seek external validation (external audit, peer review, or published best practice adoption) and document it.','Excellence means demonstrated sustained improvement over multiple assessment cycles with supporting data.']
+                          : ['Create a dated, signed SOP for this process and place it in the relevant department folder — version-controlled.','Train all concerned staff and maintain a signed attendance register as evidence of training.','Maintain a monthly audit record showing consistent compliance; the audit tool and results must be available for assessors.','Ensure any relevant forms/registers are filled completely — incomplete records are scored as non-compliance.'];
+                        const displayTips = tips || lvlTips;
+                        const tipLabel = tips ? 'HOW TO ACHIEVE THIS OE' : `GENERAL GUIDANCE — ${oe.level.toUpperCase()}`;
+                        return (
+                          <div style={{marginTop:6,marginBottom:8,background:T.blue+'14',border:`1px solid ${T.blue}22`,borderRadius:8,padding:'12px 14px'}}>
+                            <div style={{fontSize:10,letterSpacing:2,color:T.blue,marginBottom:8,fontWeight:700}}>{tipLabel}</div>
+                            {displayTips.map((tip,i)=>(
+                              <div key={i} style={{display:'flex',gap:8,marginBottom:6,alignItems:'flex-start'}}>
+                                <div style={{width:18,height:18,borderRadius:'50%',background:T.blue+'22',border:`1px solid ${T.blue}44`,
+                                  display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,fontSize:11,color:T.blue,fontWeight:700}}>{i+1}</div>
+                                <div style={{fontSize:12,color:T.text,lineHeight:1.6,paddingTop:1}}>{tip}</div>
+                              </div>
+                            ))}
+                            {!tips&&<div style={{fontSize:11,color:T.muted,marginTop:4,fontStyle:'italic'}}>OE-specific tips will appear here once loaded — showing {oe.level} guidance for now.</div>}
+                          </div>
+                        );
+                      })()}
                       <div style={{display:'flex',gap:4,flexWrap:'wrap'}}>
                         {[1,2,3,4,5].map(n=>(
                           <button key={n} onClick={()=>handleScore(oe.oe_code,n)}
