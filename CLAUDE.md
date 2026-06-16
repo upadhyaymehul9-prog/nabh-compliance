@@ -13,7 +13,7 @@ git add . && git commit -m "deploy: auto-sync" && git push origin master
 - Never mention specific OE counts in any public SEO page or marketing content
 - Never mention specific standard counts per chapter
 - Only the app (`src/App.js`) may reference specific OE numbers as they come from Supabase
-- Correct validity periods: HCO Full = 4 years, HCO ELC = 2 years, SHCO Full = 4 years, SHCO ELC = 2 years
+- Correct validity periods: HCO Full = 4 years, HCO ELC = 2 years, SHCO Full = 4 years (confirmed from official NABH documents), SHCO ELC = 2 years
 - Correct programme names: HCO Full Accreditation, HCO Entry Level Certification (ELC), SHCO Full Accreditation, SHCO Entry Level Certification
 - AccredReady covers multiple NABH programmes — never position it as HCO-only or 6th Edition only
 - When in doubt about any NABH number — do not include it
