@@ -5178,6 +5178,7 @@ export default function App() {
   const [shcoFullAssessType, setShcoFullAssessType] = useState('final');
   const [shcoFullTab, setShcoFullTab] = useState('dashboard');
   const [shcoFullSearch, setShcoFullSearch] = useState('');
+  const [shcoFullPdfLoading, setShcoFullPdfLoading] = useState(false);
 
   // Reassign module-level T so all component closures see the correct theme
   T = theme === 'light' ? LIGHT_THEME : DARK_THEME;
@@ -5446,6 +5447,338 @@ export default function App() {
       doc.save(`${cleanName}_NABH_Gap_Report_${fileDateStr}.pdf`);
     } catch(e){ console.error('PDF generation failed:',e); }
     setPdfLoading(false);
+  };
+
+  // ── SHCO Full Gap Report PDF ─────────────────────────────────────────────
+  const generateShcoFullPDF = async () => {
+    setShcoFullPdfLoading(true);
+    try {
+      const doc = new jsPDF({ unit:'pt', format:'a4' });
+      const W = doc.internal.pageSize.getWidth();
+      const H = doc.internal.pageSize.getHeight();
+      const today = new Date();
+      const dateStr = today.toLocaleDateString('en-IN',{day:'2-digit',month:'long',year:'numeric'});
+      const fileDateStr = String(today.getDate()).padStart(2,'0')+String(today.getMonth()+1).padStart(2,'0')+today.getFullYear();
+      const cleanHospital = (context?.hospitalName||'Hospital').replace(/\s+(New|Trial|Active|Expired)$/i,'').trim();
+      const assessTypeLabel = shcoFullAssessType==='final' ? 'Final Assessment'
+                            : shcoFullAssessType==='surveillance' ? 'Surveillance Assessment'
+                            : 'Re-accreditation Assessment';
+
+      const SHCO_CHAPTERS = [
+        {key:'AAC',name:'Access, Assessment and Continuity of Care'},
+        {key:'COP',name:'Care of Patients'},
+        {key:'MOM',name:'Management of Medication'},
+        {key:'PRE',name:'Patient Rights and Education'},
+        {key:'HIC',name:'Hospital Infection Prevention and Control'},
+        {key:'PSQ',name:'Patient Safety and Quality Improvement'},
+        {key:'ROM',name:'Responsibility of Management'},
+        {key:'FMS',name:'Facility Management and Safety'},
+        {key:'HRM',name:'Human Resource Management'},
+        {key:'IMS',name:'Information Management System'},
+      ];
+
+      // OE subsets
+      const coreCommOEs = shcoFullOes.filter(oe=>oe.level==='Core'||oe.level==='Commitment');
+      const achieveOEs  = shcoFullOes.filter(oe=>oe.level==='Achievement');
+      const excelOEs    = shcoFullOes.filter(oe=>oe.level==='Excellence');
+      const coreOEs     = shcoFullOes.filter(oe=>oe.level==='Core');
+      const relevantOEs = shcoFullAssessType==='final'        ? coreCommOEs
+                        : shcoFullAssessType==='surveillance' ? shcoFullOes.filter(oe=>oe.level!=='Excellence')
+                        : shcoFullOes;
+
+      const compliance = arr => arr.length>0
+        ? Math.round(arr.reduce((a,oe)=>a+(shcoFullScores[oe.oe_code]||0),0)/(arr.length*5)*100) : 0;
+
+      const ccPct    = compliance(coreCommOEs);
+      const achPct   = compliance(achieveOEs);
+      const excelPct = compliance(excelOEs);
+
+      // Chapter stats
+      const chStats = SHCO_CHAPTERS.map(c=>{
+        const chOes    = relevantOEs.filter(oe=>oe.chapter===c.key);
+        const chScored = chOes.filter(oe=>shcoFullScores[oe.oe_code]);
+        const chAvg    = chScored.length>0 ? chScored.reduce((a,oe)=>a+shcoFullScores[oe.oe_code],0)/chScored.length : null;
+        const totalCount = shcoFullOes.filter(oe=>oe.chapter===c.key).length;
+        const pct = chAvg!==null ? Math.round(chAvg/5*100) : null;
+        return {...c, relevantCount:chOes.length, totalCount, scoredCount:chScored.length, avg:chAvg, pct };
+      });
+
+      // Rules
+      const maxLowPerStd = shcoFullAssessType==='renewal' ? 0 : 1;
+      const stdMap={};
+      relevantOEs.forEach(oe=>{
+        if(!stdMap[oe.standard_code])stdMap[oe.standard_code]={oes:[]};
+        stdMap[oe.standard_code].oes.push(oe);
+      });
+      const stdChecks = Object.entries(stdMap).map(([code,{oes}])=>{
+        const scored = oes.filter(oe=>shcoFullScores[oe.oe_code]);
+        const avg    = scored.length>0 ? scored.reduce((a,oe)=>a+shcoFullScores[oe.oe_code],0)/scored.length : null;
+        const atOrBelow2 = oes.filter(oe=>shcoFullScores[oe.oe_code]&&shcoFullScores[oe.oe_code]<=2).length;
+        return {code,avg,atOrBelow2};
+      });
+      const chapAvgFails = chStats.filter(c=>c.avg!==null&&c.avg<4);
+      const corePass  = coreOEs.every(oe=>shcoFullScores[oe.oe_code]&&shcoFullScores[oe.oe_code]>=4);
+      const rule1Pass = corePass;
+      const rule2Pass = ccPct>=80;
+      const rule3Pass = stdChecks.every(s=>s.atOrBelow2<=maxLowPerStd);
+      const rule4Pass = stdChecks.every(s=>s.avg===null||s.avg>=4);
+      const rule5Pass = chapAvgFails.length===0;
+      const allRulesPass = rule1Pass&&rule2Pass&&rule3Pass&&rule4Pass&&rule5Pass;
+
+      const rules = [
+        {label:'All Core OEs must score ≥4',            detail:`${coreOEs.length} Core OEs — every one must reach Good compliance`,       pass:rule1Pass},
+        {label:`Core + Commitment overall ≥80% (${coreCommOEs.length} OEs)`, detail:`Current: ${ccPct}% — threshold: 80%`,                  pass:rule2Pass},
+        {label:'No standard with >'+maxLowPerStd+' OE(s) scored ≤2', detail:`${stdChecks.filter(s=>s.atOrBelow2>maxLowPerStd).length} standard(s) failing this rule`, pass:rule3Pass},
+        {label:'Average score per standard ≥4',         detail:`${stdChecks.filter(s=>s.avg!==null&&s.avg<4).length} standard(s) below 4 average`,                     pass:rule4Pass},
+        {label:'Average score per chapter ≥4',          detail:`${chapAvgFails.length} chapter(s) below 4 average`,                         pass:rule5Pass},
+      ];
+      if(shcoFullAssessType==='surveillance'||shcoFullAssessType==='renewal'){
+        rules.push({label:`Achievement overall ≥80% (${achieveOEs.length} OEs)`, detail:`Current: ${achPct}%`, pass:achPct>=80});
+      }
+      if(shcoFullAssessType==='renewal'){
+        rules.push({label:`Excellence overall ≥80% (${excelOEs.length} OEs)`, detail:`Current: ${excelPct}%`, pass:excelPct>=80});
+      }
+
+      // Weak OEs (score ≤3, from relevantOEs)
+      const weakOEs = relevantOEs.filter(oe=>shcoFullScores[oe.oe_code]&&shcoFullScores[oe.oe_code]<=3)
+        .sort((a,b)=>shcoFullScores[a.oe_code]-shcoFullScores[b.oe_code]||a.oe_code.localeCompare(b.oe_code));
+      const criticalOEs = coreOEs.filter(oe=>shcoFullScores[oe.oe_code]&&shcoFullScores[oe.oe_code]<4);
+      const scoredCount = relevantOEs.filter(oe=>shcoFullScores[oe.oe_code]).length;
+
+      const scoreLabel = ['','No compliance','Poor compliance','Partial compliance','Good compliance','Full compliance'];
+      const scoreCol   = s => s===1||s===2 ? '#e05a5a' : s===3 ? '#f4a441' : s>=4 ? '#4caf7d' : '#3a5870';
+
+      // ── Helper: new page background ──────────────────────────────────────
+      const newPage = () => {
+        doc.addPage();
+        doc.setFillColor('#050e1a'); doc.rect(0,0,W,H,'F');
+        doc.setFillColor('#c9a84c'); doc.rect(0,0,W,4,'F');
+      };
+
+      // ── PAGE 1: COVER ───────────────────────────────────────────────────
+      doc.setFillColor('#050e1a'); doc.rect(0,0,W,H,'F');
+      doc.setFillColor('#c9a84c'); doc.rect(0,0,W,6,'F');
+
+      doc.setFontSize(9); doc.setTextColor('#c9a84c');
+      doc.text('ACCREDREADY · NABH SHCO 3RD EDITION',W/2,58,{align:'center'});
+      doc.setFontSize(27); doc.setTextColor('#eef4f9');
+      doc.text('NABH SHCO Gap Assessment Report',W/2,106,{align:'center'});
+      doc.setDrawColor('#c9a84c'); doc.setLineWidth(0.5);
+      doc.line(60,124,W-60,124);
+
+      doc.setFontSize(22); doc.setTextColor('#c9a84c');
+      const hospLines = doc.splitTextToSize(cleanHospital, W-160);
+      doc.text(hospLines, W/2, 160, {align:'center'});
+      const afterHosp = 160 + (hospLines.length-1)*28;
+      doc.setFontSize(11); doc.setTextColor('#c8dcea');
+      doc.text(assessTypeLabel, W/2, afterHosp+26, {align:'center'});
+      doc.setFontSize(9); doc.setTextColor('#3a5870');
+      doc.text(`Generated on ${dateStr}`, W/2, afterHosp+44, {align:'center'});
+
+      const oePct = ccPct;
+      const passCol  = oePct>=80 ? '#4caf7d' : oePct>=60 ? '#f4a441' : '#e05a5a';
+      const verdictText = allRulesPass ? 'ACCREDITATION READY' : oePct>=80 ? 'RULES INCOMPLETE' : 'NOT READY';
+
+      doc.setFontSize(72); doc.setTextColor(passCol);
+      doc.text(`${oePct}%`,W/2, afterHosp+148,{align:'center'});
+      doc.setFontSize(11); doc.setTextColor('#c8dcea');
+      doc.text('CORE + COMMITMENT COMPLIANCE',W/2, afterHosp+172,{align:'center'});
+      doc.setFontSize(20); doc.setTextColor(passCol);
+      doc.text(`VERDICT: ${verdictText}`,W/2, afterHosp+208,{align:'center'});
+
+      const statY = afterHosp+248;
+      const stats3=[
+        [`${scoredCount} / ${relevantOEs.length}`, 'Relevant OEs Scored'],
+        [`${weakOEs.length}`,                       'Weak OEs (score ≤3)'],
+        [`${criticalOEs.length}`,                   'Core OEs below 4'],
+      ];
+      const colW=(W-120)/3;
+      stats3.forEach(([val,lbl],i)=>{
+        const cx=60+colW*i+colW/2;
+        doc.setFillColor('#081525'); doc.roundedRect(60+colW*i+4, statY-20, colW-8, 46, 4,4,'F');
+        doc.setFontSize(22); doc.setTextColor('#c9a84c');
+        doc.text(val, cx, statY+4, {align:'center'});
+        doc.setFontSize(8); doc.setTextColor('#3a5870');
+        doc.text(lbl, cx, statY+20, {align:'center'});
+      });
+
+      doc.setFontSize(7); doc.setTextColor('#3a5870');
+      doc.text('Generated by accredready.in — Independent educational tool — Not affiliated with NABH/QCI',W/2,H-28,{align:'center'});
+
+      // ── PAGE 2: ACCREDITATION RULES ─────────────────────────────────────
+      newPage();
+      let y=50;
+      doc.setFontSize(16); doc.setTextColor('#eef4f9');
+      doc.text('Accreditation Rules',60,y); y+=10;
+      doc.setDrawColor('#0f2640'); doc.setLineWidth(0.5);
+      doc.line(60,y,W-60,y); y+=24;
+      doc.setFontSize(8); doc.setTextColor('#3a5870');
+      doc.text(`ASSESSMENT TYPE: ${assessTypeLabel.toUpperCase()} · ${rules.filter(r=>r.pass).length} of ${rules.length} RULES PASSING`,60,y); y+=18;
+
+      rules.forEach(r=>{
+        if(y>H-60){ newPage(); y=50; }
+        doc.setFillColor(r.pass?'#061810':'#180606');
+        doc.roundedRect(60,y-14,W-120,32,3,3,'F');
+        doc.setFillColor(r.pass?'#4caf7d':'#e05a5a');
+        doc.roundedRect(W-106,y-7,40,16,3,3,'F');
+        doc.setFontSize(8); doc.setTextColor('#050e1a');
+        doc.text(r.pass?'PASS':'FAIL',W-86,y+3,{align:'center'});
+        doc.setFontSize(10); doc.setTextColor('#eef4f9');
+        doc.text(r.label,76,y-2);
+        doc.setFontSize(8); doc.setTextColor('#8aadcc');
+        doc.text(r.detail,76,y+11);
+        y+=40;
+      });
+
+      // ── PAGE 2 continued: CHAPTER-WISE TABLE ────────────────────────────
+      y+=16;
+      if(y>H-220){ newPage(); y=50; }
+      doc.setFontSize(14); doc.setTextColor('#eef4f9');
+      doc.text('Chapter-wise Compliance',60,y); y+=10;
+      doc.setDrawColor('#0f2640'); doc.line(60,y,W-60,y); y+=20;
+
+      // Header row
+      doc.setFillColor('#081525'); doc.rect(60,y-13,W-120,20,'F');
+      doc.setFontSize(8); doc.setTextColor('#c9a84c');
+      doc.text('CHAPTER',74,y-2);
+      doc.text('NAME',130,y-2);
+      doc.text('RELEVANT',W-190,y-2);
+      doc.text('SCORED',W-140,y-2);
+      doc.text('COMPLIANCE',W-92,y-2);
+      doc.text('STATUS',W-32,y-2,{align:'right'});
+      y+=14;
+
+      chStats.forEach(c=>{
+        if(y>H-40){ newPage(); y=50; }
+        const pctVal = c.pct!==null ? c.pct : null;
+        const pass   = pctVal!==null&&pctVal>=80;
+        const rowBg  = pctVal===null ? '#0a1520' : pass ? '#061810' : pctVal>=60 ? '#14100a' : '#180606';
+        const valCol = pctVal===null ? '#3a5870' : pass ? '#4caf7d' : pctVal>=60 ? '#f4a441' : '#e05a5a';
+        doc.setFillColor(rowBg); doc.rect(60,y-12,W-120,20,'F');
+        doc.setFontSize(9); doc.setTextColor('#c9a84c');
+        doc.text(c.key,74,y-1);
+        doc.setFontSize(8); doc.setTextColor('#c8dcea');
+        doc.text(c.name.slice(0,36),130,y-1);
+        doc.setFontSize(8); doc.setTextColor('#8aadcc');
+        doc.text(String(c.relevantCount),W-190,y-1);
+        doc.text(String(c.scoredCount),W-140,y-1);
+        doc.setTextColor(valCol);
+        doc.text(pctVal!==null?`${pctVal}%`:'—',W-92,y-1);
+        doc.setFontSize(7);
+        doc.text(pctVal===null?'UNSCORED':pass?'PASS':'FAIL',W-32,y-1,{align:'right'});
+        y+=22;
+      });
+
+      // ── PAGE 3+: WEAK OEs GROUPED BY CHAPTER ───────────────────────────
+      newPage(); y=50;
+      doc.setFontSize(16); doc.setTextColor('#eef4f9');
+      doc.text('Gap Analysis — Weak OEs (Score ≤3)',60,y); y+=10;
+      doc.setDrawColor('#0f2640'); doc.line(60,y,W-60,y); y+=18;
+      doc.setFontSize(8); doc.setTextColor('#3a5870');
+      doc.text(`${weakOEs.length} OE(s) scoring ≤3 require attention. Grouped by chapter.`,60,y); y+=20;
+
+      if(weakOEs.length===0){
+        doc.setFontSize(12); doc.setTextColor('#4caf7d');
+        doc.text('✓ No weak OEs — all scored OEs are at 4 or 5.',W/2,y+40,{align:'center'});
+      } else {
+        SHCO_CHAPTERS.forEach(ch=>{
+          const chWeak = weakOEs.filter(oe=>oe.chapter===ch.key);
+          if(chWeak.length===0) return;
+
+          if(y>H-80){ newPage(); y=50; }
+          // Chapter header band
+          doc.setFillColor('#0c1e30');
+          doc.rect(60,y-12,W-120,20,'F');
+          doc.setFontSize(10); doc.setTextColor('#c9a84c');
+          doc.text(`${ch.key} — ${ch.name}`,74,y-1);
+          doc.setFontSize(8); doc.setTextColor('#3a5870');
+          doc.text(`${chWeak.length} weak OE(s)`,W-64,y-1,{align:'right'});
+          y+=22;
+
+          // Column headers
+          doc.setFillColor('#081525'); doc.rect(60,y-11,W-120,16,'F');
+          doc.setFontSize(7); doc.setTextColor('#c9a84c');
+          doc.text('OE CODE',74,y-2);
+          doc.text('LEVEL',152,y-2);
+          doc.text('OE TEXT',206,y-2);
+          doc.text('SCORE',W-60,y-2,{align:'right'});
+          y+=14;
+
+          chWeak.forEach(oe=>{
+            if(y>H-46){ newPage(); y=50; }
+            const sc  = shcoFullScores[oe.oe_code]||0;
+            const scC = scoreCol(sc);
+            const rowBg = sc<=2 ? '#180606' : '#140e00';
+            doc.setFillColor(rowBg); doc.rect(60,y-11,W-120,18,'F');
+            doc.setFontSize(8); doc.setTextColor('#4fc3f7');
+            doc.text((oe.oe_code||'').slice(0,14),74,y-1);
+            doc.setFontSize(7); doc.setTextColor('#8aadcc');
+            doc.text((oe.level||'').slice(0,12),152,y-1);
+            // Wrap long OE text
+            const maxTextW = W-120-152+60-70;
+            const oeText = doc.splitTextToSize((oe.oe_text||'').slice(0,120), maxTextW);
+            const lineH  = 9;
+            doc.setFontSize(7.5); doc.setTextColor('#c8dcea');
+            doc.text(oeText[0]||'',206,y-1);
+            doc.setFontSize(9); doc.setTextColor(scC);
+            doc.text(`${sc} — ${(scoreLabel[sc]||'').slice(0,14)}`,W-60,y-1,{align:'right'});
+            if(oeText.length>1){
+              y+=lineH;
+              doc.setFontSize(7.5); doc.setTextColor('#3a5870');
+              doc.text(oeText[1],206,y-1);
+            }
+            y+=20;
+          });
+          y+=6;
+        });
+      }
+
+      // ── PAGE: SUMMARY ───────────────────────────────────────────────────
+      newPage(); y=60;
+      doc.setFontSize(16); doc.setTextColor('#eef4f9');
+      doc.text('Report Summary',60,y); y+=36;
+
+      const summaryRows=[
+        ['Assessment Type',    assessTypeLabel,                              '#c9a84c'],
+        ['Total OEs in Scope', String(relevantOEs.length),                   '#eef4f9'],
+        ['OEs Scored',         `${scoredCount} of ${relevantOEs.length}`,    '#4caf7d'],
+        ['OEs Unscored',       String(relevantOEs.length-scoredCount),       scoredCount===relevantOEs.length?'#4caf7d':'#f4a441'],
+        ['Weak OEs (≤3)',       String(weakOEs.length),                       weakOEs.length===0?'#4caf7d':'#f4a441'],
+        ['Critical (Core <4)', String(criticalOEs.length),                   criticalOEs.length===0?'#4caf7d':'#e05a5a'],
+        ['Core+Commit Compliance', `${ccPct}%`,                              ccPct>=80?'#4caf7d':'#e05a5a'],
+        ['Overall Verdict',    verdictText,                                  allRulesPass?'#4caf7d':'#e05a5a'],
+      ];
+
+      summaryRows.forEach(([lbl,val,col])=>{
+        if(y>H-60){ newPage(); y=60; }
+        doc.setFillColor('#081525'); doc.roundedRect(60,y-15,W-120,28,3,3,'F');
+        doc.setFontSize(10); doc.setTextColor('#c8dcea');
+        doc.text(lbl,80,y-1);
+        doc.setFontSize(11); doc.setTextColor(col);
+        doc.text(val,W-80,y-1,{align:'right'});
+        y+=36;
+      });
+
+      y+=10;
+      doc.setDrawColor('#0f2640'); doc.line(60,y,W-60,y); y+=22;
+      doc.setFontSize(8); doc.setTextColor('#3a5870');
+      doc.text(`Report generated on ${dateStr} via accredready.in`,W/2,y,{align:'center'}); y+=16;
+      doc.text('This report is based on self-assessment scores entered by the hospital team.',W/2,y,{align:'center'}); y+=13;
+      doc.text('It is not an official NABH assessment and must not replace a formal NABH evaluation.',W/2,y,{align:'center'});
+
+      // Page numbers
+      const nPages = doc.internal.getNumberOfPages();
+      for(let i=1;i<=nPages;i++){
+        doc.setPage(i);
+        doc.setFontSize(7); doc.setTextColor('#3a5870');
+        doc.text(`Page ${i} of ${nPages}`,W-60,H-18,{align:'right'});
+        if(i>1) doc.text('NABH SHCO Gap Report · accredready.in',60,H-18);
+      }
+
+      const cleanName = cleanHospital.replace(/[^a-zA-Z0-9]/g,'_');
+      doc.save(`${cleanName}_SHCO_Gap_Report_${fileDateStr}.pdf`);
+    } catch(e){ console.error('SHCO Full PDF generation failed:',e); }
+    setShcoFullPdfLoading(false);
   };
 
   const [authErrorMsg,setAuthErrorMsg]=useState("");
@@ -6967,7 +7300,7 @@ export default function App() {
     return (
       <div style={{background:T.bg,minHeight:'100vh',color:T.text,fontFamily:'Segoe UI,system-ui,sans-serif'}}>
         {/* Tab header */}
-        <div style={{display:'flex',borderBottom:`1px solid ${T.border}`,padding:'0 16px',background:T.panel}}>
+        <div style={{display:'flex',alignItems:'center',borderBottom:`1px solid ${T.border}`,padding:'0 16px',background:T.panel}}>
           {[
             {key:'dashboard',label:'📊 Dashboard'},
             {key:'scoring',  label:'✏️ Score OEs'},
@@ -6979,6 +7312,12 @@ export default function App() {
               {tab.label}
             </button>
           ))}
+          <button onClick={generateShcoFullPDF} disabled={shcoFullPdfLoading}
+            style={{marginLeft:'auto',padding:'6px 14px',borderRadius:7,border:`1px solid ${T.gold}`,
+              background:'transparent',color:T.gold,fontSize:12,fontWeight:700,cursor:shcoFullPdfLoading?'default':'pointer',
+              opacity:shcoFullPdfLoading?0.6:1,whiteSpace:'nowrap'}}>
+            {shcoFullPdfLoading ? '⏳ Generating…' : '⬇ Download Gap Report'}
+          </button>
         </div>
         {shcoFullTab==='dashboard' ? renderDashboard() : renderScoreOEs()}
       </div>
