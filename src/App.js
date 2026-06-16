@@ -5175,6 +5175,7 @@ export default function App() {
   const [shcoFullChapter, setShcoFullChapter] = useState('all');
   const [shcoFullLevel, setShcoFullLevel] = useState('all');
   const [shcoFullLoading, setShcoFullLoading] = useState(false);
+  const [shcoFullAssessType, setShcoFullAssessType] = useState('final');
 
   // Reassign module-level T so all component closures see the correct theme
   T = theme === 'light' ? LIGHT_THEME : DARK_THEME;
@@ -6595,20 +6596,25 @@ export default function App() {
 
   // ── SHCO FULL ACCREDITATION DASHBOARD ────────────────────────────────────
   const renderSHCOFullTab = () => {
+    // Chapter data from book p.24 — Summary of Standards
     const CHAPTERS = [
-      {key:'AAC',name:'Access, Assessment & Continuity of Care'},
-      {key:'COP',name:'Care of Patients'},
-      {key:'MOM',name:'Management of Medication'},
-      {key:'PRE',name:'Patient Rights & Education'},
-      {key:'HIC',name:'Hospital Infection Control'},
-      {key:'PSQ',name:'Patient Safety & Quality Improvement'},
-      {key:'ROM',name:'Responsibilities of Management'},
-      {key:'FMS',name:'Facility Management & Safety'},
-      {key:'HRM',name:'Human Resource Management'},
-      {key:'IMS',name:'Information Management System'},
+      {key:'AAC',name:'Access, Assessment and Continuity of Care',stds:8,oes:48,core:5,commit:38,achieve:4,excel:1},
+      {key:'COP',name:'Care of Patients',stds:13,oes:82,core:12,commit:61,achieve:6,excel:3},
+      {key:'MOM',name:'Management of Medication',stds:9,oes:52,core:12,commit:34,achieve:4,excel:2},
+      {key:'PRE',name:'Patient Rights and Education',stds:6,oes:39,core:11,commit:21,achieve:5,excel:2},
+      {key:'HIC',name:'Hospital Infection Control',stds:6,oes:36,core:12,commit:20,achieve:3,excel:1},
+      {key:'PSQ',name:'Patient Safety and Quality Improvement',stds:5,oes:28,core:9,commit:16,achieve:1,excel:2},
+      {key:'ROM',name:'Responsibilities of Management',stds:4,oes:19,core:5,commit:8,achieve:5,excel:1},
+      {key:'FMS',name:'Facility Management and Safety',stds:5,oes:29,core:9,commit:14,achieve:5,excel:1},
+      {key:'HRM',name:'Human Resource Management',stds:9,oes:45,core:16,commit:24,achieve:2,excel:3},
+      {key:'IMS',name:'Information Management System',stds:6,oes:30,core:9,commit:21,achieve:0,excel:0},
     ];
     const LEVELS = ['Core','Commitment','Achievement','Excellence'];
-    const levelColor = (l) => l==='Core'?T.red:l==='Commitment'?T.orange:l==='Achievement'?T.gold:T.blue;
+    const levelColor = l => l==='Core'?T.red:l==='Commitment'?T.orange:l==='Achievement'?T.gold:T.blue;
+
+    // Score labels and colours — exactly from book p.19
+    const SCORE_LABELS = ['','No compliance','Poor compliance','Partial compliance','Good compliance','Full compliance'];
+    const SCORE_COLORS = ['',T.red,T.red,T.orange,T.green,T.blue];
 
     const handleScore = async (oeCode, score) => {
       setShcoFullScores(prev=>({...prev,[oeCode]:score}));
@@ -6620,40 +6626,153 @@ export default function App() {
       setShcoFullScoreSaving(prev=>({...prev,[oeCode]:false}));
     };
 
-    const scoredCount = shcoFullOes.filter(oe=>shcoFullScores[oe.oe_code]).length;
-    const total = shcoFullOes.length;
-    const scoredScores = shcoFullOes.filter(oe=>shcoFullScores[oe.oe_code]).map(oe=>shcoFullScores[oe.oe_code]);
-    const overallAvg = scoredScores.length>0 ? scoredScores.reduce((a,b)=>a+b,0)/scoredScores.length : 0;
-    const overallPct = Math.round(overallAvg/5*100);
+    // ── OE subsets (book p.21-23) ──────────────────────────────────────────
+    // Final     : Core + Commitment = 100 + 257 = 357 OEs
+    // Surveillance : + Achievement  = 357 + 35  = 392 OEs
+    // Renewal   : all               = 392 + 16  = 408 OEs
+    const coreCommOEs  = shcoFullOes.filter(oe=>oe.level==='Core'||oe.level==='Commitment'); // 357
+    const achieveOEs   = shcoFullOes.filter(oe=>oe.level==='Achievement');                   // 35
+    const excelOEs     = shcoFullOes.filter(oe=>oe.level==='Excellence');                    // 16
+    const coreOEs      = shcoFullOes.filter(oe=>oe.level==='Core');                          // 100
 
-    const coreOes = shcoFullOes.filter(oe=>oe.level==='Core');
-    const coreFails = coreOes.filter(oe=>(shcoFullScores[oe.oe_code]||0)<4);
-    const coreUnscored = coreOes.filter(oe=>!shcoFullScores[oe.oe_code]).length;
+    // OEs counted for the selected assessment type
+    const relevantOEs = shcoFullAssessType==='final'         ? coreCommOEs
+                      : shcoFullAssessType==='surveillance'  ? shcoFullOes.filter(oe=>oe.level!=='Excellence')
+                      : shcoFullOes; // renewal
 
-    const chapterStats = CHAPTERS.map(c=>{
-      const chOes = shcoFullOes.filter(oe=>oe.chapter===c.key);
-      const chScored = chOes.filter(oe=>shcoFullScores[oe.oe_code]);
-      const chAvg = chScored.length>0 ? chScored.reduce((a,oe)=>a+shcoFullScores[oe.oe_code],0)/chScored.length : 0;
-      const chPct = Math.round(chAvg/5*100);
-      return {...c, total:chOes.length, scored:chScored.length, pct:chPct, pass:chScored.length===chOes.length&&chPct>=80};
+    // ── Compliance helper ──────────────────────────────────────────────────
+    // Book: cumulative score / (count × 5) × 100; unscored = 0 (conservative)
+    const compliance = arr => arr.length>0
+      ? Math.round(arr.reduce((a,oe)=>a+(shcoFullScores[oe.oe_code]||0),0) / (arr.length*5) * 100)
+      : 0;
+
+    const ccPct    = compliance(coreCommOEs);  // Core+Commitment 357 OEs
+    const achPct   = compliance(achieveOEs);   // Achievement 35 OEs
+    const excelPct = compliance(excelOEs);     // Excellence 16 OEs
+
+    // ── Core OE rule (p.21 rule 1): every Core OE score ≥4 ───────────────
+    const coreScoredBelow4 = coreOEs.filter(oe=>shcoFullScores[oe.oe_code]&&shcoFullScores[oe.oe_code]<4);
+    const coreUnscoredOEs  = coreOEs.filter(oe=>!shcoFullScores[oe.oe_code]);
+    const corePass = coreScoredBelow4.length===0 && coreUnscoredOEs.length===0;
+
+    // ── Per-standard stats (using relevantOEs) ────────────────────────────
+    const stdMap = {};
+    relevantOEs.forEach(oe=>{
+      if(!stdMap[oe.standard_code])stdMap[oe.standard_code]={text:oe.standard_text,ch:oe.chapter,oes:[]};
+      stdMap[oe.standard_code].oes.push(oe);
     });
-    const chapsFailing = chapterStats.filter(c=>c.scored===c.total&&c.total>0&&!c.pass);
+    const stdChecks = Object.entries(stdMap).map(([code,{oes}])=>{
+      const scored = oes.filter(oe=>shcoFullScores[oe.oe_code]);
+      const avg = scored.length>0 ? scored.reduce((a,oe)=>a+shcoFullScores[oe.oe_code],0)/scored.length : null;
+      const atOrBelow2 = oes.filter(oe=>shcoFullScores[oe.oe_code]&&shcoFullScores[oe.oe_code]<=2).length;
+      return {code, avg, atOrBelow2, total:oes.length, scoredCount:scored.length};
+    });
 
-    let verdict, verdictColor;
-    if(shcoFullLoading||total===0){verdict='Loading OEs…';verdictColor=T.muted;}
-    else if(scoredCount<total){verdict=`${total-scoredCount} OEs unscored`;verdictColor=T.orange;}
-    else if(coreFails.length>0){verdict=`CORE FAIL — ${coreFails.length} Core OE${coreFails.length>1?'s':''} below 4`;verdictColor=T.red;}
-    else if(overallPct<80){verdict=`Below threshold — ${overallPct}% overall (need 80%)`;verdictColor=T.red;}
-    else if(chapsFailing.length>0){verdict=`${chapsFailing.length} chapter${chapsFailing.length>1?'s':''} below 80%`;verdictColor=T.orange;}
-    else{verdict='✓ READY FOR ACCREDITATION';verdictColor=T.green;}
+    // p.21 rule 2 (Final/Surveillance): no standard with >1 OE scored ≤2
+    // p.22 rule 6 (Renewal): no standard with ANY OE scored ≤2
+    const maxLowPerStd = shcoFullAssessType==='renewal' ? 0 : 1;
+    const stdLowFails  = stdChecks.filter(s=>s.atOrBelow2>maxLowPerStd);
 
+    // p.21 rule 3: avg per standard ≥4
+    const stdAvgFails = stdChecks.filter(s=>s.avg!==null&&s.avg<4);
+
+    // ── Per-chapter stats (p.21 rule 4: avg per chapter ≥4) ───────────────
+    const chapterStats = CHAPTERS.map(c=>{
+      const chOes    = relevantOEs.filter(oe=>oe.chapter===c.key);
+      const chScored = chOes.filter(oe=>shcoFullScores[oe.oe_code]);
+      const chAvg    = chScored.length>0 ? chScored.reduce((a,oe)=>a+shcoFullScores[oe.oe_code],0)/chScored.length : null;
+      return {...c, relevantCount:chOes.length, scoredCount:chScored.length,
+        avg:chAvg, pct:chAvg!==null?Math.round(chAvg/5*100):null, pass:chAvg!==null&&chAvg>=4};
+    });
+    const chapAvgFails = chapterStats.filter(c=>c.avg!==null&&c.avg<4);
+
+    // ── Build rules checklist ──────────────────────────────────────────────
+    const rules = [];
+
+    // Rule: Core+Commitment compliance ≥80% — all assessment types
+    rules.push({
+      label:`Core + Commitment compliance ≥80% — ${coreCommOEs.length} OEs (score / ${coreCommOEs.length*5})`,
+      pct:ccPct, pass:ccPct>=80,
+      detail:`${ccPct}% (need ≥80%). Scores sum / ${coreCommOEs.length*5}`,
+      src:'p.21',
+    });
+
+    // Surveillance + Renewal: Achievement ≥80%
+    if(shcoFullAssessType==='surveillance'||shcoFullAssessType==='renewal'){
+      rules.push({
+        label:`Achievement compliance ≥80% — ${achieveOEs.length} OEs (score / ${achieveOEs.length*5})`,
+        pct:achPct, pass:achPct>=80,
+        detail:`${achPct}% (need ≥80%)`,
+        src:'p.22',
+      });
+    }
+
+    // Renewal only: Excellence ≥80%
+    if(shcoFullAssessType==='renewal'){
+      rules.push({
+        label:`Excellence compliance ≥80% — ${excelOEs.length} OEs (score / ${excelOEs.length*5})`,
+        pct:excelPct, pass:excelPct>=80,
+        detail:`${excelPct}% (need ≥80%)`,
+        src:'p.22',
+      });
+    }
+
+    // Core OE ≥4
+    rules.push({
+      label:`Every Core OE score ≥4 (Good compliance) — ${coreOEs.length} OEs`,
+      pass:corePass,
+      detail:coreScoredBelow4.length>0
+        ?`${coreScoredBelow4.length} Core OE(s) scored <4: ${coreScoredBelow4.slice(0,4).map(o=>o.oe_code).join(', ')}${coreScoredBelow4.length>4?'…':''}`
+        :coreUnscoredOEs.length>0
+          ?`${coreUnscoredOEs.length} Core OE(s) not yet scored`
+          :'✓ All 100 Core OEs ≥4',
+      src:'p.21 R1',
+    });
+
+    // Standard ≤2 rule
+    rules.push({
+      label:shcoFullAssessType==='renewal'
+        ?`No standard with ANY OE scored ≤2 (Poor compliance)`
+        :`No standard with more than 1 OE scored ≤2`,
+      pass:stdLowFails.length===0,
+      detail:stdLowFails.length>0
+        ?`${stdLowFails.length} standard(s) fail: ${stdLowFails.slice(0,4).map(s=>s.code).join(', ')}${stdLowFails.length>4?'…':''}`
+        :'✓ OK',
+      src:shcoFullAssessType==='renewal'?'p.22 R6':'p.21 R2',
+    });
+
+    // Standard avg ≥4
+    rules.push({
+      label:`Average score per standard ≥4 (Good compliance) — ${stdChecks.length} standards`,
+      pass:stdAvgFails.length===0,
+      detail:stdAvgFails.length>0
+        ?`${stdAvgFails.length} standard(s) below avg 4: ${stdAvgFails.slice(0,4).map(s=>s.code).join(', ')}${stdAvgFails.length>4?'…':''}`
+        :'✓ OK',
+      src:'p.21 R3',
+    });
+
+    // Chapter avg ≥4
+    rules.push({
+      label:`Average score per chapter ≥4 (Good compliance) — 10 chapters`,
+      pass:chapAvgFails.length===0,
+      detail:chapAvgFails.length>0
+        ?`${chapAvgFails.length} chapter(s) below avg 4: ${chapAvgFails.map(c=>c.key).join(', ')}`
+        :'✓ OK',
+      src:'p.21 R4',
+    });
+
+    const rulesPass = rules.filter(r=>r.pass).length;
+    const allPass   = rules.every(r=>r.pass);
+
+    const totalScored    = shcoFullOes.filter(oe=>shcoFullScores[oe.oe_code]).length;
+    const relevantScored = relevantOEs.filter(oe=>shcoFullScores[oe.oe_code]).length;
+
+    // ── Filter + group OEs for display ────────────────────────────────────
     const filteredOes = shcoFullOes.filter(oe=>{
-      const chMatch = shcoFullChapter==='all'||oe.chapter===shcoFullChapter;
+      const chMatch  = shcoFullChapter==='all'||oe.chapter===shcoFullChapter;
       const lvlMatch = shcoFullLevel==='all'||oe.level===shcoFullLevel;
       return chMatch&&lvlMatch;
     });
-
-    // Group filtered OEs by standard_code
     const byStandard = filteredOes.reduce((acc,oe)=>{
       if(!acc[oe.standard_code])acc[oe.standard_code]={std:oe.standard_text,oes:[]};
       acc[oe.standard_code].oes.push(oe);
@@ -6662,49 +6781,103 @@ export default function App() {
 
     return (
       <div style={{background:T.bg,minHeight:'100vh',color:T.text,fontFamily:'Segoe UI,system-ui,sans-serif'}}>
-        {/* Header stats */}
         <div style={{padding:'16px 16px 0'}}>
-          <div style={{background:T.panel,border:`1px solid ${T.orange}44`,borderRadius:12,padding:16,marginBottom:12}}>
-            <div style={{color:T.orange,fontWeight:700,fontSize:15,marginBottom:10}}>🏨 SHCO Full Accreditation — 3rd Edition</div>
-            <div style={{display:'flex',gap:10,flexWrap:'wrap'}}>
+
+          {/* ── Assessment type selector ── */}
+          <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:14,marginBottom:10}}>
+            <div style={{fontSize:11,color:T.muted,fontWeight:700,letterSpacing:1,marginBottom:8}}>PREPARING FOR — BOOK pp.21–23</div>
+            <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
               {[
-                {label:'Total OEs',val:total,color:T.text},
-                {label:'Scored',val:scoredCount,color:scoredCount===total&&total>0?T.green:T.orange},
-                {label:'Overall',val:`${overallPct}%`,color:overallPct>=80?T.green:overallPct>=60?T.orange:T.red},
-                {label:'Core Fails',val:coreFails.length+(coreUnscored>0?`+${coreUnscored}?`:''),color:coreFails.length>0||coreUnscored>0?T.red:T.green},
-              ].map(s=>(
-                <div key={s.label} style={{background:T.panel2,borderRadius:8,padding:'8px 14px',textAlign:'center',border:`1px solid ${T.border}`,flex:1,minWidth:70}}>
-                  <div style={{fontSize:18,fontWeight:800,color:s.color}}>{s.val}</div>
-                  <div style={{fontSize:11,color:T.muted}}>{s.label}</div>
+                {key:'final',       label:'Final Assessment',      sub:'Core + Commitment — 357 OEs', note:'Award: 4 years'},
+                {key:'surveillance',label:'Surveillance Assessment',sub:'+ Achievement — 392 OEs',    note:'At 18 months'},
+                {key:'renewal',     label:'Re-accreditation',      sub:'All 408 OEs',                 note:'4-year renewal'},
+              ].map(at=>(
+                <button key={at.key} onClick={()=>setShcoFullAssessType(at.key)}
+                  style={{flex:1,minWidth:120,padding:'9px 10px',borderRadius:10,cursor:'pointer',textAlign:'left',border:'none',
+                    background:shcoFullAssessType===at.key?T.orange+'22':T.panel2,
+                    outline:shcoFullAssessType===at.key?`2px solid ${T.orange}`:`1px solid ${T.border}`}}>
+                  <div style={{color:shcoFullAssessType===at.key?T.orange:T.text,fontWeight:700,fontSize:13}}>{at.label}</div>
+                  <div style={{color:T.muted,fontSize:11,marginTop:1}}>{at.sub}</div>
+                  <div style={{color:shcoFullAssessType===at.key?T.orange+'99':T.muted,fontSize:10,marginTop:1}}>{at.note}</div>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Scoring progress + rules checklist ── */}
+          <div style={{background:T.panel,border:`1px solid ${T.orange}44`,borderRadius:12,padding:14,marginBottom:10}}>
+            <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:6,flexWrap:'wrap',gap:6}}>
+              <div style={{color:T.orange,fontWeight:700,fontSize:14}}>🏨 SHCO Full Accreditation — 3rd Edition (Aug 2022)</div>
+              <div style={{fontSize:11,color:T.muted}}>{relevantScored}/{relevantOEs.length} relevant scored · {totalScored}/408 total</div>
+            </div>
+            <div style={{height:5,borderRadius:3,background:T.border,overflow:'hidden',marginBottom:12}}>
+              <div style={{height:'100%',
+                width:`${relevantOEs.length>0?Math.round(relevantScored/relevantOEs.length*100):0}%`,
+                background:`linear-gradient(90deg,${T.orange},${T.gold})`,borderRadius:3,transition:'width 0.3s'}}/>
+            </div>
+
+            {/* Rules checklist — 100% from book */}
+            <div style={{display:'grid',gap:5}}>
+              {rules.map((r,i)=>(
+                <div key={i} style={{display:'flex',alignItems:'flex-start',gap:8,padding:'8px 10px',borderRadius:8,
+                  background:r.pass?T.green+'12':T.red+'12',border:`1px solid ${r.pass?T.green:T.red}30`}}>
+                  <span style={{fontSize:13,flexShrink:0,marginTop:1}}>{r.pass?'✅':'❌'}</span>
+                  <div style={{flex:1,minWidth:0}}>
+                    <div style={{fontSize:12,fontWeight:600,color:r.pass?T.green:T.red,lineHeight:1.4}}>{r.label}</div>
+                    <div style={{fontSize:11,color:T.muted,marginTop:2}}>{r.detail}</div>
+                    {'pct' in r&&(
+                      <div style={{display:'flex',alignItems:'center',gap:6,marginTop:4}}>
+                        <div style={{flex:1,height:4,borderRadius:2,background:T.border,overflow:'hidden'}}>
+                          <div style={{height:'100%',width:`${r.pct}%`,background:r.pass?T.green:T.red,borderRadius:2,transition:'width 0.3s'}}/>
+                        </div>
+                        <span style={{color:r.pass?T.green:T.red,fontWeight:700,fontSize:11,minWidth:32}}>{r.pct}%</span>
+                      </div>
+                    )}
+                  </div>
+                  <span style={{fontSize:10,color:T.muted,flexShrink:0,fontFamily:'monospace'}}>{r.src}</span>
                 </div>
               ))}
             </div>
-            <div style={{marginTop:10,padding:'8px 12px',borderRadius:8,background:`${verdictColor}18`,border:`1px solid ${verdictColor}44`,textAlign:'center'}}>
-              <span style={{fontSize:13,fontWeight:700,color:verdictColor}}>{verdict}</span>
+
+            <div style={{marginTop:10,padding:'9px 12px',borderRadius:8,textAlign:'center',
+              background:allPass?T.green+'18':rulesPass>0?T.orange+'18':T.red+'18',
+              border:`1px solid ${allPass?T.green:rulesPass>0?T.orange:T.red}44`}}>
+              <span style={{fontSize:13,fontWeight:800,color:allPass?T.green:rulesPass>0?T.orange:T.red}}>
+                {allPass?'✓ ALL RULES PASS — READY FOR ACCREDITATION':`${rulesPass}/${rules.length} rules passing`}
+              </span>
             </div>
-            {/* Chapter health row */}
-            {!shcoFullLoading&&total>0&&(
-              <div style={{marginTop:10,display:'flex',gap:4,flexWrap:'wrap'}}>
-                {chapterStats.map(c=>{
-                  const col=c.scored===0?T.muted:c.pass?T.green:c.pct>=60?T.orange:T.red;
-                  return(
-                    <div key={c.key} title={`${c.key}: ${c.scored}/${c.total} scored, ${c.pct}%`}
-                      style={{padding:'3px 8px',borderRadius:6,background:`${col}22`,border:`1px solid ${col}55`,fontSize:11,fontWeight:700,color:col,cursor:'pointer'}}
-                      onClick={()=>setShcoFullChapter(c.key==='all'?'all':c.key)}>
-                      {c.key} {c.scored===c.total&&c.total>0?c.pct+'%':'…'}
-                    </div>
-                  );
-                })}
-              </div>
-            )}
           </div>
 
-          {/* Chapter tabs */}
-          <div style={{display:'flex',overflowX:'auto',gap:0,borderBottom:`1px solid ${T.border}`,marginBottom:10}}>
-            {[{key:'all',label:'All Chapters'},...CHAPTERS.map(c=>({key:c.key,label:c.key}))].map(tab=>(
+          {/* ── Chapter health grid ── */}
+          {!shcoFullLoading&&shcoFullOes.length>0&&(
+            <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(130px,1fr))',gap:6,marginBottom:10}}>
+              {chapterStats.map(c=>{
+                const col = c.avg===null?T.muted:c.pass?T.green:T.orange;
+                return(
+                  <div key={c.key}
+                    onClick={()=>setShcoFullChapter(shcoFullChapter===c.key?'all':c.key)}
+                    style={{background:T.panel,border:`1.5px solid ${shcoFullChapter===c.key?T.orange:col+'55'}`,
+                      borderRadius:8,padding:'8px 10px',cursor:'pointer'}}>
+                    <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:2}}>
+                      <span style={{color:T.orange,fontWeight:800,fontSize:13}}>{c.key}</span>
+                      <span style={{fontSize:12,fontWeight:700,color:col}}>{c.avg!==null?c.avg.toFixed(1):'—'}</span>
+                    </div>
+                    <div style={{fontSize:10,color:T.muted,marginBottom:3}}>{c.scoredCount}/{c.relevantCount} scored</div>
+                    <div style={{height:3,borderRadius:2,background:T.border,overflow:'hidden'}}>
+                      <div style={{height:'100%',width:`${c.relevantCount>0?Math.round(c.scoredCount/c.relevantCount*100):0}%`,background:col,borderRadius:2}}/>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {/* ── Chapter tabs ── */}
+          <div style={{display:'flex',overflowX:'auto',gap:0,borderBottom:`1px solid ${T.border}`,marginBottom:8}}>
+            {[{key:'all',label:'All'},...CHAPTERS.map(c=>({key:c.key,label:c.key}))].map(tab=>(
               <button key={tab.key} onClick={()=>setShcoFullChapter(tab.key)}
-                style={{padding:'7px 12px',border:'none',cursor:'pointer',whiteSpace:'nowrap',background:'transparent',
-                  fontSize:13,fontWeight:600,
+                style={{padding:'6px 10px',border:'none',cursor:'pointer',whiteSpace:'nowrap',background:'transparent',
+                  fontSize:12,fontWeight:600,
                   color:shcoFullChapter===tab.key?T.orange:T.muted,
                   borderBottom:shcoFullChapter===tab.key?`2px solid ${T.orange}`:'2px solid transparent'}}>
                 {tab.label}
@@ -6712,70 +6885,93 @@ export default function App() {
             ))}
           </div>
 
-          {/* Level filter pills */}
-          <div style={{display:'flex',gap:6,flexWrap:'wrap',marginBottom:12}}>
+          {/* ── Level pills ── */}
+          <div style={{display:'flex',gap:6,flexWrap:'wrap',marginBottom:12,alignItems:'center'}}>
             {['all',...LEVELS].map(lv=>(
               <button key={lv} onClick={()=>setShcoFullLevel(lv)}
-                style={{padding:'4px 12px',borderRadius:20,border:`1px solid ${shcoFullLevel===lv?(lv==='all'?T.gold:levelColor(lv)):T.border}`,
+                style={{padding:'3px 11px',borderRadius:20,cursor:'pointer',
+                  border:`1px solid ${shcoFullLevel===lv?(lv==='all'?T.gold:levelColor(lv)):T.border}`,
                   background:shcoFullLevel===lv?(lv==='all'?T.gold+'22':levelColor(lv)+'22'):'transparent',
                   color:shcoFullLevel===lv?(lv==='all'?T.gold:levelColor(lv)):T.muted,
-                  fontSize:12,fontWeight:600,cursor:'pointer'}}>
+                  fontSize:12,fontWeight:600}}>
                 {lv==='all'?'All Levels':lv}
               </button>
             ))}
-            <span style={{marginLeft:'auto',fontSize:12,color:T.muted,alignSelf:'center'}}>{filteredOes.length} OEs</span>
+            <span style={{marginLeft:'auto',fontSize:11,color:T.muted}}>{filteredOes.length} OEs</span>
           </div>
         </div>
 
-        {/* OE list grouped by standard */}
+        {/* ── OE list grouped by standard ── */}
         <div style={{padding:'0 16px 80px'}}>
           {shcoFullLoading ? (
-            <div style={{textAlign:'center',padding:40,color:T.muted}}>Loading OEs…</div>
+            <div style={{textAlign:'center',padding:40,color:T.muted}}>Loading OEs from database…</div>
           ) : Object.keys(byStandard).length===0 ? (
             <div style={{textAlign:'center',padding:40,color:T.muted}}>No OEs match the current filter.</div>
           ) : (
             Object.entries(byStandard).map(([stdCode,{std,oes:stdOes}])=>{
-              const stdScored = stdOes.filter(oe=>shcoFullScores[oe.oe_code]).length;
-              const stdAvg = stdScored>0 ? stdOes.filter(oe=>shcoFullScores[oe.oe_code]).reduce((a,oe)=>a+shcoFullScores[oe.oe_code],0)/stdScored : 0;
-              const stdPct = Math.round(stdAvg/5*100);
-              const stdCol = stdScored===0?T.muted:stdPct>=80?T.green:stdPct>=60?T.orange:T.red;
+              const stdScoredOes  = stdOes.filter(oe=>shcoFullScores[oe.oe_code]);
+              const stdAvg        = stdScoredOes.length>0
+                ? stdScoredOes.reduce((a,oe)=>a+shcoFullScores[oe.oe_code],0)/stdScoredOes.length : null;
+              const stdLowCount   = stdOes.filter(oe=>shcoFullScores[oe.oe_code]&&shcoFullScores[oe.oe_code]<=2).length;
+              const stdFails      = (stdAvg!==null&&stdAvg<4)||(stdLowCount>maxLowPerStd);
+              const stdBorder     = stdAvg===null?T.border:stdFails?T.red:T.green;
               return (
-                <div key={stdCode} style={{marginBottom:16}}>
-                  <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:'10px 14px',marginBottom:6,display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:10}}>
-                    <div>
+                <div key={stdCode} style={{marginBottom:14}}>
+                  {/* Standard header */}
+                  <div style={{background:T.panel,border:`1px solid ${stdBorder}`,borderRadius:10,
+                    padding:'9px 13px',marginBottom:5,display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:10}}>
+                    <div style={{flex:1}}>
                       <span style={{color:T.orange,fontWeight:800,fontSize:13,marginRight:8}}>{stdCode}</span>
                       <span style={{color:T.text,fontSize:13,lineHeight:1.5}}>{std}</span>
                     </div>
-                    {stdScored>0&&<span style={{fontSize:12,fontWeight:700,color:stdCol,whiteSpace:'nowrap'}}>{stdPct}%</span>}
+                    <div style={{flexShrink:0,textAlign:'right'}}>
+                      {stdAvg!==null&&(
+                        <div style={{fontSize:12,fontWeight:700,color:stdAvg>=4?T.green:T.red}}>
+                          avg {stdAvg.toFixed(1)}
+                        </div>
+                      )}
+                      {stdLowCount>maxLowPerStd&&(
+                        <div style={{fontSize:10,color:T.red}}>{stdLowCount} OE(s) ≤2</div>
+                      )}
+                      <div style={{fontSize:10,color:T.muted}}>{stdScoredOes.length}/{stdOes.length} scored</div>
+                    </div>
                   </div>
+
+                  {/* OE rows */}
                   {stdOes.map(oe=>{
-                    const sc = shcoFullScores[oe.oe_code]||0;
+                    const sc     = shcoFullScores[oe.oe_code]||0;
                     const saving = shcoFullScoreSaving[oe.oe_code];
-                    const lc = levelColor(oe.level);
-                    const rowBorder = sc>=4?T.green:sc>=3?T.gold:sc>=1?T.red:T.border;
+                    const lc     = levelColor(oe.level);
+                    const rowBorder = sc>=4?T.green:sc===3?T.orange:sc>=1?T.red:T.border;
                     return (
-                      <div key={oe.oe_code} style={{background:T.panel2,border:`1px solid ${rowBorder}`,borderRadius:8,padding:'10px 12px',marginBottom:6,marginLeft:8}}>
-                        <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:6,flexWrap:'wrap'}}>
-                          <span style={{fontSize:12,fontWeight:700,color:T.muted}}>{oe.oe_code}</span>
-                          <span style={{fontSize:11,padding:'2px 8px',borderRadius:10,background:lc+'22',color:lc,border:`1px solid ${lc}44`,fontWeight:700}}>{oe.level}</span>
-                          {sc>0&&<span style={{fontSize:12,fontWeight:700,color:sc>=4?T.green:sc>=3?T.gold:T.red}}>{'★'.repeat(sc)}{'☆'.repeat(5-sc)}</span>}
-                          {saving&&<span style={{fontSize:11,color:T.muted}}>saving…</span>}
+                      <div key={oe.oe_code} style={{background:T.panel2,border:`1px solid ${rowBorder}`,
+                        borderRadius:8,padding:'10px 12px',marginBottom:5,marginLeft:8}}>
+                        <div style={{display:'flex',alignItems:'center',gap:7,marginBottom:5,flexWrap:'wrap'}}>
+                          <span style={{fontSize:12,fontWeight:700,color:T.muted,fontFamily:'monospace'}}>{oe.oe_code}</span>
+                          <span style={{fontSize:11,padding:'1px 7px',borderRadius:10,
+                            background:lc+'22',color:lc,border:`1px solid ${lc}44`,fontWeight:700}}>{oe.level}</span>
+                          {sc>0
+                            ? <span style={{fontSize:11,fontWeight:700,color:SCORE_COLORS[sc],
+                                padding:'1px 8px',borderRadius:8,
+                                background:SCORE_COLORS[sc]+'18',border:`1px solid ${SCORE_COLORS[sc]}44`}}>
+                                {sc} – {SCORE_LABELS[sc]}
+                              </span>
+                            : <span style={{fontSize:11,color:T.muted}}>Not scored</span>
+                          }
+                          {saving&&<span style={{fontSize:11,color:T.muted,fontStyle:'italic'}}>saving…</span>}
                         </div>
                         <div style={{fontSize:13,color:T.text,lineHeight:1.6,marginBottom:8}}>{oe.text}</div>
-                        <div style={{display:'flex',gap:5,flexWrap:'wrap'}}>
-                          {[1,2,3,4,5].map(n=>{
-                            const labels=['None','Partial','Mostly','Full','Excellent'];
-                            const colors=[T.red,T.orange,T.gold,T.green,T.blue];
-                            return(
-                              <button key={n} onClick={()=>handleScore(oe.oe_code,n)}
-                                style={{padding:'4px 10px',borderRadius:7,fontSize:12,fontWeight:700,cursor:'pointer',
-                                  background:sc===n?`${colors[n-1]}30`:T.panel,
-                                  border:`1px solid ${sc===n?colors[n-1]:colors[n-1]+'40'}`,
-                                  color:sc===n?colors[n-1]:T.muted,transition:'all 0.15s'}}>
-                                {n} – {labels[n-1]}
-                              </button>
-                            );
-                          })}
+                        {/* Score buttons — labels from book p.19 */}
+                        <div style={{display:'flex',gap:4,flexWrap:'wrap'}}>
+                          {[1,2,3,4,5].map(n=>(
+                            <button key={n} onClick={()=>handleScore(oe.oe_code,n)}
+                              style={{padding:'4px 9px',borderRadius:7,fontSize:11,fontWeight:700,cursor:'pointer',
+                                background:sc===n?`${SCORE_COLORS[n]}28`:T.panel,
+                                border:`1px solid ${sc===n?SCORE_COLORS[n]:SCORE_COLORS[n]+'40'}`,
+                                color:sc===n?SCORE_COLORS[n]:T.muted,transition:'all 0.12s'}}>
+                              {n} – {SCORE_LABELS[n]}
+                            </button>
+                          ))}
                         </div>
                       </div>
                     );
