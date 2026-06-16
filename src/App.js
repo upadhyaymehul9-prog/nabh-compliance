@@ -5686,6 +5686,22 @@ export default function App() {
         doc.setFontSize(12); doc.setTextColor('#4caf7d');
         doc.text('✓ No weak OEs — all scored OEs are at 4 or 5.',W/2,y+40,{align:'center'});
       } else {
+        // Column layout (content area = 60..535, width=475)
+        // OE Code 12%=57, Level 10%=47, OE Text 58%=276, Score 20%=95
+        const cX1=64, cX2=121, cX3=172, cX4=452; // left x of each col
+        const textColW=276; // OE text column width for wrapping
+        const rowPad=5;
+
+        const drawGapColHeaders=()=>{
+          doc.setFillColor('#081525'); doc.rect(60,y-11,W-120,16,'F');
+          doc.setFontSize(7); doc.setTextColor('#c9a84c');
+          doc.text('OE CODE',cX1,y-2);
+          doc.text('LEVEL',cX2,y-2);
+          doc.text('OE TEXT',cX3,y-2);
+          doc.text('SCORE',W-64,y-2,{align:'right'});
+          y+=14;
+        };
+
         SHCO_CHAPTERS.forEach(ch=>{
           const chWeak = weakOEs.filter(oe=>oe.chapter===ch.key);
           if(chWeak.length===0) return;
@@ -5700,41 +5716,111 @@ export default function App() {
           doc.text(`${chWeak.length} weak OE(s)`,W-64,y-1,{align:'right'});
           y+=22;
 
-          // Column headers
-          doc.setFillColor('#081525'); doc.rect(60,y-11,W-120,16,'F');
-          doc.setFontSize(7); doc.setTextColor('#c9a84c');
-          doc.text('OE CODE',74,y-2);
-          doc.text('LEVEL',152,y-2);
-          doc.text('OE TEXT',206,y-2);
-          doc.text('SCORE',W-60,y-2,{align:'right'});
-          y+=14;
+          drawGapColHeaders();
 
           chWeak.forEach(oe=>{
-            if(y>H-46){ newPage(); y=50; }
-            const sc  = shcoFullScores[oe.oe_code]||0;
-            const scC = scoreCol(sc);
-            const rowBg = sc<=2 ? '#180606' : '#140e00';
-            doc.setFillColor(rowBg); doc.rect(60,y-11,W-120,18,'F');
-            doc.setFontSize(8); doc.setTextColor('#4fc3f7');
-            doc.text((oe.oe_code||'').slice(0,14),74,y-1);
-            doc.setFontSize(7); doc.setTextColor('#8aadcc');
-            doc.text((oe.level||'').slice(0,12),152,y-1);
-            // Wrap long OE text
-            const maxTextW = W-120-152+60-70;
-            const oeText = doc.splitTextToSize((oe.text||'').slice(0,120), maxTextW);
-            const lineH  = 9;
-            doc.setFontSize(7.5); doc.setTextColor('#c8dcea');
-            doc.text(oeText[0]||'',206,y-1);
-            doc.setFontSize(9); doc.setTextColor(scC);
-            doc.text(`${sc} — ${(scoreLabel[sc]||'').slice(0,14)}`,W-60,y-1,{align:'right'});
-            if(oeText.length>1){
-              y+=lineH;
-              doc.setFontSize(7.5); doc.setTextColor('#3a5870');
-              doc.text(oeText[1],206,y-1);
+            const sc      = shcoFullScores[oe.oe_code]||0;
+            const scC     = scoreCol(sc);
+            const rowBg   = sc<=2 ? '#180606' : '#140e00';
+            // Pre-compute wrapped text to know row height
+            doc.setFontSize(7.5);
+            const wrapped = doc.splitTextToSize(oe.text||'', textColW);
+            const lineH   = 9;
+            const rowH    = Math.max(18, wrapped.length * lineH + rowPad*2);
+
+            if(y+rowH>H-40){
+              newPage(); y=50;
+              drawGapColHeaders();
             }
-            y+=20;
+
+            doc.setFillColor(rowBg); doc.rect(60,y-rowPad,W-120,rowH,'F');
+
+            // OE Code
+            doc.setFontSize(8); doc.setTextColor('#4fc3f7');
+            doc.text((oe.oe_code||''),cX1,y+2);
+            // Level
+            doc.setFontSize(7); doc.setTextColor('#8aadcc');
+            doc.text((oe.level||'').slice(0,12),cX2,y+2);
+            // OE Text — all wrapped lines, clipped to col width
+            doc.setFontSize(7.5); doc.setTextColor('#c8dcea');
+            wrapped.forEach((line,i)=>{ doc.text(line,cX3,y+2+i*lineH); });
+            // Score — right-aligned in score col
+            doc.setFontSize(8); doc.setTextColor(scC);
+            doc.text(`${sc}/5`,W-64,y+2,{align:'right'});
+            doc.setFontSize(7); doc.setTextColor(scC);
+            doc.text((scoreLabel[sc]||'').slice(0,16),W-64,y+2+lineH,{align:'right'});
+
+            y+=rowH+2;
           });
-          y+=6;
+          y+=8;
+        });
+      }
+
+      // ── PAGE: CORRECTIVE ACTIONS (CAPAs) ────────────────────────────────
+      const capaEntries = weakOEs
+        .map(oe=>({oe, capa:shcoFullCapaDb[oe.oe_code]}))
+        .filter(({capa})=>capa&&capa.finding);
+
+      if(capaEntries.length>0){
+        newPage(); y=50;
+        doc.setFontSize(16); doc.setTextColor('#eef4f9');
+        doc.text('Corrective Actions (CAPA)',60,y); y+=10;
+        doc.setDrawColor('#0f2640'); doc.line(60,y,W-60,y); y+=18;
+        doc.setFontSize(8); doc.setTextColor('#3a5870');
+        doc.text(`${capaEntries.length} CAPA(s) recorded for weak OEs`,60,y); y+=20;
+
+        capaEntries.forEach(({oe,capa})=>{
+          const sc  = shcoFullScores[oe.oe_code]||0;
+          const scC = scoreCol(sc);
+
+          // Estimate height needed
+          doc.setFontSize(8);
+          const findLines  = doc.splitTextToSize(capa.finding||'',W-180);
+          const actionLines= doc.splitTextToSize(capa.action_planned||'',W-180);
+          const estH = 14+findLines.length*10+actionLines.length*10+28+16;
+          if(y+estH>H-40){ newPage(); y=50; }
+
+          // Card background
+          doc.setFillColor('#0a1a2a');
+          doc.roundedRect(60,y-4,W-120,estH,3,3,'F');
+          doc.setDrawColor('#1a3550');
+          doc.roundedRect(60,y-4,W-120,estH,3,3,'S');
+
+          // OE header
+          doc.setFontSize(9); doc.setTextColor('#4fc3f7');
+          doc.text(oe.oe_code,68,y+8);
+          doc.setFontSize(8); doc.setTextColor('#8aadcc');
+          doc.text(oe.level,130,y+8);
+          doc.setFontSize(8); doc.setTextColor(scC);
+          doc.text(`Score: ${sc}/5`,W-64,y+8,{align:'right'});
+          y+=18;
+
+          // Finding
+          doc.setFontSize(7); doc.setTextColor('#3a5870');
+          doc.text('FINDING',68,y);
+          doc.setFontSize(8); doc.setTextColor('#c8dcea');
+          findLines.forEach((line,i)=>doc.text(line,68,y+9+i*10));
+          y+=9+findLines.length*10+4;
+
+          // Action
+          doc.setFontSize(7); doc.setTextColor('#3a5870');
+          doc.text('ACTION PLANNED',68,y);
+          doc.setFontSize(8); doc.setTextColor('#c8dcea');
+          actionLines.forEach((line,i)=>doc.text(line,68,y+9+i*10));
+          y+=9+actionLines.length*10+4;
+
+          // Person + date
+          const person = capa.responsible_person||'—';
+          const dateStr2= capa.target_date ? new Date(capa.target_date).toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'}) : '—';
+          doc.setFontSize(7); doc.setTextColor('#3a5870');
+          doc.text(`RESPONSIBLE: `,68,y);
+          doc.setFontSize(8); doc.setTextColor('#c8dcea');
+          doc.text(person,68+doc.getTextWidth('RESPONSIBLE: '),y);
+          doc.setFontSize(7); doc.setTextColor('#3a5870');
+          doc.text(`TARGET DATE: `,W/2,y);
+          doc.setFontSize(8); doc.setTextColor('#c8dcea');
+          doc.text(dateStr2,W/2+doc.getTextWidth('TARGET DATE: '),y);
+          y+=18;
         });
       }
 
