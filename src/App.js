@@ -5721,7 +5721,7 @@ export default function App() {
             doc.text((oe.level||'').slice(0,12),152,y-1);
             // Wrap long OE text
             const maxTextW = W-120-152+60-70;
-            const oeText = doc.splitTextToSize((oe.oe_text||'').slice(0,120), maxTextW);
+            const oeText = doc.splitTextToSize((oe.text||'').slice(0,120), maxTextW);
             const lineH  = 9;
             doc.setFontSize(7.5); doc.setTextColor('#c8dcea');
             doc.text(oeText[0]||'',206,y-1);
@@ -7332,7 +7332,7 @@ export default function App() {
       .map(oe=>({oe, sev:gapSeverity(oe)}))
       .filter(({sev})=>sev!==null)
       .map(({oe,sev})=>({
-        oe_code: oe.oe_code, oe_text: oe.oe_text, level: oe.level,
+        oe_code: oe.oe_code, oe_text: oe.text, level: oe.level,
         standard_code: oe.standard_code, severity: sev,
         score: shcoFullScores[oe.oe_code]||0,
       }));
