@@ -5069,46 +5069,13 @@ const SHCO_FULL_TOUR_STEPS=[
   {title:"You're ready to start! 🚀",body:"Begin with Score OEs → score your first chapter. The Dashboard updates in real time as you score.",targetId:null,shcoFullTab:null},
 ];
 
-function WalktourOverlay({step,totalSteps,onNext,onSkip,spotlightRect,steps}){
+function WalktourOverlay({step,totalSteps,onNext,onSkip,steps}){
   const isLast=step===totalSteps-1;
   const s=steps[step];
-  const CARD_HEIGHT=200;
-  const windowHeight=window.innerHeight;
-  const cardStyle={
-    position:'fixed',
-    left:'50%',
-    transform:'translateX(-50%)',
-    width:'90%',
-    maxWidth:420,
-    background:T.panel,
-    border:`1px solid ${T.border}`,
-    borderRadius:16,
-    padding:'24px 28px',
-    zIndex:10001,
-    boxShadow:'0 8px 40px rgba(0,0,0,0.6)',
-  };
-  if(spotlightRect){
-    const spaceBelow=windowHeight-spotlightRect.top-spotlightRect.height;
-    if(spaceBelow>=CARD_HEIGHT+24){cardStyle.top=Math.max(8,spotlightRect.top+spotlightRect.height+16);}
-    else{cardStyle.top=Math.max(8,spotlightRect.top-CARD_HEIGHT-16);}
-  }else{
-    cardStyle.top='50%';
-    cardStyle.transform='translate(-50%, -50%)';
-  }
   return(
-    <div style={{position:'fixed',inset:0,zIndex:10000}}>
-      {spotlightRect?(
-        <>
-          <div style={{position:'fixed',top:0,left:0,right:0,height:spotlightRect.top,background:'rgba(0,0,0,0.82)'}}/>
-          <div style={{position:'fixed',top:spotlightRect.top+spotlightRect.height,left:0,right:0,bottom:0,background:'rgba(0,0,0,0.82)'}}/>
-          <div style={{position:'fixed',top:spotlightRect.top,left:0,width:spotlightRect.left,height:spotlightRect.height,background:'rgba(0,0,0,0.82)'}}/>
-          <div style={{position:'fixed',top:spotlightRect.top,left:spotlightRect.left+spotlightRect.width,right:0,height:spotlightRect.height,background:'rgba(0,0,0,0.82)'}}/>
-          <div style={{position:'fixed',top:spotlightRect.top-4,left:spotlightRect.left-4,width:spotlightRect.width+8,height:spotlightRect.height+8,border:`3px solid ${T.gold}`,borderRadius:10,pointerEvents:'none',zIndex:10002,boxShadow:`0 0 20px ${T.gold}66`}}/>
-        </>
-      ):(
-        <div style={{position:'fixed',inset:0,background:'rgba(0,0,0,0.82)'}}/>
-      )}
-      <div style={cardStyle}>
+    <div style={{position:'fixed',inset:0,zIndex:10000,display:'flex',alignItems:'center',justifyContent:'center'}}>
+      <div style={{position:'fixed',inset:0,background:'rgba(0,0,0,0.82)'}}/>
+      <div style={{position:'relative',width:'90%',maxWidth:420,background:T.panel,border:`1px solid ${T.border}`,borderRadius:16,padding:'24px 28px',zIndex:10001,boxShadow:'0 8px 40px rgba(0,0,0,0.6)'}}>
         <div style={{display:'flex',justifyContent:'center',gap:6,marginBottom:16}}>
           {steps.map((_,i)=>(
             <div key={i} style={{width:8,height:8,borderRadius:'50%',background:i===step?T.gold:T.muted,transition:'background 0.2s'}}/>
@@ -5178,7 +5145,6 @@ export default function App() {
   const [committeesView, setCommitteesView] = useState('reference');
   const [showLicenseAdd, setShowLicenseAdd] = useState(false);
   const [tourStep, setTourStep] = useState(null);
-  const [spotlightRect, setSpotlightRect] = useState(null);
   const activeStepsRef = useRef(TOUR_STEPS);
   const [shcoFullOes, setShcoFullOes] = useState([]);
   const [shcoFullScores, setShcoFullScores] = useState({});
@@ -5212,7 +5178,6 @@ export default function App() {
   activeStepsRef.current = activeSteps;
 
   const dismissTour = useCallback(async () => {
-    setSpotlightRect(null);
     setTourStep(null);
     console.log("[Tour] dismissTour called. context.hospitalId =", context?.hospitalId);
     if (context?.hospitalId) {
@@ -5234,21 +5199,10 @@ export default function App() {
 
   const TAB_TO_SCREEN = {'Dashboard':'dashboard','Score OEs':'scoring','Fix Gaps':'gaps','Audits':'audits','KPIs':'kpis'};
   useEffect(() => {
-    if (tourStep === null) { setSpotlightRect(null); return; }
+    if (tourStep === null) return;
     const step = activeStepsRef.current[tourStep];
     if (step.shcoFullTab) { setShcoFullTab(step.shcoFullTab); }
     else if (step.tabToActivate) { setScreen(TAB_TO_SCREEN[step.tabToActivate] || screen); }
-    const timer = setTimeout(() => {
-      if (step.targetId) {
-        const el = document.getElementById(step.targetId);
-        if (el) {
-          el.scrollIntoView({block:'nearest'}); // scroll into view first so getBoundingClientRect never returns negative top
-          const rect = el.getBoundingClientRect();
-          setSpotlightRect({top:rect.top,left:rect.left,width:rect.width,height:rect.height});
-        } else { setSpotlightRect(null); }
-      } else { setSpotlightRect(null); }
-    }, 350);
-    return () => clearTimeout(timer);
   }, [tourStep]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const generatePDF = async () => {
@@ -8651,7 +8605,7 @@ export default function App() {
       </a>
       <button onClick={()=>setTourStep(0)} title="Replay app tour"
         style={{position:"fixed",bottom:148,right:20,zIndex:9997,width:48,height:48,borderRadius:24,background:T.gold,border:"none",color:T.bg,fontSize:22,fontWeight:900,cursor:"pointer",boxShadow:`0 4px 16px rgba(201,168,76,0.5)`,display:"flex",alignItems:"center",justifyContent:"center",lineHeight:1}}>?</button>
-      {tourStep!==null&&<WalktourOverlay step={tourStep} totalSteps={activeSteps.length} onNext={nextTourStep} onSkip={dismissTour} spotlightRect={spotlightRect} steps={activeSteps}/>}
+      {tourStep!==null&&<WalktourOverlay step={tourStep} totalSteps={activeSteps.length} onNext={nextTourStep} onSkip={dismissTour} steps={activeSteps}/>}
       <div style={{textAlign:"center",padding:"14px",color:T.muted,fontSize:11,borderTop:`1px solid ${T.border}`,marginTop:20}}>
         NABH Accreditation Platform — Independent educational tool — Not affiliated with NABH/QCI
       </div>
