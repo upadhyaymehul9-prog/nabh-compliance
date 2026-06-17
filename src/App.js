@@ -3605,8 +3605,14 @@ function KPIsScreen({ hospitalId, user }) {
     const num=parseFloat(f.calc_num);
     const den=parseFloat(f.calc_den);
     if(isNaN(num)||isNaN(den)||den===0){alert("Enter valid non-zero denominator.");return;}
-    const isPercent=(kpi.unit||"").toLowerCase().includes("%");
-    const result=isPercent?(num/den)*100:num/den;
+    const u=(kpi.unit||"").toLowerCase();
+    const fml=(kpi.formula||"").toLowerCase();
+    // Determine multiplier: check 1000 before 100 (1000 contains the string "100")
+    const multiplier=
+      (u.includes("1000")||fml.includes("1000"))?1000:
+      (u.includes("%")||/\/100\b/.test(u)||fml.includes("%")||/[×x]\s*100\b/.test(fml))?100:
+      1;
+    const result=(num/den)*multiplier;
     setCalcResult(r=>({...r,[kpi.id]:result}));
     setSaving(kpi.id);
     const{error}=await supabase.from("kpi_data").upsert({
