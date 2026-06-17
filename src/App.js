@@ -6877,13 +6877,15 @@ export default function App() {
     Promise.all([
       supabase.from("shco_full_oes").select("*").order("oe_code"),
       supabase.from("shco_full_scores").select("oe_code,score").eq("hospital_id",context.hospitalId),
-      supabase.from("shco_full_capa").select("*").eq("hospital_id",context.hospitalId),
-    ]).then(([{data:oeData},{data:scoreData},{data:capaData}])=>{
+    ]).then(([{data:oeData},{data:scoreData}])=>{
       if(oeData)setShcoFullOes(oeData);
       if(scoreData){const m={};scoreData.forEach(s=>{m[s.oe_code]=s.score;});setShcoFullScores(m);}
-      if(capaData){const m={};capaData.forEach(c=>{m[c.oe_code]=c;});setShcoFullCapaDb(m);}
       setShcoFullLoading(false);
-    });
+    }).catch(()=>setShcoFullLoading(false));
+    supabase.from("shco_full_capa").select("*").eq("hospital_id",context.hospitalId)
+      .then(({data:capaData})=>{
+        if(capaData){const m={};capaData.forEach(c=>{m[c.oe_code]=c;});setShcoFullCapaDb(m);}
+      }).catch(()=>{});
   },[selectedProgramme,context?.hospitalId]);
 
   const saveShcoFullCapa = async (oeCode) => {
@@ -6913,16 +6915,20 @@ export default function App() {
   useEffect(()=>{
     if(selectedProgramme!=="eco-full"||!context?.hospitalId)return;
     setEcoFullLoading(true);
+    // Load OEs and scores first — these tables always exist
     Promise.all([
       supabase.from("eco_full_oes").select("*").order("oe_code"),
       supabase.from("eco_full_scores").select("oe_code,score").eq("hospital_id",context.hospitalId),
-      supabase.from("eco_full_capa").select("*").eq("hospital_id",context.hospitalId),
-    ]).then(([{data:oeData},{data:scoreData},{data:capaData}])=>{
+    ]).then(([{data:oeData},{data:scoreData}])=>{
       if(oeData)setEcoFullOes(oeData);
       if(scoreData){const m={};scoreData.forEach(s=>{m[s.oe_code]=s.score;});setEcoFullScores(m);}
-      if(capaData){const m={};capaData.forEach(c=>{m[c.oe_code]=c;});setEcoFullCapaDb(m);}
       setEcoFullLoading(false);
-    });
+    }).catch(()=>setEcoFullLoading(false));
+    // Load CAPAs independently — table may not exist yet
+    supabase.from("eco_full_capa").select("*").eq("hospital_id",context.hospitalId)
+      .then(({data:capaData})=>{
+        if(capaData){const m={};capaData.forEach(c=>{m[c.oe_code]=c;});setEcoFullCapaDb(m);}
+      }).catch(()=>{});
   },[selectedProgramme,context?.hospitalId]);
 
   const saveEcoFullCapa = async (oeCode) => {
