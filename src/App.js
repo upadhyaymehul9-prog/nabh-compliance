@@ -6445,8 +6445,9 @@ export default function App() {
       const maxLowPerStd = ecoFullAssessType==='renewal' ? 0 : 1;
       const stdMap={};
       relevantOEs.forEach(oe=>{
-        if(!stdMap[oe.standard_code])stdMap[oe.standard_code]={oes:[]};
-        stdMap[oe.standard_code].oes.push(oe);
+        const sk=oe.standard_code||(oe.oe_code?oe.oe_code.replace(/\.[^.]+$/,''):oe.chapter||'Other');
+        if(!stdMap[sk])stdMap[sk]={oes:[]};
+        stdMap[sk].oes.push(oe);
       });
       const stdChecks = Object.entries(stdMap).map(([code,{oes}])=>{
         const scored = oes.filter(oe=>ecoFullScores[oe.oe_code]);
@@ -8727,12 +8728,14 @@ export default function App() {
     const filteredOes=ecoFullOes.filter(oe=>{
       const chMatch=ecoFullChapter==='all'||oe.chapter===ecoFullChapter;
       const lvlMatch=ecoFullLevel==='all'||oe.level===ecoFullLevel;
-      const txMatch=!q||oe.oe_code.toLowerCase().includes(q)||oe.text.toLowerCase().includes(q);
+      const txMatch=!q||oe.oe_code.toLowerCase().includes(q)||(oe.text||'').toLowerCase().includes(q);
       return chMatch&&lvlMatch&&txMatch;
     });
     const byStandard=filteredOes.reduce((acc,oe)=>{
-      if(!acc[oe.standard_code])acc[oe.standard_code]={std:oe.standard_text,oes:[]};
-      acc[oe.standard_code].oes.push(oe);
+      const stdKey=oe.standard_code||(oe.oe_code?oe.oe_code.replace(/\.[^.]+$/,''):oe.chapter||'Other');
+      const stdText=oe.standard_text||stdKey;
+      if(!acc[stdKey])acc[stdKey]={std:stdText,oes:[]};
+      acc[stdKey].oes.push(oe);
       return acc;
     },{});
 
