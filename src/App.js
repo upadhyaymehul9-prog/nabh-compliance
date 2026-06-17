@@ -7331,7 +7331,7 @@ export default function App() {
 
     // ── Score OEs sub-render ──────────────────────────────────────────────
     const renderScoreOEs=()=>(
-      <div id="shco-tour-score" style={{padding:'12px 16px 80px'}}>
+      <div style={{padding:'12px 16px 80px'}}>
         {/* Search bar */}
         <input
           value={shcoFullSearch} onChange={e=>setShcoFullSearch(e.target.value)}
@@ -7496,7 +7496,7 @@ export default function App() {
       });
 
       return (
-        <div id="shco-tour-fixgaps" style={{padding:'12px 16px 80px'}}>
+        <div style={{padding:'12px 16px 80px'}}>
           {/* Search */}
           <input value={shcoFullGapSearch} onChange={e=>setShcoFullGapSearch(e.target.value)}
             placeholder="Search gaps by OE code (e.g. AAC.1.a) or keyword…"
@@ -7641,10 +7641,10 @@ export default function App() {
         <div style={{display:'flex',alignItems:'center',borderBottom:`1px solid ${T.border}`,padding:'0 16px',background:T.panel}}>
           {[
             {key:'dashboard',label:'📊 Dashboard'},
-            {key:'scoring',  label:'✏️ Score OEs'},
-            {key:'fixgaps',  label:`🔧 Fix Gaps${allGaps.length>0?' ('+allGaps.length+')':''}`},
+            {key:'scoring',  label:'✏️ Score OEs', tourId:'shco-tour-score'},
+            {key:'fixgaps',  label:`🔧 Fix Gaps${allGaps.length>0?' ('+allGaps.length+')':''}`, tourId:'shco-tour-fixgaps'},
           ].map(tab=>(
-            <button key={tab.key} onClick={()=>setShcoFullTab(tab.key)}
+            <button key={tab.key} id={tab.tourId||undefined} onClick={()=>setShcoFullTab(tab.key)}
               style={{padding:'12px 16px',border:'none',cursor:'pointer',background:'transparent',fontSize:13,fontWeight:600,
                 color:shcoFullTab===tab.key?T.orange:T.muted,
                 borderBottom:shcoFullTab===tab.key?`2px solid ${T.orange}`:'2px solid transparent'}}>
