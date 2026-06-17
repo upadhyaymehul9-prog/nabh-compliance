@@ -5087,7 +5087,8 @@ function WalktourOverlay({step,totalSteps,onNext,onSkip,spotlightRect,steps}){
     zIndex:10001,
     boxShadow:'0 8px 40px rgba(0,0,0,0.6)',
   };
-  if(spotlightRect){
+  const validSpotlight = spotlightRect && spotlightRect.top >= 0 && spotlightRect.width > 0;
+  if(validSpotlight){
     const spaceBelow=windowHeight-spotlightRect.top-spotlightRect.height;
     if(spaceBelow>=CARD_HEIGHT+24){cardStyle.top=spotlightRect.top+spotlightRect.height+16;}
     else{cardStyle.top=Math.max(8,spotlightRect.top-CARD_HEIGHT-16);}
@@ -5097,7 +5098,7 @@ function WalktourOverlay({step,totalSteps,onNext,onSkip,spotlightRect,steps}){
   }
   return(
     <div style={{position:'fixed',inset:0,zIndex:10000}}>
-      {spotlightRect?(
+      {validSpotlight?(
         <>
           <div style={{position:'fixed',top:0,left:0,right:0,height:spotlightRect.top,background:'rgba(0,0,0,0.82)'}}/>
           <div style={{position:'fixed',top:spotlightRect.top+spotlightRect.height,left:0,right:0,bottom:0,background:'rgba(0,0,0,0.82)'}}/>
@@ -5242,9 +5243,9 @@ export default function App() {
       if (step.targetId) {
         const el = document.getElementById(step.targetId);
         if (el) {
+          el.scrollIntoView({block:'nearest'}); // scroll into view first so getBoundingClientRect never returns negative top
           const rect = el.getBoundingClientRect();
           setSpotlightRect({top:rect.top,left:rect.left,width:rect.width,height:rect.height});
-          el.scrollIntoView({behavior:'smooth',block:'center'});
         } else { setSpotlightRect(null); }
       } else { setSpotlightRect(null); }
     }, 350);
