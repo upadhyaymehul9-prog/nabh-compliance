@@ -5087,10 +5087,9 @@ function WalktourOverlay({step,totalSteps,onNext,onSkip,spotlightRect,steps}){
     zIndex:10001,
     boxShadow:'0 8px 40px rgba(0,0,0,0.6)',
   };
-  const validSpotlight = spotlightRect && spotlightRect.top >= 0 && spotlightRect.width > 0;
-  if(validSpotlight){
+  if(spotlightRect){
     const spaceBelow=windowHeight-spotlightRect.top-spotlightRect.height;
-    if(spaceBelow>=CARD_HEIGHT+24){cardStyle.top=spotlightRect.top+spotlightRect.height+16;}
+    if(spaceBelow>=CARD_HEIGHT+24){cardStyle.top=Math.max(8,spotlightRect.top+spotlightRect.height+16);}
     else{cardStyle.top=Math.max(8,spotlightRect.top-CARD_HEIGHT-16);}
   }else{
     cardStyle.top='50%';
@@ -5098,7 +5097,7 @@ function WalktourOverlay({step,totalSteps,onNext,onSkip,spotlightRect,steps}){
   }
   return(
     <div style={{position:'fixed',inset:0,zIndex:10000}}>
-      {validSpotlight?(
+      {spotlightRect?(
         <>
           <div style={{position:'fixed',top:0,left:0,right:0,height:spotlightRect.top,background:'rgba(0,0,0,0.82)'}}/>
           <div style={{position:'fixed',top:spotlightRect.top+spotlightRect.height,left:0,right:0,bottom:0,background:'rgba(0,0,0,0.82)'}}/>
