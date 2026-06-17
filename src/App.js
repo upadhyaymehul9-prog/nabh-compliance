@@ -3507,6 +3507,55 @@ function CommitteesScreen({ hospitalId, committeesView, navigate }) {
   );
 }
 
+// Verified against official NABH 6th Edition (nabh_hco_kpi_correct.json). KPIs 1-32 only.
+// KPIs 33-50 are not overridden — Supabase DB values pass through unchanged.
+const HCO_KPI_OVERRIDE={
+  1:{name:"Time for initial assessment of indoor patients",standard_ref:"PSQ.3a",numerator:"Sum of time taken for assessment (minutes)",denominator:"Total number of admissions",formula:"N/D",unit:"Minutes",target:"<60 min general wards, <30 min emergency"},
+  2:{name:"Number of reporting errors per 1000 investigations",standard_ref:"PSQ.3a",numerator:"Number of reporting errors",denominator:"Number of tests performed",formula:"N/D x 1000",unit:"/1000 tests",target:"<1 per 1000 tests"},
+  3:{name:"Percentage of adherence to safety precautions by staff in diagnostics",standard_ref:"PSQ.3a",numerator:"Number of staff adhering to safety precautions",denominator:"Number of staff audited",formula:"N/D x 100",unit:"Percentage",target:">95%"},
+  4:{name:"Incidence of medication errors",standard_ref:"PSQ.3a",numerator:"Total number of medication errors",denominator:"Total number of opportunities",formula:"N/D x 100",unit:"Percentage",target:"<1%"},
+  5:{name:"Percentage of in-patients developing adverse drug reactions",standard_ref:"PSQ.3a",numerator:"Number of adverse drug reactions",denominator:"Number of inpatients",formula:"N/D x 100",unit:"Percentage",target:"Monitor and improve"},
+  6:{name:"Percentage of unplanned return to OT",standard_ref:"PSQ.3a",numerator:"Number of unplanned returns to OT",denominator:"Number of patients who underwent surgeries in OT",formula:"N/D x 100",unit:"Percentage",target:"<2%"},
+  7:{name:"Percentage of surgeries where WHO safe surgery checklist was followed",standard_ref:"PSQ.3a",numerator:"Number of surgeries where WHO safe surgery checklist was followed",denominator:"Number of surgeries audited",formula:"N/D x 100",unit:"Percentage",target:">99%"},
+  8:{name:"Percentage of transfusion reactions",standard_ref:"PSQ.3a",numerator:"Number of transfusion reactions",denominator:"Number of units transfused",formula:"N/D x 100",unit:"Percentage",target:"<1%"},
+  9:{name:"Standardised Mortality Ratio for ICU",standard_ref:"PSQ.3a",numerator:"Actual deaths in ICU",denominator:"Predicted deaths in ICU",formula:"N/D",unit:"Ratio",target:"<1"},
+  10:{name:"Return to ICU within 48 hours",standard_ref:"PSQ.3a",numerator:"Number of returns to ICU within 48 hours",denominator:"Number of discharges/transfers from ICU",formula:"N/D x 100",unit:"Percentage",target:"<5%"},
+  11:{name:"Return to emergency within 72 hours with similar complaints",standard_ref:"PSQ.3a",numerator:"Number of returns to emergency within 72 hours with similar presenting complaints",denominator:"Number of patients who came to emergency",formula:"N/D x 100",unit:"Percentage",target:"<5%"},
+  12:{name:"Incidence of hospital associated pressure ulcers after admission",standard_ref:"PSQ.3a",numerator:"Number of patients who develop new/worsening pressure ulcers after admission",denominator:"Total number of inpatient days",formula:"N/D x 1000",unit:"/1000 patient days",target:"<1 per 1000 patient days"},
+  13:{name:"Catheter associated urinary tract infection rate",standard_ref:"PSQ.3b",numerator:"Number of urinary catheter associated UTIs in a month",denominator:"Number of urinary catheter days in that month",formula:"N/D x 1000",unit:"/1000 urinary catheter days",target:"<1 per 1000 catheter days"},
+  14:{name:"Ventilator associated pneumonia rate",standard_ref:"PSQ.3b",numerator:"Number of VAP cases in a month",denominator:"Number of ventilator days in that month",formula:"N/D x 1000",unit:"/1000 ventilator days",target:"<2 per 1000 ventilator days"},
+  15:{name:"Central line associated bloodstream infection rate",standard_ref:"PSQ.3b",numerator:"Number of central line associated bloodstream infections in a month",denominator:"Number of central line days in that month",formula:"N/D x 1000",unit:"/1000 central line days",target:"<1 per 1000 central line days"},
+  16:{name:"Surgical site infection rate",standard_ref:"PSQ.3a",numerator:"Number of surgical site infections in a given month",denominator:"Number of surgeries performed in that month",formula:"N/D x 100",unit:"/100 procedures",target:"<2 per 100 procedures"},
+  17:{name:"Compliance to hand hygiene practices",standard_ref:"PSQ.3b",numerator:"Total number of actions performed (hand hygiene compliant)",denominator:"Total number of hand hygiene opportunities",formula:"N/D x 100",unit:"Percentage",target:">80%"},
+  18:{name:"Percentage of cases who receive appropriate prophylactic antibiotics",standard_ref:"PSQ.3b",numerator:"Number of patients who received appropriate prophylactic antibiotic",denominator:"Number of patients who underwent surgeries",formula:"N/D x 100",unit:"Percentage",target:">95%"},
+  19:{name:"Percentage of rescheduling of surgeries",standard_ref:"PSQ.3c",numerator:"Number of cases rescheduled",denominator:"Number of surgeries planned",formula:"N/D x 100",unit:"Percentage",target:"<5%"},
+  20:{name:"Turnaround time for issue of blood and blood components",standard_ref:"PSQ.3c",numerator:"Sum of time taken (in minutes)",denominator:"Total number of blood and blood components crossmatched/reserved",formula:"N/D",unit:"Minutes",target:"<30 minutes"},
+  21:{name:"Nurse patient ratio for ICUs and wards",standard_ref:"PSQ.3c",numerator:"Number of nursing staff",denominator:"Number of occupied beds",formula:"N/D",unit:"Ratio",target:"ICU 1:1-2, Wards 1:6"},
+  22:{name:"Waiting time for outpatient consultation",standard_ref:"PSQ.3c",numerator:"Sum total time for consultation (minutes)",denominator:"Total number of outpatients",formula:"N/D",unit:"Minutes",target:"<30 minutes"},
+  23:{name:"Waiting time for diagnostics",standard_ref:"PSQ.3c",numerator:"Sum total time waiting for diagnostics (minutes)",denominator:"Number of outpatients reported in diagnostics",formula:"N/D",unit:"Minutes",target:"<30 minutes"},
+  24:{name:"Time taken for discharge",standard_ref:"PSQ.3c",numerator:"Sum of time taken for discharge (minutes)",denominator:"Number of patients discharged",formula:"N/D",unit:"Minutes",target:"<60 minutes"},
+  25:{name:"Percentage of medical records having incomplete and/or improper consent",standard_ref:"PSQ.3c",numerator:"Number of medical records having incomplete and/or improper consent",denominator:"Number of discharges and deaths",formula:"N/D x 100",unit:"Percentage",target:"<1%"},
+  26:{name:"Number of stock-outs of emergency medications",standard_ref:"PSQ.3c",numerator:"Number of stock-outs of emergency drugs",denominator:"N/A - count only",formula:"Count",unit:"Number",target:"0"},
+  27:{name:"Number of variations observed in mock drills",standard_ref:"PSQ.3d",numerator:"Total number of variations in a mock drill",denominator:"N/A - count only",formula:"Count",unit:"Number",target:"0"},
+  28:{name:"Incidence of patient falls",standard_ref:"PSQ.3d",numerator:"Number of patient falls",denominator:"Total number of inpatient days",formula:"N/D x 1000",unit:"/1000 patient days",target:"<1 per 1000 patient days"},
+  29:{name:"Percentage of near misses",standard_ref:"PSQ.3d",numerator:"Number of near misses reported",denominator:"Number of incidents reported",formula:"N/D x 100",unit:"Percentage",target:">30%"},
+  30:{name:"Rate of needlestick injuries",standard_ref:"PSQ.3d",numerator:"Number of needlestick injuries",denominator:"Average occupied beds",formula:"N/D x 1000",unit:"Rate /1000 occupied beds (cumulative yearly)",target:"<5 per 1000 occupied beds per year"},
+  31:{name:"Appropriate handovers during shift change",standard_ref:"PSQ.3d",numerator:"Total number of handovers done appropriately",denominator:"Total number of handover opportunities",formula:"N/D x 100",unit:"Percentage",target:">95%"},
+  32:{name:"Percentage of safe and rational prescriptions",standard_ref:"PSQ.3d",numerator:"Total number of safe and rational prescriptions",denominator:"Total number of prescriptions audited",formula:"N/D x 100",unit:"Percentage",target:">90%"}
+};
+
+// Multipliers keyed by kpi_no — KPIs 1-32 from official NABH 6th Edition.
+// 0 = count-only (KPI 26, 27). KPIs 33-50 fall through to text-based detection.
+const KPI_MULTIPLIERS={
+  1:1,   2:1000,3:100, 4:100, 5:100,
+  6:100, 7:100, 8:100, 9:1,   10:100,
+  11:100,12:1000,13:1000,14:1000,15:1000,
+  16:100,17:100,18:100,19:100,20:1,
+  21:1,  22:1,  23:1,  24:1,  25:100,
+  26:0,  27:0,  28:1000,29:100,30:1000,
+  31:100,32:100
+};
+
 // ── KPIs — with monthly data entry ───────────────────────────
 function KPIsScreen({ hospitalId, user }) {
   const [kpis,setKpis]=useState([]);
@@ -3527,7 +3576,9 @@ function KPIsScreen({ hospitalId, user }) {
   const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
   useEffect(()=>{
-    supabase.from("kpis").select("*, source, source_doc").order("kpi_no").then(({data})=>setKpis(data||[]));
+    supabase.from("kpis").select("*, source, source_doc").order("kpi_no").then(({data})=>
+      setKpis((data||[]).map(k=>({...k,...(HCO_KPI_OVERRIDE[k.kpi_no]||{})})))
+    );
     if(hospitalId){
       const loadData=async()=>{
         const[{data:kdData},{data:ctData}]=await Promise.all([
@@ -3601,25 +3652,33 @@ function KPIsScreen({ hospitalId, user }) {
 
   const calcAndSave=async(kpi)=>{
     const f=dataForm[kpi.id];
-    if(!f||f.calc_num===""||f.calc_den===""){alert("Enter numerator and denominator.");return;}
-    const num=parseFloat(f.calc_num);
-    const den=parseFloat(f.calc_den);
-    if(isNaN(num)||isNaN(den)||den===0){alert("Enter valid non-zero denominator.");return;}
-    const u=(kpi.unit||"").toLowerCase();
-    const fml=(kpi.formula||"").toLowerCase();
-    // Determine multiplier: check 1000 before 100 (1000 contains the string "100")
-    const multiplier=
-      (u.includes("1000")||fml.includes("1000"))?1000:
+    const u=(kpi.unit||"").toLowerCase().replace(/,/g,"");
+    const fml=(kpi.formula||"").toLowerCase().replace(/,/g,"");
+    const nm=(kpi.name||"").toLowerCase();
+    const multiplier=KPI_MULTIPLIERS[kpi.kpi_no]!==undefined?KPI_MULTIPLIERS[kpi.kpi_no]:
+      (u.includes("1000")||fml.includes("1000")||nm.includes("1000"))?1000:
       (u.includes("%")||/\/100\b/.test(u)||fml.includes("%")||/[×x]\s*100\b/.test(fml))?100:
       1;
-    const result=(num/den)*multiplier;
+    const isCount=multiplier===0;
+    if(!f||f.calc_num===""){alert(isCount?"Enter count.":"Enter numerator and denominator.");return;}
+    if(!isCount&&f.calc_den===""){alert("Enter numerator and denominator.");return;}
+    const num=parseFloat(f.calc_num);
+    if(isNaN(num)){alert("Enter valid number.");return;}
+    let result,den=null;
+    if(isCount){
+      result=num;
+    } else {
+      den=parseFloat(f.calc_den);
+      if(isNaN(den)||den===0){alert("Enter valid non-zero denominator.");return;}
+      result=(num/den)*multiplier;
+    }
     setCalcResult(r=>({...r,[kpi.id]:result}));
     setSaving(kpi.id);
     const{error}=await supabase.from("kpi_data").upsert({
       hospital_id:hospitalId,kpi_id:kpi.id,
       numerator:num,denominator:den,
-      value:parseFloat(result.toFixed(4)),
-      benchmark:kpi.benchmark_value||null,
+      value:parseFloat(result.toFixed(isCount?0:4)),
+      benchmark:isCount?null:(kpi.benchmark_value||null),
       month:f.month||curMonth,year:f.year||curYear,
       trend:"stable",capa_required:false
     },{onConflict:"hospital_id,kpi_id,month,year"});
@@ -3789,28 +3848,35 @@ function KPIsScreen({ hospitalId, user }) {
                         </select>
                       </div>
                     </div>
-                    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:8}}>
-                      <div>
-                        <div style={{fontSize:8,color:T.muted,marginBottom:3}}>NUMERATOR — {k.numerator}</div>
-                        <input type="number" step="0.01" value={f.calc_num||""} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,calc_num:e.target.value}}))} placeholder="Enter value" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+                    {KPI_MULTIPLIERS[k.kpi_no]===0?(
+                      <div style={{marginBottom:8}}>
+                        <div style={{fontSize:8,color:T.muted,marginBottom:3}}>COUNT — {k.numerator}</div>
+                        <input type="number" step="1" value={f.calc_num||""} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,calc_num:e.target.value}}))} placeholder="Enter count" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
                       </div>
-                      <div>
-                        <div style={{fontSize:8,color:T.muted,marginBottom:3}}>DENOMINATOR — {k.denominator}</div>
-                        <input type="number" step="0.01" value={f.calc_den||""} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,calc_den:e.target.value}}))} placeholder="Enter value" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+                    ):(
+                      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:8}}>
+                        <div>
+                          <div style={{fontSize:8,color:T.muted,marginBottom:3}}>NUMERATOR — {k.numerator}</div>
+                          <input type="number" step="0.01" value={f.calc_num||""} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,calc_num:e.target.value}}))} placeholder="Enter value" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+                        </div>
+                        <div>
+                          <div style={{fontSize:8,color:T.muted,marginBottom:3}}>DENOMINATOR — {k.denominator}</div>
+                          <input type="number" step="0.01" value={f.calc_den||""} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,calc_den:e.target.value}}))} placeholder="Enter value" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
+                        </div>
                       </div>
-                    </div>
+                    )}
                     <button onClick={()=>calcAndSave(k)} disabled={saving===k.id}
                       style={{padding:"7px 18px",borderRadius:7,background:saveSuccess===k.id?T.green:T.goldD,border:`1px solid ${saveSuccess===k.id?T.green:T.gold}`,color:saveSuccess===k.id?T.bg:T.gold,fontSize:13,fontWeight:700,cursor:"pointer"}}>
-                      {saving===k.id?"Saving…":saveSuccess===k.id?"✅ Saved!":"🧮 Calculate & Save"}
+                      {saving===k.id?"Saving…":saveSuccess===k.id?"✅ Saved!":KPI_MULTIPLIERS[k.kpi_no]===0?"📋 Save Count":"🧮 Calculate & Save"}
                     </button>
-                    {calcResult[k.id]!==undefined&&(()=>{const effectiveTarget=customTargets[k.id]||k.target;return(
+                    {calcResult[k.id]!==undefined&&(()=>{const effectiveTarget=customTargets[k.id]||k.target;const isCount=KPI_MULTIPLIERS[k.kpi_no]===0;return(
                       <div style={{marginTop:8}}>
-                        <div style={{fontSize:15,fontWeight:700,color:getResultColor(calcResult[k.id],effectiveTarget)}}>
-                          Result: {calcResult[k.id].toFixed(2)} {k.unit}
+                        <div style={{fontSize:15,fontWeight:700,color:isCount?T.gold:getResultColor(calcResult[k.id],effectiveTarget)}}>
+                          {isCount?`Count: ${calcResult[k.id].toFixed(0)} ${k.unit}`:`Result: ${calcResult[k.id].toFixed(2)} ${k.unit}`}
                         </div>
-                        <div style={{fontSize:12,color:getResultColor(calcResult[k.id],effectiveTarget),marginTop:2}}>
+                        {!isCount&&<div style={{fontSize:12,color:getResultColor(calcResult[k.id],effectiveTarget),marginTop:2}}>
                           {getResultLabel(calcResult[k.id],effectiveTarget)}
-                        </div>
+                        </div>}
                       </div>
                     );})()}
                   </div>
