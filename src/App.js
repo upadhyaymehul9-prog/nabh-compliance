@@ -5063,7 +5063,7 @@ const SHCO_FULL_TOUR_STEPS=[
   {title:"Welcome to SHCO Full Accreditation 🎉",body:"Your complete NABH SHCO Full Accreditation toolkit. This quick tour shows you where everything is.",targetId:null,shcoFullTab:'dashboard'},
   {title:"Step 1: Choose Assessment Mode",body:"Pick Final Assessment (first award), Surveillance (18-month check), or Re-accreditation (4-year renewal). This determines which OEs are evaluated.",targetId:"shco-tour-assess-mode",shcoFullTab:'dashboard'},
   {title:"Step 2: Readiness Dashboard",body:"See your live PASS/FAIL verdict across all NABH scoring rules — 80% overall compliance and every Core OE must score ≥4.",targetId:"shco-tour-rules",shcoFullTab:'dashboard'},
-  {title:"Step 3: Score Your OEs",body:"Score each Objective Element 1–5 (No compliance to Full compliance). Filter by chapter or OE level to focus your effort.",targetId:"shco-tour-score",shcoFullTab:'scoring'},
+  {title:"Step 3: Score Your OEs",body:"Score each Objective Element 1–5 (No compliance to Full compliance). Filter by chapter or OE level to focus your effort.",targetId:"shco-tour-score",shcoFullTab:null},
   {title:"Step 4: Fix Gaps",body:"All weak OEs (score ≤3) appear here. Add corrective actions, assign an owner, and set target dates to track progress.",targetId:"shco-tour-fixgaps",shcoFullTab:'fixgaps'},
   {title:"Step 5: Download Gap Report",body:"Export a PDF Gap Report with your compliance % and all action items — share with your team or keep for assessor review.",targetId:"shco-tour-pdf",shcoFullTab:'dashboard'},
   {title:"You're ready to start! 🚀",body:"Begin with Score OEs → score your first chapter. The Dashboard updates in real time as you score.",targetId:null,shcoFullTab:null},
