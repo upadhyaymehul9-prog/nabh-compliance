@@ -5059,9 +5059,19 @@ const TOUR_STEPS=[
   {title:"You're ready to start! 🚀",body:"Begin with Score OEs → complete your first chapter. Your Gap Report PDF updates as you score.",targetId:null,tabToActivate:null},
 ];
 
-function WalktourOverlay({step,totalSteps,onNext,onSkip,spotlightRect}){
+const SHCO_FULL_TOUR_STEPS=[
+  {title:"Welcome to SHCO Full Accreditation 🎉",body:"Your complete NABH SHCO Full Accreditation toolkit. This quick tour shows you where everything is.",targetId:null,shcoFullTab:'dashboard'},
+  {title:"Step 1: Choose Assessment Mode",body:"Pick Final Assessment (first award), Surveillance (18-month check), or Re-accreditation (4-year renewal). This determines which OEs are evaluated.",targetId:"shco-tour-assess-mode",shcoFullTab:'dashboard'},
+  {title:"Step 2: Readiness Dashboard",body:"See your live PASS/FAIL verdict across all NABH scoring rules — 80% overall compliance and every Core OE must score ≥4.",targetId:"shco-tour-rules",shcoFullTab:'dashboard'},
+  {title:"Step 3: Score Your OEs",body:"Score each Objective Element 1–5 (No compliance to Full compliance). Filter by chapter or OE level to focus your effort.",targetId:"shco-tour-score",shcoFullTab:'scoring'},
+  {title:"Step 4: Fix Gaps",body:"All weak OEs (score ≤3) appear here. Add corrective actions, assign an owner, and set target dates to track progress.",targetId:"shco-tour-fixgaps",shcoFullTab:'fixgaps'},
+  {title:"Step 5: Download Gap Report",body:"Export a PDF Gap Report with your compliance % and all action items — share with your team or keep for assessor review.",targetId:"shco-tour-pdf",shcoFullTab:'dashboard'},
+  {title:"You're ready to start! 🚀",body:"Begin with Score OEs → score your first chapter. The Dashboard updates in real time as you score.",targetId:null,shcoFullTab:null},
+];
+
+function WalktourOverlay({step,totalSteps,onNext,onSkip,spotlightRect,steps}){
   const isLast=step===totalSteps-1;
-  const s=TOUR_STEPS[step];
+  const s=steps[step];
   const CARD_HEIGHT=200;
   const windowHeight=window.innerHeight;
   const cardStyle={
@@ -5100,7 +5110,7 @@ function WalktourOverlay({step,totalSteps,onNext,onSkip,spotlightRect}){
       )}
       <div style={cardStyle}>
         <div style={{display:'flex',justifyContent:'center',gap:6,marginBottom:16}}>
-          {TOUR_STEPS.map((_,i)=>(
+          {steps.map((_,i)=>(
             <div key={i} style={{width:8,height:8,borderRadius:'50%',background:i===step?T.gold:T.muted,transition:'background 0.2s'}}/>
           ))}
         </div>
@@ -5169,6 +5179,7 @@ export default function App() {
   const [showLicenseAdd, setShowLicenseAdd] = useState(false);
   const [tourStep, setTourStep] = useState(null);
   const [spotlightRect, setSpotlightRect] = useState(null);
+  const activeStepsRef = useRef(TOUR_STEPS);
   const [shcoFullOes, setShcoFullOes] = useState([]);
   const [shcoFullScores, setShcoFullScores] = useState({});
   const [shcoFullScoreSaving, setShcoFullScoreSaving] = useState({});
@@ -5197,6 +5208,9 @@ export default function App() {
     }
   };
 
+  const activeSteps = selectedProgramme === 'shco-full' ? SHCO_FULL_TOUR_STEPS : TOUR_STEPS;
+  activeStepsRef.current = activeSteps;
+
   const dismissTour = useCallback(async () => {
     setSpotlightRect(null);
     setTourStep(null);
@@ -5213,7 +5227,7 @@ export default function App() {
   const nextTourStep = useCallback(() => {
     setTourStep(prev => {
       if (prev === null) return null;
-      if (prev >= TOUR_STEPS.length - 1) { dismissTour(); return null; }
+      if (prev >= activeStepsRef.current.length - 1) { dismissTour(); return null; }
       return prev + 1;
     });
   }, [dismissTour]);
@@ -5221,8 +5235,9 @@ export default function App() {
   const TAB_TO_SCREEN = {'Dashboard':'dashboard','Score OEs':'scoring','Fix Gaps':'gaps','Audits':'audits','KPIs':'kpis'};
   useEffect(() => {
     if (tourStep === null) { setSpotlightRect(null); return; }
-    const step = TOUR_STEPS[tourStep];
-    if (step.tabToActivate) { setScreen(TAB_TO_SCREEN[step.tabToActivate] || screen); }
+    const step = activeStepsRef.current[tourStep];
+    if (step.shcoFullTab) { setShcoFullTab(step.shcoFullTab); }
+    else if (step.tabToActivate) { setScreen(TAB_TO_SCREEN[step.tabToActivate] || screen); }
     const timer = setTimeout(() => {
       if (step.targetId) {
         const el = document.getElementById(step.targetId);
@@ -7217,7 +7232,7 @@ export default function App() {
     const renderDashboard=()=>(
       <div style={{padding:'12px 16px 40px'}}>
         {/* Assessment mode cards */}
-        <div style={{marginBottom:12}}>
+        <div id="shco-tour-assess-mode" style={{marginBottom:12}}>
           <div style={{fontSize:11,color:T.muted,fontWeight:700,letterSpacing:1,marginBottom:8}}>ASSESSMENT MODE</div>
           <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
             {[
@@ -7254,7 +7269,7 @@ export default function App() {
         </div>
 
         {/* Rules checklist */}
-        <div style={{marginBottom:12}}>
+        <div id="shco-tour-rules" style={{marginBottom:12}}>
           <div style={{fontSize:11,color:T.muted,fontWeight:700,letterSpacing:1,marginBottom:8}}>ACCREDITATION RULES</div>
           <div style={{display:'grid',gap:5}}>
             {rules.map((r,i)=>(
@@ -7316,7 +7331,7 @@ export default function App() {
 
     // ── Score OEs sub-render ──────────────────────────────────────────────
     const renderScoreOEs=()=>(
-      <div style={{padding:'12px 16px 80px'}}>
+      <div id="shco-tour-score" style={{padding:'12px 16px 80px'}}>
         {/* Search bar */}
         <input
           value={shcoFullSearch} onChange={e=>setShcoFullSearch(e.target.value)}
@@ -7481,7 +7496,7 @@ export default function App() {
       });
 
       return (
-        <div style={{padding:'12px 16px 80px'}}>
+        <div id="shco-tour-fixgaps" style={{padding:'12px 16px 80px'}}>
           {/* Search */}
           <input value={shcoFullGapSearch} onChange={e=>setShcoFullGapSearch(e.target.value)}
             placeholder="Search gaps by OE code (e.g. AAC.1.a) or keyword…"
@@ -7636,7 +7651,7 @@ export default function App() {
               {tab.label}
             </button>
           ))}
-          <button onClick={generateShcoFullPDF} disabled={shcoFullPdfLoading}
+          <button id="shco-tour-pdf" onClick={generateShcoFullPDF} disabled={shcoFullPdfLoading}
             style={{marginLeft:'auto',padding:'6px 14px',borderRadius:7,border:`1px solid ${T.gold}`,
               background:'transparent',color:T.gold,fontSize:12,fontWeight:700,cursor:shcoFullPdfLoading?'default':'pointer',
               opacity:shcoFullPdfLoading?0.6:1,whiteSpace:'nowrap'}}>
@@ -8636,7 +8651,7 @@ export default function App() {
       </a>
       <button onClick={()=>setTourStep(0)} title="Replay app tour"
         style={{position:"fixed",bottom:148,right:20,zIndex:9997,width:48,height:48,borderRadius:24,background:T.gold,border:"none",color:T.bg,fontSize:22,fontWeight:900,cursor:"pointer",boxShadow:`0 4px 16px rgba(201,168,76,0.5)`,display:"flex",alignItems:"center",justifyContent:"center",lineHeight:1}}>?</button>
-      {tourStep!==null&&<WalktourOverlay step={tourStep} totalSteps={TOUR_STEPS.length} onNext={nextTourStep} onSkip={dismissTour} spotlightRect={spotlightRect}/>}
+      {tourStep!==null&&<WalktourOverlay step={tourStep} totalSteps={activeSteps.length} onNext={nextTourStep} onSkip={dismissTour} spotlightRect={spotlightRect} steps={activeSteps}/>}
       <div style={{textAlign:"center",padding:"14px",color:T.muted,fontSize:11,borderTop:`1px solid ${T.border}`,marginTop:20}}>
         NABH Accreditation Platform — Independent educational tool — Not affiliated with NABH/QCI
       </div>
