@@ -3614,7 +3614,7 @@ function KPIsScreen({ hospitalId, user }) {
       numerator:num,denominator:den,
       value:parseFloat(result.toFixed(4)),
       benchmark:kpi.benchmark_value||null,
-      month:curMonth,year:curYear,
+      month:f.month||curMonth,year:f.year||curYear,
       trend:"stable",capa_required:false
     },{onConflict:"hospital_id,kpi_id,month,year"});
     if(!error){
@@ -3766,9 +3766,23 @@ function KPIsScreen({ hospitalId, user }) {
                   </div>
                   {k.remarks&&<div style={{fontSize:12,color:T.muted,fontStyle:"italic",lineHeight:1.5}}>💡 {k.remarks}</div>}
 
-                  {/* CALCULATOR */}
+                  {/* DATA ENTRY */}
                   <div style={{borderTop:`1px solid ${T.border}`,paddingTop:12}}>
-                    <div style={{fontSize:12,fontWeight:700,color:T.blue,marginBottom:10,letterSpacing:1}}>🧮 CALCULATOR</div>
+                    <div style={{fontSize:12,fontWeight:700,color:T.gold,marginBottom:10,letterSpacing:1}}>📥 ENTER DATA</div>
+                    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:8}}>
+                      <div>
+                        <div style={{fontSize:8,color:T.muted,marginBottom:3}}>MONTH</div>
+                        <select value={f.month} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,month:parseInt(e.target.value)}}))} style={{...inp,width:"100%"}}>
+                          {MONTHS.map((m,i)=><option key={i} value={i+1}>{m}</option>)}
+                        </select>
+                      </div>
+                      <div>
+                        <div style={{fontSize:8,color:T.muted,marginBottom:3}}>YEAR</div>
+                        <select value={f.year} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,year:parseInt(e.target.value)}}))} style={{...inp,width:"100%"}}>
+                          {[curYear-1,curYear,curYear+1].map(y=><option key={y} value={y}>{y}</option>)}
+                        </select>
+                      </div>
+                    </div>
                     <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:8}}>
                       <div>
                         <div style={{fontSize:8,color:T.muted,marginBottom:3}}>NUMERATOR — {k.numerator}</div>
@@ -3779,8 +3793,9 @@ function KPIsScreen({ hospitalId, user }) {
                         <input type="number" step="0.01" value={f.calc_den||""} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,calc_den:e.target.value}}))} placeholder="Enter value" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
                       </div>
                     </div>
-                    <button onClick={()=>calcAndSave(k)} disabled={saving===k.id} style={{padding:"7px 18px",borderRadius:7,background:T.blueD,border:`1px solid ${T.blue}`,color:T.blue,fontSize:13,fontWeight:700,cursor:"pointer"}}>
-                      {saving===k.id?"Saving…":"🧮 Calculate & Save"}
+                    <button onClick={()=>calcAndSave(k)} disabled={saving===k.id}
+                      style={{padding:"7px 18px",borderRadius:7,background:saveSuccess===k.id?T.green:T.goldD,border:`1px solid ${saveSuccess===k.id?T.green:T.gold}`,color:saveSuccess===k.id?T.bg:T.gold,fontSize:13,fontWeight:700,cursor:"pointer"}}>
+                      {saving===k.id?"Saving…":saveSuccess===k.id?"✅ Saved!":"🧮 Calculate & Save"}
                     </button>
                     {calcResult[k.id]!==undefined&&(()=>{const effectiveTarget=customTargets[k.id]||k.target;return(
                       <div style={{marginTop:8}}>
@@ -3794,64 +3809,13 @@ function KPIsScreen({ hospitalId, user }) {
                     );})()}
                   </div>
 
-                  {/* DATA ENTRY */}
-                  <div style={{borderTop:`1px solid ${T.border}`,paddingTop:12}}>
-                    <div style={{fontSize:12,fontWeight:700,color:T.gold,marginBottom:10,letterSpacing:1}}>📥 ENTER MONTHLY DATA</div>
-                    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8,marginBottom:8}}>
-                      <div>
-                        <div style={{fontSize:8,color:T.muted,marginBottom:3}}>MONTH</div>
-                        <select value={f.month} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,month:parseInt(e.target.value)}}))} style={{...inp,width:"100%"}}>
-                          {MONTHS.map((m,i)=><option key={i} value={i+1}>{m}</option>)}
-                        </select>
-                      </div>
-                      <div>
-                        <div style={{fontSize:8,color:T.muted,marginBottom:3}}>YEAR</div>
-                        <select value={f.year} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,year:parseInt(e.target.value)}}))} style={{...inp,width:"100%"}}>
-                          {[curYear-1,curYear,curYear+1].map(y=><option key={y} value={y}>{y}</option>)}
-                        </select>
-                      </div>
-                      <div>
-                        <div style={{fontSize:8,color:T.muted,marginBottom:3}}>VALUE ({k.unit})</div>
-                        <input type="number" step="0.01" value={f.value} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,value:e.target.value}}))} placeholder="Enter value" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
-                      </div>
-                    </div>
-                    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:8}}>
-                      <div>
-                        <div style={{fontSize:8,color:T.muted,marginBottom:3}}>TREND</div>
-                        <select value={f.trend} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,trend:e.target.value}}))} style={{...inp,width:"100%"}}>
-                          <option value="improving">📈 Improving</option>
-                          <option value="stable">➡️ Stable</option>
-                          <option value="worsening">📉 Worsening</option>
-                        </select>
-                      </div>
-                      <div style={{display:"flex",alignItems:"flex-end"}}>
-                        <label style={{display:"flex",alignItems:"center",gap:6,fontSize:13,color:T.text,cursor:"pointer",paddingBottom:2}}>
-                          <input type="checkbox" checked={f.capa_required} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,capa_required:e.target.checked}}))}/> CAPA Required
-                        </label>
-                      </div>
-                    </div>
-                    {f.capa_required&&(
-                      <div style={{marginBottom:8}}>
-                        <div style={{fontSize:8,color:T.muted,marginBottom:3}}>CAPA NOTES</div>
-                        <textarea value={f.capa_notes} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,capa_notes:e.target.value}}))} rows={2} placeholder="Describe corrective action planned…" style={{...inp,width:"100%",resize:"vertical",boxSizing:"border-box"}}/>
-                      </div>
-                    )}
-                    <div style={{marginBottom:8}}>
-                      <div style={{fontSize:8,color:T.muted,marginBottom:3}}>EVIDENCE LINK — Data Sheet (Google Drive / OneDrive URL)</div>
-                      <input value={f.evidence_url||""} onChange={e=>setDataForm(df=>({...df,[k.id]:{...f,evidence_url:e.target.value}}))} placeholder="https://drive.google.com/…" style={{...inp,width:"100%",boxSizing:"border-box"}}/>
-                    </div>
-                    <button onClick={()=>saveKpiData(k)} disabled={saving===k.id} style={{padding:"7px 18px",borderRadius:7,background:saveSuccess===k.id?T.green:T.goldD,border:`1px solid ${saveSuccess===k.id?T.green:T.gold}`,color:saveSuccess===k.id?T.bg:T.gold,fontSize:13,fontWeight:700,cursor:"pointer"}}>
-                      {saving===k.id?"Saving…":saveSuccess===k.id?"✅ Saved!":"💾 Save Entry"}
-                    </button>
-                  </div>
-
                   {/* History */}
                   {history.length>0&&(
                     <div style={{borderTop:`1px solid ${T.border}`,paddingTop:12}}>
                       <KpiTrendChart history={history} target={k.benchmark_value||k.target} unit={k.unit}/>
                       <div style={{fontSize:11,color:T.muted,marginBottom:8,letterSpacing:1,marginTop:12}}>TRACKING HISTORY ({history.length} entries)</div>
                       <div style={{display:"grid",gap:4}}>
-                        {history.slice(0,6).map(d=>(
+                        {history.map(d=>(
                           <div key={d.id} style={{display:"flex",gap:10,alignItems:"center",padding:"6px 10px",background:T.panel2,borderRadius:6,border:`1px solid ${d.capa_required?`${T.orange}30`:T.border}`}}>
                             <span style={{fontSize:12,color:T.muted,minWidth:60}}>{MONTHS[d.month-1]} {d.year}</span>
                             <span style={{fontSize:14,fontWeight:700,color:T.white}}>{d.value} {k.unit}</span>
