@@ -3874,6 +3874,236 @@ function KPIsScreen({ hospitalId, user }) {
   );
 }
 
+// ── SHCO FULL — KPI tab ───────────────────────────────────────────────────────
+const SHCO_KPIS=[
+  {id:1, name:"Time for initial assessment of indoor patients",  ref:"PSQ.2a", formula:"Average time",                               unit:"minutes", numLabel:"Total assessment time (min)",    denLabel:"Number of patients",          multiplier:1},
+  {id:2, name:"Incidence of medication errors",                  ref:"PSQ.2a", formula:"Errors / Opportunities × 100",              unit:"%",       numLabel:"Number of medication errors",     denLabel:"Number of opportunities",     multiplier:100},
+  {id:3, name:"Percentage of transfusion reactions",             ref:"PSQ.2a", formula:"Reactions / Units transfused × 100",        unit:"%",       numLabel:"Number of transfusion reactions", denLabel:"Units transfused",            multiplier:100},
+  {id:4, name:"Standardised Mortality Ratio ICU",                ref:"PSQ.2a", formula:"Actual deaths / Predicted deaths",          unit:"ratio",   numLabel:"Actual deaths",                   denLabel:"Predicted deaths",            multiplier:1},
+  {id:5, name:"Incidence of pressure ulcers",                    ref:"PSQ.2a", formula:"Cases / 1000 patient days",                 unit:"/1000",   numLabel:"Number of pressure ulcer cases",  denLabel:"Total patient days",          multiplier:1000},
+  {id:6, name:"Catheter associated UTI rate",                    ref:"PSQ.2b", formula:"UTIs / 1000 catheter days",                 unit:"/1000",   numLabel:"Number of catheter-associated UTIs",denLabel:"Total catheter days",       multiplier:1000},
+  {id:7, name:"Ventilator associated pneumonia rate",            ref:"PSQ.2b", formula:"VAP / 1000 ventilator days",                unit:"/1000",   numLabel:"Number of VAP events",            denLabel:"Total ventilator days",       multiplier:1000},
+  {id:8, name:"Central line bloodstream infection rate",         ref:"PSQ.2b", formula:"CLABSI / 1000 central line days",           unit:"/1000",   numLabel:"Number of CLABSI events",         denLabel:"Total central line days",     multiplier:1000},
+  {id:9, name:"Surgical site infection rate",                    ref:"PSQ.2b", formula:"SSI / Surgeries × 100",                    unit:"%",       numLabel:"Number of SSIs",                  denLabel:"Number of surgeries",         multiplier:100},
+  {id:10,name:"Hand hygiene compliance rate",                    ref:"PSQ.2b", formula:"Compliant observations / Opportunities × 100",unit:"%",     numLabel:"Compliant observations",          denLabel:"Total opportunities",         multiplier:100},
+  {id:11,name:"Antibiotic prophylaxis compliance",               ref:"PSQ.2b", formula:"Compliant / Eligible × 100",               unit:"%",       numLabel:"Compliant patients",              denLabel:"Eligible patients",           multiplier:100},
+  {id:12,name:"Waiting time for diagnostics",                    ref:"PSQ.2c", formula:"Average waiting time",                      unit:"minutes", numLabel:"Total waiting time (min)",        denLabel:"Number of patients",          multiplier:1},
+  {id:13,name:"Time taken for discharge",                        ref:"PSQ.2c", formula:"Average discharge time",                    unit:"minutes", numLabel:"Total discharge time (min)",      denLabel:"Number of discharges",        multiplier:1},
+  {id:14,name:"Incidence of patient falls",                      ref:"PSQ.2d", formula:"Falls / 1000 patient days",                 unit:"/1000",   numLabel:"Number of patient falls",         denLabel:"Total patient days",          multiplier:1000},
+  {id:15,name:"Needlestick injuries",                            ref:"PSQ.2d", formula:"Injuries / 100 occupied beds",              unit:"/100",    numLabel:"Number of needlestick injuries",  denLabel:"Total occupied beds",         multiplier:100},
+];
+
+function ShcoFullKpiTab({hospitalId}){
+  const [kpiData,setKpiData]=useState([]);
+  const [loading,setLoading]=useState(true);
+  const [expanded,setExpanded]=useState(null);
+  const [forms,setForms]=useState({});
+  const [saving,setSaving]=useState(null);
+  const [saveSuccess,setSaveSuccess]=useState(null);
+  const [calcResults,setCalcResults]=useState({});
+
+  const now=new Date(); const curMonth=now.getMonth()+1; const curYear=now.getFullYear();
+  const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  useEffect(()=>{
+    if(!hospitalId){setLoading(false);return;}
+    supabase.from('shco_kpi_data').select('*').eq('hospital_id',hospitalId)
+      .order('year',{ascending:false}).order('month',{ascending:false})
+      .then(({data})=>{setKpiData(data||[]);setLoading(false);});
+  },[hospitalId]);
+
+  const getHistory=(id)=>kpiData.filter(d=>d.kpi_id===id).sort((a,b)=>b.year-a.year||b.month-a.month);
+  const getLatest=(id)=>getHistory(id)[0];
+  const monthsTracked=(id)=>new Set(kpiData.filter(d=>d.kpi_id===id).map(d=>`${d.year}-${d.month}`)).size;
+
+  const calcValue=(kpi,num,den)=>(num/den)*kpi.multiplier;
+
+  const calcAndSave=async(kpi)=>{
+    const f=forms[kpi.id]||{};
+    const num=parseFloat(f.num); const den=parseFloat(f.den);
+    if(isNaN(num)||isNaN(den)||den===0){alert("Enter valid numerator and non-zero denominator.");return;}
+    const value=calcValue(kpi,num,den);
+    const month=f.month||curMonth; const year=f.year||curYear;
+    setCalcResults(r=>({...r,[kpi.id]:value}));
+    setSaving(kpi.id);
+    const{error}=await supabase.from('shco_kpi_data').upsert({
+      hospital_id:hospitalId,kpi_id:kpi.id,
+      numerator:num,denominator:den,
+      value:parseFloat(value.toFixed(4)),
+      month,year
+    },{onConflict:'hospital_id,kpi_id,month,year'});
+    if(!error){
+      const{data}=await supabase.from('shco_kpi_data').select('*').eq('hospital_id',hospitalId)
+        .order('year',{ascending:false}).order('month',{ascending:false});
+      setKpiData(data||[]);
+      setSaveSuccess(kpi.id);
+      setTimeout(()=>setSaveSuccess(null),2000);
+    }else{alert("Error: "+error.message);}
+    setSaving(null);
+  };
+
+  const deleteEntry=async(entryId)=>{
+    if(!window.confirm("Delete this entry?"))return;
+    const{error}=await supabase.from('shco_kpi_data').delete().eq('id',entryId);
+    if(!error)setKpiData(p=>p.filter(d=>d.id!==entryId));
+    else alert("Error: "+error.message);
+  };
+
+  const tracked=SHCO_KPIS.filter(k=>monthsTracked(k.id)>=3).length;
+  const inp={padding:'6px 9px',borderRadius:6,border:`1px solid ${T.border}`,background:T.panel,color:T.text,fontSize:13};
+
+  if(loading)return <div style={{textAlign:'center',color:T.muted,padding:40}}>Loading KPIs…</div>;
+
+  return(
+    <div style={{padding:'16px 16px 60px'}}>
+      {/* Summary bar */}
+      <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:'12px 16px',marginBottom:14}}>
+        <div style={{display:'flex',gap:16,alignItems:'center',flexWrap:'wrap'}}>
+          <div style={{flex:1}}>
+            <div style={{fontSize:11,color:T.muted,marginBottom:3,letterSpacing:1}}>KPI TRACKING STATUS</div>
+            <div style={{fontSize:14,color:tracked>=12?T.green:tracked>0?T.orange:T.red,fontWeight:700}}>
+              {tracked}/15 KPIs with ≥3 months data
+              <span style={{fontSize:11,color:T.muted,marginLeft:6}}>(required for NABH assessment)</span>
+            </div>
+            <div style={{height:4,background:T.border,borderRadius:2,marginTop:6}}>
+              <div style={{height:'100%',borderRadius:2,background:tracked>=12?T.green:tracked>0?T.orange:T.red,width:`${Math.round((tracked/15)*100)}%`,transition:'width 0.5s'}}/>
+            </div>
+          </div>
+          <div style={{textAlign:'right'}}>
+            <div style={{fontSize:20,fontWeight:700,color:T.gold}}>{Math.round((tracked/15)*100)}%</div>
+            <div style={{fontSize:11,color:T.muted}}>KPI readiness</div>
+          </div>
+        </div>
+      </div>
+
+      {/* KPI cards */}
+      <div style={{display:'grid',gap:8}}>
+        {SHCO_KPIS.map(kpi=>{
+          const isOpen=expanded===kpi.id;
+          const history=getHistory(kpi.id);
+          const latest=getLatest(kpi.id);
+          const mt=monthsTracked(kpi.id);
+          const statusColor=mt===0?T.red:mt<3?T.orange:T.green;
+          const statusLabel=mt===0?'Not started':mt<3?`${mt} month${mt>1?'s':''}`:    `${mt} months`;
+          const f=forms[kpi.id]||{};
+          const month=f.month!=null?f.month:curMonth;
+          const year=f.year!=null?f.year:curYear;
+          // trend: compare last two entries
+          const twoRecent=history.slice(0,2);
+          const trendArrow=twoRecent.length<2?null:twoRecent[0].value>twoRecent[1].value?'↑':twoRecent[0].value<twoRecent[1].value?'↓':'→';
+
+          return(
+            <div key={kpi.id} style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,overflow:'hidden'}}>
+              <div style={{padding:'12px 16px',cursor:'pointer'}} onClick={()=>{
+                setExpanded(isOpen?null:kpi.id);
+                if(!isOpen&&!forms[kpi.id])setForms(sf=>({...sf,[kpi.id]:{month:curMonth,year:curYear,num:'',den:''}}));
+              }}>
+                <div style={{display:'flex',gap:10,alignItems:'flex-start'}}>
+                  <div style={{width:28,height:28,borderRadius:6,background:T.goldD,border:`1px solid ${T.gold}30`,display:'flex',alignItems:'center',justifyContent:'center',fontSize:12,fontWeight:800,color:T.gold,flexShrink:0}}>{kpi.id}</div>
+                  <div style={{flex:1}}>
+                    <div style={{display:'flex',gap:7,alignItems:'center',marginBottom:3,flexWrap:'wrap'}}>
+                      <span style={{fontSize:14,fontWeight:700,color:T.white}}>{kpi.name}</span>
+                      <span style={{fontSize:8,padding:'2px 6px',borderRadius:4,background:`${statusColor}20`,color:statusColor}}>📊 {statusLabel}</span>
+                    </div>
+                    <div style={{display:'flex',gap:10,flexWrap:'wrap',alignItems:'center'}}>
+                      <span style={{fontSize:12,color:T.muted}}>📋 {kpi.ref}</span>
+                      <span style={{fontSize:12,color:T.muted}}>{kpi.formula} → <em>{kpi.unit}</em></span>
+                      {latest&&(
+                        <span style={{fontSize:12,color:T.blue}}>
+                          Latest: {parseFloat(latest.value).toFixed(2)} {kpi.unit} ({MONTHS[latest.month-1]} {latest.year})
+                          {trendArrow&&<span style={{marginLeft:4,fontWeight:700,color:trendArrow==='↑'?T.green:trendArrow==='↓'?T.red:T.muted}}>{trendArrow}</span>}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <span style={{fontSize:16,color:T.muted}}>{isOpen?'▲':'▼'}</span>
+                </div>
+              </div>
+
+              {isOpen&&(
+                <div style={{borderTop:`1px solid ${T.border}`,padding:'14px 16px',display:'grid',gap:12}}>
+                  {/* Formula strip */}
+                  <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+                    <div style={{background:T.goldD,border:`1px solid ${T.gold}30`,borderRadius:8,padding:'8px 12px',flex:1}}>
+                      <div style={{fontSize:11,color:T.muted,marginBottom:3}}>FORMULA</div>
+                      <div style={{fontSize:13,color:T.gold,fontWeight:700}}>{kpi.formula}</div>
+                    </div>
+                    <div style={{background:T.panel2,borderRadius:8,padding:'8px 12px',flex:1}}>
+                      <div style={{fontSize:11,color:T.muted,marginBottom:3}}>UNIT</div>
+                      <div style={{fontSize:13,color:T.text,fontWeight:700}}>{kpi.unit}</div>
+                    </div>
+                  </div>
+
+                  {/* Calculator */}
+                  <div style={{borderTop:`1px solid ${T.border}`,paddingTop:12}}>
+                    <div style={{fontSize:12,fontWeight:700,color:T.blue,marginBottom:10,letterSpacing:1}}>🧮 CALCULATOR</div>
+                    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8,marginBottom:8}}>
+                      <div>
+                        <div style={{fontSize:8,color:T.muted,marginBottom:3}}>NUMERATOR — {kpi.numLabel}</div>
+                        <input type="number" step="0.01" value={f.num||''} onChange={e=>setForms(sf=>({...sf,[kpi.id]:{...f,num:e.target.value}}))} placeholder="Enter value" style={{...inp,width:'100%',boxSizing:'border-box'}}/>
+                      </div>
+                      <div>
+                        <div style={{fontSize:8,color:T.muted,marginBottom:3}}>DENOMINATOR — {kpi.denLabel}</div>
+                        <input type="number" step="0.01" value={f.den||''} onChange={e=>setForms(sf=>({...sf,[kpi.id]:{...f,den:e.target.value}}))} placeholder="Enter value" style={{...inp,width:'100%',boxSizing:'border-box'}}/>
+                      </div>
+                    </div>
+                    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8,marginBottom:8}}>
+                      <div>
+                        <div style={{fontSize:8,color:T.muted,marginBottom:3}}>MONTH</div>
+                        <select value={month} onChange={e=>setForms(sf=>({...sf,[kpi.id]:{...f,month:parseInt(e.target.value)}}))} style={{...inp,width:'100%'}}>
+                          {MONTHS.map((m,i)=><option key={i} value={i+1}>{m}</option>)}
+                        </select>
+                      </div>
+                      <div>
+                        <div style={{fontSize:8,color:T.muted,marginBottom:3}}>YEAR</div>
+                        <select value={year} onChange={e=>setForms(sf=>({...sf,[kpi.id]:{...f,year:parseInt(e.target.value)}}))} style={{...inp,width:'100%'}}>
+                          {[curYear-1,curYear,curYear+1].map(y=><option key={y} value={y}>{y}</option>)}
+                        </select>
+                      </div>
+                    </div>
+                    <button onClick={()=>calcAndSave(kpi)} disabled={saving===kpi.id}
+                      style={{padding:'7px 18px',borderRadius:7,background:saveSuccess===kpi.id?T.green:T.goldD,border:`1px solid ${saveSuccess===kpi.id?T.green:T.gold}`,color:saveSuccess===kpi.id?T.bg:T.gold,fontSize:13,fontWeight:700,cursor:'pointer'}}>
+                      {saving===kpi.id?'Saving…':saveSuccess===kpi.id?'✅ Saved!':'🧮 Calculate & Save'}
+                    </button>
+                    {calcResults[kpi.id]!==undefined&&(
+                      <div style={{marginTop:8,fontSize:15,fontWeight:700,color:T.gold}}>
+                        Result: {calcResults[kpi.id].toFixed(2)} {kpi.unit}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* History */}
+                  {history.length>0&&(
+                    <div style={{borderTop:`1px solid ${T.border}`,paddingTop:12}}>
+                      <div style={{fontSize:11,color:T.muted,marginBottom:8,letterSpacing:1}}>TRACKING HISTORY ({history.length} entries)</div>
+                      <div style={{display:'grid',gap:4}}>
+                        {history.slice(0,6).map((d,i)=>{
+                          const prev=history[i+1];
+                          const diff=prev?parseFloat(d.value)-parseFloat(prev.value):null;
+                          const arrow=diff===null?null:diff>0?'↑':diff<0?'↓':'→';
+                          return(
+                            <div key={d.id} style={{display:'flex',gap:10,alignItems:'center',padding:'6px 10px',background:T.panel2,borderRadius:6,border:`1px solid ${T.border}`}}>
+                              <span style={{fontSize:12,color:T.muted,minWidth:60}}>{MONTHS[d.month-1]} {d.year}</span>
+                              <span style={{fontSize:14,fontWeight:700,color:T.white}}>{parseFloat(d.value).toFixed(2)} {kpi.unit}</span>
+                              {arrow&&<span style={{fontSize:13,fontWeight:700,color:arrow==='↑'?T.green:arrow==='↓'?T.red:T.muted}}>{arrow}</span>}
+                              {diff!==null&&<span style={{fontSize:11,color:T.muted}}>{diff>0?'+':''}{diff.toFixed(2)} vs {MONTHS[prev.month-1]}</span>}
+                              <button onClick={()=>deleteEntry(d.id)} style={{marginLeft:'auto',padding:'2px 8px',borderRadius:5,background:'transparent',border:`1px solid ${T.red}40`,color:T.red,fontSize:11,cursor:'pointer'}}>Delete</button>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 // ── AUDITS — shared constants & styles ────────────────────────────────────────────────────────────
 
 const AUDIT_CATEGORIES=[
@@ -7597,6 +7827,7 @@ export default function App() {
             {key:'dashboard',label:'📊 Dashboard'},
             {key:'scoring',  label:'✏️ Score OEs', tourId:'shco-tour-score'},
             {key:'fixgaps',  label:`🔧 Fix Gaps${allGaps.length>0?' ('+allGaps.length+')':''}`, tourId:'shco-tour-fixgaps'},
+            {key:'kpis',     label:'📈 KPIs'},
           ].map(tab=>(
             <button key={tab.key} id={tab.tourId||undefined} onClick={()=>setShcoFullTab(tab.key)}
               style={{padding:'12px 16px',border:'none',cursor:'pointer',background:'transparent',fontSize:13,fontWeight:600,
@@ -7612,7 +7843,7 @@ export default function App() {
             {shcoFullPdfLoading ? '⏳ Generating…' : '⬇ Download Gap Report'}
           </button>
         </div>
-        {shcoFullTab==='dashboard' ? renderDashboard() : shcoFullTab==='scoring' ? renderScoreOEs() : renderFixGaps()}
+        {shcoFullTab==='dashboard' ? renderDashboard() : shcoFullTab==='scoring' ? renderScoreOEs() : shcoFullTab==='kpis' ? <ShcoFullKpiTab hospitalId={context?.hospitalId}/> : renderFixGaps()}
       </div>
     );
   };
