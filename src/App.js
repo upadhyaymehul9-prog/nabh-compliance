@@ -2364,6 +2364,17 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
       icon: "📋",
       color: T.green,
     },
+    {
+      key: "eco_full",
+      title: "Eye Care Organisation (ECO)",
+      subtitle: "Full Accreditation",
+      badge: "302 OEs",
+      tags: ["Eye Care", "Full Accreditation"],
+      desc: "Full NABH accreditation for Eye Care Organisations. Comprehensive quality programme covering all eye care OEs.",
+      available: true,
+      icon: "👁️",
+      color: "#06b6d4",
+    },
   ];
 
   const handleNotify = async (programme) => {
@@ -2421,15 +2432,6 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
         {/* ── Coming Soon cards ── */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16, opacity: 0.82 }}>
           {[
-            {
-              key: "eye_hospital",
-              icon: "👁️",
-              title: "Eye Hospital Accreditation",
-              subtitle: "Ophthalmology Accreditation",
-              color: T.blue,
-              tags: ["Ophthalmology", "Day Care"],
-              desc: "Dedicated NABH accreditation pathway for eye hospitals and ophthalmology day-care centres.",
-            },
             {
               key: "ayush_hospital",
               icon: "🌿",
@@ -3905,6 +3907,228 @@ function KPIsScreen({ hospitalId, user }) {
           );
         })}
         {filtered.length===0&&<div style={{textAlign:"center",color:T.muted,padding:30,fontSize:14}}>No KPIs match.</div>}
+      </div>
+    </div>
+  );
+}
+
+// ── ECO FULL — KPI tab ────────────────────────────────────────────────────────
+const ECO_KPIS=[
+  {id:1,  name:"Average OPD waiting time",                          ref:"AAC.1",  formula:"Total waiting time / Patients",        unit:"minutes", numLabel:"Total waiting time (min)",         denLabel:"Number of patients",          multiplier:1},
+  {id:2,  name:"Incidence of medication errors",                    ref:"PSQ.2a", formula:"Errors / Opportunities × 100",        unit:"%",       numLabel:"Number of medication errors",      denLabel:"Number of opportunities",     multiplier:100},
+  {id:3,  name:"Percentage of surgical site infections (eye)",      ref:"HIC.1",  formula:"SSI / Surgeries × 100",               unit:"%",       numLabel:"Number of SSIs",                   denLabel:"Number of eye surgeries",     multiplier:100},
+  {id:4,  name:"Unplanned return to OT rate",                       ref:"COP.1",  formula:"Returns / Surgeries × 100",           unit:"%",       numLabel:"Unplanned returns to OT",          denLabel:"Total surgeries",             multiplier:100},
+  {id:5,  name:"Visual acuity improvement rate (post-surgery)",     ref:"COP.2",  formula:"Improved / Operated × 100",           unit:"%",       numLabel:"Patients with improved VA",        denLabel:"Total operated patients",     multiplier:100},
+  {id:6,  name:"Hand hygiene compliance rate",                      ref:"HIC.2",  formula:"Compliant / Opportunities × 100",     unit:"%",       numLabel:"Compliant observations",           denLabel:"Total opportunities",         multiplier:100},
+  {id:7,  name:"Incidence of patient falls",                        ref:"PSQ.2d", formula:"Falls / 1000 patient days",           unit:"/1000",   numLabel:"Number of patient falls",          denLabel:"Total patient days",          multiplier:1000},
+  {id:8,  name:"Needlestick injuries rate",                         ref:"HRM.1",  formula:"Injuries / 100 occupied beds",        unit:"/100",    numLabel:"Number of needlestick injuries",   denLabel:"Total occupied beds",         multiplier:100},
+  {id:9,  name:"Percentage of IOL power accuracy",                  ref:"COP.3",  formula:"Accurate / Total × 100",              unit:"%",       numLabel:"Cases with accurate IOL power",    denLabel:"Total IOL cases",             multiplier:100},
+  {id:10, name:"Antibiotic prophylaxis compliance (eye surgery)",   ref:"MOM.1",  formula:"Compliant / Eligible × 100",          unit:"%",       numLabel:"Compliant patients",               denLabel:"Eligible patients",           multiplier:100},
+  {id:11, name:"Patient satisfaction score",                        ref:"PRE.1",  formula:"Satisfied / Surveyed × 100",          unit:"%",       numLabel:"Satisfied patients",               denLabel:"Total surveyed patients",     multiplier:100},
+  {id:12, name:"Waiting time for diagnostics",                      ref:"AAC.2",  formula:"Average waiting time",                unit:"minutes", numLabel:"Total waiting time (min)",         denLabel:"Number of patients",          multiplier:1},
+  {id:13, name:"Time taken for discharge",                          ref:"AAC.3",  formula:"Average discharge time",              unit:"minutes", numLabel:"Total discharge time (min)",       denLabel:"Number of discharges",        multiplier:1},
+  {id:14, name:"Percentage of corneal transplant survival",         ref:"COP.4",  formula:"Successful / Total × 100",            unit:"%",       numLabel:"Successful graft cases",           denLabel:"Total corneal transplants",   multiplier:100},
+  {id:15, name:"Instrument sterilisation compliance rate",          ref:"HIC.3",  formula:"Compliant instruments / Total × 100", unit:"%",       numLabel:"Compliant sterilised instruments", denLabel:"Total instruments processed", multiplier:100},
+];
+
+function EcoFullKpiTab({hospitalId}){
+  const [kpiData,setKpiData]=useState([]);
+  const [loading,setLoading]=useState(true);
+  const [expanded,setExpanded]=useState(null);
+  const [forms,setForms]=useState({});
+  const [saving,setSaving]=useState(null);
+  const [saveSuccess,setSaveSuccess]=useState(null);
+  const [calcResults,setCalcResults]=useState({});
+
+  const now=new Date(); const curMonth=now.getMonth()+1; const curYear=now.getFullYear();
+  const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  useEffect(()=>{
+    if(!hospitalId){setLoading(false);return;}
+    supabase.from('eco_kpi_data').select('*').eq('hospital_id',hospitalId)
+      .order('year',{ascending:false}).order('month',{ascending:false})
+      .then(({data})=>{setKpiData(data||[]);setLoading(false);});
+  },[hospitalId]);
+
+  const getHistory=(id)=>kpiData.filter(d=>d.kpi_id===id).sort((a,b)=>b.year-a.year||b.month-a.month);
+  const getLatest=(id)=>getHistory(id)[0];
+  const monthsTracked=(id)=>new Set(kpiData.filter(d=>d.kpi_id===id).map(d=>`${d.year}-${d.month}`)).size;
+
+  const calcValue=(kpi,num,den)=>(num/den)*kpi.multiplier;
+
+  const calcAndSave=async(kpi)=>{
+    const f=forms[kpi.id]||{};
+    const num=parseFloat(f.num); const den=parseFloat(f.den);
+    if(isNaN(num)||isNaN(den)||den===0){alert("Enter valid numerator and non-zero denominator.");return;}
+    const value=calcValue(kpi,num,den);
+    const month=f.month||curMonth; const year=f.year||curYear;
+    setCalcResults(r=>({...r,[kpi.id]:value}));
+    setSaving(kpi.id);
+    const{error}=await supabase.from('eco_kpi_data').upsert({
+      hospital_id:hospitalId,kpi_id:kpi.id,
+      numerator:num,denominator:den,
+      value:parseFloat(value.toFixed(4)),
+      month,year
+    },{onConflict:'hospital_id,kpi_id,month,year'});
+    if(!error){
+      const{data}=await supabase.from('eco_kpi_data').select('*').eq('hospital_id',hospitalId)
+        .order('year',{ascending:false}).order('month',{ascending:false});
+      setKpiData(data||[]);
+      setSaveSuccess(kpi.id);
+      setTimeout(()=>setSaveSuccess(null),2000);
+    }else{alert("Error: "+error.message);}
+    setSaving(null);
+  };
+
+  const deleteEntry=async(entryId)=>{
+    if(!window.confirm("Delete this entry?"))return;
+    const{error}=await supabase.from('eco_kpi_data').delete().eq('id',entryId);
+    if(!error)setKpiData(p=>p.filter(d=>d.id!==entryId));
+    else alert("Error: "+error.message);
+  };
+
+  const tracked=ECO_KPIS.filter(k=>monthsTracked(k.id)>=3).length;
+  const inp={padding:'6px 9px',borderRadius:6,border:`1px solid ${T.border}`,background:T.panel,color:T.text,fontSize:13};
+
+  if(loading)return <div style={{textAlign:'center',color:T.muted,padding:40}}>Loading KPIs…</div>;
+
+  return(
+    <div style={{padding:'16px 16px 60px'}}>
+      <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:'12px 16px',marginBottom:14}}>
+        <div style={{display:'flex',gap:16,alignItems:'center',flexWrap:'wrap'}}>
+          <div style={{flex:1}}>
+            <div style={{fontSize:11,color:T.muted,marginBottom:3,letterSpacing:1}}>KPI TRACKING STATUS</div>
+            <div style={{fontSize:14,color:tracked>=12?T.green:tracked>0?T.orange:T.red,fontWeight:700}}>
+              {tracked}/15 KPIs with ≥3 months data
+              <span style={{fontSize:11,color:T.muted,marginLeft:6}}>(required for NABH assessment)</span>
+            </div>
+            <div style={{height:4,background:T.border,borderRadius:2,marginTop:6}}>
+              <div style={{height:'100%',borderRadius:2,background:tracked>=12?T.green:tracked>0?T.orange:T.red,width:`${Math.round((tracked/15)*100)}%`,transition:'width 0.5s'}}/>
+            </div>
+          </div>
+          <div style={{textAlign:'right'}}>
+            <div style={{fontSize:20,fontWeight:700,color:'#06b6d4'}}>{Math.round((tracked/15)*100)}%</div>
+            <div style={{fontSize:11,color:T.muted}}>KPI readiness</div>
+          </div>
+        </div>
+      </div>
+
+      <div style={{display:'grid',gap:8}}>
+        {ECO_KPIS.map(kpi=>{
+          const isOpen=expanded===kpi.id;
+          const history=getHistory(kpi.id);
+          const latest=getLatest(kpi.id);
+          const mt=monthsTracked(kpi.id);
+          const statusColor=mt===0?T.red:mt<3?T.orange:T.green;
+          const statusLabel=mt===0?'Not started':mt<3?`${mt} month${mt>1?'s':''}`:    `${mt} months`;
+          const f=forms[kpi.id]||{};
+          const month=f.month!=null?f.month:curMonth;
+          const year=f.year!=null?f.year:curYear;
+          const twoRecent=history.slice(0,2);
+          const trendArrow=twoRecent.length<2?null:twoRecent[0].value>twoRecent[1].value?'↑':twoRecent[0].value<twoRecent[1].value?'↓':'→';
+
+          return(
+            <div key={kpi.id} style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,overflow:'hidden'}}>
+              <div style={{padding:'12px 16px',cursor:'pointer'}} onClick={()=>{
+                setExpanded(isOpen?null:kpi.id);
+                if(!isOpen&&!forms[kpi.id])setForms(sf=>({...sf,[kpi.id]:{month:curMonth,year:curYear,num:'',den:''}}));
+              }}>
+                <div style={{display:'flex',gap:10,alignItems:'flex-start'}}>
+                  <div style={{width:28,height:28,borderRadius:6,background:'rgba(6,182,212,0.10)',border:'1px solid rgba(6,182,212,0.30)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:12,fontWeight:800,color:'#06b6d4',flexShrink:0}}>{kpi.id}</div>
+                  <div style={{flex:1}}>
+                    <div style={{display:'flex',gap:7,alignItems:'center',marginBottom:3,flexWrap:'wrap'}}>
+                      <span style={{fontSize:14,fontWeight:700,color:T.white}}>{kpi.name}</span>
+                      <span style={{fontSize:8,padding:'2px 6px',borderRadius:4,background:`${statusColor}20`,color:statusColor}}>📊 {statusLabel}</span>
+                    </div>
+                    <div style={{display:'flex',gap:10,flexWrap:'wrap',alignItems:'center'}}>
+                      <span style={{fontSize:12,color:T.muted}}>📋 {kpi.ref}</span>
+                      <span style={{fontSize:12,color:T.muted}}>{kpi.formula} → <em>{kpi.unit}</em></span>
+                      {latest&&(
+                        <span style={{fontSize:12,color:T.blue}}>
+                          Latest: {parseFloat(latest.value).toFixed(2)} {kpi.unit} ({MONTHS[latest.month-1]} {latest.year})
+                          {trendArrow&&<span style={{marginLeft:4,fontWeight:700,color:trendArrow==='↑'?T.green:trendArrow==='↓'?T.red:T.muted}}>{trendArrow}</span>}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <span style={{fontSize:16,color:T.muted}}>{isOpen?'▲':'▼'}</span>
+                </div>
+              </div>
+
+              {isOpen&&(
+                <div style={{borderTop:`1px solid ${T.border}`,padding:'14px 16px',display:'grid',gap:12}}>
+                  <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+                    <div style={{background:'rgba(6,182,212,0.08)',border:'1px solid rgba(6,182,212,0.20)',borderRadius:8,padding:'8px 12px',flex:1}}>
+                      <div style={{fontSize:10,color:'#06b6d4',marginBottom:4,fontWeight:700}}>FORMULA</div>
+                      <div style={{fontSize:12,color:T.text}}>{kpi.formula}</div>
+                    </div>
+                    <div style={{background:T.panel2,border:`1px solid ${T.border}`,borderRadius:8,padding:'8px 12px'}}>
+                      <div style={{fontSize:10,color:T.muted,marginBottom:4}}>UNIT</div>
+                      <div style={{fontSize:13,fontWeight:700,color:'#06b6d4'}}>{kpi.unit}</div>
+                    </div>
+                    {calcResults[kpi.id]!=null&&(
+                      <div style={{background:T.greenD,border:`1px solid ${T.green}44`,borderRadius:8,padding:'8px 12px'}}>
+                        <div style={{fontSize:10,color:T.green,marginBottom:4}}>RESULT</div>
+                        <div style={{fontSize:13,fontWeight:700,color:T.green}}>{parseFloat(calcResults[kpi.id].toFixed(4))} {kpi.unit}</div>
+                      </div>
+                    )}
+                  </div>
+
+                  <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))',gap:8}}>
+                    <div>
+                      <div style={{fontSize:11,color:T.muted,marginBottom:4}}>{kpi.numLabel}</div>
+                      <input value={f.num||''} onChange={e=>setForms(sf=>({...sf,[kpi.id]:{...f,num:e.target.value}}))}
+                        placeholder="Numerator" type="number" min="0" style={{...inp,width:'100%',boxSizing:'border-box'}}/>
+                    </div>
+                    <div>
+                      <div style={{fontSize:11,color:T.muted,marginBottom:4}}>{kpi.denLabel}</div>
+                      <input value={f.den||''} onChange={e=>setForms(sf=>({...sf,[kpi.id]:{...f,den:e.target.value}}))}
+                        placeholder="Denominator" type="number" min="0" style={{...inp,width:'100%',boxSizing:'border-box'}}/>
+                    </div>
+                    <div>
+                      <div style={{fontSize:11,color:T.muted,marginBottom:4}}>MONTH</div>
+                      <select value={month} onChange={e=>setForms(sf=>({...sf,[kpi.id]:{...f,month:parseInt(e.target.value)}}))} style={{...inp,width:'100%',boxSizing:'border-box'}}>
+                        {MONTHS.map((m,i)=><option key={m} value={i+1}>{m}</option>)}
+                      </select>
+                    </div>
+                    <div>
+                      <div style={{fontSize:11,color:T.muted,marginBottom:4}}>YEAR</div>
+                      <input value={year||''} onChange={e=>setForms(sf=>({...sf,[kpi.id]:{...f,year:parseInt(e.target.value)}}))}
+                        type="number" min="2020" style={{...inp,width:'100%',boxSizing:'border-box'}}/>
+                    </div>
+                  </div>
+
+                  <div style={{display:'flex',gap:8,alignItems:'center',flexWrap:'wrap'}}>
+                    <button onClick={()=>calcAndSave(kpi)} disabled={saving===kpi.id}
+                      style={{padding:'8px 20px',borderRadius:8,background:'linear-gradient(135deg,#06b6d4,#0891b2)',border:'none',color:'#fff',fontSize:13,fontWeight:700,cursor:'pointer',opacity:saving===kpi.id?0.6:1}}>
+                      {saving===kpi.id?'Saving…':'Calculate & Save'}
+                    </button>
+                    {saveSuccess===kpi.id&&<span style={{fontSize:13,color:T.green}}>✓ Saved</span>}
+                  </div>
+
+                  {history.length>0&&(
+                    <div>
+                      <div style={{fontSize:11,color:T.muted,marginBottom:6,letterSpacing:1}}>HISTORY</div>
+                      <div style={{display:'grid',gap:4}}>
+                        {history.slice(0,6).map(d=>(
+                          <div key={d.id} style={{display:'flex',alignItems:'center',gap:10,padding:'6px 10px',borderRadius:7,background:T.panel2,border:`1px solid ${T.border}`}}>
+                            <span style={{fontSize:12,color:T.muted,minWidth:70}}>{MONTHS[d.month-1]} {d.year}</span>
+                            <span style={{fontSize:13,fontWeight:700,color:'#06b6d4'}}>{parseFloat(d.value).toFixed(2)} {kpi.unit}</span>
+                            <span style={{fontSize:11,color:T.muted}}>{d.numerator} / {d.denominator}</span>
+                            <button onClick={()=>deleteEntry(d.id)}
+                              style={{marginLeft:'auto',fontSize:11,color:T.red,background:'transparent',border:`1px solid ${T.red}44`,borderRadius:6,padding:'2px 8px',cursor:'pointer'}}>
+                              Delete
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -5428,6 +5652,22 @@ export default function App() {
   const [shcoFullCapaForm, setShcoFullCapaForm] = useState({});
   const [shcoFullCapaSaving, setShcoFullCapaSaving] = useState({});
   const [shcoFullCapaDb, setShcoFullCapaDb] = useState({});
+  const [ecoFullOes, setEcoFullOes] = useState([]);
+  const [ecoFullScores, setEcoFullScores] = useState({});
+  const [ecoFullScoreSaving, setEcoFullScoreSaving] = useState({});
+  const [ecoFullChapter, setEcoFullChapter] = useState('all');
+  const [ecoFullLevel, setEcoFullLevel] = useState('all');
+  const [ecoFullLoading, setEcoFullLoading] = useState(false);
+  const [ecoFullAssessType, setEcoFullAssessType] = useState('final');
+  const [ecoFullTab, setEcoFullTab] = useState('dashboard');
+  const [ecoFullSearch, setEcoFullSearch] = useState('');
+  const [ecoFullPdfLoading, setEcoFullPdfLoading] = useState(false);
+  const [ecoFullShowTip, setEcoFullShowTip] = useState({});
+  const [ecoFullGapFilter, setEcoFullGapFilter] = useState('ALL');
+  const [ecoFullGapSearch, setEcoFullGapSearch] = useState('');
+  const [ecoFullCapaForm, setEcoFullCapaForm] = useState({});
+  const [ecoFullCapaSaving, setEcoFullCapaSaving] = useState({});
+  const [ecoFullCapaDb, setEcoFullCapaDb] = useState({});
 
   // Reassign module-level T so all component closures see the correct theme
   T = theme === 'light' ? LIGHT_THEME : DARK_THEME;
@@ -5440,7 +5680,7 @@ export default function App() {
     }
   };
 
-  const activeSteps = selectedProgramme === 'shco-full' ? SHCO_FULL_TOUR_STEPS : TOUR_STEPS;
+  const activeSteps = (selectedProgramme === 'shco-full' || selectedProgramme === 'eco-full') ? SHCO_FULL_TOUR_STEPS : TOUR_STEPS;
   activeStepsRef.current = activeSteps;
 
   const dismissTour = useCallback(async () => {
@@ -6116,6 +6356,388 @@ export default function App() {
     setShcoFullPdfLoading(false);
   };
 
+  const generateEcoFullPDF = async () => {
+    setEcoFullPdfLoading(true);
+    try {
+      const doc = new jsPDF({ unit:'pt', format:'a4' });
+      const W = doc.internal.pageSize.getWidth();
+      const H = doc.internal.pageSize.getHeight();
+      const today = new Date();
+      const dateStr = today.toLocaleDateString('en-IN',{day:'2-digit',month:'long',year:'numeric'});
+      const fileDateStr = String(today.getDate()).padStart(2,'0')+String(today.getMonth()+1).padStart(2,'0')+today.getFullYear();
+      const cleanHospital = (context?.hospitalName||'Organisation').replace(/\s+(New|Trial|Active|Expired)$/i,'').trim();
+      const assessTypeLabel = ecoFullAssessType==='final' ? 'Final Assessment'
+                            : ecoFullAssessType==='surveillance' ? 'Surveillance Assessment'
+                            : 'Re-accreditation Assessment';
+
+      // Derive chapters from loaded OE data
+      const ecoChapterKeys = [...new Set(ecoFullOes.map(oe=>oe.chapter))].filter(Boolean).sort();
+      const ECO_CHAPTERS = ecoChapterKeys.map(key=>{
+        const chOe = ecoFullOes.find(oe=>oe.chapter===key);
+        return {key, name: chOe?.chapter_name || key};
+      });
+
+      const coreCommOEs = ecoFullOes.filter(oe=>oe.level==='Core'||oe.level==='Commitment');
+      const achieveOEs  = ecoFullOes.filter(oe=>oe.level==='Achievement');
+      const excelOEs    = ecoFullOes.filter(oe=>oe.level==='Excellence');
+      const coreOEs     = ecoFullOes.filter(oe=>oe.level==='Core');
+      const relevantOEs = ecoFullAssessType==='final'        ? coreCommOEs
+                        : ecoFullAssessType==='surveillance' ? ecoFullOes.filter(oe=>oe.level!=='Excellence')
+                        : ecoFullOes;
+
+      const compliance = arr => arr.length>0
+        ? Math.round(arr.reduce((a,oe)=>a+(ecoFullScores[oe.oe_code]||0),0)/(arr.length*5)*100) : 0;
+
+      const ccPct    = compliance(coreCommOEs);
+      const achPct   = compliance(achieveOEs);
+      const excelPct = compliance(excelOEs);
+
+      const chStats = ECO_CHAPTERS.map(c=>{
+        const chOes    = relevantOEs.filter(oe=>oe.chapter===c.key);
+        const chScored = chOes.filter(oe=>ecoFullScores[oe.oe_code]);
+        const chAvg    = chScored.length>0 ? chScored.reduce((a,oe)=>a+ecoFullScores[oe.oe_code],0)/chScored.length : null;
+        const totalCount = ecoFullOes.filter(oe=>oe.chapter===c.key).length;
+        const pct = chAvg!==null ? Math.round(chAvg/5*100) : null;
+        return {...c, relevantCount:chOes.length, totalCount, scoredCount:chScored.length, avg:chAvg, pct };
+      });
+
+      const maxLowPerStd = ecoFullAssessType==='renewal' ? 0 : 1;
+      const stdMap={};
+      relevantOEs.forEach(oe=>{
+        if(!stdMap[oe.standard_code])stdMap[oe.standard_code]={oes:[]};
+        stdMap[oe.standard_code].oes.push(oe);
+      });
+      const stdChecks = Object.entries(stdMap).map(([code,{oes}])=>{
+        const scored = oes.filter(oe=>ecoFullScores[oe.oe_code]);
+        const avg    = scored.length>0 ? scored.reduce((a,oe)=>a+ecoFullScores[oe.oe_code],0)/scored.length : null;
+        const atOrBelow2 = oes.filter(oe=>ecoFullScores[oe.oe_code]&&ecoFullScores[oe.oe_code]<=2).length;
+        return {code,avg,atOrBelow2};
+      });
+      const chapAvgFails = chStats.filter(c=>c.avg!==null&&c.avg<4);
+      const corePass  = coreOEs.every(oe=>ecoFullScores[oe.oe_code]&&ecoFullScores[oe.oe_code]>=4);
+      const rule1Pass = corePass;
+      const rule2Pass = ccPct>=80;
+      const rule3Pass = stdChecks.every(s=>s.atOrBelow2<=maxLowPerStd);
+      const rule4Pass = stdChecks.every(s=>s.avg===null||s.avg>=4);
+      const rule5Pass = chapAvgFails.length===0;
+      const allRulesPass = rule1Pass&&rule2Pass&&rule3Pass&&rule4Pass&&rule5Pass;
+
+      const rules = [
+        {label:'All Core OEs must score ≥4',            detail:`${coreOEs.length} Core OEs — every one must reach Good compliance`,       pass:rule1Pass},
+        {label:`Core + Commitment overall ≥80% (${coreCommOEs.length} OEs)`, detail:`Current: ${ccPct}% — threshold: 80%`,                  pass:rule2Pass},
+        {label:'No standard with >'+maxLowPerStd+' OE(s) scored ≤2', detail:`${stdChecks.filter(s=>s.atOrBelow2>maxLowPerStd).length} standard(s) failing this rule`, pass:rule3Pass},
+        {label:'Average score per standard ≥4',         detail:`${stdChecks.filter(s=>s.avg!==null&&s.avg<4).length} standard(s) below 4 average`,                     pass:rule4Pass},
+        {label:'Average score per chapter ≥4',          detail:`${chapAvgFails.length} chapter(s) below 4 average`,                         pass:rule5Pass},
+      ];
+      if(ecoFullAssessType==='surveillance'||ecoFullAssessType==='renewal'){
+        rules.push({label:`Achievement overall ≥80% (${achieveOEs.length} OEs)`, detail:`Current: ${achPct}%`, pass:achPct>=80});
+      }
+      if(ecoFullAssessType==='renewal'){
+        rules.push({label:`Excellence overall ≥80% (${excelOEs.length} OEs)`, detail:`Current: ${excelPct}%`, pass:excelPct>=80});
+      }
+
+      const weakOEs = relevantOEs.filter(oe=>ecoFullScores[oe.oe_code]&&ecoFullScores[oe.oe_code]<=3)
+        .sort((a,b)=>ecoFullScores[a.oe_code]-ecoFullScores[b.oe_code]||a.oe_code.localeCompare(b.oe_code));
+      const criticalOEs = coreOEs.filter(oe=>ecoFullScores[oe.oe_code]&&ecoFullScores[oe.oe_code]<4);
+      const scoredCount = relevantOEs.filter(oe=>ecoFullScores[oe.oe_code]).length;
+
+      const scoreLabel = ['','No compliance','Poor compliance','Partial compliance','Good compliance','Full compliance'];
+      const scoreCol   = s => s===1||s===2 ? '#e05a5a' : s===3 ? '#f4a441' : s>=4 ? '#4caf7d' : '#3a5870';
+
+      const newPage = () => {
+        doc.addPage();
+        doc.setFillColor('#050e1a'); doc.rect(0,0,W,H,'F');
+        doc.setFillColor('#06b6d4'); doc.rect(0,0,W,4,'F');
+      };
+
+      // PAGE 1: COVER
+      doc.setFillColor('#050e1a'); doc.rect(0,0,W,H,'F');
+      doc.setFillColor('#06b6d4'); doc.rect(0,0,W,6,'F');
+
+      doc.setFontSize(9); doc.setTextColor('#06b6d4');
+      doc.text('ACCREDREADY · NABH ECO FULL ACCREDITATION',W/2,58,{align:'center'});
+      doc.setFontSize(27); doc.setTextColor('#eef4f9');
+      doc.text('NABH ECO Gap Assessment Report',W/2,106,{align:'center'});
+      doc.setDrawColor('#06b6d4'); doc.setLineWidth(0.5);
+      doc.line(60,124,W-60,124);
+
+      doc.setFontSize(22); doc.setTextColor('#06b6d4');
+      const hospLines = doc.splitTextToSize(cleanHospital, W-160);
+      doc.text(hospLines, W/2, 160, {align:'center'});
+      const afterHosp = 160 + (hospLines.length-1)*28;
+      doc.setFontSize(11); doc.setTextColor('#c8dcea');
+      doc.text(assessTypeLabel, W/2, afterHosp+26, {align:'center'});
+      doc.setFontSize(9); doc.setTextColor('#3a5870');
+      doc.text(`Generated on ${dateStr}`, W/2, afterHosp+44, {align:'center'});
+
+      const oePct = ccPct;
+      const passCol  = oePct>=80 ? '#4caf7d' : oePct>=60 ? '#f4a441' : '#e05a5a';
+      const verdictText = allRulesPass ? 'ACCREDITATION READY' : oePct>=80 ? 'RULES INCOMPLETE' : 'NOT READY';
+
+      doc.setFontSize(72); doc.setTextColor(passCol);
+      doc.text(`${oePct}%`,W/2, afterHosp+148,{align:'center'});
+      doc.setFontSize(11); doc.setTextColor('#c8dcea');
+      doc.text('CORE + COMMITMENT COMPLIANCE',W/2, afterHosp+172,{align:'center'});
+      doc.setFontSize(20); doc.setTextColor(passCol);
+      doc.text(`VERDICT: ${verdictText}`,W/2, afterHosp+208,{align:'center'});
+
+      const statY = afterHosp+248;
+      const stats3=[
+        [`${scoredCount} / ${relevantOEs.length}`, 'Relevant OEs Scored'],
+        [`${weakOEs.length}`,                       'Weak OEs (score ≤3)'],
+        [`${criticalOEs.length}`,                   'Core OEs below 4'],
+      ];
+      const colW=(W-120)/3;
+      stats3.forEach(([val,lbl],i)=>{
+        const cx=60+colW*i+colW/2;
+        doc.setFillColor('#081525'); doc.roundedRect(60+colW*i+4, statY-20, colW-8, 46, 4,4,'F');
+        doc.setFontSize(22); doc.setTextColor('#06b6d4');
+        doc.text(val, cx, statY+4, {align:'center'});
+        doc.setFontSize(8); doc.setTextColor('#3a5870');
+        doc.text(lbl, cx, statY+20, {align:'center'});
+      });
+
+      doc.setFontSize(7); doc.setTextColor('#3a5870');
+      doc.text('Generated by accredready.in — Independent educational tool — Not affiliated with NABH/QCI',W/2,H-28,{align:'center'});
+
+      // PAGE 2: ACCREDITATION RULES
+      newPage();
+      let y=50;
+      doc.setFontSize(16); doc.setTextColor('#eef4f9');
+      doc.text('Accreditation Rules',60,y); y+=10;
+      doc.setDrawColor('#0f2640'); doc.setLineWidth(0.5);
+      doc.line(60,y,W-60,y); y+=24;
+      doc.setFontSize(8); doc.setTextColor('#3a5870');
+      doc.text(`ASSESSMENT TYPE: ${assessTypeLabel.toUpperCase()} · ${rules.filter(r=>r.pass).length} of ${rules.length} RULES PASSING`,60,y); y+=18;
+
+      rules.forEach(r=>{
+        if(y>H-60){ newPage(); y=50; }
+        doc.setFillColor(r.pass?'#061810':'#180606');
+        doc.roundedRect(60,y-14,W-120,32,3,3,'F');
+        doc.setFillColor(r.pass?'#4caf7d':'#e05a5a');
+        doc.roundedRect(W-106,y-7,40,16,3,3,'F');
+        doc.setFontSize(8); doc.setTextColor('#050e1a');
+        doc.text(r.pass?'PASS':'FAIL',W-86,y+3,{align:'center'});
+        doc.setFontSize(10); doc.setTextColor('#eef4f9');
+        doc.text(r.label,76,y-2);
+        doc.setFontSize(8); doc.setTextColor('#8aadcc');
+        doc.text(r.detail,76,y+11);
+        y+=40;
+      });
+
+      // CHAPTER-WISE TABLE
+      y+=16;
+      if(y>H-220){ newPage(); y=50; }
+      doc.setFontSize(14); doc.setTextColor('#eef4f9');
+      doc.text('Chapter-wise Compliance',60,y); y+=10;
+      doc.setDrawColor('#0f2640'); doc.line(60,y,W-60,y); y+=20;
+
+      const chC1=64,chC2=108,chC3=312,chC4=368,chC5=424,chC6=530;
+      doc.setFillColor('#081525'); doc.rect(60,y-13,W-120,20,'F');
+      doc.setFontSize(8); doc.setTextColor('#06b6d4');
+      doc.text('CH',chC1,y-2);
+      doc.text('CHAPTER NAME',chC2,y-2);
+      doc.text('RELEV.',chC3,y-2);
+      doc.text('SCORED',chC4,y-2);
+      doc.text('COMPLIANCE',chC5,y-2);
+      doc.text('STATUS',chC6,y-2,{align:'right'});
+      y+=14;
+
+      chStats.forEach(c=>{
+        if(y>H-40){ newPage(); y=50; }
+        const pctVal = c.pct!==null ? c.pct : null;
+        const pass   = pctVal!==null&&pctVal>=80;
+        const rowBg  = pctVal===null ? '#0a1520' : pass ? '#061810' : pctVal>=60 ? '#14100a' : '#180606';
+        const valCol = pctVal===null ? '#3a5870' : pass ? '#4caf7d' : pctVal>=60 ? '#f4a441' : '#e05a5a';
+        doc.setFontSize(8);
+        const nameLines = doc.splitTextToSize(c.name, 200);
+        const chRowH = Math.max(20, nameLines.length*10+6);
+        doc.setFillColor(rowBg); doc.rect(60,y-12,W-120,chRowH,'F');
+        doc.setFontSize(9); doc.setTextColor('#06b6d4');
+        doc.text(c.key,chC1,y-1);
+        doc.setFontSize(8); doc.setTextColor('#c8dcea');
+        nameLines.forEach((line,i)=>doc.text(line,chC2,y-1+i*10));
+        doc.setFontSize(8); doc.setTextColor('#8aadcc');
+        doc.text(String(c.relevantCount),chC3,y-1);
+        doc.text(String(c.scoredCount),chC4,y-1);
+        doc.setTextColor(valCol);
+        doc.text(pctVal!==null?`${pctVal}%`:'—',chC5,y-1);
+        doc.setFontSize(7);
+        doc.text(pctVal===null?'UNSCORED':pass?'PASS':'FAIL',chC6,y-1,{align:'right'});
+        y+=chRowH+2;
+      });
+
+      // PAGE 3+: WEAK OEs
+      newPage(); y=50;
+      doc.setFontSize(16); doc.setTextColor('#eef4f9');
+      doc.text('Gap Analysis — Weak OEs (Score ≤3)',60,y); y+=10;
+      doc.setDrawColor('#0f2640'); doc.line(60,y,W-60,y); y+=18;
+      doc.setFontSize(8); doc.setTextColor('#3a5870');
+      doc.text(`${weakOEs.length} OE(s) scoring ≤3 require attention. Grouped by chapter.`,60,y); y+=20;
+
+      if(weakOEs.length===0){
+        doc.setFontSize(12); doc.setTextColor('#4caf7d');
+        doc.text('✓ No weak OEs — all scored OEs are at 4 or 5.',W/2,y+40,{align:'center'});
+      } else {
+        const cX1=64, cX2=121, cX3=172, cX4=452;
+        const textColW=276;
+        const rowPad=5;
+
+        const drawGapColHeaders=()=>{
+          doc.setFillColor('#081525'); doc.rect(60,y-11,W-120,16,'F');
+          doc.setFontSize(7); doc.setTextColor('#06b6d4');
+          doc.text('OE CODE',cX1,y-2);
+          doc.text('LEVEL',cX2,y-2);
+          doc.text('OE TEXT',cX3,y-2);
+          doc.text('SCORE',W-64,y-2,{align:'right'});
+          y+=14;
+        };
+
+        ECO_CHAPTERS.forEach(ch=>{
+          const chWeak = weakOEs.filter(oe=>oe.chapter===ch.key);
+          if(chWeak.length===0) return;
+
+          if(y>H-80){ newPage(); y=50; }
+          doc.setFillColor('#0c1e30');
+          doc.rect(60,y-12,W-120,20,'F');
+          doc.setFontSize(10); doc.setTextColor('#06b6d4');
+          doc.text(`${ch.key} — ${ch.name}`,74,y-1);
+          doc.setFontSize(8); doc.setTextColor('#3a5870');
+          doc.text(`${chWeak.length} weak OE(s)`,W-64,y-1,{align:'right'});
+          y+=22;
+
+          drawGapColHeaders();
+
+          chWeak.forEach(oe=>{
+            const sc      = ecoFullScores[oe.oe_code]||0;
+            const scC     = scoreCol(sc);
+            const rowBg   = sc<=2 ? '#180606' : '#140e00';
+            doc.setFontSize(7.5);
+            const wrapped = doc.splitTextToSize(oe.text||'', textColW);
+            const lineH   = 9;
+            const rowH    = Math.max(18, wrapped.length * lineH + rowPad*2);
+
+            if(y+rowH>H-40){ newPage(); y=50; drawGapColHeaders(); }
+
+            doc.setFillColor(rowBg); doc.rect(60,y-rowPad,W-120,rowH,'F');
+            doc.setFontSize(8); doc.setTextColor('#4fc3f7');
+            doc.text((oe.oe_code||''),cX1,y+2);
+            doc.setFontSize(7); doc.setTextColor('#8aadcc');
+            doc.text((oe.level||'').slice(0,12),cX2,y+2);
+            doc.setFontSize(7.5); doc.setTextColor('#c8dcea');
+            wrapped.forEach((line,i)=>{ doc.text(line,cX3,y+2+i*lineH); });
+            doc.setFontSize(8); doc.setTextColor(scC);
+            doc.text(`${sc}/5`,W-64,y+2,{align:'right'});
+            doc.setFontSize(7); doc.setTextColor(scC);
+            doc.text((scoreLabel[sc]||'').slice(0,16),W-64,y+2+lineH,{align:'right'});
+            y+=rowH+2;
+          });
+          y+=8;
+        });
+      }
+
+      // CAPA PAGE
+      const capaEntries = weakOEs
+        .map(oe=>({oe, capa:ecoFullCapaDb[oe.oe_code]}))
+        .filter(({capa})=>capa&&capa.finding);
+
+      if(capaEntries.length>0){
+        newPage(); y=50;
+        doc.setFontSize(16); doc.setTextColor('#eef4f9');
+        doc.text('Corrective Actions (CAPA)',60,y); y+=10;
+        doc.setDrawColor('#0f2640'); doc.line(60,y,W-60,y); y+=18;
+        doc.setFontSize(8); doc.setTextColor('#3a5870');
+        doc.text(`${capaEntries.length} CAPA(s) recorded for weak OEs`,60,y); y+=20;
+
+        capaEntries.forEach(({oe,capa})=>{
+          const sc  = ecoFullScores[oe.oe_code]||0;
+          const scC = scoreCol(sc);
+          doc.setFontSize(8);
+          const findLines  = doc.splitTextToSize(capa.finding||'',W-180);
+          const actionLines= doc.splitTextToSize(capa.action_planned||'',W-180);
+          const estH = 14+findLines.length*10+actionLines.length*10+28+16;
+          if(y+estH>H-40){ newPage(); y=50; }
+          doc.setFillColor('#0a1a2a');
+          doc.roundedRect(60,y-4,W-120,estH,3,3,'F');
+          doc.setDrawColor('#1a3550');
+          doc.roundedRect(60,y-4,W-120,estH,3,3,'S');
+          doc.setFontSize(9); doc.setTextColor('#4fc3f7');
+          doc.text(oe.oe_code,68,y+8);
+          doc.setFontSize(8); doc.setTextColor('#8aadcc');
+          doc.text(oe.level,130,y+8);
+          doc.setFontSize(8); doc.setTextColor(scC);
+          doc.text(`Score: ${sc}/5`,W-64,y+8,{align:'right'});
+          y+=18;
+          doc.setFontSize(7); doc.setTextColor('#3a5870');
+          doc.text('FINDING',68,y);
+          doc.setFontSize(8); doc.setTextColor('#c8dcea');
+          findLines.forEach((line,i)=>doc.text(line,68,y+9+i*10));
+          y+=9+findLines.length*10+4;
+          doc.setFontSize(7); doc.setTextColor('#3a5870');
+          doc.text('ACTION PLANNED',68,y);
+          doc.setFontSize(8); doc.setTextColor('#c8dcea');
+          actionLines.forEach((line,i)=>doc.text(line,68,y+9+i*10));
+          y+=9+actionLines.length*10+4;
+          const person = capa.responsible_person||'—';
+          const dateStr2= capa.target_date ? new Date(capa.target_date).toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'}) : '—';
+          doc.setFontSize(7); doc.setTextColor('#3a5870');
+          doc.text('RESPONSIBLE: ',68,y);
+          doc.setFontSize(8); doc.setTextColor('#c8dcea');
+          doc.text(person,68+doc.getTextWidth('RESPONSIBLE: '),y);
+          doc.setFontSize(7); doc.setTextColor('#3a5870');
+          doc.text('TARGET DATE: ',W/2,y);
+          doc.setFontSize(8); doc.setTextColor('#c8dcea');
+          doc.text(dateStr2,W/2+doc.getTextWidth('TARGET DATE: '),y);
+          y+=18;
+        });
+      }
+
+      // SUMMARY PAGE
+      newPage(); y=60;
+      doc.setFontSize(16); doc.setTextColor('#eef4f9');
+      doc.text('Report Summary',60,y); y+=36;
+
+      const summaryRows=[
+        ['Assessment Type',    assessTypeLabel,                              '#06b6d4'],
+        ['Total OEs in Scope', String(relevantOEs.length),                   '#eef4f9'],
+        ['OEs Scored',         `${scoredCount} of ${relevantOEs.length}`,    '#4caf7d'],
+        ['OEs Unscored',       String(relevantOEs.length-scoredCount),       scoredCount===relevantOEs.length?'#4caf7d':'#f4a441'],
+        ['Weak OEs (≤3)',       String(weakOEs.length),                       weakOEs.length===0?'#4caf7d':'#f4a441'],
+        ['Critical (Core <4)', String(criticalOEs.length),                   criticalOEs.length===0?'#4caf7d':'#e05a5a'],
+        ['Core+Commit Compliance', `${ccPct}%`,                              ccPct>=80?'#4caf7d':'#e05a5a'],
+        ['Overall Verdict',    verdictText,                                  allRulesPass?'#4caf7d':'#e05a5a'],
+      ];
+
+      summaryRows.forEach(([lbl,val,col])=>{
+        if(y>H-60){ newPage(); y=60; }
+        doc.setFillColor('#081525'); doc.roundedRect(60,y-15,W-120,28,3,3,'F');
+        doc.setFontSize(10); doc.setTextColor('#c8dcea');
+        doc.text(lbl,80,y-1);
+        doc.setFontSize(11); doc.setTextColor(col);
+        doc.text(val,W-80,y-1,{align:'right'});
+        y+=36;
+      });
+
+      y+=10;
+      doc.setDrawColor('#0f2640'); doc.line(60,y,W-60,y); y+=22;
+      doc.setFontSize(8); doc.setTextColor('#3a5870');
+      doc.text(`Report generated on ${dateStr} via accredready.in`,W/2,y,{align:'center'}); y+=16;
+      doc.text('This report is based on self-assessment scores entered by the organisation team.',W/2,y,{align:'center'}); y+=13;
+      doc.text('It is not an official NABH assessment and must not replace a formal NABH evaluation.',W/2,y,{align:'center'});
+
+      const nPages = doc.internal.getNumberOfPages();
+      for(let i=1;i<=nPages;i++){
+        doc.setPage(i);
+        doc.setFontSize(7); doc.setTextColor('#3a5870');
+        doc.text(`Page ${i} of ${nPages}`,W-60,H-18,{align:'right'});
+      }
+
+      const cleanName = cleanHospital.replace(/[^a-zA-Z0-9]/g,'_');
+      doc.save(`${cleanName}_ECO_Gap_Report_${fileDateStr}.pdf`);
+    } catch(e){ console.error('ECO Full PDF generation failed:',e); }
+    setEcoFullPdfLoading(false);
+  };
+
   const [authErrorMsg,setAuthErrorMsg]=useState("");
 
   useEffect(()=>{
@@ -6287,6 +6909,45 @@ export default function App() {
     setShcoFullCapaForm(p=>{const n={...p};delete n[oeCode];return n;});
   };
 
+  // Load ECO Full OEs + scores + CAPAs
+  useEffect(()=>{
+    if(selectedProgramme!=="eco-full"||!context?.hospitalId)return;
+    setEcoFullLoading(true);
+    Promise.all([
+      supabase.from("eco_full_oes").select("*").order("oe_code"),
+      supabase.from("eco_full_scores").select("oe_code,score").eq("hospital_id",context.hospitalId),
+      supabase.from("eco_full_capa").select("*").eq("hospital_id",context.hospitalId),
+    ]).then(([{data:oeData},{data:scoreData},{data:capaData}])=>{
+      if(oeData)setEcoFullOes(oeData);
+      if(scoreData){const m={};scoreData.forEach(s=>{m[s.oe_code]=s.score;});setEcoFullScores(m);}
+      if(capaData){const m={};capaData.forEach(c=>{m[c.oe_code]=c;});setEcoFullCapaDb(m);}
+      setEcoFullLoading(false);
+    });
+  },[selectedProgramme,context?.hospitalId]);
+
+  const saveEcoFullCapa = async (oeCode) => {
+    const f = ecoFullCapaForm[oeCode];
+    if(!f?.finding||!f?.action||!context?.hospitalId) return;
+    setEcoFullCapaSaving(p=>({...p,[oeCode]:true}));
+    await supabase.from("eco_full_capa").upsert({
+      hospital_id:context.hospitalId, oe_code:oeCode,
+      finding:f.finding, action_planned:f.action,
+      responsible_person:f.person||'', target_date:f.date||null, status:'open',
+    },{onConflict:"hospital_id,oe_code"});
+    const {data:fresh}=await supabase.from("eco_full_capa").select("*").eq("hospital_id",context.hospitalId);
+    if(fresh){const m={};fresh.forEach(c=>{m[c.oe_code]=c;});setEcoFullCapaDb(m);}
+    setEcoFullCapaSaving(p=>({...p,[oeCode]:false}));
+    setEcoFullCapaForm(p=>({...p,[oeCode]:{...p[oeCode],saved:true,expanded:false}}));
+  };
+
+  const deleteEcoFullCapa = async (oeCode) => {
+    if(!window.confirm('Delete this CAPA? This cannot be undone.')) return;
+    await supabase.from("eco_full_capa").delete()
+      .eq("hospital_id",context.hospitalId).eq("oe_code",oeCode);
+    setEcoFullCapaDb(p=>{const n={...p};delete n[oeCode];return n;});
+    setEcoFullCapaForm(p=>{const n={...p};delete n[oeCode];return n;});
+  };
+
   // Load existing SHCO ELC scores for this hospital
   useEffect(()=>{
     if(selectedProgramme!=="shco-elc"||!context?.hospitalId)return;
@@ -6418,6 +7079,7 @@ export default function App() {
     else if(key==="shco_full"){setSelectedProgramme("shco-full");setScreen("shco-full");setAuthState("app");}
     else if(key==="shco_elc"){setSelectedProgramme("shco-elc");setScreen("shco");setAuthState("app");}
     else if(key==="hco_elc"){setSelectedProgramme("hco-elc");setScreen("hco-elc");setAuthState("app");}
+    else if(key==="eco_full"){setSelectedProgramme("eco-full");setScreen("eco-full");setAuthState("app");}
   };
 
   if(authState==="loading") return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",color:T.gold,fontFamily:"Segoe UI,sans-serif",fontSize:16}}>Loading…</div>;
@@ -7884,6 +8546,565 @@ export default function App() {
     );
   };
 
+  // ── ECO FULL TAB ──────────────────────────────────────────────────────────
+  const renderECOFullTab = () => {
+    const ECO_COLOR = '#06b6d4';
+    // Derive chapters dynamically from loaded OE data
+    const chapterKeys = [...new Set(ecoFullOes.map(oe=>oe.chapter))].filter(Boolean).sort();
+    const CHAPTERS = chapterKeys.map(key=>{
+      const chOe = ecoFullOes.find(oe=>oe.chapter===key);
+      return {key, name: chOe?.chapter_name || key};
+    });
+    const LEVELS = ['Core','Commitment','Achievement','Excellence'];
+    const levelColor = l => l==='Core'?T.red:l==='Commitment'?T.orange:l==='Achievement'?T.gold:T.blue;
+    const SCORE_LABELS = ['','No compliance','Poor compliance','Partial compliance','Good compliance','Full compliance'];
+    const SCORE_COLORS = ['',T.red,T.red,T.orange,T.green,T.blue];
+
+    const chapterOeCount = ch => ecoFullOes.filter(oe=>oe.chapter===ch).length;
+
+    const handleScore = async (oeCode, score) => {
+      setEcoFullScores(prev=>({...prev,[oeCode]:score}));
+      setEcoFullScoreSaving(prev=>({...prev,[oeCode]:true}));
+      await supabase.from("eco_full_scores").upsert(
+        {hospital_id:context.hospitalId,oe_code:oeCode,score},
+        {onConflict:"hospital_id,oe_code"}
+      );
+      setEcoFullScoreSaving(prev=>({...prev,[oeCode]:false}));
+    };
+
+    // OE subsets by level
+    const coreCommOEs = ecoFullOes.filter(oe=>oe.level==='Core'||oe.level==='Commitment'); // 282
+    const achieveOEs  = ecoFullOes.filter(oe=>oe.level==='Achievement');                   // 12
+    const excelOEs    = ecoFullOes.filter(oe=>oe.level==='Excellence');                    // 8
+    const coreOEs     = ecoFullOes.filter(oe=>oe.level==='Core');
+
+    const relevantOEs = ecoFullAssessType==='final'        ? coreCommOEs
+                      : ecoFullAssessType==='surveillance' ? ecoFullOes.filter(oe=>oe.level!=='Excellence')
+                      : ecoFullOes;
+
+    const compliance = arr => arr.length>0
+      ? Math.round(arr.reduce((a,oe)=>a+(ecoFullScores[oe.oe_code]||0),0)/(arr.length*5)*100) : 0;
+
+    const ccPct    = compliance(coreCommOEs);
+    const achPct   = compliance(achieveOEs);
+    const excelPct = compliance(excelOEs);
+
+    const coreScoredBelow4 = coreOEs.filter(oe=>ecoFullScores[oe.oe_code]&&ecoFullScores[oe.oe_code]<4);
+    const coreUnscoredOEs  = coreOEs.filter(oe=>!ecoFullScores[oe.oe_code]);
+    const corePass = coreScoredBelow4.length===0&&coreUnscoredOEs.length===0;
+
+    const stdMap={};
+    relevantOEs.forEach(oe=>{
+      if(!stdMap[oe.standard_code])stdMap[oe.standard_code]={text:oe.standard_text,ch:oe.chapter,oes:[]};
+      stdMap[oe.standard_code].oes.push(oe);
+    });
+    const stdChecks=Object.entries(stdMap).map(([code,{oes}])=>{
+      const scored=oes.filter(oe=>ecoFullScores[oe.oe_code]);
+      const avg=scored.length>0?scored.reduce((a,oe)=>a+ecoFullScores[oe.oe_code],0)/scored.length:null;
+      const atOrBelow2=oes.filter(oe=>ecoFullScores[oe.oe_code]&&ecoFullScores[oe.oe_code]<=2).length;
+      return {code,avg,atOrBelow2,total:oes.length,scoredCount:scored.length};
+    });
+
+    const maxLowPerStd = ecoFullAssessType==='renewal' ? 0 : 1;
+    const stdLowFails  = stdChecks.filter(s=>s.atOrBelow2>maxLowPerStd);
+    const stdAvgFails  = stdChecks.filter(s=>s.avg!==null&&s.avg<4);
+
+    const chapterStats=CHAPTERS.map(c=>{
+      const chOes=relevantOEs.filter(oe=>oe.chapter===c.key);
+      const chScored=chOes.filter(oe=>ecoFullScores[oe.oe_code]);
+      const chAvg=chScored.length>0?chScored.reduce((a,oe)=>a+ecoFullScores[oe.oe_code],0)/chScored.length:null;
+      const totalCount=ecoFullOes.filter(oe=>oe.chapter===c.key).length;
+      return {...c,relevantCount:chOes.length,totalCount,scoredCount:chScored.length,
+        avg:chAvg,pct:chAvg!==null?Math.round(chAvg/5*100):null,pass:chAvg!==null&&chAvg>=4};
+    });
+    const chapAvgFails=chapterStats.filter(c=>c.avg!==null&&c.avg<4);
+
+    const rules=[];
+    rules.push({
+      label:`Core + Commitment overall compliance ≥80% (${coreCommOEs.length} OEs)`,
+      pct:ccPct,pass:ccPct>=80,
+      detail:`Current: ${ccPct}% — need ≥80%`,
+    });
+    if(ecoFullAssessType==='surveillance'||ecoFullAssessType==='renewal'){
+      rules.push({
+        label:`Achievement overall compliance ≥80% (${achieveOEs.length} OEs)`,
+        pct:achPct,pass:achPct>=80,
+        detail:`Current: ${achPct}% — need ≥80%`,
+      });
+    }
+    if(ecoFullAssessType==='renewal'){
+      rules.push({
+        label:`Excellence overall compliance ≥80% (${excelOEs.length} OEs)`,
+        pct:excelPct,pass:excelPct>=80,
+        detail:`Current: ${excelPct}% — need ≥80%`,
+      });
+    }
+    rules.push({
+      label:`All ${coreOEs.length} Core OEs must score ≥4 (Good compliance)`,
+      pass:corePass,
+      detail:coreScoredBelow4.length>0
+        ?`${coreScoredBelow4.length} Core OE(s) scored <4: ${coreScoredBelow4.slice(0,4).map(o=>o.oe_code).join(', ')}${coreScoredBelow4.length>4?'…':''}`
+        :coreUnscoredOEs.length>0?`${coreUnscoredOEs.length} Core OE(s) not yet scored`
+        :'✓ All Core OEs ≥4',
+    });
+    rules.push({
+      label:ecoFullAssessType==='renewal'
+        ?`No standard should have any OE scored ≤2 (Poor compliance)`
+        :`No standard should have more than 1 OE scored ≤2`,
+      pass:stdLowFails.length===0,
+      detail:stdLowFails.length>0
+        ?`${stdLowFails.length} standard(s) failing: ${stdLowFails.slice(0,4).map(s=>s.code).join(', ')}${stdLowFails.length>4?'…':''}`
+        :'✓ All standards OK',
+    });
+    rules.push({
+      label:`Average score per standard must be ≥4`,
+      pass:stdAvgFails.length===0,
+      detail:stdAvgFails.length>0
+        ?`${stdAvgFails.length} standard(s) below average 4: ${stdAvgFails.slice(0,4).map(s=>s.code).join(', ')}${stdAvgFails.length>4?'…':''}`
+        :'✓ All standards ≥4',
+    });
+    rules.push({
+      label:`Average score per chapter must be ≥4`,
+      pass:chapAvgFails.length===0,
+      detail:chapAvgFails.length>0
+        ?`${chapAvgFails.length} chapter(s) below average 4: ${chapAvgFails.map(c=>c.key).join(', ')}`
+        :'✓ All chapters ≥4',
+    });
+
+    const rulesPass=rules.filter(r=>r.pass).length;
+    const allPass=rules.every(r=>r.pass);
+    const totalScored=ecoFullOes.filter(oe=>ecoFullScores[oe.oe_code]).length;
+    const relevantScored=relevantOEs.filter(oe=>ecoFullScores[oe.oe_code]).length;
+
+    const q=ecoFullSearch.toLowerCase().trim();
+    const filteredOes=ecoFullOes.filter(oe=>{
+      const chMatch=ecoFullChapter==='all'||oe.chapter===ecoFullChapter;
+      const lvlMatch=ecoFullLevel==='all'||oe.level===ecoFullLevel;
+      const txMatch=!q||oe.oe_code.toLowerCase().includes(q)||oe.text.toLowerCase().includes(q);
+      return chMatch&&lvlMatch&&txMatch;
+    });
+    const byStandard=filteredOes.reduce((acc,oe)=>{
+      if(!acc[oe.standard_code])acc[oe.standard_code]={std:oe.standard_text,oes:[]};
+      acc[oe.standard_code].oes.push(oe);
+      return acc;
+    },{});
+
+    const renderDashboard=()=>(
+      <div style={{padding:'12px 16px 40px'}}>
+        <div style={{marginBottom:12}}>
+          <div style={{fontSize:11,color:T.muted,fontWeight:700,letterSpacing:1,marginBottom:8}}>ASSESSMENT MODE</div>
+          <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+            {[
+              {key:'final',       label:'Final Assessment',       sub:`Core + Commitment · ${coreCommOEs.length} OEs`, note:'Initial 4-year award'},
+              {key:'surveillance',label:'Surveillance Assessment', sub:`+ Achievement · ${coreCommOEs.length+achieveOEs.length} OEs`,    note:'At 18 months'},
+              {key:'renewal',     label:'Re-accreditation',       sub:`All ${ecoFullOes.length} OEs`,                 note:'4-year renewal'},
+            ].map(at=>(
+              <button key={at.key} onClick={()=>setEcoFullAssessType(at.key)}
+                style={{flex:1,minWidth:130,padding:'10px 12px',borderRadius:10,cursor:'pointer',textAlign:'left',border:'none',
+                  background:ecoFullAssessType===at.key?ECO_COLOR+'22':T.panel,
+                  outline:ecoFullAssessType===at.key?`2px solid ${ECO_COLOR}`:`1px solid ${T.border}`}}>
+                <div style={{color:ecoFullAssessType===at.key?ECO_COLOR:T.white,fontWeight:700,fontSize:13,marginBottom:2}}>{at.label}</div>
+                <div style={{color:T.muted,fontSize:11}}>{at.sub}</div>
+                <div style={{color:ecoFullAssessType===at.key?ECO_COLOR:T.muted,fontSize:10,marginTop:2}}>{at.note}</div>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:8,marginBottom:12}}>
+          {[
+            {label:'Total OEs',val:ecoFullOes.length,color:T.text},
+            {label:'Scored',val:`${totalScored}/${ecoFullOes.length}`,color:totalScored===ecoFullOes.length?T.green:T.orange},
+            {label:'Overall %',val:`${ccPct}%`,color:ccPct>=80?T.green:T.red},
+            {label:'Core Fails',val:coreScoredBelow4.length+coreUnscoredOEs.length,
+              color:(coreScoredBelow4.length+coreUnscoredOEs.length)>0?T.red:T.green},
+          ].map(s=>(
+            <div key={s.label} style={{background:T.panel,borderRadius:8,padding:'10px 8px',textAlign:'center',border:`1px solid ${T.border}`}}>
+              <div style={{fontSize:20,fontWeight:800,color:s.color}}>{s.val}</div>
+              <div style={{fontSize:11,color:T.muted,marginTop:2}}>{s.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div style={{marginBottom:12}}>
+          <div style={{fontSize:11,color:T.muted,fontWeight:700,letterSpacing:1,marginBottom:8}}>ACCREDITATION RULES</div>
+          <div style={{display:'grid',gap:5}}>
+            {rules.map((r,i)=>(
+              <div key={i} style={{display:'flex',alignItems:'flex-start',gap:8,padding:'8px 10px',borderRadius:8,
+                background:r.pass?T.green+'10':T.red+'10',border:`1px solid ${r.pass?T.green:T.red}28`}}>
+                <span style={{fontSize:14,flexShrink:0}}>{r.pass?'✅':'❌'}</span>
+                <div style={{flex:1,minWidth:0}}>
+                  <div style={{fontSize:12,fontWeight:600,color:r.pass?T.green:T.red,lineHeight:1.4}}>{r.label}</div>
+                  <div style={{fontSize:11,color:T.muted,marginTop:2}}>{r.detail}</div>
+                  {'pct' in r&&(
+                    <div style={{display:'flex',alignItems:'center',gap:6,marginTop:4}}>
+                      <div style={{flex:1,height:4,borderRadius:2,background:T.border,overflow:'hidden'}}>
+                        <div style={{height:'100%',width:`${r.pct}%`,background:r.pass?T.green:T.red,borderRadius:2,transition:'width 0.3s'}}/>
+                      </div>
+                      <span style={{color:r.pass?T.green:T.red,fontWeight:700,fontSize:11,minWidth:34}}>{r.pct}%</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div style={{marginTop:8,padding:'9px 14px',borderRadius:8,textAlign:'center',
+            background:allPass?T.green+'18':rulesPass>0?T.orange+'18':T.red+'18',
+            border:`1px solid ${allPass?T.green:rulesPass>0?T.orange:T.red}44`}}>
+            <span style={{fontSize:13,fontWeight:800,color:allPass?T.green:rulesPass>0?T.orange:T.red}}>
+              {allPass?'✓ ALL RULES PASS — READY FOR ACCREDITATION':`${rulesPass} of ${rules.length} rules passing`}
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:8}}>
+            <div style={{fontSize:11,color:T.muted,fontWeight:700,letterSpacing:1}}>CHAPTER HEALTH</div>
+            <div style={{fontSize:11,color:T.muted}}>{relevantScored}/{relevantOEs.length} relevant OEs scored</div>
+          </div>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(140px,1fr))',gap:6}}>
+            {chapterStats.map(c=>{
+              const col=c.avg===null?T.muted:c.pass?T.green:T.orange;
+              return(
+                <div key={c.key} style={{background:T.panel,border:`1px solid ${col}44`,borderRadius:8,padding:'10px 12px'}}>
+                  <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:3}}>
+                    <span style={{color:ECO_COLOR,fontWeight:800,fontSize:14}}>{c.key}</span>
+                    <span style={{fontSize:13,fontWeight:700,color:col}}>{c.avg!==null?c.avg.toFixed(1)+' / 5':'—'}</span>
+                  </div>
+                  <div style={{fontSize:10,color:T.muted,marginBottom:2}}>{c.scoredCount} of {c.relevantCount} relevant scored</div>
+                  <div style={{fontSize:10,color:T.muted,marginBottom:4}}>{c.totalCount} total OEs in chapter</div>
+                  <div style={{height:4,borderRadius:2,background:T.border,overflow:'hidden',marginBottom:4}}>
+                    <div style={{height:'100%',width:`${c.relevantCount>0?Math.round(c.scoredCount/c.relevantCount*100):0}%`,background:col,borderRadius:2,transition:'width 0.3s'}}/>
+                  </div>
+                  <div style={{fontSize:10,color:T.muted,lineHeight:1.4}}>{c.name}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    );
+
+    const renderScoreOEs=()=>(
+      <div style={{padding:'12px 16px 80px'}}>
+        <input
+          value={ecoFullSearch} onChange={e=>setEcoFullSearch(e.target.value)}
+          placeholder="Search by OE code or keyword…"
+          style={{width:'100%',padding:'9px 12px',borderRadius:8,border:`1px solid ${T.border}`,
+            background:T.panel2,color:T.text,fontSize:14,boxSizing:'border-box',marginBottom:10}}
+        />
+        <div style={{display:'flex',overflowX:'auto',gap:0,borderBottom:`1px solid ${T.border}`,marginBottom:8}}>
+          {[{key:'all',count:ecoFullOes.length},...CHAPTERS.map(c=>({key:c.key,count:chapterOeCount(c.key)}))].map(tab=>(
+            <button key={tab.key} onClick={()=>setEcoFullChapter(tab.key)}
+              style={{padding:'6px 10px',border:'none',cursor:'pointer',whiteSpace:'nowrap',background:'transparent',
+                fontSize:12,fontWeight:600,
+                color:ecoFullChapter===tab.key?ECO_COLOR:T.muted,
+                borderBottom:ecoFullChapter===tab.key?`2px solid ${ECO_COLOR}`:'2px solid transparent'}}>
+              {tab.key==='all'?'All':tab.key} ({tab.count})
+            </button>
+          ))}
+        </div>
+        <div style={{display:'flex',gap:6,flexWrap:'wrap',marginBottom:12,alignItems:'center'}}>
+          {['all',...LEVELS].map(lv=>(
+            <button key={lv} onClick={()=>setEcoFullLevel(lv)}
+              style={{padding:'3px 11px',borderRadius:20,cursor:'pointer',
+                border:`1px solid ${ecoFullLevel===lv?(lv==='all'?ECO_COLOR:levelColor(lv)):T.border}`,
+                background:ecoFullLevel===lv?(lv==='all'?ECO_COLOR+'22':levelColor(lv)+'22'):'transparent',
+                color:ecoFullLevel===lv?(lv==='all'?ECO_COLOR:levelColor(lv)):T.muted,
+                fontSize:12,fontWeight:600}}>
+              {lv==='all'?'All Levels':lv}
+            </button>
+          ))}
+          <span style={{marginLeft:'auto',fontSize:11,color:T.muted}}>{filteredOes.length} OEs</span>
+        </div>
+
+        {ecoFullLoading ? (
+          <div style={{textAlign:'center',padding:40,color:T.muted}}>Loading OEs…</div>
+        ) : Object.keys(byStandard).length===0 ? (
+          <div style={{textAlign:'center',padding:40,color:T.muted}}>No OEs match the current filter.</div>
+        ) : (
+          Object.entries(byStandard).map(([stdCode,{std,oes:stdOes}])=>{
+            const stdScoredOes=stdOes.filter(oe=>ecoFullScores[oe.oe_code]);
+            const stdAvg=stdScoredOes.length>0?stdScoredOes.reduce((a,oe)=>a+ecoFullScores[oe.oe_code],0)/stdScoredOes.length:null;
+            const stdLowCount=stdOes.filter(oe=>ecoFullScores[oe.oe_code]&&ecoFullScores[oe.oe_code]<=2).length;
+            const stdFails=(stdAvg!==null&&stdAvg<4)||(stdLowCount>maxLowPerStd);
+            const stdBorder=stdAvg===null?T.border:stdFails?T.red:T.green;
+            return (
+              <div key={stdCode} style={{marginBottom:14}}>
+                <div style={{background:T.panel,border:`1px solid ${stdBorder}`,borderRadius:10,
+                  padding:'9px 13px',marginBottom:5,display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:10}}>
+                  <div style={{flex:1}}>
+                    <span style={{color:ECO_COLOR,fontWeight:800,fontSize:13,marginRight:8}}>{stdCode}</span>
+                    <span style={{color:T.text,fontSize:13,lineHeight:1.5}}>{std}</span>
+                  </div>
+                  <div style={{flexShrink:0,textAlign:'right'}}>
+                    {stdAvg!==null&&<div style={{fontSize:12,fontWeight:700,color:stdAvg>=4?T.green:T.red}}>avg {stdAvg.toFixed(1)}</div>}
+                    {stdLowCount>maxLowPerStd&&<div style={{fontSize:10,color:T.red}}>{stdLowCount} OE(s) ≤2</div>}
+                    <div style={{fontSize:10,color:T.muted}}>{stdScoredOes.length}/{stdOes.length} scored</div>
+                  </div>
+                </div>
+                {stdOes.map(oe=>{
+                  const sc=ecoFullScores[oe.oe_code]||0;
+                  const saving=ecoFullScoreSaving[oe.oe_code];
+                  const lc=levelColor(oe.level);
+                  const rowBorder=sc>=4?T.green:sc===3?T.orange:sc>=1?T.red:T.border;
+                  return (
+                    <div key={oe.oe_code} style={{background:T.panel2,border:`1px solid ${rowBorder}`,
+                      borderRadius:8,padding:'10px 12px',marginBottom:5,marginLeft:8}}>
+                      <div style={{display:'flex',alignItems:'center',gap:7,marginBottom:5,flexWrap:'wrap'}}>
+                        <span style={{fontSize:12,fontWeight:700,color:T.muted,fontFamily:'monospace'}}>{oe.oe_code}</span>
+                        <span style={{fontSize:11,padding:'1px 7px',borderRadius:10,
+                          background:lc+'22',color:lc,border:`1px solid ${lc}44`,fontWeight:700}}>{oe.level}</span>
+                        {sc>0
+                          ?<span style={{fontSize:11,fontWeight:700,color:SCORE_COLORS[sc],
+                              padding:'1px 8px',borderRadius:8,background:SCORE_COLORS[sc]+'18',border:`1px solid ${SCORE_COLORS[sc]}44`}}>
+                              {sc} – {SCORE_LABELS[sc]}
+                            </span>
+                          :<span style={{fontSize:11,color:T.muted}}>Not scored</span>
+                        }
+                        {saving&&<span style={{fontSize:11,color:T.muted,fontStyle:'italic'}}>saving…</span>}
+                        <button onClick={()=>setEcoFullShowTip(p=>({...p,[oe.oe_code]:!p[oe.oe_code]}))}
+                          style={{marginLeft:'auto',padding:'3px 10px',borderRadius:7,fontSize:11,cursor:'pointer',
+                            background:ecoFullShowTip[oe.oe_code]?T.blue+'22':'transparent',
+                            border:`1px solid ${ecoFullShowTip[oe.oe_code]?T.blue:T.muted}`,
+                            color:ecoFullShowTip[oe.oe_code]?T.blue:T.muted}}>
+                          {ecoFullShowTip[oe.oe_code]?'▲ Hide':'? How to achieve'}
+                        </button>
+                      </div>
+                      <div style={{fontSize:13,color:T.text,lineHeight:1.6,marginBottom:8}}>{oe.text}</div>
+                      {ecoFullShowTip[oe.oe_code]&&(()=>{
+                        const tips = oe.achieve_tips;
+                        const lvlTips = oe.level==='Core'
+                          ? ['This is a Core OE — assessors will examine records, observe practice directly, and interview staff on every visit.','Ensure 100% of patient files show evidence of compliance, with no exceptions — even one missing record is a finding.','Conduct a monthly internal audit specifically for this OE and display the trend chart in the department.','Prepare staff with a 2-minute verbal response explaining the process — assessors routinely ask directly.']
+                          : oe.level==='Achievement'
+                          ? ['Collect before/after data to demonstrate measurable improvement — a chart or table showing trend over 3 months is ideal.','Ensure the quality committee has reviewed and minuted this indicator at least once in the last quarter.','Show actual outcome numbers not just that a system is in place.','Achievement OEs are assessed at Surveillance — begin collecting data from Day 1 of accreditation.']
+                          : oe.level==='Excellence'
+                          ? ['Excellence OEs are assessed at Re-accreditation — document innovation and leadership beyond basic compliance.','Benchmark against national or international standards and record the comparison formally.','Seek external validation and document it.','Excellence means demonstrated sustained improvement over multiple assessment cycles with supporting data.']
+                          : ['Create a dated, signed SOP for this process and place it in the relevant department folder — version-controlled.','Train all concerned staff and maintain a signed attendance register as evidence of training.','Maintain a monthly audit record showing consistent compliance.','Ensure any relevant forms/registers are filled completely — incomplete records are scored as non-compliance.'];
+                        const displayTips = tips || lvlTips;
+                        const tipLabel = tips ? 'HOW TO ACHIEVE THIS OE' : `GENERAL GUIDANCE — ${oe.level.toUpperCase()}`;
+                        return (
+                          <div style={{marginTop:6,marginBottom:8,background:T.blue+'14',border:`1px solid ${T.blue}22`,borderRadius:8,padding:'12px 14px'}}>
+                            <div style={{fontSize:10,letterSpacing:2,color:T.blue,marginBottom:8,fontWeight:700}}>{tipLabel}</div>
+                            {displayTips.map((tip,i)=>(
+                              <div key={i} style={{display:'flex',gap:8,marginBottom:6,alignItems:'flex-start'}}>
+                                <div style={{width:18,height:18,borderRadius:'50%',background:T.blue+'22',border:`1px solid ${T.blue}44`,
+                                  display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,fontSize:11,color:T.blue,fontWeight:700}}>{i+1}</div>
+                                <div style={{fontSize:12,color:T.text,lineHeight:1.6,paddingTop:1}}>{tip}</div>
+                              </div>
+                            ))}
+                            {!tips&&<div style={{fontSize:11,color:T.muted,marginTop:4,fontStyle:'italic'}}>OE-specific tips will appear here once loaded.</div>}
+                          </div>
+                        );
+                      })()}
+                      <div style={{display:'flex',gap:4,flexWrap:'wrap'}}>
+                        {[1,2,3,4,5].map(n=>(
+                          <button key={n} onClick={()=>handleScore(oe.oe_code,n)}
+                            style={{padding:'4px 9px',borderRadius:7,fontSize:11,fontWeight:700,cursor:'pointer',
+                              background:sc===n?`${SCORE_COLORS[n]}28`:T.panel,
+                              border:`1px solid ${sc===n?SCORE_COLORS[n]:SCORE_COLORS[n]+'40'}`,
+                              color:sc===n?SCORE_COLORS[n]:T.muted,transition:'all 0.12s'}}>
+                            {n} – {SCORE_LABELS[n]}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })
+        )}
+      </div>
+    );
+
+    const gapSeverity = oe => {
+      const sc = ecoFullScores[oe.oe_code]||0;
+      if(sc===0) return null;
+      if(oe.level==='Core') return sc<=3 ? 'CRITICAL' : null;
+      if(oe.level==='Commitment') return sc<=2 ? 'HIGH' : sc===3 ? 'MEDIUM' : null;
+      return sc<=3 ? 'LOW' : null;
+    };
+
+    const allGaps = ecoFullOes
+      .map(oe=>({oe, sev:gapSeverity(oe)}))
+      .filter(({sev})=>sev!==null)
+      .map(({oe,sev})=>({
+        oe_code: oe.oe_code, oe_text: oe.text, level: oe.level,
+        standard_code: oe.standard_code, severity: sev,
+        score: ecoFullScores[oe.oe_code]||0,
+      }));
+
+    const renderFixGaps = () => {
+      const qg = ecoFullGapSearch.toLowerCase().trim();
+      const filtered = allGaps.filter(g=>{
+        const matchSev = ecoFullGapFilter==='ALL' || g.severity===ecoFullGapFilter;
+        const matchQ   = !qg || g.oe_code.toLowerCase().includes(qg) || g.oe_text.toLowerCase().includes(qg);
+        return matchSev && matchQ;
+      });
+
+      return (
+        <div style={{padding:'12px 16px 80px'}}>
+          <input value={ecoFullGapSearch} onChange={e=>setEcoFullGapSearch(e.target.value)}
+            placeholder="Search gaps by OE code or keyword…"
+            style={{width:'100%',padding:'10px 14px',borderRadius:8,border:`1px solid ${T.border}`,
+              background:T.panel2,color:T.text,fontSize:14,marginBottom:10,boxSizing:'border-box'}}/>
+
+          <div style={{display:'flex',gap:8,marginBottom:14,flexWrap:'wrap',alignItems:'center'}}>
+            {['ALL','CRITICAL','HIGH','MEDIUM','LOW'].map(s=>(
+              <button key={s} onClick={()=>setEcoFullGapFilter(s)}
+                style={{padding:'5px 14px',borderRadius:8,fontSize:12,cursor:'pointer',
+                  background:ecoFullGapFilter===s?`${sevColor(s)}20`:'transparent',
+                  border:`1px solid ${ecoFullGapFilter===s?sevColor(s):T.border}`,
+                  color:ecoFullGapFilter===s?sevColor(s):T.muted}}>{s}</button>
+            ))}
+            <div style={{marginLeft:'auto',fontSize:13,color:T.muted}}>{allGaps.length} gaps</div>
+          </div>
+
+          {filtered.length===0 && (
+            <div style={{textAlign:'center',color:T.muted,padding:'40px',fontSize:14}}>
+              {allGaps.length===0 ? 'No gaps found. Score OEs first.' : 'No gaps at this severity level.'}
+            </div>
+          )}
+
+          <div style={{display:'grid',gap:10}}>
+            {filtered.map(g=>{
+              const fc   = ecoFullCapaForm[g.oe_code]||{};
+              const dbC  = ecoFullCapaDb[g.oe_code];
+              const expanded = fc.expanded;
+              const hasSaved = dbC || fc.saved;
+              return (
+                <div key={g.oe_code} style={{background:T.panel,border:`1px solid ${sevColor(g.severity)}25`,borderRadius:12,overflow:'hidden'}}>
+                  <div style={{height:3,background:sevColor(g.severity)}}/>
+                  <div style={{padding:'14px 16px'}}>
+                    <div style={{display:'flex',gap:10,alignItems:'flex-start',marginBottom:8}}>
+                      <div style={{flex:1}}>
+                        <div style={{display:'flex',gap:8,alignItems:'center',marginBottom:4,flexWrap:'wrap'}}>
+                          <span style={{fontFamily:'monospace',fontSize:13,fontWeight:700,color:lvColor(g.level)}}>{g.oe_code}</span>
+                          <span style={{fontSize:11,padding:'2px 7px',borderRadius:5,background:`${sevColor(g.severity)}15`,color:sevColor(g.severity),fontWeight:700}}>{g.severity}</span>
+                          <span style={{fontSize:11,padding:'2px 6px',borderRadius:5,background:`${lvColor(g.level)}18`,color:lvColor(g.level)}}>{g.level}</span>
+                          {hasSaved&&<span style={{fontSize:11,padding:'2px 6px',borderRadius:5,background:T.green+'22',color:T.green}}>✓ CAPA saved</span>}
+                        </div>
+                        <div style={{fontSize:12,color:T.text,lineHeight:1.5}}>{g.oe_text}</div>
+                      </div>
+                      <div style={{textAlign:'center',flexShrink:0}}>
+                        <div style={{fontSize:22,fontWeight:800,color:g.score<=2?T.red:g.score===3?T.orange:T.green}}>{g.score}</div>
+                        <div style={{fontSize:7,color:T.muted}}>/ 5</div>
+                      </div>
+                    </div>
+
+                    <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+                      {!expanded && hasSaved ? (
+                        <>
+                          <button
+                            onClick={()=>setEcoFullCapaForm(p=>({...p,[g.oe_code]:{
+                              ...fc, expanded:true,
+                              finding: fc.finding!==undefined ? fc.finding : (dbC?.finding||''),
+                              action:  fc.action!==undefined  ? fc.action  : (dbC?.action_planned||''),
+                              person:  fc.person!==undefined  ? fc.person  : (dbC?.responsible_person||''),
+                              date:    fc.date!==undefined    ? fc.date    : (dbC?.target_date||''),
+                            }}))}
+                            style={{fontSize:12,color:T.gold,background:'transparent',border:`1px solid ${T.gold}44`,borderRadius:8,padding:'4px 14px',cursor:'pointer'}}>
+                            ✏️ Edit CAPA
+                          </button>
+                          <button
+                            onClick={()=>deleteEcoFullCapa(g.oe_code)}
+                            style={{fontSize:12,color:T.red,background:'transparent',border:`1px solid ${T.red}44`,borderRadius:8,padding:'4px 14px',cursor:'pointer'}}>
+                            🗑 Delete CAPA
+                          </button>
+                        </>
+                      ) : expanded ? (
+                        <button
+                          onClick={()=>setEcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,expanded:false}}))}
+                          style={{fontSize:12,color:T.muted,background:'transparent',border:`1px solid ${T.border}`,borderRadius:8,padding:'4px 14px',cursor:'pointer'}}>
+                          ▲ Hide CAPA
+                        </button>
+                      ) : (
+                        <button
+                          onClick={()=>setEcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,expanded:true}}))}
+                          style={{fontSize:12,color:T.gold,background:'transparent',border:`1px solid ${T.gold}44`,borderRadius:8,padding:'4px 14px',cursor:'pointer'}}>
+                          ▼ Add CAPA
+                        </button>
+                      )}
+                    </div>
+
+                    {expanded&&(
+                      <div style={{marginTop:12,display:'grid',gap:8}}>
+                        {fc.saved&&<div style={{fontSize:12,color:T.green,padding:'6px 10px',background:T.green+'14',borderRadius:6}}>✓ CAPA saved successfully</div>}
+                        <div>
+                          <div style={{fontSize:11,color:T.muted,marginBottom:4}}>FINDING *</div>
+                          <textarea value={fc.finding!==undefined ? fc.finding : (dbC?.finding||'')}
+                            onChange={e=>setEcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,finding:e.target.value,saved:false}}))}
+                            rows={2} placeholder="Describe the non-compliance finding…"
+                            style={{width:'100%',padding:'8px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,resize:'vertical',boxSizing:'border-box'}}/>
+                        </div>
+                        <div>
+                          <div style={{fontSize:11,color:T.muted,marginBottom:4}}>ACTION PLANNED *</div>
+                          <textarea value={fc.action!==undefined ? fc.action : (dbC?.action_planned||'')}
+                            onChange={e=>setEcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,action:e.target.value,saved:false}}))}
+                            rows={2} placeholder="Corrective action to be taken…"
+                            style={{width:'100%',padding:'8px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,resize:'vertical',boxSizing:'border-box'}}/>
+                        </div>
+                        <div style={{display:'flex',gap:8,flexWrap:'wrap',alignItems:'flex-end'}}>
+                          <div style={{flex:1,minWidth:140}}>
+                            <div style={{fontSize:11,color:T.muted,marginBottom:4}}>RESPONSIBLE PERSON</div>
+                            <input value={fc.person!==undefined ? fc.person : (dbC?.responsible_person||'')}
+                              onChange={e=>setEcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,person:e.target.value,saved:false}}))}
+                              placeholder="Name / Designation"
+                              style={{width:'100%',padding:'7px 10px',borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,boxSizing:'border-box'}}/>
+                          </div>
+                          <div>
+                            <div style={{fontSize:11,color:T.muted,marginBottom:4}}>TARGET DATE</div>
+                            <input type="date" value={fc.date!==undefined ? fc.date : (dbC?.target_date||'')}
+                              onChange={e=>setEcoFullCapaForm(p=>({...p,[g.oe_code]:{...fc,date:e.target.value,saved:false}}))}
+                              style={{padding:'7px 10px',borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13}}/>
+                          </div>
+                          <button onClick={()=>saveEcoFullCapa(g.oe_code)}
+                            disabled={ecoFullCapaSaving[g.oe_code]||!(fc.finding!==undefined?fc.finding:dbC?.finding)||!(fc.action!==undefined?fc.action:dbC?.action_planned)}
+                            style={{padding:'7px 20px',borderRadius:10,background:`linear-gradient(135deg,${T.green},#3d9e6e)`,
+                              border:'none',color:T.bg,fontSize:14,fontWeight:700,cursor:'pointer',opacity:1}}>
+                            {ecoFullCapaSaving[g.oe_code]?'Saving…':'Save CAPA →'}
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      );
+    };
+
+    return (
+      <div style={{background:T.bg,minHeight:'100vh',color:T.text,fontFamily:'Segoe UI,system-ui,sans-serif'}}>
+        <div style={{display:'flex',alignItems:'center',borderBottom:`1px solid ${T.border}`,padding:'0 16px',background:T.panel}}>
+          {[
+            {key:'dashboard',label:'📊 Dashboard'},
+            {key:'scoring',  label:'✏️ Score OEs'},
+            {key:'fixgaps',  label:`🔧 Fix Gaps${allGaps.length>0?' ('+allGaps.length+')':''}`},
+            {key:'kpis',     label:'📈 KPIs'},
+          ].map(tab=>(
+            <button key={tab.key} onClick={()=>setEcoFullTab(tab.key)}
+              style={{padding:'12px 16px',border:'none',cursor:'pointer',background:'transparent',fontSize:13,fontWeight:600,
+                color:ecoFullTab===tab.key?ECO_COLOR:T.muted,
+                borderBottom:ecoFullTab===tab.key?`2px solid ${ECO_COLOR}`:'2px solid transparent'}}>
+              {tab.label}
+            </button>
+          ))}
+          <button onClick={generateEcoFullPDF} disabled={ecoFullPdfLoading}
+            style={{marginLeft:'auto',padding:'6px 14px',borderRadius:7,border:`1px solid ${ECO_COLOR}`,
+              background:'transparent',color:ECO_COLOR,fontSize:12,fontWeight:700,cursor:ecoFullPdfLoading?'default':'pointer',
+              opacity:ecoFullPdfLoading?0.6:1,whiteSpace:'nowrap'}}>
+            {ecoFullPdfLoading ? '⏳ Generating…' : '⬇ Download Gap Report'}
+          </button>
+        </div>
+        {ecoFullTab==='dashboard' ? renderDashboard() : ecoFullTab==='scoring' ? renderScoreOEs() : ecoFullTab==='kpis' ? <EcoFullKpiTab hospitalId={context?.hospitalId}/> : renderFixGaps()}
+      </div>
+    );
+  };
+
   // ── HCO ELC TAB ──────────────────────────────────────────────────────────
   const renderHCOTab = () => {
 
@@ -8863,6 +10084,7 @@ export default function App() {
         {screen==="profile"&&<ProfileScreen user={user} context={context} onContextUpdate={setContext}/>}
         {screen==="shco"&&renderSHCOTab()}
         {screen==="shco-full"&&renderSHCOFullTab()}
+        {screen==="eco-full"&&renderECOFullTab()}
         {screen==="hco-elc"&&renderHCOTab()}
       </div>
 
