@@ -8053,9 +8053,11 @@ export default function App() {
     const compliance = arr => arr.length>0
       ? Math.round(arr.reduce((a,oe)=>a+(shcoFullScores[oe.oe_code]||0),0)/(arr.length*5)*100) : 0;
 
-    const ccPct    = compliance(coreCommOEs);
-    const achPct   = compliance(achieveOEs);
-    const excelPct = compliance(excelOEs);
+    const commitmentOEs = shcoFullOes.filter(oe=>oe.level==='Commitment');
+    const ccPct         = compliance(coreCommOEs);
+    const commitPct     = compliance(commitmentOEs);
+    const achPct        = compliance(achieveOEs);
+    const excelPct      = compliance(excelOEs);
 
     // Core rule: every Core OE ≥4
     const coreScoredBelow4 = coreOEs.filter(oe=>shcoFullScores[oe.oe_code]&&shcoFullScores[oe.oe_code]<4);
@@ -8097,6 +8099,11 @@ export default function App() {
       label:`Core + Commitment overall compliance ≥80% (${coreCommOEs.length} OEs)`,
       pct:ccPct,pass:ccPct>=80,
       detail:`Current: ${ccPct}% — need ≥80%`,
+    });
+    rules.push({
+      label:`Commitment compliance ≥80% (${commitmentOEs.length} OEs)`,
+      pct:commitPct,pass:commitPct>=80,
+      detail:`Current: ${commitPct}% — need ≥80%`,
     });
     if(shcoFullAssessType==='surveillance'||shcoFullAssessType==='renewal'){
       rules.push({
@@ -8172,7 +8179,7 @@ export default function App() {
           <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
             {[
               {key:'final',       label:'Final Assessment',       sub:'Core + Commitment · 357 OEs', note:'Initial 4-year award'},
-              {key:'surveillance',label:'Surveillance Assessment', sub:'+ Achievement · 392 OEs',    note:'At 18 months'},
+              {key:'surveillance',label:'Surveillance Assessment', sub:'+ Achievement · 392 OEs',    note:'At 14–18 months'},
               {key:'renewal',     label:'Re-accreditation',       sub:'All 408 OEs',                 note:'4-year renewal'},
             ].map(at=>(
               <button key={at.key} onClick={()=>setShcoFullAssessType(at.key)}
