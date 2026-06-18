@@ -8633,9 +8633,11 @@ export default function App() {
     const compliance = arr => arr.length>0
       ? Math.round(arr.reduce((a,oe)=>a+(ecoFullScores[oe.oe_code]||0),0)/(arr.length*5)*100) : 0;
 
-    const ccPct    = compliance(coreCommOEs);
-    const achPct   = compliance(achieveOEs);
-    const excelPct = compliance(excelOEs);
+    const commitmentOEs = ecoFullOes.filter(oe=>oe.level==='Commitment');
+    const ccPct         = compliance(coreCommOEs);
+    const commitPct     = compliance(commitmentOEs);
+    const achPct        = compliance(achieveOEs);
+    const excelPct      = compliance(excelOEs);
 
     const coreScoredBelow4 = coreOEs.filter(oe=>ecoFullScores[oe.oe_code]&&ecoFullScores[oe.oe_code]<4);
     const coreUnscoredOEs  = coreOEs.filter(oe=>!ecoFullScores[oe.oe_code]);
@@ -8672,6 +8674,11 @@ export default function App() {
       label:`Core + Commitment overall compliance ≥80% (${coreCommOEs.length} OEs)`,
       pct:ccPct,pass:ccPct>=80,
       detail:`Current: ${ccPct}% — need ≥80%`,
+    });
+    rules.push({
+      label:`Commitment compliance ≥80% (${commitmentOEs.length} OEs)`,
+      pct:commitPct,pass:commitPct>=80,
+      detail:`Current: ${commitPct}% — need ≥80%`,
     });
     if(ecoFullAssessType==='surveillance'||ecoFullAssessType==='renewal'){
       rules.push({
@@ -8746,7 +8753,7 @@ export default function App() {
           <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
             {[
               {key:'final',       label:'Final Assessment',       sub:`Core + Commitment · ${coreCommOEs.length} OEs`, note:'Initial 4-year award'},
-              {key:'surveillance',label:'Surveillance Assessment', sub:`+ Achievement · ${coreCommOEs.length+achieveOEs.length} OEs`,    note:'At 18 months'},
+              {key:'surveillance',label:'Surveillance Assessment', sub:`+ Achievement · ${coreCommOEs.length+achieveOEs.length} OEs`,    note:'At 21–24 months'},
               {key:'renewal',     label:'Re-accreditation',       sub:`All ${ecoFullOes.length} OEs`,                 note:'4-year renewal'},
             ].map(at=>(
               <button key={at.key} onClick={()=>setEcoFullAssessType(at.key)}
