@@ -1,5 +1,13 @@
 # CLAUDE.md
 
+## Session Start Rule
+
+At the start of every session, always run:
+
+```
+git pull origin master
+```
+
 ## Post-Deploy Rule
 
 After every successful `npm run deploy`, automatically run:
