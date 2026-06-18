@@ -3955,21 +3955,26 @@ function EcoTipBox(oe) {
 
 // ── ECO FULL — KPI tab ────────────────────────────────────────────────────────
 const ECO_KPIS=[
-  {id:1,  name:"Average OPD waiting time",                          ref:"AAC.1",  formula:"Total waiting time / Patients",        unit:"minutes", numLabel:"Total waiting time (min)",         denLabel:"Number of patients",          multiplier:1},
-  {id:2,  name:"Incidence of medication errors",                    ref:"PSQ.2a", formula:"Errors / Opportunities × 100",        unit:"%",       numLabel:"Number of medication errors",      denLabel:"Number of opportunities",     multiplier:100},
-  {id:3,  name:"Percentage of surgical site infections (eye)",      ref:"IPC.1",  formula:"SSI / Surgeries × 100",               unit:"%",       numLabel:"Number of SSIs",                   denLabel:"Number of eye surgeries",     multiplier:100},
-  {id:4,  name:"Unplanned return to OT rate",                       ref:"COP.1",  formula:"Returns / Surgeries × 100",           unit:"%",       numLabel:"Unplanned returns to OT",          denLabel:"Total surgeries",             multiplier:100},
-  {id:5,  name:"Visual acuity improvement rate (post-surgery)",     ref:"COP.2",  formula:"Improved / Operated × 100",           unit:"%",       numLabel:"Patients with improved VA",        denLabel:"Total operated patients",     multiplier:100},
-  {id:6,  name:"Hand hygiene compliance rate",                      ref:"IPC.2",  formula:"Compliant / Opportunities × 100",     unit:"%",       numLabel:"Compliant observations",           denLabel:"Total opportunities",         multiplier:100},
-  {id:7,  name:"Incidence of patient falls",                        ref:"PSQ.2d", formula:"Falls / 1000 patient days",           unit:"/1000",   numLabel:"Number of patient falls",          denLabel:"Total patient days",          multiplier:1000},
-  {id:8,  name:"Needlestick injuries rate",                         ref:"HRM.1",  formula:"Injuries / 100 occupied beds",        unit:"/100",    numLabel:"Number of needlestick injuries",   denLabel:"Total occupied beds",         multiplier:100},
-  {id:9,  name:"Percentage of IOL power accuracy",                  ref:"COP.3",  formula:"Accurate / Total × 100",              unit:"%",       numLabel:"Cases with accurate IOL power",    denLabel:"Total IOL cases",             multiplier:100},
-  {id:10, name:"Antibiotic prophylaxis compliance (eye surgery)",   ref:"MOM.1",  formula:"Compliant / Eligible × 100",          unit:"%",       numLabel:"Compliant patients",               denLabel:"Eligible patients",           multiplier:100},
-  {id:11, name:"Patient satisfaction score",                        ref:"PRE.1",  formula:"Satisfied / Surveyed × 100",          unit:"%",       numLabel:"Satisfied patients",               denLabel:"Total surveyed patients",     multiplier:100},
-  {id:12, name:"Waiting time for diagnostics",                      ref:"AAC.2",  formula:"Average waiting time",                unit:"minutes", numLabel:"Total waiting time (min)",         denLabel:"Number of patients",          multiplier:1},
-  {id:13, name:"Time taken for discharge",                          ref:"AAC.3",  formula:"Average discharge time",              unit:"minutes", numLabel:"Total discharge time (min)",       denLabel:"Number of discharges",        multiplier:1},
-  {id:14, name:"Percentage of corneal transplant survival",         ref:"COP.4",  formula:"Successful / Total × 100",            unit:"%",       numLabel:"Successful graft cases",           denLabel:"Total corneal transplants",   multiplier:100},
-  {id:15, name:"Instrument sterilisation compliance rate",          ref:"IPC.3",  formula:"Compliant instruments / Total × 100", unit:"%",       numLabel:"Compliant sterilised instruments", denLabel:"Total instruments processed", multiplier:100},
+  {id:1,  name:"Time for initial assessment (OP / Emergency)",                  ref:"PSQ.3.b", formula:"Sum of assessment time / Total patients",                   unit:"minutes", numLabel:"Total assessment time (min)",                    denLabel:"Number of patients assessed",                multiplier:1},
+  {id:2,  name:"Percentage of reporting errors / 100 investigations",           ref:"PSQ.3.c", formula:"Reporting errors / Tests performed × 100",                  unit:"%",       numLabel:"Number of reporting errors",                     denLabel:"Number of tests performed",                  multiplier:100},
+  {id:3,  name:"Percentage of re-dos",                                          ref:"PSQ.3.c", formula:"Re-tests / Tests performed × 100",                          unit:"%",       numLabel:"Number of re-dos / re-tests",                    denLabel:"Number of tests performed",                  multiplier:100},
+  {id:4,  name:"Incidence of medication errors",                                ref:"PSQ.3.d", formula:"Medication errors / Patient days × 1000",                   unit:"/1000",   numLabel:"Number of medication errors",                    denLabel:"Total patient days",                         multiplier:1000},
+  {id:5,  name:"Percentage of adverse drug reactions",                          ref:"PSQ.3.d", formula:"ADR admissions / Discharges & deaths × 100",                unit:"%",       numLabel:"Admissions with adverse drug reaction",          denLabel:"Total discharges and deaths",                multiplier:100},
+  {id:6,  name:"Percentage of modification of anaesthesia plan",                ref:"PSQ.3.e", formula:"Modified plans / Total anaesthesias × 100",                 unit:"%",       numLabel:"Anaesthesia plans modified",                     denLabel:"Total patients who underwent anaesthesia",   multiplier:100},
+  {id:7,  name:"Percentage of adverse anaesthesia events",                      ref:"PSQ.3.e", formula:"Adverse events / Total anaesthesias × 100",                 unit:"%",       numLabel:"Adverse anaesthesia events",                     denLabel:"Total patients who underwent anaesthesia",   multiplier:100},
+  {id:8,  name:"Percentage of adverse laser procedure events",                  ref:"PSQ.3.f", formula:"Adverse laser events / Laser procedures × 100",             unit:"%",       numLabel:"Adverse events related to laser procedures",     denLabel:"Total laser procedures performed",           multiplier:100},
+  {id:9,  name:"Percentage of unplanned return to OT",                          ref:"PSQ.3.g", formula:"Unplanned returns / Patients operated × 100",               unit:"%",       numLabel:"Unplanned returns to OT",                        denLabel:"Total patients operated",                    multiplier:100},
+  {id:10, name:"Percentage of re-scheduling of surgeries",                      ref:"PSQ.3.g", formula:"Re-scheduled cases / Surgeries planned × 100",              unit:"%",       numLabel:"Cases re-scheduled (beyond 4 hrs)",              denLabel:"Total surgeries planned",                    multiplier:100},
+  {id:11, name:"Adherence to wrong-site / wrong-patient / wrong-surgery check", ref:"PSQ.3.g", formula:"Protocol-followed cases / Surgeries performed × 100",       unit:"%",       numLabel:"Cases where prevention protocol was followed",   denLabel:"Total surgeries performed",                  multiplier:100},
+  {id:12, name:"Percentage of surgery complications",                           ref:"PSQ.3.g", formula:"Surgery complications / Total surgeries × 100",              unit:"%",       numLabel:"Number of surgery complications",                denLabel:"Total surgeries performed",                  multiplier:100},
+  {id:13, name:"Incidence of TASS / Endophthalmitis",                           ref:"PSQ.3.g", formula:"TASS or Endophthalmitis cases / Total surgeries × 100",     unit:"%",       numLabel:"TASS / Endophthalmitis cases",                   denLabel:"Total surgeries performed",                  multiplier:100},
+  {id:14, name:"Critical equipment downtime",                                   ref:"PSQ.3.h", formula:"Sum of downtime hours for all critical equipment (monthly)", unit:"hours",   numLabel:"Total downtime hours (all critical equipment)",  denLabel:"Enter 1 (this is a sum indicator)",          multiplier:1},
+  {id:15, name:"Employee satisfaction index",                                   ref:"PSQ.3.j", formula:"Average score achieved / Maximum possible score × 100",      unit:"%",       numLabel:"Average score achieved",                         denLabel:"Maximum possible score",                     multiplier:100},
+  {id:16, name:"Number of sentinel events reported and analysed",               ref:"PSQ.3.k", formula:"Events analysed & completed / Total reported × 100",         unit:"%",       numLabel:"Sentinel events analysed and completed",         denLabel:"Total sentinel events reported",             multiplier:100},
+  {id:17, name:"Percentage of near misses",                                     ref:"PSQ.3.k", formula:"Near misses reported / Total incidents reported × 100",      unit:"%",       numLabel:"Near misses reported",                           denLabel:"Total incidents reported",                   multiplier:100},
+  {id:18, name:"Percentage of medical records without discharge summary",        ref:"PSQ.3.i", formula:"Records without discharge summary / Discharges & deaths × 100", unit:"%",  numLabel:"Records without discharge summary",              denLabel:"Total discharges and deaths",                multiplier:100},
+  {id:19, name:"Percentage of records with incomplete / improper consent",      ref:"PSQ.3.i", formula:"Incomplete/improper consent records / Discharges & deaths × 100", unit:"%", numLabel:"Records with incomplete or improper consent",    denLabel:"Total discharges and deaths",                multiplier:100},
+  {id:20, name:"Staff adherence to hand hygiene protocols",                     ref:"PSQ.3.m", formula:"Compliant actions / Total opportunities × 100",              unit:"%",       numLabel:"Compliant hand hygiene actions observed",        denLabel:"Total hand hygiene opportunities observed",  multiplier:100},
 ];
 
 function EcoFullKpiTab({hospitalId}){
@@ -4039,16 +4044,16 @@ function EcoFullKpiTab({hospitalId}){
         <div style={{display:'flex',gap:16,alignItems:'center',flexWrap:'wrap'}}>
           <div style={{flex:1}}>
             <div style={{fontSize:11,color:T.muted,marginBottom:3,letterSpacing:1}}>KPI TRACKING STATUS</div>
-            <div style={{fontSize:14,color:tracked>=12?T.green:tracked>0?T.orange:T.red,fontWeight:700}}>
-              {tracked}/15 KPIs with ≥3 months data
+            <div style={{fontSize:14,color:tracked>=16?T.green:tracked>0?T.orange:T.red,fontWeight:700}}>
+              {tracked}/20 KPIs with ≥3 months data
               <span style={{fontSize:11,color:T.muted,marginLeft:6}}>(required for NABH assessment)</span>
             </div>
             <div style={{height:4,background:T.border,borderRadius:2,marginTop:6}}>
-              <div style={{height:'100%',borderRadius:2,background:tracked>=12?T.green:tracked>0?T.orange:T.red,width:`${Math.round((tracked/15)*100)}%`,transition:'width 0.5s'}}/>
+              <div style={{height:'100%',borderRadius:2,background:tracked>=16?T.green:tracked>0?T.orange:T.red,width:`${Math.round((tracked/20)*100)}%`,transition:'width 0.5s'}}/>
             </div>
           </div>
           <div style={{textAlign:'right'}}>
-            <div style={{fontSize:20,fontWeight:700,color:'#06b6d4'}}>{Math.round((tracked/15)*100)}%</div>
+            <div style={{fontSize:20,fontWeight:700,color:'#06b6d4'}}>{Math.round((tracked/20)*100)}%</div>
             <div style={{fontSize:11,color:T.muted}}>KPI readiness</div>
           </div>
         </div>
