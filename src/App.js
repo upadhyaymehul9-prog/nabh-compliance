@@ -6655,7 +6655,7 @@ export default function App() {
             const scC     = scoreCol(sc);
             const rowBg   = sc<=2 ? '#180606' : '#140e00';
             doc.setFontSize(7.5);
-            const wrapped = doc.splitTextToSize(oe.text||'', textColW);
+            const wrapped = doc.splitTextToSize(oe.oe_text||'', textColW);
             const lineH   = 9;
             const rowH    = Math.max(18, wrapped.length * lineH + rowPad*2);
 
@@ -8728,7 +8728,7 @@ export default function App() {
     const filteredOes=ecoFullOes.filter(oe=>{
       const chMatch=ecoFullChapter==='all'||oe.chapter===ecoFullChapter;
       const lvlMatch=ecoFullLevel==='all'||oe.level===ecoFullLevel;
-      const txMatch=!q||oe.oe_code.toLowerCase().includes(q)||(oe.text||'').toLowerCase().includes(q);
+      const txMatch=!q||oe.oe_code.toLowerCase().includes(q)||(oe.oe_text||'').toLowerCase().includes(q);
       return chMatch&&lvlMatch&&txMatch;
     });
     const byStandard=filteredOes.reduce((acc,oe)=>{
@@ -8921,7 +8921,7 @@ export default function App() {
                           {ecoFullShowTip[oe.oe_code]?'▲ Hide':'▶ How to achieve'}
                         </button>
                       </div>
-                      <div style={{fontSize:13,color:T.text,lineHeight:1.6,marginBottom:8}}>{oe.text}</div>
+                      <div style={{fontSize:13,color:T.text,lineHeight:1.6,marginBottom:8}}>{oe.oe_text}</div>
                       {ecoFullShowTip[oe.oe_code] && EcoTipBox(oe)}
                       <div style={{display:'flex',gap:4,flexWrap:'wrap'}}>
                         {[1,2,3,4,5].map(n=>(
@@ -8956,7 +8956,7 @@ export default function App() {
       .map(oe=>({oe, sev:gapSeverity(oe)}))
       .filter(({sev})=>sev!==null)
       .map(({oe,sev})=>({
-        oe_code: oe.oe_code, oe_text: oe.text, level: oe.level,
+        oe_code: oe.oe_code, oe_text: oe.oe_text, level: oe.level,
         standard_code: oe.standard_code, severity: sev,
         score: ecoFullScores[oe.oe_code]||0,
       }));

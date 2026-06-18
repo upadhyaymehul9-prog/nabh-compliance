@@ -63,7 +63,9 @@
       "Bash(mv nabh-clinic-branding:*)",
       "Bash(mv clinic-revenue-retention:*)",
       "Bash(mv nabh-affordable-software:*)",
-      "PowerShell(git stash *)"
+      "PowerShell(git stash *)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\SERVER\\\\Desktop\\\\nabh-compliance\\\\scripts\\\\\" | Where-Object {$_.Name -match \"kpi\"})",
+      "PowerShell(Select-String *)"
     ]
   }
 }
