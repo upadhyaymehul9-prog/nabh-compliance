@@ -3957,10 +3957,10 @@ function EcoTipBox(oe) {
 const ECO_KPIS=[
   {id:1,  name:"Average OPD waiting time",                          ref:"AAC.1",  formula:"Total waiting time / Patients",        unit:"minutes", numLabel:"Total waiting time (min)",         denLabel:"Number of patients",          multiplier:1},
   {id:2,  name:"Incidence of medication errors",                    ref:"PSQ.2a", formula:"Errors / Opportunities × 100",        unit:"%",       numLabel:"Number of medication errors",      denLabel:"Number of opportunities",     multiplier:100},
-  {id:3,  name:"Percentage of surgical site infections (eye)",      ref:"HIC.1",  formula:"SSI / Surgeries × 100",               unit:"%",       numLabel:"Number of SSIs",                   denLabel:"Number of eye surgeries",     multiplier:100},
+  {id:3,  name:"Percentage of surgical site infections (eye)",      ref:"IPC.1",  formula:"SSI / Surgeries × 100",               unit:"%",       numLabel:"Number of SSIs",                   denLabel:"Number of eye surgeries",     multiplier:100},
   {id:4,  name:"Unplanned return to OT rate",                       ref:"COP.1",  formula:"Returns / Surgeries × 100",           unit:"%",       numLabel:"Unplanned returns to OT",          denLabel:"Total surgeries",             multiplier:100},
   {id:5,  name:"Visual acuity improvement rate (post-surgery)",     ref:"COP.2",  formula:"Improved / Operated × 100",           unit:"%",       numLabel:"Patients with improved VA",        denLabel:"Total operated patients",     multiplier:100},
-  {id:6,  name:"Hand hygiene compliance rate",                      ref:"HIC.2",  formula:"Compliant / Opportunities × 100",     unit:"%",       numLabel:"Compliant observations",           denLabel:"Total opportunities",         multiplier:100},
+  {id:6,  name:"Hand hygiene compliance rate",                      ref:"IPC.2",  formula:"Compliant / Opportunities × 100",     unit:"%",       numLabel:"Compliant observations",           denLabel:"Total opportunities",         multiplier:100},
   {id:7,  name:"Incidence of patient falls",                        ref:"PSQ.2d", formula:"Falls / 1000 patient days",           unit:"/1000",   numLabel:"Number of patient falls",          denLabel:"Total patient days",          multiplier:1000},
   {id:8,  name:"Needlestick injuries rate",                         ref:"HRM.1",  formula:"Injuries / 100 occupied beds",        unit:"/100",    numLabel:"Number of needlestick injuries",   denLabel:"Total occupied beds",         multiplier:100},
   {id:9,  name:"Percentage of IOL power accuracy",                  ref:"COP.3",  formula:"Accurate / Total × 100",              unit:"%",       numLabel:"Cases with accurate IOL power",    denLabel:"Total IOL cases",             multiplier:100},
@@ -3969,7 +3969,7 @@ const ECO_KPIS=[
   {id:12, name:"Waiting time for diagnostics",                      ref:"AAC.2",  formula:"Average waiting time",                unit:"minutes", numLabel:"Total waiting time (min)",         denLabel:"Number of patients",          multiplier:1},
   {id:13, name:"Time taken for discharge",                          ref:"AAC.3",  formula:"Average discharge time",              unit:"minutes", numLabel:"Total discharge time (min)",       denLabel:"Number of discharges",        multiplier:1},
   {id:14, name:"Percentage of corneal transplant survival",         ref:"COP.4",  formula:"Successful / Total × 100",            unit:"%",       numLabel:"Successful graft cases",           denLabel:"Total corneal transplants",   multiplier:100},
-  {id:15, name:"Instrument sterilisation compliance rate",          ref:"HIC.3",  formula:"Compliant instruments / Total × 100", unit:"%",       numLabel:"Compliant sterilised instruments", denLabel:"Total instruments processed", multiplier:100},
+  {id:15, name:"Instrument sterilisation compliance rate",          ref:"IPC.3",  formula:"Compliant instruments / Total × 100", unit:"%",       numLabel:"Compliant sterilised instruments", denLabel:"Total instruments processed", multiplier:100},
 ];
 
 function EcoFullKpiTab({hospitalId}){
