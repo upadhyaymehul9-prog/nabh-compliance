@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, Tooltip, ReferenceLine, ResponsiveContainer, CartesianGrid } from "recharts";
 import jsPDF from 'jspdf';
+import AIAssistantWidget from "./components/AIAssistantWidget";
 
 const supabase = createClient(
   "https://tbptllgcjtiiqspxqcde.supabase.co",
@@ -5696,6 +5697,8 @@ export default function App() {
   const [shcoFullShowTip, setShcoFullShowTip] = useState({});
   const [shcoFullGapFilter, setShcoFullGapFilter] = useState('ALL');
   const [shcoFullGapSearch, setShcoFullGapSearch] = useState('');
+  const [aiWidgetOpen, setAiWidgetOpen] = useState(false);
+  const [aiWidgetTrigger, setAiWidgetTrigger] = useState({ code: null, id: 0 });
   const [shcoFullCapaForm, setShcoFullCapaForm] = useState({});
   const [shcoFullCapaSaving, setShcoFullCapaSaving] = useState({});
   const [shcoFullCapaDb, setShcoFullCapaDb] = useState({});
@@ -8364,6 +8367,11 @@ export default function App() {
                             color:shcoFullShowTip[oe.oe_code]?T.blue:T.muted}}>
                           {shcoFullShowTip[oe.oe_code]?'▲ Hide':'? How to achieve'}
                         </button>
+                        <button onClick={()=>{setAiWidgetOpen(true);setAiWidgetTrigger({code:oe.oe_code,id:Date.now()});}}
+                          style={{padding:'3px 10px',borderRadius:7,fontSize:11,cursor:'pointer',
+                            background:T.gold+'18',border:`1px solid ${T.gold}55`,color:T.gold,fontWeight:600}}>
+                          ✦ Ask AI
+                        </button>
                       </div>
                       <div style={{fontSize:13,color:T.text,lineHeight:1.6,marginBottom:8}}>{oe.text}</div>
                       {shcoFullShowTip[oe.oe_code]&&(()=>{
@@ -10143,6 +10151,15 @@ export default function App() {
       </a>
       <button onClick={()=>setTourStep(0)} title="Replay app tour"
         style={{position:"fixed",bottom:148,right:20,zIndex:9997,width:48,height:48,borderRadius:24,background:T.gold,border:"none",color:T.bg,fontSize:22,fontWeight:900,cursor:"pointer",boxShadow:`0 4px 16px rgba(201,168,76,0.5)`,display:"flex",alignItems:"center",justifyContent:"center",lineHeight:1}}>?</button>
+      {selectedProgramme==="shco-full"&&(
+        <AIAssistantWidget
+          T={T}
+          open={aiWidgetOpen}
+          onOpen={()=>setAiWidgetOpen(true)}
+          onClose={()=>setAiWidgetOpen(false)}
+          trigger={aiWidgetTrigger}
+        />
+      )}
       {tourStep!==null&&<WalktourOverlay step={tourStep} totalSteps={activeSteps.length} onNext={nextTourStep} onSkip={dismissTour} steps={activeSteps}/>}
       <div style={{textAlign:"center",padding:"14px",color:T.muted,fontSize:11,borderTop:`1px solid ${T.border}`,marginTop:20}}>
         NABH Accreditation Platform — Independent educational tool — Not affiliated with NABH/QCI
