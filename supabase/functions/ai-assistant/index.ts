@@ -40,6 +40,7 @@ Deno.serve(async (req) => {
     if (codeErr) throw new Error(`DB oe_code search: ${codeErr.message}`);
 
     let rows = codeRows && codeRows.length > 0 ? codeRows : null;
+    let isKeywordFallback = false;
 
     // Step 2: fall back to keyword search against text column
     if (!rows) {
@@ -57,7 +58,12 @@ Deno.serve(async (req) => {
           .or(filter)
           .limit(6);
         if (kwErr) throw new Error(`DB keyword search: ${kwErr.message}`);
-        rows = kwRows && kwRows.length > 0 ? kwRows : [];
+        if (kwRows && kwRows.length > 0) {
+          rows = kwRows;
+          isKeywordFallback = true;
+        } else {
+          rows = [];
+        }
       } else {
         rows = [];
       }
@@ -90,7 +96,14 @@ Deno.serve(async (req) => {
       ` they appear verbatim in <context>.\n` +
       `4. Keep answers practical and specific — hospital staff need to know what to` +
       ` DO, not just what the rule says.\n` +
-      `5. Always end your answer with the source: 'Source: SHCO Full — [oe_code]'\n\n` +
+      `5. Always end your answer with the source: 'Source: SHCO Full — [oe_code]'\n` +
+      `6. When you cannot find a match, state ONLY that no matching SHCO Full` +
+      ` requirement was found, and suggest the user rephrase or check with their` +
+      ` AccredReady admin. Do NOT speculate about which chapter, standard, or OE` +
+      ` might contain the answer, do NOT guess chapter names or codes, and do NOT` +
+      ` describe NABH structure beyond what is explicitly in <context>. If <context>` +
+      ` is empty, your entire response must be limited to the refusal sentence —` +
+      ` nothing else.\n\n` +
       `<context>\n${contextBlock}\n</context>`;
 
     _step.current = "anthropic-fetch";
@@ -117,9 +130,19 @@ Deno.serve(async (req) => {
 
     const anthropicData = await anthropicRes.json();
     const answer = anthropicData.content?.[0]?.text ?? "";
-    const sources = rows.map((r) => r.oe_code);
+    const sources = (!isKeywordFallback && rows.length > 0)
+      ? rows.map((r) => r.oe_code)
+      : [];
+    const suggestions = (isKeywordFallback || rows.length === 0)
+      ? [
+          "What are the requirements for infection control programme documentation?",
+          "Who approves antibiotic usage in SHCO standards?",
+          "What are the safe injection practices required?",
+          "What does the IC committee need to do and how often does it meet?",
+        ]
+      : [];
 
-    return Response.json({ answer, sources }, { headers: CORS });
+    return Response.json({ answer, sources, suggestions }, { headers: CORS });
   } catch (err) {
     console.error(`[${_step.current}]`, err);
     return Response.json(

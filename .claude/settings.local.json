@@ -66,7 +66,8 @@
       "PowerShell(git stash *)",
       "PowerShell(Get-ChildItem \"C:\\\\Users\\\\SERVER\\\\Desktop\\\\nabh-compliance\\\\scripts\\\\\" | Where-Object {$_.Name -match \"kpi\"})",
       "PowerShell(Select-String *)",
-      "PowerShell(python -c \"import pdfplumber; pdf=pdfplumber.open\\(r'C:\\\\Users\\\\SERVER\\\\Desktop\\\\NABH ECO\\\\Eye-Care-Standard-Guidebok_2nd-Edition.pdf'\\); print\\(len\\(pdf.pages\\),'pages'\\); [print\\(f'--- Page {i+1} ---'\\); print\\(pdf.pages[i].extract_text\\(\\)[:1500]\\) for i in range\\(min\\(3,len\\(pdf.pages\\)\\)\\)]\" 2>&1)"
+      "PowerShell(python -c \"import pdfplumber; pdf=pdfplumber.open\\(r'C:\\\\Users\\\\SERVER\\\\Desktop\\\\NABH ECO\\\\Eye-Care-Standard-Guidebok_2nd-Edition.pdf'\\); print\\(len\\(pdf.pages\\),'pages'\\); [print\\(f'--- Page {i+1} ---'\\); print\\(pdf.pages[i].extract_text\\(\\)[:1500]\\) for i in range\\(min\\(3,len\\(pdf.pages\\)\\)\\)]\" 2>&1)",
+      "Bash(npx supabase:*)"
     ]
   }
 }
