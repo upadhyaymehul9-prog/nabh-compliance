@@ -1,0 +1,533 @@
+GLOSSARY
+The commonly-used terminologies in the NABH standards are briey described and explained herein to remove
+any ambiguity regarding their comprehension. The denitions narrated have been taken from various authentic
+sources as stated, wherever possible. Notwithstanding the accuracy of the explanations given, in the event of
+any discrepancy with a legal requirement enshrined in the law of the land, the provisions of the latter shall apply.
+Accreditation Accreditation is self-assessment and external peer review process used by health
+care organisations to accurately assess their level of performance in relation to
+established standards and to implement ways to improve the health care system
+continuously.
+Accreditation The evaluation process for assessing the compliance of an organisation with the
+assessment applicable standards for determining its accreditation status.
+Advance life support Emergency medical care for sustaining life, including debrillation, airway
+management, and drugs and medications.
+Adverse drug A response to a drug which is noxious and unintended and which occurs at doses
+reaction normally used in man for prophylaxis, diagnosis, or therapy of disease or for the
+modication of physiologic function.
+Adverse event An injury related to medical management, in contrast to complications of the disease.
+Medical management includes all aspects of care, including diagnosis and
+treatment, failure to diagnose or treat, and the systems and equipment used to
+deliver care. Adverse events may be preventable or non-preventable. (WHO Draft
+Guidelines for Adverse Event Reporting and Learning Systems)
+Anaesthesia Death It is dened as death occurring within 24 hours of administration of anaesthesia due
+to cases related to anaesthesia. However, death may occur even afterwards due to
+the complications.
+Assessment All activities including history taking, physical examination, laboratory investigations
+that contribute towards determining the prevailing clinical status of the patient.
+Barrier nursing The nursing of patients with infectious diseases in isolation to prevent the spread of
+infection.
+As the name implies, the aim is to erect a barrier to the passage of infectious
+pathogenic organisms between the contagious patient and other patients and staff in
+the hospital, and thence to the outside world. The nurses wear gowns, masks, and
+gloves, and they observe strict rules that minimise the risk of passing on infectious
+agents.
+Basic life support Basic life support (BLS) is the level of medical care which is used for patients with
+life-threatening illnesses or injuries until the patient can be given full medical care.
+Breakdown Activities which are associated with the repair and servicing of site infrastructure,
+maintenance buildings, plant or equipment within the site's agreed building capacity allocation
+which have become inoperable or unusable because of the failure of component
+parts.
+Byelaws A rule governing the internal management of an organisation. It can supplement or
+complement the government law but cannot countermand it, e.g. municipal by-laws
+for construction of hospitals/nursing homes, for disposal of hazardous and/or
+infectious waste
+Calibration Set of operations that establish, under specied conditions, the relationship between
+values of quantities indicated by a measuring instrument or measuring system, or
+values represented by a material measure or a reference material, and the
+corresponding values realised by standards.
+Care Plan A plan that identies patient care needs, lists the strategy to meet those needs,
+documents treatment goals and objectives, outlines the criteria for ending
+interventions, and documents the individual's progress in meeting specied goals
+and objectives. The format of the plan may be guided by specic policies and
+procedures, protocols, practice guidelines or a combination of these. It includes
+preventive, promotive, curative and rehabilitative aspects of care.
+Citizen's charter Citizen's Charter is a document which represents a systematic effort to focus on the
+commitment of the organisation towards its citizens in respects of standard of
+services, information, choice and consultation, non-discrimination and accessibility,
+grievance redress, courtesy and value for money.
+(Reference: https://goicharters.nic.in/faq.htm)
+Clinical audit A quality improvement process that seeks to improve patient care and outcomes
+through systematic review of care against explicit criteria and the implementation of
+change. (Reference: Principles for Best Practice in Clinical Audit 2002, NICE/CHI)
+Clinical autopsy It is a surgical procedure that consists of an examination of a corpse by dissection to
+identify the cause, mode and manner of death or to evaluate any disease or injury
+that may be present for research or educational purposes.
+Clinical care pathway Clinical care pathways are standardised evidence-based, multidisciplinary
+management plans. They identify an appropriate sequence of clinical interventions,
+timeframes, milestones and expected outcomes for a homogenous patient group.
+Clinical practice Clinical practice guidelines are systematically developed statements to assist
+guidelines practitioner and patient decisions about appropriate health care for specic clinical
+circumstances.
+Competence Demonstrated ability to apply knowledge and skills (para 3.9.2 of ISO 9000: 2015).
+Knowledge is the understanding of facts and procedures. Skill is the ability to
+perform a specic action.
+Condentiality Restricted access to information to individuals who have a need, a reason and
+permission for such access. It also includes an individual's right to personal privacy
+as well as the privacy of information related to his/her healthcare records.
+Consent 1. The willingness of a party to undergo examination/procedure/ treatment by a
+healthcare provider. It may be implied (e.g. patient registering in OPD), expressed
+which may be written or verbal. Informed consent is a type of consent in which the
+healthcare provider has a duty to inform his/her patient about the procedure, its
+potential risk and benets, alternative procedure with their risk and benets so as to
+enable the patient to make an informed decision of his/her health care.
+2. In law, it means active acquiescence or silent compliance by a person legally
+capable of consenting. In India, the legal age of consent is 18 years. It may be
+evidenced by words or acts or by silence when silence implies concurrence. Actual
+or implied consent is necessarily an element in every contract and every agreement.
+Control Charts The statistical tool used in quality control to (1) analyse and understand process
+variables, (2) determine process capabilities, and to (3) monitor effects of the
+variables on the difference between target and actual performance. Control charts
+indicate upper and lower control limits, and often include a central (average) line, to
+help detect the trend of plotted values. If all data points are within the control limits,
+variations in the values may be due to a common cause and process is said to be 'in
+control'. If data points fall outside the control limits, variations may be due to a special
+cause, and the process is said to be out of control.
+Correction Action to eliminate the detected non-conformity (Reference: ISO 9000:2015)
+Corrective action Action to eliminate the cause of a non-conformity and to prevent recurrence.
+(Reference: ISO 9000:2015)
+Credentialing The process of obtaining, verifying and assessing the qualication of a healthcare
+provider.
+Data Data is a record of the event.
+Discharge summary A part of a patient record that summarises the reasons for admission, signicant
+clinical ndings, procedures performed, treatment rendered, patient's condition on
+discharge and any specic instructions given to the patient or family (for example
+follow-up medications).
+Disciplinary A sequence of activities to be carried out when staff does not conform to the laid-
+procedure down norms, rules and regulations of the healthcare organisation.
+Drug dispensing The preparation, packaging, labelling, record keeping, and transfer of a prescription
+drug to a patient or an intermediary, who is responsible for the administration of the
+drug. (Reference: Mosby's Medical Dictionary, 9th edition, 2009, Elsevier.)
+Drug Administration The giving of a therapeutic agent to a patient, e.g. by infusion, inhalation, injection,
+paste, pessary, suppository or tablet.
+Effective Effective Communication is a communication between two or more persons wherein
+communication the intended message is successfully delivered, received and understood.
+The effective communication also includes several other skills such as non-verbal
+communication, engaged listening, ability to speak assertively, etc.
+Employees All members of the healthcare organisation who are employed full time and are paid
+suitable remuneration for their services as per the laid-down policy.
+End-of-life Care Helps all those with an advanced, progressive, incurable illness to live as well as
+possible until they die. It enables the supportive and palliative care needs of both
+patient and family to be identied and met throughout the last phase of life and into
+bereavement. It includes management of pain and other symptoms and provision of
+psychological, social, spiritual and practical support.
+Enhanced Enhanced communication is using the methods of communication to ensure
+communication meaning and understanding through the recognition of the limitations of others. The
+intent is to ensure purposeful, timely and reliable communication. The
+communication must be sensitive, empathetic and inclusive.
+Ethics Moral principles that govern a person's or group's behaviour.
+Evidence-based Evidence-based medicine is the conscientious, explicit, and judicious use of current
+medicine best evidence in making decisions about the care of individual patients.
+Family The person(s) with a signicant role in the patient's life. It mainly includes spouse,
+children and parents. It may also include a person not legally related to the patient
+but can make healthcare decisions for a patient if the patient loses decision-making
+ability.
+Failure Mode and A method used to prospectively identify error risks within a particular process.
+Effect Analysis
+(FMEA)
+Formulary An approved list of drugs. Drugs contained in the formulary are generally those that
+are determined to be cost-effective and medically effective.
+Goal A broad statement describing a desired future condition or achievement without
+being specic about how much and when. (Reference: American Society for Quality)
+The term “goals” refers to a future condition or performance level that one intends to
+attain. Goals can be both short- and longer-term. Goals are ends that guide actions.
+(Reference: Malcolm Baldridge National Quality Award)
+Grievance- handling The sequence of activities carried out to address the grievances of patients, visitors,
+procedures relatives and staff.
+Hazardous materials Substances dangerous to human and other living organisms. They include
+radioactive or chemical materials.
+Hazardous waste Waste materials dangerous to living organisms. Such materials require special
+precautions for disposal. They include the biologic waste that can transmit disease
+(for example, blood, tissues) radioactive materials, and toxic chemicals. Other
+examples are infectious waste such as used needles, used bandages and uid
+soaked items.
+Healthcare- Healthcare-associated infection (HAI), also referred to as "nosocomial" or "hospital"
+associated infection infection, is an infection occurring in a patient during the process of care in a hospital
+or other health care facility which was not present or incubating at the time of
+admission. (Reference: World Health Organization)
+Healthcare The generic term is used to describe the various types of organisation that provide
+organisation healthcare services. This includes ambulatory care centres, hospitals, laboratories,
+etc.
+High-dependency unit A high-dependency unit (HDU) is an area for patients who require more intensive
+observation, treatment and nursing care than are usually provided for in a ward. It is a
+standard of care between the ward and full intensive care.
+High Risk/High Alert High-risk/high-alert medications are medications involved in a high percentage of
+Medications medication errors or sentinel events and medications that carry a high risk for abuse,
+error, or other adverse outcomes.
+Examples include medications with a low therapeutic index, controlled substances,
+psychotherapeutic medications, and look-alike and sound-alike medications.
+Incident reporting It is dened as written or verbal reporting of any event in the process of patient care,
+that is inconsistent with the deserved patient outcome or routine operations of the
+healthcare facility.
+In-service Organised education/training usually provided in the workplace for enhancing the
+education/training skills of staff members or for teaching them new skills relevant to their jobs/tasks.
+Indicator A statistical measure of the performance of functions, systems or processes over
+time. For example, hospital acquired infection rate, mortality rate, caesarean section
+rate, absence rate, etc.
+Information Processed data which lends meaning to the raw data.
+Intent A brief explanation of the rationale, meaning and signicance of the standards laid
+down in a particular chapter.
+Inventory control The method of supervising the intake, use and disposal of various goods in hands. It
+relates to supervision of the supply, storage and accessibility of items in order to
+ensure an adequate supply without stock-outs/excessive storage. It is also the
+process of balancing ordering costs against carrying costs of the inventory so as to
+minimise total costs.
+Isolation Separation of an ill person who has a communicable disease (e.g.,measles,
+chickenpox, mumps, SARS) from those who are healthy. Isolation prevents
+transmission of infection to others and also allows the focused delivery of specialised
+health care to ill patients. The period of isolation varies from disease-to-disease.
+Isolation facilities can also be extended to patients for fullling their individual, unique
+needs.
+Job description 1. It entails an explanation pertaining to duties, responsibilities and conditions
+required to perform a job.
+2. A summary of the most important features of a job, including the general nature of
+the work performed (duties and responsibilities) and level (i.e., skill, effort,
+responsibility and working conditions) of the work performed. It typically includes
+job specications that include employee characteristics required for competent
+performance of the job. A job description should describe and focus on the job
+itself and not on any specic individual who might ll the job.
+Job specication 1. The qualications/physical requirements, experience and skills required to perform
+a particular job/task.
+2. A statement of the minimum acceptable qualications that an incumbent must
+possess to perform a given job successfully.
+Maintenance The combination of all technical and administrative actions, including supervision
+actions, intended to retain an item in, or restore it to, a state in which it can perform a
+required function. (Reference: British Standard 3811:1993)
+Medical equipment Any xed or portable non-drug item or apparatus used for diagnosis, treatment,
+monitoring and direct care of a patient.
+Medication error A medication error is any preventable event that may cause or lead to inappropriate
+medication use or patient harm while the medication is in the control of the health
+care professional, patient, or consumer.
+Such events may be related to professional practice, health care products,
+procedures, and systems, including prescribing; order communication; product
+labelling, packaging, and nomenclature; compounding; dispensing; distribution;
+administration; education; monitoring; and use. (Reference: The National
+Coordinating Council for Medication Error Reporting and Prevention)
+Medication Order A written order by a physician, dentist, or other designated health professionals for a
+medication to be dispensed by a pharmacy for administration to a patient.
+(Reference: Mosby's Medical Dictionary, 10th edition, Elsevier)
+Mission An organisation's purpose. This refers to the overall function of an organisation. The
+mission answers the question, “What is this organisation attempting to accomplish?”
+The mission might dene patients, stakeholders, or markets served, distinctive or
+core competencies or technologies used.
+Monitoring The performance and analysis of routine measurements aimed at identifying and
+detecting changes in the health status or the environment, e.g. monitoring of growth
+and nutritional status, air quality in operation theatre. It requires careful planning and
+use of standardised procedures and methods of data collection.
+Multidisciplinary A generic term which includes representatives from various disciplines, professions
+or service areas.
+Near-miss A near-miss is an unplanned event that did not result in injury, illness, or damage--but
+had the potential to do so.
+Errors that did not result in patient harm, but could have, can be categorised as near-
+misses.
+No harm This is used synonymously with a near miss. However, some authors draw a
+distinction between these two phrases.
+A near-miss is dened when an error is realised just in the nick of time, and abortive
+action is instituted to cut short its translation. In no harm scenario, the error is not
+recognised, and the deed is done, but fortunately for the healthcare professional, the
+expected adverse event does not occur. The distinction between the two is important
+and is best exemplied by reactions to administered drugs in allergic patients. A
+prophylactic injection of cephalosporin may be stopped in time because it suddenly
+transpires that the patient is known to be allergic to penicillin (near-miss). If this vital
+piece of information is overlooked, and the cephalosporin administered, the patient
+may fortunately not develop an anaphylactic reaction (no harm event).
+Notiable disease Certain specied diseases, which are required by law to be notied to the public
+health authorities. Under the international health regulation (WHO's International
+Health Regulations 2005), the following diseases are always notiable to WHO:
+(a) Smallpox
+(b) Poliomyelitis due to wild-type poliovirus
+(c) Human inuenza caused by a new subtype
+(d) Severe acute respiratory syndrome (SARS).
+In India, the following is an indicative list of diseases which are also notiable, but
+may vary from state to state:
+(a) Polio
+(b) Inuenza
+(c) Malaria
+(d) Rabies
+(e) HIV/AIDS
+(f) Louse-borne typhus
+(g) Tuberculosis
+(h) Leprosy
+(i) Leptospirosis
+(j) Viral hepatitis
+(k) Dengue fever
+Nursing Empowerment for nurses may consist of three components: a workplace that has the
+empowerment requisite structures to promote empowerment; a psychological belief in one's ability
+to be empowered; and acknowledgement that there is power in the relationships and
+caring that nurses provide.
+It could include structural empowerment and psychological empowerment. Structural
+empowerment refers to the presence or absence of empowering conditions in the
+workplace. Kanter's (1993) theory of structural empowerment includes a discussion
+of organisational behaviour and empowerment. According to this theory,
+empowerment is promoted in work environments that provide employees with access
+to information, resources, support, and the opportunity to learn and develop.
+Psychological empowerment is related to a sense of motivation towards the
+organisational environment, based on the dimensions of meaning, competence, self-
+determination, and impact
+Evidence of nursing empowerment include initiating and carrying out CPR even in
+the absences of physicians, implementing standard protocols in the ICU such as
+weaning a patient off ventilator, tapering or titrating inotropic as per standard
+policies, nurse-led discussions during patient rounds, preparing nursing budgets,
+decisions to procure equipment that aid and ease nursing care, empowered to
+correct, stop non-compliance to protocols dened by the hospital.
+Objective A specic statement of a desired short-term condition or achievement includes
+measurable end-results to be accomplished by specic teams or individuals within
+time limits. (Reference: American Society for Quality)
+Objective element It is that component of standard which can be measured objectively on a rating
+scale. Acceptable compliance with the measurable elements will determine the
+overall compliance with the standard.
+Occupational health The hazards to which an individual is exposed during the course of the performance
+hazard of his job. These include physical, chemical, biological, mechanical and
+psychosocial hazards.
+Operational plan The operational plan is the part of your strategic plan. It denes how you will operate
+in practice to implement your action and monitoring plans - what your capacity needs
+are, how you will engage resources, how you will deal with risks, and how you will
+ensure the sustainability of the organisation's achievements.
+Organogram A graphic representation of the reporting relationship in an organisation.
+Outsourcing Hiring of services and facilities from other organisation based upon one's own
+requirement in areas where such facilities are either not available or else are not cost-
+effective. For example, outsourcing of house-keeping, security, laboratory/certain
+special diagnostic facilities. When an activity is outsourced to other institutions, there
+should be a memorandum of understanding that clearly lays down the obligations of
+both organisations: the one which is outsourcing and the one who is providing the
+outsourced facility. It also addresses the quality-related aspects.
+Patient-care setting The location where a patient is provided health care as per his needs, e.g. ICU,
+speciality ward, private ward and general ward.
+Patient record/ A document which contains the chronological sequence of events that a patient
+medical record/ undergoes during his stay in the healthcare organisation. It includes demographic
+clinical record data of the patient, assessment ndings, diagnosis, consultations, procedures
+undergone, progress notes and discharge summary.
+Patient-reported Patient-reported experience measures are questionnaires measuring the patients'
+experience measures perceptions of their experience whilst receiving care.
+(PREMs)
+Patient-reported Patient-reported outcome measures are questionnaires measuring the patients' views
+outcome measures of their health status.
+(PROMs)
+Patient Satisfaction Patient satisfaction is a measure of the extent to which a patient is content with the
+health care which they received from their health care provider. Patient satisfaction is
+thus a proxy but a very effective indicator to measure the success of Health care
+providers.
+Patient Experience Patient Experience is the sum of all interactions, shaped by an organisation's culture,
+that inuence patient perceptions across the continuum of care.
+It is a holistic perception that the patient forms about the healthcare provider based
+on the overall interactions/ care touchpoints.
+Performance It is the process of evaluating the performance of staff during a dened period of time
+appraisal with the aim of ascertaining their suitability for the job, the potential for growth as well
+as determining training needs.
+Point of care Medical Equipment that is used to deliver care/intervene at or near the site of patient
+equipment care. These are primarily Point-of-care testing (POCT), or bedside testing equipment
+that helps in reducing turn-around times. POCT Machine examples; Glucometer, ABG
+Analyser, Stat Lab at ICU/ER, portable USG etc.
+Policies They are the guidelines for decision-making,e.g. admission, discharge policies,
+antibiotic policy,etc.
+Preventive action Action to eliminate the cause of a potential non-conformity. (Reference ISO
+9000:2015)
+Preventive It is a set of activities that are performed on plant equipment, machinery, and systems
+maintenance before the occurrence of a failure in order to protect them and to prevent or eliminate
+any degradation in their operating conditions.
+The maintenance carried out at predetermined intervals or according to prescribed
+criteria and intended to reduce the probability of failure or the degradation of the
+functioning of an item.
+Prescription A prescription is a document given by a physician or other healthcare practitioner in
+the form of instructions that govern the care plan for an individual patient.
+Legally, it is a written directive, for compounding or dispensing and administration of
+drugs, or for other service to a particular patient.
+(Reference: Miller-Keane Encyclopedia and Dictionary of Medicine, Nursing, and
+Allied Health, Seventh Edition, Saunders)
+Privileging It is the process for authorising all medical professionals to admit and treat patients
+and provide other clinical services commensurate with their qualications and skills.
+Privileged Condential information furnished (to facilitate diagnosis and treatment) by the
+communication patient to a professional authorised by law to provide care and treatment.
+Procedural sedation Procedural sedation is a technique of administering sedatives or dissociative agents
+with or without analgesics to induce a state that allows the patient to tolerate
+unpleasant procedures while maintaining cardiorespiratory function. Procedural
+sedation and analgesia (PSA) is intended to result in a depressed level of
+consciousness that allows the patient to maintain oxygenation and airway control
+independently. (Reference: The American College of Emergency Physicians)
+Procedure 1. A specied way to carry out an activity or a process (Para 3.4.5 of ISO 9000: 2015).
+2. A series of activities for carrying out work which when observed by all help to
+ensure the maximum use of resources and efforts to achieve the desired output.
+Process A set of interrelated or interacting activities which transforms inputs into outputs (Para
+3.4.1 of ISO 9000: 2015).
+Programme A sequence of activities designed to implement policies and accomplish objectives.
+Protocol A plan or a set of steps to be followed in a study, an investigation or an intervention.
+Quality 1. Degree to which a set of inherent characteristics full requirements (Para 3.1.1 of
+ISO 9000: 2015).
+Characteristics imply a distinguishing feature (Para 3.5.1 of ISO 9000: 2015).
+Requirements are a need or expectation that is stated, generally implied or obligatory
+(Para 3.1.2 of ISO 9000:2015).
+2. Degree of adherence to pre-established criteria or standards.
+Quality assurance Part of quality management focussed on providing condence that quality
+requirements will be fullled (Para 3.2.11 of ISO 9000:2015).
+Quality improvement Ongoing response to quality assessment data about a service in ways that improve
+the process by which services are provided to consumers/patients.
+Radiation Safety Radiation safety refers to safety issues and protection from radiation hazards arising
+from the handling of radioactive materials or chemicals and exposure to Ionizing and
+Non-Ionizing Radiation.
+This is implemented by taking steps to ensure that people will not receive excessive
+doses of radiation and by monitoring all sources of radiation to which they may be
+exposed.(Reference: McGraw-Hill Dictionary of Scientic & Technical Terms)
+In a Healthcare setting, this commonly refers to X-ray machines, CT/PET CT Scans,
+Electron microscopes, Particle accelerators, Cyclotron etc. Radioactive substances
+and radioactive waste are also potential Hazards.
+Imaging Safety includes safety measures to be taken while performing an MRI,
+Radiological interventions, Sedation, Anaesthesia, Transfer of patients, Monitoring
+patients during imaging procedure etc.
+Re-assessment It implies a continuous and ongoing assessment of the patient, which is recorded in
+the medical records as progress notes.
+Reconciliation of Medication reconciliation is the process of creating the most accurate list possible of
+medications all medications a patient is taking — including drug name, dosage, frequency, and
+route — and comparing that list against the physician's admission, transfer, and/or
+discharge orders, with the goal of providing correct medications to the patient at all
+transition points within the hospital. (Reference: Institute for Healthcare Improvement)
+Resources It implies all inputs in terms of men, material, money, machines, minutes (time),
+methods, metres (space), skills, knowledge and information that are needed for the
+efcient and effective functioning of an organisation.
+Restraints Devices used to ensure safety by restricting and controlling a person's movement.
+Many facilities are “restraint-free” or use alternative methods to help modify
+behaviour. Restraint may be physical or chemical (by use of sedatives).
+Risk abatement Risk abatement means minimising the risk or minimising the impact of that risk.
+Risk assessment Risk assessment is the determination of the quantitative or qualitative value of risk
+related to a concrete situation and a recognised threat (also called hazard). Risk
+assessment is a step in a risk management procedure.
+Risk management Clinical and administrative activities to identify, evaluate and reduce the risk of injury.
+Risk mitigation Risk mitigation is a strategy to prepare for and lessen the effects of threats and
+disasters. Risk mitigation takes steps to reduce the negative effects of threats and
+disasters.
+Risk reduction The conceptual framework of elements considered with the possibilities to minimise
+vulnerabilities and disaster risks throughout society to avoid (prevention) or to limit
+(mitigation and preparedness) the adverse impacts of hazards, within the broad
+context of sustainable development.
+It is the decrease in the risk of a healthcare facility, given activity, and treatment
+process with respect to patient, staff, visitors and community.
+Root Cause Analysis Root Cause Analysis (RCA) is a structured process that uncovers the physical,
+(RCA) human, and latent causes of any undesirable event in the workplace. Root cause
+analysis (RCA) is a method of problem-solving that tries to identify the root causes of
+faults or problems that cause operating events.
+RCA practice tries to solve problems by attempting to identify and correct the root
+causes of events, as opposed to simply addressing their symptoms. By focusing
+correction on root causes, problem recurrence can be prevented. The process
+involves data collection; cause charting, root cause identication and
+recommendation generation and implementation.
+Safety The degree to which the risk of an intervention/procedure, in the care environment is
+reduced for a patient, visitors and healthcare providers.
+Safety programme A programme focused on patient, staff and visitor safety.
+Scope of services Range of clinical and supportive activities that are provided by a healthcare
+organisation.
+Security Protection from loss, destruction, tampering, and unauthorised access or use.
+Sedation The administration to an individual, in any setting for any purpose, by any route,
+moderate or deep sedation. There are three levels of sedation:
+Minimal sedation (anxiolysis) - A drug-induced state during which patients respond
+normally to verbal commands. Although cognitive function and coordination may be
+impaired, ventilatory and cardiovascular functions are not affected.
+Moderate sedation/analgesia (conscious sedation) - A drug-induced depression of
+consciousness during which patients respond purposefully to verbal commands
+either alone or accompanied by light tactile stimulation. No interventions are needed
+to maintain a patent airway.
+Deep sedation/analgesia - A drug-induced depression of consciousness during
+which patients cannot be easily aroused but respond purposefully after repeated or
+painful stimulation. Patients may need help in maintaining a patent airway.
+Sentinel events A relatively infrequent, unexpected incident, related to system or process
+deciencies, which leads to death or major and enduring loss of function for a
+recipient of healthcare services.
+Major and enduring loss of function refers to sensory, motor, physiological, or
+psychological impairment not present at the time services were sought or begun. The
+impairment lasts for a minimum period of two weeks and is not related to an
+underlying condition.
+Social responsibility A balanced approach for an organisation to address economic, social and
+environmental issues in a way that aims to benet people, communities and
+society,e.g. adoption of villages for providing health care, holding of medical camps
+and proper disposal of hospital wastes.
+Sound clinical Practitioner decisions based on available knowledge, principles and practices for
+practice specic clinical situations.
+Special Educational In addition to routine carried by the healthcare professionals, patients and family
+needs of the patient have special educational needs depending on the situation. For example, a post-
+surgical patient who has to take care of his wound, nasogastric tube feeding, patient
+on tracheostomy getting discharged who has to be taken care of by the family etc.
+The special educational needs are also greatly inuenced by the literacy, educational
+level, language, emotional barriers and physical and cognitive limitations. Hence it is
+important for the staff to determine the special educational needs and the challenges
+inuencing the effective education.
+Staff All personnel working in the organisation including employees, “fee-for-service”
+medical professionals, part-time workers, contractual personnel and volunteers.
+Standard precautions 1. A method of infection control in which all human blood and other bodily uids are
+considered infectious for HIV, HBV and other blood-borne pathogens, regardless
+of patient history. It encompasses a variety of practices to prevent occupational
+exposure, such as the use of personal protective equipment (PPE), disposal of
+sharps and safe housekeeping
+2. A set of guidelines protecting rst aiders or healthcare professionals from
+pathogens. The main message is: "Don't touch or use anything that has the
+victim's body uid on it without a barrier." It also assumes that all body uid of a
+patient is infectious, and must be treated accordingly.
+Standard Precautions apply to blood, all body uids, secretions, and excretions
+(except sweat) regardless of whether or not they contain visible blood, non-intact
+skin and mucous membranes
+Standards A statement of expectation that denes the structures and process that must be
+substantially in place in an organisation to enhance the quality of care.
+Sterilisation It is the process of killing or removing microorganisms including their spores by
+thermal, chemical or irradiation means.
+Strategic plan Strategic planning is an organisation's process of dening its strategy or direction
+and making decisions on allocating its resources to pursue this strategy, including its
+capital and people. Various business analysis techniques can be used in strategic
+planning, including SWOT analysis (Strengths, Weaknesses, Opportunities and
+Threats), e.g. Organisation can have a strategic plan to become a market leader in
+the provision of cardiothoracic and vascular services. The resource allocation will
+have to follow the pattern to achieve the target.
+The process by which an organisation envisions its future and develops strategies,
+goals, objectives and action plans to achieve that future.
+Surveillance The continuous scrutiny of factors that determines the occurrence and distribution of
+diseases and other conditions of ill health. It implies watching over with great
+attention, authority and often with suspicion. It requires professional analysis and
+sophisticated interpretation of data leading to recommendations for control activities.
+Table-top exercise A table-top exercise is an activity in which key personnel assigned
+emergency management roles and responsibilities are gathered to discuss, in a non-
+threatening environment, various simulated emergency situations.
+(Reference:
+https://uwpd.wisc.edu/content/uploads/2014/01/What_is_a_tabletop_exercise.pdf)
+Traceability Traceability is the ability to trace the history, application, use and location of an item
+or its characteristics through recorded identication data. (Reference: ISO
+9000:2015)
+Transfusion reaction A transfusion reaction is a problem that occurs after a patient receives a transfusion
+of blood.
+Triage Triage is a process of prioritising patients based on the severity of their condition so
+as to treat as many as possible when resources are insufcient for all to be treated
+immediately.
+Turn-around-time Turnaround Ttime (TAT) means the amount of time taken to complete a process or
+full a request.
+Unstable patient A patient whose vital parameters need external assistance for their maintenance.
+Validated tool A validated tool refers to a questionnaire/scale that has been developed to be
+administered among the intended respondents. The validation processes should
+have been completed using a representative sample, demonstrating adequate
+reliability (the ability of the instrument to produce consistent results) and validity (the
+ability of the instrument to produce true results).
+Validation Validation is verication, where the specied requirements are adequate for the
+intended use.
+Values The fundamental beliefs that drive organisational behaviour and decision-making.
+This refers to the guiding principles and behaviours that embody how an organisation
+and its people are expected to operate. Values reect and reinforce the desired
+culture of an organisation.
+Verbal order Verbal orders are those orders given by a physician with prescriptive authority to a
+licensed person who is authorised by the organisation.
+Verication Verication is the provision of objective evidence that a given item fulls specied
+requirements.
+Vision An overarching statement of the way an organisation wants to be, an ideal state of
+being at a future point.
+This refers to the desired future state of an organisation. The vision describes where
+the organisation is headed, what it intends to be, or how it wishes to be perceived in
+the future.
+Vulnerable patient Those patients who are prone to injury and disease by virtue of their age, sex,
+physical, mental and immunological status,e.g. infants, elderly, physically- and
+mentally-challenged, semiconscious/unconscious, those on immunosuppressive
+and/or chemotherapeutic agents.
+Workplace violence Incidents where staff are abused, threatened or assaulted in circumstances related to
+their work, including commuting to and from work, involving an explicit or implicit
+challenge to their safety, well-being or health. (Adapted from European Commission)
