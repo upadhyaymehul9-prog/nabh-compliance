@@ -30,13 +30,25 @@ Deno.serve(async (req) => {
     _step.current = "supabase-init";
     const supabase = createClient(supabaseUrl, serviceKey);
 
-    // Step 1: try oe_code match (strip all whitespace so "PRE .2.a" matches "PRE.2.a")
+    // Step 1: try oe_code match — normalize user input to canonical DB format
+    // DB format: CHAPTER.NUMBER.letter  e.g. "AAC.1.a", "PRE.2.g"
+    // Handles: "aac1a", "aac 1 a", "AAC-1-A", "AAC .1.a", "aac.1.a" → "AAC.1.a"
     _step.current = "db-oe_code-search";
-    const questionCompact = question.replace(/\s+/g, "");
+    const normalizeOeCode = (q: string): string => {
+      // Strip all whitespace first, then try to extract a code pattern
+      const compact = q.replace(/\s+/g, "");
+      // Match: 2-4 uppercase letters, optional separator, 1-2 digits, optional separator, 1 letter
+      const match = compact.match(/^([A-Za-z]{2,4})[.\-]?(\d{1,2})[.\-]?([A-Za-z])$/i);
+      if (match) {
+        return `${match[1].toUpperCase()}.${match[2]}.${match[3].toLowerCase()}`;
+      }
+      return compact;
+    };
+    const oeCodeQuery = normalizeOeCode(question.trim());
     const { data: codeRows, error: codeErr } = await supabase
       .from("shco_full_oes")
       .select("oe_code, chapter, standard_code, level, text, achieve_tips")
-      .ilike("oe_code", `%${questionCompact}%`)
+      .ilike("oe_code", `%${oeCodeQuery}%`)
       .limit(6);
     if (codeErr) throw new Error(`DB oe_code search: ${codeErr.message}`);
 
