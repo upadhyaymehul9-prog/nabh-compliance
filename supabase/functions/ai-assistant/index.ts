@@ -6,6 +6,304 @@ const CORS = {
   "Access-Control-Allow-Headers": "Content-Type, Authorization",
 };
 
+// ── SHCO General Reference Content ────────────────────────────────────────────
+// Source: NABH Accreditation Standards for Small Healthcare Organizations,
+// 3rd Edition, August 2022, ISBN 978-81-959676-1-2
+const GENERAL_INFO = `
+WHAT IS NABH?
+National Accreditation Board for Hospitals and Healthcare Providers (NABH) is a constituent board of the Quality Council of India (QCI), set up to establish and operate accreditation programs for healthcare organisations. NABH is accredited by the International Society for Quality in Healthcare (ISQua).
+
+ASSESSMENT MODES — THE THREE POINTS IN THE ACCREDITATION CYCLE:
+
+Final Assessment — The initial assessment before first accreditation is granted. A team of assessors conducts an on-site evaluation. At this stage, only objective elements at Core and Commitment level are scored (357 of 408 total OEs). Accreditation is awarded for 4 years if criteria are met.
+
+Surveillance Assessment — Conducted 14–18 months after accreditation is granted (midterm check during the 4-year cycle). At this stage, Core, Commitment, AND Achievement level OEs are scored (392 of 408 total OEs). This checks whether the hospital is improving and maintaining standards.
+
+Renewal/Re-accreditation Assessment — Conducted before the 4-year accreditation expires (apply at least 6 months prior to expiry). At this stage, ALL OE levels are scored — Core, Commitment, Achievement, AND Excellence (all 408 OEs).
+
+ACCREDITATION DECISION CRITERIA:
+
+Final Assessment criteria: Overall compliance ≥80%; every Core OE score ≥4; average score per standard ≥4; average score per chapter ≥4; no standard with more than 1 OE scored ≤2; every OE scored ≤3 must have an accepted action plan with timelines.
+
+Surveillance Assessment adds: Commitment level compliance ≥80%; Achievement level compliance ≥80%; improvement required on any OE that scored ≤2 in the previous assessment.
+
+Re-accreditation Assessment adds: Excellence level compliance ≥80%; improvement required on any OE that scored ≤2 in the previous assessment; NOTE — the book's body text (p.22) states no standard should have ANY OE scored ≤2 (stricter than Final/Surveillance), though the book's own summary table (p.23) shows the same "1" limit for all three types — the conservative interpretation for Re-accreditation preparation is to aim for zero OEs ≤2 per standard.
+
+OE LEVELS (Core / Commitment / Achievement / Excellence):
+CORE — Standards the organisation MUST have in place to ensure quality of care and safety. Mandatorily assessed at every assessment stage. Score must never be below 4.
+Commitment — Most objective elements sit here. These form the basis for accreditation at the Final Assessment.
+Achievement — Reflects ongoing improvement beyond the basics. First assessed at the Surveillance stage (14–18 months post-accreditation).
+Excellence — The highest level, reflecting a mature quality system. Only assessed at Re-accreditation (end of the 4-year cycle).
+SHCO 3rd Edition breakdown: 408 total OEs = 100 Core + 257 Commitment + 35 Achievement + 16 Excellence, across 71 standards and 10 chapters.
+
+SCORING SCALE (5-point, used in both self-assessment and official assessment):
+Score 1 — No compliance: No systems in place; ≤20% of samples meet requirement; non-conformity exists.
+Score 2 — Poor compliance: Elementary systems in place; 21–40% of samples meet requirement; non-conformity exists.
+Score 3 — Partial compliance: Systems partially in place; 41–60% of samples meet requirement; non-conformity exists.
+Score 4 — Good compliance: Systems in place with evidence of implementation; 61–80% of samples meet requirement; non-conformity could exist.
+Score 5 — Full compliance: Systems fully implemented across the organisation; 81–100% of samples meet requirement; no non-conformity.
+Note: the basis for scoring is implementation. If documentation is inadequate even when implementation is good, the score can be downgraded by one point.
+
+WHAT IS A KPI?
+KPI = Key Performance Indicator. Per Annexure 1 of the official SHCO 3rd Edition standards book: KPIs help to systematically monitor, evaluate, and continually improve service performance. By themselves, KPIs do not improve performance — they provide signposts that signal progress toward goals and opportunities for improvement. Each KPI has a standardised definition, formula (numerator/denominator), unit, and defined monitoring frequency. KPIs are separate from OE scoring — they are tracked on an ongoing basis (not scored 1–5 like OEs) and reviewed for trends over time.
+
+WHAT IS A STANDARD vs AN OBJECTIVE ELEMENT (OE)?
+Standard — A statement of expectation defining structures/processes that must be in place. Numbered serially: first 3 letters = chapter code, number = order within chapter (e.g. AAC.1 = first standard of the AAC chapter).
+Objective Element (OE) — The measurable component of a standard, scored on the 1–5 scale during assessment. Numbered with a letter after the standard number (e.g. AAC.1.c = third OE of the first AAC standard).
+
+THE 10 SHCO CHAPTERS (Total: 71 standards, 408 OEs):
+1. AAC — Access, Assessment and Continuity of Care (8 standards, 48 OEs)
+2. COP — Care of Patients (13 standards, 82 OEs)
+3. MOM — Management of Medication (9 standards, 52 OEs)
+4. PRE — Patient Rights and Education (6 standards, 39 OEs)
+5. HIC — Hospital Infection Control (6 standards, 36 OEs)
+6. PSQ — Patient Safety and Quality Improvement (5 standards, 28 OEs)
+7. ROM — Responsibilities of Management (4 standards, 19 OEs)
+8. FMS — Facility Management and Safety (5 standards, 29 OEs)
+9. HRM — Human Resource Management (9 standards, 45 OEs)
+10. IMS — Information Management System (6 standards, 30 OEs)
+`.trim();
+
+// ── NABH Official Glossary ─────────────────────────────────────────────────────
+// Source: SHCO 3rd Edition Standards Book, pp.138–150
+// PDF ligature artifacts (fi/fl) corrected during embedding.
+const GLOSSARY: Record<string, string> = {
+  "accreditation": "Accreditation is a self-assessment and external peer review process used by healthcare organisations to accurately assess their level of performance in relation to established standards and to implement ways to improve the healthcare system continuously.",
+  "accreditation assessment": "The evaluation process for assessing the compliance of an organisation with the applicable standards for determining its accreditation status.",
+  "advance life support": "Emergency medical care for sustaining life, including defibrillation, airway management, and drugs and medications.",
+  "adverse drug reaction": "A response to a drug which is noxious and unintended and which occurs at doses normally used in man for prophylaxis, diagnosis, or therapy of disease or for the modification of physiologic function.",
+  "adverse event": "An injury related to medical management, in contrast to complications of the disease. Medical management includes all aspects of care, including diagnosis and treatment, failure to diagnose or treat, and the systems and equipment used to deliver care. Adverse events may be preventable or non-preventable. (WHO Draft Guidelines for Adverse Event Reporting and Learning Systems)",
+  "anaesthesia death": "Defined as death occurring within 24 hours of administration of anaesthesia due to cases related to anaesthesia. However, death may occur even afterwards due to the complications.",
+  "assessment": "All activities including history taking, physical examination, laboratory investigations that contribute towards determining the prevailing clinical status of the patient.",
+  "barrier nursing": "The nursing of patients with infectious diseases in isolation to prevent the spread of infection. The aim is to erect a barrier to the passage of infectious pathogenic organisms between the contagious patient and other patients and staff in the hospital, and thence to the outside world. The nurses wear gowns, masks, and gloves, and observe strict rules that minimise the risk of passing on infectious agents.",
+  "basic life support": "Basic life support (BLS) is the level of medical care which is used for patients with life-threatening illnesses or injuries until the patient can be given full medical care.",
+  "breakdown maintenance": "Activities which are associated with the repair and servicing of site infrastructure, buildings, plant or equipment within the site's agreed building capacity allocation which have become inoperable or unusable because of the failure of component parts.",
+  "byelaws": "A rule governing the internal management of an organisation. It can supplement or complement the government law but cannot countermand it, e.g. municipal by-laws for construction of hospitals/nursing homes, for disposal of hazardous and/or infectious waste.",
+  "calibration": "Set of operations that establish, under specified conditions, the relationship between values of quantities indicated by a measuring instrument or measuring system, or values represented by a material measure or a reference material, and the corresponding values realised by standards.",
+  "care plan": "A plan that identifies patient care needs, lists the strategy to meet those needs, documents treatment goals and objectives, outlines the criteria for ending interventions, and documents the individual's progress in meeting specified goals and objectives. The format of the plan may be guided by specific policies and procedures, protocols, practice guidelines or a combination of these. It includes preventive, promotive, curative and rehabilitative aspects of care.",
+  "citizen's charter": "A document which represents a systematic effort to focus on the commitment of the organisation towards its citizens in respects of standard of services, information, choice and consultation, non-discrimination and accessibility, grievance redress, courtesy and value for money.",
+  "clinical audit": "A quality improvement process that seeks to improve patient care and outcomes through systematic review of care against explicit criteria and the implementation of change. (Reference: Principles for Best Practice in Clinical Audit 2002, NICE/CHI)",
+  "clinical autopsy": "A surgical procedure that consists of an examination of a corpse by dissection to identify the cause, mode and manner of death or to evaluate any disease or injury that may be present for research or educational purposes.",
+  "clinical care pathway": "Standardised evidence-based, multidisciplinary management plans. They identify an appropriate sequence of clinical interventions, timeframes, milestones and expected outcomes for a homogenous patient group.",
+  "clinical practice guidelines": "Systematically developed statements to assist practitioner and patient decisions about appropriate health care for specific clinical circumstances.",
+  "competence": "Demonstrated ability to apply knowledge and skills (para 3.9.2 of ISO 9000:2015). Knowledge is the understanding of facts and procedures. Skill is the ability to perform a specific action.",
+  "confidentiality": "Restricted access to information to individuals who have a need, a reason and permission for such access. It also includes an individual's right to personal privacy as well as the privacy of information related to his/her healthcare records.",
+  "consent": "1. The willingness of a party to undergo examination/procedure/treatment by a healthcare provider. It may be implied (e.g. patient registering in OPD), expressed which may be written or verbal. Informed consent is a type of consent in which the healthcare provider has a duty to inform his/her patient about the procedure, its potential risk and benefits, alternative procedure with their risk and benefits so as to enable the patient to make an informed decision of his/her healthcare. 2. In law, it means active acquiescence or silent compliance by a person legally capable of consenting. In India, the legal age of consent is 18 years.",
+  "control charts": "The statistical tool used in quality control to (1) analyse and understand process variables, (2) determine process capabilities, and to (3) monitor effects of the variables on the difference between target and actual performance. Control charts indicate upper and lower control limits, and often include a central (average) line, to help detect the trend of plotted values.",
+  "correction": "Action to eliminate the detected non-conformity. (Reference: ISO 9000:2015)",
+  "corrective action": "Action to eliminate the cause of a non-conformity and to prevent recurrence. (Reference: ISO 9000:2015)",
+  "credentialing": "The process of obtaining, verifying and assessing the qualifications of a healthcare provider.",
+  "data": "A record of the event.",
+  "discharge summary": "A part of a patient record that summarises the reasons for admission, significant clinical findings, procedures performed, treatment rendered, patient's condition on discharge and any specific instructions given to the patient or family (for example follow-up medications).",
+  "disciplinary procedure": "A sequence of activities to be carried out when staff does not conform to the laid-down norms, rules and regulations of the healthcare organisation.",
+  "drug dispensing": "The preparation, packaging, labelling, record keeping, and transfer of a prescription drug to a patient or an intermediary, who is responsible for the administration of the drug. (Reference: Mosby's Medical Dictionary, 9th edition, 2009, Elsevier.)",
+  "drug administration": "The giving of a therapeutic agent to a patient, e.g. by infusion, inhalation, injection, paste, pessary, suppository or tablet.",
+  "effective communication": "Communication between two or more persons wherein the intended message is successfully delivered, received and understood. It also includes several other skills such as non-verbal communication, engaged listening, ability to speak assertively, etc.",
+  "employees": "All members of the healthcare organisation who are employed full time and are paid suitable remuneration for their services as per the laid-down policy.",
+  "end-of-life care": "Helps all those with an advanced, progressive, incurable illness to live as well as possible until they die. It enables the supportive and palliative care needs of both patient and family to be identified and met throughout the last phase of life and into bereavement. It includes management of pain and other symptoms and provision of psychological, social, spiritual and practical support.",
+  "enhanced communication": "Using the methods of communication to ensure meaning and understanding through the recognition of the limitations of others. The intent is to ensure purposeful, timely and reliable communication. The communication must be sensitive, empathetic and inclusive.",
+  "ethics": "Moral principles that govern a person's or group's behaviour.",
+  "evidence-based medicine": "The conscientious, explicit, and judicious use of current best evidence in making decisions about the care of individual patients.",
+  "family": "The person(s) with a significant role in the patient's life. It mainly includes spouse, children and parents. It may also include a person not legally related to the patient but can make healthcare decisions for a patient if the patient loses decision-making ability.",
+  "failure mode and effect analysis": "A method used to prospectively identify error risks within a particular process.",
+  "fmea": "A method used to prospectively identify error risks within a particular process. (Failure Mode and Effect Analysis)",
+  "formulary": "An approved list of drugs. Drugs contained in the formulary are generally those that are determined to be cost-effective and medically effective.",
+  "goal": "A broad statement describing a desired future condition or achievement without being specific about how much and when. Goals can be both short- and longer-term. Goals are ends that guide actions. (Reference: Malcolm Baldridge National Quality Award)",
+  "grievance-handling procedures": "The sequence of activities carried out to address the grievances of patients, visitors, relatives and staff.",
+  "hazardous materials": "Substances dangerous to human and other living organisms. They include radioactive or chemical materials.",
+  "hazardous waste": "Waste materials dangerous to living organisms. Such materials require special precautions for disposal. They include the biologic waste that can transmit disease (for example, blood, tissues) radioactive materials, and toxic chemicals. Other examples are infectious waste such as used needles, used bandages and fluid soaked items.",
+  "healthcare-associated infection": "An infection occurring in a patient during the process of care in a hospital or other healthcare facility which was not present or incubating at the time of admission. Also referred to as 'nosocomial' or 'hospital' infection. (Reference: World Health Organization)",
+  "healthcare organisation": "The generic term used to describe the various types of organisation that provide healthcare services. This includes ambulatory care centres, hospitals, laboratories, etc.",
+  "high-dependency unit": "An area for patients who require more intensive observation, treatment and nursing care than are usually provided for in a ward. It is a standard of care between the ward and full intensive care.",
+  "high risk medications": "Medications involved in a high percentage of medication errors or sentinel events and medications that carry a high risk for abuse, error, or other adverse outcomes. Examples include medications with a low therapeutic index, controlled substances, psychotherapeutic medications, and look-alike and sound-alike medications.",
+  "high alert medications": "Medications involved in a high percentage of medication errors or sentinel events and medications that carry a high risk for abuse, error, or other adverse outcomes. Examples include medications with a low therapeutic index, controlled substances, psychotherapeutic medications, and look-alike and sound-alike medications.",
+  "incident reporting": "Written or verbal reporting of any event in the process of patient care, that is inconsistent with the deserved patient outcome or routine operations of the healthcare facility.",
+  "in-service education": "Organised education/training usually provided in the workplace for enhancing the skills of staff members or for teaching them new skills relevant to their jobs/tasks.",
+  "in-service training": "Organised education/training usually provided in the workplace for enhancing the skills of staff members or for teaching them new skills relevant to their jobs/tasks.",
+  "indicator": "A statistical measure of the performance of functions, systems or processes over time. For example, hospital acquired infection rate, mortality rate, caesarean section rate, absence rate, etc.",
+  "information": "Processed data which lends meaning to the raw data.",
+  "intent": "A brief explanation of the rationale, meaning and significance of the standards laid down in a particular chapter.",
+  "inventory control": "The method of supervising the intake, use and disposal of various goods in hands. It relates to supervision of the supply, storage and accessibility of items in order to ensure an adequate supply without stock-outs/excessive storage. It is also the process of balancing ordering costs against carrying costs of the inventory so as to minimise total costs.",
+  "isolation": "Separation of an ill person who has a communicable disease (e.g., measles, chickenpox, mumps, SARS) from those who are healthy. Isolation prevents transmission of infection to others and also allows the focused delivery of specialised health care to ill patients.",
+  "job description": "An explanation pertaining to duties, responsibilities and conditions required to perform a job. A summary of the most important features of a job, including the general nature of the work performed (duties and responsibilities) and level (i.e., skill, effort, responsibility and working conditions) of the work performed.",
+  "job specification": "The qualifications/physical requirements, experience and skills required to perform a particular job/task. A statement of the minimum acceptable qualifications that an incumbent must possess to perform a given job successfully.",
+  "maintenance": "The combination of all technical and administrative actions, including supervision actions, intended to retain an item in, or restore it to, a state in which it can perform a required function. (Reference: British Standard 3811:1993)",
+  "medical equipment": "Any fixed or portable non-drug item or apparatus used for diagnosis, treatment, monitoring and direct care of a patient.",
+  "medication error": "Any preventable event that may cause or lead to inappropriate medication use or patient harm while the medication is in the control of the health care professional, patient, or consumer. Such events may be related to professional practice, health care products, procedures, and systems, including prescribing; order communication; product labelling, packaging, and nomenclature; compounding; dispensing; distribution; administration; education; monitoring; and use. (Reference: The National Coordinating Council for Medication Error Reporting and Prevention)",
+  "medication order": "A written order by a physician, dentist, or other designated health professionals for a medication to be dispensed by a pharmacy for administration to a patient. (Reference: Mosby's Medical Dictionary, 10th edition, Elsevier)",
+  "mission": "An organisation's purpose. This refers to the overall function of an organisation. The mission answers the question, 'What is this organisation attempting to accomplish?' The mission might define patients, stakeholders, or markets served, distinctive or core competencies or technologies used.",
+  "monitoring": "The performance and analysis of routine measurements aimed at identifying and detecting changes in the health status or the environment. It requires careful planning and use of standardised procedures and methods of data collection.",
+  "multidisciplinary": "A generic term which includes representatives from various disciplines, professions or service areas.",
+  "near-miss": "An unplanned event that did not result in injury, illness, or damage — but had the potential to do so. Errors that did not result in patient harm, but could have, can be categorised as near-misses.",
+  "no harm": "Used synonymously with a near miss. A near-miss is defined when an error is realised just in the nick of time, and abortive action is instituted to cut short its translation. In a no-harm scenario, the error is not recognised, and the deed is done, but fortunately the expected adverse event does not occur.",
+  "notifiable disease": "Certain specified diseases which are required by law to be notified to the public health authorities. Under WHO's International Health Regulations 2005, diseases always notifiable to WHO include: Smallpox, Poliomyelitis due to wild-type poliovirus, Human influenza caused by a new subtype, and Severe acute respiratory syndrome (SARS). In India, diseases such as Polio, Influenza, Malaria, Rabies, HIV/AIDS, Tuberculosis, Leprosy, Dengue fever are also notifiable (may vary by state).",
+  "nursing empowerment": "Empowerment for nurses may consist of three components: a workplace that has the requisite structures to promote empowerment; a psychological belief in one's ability to be empowered; and acknowledgement that there is power in the relationships and caring that nurses provide. It includes structural empowerment (access to information, resources, support, and opportunity) and psychological empowerment (meaning, competence, self-determination, and impact).",
+  "objective": "A specific statement of a desired short-term condition or achievement; includes measurable end-results to be accomplished by specific teams or individuals within time limits. (Reference: American Society for Quality)",
+  "objective element": "That component of standard which can be measured objectively on a rating scale. Acceptable compliance with the measurable elements will determine the overall compliance with the standard.",
+  "occupational health hazard": "The hazards to which an individual is exposed during the course of the performance of his job. These include physical, chemical, biological, mechanical and psychosocial hazards.",
+  "operational plan": "The operational plan is the part of your strategic plan. It defines how you will operate in practice to implement your action and monitoring plans — what your capacity needs are, how you will engage resources, how you will deal with risks, and how you will ensure the sustainability of the organisation's achievements.",
+  "organogram": "A graphic representation of the reporting relationship in an organisation.",
+  "outsourcing": "Hiring of services and facilities from other organisations based upon one's own requirement in areas where such facilities are either not available or are not cost-effective. When an activity is outsourced, there should be a memorandum of understanding that clearly lays down the obligations of both organisations.",
+  "patient-care setting": "The location where a patient is provided health care as per his needs, e.g. ICU, speciality ward, private ward and general ward.",
+  "patient record": "A document which contains the chronological sequence of events that a patient undergoes during his stay in the healthcare organisation. It includes demographic data of the patient, assessment findings, diagnosis, consultations, procedures undergone, progress notes and discharge summary.",
+  "medical record": "A document which contains the chronological sequence of events that a patient undergoes during his stay in the healthcare organisation. It includes demographic data, assessment findings, diagnosis, consultations, procedures undergone, progress notes and discharge summary.",
+  "clinical record": "A document which contains the chronological sequence of events that a patient undergoes during his stay in the healthcare organisation. It includes demographic data, assessment findings, diagnosis, consultations, procedures undergone, progress notes and discharge summary.",
+  "prems": "Patient-reported experience measures — questionnaires measuring the patients' perceptions of their experience whilst receiving care.",
+  "patient-reported experience measures": "Questionnaires measuring the patients' perceptions of their experience whilst receiving care.",
+  "proms": "Patient-reported outcome measures — questionnaires measuring the patients' views of their health status.",
+  "patient-reported outcome measures": "Questionnaires measuring the patients' views of their health status.",
+  "patient satisfaction": "A measure of the extent to which a patient is content with the health care which they received from their health care provider. Patient satisfaction is a proxy but a very effective indicator to measure the success of healthcare providers.",
+  "patient experience": "The sum of all interactions, shaped by an organisation's culture, that influence patient perceptions across the continuum of care. It is a holistic perception that the patient forms about the healthcare provider based on the overall interactions/care touchpoints.",
+  "performance appraisal": "The process of evaluating the performance of staff during a defined period of time with the aim of ascertaining their suitability for the job, the potential for growth as well as determining training needs.",
+  "point of care equipment": "Medical equipment that is used to deliver care/intervene at or near the site of patient care. These are primarily Point-of-care testing (POCT), or bedside testing equipment that helps in reducing turn-around times. Examples: Glucometer, ABG Analyser, Stat Lab at ICU/ER, portable USG.",
+  "policies": "Guidelines for decision-making, e.g. admission, discharge policies, antibiotic policy, etc.",
+  "preventive action": "Action to eliminate the cause of a potential non-conformity. (Reference ISO 9000:2015)",
+  "preventive maintenance": "A set of activities performed on plant equipment, machinery, and systems before the occurrence of a failure in order to protect them and to prevent or eliminate any degradation in their operating conditions. The maintenance carried out at predetermined intervals or according to prescribed criteria and intended to reduce the probability of failure or the degradation of the functioning of an item.",
+  "prescription": "A document given by a physician or other healthcare practitioner in the form of instructions that govern the care plan for an individual patient. Legally, it is a written directive, for compounding or dispensing and administration of drugs, or for other service to a particular patient. (Reference: Miller-Keane Encyclopedia and Dictionary of Medicine, Nursing, and Allied Health, Seventh Edition, Saunders)",
+  "privileging": "The process for authorising all medical professionals to admit and treat patients and provide other clinical services commensurate with their qualifications and skills.",
+  "privileged communication": "Confidential information furnished (to facilitate diagnosis and treatment) by the patient to a professional authorised by law to provide care and treatment.",
+  "procedural sedation": "A technique of administering sedatives or dissociative agents with or without analgesics to induce a state that allows the patient to tolerate unpleasant procedures while maintaining cardiorespiratory function. Procedural sedation and analgesia (PSA) is intended to result in a depressed level of consciousness that allows the patient to maintain oxygenation and airway control independently. (Reference: The American College of Emergency Physicians)",
+  "procedure": "1. A specified way to carry out an activity or a process (ISO 9000:2015). 2. A series of activities for carrying out work which when observed by all help to ensure the maximum use of resources and efforts to achieve the desired output.",
+  "process": "A set of interrelated or interacting activities which transforms inputs into outputs. (ISO 9000:2015)",
+  "programme": "A sequence of activities designed to implement policies and accomplish objectives.",
+  "protocol": "A plan or a set of steps to be followed in a study, an investigation or an intervention.",
+  "quality": "1. Degree to which a set of inherent characteristics fulfil requirements (ISO 9000:2015). 2. Degree of adherence to pre-established criteria or standards.",
+  "quality assurance": "Part of quality management focused on providing confidence that quality requirements will be fulfilled. (ISO 9000:2015)",
+  "quality improvement": "Ongoing response to quality assessment data about a service in ways that improve the process by which services are provided to consumers/patients.",
+  "radiation safety": "Safety issues and protection from radiation hazards arising from the handling of radioactive materials or chemicals and exposure to Ionizing and Non-Ionizing Radiation. In a healthcare setting, this commonly refers to X-ray machines, CT/PET CT Scans, Electron microscopes, Particle accelerators, Cyclotron, etc.",
+  "re-assessment": "Implies a continuous and ongoing assessment of the patient, which is recorded in the medical records as progress notes.",
+  "reconciliation of medications": "The process of creating the most accurate list possible of all medications a patient is taking — including drug name, dosage, frequency, and route — and comparing that list against the physician's admission, transfer, and/or discharge orders, with the goal of providing correct medications to the patient at all transition points within the hospital. (Reference: Institute for Healthcare Improvement)",
+  "resources": "All inputs in terms of men, material, money, machines, minutes (time), methods, metres (space), skills, knowledge and information that are needed for the efficient and effective functioning of an organisation.",
+  "restraints": "Devices used to ensure safety by restricting and controlling a person's movement. Restraint may be physical or chemical (by use of sedatives).",
+  "risk abatement": "Minimising the risk or minimising the impact of that risk.",
+  "risk assessment": "The determination of the quantitative or qualitative value of risk related to a concrete situation and a recognised threat (also called hazard). Risk assessment is a step in a risk management procedure.",
+  "risk management": "Clinical and administrative activities to identify, evaluate and reduce the risk of injury.",
+  "risk mitigation": "A strategy to prepare for and lessen the effects of threats and disasters. Risk mitigation takes steps to reduce the negative effects of threats and disasters.",
+  "risk reduction": "The decrease in the risk of a healthcare facility, given activity, and treatment process with respect to patient, staff, visitors and community.",
+  "root cause analysis": "A structured process that uncovers the physical, human, and latent causes of any undesirable event in the workplace. RCA is a method of problem-solving that tries to identify the root causes of faults or problems that cause operating events. By focusing correction on root causes, problem recurrence can be prevented.",
+  "rca": "Root Cause Analysis — A structured process that uncovers the physical, human, and latent causes of any undesirable event in the workplace. By focusing correction on root causes, problem recurrence can be prevented.",
+  "safety": "The degree to which the risk of an intervention/procedure, in the care environment is reduced for a patient, visitors and healthcare providers.",
+  "safety programme": "A programme focused on patient, staff and visitor safety.",
+  "scope of services": "Range of clinical and supportive activities that are provided by a healthcare organisation.",
+  "security": "Protection from loss, destruction, tampering, and unauthorised access or use.",
+  "sedation": "The administration to an individual, in any setting for any purpose, by any route, moderate or deep sedation. There are three levels: Minimal sedation (anxiolysis) — a drug-induced state during which patients respond normally to verbal commands; Moderate sedation/analgesia (conscious sedation) — a drug-induced depression of consciousness during which patients respond purposefully to verbal commands; Deep sedation/analgesia — a drug-induced depression of consciousness during which patients cannot be easily aroused but respond purposefully after repeated or painful stimulation.",
+  "sentinel events": "A relatively infrequent, unexpected incident, related to system or process deficiencies, which leads to death or major and enduring loss of function for a recipient of healthcare services. Major and enduring loss of function refers to sensory, motor, physiological, or psychological impairment not present at the time services were sought or begun. The impairment lasts for a minimum period of two weeks and is not related to an underlying condition.",
+  "social responsibility": "A balanced approach for an organisation to address economic, social and environmental issues in a way that aims to benefit people, communities and society, e.g. adoption of villages for providing health care, holding of medical camps and proper disposal of hospital wastes.",
+  "sound clinical practice": "Practitioner decisions based on available knowledge, principles and practices for specific clinical situations.",
+  "special educational needs of the patient": "In addition to routine care carried by healthcare professionals, patients and family have special educational needs depending on the situation. These are greatly influenced by literacy, educational level, language, emotional barriers and physical and cognitive limitations.",
+  "staff": "All personnel working in the organisation including employees, 'fee-for-service' medical professionals, part-time workers, contractual personnel and volunteers.",
+  "standard precautions": "1. A method of infection control in which all human blood and other bodily fluids are considered infectious for HIV, HBV and other blood-borne pathogens, regardless of patient history. It encompasses the use of personal protective equipment (PPE), disposal of sharps and safe housekeeping. 2. Standard Precautions apply to blood, all body fluids, secretions, and excretions (except sweat) regardless of whether or not they contain visible blood, non-intact skin and mucous membranes.",
+  "standards": "A statement of expectation that defines the structures and processes that must be substantially in place in an organisation to enhance the quality of care.",
+  "sterilisation": "The process of killing or removing microorganisms including their spores by thermal, chemical or irradiation means.",
+  "strategic plan": "An organisation's process of defining its strategy or direction and making decisions on allocating its resources to pursue this strategy, including its capital and people. The process by which an organisation envisions its future and develops strategies, goals, objectives and action plans to achieve that future.",
+  "surveillance": "The continuous scrutiny of factors that determines the occurrence and distribution of diseases and other conditions of ill health. It implies watching over with great attention, authority and often with suspicion. It requires professional analysis and sophisticated interpretation of data leading to recommendations for control activities.",
+  "table-top exercise": "An activity in which key personnel assigned emergency management roles and responsibilities are gathered to discuss, in a non-threatening environment, various simulated emergency situations.",
+  "traceability": "The ability to trace the history, application, use and location of an item or its characteristics through recorded identification data. (Reference: ISO 9000:2015)",
+  "transfusion reaction": "A problem that occurs after a patient receives a transfusion of blood.",
+  "triage": "A process of prioritising patients based on the severity of their condition so as to treat as many as possible when resources are insufficient for all to be treated immediately.",
+  "turn-around-time": "The amount of time taken to complete a process or fulfil a request.",
+  "tat": "Turn-around-time — the amount of time taken to complete a process or fulfil a request.",
+  "unstable patient": "A patient whose vital parameters need external assistance for their maintenance.",
+  "validated tool": "A questionnaire/scale that has been developed to be administered among the intended respondents. The validation processes should have been completed using a representative sample, demonstrating adequate reliability (the ability of the instrument to produce consistent results) and validity (the ability of the instrument to produce true results).",
+  "validation": "Verification, where the specified requirements are adequate for the intended use.",
+  "values": "The fundamental beliefs that drive organisational behaviour and decision-making. This refers to the guiding principles and behaviours that embody how an organisation and its people are expected to operate. Values reflect and reinforce the desired culture of an organisation.",
+  "verbal order": "Orders given by a physician with prescriptive authority to a licensed person who is authorised by the organisation.",
+  "verification": "The provision of objective evidence that a given item fulfils specified requirements.",
+  "vision": "An overarching statement of the way an organisation wants to be, an ideal state of being at a future point. This refers to the desired future state of an organisation — where the organisation is headed, what it intends to be, or how it wishes to be perceived in the future.",
+  "vulnerable patient": "Those patients who are prone to injury and disease by virtue of their age, sex, physical, mental and immunological status, e.g. infants, elderly, physically- and mentally-challenged, semiconscious/unconscious, those on immunosuppressive and/or chemotherapeutic agents.",
+  "workplace violence": "Incidents where staff are abused, threatened or assaulted in circumstances related to their work, including commuting to and from work, involving an explicit or implicit challenge to their safety, well-being or health. (Adapted from European Commission)",
+};
+
+// ── Detection helpers ──────────────────────────────────────────────────────────
+
+// Patterns that indicate a general-info question (assessment process, scoring, chapters, KPIs)
+const GENERAL_INFO_PATTERNS: RegExp[] = [
+  /\bfinal\s+assessment\b/i,
+  /\bsurveillance\s+assessment\b/i,
+  /\bre.?accreditation\b/i,
+  /\brenewal\s+assessment\b/i,
+  /\baccreditation\s+(cycle|process|criteria|decision|period|validity|award)\b/i,
+  /\bhow\s+(long|many years)\s+is\s+(nabh\s+)?accreditation\b/i,
+  /\b4.year\s+(validity|cycle|accreditation)\b/i,
+  /\bkpi\b/i,
+  /\bkey\s+performance\s+indicator\b/i,
+  /\b(what|how)\s+(is|are|does)\s+(the\s+)?scoring\b/i,
+  /\bhow\s+(is|are)\s+oe(s)?\s+scored\b/i,
+  /\b5.point\s+scale\b/i,
+  /\bfive.point\s+scale\b/i,
+  /\bwhat\s+(is|does)\s+(a\s+)?(core|commitment|achievement|excellence)\b/i,
+  /\b(core|commitment|achievement|excellence)\s+(level|oe|standard|category|objective)\b/i,
+  /\blevels?\s+of\s+(oe|objective\s+elements?|standards?)\b/i,
+  /\bwhat\s+is\s+(a\s+)?standard\b/i,
+  /\bwhat\s+is\s+(an?\s+)?(oe|objective\s+element)\b/i,
+  /\bwhat\s+is\s+nabh\b/i,
+  /\babout\s+nabh\b/i,
+  /\bnabh\s+accreditation\s+(programme|program|process)\b/i,
+  /\bhow\s+many\s+chapters\b/i,
+  /\bchapter\s+(list|structure|overview|code)\b/i,
+  /\blist\s+(of\s+)?(all\s+)?chapters\b/i,
+  /\bhow\s+many\s+(total\s+)?oe(s)?\b/i,
+  /\btotal\s+(number\s+of\s+)?oe(s)?\b/i,
+  /\b408\s+oe\b/i,
+  /\baccreditation\s+decision\b/i,
+  /\b80\s*(percent|%)\s+(compliance|score)\b/i,
+  /\bwhat\s+score\s+do\s+i\s+need\b/i,
+  /\bpass\s+(criteria|score|marks)\b/i,
+];
+
+function isGeneralInfoQuestion(q: string): boolean {
+  return GENERAL_INFO_PATTERNS.some((p) => p.test(q));
+}
+
+// Returns the best-matching glossary entry for definitional questions, or null
+function getGlossaryMatch(q: string): { term: string; definition: string } | null {
+  const lower = q.toLowerCase().replace(/[?!.]+$/, "").trim();
+
+  // Extract candidate from common definitional question patterns
+  let candidate = "";
+  const defPatterns = [
+    /^what\s+(?:is|are)\s+(?:a\s+|an\s+|the\s+)?(.+)$/,
+    /^what\s+does\s+(.+?)\s+mean$/,
+    /^define\s+(?:the\s+term\s+)?(.+)$/,
+    /^(?:meaning|definition)\s+of\s+(.+)$/,
+    /^explain\s+(?:the\s+term\s+)?(.+)$/,
+    /^(.+?)\s+(?:meaning|definition|defined)$/,
+  ];
+  for (const p of defPatterns) {
+    const m = lower.match(p);
+    if (m) { candidate = m[1].trim(); break; }
+  }
+
+  if (!candidate) return null;
+
+  // Exact key match
+  if (GLOSSARY[candidate]) return { term: candidate, definition: GLOSSARY[candidate] };
+
+  // Candidate starts with a key (e.g. "adverse drug reaction in nabh" → "adverse drug reaction")
+  for (const key of Object.keys(GLOSSARY)) {
+    if (candidate.startsWith(key)) return { term: key, definition: GLOSSARY[key] };
+  }
+
+  // Key starts with candidate (e.g. "sedation levels" → "sedation")
+  for (const key of Object.keys(GLOSSARY)) {
+    if (key.startsWith(candidate) && Math.abs(key.length - candidate.length) < 15) {
+      return { term: key, definition: GLOSSARY[key] };
+    }
+  }
+
+  // Candidate contains a key as a distinct phrase (longest match first)
+  const sortedKeys = Object.keys(GLOSSARY).sort((a, b) => b.length - a.length);
+  for (const key of sortedKeys) {
+    if (key.length >= 5 && candidate.includes(key)) {
+      return { term: key, definition: GLOSSARY[key] };
+    }
+  }
+
+  return null;
+}
+
+// ── Main handler ───────────────────────────────────────────────────────────────
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { status: 204, headers: CORS });
@@ -30,14 +328,12 @@ Deno.serve(async (req) => {
     _step.current = "supabase-init";
     const supabase = createClient(supabaseUrl, serviceKey);
 
-    // Step 1: try oe_code match — normalize user input to canonical DB format
+    // Step 1: try OE code match — normalize user input to canonical DB format
     // DB format: CHAPTER.NUMBER.letter  e.g. "AAC.1.a", "PRE.2.g"
     // Handles: "aac1a", "aac 1 a", "AAC-1-A", "AAC .1.a", "aac.1.a" → "AAC.1.a"
     _step.current = "db-oe_code-search";
     const normalizeOeCode = (q: string): string => {
-      // Strip all whitespace first, then try to extract a code pattern
       const compact = q.replace(/\s+/g, "");
-      // Match: 2-4 uppercase letters, optional separator, 1-2 digits, optional separator, 1 letter
       const match = compact.match(/^([A-Za-z]{2,4})[.\-]?(\d{1,2})[.\-]?([A-Za-z])$/i);
       if (match) {
         return `${match[1].toUpperCase()}.${match[2]}.${match[3].toLowerCase()}`;
@@ -54,9 +350,31 @@ Deno.serve(async (req) => {
 
     let rows = codeRows && codeRows.length > 0 ? codeRows : null;
     let isKeywordFallback = false;
+    let isGeneralRef = false;
+    let generalRefContext = "";
+    let generalRefSourceLabel = "";
 
-    // Step 2: fall back to keyword search against text column
+    // Step 2: if no OE code match, check glossary
     if (!rows) {
+      _step.current = "glossary-check";
+      const glossaryMatch = getGlossaryMatch(question);
+      if (glossaryMatch) {
+        isGeneralRef = true;
+        generalRefContext = `TERM: ${glossaryMatch.term}\nDEFINITION: ${glossaryMatch.definition}`;
+        generalRefSourceLabel = "SHCO Full — Official Glossary (NABH 3rd Edition Standards Book, pp.138–150)";
+      }
+    }
+
+    // Step 3: if no glossary match, check general info topics
+    if (!rows && !isGeneralRef && isGeneralInfoQuestion(question)) {
+      _step.current = "general-info-check";
+      isGeneralRef = true;
+      generalRefContext = GENERAL_INFO;
+      generalRefSourceLabel = "SHCO Full — General Reference (NABH 3rd Edition Standards Book)";
+    }
+
+    // Step 4: if no general ref match, fall back to keyword search against OE text
+    if (!rows && !isGeneralRef) {
       _step.current = "db-keyword-search";
       const keywords = question
         .split(/\s+/)
@@ -83,41 +401,59 @@ Deno.serve(async (req) => {
     }
 
     _step.current = "build-context";
-    const contextBlock = rows.length > 0
-      ? rows
-          .map((r) => {
-            const tips = Array.isArray(r.achieve_tips) && r.achieve_tips.length > 0
-              ? r.achieve_tips.join(" | ")
-              : "—";
-            return `${r.oe_code} | ${r.level} | ${r.text} | ${tips}`;
-          })
-          .join("\n")
-      : "";
+    const contextBlock = isGeneralRef
+      ? generalRefContext
+      : rows && rows.length > 0
+        ? rows
+            .map((r) => {
+              const tips =
+                Array.isArray(r.achieve_tips) && r.achieve_tips.length > 0
+                  ? r.achieve_tips.join(" | ")
+                  : "—";
+              return `${r.oe_code} | ${r.level} | ${r.text} | ${tips}`;
+            })
+            .join("\n")
+        : "";
 
-    const systemPrompt =
-      `You are AccredReady's NABH SHCO Full compliance assistant. You answer ONLY` +
-      ` using the Objective Element (OE) content provided below in <context>. You` +
-      ` have no other knowledge of NABH standards, KPIs, or accreditation` +
-      ` requirements — anything not in the provided context is outside what you know.\n\n` +
-      `Rules:\n` +
-      `1. If the answer is fully contained in <context>, answer clearly and cite` +
-      ` the exact oe_code(s) you used.\n` +
-      `2. If <context> is empty or doesn't address the question, say: 'I couldn't` +
-      ` find a matching SHCO Full requirement for that — try rephrasing, or check` +
-      ` with your AccredReady admin.' Do NOT guess or use general NABH knowledge.\n` +
-      `3. Never state OE counts, chapter totals, fees, or validity periods unless` +
-      ` they appear verbatim in <context>.\n` +
-      `4. Keep answers practical and specific — hospital staff need to know what to` +
-      ` DO, not just what the rule says.\n` +
-      `5. Always end your answer with the source: 'Source: SHCO Full — [oe_code]'\n` +
-      `6. When you cannot find a match, state ONLY that no matching SHCO Full` +
-      ` requirement was found, and suggest the user rephrase or check with their` +
-      ` AccredReady admin. Do NOT speculate about which chapter, standard, or OE` +
-      ` might contain the answer, do NOT guess chapter names or codes, and do NOT` +
-      ` describe NABH structure beyond what is explicitly in <context>. If <context>` +
-      ` is empty, your entire response must be limited to the refusal sentence —` +
-      ` nothing else.\n\n` +
-      `<context>\n${contextBlock}\n</context>`;
+    // System prompt — two variants depending on context type
+    const systemPrompt = isGeneralRef
+      ? `You are AccredReady's NABH SHCO Full compliance assistant. You answer ONLY` +
+        ` using the reference content provided below in <context>, which is sourced` +
+        ` from the official NABH SHCO 3rd Edition Standards Book (August 2022).` +
+        ` You have no other knowledge of NABH standards or accreditation requirements` +
+        ` — anything not in the provided context is outside what you know.\n\n` +
+        `Rules:\n` +
+        `1. Answer clearly and completely from the <context> provided.\n` +
+        `2. If the <context> does not address the question, say: 'I couldn't find` +
+        ` a matching SHCO Full reference for that — try rephrasing, or check with` +
+        ` your AccredReady admin.' Do NOT guess or use general NABH knowledge.\n` +
+        `3. Keep answers practical and easy to understand for hospital staff.\n` +
+        `4. Always end your answer with: 'Source: ${generalRefSourceLabel}'\n` +
+        `5. Do NOT speculate about anything not explicitly in <context>.\n\n` +
+        `<context>\n${contextBlock}\n</context>`
+      : `You are AccredReady's NABH SHCO Full compliance assistant. You answer ONLY` +
+        ` using the Objective Element (OE) content provided below in <context>. You` +
+        ` have no other knowledge of NABH standards, KPIs, or accreditation` +
+        ` requirements — anything not in the provided context is outside what you know.\n\n` +
+        `Rules:\n` +
+        `1. If the answer is fully contained in <context>, answer clearly and cite` +
+        ` the exact oe_code(s) you used.\n` +
+        `2. If <context> is empty or doesn't address the question, say: 'I couldn't` +
+        ` find a matching SHCO Full requirement for that — try rephrasing, or check` +
+        ` with your AccredReady admin.' Do NOT guess or use general NABH knowledge.\n` +
+        `3. Never state OE counts, chapter totals, fees, or validity periods unless` +
+        ` they appear verbatim in <context>.\n` +
+        `4. Keep answers practical and specific — hospital staff need to know what to` +
+        ` DO, not just what the rule says.\n` +
+        `5. Always end your answer with the source: 'Source: SHCO Full — [oe_code]'\n` +
+        `6. When you cannot find a match, state ONLY that no matching SHCO Full` +
+        ` requirement was found, and suggest the user rephrase or check with their` +
+        ` AccredReady admin. Do NOT speculate about which chapter, standard, or OE` +
+        ` might contain the answer, do NOT guess chapter names or codes, and do NOT` +
+        ` describe NABH structure beyond what is explicitly in <context>. If <context>` +
+        ` is empty, your entire response must be limited to the refusal sentence —` +
+        ` nothing else.\n\n` +
+        `<context>\n${contextBlock}\n</context>`;
 
     _step.current = "anthropic-fetch";
     const anthropicRes = await fetch("https://api.anthropic.com/v1/messages", {
@@ -129,7 +465,7 @@ Deno.serve(async (req) => {
       },
       body: JSON.stringify({
         model: "claude-sonnet-4-6",
-        max_tokens: 600,
+        max_tokens: 700,
         system: systemPrompt,
         messages: [{ role: "user", content: question }],
       }),
@@ -143,17 +479,23 @@ Deno.serve(async (req) => {
 
     const anthropicData = await anthropicRes.json();
     const answer = anthropicData.content?.[0]?.text ?? "";
-    const sources = (!isKeywordFallback && rows.length > 0)
-      ? rows.map((r) => r.oe_code)
-      : [];
-    const suggestions = (isKeywordFallback || rows.length === 0)
-      ? [
-          "What are the requirements for infection control programme documentation?",
-          "Who approves antibiotic usage in SHCO standards?",
-          "What are the safe injection practices required?",
-          "What does the IC committee need to do and how often does it meet?",
-        ]
-      : [];
+
+    // Sources: OE codes only for direct OE matches; empty for general ref or keyword fallback
+    const sources =
+      !isGeneralRef && !isKeywordFallback && rows && rows.length > 0
+        ? rows.map((r) => r.oe_code)
+        : [];
+
+    // Suggestions: fixed example questions when no real OE match
+    const suggestions =
+      !isGeneralRef && (isKeywordFallback || (rows && rows.length === 0))
+        ? [
+            "What are the requirements for infection control programme documentation?",
+            "Who approves antibiotic usage in SHCO standards?",
+            "What are the safe injection practices required?",
+            "What does the IC committee need to do and how often does it meet?",
+          ]
+        : [];
 
     return Response.json({ answer, sources, suggestions }, { headers: CORS });
   } catch (err) {
