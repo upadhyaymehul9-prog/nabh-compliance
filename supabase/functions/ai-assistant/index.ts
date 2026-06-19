@@ -30,12 +30,13 @@ Deno.serve(async (req) => {
     _step.current = "supabase-init";
     const supabase = createClient(supabaseUrl, serviceKey);
 
-    // Step 1: try oe_code match
+    // Step 1: try oe_code match (strip all whitespace so "PRE .2.a" matches "PRE.2.a")
     _step.current = "db-oe_code-search";
+    const questionCompact = question.replace(/\s+/g, "");
     const { data: codeRows, error: codeErr } = await supabase
       .from("shco_full_oes")
       .select("oe_code, chapter, standard_code, level, text, achieve_tips")
-      .ilike("oe_code", `%${question.trim()}%`)
+      .ilike("oe_code", `%${questionCompact}%`)
       .limit(6);
     if (codeErr) throw new Error(`DB oe_code search: ${codeErr.message}`);
 
