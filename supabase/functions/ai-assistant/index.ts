@@ -328,25 +328,31 @@ Deno.serve(async (req) => {
     _step.current = "supabase-init";
     const supabase = createClient(supabaseUrl, serviceKey);
 
-    // Step 1: try OE code match — normalize user input to canonical DB format
+    // Step 1: try OE code match — scan anywhere in the question for a code pattern
     // DB format: CHAPTER.NUMBER.letter  e.g. "AAC.1.a", "PRE.2.g"
-    // Handles: "aac1a", "aac 1 a", "AAC-1-A", "AAC .1.a", "aac.1.a" → "AAC.1.a"
+    // Handles bare codes AND natural-language wrappers:
+    //   "what is MOM.3.g", "tell me about MOM 3 G", "comply with MOM-3-g" → "MOM.3.g"
     _step.current = "db-oe_code-search";
-    const normalizeOeCode = (q: string): string => {
-      const compact = q.replace(/\s+/g, "");
-      const match = compact.match(/^([A-Za-z]{2,4})[.\-]?(\d{1,2})[.\-]?([A-Za-z])$/i);
-      if (match) {
-        return `${match[1].toUpperCase()}.${match[2]}.${match[3].toLowerCase()}`;
+    const extractOeCode = (q: string): string | null => {
+      // Scan the raw question for a code pattern anywhere in the text
+      // Pattern: 2-4 letters, optional separator, 1-2 digits, optional separator, 1 letter
+      const scan = q.match(/\b([A-Za-z]{2,4})[.\-\s]?(\d{1,2})[.\-\s]?([A-Za-z])\b/i);
+      if (scan) {
+        return `${scan[1].toUpperCase()}.${scan[2]}.${scan[3].toLowerCase()}`;
       }
-      return compact;
+      return null;
     };
-    const oeCodeQuery = normalizeOeCode(question.trim());
-    const { data: codeRows, error: codeErr } = await supabase
-      .from("shco_full_oes")
-      .select("oe_code, chapter, standard_code, level, text, achieve_tips")
-      .ilike("oe_code", `%${oeCodeQuery}%`)
-      .limit(12);
-    if (codeErr) throw new Error(`DB oe_code search: ${codeErr.message}`);
+    const oeCodeQuery = extractOeCode(question);
+    let codeRows = null;
+    if (oeCodeQuery) {
+      const { data, error: codeErr } = await supabase
+        .from("shco_full_oes")
+        .select("oe_code, chapter, standard_code, level, text, achieve_tips")
+        .ilike("oe_code", `%${oeCodeQuery}%`)
+        .limit(12);
+      if (codeErr) throw new Error(`DB oe_code search: ${codeErr.message}`);
+      codeRows = data;
+    }
 
     let rows = codeRows && codeRows.length > 0 ? codeRows : null;
     let isKeywordFallback = false;
