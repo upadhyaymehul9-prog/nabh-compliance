@@ -10067,6 +10067,11 @@ export default function App() {
                       <span style={{fontSize:15,width:20,textAlign:"center"}}>📁</span>
                       <span>Docs</span>
                     </a>
+                    <a href="https://wa.me/918511180957?text=Hi%2C%20I%20have%20a%20suggestion%20for%20AccredReady%3A%20" target="_blank" rel="noopener noreferrer" onClick={()=>setShowMoreMenu(false)}
+                      style={{padding:"9px 16px",borderLeft:"3px solid transparent",background:"transparent",color:T.text,fontSize:13,display:"flex",alignItems:"center",gap:10,textDecoration:"none",fontWeight:400,width:"100%"}}>
+                      <span style={{fontSize:15,width:20,textAlign:"center"}}>💬</span>
+                      <span>Suggest a feature</span>
+                    </a>
                   </div>
                 )}
               </div>
@@ -10145,10 +10150,6 @@ export default function App() {
         {screen==="hco-elc"&&renderHCOTab()}
       </div>
 
-      <a href="https://wa.me/918511180957?text=Hi%2C%20I%20have%20a%20suggestion%20for%20AccredReady%3A%20" target="_blank" rel="noopener noreferrer"
-        style={{position:"fixed",bottom:80,right:20,zIndex:9998,display:"flex",alignItems:"center",gap:8,padding:"10px 16px",borderRadius:24,background:"#25D366",color:"#ffffff",fontSize:13,fontWeight:700,textDecoration:"none",boxShadow:"0 4px 16px rgba(37,211,102,0.5)"}}>
-        <span style={{fontSize:18}}>💬</span> Suggest
-      </a>
       <button onClick={()=>setTourStep(0)} title="Replay app tour"
         style={{position:"fixed",bottom:148,right:20,zIndex:9997,width:48,height:48,borderRadius:24,background:T.gold,border:"none",color:T.bg,fontSize:22,fontWeight:900,cursor:"pointer",boxShadow:`0 4px 16px rgba(201,168,76,0.5)`,display:"flex",alignItems:"center",justifyContent:"center",lineHeight:1}}>?</button>
       {selectedProgramme==="shco-full"&&(

@@ -49,7 +49,7 @@ Deno.serve(async (req) => {
       .from("shco_full_oes")
       .select("oe_code, chapter, standard_code, level, text, achieve_tips")
       .ilike("oe_code", `%${oeCodeQuery}%`)
-      .limit(6);
+      .limit(12);
     if (codeErr) throw new Error(`DB oe_code search: ${codeErr.message}`);
 
     let rows = codeRows && codeRows.length > 0 ? codeRows : null;
@@ -69,7 +69,7 @@ Deno.serve(async (req) => {
           .from("shco_full_oes")
           .select("oe_code, chapter, standard_code, level, text, achieve_tips")
           .or(filter)
-          .limit(6);
+          .limit(12);
         if (kwErr) throw new Error(`DB keyword search: ${kwErr.message}`);
         if (kwRows && kwRows.length > 0) {
           rows = kwRows;
