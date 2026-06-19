@@ -13,8 +13,10 @@ git pull origin master
 After every successful `npm run deploy`, automatically run:
 
 ```
-git add . && git commit -m "deploy: auto-sync" && git push origin master
+git add src/ public/ supabase/functions/ scripts/ && git commit -m "deploy: auto-sync" && git push origin master
 ```
+
+Never use `git add .` in auto-sync — it can stage secrets from `.claude/settings.local.json` or other untracked sensitive files.
 
 ## NABH DATA ACCURACY RULES
 
