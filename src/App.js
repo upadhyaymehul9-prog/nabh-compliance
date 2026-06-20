@@ -2517,8 +2517,12 @@ function SetupScreen({ user, onReady }) {
 
   const init=async()=>{
     setLoading(true);
-    const{data:existingProf}=await supabase.from("profiles").select("id").eq("id",user.id).maybeSingle();
+    const{data:existingProf}=await supabase.from("profiles").select("id,hospital_id").eq("id",user.id).maybeSingle();
     if(!existingProf){await supabase.from("profiles").insert({id:user.id});}
+    if(existingProf&&!existingProf.hospital_id){
+      const{data:orphan}=await supabase.from("hospitals").select("id").eq("created_by",user.id).limit(1).maybeSingle();
+      if(orphan){await supabase.from("profiles").update({hospital_id:orphan.id,role:"admin"}).eq("id",user.id);}
+    }
     const{data:hosp}=await supabase.from("hospitals").select("*").limit(1).single();
     if(hosp){
       setHospital(hosp);
@@ -2538,11 +2542,17 @@ function SetupScreen({ user, onReady }) {
     if(!newHosp.trim())return;
     setLoading(true);setError("");
     const{data:prof}=await supabase.from("profiles").select("whatsapp_number").eq("id",user.id).maybeSingle();
-    const hospInsert={name:newHosp.trim(),nabh_status:"preparing"};
+    const hospInsert={name:newHosp.trim(),nabh_status:"preparing",created_by:user.id};
     if(prof?.whatsapp_number)hospInsert.whatsapp=prof.whatsapp_number;
     const{data,error:err}=await supabase.from("hospitals").insert(hospInsert).select().single();
     if(err){setError(err.message);setLoading(false);return;}
-    await supabase.from("profiles").upsert({id:user.id,hospital_id:data.id,role:"admin",name:user.email});
+    const{error:linkErr}=await supabase.from("profiles").update({hospital_id:data.id,role:"admin",name:user.email}).eq("id",user.id);
+    if(linkErr){
+      console.error("Hospital link failed:",linkErr);
+      setError("Your hospital was created but could not be linked to your account. Please sign out and sign back in — it will be linked automatically on next login.");
+      setLoading(false);
+      return;
+    }
     setHospital(data);setAssessments([]);setNewHosp("");setLoading(false);
     setShowOnboarding(true);
   };
