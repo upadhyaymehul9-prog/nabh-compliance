@@ -2530,7 +2530,7 @@ function SetupScreen({ user, onReady }) {
       const assData=ass||[];
       setAssessments(assData);
       if(assData.length===1){
-        onReady({hospitalId:hosp.id,assessmentId:assData[0].id,hospitalName:hosp.name,assessmentName:assData[0].name,userEmail:user.email,userId:user.id,plan:hosp.plan});
+        onReady({hospitalId:hosp.id,assessmentId:assData[0].id,hospitalName:hosp.name,assessmentName:assData[0].name,userEmail:user.email,userId:user.id,plan:hosp.plan,access_until:hosp.access_until});
         return;
       }
       if(assData.length>0)setSelAss(assData[0].id);
@@ -2575,7 +2575,7 @@ function SetupScreen({ user, onReady }) {
       nabh_status:nabh_status||"preparing"
     }}).catch(()=>{});
     setLoading(false);
-    onReady({hospitalId:hospital.id,assessmentId:ass.id,hospitalName:hospital.name,assessmentName:assName,userEmail:user.email,userId:user.id,plan:hospital.plan});
+    onReady({hospitalId:hospital.id,assessmentId:ass.id,hospitalName:hospital.name,assessmentName:assName,userEmail:user.email,userId:user.id,plan:hospital.plan,access_until:hospital.access_until});
   };
 
   const createAssessment=async()=>{
@@ -2589,7 +2589,7 @@ function SetupScreen({ user, onReady }) {
   const proceed=()=>{
     if(!hospital||!selAss)return;
     const ass=assessments.find(a=>a.id===selAss);
-    onReady({hospitalId:hospital.id,assessmentId:selAss,hospitalName:hospital.name,assessmentName:ass?.name,userEmail:user.email,userId:user.id,plan:hospital.plan});
+    onReady({hospitalId:hospital.id,assessmentId:selAss,hospitalName:hospital.name,assessmentName:ass?.name,userEmail:user.email,userId:user.id,plan:hospital.plan,access_until:hospital.access_until});
   };
 
   if(loading) return (
@@ -7157,17 +7157,15 @@ export default function App() {
   if(authState==="setup") return <SetupScreen user={user} onReady={handleReady}/>;
   if(authState==="programme") return <ProgrammeSelector user={user} ctx={context} onSelect={handleProgrammeSelect}/>;
 
-  const trialDays = 14;
-  const OFFICIAL_TRIAL_START = new Date('2026-06-06T00:00:00.000Z');
-  const userSignup = user?.created_at ? new Date(user.created_at) : new Date();
-  const effectiveStart = userSignup < OFFICIAL_TRIAL_START ? OFFICIAL_TRIAL_START : userSignup;
-  const daysUsed = Math.floor((Date.now() - effectiveStart.getTime()) / (1000 * 60 * 60 * 24));
-  const daysLeft = Math.max(0, trialDays - daysUsed);
-  const trialExpired = daysUsed >= trialDays && (!context?.plan || context.plan === 'trial');
-  const isTrialActive = !trialExpired && (!context?.plan || context.plan === 'trial');
-  const isPaid = context?.plan && context.plan !== 'trial';
+  const isFree = context?.plan === 'free';
+  const isPaid = context?.plan === 'paid';
+  const accessUntil = context?.access_until ? new Date(context.access_until) : null;
+  const hasAccess = isFree || (accessUntil !== null && accessUntil > new Date());
+  const daysLeft = accessUntil ? Math.max(0, Math.ceil((accessUntil.getTime() - Date.now()) / (1000*60*60*24))) : 0;
+  const trialExpired = !hasAccess;
+  const isTrialActive = hasAccess && !isFree && !isPaid;
 
-  if(trialExpired) return <UpgradeWall daysUsed={daysUsed} onSignOut={handleSignOut}/>;
+  if(trialExpired) return <UpgradeWall onSignOut={handleSignOut}/>;
 
   const readinessColor=decision.readiness==="NOT READY"?T.red:decision.readiness==="RISKY"?T.orange:T.green;
   const verdictColor=decision.verdict==="FAIL"?T.red:decision.verdict==="PASS"?T.green:decision.verdict==="PARTIAL"?T.orange:T.blue;
