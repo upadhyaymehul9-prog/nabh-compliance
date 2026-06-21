@@ -434,6 +434,102 @@ Process: "Ten rights" not observed, wrong stocking, wrong labelling, no cross-ch
 Common corrective actions: Training, manpower recruitment, pharmacy stock rectification, equipment replacement/rectification.
 `.trim();
 
+// ── SHCO Quality Tools + Medication Chart Review Checklist ────────────────────
+// Source: NABH SHCO 3rd Edition —
+//   Medication Chart Review Checklist: Annexure 2 (pp.166–169)
+//   Quality Tools: Annexure 3 (pp.170–172)
+const QUALITY_TOOLS_CONTENT = `
+SHCO FULL — MEDICATION CHART REVIEW CHECKLIST (Annexure 2, pp.166–169)
+
+A structured audit form for reviewing medication charts. For each drug (up to 10 per sheet), the auditor marks each parameter with the error category (A–I), or 0 for no error, or NA if not applicable. Multiple errors can be recorded per cell.
+
+Header fields: Auditor, Date of Audit, Location, UHID, Date of Admission, Primary Consultant, Drug allergies documented (Yes/No).
+
+PARAMETERS — DOCTORS (1–13):
+1. Incorrect drug selection
+2. No/wrong dose
+3. No/wrong unit of measurement
+4. No/wrong frequency
+5. No/wrong route
+6. No/wrong concentration
+7. No/wrong rate of administration
+8. Illegible handwriting
+9. Non-approved abbreviations used
+10. Non-usage of capital letters for drug names
+11. Non-usage of generic names
+12. Non-modification of drug dose keeping in mind drug-drug interaction
+13. Non-modification of time of drug administration/dose/drug keeping in mind food-drug interaction
+
+PARAMETERS — DOCTOR AND/OR NURSE (14–16):
+14. Wrong formulation transcribed/indented
+15. Wrong drug transcribed/indented
+16. Wrong strength transcribed/indented
+
+PARAMETERS — PHARMACIST (17–23):
+17. Wrong drug dispensed
+18. Wrong dose dispensed
+19. Wrong formulation dispensed
+20. Expired/near-expiry drugs dispensed
+21. No/wrong labelling
+22. Delay in dispense beyond defined time
+23. Generic or class substitute done without consulting the prescribing doctor
+
+PARAMETERS — NURSES (24–35):
+24. Wrong Patient
+25. Dose Omission
+26. Improper Dose
+27. Wrong Drug
+28. Wrong Formulation Administered
+29. Wrong Route of Administration
+30. Wrong Rate
+31. Wrong Duration
+32. Wrong Time (deviation from the organisation's defined timeframe; basis must be evidence-based — org may adopt/adapt ISMP Acute Care Guidelines)
+33. No documentation of drug administration
+34. Incomplete/Improper documentation by nursing staff (Incomplete = missing date, time, or signature; Improper = wrong dose notation or not stating actual brand in cases of brand substitution)
+35. Documentation without administration
+
+HOW TO COUNT ERRORS AND OPPORTUNITIES (for KPI #2 numerator/denominator):
+
+Number of ERRORS = number of cells with a value between A and I.
+Example: drug 1 has a category-C error (doctors) and a category-B error (pharmacists), and drug 4 has a category-C error (nurses) → numerator = 3.
+
+Number of OPPORTUNITIES = number of cells with EITHER 0 OR a value A–I (i.e. all filled cells, excluding NA cells).
+Example: 10 drugs × 35 parameters = 350 total cells = 350 opportunities (if all filled).
+If 6 drugs and 24 cells marked NA → opportunities = (35 × 6) − 24 = 186.
+
+SELECTING A CATEGORY: Choose only ONE category per error — the one that best fits. Select the HIGHEST severity level that applies during the event. Example: if a patient suffers a severe anaphylactic reaction (Category H) requiring treatment (Category F) but recovers fully, code it as Category H (highest severity reached).
+
+---
+
+SHCO FULL — QUALITY TOOLS (Annexure 3, pp.170–172)
+
+QI data should be analysed using statistical/quality tools to assess compliance with targets and identify areas for improvement. NABH recognises the following six tools:
+
+ROOT CAUSE ANALYSIS (RCA):
+A systematic, extensive, in-depth analysis of a problem to get to its underlying cause. Used to establish causality when adverse trends are noted for any parameter, or in the case of errors/incidents. Carried out using either the 5 Whys tool or the Cause and Effect Diagram.
+
+5 WHYS (Taiichi Ohno):
+Asks "Why?" five times sequentially, each in response to the previous answer, until reaching the root cause. Shifts focus (blame) from individuals to the process. A problem may have multiple root causes; different people seeing different parts of the system may answer differently. The 5 Whys has been criticised for over-simplifying complex problems — best used in conjunction with a Cause and Effect Diagram.
+
+CAUSE AND EFFECT DIAGRAM (Ishikawa / Fishbone):
+Graphically displays the relationship of many causes to an effect and to each other. A horizontal line runs from tail to head of the "fish," where the effect is written. Causes are grouped under categories such as Materials, Methods, Equipment, Environment, and People (or as required). Used extensively to reach the root cause of deviations from any policy/procedure/protocol, for outliers in indicator data, and for detailed analysis of incidents and adverse events.
+
+AFFINITY DIAGRAM:
+Serves the same purpose as the Ishikawa chart, but the visual presentation differs.
+
+HISTOGRAM:
+A bar chart displaying variation in continuous data (time, weight, size, temperature). Helps recognise and analyse patterns not apparent in data tables or from averages/medians, and highlights the most frequently occurring interval.
+
+FAILURE MODES AND EFFECTS ANALYSIS (FMEA):
+A tool for systematic, PROACTIVE analysis of a process where harm may occur — preventing it by correcting processes proactively rather than reacting to adverse events after failures. FMEA prompts teams to review, evaluate, and record:
+- Steps in the process
+- Failure modes (what could go wrong?)
+- Failure causes (why would the failure happen?)
+- Failure effects (consequences — severity and frequency — of each failure)
+- How the failure can be prevented
+FMEA forms the core of risk assessment and risk mitigation.
+`.trim();
+
 // ── Detection helpers ──────────────────────────────────────────────────────────
 
 // Patterns that detect SPECIFIC KPI questions (formula, rate, calculation, PSQ.2x standard).
@@ -507,6 +603,45 @@ const MED_ERROR_PATTERNS: RegExp[] = [
 
 function isMedicationErrorQuestion(q: string): boolean {
   return MED_ERROR_PATTERNS.some((p) => p.test(q));
+}
+
+// Patterns that detect quality-tools questions (Annexure 3) and medication chart
+// review checklist questions (Annexure 2, pp.166–169).
+// Runs at Step 0c — after KPI (Step 0) and med-error categorization (Step 0b).
+// "RCA" and "root cause" (generic, without medication/drug/error context) fall here,
+// since MED_ERROR only catches root-cause questions paired with medication context.
+const QUALITY_TOOLS_PATTERNS: RegExp[] = [
+  // Quality improvement tools (Annexure 3)
+  /\bfmea\b/i,
+  /\bfailure\s+mode(s)?\b/i,
+  /\b5\s*whys?\b/i,
+  /\bfishbone\b/i,
+  /\bishikawa\b/i,
+  /\bcause\s+and\s+effect\s+diagram\b/i,
+  /\baffinity\s+diagram\b/i,
+  /\bquality\s+tool(s)?\b/i,
+  /\bqi\s+tool(s)?\b/i,
+  /\bquality\s+improvement\s+tool(s)?\b/i,
+  /\bproactive\s+(analysis|risk)\b/i,
+  // RCA as a standalone concept (not paired with medication — that's MED_ERROR)
+  /\broot\s+cause\s+analysis\b/i,
+  /\b\brca\b(?!.{0,30}(medication|drug|error))/i,
+  // Histogram as a QI/data tool
+  /\bhistogram\b/i,
+  // Medication chart review checklist (Annexure 2, pp.166-169)
+  /\bchart\s+review\b/i,
+  /\bmedication\s+(audit\s+form|chart\s+audit|chart\s+review)\b/i,
+  /\b(how\s+to\s+count|counting)\s+(errors?|opportunit)/i,
+  /\bcount.{0,20}opportunit.{0,20}(chart|audit|medication|drug)\b/i,
+  /\bopportunities.{0,30}(chart|audit|medication|formula|kpi)\b/i,
+  /\bparameter(s)?.{0,20}(nurse|doctor|pharmacist|audit|checklist)\b/i,
+  /\b(nurse|doctor|pharmacist).{0,20}parameter(s)?\b/i,
+  /\baudit\s+(form|parameters?|checklist)\b/i,
+  /\b35\s*parameter(s)?\b/i,
+];
+
+function isQualityToolsQuestion(q: string): boolean {
+  return QUALITY_TOOLS_PATTERNS.some((p) => p.test(q));
 }
 
 // Patterns that indicate a general-info question (assessment process, scoring, chapters, KPIs)
@@ -626,6 +761,7 @@ Deno.serve(async (req) => {
     let isGeneralRef = false;
     let isKpiRef = false;
     let isMedErrorRef = false;
+    let isQualityToolsRef = false;
     let generalRefContext = "";
     let generalRefSourceLabel = "";
 
@@ -648,6 +784,19 @@ Deno.serve(async (req) => {
       isMedErrorRef = true;
       generalRefContext = MEDICATION_ERROR_CONTENT;
       generalRefSourceLabel = "SHCO Full — Medication Error Monitoring (Annexure 2, NCC-MERP)";
+    }
+
+    // Step 0c: Quality tools + chart review checklist detection.
+    // Fires only if KPI (Step 0) and med-error categorization (Step 0b) didn't match.
+    // Generic "RCA" / "root cause analysis" lands here; RCA-with-medication-context
+    // was already caught at Step 0b.
+    _step.current = "quality-tools-check";
+    if (!isGeneralRef && isQualityToolsQuestion(question)) {
+      isGeneralRef = true;
+      isQualityToolsRef = true;
+      generalRefContext = QUALITY_TOOLS_CONTENT;
+      // Source label used as fallback; system prompt rule 1c refines it per answer type.
+      generalRefSourceLabel = "SHCO Full — Quality Tools (Annexure 3) / Medication Chart Review Checklist (Annexure 2, pp.166–169)";
     }
 
     // Step 1: try OE code match — scan anywhere in the question for a code pattern
@@ -762,6 +911,14 @@ Deno.serve(async (req) => {
             ` letter(s) (A through I) and the harm level (No Error / Error No Harm / Error Harm /` +
             ` Error Death) in your answer. Walk through the classification algorithm when it helps` +
             ` the user understand which category applies.\n`
+          : ``) +
+        (isQualityToolsRef
+          ? `1c. For quality tools questions: if answering about RCA, 5 Whys, Fishbone/Ishikawa,` +
+            ` Affinity Diagram, Histogram, or FMEA — end with 'Source: SHCO Full — Quality Tools` +
+            ` (Annexure 3)'. If answering about the medication chart review checklist, its 35` +
+            ` parameters, or how to count errors/opportunities — end with 'Source: SHCO Full —` +
+            ` Medication Chart Review Checklist (Annexure 2, pp.166–169)'. Replace rule 4's source` +
+            ` line with the appropriate one above.\n`
           : ``) +
         `2. If the <context> does not address the question, say: 'I couldn't find` +
         ` a matching SHCO Full reference for that — try rephrasing, or check with` +
