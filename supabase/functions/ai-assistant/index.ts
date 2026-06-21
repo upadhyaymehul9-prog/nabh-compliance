@@ -214,7 +214,185 @@ const GLOSSARY: Record<string, string> = {
   "workplace violence": "Incidents where staff are abused, threatened or assaulted in circumstances related to their work, including commuting to and from work, involving an explicit or implicit challenge to their safety, well-being or health. (Adapted from European Commission)",
 };
 
+// ── SHCO KPI Content ──────────────────────────────────────────────────────────
+// Source: NABH Accreditation Standards for Small Healthcare Organizations,
+// 3rd Edition, August 2022, Annexure 1 (pp.151–159)
+const SHCO_KPI_CONTENT = `
+SHCO FULL — THE 15 MANDATORY KPIs
+Source: NABH SHCO 3rd Edition, Annexure 1, pages 151–159
+
+KPIs must be tracked monthly. Assessors verify at least 3 months of data before accreditation is granted. KPIs are separate from OE scoring — they are not rated 1–5, they are tracked as numbers/rates over time.
+
+SAMPLING METHODOLOGY (applies to KPIs 1, 2, and 10 only):
+Stratified random sampling is required — NOT convenience sampling. Sample size is calculated using Solvin's formula: n = N / (1 + Ne²) at 95% confidence interval, where N is the average of the preceding 3 months for the relevant metric.
+
+SAMPLE SIZE TABLE (Solvin's formula, 95% CI):
+Screening population 50 → required sample 44
+Screening population 100 → required sample 79
+Screening population 150 → required sample 108
+Screening population 200 → required sample 132
+Screening population 500 → required sample 217
+Screening population 1000 → required sample 278
+Screening population 2000 → required sample 322
+Screening population 5000 → required sample 357
+Screening population 10000 → required sample 370
+Screening population 20000 → required sample 377
+
+---
+
+PSQ.2a — Patient Safety Quality Indicators (KPIs 1–5):
+
+KPI 1: Time for initial assessment of indoor patients
+Formula: Sum of time taken for assessment (minutes) / Total number of admissions (sample)
+Unit: Minutes
+Frequency: Monthly
+Sampling required: YES — stratified random sample
+
+KPI 2: Incidence of medication errors
+Formula: Total number of medication errors / Total number of opportunities × 100
+Unit: % (percentage)
+Frequency: Monthly
+Sampling required: YES — stratified random sample
+
+KPI 3: Percentage of transfusion reactions
+Formula: Number of transfusion reactions / Number of units transfused × 100
+Unit: % (percentage)
+Frequency: Monthly
+Sampling required: No
+
+KPI 4: Standardised Mortality Ratio for ICU (SMR-ICU)
+Formula: Actual ICU deaths / Predicted ICU deaths
+Unit: Ratio
+Frequency: Monthly
+Sampling required: No
+
+KPI 5: Incidence of hospital-associated pressure ulcers after admission
+Formula: Number of new or worsening pressure ulcers after admission / Total patient days × 1000
+Unit: Per 1000 patient days
+Frequency: Monthly
+Sampling required: No
+
+---
+
+PSQ.2b — Infection Control & Safety Indicators (KPIs 6–11):
+
+KPI 6: Catheter-associated UTI rate (CAUTI)
+Formula: Number of UTIs associated with urinary catheter in the month / Number of urinary catheter days in that month × 1000
+Unit: Per 1000 catheter days
+Frequency: Monthly
+Sampling required: No
+
+KPI 7: Ventilator-associated Pneumonia rate (VAP)
+Formula: Number of VAP cases in the month / Number of ventilator days in that month × 1000
+Unit: Per 1000 ventilator days
+Frequency: Monthly
+Sampling required: No
+
+KPI 8: Central line-associated Blood Stream Infection rate (CLABSI)
+Formula: Number of CLABSI cases in the month / Number of central line days in that month × 1000
+Unit: Per 1000 central line days
+Frequency: Monthly
+Sampling required: No
+
+KPI 9: Surgical site infection rate (SSI)
+Formula: Number of SSIs in a given month / Number of surgeries performed in that month × 100
+Unit: Per 100 procedures
+Frequency: Monthly
+Sampling required: No
+IMPORTANT SPECIAL NOTE: SSI has a rolling/cumulative surveillance methodology. The numerator updates over a 30-day and then 90-day window after the reporting month — SSIs can manifest up to 90 days post-surgery. This means the "final" SSI rate for any given month is not fully known until approximately 90 days later. When presenting SSI data to NABH assessors, explain this lag — the current month's rate may still be preliminary.
+
+KPI 10: Compliance to hand hygiene practice
+Formula: Total number of hand hygiene actions performed (compliant) / Total number of hand hygiene opportunities × 100
+Unit: % (percentage)
+Frequency: Monthly
+Sampling required: YES — stratified random sample
+
+KPI 11: Percentage of cases receiving appropriate prophylactic antibiotics within specified timeframe
+Formula: Number of patients who received appropriate prophylactic antibiotic (correct dose and timing) / Number of patients who underwent surgery × 100
+Unit: % (percentage)
+Frequency: Monthly
+Sampling required: No
+
+---
+
+PSQ.2c — Waiting Time Indicators (KPIs 12–13):
+
+KPI 12: Waiting time for diagnostics
+Formula: Sum total waiting time (minutes) / Number of patients reported in diagnostics
+Unit: Minutes
+Frequency: Monthly
+Sampling required: No
+
+KPI 13: Time taken for discharge
+Formula: Sum of time taken for discharge (minutes) / Number of patients discharged
+Unit: Minutes
+Frequency: Monthly
+Sampling required: No
+
+---
+
+PSQ.2d — Safety Event Indicators (KPIs 14–15):
+
+KPI 14: Incidence of patient falls
+Formula: Number of patient falls / Total patient days × 1000
+Unit: Per 1000 patient days
+Frequency: Monthly
+Sampling required: No
+
+KPI 15: Rate of needlestick injuries
+Formula: Number of needlestick injuries / Number of occupied beds × 100
+Unit: Per 100 occupied beds (cumulative year-to-date)
+Frequency: Monthly — reported as cumulative YTD
+Sampling required: No
+IMPORTANT SPECIAL NOTE: Unlike all other KPIs which are monthly snapshots, needlestick injury rate is reported cumulatively year-to-date. For example, the February report includes January + February combined data. The denominator uses occupied beds for the cumulative period, not just the reporting month.
+`.trim();
+
 // ── Detection helpers ──────────────────────────────────────────────────────────
+
+// Patterns that detect SPECIFIC KPI questions (formula, rate, calculation, PSQ.2x standard).
+// Must run BEFORE the general-info check so these don't fall into the generic "what is a KPI"
+// branch — they need the full KPI annexure content, not just the KPI definition.
+const KPI_SPECIFIC_PATTERNS: RegExp[] = [
+  // PSQ KPI standard codes (PSQ.2a / PSQ.2b / PSQ.2c / PSQ.2d — without a trailing dot)
+  /\bPSQ[.\-\s]?2\s*[abcd]\b/i,
+  // Sample size / sampling methodology
+  /\bsample\s+size\b/i,
+  /\bsolvin'?s?\b/i,
+  /\bstratified\s+random\b/i,
+  // Formula / calculation intent
+  /\bformula\s+(for|of|to)\b/i,
+  /\bhow\s+(do\s+I|to)\s+(calculate|compute|measure|work\s+out)\b/i,
+  // Specific KPI indicator names (rate / formula context)
+  /\bmedication\s+error\s+rate\b/i,
+  /\bincidence\s+of\s+medication\s+error\b/i,
+  /\btransfusion\s+reaction\s+rate\b/i,
+  /\bpressure\s+ulcer\s+(rate|incidence|kpi)\b/i,
+  /\bcauti\b/i,
+  /\bcatheter.{0,20}uti\b/i,
+  /\bcatheter.{0,20}urinary\s+tract\s+infection\s+rate\b/i,
+  /\bvap\s+rate\b/i,
+  /\bventilator.{0,20}pneumonia\s+rate\b/i,
+  /\bclabsi\b/i,
+  /\bcentral\s+line.{0,20}(blood\s*stream|bsi)\s+infection\s+rate\b/i,
+  /\bssi\s+rate\b/i,
+  /\bsurgical\s+site\s+infection\s+rate\b/i,
+  /\bhand\s+hygiene\s+(compliance|rate|kpi)\b/i,
+  /\bantibiotic\s+prophylaxis\s+(compliance|rate|kpi)\b/i,
+  /\bpatient\s+falls?\s+rate\b/i,
+  /\bneedlestick\s+injur(y|ies)\s+rate\b/i,
+  /\bwaiting\s+time\s+(for\s+)?diagnostics?\b/i,
+  /\btime\s+(taken\s+)?for\s+discharge\b/i,
+  /\b(standardis[e]?d|standardized)\s+mortality\s+ratio\b/i,
+  /\bsmr.{0,10}icu\b/i,
+  /\binitial\s+assessment\s+(time|kpi)\b/i,
+  // "list / what are the / all KPIs" (enumerate request)
+  /\b(list|show|what\s+are)\s+(all\s+)?(the\s+)?(shco\s+|nabh\s+)?kpis?\b/i,
+  /\bhow\s+many\s+kpis\s+(are\s+there|does\s+shco|in\s+shco)\b/i,
+];
+
+function isKpiSpecificQuestion(q: string): boolean {
+  return KPI_SPECIFIC_PATTERNS.some((p) => p.test(q));
+}
 
 // Patterns that indicate a general-info question (assessment process, scoring, chapters, KPIs)
 const GENERAL_INFO_PATTERNS: RegExp[] = [
@@ -328,6 +506,23 @@ Deno.serve(async (req) => {
     _step.current = "supabase-init";
     const supabase = createClient(supabaseUrl, serviceKey);
 
+    let rows: Record<string, unknown>[] | null = null;
+    let isKeywordFallback = false;
+    let isGeneralRef = false;
+    let isKpiRef = false;
+    let generalRefContext = "";
+    let generalRefSourceLabel = "";
+
+    // Step 0: KPI-specific detection — runs before OE extraction so that
+    // "what is PSQ.2a" routes to KPI content rather than the OE lookup.
+    _step.current = "kpi-check";
+    if (isKpiSpecificQuestion(question)) {
+      isGeneralRef = true;
+      isKpiRef = true;
+      generalRefContext = SHCO_KPI_CONTENT;
+      generalRefSourceLabel = "SHCO Full — KPI Annexure 1 (NABH 3rd Edition Standards Book, pp.151–159)";
+    }
+
     // Step 1: try OE code match — scan anywhere in the question for a code pattern
     // DB format: CHAPTER.NUMBER.letter  e.g. "AAC.1.a", "PRE.2.g"
     // Handles bare codes AND natural-language wrappers:
@@ -342,7 +537,7 @@ Deno.serve(async (req) => {
       }
       return null;
     };
-    const oeCodeQuery = extractOeCode(question);
+    const oeCodeQuery = !isKpiRef ? extractOeCode(question) : null;
     let codeRows = null;
     if (oeCodeQuery) {
       const { data, error: codeErr } = await supabase
@@ -354,14 +549,12 @@ Deno.serve(async (req) => {
       codeRows = data;
     }
 
-    let rows = codeRows && codeRows.length > 0 ? codeRows : null;
-    let isKeywordFallback = false;
-    let isGeneralRef = false;
-    let generalRefContext = "";
-    let generalRefSourceLabel = "";
+    if (!isKpiRef) {
+      rows = codeRows && codeRows.length > 0 ? codeRows : null;
+    }
 
     // Step 2: if no OE code match, check glossary
-    if (!rows) {
+    if (!rows && !isGeneralRef) {
       _step.current = "glossary-check";
       const glossaryMatch = getGlossaryMatch(question);
       if (glossaryMatch) {
@@ -372,7 +565,7 @@ Deno.serve(async (req) => {
     }
 
     // Step 3: if no glossary match, check general info topics
-    if (!rows && !isGeneralRef && isGeneralInfoQuestion(question)) {
+    if (!rows && !isGeneralRef && !isKpiRef && isGeneralInfoQuestion(question)) {
       _step.current = "general-info-check";
       isGeneralRef = true;
       generalRefContext = GENERAL_INFO;
@@ -430,6 +623,12 @@ Deno.serve(async (req) => {
         ` — anything not in the provided context is outside what you know.\n\n` +
         `Rules:\n` +
         `1. Answer clearly and completely from the <context> provided.\n` +
+        (isKpiRef
+          ? `1a. For KPI questions, ALWAYS include the exact formula (numerator / denominator × multiplier)` +
+            ` and the unit in your answer — hospital staff need these to implement tracking. If multiple` +
+            ` KPIs are relevant, list each one with its formula and unit. Also mention sampling requirements` +
+            ` (YES/NO) and any SPECIAL NOTEs from <context>.\n`
+          : ``) +
         `2. If the <context> does not address the question, say: 'I couldn't find` +
         ` a matching SHCO Full reference for that — try rephrasing, or check with` +
         ` your AccredReady admin.' Do NOT guess or use general NABH knowledge.\n` +
