@@ -347,6 +347,93 @@ Sampling required: No
 IMPORTANT SPECIAL NOTE: Unlike all other KPIs which are monthly snapshots, needlestick injury rate is reported cumulatively year-to-date. For example, the February report includes January + February combined data. The denominator uses occupied beds for the cumulative period, not just the reporting month.
 `.trim();
 
+// ── SHCO Medication Error Monitoring Content ──────────────────────────────────
+// Source: NABH SHCO 3rd Edition, Annexure 2 "Guidance on Monitoring Medication
+// Errors" (pp.160–165). NCC-MERP categorization © 2001 NCC-MERP.
+const MEDICATION_ERROR_CONTENT = `
+SHCO FULL — MEDICATION ERROR MONITORING (Annexure 2, pp.160–165)
+Categorization framework: NCC-MERP (National Coordinating Council for Medication Error Reporting and Prevention)
+
+DEFINITION OF A MEDICATION ERROR (NCC-MERP):
+A medication error is any preventable event that may cause or lead to inappropriate medication use or patient harm while the medication is in the control of the healthcare professional, patient, or consumer. Such events may relate to professional practice, healthcare products, procedures, and systems — including prescribing, order communication, product labelling, packaging and nomenclature, compounding, dispensing, distribution, administration, education, monitoring, and use.
+
+---
+
+CATEGORIES OF MEDICATION ERROR — 4 HARM LEVELS, 9 CATEGORIES (A through I):
+
+NO ERROR:
+Category A — Circumstances or events that have the capacity to cause error (but no error occurred)
+
+ERROR, NO HARM:
+Category B — An error occurred, but it did NOT reach the patient (note: an "error of omission" DOES reach the patient and is NOT Category B)
+Category C — An error occurred that reached the patient but did NOT cause harm
+Category D — An error reached the patient and required monitoring to confirm no harm resulted, and/or required intervention to preclude harm
+
+ERROR, HARM:
+Category E — An error that may have contributed to or resulted in TEMPORARY harm, requiring intervention
+Category F — An error that may have contributed to or resulted in TEMPORARY harm, requiring INITIAL OR PROLONGED HOSPITALIZATION
+Category G — An error that may have contributed to or resulted in PERMANENT patient harm
+Category H — An error that required intervention NECESSARY TO SUSTAIN LIFE (e.g. CPR, defibrillation, intubation)
+
+ERROR, DEATH:
+Category I — An error that may have contributed to or resulted in the patient's DEATH
+
+---
+
+KEY DEFINITIONS:
+Harm — Impairment of the physical, emotional, or psychological function or structure of the body, and/or pain resulting therefrom.
+Monitoring — To observe or record relevant physiological or psychological signs.
+Intervention — May include change in therapy or active medical/surgical treatment.
+Intervention Necessary to Sustain Life — Includes cardiovascular and respiratory support (e.g. CPR, defibrillation, intubation).
+
+---
+
+CLASSIFICATION ALGORITHM (work through these questions in order):
+1. Did an actual error occur? → NO = Category A
+2. Did the error reach the patient? → NO = Category B
+3. Did the error contribute to or result in patient DEATH? → YES = Category I
+4. Was the patient harmed? → NO branch:
+   - Was extra monitoring or intervention to preclude harm required? → YES = Category D; NO = Category C
+5. If patient WAS harmed:
+   - Did the error require intervention necessary to sustain life? → YES = Category H
+   - Was the harm permanent? → YES = Category G
+   - Was the harm temporary?
+     - Did the error require initial or prolonged hospitalization? → YES = Category F; NO = Category E
+
+---
+
+MONITORING METHODOLOGY:
+Preferred methods: Chart Review, Audit, and Self-Reporting (for manually documented charts). Software programmes can be used where prescriptions are generated online.
+Formula: Total number of errors identified / Total number of opportunities × 100
+(This is KPI #2 — see KPI Annexure 1 for formula details and sampling requirements.)
+
+Important principles:
+- Personnel identification is for ROOT CAUSE ANALYSIS and corrective/preventive action — NOT for punitive action.
+- Sample population = running average of the previous 3 months of admissions.
+- Files from ALL clinical specialities must be included; stratified sampling helps achieve this.
+- Self-reported errors, errors found during audits, and errors found by any other methodology are ALL added to the numerator.
+
+---
+
+IMMEDIATE CORRECTION (before full root-cause analysis):
+For Category A and B → Administer the drug within a reasonable timeframe.
+For Category C and D → Consult the clinician and follow orders accordingly.
+
+---
+
+ROOT CAUSE ANALYSIS — 4 CAUSE GROUPS:
+
+People: Casual attitude, inexperienced/new staff, untrained staff, shift-change/hurry, emotionally or physically unfit, wrong indent/receiving, patient identification error.
+
+Environment: Pharmacy poor drug storage (ventilation/lighting/humidity), space constraints for storage, manpower constraints for dispensing.
+
+Equipment: Defective syringe pumps, inappropriate syringe/diluent.
+
+Process: "Ten rights" not observed, wrong stocking, wrong labelling, no cross-checking, stock-outs, unauthorized drug replacement, LASA (look-alike sound-alike) medicine error, wrong dispensing, wrong distribution, illegible handwriting.
+
+Common corrective actions: Training, manpower recruitment, pharmacy stock rectification, equipment replacement/rectification.
+`.trim();
+
 // ── Detection helpers ──────────────────────────────────────────────────────────
 
 // Patterns that detect SPECIFIC KPI questions (formula, rate, calculation, PSQ.2x standard).
@@ -392,6 +479,34 @@ const KPI_SPECIFIC_PATTERNS: RegExp[] = [
 
 function isKpiSpecificQuestion(q: string): boolean {
   return KPI_SPECIFIC_PATTERNS.some((p) => p.test(q));
+}
+
+// Patterns that detect medication error CATEGORIZATION questions (Annexure 2).
+// Kept distinct from KPI #2 (medication error RATE/formula) which stays in KPI content.
+// These fire on: harm categories, NCC-MERP, root cause, LASA, classification algorithm.
+const MED_ERROR_PATTERNS: RegExp[] = [
+  /\bncc.?merp\b/i,
+  /\bcategory\s+[a-i]\b/i,                                        // "category A", "category D", etc.
+  /\bharm\s+(level|categor)/i,
+  /\b(categorize|categorise|classify|classification)\s+(a\s+)?(medication\s+|drug\s+)?error\b/i,
+  /\bhow\s+(do\s+I|to)\s+(categorize|categorise|classify)\b/i,
+  /\blasa\b/i,
+  /\blook.?alike\s+sound.?alike\b/i,
+  /\berror\s+of\s+omission\b/i,
+  /\broot\s+cause.{0,40}(medication|drug|error)\b/i,
+  /\b(medication|drug).{0,40}root\s+cause\b/i,
+  /\bmedication\s+error.{0,30}(monitor|audit|report|analys|categor|classif|harm)\b/i,
+  /\b(monitor|audit|report|analys).{0,30}medication\s+error\b/i,
+  /\b(temporary|permanent)\s+harm\b/i,
+  /\b(what|which)\s+(are|is)\s+(the\s+)?(harm\s+)?(levels?|categories)\s+(of\s+)?(medication\s+)?error\b/i,
+  /\bdifference\s+between\s+categor(y|ies)\b/i,
+  /\bno\s+harm.{0,20}error\b/i,
+  /\berror.{0,20}no\s+harm\b/i,
+  /\bmedication\s+error\s+categor/i,
+];
+
+function isMedicationErrorQuestion(q: string): boolean {
+  return MED_ERROR_PATTERNS.some((p) => p.test(q));
 }
 
 // Patterns that indicate a general-info question (assessment process, scoring, chapters, KPIs)
@@ -510,6 +625,7 @@ Deno.serve(async (req) => {
     let isKeywordFallback = false;
     let isGeneralRef = false;
     let isKpiRef = false;
+    let isMedErrorRef = false;
     let generalRefContext = "";
     let generalRefSourceLabel = "";
 
@@ -521,6 +637,17 @@ Deno.serve(async (req) => {
       isKpiRef = true;
       generalRefContext = SHCO_KPI_CONTENT;
       generalRefSourceLabel = "SHCO Full — KPI Annexure 1 (NABH 3rd Edition Standards Book, pp.151–159)";
+    }
+
+    // Step 0b: Medication error categorization detection — runs before OE extraction.
+    // Categorization/harm-level questions → Annexure 2 content.
+    // Formula/rate questions are already caught by Step 0 (KPI) and never reach here.
+    _step.current = "med-error-check";
+    if (!isGeneralRef && isMedicationErrorQuestion(question)) {
+      isGeneralRef = true;
+      isMedErrorRef = true;
+      generalRefContext = MEDICATION_ERROR_CONTENT;
+      generalRefSourceLabel = "SHCO Full — Medication Error Monitoring (Annexure 2, NCC-MERP)";
     }
 
     // Step 1: try OE code match — scan anywhere in the question for a code pattern
@@ -537,7 +664,8 @@ Deno.serve(async (req) => {
       }
       return null;
     };
-    const oeCodeQuery = !isKpiRef ? extractOeCode(question) : null;
+    // Skip OE DB lookup entirely if a reference source already matched
+    const oeCodeQuery = !isGeneralRef ? extractOeCode(question) : null;
     let codeRows = null;
     if (oeCodeQuery) {
       const { data, error: codeErr } = await supabase
@@ -549,7 +677,7 @@ Deno.serve(async (req) => {
       codeRows = data;
     }
 
-    if (!isKpiRef) {
+    if (!isGeneralRef) {
       rows = codeRows && codeRows.length > 0 ? codeRows : null;
     }
 
@@ -565,7 +693,7 @@ Deno.serve(async (req) => {
     }
 
     // Step 3: if no glossary match, check general info topics
-    if (!rows && !isGeneralRef && !isKpiRef && isGeneralInfoQuestion(question)) {
+    if (!rows && !isGeneralRef && isGeneralInfoQuestion(question)) {
       _step.current = "general-info-check";
       isGeneralRef = true;
       generalRefContext = GENERAL_INFO;
@@ -628,6 +756,12 @@ Deno.serve(async (req) => {
             ` and the unit in your answer — hospital staff need these to implement tracking. If multiple` +
             ` KPIs are relevant, list each one with its formula and unit. Also mention sampling requirements` +
             ` (YES/NO) and any SPECIAL NOTEs from <context>.\n`
+          : ``) +
+        (isMedErrorRef
+          ? `1b. For medication error categorization questions, ALWAYS include the specific category` +
+            ` letter(s) (A through I) and the harm level (No Error / Error No Harm / Error Harm /` +
+            ` Error Death) in your answer. Walk through the classification algorithm when it helps` +
+            ` the user understand which category applies.\n`
           : ``) +
         `2. If the <context> does not address the question, say: 'I couldn't find` +
         ` a matching SHCO Full reference for that — try rephrasing, or check with` +
