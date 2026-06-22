@@ -5556,7 +5556,7 @@ function RecoveryScreen({ user, onDone }) {
         <div style={{display:"flex",gap:12,alignItems:"center",marginBottom:18}}>
           <div style={{width:42,height:42,borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:20}}>🔐</div>
           <div>
-            <div style={{fontSize:11,letterSpacing:3,color:T.gold,marginBottom:2}}>NABH 6TH EDITION</div>
+            <div style={{fontSize:11,letterSpacing:3,color:T.gold,marginBottom:2}}>ACCREDREADY</div>
             <div style={{fontSize:15,fontWeight:700,color:T.white}}>Set New Password</div>
           </div>
         </div>
