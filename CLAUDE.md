@@ -8,6 +8,16 @@ At the start of every session, always run:
 git pull origin master
 ```
 
+## Workflow Rule — Local-First, Always
+
+1. Every new change is built and kept LOCAL first.
+2. Test locally (`npm start`, verify on localhost:3000) — confirm everything works.
+3. Only after local testing passes do we move to the next level (deploy via `npm run deploy`).
+4. NEVER deploy untested code. NEVER `npm run deploy` before local verification.
+5. Build complete → test local → confirm OK → then and only then deploy.
+
+This rule applies to every task in this repo from now on.
+
 ## Post-Deploy Rule
 
 After every successful `npm run deploy`, automatically run:

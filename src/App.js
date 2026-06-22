@@ -3,6 +3,7 @@ import { createClient } from "@supabase/supabase-js";
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, Tooltip, ReferenceLine, ResponsiveContainer, CartesianGrid } from "recharts";
 import jsPDF from 'jspdf';
 import AIAssistantWidget from "./components/AIAssistantWidget";
+import HomepageScreen from "./components/HomepageScreen";
 
 const supabase = createClient(
   "https://tbptllgcjtiiqspxqcde.supabase.co",
@@ -6843,7 +6844,7 @@ export default function App() {
     }
     supabase.auth.getSession().then(({data:{session}})=>{
       if(session?.user){setUser(session.user);setAuthState("setup");}
-      else setAuthState("login");
+      else setAuthState("homepage");
     });
     const{data:{subscription}}=supabase.auth.onAuthStateChange((event,session)=>{
       if(event==="PASSWORD_RECOVERY"){
@@ -6852,10 +6853,24 @@ export default function App() {
         return;
       }
       if(session?.user){setUser(session.user);setAuthState(s=>s==="recovery"?s:s==="loading"?"setup":s);}
+      else if(event==="INITIAL_SESSION"){setUser(null);setAuthState("homepage");setContext(null);}
       else{setUser(null);setAuthState("login");setContext(null);}
     });
     return()=>subscription.unsubscribe();
   },[]);
+
+  // Show #resources-section only on the homepage
+  useEffect(()=>{
+    const rs=document.getElementById('resources-section');
+    if(rs) rs.style.display=authState==="homepage"?"block":"none";
+  },[authState]);
+
+  // Back button: login screen (unauthenticated) → homepage
+  useEffect(()=>{
+    const onPop=()=>{ if(authState==="login"&&!user) setAuthState("homepage"); };
+    window.addEventListener("popstate",onPop);
+    return()=>window.removeEventListener("popstate",onPop);
+  },[authState,user]);
 
   // Load theme preference when user logs in
   useEffect(()=>{
@@ -7152,6 +7167,7 @@ export default function App() {
   };
 
   if(authState==="loading") return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",color:T.gold,fontFamily:"Segoe UI,sans-serif",fontSize:16}}>Loading…</div>;
+  if(authState==="homepage") return <HomepageScreen onSignIn={()=>{window.history.pushState({screen:"login"},"",window.location.pathname);setAuthState("login");}} />;
   if(authState==="recovery") return <RecoveryScreen user={user} onDone={()=>{setUser(null);setAuthState("login");setContext(null);}}/>;
   if(authState==="login") return <LoginScreen onLogin={u=>{setUser(u);setAuthState("setup");}} initialError={authErrorMsg}/>;
   if(authState==="setup") return <SetupScreen user={user} onReady={handleReady}/>;

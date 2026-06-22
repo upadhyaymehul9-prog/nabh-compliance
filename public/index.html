@@ -61,13 +61,16 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
     <style>
       #resources-section {
-        background: #040d1a;
-        border-top: 1px solid rgba(255,255,255,0.06);
+        display: none; /* shown by React useEffect only when authState === "homepage" */
+        background: #16322a;
+        border-top: 1px solid rgba(255,255,255,0.08);
         padding: 4rem 2rem;
-        font-family: 'DM Sans', sans-serif;
+        font-family: 'Inter', system-ui, sans-serif;
       }
       #resources-section .rs-inner {
         max-width: 900px;
@@ -75,9 +78,9 @@
       }
       #resources-section .rs-badge {
         display: inline-block;
-        background: rgba(245,158,11,0.1);
-        border: 1px solid rgba(245,158,11,0.3);
-        color: #f59e0b;
+        background: rgba(198,154,92,0.12);
+        border: 1px solid rgba(198,154,92,0.3);
+        color: #c69a5c;
         padding: 0.3rem 1rem;
         border-radius: 50px;
         font-size: 0.75rem;
@@ -87,15 +90,15 @@
         margin-bottom: 1rem;
       }
       #resources-section h2 {
-        font-family: 'Syne', sans-serif;
+        font-family: 'Fraunces', Georgia, serif;
         font-size: clamp(1.5rem, 3vw, 2rem);
-        font-weight: 800;
-        color: #f8fafc;
+        font-weight: 600;
+        color: #f7f4ee;
         margin-bottom: 0.5rem;
       }
-      #resources-section h2 span { color: #38bdf8; }
+      #resources-section h2 span { color: #c69a5c; }
       #resources-section .rs-sub {
-        color: #94a3b8;
+        color: #9fb2aa;
         font-size: 0.97rem;
         margin-bottom: 2.5rem;
       }
@@ -105,8 +108,8 @@
         gap: 1rem;
       }
       #resources-section .rs-card {
-        background: #0f1f38;
-        border: 1px solid rgba(255,255,255,0.07);
+        background: #1d4035;
+        border: 1px solid #2a5446;
         border-radius: 12px;
         padding: 1.25rem 1.5rem;
         text-decoration: none;
@@ -116,32 +119,32 @@
         transition: border-color 0.2s, transform 0.2s;
       }
       #resources-section .rs-card:hover {
-        border-color: rgba(56,189,248,0.4);
+        border-color: rgba(198,154,92,0.5);
         transform: translateY(-2px);
       }
       #resources-section .rs-card-label {
         font-size: 0.72rem;
-        color: #38bdf8;
+        color: #c69a5c;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.06em;
       }
       #resources-section .rs-card-title {
-        font-family: 'Syne', sans-serif;
+        font-family: 'Fraunces', Georgia, serif;
         font-size: 0.97rem;
-        font-weight: 700;
-        color: #f8fafc;
+        font-weight: 600;
+        color: #f7f4ee;
         line-height: 1.4;
       }
       #resources-section .rs-card-desc {
         font-size: 0.83rem;
-        color: #94a3b8;
+        color: #9fb2aa;
         line-height: 1.5;
       }
       #resources-section .rs-arrow {
         margin-top: 0.5rem;
         font-size: 0.8rem;
-        color: #2563eb;
+        color: #c69a5c;
         font-weight: 600;
       }
     </style>
