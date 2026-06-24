@@ -5864,7 +5864,7 @@ export default function App() {
 
       const chapterNames={
         AAC:'Access, Assessment & Continuity of Care',COP:'Care of Patients',
-        MOM:'Management of Medications',PRE:'Pre-Operative Management',
+        MOM:'Management of Medications',PRE:'Patient Rights and Education',
         IPC:'Infection Prevention & Control',PSQ:'Patient Safety & Quality Improvement',
         ROM:'Responsibilities of Management',FMS:'Facility Management & Safety',
         HRM:'Human Resource Management',IMS:'Information Management System',
