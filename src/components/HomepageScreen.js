@@ -22,11 +22,15 @@ export default function HomepageScreen({ onSignIn }) {
       link.href = 'https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap';
       document.head.appendChild(link);
     }
+    document.documentElement.style.scrollBehavior = 'smooth';
     const header = document.getElementById('hp-header');
     if (!header) return;
     const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      document.documentElement.style.scrollBehavior = '';
+    };
   }, []);
 
   return (
@@ -91,14 +95,15 @@ export default function HomepageScreen({ onSignIn }) {
           display: inline-flex; align-items: center; gap: 7px;
           font-family: 'Figtree', sans-serif; font-weight: 700; font-size: 14.5px;
           border-radius: 9px; padding: 10px 22px; cursor: pointer; border: none;
-          transition: background .15s ease, box-shadow .15s ease, transform .15s ease, border-color .15s ease;
+          min-height: 44px;
+          transition: background .15s ease, box-shadow .2s cubic-bezier(0.175, 0.885, 0.32, 1.1), border-color .15s ease;
           line-height: 1; text-align: center; white-space: nowrap;
         }
-        #hp-root .btn:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+        #hp-root .btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
         #hp-root .btn-primary { background: var(--brand); color: #fff; box-shadow: 0 1px 3px rgba(6,95,70,.25); }
-        #hp-root .btn-primary:hover { background: var(--brand-dark); box-shadow: var(--shadow-md); transform: translateY(-1px); }
+        #hp-root .btn-primary:hover { background: var(--brand-dark); box-shadow: var(--shadow-md); }
         #hp-root .btn-amber { background: var(--amber); color: #fff; box-shadow: 0 1px 3px rgba(217,119,6,.25); }
-        #hp-root .btn-amber:hover { background: var(--amber-dark); box-shadow: 0 4px 14px rgba(217,119,6,.35); transform: translateY(-1px); }
+        #hp-root .btn-amber:hover { background: var(--amber-dark); box-shadow: 0 4px 14px rgba(217,119,6,.35); }
         #hp-root .btn-ghost-white { background: rgba(255,255,255,.1); color: #fff; border: 1.5px solid rgba(255,255,255,.2); backdrop-filter: blur(4px); }
         #hp-root .btn-ghost-white:hover { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.4); }
         #hp-root .btn-lg { padding: 13px 30px; font-size: 15.5px; border-radius: 10px; }
@@ -146,9 +151,9 @@ export default function HomepageScreen({ onSignIn }) {
         }
         #hp-root .logo-name b { color: var(--brand); }
         #hp-root .navlinks { display: flex; align-items: center; gap: 4px; font-size: 14px; }
-        #hp-root .navlinks a.nav-link { padding: 6px 13px; border-radius: 8px; color: var(--muted); font-weight: 500; transition: background .15s, color .15s; }
+        #hp-root .navlinks a.nav-link { padding: 6px 13px; border-radius: 8px; color: var(--muted); font-weight: 500; transition: background .15s, color .15s; min-height: 44px; display: inline-flex; align-items: center; }
         #hp-root .navlinks a.nav-link:hover { color: var(--text); background: var(--surface); }
-        #hp-root .navlinks a.nav-link:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+        #hp-root .navlinks a.nav-link:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
         @media(max-width:740px) { #hp-root .navlinks a.nav-link { display: none; } }
 
         /* ── HERO ── */
@@ -183,7 +188,7 @@ export default function HomepageScreen({ onSignIn }) {
         #hp-root .hero h1 .hero-hi { display: block; }
         #hp-root .hero-sub { margin: 26px 0 36px; font-size: 17px; color: #A7C4BA; max-width: 52ch; line-height: 1.75; }
         #hp-root .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-        #hp-root .hero-social { display: flex; align-items: center; gap: 7px; margin-top: 14px; font-size: 13px; color: rgba(255,255,255,.55); }
+        #hp-root .hero-social { display: flex; align-items: center; gap: 7px; margin-top: 14px; font-size: 13px; color: rgba(255,255,255,.8); }
         #hp-root .hero-social i { color: #6EE7B7; font-size: 15px; }
         #hp-root .hero-note { margin-top: 20px; font-size: 13px; color: #5A8A7C; display: flex; align-items: center; gap: 6px; }
         #hp-root .hero-stats { display: flex; flex-wrap: wrap; gap: 0; margin-top: 52px; border-top: 1px solid rgba(255,255,255,.1); }
@@ -243,8 +248,8 @@ export default function HomepageScreen({ onSignIn }) {
         #hp-root .fgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
         @media(max-width:860px) { #hp-root .fgrid { grid-template-columns: repeat(2, 1fr); } }
         @media(max-width:540px) { #hp-root .fgrid { grid-template-columns: 1fr; } }
-        #hp-root .fcard { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 28px; transition: border-color .2s, box-shadow .2s, transform .2s; cursor: default; }
-        #hp-root .fcard:hover { border-color: var(--brand-light); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        #hp-root .fcard { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 28px; transition: border-color .2s, box-shadow .2s cubic-bezier(0.175, 0.885, 0.32, 1.1); cursor: default; }
+        #hp-root .fcard:hover { border-color: var(--brand-light); box-shadow: var(--shadow-md); }
         #hp-root .fcard .ic { width: 46px; height: 46px; border-radius: 12px; background: var(--brand-bg); color: var(--brand); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 18px; }
         #hp-root .fcard h3 { font-family: 'Figtree', sans-serif; font-size: 16.5px; font-weight: 700; color: var(--text); margin-bottom: 9px; }
         #hp-root .fcard p { font-size: 14.5px; color: var(--muted); line-height: 1.7; }
@@ -276,9 +281,9 @@ export default function HomepageScreen({ onSignIn }) {
         #hp-root .person { border: 1px solid var(--border); border-radius: 14px; margin-bottom: 12px; overflow: hidden; background: var(--white); transition: border-color .15s, box-shadow .15s; }
         #hp-root .person:hover { border-color: var(--brand-light); }
         #hp-root .person.open { border-color: var(--brand-light); box-shadow: var(--shadow-sm); }
-        #hp-root .person-head { display: flex; align-items: center; gap: 16px; padding: 20px 24px; cursor: pointer; user-select: none; transition: background .15s; }
+        #hp-root .person-head { display: flex; align-items: center; gap: 16px; padding: 20px 24px; cursor: pointer; user-select: none; transition: background .15s; background: none; border: none; width: 100%; text-align: left; font-family: inherit; font-size: inherit; color: inherit; }
         #hp-root .person-head:hover { background: var(--surface); }
-        #hp-root .person-head:focus-visible { outline: 3px solid var(--teal); outline-offset: -3px; }
+        #hp-root .person-head:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
         #hp-root .person-av { width: 52px; height: 52px; border-radius: 12px; background: var(--brand-bg); color: var(--brand); font-family: 'Figtree', sans-serif; font-size: 17px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
         #hp-root .person-info { flex: 1; min-width: 0; }
         #hp-root .person-info h3 { font-family: 'Figtree', sans-serif; font-size: 17px; font-weight: 700; color: var(--text); line-height: 1.3; }
@@ -322,7 +327,7 @@ export default function HomepageScreen({ onSignIn }) {
         #hp-root .pricing-cta .btn { width: 100%; justify-content: center; }
         #hp-root .pricing-disclaimer { font-size: 12px; color: rgba(255,255,255,.4); margin-top: 12px; line-height: 1.5; }
         #hp-root .pricing-right { background: var(--white); padding: 46px 42px; }
-        #hp-root .pricing-right h3 { font-family: 'Figtree', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--subtle); margin-bottom: 22px; }
+        #hp-root .pricing-right h3 { font-family: 'Figtree', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 22px; }
         #hp-root .pricing-right ul { list-style: none; }
         #hp-root .pricing-right li { display: flex; align-items: flex-start; gap: 11px; font-size: 14.5px; color: var(--text); padding: 11px 0; border-bottom: 1px solid var(--border); }
         #hp-root .pricing-right li:last-child { border-bottom: none; }
@@ -343,7 +348,7 @@ export default function HomepageScreen({ onSignIn }) {
         #hp-root .mcard .soon-badge { position: absolute; top: 14px; right: 14px; }
         #hp-root .waitlist-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-family: 'Figtree', sans-serif; font-weight: 700; color: var(--brand); margin-top: 12px; cursor: pointer; padding: 0; background: none; border: none; transition: color .15s; }
         #hp-root .waitlist-btn:hover { color: var(--brand-dark); }
-        #hp-root .waitlist-btn:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; border-radius: 4px; }
+        #hp-root .waitlist-btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 4px; }
 
         /* ── FINAL CTA ── */
         #hp-root .final { background: var(--brand-dark); color: #fff; padding: 104px 0; text-align: center; }
@@ -360,7 +365,7 @@ export default function HomepageScreen({ onSignIn }) {
         #hp-root footer .footer-links { display: flex; gap: 22px; }
         #hp-root footer a { transition: color .15s; }
         #hp-root footer a:hover { color: #fff; }
-        #hp-root footer a:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; border-radius: 3px; }
+        #hp-root footer a:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 3px; }
 
         /* ── RESPONSIVE ── */
         @media(max-width:640px) {
@@ -393,7 +398,7 @@ export default function HomepageScreen({ onSignIn }) {
               <a className="nav-link" href="#how-it-works">How it works</a>
               <a className="nav-link" href="#about">About</a>
               <a className="nav-link" href="#pricing">Pricing</a>
-              <button className="btn btn-primary" onClick={onSignIn}>Sign in</button>
+              <button className="btn btn-primary" onClick={onSignIn}>Sign In</button>
             </div>
           </nav>
         </div>
@@ -402,7 +407,7 @@ export default function HomepageScreen({ onSignIn }) {
       <span id="top"></span>
 
       {/* HERO */}
-      <section className="hero" aria-label="Hero">
+      <section className="hero" aria-label="AccredReady platform introduction">
         <div className="hero-inner">
           <div>
             <div className="hero-badge">
@@ -416,10 +421,10 @@ export default function HomepageScreen({ onSignIn }) {
             <p className="hero-sub">India's most affordable NABH compliance platform — built by a healthcare operations leader. Score your standards, find your gaps, fix them, and reach survey-readiness. For hospitals and small healthcare organisations.</p>
             <div className="hero-actions">
               <button className="btn btn-amber btn-lg" onClick={onSignIn}>
-                <i className="ti ti-rocket" aria-hidden="true"></i> Start free
+                <i className="ti ti-rocket" aria-hidden="true"></i> Start Free
               </button>
               <a className="btn btn-ghost-white btn-lg" href="#features">
-                See how it works <i className="ti ti-arrow-down" aria-hidden="true"></i>
+                See How It Works <i className="ti ti-arrow-down" aria-hidden="true"></i>
               </a>
             </div>
             <p className="hero-social">
@@ -616,8 +621,8 @@ export default function HomepageScreen({ onSignIn }) {
             <p>A practising NABH Quality Manager, an independent expert consulting panel, and a healthcare financing partner. Tap any name to see the full background.</p>
           </div>
 
-          <div className={`person${openPersons[0] ? " open" : ""}`} role="button" tabIndex={0} aria-expanded={openPersons[0]} onClick={() => togPerson(0)} onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && togPerson(0)}>
-            <div className="person-head">
+          <div className={`person${openPersons[0] ? " open" : ""}`}>
+            <button className="person-head" aria-expanded={openPersons[0]} aria-controls="person-body-0" onClick={() => togPerson(0)}>
               <div className="person-av" aria-hidden="true">MU</div>
               <div className="person-info">
                 <h3>Dr. Mehul Upadhyay</h3>
@@ -625,8 +630,8 @@ export default function HomepageScreen({ onSignIn }) {
               </div>
               <span className="tag tag-founder">Founder</span>
               <i className="ti ti-chevron-down p-caret" aria-hidden="true"></i>
-            </div>
-            <div className="person-body">
+            </button>
+            <div className="person-body" id="person-body-0">
               <div className="inner">
                 <p>15+ years of healthcare operations experience, including international exposure in New Zealand. Currently Head of Medical Services &amp; Operations at HMP Foundation, Ankleshwar.</p>
                 <p>AccredReady was built out of that direct, on-ground experience: the documentation burden, the audit cycles, and the gap between a standard's written requirement and a hospital's day-to-day reality. The platform reflects what accreditation actually looks like from inside a hospital, not from outside it.</p>
@@ -635,8 +640,8 @@ export default function HomepageScreen({ onSignIn }) {
             </div>
           </div>
 
-          <div className={`person${openPersons[1] ? " open" : ""}`} role="button" tabIndex={0} aria-expanded={openPersons[1]} onClick={() => togPerson(1)} onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && togPerson(1)}>
-            <div className="person-head">
+          <div className={`person${openPersons[1] ? " open" : ""}`}>
+            <button className="person-head" aria-expanded={openPersons[1]} aria-controls="person-body-1" onClick={() => togPerson(1)}>
               <div className="person-av" aria-hidden="true">PE</div>
               <div className="person-info">
                 <h3>PMS EduCon</h3>
@@ -644,8 +649,8 @@ export default function HomepageScreen({ onSignIn }) {
               </div>
               <span className="tag tag-expert">Expert Panel</span>
               <i className="ti ti-chevron-down p-caret" aria-hidden="true"></i>
-            </div>
-            <div className="person-body">
+            </button>
+            <div className="person-body" id="person-body-1">
               <div className="inner">
                 <p>End-to-end NABH accreditation consulting for hospitals, SHCOs, eye hospitals, Ayush centres, dental and imaging centres — including documentation support, gap analysis, mock audits, and onsite/online training covering NABH standards, internal auditing, infection control, and fire safety.</p>
                 <p className="meta-line"><b>Coverage:</b> Remote &amp; in-person, Greater Ahmedabad Area</p>
@@ -662,8 +667,8 @@ export default function HomepageScreen({ onSignIn }) {
             </div>
           </div>
 
-          <div className={`person${openPersons[2] ? " open" : ""}`} role="button" tabIndex={0} aria-expanded={openPersons[2]} onClick={() => togPerson(2)} onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && togPerson(2)}>
-            <div className="person-head">
+          <div className={`person${openPersons[2] ? " open" : ""}`}>
+            <button className="person-head" aria-expanded={openPersons[2]} aria-controls="person-body-2" onClick={() => togPerson(2)}>
               <div className="person-av" aria-hidden="true">RK</div>
               <div className="person-info">
                 <h3>Dr. D. Rakesh Khanna, MD(AM)</h3>
@@ -671,8 +676,8 @@ export default function HomepageScreen({ onSignIn }) {
               </div>
               <span className="tag tag-expert">Expert Panel</span>
               <i className="ti ti-chevron-down p-caret" aria-hidden="true"></i>
-            </div>
-            <div className="person-body">
+            </button>
+            <div className="person-body" id="person-body-2">
               <div className="inner">
                 <p>JCI, AACI, NABH, DHA &amp; MOH standards define Dr. D. Rakesh Khanna's expertise as a trusted Accreditation Partner for hospitals across India and the UAE. An AACI Certified Internal Surveyor and Senior Healthcare Quality Strategist, he has led accreditation readiness at Medcare Hospitals &amp; Medical Centres (Aster DM Healthcare, UAE) and major Indian institutions including East Coast Hospitals, Medway Hospitals, GVN Hospitals, Dr. Rela Institute &amp; Medical Centre, and Saveetha Hospital. With proven success in commissioning hospitals to full NABH/JCI compliance, optimising manpower, reducing costs, and strengthening patient safety, he delivers end-to-end accreditation readiness and operational excellence — across more than 20 accreditations.</p>
                 <p className="meta-line"><b>Based:</b> Chennai, with extensive India &amp; UAE hospital experience · <b>Accreditations led:</b> 20+</p>
@@ -744,7 +749,7 @@ export default function HomepageScreen({ onSignIn }) {
               </div>
               <div className="pricing-cta">
                 <button className="btn btn-amber btn-lg" onClick={onSignIn}>
-                  <i className="ti ti-rocket" aria-hidden="true"></i> Start free
+                  <i className="ti ti-rocket" aria-hidden="true"></i> Start Free
                 </button>
                 <p className="pricing-disclaimer">No credit card required. Email-only signup. Cancel anytime.</p>
               </div>
@@ -804,7 +809,7 @@ export default function HomepageScreen({ onSignIn }) {
               <h4>IPD Manager</h4>
               <p>Inpatient admission-to-discharge workflow, built to order for hospitals that need it.</p>
               <button className="waitlist-btn" onClick={() => wl("IPD Manager")} aria-label="Join waitlist for IPD Manager">
-                <i className="ti ti-bell" aria-hidden="true"></i> Join waitlist
+                <i className="ti ti-bell" aria-hidden="true"></i> Join Waitlist
               </button>
             </div>
             <div className="mcard soon">
@@ -813,7 +818,7 @@ export default function HomepageScreen({ onSignIn }) {
               <h4>Revenue Leakage Self-Audit</h4>
               <p>Find where your hospital is losing revenue — and exactly how to plug each leak.</p>
               <button className="waitlist-btn" onClick={() => wl("Revenue Leakage Self-Audit")} aria-label="Join waitlist for Revenue Leakage Self-Audit">
-                <i className="ti ti-bell" aria-hidden="true"></i> Join waitlist
+                <i className="ti ti-bell" aria-hidden="true"></i> Join Waitlist
               </button>
             </div>
           </div>
@@ -829,7 +834,7 @@ export default function HomepageScreen({ onSignIn }) {
           <h2>Accreditation readiness, <em className="si">built and backed</em> end to end.</h2>
           <p>Software from a practising NABH Quality Manager. Consulting from an independent expert network. Financing from a dedicated healthcare partner.</p>
           <button className="btn btn-amber btn-lg" onClick={onSignIn}>
-            <i className="ti ti-rocket" aria-hidden="true"></i> Start free
+            <i className="ti ti-rocket" aria-hidden="true"></i> Start Free
           </button>
           <div className="contact-row">
             <div className="item"><div className="k">Website</div><div className="v">accredready.in</div></div>
