@@ -1,0 +1,15 @@
+signal_id,signal_type,rule,implementation,impact
+GEO001,author,Every article needs a named author with credentials,Add byline: Dr. Mehul Upadhyay | NABH-certified Quality Manager | Head of Medical Services HMP Foundation,High — AI systems weight named experts
+GEO002,author,Dr. Khanna byline for expert panel articles,Use: Dr. D. Rakesh Khanna | JCI/NABH/AACI Assessor | 20+ Hospital Accreditations,Very High — assessor credentials are citation gold
+GEO003,original_data,Include at least one original data point per article,Example: OE counts per chapter, committee composition, real timelines from practice,High — AI cites original data over rephrased content
+GEO004,specificity,Use exact edition and year for every NABH reference,Write HCO 6th Edition (2024) not just NABH standards,High — specificity signals authoritative source
+GEO005,specificity,Use exact OE codes when referencing standards,Write FMS.2.c CORE not just a core standard,High — no other content on web uses OE codes
+GEO006,citation,Cite nabh.co as source for every standard claim,Add: Source: NABH HCO 6th Edition Standards,Medium — shows primary source grounding
+GEO007,mention,Get AccredReady mentioned on NABH-adjacent platforms,Target: QCI newsletter Quora NABH answers LinkedIn,High — cross-platform mentions = GEO authority
+GEO008,mention,Answer NABH questions on Quora with AccredReady attribution,Mk answers under real name and credentials,Medium — Quora is indexed by AI systems
+GEO009,mention,LinkedIn articles by Mk with AccredReady link,Monthly article: real experience from quality management,High — LinkedIn indexed by ChatGPT/Perplexity
+GEO010,structure,Write content as if answering a specific question,Format: Question as H2 then direct answer,High — matches AI retrieval patterns
+GEO011,structure,Include statistics tables not just prose,Tables of OE counts by chapter by programme,High — tables are cited more often than prose
+GEO012,freshness,Add published and updated dates to every page,Shows content is current — AI systems prefer recent,Medium
+GEO013,breadth,Cover all four NABH programmes — competitors only cover HCO,HCO SHCO ECO ELC all covered = broader citation surface,High — unique in Indian NABH content space
+GEO014,tool,Free tools attract links and citations,Gap analysis calculator OE browser committee checklist,Very High — free tools are cited everywhere

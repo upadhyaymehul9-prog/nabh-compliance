@@ -1,0 +1,21 @@
+rule_id,category,rule,priority,example
+SEO001,keyword,Primary keyword must appear in H1 title,critical,H1: NABH accreditation checklist 2025
+SEO002,keyword,Primary keyword in first 150 words of page,critical,Use exact phrase in opening paragraph
+SEO003,keyword,Primary keyword in meta description,high,<meta name="description" content="NABH accreditation checklist...">
+SEO004,keyword,Long-tail keywords in H2 subheadings,high,H2: How long does NABH full accreditation take?
+SEO005,structure,Page title under 60 characters,critical,NABH HCO full accreditation guide | AccredReady
+SEO006,structure,Meta description 120-155 characters,high,Describe page content with primary keyword and CTA
+SEO007,structure,FAQ section mandatory on every /learn page,critical,Minimum 4 FAQ questions per page
+SEO008,structure,Internal link to accredready.in homepage in every page,high,Link text: Track your NABH compliance free
+SEO009,structure,Author byline with credentials on every article,critical,Dr. Mehul Upadhyay NABH-certified Quality Manager
+SEO010,structure,Published date and last updated date visible,medium,Published: June 2025 | Updated: June 2026
+SEO011,technical,FAQ schema JSON-LD on every /learn page,critical,Add FAQPage structured data
+SEO012,technical,Article schema on blog posts,high,Add Article structured data with author
+SEO013,technical,Canonical URL tag on every page,high,<link rel="canonical" href="https://accredready.in/learn/...">
+SEO014,technical,OG tags for social sharing,medium,og:title og:description og:image
+SEO015,keyword,Target zero search-volume NABH-specific terms,high,Own NABH ECO OE count — no competition
+SEO016,link,Every /learn page links back to pricing/signup,critical,CTA at end of every informational page
+SEO017,link,Cross-link between related /learn pages,medium,NABH HCO page links to SHCO comparison page
+SEO018,content,Opening paragraph answers core question directly,critical,AEO rule — no preamble allowed
+SEO019,content,Specific numbers over vague claims,critical,639 OEs not hundreds of OEs
+SEO020,content,Cite nabh.co as source for any standard claim,critical,Never cite general knowledge for NABH facts

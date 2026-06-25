@@ -1,0 +1,26 @@
+rule_id,category,rule,do_or_dont,example
+BRAND001,voice,Write like a quality manager to another quality manager,DO,Assessors check FMS.2.c CORE compliance first
+BRAND002,voice,Use specific numbers always,DO,302 OEs in ECO Full not hundreds of OEs
+BRAND003,voice,Reference chapter codes naturally,DO,The AAC chapter covers patient access and assessment
+BRAND004,voice,First-person founder voice for blog articles,DO,In my 15 years of hospital operations I have seen...
+BRAND005,banned_word,Never use the word comprehensive,DONT,comprehensive solution -> use specific instead
+BRAND006,banned_word,Never use the word robust,DONT,robust system -> say what it actually does
+BRAND007,banned_word,Never use the word seamlessly,DONT,seamlessly integrates -> just say how it works
+BRAND008,banned_word,Never use leverage as a verb,DONT,leverage our platform -> use AccredReady
+BRAND009,banned_word,Never use revolutionize or transform healthcare,DONT,sounds fake in B2B healthcare context
+BRAND010,banned_word,Never use world-class or best-in-class,DONT,unverifiable claim — kills credibility
+BRAND011,positioning,We are the NABH-native tool not an HMS,DO,AccredReady is built only for NABH compliance — not an HMS
+BRAND012,positioning,Do not bash competitors by name,DONT,Never mention MocDoc Adrine Unidoc by name
+BRAND013,positioning,Position against the problem not other products,DO,Most hospitals prepare for NABH using Excel and consultants
+BRAND014,public_rule,Never write 639 OEs in public copy,CRITICAL,Say multiple NABH programmes or list them by name
+BRAND015,public_rule,NABH content from nabh.co or official PDF only,CRITICAL,Never generate NABH facts from general knowledge
+BRAND016,public_rule,No fake urgency or artificial scarcity,DONT,Limited time offer -> Remove completely
+BRAND017,credibility,Always include edition and year for NABH content,DO,HCO 6th Edition 2024 not just HCO standards
+BRAND018,credibility,Dr. Khanna byline only with his explicit approval,CRITICAL,Never publish under his name without confirmation
+BRAND019,credibility,Hiral case studies must anonymise hospital names,CRITICAL,Unless explicit written consent given
+BRAND020,cta,One CTA per page — never multiple competing CTAs,DO,End with: Start free on AccredReady -> accredready.in
+BRAND021,cta,CTA language: low commitment free trial framing,DO,Try AccredReady free not Buy now or Subscribe
+BRAND022,pricing,Always show INR pricing when mentioned,DO,₹499/month not $6/month
+BRAND023,audience,Write for busy quality managers not administrators,DO,Assume reader knows NABH exists and has done at least one audit
+BRAND024,audience,Secondary audience: NABH consultants,DO,Mention consultant use case: manage multiple hospitals
+BRAND025,soni,Soni Ahlawat is personal friend with comped account — never treat as lead,CRITICAL,Never include in outreach campaigns
