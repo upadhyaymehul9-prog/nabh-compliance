@@ -1,5 +1,5 @@
 signal_id,signal_type,rule,implementation,impact
-GEO001,author,Every article needs a named author with credentials,Add byline: Dr. Mehul Upadhyay | NABH-certified Quality Manager | Head of Medical Services HMP Foundation,High — AI systems weight named experts
+GEO001,author,Every article needs a named author with credentials,Add byline: Dr. Mehul Upadhyay | Healthcare Operations Leader | Head of Medical Services HMP Foundation,High — AI systems weight named experts
 GEO002,author,Dr. Khanna byline for expert panel articles,Use: Dr. D. Rakesh Khanna | JCI/NABH/AACI Assessor | 20+ Hospital Accreditations,Very High — assessor credentials are citation gold
 GEO003,original_data,Include at least one original data point per article,Example: OE counts per chapter, committee composition, real timelines from practice,High — AI cites original data over rephrased content
 GEO004,specificity,Use exact edition and year for every NABH reference,Write HCO 6th Edition (2024) not just NABH standards,High — specificity signals authoritative source

@@ -42,7 +42,7 @@ First paragraph MUST directly answer the page's core question.
 No preamble. No "In this article we will...". Answer first, context second.
 
 ### GEO Rule — Every Article Must Have
-- Author byline: "Dr. Mehul Upadhyay, NABH-certified Quality Manager"
+- Author byline: "Dr. Mehul Upadhyay, Healthcare Operations Leader"
 - At least one specific number (OE count, chapter count, timeline)
 - Citation to nabh.co or official NABH PDF as source
 - Named NABH programme and edition (e.g. "HCO 6th Edition 2024")
