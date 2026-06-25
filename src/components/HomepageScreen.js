@@ -188,6 +188,9 @@ export default function HomepageScreen({ onSignIn }) {
         #hp-root .hero h1 .hero-hi { display: block; }
         #hp-root .hero-sub { margin: 26px 0 36px; font-size: 17px; color: #A7C4BA; max-width: 52ch; line-height: 1.75; }
         #hp-root .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+        #hp-root .hero-app { display: flex; align-items: center; gap: 10px; margin-top: 18px; }
+        #hp-root .hero-app-label { font-size: 12px; color: rgba(255,255,255,.6); white-space: nowrap; }
+        #hp-root .hero-app img { height: 48px; display: inline-block; border: none; background: none; vertical-align: middle; }
         #hp-root .hero-social { display: flex; align-items: center; gap: 7px; margin-top: 14px; font-size: 13px; color: rgba(255,255,255,.8); }
         #hp-root .hero-social i { color: #6EE7B7; font-size: 15px; }
         #hp-root .hero-note { margin-top: 20px; font-size: 13px; color: #5A8A7C; display: flex; align-items: center; gap: 6px; }
@@ -425,6 +428,12 @@ export default function HomepageScreen({ onSignIn }) {
               </button>
               <a className="btn btn-ghost-white btn-lg" href="#features">
                 See How It Works <i className="ti ti-arrow-down" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div className="hero-app">
+              <span className="hero-app-label">Also available on Android</span>
+              <a href="https://play.google.com/store/apps/details?id=com.mktech.nabhcompliance" target="_blank" rel="noopener noreferrer">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
               </a>
             </div>
             <p className="hero-social">
