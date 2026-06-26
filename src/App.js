@@ -3090,6 +3090,16 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
 function GapFixScreen({ assessmentId, gaps, onRefresh }) {
   const [sevFilter,setSevFilter]=useState("ALL"); const [capas,setCapas]=useState({}); const [saving,setSaving]=useState({});
   const [search, setSearch] = useState('');
+  const [deleting,setDeleting]=useState({});
+  useEffect(()=>{
+    if(!assessmentId) return;
+    supabase.from("capa").select("*").eq("assessment_id",assessmentId).then(({data})=>{
+      if(!data) return;
+      const loaded={};
+      data.forEach(r=>{loaded[r.oe_id]={finding:r.finding||'',action:r.action_planned||'',root_cause:r.root_cause||'',action_type:r.action_type||'Process',person:r.responsible_person||'',date:r.target_date||'',saved:true,expanded:false};});
+      setCapas(loaded);
+    });
+  },[assessmentId]);
   const filteredGaps = (gaps||[]).filter(g => {
     const matchesSev = sevFilter === 'ALL' || g.severity === sevFilter;
     const matchesSearch = !search ||
@@ -3101,6 +3111,14 @@ function GapFixScreen({ assessmentId, gaps, onRefresh }) {
     const c=capas[oeId];if(!c?.finding||!c?.action)return;setSaving(p=>({...p,[oeId]:true}));
     await supabase.from("capa").upsert({assessment_id:assessmentId,oe_id:oeId,finding:c.finding,root_cause:c.root_cause||"",action_planned:c.action,action_type:c.action_type||"Process",responsible_person:c.person||"",target_date:c.date||null,status:"open"},{onConflict:"assessment_id,oe_id"});
     setSaving(p=>({...p,[oeId]:false}));setCapas(p=>({...p,[oeId]:{...p[oeId],saved:true}}));onRefresh();
+  };
+  const deleteCapa=async(oeId)=>{
+    if(!window.confirm('Delete this CAPA entry?')) return;
+    setDeleting(p=>({...p,[oeId]:true}));
+    await supabase.from("capa").delete().match({assessment_id:assessmentId,oe_id:oeId});
+    setCapas(p=>{const n={...p};delete n[oeId];return n;});
+    setDeleting(p=>({...p,[oeId]:false}));
+    onRefresh();
   };
   return (
     <div>
@@ -3147,7 +3165,8 @@ function GapFixScreen({ assessmentId, gaps, onRefresh }) {
                     <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
                       <div style={{flex:1,minWidth:140}}><div style={{fontSize:11,color:T.muted,marginBottom:4}}>RESPONSIBLE PERSON</div><input value={c.person||""} onChange={e=>setCapas(p=>({...p,[g.oe_id]:{...c,person:e.target.value}}))} placeholder="Name / Designation" style={{width:"100%",padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,boxSizing:"border-box"}}/></div>
                       <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>TARGET DATE</div><input type="date" value={c.date||""} onChange={e=>setCapas(p=>({...p,[g.oe_id]:{...c,date:e.target.value}}))} style={{padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13}}/></div>
-                      <button onClick={()=>submitCapa(g.oe_id)} disabled={saving[g.oe_id]||!c.finding||!c.action} style={{marginTop:14,padding:"7px 20px",borderRadius:10,background:`linear-gradient(135deg,${T.green},#3d9e6e)`,border:"none",color:T.bg,fontSize:14,fontWeight:700,cursor:c.finding&&c.action?"pointer":"default",opacity:c.finding&&c.action?1:0.5}}>{saving[g.oe_id]?"Saving…":"Save CAPA →"}</button>
+                      <button onClick={()=>submitCapa(g.oe_id)} disabled={saving[g.oe_id]||deleting[g.oe_id]||!c.finding||!c.action} style={{marginTop:14,padding:"7px 20px",borderRadius:10,background:`linear-gradient(135deg,${T.green},#3d9e6e)`,border:"none",color:T.bg,fontSize:14,fontWeight:700,cursor:c.finding&&c.action?"pointer":"default",opacity:c.finding&&c.action?1:0.5}}>{saving[g.oe_id]?"Saving…":"Save CAPA →"}</button>
+                      {c.saved&&<button onClick={()=>deleteCapa(g.oe_id)} disabled={deleting[g.oe_id]||saving[g.oe_id]} style={{marginTop:14,padding:"7px 14px",borderRadius:10,background:"transparent",border:`1px solid ${T.red}`,color:T.red,fontSize:13,fontWeight:700,cursor:"pointer"}}>{deleting[g.oe_id]?"Deleting…":"Delete"}</button>}
                     </div>
                   </div>
                 )}
@@ -5946,6 +5965,69 @@ export default function App() {
         });
       }
 
+      // ── PAGE: CORRECTIVE ACTIONS (CAPA) ─────────────────────────────────
+      const {data:rawCapas}=await supabase.from("capa").select("*").eq("assessment_id",context?.assessmentId||'');
+      const capaMap={};
+      (rawCapas||[]).forEach(r=>{capaMap[r.oe_id]=r;});
+      const capaEntries=(gaps||[]).filter(g=>capaMap[g.oe_id]?.finding);
+      if(capaEntries.length>0){
+        doc.addPage();
+        doc.setFillColor('#050e1a'); doc.rect(0,0,W,H,'F');
+        doc.setFillColor('#c9a84c'); doc.rect(0,0,W,4,'F');
+        y=60;
+        doc.setFontSize(16); doc.setTextColor('#eef4f9');
+        doc.text('Corrective Actions (CAPA)',60,y); y+=10;
+        doc.setDrawColor('#0f2640'); doc.line(60,y,W-60,y); y+=18;
+        doc.setFontSize(8); doc.setTextColor('#3a5870');
+        doc.text(`${capaEntries.length} CAPA(s) recorded for gap OEs`,60,y); y+=20;
+        capaEntries.forEach(g=>{
+          const capa=capaMap[g.oe_id];
+          const scC=g.score<=2?'#e05a5a':g.score===3?'#f4a441':'#4caf7d';
+          doc.setFontSize(8);
+          const findLines=doc.splitTextToSize(capa.finding||'',W-180);
+          const actionLines=doc.splitTextToSize(capa.action_planned||'',W-180);
+          const estH=14+findLines.length*10+actionLines.length*10+28+16;
+          if(y+estH>H-40){
+            doc.addPage();
+            doc.setFillColor('#050e1a'); doc.rect(0,0,W,H,'F');
+            doc.setFillColor('#c9a84c'); doc.rect(0,0,W,4,'F');
+            y=60;
+          }
+          doc.setFillColor('#0a1a2a');
+          doc.roundedRect(60,y-4,W-120,estH,3,3,'F');
+          doc.setDrawColor('#1a3550');
+          doc.roundedRect(60,y-4,W-120,estH,3,3,'S');
+          doc.setFontSize(9); doc.setTextColor('#c9a84c');
+          doc.text(g.oe_id||'',68,y+8);
+          doc.setFontSize(8); doc.setTextColor('#8aadcc');
+          doc.text(g.level||'',130,y+8);
+          doc.setFontSize(8); doc.setTextColor(scC);
+          doc.text(`Score: ${g.score}/5`,W-64,y+8,{align:'right'});
+          y+=18;
+          doc.setFontSize(7); doc.setTextColor('#3a5870');
+          doc.text('FINDING',68,y);
+          doc.setFontSize(8); doc.setTextColor('#c8dcea');
+          findLines.forEach((line,i)=>doc.text(line,68,y+9+i*10));
+          y+=9+findLines.length*10+4;
+          doc.setFontSize(7); doc.setTextColor('#3a5870');
+          doc.text('ACTION PLANNED',68,y);
+          doc.setFontSize(8); doc.setTextColor('#c8dcea');
+          actionLines.forEach((line,i)=>doc.text(line,68,y+9+i*10));
+          y+=9+actionLines.length*10+4;
+          const person2=capa.responsible_person||'—';
+          const dateStr2=capa.target_date?new Date(capa.target_date).toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'}):'—';
+          doc.setFontSize(7); doc.setTextColor('#3a5870');
+          doc.text('RESPONSIBLE: ',68,y);
+          doc.setFontSize(8); doc.setTextColor('#c8dcea');
+          doc.text(person2,68+doc.getTextWidth('RESPONSIBLE: '),y);
+          doc.setFontSize(7); doc.setTextColor('#3a5870');
+          doc.text('TARGET DATE: ',W/2,y);
+          doc.setFontSize(8); doc.setTextColor('#c8dcea');
+          doc.text(dateStr2,W/2+doc.getTextWidth('TARGET DATE: '),y);
+          y+=18;
+        });
+      }
+
       // ── PAGE 4: SUMMARY ─────────────────────────────────────────────────
       doc.addPage();
       doc.setFillColor('#050e1a'); doc.rect(0,0,W,H,'F');
@@ -8088,6 +8170,13 @@ export default function App() {
     const chapterOeCount = ch => shcoFullOes.filter(oe=>oe.chapter===ch).length;
 
     const handleScore = async (oeCode, score) => {
+      if(shcoFullScores[oeCode]===score){
+        setShcoFullScores(prev=>{const n={...prev};delete n[oeCode];return n;});
+        setShcoFullScoreSaving(prev=>({...prev,[oeCode]:true}));
+        await supabase.from("shco_full_scores").delete().match({hospital_id:context.hospitalId,oe_code:oeCode});
+        setShcoFullScoreSaving(prev=>({...prev,[oeCode]:false}));
+        return;
+      }
       setShcoFullScores(prev=>({...prev,[oeCode]:score}));
       setShcoFullScoreSaving(prev=>({...prev,[oeCode]:true}));
       await supabase.from("shco_full_scores").upsert(
