@@ -7166,18 +7166,16 @@ export default function App() {
     const f = ecoFullCapaForm[oeCode];
     if(!f?.finding||!f?.action||!context?.hospitalId) return;
     setEcoFullCapaSaving(p=>({...p,[oeCode]:true}));
-    try {
-      await supabase.from("eco_full_capa").upsert({
-        hospital_id:context.hospitalId, oe_code:oeCode,
-        finding:f.finding, action_planned:f.action,
-        responsible_person:f.person||'', target_date:f.date||null, status:'open',
-      },{onConflict:"hospital_id,oe_code"});
-      const {data:fresh}=await supabase.from("eco_full_capa").select("*").eq("hospital_id",context.hospitalId);
-      if(fresh){const m={};fresh.forEach(c=>{m[c.oe_code]=c;});setEcoFullCapaDb(m);}
-      setEcoFullCapaForm(p=>({...p,[oeCode]:{...p[oeCode],saved:true,expanded:false}}));
-    } finally {
-      setEcoFullCapaSaving(p=>({...p,[oeCode]:false}));
-    }
+    const {error}=await supabase.from("eco_full_capa").upsert({
+      hospital_id:context.hospitalId, oe_code:oeCode,
+      finding:f.finding, action_planned:f.action,
+      responsible_person:f.person||'', target_date:f.date||null, status:'open',
+    },{onConflict:"hospital_id,oe_code"});
+    setEcoFullCapaSaving(p=>({...p,[oeCode]:false}));
+    if(error){alert("CAPA save failed: "+error.message);return;}
+    const {data:fresh}=await supabase.from("eco_full_capa").select("*").eq("hospital_id",context.hospitalId);
+    if(fresh){const m={};fresh.forEach(c=>{m[c.oe_code]=c;});setEcoFullCapaDb(m);}
+    setEcoFullCapaForm(p=>({...p,[oeCode]:{...p[oeCode],saved:true,expanded:false}}));
   };
 
   const deleteEcoFullCapa = async (oeCode) => {
