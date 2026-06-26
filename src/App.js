@@ -3170,6 +3170,7 @@ function GapFixScreen({ assessmentId, gaps, onRefresh }) {
                       <span style={{fontSize:11,padding:"2px 7px",borderRadius:5,background:`${sevColor(g.severity)}15`,color:sevColor(g.severity)}}>{g.severity}</span>
                       {g.level==="CORE"&&<span style={{fontSize:11,padding:"2px 6px",borderRadius:5,background:T.redD,color:T.red}}>CORE</span>}
                       {g.gap_closed&&<span style={{fontSize:11,padding:"2px 6px",borderRadius:5,background:T.greenD,color:T.green}}>✓ CLOSED</span>}
+                      {hasSaved&&<span style={{fontSize:11,padding:"2px 6px",borderRadius:5,background:T.green+"22",color:T.green}}>✓ CAPA saved</span>}
                     </div>
                     <div style={{fontSize:12,color:T.text,lineHeight:1.5,marginBottom:6}}>{g.oe_text}</div>
                     <div style={{fontSize:12,color:T.muted,fontStyle:"italic"}}>{g.message}</div>
@@ -3180,25 +3181,18 @@ function GapFixScreen({ assessmentId, gaps, onRefresh }) {
                   </div>
                 </div>
 
-                {/* ── COLLAPSED + SAVED: summary row ── */}
-                {!expanded&&hasSaved&&(
-                  <div style={{marginTop:8}}>
-                    <div style={{display:"flex",gap:8,alignItems:"center",flexWrap:"wrap",padding:"8px 10px",background:T.panel2,borderRadius:8,border:`1px solid ${T.green}30`}}>
-                      <span style={{fontSize:12,color:T.green,fontWeight:700}}>✓</span>
-                      <span style={{fontSize:12,color:T.text,flex:1,minWidth:0,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{(dbC.finding||'').slice(0,60)}{(dbC.finding||'').length>60?'…':''}</span>
-                      {dbC.responsible_person&&<span style={{fontSize:11,color:T.muted}}>{dbC.responsible_person}</span>}
-                      {dbC.target_date&&<span style={{fontSize:11,color:T.muted}}>{dbC.target_date}</span>}
-                    </div>
-                    <div style={{marginTop:6}}>
-                      <button onClick={()=>setCapaForm(p=>({...p,[g.oe_id]:{...fc,expanded:true,finding:fc.finding!==undefined?fc.finding:(dbC?.finding||''),action:fc.action!==undefined?fc.action:(dbC?.action_planned||''),person:fc.person!==undefined?fc.person:(dbC?.responsible_person||''),date:fc.date!==undefined?fc.date:(dbC?.target_date||'')}}))} style={{fontSize:12,color:T.gold,background:"transparent",border:`1px solid ${T.gold}30`,borderRadius:8,padding:"4px 14px",cursor:"pointer"}}>✏️ Edit CAPA</button>
-                    </div>
-                  </div>
-                )}
-
-                {/* ── COLLAPSED + UNSAVED: add button ── */}
-                {!expanded&&!hasSaved&&(
-                  <button onClick={()=>setCapaForm(p=>({...p,[g.oe_id]:{...fc,expanded:true}}))} style={{fontSize:12,color:T.gold,background:"transparent",border:`1px solid ${T.gold}30`,borderRadius:8,padding:"4px 14px",cursor:"pointer",marginTop:4}}>▼ Add CAPA</button>
-                )}
+                <div style={{display:"flex",gap:8,flexWrap:"wrap",marginTop:4}}>
+                  {!expanded&&hasSaved ? (
+                    <>
+                      <button onClick={()=>setCapaForm(p=>({...p,[g.oe_id]:{...fc,expanded:true,finding:fc.finding!==undefined?fc.finding:(dbC?.finding||''),action:fc.action!==undefined?fc.action:(dbC?.action_planned||''),person:fc.person!==undefined?fc.person:(dbC?.responsible_person||''),date:fc.date!==undefined?fc.date:(dbC?.target_date||'')}}))} style={{fontSize:12,color:T.gold,background:"transparent",border:`1px solid ${T.gold}44`,borderRadius:8,padding:"4px 14px",cursor:"pointer"}}>✏️ Edit CAPA</button>
+                      <button onClick={()=>deleteCapa(g.oe_id)} disabled={deleting[g.oe_id]||saving[g.oe_id]} style={{fontSize:12,color:T.red,background:"transparent",border:`1px solid ${T.red}44`,borderRadius:8,padding:"4px 14px",cursor:"pointer"}}>{deleting[g.oe_id]?"Deleting…":"🗑 Delete CAPA"}</button>
+                    </>
+                  ) : expanded ? (
+                    <button onClick={()=>setCapaForm(p=>({...p,[g.oe_id]:{...fc,expanded:false}}))} style={{fontSize:12,color:T.muted,background:"transparent",border:`1px solid ${T.border}`,borderRadius:8,padding:"4px 14px",cursor:"pointer"}}>▲ Hide CAPA</button>
+                  ) : (
+                    <button onClick={()=>setCapaForm(p=>({...p,[g.oe_id]:{...fc,expanded:true}}))} style={{fontSize:12,color:T.gold,background:"transparent",border:`1px solid ${T.gold}44`,borderRadius:8,padding:"4px 14px",cursor:"pointer"}}>▼ Add CAPA</button>
+                  )}
+                </div>
 
                 {/* ── EXPANDED: full form ── */}
                 {expanded&&(
@@ -3209,9 +3203,7 @@ function GapFixScreen({ assessmentId, gaps, onRefresh }) {
                       <div style={{flex:1,minWidth:140}}><div style={{fontSize:11,color:T.muted,marginBottom:4}}>RESPONSIBLE PERSON</div><input value={fc.person||""} onChange={e=>setCapaForm(p=>({...p,[g.oe_id]:{...fc,person:e.target.value}}))} placeholder="Name / Designation" style={{width:"100%",padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,boxSizing:"border-box"}}/></div>
                       <div><div style={{fontSize:11,color:T.muted,marginBottom:4}}>TARGET DATE</div><input type="date" value={fc.date||""} onChange={e=>setCapaForm(p=>({...p,[g.oe_id]:{...fc,date:e.target.value}}))} style={{padding:"7px 10px",borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13}}/></div>
                       <button onClick={()=>submitCapa(g.oe_id)} disabled={saving[g.oe_id]||deleting[g.oe_id]||!fc.finding||!fc.action} style={{marginTop:14,padding:"7px 20px",borderRadius:10,background:`linear-gradient(135deg,${T.green},#3d9e6e)`,border:"none",color:T.bg,fontSize:14,fontWeight:700,cursor:fc.finding&&fc.action?"pointer":"default",opacity:fc.finding&&fc.action?1:0.5}}>{saving[g.oe_id]?"Saving…":"Save CAPA →"}</button>
-                      {hasSaved&&<button onClick={()=>deleteCapa(g.oe_id)} disabled={deleting[g.oe_id]||saving[g.oe_id]} style={{marginTop:14,padding:"7px 14px",borderRadius:10,background:"transparent",border:`1px solid ${T.red}`,color:T.red,fontSize:13,fontWeight:700,cursor:"pointer"}}>{deleting[g.oe_id]?"Deleting…":"Delete"}</button>}
                     </div>
-                    <button onClick={()=>setCapaForm(p=>({...p,[g.oe_id]:{...fc,expanded:false}}))} style={{fontSize:12,color:T.muted,background:"transparent",border:`1px solid ${T.border}`,borderRadius:8,padding:"4px 14px",cursor:"pointer",justifySelf:"start"}}>▲ Hide CAPA</button>
                   </div>
                 )}
 
