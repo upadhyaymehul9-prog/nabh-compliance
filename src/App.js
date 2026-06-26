@@ -3108,9 +3108,20 @@ function GapFixScreen({ assessmentId, gaps, onRefresh }) {
     return matchesSev && matchesSearch;
   });
   const submitCapa=async(oeId)=>{
-    const c=capas[oeId];if(!c?.finding||!c?.action)return;setSaving(p=>({...p,[oeId]:true}));
-    await supabase.from("capa").upsert({assessment_id:assessmentId,oe_id:oeId,finding:c.finding,root_cause:c.root_cause||"",action_planned:c.action,action_type:c.action_type||"Process",responsible_person:c.person||"",target_date:c.date||null,status:"open"},{onConflict:"assessment_id,oe_id"});
-    setSaving(p=>({...p,[oeId]:false}));setCapas(p=>({...p,[oeId]:{...p[oeId],saved:true}}));onRefresh();
+    const c=capas[oeId];
+    if(!c?.finding||!c?.action) return;
+    setSaving(p=>({...p,[oeId]:true}));
+    const {error} = await supabase.from("capa").upsert(
+      {assessment_id:assessmentId,oe_id:oeId,finding:c.finding,root_cause:c.root_cause||"",action_planned:c.action,action_type:c.action_type||"Process",responsible_person:c.person||"",target_date:c.date||null,status:"open"},
+      {onConflict:"assessment_id,oe_id"}
+    );
+    setSaving(p=>({...p,[oeId]:false}));
+    if(error){
+      alert("CAPA save failed: "+error.message);
+      return;
+    }
+    setCapas(p=>({...p,[oeId]:{...p[oeId],saved:true}}));
+    onRefresh();
   };
   const deleteCapa=async(oeId)=>{
     if(!window.confirm('Delete this CAPA entry?')) return;
