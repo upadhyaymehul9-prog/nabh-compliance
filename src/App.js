@@ -3931,17 +3931,17 @@ function EcoTipBox(oe) {
   // Guard: achieve_tips must be an actual array of strings, otherwise fall back
   const rawTips = oe.achieve_tips;
   const tips = Array.isArray(rawTips) && rawTips.length > 0 ? rawTips : null;
-  const lvlTips = oe.level === 'Core'
+  const lvlTips = oe.category === 'core'
     ? ['This is a Core OE — assessors will examine records, observe practice directly, and interview staff on every visit.',
        'Ensure 100% of patient files show evidence of compliance, with no exceptions — even one missing record is a finding.',
        'Conduct a monthly internal audit specifically for this OE and display the trend chart in the department.',
        'Prepare staff with a 2-minute verbal response explaining the process — assessors routinely ask directly.']
-    : oe.level === 'Achievement'
+    : oe.category === 'achievement'
     ? ['Collect before/after data to demonstrate measurable improvement — a chart or table showing trend over 3 months is ideal.',
        'Ensure the quality committee has reviewed and minuted this indicator at least once in the last quarter.',
        'Show actual outcome numbers, not just that a system is in place.',
        'Achievement OEs are assessed at Surveillance — begin collecting data from Day 1 of accreditation.']
-    : oe.level === 'Excellence'
+    : oe.category === 'excellence'
     ? ['Excellence OEs are assessed at Re-accreditation — document innovation and leadership beyond basic compliance.',
        'Benchmark against national or international standards and record the comparison formally.',
        'Seek external validation and document it.',
@@ -3951,7 +3951,7 @@ function EcoTipBox(oe) {
        'Maintain a monthly audit record showing consistent compliance.',
        'Ensure any relevant forms/registers are filled completely — incomplete records are scored as non-compliance.'];
   const displayTips = tips || lvlTips;
-  const tipLabel = tips ? 'HOW TO ACHIEVE THIS OE' : `GENERAL GUIDANCE — ${(oe.level || '').toUpperCase()}`;
+  const tipLabel = tips ? 'HOW TO ACHIEVE THIS OE' : `GENERAL GUIDANCE — ${(oe.category || '').toUpperCase()}`;
   return (
     <div style={{marginTop:6,marginBottom:8,background:T.blue+'14',border:`1px solid ${T.blue}22`,borderRadius:8,padding:'12px 14px'}}>
       <div style={{fontSize:10,letterSpacing:2,color:T.blue,marginBottom:8,fontWeight:700}}>{tipLabel}</div>
@@ -3962,7 +3962,7 @@ function EcoTipBox(oe) {
           <div style={{fontSize:12,color:T.text,lineHeight:1.6,paddingTop:1}}>{String(tip)}</div>
         </div>
       ))}
-      {!tips && <div style={{fontSize:11,color:T.muted,marginTop:4,fontStyle:'italic'}}>OE-specific tips will appear once loaded — showing {oe.level} guidance for now.</div>}
+      {!tips && <div style={{fontSize:11,color:T.muted,marginTop:4,fontStyle:'italic'}}>OE-specific tips will appear once loaded — showing {oe.category} guidance for now.</div>}
     </div>
   );
 }
@@ -6422,6 +6422,19 @@ export default function App() {
   const generateEcoFullPDF = async () => {
     setEcoFullPdfLoading(true);
     try {
+      let localOes = ecoFullOes;
+      let localScores = ecoFullScores;
+      let localCapa = ecoFullCapaDb;
+      if(localOes.length===0){
+        const [{data:oeD},{data:scD}]=await Promise.all([
+          supabase.from("eco_full_oes").select("*").order("oe_code"),
+          supabase.from("eco_full_scores").select("oe_code,score").eq("hospital_id",context.hospitalId),
+        ]);
+        if(oeD) localOes=oeD;
+        if(scD){const m={};scD.forEach(s=>{m[s.oe_code]=s.score;});localScores=m;}
+        const {data:capD}=await supabase.from("eco_full_capa").select("*").eq("hospital_id",context.hospitalId);
+        if(capD){const m={};capD.forEach(c=>{m[c.oe_code]=c;});localCapa=m;}
+      }
       const doc = new jsPDF({ unit:'pt', format:'a4' });
       const W = doc.internal.pageSize.getWidth();
       const H = doc.internal.pageSize.getHeight();
@@ -6434,22 +6447,22 @@ export default function App() {
                             : 'Re-accreditation Assessment';
 
       // Derive chapters from loaded OE data
-      const ecoChapterKeys = [...new Set(ecoFullOes.map(oe=>oe.chapter))].filter(Boolean).sort();
+      const ecoChapterKeys = [...new Set(localOes.map(oe=>oe.chapter))].filter(Boolean).sort();
       const ECO_CHAPTERS = ecoChapterKeys.map(key=>{
-        const chOe = ecoFullOes.find(oe=>oe.chapter===key);
+        const chOe = localOes.find(oe=>oe.chapter===key);
         return {key, name: chOe?.chapter_name || key};
       });
 
-      const coreCommOEs = ecoFullOes.filter(oe=>oe.level==='Core'||oe.level==='Commitment');
-      const achieveOEs  = ecoFullOes.filter(oe=>oe.level==='Achievement');
-      const excelOEs    = ecoFullOes.filter(oe=>oe.level==='Excellence');
-      const coreOEs     = ecoFullOes.filter(oe=>oe.level==='Core');
+      const coreCommOEs = localOes.filter(oe=>oe.category==='core'||oe.category==='commitment');
+      const achieveOEs  = localOes.filter(oe=>oe.category==='achievement');
+      const excelOEs    = localOes.filter(oe=>oe.category==='excellence');
+      const coreOEs     = localOes.filter(oe=>oe.category==='core');
       const relevantOEs = ecoFullAssessType==='final'        ? coreCommOEs
-                        : ecoFullAssessType==='surveillance' ? ecoFullOes.filter(oe=>oe.level!=='Excellence')
-                        : ecoFullOes;
+                        : ecoFullAssessType==='surveillance' ? localOes.filter(oe=>oe.category!=='excellence')
+                        : localOes;
 
       const compliance = arr => arr.length>0
-        ? Math.round(arr.reduce((a,oe)=>a+(ecoFullScores[oe.oe_code]||0),0)/(arr.length*5)*100) : 0;
+        ? Math.round(arr.reduce((a,oe)=>a+(localScores[oe.oe_code]||0),0)/(arr.length*5)*100) : 0;
 
       const ccPct    = compliance(coreCommOEs);
       const achPct   = compliance(achieveOEs);
@@ -6457,10 +6470,11 @@ export default function App() {
 
       const chStats = ECO_CHAPTERS.map(c=>{
         const chOes    = relevantOEs.filter(oe=>oe.chapter===c.key);
-        const chScored = chOes.filter(oe=>ecoFullScores[oe.oe_code]);
-        const chAvg    = chScored.length>0 ? chScored.reduce((a,oe)=>a+ecoFullScores[oe.oe_code],0)/chScored.length : null;
-        const totalCount = ecoFullOes.filter(oe=>oe.chapter===c.key).length;
-        const pct = chAvg!==null ? Math.round(chAvg/5*100) : null;
+        const chScored = chOes.filter(oe=>localScores[oe.oe_code]);
+        const chSum    = chScored.reduce((a,oe)=>a+localScores[oe.oe_code],0);
+        const chAvg    = chScored.length>0 ? chSum/chScored.length : null;
+        const totalCount = localOes.filter(oe=>oe.chapter===c.key).length;
+        const pct = chScored.length>0 ? Math.round(chSum/(chOes.length*5)*100) : null;
         return {...c, relevantCount:chOes.length, totalCount, scoredCount:chScored.length, avg:chAvg, pct };
       });
 
@@ -6472,13 +6486,13 @@ export default function App() {
         stdMap[sk].oes.push(oe);
       });
       const stdChecks = Object.entries(stdMap).map(([code,{oes}])=>{
-        const scored = oes.filter(oe=>ecoFullScores[oe.oe_code]);
-        const avg    = scored.length>0 ? scored.reduce((a,oe)=>a+ecoFullScores[oe.oe_code],0)/scored.length : null;
-        const atOrBelow2 = oes.filter(oe=>ecoFullScores[oe.oe_code]&&ecoFullScores[oe.oe_code]<=2).length;
+        const scored = oes.filter(oe=>localScores[oe.oe_code]);
+        const avg    = scored.length>0 ? scored.reduce((a,oe)=>a+localScores[oe.oe_code],0)/scored.length : null;
+        const atOrBelow2 = oes.filter(oe=>localScores[oe.oe_code]&&localScores[oe.oe_code]<=2).length;
         return {code,avg,atOrBelow2};
       });
       const chapAvgFails = chStats.filter(c=>c.avg!==null&&c.avg<4);
-      const corePass  = coreOEs.every(oe=>ecoFullScores[oe.oe_code]&&ecoFullScores[oe.oe_code]>=4);
+      const corePass  = coreOEs.every(oe=>localScores[oe.oe_code]&&localScores[oe.oe_code]>=4);
       const rule1Pass = corePass;
       const rule2Pass = ccPct>=80;
       const rule3Pass = stdChecks.every(s=>s.atOrBelow2<=maxLowPerStd);
@@ -6487,23 +6501,23 @@ export default function App() {
       const allRulesPass = rule1Pass&&rule2Pass&&rule3Pass&&rule4Pass&&rule5Pass;
 
       const rules = [
-        {label:'All Core OEs must score ≥4',            detail:`${coreOEs.length} Core OEs — every one must reach Good compliance`,       pass:rule1Pass},
-        {label:`Core + Commitment overall ≥80% (${coreCommOEs.length} OEs)`, detail:`Current: ${ccPct}% — threshold: 80%`,                  pass:rule2Pass},
-        {label:'No standard with >'+maxLowPerStd+' OE(s) scored ≤2', detail:`${stdChecks.filter(s=>s.atOrBelow2>maxLowPerStd).length} standard(s) failing this rule`, pass:rule3Pass},
-        {label:'Average score per standard ≥4',         detail:`${stdChecks.filter(s=>s.avg!==null&&s.avg<4).length} standard(s) below 4 average`,                     pass:rule4Pass},
-        {label:'Average score per chapter ≥4',          detail:`${chapAvgFails.length} chapter(s) below 4 average`,                         pass:rule5Pass},
+        {label:'All Core OEs must score >=4',            detail:`${coreOEs.length} Core OEs — every one must reach Good compliance`,       pass:rule1Pass},
+        {label:`Core + Commitment overall >=80% (${coreCommOEs.length} OEs)`, detail:`Current: ${ccPct}% — threshold: 80%`,                  pass:rule2Pass},
+        {label:'No standard with >'+maxLowPerStd+' OE(s) scored <=2', detail:`${stdChecks.filter(s=>s.atOrBelow2>maxLowPerStd).length} standard(s) failing this rule`, pass:rule3Pass},
+        {label:'Average score per standard >=4',         detail:`${stdChecks.filter(s=>s.avg!==null&&s.avg<4).length} standard(s) below 4 average`,                     pass:rule4Pass},
+        {label:'Average score per chapter >=4',          detail:`${chapAvgFails.length} chapter(s) below 4 average`,                         pass:rule5Pass},
       ];
       if(ecoFullAssessType==='surveillance'||ecoFullAssessType==='renewal'){
-        rules.push({label:`Achievement overall ≥80% (${achieveOEs.length} OEs)`, detail:`Current: ${achPct}%`, pass:achPct>=80});
+        rules.push({label:`Achievement overall >=80% (${achieveOEs.length} OEs)`, detail:`Current: ${achPct}%`, pass:achPct>=80});
       }
       if(ecoFullAssessType==='renewal'){
-        rules.push({label:`Excellence overall ≥80% (${excelOEs.length} OEs)`, detail:`Current: ${excelPct}%`, pass:excelPct>=80});
+        rules.push({label:`Excellence overall >=80% (${excelOEs.length} OEs)`, detail:`Current: ${excelPct}%`, pass:excelPct>=80});
       }
 
-      const weakOEs = relevantOEs.filter(oe=>ecoFullScores[oe.oe_code]&&ecoFullScores[oe.oe_code]<=3)
-        .sort((a,b)=>ecoFullScores[a.oe_code]-ecoFullScores[b.oe_code]||a.oe_code.localeCompare(b.oe_code));
-      const criticalOEs = coreOEs.filter(oe=>ecoFullScores[oe.oe_code]&&ecoFullScores[oe.oe_code]<4);
-      const scoredCount = relevantOEs.filter(oe=>ecoFullScores[oe.oe_code]).length;
+      const weakOEs = relevantOEs.filter(oe=>localScores[oe.oe_code]&&localScores[oe.oe_code]<=3)
+        .sort((a,b)=>localScores[a.oe_code]-localScores[b.oe_code]||a.oe_code.localeCompare(b.oe_code));
+      const criticalOEs = coreOEs.filter(oe=>localScores[oe.oe_code]&&localScores[oe.oe_code]<4);
+      const scoredCount = relevantOEs.filter(oe=>localScores[oe.oe_code]).length;
 
       const scoreLabel = ['','No compliance','Poor compliance','Partial compliance','Good compliance','Full compliance'];
       const scoreCol   = s => s===1||s===2 ? '#e05a5a' : s===3 ? '#f4a441' : s>=4 ? '#4caf7d' : '#3a5870';
@@ -6542,13 +6556,15 @@ export default function App() {
       doc.text(`${oePct}%`,W/2, afterHosp+148,{align:'center'});
       doc.setFontSize(11); doc.setTextColor('#c8dcea');
       doc.text('CORE + COMMITMENT COMPLIANCE',W/2, afterHosp+172,{align:'center'});
+      doc.setFontSize(7.5); doc.setTextColor('#3a5870');
+      doc.text('Based on all relevant OEs; unscored OEs count as 0.',W/2, afterHosp+186,{align:'center'});
       doc.setFontSize(20); doc.setTextColor(passCol);
       doc.text(`VERDICT: ${verdictText}`,W/2, afterHosp+208,{align:'center'});
 
       const statY = afterHosp+248;
       const stats3=[
         [`${scoredCount} / ${relevantOEs.length}`, 'Relevant OEs Scored'],
-        [`${weakOEs.length}`,                       'Weak OEs (score ≤3)'],
+        [`${weakOEs.length}`,                       'Weak OEs (score <=3)'],
         [`${criticalOEs.length}`,                   'Core OEs below 4'],
       ];
       const colW=(W-120)/3;
@@ -6631,29 +6647,38 @@ export default function App() {
         y+=chRowH+2;
       });
 
+      y+=14;
+      if(y>H-60){ newPage(); y=50; }
+      doc.setFont('helvetica','italic');
+      doc.setFontSize(7); doc.setTextColor('#3a5870');
+      const fnoteLines=doc.splitTextToSize('Compliance % = (sum of all OE scores in chapter) / (total relevant OEs in chapter x 5) x 100. Unscored OEs count as 0. A low % may simply mean most OEs are not yet scored.',W-120);
+      fnoteLines.forEach((ln,i)=>doc.text(ln,60,y+i*9));
+      y+=fnoteLines.length*9+6;
+      doc.setFont('helvetica','normal');
+
       // PAGE 3+: WEAK OEs
       newPage(); y=50;
       doc.setFontSize(16); doc.setTextColor('#eef4f9');
-      doc.text('Gap Analysis — Weak OEs (Score ≤3)',60,y); y+=10;
-      doc.setDrawColor('#0f2640'); doc.line(60,y,W-60,y); y+=18;
+      doc.text('Gap Analysis — Weak OEs (Score <=3)',40,y); y+=10;
+      doc.setDrawColor('#0f2640'); doc.line(40,y,W-40,y); y+=18;
       doc.setFontSize(8); doc.setTextColor('#3a5870');
-      doc.text(`${weakOEs.length} OE(s) scoring ≤3 require attention. Grouped by chapter.`,60,y); y+=20;
+      doc.text(`${weakOEs.length} OE(s) scoring <=3 require attention. Grouped by chapter.`,40,y); y+=20;
 
       if(weakOEs.length===0){
         doc.setFontSize(12); doc.setTextColor('#4caf7d');
         doc.text('✓ No weak OEs — all scored OEs are at 4 or 5.',W/2,y+40,{align:'center'});
       } else {
-        const cX1=64, cX2=121, cX3=172, cX4=452;
-        const textColW=276;
+        const cX1=44, cX2=104, cX3=174;
+        const textColW=220;
         const rowPad=5;
 
         const drawGapColHeaders=()=>{
-          doc.setFillColor('#081525'); doc.rect(60,y-11,W-120,16,'F');
+          doc.setFillColor('#081525'); doc.rect(40,y-11,W-80,16,'F');
           doc.setFontSize(7); doc.setTextColor('#06b6d4');
           doc.text('OE CODE',cX1,y-2);
           doc.text('LEVEL',cX2,y-2);
           doc.text('OE TEXT',cX3,y-2);
-          doc.text('SCORE',W-64,y-2,{align:'right'});
+          doc.text('SCORE',W-44,y-2,{align:'right'});
           y+=14;
         };
 
@@ -6663,38 +6688,39 @@ export default function App() {
 
           if(y>H-80){ newPage(); y=50; }
           doc.setFillColor('#0c1e30');
-          doc.rect(60,y-12,W-120,20,'F');
+          doc.rect(40,y-12,W-80,20,'F');
           doc.setFontSize(10); doc.setTextColor('#06b6d4');
-          doc.text(`${ch.key} — ${ch.name}`,74,y-1);
+          doc.text(`${ch.key} — ${ch.name}`,54,y-1);
           doc.setFontSize(8); doc.setTextColor('#3a5870');
-          doc.text(`${chWeak.length} weak OE(s)`,W-64,y-1,{align:'right'});
+          doc.text(`${chWeak.length} weak OE(s)`,W-44,y-1,{align:'right'});
           y+=22;
 
           drawGapColHeaders();
 
           chWeak.forEach(oe=>{
-            const sc      = ecoFullScores[oe.oe_code]||0;
+            const sc      = localScores[oe.oe_code]||0;
             const scC     = scoreCol(sc);
             const rowBg   = sc<=2 ? '#180606' : '#140e00';
             doc.setFontSize(7.5);
-            const wrapped = doc.splitTextToSize(oe.oe_text||'', textColW);
-            const lineH   = 9;
-            const rowH    = Math.max(18, wrapped.length * lineH + rowPad*2);
+            const oeText=(oe.oe_text||'').replace(/\uFB00/g,'ff').replace(/\uFB01/g,'fi').replace(/\uFB02/g,'fl').replace(/\uFB03/g,'ffi').replace(/\uFB04/g,'ffl').replace(/\uFB05/g,'st').replace(/\uFB06/g,'st').replace(/\u2018/g,"'").replace(/\u2019/g,"'").replace(/\u201C/g,'"').replace(/\u201D/g,'"').replace(/\u2013/g,'-').replace(/\u2014/g,'--').replace(/[^\x20-\x7E\xA0-\xFF]/g,'');
+            const wrapped = doc.splitTextToSize(oeText, textColW);
+            const lineH=9; const rowH=Math.max(20, wrapped.length*lineH+rowPad*2);
 
             if(y+rowH>H-40){ newPage(); y=50; drawGapColHeaders(); }
 
-            doc.setFillColor(rowBg); doc.rect(60,y-rowPad,W-120,rowH,'F');
+            doc.setFillColor(rowBg); doc.rect(40,y-rowPad,W-80,rowH,'F');
             doc.setFontSize(8); doc.setTextColor('#4fc3f7');
             doc.text((oe.oe_code||''),cX1,y+2);
             doc.setFontSize(7); doc.setTextColor('#8aadcc');
-            doc.text((oe.level||'').slice(0,12),cX2,y+2);
+            doc.text((oe.category||'').slice(0,12),cX2,y+2);
             doc.setFontSize(7.5); doc.setTextColor('#c8dcea');
+            doc.setCharSpace(0);
             wrapped.forEach((line,i)=>{ doc.text(line,cX3,y+2+i*lineH); });
             doc.setFontSize(8); doc.setTextColor(scC);
-            doc.text(`${sc}/5`,W-64,y+2,{align:'right'});
+            doc.text(`${sc}/5`,W-44,y+2,{align:'right'});
             doc.setFontSize(7); doc.setTextColor(scC);
-            doc.text((scoreLabel[sc]||'').slice(0,16),W-64,y+2+lineH,{align:'right'});
-            y+=rowH+2;
+            doc.text((scoreLabel[sc]||'').slice(0,16),W-44,y+2+lineH,{align:'right'});
+            y+=rowH+6;
           });
           y+=8;
         });
@@ -6702,7 +6728,7 @@ export default function App() {
 
       // CAPA PAGE
       const capaEntries = weakOEs
-        .map(oe=>({oe, capa:ecoFullCapaDb[oe.oe_code]}))
+        .map(oe=>({oe, capa:localCapa[oe.oe_code]}))
         .filter(({capa})=>capa&&capa.finding);
 
       if(capaEntries.length>0){
@@ -6714,7 +6740,7 @@ export default function App() {
         doc.text(`${capaEntries.length} CAPA(s) recorded for weak OEs`,60,y); y+=20;
 
         capaEntries.forEach(({oe,capa})=>{
-          const sc  = ecoFullScores[oe.oe_code]||0;
+          const sc  = localScores[oe.oe_code]||0;
           const scC = scoreCol(sc);
           doc.setFontSize(8);
           const findLines  = doc.splitTextToSize(capa.finding||'',W-180);
@@ -6728,7 +6754,7 @@ export default function App() {
           doc.setFontSize(9); doc.setTextColor('#4fc3f7');
           doc.text(oe.oe_code,68,y+8);
           doc.setFontSize(8); doc.setTextColor('#8aadcc');
-          doc.text(oe.level,130,y+8);
+          doc.text(oe.category||'',130,y+8);
           doc.setFontSize(8); doc.setTextColor(scC);
           doc.text(`Score: ${sc}/5`,W-64,y+8,{align:'right'});
           y+=18;
@@ -6766,7 +6792,7 @@ export default function App() {
         ['Total OEs in Scope', String(relevantOEs.length),                   '#eef4f9'],
         ['OEs Scored',         `${scoredCount} of ${relevantOEs.length}`,    '#4caf7d'],
         ['OEs Unscored',       String(relevantOEs.length-scoredCount),       scoredCount===relevantOEs.length?'#4caf7d':'#f4a441'],
-        ['Weak OEs (≤3)',       String(weakOEs.length),                       weakOEs.length===0?'#4caf7d':'#f4a441'],
+        ['Weak OEs (<=3)',       String(weakOEs.length),                       weakOEs.length===0?'#4caf7d':'#f4a441'],
         ['Critical (Core <4)', String(criticalOEs.length),                   criticalOEs.length===0?'#4caf7d':'#e05a5a'],
         ['Core+Commit Compliance', `${ccPct}%`,                              ccPct>=80?'#4caf7d':'#e05a5a'],
         ['Overall Verdict',    verdictText,                                  allRulesPass?'#4caf7d':'#e05a5a'],
@@ -6799,7 +6825,7 @@ export default function App() {
       const cleanName = cleanHospital.replace(/[^a-zA-Z0-9]/g,'_');
       doc.save(`${cleanName}_ECO_Gap_Report_${fileDateStr}.pdf`);
     } catch(e){ console.error('ECO Full PDF generation failed:',e); }
-    setEcoFullPdfLoading(false);
+    finally{ setEcoFullPdfLoading(false); }
   };
 
   const [authErrorMsg,setAuthErrorMsg]=useState("");
@@ -7007,21 +7033,24 @@ export default function App() {
       .then(({data:capaData})=>{
         if(capaData){const m={};capaData.forEach(c=>{m[c.oe_code]=c;});setEcoFullCapaDb(m);}
       }).catch(()=>{});
-  },[selectedProgramme,context?.hospitalId]);
+  },[selectedProgramme,context?.hospitalId,user?.id]);
 
   const saveEcoFullCapa = async (oeCode) => {
     const f = ecoFullCapaForm[oeCode];
     if(!f?.finding||!f?.action||!context?.hospitalId) return;
     setEcoFullCapaSaving(p=>({...p,[oeCode]:true}));
-    await supabase.from("eco_full_capa").upsert({
-      hospital_id:context.hospitalId, oe_code:oeCode,
-      finding:f.finding, action_planned:f.action,
-      responsible_person:f.person||'', target_date:f.date||null, status:'open',
-    },{onConflict:"hospital_id,oe_code"});
-    const {data:fresh}=await supabase.from("eco_full_capa").select("*").eq("hospital_id",context.hospitalId);
-    if(fresh){const m={};fresh.forEach(c=>{m[c.oe_code]=c;});setEcoFullCapaDb(m);}
-    setEcoFullCapaSaving(p=>({...p,[oeCode]:false}));
-    setEcoFullCapaForm(p=>({...p,[oeCode]:{...p[oeCode],saved:true,expanded:false}}));
+    try {
+      await supabase.from("eco_full_capa").upsert({
+        hospital_id:context.hospitalId, oe_code:oeCode,
+        finding:f.finding, action_planned:f.action,
+        responsible_person:f.person||'', target_date:f.date||null, status:'open',
+      },{onConflict:"hospital_id,oe_code"});
+      const {data:fresh}=await supabase.from("eco_full_capa").select("*").eq("hospital_id",context.hospitalId);
+      if(fresh){const m={};fresh.forEach(c=>{m[c.oe_code]=c;});setEcoFullCapaDb(m);}
+      setEcoFullCapaForm(p=>({...p,[oeCode]:{...p[oeCode],saved:true,expanded:false}}));
+    } finally {
+      setEcoFullCapaSaving(p=>({...p,[oeCode]:false}));
+    }
   };
 
   const deleteEcoFullCapa = async (oeCode) => {
@@ -8658,29 +8687,34 @@ export default function App() {
     const chapterOeCount = ch => ecoFullOes.filter(oe=>oe.chapter===ch).length;
 
     const handleScore = async (oeCode, score) => {
+      if(ecoFullScores[oeCode]===score){
+        setEcoFullScores(prev=>{const n={...prev};delete n[oeCode];return n;});
+        setEcoFullScoreSaving(prev=>({...prev,[oeCode]:true}));
+        await supabase.from("eco_full_scores").delete().match({hospital_id:context.hospitalId,oe_code:oeCode});
+        setEcoFullScoreSaving(prev=>({...prev,[oeCode]:false}));
+        return;
+      }
       setEcoFullScores(prev=>({...prev,[oeCode]:score}));
       setEcoFullScoreSaving(prev=>({...prev,[oeCode]:true}));
-      await supabase.from("eco_full_scores").upsert(
-        {hospital_id:context.hospitalId,oe_code:oeCode,score},
-        {onConflict:"hospital_id,oe_code"}
-      );
+      await supabase.from("eco_full_scores").delete().eq("hospital_id",context.hospitalId).eq("oe_code",oeCode);
+      await supabase.from("eco_full_scores").insert({hospital_id:context.hospitalId,oe_code:oeCode,score});
       setEcoFullScoreSaving(prev=>({...prev,[oeCode]:false}));
     };
 
     // OE subsets by level
-    const coreCommOEs = ecoFullOes.filter(oe=>oe.level==='Core'||oe.level==='Commitment'); // 282
-    const achieveOEs  = ecoFullOes.filter(oe=>oe.level==='Achievement');                   // 12
-    const excelOEs    = ecoFullOes.filter(oe=>oe.level==='Excellence');                    // 8
-    const coreOEs     = ecoFullOes.filter(oe=>oe.level==='Core');
+    const coreCommOEs = ecoFullOes.filter(oe=>oe.category==='core'||oe.category==='commitment'); // 282
+    const achieveOEs  = ecoFullOes.filter(oe=>oe.category==='achievement');                     // 12
+    const excelOEs    = ecoFullOes.filter(oe=>oe.category==='excellence');                      // 8
+    const coreOEs     = ecoFullOes.filter(oe=>oe.category==='core');
 
     const relevantOEs = ecoFullAssessType==='final'        ? coreCommOEs
-                      : ecoFullAssessType==='surveillance' ? ecoFullOes.filter(oe=>oe.level!=='Excellence')
+                      : ecoFullAssessType==='surveillance' ? ecoFullOes.filter(oe=>oe.category!=='excellence')
                       : ecoFullOes;
 
     const compliance = arr => arr.length>0
       ? Math.round(arr.reduce((a,oe)=>a+(ecoFullScores[oe.oe_code]||0),0)/(arr.length*5)*100) : 0;
 
-    const commitmentOEs = ecoFullOes.filter(oe=>oe.level==='Commitment');
+    const commitmentOEs = ecoFullOes.filter(oe=>oe.category==='commitment');
     const ccPct         = compliance(coreCommOEs);
     const commitPct     = compliance(commitmentOEs);
     const achPct        = compliance(achieveOEs);
@@ -8781,7 +8815,7 @@ export default function App() {
     const q=ecoFullSearch.toLowerCase().trim();
     const filteredOes=ecoFullOes.filter(oe=>{
       const chMatch=ecoFullChapter==='all'||oe.chapter===ecoFullChapter;
-      const lvlMatch=ecoFullLevel==='all'||oe.level===ecoFullLevel;
+      const lvlMatch=ecoFullLevel==='all'||oe.category?.toLowerCase()===ecoFullLevel.toLowerCase();
       const txMatch=!q||oe.oe_code.toLowerCase().includes(q)||(oe.oe_text||'').toLowerCase().includes(q);
       return chMatch&&lvlMatch&&txMatch;
     });
@@ -8950,7 +8984,8 @@ export default function App() {
                 {stdOes.map(oe=>{
                   const sc=ecoFullScores[oe.oe_code]||0;
                   const saving=ecoFullScoreSaving[oe.oe_code];
-                  const lc=levelColor(oe.level);
+                  const catCap=oe.category?oe.category[0].toUpperCase()+oe.category.slice(1):'';
+                  const lc=levelColor(catCap);
                   const rowBorder=sc>=4?T.green:sc===3?T.orange:sc>=1?T.red:T.border;
                   return (
                     <div key={oe.oe_code} style={{background:T.panel2,border:`1px solid ${rowBorder}`,
@@ -8958,7 +8993,7 @@ export default function App() {
                       <div style={{display:'flex',alignItems:'center',gap:7,marginBottom:5,flexWrap:'wrap'}}>
                         <span style={{fontSize:12,fontWeight:700,color:T.muted,fontFamily:'monospace'}}>{oe.oe_code}</span>
                         <span style={{fontSize:11,padding:'1px 7px',borderRadius:10,
-                          background:lc+'22',color:lc,border:`1px solid ${lc}44`,fontWeight:700}}>{oe.level}</span>
+                          background:lc+'22',color:lc,border:`1px solid ${lc}44`,fontWeight:700}}>{catCap}</span>
                         {sc>0
                           ?<span style={{fontSize:11,fontWeight:700,color:SCORE_COLORS[sc],
                               padding:'1px 8px',borderRadius:8,background:SCORE_COLORS[sc]+'18',border:`1px solid ${SCORE_COLORS[sc]}44`}}>
@@ -9001,8 +9036,8 @@ export default function App() {
     const gapSeverity = oe => {
       const sc = ecoFullScores[oe.oe_code]||0;
       if(sc===0) return null;
-      if(oe.level==='Core') return sc<=3 ? 'CRITICAL' : null;
-      if(oe.level==='Commitment') return sc<=2 ? 'HIGH' : sc===3 ? 'MEDIUM' : null;
+      if(oe.category==='core') return sc<=3 ? 'CRITICAL' : null;
+      if(oe.category==='commitment') return sc<=2 ? 'HIGH' : sc===3 ? 'MEDIUM' : null;
       return sc<=3 ? 'LOW' : null;
     };
 
@@ -9010,7 +9045,7 @@ export default function App() {
       .map(oe=>({oe, sev:gapSeverity(oe)}))
       .filter(({sev})=>sev!==null)
       .map(({oe,sev})=>({
-        oe_code: oe.oe_code, oe_text: oe.oe_text, level: oe.level,
+        oe_code: oe.oe_code, oe_text: oe.oe_text, level: oe.category,
         standard_code: oe.standard_code, severity: sev,
         score: ecoFullScores[oe.oe_code]||0,
       }));
