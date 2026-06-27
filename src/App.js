@@ -3087,7 +3087,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
   );
 }
 
-function GapFixScreen({ assessmentId, gaps, onRefresh }) {
+function GapFixScreen({ assessmentId, gaps, onRefresh, onDownloadReport, pdfLoading }) {
   const [sevFilter,setSevFilter]=useState("ALL");
   const [search,setSearch]=useState('');
   const [saving,setSaving]=useState({});
@@ -3148,9 +3148,15 @@ function GapFixScreen({ assessmentId, gaps, onRefresh }) {
         placeholder="Search gaps by OE ID or text (e.g. 'AAC.1.a', 'hand hygiene')..."
         style={{width:'100%',padding:'10px 14px',borderRadius:8,border:'1px solid #0f2640',background:'#081525',color:'#eef4f9',fontSize:14,marginBottom:10,boxSizing:'border-box'}}
       />
-      <div style={{display:"flex",gap:8,marginBottom:14}}>
+      <div style={{display:"flex",gap:8,marginBottom:14,alignItems:"center"}}>
         {["ALL","CRITICAL","HIGH","MEDIUM","LOW"].map(s=><button key={s} onClick={()=>setSevFilter(s)} style={{padding:"5px 14px",borderRadius:8,fontSize:12,cursor:"pointer",background:sevFilter===s?`${sevColor(s)}20`:"transparent",border:`1px solid ${sevFilter===s?sevColor(s):T.border}`,color:sevFilter===s?sevColor(s):T.muted}}>{s}</button>)}
-        <div style={{marginLeft:"auto",fontSize:13,color:T.muted,alignSelf:"center"}}>{filteredGaps.length} gaps</div>
+        <div style={{fontSize:13,color:T.muted,alignSelf:"center"}}>{filteredGaps.length} gaps</div>
+        {onDownloadReport&&<button onClick={onDownloadReport} disabled={pdfLoading}
+          style={{marginLeft:'auto',padding:'6px 14px',borderRadius:7,border:`1px solid ${T.gold}`,
+            background:'transparent',color:T.gold,fontSize:12,fontWeight:700,cursor:pdfLoading?'default':'pointer',
+            opacity:pdfLoading?0.6:1,whiteSpace:'nowrap'}}>
+          {pdfLoading?'⏳ Generating…':'⬇ Download Gap Report'}
+        </button>}
       </div>
       {filteredGaps.length===0&&<div style={{textAlign:"center",color:T.muted,padding:"40px",fontSize:14}}>{(gaps||[]).length===0?"No gaps found. Score OEs first.":"No gaps at this severity level."}</div>}
       <div style={{display:"grid",gap:10}}>
@@ -10318,7 +10324,7 @@ export default function App() {
           {pdfLoading?'⏳ Generating…':'⬇ Export PDF'}
         </button>}
         {screen==="scoring"&&<ScoringScreen assessmentId={context?.assessmentId} oes={oes} standards={standards} onRefresh={()=>loadData(context)}/>}
-        {screen==="gaps"&&<GapFixScreen assessmentId={context?.assessmentId} gaps={gaps} onRefresh={()=>loadData(context)}/>}
+        {screen==="gaps"&&<GapFixScreen assessmentId={context?.assessmentId} gaps={gaps} onRefresh={()=>loadData(context)} onDownloadReport={generatePDF} pdfLoading={pdfLoading}/>}
         {screen==="committees"&&<CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate}/>}
         {screen==="committee-calendar"&&<CommitteeCalendarScreen hospitalId={context?.hospitalId}/>}
         {screen==="kpis"&&<KPIsScreen hospitalId={context?.hospitalId} user={user}/>}
