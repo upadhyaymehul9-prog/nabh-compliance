@@ -5752,6 +5752,13 @@ export default function App() {
   const [elcCapaSaving,   setElcCapaSaving]   = useState({});
   const [elcCapaDeleting, setElcCapaDeleting] = useState({});
   const [elcPdfLoading,   setElcPdfLoading]   = useState(false);
+  const [shcoElcCapaDb,       setShcoElcCapaDb]       = useState({});
+  const [shcoElcCapaForm,     setShcoElcCapaForm]     = useState({});
+  const [shcoElcCapaSaving,   setShcoElcCapaSaving]   = useState({});
+  const [shcoElcCapaDeleting, setShcoElcCapaDeleting] = useState({});
+  const [shcoElcPdfLoading,   setShcoElcPdfLoading]   = useState(false);
+  const [shcoElcGapFilter,    setShcoElcGapFilter]    = useState('ALL');
+  const [shcoElcGapSearch,    setShcoElcGapSearch]    = useState('');
   const [pdfLoading, setPdfLoading] = useState(false);
   const [showMoreMenu, setShowMoreMenu] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -7172,6 +7179,214 @@ export default function App() {
     finally{ setElcPdfLoading(false); }
   };
 
+  const generateShcoElcPDF = async () => {
+    setShcoElcPdfLoading(true);
+    try {
+      const SEV_ORDER  = {CRITICAL:0, HIGH:1, MEDIUM:2, LOW:3};
+      const SEV_COLORS = {CRITICAL:'#e05a5a', HIGH:'#f4a441', MEDIUM:'#c9a84c', LOW:'#3a5870'};
+      const getSevC  = sev => SEV_COLORS[sev]||'#3a5870';
+      const lvlColor = lvl => lvl==='CORE'?'#e05a5a':lvl==='Commitment'?'#f4a441':'#c9a84c';
+      const dotCode  = code => code.replace(/^([A-Z]+)(\d+)([a-z]+)$/, '$1.$2.$3');
+      const sanitize = str => (str||'').replace(/ﬀ/g,'ff').replace(/ﬁ/g,'fi').replace(/ﬂ/g,'fl').replace(/ﬃ/g,'ffi').replace(/ﬄ/g,'ffl').replace(/'/g,"'").replace(/'/g,"'").replace(/"/g,'"').replace(/"/g,'"').replace(/–/g,'-').replace(/—/g,'--').replace(/[^\x20-\x7E\xA0-\xFF]/g,'');
+
+      const getShcoElcSev = code => {
+        const s   = shcoElcScores[code];
+        const lvl = hcoOeLevels[code];
+        if (!s) return null;
+        if (lvl==='CORE')       return s==='not_met'?'CRITICAL':s==='partial'?'HIGH':null;
+        if (lvl==='Commitment') return s==='not_met'?'HIGH':s==='partial'?'MEDIUM':null;
+        if (lvl==='Excellence') return s==='not_met'?'MEDIUM':s==='partial'?'LOW':null;
+        return null;
+      };
+
+      const gaps = HCO_ELC_OE_LIST
+        .map(oe => { const sev=getShcoElcSev(oe.code); return sev?{oe_code:oe.code,oe_text:oe.text,level:hcoOeLevels[oe.code]||'',severity:sev}:null; })
+        .filter(Boolean)
+        .sort((a,b)=>(SEV_ORDER[a.severity]??9)-(SEV_ORDER[b.severity]??9));
+
+      const capaEntries = gaps.filter(g=>shcoElcCapaDb[g.oe_code]?.finding);
+      const counts = {CRITICAL:0, HIGH:0, MEDIUM:0, LOW:0};
+      gaps.forEach(g=>{ if(counts[g.severity]!==undefined) counts[g.severity]++; });
+
+      const doc = new jsPDF({unit:'pt', format:'a4'});
+      const W = doc.internal.pageSize.getWidth();
+      const H = doc.internal.pageSize.getHeight();
+      const today = new Date();
+      const dateStr = today.toLocaleDateString('en-IN',{day:'2-digit',month:'long',year:'numeric'});
+      const fileDateStr = String(today.getDate()).padStart(2,'0')+String(today.getMonth()+1).padStart(2,'0')+today.getFullYear();
+      const cleanHospital = (context?.hospitalName||'Hospital').replace(/\s+(New|Trial|Active|Expired)$/i,'').trim();
+      const GOLD = '#c9a84c';
+
+      const newPage = () => {
+        doc.addPage();
+        doc.setFillColor('#050e1a'); doc.rect(0,0,W,H,'F');
+        doc.setFillColor(GOLD); doc.rect(0,0,W,4,'F');
+      };
+
+      doc.setFillColor('#050e1a'); doc.rect(0,0,W,H,'F');
+      doc.setFillColor(GOLD); doc.rect(0,0,W,6,'F');
+
+      doc.setFontSize(9);  doc.setTextColor(GOLD);
+      doc.text('ACCREDREADY · NABH SHCO ELC',W/2,58,{align:'center'});
+      doc.setFontSize(27); doc.setTextColor('#eef4f9');
+      doc.text('NABH SHCO ELC Gap Report',W/2,106,{align:'center'});
+      doc.setDrawColor(GOLD); doc.setLineWidth(0.5);
+      doc.line(60,124,W-60,124);
+
+      doc.setFontSize(22); doc.setTextColor(GOLD);
+      const hospLines = doc.splitTextToSize(cleanHospital, W-160);
+      doc.text(hospLines, W/2, 160, {align:'center'});
+      const afterHosp = 160+(hospLines.length-1)*28;
+      doc.setFontSize(9); doc.setTextColor('#3a5870');
+      doc.text(`Generated on ${dateStr}`, W/2, afterHosp+30, {align:'center'});
+
+      const tileY = afterHosp+80;
+      const tileW = (W-120)/4;
+      ['CRITICAL','HIGH','MEDIUM','LOW'].forEach((sev,i)=>{
+        const col = getSevC(sev);
+        const cx  = 60+tileW*i+tileW/2;
+        doc.setFillColor('#081525'); doc.roundedRect(60+tileW*i+4, tileY-20, tileW-8, 50, 4,4,'F');
+        doc.setFontSize(24); doc.setTextColor(col);
+        doc.text(String(counts[sev]), cx, tileY+6,  {align:'center'});
+        doc.setFontSize(8);  doc.setTextColor(col);
+        doc.text(sev,          cx, tileY+22, {align:'center'});
+      });
+
+      doc.setFontSize(12); doc.setTextColor('#eef4f9');
+      doc.text(`${gaps.length} total gap${gaps.length!==1?'s':''}`, W/2, tileY+56, {align:'center'});
+      doc.setFontSize(10); doc.setTextColor('#3a5870');
+      doc.text(`${capaEntries.length} CAPA${capaEntries.length!==1?'s':''} recorded`, W/2, tileY+74, {align:'center'});
+      doc.setFontSize(7);  doc.setTextColor('#3a5870');
+      doc.text('Generated by accredready.in — Independent educational tool — Not affiliated with NABH/QCI',W/2,H-28,{align:'center'});
+
+      if(gaps.length===0){
+        newPage();
+        doc.setFontSize(18); doc.setTextColor('#4caf7d');
+        doc.text('No gaps found', W/2, 230, {align:'center'});
+        doc.setFontSize(10); doc.setTextColor('#3a5870');
+        doc.text('All scored OEs are Met. Score more OEs in the OE Browser to see gaps here.',W/2,262,{align:'center',maxWidth:W-120});
+      } else {
+        newPage(); let y=50;
+        doc.setFontSize(16); doc.setTextColor('#eef4f9');
+        doc.text('Gap Analysis',60,y); y+=10;
+        doc.setDrawColor('#0f2640'); doc.setLineWidth(0.5);
+        doc.line(60,y,W-60,y); y+=18;
+        doc.setFontSize(8); doc.setTextColor('#3a5870');
+        doc.text(`${gaps.length} OE(s) not yet Met — sorted by severity`,60,y); y+=20;
+
+        const cX1=44, cX2=106, cX3=168, cX4=240;
+        const textColW=240; const rowPad=5; const lineH=9;
+
+        const drawGapHeader = () => {
+          doc.setFillColor('#081525'); doc.rect(40,y-11,W-80,16,'F');
+          doc.setFontSize(7); doc.setTextColor(GOLD);
+          doc.text('OE CODE',cX1,y-2);
+          doc.text('LEVEL',cX2,y-2);
+          doc.text('SEVERITY',cX3,y-2);
+          doc.text('OE TEXT',cX4,y-2);
+          y+=14;
+        };
+        drawGapHeader();
+
+        gaps.forEach(g=>{
+          const sevC  = getSevC(g.severity);
+          const lvlC  = lvlColor(g.level);
+          const rowBg = g.severity==='CRITICAL'?'#180606':g.severity==='HIGH'?'#140e00':g.severity==='MEDIUM'?'#121208':'#0a1520';
+          const wrapped = doc.splitTextToSize(sanitize(g.oe_text), textColW);
+          const rowH    = Math.max(20, wrapped.length*lineH+rowPad*2);
+          if(y+rowH>H-40){ newPage(); y=50; drawGapHeader(); }
+          doc.setFillColor(rowBg); doc.rect(40,y-rowPad,W-80,rowH,'F');
+          doc.setFontSize(8);   doc.setTextColor('#4fc3f7'); doc.text(dotCode(g.oe_code),cX1,y+2);
+          doc.setFontSize(7);   doc.setTextColor(lvlC);      doc.text((g.level||'').slice(0,12),cX2,y+2);
+          doc.setFontSize(7);   doc.setTextColor(sevC);      doc.text(g.severity,cX3,y+2);
+          doc.setFontSize(7.5); doc.setTextColor('#c8dcea'); wrapped.forEach((ln,i)=>doc.text(ln,cX4,y+2+i*lineH));
+          y+=rowH+6;
+        });
+
+        if(capaEntries.length>0){
+          newPage(); y=50;
+          doc.setFontSize(16); doc.setTextColor('#eef4f9');
+          doc.text('Corrective Actions (CAPA)',60,y); y+=10;
+          doc.setDrawColor('#0f2640'); doc.line(60,y,W-60,y); y+=18;
+          doc.setFontSize(8); doc.setTextColor('#3a5870');
+          doc.text(`${capaEntries.length} CAPA${capaEntries.length!==1?'s':''} recorded for gap OEs`,60,y); y+=20;
+
+          capaEntries.forEach(g=>{
+            const capa      = shcoElcCapaDb[g.oe_code];
+            const sevC      = getSevC(g.severity);
+            const findLines = doc.splitTextToSize(sanitize(capa.finding||''), W-180);
+            const actLines  = doc.splitTextToSize(sanitize(capa.action_planned||''), W-180);
+            const estH      = 14+findLines.length*10+actLines.length*10+28+16;
+            if(y+estH>H-40){ newPage(); y=50; }
+            doc.setFillColor('#0a1a2a');
+            doc.roundedRect(60,y-4,W-120,estH,3,3,'F');
+            doc.setDrawColor('#1a3550');
+            doc.roundedRect(60,y-4,W-120,estH,3,3,'S');
+            doc.setFontSize(9); doc.setTextColor('#4fc3f7');        doc.text(dotCode(g.oe_code),68,y+8);
+            doc.setFontSize(8); doc.setTextColor(lvlColor(g.level)); doc.text(g.level||'',130,y+8);
+            doc.setFontSize(8); doc.setTextColor(sevC);             doc.text(g.severity,W-64,y+8,{align:'right'});
+            y+=18;
+            doc.setFontSize(7); doc.setTextColor('#3a5870'); doc.text('FINDING',68,y);
+            doc.setFontSize(8); doc.setTextColor('#c8dcea'); findLines.forEach((ln,i)=>doc.text(ln,68,y+9+i*10));
+            y+=9+findLines.length*10+4;
+            doc.setFontSize(7); doc.setTextColor('#3a5870'); doc.text('ACTION PLANNED',68,y);
+            doc.setFontSize(8); doc.setTextColor('#c8dcea'); actLines.forEach((ln,i)=>doc.text(ln,68,y+9+i*10));
+            y+=9+actLines.length*10+4;
+            const person = capa.responsible_person||'—';
+            const dStr2  = capa.target_date?new Date(capa.target_date).toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'}):'—';
+            doc.setFontSize(7); doc.setTextColor('#3a5870'); doc.text('RESPONSIBLE: ',68,y);
+            doc.setFontSize(8); doc.setTextColor('#c8dcea'); doc.text(person,68+doc.getTextWidth('RESPONSIBLE: '),y);
+            doc.setFontSize(7); doc.setTextColor('#3a5870'); doc.text('TARGET DATE: ',W/2,y);
+            doc.setFontSize(8); doc.setTextColor('#c8dcea'); doc.text(dStr2,W/2+doc.getTextWidth('TARGET DATE: '),y);
+            y+=18;
+          });
+        }
+      }
+
+      newPage(); let y2=60;
+      doc.setFontSize(16); doc.setTextColor('#eef4f9');
+      doc.text('Report Summary',60,y2); y2+=36;
+      const scoredCt  = Object.keys(shcoElcScores).length;
+      const metCt     = Object.values(shcoElcScores).filter(v=>v==='met').length;
+      const partialCt = Object.values(shcoElcScores).filter(v=>v==='partial').length;
+      const notMetCt  = Object.values(shcoElcScores).filter(v=>v==='not_met').length;
+      [
+        ['Programme',      'NABH SHCO ELC 2nd Edition',   GOLD],
+        ['Total OEs',      String(HCO_ELC_OE_LIST.length), '#eef4f9'],
+        ['OEs Scored',     String(scoredCt),               scoredCt>0?'#4caf7d':'#f4a441'],
+        ['Met',            String(metCt),                  metCt>0?'#4caf7d':'#3a5870'],
+        ['Partial',        String(partialCt),              partialCt>0?'#f4a441':'#3a5870'],
+        ['Not Met',        String(notMetCt),               notMetCt>0?'#e05a5a':'#3a5870'],
+        ['Total Gaps',     String(gaps.length),            gaps.length===0?'#4caf7d':'#f4a441'],
+        ['Critical Gaps',  String(counts.CRITICAL),        counts.CRITICAL===0?'#4caf7d':'#e05a5a'],
+        ['High Gaps',      String(counts.HIGH),            counts.HIGH===0?'#4caf7d':'#f4a441'],
+        ['CAPAs Recorded', String(capaEntries.length),     capaEntries.length>0?'#4caf7d':'#3a5870'],
+      ].forEach(([lbl,val,col])=>{
+        if(y2>H-60){ newPage(); y2=60; }
+        doc.setFillColor('#081525'); doc.roundedRect(60,y2-15,W-120,28,3,3,'F');
+        doc.setFontSize(10); doc.setTextColor('#c8dcea'); doc.text(lbl,80,y2-1);
+        doc.setFontSize(11); doc.setTextColor(col);       doc.text(val,W-80,y2-1,{align:'right'});
+        y2+=36;
+      });
+      y2+=10;
+      doc.setDrawColor('#0f2640'); doc.line(60,y2,W-60,y2); y2+=22;
+      doc.setFontSize(8); doc.setTextColor('#3a5870');
+      doc.text(`Report generated on ${dateStr} via accredready.in`,W/2,y2,{align:'center'}); y2+=16;
+      doc.text('This report is based on self-assessment scores entered by the hospital team.',W/2,y2,{align:'center'}); y2+=13;
+      doc.text('It is not an official NABH assessment and must not replace a formal NABH evaluation.',W/2,y2,{align:'center'});
+
+      const nPages = doc.internal.getNumberOfPages();
+      for(let i=1;i<=nPages;i++){
+        doc.setPage(i);
+        doc.setFontSize(7); doc.setTextColor('#3a5870');
+        doc.text(`Page ${i} of ${nPages}`,W-60,H-18,{align:'right'});
+      }
+      const cleanName = cleanHospital.replace(/[^a-zA-Z0-9]/g,'_');
+      doc.save(`${cleanName}_SHCO_ELC_Gap_Report_${fileDateStr}.pdf`);
+    } catch(e){ console.error('SHCO ELC PDF generation failed:',e); }
+    finally{ setShcoElcPdfLoading(false); }
+  };
+
   const [authErrorMsg,setAuthErrorMsg]=useState("");
 
   useEffect(()=>{
@@ -7361,6 +7576,51 @@ export default function App() {
     setElcCapaDb(p => { const n = {...p}; delete n[oeCode]; return n; });
     setElcCapaForm(p => { const n = {...p}; delete n[oeCode]; return n; });
     setElcCapaDeleting(p => ({...p, [oeCode]: false}));
+  };
+
+  // Load SHCO ELC CAPAs for this hospital
+  useEffect(() => {
+    if (selectedProgramme !== "shco-elc" || !context?.hospitalId) return;
+    supabase.from("shco_elc_capa")
+      .select("*")
+      .eq("hospital_id", context.hospitalId)
+      .then(({data}) => {
+        if (!data) return;
+        const m = {};
+        data.forEach(r => { m[r.oe_code] = r; });
+        setShcoElcCapaDb(m);
+      })
+      .catch(() => {});
+  }, [selectedProgramme, context?.hospitalId]); // eslint-disable-line
+
+  const submitShcoElcCapa = async (oeCode) => {
+    const fc = shcoElcCapaForm[oeCode];
+    if (!fc?.finding || !fc?.action || !context?.hospitalId) return;
+    setShcoElcCapaSaving(p => ({...p, [oeCode]: true}));
+    const {error} = await supabase.from("shco_elc_capa").upsert(
+      {hospital_id: context.hospitalId, oe_code: oeCode,
+       finding: fc.finding, root_cause: fc.root_cause || '',
+       action_planned: fc.action, action_type: fc.action_type || 'Process',
+       responsible_person: fc.person || '', target_date: fc.date || null,
+       status: 'open'},
+      {onConflict: "hospital_id,oe_code"}
+    );
+    setShcoElcCapaSaving(p => ({...p, [oeCode]: false}));
+    if (error) { alert("CAPA save failed: " + error.message); return; }
+    const {data: fresh} = await supabase.from("shco_elc_capa")
+      .select("*").eq("hospital_id", context.hospitalId);
+    if (fresh) { const m = {}; fresh.forEach(r => { m[r.oe_code] = r; }); setShcoElcCapaDb(m); }
+    setShcoElcCapaForm(p => ({...p, [oeCode]: {...p[oeCode], expanded: false}}));
+  };
+
+  const deleteShcoElcCapa = async (oeCode) => {
+    if (!window.confirm('Delete this CAPA entry?')) return;
+    setShcoElcCapaDeleting(p => ({...p, [oeCode]: true}));
+    await supabase.from("shco_elc_capa").delete()
+      .eq("hospital_id", context.hospitalId).eq("oe_code", oeCode);
+    setShcoElcCapaDb(p => { const n = {...p}; delete n[oeCode]; return n; });
+    setShcoElcCapaForm(p => { const n = {...p}; delete n[oeCode]; return n; });
+    setShcoElcCapaDeleting(p => ({...p, [oeCode]: false}));
   };
 
   // Load SHCO Full OEs + scores + CAPAs
@@ -8172,7 +8432,7 @@ export default function App() {
       .eq("hospital_id",context.hospitalId)
       .eq("oe_code",code)
       .eq("programme","SHCO_ELC");
-    if(error) setShcoElcScores(p=>({...p,[code]:prev}));
+    if(error) { alert("Clear failed: " + error.message); setShcoElcScores(p=>({...p,[code]:prev})); }
     setShcoElcScoreSaving(p=>({...p,[code]:false}));
   };
 
@@ -8380,9 +8640,31 @@ export default function App() {
     );
   };
 
+  // ── SHCO ELC Fix Gaps ───────────────────────────────────────────────────
+  const shcoElcGapSeverity = (oe) => {
+    const s   = shcoElcScores[oe.code];
+    const lvl = hcoOeLevels[oe.code];
+    if (!s) return null;
+    if (lvl === 'CORE')       return s === 'not_met' ? 'CRITICAL' : s === 'partial' ? 'HIGH'   : null;
+    if (lvl === 'Commitment') return s === 'not_met' ? 'HIGH'     : s === 'partial' ? 'MEDIUM' : null;
+    if (lvl === 'Excellence') return s === 'not_met' ? 'MEDIUM'   : s === 'partial' ? 'LOW'    : null;
+    return null;
+  };
+
+  const allShcoElcGaps = HCO_ELC_OE_LIST
+    .map(oe => ({ oe, sev: shcoElcGapSeverity(oe) }))
+    .filter(({ sev }) => sev !== null)
+    .map(({ oe, sev }) => ({
+      oe_code:  oe.code,
+      oe_text:  oe.text,
+      level:    hcoOeLevels[oe.code] || '',
+      severity: sev,
+    }));
+
   const ELC_TABS = [
     {key:'overview', label:'📊 Overview'},
     {key:'oes', label:'📑 OE Browser'},
+    {key:'fixgaps', label:`🔧 Fix Gaps${allShcoElcGaps.length > 0 ? ' (' + allShcoElcGaps.length + ')' : ''}`},
     {key:'docs', label:'📂 Documents'},
     {key:'licenses', label:'📋 Licenses'},
     {key:'process', label:'🗺️ Process'},
@@ -8393,12 +8675,166 @@ export default function App() {
     switch(shcoElcTab) {
       case 'overview': return renderOverview();
       case 'oes': return renderSHCOOEBrowser();
+      case 'fixgaps': return renderSHCOELCFixGaps();
       case 'docs': return renderDocTracker();
       case 'licenses': return renderLicenseTracker();
       case 'process': return renderProcess();
       case 'upgrade': return renderUpgrade();
       default: return renderOverview();
     }
+  };
+
+  const renderSHCOELCFixGaps = () => {
+    const toElcDotCode  = code => code.replace(/^([A-Z]+)(\d+)([a-z]+)$/, '$1.$2.$3');
+    const elcLevelColor = lvl => lvl === 'CORE' ? '#e05a5a' : lvl === 'Commitment' ? '#f4a441' : '#c9a84c';
+    const q = shcoElcGapSearch.toLowerCase().trim();
+    const filtered = allShcoElcGaps.filter(g => {
+      const matchSev = shcoElcGapFilter === 'ALL' || g.severity === shcoElcGapFilter;
+      const matchQ   = !q || g.oe_code.toLowerCase().includes(q) || g.oe_text.toLowerCase().includes(q);
+      return matchSev && matchQ;
+    });
+
+    return (
+      <div style={{padding:'12px 16px 80px'}}>
+        <input
+          value={shcoElcGapSearch}
+          onChange={e => setShcoElcGapSearch(e.target.value)}
+          placeholder="Search gaps by OE code (e.g. AAC.1.a) or keyword…"
+          style={{width:'100%',padding:'10px 14px',borderRadius:8,border:`1px solid ${T.border}`,
+            background:T.panel2,color:T.text,fontSize:14,marginBottom:10,boxSizing:'border-box'}}
+        />
+
+        <div style={{display:'flex',gap:8,marginBottom:14,flexWrap:'wrap',alignItems:'center'}}>
+          {['ALL','CRITICAL','HIGH','MEDIUM','LOW'].map(s => (
+            <button key={s} onClick={() => setShcoElcGapFilter(s)}
+              style={{padding:'5px 14px',borderRadius:8,fontSize:12,cursor:'pointer',
+                background: shcoElcGapFilter === s ? `${sevColor(s)}20` : 'transparent',
+                border: `1px solid ${shcoElcGapFilter === s ? sevColor(s) : T.border}`,
+                color:  shcoElcGapFilter === s ? sevColor(s) : T.muted}}>
+              {s}
+            </button>
+          ))}
+          <div style={{marginLeft:'auto',display:'flex',gap:8,alignItems:'center'}}>
+            <span style={{fontSize:13,color:T.muted}}>{allShcoElcGaps.length} gap{allShcoElcGaps.length !== 1 ? 's' : ''}</span>
+            <button onClick={generateShcoElcPDF} disabled={shcoElcPdfLoading}
+              style={{padding:'6px 14px',borderRadius:7,border:`1px solid ${T.gold}`,
+                background:'transparent',color:T.gold,fontSize:12,fontWeight:700,
+                cursor:shcoElcPdfLoading?'default':'pointer',opacity:shcoElcPdfLoading?0.6:1,whiteSpace:'nowrap'}}>
+              {shcoElcPdfLoading?'⏳ Generating…':'⬇ Download Gap Report'}
+            </button>
+          </div>
+        </div>
+
+        {filtered.length === 0 && (
+          <div style={{textAlign:'center',color:T.muted,padding:'40px 0',fontSize:14}}>
+            {allShcoElcGaps.length === 0 ? 'No gaps found. Score OEs in the OE Browser first.' : 'No gaps at this severity level.'}
+          </div>
+        )}
+
+        <div style={{display:'grid',gap:10}}>
+          {filtered.map(g => {
+            const fc       = shcoElcCapaForm[g.oe_code] || {};
+            const dbC      = shcoElcCapaDb[g.oe_code];
+            const hasSaved = !!dbC;
+            const expanded = fc.expanded;
+            return (
+              <div key={g.oe_code} style={{background:T.panel,border:`1px solid ${sevColor(g.severity)}25`,borderRadius:12,overflow:'hidden'}}>
+                <div style={{height:3,background:sevColor(g.severity)}}/>
+                <div style={{padding:'14px 16px'}}>
+                  <div style={{display:'flex',gap:8,alignItems:'center',marginBottom:6,flexWrap:'wrap'}}>
+                    <span style={{fontFamily:'monospace',fontSize:13,fontWeight:700,color:elcLevelColor(g.level)}}>
+                      {toElcDotCode(g.oe_code)}
+                    </span>
+                    <span style={{fontSize:11,padding:'2px 7px',borderRadius:5,fontWeight:700,
+                      background:`${sevColor(g.severity)}15`,color:sevColor(g.severity)}}>
+                      {g.severity}
+                    </span>
+                    <span style={{fontSize:11,padding:'2px 6px',borderRadius:5,
+                      background:`${elcLevelColor(g.level)}18`,color:elcLevelColor(g.level)}}>
+                      {g.level}
+                    </span>
+                    {hasSaved && <span style={{fontSize:11,padding:'2px 6px',borderRadius:5,background:T.green+'22',color:T.green}}>✓ CAPA saved</span>}
+                  </div>
+                  <div style={{fontSize:13,color:T.text,lineHeight:1.6,marginBottom:10}}>{g.oe_text}</div>
+                  <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+                    {!expanded && hasSaved ? (
+                      <>
+                        <button
+                          onClick={() => setShcoElcCapaForm(p => ({...p, [g.oe_code]: {
+                            ...fc, expanded: true,
+                            finding: fc.finding !== undefined ? fc.finding : (dbC?.finding || ''),
+                            action:  fc.action  !== undefined ? fc.action  : (dbC?.action_planned || ''),
+                            person:  fc.person  !== undefined ? fc.person  : (dbC?.responsible_person || ''),
+                            date:    fc.date    !== undefined ? fc.date    : (dbC?.target_date || ''),
+                          }}))}
+                          style={{fontSize:12,color:T.gold,background:'transparent',border:`1px solid ${T.gold}44`,borderRadius:8,padding:'4px 14px',cursor:'pointer'}}>
+                          ✏️ Edit CAPA
+                        </button>
+                        <button
+                          onClick={() => deleteShcoElcCapa(g.oe_code)}
+                          disabled={shcoElcCapaDeleting[g.oe_code] || shcoElcCapaSaving[g.oe_code]}
+                          style={{fontSize:12,color:T.red,background:'transparent',border:`1px solid ${T.red}44`,borderRadius:8,padding:'4px 14px',cursor:'pointer'}}>
+                          {shcoElcCapaDeleting[g.oe_code] ? 'Deleting…' : '🗑 Delete CAPA'}
+                        </button>
+                      </>
+                    ) : expanded ? (
+                      <button
+                        onClick={() => setShcoElcCapaForm(p => ({...p, [g.oe_code]: {...fc, expanded: false}}))}
+                        style={{fontSize:12,color:T.muted,background:'transparent',border:`1px solid ${T.border}`,borderRadius:8,padding:'4px 14px',cursor:'pointer'}}>
+                        ▲ Hide CAPA
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => setShcoElcCapaForm(p => ({...p, [g.oe_code]: {...fc, expanded: true}}))}
+                        style={{fontSize:12,color:T.gold,background:'transparent',border:`1px solid ${T.gold}44`,borderRadius:8,padding:'4px 14px',cursor:'pointer'}}>
+                        ▼ Add CAPA
+                      </button>
+                    )}
+                  </div>
+                  {expanded && (
+                    <div style={{marginTop:12,display:'grid',gap:8}}>
+                      <div>
+                        <div style={{fontSize:11,color:T.muted,marginBottom:4}}>FINDING *</div>
+                        <textarea value={fc.finding || ''} onChange={e => setShcoElcCapaForm(p => ({...p, [g.oe_code]: {...fc, finding: e.target.value}}))}
+                          rows={2} placeholder="Describe the non-compliance finding…"
+                          style={{width:'100%',padding:'8px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,resize:'vertical',boxSizing:'border-box'}}/>
+                      </div>
+                      <div>
+                        <div style={{fontSize:11,color:T.muted,marginBottom:4}}>ACTION PLANNED *</div>
+                        <textarea value={fc.action || ''} onChange={e => setShcoElcCapaForm(p => ({...p, [g.oe_code]: {...fc, action: e.target.value}}))}
+                          rows={2} placeholder="Corrective action to be taken…"
+                          style={{width:'100%',padding:'8px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,resize:'vertical',boxSizing:'border-box'}}/>
+                      </div>
+                      <div style={{display:'flex',gap:8,flexWrap:'wrap',alignItems:'flex-end'}}>
+                        <div style={{flex:1,minWidth:140}}>
+                          <div style={{fontSize:11,color:T.muted,marginBottom:4}}>RESPONSIBLE PERSON</div>
+                          <input value={fc.person || ''} onChange={e => setShcoElcCapaForm(p => ({...p, [g.oe_code]: {...fc, person: e.target.value}}))}
+                            placeholder="Name / Designation"
+                            style={{width:'100%',padding:'7px 10px',borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13,boxSizing:'border-box'}}/>
+                        </div>
+                        <div>
+                          <div style={{fontSize:11,color:T.muted,marginBottom:4}}>TARGET DATE</div>
+                          <input type="date" value={fc.date || ''} onChange={e => setShcoElcCapaForm(p => ({...p, [g.oe_code]: {...fc, date: e.target.value}}))}
+                            style={{padding:'7px 10px',borderRadius:7,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:13}}/>
+                        </div>
+                        <button onClick={() => submitShcoElcCapa(g.oe_code)}
+                          disabled={shcoElcCapaSaving[g.oe_code] || shcoElcCapaDeleting[g.oe_code] || !fc.finding || !fc.action}
+                          style={{padding:'7px 20px',borderRadius:10,background:`linear-gradient(135deg,${T.green},#3d9e6e)`,
+                            border:'none',color:T.bg,fontSize:14,fontWeight:700,
+                            cursor: fc.finding && fc.action ? 'pointer' : 'default',
+                            opacity: fc.finding && fc.action ? 1 : 0.5}}>
+                          {shcoElcCapaSaving[g.oe_code] ? 'Saving…' : 'Save CAPA →'}
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
   };
 
   // ── MAIN SHCO TAB RENDER ──
