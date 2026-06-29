@@ -7437,7 +7437,7 @@ export default function App() {
         setAuthState("recovery");
         return;
       }
-      if(session?.user){setUser(session.user);setAuthState(s=>s==="recovery"?s:s==="loading"?"setup":s);}
+      if(session?.user){setUser(session.user);setAuthState(s=>{if(s==="recovery")return s;if(event==="SIGNED_IN"&&(s==="loading"||s==="homepage"||s==="login"))return "setup";if(s==="loading")return "setup";return s;});}
       else if(event==="INITIAL_SESSION"){setUser(null);setAuthState("homepage");setContext(null);}
       else{setUser(null);setAuthState("login");setContext(null);}
     });
