@@ -2083,7 +2083,7 @@ function LoginScreen({ onLogin, initialError }) {
     setError("");setLoading(true);
     const{error:err}=await supabase.auth.signInWithOAuth({
       provider:"google",
-      options:{redirectTo:"https://upadhyaymehul9-prog.github.io/nabh-compliance/"}
+      options:{redirectTo:"https://accredready.in"}
     });
     if(err){setError(err.message);setLoading(false);}
   };
