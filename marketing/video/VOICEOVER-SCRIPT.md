@@ -92,6 +92,7 @@ python3 scripts/add-promo-voiceover.py
 Outputs:
 - `marketing/video/output/accredready-promo-1080p-voiced.mp4`
 - `marketing/video/output/accredready-promo-vertical-voiced.mp4`
-- `public/accredready-promo-1080p-with-voice.mp4` (for deploy)
+- `public/accredready-promo.mp4` — **main file with voice** (replaces silent default)
+- `public/accredready-promo-silent.mp4` — silent backup
 
 Then re-add voiceover in CapCut using this script again if you prefer a human recording.

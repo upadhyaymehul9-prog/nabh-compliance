@@ -17,6 +17,7 @@ import edge_tts
 ROOT = Path(__file__).resolve().parent.parent
 SRT = ROOT / "marketing/video/accredready-promo.srt"
 OUT_DIR = ROOT / "marketing/video/output"
+PUBLIC = ROOT / "public"
 VOICE = "en-IN-NeerjaNeural"
 VIDEO_DURATION = 37.0
 
@@ -50,9 +51,13 @@ def srt_time(value: str) -> float:
     return int(h) * 3600 + int(m) * 60 + int(s) + int(ms) / 1000.0
 
 
-async def synthesize(text: str, out_path: Path) -> None:
-    communicate = edge_tts.Communicate(text, VOICE, rate="-5%")
-    await communicate.save(str(out_path))
+async def synthesize_all(cues: list[Cue], work: Path) -> None:
+    async def one(cue: Cue) -> None:
+        out = work / f"seg-{cue.index:02d}-raw.mp3"
+        communicate = edge_tts.Communicate(cue.text, VOICE, rate="-5%")
+        await communicate.save(str(out))
+
+    await asyncio.gather(*(one(c) for c in cues))
 
 
 def run(cmd: list[str]) -> None:
@@ -60,7 +65,7 @@ def run(cmd: list[str]) -> None:
     subprocess.run(cmd, check=True)
 
 
-def fit_segment(src: Path, dst: Path, max_duration: float) -> None:
+def probe_duration(path: Path) -> float:
     probe = subprocess.run(
         [
             "ffprobe",
@@ -70,13 +75,17 @@ def fit_segment(src: Path, dst: Path, max_duration: float) -> None:
             "format=duration",
             "-of",
             "default=noprint_wrappers=1:nokey=1",
-            str(src),
+            str(path),
         ],
         capture_output=True,
         text=True,
         check=True,
     )
-    duration = float(probe.stdout.strip())
+    return float(probe.stdout.strip())
+
+
+def fit_segment(src: Path, dst: Path, max_duration: float) -> None:
+    duration = probe_duration(src)
     if duration <= max_duration or max_duration <= 0:
         shutil.copy(src, dst)
         return
@@ -95,38 +104,37 @@ def fit_segment(src: Path, dst: Path, max_duration: float) -> None:
 
 
 def build_audio(cues: list[Cue], work: Path) -> Path:
+    asyncio.run(synthesize_all(cues, work))
+
     fitted: list[Path] = []
     for cue in cues:
         raw = work / f"seg-{cue.index:02d}-raw.mp3"
         fit = work / f"seg-{cue.index:02d}.mp3"
-        asyncio.run(synthesize(cue.text, raw))
         slot = max(cue.end - cue.start, 0.5)
         fit_segment(raw, fit, slot)
         fitted.append(fit)
 
-    inputs: list[str] = [
-        "-f",
-        "lavfi",
-        "-i",
-        f"anullsrc=r=44100:cl=mono,atrim=0:{VIDEO_DURATION}",
-    ]
+    inputs: list[str] = []
     filter_parts: list[str] = []
-    mix_inputs: list[str] = ["[0:a]"]
+    mix_labels: list[str] = []
 
-    for i, (cue, seg) in enumerate(zip(cues, fitted), start=1):
+    for i, (cue, seg) in enumerate(zip(cues, fitted)):
         inputs.extend(["-i", str(seg)])
         delay_ms = int(cue.start * 1000)
         label = f"a{i}"
         filter_parts.append(f"[{i}:a]adelay={delay_ms}|{delay_ms}[{label}]")
-        mix_inputs.append(f"[{label}]")
+        mix_labels.append(f"[{label}]")
 
     mixed = work / "voiceover.m4a"
-    n = len(cues) + 1
+    n = len(cues)
+    # normalize=0 avoids amix dividing volume across all inputs
     filter_complex = (
         ";".join(filter_parts)
         + ";"
-        + "".join(mix_inputs)
-        + f"amix=inputs={n}:duration=first:dropout_transition=0,volume=1.2[aout]"
+        + "".join(mix_labels)
+        + f"amix=inputs={n}:duration=longest:dropout_transition=0:normalize=0,"
+        f"apad=pad_dur={VIDEO_DURATION},"
+        f"loudnorm=I=-14:TP=-1.5:LRA=11[aout]"
     )
     run(
         [
@@ -141,9 +149,15 @@ def build_audio(cues: list[Cue], work: Path) -> Path:
             "aac",
             "-b:a",
             "192k",
+            "-ar",
+            "44100",
             str(mixed),
         ]
     )
+
+    saved = OUT_DIR / "accredready-promo-voiceover.m4a"
+    shutil.copy(mixed, saved)
+    print(f"✓ {saved}")
     return mixed
 
 
@@ -166,12 +180,30 @@ def mux_video(video_in: Path, audio: Path, video_out: Path) -> None:
             "aac",
             "-b:a",
             "192k",
+            "-ar",
+            "44100",
             "-shortest",
             "-movflags",
             "+faststart",
             str(video_out),
         ]
     )
+
+
+def publish_voiced_videos(voiced: dict[str, Path]) -> None:
+    PUBLIC.mkdir(exist_ok=True)
+
+    silent_h = PUBLIC / "accredready-promo.mp4"
+    silent_v = PUBLIC / "accredready-promo-vertical.mp4"
+    if silent_h.exists():
+        shutil.copy(silent_h, PUBLIC / "accredready-promo-silent.mp4")
+    if silent_v.exists():
+        shutil.copy(silent_v, PUBLIC / "accredready-promo-vertical-silent.mp4")
+
+    shutil.copy(voiced["horizontal"], PUBLIC / "accredready-promo.mp4")
+    shutil.copy(voiced["vertical"], PUBLIC / "accredready-promo-vertical.mp4")
+    shutil.copy(voiced["horizontal"], PUBLIC / "accredready-promo-1080p-with-voice.mp4")
+    shutil.copy(voiced["vertical"], PUBLIC / "accredready-promo-vertical-with-voice.mp4")
 
 
 def main() -> int:
@@ -189,28 +221,28 @@ def main() -> int:
         work = Path(tmp)
         audio = build_audio(cues, work)
 
-        pairs = [
-            (
-                OUT_DIR / "accredready-promo-1080p.mp4",
-                OUT_DIR / "accredready-promo-1080p-voiced.mp4",
-            ),
-            (
-                OUT_DIR / "accredready-promo-vertical.mp4",
-                OUT_DIR / "accredready-promo-vertical-voiced.mp4",
-            ),
-        ]
-        for src, dst in pairs:
+        sources = {
+            "horizontal": OUT_DIR / "accredready-promo-1080p.mp4",
+            "vertical": OUT_DIR / "accredready-promo-vertical.mp4",
+        }
+        outputs = {
+            "horizontal": OUT_DIR / "accredready-promo-1080p-voiced.mp4",
+            "vertical": OUT_DIR / "accredready-promo-vertical-voiced.mp4",
+        }
+
+        voiced: dict[str, Path] = {}
+        for key, src in sources.items():
             if not src.exists():
                 print(f"Skip missing video: {src}")
                 continue
+            dst = outputs[key]
             mux_video(src, audio, dst)
+            voiced[key] = dst
             print(f"✓ {dst}")
 
-        public = ROOT / "public"
-        public.mkdir(exist_ok=True)
-        for _, dst in pairs:
-            if dst.exists():
-                shutil.copy(dst, public / dst.name.replace("-voiced", "-with-voice"))
+        if voiced:
+            publish_voiced_videos(voiced)
+            print("✓ public/accredready-promo.mp4 now includes voiceover")
 
     print("\nDone.")
     return 0
