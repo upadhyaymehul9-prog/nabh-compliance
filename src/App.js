@@ -2057,8 +2057,9 @@ const HP={
   brand:"#065F46",brandDark:"#064E3B",brandMid:"#047857",brandBg:"#ECFDF5",
   amber:"#D97706",text:"#1E293B",muted:"#475569",subtle:"#94A3B8",border:"#E2E8F0",white:"#FFFFFF",
   red:"#DC2626",redBg:"#FEF2F2",green:"#059669",greenBg:"#ECFDF9",brandLight:"#6EE7B7",
+  boxBorder:"1.5px solid #000000",
 };
-const hpInp={width:"100%",padding:"12px 14px",borderRadius:10,border:`1.5px solid ${HP.border}`,background:"#f8fafc",color:HP.text,fontSize:15,boxSizing:"border-box",fontFamily:"Inter,system-ui,sans-serif"};
+const hpInp={width:"100%",padding:"12px 14px",borderRadius:10,border:HP.boxBorder,background:"#f8fafc",color:HP.text,fontSize:15,boxSizing:"border-box",fontFamily:"Inter,system-ui,sans-serif"};
 const hpLbl={fontSize:12,color:HP.muted,marginBottom:6,fontWeight:600,fontFamily:"Figtree,Inter,sans-serif",letterSpacing:.3};
 function NavIcon({icon,style}){return icon?.startsWith("ti-")?<i className={`ti ${icon}`} style={{fontSize:14,...style}} aria-hidden="true"/>:<span style={style}>{icon}</span>;}
 
@@ -2105,26 +2106,26 @@ function LoginScreen({ onLogin, initialError, onBackToHomepage }) {
     if(err){setError(err.message);setLoading(false);}
   };
   if(mode==='terms') return <TermsScreen onBack={()=>setMode('login')}/>;
-  const inp={width:"100%",padding:"12px 14px",borderRadius:10,border:`1.5px solid ${HP.border}`,background:"#f8fafc",color:HP.text,fontSize:15,boxSizing:"border-box",fontFamily:"Inter,system-ui,sans-serif"};
+  const inp={width:"100%",padding:"12px 14px",borderRadius:10,border:HP.boxBorder,background:"#f8fafc",color:HP.text,fontSize:15,boxSizing:"border-box",fontFamily:"Inter,system-ui,sans-serif"};
   const lbl={fontSize:12,color:HP.muted,marginBottom:6,fontWeight:600,fontFamily:"Figtree,Inter,sans-serif"};
   return (
     <div style={{minHeight:"100vh",background:`linear-gradient(145deg,${HP.brandDark} 0%,${HP.brandMid} 42%,${HP.brandBg} 100%)`,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"Inter,system-ui,sans-serif",padding:"24px 16px",position:"relative"}}>
       <div style={{position:"absolute",inset:0,backgroundImage:"radial-gradient(circle, rgba(255,255,255,.06) 1px, transparent 1px)",backgroundSize:"28px 28px",pointerEvents:"none"}}/>
-      <div style={{position:"relative",zIndex:1,background:HP.white,borderRadius:16,padding:"36px 32px",width:"100%",maxWidth:400,boxShadow:"0 20px 50px rgba(6,78,59,.22)"}}>
+      <div style={{position:"relative",zIndex:1,background:HP.white,border:HP.boxBorder,borderRadius:16,padding:"36px 32px",width:"100%",maxWidth:400,boxShadow:"0 20px 50px rgba(6,78,59,.22)"}}>
         {onBackToHomepage&&(
           <button type="button" onClick={onBackToHomepage} style={{display:"inline-flex",alignItems:"center",gap:6,marginBottom:20,background:"none",border:"none",padding:0,cursor:"pointer",fontFamily:"Figtree,Inter,sans-serif",fontSize:13,fontWeight:600,color:HP.muted}}>
             ← Back to homepage
           </button>
         )}
         <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:24}}>
-          <div style={{width:42,height:42,borderRadius:10,background:HP.brand,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"Figtree,sans-serif",fontWeight:800,fontSize:20,color:HP.white,flexShrink:0}}>A</div>
+          <div style={{width:42,height:42,borderRadius:10,background:HP.brand,border:HP.boxBorder,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"Figtree,sans-serif",fontWeight:800,fontSize:20,color:HP.white,flexShrink:0}}>A</div>
           <div>
             <div style={{fontFamily:"Figtree,sans-serif",fontSize:20,fontWeight:700,color:HP.text}}>Accred<span style={{color:HP.brand}}>Ready</span></div>
             <div style={{fontSize:13,color:HP.muted,marginTop:2}}>{mode==="signup"?"Create your account":mode==="reset"?"Reset password":"Sign in to continue"}</div>
           </div>
         </div>
-        {error&&<div style={{background:HP.redBg,border:`1px solid ${HP.red}40`,borderRadius:10,padding:"10px 14px",marginBottom:16,fontSize:13,color:HP.red}}>{error}</div>}
-        {msg&&<div style={{background:HP.greenBg,border:`1px solid ${HP.green}40`,borderRadius:10,padding:"10px 14px",marginBottom:16,fontSize:13,color:HP.green}}>{msg}</div>}
+        {error&&<div style={{background:HP.redBg,border:HP.boxBorder,borderRadius:10,padding:"10px 14px",marginBottom:16,fontSize:13,color:HP.red}}>{error}</div>}
+        {msg&&<div style={{background:HP.greenBg,border:HP.boxBorder,borderRadius:10,padding:"10px 14px",marginBottom:16,fontSize:13,color:HP.green}}>{msg}</div>}
         {mode==="login"&&(
           <div style={{textAlign:"center",padding:"0 0 18px",marginBottom:18,borderBottom:`1px solid ${HP.border}`}}>
             <div style={{fontFamily:"Fraunces,Georgia,serif",fontSize:15,fontStyle:"italic",color:HP.text,lineHeight:1.8}}>"Quality is not an act, it is a habit."</div>
@@ -2148,7 +2149,7 @@ function LoginScreen({ onLogin, initialError, onBackToHomepage }) {
           <input type="checkbox" id="rememberMe" checked={rememberMe} onChange={e=>setRememberMe(e.target.checked)} style={{width:16,height:16,accentColor:HP.brand,cursor:"pointer"}}/>
           <label htmlFor="rememberMe" style={{color:HP.muted,fontSize:13,cursor:"pointer"}}>Remember me</label>
         </div>}
-        <button onClick={handle} disabled={loading} style={{width:"100%",padding:"13px",borderRadius:10,background:HP.brand,border:"none",color:HP.white,fontSize:15,fontWeight:700,cursor:"pointer",opacity:loading?0.7:1,fontFamily:"Figtree,Inter,sans-serif",boxShadow:"0 2px 8px rgba(6,95,70,.28)"}}>
+        <button onClick={handle} disabled={loading} style={{width:"100%",padding:"13px",borderRadius:10,background:HP.brand,border:HP.boxBorder,color:HP.white,fontSize:15,fontWeight:700,cursor:"pointer",opacity:loading?0.7:1,fontFamily:"Figtree,Inter,sans-serif",boxShadow:"0 2px 8px rgba(6,95,70,.28)"}}>
           {loading?"Please wait…":mode==="login"?"Sign In →":mode==="signup"?"Create Account →":"Send Reset Email →"}
         </button>
         <div style={{fontSize:11,color:HP.subtle,textAlign:"center",marginTop:8}}>🔒 Secured by Supabase · No spam, ever</div>
@@ -2160,7 +2161,7 @@ function LoginScreen({ onLogin, initialError, onBackToHomepage }) {
               <div style={{flex:1,height:1,background:HP.border}}/>
             </div>
             <button onClick={signInWithGoogle} disabled={loading}
-              style={{width:"100%",padding:"12px",borderRadius:10,background:HP.white,border:`1.5px solid ${HP.border}`,color:HP.text,fontSize:14,fontWeight:600,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",gap:10,opacity:loading?0.7:1,fontFamily:"Figtree,Inter,sans-serif"}}>
+              style={{width:"100%",padding:"12px",borderRadius:10,background:HP.white,border:HP.boxBorder,color:HP.text,fontSize:14,fontWeight:600,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",gap:10,opacity:loading?0.7:1,fontFamily:"Figtree,Inter,sans-serif"}}>
               <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.08 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-3.58-13.46-8.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
               Continue with Google
             </button>
@@ -2196,7 +2197,7 @@ function LoginScreen({ onLogin, initialError, onBackToHomepage }) {
       </div>
       {showPricing&&(
         <div onClick={()=>setShowPricing(false)} style={{position:"fixed",inset:0,zIndex:2000,background:"rgba(6,30,20,.55)",display:"flex",alignItems:"center",justifyContent:"center",padding:20}}>
-          <div onClick={e=>e.stopPropagation()} style={{background:HP.white,border:`1px solid ${HP.border}`,borderRadius:16,padding:"28px 24px",maxWidth:400,width:"100%",textAlign:"center",position:"relative",boxShadow:"0 20px 50px rgba(0,0,0,.2)"}}>
+          <div onClick={e=>e.stopPropagation()} style={{background:HP.white,border:HP.boxBorder,borderRadius:16,padding:"28px 24px",maxWidth:400,width:"100%",textAlign:"center",position:"relative",boxShadow:"0 20px 50px rgba(0,0,0,.2)"}}>
             <button onClick={()=>setShowPricing(false)} style={{position:"absolute",top:12,right:14,background:"none",border:"none",color:HP.subtle,fontSize:18,cursor:"pointer",lineHeight:1}}>✕</button>
             <div style={{fontSize:11,letterSpacing:3,color:HP.brand,marginBottom:8,fontWeight:700}}>ACCREDREADY</div>
             <div style={{display:"flex",alignItems:"baseline",justifyContent:"center",gap:4,marginBottom:4}}>
@@ -2334,6 +2335,7 @@ function OnboardingScreen({ hospitalName, onDone }) {
         position: "relative",
         zIndex: 1,
         background: HP.white,
+        border: HP.boxBorder,
         borderRadius: 16,
         padding: "36px 32px",
         width: "100%",
@@ -2342,7 +2344,7 @@ function OnboardingScreen({ hospitalName, onDone }) {
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 28 }}>
           <div style={{
-            width: 42, height: 42, borderRadius: 10, background: HP.brand,
+            width: 42, height: 42, borderRadius: 10, background: HP.brand, border: HP.boxBorder,
             display: "flex", alignItems: "center", justifyContent: "center",
             fontFamily: "Figtree, sans-serif", fontWeight: 800, fontSize: 20, color: HP.white, flexShrink: 0,
           }}>A</div>
@@ -2374,23 +2376,22 @@ function OnboardingScreen({ hospitalName, onDone }) {
                 style={{
                   padding: "14px 16px",
                   borderRadius: 12,
-                  border: `1.5px solid ${selected ? HP.brand : HP.border}`,
-                  borderLeft: `4px solid ${selected ? HP.brand : HP.border}`,
+                  border: HP.boxBorder,
                   background: selected ? HP.brandBg : HP.white,
                   cursor: "pointer",
                   display: "flex",
                   alignItems: "center",
                   gap: 14,
                   textAlign: "left",
-                  transition: "border-color .15s, background .15s, box-shadow .15s",
-                  boxShadow: selected ? "0 4px 14px rgba(6,95,70,.1)" : "0 1px 3px rgba(0,0,0,.04)",
+                  transition: "background .15s, box-shadow .15s",
+                  boxShadow: selected ? "0 4px 14px rgba(0,0,0,.08)" : "0 1px 3px rgba(0,0,0,.04)",
                   fontFamily: "inherit",
                 }}
               >
                 <div style={{
                   width: 40, height: 40, borderRadius: 10, flexShrink: 0,
                   background: selected ? `${HP.brand}18` : HP.brandBg,
-                  border: `1px solid ${selected ? `${HP.brand}40` : HP.border}`,
+                  border: HP.boxBorder,
                   display: "flex", alignItems: "center", justifyContent: "center",
                   color: selected ? HP.brand : HP.brandMid,
                 }}>
@@ -2406,7 +2407,7 @@ function OnboardingScreen({ hospitalName, onDone }) {
                 </div>
                 <div style={{
                   width: 22, height: 22, borderRadius: "50%", flexShrink: 0,
-                  border: `2px solid ${selected ? HP.brand : HP.border}`,
+                  border: HP.boxBorder,
                   background: selected ? HP.brand : HP.white,
                   display: "flex", alignItems: "center", justifyContent: "center",
                   color: HP.white, fontSize: 12, fontWeight: 700,
@@ -2428,7 +2429,7 @@ function OnboardingScreen({ hospitalName, onDone }) {
             padding: "13px",
             borderRadius: 10,
             background: nabh_status ? HP.brand : HP.border,
-            border: "none",
+            border: HP.boxBorder,
             color: nabh_status ? HP.white : HP.subtle,
             fontSize: 15,
             fontWeight: 700,
@@ -2540,7 +2541,7 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
     <div style={{ minHeight: "100vh", background: `linear-gradient(180deg,${HP.brandBg} 0%,${HP.white} 45%)`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Inter,system-ui,sans-serif", padding: 24 }}>
       <div style={{ width: "100%", maxWidth: 920 }}>
         <div style={{ textAlign: "center", marginBottom: 36 }}>
-          <div style={{ width: 46, height: 46, borderRadius: 11, background: HP.brand, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Figtree,sans-serif", fontWeight: 800, fontSize: 22, color: HP.white, margin: "0 auto 16px" }}>A</div>
+          <div style={{ width: 46, height: 46, borderRadius: 11, background: HP.brand, border: HP.boxBorder, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Figtree,sans-serif", fontWeight: 800, fontSize: 22, color: HP.white, margin: "0 auto 16px" }}>A</div>
           <div style={{ fontSize: 11, letterSpacing: 3, color: HP.brandMid, marginBottom: 8, fontWeight: 700 }}>ACCREDREADY</div>
           <div style={{ fontSize: 28, fontWeight: 800, color: HP.text, fontFamily: "Figtree,sans-serif", marginBottom: 8 }}>Select your programme</div>
           <div style={{ fontSize: 14, color: HP.muted, maxWidth: 480, margin: "0 auto" }}>Choose the accreditation programme you are working towards. You can switch anytime.</div>
@@ -2550,17 +2551,17 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
           {programmes.map(p => (
             <div key={p.key}
               onClick={() => p.available ? onSelect(p.key, ctx) : setComingSoonModal(p)}
-              style={{ background: HP.white, border: `1.5px solid ${HP.border}`, borderLeft: `4px solid ${p.color}`, borderRadius: 14, padding: "24px", cursor: "pointer", position: "relative", transition: "border-color 0.18s, box-shadow 0.18s", boxShadow: "0 1px 3px rgba(0,0,0,.04)" }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = p.color; e.currentTarget.style.boxShadow = "0 8px 24px rgba(6,95,70,.1)"; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = HP.border; e.currentTarget.style.borderLeftColor = p.color; e.currentTarget.style.boxShadow = "0 1px 3px rgba(0,0,0,.04)"; }}
+              style={{ background: HP.white, border: HP.boxBorder, borderRadius: 14, padding: "24px", cursor: "pointer", position: "relative", transition: "box-shadow 0.18s", boxShadow: "0 1px 3px rgba(0,0,0,.04)" }}
+              onMouseEnter={e => { e.currentTarget.style.boxShadow = "0 8px 24px rgba(0,0,0,.12)"; }}
+              onMouseLeave={e => { e.currentTarget.style.boxShadow = "0 1px 3px rgba(0,0,0,.04)"; }}
             >
-              <div style={{ position: "absolute", top: 14, right: 14, fontSize: 9, fontWeight: 700, letterSpacing: .5, padding: "4px 10px", borderRadius: 100, background: `${p.color}18`, color: p.color, border: `1px solid ${p.color}40` }}>{p.badge}</div>
+              <div style={{ position: "absolute", top: 14, right: 14, fontSize: 9, fontWeight: 700, letterSpacing: .5, padding: "4px 10px", borderRadius: 100, background: `${p.color}18`, color: p.color, border: HP.boxBorder }}>{p.badge}</div>
               <div style={{ fontSize: 28, marginBottom: 12 }}>{p.icon}</div>
               <div style={{ fontSize: 16, fontWeight: 800, color: HP.text, marginBottom: 3, fontFamily: "Figtree,sans-serif" }}>{p.title}</div>
               <div style={{ fontSize: 11, color: p.color, fontWeight: 600, marginBottom: 10 }}>{p.subtitle}</div>
               <div style={{ display: "flex", gap: 6, marginBottom: 14, flexWrap: "wrap" }}>
                 {p.tags.map(tag => (
-                  <span key={tag} style={{ fontSize: 10, padding: "3px 9px", borderRadius: 8, background: HP.brandBg, border: `1px solid ${HP.border}`, color: HP.muted }}>{tag}</span>
+                  <span key={tag} style={{ fontSize: 10, padding: "3px 9px", borderRadius: 8, background: HP.brandBg, border: HP.boxBorder, color: HP.muted }}>{tag}</span>
                 ))}
               </div>
               <div style={{ fontSize: 12, color: HP.muted, lineHeight: 1.7, marginBottom: 16 }}>{p.desc}</div>
@@ -2602,14 +2603,14 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
               desc: "NABH accreditation standards for dental clinics and oral health care centres.",
             },
           ].map(cs => (
-            <div key={cs.key} style={{ background: HP.white, border: `1.5px solid ${HP.border}`, borderRadius: 14, padding: "24px", cursor: "default", position: "relative" }}>
-              <div style={{ position: "absolute", top: 14, right: 14, fontSize: 9, fontWeight: 700, letterSpacing: .5, padding: "4px 10px", borderRadius: 100, background: "#f1f5f9", color: HP.subtle, border: `1px solid ${HP.border}` }}>Coming Soon</div>
-              <div style={{ width: 44, height: 44, borderRadius: 12, background: HP.brandBg, border: `1px solid ${HP.border}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, marginBottom: 12 }}>{cs.icon}</div>
+            <div key={cs.key} style={{ background: HP.white, border: HP.boxBorder, borderRadius: 14, padding: "24px", cursor: "default", position: "relative" }}>
+              <div style={{ position: "absolute", top: 14, right: 14, fontSize: 9, fontWeight: 700, letterSpacing: .5, padding: "4px 10px", borderRadius: 100, background: "#f1f5f9", color: HP.subtle, border: HP.boxBorder }}>Coming Soon</div>
+              <div style={{ width: 44, height: 44, borderRadius: 12, background: HP.brandBg, border: HP.boxBorder, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, marginBottom: 12 }}>{cs.icon}</div>
               <div style={{ fontSize: 15, fontWeight: 800, color: HP.text, marginBottom: 3, fontFamily: "Figtree,sans-serif" }}>{cs.title}</div>
               <div style={{ fontSize: 10, color: cs.color, fontWeight: 600, marginBottom: 10 }}>{cs.subtitle}</div>
               <div style={{ display: "flex", gap: 6, marginBottom: 14, flexWrap: "wrap" }}>
                 {cs.tags.map(tag => (
-                  <span key={tag} style={{ fontSize: 9, padding: "2px 8px", borderRadius: 8, background: HP.brandBg, border: `1px solid ${HP.border}`, color: HP.muted }}>{tag}</span>
+                  <span key={tag} style={{ fontSize: 9, padding: "2px 8px", borderRadius: 8, background: HP.brandBg, border: HP.boxBorder, color: HP.muted }}>{tag}</span>
                 ))}
               </div>
               <div style={{ fontSize: 11, color: HP.muted, lineHeight: 1.7, marginBottom: 16 }}>{cs.desc}</div>
@@ -2626,24 +2627,24 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
       {comingSoonModal && (
         <div style={{ position: "fixed", inset: 0, background: "rgba(6,30,20,.55)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 1000, padding: 20 }}
           onClick={() => { setComingSoonModal(null); }}>
-          <div style={{ background: HP.white, border: `1px solid ${HP.border}`, borderRadius: 16, padding: "36px", width: 380, maxWidth: "100%", boxShadow: "0 20px 50px rgba(0,0,0,.2)" }} onClick={e => e.stopPropagation()}>
+          <div style={{ background: HP.white, border: HP.boxBorder, borderRadius: 16, padding: "36px", width: 380, maxWidth: "100%", boxShadow: "0 20px 50px rgba(0,0,0,.2)" }} onClick={e => e.stopPropagation()}>
             <div style={{ textAlign: "center", marginBottom: 20 }}>
               <div style={{ fontSize: 40, marginBottom: 12 }}>🚧</div>
               <div style={{ fontSize: 18, fontWeight: 700, color: HP.text, marginBottom: 8, fontFamily: "Figtree,sans-serif" }}>{comingSoonModal.title}</div>
               <div style={{ fontSize: 12, color: HP.muted, lineHeight: 1.7 }}>This programme is coming soon. We're actively building it — register your interest and we'll notify you when it launches.</div>
             </div>
             {notifyDone[comingSoonModal.key] ? (
-              <div style={{ textAlign: "center", padding: "14px", background: HP.greenBg, border: `1px solid ${HP.green}40`, borderRadius: 10, color: HP.green, fontSize: 12, fontWeight: 700 }}>
+              <div style={{ textAlign: "center", padding: "14px", background: HP.greenBg, border: HP.boxBorder, borderRadius: 10, color: HP.green, fontSize: 12, fontWeight: 700 }}>
                 ✓ You're on the list! We'll notify you when it launches.
               </div>
             ) : (
               <button onClick={() => handleNotify(comingSoonModal.key)} disabled={notifyLoading}
-                style={{ width: "100%", padding: "12px", borderRadius: 10, background: HP.brand, border: "none", color: HP.white, fontSize: 13, fontWeight: 700, cursor: "pointer", opacity: notifyLoading ? 0.7 : 1, fontFamily: "Figtree,sans-serif" }}>
+                style={{ width: "100%", padding: "12px", borderRadius: 10, background: HP.brand, border: HP.boxBorder, color: HP.white, fontSize: 13, fontWeight: 700, cursor: "pointer", opacity: notifyLoading ? 0.7 : 1, fontFamily: "Figtree,sans-serif" }}>
                 {notifyLoading ? "Saving…" : "🔔 Notify me when available"}
               </button>
             )}
             <button onClick={() => { setComingSoonModal(null); }}
-              style={{ width: "100%", marginTop: 10, padding: "10px", borderRadius: 10, background: "transparent", border: `1px solid ${HP.border}`, color: HP.muted, fontSize: 12, cursor: "pointer" }}>
+              style={{ width: "100%", marginTop: 10, padding: "10px", borderRadius: 10, background: "transparent", border: HP.boxBorder, color: HP.muted, fontSize: 12, cursor: "pointer" }}>
               Close
             </button>
           </div>
@@ -2754,16 +2755,16 @@ function SetupScreen({ user, onReady }) {
 
   return (
     <div style={{minHeight:"100vh",background:`linear-gradient(145deg,${HP.brandDark} 0%,${HP.brandMid} 42%,${HP.brandBg} 100%)`,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"Inter,system-ui,sans-serif",padding:"24px 16px"}}>
-      <div style={{background:HP.white,borderRadius:16,padding:"36px 32px",width:"100%",maxWidth:440,boxShadow:"0 20px 50px rgba(6,78,59,.22)"}}>
+      <div style={{background:HP.white,border:HP.boxBorder,borderRadius:16,padding:"36px 32px",width:"100%",maxWidth:440,boxShadow:"0 20px 50px rgba(6,78,59,.22)"}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:20}}>
           <div style={{display:"flex",alignItems:"center",gap:10}}>
-            <div style={{width:36,height:36,borderRadius:9,background:HP.brand,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"Figtree,sans-serif",fontWeight:800,fontSize:17,color:HP.white}}>A</div>
+            <div style={{width:36,height:36,borderRadius:9,background:HP.brand,border:HP.boxBorder,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"Figtree,sans-serif",fontWeight:800,fontSize:17,color:HP.white}}>A</div>
             <div style={{fontSize:11,letterSpacing:2,color:HP.brandMid,fontWeight:700}}>ACCREDREADY</div>
           </div>
-          <button onClick={()=>supabase.auth.signOut()} style={{fontSize:12,color:HP.muted,background:"transparent",border:`1px solid ${HP.border}`,borderRadius:8,padding:"5px 12px",cursor:"pointer",fontFamily:"Figtree,sans-serif",fontWeight:600}}>Sign out</button>
+          <button onClick={()=>supabase.auth.signOut()} style={{fontSize:12,color:HP.muted,background:"transparent",border:HP.boxBorder,borderRadius:8,padding:"5px 12px",cursor:"pointer",fontFamily:"Figtree,sans-serif",fontWeight:600}}>Sign out</button>
         </div>
 
-        {error&&<div style={{background:HP.redBg,border:`1px solid ${HP.red}40`,borderRadius:10,padding:"10px 14px",marginBottom:16,fontSize:13,color:HP.red}}>{error}</div>}
+        {error&&<div style={{background:HP.redBg,border:HP.boxBorder,borderRadius:10,padding:"10px 14px",marginBottom:16,fontSize:13,color:HP.red}}>{error}</div>}
 
         {!hospital&&(
           <>
@@ -2773,7 +2774,7 @@ function SetupScreen({ user, onReady }) {
             <div style={{display:"flex",gap:8}}>
               <input value={newHosp} onChange={e=>setNewHosp(e.target.value)} placeholder="e.g. HMP Foundation Hospital" onKeyDown={e=>e.key==="Enter"&&createHospital()}
                 style={{...hpInp,flex:1}}/>
-              <button onClick={createHospital} disabled={!newHosp.trim()} style={{padding:"12px 18px",borderRadius:10,background:HP.brand,border:"none",color:HP.white,fontSize:14,fontWeight:700,cursor:newHosp.trim()?"pointer":"default",opacity:newHosp.trim()?1:0.5,fontFamily:"Figtree,sans-serif",whiteSpace:"nowrap"}}>Create</button>
+              <button onClick={createHospital} disabled={!newHosp.trim()} style={{padding:"12px 18px",borderRadius:10,background:HP.brand,border:HP.boxBorder,color:HP.white,fontSize:14,fontWeight:700,cursor:newHosp.trim()?"pointer":"default",opacity:newHosp.trim()?1:0.5,fontFamily:"Figtree,sans-serif",whiteSpace:"nowrap"}}>Create</button>
             </div>
           </>
         )}
@@ -2793,9 +2794,9 @@ function SetupScreen({ user, onReady }) {
             <div style={{display:"flex",gap:8,marginBottom:16}}>
               <input value={newAss} onChange={e=>setNewAss(e.target.value)} placeholder="Or create new assessment…" onKeyDown={e=>e.key==="Enter"&&createAssessment()}
                 style={{...hpInp,flex:1,fontSize:14}}/>
-              <button onClick={createAssessment} disabled={!newAss.trim()} style={{padding:"10px 16px",borderRadius:10,background:HP.brandBg,border:`1px solid ${HP.brand}40`,color:HP.brand,fontSize:14,fontWeight:700,cursor:"pointer",fontFamily:"Figtree,sans-serif"}}>Add</button>
+              <button onClick={createAssessment} disabled={!newAss.trim()} style={{padding:"10px 16px",borderRadius:10,background:HP.brandBg,border:HP.boxBorder,color:HP.brand,fontSize:14,fontWeight:700,cursor:"pointer",fontFamily:"Figtree,sans-serif"}}>Add</button>
             </div>
-            <button onClick={proceed} disabled={!selAss} style={{width:"100%",padding:"13px",borderRadius:10,background:selAss?HP.brand:HP.border,border:"none",color:selAss?HP.white:HP.subtle,fontSize:15,fontWeight:700,cursor:selAss?"pointer":"default",fontFamily:"Figtree,sans-serif",boxShadow:selAss?"0 2px 8px rgba(6,95,70,.28)":"none"}}>
+            <button onClick={proceed} disabled={!selAss} style={{width:"100%",padding:"13px",borderRadius:10,background:selAss?HP.brand:HP.border,border:HP.boxBorder,color:selAss?HP.white:HP.subtle,fontSize:15,fontWeight:700,cursor:selAss?"pointer":"default",fontFamily:"Figtree,sans-serif",boxShadow:selAss?"0 2px 8px rgba(6,95,70,.28)":"none"}}>
               Open Assessment →
             </button>
           </>
