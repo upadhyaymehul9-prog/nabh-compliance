@@ -82,7 +82,7 @@ node scripts/render-promo-video.js
 
 ## Regenerate AI voiceover (automated)
 
-Uses Microsoft Edge TTS (`en-IN-NeerjaNeural`, Indian English):
+Uses one **continuous narration** at a **uniform pace** (Microsoft Edge TTS `en-IN-NeerjaNeural`) — no per-line speed changes.
 
 ```bash
 pip install edge-tts
@@ -92,7 +92,7 @@ python3 scripts/add-promo-voiceover.py
 Outputs:
 - `marketing/video/output/accredready-promo-1080p-voiced.mp4`
 - `marketing/video/output/accredready-promo-vertical-voiced.mp4`
-- `public/accredready-promo.mp4` — **main file with voice** (replaces silent default)
+- `public/accredready-promo.mp4` — **main file with voice**
 - `public/accredready-promo-silent.mp4` — silent backup
 
-Then re-add voiceover in CapCut using this script again if you prefer a human recording.
+Scene sync is approximate (voice runs smoothly start-to-finish). For frame-perfect sync, record manually in CapCut using the script below.

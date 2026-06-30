@@ -1,71 +1,34 @@
 #!/usr/bin/env python3
-"""Generate Edge TTS voiceover synced to SRT and mux into promo MP4."""
+"""Generate Edge TTS voiceover for promo MP4 — one continuous read, uniform pace."""
 
 from __future__ import annotations
 
 import asyncio
-import re
 import shutil
 import subprocess
 import sys
 import tempfile
-from dataclasses import dataclass
 from pathlib import Path
 
 import edge_tts
 
 ROOT = Path(__file__).resolve().parent.parent
-SRT = ROOT / "marketing/video/accredready-promo.srt"
 OUT_DIR = ROOT / "marketing/video/output"
 PUBLIC = ROOT / "public"
 VOICE = "en-IN-NeerjaNeural"
 VIDEO_DURATION = 37.0
-GAP_BETWEEN_CUES = 0.12  # seconds — prevents back-to-back overlap
+LEAD_IN = 0.3
+TARGET_SPEECH = VIDEO_DURATION - LEAD_IN - 0.15  # room before end card
 
-
-@dataclass
-class Cue:
-    index: int
-    start: float
-    end: float
-    text: str
-
-
-def parse_srt(path: Path) -> list[Cue]:
-    raw = path.read_text(encoding="utf-8").strip()
-    blocks = re.split(r"\n\s*\n", raw)
-    cues: list[Cue] = []
-    for block in blocks:
-        lines = block.strip().splitlines()
-        if len(lines) < 3:
-            continue
-        idx = int(lines[0])
-        start_s, end_s = [p.strip() for p in lines[1].split("-->")]
-        text = " ".join(line.strip() for line in lines[2:])
-        cues.append(Cue(idx, srt_time(start_s), srt_time(end_s), text))
-    return cues
-
-
-def srt_time(value: str) -> float:
-    h, m, rest = value.split(":")
-    s, ms = rest.split(",")
-    return int(h) * 3600 + int(m) * 60 + int(s) + int(ms) / 1000.0
-
-
-def max_segment_duration(cues: list[Cue], index: int) -> float:
-    cue = cues[index]
-    if index + 1 < len(cues):
-        return max(cues[index + 1].start - cue.start - GAP_BETWEEN_CUES, 0.4)
-    return max(VIDEO_DURATION - cue.start - 0.2, 0.4)
-
-
-async def synthesize_all(cues: list[Cue], work: Path) -> None:
-    async def one(cue: Cue) -> None:
-        out = work / f"seg-{cue.index:02d}-raw.mp3"
-        communicate = edge_tts.Communicate(cue.text, VOICE, rate="-5%")
-        await communicate.save(str(out))
-
-    await asyncio.gather(*(one(c) for c in cues))
+# Slightly tightened for 37s at one consistent speaking pace (same meaning)
+FULL_SCRIPT = (
+    "AccredReady — the NABH compliance platform for Indian hospitals and healthcare organisations. "
+    "Most hospitals still use scattered Excel sheets and consultants charging fifty thousand to two lakh rupees or more. "
+    "AccredReady puts everything in one place — score objective elements, rank gaps by priority, log CAPA, and track KPIs, audits, and drills. "
+    "Your live readiness dashboard shows where you stand before the assessor arrives. Export gap reports in one click. "
+    "HCO Full, HCO Entry Level, SHCO Full, SHCO ELC, and ECO — every major NABH programme, one subscription. "
+    "Four hundred ninety-nine rupees a month. Start your free fourteen-day trial at accredready.in — no credit card required."
+)
 
 
 def run(cmd: list[str]) -> None:
@@ -93,7 +56,6 @@ def probe_duration(path: Path) -> float:
 
 
 def atempo_chain(speed: float) -> str:
-    """Build ffmpeg atempo chain (each factor must stay within 0.5–2.0)."""
     filters: list[str] = []
     remaining = speed
     while remaining > 1.01:
@@ -107,70 +69,82 @@ def atempo_chain(speed: float) -> str:
     return ",".join(filters) if filters else "anull"
 
 
-def fit_segment(src: Path, dst: Path, max_duration: float) -> None:
-    duration = probe_duration(src)
-    filters: list[str] = []
-    if duration > max_duration:
-        filters.append(atempo_chain(duration / max_duration))
-    filters.append(f"atrim=0:{max_duration:.3f}")
-    filters.append("asetpts=PTS-STARTPTS")
+async def synthesize(text: str, rate: str, out: Path) -> None:
+    communicate = edge_tts.Communicate(text, VOICE, rate=rate)
+    await communicate.save(str(out))
+
+
+def make_silence(path: Path, duration: float) -> None:
+    run(
+        [
+            "ffmpeg",
+            "-y",
+            "-f",
+            "lavfi",
+            "-i",
+            "anullsrc=r=44100:cl=mono",
+            "-t",
+            f"{duration:.3f}",
+            "-c:a",
+            "libmp3lame",
+            str(path),
+        ]
+    )
+
+
+def build_audio(work: Path) -> Path:
+    """One voice, one speed: TTS rate + single atempo pass to fit the video."""
+    rates = ["+25%", "+28%", "+30%", "+32%", "+33%", "+35%"]
+    raw = work / "narration-raw.mp3"
+    best_rate = rates[0]
+
+    for rate in rates:
+        asyncio.run(synthesize(FULL_SCRIPT, rate, raw))
+        duration = probe_duration(raw)
+        tempo_needed = duration / TARGET_SPEECH
+        print(f"  TTS rate {rate}: {duration:.1f}s → tempo {tempo_needed:.3f}x to fit {TARGET_SPEECH:.1f}s")
+        best_rate = rate
+        if tempo_needed <= 1.08:
+            break
+
+    duration = probe_duration(raw)
+    tempo = duration / TARGET_SPEECH
+    tempo = min(max(tempo, 1.0), 1.13)
+
+    fitted = work / "narration-fit.mp3"
     run(
         [
             "ffmpeg",
             "-y",
             "-i",
-            str(src),
+            str(raw),
             "-af",
-            ",".join(filters),
-            str(dst),
+            f"{atempo_chain(tempo)},loudnorm=I=-14:TP=-1.5:LRA=11",
+            str(fitted),
         ]
     )
+    speech_dur = probe_duration(fitted)
+    print(f"  final: rate={best_rate}, tempo={tempo:.3f}x, speech={speech_dur:.1f}s")
 
+    lead = work / "lead.mp3"
+    make_silence(lead, LEAD_IN)
 
-def build_audio(cues: list[Cue], work: Path) -> Path:
-    asyncio.run(synthesize_all(cues, work))
-
-    fitted: list[Path] = []
-    for i, cue in enumerate(cues):
-        raw = work / f"seg-{cue.index:02d}-raw.mp3"
-        fit = work / f"seg-{cue.index:02d}.mp3"
-        allowed = max_segment_duration(cues, i)
-        fit_segment(raw, fit, allowed)
-        fitted.append(fit)
-        dur = probe_duration(fit)
-        print(f"  cue {cue.index}: start={cue.start:.2f}s max={allowed:.2f}s actual={dur:.2f}s")
-
-    inputs: list[str] = []
-    filter_parts: list[str] = []
-    mix_labels: list[str] = []
-
-    for i, (cue, seg) in enumerate(zip(cues, fitted)):
-        inputs.extend(["-i", str(seg)])
-        delay_ms = int(cue.start * 1000)
-        label = f"v{i}"
-        # Segment already trimmed — delay places it; no overlap possible
-        filter_parts.append(f"[{i}:a]adelay={delay_ms}|{delay_ms}[{label}]")
-        mix_labels.append(f"[{label}]")
+    concat_list = work / "concat.txt"
+    concat_list.write_text(f"file '{lead}'\nfile '{fitted}'\n", encoding="utf-8")
 
     mixed = work / "voiceover.m4a"
-    n = len(cues)
-    filter_complex = (
-        ";".join(filter_parts)
-        + ";"
-        + "".join(mix_labels)
-        + f"amix=inputs={n}:duration=longest:dropout_transition=0:normalize=0,"
-        f"atrim=0:{VIDEO_DURATION},asetpts=PTS-STARTPTS,"
-        f"loudnorm=I=-14:TP=-1.5:LRA=11[aout]"
-    )
     run(
         [
             "ffmpeg",
             "-y",
-            *inputs,
-            "-filter_complex",
-            filter_complex,
-            "-map",
-            "[aout]",
+            "-f",
+            "concat",
+            "-safe",
+            "0",
+            "-i",
+            str(concat_list),
+            "-af",
+            f"apad=pad_dur={VIDEO_DURATION},atrim=0:{VIDEO_DURATION}",
             "-c:a",
             "aac",
             "-b:a",
@@ -183,7 +157,7 @@ def build_audio(cues: list[Cue], work: Path) -> Path:
 
     saved = OUT_DIR / "accredready-promo-voiceover.m4a"
     shutil.copy(mixed, saved)
-    print(f"✓ {saved}")
+    print(f"✓ {saved} ({probe_duration(saved):.1f}s)")
     return mixed
 
 
@@ -217,7 +191,6 @@ def mux_video(video_in: Path, audio: Path, video_out: Path) -> None:
 
 
 def ensure_silent_backups() -> None:
-    """Keep one silent copy — never overwrite from a voiced file."""
     PUBLIC.mkdir(exist_ok=True)
     silent_h = PUBLIC / "accredready-promo-silent.mp4"
     silent_v = PUBLIC / "accredready-promo-vertical-silent.mp4"
@@ -232,7 +205,6 @@ def ensure_silent_backups() -> None:
 def publish_voiced_videos(voiced: dict[str, Path]) -> None:
     PUBLIC.mkdir(exist_ok=True)
     ensure_silent_backups()
-
     shutil.copy(voiced["horizontal"], PUBLIC / "accredready-promo.mp4")
     shutil.copy(voiced["vertical"], PUBLIC / "accredready-promo-vertical.mp4")
     shutil.copy(voiced["horizontal"], PUBLIC / "accredready-promo-1080p-with-voice.mp4")
@@ -243,16 +215,12 @@ def main() -> int:
     if shutil.which("ffmpeg") is None:
         print("ffmpeg is required", file=sys.stderr)
         return 1
-    if not SRT.exists():
-        print(f"Missing SRT: {SRT}", file=sys.stderr)
-        return 1
 
-    cues = parse_srt(SRT)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     with tempfile.TemporaryDirectory(prefix="promo-voice-") as tmp:
         work = Path(tmp)
-        audio = build_audio(cues, work)
+        audio = build_audio(work)
 
         sources = {
             "horizontal": OUT_DIR / "accredready-promo-1080p.mp4",
@@ -275,7 +243,7 @@ def main() -> int:
 
         if voiced:
             publish_voiced_videos(voiced)
-            print("✓ public/accredready-promo.mp4 now includes voiceover")
+            print("✓ public/accredready-promo.mp4 updated")
 
     print("\nDone.")
     return 0
