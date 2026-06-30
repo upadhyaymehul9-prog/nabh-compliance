@@ -2075,7 +2075,7 @@ function LoginScreen({ onLogin, initialError }) {
         if(whatsapp.trim()&&data.user&&data.session){await supabase.from("profiles").upsert({id:data.user.id,whatsapp_number:whatsapp.trim()},{onConflict:"id"});}
         await fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({access_key:"2aaadfc3-c669-4b2b-92b8-6d6bee4faee1",subject:"New AccredReady Signup",name:"New User",email,message:`New signup:\nEmail: ${email}${whatsapp.trim()?`\nWhatsApp: ${whatsapp.trim()}`:""}`,})});
         if(data.session)onLogin(data.user);else{setMsg("Account created. You can now sign in.");setMode("login");}}
-      else if(mode==="reset"){if(!email.trim())throw new Error("Enter your email address first.");const{error:err}=await supabase.auth.resetPasswordForEmail(email,{redirectTo:"https://upadhyaymehul9-prog.github.io/nabh-compliance/"});if(err)throw err;setMsg("Password reset email sent! Check your inbox.");setMode("login");}
+      else if(mode==="reset"){if(!email.trim())throw new Error("Enter your email address first.");const{error:err}=await supabase.auth.resetPasswordForEmail(email,{redirectTo:"https://accredready.in"});if(err)throw err;setMsg("Password reset email sent! Check your inbox.");setMode("login");}
     }catch(e){setError(e.message);}
     setLoading(false);
   };
@@ -2518,13 +2518,20 @@ function SetupScreen({ user, onReady }) {
 
   const init=async()=>{
     setLoading(true);
-    const{data:existingProf}=await supabase.from("profiles").select("id,hospital_id").eq("id",user.id).maybeSingle();
-    if(!existingProf){await supabase.from("profiles").insert({id:user.id});}
-    if(existingProf&&!existingProf.hospital_id){
-      const{data:orphan}=await supabase.from("hospitals").select("id").eq("created_by",user.id).limit(1).maybeSingle();
-      if(orphan){await supabase.from("profiles").update({hospital_id:orphan.id,role:"admin"}).eq("id",user.id);}
+    let{data:prof}=await supabase.from("profiles").select("id,hospital_id").eq("id",user.id).maybeSingle();
+    if(!prof){
+      await supabase.from("profiles").insert({id:user.id});
+      prof={id:user.id,hospital_id:null};
     }
-    const{data:hosp}=await supabase.from("hospitals").select("*").limit(1).single();
+    if(!prof.hospital_id){
+      const{data:orphan}=await supabase.from("hospitals").select("id").eq("created_by",user.id).limit(1).maybeSingle();
+      if(orphan){
+        await supabase.from("profiles").update({hospital_id:orphan.id,role:"admin"}).eq("id",user.id);
+        prof={...prof,hospital_id:orphan.id};
+      }
+    }
+    if(!prof.hospital_id){setLoading(false);return;}
+    const{data:hosp}=await supabase.from("hospitals").select("*").eq("id",prof.hospital_id).single();
     if(hosp){
       setHospital(hosp);
       const{data:ass}=await supabase.from("assessments").select("*").eq("hospital_id",hosp.id).order("created_at",{ascending:false});
