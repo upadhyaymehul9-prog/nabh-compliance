@@ -80,4 +80,18 @@ After CapCut export, upload to:
 node scripts/render-promo-video.js
 ```
 
-Then re-add voiceover in CapCut using this script again.
+## Regenerate AI voiceover (automated)
+
+Uses Microsoft Edge TTS (`en-IN-NeerjaNeural`, Indian English):
+
+```bash
+pip install edge-tts
+python3 scripts/add-promo-voiceover.py
+```
+
+Outputs:
+- `marketing/video/output/accredready-promo-1080p-voiced.mp4`
+- `marketing/video/output/accredready-promo-vertical-voiced.mp4`
+- `public/accredready-promo-1080p-with-voice.mp4` (for deploy)
+
+Then re-add voiceover in CapCut using this script again if you prefer a human recording.
