@@ -8,7 +8,7 @@ import HomepageScreen from "./components/HomepageScreen";
 const supabase = createClient(
   "https://tbptllgcjtiiqspxqcde.supabase.co",
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRicHRsbGdjanRpaXFzcHhxY2RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY2NjkzNjAsImV4cCI6MjA5MjI0NTM2MH0.4CPgNp6ytVNRmTU0FJbu2io94QJmsAow5im-vGtoRAU",
-  { auth: { flowType: "pkce", detectSessionInUrl: true, persistSession: true, autoRefreshToken: true } }
+  { auth: { flowType: "implicit", detectSessionInUrl: true, persistSession: true, autoRefreshToken: true } }
 );
 
 // ── SHCO ELC Static Data ─────────────────────────────────────────────────
@@ -7390,6 +7390,20 @@ export default function App() {
   const [authErrorMsg,setAuthErrorMsg]=useState("");
 
   useEffect(()=>{
+    let cancelled=false;
+
+    const finishSignedIn=(sessionUser)=>{
+      if(cancelled||!sessionUser)return;
+      setUser(sessionUser);
+      setAuthState(s=>s==="recovery"?s:"setup");
+    };
+    const finishSignedOut=()=>{
+      if(cancelled)return;
+      setUser(null);
+      setAuthState(s=>s==="recovery"?s:"homepage");
+      setContext(null);
+    };
+
     // Detect auth error fragment in URL (e.g., expired/invalid recovery link)
     // This MUST run before any session check — an expired link with an active session
     // would otherwise silently land on dashboard, hiding the error from the user.
@@ -7427,6 +7441,41 @@ export default function App() {
       });
       return;
     }
+
+    const bootstrapAuth=async()=>{
+      // Google OAuth returns tokens in the URL hash (implicit grant). When flowType is
+      // "pkce" the client rejects that callback and never writes localStorage. Capture
+      // the callback explicitly; also handles PKCE ?code= redirects when configured.
+      const hashParams=new URLSearchParams(window.location.hash.startsWith("#")?window.location.hash.slice(1):"");
+      const accessToken=hashParams.get("access_token");
+      const refreshToken=hashParams.get("refresh_token");
+      if(accessToken&&refreshToken){
+        const{data,error}=await supabase.auth.setSession({access_token:accessToken,refresh_token:refreshToken});
+        if(!cancelled){
+          if(!error&&data.session?.user){
+            window.history.replaceState(null,"",window.location.pathname+window.location.search);
+            finishSignedIn(data.session.user);
+            return;
+          }
+        }
+      }
+      const authCode=new URLSearchParams(window.location.search).get("code");
+      if(authCode){
+        const{data,error}=await supabase.auth.exchangeCodeForSession(authCode);
+        if(!cancelled){
+          if(!error&&data.session?.user){
+            window.history.replaceState(null,"",window.location.pathname);
+            finishSignedIn(data.session.user);
+            return;
+          }
+        }
+      }
+      const{data:{session}}=await supabase.auth.getSession();
+      if(cancelled)return;
+      if(session?.user)finishSignedIn(session.user);
+      else finishSignedOut();
+    };
+
     const{data:{subscription}}=supabase.auth.onAuthStateChange((event,session)=>{
       if(event==="PASSWORD_RECOVERY"){
         if(session?.user)setUser(session.user);
@@ -7434,15 +7483,14 @@ export default function App() {
         return;
       }
       if(session?.user){
-        setUser(session.user);
-        setAuthState(s=>s==="recovery"?s:"setup");
-      } else {
-        setUser(null);
-        setAuthState(s=>s==="recovery"?s:"homepage");
-        setContext(null);
+        finishSignedIn(session.user);
+      }else if(event!=="INITIAL_SESSION"){
+        finishSignedOut();
       }
+      // INITIAL_SESSION with null: bootstrapAuth resolves auth state after URL exchange
     });
-    return()=>subscription.unsubscribe();
+    bootstrapAuth();
+    return()=>{cancelled=true;subscription.unsubscribe();};
   },[]);
 
   // Show #resources-section only on the homepage
