@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 
+const YOUTUBE_PROMO_ID = "de3TKt7LfT8";
+const YOUTUBE_PROMO_URL = `https://www.youtube.com/watch?v=${YOUTUBE_PROMO_ID}`;
+
 export default function HomepageScreen({ onSignIn }) {
   const [openPersons, setOpenPersons] = useState([false, false, false]);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -199,7 +202,7 @@ export default function HomepageScreen({ onSignIn }) {
         }
         @media(max-width:960px) {
           #hp-root .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-          #hp-root .hero-mockup { max-width: 480px; width: 100%; margin: 0 auto; justify-self: center; }
+          #hp-root .hero-mockup, #hp-root .hero-video { max-width: 480px; width: 100%; margin: 0 auto; justify-self: center; }
         }
         @media(max-width:768px) { #hp-root .hero-inner { padding: 64px 20px 56px; } }
         #hp-root .hero-badge {
@@ -259,6 +262,27 @@ export default function HomepageScreen({ onSignIn }) {
         #hp-root .mock-sev.high { background: rgba(239,68,68,.25); color: #FCA5A5; }
         #hp-root .mock-sev.med  { background: rgba(245,158,11,.2);  color: #FCD34D; }
         #hp-root .mock-sev.low  { background: rgba(6,95,70,.4);     color: #6EE7B7; }
+
+        /* ── HERO VIDEO (YouTube) ── */
+        #hp-root .hero-video {
+          background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14);
+          border-radius: 18px; overflow: hidden;
+          backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+          box-shadow: 0 8px 32px rgba(0,0,0,.25);
+          width: 100%; max-width: 520px; justify-self: end;
+        }
+        #hp-root .hero-video-cap {
+          padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,.1);
+          background: rgba(0,0,0,.15);
+          font-family: 'Figtree', sans-serif; font-size: 11.5px; font-weight: 700;
+          letter-spacing: .08em; text-transform: uppercase; color: #5EEAD4;
+          display: flex; align-items: center; gap: 8px;
+        }
+        #hp-root .hero-video-cap i { font-size: 16px; }
+        #hp-root .hero-video-inner { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; background: #000; }
+        #hp-root .hero-video-inner iframe {
+          position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+        }
 
         /* ── TRUST BAR ── */
         #hp-root .trust-bar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 16px 0; }
@@ -467,6 +491,9 @@ export default function HomepageScreen({ onSignIn }) {
               <a className="btn btn-ghost-white btn-lg" href="#features">
                 See How It Works <i className="ti ti-arrow-down" aria-hidden="true"></i>
               </a>
+              <a className="btn btn-ghost-white btn-lg" href={YOUTUBE_PROMO_URL} target="_blank" rel="noopener noreferrer">
+                <i className="ti ti-brand-youtube" aria-hidden="true"></i> Watch Video
+              </a>
             </div>
             <div className="hero-app">
               <span className="hero-app-label">Also available on Android</span>
@@ -497,51 +524,19 @@ export default function HomepageScreen({ onSignIn }) {
             </div>
           </div>
 
-          <div className="hero-mockup" aria-hidden="true">
-            <div className="mock-titlebar">
-              <span className="mock-dot"></span>
-              <span className="mock-dot"></span>
-              <span className="mock-dot"></span>
-              <span className="mock-url-bar">AccredReady · HCO Full Accreditation</span>
+          <div className="hero-video" id="promo-video">
+            <div className="hero-video-cap">
+              <i className="ti ti-player-play" aria-hidden="true"></i>
+              2-min product overview
             </div>
-            <div className="mock-body">
-              <div className="mock-prog-label">Live Readiness Dashboard</div>
-              <div className="mock-score-row">
-                <div className="mock-stat-card">
-                  <div className="mock-stat-val green">72%</div>
-                  <div className="mock-stat-lbl">Score</div>
-                </div>
-                <div className="mock-stat-card">
-                  <div className="mock-stat-val yellow">18</div>
-                  <div className="mock-stat-lbl">Open Gaps</div>
-                </div>
-                <div className="mock-stat-card">
-                  <div className="mock-stat-val teal">9</div>
-                  <div className="mock-stat-lbl">Closed</div>
-                </div>
-              </div>
-              <div className="mock-progress-wrap">
-                <div className="mock-progress-head">
-                  <span>Overall readiness</span>
-                  <span>72 / 100</span>
-                </div>
-                <div className="mock-bar-track">
-                  <div className="mock-bar-fill"></div>
-                </div>
-              </div>
-              <div className="mock-gaps-title">Top Priority Gaps</div>
-              <div className="mock-gap-item">
-                <span className="mock-sev high">High</span>
-                <span>Patient Rights &amp; Education (Ch. 7)</span>
-              </div>
-              <div className="mock-gap-item">
-                <span className="mock-sev med">Med</span>
-                <span>Infection Control Protocols (Ch. 3)</span>
-              </div>
-              <div className="mock-gap-item">
-                <span className="mock-sev low">Low</span>
-                <span>Quality Improvement Programme (Ch. 10)</span>
-              </div>
+            <div className="hero-video-inner">
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_PROMO_ID}?rel=0&modestbranding=1`}
+                title="AccredReady — NABH Compliance Software for Hospitals"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
