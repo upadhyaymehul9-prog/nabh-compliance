@@ -1,0 +1,28 @@
+name: LinkedIn daily post
+
+on:
+  schedule:
+    # 03:30 UTC = 09:00 IST
+    - cron: "30 3 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Preview today's post
+        run: python3 scripts/linkedin/daily_post.py --dry-run
+
+      - name: Publish to LinkedIn company page
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_ORG_ID: "135244094"
+        run: |
+          if [ -z "$LINKEDIN_ACCESS_TOKEN" ]; then
+            echo "LINKEDIN_ACCESS_TOKEN not set — skipping publish."
+            echo "Add secret in GitHub Settings → Secrets → Actions"
+            exit 0
+          fi
+          python3 scripts/linkedin/daily_post.py --post

@@ -1,0 +1,98 @@
+{
+  "timezone": "Asia/Kolkata",
+  "default_post_hour": 9,
+  "notes": "Rotates daily. Video posts use YouTube link (native upload needs extra API scope). Same video repeats only on days marked type=video — typically 2x per week.",
+  "posts": [
+    {
+      "id": "d01-tip-excel",
+      "type": "text",
+      "text": "Most NABH quality teams still track readiness in Excel.\n\nThe problem is not the spreadsheet — it is that scores, gaps, KPIs, and audit evidence live in different files. Before every assessment, someone spends days reconciling numbers that should already be connected.\n\nAccredReady puts scoring, gap analysis, KPIs, audits, and mock drills in one workspace — built by a practising hospital quality manager.\n\nTry free: https://accredready.in\n\n#NABH #HospitalManagement #HealthcareQuality #AccredReady"
+    },
+    {
+      "id": "d02-video-promo",
+      "type": "video_link",
+      "text": "2-minute overview — how AccredReady helps Indian hospitals prepare for NABH accreditation.\n\nScore objective elements. Run gap analysis. Track KPIs and audits. One platform from ₹499/month.\n\nWatch the demo, then start your free trial — no credit card required.",
+      "link": "https://www.youtube.com/watch?v=de3TKt7LfT8",
+      "link_title": "AccredReady — NABH Compliance Software for Hospitals",
+      "link_description": "NABH compliance platform for HCO, SHCO, ELC & ECO programmes. 14-day free trial."
+    },
+    {
+      "id": "d03-tip-ot",
+      "type": "text",
+      "text": "NABH assessors in the OT do not only check equipment — they check the system.\n\nSilenced monitor alarms, post-surgery checklist backdating, and expired defibrillator pads are recurring audit findings. Functional machines plus documented protocols plus real-time records = true compliance.\n\nTrack gaps by chapter before the assessor arrives: https://accredready.in\n\n#NABH #PatientSafety #OperationTheater #AccredReady"
+    },
+    {
+      "id": "d04-learn-gap",
+      "type": "article",
+      "text": "How to run a NABH gap analysis without losing a week to spreadsheets.\n\nOur free guide walks through scoring objective elements, prioritising CORE gaps, and preparing evidence — step by step for hospital quality teams.",
+      "link": "https://accredready.in/learn/nabh-gap-analysis.html",
+      "link_title": "NABH Gap Analysis Checklist for Hospitals",
+      "link_description": "Step-by-step gap analysis guide for Indian hospitals preparing for NABH."
+    },
+    {
+      "id": "d05-tip-kpi",
+      "type": "text",
+      "text": "KPI tracking fails when the quality team calculates manually and spots trends late.\n\nEnter data once. See trends automatically. Walk into the audit knowing where each indicator stands — not scrambling the week before.\n\nAccredReady includes KPI calculators with source references mapped for your team.\n\nStart free: https://accredready.in\n\n#NABH #QualityManagement #HospitalAdministration"
+    },
+    {
+      "id": "d06-learn-programmes",
+      "type": "article",
+      "text": "HCO Full, SHCO, ELC, or ECO — which NABH programme fits your organisation?\n\nWe published a comparison guide for hospital administrators and quality managers evaluating their accreditation path.",
+      "link": "https://accredready.in/learn/nabh-programmes-comparison.html",
+      "link_title": "NABH Programmes Compared — HCO vs SHCO vs ECO vs ELC",
+      "link_description": "Compare NABH accreditation programmes for Indian hospitals."
+    },
+    {
+      "id": "d07-video-promo",
+      "type": "video_link",
+      "text": "Built inside hospital operations — not from a slide deck.\n\nAccredReady is NABH compliance software for Indian hospitals: gaps, KPIs, CAPA, audits, and readiness scoring in one place.\n\nSee it in 2 minutes ↓",
+      "link": "https://www.youtube.com/watch?v=de3TKt7LfT8",
+      "link_title": "AccredReady Product Demo (YouTube)",
+      "link_description": "₹499/month · 14-day free trial · accredready.in"
+    },
+    {
+      "id": "d08-tip-consultant",
+      "type": "text",
+      "text": "Consultants add value for strategy and mock surveys. Software adds value every week between visits.\n\nThe hospitals moving fastest use both: expert guidance for interpretation, and a platform that keeps OE scoring, gaps, and KPIs current year-round.\n\nAccredReady: ₹499/month per hospital. Try free at https://accredready.in\n\n#NABH #HealthcareInnovation #AccredReady"
+    },
+    {
+      "id": "d09-learn-timeline",
+      "type": "article",
+      "text": "How long does NABH accreditation actually take?\n\nTimelines vary by programme and hospital size. Our guide breaks down realistic preparation phases so quality managers can plan assessor readiness.",
+      "link": "https://accredready.in/learn/nabh-accreditation-timeline.html",
+      "link_title": "NABH Accreditation Timeline for Hospitals",
+      "link_description": "Realistic NABH preparation timelines for Indian hospitals."
+    },
+    {
+      "id": "d10-tip-shco",
+      "type": "text",
+      "text": "Small hospitals often assume NABH is only for large multi-specialty centres.\n\nSHCO and Entry Level programmes exist for a reason — structured quality improvement at a scale that fits nursing homes, day-care centres, and smaller facilities.\n\nAccredReady supports multiple NABH programmes in one subscription.\n\nhttps://accredready.in\n\n#SHCO #NABH #HealthcareQuality"
+    },
+    {
+      "id": "d11-blog-audit",
+      "type": "article",
+      "text": "Internal audit season does not have to mean last-minute folder hunts.\n\nOur checklist covers what to verify before the assessor arrives — and how to keep evidence mapped to objective elements year-round.",
+      "link": "https://accredready.in/blog/nabh-internal-audit-checklist.html",
+      "link_title": "NABH Internal Audit Checklist",
+      "link_description": "Practical internal audit preparation for hospital quality teams."
+    },
+    {
+      "id": "d12-tip-trial",
+      "type": "text",
+      "text": "Quality managers: if you are evaluating NABH software, ask three questions:\n\n1. Does it cover your programme (HCO / SHCO / ELC / ECO)?\n2. Can you score OEs and see gaps ranked by priority?\n3. Does it track KPIs and audits — not just documents?\n\nAccredReady checks all three. 14-day free trial, no credit card: https://accredready.in\n\n#NABH #HospitalQuality"
+    },
+    {
+      "id": "d13-video-promo",
+      "type": "video_link",
+      "text": "New to AccredReady? Start here.\n\nA short walkthrough of the platform Indian hospitals use for NABH readiness — scoring, gaps, KPIs, and audits.\n\nFree trial: https://accredready.in",
+      "link": "https://www.youtube.com/watch?v=de3TKt7LfT8",
+      "link_title": "AccredReady — NABH Compliance Platform",
+      "link_description": "Watch the 2-minute product overview on YouTube."
+    },
+    {
+      "id": "d14-founder",
+      "type": "text",
+      "text": "I built AccredReady after 15+ years in hospital operations — because the gap between NABH standards and daily ward reality is too wide for Excel alone.\n\nIf you lead quality at an Indian hospital, I would value your feedback on what would make your next audit cycle easier.\n\nTry the platform free: https://accredready.in\nConnect with me for a walkthrough.\n\n#NABH #HealthcareLeadership #AccredReady #BuiltInIndia"
+    }
+  ]
+}

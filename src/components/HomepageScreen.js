@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 const YOUTUBE_PROMO_ID = "de3TKt7LfT8";
 const YOUTUBE_PROMO_URL = `https://www.youtube.com/watch?v=${YOUTUBE_PROMO_ID}`;
 const FOUNDER_LINKEDIN_URL = "https://www.linkedin.com/in/dr-mehul-upadhyay-039a07197";
+const COMPANY_LINKEDIN_URL = "https://www.linkedin.com/company/135244094/";
 
 export default function HomepageScreen({ onSignIn }) {
   const [openPersons, setOpenPersons] = useState([false, false, false]);
@@ -686,8 +687,11 @@ export default function HomepageScreen({ onSignIn }) {
                 <p>AccredReady was built out of that direct, on-ground experience: the documentation burden, the audit cycles, and the gap between a standard's written requirement and a hospital's day-to-day reality. The platform reflects what accreditation actually looks like from inside a hospital, not from outside it.</p>
                 <p className="meta-line"><b>Current role:</b> Head of Medical Services &amp; Operations, HMP Foundation (Reliance) · <b>Based in:</b> Ankleshwar, Gujarat · <b>Also:</b> IIM Kozhikode — Healthcare Management &amp; AI</p>
                 <p className="meta-line founder-links">
+                  <a href={COMPANY_LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
+                    <i className="ti ti-brand-linkedin" aria-hidden="true"></i> AccredReady on LinkedIn
+                  </a>
                   <a href={FOUNDER_LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
-                    <i className="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn profile
+                    <i className="ti ti-user" aria-hidden="true"></i> Founder profile
                   </a>
                   <a href={YOUTUBE_PROMO_URL} target="_blank" rel="noopener noreferrer">
                     <i className="ti ti-brand-youtube" aria-hidden="true"></i> Product video
@@ -905,6 +909,7 @@ export default function HomepageScreen({ onSignIn }) {
         <div className="wrap">
           <span>© 2026 AccredReady — NABH Compliance Platform · MK Tech</span>
           <div className="footer-links">
+            <a href={COMPANY_LINKEDIN_URL} target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="mailto:doctor@accredready.in">Contact</a>
             <a href="/terms.html">Terms</a>
             <a href="/privacy.html">Privacy</a>
