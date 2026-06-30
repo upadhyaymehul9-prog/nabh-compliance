@@ -857,9 +857,9 @@ export default function HomepageScreen({ onSignIn }) {
         <div className="wrap">
           <span>© 2026 AccredReady — NABH Compliance Platform · MK Tech</span>
           <div className="footer-links">
-            <a href="/contact">Contact</a>
-            <a href="/terms">Terms</a>
-            <a href="/privacy">Privacy</a>
+            <a href="mailto:doctor@accredready.in">Contact</a>
+            <a href="/terms.html">Terms</a>
+            <a href="/privacy.html">Privacy</a>
           </div>
         </div>
       </footer>
