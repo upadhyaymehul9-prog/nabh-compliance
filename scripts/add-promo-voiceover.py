@@ -20,6 +20,7 @@ OUT_DIR = ROOT / "marketing/video/output"
 PUBLIC = ROOT / "public"
 VOICE = "en-IN-NeerjaNeural"
 VIDEO_DURATION = 37.0
+GAP_BETWEEN_CUES = 0.12  # seconds — prevents back-to-back overlap
 
 
 @dataclass
@@ -49,6 +50,13 @@ def srt_time(value: str) -> float:
     h, m, rest = value.split(":")
     s, ms = rest.split(",")
     return int(h) * 3600 + int(m) * 60 + int(s) + int(ms) / 1000.0
+
+
+def max_segment_duration(cues: list[Cue], index: int) -> float:
+    cue = cues[index]
+    if index + 1 < len(cues):
+        return max(cues[index + 1].start - cue.start - GAP_BETWEEN_CUES, 0.4)
+    return max(VIDEO_DURATION - cue.start - 0.2, 0.4)
 
 
 async def synthesize_all(cues: list[Cue], work: Path) -> None:
@@ -84,20 +92,36 @@ def probe_duration(path: Path) -> float:
     return float(probe.stdout.strip())
 
 
+def atempo_chain(speed: float) -> str:
+    """Build ffmpeg atempo chain (each factor must stay within 0.5–2.0)."""
+    filters: list[str] = []
+    remaining = speed
+    while remaining > 1.01:
+        step = min(remaining, 2.0)
+        filters.append(f"atempo={step:.4f}")
+        remaining /= step
+    while remaining < 0.99:
+        step = max(remaining, 0.5)
+        filters.append(f"atempo={step:.4f}")
+        remaining /= step
+    return ",".join(filters) if filters else "anull"
+
+
 def fit_segment(src: Path, dst: Path, max_duration: float) -> None:
     duration = probe_duration(src)
-    if duration <= max_duration or max_duration <= 0:
-        shutil.copy(src, dst)
-        return
-    speed = min(duration / max_duration, 1.35)
+    filters: list[str] = []
+    if duration > max_duration:
+        filters.append(atempo_chain(duration / max_duration))
+    filters.append(f"atrim=0:{max_duration:.3f}")
+    filters.append("asetpts=PTS-STARTPTS")
     run(
         [
             "ffmpeg",
             "-y",
             "-i",
             str(src),
-            "-filter:a",
-            f"atempo={speed:.4f}",
+            "-af",
+            ",".join(filters),
             str(dst),
         ]
     )
@@ -107,12 +131,14 @@ def build_audio(cues: list[Cue], work: Path) -> Path:
     asyncio.run(synthesize_all(cues, work))
 
     fitted: list[Path] = []
-    for cue in cues:
+    for i, cue in enumerate(cues):
         raw = work / f"seg-{cue.index:02d}-raw.mp3"
         fit = work / f"seg-{cue.index:02d}.mp3"
-        slot = max(cue.end - cue.start, 0.5)
-        fit_segment(raw, fit, slot)
+        allowed = max_segment_duration(cues, i)
+        fit_segment(raw, fit, allowed)
         fitted.append(fit)
+        dur = probe_duration(fit)
+        print(f"  cue {cue.index}: start={cue.start:.2f}s max={allowed:.2f}s actual={dur:.2f}s")
 
     inputs: list[str] = []
     filter_parts: list[str] = []
@@ -121,18 +147,18 @@ def build_audio(cues: list[Cue], work: Path) -> Path:
     for i, (cue, seg) in enumerate(zip(cues, fitted)):
         inputs.extend(["-i", str(seg)])
         delay_ms = int(cue.start * 1000)
-        label = f"a{i}"
+        label = f"v{i}"
+        # Segment already trimmed — delay places it; no overlap possible
         filter_parts.append(f"[{i}:a]adelay={delay_ms}|{delay_ms}[{label}]")
         mix_labels.append(f"[{label}]")
 
     mixed = work / "voiceover.m4a"
     n = len(cues)
-    # normalize=0 avoids amix dividing volume across all inputs
     filter_complex = (
         ";".join(filter_parts)
         + ";"
         + "".join(mix_labels)
-        + f"amix=inputs={n}:duration=longest:dropout_transition=0:normalize=0,"
+        + f"amix=inputs={n}:duration=first:dropout_transition=0:normalize=0,"
         f"apad=pad_dur={VIDEO_DURATION},"
         f"loudnorm=I=-14:TP=-1.5:LRA=11[aout]"
     )
@@ -190,15 +216,22 @@ def mux_video(video_in: Path, audio: Path, video_out: Path) -> None:
     )
 
 
+def ensure_silent_backups() -> None:
+    """Keep one silent copy — never overwrite from a voiced file."""
+    PUBLIC.mkdir(exist_ok=True)
+    silent_h = PUBLIC / "accredready-promo-silent.mp4"
+    silent_v = PUBLIC / "accredready-promo-vertical-silent.mp4"
+    src_h = OUT_DIR / "accredready-promo-1080p.mp4"
+    src_v = OUT_DIR / "accredready-promo-vertical.mp4"
+    if not silent_h.exists() and src_h.exists():
+        shutil.copy(src_h, silent_h)
+    if not silent_v.exists() and src_v.exists():
+        shutil.copy(src_v, silent_v)
+
+
 def publish_voiced_videos(voiced: dict[str, Path]) -> None:
     PUBLIC.mkdir(exist_ok=True)
-
-    silent_h = PUBLIC / "accredready-promo.mp4"
-    silent_v = PUBLIC / "accredready-promo-vertical.mp4"
-    if silent_h.exists():
-        shutil.copy(silent_h, PUBLIC / "accredready-promo-silent.mp4")
-    if silent_v.exists():
-        shutil.copy(silent_v, PUBLIC / "accredready-promo-vertical-silent.mp4")
+    ensure_silent_backups()
 
     shutil.copy(voiced["horizontal"], PUBLIC / "accredready-promo.mp4")
     shutil.copy(voiced["vertical"], PUBLIC / "accredready-promo-vertical.mp4")
