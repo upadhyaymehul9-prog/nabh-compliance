@@ -2288,50 +2288,175 @@ function TermsScreen({onBack}){return(
 function OnboardingScreen({ hospitalName, onDone }) {
   const [nabh_status, setNabhStatus] = useState("");
 
+  useEffect(() => {
+    if (!document.querySelector('link[data-onboard-figtree]')) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.setAttribute('data-onboard-figtree', '1');
+      link.href = 'https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap';
+      document.head.appendChild(link);
+    }
+  }, []);
+
   const NABH_STATUSES = [
-    { id: "exploring",   icon: "🔍", label: "Just Exploring",       desc: "Want to understand NABH requirements" },
-    { id: "preparing",   icon: "📋", label: "Preparing to Apply",   desc: "Planning to apply within 6–12 months" },
-    { id: "applied",     icon: "📨", label: "Application Submitted", desc: "Already submitted NABH application" },
-    { id: "assessment",  icon: "🏥", label: "Assessment Scheduled",  desc: "Assessors visiting soon" },
-    { id: "consultant",  icon: "🤝", label: "NABH Consultant",       desc: "Managing multiple hospitals" },
+    { id: "exploring",  icon: "ti-search",          label: "Just Exploring",        desc: "Understanding NABH requirements and programmes" },
+    { id: "preparing",  icon: "ti-clipboard-check", label: "Preparing to Apply",    desc: "Planning to apply within the next 6–12 months" },
+    { id: "applied",    icon: "ti-mail-forward",    label: "Application Submitted", desc: "NABH application already submitted to the portal" },
+    { id: "assessment", icon: "ti-building-hospital", label: "Assessment Scheduled", desc: "Assessors visiting soon — final prep mode" },
+    { id: "consultant", icon: "ti-users",           label: "NABH Consultant",       desc: "Managing accreditation for multiple hospitals" },
   ];
 
+  const displayName = hospitalName?.trim();
+  const welcomeTitle = displayName && displayName.toLowerCase() !== "new"
+    ? `Welcome, ${displayName}`
+    : "Welcome to AccredReady";
+
   return (
-    <div style={{ minHeight: "100vh", background: T.bg, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Segoe UI,system-ui,sans-serif", padding: 16 }}>
-      <div style={{ background: T.panel, border: `1px solid ${T.border}`, borderRadius: 16, padding: "36px", width: 460, maxWidth: "100%" }}>
-        <div style={{ marginBottom: 24 }}>
-          <div style={{ fontSize: 8, letterSpacing: 3, color: T.gold, marginBottom: 8 }}>ACCREDREADY · SETUP</div>
-          <div style={{ fontSize: 20, fontWeight: 700, color: T.white, marginBottom: 4 }}>Welcome, {hospitalName}! 🎉</div>
-          <div style={{ fontSize: 11, color: T.muted, lineHeight: 1.6 }}>One quick question to personalise your experience.</div>
-        </div>
+    <div style={{
+      minHeight: "100vh",
+      background: `linear-gradient(145deg, ${HP.brandDark} 0%, ${HP.brandMid} 42%, ${HP.brandBg} 100%)`,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontFamily: "Inter, system-ui, sans-serif",
+      padding: "24px 16px",
+      position: "relative",
+    }}>
+      <div style={{
+        position: "absolute",
+        inset: 0,
+        backgroundImage: "radial-gradient(circle, rgba(255,255,255,.06) 1px, transparent 1px)",
+        backgroundSize: "28px 28px",
+        pointerEvents: "none",
+      }} />
 
-        <div style={{ fontSize: 13, fontWeight: 700, color: T.white, marginBottom: 4 }}>Where are you in your NABH journey?</div>
-        <div style={{ fontSize: 10, color: T.muted, marginBottom: 16 }}>We'll tailor your dashboard based on your stage.</div>
-        <div style={{ display: "grid", gap: 8 }}>
-          {NABH_STATUSES.map(s => (
-            <div key={s.id} onClick={() => setNabhStatus(s.id)}
-              style={{ padding: "12px 16px", borderRadius: 10, border: `1px solid ${nabh_status === s.id ? T.gold : T.border}`, background: nabh_status === s.id ? T.goldD : T.panel2, cursor: "pointer", display: "flex", alignItems: "center", gap: 12, transition: "all 0.15s" }}>
-              <div style={{ fontSize: 20, flexShrink: 0 }}>{s.icon}</div>
-              <div>
-                <div style={{ fontSize: 12, fontWeight: 700, color: nabh_status === s.id ? T.goldL : T.white }}>{s.label}</div>
-                <div style={{ fontSize: 10, color: T.muted, marginTop: 2 }}>{s.desc}</div>
-              </div>
-              {nabh_status === s.id && <div style={{ marginLeft: "auto", color: T.gold, fontSize: 16 }}>✓</div>}
+      <div style={{
+        position: "relative",
+        zIndex: 1,
+        background: HP.white,
+        borderRadius: 16,
+        padding: "36px 32px",
+        width: "100%",
+        maxWidth: 520,
+        boxShadow: "0 20px 50px rgba(6,78,59,.22)",
+      }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 28 }}>
+          <div style={{
+            width: 42, height: 42, borderRadius: 10, background: HP.brand,
+            display: "flex", alignItems: "center", justifyContent: "center",
+            fontFamily: "Figtree, sans-serif", fontWeight: 800, fontSize: 20, color: HP.white, flexShrink: 0,
+          }}>A</div>
+          <div>
+            <div style={{ fontSize: 11, letterSpacing: 2.5, color: HP.brandMid, fontWeight: 700 }}>SETUP · STEP 1 OF 1</div>
+            <div style={{ fontFamily: "Figtree, sans-serif", fontSize: 20, fontWeight: 800, color: HP.text, marginTop: 2 }}>
+              {welcomeTitle}
             </div>
-          ))}
+          </div>
         </div>
 
-        <div style={{ display: "flex", justifyContent: "flex-end", marginTop: 24 }}>
-          <button onClick={() => onDone({ nabh_status })} disabled={!nabh_status}
-            style={{ padding: "10px 24px", borderRadius: 9, background: nabh_status ? `linear-gradient(135deg,${T.gold},#f0d070)` : T.border, border: "none", color: nabh_status ? T.bg : T.muted, fontSize: 12, fontWeight: 700, cursor: nabh_status ? "pointer" : "default", transition: "all 0.2s" }}>
-            Continue →
-          </button>
+        <div style={{ marginBottom: 22 }}>
+          <div style={{ fontFamily: "Figtree, sans-serif", fontSize: 16, fontWeight: 700, color: HP.text, marginBottom: 6 }}>
+            Where are you in your NABH journey?
+          </div>
+          <div style={{ fontSize: 14, color: HP.muted, lineHeight: 1.6 }}>
+            We'll tailor your dashboard priorities based on your stage.
+          </div>
         </div>
+
+        <div style={{ display: "grid", gap: 10 }}>
+          {NABH_STATUSES.map(s => {
+            const selected = nabh_status === s.id;
+            return (
+              <button
+                key={s.id}
+                type="button"
+                onClick={() => setNabhStatus(s.id)}
+                style={{
+                  padding: "14px 16px",
+                  borderRadius: 12,
+                  border: `1.5px solid ${selected ? HP.brand : HP.border}`,
+                  borderLeft: `4px solid ${selected ? HP.brand : HP.border}`,
+                  background: selected ? HP.brandBg : HP.white,
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 14,
+                  textAlign: "left",
+                  transition: "border-color .15s, background .15s, box-shadow .15s",
+                  boxShadow: selected ? "0 4px 14px rgba(6,95,70,.1)" : "0 1px 3px rgba(0,0,0,.04)",
+                  fontFamily: "inherit",
+                }}
+              >
+                <div style={{
+                  width: 40, height: 40, borderRadius: 10, flexShrink: 0,
+                  background: selected ? `${HP.brand}18` : HP.brandBg,
+                  border: `1px solid ${selected ? `${HP.brand}40` : HP.border}`,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  color: selected ? HP.brand : HP.brandMid,
+                }}>
+                  <NavIcon icon={s.icon} style={{ fontSize: 18 }} />
+                </div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{
+                    fontFamily: "Figtree, sans-serif",
+                    fontSize: 14, fontWeight: 700,
+                    color: selected ? HP.brandDark : HP.text,
+                  }}>{s.label}</div>
+                  <div style={{ fontSize: 12, color: HP.muted, marginTop: 3, lineHeight: 1.5 }}>{s.desc}</div>
+                </div>
+                <div style={{
+                  width: 22, height: 22, borderRadius: "50%", flexShrink: 0,
+                  border: `2px solid ${selected ? HP.brand : HP.border}`,
+                  background: selected ? HP.brand : HP.white,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  color: HP.white, fontSize: 12, fontWeight: 700,
+                }}>
+                  {selected ? "✓" : ""}
+                </div>
+              </button>
+            );
+          })}
+        </div>
+
+        <button
+          type="button"
+          onClick={() => onDone({ nabh_status })}
+          disabled={!nabh_status}
+          style={{
+            width: "100%",
+            marginTop: 24,
+            padding: "13px",
+            borderRadius: 10,
+            background: nabh_status ? HP.brand : HP.border,
+            border: "none",
+            color: nabh_status ? HP.white : HP.subtle,
+            fontSize: 15,
+            fontWeight: 700,
+            cursor: nabh_status ? "pointer" : "default",
+            fontFamily: "Figtree, Inter, sans-serif",
+            boxShadow: nabh_status ? "0 2px 8px rgba(6,95,70,.28)" : "none",
+            transition: "background .15s, box-shadow .15s",
+          }}
+        >
+          Continue →
+        </button>
 
         <div style={{ textAlign: "center", marginTop: 14 }}>
-          <button onClick={() => onDone({ nabh_status: "preparing" })}
-            style={{ background: "transparent", border: "none", color: T.muted, fontSize: 10, cursor: "pointer", textDecoration: "underline" }}>
-            Skip →
+          <button
+            type="button"
+            onClick={() => onDone({ nabh_status: "preparing" })}
+            style={{
+              background: "transparent",
+              border: "none",
+              color: HP.muted,
+              fontSize: 13,
+              cursor: "pointer",
+              fontFamily: "Figtree, Inter, sans-serif",
+              fontWeight: 600,
+              padding: "4px 8px",
+            }}
+          >
+            Skip for now →
           </button>
         </div>
       </div>
