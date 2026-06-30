@@ -20,14 +20,14 @@ VIDEO_DURATION = 37.0
 LEAD_IN = 0.3
 TARGET_SPEECH = VIDEO_DURATION - LEAD_IN - 0.15  # room before end card
 
-# Slightly tightened for 37s at one consistent speaking pace (same meaning)
+# Trimmed for 37s at a calm, consistent pace (+8–10% TTS, minimal compression)
 FULL_SCRIPT = (
-    "AccredReady — the NABH compliance platform for Indian hospitals and healthcare organisations. "
-    "Most hospitals still use scattered Excel sheets and consultants charging fifty thousand to two lakh rupees or more. "
-    "AccredReady puts everything in one place — score objective elements, rank gaps by priority, log CAPA, and track KPIs, audits, and drills. "
-    "Your live readiness dashboard shows where you stand before the assessor arrives. Export gap reports in one click. "
-    "HCO Full, HCO Entry Level, SHCO Full, SHCO ELC, and ECO — every major NABH programme, one subscription. "
-    "Four hundred ninety-nine rupees a month. Start your free fourteen-day trial at accredready.in — no credit card required."
+    "AccredReady — NABH compliance for Indian hospitals and healthcare organisations. "
+    "Most teams still use Excel and consultants charging fifty thousand to two lakh rupees. "
+    "One platform to score objective elements, rank gaps, log CAPA, and track KPIs, audits, and drills. "
+    "Your readiness dashboard shows where you stand before the assessor arrives. "
+    "HCO Full, SHCO Full, ELC, and ECO — every major NABH programme, one subscription. "
+    "Four hundred ninety-nine rupees a month. Start your free trial at accredready.in — no credit card required."
 )
 
 
@@ -94,22 +94,24 @@ def make_silence(path: Path, duration: float) -> None:
 
 def build_audio(work: Path) -> Path:
     """One voice, one speed: TTS rate + single atempo pass to fit the video."""
-    rates = ["+25%", "+28%", "+30%", "+32%", "+33%", "+35%"]
+    # Pick the slowest TTS rate that fits with minimal atempo (calmer delivery)
+    rates = ["+0%", "+5%", "+8%", "+10%", "+12%", "+15%"]
     raw = work / "narration-raw.mp3"
-    best_rate = rates[0]
+    best_rate = rates[-1]
 
     for rate in rates:
         asyncio.run(synthesize(FULL_SCRIPT, rate, raw))
         duration = probe_duration(raw)
         tempo_needed = duration / TARGET_SPEECH
         print(f"  TTS rate {rate}: {duration:.1f}s → tempo {tempo_needed:.3f}x to fit {TARGET_SPEECH:.1f}s")
-        best_rate = rate
-        if tempo_needed <= 1.08:
+        if tempo_needed <= 1.12:
+            best_rate = rate
             break
+        best_rate = rate
 
     duration = probe_duration(raw)
     tempo = duration / TARGET_SPEECH
-    tempo = min(max(tempo, 1.0), 1.13)
+    tempo = min(max(tempo, 1.0), 1.12)
 
     fitted = work / "narration-fit.mp3"
     run(
