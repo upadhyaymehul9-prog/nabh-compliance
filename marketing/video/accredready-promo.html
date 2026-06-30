@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AccredReady Promo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,400&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1920px; height: 1080px; overflow: hidden;
+      font-family: 'Figtree', system-ui, sans-serif;
+      background: #064E3B;
+    }
+    .stage { width: 1920px; height: 1080px; position: relative; overflow: hidden; }
+
+    /* ── shared ── */
+    .slide {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      padding: 80px 120px;
+    }
+    .slide.active { opacity: 1; pointer-events: auto; }
+    .dots-bg {
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .glow {
+      position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none;
+    }
+
+    /* ── SLIDE 1: Logo hook (0–4s) ── */
+    #s1 { animation: show 4s ease forwards; animation-delay: 0s; }
+    #s1 .logo {
+      width: 100px; height: 100px; border-radius: 24px; background: #065F46;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 52px; font-weight: 800; color: #fff;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      animation: popIn .8s cubic-bezier(.34,1.56,.64,1) .2s both;
+    }
+    #s1 h1 {
+      font-size: 72px; font-weight: 800; color: #fff; margin-top: 36px;
+      letter-spacing: -.03em; text-align: center;
+      animation: fadeUp .9s ease .5s both;
+    }
+    #s1 h1 span { color: #6EE7B7; }
+    #s1 p {
+      font-size: 28px; color: #A7C4BA; margin-top: 20px; text-align: center; max-width: 900px;
+      animation: fadeUp .9s ease .8s both;
+    }
+
+    /* ── SLIDE 2: Problem (4–9s) ── */
+    #s2 { animation: show 5s ease forwards; animation-delay: 4s; }
+    #s2 .eyebrow {
+      font-size: 16px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+      color: #FCD34D; margin-bottom: 24px;
+      animation: fadeUp .6s ease .1s both;
+    }
+    #s2 h2 {
+      font-size: 58px; font-weight: 800; color: #fff; text-align: center; line-height: 1.15;
+      animation: fadeUp .8s ease .3s both;
+    }
+    #s2 h2 em { font-family: 'Fraunces', serif; font-style: italic; color: #FCA5A5; font-weight: 400; }
+    #s2 .cards {
+      display: flex; gap: 32px; margin-top: 56px;
+      animation: fadeUp .8s ease .6s both;
+    }
+    #s2 .card {
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14);
+      border-radius: 20px; padding: 36px 40px; width: 380px; text-align: center;
+    }
+    #s2 .card .icon { font-size: 48px; margin-bottom: 16px; }
+    #s2 .card p { font-size: 22px; color: #CBD5E1; line-height: 1.5; }
+
+    /* ── SLIDE 3: Solution (9–16s) ── */
+    #s3 { animation: show 7s ease forwards; animation-delay: 9s; }
+    #s3 h2 {
+      font-size: 52px; font-weight: 800; color: #fff; text-align: center; margin-bottom: 48px;
+      animation: fadeUp .7s ease .2s both;
+    }
+    #s3 h2 span { color: #6EE7B7; }
+    #s3 .features {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; width: 100%; max-width: 1500px;
+      animation: fadeUp .8s ease .5s both;
+    }
+    #s3 .feat {
+      background: rgba(255,255,255,.1); border: 1px solid rgba(110,231,183,.25);
+      border-radius: 16px; padding: 32px 24px; text-align: center;
+    }
+    #s3 .feat .ic { font-size: 40px; margin-bottom: 14px; }
+    #s3 .feat h3 { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    #s3 .feat p { font-size: 16px; color: #94A3B8; line-height: 1.5; }
+
+    /* ── SLIDE 4: Dashboard mock (16–24s) ── */
+    #s4 { animation: show 8s ease forwards; animation-delay: 16s; }
+    #s4 .layout { display: flex; gap: 60px; align-items: center; width: 100%; max-width: 1600px; }
+    #s4 .copy { flex: 1; animation: fadeUp .7s ease .2s both; }
+    #s4 .copy h2 { font-size: 48px; font-weight: 800; color: #fff; line-height: 1.15; margin-bottom: 20px; }
+    #s4 .copy p { font-size: 24px; color: #A7C4BA; line-height: 1.6; }
+    #s4 .mock {
+      width: 680px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15);
+      border-radius: 20px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.35);
+      animation: slideInRight 1s ease .4s both;
+    }
+    #s4 .mock-bar { display: flex; gap: 8px; padding: 16px 20px; background: rgba(0,0,0,.2); border-bottom: 1px solid rgba(255,255,255,.1); }
+    #s4 .dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,.2); }
+    #s4 .mock-body { padding: 28px; }
+    #s4 .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-bottom: 20px; }
+    #s4 .stat { background: rgba(255,255,255,.07); border-radius: 12px; padding: 16px; text-align: center; }
+    #s4 .stat .v { font-size: 32px; font-weight: 800; }
+    #s4 .stat .v.g { color: #6EE7B7; }
+    #s4 .stat .v.y { color: #FCD34D; }
+    #s4 .stat .l { font-size: 11px; color: #64748B; margin-top: 4px; text-transform: uppercase; letter-spacing: .08em; }
+    #s4 .bar-track { height: 10px; background: rgba(255,255,255,.1); border-radius: 8px; overflow: hidden; margin-top: 12px; }
+    #s4 .bar-fill {
+      height: 100%; width: 0; background: linear-gradient(90deg, #059669, #6EE7B7);
+      border-radius: 8px; animation: growBar 2s ease 1.2s forwards;
+    }
+
+    /* ── SLIDE 5: Programmes (24–29s) ── */
+    #s5 { animation: show 5s ease forwards; animation-delay: 24s; }
+    #s5 h2 { font-size: 48px; font-weight: 800; color: #fff; text-align: center; margin-bottom: 40px; animation: fadeUp .6s ease .2s both; }
+    #s5 .progs {
+      display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; max-width: 1400px;
+      animation: fadeUp .8s ease .4s both;
+    }
+    #s5 .prog {
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15);
+      border-left: 4px solid var(--c); border-radius: 14px; padding: 24px 32px; min-width: 280px;
+    }
+    #s5 .prog h3 { font-size: 18px; font-weight: 700; color: #fff; }
+    #s5 .prog p { font-size: 14px; color: #94A3B8; margin-top: 6px; }
+
+    /* ── SLIDE 6: CTA (29–36s) ── */
+    #s6 { animation: show 7s ease forwards; animation-delay: 29s; }
+    #s6 .glow1 { width: 600px; height: 600px; background: rgba(4,120,87,.5); top: -100px; right: -100px; }
+    #s6 .glow2 { width: 400px; height: 400px; background: rgba(217,119,6,.3); bottom: -80px; left: -80px; }
+    #s6 .price {
+      font-size: 120px; font-weight: 800; color: #fff; line-height: 1;
+      animation: popIn .8s cubic-bezier(.34,1.56,.64,1) .3s both;
+    }
+    #s6 .price small { font-size: 36px; color: #A7F3D0; font-weight: 600; }
+    #s6 .vs { font-size: 26px; color: #A7C4BA; margin: 24px 0 40px; text-align: center; animation: fadeUp .7s ease .6s both; }
+    #s6 .vs b { color: #FCD34D; }
+    #s6 .cta {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: #D97706; color: #fff; font-size: 32px; font-weight: 800;
+      padding: 22px 48px; border-radius: 14px;
+      box-shadow: 0 12px 40px rgba(217,119,6,.45);
+      animation: popIn .7s cubic-bezier(.34,1.56,.64,1) .9s both;
+    }
+    #s6 .url { font-size: 28px; color: #6EE7B7; margin-top: 28px; font-weight: 700; animation: fadeUp .7s ease 1.2s both; }
+    #s6 .trial { font-size: 20px; color: #64748B; margin-top: 16px; animation: fadeUp .7s ease 1.4s both; }
+
+    @keyframes show {
+      0%, 1% { opacity: 0; }
+      2%, 98% { opacity: 1; }
+      99%, 100% { opacity: 0; }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(.85); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(60px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes growBar { to { width: 72%; } }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="dots-bg"></div>
+
+    <!-- Slide 1 -->
+    <div class="slide active" id="s1">
+      <div class="glow" style="width:500px;height:500px;background:rgba(4,120,87,.4);bottom:-150px;right:-100px;"></div>
+      <div class="logo">A</div>
+      <h1>Accred<span>Ready</span></h1>
+      <p>NABH compliance platform for Indian hospitals &amp; healthcare organisations</p>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide" id="s2">
+      <div class="eyebrow">The problem</div>
+      <h2>Most hospitals still prep with<br/><em>Excel sheets &amp; expensive consultants</em></h2>
+      <div class="cards">
+        <div class="card"><div class="icon">📊</div><p>Scattered spreadsheets with no live readiness view</p></div>
+        <div class="card"><div class="icon">💸</div><p>Consultant engagements from ₹50,000 to ₹2,00,000+</p></div>
+        <div class="card"><div class="icon">⏱️</div><p>Gap analysis takes weeks — assessors want evidence now</p></div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide" id="s3">
+      <h2>One platform. <span>Survey-ready.</span></h2>
+      <div class="features">
+        <div class="feat"><div class="ic">✏️</div><h3>Score OEs</h3><p>Self-assess every objective element with built-in tips</p></div>
+        <div class="feat"><div class="ic">🎯</div><h3>Gap analysis</h3><p>See priority gaps ranked by severity — live</p></div>
+        <div class="feat"><div class="ic">🔧</div><h3>Fix with CAPA</h3><p>Log corrective actions and attach evidence</p></div>
+        <div class="feat"><div class="ic">📈</div><h3>Track KPIs</h3><p>Monthly indicators, audits, drills &amp; committees</p></div>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide" id="s4">
+      <div class="layout">
+        <div class="copy">
+          <h2>Live readiness dashboard</h2>
+          <p>Know exactly where you stand before the assessor walks in. Export PDF gap reports in one click.</p>
+        </div>
+        <div class="mock">
+          <div class="mock-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          <div class="mock-body">
+            <div style="font-size:12px;color:#5EEAD4;font-weight:700;letter-spacing:.1em;margin-bottom:16px;">READINESS OVERVIEW</div>
+            <div class="stats">
+              <div class="stat"><div class="v g">72%</div><div class="l">Score</div></div>
+              <div class="stat"><div class="v y">18</div><div class="l">Open gaps</div></div>
+              <div class="stat"><div class="v g">9</div><div class="l">Closed</div></div>
+            </div>
+            <div style="font-size:13px;color:#94A3B8;display:flex;justify-content:space-between"><span>Overall readiness</span><span>72 / 100</span></div>
+            <div class="bar-track"><div class="bar-fill"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide" id="s5">
+      <h2>All NABH programmes covered</h2>
+      <div class="progs">
+        <div class="prog" style="--c:#065F46"><h3>HCO Full Accreditation</h3><p>6th Edition · 51+ beds</p></div>
+        <div class="prog" style="--c:#0891B2"><h3>HCO Entry Level (ELC)</h3><p>Document &amp; license based</p></div>
+        <div class="prog" style="--c:#D97706"><h3>SHCO Full &amp; ELC</h3><p>Small hospitals &amp; clinics</p></div>
+        <div class="prog" style="--c:#06b6d4"><h3>ECO Full Accreditation</h3><p>Eye care organisations</p></div>
+      </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide" id="s6">
+      <div class="glow glow1"></div>
+      <div class="glow glow2"></div>
+      <div class="price">₹499<small> /month</small></div>
+      <p class="vs">vs. consultant engagements that typically run <b>₹50,000–₹2,00,000+</b></p>
+      <div class="cta">🚀 Start Free Trial</div>
+      <div class="url">accredready.in</div>
+      <div class="trial">14-day free trial · No credit card · Cancel anytime</div>
+    </div>
+  </div>
+</body>
+</html>
