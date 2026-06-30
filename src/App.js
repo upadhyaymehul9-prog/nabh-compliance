@@ -2056,8 +2056,11 @@ function UpgradeWall({ daysUsed, onSignOut }) {
 const HP={
   brand:"#065F46",brandDark:"#064E3B",brandMid:"#047857",brandBg:"#ECFDF5",
   amber:"#D97706",text:"#1E293B",muted:"#475569",subtle:"#94A3B8",border:"#E2E8F0",white:"#FFFFFF",
-  red:"#DC2626",redBg:"#FEF2F2",green:"#059669",greenBg:"#ECFDF9",
+  red:"#DC2626",redBg:"#FEF2F2",green:"#059669",greenBg:"#ECFDF9",brandLight:"#6EE7B7",
 };
+const hpInp={width:"100%",padding:"12px 14px",borderRadius:10,border:`1.5px solid ${HP.border}`,background:"#f8fafc",color:HP.text,fontSize:15,boxSizing:"border-box",fontFamily:"Inter,system-ui,sans-serif"};
+const hpLbl={fontSize:12,color:HP.muted,marginBottom:6,fontWeight:600,fontFamily:"Figtree,Inter,sans-serif",letterSpacing:.3};
+function NavIcon({icon,style}){return icon?.startsWith("ti-")?<i className={`ti ${icon}`} style={{fontSize:14,...style}} aria-hidden="true"/>:<span style={style}>{icon}</span>;}
 
 function LoginScreen({ onLogin, initialError, onBackToHomepage }) {
   const [email,setEmail]=useState(""); const [pass,setPass]=useState(""); const [whatsapp,setWhatsapp]=useState("");
@@ -2352,7 +2355,7 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
       desc: "Full NABH accreditation for hospitals with 51 or more beds. The gold standard in Indian hospital accreditation.",
       available: true,
       icon: "🏥",
-      color: T.gold,
+      color: HP.brand,
     },
     {
       key: "hco_elc",
@@ -2363,7 +2366,7 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
       desc: "Entry-level certification for hospitals with 51+ beds. Document and license based — structured first step toward full HCO accreditation.",
       available: true,
       icon: "🎯",
-      color: T.blue,
+      color: "#0891B2",
     },
     {
       key: "shco_full",
@@ -2374,7 +2377,7 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
       desc: "Full NABH accreditation for small hospitals with up to 50 beds. Comprehensive quality programme.",
       available: true,
       icon: "🏨",
-      color: T.orange,
+      color: HP.amber,
     },
     {
       key: "shco_elc",
@@ -2385,7 +2388,7 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
       desc: "Entry-level certification for hospitals with up to 50 beds. Document and license based — no OE scoring required.",
       available: true,
       icon: "📋",
-      color: T.green,
+      color: HP.brandMid,
     },
     {
       key: "eco_full",
@@ -2409,37 +2412,37 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: T.bg, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Segoe UI,system-ui,sans-serif", padding: 24 }}>
-      <div style={{ width: "100%", maxWidth: 860 }}>
+    <div style={{ minHeight: "100vh", background: `linear-gradient(180deg,${HP.brandBg} 0%,${HP.white} 45%)`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Inter,system-ui,sans-serif", padding: 24 }}>
+      <div style={{ width: "100%", maxWidth: 920 }}>
         <div style={{ textAlign: "center", marginBottom: 36 }}>
-          <div style={{ width: 52, height: 52, borderRadius: 14, background: `linear-gradient(135deg,${T.gold},#f0d070)`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 26, margin: "0 auto 16px" }}>⚕</div>
-          <div style={{ fontSize: 9, letterSpacing: 3, color: T.gold, marginBottom: 8 }}>ACCREDREADY</div>
-          <div style={{ fontSize: 26, fontWeight: 700, color: T.white, fontFamily: "Georgia,serif", marginBottom: 8 }}>Select Your Programme</div>
-          <div style={{ fontSize: 12, color: T.muted }}>Choose the accreditation programme you are working towards. You can switch anytime.</div>
+          <div style={{ width: 46, height: 46, borderRadius: 11, background: HP.brand, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Figtree,sans-serif", fontWeight: 800, fontSize: 22, color: HP.white, margin: "0 auto 16px" }}>A</div>
+          <div style={{ fontSize: 11, letterSpacing: 3, color: HP.brandMid, marginBottom: 8, fontWeight: 700 }}>ACCREDREADY</div>
+          <div style={{ fontSize: 28, fontWeight: 800, color: HP.text, fontFamily: "Figtree,sans-serif", marginBottom: 8 }}>Select your programme</div>
+          <div style={{ fontSize: 14, color: HP.muted, maxWidth: 480, margin: "0 auto" }}>Choose the accreditation programme you are working towards. You can switch anytime.</div>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16 }}>
           {programmes.map(p => (
             <div key={p.key}
               onClick={() => p.available ? onSelect(p.key, ctx) : setComingSoonModal(p)}
-              style={{ background: T.panel, border: `1.5px solid ${T.border}`, borderRadius: 14, padding: "24px", cursor: "pointer", position: "relative", transition: "border-color 0.18s, background 0.18s" }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = p.color; e.currentTarget.style.background = T.panel2; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = T.border; e.currentTarget.style.background = T.panel; }}
+              style={{ background: HP.white, border: `1.5px solid ${HP.border}`, borderLeft: `4px solid ${p.color}`, borderRadius: 14, padding: "24px", cursor: "pointer", position: "relative", transition: "border-color 0.18s, box-shadow 0.18s", boxShadow: "0 1px 3px rgba(0,0,0,.04)" }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = p.color; e.currentTarget.style.boxShadow = "0 8px 24px rgba(6,95,70,.1)"; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = HP.border; e.currentTarget.style.borderLeftColor = p.color; e.currentTarget.style.boxShadow = "0 1px 3px rgba(0,0,0,.04)"; }}
             >
-              <div style={{ position: "absolute", top: 14, right: 14, fontSize: 8, fontWeight: 700, letterSpacing: 1, padding: "3px 9px", borderRadius: 20, background: p.available ? `${p.color}20` : `${T.muted}18`, color: p.available ? p.color : T.muted, border: `1px solid ${p.available ? p.color : T.muted}40` }}>{p.badge}</div>
-              <div style={{ fontSize: 30, marginBottom: 12 }}>{p.icon}</div>
-              <div style={{ fontSize: 15, fontWeight: 800, color: T.white, marginBottom: 3 }}>{p.title}</div>
-              <div style={{ fontSize: 10, color: p.color, fontWeight: 600, marginBottom: 10 }}>{p.subtitle}</div>
+              <div style={{ position: "absolute", top: 14, right: 14, fontSize: 9, fontWeight: 700, letterSpacing: .5, padding: "4px 10px", borderRadius: 100, background: `${p.color}18`, color: p.color, border: `1px solid ${p.color}40` }}>{p.badge}</div>
+              <div style={{ fontSize: 28, marginBottom: 12 }}>{p.icon}</div>
+              <div style={{ fontSize: 16, fontWeight: 800, color: HP.text, marginBottom: 3, fontFamily: "Figtree,sans-serif" }}>{p.title}</div>
+              <div style={{ fontSize: 11, color: p.color, fontWeight: 600, marginBottom: 10 }}>{p.subtitle}</div>
               <div style={{ display: "flex", gap: 6, marginBottom: 14, flexWrap: "wrap" }}>
                 {p.tags.map(tag => (
-                  <span key={tag} style={{ fontSize: 9, padding: "2px 8px", borderRadius: 8, background: T.panel2, border: `1px solid ${T.border}`, color: T.muted }}>{tag}</span>
+                  <span key={tag} style={{ fontSize: 10, padding: "3px 9px", borderRadius: 8, background: HP.brandBg, border: `1px solid ${HP.border}`, color: HP.muted }}>{tag}</span>
                 ))}
               </div>
-              <div style={{ fontSize: 11, color: T.text, lineHeight: 1.7, marginBottom: 16 }}>{p.desc}</div>
+              <div style={{ fontSize: 12, color: HP.muted, lineHeight: 1.7, marginBottom: 16 }}>{p.desc}</div>
               {p.available ? (
-                <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 11, fontWeight: 700, color: p.color }}>Open Dashboard <span>→</span></div>
+                <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 700, color: p.color, fontFamily: "Figtree,sans-serif" }}>Open Dashboard <span>→</span></div>
               ) : (
-                <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 11, color: T.muted }}><span>🔔</span> Notify me when available</div>
+                <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: HP.subtle }}><span>🔔</span> Notify me when available</div>
               )}
             </div>
           ))}
@@ -2447,20 +2450,20 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
 
         {/* ── Coming Soon divider ── */}
         <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "32px 0 20px" }}>
-          <div style={{ flex: 1, height: 1, background: T.border }} />
-          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 3, color: T.muted, textTransform: "uppercase" }}>Coming Soon</div>
-          <div style={{ flex: 1, height: 1, background: T.border }} />
+          <div style={{ flex: 1, height: 1, background: HP.border }} />
+          <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 3, color: HP.subtle, textTransform: "uppercase" }}>Coming Soon</div>
+          <div style={{ flex: 1, height: 1, background: HP.border }} />
         </div>
 
         {/* ── Coming Soon cards ── */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16, opacity: 0.82 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16, opacity: 0.88 }}>
           {[
             {
               key: "ayush_hospital",
               icon: "🌿",
               title: "AYUSH Hospital",
               subtitle: "Ayurveda · Homeopathy · Unani",
-              color: T.green,
+              color: HP.brandMid,
               tags: ["Ayurveda", "Homeopathy", "Unani"],
               desc: "NABH accreditation for AYUSH hospitals including Ayurveda, Homeopathy, and Unani systems.",
             },
@@ -2469,53 +2472,53 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
               icon: "🦷",
               title: "Dental Clinic",
               subtitle: "Dental Accreditation",
-              color: T.orange,
+              color: HP.amber,
               tags: ["Dental", "Oral Health"],
               desc: "NABH accreditation standards for dental clinics and oral health care centres.",
             },
           ].map(cs => (
-            <div key={cs.key} style={{ background: T.panel, border: `1.5px solid ${T.border}`, borderRadius: 14, padding: "24px", cursor: "default", position: "relative" }}>
-              <div style={{ position: "absolute", top: 14, right: 14, fontSize: 8, fontWeight: 700, letterSpacing: 1, padding: "3px 9px", borderRadius: 20, background: `${T.muted}18`, color: T.muted, border: `1px solid ${T.muted}40` }}>Coming Soon</div>
-              <div style={{ width: 44, height: 44, borderRadius: 12, background: T.panel2, border: `1px solid ${T.border}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, marginBottom: 12 }}>{cs.icon}</div>
-              <div style={{ fontSize: 15, fontWeight: 800, color: T.white, marginBottom: 3 }}>{cs.title}</div>
+            <div key={cs.key} style={{ background: HP.white, border: `1.5px solid ${HP.border}`, borderRadius: 14, padding: "24px", cursor: "default", position: "relative" }}>
+              <div style={{ position: "absolute", top: 14, right: 14, fontSize: 9, fontWeight: 700, letterSpacing: .5, padding: "4px 10px", borderRadius: 100, background: "#f1f5f9", color: HP.subtle, border: `1px solid ${HP.border}` }}>Coming Soon</div>
+              <div style={{ width: 44, height: 44, borderRadius: 12, background: HP.brandBg, border: `1px solid ${HP.border}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, marginBottom: 12 }}>{cs.icon}</div>
+              <div style={{ fontSize: 15, fontWeight: 800, color: HP.text, marginBottom: 3, fontFamily: "Figtree,sans-serif" }}>{cs.title}</div>
               <div style={{ fontSize: 10, color: cs.color, fontWeight: 600, marginBottom: 10 }}>{cs.subtitle}</div>
               <div style={{ display: "flex", gap: 6, marginBottom: 14, flexWrap: "wrap" }}>
                 {cs.tags.map(tag => (
-                  <span key={tag} style={{ fontSize: 9, padding: "2px 8px", borderRadius: 8, background: T.panel2, border: `1px solid ${T.border}`, color: T.muted }}>{tag}</span>
+                  <span key={tag} style={{ fontSize: 9, padding: "2px 8px", borderRadius: 8, background: HP.brandBg, border: `1px solid ${HP.border}`, color: HP.muted }}>{tag}</span>
                 ))}
               </div>
-              <div style={{ fontSize: 11, color: T.text, lineHeight: 1.7, marginBottom: 16 }}>{cs.desc}</div>
-              <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 11, color: T.muted }}><span>🔔</span> Notify me when available</div>
+              <div style={{ fontSize: 11, color: HP.muted, lineHeight: 1.7, marginBottom: 16 }}>{cs.desc}</div>
+              <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 11, color: HP.subtle }}><span>🔔</span> Notify me when available</div>
             </div>
           ))}
         </div>
 
-        <div style={{ textAlign: "center", marginTop: 18, fontSize: 10, color: T.muted }}>
+        <div style={{ textAlign: "center", marginTop: 18, fontSize: 12, color: HP.subtle }}>
           All upcoming programmes will be included in your existing subscription at no extra cost.
         </div>
       </div>
 
       {comingSoonModal && (
-        <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.72)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 1000, padding: 20 }}
+        <div style={{ position: "fixed", inset: 0, background: "rgba(6,30,20,.55)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 1000, padding: 20 }}
           onClick={() => { setComingSoonModal(null); }}>
-          <div style={{ background: T.panel, border: `1px solid ${T.border}`, borderRadius: 16, padding: "36px", width: 380, maxWidth: "100%" }} onClick={e => e.stopPropagation()}>
+          <div style={{ background: HP.white, border: `1px solid ${HP.border}`, borderRadius: 16, padding: "36px", width: 380, maxWidth: "100%", boxShadow: "0 20px 50px rgba(0,0,0,.2)" }} onClick={e => e.stopPropagation()}>
             <div style={{ textAlign: "center", marginBottom: 20 }}>
               <div style={{ fontSize: 40, marginBottom: 12 }}>🚧</div>
-              <div style={{ fontSize: 18, fontWeight: 700, color: T.white, marginBottom: 8 }}>{comingSoonModal.title}</div>
-              <div style={{ fontSize: 11, color: T.muted, lineHeight: 1.7 }}>This programme is coming soon. We're actively building it — register your interest and we'll notify you when it launches.</div>
+              <div style={{ fontSize: 18, fontWeight: 700, color: HP.text, marginBottom: 8, fontFamily: "Figtree,sans-serif" }}>{comingSoonModal.title}</div>
+              <div style={{ fontSize: 12, color: HP.muted, lineHeight: 1.7 }}>This programme is coming soon. We're actively building it — register your interest and we'll notify you when it launches.</div>
             </div>
             {notifyDone[comingSoonModal.key] ? (
-              <div style={{ textAlign: "center", padding: "14px", background: T.greenD, border: `1px solid ${T.green}40`, borderRadius: 10, color: T.green, fontSize: 12, fontWeight: 700 }}>
+              <div style={{ textAlign: "center", padding: "14px", background: HP.greenBg, border: `1px solid ${HP.green}40`, borderRadius: 10, color: HP.green, fontSize: 12, fontWeight: 700 }}>
                 ✓ You're on the list! We'll notify you when it launches.
               </div>
             ) : (
               <button onClick={() => handleNotify(comingSoonModal.key)} disabled={notifyLoading}
-                style={{ width: "100%", padding: "12px", borderRadius: 10, background: `linear-gradient(135deg,${T.gold},#f0d070)`, border: "none", color: T.bg, fontSize: 13, fontWeight: 700, cursor: "pointer", opacity: notifyLoading ? 0.7 : 1 }}>
+                style={{ width: "100%", padding: "12px", borderRadius: 10, background: HP.brand, border: "none", color: HP.white, fontSize: 13, fontWeight: 700, cursor: "pointer", opacity: notifyLoading ? 0.7 : 1, fontFamily: "Figtree,sans-serif" }}>
                 {notifyLoading ? "Saving…" : "🔔 Notify me when available"}
               </button>
             )}
             <button onClick={() => { setComingSoonModal(null); }}
-              style={{ width: "100%", marginTop: 10, padding: "10px", borderRadius: 10, background: "transparent", border: `1px solid ${T.border}`, color: T.muted, fontSize: 12, cursor: "pointer" }}>
+              style={{ width: "100%", marginTop: 10, padding: "10px", borderRadius: 10, background: "transparent", border: `1px solid ${HP.border}`, color: HP.muted, fontSize: 12, cursor: "pointer" }}>
               Close
             </button>
           </div>
@@ -2615,7 +2618,7 @@ function SetupScreen({ user, onReady }) {
   };
 
   if(loading) return (
-    <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",color:T.gold,fontFamily:"Segoe UI,sans-serif",fontSize:16}}>
+    <div style={{minHeight:"100vh",background:`linear-gradient(145deg,${HP.brandDark},${HP.brandBg})`,display:"flex",alignItems:"center",justifyContent:"center",color:HP.brand,fontFamily:"Figtree,Inter,sans-serif",fontSize:16,fontWeight:600}}>
       Setting up your workspace…
     </div>
   );
@@ -2625,46 +2628,49 @@ function SetupScreen({ user, onReady }) {
   );
 
   return (
-    <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"Segoe UI,system-ui,sans-serif"}}>
-      <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:16,padding:"36px",width:420}}>
-        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:4}}>
-          <div style={{fontSize:8,letterSpacing:3,color:T.gold}}>ACCREDREADY</div>
-          <button onClick={()=>supabase.auth.signOut()} style={{fontSize:12,color:T.muted,background:"transparent",border:`1px solid ${T.border}`,borderRadius:6,padding:"3px 10px",cursor:"pointer"}}>Sign out</button>
+    <div style={{minHeight:"100vh",background:`linear-gradient(145deg,${HP.brandDark} 0%,${HP.brandMid} 42%,${HP.brandBg} 100%)`,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"Inter,system-ui,sans-serif",padding:"24px 16px"}}>
+      <div style={{background:HP.white,borderRadius:16,padding:"36px 32px",width:"100%",maxWidth:440,boxShadow:"0 20px 50px rgba(6,78,59,.22)"}}>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:20}}>
+          <div style={{display:"flex",alignItems:"center",gap:10}}>
+            <div style={{width:36,height:36,borderRadius:9,background:HP.brand,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"Figtree,sans-serif",fontWeight:800,fontSize:17,color:HP.white}}>A</div>
+            <div style={{fontSize:11,letterSpacing:2,color:HP.brandMid,fontWeight:700}}>ACCREDREADY</div>
+          </div>
+          <button onClick={()=>supabase.auth.signOut()} style={{fontSize:12,color:HP.muted,background:"transparent",border:`1px solid ${HP.border}`,borderRadius:8,padding:"5px 12px",cursor:"pointer",fontFamily:"Figtree,sans-serif",fontWeight:600}}>Sign out</button>
         </div>
 
-        {error&&<div style={{background:T.redD,border:`1px solid ${T.red}40`,borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:13,color:T.red,marginTop:12}}>{error}</div>}
+        {error&&<div style={{background:HP.redBg,border:`1px solid ${HP.red}40`,borderRadius:10,padding:"10px 14px",marginBottom:16,fontSize:13,color:HP.red}}>{error}</div>}
 
         {!hospital&&(
           <>
-            <div style={{fontSize:18,fontWeight:700,color:T.white,margin:"16px 0 8px"}}>Welcome! Set up your hospital</div>
-            <div style={{fontSize:13,color:T.muted,marginBottom:20,lineHeight:1.6}}>Each account is linked to one hospital. Enter your hospital name to get started.</div>
-            <div style={{fontSize:12,color:T.muted,marginBottom:8,letterSpacing:1}}>HOSPITAL NAME</div>
+            <div style={{fontSize:22,fontWeight:800,color:HP.text,margin:"0 0 8px",fontFamily:"Figtree,sans-serif"}}>Welcome! Set up your hospital</div>
+            <div style={{fontSize:14,color:HP.muted,marginBottom:20,lineHeight:1.6}}>Each account is linked to one hospital. Enter your hospital name to get started.</div>
+            <div style={hpLbl}>Hospital name</div>
             <div style={{display:"flex",gap:8}}>
               <input value={newHosp} onChange={e=>setNewHosp(e.target.value)} placeholder="e.g. HMP Foundation Hospital" onKeyDown={e=>e.key==="Enter"&&createHospital()}
-                style={{flex:1,padding:"10px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:15,boxSizing:"border-box"}}/>
-              <button onClick={createHospital} disabled={!newHosp.trim()} style={{padding:"10px 16px",borderRadius:8,background:`linear-gradient(135deg,${T.gold},#f0d070)`,border:"none",color:T.bg,fontSize:14,fontWeight:700,cursor:newHosp.trim()?"pointer":"default",opacity:newHosp.trim()?1:0.5}}>Create</button>
+                style={{...hpInp,flex:1}}/>
+              <button onClick={createHospital} disabled={!newHosp.trim()} style={{padding:"12px 18px",borderRadius:10,background:HP.brand,border:"none",color:HP.white,fontSize:14,fontWeight:700,cursor:newHosp.trim()?"pointer":"default",opacity:newHosp.trim()?1:0.5,fontFamily:"Figtree,sans-serif",whiteSpace:"nowrap"}}>Create</button>
             </div>
           </>
         )}
 
         {hospital&&(
           <>
-            <div style={{fontSize:18,fontWeight:700,color:T.white,margin:"16px 0 4px"}}>{hospital.name}</div>
-            <div style={{fontSize:12,color:T.green,marginBottom:20}}>✓ Hospital registered</div>
+            <div style={{fontSize:22,fontWeight:800,color:HP.text,margin:"0 0 4px",fontFamily:"Figtree,sans-serif"}}>{hospital.name}</div>
+            <div style={{fontSize:13,color:HP.green,marginBottom:20,fontWeight:600}}>✓ Hospital registered</div>
 
-            <div style={{fontSize:12,color:T.muted,marginBottom:8,letterSpacing:1}}>ASSESSMENT</div>
+            <div style={hpLbl}>Assessment</div>
             {assessments.length>0&&(
               <select value={selAss} onChange={e=>setSelAss(e.target.value)}
-                style={{width:"100%",padding:"10px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:15,marginBottom:10,boxSizing:"border-box"}}>
+                style={{...hpInp,marginBottom:10}}>
                 {assessments.map(a=><option key={a.id} value={a.id}>{a.name}</option>)}
               </select>
             )}
             <div style={{display:"flex",gap:8,marginBottom:16}}>
               <input value={newAss} onChange={e=>setNewAss(e.target.value)} placeholder="Or create new assessment…" onKeyDown={e=>e.key==="Enter"&&createAssessment()}
-                style={{flex:1,padding:"9px 12px",borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14,boxSizing:"border-box"}}/>
-              <button onClick={createAssessment} disabled={!newAss.trim()} style={{padding:"9px 16px",borderRadius:8,background:T.goldD,border:`1px solid ${T.gold}40`,color:T.gold,fontSize:14,cursor:"pointer"}}>Add</button>
+                style={{...hpInp,flex:1,fontSize:14}}/>
+              <button onClick={createAssessment} disabled={!newAss.trim()} style={{padding:"10px 16px",borderRadius:10,background:HP.brandBg,border:`1px solid ${HP.brand}40`,color:HP.brand,fontSize:14,fontWeight:700,cursor:"pointer",fontFamily:"Figtree,sans-serif"}}>Add</button>
             </div>
-            <button onClick={proceed} disabled={!selAss} style={{width:"100%",padding:"12px",borderRadius:10,background:selAss?`linear-gradient(135deg,${T.gold},#f0d070)`:T.border,border:"none",color:selAss?T.bg:T.muted,fontSize:15,fontWeight:700,cursor:selAss?"pointer":"default"}}>
+            <button onClick={proceed} disabled={!selAss} style={{width:"100%",padding:"13px",borderRadius:10,background:selAss?HP.brand:HP.border,border:"none",color:selAss?HP.white:HP.subtle,fontSize:15,fontWeight:700,cursor:selAss?"pointer":"default",fontFamily:"Figtree,sans-serif",boxShadow:selAss?"0 2px 8px rgba(6,95,70,.28)":"none"}}>
               Open Assessment →
             </button>
           </>
@@ -11118,25 +11124,25 @@ export default function App() {
   };
 
   const ALL_NAV=[
-    {id:"dashboard",label:"Dashboard",icon:"📊",programmes:["hco"],primary:true},
-    {id:"scoring",label:"Score OEs",icon:"✏️",programmes:["hco"],primary:true},
-    {id:"gaps",label:"Fix Gaps",icon:"🔧",programmes:["hco"],primary:true},
-    {id:"audits",label:"Audits",icon:"🔍",programmes:["hco"],primary:true},
-    {id:"drills",label:"Drills",icon:"🚨",programmes:["hco"],primary:true},
-    {id:"committees",label:"Committees",icon:"🏛️",programmes:["hco"],primary:false},
-    {id:"kpis",label:"KPIs",icon:"📈",programmes:["hco"],primary:false},
-    {id:"checklists",label:"Checklists",icon:"✅",programmes:["hco"],primary:false},
-    {id:"committee-calendar",label:"Cal",icon:"📅",programmes:["hco"],primary:false},
-    {id:"licenses",label:"Licenses",icon:"📋",programmes:["hco"],primary:false},
-    {id:"tracer",label:"Tracer",icon:"🩺",programmes:["hco"],primary:false},
-    {id:"pricing",label:"Pricing",icon:"💎",programmes:["hco","shco-elc","hco-elc","shco-full"],primary:false},
-    {id:"profile",label:"Profile",icon:"👤",programmes:["hco","shco-elc","hco-elc","shco-full"],primary:false},
-    {id:"shco",label:"SHCO",icon:"🏥",programmes:["shco-elc"]},
-    {id:"hco-elc",label:"HCO ELC",icon:"🎯",programmes:["hco-elc"]},
-    {id:"shco-full",label:"Score OEs",icon:"✏️",programmes:["shco-full"],primary:true},
-    {id:"eco-full", label:"Score OEs",icon:"✏️",programmes:["eco-full"], primary:true},
-    {id:"pricing",  label:"Pricing",  icon:"💎",programmes:["eco-full"], primary:false},
-    {id:"profile",  label:"Profile",  icon:"👤",programmes:["eco-full"], primary:false},
+    {id:"dashboard",label:"Dashboard",icon:"ti-layout-dashboard",programmes:["hco"],primary:true},
+    {id:"scoring",label:"Score OEs",icon:"ti-edit",programmes:["hco"],primary:true},
+    {id:"gaps",label:"Fix Gaps",icon:"ti-tool",programmes:["hco"],primary:true},
+    {id:"audits",label:"Audits",icon:"ti-search",programmes:["hco"],primary:true},
+    {id:"drills",label:"Drills",icon:"ti-alarm",programmes:["hco"],primary:true},
+    {id:"committees",label:"Committees",icon:"ti-building-community",programmes:["hco"],primary:false},
+    {id:"kpis",label:"KPIs",icon:"ti-chart-line",programmes:["hco"],primary:false},
+    {id:"checklists",label:"Checklists",icon:"ti-checklist",programmes:["hco"],primary:false},
+    {id:"committee-calendar",label:"Cal",icon:"ti-calendar",programmes:["hco"],primary:false},
+    {id:"licenses",label:"Licenses",icon:"ti-file-certificate",programmes:["hco"],primary:false},
+    {id:"tracer",label:"Tracer",icon:"ti-stethoscope",programmes:["hco"],primary:false},
+    {id:"pricing",label:"Pricing",icon:"ti-diamond",programmes:["hco","shco-elc","hco-elc","shco-full"],primary:false},
+    {id:"profile",label:"Profile",icon:"ti-user",programmes:["hco","shco-elc","hco-elc","shco-full"],primary:false},
+    {id:"shco",label:"SHCO",icon:"ti-building-hospital",programmes:["shco-elc"]},
+    {id:"hco-elc",label:"HCO ELC",icon:"ti-target",programmes:["hco-elc"]},
+    {id:"shco-full",label:"Score OEs",icon:"ti-edit",programmes:["shco-full"],primary:true},
+    {id:"eco-full", label:"Score OEs",icon:"ti-edit",programmes:["eco-full"], primary:true},
+    {id:"pricing",  label:"Pricing",  icon:"ti-diamond",programmes:["eco-full"], primary:false},
+    {id:"profile",  label:"Profile",  icon:"ti-user",programmes:["eco-full"], primary:false},
   ];
   const NAV=ALL_NAV.filter(n=>n.programmes.includes(selectedProgramme));
   const PRIMARY_NAV=NAV.filter(n=>n.primary);
@@ -11155,25 +11161,25 @@ export default function App() {
           [data-theme="light"] body{background:#e8f2fb}
         `:''}
       `}</style>
-      <div style={{background:theme==='light'?"#1565c0":"linear-gradient(90deg,#040d1a,#08192e)",borderBottom:`1px solid ${theme==='light'?"#0d47a1":T.border}`,padding:"10px 20px",position:"sticky",top:0,zIndex:200,boxShadow:theme==='light'?"0 2px 12px rgba(21,101,192,0.4)":"0 2px 20px rgba(0,0,0,0.6)"}}>
+      <div style={{background:theme==='light'?"#1565c0":`linear-gradient(90deg,${HP.brandDark},#0a3d32)`,borderBottom:`1px solid ${theme==='light'?"#0d47a1":"rgba(110,231,183,.15)"}`,padding:"10px 20px",position:"sticky",top:0,zIndex:200,boxShadow:theme==='light'?"0 2px 12px rgba(21,101,192,0.4)":"0 2px 20px rgba(0,0,0,0.35)"}}>
         <div style={{maxWidth:1200,margin:"0 auto",display:"flex",alignItems:"center",gap:10,flexWrap:"wrap"}}>
-          <div style={{width:32,height:32,borderRadius:8,background:theme==='light'?"rgba(255,255,255,0.15)":`linear-gradient(135deg,${T.gold},#f0d070)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:17,flexShrink:0,border:theme==='light'?"1px solid rgba(255,255,255,0.3)":"none",color:"#ffffff"}}>⚕</div>
+          <div style={{width:32,height:32,borderRadius:8,background:theme==='light'?"rgba(255,255,255,0.15)":HP.brand,display:"flex",alignItems:"center",justifyContent:"center",fontSize:15,flexShrink:0,border:theme==='light'?"1px solid rgba(255,255,255,0.3)":"none",color:"#ffffff",fontFamily:"Figtree,sans-serif",fontWeight:800}}>A</div>
           <div style={{flex:1,minWidth:100}}>
-            <div style={{fontSize:7,letterSpacing:3,color:theme==='light'?"rgba(255,255,255,0.7)":T.gold}}>{selectedProgramme==="shco-full"?"NABH SHCO 3RD EDITION":selectedProgramme==="shco-elc"?"NABH SHCO ELC":selectedProgramme==="hco-elc"?"NABH HCO ELC":selectedProgramme==="eco-full"?"NABH ECO FULL ACCREDITATION":"NABH 6TH EDITION"}</div>
+            <div style={{fontSize:7,letterSpacing:3,color:theme==='light'?"rgba(255,255,255,0.7)":HP.brandLight}}>{selectedProgramme==="shco-full"?"NABH SHCO 3RD EDITION":selectedProgramme==="shco-elc"?"NABH SHCO ELC":selectedProgramme==="hco-elc"?"NABH HCO ELC":selectedProgramme==="eco-full"?"NABH ECO FULL ACCREDITATION":"NABH 6TH EDITION"}</div>
             <div style={{fontSize:14,fontWeight:700,color:"#ffffff"}}>{context?.hospitalName||"AccredReady"}{context?.assessmentName&&<span style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted,marginLeft:6}}>{context.assessmentName}</span>}</div>
           </div>
           {loading&&<div style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted}}>Refreshing…</div>}
           {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${readinessColor}25`,border:`1px solid ${readinessColor}60`,fontSize:11,fontWeight:700,color:theme==='light'?"#ffffff":readinessColor}}>{decision.readiness==="NOT READY"?"❌":decision.readiness==="RISKY"?"⚠️":"✅"} {decision.readiness||"—"}</div>}
           {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${verdictColor}25`,border:`1px solid ${verdictColor}60`,fontSize:12,fontWeight:800,color:theme==='light'?"#ffffff":verdictColor}}>{decision.verdict==="PARTIAL"?"⚠️":""}{decision.verdict||"—"}</div>}
           <div style={{display:"flex",gap:3,flexWrap:"wrap",position:"relative"}}>
-            {PRIMARY_NAV.map(n=>{const _tourIds={dashboard:"tour-target-dashboard",scoring:"tour-target-score",gaps:"tour-target-fixgaps",audits:"tour-target-audits"};return(
+            {PRIMARY_NAV.map(n=>{const _tourIds={dashboard:"tour-target-dashboard",scoring:"tour-target-score",gaps:"tour-target-fixgaps",audits:"tour-target-audits"};const navActive=screen===n.id;const darkActive=theme!=='light'&&navActive;return(
               <button key={n.id} id={_tourIds[n.id]||undefined} onClick={()=>navigate({ screen: n.id })} style={{
-                padding:"4px 9px",borderRadius:7,fontSize:11,cursor:"pointer",
-                background:screen===n.id?(theme==='light'?"rgba(255,255,255,0.25)":T.goldD):"transparent",
-                border:`1px solid ${screen===n.id?(theme==='light'?"rgba(255,255,255,0.6)":T.gold):(theme==='light'?"rgba(255,255,255,0.3)":T.border)}`,
+                padding:"5px 10px",borderRadius:7,fontSize:11,cursor:"pointer",display:"inline-flex",alignItems:"center",gap:5,
+                background:navActive?(theme==='light'?"rgba(255,255,255,0.25)":darkActive?"rgba(110,231,183,.15)":T.goldD):"transparent",
+                border:`1px solid ${navActive?(theme==='light'?"rgba(255,255,255,0.6)":darkActive?"rgba(110,231,183,.35)":T.gold):(theme==='light'?"rgba(255,255,255,0.3)":T.border)}`,
                 color:"#ffffff",
-                fontWeight:screen===n.id?700:400,
-              }}>{n.icon} {n.label}</button>
+                fontWeight:navActive?700:400,
+              }}><NavIcon icon={n.icon}/> {n.label}</button>
             );})}
 
             {SECONDARY_NAV.length>0&&(
@@ -11193,18 +11199,18 @@ export default function App() {
                     {SECONDARY_NAV.map(n=>(
                       <button key={n.id} onClick={()=>{navigate({ screen: n.id });setShowMoreMenu(false);}}
                         style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen===n.id?T.gold:"transparent"}`,background:screen===n.id?T.goldD:"transparent",color:screen===n.id?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",flexDirection:"row",alignItems:"center",gap:10,fontWeight:screen===n.id?700:400,width:"100%",textAlign:"left"}}>
-                        <span style={{width:20,fontSize:15}}>{n.icon}</span>
+                        <span style={{width:20,display:"flex",justifyContent:"center"}}><NavIcon icon={n.icon}/></span>
                         <span>{n.label}</span>
                       </button>
                     ))}
                     <a href="https://drive.google.com/drive/folders/1DOfGmHg_dO5blXw_3Mz07dtre6IKYYlI" target="_blank" rel="noopener noreferrer" onClick={()=>setShowMoreMenu(false)}
                       style={{padding:"9px 16px",borderLeft:"3px solid transparent",background:"transparent",color:T.gold,fontSize:13,display:"flex",alignItems:"center",gap:10,textDecoration:"none",fontWeight:700,width:"100%"}}>
-                      <span style={{fontSize:15,width:20,textAlign:"center"}}>📁</span>
+                      <span style={{fontSize:15,width:20,textAlign:"center"}}><NavIcon icon="ti-folder"/></span>
                       <span>Docs</span>
                     </a>
                     <a href="https://wa.me/918511180957?text=Hi%2C%20I%20have%20a%20suggestion%20for%20AccredReady%3A%20" target="_blank" rel="noopener noreferrer" onClick={()=>setShowMoreMenu(false)}
                       style={{padding:"9px 16px",borderLeft:"3px solid transparent",background:"transparent",color:T.text,fontSize:13,display:"flex",alignItems:"center",gap:10,textDecoration:"none",fontWeight:400,width:"100%"}}>
-                      <span style={{fontSize:15,width:20,textAlign:"center"}}>💬</span>
+                      <span style={{fontSize:15,width:20,textAlign:"center"}}><NavIcon icon="ti-message-circle"/></span>
                       <span>Suggest a feature</span>
                     </a>
                   </div>
@@ -11216,18 +11222,18 @@ export default function App() {
 
           <button onClick={toggleTheme} title={theme==='dark'?'Switch to light mode':'Switch to dark mode'} style={{padding:"4px 9px",borderRadius:7,background:theme==='light'?"rgba(255,255,255,0.2)":"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.border}`,color:"#ffffff",fontSize:15,cursor:"pointer",lineHeight:1}}>{theme==='dark'?'☀️':'🌙'}</button>
           <div style={{position:"relative"}}>
-            <button onClick={e=>{e.stopPropagation();setShowUserMenu(v=>!v);}} style={{width:30,height:30,borderRadius:"50%",background:theme==='light'?"rgba(255,255,255,0.2)":T.goldD,border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.gold}`,color:"#ffffff",fontSize:16,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",padding:0}}>👤</button>
+            <button onClick={e=>{e.stopPropagation();setShowUserMenu(v=>!v);}} style={{width:30,height:30,borderRadius:"50%",background:theme==='light'?"rgba(255,255,255,0.2)":HP.brand,border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":"rgba(110,231,183,.35)"}`,color:"#ffffff",fontSize:14,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",padding:0}}><NavIcon icon="ti-user"/></button>
             {showUserMenu&&(
               <div onClick={e=>e.stopPropagation()} style={{position:"absolute",top:"calc(100% + 6px)",right:0,background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"6px 0",display:"flex",flexDirection:"column",zIndex:300,minWidth:160,boxShadow:"0 8px 30px rgba(0,0,0,0.15)"}}>
                 <button onClick={()=>{navigate({ screen: "profile" });setShowUserMenu(false);}} style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen==="profile"?T.gold:"transparent"}`,background:screen==="profile"?T.goldD:"transparent",color:screen==="profile"?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:10,width:"100%",textAlign:"left"}}>
-                  <span style={{width:20,fontSize:15}}>👤</span><span>Profile</span>
+                  <span style={{width:20,display:"flex",justifyContent:"center"}}><NavIcon icon="ti-user"/></span><span>Profile</span>
                 </button>
                 <button onClick={()=>{navigate({ screen: "pricing" });setShowUserMenu(false);}} style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen==="pricing"?T.gold:"transparent"}`,background:screen==="pricing"?T.goldD:"transparent",color:screen==="pricing"?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:10,width:"100%",textAlign:"left"}}>
-                  <span style={{width:20,fontSize:15}}>💎</span><span>Pricing</span>
+                  <span style={{width:20,display:"flex",justifyContent:"center"}}><NavIcon icon="ti-diamond"/></span><span>Pricing</span>
                 </button>
                 <div style={{height:1,background:T.border,margin:"4px 0"}}/>
                 <button onClick={handleSignOut} style={{padding:"9px 16px",border:"none",borderLeft:"3px solid transparent",background:"transparent",color:T.red,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:10,width:"100%",textAlign:"left"}}>
-                  <span style={{width:20,fontSize:15}}>🚪</span><span>Sign out</span>
+                  <span style={{width:20,display:"flex",justifyContent:"center"}}><NavIcon icon="ti-logout"/></span><span>Sign out</span>
                 </button>
               </div>
             )}
