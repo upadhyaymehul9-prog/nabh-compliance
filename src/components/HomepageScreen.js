@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function HomepageScreen({ onSignIn }) {
   const [openPersons, setOpenPersons] = useState([false, false, false]);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const togPerson = (idx) =>
     setOpenPersons(prev => prev.map((v, i) => i === idx ? !v : v));
@@ -141,7 +142,7 @@ export default function HomepageScreen({ onSignIn }) {
           border-bottom: 1px solid var(--border); transition: box-shadow .2s ease;
         }
         #hp-root header.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.06); }
-        #hp-root nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+        #hp-root nav { display: flex; align-items: center; justify-content: space-between; height: 66px; gap: 12px; }
         #hp-root .logo { display: flex; align-items: center; gap: 10px; font-family: 'Figtree', sans-serif; font-weight: 700; font-size: 18px; color: var(--text); }
         #hp-root .logo-mark {
           width: 35px; height: 35px; border-radius: 9px; background: var(--brand);
@@ -154,7 +155,29 @@ export default function HomepageScreen({ onSignIn }) {
         #hp-root .navlinks a.nav-link { padding: 6px 13px; border-radius: 8px; color: var(--muted); font-weight: 500; transition: background .15s, color .15s; min-height: 44px; display: inline-flex; align-items: center; }
         #hp-root .navlinks a.nav-link:hover { color: var(--text); background: var(--surface); }
         #hp-root .navlinks a.nav-link:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
-        @media(max-width:740px) { #hp-root .navlinks a.nav-link { display: none; } }
+        #hp-root .nav-right { display: flex; align-items: center; gap: 4px; }
+        #hp-root .menu-toggle {
+          display: none; align-items: center; justify-content: center;
+          width: 44px; height: 44px; border-radius: 10px; border: 1px solid var(--border);
+          background: var(--white); color: var(--text); cursor: pointer;
+        }
+        #hp-root .menu-toggle:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+        #hp-root .mobile-menu {
+          display: none; position: absolute; top: 66px; left: 0; right: 0;
+          background: rgba(255,255,255,.98); border-bottom: 1px solid var(--border);
+          padding: 12px 24px 16px; box-shadow: var(--shadow-md); z-index: 99;
+        }
+        #hp-root .mobile-menu.open { display: block; }
+        #hp-root .mobile-menu a, #hp-root .mobile-menu button {
+          display: flex; width: 100%; padding: 12px 0; border: none; background: none;
+          font-size: 15px; font-weight: 600; color: var(--text); text-align: left; cursor: pointer;
+          border-bottom: 1px solid var(--border); font-family: 'Figtree', sans-serif;
+        }
+        #hp-root .mobile-menu a:last-child, #hp-root .mobile-menu button:last-child { border-bottom: none; }
+        @media(max-width:740px) {
+          #hp-root .navlinks a.nav-link { display: none; }
+          #hp-root .menu-toggle { display: inline-flex; }
+        }
 
         /* ── HERO ── */
         #hp-root .hero { background: var(--brand-dark); color: #fff; position: relative; overflow: hidden; }
@@ -171,11 +194,14 @@ export default function HomepageScreen({ onSignIn }) {
         }
         #hp-root .hero-inner {
           position: relative; z-index: 2; padding: 88px 24px 76px;
-          display: grid; grid-template-columns: 1fr 400px; gap: 56px;
+          display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 420px); gap: 48px;
           align-items: center; max-width: 1100px; margin: 0 auto;
         }
-        @media(max-width:960px) { #hp-root .hero-inner { grid-template-columns: 1fr; gap: 48px; } }
-        @media(max-width:768px) { #hp-root .hero-inner { padding: 64px 24px 56px; } }
+        @media(max-width:960px) {
+          #hp-root .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+          #hp-root .hero-mockup { max-width: 480px; width: 100%; margin: 0 auto; justify-self: center; }
+        }
+        @media(max-width:768px) { #hp-root .hero-inner { padding: 64px 20px 56px; } }
         #hp-root .hero-badge {
           display: inline-flex; align-items: center; gap: 8px;
           background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.16);
@@ -208,8 +234,8 @@ export default function HomepageScreen({ onSignIn }) {
           border-radius: 18px; overflow: hidden;
           backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
           box-shadow: 0 8px 32px rgba(0,0,0,.25);
+          width: 100%; max-width: 420px; justify-self: end;
         }
-        @media(max-width:960px) { #hp-root .hero-mockup { max-width: 460px; } }
         #hp-root .mock-titlebar { display: flex; align-items: center; gap: 8px; padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,.1); background: rgba(0,0,0,.15); }
         #hp-root .mock-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,.18); }
         #hp-root .mock-url-bar { flex: 1; background: rgba(255,255,255,.08); border-radius: 6px; padding: 5px 12px; font-size: 11.5px; color: rgba(255,255,255,.4); font-family: 'Inter', sans-serif; margin-left: 4px; }
@@ -390,20 +416,32 @@ export default function HomepageScreen({ onSignIn }) {
 
       {/* NAV */}
       <header id="hp-header">
-        <div className="wrap">
+        <div className="wrap" style={{position:"relative"}}>
           <nav>
             <a className="logo ff" href="#top">
               <div className="logo-mark">A</div>
               <span className="logo-name">Accred<b>Ready</b></span>
             </a>
-            <div className="navlinks">
-              <a className="nav-link" href="#features">Features</a>
-              <a className="nav-link" href="#how-it-works">How it works</a>
-              <a className="nav-link" href="#about">About</a>
-              <a className="nav-link" href="#pricing">Pricing</a>
-              <button className="btn btn-primary" onClick={onSignIn}>Sign In</button>
+            <div className="nav-right">
+              <div className="navlinks">
+                <a className="nav-link" href="#features">Features</a>
+                <a className="nav-link" href="#how-it-works">How it works</a>
+                <a className="nav-link" href="#about">About</a>
+                <a className="nav-link" href="#pricing">Pricing</a>
+                <button className="btn btn-primary" onClick={onSignIn}>Sign In</button>
+              </div>
+              <button type="button" className="menu-toggle" aria-label="Open menu" aria-expanded={menuOpen} onClick={()=>setMenuOpen(v=>!v)}>
+                <i className={`ti ${menuOpen?"ti-x":"ti-menu-2"}`} aria-hidden="true"></i>
+              </button>
             </div>
           </nav>
+          <div className={`mobile-menu${menuOpen?" open":""}`}>
+            <a href="#features" onClick={()=>setMenuOpen(false)}>Features</a>
+            <a href="#how-it-works" onClick={()=>setMenuOpen(false)}>How it works</a>
+            <a href="#about" onClick={()=>setMenuOpen(false)}>About</a>
+            <a href="#pricing" onClick={()=>setMenuOpen(false)}>Pricing</a>
+            <button type="button" onClick={()=>{setMenuOpen(false);onSignIn();}}>Sign In</button>
+          </div>
         </div>
       </header>
 
