@@ -158,8 +158,8 @@ def build_audio(cues: list[Cue], work: Path) -> Path:
         ";".join(filter_parts)
         + ";"
         + "".join(mix_labels)
-        + f"amix=inputs={n}:duration=first:dropout_transition=0:normalize=0,"
-        f"apad=pad_dur={VIDEO_DURATION},"
+        + f"amix=inputs={n}:duration=longest:dropout_transition=0:normalize=0,"
+        f"atrim=0:{VIDEO_DURATION},asetpts=PTS-STARTPTS,"
         f"loudnorm=I=-14:TP=-1.5:LRA=11[aout]"
     )
     run(
