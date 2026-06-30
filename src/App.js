@@ -7390,6 +7390,7 @@ export default function App() {
   const [authErrorMsg,setAuthErrorMsg]=useState("");
 
   useEffect(()=>{
+    console.log('[oauth-debug] post-redirect localStorage keys:', Object.keys(localStorage), '| code-verifier present:', Object.keys(localStorage).some(k=>k.includes('code-verifier')));
     // Detect auth error fragment in URL (e.g., expired/invalid recovery link)
     // This MUST run before any session check — an expired link with an active session
     // would otherwise silently land on dashboard, hiding the error from the user.
