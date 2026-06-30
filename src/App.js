@@ -7395,7 +7395,7 @@ export default function App() {
     const finishSignedIn=(sessionUser)=>{
       if(cancelled||!sessionUser)return;
       setUser(sessionUser);
-      setAuthState(s=>s==="recovery"?s:"setup");
+      setAuthState(s=>(s==="loading"||s==="homepage"||s==="login")?"setup":s);
     };
     const finishSignedOut=()=>{
       if(cancelled)return;
