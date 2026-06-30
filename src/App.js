@@ -7427,19 +7427,20 @@ export default function App() {
       });
       return;
     }
-    supabase.auth.getSession().then(({data:{session}})=>{
-      if(session?.user){setUser(session.user);setAuthState("setup");}
-      else setAuthState("homepage");
-    });
     const{data:{subscription}}=supabase.auth.onAuthStateChange((event,session)=>{
       if(event==="PASSWORD_RECOVERY"){
         if(session?.user)setUser(session.user);
         setAuthState("recovery");
         return;
       }
-      if(session?.user){setUser(session.user);setAuthState(s=>{if(s==="recovery")return s;if(event==="SIGNED_IN"&&(s==="loading"||s==="homepage"||s==="login"))return "setup";if(s==="loading")return "setup";return s;});}
-      else if(event==="INITIAL_SESSION"){setUser(null);setAuthState("homepage");setContext(null);}
-      else{setUser(null);setAuthState("login");setContext(null);}
+      if(session?.user){
+        setUser(session.user);
+        setAuthState(s=>s==="recovery"?s:"setup");
+      } else {
+        setUser(null);
+        setAuthState(s=>s==="recovery"?s:"homepage");
+        setContext(null);
+      }
     });
     return()=>subscription.unsubscribe();
   },[]);
