@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 const YOUTUBE_PROMO_ID = "de3TKt7LfT8";
 const YOUTUBE_PROMO_URL = `https://www.youtube.com/watch?v=${YOUTUBE_PROMO_ID}`;
+const FOUNDER_LINKEDIN_URL = "https://www.linkedin.com/in/dr-mehul-upadhyay-039a07197";
 
 export default function HomepageScreen({ onSignIn }) {
   const [openPersons, setOpenPersons] = useState([false, false, false]);
@@ -350,6 +351,12 @@ export default function HomepageScreen({ onSignIn }) {
         #hp-root .person-body p { color: var(--muted); font-size: 14.5px; line-height: 1.75; margin-top: 16px; max-width: 74ch; }
         #hp-root .meta-line { font-size: 13px !important; margin-top: 10px !important; }
         #hp-root .meta-line b { color: var(--text); }
+        #hp-root .founder-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px !important; }
+        #hp-root .founder-links a {
+          display: inline-flex; align-items: center; gap: 6px;
+          font-size: 13px; font-weight: 600; color: var(--brand-mid);
+        }
+        #hp-root .founder-links a:hover { color: var(--brand-dark); text-decoration: underline; }
         #hp-root .hosp-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
         #hp-root .hosp-chips span { font-size: 12px; background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 5px 12px; border-radius: 7px; font-weight: 500; }
 
@@ -678,6 +685,14 @@ export default function HomepageScreen({ onSignIn }) {
                 <p>15+ years of healthcare operations experience, including international exposure in New Zealand. Currently Head of Medical Services &amp; Operations at HMP Foundation, Ankleshwar.</p>
                 <p>AccredReady was built out of that direct, on-ground experience: the documentation burden, the audit cycles, and the gap between a standard's written requirement and a hospital's day-to-day reality. The platform reflects what accreditation actually looks like from inside a hospital, not from outside it.</p>
                 <p className="meta-line"><b>Current role:</b> Head of Medical Services &amp; Operations, HMP Foundation (Reliance) · <b>Based in:</b> Ankleshwar, Gujarat · <b>Also:</b> IIM Kozhikode — Healthcare Management &amp; AI</p>
+                <p className="meta-line founder-links">
+                  <a href={FOUNDER_LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
+                    <i className="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn profile
+                  </a>
+                  <a href={YOUTUBE_PROMO_URL} target="_blank" rel="noopener noreferrer">
+                    <i className="ti ti-brand-youtube" aria-hidden="true"></i> Product video
+                  </a>
+                </p>
               </div>
             </div>
           </div>
