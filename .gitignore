@@ -31,8 +31,5 @@ supabase/.temp/
 marketing/linkedin/post-log.json
 .env.linkedin
 
-# OPD Manager (separate Next.js app)
-opd-manager/node_modules
-opd-manager/.next
-opd-manager/out
-opd-manager/.env.local
+# OPD Manager — standalone repo (see github.com/upadhyaymehul9-prog/opd-manager)
+opd-manager/
