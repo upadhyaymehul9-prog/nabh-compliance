@@ -758,6 +758,7 @@ Deno.serve(async (req) => {
 
     let rows: Record<string, unknown>[] | null = null;
     let isKeywordFallback = false;
+    let mergedHits: { kind: "oe" | "kb"; rank: number; row: Record<string, unknown> }[] = [];
     let isGeneralRef = false;
     let isKpiRef = false;
     let isMedErrorRef = false;
@@ -849,17 +850,34 @@ Deno.serve(async (req) => {
       generalRefSourceLabel = "SHCO Full — General Reference (NABH 3rd Edition Standards Book)";
     }
 
-    // Step 4: if no general ref match, fall back to ranked full-text search over OE text.
-    // Uses websearch_to_tsquery + ts_rank via the search_shco_full_oes RPC, returning the
-    // top-N most relevant OEs (replaces the old unranked ILIKE-OR, which let common words
-    // flood an unranked 12-row cap and evict the relevant OE).
+    // Step 4: if no curated reference matched, fall back to ranked full-text search.
+    // Search BOTH the OE table (search_shco_full_oes) and the curated KB (search_shco_kb)
+    // in parallel, then merge the hits by ts_rank so the most relevant rows across both
+    // sources feed the answer model. (Replaces the old unranked ILIKE-OR; both RPCs use
+    // websearch_to_tsquery converted to OR + ts_rank and expose a numeric `rank`.)
     if (!rows && !isGeneralRef) {
       _step.current = "db-fts-search";
-      const { data: ftsRows, error: ftsErr } = await supabase
-        .rpc("search_shco_full_oes", { q: question, match_count: 8 });
-      if (ftsErr) throw new Error(`DB FTS search: ${ftsErr.message}`);
-      if (ftsRows && ftsRows.length > 0) {
-        rows = ftsRows;
+      const [oeRes, kbRes] = await Promise.all([
+        supabase.rpc("search_shco_full_oes", { q: question, match_count: 8 }),
+        supabase.rpc("search_shco_kb", { q: question, match_count: 8 }),
+      ]);
+      if (oeRes.error) throw new Error(`DB FTS search (oes): ${oeRes.error.message}`);
+      if (kbRes.error) throw new Error(`DB FTS search (kb): ${kbRes.error.message}`);
+
+      const tag = (kind: "oe" | "kb") => (r: Record<string, unknown>) => ({
+        kind,
+        rank: typeof r.rank === "number" ? r.rank : 0,
+        row: r,
+      });
+      mergedHits = [
+        ...((oeRes.data ?? []) as Record<string, unknown>[]).map(tag("oe")),
+        ...((kbRes.data ?? []) as Record<string, unknown>[]).map(tag("kb")),
+      ]
+        .sort((a, b) => b.rank - a.rank)
+        .slice(0, 10);
+
+      if (mergedHits.length > 0) {
+        rows = mergedHits.map((h) => h.row);
         isKeywordFallback = true;
       } else {
         rows = [];
@@ -867,19 +885,25 @@ Deno.serve(async (req) => {
     }
 
     _step.current = "build-context";
+    const renderOe = (r: Record<string, unknown>) => {
+      const tips =
+        Array.isArray(r.achieve_tips) && r.achieve_tips.length > 0
+          ? r.achieve_tips.join(" | ")
+          : "—";
+      return `${r.oe_code} | ${r.level} | ${r.text} | ${tips}`;
+    };
+    const renderKb = (r: Record<string, unknown>) =>
+      `${r.title} [${r.source_label}] | ${r.content}`;
+
     const contextBlock = isGeneralRef
       ? generalRefContext
-      : rows && rows.length > 0
-        ? rows
-            .map((r) => {
-              const tips =
-                Array.isArray(r.achieve_tips) && r.achieve_tips.length > 0
-                  ? r.achieve_tips.join(" | ")
-                  : "—";
-              return `${r.oe_code} | ${r.level} | ${r.text} | ${tips}`;
-            })
+      : mergedHits.length > 0
+        ? mergedHits
+            .map((h) => (h.kind === "oe" ? renderOe(h.row) : renderKb(h.row)))
             .join("\n")
-        : "";
+        : rows && rows.length > 0
+          ? rows.map(renderOe).join("\n") // Step-1 direct oe_code match (all OE rows)
+          : "";
 
     // System prompt — two variants depending on context type
     const systemPrompt = isGeneralRef
@@ -918,12 +942,14 @@ Deno.serve(async (req) => {
         `5. Do NOT speculate about anything not explicitly in <context>.\n\n` +
         `<context>\n${contextBlock}\n</context>`
       : `You are AccredReady's NABH SHCO Full compliance assistant. You answer ONLY` +
-        ` using the Objective Element (OE) content provided below in <context>. You` +
-        ` have no other knowledge of NABH standards, KPIs, or accreditation` +
-        ` requirements — anything not in the provided context is outside what you know.\n\n` +
+        ` using the SHCO Full reference content provided below in <context> — a mix of` +
+        ` Objective Elements (OEs) and curated reference entries. You have no other` +
+        ` knowledge of NABH standards, KPIs, or accreditation requirements — anything` +
+        ` not in the provided context is outside what you know.\n\n` +
         `Rules:\n` +
-        `1. If the answer is fully contained in <context>, answer clearly and cite` +
-        ` the exact oe_code(s) you used.\n` +
+        `1. If the answer is fully contained in <context>, answer clearly and cite the` +
+        ` exact oe_code(s) for OE lines, or the bracketed [source label] for curated` +
+        ` reference lines, that you used.\n` +
         `2. If <context> is empty or doesn't address the question, say: 'I couldn't` +
         ` find a matching SHCO Full requirement for that — try rephrasing, or check` +
         ` with your AccredReady admin.' Do NOT guess or use general NABH knowledge.\n` +
@@ -931,7 +957,9 @@ Deno.serve(async (req) => {
         ` they appear verbatim in <context>.\n` +
         `4. Keep answers practical and specific — hospital staff need to know what to` +
         ` DO, not just what the rule says.\n` +
-        `5. Always end your answer with the source: 'Source: SHCO Full — [oe_code]'\n` +
+        `5. Always end your answer with the source: for an OE, 'Source: SHCO Full —` +
+        ` [oe_code]'; for a curated reference entry, use its bracketed [source label]` +
+        ` from <context>.\n` +
         `6. When you cannot find a match, state ONLY that no matching SHCO Full` +
         ` requirement was found, and suggest the user rephrase or check with their` +
         ` AccredReady admin. Do NOT speculate about which chapter, standard, or OE` +
