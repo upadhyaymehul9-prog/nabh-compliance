@@ -849,28 +849,18 @@ Deno.serve(async (req) => {
       generalRefSourceLabel = "SHCO Full — General Reference (NABH 3rd Edition Standards Book)";
     }
 
-    // Step 4: if no general ref match, fall back to keyword search against OE text
+    // Step 4: if no general ref match, fall back to ranked full-text search over OE text.
+    // Uses websearch_to_tsquery + ts_rank via the search_shco_full_oes RPC, returning the
+    // top-N most relevant OEs (replaces the old unranked ILIKE-OR, which let common words
+    // flood an unranked 12-row cap and evict the relevant OE).
     if (!rows && !isGeneralRef) {
-      _step.current = "db-keyword-search";
-      const keywords = question
-        .split(/\s+/)
-        .filter((w) => w.length > 3)
-        .slice(0, 8);
-
-      if (keywords.length > 0) {
-        const filter = keywords.map((w) => `text.ilike.%${w}%`).join(",");
-        const { data: kwRows, error: kwErr } = await supabase
-          .from("shco_full_oes")
-          .select("oe_code, chapter, standard_code, level, text, achieve_tips")
-          .or(filter)
-          .limit(12);
-        if (kwErr) throw new Error(`DB keyword search: ${kwErr.message}`);
-        if (kwRows && kwRows.length > 0) {
-          rows = kwRows;
-          isKeywordFallback = true;
-        } else {
-          rows = [];
-        }
+      _step.current = "db-fts-search";
+      const { data: ftsRows, error: ftsErr } = await supabase
+        .rpc("search_shco_full_oes", { q: question, match_count: 8 });
+      if (ftsErr) throw new Error(`DB FTS search: ${ftsErr.message}`);
+      if (ftsRows && ftsRows.length > 0) {
+        rows = ftsRows;
+        isKeywordFallback = true;
       } else {
         rows = [];
       }
@@ -986,10 +976,10 @@ Deno.serve(async (req) => {
     const suggestions =
       !isGeneralRef && (isKeywordFallback || (rows && rows.length === 0))
         ? [
-            "What are the requirements for infection control programme documentation?",
-            "Who approves antibiotic usage in SHCO standards?",
-            "What are the safe injection practices required?",
-            "What does the IC committee need to do and how often does it meet?",
+            "What must we do for hand hygiene?",
+            "What must we do for biomedical waste segregation?",
+            "What must we do for fire safety and emergency preparedness?",
+            "What does the infection control committee do?",
           ]
         : [];
 
