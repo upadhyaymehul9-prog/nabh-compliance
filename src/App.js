@@ -3384,7 +3384,7 @@ function GapFixScreen({ assessmentId, gaps, onRefresh, onDownloadReport, pdfLoad
 
 
 // ── COMMITTEES — with full MOM ─────────────────────────────
-function CommitteesScreen({ hospitalId, committeesView, navigate }) {
+function CommitteesScreen({ hospitalId, committeesView, navigate, selectedProgramme }) {
   const [committees,setCommittees]=useState([]);
   const [meetings,setMeetings]=useState([]);
   const [loading,setLoading]=useState(true);
@@ -3409,13 +3409,26 @@ function CommitteesScreen({ hospitalId, committeesView, navigate }) {
   const [momForm,setMOMForm]=useState(emptyMOM());
 
   useEffect(()=>{
-    supabase.from("committees").select("*").order("id").then(({data})=>setCommittees(data||[]));
+    (async()=>{
+      const prog = selectedProgramme==='hco-elc' ? 'HCO_ELC'
+                 : selectedProgramme==='shco-elc' ? 'SHCO_ELC' : null;
+      if (prog) {
+        const { data } = await supabase
+          .from('committee_programme_map')
+          .select('committees(*)').eq('programme', prog);
+        setCommittees((data||[]).map(r=>r.committees).filter(Boolean));
+      } else {
+        // unchanged: existing HCO Full load of all committees
+        const { data } = await supabase.from("committees").select("*").order("id");
+        setCommittees(data||[]);
+      }
+    })();
     if(hospitalId){
       supabase.from("committee_meetings").select("*").eq("hospital_id",hospitalId)
         .order("meeting_date",{ascending:false})
         .then(({data})=>{setMeetings(data||[]);setLoading(false);});
     } else { setLoading(false); }
-  },[hospitalId]);
+  },[hospitalId,selectedProgramme]);
 
   const filtered=committees.filter(c=>{
     const ms=!search||c.name.toLowerCase().includes(search.toLowerCase())||c.chapter_ref?.toLowerCase().includes(search.toLowerCase());
@@ -3481,6 +3494,9 @@ function CommitteesScreen({ hospitalId, committeesView, navigate }) {
     return (now-d)/(1000*60*60*24*365)<=1;
   }).map(m=>m.committee_id)).size;
 
+  // ELC programmes show their own committee count; HCO Full keeps the fixed 26
+  const commTotal=(selectedProgramme==='hco-elc'||selectedProgramme==='shco-elc')?committees.length:26;
+
   if(loading) return <div style={{textAlign:"center",color:T.muted,padding:40}}>Loading…</div>;
 
   return (
@@ -3490,10 +3506,10 @@ function CommitteesScreen({ hospitalId, committeesView, navigate }) {
         <div style={{flex:1}}>
           <div style={{fontSize:11,color:T.muted,marginBottom:3,letterSpacing:1}}>COMMITTEE FUNCTIONING</div>
           <div style={{fontSize:14,color:totalActive>=20?T.green:totalActive>0?T.orange:T.red,fontWeight:700}}>
-            {totalActive}/26 committees active <span style={{fontSize:11,color:T.muted}}>(met in last 12 months)</span>
+            {totalActive}/{commTotal} committees active <span style={{fontSize:11,color:T.muted}}>(met in last 12 months)</span>
           </div>
           <div style={{height:4,background:T.border,borderRadius:2,marginTop:6}}>
-            <div style={{height:"100%",borderRadius:2,background:totalActive>=20?T.green:totalActive>0?T.orange:T.red,width:`${Math.min(100,(totalActive/26)*100)}%`,transition:"width 0.5s"}}/>
+            <div style={{height:"100%",borderRadius:2,background:totalActive>=20?T.green:totalActive>0?T.orange:T.red,width:`${Math.min(100,(totalActive/(commTotal||1))*100)}%`,transition:"width 0.5s"}}/>
           </div>
         </div>
         <div style={{display:"flex",gap:8}}>
@@ -11408,7 +11424,7 @@ export default function App() {
         </button>}
         {screen==="scoring"&&<ScoringScreen assessmentId={context?.assessmentId} oes={oes} standards={standards} onRefresh={()=>loadData(context)}/>}
         {screen==="gaps"&&<GapFixScreen assessmentId={context?.assessmentId} gaps={gaps} onRefresh={()=>loadData(context)} onDownloadReport={generatePDF} pdfLoading={pdfLoading}/>}
-        {screen==="committees"&&<CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate}/>}
+        {screen==="committees"&&<CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate} selectedProgramme={selectedProgramme}/>}
         {screen==="committee-calendar"&&<CommitteeCalendarScreen hospitalId={context?.hospitalId}/>}
         {screen==="kpis"&&<KPIsScreen hospitalId={context?.hospitalId} user={user}/>}
         {screen==="checklists"&&<ChecklistsScreen hospitalId={context?.hospitalId}/>}
