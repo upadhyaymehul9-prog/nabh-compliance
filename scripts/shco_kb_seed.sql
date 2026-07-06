@@ -1,0 +1,470 @@
+-- SHCO book-only knowledge seed
+-- Source: NABH SHCO 3rd Edition (August 2022) — extracted via scripts/extract_shco_book.py
+-- Run in Supabase SQL Editor AFTER 20260706_shco_kb_schema.sql migration
+
+-- 1. Clear prior book KB rows (safe re-run)
+delete from public.shco_kb where source_label like 'SHCO Full —%';
+
+-- 2. Chapter intents, summaries, and general reference
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_intent', 'AAC', 'AAC — Intent of the Chapter', 'Patients are informed of the services provided by the organisation. Only those patients who can be cared for by the organisation are admitted. Emergency patients receive life-stabilising treatment and are then either admitted (if resources are available) or transferred appropriately to an organisation that has the resources to take care of such patients. Out-patients who do not match the organisation''s resources are similarly referred to organisations that have the required resources. Patients that match the organisation''s resources are admitted using a defined process. Patients cared for by the organisation undergo an established initial assessment and periodic reassessments. These assessments result in the formulation of a care plan. The organisation provides laboratory and imaging services commensurate to its scope of services. The laboratory and imaging services are provided by competent staff in a safe environment for both patients and staff. Patient care is continuous and multidisciplinary. Transfer and discharge protocols are well defined, with adequate information provided to the patient.', 'SHCO Full — AAC Chapter Intent (NABH 3rd Edition, p.56)', 56);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_summary', 'AAC', 'AAC — Summary of Standards', 'AAC.1. The organization defines and displays the healthcare services that it provides.
+AAC.2. The organization has a well-defined registration, admission and transfer process.
+AAC.3.
+AAC.4.
+AAC.5.
+AAC.6. There is an established safety programme in the laboratory and imaging services
+AAC.7. Patient care is continuous and multidisciplinary in nature.
+AAC.8.', 'SHCO Full — AAC Summary of Standards (NABH 3rd Edition, p.56)', 56);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_intent', 'COP', 'COP — Intent of the Chapter', 'The organisation provides uniform care to all patients in various settings. The settings include care provided in outpatient units, day care facilities, in-patient units including critical care units, procedure rooms and operation theatre. When similar care is provided in these different settings, care delivery is uniform. Written guidance, applicable laws and regulations guide emergency and ambulance services, cardio-pulmonary resuscitation, use of blood and blood components, care of patients in the critical care and high dependency units. Written guidance, applicable laws and regulations also guide the care of patients who are at higher risk of morbidity/mortality, high-risk obstetric patients, paediatric patients, patients undergoing procedural sedation, administration of anaesthesia, patients undergoing surgical procedures and end of life care. Pain management, nutritional therapy and rehabilitative services are also addressed to provide comprehensive health care. The management should have written guidelines for organ donation and procurement. The transplant programme ensures that it has the right skill mix of staff and other related support systems to ensure safe and high quality of care. The standards aim to guide and encourage patient safety as the overarching principle for providing care to the patients.', 'SHCO Full — COP Chapter Intent (NABH 3rd Edition, p.66)', 66);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_summary', 'COP', 'COP — Summary of Standards', 'COP.1. Uniform care to patients is provided in all settings of the organization and is guided by written
+COP.2. Emergency services including ambulance, and management of disasters, are provided in
+COP.3. Cardio-pulmonary resuscitation services are provided uniformly across the organization.
+COP.4. Nursing care is provided to patients in the organization in consonance with clinical protocols.
+COP.5. Transfusion services are provided as per the scope of services of the organization, safely.
+COP.6. Organization provides care in the intensive care and high dependency units, in a systematic
+COP.7. Organization provides safe obstetric care.', 'SHCO Full — COP Summary of Standards (NABH 3rd Edition, p.66)', 66);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_intent', 'MOM', 'MOM — Intent of the Chapter', 'The organisation has a safe and organised medication process. The availability, safe storage, prescription, dispensing and administration of medications is governed by written guidance. Medications also include blood & blood components, implants and medical devices. The pharmacy should have oversight of all medications stocked out of the pharmacy. The pharmacy should ensure correct storage (as regards to temperature, light; high-risk medications including look-alike, sound-alike, etc.), near expiry dates and maintenance of documentation. The availability of emergency medications is stressed upon. The organisation should have a mechanism to ensure that the emergency medications are standardised throughout the organisation, readily available and replenished promptly. There should be a monitoring mechanism to ensure that the required medications are always stocked and well within expiry dates. Every high-risk medication order should be verified by an appropriate person to ensure accuracy of the dose, frequency and route of administration. Safety is paramount when using narcotics, chemotherapeutic agents and radioactive agents. The process also includes monitoring of patients after administration and procedures for reporting and analysing near-misses, medication errors and adverse drug reactions. Staff are aware of the recall process and are empowered to report errors', 'SHCO Full — MOM Chapter Intent (NABH 3rd Edition, p.82)', 82);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_summary', 'MOM', 'MOM — Summary of Standards', 'MOM.1. Multidisciplinary committee guides pharmacy services and management of medication.
+MOM.2. Medications are stored appropriately and are available where required.
+MOM.3. Medications are prescribed safely and rationally.
+MOM.4. Medication orders are written in a uniform manner.
+MOM.5. Medications are dispensed in a safe manner.
+MOM.6. Medications are administered safely.
+MOM.7. Patients are monitored after medication administration.
+MOM.8. Narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents
+MOM.9. Implantable prosthesis and medical devices are used in accordance with laid down criteria.', 'SHCO Full — MOM Summary of Standards (NABH 3rd Edition, p.82)', 82);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_intent', 'PRE', 'PRE — Intent of the Chapter', 'The organisation defines, protects and promotes the patient and family''s rights and responsibilities. The staff is aware of these rights and is trained to protect them. Patients are informed of their rights and educated about their responsibilities at the time of entering the organisation. The expected costs of treatment and care are explained clearly to the patient and/or family. Patients are educated about the mechanisms available for addressing grievances. Informed consent is obtained from the patient or family for specified procedures/care. The key components of information shall include risks, benefits and alternatives. Patients and families have a right to get information, education and communication about their healthcare needs in a language and manner that is understood by them.', 'SHCO Full — PRE Chapter Intent (NABH 3rd Edition, p.92)', 92);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_summary', 'PRE', 'PRE — Summary of Standards', 'PRE.1. The organisation protects and promotes patient and family rights and informs them about
+PRE.2. Patient and family rights support individual beliefs, values and involve the patient and family in
+PRE.3. Informed consent is obtained from the patient or family about their care.
+PRE.4. Patient and families have a right to information, education and communication about their
+PRE.5. Patients and families have a right to information on expected costs.
+PRE.6. The organization has a mechanism to capture patient''s feedback and to redress complaints.', 'SHCO Full — PRE Summary of Standards (NABH 3rd Edition, p.92)', 92);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_intent', 'HIC', 'HIC — Intent of the Chapter', 'The organisation implements an effective healthcare associated infection prevention and control programme. The programme is documented and aims at reducing/eliminating infection risks to patients, visitors and providers of care. The programme is implemented across the organisation, including clinical areas and support services. This shall be done through a multidisciplinary committee. The organisation provides proper facilities and adequate resources to support the infection prevention and control programme. The organisation measures and acts to prevent or reduce the risk of healthcare associated infection in patients and staff. The organisation has an effective antimicrobial management programme through a regularly updated antibiotic policy which is based on local data and trend analysis. Monitoring of antimicrobials usage in the organisation is an integral part of the programme. Surveillance activities are incorporated in the infection prevention and control programme. The programme includes disinfection/sterilisation activities and biomedical waste (BMW) management.', 'SHCO Full — HIC Chapter Intent (NABH 3rd Edition, p.99)', 99);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_summary', 'HIC', 'HIC — Summary of Standards', 'HIC.1. The organisation has a comprehensive and coordinated Hospital Infection Prevention and
+HIC.2. The organisation implements the infection prevention and control programme in clinical areas.
+HIC.3. The organisation implements the infection prevention and control programme in support
+HIC.4. The organisation takes actions to prevent healthcare associated Infections (HAI) in patients and
+HIC.5. The organisation performs surveillance to capture and monitor infection prevention and control
+HIC.6. Infection prevention measures include sterilization and/or disinfection of instruments, equipment', 'SHCO Full — HIC Summary of Standards (NABH 3rd Edition, p.99)', 99);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_intent', 'PSQ', 'PSQ — Intent of the Chapter', 'The standards encourage an environment of patient safety and continual quality improvement. The patient safety and quality programme should be documented and involve all areas of the organisation and all staff members. National/international patient-safety goals/solutions are implemented. The organisation should collect data on structures, processes and outcomes, especially in areas of high-risk situations. The collected data should be collated, analysed and used for further improvements. Appropriate quality tools can be used for carrying out quality improvement activities. Clinical audits shall be used as a tool to improve the quality of patient care. The improvements should be sustained. Department leaders play an active role in patient safety and quality improvement. The organisation should have a robust incident reporting system. Sentinel events shall be defined. All incidents are investigated, and appropriate action is taken. The management should support the patient safety and quality programme', 'SHCO Full — PSQ Chapter Intent (NABH 3rd Edition, p.108)', 108);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_summary', 'PSQ', 'PSQ — Summary of Standards', 'PSQ.1. The organisation implements a patient-safety programme and a structured quality improvement
+PSQ.2. The organisation identifies key indicators to monitor the structures, processes and outcomes
+PSQ.3. There is an established system for clinical audit and quality improvement programmes.
+PSQ.4. The patient safety and quality improvement programme are supported by the management.
+PSQ.5. Incidents are collected and analysed to ensure continual quality improvement.', 'SHCO Full — PSQ Summary of Standards (NABH 3rd Edition, p.108)', 108);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_intent', 'ROM', 'ROM — Intent of the Chapter', 'The management of the healthcare organisation is aware of and manages all the key components of governance. Those responsible for governance are identified and their roles defined. The standards encourage the governance of the organisation professionally and ethically. The responsibilities of management are defined. The responsibilities of the leaders at all levels are defined. The management executes its responsibility for compliance with all applicable regulations. Leaders ensure that patient-safety and risk-management issues are an integral part of patient care and hospital management. Note: "Responsible for Governance'' refers to the governing entity of the healthcare organisation and can exist in many configurations. For example, the owner(s), the board of directors, or in the case of public hospitals, the respective Ministry (Health/Railways/Labour).', 'SHCO Full — ROM Chapter Intent (NABH 3rd Edition, p.116)', 116);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_summary', 'ROM', 'ROM — Summary of Standards', 'ROM.1. The organisation identifies those responsible for governance and their roles are defined.
+ROM.2. The organisation is headed by a leader who shall be responsible for operating the
+ROM.3. The organisation displays professionalism in its functioning.
+ROM.4. Management ensures that patient-safety aspects and risk-management issues are an integral', 'SHCO Full — ROM Summary of Standards (NABH 3rd Edition, p.116)', 116);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_intent', 'FMS', 'FMS — Intent of the Chapter', 'The standards guide the provision of a safe and secure environment for patients, their families, staff and visitors. The organisation attends to the facility, equipment, and internal physical environment for improving patient safety and quality of services by consistently addressing issues that may arise out of the same. The organisation does this through proactive risk analysis, safety rounds, training of staff on the enhancement of safety. To ensure this, the organisation conducts regular facility inspection rounds and takes the appropriate action to ensure safety. The organisation provides for safe water, electricity, medical gases and vacuum systems. The organisation has a programme for medical and utility equipment management. The organisation plans for fire and non-fire emergencies within the facilities. The organisation safely manages hazardous materials. The organisation works towards measures on being energy efficient.', 'SHCO Full — FMS Chapter Intent (NABH 3rd Edition, p.122)', 122);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_summary', 'FMS', 'FMS — Summary of Standards', 'FMS.1. The organisation''s environment and facilities operate in a planned manner and promotes
+FMS.2. The organisation''s environment and facilities operate to ensure the safety of patients, their
+FMS.3. The organisation has a programme for medical equipment and support services
+FMS.4. The organisation has a programme for medical gases, vacuum and compressed air.
+FMS.5. The organization has plans for fire and non-fire emergencies within the facilities.', 'SHCO Full — FMS Summary of Standards (NABH 3rd Edition, p.122)', 122);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_intent', 'HRM', 'HRM — Intent of the Chapter', 'The most important resource of the organisation is its human resource. Human resources are an asset for the effective and efficient functioning of the organisation. The management plans on identifying the right number and skill mix of staff required to render safe care to the patients. Recruitment of staff is accomplished by having a uniform and standardised system. The organisation must orient the staff to its environment and also orient them to specific duties and responsibilities related to their position. The organisation should plan to have an ongoing professional training/in-service education to enhance the competencies and skills of the staff continually. The organization must ensure that all staff undergo induction training and ongoing professional training, pertaining to safety and quality. A systematic and structured appraisal system must be used for staff development. The organisation uses this as an opportunity to discuss, motivate, identify gaps in the performance of the staff. The organisation promotes the physical and mental well-being of staff. A grievance handling mechanism and disciplinary procedure should be in place. Credentialing and privileging of health-care professionals (medical, nursing and para-clinical professionals) are done to ensure patient safety. A document containing all such personal information has to be maintained for all staff. Note The term "employee" refers to all salaried personnel working in the organisation. The term "staff" refers to all personnel working in the organisation including employees, "fee for service" medical professionals, part-time workers, contractual personnel and volunteers', 'SHCO Full — HRM Chapter Intent (NABH 3rd Edition, p.128)', 128);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_summary', 'HRM', 'HRM — Summary of Standards', 'HRM.1. The organisation has a documented system of human resource planning.
+HRM.2. Staff are provided induction training and an on-going professional training for development.
+HRM.3. Staff are trained in safety and quality-related aspects.
+HRM.4. An appraisal system for evaluating the performance of staff exists as an integral part of the
+HRM.5. The organisation promotes staff well-being and addresses their health and safety needs.
+HRM.6. There is documented personal information for each staff member.', 'SHCO Full — HRM Summary of Standards (NABH 3rd Edition, p.128)', 128);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_intent', 'IMS', 'IMS — Intent of the Chapter', 'The goal of information management in the organisation is to ensure that the right information is available to the right person at the right time. Information management includes management of hospital information system as well as all modalities of information communicated to staff, patients, visitors and community in general. Data and information management must be directed to meet the organisation''s needs and support the delivery of quality patient care. The information needs are provided in an authenticated, secure and accurate manner at the right time and place. Confidentiality, integrity and security of records, data and information is maintained. Confidentiality of protected health information is paramount and is safeguarded across all information processing, storing and disseminating platforms. Information management also includes periodic review, revision and withdrawal of obsolete information to avoid confusion among staff, patients and visitors. The organisation maintains a complete and accurate medical record for every patient. Various aspects of the medical record like contents, staff authorised to make entries and retention of records are addressed effectively by the organisation. The medical record is available for appropriate care providers. The medical records are reviewed at regular intervals', 'SHCO Full — IMS Chapter Intent (NABH 3rd Edition, p.138)', 138);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('chapter_summary', 'IMS', 'IMS — Summary of Standards', 'IMS.1. Information needs of the stakeholders are met and data is captured and analyzed
+IMS.2. The patients cared for by the organisation have a complete and accurate medical record.
+IMS.3. The medical record reects the continuity of care.
+IMS.4. The organisation maintains confidentiality, integrity and security of records, data and
+IMS.5. The organization ensures availability of current and relevant documents, records, data and
+IMS.6. The organisation regularly carries out a review of medical records.', 'SHCO Full — IMS Summary of Standards (NABH 3rd Edition, p.138)', 138);
+insert into public.shco_kb (kb_type, chapter, title, content, source_label, book_page) values ('general', null, 'What is an Interpretation?', 'The interpretation provides guidance on what the organisation needs to do to ensure that the requirement(s) of the objective element is met. Where applicable, it provides references and suggests a specific methodology that the organisation needs to adhere to. The word ''shall/should'' or ''will/would'' is used to reect a mandatory requirement. The interpretation also lists out desirable aspects for the organisation to implement, and the word ''can/could'' is used to reect this. During scoring, the desirable aspects are not considered, and they are only used to reect on the overall achievement of the standard, which is reected in the assessment report. At places, the interpretation would not be specific and would have used the words like ''adequate/appropriate''. This has been done keeping in mind the diverse nature of healthcare delivery and adhering to the intent of this standard which is to improve the quality of healthcare and at the same time, be feasible. The expectation is that whenever such a phrase has been used in the interpretation/objective element, the organisation shall base its practice on evidence-based/best practice. In some places, the interpretation has listed out examples. The examples are only illustrative in nature, and the organisation has the liberty to decide what/how to implement. However, the requirement of the objective element would have to be adhered.', 'SHCO Full — How to Read the Standard (NABH 3rd Edition, p.12)', 12);
+
+-- 3. Mandatory documentation flags (*) from the standards book
+alter table public.shco_full_oes add column if not exists doc_required boolean;
+alter table public.shco_full_oes add column if not exists book_page_ref int;
+
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.1.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.1.b';
+update public.shco_full_oes set doc_required = true where oe_code = 'AAC.1.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.1.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'AAC.2.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.2.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.2.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.2.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'AAC.2.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'AAC.2.f';
+update public.shco_full_oes set doc_required = true where oe_code = 'AAC.3.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.3.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.3.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.3.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.3.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.4.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.4.b';
+update public.shco_full_oes set doc_required = true where oe_code = 'AAC.4.c';
+update public.shco_full_oes set doc_required = true where oe_code = 'AAC.4.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'AAC.4.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'AAC.4.f';
+update public.shco_full_oes set doc_required = true where oe_code = 'AAC.4.g';
+update public.shco_full_oes set doc_required = true where oe_code = 'AAC.4.h';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.5.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.5.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.5.c';
+update public.shco_full_oes set doc_required = true where oe_code = 'AAC.5.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.5.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'AAC.5.f';
+update public.shco_full_oes set doc_required = true where oe_code = 'AAC.5.g';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.5.h';
+update public.shco_full_oes set doc_required = true where oe_code = 'AAC.5.i';
+update public.shco_full_oes set doc_required = true where oe_code = 'AAC.6.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.6.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.6.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.6.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.6.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.7.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.7.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.7.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.7.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.8.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.8.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.8.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.8.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.8.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.8.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'AAC.8.g';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.1.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.1.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.1.c';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.1.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.1.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.10.a';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.10.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.10.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.10.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.10.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.10.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.10.g';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.10.h';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.11.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.11.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.11.c';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.11.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.11.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.11.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.11.g';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.11.h';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.11.i';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.11.j';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.12.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.12.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.12.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.12.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.12.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.12.f';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.13.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.13.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.13.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.13.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.13.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.13.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.2.a';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.2.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.2.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.2.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.2.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.2.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.2.g';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.2.h';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.2.i';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.2.j';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.2.k';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.3.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.3.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.3.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.3.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.4.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.4.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.4.c';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.4.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.5.a';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.5.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.5.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.5.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.5.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.5.f';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.6.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.6.b';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.6.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.6.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.6.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.7.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.7.b';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.7.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.7.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.7.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.8.a';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.8.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.8.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.8.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.8.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.8.f';
+update public.shco_full_oes set doc_required = true where oe_code = 'COP.9.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.9.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.9.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.9.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'COP.9.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.1.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.1.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.1.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.1.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.1.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'FMS.1.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.2.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.2.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.2.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.2.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.2.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'FMS.2.f';
+update public.shco_full_oes set doc_required = true where oe_code = 'FMS.2.g';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.3.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.3.b';
+update public.shco_full_oes set doc_required = true where oe_code = 'FMS.3.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.3.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.3.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'FMS.3.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.3.g';
+update public.shco_full_oes set doc_required = true where oe_code = 'FMS.4.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.4.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.4.c';
+update public.shco_full_oes set doc_required = true where oe_code = 'FMS.4.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'FMS.5.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.5.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.5.c';
+update public.shco_full_oes set doc_required = true where oe_code = 'FMS.5.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'FMS.5.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'HIC.1.a';
+update public.shco_full_oes set doc_required = true where oe_code = 'HIC.1.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.1.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.1.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.1.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.1.f';
+update public.shco_full_oes set doc_required = true where oe_code = 'HIC.2.a';
+update public.shco_full_oes set doc_required = true where oe_code = 'HIC.2.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.2.c';
+update public.shco_full_oes set doc_required = true where oe_code = 'HIC.2.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'HIC.2.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.2.f';
+update public.shco_full_oes set doc_required = true where oe_code = 'HIC.2.g';
+update public.shco_full_oes set doc_required = true where oe_code = 'HIC.3.a';
+update public.shco_full_oes set doc_required = true where oe_code = 'HIC.3.b';
+update public.shco_full_oes set doc_required = true where oe_code = 'HIC.3.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.3.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'HIC.3.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.3.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.4.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.4.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.4.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.4.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.4.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'HIC.4.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.5.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.5.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.5.c';
+update public.shco_full_oes set doc_required = true where oe_code = 'HIC.5.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.5.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.5.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.6.a';
+update public.shco_full_oes set doc_required = true where oe_code = 'HIC.6.b';
+update public.shco_full_oes set doc_required = true where oe_code = 'HIC.6.c';
+update public.shco_full_oes set doc_required = true where oe_code = 'HIC.6.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'HIC.6.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.1.a';
+update public.shco_full_oes set doc_required = true where oe_code = 'HRM.1.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.1.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.1.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'HRM.1.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.1.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.1.g';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.1.h';
+update public.shco_full_oes set doc_required = true where oe_code = 'HRM.1.i';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.2.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.2.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.2.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.2.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.2.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.3.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.3.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.3.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.3.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.3.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.3.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.3.g';
+update public.shco_full_oes set doc_required = true where oe_code = 'HRM.4.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.4.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.4.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.4.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.5.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.5.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.5.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.5.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.6.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.6.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.6.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.6.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.7.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.7.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.7.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.7.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.8.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.8.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.8.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.8.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.9.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.9.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.9.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'HRM.9.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.1.a';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.1.b';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.1.c';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.1.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.1.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.1.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.2.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.2.b';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.2.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.2.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.2.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.2.f';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.3.a';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.3.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.3.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.3.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.3.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.3.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.3.g';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.3.h';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.4.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.4.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.4.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.4.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.5.a';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.5.b';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.5.c';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.5.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.5.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.5.f';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.6.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.6.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.6.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.6.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.6.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.6.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.6.g';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.6.h';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.6.i';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.7.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.7.b';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.7.c';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.7.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.7.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.8.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.8.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.8.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.8.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.8.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'MOM.9.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.9.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'MOM.9.c';
+update public.shco_full_oes set doc_required = true where oe_code = 'PRE.1.a';
+update public.shco_full_oes set doc_required = true where oe_code = 'PRE.1.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.1.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.1.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.1.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.2.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.2.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.2.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.2.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.2.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.2.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.2.g';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.2.h';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.2.i';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.2.j';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.2.k';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.2.l';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.2.m';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.2.n';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.2.o';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.2.p';
+update public.shco_full_oes set doc_required = true where oe_code = 'PRE.3.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.3.b';
+update public.shco_full_oes set doc_required = true where oe_code = 'PRE.3.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.3.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.4.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.4.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.4.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.4.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.4.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'PRE.4.f';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.5.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.5.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.5.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.5.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.6.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.6.b';
+update public.shco_full_oes set doc_required = true where oe_code = 'PRE.6.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'PRE.6.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'PSQ.1.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.1.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.1.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.1.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.1.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.1.f';
+update public.shco_full_oes set doc_required = true where oe_code = 'PSQ.1.g';
+update public.shco_full_oes set doc_required = true where oe_code = 'PSQ.1.h';
+update public.shco_full_oes set doc_required = true where oe_code = 'PSQ.1.i';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.2.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.2.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.2.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.2.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.2.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.3.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.3.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.3.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.3.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.3.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.4.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.4.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.4.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.4.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'PSQ.5.a';
+update public.shco_full_oes set doc_required = true where oe_code = 'PSQ.5.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.5.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.5.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'PSQ.5.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'ROM.1.a';
+update public.shco_full_oes set doc_required = true where oe_code = 'ROM.1.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'ROM.1.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'ROM.1.d';
+update public.shco_full_oes set doc_required = true where oe_code = 'ROM.1.e';
+update public.shco_full_oes set doc_required = false where oe_code = 'ROM.2.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'ROM.2.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'ROM.2.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'ROM.2.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'ROM.3.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'ROM.3.b';
+update public.shco_full_oes set doc_required = false where oe_code = 'ROM.3.c';
+update public.shco_full_oes set doc_required = true where oe_code = 'ROM.3.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'ROM.3.e';
+update public.shco_full_oes set doc_required = true where oe_code = 'ROM.4.a';
+update public.shco_full_oes set doc_required = false where oe_code = 'ROM.4.b';
+update public.shco_full_oes set doc_required = true where oe_code = 'ROM.4.c';
+update public.shco_full_oes set doc_required = false where oe_code = 'ROM.4.d';
+update public.shco_full_oes set doc_required = false where oe_code = 'ROM.4.e';
+
+-- Note: 31 OEs could not be matched to PDF asterisk marks automatically.
+-- Re-run scripts/extract_shco_book.py after PDF parser improvements.
+
+-- 4. Verify
+select kb_type, count(*) from public.shco_kb group by kb_type order by kb_type;
+select count(*) filter (where doc_required) as starred, count(*) as total from public.shco_full_oes;

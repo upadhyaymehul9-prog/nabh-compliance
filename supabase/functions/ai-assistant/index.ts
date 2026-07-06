@@ -683,6 +683,33 @@ function isGeneralInfoQuestion(q: string): boolean {
   return GENERAL_INFO_PATTERNS.some((p) => p.test(q));
 }
 
+// Chapter intent / summary questions — book-only content in shco_kb
+const CHAPTER_CODES = ["AAC", "COP", "MOM", "PRE", "HIC", "PSQ", "ROM", "FMS", "HRM", "IMS"] as const;
+const CHAPTER_INTENT_PATTERNS: RegExp[] = [
+  /\bintent\s+of\s+(the\s+)?(aac|cop|mom|pre|hic|psq|rom|fms|hrm|ims)\b/i,
+  /\b(aac|cop|mom|pre|hic|psq|rom|fms|hrm|ims)\s+chapter\s+intent\b/i,
+  /\bwhat\s+is\s+(the\s+)?(aac|cop|mom|pre|hic|psq|rom|fms|hrm|ims)\s+chapter\s+about\b/i,
+  /\bsummary\s+of\s+standards\s+(for\s+)?(aac|cop|mom|pre|hic|psq|rom|fms|hrm|ims)\b/i,
+  /\b(aac|cop|mom|pre|hic|psq|rom|fms|hrm|ims)\s+standards\s+summary\b/i,
+  /\bwhat\s+does\s+(the\s+)?(aac|cop|mom|pre|hic|psq|rom|fms|hrm|ims)\s+chapter\s+cover\b/i,
+];
+
+function getChapterIntentMatch(q: string): string | null {
+  for (const p of CHAPTER_INTENT_PATTERNS) {
+    const m = q.match(p);
+    if (m) {
+      const code = (m[2] ?? m[1]).toUpperCase();
+      if (CHAPTER_CODES.includes(code as typeof CHAPTER_CODES[number])) return code;
+    }
+  }
+  // Bare chapter code + "intent" or "about"
+  const bare = q.match(
+    /\b(aac|cop|mom|pre|hic|psq|rom|fms|hrm|ims)\b.*\b(intent|about|covers?|summary)\b/i,
+  );
+  if (bare) return bare[1].toUpperCase();
+  return null;
+}
+
 // Returns the best-matching glossary entry for definitional questions, or null
 function getGlossaryMatch(q: string): { term: string; definition: string } | null {
   const lower = q.toLowerCase().replace(/[?!.]+$/, "").trim();
@@ -820,7 +847,7 @@ Deno.serve(async (req) => {
     if (oeCodeQuery) {
       const { data, error: codeErr } = await supabase
         .from("shco_full_oes")
-        .select("oe_code, chapter, standard_code, level, text, achieve_tips")
+        .select("oe_code, chapter, standard_code, level, text, achieve_tips, doc_required, interpretation")
         .ilike("oe_code", `%${oeCodeQuery}%`)
         .limit(12);
       if (codeErr) throw new Error(`DB oe_code search: ${codeErr.message}`);
@@ -842,7 +869,29 @@ Deno.serve(async (req) => {
       }
     }
 
-    // Step 3: if no glossary match, check general info topics
+    // Step 3: chapter intent / summary from shco_kb (book-only)
+    if (!rows && !isGeneralRef) {
+      const chapterCode = getChapterIntentMatch(question);
+      if (chapterCode) {
+        _step.current = "chapter-intent-kb";
+        const { data: kbRows, error: kbErr } = await supabase
+          .from("shco_kb")
+          .select("title, content, source_label, kb_type")
+          .eq("chapter", chapterCode)
+          .in("kb_type", ["chapter_intent", "chapter_summary"])
+          .order("kb_type");
+        if (kbErr) throw new Error(`DB chapter KB: ${kbErr.message}`);
+        if (kbRows && kbRows.length > 0) {
+          isGeneralRef = true;
+          generalRefContext = kbRows
+            .map((r) => `${r.title}\n${r.content}`)
+            .join("\n\n");
+          generalRefSourceLabel = kbRows.map((r) => r.source_label).join(" / ");
+        }
+      }
+    }
+
+    // Step 4: if no glossary match, check general info topics
     if (!rows && !isGeneralRef && isGeneralInfoQuestion(question)) {
       _step.current = "general-info-check";
       isGeneralRef = true;
@@ -850,7 +899,7 @@ Deno.serve(async (req) => {
       generalRefSourceLabel = "SHCO Full — General Reference (NABH 3rd Edition Standards Book)";
     }
 
-    // Step 4: if no curated reference matched, fall back to ranked full-text search.
+    // Step 5: if no curated reference matched, fall back to ranked full-text search.
     // Search BOTH the OE table (search_shco_full_oes) and the curated KB (search_shco_kb)
     // in parallel, then merge the hits by ts_rank so the most relevant rows across both
     // sources feed the answer model. (Replaces the old unranked ILIKE-OR; both RPCs use
@@ -890,7 +939,21 @@ Deno.serve(async (req) => {
         Array.isArray(r.achieve_tips) && r.achieve_tips.length > 0
           ? r.achieve_tips.join(" | ")
           : "—";
-      return `${r.oe_code} | ${r.level} | ${r.text} | ${tips}`;
+      const docFlag =
+        r.doc_required === true
+          ? "Mandatory system documentation (*)"
+          : r.doc_required === false
+            ? "No mandatory doc flag in book"
+            : "—";
+      const interp =
+        typeof r.interpretation === "string" && r.interpretation.trim()
+          ? r.interpretation.trim()
+          : "—";
+      return (
+        `${r.oe_code} | ${r.level} | OE: ${r.text} | Doc flag: ${docFlag}` +
+        ` | Official interpretation: ${interp}` +
+        ` | AccredReady achieve tips (NOT NABH): ${tips}`
+      );
     };
     const renderKb = (r: Record<string, unknown>) =>
       `${r.title} [${r.source_label}] | ${r.content}`;
@@ -957,16 +1020,23 @@ Deno.serve(async (req) => {
         ` they appear verbatim in <context>.\n` +
         `4. Keep answers practical and specific — hospital staff need to know what to` +
         ` DO, not just what the rule says.\n` +
-        `5. Always end your answer with the source: for an OE, 'Source: SHCO Full —` +
+        `5. Lines labelled "AccredReady achieve tips" are hospital guidance from` +
+        ` AccredReady — NOT official NABH text. Cite them separately if used.\n` +
+        `6. "Official interpretation" comes only from the NABH book. If it shows "—",` +
+        ` do NOT invent an interpretation — answer from the OE text and doc flag only.\n` +
+        `7. If Doc flag is "Mandatory system documentation (*)", tell the user the` +
+        ` book requires written system documentation for this OE.\n` +
+        `8. Always end your answer with the source: for an OE, 'Source: SHCO Full —` +
         ` [oe_code]'; for a curated reference entry, use its bracketed [source label]` +
         ` from <context>.\n` +
-        `6. When you cannot find a match, state ONLY that no matching SHCO Full` +
+        `9. When you cannot find a match, state ONLY that no matching SHCO Full` +
         ` requirement was found, and suggest the user rephrase or check with their` +
         ` AccredReady admin. Do NOT speculate about which chapter, standard, or OE` +
         ` might contain the answer, do NOT guess chapter names or codes, and do NOT` +
         ` describe NABH structure beyond what is explicitly in <context>. If <context>` +
         ` is empty, your entire response must be limited to the refusal sentence —` +
-        ` nothing else.\n\n` +
+        ` nothing else.\n` +
+        `(Rules 6–9 above supersede any earlier numbering in this prompt block.)\n\n` +
         `<context>\n${contextBlock}\n</context>`;
 
     _step.current = "anthropic-fetch";
