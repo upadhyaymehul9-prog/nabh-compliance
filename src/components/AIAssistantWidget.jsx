@@ -99,7 +99,10 @@ export default function AIAssistantWidget({ T, open, onOpen, onClose, trigger })
             right: 20,
             zIndex: 9995,
             width: 360,
-            maxHeight: 480,
+            // Viewport-relative ceiling so the panel never grows above the top
+            // of the screen. 276px bottom offset + ~84px top clearance (sticky
+            // header) = 360px; min() keeps the original 480px cap on tall screens.
+            maxHeight: "min(480px, calc(100dvh - 360px))",
             display: "flex",
             flexDirection: "column",
             background: T.panel,
@@ -165,7 +168,7 @@ export default function AIAssistantWidget({ T, open, onOpen, onClose, trigger })
           {/* Message list */}
           <div
             style={{
-              flex: 1,
+              flex: "1 1 auto",
               overflowY: "auto",
               padding: "12px 14px",
               display: "flex",
