@@ -23,18 +23,24 @@ def main() -> None:
         "alter table public.shco_full_oes",
         "  add column if not exists doc_required boolean,",
         "  add column if not exists interpretation text,",
-        "  add column if not exists book_page_ref int;",
+        "  add column if not exists book_page_ref int,",
+        "  add column if not exists assessment_stages text;",
         "",
-        "-- Remove prior book KB rows only (keeps committees etc.)",
+        "-- Remove prior book KB rows (preserves unrelated categories)",
         "delete from public.shco_kb",
-        "where category in ('chapter_intent', 'chapter_summary', 'general')",
-        "  and source_label like 'SHCO Full —%';",
+        "where source_label like 'SHCO Full —%'",
+        "  and category in ('chapter_intent', 'chapter_summary', 'general', 'committees');",
         "",
     ]
 
     for entry in KNOWLEDGE["kb_entries"]:
         category = esc(entry["kb_type"])
-        section = esc(entry["chapter"]) if entry.get("chapter") else esc(entry["title"])
+        if entry.get("section"):
+            section = esc(entry["section"])
+        elif entry.get("chapter"):
+            section = esc(entry["chapter"])
+        else:
+            section = esc(entry["title"])
         lines.append(
             "insert into public.shco_kb (category, section, title, content, source_label) values "
             f"('{category}', '{section}', '{esc(entry['title'])}', "
@@ -46,6 +52,13 @@ def main() -> None:
         val = "true" if starred else "false"
         lines.append(
             f"update public.shco_full_oes set doc_required = {val} where oe_code = '{esc(code)}';"
+        )
+
+    lines.extend(["", "-- Assessment stages by OE level (book pp.12–16)"])
+    for code, stages in sorted(KNOWLEDGE.get("assessment_stages", {}).items()):
+        lines.append(
+            f"update public.shco_full_oes set assessment_stages = '{esc(stages)}' "
+            f"where oe_code = '{esc(code)}';"
         )
 
     lines.extend(

@@ -847,7 +847,7 @@ Deno.serve(async (req) => {
     if (oeCodeQuery) {
       const { data, error: codeErr } = await supabase
         .from("shco_full_oes")
-        .select("oe_code, chapter, standard_code, level, text, achieve_tips, doc_required, interpretation")
+        .select("oe_code, chapter, standard_code, level, text, achieve_tips, doc_required, interpretation, assessment_stages")
         .ilike("oe_code", `%${oeCodeQuery}%`)
         .limit(12);
       if (codeErr) throw new Error(`DB oe_code search: ${codeErr.message}`);
@@ -949,8 +949,13 @@ Deno.serve(async (req) => {
         typeof r.interpretation === "string" && r.interpretation.trim()
           ? r.interpretation.trim()
           : "—";
+      const stages =
+        typeof r.assessment_stages === "string" && r.assessment_stages.trim()
+          ? r.assessment_stages.trim()
+          : "—";
       return (
-        `${r.oe_code} | ${r.level} | OE: ${r.text} | Doc flag: ${docFlag}` +
+        `${r.oe_code} | ${r.level} | Assessed at: ${stages}` +
+        ` | OE: ${r.text} | Doc flag: ${docFlag}` +
         ` | Official interpretation: ${interp}` +
         ` | AccredReady achieve tips (NOT NABH): ${tips}`
       );
