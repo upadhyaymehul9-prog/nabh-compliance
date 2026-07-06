@@ -11210,6 +11210,7 @@ export default function App() {
     {key:'oes', label:'📑 OE Browser'},
     {key:'fixgaps', label:`🔧 Fix Gaps${allElcGaps.length > 0 ? ' (' + allElcGaps.length + ')' : ''}`},
     {key:'docs', label:'📂 Documents'},
+    {key:'committees', label:'🏛️ Committees'},
     {key:'licenses', label:'📋 Licenses'},
     {key:'process', label:'🗺️ Process'},
     {key:'upgrade', label:'⬆️ Upgrade Path'},
@@ -11221,6 +11222,7 @@ export default function App() {
       case 'oes': return renderOEBrowser();
       case 'fixgaps': return renderELCFixGaps();
       case 'docs': return renderDocTracker();
+      case 'committees': return <CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate} selectedProgramme={'hco-elc'} />;
       case 'licenses': return renderLicenseTracker();
       case 'process': return renderProcess();
       case 'upgrade': return renderUpgrade();
