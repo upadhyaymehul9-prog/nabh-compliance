@@ -8,7 +8,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 KNOWLEDGE = json.loads((ROOT / "shco_book_knowledge.json").read_text())
+ANNEXURE_PATH = ROOT / "shco_annexure_kb.json"
 OUT = ROOT / "shco_kb_production.sql"
+
+ANNEXURE_CATEGORIES = (
+    "annexure_kpi",
+    "annexure_med_error",
+    "annexure_chart_review",
+    "annexure_quality_tools",
+)
 
 
 def esc(value: str) -> str:
@@ -29,11 +37,18 @@ def main() -> None:
         "-- Remove prior book KB rows (preserves unrelated categories)",
         "delete from public.shco_kb",
         "where source_label like 'SHCO Full —%'",
-        "  and category in ('chapter_intent', 'chapter_summary', 'general', 'committees');",
+        "  and category in (",
+        "    'chapter_intent', 'chapter_summary', 'general', 'committees',",
+        "    'annexure_kpi', 'annexure_med_error', 'annexure_chart_review', 'annexure_quality_tools'",
+        "  );",
         "",
     ]
 
-    for entry in KNOWLEDGE["kb_entries"]:
+    all_entries = list(KNOWLEDGE["kb_entries"])
+    if ANNEXURE_PATH.exists():
+        all_entries.extend(json.loads(ANNEXURE_PATH.read_text()))
+
+    for entry in all_entries:
         category = esc(entry["kb_type"])
         if entry.get("section"):
             section = esc(entry["section"])

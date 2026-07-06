@@ -70,6 +70,12 @@ COMMITTEE_MANDATES = [
         "oe_codes": ["COP.3.d", "COP.3"],
         "book_page": 70,
     },
+    {
+        "title": "Committees — Committee Effectiveness Review",
+        "section": "Committees — Governance",
+        "oe_codes": ["ROM.3.c", "ROM.3"],
+        "book_page": 117,
+    },
 ]
 
 

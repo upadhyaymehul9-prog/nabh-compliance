@@ -616,6 +616,15 @@
       "book_page": 70
     },
     {
+      "kb_type": "committees",
+      "chapter": null,
+      "title": "Committees \u2014 Committee Effectiveness Review",
+      "section": "Committees \u2014 Governance",
+      "content": "MANDATED by the SHCO 3rd Edition standards book. ROM.3.c (Commitment): The functioning of committees is reviewed for their effectiveness.",
+      "source_label": "SHCO Full \u2014 Committees \u2014 Committee Effectiveness Review (NABH 3rd Edition, p.117)",
+      "book_page": 117
+    },
+    {
       "kb_type": "general",
       "chapter": null,
       "title": "OE assessment stages by level",
@@ -1182,6 +1191,6 @@
     "oes_with_mandatory_flag": 408,
     "oes_starred": 118,
     "oes_missing_flag": 0,
-    "kb_entries": 27
+    "kb_entries": 28
   }
 }
