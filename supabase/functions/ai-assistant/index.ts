@@ -876,10 +876,10 @@ Deno.serve(async (req) => {
         _step.current = "chapter-intent-kb";
         const { data: kbRows, error: kbErr } = await supabase
           .from("shco_kb")
-          .select("title, content, source_label, kb_type")
-          .eq("chapter", chapterCode)
-          .in("kb_type", ["chapter_intent", "chapter_summary"])
-          .order("kb_type");
+          .select("title, content, source_label, category, section")
+          .eq("section", chapterCode)
+          .in("category", ["chapter_intent", "chapter_summary"])
+          .order("category");
         if (kbErr) throw new Error(`DB chapter KB: ${kbErr.message}`);
         if (kbRows && kbRows.length > 0) {
           isGeneralRef = true;
