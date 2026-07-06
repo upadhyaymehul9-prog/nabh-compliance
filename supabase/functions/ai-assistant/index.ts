@@ -957,7 +957,7 @@ Deno.serve(async (req) => {
         `${r.oe_code} | ${r.level} | Assessed at: ${stages}` +
         ` | OE: ${r.text} | Doc flag: ${docFlag}` +
         ` | Official interpretation: ${interp}` +
-        ` | AccredReady achieve tips (NOT NABH): ${tips}`
+        ` | Achieve tips: ${tips}`
       );
     };
     const renderKb = (r: Record<string, unknown>) =>
@@ -996,17 +996,14 @@ Deno.serve(async (req) => {
           : ``) +
         (isQualityToolsRef
           ? `1c. For quality tools questions: if answering about RCA, 5 Whys, Fishbone/Ishikawa,` +
-            ` Affinity Diagram, Histogram, or FMEA — end with 'Source: SHCO Full — Quality Tools` +
-            ` (Annexure 3)'. If answering about the medication chart review checklist, its 35` +
-            ` parameters, or how to count errors/opportunities — end with 'Source: SHCO Full —` +
-            ` Medication Chart Review Checklist (Annexure 2, pp.166–169)'. Replace rule 4's source` +
-            ` line with the appropriate one above.\n`
+            ` Affinity Diagram, Histogram, or FMEA, or the medication chart review checklist,` +
+            ` include the relevant detail from <context>.\n`
           : ``) +
         `2. If the <context> does not address the question, say: 'I couldn't find` +
         ` a matching SHCO Full reference for that — try rephrasing, or check with` +
         ` your AccredReady admin.' Do NOT guess or use general NABH knowledge.\n` +
         `3. Keep answers practical and easy to understand for hospital staff.\n` +
-        `4. Always end your answer with: 'Source: ${generalRefSourceLabel}'\n` +
+        `4. Always end your answer with exactly: SHCO 3rd edition\n` +
         `5. Do NOT speculate about anything not explicitly in <context>.\n\n` +
         `<context>\n${contextBlock}\n</context>`
       : `You are AccredReady's NABH SHCO Full compliance assistant. You answer ONLY` +
@@ -1025,15 +1022,13 @@ Deno.serve(async (req) => {
         ` they appear verbatim in <context>.\n` +
         `4. Keep answers practical and specific — hospital staff need to know what to` +
         ` DO, not just what the rule says.\n` +
-        `5. Lines labelled "AccredReady achieve tips" are hospital guidance from` +
-        ` AccredReady — NOT official NABH text. Cite them separately if used.\n` +
+        `5. Achieve tips in <context> are optional practical guidance — use them when` +
+        ` helpful but do not add any disclaimer or separate source line about them.\n` +
         `6. "Official interpretation" comes only from the NABH book. If it shows "—",` +
         ` do NOT invent an interpretation — answer from the OE text and doc flag only.\n` +
         `7. If Doc flag is "Mandatory system documentation (*)", tell the user the` +
         ` book requires written system documentation for this OE.\n` +
-        `8. Always end your answer with the source: for an OE, 'Source: SHCO Full —` +
-        ` [oe_code]'; for a curated reference entry, use its bracketed [source label]` +
-        ` from <context>.\n` +
+        `8. Always end your answer with exactly: SHCO 3rd edition\n` +
         `9. When you cannot find a match, state ONLY that no matching SHCO Full` +
         ` requirement was found, and suggest the user rephrase or check with their` +
         ` AccredReady admin. Do NOT speculate about which chapter, standard, or OE` +
