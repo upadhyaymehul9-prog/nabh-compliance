@@ -3496,6 +3496,7 @@ function CommitteesScreen({ hospitalId, committeesView, navigate, selectedProgra
 
   // ELC programmes show their own committee count; HCO Full keeps the fixed 26
   const commTotal=(selectedProgramme==='hco-elc'||selectedProgramme==='shco-elc')?committees.length:26;
+  const commReadyMin=commTotal<=10?commTotal:20;
 
   if(loading) return <div style={{textAlign:"center",color:T.muted,padding:40}}>Loading…</div>;
 
@@ -3505,11 +3506,11 @@ function CommitteesScreen({ hospitalId, committeesView, navigate, selectedProgra
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",marginBottom:14,display:"flex",gap:16,alignItems:"center",flexWrap:"wrap"}}>
         <div style={{flex:1}}>
           <div style={{fontSize:11,color:T.muted,marginBottom:3,letterSpacing:1}}>COMMITTEE FUNCTIONING</div>
-          <div style={{fontSize:14,color:totalActive>=20?T.green:totalActive>0?T.orange:T.red,fontWeight:700}}>
+          <div style={{fontSize:14,color:totalActive>=commReadyMin?T.green:totalActive>0?T.orange:T.red,fontWeight:700}}>
             {totalActive}/{commTotal} committees active <span style={{fontSize:11,color:T.muted}}>(met in last 12 months)</span>
           </div>
           <div style={{height:4,background:T.border,borderRadius:2,marginTop:6}}>
-            <div style={{height:"100%",borderRadius:2,background:totalActive>=20?T.green:totalActive>0?T.orange:T.red,width:`${Math.min(100,(totalActive/(commTotal||1))*100)}%`,transition:"width 0.5s"}}/>
+            <div style={{height:"100%",borderRadius:2,background:totalActive>=commReadyMin?T.green:totalActive>0?T.orange:T.red,width:`${Math.min(100,(totalActive/(commTotal||1))*100)}%`,transition:"width 0.5s"}}/>
           </div>
         </div>
         <div style={{display:"flex",gap:8}}>
@@ -8891,6 +8892,7 @@ export default function App() {
     {key:'oes', label:'📑 OE Browser'},
     {key:'fixgaps', label:`🔧 Fix Gaps${allShcoElcGaps.length > 0 ? ' (' + allShcoElcGaps.length + ')' : ''}`},
     {key:'docs', label:'📂 Documents'},
+    {key:'committees', label:'🏛️ Committees'},
     {key:'licenses', label:'📋 Licenses'},
     {key:'process', label:'🗺️ Process'},
     {key:'upgrade', label:'⬆️ Upgrade Path'},
@@ -8902,6 +8904,7 @@ export default function App() {
       case 'oes': return renderSHCOOEBrowser();
       case 'fixgaps': return renderSHCOELCFixGaps();
       case 'docs': return renderDocTracker();
+      case 'committees': return <CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate} selectedProgramme={'shco-elc'} />;
       case 'licenses': return renderLicenseTracker();
       case 'process': return renderProcess();
       case 'upgrade': return renderUpgrade();
