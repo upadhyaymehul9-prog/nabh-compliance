@@ -3848,7 +3848,10 @@ function KPIsScreen({ hospitalId, user }) {
     } else { setLoading(false); }
   },[hospitalId,user]);
 
-  const filtered=kpis.filter(k=>k.category===tab&&(!search||k.name.toLowerCase().includes(search.toLowerCase())||(k.dept||"").toLowerCase().includes(search.toLowerCase())));
+  // Exclude ELC-scoped KPIs (kpi_no 51-64, tagged HCO_ELC/SHCO_ELC via programme_scope) —
+  // those belong to the ELC modules' own KPI tab, not the HCO Full screen.
+  const isElcScoped=(k)=>Array.isArray(k.programme_scope)&&k.programme_scope.some(s=>s==="HCO_ELC"||s==="SHCO_ELC");
+  const filtered=kpis.filter(k=>!isElcScoped(k)&&k.category===tab&&(!search||k.name.toLowerCase().includes(search.toLowerCase())||(k.dept||"").toLowerCase().includes(search.toLowerCase())));
   const depts=[...new Set(kpis.filter(k=>k.category==="dept_specific").map(k=>k.dept))].sort();
 
   const getKpiHistory=(kpiId)=>kpiData.filter(d=>String(d.kpi_id)===String(kpiId)).sort((a,b)=>b.year-a.year||b.month-a.month);
@@ -4652,6 +4655,411 @@ function ShcoFullKpiTab({hospitalId}){
                           );
                         })}
                       </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// ── ELC KPI TAB (HCO_ELC + SHCO_ELC) ──────────────────────────────────────────
+// DB-driven from the `kpis` table filtered by programme_scope (kpi_no 51-64).
+// Data tables are fully separate per programme: hco_elc_kpi_data / shco_elc_kpi_data.
+// SSI (kpi_no 52) is entered in three surveillance stages; all others are single 'final' rows.
+const ELC_SSI_KPI_NO = 52;
+const ELC_SSI_STAGES = [
+  { key: 'preliminary',  label: 'Preliminary',  provisional: true  },
+  { key: 'day_30',       label: '30-Day',        provisional: true  },
+  { key: 'day_90_final', label: '90-Day Final',  provisional: false },
+];
+const ELC_SSI_STAGE_LABEL = { preliminary: 'Preliminary', day_30: '30-Day', day_90_final: '90-Day Final' };
+// SCORING INVARIANT (patient-safety critical): for SSI, only this stage is scorable.
+// A 'preliminary' or 'day_30' value is PROVISIONAL and must NEVER count toward any
+// readiness number, pass/fail, or verdict. A month with no 'day_90_final' row is
+// pending / not-yet-scorable (treat like an unscored OE) — never pass and never fail.
+// Any future ELC KPI scoring MUST filter SSI to this stage. Single source of truth:
+const ELC_SSI_SCORABLE_STAGE = 'day_90_final';
+
+function ElcKpiTab({ hospitalId, programme }) {
+  const table = programme === 'HCO_ELC' ? 'hco_elc_kpi_data' : 'shco_elc_kpi_data';
+  const [defs, setDefs] = useState([]);
+  const [kpiData, setKpiData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [expanded, setExpanded] = useState(null);
+  const [forms, setForms] = useState({});        // key: `${kpiId}` (normal) or `${kpiId}__${stage}` (SSI)
+  const [ssiStage, setSsiStage] = useState({});   // kpiId -> active stage key
+  const [saving, setSaving] = useState(null);
+  const [saveSuccess, setSaveSuccess] = useState(null);
+  const [calcResults, setCalcResults] = useState({});
+
+  const now = new Date(); const curMonth = now.getMonth() + 1; const curYear = now.getFullYear();
+  const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const inp = { padding:'6px 9px', borderRadius:6, border:`1px solid ${T.border}`, background:T.panel, color:T.text, fontSize:13 };
+
+  const reload = async () => {
+    const { data } = await supabase.from(table).select('*').eq('hospital_id', hospitalId)
+      .order('year', { ascending:false }).order('month', { ascending:false });
+    setKpiData(data || []);
+  };
+
+  useEffect(() => {
+    supabase.from('kpis').select('*').contains('programme_scope', [programme]).order('kpi_no')
+      .then(({ data }) => setDefs(data || []));
+    if (hospitalId) { reload().then(() => setLoading(false)); }
+    else setLoading(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hospitalId, programme]);
+
+  // Derive the num/den multiplier from the KPI's own unit/formula/name (mirrors KPIsScreen).
+  const deriveMultiplier = (kpi) => {
+    const u = (kpi.unit || "").toLowerCase().replace(/,/g, "");
+    const fml = (kpi.formula || "").toLowerCase().replace(/,/g, "");
+    const nm = (kpi.name || "").toLowerCase();
+    if (fml.includes("count") || u.trim() === "number") return 0; // count-only
+    if (u.includes("1000") || fml.includes("1000") || nm.includes("1000")) return 1000;
+    if (u.includes("%") || /\/100\b/.test(u) || fml.includes("%") || /[×x]\s*100\b/.test(fml)) return 100;
+    return 1;
+  };
+  const getResultColor = (result, target) => {
+    if (!target) return '#c9a84c';
+    const t = String(target).trim();
+    if (t.includes('Decreasing') || t.includes('benchmark') || t.includes(';') || t.includes('1:') || t.includes('varies') || t.includes('trend')) return '#c9a84c';
+    const lt = t.match(/^<\s*([\d.]+)/); if (lt) return result < parseFloat(lt[1]) ? '#4caf7d' : '#e05a5a';
+    const gt = t.match(/^>\s*([\d.]+)/); if (gt) return result > parseFloat(gt[1]) ? '#4caf7d' : '#e05a5a';
+    return '#c9a84c';
+  };
+  const getResultLabel = (result, target) => {
+    const c = getResultColor(result, target);
+    return c === '#4caf7d' ? '✅ Within target' : c === '#e05a5a' ? '❌ Outside target' : '📊 Compare with baseline';
+  };
+
+  const isSSI = (kpi) => kpi.kpi_no === ELC_SSI_KPI_NO;
+  const unitSuffix = (kpi) => (/%|percent/i.test(kpi.unit || '') ? '%' : '');
+
+  const entriesFor = (kpiId, stage = 'final') =>
+    kpiData.filter(d => d.kpi_id === kpiId && (d.surveillance_stage || 'final') === stage)
+           .sort((a, b) => b.year - a.year || b.month - a.month);
+  const latestFinal = (kpiId) => entriesFor(kpiId, 'final')[0];
+  const monthsTracked = (kpi) => {
+    // A month only counts once finalized: 'final' for normal KPIs, the scorable
+    // surveillance stage for SSI. Provisional SSI stages never count (see invariant above).
+    const stage = isSSI(kpi) ? ELC_SSI_SCORABLE_STAGE : 'final';
+    return new Set(entriesFor(kpi.id, stage).map(d => `${d.year}-${d.month}`)).size;
+  };
+
+  // Group all SSI rows for a kpi by month, keyed stage -> row.
+  const ssiGroups = (kpiId) => {
+    const map = {};
+    kpiData.filter(d => d.kpi_id === kpiId).forEach(d => {
+      const key = `${d.year}-${String(d.month).padStart(2, '0')}`;
+      if (!map[key]) map[key] = { year: d.year, month: d.month, stages: {} };
+      map[key].stages[d.surveillance_stage || 'final'] = d;
+    });
+    return Object.values(map).sort((a, b) => b.year - a.year || b.month - a.month);
+  };
+  const finalizeDate = (month, year) => {
+    const d = new Date(year, month, 0); d.setDate(d.getDate() + 90); // end of reporting month + 90d
+    return `${d.getDate()} ${MONTHS[d.getMonth()]} ${d.getFullYear()}`;
+  };
+
+  const saveNormal = async (kpi) => {
+    const f = forms[kpi.id] || {};
+    const mult = deriveMultiplier(kpi); const isCount = mult === 0;
+    const num = parseFloat(f.num);
+    if (isNaN(num)) { alert(isCount ? "Enter count." : "Enter numerator and denominator."); return; }
+    let value, den = 0;
+    if (isCount) { value = num; }
+    else { den = parseFloat(f.den); if (isNaN(den) || den === 0) { alert("Enter valid non-zero denominator."); return; } value = (num / den) * mult; }
+    setCalcResults(r => ({ ...r, [kpi.id]: value }));
+    setSaving(kpi.id);
+    const { error } = await supabase.from(table).upsert({
+      hospital_id: hospitalId, kpi_id: kpi.id,
+      numerator: num, denominator: den, value: parseFloat(value.toFixed(isCount ? 0 : 4)),
+      month: f.month || curMonth, year: f.year || curYear, surveillance_stage: 'final'
+    }, { onConflict: 'hospital_id,kpi_id,month,year,surveillance_stage' });
+    if (!error) { await reload(); setSaveSuccess(kpi.id); setTimeout(() => setSaveSuccess(null), 2000); }
+    else alert("Error: " + error.message);
+    setSaving(null);
+  };
+
+  const saveSSI = async (kpi, stage) => {
+    const key = `${kpi.id}__${stage}`; const f = forms[key] || {};
+    const mult = deriveMultiplier(kpi);
+    const num = parseFloat(f.num), den = parseFloat(f.den);
+    if (isNaN(num) || isNaN(den) || den === 0) { alert("Enter numerator and non-zero denominator."); return; }
+    const value = (num / den) * mult;
+    setCalcResults(r => ({ ...r, [key]: value }));
+    setSaving(key);
+    const { error } = await supabase.from(table).upsert({
+      hospital_id: hospitalId, kpi_id: kpi.id,
+      numerator: num, denominator: den, value: parseFloat(value.toFixed(4)),
+      month: f.month || curMonth, year: f.year || curYear, surveillance_stage: stage
+    }, { onConflict: 'hospital_id,kpi_id,month,year,surveillance_stage' });
+    if (!error) { await reload(); setSaveSuccess(key); setTimeout(() => setSaveSuccess(null), 2000); }
+    else alert("Error: " + error.message);
+    setSaving(null);
+  };
+
+  const deleteEntry = async (id) => {
+    if (!window.confirm("Delete this entry?")) return;
+    const { error } = await supabase.from(table).delete().eq('id', id);
+    if (!error) setKpiData(p => p.filter(d => d.id !== id)); else alert("Error: " + error.message);
+  };
+
+  const total = defs.length;
+  const tracked = defs.filter(k => monthsTracked(k) >= 3).length;
+  const pct = total ? Math.round((tracked / total) * 100) : 0;
+
+  if (loading) return <div style={{ textAlign:'center', color:T.muted, padding:40 }}>Loading KPIs…</div>;
+  if (!hospitalId) return <div style={{ textAlign:'center', color:T.muted, padding:40 }}>Select a hospital to track KPIs.</div>;
+
+  return (
+    <div style={{ padding:'16px 16px 60px' }}>
+      {/* Summary bar */}
+      <div style={{ background:T.panel, border:`1px solid ${T.border}`, borderRadius:10, padding:'12px 16px', marginBottom:14 }}>
+        <div style={{ display:'flex', gap:16, alignItems:'center', flexWrap:'wrap' }}>
+          <div style={{ flex:1 }}>
+            <div style={{ fontSize:11, color:T.muted, marginBottom:3, letterSpacing:1 }}>ELC KPI TRACKING STATUS</div>
+            <div style={{ fontSize:14, color: tracked >= total * 0.8 ? T.green : tracked > 0 ? T.orange : T.red, fontWeight:700 }}>
+              {tracked}/{total} KPIs with ≥3 months data
+              <span style={{ fontSize:11, color:T.muted, marginLeft:6 }}>(minimum required for NABH assessment)</span>
+            </div>
+            <div style={{ height:4, background:T.border, borderRadius:2, marginTop:6 }}>
+              <div style={{ height:'100%', borderRadius:2, background: tracked >= total * 0.8 ? T.green : tracked > 0 ? T.orange : T.red, width:`${pct}%`, transition:'width 0.5s' }} />
+            </div>
+          </div>
+          <div style={{ textAlign:'right' }}>
+            <div style={{ fontSize:20, fontWeight:700, color:T.gold }}>{pct}%</div>
+            <div style={{ fontSize:11, color:T.muted }}>KPI readiness</div>
+          </div>
+        </div>
+      </div>
+
+      {defs.length === 0 && <div style={{ textAlign:'center', color:T.muted, padding:30 }}>No ELC KPIs found for this programme.</div>}
+
+      {/* KPI cards */}
+      <div style={{ display:'grid', gap:8 }}>
+        {defs.map((k, idx) => {
+          const ssi = isSSI(k);
+          const displayNo = idx + 1; // guidebook position 1-14, not the raw DB kpi_no
+          const isOpen = expanded === k.id;
+          const mt = monthsTracked(k);
+          const status = mt === 0 ? { label:'Not started', color:T.red } : mt < 3 ? { label:`${mt} month${mt > 1 ? 's' : ''}`, color:T.orange } : { label:`${mt} months`, color:T.green };
+          const mult = deriveMultiplier(k); const isCount = mult === 0;
+          const latest = ssi ? entriesFor(k.id, ELC_SSI_SCORABLE_STAGE)[0] : latestFinal(k.id);
+          const f = forms[k.id] || {};
+          const month = f.month != null ? f.month : curMonth;
+          const year = f.year != null ? f.year : curYear;
+
+          return (
+            <div key={k.id} style={{ background:T.panel, border:`1px solid ${ssi ? `${T.gold}25` : T.border}`, borderRadius:10, overflow:'hidden' }}>
+              <div style={{ padding:'12px 16px', cursor:'pointer' }} onClick={() => {
+                setExpanded(isOpen ? null : k.id);
+                if (!isOpen && ssi && !ssiStage[k.id]) setSsiStage(s => ({ ...s, [k.id]: 'preliminary' }));
+              }}>
+                <div style={{ display:'flex', gap:10, alignItems:'flex-start' }}>
+                  <div style={{ width:28, height:28, borderRadius:6, background:T.goldD, border:`1px solid ${T.gold}30`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:12, fontWeight:800, color:T.gold, flexShrink:0 }}>{displayNo}</div>
+                  <div style={{ flex:1 }}>
+                    <div style={{ display:'flex', gap:7, alignItems:'center', marginBottom:3, flexWrap:'wrap' }}>
+                      <span style={{ fontSize:14, fontWeight:700, color:T.white }}>{k.name}</span>
+                      {ssi && <span style={{ fontSize:8, padding:'2px 6px', borderRadius:4, background:`${T.gold}20`, color:T.gold }}>🔬 SURVEILLANCE</span>}
+                      <span style={{ fontSize:8, padding:'2px 6px', borderRadius:4, background:`${status.color}20`, color:status.color }}>📊 {status.label}</span>
+                    </div>
+                    <div style={{ display:'flex', gap:10, flexWrap:'wrap', alignItems:'center' }}>
+                      {k.standard_ref && <span style={{ fontSize:12, color:T.muted }}>📋 {k.standard_ref}</span>}
+                      {k.target && <span style={{ fontSize:12, color:T.green, fontWeight:600 }}>🎯 {k.target}</span>}
+                      {latest && <span style={{ fontSize:12, color:T.blue }}>Final: {parseFloat(latest.value).toFixed(2)}{unitSuffix(k)} ({MONTHS[latest.month - 1]} {latest.year})</span>}
+                    </div>
+                  </div>
+                  <span style={{ fontSize:16, color:T.muted }}>{isOpen ? '▲' : '▼'}</span>
+                </div>
+              </div>
+
+              {isOpen && (
+                <div style={{ borderTop:`1px solid ${T.border}`, padding:'14px 16px', display:'grid', gap:12 }}>
+                  {/* Definition strips */}
+                  <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+                    <div style={{ background:T.panel2, borderRadius:8, padding:'10px 12px' }}><div style={{ fontSize:11, color:T.muted, marginBottom:4 }}>NUMERATOR</div><div style={{ fontSize:13, color:T.text }}>{k.numerator}</div></div>
+                    <div style={{ background:T.panel2, borderRadius:8, padding:'10px 12px' }}><div style={{ fontSize:11, color:T.muted, marginBottom:4 }}>DENOMINATOR</div><div style={{ fontSize:13, color:T.text }}>{k.denominator}</div></div>
+                  </div>
+                  <div style={{ display:'flex', gap:8, flexWrap:'wrap' }}>
+                    <div style={{ background:T.goldD, border:`1px solid ${T.gold}30`, borderRadius:8, padding:'8px 12px', flex:1 }}><div style={{ fontSize:11, color:T.muted, marginBottom:3 }}>FORMULA</div><div style={{ fontSize:13, color:T.gold, fontWeight:700 }}>{k.formula} → {k.unit}</div></div>
+                    <div style={{ background:T.greenD, border:`1px solid ${T.green}30`, borderRadius:8, padding:'8px 12px', flex:1 }}><div style={{ fontSize:11, color:T.muted, marginBottom:3 }}>TARGET</div><div style={{ fontSize:13, color:T.green, fontWeight:700 }}>{k.target}</div></div>
+                  </div>
+
+                  {ssi ? (
+                    /* ── SSI: three-stage surveillance entry ── */
+                    <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:12 }}>
+                      <div style={{ fontSize:12, fontWeight:700, color:T.gold, marginBottom:4, letterSpacing:1 }}>🔬 SURVEILLANCE ENTRY</div>
+                      <div style={{ fontSize:11, color:T.muted, marginBottom:10, fontStyle:'italic' }}>Enter each stage as it becomes available. Only the 90-Day Final value is scored; earlier stages are provisional and editable any time.</div>
+                      {(() => {
+                        const stage = ssiStage[k.id] || 'preliminary';
+                        const key = `${k.id}__${stage}`; const sf = forms[key] || {};
+                        const sMonth = sf.month != null ? sf.month : curMonth;
+                        const sYear = sf.year != null ? sf.year : curYear;
+                        return (
+                          <>
+                            <div style={{ display:'flex', gap:6, marginBottom:10 }}>
+                              {ELC_SSI_STAGES.map(st => (
+                                <button key={st.key} onClick={() => setSsiStage(s => ({ ...s, [k.id]: st.key }))}
+                                  style={{ flex:1, padding:'7px 8px', borderRadius:7, fontSize:12, fontWeight:700, cursor:'pointer',
+                                    background: stage === st.key ? T.goldD : 'transparent',
+                                    border:`1px solid ${stage === st.key ? T.gold : T.border}`,
+                                    color: stage === st.key ? T.goldL : T.muted }}>
+                                  {st.label}
+                                </button>
+                              ))}
+                            </div>
+                            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, marginBottom:8 }}>
+                              <div>
+                                <div style={{ fontSize:8, color:T.muted, marginBottom:3 }}>NUMERATOR — {k.numerator}</div>
+                                <input type="number" step="0.01" value={sf.num || ''} onChange={e => setForms(fm => ({ ...fm, [key]: { ...sf, num:e.target.value } }))} placeholder="Enter value" style={{ ...inp, width:'100%', boxSizing:'border-box' }} />
+                              </div>
+                              <div>
+                                <div style={{ fontSize:8, color:T.muted, marginBottom:3 }}>DENOMINATOR — {k.denominator}</div>
+                                <input type="number" step="0.01" value={sf.den || ''} onChange={e => setForms(fm => ({ ...fm, [key]: { ...sf, den:e.target.value } }))} placeholder="Enter value" style={{ ...inp, width:'100%', boxSizing:'border-box' }} />
+                              </div>
+                            </div>
+                            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, marginBottom:8 }}>
+                              <div>
+                                <div style={{ fontSize:8, color:T.muted, marginBottom:3 }}>MONTH</div>
+                                <select value={sMonth} onChange={e => setForms(fm => ({ ...fm, [key]: { ...sf, month:parseInt(e.target.value) } }))} style={{ ...inp, width:'100%' }}>{MONTHS.map((m, i) => <option key={i} value={i + 1}>{m}</option>)}</select>
+                              </div>
+                              <div>
+                                <div style={{ fontSize:8, color:T.muted, marginBottom:3 }}>YEAR</div>
+                                <select value={sYear} onChange={e => setForms(fm => ({ ...fm, [key]: { ...sf, year:parseInt(e.target.value) } }))} style={{ ...inp, width:'100%' }}>{[curYear - 1, curYear, curYear + 1].map(y => <option key={y} value={y}>{y}</option>)}</select>
+                              </div>
+                            </div>
+                            <button onClick={() => saveSSI(k, stage)} disabled={saving === key}
+                              style={{ padding:'7px 18px', borderRadius:7, background: saveSuccess === key ? T.green : T.goldD, border:`1px solid ${saveSuccess === key ? T.green : T.gold}`, color: saveSuccess === key ? T.bg : T.gold, fontSize:13, fontWeight:700, cursor:'pointer' }}>
+                              {saving === key ? 'Saving…' : saveSuccess === key ? '✅ Saved!' : `Save ${ELC_SSI_STAGE_LABEL[stage]}`}
+                            </button>
+                            {calcResults[key] !== undefined && (
+                              <div style={{ marginTop:8, fontSize:14, fontWeight:700, color: stage === 'day_90_final' ? getResultColor(calcResults[key], k.target) : T.muted, fontStyle: stage === 'day_90_final' ? 'normal' : 'italic' }}>
+                                {stage === 'day_90_final' ? `Result: ${calcResults[key].toFixed(2)}${unitSuffix(k)}` : `Provisional: ${calcResults[key].toFixed(2)}${unitSuffix(k)}`}
+                              </div>
+                            )}
+                          </>
+                        );
+                      })()}
+
+                      {/* SSI staged history, grouped by month */}
+                      {ssiGroups(k.id).length > 0 && (
+                        <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:12, marginTop:12 }}>
+                          <div style={{ fontSize:11, color:T.muted, marginBottom:8, letterSpacing:1 }}>SURVEILLANCE HISTORY</div>
+                          <div style={{ display:'grid', gap:6 }}>
+                            {ssiGroups(k.id).map(g => {
+                              const fin = g.stages.day_90_final;
+                              return (
+                                <div key={`${g.year}-${g.month}`} style={{ padding:'8px 10px', background:T.panel2, borderRadius:6, border:`1px solid ${T.border}` }}>
+                                  <div style={{ fontSize:12, color:T.muted, marginBottom:4 }}>{MONTHS[g.month - 1]} {g.year}</div>
+                                  <div style={{ display:'flex', gap:8, alignItems:'center', flexWrap:'wrap' }}>
+                                    {ELC_SSI_STAGES.map((st, i) => {
+                                      const row = g.stages[st.key];
+                                      return (
+                                        <span key={st.key} style={{ display:'inline-flex', alignItems:'center', gap:8 }}>
+                                          {i > 0 && <span style={{ color:T.muted }}>→</span>}
+                                          {row ? (
+                                            st.provisional ? (
+                                              <span style={{ fontSize:13, color:T.muted, fontStyle:'italic' }}>
+                                                {st.label}: {parseFloat(row.value).toFixed(2)}{unitSuffix(k)}
+                                                <span style={{ fontSize:9, marginLeft:4, padding:'1px 5px', borderRadius:4, border:`1px solid ${T.border}`, color:T.muted }}>Provisional</span>
+                                                <span onClick={() => deleteEntry(row.id)} style={{ marginLeft:5, color:T.red, cursor:'pointer', fontSize:11 }}>✕</span>
+                                              </span>
+                                            ) : (
+                                              <span style={{ fontSize:13, fontWeight:700, color:getResultColor(parseFloat(row.value), k.target) }}>
+                                                {st.label}: {parseFloat(row.value).toFixed(2)}{unitSuffix(k)}
+                                                <span onClick={() => deleteEntry(row.id)} style={{ marginLeft:5, color:T.red, cursor:'pointer', fontSize:11 }}>✕</span>
+                                              </span>
+                                            )
+                                          ) : (
+                                            <span style={{ fontSize:12, color:'#5a6b7a', fontStyle:'italic' }}>{st.label}: —</span>
+                                          )}
+                                        </span>
+                                      );
+                                    })}
+                                  </div>
+                                  {!fin && (
+                                    <div style={{ fontSize:12, color:T.orange, marginTop:5, fontStyle:'italic' }}>
+                                      ⏳ Pending — finalizes {finalizeDate(g.month, g.year)}
+                                    </div>
+                                  )}
+                                  {fin && (
+                                    <div style={{ fontSize:11, color:getResultColor(parseFloat(fin.value), k.target), marginTop:5 }}>
+                                      {getResultLabel(parseFloat(fin.value), k.target)}
+                                    </div>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    /* ── Normal single-value KPI ── */
+                    <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:12 }}>
+                      <div style={{ fontSize:12, fontWeight:700, color:T.gold, marginBottom:10, letterSpacing:1 }}>📥 ENTER DATA</div>
+                      <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, marginBottom:8 }}>
+                        <div>
+                          <div style={{ fontSize:8, color:T.muted, marginBottom:3 }}>MONTH</div>
+                          <select value={month} onChange={e => setForms(fm => ({ ...fm, [k.id]: { ...f, month:parseInt(e.target.value) } }))} style={{ ...inp, width:'100%' }}>{MONTHS.map((m, i) => <option key={i} value={i + 1}>{m}</option>)}</select>
+                        </div>
+                        <div>
+                          <div style={{ fontSize:8, color:T.muted, marginBottom:3 }}>YEAR</div>
+                          <select value={year} onChange={e => setForms(fm => ({ ...fm, [k.id]: { ...f, year:parseInt(e.target.value) } }))} style={{ ...inp, width:'100%' }}>{[curYear - 1, curYear, curYear + 1].map(y => <option key={y} value={y}>{y}</option>)}</select>
+                        </div>
+                      </div>
+                      {isCount ? (
+                        <div style={{ marginBottom:8 }}>
+                          <div style={{ fontSize:8, color:T.muted, marginBottom:3 }}>COUNT — {k.numerator}</div>
+                          <input type="number" step="1" value={f.num || ''} onChange={e => setForms(fm => ({ ...fm, [k.id]: { ...f, num:e.target.value } }))} placeholder="Enter count" style={{ ...inp, width:'100%', boxSizing:'border-box' }} />
+                        </div>
+                      ) : (
+                        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, marginBottom:8 }}>
+                          <div>
+                            <div style={{ fontSize:8, color:T.muted, marginBottom:3 }}>NUMERATOR — {k.numerator}</div>
+                            <input type="number" step="0.01" value={f.num || ''} onChange={e => setForms(fm => ({ ...fm, [k.id]: { ...f, num:e.target.value } }))} placeholder="Enter value" style={{ ...inp, width:'100%', boxSizing:'border-box' }} />
+                          </div>
+                          <div>
+                            <div style={{ fontSize:8, color:T.muted, marginBottom:3 }}>DENOMINATOR — {k.denominator}</div>
+                            <input type="number" step="0.01" value={f.den || ''} onChange={e => setForms(fm => ({ ...fm, [k.id]: { ...f, den:e.target.value } }))} placeholder="Enter value" style={{ ...inp, width:'100%', boxSizing:'border-box' }} />
+                          </div>
+                        </div>
+                      )}
+                      <button onClick={() => saveNormal(k)} disabled={saving === k.id}
+                        style={{ padding:'7px 18px', borderRadius:7, background: saveSuccess === k.id ? T.green : T.goldD, border:`1px solid ${saveSuccess === k.id ? T.green : T.gold}`, color: saveSuccess === k.id ? T.bg : T.gold, fontSize:13, fontWeight:700, cursor:'pointer' }}>
+                        {saving === k.id ? 'Saving…' : saveSuccess === k.id ? '✅ Saved!' : isCount ? '📋 Save Count' : '🧮 Calculate & Save'}
+                      </button>
+                      {calcResults[k.id] !== undefined && (
+                        <div style={{ marginTop:8 }}>
+                          <div style={{ fontSize:15, fontWeight:700, color: isCount ? T.gold : getResultColor(calcResults[k.id], k.target) }}>
+                            {isCount ? `Count: ${calcResults[k.id].toFixed(0)} ${k.unit}` : `Result: ${calcResults[k.id].toFixed(2)}${unitSuffix(k)}`}
+                          </div>
+                          {!isCount && <div style={{ fontSize:12, color:getResultColor(calcResults[k.id], k.target), marginTop:2 }}>{getResultLabel(calcResults[k.id], k.target)}</div>}
+                        </div>
+                      )}
+
+                      {/* Normal history */}
+                      {entriesFor(k.id, 'final').length > 0 && (
+                        <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:12, marginTop:12 }}>
+                          <div style={{ fontSize:11, color:T.muted, marginBottom:8, letterSpacing:1 }}>TRACKING HISTORY ({entriesFor(k.id, 'final').length} entries)</div>
+                          <div style={{ display:'grid', gap:4 }}>
+                            {entriesFor(k.id, 'final').slice(0, 6).map(d => (
+                              <div key={d.id} style={{ display:'flex', gap:10, alignItems:'center', padding:'6px 10px', background:T.panel2, borderRadius:6, border:`1px solid ${T.border}` }}>
+                                <span style={{ fontSize:12, color:T.muted, minWidth:60 }}>{MONTHS[d.month - 1]} {d.year}</span>
+                                <span style={{ fontSize:14, fontWeight:700, color:T.white }}>{parseFloat(d.value).toFixed(2)}{unitSuffix(k)}</span>
+                                <button onClick={() => deleteEntry(d.id)} style={{ marginLeft:'auto', padding:'2px 8px', borderRadius:5, background:'transparent', border:`1px solid ${T.red}40`, color:T.red, fontSize:11, cursor:'pointer' }}>Delete</button>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
@@ -8891,6 +9299,7 @@ export default function App() {
     {key:'overview', label:'📊 Overview'},
     {key:'oes', label:'📑 OE Browser'},
     {key:'fixgaps', label:`🔧 Fix Gaps${allShcoElcGaps.length > 0 ? ' (' + allShcoElcGaps.length + ')' : ''}`},
+    {key:'kpis', label:'📈 KPIs'},
     {key:'docs', label:'📂 Documents'},
     {key:'committees', label:'🏛️ Committees'},
     {key:'licenses', label:'📋 Licenses'},
@@ -8903,6 +9312,7 @@ export default function App() {
       case 'overview': return renderOverview();
       case 'oes': return renderSHCOOEBrowser();
       case 'fixgaps': return renderSHCOELCFixGaps();
+      case 'kpis': return <ElcKpiTab hospitalId={context?.hospitalId} programme="SHCO_ELC" />;
       case 'docs': return renderDocTracker();
       case 'committees': return <CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate} selectedProgramme={'shco-elc'} />;
       case 'licenses': return renderLicenseTracker();
@@ -11212,6 +11622,7 @@ export default function App() {
     {key:'overview', label:'📊 Overview'},
     {key:'oes', label:'📑 OE Browser'},
     {key:'fixgaps', label:`🔧 Fix Gaps${allElcGaps.length > 0 ? ' (' + allElcGaps.length + ')' : ''}`},
+    {key:'kpis', label:'📈 KPIs'},
     {key:'docs', label:'📂 Documents'},
     {key:'committees', label:'🏛️ Committees'},
     {key:'licenses', label:'📋 Licenses'},
@@ -11224,6 +11635,7 @@ export default function App() {
       case 'overview': return renderOverview();
       case 'oes': return renderOEBrowser();
       case 'fixgaps': return renderELCFixGaps();
+      case 'kpis': return <ElcKpiTab hospitalId={context?.hospitalId} programme="HCO_ELC" />;
       case 'docs': return renderDocTracker();
       case 'committees': return <CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate} selectedProgramme={'hco-elc'} />;
       case 'licenses': return renderLicenseTracker();
