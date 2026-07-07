@@ -223,6 +223,27 @@ const SHCO_ELC_LICENSES = [
   {id:"LIC024",cat:"AERB",name:"Cobalt Compliance License",appl:"If Cobalt therapy available"},
   {id:"LIC025",cat:"AERB",name:"Linear Accelerator (LINAC) Compliance License",appl:"If LINAC available"},
   {id:"LIC026",cat:"AERB",name:"Brachytherapy Compliance License",appl:"If Brachytherapy available"},
+  {id:"LIC027",cat:"Mandatory",name:"Building Completion / Occupancy Certificate",appl:"All",
+    note:"Legal proof the building is approved for occupancy; checked at application. Obtain before operations; renew on any structural change.",
+    authority:"Municipal Corporation / local Town Planning authority"},
+  {id:"LIC028",cat:"Mandatory",name:"Fire NOC / Fire Safety Certificate",appl:"All",
+    note:"Life-safety clearance; a top reason ELC applications are rejected. Obtain before operations; renew per state Fire Act.",
+    authority:"State Fire Services Dept / Chief Fire Officer (via municipal body)"},
+  {id:"LIC029",cat:"Mandatory",name:"Clinical Establishments Act Registration",appl:"Where state has notified CEA",
+    note:"Legal registration to run a clinical establishment in CEA-notified states. Obtain before operations.",
+    authority:"State Health Dept / District CEA Registering Authority"},
+  {id:"LIC030",cat:"Mandatory",name:"FSSAI License",appl:"If kitchen or canteen operates",
+    note:"Food safety licence for patient/staff meals. Obtain before serving food; renew annually.",
+    authority:"FSSAI (foscos.fssai.gov.in) / District Designated Officer"},
+  {id:"LIC031",cat:"Mandatory",name:"PESO License",appl:"If medical gas / pressure vessels stored",
+    note:"Safe storage of oxygen/medical gas cylinders and manifolds. Obtain before installing gas storage.",
+    authority:"Petroleum & Explosives Safety Organisation (PESO) / State Controller of Explosives"},
+  {id:"LIC032",cat:"Mandatory",name:"Lift / Elevator License",appl:"If lift installed",
+    note:"Statutory lift fitness certificate. Obtain before use; renew periodically.",
+    authority:"State Electrical Inspectorate / Lift Inspector"},
+  {id:"LIC033",cat:"Mandatory",name:"Blood Centre / Storage Licence",appl:"If blood bank or storage unit present",
+    note:"Legal operation of a blood centre or storage unit. Obtain before storing blood.",
+    authority:"State Drug Controller + NACO / SBTC"},
 ];
 
 const SHCO_ELC_OE_SUMMARY = [
@@ -504,6 +525,27 @@ const HCO_ELC_LICENSES = [
   {id:"LIC024",cat:"AERB",name:"Cobalt Compliance License",appl:"If Cobalt therapy available"},
   {id:"LIC025",cat:"AERB",name:"Linear Accelerator (LINAC) Compliance License",appl:"If LINAC available"},
   {id:"LIC026",cat:"AERB",name:"Brachytherapy Compliance License",appl:"If Brachytherapy available"},
+  {id:"LIC027",cat:"Mandatory",name:"Building Completion / Occupancy Certificate",appl:"All",
+    note:"Legal proof the building is approved for occupancy; checked at application. Obtain before operations; renew on any structural change.",
+    authority:"Municipal Corporation / local Town Planning authority"},
+  {id:"LIC028",cat:"Mandatory",name:"Fire NOC / Fire Safety Certificate",appl:"All",
+    note:"Life-safety clearance; a top reason ELC applications are rejected. Obtain before operations; renew per state Fire Act.",
+    authority:"State Fire Services Dept / Chief Fire Officer (via municipal body)"},
+  {id:"LIC029",cat:"Mandatory",name:"Clinical Establishments Act Registration",appl:"Where state has notified CEA",
+    note:"Legal registration to run a clinical establishment in CEA-notified states. Obtain before operations.",
+    authority:"State Health Dept / District CEA Registering Authority"},
+  {id:"LIC030",cat:"Mandatory",name:"FSSAI License",appl:"If kitchen or canteen operates",
+    note:"Food safety licence for patient/staff meals. Obtain before serving food; renew annually.",
+    authority:"FSSAI (foscos.fssai.gov.in) / District Designated Officer"},
+  {id:"LIC031",cat:"Mandatory",name:"PESO License",appl:"If medical gas / pressure vessels stored",
+    note:"Safe storage of oxygen/medical gas cylinders and manifolds. Obtain before installing gas storage.",
+    authority:"Petroleum & Explosives Safety Organisation (PESO) / State Controller of Explosives"},
+  {id:"LIC032",cat:"Mandatory",name:"Lift / Elevator License",appl:"If lift installed",
+    note:"Statutory lift fitness certificate. Obtain before use; renew periodically.",
+    authority:"State Electrical Inspectorate / Lift Inspector"},
+  {id:"LIC033",cat:"Mandatory",name:"Blood Centre / Storage Licence",appl:"If blood bank or storage unit present",
+    note:"Legal operation of a blood centre or storage unit. Obtain before storing blood.",
+    authority:"State Drug Controller + NACO / SBTC"},
 ];
 
 const HCO_ELC_CHAPTER_SUMMARY = [
@@ -8890,6 +8932,8 @@ export default function App() {
                 opacity: s==='na' ? 0.6 : 1
               }}>
                 <div style={{color:T.text,fontSize:14,marginBottom:6}}>{lic.name}</div>
+                {lic.note && <div style={{color:T.muted,fontSize:12,marginBottom:6,lineHeight:1.4}}>{lic.note}</div>}
+                {lic.authority && <div style={{color:T.muted,fontSize:12,marginBottom:6}}>Apply to: {lic.authority}</div>}
                 <div style={{display:'flex',gap:6}}>
                   {['pending','obtained','na'].map(status => (
                     <button key={status} onClick={() => setLicStatus(lic.id, status)}
@@ -11067,6 +11111,8 @@ export default function App() {
                   <div style={{color:T.text,fontSize:14,flex:1}}>{lic.name}</div>
                   <div style={{color:T.muted,fontSize:12,flexShrink:0}}>{lic.appl}</div>
                 </div>
+                {lic.note && <div style={{color:T.muted,fontSize:12,marginBottom:6,lineHeight:1.4}}>{lic.note}</div>}
+                {lic.authority && <div style={{color:T.muted,fontSize:12,marginBottom:6}}>Apply to: {lic.authority}</div>}
                 <div style={{display:'flex',gap:6}}>
                   {['pending','obtained','na'].map(status => (
                     <button key={status} onClick={() => setLicStatus(lic.id, status)}
