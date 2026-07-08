@@ -3893,8 +3893,12 @@ function KPIsScreen({ hospitalId, user }) {
   // Exclude ELC-scoped KPIs (kpi_no 51-64, tagged HCO_ELC/SHCO_ELC via programme_scope) —
   // those belong to the ELC modules' own KPI tab, not the HCO Full screen.
   const isElcScoped=(k)=>Array.isArray(k.programme_scope)&&k.programme_scope.some(s=>s==="HCO_ELC"||s==="SHCO_ELC");
-  const filtered=kpis.filter(k=>!isElcScoped(k)&&k.category===tab&&(!search||k.name.toLowerCase().includes(search.toLowerCase())||(k.dept||"").toLowerCase().includes(search.toLowerCase())));
-  const depts=[...new Set(kpis.filter(k=>k.category==="dept_specific").map(k=>k.dept))].sort();
+  // Single source of truth for the HCO Full KPI set: everything the guard doesn't exclude.
+  // The card list AND the tracking summary count both derive from this, so the count can
+  // never drift back to including ELC-scoped rows (kpi_no 51-64 twins → 28 rows).
+  const hcoFullKpis=kpis.filter(k=>!isElcScoped(k));
+  const filtered=hcoFullKpis.filter(k=>k.category===tab&&(!search||k.name.toLowerCase().includes(search.toLowerCase())||(k.dept||"").toLowerCase().includes(search.toLowerCase())));
+  const depts=[...new Set(hcoFullKpis.filter(k=>k.category==="dept_specific").map(k=>k.dept))].sort();
 
   const getKpiHistory=(kpiId)=>kpiData.filter(d=>String(d.kpi_id)===String(kpiId)).sort((a,b)=>b.year-a.year||b.month-a.month);
   const getLatest=(kpiId)=>getKpiHistory(kpiId)[0];
@@ -4028,9 +4032,10 @@ function KPIsScreen({ hospitalId, user }) {
     else{alert("Error: "+error.message);}
   };
 
-  // Overall KPI tracking summary
-  const tracked=kpis.filter(k=>monthsTracked(k.id)>=3).length;
-  const total=kpis.length;
+  // Overall KPI tracking summary — count over the guarded HCO Full set only,
+  // NOT raw `kpis` (which now carries the 28 ELC twin rows, kpi_no 51-64).
+  const tracked=hcoFullKpis.filter(k=>monthsTracked(k.id)>=3).length;
+  const total=hcoFullKpis.length;
 
   const inp={padding:"6px 9px",borderRadius:6,border:`1px solid ${T.border}`,background:T.panel,color:T.text,fontSize:13};
 
