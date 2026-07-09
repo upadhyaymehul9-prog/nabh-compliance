@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>AccredReady — Liquid Glass Concept (Preview Only)</title>
+<title>AccredReady — Glassmorphism Concept (Preview Only)</title>
 <meta name="robots" content="noindex, nofollow" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,8 +79,15 @@
   .card:hover{transform:translateY(-6px);border-color:var(--line-hi);
     box-shadow:inset 0 1px 0 rgba(255,255,255,.35), 0 30px 70px rgba(2,6,18,.6);}
 
+  .preview-ribbon{
+    position:fixed;top:0;left:0;right:0;z-index:60;text-align:center;padding:8px;
+    font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    color:#8df2cd;background:rgba(52,224,161,.12);border-bottom:1px solid rgba(52,224,161,.2);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  }
+
   /* ---------- nav ---------- */
-  nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:50;
+  nav{position:fixed;top:42px;left:50%;transform:translateX(-50%);z-index:50;
     width:min(1060px, calc(100% - 32px));
     display:flex;align-items:center;justify-content:space-between;
     padding:12px 14px 12px 22px;border-radius:999px;}
@@ -104,7 +111,7 @@
   .btn-solid:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(52,224,161,.55), inset 0 1px 0 rgba(255,255,255,.65)}
 
   /* ---------- hero ---------- */
-  .hero{max-width:1060px;margin:0 auto;padding:170px 24px 70px;text-align:center}
+  .hero{max-width:1060px;margin:0 auto;padding:200px 24px 70px;text-align:center}
   .chip{display:inline-flex;align-items:center;gap:9px;padding:9px 18px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#8df2cd;margin-bottom:30px}
   .chip .dot{width:7px;height:7px;border-radius:50%;background:var(--emerald);box-shadow:0 0 12px var(--emerald);animation:pulse 2.4s infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
@@ -176,6 +183,8 @@
 <div class="bg"></div>
 <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
 <div class="grain"></div>
+
+<div class="preview-ribbon">Glassmorphism · Preview only</div>
 
 <nav class="glass glass-pill">
   <a class="logo" href="#"><span class="logo-mark">A</span>AccredReady</a>
@@ -271,7 +280,7 @@
 </section>
 
 <footer>
-  <b>Design preview only</b> — liquid glass concept · © 2026 AccredReady · MK Tech · Gujarat, India
+  <b>Design preview only</b> — glassmorphism concept · © 2026 AccredReady · MK Tech · Gujarat, India
 </footer>
 
 </body>
