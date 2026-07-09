@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AccredReady — Bento Grid Concept (Preview Only)</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0f1a;
+    --surface: #111827;
+    --surface-2: #1a2234;
+    --border: rgba(255,255,255,.08);
+    --border-hi: rgba(255,255,255,.14);
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --gold: #d4a843;
+    --gold-soft: rgba(212,168,67,.15);
+    --teal: #2dd4bf;
+    --teal-soft: rgba(45,212,191,.12);
+    --blue: #60a5fa;
+    --blue-soft: rgba(96,165,250,.12);
+    --rose: #fb7185;
+    --rose-soft: rgba(251,113,133,.12);
+    --violet: #a78bfa;
+    --violet-soft: rgba(167,139,250,.12);
+    --radius: 24px;
+    --radius-sm: 16px;
+    --gap: 14px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+
+  .page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 20px 80px;
+  }
+
+  /* ── top bar ── */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text);
+  }
+
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, var(--gold), #b8862e);
+    display: grid;
+    place-items: center;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: #0a0f1a;
+    box-shadow: 0 8px 24px rgba(212,168,67,.25);
+  }
+
+  .brand-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: -.02em;
+  }
+
+  .preview-badge {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: var(--gold-soft);
+    border: 1px solid rgba(212,168,67,.25);
+    padding: 6px 14px;
+    border-radius: 999px;
+  }
+
+  .topbar-actions {
+    display: flex;
+    gap: 10px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 22px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s, background .2s;
+  }
+
+  .btn:active { transform: scale(.98); }
+
+  .btn-ghost {
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--border-hi);
+    background: var(--surface-2);
+  }
+
+  .btn-primary {
+    color: #0a0f1a;
+    background: linear-gradient(145deg, #e8c068, var(--gold));
+    box-shadow: 0 8px 28px rgba(212,168,67,.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 32px rgba(212,168,67,.4);
+  }
+
+  /* ── bento grid ── */
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(120px, auto);
+    gap: var(--gap);
+  }
+
+  .tile {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color .25s, transform .25s, box-shadow .25s;
+  }
+
+  .tile:hover {
+    border-color: var(--border-hi);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 50px rgba(0,0,0,.35);
+  }
+
+  .tile::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(600px 200px at var(--mx, 50%) var(--my, 0%), rgba(255,255,255,.06), transparent 60%);
+    opacity: 0;
+    transition: opacity .3s;
+  }
+
+  .tile:hover::after { opacity: 1; }
+
+  .span-12 { grid-column: span 12; }
+  .span-8  { grid-column: span 8; }
+  .span-7  { grid-column: span 7; }
+  .span-6  { grid-column: span 6; }
+  .span-5  { grid-column: span 5; }
+  .span-4  { grid-column: span 4; }
+  .span-3  { grid-column: span 3; }
+  .row-2   { grid-row: span 2; }
+
+  @media (max-width: 960px) {
+    .span-8, .span-7, .span-6, .span-5 { grid-column: span 12; }
+    .span-4, .span-3 { grid-column: span 6; }
+  }
+
+  @media (max-width: 640px) {
+    .span-4, .span-3 { grid-column: span 12; }
+    .row-2 { grid-row: span 1; }
+  }
+
+  .tile-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .tile h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    margin-bottom: 12px;
+  }
+
+  .tile h3 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+  }
+
+  .tile p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 42ch;
+  }
+
+  .accent-gold  { --accent: var(--gold);  --accent-soft: var(--gold-soft); }
+  .accent-teal  { --accent: var(--teal);  --accent-soft: var(--teal-soft); }
+  .accent-blue  { --accent: var(--blue);  --accent-soft: var(--blue-soft); }
+  .accent-rose  { --accent: var(--rose);  --accent-soft: var(--rose-soft); }
+  .accent-violet{ --accent: var(--violet);--accent-soft: var(--violet-soft);}
+
+  .tile-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+    background: var(--accent-soft, var(--gold-soft));
+    border: 1px solid color-mix(in srgb, var(--accent, var(--gold)) 25%, transparent);
+  }
+
+  /* hero tile */
+  .hero-tile {
+    background:
+      linear-gradient(135deg, rgba(212,168,67,.08) 0%, transparent 45%),
+      linear-gradient(225deg, rgba(45,212,191,.06) 0%, transparent 50%),
+      var(--surface);
+    padding: 36px 32px 32px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-tile h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.08;
+    letter-spacing: -.03em;
+    margin-bottom: 16px;
+    max-width: 14ch;
+  }
+
+  .hero-tile h1 em {
+    font-style: normal;
+    color: var(--gold);
+  }
+
+  .hero-tile .lead {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 48ch;
+    margin-bottom: 24px;
+    line-height: 1.65;
+  }
+
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  /* stat tiles */
+  .stat-value {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 2.4rem;
+    letter-spacing: -.03em;
+    line-height: 1;
+    margin-bottom: 6px;
+    color: var(--accent, var(--gold));
+  }
+
+  .stat-value small {
+    font-size: 1rem;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  /* mini dashboard mock */
+  .dash-mock {
+    margin-top: auto;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    display: grid;
+    gap: 10px;
+  }
+
+  .dash-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .dash-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .dash-bar-wrap {
+    flex: 1;
+    height: 6px;
+    background: rgba(255,255,255,.06);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+
+  .dash-bar {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--teal), var(--gold));
+  }
+
+  .dash-pct {
+    font-weight: 600;
+    color: var(--text);
+    min-width: 32px;
+    text-align: right;
+  }
+
+  /* programme pills */
+  .pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .pill {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+
+  .pill.active {
+    color: var(--teal);
+    border-color: rgba(45,212,191,.3);
+    background: var(--teal-soft);
+  }
+
+  /* AI chat mock */
+  .ai-bubble {
+    margin-top: 12px;
+    padding: 12px 14px;
+    border-radius: 14px 14px 14px 4px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  .ai-bubble strong { color: var(--text); font-weight: 600; }
+
+  .ai-source {
+    margin-top: 8px;
+    font-size: 11px;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  /* committee list */
+  .mini-list {
+    list-style: none;
+    margin-top: 12px;
+    display: grid;
+    gap: 8px;
+  }
+
+  .mini-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 8px 12px;
+    background: rgba(255,255,255,.03);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+
+  .mini-list .ok { color: var(--teal); font-size: 11px; font-weight: 600; }
+
+  /* wide CTA */
+  .cta-tile {
+    background:
+      linear-gradient(120deg, rgba(212,168,67,.12), rgba(45,212,191,.08)),
+      var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 32px;
+  }
+
+  .cta-tile h2 { margin-bottom: 6px; font-size: 1.6rem; }
+  .cta-tile p { margin: 0; }
+
+  footer {
+    text-align: center;
+    margin-top: 48px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  footer b { color: var(--gold); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="topbar">
+    <a class="brand" href="#">
+      <div class="brand-mark">A</div>
+      <span class="brand-name">AccredReady</span>
+    </a>
+    <span class="preview-badge">Bento grid · Preview only</span>
+    <div class="topbar-actions">
+      <a class="btn btn-ghost" href="#">Sign in</a>
+      <a class="btn btn-primary" href="#">Get started free</a>
+    </div>
+  </header>
+
+  <main class="bento">
+
+    <!-- Hero — spans 8 cols -->
+    <article class="tile hero-tile span-8 accent-gold">
+      <p class="tile-label">NABH compliance platform</p>
+      <h1>Accreditation-ready,<br><em>every week.</em></h1>
+      <p class="lead">Score OEs, track KPIs, run internal audits, and manage committees — HCO and SHCO programmes in one place.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#">Start free trial</a>
+        <a class="btn btn-ghost" href="#">See how it works</a>
+      </div>
+    </article>
+
+    <!-- Readiness stat -->
+    <article class="tile span-4 row-2 accent-teal" style="display:flex;flex-direction:column;">
+      <p class="tile-label">Live readiness</p>
+      <div class="stat-value">78<small>%</small></div>
+      <p>Overall compliance score across active chapters — updated as you score.</p>
+      <div class="dash-mock" style="margin-top:20px;">
+        <div class="dash-row">
+          <span class="dash-dot" style="background:var(--teal)"></span>
+          <span style="flex:1;color:var(--muted)">Core OEs</span>
+          <span class="dash-pct">92%</span>
+        </div>
+        <div class="dash-row">
+          <span class="dash-dot" style="background:var(--gold)"></span>
+          <span style="flex:1;color:var(--muted)">Commitment</span>
+          <span class="dash-pct">74%</span>
+        </div>
+        <div class="dash-row">
+          <span class="dash-dot" style="background:var(--blue)"></span>
+          <span style="flex:1;color:var(--muted)">KPIs on track</span>
+          <span class="dash-pct">12/15</span>
+        </div>
+        <div class="dash-row">
+          <span class="dash-dot" style="background:var(--rose)"></span>
+          <span style="flex:1;color:var(--muted)">Open gaps</span>
+          <span class="dash-pct">23</span>
+        </div>
+        <div class="dash-row" style="margin-top:4px;">
+          <div class="dash-bar-wrap" style="width:100%">
+            <div class="dash-bar" style="width:78%"></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- OE scoring -->
+    <article class="tile span-4 accent-gold">
+      <div class="tile-icon">📋</div>
+      <h3>OE scoring</h3>
+      <p>Score every objective element chapter by chapter. Core gaps flagged instantly.</p>
+      <div class="pill-row">
+        <span class="pill active">SHCO Full</span>
+        <span class="pill">SHCO ELC</span>
+        <span class="pill">HCO</span>
+      </div>
+    </article>
+
+    <!-- AI assistant -->
+    <article class="tile span-4 accent-violet">
+      <div class="tile-icon">✦</div>
+      <h3>Ask AI</h3>
+      <p>Book-grounded answers for SHCO requirements — per OE, chapter, or KPI.</p>
+      <div class="ai-bubble">
+        <strong>AAC.1.a</strong> — Services must align with community needs. Document your service list and needs assessment.
+        <div class="ai-source">SHCO 3rd edition</div>
+      </div>
+    </article>
+
+    <!-- KPIs -->
+    <article class="tile span-4 accent-teal">
+      <div class="tile-icon">📈</div>
+      <h3>KPI dashboard</h3>
+      <p>Track mandatory indicators monthly with formulas, targets, and trend charts.</p>
+    </article>
+
+    <!-- Committees -->
+    <article class="tile span-6 accent-blue">
+      <div class="tile-icon">🏛️</div>
+      <h3>Committees & minutes</h3>
+      <p>Reference guides, meeting records, and attendance — programme-scoped.</p>
+      <ul class="mini-list">
+        <li><span>Infection Control</span><span class="ok">Active</span></li>
+        <li><span>Pharmacy & Therapeutics</span><span class="ok">Active</span></li>
+        <li><span>Quality Council</span><span class="ok">Due</span></li>
+      </ul>
+    </article>
+
+    <!-- Audits -->
+    <article class="tile span-3 accent-rose">
+      <div class="tile-icon">🔍</div>
+      <h3>Internal audits</h3>
+      <p>Structured checklists with findings and CAPA tracking.</p>
+    </article>
+
+    <!-- Mock drills -->
+    <article class="tile span-3 accent-gold">
+      <div class="tile-icon">🚨</div>
+      <h3>Mock drills</h3>
+      <p>Fire, code blue, disaster — log evidence for assessors.</p>
+    </article>
+
+    <!-- Programmes wide -->
+    <article class="tile span-6 accent-violet">
+      <p class="tile-label">All programmes</p>
+      <h2>One platform.<br>Every NABH path.</h2>
+      <p>HCO Full, HCO ELC, SHCO Full, and SHCO ELC — switch without losing your hospital's data.</p>
+      <div class="pill-row">
+        <span class="pill active">HCO Full</span>
+        <span class="pill">HCO ELC</span>
+        <span class="pill active">SHCO Full</span>
+        <span class="pill">SHCO ELC</span>
+        <span class="pill">ECO Full</span>
+      </div>
+    </article>
+
+    <!-- Gap report -->
+    <article class="tile span-3 accent-teal">
+      <div class="stat-value" style="font-size:1.8rem;">PDF</div>
+      <h3>Gap reports</h3>
+      <p>Export readiness summaries for management and mock surveys.</p>
+    </article>
+
+    <!-- Mobile -->
+    <article class="tile span-3 accent-blue">
+      <div class="tile-icon">📱</div>
+      <h3>Web + Android</h3>
+      <p>Rounds on mobile. Dashboards on desktop. Always in sync.</p>
+    </article>
+
+    <!-- Pricing teaser -->
+    <article class="tile span-4 accent-gold">
+      <p class="tile-label">Pricing</p>
+      <div class="stat-value">₹499<small>/mo</small></div>
+      <p>Per hospital. No setup fee. Cancel anytime.</p>
+    </article>
+
+    <!-- How to achieve -->
+    <article class="tile span-4 accent-teal">
+      <div class="tile-icon">💡</div>
+      <h3>How to Achieve</h3>
+      <p>Practical step-by-step guidance on every OE — separate from official NABH text.</p>
+    </article>
+
+    <!-- Tracer -->
+    <article class="tile span-4 accent-rose">
+      <div class="tile-icon">🔗</div>
+      <h3>Tracer audits</h3>
+      <p>Follow the patient journey across departments with structured evidence trails.</p>
+    </article>
+
+    <!-- CTA band -->
+    <article class="tile cta-tile span-12">
+      <div>
+        <h2>See your first readiness score today.</h2>
+        <p>Set up your hospital in minutes — no credit card required.</p>
+      </div>
+      <a class="btn btn-primary" href="#">Get started free →</a>
+    </article>
+
+  </main>
+
+  <footer>
+    <b>Design preview only</b> — bento grid concept · © 2026 AccredReady · MK Tech · Gujarat, India
+  </footer>
+
+</div>
+
+<script>
+  document.querySelectorAll('.tile').forEach(tile => {
+    tile.addEventListener('mousemove', e => {
+      const r = tile.getBoundingClientRect();
+      tile.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+      tile.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+    });
+  });
+</script>
+</body>
+</html>
