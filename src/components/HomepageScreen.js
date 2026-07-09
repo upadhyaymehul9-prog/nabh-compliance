@@ -402,6 +402,10 @@ export default function HomepageScreen({ onSignIn }) {
         @media(max-width:480px) { #hp-root .mgrid { grid-template-columns: 1fr; } }
         #hp-root .mcard { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 22px; position: relative; transition: border-color .2s, box-shadow .2s; }
         #hp-root .mcard:hover { border-color: var(--brand-light); box-shadow: var(--shadow-sm); }
+        #hp-root a.mcard { display: block; color: inherit; text-decoration: none; }
+        #hp-root a.mcard:hover { border-color: var(--brand); }
+        #hp-root .mcard .card-cta { font-family: 'Figtree', sans-serif; font-size: 12.5px; font-weight: 700; color: var(--brand); margin-top: 12px; display: inline-flex; align-items: center; gap: 4px; }
+        #hp-root a.mcard:hover .card-cta { color: var(--brand-dark); }
         #hp-root .mcard.soon { background: var(--surface); border-style: dashed; }
         #hp-root .mcard .ic { width: 40px; height: 40px; border-radius: 10px; background: var(--brand-bg); color: var(--brand); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 14px; }
         #hp-root .mcard h4 { font-family: 'Figtree', sans-serif; font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 7px; }
@@ -841,26 +845,30 @@ export default function HomepageScreen({ onSignIn }) {
           </div>
           <div className="tier-label">Available now</div>
           <div className="mgrid">
-            <div className="mcard">
-              <div className="ic" aria-hidden="true"><i className="ti ti-users"></i></div>
-              <h4>OPD Queue Manager</h4>
-              <p>Digital patient flow from entry to exit — no more blank-form re-entry at reception.</p>
-            </div>
-            <div className="mcard">
+            <a href="/bookmyclinic" className="mcard">
               <div className="ic" aria-hidden="true"><i className="ti ti-calendar-event"></i></div>
-              <h4>Appointment Scheduler</h4>
-              <p>QR-based clinic booking with WhatsApp confirmations. Privacy-first, no patient data stored.</p>
-            </div>
-            <div className="mcard">
-              <div className="ic" aria-hidden="true"><i className="ti ti-chart-bar"></i></div>
-              <h4>Hospital Dashboard</h4>
-              <p>Real-time KPI monitoring across departments — see performance and revenue at a glance.</p>
-            </div>
-            <div className="mcard">
-              <div className="ic" aria-hidden="true"><i className="ti ti-device-laptop"></i></div>
-              <h4>Website &amp; App Development</h4>
-              <p>Custom hospital websites and mobile apps, built and shipped end-to-end.</p>
-            </div>
+              <h4>BookMyClinic</h4>
+              <p>Free appointment booking for clinics — patients book in 60 seconds, no OTP. Live at bookmyclinics.com.</p>
+              <span className="card-cta">Learn more →</span>
+            </a>
+            <a href="/opd-manager" className="mcard">
+              <div className="ic" aria-hidden="true"><i className="ti ti-stethoscope"></i></div>
+              <h4>OPD Manager</h4>
+              <p>Clinic command center — reception to pharmacy, lab, analytics, TV display, and NABH-ready records.</p>
+              <span className="card-cta">Explore →</span>
+            </a>
+            <a href="https://bookmyclinics.com" target="_blank" rel="noopener noreferrer" className="mcard">
+              <div className="ic" aria-hidden="true"><i className="ti ti-external-link"></i></div>
+              <h4>Book a clinic slot</h4>
+              <p>Patient-facing booking — find a doctor, pick a time, get WhatsApp confirmation.</p>
+              <span className="card-cta">Open BookMyClinic →</span>
+            </a>
+            <a href="/healthcare-ecosystem" className="mcard">
+              <div className="ic" aria-hidden="true"><i className="ti ti-brand-stackshare"></i></div>
+              <h4>Full ecosystem</h4>
+              <p>See how AccredReady, BookMyClinic, and OPD Manager connect — prepare, book, run.</p>
+              <span className="card-cta">View all products →</span>
+            </a>
           </div>
           <div className="tier-label">Coming soon</div>
           <div className="mgrid">
@@ -909,6 +917,9 @@ export default function HomepageScreen({ onSignIn }) {
         <div className="wrap">
           <span>© 2026 AccredReady — NABH Compliance Platform · MK Tech</span>
           <div className="footer-links">
+            <a href="/healthcare-ecosystem">Our products</a>
+            <a href="/bookmyclinic">BookMyClinic</a>
+            <a href="/opd-manager">OPD Manager</a>
             <a href={COMPANY_LINKEDIN_URL} target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="mailto:doctor@accredready.in">Contact</a>
             <a href="/terms.html">Terms</a>
