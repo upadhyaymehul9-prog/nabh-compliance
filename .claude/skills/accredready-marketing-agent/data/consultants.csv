@@ -1,0 +1,2 @@
+id,name,firm,client_facility_count,programmes_served,linkedin_url,email,whatsapp,stage,last_touch,last_touch_date,next_action,next_action_date,offer_discussed,notes
+EXAMPLE-001,Example Consultant (keep this row as format reference),Example Hospital Solutions,25,HCO Full;SHCO;ELC,https://linkedin.com/in/example,example@example.com,+91XXXXXXXXXX,identified,,,P1 intro message,2026-07-13,,Do not delete this row — it documents the column format

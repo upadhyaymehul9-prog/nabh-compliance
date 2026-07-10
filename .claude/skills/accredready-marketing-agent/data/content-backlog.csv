@@ -1,0 +1,8 @@
+id,slug,working_title,content_type,target_intent,priority,status,url,shipped_date,notes
+CB001,nabh-software-vs-excel,NABH readiness tracking: software vs Excel spreadsheets,commercial,decision,1,planned,,,Highest-intent evaluator page; honest comparison — Excel works until evidence and KPIs fragment
+CB002,nabh-consultant-vs-software,NABH consultant vs software: what each actually does,commercial,decision,1,planned,,,Positions software as complement to consultants; supports partner playbook; cite consultant scope norms
+CB003,nabh-elc-incentive-states,State incentives for NABH Entry Level Certification,commercial,decision,2,planned,,,ELC buyers with government incentive motivation; verify current schemes before writing
+CB004,nabh-accreditation-cost-refresh,Refresh: NABH accreditation cost page,refresh,decision,2,planned,/nabh-accreditation-cost.html,,Add answer-first opening + FAQ schema if missing; verify fee figures against official NABH sources
+CB005,nabh-renewal-guide,NABH reaccreditation and renewal: what changes the second time,learn,informational,3,planned,,,Renewal audiences are existing accredited hospitals — strong fit for ongoing-tracking pitch
+CB006,nabh-quality-manager-first-90-days,New NABH quality manager: where to start,learn,informational,3,planned,,,Persona-magnet article; feeds LinkedIn and outreach touches
+CB007,interlink-audit,Monthly interlink audit: every informational page links to one commercial page,maintenance,,4,planned,,,Grep public/ HTML for orphan pages; fix links
