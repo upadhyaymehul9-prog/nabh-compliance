@@ -1,13 +1,21 @@
 import { useState, useEffect } from "react";
+import AuthForm from "./AuthForm";
 
 const YOUTUBE_PROMO_ID = "de3TKt7LfT8";
 const YOUTUBE_PROMO_URL = `https://www.youtube.com/watch?v=${YOUTUBE_PROMO_ID}`;
 const FOUNDER_LINKEDIN_URL = "https://www.linkedin.com/in/dr-mehul-upadhyay-039a07197";
 const COMPANY_LINKEDIN_URL = "https://www.linkedin.com/company/135244094/";
 
-export default function HomepageScreen({ onSignIn }) {
+export default function HomepageScreen({ onLogin }) {
   const [openPersons, setOpenPersons] = useState([false, false, false]);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [authCardMode, setAuthCardMode] = useState("signup");
+
+  const goToAuth = (mode) => {
+    setMenuOpen(false);
+    setAuthCardMode(mode);
+    document.getElementById('hero-auth-card')?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
 
   const togPerson = (idx) =>
     setOpenPersons(prev => prev.map((v, i) => i === idx ? !v : v));
@@ -198,15 +206,16 @@ export default function HomepageScreen({ onSignIn }) {
           pointer-events: none;
         }
         #hp-root .hero-inner {
-          position: relative; z-index: 2; padding: 88px 24px 76px;
+          position: relative; z-index: 2; padding: 28px 24px 64px;
           display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 420px); gap: 48px;
-          align-items: center; max-width: 1100px; margin: 0 auto;
+          align-items: start; max-width: 1100px; margin: 0 auto;
         }
+        #hp-root .hero-side { display: flex; flex-direction: column; gap: 22px; width: 100%; justify-self: end; }
         @media(max-width:960px) {
           #hp-root .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-          #hp-root .hero-mockup, #hp-root .hero-video { max-width: 480px; width: 100%; margin: 0 auto; justify-self: center; }
+          #hp-root .hero-mockup, #hp-root .hero-side { max-width: 480px; width: 100%; margin: 0 auto; justify-self: center; }
         }
-        @media(max-width:768px) { #hp-root .hero-inner { padding: 64px 20px 56px; } }
+        @media(max-width:768px) { #hp-root .hero-inner { padding: 32px 20px 56px; } }
         #hp-root .hero-badge {
           display: inline-flex; align-items: center; gap: 8px;
           background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.16);
@@ -297,6 +306,7 @@ export default function HomepageScreen({ onSignIn }) {
         /* ── SECTION SHELL ── */
         #hp-root section { padding: 88px 0; }
         @media(max-width:768px) { #hp-root section { padding: 64px 0; } }
+        #hp-root section.hero { padding: 0; }
 
         /* ── FEATURES ── */
         #hp-root .features { background: var(--surface); }
@@ -460,7 +470,7 @@ export default function HomepageScreen({ onSignIn }) {
                 <a className="nav-link" href="#how-it-works">How it works</a>
                 <a className="nav-link" href="#about">About</a>
                 <a className="nav-link" href="#pricing">Pricing</a>
-                <button className="btn btn-primary" onClick={onSignIn}>Sign In</button>
+                <button className="btn btn-primary" onClick={()=>goToAuth("login")}>Sign In</button>
               </div>
               <button type="button" className="menu-toggle" aria-label="Open menu" aria-expanded={menuOpen} onClick={()=>setMenuOpen(v=>!v)}>
                 <i className={`ti ${menuOpen?"ti-x":"ti-menu-2"}`} aria-hidden="true"></i>
@@ -472,7 +482,7 @@ export default function HomepageScreen({ onSignIn }) {
             <a href="#how-it-works" onClick={()=>setMenuOpen(false)}>How it works</a>
             <a href="#about" onClick={()=>setMenuOpen(false)}>About</a>
             <a href="#pricing" onClick={()=>setMenuOpen(false)}>Pricing</a>
-            <button type="button" onClick={()=>{setMenuOpen(false);onSignIn();}}>Sign In</button>
+            <button type="button" onClick={()=>goToAuth("login")}>Sign In</button>
           </div>
         </div>
       </header>
@@ -493,7 +503,7 @@ export default function HomepageScreen({ onSignIn }) {
             </h1>
             <p className="hero-sub">India's most affordable NABH compliance platform — built by a healthcare operations leader. Score your standards, find your gaps, fix them, and reach survey-readiness. For hospitals and small healthcare organisations.</p>
             <div className="hero-actions">
-              <button className="btn btn-amber btn-lg" onClick={onSignIn}>
+              <button className="btn btn-amber btn-lg" onClick={()=>goToAuth("signup")}>
                 <i className="ti ti-rocket" aria-hidden="true"></i> Start Free
               </button>
               <a className="btn btn-ghost-white btn-lg" href="#features">
@@ -532,19 +542,24 @@ export default function HomepageScreen({ onSignIn }) {
             </div>
           </div>
 
-          <div className="hero-video" id="promo-video">
-            <div className="hero-video-cap">
-              <i className="ti ti-player-play" aria-hidden="true"></i>
-              2-min product overview
+          <div className="hero-side">
+            <div id="hero-auth-card">
+              <AuthForm key={authCardMode} variant="embedded" initialMode={authCardMode} onLogin={onLogin} />
             </div>
-            <div className="hero-video-inner">
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_PROMO_ID}?rel=0&modestbranding=1`}
-                title="AccredReady — NABH Compliance Software for Hospitals"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                loading="lazy"
-              />
+            <div className="hero-video" id="promo-video">
+              <div className="hero-video-cap">
+                <i className="ti ti-player-play" aria-hidden="true"></i>
+                2-min product overview
+              </div>
+              <div className="hero-video-inner">
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_PROMO_ID}?rel=0&modestbranding=1`}
+                  title="AccredReady — NABH Compliance Software for Hospitals"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -809,7 +824,7 @@ export default function HomepageScreen({ onSignIn }) {
                 </div>
               </div>
               <div className="pricing-cta">
-                <button className="btn btn-amber btn-lg" onClick={onSignIn}>
+                <button className="btn btn-amber btn-lg" onClick={()=>goToAuth("signup")}>
                   <i className="ti ti-rocket" aria-hidden="true"></i> Start Free
                 </button>
                 <p className="pricing-disclaimer">No credit card required. Email-only signup. Cancel anytime.</p>
@@ -894,7 +909,7 @@ export default function HomepageScreen({ onSignIn }) {
           </span>
           <h2>Accreditation readiness, <em className="si">built and backed</em> end to end.</h2>
           <p>Software from a practising NABH Quality Manager. Consulting from an independent expert network. Financing from a dedicated healthcare partner.</p>
-          <button className="btn btn-amber btn-lg" onClick={onSignIn}>
+          <button className="btn btn-amber btn-lg" onClick={()=>goToAuth("signup")}>
             <i className="ti ti-rocket" aria-hidden="true"></i> Start Free
           </button>
           <div className="contact-row">
