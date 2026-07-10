@@ -1,5 +1,5 @@
 id,slug,working_title,content_type,target_intent,priority,status,url,shipped_date,notes
-CB001,nabh-software-vs-excel,NABH readiness tracking: software vs Excel spreadsheets,commercial,decision,1,planned,,,Highest-intent evaluator page; honest comparison — Excel works until evidence and KPIs fragment
+CB001,nabh-software-vs-excel,NABH readiness tracking: software vs Excel spreadsheets,commercial,decision,1,built,/nabh-software-vs-excel.html,2026-07-10,Built; interlinked from gap-analysis and kpi-tracking learn pages; awaiting local verify + deploy by founder
 CB002,nabh-consultant-vs-software,NABH consultant vs software: what each actually does,commercial,decision,1,planned,,,Positions software as complement to consultants; supports partner playbook; cite consultant scope norms
 CB003,nabh-elc-incentive-states,State incentives for NABH Entry Level Certification,commercial,decision,2,planned,,,ELC buyers with government incentive motivation; verify current schemes before writing
 CB004,nabh-accreditation-cost-refresh,Refresh: NABH accreditation cost page,refresh,decision,2,planned,/nabh-accreditation-cost.html,,Add answer-first opening + FAQ schema if missing; verify fee figures against official NABH sources
