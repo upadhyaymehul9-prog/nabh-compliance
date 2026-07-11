@@ -6439,6 +6439,12 @@ export default function App() {
 
   const activeSteps = (selectedProgramme === 'shco-full' || selectedProgramme === 'eco-full') ? SHCO_FULL_TOUR_STEPS : TOUR_STEPS;
   activeStepsRef.current = activeSteps;
+  // The replay tour only fits programmes that have a matching tour.
+  // - hco       → TOUR_STEPS
+  // - shco-full → SHCO_FULL_TOUR_STEPS
+  // Checklist modules (hco-elc, shco-elc, dental-elc) have no tour, and eco-full
+  // has no ECO-specific tour — it would otherwise show SHCO's walkthrough. Excluded.
+  const hasTour = selectedProgramme === 'hco' || selectedProgramme === 'shco-full';
 
   const dismissTour = useCallback(async () => {
     setTourStep(null);
@@ -12262,8 +12268,8 @@ export default function App() {
         {screen==="dental-elc"&&renderDentalTab()}
       </div>
 
-      <button onClick={()=>setTourStep(0)} title="Replay app tour"
-        style={{position:"fixed",bottom:148,right:20,zIndex:9997,width:48,height:48,borderRadius:24,background:T.gold,border:"none",color:T.bg,fontSize:22,fontWeight:900,cursor:"pointer",boxShadow:`0 4px 16px rgba(201,168,76,0.5)`,display:"flex",alignItems:"center",justifyContent:"center",lineHeight:1}}>?</button>
+      {hasTour&&<button onClick={()=>setTourStep(0)} title="Replay app tour"
+        style={{position:"fixed",bottom:148,right:20,zIndex:9997,width:48,height:48,borderRadius:24,background:T.gold,border:"none",color:T.bg,fontSize:22,fontWeight:900,cursor:"pointer",boxShadow:`0 4px 16px rgba(201,168,76,0.5)`,display:"flex",alignItems:"center",justifyContent:"center",lineHeight:1}}>?</button>}
       {selectedProgramme==="shco-full"&&(
         <AIAssistantWidget
           T={T}
@@ -12273,7 +12279,7 @@ export default function App() {
           trigger={aiWidgetTrigger}
         />
       )}
-      {tourStep!==null&&<WalktourOverlay step={tourStep} totalSteps={activeSteps.length} onNext={nextTourStep} onSkip={dismissTour} steps={activeSteps}/>}
+      {hasTour&&tourStep!==null&&<WalktourOverlay step={tourStep} totalSteps={activeSteps.length} onNext={nextTourStep} onSkip={dismissTour} steps={activeSteps}/>}
       <div style={{textAlign:"center",padding:"14px",color:T.muted,fontSize:11,borderTop:`1px solid ${T.border}`,marginTop:20}}>
         NABH Accreditation Platform — Independent educational tool — Not affiliated with NABH/QCI
       </div>
