@@ -1901,6 +1901,208 @@ const HCO_FEE = {
   label: "HCO Entry Level Certification (>50 sanctioned beds)",
 };
 
+// ── Dental Clinic ELC Static Data ─────────────────────────────────────────
+// Source: NABH Entry Level Certification Standards for Dental Clinics, 1st Edition, April 2023.
+// Self-contained module — checklist based (no OE scoring). Statuses: ready / pending / na.
+
+// Section 2 — Statutory legal tracker. cat groups; status obtained / pending / na.
+const DENTAL_ELC_STATUTORY = [
+  {id:"DST-A1",cat:"General Registration (any one of A)",name:"Registration under Clinical Establishment Act (or equivalent state act)"},
+  {id:"DST-A2",cat:"General Registration (any one of A)",name:"Registration under Shops and Establishments Act"},
+  {id:"DST-A3",cat:"General Registration (any one of A)",name:"Registration with Local Authorities (City Corporation / Municipality / Village Panchayat)"},
+  {id:"DST-B1",cat:"Bio-medical Waste Management",name:"BMW Management & Handling Authorization from Pollution Control Board"},
+  {id:"DST-B2",cat:"Bio-medical Waste Management",name:"Bio-medical Waste MOU with vendor for disposal"},
+  {id:"DST-C1",cat:"Facility Management",name:"Fire NOC / third-party fire audit, fire-fighting equipment & information displayed in clinic (as applicable)"},
+  {id:"DST-C2",cat:"Facility Management",name:"Third-party electrical audit of the facility in the last one year"},
+  {id:"DST-D1",cat:"AERB Registration (N/A if service absent)",name:"AERB registration / licence — IOPA"},
+  {id:"DST-D2",cat:"AERB Registration (N/A if service absent)",name:"AERB registration / licence — OPG"},
+  {id:"DST-D3",cat:"AERB Registration (N/A if service absent)",name:"AERB registration / licence — CBCT"},
+  {id:"DST-E1",cat:"Outsourced Services",name:"MOU with the outsourced Dental Lab"},
+  {id:"DST-E2",cat:"Outsourced Services",name:"MOU with hospital for emergency services / ambulance services"},
+  {id:"DST-E3",cat:"Outsourced Services",name:"Water testing reports in the last 6 months"},
+  {id:"DST-E4",cat:"Outsourced Services",name:"MOU for any other outsourced services"},
+];
+
+// Section 5 — Documents (Manuals, SOPs & checklists). group = tab section; sub = sub-heading.
+const DENTAL_ELC_DOCS = [
+  // 1. Manuals
+  {id:"D101",group:"Manuals",sub:"Quality Improvement Manual",text:"Quality Improvement Manual (updated once a year)"},
+  {id:"D102",group:"Manuals",sub:"Quality Improvement Manual",text:"Designated personnel appointed for coordinating & implementing the QA programme (existing person with QA training may be designated)"},
+  {id:"D103",group:"Manuals",sub:"Infection Control Manual",text:"Infection Control Manual (updated once a year)"},
+  {id:"D104",group:"Manuals",sub:"Infection Control Manual",text:"Designated personnel appointed for coordinating & implementing the Infection Control programme (existing doctor with IC training may be designated)"},
+
+  // 2.1 Infection Control — mode of sterilization
+  {id:"D201",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"Disposable instruments used for examination (if applicable)"},
+  {id:"D202",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"Sterilization of burs"},
+  {id:"D203",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"Sterilization of files"},
+  {id:"D204",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"Sterilization of prosthetic trays"},
+  {id:"D205",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"Sterilization of diagnostic instruments"},
+  {id:"D206",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"Sterilization of surgical instruments"},
+  {id:"D207",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"Sterilization of scaler tips"},
+  {id:"D208",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"Gloves, mask, syringe, needles"},
+  {id:"D209",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"RVG sensor covers"},
+  {id:"D210",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"Mixing bowls"},
+  {id:"D211",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"Mixing spatula"},
+  {id:"D212",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"Doctor's apron"},
+  {id:"D213",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"Assistant's apron"},
+  {id:"D214",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"Sterilization of handpieces"},
+  {id:"D215",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"Chair disinfection"},
+  {id:"D216",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"Spittoon cleaning"},
+  {id:"D217",group:"Infection Control",sub:"2.1 Mode of Sterilization",text:"Laundry (disposable / washing)"},
+  // 2.2 Infection Control of the clinic — Hand Hygiene
+  {id:"D221",group:"Infection Control",sub:"2.2a Hand Hygiene",text:"Awareness of hand-hygiene policy"},
+  {id:"D222",group:"Infection Control",sub:"2.2a Hand Hygiene",text:"Steps of hand washing displayed / known"},
+  {id:"D223",group:"Infection Control",sub:"2.2a Hand Hygiene",text:"Washing time observed"},
+  {id:"D224",group:"Infection Control",sub:"2.2a Hand Hygiene",text:"All rooms have hand-hygiene signages"},
+  {id:"D225",group:"Infection Control",sub:"2.2a Hand Hygiene",text:"Training of staff on hand hygiene"},
+  {id:"D226",group:"Infection Control",sub:"2.2a Hand Hygiene",text:"Data collection sheet for hand hygiene"},
+  // 2.2b Bio-medical waste management
+  {id:"D231",group:"Infection Control",sub:"2.2b Bio-Medical Waste",text:"Awareness of the BMW policy"},
+  {id:"D232",group:"Infection Control",sub:"2.2b Bio-Medical Waste",text:"Staff training on BMW"},
+  {id:"D233",group:"Infection Control",sub:"2.2b Bio-Medical Waste",text:"Availability of coloured bins"},
+  {id:"D234",group:"Infection Control",sub:"2.2b Bio-Medical Waste",text:"Labels for dustbins"},
+  {id:"D235",group:"Infection Control",sub:"2.2b Bio-Medical Waste",text:"Different coloured polybags"},
+  {id:"D236",group:"Infection Control",sub:"2.2b Bio-Medical Waste",text:"Labels for polybags"},
+  {id:"D237",group:"Infection Control",sub:"2.2b Bio-Medical Waste",text:"Designated BMW collection area"},
+  {id:"D238",group:"Infection Control",sub:"2.2b Bio-Medical Waste",text:"Housekeeping trainings for waste collection"},
+  {id:"D239",group:"Infection Control",sub:"2.2b Bio-Medical Waste",text:"Bio-medical waste vendor attendance"},
+  {id:"D240",group:"Infection Control",sub:"2.2b Bio-Medical Waste",text:"Availability of sharps container"},
+  // 2.2c Blood & body fluid spill management
+  {id:"D251",group:"Infection Control",sub:"2.2c Blood & Body Fluid Spill",text:"Awareness of the spill-management policy"},
+  {id:"D252",group:"Infection Control",sub:"2.2c Blood & Body Fluid Spill",text:"Staff trainings"},
+  {id:"D253",group:"Infection Control",sub:"2.2c Blood & Body Fluid Spill",text:"Housekeeping trainings"},
+  {id:"D254",group:"Infection Control",sub:"2.2c Blood & Body Fluid Spill",text:"Mock drills for spill management"},
+  {id:"D255",group:"Infection Control",sub:"2.2c Blood & Body Fluid Spill",text:"Availability of spill kit"},
+  {id:"D256",group:"Infection Control",sub:"2.2c Blood & Body Fluid Spill",text:"Availability of incident reporting form"},
+  // 2.2d Needle stick injury
+  {id:"D261",group:"Infection Control",sub:"2.2d Needle Stick Injury",text:"Awareness of NSI policy"},
+  {id:"D262",group:"Infection Control",sub:"2.2d Needle Stick Injury",text:"Staff trainings"},
+  {id:"D263",group:"Infection Control",sub:"2.2d Needle Stick Injury",text:"Post-exposure prophylaxis available"},
+  {id:"D264",group:"Infection Control",sub:"2.2d Needle Stick Injury",text:"Availability of NSI incident reporting form"},
+
+  // 3. Quality & safety checklist
+  {id:"D301",group:"Quality & Safety",sub:"3.1 Patient Registration in OPD",text:"Contact numbers of staff displayed at reception"},
+  {id:"D302",group:"Quality & Safety",sub:"3.1 Patient Registration in OPD",text:"Registration form available (English & vernacular language)"},
+  {id:"D303",group:"Quality & Safety",sub:"3.1 Patient Registration in OPD",text:"Awareness about registration policy"},
+  {id:"D304",group:"Quality & Safety",sub:"3.1 Patient Registration in OPD",text:"Awareness about patient identification"},
+  {id:"D305",group:"Quality & Safety",sub:"3.1 Patient Registration in OPD",text:"Every patient has a unique identifier"},
+  {id:"D306",group:"Quality & Safety",sub:"3.2 Record Keeping",text:"Safe upkeeping of registration forms on a monthly basis"},
+  {id:"D307",group:"Quality & Safety",sub:"3.2 Record Keeping",text:"Safe upkeep of consent forms, ADR forms, NSI forms"},
+  {id:"D308",group:"Quality & Safety",sub:"3.2 Record Keeping",text:"Checklist for review of medical records"},
+  {id:"D309",group:"Quality & Safety",sub:"3.3–3.5 Safety & Referral",text:"Radiation safety programme established"},
+  {id:"D310",group:"Quality & Safety",sub:"3.3–3.5 Safety & Referral",text:"Availability of neighbouring hospital contact details"},
+  {id:"D311",group:"Quality & Safety",sub:"3.3–3.5 Safety & Referral",text:"Availability of neighbouring ambulance contact details"},
+  {id:"D312",group:"Quality & Safety",sub:"3.6 Dental Pain Management",text:"Display of pain assessment chart"},
+  {id:"D313",group:"Quality & Safety",sub:"3.6 Dental Pain Management",text:"Awareness of the dentist for pain management"},
+  {id:"D314",group:"Quality & Safety",sub:"3.7 Vulnerable Patients",text:"Availability of wheelchair / stretcher"},
+  {id:"D315",group:"Quality & Safety",sub:"3.7 Vulnerable Patients",text:"Availability of ramp (optional)"},
+  {id:"D316",group:"Quality & Safety",sub:"3.7 Vulnerable Patients",text:"Safety bells in the washroom (desirable)"},
+  {id:"D317",group:"Quality & Safety",sub:"3.8–3.11 Care Protocols",text:"Policies & procedures for post-procedure management"},
+  {id:"D318",group:"Quality & Safety",sub:"3.8–3.11 Care Protocols",text:"Staff aware about emergency codes (CODE RED & CODE BLUE)"},
+  {id:"D319",group:"Quality & Safety",sub:"3.8–3.11 Care Protocols",text:"Training for use of fire extinguisher to staff"},
+  {id:"D320",group:"Quality & Safety",sub:"3.8–3.11 Care Protocols",text:"BLS training for the staff"},
+  {id:"D321",group:"Quality & Safety",sub:"3.8–3.11 Care Protocols",text:"Policies address handling of medico-legal cases"},
+  {id:"D322",group:"Quality & Safety",sub:"3.8–3.11 Care Protocols",text:"Policies & training on procedures for care of emergency patients"},
+  {id:"D323",group:"Quality & Safety",sub:"3.12 Impressions & Prosthesis Handling",text:"Master log book for batch & serial number of dental implantable prosthesis"},
+  {id:"D324",group:"Quality & Safety",sub:"3.12 Impressions & Prosthesis Handling",text:"Log book of dental lab work"},
+  {id:"D325",group:"Quality & Safety",sub:"3.13–3.14 Local Anaesthesia",text:"Protocol for special care of anxious patients/children during LA / procedural sedation; ADR recorded in ADR form"},
+  {id:"D326",group:"Quality & Safety",sub:"3.13–3.14 Local Anaesthesia",text:"Authorization for qualified dental surgeon to administer local anaesthesia"},
+  {id:"D327",group:"Quality & Safety",sub:"3.15 Grievance Redressal",text:"Presence of complaint / suggestion register"},
+  {id:"D328",group:"Quality & Safety",sub:"3.15 Grievance Redressal",text:"Process of complaint reporting, analysis & resolution within a defined timeframe"},
+  {id:"D329",group:"Quality & Safety",sub:"3.16 Consent",text:"Awareness about patient consent policy"},
+  {id:"D330",group:"Quality & Safety",sub:"3.16 Consent",text:"Staff aware of procedures for which consent needs to be taken"},
+  {id:"D331",group:"Quality & Safety",sub:"3.17–3.21 Materials & Education",text:"Availability of patient education material"},
+  {id:"D332",group:"Quality & Safety",sub:"3.17–3.21 Materials & Education",text:"Uniform pricing policy"},
+  {id:"D333",group:"Quality & Safety",sub:"3.17–3.21 Materials & Education",text:"Selection procedure for purchasing dental materials"},
+  {id:"D334",group:"Quality & Safety",sub:"3.17–3.21 Materials & Education",text:"Policies & procedures for storage and dispensing of dental materials"},
+  {id:"D335",group:"Quality & Safety",sub:"3.17–3.21 Materials & Education",text:"Policies & procedures for the use of implant prosthesis"},
+  {id:"D336",group:"Quality & Safety",sub:"3.22–3.23 Equipment",text:"Policy for optimum procurement & usage of dental instruments and equipment"},
+  {id:"D337",group:"Quality & Safety",sub:"3.22–3.23 Equipment",text:"Inventory management register"},
+  {id:"D338",group:"Quality & Safety",sub:"3.22–3.23 Equipment",text:"Policy for maintenance of dental equipment & instruments (with equipment details log)"},
+  {id:"D339",group:"Quality & Safety",sub:"3.24 Medication Storage",text:"List / stock register of dental material"},
+  {id:"D340",group:"Quality & Safety",sub:"3.24 Medication Storage",text:"List of sound-alike and look-alike materials"},
+  {id:"D341",group:"Quality & Safety",sub:"3.24 Medication Storage",text:"List of sound-alike and look-alike medications"},
+  {id:"D342",group:"Quality & Safety",sub:"3.24 Medication Storage",text:"List of emergency medications / high-risk drugs with expiry date"},
+  {id:"D343",group:"Quality & Safety",sub:"3.24 Medication Storage",text:"List of hazardous material"},
+  {id:"D344",group:"Quality & Safety",sub:"3.25 Mercury Spills",text:"SOP for mercury spills"},
+  {id:"D345",group:"Quality & Safety",sub:"3.26 Fire & Emergency",text:"Presence of guard at the entrance (optional)"},
+  {id:"D346",group:"Quality & Safety",sub:"3.26 Fire & Emergency",text:"Staff aware about the disaster management plan"},
+  {id:"D347",group:"Quality & Safety",sub:"3.26 Fire & Emergency",text:"Awareness about the location of fire extinguisher and fire panel"},
+  {id:"D348",group:"Quality & Safety",sub:"3.26 Fire & Emergency",text:"Rubber mats in front of electric installations (only if HT line present)"},
+  {id:"D349",group:"Quality & Safety",sub:"3.26 Fire & Emergency",text:"Functioning of fire alarm and fire panel"},
+  {id:"D350",group:"Quality & Safety",sub:"3.26 Fire & Emergency",text:"Availability of fire extinguishers"},
+  {id:"D351",group:"Quality & Safety",sub:"3.27 No Smoking",text:"No-smoking signages available"},
+  {id:"D352",group:"Quality & Safety",sub:"3.28 Signages",text:"Bilingual scope of services displayed"},
+  {id:"D353",group:"Quality & Safety",sub:"3.28 Signages",text:"Display of licenses and statutory requirements"},
+  {id:"D354",group:"Quality & Safety",sub:"3.28 Signages",text:"Patient rights and responsibilities displayed"},
+  {id:"D355",group:"Quality & Safety",sub:"3.28 Signages",text:"AERB licenses and signages"},
+  {id:"D356",group:"Quality & Safety",sub:"3.28 Signages",text:"Fire exit signages and plan"},
+  {id:"D357",group:"Quality & Safety",sub:"3.29 Backyard & Power",text:"Cleanliness of backyard in clinic (if available)"},
+  {id:"D358",group:"Quality & Safety",sub:"3.29 Backyard & Power",text:"DG set / inverter / UPS available (compulsory)"},
+  {id:"D359",group:"Quality & Safety",sub:"3.30–3.32 HR & Training",text:"Organization organogram"},
+  {id:"D360",group:"Quality & Safety",sub:"3.30–3.32 HR & Training",text:"Training & development policy — awareness about NABH policies"},
+  {id:"D361",group:"Quality & Safety",sub:"3.30–3.32 HR & Training",text:"Awareness about the scope of services of clinic"},
+  {id:"D362",group:"Quality & Safety",sub:"3.30–3.32 HR & Training",text:"Staff aware about infectious diseases"},
+  {id:"D363",group:"Quality & Safety",sub:"3.30–3.32 HR & Training",text:"All staff is BLS trained"},
+  {id:"D364",group:"Quality & Safety",sub:"3.30–3.32 HR & Training",text:"Awareness about NABH policies related to nursing / assistants"},
+  {id:"D365",group:"Quality & Safety",sub:"3.30–3.32 HR & Training",text:"Awareness about the usage of PPE"},
+  {id:"D366",group:"Quality & Safety",sub:"3.30–3.32 HR & Training",text:"Staff appraisal system — job description & KRAs defined for each category of staff"},
+  {id:"D367",group:"Quality & Safety",sub:"3.33 Credentialing",text:"Antecedents of potential employees checked (criminal / negligence background)"},
+  {id:"D368",group:"Quality & Safety",sub:"3.33 Credentialing",text:"Personal files of all employees maintained"},
+  {id:"D369",group:"Quality & Safety",sub:"3.33 Credentialing",text:"Policies guide the requisition of outside specialist to DHSP"},
+  {id:"D370",group:"Quality & Safety",sub:"3.34 Information Security",text:"Policies & procedures for maintaining confidentiality, integrity and security of information"},
+];
+
+// Section 6 — Forms & Formats
+const DENTAL_ELC_FORMS = [
+  {id:"DF01",text:"Patient transfer or referral form / summary for patients who do not match the organization's resources"},
+  {id:"DF02",text:"Informed consent for treatment by an outside specialist"},
+  {id:"DF03",text:"Initial Assessment Form for OPD patients (including pain management criteria)"},
+  {id:"DF04",text:"Informed consent for administration of anaesthesia (separate form for LA and GA)"},
+  {id:"DF05",text:"Consent for photographs / recording procedures"},
+  {id:"DF06",text:"General consent for procedures (taken separately for each procedure)"},
+  {id:"DF07",text:"Tariff list of dental procedures"},
+  {id:"DF08",text:"Patient's consent for change in estimated cost of treatment"},
+  {id:"DF09",text:"Adverse Drug Reaction (ADR) form"},
+  {id:"DF10",text:"Sentinel events form"},
+];
+
+// Broad speciality scope (Section 3, list A) — reference only
+const DENTAL_ELC_SCOPE = [
+  "General Dentistry",
+  "Conservative Dentistry and Endodontics",
+  "Oral & Maxillofacial Surgery",
+  "Oral Medicine and Radiology",
+  "Oral Pathology",
+  "Orthodontics and Dentofacial Orthopaedics",
+  "Pedodontics (Preventive & Paediatric Dentistry)",
+  "Periodontology",
+  "Prosthodontics",
+];
+
+// Assessment process (from Assessment Criteria section)
+const DENTAL_ELC_PROCESS = [
+  {step:1,name:"Opening Meeting",url:"",desc:"Assessor commences with a meeting with the clinic management to explain the scope and plan of the assessment.",output:"Assessment plan agreed"},
+  {step:2,name:"Checklist Compliance Review",url:"",desc:"Assessor reviews compliance against the checklist-based Dental Certification standards — manuals, SOPs, infection control and quality & safety checklists.",output:"Checklist verified"},
+  {step:3,name:"Facility Visit",url:"",desc:"Assessor visits the complete facility within the given timeline (one day for clinics up to 8 dental chairs).",output:"Facility walkthrough done"},
+  {step:4,name:"Staff & Patient Interviews",url:"",desc:"Assessor holds random, unstructured interviews with staff, consultants and patients to verify the facts.",output:"Facts verified"},
+  {step:5,name:"Online Portal Entry",url:"",desc:"Assessor fills the online portal on the day of the assessment itself.",output:"Assessment submitted online"},
+  {step:6,name:"Closing Meeting",url:"",desc:"Assessor ends the assessment with a closing meeting summarising the findings with the clinic management.",output:"Findings communicated"},
+  {step:7,name:"Certificate",url:"",desc:"On successful compliance, the Entry Level Dental Clinic Certificate is issued. Valid for two years.",output:"NABH Dental ELC Certificate (2-year validity)"},
+];
+
+// Fee & scope reference
+const DENTAL_ELC_INFO = {
+  validity:"2 Years",
+  visitDuration:"1 day (clinics up to 8 dental chairs)",
+  scope:"Dental clinics with 1–8 chairs",
+  exclusions:"Dental clinics with more than 8 chairs, dental colleges and hospitals",
+  fees:[
+    {chairs:"1–4 dental chairs",fee:"₹11,000 + 18% GST (for two years)"},
+    {chairs:"5–8 dental chairs",fee:"₹15,000 + 18% GST (for two years)"},
+  ],
+};
+
 // ── NABH 6th Edition official chapter order ─────────────────────────────
 const CHAPTER_ORDER = {
   "AAC": 1,  // Access, Assessment and Continuity of Care
@@ -2344,6 +2546,17 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
       icon: "👁️",
       color: "#06b6d4",
     },
+    {
+      key: "dental_elc",
+      title: "Dental Clinic Certification",
+      subtitle: "Entry Level — Dental Clinics",
+      badge: "1st Edition",
+      tags: ["1–8 chairs", "Checklist based"],
+      desc: "NABH Entry Level Certification for dental clinics (1–8 chairs). Checklist-based readiness tracker covering statutory, infection control, quality & safety, and forms.",
+      available: true,
+      icon: "🦷",
+      color: "#0ea5e9",
+    },
   ];
 
   const handleNotify = async (programme) => {
@@ -2409,15 +2622,6 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
               color: HP.brandMid,
               tags: ["Ayurveda", "Homeopathy", "Unani"],
               desc: "NABH accreditation for AYUSH hospitals including Ayurveda, Homeopathy, and Unani systems.",
-            },
-            {
-              key: "dental_clinic",
-              icon: "🦷",
-              title: "Dental Clinic",
-              subtitle: "Dental Accreditation",
-              color: HP.amber,
-              tags: ["Dental", "Oral Health"],
-              desc: "NABH accreditation standards for dental clinics and oral health care centres.",
             },
           ].map(cs => (
             <div key={cs.key} style={{ background: HP.white, border: HP.boxBorder, borderRadius: 14, padding: "24px", cursor: "default", position: "relative" }}>
@@ -6214,6 +6418,13 @@ export default function App() {
   const [ecoFullCapaForm, setEcoFullCapaForm] = useState({});
   const [ecoFullCapaSaving, setEcoFullCapaSaving] = useState({});
   const [ecoFullCapaDb, setEcoFullCapaDb] = useState({});
+  // ── Dental ELC (checklist-based, self-contained) ──
+  const [dentalTab, setDentalTab] = useState('overview');
+  const [dentalDocProgress, setDentalDocProgress] = useState({});
+  const [dentalStatProgress, setDentalStatProgress] = useState({});
+  const [dentalFormProgress, setDentalFormProgress] = useState({});
+  const [dentalDocGroup, setDentalDocGroup] = useState('all');
+  const [dentalDocFilter, setDentalDocFilter] = useState('all');
 
   // Reassign module-level T so all component closures see the correct theme
   T = theme === 'light' ? LIGHT_THEME : DARK_THEME;
@@ -7960,6 +8171,41 @@ export default function App() {
       });
   },[selectedProgramme,context?.assessmentId]);
 
+  // Load Dental ELC progress from DB when entering that programme
+  useEffect(()=>{
+    if(selectedProgramme!=="dental-elc"||!context?.assessmentId)return;
+    supabase.from("dental_elc_progress")
+      .select("doc_progress,stat_progress,form_progress")
+      .eq("assessment_id",context.assessmentId)
+      .maybeSingle()
+      .then(({data})=>{
+        if(data?.doc_progress)setDentalDocProgress(data.doc_progress);
+        if(data?.stat_progress)setDentalStatProgress(data.stat_progress);
+        if(data?.form_progress)setDentalFormProgress(data.form_progress);
+      });
+  },[selectedProgramme,context?.assessmentId]);
+
+  // Persist Dental ELC doc progress
+  useEffect(()=>{
+    if(selectedProgramme!=="dental-elc"||!context?.assessmentId||Object.keys(dentalDocProgress).length===0)return;
+    supabase.from("dental_elc_progress")
+      .upsert({assessment_id:context.assessmentId,doc_progress:dentalDocProgress},{onConflict:"assessment_id"});
+  },[dentalDocProgress]);// eslint-disable-line react-hooks/exhaustive-deps
+
+  // Persist Dental ELC statutory progress
+  useEffect(()=>{
+    if(selectedProgramme!=="dental-elc"||!context?.assessmentId||Object.keys(dentalStatProgress).length===0)return;
+    supabase.from("dental_elc_progress")
+      .upsert({assessment_id:context.assessmentId,stat_progress:dentalStatProgress},{onConflict:"assessment_id"});
+  },[dentalStatProgress]);// eslint-disable-line react-hooks/exhaustive-deps
+
+  // Persist Dental ELC forms progress
+  useEffect(()=>{
+    if(selectedProgramme!=="dental-elc"||!context?.assessmentId||Object.keys(dentalFormProgress).length===0)return;
+    supabase.from("dental_elc_progress")
+      .upsert({assessment_id:context.assessmentId,form_progress:dentalFormProgress},{onConflict:"assessment_id"});
+  },[dentalFormProgress]);// eslint-disable-line react-hooks/exhaustive-deps
+
   // Preload ELC oe_level badges — shared by both HCO and SHCO ELC (same unified 2nd Edition levels)
   useEffect(()=>{
     if(selectedProgramme!=="hco-elc"&&selectedProgramme!=="shco-elc")return;
@@ -8296,6 +8542,7 @@ export default function App() {
     else if(key==="shco_elc"){setSelectedProgramme("shco-elc");setScreen("shco");setAuthState("app");}
     else if(key==="hco_elc"){setSelectedProgramme("hco-elc");setScreen("hco-elc");setAuthState("app");}
     else if(key==="eco_full"){setSelectedProgramme("eco-full");setScreen("eco-full");setAuthState("app");}
+    else if(key==="dental_elc"){setSelectedProgramme("dental-elc");setScreen("dental-elc");setAuthState("app");}
   };
 
   if(authState==="loading") return <div style={{minHeight:"100vh",background:T.bg,display:"flex",alignItems:"center",justifyContent:"center",color:T.gold,fontFamily:"Segoe UI,sans-serif",fontSize:16}}>Loading…</div>;
@@ -11515,6 +11762,334 @@ export default function App() {
   );
   };
 
+  // ══════════════════════════════════════════════════════════════════════
+  // DENTAL CLINIC ELC — self-contained checklist module (no OE scoring)
+  // ══════════════════════════════════════════════════════════════════════
+  const renderDentalTab = () => {
+    const docStatus  = (id) => dentalDocProgress[id]  || 'pending';
+    const statStatus = (id) => dentalStatProgress[id] || 'pending';
+    const formStatus = (id) => dentalFormProgress[id] || 'pending';
+    const setDoc  = (id, s) => setDentalDocProgress(p => ({ ...p, [id]: s }));
+    const setStat = (id, s) => setDentalStatProgress(p => ({ ...p, [id]: s }));
+    const setForm = (id, s) => setDentalFormProgress(p => ({ ...p, [id]: s }));
+
+    // ── Progress stats ──
+    const docReady = DENTAL_ELC_DOCS.filter(d => docStatus(d.id) === 'ready').length;
+    const docNA    = DENTAL_ELC_DOCS.filter(d => docStatus(d.id) === 'na').length;
+    const docAppl  = DENTAL_ELC_DOCS.length - docNA;
+    const docPct   = docAppl > 0 ? Math.round((docReady / docAppl) * 100) : 0;
+
+    const statReady = DENTAL_ELC_STATUTORY.filter(l => statStatus(l.id) === 'ready').length;
+    const statNA    = DENTAL_ELC_STATUTORY.filter(l => statStatus(l.id) === 'na').length;
+    const statAppl  = DENTAL_ELC_STATUTORY.length - statNA;
+    const statPct   = statAppl > 0 ? Math.round((statReady / statAppl) * 100) : 0;
+
+    const formReady = DENTAL_ELC_FORMS.filter(f => formStatus(f.id) === 'ready').length;
+    const formNA    = DENTAL_ELC_FORMS.filter(f => formStatus(f.id) === 'na').length;
+    const formAppl  = DENTAL_ELC_FORMS.length - formNA;
+    const formPct   = formAppl > 0 ? Math.round((formReady / formAppl) * 100) : 0;
+
+    const overallPct = Math.round((docPct + statPct + formPct) / 3);
+
+    const DENTAL_TABS = [
+      {key:'overview',  label:'📊 Overview'},
+      {key:'statutory', label:'📋 Statutory'},
+      {key:'checklist', label:'🗂️ Documents & Checklists'},
+      {key:'forms',     label:'📝 Forms & Formats'},
+      {key:'process',   label:'🗺️ Process & Fees'},
+    ];
+
+    // Reusable 3-state toggle row
+    const statusToggle = (curr, onSet, doneLabel='✅ Ready') => (
+      <div style={{display:'flex',gap:6,flexWrap:'wrap'}}>
+        {['pending','ready','na'].map(status => {
+          const active = curr === status;
+          const col = status==='ready'?T.green:status==='na'?T.muted:T.orange;
+          const lbl = status==='ready'?doneLabel:status==='na'?'➖ N/A':'⏳ Pending';
+          return (
+            <button key={status} onClick={() => onSet(status)}
+              style={{padding:'3px 10px',borderRadius:6,border:'none',cursor:'pointer',fontSize:13,fontWeight:600,
+                background: active ? col+'33' : T.panel2, color: active ? col : T.muted,
+                outline: active ? `1px solid ${col}` : 'none'}}>
+              {lbl}
+            </button>
+          );
+        })}
+      </div>
+    );
+
+    const ring = (label, pct, done, total) => {
+      const color = pct>=80?T.green:pct>=50?T.orange:T.red;
+      return (
+        <div style={{background:T.panel2,borderRadius:10,padding:12,textAlign:'center',border:`1px solid ${T.border}`}}>
+          <div style={{position:'relative',width:64,height:64,margin:'0 auto 8px'}}>
+            <svg viewBox="0 0 36 36" style={{width:64,height:64,transform:'rotate(-90deg)'}}>
+              <circle cx="18" cy="18" r="15.9" fill="none" stroke={T.border} strokeWidth="3"/>
+              <circle cx="18" cy="18" r="15.9" fill="none" stroke={color} strokeWidth="3"
+                strokeDasharray={`${pct} ${100-pct}`} strokeDashoffset="0" strokeLinecap="round"/>
+            </svg>
+            <div style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',color,fontWeight:700,fontSize:16}}>{pct}%</div>
+          </div>
+          <div style={{color:T.text,fontSize:14,fontWeight:600}}>{label}</div>
+          {done !== null && <div style={{color:T.muted,fontSize:12}}>{done}/{total}</div>}
+        </div>
+      );
+    };
+
+    // ── OVERVIEW ──
+    const renderDentalOverview = () => (
+      <div style={{padding:16,display:'flex',flexDirection:'column',gap:16}}>
+        <div style={{background:'#04121c',border:`1px solid ${T.blue}`,borderRadius:10,padding:14}}>
+          <div style={{color:T.blue,fontWeight:700,fontSize:15,marginBottom:4}}>🦷 Entry Level Certification — Dental Clinics (1st Edition, April 2023)</div>
+          <div style={{color:'#c8dcea',fontSize:14,lineHeight:1.6}}>
+            A checklist-based certification for dental clinics with <strong style={{color:T.gold}}>1–8 chairs</strong>. Work through the statutory tracker, documents & checklists, and forms below to prepare for your assessment.
+          </div>
+        </div>
+
+        <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
+          <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:14}}>📊 Certification Readiness</div>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(120px,1fr))',gap:12}}>
+            {ring('Statutory', statPct, statReady, statAppl)}
+            {ring('Documents', docPct, docReady, docAppl)}
+            {ring('Forms', formPct, formReady, formAppl)}
+            {ring('Overall', overallPct, null, null)}
+          </div>
+        </div>
+
+        <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
+          <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:12}}>ℹ️ Programme Details</div>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(160px,1fr))',gap:10}}>
+            {[
+              {label:'Validity',val:DENTAL_ELC_INFO.validity},
+              {label:'Visit Duration',val:DENTAL_ELC_INFO.visitDuration},
+              {label:'Scope',val:DENTAL_ELC_INFO.scope},
+            ].map(s => (
+              <div key={s.label} style={{background:T.panel2,borderRadius:8,padding:'10px 14px',border:`1px solid ${T.border}`}}>
+                <div style={{color:T.muted,fontSize:12,marginBottom:2}}>{s.label}</div>
+                <div style={{color:T.gold,fontSize:14,fontWeight:600}}>{s.val}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{marginTop:12,background:'#1a0a00',border:`1px solid ${T.orange}44`,borderRadius:8,padding:'10px 12px'}}>
+            <div style={{color:T.orange,fontSize:13,fontWeight:600,marginBottom:2}}>Exclusions</div>
+            <div style={{color:T.text,fontSize:13,lineHeight:1.5}}>{DENTAL_ELC_INFO.exclusions}</div>
+          </div>
+        </div>
+
+        <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.border}`}}>
+          <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:12}}>🩺 Scope of Services — Broad Specialities</div>
+          <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+            {DENTAL_ELC_SCOPE.map(s => (
+              <span key={s} style={{fontSize:13,padding:'4px 10px',borderRadius:8,background:T.blue+'18',color:T.blue,border:`1px solid ${T.blue}33`}}>{s}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+
+    // ── STATUTORY ──
+    const renderDentalStatutory = () => {
+      const cats = [...new Set(DENTAL_ELC_STATUTORY.map(l => l.cat))];
+      return (
+        <div style={{padding:16}}>
+          <div style={{display:'flex',gap:8,marginBottom:14,flexWrap:'wrap'}}>
+            {[
+              {label:`✅ Ready: ${statReady}`,color:T.green},
+              {label:`⏳ Pending: ${DENTAL_ELC_STATUTORY.length - statReady - statNA}`,color:T.orange},
+              {label:`➖ N/A: ${statNA}`,color:T.muted},
+            ].map(s => (
+              <div key={s.label} style={{padding:'4px 10px',borderRadius:20,background:s.color+'22',color:s.color,fontSize:13,border:`1px solid ${s.color}44`}}>{s.label}</div>
+            ))}
+          </div>
+          <div style={{color:T.muted,fontSize:13,marginBottom:14,lineHeight:1.5}}>
+            Legal tracker (Section 2). Mark AERB items <strong>N/A</strong> if that imaging service is not offered. For General Registration, any one of the three options is sufficient.
+          </div>
+          {cats.map(cat => {
+            const items = DENTAL_ELC_STATUTORY.filter(l => l.cat === cat);
+            return (
+              <div key={cat} style={{marginBottom:16}}>
+                <div style={{color:T.gold,fontWeight:600,fontSize:14,marginBottom:8}}>{cat}</div>
+                <div style={{display:'flex',flexDirection:'column',gap:6}}>
+                  {items.map(lic => {
+                    const s = statStatus(lic.id);
+                    return (
+                      <div key={lic.id} style={{background:T.panel,borderRadius:8,padding:'10px 12px',border:`1px solid ${s==='ready'?T.green:T.border}`,opacity:s==='na'?0.6:1}}>
+                        <div style={{color:T.text,fontSize:14,marginBottom:6,lineHeight:1.5}}>{lic.name}</div>
+                        {statusToggle(s, (st)=>setStat(lic.id, st))}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      );
+    };
+
+    // ── DOCUMENTS & CHECKLISTS ──
+    const renderDentalChecklist = () => {
+      const groups = ['Manuals','Infection Control','Quality & Safety'];
+      const filtered = DENTAL_ELC_DOCS.filter(d => {
+        const gMatch = dentalDocGroup === 'all' || d.group === dentalDocGroup;
+        const sMatch = dentalDocFilter === 'all' || docStatus(d.id) === dentalDocFilter;
+        return gMatch && sMatch;
+      });
+      const shownGroups = groups.filter(g => filtered.some(d => d.group === g));
+      return (
+        <div style={{padding:16}}>
+          <div style={{display:'flex',gap:8,marginBottom:12,flexWrap:'wrap'}}>
+            {[
+              {label:`✅ Ready: ${docReady}`,color:T.green},
+              {label:`⏳ Pending: ${DENTAL_ELC_DOCS.length - docReady - docNA}`,color:T.orange},
+              {label:`➖ N/A: ${docNA}`,color:T.muted},
+            ].map(s => (
+              <div key={s.label} style={{padding:'4px 10px',borderRadius:20,background:s.color+'22',color:s.color,fontSize:13,border:`1px solid ${s.color}44`}}>{s.label}</div>
+            ))}
+          </div>
+          <div style={{display:'flex',gap:8,marginBottom:14,flexWrap:'wrap'}}>
+            <select value={dentalDocGroup} onChange={e => setDentalDocGroup(e.target.value)}
+              style={{padding:'6px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14}}>
+              <option value="all">All Sections</option>
+              {groups.map(g => <option key={g} value={g}>{g}</option>)}
+            </select>
+            <select value={dentalDocFilter} onChange={e => setDentalDocFilter(e.target.value)}
+              style={{padding:'6px 10px',borderRadius:8,border:`1px solid ${T.border}`,background:T.panel2,color:T.text,fontSize:14}}>
+              <option value="all">All Status</option>
+              <option value="pending">Pending</option>
+              <option value="ready">Ready</option>
+              <option value="na">N/A</option>
+            </select>
+            <div style={{marginLeft:'auto',color:T.muted,fontSize:13,display:'flex',alignItems:'center'}}>{filtered.length} items</div>
+          </div>
+
+          {shownGroups.map(group => {
+            const gDocs = filtered.filter(d => d.group === group);
+            const subs = [...new Set(gDocs.map(d => d.sub))];
+            return (
+              <div key={group} style={{marginBottom:20}}>
+                <div style={{color:T.white,fontWeight:700,fontSize:15,marginBottom:10,paddingBottom:6,borderBottom:`1px solid ${T.border}`}}>{group}</div>
+                {subs.map(sub => {
+                  const subDocs = gDocs.filter(d => d.sub === sub);
+                  return (
+                    <div key={sub} style={{marginBottom:14}}>
+                      <div style={{color:T.gold,fontWeight:600,fontSize:13,marginBottom:8}}>{sub} <span style={{color:T.muted,fontWeight:400}}>({subDocs.length})</span></div>
+                      <div style={{display:'flex',flexDirection:'column',gap:6}}>
+                        {subDocs.map(doc => {
+                          const s = docStatus(doc.id);
+                          return (
+                            <div key={doc.id} style={{background:T.panel,borderRadius:8,padding:'10px 12px',border:`1px solid ${s==='ready'?T.green:T.border}`,opacity:s==='na'?0.6:1}}>
+                              <div style={{color:T.text,fontSize:14,lineHeight:1.5,marginBottom:6}}>{doc.text}</div>
+                              {statusToggle(s, (st)=>setDoc(doc.id, st))}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
+          {filtered.length === 0 && (
+            <div style={{textAlign:'center',color:T.muted,padding:'40px 0',fontSize:14}}>No items at this filter.</div>
+          )}
+        </div>
+      );
+    };
+
+    // ── FORMS & FORMATS ──
+    const renderDentalForms = () => (
+      <div style={{padding:16}}>
+        <div style={{display:'flex',gap:8,marginBottom:14,flexWrap:'wrap'}}>
+          {[
+            {label:`✅ Ready: ${formReady}`,color:T.green},
+            {label:`⏳ Pending: ${DENTAL_ELC_FORMS.length - formReady - formNA}`,color:T.orange},
+            {label:`➖ N/A: ${formNA}`,color:T.muted},
+          ].map(s => (
+            <div key={s.label} style={{padding:'4px 10px',borderRadius:20,background:s.color+'22',color:s.color,fontSize:13,border:`1px solid ${s.color}44`}}>{s.label}</div>
+          ))}
+        </div>
+        <div style={{color:T.muted,fontSize:13,marginBottom:14}}>Forms & Formats (Section 6) that must be prepared and maintained by the clinic.</div>
+        <div style={{display:'flex',flexDirection:'column',gap:6}}>
+          {DENTAL_ELC_FORMS.map((f,idx) => {
+            const s = formStatus(f.id);
+            return (
+              <div key={f.id} style={{background:T.panel,borderRadius:8,padding:'10px 12px',border:`1px solid ${s==='ready'?T.green:T.border}`,opacity:s==='na'?0.6:1}}>
+                <div style={{color:T.text,fontSize:14,lineHeight:1.5,marginBottom:6}}>
+                  <span style={{color:T.muted,fontSize:12,marginRight:6}}>{idx+1}.</span>{f.text}
+                </div>
+                {statusToggle(s, (st)=>setForm(f.id, st))}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+
+    // ── PROCESS & FEES ──
+    const renderDentalProcess = () => (
+      <div style={{padding:16}}>
+        <div style={{background:T.panel,borderRadius:12,padding:16,border:`1px solid ${T.gold}44`,marginBottom:16}}>
+          <div style={{color:T.gold,fontWeight:700,fontSize:15,marginBottom:10}}>💳 Fee Structure — one-time fee for two years</div>
+          <div style={{display:'flex',flexDirection:'column',gap:8}}>
+            {DENTAL_ELC_INFO.fees.map(f => (
+              <div key={f.chairs} style={{display:'flex',justifyContent:'space-between',alignItems:'center',background:T.panel2,borderRadius:8,padding:'10px 14px',border:`1px solid ${T.border}`,flexWrap:'wrap',gap:6}}>
+                <span style={{color:T.text,fontSize:14}}>{f.chairs}</span>
+                <span style={{color:T.gold,fontSize:14,fontWeight:700}}>{f.fee}</span>
+              </div>
+            ))}
+          </div>
+          <div style={{color:T.muted,fontSize:12,marginTop:8}}>Assessor mandays: 1 assessor × 1 day for both fee bands. For current official fees, refer to nabh.co.</div>
+        </div>
+
+        <div style={{color:T.white,fontWeight:700,fontSize:16,marginBottom:12}}>🗺️ Assessment Process</div>
+        <div style={{display:'flex',flexDirection:'column',gap:0}}>
+          {DENTAL_ELC_PROCESS.map((step, idx) => (
+            <div key={step.step} style={{display:'flex',gap:12}}>
+              <div style={{display:'flex',flexDirection:'column',alignItems:'center',width:32,flexShrink:0}}>
+                <div style={{width:32,height:32,borderRadius:'50%',background:T.gold,display:'flex',alignItems:'center',justifyContent:'center',fontWeight:700,fontSize:15,color:T.bg,flexShrink:0}}>{step.step}</div>
+                {idx < DENTAL_ELC_PROCESS.length - 1 && <div style={{width:2,flex:1,background:T.border,minHeight:20,margin:'4px 0'}}/>}
+              </div>
+              <div style={{background:T.panel,borderRadius:10,padding:'12px 14px',marginBottom:10,flex:1,border:`1px solid ${T.border}`}}>
+                <div style={{color:T.white,fontWeight:700,fontSize:15,marginBottom:4}}>{step.name}</div>
+                <div style={{color:T.text,fontSize:14,lineHeight:1.6,marginBottom:6}}>{step.desc}</div>
+                <div style={{color:T.muted,fontSize:13}}>📄 Output: <span style={{color:T.gold}}>{step.output}</span></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+
+    const renderDentalActive = () => {
+      switch (dentalTab) {
+        case 'overview':  return renderDentalOverview();
+        case 'statutory': return renderDentalStatutory();
+        case 'checklist': return renderDentalChecklist();
+        case 'forms':     return renderDentalForms();
+        case 'process':   return renderDentalProcess();
+        default:          return renderDentalOverview();
+      }
+    };
+
+    return (
+      <div style={{background:T.bg,minHeight:'100vh',color:T.text}}>
+        <div style={{display:'flex',overflowX:'auto',gap:0,padding:'12px 16px 0',borderBottom:`1px solid ${T.border}`}}>
+          {DENTAL_TABS.map(tab => (
+            <button key={tab.key} onClick={() => setDentalTab(tab.key)}
+              style={{padding:'8px 14px',border:'none',cursor:'pointer',whiteSpace:'nowrap',background:'transparent',fontSize:14,fontWeight:600,
+                color: dentalTab === tab.key ? T.gold : T.muted,
+                borderBottom: dentalTab === tab.key ? `2px solid ${T.gold}` : '2px solid transparent'}}>
+              {tab.label}
+            </button>
+          ))}
+        </div>
+        {renderDentalActive()}
+      </div>
+    );
+  };
+
   const ALL_NAV=[
     {id:"dashboard",label:"Dashboard",icon:"ti-layout-dashboard",programmes:["hco"],primary:true},
     {id:"scoring",label:"Score OEs",icon:"ti-edit",programmes:["hco"],primary:true},
@@ -11535,6 +12110,9 @@ export default function App() {
     {id:"eco-full", label:"Score OEs",icon:"ti-edit",programmes:["eco-full"], primary:true},
     {id:"pricing",  label:"Pricing",  icon:"ti-diamond",programmes:["eco-full"], primary:false},
     {id:"profile",  label:"Profile",  icon:"ti-user",programmes:["eco-full"], primary:false},
+    {id:"dental-elc",label:"Checklist",icon:"ti-checklist",programmes:["dental-elc"], primary:true},
+    {id:"pricing",  label:"Pricing",  icon:"ti-diamond",programmes:["dental-elc"], primary:false},
+    {id:"profile",  label:"Profile",  icon:"ti-user",programmes:["dental-elc"], primary:false},
   ];
   const NAV=ALL_NAV.filter(n=>n.programmes.includes(selectedProgramme));
   const PRIMARY_NAV=NAV.filter(n=>n.primary);
@@ -11557,7 +12135,7 @@ export default function App() {
         <div style={{maxWidth:1200,margin:"0 auto",display:"flex",alignItems:"center",gap:10,flexWrap:"wrap"}}>
           <div style={{width:32,height:32,borderRadius:8,background:theme==='light'?"rgba(255,255,255,0.15)":HP.brand,display:"flex",alignItems:"center",justifyContent:"center",fontSize:15,flexShrink:0,border:theme==='light'?"1px solid rgba(255,255,255,0.3)":"none",color:"#ffffff",fontFamily:"Figtree,sans-serif",fontWeight:800}}>A</div>
           <div style={{flex:1,minWidth:100}}>
-            <div style={{fontSize:7,letterSpacing:3,color:theme==='light'?"rgba(255,255,255,0.7)":HP.brandLight}}>{selectedProgramme==="shco-full"?"NABH SHCO 3RD EDITION":selectedProgramme==="shco-elc"?"NABH SHCO ELC":selectedProgramme==="hco-elc"?"NABH HCO ELC":selectedProgramme==="eco-full"?"NABH ECO FULL ACCREDITATION":"NABH 6TH EDITION"}</div>
+            <div style={{fontSize:7,letterSpacing:3,color:theme==='light'?"rgba(255,255,255,0.7)":HP.brandLight}}>{selectedProgramme==="shco-full"?"NABH SHCO 3RD EDITION":selectedProgramme==="shco-elc"?"NABH SHCO ELC":selectedProgramme==="hco-elc"?"NABH HCO ELC":selectedProgramme==="eco-full"?"NABH ECO FULL ACCREDITATION":selectedProgramme==="dental-elc"?"NABH DENTAL ELC — 1ST EDITION":"NABH 6TH EDITION"}</div>
             <div style={{fontSize:14,fontWeight:700,color:"#ffffff"}}>{context?.hospitalName||"AccredReady"}{context?.assessmentName&&<span style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted,marginLeft:6}}>{context.assessmentName}</span>}</div>
           </div>
           {loading&&<div style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted}}>Refreshing…</div>}
@@ -11681,6 +12259,7 @@ export default function App() {
         {screen==="shco-full"&&renderSHCOFullTab()}
         {screen==="eco-full"&&renderECOFullTab()}
         {screen==="hco-elc"&&renderHCOTab()}
+        {screen==="dental-elc"&&renderDentalTab()}
       </div>
 
       <button onClick={()=>setTourStep(0)} title="Replay app tour"

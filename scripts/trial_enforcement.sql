@@ -83,7 +83,7 @@ do $$
 declare t text;
 begin
   foreach t in array array[
-    'scores','capa','hco_elc_progress','shco_elc_progress'
+    'scores','capa','hco_elc_progress','shco_elc_progress','dental_elc_progress'
   ] loop
     execute format('drop policy if exists "%s_member_all" on public.%I;', t, t);
     execute format($f$
