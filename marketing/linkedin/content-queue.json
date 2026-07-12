@@ -5,8 +5,11 @@
   "posts": [
     {
       "id": "d01-tip-excel",
-      "type": "text",
-      "text": "Most NABH quality teams still track readiness in Excel.\n\nThe problem is not the spreadsheet — it is that scores, gaps, KPIs, and audit evidence live in different files. Before every assessment, someone spends days reconciling numbers that should already be connected.\n\nAccredReady puts scoring, gap analysis, KPIs, audits, and mock drills in one workspace — built by a practising hospital quality manager.\n\nTry free: https://accredready.in\n\n#NABH #HospitalManagement #HealthcareQuality #AccredReady"
+      "type": "article",
+      "text": "Most NABH quality teams still track readiness in Excel.\n\nThe problem is not the spreadsheet — it is that scores, gaps, KPIs, and audit evidence live in different files. Before every assessment, someone spends days reconciling numbers that should already be connected.\n\nWe published an honest decision guide: where Excel works, where it breaks, and how to choose.",
+      "link": "https://accredready.in/nabh-software-vs-excel",
+      "link_title": "NABH software vs Excel — which one for your quality team?",
+      "link_description": "Where Excel works for NABH prep, where it breaks, and how to decide."
     },
     {
       "id": "d02-video-promo",
@@ -52,8 +55,11 @@
     },
     {
       "id": "d08-tip-consultant",
-      "type": "text",
-      "text": "Consultants add value for strategy and mock surveys. Software adds value every week between visits.\n\nThe hospitals moving fastest use both: expert guidance for interpretation, and a platform that keeps OE scoring, gaps, and KPIs current year-round.\n\nAccredReady: ₹499/month per hospital. Try free at https://accredready.in\n\n#NABH #HealthcareInnovation #AccredReady"
+      "type": "article",
+      "text": "Consultants add value for strategy and mock surveys. Software adds value every week between visits.\n\nThey are not substitutes — hospitals moving fastest use both. We published a clear breakdown of what each job actually covers.",
+      "link": "https://accredready.in/nabh-consultant-vs-software",
+      "link_title": "NABH consultant vs software — what each actually does",
+      "link_description": "Honest comparison for hospital quality teams deciding how to prepare."
     },
     {
       "id": "d09-learn-timeline",
