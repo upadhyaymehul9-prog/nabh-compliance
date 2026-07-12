@@ -42,6 +42,11 @@ SKIP_NAME = re.compile(
     re.I,
 )
 SKIP_EMAIL = re.compile(r"\b(phc|chc|bmo|mophc|smo|sdh|hwc|uphc|rbsy)\b", re.I)
+GOV_EXCLUDE = re.compile(
+    r"\b(District Hospital|Civil Hospital|Sub.?Divisional Hospital|Taluka Hospital|"
+    r"Block Hospital|Government Hospital|Govt\.? Hospital|CHC|PHC)\b",
+    re.I,
+)
 PRIVATE_MARKERS = re.compile(
     r"\b(Pvt\.?|Private|Ltd\.?|Limited|Multispecialty|Multi.?Speciality|Super.?Speciality|"
     r"Superspeciality|Nursing Home|Healthcare|Health Care|Medical Centre|Medical Center|"
@@ -109,6 +114,8 @@ def load_private_pmjay_rows() -> list[dict]:
             name = r.get("hospital_name", "")
             email = r.get("email", "")
             if SKIP_NAME.search(name) or SKIP_EMAIL.search(email):
+                continue
+            if GOV_EXCLUDE.search(name) and not re.search(r"\b(Pvt|Private|Ltd)\b", name, re.I):
                 continue
             if not PRIVATE_MARKERS.search(name):
                 continue
