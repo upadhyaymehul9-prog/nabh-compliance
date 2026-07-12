@@ -77,6 +77,12 @@ Playbook: `playbooks/paid-ads-ctwa.md`.
   playbook: pipeline by stage, content shipped, queue health, next actions.
 Playbook: `playbooks/measurement.md`.
 
+## Near-term goal: first 10 paying customers
+
+Concrete 8-week operating plan: `marketing/FIRST-10-CUSTOMERS.md`.
+Primary path: founder WhatsApp (~7) + consultant partners (~2–3) + commercial
+SEO pages as nurture assets. No paid ads until Engines A+B convert.
+
 ## Operating cadence
 
 | Rhythm | Action |
