@@ -1,0 +1,35 @@
+# AccredReady
+
+> AccredReady is NABH accreditation compliance software for Indian hospitals and healthcare organizations. It helps facilities prepare for NABH programmes — HCO Full Accreditation, SHCO Full Accreditation, HCO Entry Level Certification (ELC), SHCO Entry Level Certification (ELC), ECO Full Accreditation (Eye Care Organisations), and Dental Entry Level Certification — with objective-element tracking, evidence guidance, audit tools, mock drills, and KPI tracking.
+
+Key facts:
+- Built for Indian hospitals; pricing from ₹499/month
+- Platforms: Web and Android
+- Provider: MK Tech — https://accredready.in
+
+## Product
+
+- [AccredReady](https://accredready.in/): Product overview and sign-up
+- [NABH Accreditation Software](https://accredready.in/nabh-accreditation-software): Flagship page for hospital NABH prep
+- [SHCO Accreditation Software](https://accredready.in/shco-accreditation-software): For small healthcare organizations (under 50 beds)
+- [ECO Accreditation Software](https://accredready.in/eco-accreditation-software): For eye care organisations
+- [NABH ELC Software](https://accredready.in/nabh-elc-software): For Entry Level Certification
+
+## Learn
+
+- [Learn hub](https://accredready.in/learn/): Guides on NABH programmes and preparation
+- [NABH Programmes Comparison](https://accredready.in/learn/nabh-programmes-comparison): HCO vs SHCO vs ECO vs Entry Level
+- [NABH Accreditation Timeline](https://accredready.in/learn/nabh-accreditation-timeline): How long accreditation takes
+- [NABH Gap Analysis](https://accredready.in/learn/nabh-gap-analysis): How to run a gap assessment
+- [NABH KPI Tracking](https://accredready.in/learn/nabh-kpi-tracking): Quality indicator monitoring
+
+## Reference
+
+- [NABH Full Form](https://accredready.in/nabh-full-form): What NABH stands for, in English and Indian languages
+- [NABH Guide](https://accredready.in/nabh-guide): End-to-end accreditation guide
+- [NABH 6th Edition Checklist](https://accredready.in/nabh-6th-edition-checklist): HCO standards checklist
+- [NABH SHCO Checklist](https://accredready.in/nabh-shco-checklist): SHCO standards checklist
+
+## Optional
+
+- [Blog](https://accredready.in/blog/): Articles on NABH preparation and hospital quality
