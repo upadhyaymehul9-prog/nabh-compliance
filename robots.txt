@@ -14,3 +14,6 @@ Disallow: /static/
 Disallow: /build/
 
 Sitemap: https://accredready.in/sitemap.xml
+
+# AI/LLM context file (https://llmstxt.org)
+# llms.txt: https://accredready.in/llms.txt
