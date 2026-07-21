@@ -24,4 +24,4 @@ BRAND022,pricing,Always show INR pricing when mentioned,DO,₹499/month not $6/m
 BRAND023,audience,Write for busy quality managers not administrators,DO,Assume reader knows NABH exists and has done at least one audit
 BRAND024,audience,Secondary audience: NABH consultants,DO,Mention consultant use case: manage multiple hospitals
 BRAND025,soni,Soni Ahlawat is personal friend with comped account — never treat as lead,CRITICAL,Never include in outreach campaigns
-BRAND026,author_byline,Author byline must say "Healthcare Operations Leader" not "NABH-certified Quality Manager",CRITICAL,Dr. Mehul Upadhyay | Healthcare Operations Leader | Medical Services HMP Foundation
+BRAND026,author_byline,Author byline must say "Healthcare Operations Leader" not "NABH-certified Quality Manager",CRITICAL,Dr. Mehul Upadhyay | Healthcare Operations Leader (no employer mention)
