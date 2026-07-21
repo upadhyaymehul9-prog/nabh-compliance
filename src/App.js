@@ -6861,17 +6861,17 @@ export default function App() {
       const allRulesPass = rule1Pass&&rule2Pass&&rule3Pass&&rule4Pass&&rule5Pass;
 
       const rules = [
-        {label:'All Core OEs must score ≥4',            detail:`${coreOEs.length} Core OEs — every one must reach Good compliance`,       pass:rule1Pass},
-        {label:`Core + Commitment overall ≥80% (${coreCommOEs.length} OEs)`, detail:`Current: ${ccPct}% — threshold: 80%`,                  pass:rule2Pass},
-        {label:'No standard with >'+maxLowPerStd+' OE(s) scored ≤2', detail:`${stdChecks.filter(s=>s.atOrBelow2>maxLowPerStd).length} standard(s) failing this rule`, pass:rule3Pass},
-        {label:'Average score per standard ≥4',         detail:`${stdChecks.filter(s=>s.avg!==null&&s.avg<4).length} standard(s) below 4 average`,                     pass:rule4Pass},
-        {label:'Average score per chapter ≥4',          detail:`${chapAvgFails.length} chapter(s) below 4 average`,                         pass:rule5Pass},
+        {label:'All Core OEs must score >=4',            detail:`${coreOEs.length} Core OEs — every one must reach Good compliance`,       pass:rule1Pass},
+        {label:`Core + Commitment overall >=80% (${coreCommOEs.length} OEs)`, detail:`Current: ${ccPct}% — threshold: 80%`,                  pass:rule2Pass},
+        {label:'No standard with >'+maxLowPerStd+' OE(s) scored <=2', detail:`${stdChecks.filter(s=>s.atOrBelow2>maxLowPerStd).length} standard(s) failing this rule`, pass:rule3Pass},
+        {label:'Average score per standard >=4',         detail:`${stdChecks.filter(s=>s.avg!==null&&s.avg<4).length} standard(s) below 4 average`,                     pass:rule4Pass},
+        {label:'Average score per chapter >=4',          detail:`${chapAvgFails.length} chapter(s) below 4 average`,                         pass:rule5Pass},
       ];
       if(shcoFullAssessType==='surveillance'||shcoFullAssessType==='renewal'){
-        rules.push({label:`Achievement overall ≥80% (${achieveOEs.length} OEs)`, detail:`Current: ${achPct}%`, pass:achPct>=80});
+        rules.push({label:`Achievement overall >=80% (${achieveOEs.length} OEs)`, detail:`Current: ${achPct}%`, pass:achPct>=80});
       }
       if(shcoFullAssessType==='renewal'){
-        rules.push({label:`Excellence overall ≥80% (${excelOEs.length} OEs)`, detail:`Current: ${excelPct}%`, pass:excelPct>=80});
+        rules.push({label:`Excellence overall >=80% (${excelOEs.length} OEs)`, detail:`Current: ${excelPct}%`, pass:excelPct>=80});
       }
 
       // Weak OEs (score ≤3, from relevantOEs)
@@ -6924,7 +6924,7 @@ export default function App() {
       const statY = afterHosp+248;
       const stats3=[
         [`${scoredCount} / ${relevantOEs.length}`, 'Relevant OEs Scored'],
-        [`${weakOEs.length}`,                       'Weak OEs (score ≤3)'],
+        [`${weakOEs.length}`,                       'Weak OEs (score <=3)'],
         [`${criticalOEs.length}`,                   'Core OEs below 4'],
       ];
       const colW=(W-120)/3;
@@ -7062,10 +7062,10 @@ export default function App() {
       // ── PAGE 3+: WEAK OEs GROUPED BY CHAPTER ───────────────────────────
       newPage(); y=50;
       doc.setFontSize(16); doc.setTextColor('#eef4f9');
-      doc.text('Gap Analysis — Weak OEs (Score ≤3)',60,y); y+=10;
+      doc.text('Gap Analysis — Weak OEs (Score <=3)',60,y); y+=10;
       doc.setDrawColor('#0f2640'); doc.line(60,y,W-60,y); y+=18;
       doc.setFontSize(8); doc.setTextColor('#3a5870');
-      doc.text(`${weakOEs.length} OE(s) scoring ≤3 require attention. Grouped by chapter.`,60,y); y+=20;
+      doc.text(`${weakOEs.length} OE(s) scoring <=3 require attention. Grouped by chapter.`,60,y); y+=20;
 
       if(weakOEs.length===0){
         doc.setFontSize(12); doc.setTextColor('#4caf7d');
