@@ -3443,8 +3443,8 @@ function CommitteesScreen({ hospitalId, committeesView, navigate, selectedProgra
       } else {
         const { data } = await supabase
           .from('committee_programme_map')
-          .select('committees(*)').eq('programme', prog);
-        setCommittees((data||[]).map(r=>r.committees).filter(Boolean));
+          .select('chapter_ref, committees(*)').eq('programme', prog);
+        setCommittees((data||[]).map(r=>({...r.committees, programme_chapter_ref: r.chapter_ref})).filter(Boolean));
       }
     })();
     if(hospitalId){
@@ -3519,8 +3519,7 @@ function CommitteesScreen({ hospitalId, committeesView, navigate, selectedProgra
     return (now-d)/(1000*60*60*24*365)<=1;
   }).map(m=>m.committee_id)).size;
 
-  // ELC programmes show their own committee count; HCO Full keeps the fixed 26
-  const commTotal=(selectedProgramme==='hco-elc'||selectedProgramme==='shco-elc')?committees.length:26;
+  const commTotal=committees.length;
   const commReadyMin=commTotal<=10?commTotal:20;
 
   if(loading) return <div style={{textAlign:"center",color:T.muted,padding:40}}>Loading…</div>;
@@ -3574,7 +3573,7 @@ function CommitteesScreen({ hospitalId, committeesView, navigate, selectedProgra
                             :<span style={{fontSize:8,padding:"2px 7px",borderRadius:5,background:T.redD,color:T.red}}>No meetings recorded</span>}
                         </div>
                         <div style={{display:"flex",gap:12,flexWrap:"wrap"}}>
-                          <span style={{fontSize:12,color:T.muted}}>📋 {c.chapter_ref}</span>
+                          <span style={{fontSize:12,color:T.muted}}>📋 {c.programme_chapter_ref || c.chapter_ref}</span>
                           <span style={{fontSize:12,color:T.muted}}>🔄 {c.frequency}</span>
                           <span style={{fontSize:12,color:T.muted}}>👤 {c.chair}</span>
                           {last&&<span style={{fontSize:12,color:T.green}}>Last: {last}</span>}
