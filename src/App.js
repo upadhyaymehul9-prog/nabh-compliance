@@ -6763,6 +6763,31 @@ export default function App() {
   const generateShcoFullPDF = async () => {
     setShcoFullPdfLoading(true);
     try {
+      // Fetch committee data fresh at PDF generation time (programme-scoped)
+      const { data: cpmData } = await supabase
+        .from('committee_programme_map')
+        .select('chapter_ref, committees(*)')
+        .eq('programme', 'SHCO_FULL');
+      const pdfCommittees = (cpmData||[])
+        .map(r=>({...r.committees, programme_chapter_ref: r.chapter_ref}))
+        .filter(Boolean);
+      const { data: meetData } = await supabase
+        .from('committee_meetings')
+        .select('committee_id, meeting_date')
+        .eq('hospital_id', context?.hospitalId)
+        .eq('programme', 'SHCO_FULL');
+      const pdfMeetings = meetData||[];
+      const now12 = new Date();
+      const meetingsInLast12 = (cid) => pdfMeetings.filter(m=>{
+        const d=new Date(m.meeting_date);
+        return m.committee_id===cid && (now12-d)/(1000*60*60*24*365)<=1;
+      });
+      const lastMeetingDate = (cid) => {
+        const ms = pdfMeetings.filter(m=>m.committee_id===cid)
+          .sort((a,b)=>new Date(b.meeting_date)-new Date(a.meeting_date));
+        return ms.length>0 ? ms[0].meeting_date : null;
+      };
+      const totalCommActive = pdfCommittees.filter(c=>meetingsInLast12(c.id).length>0).length;
       const doc = new jsPDF({ unit:'pt', format:'a4' });
       const W = doc.internal.pageSize.getWidth();
       const H = doc.internal.pageSize.getHeight();
@@ -6985,6 +7010,53 @@ export default function App() {
         doc.setFontSize(7);
         doc.text(pctVal===null?'UNSCORED':pass?'PASS':'FAIL',chC6,y-1,{align:'right'});
         y+=chRowH+2;
+      });
+
+      // ── COMMITTEE FUNCTIONING ────────────────────────────────────────────
+      newPage(); y=50;
+      doc.setFontSize(16); doc.setTextColor('#eef4f9');
+      doc.text('Committee Functioning',60,y); y+=10;
+      doc.setDrawColor('#0f2640'); doc.setLineWidth(0.5);
+      doc.line(60,y,W-60,y); y+=16;
+      doc.setFontSize(8); doc.setTextColor('#3a5870');
+      doc.text(`${totalCommActive} of ${pdfCommittees.length} committee${pdfCommittees.length!==1?'s':''} active (met in last 12 months)`,60,y); y+=18;
+
+      // Columns (content 60..535): Name 214pt | OE Ref 84pt | Mtg 54pt | Last 114pt | Status right
+      const ccX1=64, ccX2=278, ccX3=362, ccX4=416, ccX5=530;
+
+      doc.setFillColor('#081525'); doc.rect(60,y-13,W-120,20,'F');
+      doc.setFontSize(8); doc.setTextColor('#c9a84c');
+      doc.text('COMMITTEE NAME', ccX1, y-2);
+      doc.text('OE REF',         ccX2, y-2);
+      doc.text('MTG (12M)',       ccX3, y-2);
+      doc.text('LAST MEETING',   ccX4, y-2);
+      doc.text('STATUS',         ccX5, y-2, {align:'right'});
+      y+=14;
+
+      pdfCommittees.forEach(c=>{
+        if(y>H-40){ newPage(); y=50; }
+        const mCount12 = meetingsInLast12(c.id).length;
+        const active   = mCount12>0;
+        const lastDate = lastMeetingDate(c.id);
+        const lastStr  = lastDate
+          ? new Date(lastDate).toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'})
+          : '—';
+        const rowBg = active ? '#061810' : '#180606';
+        const stCol = active ? '#4caf7d' : '#e05a5a';
+        const stLbl = active ? 'ACTIVE'  : 'NO RECORD';
+        doc.setFontSize(8);
+        const nameLines = doc.splitTextToSize(c.name||'', 210);
+        const rowH = Math.max(20, nameLines.length*10+6);
+        doc.setFillColor(rowBg); doc.rect(60,y-12,W-120,rowH,'F');
+        doc.setFontSize(8); doc.setTextColor('#c8dcea');
+        nameLines.forEach((line,i)=>doc.text(line,ccX1,y-1+i*10));
+        doc.setTextColor('#8aadcc');
+        doc.text(c.programme_chapter_ref||c.chapter_ref||'—', ccX2, y-1);
+        doc.text(String(mCount12),                              ccX3, y-1);
+        doc.text(lastStr,                                       ccX4, y-1);
+        doc.setFontSize(7); doc.setTextColor(stCol);
+        doc.text(stLbl, ccX5, y-1, {align:'right'});
+        y+=rowH+2;
       });
 
       // ── PAGE 3+: WEAK OEs GROUPED BY CHAPTER ───────────────────────────
