@@ -7062,14 +7062,14 @@ export default function App() {
       // ── PAGE 3+: WEAK OEs GROUPED BY CHAPTER ───────────────────────────
       newPage(); y=50;
       doc.setFontSize(16); doc.setTextColor('#eef4f9');
-      doc.text('Gap Analysis — Weak OEs (Score <=3)',60,y); y+=10;
+      doc.text('Gap Analysis - Weak OEs (Score <=3)',60,y); y+=10;
       doc.setDrawColor('#0f2640'); doc.line(60,y,W-60,y); y+=18;
       doc.setFontSize(8); doc.setTextColor('#3a5870');
       doc.text(`${weakOEs.length} OE(s) scoring <=3 require attention. Grouped by chapter.`,60,y); y+=20;
 
       if(weakOEs.length===0){
         doc.setFontSize(12); doc.setTextColor('#4caf7d');
-        doc.text('✓ No weak OEs — all scored OEs are at 4 or 5.',W/2,y+40,{align:'center'});
+        doc.text('No weak OEs - all scored OEs are at 4 or 5.',W/2,y+40,{align:'center'});
       } else {
         // Column layout (content area = 60..535, width=475)
         // OE Code 12%=57, Level 10%=47, OE Text 58%=276, Score 20%=95
