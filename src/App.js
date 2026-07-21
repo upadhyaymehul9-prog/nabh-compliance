@@ -3429,23 +3429,26 @@ function CommitteesScreen({ hospitalId, committeesView, navigate, selectedProgra
   });
   const [momForm,setMOMForm]=useState(emptyMOM());
 
+  const prog = selectedProgramme==='hco-elc'   ? 'HCO_ELC'
+             : selectedProgramme==='shco-elc'  ? 'SHCO_ELC'
+             : selectedProgramme==='shco-full' ? 'SHCO_FULL'
+             : 'HCO_FULL';
+
   useEffect(()=>{
     (async()=>{
-      const prog = selectedProgramme==='hco-elc' ? 'HCO_ELC'
-                 : selectedProgramme==='shco-elc' ? 'SHCO_ELC' : null;
-      if (prog) {
+      if (prog==='HCO_FULL') {
+        // committee_programme_map has no HCO_FULL rows yet — load flat list until backfilled
+        const { data } = await supabase.from("committees").select("*").order("id");
+        setCommittees(data||[]);
+      } else {
         const { data } = await supabase
           .from('committee_programme_map')
           .select('committees(*)').eq('programme', prog);
         setCommittees((data||[]).map(r=>r.committees).filter(Boolean));
-      } else {
-        // unchanged: existing HCO Full load of all committees
-        const { data } = await supabase.from("committees").select("*").order("id");
-        setCommittees(data||[]);
       }
     })();
     if(hospitalId){
-      supabase.from("committee_meetings").select("*").eq("hospital_id",hospitalId)
+      supabase.from("committee_meetings").select("*").eq("hospital_id",hospitalId).eq("programme",prog)
         .order("meeting_date",{ascending:false})
         .then(({data})=>{setMeetings(data||[]);setLoading(false);});
     } else { setLoading(false); }
@@ -3473,6 +3476,7 @@ function CommitteesScreen({ hospitalId, committeesView, navigate, selectedProgra
     setSaving(true);
     const {error}=await supabase.from("committee_meetings").insert({
       hospital_id:hospitalId,
+      programme:prog,
       committee_id:committeeId,
       meeting_date:momForm.meeting_date,
       meeting_no:momForm.meeting_no||null,
@@ -3491,7 +3495,7 @@ function CommitteesScreen({ hospitalId, committeesView, navigate, selectedProgra
       evidence_url:momForm.evidence_url||null,
     });
     if(!error){
-      const{data}=await supabase.from("committee_meetings").select("*").eq("hospital_id",hospitalId).order("meeting_date",{ascending:false});
+      const{data}=await supabase.from("committee_meetings").select("*").eq("hospital_id",hospitalId).eq("programme",prog).order("meeting_date",{ascending:false});
       setMeetings(data||[]);
       setShowMOMForm(null);
       setMOMForm(emptyMOM());
@@ -10194,7 +10198,8 @@ export default function App() {
             {key:'dashboard',label:'📊 Dashboard'},
             {key:'scoring',  label:'✏️ Score OEs', tourId:'shco-tour-score'},
             {key:'fixgaps',  label:`🔧 Fix Gaps${allGaps.length>0?' ('+allGaps.length+')':''}`, tourId:'shco-tour-fixgaps'},
-            {key:'kpis',     label:'📈 KPIs'},
+            {key:'kpis',        label:'📈 KPIs'},
+            {key:'committees',  label:'🏛️ Committees'},
           ].map(tab=>(
             <button key={tab.key} id={tab.tourId||undefined} onClick={()=>setShcoFullTab(tab.key)}
               style={{padding:'12px 16px',border:'none',cursor:'pointer',background:'transparent',fontSize:13,fontWeight:600,
@@ -10210,7 +10215,7 @@ export default function App() {
             {shcoFullPdfLoading ? '⏳ Generating…' : '⬇ Download Gap Report'}
           </button>
         </div>
-        {shcoFullTab==='dashboard' ? renderDashboard() : shcoFullTab==='scoring' ? renderScoreOEs() : shcoFullTab==='kpis' ? <ShcoFullKpiTab hospitalId={context?.hospitalId}/> : renderFixGaps()}
+        {shcoFullTab==='dashboard' ? renderDashboard() : shcoFullTab==='scoring' ? renderScoreOEs() : shcoFullTab==='kpis' ? <ShcoFullKpiTab hospitalId={context?.hospitalId}/> : shcoFullTab==='committees' ? <CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate} selectedProgramme={'shco-full'}/> : renderFixGaps()}
       </div>
     );
   };
