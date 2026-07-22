@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { GennieHead, GennieFull } from "./GennieMascot";
 
 const ENDPOINT = "https://tbptllgcjtiiqspxqcde.supabase.co/functions/v1/ai-assistant";
 const ANON_KEY =
@@ -62,9 +63,9 @@ export default function AIAssistantWidget({ T, open, onOpen, onClose, trigger })
     bottom: 216,
     right: 20,
     zIndex: 9996,
-    width: 48,
-    height: 48,
-    borderRadius: 24,
+    width: 56,
+    height: 56,
+    borderRadius: 28,
     background: `linear-gradient(135deg, ${T.gold}, #f0d070)`,
     border: "none",
     color: T.bg,
@@ -76,6 +77,8 @@ export default function AIAssistantWidget({ T, open, onOpen, onClose, trigger })
     alignItems: "center",
     justifyContent: "center",
     lineHeight: 1,
+    overflow: "hidden",
+    padding: 0,
   };
 
   return (
@@ -83,11 +86,14 @@ export default function AIAssistantWidget({ T, open, onOpen, onClose, trigger })
       {/* Floating toggle button */}
       <button
         onClick={open ? onClose : onOpen}
-        title={open ? "Close AI assistant" : "Ask AI about SHCO Full requirements"}
+        title={open ? "Close Gennie" : "Ask Gennie about SHCO Full requirements"}
         style={btnStyle}
-        aria-label="AI assistant"
+        aria-label="Gennie assistant"
       >
-        {open ? "✕" : "AI"}
+        {/* 48 inside the 56px circle: the hoop earrings sit at the very edge of
+            the 130-wide viewBox, so a full-bleed 56 gets them clipped by the
+            border-radius mask. 48 leaves them clear. */}
+        {open ? "✕" : <GennieHead size={48} />}
       </button>
 
       {/* Chat panel — slide up above the button */}
@@ -95,14 +101,14 @@ export default function AIAssistantWidget({ T, open, onOpen, onClose, trigger })
         <div
           style={{
             position: "fixed",
-            bottom: 276,
+            bottom: 284,
             right: 20,
             zIndex: 9995,
             width: 360,
             // Viewport-relative ceiling so the panel never grows above the top
-            // of the screen. 276px bottom offset + ~84px top clearance (sticky
-            // header) = 360px; min() keeps the original 480px cap on tall screens.
-            maxHeight: "min(480px, calc(100dvh - 360px))",
+            // of the screen. 284px bottom offset + ~84px top clearance (sticky
+            // header) = 368px; min() keeps the original 480px cap on tall screens.
+            maxHeight: "min(480px, calc(100dvh - 368px))",
             display: "flex",
             flexDirection: "column",
             background: T.panel,
@@ -133,17 +139,15 @@ export default function AIAssistantWidget({ T, open, onOpen, onClose, trigger })
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                fontSize: 13,
-                fontWeight: 900,
-                color: T.bg,
                 flexShrink: 0,
+                overflow: "hidden",
               }}
             >
-              AI
+              <GennieHead size={24} />
             </span>
             <div style={{ flex: 1 }}>
               <div style={{ color: T.gold, fontWeight: 700, fontSize: 13 }}>
-                AccredReady AI
+                Gennie
               </div>
               <div style={{ color: T.muted, fontSize: 10 }}>
                 SHCO Full — grounded on your OE database
@@ -183,13 +187,33 @@ export default function AIAssistantWidget({ T, open, onOpen, onClose, trigger })
                   color: T.muted,
                   fontSize: 12,
                   textAlign: "center",
-                  marginTop: 48,
+                  marginTop: 16,
                   lineHeight: 1.8,
                 }}
               >
-                Ask anything about SHCO Full requirements.
-                <br />
-                <span style={{ color: T.gold, fontStyle: "italic" }}>
+                <GennieFull size={108} />
+                <div
+                  style={{
+                    color: T.gold,
+                    fontSize: 15,
+                    fontWeight: 700,
+                    marginTop: 10,
+                  }}
+                >
+                  Kya hukum hai mera aaka?
+                </div>
+                <div style={{ marginTop: 6 }}>
+                  How can I help you stay compliant today? Ask me anything about
+                  your OEs, committees, or gaps.
+                </div>
+                <span
+                  style={{
+                    color: T.gold,
+                    fontStyle: "italic",
+                    display: "inline-block",
+                    marginTop: 8,
+                  }}
+                >
                   e.g. "What do I need for IMS.1.a?"
                 </span>
               </div>
