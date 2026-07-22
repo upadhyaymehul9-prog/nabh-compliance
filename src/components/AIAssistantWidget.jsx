@@ -5,6 +5,15 @@ const ENDPOINT = "https://tbptllgcjtiiqspxqcde.supabase.co/functions/v1/ai-assis
 const ANON_KEY =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRicHRsbGdjanRpaXFzcHhxY2RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY2NjkzNjAsImV4cCI6MjA5MjI0NTM2MH0.4CPgNp6ytVNRmTU0FJbu2io94QJmsAow5im-vGtoRAU";
 
+// Below this viewport height the panel at its normal anchor cannot show the
+// whole greeting without scrolling: the greeting is 256px of content plus 108px
+// of chrome (header 48 + input 60) = a 364px panel, while the normal anchor
+// reserves 316px, so it needs 680px of viewport. Under the gate the panel drops
+// 80px lower — stopping 8px above the tour "?" button — and the collapsed
+// circle fades out, since at bottom:152 it would sit on top of the input bar.
+// At or above the gate every value is exactly what shipped in adb2721.
+const SHORT_VIEWPORT_GATE = 680;
+
 // trigger = { code: string|null, id: number }
 // id increment = new auto-ask; allows same code to re-trigger
 export default function AIAssistantWidget({ T, open, onOpen, onClose, trigger }) {
@@ -12,7 +21,17 @@ export default function AIAssistantWidget({ T, open, onOpen, onClose, trigger })
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [isShort, setIsShort] = useState(
+    () => typeof window !== "undefined" && window.innerHeight < SHORT_VIEWPORT_GATE
+  );
   const bottomRef = useRef(null);
+
+  useEffect(() => {
+    const onResize = () =>
+      setIsShort(window.innerHeight < SHORT_VIEWPORT_GATE);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   const ask = async (question) => {
     const q = question.trim();
@@ -84,6 +103,12 @@ export default function AIAssistantWidget({ T, open, onOpen, onClose, trigger })
         lineHeight: 1,
         overflow: "hidden",
         padding: 0,
+        // On short viewports the panel drops to bottom:152 and would run the
+        // input bar straight under this circle, so it fades out. The panel
+        // header's ✕ is the close affordance there.
+        opacity: isShort ? 0 : 1,
+        pointerEvents: isShort ? "none" : "auto",
+        transition: "opacity 0.15s",
       }
     : {
         position: "fixed",
@@ -149,15 +174,20 @@ export default function AIAssistantWidget({ T, open, onOpen, onClose, trigger })
         <div
           style={{
             position: "fixed",
-            bottom: 232,
+            bottom: isShort ? 152 : 232,
             right: 20,
             zIndex: 9995,
             width: 360,
             // Viewport-relative ceiling so the panel never grows above the top
-            // of the screen. 232px bottom offset + ~84px top clearance (sticky
-            // header) = 316px; min() keeps the original 480px cap on tall screens.
-            // Sits 12px above the collapsed 56px launcher circle at bottom:164.
-            maxHeight: "min(480px, calc(100dvh - 316px))",
+            // of the screen: bottom offset + ~84px top clearance (sticky header).
+            // Normal — 232 + 84 = 316, sitting 12px above the collapsed circle.
+            // Short  — 152 + 84 = 236, sitting 8px above the tour "?" button.
+            // The offset is a fixed constant either way, so the panel only ever
+            // grows upward and never reaches the third-party chat widget that
+            // owns bottom 20–74 at z-index 1000002.
+            maxHeight: isShort
+              ? "min(480px, calc(100dvh - 236px))"
+              : "min(480px, calc(100dvh - 316px))",
             display: "flex",
             flexDirection: "column",
             background: T.panel,
