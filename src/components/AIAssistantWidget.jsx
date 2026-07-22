@@ -58,28 +58,49 @@ export default function AIAssistantWidget({ T, open, onOpen, onClose, trigger })
     ask(input);
   };
 
-  const btnStyle = {
-    position: "fixed",
-    bottom: 216,
-    right: 20,
-    zIndex: 9996,
-    width: 56,
-    height: 56,
-    borderRadius: 28,
-    background: `linear-gradient(135deg, ${T.gold}, #f0d070)`,
-    border: "none",
-    color: T.bg,
-    fontSize: 18,
-    fontWeight: 900,
-    cursor: "pointer",
-    boxShadow: `0 4px 16px rgba(201,168,76,0.5)`,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    lineHeight: 1,
-    overflow: "hidden",
-    padding: 0,
-  };
+  // Closed, Gennie floats free on the page — no card, border or backdrop — with
+  // the greeting stacked beneath him. Open, he collapses back into the 56px
+  // lamp-gold circle so the chat panel can claim the height.
+  // Both states share bottom:164, which clears the relocated tour "?" button
+  // (bottom:96, 48 tall) by 20px and never reaches the third-party chat widget
+  // that owns bottom:14–68 at z-index 1000001.
+  const launcherStyle = open
+    ? {
+        position: "fixed",
+        bottom: 164,
+        right: 20,
+        zIndex: 9996,
+        width: 56,
+        height: 56,
+        borderRadius: 28,
+        background: `linear-gradient(135deg, ${T.gold}, #f0d070)`,
+        border: "none",
+        color: T.bg,
+        cursor: "pointer",
+        boxShadow: `0 4px 16px rgba(201,168,76,0.5)`,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        lineHeight: 1,
+        overflow: "hidden",
+        padding: 0,
+      }
+    : {
+        position: "fixed",
+        bottom: 164,
+        right: 20,
+        zIndex: 9996,
+        width: 112,
+        background: "transparent",
+        border: "none",
+        padding: 0,
+        margin: 0,
+        cursor: "pointer",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: 8,
+      };
 
   return (
     <>
@@ -87,13 +108,40 @@ export default function AIAssistantWidget({ T, open, onOpen, onClose, trigger })
       <button
         onClick={open ? onClose : onOpen}
         title={open ? "Close Gennie" : "Ask Gennie about SHCO Full requirements"}
-        style={btnStyle}
+        style={launcherStyle}
         aria-label="Gennie assistant"
       >
-        {/* 48 inside the 56px circle: the hoop earrings sit at the very edge of
-            the 130-wide viewBox, so a full-bleed 56 gets them clipped by the
-            border-radius mask. 48 leaves them clear. */}
-        {open ? "✕" : <GennieHead size={48} />}
+        {open ? (
+          /* 48 inside the 56px circle: the hoop earrings sit at the very edge
+             of the 130-wide viewBox, so a full-bleed 56 gets them clipped by
+             the border-radius mask. 48 leaves them clear. */
+          <GennieHead size={48} />
+        ) : (
+          <>
+            {/* Wrapper carries the shadow — GennieFull takes no style prop, and
+                drop-shadow() follows the SVG's alpha so it lifts the figure
+                rather than boxing it. */}
+            <span
+              style={{
+                display: "block",
+                filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.45))",
+              }}
+            >
+              <GennieFull size={112} />
+            </span>
+            <span
+              style={{
+                color: T.gold,
+                fontSize: 13,
+                fontWeight: 700,
+                lineHeight: 1.4,
+                textAlign: "center",
+              }}
+            >
+              Kya hukum hai mera aaka?
+            </span>
+          </>
+        )}
       </button>
 
       {/* Chat panel — slide up above the button */}
@@ -101,14 +149,15 @@ export default function AIAssistantWidget({ T, open, onOpen, onClose, trigger })
         <div
           style={{
             position: "fixed",
-            bottom: 284,
+            bottom: 232,
             right: 20,
             zIndex: 9995,
             width: 360,
             // Viewport-relative ceiling so the panel never grows above the top
-            // of the screen. 284px bottom offset + ~84px top clearance (sticky
-            // header) = 368px; min() keeps the original 480px cap on tall screens.
-            maxHeight: "min(480px, calc(100dvh - 368px))",
+            // of the screen. 232px bottom offset + ~84px top clearance (sticky
+            // header) = 316px; min() keeps the original 480px cap on tall screens.
+            // Sits 12px above the collapsed 56px launcher circle at bottom:164.
+            maxHeight: "min(480px, calc(100dvh - 316px))",
             display: "flex",
             flexDirection: "column",
             background: T.panel,

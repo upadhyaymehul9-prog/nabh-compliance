@@ -10052,7 +10052,7 @@ export default function App() {
                         <button onClick={()=>{setAiWidgetOpen(true);setAiWidgetTrigger({code:oe.oe_code,id:Date.now()});}}
                           style={{padding:'3px 10px',borderRadius:7,fontSize:11,cursor:'pointer',
                             background:T.gold+'18',border:`1px solid ${T.gold}55`,color:T.gold,fontWeight:600}}>
-                          ✦ Ask AI
+                          ✦ Ask Gennie
                         </button>
                       </div>
                       <div style={{fontSize:13,color:T.text,lineHeight:1.6,marginBottom:8}}>{oe.text}</div>
@@ -12329,7 +12329,7 @@ export default function App() {
       <div style={{maxWidth:1200,margin:"0 auto",padding:"16px"}}>
         {screen==="dashboard"&&<Dashboard decision={decision} gaps={gaps} onNav={id=>navigate({screen:id})}/>}
         {screen==="dashboard"&&<button onClick={generatePDF} disabled={pdfLoading}
-          style={{position:'fixed',bottom:20,right:20,zIndex:9999,padding:'8px 16px',borderRadius:9,border:`1px solid ${T.gold}`,background:T.bg,color:T.gold,fontSize:12,fontWeight:700,cursor:pdfLoading?'default':'pointer',opacity:pdfLoading?0.6:1,boxShadow:'0 2px 12px rgba(0,0,0,0.5)'}}>
+          style={{position:'fixed',bottom:20,right:88,zIndex:9999,padding:'8px 16px',borderRadius:9,border:`1px solid ${T.gold}`,background:T.bg,color:T.gold,fontSize:12,fontWeight:700,cursor:pdfLoading?'default':'pointer',opacity:pdfLoading?0.6:1,boxShadow:'0 2px 12px rgba(0,0,0,0.5)'}}>
           {pdfLoading?'⏳ Generating…':'⬇ Export PDF'}
         </button>}
         {screen==="scoring"&&<ScoringScreen assessmentId={context?.assessmentId} oes={oes} standards={standards} onRefresh={()=>loadData(context)}/>}
@@ -12352,7 +12352,7 @@ export default function App() {
       </div>
 
       {hasTour&&<button onClick={()=>setTourStep(0)} title="Replay app tour"
-        style={{position:"fixed",bottom:148,right:20,zIndex:9997,width:48,height:48,borderRadius:24,background:T.gold,border:"none",color:T.bg,fontSize:22,fontWeight:900,cursor:"pointer",boxShadow:`0 4px 16px rgba(201,168,76,0.5)`,display:"flex",alignItems:"center",justifyContent:"center",lineHeight:1}}>?</button>}
+        style={{position:"fixed",bottom:96,right:20,zIndex:9997,width:48,height:48,borderRadius:24,background:T.gold,border:"none",color:T.bg,fontSize:22,fontWeight:900,cursor:"pointer",boxShadow:`0 4px 16px rgba(201,168,76,0.5)`,display:"flex",alignItems:"center",justifyContent:"center",lineHeight:1}}>?</button>}
       {selectedProgramme==="shco-full"&&(
         <AIAssistantWidget
           T={T}
