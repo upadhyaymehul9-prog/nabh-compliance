@@ -240,7 +240,7 @@ export default function AIAssistantWidget({ T, open, onOpen, onClose, trigger })
                   lineHeight: 1.8,
                 }}
               >
-                <GennieFull size={108} />
+                <GennieFull size={72} />
                 <div
                   style={{
                     color: T.gold,
