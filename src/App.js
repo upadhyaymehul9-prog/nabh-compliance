@@ -10270,8 +10270,10 @@ export default function App() {
 
     return (
       <div style={{background:T.bg,minHeight:'100vh',color:T.text,fontFamily:'Segoe UI,system-ui,sans-serif'}}>
-        {/* Tab header */}
-        <div style={{display:'flex',alignItems:'center',borderBottom:`1px solid ${T.border}`,padding:'0 16px',background:T.panel}}>
+        {/* Tab header — overflowX:auto keeps this a single swipeable row on
+            narrow screens instead of spilling past the viewport. Matches the
+            chapter/sub-tab rows elsewhere in this file (e.g. :9972, :12167). */}
+        <div style={{display:'flex',alignItems:'center',overflowX:'auto',borderBottom:`1px solid ${T.border}`,padding:'0 16px',background:T.panel}}>
           {[
             {key:'dashboard',label:'📊 Dashboard'},
             {key:'scoring',  label:'✏️ Score OEs', tourId:'shco-tour-score'},
@@ -10281,6 +10283,7 @@ export default function App() {
           ].map(tab=>(
             <button key={tab.key} id={tab.tourId||undefined} onClick={()=>setShcoFullTab(tab.key)}
               style={{padding:'12px 16px',border:'none',cursor:'pointer',background:'transparent',fontSize:13,fontWeight:600,
+                flexShrink:0,whiteSpace:'nowrap',
                 color:shcoFullTab===tab.key?T.orange:T.muted,
                 borderBottom:shcoFullTab===tab.key?`2px solid ${T.orange}`:'2px solid transparent'}}>
               {tab.label}
@@ -10289,7 +10292,7 @@ export default function App() {
           <button id="shco-tour-pdf" onClick={generateShcoFullPDF} disabled={shcoFullPdfLoading}
             style={{marginLeft:'auto',padding:'6px 14px',borderRadius:7,border:`1px solid ${T.gold}`,
               background:'transparent',color:T.gold,fontSize:12,fontWeight:700,cursor:shcoFullPdfLoading?'default':'pointer',
-              opacity:shcoFullPdfLoading?0.6:1,whiteSpace:'nowrap'}}>
+              flexShrink:0,opacity:shcoFullPdfLoading?0.6:1,whiteSpace:'nowrap'}}>
             {shcoFullPdfLoading ? '⏳ Generating…' : '⬇ Download Gap Report'}
           </button>
         </div>
@@ -10822,7 +10825,8 @@ export default function App() {
 
     return (
       <div style={{background:T.bg,minHeight:'100vh',color:T.text,fontFamily:'Segoe UI,system-ui,sans-serif'}}>
-        <div style={{display:'flex',alignItems:'center',borderBottom:`1px solid ${T.border}`,padding:'0 16px',background:T.panel}}>
+        {/* Tab header — see the SHCO Full header above for why overflowX:auto. */}
+        <div style={{display:'flex',alignItems:'center',overflowX:'auto',borderBottom:`1px solid ${T.border}`,padding:'0 16px',background:T.panel}}>
           {[
             {key:'dashboard',label:'📊 Dashboard'},
             {key:'scoring',  label:'✏️ Score OEs'},
@@ -10831,6 +10835,7 @@ export default function App() {
           ].map(tab=>(
             <button key={tab.key} onClick={()=>setEcoFullTab(tab.key)}
               style={{padding:'12px 16px',border:'none',cursor:'pointer',background:'transparent',fontSize:13,fontWeight:600,
+                flexShrink:0,whiteSpace:'nowrap',
                 color:ecoFullTab===tab.key?ECO_COLOR:T.muted,
                 borderBottom:ecoFullTab===tab.key?`2px solid ${ECO_COLOR}`:'2px solid transparent'}}>
               {tab.label}
@@ -10839,7 +10844,7 @@ export default function App() {
           <button onClick={generateEcoFullPDF} disabled={ecoFullPdfLoading}
             style={{marginLeft:'auto',padding:'6px 14px',borderRadius:7,border:`1px solid ${ECO_COLOR}`,
               background:'transparent',color:ECO_COLOR,fontSize:12,fontWeight:700,cursor:ecoFullPdfLoading?'default':'pointer',
-              opacity:ecoFullPdfLoading?0.6:1,whiteSpace:'nowrap'}}>
+              flexShrink:0,opacity:ecoFullPdfLoading?0.6:1,whiteSpace:'nowrap'}}>
             {ecoFullPdfLoading ? '⏳ Generating…' : '⬇ Download Gap Report'}
           </button>
         </div>
