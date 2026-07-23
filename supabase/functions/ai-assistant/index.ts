@@ -1026,6 +1026,17 @@ Deno.serve(async (req) => {
         ` helpful but do not add any disclaimer or separate source line about them.\n` +
         `6. "Official interpretation" comes only from the NABH book. If it shows "—",` +
         ` do NOT invent an interpretation — answer from the OE text and doc flag only.\n` +
+        `6a. More broadly: if <context> discusses the general topic (e.g. a committee,` +
+        ` a process, a policy) but does NOT explicitly state a specific detail you were` +
+        ` asked for — meeting frequency, membership/composition, chairperson, quorum,` +
+        ` timelines, or any other number or named requirement — you MUST split your` +
+        ` answer: first state clearly what <context> DOES say, citing the source, then` +
+        ` say exactly: "The SHCO reference content available to me does not specify` +
+        ` [the missing detail]. NABH generally expects the hospital to define this in` +
+        ` its own committee terms of reference / policy document." Do NOT fill the gap` +
+        ` with general NABH knowledge, typical industry practice, or a plausible-sounding` +
+        ` specific — a confident wrong answer about frequency or membership is worse` +
+        ` than admitting the gap, since hospitals act on what you tell them.\n` +
         `7. If Doc flag is "Mandatory system documentation (*)", tell the user the` +
         ` book requires written system documentation for this OE.\n` +
         `8. Always end your answer with exactly: SHCO 3rd edition\n` +
