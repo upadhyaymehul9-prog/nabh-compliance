@@ -644,6 +644,31 @@ function isQualityToolsQuestion(q: string): boolean {
   return QUALITY_TOOLS_PATTERNS.some((p) => p.test(q));
 }
 
+// Patterns that detect committee roster / committee count questions.
+// Runs at Step 0d — after KPI (0), med-error (0b) and quality tools (0c).
+// Routes to the curated committee roster row in shco_kb so that every phrasing of
+// "how many committees" / "list all committees" resolves to the same authoritative
+// list, instead of FTS returning one arbitrary individual committee row.
+const COMMITTEE_COUNT_PATTERNS: RegExp[] = [
+  // Count phrasing
+  /\bhow\s+many\s+committees?\b/i,
+  /\bnumber\s+of\s+committees?\b/i,
+  // Requirement phrasing — "committees required", "committees does SHCO require"
+  /\bcommittees?\s+(are\s+)?(required|needed|mandatory|compulsory)\b/i,
+  /\bcommittees?\s+(does|do|should)\s+(shco|nabh|we|i|a\s+hospital|the\s+hospital)\b/i,
+  /\b(required|mandatory|necessary)\s+committees?\b/i,
+  // Enumerate phrasing — "list all committees", "list of committees", "which committees"
+  /\b(list|show|name|give)\s+(me\s+)?(all\s+|the\s+)*committees?\b/i,
+  /\blist\s+of\s+committees?\b/i,
+  /\b(what|which)\s+committees?\b/i,
+  /\ball\s+(the\s+)?committees?\b/i,
+  /\bcommittees?\s+(list|roster)\b/i,
+];
+
+function isCommitteeCountQuestion(q: string): boolean {
+  return COMMITTEE_COUNT_PATTERNS.some((p) => p.test(q));
+}
+
 // Patterns that indicate a general-info question (assessment process, scoring, chapters, KPIs)
 const GENERAL_INFO_PATTERNS: RegExp[] = [
   /\bfinal\s+assessment\b/i,
@@ -825,6 +850,26 @@ Deno.serve(async (req) => {
       generalRefContext = QUALITY_TOOLS_CONTENT;
       // Source label used as fallback; system prompt rule 1c refines it per answer type.
       generalRefSourceLabel = "SHCO Full — Quality Tools (Annexure 3) / Medication Chart Review Checklist (Annexure 2, pp.166–169)";
+    }
+
+    // Step 0d: Committee roster / count detection.
+    // Fires only if Steps 0, 0b and 0c didn't match. Unlike those steps the content
+    // is not a compiled-in constant — it is the curated roster row in shco_kb, looked
+    // up by exact category + section so the answer stays in sync with the DB.
+    _step.current = "committee-count-check";
+    if (!isGeneralRef && isCommitteeCountQuestion(question)) {
+      const { data: rosterRows, error: rosterErr } = await supabase
+        .from("shco_kb")
+        .select("title, content, source_label")
+        .eq("category", "committees")
+        .eq("section", "Committees — Full List")
+        .limit(1);
+      if (rosterErr) throw new Error(`DB committee roster: ${rosterErr.message}`);
+      if (rosterRows && rosterRows.length > 0) {
+        isGeneralRef = true;
+        generalRefContext = `${rosterRows[0].title}\n${rosterRows[0].content}`;
+        generalRefSourceLabel = rosterRows[0].source_label as string;
+      }
     }
 
     // Step 1: try OE code match — scan anywhere in the question for a code pattern
