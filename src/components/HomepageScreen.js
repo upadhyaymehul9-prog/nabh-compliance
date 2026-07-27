@@ -454,7 +454,22 @@ export default function HomepageScreen({ onLogin }) {
 
         /* ── ICON RESET ── */
         #hp-root .ti { font-style: normal; }
+
+        /* ── TICKER ── */
+        @keyframes hp-ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .hp-ticker-bar { overflow: hidden; white-space: nowrap; cursor: pointer; background: #D97706; transition: background .15s; }
+        .hp-ticker-bar:hover { background: #B45309; }
+        .hp-ticker-inner { display: inline-block; animation: hp-ticker 30s linear infinite; padding: 9px 0; font-size: 13px; font-weight: 600; color: #fff; font-family: 'Figtree', sans-serif; letter-spacing: .01em; }
       `}</style>
+
+      {/* TICKER */}
+      <div className="hp-ticker-bar"
+        onClick={() => document.querySelector('.mktech')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+        role="button" tabIndex={0} aria-label="View free tools">
+        <div className="hp-ticker-inner">
+          &nbsp;&nbsp;&nbsp;🎉 New: Try our free Revenue Leakage Self-Audit and Marketing &amp; Brand Health Check — no login needed →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🎉 New: Try our free Revenue Leakage Self-Audit and Marketing &amp; Brand Health Check — no login needed →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+      </div>
 
       {/* NAV */}
       <header id="hp-header">
@@ -876,6 +891,24 @@ export default function HomepageScreen({ onLogin }) {
               <h4>Website &amp; App Development</h4>
               <p>Custom hospital websites and mobile apps, built and shipped end-to-end.</p>
             </div>
+            <div className="mcard" style={{position:"relative", cursor:"pointer"}} onClick={() => window.open("/revenue-leakage-review/", "_blank", "noopener,noreferrer")}>
+              <span style={{position:"absolute",top:14,right:14,fontSize:"9px",fontWeight:700,letterSpacing:".05em",textTransform:"uppercase",background:"#dcfce7",color:"#16a34a",padding:"3px 9px",borderRadius:100}}>Free Tool</span>
+              <div className="ic" style={{background:"#dcfce7",color:"#16a34a"}} aria-hidden="true">💰</div>
+              <h4>Revenue Leakage Self-Audit</h4>
+              <p>Estimate how much revenue your hospital may be losing across billing, OT, pharmacy, TPA, and more — 118-point audit.</p>
+              <a href="/revenue-leakage-review/" target="_blank" rel="noopener noreferrer" className="waitlist-btn" style={{color:"#16a34a"}}>
+                Take the audit →
+              </a>
+            </div>
+            <div className="mcard" style={{position:"relative", cursor:"pointer"}} onClick={() => window.open("/marketing-leakage-check-for-healthcare/", "_blank", "noopener,noreferrer")}>
+              <span style={{position:"absolute",top:14,right:14,fontSize:"9px",fontWeight:700,letterSpacing:".05em",textTransform:"uppercase",background:"#f3e8ff",color:"#9333ea",padding:"3px 9px",borderRadius:100}}>Free Tool</span>
+              <div className="ic" style={{background:"#f3e8ff",color:"#9333ea"}} aria-hidden="true">📢</div>
+              <h4>Marketing &amp; Brand Health Check</h4>
+              <p>See how your hospital's marketing and branding compares to best practice — 97-point audit.</p>
+              <a href="/marketing-leakage-check-for-healthcare/" target="_blank" rel="noopener noreferrer" className="waitlist-btn" style={{color:"#9333ea"}}>
+                Take the audit →
+              </a>
+            </div>
           </div>
           <div className="tier-label">Coming soon</div>
           <div className="mgrid">
@@ -885,15 +918,6 @@ export default function HomepageScreen({ onLogin }) {
               <h4>IPD Manager</h4>
               <p>Inpatient admission-to-discharge workflow, built to order for hospitals that need it.</p>
               <button className="waitlist-btn" onClick={() => wl("IPD Manager")} aria-label="Join waitlist for IPD Manager">
-                <i className="ti ti-bell" aria-hidden="true"></i> Join Waitlist
-              </button>
-            </div>
-            <div className="mcard soon">
-              <span className="soon-badge badge-soon-warm">Coming soon</span>
-              <div className="ic" aria-hidden="true"><i className="ti ti-report-money"></i></div>
-              <h4>Revenue Leakage Self-Audit</h4>
-              <p>Find where your hospital is losing revenue — and exactly how to plug each leak.</p>
-              <button className="waitlist-btn" onClick={() => wl("Revenue Leakage Self-Audit")} aria-label="Join waitlist for Revenue Leakage Self-Audit">
                 <i className="ti ti-bell" aria-hidden="true"></i> Join Waitlist
               </button>
             </div>

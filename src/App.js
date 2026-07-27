@@ -2557,6 +2557,32 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
       icon: "🦷",
       color: "#0ea5e9",
     },
+    {
+      key: "revenue_leakage",
+      title: "Revenue Leakage Self-Audit",
+      subtitle: "No login needed",
+      badge: "Free Tool",
+      tags: ["118-point audit", "Free"],
+      desc: "Estimate how much revenue your hospital may be losing across billing, OT, pharmacy, TPA, and more — 118-point audit.",
+      available: true,
+      icon: "💰",
+      color: "#16a34a",
+      href: "/revenue-leakage-review/",
+      linkText: "Take the audit",
+    },
+    {
+      key: "marketing_leakage",
+      title: "Marketing & Brand Health Check",
+      subtitle: "No login needed",
+      badge: "Free Tool",
+      tags: ["97-point audit", "Free"],
+      desc: "See how your hospital's marketing and branding compares to best practice — 97-point audit.",
+      available: true,
+      icon: "📢",
+      color: "#9333ea",
+      href: "/marketing-leakage-check-for-healthcare/",
+      linkText: "Take the audit",
+    },
   ];
 
   const handleNotify = async (programme) => {
@@ -2568,7 +2594,18 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: `linear-gradient(180deg,${HP.brandBg} 0%,${HP.white} 45%)`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Inter,system-ui,sans-serif", padding: 24 }}>
+    <>
+      <style>{`@keyframes ps-ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }`}</style>
+      <div style={{overflow:"hidden", whiteSpace:"nowrap", cursor:"pointer", background:"#D97706", transition:"background .15s"}}
+        onClick={() => document.getElementById('free-tools-start')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+        onMouseEnter={e => e.currentTarget.style.background="#B45309"}
+        onMouseLeave={e => e.currentTarget.style.background="#D97706"}
+        role="button" tabIndex={0} aria-label="Scroll to free tools">
+        <span style={{display:"inline-block", animation:"ps-ticker 30s linear infinite", padding:"9px 0", fontSize:13, fontWeight:600, color:"#fff", fontFamily:"Figtree,sans-serif", letterSpacing:".01em"}}>
+          &nbsp;&nbsp;&nbsp;🎉 New: Try our free Revenue Leakage Self-Audit and Marketing &amp; Brand Health Check — no login needed →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🎉 New: Try our free Revenue Leakage Self-Audit and Marketing &amp; Brand Health Check — no login needed →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+      </div>
+      <div style={{ minHeight: "100vh", background: `linear-gradient(180deg,${HP.brandBg} 0%,${HP.white} 45%)`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Inter,system-ui,sans-serif", padding: 24 }}>
       <div style={{ width: "100%", maxWidth: 920 }}>
         <div style={{ textAlign: "center", marginBottom: 36 }}>
           <div style={{ width: 46, height: 46, borderRadius: 11, background: HP.brand, border: HP.boxBorder, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Figtree,sans-serif", fontWeight: 800, fontSize: 22, color: HP.white, margin: "0 auto 16px" }}>A</div>
@@ -2580,7 +2617,8 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16 }}>
           {programmes.map(p => (
             <div key={p.key}
-              onClick={() => p.available ? onSelect(p.key, ctx) : setComingSoonModal(p)}
+              id={p.key === "revenue_leakage" ? "free-tools-start" : undefined}
+              onClick={() => p.href ? window.open(p.href, "_blank", "noopener,noreferrer") : p.available ? onSelect(p.key, ctx) : setComingSoonModal(p)}
               style={{ background: HP.white, border: HP.boxBorder, borderRadius: 14, padding: "24px", cursor: "pointer", position: "relative", transition: "box-shadow 0.18s", boxShadow: "0 1px 3px rgba(0,0,0,.04)" }}
               onMouseEnter={e => { e.currentTarget.style.boxShadow = "0 8px 24px rgba(0,0,0,.12)"; }}
               onMouseLeave={e => { e.currentTarget.style.boxShadow = "0 1px 3px rgba(0,0,0,.04)"; }}
@@ -2596,7 +2634,7 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
               </div>
               <div style={{ fontSize: 12, color: HP.muted, lineHeight: 1.7, marginBottom: 16 }}>{p.desc}</div>
               {p.available ? (
-                <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 700, color: p.color, fontFamily: "Figtree,sans-serif" }}>Open Dashboard <span>→</span></div>
+                <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 700, color: p.color, fontFamily: "Figtree,sans-serif" }}>{p.linkText || "Open Dashboard"} <span>→</span></div>
               ) : (
                 <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: HP.subtle }}><span>🔔</span> Notify me when available</div>
               )}
@@ -2672,6 +2710,7 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
         </div>
       )}
     </div>
+    </>
   );
 }
 
