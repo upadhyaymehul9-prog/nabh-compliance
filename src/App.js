@@ -2834,7 +2834,7 @@ function SetupScreen({ user, onReady }) {
   );
 }
 
-function VerdictBanner({ decision }) {
+function VerdictBanner({ decision, onExportPDF, pdfLoading }) {
   const rd=decision.readiness||"NOT READY";
   const rdColor=rd==="NOT READY"?T.red:rd==="RISKY"?T.orange:T.green;
   const rdBg=rd==="NOT READY"?T.redD:rd==="RISKY"?T.orangeD:T.greenD;
@@ -2843,7 +2843,13 @@ function VerdictBanner({ decision }) {
   return (
     <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:14,overflow:"hidden",marginBottom:14}}>
       <div style={{height:4,background:`linear-gradient(90deg,${vColor},${rdColor})`}}/>
-      <div style={{padding:"18px 22px"}}>
+      <div style={{padding:"18px 22px",position:"relative"}}>
+        {onExportPDF&&(
+          <button onClick={onExportPDF} disabled={pdfLoading} title="Export Gap Report PDF"
+            style={{position:"absolute",top:14,right:16,zIndex:1,padding:"6px 12px",borderRadius:8,border:`1px solid ${T.gold}`,background:T.bg,color:T.gold,fontSize:12,fontWeight:700,cursor:pdfLoading?"default":"pointer",opacity:pdfLoading?0.6:1}}>
+            {pdfLoading?"⏳ Generating…":"⬇ Export PDF"}
+          </button>
+        )}
         <div style={{display:"flex",gap:20,alignItems:"center",flexWrap:"wrap"}}>
           <div style={{textAlign:"center",minWidth:100}}>
             <div style={{fontSize:11,letterSpacing:3,color:T.muted,marginBottom:4}}>VERDICT</div>
@@ -2916,7 +2922,7 @@ function ChapterHeatmap({ breakdown }) {
   );
 }
 
-function Dashboard({ decision, gaps, onNav }) {
+function Dashboard({ decision, gaps, onNav, onExportPDF, pdfLoading }) {
   const top5=[...(gaps||[])].sort((a,b)=>b.priority_score-a.priority_score).slice(0,5);
 
   // Build pillar status from decision object
@@ -2966,7 +2972,7 @@ function Dashboard({ decision, gaps, onNav }) {
 
   return (
     <div>
-      <VerdictBanner decision={decision}/>
+      <VerdictBanner decision={decision} onExportPDF={onExportPDF} pdfLoading={pdfLoading}/>
       {/* Next Actions */}
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"14px 16px",marginTop:14,marginBottom:14}}>
         <div style={{fontSize:11,letterSpacing:2,color:T.muted,marginBottom:10}}>WHAT TO DO NEXT</div>
@@ -6374,8 +6380,8 @@ export default function App() {
   const [shcoElcGapFilter,    setShcoElcGapFilter]    = useState('ALL');
   const [shcoElcGapSearch,    setShcoElcGapSearch]    = useState('');
   const [pdfLoading, setPdfLoading] = useState(false);
-  const [showMoreMenu, setShowMoreMenu] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const [theme, setTheme] = useState('dark');
   const [navStack, setNavStack] = useState([]);
   const [drillsView, setDrillsView] = useState('tracker');
@@ -8528,14 +8534,6 @@ export default function App() {
       .upsert({assessment_id:context.assessmentId,lic_progress:hcoLicProgress},{onConflict:"assessment_id"});
   },[hcoLicProgress]);// eslint-disable-line react-hooks/exhaustive-deps
 
-  // Close ••• dropdown on outside click
-  useEffect(()=>{
-    if(!showMoreMenu)return;
-    const handler=()=>setShowMoreMenu(false);
-    document.addEventListener("click",handler);
-    return()=>document.removeEventListener("click",handler);
-  },[showMoreMenu]);
-
   // Close user menu on outside click
   useEffect(()=>{
     if(!showUserMenu)return;
@@ -8543,6 +8541,22 @@ export default function App() {
     document.addEventListener("click",handler);
     return()=>document.removeEventListener("click",handler);
   },[showUserMenu]);
+
+  // Close nav drawer on Escape
+  useEffect(()=>{
+    if(!drawerOpen)return;
+    const handler=e=>{if(e.key==="Escape")setDrawerOpen(false);};
+    document.addEventListener("keydown",handler);
+    return()=>document.removeEventListener("keydown",handler);
+  },[drawerOpen]);
+
+  // Lock page scroll while the drawer is open (restore prior value on close/unmount)
+  useEffect(()=>{
+    if(!drawerOpen)return;
+    const prev=document.body.style.overflow;
+    document.body.style.overflow="hidden";
+    return()=>{document.body.style.overflow=prev;};
+  },[drawerOpen]);
 
   // NavStack refs — kept in sync via effects so goBack/navigate closures always read current values
   const currentNavStateRef = useRef(null);
@@ -12185,21 +12199,30 @@ export default function App() {
   };
 
   const ALL_NAV=[
-    {id:"dashboard",label:"Dashboard",icon:"ti-layout-dashboard",programmes:["hco"],primary:true},
+    // ── HCO Full (drawer module) ──────────────────────────────────────────
+    // Primary action — rendered as the dedicated header button, never in the drawer.
     {id:"scoring",label:"Score OEs",icon:"ti-edit",programmes:["hco"],primary:true},
-    {id:"gaps",label:"Fix Gaps",icon:"ti-tool",programmes:["hco"],primary:true},
-    {id:"audits",label:"Audits",icon:"ti-search",programmes:["hco"],primary:true},
-    {id:"drills",label:"Drills",icon:"ti-alarm",programmes:["hco"],primary:true},
-    {id:"committees",label:"Committees",icon:"ti-building-community",programmes:["hco"],primary:false},
-    {id:"kpis",label:"KPIs",icon:"ti-chart-line",programmes:["hco"],primary:false},
-    {id:"checklists",label:"Checklists",icon:"ti-checklist",programmes:["hco"],primary:false},
-    {id:"committee-calendar",label:"Cal",icon:"ti-calendar",programmes:["hco"],primary:false},
-    {id:"licenses",label:"Licenses",icon:"ti-file-certificate",programmes:["hco"],primary:false},
-    {id:"tracer",label:"Tracer",icon:"ti-stethoscope",programmes:["hco"],primary:false},
+    // ASSESS
+    {id:"dashboard",label:"Dashboard",icon:"ti-layout-dashboard",programmes:["hco"],group:"assess"},
+    {id:"gaps",label:"Fix Gaps",icon:"ti-tool",programmes:["hco"],group:"assess"},
+    {id:"tracer",label:"Tracer",icon:"ti-stethoscope",programmes:["hco"],group:"assess"},
+    // GOVERNANCE
+    {id:"committees",label:"Committees",icon:"ti-building-community",programmes:["hco"],group:"governance"},
+    {id:"audits",label:"Audits",icon:"ti-search",programmes:["hco"],group:"governance"},
+    {id:"drills",label:"Drills",icon:"ti-alarm",programmes:["hco"],group:"governance"},
+    {id:"kpis",label:"KPIs",icon:"ti-chart-line",programmes:["hco"],group:"governance"},
+    // EVIDENCE
+    {id:"checklists",label:"Checklists",icon:"ti-checklist",programmes:["hco"],group:"evidence"},
+    {id:"docs",label:"Docs",icon:"ti-folder",programmes:["hco"],group:"evidence",href:"https://drive.google.com/drive/folders/1DOfGmHg_dO5blXw_3Mz07dtre6IKYYlI"},
+    {id:"licenses",label:"Licenses",icon:"ti-file-certificate",programmes:["hco"],group:"evidence"},
+    // PLAN
+    {id:"committee-calendar",label:"Calendar",icon:"ti-calendar",programmes:["hco"],group:"plan"},
+    // Footer (all modules)
     {id:"pricing",label:"Pricing",icon:"ti-diamond",programmes:["hco","shco-elc","hco-elc","shco-full"],primary:false},
     {id:"profile",label:"Profile",icon:"ti-user",programmes:["hco","shco-elc","hco-elc","shco-full"],primary:false},
-    {id:"shco",label:"SHCO",icon:"ti-building-hospital",programmes:["shco-elc"]},
-    {id:"hco-elc",label:"HCO ELC",icon:"ti-target",programmes:["hco-elc"]},
+    // ── Other modules ────────────────────────────────────────────────────
+    {id:"shco",label:"SHCO",icon:"ti-building-hospital",programmes:["shco-elc"],primary:true},
+    {id:"hco-elc",label:"HCO ELC",icon:"ti-target",programmes:["hco-elc"],primary:true},
     {id:"shco-full",label:"Score OEs",icon:"ti-edit",programmes:["shco-full"],primary:true},
     {id:"eco-full", label:"Score OEs",icon:"ti-edit",programmes:["eco-full"], primary:true},
     {id:"pricing",  label:"Pricing",  icon:"ti-diamond",programmes:["eco-full"], primary:false},
@@ -12209,9 +12232,19 @@ export default function App() {
     {id:"profile",  label:"Profile",  icon:"ti-user",programmes:["dental-elc"], primary:false},
   ];
   const NAV=ALL_NAV.filter(n=>n.programmes.includes(selectedProgramme));
-  const PRIMARY_NAV=NAV.filter(n=>n.primary);
-  const SECONDARY_NAV=NAV.filter(n=>!n.primary&&n.id!=="pricing"&&n.id!=="profile");
-  const secondaryActive=SECONDARY_NAV.some(n=>n.id===screen);
+  const primaryItem=NAV.find(n=>n.primary);
+  const DRAWER_GROUPS=[
+    {key:"assess",label:"ASSESS"},
+    {key:"governance",label:"GOVERNANCE"},
+    {key:"evidence",label:"EVIDENCE"},
+    {key:"plan",label:"PLAN"},
+  ];
+  // Build only the groups that have items for this programme; empty groups render no heading.
+  const drawerGroups=DRAWER_GROUPS
+    .map(g=>({...g,items:NAV.filter(n=>n.group===g.key)}))
+    .filter(g=>g.items.length>0);
+  // A drawer is only worth showing if it has real navigation groups — footer-only content is not.
+  const hasDrawer=drawerGroups.length>0;
 
   return (
     <div data-theme={theme} style={{fontFamily:"Segoe UI,system-ui,sans-serif",background:T.bg,minHeight:"100vh",color:T.text}}>
@@ -12226,84 +12259,109 @@ export default function App() {
         `:''}
       `}</style>
       <div style={{background:theme==='light'?"#1565c0":`linear-gradient(90deg,${HP.brandDark},#0a3d32)`,borderBottom:`1px solid ${theme==='light'?"#0d47a1":"rgba(110,231,183,.15)"}`,padding:"10px 20px",position:"sticky",top:0,zIndex:200,boxShadow:theme==='light'?"0 2px 12px rgba(21,101,192,0.4)":"0 2px 20px rgba(0,0,0,0.35)"}}>
-        <div style={{maxWidth:1200,margin:"0 auto",display:"flex",alignItems:"center",gap:10,flexWrap:"wrap"}}>
+        <div style={{maxWidth:1200,margin:"0 auto",display:"flex",alignItems:"center",gap:10}}>
+          {hasDrawer&&(
+            <button onClick={()=>setDrawerOpen(true)} aria-label="Open menu" title="Menu" style={{width:34,height:34,borderRadius:8,flexShrink:0,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",padding:0,color:"#ffffff",background:theme==='light'?"rgba(255,255,255,0.15)":"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.3)":T.border}`}}>
+              <NavIcon icon="ti-menu-2" style={{fontSize:18}}/>
+            </button>
+          )}
           <div style={{width:32,height:32,borderRadius:8,background:theme==='light'?"rgba(255,255,255,0.15)":HP.brand,display:"flex",alignItems:"center",justifyContent:"center",fontSize:15,flexShrink:0,border:theme==='light'?"1px solid rgba(255,255,255,0.3)":"none",color:"#ffffff",fontFamily:"Figtree,sans-serif",fontWeight:800}}>A</div>
-          <div style={{flex:1,minWidth:100}}>
+          <div style={{flex:1,minWidth:80,textAlign:hasDrawer?"center":"left",overflow:"hidden"}}>
             <div style={{fontSize:7,letterSpacing:3,color:theme==='light'?"rgba(255,255,255,0.7)":HP.brandLight}}>{selectedProgramme==="shco-full"?"NABH SHCO 3RD EDITION":selectedProgramme==="shco-elc"?"NABH SHCO ELC":selectedProgramme==="hco-elc"?"NABH HCO ELC":selectedProgramme==="eco-full"?"NABH ECO FULL ACCREDITATION":selectedProgramme==="dental-elc"?"NABH DENTAL ELC — 1ST EDITION":"NABH 6TH EDITION"}</div>
-            <div style={{fontSize:14,fontWeight:700,color:"#ffffff"}}>{context?.hospitalName||"AccredReady"}{context?.assessmentName&&<span style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted,marginLeft:6}}>{context.assessmentName}</span>}</div>
+            <div style={{fontSize:14,fontWeight:700,color:"#ffffff",whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis"}}>{context?.hospitalName||"AccredReady"}{context?.assessmentName&&<span style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted,marginLeft:6}}>{context.assessmentName}</span>}</div>
           </div>
-          {loading&&<div style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted}}>Refreshing…</div>}
-          {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${readinessColor}25`,border:`1px solid ${readinessColor}60`,fontSize:11,fontWeight:700,color:theme==='light'?"#ffffff":readinessColor}}>{decision.readiness==="NOT READY"?"❌":decision.readiness==="RISKY"?"⚠️":"✅"} {decision.readiness||"—"}</div>}
-          {selectedProgramme==="hco"&&<div style={{padding:"3px 10px",borderRadius:20,background:`${verdictColor}25`,border:`1px solid ${verdictColor}60`,fontSize:12,fontWeight:800,color:theme==='light'?"#ffffff":verdictColor}}>{decision.verdict==="PARTIAL"?"⚠️":""}{decision.verdict||"—"}</div>}
-          <div style={{display:"flex",gap:3,flexWrap:"wrap",position:"relative"}}>
-            {PRIMARY_NAV.map(n=>{const _tourIds={dashboard:"tour-target-dashboard",scoring:"tour-target-score",gaps:"tour-target-fixgaps",audits:"tour-target-audits"};const navActive=screen===n.id;const darkActive=theme!=='light'&&navActive;return(
-              <button key={n.id} id={_tourIds[n.id]||undefined} onClick={()=>navigate({ screen: n.id })} style={{
-                padding:"5px 10px",borderRadius:7,fontSize:11,cursor:"pointer",display:"inline-flex",alignItems:"center",gap:5,
-                background:navActive?(theme==='light'?"rgba(255,255,255,0.25)":darkActive?"rgba(110,231,183,.15)":T.goldD):"transparent",
-                border:`1px solid ${navActive?(theme==='light'?"rgba(255,255,255,0.6)":darkActive?"rgba(110,231,183,.35)":T.gold):(theme==='light'?"rgba(255,255,255,0.3)":T.border)}`,
-                color:"#ffffff",
-                fontWeight:navActive?700:400,
-              }}><NavIcon icon={n.icon}/> {n.label}</button>
-            );})}
-
-            {SECONDARY_NAV.length>0&&(
-              <div style={{position:"relative"}}>
-                <button
-                  onClick={e=>{e.stopPropagation();setShowMoreMenu(v=>!v);}}
-                  style={{padding:"4px 9px",borderRadius:7,fontSize:11,cursor:"pointer",letterSpacing:2,
-                    background:(secondaryActive||showMoreMenu)?(theme==='light'?"rgba(255,255,255,0.25)":T.goldD):"transparent",
-                    border:`1px solid ${(secondaryActive||showMoreMenu)?(theme==='light'?"rgba(255,255,255,0.6)":T.gold):(theme==='light'?"rgba(255,255,255,0.3)":T.border)}`,
-                    color:"#ffffff",
-                  }}
-                id="tour-target-more">•••</button>
-                {showMoreMenu&&(
-                  <div
-                    onClick={e=>e.stopPropagation()}
-                    style={{position:"absolute",top:"calc(100% + 6px)",left:0,background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"6px 0",display:"flex",flexDirection:"column",zIndex:300,minWidth:220,boxShadow:"0 8px 30px rgba(0,0,0,0.15)"}}>
-                    {SECONDARY_NAV.map(n=>(
-                      <button key={n.id} onClick={()=>{navigate({ screen: n.id });setShowMoreMenu(false);}}
-                        style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen===n.id?T.gold:"transparent"}`,background:screen===n.id?T.goldD:"transparent",color:screen===n.id?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",flexDirection:"row",alignItems:"center",gap:10,fontWeight:screen===n.id?700:400,width:"100%",textAlign:"left"}}>
-                        <span style={{width:20,display:"flex",justifyContent:"center"}}><NavIcon icon={n.icon}/></span>
-                        <span>{n.label}</span>
-                      </button>
-                    ))}
-                    <a href="https://drive.google.com/drive/folders/1DOfGmHg_dO5blXw_3Mz07dtre6IKYYlI" target="_blank" rel="noopener noreferrer" onClick={()=>setShowMoreMenu(false)}
-                      style={{padding:"9px 16px",borderLeft:"3px solid transparent",background:"transparent",color:T.gold,fontSize:13,display:"flex",alignItems:"center",gap:10,textDecoration:"none",fontWeight:700,width:"100%"}}>
-                      <span style={{fontSize:15,width:20,textAlign:"center"}}><NavIcon icon="ti-folder"/></span>
-                      <span>Docs</span>
-                    </a>
-                    <a href="https://wa.me/918511180957?text=Hi%2C%20I%20have%20a%20suggestion%20for%20AccredReady%3A%20" target="_blank" rel="noopener noreferrer" onClick={()=>setShowMoreMenu(false)}
-                      style={{padding:"9px 16px",borderLeft:"3px solid transparent",background:"transparent",color:T.text,fontSize:13,display:"flex",alignItems:"center",gap:10,textDecoration:"none",fontWeight:400,width:"100%"}}>
-                      <span style={{fontSize:15,width:20,textAlign:"center"}}><NavIcon icon="ti-message-circle"/></span>
-                      <span>Suggest a feature</span>
-                    </a>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-          <button onClick={()=>setAuthState("programme")} style={{padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.3)":T.border}`,color:"#ffffff",fontSize:11,cursor:"pointer"}}>Switch</button>
-
-          <button onClick={toggleTheme} title={theme==='dark'?'Switch to light mode':'Switch to dark mode'} style={{padding:"4px 9px",borderRadius:7,background:theme==='light'?"rgba(255,255,255,0.2)":"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.border}`,color:"#ffffff",fontSize:15,cursor:"pointer",lineHeight:1}}>{theme==='dark'?'☀️':'🌙'}</button>
-          <div style={{position:"relative"}}>
-            <button onClick={e=>{e.stopPropagation();setShowUserMenu(v=>!v);}} style={{width:30,height:30,borderRadius:"50%",background:theme==='light'?"rgba(255,255,255,0.2)":HP.brand,border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":"rgba(110,231,183,.35)"}`,color:"#ffffff",fontSize:14,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",padding:0}}><NavIcon icon="ti-user"/></button>
-            {showUserMenu&&(
-              <div onClick={e=>e.stopPropagation()} style={{position:"absolute",top:"calc(100% + 6px)",right:0,background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"6px 0",display:"flex",flexDirection:"column",zIndex:300,minWidth:160,boxShadow:"0 8px 30px rgba(0,0,0,0.15)"}}>
-                <button onClick={()=>{navigate({ screen: "profile" });setShowUserMenu(false);}} style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen==="profile"?T.gold:"transparent"}`,background:screen==="profile"?T.goldD:"transparent",color:screen==="profile"?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:10,width:"100%",textAlign:"left"}}>
-                  <span style={{width:20,display:"flex",justifyContent:"center"}}><NavIcon icon="ti-user"/></span><span>Profile</span>
-                </button>
-                <button onClick={()=>{navigate({ screen: "pricing" });setShowUserMenu(false);}} style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen==="pricing"?T.gold:"transparent"}`,background:screen==="pricing"?T.goldD:"transparent",color:screen==="pricing"?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:10,width:"100%",textAlign:"left"}}>
-                  <span style={{width:20,display:"flex",justifyContent:"center"}}><NavIcon icon="ti-diamond"/></span><span>Pricing</span>
-                </button>
-                <div style={{height:1,background:T.border,margin:"4px 0"}}/>
-                <button onClick={handleSignOut} style={{padding:"9px 16px",border:"none",borderLeft:"3px solid transparent",background:"transparent",color:T.red,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:10,width:"100%",textAlign:"left"}}>
-                  <span style={{width:20,display:"flex",justifyContent:"center"}}><NavIcon icon="ti-logout"/></span><span>Sign out</span>
-                </button>
-              </div>
-            )}
-          </div>
+          {loading&&<div style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted,flexShrink:0}}>Refreshing…</div>}
+          {primaryItem&&(
+            <button id={primaryItem.id==="scoring"?"tour-target-score":undefined} onClick={()=>navigate({screen:primaryItem.id})} style={{flexShrink:0,padding:"7px 14px",borderRadius:8,border:"none",cursor:"pointer",display:"inline-flex",alignItems:"center",gap:6,fontSize:13,fontWeight:700,background:theme==='light'?"#ffffff":`linear-gradient(135deg,${T.gold},#f0d070)`,color:theme==='light'?"#1565c0":T.bg}}>
+              <NavIcon icon={primaryItem.icon}/> {primaryItem.label}
+            </button>
+          )}
+          {!hasDrawer&&(<>
+            <button onClick={()=>setAuthState("programme")} style={{flexShrink:0,padding:"4px 9px",borderRadius:7,background:"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.3)":T.border}`,color:"#ffffff",fontSize:11,cursor:"pointer"}}>Switch</button>
+            <button onClick={toggleTheme} title={theme==='dark'?'Switch to light mode':'Switch to dark mode'} style={{flexShrink:0,padding:"4px 9px",borderRadius:7,background:theme==='light'?"rgba(255,255,255,0.2)":"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":T.border}`,color:"#ffffff",fontSize:15,cursor:"pointer",lineHeight:1}}>{theme==='dark'?'☀️':'🌙'}</button>
+            <div style={{position:"relative",flexShrink:0}}>
+              <button onClick={e=>{e.stopPropagation();setShowUserMenu(v=>!v);}} style={{width:30,height:30,borderRadius:"50%",background:theme==='light'?"rgba(255,255,255,0.2)":HP.brand,border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":"rgba(110,231,183,.35)"}`,color:"#ffffff",fontSize:14,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",padding:0}}><NavIcon icon="ti-user"/></button>
+              {showUserMenu&&(
+                <div onClick={e=>e.stopPropagation()} style={{position:"absolute",top:"calc(100% + 6px)",right:0,background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"6px 0",display:"flex",flexDirection:"column",zIndex:300,minWidth:160,boxShadow:"0 8px 30px rgba(0,0,0,0.15)"}}>
+                  <button onClick={()=>{navigate({ screen: "profile" });setShowUserMenu(false);}} style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen==="profile"?T.gold:"transparent"}`,background:screen==="profile"?T.goldD:"transparent",color:screen==="profile"?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:10,width:"100%",textAlign:"left"}}>
+                    <span style={{width:20,display:"flex",justifyContent:"center"}}><NavIcon icon="ti-user"/></span><span>Profile</span>
+                  </button>
+                  <button onClick={()=>{navigate({ screen: "pricing" });setShowUserMenu(false);}} style={{padding:"9px 16px",border:"none",borderLeft:`3px solid ${screen==="pricing"?T.gold:"transparent"}`,background:screen==="pricing"?T.goldD:"transparent",color:screen==="pricing"?T.gold:T.text,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:10,width:"100%",textAlign:"left"}}>
+                    <span style={{width:20,display:"flex",justifyContent:"center"}}><NavIcon icon="ti-diamond"/></span><span>Pricing</span>
+                  </button>
+                  <div style={{height:1,background:T.border,margin:"4px 0"}}/>
+                  <button onClick={handleSignOut} style={{padding:"9px 16px",border:"none",borderLeft:"3px solid transparent",background:"transparent",color:T.red,fontSize:13,cursor:"pointer",display:"flex",alignItems:"center",gap:10,width:"100%",textAlign:"left"}}>
+                    <span style={{width:20,display:"flex",justifyContent:"center"}}><NavIcon icon="ti-logout"/></span><span>Sign out</span>
+                  </button>
+                </div>
+              )}
+            </div>
+          </>)}
         </div>
       </div>
+
+      {selectedProgramme==="hco"&&(
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"10px 20px 0",display:"flex",gap:8,flexWrap:"wrap"}}>
+          <div style={{padding:"3px 10px",borderRadius:20,background:`${readinessColor}25`,border:`1px solid ${readinessColor}60`,fontSize:11,fontWeight:700,color:readinessColor}}>{decision.readiness==="NOT READY"?"❌":decision.readiness==="RISKY"?"⚠️":"✅"} {decision.readiness||"—"}</div>
+          <div style={{padding:"3px 10px",borderRadius:20,background:`${verdictColor}25`,border:`1px solid ${verdictColor}60`,fontSize:12,fontWeight:800,color:verdictColor}}>{decision.verdict==="PARTIAL"?"⚠️":""}{decision.verdict||"—"}</div>
+        </div>
+      )}
+
+      {hasDrawer&&(
+        <>
+          <div onClick={()=>setDrawerOpen(false)} style={{position:"fixed",inset:0,background:theme==='light'?"rgba(0,0,0,0.45)":"rgba(0,0,0,0.75)",backdropFilter:"blur(2px)",WebkitBackdropFilter:"blur(2px)",zIndex:1000,opacity:drawerOpen?1:0,pointerEvents:drawerOpen?"auto":"none",transition:"opacity .25s ease"}}/>
+          <aside style={{position:"fixed",top:0,left:0,height:"100vh",width:"min(280px, 85vw)",background:T.bg,borderRight:`1px solid ${theme==='light'?T.border:"rgba(255,255,255,0.14)"}`,zIndex:1001,display:"flex",flexDirection:"column",transform:drawerOpen?"translateX(0)":"translateX(-100%)",transition:"transform .25s ease",boxShadow:drawerOpen?(theme==='light'?"6px 0 28px rgba(0,0,0,0.28)":"10px 0 48px rgba(0,0,0,0.75)"):"none"}}>
+            <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"14px 16px",borderBottom:`1px solid ${T.border}`,flexShrink:0}}>
+              <span style={{fontSize:13,fontWeight:800,letterSpacing:1,color:T.gold}}>MENU</span>
+              <button onClick={()=>setDrawerOpen(false)} aria-label="Close menu" style={{width:30,height:30,borderRadius:7,border:`1px solid ${T.border}`,background:"transparent",color:T.text,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",padding:0}}><NavIcon icon="ti-x" style={{fontSize:16}}/></button>
+            </div>
+            <div style={{flex:1,overflowY:"auto",padding:"8px 0"}}>
+              {drawerGroups.map(g=>(
+                <div key={g.key} style={{marginBottom:6}}>
+                  <div style={{padding:"10px 18px 4px",fontSize:10,fontWeight:800,letterSpacing:1.5,color:T.muted}}>{g.label}</div>
+                  {g.items.map(n=>{
+                    const active=screen===n.id;
+                    const _tourIds={dashboard:"tour-target-dashboard",gaps:"tour-target-fixgaps",audits:"tour-target-audits"};
+                    const rowStyle={padding:"10px 18px",borderLeft:`3px solid ${active?T.gold:"transparent"}`,background:active?T.goldD:"transparent",color:active?T.gold:T.text,fontSize:14,fontWeight:active?700:500,cursor:"pointer",display:"flex",alignItems:"center",gap:12,width:"100%",textAlign:"left",border:"none",textDecoration:"none"};
+                    return n.href?(
+                      <a key={n.id} href={n.href} target="_blank" rel="noopener noreferrer" onClick={()=>setDrawerOpen(false)} style={rowStyle}>
+                        <span style={{width:20,display:"flex",justifyContent:"center"}}><NavIcon icon={n.icon}/></span>
+                        <span style={{flex:1}}>{n.label}</span>
+                        <NavIcon icon="ti-external-link" style={{fontSize:13,opacity:0.55}}/>
+                      </a>
+                    ):(
+                      <button key={n.id} id={_tourIds[n.id]||undefined} onClick={()=>{navigate({screen:n.id});setDrawerOpen(false);}} style={rowStyle}>
+                        <span style={{width:20,display:"flex",justifyContent:"center"}}><NavIcon icon={n.icon}/></span>
+                        <span style={{flex:1}}>{n.label}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              ))}
+            </div>
+            <div style={{flexShrink:0,borderTop:`1px solid ${T.border}`,padding:"9px 14px",display:"flex",flexDirection:"column",gap:7}}>
+              <div style={{lineHeight:1.25}}>
+                <div style={{fontSize:12,fontWeight:700,color:T.text,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{context?.hospitalName||"AccredReady"}</div>
+                <div style={{fontSize:10,color:T.muted,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{user?.email||""}</div>
+              </div>
+              <div style={{display:"flex",gap:8}}>
+                <button onClick={()=>{setDrawerOpen(false);setAuthState("programme");}} style={{flex:1,padding:"6px 10px",borderRadius:8,background:"transparent",border:`1px solid ${T.border}`,color:T.text,fontSize:12,fontWeight:600,cursor:"pointer",display:"inline-flex",alignItems:"center",justifyContent:"center",gap:6}}><NavIcon icon="ti-refresh"/> Switch module</button>
+                <button onClick={toggleTheme} title={theme==='dark'?'Switch to light mode':'Switch to dark mode'} style={{flexShrink:0,width:40,padding:"6px 0",borderRadius:8,background:"transparent",border:`1px solid ${T.border}`,color:T.text,fontSize:14,cursor:"pointer",lineHeight:1}}>{theme==='dark'?'☀️':'🌙'}</button>
+              </div>
+              <div style={{display:"flex",alignItems:"center",justifyContent:"center",flexWrap:"wrap",gap:"2px 6px",fontSize:12}}>
+                <button onClick={()=>{navigate({screen:"profile"});setDrawerOpen(false);}} style={{background:"none",border:"none",padding:"2px 3px",cursor:"pointer",fontSize:12,fontWeight:600,color:screen==="profile"?T.gold:T.text}}>Profile</button>
+                <span style={{color:T.muted,fontSize:11}}>·</span>
+                <button onClick={()=>{navigate({screen:"pricing"});setDrawerOpen(false);}} style={{background:"none",border:"none",padding:"2px 3px",cursor:"pointer",fontSize:12,fontWeight:600,color:screen==="pricing"?T.gold:T.text}}>Pricing</button>
+                {hasTour&&<span style={{color:T.muted,fontSize:11}}>·</span>}
+                {hasTour&&<button onClick={()=>{setDrawerOpen(false);setTourStep(0);}} title="Replay app tour" style={{background:"none",border:"none",padding:"2px 3px",cursor:"pointer",fontSize:12,fontWeight:600,color:T.text}}>Tour</button>}
+                <span style={{color:T.muted,fontSize:11}}>·</span>
+                <a href="https://wa.me/918511180957?text=Hi%2C%20I%20have%20a%20suggestion%20for%20AccredReady%3A%20" target="_blank" rel="noopener noreferrer" onClick={()=>setDrawerOpen(false)} style={{padding:"2px 3px",fontSize:12,fontWeight:600,color:T.text,textDecoration:"none"}}>Suggest</a>
+              </div>
+              <button onClick={handleSignOut} style={{padding:"6px 10px",borderRadius:8,background:"transparent",border:`1px solid ${T.red}55`,color:T.red,fontSize:12,fontWeight:600,cursor:"pointer",display:"inline-flex",alignItems:"center",justifyContent:"center",gap:6}}><NavIcon icon="ti-logout"/> Sign out</button>
+            </div>
+          </aside>
+        </>
+      )}
 
       {isTrialActive && daysLeft <= 5 && (
         <div style={{background:"#1a0a00",borderBottom:"1px solid #f4a44140",padding:"8px 20px",display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:8}}>
@@ -12332,11 +12390,7 @@ export default function App() {
       )}
 
       <div style={{maxWidth:1200,margin:"0 auto",padding:"16px"}}>
-        {screen==="dashboard"&&<Dashboard decision={decision} gaps={gaps} onNav={id=>navigate({screen:id})}/>}
-        {screen==="dashboard"&&<button onClick={generatePDF} disabled={pdfLoading}
-          style={{position:'fixed',bottom:20,right:88,zIndex:9999,padding:'8px 16px',borderRadius:9,border:`1px solid ${T.gold}`,background:T.bg,color:T.gold,fontSize:12,fontWeight:700,cursor:pdfLoading?'default':'pointer',opacity:pdfLoading?0.6:1,boxShadow:'0 2px 12px rgba(0,0,0,0.5)'}}>
-          {pdfLoading?'⏳ Generating…':'⬇ Export PDF'}
-        </button>}
+        {screen==="dashboard"&&<Dashboard decision={decision} gaps={gaps} onNav={id=>navigate({screen:id})} onExportPDF={generatePDF} pdfLoading={pdfLoading}/>}
         {screen==="scoring"&&<ScoringScreen assessmentId={context?.assessmentId} oes={oes} standards={standards} onRefresh={()=>loadData(context)}/>}
         {screen==="gaps"&&<GapFixScreen assessmentId={context?.assessmentId} gaps={gaps} onRefresh={()=>loadData(context)} onDownloadReport={generatePDF} pdfLoading={pdfLoading}/>}
         {screen==="committees"&&<CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate} selectedProgramme={selectedProgramme}/>}
@@ -12356,8 +12410,6 @@ export default function App() {
         {screen==="dental-elc"&&renderDentalTab()}
       </div>
 
-      {hasTour&&<button onClick={()=>setTourStep(0)} title="Replay app tour"
-        style={{position:"fixed",bottom:96,right:20,zIndex:9997,width:48,height:48,borderRadius:24,background:T.gold,border:"none",color:T.bg,fontSize:22,fontWeight:900,cursor:"pointer",boxShadow:`0 4px 16px rgba(201,168,76,0.5)`,display:"flex",alignItems:"center",justifyContent:"center",lineHeight:1}}>?</button>}
       {selectedProgramme==="shco-full"&&(
         <AIAssistantWidget
           T={T}
