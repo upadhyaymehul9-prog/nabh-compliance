@@ -8631,7 +8631,8 @@ export default function App() {
     setLoading(false);
     if(ctx?.hospitalId){
       const{data:hospWt}=await supabase.from("hospitals").select("walkthrough_dismissed").eq("id",ctx.hospitalId).maybeSingle();
-      if(hospWt&&!hospWt.walkthrough_dismissed)setTourStep(0);
+      // Auto-trigger disabled: tour targeted the removed ••• button. Manual "Tour" button in drawer footer still works.
+      // if(hospWt&&!hospWt.walkthrough_dismissed)setTourStep(0);
     }
   },[]);
 
