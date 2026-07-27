@@ -30,3 +30,6 @@ supabase/.temp/
 # LinkedIn automation logs (local / CI)
 marketing/linkedin/post-log.json
 .env.linkedin
+
+# OPD Manager — standalone repo (see github.com/upadhyaymehul9-prog/opd-manager)
+opd-manager/
