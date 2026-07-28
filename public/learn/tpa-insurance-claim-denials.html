@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why TPA and insurance claims get rejected — and how to recover them | AccredReady</title>
+  <meta name="description" content="The seven categories of TPA claim rejection in Indian hospitals, why pre-authorisation failures cost the most, and how to resubmit, appeal and track every claim." />
+  <meta name="keywords" content="TPA claim rejection, TPA claim rejection hospital, insurance claim denial hospital India, pre-authorisation failure hospital, TPA claim resubmission, hospital claim appeal IRDAI, TPA rejection tracking" />
+  <link rel="canonical" href="https://accredready.in/learn/tpa-insurance-claim-denials" />
+  <meta property="og:title" content="Why TPA and insurance claims get rejected in Indian hospitals — and how to recover them" />
+  <meta property="og:description" content="The seven categories of TPA claim rejection, how pre-authorisation failures drive the most costly denials, the resubmission and appeal process, and how to build a tracking system that closes the revenue gap." />
+  <meta property="og:url" content="https://accredready.in/learn/tpa-insurance-claim-denials" />
+  <meta property="og:image" content="https://accredready.in/logo512.png" />
+  <meta property="og:type" content="article" />
+
+  <!-- FAQPage schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are the most common reasons TPA insurance claims get rejected in Indian hospitals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most common reasons are: (1) pre-authorisation not obtained or insufficient — the single highest-value rejection category; (2) documentation deficiency — discharge summary incomplete, investigation reports not attached, treating doctor signature missing; (3) diagnosis or procedure coding mismatch between the pre-auth, the claim form, and the discharge summary; (4) claim submitted past the TPA's deadline; (5) treatment categorised as a policy exclusion. Pre-auth failures and documentation deficiencies are the most recoverable — they can typically be resubmitted with corrections. Policy exclusion rejections are usually final."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a pre-authorisation and why do hospitals lose TPA claims because of it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pre-authorisation (pre-auth) is the TPA's written approval for a planned admission and treatment, issued before the procedure takes place. Without valid pre-auth, most TPAs will not settle the claim. Hospitals lose claims to pre-auth failures in four specific ways: (1) pre-auth not obtained at all for a planned admission; (2) pre-auth obtained for one procedure but a different or additional procedure performed intraoperatively without seeking enhancement; (3) pre-auth amount insufficient for the actual stay duration, and extension not sought during admission; (4) emergency admissions where retrospective pre-auth was required but not applied for within the TPA's specified window — usually 24 to 48 hours of emergency admission."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I appeal or resubmit a rejected TPA claim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For deficiency claims: compile the requested documents and resubmit with a deficiency response cover letter within the TPA's specified window — usually 30 to 60 days from the rejection date. For denial claims: submit a formal written appeal to the insurance company with supporting clinical documentation, reference the policy terms, and request reconsideration. If the denial is upheld, escalate to the Insurance Ombudsman. Track every rejected claim individually — batch write-offs are the primary cause of permanent revenue loss."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How should a hospital track TPA claim rejections to reduce revenue leakage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Maintain a rejection register with one row per rejected claim, recording: TPA name, claim number, rejection date, rejection reason, claim value, resubmission deadline, resubmission date, outcome, and amount recovered or written off. Calculate monthly: rejection rate by TPA, recovery rate, and write-off rate. Review this data by TPA to identify which TPAs have the highest rejection rates and which rejection reasons are most common — this drives your prevention interventions and TPA relationship escalations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can NABH accreditation help reduce TPA claim rejection rates?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — significantly. The most common TPA rejection reasons are documentation deficiencies and coding mismatches. NABH standards require clinical documentation to meet specific completeness criteria — discharge summaries must include diagnosis, treatment, investigations, and follow-up; medical records must be completed within defined timelines; medication records must be accurate. Hospitals that implement NABH documentation standards find that their claim rejection rate falls because the documentation TPAs require for settlement is the same documentation NABH requires for accreditation."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Article schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Why TPA and insurance claims get rejected in Indian hospitals — and how to recover them",
+    "description": "The seven categories of TPA claim rejection, how pre-authorisation failures drive the most costly denials, the resubmission and appeal process, and how to build a tracking system that closes the revenue gap.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Mehul Upadhyay",
+      "jobTitle": "Healthcare Operations Leader"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AccredReady",
+      "url": "https://accredready.in"
+    },
+    "datePublished": "2026-07-28",
+    "dateModified": "2026-07-28",
+    "mainEntityOfPage": "https://accredready.in/learn/tpa-insurance-claim-denials"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          ink: '#0B1B2B', paper: '#FBFDFD', verify: '#0E8A5F', verifydark: '#0A6B4A',
+          signal: '#D97706', alert: '#DC2626', slate: '#4B5D6E', hairline: '#DCE6E4', mint: '#EBF4F0'
+        },
+        fontFamily: {
+          display: ['"Bricolage Grotesque"', 'sans-serif'],
+          body: ['"IBM Plex Sans"', 'sans-serif'],
+          mono: ['"IBM Plex Mono"', 'monospace']
+        }
+      }}
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer components {
+      .tbl { @apply w-full border-collapse text-[0.9rem]; }
+      .tbl th { @apply bg-mint px-4 py-3 text-left font-mono text-[0.78rem] font-medium uppercase tracking-wide text-ink; }
+      .tbl td { @apply border-b border-hairline px-4 py-2.5 align-top text-slate; }
+      .tbl tr:last-child td { @apply border-b-0; }
+      .tbl strong { @apply text-ink; }
+    }
+  </style>
+  <style>
+    body { background: #FBFDFD; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-body text-ink leading-[1.7] antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-lg focus:bg-verify focus:px-4 focus:py-2 focus:text-white focus:outline-none">Skip to content</a>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-[100] border-b border-hairline bg-paper/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="https://accredready.in" class="rounded font-display text-[22px] font-bold tracking-[-0.01em] text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2">AccredReady</a>
+      <a href="https://accredready.in" class="rounded-xl bg-verify px-5 py-2.5 text-[15px] font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 motion-reduce:transform-none motion-reduce:transition-none">Start free trial</a>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <header class="mx-auto max-w-3xl px-5 pb-10 pt-16 text-center sm:px-8">
+      <span class="mb-6 inline-flex items-center gap-2 rounded-lg border border-verify/20 bg-mint px-3 py-1.5 font-mono text-[13px] uppercase tracking-wide text-verify">
+        <span class="h-1.5 w-1.5 rounded-full bg-verify"></span>NABH Guide · Revenue Leakage
+      </span>
+      <h1 class="mb-5 font-display text-[clamp(1.8rem,4vw,3rem)] font-bold leading-[1.1] tracking-[-0.02em]">Why TPA and insurance claims get rejected<br>in Indian hospitals — and how to recover them</h1>
+      <p class="mx-auto max-w-2xl text-lg text-slate">The seven categories of TPA claim rejection, how pre-authorisation failures drive the most costly denials, the resubmission and appeal process, and how to build a tracking system that closes the revenue gap.</p>
+    </header>
+
+    <article class="mx-auto max-w-3xl px-5 pb-16 sm:px-8 [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-bold [&_h3]:mb-2 [&_h3]:mt-7 [&_h3]:font-display [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-ink [&_p]:mb-4 [&_p]:text-[0.97rem] [&_p]:text-slate [&_strong]:text-ink">
+
+      <!-- Author byline -->
+      <div class="mb-8 flex flex-wrap items-center gap-x-4 gap-y-1 border-b border-hairline pb-5 text-[0.83rem] text-slate">
+        <span class="flex items-center gap-1.5">
+          <span class="h-6 w-6 rounded-full bg-mint flex items-center justify-center font-display text-[11px] font-bold text-verify" aria-hidden="true">MU</span>
+          <strong class="text-ink">Dr. Mehul Upadhyay</strong>
+        </span>
+        <span class="text-slate/50">·</span>
+        <span>Healthcare Operations Leader</span>
+        <span class="text-slate/50">·</span>
+        <time datetime="2026-07-28">Published: July 2026</time>
+        <span class="text-slate/50">·</span>
+        <time datetime="2026-07-28">Updated: July 2026</time>
+      </div>
+
+      <!-- AEO opening — direct answer first -->
+      <p class="!text-[1.05rem] !text-ink">
+        TPA (Third Party Administrator) claims represent 20 to 40 percent of billing revenue in many Indian hospitals, and rejection rates of 10 to 20 percent of submitted claim value are routine. The deeper problem is not the rejection itself — most deficiency rejections are recoverable if resubmitted correctly and within the payer's appeal window. The deeper problem is that <strong>most rejected claims are never resubmitted</strong>. They are either written off in a batch process at quarter-end, or they age in outstanding receivables without active follow-up until they fall outside the recovery window. A hospital with ₹3 crore per month in TPA billing and a 15 percent write-off rate is losing ₹45 lakh monthly to a process failure, not a coverage problem. This guide breaks down why each rejection category happens, which ones are recoverable, and how to build the tracking system that prevents permanent write-offs.
+      </p>
+
+      <div class="my-5 rounded-xl border border-verify/30 bg-mint px-6 py-4">
+        <p class="!mb-0 !text-ink"><strong>The distinction that matters: deficiency vs. denial.</strong> A deficiency claim is a soft rejection — the TPA wants more documentation or a correction. It is recoverable if resubmitted within the window. A denial is a coverage decision — the TPA has ruled the claim is not payable under the policy. Denials require an appeal to the insurance company, not just a document resubmission. Treating every rejection the same way wastes time; categorising them correctly determines the right response.</p>
+      </div>
+
+      <!-- SEVEN CATEGORIES -->
+      <h2>The seven categories of TPA claim rejection</h2>
+      <p>Every TPA claim rejection falls into one of these categories. The category determines whether the claim is recoverable, who is responsible for resubmission, and what the timeline is.</p>
+
+      <div class="my-6 overflow-x-auto rounded-xl border border-hairline shadow-sm">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Rejection category</th>
+              <th>What causes it</th>
+              <th>Is it recoverable?</th>
+              <th>Recovery action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Pre-auth failure</strong></td>
+              <td>Pre-authorisation not obtained before admission, obtained for wrong procedure, or not enhanced for extended stay or additional procedures</td>
+              <td>Sometimes</td>
+              <td>Apply for retrospective pre-auth (if TPA allows); escalate to insurance company. Emergency admissions often have a 24–48 hour retrospective window.</td>
+            </tr>
+            <tr>
+              <td><strong>Documentation deficiency</strong></td>
+              <td>Discharge summary incomplete; investigation reports missing; treating doctor signature absent; case sheet not attached; indoor case records not provided</td>
+              <td>Yes</td>
+              <td>Compile missing documents and resubmit as a deficiency response within the TPA's specified window — usually 30 to 60 days from the rejection date.</td>
+            </tr>
+            <tr>
+              <td><strong>Coding / diagnosis mismatch</strong></td>
+              <td>ICD-10 diagnosis code on claim form does not match the pre-auth diagnosis; procedure code does not match the treatment described in the discharge summary</td>
+              <td>Yes</td>
+              <td>Correct the codes with clinical team input; resubmit with a cover letter explaining the correction. Ensure discharge summary and claim form are aligned before resubmission.</td>
+            </tr>
+            <tr>
+              <td><strong>Tariff dispute</strong></td>
+              <td>Amount claimed exceeds the contracted rate in the TPA empanelment agreement; package claimed when itemised billing was applicable, or vice versa</td>
+              <td>Partially</td>
+              <td>Review empanelment agreement for the specific procedure. Resubmit at contracted rate; dispute the rate formally if the agreement was not followed correctly.</td>
+            </tr>
+            <tr>
+              <td><strong>Policy exclusion</strong></td>
+              <td>Treatment falls under a specific exclusion in the patient's policy — pre-existing condition waiting period, cosmetic procedure, non-covered illness</td>
+              <td>Rarely</td>
+              <td>Request the specific policy clause from the TPA. If the exclusion is incorrectly applied, appeal to the insurance company and if needed the Insurance Ombudsman.</td>
+            </tr>
+            <tr>
+              <td><strong>Submission deadline miss</strong></td>
+              <td>Claim submitted after the TPA's post-discharge submission deadline (typically 15–30 days for cashless; 30–90 days for reimbursement claims)</td>
+              <td>Sometimes</td>
+              <td>Submit a late submission request with a documented reason for the delay. Most TPAs have a condonation process for first-time late submissions.</td>
+            </tr>
+            <tr>
+              <td><strong>Duplicate / administrative</strong></td>
+              <td>Claim already submitted and processed; patient details mismatch (name spelling, date of birth, policy number error); wrong TPA submitted to</td>
+              <td>Yes</td>
+              <td>Verify claim status in TPA portal before resubmitting. Correct the administrative error and resubmit. Check patient data at admission to prevent recurrence.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- PRE-AUTH -->
+      <h2>Pre-authorisation: the highest-value failure point</h2>
+      <p>Pre-auth failures are the most expensive category of TPA rejection because they are often large-value claims — planned surgeries, oncology admissions, cardiac procedures — and because they are partially preventable at the front end.</p>
+
+      <h3>1. Pre-auth not obtained at all</h3>
+      <p>Planned admissions — elective surgeries, chemotherapy cycles, dialysis — require pre-auth before the patient is admitted. The breakdown usually happens when admission is confirmed but the billing team is not notified in time to apply for pre-auth, or when the patient carries a corporate card that staff assume covers pre-auth automatically. Pre-auth must be a mandatory step in the admission workflow, not an afterthought.</p>
+
+      <h3>2. Procedure change without enhancement</h3>
+      <p>Pre-auth is granted for a specific procedure. If the surgeon decides intraoperatively to perform an additional or different procedure — a common scenario in laparoscopic-to-open conversions, or when a concurrent finding is addressed — the claim must include that procedure. If pre-auth was not sought for it, that portion of the bill will be rejected. Operating room staff and surgical coordinators must communicate intraoperative changes to billing within 24 hours so enhancement requests can be filed.</p>
+
+      <h3>3. Pre-auth amount insufficient — no extension sought</h3>
+      <p>Pre-auth is typically granted for an estimated stay and amount. When a patient's stay extends beyond the approved duration — due to complications, ICU admission, or post-operative issues — a pre-auth extension must be sought before the approved amount is exhausted. Hospitals frequently miss this because no one is tracking the running bill against the approved pre-auth amount during the admission. The TPA settles up to the approved amount and rejects the balance.</p>
+
+      <h3>4. Emergency admission — retrospective pre-auth not filed</h3>
+      <p>Emergency admissions cannot obtain advance pre-auth by definition. Most TPAs allow a retrospective pre-auth window — typically 24 to 48 hours from the time of admission — within which the hospital must notify the TPA. If this window is missed, the cashless claim is rejected. Emergency department staff and billing must have a protocol for notifying the TPA coordinator of every insurance patient admitted through emergency, regardless of shift or time of day.</p>
+
+      <!-- RESUBMISSION PROCESS -->
+      <h2>The resubmission and appeal process — step by step</h2>
+
+      <ol class="my-6 space-y-5">
+        <li class="flex items-start gap-4">
+          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-verify font-display font-bold text-white text-sm">1</span>
+          <div>
+            <h3 class="!mt-0 !mb-1">Categorise every rejection immediately on receipt</h3>
+            <p class="!mb-0 !text-[0.92rem]">When a rejection arrives, categorise it the same day using the seven categories above. The category determines the next action. Do not batch rejections — each must be individually reviewed. A rejection sitting unread for two weeks may fall outside the resubmission window.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-verify font-display font-bold text-white text-sm">2</span>
+          <div>
+            <h3 class="!mt-0 !mb-1">For deficiency claims: compile and resubmit within the window</h3>
+            <p class="!mb-0 !text-[0.92rem]">Most TPAs specify in the rejection letter exactly which documents are missing. Compile those documents — discharge summary with treating doctor's signature, investigation reports, indoor case records, pre-auth letter if needed — and resubmit with a cover letter referencing the original claim number and the rejection reference. Obtain a resubmission acknowledgement. The resubmission window is typically 30 to 60 days from the rejection date — check each TPA's agreement.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-verify font-display font-bold text-white text-sm">3</span>
+          <div>
+            <h3 class="!mt-0 !mb-1">For denial claims: appeal to the insurance company directly</h3>
+            <p class="!mb-0 !text-[0.92rem]">If the TPA has made a coverage decision (policy exclusion, pre-auth denied, benefit not applicable), the path is a formal appeal to the insurance company, not the TPA. Write a formal appeal letter to the insurer's grievance cell, attach the clinical case summary, reference the specific policy clause the TPA cited, and provide medical justification from the treating doctor. Most insurers must respond to written grievances within 15 days per IRDAI guidelines.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-verify font-display font-bold text-white text-sm">4</span>
+          <div>
+            <h3 class="!mt-0 !mb-1">Escalate persistent disputes to the Insurance Ombudsman</h3>
+            <p class="!mb-0 !text-[0.92rem]">If the insurer's internal appeal is rejected and you believe the rejection is incorrect, the patient (or the hospital on the patient's behalf) can escalate to the Insurance Ombudsman — a free, quasi-judicial grievance resolution mechanism under IRDAI. The Ombudsman cannot be approached until the insurer's internal grievance process has been exhausted.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-verify font-display font-bold text-white text-sm">5</span>
+          <div>
+            <h3 class="!mt-0 !mb-1">Track every resubmission to final resolution</h3>
+            <p class="!mb-0 !text-[0.92rem]">A resubmission is not a recovery until payment is received. Track each resubmitted claim to its final state: settled, re-rejected, or written off. The recovery rate on resubmitted deficiency claims — when done correctly and within the window — is typically 60 to 80 percent. The write-off rate on claims never resubmitted is 100 percent.</p>
+          </div>
+        </li>
+      </ol>
+
+      <!-- TRACKING SYSTEM -->
+      <h2>Building a TPA rejection tracking system</h2>
+      <p>The difference between a hospital that recovers 70 percent of its rejected TPA claim value and one that recovers 20 percent is almost entirely a tracking and accountability difference, not a clinical or policy difference.</p>
+
+      <div class="my-6 overflow-x-auto rounded-xl border border-hairline shadow-sm">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Column in rejection register</th>
+              <th>What it tracks</th>
+              <th>Why it matters</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>TPA name</strong></td>
+              <td>Which TPA issued the rejection</td>
+              <td>Identifies which TPAs have disproportionately high rejection rates — trigger for relationship escalation</td>
+            </tr>
+            <tr>
+              <td><strong>Claim number + patient name</strong></td>
+              <td>Unique identifier for the claim</td>
+              <td>Enables status tracking across resubmissions without confusion</td>
+            </tr>
+            <tr>
+              <td><strong>Rejection date + reason code</strong></td>
+              <td>When rejected and why (from the seven categories)</td>
+              <td>Enables analysis of which rejection reasons are most common and most costly</td>
+            </tr>
+            <tr>
+              <td><strong>Claim value</strong></td>
+              <td>Value of the rejected claim in rupees</td>
+              <td>Prioritises resubmission effort — high-value claims warrant more aggressive follow-up</td>
+            </tr>
+            <tr>
+              <td><strong>Resubmission deadline</strong></td>
+              <td>Last date by which resubmission is possible</td>
+              <td>Prevents deadline miss, which converts a recoverable rejection into a permanent write-off</td>
+            </tr>
+            <tr>
+              <td><strong>Resubmission date + outcome</strong></td>
+              <td>When resubmitted and what happened</td>
+              <td>Calculates actual recovery rate; surfaces TPAs with poor resubmission acceptance rates</td>
+            </tr>
+            <tr>
+              <td><strong>Amount recovered / written off</strong></td>
+              <td>Final financial outcome</td>
+              <td>The only number that tells you whether the resubmission process is actually working</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="my-5 rounded-xl border border-signal/30 bg-signal/5 px-6 py-4">
+        <p class="!mb-0 !text-ink">Calculate these three metrics monthly: <strong>rejection rate</strong> (total rejected value ÷ total submitted value, by TPA), <strong>recovery rate</strong> (total recovered from resubmissions ÷ total rejected value), and <strong>write-off rate</strong> (total permanently written off ÷ total rejected value). If your recovery rate is below 50 percent, the resubmission process is the problem, not the rejection rate.</p>
+      </div>
+
+      <!-- PREVENTION -->
+      <h2>How to reduce future TPA claim rejections</h2>
+      <p>Most rejection prevention happens at admission and during the stay, not at the billing stage. By the time a claim is being prepared, the underlying cause of most rejections has already occurred.</p>
+
+      <h3>At admission — insurance verification checklist</h3>
+      <p>For every insurance patient: verify policy is active, confirm coverage for the planned procedure, identify if pre-auth is required, obtain pre-auth before admission for planned cases, and record the pre-auth reference number and approved amount in the patient file. Assign one staff member as the TPA coordinator for each insurance admission.</p>
+
+      <h3>During admission — active pre-auth monitoring</h3>
+      <p>Track the running bill daily against the approved pre-auth amount. If the patient's running cost approaches the approved limit and discharge is not imminent, apply for pre-auth enhancement immediately. Flag any change in the treatment plan to the billing team within 24 hours so enhancement requests can be filed before the procedure takes place.</p>
+
+      <h3>At discharge — pre-submission document check</h3>
+      <p>Before the final bill is generated, run a document checklist: discharge summary complete and signed by treating doctor, all investigation reports attached, medication record reconciled with billing, procedure codes verified against pre-auth diagnosis. Deficiencies identified at this stage can be corrected before submission — deficiencies identified after rejection require a resubmission process with a 30–60 day delay.</p>
+
+      <h3>Ongoing — coding training and TPA relationship management</h3>
+      <p>Train billing staff on ICD-10 coding annually — coding errors are a consistent rejection source that training directly addresses. Review each TPA's empanelment agreement annually and ensure the billing rate card matches. Maintain a direct contact at each major TPA's hospital relations team for escalation of disputes.</p>
+
+      <!-- FAQ SECTION -->
+      <h2>Frequently asked questions</h2>
+
+      <h3>What are the most common reasons TPA insurance claims get rejected in Indian hospitals?</h3>
+      <p>The most common reasons are: (1) pre-authorisation not obtained or insufficient — the single highest-value rejection category; (2) documentation deficiency — discharge summary incomplete, investigation reports not attached, treating doctor signature missing; (3) diagnosis or procedure coding mismatch between the pre-auth, the claim form, and the discharge summary; (4) claim submitted past the TPA's deadline; (5) treatment categorised as a policy exclusion. Pre-auth failures and documentation deficiencies are the most recoverable — they can typically be resubmitted with corrections. Policy exclusion rejections are usually final.</p>
+
+      <h3>What is a pre-authorisation and why do hospitals lose TPA claims because of it?</h3>
+      <p>Pre-authorisation (pre-auth) is the TPA's written approval for a planned admission and treatment, issued before the procedure takes place. Without valid pre-auth, most TPAs will not settle the claim. Hospitals lose claims to pre-auth failures in four specific ways: (1) pre-auth not obtained at all for a planned admission; (2) pre-auth obtained for one procedure but a different or additional procedure performed intraoperatively without seeking enhancement; (3) pre-auth amount insufficient for the actual stay duration, and extension not sought during admission; (4) emergency admissions where retrospective pre-auth was required but not applied for within the TPA's specified window — usually 24 to 48 hours of emergency admission.</p>
+
+      <h3>How do I appeal or resubmit a rejected TPA claim?</h3>
+      <p>For deficiency claims: compile the requested documents and resubmit with a deficiency response cover letter within the TPA's specified window — usually 30 to 60 days from the rejection date. For denial claims: submit a formal written appeal to the insurance company with supporting clinical documentation, reference the policy terms, and request reconsideration. If the denial is upheld, escalate to the Insurance Ombudsman. Track every rejected claim individually — batch write-offs are the primary cause of permanent revenue loss.</p>
+
+      <h3>How should a hospital track TPA claim rejections to reduce revenue leakage?</h3>
+      <p>Maintain a rejection register with one row per rejected claim, recording: TPA name, claim number, rejection date, rejection reason, claim value, resubmission deadline, resubmission date, outcome, and amount recovered or written off. Calculate monthly: rejection rate by TPA, recovery rate, and write-off rate. Review this data by TPA to identify which TPAs have the highest rejection rates and which rejection reasons are most common — this drives your prevention interventions and TPA relationship escalations.</p>
+
+      <h3>Can NABH accreditation help reduce TPA claim rejection rates?</h3>
+      <p>Yes — significantly. The most common TPA rejection reasons are documentation deficiencies and coding mismatches. NABH standards require clinical documentation to meet specific completeness criteria — discharge summaries must include diagnosis, treatment, investigations, and follow-up; medical records must be completed within defined timelines; medication records must be accurate. Hospitals that implement NABH documentation standards find that their claim rejection rate falls because the documentation TPAs require for settlement is the same documentation NABH requires for accreditation.</p>
+
+      <!-- SOURCE -->
+      <div class="my-8 rounded-xl border border-hairline bg-white px-5 py-4 text-[0.83rem] text-slate">
+        <p class="!mb-0"><strong class="text-ink">Sources and notes:</strong> TPA claim rejection percentages are practitioner estimates from hospital finance operations. IRDAI grievance resolution timelines and Insurance Ombudsman process: <a href="https://irdai.gov.in" target="_blank" rel="noopener noreferrer" class="rounded text-verify underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-verify">irdai.gov.in</a>. Specific resubmission windows vary by TPA and empanelment agreement — verify with each TPA directly. NABH documentation requirements: NABH HCO 6th Edition (2024), available at <a href="https://nabh.co" target="_blank" rel="noopener noreferrer" class="rounded text-verify underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-verify">nabh.co</a>.</p>
+      </div>
+
+      <!-- RELATED -->
+      <div class="my-6 rounded-xl border border-hairline bg-white px-5 py-4 text-[0.9rem]">
+        <p class="!mb-2 font-mono text-[12px] uppercase tracking-wide text-slate">Related guides</p>
+        <ul class="space-y-1.5 !mb-0">
+          <li>→ <a href="https://accredready.in/learn/hospital-revenue-leakage-guide" class="rounded text-verify underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-verify">Hospital revenue leakage — all sources, scale and how to audit it</a></li>
+          <li>→ <a href="https://accredready.in/learn/nabh-gap-analysis" class="rounded text-verify underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-verify">NABH gap analysis — how to score every OE before your assessment</a></li>
+          <li>→ <a href="https://accredready.in/learn/nabh-accreditation-timeline" class="rounded text-verify underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-verify">NABH accreditation timeline — how long preparation takes</a></li>
+          <li>→ <a href="https://accredready.in/learn/nabh-kpi-tracking" class="rounded text-verify underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-verify">NABH KPI tracking — which indicators to monitor and how</a></li>
+        </ul>
+      </div>
+
+      <!-- CTA -->
+      <div class="my-10 rounded-2xl bg-ink px-6 py-12 text-center">
+        <p class="font-mono text-[12px] uppercase tracking-widest text-white/50 mb-3">AccredReady</p>
+        <h2 class="!mt-0 font-display text-2xl font-bold !text-white">Audit your hospital's revenue leakage — free</h2>
+        <p class="mx-auto mt-3 max-w-lg !text-white/70">The AccredReady Revenue Leakage Review checks every major leakage point department by department — billing, OT, pharmacy, TPA, inventory, credit — and gives you a prioritised gap report in under 15 minutes.</p>
+        <a href="https://accredready.in/revenue-leakage-review/" class="mt-5 inline-block rounded-xl bg-verify px-8 py-3.5 font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start free revenue leakage review →</a>
+        <p class="!mt-4 !mb-0 !text-[0.85rem] !text-white/40">Or <a href="https://accredready.in" class="text-white/60 underline hover:text-white">start your full NABH preparation on AccredReady</a></p>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-white/70">
+    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+      <nav aria-label="Footer" class="flex flex-wrap justify-center gap-x-7 gap-y-3 text-[14px]">
+        <a href="https://accredready.in" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
+        <a href="https://accredready.in/nabh-accreditation-software" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Software</a>
+        <a href="https://accredready.in/nabh-6th-edition-standards" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">6th Edition Guide</a>
+        <a href="https://accredready.in/nabh-internal-audit-checklist" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Internal Audit</a>
+        <a href="https://accredready.in/learn/nabh-programmes-comparison" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Programmes Guide</a>
+        <button onclick="document.getElementById('contactModal').style.display='flex'" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink" style="background:none;border:none;color:inherit;font-size:inherit;cursor:pointer;font-family:inherit;padding:0;">Contact Us</button>
+        <a href="https://accredready.in/privacy" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
+      </nav>
+      <p class="mt-8 text-center font-mono text-[12px] text-white/45">© 2026 AccredReady by MK Tech.</p>
+    </div>
+  </footer>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.75);align-items:center;justify-content:center;padding:20px;">
+    <div onclick="event.stopPropagation()" style="background:#081525;border:1px solid #1e3a52;border-radius:16px;padding:28px 24px;max-width:420px;width:100%;position:relative;max-height:90vh;overflow-y:auto;">
+      <button onclick="document.getElementById('contactModal').style.display='none';document.getElementById('cSuccess').style.display='none';document.getElementById('cError').style.display='none';document.getElementById('cForm').reset();" style="position:absolute;top:12px;right:14px;background:none;border:none;color:#7a9db8;font-size:20px;cursor:pointer;line-height:1;">&#x2715;</button>
+      <div style="font-size:11px;letter-spacing:3px;color:#c9a84c;margin-bottom:8px;text-transform:uppercase;">AccredReady</div>
+      <div style="font-size:20px;font-weight:700;color:#eef4f9;margin-bottom:18px;">Contact Us</div>
+      <div id="cSuccess" style="display:none;color:#0E8A5F;font-size:15px;padding:14px;background:#EBF4F0;border-radius:8px;margin-bottom:16px;">Thank you! We'll get back to you soon.</div>
+      <div id="cError" style="display:none;color:#DC2626;font-size:14px;padding:12px;background:#fef2f2;border-radius:8px;margin-bottom:16px;">Something went wrong, please try again.</div>
+      <form id="cForm" onsubmit="submitContact(event)">
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Name *</label><input type="text" name="name" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Email *</label><input type="email" name="email" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Mobile *</label><input type="tel" name="phone" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:18px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Message *</label><textarea name="message" required rows="4" style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;resize:vertical;font-family:inherit;"></textarea></div>
+        <button type="submit" id="cSubmit" style="width:100%;padding:12px;background:#0E8A5F;border:none;border-radius:10px;color:#fff;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;">Send Message</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.getElementById('contactModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.style.display = 'none';
+        document.getElementById('cSuccess').style.display = 'none';
+        document.getElementById('cError').style.display = 'none';
+        document.getElementById('cForm').reset();
+      }
+    });
+    async function submitContact(e) {
+      e.preventDefault();
+      var btn = document.getElementById('cSubmit');
+      btn.disabled = true; btn.textContent = 'Sending…';
+      document.getElementById('cSuccess').style.display = 'none';
+      document.getElementById('cError').style.display = 'none';
+      var f = e.target;
+      try {
+        var r = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            access_key: '2aaadfc3-c669-4b2b-92b8-6d6bee4faee1',
+            name: f.name.value, email: f.email.value,
+            phone: f.phone.value, message: f.message.value
+          })
+        });
+        var j = await r.json();
+        if (r.ok && j.success) { document.getElementById('cSuccess').style.display = 'block'; f.reset(); }
+        else document.getElementById('cError').style.display = 'block';
+      } catch (err) { document.getElementById('cError').style.display = 'block'; }
+      btn.disabled = false; btn.textContent = 'Send Message';
+    }
+  </script>
+</body>
+</html>
