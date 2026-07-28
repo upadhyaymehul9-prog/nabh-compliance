@@ -30,3 +30,7 @@ supabase/.temp/
 # LinkedIn automation logs (local / CI)
 marketing/linkedin/post-log.json
 .env.linkedin
+
+# Local agent skill plugins (vendored, contains contact PII in data/)
+.agents/
+AGENTS.md
