@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revenue cycle management for small hospitals in India | AccredReady</title>
+  <meta name="description" content="How small Indian hospitals can manage the revenue cycle from patient registration to final collection — where cycles break down and how to build a simple RCM tracking process without enterprise software." />
+  <meta name="keywords" content="revenue cycle management small hospitals India, hospital RCM India, hospital billing cycle India, patient registration to collection, hospital revenue cycle process, RCM without software India, small hospital billing" />
+  <link rel="canonical" href="https://accredready.in/learn/revenue-cycle-management-small-hospitals" />
+  <meta property="og:title" content="Revenue cycle management for small hospitals in India: registration to final collection" />
+  <meta property="og:description" content="The complete revenue cycle for small Indian hospitals — where it breaks down at each stage, and how to build a simple tracking process without expensive enterprise software." />
+  <meta property="og:url" content="https://accredready.in/learn/revenue-cycle-management-small-hospitals" />
+  <meta property="og:image" content="https://accredready.in/logo512.png" />
+  <meta property="og:type" content="article" />
+
+  <!-- FAQPage schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the revenue cycle in a hospital?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The hospital revenue cycle is the sequence of administrative and clinical steps from the moment a patient is registered to the moment payment is collected and reconciled. It includes patient registration (capturing demographics and insurance details), pre-authorisation for insured patients, service delivery and charge capture, billing and claim generation, claim submission to TPAs or insurance companies, payment posting, follow-up on unpaid or rejected claims, and final collection of any patient balance outstanding. A breakdown at any single stage — a registration error, a missed charge, a claim rejection that is not followed up — results in revenue that is billed late, underbilled, or never collected."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where do small hospitals most commonly lose revenue in the billing cycle?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The three highest-frequency breakdowns in small hospital revenue cycles are: (1) charge capture gaps — services rendered during an admission that are not entered into the billing system before discharge, particularly for ancillary services like physiotherapy, dietary consultations, and nursing procedures; (2) TPA pre-authorisation failures — cashless insurance patients admitted without obtaining pre-auth for the procedures eventually performed, leading to claim denials; and (3) discharge collection failures — patients discharged without settling outstanding balances, with insufficient deposits to cover actual services. In each case the root cause is a process gap at a specific handoff between departments, not a systemic fraud or system failure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a small hospital manage the revenue cycle without expensive software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — a significant portion of RCM discipline is process-based, not software-based. A small hospital with fewer than 100 beds can implement effective revenue cycle management using a combination of Google Sheets or Excel for tracking, a daily discharge reconciliation process, a TPA claim register maintained by the billing team, and a pre-discharge collection checklist at the billing counter. The key is discipline in running the same checks every day, not the sophistication of the software. Software automates these checks; the manual version requires staff who perform them consistently without automation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a TPA claim rejection and how does it affect the revenue cycle?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A TPA (Third Party Administrator) claim rejection occurs when an insurer or TPA declines a submitted claim — typically because documentation was incomplete, the procedure was not pre-authorised, coding was incorrect, or the claim was submitted after the payer's deadline. In the revenue cycle, a rejection creates an open receivable that must be actively managed: the claim must be corrected and resubmitted within the payer's appeal window, or it is written off as bad debt. In many small hospitals, rejected TPA claims are not tracked as a discrete category and are silently written off, representing one of the highest-value revenue cycle leakage points."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What daily and weekly checks should a small hospital billing team run?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Daily: (1) reconcile the previous day's discharge list against bills raised — every discharged patient should have a final bill; (2) check pre-auth status for all current admissions who are TPA/cashless patients; (3) post payments received and match against expected amounts. Weekly: (1) review outstanding TPA claims aged more than 15 days — call or follow up with each TPA; (2) reconcile pharmacy dispensing records against patient medication charges for a sample of discharges; (3) review open receivables from patients who left without settling their balance. Monthly: calculate claim rejection rate as a percentage of total TPA billings, and track whether it is improving."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Article schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Revenue cycle management for small hospitals in India: registration to final collection",
+    "description": "The complete revenue cycle for small Indian hospitals — where it breaks down at each stage, and how to build a simple tracking process without expensive enterprise software.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Mehul Upadhyay",
+      "jobTitle": "Healthcare Operations Leader"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AccredReady",
+      "url": "https://accredready.in"
+    },
+    "datePublished": "2026-07-28",
+    "dateModified": "2026-07-28",
+    "mainEntityOfPage": "https://accredready.in/learn/revenue-cycle-management-small-hospitals"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          ink: '#0B1B2B', paper: '#FBFDFD', verify: '#0E8A5F', verifydark: '#0A6B4A',
+          signal: '#D97706', alert: '#DC2626', slate: '#4B5D6E', hairline: '#DCE6E4', mint: '#EBF4F0'
+        },
+        fontFamily: {
+          display: ['"Bricolage Grotesque"', 'sans-serif'],
+          body: ['"IBM Plex Sans"', 'sans-serif'],
+          mono: ['"IBM Plex Mono"', 'monospace']
+        }
+      }}
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer components {
+      .tbl { @apply w-full border-collapse text-[0.9rem]; }
+      .tbl th { @apply bg-mint px-4 py-3 text-left font-mono text-[0.78rem] font-medium uppercase tracking-wide text-ink; }
+      .tbl td { @apply border-b border-hairline px-4 py-2.5 align-top text-slate; }
+      .tbl tr:last-child td { @apply border-b-0; }
+      .tbl strong { @apply text-ink; }
+    }
+  </style>
+  <style>
+    body { background: #FBFDFD; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-body text-ink leading-[1.7] antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-lg focus:bg-verify focus:px-4 focus:py-2 focus:text-white focus:outline-none">Skip to content</a>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-[100] border-b border-hairline bg-paper/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="https://accredready.in" class="rounded font-display text-[22px] font-bold tracking-[-0.01em] text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2">AccredReady</a>
+      <a href="https://accredready.in" class="rounded-xl bg-verify px-5 py-2.5 text-[15px] font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 motion-reduce:transform-none motion-reduce:transition-none">Start free trial</a>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <header class="mx-auto max-w-3xl px-5 pb-10 pt-16 text-center sm:px-8">
+      <span class="mb-6 inline-flex items-center gap-2 rounded-lg border border-verify/20 bg-mint px-3 py-1.5 font-mono text-[13px] uppercase tracking-wide text-verify">
+        <span class="h-1.5 w-1.5 rounded-full bg-verify"></span>NABH Guide · Revenue Leakage
+      </span>
+      <h1 class="mb-5 font-display text-[clamp(1.8rem,4vw,3rem)] font-bold leading-[1.1] tracking-[-0.02em]">Revenue cycle management for small hospitals:<br>registration to final collection</h1>
+      <p class="mx-auto max-w-2xl text-lg text-slate">How the hospital revenue cycle works, where it breaks down in small Indian hospitals, and how to build a practical RCM tracking process without expensive enterprise software.</p>
+    </header>
+
+    <article class="mx-auto max-w-3xl px-5 pb-16 sm:px-8 [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-bold [&_h3]:mb-2 [&_h3]:mt-7 [&_h3]:font-display [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-ink [&_p]:mb-4 [&_p]:text-[0.97rem] [&_p]:text-slate [&_strong]:text-ink">
+
+      <!-- Author byline -->
+      <div class="mb-8 flex flex-wrap items-center gap-x-4 gap-y-1 border-b border-hairline pb-5 text-[0.83rem] text-slate">
+        <span class="flex items-center gap-1.5">
+          <span class="h-6 w-6 rounded-full bg-mint flex items-center justify-center font-display text-[11px] font-bold text-verify" aria-hidden="true">MU</span>
+          <strong class="text-ink">Dr. Mehul Upadhyay</strong>
+        </span>
+        <span class="text-slate/50">·</span>
+        <span>Healthcare Operations Leader</span>
+        <span class="text-slate/50">·</span>
+        <time datetime="2026-07-28">Published: July 2026</time>
+        <span class="text-slate/50">·</span>
+        <time datetime="2026-07-28">Updated: July 2026</time>
+      </div>
+
+      <!-- AEO opening -->
+      <p class="!text-[1.05rem] !text-ink">
+        Revenue cycle management (RCM) is the administrative process that turns a clinical service into collected cash — from the moment a patient registers at the front desk to the moment payment lands in the hospital's account. For a small Indian hospital, the revenue cycle typically runs through six stages: <strong>patient registration, pre-authorisation, service delivery and charge capture, billing, claim submission and follow-up, and collection.</strong> A gap at any one stage creates a revenue loss that is often invisible until a formal audit surfaces it. Based on practitioner experience, most small hospitals lose an estimated 5 to 12 percent of their collectible revenue to cycle breakdowns (actual figures vary significantly by hospital size, payer mix, and existing billing process maturity) — not because the services were not provided, but because the administrative process failed at a handoff between departments. This guide explains each stage, where it typically breaks down, and how to build a simple tracking system that works without enterprise hospital management software.
+      </p>
+
+      <div class="my-5 rounded-xl border border-verify/30 bg-mint px-6 py-4">
+        <p class="!mb-0 !text-ink"><strong>The key insight about small hospital RCM:</strong> revenue cycle problems are almost always process problems, not software problems. A small hospital with a disciplined daily reconciliation routine and a TPA claim register maintained in Google Sheets will outperform a larger hospital running an expensive HMS that nobody uses consistently. Discipline in the process is the variable — not the sophistication of the tool.</p>
+      </div>
+
+      <!-- THE SIX STAGES -->
+      <h2>The six stages of the hospital revenue cycle</h2>
+      <p>Understanding where revenue is supposed to flow helps you identify where it stops. Each stage below has a specific output — and a specific failure mode.</p>
+
+      <div class="my-6 overflow-x-auto rounded-xl border border-hairline shadow-sm">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>What happens</th>
+              <th>Output if done correctly</th>
+              <th>Common failure</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. Patient registration</strong></td>
+              <td>Demographics, contact details, payer type (self-pay, TPA, Ayushman Bharat, corporate empanelled) captured accurately at admission</td>
+              <td>Clean patient record linked to the correct payer; insurance card or corporate letter scanned</td>
+              <td>Payer type misrecorded; insurance card not scanned; phone number wrong — all create collection problems at discharge</td>
+            </tr>
+            <tr>
+              <td><strong>2. Pre-authorisation</strong></td>
+              <td>For TPA/cashless patients: request and obtain approval from the insurer before elective procedures; emergency admissions require concurrent or retrospective authorisation within payer timelines</td>
+              <td>Pre-auth reference number in the patient file; approved amount documented; scope of procedures covered confirmed</td>
+              <td>Pre-auth not obtained for additional procedures performed during admission; emergency cases not retrospectively authorised within deadline; approved amount insufficient and not escalated</td>
+            </tr>
+            <tr>
+              <td><strong>3. Charge capture</strong></td>
+              <td>Every service, procedure, drug, consumable, and diagnostic test rendered during admission is entered into the billing system before discharge</td>
+              <td>A complete charge sheet matching the clinical record — every service in the nursing notes and doctor orders has a corresponding billing entry</td>
+              <td>Ancillary services (physio, dietitian, wound dressing) not entered; night-shift pharmacy dispensing posted next day after discharge; OT consumables used but not documented on the charge sheet</td>
+            </tr>
+            <tr>
+              <td><strong>4. Billing and claim generation</strong></td>
+              <td>Final bill generated; TPA claims prepared with supporting documentation (discharge summary, investigation reports, prescription, pre-auth letter, surgical notes)</td>
+              <td>Accurate final bill; claim package complete and submitted within payer deadline</td>
+              <td>Claims submitted with missing documents (surgical notes, diagnostic reports); claim submitted after payer deadline; coding errors that trigger automatic rejection</td>
+            </tr>
+            <tr>
+              <td><strong>5. Claim follow-up and collections</strong></td>
+              <td>Track claim status; respond to queries; resubmit rejected claims with corrections within appeal window; follow up with TPAs on settled claims for payment release</td>
+              <td>Claims settled within 30–45 days; rejections resubmitted within 7–10 days of rejection notice</td>
+              <td>Rejected claims not tracked; written off silently; settled claims not followed up for payment release; short-settlements accepted without query</td>
+            </tr>
+            <tr>
+              <td><strong>6. Patient balance collection</strong></td>
+              <td>Collect outstanding patient balance (above TPA settlement or self-pay balance) before or at discharge; post-discharge follow-up for any balance remaining</td>
+              <td>Patient discharged with zero outstanding balance; or a structured payment plan in writing if exceptions are made</td>
+              <td>Patients discharged with outstanding balance and no follow-up plan; initial deposit insufficient for services rendered; no escalation process for unpaid corporate or empanelled balances</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- WHERE IT BREAKS DOWN -->
+      <h2>Where the revenue cycle breaks down in small hospitals</h2>
+      <p>Small hospitals typically do not fail at all six stages simultaneously. The highest-frequency breakdowns concentrate in three areas — and addressing these three is where the most revenue is recoverable.</p>
+
+      <h3>Charge capture gaps at the department level</h3>
+      <p>The most consistent revenue cycle failure in small hospitals is services rendered but not charged. The mechanism is almost always the same: the clinical team provides a service, documents it in the clinical record (nursing notes, physio visit log, doctor order), but the charge entry to the billing system either does not happen at all or happens too late. The most vulnerable services are those that cross departmental boundaries — a physiotherapy session ordered by a doctor and delivered in the ward, a dietitian consultation, a wound dressing done by the nursing team in the evening shift. These services are clearly documented clinically but require a billing entry by someone who may not see the clinical notes in real time.</p>
+      <p>The fix is a <strong>pre-discharge charge reconciliation checklist</strong>: before any patient is discharged, the billing team reviews the clinical notes from every department against the charge sheet and confirms that every service documented has a corresponding entry. This takes 10–15 minutes per discharge and typically recovers several hundred to several thousand rupees per patient depending on the length and complexity of the admission.</p>
+
+      <h3>TPA pre-authorisation and claim management failures</h3>
+      <p>For hospitals with a significant proportion of TPA and Ayushman Bharat patients, claim management is the single highest-value revenue cycle activity. The most common failure pattern: a patient is admitted, receives treatment, and is discharged — but the billing team does not submit the TPA claim within the payer's submission deadline (typically 30–90 days from discharge). Or: the claim is submitted but returned with a deficiency query, and the deficiency sits unresolved in someone's email inbox for 60 days until the appeal window closes. In both cases the claim is written off as uncollectible, but the root cause was an administrative failure, not a clinical one.</p>
+      <p>A simple TPA claim register — a spreadsheet with one row per claim showing patient name, admission date, TPA name, claim amount, submission date, current status, and next follow-up date — turns this from an invisible problem into a managed one. Any claim that has not moved status in 15 days triggers a follow-up call. This is the entire intervention. No software required.</p>
+
+      <h3>Discharge collection process failures</h3>
+      <p>The moment of discharge is the last point at which a hospital can practically collect an outstanding balance from a patient. Once the patient has left the premises, collection becomes exponentially harder. The most common gap: the initial deposit collected at admission was calibrated to estimated costs at the time of admission, but the actual treatment was more extensive — and the billing team did not update the deposit request during the admission. The patient is handed a final bill that is ₹20,000–₹40,000 higher than the deposit, the patient is ready to leave, the family is present, and the billing team is under social pressure to release the patient without collecting the balance. This scenario is preventable with a mid-admission billing review for any patient whose length of stay or treatment scope has exceeded the initial estimate.</p>
+
+      <!-- WARNING SIGNS -->
+      <h2>Warning signs your revenue cycle has a problem</h2>
+
+      <div class="my-6 space-y-3">
+        <div class="flex items-start gap-4 rounded-xl border-l-4 border-alert bg-white px-5 py-4">
+          <div>
+            <p class="!mb-0 !text-[0.93rem]"><strong>Your TPA outstanding receivables include claims older than 60 days</strong> with no status update in your billing register — or you do not maintain a claim-by-claim register at all.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 rounded-xl border-l-4 border-alert bg-white px-5 py-4">
+          <div>
+            <p class="!mb-0 !text-[0.93rem]"><strong>Patients are regularly discharged with outstanding balances</strong> and no structured follow-up process — balances are noted in the billing system but not actively pursued.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 rounded-xl border-l-4 border-alert bg-white px-5 py-4">
+          <div>
+            <p class="!mb-0 !text-[0.93rem]"><strong>Your final bills do not include ancillary charges</strong> (physio, dietary, nursing procedures) for patients who clearly received those services based on the clinical documentation.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 rounded-xl border-l-4 border-alert bg-white px-5 py-4">
+          <div>
+            <p class="!mb-0 !text-[0.93rem]"><strong>You do not know your TPA claim rejection rate</strong> as a percentage of total TPA billings — it has never been calculated.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 rounded-xl border-l-4 border-signal bg-white px-5 py-4">
+          <div>
+            <p class="!mb-0 !text-[0.93rem]"><strong>Pre-authorisation is requested for admissions but not updated</strong> when the scope of treatment changes — additional procedures are performed without obtaining enhanced or supplementary pre-auth.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIMPLE RCM TRACKING -->
+      <h2>Building a simple RCM tracking process without enterprise software</h2>
+      <p>A small hospital with fewer than 100 beds can implement effective revenue cycle discipline using four tools that cost nothing beyond the time of the billing team.</p>
+
+      <ol class="my-6 space-y-5">
+        <li class="flex items-start gap-4">
+          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-verify font-display font-bold text-white text-sm">1</span>
+          <div>
+            <h3 class="!mt-0 !mb-1">Daily discharge reconciliation register</h3>
+            <p class="!mb-0 !text-[0.92rem]">Maintain a Google Sheet with one row per discharge. Columns: patient name, MRD number, discharge date, payer type, final bill amount, deposit collected, balance outstanding, balance collected (Y/N), TPA claim submitted (Y/N), claim amount, claim status. Run this every morning for the previous day's discharges. Every row with an outstanding balance or an unsubmitted TPA claim is an open revenue cycle item that requires action. The sheet takes 20–30 minutes to update daily and gives the hospital administrator a complete picture of open revenue cycle items in a single view.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-verify font-display font-bold text-white text-sm">2</span>
+          <div>
+            <h3 class="!mt-0 !mb-1">TPA claim tracking register</h3>
+            <p class="!mb-0 !text-[0.92rem]">A separate sheet for TPA and Ayushman Bharat claims only. Columns: patient name, TPA name, claim number, claim amount, submission date, acknowledgement received (Y/N), status (pending/query/approved/rejected/paid), query reason if rejected, resubmission date, settlement amount, payment received date. Colour-code rows by claim age: green for under 15 days, yellow for 15–30 days, red for over 30 days. Any red row without a recent status update gets a phone call to the TPA that day. This single process prevents the "silent write-off" that consumes 8–15% of TPA billing in hospitals without active claim management.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-verify font-display font-bold text-white text-sm">3</span>
+          <div>
+            <h3 class="!mt-0 !mb-1">Pre-discharge charge checklist</h3>
+            <p class="!mb-0 !text-[0.93rem]">A one-page checklist that the billing team runs through before every discharge. Sections: (1) has every service in the nursing notes been entered? (2) has every pharmacy dispensing entry been matched to a billing charge? (3) for surgical cases — have OT consumables and implants been verified against the operation notes? (4) have all ancillary charges (physio, dietitian, blood bank, lab, radiology) been included? (5) for TPA patients — is the pre-auth amount sufficient to cover the final bill, and if not, has enhanced auth been requested? This checklist takes 10–15 minutes and prevents the majority of charge capture gaps.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-verify font-display font-bold text-white text-sm">4</span>
+          <div>
+            <h3 class="!mt-0 !mb-1">Monthly RCM performance review</h3>
+            <p class="!mb-0 !text-[0.92rem]">Once a month, calculate four numbers from the registers above: (A) total discharges vs. total bills raised — any gap means some discharges had no bill; (B) total TPA claims submitted vs. total TPA admissions billed — any gap means some TPA claims were not submitted; (C) TPA claim rejection rate as a percentage of claims submitted; (D) total outstanding balance from self-pay and corporate patients discharged in the last 30 days. These four numbers are your RCM health indicators. Trend them month-on-month and you will see exactly where the cycle is improving and where it is not.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="my-5 rounded-xl border border-verify/30 bg-mint px-6 py-4">
+        <p class="!mb-0 !text-ink"><strong>On timing:</strong> the earlier in the revenue cycle you catch a problem, the cheaper it is to fix. A charge gap caught during the pre-discharge checklist costs 5 minutes to correct. The same gap found in a monthly audit requires pulling clinical records, matching against the billing system, and deciding whether a supplementary bill is worth raising. Fix it at discharge.</p>
+      </div>
+
+      <!-- BENCHMARKS TABLE -->
+      <h2>Simple RCM benchmarks for small hospitals</h2>
+      <p>These directional numbers help you calibrate whether your revenue cycle is performing reasonably or has significant room for improvement. They are not published benchmarks — use them as a starting point for setting internal targets.</p>
+
+      <div class="my-6 overflow-x-auto rounded-xl border border-hairline shadow-sm">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Needs attention</th>
+              <th>Reasonable</th>
+              <th>Well-managed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>TPA claim rejection rate</strong></td>
+              <td>&gt;15% of claims by value</td>
+              <td>8–15%</td>
+              <td>&lt;5%</td>
+            </tr>
+            <tr>
+              <td><strong>Average claim settlement time</strong></td>
+              <td>&gt;60 days</td>
+              <td>30–60 days</td>
+              <td>&lt;30 days</td>
+            </tr>
+            <tr>
+              <td><strong>Patient balance outstanding at discharge</strong></td>
+              <td>&gt;10% of discharges have a balance</td>
+              <td>4–10%</td>
+              <td>&lt;3%</td>
+            </tr>
+            <tr>
+              <td><strong>Charge capture gap (audit-detected)</strong></td>
+              <td>&gt;8% of billing revenue</td>
+              <td>3–8%</td>
+              <td>&lt;2%</td>
+            </tr>
+            <tr>
+              <td><strong>Bills raised vs. discharges (daily reconciliation)</strong></td>
+              <td>Any day where these do not match</td>
+              <td>Match on 95%+ of days</td>
+              <td>Match every day</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="!text-[0.83rem]">These ranges are practitioner estimates based on small hospital operations experience and are not published industry benchmarks. Use them as a directional guide, not as certified targets.</p>
+
+      <!-- FAQ SECTION -->
+      <h2>Frequently asked questions</h2>
+
+      <h3>What is the revenue cycle in a hospital?</h3>
+      <p>The hospital revenue cycle is the sequence of administrative and clinical steps from the moment a patient is registered to the moment payment is collected and reconciled. It includes patient registration, pre-authorisation for insured patients, service delivery and charge capture, billing and claim generation, claim submission to TPAs or insurance companies, payment posting, follow-up on unpaid or rejected claims, and final collection of any patient balance outstanding. A breakdown at any single stage results in revenue that is billed late, underbilled, or never collected.</p>
+
+      <h3>Where do small hospitals most commonly lose revenue in the billing cycle?</h3>
+      <p>The three highest-frequency breakdowns are: (1) charge capture gaps — services rendered but not entered into the billing system before discharge, particularly ancillary services; (2) TPA pre-authorisation failures — cashless insurance patients admitted without obtaining pre-auth for the procedures eventually performed, leading to claim denials; and (3) discharge collection failures — patients discharged without settling outstanding balances. In each case the root cause is a process gap at a specific handoff between departments, not systemic fraud or system failure.</p>
+
+      <h3>Can a small hospital manage the revenue cycle without expensive software?</h3>
+      <p>Yes — a significant portion of RCM discipline is process-based, not software-based. A small hospital with fewer than 100 beds can implement effective revenue cycle management using Google Sheets or Excel for tracking, a daily discharge reconciliation process, a TPA claim register, and a pre-discharge collection checklist at the billing counter. The key is running the same checks every day with discipline. Software automates these checks; the manual version requires staff who perform them consistently.</p>
+
+      <h3>What is a TPA claim rejection and how does it affect the revenue cycle?</h3>
+      <p>A TPA claim rejection occurs when an insurer or TPA declines a submitted claim — typically because documentation was incomplete, the procedure was not pre-authorised, coding was incorrect, or the claim was submitted after the payer's deadline. Rejections create open receivables that must be actively managed: correct and resubmit within the payer's appeal window, or the claim is written off. In many small hospitals, rejected TPA claims are not tracked as a discrete category and are silently written off — one of the highest-value revenue cycle leakage points.</p>
+
+      <h3>What daily and weekly checks should a small hospital billing team run?</h3>
+      <p>Daily: reconcile the previous day's discharge list against bills raised; check pre-auth status for all current TPA admissions; post payments received and match against expected amounts. Weekly: review outstanding TPA claims aged more than 15 days and follow up with each TPA; reconcile pharmacy dispensing records against patient medication charges for a sample of discharges; review open receivables from patients who left without settling their balance. Monthly: calculate claim rejection rate as a percentage of total TPA billings and track whether it is improving.</p>
+
+      <!-- SOURCE -->
+      <div class="my-8 rounded-xl border border-hairline bg-white px-5 py-4 text-[0.83rem] text-slate">
+        <p class="!mb-0"><strong class="text-ink">Sources and notes:</strong> Revenue cycle benchmarks and process descriptions are based on healthcare finance operations experience and are not published benchmarks from any regulatory body. TPA claim management timelines and pre-authorisation requirements vary by TPA and insurance company — verify current requirements directly with your TPA agreements and IRDAI guidelines. For NABH documentation standards that underpin charge capture: NABH HCO 6th Edition (2024), available at <a href="https://nabh.co" target="_blank" rel="noopener noreferrer" class="rounded text-verify underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-verify">nabh.co</a>.</p>
+      </div>
+
+      <!-- RELATED -->
+      <div class="my-6 rounded-xl border border-hairline bg-white px-5 py-4 text-[0.9rem]">
+        <p class="!mb-2 font-mono text-[12px] uppercase tracking-wide text-slate">Related guides</p>
+        <ul class="space-y-1.5 !mb-0">
+          <li>→ <a href="https://accredready.in/learn/hospital-revenue-leakage-guide" class="rounded text-verify underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-verify">Hospital revenue leakage in India: sources, scale, and how to audit it</a></li>
+          <li>→ <a href="https://accredready.in/learn/tpa-insurance-claim-denials" class="rounded text-verify underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-verify">TPA insurance claim denials — why claims are rejected and how to recover them</a></li>
+          <li>→ <a href="https://accredready.in/learn/ot-pharmacy-billing-leakage" class="rounded text-verify underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-verify">OT and pharmacy billing leakage — how to audit and close the gaps</a></li>
+          <li>→ <a href="https://accredready.in/learn/nabh-kpi-tracking" class="rounded text-verify underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-verify">NABH KPI tracking — which indicators to monitor and how</a></li>
+        </ul>
+      </div>
+
+      <!-- CTA -->
+      <div class="my-10 rounded-2xl bg-ink px-6 py-12 text-center">
+        <p class="font-mono text-[12px] uppercase tracking-widest text-white/50 mb-3">AccredReady</p>
+        <h2 class="!mt-0 font-display text-2xl font-bold !text-white">Find out where your revenue cycle is leaking — free</h2>
+        <p class="mx-auto mt-3 max-w-lg !text-white/70">The AccredReady Revenue Leakage Review checks every major leakage point across your billing cycle — charge capture, TPA claims, pharmacy, OT, and collection — and gives you a prioritised gap report in under 15 minutes.</p>
+        <a href="https://accredready.in/revenue-leakage-review/" class="mt-5 inline-block rounded-xl bg-verify px-8 py-3.5 font-semibold text-white transition-all duration-150 hover:-translate-y-px hover:bg-verifydark hover:shadow-[0_6px_16px_rgba(14,138,95,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink motion-reduce:transform-none motion-reduce:transition-none">Start free revenue leakage review →</a>
+        <p class="!mt-4 !mb-0 !text-[0.85rem] !text-white/40">Or <a href="https://accredready.in" class="text-white/60 underline hover:text-white">start your full NABH preparation on AccredReady</a></p>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-white/70">
+    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+      <nav aria-label="Footer" class="flex flex-wrap justify-center gap-x-7 gap-y-3 text-[14px]">
+        <a href="https://accredready.in" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Home</a>
+        <a href="https://accredready.in/nabh-accreditation-software" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">NABH Software</a>
+        <a href="https://accredready.in/nabh-6th-edition-standards" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">6th Edition Guide</a>
+        <a href="https://accredready.in/nabh-internal-audit-checklist" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Internal Audit</a>
+        <a href="https://accredready.in/learn/nabh-programmes-comparison" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Programmes Guide</a>
+        <button onclick="document.getElementById('contactModal').style.display='flex'" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink" style="background:none;border:none;color:inherit;font-size:inherit;cursor:pointer;font-family:inherit;padding:0;">Contact Us</button>
+        <a href="https://accredready.in/privacy" class="rounded hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-verify focus-visible:ring-offset-2 focus-visible:ring-offset-ink">Privacy Policy</a>
+      </nav>
+      <p class="mt-8 text-center font-mono text-[12px] text-white/45">© 2026 AccredReady by MK Tech.</p>
+    </div>
+  </footer>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.75);align-items:center;justify-content:center;padding:20px;">
+    <div onclick="event.stopPropagation()" style="background:#081525;border:1px solid #1e3a52;border-radius:16px;padding:28px 24px;max-width:420px;width:100%;position:relative;max-height:90vh;overflow-y:auto;">
+      <button onclick="document.getElementById('contactModal').style.display='none';document.getElementById('cSuccess').style.display='none';document.getElementById('cError').style.display='none';document.getElementById('cForm').reset();" style="position:absolute;top:12px;right:14px;background:none;border:none;color:#7a9db8;font-size:20px;cursor:pointer;line-height:1;">&#x2715;</button>
+      <div style="font-size:11px;letter-spacing:3px;color:#c9a84c;margin-bottom:8px;text-transform:uppercase;">AccredReady</div>
+      <div style="font-size:20px;font-weight:700;color:#eef4f9;margin-bottom:18px;">Contact Us</div>
+      <div id="cSuccess" style="display:none;color:#0E8A5F;font-size:15px;padding:14px;background:#EBF4F0;border-radius:8px;margin-bottom:16px;">Thank you! We'll get back to you soon.</div>
+      <div id="cError" style="display:none;color:#DC2626;font-size:14px;padding:12px;background:#fef2f2;border-radius:8px;margin-bottom:16px;">Something went wrong, please try again.</div>
+      <form id="cForm" onsubmit="submitContact(event)">
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Name *</label><input type="text" name="name" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Email *</label><input type="email" name="email" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:14px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Mobile *</label><input type="tel" name="phone" required style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;font-family:inherit;"></div>
+        <div style="margin-bottom:18px;"><label style="display:block;color:#7a9db8;font-size:13px;margin-bottom:5px;">Message *</label><textarea name="message" required rows="4" style="width:100%;box-sizing:border-box;padding:10px 12px;background:#0d2035;border:1px solid #1e3a52;border-radius:8px;color:#eef4f9;font-size:15px;outline:none;resize:vertical;font-family:inherit;"></textarea></div>
+        <button type="submit" id="cSubmit" style="width:100%;padding:12px;background:#0E8A5F;border:none;border-radius:10px;color:#fff;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;">Send Message</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.getElementById('contactModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.style.display = 'none';
+        document.getElementById('cSuccess').style.display = 'none';
+        document.getElementById('cError').style.display = 'none';
+        document.getElementById('cForm').reset();
+      }
+    });
+    async function submitContact(e) {
+      e.preventDefault();
+      var btn = document.getElementById('cSubmit');
+      btn.disabled = true; btn.textContent = 'Sending…';
+      document.getElementById('cSuccess').style.display = 'none';
+      document.getElementById('cError').style.display = 'none';
+      var f = e.target;
+      try {
+        var r = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            access_key: '2aaadfc3-c669-4b2b-92b8-6d6bee4faee1',
+            name: f.name.value, email: f.email.value,
+            phone: f.phone.value, message: f.message.value
+          })
+        });
+        var j = await r.json();
+        if (r.ok && j.success) { document.getElementById('cSuccess').style.display = 'block'; f.reset(); }
+        else document.getElementById('cError').style.display = 'block';
+      } catch (err) { document.getElementById('cError').style.display = 'block'; }
+      btn.disabled = false; btn.textContent = 'Send Message';
+    }
+  </script>
+</body>
+</html>
