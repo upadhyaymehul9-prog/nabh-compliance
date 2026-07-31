@@ -978,6 +978,36 @@ Deno.serve(async (req) => {
       }
     }
 
+    // Step 5.5: committee expansion — if OE rows are in play, attach any committee
+    // KB entries whose linked_oe_codes overlap, excluding titles already in mergedHits.
+    let committeeExpansionRows: Record<string, unknown>[] = [];
+    if (!isGeneralRef && rows && rows.length > 0) {
+      _step.current = "committee-expansion";
+      const oeCodesInPlay = [
+        ...new Set(
+          rows
+            .map((r) => r.oe_code)
+            .filter((c): c is string => typeof c === "string" && c.length > 0),
+        ),
+      ];
+      if (oeCodesInPlay.length > 0) {
+        const existingKbTitles = new Set(
+          mergedHits
+            .filter((h) => h.kind === "kb")
+            .map((h) => h.row.title as string),
+        );
+        const { data: commRows, error: commErr } = await supabase
+          .from("shco_kb")
+          .select("title, content, source_label, linked_oe_codes")
+          .eq("category", "committees")
+          .overlaps("linked_oe_codes", oeCodesInPlay);
+        if (commErr) throw new Error(`DB committee expansion: ${commErr.message}`);
+        committeeExpansionRows = (commRows ?? []).filter(
+          (r) => !existingKbTitles.has(r.title as string),
+        );
+      }
+    }
+
     _step.current = "build-context";
     const renderOe = (r: Record<string, unknown>) => {
       const tips =
@@ -1011,11 +1041,21 @@ Deno.serve(async (req) => {
     const contextBlock = isGeneralRef
       ? generalRefContext
       : mergedHits.length > 0
-        ? mergedHits
-            .map((h) => (h.kind === "oe" ? renderOe(h.row) : renderKb(h.row)))
+        ? [
+            mergedHits
+              .map((h) => (h.kind === "oe" ? renderOe(h.row) : renderKb(h.row)))
+              .join("\n"),
+            ...committeeExpansionRows.map(renderKb),
+          ]
+            .filter(Boolean)
             .join("\n")
         : rows && rows.length > 0
-          ? rows.map(renderOe).join("\n") // Step-1 direct oe_code match (all OE rows)
+          ? [
+              rows.map(renderOe).join("\n"), // Step-1 direct oe_code match (all OE rows)
+              ...committeeExpansionRows.map(renderKb),
+            ]
+              .filter(Boolean)
+              .join("\n")
           : "";
 
     // System prompt — two variants depending on context type
