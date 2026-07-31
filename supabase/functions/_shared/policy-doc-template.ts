@@ -6,7 +6,7 @@
 import {
   Document, Packer, Paragraph, TextRun, HeadingLevel, Table, TableRow, TableCell,
   WidthType, AlignmentType, ShadingType,
-} from "docx";
+} from "npm:docx";
 
 export interface PolicyDocData {
   hospitalName: string;
