@@ -1,16 +1,19 @@
-// One-time (re-runnable) backfill job: generates embeddings for every
-// shco_full_oes and shco_kb row that doesn't have one yet.
+// One-time (re-runnable) backfill job: generates embeddings for a SMALL
+// batch of rows per call, then stops — call it repeatedly until it reports
+// zero rows processed. This avoids exceeding free-tier Edge Function
+// compute limits, which a single call processing all ~450+ rows in one
+// loop hit (WORKER_RESOURCE_LIMIT).
 //
 // Uses Supabase's built-in gte-small model (free, runs in Edge Runtime,
 // no external API key). Safe to re-run — only processes rows where
-// embedding is null, so partial failures can just be re-triggered.
+// embedding is null.
 //
-// Call it with: curl -X POST <function-url> -H "Authorization: Bearer <service-role-key>"
-// Processes in batches to avoid timing out on the full table.
+// Call repeatedly with: curl -X POST <function-url> -H "Authorization: Bearer <service-role-key>"
+// Stop calling once the response shows shco_full_oes: 0, shco_kb: 0.
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-const BATCH_SIZE = 20;
+const BATCH_SIZE = 5; // small — one call handles 5 OE rows + 5 kb rows max
 
 Deno.serve(async (req: Request) => {
   try {
@@ -31,17 +34,16 @@ Deno.serve(async (req: Request) => {
 
     const results = { shco_full_oes: 0, shco_kb: 0, errors: [] as string[] };
 
-    // --- shco_full_oes ---
-    for (;;) {
+    // --- shco_full_oes: ONE batch only, no outer loop ---
+    {
       const { data: rows, error } = await supabase
         .from("shco_full_oes")
         .select("oe_code, text, interpretation")
         .is("embedding", null)
         .limit(BATCH_SIZE);
       if (error) throw new Error(`fetch shco_full_oes: ${error.message}`);
-      if (!rows || rows.length === 0) break;
 
-      for (const row of rows) {
+      for (const row of rows ?? []) {
         try {
           const inputText = [row.oe_code, row.text, row.interpretation]
             .filter(Boolean)
@@ -59,17 +61,16 @@ Deno.serve(async (req: Request) => {
       }
     }
 
-    // --- shco_kb ---
-    for (;;) {
+    // --- shco_kb: ONE batch only, no outer loop ---
+    {
       const { data: rows, error } = await supabase
         .from("shco_kb")
         .select("id, title, content")
         .is("embedding", null)
         .limit(BATCH_SIZE);
       if (error) throw new Error(`fetch shco_kb: ${error.message}`);
-      if (!rows || rows.length === 0) break;
 
-      for (const row of rows) {
+      for (const row of rows ?? []) {
         try {
           const inputText = [row.title, row.content].filter(Boolean).join(" — ");
           const vec = await embed(inputText);
