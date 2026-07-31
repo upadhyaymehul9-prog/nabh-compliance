@@ -944,31 +944,54 @@ Deno.serve(async (req) => {
       generalRefSourceLabel = "SHCO Full — General Reference (NABH 3rd Edition Standards Book)";
     }
 
-    // Step 5: if no curated reference matched, fall back to ranked full-text search.
-    // Search BOTH the OE table (search_shco_full_oes) and the curated KB (search_shco_kb)
-    // in parallel, then merge the hits by ts_rank so the most relevant rows across both
-    // sources feed the answer model. (Replaces the old unranked ILIKE-OR; both RPCs use
-    // websearch_to_tsquery converted to OR + ts_rank and expose a numeric `rank`.)
+    // Step 5: hybrid search — embed the question with gte-small, then run FTS and
+    // vector search across both tables in parallel, merged via Reciprocal Rank Fusion (k=60).
     if (!rows && !isGeneralRef) {
-      _step.current = "db-fts-search";
-      const [oeRes, kbRes] = await Promise.all([
+      _step.current = "db-hybrid-search";
+
+      const session = new Supabase.ai.Session("gte-small");
+      const embedding: number[] = await session.run(question, {
+        mean_pool: true,
+        normalize: true,
+      });
+
+      const [oeRes, kbRes, oeVecRes, kbVecRes] = await Promise.all([
         supabase.rpc("search_shco_full_oes", { q: question, match_count: 8 }),
         supabase.rpc("search_shco_kb", { q: question, match_count: 8 }),
+        supabase.rpc("match_shco_full_oes", { query_embedding: embedding, match_count: 8, match_threshold: 0.3 }),
+        supabase.rpc("match_shco_kb", { query_embedding: embedding, match_count: 8, match_threshold: 0.3 }),
       ]);
       if (oeRes.error) throw new Error(`DB FTS search (oes): ${oeRes.error.message}`);
       if (kbRes.error) throw new Error(`DB FTS search (kb): ${kbRes.error.message}`);
+      if (oeVecRes.error) throw new Error(`DB vector search (oes): ${oeVecRes.error.message}`);
+      if (kbVecRes.error) throw new Error(`DB vector search (kb): ${kbVecRes.error.message}`);
 
-      const tag = (kind: "oe" | "kb") => (r: Record<string, unknown>) => ({
-        kind,
-        rank: typeof r.rank === "number" ? r.rank : 0,
-        row: r,
-      });
-      mergedHits = [
-        ...((oeRes.data ?? []) as Record<string, unknown>[]).map(tag("oe")),
-        ...((kbRes.data ?? []) as Record<string, unknown>[]).map(tag("kb")),
-      ]
-        .sort((a, b) => b.rank - a.rank)
-        .slice(0, 10);
+      // RRF: each list contributes 1/(k+i+1) to the key's cumulative score.
+      const k = 60;
+      const scores = new Map<string, number>();
+      const registry = new Map<string, { kind: "oe" | "kb"; row: Record<string, unknown> }>();
+
+      const fuse = (
+        list: Record<string, unknown>[],
+        kind: "oe" | "kb",
+        keyField: string,
+      ) => {
+        list.forEach((row, i) => {
+          const key = `${kind}:${row[keyField]}`;
+          scores.set(key, (scores.get(key) ?? 0) + 1 / (k + i + 1));
+          if (!registry.has(key)) registry.set(key, { kind, row });
+        });
+      };
+
+      fuse((oeRes.data ?? []) as Record<string, unknown>[], "oe", "oe_code");
+      fuse((kbRes.data ?? []) as Record<string, unknown>[], "kb", "title");
+      fuse((oeVecRes.data ?? []) as Record<string, unknown>[], "oe", "oe_code");
+      fuse((kbVecRes.data ?? []) as Record<string, unknown>[], "kb", "title");
+
+      mergedHits = [...scores.entries()]
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10)
+        .map(([key, rank]) => ({ ...registry.get(key)!, rank }));
 
       if (mergedHits.length > 0) {
         rows = mergedHits.map((h) => h.row);
