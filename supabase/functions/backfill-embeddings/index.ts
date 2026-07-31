@@ -32,7 +32,7 @@ Deno.serve(async (req: Request) => {
       return Array.from(output as Iterable<number>);
     };
 
-    const results = { shco_full_oes: 0, shco_kb: 0, errors: [] as string[] };
+    const results = { shco_full_oes: 0, shco_kb: 0, errors: [] as string[], debug: [] as string[] };
 
     // --- shco_full_oes: ONE batch only, no outer loop ---
     {
@@ -49,12 +49,19 @@ Deno.serve(async (req: Request) => {
             .filter(Boolean)
             .join(" — ");
           const vec = await embed(inputText);
-          const { error: updErr } = await supabase
+          results.debug.push(`oe_code=${row.oe_code} vecLen=${vec.length} sample=${vec.slice(0,3).join(",")}`);
+          const { data: updData, error: updErr } = await supabase
             .from("shco_full_oes")
             .update({ embedding: vec })
-            .eq("oe_code", row.oe_code as string);
+            .eq("oe_code", row.oe_code as string)
+            .select("oe_code");
           if (updErr) throw updErr;
-          results.shco_full_oes++;
+          results.debug.push(`update matched rows: ${JSON.stringify(updData)}`);
+          if (updData && updData.length > 0) {
+            results.shco_full_oes++;
+          } else {
+            results.errors.push(`shco_full_oes ${row.oe_code}: update matched 0 rows`);
+          }
         } catch (e) {
           results.errors.push(`shco_full_oes ${row.oe_code}: ${(e as Error).message}`);
         }
