@@ -37,6 +37,7 @@ Critical rules:
    as an official NABH requirement.
 5. Output ONLY valid JSON, no other text, matching exactly this shape:
 {
+  "policyTitle": "string (a short, specific policy name, e.g. 'Hand Hygiene Policy' — NOT the chapter code)",
   "purpose": "string",
   "scope": "string",
   "policyStatement": "string",
@@ -128,7 +129,7 @@ Write the policy document content JSON now.`;
     const rawText = anthropicData.content?.[0]?.text ?? "{}";
 
     let content: {
-      purpose: string; scope: string; policyStatement: string;
+      policyTitle: string; purpose: string; scope: string; policyStatement: string;
       procedureSteps: string[]; responsibility: string; references: string; distribution: string;
     };
     try {
@@ -140,7 +141,7 @@ Write the policy document content JSON now.`;
     }
 
     // --- Build the docx ---
-    const docTitle = `${oe.chapter} Policy — ${oe.oe_code}`;
+    const docTitle = content.policyTitle?.trim() || `${oe.chapter} Policy — ${oe.oe_code}`;
     const hospitalPrefix = (hospital_name?.match(/^\S+/)?.[0] ?? "HOSP").toUpperCase();
     const oeSuffix = oe.oe_code.split(".").slice(1).join(""); // "MOM.2.b" -> "2b"
     const docNo = `${hospitalPrefix}/${oe.chapter}/POL-${oeSuffix}`;
@@ -163,11 +164,13 @@ Write the policy document content JSON now.`;
 
     const buffer = await documentToBuffer(doc);
 
+    const safeTitleForFilename = docTitle.replace(/[^a-zA-Z0-9\s-]/g, "").replace(/\s+/g, "_");
+
     return new Response(buffer, {
       headers: {
         ...CORS,
         "Content-Type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-        "Content-Disposition": `attachment; filename="${oe.oe_code}_policy.docx"`,
+        "Content-Disposition": `attachment; filename="${oe.oe_code}_${safeTitleForFilename}.docx"`,
       },
     });
   } catch (err) {
