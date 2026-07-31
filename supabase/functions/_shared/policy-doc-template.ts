@@ -5,7 +5,7 @@
 
 import {
   Document, Packer, Paragraph, TextRun, HeadingLevel, Table, TableRow, TableCell,
-  WidthType, AlignmentType, ShadingType,
+  WidthType, AlignmentType, ShadingType, Footer,
 } from "npm:docx";
 
 export interface PolicyDocData {
@@ -65,6 +65,18 @@ export function buildPolicyDocument(data: PolicyDocData): Document {
     sections: [
       {
         properties: { page: { size: { width: 11906, height: 16838 } } }, // A4
+        footers: {
+          default: new Footer({
+            children: [
+              new Paragraph({
+                alignment: AlignmentType.CENTER,
+                children: [
+                  new TextRun({ text: `${data.hospitalName}  |  ${data.docNo}  |  Confidential — Controlled Document`, size: 16, italics: true }),
+                ],
+              }),
+            ],
+          }),
+        },
         children: [
           new Paragraph({ children: [new TextRun({ text: data.hospitalName, bold: true, size: 32 })], alignment: AlignmentType.CENTER, spacing: { after: 60 } }),
           new Paragraph({ children: [new TextRun({ text: data.docTitle, bold: true, size: 28 })], alignment: AlignmentType.CENTER, spacing: { after: 60 } }),

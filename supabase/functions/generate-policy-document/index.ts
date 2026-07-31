@@ -26,13 +26,16 @@ Critical rules:
 1. Write in your OWN original words — never copy phrasing from any NABH document.
    You are given the underlying requirement (OE text, achieve tips, committee info);
    express it as clear, actionable hospital policy language.
-2. If the source data does not specify a detail (exact frequency, named role,
+2. Use the actual hospital name provided (not "the organisation" or "the hospital")
+   naturally throughout the Purpose, Scope, Policy Statement, and Responsibility
+   sections — real hospital policy documents name the facility repeatedly, not once.
+3. If the source data does not specify a detail (exact frequency, named role,
    specific number), write "[Hospital to define — not specified in NABH SHCO 3rd
    Edition]" in that spot. NEVER invent a plausible-sounding specific.
-3. If committee info is provided and includes "AccredReady recommended practice"
+4. If committee info is provided and includes "AccredReady recommended practice"
    content, you may use it but must phrase it as a suggested/example practice, not
    as an official NABH requirement.
-4. Output ONLY valid JSON, no other text, matching exactly this shape:
+5. Output ONLY valid JSON, no other text, matching exactly this shape:
 {
   "purpose": "string",
   "scope": "string",
@@ -91,7 +94,9 @@ Deno.serve(async (req: Request) => {
       : "No specific committee linked to this OE.";
 
     // --- Ask Claude to write original content ---
-    const userMessage = `OE Code: ${oe.oe_code}
+    const userMessage = `Hospital Name: ${hospital_name || "[HOSPITAL NAME]"}
+
+OE Code: ${oe.oe_code}
 Level: ${oe.level}
 Chapter: ${oe.chapter}
 OE Requirement Text: ${oe.text}
@@ -110,7 +115,7 @@ Write the policy document content JSON now.`;
       },
       body: JSON.stringify({
         model: "claude-sonnet-4-6",
-        max_tokens: 1200,
+        max_tokens: 2500,
         system: CONTENT_SYSTEM_PROMPT,
         messages: [{ role: "user", content: userMessage }],
       }),
