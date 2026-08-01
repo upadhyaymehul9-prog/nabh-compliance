@@ -46,7 +46,7 @@ export function buildPolicyDocument(data: PolicyDocData): Document {
     rows: [
       new TableRow({ children: [cell("Document No.", { bold: true, shade: true }), cell(data.docNo), cell("Version", { bold: true, shade: true }), cell("1.0")] }),
       new TableRow({ children: [cell("Effective Date", { bold: true, shade: true }), cell("[DD-MM-YYYY]"), cell("Review Date", { bold: true, shade: true }), cell("[DD-MM-YYYY]")] }),
-      new TableRow({ children: [cell("Applicable OE", { bold: true, shade: true }), cell(`${data.oeCode} (${data.oeLevel})`), cell("NABH Chapter", { bold: true, shade: true }), cell(data.chapterName)] }),
+      new TableRow({ children: [cell("Applicable OE(s)", { bold: true, shade: true }), cell(data.oeLevel ? `${data.oeCode} (${data.oeLevel})` : data.oeCode), cell("NABH Chapter", { bold: true, shade: true }), cell(data.chapterName)] }),
       new TableRow({ children: [cell("Prepared By", { bold: true, shade: true }), cell("_________________"), cell("Date", { bold: true, shade: true }), cell("________")] }),
       new TableRow({ children: [cell("Reviewed By", { bold: true, shade: true }), cell("_________________"), cell("Date", { bold: true, shade: true }), cell("________")] }),
       new TableRow({ children: [cell("Approved By", { bold: true, shade: true }), cell("_________________"), cell("Date", { bold: true, shade: true }), cell("________")] }),
