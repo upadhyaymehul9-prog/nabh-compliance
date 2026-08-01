@@ -1,3 +1,21 @@
+// ⚠️ DEPRECATED — NOT IN USE. DO NOT DEPLOY.
+//
+// This function kept hitting Supabase's compute limit on the long web-search
+// drafting call, so master-policy drafting is no longer done here. It is now
+// done directly in Claude Code sessions: fetch the OEs and any linked committee
+// from Supabase, draft and verify the content in-session, then insert the row
+// into shco_policy_masters with status='draft'.
+//
+// Kept in the repo for reference only. Two known reasons it would produce a bad
+// row if anyone ran it today:
+//   1. shco_policy_masters gained `abbreviations` and `disclaimer` columns
+//      (2026-08-01). The insert object and DRAFT_SYSTEM_PROMPT below predate
+//      them and would write a row with both fields empty.
+//   2. It has no notion of the deferred-topic tracking now kept in
+//      scripts/master-policy-todos.md.
+// Neither is worth fixing unless this function is genuinely revived — if it is,
+// fix both before deploying.
+//
 // PHASE A — Master document drafting (one-time per standard, human-reviewed).
 //
 // This is NOT the hospital-facing function. It drafts ONE master policy for
