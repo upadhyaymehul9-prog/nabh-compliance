@@ -72,13 +72,15 @@ Deno.serve(async (req: Request) => {
       oeCode: (master.oe_codes as string[]).join(", "),
       oeLevel: "", // multiple OEs, level varies — omitted at this granularity
       chapterName: master.chapter,
+      abbreviations: master.abbreviations ? substitute(master.abbreviations, hospital_name) : undefined,
       purpose: substitute(master.purpose, hospital_name),
       scope: substitute(master.scope, hospital_name),
       policyStatement: substitute(master.policy_statement, hospital_name),
       procedureSteps: (master.procedure_steps as string[]).map((s) => substitute(s, hospital_name)),
       responsibility: substitute(master.responsibility, hospital_name),
-      references: master.references_text, // factual/citation text — no hospital name expected here
+      references: substitute(master.references_text, hospital_name),
       distribution: substitute(master.distribution, hospital_name),
+      disclaimer: master.disclaimer ? substitute(master.disclaimer, hospital_name) : undefined,
     });
 
     const buffer = await documentToBuffer(doc);

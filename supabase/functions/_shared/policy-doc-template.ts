@@ -15,6 +15,7 @@ export interface PolicyDocData {
   oeCode: string;
   oeLevel: string;
   chapterName: string;
+  abbreviations?: string;
   purpose: string;
   scope: string;
   policyStatement: string;
@@ -22,6 +23,7 @@ export interface PolicyDocData {
   responsibility: string;
   references: string;
   distribution: string;
+  disclaimer?: string;
 }
 
 const cell = (text: string, opts: { bold?: boolean; shade?: boolean; width?: number } = {}) =>
@@ -35,8 +37,42 @@ const heading = (text: string) =>
   new Paragraph({ text, heading: HeadingLevel.HEADING_1, spacing: { before: 300, after: 150 } });
 const body = (text: string) =>
   new Paragraph({ children: [new TextRun({ text, size: 22 })], spacing: { after: 150 } });
-const bullet = (text: string) =>
-  new Paragraph({ children: [new TextRun({ text, size: 22 })], bullet: { level: 0 }, spacing: { after: 80 } });
+
+// Procedure steps arrive as one fused string per step, e.g.:
+//   "4. Choosing between alcohol-based handrub and soap and water\n\nAlcohol-based
+//    handrub is the routine method... - hands are visibly dirty...\n- hands feel sticky..."
+// Splitting the title from the body (and any "- " sub-list within the body) turns this
+// from one dense wall of text into a scannable step: bold title, then body, then real
+// bullet points for any embedded list — instead of everything mashed into one bullet.
+const renderProcedureStep = (text: string): Paragraph[] => {
+  const titleMatch = text.match(/^(\d+\.\s[^\n]+)\n\n([\s\S]*)$/);
+  if (!titleMatch) {
+    // No recognizable "N. Title\n\nBody" shape — render as-is rather than guess.
+    return [new Paragraph({ children: [new TextRun({ text, size: 22 })], spacing: { after: 200 } })];
+  }
+  const [, title, rest] = titleMatch;
+  const paragraphs: Paragraph[] = [
+    new Paragraph({ children: [new TextRun({ text: title, bold: true, size: 23 })], spacing: { before: 240, after: 90 } }),
+  ];
+
+  const blocks = rest.split(/\n\n+/);
+  for (const block of blocks) {
+    const trimmed = block.trim();
+    if (!trimmed) continue;
+    if (/^- /.test(trimmed) || trimmed.includes("\n- ")) {
+      const lines = trimmed.split(/\n(?=- )/).map((l) => l.trim()).filter(Boolean);
+      for (const line of lines) {
+        const cleaned = line.replace(/^- /, "");
+        paragraphs.push(
+          new Paragraph({ children: [new TextRun({ text: cleaned, size: 22 })], bullet: { level: 0 }, spacing: { after: 60 } }),
+        );
+      }
+    } else {
+      paragraphs.push(new Paragraph({ children: [new TextRun({ text: trimmed, size: 22 })], spacing: { after: 120 } }));
+    }
+  }
+  return paragraphs;
+};
 
 export function buildPolicyDocument(data: PolicyDocData): Document {
   const today = new Date().toLocaleDateString("en-GB").replace(/\//g, "-");
@@ -86,6 +122,9 @@ export function buildPolicyDocument(data: PolicyDocData): Document {
             spacing: { after: 300 },
           }),
           controlTable,
+          ...(data.abbreviations
+            ? [heading("Abbreviations"), body(data.abbreviations)]
+            : []),
           heading("1. Purpose"),
           body(data.purpose),
           heading("2. Scope"),
@@ -93,7 +132,7 @@ export function buildPolicyDocument(data: PolicyDocData): Document {
           heading("3. Policy Statement"),
           body(data.policyStatement),
           heading("4. Procedure"),
-          ...data.procedureSteps.map(bullet),
+          ...data.procedureSteps.flatMap(renderProcedureStep),
           heading("5. Responsibility"),
           body(data.responsibility),
           heading("6. References"),
@@ -102,6 +141,9 @@ export function buildPolicyDocument(data: PolicyDocData): Document {
           body(data.distribution),
           heading("8. Revision History"),
           revisionHistory,
+          ...(data.disclaimer
+            ? [heading("Disclaimer"), body(data.disclaimer)]
+            : []),
         ],
       },
     ],
