@@ -128,6 +128,53 @@ const renderProcedureStep = (text: string, stepToOeLookup?: Map<number, string[]
   return paragraphs;
 };
 
+// Abbreviations arrive as one string with one "ABBR — Meaning" entry per line,
+// plus sometimes a trailing note (e.g. "Any additional abbreviation... is
+// [Hospital to define]"). Splitting these into a real two-column table is far
+// more scannable than one dense paragraph — a glossary is a lookup tool, not
+// prose meant to be read start to finish.
+const renderAbbreviations = (text: string): (Paragraph | Table)[] => {
+  const lines = text.split("\n").map((l) => l.trim()).filter(Boolean);
+  const rows: { abbr: string; meaning: string }[] = [];
+  const otherLines: string[] = [];
+
+  for (const line of lines) {
+    const match = line.match(/^(.+?)\s+—\s+(.+)$/);
+    if (match) {
+      rows.push({ abbr: match[1].trim(), meaning: match[2].trim() });
+    } else {
+      otherLines.push(line);
+    }
+  }
+
+  const result: (Paragraph | Table)[] = [];
+  if (rows.length > 0) {
+    result.push(
+      new Table({
+        width: { size: 100, type: WidthType.PERCENTAGE },
+        rows: [
+          new TableRow({
+            children: [
+              cell("Abbreviation", { bold: true, shade: true, width: 25 }),
+              cell("Meaning", { bold: true, shade: true, width: 75 }),
+            ],
+          }),
+          ...rows.map(
+            (r) =>
+              new TableRow({
+                children: [cell(r.abbr, { width: 25 }), cell(r.meaning, { width: 75 })],
+              }),
+          ),
+        ],
+      }),
+    );
+  }
+  for (const line of otherLines) {
+    result.push(new Paragraph({ children: [new TextRun({ text: line, size: 22, italics: true })], spacing: { before: 120, after: 120 } }));
+  }
+  return result;
+};
+
 export function buildPolicyDocument(data: PolicyDocData): Document {
   const today = new Date().toLocaleDateString("en-GB").replace(/\//g, "-");
 
@@ -205,7 +252,7 @@ export function buildPolicyDocument(data: PolicyDocData): Document {
             ? [heading("OE Cross-Reference"), oeMappingTable]
             : []),
           ...(data.abbreviations
-            ? [heading("Abbreviations"), body(data.abbreviations)]
+            ? [heading("Abbreviations"), ...renderAbbreviations(data.abbreviations)]
             : []),
           heading("1. Purpose"),
           body(data.purpose),
