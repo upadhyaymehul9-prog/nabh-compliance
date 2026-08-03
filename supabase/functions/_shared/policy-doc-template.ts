@@ -93,10 +93,18 @@ const buildStepToOeLookup = (oeMapping?: OeMappingEntry[]): Map<number, string[]
 // so a reader doesn't have to cross-reference the OE Cross-Reference table to know
 // which requirement a given step actually answers.
 const renderProcedureStep = (text: string, stepToOeLookup?: Map<number, string[]>): Paragraph[] => {
-  const titleMatch = text.match(/^(\d+)\.\s([^\n]+)\n\n([\s\S]*)$/);
+  // Normalize line endings first: content drafted via different tools (Claude
+  // Code sessions vs. a Windows Python build script) can arrive with either
+  // \n or \r\n. The title/body split below requires \n\n exactly — without
+  // this normalization, \r\n\r\n content silently fails the regex and every
+  // step falls through to one unformatted paragraph: no bold title, no real
+  // bullets, no OE code annotation. This happened for real on HIC.1's first
+  // generation and wasn't obvious until the actual document was inspected.
+  const normalizedText = text.replace(/\r\n/g, "\n");
+  const titleMatch = normalizedText.match(/^(\d+)\.\s([^\n]+)\n\n([\s\S]*)$/);
   if (!titleMatch) {
     // No recognizable "N. Title\n\nBody" shape — render as-is rather than guess.
-    return [new Paragraph({ children: [new TextRun({ text, size: 22 })], spacing: { after: 200 } })];
+    return [new Paragraph({ children: [new TextRun({ text: normalizedText, size: 22 })], spacing: { after: 200 } })];
   }
   const [, stepNumStr, titleText, rest] = titleMatch;
   const stepNum = parseInt(stepNumStr, 10);
@@ -134,7 +142,8 @@ const renderProcedureStep = (text: string, stepToOeLookup?: Map<number, string[]
 // more scannable than one dense paragraph — a glossary is a lookup tool, not
 // prose meant to be read start to finish.
 const renderAbbreviations = (text: string): (Paragraph | Table)[] => {
-  const lines = text.split("\n").map((l) => l.trim()).filter(Boolean);
+  const normalizedText = text.replace(/\r\n/g, "\n");
+  const lines = normalizedText.split("\n").map((l) => l.trim()).filter(Boolean);
   const rows: { abbr: string; meaning: string }[] = [];
   const otherLines: string[] = [];
 
