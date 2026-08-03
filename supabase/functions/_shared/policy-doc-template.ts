@@ -8,6 +8,12 @@ import {
   WidthType, AlignmentType, ShadingType, Footer,
 } from "npm:docx";
 
+export interface OeMappingEntry {
+  oeCode: string;
+  requirement: string;
+  steps: string;
+}
+
 export interface PolicyDocData {
   hospitalName: string;
   docNo: string;
@@ -16,6 +22,7 @@ export interface PolicyDocData {
   oeLevel: string;
   chapterName: string;
   abbreviations?: string;
+  oeMapping?: OeMappingEntry[];
   purpose: string;
   scope: string;
   policyStatement: string;
@@ -97,6 +104,31 @@ export function buildPolicyDocument(data: PolicyDocData): Document {
     ],
   });
 
+  const oeMappingTable = data.oeMapping && data.oeMapping.length > 0
+    ? new Table({
+        width: { size: 100, type: WidthType.PERCENTAGE },
+        rows: [
+          new TableRow({
+            children: [
+              cell("OE Code", { bold: true, shade: true, width: 15 }),
+              cell("Requirement", { bold: true, shade: true, width: 55 }),
+              cell("Addressed In", { bold: true, shade: true, width: 30 }),
+            ],
+          }),
+          ...data.oeMapping.map(
+            (m) =>
+              new TableRow({
+                children: [
+                  cell(m.oeCode, { width: 15 }),
+                  cell(m.requirement, { width: 55 }),
+                  cell(m.steps, { width: 30 }),
+                ],
+              }),
+          ),
+        ],
+      })
+    : null;
+
   return new Document({
     sections: [
       {
@@ -122,6 +154,9 @@ export function buildPolicyDocument(data: PolicyDocData): Document {
             spacing: { after: 300 },
           }),
           controlTable,
+          ...(oeMappingTable
+            ? [heading("OE Cross-Reference"), oeMappingTable]
+            : []),
           ...(data.abbreviations
             ? [heading("Abbreviations"), body(data.abbreviations)]
             : []),

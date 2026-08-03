@@ -73,6 +73,13 @@ Deno.serve(async (req: Request) => {
       oeLevel: "", // multiple OEs, level varies — omitted at this granularity
       chapterName: master.chapter,
       abbreviations: master.abbreviations ? substitute(master.abbreviations, hospital_name) : undefined,
+      oeMapping: Array.isArray(master.oe_mapping)
+        ? (master.oe_mapping as { oe_code: string; requirement: string; steps: string }[]).map((m) => ({
+            oeCode: m.oe_code,
+            requirement: substitute(m.requirement, hospital_name),
+            steps: m.steps,
+          }))
+        : undefined,
       purpose: substitute(master.purpose, hospital_name),
       scope: substitute(master.scope, hospital_name),
       policyStatement: substitute(master.policy_statement, hospital_name),
