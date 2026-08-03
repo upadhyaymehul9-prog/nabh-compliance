@@ -45,21 +45,68 @@ const heading = (text: string) =>
 const body = (text: string) =>
   new Paragraph({ children: [new TextRun({ text, size: 22 })], spacing: { after: 150 } });
 
+// Parses an oe_mapping "steps" string like "Step 2, Steps 10-14" into the set
+// of step numbers it refers to: [2, 10, 11, 12, 13, 14]. Tolerates "Step"/"Steps"
+// and comma-separated combinations of single numbers and ranges.
+const parseStepNumbers = (stepsStr: string): number[] => {
+  const numbers: number[] = [];
+  const parts = stepsStr.split(",");
+  for (const part of parts) {
+    const rangeMatch = part.match(/(\d+)\s*-\s*(\d+)/);
+    if (rangeMatch) {
+      const start = parseInt(rangeMatch[1], 10);
+      const end = parseInt(rangeMatch[2], 10);
+      for (let n = start; n <= end; n++) numbers.push(n);
+      continue;
+    }
+    const singleMatch = part.match(/(\d+)/);
+    if (singleMatch) numbers.push(parseInt(singleMatch[1], 10));
+  }
+  return numbers;
+};
+
+// Builds a lookup from step number -> OE code(s), so each step's title can be
+// annotated directly (e.g. "2. Standard precautions... (HIC.2.a)") instead of
+// requiring the reader to cross-reference a separate table to know which OE a
+// given step actually answers.
+const buildStepToOeLookup = (oeMapping?: OeMappingEntry[]): Map<number, string[]> => {
+  const lookup = new Map<number, string[]>();
+  if (!oeMapping) return lookup;
+  for (const entry of oeMapping) {
+    const stepNumbers = parseStepNumbers(entry.steps);
+    for (const n of stepNumbers) {
+      const existing = lookup.get(n) ?? [];
+      existing.push(entry.oeCode);
+      lookup.set(n, existing);
+    }
+  }
+  return lookup;
+};
+
 // Procedure steps arrive as one fused string per step, e.g.:
 //   "4. Choosing between alcohol-based handrub and soap and water\n\nAlcohol-based
 //    handrub is the routine method... - hands are visibly dirty...\n- hands feel sticky..."
 // Splitting the title from the body (and any "- " sub-list within the body) turns this
 // from one dense wall of text into a scannable step: bold title, then body, then real
 // bullet points for any embedded list — instead of everything mashed into one bullet.
-const renderProcedureStep = (text: string): Paragraph[] => {
-  const titleMatch = text.match(/^(\d+\.\s[^\n]+)\n\n([\s\S]*)$/);
+// stepToOeLookup, if provided, annotates the title with its OE code(s) directly,
+// so a reader doesn't have to cross-reference the OE Cross-Reference table to know
+// which requirement a given step actually answers.
+const renderProcedureStep = (text: string, stepToOeLookup?: Map<number, string[]>): Paragraph[] => {
+  const titleMatch = text.match(/^(\d+)\.\s([^\n]+)\n\n([\s\S]*)$/);
   if (!titleMatch) {
     // No recognizable "N. Title\n\nBody" shape — render as-is rather than guess.
     return [new Paragraph({ children: [new TextRun({ text, size: 22 })], spacing: { after: 200 } })];
   }
-  const [, title, rest] = titleMatch;
+  const [, stepNumStr, titleText, rest] = titleMatch;
+  const stepNum = parseInt(stepNumStr, 10);
+  const oeCodes = stepToOeLookup?.get(stepNum);
+  const titleWithOe = oeCodes && oeCodes.length > 0
+    ? `${stepNumStr}. ${titleText} (${oeCodes.join(", ")})`
+    : `${stepNumStr}. ${titleText}`;
+
   const paragraphs: Paragraph[] = [
-    new Paragraph({ children: [new TextRun({ text: title, bold: true, size: 23 })], spacing: { before: 240, after: 90 } }),
+    new Paragraph({ children: [new TextRun({ text: titleWithOe, bold: true, size: 23 })], spacing: { before: 240, after: 90 } }),
   ];
 
   const blocks = rest.split(/\n\n+/);
@@ -167,7 +214,10 @@ export function buildPolicyDocument(data: PolicyDocData): Document {
           heading("3. Policy Statement"),
           body(data.policyStatement),
           heading("4. Procedure"),
-          ...data.procedureSteps.flatMap(renderProcedureStep),
+          ...(() => {
+            const stepToOeLookup = buildStepToOeLookup(data.oeMapping);
+            return data.procedureSteps.flatMap((step) => renderProcedureStep(step, stepToOeLookup));
+          })(),
           heading("5. Responsibility"),
           body(data.responsibility),
           heading("6. References"),
