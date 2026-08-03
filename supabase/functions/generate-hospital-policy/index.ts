@@ -79,7 +79,7 @@ Deno.serve(async (req: Request) => {
             requirement: substitute(m.requirement, hospital_name),
             steps: m.steps,
             evidence: m.evidence ? substitute(m.evidence, hospital_name) : undefined,
-            responsible: m.responsible,
+            responsible: m.responsible ? substitute(m.responsible, hospital_name) : undefined,
           }))
         : undefined,
       purpose: substitute(master.purpose, hospital_name),

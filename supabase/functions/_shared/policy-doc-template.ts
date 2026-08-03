@@ -47,12 +47,18 @@ const heading = (text: string) =>
 const body = (text: string) =>
   new Paragraph({ children: [new TextRun({ text, size: 22 })], spacing: { after: 150 } });
 
-// Parses an oe_mapping "steps" string like "Step 2, Steps 10-14" into the set
-// of step numbers it refers to: [2, 10, 11, 12, 13, 14]. Tolerates "Step"/"Steps"
-// and comma-separated combinations of single numbers and ranges.
+// Parses an oe_mapping "steps" string like "Step 2, Steps 10-14" or
+// "Steps 1, 4-11 and 26" into the set of step numbers it refers to.
+// Tolerates "Step"/"Steps", comma-separated lists, ranges, and "and" used
+// before the final item in the list (a natural way to write it, but one
+// that silently dropped the last number until this normalization — e.g.
+// "Steps 1, 4-11 and 26" previously lost step 26's inline OE annotation
+// even though the OE Cross-Reference table's plain-text "Addressed In"
+// column always showed it correctly).
 const parseStepNumbers = (stepsStr: string): number[] => {
   const numbers: number[] = [];
-  const parts = stepsStr.split(",");
+  const normalized = stepsStr.replace(/\s+and\s+/gi, ", ");
+  const parts = normalized.split(",");
   for (const part of parts) {
     const rangeMatch = part.match(/(\d+)\s*-\s*(\d+)/);
     if (rangeMatch) {
