@@ -74,10 +74,12 @@ Deno.serve(async (req: Request) => {
       chapterName: master.chapter,
       abbreviations: master.abbreviations ? substitute(master.abbreviations, hospital_name) : undefined,
       oeMapping: Array.isArray(master.oe_mapping)
-        ? (master.oe_mapping as { oe_code: string; requirement: string; steps: string }[]).map((m) => ({
+        ? (master.oe_mapping as { oe_code: string; requirement: string; steps: string; evidence?: string; responsible?: string }[]).map((m) => ({
             oeCode: m.oe_code,
             requirement: substitute(m.requirement, hospital_name),
             steps: m.steps,
+            evidence: m.evidence ? substitute(m.evidence, hospital_name) : undefined,
+            responsible: m.responsible,
           }))
         : undefined,
       purpose: substitute(master.purpose, hospital_name),

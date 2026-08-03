@@ -12,6 +12,8 @@ export interface OeMappingEntry {
   oeCode: string;
   requirement: string;
   steps: string;
+  evidence?: string;
+  responsible?: string;
 }
 
 export interface PolicyDocData {
@@ -207,28 +209,54 @@ export function buildPolicyDocument(data: PolicyDocData): Document {
     ],
   });
 
+  const hasEvidenceData = data.oeMapping?.some((m) => m.evidence || m.responsible) ?? false;
+
   const oeMappingTable = data.oeMapping && data.oeMapping.length > 0
     ? new Table({
         width: { size: 100, type: WidthType.PERCENTAGE },
-        rows: [
-          new TableRow({
-            children: [
-              cell("OE Code", { bold: true, shade: true, width: 15 }),
-              cell("Requirement", { bold: true, shade: true, width: 55 }),
-              cell("Addressed In", { bold: true, shade: true, width: 30 }),
-            ],
-          }),
-          ...data.oeMapping.map(
-            (m) =>
+        rows: hasEvidenceData
+          ? [
               new TableRow({
                 children: [
-                  cell(m.oeCode, { width: 15 }),
-                  cell(m.requirement, { width: 55 }),
-                  cell(m.steps, { width: 30 }),
+                  cell("OE Code", { bold: true, shade: true, width: 12 }),
+                  cell("Requirement", { bold: true, shade: true, width: 33 }),
+                  cell("Addressed In", { bold: true, shade: true, width: 18 }),
+                  cell("Evidence", { bold: true, shade: true, width: 22 }),
+                  cell("Responsible", { bold: true, shade: true, width: 15 }),
                 ],
               }),
-          ),
-        ],
+              ...data.oeMapping.map(
+                (m) =>
+                  new TableRow({
+                    children: [
+                      cell(m.oeCode, { width: 12 }),
+                      cell(m.requirement, { width: 33 }),
+                      cell(m.steps, { width: 18 }),
+                      cell(m.evidence ?? "—", { width: 22 }),
+                      cell(m.responsible ?? "—", { width: 15 }),
+                    ],
+                  }),
+              ),
+            ]
+          : [
+              new TableRow({
+                children: [
+                  cell("OE Code", { bold: true, shade: true, width: 15 }),
+                  cell("Requirement", { bold: true, shade: true, width: 55 }),
+                  cell("Addressed In", { bold: true, shade: true, width: 30 }),
+                ],
+              }),
+              ...data.oeMapping.map(
+                (m) =>
+                  new TableRow({
+                    children: [
+                      cell(m.oeCode, { width: 15 }),
+                      cell(m.requirement, { width: 55 }),
+                      cell(m.steps, { width: 30 }),
+                    ],
+                  }),
+              ),
+            ],
       })
     : null;
 
