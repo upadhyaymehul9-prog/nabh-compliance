@@ -2,10 +2,44 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, Tooltip, ReferenceLine, ResponsiveContainer, CartesianGrid } from "recharts";
 import jsPDF from 'jspdf';
 import AIAssistantWidget from "./components/AIAssistantWidget";
-import QuickChecklistTab from "./components/QuickChecklist";
+import QuickChecklistTab, { sanitizeForPdf } from "./components/QuickChecklist";
 import HomepageScreen from "./components/HomepageScreen";
 import AuthForm from "./components/AuthForm";
 import { supabase } from "./supabaseClient";
+
+// ── PDF text safety ──────────────────────────────────────────────────────
+// jsPDF's standard-14 fonts are WinAnsi-only. Any character outside that set is
+// silently re-encoded and a reader shows the wrong glyph — U+2264 "≤" prints as
+// "d", en-dashes and smart quotes vanish, "₹" becomes "¹".
+//
+// There are ~285 doc.text call sites in this file, so patching them one by one
+// would be a large diff and every site would be a chance to miss one. Instead we
+// patch the three text APIs on the document itself, once, at construction: any
+// string drawn through a wrapped document is PDF-safe by construction, including
+// call sites added later.
+//
+// ASCII and the Latin-1 supplement (U+00A0-U+00FF) are inside WinAnsi and render
+// correctly, so they are left exactly as authored — that keeps accented names
+// ("Café"), "±" and "×" intact. Only genuinely unencodable characters are
+// translated. Whitespace is never touched, so nothing that relies on spacing for
+// layout can shift.
+const pdfChar = (ch) => {
+  const cp = ch.codePointAt(0);
+  return cp <= 0x7f || (cp >= 0xa0 && cp <= 0xff) ? ch : sanitizeForPdf(ch);
+};
+const pdfText = (text) =>
+  text === null || text === undefined ? "" : Array.from(String(text), pdfChar).join("");
+
+const pdfSafe = (doc) => {
+  const wrap = (fn) => (text, ...rest) =>
+    fn(Array.isArray(text) ? text.map(pdfText) : pdfText(text), ...rest);
+  // text draws, splitTextToSize wraps, getTextWidth measures — all three must
+  // see the same translated string or widths will not match the glyphs drawn.
+  doc.text = wrap(doc.text.bind(doc));
+  doc.splitTextToSize = wrap(doc.splitTextToSize.bind(doc));
+  doc.getTextWidth = wrap(doc.getTextWidth.bind(doc));
+  return doc;
+};
 
 // ── SHCO ELC Static Data ─────────────────────────────────────────────────
 const SHCO_ELC_DOCS = [
@@ -6536,7 +6570,7 @@ export default function App() {
   const generatePDF = async () => {
     setPdfLoading(true);
     try {
-      const doc = new jsPDF({ unit:'pt', format:'a4' });
+      const doc = pdfSafe(new jsPDF({ unit:'pt', format:'a4' }));
       const W = doc.internal.pageSize.getWidth();
       const H = doc.internal.pageSize.getHeight();
       const today = new Date();
@@ -6844,7 +6878,7 @@ export default function App() {
         return ms.length>0 ? ms[0].meeting_date : null;
       };
       const totalCommActive = pdfCommittees.filter(c=>meetingsInLast12(c.id).length>0).length;
-      const doc = new jsPDF({ unit:'pt', format:'a4' });
+      const doc = pdfSafe(new jsPDF({ unit:'pt', format:'a4' }));
       const W = doc.internal.pageSize.getWidth();
       const H = doc.internal.pageSize.getHeight();
       const today = new Date();
@@ -7336,7 +7370,7 @@ export default function App() {
         const {data:capD}=await supabase.from("eco_full_capa").select("*").eq("hospital_id",context.hospitalId);
         if(capD){const m={};capD.forEach(c=>{m[c.oe_code]=c;});localCapa=m;}
       }
-      const doc = new jsPDF({ unit:'pt', format:'a4' });
+      const doc = pdfSafe(new jsPDF({ unit:'pt', format:'a4' }));
       const W = doc.internal.pageSize.getWidth();
       const H = doc.internal.pageSize.getHeight();
       const today = new Date();
@@ -7603,7 +7637,7 @@ export default function App() {
             const scC     = scoreCol(sc);
             const rowBg   = sc<=2 ? '#180606' : '#140e00';
             doc.setFontSize(7.5);
-            const oeText=(oe.oe_text||'').replace(/\uFB00/g,'ff').replace(/\uFB01/g,'fi').replace(/\uFB02/g,'fl').replace(/\uFB03/g,'ffi').replace(/\uFB04/g,'ffl').replace(/\uFB05/g,'st').replace(/\uFB06/g,'st').replace(/\u2018/g,"'").replace(/\u2019/g,"'").replace(/\u201C/g,'"').replace(/\u201D/g,'"').replace(/\u2013/g,'-').replace(/\u2014/g,'--').replace(/[^\x20-\x7E\xA0-\xFF]/g,'');
+            const oeText=pdfText(oe.oe_text);
             const wrapped = doc.splitTextToSize(oeText, textColW);
             const lineH=9; const rowH=Math.max(20, wrapped.length*lineH+rowPad*2);
 
@@ -7737,7 +7771,7 @@ export default function App() {
       const getSevC  = sev => SEV_COLORS[sev]||'#3a5870';
       const lvlColor = lvl => lvl==='CORE'?'#e05a5a':lvl==='Commitment'?'#f4a441':'#c9a84c';
       const dotCode  = code => code.replace(/^([A-Z]+)(\d+)([a-z]+)$/, '$1.$2.$3');
-      const sanitize = str => (str||'').replace(/ﬀ/g,'ff').replace(/ﬁ/g,'fi').replace(/ﬂ/g,'fl').replace(/ﬃ/g,'ffi').replace(/ﬄ/g,'ffl').replace(/‘/g,"'").replace(/’/g,"'").replace(/“/g,'"').replace(/”/g,'"').replace(/–/g,'-').replace(/—/g,'--').replace(/[^\x20-\x7E\xA0-\xFF]/g,'');
+      const sanitize = pdfText;
 
       const getElcSev = code => {
         const s   = elcScores[code];
@@ -7758,7 +7792,7 @@ export default function App() {
       const counts = {CRITICAL:0, HIGH:0, MEDIUM:0, LOW:0};
       gaps.forEach(g=>{ if(counts[g.severity]!==undefined) counts[g.severity]++; });
 
-      const doc = new jsPDF({unit:'pt', format:'a4'});
+      const doc = pdfSafe(new jsPDF({unit:'pt', format:'a4'}));
       const W = doc.internal.pageSize.getWidth();
       const H = doc.internal.pageSize.getHeight();
       const today = new Date();
@@ -7949,7 +7983,7 @@ export default function App() {
       const getSevC  = sev => SEV_COLORS[sev]||'#3a5870';
       const lvlColor = lvl => lvl==='CORE'?'#e05a5a':lvl==='Commitment'?'#f4a441':'#c9a84c';
       const dotCode  = code => code.replace(/^([A-Z]+)(\d+)([a-z]+)$/, '$1.$2.$3');
-      const sanitize = str => (str||'').replace(/ﬀ/g,'ff').replace(/ﬁ/g,'fi').replace(/ﬂ/g,'fl').replace(/ﬃ/g,'ffi').replace(/ﬄ/g,'ffl').replace(/'/g,"'").replace(/'/g,"'").replace(/"/g,'"').replace(/"/g,'"').replace(/–/g,'-').replace(/—/g,'--').replace(/[^\x20-\x7E\xA0-\xFF]/g,'');
+      const sanitize = pdfText;
 
       const getShcoElcSev = code => {
         const s   = shcoElcScores[code];
@@ -7970,7 +8004,7 @@ export default function App() {
       const counts = {CRITICAL:0, HIGH:0, MEDIUM:0, LOW:0};
       gaps.forEach(g=>{ if(counts[g.severity]!==undefined) counts[g.severity]++; });
 
-      const doc = new jsPDF({unit:'pt', format:'a4'});
+      const doc = pdfSafe(new jsPDF({unit:'pt', format:'a4'}));
       const W = doc.internal.pageSize.getWidth();
       const H = doc.internal.pageSize.getHeight();
       const today = new Date();
