@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Slide-out nav drawer. 100dvh tracks the *visible* viewport, so the panel
+   stops above the mobile browser's address bar / bottom toolbar instead of
+   running underneath them and clipping the footer (Sign out). The 100vh line
+   is the fallback for browsers without dvh; on desktop the two are identical. */
+.app-drawer {
+  height: 100vh;
+  height: 100dvh;
+}

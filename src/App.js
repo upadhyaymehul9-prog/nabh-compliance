@@ -12402,12 +12402,12 @@ export default function App() {
       {hasDrawer&&(
         <>
           <div onClick={()=>setDrawerOpen(false)} style={{position:"fixed",inset:0,background:theme==='light'?"rgba(0,0,0,0.45)":"rgba(0,0,0,0.75)",backdropFilter:"blur(2px)",WebkitBackdropFilter:"blur(2px)",zIndex:1000,opacity:drawerOpen?1:0,pointerEvents:drawerOpen?"auto":"none",transition:"opacity .25s ease"}}/>
-          <aside style={{position:"fixed",top:0,left:0,height:"100vh",width:"min(280px, 85vw)",background:T.bg,borderRight:`1px solid ${theme==='light'?T.border:"rgba(255,255,255,0.14)"}`,zIndex:1001,display:"flex",flexDirection:"column",transform:drawerOpen?"translateX(0)":"translateX(-100%)",transition:"transform .25s ease",boxShadow:drawerOpen?(theme==='light'?"6px 0 28px rgba(0,0,0,0.28)":"10px 0 48px rgba(0,0,0,0.75)"):"none"}}>
+          <aside className="app-drawer" style={{position:"fixed",top:0,left:0,width:"min(280px, 85vw)",background:T.bg,borderRight:`1px solid ${theme==='light'?T.border:"rgba(255,255,255,0.14)"}`,zIndex:1001,display:"flex",flexDirection:"column",transform:drawerOpen?"translateX(0)":"translateX(-100%)",transition:"transform .25s ease",boxShadow:drawerOpen?(theme==='light'?"6px 0 28px rgba(0,0,0,0.28)":"10px 0 48px rgba(0,0,0,0.75)"):"none"}}>
             <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"14px 16px",borderBottom:`1px solid ${T.border}`,flexShrink:0}}>
               <span style={{fontSize:13,fontWeight:800,letterSpacing:1,color:T.gold}}>MENU</span>
               <button onClick={()=>setDrawerOpen(false)} aria-label="Close menu" style={{width:30,height:30,borderRadius:7,border:`1px solid ${T.border}`,background:"transparent",color:T.text,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",padding:0}}><NavIcon icon="ti-x" style={{fontSize:16}}/></button>
             </div>
-            <div style={{flex:1,overflowY:"auto",padding:"8px 0"}}>
+            <div style={{flex:1,minHeight:0,overflowY:"auto",overscrollBehavior:"contain",padding:"8px 0"}}>
               {drawerGroups.map(g=>(
                 <div key={g.key} style={{marginBottom:6}}>
                   <div style={{padding:"10px 18px 4px",fontSize:10,fontWeight:800,letterSpacing:1.5,color:T.muted}}>{g.label}</div>
