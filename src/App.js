@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, Tooltip, ReferenceLine, ResponsiveContainer, CartesianGrid } from "recharts";
 import jsPDF from 'jspdf';
 import AIAssistantWidget from "./components/AIAssistantWidget";
+import QuickChecklistTab from "./components/QuickChecklist";
 import HomepageScreen from "./components/HomepageScreen";
 import AuthForm from "./components/AuthForm";
 import { supabase } from "./supabaseClient";
@@ -4529,6 +4530,16 @@ const SHCO_KPIS=[
   {id:14,name:"Incidence of patient falls",                      ref:"PSQ.2d", formula:"Falls / 1000 patient days",                 unit:"/1000",   numLabel:"Number of patient falls",         denLabel:"Total patient days",          multiplier:1000},
   {id:15,name:"Needlestick injuries",                            ref:"PSQ.2d", formula:"Injuries / 100 occupied beds",              unit:"/100",    numLabel:"Number of needlestick injuries",  denLabel:"Total occupied beds",         multiplier:100},
 ];
+
+// Reference data the Quick Checklist needs but that lives in this file. Frozen at
+// module scope so the identity is stable — the checklist's loader memoises on it.
+const QUICK_CHECKLIST_REF = {
+  CHAPTER_ORDER,
+  HCO_ELC_OE_LIST,
+  HCO_KPI_OVERRIDE,
+  SHCO_KPIS,
+  ECO_KPIS,
+};
 
 function ShcoFullKpiTab({hospitalId}){
   const [kpiData,setKpiData]=useState([]);
@@ -9512,6 +9523,7 @@ export default function App() {
     {key:'overview', label:'📊 Overview'},
     {key:'oes', label:'📑 OE Browser'},
     {key:'fixgaps', label:`🔧 Fix Gaps${allShcoElcGaps.length > 0 ? ' (' + allShcoElcGaps.length + ')' : ''}`},
+    {key:'checklist', label:'✅ Quick Checklist'},
     {key:'kpis', label:'📈 KPIs'},
     {key:'docs', label:'📂 Documents'},
     {key:'committees', label:'🏛️ Committees'},
@@ -9525,6 +9537,7 @@ export default function App() {
       case 'overview': return renderOverview();
       case 'oes': return renderSHCOOEBrowser();
       case 'fixgaps': return renderSHCOELCFixGaps();
+      case 'checklist': return <QuickChecklistTab T={T} programme="shco-elc" hospitalId={context?.hospitalId} hospitalName={context?.hospitalName} refData={QUICK_CHECKLIST_REF} />;
       case 'kpis': return <ElcKpiTab hospitalId={context?.hospitalId} programme="SHCO_ELC" />;
       case 'docs': return renderDocTracker();
       case 'committees': return <CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate} selectedProgramme={'shco-elc'} />;
@@ -10334,6 +10347,7 @@ export default function App() {
             {key:'fixgaps',  label:`🔧 Fix Gaps${allGaps.length>0?' ('+allGaps.length+')':''}`, tourId:'shco-tour-fixgaps'},
             {key:'kpis',        label:'📈 KPIs'},
             {key:'committees',  label:'🏛️ Committees'},
+            {key:'checklist',   label:'✅ Quick Checklist'},
           ].map(tab=>(
             <button key={tab.key} id={tab.tourId||undefined} onClick={()=>setShcoFullTab(tab.key)}
               style={{padding:'12px 16px',border:'none',cursor:'pointer',background:'transparent',fontSize:13,fontWeight:600,
@@ -10350,7 +10364,7 @@ export default function App() {
             {shcoFullPdfLoading ? '⏳ Generating…' : '⬇ Download Gap Report'}
           </button>
         </div>
-        {shcoFullTab==='dashboard' ? renderDashboard() : shcoFullTab==='scoring' ? renderScoreOEs() : shcoFullTab==='kpis' ? <ShcoFullKpiTab hospitalId={context?.hospitalId}/> : shcoFullTab==='committees' ? <CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate} selectedProgramme={'shco-full'}/> : renderFixGaps()}
+        {shcoFullTab==='dashboard' ? renderDashboard() : shcoFullTab==='scoring' ? renderScoreOEs() : shcoFullTab==='kpis' ? <ShcoFullKpiTab hospitalId={context?.hospitalId}/> : shcoFullTab==='committees' ? <CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate} selectedProgramme={'shco-full'}/> : shcoFullTab==='checklist' ? <QuickChecklistTab T={T} programme="shco-full" hospitalId={context?.hospitalId} hospitalName={context?.hospitalName} refData={QUICK_CHECKLIST_REF}/> : renderFixGaps()}
       </div>
     );
   };
@@ -10886,6 +10900,7 @@ export default function App() {
             {key:'scoring',  label:'✏️ Score OEs'},
             {key:'fixgaps',  label:`🔧 Fix Gaps${allGaps.length>0?' ('+allGaps.length+')':''}`},
             {key:'kpis',     label:'📈 KPIs'},
+            {key:'checklist',label:'✅ Quick Checklist'},
           ].map(tab=>(
             <button key={tab.key} onClick={()=>setEcoFullTab(tab.key)}
               style={{padding:'12px 16px',border:'none',cursor:'pointer',background:'transparent',fontSize:13,fontWeight:600,
@@ -10902,7 +10917,7 @@ export default function App() {
             {ecoFullPdfLoading ? '⏳ Generating…' : '⬇ Download Gap Report'}
           </button>
         </div>
-        {ecoFullTab==='dashboard' ? renderDashboard() : ecoFullTab==='scoring' ? renderScoreOEs() : ecoFullTab==='kpis' ? <EcoFullKpiTab hospitalId={context?.hospitalId}/> : renderFixGaps()}
+        {ecoFullTab==='dashboard' ? renderDashboard() : ecoFullTab==='scoring' ? renderScoreOEs() : ecoFullTab==='kpis' ? <EcoFullKpiTab hospitalId={context?.hospitalId}/> : ecoFullTab==='checklist' ? <QuickChecklistTab T={T} programme="eco-full" hospitalId={context?.hospitalId} hospitalName={context?.hospitalName} refData={QUICK_CHECKLIST_REF}/> : renderFixGaps()}
       </div>
     );
   };
@@ -11843,6 +11858,7 @@ export default function App() {
     {key:'overview', label:'📊 Overview'},
     {key:'oes', label:'📑 OE Browser'},
     {key:'fixgaps', label:`🔧 Fix Gaps${allElcGaps.length > 0 ? ' (' + allElcGaps.length + ')' : ''}`},
+    {key:'checklist', label:'✅ Quick Checklist'},
     {key:'kpis', label:'📈 KPIs'},
     {key:'docs', label:'📂 Documents'},
     {key:'committees', label:'🏛️ Committees'},
@@ -11856,6 +11872,7 @@ export default function App() {
       case 'overview': return renderOverview();
       case 'oes': return renderOEBrowser();
       case 'fixgaps': return renderELCFixGaps();
+      case 'checklist': return <QuickChecklistTab T={T} programme="hco-elc" hospitalId={context?.hospitalId} hospitalName={context?.hospitalName} refData={QUICK_CHECKLIST_REF} />;
       case 'kpis': return <ElcKpiTab hospitalId={context?.hospitalId} programme="HCO_ELC" />;
       case 'docs': return renderDocTracker();
       case 'committees': return <CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate} selectedProgramme={'hco-elc'} />;
@@ -12245,6 +12262,7 @@ export default function App() {
     // ASSESS
     {id:"dashboard",label:"Dashboard",icon:"ti-layout-dashboard",programmes:["hco"],group:"assess"},
     {id:"gaps",label:"Fix Gaps",icon:"ti-tool",programmes:["hco"],group:"assess"},
+    {id:"checklist",label:"Quick Checklist",icon:"ti-list-check",programmes:["hco"],group:"assess"},
     {id:"tracer",label:"Tracer",icon:"ti-stethoscope",programmes:["hco"],group:"assess"},
     // GOVERNANCE
     {id:"committees",label:"Committees",icon:"ti-building-community",programmes:["hco"],group:"governance"},
@@ -12433,6 +12451,7 @@ export default function App() {
         {screen==="dashboard"&&<Dashboard decision={decision} gaps={gaps} onNav={id=>navigate({screen:id})} onExportPDF={generatePDF} pdfLoading={pdfLoading}/>}
         {screen==="scoring"&&<ScoringScreen assessmentId={context?.assessmentId} oes={oes} standards={standards} onRefresh={()=>loadData(context)}/>}
         {screen==="gaps"&&<GapFixScreen assessmentId={context?.assessmentId} gaps={gaps} onRefresh={()=>loadData(context)} onDownloadReport={generatePDF} pdfLoading={pdfLoading}/>}
+        {screen==="checklist"&&<QuickChecklistTab T={T} programme="hco" hospitalId={context?.hospitalId} assessmentId={context?.assessmentId} hospitalName={context?.hospitalName} refData={QUICK_CHECKLIST_REF}/>}
         {screen==="committees"&&<CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate} selectedProgramme={selectedProgramme}/>}
         {screen==="committee-calendar"&&<CommitteeCalendarScreen hospitalId={context?.hospitalId}/>}
         {screen==="kpis"&&<KPIsScreen hospitalId={context?.hospitalId} user={user}/>}
