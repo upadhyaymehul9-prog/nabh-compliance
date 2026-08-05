@@ -20,3 +20,62 @@ code {
   height: 100vh;
   height: 100dvh;
 }
+
+/* Quick Checklist rows. These live here rather than inline because the mobile
+   rules below have to override them — an inline style would always win. The
+   desktop values are exactly what was previously set inline. */
+.qc-row { align-items: center; }
+
+/* flex must live here, not inline: the shorthand `flex:1` also sets
+   flex-basis:0%, and an inline basis would beat the mobile flex-basis:100%
+   below, leaving the description squeezed into a narrow column instead of
+   dropping to its own line. `1 1 0%` is what `flex:1` expanded to before. */
+.qc-desc {
+  flex: 1 1 0%;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* The review tick. Desktop keeps the original 13px box; mobile grows the hit
+   area to 40x40 (WCAG 2.5.5 target size) while the box itself stays 13px. */
+.qc-tick {
+  flex-shrink: 0;
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  /* Description drops to its own full-width line and wraps, instead of being
+     ellipsed into ~145px with a hover tooltip touch devices can never fire. */
+  .qc-row {
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 2px;
+  }
+  .qc-desc {
+    flex-basis: 100%;
+    order: 4;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    overflow-wrap: anywhere;
+  }
+  .qc-status {
+    order: 3;
+    margin-left: auto;
+  }
+  .qc-tick {
+    width: 40px;
+    height: 40px;
+  }
+}

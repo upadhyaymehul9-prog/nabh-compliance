@@ -6,10 +6,16 @@ import { supabase } from "../supabaseClient";
  * Quick Checklist — a flat, read-only roll-up of the three things a hospital is
  * assessed on: OEs, KPIs and committees.
  *
- * This module never writes. It re-reads the same tables the scoring / KPI /
- * committee screens own and derives done / not-done from them, so it can never
- * drift out of step with those screens and can never corrupt them. The "done"
- * rules below are lifted verbatim from the existing screens — see each constant.
+ * It never writes to the tables it reports on. It re-reads the same tables the
+ * scoring / KPI / committee screens own and derives done / not-done from them,
+ * so it can never drift out of step with those screens and can never corrupt
+ * them. The "done" rules below are lifted verbatim from the existing screens —
+ * see each constant.
+ *
+ * The one thing it does write is its own review ticks (*_checklist_reviews), an
+ * informal "I have looked at this row" marker. Those are stored apart from every
+ * table above, are never read back into done / not-done, and carry no compliance
+ * meaning — see reviewTable below.
  *
  * Programme separation is absolute: every programme has its own catalogue table
  * and its own hospital-data table, and nothing is shared across programmes.
@@ -27,13 +33,21 @@ const KPI_DONE_MONTHS = 3;
 // same rule as totalActive / meetingsInLast12 in the gap-report generators.
 const COMMITTEE_DONE_WINDOW_DAYS = 365;
 
+// reviewTable holds the informal "I have looked at this row" ticks. It is the
+// one thing this module writes, it is per-programme like everything else, and it
+// is deliberately kept apart from the done-rules above: a tick says nothing about
+// compliance and never feeds scoring.
 const PROGRAMMES = {
-  "hco":       { label: "HCO Full Accreditation",             committeeProgramme: "HCO_FULL"  },
-  "shco-full": { label: "SHCO Full Accreditation",            committeeProgramme: "SHCO_FULL" },
-  "eco-full":  { label: "ECO Full Accreditation",             committeeProgramme: null        },
-  "hco-elc":   { label: "HCO Entry Level Certification",      committeeProgramme: "HCO_ELC"   },
-  "shco-elc":  { label: "SHCO Entry Level Certification",     committeeProgramme: "SHCO_ELC"  },
+  "hco":       { label: "HCO Full Accreditation",             committeeProgramme: "HCO_FULL",  reviewTable: "hco_checklist_reviews"       },
+  "shco-full": { label: "SHCO Full Accreditation",            committeeProgramme: "SHCO_FULL", reviewTable: "shco_full_checklist_reviews" },
+  "eco-full":  { label: "ECO Full Accreditation",             committeeProgramme: null,        reviewTable: "eco_full_checklist_reviews"  },
+  "hco-elc":   { label: "HCO Entry Level Certification",      committeeProgramme: "HCO_ELC",   reviewTable: "hco_elc_checklist_reviews"   },
+  "shco-elc":  { label: "SHCO Entry Level Certification",     committeeProgramme: "SHCO_ELC",  reviewTable: "shco_elc_checklist_reviews"  },
 };
+
+// One key per checklist row. Codes are only unique within a section (an OE and a
+// committee could both be "AAC.1"), so the section is part of the key.
+const reviewKey = (section, code) => `${section}::${code}`;
 
 // ELC OE codes are stored compact (AAC1a) but read as dotted (AAC.1.a) everywhere
 // they are shown to a user. Same transform the ELC gap lists use.
@@ -212,6 +226,14 @@ async function loadCommitteeItems(programme, { hospitalId }) {
         : "No meetings recorded",
     };
   });
+}
+
+async function loadReviews(programme, { hospitalId }) {
+  const table = PROGRAMMES[programme]?.reviewTable;
+  if (!table || !hospitalId) return new Set();
+  const { data } = await supabase
+    .from(table).select("section, item_code").eq("hospital_id", hospitalId);
+  return new Set((data || []).map((r) => reviewKey(r.section, r.item_code)));
 }
 
 // ── PDF text sanitising ────────────────────────────────────────────────────
@@ -398,6 +420,8 @@ export default function QuickChecklistTab({ T, programme, hospitalId, assessment
   const [showCompleted, setShowCompleted] = useState(false);
   const [pdfLoading, setPdfLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [reviewed, setReviewed] = useState(() => new Set());
+  const [reviewError, setReviewError] = useState(null);
 
   const cfg = PROGRAMMES[programme];
 
@@ -405,11 +429,13 @@ export default function QuickChecklistTab({ T, programme, hospitalId, assessment
     setLoading(true);
     setError(null);
     try {
-      const [oes, kpis, committees] = await Promise.all([
+      const [oes, kpis, committees, ticks] = await Promise.all([
         loadOeItems(programme, { hospitalId, assessmentId, refData }),
         loadKpiItems(programme, { hospitalId, refData }),
         loadCommitteeItems(programme, { hospitalId }),
+        loadReviews(programme, { hospitalId }),
       ]);
+      setReviewed(ticks);
       setSections([
         { key: "oes", title: "Objective Elements", items: oes },
         { key: "kpis", title: "Key Performance Indicators", items: kpis },
@@ -422,6 +448,38 @@ export default function QuickChecklistTab({ T, programme, hospitalId, assessment
   }, [programme, hospitalId, assessmentId, refData]);
 
   useEffect(() => { load(); }, [load]);
+
+  // Optimistic: the tick flips immediately and rolls back if the write fails.
+  // A tick is presence of a row, so un-ticking is a delete rather than a flag.
+  const toggleReviewed = useCallback(async (section, code) => {
+    const table = cfg?.reviewTable;
+    if (!table || !hospitalId) return;
+    const key = reviewKey(section, code);
+    const wasReviewed = reviewed.has(key);
+
+    setReviewError(null);
+    setReviewed((prev) => {
+      const next = new Set(prev);
+      if (wasReviewed) next.delete(key); else next.add(key);
+      return next;
+    });
+
+    const { error: writeError } = wasReviewed
+      ? await supabase.from(table).delete()
+          .eq("hospital_id", hospitalId).eq("section", section).eq("item_code", code)
+      : await supabase.from(table)
+          .upsert({ hospital_id: hospitalId, section, item_code: code },
+                  { onConflict: "hospital_id,section,item_code" });
+
+    if (writeError) {
+      setReviewed((prev) => {
+        const next = new Set(prev);
+        if (wasReviewed) next.add(key); else next.delete(key);
+        return next;
+      });
+      setReviewError(writeError.message || "Could not save that tick.");
+    }
+  }, [cfg, hospitalId, reviewed]);
 
   const exportPDF = () => {
     setPdfLoading(true);
@@ -459,6 +517,12 @@ export default function QuickChecklistTab({ T, programme, hospitalId, assessment
             {cfg?.label}
             {anyData && <> · {totalDone} of {totalItems} complete</>}
           </div>
+          {anyData && (
+            <div style={{ fontSize: 10.5, color: T.muted, marginTop: 3, fontStyle: "italic" }}>
+              Ticks are your own review markers — completion still comes from scores,
+              KPI data and meetings.
+            </div>
+          )}
         </div>
 
         <label style={{
@@ -497,6 +561,15 @@ export default function QuickChecklistTab({ T, programme, hospitalId, assessment
         </div>
       )}
 
+      {reviewError && (
+        <div style={{
+          padding: "10px 14px", borderRadius: 8, marginBottom: 14,
+          background: `${T.red}18`, border: `1px solid ${T.red}55`, color: T.red, fontSize: 12,
+        }}>
+          {reviewError}
+        </div>
+      )}
+
       {!anyData && !error && (
         <div style={{ color: T.muted, fontSize: 13, padding: "24px 0" }}>
           Nothing to show yet. Score some OEs, log KPI data, or record a committee meeting
@@ -525,41 +598,53 @@ export default function QuickChecklistTab({ T, programme, hospitalId, assessment
               <div style={{ fontSize: 12, color: T.muted, fontStyle: "italic", padding: "10px 2px" }}>
                 All items complete.
               </div>
-            ) : rows.map((item) => (
+            ) : rows.map((item) => {
+              const isReviewed = reviewed.has(reviewKey(section.key, item.code));
+              return (
               <div
                 key={`${section.key}-${item.code}`}
                 title={item.desc}
+                className="qc-row"
                 style={{
-                  display: "flex", alignItems: "center", gap: 10,
+                  display: "flex", gap: 10,
                   padding: "7px 2px", borderBottom: `1px solid ${T.border}44`,
                   opacity: item.done ? 0.55 : 1,
                 }}
               >
-                <span style={{
-                  flexShrink: 0, width: 13, height: 13, borderRadius: 3,
-                  border: `1px solid ${item.done ? T.green : T.border}`,
-                  background: item.done ? T.green : "transparent",
-                  color: "#fff", fontSize: 10, lineHeight: "12px", textAlign: "center",
-                }}>
-                  {item.done ? "✓" : ""}
-                </span>
+                <button
+                  type="button"
+                  className="qc-tick"
+                  onClick={() => toggleReviewed(section.key, item.code)}
+                  aria-pressed={isReviewed}
+                  aria-label={`Mark ${item.code} as reviewed`}
+                  title={isReviewed ? "Reviewed — click to clear" : "Mark as reviewed"}
+                >
+                  <span style={{
+                    width: 13, height: 13, borderRadius: 3, flexShrink: 0,
+                    border: `1px solid ${isReviewed ? T.gold : T.border}`,
+                    background: isReviewed ? T.gold : "transparent",
+                    color: T.bg, fontSize: 10, lineHeight: "12px", textAlign: "center",
+                  }}>
+                    {isReviewed ? "✓" : ""}
+                  </span>
+                </button>
                 <span style={{
                   flexShrink: 0, minWidth: 78, fontFamily: "monospace",
                   fontSize: 11.5, fontWeight: 700, color: item.done ? T.muted : T.text,
                 }}>
                   {item.code}
                 </span>
-                <span style={{
-                  flex: 1, minWidth: 0, fontSize: 12.5, color: item.done ? T.muted : T.text,
-                  whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis",
+                <span className="qc-desc" style={{
+                  fontSize: 12.5, color: item.done ? T.muted : T.text,
                 }}>
                   {item.desc}
                 </span>
-                <span style={{ flexShrink: 0, fontSize: 10.5, color: T.muted, whiteSpace: "nowrap" }}>
+                <span className="qc-status" style={{ flexShrink: 0, fontSize: 10.5, color: T.muted, whiteSpace: "nowrap" }}>
                   {item.status}
                 </span>
               </div>
-            ))}
+              );
+            })}
           </div>
         );
       })}
