@@ -252,6 +252,9 @@ const PDF_CHAR_MAP = {
   // Invisible / exotic whitespace
   " ": " ", " ": " ", " ": " ", " ": " ", " ": " ",
   "​": "", "‌": "", "‍": "", "﻿": "",
+  // Known-unmapped, and so dropped rather than corrupted: per-mille, prime and
+  // double-prime, division slash, and most of Mathematical Operators. Safe for
+  // the PDF but lossy - add them here if real hospital data ever surfaces one.
 };
 
 const ASCII_MAX = 0x7f;
