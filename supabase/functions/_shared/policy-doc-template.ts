@@ -24,12 +24,17 @@ export interface PolicyDocData {
   oeLevel: string;
   chapterName: string;
   abbreviations?: string;
+  definitions?: string;
   oeMapping?: OeMappingEntry[];
   purpose: string;
   scope: string;
   policyStatement: string;
   procedureSteps: string[];
+  trainingCompetency?: string;
   responsibility: string;
+  resourcesRequired?: string;
+  monitoringAudit?: string;
+  exceptions?: string;
   references: string;
   distribution: string;
   disclaimer?: string;
@@ -297,6 +302,9 @@ export function buildPolicyDocument(data: PolicyDocData): Document {
           ...(data.abbreviations
             ? [heading("Abbreviations"), ...renderAbbreviations(data.abbreviations)]
             : []),
+          ...(data.definitions
+            ? [heading("Definitions"), body(data.definitions)]
+            : []),
           heading("1. Purpose"),
           body(data.purpose),
           heading("2. Scope"),
@@ -308,8 +316,20 @@ export function buildPolicyDocument(data: PolicyDocData): Document {
             const stepToOeLookup = buildStepToOeLookup(data.oeMapping);
             return data.procedureSteps.flatMap((step) => renderProcedureStep(step, stepToOeLookup));
           })(),
+          ...(data.trainingCompetency
+            ? [heading("Training & Competency"), body(data.trainingCompetency)]
+            : []),
           heading("5. Responsibility"),
           body(data.responsibility),
+          ...(data.resourcesRequired
+            ? [heading("Resources Required"), body(data.resourcesRequired)]
+            : []),
+          ...(data.monitoringAudit
+            ? [heading("Monitoring & Audit"), body(data.monitoringAudit)]
+            : []),
+          ...(data.exceptions
+            ? [heading("Exceptions / Special Situations"), body(data.exceptions)]
+            : []),
           heading("6. References"),
           body(data.references),
           heading("7. Distribution"),

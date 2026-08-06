@@ -73,6 +73,7 @@ Deno.serve(async (req: Request) => {
       oeLevel: "", // multiple OEs, level varies — omitted at this granularity
       chapterName: master.chapter,
       abbreviations: master.abbreviations ? substitute(master.abbreviations, hospital_name) : undefined,
+      definitions: master.definitions ? substitute(master.definitions, hospital_name) : undefined,
       oeMapping: Array.isArray(master.oe_mapping)
         ? (master.oe_mapping as { oe_code: string; requirement: string; steps: string; evidence?: string; responsible?: string }[]).map((m) => ({
             oeCode: m.oe_code,
@@ -86,7 +87,11 @@ Deno.serve(async (req: Request) => {
       scope: substitute(master.scope, hospital_name),
       policyStatement: substitute(master.policy_statement, hospital_name),
       procedureSteps: (master.procedure_steps as string[]).map((s) => substitute(s, hospital_name)),
+      trainingCompetency: master.training_competency ? substitute(master.training_competency, hospital_name) : undefined,
       responsibility: substitute(master.responsibility, hospital_name),
+      resourcesRequired: master.resources_required ? substitute(master.resources_required, hospital_name) : undefined,
+      monitoringAudit: master.monitoring_audit ? substitute(master.monitoring_audit, hospital_name) : undefined,
+      exceptions: master.exceptions ? substitute(master.exceptions, hospital_name) : undefined,
       references: substitute(master.references_text, hospital_name),
       distribution: substitute(master.distribution, hospital_name),
       disclaimer: master.disclaimer ? substitute(master.disclaimer, hospital_name) : undefined,
