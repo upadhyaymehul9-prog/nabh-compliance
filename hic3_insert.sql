@@ -1,0 +1,598 @@
+-- HIC.3 master policy draft -- HIC.3
+-- Run in the Supabase SQL Editor. Inserts/updates one row with status='draft'.
+-- Review universal_facts_checklist and oe_mapping before setting status='approved'.
+--
+-- COLUMN TYPES (confirmed against the live schema 2026-08-03):
+--   oe_codes        text[]   -- written as array[...]
+--   procedure_steps text[]   -- written as array[...]
+--   oe_mapping      jsonb    -- written as a jsonb literal
+--
+-- oe_mapping entries carry {oe_code, requirement, steps, evidence, responsible}.
+-- evidence and responsible are both substituted for {{HOSPITAL_NAME}} at generation
+-- time (index.ts), so they may contain the placeholder.
+
+insert into public.shco_policy_masters (
+  standard_code, chapter, oe_codes, policy_title, purpose, scope, policy_statement,
+  procedure_steps, responsibility, references_text, distribution, abbreviations,
+  disclaimer, oe_mapping, universal_facts_checklist, status, updated_at
+) values (
+  $q$HIC.3$q$,
+  $q$HIC$q$,
+  array['HIC.3.a', 'HIC.3.b', 'HIC.3.c', 'HIC.3.d', 'HIC.3.e', 'HIC.3.f'],
+  $q$Infection Prevention and Control in Support Services$q$,
+  $q$This document sets out how {{HOSPITAL_NAME}} prevents the transmission of infection through its support services — the engineering systems that condition the air and supply the water, the construction and renovation work that disturbs them, housekeeping, biomedical waste handling, laundry and linen, and the kitchen. These services are not clinical, but each of them can carry infection to a patient who never comes near the department responsible, and each is largely delivered by staff who are not clinically trained and are often employed by a contractor. This policy states what each service must do, who owns it, and what evidence proves it is being done.$q$,
+  $q$This policy applies to every support service of {{HOSPITAL_NAME}} and to every area those services reach, which is the whole hospital: wards, critical care, operating and procedure rooms, emergency and outpatient areas, diagnostics, pharmacy, stores, corridors, toilets, waste storage, laundry, kitchen, plant rooms and external grounds.
+
+It binds employed support staff, supervisors and department heads, and — with equal force — outsourced and contract personnel including housekeeping agencies, laundry contractors, food service providers, waste transporters, pest control operators and construction contractors. Where a service is outsourced, the contract of {{HOSPITAL_NAME}} with that provider incorporates the requirements of this policy, and {{HOSPITAL_NAME}} remains accountable for the outcome regardless of who performs the work.
+
+What this policy does not cover: the reprocessing, disinfection and sterilisation of instruments, equipment and devices, including the Spaulding classification of devices as critical, semi-critical or non-critical, central sterile supply processes, sterilisation indicators and sterile storage — those belong to the sterilisation and disinfection policy. Clinical practices at the bedside are set out in the infection prevention and control practices policy, and the governance of the programme as a whole in the infection prevention and control programme policy. This policy covers environmental surfaces and support processes; it does not cover what is done to an instrument.$q$,
+  $q${{HOSPITAL_NAME}} holds that a hospital is only as clean as its support services. A correct hand hygiene technique at the bedside is undone by a mop that carries organisms from a toilet into a ward, by a ventilation system that has not been maintained, by linen washed below temperature, or by food held at a temperature that lets bacteria multiply.
+
+{{HOSPITAL_NAME}} therefore treats housekeeping, waste handling, laundry, catering and engineering as infection control functions in their own right, not as facilities matters that happen to occur inside a hospital. Each is governed by a written procedure, performed by trained staff, supervised, and verified against evidence rather than assurance.
+
+Support services staff at {{HOSPITAL_NAME}} are frequently the least trained and most exposed people in the building. {{HOSPITAL_NAME}} commits to training them in the language they work in, providing them the protective equipment their work requires, offering the immunisation appropriate to their exposure, and treating their reports of unsafe conditions with the same seriousness as a clinician's.
+
+Where a support service is outsourced, {{HOSPITAL_NAME}} accepts that it may delegate the work but not the responsibility. Contractor staff are trained, monitored and audited to the same standard as employed staff, and contractual arrangements are written so that this is enforceable.
+
+Compliance with the statutory obligations governing these services — the biomedical waste rules, food safety licensing, and pollution control authorisation — is treated as a minimum condition of operating, not as an achievement.$q$,
+  array[
+    $s$1. Engineering controls that support infection prevention — what they are and who owns them
+
+Engineering controls are the features of the building and its services that reduce infection risk without depending on anyone remembering to do anything: ventilation that dilutes and directs air, pressure differentials that decide which way air moves when a door opens, filtration that removes particles, water systems that do not harbour organisms, and a layout that keeps clean and contaminated flows apart.
+
+At {{HOSPITAL_NAME}} the engineering or maintenance function owns the operation and maintenance of these systems, and the Infection Control Team owns the specification of what they must achieve and the verification that they do. Neither can discharge the duty alone: engineering knows how the plant works, infection control knows what the clinical areas need of it.
+
+A register of all infection-relevant engineering systems is maintained, identifying for each: the areas it serves, the performance it must meet, the maintenance it requires and at what frequency, the person responsible, and where its records are kept. Any change to these systems — a new area brought into service, an air handling unit replaced, a duct rerouted — is notified to the Infection Control Team before it is made, because a change made for energy or cost reasons can silently remove a control the hospital depends on.$s$,
+    $s$2. Ventilation of operating theatres
+
+Operating theatres at {{HOSPITAL_NAME}} are ventilated to a specification, and that specification is verified rather than assumed.
+
+The applicable guidelines distinguish two categories of operating theatre, and the air quality required differs between them. {{HOSPITAL_NAME}} records which category each of its theatres falls into — [Hospital to define] — because applying the wrong one either under-protects the patient or imposes a cost the hospital has no need to carry.
+
+- A Type A theatre, the category formerly described as super-specialty, requires supply air quality of Class 100, equivalently ISO Class 5, measured at rest, and terminal high-efficiency particulate air filtration is mandatory.
+- A Type B theatre, the category formerly described as general, requires supply air quality of Class 1000, equivalently ISO Class 6, measured at rest, and terminal high-efficiency particulate air filtration may be provided rather than being mandatory.
+
+The requirements common to both categories are:
+
+- a minimum of 20 total air changes per hour, of which at least 4 are fresh air changes, the total being based on the biological load and the location; the rate may be reduced to 25 per cent during non-operational hours by variable frequency drive, provided the positive pressure relationship is not disturbed;
+- positive pressure relative to all adjoining areas of at least 2.5 pascals, equivalent to 0.01 inches water gauge, maintained at all times including when the theatre is not in use;
+- where high-efficiency particulate air filters are provided, an efficiency of at least 99.97 per cent down to 0.3 microns or better, installed as terminal filters in the ceiling;
+- unidirectional downward airflow over the operating table from a non-aspirating laminar flow diffuser or ceiling array, at a face velocity of 25 to 35 feet per minute;
+- a filtration area extending at least one foot beyond the operating table on every side;
+- temperature of 21 degrees Celsius plus or minus 3, except where joint replacement surgery is performed, for which 18 degrees Celsius plus or minus 2 applies;
+- relative humidity between 20 and 60 per cent, with 55 per cent regarded as the ideal.
+
+Theatre doors are kept closed during procedures and traffic is kept to the minimum necessary, since the pressure regime and the air change rate both depend on it. A theatre that fails any parameter is taken out of use for elective work until it is corrected, and the decision is recorded.$s$,
+    $s$3. Ventilation and pressure relationships in other areas
+
+Elsewhere in {{HOSPITAL_NAME}} the ventilation requirement is defined by what the area is for, and in particular by which direction air must move.
+
+- Protective environments, where the patient is being protected from the environment, are held at positive pressure relative to the corridor.
+- Airborne infection isolation rooms, where the environment is being protected from the patient, are held at negative pressure of at least 2.5 pascals with at least 12 air changes per hour for new or renovated rooms and not fewer than 6 for existing rooms, exhausted outside away from intakes or filtered through a high-efficiency particulate air filter.
+- Critical care areas, procedure rooms, laboratories, dirty utility rooms, waste stores, laundry and kitchen each have a defined air change rate and pressure relationship recorded in the engineering register.
+
+Areas that generate contamination — dirty utilities, sluices, waste holding, toilets — are held at negative pressure relative to adjoining clean areas so that odour and airborne contamination do not migrate outward.
+
+The pressure relationship of each critical area is verified at an interval of [Hospital to define] and the result recorded. Where a permanent monitoring device is fitted, its reading is checked and logged daily by the area in-charge; a reading outside limits is reported the same day.$s$,
+    $s$4. Filter maintenance and validation of critical-area ventilation
+
+Filters are the part of a ventilation system that fails silently. A clogged or bypassed filter reduces air flow and can release accumulated contamination into the space it was protecting.
+
+{{HOSPITAL_NAME}} therefore maintains a filter register recording, for every air handling unit serving a clinical or critical area, the filter grades fitted, the manufacturer's recommended replacement interval, the date of each cleaning or replacement, and the signature of the technician who performed it. Pre-filters and fine filters are cleaned or replaced at the specified interval or sooner where pressure differential across the filter indicates loading.
+
+High-efficiency particulate air filters are not cleaned. They are replaced when integrity testing fails or at the manufacturer's stated interval, and each replacement is followed by an integrity test.
+
+Validation of critical-area ventilation — operating theatres and any other area {{HOSPITAL_NAME}} designates — is carried out at an interval of [Hospital to define] and covers at minimum the air change rate, the pressure differential, high-efficiency filter integrity, and temperature and humidity. Validation is performed by [Hospital to define] and the report is retained and tabled at the Infection Prevention and Control Committee. A failed parameter generates a recorded corrective action, a re-test, and a decision on whether the area may continue in use meanwhile.$s$,
+    $s$5. Environmental surveillance of critical areas
+
+{{HOSPITAL_NAME}} monitors the environment of its critical areas so that deterioration is detected before it causes infection rather than after.
+
+Environmental surveillance comprises:
+
+- microbiological air sampling of operating theatres and other critical areas at an interval of [Hospital to define], with the sampling method, plate positions and acceptance limits stated in writing before sampling begins;
+- surface swab sampling in operating theatres, critical care and procedure rooms at an interval of [Hospital to define], concentrated on high-touch surfaces and on equipment in contact with patients;
+- continuous or logged monitoring of temperature and relative humidity in theatres and critical care, reviewed daily;
+- verification of pressure differentials and air change rates as set out in step 4;
+- water sampling as set out in step 6.
+
+Results are reported to the Infection Control Team and reviewed at the Infection Prevention and Control Committee alongside infection data, so that an environmental trend and a clinical trend can be read against each other.
+
+An out-of-limit result is not a filing matter. It generates a recorded investigation of the probable cause, a corrective action with a named owner and a date, and a repeat sample confirming the correction. Where the result concerns an area in active clinical use, the Infection Control Officer decides whether use continues meanwhile and records the decision and its basis.
+
+Routine environmental sampling is a monitoring tool, not a substitute for cleaning and maintenance; {{HOSPITAL_NAME}} does not treat a passing plate count as evidence that its procedures are being followed.$s$,
+    $s$6. Water systems
+
+Water reaches patients directly, through drinking, washing and therapy, and indirectly through equipment, cleaning and food preparation.
+
+{{HOSPITAL_NAME}} maintains its water systems so that they remain safe: storage tanks are cleaned and disinfected at an interval of [Hospital to define] with the work recorded; outlets in low-use areas are flushed on a defined schedule to prevent stagnation; hot and cold water are stored and distributed at temperatures that discourage bacterial multiplication; and the physical integrity of the system is maintained so that cross-connection and back-siphonage cannot occur.
+
+Water quality testing covers, at minimum, microbiological quality of the potable supply and testing of plumbing serving patient care areas for coliforms and for Legionella, at an interval of [Hospital to define]. Reports and any remediation are retained.
+
+Where {{HOSPITAL_NAME}} provides dialysis, the water treatment system for dialysis is subject to its own testing regime, which is set out in the dialysis service's own procedure and is not restated here.
+
+The detailed specification of potable water quality and the wider water safety plan sit with the facility management and safety standards; what this policy fixes is that water testing results reach the Infection Prevention and Control Committee and that an adverse result triggers the same investigation and corrective action cycle as any other environmental exceedance.$s$,
+    $s$7. Physical separation of clean and contaminated flows
+
+The layout of {{HOSPITAL_NAME}} keeps clean and contaminated materials apart, in space or in time, so that they do not cross.
+
+This means, in practice:
+
+- separate storage for clean and for used or soiled items, never the same room or trolley;
+- defined routes for the movement of waste, soiled linen and used instruments that avoid, so far as the building permits, the routes used for sterile supplies, clean linen and food;
+- where a single corridor or lift must serve both, separation in time and full containment of the contaminated material, with a cleaning step between uses;
+- dirty utility rooms provided in each clinical area, with a sluice or means of safe disposal of body fluids, so that this does not occur in a hand-wash basin or a pantry;
+- clean linen, sterile supplies and food never stored in a dirty utility, waste holding area or sluice room.
+
+Where the existing building cannot achieve full separation, the compensating measure — containment, timing, cleaning between uses — is written down, and the limitation is recorded as a risk in the infection control risk register rather than left as an informal practice.$s$,
+    $s$8. Infection control risk assessment before construction or renovation
+
+No construction, renovation, demolition, or significant maintenance work begins at {{HOSPITAL_NAME}} until an infection control risk assessment has been completed in writing and approved. This applies to work of any size, including work by a contractor engaged directly by a department, and including work carried out at night or at weekends.
+
+Construction disturbs dust, and hospital dust carries fungal spores — Aspergillus in particular — that are harmless to most people and lethal to the immunocompromised. The risk is created the moment a ceiling tile is lifted, not when a wall comes down.
+
+The assessment is prepared jointly by the person commissioning the work, the engineering function and the Infection Control Team, and is approved before the contractor is permitted on site. It records the nature and extent of the work, its location and what lies on every side of it including above and below, the duration and working hours, the patient groups affected, the class of precautions required, the specific measures to be applied, and who will verify them.
+
+A copy of the approved assessment is held on site for the duration of the work and is available to any member of staff who asks.$s$,
+    $s$9. Determining the class of precautions
+
+{{HOSPITAL_NAME}} determines the level of precaution required by cross-referencing two things: how much dust the work will generate, and how vulnerable the people nearby are.
+
+The work is classified by activity type, on a scale running from inspection and non-invasive activity, through small-scale short-duration work generating minimal dust, to work generating moderate dust or requiring removal of a building component, to major demolition and construction.
+
+The surrounding area is classified by patient risk group — low, medium, high or highest — according to who occupies it. Administrative and non-clinical areas are lowest; general wards and outpatient areas are medium; emergency, critical care, dialysis and procedure areas are high; operating theatres, any protective environment and areas holding immunocompromised patients are highest.
+
+The intersection of activity type and patient risk group gives the class of precautions, conventionally numbered from I to IV in ascending order of stringency, with more recent guidance separating the highest classes further. {{HOSPITAL_NAME}} adopts the matrix published at [Hospital to define] and records the class determined for every project on the assessment form.
+
+Where the class is disputed, the more stringent classification applies. The cost of unnecessary containment is trivial next to the cost of a post-operative or post-transplant fungal infection.$s$,
+    $s$10. Containment and dust control during the work
+
+The precautions applied at {{HOSPITAL_NAME}} scale with the class determined in step 9, and are specified in the risk assessment rather than left to the contractor's judgement. They are drawn from the following:
+
+- rigid or sealed impermeable barriers isolating the work area, extending fully from floor to structural ceiling rather than to a false ceiling;
+- sealing of all penetrations, and sealing or isolation of ventilation supply and return within the work area so that dust is not drawn into the wider system;
+- negative pressure within the work area relative to surrounding occupied areas, with air exhausted outside or through a high-efficiency particulate air filter, and the pressure verified rather than assumed;
+- tacky or walk-off mats at the exit from the work area, replaced when loaded;
+- wetting of debris to suppress dust, removal of debris in covered or sealed containers, and use of a defined route and time for its removal;
+- an anteroom for changing where the class requires it;
+- relocation of the most vulnerable patients away from the vicinity, where relocation is possible.
+
+The barrier and containment measures are inspected daily while the work is in progress by a named person, and the inspection is recorded. A breach is corrected immediately and the work stopped meanwhile if the breach is significant.$s$,
+    $s$11. Contractor control and worker movement
+
+Construction workers at {{HOSPITAL_NAME}} are briefed before they start on the infection control requirements applying to their work, on the boundaries of their permitted area, and on the reason for both. The briefing is recorded with names and date.
+
+Workers enter and leave by the designated route only, which is chosen to avoid patient care areas so far as the building permits. They do not use patient corridors, lifts or toilets designated for patient or clinical use, and they do not eat, smoke or rest inside the work area or in clinical areas.
+
+Where the class of precaution requires it, protective clothing, shoe covers or masks are worn in transition zones, and a sign-in register at the entry point records attendance and compliance.
+
+The contract with the contractor makes these obligations explicit and provides a consequence for breach. The person at {{HOSPITAL_NAME}} responsible for the contract — [Hospital to define] — is responsible for enforcing them, and repeated breaches are escalated to the Infection Prevention and Control Committee.$s$,
+    $s$12. Clearance and reoccupation after the work
+
+An area is not returned to clinical use at {{HOSPITAL_NAME}} because the work is finished. It is returned when it has been cleaned and verified.
+
+Before reoccupation:
+
+- construction debris and materials are removed and the barriers taken down in a manner that does not disperse settled dust;
+- the area receives a thorough terminal clean of all surfaces including high-level surfaces, ledges and light fittings, followed by a second clean after any remaining dust has settled;
+- the ventilation system serving the area is restored, filters serving the area are inspected and replaced where the work has loaded them, and the air change rate and pressure relationship are re-verified;
+- water outlets that have been out of use or disturbed are flushed and, where the area's use requires it, sampled;
+- environmental sampling is performed where the area's risk group requires it, with the results available before patients are admitted.
+
+A written clearance is issued by the Infection Control Team and the engineering function jointly, recording what was verified and the date of reoccupation. The clearance is retained with the project's risk assessment.$s$,
+    $s$13. The cleaning programme — zones and responsibility
+
+{{HOSPITAL_NAME}} maintains a written housekeeping procedure covering every area of the hospital. It is not a general instruction to keep the place clean; it states, for each area, what is cleaned, how often, with what, by whom, and how compliance is verified.
+
+Areas are grouped into cleaning zones by the risk they carry, which determines frequency and method:
+
+- high-risk areas — operating theatres, critical care, procedure and delivery rooms, dialysis, isolation rooms, laboratory, central sterile supply, neonatal areas;
+- moderate-risk areas — general wards, outpatient departments, emergency, imaging, pharmacy, physiotherapy;
+- low-risk areas — administrative offices, records, corridors, waiting areas, stores;
+- sanitary and dirty areas — toilets, bathrooms, sluices, dirty utilities, waste holding areas, which are always cleaned last and with equipment dedicated to them.
+
+Each area has a named person accountable for its cleanliness — for clinical areas the area in-charge, for the cleaning work itself the housekeeping supervisor. Where housekeeping is outsourced, the contractor's supervisor is named and the contract incorporates this procedure.$s$,
+    $s$14. Cleaning frequency by area and by surface
+
+Frequency at {{HOSPITAL_NAME}} is set by risk and by how often a surface is touched, not by convenience.
+
+High-touch surfaces — bed rails, bedside tables and lockers, call bells, light and equipment switches, door handles, taps, IV poles and stands, trolley handles, monitor and pump surfaces, keyboards, telephones, chair arms in waiting areas — are cleaned and disinfected at minimum daily in every occupied clinical area, and more frequently in high-risk areas and in any area under transmission-based precautions.
+
+Floors and low-touch surfaces are cleaned at a frequency set by zone: high-risk areas at [Hospital to define], moderate-risk at [Hospital to define], low-risk at [Hospital to define]. Sanitary areas are cleaned at [Hospital to define] and whenever found soiled.
+
+Operating theatres are cleaned between every case, with a defined end-of-list clean and a periodic deep clean at an interval of [Hospital to define].
+
+Spot cleaning of any visible soiling is immediate and is not deferred to the scheduled round. Any surface visibly soiled with blood or body fluid is dealt with under step 18.$s$,
+    $s$15. Cleaning agents and disinfectants — selection and preparation
+
+{{HOSPITAL_NAME}} distinguishes cleaning from disinfection. Cleaning with detergent and water physically removes soil and the organisms in it and is the necessary first step; disinfection kills what remains. Disinfectant applied to a soiled surface is largely wasted, because organic matter neutralises it.
+
+The disinfectants approved for environmental use at {{HOSPITAL_NAME}}, their working concentrations, their contact times and the surfaces they may be used on are listed in the housekeeping procedure. Sodium hypochlorite is the mainstay for environmental surfaces, and the concentrations in recognised use are of the order of 1,000 parts per million available chlorine for general surface disinfection and 5,000 parts per million where a higher level is indicated; the concentration adopted for each application at {{HOSPITAL_NAME}} is [Hospital to define].
+
+Hypochlorite solutions are prepared fresh each shift, because they lose activity on standing, and the container is labelled with the concentration and the time of preparation. Dilution is performed by a measured method with the ratio displayed at the point of preparation — not by eye. Hypochlorite is not mixed with any acid or ammonia-containing product, and is not applied to metal surfaces it will corrode.
+
+The contact time stated for the product is observed; a surface wiped and immediately dried has not been disinfected.
+
+Selection and reprocessing of disinfectants for instruments and devices, including the classification of devices as critical, semi-critical or non-critical and the choice of high-level disinfectant, is a separate matter governed by the sterilisation and disinfection policy.$s$,
+    $s$16. Cleaning method, equipment and colour coding
+
+Cleaning at {{HOSPITAL_NAME}} follows a defined method so that it does not redistribute contamination.
+
+- Cleaning proceeds from cleaner areas to dirtier ones, and from higher surfaces to lower, so that soil falls onto surfaces not yet cleaned.
+- Cloths and mop heads are colour-coded by zone, with a distinct colour reserved for sanitary areas and another for clinical areas; the colour scheme adopted by {{HOSPITAL_NAME}} is [Hospital to define] and is displayed as a chart wherever cleaning equipment is stored.
+- Equipment is never carried between zones. Sanitary-area equipment does not enter a clinical area under any circumstances.
+- Cloths and mop heads are changed between rooms in high-risk areas and whenever visibly soiled; they are not returned to the solution bucket after use on a soiled surface.
+- Used cloths and mop heads are laundered and dried between uses and are not left damp, since a damp mop head stored overnight multiplies organisms.
+- Cleaning solution is changed when visibly soiled and between areas, and buckets are emptied, cleaned and stored dry and inverted.
+- Cleaning trolleys are cleaned at the end of each shift and stored in a designated place, not in a corridor or clinical area.
+
+Housekeeping staff wear the protective equipment specified for the task, and perform hand hygiene after removing gloves.$s$,
+    $s$17. Discharge, transfer and terminal cleaning
+
+When a patient is discharged, transferred or dies, the bed space at {{HOSPITAL_NAME}} receives a terminal clean before the next patient is admitted to it.
+
+Terminal cleaning covers the bed frame, mattress and pillow covers, bed rails, the bedside locker and table inside and out, the over-bed light and controls, the call bell and its cable, the chair, curtains where they are due for change or are soiled, all equipment remaining at the bed space, and the floor beneath and around the bed. Disposable items belonging to the previous patient are discarded, and reusable items are cleaned or reprocessed before reissue.
+
+Where the patient was under transmission-based precautions or was known or suspected to carry an organism of significance, an enhanced terminal clean is performed: the same scope, with a disinfectant appropriate to the organism, curtains changed, and the room left for any specified period before reoccupation. The Infection Control Team specifies any additional measure for the organism concerned.
+
+Completion of terminal cleaning is recorded and signed, and the bed is not shown as available until it is.$s$,
+    $s$18. Blood and body fluid spills
+
+Any spill of blood or other body fluid at {{HOSPITAL_NAME}} is dealt with immediately by the staff present, not left for the next cleaning round, and not left unattended once discovered.
+
+The method is:
+
+- restrict access to the area and assemble the spill kit before starting;
+- put on gloves, apron and, where splashing is possible, eye protection and a mask;
+- cover the spill with absorbent material and remove the bulk of the fluid, disposing of the material as infectious waste;
+- where the spill contains sharp fragments, remove them with forceps or a scoop and never with gloved hands;
+- clean the area with detergent and water;
+- disinfect with sodium hypochlorite at the concentration specified for the purpose — a 1:100 dilution of household bleach, giving of the order of 500 to 600 parts per million available chlorine, is the recognised strength for a small spill on a non-porous surface, and a stronger 1:10 dilution is applied first where the spill is a laboratory culture, followed by terminal disinfection at the weaker strength;
+- observe the contact time, then rinse where the surface requires it and allow to dry;
+- remove protective equipment, dispose of it as infectious waste, and perform hand hygiene.
+
+A spill kit containing the necessary materials is available in every clinical area and its contents are checked at an interval of [Hospital to define]. Spills of chemical, cytotoxic or mercury-containing material are not covered here and are managed under the hazardous material procedure.$s$,
+    $s$19. Verification that cleaning happened and worked
+
+{{HOSPITAL_NAME}} verifies cleaning in two distinct ways, because they answer different questions.
+
+Whether cleaning happened is verified by the area cleaning checklist, completed by the cleaner and countersigned by the supervisor for each area and each round. Completed checklists are filed so that a continuous trail is available for the preceding [Hospital to define].
+
+Whether cleaning worked is verified by inspection and, in high-risk areas, by measurement:
+
+- documented visual inspection rounds by the housekeeping supervisor and, independently, by the Infection Control Nurse, using a structured checklist rather than an impression;
+- environmental surface sampling in high-risk areas as set out in step 5;
+- review of cleaning practice whenever a cluster of infection, an environmental exceedance or a complaint suggests a failure.
+
+Findings are fed back to the individual cleaner and the supervisor promptly, since feedback weeks later changes nothing. Repeated failure in an area is treated as a training or resourcing problem to be fixed rather than solely as a disciplinary matter, and persistent failure is reported to the Infection Prevention and Control Committee.$s$,
+    $s$20. Biomedical waste — segregation at the point of generation
+
+Segregation happens where the waste is generated, by the person who generates it, at the moment it is generated. Waste mixed at source cannot be separated afterwards, and a single infectious item placed in general waste contaminates the whole stream.
+
+{{HOSPITAL_NAME}} segregates biomedical waste into the four colour-coded categories prescribed by the Bio-Medical Waste Management Rules, 2016 and their subsequent amendments:
+
+- Yellow — human and animal anatomical waste; soiled waste such as dressings, bandages, cotton and items contaminated with blood or body fluids; expired and discarded medicines; chemical waste; discarded linen contaminated with blood or body fluids; and microbiological and laboratory waste, which is pre-treated before disposal where the rules require it.
+- Red — contaminated recyclable plastic waste: tubing, bottles, intravenous sets, catheters, urine bags, syringes without needles, and gloves.
+- White, in a translucent puncture-proof and leak-proof container — sharps: needles, syringes with fixed needles, scalpels, blades and any other item that can pierce skin.
+- Blue, in a puncture-proof box or cardboard container — broken or discarded glass including medicine vials and ampoules, and metallic body implants.
+
+General waste that is not contaminated is not biomedical waste and is not placed in a coloured bag; it is disposed of as municipal waste. Over-segregation into the biomedical stream is a real cost and disposal burden and is corrected in training as firmly as under-segregation.
+
+A colour-coding chart with pictures, in the languages the staff of {{HOSPITAL_NAME}} read, is displayed at every point of waste generation.$s$,
+    $s$21. Containers, labelling and bin management
+
+At {{HOSPITAL_NAME}}, containers for biomedical waste are placed at every point of generation, so that a member of staff never has to carry waste to dispose of it correctly. Convenience determines compliance.
+
+Containers are foot-operated and lidded, of the correct colour, lined with a bag of matching colour, labelled with the category and the biohazard symbol, and sized to the volume the location generates.
+
+Bags and containers are filled to no more than three-quarters of their capacity and are then closed and removed. Sharps containers are never decanted, never emptied for reuse, and are sealed and replaced at the fill line. Needles are not recapped, bent or separated by hand.
+
+Every container carries a label identifying {{HOSPITAL_NAME}} as the generator and, where required, the date and the department, so that any waste found wrongly segregated can be traced to its source and addressed there.
+
+Bins are inspected daily by the floor supervisor against a checklist covering presence, condition, correct lining, fill level, closure and labelling, and the inspection is recorded.$s$,
+    $s$22. Internal transport and central storage
+
+Biomedical waste at {{HOSPITAL_NAME}} is moved from the points of generation to the central storage area by a defined route, at defined times, by designated staff.
+
+The route avoids patient care areas, food service areas and clean supply routes so far as the building permits, and the times are chosen to avoid peak patient and visitor movement, meal service and clean linen distribution. Waste is transported in covered, labelled, leak-proof trolleys used for no other purpose, which are cleaned and disinfected daily and whenever contaminated.
+
+Bags are not dragged, thrown, or carried against the body, and are handled by the neck of the bag with gloves on.
+
+The central storage area is secured against unauthorised access and animals, is impervious and drainable, has water supply for cleaning, is labelled with the biohazard symbol, and is sited away from patient areas, food preparation and public routes. Categories are stored separately within it.
+
+No untreated biomedical waste is stored beyond 48 hours. Where this cannot be met, the reason and the authorisation obtained are recorded. The storage area is cleaned and disinfected daily and after every collection.$s$,
+    $s$23. Handover, manifests and regulatory records
+
+{{HOSPITAL_NAME}} holds a valid authorisation from the State Pollution Control Board or Pollution Control Committee for the generation and handling of biomedical waste, and renews it before expiry. A copy is displayed and available for inspection.
+
+Waste is handed over only to the authorised common biomedical waste treatment facility with which {{HOSPITAL_NAME}} has a current agreement, or treated on site where {{HOSPITAL_NAME}} is authorised to do so.
+
+At every handover the quantity by category is weighed and recorded, and the manifest or consignment note is completed and signed by both parties. {{HOSPITAL_NAME}} retains its copy so that a complete chain of custody can be reconstructed for any date.
+
+A daily record is maintained of waste generated by category and by department, which serves both as the regulatory record and as the means of detecting a department whose segregation has drifted.
+
+The annual report required by the rules is submitted to the prescribed authority by 30 June each year for the preceding calendar year, and is also made available on the website of {{HOSPITAL_NAME}} as the amended rules require. Copies of submitted reports are retained.
+
+Barcoding or such other tracking system as the rules require is applied to bags and containers handed over.$s$,
+    $s$24. Protection, immunisation and training of waste handlers
+
+The people who handle biomedical waste at {{HOSPITAL_NAME}} carry the highest exposure to it and are frequently the least clinically trained. {{HOSPITAL_NAME}} treats their protection as a condition of running the service.
+
+Every waste handler, whether employed or engaged through a contractor:
+
+- is issued and required to wear the protective equipment specified for the task — heavy-duty gloves, apron or gown, closed protective footwear, and mask and eye protection where splashing is possible — provided at the cost of {{HOSPITAL_NAME}} or its contractor and never at the worker's own cost;
+- is offered immunisation against hepatitis B, with the offer, the doses given, and any declining of it recorded;
+- is offered tetanus immunisation as indicated;
+- receives training at induction and at an interval of [Hospital to define] thereafter, in a language they understand and by demonstration rather than lecture, covering the colour code, safe handling, what to do after a sharps injury, and the reason for each;
+- is included in the hospital's post-exposure management arrangements on the same terms as clinical staff.
+
+Training attendance and immunisation status are recorded by name and are reviewed at the Infection Prevention and Control Committee. A handler who has not been trained does not handle waste.$s$,
+    $s$25. Waste-related incidents and spills
+
+Any spill of biomedical waste at {{HOSPITAL_NAME}} is contained immediately, the area cleared of people, and the material recovered with protective equipment on using a scoop and forceps rather than hands. The area is then cleaned and disinfected as for a body fluid spill under step 18, and the recovered material and cleaning materials are disposed of as yellow-category waste.
+
+Any sharps injury or mucous membrane exposure sustained during waste handling is reported immediately and managed under the post-exposure procedure, without regard to whether the injured person is employed by {{HOSPITAL_NAME}} or by a contractor.
+
+Every waste-related incident — a spill, a sharps injury, a wrongly segregated container discovered downstream, a missed collection, a rejected consignment — is recorded and reviewed at the Infection Prevention and Control Committee for what it reveals about the system rather than the individual. Where the cause is a bin in the wrong place, a container of the wrong size, or a collection frequency that does not match generation, the system is changed.$s$,
+    $s$26. Linen — handling and segregation at the point of use
+
+Used linen at {{HOSPITAL_NAME}} is handled as little as possible and as gently as possible. Shaking a soiled sheet aerosolises whatever is on it into the air of the ward.
+
+At the bedside:
+
+- used linen is removed by rolling it inward so that the soiled surface is contained, never shaken or flapped;
+- it is placed directly into the designated bag at the point of use — it is not placed on the floor, on another bed, on a chair or over a rail while other work is completed;
+- linen soiled with blood or body fluids, and linen from a patient under transmission-based precautions, is placed in a leak-proof bag of the designated colour and, where the volume of fluid requires it, double-bagged;
+- sharps, instruments, dentures, personal items and clinical waste are checked for and removed before bagging, since a sharp left in linen injures the person who next handles it;
+- bags are filled to no more than three-quarters, closed securely at the point of use, and not opened again before the laundry;
+- linen contaminated with blood or body fluids that is discarded rather than laundered is disposed of as yellow-category waste under step 20.
+
+Staff handling used linen wear gloves and an apron, and perform hand hygiene after removing them. Colour coding and bagging requirements are displayed in every sluice and linen store of {{HOSPITAL_NAME}}.$s$,
+    $s$27. Transport and holding of soiled linen
+
+Soiled linen at {{HOSPITAL_NAME}} travels in covered, dedicated, leak-proof trolleys or containers by a defined route and at defined times, separated from the movement of clean linen, food and sterile supplies in space where the building permits and in time where it does not.
+
+Trolleys used for soiled linen are not used for clean linen. Where the same trolley must serve both, it is cleaned and disinfected between uses and the arrangement is recorded as a compensating measure under step 7.
+
+Soiled linen is not held longer than necessary before processing; the maximum holding period at {{HOSPITAL_NAME}} is [Hospital to define]. The soiled linen holding area is separate from the clean linen store, is ventilated to the outside or at negative pressure relative to adjoining clean areas, and is cleaned daily.
+
+Bags are not opened, sorted or counted in clinical areas or in the clean linen store. Where sorting is necessary, it is done in the laundry's designated soiled area, by staff wearing the specified protective equipment.$s$,
+    $s$28. Washing parameters
+
+Linen at {{HOSPITAL_NAME}} is washed to a specification that is recorded and monitored, whether the laundry is run in-house or by a contractor.
+
+The recognised parameters are:
+
+- hot-water washing at a temperature of at least 71 degrees Celsius, equivalent to 160 degrees Fahrenheit, maintained for a minimum of 25 minutes at that temperature during the wash cycle; or
+- low-temperature washing, where the chemistry compensates: recognised guidance supports washing at low temperature provided the cycle, detergent and additives are controlled and a chlorine bleach rinse is used, with a total available chlorine residual of the order of 50 to 150 parts per million achieved during the bleach cycle.
+
+Chlorine bleach becomes active at water temperatures in the region of 57 to 63 degrees Celsius, which is why a bleach cycle in a cold wash requires the concentration to do the work instead. Bleach is not used on fabrics it damages, including flame-retardant fabrics, and the alternative for those fabrics is specified.
+
+The parameter adopted by {{HOSPITAL_NAME}} is [Hospital to define], stated as the temperature and hold time or as the chemical regime. Wash cycle temperature is recorded for each load, either automatically by the machine or manually by the operator, and the records are retained. Adequate drying and, where used, ironing provide a further reduction and are not omitted.
+
+Where laundry is outsourced, {{HOSPITAL_NAME}} obtains the wash records or an equivalent assurance from the contractor at an interval of [Hospital to define], and inspects the contractor's premises at an interval of [Hospital to define]. Delegating the washing does not delegate the duty to know it was done correctly.$s$,
+    $s$29. Clean linen — handling, storage and distribution
+
+Clean linen at {{HOSPITAL_NAME}} is protected from the point it leaves the dryer to the point it reaches the patient; linen recontaminated after washing is no better than linen never washed.
+
+Clean linen is:
+
+- handled with clean hands and, where the volume or the setting requires it, with clean gloves and a clean apron;
+- transported in covered, clean, dedicated trolleys or in closed bags, by a route separated from soiled linen and waste;
+- stored in a dedicated, clean, dry, ventilated area used for no other purpose, on shelving clear of the floor, away from sluices, waste holding, sinks and any source of splashing, with the store kept closed;
+- issued on a first-in, first-out basis so that stock rotates;
+- inspected before issue and withdrawn if stained, damp, damaged or malodorous, and returned for rewashing or condemned.
+
+Clean linen is not stored in a dirty utility, a sluice, a bathroom or a corridor, and is not left uncovered on an open trolley in a clinical area overnight.
+
+Stock levels are maintained at a level that allows linen to be changed when it should be rather than when supply permits; the par level for each area is [Hospital to define]. The condition of the linen inventory and the state of the clean linen stores are audited at an interval of [Hospital to define] and recorded.$s$,
+    $s$30. Food services — governance, licensing and supplier control
+
+The kitchen of {{HOSPITAL_NAME}} serves a population that is more vulnerable to foodborne illness than the general public, and food safety is therefore treated as a patient safety matter.
+
+{{HOSPITAL_NAME}} holds a current licence or registration under the Food Safety and Standards Act and displays it. Where catering is outsourced, the contractor holds its own valid licence, a copy is held by {{HOSPITAL_NAME}}, and the contract incorporates this policy.
+
+Food and ingredients are purchased only from approved suppliers. The approved supplier list, the basis on which a supplier is approved, and the date of the last review are recorded; the review interval is [Hospital to define].
+
+The person accountable for food safety at {{HOSPITAL_NAME}} is [Hospital to define]. Food service is included in the scope of the Infection Prevention and Control Committee, which reviews kitchen audit results, food handler health records and any suspected foodborne incident.$s$,
+    $s$31. Food handler health, hygiene and training
+
+Every food handler at {{HOSPITAL_NAME}}, employed or contracted:
+
+- undergoes a medical examination by a registered medical practitioner before starting work and annually thereafter, with the record retained;
+- is offered immunisation against the enteric group of diseases according to the recommended schedule, with doses recorded;
+- reports any diarrhoea, vomiting, fever, jaundice, sore throat with fever, or infected skin lesion, and is excluded from food handling until cleared — the obligation to report is stated in writing and the exclusion is enforced rather than left to the individual's judgement;
+- keeps nails short and unvarnished, removes hand jewellery, wears clean protective clothing and effective hair covering, and does not smoke, chew, spit or eat in food areas;
+- covers any cut or wound on the hand with a waterproof, brightly coloured dressing and wears a glove over it;
+- performs hand hygiene on entering the kitchen, before handling ready-to-eat food, after handling raw food, after using the toilet, and after any interruption; a dedicated hand-wash basin with soap and drying means is provided in the kitchen and is not used for washing food or utensils.
+
+Food handlers are trained in food safety at induction and at an interval of [Hospital to define]. {{HOSPITAL_NAME}} maintains at least one trained and certified food safety supervisor for every 25 food handlers, as the food safety training and certification scheme requires, and retains the certificate.$s$,
+    $s$32. Receipt and storage of food
+
+Incoming food at {{HOSPITAL_NAME}} is inspected at receipt for condition, packaging integrity, labelling and date marking, and the temperature of chilled and frozen deliveries is checked and recorded. Consignments that fail are rejected and the rejection recorded.
+
+In storage:
+
+- dry stores are cool, dry, ventilated, pest-proof, and stocked clear of the floor and away from walls, with stock rotated first-in-first-out and date marking visible;
+- refrigerated food is held at or below 5 degrees Celsius, with cold stores operating in the range of about 1 to 5 degrees Celsius, and frozen food held frozen solid;
+- raw and ready-to-eat foods are separated, with raw meat, poultry and fish stored below and away from ready-to-eat items so that drip cannot contaminate them;
+- cooked and prepared foods are covered, labelled with the date and time of preparation, and used within the period defined for them;
+- chemicals, cleaning agents and pesticides are stored outside the food storage areas entirely.
+
+Refrigerator and freezer temperatures are checked and recorded at a frequency of [Hospital to define], with an out-of-range reading generating an immediate corrective action, a decision on the affected food, and a record of both.$s$,
+    $s$33. Temperature control in preparation, holding and service
+
+Bacteria multiply fastest between 5 and 60 degrees Celsius, and time spent in that range is what turns safe food into unsafe food. Control of temperature and of time is therefore the core of the kitchen's method at {{HOSPITAL_NAME}}.
+
+- Food is cooked thoroughly, and the core temperature of cooked items is checked with a cleaned and disinfected probe thermometer and recorded for the items and frequency defined by {{HOSPITAL_NAME}} at [Hospital to define].
+- Hot food held for service is held above 60 degrees Celsius throughout, and the holding temperature is checked and recorded.
+- Cold food for service is held at or below 5 degrees Celsius.
+- Cooked food that is to be cooled is cooled rapidly and refrigerated, not left to cool at room temperature over an extended period.
+- Reheated food is reheated thoroughly and once only; food is not reheated repeatedly, and food returned from a ward is not re-served.
+- Time from plating to service to the patient is minimised, and food trolleys used for transport maintain temperature; the maximum permitted interval at {{HOSPITAL_NAME}} is [Hospital to define].
+
+Cross-contamination is prevented by separating raw and ready-to-eat preparation in space or in time, using separate and identifiable boards, knives and surfaces for each, and cleaning and disinfecting between tasks.
+
+Where {{HOSPITAL_NAME}} retains reference samples of food served, the sample, the date and the meal are recorded and the sample held for [Hospital to define], so that a suspected foodborne incident can be investigated rather than argued about.$s$,
+    $s$34. Kitchen cleaning, pest control and waste
+
+The kitchen of {{HOSPITAL_NAME}} operates to a written cleaning schedule identifying every surface, item of equipment and area, its cleaning frequency, the agent and method, and the person responsible, with completion recorded and countersigned.
+
+Food contact surfaces and equipment are cleaned and sanitised between tasks and at the end of each service. Equipment that is dismantled for cleaning is dismantled at the specified frequency rather than only when it fails. Cloths used in the kitchen are single-use or laundered and dried between uses, and are not shared with non-food areas.
+
+Utensils and crockery are washed at a temperature adequate for sanitisation or chemically sanitised, and are air-dried; crockery used by a patient under transmission-based precautions is handled according to the precaution but does not require disposable ware unless the Infection Control Team specifies it.
+
+Pest control is preventive first — proofing of openings, drainage maintenance, prompt removal of food debris and waste, and stores kept clear of the floor — supported by a contract with a licensed operator, visits at an interval of [Hospital to define], and a record of every visit, finding and treatment. Pesticides are not applied where food is exposed. Any sighting of a pest is reported and recorded rather than dealt with informally.
+
+Kitchen waste is removed frequently in covered containers, is not accumulated in the kitchen, and is kept entirely separate from biomedical waste streams. Kitchen waste containers are cleaned after each emptying.$s$,
+    $s$35. Training of support services staff
+
+{{HOSPITAL_NAME}} trains every member of support services staff in the infection control requirements of their own work, at induction before they begin unsupervised work and at an interval of [Hospital to define] thereafter, and again whenever a procedure, product or piece of equipment changes.
+
+Training is delivered in a language the person understands and by demonstration and return demonstration rather than by lecture and signature, since much of this workforce learns by doing and some may have limited literacy. Pictorial job aids are placed at the point of work.
+
+Contractor staff receive the same training, and their attendance is recorded by {{HOSPITAL_NAME}} rather than accepted on the contractor's assurance. A contractor's staff turnover does not reduce the requirement; new personnel are trained before deployment.
+
+Records of training are kept by name, date, topic and trainer, and note that competence was observed where a technique was taught.$s$,
+    $s$36. Monitoring and audit of support services
+
+Each support service at {{HOSPITAL_NAME}} is audited against this policy at an interval of [Hospital to define] using a structured checklist, by a person independent of the service being audited.
+
+The audit programme covers housekeeping practice and cleanliness, waste segregation at source and through the chain of custody, linen handling and storage, kitchen hygiene and temperature records, engineering maintenance and validation records, and compliance during any construction project in progress.
+
+Findings are recorded with a corrective action, an owner and a due date, and are tracked to closure at the Infection Prevention and Control Committee. Results are also fed back to the staff of the service audited, in terms they can act on.
+
+Where a service is outsourced, audit findings are communicated formally to the contractor and, where performance does not improve, escalated through the contract. Contract renewal decisions take account of the audit record.$s$,
+    $s$37. Records retained under this policy
+
+{{HOSPITAL_NAME}} retains, as evidence that this policy operates: the engineering systems register and preventive maintenance records; filter change logs and critical-area validation reports; environmental sampling results and corrective actions; water testing reports; temperature and humidity logs; infection control risk assessments for construction projects with containment inspection logs and clearance certificates; the housekeeping procedure and completed area cleaning checklists; disinfectant preparation records; cleaning audit and inspection reports; the biomedical waste authorisation, daily waste records by category, manifests, annual reports and website publication; waste handler training and immunisation records; the linen management procedure, wash cycle records and linen audits; the food licence, approved supplier list, food handler medical and immunisation records, food safety supervisor certification, temperature logs, kitchen audit reports and pest control records; support services training records; and audit findings with their closure.
+
+Records are retained for a period of [Hospital to define], which is not less than any period prescribed by applicable law — including the retention periods required by the biomedical waste rules — or by the accreditation standard, and are stored so that they remain legible, retrievable and confidential.$s$,
+    $s$38. Review of this policy
+
+This policy is reviewed by the Infection Prevention and Control Committee at least once every [Hospital to define], and sooner where a statutory rule changes, where an outbreak, incident or audit finding exposes a gap, where a support service is newly outsourced or brought in-house, or where a new service, building or major item of plant is introduced.
+
+The review specifically checks that the outsourced services described here are still the ones actually contracted, and that the named responsibilities still correspond to posts that exist and are filled. Revisions are approved by the Committee, endorsed by management, and issued with the superseded version withdrawn from every point of use.$s$
+  ],
+  $q$The Infection Prevention and Control Committee owns this policy, reviews audit and environmental results from every support service, and escalates unresolved failures and unfunded requirements to management.
+
+The Infection Control Officer specifies what the support services must achieve in infection control terms, decides whether an area may remain in use after an environmental or engineering failure, and leads the investigation of any incident traced to a support service.
+
+The Infection Control Nurse audits support services practice independently of the departments concerned, delivers and records training, and is the first point of contact for support staff on infection control questions.
+
+The Engineering or Maintenance In-charge operates and maintains ventilation, filtration, water and related systems, keeps the maintenance and validation records, and notifies the Infection Control Team before any change to these systems.
+
+The Housekeeping Supervisor is responsible for cleaning to the written procedure, for the condition and correct use of cleaning equipment, for supervisor sign-off of cleaning checklists, and for the competence of cleaning staff including contractor staff.
+
+The Biomedical Waste Officer or Waste Management In-charge is responsible for segregation compliance, the chain of custody from generation to handover, the authorisation and its renewal, the statutory records and the annual report.
+
+The Laundry In-charge is responsible for the wash specification and its records, for the separation of soiled and clean flows, and for the condition and storage of clean linen.
+
+The Dietary or Food Services In-charge is responsible for the food licence, supplier approval, food handler health and training records, temperature control and its records, and kitchen hygiene.
+
+Heads of clinical departments and area in-charges are responsible for segregation at source, correct handling of linen at the bedside, and for reporting support service failures in their areas rather than working around them.
+
+Where a service is outsourced, the contract manager at {{HOSPITAL_NAME}} is responsible for enforcing this policy through the contract, and the contractor's supervisor is responsible for day-to-day compliance.
+
+All staff are responsible for segregating waste correctly at the point they generate it and for reporting spills, breaches and unsafe conditions immediately.$q$,
+  $q$- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Hospital Infection Control chapter, standard HIC.3.
+- Bio-Medical Waste Management Rules, 2016, and subsequent amendments, made under the Environment (Protection) Act, 1986, Ministry of Environment, Forest and Climate Change, Government of India.
+- National Centre for Disease Control, Ministry of Health and Family Welfare, Government of India, National Guidelines for Infection Prevention and Control in Healthcare Facilities, 2020.
+- Centers for Disease Control and Prevention, Guidelines for Environmental Infection Control in Health-Care Facilities, including the guidance on laundry and bedding and on environmental cleaning procedures.
+- American Society for Health Care Engineering, Infection Control Risk Assessment (ICRA) matrix of precautions for construction and renovation, and its subsequent revision.
+- NABH guidelines on air conditioning for operation theatres, and the ventilation standards of the Indian Society of Heating, Refrigerating and Air Conditioning Engineers (ISHRAE) and ASHRAE Standard 170.
+- Food Safety and Standards Act, 2006 and regulations made under it, Food Safety and Standards Authority of India, including the Food Safety Training and Certification (FoSTaC) requirement for food safety supervisors.
+- World Health Organization, Guidelines on Core Components of Infection Prevention and Control Programmes, 2016 — core component on the built environment, materials and equipment.
+- Internal documents of {{HOSPITAL_NAME}}: infection prevention and control programme policy, infection prevention and control practices policy, sterilisation and disinfection policy, biomedical waste management procedure, housekeeping procedure, linen management procedure, kitchen sanitation procedure, occupational health and post-exposure procedure, and the facility management and safety policies.$q$,
+  $q$Controlled master copy: Infection Control Team, {{HOSPITAL_NAME}}.
+
+Copies issued to: the office of the head of the institution; the Infection Prevention and Control Committee (all members); nursing administration; every inpatient ward and critical care area; operating theatre and procedure rooms; emergency and outpatient departments; laboratory; central sterile supply; housekeeping department and each housekeeping supervisor; the biomedical waste officer and the central waste storage area; laundry; kitchen and dietary services; engineering and maintenance; stores and purchase; the contracts or purchase function for onward issue to each outsourced service provider; and the quality or accreditation coordinator.
+
+The current version is available to all staff at [Hospital to define — intranet location or nursing station folder]. Extracts relevant to a specific service — the colour code, the cleaning schedule, the wash specification, the temperature limits — are displayed as job aids at the point of work in the languages staff read. Superseded versions are withdrawn from all points of use on issue of a revision, and one dated copy of each is retained by the Infection Control Team.$q$,
+  $q$ACH — Air Changes per Hour
+AHU — Air Handling Unit
+AIIR — Airborne Infection Isolation Room
+BMW — Bio-Medical Waste
+CBWTF — Common Bio-Medical Waste Treatment Facility
+CSSD — Central Sterile Supply Department
+FoSTaC — Food Safety Training and Certification
+FSSAI — Food Safety and Standards Authority of India
+HAI — Healthcare Associated Infection
+HEPA — High-Efficiency Particulate Air (filter)
+HIC — Hospital Infection Control (NABH chapter)
+HVAC — Heating, Ventilation and Air Conditioning
+ICRA — Infection Control Risk Assessment
+IPC — Infection Prevention and Control
+IPCC — Infection Prevention and Control Committee
+ISHRAE — Indian Society of Heating, Refrigerating and Air Conditioning Engineers
+NABH — National Accreditation Board for Hospitals and Healthcare Providers
+NCDC — National Centre for Disease Control
+OE — Objective Element
+OT — Operating Theatre
+Pa — Pascal (unit of pressure)
+PPE — Personal Protective Equipment
+ppm — Parts Per Million
+SHCO — Small Healthcare Organisation
+SPCB — State Pollution Control Board
+WHO — World Health Organization$q$,
+  $q$This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.
+
+Several requirements in this document are statutory rather than advisory — in particular those arising under the Bio-Medical Waste Management Rules, 2016 and the Food Safety and Standards Act, 2006. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.
+
+The clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.
+
+This document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.$q$,
+  $q$[{"oe_code": "HIC.3.a", "requirement": "Appropriate engineering controls are in place to prevent infection", "steps": "Steps 1-7", "evidence": "Engineering systems register; HVAC/AHU preventive maintenance records; filter change log with technician signatures; critical-area validation reports covering air change rate, pressure differential and HEPA integrity; OT temperature and humidity logs; environmental air and surface sampling results with corrective actions; water tank cleaning and water quality test reports", "responsible": "Engineering / Maintenance In-charge of {{HOSPITAL_NAME}}, jointly with the Infection Control Officer"}, {"oe_code": "HIC.3.b", "requirement": "A plan is designed and implemented to reduce infection risk during construction and renovation", "steps": "Steps 8-12", "evidence": "Signed infection control risk assessment for every project, recording activity type, patient risk group and class of precautions; daily containment inspection log; contractor briefing register; post-work clearance certificate signed jointly by engineering and the Infection Control Team, with any clearance sampling results", "responsible": "Engineering / Projects In-charge and the commissioning department, with approval by the Infection Prevention and Control Committee"}, {"oe_code": "HIC.3.c", "requirement": "Housekeeping procedures are adhered to", "steps": "Steps 13-19", "evidence": "Written housekeeping procedure with zone-wise frequencies; area cleaning checklists with cleaner and supervisor sign-off; disinfectant preparation and dilution records; colour-coding chart displayed at equipment stores; terminal cleaning records; spill kit check records; supervisor and Infection Control Nurse inspection reports; environmental surface swab results", "responsible": "Housekeeping Supervisor (or the contractor's supervisor where outsourced), audited independently by the Infection Control Nurse"}, {"oe_code": "HIC.3.d", "requirement": "Biomedical waste is handled appropriately and safely", "steps": "Steps 20-25", "evidence": "Current State Pollution Control Board authorisation; daily BMW record by category and department; bin inspection checklists; manifests / consignment notes from the common treatment facility; annual report submitted by 30 June and published on the website of {{HOSPITAL_NAME}}; waste handler training records and hepatitis B immunisation status; waste incident and sharps injury records", "responsible": "Biomedical Waste Officer / Waste Management In-charge of {{HOSPITAL_NAME}}"}, {"oe_code": "HIC.3.e", "requirement": "Laundry and linen management processes are adhered to", "steps": "Steps 26-29", "evidence": "Linen management procedure; wash cycle temperature and hold-time records per load (or contractor wash records where outsourced); linen flow audit checklists from soiled collection to clean storage; clean linen store inspection log; contractor premises inspection reports; linen condition and par-level audit", "responsible": "Laundry In-charge / Housekeeping Supervisor, with the contract manager where laundry is outsourced"}, {"oe_code": "HIC.3.f", "requirement": "Kitchen sanitation and food handling issues are adhered to", "steps": "Steps 30-34", "evidence": "Current FSSAI licence (and the contractor's licence where catering is outsourced); approved supplier list with review dates; food handler annual medical examination and enteric immunisation records; food safety supervisor certification at one per 25 food handlers; refrigerator, hot-holding and core cooking temperature logs; kitchen cleaning schedule with sign-off; pest control visit and treatment records; kitchen hygiene audit reports", "responsible": "Dietary / Food Services In-charge of {{HOSPITAL_NAME}} (or the catering contractor's manager), overseen by the Infection Prevention and Control Committee"}]$q$::jsonb,
+  $q$Universal (non-NABH) facts included in this draft, and where each was verified. Check these first.
+
+1. Bio-Medical Waste Management Rules, 2016 — four-colour segregation code. Yellow: human and animal anatomical waste, soiled waste, expired and discarded medicines, chemical waste, contaminated discarded linen, laboratory and microbiological waste (pre-treated where required). Red: contaminated recyclable plastics — tubing, bottles, IV sets, catheters, urine bags, syringes without needles, gloves. White (translucent, puncture-proof): sharps. Blue: broken/discarded glass and metallic body implants. The 2016 rules consolidated the previous ten categories into these four. Used in step 20. Verified via multiple summaries of the 2016 rules and their 2018/2019 amendments.
+
+2. BMW operational and regulatory duties — no untreated biomedical waste stored beyond 48 hours; authorisation required from the State Pollution Control Board / Pollution Control Committee; annual report to the prescribed authority on or before 30 June each year; the 2018 amendment requires the annual report also to be published on the facility's website; barcoding/tracking as prescribed. Used in steps 22-23. Verified via summaries of Rule 13 and the amendment rules.
+
+3. Infection Control Risk Assessment (ICRA) for construction — the matrix cross-references construction activity type (A: inspection/non-invasive; B: small-scale, minimal dust; C: moderate dust or removal of a building component; D: major demolition and construction) against patient risk group (Low, Medium, High, Highest) to yield a class of precautions (I-IV). ASHE's 2020 revision, "ICRA 2.0", added a fifth class to separate the upper classes further. Used in steps 8-10, with the specific matrix left as [Hospital to define] since more than one version is in circulation. Verified via the APIC ICRA matrix and ASHE's revision announcement.
+
+4. Operating theatre ventilation, from NABH's Revised Guidelines for Air Conditioning in Operation Theatres (2018). NABH specifies TWO theatre categories with different air quality requirements, and the distinction matters:
+   - Type A (formerly super-specialty): supply air quality Class 100 / ISO Class 5 at rest, terminal HEPA mandatory.
+   - Type B (formerly general): supply air quality Class 1000 / ISO Class 6 at rest, HEPA may be provided rather than mandatory.
+   Common to both: minimum 20 total air changes per hour based on biological load and location, of which at least 4 must be fresh air changes; reducible to 25% during non-operational hours via variable frequency drive provided positive pressure is not disturbed; minimum positive pressure 2.5 Pa (0.01 inches water gauge); HEPA where provided at 99.97% down to 0.3 microns or better, terminal, ceiling-mounted; unidirectional downward flow at 25-35 FPM face velocity from a non-aspirating laminar flow diffuser or ceiling array; filtration area extending at least one foot beyond the OT table on all sides; temperature 21 +/- 3 degrees C, except joint replacement at 18 +/- 2 degrees C; relative humidity 20 to 60%, with 55% considered ideal. Used in step 2.
+
+   CORRECTION NOTE for the reviewer: an earlier version of this draft was wrong on this step, and the errors shared one cause — relying on secondary presentations and a non-Indian source instead of the NABH document itself. It gave a single unqualified air quality of Class 100 / ISO Class 5, which is correct only for Type A; it gave relative humidity as 50-55% from a US Public Health Service source where NABH specifies 20-60%; and it omitted the 4 fresh air changes, the 25% reduction figure, the one-foot filtration margin and the joint-replacement temperature exception altogether. The remaining figures — 20 ACH, 2.5 Pa, HEPA 99.97% at 0.3 microns, 25-35 FPM, unidirectional downward flow — were re-checked against the NABH text and confirmed correct.
+
+5. Negative-pressure and isolation ventilation — at least 2.5 Pa negative differential, 12 ACH for new/renovated rooms and not fewer than 6 ACH for existing rooms, exhaust outside away from intakes or HEPA filtration if recirculated. Used in step 3. Same source basis as the HIC.1 draft (CDC guidance / ASHRAE 170).
+
+6. Healthcare laundry wash parameters — hot-water washing at a minimum of 71 degrees C (160 degrees F) for at least 25 minutes; alternatively low-temperature washing with controlled cycle chemistry and a chlorine bleach rinse achieving a total available chlorine residual of about 50-150 ppm; chlorine bleach activates at water temperatures of roughly 57-63 degrees C (135-145 F); bleach is unsuitable for flame-retardant fabrics. Used in step 28. Verified via CDC's Guidelines for Environmental Infection Control in Health-Care Facilities, laundry and bedding section.
+
+7. Environmental cleaning and spill disinfection — sodium hypochlorite at approximately 1,000 ppm for general surface disinfection and 5,000 ppm where a higher level is indicated; for a small blood spill on a non-porous surface a 1:100 dilution giving roughly 525-615 ppm available chlorine, with a 1:10 dilution applied first for laboratory culture spills followed by terminal disinfection at 1:100; high-touch surfaces cleaned and disinfected at minimum daily in occupied patient areas. Used in steps 14, 15 and 18. Verified via CDC environmental cleaning procedures and disinfection guidance.
+
+8. Food safety temperature control and food handler requirements — the danger zone is 5 to 60 degrees C; hot food held above 60 degrees C; cold food at or below 5 degrees C, with cold stores in the range of about 1-5 degrees C; annual medical examination of food handlers by a registered medical practitioner and immunisation against the enteric group of diseases; and under FSSAI's FoSTaC scheme at least one trained and certified Food Safety Supervisor for every 25 food handlers at each premises. Used in steps 31-33. Verified via FSSAI temperature guidance and FoSTaC scheme documentation.
+
+DELIBERATELY NOT INCLUDED — checked against the deferred-topic tracker and judged to belong to other standards:
+
+- Spaulding classification (critical / semi-critical / non-critical devices), high-level disinfection, sterilant selection and contact times, and validation of device reprocessing. These concern instruments and devices, which SHCO 3rd Edition assigns to HIC.6 ("Infection prevention measures include sterilisation and/or disinfection of instruments, equipment and devices"), not to HIC.3 ("implements the infection prevention and control programme in support services"). Step 15 covers environmental SURFACE disinfectant selection only and says so explicitly; the scope section states the exclusion. NOTE: these were listed in the request as HIC.3 content — I have left them for HIC.6 on the basis of the OE text, and they remain open in the tracker.
+- CSSD processes — instrument reprocessing cycle, load validation, biological and chemical indicators, sterile storage conditions, shelf life and recall. Same reasoning: HIC.6. Remains open in the tracker.
+- Potable water quality specification and the wider water safety plan, including dialysis water — the tracker assigns these to FMS.3.a. Step 6 fixes ownership, requires Legionella and coliform testing of plumbing serving patient care areas, and routes results to the IPCC, but defers the specification.
+- Chemical, cytotoxic and mercury spills — FMS per the tracker. Step 18 covers blood and body fluid spills only and says so.
+- HAI surveillance methodology — CQI, as agreed for HIC.1 and HIC.2.
+
+FOLDED IN FROM THE TRACKER (previously deferred): the environmental cleaning schedule, now step 13-19 in full; laundry and linen processing, now steps 26-29 in full; and environmental surveillance (OT air sampling, HEPA integrity, temperature and humidity monitoring, surface swabs), which the HIC.1 draft carried as a pointer only and which is now written out at step 5 under HIC.3.a engineering controls.
+
+HOSPITAL-SPECIFIC VALUES LEFT AS [Hospital to define] — 38 occurrences across: OT parameter values within the permitted ranges; pressure verification interval; critical-area validation interval and validating agency; air and surface sampling intervals; water tank cleaning and water testing intervals; ICRA matrix version adopted; construction contract manager; cleaning frequencies by zone and for sanitary areas; OT deep clean interval; hypochlorite working concentrations; cleaning colour-code scheme; spill kit check interval; cleaning checklist retention period; waste handler training interval; soiled linen maximum holding period; wash specification adopted; contractor wash-record and premises inspection intervals; clean linen par levels and audit interval; supplier review interval; food safety accountable person; food handler training interval; refrigerator temperature check frequency; core cooking temperature check scope; food service time limit; reference sample retention; pest control visit interval; support services training interval; audit interval; record retention period; policy review interval; intranet location.$q$,
+  'draft',
+  now()
+)
+on conflict (standard_code) do update set
+  chapter = excluded.chapter,
+  oe_codes = excluded.oe_codes,
+  policy_title = excluded.policy_title,
+  purpose = excluded.purpose,
+  scope = excluded.scope,
+  policy_statement = excluded.policy_statement,
+  procedure_steps = excluded.procedure_steps,
+  responsibility = excluded.responsibility,
+  references_text = excluded.references_text,
+  distribution = excluded.distribution,
+  abbreviations = excluded.abbreviations,
+  disclaimer = excluded.disclaimer,
+  oe_mapping = excluded.oe_mapping,
+  universal_facts_checklist = excluded.universal_facts_checklist,
+  status = 'draft',
+  updated_at = now();
