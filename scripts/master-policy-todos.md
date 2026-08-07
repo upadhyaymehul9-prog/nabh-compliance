@@ -147,8 +147,184 @@ Source of the gaps: comparison of the HIC.2 master draft against NABH's own
       (AI-generated draft — review before use)" is wrong for every human-reviewed master, not just
       HIC.4.
 
+      **AND the author byline — merged into this item 2026-08-07, decision confirmed.** It is the
+      same gap in the same file and must not become a second renderer pass: two passes would mean
+      two deploys, two local-test cycles, and HIC.1–HIC.4 backfilled twice.
+
+      Requested for HIC.5 on 2026-08-07: `Dr. Mehul Upadhyay · Healthcare Operations Leader`.
+      Deliberately NOT built then, and HIC.5 was NOT held up for it. The reasons it cannot simply
+      be written into the data today:
+      - `shco_policy_masters` has no `byline` / `author` / `prepared_by` column. `approved_by`
+        exists but is an approval-workflow field, is NULL across HIC.1–4, and must stay NULL on a
+        draft row;
+      - `policy-doc-template.ts` has no byline parameter. The control box hardcodes "Prepared By"
+        as a blank signature line (~line 209); there is no author slot anywhere in the document;
+      - **no master policy has ever carried it** — verified by querying every text column of the
+        HIC.1, HIC.2, HIC.3 and HIC.4 live rows for the name. HIC.5 is not the odd one out.
+
+      Storing it without rendering it would reproduce the dormant-`version`-column error described
+      above: data present, document unchanged, and a false belief the job was done.
+
+      **To build, in the same pass as version and revision history:**
+      1. migration: `alter table public.shco_policy_masters add column author_byline text;`
+         (alongside `version` → text and the `revision_history` jsonb column)
+      2. `PolicyDocData` in `_shared/policy-doc-template.ts`: add `authorByline?: string`
+      3. render it in the control box or immediately beneath it — not in the footer, which already
+         carries hospital name, doc no. and the confidentiality mark
+      4. pass it through in `generate-hospital-policy/index.ts` (and check
+         `generate-policy-document/index.ts`, which builds its own `docNo` and may need it too)
+      5. local test per CLAUDE.md — note the app is auth-gated, so the visual check needs the user
+         to sign in
+      6. deploy, then backfill HIC.1–HIC.5
+
       This supersedes the "Amendment Sheet" and "Rev. No." bullets in the cross-cutting section
-      below, which describe the same gap in less specific terms.
+      below, which describe the same gap in less specific terms, and it also absorbs the
+      "Prepared By / Approved By / Responsibility of Updating signature block" bullet there.
+
+---
+
+## Deferred from HIC.5 (drafted 2026-08-07)
+
+- [ ] **Reconcile the three overlaps HIC.5 creates with HIC.1, HIC.2 and HIC.3** in the same
+      consistency pass as the HIC.2/HIC.4 item above — not before all 6 HIC standards are drafted.
+
+      Context and instruction: three of HIC.5's OEs require content the approved documents already
+      partly carry. On instruction (2026-08-07), following the HIC.4 precedent, **HIC.5 carries the
+      full content for all three and HIC.1/HIC.2/HIC.3 were NOT reopened.** The HIC.5 scope section
+      states each division explicitly. Do NOT patch one document without the other.
+
+      1. **HIC.5.b (Core) vs approved HIC.2 step 9 — hand hygiene compliance monitoring.**
+         HIC.2 step 9 already carries open direct observation, the actions-over-opportunities
+         formula, stratification by cadre and area, handrub consumption per 1,000 patient days,
+         feedback and re-audit. HIC.5 steps 19–21 add observer validation and revalidation,
+         independence of observer from area, a minimum sample size with rate suppression below it,
+         breakdown by moment, and dispenser availability as a third indirect measure.
+         **Divergence:** HIC.2 states a session length ("approximately 20 minutes, plus or minus
+         10"); HIC.5 step 20 deliberately states only "a defined and limited length", to avoid
+         creating a second and potentially divergent number. Not a contradiction — one specific,
+         one general. Likely target wording is HIC.2's, adopted in both.
+
+      2. **HIC.5.d (Commitment, ASTERISKED) vs approved HIC.1 steps 25–26 — outbreaks.**
+         HIC.1 step 26 ("Recognising and responding to an outbreak within the hospital") already
+         defines an outbreak and sketches the response; step 25 covers notifiable disease
+         reporting. HIC.5 steps 30–35 carry the full identification, investigation, control,
+         closure and reporting programme. **HIC.5.d is the asterisked OE of the chapter's
+         surveillance standard**, so the documented-evidence anchor must sit in HIC.5.
+         **Divergence:** the two outbreak definitions are consistent in substance but separately
+         worded — make them identical, and reduce HIC.1 step 26 to a pointer once HIC.5 is
+         approved. Also align HIC.1's "report to the ICO on the same day it is suspected" with
+         HIC.5 step 31's "on the day the suspicion arises" — same rule, different words.
+         Note: HIC.1 owns *community* outbreaks/pandemics (HIC.1.d) and the statutory notification
+         route; that split is correct and stays.
+
+      3. **HIC.5.e (Core) vs approved HIC.3 steps 13–19 — housekeeping.**
+         HIC.3.c owns adherence to the housekeeping procedure. HIC.5 steps 26–29 own whether it
+         worked — three axes of measurement, a pre-defined high-touch surface list, objective
+         thoroughness monitoring by fluorescent marker or ATP, the independence requirement, the
+         pass-rate calculation, and restriction of environmental culturing to defined triggers.
+         **THIS IS THE ONE REAL TENSION OF THE THREE, and the most important to resolve.**
+         HIC.3 lists "environmental surface swab results" among its routine housekeeping evidence,
+         while HIC.5 step 28 expressly does **not** perform routine untargeted surface culturing
+         and restricts it to stated triggers (outbreak hypothesis, defined critical systems,
+         post-construction clearance, suspected product contamination, health-authority direction).
+         An assessor reading both will find HIC.3 promising a record HIC.5 says the hospital does
+         not routinely produce. No clinical safety issue — nobody is harmed by an unnecessary swab
+         — but the documents disagree. **HIC.5's position is the better-supported one** (CDC
+         environmental infection control guidance: no established relationship to patient infection
+         in general areas, no agreed action thresholds for most surfaces). Fix belongs in HIC.3.
+         NOT drafted — deliberately deferred to the pass.
+
+- [x] **Author byline — MERGED 2026-08-07 into the version/revision-history TODO above.**
+      Decision confirmed: log it, do not build now; HIC.5 is not held up for it. The full context,
+      the reasons it cannot be stored without a renderer change, and the six build steps now live
+      with the version and revision-history work under "Deferred from HIC.4", because they are the
+      same gap in the same file and belong in one pass. Nothing to do here — see that item.
+
+- [ ] **HIC.3 promises a record the hospital does not routinely produce — environmental surface
+      swabs.** Discrete edit to HIC.3, broken out of the reconciliation item above so it is not
+      lost inside it. Confirmed for logging 2026-08-07.
+
+      **The contradiction.** HIC.3's OE mapping lists "environmental surface swab results" among
+      the routine evidence for HIC.3.c (housekeeping procedures), and HIC.3 step 5 describes
+      routine environmental sampling with repeat-sample confirmation. HIC.5 step 28 states that
+      {{HOSPITAL_NAME}} does **not** perform routine untargeted environmental culturing, and
+      restricts sampling to five defined triggers: an outbreak hypothesis naming the organism
+      sought in advance; periodic monitoring of defined critical systems (OT air, dialysis water,
+      potable water) on engineering or regulatory grounds; post-construction or post-repair
+      clearance; suspected product/device/process contamination; and direction by the competent
+      health authority.
+
+      An assessor reading both documents will find HIC.3 offering a routine record that HIC.5 says
+      is not routinely generated. Not a clinical safety issue — nobody is harmed by an unnecessary
+      swab — but the two documents disagree in front of an assessor, which is the failure mode
+      this file exists to prevent.
+
+      **HIC.5's position is the better-supported one** and should win: CDC environmental infection
+      control guidance does not recommend routine untargeted surface culturing, there is no
+      established relationship to patient infection in general areas, and there are no agreed
+      action thresholds for most surfaces. A low colony count is not evidence that cleaning is
+      working, which is precisely the inference HIC.3's framing invites.
+
+      **Fix belongs in HIC.3, not HIC.5.** Narrow HIC.3's HIC.3.c evidence list to the objective
+      cleaning-outcome monitoring HIC.5 step 27 actually produces (fluorescent marker or ATP pass
+      rates), and re-point HIC.3's environmental sampling text at the trigger list in HIC.5 step 28
+      rather than describing it as routine. HIC.3 is approved and was deliberately NOT reopened on
+      2026-08-07 — do it in the reconciliation pass.
+
+      Note the same care applies in reverse: HIC.5 step 28 deliberately does **not** restate the
+      parameters and frequencies for the critical-system monitoring (OT air, dialysis water,
+      potable water). Those live in HIC.3 and the facility policies. HIC.5 receives and trends the
+      results. Do not move them.
+
+- [ ] **Stop assuming the asterisked OE is the last one in the standard — check it per standard.**
+      Logged 2026-08-07 as a process note for HIC.6 and for any future chapter.
+
+      In HIC.4 the asterisk (`doc_required = true`) sat on the final OE, HIC.4.f. In **HIC.5 it
+      sits on HIC.5.d** — "The organisation identifies and takes appropriate action to control
+      outbreaks of infections" — and **not** on HIC.5.f. Verified against the official SHCO 3rd
+      Edition PDF (printed p.95) and against `shco_full_oes`; both agree, and HIC.5.d is the only
+      asterisked OE in the standard.
+
+      **Why it matters for drafting.** The asterisked OE is the documented-evidence anchor of the
+      standard, and it decides which block of the procedure gets the deepest treatment and the
+      fullest evidence column. HIC.5's draft puts its heaviest content at steps 30–35 (outbreaks)
+      for exactly this reason. Had the HIC.4 pattern been assumed, the weight would have landed on
+      the analysis-and-feedback block instead and the standard's evidence anchor would have been
+      under-built.
+
+      **Do this for HIC.6 before drafting:** query
+      `select oe_code, level, doc_required from public.shco_full_oes where oe_code like 'HIC.6%'`
+      **and** confirm against the PDF, rather than inferring from position — and rather than
+      trusting either source alone. Doing exactly that on 2026-08-07 turned up the next item.
+
+- [ ] **DATA ERROR: `shco_full_oes` is missing the asterisk on HIC.6.e.** Found 2026-08-07 while
+      verifying the asterisk-position note above. **Not fixed — this is a production write to a
+      table the app reads, so it needs your go-ahead.**
+
+      **The discrepancy.** The official SHCO 3rd Edition PDF, printed p.96 (PDF page index 102),
+      carries an asterisk on **four** HIC.6 objective elements — b, c, d **and e**:
+
+      > `Commitment e. The established recall procedure is implemented when a breakdown in the`
+      > `sterilisation system is identified. *`
+
+      `shco_full_oes` has `doc_required = true` for HIC.6.b, c and d, but **`false` for HIC.6.e**.
+      Verified twice: once by reading the extracted page and once by re-extracting with the
+      asterisk-bearing lines marked, to rule out a stray footnote glyph. The asterisk is on the
+      wrapped second line of OE e, exactly as it is for b and c.
+
+      **Why it matters.** HIC.6.e is the recall procedure — the OE that requires documented
+      evidence of what the hospital does when a sterilisation failure is discovered after items
+      have been issued. If HIC.6 is drafted against the DB rather than the PDF, that OE will be
+      built as an ordinary Commitment element and will be under-evidenced in the one place an
+      assessor is most likely to ask for a document.
+
+      **Also check the rest of the table.** One wrong flag suggests the extraction that populated
+      `doc_required` mishandled asterisks on wrapped lines generally. Before drafting HIC.6, spot
+      -check every chapter's asterisks against the PDF, not just HIC. The three HIC.5 flags and the
+      six HIC.4 flags were verified during those drafts and are correct.
+
+      **Fix:** `update public.shco_full_oes set doc_required = true where oe_code = 'HIC.6.e';`
+      — after confirming the wider audit, so it is done once rather than piecemeal.
 
 ---
 

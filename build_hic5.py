@@ -1,0 +1,1156 @@
+# -*- coding: utf-8 -*-
+"""Builds the HIC.5 master policy draft: JSON for review + SQL for the Supabase SQL Editor.
+
+Column types confirmed against the live schema (2026-08-07):
+  oe_codes        text[]
+  procedure_steps text[]
+  oe_mapping      jsonb
+
+Official source: NABH Standards for Small Healthcare Organisations, 3rd Edition (August 2022),
+Chapter 5 Hospital Infection Control, standard HIC.5 and OEs HIC.5.a-f, read from the standards
+PDF at printed page 95 (PDF page index 101) in the local copy at
+"C:/Users/SERVER/Desktop/NABH SHCO/SHCO-Standards-3rd-Edition.pdf".
+
+Levels, verified against the PDF and against shco_full_oes: a Core, b Core, c Achievement,
+d Commitment, e Core, f Commitment. HIC.5.d alone carries the asterisk (doc_required = true) --
+note this differs from HIC.4, where the asterisk sat on the final OE.
+
+The five optional sections (definitions, training_competency, resources_required,
+monitoring_audit, exceptions) are deliberately left unset, matching HIC.1-4.
+"""
+import json
+import re
+
+STANDARD_CODE = "HIC.5"
+CHAPTER = "HIC"
+OE_CODES = ["HIC.5.a", "HIC.5.b", "HIC.5.c", "HIC.5.d", "HIC.5.e", "HIC.5.f"]
+
+POLICY_TITLE = "Infection Prevention and Control Surveillance"
+
+PURPOSE = """This document sets out how {{HOSPITAL_NAME}} measures infection. It defines what is counted, how a case is decided, what it is counted against, how the resulting numbers are analysed, what happens when they move, and who is told.
+
+Surveillance is not record-keeping. A hospital that collects infection data and files it has not performed surveillance; it has performed data entry. Surveillance is the continuous, systematic collection of defined events, their analysis against a denominator that makes them comparable, and the return of that analysis to the people whose practice produced it, in time for them to act on it. The last part is the part most often missing, and it is the part that makes the rest worth doing.
+
+This document also sets out how {{HOSPITAL_NAME}} recognises that something has gone wrong across a group of patients rather than in one of them — an outbreak — and what it does in the hours and days that follow.
+
+Every other infection control policy of {{HOSPITAL_NAME}} makes a claim about what the hospital does. This one is how those claims are tested."""
+
+SCOPE = """This policy applies to every patient area of {{HOSPITAL_NAME}} — inpatient wards, critical care and high-dependency areas, operation theatres and procedure rooms, the labour room, emergency, day-care, dialysis, and outpatient areas where invasive procedures are performed — and to the support services whose output is measured under it, including housekeeping, laundry, kitchen and waste handling. It binds the laboratory of {{HOSPITAL_NAME}}, or the outsourced laboratory acting for it, in respect of the alerts and reports this policy requires.
+
+It applies to infection in patients and, where this policy says so, to infection in staff.
+
+The division of responsibility between this policy and the other infection control policies of {{HOSPITAL_NAME}} is deliberate, and a reader who is looking for a practice rather than a measurement should start elsewhere.
+
+What this policy owns, and no other policy of {{HOSPITAL_NAME}} does:
+
+- the standard case definitions by which a healthcare associated infection is decided to have occurred, and the rule that they are not modified locally;
+- the denominators — device days, patient days, admissions and procedures — and the rules for counting them;
+- the calculation of rates, their trending over time, and their comparison against internal and external benchmarks;
+- the validation of the surveillance data itself;
+- the analysis of all of the above, the corrective and preventive action that follows, and the feedback loop back to the clinical team.
+
+Three boundaries need stating explicitly, because in each case another policy of {{HOSPITAL_NAME}} already governs the practice being measured, and this policy governs only the measurement.
+
+Prevention of device-associated and surgical site infection. The infection prevention policy owns the care bundles — what is done to prevent catheter-associated urinary tract infection, ventilator-associated pneumonia and the ventilator-associated events around it, catheter-linked bloodstream infection and surgical site infection — and owns the measurement of whether those bundles were performed, which is a process measure. This policy owns the counting of the infections themselves: the case definitions, the device-day denominators, the rate calculation, the benchmarking and the feedback. A bundle compliance figure and an infection rate are different measurements of the same thing and are read against each other; neither substitutes for the other.
+
+Hand hygiene. The infection prevention and control practices policy owns hand hygiene itself — the five moments, the choice between handrub and soap and water, the technique, the duration, and the facilities and consumables that make it possible. This policy owns the surveillance of compliance with it: who may observe, how an observer is validated, what counts as an opportunity, how large a sample must be before a figure means anything, how the rate is calculated and stratified, and how the result is fed back and acted on. Where the two documents describe the same observation activity, they are intended to agree.
+
+Housekeeping. The support services policy owns the housekeeping procedure — which areas are cleaned, how often, with what agent at what dilution, by whom, and the supervisor's confirmation that the work was done. This policy owns the surveillance of whether it worked, which is a different question and is not answered by the same record. A signed cleaning checklist is evidence of activity. This policy is concerned with evidence of outcome.
+
+Outbreaks. The infection prevention and control programme policy owns the participation of {{HOSPITAL_NAME}} in outbreaks and pandemics in the surrounding community, and owns the statutory notifiable disease reporting route. This policy owns the identification and control of an outbreak within {{HOSPITAL_NAME}} — the thresholds that define one, the duty to report a suspicion, the investigation, the control measures, and the closure and report. Where an internal outbreak also triggers a statutory notification, this policy hands over to that route rather than restating it.
+
+What this policy does not cover: the governance and resourcing of the infection control programme; the practices set out in the clinical areas policy; the engineering, construction, waste, laundry and kitchen requirements of the support services policy; instrument reprocessing and sterilisation; and the selection of antimicrobial agents and the structure of the stewardship arrangement. Each has its own policy. This policy supplies those policies with data and receives from them the practices it measures."""
+
+POLICY_STATEMENT = """{{HOSPITAL_NAME}} holds that a hospital cannot manage infection it does not measure, and cannot trust a measurement it has not defined in advance.
+
+{{HOSPITAL_NAME}} therefore commits to standard, published case definitions, applied unchanged. A definition adjusted to local convenience produces a number that cannot be compared with last quarter, with another unit, or with anyone else, and its only reliable property is that it will be lower. Where a published definition is difficult to apply here, the difficulty is recorded and referred to the Infection Prevention and Control Committee; it is not resolved by quietly narrowing the definition.
+
+{{HOSPITAL_NAME}} commits to counting the denominator with the same care as the numerator. An infection rate is a fraction, and the fraction is far more often wrong at the bottom than at the top. Device days that are estimated, back-filled at month end, or reconstructed from memory make the rate they produce meaningless, and a meaningless rate is worse than no rate because it invites action.
+
+{{HOSPITAL_NAME}} does not treat a low rate as good news until it has asked how hard it looked. Surveillance intensity and reported incidence move together. Where a rate falls, {{HOSPITAL_NAME}} examines case-finding before it congratulates anyone.
+
+{{HOSPITAL_NAME}} states plainly that surveillance data is not used to discipline individuals. Its purpose is to find where a system fails, and a system that punishes the reporter loses the information it needs. Data is reported by unit, by device and by procedure — not by named clinician — and a member of staff who reports a suspected infection, a cluster or a data error is treated as having done the right thing.
+
+{{HOSPITAL_NAME}} commits to closing the loop. Surveillance that ends at a committee is incomplete. Every clinical area receives its own figures, in a form its staff can read, at a defined interval, together with what the figures are believed to mean and what is being asked of the area. Where a corrective action is taken, the same measurement is repeated to establish whether it worked, and where it did not, that is recorded as plainly as a success would be.
+
+On outbreaks, {{HOSPITAL_NAME}} commits to acting on suspicion rather than waiting for proof. The cost of investigating a cluster that turns out to be coincidence is small and is borne willingly. The cost of waiting for confirmation before acting is borne by patients. Any member of staff may raise a suspicion, directly and without going through a line manager, and no one is criticised for raising one that proves unfounded."""
+
+PROCEDURE_STEPS = [
+"""1. What surveillance means at {{HOSPITAL_NAME}}
+
+Surveillance at {{HOSPITAL_NAME}} is active, prospective and targeted.
+
+It is active in that a designated person goes looking for cases, rather than waiting for clinicians to report them. Passive reporting — relying on the treating team to notify an infection — is known to find a fraction of what is there, and the fraction varies with how busy the ward is. {{HOSPITAL_NAME}} does not rely on it.
+
+It is prospective in that cases are identified while the patient is still in the hospital, or within the defined follow-up window, rather than reconstructed later from discharge records. Retrospective case-finding from coded discharge data is used only as a cross-check on completeness under step 16, never as the primary method.
+
+It is targeted in that {{HOSPITAL_NAME}} does not attempt to survey every infection in every area. A small hospital that tries to count everything counts nothing accurately. Surveillance effort is directed by the annual risk assessment at step 2 to the areas, devices and procedures where the risk is greatest and where the hospital can actually change the outcome.
+
+Three principles govern the whole of this policy and are repeated here because the rest of it depends on them:
+
+- a case is decided by the case definition in force, not by clinical impression and not by whether an antimicrobial was started;
+- a numerator is never reported without its denominator;
+- a measurement that is not fed back to the people who produced it has not been completed.
+
+Surveillance is carried out by the Infection Control Team and reported to the Infection Prevention and Control Committee. It is not a function of the treating team, though the treating team supplies much of its raw material and receives all of its output.""",
+
+"""2. The annual surveillance risk assessment
+
+Once every year, and sooner where the services of {{HOSPITAL_NAME}} change materially, the Infection Control Team prepares a surveillance risk assessment and the Infection Prevention and Control Committee approves it. This assessment decides what will be surveyed for the coming period and, equally importantly, what will not.
+
+The assessment considers, for each candidate subject of surveillance:
+
+- the volume of the activity at {{HOSPITAL_NAME}} — how many catheters, ventilated patients, central lines and procedures of each type there actually are, because a rate calculated on a handful of device days is statistically unstable and will swing wildly for reasons that have nothing to do with care;
+- the severity of the outcome if the infection occurs;
+- what is known about local performance from the previous period, and from any cluster, complaint or incident;
+- whether the hospital could realistically act on the finding, since surveying something no one is in a position to change consumes effort and produces nothing;
+- any external requirement — accreditation, statutory notification, or a requirement of a funder or a network to which {{HOSPITAL_NAME}} belongs.
+
+The assessment records the decision on each candidate and the reason for it. A subject excluded from surveillance is recorded as excluded, with the reason, and is reconsidered at the next assessment. This matters: a hospital that has never surveyed something and a hospital that considered it and decided against it look identical in the absence of the record, and only one of them has managed its risk.
+
+The subjects reviewed at each assessment include at a minimum device-associated infection for each device in use at {{HOSPITAL_NAME}}, surgical site infection for the procedures performed, hand hygiene compliance, multi-drug-resistant organisms, the effectiveness of housekeeping, and any infection risk particular to the services or the setting of {{HOSPITAL_NAME}} — [Hospital to define].""",
+
+"""3. The written surveillance plan
+
+The decisions of the risk assessment are recorded in a written surveillance plan, approved by the Infection Prevention and Control Committee and reviewed with each risk assessment. The plan is the controlling document for everything in steps 4 to 38 and states, for each subject under surveillance:
+
+- what is being counted, and the exact case definition set that decides it, identified by source and version;
+- the population under surveillance — which units, which patients, which procedures;
+- the denominator to be used, and who collects it;
+- the method and frequency of data collection, and the person responsible by role;
+- the calculation to be performed;
+- the frequency of analysis and of reporting;
+- who receives the result, in what form, and within what time of the period closing;
+- the threshold or signal that triggers investigation, defined in advance of seeing the data;
+- how long the record is retained.
+
+The plan covers, as separate entries, the healthcare associated infections at steps 6 to 14, hand hygiene compliance at steps 19 to 21, multi-drug-resistant organisms and highly virulent infections at steps 22 to 25, and housekeeping effectiveness at steps 26 to 29. Each of these is a surveillance activity in its own right with its own definition, denominator and reporting route, and the plan does not treat any of them as an afterthought to the infection rates.
+
+The plan states the resources it assumes — the time of the Infection Control Nurse in particular, expressed in sessions or hours per week rather than as an aspiration. Where the plan cannot be delivered with the resources available, the Infection Control Team says so in writing to the Committee rather than delivering it partially and reporting it as complete. The Committee either reduces the plan or obtains the resource, and records which.""",
+
+"""4. Active case-finding — sources and the daily routine
+
+The Infection Control Nurse, or another person designated in the surveillance plan, conducts case-finding on every working day. Where {{HOSPITAL_NAME}} does not staff this function on every day of the week, the plan states the arrangement for weekends and holidays and how cases arising then are captured — [Hospital to define].
+
+Case-finding draws on more than one source, because no single source is complete:
+
+- the microbiology report stream, reviewed daily for positive cultures from any site, which is the highest-yield single source but finds only cultured infections;
+- ward rounds and direct observation in clinical areas, which find the patient started on an antimicrobial for a clinical diagnosis without a culture;
+- the antimicrobial start record or pharmacy issue data, which flags a patient whose treatment changed for a reason that may be an infection;
+- the temperature and vital signs record, and nursing handover, for new fever after a defined period from admission;
+- device registers and theatre lists, which identify the population at risk and so identify who should be looked at;
+- readmission and emergency attendance records, which find the surgical site infection that presents after discharge;
+- reports made voluntarily by clinical staff, which are welcomed and acknowledged but never relied on alone.
+
+For every patient identified as a possible case, the Infection Control Nurse records the identifying details, the device or procedure concerned, the relevant dates, and the clinical and laboratory findings against the criteria of the case definition. The record shows which criteria were met and which were not. A possible case that does not meet the definition is recorded as assessed and excluded, with the reason — this is what allows the completeness of surveillance to be checked later, and it is the record most often omitted.
+
+Case-finding is documented daily, including on days when nothing was found. A gap in the record is indistinguishable from a day on which no one looked.""",
+
+"""5. Case definitions — the rule against local modification
+
+{{HOSPITAL_NAME}} adopts a single published set of surveillance case definitions and applies it without amendment. The set in force is [Hospital to define — name the definition set and its version or year, for example the surveillance definitions published by a recognised national or international surveillance network], and it is named in the surveillance plan.
+
+The following rules govern its use and are not subject to local discretion:
+
+- a case is decided by the definition, not by the treating clinician's diagnosis. The two frequently differ, and both can be correct: a surveillance definition is built for consistency across patients and hospitals, not for the care of an individual, and it is not a clinical diagnosis. A patient may be correctly treated for an infection that the surveillance definition does not count, and the reverse;
+- a definition is never narrowed, and no additional criterion is added, because doing so lowers the reported rate without changing anything that happens to a patient;
+- where the definition set is revised by its publisher, {{HOSPITAL_NAME}} adopts the revision from a stated date, and the change of definition is recorded on the trend chart at that point, because a step change in a rate at the moment a definition changed is an artefact and must not be read as a change in performance;
+- where a criterion cannot be applied at {{HOSPITAL_NAME}} — most often because a test the definition requires is not available — the limitation is recorded in the surveillance plan, and every rate produced under it is reported with that limitation stated alongside. It is not silently worked around;
+- the person applying the definitions is trained in them and is not the person who delivered the care being classified.
+
+Each case is classified by the Infection Control Nurse against the definition and reviewed by the Infection Control Officer, who signs off the classification. Where the two disagree, or where the treating clinician disputes the classification, the case is discussed and the outcome recorded with its reasoning. The classification stands or falls on the definition, but a disputed case that is never discussed damages the credibility of the whole system.
+
+An infection is attributed to {{HOSPITAL_NAME}} only where it was not present or incubating at the time of admission. The definition set in force states the day threshold and the window rules that decide this, and those rules are applied as published. Infections judged present on admission are recorded as such and reported separately, because they are part of the hospital's infection burden even though they are not part of its infection rate.""",
+
+"""6. Catheter-associated urinary tract infection — deciding a case
+
+A catheter-associated urinary tract infection is counted where a patient with an indwelling urinary catheter, in place for longer than the period the definition set specifies, or removed within the window the definition set allows, meets the definition's clinical and microbiological criteria together.
+
+Three points of application are recorded here because they are where counting most often goes wrong:
+
+- a positive urine culture on its own is not a case. Bacteriuria in a catheterised patient is common and usually asymptomatic, and counting every positive culture as an infection produces a rate that measures how often urine was sent, not how often infection occurred. The definition requires the clinical criteria as well, and both are recorded;
+- {{HOSPITAL_NAME}} does not screen catheterised patients for bacteriuria in order to find cases. Urine is cultured for a clinical reason. Sending routine surveillance cultures would inflate the numerator and change practice for the worse, since it leads to treatment of colonisation;
+- the catheter day count on which the case depends is the count at step 11, not a reconstruction.
+
+The Infection Control Nurse records for each case the patient identifier, the unit, the date of catheter insertion, the date of onset, the organism and its susceptibility, the criteria met, and whether the catheter was still in place at onset. Where the case arose in a patient whose catheter had been removed within the window the definition allows, that is recorded explicitly, since it is a case that a careless count would miss.
+
+Each confirmed case is notified to the treating unit and to the Infection Control Officer, and is included in the line list for the period. Where the case involves an organism on the list at step 22, it also enters the register at step 23. The preventive actions that should have applied to this patient are set out in the infection prevention policy and are not restated here; a confirmed case triggers a review of whether they were performed, and the result of that review is recorded with the case."""
+,
+"""7. Central line-associated bloodstream infection — deciding a case
+
+A central line-associated bloodstream infection is counted where a laboratory-confirmed bloodstream infection occurs in a patient who had a central line in place for longer than the period the definition set specifies, or removed within the window it allows, and the infection is not attributable to an infection at another site.
+
+The points of application that matter at {{HOSPITAL_NAME}}:
+
+- the definition is a surveillance definition, not a clinical judgement about where the organism came from. It does not require proof that the line was the source, and a case is not excluded because a clinician believes the line was not responsible. That belief is recorded and reviewed, but it does not remove the case from the count;
+- an organism recognised as a common commensal is counted only where the definition's additional criteria are met, including the requirement for more than one blood culture drawn on separate occasions. This is precisely the criterion that a single contaminated culture fails, and applying it properly is what keeps contamination out of the numerator;
+- blood culture technique determines the quality of this rate more than any other factor. Where the contamination rate is high, the bloodstream infection rate is unreliable in both directions, and {{HOSPITAL_NAME}} monitors blood culture contamination as a supporting indicator under step 16;
+- an infection secondary to another site — a urinary tract infection, a surgical site infection, a pneumonia — is attributed to that site under the definition's rules and is not counted here. The reasoning for each such exclusion is recorded, because this is the exclusion most open to being applied loosely.
+
+Recorded for each case: patient identifier, unit, line type and insertion site, insertion date, the dates and results of the blood cultures, the organism and susceptibility, the criteria met, and whether the line was still in place at onset.
+
+Peripheral intravenous cannulae are outside this definition. Bloodstream infection arising from a peripheral cannula is recorded and trended separately under step 15, because it is a real and under-recognised risk in hospitals whose central line use is low, and a policy that counts only central lines will not see it.""",
+
+"""8. Ventilator-associated events and ventilator-associated pneumonia — deciding a case
+
+Where {{HOSPITAL_NAME}} provides invasive mechanical ventilation, ventilator-associated events are counted using the tiered framework the definition set specifies: a ventilator-associated condition, defined by a sustained deterioration in oxygenation after a period of stability or improvement; an infection-related ventilator-associated complication, being that deterioration together with evidence of infection and a new antimicrobial started and continued; and possible ventilator-associated pneumonia within it, where the respiratory specimen criteria are also met.
+
+The reason {{HOSPITAL_NAME}} uses this framework rather than a clinical pneumonia definition is that it is built from objective, largely automatable data — ventilator settings and oxygenation, temperature, white cell count, antimicrobial start dates — and does not depend on the interpretation of a chest radiograph, which is the least reproducible element of the older definitions and the one most vulnerable to being read differently by different people.
+
+Points of application:
+
+- the first tier is not an infection. A ventilator-associated condition captures deterioration from any cause, including fluid overload, atelectasis and acute respiratory distress. It is counted and trended as the denominator of the tiers above it, and is not reported as an infection rate;
+- the ventilator day count comes from step 11 and is taken at a consistent time each day;
+- the framework applies to invasive ventilation through an endotracheal tube or tracheostomy. Non-invasive ventilation and high-flow nasal oxygen are outside it. Where {{HOSPITAL_NAME}} uses these, their associated respiratory infections are trended under step 15 rather than forced into a definition built for something else;
+- where {{HOSPITAL_NAME}} does not provide invasive ventilation at all, that is recorded in the surveillance plan as a signed and dated declaration by the head of the institution stating that the service is not provided, with the reason and the referral arrangement for patients who need it — [Hospital to define — state whether invasive ventilation is provided; if it is not, record the reason and where such patients are referred]. The declaration is tabled at the Infection Prevention and Control Committee and reviewed each year. This is the record that distinguishes a service the hospital does not offer from a surveillance activity it has failed to perform.
+
+Recorded for each event: patient identifier, unit, intubation date, the daily oxygenation parameters that establish the baseline and the deterioration, temperature and white cell count where the tier requires them, antimicrobial start and duration, respiratory specimen results, the tier reached, and the criteria met at each tier.""",
+
+"""9. Surgical site infection — deciding a case
+
+Surgical site infections are counted for the procedures named in the surveillance plan. {{HOSPITAL_NAME}} does not attempt to survey every operation it performs; it surveys the procedures selected at step 2 by volume and risk, and states which those are — [Hospital to define].
+
+A surgical site infection is classified by depth, using the definition set's three categories: superficial incisional, involving skin and subcutaneous tissue; deep incisional, involving fascia and muscle; and organ or space, involving any part of the anatomy opened or manipulated during the procedure other than the incision. The depth is recorded for every case, because the three behave differently, carry different consequences, and respond to different preventive measures, and a combined figure conceals all of that.
+
+The surveillance period after the procedure is defined by the definition set in force and differs by procedure — a shorter window for most operations and an extended window for defined procedures involving an implant. The window applying to each procedure under surveillance is stated in the surveillance plan; {{HOSPITAL_NAME}} does not apply a single window to everything, because doing so either misses late implant infections or holds open surveillance on procedures that do not need it — [Hospital to define — state the surveillance window for each procedure under surveillance, taken from the definition set in force].
+
+Points of application:
+
+- a stitch abscess alone, an infection of an episiotomy or a circumcision site, and an infected burn wound are treated as the definition set directs, which in most published sets excludes them from surgical site infection counting. The treatment of each is stated in the surveillance plan rather than decided case by case;
+- a wound that is red, or that a clinician has treated with an antimicrobial, is not a case unless the definition's criteria are met. Recording purulent drainage, the culture result where one was taken, and the clinician's deliberate opening of the wound is what allows the definition to be applied rather than guessed;
+- the wound class of the procedure — clean, clean-contaminated, contaminated or dirty — is recorded at the time of operation by the operating team, not assigned afterwards by the person doing surveillance. It is required for the risk stratification at step 14 and cannot be reconstructed reliably.
+
+Recorded for each case: patient identifier, procedure and date, surgeon, wound class, duration of operation, the risk factors the stratification requires, date of onset, depth, organism and susceptibility, criteria met, and whether the case was detected during admission, on readmission, or through the post-discharge follow-up at step 10.""",
+
+"""10. Post-discharge surveillance for surgical site infection
+
+Most surgical site infections at a hospital with a short length of stay appear after the patient has gone home. A hospital that counts only the infections it sees on its own wards will report a low rate and will believe it.
+
+{{HOSPITAL_NAME}} therefore operates a defined post-discharge detection method for every procedure under surveillance, and states which method is used for which procedure in the surveillance plan. The method is one or more of:
+
+- review at the scheduled post-operative outpatient visit, with the wound examined and the finding recorded on a standard form that is returned to the Infection Control Nurse whether or not an infection was found;
+- structured telephone contact with the patient or attendant at a defined point in the surveillance window, using a fixed set of questions;
+- systematic review of readmissions, emergency attendances and unscheduled outpatient visits for any patient within the surveillance window of a procedure under surveillance;
+- review of antimicrobial prescriptions issued to post-operative patients from the pharmacy of {{HOSPITAL_NAME}};
+- notification from the operating surgeon, which supplements the above and does not replace it.
+
+The method chosen for each procedure is [Hospital to define — state the post-discharge method for each procedure under surveillance and the point in the window at which it is applied].
+
+Whichever methods are used, the plan records the proportion of patients actually reached, because a post-discharge method that reaches a third of patients does not support a rate and the reader of that rate needs to know it. The denominator for reporting purposes remains all procedures performed; the proportion followed up is reported alongside, and where it falls below the level the plan sets, that is itself a finding requiring corrective action under step 36 — [Hospital to define].
+
+Cases detected after discharge are counted against the period of the operation, not the period of detection. Assigning them to the month they were found produces a rate that is impossible to interpret and that moves for reasons unconnected to the surgery.""",
+
+"""11. Device days — how the denominator is counted
+
+The device-day count is the foundation of every device-associated rate, and {{HOSPITAL_NAME}} treats it with the seriousness that implies.
+
+The rule is: on each calendar day, at the same time each day, a designated person in each unit under surveillance counts the number of patients in that unit who have the device in place at that moment, and records the number. The count is of patients, not devices — a patient with two central lines contributes one central line day. A patient counted on Monday and again on Tuesday contributes two device days.
+
+The requirements:
+
+- the count is taken at a fixed hour each day, stated in the surveillance plan and the same across all units — [Hospital to define — state the hour at which the daily device count is taken];
+- it is recorded on the day, on a form or in a system that shows the date, the unit, the count and the person who took it. It is not reconstructed at the end of the month, and it is not estimated from bed occupancy;
+- a patient with the device in place for any part of the day on which the count falls is counted if the device is present at the counting hour; the definition set's rule for the day of insertion and the day of removal is applied as published and is stated in the plan;
+- patient movement between units is handled by the rule that the patient is counted in the unit where they are located at the counting hour, so that a patient is counted once;
+- where a device is temporarily disconnected but remains in the patient, it is in place. Where it has been removed and a new one placed the same day, that is one device day, not two.
+
+Sampling of device days — counting on some days and extrapolating — is permitted only where the definition set in force provides a validated sampling method, only for units meeting whatever criteria that method requires, and only where the surveillance plan records the method and the conversion applied. {{HOSPITAL_NAME}} does not devise its own sampling scheme. Where sampling is used, it is stated wherever the resulting rate is reported.
+
+The daily count sheets are retained as the primary record. A monthly total with no daily sheets behind it cannot be validated and is treated as unverified data under step 16.""",
+
+"""12. Patient days, admissions and procedures — the other denominators
+
+Beyond device days, {{HOSPITAL_NAME}} maintains the denominators that the remaining calculations require:
+
+- patient days, counted by the same daily census method as device days and at the same hour, being the number of patients occupying a bed at that moment, summed across the days of the period. Patient days support the device utilisation ratio at step 13, the hand hygiene consumption indicator at step 21 and the trending of non-device infections at step 15;
+- admissions and discharges for the period, taken from the admission register;
+- procedures performed, counted from the theatre and procedure registers by procedure category, matching the categories used in the surveillance plan for surgical site infection. A procedure is counted once, on the date it was performed, regardless of how many surgeons were present or how many incisions were made, unless the definition set directs otherwise for a specific category;
+- for housekeeping surveillance at step 27, the number of surfaces or areas assessed, which is the denominator for the cleaning-outcome pass rate;
+- for hand hygiene at step 21, the number of observed opportunities, which is that measurement's denominator and is not interchangeable with any of the above.
+
+Denominators are collected by the unit that generates them — the ward for patient and device days, theatre for procedures — and are collated by the Infection Control Nurse. The Infection Control Nurse checks each period's denominators against an independent source before use: patient days against the bed occupancy or billing record, procedures against the theatre register and the billing record. Where the two disagree by more than the tolerance stated in the plan, the discrepancy is resolved before any rate is calculated, and the resolution is recorded — [Hospital to define].
+
+The reason for this care is arithmetic. A numerator error changes a rate by one case. A denominator error changes every rate in the period, in the same direction, invisibly.""",
+
+"""13. Calculating the rates
+
+{{HOSPITAL_NAME}} calculates and reports the following, using these formulas and no others:
+
+Device-associated infection rate, calculated separately for each device and each unit:
+
+  rate per 1,000 device days = (number of device-associated infections in the period divided by the number of device days in the period) multiplied by 1,000
+
+Device utilisation ratio, calculated separately for each device and each unit:
+
+  device utilisation ratio = number of device days in the period divided by the number of patient days in the period
+
+Surgical site infection rate, calculated separately for each procedure category:
+
+  rate per 100 procedures = (number of surgical site infections in the period divided by the number of procedures in that category in the period) multiplied by 100
+
+Hand hygiene compliance is calculated under step 21 and housekeeping pass rates under step 27, each against its own denominator.
+
+Two rules about presentation, both of which exist because their breach misleads:
+
+- the device utilisation ratio is reported alongside every device-associated rate, never separately. The two must be read together. A unit that reduces its infection rate while its utilisation ratio also falls has probably achieved that by using fewer devices, which is a genuine and desirable success but a different one from improving device care. A unit whose rate falls while utilisation rises has improved its practice. Reporting the rate alone makes these indistinguishable;
+- the numerator and denominator are printed next to every rate. A rate of 8 per 1,000 device days derived from two infections in 250 device days is not a finding, and a reader given only the rate cannot know that. Where the denominator in a period falls below the level the surveillance plan sets as the minimum for a stable rate, the numbers are reported but the rate is suppressed and the reason stated — [Hospital to define — state the minimum denominator below which a rate is not reported].
+
+Rates are calculated for the period stated in the plan, and are also maintained cumulatively across the year, because a small hospital's monthly figures are too unstable to steer by and the cumulative figure is what shows the direction.
+
+A standardised infection ratio — observed infections divided by the number predicted by an external risk model — is calculated only where {{HOSPITAL_NAME}} participates in a network that supplies a valid predicted count for its case mix. It is not computed from a national average applied by hand, which produces a number with the appearance of rigour and none of the substance.""",
+
+"""14. Risk stratification for surgical site infection
+
+A crude surgical site infection rate compares a hospital with itself only if its case mix does not change, and case mix always changes. {{HOSPITAL_NAME}} therefore stratifies its surgical site infection rates using the risk index the definition set in force specifies, built from the factors that set records at the time of operation:
+
+- the wound classification of the procedure, recorded by the operating team at the end of the operation;
+- the patient's pre-operative physical status score, recorded by the anaesthetist;
+- the duration of the operation, measured against the cut-off point published for that procedure category.
+
+Each factor contributes to a risk index, and rates are reported by index category as well as in total. Where the number of procedures in a category is too small to support a stratified rate, the counts are reported without the rate, as step 13 requires.
+
+The record for each procedure carries these factors whether or not an infection occurred, since they are the denominator's risk profile and cannot be collected only for cases. Collecting them only for infected patients is a common and serious error: it makes stratification impossible and produces a comparison of infected patients with nothing.
+
+Where {{HOSPITAL_NAME}} performs too few procedures in a category for stratification to be meaningful, it says so and reports the crude rate with the case mix described in words alongside. An unstratified rate honestly labelled is more useful than a stratified one built on numbers too small to bear it.
+
+The risk factors specific to the patient that the index does not capture — diabetes and glycaemic control, obesity, smoking, immunosuppression, pre-operative stay — are recorded where the surveillance plan requires them, and are used in the analysis of any cluster under step 33 rather than in the routine rate.""",
+
+"""15. Non-device infections and other infection risks within scope
+
+The four device- and procedure-associated infections are not the whole of healthcare associated infection, and a surveillance system limited to them will miss real harm. {{HOSPITAL_NAME}} therefore also captures and trends, using the definition set in force and against the patient-day denominator:
+
+- non-ventilator hospital-acquired pneumonia, which in most general hospitals is more common than the ventilator-associated form and is far less often counted;
+- bloodstream infection associated with peripheral intravenous cannulae, and phlebitis rates from the cannula inspection records;
+- gastrointestinal infection acquired in hospital, including antibiotic-associated diarrhoea and, where the laboratory can identify it, Clostridioides difficile infection;
+- infection following an invasive procedure that is not counted as surgery under step 9 — dialysis access, endoscopy, interventional radiology, or any other invasive procedure {{HOSPITAL_NAME}} performs;
+- infection in the newborn and in the labour room where {{HOSPITAL_NAME}} provides obstetric services, including neonatal sepsis and puerperal sepsis;
+- infection acquired by staff in the course of work, drawn from the occupational health records rather than duplicated here, and reported in aggregate;
+- any infection risk particular to the services, building or population of {{HOSPITAL_NAME}} — [Hospital to define].
+
+These are trended rather than benchmarked. Published external comparators for most of them are scarce or not comparable, and the useful question is whether the count at {{HOSPITAL_NAME}} is moving, not how it stands against a figure derived from a different case mix.
+
+Where a trend in any of these rises against its own history, it is investigated under step 17 exactly as a device-associated rate would be, and where the rise suggests transmission it enters the outbreak route at step 31.
+
+Which of the above are under active surveillance in the current period, as against being reviewed only when a signal appears, is stated in the surveillance plan and decided at the annual risk assessment. {{HOSPITAL_NAME}} does not claim to survey all of them continuously if it does not.""",
+
+"""16. Data quality and validation
+
+Surveillance data that has not been checked is an opinion. {{HOSPITAL_NAME}} validates its own surveillance and records the result.
+
+Validation of the numerator. At an interval stated in the surveillance plan, a second trained person independently reviews a sample of records and applies the case definitions without sight of the original classification. The two classifications are compared and the level of agreement recorded. Disagreements are examined individually to establish whether the cause is an ambiguity in applying the definition — which is corrected by training or by a written local interpretation note that narrows nothing — or an error, which is corrected in the data. The sample size and interval are [Hospital to define].
+
+Validation of completeness. Because active case-finding still misses cases, {{HOSPITAL_NAME}} periodically cross-checks its surveillance against an independent source that was not used in case-finding: coded discharge diagnoses, pharmacy records of antimicrobial courses, laboratory records of positive cultures not previously reviewed, or readmission records. Cases found by the cross-check but absent from surveillance are added, and the reason each was missed is recorded and acted on. A cross-check that never finds anything is more likely to be a cross-check that is not working than evidence of perfect case-finding.
+
+Validation of the denominator. The Infection Control Nurse checks daily device-day and patient-day sheets for missing days, implausible jumps, and totals that do not reconcile with the independent sources at step 12. A missing day is recorded as missing and is not filled in with an assumed figure.
+
+Supporting data quality indicators, tracked and reported with the surveillance data:
+
+- the blood culture contamination rate, which conditions the reliability of the bloodstream infection rate;
+- the proportion of infection episodes with a culture taken before antimicrobials were started, which conditions the reliability of the organism and resistance data;
+- the proportion of surgical procedures with wound class and duration recorded, which conditions the stratification at step 14;
+- the proportion of post-discharge follow-up actually achieved, from step 10;
+- the completeness of the daily device count sheets, expressed as days recorded against days expected.
+
+The validation results are reported to the Infection Prevention and Control Committee with the surveillance data, not separately and not on request. A rate presented without its data quality context invites more confidence than it has earned.""",
+
+"""17. Analysis — trends, thresholds and what a movement means
+
+Data becomes information at this step, and the whole of the policy exists to reach it.
+
+At the frequency stated in the surveillance plan, the Infection Control Nurse prepares and the Infection Control Officer interprets:
+
+- the rate for the period with its numerator and denominator, by unit and by device or procedure;
+- the same rate plotted over time, as a run chart or control chart covering enough periods to show a trend rather than a fluctuation. {{HOSPITAL_NAME}} plots at least the trailing twelve periods where they exist;
+- the cumulative rate for the year to date;
+- the device utilisation ratio alongside each device rate;
+- the organism profile and its resistance pattern for the period, and how it has changed;
+- the bundle compliance figures obtained from the infection prevention policy, plotted against the infection rate, so that the two can be read together;
+- the data quality indicators from step 16.
+
+Interpretation is written down. A chart circulated without a stated interpretation transfers the work of understanding it to a reader less equipped to do so, and in practice means it is not done.
+
+Thresholds are set in advance. For each measure the surveillance plan states what will trigger investigation, defined before the data is seen so that a threshold cannot be adjusted to avoid triggering. The triggers used at {{HOSPITAL_NAME}} are:
+
+- a rate exceeding the level the plan sets for that measure — [Hospital to define];
+- a run of consecutive periods moving in the same direction, or points beyond the control limits where a control chart is used;
+- any case of an infection type the plan designates as warranting review of every occurrence;
+- the appearance of an organism on the alert list at step 24, at any number;
+- two or more cases of the same organism, with a similar susceptibility pattern, in the same unit within a defined period — which is the signal for the outbreak route at step 31 — [Hospital to define].
+
+What a movement does not mean. The Infection Control Officer explicitly considers, and records having considered, whether an apparent change is an artefact before treating it as real: a change in the definition set, a change in case-finding intensity or in the person doing it, a change in testing or culturing practice, a change in denominator collection, a change in case mix, or simple small-number variation. A rate built on a small denominator will cross most thresholds eventually without anything having changed, and treating that as a finding wastes the credibility the system needs for the occasion when the change is real.""",
+
+"""18. Benchmarking — internal and external
+
+{{HOSPITAL_NAME}} compares its rates in two directions, and treats the two comparisons very differently.
+
+Internal comparison is the primary one. The rate for each unit is compared against that unit's own history, and units within {{HOSPITAL_NAME}} are compared with each other where their patient populations are genuinely similar. This comparison is valid because the definitions, the case-finding, the denominators and the people are the same on both sides of it. Where a unit differs from its own past, the question is what changed here, and the answer is usually findable.
+
+External comparison is secondary and is handled with stated caution. {{HOSPITAL_NAME}} compares its rates against published national or international rates only where:
+
+- the same case definition set and version was used to produce both;
+- the comparator's denominator was collected on the same basis;
+- the comparator's case mix and unit type are stated and are reasonably similar to the population at {{HOSPITAL_NAME}};
+- the comparator's period and its number of observations are stated.
+
+Where any of these is unknown, the comparison is reported with that gap named. The source, edition and period of every external benchmark used is recorded with the comparison; a benchmark quoted without its source cannot be checked and will eventually be quoted wrongly.
+
+The comparator sources used by {{HOSPITAL_NAME}} are [Hospital to define — name the national or international surveillance reports used as comparators, with the edition and period].
+
+Two cautions are recorded in the analysis whenever an external comparison is made. First, a hospital that looks better than a published benchmark should examine its case-finding before accepting the result, because incomplete ascertainment produces exactly this appearance. Second, a favourable external comparison is not a reason to stop improving; benchmarks describe what is usual, not what is achievable.
+
+Where {{HOSPITAL_NAME}} participates in a surveillance network that supplies risk-adjusted comparison, that comparison is used in preference to unadjusted published rates, and the network and the period are named.""",
+
+"""19. Hand hygiene compliance — what is monitored
+
+Hand hygiene compliance is a subject of surveillance at {{HOSPITAL_NAME}} in its own right, planned, sampled, calculated and reported with the same discipline as an infection rate. It is not an informal ward check.
+
+The practice being measured — the five moments at which hands are cleaned, the choice between alcohol-based handrub and soap and water, the technique and its duration, and the facilities that make it possible — is set out in the infection prevention and control practices policy of {{HOSPITAL_NAME}} and is not restated here. This policy governs how compliance with it is measured.
+
+What is counted is the opportunity, not the person and not the patient. An opportunity arises whenever one or more of the five moments occurs. Where two moments coincide in a single transition, they constitute one opportunity requiring one hand hygiene action. An opportunity is scored as met where the required action was performed by the required method, and as missed where it was not. Glove use in place of hand hygiene is scored as missed, because it is.
+
+The surveillance plan states which cadres and which areas are covered and at what frequency, and covers at a minimum all clinical areas and all four of medical, nursing, technical and support staff. Reporting only a hospital-wide figure is expressly not sufficient: a single number conceals the cadre and the area where the problem sits, and those are the only two facts that make the measurement actionable.
+
+Compliance is also broken down by moment. The moments before touching a patient and before an aseptic procedure are consistently the weakest in published observation studies, and they are the two that matter most for transmission to the patient — a hospital reporting a good overall figure may be performing well only on the moments that protect the staff member. {{HOSPITAL_NAME}} therefore reports by moment as well as by cadre and area.""",
+
+"""20. Hand hygiene compliance — observers, method and sample
+
+Direct observation is the reference method at {{HOSPITAL_NAME}} and is the method on which the reported figure is based.
+
+Observers. Observation is performed by a person trained in the observation method and validated before observing independently. Validation means that the candidate observes the same sequence of opportunities as an already-validated observer and their scoring is compared; the candidate observes independently only once agreement reaches the level the plan sets. Validation is repeated at an interval stated in the plan, because observers drift. The register of validated observers, with validation and revalidation dates, is maintained by the Infection Control Nurse — [Hospital to define].
+
+Independence. An observer does not audit an area in which they work or for which they are managerially responsible. Where the size of {{HOSPITAL_NAME}} makes complete independence impractical, the plan records the arrangement adopted and the safeguard applied, and the constraint is stated wherever the figures are reported — [Hospital to define].
+
+Method. Observation is open: staff are told that hand hygiene is being observed, which is the ethical position and the one the established methodology assumes. Sessions are of a defined and limited length so that the observer records accurately, and are spread across shifts, days of the week and times of day rather than concentrated in the quiet hours of a weekday morning, which produces a flattering and useless figure. The observer records, for each opportunity, the cadre, the moment, whether an action was performed, and by which method. The observer does not intervene during the session except where a patient is at immediate risk, in which case the observation is stopped and the reason recorded.
+
+Sample. The plan states the minimum number of opportunities required per area and per cadre before a compliance figure is calculated, and the frequency of observation. A figure derived from fewer opportunities than the minimum is reported as a raw count with the rate suppressed, exactly as step 13 requires of infection rates — [Hospital to define].
+
+The observed figure is affected by the presence of the observer, and {{HOSPITAL_NAME}} states this rather than pretending otherwise. It is the reason the indirect measure at step 21 is tracked alongside, and the reason the reported number is treated as an indicator of direction rather than as an exact truth.""",
+
+"""21. Hand hygiene compliance — calculation, indirect measures and reporting
+
+Calculation:
+
+  compliance (%) = (number of hand hygiene actions performed divided by the number of opportunities observed) multiplied by 100
+
+The figure is calculated separately by clinical area, by professional cadre and by moment, and reported at each of those levels together with the number of opportunities on which each is based.
+
+Indirect measures, tracked and reported alongside the observed figure and never in place of it:
+
+- consumption of alcohol-based handrub, expressed as volume per 1,000 patient days, taken from stores issue data;
+- consumption of soap on the same basis;
+- availability, taken from the point-of-care checks the practices policy requires — the proportion of dispensers found stocked and functioning at inspection. This one is important, because a compliance figure has no meaning in an area where the handrub was empty, and a low compliance figure whose cause is empty dispensers requires a completely different corrective action from one whose cause is behaviour.
+
+Consumption data is a poor measure of compliance on its own — it cannot distinguish many uses by a few people from few uses by many, and it is affected by spillage, by visitor use and by stock movements — but it is not subject to the observer effect, and a divergence between rising observed compliance and flat consumption is a signal worth investigating.
+
+Reporting and action. The result for each area is fed back to that area within the time the plan sets, in a form its staff can read, and is displayed where they work. It is tabled at the Infection Prevention and Control Committee with the trend. Where an area or cadre falls below the target {{HOSPITAL_NAME}} has adopted, the Committee records a named corrective action with an owner and a due date, and the area is re-observed to establish whether the action worked. The target and the feedback time are [Hospital to define].
+
+The compliance trend is read against the infection rates at step 17. The relationship between the two is real but is neither immediate nor proportionate, and {{HOSPITAL_NAME}} does not present a fall in infection rates as proof that a hand hygiene intervention worked, nor a stable infection rate as proof that it did not.""",
+
+"""22. Multi-drug-resistant organisms — defining the list
+
+{{HOSPITAL_NAME}} maintains a written list of the organisms and resistance phenotypes it treats as multi-drug-resistant for surveillance purposes. The list is approved by the Infection Prevention and Control Committee, is reviewed at least annually, and is held jointly by the Infection Control Team and the laboratory.
+
+The list is built on published resistance definitions rather than on local impression. The recognised framework classifies an isolate as multi-drug-resistant where it is non-susceptible to at least one agent in three or more antimicrobial categories, as extensively drug-resistant where it is non-susceptible to at least one agent in all but two or fewer categories, and as pandrug-resistant where it is non-susceptible to all agents in all categories — the categories being those defined for that organism in the published framework. The framework and version {{HOSPITAL_NAME}} applies is named in the surveillance plan.
+
+Alongside that general framework, the list names the specific phenotypes {{HOSPITAL_NAME}} tracks by name, because these are the ones that drive isolation decisions and empirical therapy. The list includes at a minimum, where the laboratory of {{HOSPITAL_NAME}} can identify them:
+
+- methicillin-resistant Staphylococcus aureus;
+- vancomycin-resistant enterococci, and any vancomycin-intermediate or vancomycin-resistant Staphylococcus aureus;
+- carbapenem-resistant Enterobacterales, Acinetobacter and Pseudomonas;
+- extended-spectrum beta-lactamase-producing Enterobacterales;
+- Clostridioides difficile, where identification is available;
+- any organism resistant to the agents on which the empirical therapy of {{HOSPITAL_NAME}} depends, since resistance to those has immediate consequences for every patient started on treatment;
+- any additional organism the Committee adds on local grounds — [Hospital to define].
+
+Susceptibility is reported by the laboratory against a stated and current interpretive standard, and the standard and its version are named — [Hospital to define — name the antimicrobial susceptibility testing interpretive standard and version used by the laboratory]. Two laboratories using different standards, or the same laboratory using different versions across a period, will report different resistance rates for identical isolates, and a resistance trend that spans a change of standard is annotated at that point.
+
+Where the laboratory of {{HOSPITAL_NAME}} is outsourced, these requirements are written into the contract, and the contract states the laboratory's obligation to report against the agreed standard and to raise the alerts at step 23.""",
+
+"""23. Multi-drug-resistant organisms — the capture mechanism
+
+Having a list is not a mechanism. {{HOSPITAL_NAME}} operates a defined route by which an isolate on the list at step 22 reaches the people who must act on it, within a time that allows them to act.
+
+The mechanism:
+
+- the laboratory identifies any isolate matching the list at the point the susceptibility result is finalised, and flags it as an alert organism on the report itself so that the treating team sees it without having to recognise the pattern;
+- the laboratory communicates the alert to the Infection Control Team and to the treating unit by a direct method — not by the routine report alone — within the time the surveillance plan sets, and records that it did so with the time and the recipient. The time standard and the method are [Hospital to define];
+- where the result is finalised outside working hours, the alert follows the out-of-hours route the plan states, since an alert that waits for the next working morning has lost the day in which isolation would have mattered — [Hospital to define];
+- the Infection Control Nurse enters the isolate in the multi-drug-resistant organism register on the day the alert is received;
+- the patient's record is flagged, so that the organism is known on any readmission and on any transfer. The criteria and the authority for removing a flag are stated, because a flag that is never removed becomes noise and is then ignored — [Hospital to define];
+- the Infection Control Officer decides whether transmission-based precautions are required and, if so, which, applying the practices policy. That decision and its date are recorded against the register entry.
+
+The register records, for each isolate: patient identifier, unit, specimen site and type, date of specimen collection, organism, the resistance phenotype, the susceptibility result, whether the isolate was judged present on admission or hospital-onset by the definition set's day rules, precautions instituted and their date, and the outcome.
+
+Repeat isolates from the same patient are recorded but are counted once for incidence purposes within the period the plan specifies, so that a long-stay patient repeatedly cultured does not appear as an epidemic on his own.
+
+Where the same organism with a similar susceptibility pattern appears in more than one patient in the same unit within the period at step 17, the Infection Control Officer treats it as a possible transmission event and enters the outbreak route at step 31, whether or not the number reaches any threshold. Genuinely unrelated acquisition is a reasonable finding of an investigation; it is not a safe assumption to start from.""",
+
+"""24. Highly virulent and epidemiologically significant infections — immediate alert
+
+Some organisms matter at a count of one. For these, waiting for a rate, a trend or a threshold is the wrong response, and {{HOSPITAL_NAME}} operates a separate immediate-alert route.
+
+{{HOSPITAL_NAME}} maintains an alert list of organisms and clinical syndromes on which a single occurrence, or a single credible suspicion, requires immediate notification and immediate action. The list is approved by the Infection Prevention and Control Committee and is displayed in the laboratory and in every clinical area. It includes:
+
+- any organism or syndrome on the notifiable disease list applying to {{HOSPITAL_NAME}}, which is dealt with under the statutory notification route in the infection prevention and control programme policy;
+- pathogens of high transmissibility or high case fatality — including viral haemorrhagic fevers, diphtheria, meningococcal disease, cholera, and any pathogen designated by the competent health authority during an emergency;
+- suspected or confirmed pulmonary or laryngeal tuberculosis, and any suspected multi-drug-resistant tuberculosis;
+- measles, chickenpox, mumps, rubella and pertussis, which are of consequence chiefly because of who else in the building is susceptible;
+- any resistance phenotype new to {{HOSPITAL_NAME}}, including a first isolation of an organism resistant to an agent of last resort;
+- any infection in a member of staff that could be transmitted to patients, handled under the occupational health provisions and reported here in aggregate only;
+- any suspected infection arising from a contaminated product, device or procedure, or any cluster suggesting a common source;
+- any additional organism or syndrome the Committee adds — [Hospital to define].
+
+The alert route is the same as at step 23 but with no permissible delay: the person who identifies or suspects the case notifies the Infection Control Officer immediately, by telephone or in person, at any hour. Any member of staff may raise the alert directly. It is not routed through a line manager, and it is not held until the next working day.
+
+On receiving an alert, the Infection Control Officer determines the immediate precautions and patient placement, identifies whether other patients or staff have been exposed, and decides whether the outbreak route at step 32 is to be entered. Statutory notification, where the disease requires it, follows the route in the infection prevention and control programme policy and is not delayed pending laboratory confirmation where the clinical suspicion alone requires reporting.
+
+Every alert raised is logged with the date, time, raiser, recipient and the action taken, including alerts that proved unfounded. The log is reviewed by the Committee, since a falling number of alerts is more likely to indicate that people have stopped raising them than that the hospital has become safer.""",
+
+"""25. Cumulative antibiogram and resistance trend reporting
+
+{{HOSPITAL_NAME}} produces a cumulative antibiogram — a summary of the proportion of isolates of each organism susceptible to each agent tested — at the interval stated in the surveillance plan and at least annually.
+
+It is produced to the recognised methodological rules, because an antibiogram built carelessly will misdirect empirical therapy for a year:
+
+- only the first isolate of a given organism from a given patient in the period is included, regardless of specimen site, so that one heavily sampled patient does not distort the figures;
+- an organism is reported only where the number of isolates in the period reaches the minimum the standard specifies. Below that number the count is shown and the percentage is not, because a percentage derived from a handful of isolates will be read as though it were reliable;
+- the period covered, the number of isolates for each organism, and the interpretive standard and version are printed on the antibiogram itself;
+- surveillance-only isolates from screening swabs are excluded from the therapeutic antibiogram and reported separately, since including them shifts the picture away from the organisms actually causing disease;
+- where volumes permit, separate antibiograms are produced for critical care and for the general wards, and for hospital-onset against community-onset isolates, since empirical therapy decisions differ between them.
+
+The antibiogram is issued to every prescriber at {{HOSPITAL_NAME}}, to the antimicrobial stewardship arrangement, and to the Infection Prevention and Control Committee. The selection of agents for empirical therapy on the basis of it belongs to the antimicrobial usage policy, not to this one; this policy is responsible for producing it accurately and getting it into prescribers' hands.
+
+Alongside the antibiogram, the Infection Control Nurse reports the resistance trend: the incidence of each organism on the list at step 22 per 1,000 patient days, plotted over time, split between isolates judged present on admission and those judged hospital-onset. That split is the informative one. A rise in resistant organisms present on admission reflects what is happening in the community and calls for a change in empirical therapy and admission screening. A rise in hospital-onset isolates reflects transmission inside {{HOSPITAL_NAME}} and calls for the measures in this policy. Reporting the two together as a single figure conceals which of the two is happening.""",
+
+"""26. Housekeeping effectiveness — what is measured
+
+The support services policy of {{HOSPITAL_NAME}} governs housekeeping: which areas are cleaned, at what frequency, with which agent at which dilution, by whom, and the supervisor's confirmation that the work was done. This step and the three that follow govern the separate question of whether it worked.
+
+The distinction is the whole point of this section. A completed cleaning checklist records that a person attended and signed. It does not record whether the surfaces a patient's hands and a nurse's gloves will touch were actually cleaned. Published assessments consistently find that a substantial proportion of high-touch surfaces are missed even where cleaning was performed and documented, and that visual inspection does not detect this — a surface can look clean and carry a substantial bioburden, and a surface can look soiled and be microbiologically unremarkable. Visual assessment therefore measures appearance, which matters to patients and to the reputation of {{HOSPITAL_NAME}} but is not the measurement this step requires.
+
+{{HOSPITAL_NAME}} therefore measures housekeeping effectiveness on three axes, and reports all three:
+
+- thoroughness — was each surface that should have been cleaned actually cleaned. Measured objectively at step 27;
+- appearance and process compliance — is the area visibly clean and was the documented procedure followed, including correct dilution, correct contact time, correct colour-coded equipment and correct sequence. Measured by structured audit at step 27;
+- microbiological outcome, where the risk of the area requires it. Measured at step 28, on defined triggers rather than routinely.
+
+The high-touch surfaces on which the thoroughness measurement is based are defined in advance for each area type, so that the same surfaces are assessed each time and the result is comparable across periods. For a general inpatient area they comprise at a minimum the bed rails, the bed surface and controls, the bedside table and locker, the call button and any patient handset, the intravenous pole and pump controls, the chair the attendant uses, the door handles on both faces, the light switches, the tap and any sink surround, and the toilet flush handle and grab rails. For critical care, procedure rooms, theatre and dialysis, the list is extended to the equipment surfaces particular to the area — [Hospital to define — list the high-touch surfaces assessed in each area type].""",
+
+"""27. Housekeeping effectiveness — monitoring methods
+
+Thoroughness monitoring, objective. {{HOSPITAL_NAME}} assesses cleaning thoroughness by an objective method that does not rely on the eye. The method is one of:
+
+- a fluorescent marking gel, applied unobtrusively to defined high-touch surfaces before a scheduled clean and read under ultraviolet light afterwards. A mark removed indicates the surface was wiped; a mark remaining indicates it was not. This method measures the physical action of wiping and is inexpensive, and it is the method most readily sustained in a small hospital;
+- adenosine triphosphate bioluminescence, which swabs the surface and reports organic residue in relative light units against a pass threshold. It gives a numeric result within minutes but the thresholds are instrument-specific and are not comparable between systems, so the threshold in use is stated wherever the result is reported;
+- a combination of the two.
+
+The method in use, the surfaces marked or swabbed, the number assessed per round, the frequency, and the pass threshold where a numeric method is used are stated in the surveillance plan — [Hospital to define — state the objective method used, the sampling frequency, the number of surfaces per round, and the pass threshold if numeric].
+
+Two rules govern it. The marking or swabbing is done without the knowledge of the person who will clean, because a surface known to be under assessment will be cleaned and the measurement will then describe nothing. And the result is used to improve the cleaning process — by retraining, by revising the sequence, by reallocating time, or by changing the equipment — not to identify and penalise an individual cleaner, whose cooperation the system depends on.
+
+Process and appearance audit, structured. At the frequency the plan states, a structured audit is performed against a written checklist covering visible cleanliness by zone, correct disinfectant and dilution, contact time observed, correct colour-coded equipment in use and correctly stored, cleaning sequence from cleaner to dirtier areas and from higher to lower surfaces, cloth and mop management including the change of cloth between patient zones, waste segregation at the point of cleaning, and the condition and storage of equipment.
+
+The auditor is independent of the housekeeping service. Where housekeeping is outsourced, the audit is conducted by {{HOSPITAL_NAME}} and not by the contractor, whatever the contract's own quality arrangements provide; the contractor's self-audit is received in addition and is not accepted in substitution.
+
+Calculation. The thoroughness result is expressed as a pass rate:
+
+  thoroughness (%) = (number of surfaces assessed as cleaned divided by the number of surfaces assessed) multiplied by 100
+
+calculated by area and by surface type. The breakdown by surface type is what makes it actionable: a consistent failure on one class of surface across many areas indicates a gap in the procedure or the training, while scattered failures in one area indicate a problem with that area's staffing or time.""",
+
+"""28. Environmental and water sampling — when it is done and when it is not
+
+Microbiological sampling of surfaces, air and water has a place in surveillance, and it is a narrow one. {{HOSPITAL_NAME}} does not perform routine environmental culturing across the hospital, because the results have no established relationship to patient infection in general areas, there are no agreed action thresholds for most surfaces, and the practice consumes resource while generating findings no one can act on. A plate with a low colony count is not evidence that housekeeping is working, and treating it as such is the error this step exists to prevent.
+
+Sampling is performed at {{HOSPITAL_NAME}} in these situations, and the trigger is recorded with every sample taken:
+
+- where an outbreak investigation under step 33 generates a specific hypothesis that the environment, the water or the air is the source. The sampling is then directed at that hypothesis, with the organism sought named in advance and the laboratory told what to look for. Untargeted sampling during an outbreak produces incidental organisms that mislead the investigation;
+- where the surveillance plan requires periodic monitoring of a defined critical area or system on engineering or regulatory grounds — operating theatre air, ventilation validation, dialysis water and dialysate, and the potable water supply. These requirements, their parameters and their frequencies belong to the support services policy and the facility policies of {{HOSPITAL_NAME}}, and this policy receives the results and trends them rather than setting the parameters;
+- after construction, renovation or a repair affecting a critical area, as the support services policy requires before reoccupation;
+- where a product, device or process is suspected of contamination;
+- where the competent health authority directs it.
+
+For every sample: the reason, the exact location, the date and time, the method, the organism sought and the laboratory used are recorded, together with the action threshold being applied and its source. A result without a pre-stated threshold cannot be acted on consistently.
+
+Where a result exceeds its threshold, the Infection Control Officer records the interpretation, the probable cause, a corrective action with a named owner and a date, and a repeat sample confirming the correction. Where the area is in active clinical use, the Infection Control Officer decides whether use continues in the meantime and records the decision and its basis.
+
+Hand and glove cultures of staff, and routine culturing of staff generally, are not performed as surveillance. They are done only as part of a specific outbreak investigation where the hypothesis requires them, with the consent and the involvement of the individuals concerned, and with the result handled under the confidentiality provisions at step 38.""",
+
+"""29. Housekeeping surveillance — reporting and action
+
+The results of steps 27 and 28 are reported on the same discipline as every other measure in this policy.
+
+Immediate feedback. The result of each round is given to the housekeeping supervisor for the area at the time of the round, surface by surface, so that a missed surface can be cleaned that day. This is a correction, not a measurement, and it is recorded separately from the aggregate figures.
+
+Periodic reporting. At the interval the surveillance plan states, the Infection Control Nurse reports the thoroughness pass rate by area and by surface type, the process audit results, the trend of both over time, and any environmental sampling results with their triggers and outcomes. The report goes to the housekeeping supervisor, to the head of the department responsible for housekeeping, and to the Infection Prevention and Control Committee.
+
+Action. Where the pass rate for an area or a surface type falls below the level the plan sets, the Committee records a corrective action with a named owner and a due date, and the area is re-assessed to establish whether the action worked. The corrective action addresses the cause identified, and the plausible causes are distinct and require distinct responses: insufficient time allocated per bed or per area; too few staff for the workload; staff not trained on the surfaces or the sequence; equipment or consumables unavailable, which is a resourcing failure and not a housekeeping one; unclear allocation of responsibility for equipment surfaces, which are frequently cleaned by neither housekeeping nor nursing because each believes the other does it; or a procedure that cannot be performed as written in the time available. The threshold triggering action is [Hospital to define].
+
+Where housekeeping is outsourced, the results are supplied to the contractor formally, are reviewed at the contract review meeting, and are recorded in the contract performance file. The contract of {{HOSPITAL_NAME}} provides for the contractor to act on them within a stated period, and the renewal decision takes account of the record. The contract manager is responsible for this and the Infection Control Team is not, though it supplies the data.
+
+The relationship between housekeeping effectiveness and infection rates is reported but not overstated. Environmental transmission is one route among several, and a hospital whose cleaning improves while its infection rates do not has not necessarily wasted the effort. The measurement is reported on its own merits.""",
+
+"""30. Outbreak — definition and the thresholds that trigger one
+
+An outbreak within {{HOSPITAL_NAME}} is any occurrence of infection above the expected level for that organism, area and period, or the appearance of an organism of particular significance even as a single case — including a multidrug-resistant organism new to the hospital.
+
+That definition is worded identically to the one in the infection prevention and control programme policy of {{HOSPITAL_NAME}}, deliberately and not by coincidence. Two policies of the same hospital that define an outbreak differently will, sooner or later, disagree about whether one is happening. If either document is revised, the other is revised in the same pass.
+
+Because "above the expected level" is a judgement, {{HOSPITAL_NAME}} states in advance the triggers that require the outbreak route to be entered, so that the decision does not depend on how the week is going. The triggers are:
+
+- two or more cases of infection with the same organism and a similar susceptibility pattern, in the same unit, within the period stated in the surveillance plan, where a link between them is plausible — [Hospital to define — state the number of cases and the time period that constitute a trigger, and any variation by organism];
+- a single case of any organism or syndrome on the alert list at step 24;
+- a single case of an organism not previously isolated at {{HOSPITAL_NAME}}, or a resistance phenotype not previously seen here;
+- any infection rate crossing the threshold set for it at step 17, where the cases cluster in place or time;
+- two or more cases of infection following the same procedure, performed by the same team, or associated with the same device, product or batch;
+- any cluster of infection among staff of {{HOSPITAL_NAME}}, or among staff and patients together;
+- a cluster of clinically similar illness for which no organism has yet been identified — an outbreak is not required to have a name before it is investigated, and waiting for one is how the first week is lost;
+- any suspicion raised under step 31 that the Infection Control Officer judges warrants investigation, whether or not it meets any of the above.
+
+Entering the outbreak route is not the same as declaring an outbreak. The route begins with investigation; a declaration follows only if the investigation supports it. This distinction is stated because fear of the word "outbreak" is a common reason investigations start late, and nothing in this policy requires anyone to use the word in order to start looking.
+
+Authority. The Infection Control Officer may enter the outbreak route and initiate the immediate measures at step 32 on their own authority, without waiting for a committee, a manager or the head of the institution. The deputy named in the surveillance plan holds the same authority in the Infection Control Officer's absence, so that the authority exists at every hour of every day — [Hospital to define — name the Infection Control Officer and the deputy, with 24-hour contact details].""",
+
+"""31. Outbreak — detection and the duty to report a suspicion
+
+An outbreak is detected in one of three ways at {{HOSPITAL_NAME}}, and all three are kept open because each finds cases the others miss.
+
+By the surveillance system. The analysis at step 17, the multi-drug-resistant organism register at step 23 and the alert route at step 24 are designed to surface clustering, and the Infection Control Nurse reviews the register and the line lists specifically for it on every working day — same organism, same unit, same period; same procedure or same operator; same device or same batch.
+
+By the laboratory. The laboratory of {{HOSPITAL_NAME}}, or the outsourced laboratory, is required by this policy and by its contract to notify the Infection Control Team where it observes an unusual number of isolates of the same organism from the same area, an unusual susceptibility pattern, or any organism on the alert list. The laboratory frequently sees the pattern first because it sees every unit at once, and this route is the one most often left unbuilt.
+
+By clinical staff. Any member of staff of {{HOSPITAL_NAME}} — of any grade, clinical or non-clinical, employed or contracted — who suspects that more infections are occurring than usual, or that two patients' infections are connected, reports that suspicion to the Infection Control Officer.
+
+The duty to report a suspicion is stated here in full because it is the part of this policy most likely to be tested:
+
+- the cluster is reported to the Infection Control Officer on the same day it is suspected, not at the end of a shift or a week. This is the same rule, in the same words, as the infection prevention and control programme policy of {{HOSPITAL_NAME}};
+- it is made directly to the Infection Control Officer or the named deputy. It does not go through a line manager, and no permission is required to make it;
+- it is made on suspicion. The person reporting is not expected to have evidence, a diagnosis, an organism, or a theory;
+- the contact route and the number are displayed in every clinical area, in the laboratory, and in the induction pack of every worker including contracted staff and students;
+- no person is criticised, penalised or disadvantaged for raising a suspicion that proves unfounded, and this is stated to staff in training rather than merely written here. The Infection Control Officer acknowledges every report to the person who made it, including those not taken further, and records the acknowledgement.
+
+Every suspicion received is logged with the date, time, source and the action taken, whether or not it was investigated. The log is reviewed by the Infection Prevention and Control Committee.""",
+
+"""32. Outbreak — the immediate response
+
+On entering the outbreak route, the Infection Control Officer takes the following measures immediately and does not defer any of them pending confirmation, a meeting or an approval.
+
+Protect first. Measures to interrupt transmission are instituted before the cause is known, on the basis of the most likely route given the organism and the setting. These are, as applicable: transmission-based precautions for the affected patients under the practices policy; cohorting of affected patients and, where necessary, of the staff caring for them; restriction of admissions or transfers into the affected area; suspension of the procedure, the device, the product or the batch under suspicion; enhanced and more frequent cleaning of the area; and reinforcement of hand hygiene with directly supervised observation. Measures instituted before the cause is known are recorded as precautionary and are reviewed as the investigation develops; some will prove unnecessary, and that is an acceptable cost.
+
+Preserve. The Infection Control Officer secures what the investigation will need before it disappears: relevant isolates are retained by the laboratory rather than discarded, and the plan states the retention arrangement and period; the suspect product, device, batch, lot number or equipment is quarantined and not returned, discarded or repaired; and the relevant records — case notes, theatre registers, device registers, cleaning records, duty rosters, temperature logs, maintenance records — are identified and preserved.
+
+Convene. The Infection Control Officer convenes the outbreak response group within the time the plan states. Its standing membership is the Infection Control Officer as chair, the Infection Control Nurse, the head or in-charge of the affected area, the microbiologist or the laboratory's representative, and a representative of the management of {{HOSPITAL_NAME}}, with others co-opted as the situation requires — engineering, housekeeping, pharmacy, occupational health, the dietician. The group meets daily while the outbreak is active. Every meeting is minuted with decisions, owners and times, and the minutes are the primary record of the response.
+
+Notify. The Infection Control Officer informs the head of the institution the same day. Where the disease or the scale requires statutory notification, that follows the route in the infection prevention and control programme policy and is not delayed for laboratory confirmation where clinical suspicion alone requires reporting. Where the outbreak involves a product, device or drug, the Infection Control Officer considers whether a report to the regulator or the manufacturer is required and records the consideration.
+
+Time of entry into the route is recorded, because the interval between the first case and the first control measure is the single most useful number in the outbreak report.""",
+
+"""33. Outbreak — investigation
+
+The investigation runs in parallel with the control measures at step 32 and never in sequence after them.
+
+Establish a case definition for this outbreak. A working definition is written at the outset, stating the clinical and laboratory features, the place and the time period that make a patient a case. It is deliberately broad at first, so that cases are not missed, and is narrowed later as the picture becomes clearer. Every version is dated and retained, because the case count only makes sense against the definition in force when it was made. This outbreak definition is separate from the routine surveillance definitions at step 5 and does not replace them.
+
+Find the cases. Active searching is done for further cases meeting the working definition — among current inpatients, among patients discharged within the relevant period, in the outpatient and emergency records, and among staff. The search covers the period before the first recognised case, since the true first case is usually earlier than the one that triggered the investigation.
+
+Build the line list. Every case is entered on a line list carrying the identifying details, age and sex, unit and bed, dates of admission, onset, specimen and result, the organism and its full susceptibility pattern, devices in place with their dates, procedures undergone with dates and operators, the ward staff involved, antimicrobials received, movements between units and beds, and the outcome. The line list is the analysis; it is maintained continuously rather than assembled at the end.
+
+Describe by time, place and person. The cases are plotted as an epidemic curve, by date of onset, which distinguishes a point-source exposure from continuing transmission and indicates roughly when exposure occurred. They are mapped by place — bed, bay, room, unit, theatre — and tabulated by person, looking for what the cases share and the non-cases do not: an operator, a shift, a device batch, a procedure, a piece of equipment, a food, a water outlet, a member of staff common to all.
+
+Form and test a hypothesis. From the description, the group forms a hypothesis about the source and the route, and states it explicitly. It is then tested — by comparing exposure between cases and suitable non-cases, by targeted environmental or product sampling under step 28, by observing the practice concerned directly rather than by asking whether it is done correctly, and, where available, by typing the isolates to establish whether they are the same strain. Direct observation of the suspect procedure is disproportionately productive and is the step most often skipped.
+
+Record what was excluded. Hypotheses considered and rejected, with the reason, are recorded alongside the one pursued. An investigation that reports only its conclusion cannot be evaluated, and cannot be resumed intelligently if the outbreak recurs.""",
+
+"""34. Outbreak — control measures
+
+Control measures are revised as the investigation develops. The measures instituted precautionarily at step 32 are reviewed at each meeting of the outbreak response group and are strengthened, narrowed or withdrawn on the evidence, with the reason recorded each time.
+
+The measures available to {{HOSPITAL_NAME}}, applied as the situation requires:
+
+- isolation or cohorting of cases, and where necessary of contacts, with dedicated equipment;
+- cohorting of staff, so that those caring for affected patients do not also care for unaffected ones, subject to the staffing this requires being made available;
+- restriction or suspension of admissions to the affected area;
+- closure of a unit, a theatre or a service. This is the most consequential measure and the one most often delayed. The Infection Control Officer recommends it; the head of the institution authorises it; the decision, its reasoning and its time are recorded, and where closure is recommended and not authorised, that is recorded too, with the reason;
+- withdrawal from use of a device, product, batch or piece of equipment, and its quarantine;
+- suspension of a procedure or a practice pending review;
+- enhanced environmental cleaning and disinfection, with an agent effective against the organism concerned and with the frequency increased, verified by the objective method at step 27 rather than assumed;
+- terminal cleaning of vacated areas before reoccupation;
+- reinforcement of hand hygiene with direct supervision and immediate feedback rather than periodic audit;
+- screening of patients or staff for carriage, where the organism and the hypothesis make it useful, with the purpose stated in advance and the results handled confidentially. Staff screening is not undertaken to identify someone to blame, and this is made explicit to those asked to take part;
+- decolonisation, where it is indicated for the organism and supported by current guidance;
+- exclusion from work of an affected member of staff, under the occupational health provisions, on full pay;
+- review of antimicrobial use in the affected area with the stewardship arrangement, where the organism's emergence is plausibly related to selection pressure;
+- rectification of any engineering, ventilation, water or structural fault identified.
+
+Each measure is recorded with the date and time it began, the person who authorised it, and the date it was withdrawn.
+
+Communication is a control measure and is treated as one. Staff in the affected area are briefed on what is known, what is not, and what they are being asked to do. Affected patients and their attendants are told, in a language they understand, what has happened, what it means for them and what is being done. Communication outside {{HOSPITAL_NAME}} — to the public, to the press, to other institutions — is made only by the head of the institution or a person that office designates.""",
+
+"""35. Outbreak — closure, notification and the report
+
+Declaring the outbreak over. The outbreak response group declares the outbreak closed when no new case meeting the outbreak case definition has occurred for a period equal to the interval the group specifies for that organism, being based on its incubation period and mode of transmission. The period applied and its basis are recorded. Control measures are withdrawn deliberately and in a recorded sequence, not allowed to lapse.
+
+Notification. Where statutory notification was required, {{HOSPITAL_NAME}} makes any further reports the authority requires, cooperates with any external investigation, and retains copies of all correspondence. Where the outbreak involved a product, device or drug, the report to the manufacturer or the regulator is completed and retained. Where patients who may have been exposed have already been discharged, the group decides whether they must be contacted, records the decision and its basis, and where contact is made, records what was said and by whom.
+
+The outbreak report. Within the period the surveillance plan states, the Infection Control Officer produces a written report and tables it at the Infection Prevention and Control Committee. The report contains:
+
+- the sequence of events with dates and times, from the first case to closure, including the interval between the first case and the first control measure;
+- the case definition used, in each of its versions, and the final case count;
+- the epidemic curve and the descriptive analysis by time, place and person;
+- the hypothesis pursued, the evidence for it, and the hypotheses considered and rejected;
+- all investigation results, including sampling and typing, and including negative results;
+- the control measures instituted, when each began and ended, and who authorised them;
+- the outcome for every case, including any death;
+- the conclusion on cause, stated honestly, including where the cause was not established. A significant proportion of outbreaks are closed without a proven source, and a report that manufactures a conclusion to avoid saying so is worse than one that records the uncertainty;
+- what failed. The report identifies the failures in system, process, resource or practice that permitted the outbreak, without naming individuals;
+- corrective and preventive actions, each with a named owner and a due date;
+- an assessment of the response itself — what was slow, what was missing, what the hospital did not have when it needed it.
+
+Follow-through. The Committee tracks each action to completion and records the closure of each. The lessons are carried into revision of the policies concerned, into the next annual surveillance risk assessment at step 2, and into staff training. Enhanced surveillance of the affected area continues for the period the group specifies after closure, and its results are reported to the Committee. The report is retained under step 38.""",
+
+"""36. Analysis, corrective and preventive action
+
+This step and the two that follow are what the preceding thirty-five exist to enable.
+
+Analysis. At the frequency stated in the surveillance plan, the Infection Control Nurse assembles and the Infection Control Officer analyses the whole of the surveillance output — infection rates with denominators and utilisation ratios, trends, organism and resistance profiles, hand hygiene compliance, housekeeping effectiveness, alerts raised, outbreaks and their status, bundle compliance received from the infection prevention policy, and the data quality indicators at step 16. The analysis is written and states what the Infection Control Officer believes the data shows, what it does not show, and what remains uncertain. Tables and charts without that written interpretation do not constitute analysis and are not accepted as such.
+
+Deciding what requires action. Action is required where a threshold set at step 17 is crossed, where a trend moves adversely across consecutive periods, where a measure sits persistently below its target even without moving, where a single case of a designated type occurs, or where a data quality indicator shows the surveillance itself is failing. The Infection Control Officer may also require action on judgement where the data suggests a developing problem below any threshold, and records the reasoning.
+
+Establishing cause before acting. Before a corrective action is decided, the cause is examined. A rise in a rate has many possible causes — a change in practice, a change in staffing or workload, a change in case mix, a new device or product, a lapse in a supply, an environmental or engineering fault, a training gap, or an artefact of measurement under step 17 — and an action aimed at the wrong one consumes effort and changes nothing. Where the finding is serious, the examination is a formal root cause analysis conducted with the quality function of {{HOSPITAL_NAME}}. Where it is not, it is a documented enquiry, but it is never omitted, and "reinforce training" is not accepted as a corrective action unless the enquiry actually identified a knowledge gap.
+
+Recording the action. Every corrective and preventive action is recorded with the finding that prompted it, the cause identified, the action itself stated specifically enough to be verifiable, a single named owner, a due date, and a closure entry. Preventive actions — those addressing a risk identified before it produced harm, including one identified in another unit or another hospital — are recorded on the same register and are not treated as optional.
+
+Verifying that it worked. Every closed action is followed by re-measurement of the same measure by the same method, at a stated interval. The result is recorded and reported. Where the measure did not improve, the action is recorded as ineffective, the cause is re-examined, and a further action is taken. An action register in which every entry closes successfully is not evidence of a well-run programme; it is evidence that closure is being recorded without verification.""",
+
+"""37. Feedback to the healthcare team
+
+Surveillance that reaches a committee and stops has failed. This step states what {{HOSPITAL_NAME}} sends back, to whom, and how often.
+
+To each clinical area, at the interval stated in the surveillance plan and within a defined time of the period closing:
+
+- that area's own infection rates, with its own numerators and denominators, and its own utilisation ratios — not the hospital aggregate. A unit cannot act on a hospital-wide figure, and will not try;
+- that area's hand hygiene compliance, broken down by cadre and by moment;
+- that area's housekeeping effectiveness results;
+- the trend of each over the preceding periods, so that this period is seen in context;
+- the interpretation from step 36, in plain language;
+- what specifically is being asked of the area, and by when;
+- the status of any corrective action already assigned to the area.
+
+The interval and the turnaround time are [Hospital to define]. Timeliness matters more than polish: data delivered three months after the period it describes has no owner still available to act on it and will be received as history.
+
+How it is delivered. In writing to the head of the department and the nursing in-charge; discussed at the area's own meeting rather than only circulated, with the Infection Control Nurse attending where the finding warrants it; and displayed in the area in a form the whole team can read, including staff who do not attend departmental meetings. Where the area's staff read a language other than that of the report, the displayed version is in the language they read.
+
+To individual clinicians. Surgeon-specific surgical site infection rates are provided confidentially to the surgeon concerned, with the comparator and the numbers on which they are based. They are not circulated by name within {{HOSPITAL_NAME}} and are not used punitively. This is a deliberate position: named comparative reporting suppresses case ascertainment and encourages the selection of easier cases, both of which harm patients, while confidential individual feedback is well supported as a means of improvement.
+
+To the treating team at the time of a case. A confirmed healthcare associated infection is notified to the treating team when it is confirmed rather than only in the periodic report, so that the individual patient's care and the review of the preventive measures for that patient can proceed.
+
+Acknowledgement of the loop. The area records receipt of its feedback and its response to any action requested. Where an area does not respond within the period set, the Infection Control Officer escalates to the Infection Prevention and Control Committee, and the non-response is recorded — a feedback loop that is not closed at the receiving end is not a loop.""",
+
+"""38. Reporting to the Committee and to management; records, retention and confidentiality
+
+To the Infection Prevention and Control Committee. The Infection Control Officer presents the full surveillance report at every meeting of the Committee. The report covers the rates and trends with their denominators, the hand hygiene and housekeeping results, resistance trends and the antibiogram when produced, alerts raised, outbreaks and their status, the corrective and preventive action register with the status of each entry, the data quality and validation results, and any part of the surveillance plan that could not be delivered and why. The Committee records its consideration, its decisions, and the actions it assigns with owners and dates, and it reviews the open action register at every meeting rather than only when an item is raised.
+
+To management. The Committee reports to the management of {{HOSPITAL_NAME}} at the interval the infection prevention and control programme policy sets. The report is short, factual and evidenced, and states plainly any resource the surveillance programme requires and has not received. Where management declines or defers a request, the reason and the decision are recorded, and the Committee reflects the consequence for the programme in the next surveillance plan rather than continuing to present the plan as deliverable.
+
+Records retained under this policy. {{HOSPITAL_NAME}} retains, as evidence that this policy operates: the annual surveillance risk assessments; the surveillance plans in each version; daily case-finding records; case classification records including cases assessed and excluded; line lists for each infection type; daily device-day and patient-day count sheets; denominator reconciliation records; rate calculations and the charts produced from them; benchmark comparisons with their sources; validation and data quality records; hand hygiene observation records, observer validation records and compliance calculations; the multi-drug-resistant organism list and register; alert logs; cumulative antibiograms; housekeeping thoroughness and process audit records; environmental sampling results with their triggers; the suspicion log; outbreak records including line lists, minutes, sampling results and final reports; the corrective and preventive action register with verification records; feedback records to each area; and Committee minutes and reports to management.
+
+Retention period. Records are retained for [Hospital to define], which is not less than any period prescribed by applicable law or by the accreditation standard. Records are retained in a form that remains legible and retrievable for the whole period.
+
+Confidentiality. Surveillance records contain patient-identifiable information and, in places, staff-identifiable information. They are held securely, with access limited to the Infection Control Team, the Infection Control Officer and those the Infection Control Officer authorises. Patient identifiers are removed from every report circulated beyond that group, and reports to the Committee and to management carry aggregate data only, except where the Committee must consider an individual case, in which case that part of the minute is handled confidentially. Staff health information arising from surveillance, including screening results obtained during an outbreak investigation, is held by the occupational health responsible person under the confidentiality provisions of the occupational health policy and is not held in the surveillance file.
+
+Review of this policy. This policy is reviewed by the Infection Prevention and Control Committee at least once every [Hospital to define], and sooner where the definition set in force is revised, where the services of {{HOSPITAL_NAME}} change materially, where an outbreak or an audit finding exposes a gap in it, or where a change in the accreditation standard or in statutory requirement bears on it.""",
+]
+
+RESPONSIBILITY = """The Infection Prevention and Control Committee owns this policy. It approves the annual surveillance risk assessment and the surveillance plan, approves the multi-drug-resistant organism list and the alert list, sets the thresholds and targets, receives the surveillance report at every meeting, tracks the corrective and preventive action register to closure, and escalates unresolved failures and unfunded requirements to management.
+
+The Infection Control Officer is accountable for the technical integrity of the surveillance system. This person applies and signs off the case definitions, interprets the analysis and writes the interpretation, decides what requires action, judges the significance of an alert, enters the outbreak route and chairs the outbreak response group, authorises the immediate control measures at step 32, recommends closure of a unit or service to the head of the institution, produces the outbreak report, and signs the periodic surveillance report.
+
+The Infection Control Nurse operates the system day to day. This person conducts active case-finding, classifies cases against the definitions, maintains the line lists and the multi-drug-resistant organism register, collates and reconciles the denominators, calculates the rates, prepares the charts and the report, performs or coordinates hand hygiene observation and housekeeping effectiveness monitoring, maintains the observer register, runs the validation checks, and delivers the feedback to each clinical area.
+
+The laboratory of {{HOSPITAL_NAME}}, or the outsourced laboratory acting for it, is responsible for identifying and flagging alert organisms, for communicating alerts within the time standard and recording that it did so, for reporting susceptibility against the agreed interpretive standard, for producing the data underlying the cumulative antibiogram to the stated methodological rules, for retaining isolates when an outbreak investigation requires it, and for notifying the Infection Control Team of any unusual pattern it observes. Where the laboratory is outsourced, these obligations are written into its contract.
+
+Heads of clinical departments are responsible for the corrective actions assigned to their areas, for their staff cooperating with case-finding, observation and monitoring, for the accuracy of the device and denominator counts taken in their areas, for acting on the feedback their area receives and recording that response, and for reporting a suspected cluster without delay.
+
+Nursing in-charges of each area are responsible for the daily device-day and patient-day counts being taken at the stated hour, recorded on the day and not reconstructed, and for the immediate correction of any housekeeping deficiency notified to the area.
+
+The operating surgeon and the anaesthetist are responsible for the wound class, the physical status score and the operative duration being recorded at the time of the procedure for every operation, whether or not an infection follows, since the risk stratification at step 14 depends on data that cannot be reconstructed afterwards.
+
+The Housekeeping Supervisor, or the contractor's supervisor where the service is outsourced, is responsible for acting on the results of steps 27 to 29 and for the corrective actions assigned to the housekeeping service.
+
+The contract manager at {{HOSPITAL_NAME}} is responsible for enforcing the obligations of this policy through the contracts of the outsourced laboratory and the outsourced housekeeping service, for obtaining their records, and for carrying the surveillance results into contract review and renewal decisions.
+
+The pharmacy of {{HOSPITAL_NAME}} is responsible for supplying the antimicrobial issue and prescription data that supports case-finding at step 4, post-discharge detection at step 10 and the data quality indicators at step 16.
+
+The head of the institution is accountable for authorising the closure or restriction of a unit or service during an outbreak, for all external communication about an outbreak, for signing the applicability declaration at step 8, for ensuring the surveillance programme has the resource its plan assumes, and for the undertaking that surveillance data is not used to discipline individuals.
+
+All staff are responsible for cooperating with surveillance, for recording accurately the data this policy depends on, and for reporting immediately any suspicion of a cluster or an outbreak — a duty that belongs to every member of staff of every grade and is exercised directly."""
+
+REFERENCES = """- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Hospital Infection Control chapter, standard HIC.5.
+- Centers for Disease Control and Prevention, National Healthcare Safety Network, Patient Safety Component Manual — surveillance case definitions for device-associated infection and surgical site infection, the ventilator-associated event framework, device-day and denominator counting rules, and rate calculation.
+- Centers for Disease Control and Prevention, National Healthcare Safety Network — surgical site infection event protocol, including depth classification and post-procedure surveillance windows.
+- World Health Organization, Guidelines on Core Components of Infection Prevention and Control Programmes at the National and Acute Health Care Facility Level — core components on healthcare associated infection surveillance and on monitoring, audit and feedback.
+- World Health Organization, Hand Hygiene Technical Reference Manual and the associated observation form and data summary tools — the direct observation method, the definition of an opportunity, observer validation and the compliance calculation.
+- World Health Organization, Guidelines on Hand Hygiene in Health Care.
+- World Health Organization, Protocol for Surgical Site Infection Surveillance with a Focus on Settings with Limited Resources.
+- Magiorakos, A.-P., and colleagues, "Multidrug-resistant, extensively drug-resistant and pandrug-resistant bacteria: an international expert proposal for interim standard definitions for acquired resistance", Clinical Microbiology and Infection — the resistance classification framework applied at step 22.
+- Clinical and Laboratory Standards Institute, M39, Analysis and Presentation of Cumulative Antimicrobial Susceptibility Test Data — the methodological rules applied to the cumulative antibiogram at step 25.
+- Indian Council of Medical Research, Antimicrobial Resistance Surveillance Network annual reports, and the ICMR Hospital Infection Control Guidelines.
+- National Centre for Disease Control, Ministry of Health and Family Welfare, Government of India, National Guidelines for Infection Prevention and Control in Healthcare Facilities.
+- Integrated Disease Surveillance Programme and the Integrated Health Information Platform, Ministry of Health and Family Welfare, Government of India — outbreak and notifiable disease reporting.
+- Centers for Disease Control and Prevention, principles of outbreak investigation as set out in its field epidemiology guidance — case definition, line listing, epidemic curve, descriptive analysis by time, place and person, and hypothesis testing.
+- Society for Healthcare Epidemiology of America, Outbreak Response and Incident Management: SHEA Guidance and Resources for Healthcare Epidemiologists.
+- Society for Healthcare Epidemiology of America and Infectious Diseases Society of America, Compendium of Strategies to Prevent Healthcare-Associated Infections in Acute Care Hospitals — the surveillance and measurement recommendations.
+- Carling, P. C., and colleagues, published assessments of cleaning thoroughness in healthcare settings using fluorescent marker methodology, and the CDC Options for Evaluating Environmental Cleaning toolkit — the basis for the objective cleaning-outcome monitoring at step 27.
+- Internal documents of {{HOSPITAL_NAME}}: infection prevention and control programme policy, infection prevention and control practices policy, infection prevention and control in support services policy, prevention of healthcare associated infections and staff occupational health policy, sterilisation and disinfection policy, antimicrobial usage policy, occupational health policy, records retention policy, and the outbreak and pandemic response plan."""
+
+DISTRIBUTION = """Controlled master copy: Infection Control Team, {{HOSPITAL_NAME}}.
+
+Copies issued to: the office of the head of the institution; the Infection Prevention and Control Committee (all members); the Infection Control Officer and the Infection Control Nurse; the laboratory and, where outsourced, the service provider; nursing administration; every inpatient ward and critical care and high-dependency area; operating theatre, recovery and procedure rooms; the labour room; emergency and outpatient departments; dialysis and day-care; pharmacy; central sterile supply; housekeeping and the housekeeping contractor; laundry, kitchen and waste handling supervisors; engineering and biomedical engineering; occupational health; medical records; the antimicrobial stewardship arrangement; the contracts or purchase function for onward issue to the outsourced laboratory and housekeeping providers; and the quality or accreditation coordinator.
+
+The current version is available to all staff at [Hospital to define — intranet location or nursing station folder]. Extracts relevant to a specific process are displayed as job aids at the point of work, in the languages staff read: the alert organism list, in the laboratory and in every clinical area; the outbreak suspicion reporting contact and number, in every clinical area, the laboratory, theatre, the sluice, the waste holding area and the laundry; the daily device count instruction and its fixed hour, at every nursing station; and the high-touch surface list for the area, in each housekeeping equipment store. The suspicion reporting contact and the 24-hour contact for the Infection Control Officer and deputy are included in the induction pack issued to every worker, including contracted staff and students.
+
+Superseded versions are withdrawn from all points of use on issue of a revision, and one dated copy of each is retained by the Infection Control Team."""
+
+ABBREVIATIONS = """Abbreviations already defined in the HIC.1, HIC.2, HIC.3 and HIC.4 master policies are not repeated here. A reader using this document on its own should refer to those policies for the full infection control glossary, including CAUTI, CLABSI, SSI, VAE, VAP, IVAC, PVAP, HAI, MDRO, MRSA, IPC, IPCC, ICC, ICN, ICO, ICT, ICU, OT, PPE, ABHR, BMW, HEPA, AIIR, ACH, AHU, HVAC, CSSD, SOP, IEC, IDSP, IHIP, IPCAF, AMR, ASP, AST, DDD, AWaRe, CVC, PICC, HBV, HCV, HIV, PEP, NSI, NABH, NCDC, NHSN, WHO, CDC, SHEA, NACO, SHCO and OE.
+
+The following abbreviations are used in this document and are not defined in HIC.1 to HIC.4:
+
+ATP — Adenosine Triphosphate (used in bioluminescence cleaning-outcome testing)
+CAPA — Corrective and Preventive Action
+CFU — Colony-Forming Unit
+CLSI — Clinical and Laboratory Standards Institute
+CRE — Carbapenem-Resistant Enterobacterales
+ESBL — Extended-Spectrum Beta-Lactamase
+HAP — Hospital-Acquired Pneumonia (non-ventilator)
+ICMR — Indian Council of Medical Research
+LCBI — Laboratory-Confirmed Bloodstream Infection
+MDR — Multi-Drug Resistant
+PDR — Pandrug-Resistant
+PoA — Present on Admission
+RCA — Root Cause Analysis
+RLU — Relative Light Unit (the readout of an ATP bioluminescence test)
+SIR — Standardised Infection Ratio
+SUTI — Symptomatic Urinary Tract Infection
+UTI — Urinary Tract Infection
+VRE — Vancomycin-Resistant Enterococci
+XDR — Extensively Drug-Resistant
+
+Any additional abbreviation used locally within {{HOSPITAL_NAME}} is [Hospital to define] and is added to this list at the next revision."""
+
+# Verbatim from the approved HIC.3 / HIC.4 master policies -- do not edit. The master template
+# boilerplate is shared across the HIC set, so any change belongs in a deliberate pass over all
+# of them, not in this file. Verified below against the live HIC.4 row by hash.
+DISCLAIMER = """This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.
+
+Several requirements in this document are statutory rather than advisory — in particular those arising under the Bio-Medical Waste Management Rules, 2016 and the Food Safety and Standards Act, 2006. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.
+
+The clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.
+
+This document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced."""
+
+# md5 of the live HIC.4 disclaimer with CR stripped, read from shco_policy_masters on
+# 2026-08-07. HIC.4 is stored with CRLF paragraph breaks; this file uses LF throughout,
+# per the newline="\n" rule in build_hic1.py, so the comparison is line-ending agnostic.
+# The same value is the live HIC.3 hash -- HIC.3 and HIC.4 already share this block.
+HIC4_DISCLAIMER_MD5_LF = "ae331bb0cb2ca6428d4d1e0800e51e60"
+
+OE_MAPPING = [
+    {
+        "oe_code": "HIC.5.a",
+        "requirement": "The scope of surveillance covers the tracking and analysis of infection risks, infection rates and trends",
+        "steps": "Steps 1-18",
+        "evidence": "Surveillance plan approved by the IPCC stating scope, priorities, definitions in force, denominators, frequency and reporting route; annual surveillance risk assessment recording why each subject was selected or excluded; daily case-finding records evidencing an active prospective method with named data sources; the case definition set in force with its version and source; line lists for CAUTI, CLABSI, VAE/VAP and SSI with the criteria met recorded against each case, including cases assessed and excluded; daily device-day count sheets by unit taken at the fixed hour; patient-day, admission and procedure denominators with their reconciliation records; rate calculation worksheets showing numerator, denominator and utilisation ratio; SSI risk-stratification records carrying wound class, physical status and operative duration for every procedure; post-discharge SSI follow-up records with the proportion of patients reached; validation records with agreement figures and completeness cross-checks; run charts by unit and infection type; benchmark comparisons stating the source, edition and period",
+        "responsible": "Infection Control Nurse for case-finding, denominator collection, collation and calculation; Infection Control Officer for applying and signing off the case definitions and writing the interpretation; IPCC for approving the plan and reviewing trends",
+    },
+    {
+        "oe_code": "HIC.5.b",
+        "requirement": "Compliance with hand-hygiene guidance is itself monitored as part of surveillance",
+        "steps": "Steps 3, 19-21",
+        "evidence": "Observation tool in use; register of trained and validated observers with validation and revalidation dates and the agreement level required; observation session records showing date, area, observer, duration, opportunities and actions, stratified by professional cadre and by moment; compliance rates by area, cadre and moment with the number of opportunities behind each; the minimum sample size below which a rate is suppressed; handrub and soap consumption per 1,000 patient days from stores issue data, and dispenser availability findings; the compliance target adopted and the observation frequency; dated feedback records to each area and evidence of display at the point of work; corrective actions with owners and due dates and the re-observation that closed each",
+        "responsible": "Infection Control Nurse, or a validated observer independent of the area observed; Infection Control Officer accountable for observer validation; IPCC for the target and for the response to any shortfall",
+    },
+    {
+        "oe_code": "HIC.5.c",
+        "requirement": "Defined mechanisms capture the occurrence of multi-drug-resistant organisms and of highly virulent infections",
+        "steps": "Steps 3, 22-25, 31",
+        "evidence": "The MDRO list adopted by {{HOSPITAL_NAME}} with the published resistance framework it applies and its approval date; the alert list of organisms and syndromes requiring immediate notification at a single occurrence, displayed in the laboratory and every clinical area; laboratory alert procedure naming the recipient, the method, the time standard and the out-of-hours route, with records that alerts were communicated and when; MDRO register showing organism, site, unit, dates, resistance phenotype, susceptibility, present-on-admission or hospital-onset judgement, precautions instituted and outcome; case-record flagging with stated removal criteria and authority; the interpretive standard and version named; cumulative antibiogram produced to the stated methodological rules with period, isolate counts and standard printed on it, and evidence it reached prescribers; resistance incidence trends split between present-on-admission and hospital-onset; the alert log including alerts that proved unfounded",
+        "responsible": "The laboratory of {{HOSPITAL_NAME}} or its outsourced laboratory for identification, flagging and alerting within the time standard; Infection Control Nurse for the register, the antibiogram production and the trending; Infection Control Officer for judging significance, deciding precautions and entering the outbreak route",
+    },
+    {
+        "oe_code": "HIC.5.d",
+        "requirement": "Outbreaks of infection are identified, and appropriate action is taken to control them",
+        "steps": "Steps 17, 24, 30-35",
+        "evidence": "Written outbreak definition with the case-number and time thresholds and the single-case triggers adopted; the named Infection Control Officer and deputy with 24-hour contact details, and the standing authority to act without waiting for a committee; suspicion log with date, time, source and action taken, including unfounded reports and their acknowledgement; record of entry into the outbreak route with the time, and the interval to the first control measure; outbreak response group membership and daily minutes with decisions, owners and times; the outbreak case definition in each dated version; line list; epidemic curve and descriptive analysis by time, place and person; hypotheses pursued and those rejected with reasons; isolate retention and product or equipment quarantine records; targeted environmental sampling with the trigger and the organism sought stated in advance; control measures with the date and time each began and ended and who authorised it; records of cohorting, admission restriction, unit closure or service suspension, including any closure recommended and not authorised, with reasons; staff briefing and patient communication records; statutory notification and regulator or manufacturer reports where applicable; the declaration of closure with the period applied and its basis; the written outbreak report with the conclusion stated honestly including where no source was established, what failed, and CAPA with owners and due dates, tabled at the IPCC; enhanced post-closure surveillance results; evidence the lessons reached policy revision, training and the next risk assessment",
+        "responsible": "Infection Control Officer leads identification, investigation and control and chairs the outbreak response group, with a named deputy holding the same authority at all hours; head of the institution authorises closure or restriction of a unit or service and all external communication; IPCC receives the report and tracks the actions to completion",
+    },
+    {
+        "oe_code": "HIC.5.e",
+        "requirement": "Surveillance activity includes monitoring whether the housekeeping service is effective",
+        "steps": "Steps 3, 26-29",
+        "evidence": "The three axes of measurement defined — thoroughness, process and appearance, and microbiological outcome — with the high-touch surface list defined in advance for each area type; monitoring schedule by area and risk zone; objective cleaning-outcome records using fluorescent marker or ATP bioluminescence, showing surfaces assessed, pass rate by area and by surface type, the threshold applied where numeric, and evidence that marking or swabbing was done without the cleaner's knowledge; structured process audits against a written checklist covering agent, dilution, contact time, colour-coded equipment, sequence and cloth management, conducted by an auditor independent of the housekeeping service and, where outsourced, by {{HOSPITAL_NAME}} rather than the contractor; environmental and water sampling records with the trigger, the organism sought, the threshold applied and its source, and the corrective action and repeat sample where exceeded; same-day feedback records to the housekeeping supervisor; periodic reports to the supervisor, the department head and the IPCC with trends; corrective actions addressing an identified cause with owners, due dates and the re-assessment that closed them; where outsourced, evidence the results were supplied formally and carried into contract review and renewal",
+        "responsible": "Infection Control Nurse conducts or coordinates the monitoring independently of the housekeeping service; Housekeeping Supervisor, or the contractor's supervisor, acts on findings; IPCC reviews the trend and the corrective actions; contract manager carries the results into contract review",
+    },
+    {
+        "oe_code": "HIC.5.f",
+        "requirement": "Surveillance data is analysed, corrective and preventive action follows, and feedback is provided regularly to the healthcare team concerned",
+        "steps": "Steps 16-18, 36-38",
+        "evidence": "Written analysis stating what the data shows, what it does not show and what remains uncertain — not tables alone; thresholds and targets set in advance of seeing the data; the recorded consideration of whether an apparent movement is an artefact before it is treated as real; documented enquiry or formal root cause analysis establishing cause before a corrective action is chosen; CAPA register with the finding, the cause identified, a specifically stated action, a single named owner, a due date and a closure entry, including preventive actions; re-measurement by the same method after closure, with actions recorded as ineffective where the measure did not improve and a further action taken; dated feedback records to each clinical area showing that area's own numerators, denominators, rates, hand hygiene and housekeeping results, trend, interpretation in plain language and what is being asked of it; evidence of display at the point of work and of discussion at the area's own meeting; confidential surgeon-specific SSI feedback records; notification of each confirmed case to the treating team at the time of confirmation; the area's recorded receipt and response, and escalation records where an area did not respond; IPCC minutes recording consideration of the surveillance report and review of the open action register; the report to management and its recorded consideration, including any resource request declined or deferred and the reason; retention and confidentiality arrangements for surveillance records",
+        "responsible": "Infection Control Nurse prepares the analysis and delivers the area feedback; Infection Control Officer interprets, decides what requires action and signs the report; heads of clinical departments own the corrective actions in their areas and record their response; IPCC tracks actions to closure and reports to the management of {{HOSPITAL_NAME}}",
+    },
+]
+
+UNIVERSAL_FACTS_CHECKLIST = """Universal (non-NABH) facts included in this draft, and where each was verified. Check these first.
+
+SOURCE OF THE OE TEXT
+0. HIC.5 standard text and all six OEs were read directly from the official NABH SHCO Standards 3rd Edition PDF held locally at "C:/Users/SERVER/Desktop/NABH SHCO/SHCO-Standards-3rd-Edition.pdf", Chapter 5, printed page 95 (PDF page index 101). Levels: HIC.5.a Core, HIC.5.b Core, HIC.5.c Achievement, HIC.5.d Commitment, HIC.5.e Core, HIC.5.f Commitment. Cross-checked against scripts/shco_oes_by_chapter.json and against the live shco_full_oes table; all three agree.
+   HIC.5.d ALONE CARRIES THE ASTERISK (doc_required = true in shco_full_oes). Note for the reviewer: this differs from HIC.4, where the asterisk sat on the final OE. The outbreak content at steps 30-35 is therefore the documented-evidence anchor of this standard, and is drafted at correspondingly greater depth.
+   NO SUMMARY/STANDARDS DISCREPANCY THIS TIME: unlike HIC.4, the Summary of Standards (printed p.92) and the Standards and Objective Elements page (printed p.95) render HIC.5 identically. Nothing for the reviewer to arbitrate.
+   TWO SOURCE ARTEFACTS, COSMETIC ONLY: the PDF's text layer drops the "fi" ligature, so HIC.5.d extracts as "identies" for "identifies" (the same artefact appears in HIC.6.e). And HIC.5.e ends without a full stop in the source. Neither affects meaning; both are noted so a reviewer comparing against the PDF is not surprised.
+   The SHCO 3rd Edition standards PDF contains no per-standard interpretation text for any HIC standard -- only intent, standards, OEs and a chapter reference list. Nothing was omitted for want of access.
+
+SURVEILLANCE METHOD (steps 1, 4, 16)
+1. Active prospective surveillance detects substantially more healthcare associated infection than passive clinician reporting, and passive reporting's sensitivity varies with workload. Standard epidemiological teaching, consistent with CDC/NHSN methodology and WHO IPC core component guidance. Basis for the "active, prospective, targeted" position in step 1.
+2. Targeted rather than whole-house surveillance for a small hospital -- WHO and CDC both direct surveillance effort by risk assessment rather than requiring comprehensive surveillance. Basis for step 2.
+3. Validation by independent re-abstraction, and completeness cross-checking against a source not used in case-finding, are the two standard validation methods. Consistent with NHSN's own external validation methodology. Step 16.
+4. Blood culture contamination rate as a data quality indicator conditioning bloodstream infection rates -- standard laboratory quality practice. Step 16.
+
+CASE DEFINITIONS (steps 5-10)
+5. Surveillance definitions differ from clinical diagnosis and are built for consistency rather than for individual patient care; the two can legitimately diverge in both directions. Explicitly stated in NHSN's own guidance. Step 5.
+6. CAUTI -- a positive urine culture alone does not constitute a case; clinical criteria are also required; asymptomatic bacteriuria in catheterised patients is common; routine surveillance culturing of catheterised patients is not done. Verified against CDC/HICPAC CAUTI guideline and NHSN UTI protocol. Step 6.
+7. CLABSI -- a surveillance definition that does not require proof the line was the source; common commensals require more than one blood culture drawn on separate occasions; infections secondary to another site are attributed to that site. Verified against the NHSN bloodstream infection protocol. Step 7.
+8. Ventilator-associated event tiering -- ventilator-associated condition (sustained oxygenation deterioration after a period of stability), infection-related ventilator-associated complication (that plus infection evidence and a new antimicrobial), and possible ventilator-associated pneumonia within it; the framework was introduced precisely to remove the chest radiograph's poor inter-observer reliability; it applies to invasive ventilation only. Verified via CDC NHSN VAE protocol. Step 8. NOTE: HIC.4 deliberately described this framework in general terms only and deferred the definitions here; step 8 is where they now sit, per the agreed HIC.4/HIC.5 split.
+9. SSI depth classification -- superficial incisional, deep incisional, organ/space. Stable CDC terminology. Step 9.
+10. SSI surveillance window differs by procedure, with a shorter window for most procedures and an extended window for defined implant procedures. THE DRAFT DELIBERATELY DOES NOT STATE DAY COUNTS. The windows were revised by NHSN (the older one-year implant window was replaced by a 90-day window for a defined procedure list), and stating a number that is later revised is worse than pointing at the source. Left as [Hospital to define] against the definition set in force. This is a deliberate omission of a number, not an oversight. Reviewer to note.
+11. Post-discharge SSI detection is essential where length of stay is short, and no single method has been established as sufficient; the proportion of patients actually reached must be reported alongside the rate. Consistent with WHO's limited-resource SSI surveillance protocol and CDC guidance. Step 10. Cases attributed to the period of the operation, not the period of detection -- standard practice.
+
+DENOMINATORS AND RATES (steps 11-14)
+12. Device days counted once daily at a consistent time, per patient not per device. Verified against NHSN denominator counting instructions. Step 11. Sampling of device days is permitted by NHSN only under a validated method and for units meeting stated criteria -- the draft permits it only on that basis and forbids locally devised schemes.
+13. Device-associated rate = (infections / device days) x 1,000. Device utilisation ratio = device days / patient days. SSI rate = (infections / procedures) x 100. Verified against NHSN. Step 13.
+14. Reporting the utilisation ratio alongside the rate, and the reasoning that a falling rate with falling utilisation means something different from a falling rate with rising utilisation -- standard NHSN interpretive practice. Step 13.
+15. Standardised infection ratio = observed / predicted, requiring an external risk model. The draft restricts its use to cases where a network supplies a valid predicted count, and expressly forbids computing it by hand from a national average. Step 13. Reviewer to confirm this restriction suits the hospital's situation.
+16. SSI risk stratification using wound class, pre-operative physical status score and operative duration against a procedure-specific cut-off. This is the classic NNIS/NHSN basic risk index. The draft does NOT name the specific scoring system or state cut-off durations, since these are procedure-specific and published in the definition set. Step 14. The point that these factors must be collected for every procedure and not only for infected patients is the practically important one and is stated explicitly.
+
+HAND HYGIENE SURVEILLANCE (steps 19-21)
+17. Compliance = (actions / opportunities) x 100; the opportunity is the unit of observation; two coinciding moments constitute one opportunity requiring one action; glove use does not substitute for hand hygiene. Verified via the WHO Hand Hygiene Technical Reference Manual. Step 19, 21.
+18. Observer validation against an already-validated observer before independent observation, with periodic revalidation because observers drift. WHO methodology. Step 20. The draft does NOT state a required agreement percentage -- left as [Hospital to define] because published thresholds vary.
+19. The observer effect (Hawthorne effect) raises observed compliance; product consumption per 1,000 patient days is the standard indirect measure tracked alongside, and is itself limited because it cannot distinguish many uses by few people from few uses by many. Both points widely established. Steps 20, 21.
+20. Compliance before touching a patient and before an aseptic procedure is consistently lower than the after-exposure moments in published observation studies, and those are the two moments that protect the patient rather than the worker. This is the basis for requiring breakdown by moment in step 19. Reviewer to note this is a general finding across published studies rather than a single citable figure -- no number is stated in the draft.
+21. Session length: the draft deliberately does NOT restate the 20-minute-plus-or-minus-10 session length that the approved HIC.2 step 9 carries, to avoid a second and possibly divergent statement of the same operational detail. It states only that sessions are of a defined and limited length. See the reconciliation note below.
+
+MDRO AND ANTIBIOGRAM (steps 22-25)
+22. MDR / XDR / PDR definitions -- non-susceptible to at least one agent in three or more antimicrobial categories; non-susceptible to at least one agent in all but two or fewer categories; non-susceptible to all agents in all categories. Verified via Magiorakos et al., "Multidrug-resistant, extensively drug-resistant and pandrug-resistant bacteria: an international expert proposal for interim standard definitions for acquired resistance", Clinical Microbiology and Infection, 2012 (ECDC/CDC joint initiative). Step 22.
+23. Cumulative antibiogram methodology -- first isolate per patient per period only, regardless of site; a minimum isolate count below which percentages are not reported; the period, isolate counts and interpretive standard printed on the report; screening isolates excluded from the therapeutic antibiogram; separate antibiograms by unit type where volumes permit. Verified via CLSI M39, Analysis and Presentation of Cumulative Antimicrobial Susceptibility Test Data. Step 25. THE DRAFT DOES NOT STATE THE MINIMUM ISOLATE NUMBER -- M39's figure is widely cited as 30 but the draft points at the standard rather than quoting it, since M39 is revised periodically. Reviewer to confirm this is the preferred handling.
+24. Susceptibility interpretive standards (CLSI and EUCAST) produce different susceptibility results for identical isolates, and breakpoints are revised between versions, so a resistance trend spanning a change of standard must be annotated. Well established. Step 22. Left as [Hospital to define] which standard the hospital's laboratory uses.
+25. Splitting resistance incidence between present-on-admission and hospital-onset, because the two have different causes and call for different responses. Standard surveillance practice. Step 25.
+26. Repeat isolates from the same patient counted once per period for incidence. Standard practice, consistent with M39's first-isolate rule. Step 23.
+
+HOUSEKEEPING EFFECTIVENESS (steps 26-29)
+27. Visual assessment does not reliably reflect microbiological cleanliness -- a surface can look clean and carry significant bioburden. Well established. Step 26.
+28. A substantial proportion of high-touch surfaces are missed during routine terminal cleaning even where cleaning was performed and documented. Verified via the published fluorescent-marker assessment literature (Carling and colleagues) and the CDC Options for Evaluating Environmental Cleaning toolkit. THE DRAFT DELIBERATELY STATES "a substantial proportion" AND NOT A PERCENTAGE -- published figures vary widely by setting and by study, and quoting one as though it were a constant would be misleading. Reviewer to note this is a deliberate non-numeric statement.
+29. Fluorescent marker methodology measures the physical action of wiping; ATP bioluminescence reports organic residue in relative light units; ATP thresholds are instrument-specific and NOT comparable between systems. Verified via the CDC environmental cleaning evaluation toolkit and the ATP method literature. Step 27. The draft requires the threshold in use to be stated wherever a result is reported, and leaves the threshold itself as [Hospital to define].
+30. Marking or swabbing must be done without the cleaner's knowledge or the measurement is invalidated; and results must be used for process improvement rather than individual discipline, since the method depends on cleaners' cooperation. Both are standard cautions in the published methodology. Step 27.
+31. Routine untargeted environmental culturing is NOT recommended -- no established relationship to patient infection in general areas, and no agreed action thresholds for most surfaces. Verified via CDC environmental infection control guidance. Step 28. The exceptions the draft permits (outbreak investigation with a stated hypothesis, defined critical systems such as OT air, dialysis water and potable water, post-construction clearance, suspected product contamination, and direction by the health authority) are the standard recognised ones. Note that the parameters and frequencies for the critical-system monitoring are deliberately NOT restated here -- they sit in the approved HIC.3 support services policy, and step 28 receives and trends the results rather than setting them.
+32. Routine culturing of staff hands, and staff screening generally, is not surveillance and is done only within a specific outbreak hypothesis, with consent and confidentiality. Standard position. Steps 28, 34.
+
+OUTBREAKS (steps 30-35)
+33. Outbreak definition -- occurrence of cases in excess of what is normally expected for that organism, place and period. Standard epidemiological definition. Step 30.
+34. Outbreak investigation elements -- a working case definition that is deliberately broad at first and narrowed later, active case searching including the period before the first recognised case, a line list, an epidemic curve by date of onset, descriptive analysis by time/place/person, hypothesis formation and testing, and recording of hypotheses rejected. Verified against CDC field epidemiology guidance on outbreak investigation and the SHEA outbreak response guidance. Step 33. THE DRAFT DOES NOT PRESENT A NUMBERED CANONICAL LIST OF STEPS, because published lists vary between ten and thirteen steps depending on the source; it presents the elements instead.
+35. Control measures instituted before the cause is known, on the most likely route -- standard outbreak practice, and the draft records them as precautionary and reviewable. Step 32. The interval between first case and first control measure as the key performance number in the report is an editorial position, not a cited standard; reviewer to confirm it is wanted.
+36. Declaring an outbreak over after a period based on the organism's incubation period and transmission mode -- standard practice. Step 35. No fixed number of incubation periods is stated because published practice varies (commonly one to two); left to the response group to specify and record.
+37. A significant proportion of healthcare outbreak investigations close without a proven source. Well established in the outbreak literature. Stated in step 35 so that an honest "cause not established" conclusion is explicitly permitted rather than discouraged. Reviewer to confirm this framing is wanted.
+38. Isolate retention for typing during an outbreak, and quarantine of suspect product/device/batch -- standard practice. Step 32. The draft leaves the retention arrangement and period as a plan entry.
+38a. "ON FULL PAY" IN STEP 34 -- DECIDED AND KEPT, 2026-08-07. Step 34 provides for exclusion from work of an affected member of staff "on full pay". This was raised as a deliberate decision point and the position was confirmed: KEEP IT, do not soften it to [Hospital to define].
+   Reasons recorded so this is not reopened without cause. It is consistent with the approved HIC.4 draft, which already commits that no cost under that policy is passed to a worker and whose HIC.4.e evidence column requires "records of restrictions applied, with confirmation that pay was not withheld" -- softening it here would have made the two documents read differently on the same obligation. And it is the stronger patient-safety position: unpaid exclusion is a direct financial incentive for an infected member of staff to keep working, which is the exact behaviour the exclusion exists to prevent.
+   THE KNOWN RISK, ACCEPTED: these masters are templates issued to many hospitals, and pay during work exclusion is an HR and employment-contract matter rather than an infection control one. A hospital whose HR policy does not support this will need to amend the line. That is a deliberate trade, not an oversight. Reviewer to note.
+
+FEEDBACK (steps 36-37)
+39. Monitoring, audit and feedback is one of the WHO core components of an IPC programme, and unit-level feedback of a unit's own data is more effective than hospital aggregate reporting. Verified via WHO Guidelines on Core Components of IPC Programmes. Step 37.
+40. Confidential surgeon-specific SSI feedback rather than named comparative circulation. The draft's stated reasoning -- that named public comparison suppresses case ascertainment and encourages case selection, while confidential individual feedback supports improvement -- reflects the established position in the surgical outcomes literature. THIS IS A POLICY POSITION AS MUCH AS A FINDING; reviewer to confirm it suits {{HOSPITAL_NAME}} and does not conflict with any external reporting obligation.
+41. Non-punitive use of surveillance data, and reporting by unit rather than by named clinician. Standard patient safety position, consistent with the approach already taken in the approved HIC.1 and HIC.2 documents. Policy statement and step 37.
+
+DELIBERATELY NOT INCLUDED -- checked and judged to belong to other standards:
+- The care bundles themselves and the measurement of bundle compliance -- HIC.4, already drafted and approved. This policy counts the infections; HIC.4 prevents them and measures whether the preventive actions were performed. Step 17 reads the two against each other and step 6 requires a confirmed case to trigger a review of whether the bundle was performed, but the bundle content is not restated.
+- Hand hygiene practice itself -- the five moments, handrub versus soap and water, technique, duration, facilities and consumables. HIC.2, already drafted and approved. Steps 19-21 measure compliance with it and do not restate it.
+- The housekeeping procedure -- areas, frequencies, agents, dilutions, colour coding, terminal cleaning method. HIC.3, already drafted and approved. Steps 26-29 measure whether it worked.
+- Engineering and environmental parameters -- OT air changes, pressure differentials, HEPA specification, temperature and humidity, water system management and testing parameters. HIC.3. Step 28 receives and trends the results and does not set the parameters.
+- Statutory notifiable disease reporting, the State notifiable disease list, the district health authority contact, and participation in community outbreaks and pandemics -- HIC.1, already drafted and approved. Steps 24, 32 and 35 hand over to that route rather than restating it.
+- Isolation and barrier nursing facilities, and the transmission-based precautions applied on an alert -- HIC.1 (facilities) and HIC.2 (precautions). Steps 23, 24 and 34 reference the decision and not the technique.
+- Antimicrobial selection, empirical therapy choice, the stewardship structure and defined daily dose monitoring -- HIC.2 and the antimicrobial usage policy. Step 25 produces the antibiogram accurately and delivers it to prescribers; what they do with it belongs there.
+- Occupational health, staff immunisation, exposure management and post-exposure prophylaxis -- HIC.4. Steps 15, 24 and 34 report staff infection in aggregate and hand individual management to that policy.
+- Instrument reprocessing, sterility assurance and recall -- HIC.6, not yet drafted. Step 32 quarantines a suspect device and does not address reprocessing.
+
+ACCEPTED DUPLICATION WITH HIC.1, HIC.2 AND HIC.3 -- CONFIRMED BY THE USER 2026-08-07
+Three of this standard's OEs require content that the already-approved HIC.1, HIC.2 and HIC.3 documents partly carry. On instruction, and following the precedent set for HIC.4 on 2026-08-06, HIC.5 carries the FULL content for all three and the approved documents have NOT been reopened. The scope section states each division explicitly. A reconciliation pass across HIC.1, HIC.2, HIC.3 and HIC.5 is recorded in scripts/master-policy-todos.md, to be done after all six HIC standards are drafted.
+
+  1. HIC.5.b (Core) versus approved HIC.2 step 9. HIC.2 already carries hand hygiene compliance monitoring in detail: open direct observation, sessions of approximately 20 minutes plus or minus 10, the actions-over-opportunities formula, stratification by cadre and area, handrub consumption per 1,000 patient days, feedback and re-audit, with the audit frequency and target left as hospital-defined. Steps 19-21 here carry the full measurement system including observer validation and revalidation, independence of the observer from the area, minimum sample size with rate suppression below it, breakdown by moment, and dispenser availability as a third indirect measure -- none of which HIC.2 has. DIVERGENCE TO RESOLVE IN THE PASS: HIC.2 states a session length ("approximately 20 minutes, plus or minus 10"); step 20 here deliberately states only "a defined and limited length" so as not to create a second and potentially divergent number. The two documents do not contradict each other, but a reader comparing them will find one specific and one general. Target wording is probably HIC.2's, adopted in both.
+
+  2. HIC.5.d (Commitment, ASTERISKED) versus approved HIC.1 steps 25-26. HIC.1 step 26 is titled "Recognising and responding to an outbreak within the hospital" and already defines an outbreak as occurrence above the expected level for that organism, area and period, or the appearance of a significant organism even as a single case; it also covers notification and the reporting of any cluster to the Infection Control Officer on the day it is suspected. Steps 30-35 here carry the full identification, investigation, control, closure and reporting programme. Because HIC.5.d is the asterisked OE of this standard, the documented evidence anchor must be here.
+     WORDING DIVERGENCE CLOSED 2026-08-07, ON INSTRUCTION -- not deferred to the pass. Step 30's outbreak definition is now the HIC.1 step 26 definition reproduced word for word ("any occurrence of infection above the expected level for that organism, area and period, or the appearance of an organism of particular significance even as a single case -- including a multidrug-resistant organism new to the hospital"), and step 31's reporting rule now uses HIC.1's exact phrase, "reported to the Infection Control Officer on the same day it is suspected". Both steps state that the wording is shared and that a revision to either document requires the same revision to the other. HIC.1 was NOT reopened -- HIC.5 was aligned to it, since HIC.1 is approved and its wording is the settled one.
+     WHAT REMAINS FOR THE PASS: reduce HIC.1 step 26 to a pointer at HIC.5 once HIC.5 is approved, so that the response procedure lives in one place. The definition itself can then stay in both, which is correct -- a reader of either document should find it without a cross-reference.
+
+  3. HIC.5.e (Core) versus approved HIC.3 steps 13-19. HIC.3.c owns adherence to the housekeeping procedure and already lists supervisor and Infection Control Nurse inspection reports and environmental surface swab results among its evidence. Steps 26-29 here carry the effectiveness measurement -- the three axes, the pre-defined high-touch surface list, objective thoroughness monitoring by fluorescent marker or ATP, the independence requirement, the pass-rate calculation, and the restriction of environmental culturing to defined triggers. DIVERGENCE TO RESOLVE IN THE PASS: HIC.3 lists "environmental surface swab results" as routine evidence under housekeeping, while step 28 here expressly does NOT perform routine untargeted surface culturing and restricts it to stated triggers. THIS IS A GENUINE TENSION between the two documents and is the most important of the three to resolve. It is not a clinical safety issue -- no patient is harmed by an unnecessary swab -- but an assessor reading both will find HIC.3 promising a record that HIC.5 says the hospital does not routinely produce. HIC.5's position is the better-supported one. NOT drafted as a change to HIC.3, deliberately deferred to the pass.
+
+DISCLAIMER BLOCK -- VERBATIM FROM HIC.4, AND WHAT THAT MEANS
+The disclaimer is the approved HIC.4 block reproduced word for word, on instruction. It is asserted against the live HIC.4 row by md5 at build time, so it cannot drift unnoticed. The only difference from the stored HIC.4 value is line endings: HIC.4 is stored with CRLF paragraph breaks, this file uses LF throughout per the newline="\\n" rule in build_hic1.py, and the hash check strips CR before comparing. Wording is byte-identical. The same hash is the live HIC.3 value -- HIC.3 and HIC.4 already share this block, and HIC.5 now makes three.
+
+The two consequences recorded against HIC.4 apply here unchanged and are, if anything, sharper:
+- Paragraph 2 cites the Bio-Medical Waste Management Rules, 2016 and the Food Safety and Standards Act, 2006. Neither bears on HIC.5 at all.
+- Paragraph 4 names the FSSAI and Pollution Control Boards, which this document does not cite, and does not name the CDC, CLSI, SHEA or ICMR, which it does.
+If the boilerplate is ever revised, both points should be picked up in a pass across all of HIC.1 to HIC.6 rather than in this file alone. HIC.1 (three paragraphs) and HIC.2 (five, different opening) remain unaligned with the HIC.3/HIC.4/HIC.5 block; aligning them is a separate decision and has not been made here.
+
+AUTHOR BYLINE -- NOT IMPLEMENTED, AND WHY
+The requested byline "Dr. Mehul Upadhyay - Healthcare Operations Leader" is NOT present in this draft, because there is nowhere for it to go that would actually render:
+- shco_policy_masters has no byline, author or prepared_by column (approved_by exists but is an approval-workflow field, is NULL for all of HIC.1-4, and must stay NULL because this row is a draft);
+- supabase/functions/_shared/policy-doc-template.ts has no byline parameter. Its control box hardcodes "Prepared By" as a blank signature line, and there is no author slot anywhere in the rendered document;
+- none of HIC.1, HIC.2, HIC.3 or HIC.4 carries the byline in any field -- confirmed by querying every text column of all four live rows for the name. So this is not a case of HIC.5 diverging from the established pattern; the byline has never existed in any of them.
+Adding it would require either a schema column plus a renderer change plus an edge function deploy, or burying it inside an existing prose field where it does not belong. Neither was done unasked. Writing it into an unrendered field would repeat exactly the dormant-column error already logged against `version` in scripts/master-policy-todos.md.
+   DECIDED 2026-08-07: log it, do not build now, and do not hold HIC.5 for it. The byline work has been merged into the existing version/revision-history infrastructure TODO in scripts/master-policy-todos.md, because it is the same gap in the same renderer file -- building it separately would mean two deploys, two local-test cycles and HIC.1-4 backfilled twice. Six build steps are recorded there. NOT silently skipped, and NOT stored in a field that would never render.
+
+DATA ERROR FOUND IN shco_full_oes WHILE VERIFYING THIS DRAFT -- affects HIC.6, not HIC.5
+   Verifying the asterisk position for HIC.5 (see item 0) prompted the same check for HIC.6, which turned up a genuine discrepancy: the official PDF at printed p.96 carries an asterisk on HIC.6.b, c, d AND e, but shco_full_oes has doc_required = false for HIC.6.e. Confirmed by re-extracting the page with asterisk-bearing lines marked, to rule out a stray footnote glyph. HIC.6.e is the recall procedure -- precisely the OE an assessor asks for a document against -- so drafting HIC.6 from the DB rather than the PDF would under-evidence it. NOT corrected here: it is a production write to a table the app reads, and it is logged in scripts/master-policy-todos.md with the fix and a recommendation to audit asterisks on wrapped lines across all chapters first. The HIC.5 flags in this draft were verified directly against the PDF and are correct.
+
+HOSPITAL-SPECIFIC VALUES LEFT AS [Hospital to define] -- 37 fillable blanks in the rendered document: 24 in the exact form "[Hospital to define]" and 13 in the guidance-bearing form "[Hospital to define - what to state]". A search for the exact string finds 24 of 37; a search for "Hospital to define" without brackets finds all 37, and that is the search a hospital should be told to run. The figure is produced by policy_placeholder_audit.py across every rendered field in both forms, and was used from the first build of this file -- the old broken counter, which matched only the exact form and omitted rendered fields, is not used anywhere here. The build also asserts that no nested placeholder exists.
+
+The values the hospital must supply: additional infection risks particular to its services (steps 2 and 15); weekend and holiday case-finding arrangement; the case definition set and version in force; the SSI procedures under surveillance and the surveillance window for each; the post-discharge SSI method for each procedure and the point in the window at which it is applied, and the minimum follow-up proportion; the invasive ventilation applicability declaration with its reason and referral destination; the hour at which the daily device count is taken; the denominator reconciliation tolerance; the minimum denominator below which a rate is suppressed; the rate thresholds triggering investigation; the cluster trigger (number of cases and time period); the external benchmark sources with edition and period; the hand hygiene observer validation and revalidation arrangement and agreement level; the observer independence arrangement where full independence is impractical; the minimum hand hygiene sample size; the hand hygiene target and feedback turnaround; additional MDROs added on local grounds; the antimicrobial susceptibility interpretive standard and version; the MDRO alert time standard and method; the out-of-hours alert route; the flag removal criteria and authority; additional alert-list organisms; the high-touch surface list per area type; the objective cleaning-outcome method, frequency, sample size and numeric threshold; the housekeeping pass-rate threshold triggering action; the outbreak cluster trigger; the Infection Control Officer and deputy with 24-hour contact details; the feedback interval and turnaround; the records retention period; the policy review interval; the intranet or folder location; and any additional local abbreviation."""
+
+draft = {
+    "standard_code": STANDARD_CODE,
+    "chapter": CHAPTER,
+    "oe_codes": OE_CODES,
+    "policy_title": POLICY_TITLE,
+    "purpose": PURPOSE,
+    "scope": SCOPE,
+    "policy_statement": POLICY_STATEMENT,
+    "procedure_steps": PROCEDURE_STEPS,
+    "responsibility": RESPONSIBILITY,
+    "references_text": REFERENCES,
+    "distribution": DISTRIBUTION,
+    "abbreviations": ABBREVIATIONS,
+    "disclaimer": DISCLAIMER,
+    "oe_mapping": OE_MAPPING,
+    "universal_facts_checklist": UNIVERSAL_FACTS_CHECKLIST,
+    "status": "draft",
+}
+
+# The five optional sections (definitions, training_competency, resources_required,
+# monitoring_audit, exceptions) are intentionally absent -- they stay NULL so the
+# renderer does not emit those headings, matching HIC.1-4.
+
+# newline="\n" is REQUIRED -- see build_hic1.py. Windows CRLF inside the policy text
+# breaks the renderer's step regex and silently flattens every step.
+with open("hic5_draft.json", "w", encoding="utf-8", newline="\n") as f:
+    json.dump(draft, f, ensure_ascii=False, indent=2)
+
+
+def dollar(s, tag="q"):
+    assert f"${tag}$" not in s, f"delimiter collision in: {s[:60]}"
+    return f"${tag}${s}${tag}$"
+
+
+def pg_array(items):
+    return "array[" + ", ".join("'" + i.replace("'", "''") + "'" for i in items) + "]"
+
+
+def steps_array(steps):
+    return "array[\n    " + ",\n    ".join(dollar(s, "s") for s in steps) + "\n  ]"
+
+
+sql = f"""-- HIC.5 master policy -- DRAFT for review. Do NOT set status = 'approved' here;
+-- approval is a separate manual step after fact-checking.
+--
+-- Source: NABH SHCO Standards 3rd Edition (August 2022), Chapter 5, printed page 95.
+-- Levels: a Core, b Core, c Achievement, d Commitment, e Core, f Commitment.
+-- HIC.5.d alone carries the asterisk (doc_required = true) -- note this differs from HIC.4,
+-- where the asterisk sat on the final OE.
+--
+-- The five optional sections are deliberately not populated, matching HIC.1-4.
+
+insert into public.shco_policy_masters (
+  standard_code,
+  chapter,
+  oe_codes,
+  policy_title,
+  purpose,
+  scope,
+  policy_statement,
+  procedure_steps,
+  responsibility,
+  references_text,
+  distribution,
+  abbreviations,
+  disclaimer,
+  oe_mapping,
+  universal_facts_checklist,
+  status
+) values (
+  '{STANDARD_CODE}',
+  '{CHAPTER}',
+  {pg_array(OE_CODES)},
+  {dollar(POLICY_TITLE)},
+  {dollar(PURPOSE)},
+  {dollar(SCOPE)},
+  {dollar(POLICY_STATEMENT)},
+  {steps_array(PROCEDURE_STEPS)},
+  {dollar(RESPONSIBILITY)},
+  {dollar(REFERENCES)},
+  {dollar(DISTRIBUTION)},
+  {dollar(ABBREVIATIONS)},
+  {dollar(DISCLAIMER)},
+  {dollar(json.dumps(OE_MAPPING, ensure_ascii=False))}::jsonb,
+  {dollar(UNIVERSAL_FACTS_CHECKLIST)},
+  'draft'
+);
+"""
+
+with open("hic5_insert.sql", "w", encoding="utf-8", newline="\n") as f:
+    f.write(sql)
+
+
+# ---------------------------------------------------------------- verification
+
+print("steps:", len(PROCEDURE_STEPS))
+
+# Every step must open with its own number, in order -- the renderer keys off this.
+bad = []
+for i, s in enumerate(PROCEDURE_STEPS, start=1):
+    m = re.match(r"^(\d+)\.\s", s)
+    if not m or int(m.group(1)) != i:
+        bad.append((i, s[:50]))
+print("step numbering contiguous from 1:", not bad, bad or "")
+
+# No stray CR anywhere -- CRLF flattens every step in the renderer.
+print("no CR in any field:", not any(
+    "\r" in v for v in [PURPOSE, SCOPE, POLICY_STATEMENT, RESPONSIBILITY, REFERENCES,
+                        DISTRIBUTION, ABBREVIATIONS, DISCLAIMER, UNIVERSAL_FACTS_CHECKLIST]
+    + PROCEDURE_STEPS))
+
+print("mapping covers all 6 OEs:", sorted(m["oe_code"] for m in OE_MAPPING) == sorted(OE_CODES))
+print("every mapping row has evidence + responsible:",
+      all(m.get("evidence") and m.get("responsible") for m in OE_MAPPING))
+
+# Each mapped step range must point at steps that exist.
+referenced = set()
+for m in OE_MAPPING:
+    for a, b in re.findall(r"(\d+)-(\d+)", m["steps"]):
+        referenced.update(range(int(a), int(b) + 1))
+    for n in re.findall(r"(?<![\d-])(\d+)(?![\d-])", m["steps"]):
+        referenced.add(int(n))
+print("mapped step numbers all exist:", max(referenced) <= len(PROCEDURE_STEPS))
+print("steps not mapped to any OE:", sorted(set(range(1, len(PROCEDURE_STEPS) + 1)) - referenced))
+
+# The optional five must not have leaked into the payload.
+optional = ["definitions", "training_competency", "resources_required", "monitoring_audit", "exceptions"]
+print("optional sections left unset:", not any(k in draft for k in optional))
+
+print("status is draft:", draft["status"] == "draft")
+
+# The disclaimer must stay byte-identical to the approved HIC.4 block, ignoring line endings.
+import hashlib
+_d = hashlib.md5(DISCLAIMER.replace("\r", "").encode("utf-8")).hexdigest()
+assert _d == HIC4_DISCLAIMER_MD5_LF, f"disclaimer drifted from HIC.4: {_d}"
+print("disclaimer verbatim identical to HIC.4 (LF-normalised md5):", _d)
+
+from policy_placeholder_audit import audit
+_exact, _variant, _total, _problems = audit(draft)
+assert not _problems, _problems
+print("wrote hic5_draft.json and hic5_insert.sql")
