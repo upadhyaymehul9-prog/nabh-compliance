@@ -1,0 +1,3278 @@
+[
+  {
+    "code": "AAC.1.a",
+    "std": 1,
+    "letter": "a",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation defines and displays the healthcare services that it provides.",
+    "text": "The healthcare services being provided are defined and are in consonance with the needs of the community.",
+    "headline": "Does Your Hospital Actually Know What Services It's Offering \u2014 And Why?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The healthcare services being provided are defined and are in consonance with the needs of the community."
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 1a"
+  },
+  {
+    "code": "AAC.1.b",
+    "std": 1,
+    "letter": "b",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation defines and displays the healthcare services that it provides.",
+    "text": "Each defined clinical service shall have diagnostic and treatment services with suitably qualified personnel who provide out-patient, in-patient, daycare and emergency cover.",
+    "headline": "Does Every Specialty Have Real Staff Cover \u2014 OP, IP, Daycare and Emergency?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Each defined clinical service shall have diagnostic and treatment services with suitably qualified personne\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "WRONG PERSON",
+        "detail": "Task done by staff without required qualification / training proof."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 1b"
+  },
+  {
+    "code": "AAC.1.c",
+    "std": 1,
+    "letter": "c",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation defines and displays the healthcare services that it provides.",
+    "text": "Scope of the clinical services of each department is defined.",
+    "headline": "Is Each Department's Scope Written Clearly \u2014 Including What You Don't Do?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Scope of the clinical services of each department is defined."
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 1c"
+  },
+  {
+    "code": "AAC.1.d",
+    "std": 1,
+    "letter": "d",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation defines and displays the healthcare services that it provides.",
+    "text": "The organisation's defined clinical services are prominently displayed.",
+    "headline": "Can Every Patient See Your Service List Without Asking Anyone?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The organisation's defined clinical services are prominently displayed."
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 1d"
+  },
+  {
+    "code": "AAC.2.a",
+    "std": 2,
+    "letter": "a",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation has a well-defined registration and admission process.",
+    "text": "The organisation uses written guidance for registering and admitting patients.",
+    "headline": "Is Registration and Admission Running on Written Guidance \u2014 Or Habit?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The organisation uses written guidance for registering and admitting patients."
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 2a"
+  },
+  {
+    "code": "AAC.2.b",
+    "std": 2,
+    "letter": "b",
+    "level": "Core",
+    "level_color": "#c62828",
+    "standard": "The organisation has a well-defined registration and admission process.",
+    "text": "A unique identification number is generated at the end of the registration.",
+    "headline": "Does Every Patient Get One Unique ID That Follows Them Everywhere?",
+    "bullets": [
+      "Level: Core \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "A unique identification number is generated at the end of the registration."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 2b"
+  },
+  {
+    "code": "AAC.2.c",
+    "std": 2,
+    "letter": "c",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation has a well-defined registration and admission process.",
+    "text": "Patients are accepted only if the organisation can provide the required service.",
+    "headline": "Are You Accepting Patients You Cannot Actually Treat?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Patients are accepted only if the organisation can provide the required service."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 2c"
+  },
+  {
+    "code": "AAC.2.d",
+    "std": 2,
+    "letter": "d",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation has a well-defined registration and admission process.",
+    "text": "The written guidance also addresses managing patients during non-availability of beds.",
+    "headline": "What Happens When Every Bed Is Full \u2014 Is It Written Down?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The written guidance also addresses managing patients during non-availability of beds."
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 2d"
+  },
+  {
+    "code": "AAC.2.e",
+    "std": 2,
+    "letter": "e",
+    "level": "Achievement",
+    "level_color": "#2e7d32",
+    "standard": "The organisation has a well-defined registration and admission process.",
+    "text": "Access to the healthcare services in the organisation is prioritised according to clinical need.",
+    "headline": "Is Access Based on Clinical Need \u2014 Or Who Arrives First?",
+    "bullets": [
+      "Level: Achievement \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Access to the healthcare services in the organisation is prioritised according to clinical need."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 2e"
+  },
+  {
+    "code": "AAC.3.a",
+    "std": 3,
+    "letter": "a",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "There is an established process for transfer / referral of patients.",
+    "text": "Transfer-in of patients to the organisation is done appropriately.",
+    "headline": "Are Transfer-In Patients Stabilised and Documented Before You Take Over?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Transfer-in of patients to the organisation is done appropriately."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "EXTERNAL LINK BROKEN",
+        "detail": "Outsourced / transfer partner not vetted or documented."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 3a"
+  },
+  {
+    "code": "AAC.3.b",
+    "std": 3,
+    "letter": "b",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "There is an established process for transfer / referral of patients.",
+    "text": "Transfer-out / referral of patients to another facility is done appropriately.",
+    "headline": "When You Refer Out, Is the Transfer Safe \u2014 Or Just a Phone Call?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Transfer-out / referral of patients to another facility is done appropriately."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "EXTERNAL LINK BROKEN",
+        "detail": "Outsourced / transfer partner not vetted or documented."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 3b"
+  },
+  {
+    "code": "AAC.3.c",
+    "std": 3,
+    "letter": "c",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "There is an established process for transfer / referral of patients.",
+    "text": "During transfer or referral, accompanying staff are appropriate to the clinical condition of the patient.",
+    "headline": "Who Rides With the Patient \u2014 And Are They Skilled Enough?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "During transfer or referral, accompanying staff are appropriate to the clinical condition of the patient."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "WRONG PERSON",
+        "detail": "Task done by staff without required qualification / training proof."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "EXTERNAL LINK BROKEN",
+        "detail": "Outsourced / transfer partner not vetted or documented."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 3c"
+  },
+  {
+    "code": "AAC.3.d",
+    "std": 3,
+    "letter": "d",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "There is an established process for transfer / referral of patients.",
+    "text": "The organisation gives a summary of the patient's condition and the treatment given.",
+    "headline": "Does Every Transfer Carry a Clear Clinical Summary?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The organisation gives a summary of the patient's condition and the treatment given."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "INCOMPLETE RECORD",
+        "detail": "Key clinical details missing from the handoff / report / summary."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 3d"
+  },
+  {
+    "code": "AAC.4.a",
+    "std": 4,
+    "letter": "a",
+    "level": "Core",
+    "level_color": "#c62828",
+    "standard": "Patients cared for by the organisation undergo an established initial assessment.",
+    "text": "The initial assessment of the out-patients, daycare, in-patients and emergency patients is done in a standardised manner.",
+    "headline": "Is Initial Assessment Standardised Across OP, IP, Daycare and Emergency?",
+    "bullets": [
+      "Level: Core \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The initial assessment of the out-patients, daycare, in-patients and emergency patients is done in a standa\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 4a"
+  },
+  {
+    "code": "AAC.4.b",
+    "std": 4,
+    "letter": "b",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Patients cared for by the organisation undergo an established initial assessment.",
+    "text": "The initial assessment is performed by qualified personnel.",
+    "headline": "Who Is Allowed to Do the First Assessment \u2014 Are They Qualified?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The initial assessment is performed by qualified personnel."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "WRONG PERSON",
+        "detail": "Task done by staff without required qualification / training proof."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 4b"
+  },
+  {
+    "code": "AAC.4.c",
+    "std": 4,
+    "letter": "c",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Patients cared for by the organisation undergo an established initial assessment.",
+    "text": "The initial assessment is performed within a time frame based on the needs of the patient.",
+    "headline": "How Long Until Initial Assessment Happens \u2014 And Is That Time Defined?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The initial assessment is performed within a time frame based on the needs of the patient."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "TIME NOT TRACKED",
+        "detail": "Turnaround / response time is undefined or never measured."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 4c"
+  },
+  {
+    "code": "AAC.4.d",
+    "std": 4,
+    "letter": "d",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Patients cared for by the organisation undergo an established initial assessment.",
+    "text": "Initial assessment of daycare and in-patients includes nursing assessment, which is done at the time of admission and documented.",
+    "headline": "Is Nursing Assessment Done at Admission \u2014 And Written in the File?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Initial assessment of daycare and in-patients includes nursing assessment, which is done at the time of adm\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "TIME NOT TRACKED",
+        "detail": "Turnaround / response time is undefined or never measured."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 4d"
+  },
+  {
+    "code": "AAC.4.e",
+    "std": 4,
+    "letter": "e",
+    "level": "Core",
+    "level_color": "#c62828",
+    "standard": "Patients cared for by the organisation undergo an established initial assessment.",
+    "text": "The initial assessment for in-patients results in a documented care plan.",
+    "headline": "Does Every In-Patient Leave Assessment With a Documented Care Plan?",
+    "bullets": [
+      "Level: Core \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The initial assessment for in-patients results in a documented care plan."
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 4e"
+  },
+  {
+    "code": "AAC.4.f",
+    "std": 4,
+    "letter": "f",
+    "level": "Achievement",
+    "level_color": "#2e7d32",
+    "standard": "Patients cared for by the organisation undergo an established initial assessment.",
+    "text": "The care plan is countersigned by the clinician in-charge of the patient within 24 hours.",
+    "headline": "Is the Care Plan Countersigned by the Clinician-in-Charge Within 24 Hours?",
+    "bullets": [
+      "Level: Achievement \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The care plan is countersigned by the clinician in-charge of the patient within 24 hours."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 4f"
+  },
+  {
+    "code": "AAC.4.g",
+    "std": 4,
+    "letter": "g",
+    "level": "Excellence",
+    "level_color": "#6a1b9a",
+    "standard": "Patients cared for by the organisation undergo an established initial assessment.",
+    "text": "The care plan includes the identification of special needs regarding care following discharge.",
+    "headline": "Does the Care Plan Already Think About Needs After Discharge?",
+    "bullets": [
+      "Level: Excellence \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The care plan includes the identification of special needs regarding care following discharge."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 4g"
+  },
+  {
+    "code": "AAC.5.a",
+    "std": 5,
+    "letter": "a",
+    "level": "Core",
+    "level_color": "#c62828",
+    "standard": "Patients cared for by the organisation undergo a regular re-assessment.",
+    "text": "Patients are re-assessed at appropriate intervals to determine their response to treatment and to plan further treatment or discharge.",
+    "headline": "Are Patients Re-Assessed Often Enough to Catch Change Early?",
+    "bullets": [
+      "Level: Core \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Patients are re-assessed at appropriate intervals to determine their response to treatment and to plan furt\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "TIME NOT TRACKED",
+        "detail": "Turnaround / response time is undefined or never measured."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 5a"
+  },
+  {
+    "code": "AAC.5.b",
+    "std": 5,
+    "letter": "b",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Patients cared for by the organisation undergo a regular re-assessment.",
+    "text": "Out-patients are informed of their next follow-up, where appropriate.",
+    "headline": "Do Out-Patients Leave Knowing Exactly When to Come Back?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Out-patients are informed of their next follow-up, where appropriate."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 5b"
+  },
+  {
+    "code": "AAC.5.c",
+    "std": 5,
+    "letter": "c",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Patients cared for by the organisation undergo a regular re-assessment.",
+    "text": "For in-patients during re-assessment, the care plan is monitored and modified, where found necessary.",
+    "headline": "Does Re-Assessment Actually Change the Care Plan When Needed?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "For in-patients during re-assessment, the care plan is monitored and modified, where found necessary."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 5c"
+  },
+  {
+    "code": "AAC.5.d",
+    "std": 5,
+    "letter": "d",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Patients cared for by the organisation undergo a regular re-assessment.",
+    "text": "Staff involved in direct clinical care document re-assessments.",
+    "headline": "Is Every Re-Assessment Written by the Staff Giving Direct Care?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Staff involved in direct clinical care document re-assessments."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "WRONG PERSON",
+        "detail": "Task done by staff without required qualification / training proof."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 5d"
+  },
+  {
+    "code": "AAC.5.e",
+    "std": 5,
+    "letter": "e",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Patients cared for by the organisation undergo a regular re-assessment.",
+    "text": "The organisation lays down guidelines and implements processes to identify early warning signs of changing patient condition and accordingly initiates steps to manage the same.",
+    "headline": "Can Your Team Spot Early Warning Signs \u2014 And Act Fast?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The organisation lays down guidelines and implements processes to identify early warning signs of changing \u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 5e"
+  },
+  {
+    "code": "AAC.6.a",
+    "std": 6,
+    "letter": "a",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Laboratory services are provided as per the scope of services of the organisation.",
+    "text": "Scope of the laboratory services is commensurate to the services provided by the organisation.",
+    "headline": "Does Your Lab Scope Match What Your Hospital Actually Treats?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Scope of the laboratory services is commensurate to the services provided by the organisation."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 6a"
+  },
+  {
+    "code": "AAC.6.b",
+    "std": 6,
+    "letter": "b",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Laboratory services are provided as per the scope of services of the organisation.",
+    "text": "The infrastructure (physical and equipment) is adequate to provide the defined scope of services.",
+    "headline": "Is Lab Infrastructure Strong Enough for Your Defined Scope?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The infrastructure (physical and equipment) is adequate to provide the defined scope of services."
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 6b"
+  },
+  {
+    "code": "AAC.6.c",
+    "std": 6,
+    "letter": "c",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Laboratory services are provided as per the scope of services of the organisation.",
+    "text": "Human resource is adequate to provide the defined scope of services.",
+    "headline": "Do You Have Enough Trained Lab Hands for the Workload?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Human resource is adequate to provide the defined scope of services."
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 6c"
+  },
+  {
+    "code": "AAC.6.d",
+    "std": 6,
+    "letter": "d",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Laboratory services are provided as per the scope of services of the organisation.",
+    "text": "Qualified and trained personnel perform and supervise the investigations and report the results.",
+    "headline": "Who Performs and Signs Lab Results \u2014 Are They Qualified?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Qualified and trained personnel perform and supervise the investigations and report the results."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "WRONG PERSON",
+        "detail": "Task done by staff without required qualification / training proof."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "INCOMPLETE RECORD",
+        "detail": "Key clinical details missing from the handoff / report / summary."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 6d"
+  },
+  {
+    "code": "AAC.6.e",
+    "std": 6,
+    "letter": "e",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Laboratory services are provided as per the scope of services of the organisation.",
+    "text": "Requisition for tests, collection, identification, handling, safe transportation, processing and disposal of a specimen is performed according to written guidance.",
+    "headline": "Is Every Specimen Handled by Written Guidance From Order to Disposal?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Requisition for tests, collection, identification, handling, safe transportation, processing and disposal o\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 6e"
+  },
+  {
+    "code": "AAC.6.f",
+    "std": 6,
+    "letter": "f",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Laboratory services are provided as per the scope of services of the organisation.",
+    "text": "Laboratory results are available within a defined time frame.",
+    "headline": "Are Lab Turnaround Times Defined \u2014 And Met?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Laboratory results are available within a defined time frame."
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "TIME NOT TRACKED",
+        "detail": "Turnaround / response time is undefined or never measured."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 6f"
+  },
+  {
+    "code": "AAC.6.g",
+    "std": 6,
+    "letter": "g",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Laboratory services are provided as per the scope of services of the organisation.",
+    "text": "Critical results are intimated to the person concerned at the earliest.",
+    "headline": "When a Result Is Critical, Does the Right Clinician Hear It Immediately?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Critical results are intimated to the person concerned at the earliest."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "TIME NOT TRACKED",
+        "detail": "Turnaround / response time is undefined or never measured."
+      },
+      {
+        "title": "SAFETY GAP",
+        "detail": "Safety step skipped under workload pressure."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 6g"
+  },
+  {
+    "code": "AAC.6.h",
+    "std": 6,
+    "letter": "h",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Laboratory services are provided as per the scope of services of the organisation.",
+    "text": "Results are reported in a standardised manner.",
+    "headline": "Are Lab Reports Standardised So Clinicians Can Trust the Format?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Results are reported in a standardised manner."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "INCOMPLETE RECORD",
+        "detail": "Key clinical details missing from the handoff / report / summary."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 6h"
+  },
+  {
+    "code": "AAC.6.i",
+    "std": 6,
+    "letter": "i",
+    "level": "Achievement",
+    "level_color": "#2e7d32",
+    "standard": "Laboratory services are provided as per the scope of services of the organisation.",
+    "text": "There is a mechanism to address the recall / amendment of reports whenever applicable.",
+    "headline": "If a Report Must Be Recalled or Amended \u2014 Is There a Clear Process?",
+    "bullets": [
+      "Level: Achievement \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "There is a mechanism to address the recall / amendment of reports whenever applicable."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "INCOMPLETE RECORD",
+        "detail": "Key clinical details missing from the handoff / report / summary."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 6i"
+  },
+  {
+    "code": "AAC.7.a",
+    "std": 7,
+    "letter": "a",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "There is an established laboratory quality assurance and safety programme.",
+    "text": "The laboratory quality assurance programme is implemented.",
+    "headline": "Is Your Laboratory QA Programme Running \u2014 Or Just Written?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The laboratory quality assurance programme is implemented."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 7a"
+  },
+  {
+    "code": "AAC.7.b",
+    "std": 7,
+    "letter": "b",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "There is an established laboratory quality assurance and safety programme.",
+    "text": "The programme ensures the quality of test results through internal quality control.",
+    "headline": "Is Internal Quality Control Done Daily \u2014 And Acted On?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The programme ensures the quality of test results through internal quality control."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 7b"
+  },
+  {
+    "code": "AAC.7.c",
+    "std": 7,
+    "letter": "c",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "There is an established laboratory quality assurance and safety programme.",
+    "text": "Laboratory participates in proficiency testing / external quality assurance scheme.",
+    "headline": "Does Your Lab Join EQAS / Proficiency Testing \u2014 And Close Gaps?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Laboratory participates in proficiency testing / external quality assurance scheme."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 7c"
+  },
+  {
+    "code": "AAC.7.d",
+    "std": 7,
+    "letter": "d",
+    "level": "Excellence",
+    "level_color": "#6a1b9a",
+    "standard": "There is an established laboratory quality assurance and safety programme.",
+    "text": "The programme addresses the clinico-pathological meeting(s).",
+    "headline": "Do Clinicians and Pathologists Meet to Improve Diagnostic Quality?",
+    "bullets": [
+      "Level: Excellence \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The programme addresses the clinico-pathological meeting(s)."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 7d"
+  },
+  {
+    "code": "AAC.7.e",
+    "std": 7,
+    "letter": "e",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "There is an established laboratory quality assurance and safety programme.",
+    "text": "The laboratory safety programme is implemented.",
+    "headline": "Is Laboratory Safety a Live Programme \u2014 Not a Poster on the Wall?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The laboratory safety programme is implemented."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "SAFETY GAP",
+        "detail": "Safety step skipped under workload pressure."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 7e"
+  },
+  {
+    "code": "AAC.7.f",
+    "std": 7,
+    "letter": "f",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "There is an established laboratory quality assurance and safety programme.",
+    "text": "Laboratory personnel are appropriately trained in safe practices.",
+    "headline": "Are Lab Staff Trained for Safe Practices \u2014 And Retrained?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Laboratory personnel are appropriately trained in safe practices."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "WRONG PERSON",
+        "detail": "Task done by staff without required qualification / training proof."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 7f"
+  },
+  {
+    "code": "AAC.7.g",
+    "std": 7,
+    "letter": "g",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "There is an established laboratory quality assurance and safety programme.",
+    "text": "Laboratory personnel are provided with appropriate safety measures.",
+    "headline": "Do Lab Staff Actually Get PPE, Spill Kits and Safety Devices?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Laboratory personnel are provided with appropriate safety measures."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "WRONG PERSON",
+        "detail": "Task done by staff without required qualification / training proof."
+      },
+      {
+        "title": "SAFETY GAP",
+        "detail": "Safety step skipped under workload pressure."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 7g"
+  },
+  {
+    "code": "AAC.8.a",
+    "std": 8,
+    "letter": "a",
+    "level": "Core",
+    "level_color": "#c62828",
+    "standard": "Imaging services are provided as per the scope of services of the organisation.",
+    "text": "Imaging services comply with legal and other requirements.",
+    "headline": "Do Your Imaging Services Meet Every Legal and AERB Requirement?",
+    "bullets": [
+      "Level: Core \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Imaging services comply with legal and other requirements."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 8a"
+  },
+  {
+    "code": "AAC.8.b",
+    "std": 8,
+    "letter": "b",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Imaging services are provided as per the scope of services of the organisation.",
+    "text": "Scope of the imaging services is commensurate to the services provided by the organisation.",
+    "headline": "Does Imaging Scope Match the Clinical Services You Advertise?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Scope of the imaging services is commensurate to the services provided by the organisation."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 8b"
+  },
+  {
+    "code": "AAC.8.c",
+    "std": 8,
+    "letter": "c",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Imaging services are provided as per the scope of services of the organisation.",
+    "text": "The infrastructure (physical and equipment) and human resources are adequate to provide for its defined scope of services.",
+    "headline": "Are Machines and Staffing Adequate for Your Imaging Scope?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The infrastructure (physical and equipment) and human resources are adequate to provide for its defined sco\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 8c"
+  },
+  {
+    "code": "AAC.8.d",
+    "std": 8,
+    "letter": "d",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Imaging services are provided as per the scope of services of the organisation.",
+    "text": "Qualified and trained personnel perform, supervise and interpret the investigations.",
+    "headline": "Who Performs and Interprets Imaging \u2014 Are They Trained and Supervised?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Qualified and trained personnel perform, supervise and interpret the investigations."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "WRONG PERSON",
+        "detail": "Task done by staff without required qualification / training proof."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 8d"
+  },
+  {
+    "code": "AAC.8.e",
+    "std": 8,
+    "letter": "e",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Imaging services are provided as per the scope of services of the organisation.",
+    "text": "Imaging results are available within a defined time frame.",
+    "headline": "Are Imaging Turnaround Times Defined and Tracked?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Imaging results are available within a defined time frame."
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "TIME NOT TRACKED",
+        "detail": "Turnaround / response time is undefined or never measured."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 8e"
+  },
+  {
+    "code": "AAC.8.f",
+    "std": 8,
+    "letter": "f",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Imaging services are provided as per the scope of services of the organisation.",
+    "text": "Critical results are intimated immediately to the personnel concerned.",
+    "headline": "When Imaging Finds Something Critical \u2014 Who Is Told, and How Fast?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Critical results are intimated immediately to the personnel concerned."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "WRONG PERSON",
+        "detail": "Task done by staff without required qualification / training proof."
+      },
+      {
+        "title": "SAFETY GAP",
+        "detail": "Safety step skipped under workload pressure."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 8f"
+  },
+  {
+    "code": "AAC.8.g",
+    "std": 8,
+    "letter": "g",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Imaging services are provided as per the scope of services of the organisation.",
+    "text": "Results are reported in a standardised manner.",
+    "headline": "Are Imaging Reports Standardised Across Modalities?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Results are reported in a standardised manner."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "INCOMPLETE RECORD",
+        "detail": "Key clinical details missing from the handoff / report / summary."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 8g"
+  },
+  {
+    "code": "AAC.8.h",
+    "std": 8,
+    "letter": "h",
+    "level": "Achievement",
+    "level_color": "#2e7d32",
+    "standard": "Imaging services are provided as per the scope of services of the organisation.",
+    "text": "There is a mechanism to address the recall / amendment of reports whenever applicable.",
+    "headline": "Can You Recall or Amend an Imaging Report Without Chaos?",
+    "bullets": [
+      "Level: Achievement \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "There is a mechanism to address the recall / amendment of reports whenever applicable."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "INCOMPLETE RECORD",
+        "detail": "Key clinical details missing from the handoff / report / summary."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 8h"
+  },
+  {
+    "code": "AAC.8.i",
+    "std": 8,
+    "letter": "i",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Imaging services are provided as per the scope of services of the organisation.",
+    "text": "Imaging tests not available in the organisation are outsourced to the organisation(s) based on their quality assurance system.",
+    "headline": "When You Outsource Imaging, Do You Check Their QA First?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Imaging tests not available in the organisation are outsourced to the organisation(s) based on their qualit\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "EXTERNAL LINK BROKEN",
+        "detail": "Outsourced / transfer partner not vetted or documented."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 8i"
+  },
+  {
+    "code": "AAC.9.a",
+    "std": 9,
+    "letter": "a",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "There is an established quality assurance and radiation-safety programme for imaging services.",
+    "text": "The quality assurance programme for imaging services is implemented.",
+    "headline": "Is Imaging Quality Assurance Implemented \u2014 Not Just Planned?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The quality assurance programme for imaging services is implemented."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 9a"
+  },
+  {
+    "code": "AAC.9.b",
+    "std": 9,
+    "letter": "b",
+    "level": "Achievement",
+    "level_color": "#2e7d32",
+    "standard": "There is an established quality assurance and radiation-safety programme for imaging services.",
+    "text": "A system is in place to ensure the appropriateness of the investigations and procedures for the clinical indication.",
+    "headline": "Are Imaging Orders Checked for Appropriateness Before the Scan?",
+    "bullets": [
+      "Level: Achievement \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "A system is in place to ensure the appropriateness of the investigations and procedures for the clinical in\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 9b"
+  },
+  {
+    "code": "AAC.9.c",
+    "std": 9,
+    "letter": "c",
+    "level": "Achievement",
+    "level_color": "#2e7d32",
+    "standard": "There is an established quality assurance and radiation-safety programme for imaging services.",
+    "text": "The programme addresses periodic internal / external peer review of imaging results using appropriate sampling.",
+    "headline": "Do You Peer-Review CT/MRI Reports on a Defined Sample?",
+    "bullets": [
+      "Level: Achievement \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The programme addresses periodic internal / external peer review of imaging results using appropriate sampl\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 9c"
+  },
+  {
+    "code": "AAC.9.d",
+    "std": 9,
+    "letter": "d",
+    "level": "Excellence",
+    "level_color": "#6a1b9a",
+    "standard": "There is an established quality assurance and radiation-safety programme for imaging services.",
+    "text": "The programme addresses the clinico-radiological meeting(s).",
+    "headline": "Are Clinico-Radiological Meetings Improving Real Decisions?",
+    "bullets": [
+      "Level: Excellence \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The programme addresses the clinico-radiological meeting(s)."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 9d"
+  },
+  {
+    "code": "AAC.9.e",
+    "std": 9,
+    "letter": "e",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "There is an established quality assurance and radiation-safety programme for imaging services.",
+    "text": "The programme includes the documentation of corrective and preventive actions.",
+    "headline": "Are CAPA Actions From Imaging QA Documented and Closed?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The programme includes the documentation of corrective and preventive actions."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 9e"
+  },
+  {
+    "code": "AAC.9.f",
+    "std": 9,
+    "letter": "f",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "There is an established quality assurance and radiation-safety programme for imaging services.",
+    "text": "The radiation-safety programme is implemented.",
+    "headline": "Is Radiation Safety a Working Programme Across All Modalities?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The radiation-safety programme is implemented."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "SAFETY GAP",
+        "detail": "Safety step skipped under workload pressure."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 9f"
+  },
+  {
+    "code": "AAC.9.g",
+    "std": 9,
+    "letter": "g",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "There is an established quality assurance and radiation-safety programme for imaging services.",
+    "text": "Patients are appropriately screened for safety / risk before imaging.",
+    "headline": "Are Patients Screened for Risk Before Every Radiation Exposure?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Patients are appropriately screened for safety / risk before imaging."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 9g"
+  },
+  {
+    "code": "AAC.9.h",
+    "std": 9,
+    "letter": "h",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "There is an established quality assurance and radiation-safety programme for imaging services.",
+    "text": "Imaging personnel and patients use appropriate radiation-safety and monitoring devices where applicable.",
+    "headline": "Do Staff and Patients Use Lead Protection and Dosimeters Correctly?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Imaging personnel and patients use appropriate radiation-safety and monitoring devices where applicable."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "WRONG PERSON",
+        "detail": "Task done by staff without required qualification / training proof."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 9h"
+  },
+  {
+    "code": "AAC.9.i",
+    "std": 9,
+    "letter": "i",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "There is an established quality assurance and radiation-safety programme for imaging services.",
+    "text": "Radiation-safety and monitoring devices are periodically tested, and results are documented.",
+    "headline": "Are Radiation Safety Devices Tested on Schedule \u2014 With Records?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Radiation-safety and monitoring devices are periodically tested, and results are documented."
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "SAFETY GAP",
+        "detail": "Safety step skipped under workload pressure."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 9i"
+  },
+  {
+    "code": "AAC.10.a",
+    "std": 10,
+    "letter": "a",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Patient care is continuous and multi-disciplinary.",
+    "text": "During all phases of care, there is a qualified individual identified as responsible for the patient's care.",
+    "headline": "Is There Always One Named Clinician Responsible for the Patient?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "During all phases of care, there is a qualified individual identified as responsible for the patient's care."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "WRONG PERSON",
+        "detail": "Task done by staff without required qualification / training proof."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 10a"
+  },
+  {
+    "code": "AAC.10.b",
+    "std": 10,
+    "letter": "b",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Patient care is continuous and multi-disciplinary.",
+    "text": "Patient care is coordinated in all care settings within the organisation.",
+    "headline": "Is Care Coordinated Across Wards, ICU, OT and Diagnostics?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Patient care is coordinated in all care settings within the organisation."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 10b"
+  },
+  {
+    "code": "AAC.10.c",
+    "std": 10,
+    "letter": "c",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Patient care is continuous and multi-disciplinary.",
+    "text": "Information about the patient's care and response to treatment is shared among medical, nursing and other care providers.",
+    "headline": "Do Doctors, Nurses and Therapists Share the Same Care Picture?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Information about the patient's care and response to treatment is shared among medical, nursing and other c\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 10c"
+  },
+  {
+    "code": "AAC.10.d",
+    "std": 10,
+    "letter": "d",
+    "level": "Core",
+    "level_color": "#c62828",
+    "standard": "Patient care is continuous and multi-disciplinary.",
+    "text": "The organisation implements standardised hand-over communication during each transition of care including during shift change.",
+    "headline": "Is Hand-Over Communication Standardised at Every Transition?",
+    "bullets": [
+      "Level: Core \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The organisation implements standardised hand-over communication during each transition of care including d\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "INCOMPLETE RECORD",
+        "detail": "Key clinical details missing from the handoff / report / summary."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 10d"
+  },
+  {
+    "code": "AAC.10.e",
+    "std": 10,
+    "letter": "e",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Patient care is continuous and multi-disciplinary.",
+    "text": "Patient transfer within the organisation is done safely.",
+    "headline": "Are Internal Transfers Safe \u2014 With Staff, Equipment and Notes?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Patient transfer within the organisation is done safely."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "EXTERNAL LINK BROKEN",
+        "detail": "Outsourced / transfer partner not vetted or documented."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 10e"
+  },
+  {
+    "code": "AAC.10.f",
+    "std": 10,
+    "letter": "f",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "Patient care is continuous and multi-disciplinary.",
+    "text": "Referral of patients to other departments / specialities follow written guidance.",
+    "headline": "Do Referrals Follow Written Guidance \u2014 Or Just WhatsApp?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Referral of patients to other departments / specialities follow written guidance."
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "EXTERNAL LINK BROKEN",
+        "detail": "Outsourced / transfer partner not vetted or documented."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 10f"
+  },
+  {
+    "code": "AAC.10.g",
+    "std": 10,
+    "letter": "g",
+    "level": "Achievement",
+    "level_color": "#2e7d32",
+    "standard": "Patient care is continuous and multi-disciplinary.",
+    "text": "The organisation ensures predictable service delivery by adhering to defined timelines and informs the patient / family of any delay.",
+    "headline": "Do Patients Know When Services Will Happen \u2014 And When Delayed?",
+    "bullets": [
+      "Level: Achievement \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The organisation ensures predictable service delivery by adhering to defined timelines and informs the pati\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "TIME NOT TRACKED",
+        "detail": "Turnaround / response time is undefined or never measured."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 10g"
+  },
+  {
+    "code": "AAC.10.h",
+    "std": 10,
+    "letter": "h",
+    "level": "Excellence",
+    "level_color": "#6a1b9a",
+    "standard": "Patient care is continuous and multi-disciplinary.",
+    "text": "The organisation has a mechanism in place to monitor whether an adequate clinical intervention has taken place after a critical alert / referral.",
+    "headline": "After a Critical Alert, Do You Check That Action Actually Happened?",
+    "bullets": [
+      "Level: Excellence \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The organisation has a mechanism in place to monitor whether an adequate clinical intervention has taken pl\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "SAFETY GAP",
+        "detail": "Safety step skipped under workload pressure."
+      },
+      {
+        "title": "EXTERNAL LINK BROKEN",
+        "detail": "Outsourced / transfer partner not vetted or documented."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 10h"
+  },
+  {
+    "code": "AAC.11.a",
+    "std": 11,
+    "letter": "a",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The preventive and promotive health services are provided in a safe, collaborative and consistent manner.",
+    "text": "Written guidance governs the implementation of preventive and promotive care as per the scope of services.",
+    "headline": "Is Preventive and Promotive Care Guided by Written Policy?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Written guidance governs the implementation of preventive and promotive care as per the scope of services."
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 11a"
+  },
+  {
+    "code": "AAC.11.b",
+    "std": 11,
+    "letter": "b",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The preventive and promotive health services are provided in a safe, collaborative and consistent manner.",
+    "text": "Organisation shall define evidence-based and contextual age-appropriate screening for non-communicable diseases.",
+    "headline": "Do You Offer Age-Appropriate NCD Screening That Fits Your Context?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Organisation shall define evidence-based and contextual age-appropriate screening for non-communicable dise\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 11b"
+  },
+  {
+    "code": "AAC.11.c",
+    "std": 11,
+    "letter": "c",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The preventive and promotive health services are provided in a safe, collaborative and consistent manner.",
+    "text": "Mental health screening and appropriate intervention is advised for patients wherever applicable.",
+    "headline": "Is Mental Health Screening Built Into Routine Care Where Needed?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Mental health screening and appropriate intervention is advised for patients wherever applicable."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 11c"
+  },
+  {
+    "code": "AAC.11.d",
+    "std": 11,
+    "letter": "d",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The preventive and promotive health services are provided in a safe, collaborative and consistent manner.",
+    "text": "Evidence-based and contextual paediatric and adult immunisation shall be offered / advised as applicable.",
+    "headline": "Are Immunisations Advised Using Evidence \u2014 For Children and Adults?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Evidence-based and contextual paediatric and adult immunisation shall be offered / advised as applicable."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 11d"
+  },
+  {
+    "code": "AAC.11.e",
+    "std": 11,
+    "letter": "e",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The preventive and promotive health services are provided in a safe, collaborative and consistent manner.",
+    "text": "A multi-disciplinary approach is adopted in imparting health education on life-style modifications.",
+    "headline": "Is Lifestyle Education Truly Multi-Disciplinary \u2014 Not One Leaflet?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "A multi-disciplinary approach is adopted in imparting health education on life-style modifications."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 11e"
+  },
+  {
+    "code": "AAC.12.a",
+    "std": 12,
+    "letter": "a",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation has an established discharge process.",
+    "text": "The patient's discharge process is planned in consultation with the patient and/or family.",
+    "headline": "Is Discharge Planned With the Patient and Family \u2014 Not Sprung at the Last Minute?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The patient's discharge process is planned in consultation with the patient and/or family."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 12a"
+  },
+  {
+    "code": "AAC.12.b",
+    "std": 12,
+    "letter": "b",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation has an established discharge process.",
+    "text": "The discharge process is coordinated among various departments and agencies involved (including finance and pharmacy).",
+    "headline": "Do Clinical, Pharmacy and Finance Teams Coordinate Before Discharge?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The discharge process is coordinated among various departments and agencies involved (including finance and\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 12b"
+  },
+  {
+    "code": "AAC.12.c",
+    "std": 12,
+    "letter": "c",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation has an established discharge process.",
+    "text": "Written guidance governs the discharge of patients leaving against medical advice.",
+    "headline": "Is LAMA Handled With Written Guidance and Clear Risk Explanation?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Written guidance governs the discharge of patients leaving against medical advice."
+    ],
+    "mistakes": [
+      {
+        "title": "NO WRITTEN RULE",
+        "detail": "Policy / SOP missing or outdated for this OE."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 12c"
+  },
+  {
+    "code": "AAC.12.d",
+    "std": 12,
+    "letter": "d",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation has an established discharge process.",
+    "text": "A discharge summary is given to all the patients leaving the organisation including patients leaving against medical advice.",
+    "headline": "Does Every Leaving Patient Get a Discharge Summary \u2014 Including LAMA?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "A discharge summary is given to all the patients leaving the organisation including patients leaving agains\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "INCOMPLETE RECORD",
+        "detail": "Key clinical details missing from the handoff / report / summary."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 12d"
+  },
+  {
+    "code": "AAC.12.e",
+    "std": 12,
+    "letter": "e",
+    "level": "Achievement",
+    "level_color": "#2e7d32",
+    "standard": "The organisation has an established discharge process.",
+    "text": "The organisation adheres to planned discharge.",
+    "headline": "Do Planned Discharges Happen on Time \u2014 Or Slip Every Day?",
+    "bullets": [
+      "Level: Achievement \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The organisation adheres to planned discharge."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 12e"
+  },
+  {
+    "code": "AAC.12.f",
+    "std": 12,
+    "letter": "f",
+    "level": "Achievement",
+    "level_color": "#2e7d32",
+    "standard": "The organisation has an established discharge process.",
+    "text": "The care shall be provided by expanding access to health practices through domiciliary visits, where appropriate.",
+    "headline": "Where Needed, Do You Extend Care Through Domiciliary Visits?",
+    "bullets": [
+      "Level: Achievement \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The care shall be provided by expanding access to health practices through domiciliary visits, where approp\u2026"
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 12f"
+  },
+  {
+    "code": "AAC.12.g",
+    "std": 12,
+    "letter": "g",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation has an established discharge process.",
+    "text": "The organisation monitors the discharge time, sets appropriate benchmarks and makes continual improvement.",
+    "headline": "Do You Measure Discharge Time and Improve It Continuously?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "The organisation monitors the discharge time, sets appropriate benchmarks and makes continual improvement."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "TIME NOT TRACKED",
+        "detail": "Turnaround / response time is undefined or never measured."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "NO AUDIT LOOP",
+        "detail": "Never sampled in internal audit \u2014 gaps stay hidden until assessment."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 12g"
+  },
+  {
+    "code": "AAC.13.a",
+    "std": 13,
+    "letter": "a",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation defines the content of the discharge summary.",
+    "text": "A discharge summary is provided to the patients at the time of discharge.",
+    "headline": "Is the Discharge Summary Handed Over at Discharge \u2014 Not Later by Post?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "A discharge summary is provided to the patients at the time of discharge."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "TIME NOT TRACKED",
+        "detail": "Turnaround / response time is undefined or never measured."
+      },
+      {
+        "title": "PATIENT NOT INFORMED",
+        "detail": "Patient/family communication is inconsistent or undocumented."
+      },
+      {
+        "title": "INCOMPLETE RECORD",
+        "detail": "Key clinical details missing from the handoff / report / summary."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 13a"
+  },
+  {
+    "code": "AAC.13.b",
+    "std": 13,
+    "letter": "b",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation defines the content of the discharge summary.",
+    "text": "Discharge summary has a standardised content.",
+    "headline": "Is Discharge Summary Content Standardised Across All Units?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Discharge summary has a standardised content."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "INCOMPLETE RECORD",
+        "detail": "Key clinical details missing from the handoff / report / summary."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 13b"
+  },
+  {
+    "code": "AAC.13.c",
+    "std": 13,
+    "letter": "c",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation defines the content of the discharge summary.",
+    "text": "Discharge summary contains follow-up advice, medication and other instructions in an understandable manner.",
+    "headline": "Can Patients Understand Follow-Up, Medicines and Instructions?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Discharge summary contains follow-up advice, medication and other instructions in an understandable manner."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "INCOMPLETE RECORD",
+        "detail": "Key clinical details missing from the handoff / report / summary."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 13c"
+  },
+  {
+    "code": "AAC.13.d",
+    "std": 13,
+    "letter": "d",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation defines the content of the discharge summary.",
+    "text": "Discharge summary incorporates instructions about when and how to obtain urgent care.",
+    "headline": "Does the Summary Tell Patients When and How to Get Urgent Care?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "Discharge summary incorporates instructions about when and how to obtain urgent care."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "INCOMPLETE RECORD",
+        "detail": "Key clinical details missing from the handoff / report / summary."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 13d"
+  },
+  {
+    "code": "AAC.13.e",
+    "std": 13,
+    "letter": "e",
+    "level": "Commitment",
+    "level_color": "#1565c0",
+    "standard": "The organisation defines the content of the discharge summary.",
+    "text": "In case of death, the summary of the case also includes the cause of death.",
+    "headline": "In Death Cases, Is Cause of Death Clearly Recorded in the Summary?",
+    "bullets": [
+      "Level: Commitment \u2014 assessors will expect evidence, not verbal claims.",
+      "Map this OE to a named owner, document and audit trail.",
+      "In case of death, the summary of the case also includes the cause of death."
+    ],
+    "mistakes": [
+      {
+        "title": "NOT DOCUMENTED",
+        "detail": "Evidence is verbal \u2014 files don't prove compliance."
+      },
+      {
+        "title": "NO OWNER",
+        "detail": "No named person accountable for day-to-day compliance."
+      },
+      {
+        "title": "PROCESS DRIFT",
+        "detail": "Staff follow habit instead of the current written process."
+      },
+      {
+        "title": "INCOMPLETE RECORD",
+        "detail": "Key clinical details missing from the handoff / report / summary."
+      }
+    ],
+    "steps": [
+      "Pull the exact OE text and map current evidence in one page.",
+      "Fix the biggest gap (document, roster, or communication).",
+      "Audit 10 recent cases next week and close non-conformities."
+    ],
+    "display": "AAC 13e"
+  }
+]
