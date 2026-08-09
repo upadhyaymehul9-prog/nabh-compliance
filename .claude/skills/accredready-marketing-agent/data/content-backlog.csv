@@ -6,3 +6,13 @@ CB004,nabh-accreditation-cost-refresh,Refresh: NABH accreditation cost page,refr
 CB005,nabh-renewal-guide,NABH reaccreditation and renewal: what changes the second time,learn,informational,3,live,/learn/nabh-renewal-guide.html,2026-08-09,"Learn page: 4yr Full / 2yr ELC validity, renewal timelines, second-cycle expectations"
 CB006,nabh-quality-manager-first-90-days,New NABH quality manager: where to start,learn,informational,3,live,/learn/nabh-quality-manager-first-90-days.html,2026-08-09,Persona learn page: week-by-week first 90 days for new QM / NABH coordinator
 CB007,interlink-audit,Monthly interlink audit: every informational page links to one commercial page,maintenance,,4,planned,,,Grep public/ HTML for orphan pages; fix links
+CB008,nabh-surveillance-assessment,NABH surveillance assessment mid-cycle,learn,informational,2,built,/learn/nabh-surveillance-assessment.html,2026-08-09,HCO 6th Ed: 21-24 months; sourced nabh.co/PDF
+CB009,nabh-certificate-validity,NABH certificate validity by programme,learn,informational,2,built,/learn/nabh-certificate-validity.html,2026-08-09,HCO 4y; ELC 2y; SHCO confirm-on-certificate
+CB010,nabh-entry-level-vs-full,NABH Entry Level vs Full Accreditation,learn,decision,2,built,/learn/nabh-entry-level-vs-full.html,2026-08-09,ELC 2nd Edition unified framework facts
+CB011,nabh-hco-vs-shco,NABH HCO vs SHCO programme choice,learn,decision,2,built,/learn/nabh-hco-vs-shco.html,2026-08-09,50-bed FAQ + SHCO eligibility from nabh.co
+CB012,nabh-how-to-apply,How to apply for NABH online,learn,informational,3,built,/learn/nabh-how-to-apply.html,2026-08-09,Process steps from nabh.co FAQs
+CB013,nabh-elc-eligibility,NABH ELC eligibility and occupancy,learn,informational,2,built,/learn/nabh-elc-eligibility.html,2026-08-09,Occupancy 20/25/30 and exclusions from ELC page
+CB014,nabh-e-mitra,NABH E-Mitra free toolkit guide,learn,informational,3,built,/learn/nabh-e-mitra.html,2026-08-09,Free templates; no accreditation guarantee
+CB015,nabh-focus-assessment,NABH focus assessment explained,learn,informational,3,built,/learn/nabh-focus-assessment.html,2026-08-09,₹15000+GST from live fee tables; separate policy
+CB016,nabh-poi-quality-connect,NABH POI and Quality Connect training,learn,informational,3,built,/learn/nabh-poi-quality-connect.html,2026-08-09,Official training supports from nabh.co
+CB017,nabh-empanelment-vs-accreditation,NABH vs PMJAY empanelment,learn,decision,2,built,/learn/nabh-empanelment-vs-accreditation.html,2026-08-09,Quality status vs scheme network
