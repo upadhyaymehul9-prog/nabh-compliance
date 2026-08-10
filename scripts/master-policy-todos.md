@@ -297,34 +297,124 @@ Source of the gaps: comparison of the HIC.2 master draft against NABH's own
       **and** confirm against the PDF, rather than inferring from position — and rather than
       trusting either source alone. Doing exactly that on 2026-08-07 turned up the next item.
 
-- [ ] **DATA ERROR: `shco_full_oes` is missing the asterisk on HIC.6.e.** Found 2026-08-07 while
-      verifying the asterisk-position note above. **Not fixed — this is a production write to a
-      table the app reads, so it needs your go-ahead.**
+      **Updated 2026-08-10.** The whole table has now been audited against the PDF and corrected,
+      so `doc_required` is trustworthy for every chapter with one known exception — `HIC.2.c`, left
+      `false` deliberately (see the item under "Deferred from the asterisk audit"). The
+      position-inference warning above still stands: the flag now tells you *which* OE anchors the
+      evidence, and it is regularly not the last one. **HIC.6 is asterisked on b, c, d and e** —
+      four of five OEs — so its draft cannot lean on a single anchor block.
 
-      **The discrepancy.** The official SHCO 3rd Edition PDF, printed p.96 (PDF page index 102),
-      carries an asterisk on **four** HIC.6 objective elements — b, c, d **and e**:
+- [x] **CLOSED 2026-08-10 — DATA ERROR: `shco_full_oes` was missing the asterisk on HIC.6.e, and
+      on 13 other OEs across six chapters.** Logged 2026-08-07; full ten-chapter audit run and
+      applied 2026-08-10.
 
-      > `Commitment e. The established recall procedure is implemented when a breakdown in the`
-      > `sterilisation system is identified. *`
+      **What the audit did.** Every one of the 408 OEs was read from the official SHCO 3rd Edition
+      PDF (`C:/Users/SERVER/Desktop/NABH/SHCO-Standards-3rd-Edition.pdf`) as a complete block —
+      opening line plus every wrapped continuation line — and its asterisk compared against
+      `doc_required`. No flag was inferred from position, level or pattern. Reproducible via
+      `python scripts/asterisk_extract.py --sql` (see the note at the end of this item).
 
-      `shco_full_oes` has `doc_required = true` for HIC.6.b, c and d, but **`false` for HIC.6.e**.
-      Verified twice: once by reading the extracted page and once by re-extracting with the
-      asterisk-bearing lines marked, to rule out a stray footnote glyph. The asterisk is on the
-      wrapped second line of OE e, exactly as it is for b and c.
+      **Result: 14 mismatches, every one in the same direction** — `doc_required = false` where the
+      PDF carries an asterisk. **Zero** OEs were flagged `true` without an asterisk to support it.
 
-      **Why it matters.** HIC.6.e is the recall procedure — the OE that requires documented
-      evidence of what the hospital does when a sterilisation failure is discovered after items
-      have been issued. If HIC.6 is drafted against the DB rather than the PDF, that OE will be
-      built as an ordinary Commitment element and will be under-evidenced in the one place an
-      assessor is most likely to ask for a document.
+      | Chapter | OEs | PDF asterisks | DB was `true` | Mismatches |
+      |---------|----:|--------------:|--------------:|-----------:|
+      | AAC     |  48 |            18 |            16 |          2 |
+      | COP     |  82 |            33 |            27 |      **6** |
+      | MOM     |  52 |            23 |            21 |          2 |
+      | PRE     |  39 |             6 |             6 |          0 |
+      | HIC     |  36 |            18 |            16 |          2 |
+      | PSQ     |  28 |             6 |             6 |          0 |
+      | ROM     |  19 |             6 |             6 |          0 |
+      | FMS     |  29 |             9 |             9 |          0 |
+      | HRM     |  45 |             4 |             4 |          0 |
+      | IMS     |  30 |             9 |             7 |          2 |
+      | **Total** | **408** | **132** | **118** | **14** |
 
-      **Also check the rest of the table.** One wrong flag suggests the extraction that populated
-      `doc_required` mishandled asterisks on wrapped lines generally. Before drafting HIC.6, spot
-      -check every chapter's asterisks against the PDF, not just HIC. The three HIC.5 flags and the
-      six HIC.4 flags were verified during those drafts and are correct.
+      PRE, PSQ, ROM, FMS and HRM are clean in both directions. The three HIC.5 flags and six HIC.4
+      flags verified during those drafts were confirmed correct.
 
-      **Fix:** `update public.shco_full_oes set doc_required = true where oe_code = 'HIC.6.e';`
-      — after confirming the wider audit, so it is done once rather than piecemeal.
+      **13 applied 2026-08-10** (`doc_required` false → true), on instruction:
+
+      `AAC.2.d`, `AAC.5.e`, `COP.2.c`, `COP.5.c`, `COP.7.a`, `COP.8.f`, `COP.10.f`, `COP.13.c`,
+      `HIC.6.e`, `IMS.2.b`, `IMS.4.e`, `MOM.5.f`, `MOM.7.a`
+
+      Post-state verified: 132 PDF asterisks, 131 rows `doc_required = true`, 0 rows `true` without
+      a PDF asterisk, and `HIC.2.c` the single remaining deliberate `false`.
+
+      **1 deliberately NOT applied: `HIC.2.c`** — see its own item below. HIC.2 is approved and was
+      drafted against the old flag, so the flip belongs in the reconciliation pass, not here.
+
+      **Two findings worth carrying forward.**
+
+      1. **The wrapped-line theory only explains half of them.** Seven of the 14 had the asterisk on
+         a wrapped second or third line (AAC.2.d, COP.8.f, COP.10.f, COP.13.c, HIC.6.e, IMS.2.b,
+         IMS.4.e) — the HIC.6.e failure mode. The other seven sat on a single unwrapped line
+         (AAC.5.e, COP.2.c, COP.5.c, COP.7.a, HIC.2.c, MOM.5.f, MOM.7.a). The original extraction
+         was lossy in more than one way, so **pattern-based spot-checking would have missed them**.
+         Whole-table comparison is the only safe method; do not sample.
+      2. **`IMS.2.b` is a Core OE** — the only Core element among the 14. Medical-record contents is
+         an OE an assessor will always ask a document for, and it carried no documented-evidence
+         flag until 2026-08-10. Anything drafted against IMS before that date is under-evidenced
+         there.
+
+      **Reproducing it.** `scripts/asterisk_extract.py` (added 2026-08-10) parses the PDF and
+      self-validates before its output can be trusted: OE count must be 408, the code set and every
+      OE's level must agree with `scripts/shco_oes_data.json`, and no OE block may run long. It
+      exits non-zero and refuses to vouch for its output if any check fails. `--sql` emits the
+      two-way comparison query against `shco_full_oes`.
+
+      Two parser traps it now guards, both of which produced wrong answers on the first pass:
+      - the book's standard headers are inconsistent (`HIC.6.` alone, `MOM.3. <text>`, and
+        `COP 1. <text>` — a space, no dot). Matching only the first form silently drops all of COP;
+      - each chapter ends with a References list, which the chapter's last OE swallows unless the
+        parse is cut there. That produced **false positives on AAC.8.g and IMS.6.e** — both are
+        correctly `false` and were not touched.
+
+      Note the stale path in `scripts/extract_shco_book.py` (`/home/ubuntu/...`) does not resolve on
+      this machine; `asterisk_extract.py` carries the working path and accepts `--pdf`.
+
+---
+
+## Deferred from the asterisk audit (2026-08-10)
+
+- [ ] **`HIC.2.c` is asterisked in the PDF but left `doc_required = false` — flip it in the
+      reconciliation pass, and add the evidence anchor at the same time.** Broken out of the
+      closed audit item above so it is not lost inside it. Deferred on instruction 2026-08-10;
+      the other 13 corrections were applied that day.
+
+      **The finding.** The official SHCO 3rd Edition PDF, printed p.93 (PDF page index 99), carries
+      an asterisk on HIC.2.c:
+
+      > `Commitment c. The organisation adheres to transmission-based precautions.*`
+
+      Single unwrapped line, asterisk glued to the full stop. `shco_full_oes` has `false`.
+
+      **Why it was held back.** HIC.2 is **approved** and its master policy was drafted on
+      2026-08-01 against the old flag. Same rule as everywhere else in this file: an approved
+      document is not reopened outside the reconciliation pass, and the flag and the document must
+      move together. Flipping the flag alone would leave the app telling a hospital that HIC.2.c
+      needs documented evidence while the generated HIC.2 policy contains no anchor for it.
+
+      **What flipping it actually requires — this is the part that is easy to miss.** HIC.2.c needs
+      a **documented-evidence anchor in the HIC.2 master that does not exist today.** The approved
+      draft treats transmission-based precautions as ordinary Commitment content: it names contact,
+      droplet and airborne precautions inside the standard-precautions material, but there is no
+      block built to carry an evidence column an assessor can be walked through — no isolation
+      signage and category-assignment record, no PPE-by-category matrix, no duration-of-precautions
+      and discontinuation criteria, no record of who assigns and reviews the category per patient.
+      That block has to be **written**, not merely flagged. Budget it as a HIC.2 content edit, not
+      a one-line data change.
+
+      **Do it in the same pass as** the three HIC.5 overlaps and the HIC.2/HIC.4 PEP divergences
+      above — all of them reopen HIC.2, and it should be reopened once.
+
+      **The flag itself, when the content is ready:**
+      `update public.shco_full_oes set doc_required = true where oe_code = 'HIC.2.c';`
+
+      Until then `HIC.2.c` is the **only** OE in the table that knowingly disagrees with the PDF.
+      If a future audit reports exactly one mismatch and it is this one, that is the expected state
+      — not a regression.
 
 ---
 
