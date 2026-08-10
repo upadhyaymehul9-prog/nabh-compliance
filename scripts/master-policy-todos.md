@@ -13,6 +13,73 @@ Source of the gaps: comparison of the HIC.2 master draft against NABH's own
 
 ---
 
+# STANDING RULE: Two-tier depth (added 2026-08-10)
+
+**Read this before drafting any master policy. It is a process rule, not a task — it does not
+get ticked off and it does not expire.**
+
+HIC.1–HIC.6 were each drafted at uniform maximum depth. That was the right call for the first
+chapter, because it established the house style, the verification loop and the boundary
+discipline between standards. It does not scale: at that rate the remaining SHCO Full chapters
+would take longer than the programme can wait, and most of the effort lands on objective
+elements that will never be the thing an assessor asks a document for.
+
+From the **seventh master policy onward** — that is, every SHCO Full master policy drafted after
+HIC.6, whichever chapter it belongs to — depth is allocated per objective element, by tier.
+
+**The tier is decided by `doc_required` in `shco_full_oes`.** That flag is the asterisk in the
+official SHCO 3rd Edition PDF and is trustworthy as of the ten-chapter audit of 2026-08-10.
+Verify it against the PDF for the standard being drafted anyway — the audit found 14 wrong flags
+and the cost of checking five OEs is minutes. If a flag is ever corrected, the OE's tier changes
+with it, and an OE promoted to asterisked needs its block rebuilt to Tier 1.
+
+## Tier 1 — full treatment, HIC.6-grade. ONLY for asterisked OEs (`doc_required = true`)
+
+- Full procedure steps carrying the **reasoning**, not just the instruction — why the rule exists,
+  what fails without it, and what the common error is.
+- Full evidence column detail for that OE.
+- **Cross-check against every previously approved standard** for overlaps and contradictions
+  *before* drafting, and state the division of responsibility explicitly in Scope.
+- **Fact-check against current international standards** (CDC, WHO, ISO, AAMI, CLSI and the
+  Indian statutory sources) where the OE is technical or clinical, and record each verified fact
+  in `universal_facts_checklist`.
+- **Byte-level verification loop**: hash checks against the built draft, chunked SQL where the
+  payload exceeds what the tool accepts, and re-verification after every subsequent edit.
+
+## Tier 2 — lighter pass. For non-asterisked OEs
+
+- **Still sourced from the official PDF, still accurate. No shortcuts on correctness.** Tier 2 is
+  less prose, never less true.
+- Procedure steps state the requirement and the method clearly, **without** the extended
+  reasoning and rationale paragraphs Tier 1 carries.
+- Evidence column lists the records needed, without the exhaustive multi-clause detail.
+- **Skip the deep cross-reference audit.** Do one quick check instead: does this OE's core subject
+  matter clearly overlap something already approved? If yes, **flag it in one line** in this file
+  for the reconciliation pass and move on. Do not investigate it fully before drafting.
+- **Skip external best-practice fact-checking** unless something looks factually wrong on its
+  face — in which case check it, because shipping a wrong clinical statement is not a Tier 2
+  saving.
+
+## What this rule does not do
+
+- It does **not** retroactively change HIC.1–HIC.6. Those stay exactly as drafted, at uniform
+  depth. Do not "downgrade" any of them to match this rule.
+- It does **not** apply outside SHCO Full. ELC and HCO programmes are untouched by it; if master
+  policies are ever built for those, the tiering question is decided separately for each.
+- It does **not** relax any structural requirement. Every standard still gets the full control
+  box, OE cross-reference table, abbreviations with the back-pointer, the eight numbered sections,
+  the hash-checked disclaimer, `status = 'draft'`, the five optional sections left unset, and
+  `policy_placeholder_audit.py` wired in from the first build. Tiering governs **depth of content
+  per OE**, nothing else.
+
+## Practical consequence for a standard with no asterisked OE
+
+If a standard carries no asterisked OE at all, the whole standard is Tier 2. Say so explicitly in
+its `universal_facts_checklist` so a later reader knows the shallower treatment was a decision
+taken under this rule, not an omission.
+
+---
+
 ## Deferred from HIC.2 (drafted 2026-08-01)
 
 ### → HIC.1 / HIC.3 / HIC.6 (infection control programme, environment, sterilisation)

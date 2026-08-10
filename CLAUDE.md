@@ -28,6 +28,10 @@ git add src/ public/ supabase/functions/ scripts/ && git commit -m "deploy: auto
 
 Never use `git add .` in auto-sync — it can stage secrets from `.claude/settings.local.json` or other untracked sensitive files.
 
+## Master Policy Drafting Rule
+
+Before drafting ANY SHCO master policy, read the standing rules at the top of `scripts/master-policy-todos.md` — in particular **"STANDING RULE: Two-tier depth (added 2026-08-10)"**, which sets how much depth each objective element gets (Tier 1 full treatment only for asterisked OEs, Tier 2 for the rest). That file is also where deferred content and open reconciliation items are logged. Read it first; do not start drafting from memory of how a previous standard was built.
+
 ## NABH DATA ACCURACY RULES
 
 - Never mention specific OE counts in any public SEO page or marketing content
