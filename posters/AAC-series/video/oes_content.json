@@ -91,12 +91,12 @@
     "code": "AAC.1.c",
     "short": "AAC 1c",
     "file_stem": "AAC-1c",
-    "headline": "Is Each Department's Scope Written Clearly — Including What You Don't Do?",
+    "headline": "2 a ES @ Haemodialysis Is Each Department's © Fistula Scope Written Clearly — © Biopsy Including What You eae",
     "oe_text": "Scope of the clinical services of each department is defined.",
     "requirements": [
       {
-        "title": "Department scope defined",
-        "body": "Scope of clinical services of each department is defined."
+        "title": "Core requirement",
+        "body": "Scope of clinical services of each department is defined* iB."
       },
       {
         "title": "Inclusion or exclusion",
@@ -135,12 +135,12 @@
     "code": "AAC.1.d",
     "short": "AAC 1d",
     "file_stem": "AAC-1d",
-    "headline": "Can Every Patient See Your Service List Without Asking Anyone?",
+    "headline": "@ Neuro e hy a 10} Can Every Patient +. a See Your Service List Mo | & ener",
     "oe_text": "The organisation's defined clinical services are prominently displayed.",
     "requirements": [
       {
-        "title": "Services displayed",
-        "body": "Defined clinical services are prominently displayed."
+        "title": "Core requirement",
+        "body": "Defined clinical services are prominently displayed Z CITIZEN."
       },
       {
         "title": "Visible and permanent",
@@ -179,12 +179,12 @@
     "code": "AAC.2.a",
     "short": "AAC 2a",
     "file_stem": "AAC-2a",
-    "headline": "Is Registration and Admission Running on Written Guidance — Or Habit?",
+    "headline": "—————————— Is Registration and | vison . . . & Admission Running on ADMISSION :",
     "oe_text": "The organisation uses written guidance for registering and admitting patients, including unidentified patients, covering out-patients, day-care, in-patients and emergency patients.",
     "requirements": [
       {
-        "title": "Written guidance exists",
-        "body": "Written guidance covers registering and admitting patients, including unidentified patients."
+        "title": "Core requirement",
+        "body": "admitting patients (including unidentified patients) E."
       },
       {
         "title": "All care settings",
@@ -223,12 +223,12 @@
     "code": "AAC.2.b",
     "short": "AAC 2b",
     "file_stem": "AAC-2b",
-    "headline": "Do Patients Get One Unique ID That Follows Them Everywhere?",
+    "headline": "A AC 2 b ( UHID: AR-20458 a | @_ UID: AR-20. seg eel Aig PT That Follows Them —— U L",
     "oe_text": "A unique identification number is generated at the end of registration, and visit numbers if used are linked back to that unique number.",
     "requirements": [
       {
-        "title": "Unique ID generated",
-        "body": "A unique identification number is generated at the end of registration."
+        "title": "Core requirement",
+        "body": "A unique identification number is generated at the end of registration, and visit numbers if used are linked back to that unique number."
       },
       {
         "title": "Visit numbers linked",
@@ -267,12 +267,12 @@
     "code": "AAC.2.c",
     "short": "AAC 2c",
     "file_stem": "AAC-2c",
-    "headline": "Are You Accepting Patients You Cannot Actually Treat?",
-    "oe_text": "Patients are accepted only if the organisation can provide the required service; registration and admission staff know the services the organisation provides.",
+    "headline": "CAN WE PROVIDE ve E) caroiovocy ° £} vom repuacem Are You Accepting AY?",
+    "oe_text": "Patients are accepted only if the organisation can provide the required service.",
     "requirements": [
       {
-        "title": "Match services to capacity",
-        "body": "Patients are accepted only if the organisation can provide the required service."
+        "title": "Core requirement",
+        "body": "organisation can provide the required service START G:."
       },
       {
         "title": "Staff know the list",
@@ -311,12 +311,12 @@
     "code": "AAC.2.d",
     "short": "AAC 2d",
     "file_stem": "AAC-2d",
-    "headline": "What Happens When Every Bed Is Full — Is It Written Down?",
-    "oe_text": "Written guidance addresses managing patients during non-availability of beds; alternate organisations for redirection are known; temporary holding areas if used have adequate infrastructure and a defined timeframe.",
+    "headline": "TEMPORARY HOLDING AREA What Happens When — Every Bed Is Full — . = Is It Written Down? et eld",
+    "oe_text": "Written guidance addresses managing patients during non-availability of beds.",
     "requirements": [
       {
-        "title": "No-bed guidance",
-        "body": "Written guidance addresses managing patients during non-availability of beds."
+        "title": "Core requirement",
+        "body": "Written guidance addresses managing patients Ds . = 7."
       },
       {
         "title": "Alternate organisations",
@@ -355,12 +355,12 @@
     "code": "AAC.2.e",
     "short": "AAC 2e",
     "file_stem": "AAC-2e",
-    "headline": "Is Access Based on Clinical Need — Or Who Arrives First?",
-    "oe_text": "Access to healthcare services is prioritised according to the clinical needs of the patient; patients needing earlier response are identified and prioritised in outpatient and diagnostic settings.",
+    "headline": "‘CLINICAL PRIOR Assess eng Y Priortise Is Access Basedon 4% vozl",
+    "oe_text": "Access to healthcare services is prioritised according to the clinical needs of the patient.",
     "requirements": [
       {
-        "title": "Clinical prioritisation",
-        "body": "Access to healthcare services is prioritised according to clinical needs."
+        "title": "Core requirement",
+        "body": "according to the clinical needs of the patient gb iBETabeTaynd."
       },
       {
         "title": "Identify urgent patients",
@@ -532,7 +532,7 @@
     "short": "AAC 3d",
     "file_stem": "AAC-3d",
     "headline": "Does Every Transfer Carry a Clear Clinical Summary?",
-    "oe_text": "A clinical summary is provided during transfer of patients, with relevant clinical information for continuity of care.",
+    "oe_text": "A clinical summary is provided during transfer of patients.",
     "requirements": [
       {
         "title": "Clinical summary",
@@ -575,20 +575,20 @@
     "code": "AAC.4.a",
     "short": "AAC 4a",
     "file_stem": "AAC-4a",
-    "headline": "The initial assessment of the out-patients, daycare, in-patients and emergency patients is done in?",
-    "oe_text": "The initial assessment of the out-patients, daycare, in-patients and emergency patients is done in a standardised manner.",
+    "headline": "The initial assessment of out-patients?",
+    "oe_text": "The initial assessment of out-patients, daycare, in-patients and emergency patients is done in a standardised manner.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "The initial assessment of the out-patients."
+        "body": "The initial assessment of out-patients, daycare, in-patients and emergency patients is done in a standardised manner."
       },
       {
         "title": "Key point 2",
-        "body": "in-patients and emergency patients is done in a standardised manner."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -610,29 +610,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.4.a and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.4.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.4.b",
     "short": "AAC 4b",
     "file_stem": "AAC-4b",
-    "headline": "HM core The initial assessment is performed by qualified personnel?",
-    "oe_text": "HM core The initial assessment is performed by qualified personnel.",
+    "headline": "The initial assessment includes screening for nutritional needs?",
+    "oe_text": "The initial assessment includes screening for nutritional needs, pain, fall risk and other relevant risks as applicable.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "HM core The initial assessment is performed by qualified personnel."
+        "body": "The initial assessment includes screening for nutritional needs, pain, fall risk and other relevant risks as applicable."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -654,29 +654,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.4.b and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.4.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.4.c",
     "short": "AAC 4c",
     "file_stem": "AAC-4c",
-    "headline": "4G NABH The initial assessment is performed within a time frame based on the needs of the patient?",
-    "oe_text": "4G NABH The initial assessment is performed within a time frame based on the needs of the patient.",
+    "headline": "The initial assessment is completed within a defined time frame appropriate to the setting?",
+    "oe_text": "The initial assessment is completed within a defined time frame appropriate to the setting.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "4G NABH The initial assessment is performed within a time frame based on the needs of the patient."
+        "body": "The initial assessment is completed within a defined time frame appropriate to the setting."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -698,29 +698,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.4.c and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.4.c and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.4.d",
     "short": "AAC 4d",
     "file_stem": "AAC-4d",
-    "headline": "Initial assessment of daycare and in-patients includes nursing assessment, which is done at the?",
-    "oe_text": "Initial assessment of daycare and in-patients includes nursing assessment, which is done at the time of admission and documented.",
+    "headline": "Qualified individuals perform the initial assessment in their area of competence?",
+    "oe_text": "Qualified individuals perform the initial assessment in their area of competence.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Initial assessment of daycare and in-patients includes nursing assessment."
+        "body": "Qualified individuals perform the initial assessment in their area of competence."
       },
       {
         "title": "Key point 2",
-        "body": "which is done at the time of admission and documented."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -742,21 +742,21 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.4.d and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.4.d and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.4.e",
     "short": "AAC 4e",
     "file_stem": "AAC-4e",
-    "headline": "Does Every In-Patient Leave Assessment With a Documented Care Plan?",
-    "oe_text": "The initial assessment for in-patients results in a documented care plan prepared by the treating doctor.",
+    "headline": "Does Every In-Patient Leave Assessment With a Documented Care Plan? 1h?",
+    "oe_text": "The initial assessment for in-patients results in a documented care plan.",
     "requirements": [
       {
-        "title": "Documented care plan",
-        "body": "Initial in-patient assessment results in a documented care plan."
+        "title": "Core requirement",
+        "body": "The initial assessment for in-patients results in a documented care plan prepared by the treating doctor."
       },
       {
         "title": "Treating doctor owns it",
@@ -795,20 +795,20 @@
     "code": "AAC.4.f",
     "short": "AAC 4f",
     "file_stem": "AAC-4f",
-    "headline": "HM core The care plan is countersigned by the clinician in-charge of the patient within 24 hours?",
-    "oe_text": "HM core The care plan is countersigned by the clinician in-charge of the patient within 24 hours.",
+    "headline": "Patients are reassessed at appropriate intervals to determine response to treatment and to plan further care?",
+    "oe_text": "Patients are reassessed at appropriate intervals to determine response to treatment and to plan further care.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "HM core The care plan is countersigned by the clinician in-charge of the patient within 24 hours."
+        "body": "Patients are reassessed at appropriate intervals to determine response to treatment and to plan further care."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -830,21 +830,21 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.4.f and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.4.f and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.4.g",
     "short": "AAC 4g",
     "file_stem": "AAC-4g",
-    "headline": "Does the Care Plan Already Think About Needs After Discharge?",
-    "oe_text": "The care plan includes identification of needs regarding care following discharge, especially for patients with extremes of age or complex needs.",
+    "headline": "Does the Care Plan Already Think About | 7°\" Needs After Discharge?",
+    "oe_text": "The care plan includes identification of needs regarding care following discharge.",
     "requirements": [
       {
-        "title": "Post-discharge needs",
-        "body": "Care plan identifies needs regarding care following discharge."
+        "title": "Core requirement",
+        "body": "The care plan includes identification of needs regarding care following discharge, especially for patients with extremes of age or complex needs."
       },
       {
         "title": "High-risk focus",
@@ -883,20 +883,20 @@
     "code": "AAC.5.a",
     "short": "AAC 5a",
     "file_stem": "AAC-5a",
-    "headline": "Scope of laboratory services is commensurate to the services provided by the organisation?",
-    "oe_text": "Scope of laboratory services is commensurate to the services provided by the organisation.",
+    "headline": "Patients are reassessed at appropriate intervals to determine their response to treatment and to?",
+    "oe_text": "Patients are reassessed at appropriate intervals to determine their response to treatment and to plan for further treatment or discharge.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Scope of laboratory services is commensurate to the services provided by the organisation."
+        "body": "Patients are reassessed at appropriate intervals to determine their response to treatment and to plan for further treatment or discharge."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -918,29 +918,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.5.a and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.5.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.5.b",
     "short": "AAC 5b",
     "file_stem": "AAC-5b",
-    "headline": "Out-patients are informed of their next follow-up, where appropriate?",
-    "oe_text": "Out-patients are informed of their next follow-up, where appropriate.",
+    "headline": "The organisation lays down guidelines and implements processes to identify early warning signs of?",
+    "oe_text": "The organisation lays down guidelines and implements processes to identify early warning signs of change or deterioration in clinical conditions.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Out-patients are informed of their next follow-up."
+        "body": "The organisation lays down guidelines and implements processes to identify early warning signs of change or deterioration in clinical conditions."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -962,29 +962,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.5.b and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.5.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.5.c",
     "short": "AAC 5c",
     "file_stem": "AAC-5c",
-    "headline": "NABH For in-patients during re-assessment, the care plan is monitored and modified, where found necessary?",
-    "oe_text": "NABH For in-patients during re-assessment, the care plan is monitored and modified, where found necessary.",
+    "headline": "Is hand-over communication standardised at every transition?",
+    "oe_text": "The organisation implements standardised hand-over communication during each staffing shift and between patient care units.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "NABH For in-patients during re-assessment."
+        "body": "The organisation implements standardised hand-over communication during each staffing shift and between patient care units."
       },
       {
         "title": "Key point 2",
-        "body": "the care plan is monitored and modified."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1006,29 +1006,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.5.c and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.5.c and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.5.d",
     "short": "AAC 5d",
     "file_stem": "AAC-5d",
-    "headline": "Staff involved in direct clinical care document re-assessments?",
-    "oe_text": "Staff involved in direct clinical care document re-assessments.",
+    "headline": "During all phases of care?",
+    "oe_text": "During all phases of care, there is a qualified individual identified as responsible for the patient's care.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Staff involved in direct clinical care document re-assessments."
+        "body": "During all phases of care, there is a qualified individual identified as responsible for the patient's care."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1050,29 +1050,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.5.d and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.5.d and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.5.e",
     "short": "AAC 5e",
     "file_stem": "AAC-5e",
-    "headline": "The organisation lays down guidelines and implements processes to identify early warning signs of?",
-    "oe_text": "The organisation lays down guidelines and implements processes to identify early warning signs of change or deterioration in clinical conditions for initiating prompt intervention.",
+    "headline": "Patient care is continuous and coordinated across settings and services?",
+    "oe_text": "Patient care is continuous and coordinated across settings and services.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "The organisation lays down guidelines and implements processes to identify early warning signs of change or deterioration in clinical conditions for initiating "
+        "body": "Patient care is continuous and coordinated across settings and services."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1094,9 +1094,9 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.5.e and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.5.e and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
@@ -1112,11 +1112,11 @@
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1138,29 +1138,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.6.a and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.6.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.6.b",
     "short": "AAC 6b",
     "file_stem": "AAC-6b",
-    "headline": "The infrastructure (physical and equipment) is adequate to provide the defined scope of services?",
-    "oe_text": "The infrastructure (physical and equipment) is adequate to provide the defined scope of services.",
+    "headline": "The infrastructure (physical and equipment) is adequate to provide the defined scope of laboratory services?",
+    "oe_text": "The infrastructure (physical and equipment) is adequate to provide the defined scope of laboratory services.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "The infrastructure (physical and equipment) is adequate to provide the defined scope of services."
+        "body": "The infrastructure (physical and equipment) is adequate to provide the defined scope of laboratory services."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1182,29 +1182,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.6.b and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.6.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.6.c",
     "short": "AAC 6c",
     "file_stem": "AAC-6c",
-    "headline": "Humanresourceis adequate to provide the defined scope of services?",
-    "oe_text": "Humanresourceis adequate to provide the defined scope of services.",
+    "headline": "Human resources are adequate to provide the defined scope of laboratory services?",
+    "oe_text": "Human resources are adequate to provide the defined scope of laboratory services.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Humanresourceis adequate to provide the defined scope of services."
+        "body": "Human resources are adequate to provide the defined scope of laboratory services."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1226,9 +1226,9 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.6.c and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.6.c and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
@@ -1244,11 +1244,11 @@
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1270,29 +1270,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.6.d and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.6.d and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.6.e",
     "short": "AAC 6e",
     "file_stem": "AAC-6e",
-    "headline": "NABH Requisition for tests, collection, identification, handling, safe transportation, processing?",
-    "oe_text": "NABH Requisition for tests, collection, identification, handling, safe transportation, processing and disposal of a specimen is performed according to written guidance.",
+    "headline": "Policies and procedures guide the collection?",
+    "oe_text": "Policies and procedures guide the collection, identification, handling, safe transportation, processing and disposal of specimens.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "NABH Requisition for tests."
+        "body": "Policies and procedures guide the collection, identification, handling, safe transportation, processing and disposal of specimens."
       },
       {
         "title": "Key point 2",
-        "body": "processing and disposal of a specimen is performed according to written guidance."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1314,29 +1314,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.6.e and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.6.e and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.6.f",
     "short": "AAC 6f",
     "file_stem": "AAC-6f",
-    "headline": "Laboratory results are available within a defined time frame?",
-    "oe_text": "Laboratory results are available within a defined time frame.",
+    "headline": "Laboratory results are reported in a standardised manner within a defined time frame?",
+    "oe_text": "Laboratory results are reported in a standardised manner within a defined time frame.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Laboratory results are available within a defined time frame."
+        "body": "Laboratory results are reported in a standardised manner within a defined time frame."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1358,29 +1358,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.6.f and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.6.f and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.6.g",
     "short": "AAC 6g",
     "file_stem": "AAC-6g",
-    "headline": "HM cone Critical results are intimated to the person concerned at the earliest?",
-    "oe_text": "HM cone Critical results are intimated to the person concerned at the earliest.",
+    "headline": "Critical results are intimated to the concerned personnel promptly?",
+    "oe_text": "Critical results are intimated to the concerned personnel promptly.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "HM cone Critical results are intimated to the person concerned at the earliest."
+        "body": "Critical results are intimated to the concerned personnel promptly."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1402,21 +1402,21 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.6.g and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.6.g and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.6.h",
     "short": "AAC 6h",
     "file_stem": "AAC-6h",
-    "headline": "Are Lab Reports Standardised So Clinicians Can Trust the Format?",
+    "headline": "Are Lab Reports Standardised So Cliniciz Can Trust the Format?",
     "oe_text": "Laboratory reports are available in a standardised manner within a defined time frame.",
     "requirements": [
       {
-        "title": "Standard format",
-        "body": "Laboratory reports follow a standardised format."
+        "title": "Core requirement",
+        "body": "Laboratory reports are available in a standardised manner within a defined time frame."
       },
       {
         "title": "Defined turnaround",
@@ -1455,20 +1455,20 @@
     "code": "AAC.6.i",
     "short": "AAC 6i",
     "file_stem": "AAC-6i",
-    "headline": "Results are reported in a standardised manner?",
-    "oe_text": "Results are reported in a standardised manner.",
+    "headline": "Laboratory safety programme is implemented and laboratory personnel are trained in safe practices?",
+    "oe_text": "Laboratory safety programme is implemented and laboratory personnel are trained in safe practices.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Results are reported in a standardised manner."
+        "body": "Laboratory safety programme is implemented and laboratory personnel are trained in safe practices."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1490,21 +1490,21 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.6.i and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.6.i and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.6.j",
     "short": "AAC 6j",
     "file_stem": "AAC-6j",
-    "headline": "When You Outsource Lab Tests, Is Quality Locked in Writing?",
-    "oe_text": "Laboratory tests not available in the organisation are outsourced to organisations selected on quality and competence, with written arrangements.",
+    "headline": "When You _—— Outsource Lab Tests, Brat) Is Quality Locked nets | iti ? OUTSOURCED aes?",
+    "oe_text": "Laboratory tests not available in the organisation are outsourced to organisations based on quality.",
     "requirements": [
       {
-        "title": "Outsource on quality",
-        "body": "Unavailable lab tests are outsourced based on quality and competence."
+        "title": "Core requirement",
+        "body": "Laboratory tests not available in the organisation are outsourced to organisations selected on quality and competence, with written arrangements."
       },
       {
         "title": "Written arrangement",
@@ -1543,51 +1543,7 @@
     "code": "AAC.7.a",
     "short": "AAC 7a",
     "file_stem": "AAC-7a",
-    "headline": "The organisation has a process for discharge of all patients including medico-legal cases?",
-    "oe_text": "The organisation has a process for discharge of all patients including medico-legal cases.",
-    "requirements": [
-      {
-        "title": "Key point 1",
-        "body": "The organisation has a process for discharge of all patients including medico-legal cases."
-      },
-      {
-        "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
-      },
-      {
-        "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
-      }
-    ],
-    "gaps": [
-      {
-        "title": "POLICY ON PAPER ONLY",
-        "body": "A document exists, but day-to-day practice does not follow it."
-      },
-      {
-        "title": "STAFF CAN'T EXPLAIN",
-        "body": "Frontline teams cannot describe the required steps to an assessor."
-      },
-      {
-        "title": "RECORDS INCOMPLETE",
-        "body": "Evidence is missing, late, or not attributable to a named owner."
-      },
-      {
-        "title": "NO MONITORING LOOP",
-        "body": "Gaps are not tracked, trending, or closed with corrective action."
-      }
-    ],
-    "steps": [
-      "Assign a process owner for AAC.7.a and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
-    ]
-  },
-  {
-    "code": "AAC.7.b",
-    "short": "AAC 7b",
-    "file_stem": "AAC-7b",
-    "headline": "The laboratory quality assurance programme is implemented?",
+    "headline": "Is your laboratory QA programme running — or only written?",
     "oe_text": "The laboratory quality assurance programme is implemented.",
     "requirements": [
       {
@@ -1596,11 +1552,11 @@
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1622,29 +1578,73 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.7.b and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.7.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.7.b",
+    "short": "AAC 7b",
+    "file_stem": "AAC-7b",
+    "headline": "Is your laboratory QA programme running — or only written?",
+    "oe_text": "The laboratory quality assurance programme includes internal quality control.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The laboratory quality assurance programme includes internal quality control."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.7.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.7.c",
     "short": "AAC 7c",
     "file_stem": "AAC-7c",
-    "headline": "Discharge summary contains follow up advice, medication and other instructions in an understandable manner?",
-    "oe_text": "Discharge summary contains follow up advice, medication and other instructions in an understandable manner.",
+    "headline": "The laboratory participates in external quality assurance programmes as applicable?",
+    "oe_text": "The laboratory participates in external quality assurance programmes as applicable.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Discharge summary contains follow up advice."
+        "body": "The laboratory participates in external quality assurance programmes as applicable."
       },
       {
         "title": "Key point 2",
-        "body": "medication and other instructions in an understandable manner."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1666,29 +1666,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.7.c and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.7.c and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.7.d",
     "short": "AAC 7d",
     "file_stem": "AAC-7d",
-    "headline": "The programme addresses the clinico-pathological meeting(s)?",
-    "oe_text": "The programme addresses the clinico-pathological meeting(s).",
+    "headline": "Corrective and preventive actions from laboratory QA are documented and implemented?",
+    "oe_text": "Corrective and preventive actions from laboratory QA are documented and implemented.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "The programme addresses the clinico-pathological meeting(s)."
+        "body": "Corrective and preventive actions from laboratory QA are documented and implemented."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1710,29 +1710,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.7.d and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.7.d and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.7.e",
     "short": "AAC 7e",
     "file_stem": "AAC-7e",
-    "headline": "In case of death the summary of the case also includes the cause of death?",
-    "oe_text": "In case of death the summary of the case also includes the cause of death.",
+    "headline": "Laboratory equipment is calibrated and maintained as per defined schedule?",
+    "oe_text": "Laboratory equipment is calibrated and maintained as per defined schedule.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "In case of death the summary of the case also includes the cause of death."
+        "body": "Laboratory equipment is calibrated and maintained as per defined schedule."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1754,29 +1754,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.7.e and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.7.e and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.7.f",
     "short": "AAC 7f",
     "file_stem": "AAC-7f",
-    "headline": "Laboratory personnel are appropriately trained in safe practices?",
-    "oe_text": "Laboratory personnel are appropriately trained in safe practices.",
+    "headline": "Reagents and consumables are stored and used as per manufacturer guidance?",
+    "oe_text": "Reagents and consumables are stored and used as per manufacturer guidance.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Laboratory personnel are appropriately trained in safe practices."
+        "body": "Reagents and consumables are stored and used as per manufacturer guidance."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1798,29 +1798,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.7.f and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.7.f and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.7.g",
     "short": "AAC 7g",
     "file_stem": "AAC-7g",
-    "headline": "Laboratory personnel are provided with appropriate safety measures?",
-    "oe_text": "Laboratory personnel are provided with appropriate safety measures.",
+    "headline": "The laboratory has a documented procedure for dealing with out-of-range quality control results?",
+    "oe_text": "The laboratory has a documented procedure for dealing with out-of-range quality control results.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Laboratory personnel are provided with appropriate safety measures."
+        "body": "The laboratory has a documented procedure for dealing with out-of-range quality control results."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1842,16 +1842,16 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.7.g and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.7.g and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.8.a",
     "short": "AAC 8a",
     "file_stem": "AAC-8a",
-    "headline": "Imaging services comply with legal and other requirements?",
+    "headline": "Do your imaging services meet legal and regulatory requirements?",
     "oe_text": "Imaging services comply with legal and other requirements.",
     "requirements": [
       {
@@ -1860,11 +1860,11 @@
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1886,9 +1886,9 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.8.a and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.8.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
@@ -1904,11 +1904,11 @@
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -1930,21 +1930,21 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.8.b and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.8.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.8.c",
     "short": "AAC 8c",
     "file_stem": "AAC-8c",
-    "headline": "Are Machines and Staff Adequate for Your Imaging Scope?",
-    "oe_text": "Infrastructure (physical and equipment) and human resources are adequate to provide the defined scope of imaging services.",
+    "headline": "Are Machines and Staf Adequate for Your Imaging Scope?",
+    "oe_text": "Infrastructure and human resources are adequate to provide the defined scope of imaging services.",
     "requirements": [
       {
-        "title": "Equipment adequacy",
-        "body": "Physical infrastructure and equipment match the imaging scope."
+        "title": "Core requirement",
+        "body": "adequate to provide defined scope of imaging services."
       },
       {
         "title": "Staffing adequacy",
@@ -1983,12 +1983,12 @@
     "code": "AAC.8.d",
     "short": "AAC 8d",
     "file_stem": "AAC-8d",
-    "headline": "Who Performs and Interprets Imaging — Are They Trained and Supervised?",
+    "headline": "Who Performs and Interprets Imaging — Are They Trained and Superv?",
     "oe_text": "Qualified and trained personnel perform, supervise and interpret the imaging investigations.",
     "requirements": [
       {
-        "title": "Qualified performers",
-        "body": "Qualified and trained personnel perform imaging investigations."
+        "title": "Core requirement",
+        "body": "Qualified and trained personnel perform, supervise and interpret the imaging investigations."
       },
       {
         "title": "Supervision",
@@ -2027,20 +2027,20 @@
     "code": "AAC.8.e",
     "short": "AAC 8e",
     "file_stem": "AAC-8e",
-    "headline": "The infrastructure (physical and equipment) and human resources are adequate to provide for its?",
-    "oe_text": "The infrastructure (physical and equipment) and human resources are adequate to provide for its defined scope of services.",
+    "headline": "Policies and procedures guide identification and safe transportation of patients to imaging?",
+    "oe_text": "Policies and procedures guide identification and safe transportation of patients to imaging.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "The infrastructure (physical and equipment) and human resources are adequate to provide for its defined scope of services."
+        "body": "Policies and procedures guide identification and safe transportation of patients to imaging."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -2062,29 +2062,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.8.e and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.8.e and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.8.f",
     "short": "AAC 8f",
     "file_stem": "AAC-8f",
-    "headline": "HB core Critical results are intimated immediately to the personnel concerned?",
-    "oe_text": "HB core Critical results are intimated immediately to the personnel concerned.",
+    "headline": "Imaging results are reported within a defined time frame?",
+    "oe_text": "Imaging results are reported within a defined time frame.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "HB core Critical results are intimated immediately to the personnel concerned."
+        "body": "Imaging results are reported within a defined time frame."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -2106,29 +2106,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.8.f and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.8.f and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.8.g",
     "short": "AAC 8g",
     "file_stem": "AAC-8g",
-    "headline": "Results are reported in a standardised manner?",
-    "oe_text": "Results are reported in a standardised manner.",
+    "headline": "Critical imaging findings are intimated promptly to the concerned personnel?",
+    "oe_text": "Critical imaging findings are intimated promptly to the concerned personnel.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Results are reported in a standardised manner."
+        "body": "Critical imaging findings are intimated promptly to the concerned personnel."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -2150,29 +2150,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.8.g and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.8.g and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.8.h",
     "short": "AAC 8h",
     "file_stem": "AAC-8h",
-    "headline": "HM cone There is a mechanism to address the recall / amendment of reports whenever applicable?",
-    "oe_text": "HM cone There is a mechanism to address the recall / amendment of reports whenever applicable.",
+    "headline": "Patients are prepared for imaging procedures as per defined protocols?",
+    "oe_text": "Patients are prepared for imaging procedures as per defined protocols.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "HM cone There is a mechanism to address the recall / amendment of reports whenever applicable."
+        "body": "Patients are prepared for imaging procedures as per defined protocols."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -2194,29 +2194,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.8.h and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.8.h and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.8.i",
     "short": "AAC 8i",
     "file_stem": "AAC-8i",
-    "headline": "Imaging tests not available in the organisation are outsourced to the organisation(s) based on?",
-    "oe_text": "Imaging tests not available in the organisation are outsourced to the organisation(s) based on their quality assurance system.",
+    "headline": "Imaging safety programme including radiation safety is implemented?",
+    "oe_text": "Imaging safety programme including radiation safety is implemented.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Imaging tests not available in the organisation are outsourced to the organisation(s) based on their quality assurance system."
+        "body": "Imaging safety programme including radiation safety is implemented."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -2238,9 +2238,9 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.8.i and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.8.i and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
@@ -2256,11 +2256,11 @@
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -2282,29 +2282,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.9.a and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.9.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.9.b",
     "short": "AAC 9b",
     "file_stem": "AAC-9b",
-    "headline": "donot NABH Asradaten Snare Hees @ NABH Quality assurance program for nuclear medicine (PET scan /?",
-    "oe_text": "donot NABH Asradaten Snare Hees @ NABH Quality assurance program for nuclear medicine (PET scan / Gamma camera / SPECT CT) and radiotherapy (Linear accelerator, Brachy Therapy) shall be implemented as per AERB guidelines. Safety equipment shall undergo testing, as stated in AAC.9.i. Quality assuranc",
+    "headline": "Imaging equipment is calibrated and maintained as per defined schedule?",
+    "oe_text": "Imaging equipment is calibrated and maintained as per defined schedule.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "donot NABH Asradaten Snare Hees @ NABH Quality assurance program for nuclear medicine (PET scan / Gamma camera / SPECT CT) and radiotherapy (Linear accelerator."
+        "body": "Imaging equipment is calibrated and maintained as per defined schedule."
       },
       {
         "title": "Key point 2",
-        "body": "Brachy Therapy) shall be implemented as per AERB guidelines."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Safety equipment shall undergo testing."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -2326,21 +2326,21 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.9.b and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.9.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.9.c",
     "short": "AAC 9c",
     "file_stem": "AAC-9c",
-    "headline": "Do You Peer-Review CT/MRI Reports on a Defined Sample?",
-    "oe_text": "The imaging quality assurance programme addresses periodic internal or external peer review of imaging results using appropriate sampling.",
+    "headline": "Do You Peer-Review CT/MRI Reports ona Defined Sample? cash at?",
+    "oe_text": "Periodic peer review of imaging results is done using appropriate sampling.",
     "requirements": [
       {
-        "title": "Peer review exists",
-        "body": "Periodic internal or external peer review of imaging results is done."
+        "title": "Core requirement",
+        "body": "external peer review of imaging results O = :."
       },
       {
         "title": "Sampling defined",
@@ -2379,20 +2379,20 @@
     "code": "AAC.9.d",
     "short": "AAC 9d",
     "file_stem": "AAC-9d",
-    "headline": "The programme addresses the clinico-radiological meeting(s)?",
-    "oe_text": "The programme addresses the clinico-radiological meeting(s).",
+    "headline": "Internal quality control activities for imaging are implemented as applicable?",
+    "oe_text": "Internal quality control activities for imaging are implemented as applicable.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "The programme addresses the clinico-radiological meeting(s)."
+        "body": "Internal quality control activities for imaging are implemented as applicable."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -2414,17 +2414,17 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.9.d and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.9.d and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.9.e",
     "short": "AAC 9e",
     "file_stem": "AAC-9e",
-    "headline": "Are CAPA Actions From Imaging QA Documented and Closed?",
-    "oe_text": "The imaging quality assurance programme includes documentation of corrective and preventive actions.",
+    "headline": "Are CAPA Actions Fro! Imaging QA Document and Closed?",
+    "oe_text": "Corrective and preventive actions from imaging QA are documented.",
     "requirements": [
       {
         "title": "CAPA documented",
@@ -2467,20 +2467,20 @@
     "code": "AAC.9.f",
     "short": "AAC 9f",
     "file_stem": "AAC-9f",
-    "headline": "HE core The radiation-safety programme is implemented?",
-    "oe_text": "HE core The radiation-safety programme is implemented.",
+    "headline": "Radiation safety measures are implemented and monitored?",
+    "oe_text": "Radiation safety measures are implemented and monitored.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "HE core The radiation-safety programme is implemented."
+        "body": "Radiation safety measures are implemented and monitored."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -2502,21 +2502,21 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.9.f and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.9.f and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.9.g",
     "short": "AAC 9g",
     "file_stem": "AAC-9g",
-    "headline": "Are Patients Screened for Risk Before Every Radiation Exposure?",
-    "oe_text": "Patients are appropriately screened for safety and risk before imaging that involves radiation or other imaging hazards.",
+    "headline": "Are Patients Screened for Risk SAFETY sorte Before Every aa Radiation Exposure? seroma [V?",
+    "oe_text": "Patients are screened for safety and risk before imaging.",
     "requirements": [
       {
-        "title": "Pre-imaging screening",
-        "body": "Patients are screened for safety and risk before imaging."
+        "title": "Core requirement",
+        "body": "Patients are appropriately screened for safety and risk before imaging that involves radiation or other imaging hazards."
       },
       {
         "title": "Radiation focus",
@@ -2555,20 +2555,20 @@
     "code": "AAC.9.h",
     "short": "AAC 9h",
     "file_stem": "AAC-9h",
-    "headline": "Imaging personnel and patients use appropriate radiation- safety and monitoring devices where applicable?",
-    "oe_text": "Imaging personnel and patients use appropriate radiation- safety and monitoring devices where applicable.",
+    "headline": "Pregnancy status is ascertained where relevant before radiation exposure?",
+    "oe_text": "Pregnancy status is ascertained where relevant before radiation exposure.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Imaging personnel and patients use appropriate radiation- safety and monitoring devices where applicable."
+        "body": "Pregnancy status is ascertained where relevant before radiation exposure."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -2590,29 +2590,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.9.h and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.9.h and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.9.i",
     "short": "AAC 9i",
     "file_stem": "AAC-9i",
-    "headline": "Radiation-safety and monitoring devices are periodically tested, and results are documented?",
-    "oe_text": "Radiation-safety and monitoring devices are periodically tested, and results are documented.",
+    "headline": "Lead aprons and protective devices are available and checked?",
+    "oe_text": "Lead aprons and protective devices are available and checked.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Radiation-safety and monitoring devices are periodically tested."
+        "body": "Lead aprons and protective devices are available and checked."
       },
       {
         "title": "Key point 2",
-        "body": "and results are documented."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -2634,21 +2634,21 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.9.i and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.9.i and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.9.j",
     "short": "AAC 9j",
     "file_stem": "AAC-9j",
-    "headline": "Are Imaging and Ancillary Staff Trained in Imaging and Radiation Safety?",
-    "oe_text": "Imaging and ancillary personnel are trained in imaging safety practices and radiation-safety measures, including MRI safety zones and hazards for non-clinical staff who enter imaging areas.",
+    "headline": "Are Imaging and Ancillary Staff Trained in Imaging and Radiation Safety e Imaging and ancillary personnel trained in imaging safety?",
+    "oe_text": "Imaging and ancillary personnel are trained in imaging and radiation safety.",
     "requirements": [
       {
-        "title": "Safety training",
-        "body": "Imaging and ancillary personnel are trained in imaging safety practices."
+        "title": "Core requirement",
+        "body": "e Imaging and ancillary personnel trained in imaging safety."
       },
       {
         "title": "Radiation safety",
@@ -2688,7 +2688,7 @@
     "short": "AAC 9k",
     "file_stem": "AAC-9k",
     "headline": "Is Imaging Signage Prominently Displayed Where It Must Be?",
-    "oe_text": "Signage related to imaging services and safety is prominently displayed in appropriate locations.",
+    "oe_text": "Signage related to imaging and radiation safety is prominently displayed.",
     "requirements": [
       {
         "title": "Safety signage",
@@ -2731,20 +2731,20 @@
     "code": "AAC.10.a",
     "short": "AAC 10a",
     "file_stem": "AAC-10a",
-    "headline": "During all phases of care, there is a qualified individual identified as responsible for the patient’s care,?",
-    "oe_text": "During all phases of care, there is a qualified individual identified as responsible for the patient’s care,.",
+    "headline": "During all phases of care?",
+    "oe_text": "During all phases of care, there is a qualified individual identified as responsible for the patient.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "there is a qualified individual identified as responsible for the patient’s care."
+        "body": "During all phases of care, there is a qualified individual identified as responsible for the patient."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -2766,29 +2766,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.10.a and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.10.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.10.b",
     "short": "AAC 10b",
     "file_stem": "AAC-10b",
-    "headline": "Patient care Is coordinated in all care settings within the organisation?",
-    "oe_text": "Patient care Is coordinated in all care settings within the organisation.",
+    "headline": "Patient care is continuous and multidisciplinary in nature?",
+    "oe_text": "Patient care is continuous and multidisciplinary in nature.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Patient care Is coordinated in all care settings within the organisation."
+        "body": "Patient care is continuous and multidisciplinary in nature."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -2810,29 +2810,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.10.b and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.10.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.10.c",
     "short": "AAC 10c",
     "file_stem": "AAC-10c",
-    "headline": "ntact @ NABH Information about the patient’s care and response to treatment is shared among?",
-    "oe_text": "ntact @ NABH Information about the patient’s care and response to treatment is shared among medical, nursing and other care providers.",
+    "headline": "Information about the patient's care is shared among care providers?",
+    "oe_text": "Information about the patient's care is shared among care providers.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "ntact @ NABH Information about the patient’s care and response to treatment is shared among medical."
+        "body": "Information about the patient's care is shared among care providers."
       },
       {
         "title": "Key point 2",
-        "body": "nursing and other care providers."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -2854,21 +2854,21 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.10.c and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.10.c and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.10.d",
     "short": "AAC 10d",
     "file_stem": "AAC-10d",
-    "headline": "Is Hand-Over Communication Standardised at Every Transition?",
-    "oe_text": "The organisation implements standardised hand-over communication during each staffing shift and at every transition of care.",
+    "headline": "Is Hand-Over Communication a Standardised at ele Every Transition? “oan OD)?",
+    "oe_text": "Standardised hand-over communication is implemented during shifts and transitions of care.",
     "requirements": [
       {
-        "title": "Standard hand-over",
-        "body": "Hand-over communication is standardised."
+        "title": "Core requirement",
+        "body": "The organisation implements standardised hand-over communication during each staffing shift and at every transition of care."
       },
       {
         "title": "Shift changes",
@@ -2907,20 +2907,20 @@
     "code": "AAC.10.e",
     "short": "AAC 10e",
     "file_stem": "AAC-10e",
-    "headline": "Patient transfer within the organisation is done safely?",
-    "oe_text": "Patient transfer within the organisation is done safely.",
+    "headline": "The organisation provides laboratory and imaging services commensurate to its scope of services?",
+    "oe_text": "The organisation provides laboratory and imaging services commensurate to its scope of services.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Patient transfer within the organisation is done safely."
+        "body": "The organisation provides laboratory and imaging services commensurate to its scope of services."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -2942,29 +2942,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.10.e and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.10.e and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.10.f",
     "short": "AAC 10f",
     "file_stem": "AAC-10f",
-    "headline": "HE cone Referral of patients to other departments / specialities follow written guidance?",
-    "oe_text": "HE cone Referral of patients to other departments / specialities follow written guidance.",
+    "headline": "Care planning is coordinated across disciplines as required by patient need?",
+    "oe_text": "Care planning is coordinated across disciplines as required by patient need.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "HE cone Referral of patients to other departments / specialities follow written guidance."
+        "body": "Care planning is coordinated across disciplines as required by patient need."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -2986,29 +2986,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.10.f and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.10.f and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.10.g",
     "short": "AAC 10g",
     "file_stem": "AAC-10g",
-    "headline": "The organisation ensures predictable service delivery by adhering to defined timelines and informs?",
-    "oe_text": "The organisation ensures predictable service delivery by adhering to defined timelines and informs the patient / family and / or caregiver whenever there is a change in schedule.",
+    "headline": "Patients and families are informed and involved in care decisions as appropriate?",
+    "oe_text": "Patients and families are informed and involved in care decisions as appropriate.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "The organisation ensures predictable service delivery by adhering to defined timelines and informs the patient / family and / or caregiver whenever there is a c"
+        "body": "Patients and families are informed and involved in care decisions as appropriate."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3030,29 +3030,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.10.g and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.10.g and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.10.h",
     "short": "AAC 10h",
     "file_stem": "AAC-10h",
-    "headline": "The organisation has a mechanism in place to monitor whether an adequate clinical intervention has?",
-    "oe_text": "The organisation has a mechanism in place to monitor whether an adequate clinical intervention has taken place in response to a critical value alert.",
+    "headline": "The organisation has a process to address patients' rights and education needs during care?",
+    "oe_text": "The organisation has a process to address patients' rights and education needs during care.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "The organisation has a mechanism in place to monitor whether an adequate clinical intervention has taken place in response to a critical value alert."
+        "body": "The organisation has a process to address patients' rights and education needs during care."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3074,29 +3074,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.10.h and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.10.h and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.11.a",
     "short": "AAC 11a",
     "file_stem": "AAC-11a",
-    "headline": "Written guidance governs the implementation of preventive and promotive care as per the scope of services?",
-    "oe_text": "Written guidance governs the implementation of preventive and promotive care as per the scope of services.",
+    "headline": "Written guidance governs preventive and promotive health services where provided?",
+    "oe_text": "Written guidance governs preventive and promotive health services where provided.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Written guidance governs the implementation of preventive and promotive care as per the scope of services."
+        "body": "Written guidance governs preventive and promotive health services where provided."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3118,29 +3118,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.11.a and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.11.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.11.b",
     "short": "AAC 11b",
     "file_stem": "AAC-11b",
-    "headline": "Organisation shall define evidenced based and contextual age-appropriate screening for non-?",
-    "oe_text": "Organisation shall define evidenced based and contextual age-appropriate screening for non- communicable diseases.",
+    "headline": "Patients are screened for nutritional needs and provided appropriate intervention?",
+    "oe_text": "Patients are screened for nutritional needs and provided appropriate intervention.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Organisation shall define evidenced based and contextual age-appropriate screening for non- communicable diseases."
+        "body": "Patients are screened for nutritional needs and provided appropriate intervention."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3162,17 +3162,17 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.11.b and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.11.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.11.c",
     "short": "AAC 11c",
     "file_stem": "AAC-11c",
-    "headline": "Is Mental Health Screening Built Into Care Where It Applies?",
-    "oe_text": "Mental health screening and appropriate intervention are advised for patients wherever applicable.",
+    "headline": "Is Mental Health Screening Built Into — Care Where It Applies? J ======?",
+    "oe_text": "Mental health screening and appropriate intervention are advised wherever applicable.",
     "requirements": [
       {
         "title": "Screening where applicable",
@@ -3215,20 +3215,20 @@
     "code": "AAC.11.d",
     "short": "AAC 11d",
     "file_stem": "AAC-11d",
-    "headline": "(BM cone Mental health screening and appropriate intervention is advised for patients wherever applicable?",
-    "oe_text": "(BM cone Mental health screening and appropriate intervention is advised for patients wherever applicable.",
+    "headline": "Pain assessment and management are carried out in a standardised manner?",
+    "oe_text": "Pain assessment and management are carried out in a standardised manner.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "(BM cone Mental health screening and appropriate intervention is advised for patients wherever applicable."
+        "body": "Pain assessment and management are carried out in a standardised manner."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3250,29 +3250,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.11.d and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.11.d and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.11.e",
     "short": "AAC 11e",
     "file_stem": "AAC-11e",
-    "headline": "iawaes,  4 NABH A multi-disciplinary approach is adopted in imparting health education on?",
-    "oe_text": "iawaes,  4 NABH A multi-disciplinary approach is adopted in imparting health education on life-style modifications.",
+    "headline": "Fall-risk assessment and preventive measures are implemented for at-risk patients?",
+    "oe_text": "Fall-risk assessment and preventive measures are implemented for at-risk patients.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "4 NABH A multi-disciplinary approach is adopted in imparting health education on life-style modifications."
+        "body": "Fall-risk assessment and preventive measures are implemented for at-risk patients."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3294,29 +3294,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.11.e and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.11.e and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.12.a",
     "short": "AAC 12a",
     "file_stem": "AAC-12a",
-    "headline": "The patient’s discharge process is planned in consultation with the patient and /or family?",
-    "oe_text": "The patient’s discharge process is planned in consultation with the patient and /or family.",
+    "headline": "The patient's discharge process is planned in consultation with the patient and/or family?",
+    "oe_text": "The patient's discharge process is planned in consultation with the patient and/or family.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "The patient’s discharge process is planned in consultation with the patient and /or family."
+        "body": "The patient's discharge process is planned in consultation with the patient and/or family."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3338,29 +3338,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.12.a and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.12.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.12.b",
     "short": "AAC 12b",
     "file_stem": "AAC-12b",
-    "headline": "HM core The discharge process is coordinated among various departments and agencies involved?",
-    "oe_text": "HM core The discharge process is coordinated among various departments and agencies involved (including medico-legal and absconded cases).",
+    "headline": "The discharge process is coordinated to ensure continuity of care?",
+    "oe_text": "The discharge process is coordinated to ensure continuity of care.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "HM core The discharge process is coordinated among various departments and agencies involved (including medico-legal and absconded cases)."
+        "body": "The discharge process is coordinated to ensure continuity of care."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3382,29 +3382,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.12.b and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.12.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.12.c",
     "short": "AAC 12c",
     "file_stem": "AAC-12c",
-    "headline": "NABH Written guidance governs the discharge of patients leaving against medical advice?",
-    "oe_text": "NABH Written guidance governs the discharge of patients leaving against medical advice.",
+    "headline": "Patients and families are educated about post-discharge care and follow-up?",
+    "oe_text": "Patients and families are educated about post-discharge care and follow-up.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "NABH Written guidance governs the discharge of patients leaving against medical advice."
+        "body": "Patients and families are educated about post-discharge care and follow-up."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3426,29 +3426,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.12.c and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.12.c and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.12.d",
     "short": "AAC 12d",
     "file_stem": "AAC-12d",
-    "headline": "A discharge summary is given to all the patients leaving the organisation including patients?",
-    "oe_text": "A discharge summary is given to all the patients leaving the organisation including patients leaving against medical advice.",
+    "headline": "Medications to be continued after discharge are clearly communicated?",
+    "oe_text": "Medications to be continued after discharge are clearly communicated.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "A discharge summary is given to all the patients leaving the organisation including patients leaving against medical advice."
+        "body": "Medications to be continued after discharge are clearly communicated."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3470,29 +3470,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.12.d and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.12.d and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.12.e",
     "short": "AAC 12e",
     "file_stem": "AAC-12e",
-    "headline": "The organisation adheres to planned discharge,?",
-    "oe_text": "The organisation adheres to planned discharge,.",
+    "headline": "Follow-up advice and warning signs are explained at discharge?",
+    "oe_text": "Follow-up advice and warning signs are explained at discharge.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "The organisation adheres to planned discharge."
+        "body": "Follow-up advice and warning signs are explained at discharge."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3514,29 +3514,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.12.e and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.12.e and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.12.f",
     "short": "AAC 12f",
     "file_stem": "AAC-12f",
-    "headline": "The care shall be provided by expanding access to health practices through domiciliary visits,?",
-    "oe_text": "The care shall be provided by expanding access to health practices through domiciliary visits, wherever applicable.",
+    "headline": "Medico-legal and special-category discharges follow written guidance?",
+    "oe_text": "Medico-legal and special-category discharges follow written guidance.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "The care shall be provided by expanding access to health practices through domiciliary visits."
+        "body": "Medico-legal and special-category discharges follow written guidance."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3558,29 +3558,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.12.f and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.12.f and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.12.g",
     "short": "AAC 12g",
     "file_stem": "AAC-12g",
-    "headline": "The organisation monitors the discharge time, sets appropriate benchmarks and makes continual improvement?",
-    "oe_text": "The organisation monitors the discharge time, sets appropriate benchmarks and makes continual improvement.",
+    "headline": "Discharge against medical advice is managed as per written guidance?",
+    "oe_text": "Discharge against medical advice is managed as per written guidance.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "The organisation monitors the discharge time."
+        "body": "Discharge against medical advice is managed as per written guidance."
       },
       {
         "title": "Key point 2",
-        "body": "sets appropriate benchmarks and makes continual improvement."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3602,29 +3602,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.12.g and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.12.g and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.13.a",
     "short": "AAC 13a",
     "file_stem": "AAC-13a",
-    "headline": "Adischarge summary is provided to the patients at the time of discharge?",
-    "oe_text": "Adischarge summary is provided to the patients at the time of discharge.",
+    "headline": "Is the discharge summary handed over at discharge — not later?",
+    "oe_text": "A discharge summary is provided to the patients at the time of discharge.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Adischarge summary is provided to the patients at the time of discharge."
+        "body": "A discharge summary is provided to the patients at the time of discharge."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3646,29 +3646,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.13.a and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.13.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.13.b",
     "short": "AAC 13b",
     "file_stem": "AAC-13b",
-    "headline": "Discharge summary hasastandardised content?",
-    "oe_text": "Discharge summary hasastandardised content.",
+    "headline": "Is the discharge summary handed over at discharge — not later?",
+    "oe_text": "The discharge summary contains relevant clinical information for continuity of care.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Discharge summary hasastandardised content."
+        "body": "The discharge summary contains relevant clinical information for continuity of care."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3690,29 +3690,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.13.b and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.13.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.13.c",
     "short": "AAC 13c",
     "file_stem": "AAC-13c",
-    "headline": "Discharge summary contains follow-up advice, medication and other instructions in an understandable manner?",
-    "oe_text": "Discharge summary contains follow-up advice, medication and other instructions in an understandable manner.",
+    "headline": "Is the discharge summary handed over at discharge — not later?",
+    "oe_text": "The discharge summary is prepared by a competent doctor.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Discharge summary contains follow-up advice."
+        "body": "The discharge summary is prepared by a competent doctor."
       },
       {
         "title": "Key point 2",
-        "body": "medication and other instructions in an understandable manner."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3734,29 +3734,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.13.c and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.13.c and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.13.d",
     "short": "AAC 13d",
     "file_stem": "AAC-13d",
-    "headline": "Discharge summary incorporates instructions about when and how to obtain urgent care?",
-    "oe_text": "Discharge summary incorporates instructions about when and how to obtain urgent care.",
+    "headline": "Is the discharge summary handed over at discharge — not later?",
+    "oe_text": "A copy of the discharge summary is retained in the medical record.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "Discharge summary incorporates instructions about when and how to obtain urgent care."
+        "body": "A copy of the discharge summary is retained in the medical record."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3778,29 +3778,29 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.13.d and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.13.d and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   },
   {
     "code": "AAC.13.e",
     "short": "AAC 13e",
     "file_stem": "AAC-13e",
-    "headline": "Incase of death, the summary of the case also includes the cause of death?",
-    "oe_text": "Incase of death, the summary of the case also includes the cause of death.",
+    "headline": "In case of death?",
+    "oe_text": "In case of death, an appropriate summary of the case is provided.",
     "requirements": [
       {
         "title": "Key point 1",
-        "body": "the summary of the case also includes the cause of death."
+        "body": "In case of death, an appropriate summary of the case is provided."
       },
       {
         "title": "Key point 2",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       },
       {
         "title": "Key point 3",
-        "body": "Implement, document, and train staff on this OE."
+        "body": "Document the process, train staff, and verify with a spot check."
       }
     ],
     "gaps": [
@@ -3822,9 +3822,9 @@
       }
     ],
     "steps": [
-      "Assign a process owner for AAC.13.e and review current practice against the OE text.",
-      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
-      "Brief the involved teams this week and verify with a quick spot audit."
+      "Assign a process owner for AAC.13.e and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
     ]
   }
 ]
