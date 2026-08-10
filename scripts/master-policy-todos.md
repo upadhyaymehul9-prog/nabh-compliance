@@ -104,8 +104,10 @@ Source of the gaps: comparison of the HIC.2 master draft against NABH's own
          Distribution). Same class of error as HIC.4's since-corrected 48: the old counter matched
          only the exact string and so could not see "[Hospital to define — guidance]" forms.
          HIC.3 is approved and was deliberately NOT corrected on 2026-08-06 — fix it in this pass.
-         `policy_placeholder_audit.py` now reports the correct figure for all three; run
-         `python build_hic3.py` to reproduce it. Check HIC.1 at the same time: its checklist
+         `policies/build/policy_placeholder_audit.py` now reports the correct figure for all three;
+         run `python policies/build/build_hic3.py` to reproduce it (the build scripts and their
+         outputs moved into `policies/` on 2026-08-10; output paths are script-relative, so the
+         command works from any working directory). Check HIC.1 at the same time: its checklist
          figure should read 25 (24 exact + 1 variant) — verify before assuming it is right.
 
       CLOSED 2026-08-06 — no longer part of this pass: HIC.2 checklist flag 26 (hepatitis C: no

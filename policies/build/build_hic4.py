@@ -17,6 +17,15 @@ monitoring_audit, exceptions) are deliberately left unset, matching HIC.1-3.
 import json
 import re
 
+from pathlib import Path
+
+# Output locations, resolved from this file rather than the working directory,
+# so the build produces the same result regardless of where it is run from.
+_HERE = Path(__file__).resolve().parent          # policies/build
+_POLICIES = _HERE.parent                         # policies
+DRAFTS = _POLICIES / "drafts"
+SQL_OUT = _POLICIES / "sql"
+
 STANDARD_CODE = "HIC.4"
 CHAPTER = "HIC"
 OE_CODES = ["HIC.4.a", "HIC.4.b", "HIC.4.c", "HIC.4.d", "HIC.4.e", "HIC.4.f"]
@@ -877,7 +886,7 @@ draft = {
 
 # newline="\n" is REQUIRED -- see build_hic1.py. Windows CRLF inside the policy text
 # breaks the renderer's step regex and silently flattens every step.
-with open("hic4_draft.json", "w", encoding="utf-8", newline="\n") as f:
+with open(DRAFTS / "hic4_draft.json", "w", encoding="utf-8", newline="\n") as f:
     json.dump(draft, f, ensure_ascii=False, indent=2)
 
 
@@ -939,7 +948,7 @@ insert into public.shco_policy_masters (
 );
 """
 
-with open("hic4_insert.sql", "w", encoding="utf-8", newline="\n") as f:
+with open(SQL_OUT / "hic4_insert.sql", "w", encoding="utf-8", newline="\n") as f:
     f.write(sql)
 
 

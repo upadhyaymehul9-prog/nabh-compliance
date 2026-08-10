@@ -9,6 +9,15 @@ Column types confirmed against the live schema (2026-08-03):
 import json
 import re
 
+from pathlib import Path
+
+# Output locations, resolved from this file rather than the working directory,
+# so the build produces the same result regardless of where it is run from.
+_HERE = Path(__file__).resolve().parent          # policies/build
+_POLICIES = _HERE.parent                         # policies
+DRAFTS = _POLICIES / "drafts"
+SQL_OUT = _POLICIES / "sql"
+
 STANDARD_CODE = "HIC.3"
 CHAPTER = "HIC"
 OE_CODES = ["HIC.3.a", "HIC.3.b", "HIC.3.c", "HIC.3.d", "HIC.3.e", "HIC.3.f"]
@@ -683,7 +692,7 @@ draft = {
 
 # newline="\n" is REQUIRED -- see build_hic1.py. Windows CRLF inside the policy text
 # breaks the renderer's step regex and silently flattens every step.
-with open("hic3_draft.json", "w", encoding="utf-8", newline="\n") as f:
+with open(DRAFTS / "hic3_draft.json", "w", encoding="utf-8", newline="\n") as f:
     json.dump(draft, f, ensure_ascii=False, indent=2)
 
 
@@ -755,11 +764,11 @@ on conflict (standard_code) do update set
   updated_at = now();
 """
 
-with open("hic3_insert.sql", "w", encoding="utf-8", newline="\n") as f:
+with open(SQL_OUT / "hic3_insert.sql", "w", encoding="utf-8", newline="\n") as f:
     f.write(sql)
 
 # --- guards ------------------------------------------------------------------
-_raw = open("hic3_insert.sql", "rb").read()
+_raw = open(SQL_OUT / "hic3_insert.sql", "rb").read()
 assert b"\r" not in _raw, "CR found in hic3_insert.sql -- step formatting will silently regress"
 
 _step_re = re.compile(r"^(\d+)\.\s([^\n]+)\n\n([\s\S]*)$")

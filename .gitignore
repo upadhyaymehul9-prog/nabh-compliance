@@ -22,10 +22,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Python bytecode (build scripts under policies/build, skill scripts, etc.)
+__pycache__/
+*.py[cod]
+
 # Claude Code local settings (may contain tokens)
 .claude/settings.local.json
 supabase/.temp/
-.claude/skills/ui-ux-pro-max/scripts/__pycache__/
 
 # LinkedIn automation logs (local / CI)
 marketing/linkedin/post-log.json

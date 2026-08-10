@@ -3,6 +3,15 @@
 import json
 import re
 
+from pathlib import Path
+
+# Output locations, resolved from this file rather than the working directory,
+# so the build produces the same result regardless of where it is run from.
+_HERE = Path(__file__).resolve().parent          # policies/build
+_POLICIES = _HERE.parent                         # policies
+DRAFTS = _POLICIES / "drafts"
+SQL_OUT = _POLICIES / "sql"
+
 STANDARD_CODE = "HIC.1"
 CHAPTER = "HIC"
 OE_CODES = ["HIC.1.a", "HIC.1.b", "HIC.1.c", "HIC.1.d", "HIC.1.e", "HIC.1.f"]
@@ -552,7 +561,7 @@ draft = {
 # including inside the policy text, and the docx renderer's step regex
 # (/^(\d+)\.\s([^\n]+)\n\n([\s\S]*)$/) then fails to match "Title\r\n\r\nBody" --
 # every step silently falls back to one unformatted paragraph.
-with open("hic1_draft.json", "w", encoding="utf-8", newline="\n") as f:
+with open(DRAFTS / "hic1_draft.json", "w", encoding="utf-8", newline="\n") as f:
     json.dump(draft, f, ensure_ascii=False, indent=2)
 
 
@@ -639,11 +648,11 @@ on conflict (standard_code) do update set
   updated_at = now();
 """
 
-with open("hic1_insert.sql", "w", encoding="utf-8", newline="\n") as f:
+with open(SQL_OUT / "hic1_insert.sql", "w", encoding="utf-8", newline="\n") as f:
     f.write(sql)
 
 # Guard: a CR anywhere in the emitted SQL breaks the renderer's step regex.
-_raw = open("hic1_insert.sql", "rb").read()
+_raw = open(SQL_OUT / "hic1_insert.sql", "rb").read()
 assert b"\r" not in _raw, "CR found in hic1_insert.sql -- step formatting will silently regress"
 
 # Guard: every step must still match the renderer's regex after round-tripping.
