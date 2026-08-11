@@ -234,9 +234,45 @@ taken under this rule, not an omission.
       Storing it without rendering it would reproduce the dormant-`version`-column error described
       above: data present, document unchanged, and a false belief the job was done.
 
+      **AND `updated_at` — merged into this item 2026-08-11, as agreed.** Third dormant column in
+      the same row, same pass, same reason: it is the field a revision-history entry should be
+      derived from or reconciled against, and today it cannot be trusted to say anything.
+
+      Verified against the live table on 2026-08-11:
+      - the column **already exists** — `updated_at timestamptz NOT NULL DEFAULT now()`. Unlike
+        `version` (wrong type) and `revision_history` / `author_byline` (absent), nothing needs to
+        be added. This one is a behaviour gap, not a schema gap;
+      - **there is no trigger on the table at all** — `pg_trigger` returns zero non-internal rows
+        for `shco_policy_masters`. So the default fires once on insert and nothing ever moves it;
+      - consequently **all six rows have `updated_at` exactly equal to `created_at`**, to the
+        microsecond, including HIC.4 — the row whose text was demonstrably edited after approval on
+        2026-08-06, which is the very edit that opened this TODO. The column currently asserts that
+        no master policy has ever been modified, which is false.
+
+      So `updated_at` is dormant in the same way `version` is, and for a worse reason: `version` is
+      at least honest about being untouched, whereas `updated_at` looks like a live audit field and
+      is silently wrong. Do not build revision history on top of it until the trigger exists —
+      a revision-history entry stamped from a frozen `updated_at` inherits the frozen date.
+
+      **Decision (2026-08-11):** fix it with a `before update` trigger setting
+      `new.updated_at = now()`, not by asking every caller to set it. Callers get missed; this
+      table is written by SQL scripts, edge functions and hand-run statements alike.
+
+      Two things to settle when building, both deliberately left open here:
+      - **backfill.** The six existing rows' `updated_at` values are known-wrong for any row edited
+        after insert. There is no record of the true edit timestamps, so either leave them and note
+        it in the first revision-history entry, or set them from the revision history being written
+        in this same pass. Prefer the latter — the pass is authoring that history anyway.
+      - **whether the document renders it.** "Last updated" in the control box is useful, but it
+        overlaps the revision-history table's own date column. Decide once; do not render the same
+        date twice under two names.
+
       **To build, in the same pass as version and revision history:**
       1. migration: `alter table public.shco_policy_masters add column author_byline text;`
          (alongside `version` → text and the `revision_history` jsonb column)
+      1a. same migration: the `updated_at` trigger — `create trigger ... before update on
+         public.shco_policy_masters for each row execute function <set_updated_at>()` — plus the
+         backfill decided above. No `add column` needed; the column is already there.
       2. `PolicyDocData` in `_shared/policy-doc-template.ts`: add `authorByline?: string`
       3. render it in the control box or immediately beneath it — not in the footer, which already
          carries hospital name, doc no. and the confidentiality mark
