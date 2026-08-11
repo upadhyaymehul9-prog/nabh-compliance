@@ -523,6 +523,60 @@ taken under this rule, not an omission.
 
 ---
 
+## Deferred from the drafting-order review (2026-08-11)
+
+- [ ] **DATA ERROR: `MOM.5.standard_text` is wrong — it is a verbatim copy of MOM.3's. Fix it
+      before anyone drafts MOM.** Found 2026-08-11 while counting OEs and asterisks per standard
+      to choose the seventh master policy. Logged, deliberately NOT fixed that day.
+
+      **The error.** Both `scripts/shco_oes_data.json` and the live `public.shco_full_oes` carry:
+
+      > `MOM.3` → "Medications are prescribed safely and rationally."
+      > `MOM.5` → "Medications are prescribed safely and rationally."
+
+      Identical strings. MOM.3's is correct. MOM.5's is not: its six objective elements are
+      unambiguously about **dispensing**, not prescribing —
+
+      | OE | Level | Text |
+      |----|-------|------|
+      | MOM.5.a | Commitment | Dispensing of medications is done safely. |
+      | MOM.5.b | Commitment | Medication recalls are handled effectively. |
+      | MOM.5.c | Commitment | Near-expiry medications are handled effectively. |
+      | MOM.5.d | Core | Dispensed medications are labelled. |
+      | MOM.5.e | Core | High-risk medication orders are verified before dispensing. |
+      | MOM.5.f | Commitment | Return of medications to the pharmacy is addressed. |
+
+      The OE rows themselves are fine. **Only the standard-level text is wrong**, and it is wrong
+      in both the JSON and the database, so the two agree with each other and a consistency check
+      between them will not catch it. The chapter reads as though it covers prescribing twice and
+      dispensing never.
+
+      **Why it matters more than a cosmetic typo.** The standard text is what a master policy
+      carries in its header and what the OE cross-reference table restates. Drafting MOM.5 from the
+      stored text would produce a dispensing policy titled and scoped as a prescribing policy —
+      the same class of failure as the HIC.6.e asterisk, where trusting the stored value produced
+      an under-built document. MOM.5 is also **5-of-6 asterisked**, the densest Tier 1 standard in
+      the chapter, so it is the last place to start from a wrong premise.
+
+      **What has NOT been done, and must be, before the fix is applied:** the correct wording has
+      not been read out of the official SHCO 3rd Edition PDF. Do not write it from memory or infer
+      it from the OE list — read the standard header on the page, the same discipline the asterisk
+      audit used. `scripts/asterisk_extract.py` already parses these headers and can be pointed at
+      the MOM chapter to produce the authoritative string.
+
+      **Scope of the fix when it is made:** `scripts/shco_oes_data.json`,
+      `scripts/shco_oes_by_chapter.json` (same text, denormalised per OE row) and the
+      `standard_text` column on all six `MOM.5.*` rows in `shco_full_oes`. Check the same day
+      whether any other standard shares its text with a neighbour — this was found by eye while
+      reading a table, not by a check that would have caught a second instance. A one-line
+      `group by standard_text having count(distinct standard_code) > 1` over the whole table
+      settles it for all 408 OEs at once.
+
+      No app-facing urgency: nothing renders `standard_text` for MOM today, because no MOM master
+      policy exists. It becomes urgent the moment MOM drafting starts.
+
+---
+
 ## Cross-cutting: document control scaffolding
 
 Not a content gap — a **format** gap found against NABH's sample policy
