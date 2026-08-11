@@ -523,6 +523,53 @@ taken under this rule, not an omission.
 
 ---
 
+## Deferred from the Required Records / version infrastructure pass (2026-08-11)
+
+- [ ] **AUTHORED-CONTENT DEBT: HIC.1 and HIC.2 have no evidence or responsible data at all, so
+      they render no Required Records / Evidence Checklist section. This is missing CONTENT, not a
+      missing feature.** Confirmed on instruction 2026-08-11. Do it in the reconciliation pass,
+      which already reopens HIC.2.
+
+      **Read this before concluding the Required Records feature is "done".** The feature works;
+      it is live in `policies/build/render_previews.ts` and in the shipping template. It renders
+      for HIC.3, HIC.4, HIC.5 and HIC.6. It renders **nothing** for HIC.1 and HIC.2, and the
+      section is omitted entirely rather than printed empty. A reader opening the HIC.1 document
+      will not see a gap — they will see a document that simply has no records section, which
+      looks deliberate and is not.
+
+      **The actual state of the data.** Every `oe_mapping` entry in HIC.1 and HIC.2 carries only
+      three keys — `oe_code`, `requirement`, `steps`. HIC.3-HIC.6 carry five, adding `evidence`
+      and `responsible`. Verified against both the live rows and the draft files, so it is how
+      those two were authored, not a load or migration fault.
+
+      | Standard | OEs | OEs with evidence | Records rendered |
+      |----------|----:|------------------:|-----------------:|
+      | HIC.1    |   6 |             **0** |         **none** |
+      | HIC.2    |   7 |             **0** |         **none** |
+      | HIC.3    |   6 |                 6 |               40 |
+      | HIC.4    |   6 |                 6 |               62 |
+      | HIC.5    |   6 |                 6 |               73 |
+      | HIC.6    |   5 |                 5 |               69 |
+
+      **Second effect, easy to miss:** the same gap also drops the **Responsible** column from
+      those two documents' OE Cross-Reference tables. The trimmed table renders four columns when
+      `responsible` data exists and falls back to three when it does not, so HIC.1 and HIC.2 lose
+      the ownership column as well. Both symptoms have the same single cause and the same fix.
+
+      **Why it was not fixed in that pass.** Authoring evidence and responsible values for 11 OEs
+      is writing new content into two approved documents. The pass was explicitly scoped to
+      reformatting existing content and to infrastructure, and the standing rule is that an
+      approved document is not reopened outside the reconciliation pass.
+
+      **What the fix actually costs.** Roughly 40-70 records per standard judging by HIC.3-HIC.6,
+      so 11 OEs is a real authoring job, not a data-entry one — each record has to be the evidence
+      an assessor would actually be shown for that OE, traceable to the procedure steps already
+      written. Budget it as content work. Note HIC.2 is being reopened in that pass anyway for the
+      `HIC.2.c` transmission-based-precautions evidence anchor; **do both in one edit**, since the
+      HIC.2.c anchor will itself need evidence records that belong in this same structure.
+
+---
+
 ## Deferred from the drafting-order review (2026-08-11)
 
 - [ ] **DATA ERROR: `MOM.5.standard_text` is wrong — it is a verbatim copy of MOM.3's. Fix it

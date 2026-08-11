@@ -12,8 +12,18 @@ export interface OeMappingEntry {
   oeCode: string;
   requirement: string;
   steps: string;
+  // Full evidence detail. As of the Required Records change this is rendered ONLY
+  // by the Required Records / Evidence Checklist section — it is deliberately no
+  // longer a column in the OE Cross-Reference table, so the same list is never
+  // printed twice in one document under two headings.
   evidence?: string;
   responsible?: string;
+}
+
+export interface RevisionEntry {
+  version: string;
+  date: string;
+  description: string;
 }
 
 export interface PolicyDocData {
@@ -38,6 +48,14 @@ export interface PolicyDocData {
   references: string;
   distribution: string;
   disclaimer?: string;
+  // Document version as TEXT ("1.0", "1.1", "2.10") — semantic versions are not
+  // numbers and must not be stored or sorted as such. Falls back to "1.0" so a
+  // row that has not been backfilled still renders a sane document.
+  version?: string;
+  // Real revision history for this master. When absent, a single neutral row is
+  // printed. The previous hardcoded "Initial release (AI-generated draft — review
+  // before use)" is gone: it was false for every human-reviewed approved master.
+  revisionHistory?: RevisionEntry[];
 }
 
 const cell = (text: string, opts: { bold?: boolean; shade?: boolean; width?: number } = {}) =>
@@ -197,13 +215,72 @@ const renderAbbreviations = (text: string): (Paragraph | Table)[] => {
   return result;
 };
 
+// Splits one oe_mapping evidence string into its individual records.
+// The evidence fields are authored as semicolon-delimited lists (4-20 records per
+// OE across the drafted masters), and semicolons are used ONLY as the top-level
+// separator — commas, dashes and parenthetical asides appear inside records and
+// must not split them. This reformats existing content; it never adds any.
+const splitEvidenceRecords = (evidence: string): string[] =>
+  evidence
+    .split(";")
+    .map((r) => r.trim())
+    .filter((r) => r.length > 0);
+
+// Required Records / Evidence Checklist — the single canonical place a reader
+// finds the full evidence detail for the standard, grouped by the OE that
+// requires it. This exists because the evidence column of the OE Cross-Reference
+// table had grown to hold multi-hundred-character lists, which made that table
+// unreadable as the navigation index it is meant to be.
+//
+// Returns [] when no OE carries evidence data, so the section is omitted entirely
+// rather than printed empty. That is currently the case for HIC.1 and HIC.2,
+// whose oe_mapping entries were authored without evidence or responsible fields.
+const renderRequiredRecords = (oeMapping: OeMappingEntry[]): (Paragraph | Table)[] => {
+  const withEvidence = oeMapping.filter((m) => m.evidence && m.evidence.trim().length > 0);
+  if (withEvidence.length === 0) return [];
+
+  const out: (Paragraph | Table)[] = [
+    new Paragraph({
+      children: [
+        new TextRun({
+          text:
+            "The records below are the documented evidence for this standard. Each record is " +
+            "listed against the objective element that requires it.",
+          size: 22,
+          italics: true,
+        }),
+      ],
+      spacing: { after: 180 },
+    }),
+  ];
+
+  for (const entry of withEvidence) {
+    out.push(
+      new Paragraph({
+        children: [new TextRun({ text: `${entry.oeCode} — ${entry.requirement}`, bold: true, size: 22 })],
+        spacing: { before: 200, after: 90 },
+      }),
+    );
+    for (const record of splitEvidenceRecords(entry.evidence!)) {
+      out.push(
+        new Paragraph({
+          children: [new TextRun({ text: record, size: 22 })],
+          bullet: { level: 0 },
+          spacing: { after: 60 },
+        }),
+      );
+    }
+  }
+  return out;
+};
+
 export function buildPolicyDocument(data: PolicyDocData): Document {
   const today = new Date().toLocaleDateString("en-GB").replace(/\//g, "-");
 
   const controlTable = new Table({
     width: { size: 100, type: WidthType.PERCENTAGE },
     rows: [
-      new TableRow({ children: [cell("Document No.", { bold: true, shade: true }), cell(data.docNo), cell("Version", { bold: true, shade: true }), cell("1.0")] }),
+      new TableRow({ children: [cell("Document No.", { bold: true, shade: true }), cell(data.docNo), cell("Version", { bold: true, shade: true }), cell(data.version ?? "1.0")] }),
       new TableRow({ children: [cell("Effective Date", { bold: true, shade: true }), cell("[DD-MM-YYYY]"), cell("Review Date", { bold: true, shade: true }), cell("[DD-MM-YYYY]")] }),
       new TableRow({ children: [cell("Applicable OE(s)", { bold: true, shade: true }), cell(data.oeLevel ? `${data.oeCode} (${data.oeLevel})` : data.oeCode), cell("NABH Chapter", { bold: true, shade: true }), cell(data.chapterName)] }),
       new TableRow({ children: [cell("Prepared By", { bold: true, shade: true }), cell("_________________"), cell("Date", { bold: true, shade: true }), cell("________")] }),
@@ -212,39 +289,60 @@ export function buildPolicyDocument(data: PolicyDocData): Document {
     ],
   });
 
+  // Revision history comes from the master row. The fallback row is used only when
+  // a row carries no history yet; it states the version and today's date without
+  // asserting anything about how the content was produced or reviewed, because the
+  // template cannot know that and the old hardcoded claim was wrong for every
+  // human-reviewed master.
+  const revisionRows: RevisionEntry[] =
+    data.revisionHistory && data.revisionHistory.length > 0
+      ? data.revisionHistory
+      : [{ version: data.version ?? "1.0", date: today, description: "Issued." }];
+
   const revisionHistory = new Table({
     width: { size: 100, type: WidthType.PERCENTAGE },
     rows: [
       new TableRow({ children: [cell("Version", { bold: true, shade: true }), cell("Date", { bold: true, shade: true }), cell("Description of Change", { bold: true, shade: true, width: 50 })] }),
-      new TableRow({ children: [cell("1.0"), cell(today), cell("Initial release (AI-generated draft — review before use)", { width: 50 })] }),
+      ...revisionRows.map(
+        (r) => new TableRow({ children: [cell(r.version), cell(r.date), cell(r.description, { width: 50 })] }),
+      ),
     ],
   });
 
-  const hasEvidenceData = data.oeMapping?.some((m) => m.evidence || m.responsible) ?? false;
+  // The OE Cross-Reference table is a NAVIGATION INDEX, nothing more: which OE,
+  // what it requires in one line, where it is answered, and who owns it. The
+  // Evidence column was deliberately removed — full evidence detail now lives in
+  // the Required Records / Evidence Checklist section, and printing it in both
+  // places made this table unusable for the one job it has.
+  //
+  // Note this reads m.responsible, NOT m.evidence: HIC.1 and HIC.2 have neither,
+  // and they correctly fall through to the three-column form rather than render a
+  // Responsible column of dashes.
+  const hasResponsibleData = data.oeMapping?.some((m) => m.responsible) ?? false;
+
+  const requiredRecords = data.oeMapping ? renderRequiredRecords(data.oeMapping) : [];
 
   const oeMappingTable = data.oeMapping && data.oeMapping.length > 0
     ? new Table({
         width: { size: 100, type: WidthType.PERCENTAGE },
-        rows: hasEvidenceData
+        rows: hasResponsibleData
           ? [
               new TableRow({
                 children: [
-                  cell("OE Code", { bold: true, shade: true, width: 12 }),
-                  cell("Requirement", { bold: true, shade: true, width: 33 }),
-                  cell("Addressed In", { bold: true, shade: true, width: 18 }),
-                  cell("Evidence", { bold: true, shade: true, width: 22 }),
-                  cell("Responsible", { bold: true, shade: true, width: 15 }),
+                  cell("OE Code", { bold: true, shade: true, width: 15 }),
+                  cell("Requirement", { bold: true, shade: true, width: 45 }),
+                  cell("Addressed In", { bold: true, shade: true, width: 20 }),
+                  cell("Responsible", { bold: true, shade: true, width: 20 }),
                 ],
               }),
               ...data.oeMapping.map(
                 (m) =>
                   new TableRow({
                     children: [
-                      cell(m.oeCode, { width: 12 }),
-                      cell(m.requirement, { width: 33 }),
-                      cell(m.steps, { width: 18 }),
-                      cell(m.evidence ?? "—", { width: 22 }),
-                      cell(m.responsible ?? "—", { width: 15 }),
+                      cell(m.oeCode, { width: 15 }),
+                      cell(m.requirement, { width: 45 }),
+                      cell(m.steps, { width: 20 }),
+                      cell(m.responsible ?? "—", { width: 20 }),
                     ],
                   }),
               ),
@@ -334,7 +432,15 @@ export function buildPolicyDocument(data: PolicyDocData): Document {
           body(data.references),
           heading("7. Distribution"),
           body(data.distribution),
-          heading("8. Revision History"),
+          // Required Records sits between Distribution and Revision History: it is
+          // content an assessor reads, so it belongs before the document's back
+          // matter, not after it. Section numbers are computed rather than literal
+          // so that a master with no evidence data (HIC.1, HIC.2) does not print a
+          // document that skips from 7 straight to 9.
+          ...(requiredRecords.length > 0
+            ? [heading("8. Required Records / Evidence Checklist"), ...requiredRecords]
+            : []),
+          heading(`${requiredRecords.length > 0 ? 9 : 8}. Revision History`),
           revisionHistory,
           ...(data.disclaimer
             ? [heading("Disclaimer"), body(data.disclaimer)]
