@@ -13,7 +13,7 @@
 // Input: { standard_code: "HIC.2", hospital_name: "HMP Foundation" }
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-import { buildPolicyDocument, documentToBuffer } from "../_shared/policy-doc-template.ts";
+import { buildPolicyDocument, documentToBuffer, type RevisionEntry } from "../_shared/policy-doc-template.ts";
 
 const CORS = {
   "Access-Control-Allow-Origin": "https://accredready.in",
@@ -95,6 +95,8 @@ Deno.serve(async (req: Request) => {
       references: substitute(master.references_text, hospital_name),
       distribution: substitute(master.distribution, hospital_name),
       disclaimer: master.disclaimer ? substitute(master.disclaimer, hospital_name) : undefined,
+      version: master.version ?? "1.0",
+      revisionHistory: master.revision_history as RevisionEntry[] | undefined,
     });
 
     const buffer = await documentToBuffer(doc);
