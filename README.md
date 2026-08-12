@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# AccredReady
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**NABH accreditation compliance software for Indian hospitals and healthcare organisations.**
 
-## Available Scripts
+Live site: [https://accredready.in](https://accredready.in)
 
-In the project directory, you can run:
+AccredReady helps hospitals track objective elements (OEs), KPIs, committees, audits, and evidence against NABH standards across multiple programmes — from large hospitals (HCO Full, 6th Edition) to small hospitals (SHCO Full, 3rd Edition), entry-level certification, eye care (ECO), and dental clinics.
 
-### `npm start`
+> AccredReady is an independent educational tool. It is not affiliated with NABH or QCI.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Programmes supported
 
-### `npm test`
+| Programme | App key | Description |
+|-----------|---------|-------------|
+| HCO Full Accreditation | `hco` | Hospitals with 51+ beds — NABH 6th Edition OE scoring and gap analysis |
+| HCO Entry Level Certification (ELC) | `hco-elc` | Document and license checklist for large hospitals |
+| SHCO Full Accreditation | `shco-full` | Small hospitals (≤50 beds) — SHCO 3rd Edition OE scoring |
+| SHCO Entry Level Certification (ELC) | `shco-elc` | Document and license checklist for small hospitals |
+| ECO Full Accreditation | `eco-full` | Eye Care Organisations — full OE scoring |
+| Dental Entry Level Certification | `dental-elc` | Dental clinics (1–8 chairs) — checklist-based |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Additional surfaces: **Gennie AI assistant** (NABH Q&A), **master policy generation** (SHCO Full), and **public SEO content** (learn hub, blog, landing pages).
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Layer | Technology |
+|-------|------------|
+| Frontend | React 19 (Create React App) |
+| Backend | Supabase — Postgres, Auth, Row Level Security |
+| Edge functions | Deno TypeScript on Supabase |
+| Charts / PDF | Recharts, jsPDF |
+| Deployment | GitHub Pages → `accredready.in` |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Quick start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git pull origin master
+npm install
+npm start          # http://localhost:3000
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Build and deploy (local verification required first — see [docs/deployment.md](docs/deployment.md)):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run build
+npm run deploy     # gh-pages → accredready.in
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Repository layout
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+src/                  React app (App.js is the main shell)
+public/               Static SEO pages, sitemap, CRA index.html
+supabase/
+  functions/          Edge functions (AI assistant, policy generation)
+  migrations/         Incremental SQL migrations
+scripts/              SQL seeds, KB builders, security runbook
+policies/             SHCO master policy drafting pipeline (HIC chapter)
+marketing/            Marketing collateral and reports
+docs/                 Project documentation (this repo)
+CLAUDE.md             Agent workflow rules (local-first, NABH accuracy)
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Documentation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Doc | Contents |
+|-----|----------|
+| [docs/README.md](docs/README.md) | Documentation index |
+| [docs/architecture.md](docs/architecture.md) | App structure, auth flow, programme routing |
+| [docs/supabase.md](docs/supabase.md) | Schema, migrations, edge functions |
+| [docs/deployment.md](docs/deployment.md) | Local → build → deploy workflow |
+| [docs/policy-pipeline.md](docs/policy-pipeline.md) | Master policy authoring for SHCO Full |
+| [docs/seo-content.md](docs/seo-content.md) | Public pages and NABH accuracy rules |
+| [docs/security.md](docs/security.md) | RLS, trial enforcement, security runbook |
 
-### Analyzing the Bundle Size
+Other reference files:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [CLAUDE.md](CLAUDE.md) — session rules for AI agents working in this repo
+- [scripts/master-policy-todos.md](scripts/master-policy-todos.md) — policy drafting TODOs and standing rules
+- [scripts/SECURITY_RUNBOOK.md](scripts/SECURITY_RUNBOOK.md) — RLS and trial enforcement SQL steps
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## npm scripts
 
-### Advanced Configuration
+| Script | Action |
+|--------|--------|
+| `npm start` | Development server on port 3000 |
+| `npm run build` | Production build to `build/` |
+| `npm run deploy` | Build + publish to GitHub Pages |
+| `npm test` | Jest test runner (CRA default) |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Contributing / agent rules
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Before making changes, read [CLAUDE.md](CLAUDE.md). Key rules:
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Local-first** — test with `npm start` before deploying.
+2. **Never deploy untested code.**
+3. **Post-deploy auto-sync** — after `npm run deploy`, commit only `src/`, `public/`, `supabase/functions/`, and `scripts/` (never `git add .`).
+4. **NABH accuracy** — do not publish specific OE or standard counts on public SEO pages; only the app may reference OE numbers from Supabase.
