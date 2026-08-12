@@ -13,6 +13,11 @@
 --
 -- author_byline is deliberately NOT included — still open in the TODO; separate pass.
 --
+-- ORDER MATTERS: backfill (step 3) runs BEFORE the updated_at trigger (step 4).
+-- The trigger unconditionally sets updated_at = now() on every UPDATE. If it existed
+-- during the backfill, it would overwrite the explicit historical dates with the
+-- current timestamp and defeat the backfill entirely.
+--
 -- Idempotent where safe. Safe to re-run the backfill (deterministic values).
 
 -- ---------------------------------------------------------------------------
@@ -61,30 +66,9 @@ comment on column public.shco_policy_masters.version is
   'Semantic document version as text (e.g. "1.0", "1.1"). Not numeric — "2.10" must not sort as a number.';
 
 -- ---------------------------------------------------------------------------
--- 3. updated_at trigger (column already exists; no trigger today)
--- ---------------------------------------------------------------------------
-create or replace function public.set_shco_policy_masters_updated_at()
-returns trigger
-language plpgsql
-as $$
-begin
-  new.updated_at = now();
-  return new;
-end;
-$$;
-
-drop trigger if exists shco_policy_masters_set_updated_at
-  on public.shco_policy_masters;
-
-create trigger shco_policy_masters_set_updated_at
-  before update on public.shco_policy_masters
-  for each row
-  execute function public.set_shco_policy_masters_updated_at();
-
--- ---------------------------------------------------------------------------
--- 4. Backfill HIC.1–HIC.6
---    Runs in the same session as the schema changes above. updated_at is set
---    explicitly from the latest revision-history date (TODO preference 2026-08-11).
+-- 3. Backfill HIC.1–HIC.6
+--    No updated_at trigger exists yet, so explicit historical dates are preserved.
+--    updated_at is set from the latest revision-history date (TODO preference 2026-08-11).
 -- ---------------------------------------------------------------------------
 
 update public.shco_policy_masters
@@ -131,6 +115,28 @@ set
   revision_history = '[{"version":"1.0","date":"10-08-2026","description":"Initial release."}]'::jsonb,
   updated_at = '2026-08-10 00:00:00+00'::timestamptz
 where standard_code = 'HIC.6';
+
+-- ---------------------------------------------------------------------------
+-- 4. updated_at trigger — created LAST, after backfill
+--    Column already exists; there was no trigger before this migration.
+-- ---------------------------------------------------------------------------
+create or replace function public.set_shco_policy_masters_updated_at()
+returns trigger
+language plpgsql
+as $$
+begin
+  new.updated_at = now();
+  return new;
+end;
+$$;
+
+drop trigger if exists shco_policy_masters_set_updated_at
+  on public.shco_policy_masters;
+
+create trigger shco_policy_masters_set_updated_at
+  before update on public.shco_policy_masters
+  for each row
+  execute function public.set_shco_policy_masters_updated_at();
 
 -- ---------------------------------------------------------------------------
 -- 5. Post-run sanity check (informational — returns rows to the SQL Editor)
