@@ -143,6 +143,12 @@ taken under this rule, not an omission.
       untouched — do NOT patch one without the other, and HIC.2 is approved so it is not reopened
       until the pass itself):
 
+      **ITEMS 1 AND 2 DONE 2026-08-13** in the reconciliation pass. The antiseptic sentence is now
+      byte-identical in HIC.2 step 24 and HIC.4 step 31 and states the CDC position in all three
+      parts (verified against Kuhar et al., 2013, not taken from this file's summary). The HIV PEP
+      window is now identical in both, HIC.2 having adopted HIC.4's wording as directed. See the
+      new 2025-guideline item below for what this did NOT resolve. Original text follows.
+
       1. **Exposure first-aid: antiseptic wording.** (Was HIC.2 checklist flag 27, still open.)
          HIC.2 step 24: "Do not squeeze, scrub or apply a caustic agent such as bleach or
          antiseptic to the wound."
@@ -298,6 +304,16 @@ taken under this rule, not an omission.
       full content for all three and HIC.1/HIC.2/HIC.3 were NOT reopened.** The HIC.5 scope section
       states each division explicitly. Do NOT patch one document without the other.
 
+      **ITEMS 1, 2 AND 3 DONE 2026-08-13** in the reconciliation pass.
+      Item 1: HIC.5 step 20 adopted HIC.2's "approximately 20 minutes, plus or minus 10", with a
+      same-pass lock sentence so the two cannot drift again.
+      Item 2: HIC.1 step 26 reduced to a pointer. NOTE two of its three sub-tasks were ALREADY DONE
+      and this file was stale on both — the outbreak definitions were already byte-identical, and
+      HIC.5 step 31 already read "on the same day it is suspected", not "on the day the suspicion
+      arises" as recorded here. Only the pointer was outstanding. The HIC.1.a evidence column was
+      re-pointed at the same time, since it had cited step 26's investigation records in full.
+      Item 3: see the environmental-swab item below, now closed. Original text follows.
+
       1. **HIC.5.b (Core) vs approved HIC.2 step 9 — hand hygiene compliance monitoring.**
          HIC.2 step 9 already carries open direct observation, the actions-over-opportunities
          formula, stratification by cadre and area, handrub consumption per 1,000 patient days,
@@ -345,8 +361,19 @@ taken under this rule, not an omission.
       with the version and revision-history work under "Deferred from HIC.4", because they are the
       same gap in the same file and belong in one pass. Nothing to do here — see that item.
 
-- [ ] **HIC.3 promises a record the hospital does not routinely produce — environmental surface
-      swabs.** Discrete edit to HIC.3, broken out of the reconciliation item above so it is not
+- [x] **DONE 2026-08-13. HIC.3 narrowed to match HIC.5; contradiction closed.**
+      Found in FOUR places, not the two logged here: (1) HIC.3.c evidence, (2) HIC.3 step 5's
+      routine swab bullet, (3) HIC.3.a evidence "air AND SURFACE sampling", and (4) the
+      checklist's own provenance note listing surface swabs as step 5 content. All four fixed.
+      Step 5 keeps air, temperature/humidity, pressure and water sampling — HIC.5 step 28 routes
+      those parameters back to HIC.3 and this file said "Do not move them". Placeholder count
+      moved 40 -> 39 (routine swab interval removed); the checklist had also recorded it wrongly
+      as 38, corrected in the same edit, which closes that separate item below.
+
+      Original item retained for context.
+
+- [x] ~~**HIC.3 promises a record the hospital does not routinely produce — environmental surface
+      swabs.**~~ Discrete edit to HIC.3, broken out of the reconciliation item above so it is not
       lost inside it. Confirmed for logging 2026-08-07.
 
       **The contradiction.** HIC.3's OE mapping lists "environmental surface swab results" among
@@ -380,6 +407,26 @@ taken under this rule, not an omission.
       parameters and frequencies for the critical-system monitoring (OT air, dialysis water,
       potable water). Those live in HIC.3 and the facility policies. HIC.5 receives and trends the
       results. Do not move them.
+
+- [ ] **NEW 2026-08-13: the 2025 PHS guideline revision is not reflected in HIC.2 or HIC.4.**
+      Found while fact-checking the PEP wording in the reconciliation pass. A 2025 revision exists:
+      *2025 US Public Health Service Guidelines for the Management of Occupational Exposures to
+      HIV*, Infect Control Hosp Epidemiol.
+
+      **Two consequences, neither acted on, because both are new content rather than reconciliation.**
+
+      1. The "preferably within two [hours]" figure now carried by BOTH documents is not in the 2025
+         guideline, which says only "Initiate PEP as soon as possible, up to 72 hours following the
+         occupational exposure to HIV". It was adopted across both on instruction to remove a
+         divergence, which it did. It is not clinically wrong — earlier is better — but it must not
+         be attributed to the current guideline. Both checklists now say so explicitly.
+      2. The 2025 revision adds a recommendation NEITHER document carries: where an exposure beyond
+         72 hours is thought to represent a high risk of transmission, consult a provider with
+         expertise in HIV treatment, rather than treating 72 hours as an absolute cut-off. Both
+         documents currently state 72 hours as absolute. Consider adding the consultation route.
+
+      Decide whether to re-source the timing wording to the 2025 guideline and whether to add the
+      >72-hour consultation route. Reopens HIC.2 and HIC.4 together — never one without the other.
 
 - [ ] **Stop assuming the asterisked OE is the last one in the standard — check it per standard.**
       Logged 2026-08-07 as a process note for HIC.6 and for any future chapter.
