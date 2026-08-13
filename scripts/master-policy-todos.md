@@ -483,8 +483,22 @@ taken under this rule, not an omission.
 
 ## Deferred from the asterisk audit (2026-08-10)
 
-- [ ] **`HIC.2.c` is asterisked in the PDF but left `doc_required = false` — flip it in the
-      reconciliation pass, and add the evidence anchor at the same time.** Broken out of the
+- [x] **DONE 2026-08-13. `HIC.2.c` asterisk/flag divergence closed: anchor built, flag flipped.**
+      The anchor was built by EXPANDING steps 15 and 19 in place (no step inserted, so the six
+      internal cross-references and every `steps` mapping stayed valid). Step 15 gained the
+      consolidated PPE-by-category list and a periodic category-review cadence; step 19 gained
+      eleven fact-checked discontinuation criteria from CDC Appendix A (version 2 February 2025),
+      recorded as checklist facts 42-52. `doc_required` is now true. Verified: `shco_full_oes`
+      and `scripts/shco_oe_asterisks.json` now agree exactly — 132 true / 276 false / 408 total
+      on both sides. There is no longer any known OE where the table disagrees with the PDF.
+      NOTE: this item OVERSTATED the gap. Isolation signage and the category-assignment register
+      already existed in step 15; only the PPE matrix, the review cadence and the durations were
+      genuinely missing.
+
+      Original item retained below for context.
+
+- [x] ~~**`HIC.2.c` is asterisked in the PDF but left `doc_required = false` — flip it in the
+      reconciliation pass, and add the evidence anchor at the same time.**~~ Broken out of the
       closed audit item above so it is not lost inside it. Deferred on instruction 2026-08-10;
       the other 13 corrections were applied that day.
 
@@ -525,9 +539,27 @@ taken under this rule, not an omission.
 
 ## Deferred from the Required Records / version infrastructure pass (2026-08-11)
 
-- [ ] **AUTHORED-CONTENT DEBT: HIC.1 and HIC.2 have no evidence or responsible data at all, so
+- [x] **DONE 2026-08-13. HIC.1 and HIC.2 evidence + responsible authored and applied.**
+      HIC.1: 89 records across 6 OEs. HIC.2: 117 records across 7 OEs, HIC.2.c carrying 40 as the
+      Tier 1 asterisked element. All six HIC standards now render the Required Records section and
+      the four-column OE Cross-Reference table. Every field hash-verified against the live rows
+      after applying. Build scripts: `policies/build/hic1_oe_evidence.py`,
+      `hic2_oe_evidence.py`, `hic2_tbp_anchor.py`, `apply_oe_evidence.py`, `apply_hic2.py`.
+
+      TWO THINGS WORTH CARRYING FORWARD.
+      (a) LINE ENDINGS DIFFER PER ROW. HIC.1 stores CRLF; HIC.2 stores LF. Neither is wrong, but
+      a hash comparison against a local draft fails confusingly unless normalised, and writing the
+      wrong convention corrupts the row. Check per row before comparing or writing.
+      (b) NEVER USE str.format() ON TEMPLATE TEXT. It collapses `{{HOSPITAL_NAME}}` to
+      `{HOSPITAL_NAME}`, which the renderer does not substitute and prints literally. This reached
+      the local HIC.2 draft and was caught only by the post-apply hash check. `apply_hic2.py` now
+      carries a placeholder-integrity guard that fails the build on any single-braced token.
+
+      Original item retained below for context.
+
+- [x] ~~**AUTHORED-CONTENT DEBT: HIC.1 and HIC.2 have no evidence or responsible data at all, so
       they render no Required Records / Evidence Checklist section. This is missing CONTENT, not a
-      missing feature.** Confirmed on instruction 2026-08-11. Do it in the reconciliation pass,
+      missing feature.**~~ Confirmed on instruction 2026-08-11. Do it in the reconciliation pass,
       which already reopens HIC.2.
 
       **Read this before concluding the Required Records feature is "done".** The feature works;
