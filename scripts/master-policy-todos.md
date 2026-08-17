@@ -748,6 +748,184 @@ T2 one-line flags (standing rule: flag and move on):
 
 ---
 
+## Deferred from COP.8 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags (full cross-check done in the COP.8 draft Scope / universal_facts_checklist). Do not patch approved HIC or AAC in this pass.
+
+- [ ] **COP.7.e neonatal backup vs COP.8.b neonatal care method.** COP.7 owns that obstetric service has human resources and facilities for neonates of high-risk cases. COP.8 owns how neonates and children are cared for against named national/international guidelines. Both Scopes and COP.8 step 3 state the split. Reconcile wording if either document is reopened.
+
+- [ ] **AAC.2 UID vs COP.1 two identifiers vs COP.8 point-of-care ID and neonate-mother matching.** AAC.2 generates the unique identification number. COP.1 owns the two-identifier rule. COP.8 applies those identifiers to the child and adds matching of the neonate to the mother or designated guardian. COP.8 does not issue the number and does not rewrite the two-identifier rule.
+
+T2 one-line flags (standing rule: flag and move on):
+
+- [ ] **COP.8.c age-specific competency vs HRM credentialing method.** This requires the competency; HRM (undrafted) verifies it.
+
+- [ ] **COP.8.e paediatric nutrition/growth/dev/immunisation assessment vs AAC.3 hospital-wide assessment vs COP.13 nutrition screen vs COP.7.c maternal nutrition vs HIC.3 kitchen.** COP.8 Scope and step 6 state the split.
+
+- [ ] **COP.8.f abduction/abuse care-process vs FMS building security.** COP.8 owns matching, handing-over, nursery access and the missing-child/abuse response; FMS (undrafted) owns locks/cameras/hardware.
+
+- [ ] **HIC.3 BMW of neonatal waste.** Pointed; four colours not restated. Not a method overlap.
+
+---
+
+## Deferred from COP.9 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags (full cross-check done in the COP.9 draft Scope / universal_facts_checklist).
+
+- [ ] **COP.9 procedural sedation vs COP.10 anaesthesia.** Sedation is not general anaesthesia. Both Scopes state: this document does not write the other; unplanned/intended general anaesthesia is COP.10, not a stretched COP.9. Post-sedation recovery is COP.9.e; post-anaesthesia recovery is COP.10.f — sibling recovery processes, not one form unless the hospital writes them so.
+
+T2 one-line flags (standing rule: flag and move on):
+
+- [ ] **COP.9.b sedation consent before the drug vs PRE general consent method.** PRE (undrafted) owns how consent is explained/recorded/witnessed; COP.9.b owns that sedation consent is obtained before the sedative is given.
+
+- [ ] **COP.9 vs MOM drug-storage (NDPS / D&C).** Forward-ref. COP.9 does not write cupboard/register/destruction and does not inherit NDPS as a storage statute.
+
+- [ ] **COP.9 vs COP.11 procedure/WHO checklist.** COP.9 owns the sedation given so a procedure can be performed; COP.11 owns the procedure. Stated in COP.9 Scope and in the COP.11 flag below.
+
+- [ ] **HIC.4 "sedation" hits (ICU ventilator sedation scale / daily interruption).** Incidental; not this document.
+
+---
+
+## Deferred from COP.10 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags (full cross-check done in the COP.10 draft Scope / universal_facts_checklist).
+
+- [ ] **COP.9 sedation vs COP.10 anaesthesia vs COP.11 surgery.** COP.9 owns procedural sedation; COP.10 owns the anaesthetic (plan, monitoring under anaesthesia, post-anaesthesia recovery); COP.11 owns the surgical procedure, site-marking, WHO-framework checklist and operation notes. They meet in the theatre; they are not the same document.
+
+- [ ] **HIC.6 anaesthesia equipment reprocessing.** COP.10 requires processed circuits/masks/blades; HIC.6 owns the cycle, indicators and recall. Stated in COP.10 Scope and step 1.
+
+T2 one-line flags (standing rule: flag and move on):
+
+- [ ] **COP.10.d anaesthesia consent vs PRE general consent method.** PRE (undrafted) owns the method; COP.10.d owns that anaesthesia consent is obtained before induction.
+
+- [ ] **COP.10.g type+drugs in the record vs MOM medication process.** MOM (undrafted) owns storage and the medication process; COP.10 owns anaesthetic care and that type and anaesthetic medicines appear in the patient record. MOM must not restate anaesthetic method.
+
+- [ ] **COP.10.e monitoring under anaesthesia vs HIC.4 SSI-bundle temperature/glycaemia.** Bundle stays HIC.4 even when the anaesthetist is the person who maintains those variables.
+
+- [ ] **COP.10.h intra-operative adverse anaesthesia events vs a future PSQ incident policy.** This requires anaesthesia events to be recorded and reviewed; it does not write the hospital-wide incident system.
+
+---
+
+## Deferred from COP.11 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags (full cross-check done in the COP.11 draft Scope / universal_facts_checklist). Do not patch approved HIC.4/HIC.5/HIC.6 in this pass — reconcile when the owning document is next opened.
+
+- [ ] **HIC.4 SSI bundle vs COP.11 surgical process — shared surgical-safety checklist artefact.** HIC.4 evidence already lists "completed surgical safety checklist" as SSI-bundle evidence. COP.11.d (asterisked Core) owns the checklist as the team's pause (WHO Safe Surgery 2009 as framework; hospital checklist is [Hospital to define]; WHO items not pasted as mandated verbatim). Completing a checklist is not completing the SSI bundle; running the SSI bundle is not marking the site. HIC.4 should keep antibiotic timing, hair, glucose, skin prep, normothermia as IPC process. Do not patch HIC.4 until a dedicated pass.
+
+T2 one-line flags (standing rule: flag and move on):
+
+- [ ] **COP.11.e standard precautions in OT vs HIC.2.** Follow HIC.2; do not rewrite PPE. Stated in COP.11 Scope and step 5.
+
+- [ ] **COP.11.h process QA vs HIC.5 SSI surveillance.** Process look vs outcome look / NHSN definitions. Stated in step 8.
+
+- [ ] **COP.11.g sterile sets available vs HIC.6 instrument reprocessing.** Availability vs the decontamination cycle. Stated in step 7.
+
+- [ ] **COP.11 OT episode vs AAC.7 transfer into/out of OT.** COP.11 owns what happens after the patient is received.
+
+- [ ] **COP.11 vs COP.9 sedation vs COP.10 anaesthesia.** Surgery / site / checklist / notes vs sedation vs the anaesthetic. Stated in all three Scopes.
+
+- [ ] **COP.11.i/j transplant and donation-awareness vs COP.6 brain-death / EOL pathway.** THOA 1994 envelope here; clinical declaration pathway remains COP.6.
+
+- [ ] **COP.11 OT waste vs HIC.3 BMW.** Not named in COP.11 P2. Anatomical/OT waste remains HIC.3.
+
+---
+
+## Deferred from COP.12 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags (full cross-check done in the COP.12 draft Scope / universal_facts_checklist). HIC does not own falls, pressure ulcers, VTE or restraints.
+
+- [ ] **AAC.3 assessment dataset vs COP.12 risk programmes.** AAC.3 may collect risk factors for falls, pressure injury, thrombosis or vulnerability. COP.12 owns the tools, measures and review. Completing an assessment checkbox is not running this programme.
+
+T2 one-line flags (standing rule: flag and move on):
+
+- [ ] **COP.12.b care-environment for the vulnerable patient vs FMS building security.** Locks, CCTV and fabric remain FMS (undrafted). COP.12.b is bedside observation, call method, accompaniment, noticing a missing patient.
+
+- [ ] **COP.12.c falls / COP.12.d pressure ulcers / COP.12.e DVT vs AAC.3.** Same split as the T1 AAC.3 flag; programmes owned here.
+
+- [ ] **COP.12.d wound-dressing asepsis vs HIC.2 / HIC.4.** HIC owns dressing practice where already written; COP.12 owns the pressure-injury programme.
+
+- [ ] **COP.12.e pharmacological VTE prophylaxis vs MOM anticoagulant-as-medication.** Indication here; drug process remains MOM (undrafted).
+
+- [ ] **COP.12.f chemical restraint vs MOM.** Physical/mechanical restraint and seclusion here; chemical restraint as a medication process is MOM, not an undeclared substitute.
+
+- [ ] **COP.12 vs COP.8 child abduction/abuse.** If children are a vulnerable category, COP.12 still owns the vulnerability programme and does not rewrite COP.8.f.
+
+---
+
+## Deferred from COP.13 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags (full cross-check done in the COP.13 draft Scope / universal_facts_checklist). Do not patch approved AAC.1 or HIC.3 in this pass.
+
+- [ ] **AAC.1 service directory vs COP.13.c rehabilitation scope.** AAC.1 owns whether rehab is a defined service. COP.13.c (asterisked) requires the COP.13 scope to match that definition, including a recorded absence if the directory has no rehabilitation. A copied rehab SOP must not create a service the directory declined.
+
+- [ ] **HIC.3 kitchen / FSSAI vs COP.13.e/f nutritional screen, assessment and therapeutic-diet prescription.** HIC.3 owns kitchen hygiene and the food-safety licence. COP.13 does not name the Food Safety and Standards Act. A kitchen licence is not a nutritional-risk screen.
+
+T2 one-line flags (standing rule: flag and move on):
+
+- [ ] **COP.13.a/b pain assessment and titration vs MOM analgesic-as-medication.** Care loop here; prescribing, dispensing, administration and storage remain MOM (undrafted).
+
+- [ ] **COP.13.d collaborative rehab plan vs AAC.7 internal referral method.** AAC.7 owns the referral; COP.13 owns the plan that follows, and only where rehab is a defined service.
+
+- [ ] **COP.13 nutrition vs COP.7.c maternal nutrition vs COP.8.e paediatric nutrition/growth/immunisation assessment.** Admission-wide screen here; those other assessments are not this document and are not ticked off by it.
+
+- [ ] **COP.13 mobilisation-as-rehab-plan vs COP.12 mobilisation as falls/PU/VTE measure.** Coordinated; neither rewrites the other.
+
+---
+
+## Deferred from COP.1 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags (full cross-check done in the COP.1 draft Scope / universal_facts_checklist). Do not patch AAC.1 (approved) or the unapproved AAC.2 in this pass — reconcile when the owning document is next opened.
+
+- [ ] **AAC.2.b vs COP.1.a two identifiers.** AAC.2.b generates the unique identification number at registration. COP.1.a is TWO IDENTIFIERS at the point of care (name + UID, or the hospital-defined pair). The UID is one identifier once issued; COP.1 does not generate it. Both Scopes state the split. Flag so the division is not lost if one is approved without the other.
+
+- [ ] **AAC.1 vs COP.1.d uniform care across settings.** AAC.1 defines which services exist and the department scopes. COP.1 makes care for a given condition the same in every setting in which that care is actually provided (OPD / IPD / OT / ICU / emergency). Not the same requirement. Stated in COP.1 Scope.
+
+T2 one-line flags (standing rule: flag and move on):
+
+- [ ] **AAC.3 assessment vs COP.1.c/d protocols.** Assessment, care plan, reassessment and early-warning are AAC.3. They are not uniform-care protocols. Stated in COP.1 Scope.
+
+- [ ] **AAC.4 specimen identity vs COP.1.a.** AAC.4 applies the two-identifier process at collection; COP.1 owns the hospital-wide process. T2 flag only.
+
+- [ ] **COP.1.c hospital-wide clinical protocols vs COP.4.d nursing CPGs.** Intra-COP: COP.1 owns medical/condition protocols; COP.4 owns nursing standards of practice. Both Scopes state the split. Reconcile if either is approved as if they were the same protocol set.
+
+---
+
+## Deferred from COP.3 (drafted 2026-08-17, UNAPPROVED)
+
+Whole standard is Tier 2 (ZERO asterisks on printed p.62-63). T2 one-line flags only.
+
+- [ ] **AAC.3.e vs COP.3.** AAC.3.e owns recognising deterioration and handing the crashing patient to this protocol. COP.3 owns the resuscitation once started. Stated in both Scopes. Flag so the division is not lost if one is approved without the other.
+
+- [ ] **AAC.2 / COP.2 vs COP.3.** Life-stabilising treatment in the emergency area uses this protocol. COP.2 owns the ED area, triage, ambulance and must not write a second resuscitation algorithm. COP.3 Scope states the split. COP.2.h–i ambulance reprocessing remains a COP.2/HIC.6/MOM flag, not this one.
+
+- [ ] **HIC.6 vs COP.3.c kit availability.** HIC.6 owns reprocessing of resuscitation bags, laryngoscope blades and related airway devices. COP.3 owns having a ready kit in named areas and restoring it after use. Do not rewrite HLD, sterilisation or Spaulding classification into COP.3. Stated in COP.3 Scope.
+
+- [ ] **HIC.2 vs COP.3.** Hand hygiene, PPE and standard precautions during resuscitation remain HIC.2. Point only; not restated.
+
+---
+
+## Deferred from COP.4 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags (full cross-check done in the COP.4 draft Scope / universal_facts_checklist).
+
+- [ ] **AAC.7 handover METHOD vs COP.4.a nursing content of the record.** AAC.7 owns structured handover at shift and at internal transfer. COP.4.a owns the nursing entry in the patient record (observations, actions, alignment with the overall plan). Handover communicates; the record retains; neither substitutes. Both Scopes should keep this split. Flag so the division is not lost if one is approved without the other.
+
+- [ ] **COP.1.c/d vs COP.4.d.** Hospital-wide medical protocols vs nursing clinical practice guidelines. Same intra-COP flag as under COP.1. A medical protocol labelled as a nursing guideline does not satisfy COP.4.d.
+
+T2 one-line flags (standing rule: flag and move on):
+
+- [ ] **HIC.2 HH/PPE/TBP/injection vs COP.4.** Nurses follow HIC.2 in the course of nursing care. COP.4 points and does not restate five moments, PPE donning, isolation categories or injection-safety rules.
+
+- [ ] **HIC.6 vs COP.4.c.** HIC.6 owns reprocessing of reusable nursing equipment. COP.4.c owns that a ready item is available at the point of care.
+
+- [ ] **IMS vs COP.4.a.** IMS (undrafted) owns record structure, retention and confidentiality. COP.4 owns the nursing entries written into that record.
+
+- [ ] **AAC.3 care plan vs COP.4.a alignment.** AAC.3 owns the documented care plan. COP.4 requires nursing care to align with that plan and to make the alignment visible in the nursing entry. Not a rewrite of AAC.3.
+
+- [ ] **HRM vs COP.4.b assignment.** HRM (undrafted) owns credentialing / INC registration verification. COP.4.b uses that verification when assigning care; it does not restate the method. AAC.1.b is roster/resourcing of a specialty, not per-period assignment of a nurse to a patient.
+
+---
+
 ## Cross-cutting: document control scaffolding
 
 Not a content gap — a **format** gap found against NABH's sample policy
