@@ -80,6 +80,36 @@ taken under this rule, not an omission.
 
 ---
 
+# STANDING RULE: Disclaimer statute-matching (added 2026-08-17)
+
+**Read this before drafting any master policy. It is a process rule, not a task — it does not
+get ticked off and it does not expire.** Same standing as the two-tier depth rule above.
+
+Every master policy's Disclaimer statutory paragraph (paragraph 2 of the four-paragraph block)
+must name the statutes actually relevant to THAT standard's subject matter, cited from its own
+References section — never inherited wholesale from a different chapter's boilerplate. Before
+finalizing any new standard, check that the statutory paragraph names real, applicable law for
+that specific document.
+
+The rest of the disclaimer — structure, the four paragraphs, and the non-affiliation statement
+including the bodies it names — stays consistent in wording and format across all standards.
+Only the specific statutes named in paragraph 2 are checked and corrected per document.
+
+**What this rule does not do**
+
+- It does **not** retrofit HIC.1–HIC.6. Those already carry the Bio-Medical Waste Management
+  Rules, 2016 / Food Safety and Standards Act, 2006 paragraph as known, accepted debt (correct
+  for HIC.3's BMW content and HIC.3's kitchen/FSSAI content; wrong as a wholesale inherit for
+  every HIC standard). Logged separately; not being retrofitted.
+- It does **not** authorise rewriting paragraphs 1, 3 or 4 of the shared block in an individual
+  file. A change to those paragraphs belongs in a deliberate pass across all masters.
+- AAC.1 was drafted before this rule and still carries the HIC boilerplate in its approved row.
+  The owner instructed a targeted disclaimer-only fix on 2026-08-17; until that edit lands, AAC.1
+  is the one approved non-HIC document whose paragraph 2 names statutes it does not rely on.
+  Subsequent AAC drafts (AAC.2 onward) follow this rule from the first build.
+
+---
+
 ## Deferred from HIC.2 (drafted 2026-08-01)
 
 ### → HIC.1 / HIC.3 / HIC.6 (infection control programme, environment, sterilisation)
