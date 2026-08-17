@@ -1,0 +1,378 @@
+# -*- coding: utf-8 -*-
+"""Builds the COP.6 master policy draft: JSON for review + SQL for later insert.
+
+UNAPPROVED DRAFT. Do not insert, approve, or write this to Supabase.
+
+THIS IS DRAFTED UNDER THE TWO-TIER DEPTH STANDING RULE (2026-08-10) AND THE
+DISCLAIMER STATUTE-MATCHING STANDING RULE (2026-08-17), both in
+scripts/master-policy-todos.md.
+
+Tier is decided by doc_required / the asterisk in the official PDF:
+  Tier 1 (full treatment): COP.6.a, COP.6.c, COP.6.d, COP.6.f
+  Tier 2 (lighter pass):   COP.6.b, COP.6.e
+
+FOUR of six OEs are asterisked. The draft builds deep blocks for a, c, d and f.
+b and e are lean.
+
+CRITICAL OVERLAP (COP.6.c): HIC.2 owns hand hygiene, transmission-based
+precautions and PPE; HIC.4 owns device bundles (VAP/CLABSI/CAUTI/SSI);
+HIC.5 owns surveillance including VAE and NHSN definitions. COP.6.c requires
+those practices to be in the ICU/HDU written guidance and followed there. This
+draft does not rewrite bundles, biomedical-waste colour codes, or NHSN
+definitions.
+
+Official source: NABH Standards for Small Healthcare Organisations, 3rd Edition
+(August 2022), Chapter 2 Care of Patients, standard COP.6 and OEs COP.6.a-f, read
+from the official standards PDF (downloaded 2026-08-17 from the NABH website's
+Explore NABH Standards page), printed page 64, PDF page index 70.
+
+Asterisks verified 2026-08-17: scripts/asterisk_extract.py re-run against that
+download (self-validation passed, 408 OEs, 132 asterisks, output matched the
+committed scripts/shco_oe_asterisks.json on all 408 entries) and the COP.6 page
+read directly. COP.6.b and COP.6.e are unasterisked; COP.6.a, COP.6.c, COP.6.d
+and COP.6.f carry the asterisk.
+"""
+from policy_build_common import emit_and_verify, make_disclaimer
+
+STANDARD_CODE = "COP.6"
+CHAPTER = "COP"
+OE_CODES = [
+    "COP.6.a", "COP.6.b", "COP.6.c", "COP.6.d", "COP.6.e", "COP.6.f",
+]
+TIER1_OES = [
+    "COP.6.a", "COP.6.c", "COP.6.d", "COP.6.f",
+]
+
+POLICY_TITLE = "Care in Intensive Care and High Dependency Units"
+
+VERSION = "1.0"
+REVISION_HISTORY = [
+    {"version": "1.0", "date": "17-08-2026", "description": "Initial release."},
+]
+
+PURPOSE = """This document sets out how {{HOSPITAL_NAME}} provides care in its intensive care and high dependency units in a systematic manner: who is admitted and who is discharged, against written criteria; what is done when those beds are short; how care is given against written guidance by staff and equipment that are actually present; how infection-control practices that the hospital already owns are written into the unit's own guidance and followed there; how the unit's quality-assurance programme is run; how the patient and family are counselled; and how end-of-life care is provided consistently and in consonance with legal requirements.
+
+The chapter intent is that written guidance, applicable laws and regulations guide care of patients in the critical care and high dependency units, and end of life care. A unit that accepts every deteriorating patient without a criterion, that writes infection-control as a poster copied from another department, or that withdraws treatment in a corridor conversation that never reaches the record, is not that service. This document is the process that makes the intent operational at the door of the unit, at the bed, and at the end of a life.
+
+Intensive and high-dependency care concentrates devices, decisions and families in a small number of beds. That concentration is why admission cannot be a courtesy, why infection-control that exists hospital-wide still has to be in this unit's written guidance, and why an end-of-life decision that is not consistent with the law is not a kindness."""
+
+SCOPE = """This policy applies to the intensive care unit and the high dependency unit of {{HOSPITAL_NAME}}, where those units exist as defined services, and to every staff member who admits to, cares for a patient in, discharges from, or counsels a family about those units. If {{HOSPITAL_NAME}} does not operate an intensive care or high dependency unit, this document is adapted to state that fact in the hospital's own words and is not used to invent a unit the service directory does not define.
+
+It covers: defined admission and discharge criteria and the procedure followed when those beds are short; care based on written guidance by adequately available staff and equipment; infection-control practices documented in the unit's written guidance and followed there; the unit quality-assurance programme; periodic counselling of the patient and/or family; and end-of-life care that is consistent and legally consonant.
+
+Boundaries with other policies of {{HOSPITAL_NAME}}:
+
+- Infection-control practices in the intensive care and high dependency units are a CRITICAL overlap with the approved infection-control set, and the division is as follows. The infection-prevention-and-control-practices policy of {{HOSPITAL_NAME}} (HIC.2) owns hand hygiene, standard and transmission-based precautions, personal protective equipment, and safe injection. The healthcare-associated-infection-prevention policy of {{HOSPITAL_NAME}} (HIC.4) owns the device bundles (ventilator-associated pneumonia, central-line-associated bloodstream infection, catheter-associated urinary tract infection, and surgical-site infection) and occupational health and post-exposure prophylaxis. The infection-surveillance policy of {{HOSPITAL_NAME}} (HIC.5) owns surveillance, including ventilator-associated events, alert organisms, outbreaks, and the case definitions in use (including any NHSN definition set the surveillance plan names). This policy (COP.6.c) requires those practices to be written into the intensive-care and high-dependency written guidance and to be followed in those units. It does NOT rewrite the bundles, biomedical-waste colour codes, or NHSN definitions. A local unit document that restates a bundle and then drifts from HIC.4 is a defect, not a customisation.
+- Biomedical-waste colour categories, housekeeping methods, and kitchen hygiene are governed by the support-services infection-control policy of {{HOSPITAL_NAME}} (HIC.3). This policy does not restate them.
+- Sterilisation and high-level disinfection of equipment used in the unit are governed by the sterilisation policy of {{HOSPITAL_NAME}} (HIC.6). This policy requires that equipment in use is the equipment that policy has released; it does not write reprocessing.
+- Hospital-wide non-availability of beds is governed by the registration, admission and transfer policy of {{HOSPITAL_NAME}} (AAC.2). This policy owns the intensive-care and high-dependency bed-shortage procedure: what is done when THIS unit has no bed. AAC.2 does not write ICU triage; this document does not write the hospital-wide occupancy mechanism.
+- Early-warning signs of deterioration on the ward, and the escalation that may lead to a request for intensive or high-dependency care, are governed by the assessment policy of {{HOSPITAL_NAME}} (AAC.3). That policy owns recognising deterioration and handing the patient to this protocol. This policy owns the admission criteria against which that request is accepted or not. An early-warning trigger is not an automatic intensive-care admission.
+- Internal transfer into or out of the intensive care or high dependency unit is governed by the continuity-of-care policy of {{HOSPITAL_NAME}} (AAC.7). This policy owns whether the patient meets admission or discharge criteria; AAC.7 owns the unit-to-unit move once that decision is made.
+- Discharge from the organisation, and the discharge summary, are governed by the discharge policy of {{HOSPITAL_NAME}} (AAC.8). Discharge criteria from the intensive care or high dependency unit to a ward of this hospital are this document's. Leaving the organisation is AAC.8's. An emergency-department episode note, when that policy exists, is not this unit's discharge.
+- Cardio-pulmonary resuscitation is governed by the resuscitation policy of {{HOSPITAL_NAME}} (COP.3). This policy uses that protocol when a patient in the unit is resuscitated; it does not write it.
+- The written definition of whether intensive care and high dependency are defined services is governed by the definition-and-display policy of {{HOSPITAL_NAME}} (AAC.1).
+- Organ donation awareness and any transplant programme are governed, when drafted, by the procedures-and-operation-theatre policy of {{HOSPITAL_NAME}} (COP.11). This policy owns brain-death declaration only insofar as it forms part of this hospital's end-of-life pathway under the Transplantation of Human Organs and Tissues Act, 1994.
+- The medical record itself is governed by the information-management policies of {{HOSPITAL_NAME}}. This policy owns the intensive-care and end-of-life content written into that record."""
+
+POLICY_STATEMENT = """{{HOSPITAL_NAME}} implements defined admission and discharge criteria for its intensive care and high dependency units, and follows a defined procedure when those beds are short. A patient is not admitted because a bed happens to be empty, and is not refused without the shortage procedure being used.
+
+{{HOSPITAL_NAME}} provides care in those units based on written guidance, by staff and equipment that are adequate for the care the unit claims.
+
+{{HOSPITAL_NAME}} documents infection-control practices in the intensive-care and high-dependency written guidance and follows them there. Those practices are the hospital's HIC.2, HIC.4 and HIC.5 practices applied in this unit, not a second bundle book.
+
+{{HOSPITAL_NAME}} implements a quality-assurance programme for intensive and high-dependency care.
+
+{{HOSPITAL_NAME}} counsels the patient and/or family periodically during the intensive-care or high-dependency stay.
+
+{{HOSPITAL_NAME}} provides end-of-life care in a consistent manner and in consonance with legal requirements, including the Transplantation of Human Organs and Tissues Act, 1994 insofar as brain-death declaration forms part of this hospital's pathway, and the law on advance directives and withholding or withdrawal of life-sustaining treatment as interpreted by the Supreme Court of India in Common Cause v Union of India (2018)."""
+
+PROCEDURE_STEPS = [
+"""1. Admission and discharge criteria, and the bed-shortage procedure
+
+The defined admission and discharge criteria for the intensive care and high dependency units of {{HOSPITAL_NAME}} are implemented, and defined procedures for the situation of bed shortages are followed. This step is the documented-evidence anchor of that asterisked requirement. A criterion that exists in a file and is not the criterion used at 02:00 is not implemented. A shortage that is handled by leaving a ventilated patient in a ward corridor is not a procedure.
+
+{{HOSPITAL_NAME}} holds written admission criteria for the intensive care unit and, separately if the unit exists, for the high dependency unit. The criteria are [Hospital to define — the admission criteria for the intensive care unit and for the high dependency unit]. They state which patients the unit will accept, which it will not, and how a request from the ward, the emergency area or the operation theatre is decided. The Society of Critical Care Medicine ICU admission, discharge and triage guidelines (chapter reference 23 of this chapter) and the Indian Society of Critical Care Medicine ICU guidelines (chapter reference 25) are recognised frameworks this hospital may draw on when it writes those criteria. This document does not import a numbered scoring tool, a named triage colour, or a staffing ratio as a mandate. Paediatric intensive-care criteria, if this hospital runs a paediatric intensive-care service, are [Hospital to define — paediatric intensive-care admission criteria, if that service exists]; chapter reference 39 is a recognised source, not a protocol adopted verbatim.
+
+{{HOSPITAL_NAME}} holds written discharge criteria from the intensive care unit and from the high dependency unit to a lower level of care inside this hospital. Those criteria are [Hospital to define — the discharge criteria from the intensive care unit and from the high dependency unit]. Discharge from the unit to a ward is not discharge from the organisation. The discharge summary when the patient later leaves the hospital is owned by the discharge policy of {{HOSPITAL_NAME}}. This step owns that the patient leaves the unit because the criteria are met, not because a new admission needs the bed and no one will write the reason.
+
+The reason criteria exist, and why they have to be the criteria actually used, is that intensive-care and high-dependency beds are a scarce clinical resource, not a location. Admitting a patient who cannot benefit occupies the bed of a patient who can. Refusing a patient who meets the criteria, without using the shortage procedure, is a refusal of care the hospital holds out. The common error is twofold: the open-door, in which every deterioration becomes an intensive-care admission because saying no feels harder than saying yes; and the closed-door, in which the unit is "full" as a habit, criteria are not applied, and the shortage procedure is never opened. Both errors are this step's target. Criteria implemented means the decision in the record cites them.
+
+When the intensive care or high dependency unit has no bed for a patient who meets the admission criteria, the bed-shortage procedure is followed. That procedure is [Hospital to define — the intensive-care and high-dependency bed-shortage procedure]. It states, in writing, who has authority to decide, the options in the order they are considered (create a bed by discharging a patient who meets discharge criteria; hold the patient in a named supervised location with a named clinician while a bed is created; transfer to another organisation under the registration, admission and transfer policy of {{HOSPITAL_NAME}}), and how the decision is recorded. This procedure is not the hospital-wide non-availability mechanism owned by AAC.2. AAC.2 owns what the hospital does when it has no ward bed. This step owns what THIS unit does when it has no intensive-care or high-dependency bed. Mixing the two produces a corridor patient with no named owner.
+
+An early-warning trigger under the assessment policy of {{HOSPITAL_NAME}} may start a request for this unit. The trigger is not an admission. Admission is decided against the criteria in this step. Internal transfer into the unit, once admission is accepted, is performed under the continuity-of-care policy of {{HOSPITAL_NAME}}.
+
+The written criteria and the shortage procedure are held at [Hospital to define — where the admission and discharge criteria and the bed-shortage procedure are held].""",
+
+"""2. Written guidance, staff and equipment
+
+Care in the intensive care and high dependency units is provided based on written guidance, by adequately available staff and equipment.
+
+The written guidance for care in each unit is [Hospital to define — the written guidance for care in the intensive care unit and in the high dependency unit, and where it is held]. It covers at least monitoring, the use of the equipment the unit claims, the nursing and medical work of the unit, and the infection-control content required at step 3. It is the unit's guidance. It does not rewrite hospital-wide policies it points to.
+
+Staffing of each unit — the roles, the numbers on duty, and the arrangement out of hours — is [Hospital to define — the staffing of the intensive care and high dependency units, including out of hours]. Qualifications and professional-council registration are verified under the human resource policies of {{HOSPITAL_NAME}}; this step uses that verification and does not restate the method. Adequacy is judged against the care the unit's admission criteria claim, not against a generic intensive-care ratio this document does not set.
+
+The equipment inventory that backs each unit, including what is present at the bed and what is shared, is [Hospital to define — the equipment inventory of the intensive care and high dependency units]. Equipment that is out of service is not counted as backing a service the unit still claims. Reprocessing of reusable devices is owned by the sterilisation policy of {{HOSPITAL_NAME}}; this step requires that a device in use has been released by that policy.
+
+Where the unit cannot, today, deliver a service its criteria still claim, that service is suspended in the same order the definition-and-display policy requires of any service, and requesting clinicians are told.""",
+
+"""3. Infection-control practices documented in the unit guidance and followed
+
+Infection-control practices are documented and followed. This step is the documented-evidence anchor of that asterisked requirement, and it is the step that must not become a second infection-control manual.
+
+The intensive-care and high-dependency written guidance at step 2 contains a documented infection-control section. That section does not invent practices. It names, as the practices this unit follows, the hospital's already-written requirements:
+
+- hand hygiene, standard precautions, transmission-based precautions and personal protective equipment, as owned by the infection-prevention-and-control-practices policy of {{HOSPITAL_NAME}} (HIC.2);
+- the device bundles that apply to patients in this unit — at least the ventilator, central-line and urinary-catheter bundles, and the surgical-site bundle where a surgical patient is in the unit — as owned by the healthcare-associated-infection-prevention policy of {{HOSPITAL_NAME}} (HIC.4);
+- cooperation with surveillance, including device-day counting, case-finding and outbreak measures, as owned by the infection-surveillance policy of {{HOSPITAL_NAME}} (HIC.5).
+
+The unit guidance states where those documents are held and that staff of this unit are required to follow them here, including at night and when the unit is busy. How that section is titled and where it sits in the unit guidance is [Hospital to define — how the intensive-care and high-dependency written guidance documents the infection-control practices it follows]. What it must not do is reprint the bundles, reprint the four biomedical-waste colour categories, or reprint NHSN or other surveillance case definitions. Those texts live in HIC.4, HIC.3 and HIC.5. Reprinting them here is how they drift: a clause updated in HIC.4 and left stale on the intensive-care wall.
+
+The practices are followed, not only documented. Following means: hand hygiene at the moments HIC.2 requires, in this unit; transmission-based precautions applied to the patient in this unit when HIC.2 has assigned them; bundle elements performed for every eligible device in this unit, scored as HIC.4 scores them; device days and the other surveillance inputs HIC.5 asks of this unit supplied rather than guessed. The unit does not run a parallel scoring system. The records HIC.4 and HIC.5 already require are the records of following. Additional unit-level confirmation that those records are complete for this unit is [Hospital to define — how the unit confirms that HIC.2, HIC.4 and HIC.5 practices are being followed on its beds].
+
+The reason this step exists as intensive-care documentation, and not as a cross-reference so brief that the unit can ignore it, is that this is where devices concentrate. A hospital can have an excellent bundle book and still infect its ventilated patients if the intensive-care written guidance is silent, or if the unit has written its own "ICU infection-control SOP" that quietly drops an element. The common error is exactly that: either silence ("infection control is HIC's job") so that an assessor finds no documented practice in the unit's own guidance, or a local rewrite that becomes a second, drifting bundle. Both fail the requirement that practices are documented AND followed. Documentation without following is a file. Following without documentation in the unit guidance is a habit that leaves with the nurse who remembered it.
+
+Occupational exposure in the unit is managed under HIC.4's post-exposure pathway, not under a unit-specific PEP. Housekeeping of the unit follows HIC.3; this step does not write a cleaning schedule. Reprocessing of ventilator tubing, laryngoscope blades and other devices follows HIC.6.
+
+If a practice needed in this unit is missing from HIC.2, HIC.4 or HIC.5, the gap is raised to the Infection Prevention and Control Committee for those policies to close. It is not filled by inventing a bundle in this document.""",
+
+"""4. Quality-assurance programme for intensive and high-dependency care
+
+The organisation implements a quality-assurance programme. This step is the documented-evidence anchor of that asterisked requirement. A programme that exists as a file of intensive-care indicators never reviewed is not implemented.
+
+{{HOSPITAL_NAME}} names a quality lead for intensive and high-dependency care. The named lead is [Hospital to define — the named quality lead for intensive and high-dependency care]. That person is accountable for the programme running, for the records it produces, and for reporting findings.
+
+The programme includes a defined set of quality indicators for the unit. The indicators this hospital uses are [Hospital to define — the quality indicators for intensive and high-dependency care]. The Indian Society of Critical Care Medicine quality indicators in ICU (chapter reference 44 of this chapter) are a recognised source this hospital may draw on. This document does not mandate that set, does not mandate a numeric threshold, and does not convert a published rate into a NABH requirement. Infection rates, bundle-compliance figures and device-day denominators that HIC.5 and HIC.4 already produce are received by this programme as inputs; they are not re-collected under a second definition. This programme may add non-infection indicators (unplanned readmission to the unit, discharge against criteria, missed counselling, end-of-life documentation defects, and others the hospital chooses). Re-defining VAE, CLABSI, CAUTI or SSI here is forbidden.
+
+Indicators are collected, reviewed at [Hospital to define — the forum and interval at which intensive-care and high-dependency quality-assurance findings are reviewed], and used to produce corrective and preventive action when the review so requires. An indicator that is collected and never discussed is not a programme. The common error is a dashboard of rates copied from a society list, with no owner, no forum, and no action — a display, not assurance. The named lead, the hospital's own indicator list, the forum, and the action register are the method that replaces that error.
+
+Calibration and maintenance of unit equipment may be performed under the facility policies of {{HOSPITAL_NAME}}. This programme includes that the unit does not rely on equipment that is out of service, matching step 2. It does not write the hospital-wide medical-equipment programme.""",
+
+"""5. Periodic counselling of the patient and family
+
+The organisation has a mechanism to counsel the patient and/or family periodically.
+
+The mechanism — who counsels, how often, what is covered at a minimum, and where the counselling is recorded — is [Hospital to define — the mechanism for periodic counselling of the intensive-care or high-dependency patient and/or family]. Counselling is offered periodically during the stay, not only at admission and not only when a decision to withdraw is being asked for. Where the patient can participate, the patient is included. Where the patient cannot, the family is counselled.
+
+End-of-life discussions at step 6 are counselling, but they are not the whole of this step. A family that hears from the unit only when treatment is being stopped has not been counselled periodically.
+
+The medical record holds a note of each counselling episode against the unique identification number.""",
+
+"""6. End-of-life care, consistent and legally consonant
+
+End-of-life care is provided in a consistent manner in the organisation, and is in consonance with legal requirements. This step is the documented-evidence anchor of that asterisked requirement. Consistency means the same pathway is used in the intensive care unit, the high dependency unit, and the other locations of {{HOSPITAL_NAME}} in which a patient dies under this hospital's care, so that end-of-life care is not an intensive-care speciality invented at the last bed. Legal consonance means the pathway is written against the law that actually applies, not against a borrowed checklist from another country.
+
+The written end-of-life pathway of {{HOSPITAL_NAME}} is [Hospital to define — the written end-of-life pathway, including who may decide, how the decision is recorded, and where the pathway is held]. It is used whenever a decision is made to withhold or withdraw life-sustaining treatment, to recognise dying, or to declare death, including death by neurological criteria where this hospital's pathway includes that declaration. The Indian Society of Critical Care Medicine and Indian Association of Palliative Care consensus statements on end-of-life care (chapter references 34 and 49 of this chapter), the Indian Academy of Pediatrics consensus on end-of-life care (chapter reference 31), and the WHO Global Atlas of Palliative Care at the End of Life (chapter reference 17) are recognised sources this hospital may draw on. This document does not import their algorithms as mandates, and it does not invent a numbered withdrawal sequence.
+
+Withholding or withdrawal of life-sustaining treatment, and the status of an advance directive or living will, are handled in consonance with the law as interpreted by the Supreme Court of India in Common Cause v Union of India (2018). Staff do not treat an informal family request, or an undocumented "comfort only" note, as completing that law. The hospital's method for identifying whether an advance directive exists, for recording a withholding or withdrawal decision, and for the safeguards it applies, is part of the pathway above. This document is not legal advice; the hospital verifies the current judicial and any subsequent statutory position when it writes that pathway.
+
+Declaration of brain death, where it forms part of this hospital's end-of-life pathway, is performed in consonance with the Transplantation of Human Organs and Tissues Act, 1994. Whether {{HOSPITAL_NAME}} declares brain death, and the procedure it uses if it does, are [Hospital to define — whether brain-death declaration forms part of this hospital's end-of-life pathway, and the procedure if it does]. Chapter reference 54 addresses the current status of brain-death declaration in India as background; it is not a substitute for the Act. If this hospital does not declare brain death, the pathway still covers dying patients. Organ-donation awareness and any transplant programme remain, when drafted, with the procedures-and-operation-theatre policy of {{HOSPITAL_NAME}}; this step does not run a donation programme.
+
+The reason a written, legally consonant pathway is the safety step is that end-of-life decisions concentrate harm in both directions: continuing life-sustaining treatment that the law and the patient's known wishes would not support, and stopping treatment in a way the law does not recognise. The record is the only evidence that the decision was the hospital's pathway and not a private arrangement. The common error is the undocumented withdrawal — ventilatory support reduced, inotropes stopped, a corridor agreement with whoever is at the bedside, and a death certificate later — or, the opposite, the inability to stop because no one will write the decision. Both are failures of consistency and of legal consonance. The pathway, the named decision-makers, the record, and the refusal to treat a corridor conversation as the decision, are the method that replaces that error.
+
+Counselling of the family as the pathway is applied uses the mechanism at step 5 and is recorded. Cardio-pulmonary resuscitation, when it is still indicated, uses the resuscitation policy of {{HOSPITAL_NAME}}; a decision that resuscitation will not be attempted is recorded under this pathway and is not left as an unwritten understanding.
+
+Palliative measures that accompany withholding or withdrawal — analgesia, mouth care, stopping of non-beneficial interventions — are [Hospital to define — the palliative measures that accompany withholding or withdrawal]. Medication as a medication process remains with the medication policies of {{HOSPITAL_NAME}} when drafted; this step owns that end-of-life care includes them.""",
+
+"""7. Records, review and the order of operations
+
+Every admission decision, discharge from the unit, bed-shortage decision, counselling note, quality-assurance review, and end-of-life decision is recorded against the unique identification number where a patient is involved, and is retrievable.
+
+The quality or accreditation coordinator audits a sample of these records at [Hospital to define — the audit interval for intensive-care and high-dependency records] for: admission and discharge decisions that cite the written criteria; bed-shortage events that used the unit procedure rather than the hospital-wide AAC.2 mechanism alone; unit written guidance that documents HIC.2, HIC.4 and HIC.5 practices without reprinting bundles, colour codes or NHSN definitions, and unit records that show those practices followed; quality indicators reviewed with action where required; periodic counselling notes; and end-of-life decisions that follow the written pathway rather than an undocumented withdrawal.
+
+This policy is reviewed at [Hospital to define — the review interval for this policy], and sooner when an off-criteria admission, a shortage handled without the procedure, an infection-control drift into a local bundle, or an undocumented end-of-life decision exposes a gap, or when the HIC, AAC.2, AAC.3, AAC.7 or AAC.8 policies that this document hands work to are revised.""",
+]
+
+RESPONSIBILITY = """The head of the institution is accountable for {{HOSPITAL_NAME}} implementing intensive-care and high-dependency admission and discharge criteria, for a bed-shortage procedure that is used, for infection-control practices being in the unit guidance and followed there, and for end-of-life care that is consistent and legally consonant.
+
+The person in charge of the intensive care and high dependency units authors and keeps current the criteria and shortage procedure at step 1, holds the written guidance at step 2, keeps staffing and equipment adequate, holds the infection-control section of that guidance at step 3 without rewriting HIC bundles, and applies the end-of-life pathway at step 6.
+
+The named quality lead at step 4 operates the quality-assurance programme, receives HIC.4 and HIC.5 figures as inputs rather than redefining them, and reports findings at the stated forum.
+
+Clinicians who request admission apply the criteria, record the decision, and do not treat an early-warning trigger as an automatic admission. Clinicians who decide end-of-life care follow the written pathway and do not complete withholding or withdrawal in an undocumented conversation.
+
+Nursing staff of the unit follow the written guidance, follow HIC.2, HIC.4 and HIC.5 as documented in that guidance, complete counselling notes when they counsel, and do not run a parallel bundle.
+
+The Infection Control Team continues to own HIC.2, HIC.4 and HIC.5 hospital-wide; this unit is a setting in which those policies are applied, not a second owner of their method.
+
+The quality or accreditation coordinator audits the records at step 7 and reports findings to the head of the institution.
+
+All staff are expected to treat an off-criteria admission, a shortage without the procedure, a local rewrite of a device bundle, and an undocumented end-of-life decision as defects, and to report them."""
+
+REFERENCES = """- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Care of Patients chapter, standard COP.6.
+- Transplantation of Human Organs and Tissues Act, 1994, insofar as brain-death declaration forms part of this hospital's end-of-life pathway.
+- Common Cause v Union of India (2018), Supreme Court of India — the law on advance directives and withholding or withdrawal of life-sustaining treatment, as interpreted in that judgment. This document is not legal advice; the hospital verifies the current position when it writes its pathway.
+- Nates, J. L., et al. (2016), ICU Admission, Discharge, and Triage Guidelines: A Framework to Enhance Clinical Operations, Development of Institutional Policies, and Further Research, Critical Care Medicine, 44(8), 1553-1602 — chapter reference 23 of this chapter; a recognised framework for writing local criteria; not imported as a numbered tool.
+- Indian Society of Critical Care Medicine, Intensive Care Unit (ICU) guidelines — chapter reference 25 of this chapter; a recognised framework; not adopted verbatim.
+- Pediatric ICU Admission, Discharge, and Triage Practice Statement and Levels of Care Guidance, Pediatric Critical Care Medicine (2019), 20(9), 847-887 — chapter reference 39 of this chapter; used only if this hospital runs paediatric intensive care; not adopted verbatim.
+- Indian Society of Critical Care Medicine, Quality Indicators in ICU (2009) — chapter reference 44 of this chapter; a recognised source for choosing local indicators; not mandated as the only set, and no published rate is converted into a requirement.
+- Myatra, S. N., et al. (2014), End-of-life care policy: An integrated care plan for the dying, Indian Journal of Critical Care Medicine, 18, 615-635 — chapter reference 34 of this chapter.
+- Salins, N., et al. (2014), End of life care policy for the dying: Consensus position statement of Indian Association of Palliative Care, Indian Journal of Palliative Care, 20(3), 171 — chapter reference 49 of this chapter.
+- Mishra, S., et al. (2017), End-of-life care: Consensus statement by Indian Academy of Pediatrics, Indian Pediatrics, 54(10), 851-859 — chapter reference 31 of this chapter.
+- World Health Organization, Global Atlas of Palliative Care at the End of Life (2020) — chapter reference 17 of this chapter; background on palliative care at the end of life; not a protocol.
+- Singh, D., and Jain, G. (2018), Declaration of Brain Death in India: Current Status, Critical Care Update 2017, 273-279 — chapter reference 54 of this chapter; background only, not a substitute for the 1994 Act.
+- Internal documents of {{HOSPITAL_NAME}}: the service directory; the intensive-care and high-dependency admission and discharge criteria; the unit bed-shortage procedure; the unit written guidance including its infection-control section; the quality-indicator set and review record; the counselling mechanism; the end-of-life pathway; the infection-prevention-and-control-practices policy; the healthcare-associated-infection-prevention policy; the infection-surveillance policy; the support-services infection-control policy; the sterilisation policy; the registration, admission and transfer policy; the assessment policy; the continuity-of-care policy; the discharge policy; and the information-management policies."""
+
+DISTRIBUTION = """Controlled master copy: office of the head of the institution, {{HOSPITAL_NAME}}, with the quality or accreditation coordinator.
+
+Copies issued to: the intensive care unit; the high dependency unit; every in-patient ward that refers to those units; the emergency area; the operation theatre and recovery; nursing administration; the person in charge of the intensive care and high dependency units; the named quality lead; and the Infection Control Team.
+
+The current version is available to all staff at [Hospital to define — intranet location or nursing station folder]. The admission and discharge criteria, the bed-shortage procedure, the unit written guidance and the end-of-life pathway — the working documents this policy requires — are held in the units that use them.
+
+Superseded versions are withdrawn from all points of use on issue of a revision, and one dated copy of each is retained by the quality or accreditation coordinator."""
+
+ABBREVIATIONS = """Abbreviations already defined in the HIC.1 to HIC.6 master policies are not repeated here. A reader using this document on its own should refer to those policies for the shared glossary, including NABH, SHCO, OE, PPE, HAI, VAP, VAE, CLABSI, CAUTI, SSI, NHSN, ICT and IPCC.
+
+The following abbreviations are used in this document and are not defined in HIC.1 to HIC.6:
+
+HDU — High Dependency Unit
+ICU — Intensive Care Unit
+ISCCM — Indian Society of Critical Care Medicine
+THOA — Transplantation of Human Organs and Tissues Act, 1994
+
+Any additional abbreviation used locally within {{HOSPITAL_NAME}} is [Hospital to define] and is added to this list at the next revision."""
+
+STATUTE_CLAUSE = (
+    "the Transplantation of Human Organs and Tissues Act, 1994, insofar as brain-death "
+    "declaration forms part of this hospital's end-of-life pathway, and the legal "
+    "requirements for end-of-life care as interpreted by the Supreme Court of India in "
+    "Common Cause v Union of India (2018) on advance directives and withholding or "
+    "withdrawal of life-sustaining treatment"
+)
+DISCLAIMER = make_disclaimer(STATUTE_CLAUSE)
+
+OE_MAPPING = [
+    {
+        "oe_code": "COP.6.a",
+        "requirement": "The defined admission and discharge criteria for its intensive care and high dependency units are implemented, and defined procedures for the situation of bed shortages are followed",
+        "steps": "Steps 1, 7",
+        "evidence": "The written admission criteria for the intensive care unit and for the high dependency unit, stating which patients each unit accepts and does not accept and how a request from the ward, emergency area or operation theatre is decided, held as this hospital's criteria rather than an unadapted society table, and without a numbered scoring tool, named triage colour or staffing ratio presented as a NABH mandate; paediatric intensive-care admission criteria if that service exists; sample admission records citing the written criteria rather than 'bed available' or 'family insisted'; the written discharge criteria from each unit to a lower level of care inside this hospital, with sample discharges showing the criteria were met and distinguishing unit-to-ward discharge from leaving the organisation under the discharge policy; the written intensive-care and high-dependency bed-shortage procedure naming who has authority, the options in the order considered (create a bed by discharging a patient who meets discharge criteria; hold in a named supervised location with a named clinician; transfer to another organisation under the registration, admission and transfer policy), and how the decision is recorded; sample shortage events showing that procedure used rather than the hospital-wide AAC.2 non-availability mechanism alone, and showing a ventilated patient was not left in an unnamed corridor; records distinguishing an AAC.3 early-warning trigger (a request) from an admission decision against these criteria; records of internal transfer into the unit performed under the continuity-of-care policy after admission was accepted; the location of the criteria and shortage procedure; briefing records of staff who admit and discharge; the audit sample at step 7 of admission and discharge decisions that cite the written criteria and of shortage events that used the unit procedure",
+        "responsible": "Person in charge of the intensive care and high dependency units holds and applies the criteria and the shortage procedure; requesting clinicians do not treat an early-warning trigger as automatic admission; AAC.2 owns hospital-wide bed non-availability; AAC.7 owns the internal move once admission is accepted; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "COP.6.b",
+        "requirement": "The care is provided in intensive care and high dependency units based on written guidance by adequately available staff and equipment",
+        "steps": "Steps 2, 3, 7",
+        "evidence": "The written guidance for care in each unit and where it is held; the staffing of each unit including out of hours, using human-resource verification of qualifications rather than restating it; the equipment inventory, with out-of-service equipment not counted as backing a claimed service; records of a service suspended when it cannot be delivered; devices in use released under the sterilisation policy",
+        "responsible": "Person in charge of the units keeps guidance, staffing and equipment adequate; human resource function verifies qualifications; HIC.6 owns reprocessing; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "COP.6.c",
+        "requirement": "Infection control practices are documented and followed",
+        "steps": "Steps 3, 2, 7",
+        "evidence": "The infection-control section of the intensive-care and high-dependency written guidance, showing that it names HIC.2 (hand hygiene, standard and transmission-based precautions, personal protective equipment) as the practices this unit follows, names HIC.4 device bundles (ventilator, central-line, urinary-catheter, and surgical-site where applicable) as the bundles this unit follows, and names HIC.5 surveillance (device-day counting, case-finding, outbreak measures) as the surveillance this unit cooperates with, together with where those documents are held; records showing that section does not reprint the bundles, does not reprint biomedical-waste colour categories, and does not reprint NHSN or other surveillance case definitions; the written method by which the unit confirms those practices are being followed on its beds, using the records HIC.4 and HIC.5 already require rather than a parallel scoring system; sample unit records showing hand hygiene, transmission-based precautions and bundle elements performed in this unit, and device-day and other surveillance inputs supplied to HIC.5 rather than guessed; records showing occupational exposure managed under HIC.4's post-exposure pathway rather than a unit-specific PEP, housekeeping under HIC.3, and device reprocessing under HIC.6; records of any gap raised to the Infection Prevention and Control Committee rather than filled by inventing a bundle in this document; briefing records of unit staff shown the infection-control section of their own guidance; the audit sample at step 7 of unit guidance that documents HIC.2, HIC.4 and HIC.5 without reprinting bundles, colour codes or NHSN definitions, and of unit records that show those practices followed",
+        "responsible": "Person in charge of the units holds the infection-control section of the unit guidance and requires it to be followed; nursing and medical staff of the unit follow HIC.2, HIC.4 and HIC.5 here; Infection Control Team continues to own those policies hospital-wide; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "COP.6.d",
+        "requirement": "The organization shall implement a quality-assurance programme",
+        "steps": "Steps 4, 7",
+        "evidence": "The named quality lead for intensive and high-dependency care; the written quality-indicator set chosen by this hospital, showing ISCCM or other published lists used as sources if at all rather than as a mandated set, and showing no published numeric rate converted into a NABH requirement; records showing infection rates, bundle-compliance figures and device-day denominators received from HIC.5 and HIC.4 as inputs rather than re-collected under a second definition, and showing VAE, CLABSI, CAUTI and SSI not redefined here; any non-infection indicators the hospital has added (unplanned readmission, discharge against criteria, missed counselling, end-of-life documentation defects, or others); collection records; the forum and interval of review; the action register showing corrective and preventive action when the review required it rather than a dashboard that was never discussed; the audit sample at step 7 of indicators reviewed with action where required",
+        "responsible": "Named quality lead operates the programme and reports findings; person in charge of the units is accountable that the programme is run; HIC.4 and HIC.5 remain owners of bundle compliance and surveillance definitions; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "COP.6.e",
+        "requirement": "The organisation has a mechanism to counsel the patient and / or family periodically",
+        "steps": "Steps 5, 6, 7",
+        "evidence": "The written counselling mechanism (who, how often, minimum content, where recorded); sample notes of periodic counselling during the stay, including the patient where the patient could participate, and not only at admission or only at withholding; distinction recorded between periodic counselling and end-of-life discussions; the audit sample at step 7 of periodic counselling notes",
+        "responsible": "Clinicians and nursing staff of the unit counsel and record; person in charge of the units holds the mechanism; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "COP.6.f",
+        "requirement": "End of life care is provided in a consistent manner in the organization, and is in consonance with legal requirements",
+        "steps": "Steps 6, 5, 7",
+        "evidence": "The written end-of-life pathway used in the intensive care unit, the high dependency unit and the other locations of this hospital in which a patient dies under this hospital's care, naming who may decide, how the decision is recorded and where the pathway is held, and showing recognised Indian consensus statements used as sources rather than imported as mandated algorithms; the hospital's method for identifying whether an advance directive exists and for recording a withholding or withdrawal decision with safeguards, written against Common Cause v Union of India (2018) rather than against an informal family request or an undocumented 'comfort only' note; the written statement of whether brain-death declaration forms part of this hospital's pathway and, if it does, the procedure in consonance with the Transplantation of Human Organs and Tissues Act, 1994, or if it does not, records showing the pathway still covers dying patients; sample end-of-life records showing the pathway followed rather than an undocumented withdrawal (support reduced in a corridor agreement) or an inability to stop because no one would write the decision; records of family counselling under step 5 as the pathway was applied; records of a decision that resuscitation will not be attempted written under this pathway rather than left unwritten, with resuscitation when still indicated using the resuscitation policy; the palliative measures that accompany withholding or withdrawal, without this document writing the medication process; organ-donation awareness and any transplant programme left to the procedures-and-operation-theatre policy when drafted; the audit sample at step 7 of end-of-life decisions that follow the written pathway",
+        "responsible": "Clinicians who decide end-of-life care follow the written pathway; person in charge of the units holds the pathway; head of the institution is accountable that end-of-life care is consistent and legally consonant; COP.11 will own donation awareness and any transplant programme; quality or accreditation coordinator audits",
+    },
+]
+
+UNIVERSAL_FACTS_CHECKLIST = """Universal (non-NABH) facts included in this draft, and where each was verified. Check these first.
+
+SOURCE OF THE OE TEXT
+0. COP.6 standard text and all six OEs were read directly from the official NABH SHCO Standards 3rd Edition PDF (August 2022), Chapter 2 Care of Patients, printed page 64 (PDF page index 70). The PDF was downloaded on 2026-08-17 from the NABH website's Explore NABH Standards page. Levels: COP.6.a Commitment, COP.6.b Commitment, COP.6.c Commitment, COP.6.d Achievement, COP.6.e Commitment, COP.6.f Commitment.
+   FOUR OEs CARRY THE ASTERISK -- COP.6.a, COP.6.c, COP.6.d and COP.6.f. The draft builds four separate deep blocks (step 1 for a; step 3 for c; step 4 for d; step 6 for f). COP.6.b and COP.6.e are unasterisked and are correspondingly Tier 2.
+   Verified three ways on 2026-08-17: scripts/asterisk_extract.py re-run against the freshly downloaded PDF (self-validation passed; output matched committed scripts/shco_oe_asterisks.json on all 408 entries), the COP.6 page read directly from the extracted page text, and the committed asterisk file. COP.6 was not among the 14 mismatches of the 2026-08-10 audit. PDF OE COP.6.c reads "Infection control practices are documented and followed. *." Mapping requirement uses the text without the asterisk: "Infection control practices are documented and followed."
+
+TIERING UNDER THE STANDING RULE
+1. Two-tier depth standing rule of 2026-08-10 applies. FOUR OF SIX OEs ARE TIER 1. Tier 1: COP.6.a, COP.6.c, COP.6.d, COP.6.f -- procedure steps 1, 3, 4 and 6 carry the reasoning (why criteria must be the criteria used at 02:00, why ICU documentation of HIC practices must not become a second bundle book, why a dashboard is not a QA programme, why an undocumented withdrawal fails legal consonance). Tier 2: COP.6.b (step 2) and COP.6.e (step 5) -- requirement and method without extended rationale. Reviewer to note the shallower treatment of b and e is a DECISION UNDER THE STANDING RULE, not an omission.
+
+CROSS-REFERENCE AND OVERLAP CHECK
+2. Tier 1 cross-check (2026-08-17) of COP.6.a/c/d/f against the approved HIC masters and the AAC drafts in /tmp/aac_drafts/. Search terms: ICU, HDU, admission criteria, bundle, VAP, CLABSI, CAUTI, NHSN, VAE, end of life, brain death, bed shortage, early warning.
+   HIC.2 (approved): HH, TBP, PPE. This draft's Scope and step 3 require those practices in the unit written guidance and followed there; they are not rewritten.
+   HIC.4 (approved): device bundles. This draft requires the unit to follow those bundles and FORBIDS reprinting them. COP.6.d receives bundle-compliance figures as QA inputs; it does not re-score under a second definition.
+   HIC.5 (approved): surveillance, VAE, NHSN definitions. This draft requires cooperation (device days, case-finding) and FORBIDS reprinting NHSN definitions. QA does not redefine VAE/CLABSI/CAUTI/SSI.
+   HIC.3 (approved): BMW colours, housekeeping. Pointed at, not restated. Scope says so explicitly.
+   HIC.6 (approved): reprocessing. Unit uses released devices; does not write reprocessing.
+   AAC.2 (draft): hospital-wide bed non-availability. COP.6.a owns the ICU/HDU bed-shortage procedure. Division stated in Scope and step 1.
+   AAC.3 (draft): early warning may trigger ICU referral; COP.6 owns admission criteria. AAC.3 Scope already hands critical-care protocols to COP. Division stated.
+   AAC.7 (draft): internal transfer into/out of ICU. COP.6 decides admission/discharge; AAC.7 performs the move. Division stated.
+   AAC.8 (draft): leaving the organisation. Unit-to-ward discharge is COP.6; hospital discharge is AAC.8.
+   AAC.1: whether ICU/HDU are defined services.
+   COP.3 (sibling): CPR protocol used, not written here.
+   COP.11 (sibling): organ-donation awareness / transplant programme; this document owns brain-death declaration only insofar as it is part of the EOL pathway under THOA.
+3. T2 QUICK CHECK: COP.6.b staff/equipment vs AAC.1.b / HRM credentialing -- flagged in step 2, qualifications via HR policies. COP.6.e counselling is this document's; PRE (undrafted) may later own general education method -- forward reference only, not a contradiction.
+
+STATUTORY AND EXTERNAL FACTS
+4. Transplantation of Human Organs and Tissues Act, 1994 -- cited only insofar as brain-death declaration forms part of this hospital's EOL pathway. No section number. Whether this hospital declares brain death is [Hospital to define].
+5. Common Cause v Union of India (2018) -- cited as the Supreme Court's interpretation on advance directives and withholding/withdrawal. No invented statutory form. Document states it is not legal advice.
+6. Chapter refs 17, 23, 25, 31, 34, 39, 44, 49, 54 -- used as recognised frameworks/sources. NO scoring tool, staffing ratio, indicator threshold or withdrawal algorithm is mandated.
+7. Bio-Medical Waste Management Rules, 2016 and Food Safety and Standards Act, 2006 are NOT named in disclaimer paragraph 2. Clinical Establishments Act 2010 is NOT used as a default.
+8. NO NUMBERS ARE STATED as requirements -- no nurse:patient ratio, no waiting-time minutes, no indicator thresholds, no GCS cutoff. Every such value is [Hospital to define].
+
+EDITORIAL POSITIONS TAKEN
+9. Step 1's split between AAC.2 hospital-wide beds and COP.6.a ICU shortage, and the refusal to treat early warning as automatic admission, are editorial positions required by the overlap brief.
+10. Step 3's prohibition on reprinting bundles, BMW colours and NHSN definitions, and the rule that a local drifting ICU SOP is a defect, are editorial positions required by the overlap brief.
+11. Step 4's rule that HIC infection rates are inputs not re-definitions, and that a dashboard without a forum is not a programme, are editorial positions.
+12. Step 6's rule that a corridor withdrawal is not the decision, that the pathway applies hospital-wide for consistency, and that THOA applies only if brain death is on the pathway, are editorial positions.
+
+DISCLAIMER BLOCK -- STATUTE-MATCHED UNDER THE 2026-08-17 STANDING RULE
+13. Paragraphs 1, 3 and 4 are the shared HIC.3-6 block, hash-checked at build time. Paragraph 2 names THOA 1994 (insofar as brain-death declaration is on the pathway) and Common Cause v Union of India (2018) -- the legal sources this document's References actually rely on. It does NOT name BMW Rules 2016 or FSS Act 2006. The HIC wholesale inherit is refused by the build.
+
+DELIBERATELY NOT INCLUDED
+- HIC.2 HH/TBP/PPE method -- not rewritten.
+- HIC.4 bundle elements -- not rewritten.
+- HIC.5 NHSN/VAE definitions -- not rewritten.
+- HIC.3 BMW colours -- not rewritten.
+- Hospital-wide bed mechanism -- AAC.2.
+- Early-warning method -- AAC.3.
+- Internal transfer method -- AAC.7.
+- Hospital discharge summary -- AAC.8.
+- CPR algorithm -- COP.3.
+- Organ-donation programme -- COP.11.
+- The five optional sections are left unset, matching HIC.1-6 and AAC.1.
+
+HOSPITAL-SPECIFIC VALUES LEFT AS [Hospital to define] -- 22 fillable blanks in the rendered document: 2 in the exact form "[Hospital to define]" (one in Abbreviations, one inside the shared Disclaimer block) and 20 in the guidance-bearing form "[Hospital to define - what to state]". A search for the exact string finds 2 of 22; a search for "Hospital to define" without brackets finds all 22, and that is the search a hospital should be told to run. The figure is produced by policy_placeholder_audit.py across every rendered field in both forms, which also asserts that no nested placeholder exists.
+
+The values the hospital must supply: admission criteria for ICU and HDU; paediatric intensive-care admission criteria if that service exists; discharge criteria from ICU and HDU; the unit bed-shortage procedure; where criteria and the shortage procedure are held; the written guidance for care in each unit and where it is held; staffing including out of hours; the equipment inventory; how the unit guidance documents the infection-control practices it follows; how the unit confirms HIC.2/HIC.4/HIC.5 practices are being followed on its beds; the named quality lead; the quality indicators; the forum and interval for QA review; the counselling mechanism; the written end-of-life pathway; whether brain-death declaration forms part of the pathway and the procedure if it does; the palliative measures that accompany withholding or withdrawal; the audit interval; the review interval for this policy; the intranet or folder location; and any additional local abbreviation."""
+
+SQL_HEADER = """-- Source: NABH SHCO Standards 3rd Edition (August 2022), Chapter 2, printed page 64
+-- (PDF page index 70). Levels: a Commitment, b Commitment, c Commitment, d Achievement,
+-- e Commitment, f Commitment.
+-- FOUR OEs CARRY THE ASTERISK -- COP.6.a, COP.6.c, COP.6.d, COP.6.f.
+-- UNAPPROVED DRAFT. Do not run this insert until the owner confirms the write.
+"""
+
+if __name__ == "__main__":
+    emit_and_verify(
+        standard_code=STANDARD_CODE,
+        chapter=CHAPTER,
+        oe_codes=OE_CODES,
+        policy_title=POLICY_TITLE,
+        purpose=PURPOSE,
+        scope=SCOPE,
+        policy_statement=POLICY_STATEMENT,
+        procedure_steps=PROCEDURE_STEPS,
+        responsibility=RESPONSIBILITY,
+        references_text=REFERENCES,
+        distribution=DISTRIBUTION,
+        abbreviations=ABBREVIATIONS,
+        disclaimer=DISCLAIMER,
+        oe_mapping=OE_MAPPING,
+        universal_facts_checklist=UNIVERSAL_FACTS_CHECKLIST,
+        version=VERSION,
+        revision_history=REVISION_HISTORY,
+        tier1_oes=TIER1_OES,
+        statute_clause=STATUTE_CLAUSE,
+        sql_header=SQL_HEADER,
+        json_name="cop6_draft.json",
+        sql_name="cop6_insert.sql",
+    )
