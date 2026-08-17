@@ -703,6 +703,27 @@ taken under this rule, not an omission.
 
 ---
 
+## Deferred from AAC.1 (drafted 2026-08-17)
+
+- [ ] **When the HRM credentialing standards are drafted, check AAC.1.b for a natural
+      cross-reference point.** Flagged by the owner on 2026-08-17 at AAC.1 approval — a note for
+      the future, NOT an overlap today, since no HRM master exists yet.
+
+      Context: AAC.1.b requires each defined service to be backed by "suitably qualified
+      personnel" providing out-patient, in-patient and emergency cover. The AAC.1 draft (step 2,
+      Scope, and the AAC.1.b evidence column) deliberately relies on "the human resource
+      policies of {{HOSPITAL_NAME}}" for the verification method and does not restate it — one of
+      the three forward references recorded in the AAC.1 universal_facts_checklist item 3.
+      When the HRM chapter's credentialing standards are drafted, verify which HRM standard
+      actually owns qualification verification against the PDF (do not assume the standard
+      numbers), make its scope state the division explicitly — AAC.1 defines the services the
+      personnel must stand behind, HRM owns how their qualifications are verified — and check
+      whether AAC.1's generic "human resource policies" wording should be sharpened to name the
+      real policy title, the same resolution pattern HIC.3/HIC.4's forward references to the
+      then-undrafted HIC.6 followed.
+
+---
+
 ## Cross-cutting: document control scaffolding
 
 Not a content gap — a **format** gap found against NABH's sample policy
