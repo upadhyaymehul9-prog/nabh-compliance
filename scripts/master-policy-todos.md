@@ -926,6 +926,80 @@ T2 one-line flags (standing rule: flag and move on):
 
 ---
 
+## Deferred from COP.5 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags (full cross-check done in the COP.5 draft Scope / universal_facts_checklist). Do not patch approved AAC.4 or HIC.3 in this pass — reconcile when the owning document is next opened.
+
+- [ ] **AAC.4 laboratory testing vs COP.5 transfusion.** AAC.4 owns grouping, screening, compatibility as laboratory work, the specimen pathway, and critical laboratory results to the clinician. COP.5 owns the clinical transfusion: decision, bedside identity check, administration, emergency availability of a unit, and the reaction pathway. A compatibility report is a laboratory result; hanging the unit is COP.5. Flag so AAC.4 is not later read as owning transfusion method.
+
+- [ ] **HIC.3 BMW of used blood bags vs COP.5.b used-bag disposal.** COP.5 requires that a used bag and tubing enter the hospital-wide biomedical-waste programme and are not left on a trolley, in a sink or in general waste. It does not restate colour categories. BMW Rules 2016 are deliberately NOT named in COP.5 P2. Do not patch HIC.3.
+
+- [ ] **MOM (undrafted) vs COP.5 transfusion method.** Blood and blood components are named in the MOM chapter intent. COP.5 owns the transfusion process. When MOM is drafted it must not restate safe-transfusion method (bedside identity check, issue, administration, emergency availability, reaction pathway). Forward-ref only.
+
+T2 one-line flags (standing rule: flag and move on):
+
+- [ ] **COP.5.a transfusion scope vs AAC.1 service directory.** Align; do not rewrite the directory. Stated in Scope and step 1.
+
+- [ ] **COP.5.d transfusion/donation consent vs PRE consent method.** PRE (undrafted) owns how consent is explained, recorded and refused. COP.5.d owns that consent is obtained for transfusion and for donation before the act.
+
+- [ ] **COP.5.f haemovigilance / post-transfusion form.** No approved policy owns reaction analysis. Keep it here.
+
+- [ ] **COP.1 two identifiers vs COP.5.b bedside check.** COP.1 owns the identifier pair; COP.5 requires those identifiers before a unit is hung.
+
+---
+
+## Deferred from COP.6 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags (full cross-check done in the COP.6 draft Scope / universal_facts_checklist). CRITICAL: do not rewrite HIC bundles, BMW colours, or NHSN definitions. Do not patch approved HIC.2/HIC.4/HIC.5 in this pass.
+
+- [ ] **COP.6.c infection-control practices in ICU/HDU written guidance vs HIC.2 / HIC.4 / HIC.5.** HIC.2 owns HH/TBP/PPE. HIC.4 owns device bundles (VAP/CLABSI/CAUTI/SSI) and PEP. HIC.5 owns surveillance including VAE and NHSN definitions. COP.6.c (asterisked) requires those practices to be IN the ICU/HDU written guidance and followed there. A local unit SOP that reprints a bundle and then drifts from HIC.4 is a defect. Both documents must keep this split if either is approved without the other.
+
+- [ ] **AAC.2 hospital-wide bed unavailability vs COP.6.a ICU/HDU bed-shortage procedure.** AAC.2 owns what the hospital does when it has no ward bed. COP.6.a owns what THIS unit does when it has no intensive-care or high-dependency bed. Mixing the two produces a corridor patient with no named owner. Stated in Scope and step 1.
+
+- [ ] **AAC.3.e early-warning vs COP.6.a admission criteria.** AAC.3.e may trigger an ICU referral. COP.6 owns the admission criteria against which that request is accepted or not. An early-warning trigger is not an automatic intensive-care admission. AAC.3 already hands critical-care protocols to COP.
+
+- [ ] **AAC.7 internal transfer into/out of ICU vs COP.6 admission/discharge decision.** COP.6 decides whether the patient meets criteria; AAC.7 owns the unit-to-unit move once that decision is made.
+
+T2 one-line flags (standing rule: flag and move on):
+
+- [ ] **COP.6.b staff/equipment vs HRM credentialing / AAC.1.b.** Qualifications via HR policies; this document judges adequacy against the care the unit claims. Stated in step 2.
+
+- [ ] **COP.6.e periodic family counselling vs PRE.** PRE (undrafted) may later own general education method. COP.6.e owns that ICU/HDU counselling happens periodically during the stay.
+
+- [ ] **COP.6.f brain-death / EOL pathway vs COP.11.i/j transplant and donation-awareness.** Same THOA 1994 envelope already flagged under COP.11. Clinical declaration pathway remains COP.6; donation programme remains COP.11.
+
+- [ ] **COP.6 unit-to-ward discharge vs AAC.8 leaving the organisation vs COP.2 ED episode note.** Unit discharge criteria are COP.6; hospital discharge summary is AAC.8.
+
+- [ ] **COP.6 uses COP.3 CPR; does not write it.** Point only.
+
+- [ ] **HIC.3 housekeeping / BMW colours and HIC.6 reprocessing in the unit.** Pointed at; not restated.
+
+---
+
+## Deferred from COP.7 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags (full cross-check done in the COP.7 draft Scope / universal_facts_checklist). Do not patch AAC.5 imaging licences in this pass.
+
+- [ ] **AAC.5 USG PC-PNDT registration vs COP.7.a obstetric prohibition on sex determination.** AAC.5 owns imaging licences, statutory imaging records and the licence calendar. COP.7 owns the obstetric process, including that antenatal care does not determine or communicate foetal sex. A PC-PNDT registration is not obstetric care; an obstetric consultation that tells the family the sex is not an imaging-licence problem alone. Both documents are required. AAC.6 owns the statutory notice in imaging.
+
+- [ ] **COP.7.c maternal nutrition in antenatal assessment vs COP.13 in-patient nutritional screen vs COP.8.e paediatric nutrition/growth/immunisation vs HIC.3 kitchen.** Same split already flagged under COP.13. COP.7.c is the antenatal component (not a weight column). An in-patient screen after admission does not complete it. FSS Act is not named in COP.7 P2.
+
+T2 one-line flags (standing rule: flag and move on):
+
+- [ ] **COP.7.b high-risk identification/referral vs AAC.2 between-organisation transfer.** COP.7 owns the clinical decision that referral is needed; AAC.2 owns the transfer once that decision is made.
+
+- [ ] **COP.7.d peri/post-natal monitoring vs AAC.3.e early-warning.** Escalation of a deteriorating mother uses AAC.3 where that process applies; obstetric emergency response remains in COP.7 written guidance.
+
+- [ ] **COP.7.e neonatal BACKUP vs COP.8.b neonatal CARE.** Standing intra-COP division, mirrored in the COP.8 draft. COP.7 owns that an obstetric service caring for high-risk cases has the human resources and facilities to take care of those neonates. COP.8 owns how neonates/children are then cared for. COP.7 does not write neonatal clinical protocols.
+
+- [ ] **COP.7 live/stillbirth registration (RBD Act 1969) vs AAC.8 discharge of mother/neonate.** Statutory registration is this obstetric process; the clinical discharge summary is AAC.8. Parallel to AAC.8's split between death case-summary and statutory death certificate.
+
+- [ ] **HIC.2/3/4/5/6 labour-room IPC, waste, bundles, surveillance, reprocessing.** Infection control stays HIC. COP.7 requires those practices in obstetric areas and does not rewrite them.
+
+- [ ] **COP.7.a MTP where provided vs PRE consent method.** Statutory MTP opinion and consent records are this process where termination is in scope; general consent method remains PRE (undrafted).
+
+---
+
 ## Cross-cutting: document control scaffolding
 
 Not a content gap — a **format** gap found against NABH's sample policy
