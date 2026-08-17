@@ -87,11 +87,16 @@ interface Draft {
   resources_required?: string;
   monitoring_audit?: string;
   exceptions?: string;
+  // Drafts built after migration 20260812 carry these themselves (AAC.1 onward).
+  // When present they take precedence over PREVIEW_REVISIONS, which exists only
+  // for the HIC.1-6 drafts that predate the migration and were backfilled.
+  version?: string;
+  revision_history?: RevisionEntry[];
 }
 
 const sub = (t: string) => t.replaceAll("{{HOSPITAL_NAME}}", HOSPITAL);
 
-const EXPECTED = ["HIC.1", "HIC.2", "HIC.3", "HIC.4", "HIC.5", "HIC.6"];
+const EXPECTED = ["AAC.1", "HIC.1", "HIC.2", "HIC.3", "HIC.4", "HIC.5", "HIC.6"];
 
 async function main() {
   await Deno.mkdir(OUT, { recursive: true });
@@ -107,7 +112,12 @@ async function main() {
   for (const name of files) {
     const draft: Draft = JSON.parse(await Deno.readTextFile(new URL(name, DRAFTS)));
     const code = draft.standard_code;
-    const rev = PREVIEW_REVISIONS[code];
+    // Prefer the draft's own version/revision_history (AAC.1 onward); fall back
+    // to the PREVIEW_REVISIONS map for the pre-migration HIC drafts.
+    const rev =
+      draft.version && draft.revision_history && draft.revision_history.length > 0
+        ? { version: draft.version, history: draft.revision_history }
+        : PREVIEW_REVISIONS[code];
 
     const oeMapping = draft.oe_mapping?.map((m) => ({
       oeCode: m.oe_code,
