@@ -103,6 +103,7 @@ const EXPECTED = [
   "HIC.1", "HIC.2", "HIC.3", "HIC.4", "HIC.5", "HIC.6",
   "MOM.1", "MOM.2", "MOM.3", "MOM.4", "MOM.5", "MOM.6",
   "MOM.7", "MOM.8", "MOM.9",
+  "PRE.1", "PRE.2", "PRE.3", "PRE.4", "PRE.5", "PRE.6",
 ];
 
 async function main() {
