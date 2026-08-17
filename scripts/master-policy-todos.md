@@ -724,6 +724,30 @@ taken under this rule, not an omission.
 
 ---
 
+## Deferred from COP.2 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags (full cross-check done in the COP.2 draft Scope / universal_facts_checklist). Do not patch the approved HIC.1 or the unapproved AAC.2 in this pass — reconcile when the owning document is next opened.
+
+- [ ] **AAC.2.e vs COP.2.c triage.** AAC.2.e already writes a triage or prioritisation method at the emergency area and OPD for ACCESS (including expected time-to-assessment per category as a hospital-defined value). COP.2.c (asterisked) owns ED triage that guides INITIATION OF APPROPRIATE CARE. The COP.2 draft states they may share a local tool and are not the same act. Reconcile so AAC.2.e does not silently own ED clinical pathways and COP.2.c does not take over OPD queuing. AAC.2.e's time-to-assessment must not be read as a COP.2 numeric mandate.
+
+- [ ] **HIC.1.d vs COP.2.k operational disaster/epidemic plan.** HIC.1 is approved. HIC.1 step 24 already contains operational surge, entrance screening, continuation of essential services, command structure and drill language for community outbreaks/pandemics. COP.2.k now owns the hospital's all-hazards OPERATIONAL plan (activation, command, disaster triage, surge, continuation of essential services). HIC.1.d should keep IPC response, IEC and statutory notification. Do not patch HIC.1 until a dedicated reconciliation pass; the COP.2 Scope states that HIC.1 step 24 is not a substitute and that the two documents must not name two epidemic activators who do not know of each other.
+
+T2 one-line flags (standing rule: flag and move on):
+
+- [ ] **COP.2.e ED episode note vs AAC.8 leaving-the-organisation summary vs AAC.2.f between-org transfer note.** COP.2 Scope states the split; AAC.8 Scope does not yet name the COP.2 emergency note.
+
+- [ ] **COP.2.d waiting-patient reassessment in ED vs AAC.3.d interval reassessment vs AAC.3.e ward early-warning.** Stated in COP.2 Scope; not a contradiction.
+
+- [ ] **COP.2.a identified emergency area vs AAC.1.b emergency cover of a defined specialty.** Place vs resourcing; stated in COP.2 Scope.
+
+- [ ] **COP.2.g DOA / death within minutes vs AAC.8 death case-summary vs RBD Act statutory certificate.** Step 7 states the split.
+
+- [ ] **COP.2.h–i ambulance vs AAC.2.f transfer vehicle vs AAC.7 internal move vs MOM emergency-medication process vs HIC.6 device reprocessing.** Forward-refs in steps 8–9; pick up when MOM/COP.3/FMS are drafted.
+
+- [ ] **COP.2.j in-transit treatment / ambulance-to-ED receipt vs AAC.7 unit-to-unit handover** (Reay 2019, chapter ref 45). Stated in step 10.
+
+---
+
 ## Cross-cutting: document control scaffolding
 
 Not a content gap — a **format** gap found against NABH's sample policy
