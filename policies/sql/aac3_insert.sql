@@ -1,0 +1,217 @@
+-- AAC.3 master policy -- UNAPPROVED DRAFT for review.
+-- Do NOT run this insert against Supabase until the owner has reviewed the draft
+-- and explicitly confirmed the write. Do NOT set status = 'approved' here.
+--
+-- Source: NABH SHCO Standards 3rd Edition (August 2022), Chapter 1, printed page 51
+-- (PDF page index 57). Levels: a Core, b Achievement, c Core, d Commitment, e Commitment.
+-- ONE OE CARRIES THE ASTERISK -- AAC.3.a.
+-- UNAPPROVED DRAFT. Do not run this insert until the owner confirms the write.
+
+
+insert into public.shco_policy_masters (
+  standard_code,
+  chapter,
+  oe_codes,
+  policy_title,
+  purpose,
+  scope,
+  policy_statement,
+  procedure_steps,
+  responsibility,
+  references_text,
+  distribution,
+  abbreviations,
+  disclaimer,
+  oe_mapping,
+  universal_facts_checklist,
+  version,
+  revision_history,
+  status
+) values (
+  'AAC.3',
+  'AAC',
+  array['AAC.3.a', 'AAC.3.b', 'AAC.3.c', 'AAC.3.d', 'AAC.3.e'],
+  $q$Initial Assessment, Reassessment and Early Warning$q$,
+  $q$This document sets out how {{HOSPITAL_NAME}} performs the initial assessment of every patient it has accepted, writes the care plan that assessment produces, reassesses the patient at defined intervals, tells the out-patient the next follow-up, and recognises early warning signs of deterioration so that intervention starts without waiting for a later planned review.
+
+The chapter intent is that patients cared for by the organisation undergo an established initial assessment and periodic reassessments, and that those assessments result in a care plan. This document is that process. Registration and admission have already happened under the registration and admission policy of {{HOSPITAL_NAME}}. This document begins when the person is a patient, and it ends when the assessment, the plan and the next action are written.
+
+A copied template that does not fit the setting, or an emergency assessment completed later on the ward as if the emergency never happened, is a form with a signature and is not an assessment of the patient who was in front of the clinician.$q$,
+  $q$This policy applies to every clinical setting in which {{HOSPITAL_NAME}} accepts a patient: the out-patient department, day-care, the in-patient wards and the emergency area. It binds the clinicians who perform the initial assessment and write the care plan, the nurses and other staff who observe the patient and record reassessments, and the staff who tell an out-patient the next follow-up.
+
+It covers the initial assessment of out-patients, day-care patients, in-patients and emergency patients; the documented care plan that the initial assessment produces; reassessment at intervals defined by patient category; informing the out-patient of the next follow-up where a follow-up is appropriate; and the guidelines and process for identifying early warning signs of change or deterioration and starting prompt intervention.
+
+Boundaries with other policies of {{HOSPITAL_NAME}}:
+
+- Registration, the unique identification number, the decision to accept or admit, bed allocation, and transfer or referral between organisations are governed by the registration and admission policy of {{HOSPITAL_NAME}}. That policy already hands the initial assessment and the care plan to this document. This policy owns the clinical assessment after the patient has been accepted; it does not register, admit or transfer.
+- Life-stabilising treatment, ambulance operation, emergency clinical protocols, care in critical care or high-dependency areas, and cardio-pulmonary resuscitation are governed by the emergency-care, critical-care and resuscitation policies of {{HOSPITAL_NAME}}. This policy owns recognising deterioration across settings and handing the patient to those protocols; it does not write them.
+- Prescribing, dispensing, administration and monitoring of medication are governed by the medication policies of {{HOSPITAL_NAME}}. A care plan under this document may name a treatment; the medication process is theirs.
+- Informed consent, and education of the patient and family about their condition and their rights, are governed by the patient-rights policies of {{HOSPITAL_NAME}}. This policy owns telling the out-patient the next follow-up appointment; it does not own consent or education.
+- The medical record itself — its structure, retention and confidentiality — is governed by the information-management policies of {{HOSPITAL_NAME}}. This policy owns the assessment and care-plan content that is written into that record; it does not define the record.
+- The temperature and vital signs record is also used by the infection-surveillance policy of {{HOSPITAL_NAME}} for case-finding of infection. That use is a different purpose; the two share a chart and do not share a method.$q$,
+  $q${{HOSPITAL_NAME}} performs an initial assessment of every out-patient, day-care patient, in-patient and emergency patient it has accepted. Each setting has its own written minimum dataset. A form written for one setting is not used as the assessment in another.
+
+The initial assessment results in a documented care plan. An assessment that ends without a plan is unfinished.
+
+{{HOSPITAL_NAME}} reassesses patients at intervals defined for their category, to determine the response to treatment and to plan further treatment or discharge.
+
+Out-patients are informed of their next follow-up where a follow-up is appropriate. The appointment is told to the patient and is written down.
+
+{{HOSPITAL_NAME}} lays down guidelines and operates a process to identify early warning signs of change or deterioration in clinical condition and to start prompt intervention. The method is written; it is not left to whoever happens to be on the ward.$q$,
+  array[
+    $s$1. Initial assessment of out-patients and day-care patients
+
+Every out-patient and every day-care patient accepted by {{HOSPITAL_NAME}} receives an initial assessment at that encounter, before treatment proceeds. The assessment is performed by [Hospital to define — who performs the out-patient and day-care initial assessment], is completed within [Hospital to define — the time within which the out-patient and day-care initial assessment is completed], and is recorded against the unique identification number issued at registration.
+
+The out-patient and the day-care patient are not assessed on the same form. Each setting has a written minimum dataset because the clinical question is different, and a dataset that answers the wrong question produces a note that looks complete and is not usable.
+
+The out-patient presents with a complaint and is expected to leave the same day. The minimum dataset for the out-patient initial assessment is [Hospital to define — the minimum dataset for the out-patient initial assessment], and includes at least: the presenting complaint, a focused history, the examination findings relevant to that complaint, and a working impression or provisional diagnosis. It does not attempt an in-patient clerking. Padding an out-patient note with empty systems-review headings is not a more thorough assessment; it is a template that does not fit the setting.
+
+The day-care patient is accepted for a planned procedure or treatment and a same-day discharge. The minimum dataset for the day-care initial assessment is [Hospital to define — the minimum dataset for the day-care initial assessment], and includes at least: confirmation of the planned procedure or treatment, a review of fitness for it that day, relevant history and examination, and the plan for same-day discharge. Copying the out-patient form misses the procedure-day questions. Copying the in-patient form asks for a ward plan that will not happen. Both are the common error this step exists to stop: taking a template from another setting because it is already printed.
+
+If the out-patient or day-care patient is then admitted, that admission does not convert the earlier note into an in-patient assessment. A fresh in-patient assessment is performed under step 2. Reusing the out-patient or day-care form as the ward clerking is the same template error in the other direction.
+
+The out-patient and day-care assessment forms or electronic templates, and the named roles that complete them, are held at [Hospital to define — where the out-patient and day-care assessment forms are held].$s$,
+    $s$2. Initial assessment of in-patients and emergency patients
+
+Every emergency patient and every in-patient accepted by {{HOSPITAL_NAME}} receives an initial assessment in the setting where they are first under clinical care. The emergency assessment is performed by [Hospital to define — who performs the emergency initial assessment] and is completed within [Hospital to define — the time within which the emergency initial assessment is completed]. The in-patient assessment is performed by [Hospital to define — who performs the in-patient initial assessment] and is completed within [Hospital to define — the time within which the in-patient initial assessment is completed]. Both are recorded against the unique identification number.
+
+The two assessments are not interchangeable, and one does not wait for the other.
+
+The emergency patient is assessed in the emergency area, at first clinical contact. The minimum dataset for the emergency initial assessment is [Hospital to define — the minimum dataset for the emergency initial assessment], and includes at least: the presenting emergency, the findings needed to identify immediate threat to life or limb, the treatment already given, and a working impression. This assessment is done where the patient is. It is not deferred until a bed is allocated, and it is not completed later on the ward as the first note in the file. An assessment delayed until the ward is a missed emergency assessment. The patient was already under this hospital's care; the ward note cannot reconstruct what was found when they arrived. The common error is to treat the emergency area as a waiting room whose paperwork will be put right after admission. It will not, and this step forbids it.
+
+The in-patient is assessed for the stay. The minimum dataset for the in-patient initial assessment is [Hospital to define — the minimum dataset for the in-patient initial assessment], and includes at least: history, examination, relevant investigation findings available at the time, and a provisional diagnosis from which the care plan at step 3 is written. A patient who arrived through emergency still receives this in-patient assessment: the emergency note answers the emergency; it does not clerk the admission. A patient admitted from the out-patient department or from day-care likewise receives this assessment under this step, not a reused earlier form.
+
+A transfer-in is assessed under this step on arrival, as the registration and admission policy of {{HOSPITAL_NAME}} already requires. The sending organisation's summary travels with the patient; it does not replace the assessment performed here.
+
+The in-patient and emergency assessment forms or electronic templates, and the named roles that complete them, are held at [Hospital to define — where the in-patient and emergency assessment forms are held].$s$,
+    $s$3. Documented care plan
+
+The initial assessment results in a documented care plan. The clinician who performed the assessment writes the plan in the record, against the unique identification number, at the same encounter or admission.
+
+The fields the care plan must contain are [Hospital to define — the fields the documented care plan must contain], and include at least the planned investigations, the planned treatment, and the immediate next action. A heading titled "plan" with nothing under it is not a care plan.
+
+The information-management policies of {{HOSPITAL_NAME}} own the structure of the record. This step owns the content that is written into it. Medication orders that appear in the plan are carried out under the medication policies; consent for a named procedure is obtained under the patient-rights policies. Neither of those processes substitutes for writing the plan.
+
+Where the assessment at steps 1 or 2 changes — a day-care patient admitted, an emergency patient moved to a ward — the care plan is written or revised for the new setting rather than left as the previous setting's next action.$s$,
+    $s$4. Reassessment
+
+Patients of {{HOSPITAL_NAME}} are reassessed at appropriate intervals to determine their response to treatment and to plan further treatment or discharge. The patient categories and the reassessment interval for each are [Hospital to define — the patient categories and the reassessment interval for each].
+
+The reassessment is recorded against the unique identification number. It states what has changed, the response to treatment, and the decision that follows — continue, alter treatment, or plan discharge. A vital-signs entry on its own is not a reassessment.
+
+An unplanned reassessment is performed when the patient's condition changes, including when early warning signs are identified at step 6. That unplanned review does not replace the interval reassessment, and the interval reassessment does not replace a response to deterioration.
+
+Discharge planning that follows from reassessment is handed to the discharge policy of {{HOSPITAL_NAME}} when that document is in force; this step owns the clinical decision that discharge is now the plan.$s$,
+    $s$5. Out-patient follow-up
+
+Out-patients are informed of their next follow-up, where appropriate. Which out-patients require a recorded next follow-up is [Hospital to define — which out-patients require a recorded next follow-up]. A visit that does not need a return is recorded as not requiring follow-up, so that a blank is not indistinguishable from an omission.
+
+The next follow-up is told to the patient, in a language they understand, and is written in the out-patient record against the unique identification number. How it is given to the patient and recorded is [Hospital to define — how the next follow-up is given to the patient and recorded].
+
+This step is the appointment and the record of it. Education about the condition, and consent for a later procedure, remain under the patient-rights policies of {{HOSPITAL_NAME}}.$s$,
+    $s$6. Early warning signs of change or deterioration
+
+{{HOSPITAL_NAME}} lays down guidelines and implements a process to identify early warning signs of change or deterioration in clinical condition and to start prompt intervention.
+
+The method used to identify those signs is [Hospital to define — the method used to identify early warning signs of change or deterioration]. This document does not name a scoring tool as mandatory. A named score may be chosen locally as the method; choosing none of the published scores and writing a local method is equally acceptable, provided the method is written, staff can apply it, and it produces an action.
+
+The escalation route when those signs are identified is [Hospital to define — the escalation route when those signs are identified]. The route names who is called, that the call is made at once rather than at the next planned reassessment, and where the event is recorded. Intervention that the emergency-care, critical-care or resuscitation policies of {{HOSPITAL_NAME}} already govern is handed to those policies; this step owns recognition and the call.
+
+The temperature and vital signs used here are observations for clinical deterioration. The same chart may be read later by infection surveillance for case-finding; that reading is not this process.
+
+A trigger without a recorded intervention is a process that did not run.$s$,
+    $s$7. Records, review and the order of operations
+
+Every initial assessment, care plan, reassessment, out-patient follow-up entry and early-warning trigger is recorded against the unique identification number and is retrievable.
+
+The quality or accreditation coordinator audits a sample of these records at [Hospital to define — the audit interval for assessment, care-plan and early-warning records] for: an initial assessment present in each of the four settings, using that setting's dataset; emergency assessments completed in the emergency area rather than reconstructed on the ward; a documented care plan following the initial assessment; reassessments present at the defined intervals; out-patient follow-up told and recorded where it was required; and early-warning triggers that show an intervention, not only a score or a circled value.
+
+This policy is reviewed at [Hospital to define — the review interval for this policy], and sooner when a missed assessment, a deterioration that was not escalated, or a revision of the emergency-care or registration-and-admission policies that this document hands work to, exposes a gap.$s$
+  ],
+  $q$The head of the institution is accountable for {{HOSPITAL_NAME}} assessing every accepted patient in the setting where care starts, for a care plan existing in the record, and for a written method that identifies deterioration and starts intervention.
+
+The clinicians who assess perform the initial assessment under steps 1 and 2, write the care plan at step 3, reassess at step 4, inform the out-patient of follow-up at step 5, and respond when early warning signs are identified at step 6. They remain responsible for the patient until another named clinician has taken over.
+
+The nurses and other staff who observe patients apply the early-warning method at step 6, record the trigger, escalate along the written route, and record interval observations that the reassessment at step 4 uses. They do not wait for the next planned round when the method says to call.
+
+Heads of the out-patient department, day-care, the in-patient wards and the emergency area keep the minimum dataset for their setting in use, and stop a borrowed form from another setting being used as the assessment.
+
+The quality or accreditation coordinator audits the records at step 7 and reports findings to the head of the institution.
+
+All staff are expected to treat a missing initial assessment, a care plan that was never written, and an early-warning trigger that was not escalated, as defects, and to report them.$q$,
+  $q$- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Access, Assessment and Continuity of Care chapter, standard AAC.3.
+- Clinical Establishments (Registration and Regulation) Act, 2010 and the rules under it, where adopted by the State — insofar as they require the organisation to maintain records of the assessment and care of patients; or the corresponding State clinical establishments or nursing home registration law where the 2010 Act is not in force.
+- Gardner-Thorpe, J., Love, N., Wrightson, J., Walsh, S. and Keeling, N. J. (2006), The value of Modified Early Warning Score (MEWS) in surgical in-patients: a possible substitute for dedicated intensive care outreach teams, Annals of the Royal College of Surgeons of England, 88(6), 571–575 — cited as informing that a written method for identifying deterioration exists; this document does not mandate MEWS or any other named score.
+- Keenan, G. M., Yakel, E., Tschannen, D. and Mandeville, M. (2008), Documentation and the Nurse Care Planning Process, in Hughes, R. G. (ed.), Patient Safety and Quality: An Evidence-Based Handbook for Nurses, Agency for Healthcare Research and Quality — cited as informing that a documented care plan is a known method; this document does not import that chapter's protocol.
+- Internal documents of {{HOSPITAL_NAME}}: the out-patient, day-care, in-patient and emergency initial-assessment forms or templates; the care-plan fields; the reassessment intervals by category; the out-patient follow-up method; the early-warning guidelines and escalation route; the registration and admission policy; the emergency-care, critical-care and resuscitation policies; the medication policies; the patient-rights policies; and the information-management policies.$q$,
+  $q$Controlled master copy: office of the head of the institution, {{HOSPITAL_NAME}}, with the quality or accreditation coordinator.
+
+Copies issued to: the out-patient department; day-care; every in-patient ward; the emergency area; nursing administration; and every head of department whose staff assess patients.
+
+The current version is available to all staff at [Hospital to define — intranet location or nursing station folder]. The four setting-specific assessment forms, the care-plan template, the reassessment intervals and the early-warning guidelines — the working documents this policy requires — are held in the clinical areas that use them.
+
+Superseded versions are withdrawn from all points of use on issue of a revision, and one dated copy of each is retained by the quality or accreditation coordinator.$q$,
+  $q$Abbreviations already defined in the HIC.1 to HIC.6 master policies are not repeated here. A reader using this document on its own should refer to those policies for the shared glossary, including NABH, SHCO and OE.
+
+This document spells out "early warning signs" and "early warning" rather than introducing a new abbreviation for them. No abbreviation is used here that is not already defined in HIC.1 to HIC.6.
+
+Any additional abbreviation used locally within {{HOSPITAL_NAME}} is [Hospital to define] and is added to this list at the next revision.$q$,
+  $q$This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.
+
+Several requirements in this document are statutory rather than advisory — in particular those arising under the Clinical Establishments (Registration and Regulation) Act, 2010 and the rules under it, where adopted by the State — or the corresponding State clinical establishments or nursing home registration law where the 2010 Act is not in force — insofar as they require the organisation to maintain records of the assessment and care of patients. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.
+
+The clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.
+
+This document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.$q$,
+  $q$[{"oe_code": "AAC.3.a", "requirement": "The initial assessment for the out-patients, day-care, in-patients and emergency patients is done", "steps": "Steps 1, 2, 7", "evidence": "The written minimum dataset for the out-patient initial assessment, the day-care initial assessment, the in-patient initial assessment and the emergency initial assessment, each held as a separate form or electronic template rather than a single form used in all four settings; the named roles that perform the assessment in each setting; the stated time within which the assessment is completed in each setting; sample out-patient records showing the out-patient dataset completed at the encounter, with the unique identification number, date and time, the person who assessed, history and examination relevant to the presenting complaint, and a working impression; sample day-care records showing the day-care dataset completed before the planned procedure or treatment that day, including fitness for the same-day plan; sample emergency records showing the emergency dataset completed in the emergency area at first clinical contact, not deferred to a later ward note, with the presenting emergency, the findings needed to identify immediate threat, the treatment already given and a working impression; sample in-patient records showing the in-patient dataset completed for the stay — history, examination, relevant investigation findings and provisional diagnosis — and, where the patient arrived through emergency, both the emergency assessment and the in-patient assessment present; records of patients admitted from out-patients or day-care showing a fresh in-patient assessment rather than a reused out-patient or day-care form; transfer-in records showing an assessment performed on arrival at this hospital; the location where the four forms or templates are held; induction or briefing records showing the clinicians who assess have been shown the dataset that applies to their setting; the audit sample at step 7 covering completeness of the initial assessment in each of the four settings and the rule that an emergency assessment is not a ward clerking done later", "responsible": "Clinicians perform the assessment in the setting where care starts; heads of the out-patient department, day-care, the wards and the emergency area keep that setting's dataset in use; quality or accreditation coordinator audits; head of the institution is accountable that every accepted patient is assessed"}, {"oe_code": "AAC.3.b", "requirement": "The initial assessment results in a documented care plan", "steps": "Steps 3, 7", "evidence": "The care-plan fields in current use; sample records in which the initial assessment is followed by a documented care plan in those fields, dated and attributable to the clinician; the audit sample at step 7 of care plans present after initial assessment", "responsible": "The clinician who assessed writes the care plan; information-management policies own the record structure; quality or accreditation coordinator audits"}, {"oe_code": "AAC.3.c", "requirement": "Patients are reassessed at appropriate intervals to determine their response to treatment and to plan further treatment or discharge", "steps": "Steps 4, 7", "evidence": "The written patient categories and the reassessment interval for each; sample records showing reassessment notes at those intervals, stating response to treatment and the decision on further treatment or discharge; the audit sample at step 7 of reassessment completeness", "responsible": "Clinicians reassess and record the decision; nursing staff record the observations the reassessment uses; quality or accreditation coordinator audits"}, {"oe_code": "AAC.3.d", "requirement": "Out-patients are informed of their next follow-up, where appropriate", "steps": "Steps 5, 7", "evidence": "The written rule for which out-patients require a next follow-up; sample out-patient records showing the next follow-up told to the patient and recorded, or recorded as not required; the audit sample at step 7 of out-patient follow-up entries", "responsible": "Out-patient clinicians inform and record; quality or accreditation coordinator audits"}, {"oe_code": "AAC.3.e", "requirement": "The organization lays down guidelines and implements processes to identify early warning signs of change or deterioration in clinical conditions for initiating prompt intervention", "steps": "Steps 6, 7", "evidence": "The written guidelines naming the method used to identify early warning signs and the escalation route, including who is called; sample records of a trigger, the person who identified it, the intervention started and the time; briefing records of the staff who observe patients; the audit sample at step 7 of early-warning events that show an intervention", "responsible": "Nursing and observing staff apply the method and escalate; clinicians respond; emergency-care, critical-care and resuscitation policies own the intervention they already govern; quality or accreditation coordinator audits"}]$q$::jsonb,
+  $q$Universal (non-NABH) facts included in this draft, and where each was verified. Check these first.
+
+SOURCE OF THE OE TEXT
+0. AAC.3 standard text and all five OEs were read directly from the official NABH SHCO Standards 3rd Edition PDF (August 2022), Chapter 1 Access, Assessment and Continuity of Care, printed page 51 (PDF page index 57). The PDF was downloaded on 2026-08-17 from the NABH website's Explore NABH Standards page. Levels: AAC.3.a Core, AAC.3.b Achievement, AAC.3.c Core, AAC.3.d Commitment, AAC.3.e Commitment.
+   ONE OE CARRIES THE ASTERISK -- AAC.3.a. The draft builds the deep block in steps 1 and 2 (initial assessment by setting). AAC.3.b, AAC.3.c, AAC.3.d and AAC.3.e are unasterisked and are correspondingly Tier 2.
+   Verified three ways on 2026-08-17: scripts/asterisk_extract.py re-run against the freshly downloaded PDF (self-validation passed; output matched committed scripts/shco_oe_asterisks.json on all 408 entries), the AAC.3 page read directly from the extracted page text, and the committed asterisk file's agreement with live shco_full_oes as of 2026-08-13. AAC.3.a was not among the 14 mismatches of the 2026-08-10 audit.
+
+TIERING UNDER THE STANDING RULE
+1. Two-tier depth standing rule of 2026-08-10 applies. THE WHOLE STANDARD IS MOSTLY TIER 2 EXCEPT AAC.3.a. Tier 1: AAC.3.a -- procedure steps 1 and 2 carry the reasoning (why each setting needs its own minimum dataset, why an assessment delayed until the ward is a missed emergency assessment, why copying a template that does not fit the setting is the common error). Tier 2: AAC.3.b (step 3), AAC.3.c (step 4), AAC.3.d (step 5) and AAC.3.e (step 6) -- requirement and method without extended rationale. Reviewer to note the shallower treatment of b, c, d and e is a DECISION UNDER THE STANDING RULE, not an omission. AAC.3.a is Core and asterisked. AAC.3.c is Core (assessed at every visit) but not asterisked; Core is not a substitute for the asterisk when allocating depth.
+
+CROSS-REFERENCE AND OVERLAP CHECK
+2. Tier 1 cross-check (2026-08-17) of AAC.3.a against all six approved HIC masters and the approved AAC.1 master, plus the unapproved AAC.2 draft whose step 4 already hands this work over. Files: policies/drafts/hic1_draft.json through hic6_draft.json, aac1_draft.json and aac2_draft.json. Search terms: initial assessment, care plan, reassess, follow-up, early warning, deteriorat, vital signs.
+   AAC.1: no subject-matter overlap. AAC.1 defines and displays services; this document assesses the accepted patient. Not an overlap.
+   AAC.2: deliberate division already stated in AAC.2 step 4 -- "Further clinical content of the admission -- the initial assessment, the care plan -- is owned by the assessment policy of {{HOSPITAL_NAME}} and is not duplicated here." AAC.2 step 7 requires a transfer-in to be "assessed under the assessment policy". This draft's Scope and step 2 match that language from the other side. Not an overlap; the two documents agree. AAC.2's forward reference is now this document.
+   HIC.1-6: no subject-matter overlap on the initial clinical assessment of the accepted patient. HIC.5's vital-signs hits are case-finding of infection from the temperature chart (T2 flag under AAC.3.e, one line). HIC.6's "assessing exposed patients" is sterilisation-recall exposure assessment, not this OE. Nothing added to the reconciliation list against the approved set.
+3. FORWARD REFERENCES CREATED BY THIS DRAFT: emergency clinical protocols, critical care and CPR -- COP, not yet drafted (this document owns recognition and the call; the method of intervention is theirs); medication process -- MOM, not yet drafted; informed consent and education -- PRE, not yet drafted; the medical record structure -- IMS, not yet drafted; discharge summary -- AAC.8, not yet drafted. Each is a deliberate boundary.
+4. T2 QUICK CHECK (not a full cross-reference audit): AAC.3.b care-plan content vs IMS record structure -- flagged in Scope, IMS owns structure, this owns content. AAC.3.c reassessment vs COP.4 nursing care -- interval observations may later sit with nursing; this document owns the clinical reassessment that decides treatment or discharge. AAC.3.d follow-up vs PRE education -- this owns the appointment; PRE owns education. AAC.3.e vs COP emergency/critical-care/CPR -- this owns recognition; those own the protocols. AAC.3.e vs HIC.5 -- vital signs for infection case-finding is a different purpose; one-line flag in Scope. None of these is a contradiction with an approved document.
+
+STATUTORY AND EXTERNAL FACTS
+5. Clinical Establishments Act, 2010 -- cited only as applying where the State has adopted it, with the State-law alternative, at the level of the Act's general scheme on maintaining records of the assessment and care of patients. No section number. No assertion which law applies to {{HOSPITAL_NAME}}.
+6. Gardner-Thorpe et al. (2006) on MEWS -- chapter reference, cited only as informing that a written method for identifying deterioration exists. This draft does not mandate MEWS, NEWS or any other named score. The tool is [Hospital to define].
+7. Keenan et al. (2008) on documentation and care planning -- chapter reference, cited only as informing that a documented care plan is a known method. This draft does not import that chapter's protocol.
+8. EXTERNAL CLINICAL/TECHNICAL FACT-CHECKING: AAC.3.a (the sole Tier 1 OE) is organisational (a setting-specific initial assessment is performed). No clinical claim is stated as a universal fact. No named scoring tool is prescribed. Consistent with the standing rule: skip external best-practice fact-checking on the Tier 2 OEs unless something looks factually wrong on its face -- nothing did.
+9. NO NUMBERS ARE STATED as requirements -- no time-to-assessment ceilings, no reassessment frequencies, no score cutoffs. Every such value is [Hospital to define]. Consistent with the no-numbers default.
+
+EDITORIAL POSITIONS TAKEN
+10. Steps 1 and 2's rule that each setting has its own minimum dataset, and that a form from another setting is not reused, is an editorial position consistent with the OE naming four settings. The standard requires that the assessment is done; it does not itself forbid a single form.
+11. Step 2's rule that an emergency assessment completed later on the ward is a missed emergency assessment is an editorial position consistent with the chapter intent that emergency patients are assessed when they present.
+12. Step 6's refusal to name MEWS or NEWS as mandatory, while still requiring a written method and an escalation route, is an editorial position. The standard requires guidelines and a process, not a named score.
+
+DISCLAIMER BLOCK -- STATUTE-MATCHED UNDER THE 2026-08-17 STANDING RULE
+13. Paragraphs 1, 3 and 4 are the shared HIC.3-6 block, hash-checked at build time. Paragraph 2 names the Clinical Establishments Act 2010 (or corresponding State law) insofar as they require the organisation to maintain records of the assessment and care of patients -- the statute this document's References actually cite. It does NOT name the Bio-Medical Waste Management Rules, 2016 or the Food Safety and Standards Act, 2006. The HIC wholesale inherit is refused by the build.
+
+DELIBERATELY NOT INCLUDED
+- Registration, admission, unique identification number, transfer -- AAC.2.
+- Emergency clinical protocols, critical care, CPR -- COP.
+- Medication process -- MOM.
+- Consent and education -- PRE.
+- Medical record structure -- IMS.
+- Discharge summary -- AAC.8.
+- A named early-warning score as a mandatory tool.
+- The five optional sections are left unset, matching HIC.1-6 and AAC.1.
+
+HOSPITAL-SPECIFIC VALUES LEFT AS [Hospital to define] -- 23 fillable blanks in the rendered document: 2 in the exact form "[Hospital to define]" (one in Abbreviations, one inside the shared Disclaimer block) and 21 in the guidance-bearing form "[Hospital to define - what to state]". A search for the exact string finds 2 of 23; a search for "Hospital to define" without brackets finds all 23, and that is the search a hospital should be told to run. The figure is produced by policy_placeholder_audit.py across every rendered field in both forms, which also asserts that no nested placeholder exists.
+
+The values the hospital must supply: the minimum dataset for the out-patient initial assessment; the minimum dataset for the day-care initial assessment; who performs the out-patient and day-care initial assessment; the time within which the out-patient and day-care initial assessment is completed; where the out-patient and day-care assessment forms are held; the minimum dataset for the in-patient initial assessment; the minimum dataset for the emergency initial assessment; who performs the in-patient initial assessment; who performs the emergency initial assessment; the time within which the emergency initial assessment is completed; the time within which the in-patient initial assessment is completed; where the in-patient and emergency assessment forms are held; the fields the documented care plan must contain; the patient categories and the reassessment interval for each; which out-patients require a recorded next follow-up; how the next follow-up is given to the patient and recorded; the method used to identify early warning signs of change or deterioration; the escalation route when those signs are identified; the audit interval for assessment, care-plan and early-warning records; the review interval for this policy; the intranet or folder location; and any additional local abbreviation.$q$,
+  '1.0',
+  $q$[{"version": "1.0", "date": "17-08-2026", "description": "Initial release."}]$q$::jsonb,
+  'draft'
+);

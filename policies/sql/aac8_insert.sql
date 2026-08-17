@@ -1,0 +1,216 @@
+-- AAC.8 master policy -- UNAPPROVED DRAFT for review.
+-- Do NOT run this insert against Supabase until the owner has reviewed the draft
+-- and explicitly confirmed the write. Do NOT set status = 'approved' here.
+--
+-- Source: NABH SHCO Standards 3rd Edition (August 2022), Chapter 1, printed page 54
+-- (PDF page index 60). Levels: a Commitment, b Commitment, c Commitment, d Commitment,
+-- e Achievement, f Commitment, g Excellence.
+-- ZERO OEs CARRY THE ASTERISK. Whole standard is Tier 2. TIER1_OES = [].
+-- AAC.8.g is Excellence, unasterisked; 2026-08-10 early parse false positive, correctly false.
+-- UNAPPROVED DRAFT. Do not run this insert until the owner confirms the write.
+
+
+insert into public.shco_policy_masters (
+  standard_code,
+  chapter,
+  oe_codes,
+  policy_title,
+  purpose,
+  scope,
+  policy_statement,
+  procedure_steps,
+  responsibility,
+  references_text,
+  distribution,
+  abbreviations,
+  disclaimer,
+  oe_mapping,
+  universal_facts_checklist,
+  version,
+  revision_history,
+  status
+) values (
+  'AAC.8',
+  'AAC',
+  array['AAC.8.a', 'AAC.8.b', 'AAC.8.c', 'AAC.8.d', 'AAC.8.e', 'AAC.8.f', 'AAC.8.g'],
+  $q$Discharge Process and Discharge Summary$q$,
+  $q$This document sets out how {{HOSPITAL_NAME}} discharges a patient and what the discharge summary contains. Every patient who leaves — including a patient who leaves against medical advice — is given a summary. The summary carries identity fields, the clinical content of the episode, follow-up advice in an understandable manner, instructions on when and how to obtain urgent care, the cause of death in the case summary when the patient has died, and the special needs of planned post-discharge care.
+
+A patient who leaves without a summary, or with a summary the next clinician and the family cannot act on, is a patient whose care has stopped at the door. This document is the process that prevents that.$q$,
+  $q$This policy applies to every point at which a patient of {{HOSPITAL_NAME}} leaves the organisation: planned discharge home, discharge to another destination, leaving against medical advice, and death in the organisation insofar as a case summary is issued. It binds the clinicians who authorise discharge, the staff who prepare and give the summary, the staff who record leaving against medical advice, and the staff who identify special needs for care following discharge.
+
+It covers the discharge process; giving a discharge summary to every leaving patient including those who leave against medical advice; the identity fields of the summary; its clinical content; follow-up advice, medication and other instructions in an understandable manner; instructions about when and how to obtain urgent care; inclusion of the cause of death in the case summary; and planned discharge with identification of special post-discharge needs.
+
+Boundaries with other policies of {{HOSPITAL_NAME}}:
+
+- The unique identification number is generated at registration under the registration, admission and transfer policy of {{HOSPITAL_NAME}} (AAC.2.b). This policy does not generate the number. It requires that number as content of the discharge summary.
+- Transfer-out to another organisation is governed by AAC.2.f. A patient transferred out still leaves this organisation and is given the summary this policy requires; the clinical act of transfer, the receiving organisation and the transfer note are AAC.2's.
+- Internal transfer between units of this hospital is governed by the continuity-of-care policy of {{HOSPITAL_NAME}} (AAC.7.d). This policy owns leaving the organisation, not moving inside it.
+- Patient and family education — language, format, and the method of teaching — is governed by the patient-rights and education policies of {{HOSPITAL_NAME}} (PRE). This policy owns that the discharge summary carries follow-up advice, medication and other instructions in an understandable manner. PRE owns how the patient is taught; this document owns that the same advice is on the paper the patient takes away.
+- The medical record itself — its contents, retention, confidentiality, and that a copy of the discharge summary is filed in it — is governed by the information-management policies of {{HOSPITAL_NAME}} (IMS). This policy owns the process of discharge and the content of the summary given to the patient.
+- The statutory death certificate under the Registration of Births and Deaths Act, 1969 is not this document. Step 6 owns the cause of death in the clinical case summary. The two are different documents.
+- Batch and serial numbers of implantable prosthesis and medical devices, where they must also appear on the discharge summary, are governed by the medication and implant policies of {{HOSPITAL_NAME}} (MOM). This policy's clinical-content list does not replace that requirement.$q$,
+  $q${{HOSPITAL_NAME}} discharges against a defined process. A discharge summary is given to every patient who leaves, including a patient who leaves against medical advice. Leaving against medical advice does not cancel the summary.
+
+The summary contains the patient's name, unique identification number, date of admission and date of discharge; the reasons for admission, significant findings and diagnosis, condition at discharge, investigation results, procedures, medication administered and other treatment given; follow-up advice, medication and other instructions written so that they can be understood; and instructions about when and how to obtain urgent care.
+
+When the patient has died, the summary of the case includes the cause of death. That summary is the clinical record of the episode. It is not the statutory death certificate.
+
+{{HOSPITAL_NAME}} plans discharge and identifies special needs regarding care following discharge, so that what the patient will need after leaving is arranged before they go.
+
+{{HOSPITAL_NAME}} treats a patient who left without a summary, or a summary missing a required field, as a defect.$q$,
+  array[
+    $s$1. The discharge process, and giving the summary to every leaving patient
+
+{{HOSPITAL_NAME}} has an established discharge process. A patient leaves through that process, whether the destination is home, another organisation, or leaving against medical advice (LAMA).
+
+A discharge summary is given to every patient leaving the organisation, including a patient who leaves against medical advice. LAMA does not cancel the summary. The summary is given to the patient or to the person accompanying them, before they leave, in a form they can take with them.
+
+The process — who authorises discharge, who prepares the summary, who gives it, and how LAMA is recorded — is [Hospital to define — the discharge process, including who authorises discharge, who prepares and gives the summary, and how leaving against medical advice is recorded].
+
+A copy is filed in the medical record. Filing and retention are owned by the information-management policies of {{HOSPITAL_NAME}}. This step owns that the summary is given.
+
+A patient transferred out to another organisation under the registration, admission and transfer policy is still a leaving patient under this step and is given the summary. The transfer note and the receiving organisation are AAC.2's.$s$,
+    $s$2. Identity fields of the discharge summary
+
+The discharge summary contains the patient's name, unique identification number (UID), date of admission and date of discharge.
+
+The UID is generated at registration under the registration, admission and transfer policy of {{HOSPITAL_NAME}} (AAC.2.b). This document does not generate the number. It requires that the number already issued appears as content of the summary. A summary without it is incomplete.
+
+Date of discharge for LAMA is the date the patient left. Date of discharge in the case of death is the date of death as recorded in the case summary at step 6.$s$,
+    $s$3. Clinical content of the discharge summary
+
+The discharge summary contains the reasons for admission, significant findings and diagnosis, the patient's condition at the time of discharge, information regarding investigation results, any procedure performed, medication administered, and other treatment given.
+
+The form or electronic template that captures these fields is [Hospital to define — the discharge-summary form or electronic template]. A mandatory field that does not apply is marked so; it is not left blank. Blank mandatory fields are a defect.
+
+Batch and serial numbers of implantable prosthesis and medical devices, where an implant was used, appear on the summary because the medication and implant policies of {{HOSPITAL_NAME}} require them. This step's clinical-content list does not replace that requirement.$s$,
+    $s$4. Follow-up advice in an understandable manner
+
+The discharge summary contains follow-up advice, medication and other instructions in an understandable manner. Understandable means a language and a level of wording the patient or accompanying person can act on, not only a clinical note written for the next doctor.
+
+The method of educating the patient — language, format, return-demonstration — is owned by the patient-rights and education policies of {{HOSPITAL_NAME}}. This step owns that the same advice appears in the summary the patient takes away.
+
+How follow-up advice, discharge medication and other instructions are written on the summary so that they are understandable is [Hospital to define — how follow-up advice, discharge medication and other instructions are written so that they are understandable].$s$,
+    $s$5. Instructions about when and how to obtain urgent care
+
+The discharge summary incorporates instructions about when and how to obtain urgent care. The patient is told which symptoms or events should bring them back, and how to make contact.
+
+Those instructions — when to return, how to make contact, and where — are [Hospital to define — the urgent-care instructions: when to return, how to make contact, and where].
+
+A summary that lists follow-up appointments but is silent on urgent care does not meet this step.$s$,
+    $s$6. Cause of death in the case summary
+
+In case of death, the summary of the case also includes the cause of death.
+
+This is the clinical summary of the case: the hospital's record of the episode, given under this policy. It is not the statutory death certificate issued under the Registration of Births and Deaths Act, 1969. Both may be required. They are different documents, completed by the persons those rules name. This policy does not replace the statutory certificate and does not set the statutory form.
+
+The case summary of a death still carries the identity fields at step 2 and the clinical content at step 3, with the cause of death in addition.$s$,
+    $s$7. Planned discharge and special needs following discharge
+
+{{HOSPITAL_NAME}} adheres to planned discharge and identifies special needs regarding care following discharge. Discharge is planned rather than improvised on the day of leaving, so that follow-up, medication, equipment or support the patient will need is arranged before they go.
+
+How planned discharge is initiated, and how special post-discharge needs are identified and recorded — for example wound care, oxygen, mobility support, specialist follow-up, or a destination other than home — is [Hospital to define — how planned discharge is initiated and how special post-discharge needs are identified and recorded]. Those needs are recorded on the summary and handed to whoever will provide that care.
+
+This objective element is Excellence and unasterisked. The treatment here is Tier 2 under the standing rule: requirement and method, without extended rationale.$s$,
+    $s$8. Records, review and the order of operations
+
+Every discharge, every LAMA, every death case-summary, and every discharge summary given is recorded against the unique identification number and is retrievable. A copy of the summary is filed in the medical record under the information-management policies of {{HOSPITAL_NAME}}.
+
+The quality or accreditation coordinator audits a sample of these records at [Hospital to define — the audit interval for discharge and discharge-summary records] for a summary given to every leaving patient including LAMA, for identity fields including the unique identification number, for clinical content, for understandable follow-up advice, for urgent-care instructions, for cause of death in death case-summaries, and for planned-discharge and special-needs entries.
+
+This policy is reviewed at [Hospital to define — the review interval for this policy], and sooner when a missing summary, a LAMA without a summary, or a death without a cause in the case summary exposes a gap, or when the registration, continuity-of-care, patient-education or information-management policies that this document hands work to are revised.$s$
+  ],
+  $q$The head of the institution is accountable for {{HOSPITAL_NAME}} having a working discharge process and for a discharge summary being given to every leaving patient, including a patient who leaves against medical advice.
+
+The clinicians who authorise discharge remain responsible for the content of the summary and for the cause of death in the case summary when the patient has died.
+
+The staff who prepare and give the summary complete the required fields, give the summary before the patient leaves, and file a copy in the medical record.
+
+The staff who record LAMA complete the LAMA documentation and still give the summary.
+
+The staff who plan discharge identify special post-discharge needs under step 7 and record them on the summary.
+
+The quality or accreditation coordinator audits the records at step 8 and reports findings to the head of the institution.
+
+All staff are expected to report a patient who left without a summary, a summary missing a required field, or a death whose case summary omitted the cause of death.$q$,
+  $q$- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Access, Assessment and Continuity of Care chapter, standard AAC.8.
+- Registration of Births and Deaths Act, 1969 — insofar as a death in the organisation must be certified and recorded; cited here to distinguish the statutory death certificate from the clinical case summary at step 6, which is this policy's document.
+- Clinical Establishments (Registration and Regulation) Act, 2010 and the rules under it, where adopted by the State — the duty to maintain records of patients, including discharge; or the corresponding State clinical establishments or nursing home registration law where the 2010 Act is not in force.
+- Consumer Protection Act, 2019 — a patient who leaves without the information needed to continue care, or with a summary that cannot be understood, is a patient to whom the hospital has not given the information the episode required; cited at the level of the Act's general prohibition of unfair practice, without a section number.
+- Internal documents of {{HOSPITAL_NAME}}: the discharge process; the discharge-summary form or electronic template; the LAMA documentation; the registration, admission and transfer policy; the continuity-of-care policy; the patient-rights and education policies; the information-management policies; and the medication and implant policies.$q$,
+  $q$Controlled master copy: office of the head of the institution, {{HOSPITAL_NAME}}, with the quality or accreditation coordinator.
+
+Copies issued to: every in-patient ward; the emergency area; day-care; the operation theatre and recovery; nursing administration; the medical records function; every head of department; and whoever prepares discharge summaries.
+
+The current version is available to all staff at [Hospital to define — intranet location or nursing station folder]. The discharge-summary form and the LAMA documentation — the working documents this policy requires — are held at every unit from which a patient leaves.
+
+Superseded versions are withdrawn from all points of use on issue of a revision, and one dated copy of each is retained by the quality or accreditation coordinator.$q$,
+  $q$Abbreviations already defined in the HIC.1 to HIC.6 master policies are not repeated here. A reader using this document on its own should refer to those policies for the shared glossary, including NABH, SHCO and OE.
+
+The following abbreviations are used in this document and are not defined in HIC.1 to HIC.6:
+
+UID — Unique Identification Number
+
+LAMA — Leaving Against Medical Advice
+
+Any additional abbreviation used locally within {{HOSPITAL_NAME}} is [Hospital to define] and is added to this list at the next revision.$q$,
+  $q$This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.
+
+Several requirements in this document are statutory rather than advisory — in particular those arising under the Registration of Births and Deaths Act, 1969 insofar as a death in the organisation must be certified and recorded, the Clinical Establishments (Registration and Regulation) Act, 2010 and the rules under it, where adopted by the State — or the corresponding State law — and the Consumer Protection Act, 2019. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.
+
+The clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.
+
+This document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.$q$,
+  $q$[{"oe_code": "AAC.8.a", "requirement": "A discharge summary is given to all patients leaving the organisation, including patients leaving against medical advice", "steps": "Steps 1, 8", "evidence": "The written discharge process naming who authorises discharge, who prepares and gives the summary, and how LAMA is recorded; sample summaries given to planned discharges and to LAMA patients, showing the summary was given before leaving; LAMA documentation that still includes a summary; records of patients transferred out who were given the summary in addition to the AAC.2 transfer note; the audit sample at step 8 covering a summary given to every leaving patient including LAMA", "responsible": "Clinicians authorise discharge; staff who prepare and give the summary do so before the patient leaves, including LAMA; information-management policies own filing of the copy; quality or accreditation coordinator audits"}, {"oe_code": "AAC.8.b", "requirement": "The discharge summary contains the patient's name, unique identification number, date of admission and date of discharge", "steps": "Steps 2, 8", "evidence": "Sample discharge summaries showing name, unique identification number, date of admission and date of discharge; records showing the unique identification number matches the number generated at registration under AAC.2.b rather than a second number; LAMA and death summaries showing the date of leaving or the date of death; the audit sample at step 8 of identity fields", "responsible": "Staff who prepare the summary enter the identity fields; registration and admission policy owns generation of the unique identification number; quality or accreditation coordinator audits"}, {"oe_code": "AAC.8.c", "requirement": "The discharge summary contains reasons for admission, significant findings and diagnosis, condition at discharge, investigation results, procedures, medication administered and other treatment given", "steps": "Steps 3, 8", "evidence": "The discharge-summary form or electronic template capturing each required clinical field; sample summaries showing those fields completed or marked as not applicable rather than left blank; the audit sample at step 8 of clinical content", "responsible": "The authorising clinician is responsible for clinical content; staff who prepare the summary complete the form; quality or accreditation coordinator audits"}, {"oe_code": "AAC.8.d", "requirement": "The discharge summary contains follow-up advice, medication and other instructions in an understandable manner", "steps": "Steps 4, 8", "evidence": "The written method for how follow-up advice, discharge medication and other instructions are written so that they are understandable; sample summaries showing that advice in a language and wording the patient can act on; the audit sample at step 8 of understandable follow-up advice", "responsible": "Staff who prepare the summary write the advice; patient-rights and education policies own the method of teaching the patient; this policy owns that the advice is on the summary; quality or accreditation coordinator audits"}, {"oe_code": "AAC.8.e", "requirement": "The discharge summary incorporates instructions about when and how to obtain urgent care", "steps": "Steps 5, 8", "evidence": "The written urgent-care instructions stating when to return, how to make contact, and where; sample summaries showing those instructions present rather than follow-up appointments alone; the audit sample at step 8 of urgent-care instructions", "responsible": "Staff who prepare the summary include the urgent-care instructions; quality or accreditation coordinator audits"}, {"oe_code": "AAC.8.f", "requirement": "In case of death, the summary of the case also includes the cause of death", "steps": "Steps 6, 8", "evidence": "Sample death case-summaries showing the cause of death in addition to identity fields and clinical content; records distinguishing the clinical case summary from the statutory death certificate under the Registration of Births and Deaths Act, 1969; the audit sample at step 8 of death case-summaries", "responsible": "The clinician who completes the case summary records the cause of death; statutory certification under the Registration of Births and Deaths Act, 1969 is a separate document and is not performed under this policy; quality or accreditation coordinator audits"}, {"oe_code": "AAC.8.g", "requirement": "The organisation adheres to planned discharge and identifies special needs regarding care following discharge", "steps": "Steps 7, 8", "evidence": "The written method for initiating planned discharge and for identifying and recording special post-discharge needs; sample summaries showing those needs recorded and handed to whoever will provide the care; the audit sample at step 8 of planned-discharge and special-needs entries", "responsible": "Staff who plan discharge identify special post-discharge needs and record them on the summary; quality or accreditation coordinator audits"}]$q$::jsonb,
+  $q$Universal (non-NABH) facts included in this draft, and where each was verified. Check these first.
+
+SOURCE OF THE OE TEXT
+0. AAC.8 standard text and all seven OEs were read directly from the official NABH SHCO Standards 3rd Edition PDF (August 2022), Chapter 1 Access, Assessment and Continuity of Care, printed page 54 (PDF page index 60). The PDF was downloaded on 2026-08-17 from the NABH website's Explore NABH Standards page. Levels: AAC.8.a Commitment, AAC.8.b Commitment, AAC.8.c Commitment, AAC.8.d Commitment, AAC.8.e Achievement, AAC.8.f Commitment, AAC.8.g Excellence.
+   ZERO OEs CARRY THE ASTERISK. All seven are unasterisked, including AAC.8.g (Excellence). Verified three ways on 2026-08-17: scripts/asterisk_extract.py re-run against the freshly downloaded PDF (self-validation passed; output matched committed scripts/shco_oe_asterisks.json on all 408 entries), the AAC.8 page read directly from the extracted page text, and the committed asterisk file's agreement with live shco_full_oes as of 2026-08-13.
+   AAC.8.g FALSE-POSITIVE WARNING FROM THE 2026-08-10 AUDIT: the first asterisk parse swallowed the chapter References list into the last OE of the chapter, and any asterisk in that swallowed text flagged AAC.8.g (and IMS.6.e) as true. Both are correctly false. The current extractor cuts at References. Do not re-promote AAC.8.g to asterisked on the strength of that early parse. AAC.8 was not among the 14 mismatches that were applied; the false positive was detected and left untouched because it was already false.
+
+TIERING UNDER THE STANDING RULE
+1. Two-tier depth standing rule of 2026-08-10 applies. If a standard carries no asterisked OE at all, the whole standard is Tier 2. AAC.8 carries no asterisked OE. TIER1_OES = []. Every OE is Tier 2: procedure steps state the requirement and the method without extended rationale paragraphs. AAC.8.g is Excellence and unasterisked; Excellence is not a substitute for the asterisk when allocating depth, and it does not make the OE Tier 1. Reviewer to note the shallower treatment of the whole standard is a DECISION UNDER THE STANDING RULE, not an omission.
+
+CROSS-REFERENCE AND OVERLAP CHECK
+2. T2 quick check (2026-08-17), not a deep cross-reference audit. AAC.2.b vs AAC.8.b: unique identification number is generated at registration (AAC.2.b); this standard requires it as content of the summary. Stated in Scope and step 2.
+3. AAC.2.f vs AAC.8.a: a transferred-out patient is still a leaving patient and is given this summary; the transfer note and receiving organisation are AAC.2's. Stated in Scope and step 1.
+4. AAC.7.d vs this standard: internal unit-to-unit movement is AAC.7; leaving the organisation is AAC.8. Stated in Scope.
+5. PRE vs AAC.8.d: PRE owns the patient-education method; this standard owns that the summary carries follow-up advice in an understandable manner. One-line T2 flag. PRE not yet drafted.
+6. IMS vs this standard: IMS owns the medical record, including that a copy of the discharge summary is filed in it. This standard owns the process and the content of the summary given to the patient. One-line T2 flag. IMS not yet drafted.
+7. MOM vs AAC.8.c: batch and serial numbers of implantable prosthesis and medical devices on the discharge summary are MOM's requirement. Flagged in Scope and step 3 so this clinical-content list is not read as replacing it. MOM not yet drafted.
+8. FORWARD REFERENCES: PRE (education method), IMS (the record and the filed copy), MOM (implant identifiers on the summary). Each is a deliberate boundary.
+
+STATUTORY AND EXTERNAL FACTS
+9. Registration of Births and Deaths Act, 1969 -- cited to distinguish the statutory death certificate from the clinical case summary at step 6. No section number. This policy does not set the statutory form and does not replace it.
+10. Clinical Establishments Act, 2010 -- cited only as applying where the State has adopted it, with the State-law alternative, at the level of the Act's general scheme on patient records including discharge. No section number.
+11. Consumer Protection Act, 2019 -- leaving a patient without understandable information needed to continue care is stated as the kind of omission the Act's general prohibition of unfair practice addresses, without a section number and without asserting how a court would decide.
+12. NO NUMBERS ARE STATED as requirements -- no planned-discharge lead time in hours or days, no page counts, no follow-up windows. Every such value is [Hospital to define]. Consistent with the no-numbers default.
+13. EXTERNAL CLINICAL/TECHNICAL FACT-CHECKING: skipped under the standing rule except where something looked wrong on its face. The death-certificate vs case-summary distinction was checked because conflating them would be a statutory error; they are different documents under the Registration of Births and Deaths Act, 1969.
+
+EDITORIAL POSITIONS TAKEN
+14. Step 1's rule that LAMA does not cancel the summary, and that a transferred-out patient is still given this summary in addition to the AAC.2 transfer note, are editorial positions consistent with the OE text ("all the patients leaving", "including patients leaving against medical advice").
+15. Step 3's rule that a non-applicable field is marked rather than left blank is an editorial position; the standard requires the content, not this completeness convention.
+16. Step 5's rule that follow-up appointments alone do not meet urgent-care instructions is an editorial reading of "when and how to obtain urgent care".
+
+DISCLAIMER BLOCK -- STATUTE-MATCHED UNDER THE 2026-08-17 STANDING RULE
+17. Paragraphs 1, 3 and 4 are the shared HIC.3-6 block, hash-checked at build time. Paragraph 2 names the Registration of Births and Deaths Act, 1969, the Clinical Establishments Act 2010 (or corresponding State law), and the Consumer Protection Act 2019 -- the statutes this document's References actually cite. It does NOT name the Bio-Medical Waste Management Rules, 2016 or the Food Safety and Standards Act, 2006. The HIC wholesale inherit is refused by the build.
+
+DELIBERATELY NOT INCLUDED
+- Generation of the unique identification number -- AAC.2.b.
+- Between-organisation transfer note -- AAC.2.f.
+- Internal unit-to-unit transfer -- AAC.7.d.
+- Patient-education method -- PRE.
+- The medical record as a document, and filing/retention of the copy -- IMS.
+- Implant batch and serial numbers as a MOM requirement -- MOM (flagged, not specified here).
+- The statutory death certificate -- Registration of Births and Deaths Act, 1969; named only to distinguish it from the case summary.
+- The five optional sections are left unset, matching HIC.1-6 and AAC.1.
+
+HOSPITAL-SPECIFIC VALUES LEFT AS [Hospital to define] -- 10 fillable blanks in the rendered document: 2 in the exact form "[Hospital to define]" (one in Abbreviations, one inside the shared Disclaimer block) and 8 in the guidance-bearing form "[Hospital to define - what to state]". A search for the exact string finds 2 of 10; a search for "Hospital to define" without brackets finds all 10, and that is the search a hospital should be told to run. The figure is produced by policy_placeholder_audit.py across every rendered field in both forms, which also asserts that no nested placeholder exists.
+
+The values the hospital must supply: the discharge process including who authorises discharge, who prepares and gives the summary, and how LAMA is recorded; the discharge-summary form or electronic template; how follow-up advice, discharge medication and other instructions are written so that they are understandable; the urgent-care instructions (when to return, how to make contact, and where); how planned discharge is initiated and how special post-discharge needs are identified and recorded; the audit interval for these records; the review interval for this policy; the intranet or folder location; and any additional local abbreviation.$q$,
+  '1.0',
+  $q$[{"version": "1.0", "date": "17-08-2026", "description": "Initial release."}]$q$::jsonb,
+  'draft'
+);
