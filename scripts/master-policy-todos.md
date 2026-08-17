@@ -728,7 +728,67 @@ taken under this rule, not an omission.
 
 T1 overlap flags (full cross-check done in the COP.2 draft Scope / universal_facts_checklist). Do not patch the approved HIC.1 or the unapproved AAC.2 in this pass — reconcile when the owning document is next opened.
 
-- [ ] **AAC.2.e vs COP.2.c triage.** AAC.2.e already writes a triage or prioritisation method at the emergency area and OPD for ACCESS (including expected time-to-assessment per category as a hospital-defined value). COP.2.c (asterisked) owns ED triage that guides INITIATION OF APPROPRIATE CARE. The COP.2 draft states they may share a local tool and are not the same act. Reconcile so AAC.2.e does not silently own ED clinical pathways and COP.2.c does not take over OPD queuing. AAC.2.e's time-to-assessment must not be read as a COP.2 numeric mandate.
+- [ ] **Reconcile AAC.2.e vs COP.2.c — triage ownership (access prioritisation vs emergency care
+      initiation)** in a dedicated consistency pass once more COP/AAC chapters are drafted — not in
+      this COP insert pass.
+
+      Context and instruction: two unapproved drafts both write a "triage or prioritisation" method
+      that applies at the emergency area. AAC.2.e (Achievement, asterisked) owns **ACCESS** —
+      prioritisation of access to the organisation's healthcare services according to clinical need.
+      COP.2.c (Commitment, asterisked) owns **INITIATION OF APPROPRIATE CARE** in the emergency area
+      — a system of triage that guides when and how emergency care starts. On instruction
+      (2026-08-17), following the HIC.4/HIC.5 precedent, **COP.2 carries the full ED clinical triage
+      block and AAC.2 carries the hospital-wide access-prioritisation block; neither was patched in
+      the other's pass.** Both Scope sections state the division. Do NOT patch one without the other,
+      and do not approve one without checking the other's live wording.
+
+      **Specific divergences to resolve in that pass** (identified 2026-08-17, both documents left
+      untouched):
+
+      1. **Shared tool risk — one poster, two owners.** AAC.2 step 6 requires a triage or
+         prioritisation method "at minimum the emergency area and the out-patient department", with
+         categories, written criteria, trained appliers, recorded category against the UID, and
+         "expected time-to-assessment per category". COP.2 step 3 requires a written triage system
+         that "guides initiation of appropriate emergency care", with category, time of assignment,
+         and evidence that the category "changed what happened next — pathway, clinician called,
+         space used — rather than a stamp followed by a single queue". A hospital that uses one local
+         scale for both will be reading one document in the emergency area and another assessor will
+         read the other. **Likely resolution:** either (a) one shared local tool referenced
+         identically in both, with AAC.2 owning OPD + access order and COP.2 owning ED
+         care-initiation pathways, or (b) two explicitly linked documents where the ED system is a
+         child of the access method. Either way the cross-reference must be byte-stable in Scope,
+         step text and evidence columns.
+
+      2. **OPD queuing vs ED clinical pathways.** AAC.2.e's method determines "the order in which
+         patients are seen" at OPD and states expected time-to-assessment. COP.2.c does not set OPD
+         queuing and must not be read as taking it over. Conversely, AAC.2.e must not silently own
+         ED clinical pathways — life-threatening emergency "is not queued" in AAC.2, but initiation
+         of appropriate care (which clinician, which space, which protocol) is COP.2's act.
+         **Divergence to watch:** if AAC.2's evidence column lists "sample spanning emergency and
+         out-patient" and COP.2's lists "pathway, clinician called, space used", an assessor may ask
+         why the ED record satisfies AAC.2 but not COP.2 or vice versa. Align the evidence ask so ED
+         records are cited under COP.2 for care initiation and under AAC.2 only for access-order
+         proof if the hospital uses a single tool.
+
+      3. **Time-to-assessment is an AAC.2 numeric, not a COP.2 mandate.** AAC.2 step 6 carries
+         "[Hospital to define — the expected time-to-assessment for each priority category]". COP.2
+         step 3 deliberately does **not** import ESI level times or any other published waiting-time
+         table as a NABH mandate, and step 4 states "This document does not set a mandatory number
+         of minutes" for waiting reassessment. **Do not let AAC.2's hospital-defined
+         time-to-assessment be read back into COP.2 as a numeric compliance target**, and do not let
+         COP.2's silence on minutes be read as permission to drop AAC.2's access-time commitment.
+         The reconciliation pass should add an explicit lock sentence in both Scopes if needed.
+
+      4. **Re-triage while waiting.** AAC.2 step 6: "re-applied if the patient's condition changes
+         while waiting." COP.2 step 4: waiting reassessment with interval "[Hospital to define]",
+         re-triage under step 3 if category worsens. Not a contradiction — AAC.2 owns the
+         access-priority change, COP.2 owns the waiting patient in the ED — but the intervals and
+         record fields should not diverge if one tool is shared.
+
+      CLOSED for this pass: COP.2 Scope and step 3 already state AAC.2.e is hospital-wide access
+      prioritisation even when the local tool is shared; AAC.2 Scope hands "life-stabilising
+      treatment" and emergency clinical content to emergency-care policies. No text change until the
+      dedicated pass.
 
 - [ ] **HIC.1.d vs COP.2.k operational disaster/epidemic plan.** HIC.1 is approved. HIC.1 step 24 already contains operational surge, entrance screening, continuation of essential services, command structure and drill language for community outbreaks/pandemics. COP.2.k now owns the hospital's all-hazards OPERATIONAL plan (activation, command, disaster triage, surge, continuation of essential services). HIC.1.d should keep IPC response, IEC and statutory notification. Do not patch HIC.1 until a dedicated reconciliation pass; the COP.2 Scope states that HIC.1 step 24 is not a substitute and that the two documents must not name two epidemic activators who do not know of each other.
 
@@ -954,9 +1014,63 @@ T1 overlap flags (full cross-check done in the COP.6 draft Scope / universal_fac
 
 - [ ] **COP.6.c infection-control practices in ICU/HDU written guidance vs HIC.2 / HIC.4 / HIC.5.** HIC.2 owns HH/TBP/PPE. HIC.4 owns device bundles (VAP/CLABSI/CAUTI/SSI) and PEP. HIC.5 owns surveillance including VAE and NHSN definitions. COP.6.c (asterisked) requires those practices to be IN the ICU/HDU written guidance and followed there. A local unit SOP that reprints a bundle and then drifts from HIC.4 is a defect. Both documents must keep this split if either is approved without the other.
 
-- [ ] **AAC.2 hospital-wide bed unavailability vs COP.6.a ICU/HDU bed-shortage procedure.** AAC.2 owns what the hospital does when it has no ward bed. COP.6.a owns what THIS unit does when it has no intensive-care or high-dependency bed. Mixing the two produces a corridor patient with no named owner. Stated in Scope and step 1.
+- [ ] **Reconcile COP.6.a vs AAC.2 vs AAC.3.e — bed-shortage and ICU admission overlap** in the
+      same dedicated consistency pass as the AAC.2.e/COP.2.c triage item above — not in this COP
+      insert pass.
 
-- [ ] **AAC.3.e early-warning vs COP.6.a admission criteria.** AAC.3.e may trigger an ICU referral. COP.6 owns the admission criteria against which that request is accepted or not. An early-warning trigger is not an automatic intensive-care admission. AAC.3 already hands critical-care protocols to COP.
+      Context and instruction: three unapproved drafts touch the moment a deteriorating patient
+      needs a higher level of care or a bed that does not exist. AAC.2 step 5 owns the
+      **hospital-wide** written mechanism when no **ward** bed is available for a patient who needs
+      admission. COP.6.a (Commitment, asterisked) owns **ICU/HDU-specific** admission and discharge
+      criteria plus the **unit bed-shortage procedure** when no intensive-care or high-dependency
+      bed exists. AAC.3.e (Achievement, asterisked) owns **early-warning signs** on the ward and the
+      processes that identify deterioration — which may trigger an ICU **referral** but is not an
+      admission decision. On instruction (2026-08-17), **each draft carries its full block; none was
+      patched in the others' pass.** COP.6 Scope and step 1, AAC.2 step 5, and AAC.3 Scope state the
+      divisions. Do NOT patch one without the other.
+
+      **Specific divergences to resolve in that pass** (identified 2026-08-17):
+
+      1. **Hospital-wide ward bed shortage vs ICU/HDU bed shortage — two procedures, one patient.**
+         AAC.2 step 5 names options in order: holding area under observation, earlier safe discharge,
+         day-care/observation, transfer/referral — with authority, review interval, and
+         bed-management register. COP.6 step 1 names ICU/HDU admission criteria, discharge criteria,
+         and a **separate** intensive-care/high-dependency bed-shortage procedure (create bed by
+         discharge, escalate within unit, hold in theatre/recovery, transfer to named ICU
+         elsewhere, etc.). **Failure mode if merged:** a ventilated patient left in a ward corridor
+         because AAC.2's holding-area mechanism was applied without COP.6's unit procedure, or vice
+         versa — a hospital-wide diversion that bypasses the ICU lead. **Likely resolution:** COP.6
+         step 1 should reference AAC.2 explicitly as the hospital-wide envelope and state that when
+         both ward and ICU beds are short, both procedures run with a named coordinator; AAC.2 step 5
+         should state it does not substitute for COP.6 when the clinical need is intensive care.
+
+      2. **Early-warning trigger vs admission criteria — referral is not admission.** AAC.3.e lays
+         down guidelines to identify early warning signs and implements processes to escalate.
+         COP.6 step 1 states admission is against written ICU/HDU criteria and the responsibility
+         block names "requesting clinicians do not treat an early-warning trigger as automatic
+         admission". **Divergence to watch:** if AAC.3's escalation process names "call ICU" without
+         "ICU accepts against criteria", assessors will read automatic admission. If COP.6's criteria
+         are silent on what happens when AAC.3 fires, ward staff will improvise. **Likely
+         resolution:** AAC.3.e evidence/process names the referral handoff; COP.6.a evidence names
+         the accept/refuse decision record — cross-linked, not duplicated.
+
+      3. **Emergency patient waiting for ward bed vs ICU request from ED.** AAC.2 step 5: "An
+         emergency patient waiting for a bed remains under the emergency-care policies ... until a
+         bed is allocated or a transfer is completed." COP.6 step 1 accepts requests from "ward,
+         emergency area or operation theatre". **Not a contradiction** but the reconciliation pass
+         should confirm ED→ICU requests use COP.6 criteria and ED→ward waits use AAC.2 mechanism
+         without cross-wiring.
+
+      4. **Audit samples cite different registers.** AAC.2 step 9 audits prioritisation and
+         bed-non-availability entries. COP.6 step 7 audits "bed-shortage events that used the unit
+         procedure rather than the hospital-wide AAC.2 mechanism alone". Keep both audit asks — they
+         are deliberately different tests.
+
+      Note: AAC.7 internal transfer into/out of ICU remains a separate deferred item below; it owns
+      the move once COP.6 has accepted admission.
+
+      CLOSED for this pass: boundaries stated in all three Scopes; no text change until the
+      dedicated pass.
 
 - [ ] **AAC.7 internal transfer into/out of ICU vs COP.6 admission/discharge decision.** COP.6 decides whether the patient meets criteria; AAC.7 owns the unit-to-unit move once that decision is made.
 

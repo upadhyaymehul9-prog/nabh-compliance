@@ -84,14 +84,18 @@ INSERT_COLUMNS = [
 ]
 
 
-def load_draft():
-    draft = json.loads(DRAFT_PATH.read_text(encoding="utf-8"))
+def load_draft(draft_path=None, expected_code=None):
+    path = Path(draft_path) if draft_path else DRAFT_PATH
+    code = expected_code or STANDARD_CODE
+    draft = json.loads(path.read_text(encoding="utf-8"))
     assert sorted(draft.keys()) == sorted(INSERT_COLUMNS), (
         "draft keys diverged from the SQL insert's column list:\n"
         f"  draft-only: {sorted(set(draft) - set(INSERT_COLUMNS))}\n"
         f"  sql-only:   {sorted(set(INSERT_COLUMNS) - set(draft))}"
     )
-    assert draft["standard_code"] == STANDARD_CODE
+    assert draft["standard_code"] == code, (
+        f"draft standard_code {draft['standard_code']!r} != expected {code!r}"
+    )
     assert draft["status"] == "draft", "draft file must carry status=draft; approval happens live"
     return draft
 
@@ -116,12 +120,41 @@ def md5_lf(text):
     return hashlib.md5(text.replace("\r", "").encode("utf-8")).hexdigest()
 
 
+def insert_row(base_url, service_key, draft):
+    """POST one draft row. Returns (http_status, already_existed).
+
+    already_existed True means the unique standard_code is already live -- the
+    caller must not treat that as a successful insert of this draft.
+    """
+    code = draft["standard_code"]
+    status, raw = request(
+        "GET",
+        f"{base_url}/rest/v1/shco_policy_masters?standard_code=eq.{code}&select=standard_code",
+        service_key,
+    )
+    if status == 200 and json.loads(raw):
+        return status, True
+    if status != 200:
+        raise SystemExit(f"pre-insert existence check failed: HTTP {status}: {raw[:400]!r}")
+    status, raw = request(
+        "POST",
+        f"{base_url}/rest/v1/shco_policy_masters",
+        service_key,
+        body=draft,
+        extra_headers={"Prefer": "return=minimal"},
+    )
+    if status not in (200, 201):
+        raise SystemExit(f"INSERT failed for {code}: HTTP {status}: {raw[:400]!r}")
+    return status, False
+
+
 def verify(base_url, service_key, draft):
-    """Fetch the live AAC.1 row and compare every inserted field. Returns ok bool."""
+    """Fetch the live row and compare every inserted field. Returns ok bool."""
+    code = draft["standard_code"]
     status, raw = request(
         "GET",
         f"{base_url}/rest/v1/shco_policy_masters"
-        f"?standard_code=eq.{STANDARD_CODE}&select=*",
+        f"?standard_code=eq.{code}&select=*",
         service_key,
     )
     if status != 200:
@@ -129,7 +162,7 @@ def verify(base_url, service_key, draft):
         return False, None
     rows = json.loads(raw)
     if len(rows) != 1:
-        print(f"  VERIFY FAILED: expected exactly 1 row for {STANDARD_CODE}, got {len(rows)}")
+        print(f"  VERIFY FAILED: expected exactly 1 row for {code}, got {len(rows)}")
         return False, None
     live = rows[0]
 
@@ -190,24 +223,11 @@ def main():
         )
 
     if args.insert:
-        status, raw = request(
-            "GET",
-            f"{base_url}/rest/v1/shco_policy_masters?standard_code=eq.{STANDARD_CODE}&select=standard_code",
-            service_key,
-        )
-        if status == 200 and json.loads(raw):
-            raise SystemExit(f"{STANDARD_CODE} already exists -- refusing to insert a duplicate. "
+        http_status, already = insert_row(base_url, service_key, draft)
+        if already:
+            raise SystemExit(f"{draft['standard_code']} already exists -- refusing to insert a duplicate. "
                              "Run with --verify-only to check it.")
-        status, raw = request(
-            "POST",
-            f"{base_url}/rest/v1/shco_policy_masters",
-            service_key,
-            body=draft,
-            extra_headers={"Prefer": "return=minimal"},
-        )
-        if status not in (200, 201):
-            raise SystemExit(f"INSERT failed: HTTP {status}: {raw[:400]!r}")
-        print(f"INSERT ok (HTTP {status})")
+        print(f"INSERT ok (HTTP {http_status})")
 
     ok, live = verify(base_url, service_key, draft)
     if not ok:
