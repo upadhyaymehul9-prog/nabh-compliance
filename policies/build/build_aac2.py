@@ -1,0 +1,359 @@
+# -*- coding: utf-8 -*-
+"""Builds the AAC.2 master policy draft: JSON for review + SQL for later insert.
+
+UNAPPROVED DRAFT. Do not insert, approve, or write this to Supabase.
+
+THIS IS DRAFTED UNDER THE TWO-TIER DEPTH STANDING RULE (2026-08-10) AND THE
+DISCLAIMER STATUTE-MATCHING STANDING RULE (2026-08-17), both in
+scripts/master-policy-todos.md.
+
+Tier is decided by doc_required / the asterisk in the official PDF:
+  Tier 1 (full treatment): AAC.2.a, AAC.2.d, AAC.2.e, AAC.2.f
+  Tier 2 (lighter pass):   AAC.2.b, AAC.2.c
+
+Official source: NABH Standards for Small Healthcare Organisations, 3rd Edition
+(August 2022), Chapter 1, standard AAC.2 and OEs AAC.2.a-f, read from the official
+standards PDF (downloaded 2026-08-17 from the NABH website's Explore NABH Standards
+page), printed pages 50-51, PDF page index 56-57.
+
+Asterisks verified 2026-08-17: scripts/asterisk_extract.py re-run against that
+download (self-validation passed, 408 OEs, 132 asterisks, output matched the
+committed scripts/shco_oe_asterisks.json on all 408 entries) and the AAC.2 pages
+read directly. AAC.2.d was one of the 14 flags corrected on 2026-08-10 (asterisk
+on a wrapped continuation line).
+"""
+from policy_build_common import emit_and_verify, make_disclaimer
+
+STANDARD_CODE = "AAC.2"
+CHAPTER = "AAC"
+OE_CODES = ["AAC.2.a", "AAC.2.b", "AAC.2.c", "AAC.2.d", "AAC.2.e", "AAC.2.f"]
+TIER1_OES = ["AAC.2.a", "AAC.2.d", "AAC.2.e", "AAC.2.f"]
+
+POLICY_TITLE = "Registration, Admission and Transfer of Patients"
+
+VERSION = "1.0"
+REVISION_HISTORY = [
+    {"version": "1.0", "date": "17-08-2026", "description": "Initial release."},
+]
+
+PURPOSE = """This document sets out how {{HOSPITAL_NAME}} registers a patient, decides whether to admit, manages the patient when a bed is not available, prioritises access according to clinical need, and transfers or refers a patient whose needs this hospital cannot meet.
+
+The chapter intent is blunt: only those patients who can be cared for by the organisation are admitted. Emergency patients receive life-stabilising treatment and are then either admitted, if the resources exist, or transferred to an organisation that has them. Out-patients who do not match the organisation's resources are similarly referred. This document is the process that makes that intent operational at the door.
+
+A defined service directory (owned by the definition-and-display policy of {{HOSPITAL_NAME}}) is a promise. This document is how that promise is applied to the person in front of reception, in the emergency area, or arriving by ambulance. Where the process is undefined, the decision is improvised, and the patient most at risk from the improvisation is the one the hospital was never equipped to care for — or the one who needed a bed that was not there and was left without a plan."""
+
+SCOPE = """This policy applies to every point at which a person becomes, or is refused as, a patient of {{HOSPITAL_NAME}}: reception and the front office, the out-patient department, the emergency area, the admission desk, and any location from which a transfer-in is received or a transfer-out or referral is sent. It binds the staff who register, the clinicians who decide to admit or not to admit, the staff who manage beds, the staff who triage, and the staff who arrange transfer and referral.
+
+It covers registration of out-patients, day-care patients, in-patients and emergency patients; generation of the unique identification number; the decision to accept a patient against the defined services; admission; the management of patients during non-availability of beds; prioritisation of access by clinical need; and transfer-in, transfer-out and referral between organisations.
+
+Boundaries with other policies of {{HOSPITAL_NAME}}:
+
+- The written definition of the healthcare services, the department scopes of services, and the public display of those services are governed by the definition-and-display policy of {{HOSPITAL_NAME}}. This policy applies that definition at the point of registration and admission; it does not restate it.
+- Life-stabilising treatment of an emergency patient, ambulance operation, and the clinical content of emergency care are governed by the emergency-care policies of {{HOSPITAL_NAME}}. This policy requires that an emergency patient is not turned away untreated, and then hands the method of stabilisation to those policies.
+- Transfer of a patient from one unit or department of {{HOSPITAL_NAME}} to another, inside this hospital, is governed by the continuity-of-care policy of {{HOSPITAL_NAME}}. This policy owns transfer-in from another organisation, transfer-out to another organisation, and referral of a patient this hospital cannot accept.
+- The medical record itself — its contents, retention and confidentiality — is governed by the information-management policies of {{HOSPITAL_NAME}}. This policy owns the generation of the unique identification number at registration and requires that number to appear on every subsequent record; it does not define the record.
+- Informed consent for procedures, and the patient's rights at admission, are governed by the patient-rights policies of {{HOSPITAL_NAME}}. This policy owns the administrative decision to register and admit.
+- Isolation and transmission-based precautions applied to an admitted patient are governed by the infection-control policies of {{HOSPITAL_NAME}}."""
+
+POLICY_STATEMENT = """{{HOSPITAL_NAME}} registers every patient through a defined mechanism and issues a unique identification number at the end of registration. That number identifies the patient in every subsequent record.
+
+{{HOSPITAL_NAME}} accepts a patient only when it can provide the required service. The test is the written service directory and the department scopes of services, not the preference of the person at the desk. An emergency patient is stabilised first; the decision not to admit is not a decision to withhold life-stabilising treatment.
+
+{{HOSPITAL_NAME}} admits against a defined process. When a bed is not available, the patient is not left without a plan: the options, the decision, the communication and the destination are written down and followed.
+
+{{HOSPITAL_NAME}} prioritises access according to the clinical needs of the patient. A queue ordered by time of arrival is not a clinical process, and it is not the process used here.
+
+{{HOSPITAL_NAME}} transfers and refers patients appropriately: with clinical information that lets the receiving organisation continue care, to a destination that can actually provide the service, and with a record of what was done and why.
+
+{{HOSPITAL_NAME}} treats directing a patient to another provider, when this hospital cannot care for them, as correct practice and never as lost business."""
+
+PROCEDURE_STEPS = [
+"""1. Registering a patient
+
+{{HOSPITAL_NAME}} registers every person who becomes a patient — out-patient, day-care, in-patient or emergency — through a single defined mechanism. The mechanism is written, the staff who operate it are named by role, and the same minimum dataset is captured at every encounter so that a patient registered at 2 a.m. in the emergency area is identifiable in the same way as a patient registered at 10 a.m. in the out-patient department.
+
+The minimum dataset captured at registration is [Hospital to define — the registration dataset], and includes at least: the patient's name, age or date of birth, sex, address, a contact number where one exists, the date and time of registration, the service being sought, and the unique identification number issued at step 2. Where the patient cannot give this information — unconscious, a child, a person brought by others — the available information is recorded, the source of it is named, and the record is completed as soon as the information exists.
+
+Registration is not a courtesy at the front desk. It is the act that creates the identity against which every later clinical decision is filed. A laboratory report, a medication order, a transfer note or a discharge summary that cannot be joined to a registered identity is a document that cannot be acted on safely. That is why this step exists as a mechanism rather than as a habit, and why an unregistered episode of care is treated as a defect, not as a shortcut taken under pressure.
+
+Emergency registration is not delayed for administrative completeness. A patient who needs immediate clinical attention is identified, issued a unique identification number, and passed to the clinical team; the remaining administrative fields are completed in parallel or immediately afterwards. The common error is the reverse — holding the patient at the desk until the form is perfect — and it is forbidden here because it puts the form ahead of the patient.
+
+The registration mechanism, the forms or electronic fields, and the named roles that operate them are held at [Hospital to define — where the registration SOP and forms are held].""",
+
+"""2. The unique identification number
+
+A unique identification number is generated at the end of registration, for every patient, without exception. The number is unique to the patient at {{HOSPITAL_NAME}}: it is not reused, it is not shared between two patients, and a returning patient is re-identified against the existing number rather than issued a second one.
+
+The number appears on the registration record, the out-patient card or equivalent, every requisition, every clinical note, every transfer document and the discharge summary. A document that does not carry it is incomplete.
+
+The method of generation — electronic or manual, the format, and the control that prevents duplication — is [Hospital to define — how the unique identification number is generated and how duplication is prevented]. Where the electronic system is unavailable, a documented downtime method issues a number from a reserved range and that number is reconciled when the system returns; care is not refused, and a number is not invented, because of a system failure.
+
+The medical record that this number keys is governed by the information-management policies of {{HOSPITAL_NAME}}. This step owns only the generation of the number at registration and the requirement that it travel with the patient.""",
+
+"""3. Accepting a patient only when {{HOSPITAL_NAME}} can provide the service
+
+A patient is accepted — registered as seeking a service this hospital will provide, or admitted — only if {{HOSPITAL_NAME}} can provide the required service. The test is the current service directory and the relevant department's scope of services, maintained under the definition-and-display policy of {{HOSPITAL_NAME}}, together with the actual availability of a bed, a clinician and the diagnostics the service depends on at that moment.
+
+Staff at the points of first contact hold the current directory or the consolidated summary of department scopes and answer from it. A service that is displayed but cannot today be delivered is not offered; a service that is not in the directory is not invented at the desk.
+
+Where the required service falls outside the definition, the patient is told so, in a language they understand, and is referred or transferred under steps 7 and 8 rather than registered as if the service existed. The decision, the reason and the destination are recorded.
+
+An emergency patient is the exception that is not an exception: life-stabilising treatment is given first, under the emergency-care policies of {{HOSPITAL_NAME}}, and the decision whether this hospital can then admit is taken against the same directory. Stabilisation is not admission, and refusal to admit is not refusal to treat a life-threatening emergency.""",
+
+"""4. Admitting a patient
+
+Admission follows registration. A patient is admitted when a qualified clinician has decided that in-patient care is required, that {{HOSPITAL_NAME}} can provide it, and that a bed in an appropriate area is available or has been allocated under step 5.
+
+The admission record captures at least: the unique identification number, the date and time of the decision to admit, the admitting clinician, the provisional reason for admission, the allocated ward or area and bed, and the information given to the patient or family about the admission. Further clinical content of the admission — the initial assessment, the care plan — is owned by the assessment policy of {{HOSPITAL_NAME}} and is not duplicated here.
+
+The person who allocates the bed is [Hospital to define — the role that allocates beds], working from a current picture of occupancy rather than from memory. A bed is not allocated on a promise that a discharge will happen later in the day unless that discharge is already underway and the bed will actually be free when the patient arrives.
+
+Patients and families are told, at admission, where the patient is going and who is responsible for them on arrival. An admitted patient is accompanied to the allocated area; they are not sent to find it.""",
+
+"""5. Managing patients when beds are not available
+
+Non-availability of a bed is a situation this hospital plans for, not a surprise it improvises. {{HOSPITAL_NAME}} maintains a written mechanism that states what is done, in what order, and by whom, when a patient who needs admission cannot be given a bed at once.
+
+The mechanism exists because a full hospital still receives patients, and a patient left in a corridor, a waiting area or an ambulance without a named plan is a patient whose deterioration will not be noticed. The common error is to treat non-availability as a facilities problem that will resolve itself by evening. It will not, and this step is the documented-evidence anchor of that recognition.
+
+The mechanism states, in writing:
+
+- how current bed occupancy is known, in real time, to the people who decide — [Hospital to define — how bed occupancy is displayed or reported, and to whom];
+- who has the authority to decide among the options below, and the order in which the options are considered;
+- the options themselves: holding the patient in a defined clinical area under observation, not in a public corridor, with a named clinician responsible; identifying an earlier safe discharge or transfer of another patient whose discharge is already clinically due; using a day-care or observation arrangement where that meets the clinical need; transferring or referring the patient to a named organisation that can admit them, under steps 7 and 8;
+- what is said to the patient and family, by whom, and that the conversation is recorded;
+- the maximum time a patient may remain in the holding arrangement before the decision is reviewed — [Hospital to define — the review interval when a patient is waiting for a bed];
+- the record that is made of every instance: date and time, unique identification number, clinical need, option chosen, destination or holding area, the person who decided, and the outcome.
+
+An emergency patient waiting for a bed remains under the emergency-care policies of {{HOSPITAL_NAME}} until a bed is allocated or a transfer is completed. They are not reclassified as a waiting-list problem.
+
+Every instance of non-availability that results in a wait, a diversion, a transfer or a referral is recorded in [Hospital to define — the bed-management register or equivalent] and reviewed at [Hospital to define — the review interval and forum for bed-non-availability]. The review looks for a pattern — a service whose demand regularly exceeds its beds — and feeds that pattern to the service-directory review, because a chronic shortfall is a definition problem as well as a bed problem.""",
+
+"""6. Prioritising access according to clinical need
+
+Access to the healthcare services of {{HOSPITAL_NAME}} is prioritised according to the clinical needs of the patient. Time of arrival is recorded; it does not decide the order of care.
+
+This is the documented-evidence anchor of a requirement the standard places at Achievement level and asterisks: an assessor will ask how a sicker patient is seen first, and the answer must be a written method that staff can apply, not a claim that clinicians use their judgement. Judgement without a method is how a quietly deteriorating patient waits behind a louder one.
+
+{{HOSPITAL_NAME}} therefore operates a triage or prioritisation method at the points where patients queue for care — at minimum the emergency area and the out-patient department, and at [Hospital to define — any further prioritisation points]. The method:
+
+- assigns each patient to a priority category on arrival, using written criteria — [Hospital to define — the triage or prioritisation tool and its categories];
+- is applied by staff trained in it, named by role — [Hospital to define — who performs triage];
+- is recorded against the unique identification number, with the category, the time of assignment and the name of the person who assigned it;
+- determines the order in which patients are seen, with a stated expected time-to-assessment per category — [Hospital to define — the expected time-to-assessment for each priority category];
+- is re-applied if the patient's condition changes while waiting.
+
+A category that is never used, or a method that staff cannot state, is a document defect. The method is reviewed at [Hospital to define — the review interval for the prioritisation method] against whether higher-priority patients are in fact being seen first.
+
+Life-threatening emergency is the highest category and is not queued. The method does not displace the rule at step 3 that a patient whose needs this hospital cannot meet is stabilised and transferred rather than admitted into a service that does not exist.""",
+
+"""7. Transfer-in
+
+A patient transferred in to {{HOSPITAL_NAME}} from another organisation is accepted only under step 3 — only if this hospital can provide the required service and has the bed, the clinician and the diagnostics the service needs at that moment. A transfer-in is not a courtesy to the sending organisation; it is an admission decision made at a distance, and it is refused when the test at step 3 fails, with the reason stated to the sender.
+
+Before the patient leaves the sending organisation, {{HOSPITAL_NAME}} confirms:
+
+- the clinical reason for transfer and the service being requested;
+- that the service exists here today, not merely in the directory;
+- the receiving clinician and the allocated bed or area;
+- the mode of transport and the expected time of arrival;
+- the clinical information that will travel with the patient — at minimum a summary of the present condition, the treatment already given, relevant investigation results, and the reason for transfer.
+
+On arrival the patient is registered (or re-identified if already known), issued or matched to a unique identification number, assessed under the assessment policy of {{HOSPITAL_NAME}}, and admitted under step 4. The transfer-in is recorded in [Hospital to define — the transfer register], with sending organisation, reason, receiving clinician, date and time, and outcome.
+
+A patient who arrives without prior acceptance is treated as an emergency or walk-in under steps 1, 3 and 6, not as a transfer the hospital is obliged to complete.""",
+
+"""8. Transfer-out and referral
+
+A patient is transferred out or referred from {{HOSPITAL_NAME}} when this hospital cannot provide the required service, when a bed is not available and the mechanism at step 5 selects transfer, or when continuing care is more appropriately given elsewhere.
+
+Transfer-out is a clinical act, not an administrative one. Before the patient leaves:
+
+- a qualified clinician decides that transfer is required and records the reason;
+- the receiving organisation is identified as one that can provide the service, is contacted, and accepts the patient — a transfer is not sent into the unknown;
+- life-stabilising treatment required before travel is given under the emergency-care policies of {{HOSPITAL_NAME}};
+- a transfer note travels with the patient, carrying the unique identification number, the present condition, the treatment given, relevant investigation results, the reason for transfer, and the name and contact of the transferring clinician;
+- the mode of transport is appropriate to the patient's condition — [Hospital to define — how the mode of transport is decided and who accompanies the patient];
+- the patient and family are told the destination, the reason, and what to expect, in a language they understand.
+
+Referral of an out-patient whose needs fall outside the directory follows the same principles in lighter form: a documented reason, a named destination, the information the receiving provider needs, and a record in the same transfer register or a referral register kept with it.
+
+The record of every transfer-out and referral is made in [Hospital to define — the transfer and referral register], and includes whether the receiving organisation confirmed arrival where that confirmation is obtainable. A transfer whose outcome is never known is a process that cannot be improved.
+
+This step owns movement between organisations. Movement of a patient from one unit of {{HOSPITAL_NAME}} to another is governed by the continuity-of-care policy and is not performed under this step.""",
+
+"""9. Records, review and the order of operations
+
+Every registration, unique identification number, acceptance or refusal, admission, instance of bed non-availability, prioritisation category, transfer-in, transfer-out and referral is recorded against the unique identification number and is retrievable.
+
+The quality or accreditation coordinator audits a sample of these records at [Hospital to define — the audit interval for registration, admission and transfer records] for completeness of the unique identification number, for refusals and referrals that match the directory, for bed-non-availability entries that show a plan rather than a wait, for prioritisation categories that match the written method, and for transfer notes that contain the clinical content step 8 requires.
+
+This policy is reviewed at [Hospital to define — the review interval for this policy], and sooner when the service directory changes, when a transfer or a bed-non-availability incident exposes a gap, or when the emergency-care or continuity-of-care policies that this document hands work to are revised."""
+]
+
+RESPONSIBILITY = """The head of the institution is accountable for {{HOSPITAL_NAME}} accepting no patient it cannot care for, for the existence of a working bed-management mechanism, and for transfer arrangements that do not abandon a patient this hospital cannot admit.
+
+The person responsible for administration of {{HOSPITAL_NAME}} maintains the registration mechanism, the unique-identification-number method including the downtime arrangement, and the occupancy picture that bed allocation depends on.
+
+The role that allocates beds at step 4 operates the non-availability mechanism at step 5, records every instance, and escalates a chronic shortfall to the service-directory review.
+
+The clinicians who decide to admit, not to admit, to transfer or to refer do so against the service directory and the department scopes, record the decision, and remain responsible for the patient until the transfer is complete or another named clinician has taken over.
+
+The staff who triage apply the method at step 6, record the category, and re-triage when the condition changes.
+
+Reception, the front office and the emergency area register patients, generate or match the unique identification number, hold the current directory or consolidated scopes, and do not offer a service the directory does not support.
+
+The quality or accreditation coordinator audits the records at step 9 and reports findings to the head of the institution.
+
+All staff are expected to treat a referral or a transfer, when this hospital cannot care for the patient, as correct practice, and to report a registration, a bed wait or a transfer that was improvised rather than performed under this policy."""
+
+REFERENCES = """- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Access, Assessment and Continuity of Care chapter, standard AAC.2.
+- Clinical Establishments (Registration and Regulation) Act, 2010 and the rules under it, where adopted by the State — registration of the establishment and the duty to maintain records of patients; or the corresponding State clinical establishments or nursing home registration law where the 2010 Act is not in force.
+- Consumer Protection Act, 2019 — the prohibition of misleading advertisement and of unfair practice, which is what accepting a patient for a service the hospital cannot deliver amounts to.
+- World Health Organization, Patient Safety Solutions, Communication During Patient Hand-Overs (2007) — the principle that information must travel with a transferred patient; the method of handover inside this hospital is owned by the continuity-of-care policy.
+- Internal documents of {{HOSPITAL_NAME}}: the service directory and department scopes of services; the registration mechanism and forms; the unique-identification-number method; the bed-management register; the triage or prioritisation method; the transfer and referral register; the emergency-care policies; the assessment policy; the continuity-of-care policy; and the information-management policies."""
+
+DISTRIBUTION = """Controlled master copy: office of the head of the institution, {{HOSPITAL_NAME}}, with the quality or accreditation coordinator.
+
+Copies issued to: reception and the front office; the emergency area; every in-patient ward; nursing administration; the role that allocates beds; every head of department; and whoever arranges transfer and referral.
+
+The current version is available to all staff at [Hospital to define — intranet location or nursing station folder]. The service directory, the registration forms, the occupancy picture and the transfer register — the working documents this policy requires — are held at reception, the front office and the emergency area.
+
+Superseded versions are withdrawn from all points of use on issue of a revision, and one dated copy of each is retained by the quality or accreditation coordinator."""
+
+ABBREVIATIONS = """Abbreviations already defined in the HIC.1 to HIC.6 master policies are not repeated here. A reader using this document on its own should refer to those policies for the shared glossary, including NABH, SHCO and OE.
+
+The following abbreviations are used in this document and are not defined in HIC.1 to HIC.6:
+
+UID — Unique Identification Number
+
+Any additional abbreviation used locally within {{HOSPITAL_NAME}} is [Hospital to define] and is added to this list at the next revision."""
+
+STATUTE_CLAUSE = (
+    "the Clinical Establishments (Registration and Regulation) Act, 2010 and the rules under it, "
+    "where adopted by the State — or the corresponding State clinical establishments or nursing "
+    "home registration law where the 2010 Act is not in force — and the Consumer Protection Act, 2019"
+)
+DISCLAIMER = make_disclaimer(STATUTE_CLAUSE)
+
+OE_MAPPING = [
+    {
+        "oe_code": "AAC.2.a",
+        "requirement": "The organization has a mechanism for registering and admitting patients",
+        "steps": "Steps 1, 4, 9",
+        "evidence": "The written registration mechanism naming the roles that operate it and the minimum dataset captured at every encounter, including emergency registration that is not delayed for administrative completeness; the registration forms or electronic fields in current use; records of registration of out-patients, day-care patients, in-patients and emergency patients showing the dataset and the unique identification number; the documented downtime method for registration when the electronic system is unavailable; the written admission process showing the decision to admit by a qualified clinician, the allocation of an appropriate bed from a current occupancy picture, the admission record contents, and accompaniment of the patient to the allocated area; the named role that allocates beds; sample admission records with date and time, admitting clinician, provisional reason, allocated area and bed; induction or briefing records showing the staff at reception, the front office and the emergency area have been shown the mechanism; the audit sample at step 9 covering registration and admission completeness",
+        "responsible": "Administration maintains the registration mechanism and the occupancy picture; the named bed-allocation role admits to a bed; clinicians decide to admit; reception, front office and emergency register; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "AAC.2.b",
+        "requirement": "A unique identification number is generated at the end of registration",
+        "steps": "Steps 2, 9",
+        "evidence": "The written method of generating the unique identification number, including the control against duplication and reuse, and the downtime method with its reserved range and reconciliation; registration records showing a number issued at the end of every registration; returning-patient records showing re-identification against the existing number rather than a second issue; sample clinical documents — requisition, note, transfer document, discharge summary — each carrying the number",
+        "responsible": "Administration owns generation and the downtime method; registration staff issue or match the number; information-management policies own the medical record the number keys",
+    },
+    {
+        "oe_code": "AAC.2.c",
+        "requirement": "Patients are accepted only if the organization can provide the required service",
+        "steps": "Steps 3, 9",
+        "evidence": "The current service directory and department scopes of services held at the points of first contact; records of patients not accepted, with the reason against the directory and the referral or transfer destination; records of emergency patients stabilised and then admitted or transferred; the audit sample at step 9 of refusals and referrals against the directory",
+        "responsible": "Staff at first contact apply the directory; clinicians decide against the department scope; head of the institution is accountable that no patient is accepted for a service the hospital cannot deliver",
+    },
+    {
+        "oe_code": "AAC.2.d",
+        "requirement": "The organization has a mechanism to address management of patients during non-availability of beds",
+        "steps": "Steps 5, 9",
+        "evidence": "The written non-availability mechanism stating how occupancy is known in real time and to whom, who has authority to decide, the order in which the options are considered (defined clinical holding area with a named clinician, earlier safe discharge of another patient already due, day-care or observation where clinically adequate, transfer or referral to a named organisation), what is said to the patient and family and that the conversation is recorded, the review interval for a patient waiting for a bed, and the record made of every instance; the bed-management register or equivalent with date and time, unique identification number, clinical need, option chosen, destination or holding area, the person who decided, and the outcome; records showing an emergency patient waiting for a bed remained under the emergency-care policies until allocation or transfer; the review record at the stated interval and forum, including any pattern of chronic shortfall fed to the service-directory review; the audit sample at step 9 of bed-non-availability entries that show a plan rather than a wait",
+        "responsible": "The bed-allocation role operates the mechanism and records every instance; clinicians remain responsible for the waiting patient; administration maintains the occupancy picture; quality or accreditation coordinator audits; head of the institution is accountable for the mechanism existing and working",
+    },
+    {
+        "oe_code": "AAC.2.e",
+        "requirement": "Access to the healthcare services in the organization is prioritized according to the clinical needs of the patient",
+        "steps": "Steps 6, 9",
+        "evidence": "The written triage or prioritisation method, with categories, the written criteria that assign a patient to each category, the points at which it is applied — emergency area and out-patient department as the minimum, plus any further stated point — the named roles that apply it, and the expected time-to-assessment per category; training records of the staff who triage, showing they can apply the criteria rather than that they were merely shown the document; records of category assignment against the unique identification number, with the category, the time of assignment and the name of the person who assigned it, for a sample spanning emergency and out-patient; records of re-triage when the condition changed while waiting, with the new category and the time; records showing that life-threatening emergency was not queued; the review record at the stated interval against whether higher-priority patients are in fact being seen first, with the comparison used; the audit sample at step 9 of recorded categories against the written method and against the order in which those patients were actually seen",
+        "responsible": "Named triage staff apply and record the method; clinicians honour the priority order; quality or accreditation coordinator audits the match between category and order of being seen",
+    },
+    {
+        "oe_code": "AAC.2.f",
+        "requirement": "Transfer-in and transfer-out / referral of patients to the organization is done appropriately",
+        "steps": "Steps 7, 8, 9",
+        "evidence": "The written transfer-in confirmation before the patient leaves the sender — clinical reason, that the service exists here today, receiving clinician and allocated bed, mode of transport and expected arrival, the clinical information that will travel; the transfer register of every transfer-in with sending organisation, reason, receiving clinician, date and time, and outcome; records of refused transfer-in with the reason against step 3; the written transfer-out requirements — clinician's decision and reason, identified receiving organisation that has accepted, life-stabilising treatment before travel, the transfer note contents (unique identification number, present condition, treatment given, relevant results, reason, transferring clinician's name and contact), the mode of transport and accompaniment, and what was said to the patient and family; the transfer and referral register of every transfer-out and out-patient referral with destination, reason and, where obtainable, confirmation of arrival; sample transfer notes; the audit sample at step 9 of transfer-note content",
+        "responsible": "Clinicians decide to accept, refuse, transfer or refer and remain responsible until handover is complete; administration maintains the registers and the confirmation-before-travel; emergency-care policies own stabilisation before travel; quality or accreditation coordinator audits",
+    },
+]
+
+UNIVERSAL_FACTS_CHECKLIST = """Universal (non-NABH) facts included in this draft, and where each was verified. Check these first.
+
+SOURCE OF THE OE TEXT
+0. AAC.2 standard text and all six OEs were read directly from the official NABH SHCO Standards 3rd Edition PDF (August 2022), Chapter 1 Access, Assessment and Continuity of Care, printed pages 50-51 (PDF page index 56-57). The PDF was downloaded on 2026-08-17 from the NABH website's Explore NABH Standards page. Levels: AAC.2.a Commitment, AAC.2.b Core, AAC.2.c Commitment, AAC.2.d Commitment, AAC.2.e Achievement, AAC.2.f Commitment.
+   FOUR OEs CARRY THE ASTERISK -- AAC.2.a, AAC.2.d, AAC.2.e and AAC.2.f. There is no single documented-evidence anchor; the draft builds four separate deep blocks (steps 1 and 4 for a; step 5 for d; step 6 for e; steps 7-8 for f). AAC.2.b (Core, unique identification number) and AAC.2.c (Commitment, accept only if the service can be provided) are unasterisked and are correspondingly Tier 2.
+   Verified three ways on 2026-08-17: scripts/asterisk_extract.py re-run against the freshly downloaded PDF (self-validation passed; output matched committed scripts/shco_oe_asterisks.json on all 408 entries), the AAC.2 pages read directly from the extracted page text, and the committed asterisk file's agreement with live shco_full_oes as of 2026-08-13. AAC.2.d was one of the 14 mismatches of the 2026-08-10 audit (asterisk on a wrapped continuation line) and is now correctly true.
+
+TIERING UNDER THE STANDING RULE
+1. Two-tier depth standing rule of 2026-08-10 applies. Tier 1: AAC.2.a, AAC.2.d, AAC.2.e, AAC.2.f -- procedure steps 1, 4, 5, 6, 7 and 8 carry the reasoning (why registration is a mechanism, why a bed wait needs a named plan, why triage must be a written method, why a transfer-in is an admission decision at a distance). Tier 2: AAC.2.b (step 2) and AAC.2.c (step 3) -- requirement and method without extended rationale. Reviewer to note the shallower treatment of b and c is a DECISION UNDER THE STANDING RULE, not an omission. AAC.2.b is Core (assessed at every visit) but not asterisked; Core is not a substitute for the asterisk when allocating depth.
+
+CROSS-REFERENCE AND OVERLAP CHECK
+2. Tier 1 cross-check (2026-08-17) of AAC.2.a/d/e/f against all six approved HIC masters and the approved AAC.1 master. Files: policies/drafts/hic1_draft.json through hic6_draft.json and aac1_draft.json. Search terms: register/registration, admission, unique identification, non-availability of beds, triage, priorit, transfer-in, transfer-out, referral of patients.
+   AAC.1: deliberate division already stated in AAC.1's Scope -- AAC.1 defines the services, AAC.2 applies that definition at registration and admission, including the decision not to admit. This draft's Scope and step 3 restates that division from the other side. Not an overlap; the two documents agree. AAC.1's forward reference to 'the registration and admission policy' is now this document.
+   HIC.1-6: no subject-matter overlap on registration, admission, bed non-availability, triage or inter-organisation transfer. HIC.2's 'handover' hits are the precaution category in the nursing handover (owned by HIC.2); inter-unit handover method is AAC.7, not this standard. HIC.3's 'handover' hits are BMW manifests. Nothing added to the reconciliation list against the approved set.
+3. FORWARD REFERENCES CREATED BY THIS DRAFT: emergency life-stabilising treatment and ambulance -- COP emergency standards, not yet drafted (chapter intent requires the principle here; the method is theirs); internal transfer between units -- AAC.7, drafted in the same pass, Scope of both states the division (this document owns between-organisation movement; AAC.7 owns inside-the-hospital movement); the medical record -- IMS, not yet drafted; informed consent and rights at admission -- PRE, not yet drafted. Each is a deliberate boundary.
+4. INTRA-CHAPTER DIVISION WITH AAC.7 (drafted the same day, both unapproved): AAC.2.f vs AAC.7.d. Stated in both Scopes. Not a reconciliation item against an approved document. Logged under Deferred from AAC.2-8 so the division is not lost if one is approved without the other.
+
+STATUTORY AND EXTERNAL FACTS
+5. Clinical Establishments Act, 2010 -- cited only as applying where the State has adopted it, with the State-law alternative, at the level of the Act's general scheme on establishment registration and patient records. No section number. No assertion which law applies to {{HOSPITAL_NAME}}.
+6. Consumer Protection Act, 2019 -- accepting a patient for a service the hospital cannot deliver is stated as amounting to misleading representation / unfair practice, at the level of the Act's general prohibition, without a section number and without asserting how a court would decide. Same posture as AAC.1 step 6 on displayed services.
+7. WHO Patient Safety Solutions, Communication During Patient Hand-Overs (2007) -- cited in the chapter's own References list (item 6) and used here only for the principle that information travels with a transferred patient. The intra-hospital handover method is not specified in this document.
+8. EXTERNAL CLINICAL/TECHNICAL FACT-CHECKING: the four Tier 1 OEs are organisational (registration mechanism, bed crisis management, prioritisation method, inter-organisation transfer). No clinical claim is stated as a universal fact. The draft does not prescribe a named triage scale (NEWS, MEWS, ESI, CTAS or other) -- the tool is [Hospital to define], because prescribing one would be an editorial clinical choice the standard does not make. Chapter reference 9 (Dery et al. on prioritisation tools) and reference 11 (Egan, Managing a bed crisis) informed the existence of a written method, not a numbered protocol.
+9. NO NUMBERS ARE STATED as requirements -- no waiting-time ceilings, no occupancy percentages, no transfer-acceptance windows. Every such value is [Hospital to define]. Consistent with the no-numbers default.
+
+EDITORIAL POSITIONS TAKEN
+10. Step 1's rule that emergency registration is not delayed for administrative completeness, and that an unregistered episode of care is a defect, is an editorial position consistent with the chapter intent (emergency patients receive life-stabilising treatment first).
+11. Step 5's refusal to leave a waiting patient in a public corridor, and the feeding of chronic shortfall back to the service-directory review, are editorial positions; the standard requires a mechanism, not these specifics.
+12. Step 7's rule that a transfer-in arriving without prior acceptance is treated as a walk-in, not as an obligation, is an editorial position.
+13. The Policy Statement's line that directing a patient elsewhere is correct practice and never lost business repeats AAC.1's editorial position, deliberately, because this is the document that actually does the directing.
+
+DISCLAIMER BLOCK -- STATUTE-MATCHED UNDER THE 2026-08-17 STANDING RULE
+14. Paragraphs 1, 3 and 4 are the shared HIC.3-6 block, hash-checked at build time. Paragraph 2 names the Clinical Establishments Act 2010 (or corresponding State law) and the Consumer Protection Act 2019 -- the statutes this document's References actually cite. It does NOT name the Bio-Medical Waste Management Rules, 2016 or the Food Safety and Standards Act, 2006. The HIC wholesale inherit is refused by the build.
+
+DELIBERATELY NOT INCLUDED
+- Internal transfer between units -- AAC.7.d.
+- Initial assessment and care plan -- AAC.3.
+- Discharge summary -- AAC.8.
+- Emergency clinical protocols and ambulance -- COP.
+- The five optional sections are left unset, matching HIC.1-6 and AAC.1.
+
+HOSPITAL-SPECIFIC VALUES LEFT AS [Hospital to define] -- 21 fillable blanks in the rendered document: 2 in the exact form "[Hospital to define]" (one in Abbreviations, one inside the shared Disclaimer block) and 19 in the guidance-bearing form "[Hospital to define - what to state]". A search for the exact string finds 2 of 21; a search for "Hospital to define" without brackets finds all 21, and that is the search a hospital should be told to run. The figure is produced by policy_placeholder_audit.py across every rendered field in both forms, which also asserts that no nested placeholder exists.
+
+The values the hospital must supply: the registration dataset; where the registration SOP and forms are held; how the unique identification number is generated and how duplication is prevented; the role that allocates beds; how bed occupancy is displayed or reported and to whom; the review interval when a patient is waiting for a bed; the bed-management register or equivalent; the review interval and forum for bed-non-availability; any further prioritisation points; the triage or prioritisation tool and its categories; who performs triage; the expected time-to-assessment for each priority category; the review interval for the prioritisation method; the transfer register; how the mode of transport is decided and who accompanies the patient; the transfer and referral register; the audit interval for these records; the review interval for this policy; the intranet or folder location; and any additional local abbreviation."""
+
+SQL_HEADER = """-- Source: NABH SHCO Standards 3rd Edition (August 2022), Chapter 1, printed pages 50-51
+-- (PDF page index 56-57). Levels: a Commitment, b Core, c Commitment, d Commitment,
+-- e Achievement, f Commitment.
+-- FOUR OEs CARRY THE ASTERISK -- AAC.2.a, AAC.2.d, AAC.2.e, AAC.2.f.
+-- UNAPPROVED DRAFT. Do not run this insert until the owner confirms the write.
+"""
+
+if __name__ == "__main__":
+    emit_and_verify(
+        standard_code=STANDARD_CODE,
+        chapter=CHAPTER,
+        oe_codes=OE_CODES,
+        policy_title=POLICY_TITLE,
+        purpose=PURPOSE,
+        scope=SCOPE,
+        policy_statement=POLICY_STATEMENT,
+        procedure_steps=PROCEDURE_STEPS,
+        responsibility=RESPONSIBILITY,
+        references_text=REFERENCES,
+        distribution=DISTRIBUTION,
+        abbreviations=ABBREVIATIONS,
+        disclaimer=DISCLAIMER,
+        oe_mapping=OE_MAPPING,
+        universal_facts_checklist=UNIVERSAL_FACTS_CHECKLIST,
+        version=VERSION,
+        revision_history=REVISION_HISTORY,
+        tier1_oes=TIER1_OES,
+        statute_clause=STATUTE_CLAUSE,
+        sql_header=SQL_HEADER,
+        json_name="aac2_draft.json",
+        sql_name="aac2_insert.sql",
+    )
