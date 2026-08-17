@@ -1250,7 +1250,7 @@ T2 one-line flags:
 
 THIS IS THE NDPS STANDARD. COP.9/COP.10 storage handoff is accepted here.
 
-Owner 2026-08-17: approved after (1) chemotherapeutic/cytotoxic handling as a distinct procedure-step block (PPE, spill, CSTD or equivalent, extravasation, hazardous waste) and (2) NIOSH Alert 2004-165, OSHA hazardous-drug occupational-exposure guidance, USP <800>, and ESMO–EONS 2012 added to References as frameworks, not P2 statutes. Still insert as `status='draft'` only.
+Owner 2026-08-17: approved after (1) chemotherapeutic/cytotoxic handling as a distinct procedure-step block (PPE, spill, CSTD or equivalent, extravasation, hazardous waste) and (2) NIOSH Alert 2004-165, OSHA hazardous-drug occupational-exposure guidance, USP <800>, and ESMO–EONS 2012 added to References as frameworks, not P2 statutes. Insert as `status='draft'` only via `python3 policies/build/apply_mom_drafts_supabase.py --insert`. The 2026-08-17 Cloud Agent VM did not have `SUPABASE_SERVICE_ROLE_KEY`; dry-run of all nine drafts passed; live POST was not executed.
 
 T1 overlap flags:
 
