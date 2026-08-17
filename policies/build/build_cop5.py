@@ -220,7 +220,9 @@ Any additional abbreviation used locally within {{HOSPITAL_NAME}} is [Hospital t
 STATUTE_CLAUSE = (
     "the Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, insofar as they "
     "govern the licensing of blood banks and blood centres and the issue of blood and blood "
-    "components"
+    "components, and the National Blood Policy and the National Blood Transfusion Council / "
+    "National AIDS Control Organisation Standards for Blood Banks and Blood Transfusion "
+    "Services insofar as they govern licensed transfusion services"
 )
 DISCLAIMER = make_disclaimer(STATUTE_CLAUSE)
 
@@ -306,7 +308,7 @@ EDITORIAL POSITIONS TAKEN
 12. Step 5's rule that a defined time that is never measured is a document defect, and that emergency does not cancel the bedside match, are editorial positions.
 
 DISCLAIMER BLOCK -- STATUTE-MATCHED UNDER THE 2026-08-17 STANDING RULE
-13. Paragraphs 1, 3 and 4 are the shared HIC.3-6 block, hash-checked at build time. Paragraph 2 names the Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules insofar as they govern blood-bank / blood-centre licensing -- the statute this document's References actually rely on as law. It does NOT name the Bio-Medical Waste Management Rules, 2016 or the Food Safety and Standards Act, 2006. The HIC wholesale inherit is refused by the build.
+13. Paragraphs 1, 3 and 4 are the shared HIC.3-6 block, hash-checked at build time. Paragraph 2 names the Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules insofar as they govern blood-bank / blood-centre licensing, and the National Blood Policy and NBTC/NACO Standards for Blood Banks and Blood Transfusion Services (chapter refs 13, 40, 55) insofar as they govern licensed transfusion services -- the legal and professional sources this document's References actually rely on. It does NOT name the Bio-Medical Waste Management Rules, 2016 or the Food Safety and Standards Act, 2006. The HIC wholesale inherit is refused by the build.
 
 DELIBERATELY NOT INCLUDED
 - Laboratory specimen pathway and compatibility testing as laboratory work -- AAC.4.
