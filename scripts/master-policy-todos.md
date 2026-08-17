@@ -1189,7 +1189,9 @@ T2 one-line flags:
 
 ---
 
-## Deferred from MOM.5 (drafted 2026-08-17, UNAPPROVED)
+## Deferred from MOM.5 (drafted 2026-08-17; **owner-approved as drafted 2026-08-17**)
+
+Owner confirmed clean: no prescribing-language drift; scope boundary with MOM.3/MOM.4 correctly stated. Database `standard_text` copy-of-MOM.3 error remains the 2026-08-11 item; do not reopen the draft for that.
 
 Drafted as dispensing from the chapter-summary header on printed p.75, not from `shco_full_oes.standard_text` and not from the corrupted OE-page header. Database fix remains the 2026-08-11 item above.
 
@@ -1244,9 +1246,11 @@ T2 one-line flags:
 
 ---
 
-## Deferred from MOM.8 (drafted 2026-08-17, UNAPPROVED)
+## Deferred from MOM.8 (drafted 2026-08-17, UNAPPROVED pending owner review of the cytotoxic block)
 
 THIS IS THE NDPS STANDARD. COP.9/COP.10 storage handoff is accepted here.
+
+Owner 2026-08-17: MOM.8 not approved until chemotherapeutic/cytotoxic handling is a distinct procedure-step block (PPE, spill, CSTD or equivalent, extravasation, hazardous waste), not implied by the narcotics custody chain. That block is now step 4; radioactive agents used as therapy are step 5; the NDPS register is step 6. MOM.8.d remains Tier 2 (unasterisked). Still UNAPPROVED — do not insert.
 
 T1 overlap flags:
 
@@ -1259,9 +1263,11 @@ T2 one-line flags:
 - [ ] **MOM.3/4 prescribing vs MOM.8.b appropriate caregivers for these classes.**
 - [ ] **MOM.5 dispensing vs MOM.8.e usage/disposal record.**
 - [ ] **MOM.6 administration vs MOM.8.d chemo/radioactive preparation and qualified administration.**
-- [ ] **COP.11 chemo in OT** is still MOM.8 preparation / qualified person.
+- [ ] **COP.11 chemo in OT** is still MOM.8 step-4 handling / qualified person.
 - [ ] **AAC.5 / AAC.6 diagnostic radiology licences vs MOM.8 therapeutic radioactive agents.** If none, record absence against AAC.1; do not invent a hot laboratory.
-- [ ] **HIC.3 cytotoxic waste colours / HIC.2 PPE for chemo prep.** Pointed; not restated; BMW not in MOM.8 P2.
+- [ ] **HIC.2 donning/doffing vs extra hazardous-drug PPE named at MOM.8 step 4.** Standard-precaution PPE is not by itself cytotoxic PPE. Blood/body-fluid spill remains HIC.2.
+- [ ] **HIC.3 cytotoxic waste colours.** Unused dose, empty vials, contaminated sharps/PPE and spill debris enter that stream; colours not restated; BMW not in MOM.8 P2.
+- [ ] **FMS building chemical or mercury spill vs MOM.8 step-4 cytotoxic spill at preparation/administration.** FMS undrafted; flagged for that pass.
 
 ---
 
