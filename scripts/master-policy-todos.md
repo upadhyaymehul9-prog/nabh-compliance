@@ -80,6 +80,28 @@ taken under this rule, not an omission.
 
 ---
 
+# STANDING RULE: Disclaimer statute-matching (added 2026-08-17)
+
+**Read this before drafting any master policy. It is a process rule, not a task — it does not
+get ticked off and it does not expire.**
+
+Paragraphs 1, 3 and 4 of the shared HIC.3–6 disclaimer stay byte-identical. Only paragraph 2
+names statutes, and it names **only statutes that standard actually cites** in References.
+
+- Never inherit Bio-Medical Waste Management Rules, 2016 or the Food Safety and Standards Act,
+  2006 into paragraph 2 unless those statutes are genuinely used in that draft.
+- Never dump the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the
+  Mental Healthcare Act, 2017 onto a standard as a blanket checklist. That is the AAC.1
+  defaulted-statute bug. Cite a statute only where that standard's subject actually engages it.
+- If the PDF bibliography and the standard's subject support **no named Act**, use
+  `make_disclaimer_accreditation_only()` in `policies/build/policy_build_common.py`. Paragraph 2
+  then states that the duties are accreditation requirements of the NABH SHCO 3rd Edition, and
+  explicitly refuses to import CPA 2019 / CEA 2010 / MHCA 2017 as a checklist.
+- `emit_and_verify` hash-checks P1/P3/P4, requires `statute_clause` in P2, and fails if BMW/FSS
+  appear in P2 unless they are also in `statute_clause`.
+
+---
+
 ## Deferred from HIC.2 (drafted 2026-08-01)
 
 ### → HIC.1 / HIC.3 / HIC.6 (infection control programme, environment, sterilisation)
@@ -1283,8 +1305,124 @@ T2 one-line flags:
 
 - [ ] **AAC.1 defined services vs implant types offered.** Unused implant services are a recorded absence, not a copied implant SOP.
 - [ ] **MOM.1.e is a pointer only.** Criteria live here.
-- [ ] **PRE surgical consent vs MOM.9.b counselling for usage and precautions.** Not the same act.
+- [ ] **PRE surgical consent vs MOM.9.b counselling for usage and precautions.** Not the same act. PRE.3 (drafted 2026-08-17, UNAPPROVED) now owns surgical-consent method and accepts that implant counselling is not that consent.
 - [ ] **Medical Devices Rules, 2017.** Procure from a licensed source; implanting does not make the hospital a manufacturer.
+
+---
+
+## Deferred from PRE.1 (drafted 2026-08-17, UNAPPROVED)
+
+Source: official SHCO 3rd Edition PDF md5 `39e3bc86d73d651b9cfef283bbf018a9`, Chapter 4 printed pages 85–91 (PDF indices 91–97). PRE.1 printed p.86 / index 92. T1 = PRE.1.a*, PRE.1.b*. P2 names CPA 2019 only insofar as a patient may seek a consumer remedy — not as the source of the NABH rights list. CEA 2010 and MHCA 2017 are not in PRE.1 P2.
+
+Insert PRE.1–PRE.6 as `status='draft'` only via `python3 policies/build/apply_pre_drafts_supabase.py --insert`. The 2026-08-17 Cloud Agent VM did not have `SUPABASE_SERVICE_ROLE_KEY`; dry-run of all six drafts passed; live POST was not executed. No row was approved.
+
+T1 overlap flags (full cross-check done in the PRE.1 draft Scope / universal_facts_checklist). Do not patch approved HIC in this pass.
+
+- [ ] **PRE.1 vs PRE.2 — documented set vs content of the list.** PRE.1 owns that a documented set exists, is displayed, is made known, is promoted and is protected. PRE.2 owns what the set contains. Do not let PRE.1 grow the rights catalogue or PRE.2 write the display board.
+
+- [ ] **PRE.1.d/e vs PRE.6 — rights-violation report vs complaint redressal.** A complaint that is a rights violation is both. PRE.6 owns redressal as a complaint; PRE.1.e owns leadership review of **violations**. The report route must not be only to the alleged actor. Keep both records when the subject is a rights violation.
+
+T2 one-line flags:
+
+- [ ] **PRE.1.a awareness at entry vs AAC.2 registration/UID.** Awareness sits beside registration; this document does not generate the number.
+- [ ] **PRE.1 vs AAC.8 discharge-summary advice.** AAC.8 owns the paper; PRE.4 owns teaching method; PRE.1 owns rights at entry.
+- [ ] **PRE.3 / COP.5 / COP.9 / COP.10 / COP.11.** Consent method and that consent happened. PRE.1 does not decide whether those consents happened.
+- [ ] **IMS / HRM.** The record and the training file. Forward references.
+
+---
+
+## Deferred from PRE.2 (drafted 2026-08-17, UNAPPROVED)
+
+Whole standard is Tier 2 (sixteen OEs a–p, none asterisked; clustered into ten steps). P2 is accreditation-only — CPA/CEA/MHCA are not a checklist here. MHCA capacity is PRE.3.c, not this list.
+
+T2 one-line flags (standing rule: flag and move on):
+
+- [ ] **PRE.1 — display/protection vs this content.** See PRE.1 T1 flag.
+- [ ] **PRE.2.g vs PRE.3 and COP.5/9/10/11.** Pointer only. PRE.3 owns method. COP.5/9/10/11 own that the relevant consent happened before the act. Do not rewrite those methods in PRE.2.
+- [ ] **PRE.2.e vs PRE.3.** Refusal is the right; PRE.3 records that consent was not given.
+- [ ] **PRE.2.h vs PRE.6.** Right vs complaint mechanism.
+- [ ] **PRE.2.i vs PRE.5.** Right vs expected-cost method.
+- [ ] **PRE.2.j vs IMS and AAC.8.** Access during care vs the record file vs the discharge summary the patient takes away.
+- [ ] **PRE.2.o vs AAC.3 and PRE.5.d.** Consultation on the plan vs the clinical care-plan document vs financial implications of a change.
+- [ ] **PRE.2.p vs COP.6.e.** General multidisciplinary counselling vs periodic ICU family counselling where ICU exists. COP.6.e's forward-ref to undrafted PRE is now landed from this side.
+- [ ] **PRE.2.d vs IMS.** Confidentiality as a patient right vs confidentiality as a record-keeping act.
+- [ ] **PRE.2.m/n vs PRE.3.b and PRE.4.d.** Decision-making explanations vs the consent conversation vs disease-process education. Same language may be used; they are not the same act.
+- [ ] **Unused research / unused ICU.** Recorded absence against AAC.1, not a copied SOP.
+
+---
+
+## Deferred from PRE.3 (drafted 2026-08-17, UNAPPROVED)
+
+T1 = PRE.3.a*, PRE.3.c*. P2 names NMC Act 2019 (RMP professional consent duty) and MHCA 2017 only when that Act's definition of a person with mental illness is met. Kumar 2015 and Nandimath 2009 (chapter refs 10 and 13) are frameworks. **Samira Kohli v. Dr. Prabha Manchanda is not a numbered PRE chapter reference and is not imported as a NABH case-law mandate. Indian Contract Act 1872 is not a numbered chapter reference and is not in P2.** CPA 2019 and CEA 2010 are not in PRE.3 P2.
+
+T1 overlap flags:
+
+- [ ] **PRE.3 vs COP.5 / COP.9 / COP.10 / COP.11 — CRITICAL HANDOFF ACCEPTED.** Those drafts own that consent happened before the act and forwarded method to PRE. This document accepts method. COP.11 step 3 already requires the performing doctor (or same-team doctor present and responsible). Do not rewrite those "consent happened" steps here, and do not patch COP in this pass.
+
+- [ ] **PRE.2.g — right that consent is obtained before listed acts vs this method.** PRE.2 lists the right; PRE.3 writes the form.
+
+T2 one-line flags:
+
+- [ ] **PRE.3.b vs PRE.4.a.** Same language; consent conversation vs ongoing education.
+- [ ] **PRE.2.e.** Refusal as a right; this document records consent not given.
+- [ ] **MOM.9.b implant usage/precaution counselling is not surgical consent.** PRE.3 owns surgical consent for the implanting procedure.
+- [ ] **COP.7.a MTP where provided.** Statutory MTP opinion/consent records remain COP.7 where termination is in scope; general method is now this document. Lands COP.7's forward-ref.
+- [ ] **AAC.1.** Unused research is a recorded absence, not a copied ethics SOP.
+- [ ] **IMS.** The consent content in the record. Forward reference.
+
+---
+
+## Deferred from PRE.4 (drafted 2026-08-17, UNAPPROVED)
+
+T1 = PRE.4.f* only (effective communication). P2 is accreditation-only — no named Act in the PRE bibliography for this subject. Readability/communication chapter refs (Badarudeen, Marcus EDUCATE, Nouri/Rudd, Ha/Longnecker) are frameworks, not pasted protocols. FSS Act 2006 is not in P2.
+
+T1 overlap flags:
+
+- [ ] **PRE.4 vs AAC.8.d — CRITICAL HANDOFF ACCEPTED.** AAC.8 owns that follow-up advice is on the discharge summary and already hands teaching method to PRE. This document accepts method during the stay and for that paper. AAC.8 does not write how education is given during the stay.
+
+T2 one-line flags:
+
+- [ ] **PRE.4.b vs MOM.6 administration vs MOM.7 NM/ME/ADR capture.** PRE.4.b is teaching; MOM.6 still administers; MOM.7 still captures the event.
+- [ ] **PRE.4.c vs COP.13 nutritional-risk/therapeutic diet vs COP.8 paediatric immunisation vs HIC.3 kitchen.** PRE teaches; those documents own the clinical and kitchen methods.
+- [ ] **PRE.4.e vs HIC.2/HIC.4/HIC.5.** PRE teaches the patient how they can help prevent HAI; HIC owns IPC method. Do not rewrite bundles or surveillance.
+- [ ] **PRE.4.d vs AAC.3.** Disease-process teaching vs diagnosis and the care plan.
+- [ ] **PRE.3.b vs PRE.4.a.** Same language; different acts. See PRE.3.
+- [ ] **PRE.1.** Rights at entry vs healthcare-needs teaching.
+
+---
+
+## Deferred from PRE.5 (drafted 2026-08-17, UNAPPROVED)
+
+Whole standard is Tier 2 (no asterisked OE). P2 names CPA 2019 (not misled on price) and CEA 2010 / Clinical Establishments (Central Government) Rules 2012 display-of-rates **only if the State has adopted CEA**. Fence adoption; do not invent a CEA board in a non-adopting State. MHCA is not named. No rupee figures as NABH mandates.
+
+T2 one-line flags:
+
+- [ ] **PRE.2.i right vs this method.** PRE.2 lists the right; PRE.5 writes the tariff and the explanation.
+- [ ] **PRE.1.b promotion of the cost right.** Promotion is PRE.1; figures are PRE.5.
+- [ ] **AAC.3 / PRE.2.o care-plan change vs PRE.5.d financial implications.** Clinical modification stays AAC.3/PRE.2.o; this document owns only the money of that change.
+- [ ] **AAC.8 discharge summary.** Not this explanation unless the hospital has defined putting a bill on that paper.
+- [ ] **PRE.3 signed consent is not agreement to an unnamed bill.**
+- [ ] **ROM/FMS billing (undrafted).** PRE.5 owns patient-facing expected-cost information, not the billing ledger, GST, or payer contracts. Flagged for the ROM/FMS pass.
+
+---
+
+## Deferred from PRE.6 (drafted 2026-08-17, UNAPPROVED)
+
+Subject **confirmed from the PDF** (do not assume): "The organisation has a mechanism to capture patient's feedback and to redress complaints." T1 = PRE.6.c* (redress + make aware of the procedure). P2 names CPA 2019 for consumer grievance as a framework, not copied District Commission procedure. Reader et al. 2014 (ch 17) is a taxonomy framework. CEA/MHCA are not named.
+
+T1 overlap flags:
+
+- [ ] **PRE.6.c vs PRE.1.d/e — CRITICAL SPLIT.** A rights-violation complaint is both a PRE.6 complaint and a PRE.1.d report; PRE.1.e owns leadership review of violations. Neither record replaces the other. The complaint route must not be only to the person complained of.
+
+T2 one-line flags:
+
+- [ ] **PRE.2.h right vs this mechanism.**
+- [ ] **PRE.1.a/b rights display/promotion vs awareness of this procedure.** Awareness of the feedback/complaint procedure is PRE.6.c; it is not the PRE.1.a board counted twice.
+- [ ] **PRE.5 cost disputes** are complaints here; the tariff remains PRE.5.
+- [ ] **MOM.7.** A family complaint about a medication event is redressed here; the event is still captured under MOM.7.
+- [ ] **AAC.8.** A complaint about discharge is redressed here; AAC.8 owns the summary.
+- [ ] **ROM/FMS (undrafted)** may own an accounts adjustment; this document owns that the complaint was received and redressed as a patient complaint.
+- [ ] **PRE.6.a satisfaction vs PRE.6.b experience.** Two distinct OEs; the standard does not define the difference — hospital method must.
 
 ---
 
