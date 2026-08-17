@@ -8,6 +8,8 @@ build file; this module writes the JSON/SQL and fails loudly if structure drifts
 Disclaimer (standing rule 2026-08-17, scripts/master-policy-todos.md): paragraphs 1, 3
 and 4 of the shared HIC.3-6 block stay byte-identical; only paragraph 2's named
 statutes change per standard. make_disclaimer() enforces that split.
+make_disclaimer_accreditation_only() is the P2 helper when the standard cites no
+named Act — PRE.2 and PRE.4 use it so CPA/CEA/MHCA are not imported as a checklist.
 """
 from __future__ import annotations
 
@@ -54,6 +56,32 @@ HIC_BOILERPLATE_STATUTES = (
     "Bio-Medical Waste Management Rules, 2016",
     "Food Safety and Standards Act, 2006",
 )
+
+
+def make_disclaimer_accreditation_only() -> tuple[str, str]:
+    """P2 for a standard whose References do not rely on a named Act.
+
+    Returns (disclaimer, statute_clause). The clause is an explicit refusal to
+    import CPA 2019 / CEA 2010 / MHCA 2017 as a checklist — the AAC.1 defaulted-
+    statute bug — and must appear verbatim in paragraph 2 so emit_and_verify
+    can hash-check the split. BMW/FSS stay out of paragraph 2.
+    """
+    statute_clause = (
+        "no named Act of Parliament; the duties in this document are accreditation "
+        "requirements of the NABH SHCO 3rd Edition"
+    )
+    p2 = (
+        "The requirements in this document are accreditation requirements of the NABH "
+        "SHCO 3rd Edition rather than duties under a named Act of Parliament. In "
+        f"particular those arising under {statute_clause} are written here as "
+        "accreditation method, not as a copied statute. This policy does not import "
+        "the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or "
+        "the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise "
+        "under other documents of {{HOSPITAL_NAME}} remain those documents. "
+        "{{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies "
+        "to it; this document does not constitute legal advice."
+    )
+    return "\n\n".join([DISCLAIMER_P1, p2, DISCLAIMER_P3, DISCLAIMER_P4]), statute_clause
 
 
 def make_disclaimer(statute_clause: str) -> str:
