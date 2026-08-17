@@ -869,7 +869,7 @@ T1 overlap flags (full cross-check done in the COP.9 draft Scope / universal_fac
 
 T2 one-line flags (standing rule: flag and move on):
 
-- [ ] **COP.9.b sedation consent before the drug vs PRE general consent method.** PRE (undrafted) owns how consent is explained/recorded/witnessed; COP.9.b owns that sedation consent is obtained before the sedative is given.
+- [ ] **COP.9.b sedation consent before the drug vs PRE general consent method.** PRE.3 (drafted 2026-08-17, UNAPPROVED) now owns how consent is explained, recorded and who may give it. COP.9.b still owns that sedation consent is obtained before the sedative is given. Do not rewrite COP.9; the PRE.3 draft accepts this handoff.
 
 - [ ] **COP.9 vs MOM drug-storage (NDPS / D&C).** Forward-ref. COP.9 does not write cupboard/register/destruction and does not inherit NDPS as a storage statute.
 
@@ -889,7 +889,7 @@ T1 overlap flags (full cross-check done in the COP.10 draft Scope / universal_fa
 
 T2 one-line flags (standing rule: flag and move on):
 
-- [ ] **COP.10.d anaesthesia consent vs PRE general consent method.** PRE (undrafted) owns the method; COP.10.d owns that anaesthesia consent is obtained before induction.
+- [ ] **COP.10.d anaesthesia consent vs PRE general consent method.** PRE.3 (drafted 2026-08-17, UNAPPROVED) now owns the method. COP.10.d still owns that anaesthesia consent is obtained before induction. Do not rewrite COP.10; the PRE.3 draft accepts this handoff.
 
 - [ ] **COP.10.g type+drugs in the record vs MOM medication process.** MOM (undrafted) owns storage and the medication process; COP.10 owns anaesthetic care and that type and anaesthetic medicines appear in the patient record. MOM must not restate anaesthetic method.
 
@@ -1033,7 +1033,7 @@ T2 one-line flags (standing rule: flag and move on):
 
 - [ ] **COP.5.a transfusion scope vs AAC.1 service directory.** Align; do not rewrite the directory. Stated in Scope and step 1.
 
-- [ ] **COP.5.d transfusion/donation consent vs PRE consent method.** PRE (undrafted) owns how consent is explained, recorded and refused. COP.5.d owns that consent is obtained for transfusion and for donation before the act.
+- [ ] **COP.5.d transfusion/donation consent vs PRE consent method.** PRE.3 (drafted 2026-08-17, UNAPPROVED) now owns how consent is explained, recorded and refused. COP.5.d still owns that consent is obtained for transfusion and for donation before the act. Do not rewrite COP.5; the PRE.3 draft accepts this handoff.
 
 - [ ] **COP.5.f haemovigilance / post-transfusion form.** No approved policy owns reaction analysis. Keep it here.
 
@@ -1111,7 +1111,7 @@ T2 one-line flags (standing rule: flag and move on):
 
 - [ ] **COP.6.b staff/equipment vs HRM credentialing / AAC.1.b.** Qualifications via HR policies; this document judges adequacy against the care the unit claims. Stated in step 2.
 
-- [ ] **COP.6.e periodic family counselling vs PRE.** PRE (undrafted) may later own general education method. COP.6.e owns that ICU/HDU counselling happens periodically during the stay.
+- [ ] **COP.6.e periodic family counselling vs PRE.** PRE.2.p (drafted 2026-08-17, UNAPPROVED) now owns the general multidisciplinary-counselling right and method. COP.6.e still owns that ICU/HDU counselling happens periodically during the stay. Do not rewrite COP.6; landed from the PRE.2 side.
 
 - [ ] **COP.6.f brain-death / EOL pathway vs COP.11.i/j transplant and donation-awareness.** Same THOA 1994 envelope already flagged under COP.11. Clinical declaration pathway remains COP.6; donation programme remains COP.11.
 
@@ -1143,7 +1143,7 @@ T2 one-line flags (standing rule: flag and move on):
 
 - [ ] **HIC.2/3/4/5/6 labour-room IPC, waste, bundles, surveillance, reprocessing.** Infection control stays HIC. COP.7 requires those practices in obstetric areas and does not rewrite them.
 
-- [ ] **COP.7.a MTP where provided vs PRE consent method.** Statutory MTP opinion and consent records are this process where termination is in scope; general consent method remains PRE (undrafted).
+- [ ] **COP.7.a MTP where provided vs PRE consent method.** Statutory MTP opinion and consent records remain this obstetric process where termination is in scope. General consent method is now PRE.3 (drafted 2026-08-17, UNAPPROVED). Do not rewrite COP.7; landed from the PRE.3 side.
 
 ---
 
@@ -1159,7 +1159,7 @@ T2 one-line flags:
 
 - [ ] **AAC.1 service directory vs MOM.1.a formulary.** Formulary must match defined services; it does not rewrite the directory.
 - [ ] **HIC.2 / HIC.3 / HIC.4.** Injection safety, pharmaceutical waste colours, device bundles — pointed, not restated. BMW not in MOM.1 P2.
-- [ ] **PRE / IMS.** Counselling and the record itself, undrafted.
+- [ ] **PRE.4 / IMS.** PRE.4 (drafted 2026-08-17, UNAPPROVED) now owns teaching about medicines and side effects. The medical record itself remains IMS (still undrafted).
 
 ---
 
