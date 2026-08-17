@@ -1,0 +1,329 @@
+# -*- coding: utf-8 -*-
+"""Builds the MOM.7 master policy draft: JSON for review + SQL for later insert.
+
+UNAPPROVED DRAFT. Do not insert, approve, or write this to Supabase.
+
+THIS IS DRAFTED UNDER THE TWO-TIER DEPTH STANDING RULE (2026-08-10) AND THE
+DISCLAIMER STATUTE-MATCHING STANDING RULE (2026-08-17), both in
+scripts/master-policy-todos.md.
+
+Tier is decided by doc_required / the asterisk in the official PDF:
+  Tier 1 (full treatment): MOM.7.a, MOM.7.c (Core), MOM.7.d
+  Tier 2 (lighter pass):   MOM.7.b, MOM.7.e
+
+THREE of five OEs are asterisked. The draft builds deep blocks for a, c and d.
+b and e are lean. MOM.7.c is Core AND asterisked; Core is not a substitute for
+the asterisk when allocating depth.
+
+Official source: NABH Standards for Small Healthcare Organisations, 3rd Edition
+(August 2022), Chapter 3 Management of Medication, standard MOM.7 and OEs
+MOM.7.a-e, read from the official standards PDF (downloaded 2026-08-17 from the
+NABH website's Explore NABH Standards page), printed pages 79-80, PDF page
+index 85-86.
+
+Asterisks verified 2026-08-17: scripts/asterisk_extract.py re-run against that
+download (self-validation passed, 408 OEs, 132 asterisks, output matched the
+committed scripts/shco_oe_asterisks.json on all 408 entries) and the MOM.7
+pages read directly. MOM.7.a, MOM.7.c and MOM.7.d carry the asterisk; MOM.7.b
+and MOM.7.e are unasterisked. MOM.7.a was among the 14 mismatches of the
+2026-08-10 audit (single unwrapped line; flag flipped false to true).
+"""
+from policy_build_common import emit_and_verify, make_disclaimer
+
+STANDARD_CODE = "MOM.7"
+CHAPTER = "MOM"
+OE_CODES = [
+    "MOM.7.a", "MOM.7.b", "MOM.7.c", "MOM.7.d", "MOM.7.e",
+]
+TIER1_OES = ["MOM.7.a", "MOM.7.c", "MOM.7.d"]
+
+POLICY_TITLE = "Monitoring after Medication Administration and Medication-Event Reporting"
+
+VERSION = "1.0"
+REVISION_HISTORY = [
+    {"version": "1.0", "date": "17-08-2026", "description": "Initial release."},
+]
+
+PURPOSE = """This document sets out how {{HOSPITAL_NAME}} monitors patients after a medicine has been given, changes that medicine where the monitoring shows it should be changed, and captures, reports and analyses near miss, medication error and adverse drug reaction within a time this hospital has specified, with corrective or preventive action from that analysis.
+
+The chapter intent is a safe and organised medication process that includes monitoring of patients after administration and procedures for reporting and analysing near-misses, medication errors and adverse drug reactions. A dose that is given correctly and then not watched, or an event that is treated and never captured, is not that process. This document is the process that makes the after-the-dose part of the intent operational.
+
+This document is not the administration policy. Giving the dose, labelling a prepared syringe, identifying the patient, verifying the order and writing that the dose was given are owned by the administration policy of {{HOSPITAL_NAME}}. This document starts when that dose has been given."""
+
+SCOPE = """This policy applies to every location at {{HOSPITAL_NAME}} in which a medicine is administered and the patient remains under this hospital's care afterwards: in-patient wards, the emergency area, day-care, the operation theatre and recovery insofar as a medicine given there is watched after the dose, intensive and high-dependency areas where they exist, out-patient areas where a medicine is given and the patient is observed before leaving, and any other clinical area this hospital names. It binds the person who gave the dose, the person who watches the patient after it, the clinician who changes therapy on the basis of that watching, and the staff who capture, report and analyse near miss, medication error and adverse drug reaction.
+
+It covers: monitoring of patients after medication administration; changing medications where appropriate based on that monitoring; capture of near miss, medication error and adverse drug reaction; reporting and analysis of those events within a specified time frame; and corrective and/or preventive action based on the analysis.
+
+Boundaries with other policies of {{HOSPITAL_NAME}}:
+
+- Safe administration of the dose, labelling before a second drug is prepared, identification before administration, verification from the order, documentation that the dose was given, self-administration and patient's own medicines brought from outside are governed by the administration policy of {{HOSPITAL_NAME}} (MOM.6, sibling). This document owns what happens AFTER that dose: the watching, the change of therapy, and the capture of near miss, medication error and adverse drug reaction. MOM.6 does not write post-dose monitoring. This document does not rewrite how the dose is given.
+- Storage, prescription, order-writing and dispensing of ordinary medicines are governed by the other medication policies of {{HOSPITAL_NAME}} (MOM.2, MOM.3, MOM.4, MOM.5, siblings). Those processes may generate a near miss or a medication error that this document then captures. They do not capture it.
+- Narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents used as therapy are governed for safe use, secure storage, qualified preparation and the usage-disposal record by the narcotics-chemotherapy-radioactive policy of {{HOSPITAL_NAME}} (MOM.8, sibling). A medication error or adverse reaction involving those classes is still captured here. MOM.8 does not write the near-miss book.
+- Early-warning signs of deterioration, and the hospital-wide process that identifies them so that prompt intervention can start, are governed by the assessment policy of {{HOSPITAL_NAME}} (AAC.3.e). The same vital signs may be used. MOM.7.a is specifically post-medication monitoring of the effect and the harm of the drug. An early-warning trigger is not this document, and it is not automatic intensive-care admission.
+- Admission to intensive care or high dependency is governed by the intensive-care policy of {{HOSPITAL_NAME}} (COP.6). A patient who deteriorates after a medicine may be referred there. Referral is decided against COP.6 criteria. This document does not admit to intensive care.
+- Surveillance of healthcare-associated infections is governed by the infection-surveillance policy of {{HOSPITAL_NAME}} (HIC.5, approved). A drug reaction is not a surgical-site infection. HIC.5 does not capture medication error. This document does not count HAIs.
+- Occupational exposure and post-exposure prophylaxis are governed by the occupational-health and HAI-prevention policies of {{HOSPITAL_NAME}} (HIC.4, approved). A needle-stick is not an adverse drug reaction of the patient. HIC.4 does not write this reporting form.
+- Transfusion of blood and blood components, including the post-transfusion form, identification of transfusion reactions, and analysis of those reactions, is governed by the transfusion policy of {{HOSPITAL_NAME}} (COP.5). The chapter intent includes blood and blood components among medications. COP.5 already owns the reaction. A transfusion reaction is COP.5.f, not an MOM.7 adverse drug reaction. This document does not capture it a second time.
+- Education of the patient and family about safe use of medication and potential side effects is governed by the patient-rights and education policies of {{HOSPITAL_NAME}} (PRE.4.b, not yet drafted). PRE owns the education. This document still captures the event when it occurs. Educating is not capturing.
+- The method of informed consent generally is governed by the patient-rights policies of {{HOSPITAL_NAME}} (PRE, not yet drafted).
+- The medical record itself is governed by the information-management policies of {{HOSPITAL_NAME}} (IMS, not yet drafted). This policy owns the post-medication monitoring and medication-event content written into that record.
+- Two identifiers at the point of care are governed by the uniform-care policy of {{HOSPITAL_NAME}} (COP.1). The patient who is watched after a dose is the patient those identifiers named when the dose was given."""
+
+POLICY_STATEMENT = """{{HOSPITAL_NAME}} monitors patients after medication administration for the effect of the medicine and for harm from the medicine. A signed administration record is not that monitoring.
+
+{{HOSPITAL_NAME}} changes medications where the monitoring shows that a change is appropriate, and records the change.
+
+{{HOSPITAL_NAME}} captures near miss, medication error and adverse drug reaction. A treated event that is not captured has not been captured.
+
+{{HOSPITAL_NAME}} reports and analyses those events within a time frame this hospital has specified. The time is this hospital's definition. This document does not convert a clock copied from elsewhere into a NABH mandate.
+
+{{HOSPITAL_NAME}} takes corrective and/or preventive action based on that analysis.
+
+{{HOSPITAL_NAME}} does not treat a transfusion reaction as an adverse drug reaction under this policy, and does not treat a healthcare-associated infection or an occupational exposure as a medication event under this policy."""
+
+PROCEDURE_STEPS = [
+"""1. Patients are monitored after medication administration
+
+Patients at {{HOSPITAL_NAME}} are monitored after medication administration. This step is the documented-evidence anchor of a requirement the standard asterisks. An assessor will ask how this hospital knows what a medicine did after it was given, and the answer must be a written method used after the dose, not the administration box that records that the dose was given.
+
+The reason this is its own standard, and not a sentence inside the administration policy, is that giving the dose and watching what the dose does are two different failures. The administration policy of {{HOSPITAL_NAME}} can document a correctly identified, correctly labelled, correctly timed dose that then produces hypotension, bronchospasm, a rash, unexpected drowsiness, or no effect at all — and nobody looks. The administration record answers "was it given?". This step answers "what did it do?". Mixing the two is the common error: a signed drug chart offered as proof of monitoring. It is proof of administration. It is not proof of monitoring after administration.
+
+What is monitored is the effect of the medicine and the harm of the medicine. Effect is whether the medicine did what it was given to do — pain easing, fever falling, a blood pressure responding, a seizure stopping, a wheeze settling. Harm is whether the medicine did something it was not given to do — a rash, bronchospasm, a drop in blood pressure after an antihypertensive, a rise after a pressor that has overshot, unexpected sedation, a suspected allergic reaction. The observations used for this purpose may be the same vital signs the assessment policy of {{HOSPITAL_NAME}} uses as early-warning signs of deterioration. They are not the same process. Early-warning (AAC.3.e) is a hospital-wide system for recognising that a patient is changing, so that prompt intervention can start, and it may lead to a request for intensive care. MOM.7.a is specifically whether this drug did what it was given to do and whether it harmed. An early-warning trigger is not automatic intensive-care admission; admission is decided against the intensive-care policy of {{HOSPITAL_NAME}} (COP.6). A post-medication note that says only "stable", with no reference to the medicine just given, is not monitoring after medication administration.
+
+Who monitors after a dose, what is looked for (including any high-risk medicines this hospital watches more closely), where the observations are written, and for how long after a dose the watching continues, are [Hospital to define — who monitors after medication administration, what is observed by class of medicine or high-risk list, where it is written, and for how long after a dose]. This document does not print a numbered interval, a named early-warning score, or a mandatory set of vital-sign cut-offs. It requires that the watching happens, that it is about the medicine, and that it is recorded against the unique identification number.
+
+A medicine given in an out-patient or day-care setting is still monitored after administration for as long as this hospital keeps that patient under its care for that dose. A patient sent home with no observation after an injectable, where the hospital's own guidance required a watch, has not been monitored after medication administration.
+
+This step does not capture events. Capture is step 3. This step is the watching from which an event may be noticed. Education of the patient about potential side effects remains under the patient-education policies of {{HOSPITAL_NAME}} (PRE.4.b). Educating the patient is not a substitute for watching the patient.
+
+Transfusion of blood and blood components is not monitored as a medicine under this step. The chapter intent includes blood among medications; the transfusion policy of {{HOSPITAL_NAME}} already owns monitoring during and after a unit and the reaction pathway (COP.5). A transfusion reaction is not moved here.
+
+The written post-medication monitoring guidance is held at [Hospital to define — where the written post-medication monitoring guidance is held].""",
+
+"""2. Medications are changed where appropriate based on the monitoring
+
+Medications are changed where appropriate based on the monitoring at step 1. A watch that never leads to a change when the medicine is failing or harming is observation without a decision.
+
+Who may change a medication on the basis of that monitoring, and how the change is recorded (a new order under the order-writing policy of {{HOSPITAL_NAME}}, a recorded stop, a recorded dose adjustment), are [Hospital to define — who may change a medication based on post-medication monitoring, and how the change is recorded]. A change made only in conversation, or a change written nowhere except a nursing note that the prescriber never sees, is not a change this step recognises.
+
+Where the monitoring shows harm that is an adverse drug reaction, the medicine is stopped or changed as clinically required and the event is captured under step 3. This step owns the therapeutic change. Step 3 owns the capture.""",
+
+"""3. Capture of near miss, medication error and adverse drug reaction
+
+{{HOSPITAL_NAME}} captures near miss, medication error and adverse drug reaction. This step is the documented-evidence anchor of a Core requirement the standard asterisks. An assessor will ask how an event enters the hospital's sight, and the answer must be a capture route staff can use, not a poster that says errors should be reported.
+
+The reason capture is its own asterisked step is that reporting and analysis at step 4 cannot start from an event that never entered a book. Treatment of the patient is not capture. A senior's memory of a close call is not capture. A quality meeting that discusses "medication errors" without a captured case is not capture. The common error is a form that exists in a file and is not used at the place the error happened, or a culture in which only harm that reached a family is written down. Near miss is in the objective element because the standard wants the miss that did not become harm, not only the harm that could not be ignored.
+
+This hospital uses recognised meanings, and writes its operational definitions against them. A medication error, in the sense used by the National Coordinating Council for Medication Error Reporting and Prevention (chapter reference 1), is any preventable event that may cause or lead to inappropriate medication use or patient harm while the medication is in the control of the health care professional, patient, or consumer. It may occur in prescribing, communication, labelling, compounding, dispensing, distribution, administration, education, monitoring or use. An adverse drug event, in the sense used by the Agency for Healthcare Research and Quality primer (chapter reference 15), is harm from a medicine; some such harm follows an error and some does not. An adverse drug reaction is harm from a medicine used in a usual way — it is captured here even when no error is identified. A near miss is an error that did not reach the patient, or that reached the patient and did not cause harm; the operational line this hospital draws is written locally and is not converted into a numbered severity table by this document. The World Health Organization's Medication without Harm challenge (chapter reference 18) is the harm-reduction framing this hospital may use; it is not a reporting form.
+
+The operational definitions this hospital uses for near miss, medication error and adverse drug reaction, aligned with those recognised meanings, are [Hospital to define — the operational definitions this hospital uses for near miss, medication error and adverse drug reaction]. The capture route — the form, book or electronic report, who may complete it, and where completed captures are held — is [Hospital to define — how near miss, medication error and adverse drug reaction are captured, who may complete the capture, and where those captures are held]. A capture that can be completed only by a quality officer the next morning is not a capture route for a night-shift near miss.
+
+This step captures medication events. It does not capture:
+
+- a transfusion reaction — that is the transfusion policy of {{HOSPITAL_NAME}} (COP.5.f);
+- a healthcare-associated infection — that is the infection-surveillance policy of {{HOSPITAL_NAME}} (HIC.5); a drug reaction is not a surgical-site infection;
+- occupational exposure or post-exposure prophylaxis — that is the occupational-health policy of {{HOSPITAL_NAME}} (HIC.4); a needle-stick is not a patient's adverse drug reaction.
+
+Staff are expected to capture. The chapter intent is that staff are empowered to report errors. A capture used as punishment, or a capture that only senior staff are allowed to file, is a defect of this step.""",
+
+"""4. Reporting and analysis within a specified time frame
+
+Near miss, medication error and adverse drug reaction captured at step 3 are reported and analysed within a specified time frame. This step is the documented-evidence anchor of a requirement the standard asterisks. Capture without a clock is a drawer of forms. Analysis without a clock is a quarterly conversation about last quarter's pile.
+
+The specified time frame is this hospital's definition. This document does not invent a twenty-four-hour NABH mandate, a seventy-two-hour mandate, or any other numbered clock. A time copied from another hospital and never compared with actual reporting time is a list, not a specified time frame.
+
+The specified time frame within which a captured near miss, medication error or adverse drug reaction is reported, and to whom it is reported inside this hospital, are [Hospital to define — the specified time frame within which near miss, medication error and adverse drug reaction are reported, and to whom]. The specified time frame within which they are analysed, who analyses them, and at what forum, are [Hospital to define — the specified time frame within which near miss, medication error and adverse drug reaction are analysed, who analyses them, and at what forum]. A single serious event is analysed when it occurs, not held for a scheduled meeting. A file of forms that is never opened is not analysis.
+
+Reporting inside this hospital is this step. Reporting an adverse drug reaction onward to the Pharmacovigilance Programme of India — the national programme run with the Indian Pharmacopoeia Commission as National Coordination Centre (chapter reference 22) — is a programme this hospital may use; PvPI is not an Act and is not named as a statute. Whether and how this hospital reports ADRs to that programme is [Hospital to define — whether and how this hospital reports adverse drug reactions to the Pharmacovigilance Programme of India]. Statutory adverse-event reporting obligations that attach to medicines under the Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules remain those rules; this step does not restate them as a local clock.
+
+Analysis looks at what happened, why it was possible, and what should change. It uses the captured record, not a recollection. It does not wait for harm as a condition of being analysed: near miss is in the objective element.""",
+
+"""5. Corrective and/or preventive action based on the analysis
+
+Corrective and/or preventive action is taken based on the analysis at step 4. An analysis that ends with "staff counselled" every time, and never with a change to a process that made the error easy, is not this step.
+
+How those actions are recorded, who owns each action, and how closure is shown, are [Hospital to define — how corrective and preventive actions from medication-event analysis are recorded, assigned and followed to close]. An action with no owner, or an owner with no due date this hospital has set, is not followed. This document does not print a numbered due-date mandate; the hospital's own assignment method is the method.""",
+
+"""6. Records, review and the order of operations
+
+Every post-medication monitoring record, every change of therapy based on that monitoring, and every captured near miss, medication error and adverse drug reaction is held against the unique identification number where a patient is involved, and is retrievable. Analysis notes, reporting times against the specified time frames, and corrective or preventive actions with owners, are retrievable with the captured event.
+
+The quality or accreditation coordinator audits a sample of these records at [Hospital to define — the audit interval for post-medication monitoring and medication-event records] for: monitoring after the dose that refers to the medicine, not only a signed administration box; changes of therapy that were recorded; capture of near miss as well as of harm; reporting and analysis inside the specified time frames; actions from analysis that were assigned and closed; and no transfusion reaction, HAI or occupational exposure filed as an MOM.7 event.
+
+This policy is reviewed at [Hospital to define — the review interval for this policy], and sooner when a medicine was given and not watched, a near miss that staff described was not captured, an analysis missed its specified time frame, or a transfusion reaction was filed here, or when the administration, transfusion, assessment, intensive-care or infection-control policies that this document hands work to are revised.""",
+]
+
+RESPONSIBILITY = """The head of the institution is accountable for {{HOSPITAL_NAME}} monitoring patients after medication administration and for capturing, reporting and analysing near miss, medication error and adverse drug reaction.
+
+The named lead for post-medication monitoring and medication-event reporting authors and keeps current the written monitoring guidance at step 1 and the capture-and-reporting method at steps 3 and 4. The named lead is [Hospital to define — the named lead for post-medication monitoring and medication-event reporting].
+
+The person who administered the medicine, and the person assigned to watch after the dose, record the monitoring at step 1. Clinicians who change therapy on the basis of that monitoring record the change at step 2.
+
+All staff capture near miss, medication error and adverse drug reaction by the route at step 3. The named lead sees that reporting and analysis meet the specified time frames at step 4 and that actions at step 5 have owners.
+
+The quality or accreditation coordinator audits the records at step 6 and reports findings to the head of the institution.
+
+All staff are expected to treat an unwitnessed dose, an uncaptured near miss, and a transfusion reaction filed as an adverse drug reaction, as defects, and to report them."""
+
+REFERENCES = """- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Management of Medication chapter, standard MOM.7.
+- Drugs and Cosmetics Act, 1940, and the Drugs and Cosmetics Rules, insofar as they govern adverse-event reporting obligations arising from the use of medicines.
+- About Medication Errors, National Coordinating Council for Medication Error Reporting and Prevention (2015) — chapter reference 1; used for the recognised meaning of medication error; this document does not import that Council's tables as a mandated local form.
+- Medication Errors and Adverse Drug Events, Agency for Healthcare Research and Quality Patient Safety Network (2019) — chapter reference 15; used to distinguish medication error, adverse drug event and adverse drug reaction; not mandated as the only vocabulary.
+- Medication without harm, WHO Global Patient Safety Challenge, World Health Organization (2017) — chapter reference 18; the harm-reduction framing this hospital may use; not a reporting form.
+- Pharmacovigilance Programme of India, Indian Pharmacopoeia Commission, National Coordination Centre — chapter reference 22; the national programme for pharmacovigilance. PvPI is a programme, not an Act. Whether this hospital reports ADRs to it is a hospital decision recorded at step 4.
+- Internal documents of {{HOSPITAL_NAME}}: the written post-medication monitoring guidance; the near-miss, medication-error and adverse-drug-reaction capture route; the specified reporting and analysis time frames; the administration policy; the narcotics-chemotherapy-radioactive policy; the transfusion policy; the assessment policy; the intensive-care policy; the infection-surveillance and occupational-health policies; and the patient-education policies."""
+
+DISTRIBUTION = """Controlled master copy: office of the head of the institution, {{HOSPITAL_NAME}}, with the quality or accreditation coordinator.
+
+Copies issued to: every clinical area in which medicines are administered; pharmacy; nursing administration; the emergency area; the operation theatre and recovery; intensive and high-dependency areas where they exist; and the named lead for post-medication monitoring and medication-event reporting.
+
+The current version is available to all staff at [Hospital to define — intranet location or nursing station folder]. The monitoring guidance and the capture route — the working documents this policy requires — are held in every location that administers medicines.
+
+Superseded versions are withdrawn from all points of use on issue of a revision, and one dated copy of each is retained by the quality or accreditation coordinator."""
+
+ABBREVIATIONS = """Abbreviations already defined in the HIC.1 to HIC.6 master policies are not repeated here. A reader using this document on its own should refer to those policies for the shared glossary, including NABH, SHCO, OE, WHO, SOP and PPE.
+
+The following abbreviations are used in this document and are not defined in HIC.1 to HIC.6:
+
+ADE — adverse drug event
+ADR — adverse drug reaction
+AHRQ — Agency for Healthcare Research and Quality
+ME — medication error
+NCCMERP — National Coordinating Council for Medication Error Reporting and Prevention
+NM — near miss
+PvPI — Pharmacovigilance Programme of India
+
+Any additional abbreviation used locally within {{HOSPITAL_NAME}} is [Hospital to define] and is added to this list at the next revision."""
+
+STATUTE_CLAUSE = (
+    "the Drugs and Cosmetics Act, 1940, and the Drugs and Cosmetics Rules, insofar as they "
+    "govern adverse-event reporting obligations arising from the use of medicines"
+)
+DISCLAIMER = make_disclaimer(STATUTE_CLAUSE)
+
+OE_MAPPING = [
+    {
+        "oe_code": "MOM.7.a",
+        "requirement": "Patients are monitored after medication administration.",
+        "steps": "Steps 1, 6",
+        "evidence": "The written post-medication monitoring guidance used after a dose in every location that administers medicines, covering who watches, what is looked for as effect of the medicine and as harm from the medicine, where observations are written, and for how long after a dose the watching continues, showing a method about the drug rather than a signed administration box offered as monitoring, and rather than a note that says only 'stable' with no reference to the medicine just given; the recorded division that the administration policy owns giving and documenting the dose and this document owns the watching after it; sample records against the unique identification number showing post-dose observations that refer to the intended effect and to harm, including out-patient or day-care doses watched for as long as this hospital kept the patient for that dose; the recorded distinction that the same vital signs may be used as early-warning signs under the assessment policy but that MOM.7.a is not the early-warning system and is not automatic intensive-care admission under the intensive-care policy; the recorded exclusions that transfusion reactions remain under the transfusion policy, that healthcare-associated infection surveillance remains under the infection-surveillance policy, that occupational exposure remains under the occupational-health policy, and that educating the patient about side effects remains under patient-education policies; the location where the written guidance is held; induction or briefing records showing staff in administering areas have been shown that a signed drug chart is not monitoring after administration; the audit sample at step 6 of monitoring after the dose that refers to the medicine",
+        "responsible": "Named lead holds the written post-medication monitoring guidance; the person who administered and the person assigned to watch record the observations; head of the institution is accountable that doses are not left unwatched; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "MOM.7.b",
+        "requirement": "Medications are changed where appropriate based on the monitoring.",
+        "steps": "Steps 2, 1, 6",
+        "evidence": "The written rule on who may change a medication based on post-medication monitoring and how the change is recorded; sample records showing a stop, a dose adjustment or a new order after monitoring showed failure or harm; records showing a change made only in conversation was not treated as the change; the recorded split that this step owns the therapeutic change and step 3 owns capture of the event",
+        "responsible": "Clinician changing therapy records the change; named lead holds the rule; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "MOM.7.c",
+        "requirement": "The organisation captures near miss, medication error and adverse drug reaction.",
+        "steps": "Steps 3, 6",
+        "evidence": "The operational definitions this hospital uses for near miss, medication error and adverse drug reaction, aligned with the NCCMERP meaning of medication error (chapter reference 1) and the AHRQ distinction of medication error, adverse drug event and adverse drug reaction (chapter reference 15), without a pasted numbered severity table, and showing that near miss is captured and not only harm that reached a family; the capture route (form, book or electronic report), who may complete it including night-shift staff, and where completed captures are held, showing a route staff can use rather than a poster or a quality-officer-only form the next morning; sample captured near misses, medication errors and adverse drug reactions against the unique identification number; the recorded exclusions that a transfusion reaction is captured under the transfusion policy, a healthcare-associated infection under infection surveillance, and occupational exposure under occupational health, so that none of those three is filed as an MOM.7 event; induction or briefing records showing staff are expected to capture and that capture is not used as punishment; the audit sample at step 6 of capture of near miss as well as of harm",
+        "responsible": "All staff capture by the written route; named lead holds the definitions and the route; quality or accreditation coordinator audits; head of the institution is accountable that events are not left only in memory",
+    },
+    {
+        "oe_code": "MOM.7.d",
+        "requirement": "Near miss, medication error and adverse drug reaction are reported and analysed within a specified time frame.",
+        "steps": "Steps 4, 3, 6",
+        "evidence": "The specified time frame within which a captured near miss, medication error or adverse drug reaction is reported, and to whom inside this hospital, showing a hospital-defined clock rather than a twenty-four-hour or other numbered clock presented as a NABH mandate, and rather than a time copied from elsewhere and never compared with actual reporting; the specified time frame within which those events are analysed, who analyses them and at what forum, showing that a single serious event is analysed when it occurs and not held for a scheduled meeting, and that a file of forms never opened is not analysis; sample events showing reporting time and analysis time against those specified frames; the recorded position that PvPI is the national pharmacovigilance programme (chapter reference 22), not an Act, and the hospital's own decision whether and how ADRs are reported to that programme; the recorded reliance on the Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules for statutory adverse-event reporting obligations without restating those rules as a local clock; the audit sample at step 6 of reporting and analysis inside the specified time frames",
+        "responsible": "Named lead sees that reporting and analysis meet the specified time frames; the analysis forum records conclusions; quality or accreditation coordinator audits; head of the institution is accountable that captured events are not left unanalysed",
+    },
+    {
+        "oe_code": "MOM.7.e",
+        "requirement": "Corrective and/or preventive action(s) are taken based on the analysis.",
+        "steps": "Steps 5, 4, 6",
+        "evidence": "The written method for recording, assigning and closing corrective and preventive actions from medication-event analysis; sample actions with an owner and closure, showing analysis that did not end only with 'staff counselled' when a process change was required; the audit sample at step 6 of assigned and closed actions",
+        "responsible": "Named lead assigns actions from analysis; action owners close them; quality or accreditation coordinator audits",
+    },
+]
+
+UNIVERSAL_FACTS_CHECKLIST = """Universal (non-NABH) facts included in this draft, and where each was verified. Check these first.
+
+SOURCE OF THE OE TEXT
+0. MOM.7 standard text and all five OEs were read directly from the official NABH SHCO Standards 3rd Edition PDF (August 2022), Chapter 3 Management of Medication, printed pages 79-80 (PDF page index 85-86). Page header quoted from the book: "Patients are monitored after medication administration." The PDF was downloaded on 2026-08-17 from the NABH website's Explore NABH Standards page. Levels: MOM.7.a Commitment, MOM.7.b Commitment, MOM.7.c Core, MOM.7.d Commitment, MOM.7.e Commitment.
+   THREE OEs CARRY THE ASTERISK -- MOM.7.a, MOM.7.c and MOM.7.d. The draft builds three deep blocks (step 1 for a; step 3 for c; step 4 for d). MOM.7.b and MOM.7.e are unasterisked and are correspondingly Tier 2. MOM.7.c is Core AND asterisked; Core is not a substitute for the asterisk when allocating depth.
+   MOM.7.a was among the 14 mismatches of the 2026-08-10 audit (asterisk on a single unwrapped line; doc_required flipped false to true). The 2026-08-17 asterisk_extract.py re-run confirms the asterisk on a (raw text ends with " *").
+   Verified three ways on 2026-08-17: scripts/asterisk_extract.py re-run against the freshly downloaded PDF (self-validation passed; output matched committed scripts/shco_oe_asterisks.json on all 408 entries), the MOM.7 pages read directly from the extracted page text, and the committed asterisk file.
+
+TIERING UNDER THE STANDING RULE
+1. Two-tier depth standing rule of 2026-08-10 applies. THREE OF FIVE OEs ARE TIER 1. Tier 1: MOM.7.a, MOM.7.c, MOM.7.d -- procedure steps 1, 3 and 4 carry the reasoning (why a signed administration box is not monitoring after administration, why capture is a route staff can use rather than a poster, why the time frame is hospital-defined and not a twenty-four-hour NABH mandate). Tier 2: MOM.7.b (step 2), MOM.7.e (step 5) -- requirement and method without extended rationale. Reviewer to note the shallower treatment of b and e is a DECISION UNDER THE STANDING RULE, not an omission.
+
+CROSS-REFERENCE AND OVERLAP CHECK
+2. Tier 1 cross-check (2026-08-17) of MOM.7.a/c/d against the approved HIC.1-HIC.6 masters and the AAC/COP drafts. Search terms: medication error, adverse drug, near miss, monitoring after, transfusion reaction, PEP, SSI, early warning.
+   MOM.6 -- CRITICAL DIVISION. Administration and documentation of the dose are MOM.6; this document owns AFTER -- monitoring, changing therapy, capturing/reporting NM/ME/ADR. Stated in Purpose, Scope and step 1. Flagged for the MOM.6 drafter to mirror.
+   HIC.5 -- surveillance of HAIs is not medication-error capture. A drug reaction is not an SSI. Stated in Scope and step 3.
+   HIC.4 -- PEP is occupational exposure, not MOM.7 ADR. Stated in Scope and step 3.
+   AAC.3.e -- early-warning may use the same vital signs; MOM.7.a is specifically post-medication monitoring (effect and harm of the drug). Stated in Scope and step 1.
+   COP.6 -- not automatic ICU admission. Stated in Scope and step 1.
+   PRE.4.b (undrafted) -- educating the patient about side effects is PRE; MOM.7 still captures the event. Stated in Scope and step 1.
+   COP.5.f -- transfusion reaction is COP.5, not MOM.7 ADR, even though the chapter intent includes blood among medications. Split stated in Scope, Policy statement and steps 1 and 3. Flagged for COP.5's existing MOM forward-ref to be read as: transfusion method stays COP.5; post-drug monitoring of ordinary medicines is this document.
+3. FORWARD REFERENCES: PRE.4.b education; IMS record; MOM.6 administration (sibling); MOM.8 for those three classes (sibling). Each is a deliberate boundary.
+4. T2 QUICK CHECK: MOM.7.b change of therapy vs MOM.3/4 prescribing and order-writing -- this step owns the decision to change based on monitoring; MOM.3/4 own how the new order is written. One-line flag. MOM.7.e CAPA is this document's from medication-event analysis; not HIC or CQI ownership of all CAPA in the hospital. Nothing added to the HIC reconciliation list.
+
+STATUTORY AND EXTERNAL FACTS
+5. Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules -- cited insofar as they govern adverse-event reporting obligations arising from the use of medicines. No section number. No numbered reporting clock imported as a NABH mandate.
+6. PvPI (chapter reference 22) is named in References and at step 4 as the national programme, not as an Act. Whether the hospital reports ADRs to it is [Hospital to define]. PvPI is NOT in P2.
+7. NDPS Act 1985 is NOT named in this document or in P2. Narcotics storage waits for MOM.8.
+8. NCCMERP About Medication Errors (chapter reference 1) -- used for the recognised meaning of medication error. Not imported as a mandated local form. Verified against the chapter reference as listed in the official PDF References (printed page 82, PDF page index 88).
+9. AHRQ Medication Errors and Adverse Drug Events primer (chapter reference 15) -- used to distinguish ME / ADE / ADR. Verified against the chapter reference as listed in the official PDF References (printed pages 82-83, PDF page index 88-89).
+10. WHO Medication without harm (chapter reference 18) -- harm-reduction framing; not a reporting form. Verified against the chapter reference as listed in the official PDF References (printed page 83, PDF page index 89).
+11. NO NUMBERS ARE STATED as requirements -- no monitoring-interval minutes, no 24-hour reporting mandate, no severity-score thresholds. Every such value is [Hospital to define]. The specified time frame in MOM.7.d is hospital-defined; this draft refuses to invent a 24-hour NABH mandate.
+12. Bio-Medical Waste Management Rules, 2016, Food Safety and Standards Act, 2006, and Clinical Establishments Act, 2010 are NOT named in P2. CEA is not defaulted from AAC.
+
+EDITORIAL POSITIONS TAKEN
+13. Step 1's rule that a signed administration record is not monitoring after administration, and that a note saying only "stable" is not this OE, are editorial positions required by the MOM.6 / MOM.7 split.
+14. Steps 1 and 3's refusal to capture transfusion reactions, HAIs or occupational exposures as MOM.7 events are editorial positions required by the overlap brief (chapter intent includes blood; COP.5 already owns reactions).
+15. Step 4's refusal to print a 24-hour clock is an editorial position required by the overlap brief.
+
+DISCLAIMER BLOCK -- STATUTE-MATCHED UNDER THE 2026-08-17 STANDING RULE
+16. Paragraphs 1, 3 and 4 are the shared HIC.3-6 block, hash-checked at build time. Paragraph 2 names the Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules insofar as they govern adverse-event reporting obligations arising from the use of medicines -- the statute this document's References actually rely on. It does NOT name NDPS, PvPI as an Act, BMW Rules 2016, FSS Act 2006, or CEA 2010. The HIC wholesale inherit is refused by the build.
+
+DELIBERATELY NOT INCLUDED
+- Administration of the dose, labelling, identification, verification, documentation of administration -- MOM.6.
+- Transfusion reaction capture and analysis -- COP.5.f.
+- HAI surveillance -- HIC.5.
+- Occupational PEP -- HIC.4.
+- Early-warning system and ICU admission criteria -- AAC.3.e / COP.6.
+- Patient education about side effects -- PRE.4.b.
+- NDPS cupboard, register, destruction -- MOM.8.
+- A numbered reporting clock presented as a NABH mandate.
+- The five optional sections are left unset, matching HIC.1-6 and AAC.1.
+
+HOSPITAL-SPECIFIC VALUES LEFT AS [Hospital to define] -- 15 fillable blanks in the rendered document: 2 in the exact form "[Hospital to define]" (one in Abbreviations, one inside the shared Disclaimer block) and 13 in the guidance-bearing form "[Hospital to define — what to state]". A search for the exact string finds 2 of 15; a search for "Hospital to define" without brackets finds all 15, and that is the search a hospital should be told to run. The figure is produced by policy_placeholder_audit.py across every rendered field in both forms, which also asserts that no nested placeholder exists.
+
+The values the hospital must supply: who monitors after medication administration, what is observed, where it is written, and for how long after a dose; where the written monitoring guidance is held; who may change a medication based on that monitoring and how the change is recorded; operational definitions of near miss, medication error and adverse drug reaction; how those events are captured, who may complete the capture, and where captures are held; the specified reporting time frame and to whom; the specified analysis time frame, who analyses, and at what forum; whether and how ADRs are reported to PvPI; how CAPA from analysis is recorded, assigned and closed; the named lead; the audit interval; the review interval; the intranet or folder location; and any additional local abbreviation."""
+
+SQL_HEADER = """-- Source: NABH SHCO Standards 3rd Edition (August 2022), Chapter 3, printed pages 79-80
+-- (PDF page index 85-86). Levels: a Commitment, b Commitment, c Core, d Commitment,
+-- e Commitment.
+-- THREE OEs CARRY THE ASTERISK -- MOM.7.a, MOM.7.c, MOM.7.d.
+-- UNAPPROVED DRAFT. Do not run this insert until the owner confirms the write.
+"""
+
+if __name__ == "__main__":
+    emit_and_verify(
+        standard_code=STANDARD_CODE,
+        chapter=CHAPTER,
+        oe_codes=OE_CODES,
+        policy_title=POLICY_TITLE,
+        purpose=PURPOSE,
+        scope=SCOPE,
+        policy_statement=POLICY_STATEMENT,
+        procedure_steps=PROCEDURE_STEPS,
+        responsibility=RESPONSIBILITY,
+        references_text=REFERENCES,
+        distribution=DISTRIBUTION,
+        abbreviations=ABBREVIATIONS,
+        disclaimer=DISCLAIMER,
+        oe_mapping=OE_MAPPING,
+        universal_facts_checklist=UNIVERSAL_FACTS_CHECKLIST,
+        version=VERSION,
+        revision_history=REVISION_HISTORY,
+        tier1_oes=TIER1_OES,
+        statute_clause=STATUTE_CLAUSE,
+        sql_header=SQL_HEADER,
+        json_name="mom7_draft.json",
+        sql_name="mom7_insert.sql",
+    )
