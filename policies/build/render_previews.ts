@@ -96,7 +96,10 @@ interface Draft {
 
 const sub = (t: string) => t.replaceAll("{{HOSPITAL_NAME}}", HOSPITAL);
 
-const EXPECTED = ["AAC.1", "HIC.1", "HIC.2", "HIC.3", "HIC.4", "HIC.5", "HIC.6"];
+const EXPECTED = [
+  "AAC.1", "AAC.2", "AAC.3", "AAC.4", "AAC.5", "AAC.6", "AAC.7", "AAC.8",
+  "HIC.1", "HIC.2", "HIC.3", "HIC.4", "HIC.5", "HIC.6",
+];
 
 async function main() {
   await Deno.mkdir(OUT, { recursive: true });
