@@ -1,0 +1,202 @@
+-- PRE.2 master policy -- UNAPPROVED DRAFT for review.
+-- Do NOT run this insert against Supabase until the owner has reviewed the draft
+-- and explicitly confirmed the write. Do NOT set status = 'approved' here.
+--
+-- Source: NABH SHCO Standards 3rd Edition (August 2022), Chapter 4, printed pages 86-87
+-- (PDF page indices 92-93). Sixteen OEs PRE.2.a-p. NO OE CARRIES THE ASTERISK.
+-- Whole standard is Tier 2. Clustered into ten procedure steps.
+-- UNAPPROVED DRAFT. Do not run this insert until the owner confirms the write.
+
+
+insert into public.shco_policy_masters (
+  standard_code,
+  chapter,
+  oe_codes,
+  policy_title,
+  purpose,
+  scope,
+  policy_statement,
+  procedure_steps,
+  responsibility,
+  references_text,
+  distribution,
+  abbreviations,
+  disclaimer,
+  oe_mapping,
+  universal_facts_checklist,
+  version,
+  revision_history,
+  status
+) values (
+  'PRE.2',
+  'PRE',
+  array['PRE.2.a', 'PRE.2.b', 'PRE.2.c', 'PRE.2.d', 'PRE.2.e', 'PRE.2.f', 'PRE.2.g', 'PRE.2.h', 'PRE.2.i', 'PRE.2.j', 'PRE.2.k', 'PRE.2.l', 'PRE.2.m', 'PRE.2.n', 'PRE.2.o', 'PRE.2.p'],
+  $q$Beliefs, Values and Involvement in Decision-Making$q$,
+  $q$This document sets out the content of patient and family rights at {{HOSPITAL_NAME}}: that they include respecting values, beliefs, special preferences, cultural needs and requests for spiritual needs; personal dignity and privacy; protection from neglect or abuse; confidentiality of patient information; refusal of treatment; seeking an additional opinion; informed consent before named high-risk acts; the right to complain; information on expected cost; access to clinical records; information on the treating doctor, care plan, progress and healthcare needs; determining what information is provided to self and family; explanation of proposed care including risks, alternatives and benefits; explanation of expected results and complications; preparation and modification of the care plan in consultation with the patient and/or family; and multidisciplinary counselling when appropriate.
+
+The chapter intent is that patient and family rights support individual beliefs and values and involve the patient and family in decision-making. A list that exists only so PRE.1 can display it, or a care plan written without the patient, is not that intent.
+
+This document owns what the rights include and how they are exercised in care. PRE.1 owns that a documented set exists, is displayed, is made known, is promoted and is protected. PRE.3 owns consent method. PRE.5 owns cost information. PRE.6 owns complaint redressal. Those methods are not rewritten here.$q$,
+  $q$This policy applies to every patient and family at {{HOSPITAL_NAME}} and to every staff member who must respect the rights listed here. It binds clinicians, nurses, registration and anyone who handles patient information.
+
+It covers the sixteen rights and involvement elements PRE.2.a-p name. It does not cover how the set is displayed (PRE.1), how consent is obtained (PRE.3), how expected costs are explained (PRE.5), or how complaints are redressed (PRE.6).
+
+Boundaries with other policies of {{HOSPITAL_NAME}}:
+
+- PRE.1 owns documentation, display, awareness, promotion, protection, violation report and leadership CAPA on violations. This document owns the content of the list PRE.1 displays.
+- PRE.2.g is the right that informed consent is obtained before transfusion, anaesthesia, surgery, research and other invasive or high-risk treatment. PRE.3 owns the method. COP.5, COP.9, COP.10 and COP.11 own that the relevant consent happened before those acts and already forwarded method to PRE. This document lists the right; it does not write the form.
+- PRE.2.e refusal of treatment is the right. PRE.3 records that consent was not given.
+- PRE.2.h is the right to complain and to information on how to voice a complaint. PRE.6 owns the mechanism.
+- PRE.2.i is the right to information on expected cost. PRE.5 owns the pricing policy, tariff and explanation.
+- PRE.2.j access to clinical records is the right during care. The medical record as a record-keeping act is IMS (not yet drafted). AAC.8 owns the discharge summary the patient takes away. This document does not write the record policy or the discharge paper.
+- PRE.2.o care plan prepared and modified in consultation is involvement in the plan. AAC.3 owns assessment and the care plan as a clinical document. PRE.5.d owns the financial implications of a plan change. This document owns that the patient and/or family were consulted.
+- PRE.2.p multidisciplinary counselling when appropriate. COP.6.e owns that ICU family counselling happens periodically where ICU exists. This document owns the general right and method outside that ICU periodicity.
+- PRE.2.d confidentiality as a patient right. IMS owns how the record is kept confidential as a file. This document owns the right.
+- Capacity and who may consent when the patient cannot are PRE.3.c. The Mental Healthcare Act, 2017 is not applied as a blanket to this rights list.
+- Unused research or unused ICU is a recorded absence against AAC.1, not a copied SOP in this list.$q$,
+  $q${{HOSPITAL_NAME}} includes in patient and family rights the elements PRE.2.a-p name, and exercises them in the course of care.
+
+{{HOSPITAL_NAME}} involves the patient and/or family in decision-making, including the care plan and multidisciplinary counselling when appropriate.
+
+{{HOSPITAL_NAME}} does not treat the PRE.1 display board as a substitute for these rights being exercised, and does not rewrite PRE.3, PRE.5, PRE.6, COP.5/9/10/11, AAC.3 or AAC.8 inside this list.$q$,
+  array[
+    $s$1. Values, beliefs, special preferences, cultural and spiritual needs
+
+Patients and family rights include respecting values and beliefs, any special preferences, cultural needs, and responding to requests for spiritual needs.
+
+How those are identified and responded to in the course of care is [Hospital to define — how values, beliefs, special preferences, cultural needs and spiritual-need requests are identified and responded to]. A copied dietary-preference form is not by itself this OE. This document does not print a religion table as a NABH mandate. WHO Human rights and health (chapter reference 9) and Olejarczyk and Young (2021) — chapter reference 15 — are frameworks for rights content, not pasted charters.$s$,
+    $s$2. Dignity and privacy; protection from neglect or abuse; confidentiality of patient information
+
+Patient and family rights include respect for personal dignity and privacy during examination, procedures and treatment; protection from neglect or abuse; and treating patient information as confidential.
+
+How dignity and privacy are protected during examination, procedures and treatment, how neglect or abuse is prevented and reported, and how confidentiality of patient information is kept as a right, are [Hospital to define — how dignity and privacy during examination, procedures and treatment are protected; how protection from neglect or abuse is implemented; and how patient information is treated as confidential as a right]. Screening without a screen, discussion of a diagnosis in a corridor, and a record left open at a public desk, are defects. Confidentiality as a record-keeping system remains IMS; this step is the right. A suspicion of neglect or abuse is also a PRE.1.d matter when it is a rights violation, and may be a clinical safeguarding act this hospital has defined; this document does not invent a police SOP.$s$,
+    $s$3. Refusal of treatment and the right to seek an additional opinion
+
+Patient and family rights include the refusal of treatment and a right to seek an additional opinion regarding clinical care.
+
+How refusal is received and recorded, and how an additional opinion is facilitated (including what this hospital can and cannot arrange), are [Hospital to define — how refusal of treatment is received and recorded, and how the right to seek an additional opinion is facilitated]. PRE.3 records that consent was not given; this step is the right to refuse after information. This document does not require this hospital to pay for an outside opinion, and does not print a named second-hospital list as a NABH mandate.$s$,
+    $s$4. Right that informed consent is obtained before named high-risk acts
+
+Patient and family rights include informed consent before the transfusion of blood and blood components, anaesthesia, surgery, initiation of any research protocol and any other invasive/high-risk procedures/treatment.
+
+This step is a pointer. The method is the informed-consent policy of {{HOSPITAL_NAME}} (PRE.3). That the relevant consent happened before transfusion, sedation, anaesthesia or surgery remains COP.5, COP.9, COP.10 and COP.11. How this right is made known as a right, without rewriting those methods, is [Hospital to define — how the right to informed consent before transfusion, anaesthesia, surgery, research and other invasive or high-risk treatment is made known as a right]. A class the service directory does not provide is a recorded absence against AAC.1, not a copied consent right-SOP.$s$,
+    $s$5. Right to complain and to information on expected cost
+
+Patient and family rights include a right to complain and information on how to voice a complaint, and information on the expected cost of the treatment.
+
+This step is a pointer. Complaint mechanism and awareness of the procedure are PRE.6. Pricing policy, tariff and expected-cost explanation are PRE.5. How these two rights are made known as rights, without rewriting those methods, is [Hospital to define — how the rights to complain (and how to voice a complaint) and to information on expected cost are made known as rights].$s$,
+    $s$6. Access to clinical records; determining what information is provided to self and family
+
+Patient and family rights include access to their clinical records, and determining what information regarding their care would be provided to self and family.
+
+How access to clinical records is given during care, and how the patient determines what information is provided to self and to family, are [Hospital to define — how access to clinical records is given, and how the patient determines what information regarding their care is provided to self and family]. The discharge summary the patient takes away remains AAC.8. The record as a file remains IMS. A relative who demands the file against the patient's determination does not meet PRE.2.l.$s$,
+    $s$7. Information on the treating doctor, care plan, progress and healthcare needs
+
+Patient and family rights include information on the name of the treating doctor, care plan, progress and information on their health care needs.
+
+How that information is given and recorded is [Hospital to define — how patients and families are informed of the treating doctor's name, the care plan, progress and healthcare needs]. Ongoing education about healthcare needs as a teaching method remains PRE.4. This step is the right to be told who is treating them and how they are doing.$s$,
+    $s$8. Explanation of proposed care, expected results and complications
+
+The patient and/or family members are explained about the proposed care, including the risks, alternatives and benefits, and about the expected results and complications.
+
+How those explanations are given in the course of care is [Hospital to define — how proposed care (risks, alternatives, benefits) and expected results and complications are explained]. The consent conversation that must include procedure, risks, benefits, alternatives and who will perform remains PRE.3.b. Disease-process education remains PRE.4.d. This step is the right to those explanations as part of decision-making, including when a formal consent form is not the vehicle. They may use the same language; they are not only the consent form.$s$,
+    $s$9. Care plan in consultation; multidisciplinary counselling when appropriate
+
+The care plan is prepared and modified in consultation with the patient and/or family members. The patient and/or family members are provided multidisciplinary counselling when appropriate.
+
+How the patient and/or family are consulted when the plan is prepared or modified, and when multidisciplinary counselling is provided and by whom, are [Hospital to define — how the care plan is prepared and modified in consultation with the patient and/or family, and when and how multidisciplinary counselling is provided]. AAC.3 owns the care plan as a clinical document. PRE.5.d owns the financial implications of a change. COP.6.e owns periodic ICU family counselling where ICU exists; this step is the general method, including outside ICU. 'When appropriate' is this hospital's description, not a copied specialty list. Unused ICU is a recorded absence against AAC.1.$s$,
+    $s$10. Records, review and the order of operations
+
+The documented rights set matching PRE.1's display, and the methods at steps 1-9, are retrievable.
+
+The quality or accreditation coordinator audits a sample of these records at [Hospital to define — the audit interval for beliefs-values-and-decision-making records] for: the listed rights being exercised rather than only displayed; pointers to PRE.3, PRE.5 and PRE.6 not rewritten as those methods; care plan consultation; no MHCA process applied as a blanket to this list; and no unused-research or unused-ICU SOP copied against AAC.1.
+
+This policy is reviewed at [Hospital to define — the review interval for this policy], and sooner when a right was displayed but not exercised, or when PRE.1, PRE.3, PRE.4, PRE.5, PRE.6, AAC.3, AAC.8 or COP.5/9/10/11 that this document hands work to are revised.$s$
+  ],
+  $q$The head of the institution is accountable for {{HOSPITAL_NAME}} exercising the rights PRE.2.a-p name, not only displaying them.
+
+The named lead for beliefs, values and decision-making keeps the content of the rights set aligned with PRE.1's documented set and holds the methods at steps 1-9. The named lead is [Hospital to define — the named lead for beliefs, values and involvement in decision-making].
+
+Every clinician and nurse respects dignity, privacy, confidentiality, refusal, consultation and the pointers to consent, costs and complaints. PRE.3, PRE.5 and PRE.6 remain the owners of those methods.
+
+The quality or accreditation coordinator audits the records at step 10 and reports findings to the head of the institution.
+
+All staff are expected to treat a displayed right that is not exercised as a defect, and to report it as a PRE.1.d violation where it is one.$q$,
+  $q$- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Patient Rights and Education chapter, standard PRE.2.
+- Human rights and health (2017). World Health Organization — chapter reference 9; used as a framework for rights content; not pasted as the charter.
+- Olejarczyk, J. P., & Young, M. (2021). Patient Rights and Ethics — chapter reference 15; used as a framework; not pasted as a protocol.
+- Internal documents of {{HOSPITAL_NAME}}: the documented rights set (with PRE.1); the methods at steps 1-9; the informed-consent, expected-costs, feedback-and-complaints, education, assessment, discharge, transfusion, sedation, anaesthesia, procedures, ICU and information-management policies.$q$,
+  $q$Controlled master copy: office of the head of the institution, {{HOSPITAL_NAME}}, with the quality or accreditation coordinator.
+
+Copies issued to: registration; out-patient; emergency; every in-patient ward; ICU where it exists; nursing administration; and the named lead.
+
+The current version is available to all staff at [Hospital to define — intranet location or nursing station folder]. The documented rights set — the working document this policy shares with PRE.1 — is held at points of entry and on the wards.
+
+Superseded versions are withdrawn from all points of use on issue of a revision, and one dated copy of each is retained by the quality or accreditation coordinator.$q$,
+  $q$Abbreviations already defined in the HIC.1 to HIC.6 master policies are not repeated here. A reader using this document on its own should refer to those policies for the shared glossary, including NABH, SHCO, OE, WHO, SOP and PPE.
+
+The following abbreviations are used in this document and are not defined in HIC.1 to HIC.6:
+
+IMS — Information Management System (NABH chapter; not yet drafted)
+ICU — intensive care unit
+
+Any additional abbreviation used locally within {{HOSPITAL_NAME}} is [Hospital to define] and is added to this list at the next revision.$q$,
+  $q$This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.
+
+The requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition rather than duties under a named Act of Parliament. In particular those arising under no named Act of Parliament; the duties in this document are accreditation requirements of the NABH SHCO 3rd Edition are written here as accreditation method, not as a copied statute. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.
+
+The clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.
+
+This document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.$q$,
+  $q$[{"oe_code": "PRE.2.a", "requirement": "Patients and family rights include respecting values and beliefs, any special preferences, cultural needs, and responding to requests for spiritual needs.", "steps": "Steps 1, 10", "evidence": "The written method for identifying and responding to values, beliefs, special preferences, cultural needs and spiritual-need requests; sample records of a response rather than a copied religion table; the audit sample at step 10", "responsible": "Named lead holds the method; staff in the course of care apply it; quality or accreditation coordinator audits"}, {"oe_code": "PRE.2.b", "requirement": "Patient and family rights include respect for personal dignity and privacy during examination, procedures and treatment.", "steps": "Steps 2, 10", "evidence": "The written method for dignity and privacy during examination, procedures and treatment; sample practice or incident files showing a screen or equivalent rather than corridor discussion; the audit sample at step 10", "responsible": "Staff who examine or treat apply the method; quality or accreditation coordinator audits"}, {"oe_code": "PRE.2.c", "requirement": "Patient and family rights include protection from neglect or abuse.", "steps": "Steps 2, 10", "evidence": "The written method for protection from neglect or abuse and how a suspicion is reported; the recorded split that a rights-violation suspicion also enters PRE.1.d; the audit sample at step 10", "responsible": "All staff protect; PRE.1.d owns the violation report; quality or accreditation coordinator audits"}, {"oe_code": "PRE.2.d", "requirement": "Patient and family rights include treating patient information as confidential.", "steps": "Steps 2, 10", "evidence": "The written method for confidentiality as a patient right; the recorded split that IMS owns the record as a file; sample defects (open record at a public desk) treated as violations; the audit sample at step 10", "responsible": "All staff treat information as confidential; IMS owns the file; quality or accreditation coordinator audits"}, {"oe_code": "PRE.2.e", "requirement": "Patient and family rights include the refusal of treatment.", "steps": "Steps 3, 10", "evidence": "The written method for receiving and recording refusal; the recorded split that PRE.3 records consent not given; sample refusals; the audit sample at step 10", "responsible": "Clinicians receive refusal; PRE.3 owns the consent record; quality or accreditation coordinator audits"}, {"oe_code": "PRE.2.f", "requirement": "Patient and family rights include a right to seek an additional opinion regarding clinical care.", "steps": "Steps 3, 10", "evidence": "The written method for facilitating an additional opinion, including what this hospital can and cannot arrange; sample records; the audit sample at step 10", "responsible": "Treating doctor facilitates; named lead holds the method; quality or accreditation coordinator audits"}, {"oe_code": "PRE.2.g", "requirement": "Patient and family rights include informed consent before the transfusion of blood and blood components, anaesthesia, surgery, initiation of any research protocol and any other invasive/high-risk procedures/treatment.", "steps": "Steps 4, 10", "evidence": "The recorded pointer that PRE.3 owns consent method and COP.5/9/10/11 own that the relevant consent happened before those acts; the method for making this right known as a right; a recorded absence against AAC.1 for a class not provided; the audit sample at step 10 of the pointer not rewritten as a consent SOP", "responsible": "PRE.3 owns method; COP.5/9/10/11 own that consent happened; this document lists the right; quality or accreditation coordinator audits"}, {"oe_code": "PRE.2.h", "requirement": "Patient and family rights include a right to complain and information on how to voice a complaint.", "steps": "Steps 5, 10", "evidence": "The recorded pointer that PRE.6 owns the complaint mechanism and awareness of the procedure; the method for making this right known as a right; the audit sample at step 10", "responsible": "PRE.6 owns the mechanism; this document lists the right; quality or accreditation coordinator audits"}, {"oe_code": "PRE.2.i", "requirement": "Patient and family rights include information on the expected cost of the treatment.", "steps": "Steps 5, 10", "evidence": "The recorded pointer that PRE.5 owns pricing policy, tariff and explanation; the method for making this right known as a right; the audit sample at step 10", "responsible": "PRE.5 owns the method; this document lists the right; quality or accreditation coordinator audits"}, {"oe_code": "PRE.2.j", "requirement": "Patient and family rights include access to their clinical records.", "steps": "Steps 6, 10", "evidence": "The written method for access to clinical records during care; the recorded split that AAC.8 owns the discharge summary and IMS owns the file; the audit sample at step 10", "responsible": "Named staff give access as a right; IMS/AAC.8 own the file and the summary; quality or accreditation coordinator audits"}, {"oe_code": "PRE.2.k", "requirement": "Patient and family rights include information on the name of the treating doctor, care plan, progress and information on their health care needs.", "steps": "Steps 7, 10", "evidence": "The written method for telling the treating doctor's name, care plan, progress and healthcare needs; the recorded split that PRE.4 owns teaching method; sample records; the audit sample at step 10", "responsible": "Treating team informs; PRE.4 owns education method; quality or accreditation coordinator audits"}, {"oe_code": "PRE.2.l", "requirement": "Patient rights include determining what information regarding their care would be provided to self and family.", "steps": "Steps 6, 10", "evidence": "The written method for the patient determining what information is provided to self and family; sample records showing a relative's demand against that determination was refused; the audit sample at step 10", "responsible": "Staff who disclose information apply the patient's determination; quality or accreditation coordinator audits"}, {"oe_code": "PRE.2.m", "requirement": "The patient and/or family members are explained about the proposed care, including the risks, alternatives and benefits.", "steps": "Steps 8, 10", "evidence": "The written method for explaining proposed care including risks, alternatives and benefits as a decision-making right; the recorded split that PRE.3.b is the consent conversation and PRE.4.d is disease-process education; sample explanations; the audit sample at step 10", "responsible": "Clinicians explain proposed care; PRE.3/PRE.4 own consent conversation and ongoing education; quality or accreditation coordinator audits"}, {"oe_code": "PRE.2.n", "requirement": "The patient and/or family members are explained about the expected results and complications.", "steps": "Steps 8, 10", "evidence": "The written method for explaining expected results and complications; the same PRE.3.b/PRE.4.d split as PRE.2.m; sample explanations; the audit sample at step 10", "responsible": "Clinicians explain expected results and complications; quality or accreditation coordinator audits"}, {"oe_code": "PRE.2.o", "requirement": "The care plan is prepared and modified in consultation with the patient and/or family members.", "steps": "Steps 9, 10", "evidence": "The written method for consulting the patient and/or family when the plan is prepared or modified; the recorded split that AAC.3 owns the clinical care plan and PRE.5.d owns financial implications of a change; sample plans showing consultation; the audit sample at step 10", "responsible": "Treating team consults; AAC.3 owns the plan document; PRE.5.d owns the money of a change; quality or accreditation coordinator audits"}, {"oe_code": "PRE.2.p", "requirement": "The patient and/or family members are provided multidisciplinary counselling when appropriate.", "steps": "Steps 9, 10", "evidence": "The written description of when multidisciplinary counselling is provided and by whom; the recorded split that COP.6.e owns periodic ICU family counselling where ICU exists; a recorded absence against AAC.1 if ICU is not provided; the audit sample at step 10", "responsible": "Named counsellors provide when appropriate; COP.6 owns ICU periodicity; quality or accreditation coordinator audits"}]$q$::jsonb,
+  $q$Universal (non-NABH) facts included in this draft, and where each was verified. Check these first.
+
+SOURCE OF THE OE TEXT
+0. PRE.2 standard text and OEs PRE.2.a-e were read directly from the official NABH SHCO Standards 3rd Edition PDF (August 2022), Chapter 4, printed page 86 (PDF page index 92); PRE.2.f-p from printed page 87 (PDF page index 93). Header: "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes." Official PRE.2.k uses "health care needs" (two words). Official PRE.2.p has no terminal period. PDF md5 39e3bc86d73d651b9cfef283bbf018a9.
+   NO OE CARRIES THE ASTERISK. Whole standard is Tier 2. Sixteen OEs clustered into ten steps. Verified against asterisk_extract.py and the PRE.2 pages.
+
+TIERING UNDER THE STANDING RULE
+1. Two-tier depth standing rule of 2026-08-10 applies. If a standard carries no asterisked OE at all, the whole standard is Tier 2. PRE.2 carries no asterisked OE. TIER1_OES = []. Every OE is Tier 2. Reviewer to note the shallower treatment of the WHOLE STANDARD is a DECISION UNDER THE STANDING RULE, not an omission. Clustering a-p into ten steps is so the draft does not grow sixteen deep blocks.
+
+CROSS-REFERENCE AND OVERLAP CHECK
+2. T2 quick check (2026-08-17), as the standing rule requires for unasterisked OEs — one line each, flagged into master-policy-todos.md in the same pass.
+   PRE.1 -- display/protection vs this content. Flagged.
+   PRE.2.g vs PRE.3 and COP.5/9/10/11 -- pointer; handoff accepted. Flagged.
+   PRE.2.e vs PRE.3 refusal recording. Flagged.
+   PRE.2.h vs PRE.6. Flagged.
+   PRE.2.i vs PRE.5. Flagged.
+   PRE.2.j vs IMS and AAC.8 discharge summary. Flagged.
+   PRE.2.o vs AAC.3 and PRE.5.d. Flagged.
+   PRE.2.p vs COP.6.e ICU counselling. Flagged.
+   PRE.2.d vs IMS confidentiality as a file. Flagged.
+   PRE.2.m/n vs PRE.3.b and PRE.4.d. Flagged.
+3. FORWARD REFERENCES: IMS; ROM/FMS only via PRE.5 pointer.
+4. Nothing added to the HIC reconciliation list.
+
+STATUTORY AND EXTERNAL FACTS
+5. No named Act of Parliament is a numbered PRE chapter reference for this standard's subject. P2 is accreditation-only. Owner's suggested CPA 2019 / CEA 2010 / MHCA 2017 mapping is refused for this standard: CPA is PRE.1/PRE.5/PRE.6 where those documents actually use a consumer remedy; CEA is PRE.5 display-of-rates if the State adopted; MHCA is PRE.3.c when that Act's definition is met. Putting them on PRE.2 would be the AAC.1 defaulted-statute bug.
+6. WHO ch 9 and Olejarczyk and Young 2021 ch 15 -- frameworks, not pasted.
+7. NO NUMBERS ARE STATED as requirements. No religion table or second-hospital list as a NABH mandate.
+
+EDITORIAL POSITIONS TAKEN
+8. Clustering sixteen T2 OEs into ten steps, with g/h/i as pointers, is an editorial position required by the two-tier rule.
+9. Refusal to name MHCA on PRE.2 is an editorial position required by the owner's instruction to cite only what is genuinely in scope.
+
+DISCLAIMER BLOCK -- STATUTE-MATCHED UNDER THE 2026-08-17 STANDING RULE
+10. Paragraphs 1, 3 and 4 are the shared block, hash-checked at build time. Paragraph 2 uses make_disclaimer_accreditation_only(): no named Act of Parliament; duties are accreditation requirements of the NABH SHCO 3rd Edition. It does NOT import CPA 2019, CEA 2010 or MHCA 2017 as a checklist. BMW/FSS stay out of P2. The AAC.1 defaulted-statute bug is refused.
+
+DELIBERATELY NOT INCLUDED
+- Display, promotion, violation report -- PRE.1.
+- Consent method -- PRE.3. That consent happened -- COP.5/9/10/11.
+- Cost method -- PRE.5. Complaint method -- PRE.6. Education method -- PRE.4.
+- Care-plan document -- AAC.3. Discharge summary -- AAC.8. ICU counselling periodicity -- COP.6. Record file -- IMS.
+- MHCA 2017, CPA 2019, CEA 2010 as a checklist on this standard.
+- The five optional sections are left unset.
+
+HOSPITAL-SPECIFIC VALUES LEFT AS [Hospital to define] -- 15 fillable blanks in the rendered document: 2 in the exact form "[Hospital to define]" (one in Abbreviations, one inside the shared Disclaimer block) and 13 in the guidance-bearing form "[Hospital to define — what to state]". A search for the exact string finds 2 of 15; a search for "Hospital to define" without brackets finds all 15, and that is the search a hospital should be told to run. The figure is produced by policy_placeholder_audit.py across every rendered field in both forms, which also asserts that no nested placeholder exists.
+
+The values the hospital must supply: values/beliefs/spiritual method; dignity/privacy/abuse/confidentiality method; refusal and additional-opinion method; how the consent right is made known; how complaint and cost rights are made known; records access and who may receive information; treating-doctor/care-plan/progress information; proposed-care and expected-results explanation; care-plan consultation and multidisciplinary counselling; the named lead; the audit interval; the review interval; the intranet or folder location; and any additional local abbreviation.$q$,
+  '1.0',
+  $q$[{"version": "1.0", "date": "17-08-2026", "description": "Initial release."}]$q$::jsonb,
+  'draft'
+);

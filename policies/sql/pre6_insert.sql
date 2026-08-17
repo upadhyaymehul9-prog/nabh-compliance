@@ -1,0 +1,187 @@
+-- PRE.6 master policy -- UNAPPROVED DRAFT for review.
+-- Do NOT run this insert against Supabase until the owner has reviewed the draft
+-- and explicitly confirmed the write. Do NOT set status = 'approved' here.
+--
+-- Source: NABH SHCO Standards 3rd Edition (August 2022), Chapter 4, printed page 89
+-- (PDF page index 95). Levels: a Commitment, b Excellence, c Core, d Achievement.
+-- ONE OE CARRIES THE ASTERISK -- PRE.6.c. Subject confirmed from the PDF:
+-- feedback including satisfaction, patient experience, complaint redressal
+-- and awareness of the procedure, analysis within a defined time frame + CAPA.
+-- UNAPPROVED DRAFT. Do not run this insert until the owner confirms the write.
+
+
+insert into public.shco_policy_masters (
+  standard_code,
+  chapter,
+  oe_codes,
+  policy_title,
+  purpose,
+  scope,
+  policy_statement,
+  procedure_steps,
+  responsibility,
+  references_text,
+  distribution,
+  abbreviations,
+  disclaimer,
+  oe_mapping,
+  universal_facts_checklist,
+  version,
+  revision_history,
+  status
+) values (
+  'PRE.6',
+  'PRE',
+  array['PRE.6.a', 'PRE.6.b', 'PRE.6.c', 'PRE.6.d'],
+  $q$Patient Feedback and Complaint Redressal$q$,
+  $q$This document sets out how {{HOSPITAL_NAME}} captures feedback from patients, including patient satisfaction; how it captures the patient experience; how it redresses patient complaints as per a defined mechanism and makes patients and families aware of the procedure for giving feedback and lodging complaints; and how feedback and complaints are reviewed and analysed within a defined time frame, with corrective and/or preventive action where appropriate.
+
+The chapter intent is that patients are educated about the mechanisms available for addressing grievances. A suggestion box that is never opened, a complaint that can be lodged only with the person complained of, or a satisfaction score that never produces action, is not that intent.
+
+This document is feedback and complaint redressal. A complaint that is also a rights violation is received here and is also a PRE.1.d report; PRE.1.e owns leadership review of violations. This document does not replace that review.$q$,
+  $q$This policy applies to every point at which a patient or family at {{HOSPITAL_NAME}} can give feedback or lodge a complaint: out-patient, emergency, in-patient, day-care, and after discharge insofar as this hospital accepts post-discharge feedback. It binds the staff who collect feedback, who receive complaints, who redress them, who make patients aware of the procedure, and who review and analyse within the defined time frame.
+
+It covers: a mechanism to capture feedback including patient satisfaction; a mechanism to capture the patient experience; redressal of complaints as per the defined mechanism and making patients and families aware of the procedure for feedback and complaints; and review and analysis within a defined time frame with corrective and/or preventive action where appropriate.
+
+Boundaries with other policies of {{HOSPITAL_NAME}}:
+
+- The right to complain and information on how to voice a complaint is listed under PRE.2.h. This document owns the mechanism. PRE.2 does not write the complaint form.
+- Promotion of that right is PRE.1.b. Display and awareness of rights at entry is PRE.1.a. This document owns awareness of the feedback-and-complaint procedure (PRE.6.c), which may sit beside rights awareness but is not the rights charter.
+- A complaint that alleges a violation of patient or family rights is received under this document and is also a PRE.1.d report. PRE.1.e owns monitoring, analysis and CAPA by top leadership of violations. This document analyses the complaint as a complaint. The two records must both exist when the subject is a rights violation; neither replaces the other. The report route under PRE.1.d must not be only to the alleged actor; the complaint route here must not be only to that person either.
+- Expected-cost disputes are complaints under this document; the tariff and the explanation remain PRE.5.
+- Clinical incident, near-miss, medication error and ADR reporting remain MOM.7 and the relevant clinical policies. A family complaint about a medication event is redressed here; the event is still captured under MOM.7.
+- Discharge process is AAC.8. A complaint about discharge is redressed here; AAC.8 owns the summary.
+- ROM/FMS billing (not yet drafted) may own the accounts adjustment. This document owns that the complaint was received and redressed as a patient complaint.
+- This document does not copy District Commission, State Commission or National Commission procedure under the Consumer Protection Act, 2019. A patient who chooses a statutory consumer remedy is not blocked by this hospital mechanism, and this hospital mechanism is not that Commission.$q$,
+  $q${{HOSPITAL_NAME}} has a mechanism to capture feedback from patients, which includes patient satisfaction.
+
+{{HOSPITAL_NAME}} has a mechanism to capture the patient experience.
+
+{{HOSPITAL_NAME}} redresses patient complaints as per the defined mechanism. Patients and/or family members are made aware of the procedure for giving feedback and/or lodging complaints.
+
+{{HOSPITAL_NAME}} reviews and/or analyses feedback and complaints within a defined time frame and takes corrective and/or preventive action based on the analysis where appropriate.
+
+{{HOSPITAL_NAME}} does not treat an unopened box, or a complaint that can be lodged only with the person complained of, as that mechanism.$q$,
+  array[
+    $s$1. Feedback including patient satisfaction
+
+The organisation has a mechanism to capture feedback from patients, which includes patient satisfaction.
+
+How feedback is captured, how satisfaction is included (for example a form, a conversation, a post-discharge contact), who collects it, and how it is recorded, are [Hospital to define — the mechanism to capture patient feedback including patient satisfaction]. A score without a way to say what went wrong is incomplete satisfaction capture. This step is not the complaint file; a dissatisfied comment that asks for redressal is also a complaint at step 3.$s$,
+    $s$2. Patient experience
+
+The organisation has a mechanism to capture the patient experience.
+
+How experience is captured as distinct from a satisfaction score — what is asked, when, and how it is recorded — is [Hospital to define — the mechanism to capture the patient experience as distinct from a satisfaction score]. Experience is what happened to this patient, not only whether they would recommend the hospital. This document does not print a named experience survey as a NABH mandate.$s$,
+    $s$3. Complaint redressal and awareness of the procedure
+
+The organisation redresses patient complaints as per the defined mechanism. Patient and/or family members are made aware of the procedure for giving feedback and/or lodging complaints. This step is the documented-evidence anchor of a Core requirement the standard asterisks. An assessor will ask how a complaint is lodged, who receives it, how it is redressed, and how the family knew the route. The answer must be a written mechanism this hospital uses and evidence that patients were made aware of it — not a quality-office file the wards do not know, and not a route that exists only as a poster in English behind the billing clerk.
+
+The reason this is the safety step is that a right to complain (PRE.2.h) without a usable procedure is a poster. The chapter intent is that patients are educated about the mechanisms available for addressing grievances. The common error is to receive complaints only through the person alleged to have caused the harm, to treat a suggestion box as redressal, or to harvest a 'no complaint' signature at discharge. Reader, Gillespie and Roberts (2014) — chapter reference 17 — supply a taxonomy of patient complaints as a framework for classifying what arrives; they are not pasted as a coding protocol, and they are not a mandate to print that taxonomy on the form.
+
+The Consumer Protection Act, 2019 informs that a consumer of a healthcare service may seek a grievance remedy. This document uses that Act as a framework that a hospital-level redressal mechanism should exist and be usable. It does not copy District Commission procedure, time limits or pecuniary jurisdiction, and it does not treat this hospital mechanism as a bar to a statutory consumer complaint.
+
+How complaints are received and redressed — who may lodge, who receives (a route that is not only the person complained of), how it is recorded, how it is investigated, how the outcome is told to the complainant, and how a complaint that is also a rights violation also enters the PRE.1.d record — is [Hospital to define — the defined complaint-redressal mechanism, including who receives, how it is investigated, how the outcome is told, and how a rights-violation complaint also enters the PRE.1.d record]. How patients and families are made aware of the procedure for giving feedback and lodging complaints — at entry, during stay, and after discharge if this hospital accepts that — is [Hospital to define — how patients and families are made aware of the procedure for giving feedback and/or lodging complaints]. Awareness of this procedure is not the PRE.1.a rights board counted twice, though it may sit beside it.
+
+This document does not print a named ombudsman title, a rupee ex-gratia table, or a statutory Commission form as a NABH mandate.$s$,
+    $s$4. Review and analysis within a defined time frame, and CAPA
+
+Feedback and complaints are reviewed and/or analysed within a defined time frame. Corrective and/or preventive action(s) are taken based on the analysis where appropriate.
+
+The time frame, who reviews, how analysis is recorded, and how CAPA is taken where appropriate, are [Hospital to define — the defined time frame for review and/or analysis of feedback and complaints, who reviews, and how corrective and/or preventive action is recorded where appropriate]. A file of complaints with no date of review is not this OE. PRE.1.e owns leadership review of rights violations; this step reviews feedback and complaints as feedback and complaints. A rights-violation complaint is analysed in both places.
+
+This document does not print a number of days as a NABH mandate.$s$,
+    $s$5. Records, review and the order of operations
+
+The feedback mechanism, the experience mechanism, the complaint-redressal mechanism, awareness records, and analysis/CAPA within the defined time frame, are retrievable.
+
+The quality or accreditation coordinator audits a sample of these records at [Hospital to define — the audit interval for feedback and complaint records] for: feedback including satisfaction actually captured; experience captured as distinct from a score; complaints received by a person who is not only the alleged actor; patients made aware of the procedure; analysis within the defined time frame with CAPA where appropriate; rights-violation complaints also in the PRE.1.d record; and no District Commission form offered as this hospital's mechanism.
+
+This policy is reviewed at [Hospital to define — the review interval for this policy], and sooner when a complaint could be lodged only with the person complained of, or a box was never opened, or when PRE.1 or PRE.2 that this document hands work to are revised.$s$
+  ],
+  $q$The head of the institution is accountable for {{HOSPITAL_NAME}} capturing feedback and experience, redressing complaints as per the defined mechanism, making patients and families aware of that procedure, and analysing within the defined time frame.
+
+The named lead for feedback and complaints authors and keeps current the mechanisms and the awareness method. The named lead is [Hospital to define — the named lead for patient feedback and complaint redressal].
+
+Staff who collect feedback, who receive complaints, and who tell a family the procedure, apply those methods. The person complained of does not receive the complaint as the only route.
+
+Top leadership reviews rights violations under PRE.1.e. The named reviewer of feedback and complaints under step 4 may be the same people; the records remain distinct when the subject is a rights violation.
+
+The quality or accreditation coordinator audits the records at step 5 and reports findings to the head of the institution.
+
+All staff are expected to treat an unusable complaint route and an unopened feedback store as defects, and to report them.$q$,
+  $q$- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Patient Rights and Education chapter, standard PRE.6.
+- Reader, T. W., Gillespie, A., & Roberts, J. (2014). Patient complaints in healthcare systems: a systematic review and coding taxonomy. BMJ Quality & Safety, 23(8), 678-689 — chapter reference 17; used as a framework for classifying complaints; not pasted as a protocol.
+- Consumer Protection Act, 2019 — insofar as a consumer of a healthcare service may seek a grievance remedy; this document does not copy District Commission procedure and does not treat this hospital mechanism as a bar to a statutory consumer complaint.
+- Internal documents of {{HOSPITAL_NAME}}: the feedback mechanism; the experience mechanism; the complaint-redressal mechanism; the awareness method; analysis and CAPA records; the rights and violation-report policies; the expected-costs policy; and the information-management policies.$q$,
+  $q$Controlled master copy: office of the head of the institution, {{HOSPITAL_NAME}}, with the quality or accreditation coordinator.
+
+Copies issued to: registration and every point of entry; every in-patient ward; nursing administration; the named complaint receiver; and the named lead.
+
+The current version is available to all staff at [Hospital to define — intranet location or nursing station folder]. The complaint-redressal and awareness methods — the working documents this policy requires — are held where patients can actually use them.
+
+Superseded versions are withdrawn from all points of use on issue of a revision, and one dated copy of each is retained by the quality or accreditation coordinator.$q$,
+  $q$Abbreviations already defined in the HIC.1 to HIC.6 master policies are not repeated here. A reader using this document on its own should refer to those policies for the shared glossary, including NABH, SHCO, OE, WHO, SOP and PPE.
+
+The following abbreviations are used in this document and are not defined in HIC.1 to HIC.6:
+
+CAPA — corrective and preventive action
+CPA — Consumer Protection Act, 2019
+
+Any additional abbreviation used locally within {{HOSPITAL_NAME}} is [Hospital to define] and is added to this list at the next revision.$q$,
+  $q$This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.
+
+Several requirements in this document are statutory rather than advisory — in particular those arising under the Consumer Protection Act, 2019, insofar as a consumer of a healthcare service may seek a grievance remedy, and not as copied District Commission procedure or as a bar to a statutory consumer complaint. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.
+
+The clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.
+
+This document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.$q$,
+  $q$[{"oe_code": "PRE.6.a", "requirement": "The organisation has a mechanism to capture feedback from patients, which includes patient satisfaction.", "steps": "Steps 1, 5", "evidence": "The written feedback mechanism including how satisfaction is captured; sample feedback records; the recorded split that a dissatisfied comment asking for redressal is also a complaint at step 3; the audit sample at step 5", "responsible": "Named lead holds the feedback mechanism; staff who collect feedback apply it; quality or accreditation coordinator audits"}, {"oe_code": "PRE.6.b", "requirement": "The organisation has a mechanism to capture the patient experience.", "steps": "Steps 2, 5", "evidence": "The written experience-capture method as distinct from a satisfaction score; sample experience records rather than a named survey printed as a NABH mandate; the audit sample at step 5", "responsible": "Named lead holds the experience mechanism; staff who capture experience apply it; quality or accreditation coordinator audits"}, {"oe_code": "PRE.6.c", "requirement": "The organisation redresses patient complaints as per the defined mechanism. Patient and/or family members are made aware of the procedure for giving feedback and/or lodging complaints.", "steps": "Steps 3, 1, 5", "evidence": "The written defined complaint-redressal mechanism showing who may lodge, who receives (a route that is not only the person complained of), how investigation and outcome-to-complainant are done, and how a complaint that is also a rights violation also enters the PRE.1.d record without this step replacing PRE.1.e leadership review of violations; the written awareness method for the procedure for giving feedback and lodging complaints, at entry, during stay and after discharge if accepted, showing it is not the PRE.1.a rights board counted twice; sample complaints redressed against that mechanism and sample records that patients or families were made aware of the procedure; the recorded use of Reader et al. 2014 (chapter reference 17) as a taxonomy framework not a pasted coding protocol; the recorded use of the Consumer Protection Act, 2019 as a framework that a usable hospital-level grievance mechanism exists, with an explicit refusal to copy District Commission procedure or to treat this mechanism as a bar to a statutory consumer complaint; the recorded refusal to print a named ombudsman title, a rupee ex-gratia table or a Commission form as a NABH mandate; induction or briefing of staff who receive complaints; the location where the mechanism is held so a patient can use it; the audit sample at step 5 of a usable route and of awareness rather than an unopened box", "responsible": "Named lead holds the redressal and awareness methods; named receiver who is not only the alleged actor receives complaints; PRE.1.d/e own violation report and leadership review; quality or accreditation coordinator audits"}, {"oe_code": "PRE.6.d", "requirement": "Feedback and complaints are reviewed and/or analysed within a defined time frame. Corrective and/or preventive action(s) are taken based on the analysis where appropriate.", "steps": "Steps 4, 3, 5", "evidence": "The written defined time frame, who reviews, and how CAPA is recorded where appropriate; sample reviews dated within that frame with action where appropriate; the recorded split that PRE.1.e analyses rights violations as violations; the audit sample at step 5", "responsible": "Named reviewer analyses within the time frame; PRE.1.e owns violation CAPA; quality or accreditation coordinator audits"}]$q$::jsonb,
+  $q$Universal (non-NABH) facts included in this draft, and where each was verified. Check these first.
+
+SOURCE OF THE OE TEXT
+0. PRE.6 standard text and all four OEs were read directly from the official NABH SHCO Standards 3rd Edition PDF (August 2022), Chapter 4, printed page 89 (PDF page index 95). Header confirmed from the PDF, not assumed: "The organisation has a mechanism to capture patient's feedback and to redress complaints." (PDF uses "organization" in the header and "organisation" in the OEs.) Chapter intent printed page 85 (PDF page index 91): patients are educated about the mechanisms available for addressing grievances. PDF md5 39e3bc86d73d651b9cfef283bbf018a9. Levels: PRE.6.a Commitment, PRE.6.b Excellence, PRE.6.c Core, PRE.6.d Achievement.
+   ONE OE CARRIES THE ASTERISK -- PRE.6.c. PRE.6.a, b and d are unasterisked (Tier 2).
+   Verified three ways on 2026-08-17: asterisk_extract.py against the download (matched committed scripts/shco_oe_asterisks.json on all 408), the PRE.6 page read directly, and the committed asterisk file.
+
+TIERING UNDER THE STANDING RULE
+1. Two-tier depth standing rule of 2026-08-10 applies. ONE OF FOUR OEs IS TIER 1. Tier 1: PRE.6.c -- step 3 carries the reasoning (why an unopened box or a route only to the alleged actor is not redressal). Tier 2: PRE.6.a, PRE.6.b, PRE.6.d. Shallower treatment of a, b and d is a DECISION UNDER THE STANDING RULE, not an omission.
+
+CROSS-REFERENCE AND OVERLAP CHECK
+2. Tier 1 cross-check (2026-08-17) of PRE.6.c against HIC masters and AAC/COP/MOM drafts. Search terms: complaint, grievance, feedback, satisfaction, violation, rights.
+   PRE.1.d/e -- CRITICAL SPLIT. A rights-violation complaint is both a PRE.6 complaint and a PRE.1.d report; PRE.1.e owns leadership review of violations. Stated in Purpose, Scope and step 3.
+   PRE.2.h -- right vs this mechanism. Stated in Scope.
+   PRE.1.a/b -- rights display/promotion vs awareness of this procedure. Stated in step 3.
+   PRE.5 -- cost disputes are complaints here; tariff remains PRE.5.
+   MOM.7 -- clinical event still captured there; family complaint redressed here.
+   AAC.8 -- discharge complaints redressed here; summary remains AAC.8.
+3. FORWARD REFERENCES: ROM/FMS billing adjustment; IMS record.
+4. T2 QUICK CHECK: PRE.6.a satisfaction vs PRE.6.b experience -- both this document; split stated in steps 1-2. PRE.6.d vs PRE.1.e -- flagged.
+
+STATUTORY AND EXTERNAL FACTS
+5. Consumer Protection Act, 2019 -- named in P2 insofar as a consumer may seek a grievance remedy. No District Commission procedure copied. This hospital mechanism is not a bar to a statutory consumer complaint.
+6. CEA 2010 and MHCA 2017 are NOT named. BMW/FSS are NOT named in P2.
+7. Reader et al. 2014 (ch ref 17) -- framework taxonomy, not pasted protocol.
+8. NO NUMBERS ARE STATED as requirements. No day-count or rupee ex-gratia as a NABH mandate.
+
+EDITORIAL POSITIONS TAKEN
+9. Step 3's split with PRE.1.d/e (complaint as complaint vs violation as violation) is an editorial position required so the two processes do not copy each other.
+10. Step 3's refusal to copy District Commission procedure is an editorial position required by the disclaimer statute-matching rule.
+11. Steps 1-2 split of satisfaction vs experience is an editorial position required by two distinct OEs; the standard does not define the difference.
+
+DISCLAIMER BLOCK -- STATUTE-MATCHED UNDER THE 2026-08-17 STANDING RULE
+12. Paragraphs 1, 3 and 4 are the shared block, hash-checked at build time. Paragraph 2 names CPA 2019 only as fenced above. It does NOT name CEA, MHCA, BMW or FSS. The AAC.1 defaulted-statute bug is refused.
+
+DELIBERATELY NOT INCLUDED
+- Rights list -- PRE.2.h. Rights display/promotion and violation leadership review -- PRE.1.
+- Tariff -- PRE.5. Discharge summary -- AAC.8. Medication-event capture -- MOM.7.
+- District Commission procedure; a named ombudsman title as a NABH mandate; a rupee table.
+- The five optional sections are left unset.
+
+HOSPITAL-SPECIFIC VALUES LEFT AS [Hospital to define] -- 11 fillable blanks in the rendered document: 2 in the exact form "[Hospital to define]" (one in Abbreviations, one inside the shared Disclaimer block) and 9 in the guidance-bearing form "[Hospital to define — what to state]". A search for the exact string finds 2 of 11; a search for "Hospital to define" without brackets finds all 11, and that is the search a hospital should be told to run. The figure is produced by policy_placeholder_audit.py across every rendered field in both forms, which also asserts that no nested placeholder exists.
+
+The values the hospital must supply: feedback including satisfaction; patient-experience capture; complaint-redressal mechanism; awareness of the feedback/complaint procedure; review time frame and CAPA; the named lead; the audit interval; the review interval; the intranet or folder location; and any additional local abbreviation.$q$,
+  '1.0',
+  $q$[{"version": "1.0", "date": "17-08-2026", "description": "Initial release."}]$q$::jsonb,
+  'draft'
+);
