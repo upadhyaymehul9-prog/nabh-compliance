@@ -787,6 +787,14 @@ standards are approved on different days.
       require it. AAC.4 owns the laboratory specimen pathway up to placing waste in that
       stream, including the laboratory's own pre-treatment. AAC.6 names pre-treatment as a
       lab-safety duty pointing at HIC.3's stream. Neither AAC draft restates the four colours.
+- [x] **AAC.3.e vs approved HIC.5 — shared data point, not a shared process. Checked in full
+      2026-08-17; division written into AAC.3 Scope and step 6. HIC.5 not reopened.**
+      Shared: the temperature and vital signs record. HIC.5 step 4 reads that chart as one
+      case-finding source (new fever after a defined period from admission); step 8 uses
+      recorded temperature as a VAE criterion where invasive ventilation is provided. AAC.3.e
+      owns taking the observations, the early-warning method, the call and the intervention.
+      Two processes, one chart. An escalated deterioration is not an infection report; a
+      surveillance case is not an early-warning call. No contradiction; no HIC.5 text change.
 - [ ] **AAC.4.e vs approved HIC.5** alert-organism notification. AAC.4 owns critical results
       to the treating clinician. HIC.5 owns notifying the infection control team of isolates
       on the alert-organism list. Same laboratory, two addressees, two purposes.
