@@ -1246,11 +1246,11 @@ T2 one-line flags:
 
 ---
 
-## Deferred from MOM.8 (drafted 2026-08-17, UNAPPROVED pending owner review of the cytotoxic block)
+## Deferred from MOM.8 (drafted 2026-08-17; **owner-approved 2026-08-17** after the distinct cytotoxic block and chemotherapy-safety citations)
 
 THIS IS THE NDPS STANDARD. COP.9/COP.10 storage handoff is accepted here.
 
-Owner 2026-08-17: MOM.8 not approved until chemotherapeutic/cytotoxic handling is a distinct procedure-step block (PPE, spill, CSTD or equivalent, extravasation, hazardous waste), not implied by the narcotics custody chain. That block is now step 4; radioactive agents used as therapy are step 5; the NDPS register is step 6. MOM.8.d remains Tier 2 (unasterisked). Still UNAPPROVED — do not insert.
+Owner 2026-08-17: approved after (1) chemotherapeutic/cytotoxic handling as a distinct procedure-step block (PPE, spill, CSTD or equivalent, extravasation, hazardous waste) and (2) NIOSH Alert 2004-165, OSHA hazardous-drug occupational-exposure guidance, USP <800>, and ESMO–EONS 2012 added to References as frameworks, not P2 statutes. Still insert as `status='draft'` only.
 
 T1 overlap flags:
 
