@@ -684,11 +684,20 @@ taken under this rule, not an omission.
       an under-built document. MOM.5 is also **5-of-6 asterisked**, the densest Tier 1 standard in
       the chapter, so it is the last place to start from a wrong premise.
 
-      **What has NOT been done, and must be, before the fix is applied:** the correct wording has
-      not been read out of the official SHCO 3rd Edition PDF. Do not write it from memory or infer
-      it from the OE list — read the standard header on the page, the same discipline the asterisk
-      audit used. `scripts/asterisk_extract.py` already parses these headers and can be pointed at
-      the MOM chapter to produce the authoritative string.
+      **PDF read 2026-08-17 (MOM.5 drafted; database still NOT fixed).** The official SHCO 3rd
+      Edition PDF (August 2022, md5 `39e3bc86d73d651b9cfef283bbf018a9`) carries TWO headers:
+
+      - Chapter SUMMARY printed p.75 (PDF page index 81): **"MOM.5. Medications are dispensed in
+        a safe manner."** — this is the correct subject.
+      - Standard+OE listing printed p.78 (PDF page index 84): **"MOM.5. Medications are prescribed
+        safely and rationally."** — byte-identical to MOM.3's header on printed p.77. The six OEs
+        on that same page are all about dispensing.
+
+      The stored `standard_text` copied the **OE-page typesetting error**, not a unique invention
+      in the JSON. The chapter-summary line is the wording the data-fix should apply. The MOM.5
+      master was drafted from that summary line plus the six dispensing OEs; it does **not** use
+      the corrupted header as its title. Do not treat the OE-page header as authoritative when
+      applying the fix.
 
       **Scope of the fix when it is made:** `scripts/shco_oes_data.json`,
       `scripts/shco_oes_by_chapter.json` (same text, denormalised per OE row) and the
@@ -696,10 +705,12 @@ taken under this rule, not an omission.
       whether any other standard shares its text with a neighbour — this was found by eye while
       reading a table, not by a check that would have caught a second instance. A one-line
       `group by standard_text having count(distinct standard_code) > 1` over the whole table
-      settles it for all 408 OEs at once.
+      settles it for all 408 OEs at once. The MOM.5 master draft is already titled and scoped as
+      dispensing; the data-fix does not reopen that draft unless the stored text is later used
+      to regenerate the header.
 
-      No app-facing urgency: nothing renders `standard_text` for MOM today, because no MOM master
-      policy exists. It becomes urgent the moment MOM drafting starts.
+      The data-fix remains a **separate pass**. The 2026-08-17 MOM drafting pass did not write
+      `shco_full_oes`.
 
 ---
 
@@ -1111,6 +1122,163 @@ T2 one-line flags (standing rule: flag and move on):
 - [ ] **HIC.2/3/4/5/6 labour-room IPC, waste, bundles, surveillance, reprocessing.** Infection control stays HIC. COP.7 requires those practices in obstetric areas and does not rewrite them.
 
 - [ ] **COP.7.a MTP where provided vs PRE consent method.** Statutory MTP opinion and consent records are this process where termination is in scope; general consent method remains PRE (undrafted).
+
+---
+
+## Deferred from MOM.1 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags (full cross-check done in the MOM.1 draft Scope / universal_facts_checklist). Do not patch approved HIC or COP.5 in this pass.
+
+- [ ] **COP.5 transfusion vs MOM chapter intent that "medications also include blood & blood components".** The chapter intent on printed p.75 includes blood. COP.5 already owns the clinical transfusion (request, bedside identity, hanging, reaction). MOM.1–9 do not manage blood as ward-stock medicines and do not rewrite hanging a unit. Keep this split if either chapter is approved without the other.
+
+- [ ] **MOM.1.e vs MOM.9 implant criteria.** MOM.1.e (unasterisked) is a pointer only. MOM.9.a (asterisked) owns written procurement and usage guidance. Do not let MOM.1 grow an implant SOP.
+
+T2 one-line flags:
+
+- [ ] **AAC.1 service directory vs MOM.1.a formulary.** Formulary must match defined services; it does not rewrite the directory.
+- [ ] **HIC.2 / HIC.3 / HIC.4.** Injection safety, pharmaceutical waste colours, device bundles — pointed, not restated. BMW not in MOM.1 P2.
+- [ ] **PRE / IMS.** Counselling and the record itself, undrafted.
+
+---
+
+## Deferred from MOM.2 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags:
+
+- [ ] **COP.3 crash-cart kit vs MOM.2.e/f emergency-medication list.** COP.3 owns that resuscitation kits exist in named areas. MOM.2 owns the hospital-wide emergency-medication list, uniform storage, continuous availability and replenishment. Do not print a kit list in either as a NABH mandate.
+
+- [ ] **MOM.2 general storage vs MOM.8.c secure storage of NDPS / chemo / radioactive.** MOM.2 does not write the NDPS cupboard and does not name NDPS in P2. MOM.8 accepts the COP.9/COP.10 storage handoff.
+
+T2 one-line flags:
+
+- [ ] **COP.2 ambulance/emergency-area stock vs MOM.2.e list.** Stock against this hospital's emergency-med list; COP.2 owns ambulance fitness.
+- [ ] **COP.9 / COP.10 sedative and anaesthetic stock.** MOM.2 stores non-NDPS stock; those policies own the clinical act.
+- [ ] **LASA / high-risk lists (ISMP, WHO).** Frameworks for MOM.2.c; not mandated lists.
+
+---
+
+## Deferred from MOM.3 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags:
+
+- [ ] **MOM.3 vs MOM.4 — prescription minimum vs uniform order writing.** MOM.3.b owns the determined minimum of a prescription as a clinical document. MOM.4 owns how the order appears in the record (authorised writer, location, name+UID, legibility, dated/timed/signed, name/route/strength/frequency). Do not duplicate MOM.4's four fields inside MOM.3.b so MOM.4 becomes redundant.
+
+- [ ] **AAC.3 assessment vs MOM.3.c allergies before prescribing.** Assessment may collect allergies. Ascertaining them before this prescription is MOM.3.c. A checkbox is not that act.
+
+- [ ] **AAC.7 / AAC.8 vs MOM.3.h reconciliation at transitions.** AAC.7 owns the internal move/handover. AAC.8 owns the discharge summary including medication instructions. Reconciliation is MOM.3.h.
+
+T2 one-line flags:
+
+- [ ] **COP.13 pain titration vs MOM.3 prescribing the analgesic.** Clinical loop is COP.13; the prescription is MOM.3.
+- [ ] **WHO rational use / NLEM / EML / NCCMERP / High 5s / AHRQ med rec.** Frameworks, not pasted protocols or mandated tools.
+- [ ] **NDPS verbal orders.** A spoken order does not skip MOM.8's register.
+
+---
+
+## Deferred from MOM.4 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags:
+
+- [ ] **MOM.3 verbal orders vs MOM.4 written order artefact.** Once a verbal order is written it is a MOM.4 order. MOM.4.a owns that only authorised personnel write.
+
+T2 one-line flags:
+
+- [ ] **AAC.2 UID vs MOM.4.b name and unique identification number on the order location.** AAC.2 generates the number; MOM.4 requires it.
+- [ ] **IMS the record vs MOM.4 location/legibility/content.**
+- [ ] **HRM / NMC / INC credentialing vs MOM.4.a authorised writers.** Verification is HRM; this document owns that only those people write.
+
+---
+
+## Deferred from MOM.5 (drafted 2026-08-17, UNAPPROVED)
+
+Drafted as dispensing from the chapter-summary header on printed p.75, not from `shco_full_oes.standard_text` and not from the corrupted OE-page header. Database fix remains the 2026-08-11 item above.
+
+T1 overlap flags:
+
+- [ ] **MOM.2 near-expiry as inventory vs MOM.5.c handling near-expiry at dispensing.** MOM.2 owns stock control. MOM.5.c owns do-not-dispense / quarantine at the hatch. Mixing the two produces an expired pack that "was in date in the cupboard".
+
+- [ ] **COP.5 issue of a blood unit vs MOM.5.d labelling of dispensed medications.** A unit is not a dispensed medicine under this OE.
+
+T2 one-line flags:
+
+- [ ] **MOM.2.c high-risk LIST vs MOM.5.e verification of high-risk ORDERS before dispensing vs MOM.8 NDPS/chemo/radioactive.** Three different acts.
+- [ ] **HIC.3 returned/expired waste.** Enters the hospital-wide programme; colours not restated; BMW not in MOM.5 P2.
+- [ ] **NDPS register/destruction.** MOM.5 may dispense; MOM.8 owns the account.
+
+---
+
+## Deferred from MOM.6 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags:
+
+- [ ] **COP.1 two identifiers vs MOM.6.c identification before administration.** COP.1 owns the pair. MOM.6.c is the admin-time check using them.
+
+- [ ] **HIC.4 device bundles vs MOM.6.f catheter and tubing mis-connections.** MOM.6.f is a medication-administration connection error (WHO Patient Safety Solution 7, chapter ref 2). It is not VAP/CLABSI/CAUTI. Do not rewrite HIC.4.
+
+T2 one-line flags:
+
+- [ ] **HIC.2 safe injection.** Applied at administration; not rewritten.
+- [ ] **COP.9 / COP.10 / COP.11.** Clinical sedation/anaesthesia/surgery method stays those documents; ID / verify / document still apply.
+- [ ] **COP.13 pain titration vs MOM.6.g administration documentation.**
+- [ ] **AAC.8 discharge-summary medication instructions vs MOM.6.h in-hospital self-admin vs MOM.6.i meds brought from outside.**
+- [ ] **MOM.6.b prepared-medication labelling vs MOM.5.d dispensed-pack labelling.** Different acts.
+- [ ] **COP.5 / MOM.9.** This document does not hang blood and does not implant devices.
+
+---
+
+## Deferred from MOM.7 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags:
+
+- [ ] **MOM.6 administration record vs MOM.7 after.** MOM.6 owns the dose and the administration entry. MOM.7 owns monitoring, changing therapy, capturing and reporting near-miss / medication error / ADR.
+
+- [ ] **COP.5.f transfusion reaction vs MOM.7 ADR.** Chapter intent includes blood; COP.5 already owns transfusion reactions. A transfusion reaction is not captured as a MOM.7 ADR.
+
+T2 one-line flags:
+
+- [ ] **HIC.5 HAI surveillance vs MOM.7 medication-error capture.** A drug reaction is not an SSI.
+- [ ] **HIC.4 PEP.** Occupational exposure, not MOM.7 ADR.
+- [ ] **AAC.3.e early-warning vs MOM.7.a post-medication monitoring.** Same vital signs may be used; this is effect and harm of the drug. Not automatic ICU admission (COP.6).
+- [ ] **PRE.4.b education about side effects vs MOM.7 still capturing the event.**
+- [ ] **Reporting time frame is hospital-defined.** Do not invent a 24-hour NABH mandate.
+
+---
+
+## Deferred from MOM.8 (drafted 2026-08-17, UNAPPROVED)
+
+THIS IS THE NDPS STANDARD. COP.9/COP.10 storage handoff is accepted here.
+
+T1 overlap flags:
+
+- [ ] **COP.9 / COP.10 NDPS storage handoff now landed.** Those drafts refused to inherit NDPS as a storage statute. MOM.8 owns cupboard, register and destruction. Clinical sedation/anaesthesia method stays COP. Do not patch COP.9/COP.10 in this pass.
+
+- [ ] **MOM.2 general storage vs MOM.8.c secure storage of the three named classes.**
+
+T2 one-line flags:
+
+- [ ] **MOM.3/4 prescribing vs MOM.8.b appropriate caregivers for these classes.**
+- [ ] **MOM.5 dispensing vs MOM.8.e usage/disposal record.**
+- [ ] **MOM.6 administration vs MOM.8.d chemo/radioactive preparation and qualified administration.**
+- [ ] **COP.11 chemo in OT** is still MOM.8 preparation / qualified person.
+- [ ] **AAC.5 / AAC.6 diagnostic radiology licences vs MOM.8 therapeutic radioactive agents.** If none, record absence against AAC.1; do not invent a hot laboratory.
+- [ ] **HIC.3 cytotoxic waste colours / HIC.2 PPE for chemo prep.** Pointed; not restated; BMW not in MOM.8 P2.
+
+---
+
+## Deferred from MOM.9 (drafted 2026-08-17, UNAPPROVED)
+
+T1 overlap flags:
+
+- [ ] **AAC.8 discharge summary vs MOM.9.c batch and serial number.** AAC.8 owns that a summary is given and its clinical content list. MOM.9.c owns that batch AND serial number also appear in the medical record, the master logbook, AND the discharge summary. AAC.8 Scope already hands this to MOM; this draft mirrors it.
+
+- [ ] **COP.11 surgical implanting vs MOM.9 procurement, counselling and traceability.** Implanting is the surgical act. MOM.9 owns the criteria, counselling and numbers.
+
+T2 one-line flags:
+
+- [ ] **AAC.1 defined services vs implant types offered.** Unused implant services are a recorded absence, not a copied implant SOP.
+- [ ] **MOM.1.e is a pointer only.** Criteria live here.
+- [ ] **PRE surgical consent vs MOM.9.b counselling for usage and precautions.** Not the same act.
+- [ ] **Medical Devices Rules, 2017.** Procure from a licensed source; implanting does not make the hospital a manufacturer.
 
 ---
 
