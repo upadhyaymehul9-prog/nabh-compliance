@@ -2,6 +2,6 @@ import { createClient } from "@supabase/supabase-js";
 
 export const supabase = createClient(
   "https://tbptllgcjtiiqspxqcde.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRicHRsbGdjanRpaXFzcHhxY2RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY2NjkzNjAsImV4cCI6MjA5MjI0NTM2MH0.4CPgNp6ytVNRmTU0FJbu2io94QJmsAow5im-vGtoRAU",
+  "sb_publishable_tEu-kA8f9VLW-5uvU4E7ZA_PtaX59bw",
   { auth: { flowType: "implicit", detectSessionInUrl: true, persistSession: true, autoRefreshToken: true } }
 );
