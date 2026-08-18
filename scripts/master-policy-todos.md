@@ -83,7 +83,7 @@ taken under this rule, not an omission.
 # STANDING RULE: Disclaimer statute-matching (added 2026-08-17)
 
 **Read this before drafting any master policy. It is a process rule, not a task — it does not
-get ticked off and it does not expire.**
+get ticked off and it does not expire.** Same standing as the two-tier depth rule above.
 
 Paragraphs 1, 3 and 4 of the shared HIC.3–6 disclaimer stay byte-identical. Only paragraph 2
 names statutes, and it names **only statutes that standard actually cites** in References.
@@ -99,6 +99,29 @@ names statutes, and it names **only statutes that standard actually cites** in R
   explicitly refuses to import CPA 2019 / CEA 2010 / MHCA 2017 as a checklist.
 - `emit_and_verify` hash-checks P1/P3/P4, requires `statute_clause` in P2, and fails if BMW/FSS
   appear in P2 unless they are also in `statute_clause`.
+
+Every master policy's Disclaimer statutory paragraph (paragraph 2 of the four-paragraph block)
+must name the statutes actually relevant to THAT standard's subject matter, cited from its own
+References section — never inherited wholesale from a different chapter's boilerplate. Before
+finalizing any new standard, check that the statutory paragraph names real, applicable law for
+that specific document.
+
+The rest of the disclaimer — structure, the four paragraphs, and the non-affiliation statement
+including the bodies it names — stays consistent in wording and format across all standards.
+Only the specific statutes named in paragraph 2 are checked and corrected per document.
+
+**What this rule does not do**
+
+- It does **not** retrofit HIC.1–HIC.6. Those already carry the Bio-Medical Waste Management
+  Rules, 2016 / Food Safety and Standards Act, 2006 paragraph as known, accepted debt (correct
+  for HIC.3's BMW content and HIC.3's kitchen/FSSAI content; wrong as a wholesale inherit for
+  every HIC standard). Logged separately; not being retrofitted.
+- It does **not** authorise rewriting paragraphs 1, 3 or 4 of the shared block in an individual
+  file. A change to those paragraphs belongs in a deliberate pass across all masters.
+- AAC.1 was drafted before this rule and still carries the HIC boilerplate in its approved row.
+  The owner instructed a targeted disclaimer-only fix on 2026-08-17; until that edit lands, AAC.1
+  is the one approved non-HIC document whose paragraph 2 names statutes it does not rely on.
+  Subsequent AAC drafts (AAC.2 onward) follow this rule from the first build.
 
 ---
 
@@ -1741,6 +1764,67 @@ T2 one-line flags:
 - [ ] **FMS (undrafted) facility inspection rounds / fire plan.** Management risk duty includes
       those domains; FMS writes the facility method.
 - [ ] **Reporting time frame is hospital-defined.** Same as PSQ.5 / MOM.7: no 24-hour NABH clock.
+
+---
+
+## Deferred from AAC.2–AAC.8 (drafted 2026-08-17, UNAPPROVED)
+
+These seven drafts are local only. Nothing has been written to Supabase. Flags below are
+the overlap / forward-reference notes from that pass, logged so they are not lost if the
+standards are approved on different days.
+
+### Intra-chapter divisions (stated in both Scopes; not contradictions)
+
+- [ ] **AAC.2.f vs AAC.7.d.** AAC.2 owns transfer-in from another organisation, transfer-out
+      to another organisation, and referral of a patient this hospital cannot accept. AAC.7
+      owns transfer of a patient from one unit of this hospital to another. Keep the pair
+      if one is approved without the other.
+- [ ] **AAC.2.b vs AAC.8.b.** AAC.2 generates the unique identification number at registration.
+      AAC.8 requires that number as content of the discharge summary. Not a duplication of method.
+- [ ] **AAC.4.e vs AAC.5.e.** Critical laboratory values vs critical imaging findings. Separate
+      lists and separate registers, by design.
+- [ ] **AAC.5.a vs AAC.6.e.** AAC.5 owns imaging *licences* (AERB, PC-PNDT registration). AAC.6
+      owns imaging *safety signage* (trefoil, restricted area, pregnancy caution, PC-PNDT notice).
+
+### Against the approved set (HIC.1–6 + AAC.1)
+
+- [ ] **AAC.6.a vs approved HIC.2** (T2 one-line for AAC.6.b; full statement in AAC.6 Scope
+      because AAC.6.a is Tier 1). HIC.2 already applies in laboratory specimen-handling areas
+      (hand hygiene, standard/TBP PPE, bloodborne-pathogen sharps). AAC.6 owns the laboratory
+      safety programme as a whole (biosafety cabinets, chemical hygiene, fire, reagent spills,
+      lab-specific PPE beyond standard precautions). Not a contradiction if both Scopes stay
+      as drafted; check on approval that HIC.2 is not reopened.
+- [ ] **AAC.4.c / AAC.6.a vs approved HIC.3 BMW.** HIC.3 owns the hospital-wide colour code,
+      internal transport, SPCB authorisation and common-facility handover, including that
+      microbiological and laboratory waste is pre-treated before disposal where the rules
+      require it. AAC.4 owns the laboratory specimen pathway up to placing waste in that
+      stream, including the laboratory's own pre-treatment. AAC.6 names pre-treatment as a
+      lab-safety duty pointing at HIC.3's stream. Neither AAC draft restates the four colours.
+- [x] **AAC.3.e vs approved HIC.5 — shared data point, not a shared process. Checked in full
+      2026-08-17; division written into AAC.3 Scope and step 6. HIC.5 not reopened.**
+      Shared: the temperature and vital signs record. HIC.5 step 4 reads that chart as one
+      case-finding source (new fever after a defined period from admission); step 8 uses
+      recorded temperature as a VAE criterion where invasive ventilation is provided. AAC.3.e
+      owns taking the observations, the early-warning method, the call and the intervention.
+      Two processes, one chart. An escalated deterioration is not an infection report; a
+      surveillance case is not an early-warning call. No contradiction; no HIC.5 text change.
+- [ ] **AAC.4.e vs approved HIC.5** alert-organism notification. AAC.4 owns critical results
+      to the treating clinician. HIC.5 owns notifying the infection control team of isolates
+      on the alert-organism list. Same laboratory, two addressees, two purposes.
+- [ ] **AAC.7.c vs approved HIC.2** (T2 one-line). HIC.2 requires the precaution category in
+      the nursing handover. AAC.7 owns the handover *method*. Infection-control content of
+      the handover stays in HIC.2.
+
+### Forward references (undrafted owners)
+
+- COP emergency / critical care / CPR — life-stabilising treatment (AAC.2), deterioration
+  response method (AAC.3.e).
+- IMS — medical record structure (AAC.2.b, AAC.3, AAC.8).
+- PRE — consent and rights at admission (AAC.2); patient-education method (AAC.8.d).
+- HRM — credentialing behind lab/imaging personnel (AAC.4.b, AAC.5.c) and the "qualified
+  individual" (AAC.7.a). Already flagged from AAC.1.b for HRM.7–9; same pass.
+- FMS — hospital-wide equipment programme / fire plans, vs lab and imaging calibration
+  and lab fire as named in AAC.4.h / AAC.5.i / AAC.6.
 
 ---
 

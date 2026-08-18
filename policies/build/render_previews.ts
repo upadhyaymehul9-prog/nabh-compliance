@@ -97,7 +97,7 @@ interface Draft {
 const sub = (t: string) => t.replaceAll("{{HOSPITAL_NAME}}", HOSPITAL);
 
 const EXPECTED = [
-  "AAC.1",
+  "AAC.1", "AAC.2", "AAC.3", "AAC.4", "AAC.5", "AAC.6", "AAC.7", "AAC.8",
   "COP.1", "COP.2", "COP.3", "COP.4", "COP.5", "COP.6", "COP.7",
   "COP.8", "COP.9", "COP.10", "COP.11", "COP.12", "COP.13",
   "HIC.1", "HIC.2", "HIC.3", "HIC.4", "HIC.5", "HIC.6",

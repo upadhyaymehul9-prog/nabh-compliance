@@ -1,0 +1,412 @@
+# -*- coding: utf-8 -*-
+"""Builds the AAC.5 master policy draft: JSON for review + SQL for later insert.
+
+UNAPPROVED DRAFT. Do not insert, approve, or write this to Supabase.
+
+THIS IS DRAFTED UNDER THE TWO-TIER DEPTH STANDING RULE (2026-08-10) AND THE
+DISCLAIMER STATUTE-MATCHING STANDING RULE (2026-08-17), both in
+scripts/master-policy-todos.md.
+
+Tier is decided by doc_required / the asterisk in the official PDF:
+  Tier 1 (full treatment): AAC.5.d, AAC.5.e, AAC.5.f, AAC.5.g, AAC.5.i
+  Tier 2 (lighter pass):   AAC.5.a, AAC.5.b, AAC.5.c, AAC.5.h
+
+AAC.5.a is Core but NOT asterisked. Legal compliance is always assessed;
+documented-evidence anchors are the asterisked OEs. Do not treat Core as Tier 1.
+
+Official source: NABH Standards for Small Healthcare Organisations, 3rd Edition
+(August 2022), Chapter 1, standard AAC.5 and OEs AAC.5.a-i, read from the official
+standards PDF (downloaded 2026-08-17 from the NABH website's Explore NABH Standards
+page), printed pages 52-53, PDF page index 58-59.
+
+Asterisks verified 2026-08-17: scripts/asterisk_extract.py re-run against that
+download (self-validation passed, 408 OEs, 132 asterisks, output matched the
+committed scripts/shco_oe_asterisks.json on all 408 entries) and the AAC.5 pages
+read directly. AAC.5.e was one of the 14 flags corrected on 2026-08-10 (asterisk
+YES on a wrapped continuation line) and is correctly true.
+"""
+from policy_build_common import emit_and_verify, make_disclaimer
+
+STANDARD_CODE = "AAC.5"
+CHAPTER = "AAC"
+OE_CODES = [
+    "AAC.5.a", "AAC.5.b", "AAC.5.c", "AAC.5.d", "AAC.5.e",
+    "AAC.5.f", "AAC.5.g", "AAC.5.h", "AAC.5.i",
+]
+TIER1_OES = ["AAC.5.d", "AAC.5.e", "AAC.5.f", "AAC.5.g", "AAC.5.i"]
+
+POLICY_TITLE = "Imaging Services"
+
+VERSION = "1.0"
+REVISION_HISTORY = [
+    {"version": "1.0", "date": "17-08-2026", "description": "Initial release."},
+]
+
+PURPOSE = """This document sets out how {{HOSPITAL_NAME}} provides imaging services commensurate with the services it has defined: legally authorised, scoped to what the hospital actually does, staffed and equipped for that scope, reported in a standard form within a defined time, with critical findings told at once to the people who can act, with tests it cannot perform sent only to a centre whose quality system has been examined, and with a quality-assurance programme that includes calibration and maintenance of the equipment the reports come from.
+
+The chapter intent is that the organisation provides laboratory and imaging services commensurate to its scope of services, by competent staff, in a safe environment for both patients and staff. This document is the imaging service. Safety of that environment — screening a patient before a study, radiation monitoring of staff and patients, and imaging signage — is governed by the laboratory-and-imaging-safety policy of {{HOSPITAL_NAME}} and is not restated here.
+
+An imaging report that cannot be joined to a registered patient, that arrives after the clinical decision has already been made, or that is issued from a machine whose required quality-assurance test is overdue, is a document that looks like care and is not."""
+
+SCOPE = """This policy applies to every imaging modality {{HOSPITAL_NAME}} actually provides, and to every location from which an imaging study is performed, reported or outsourced. It binds the clinicians who report, the technicians who acquire the images, the person who owns the imaging-licence calendar, the person who notifies a critical imaging finding, and whoever arranges outsourcing. It does not assume that {{HOSPITAL_NAME}} provides every modality: computed tomography, magnetic resonance imaging, interventional radiology and nuclear medicine appear in this document only where the defined scope includes them.
+
+It covers legal and other requirements attaching to imaging; alignment of the imaging scope with the services the hospital provides; adequacy of infrastructure and human resources for that scope; standardised reporting within a defined time; immediate intimation of critical imaging results; outsourcing of imaging tests not available here, based on the receiver's quality-assurance system; implementation of the imaging quality-assurance programme; periodic peer review of imaging protocols and results; and periodic calibration and maintenance of all imaging equipment.
+
+Boundaries with other policies of {{HOSPITAL_NAME}}:
+
+- The written definition of healthcare services, the department scopes of services, and the public display of those services are governed by the definition-and-display policy of {{HOSPITAL_NAME}}. That policy owns that an imaging department scope of services exists. This policy owns that the imaging scope is commensurate with the services the hospital provides, and that a modality the hospital's clinical services do not need is not invented, and a modality those services depend on is either provided or outsourced under this document.
+- Safety of imaging — screening a patient for safety and risk before a study, radiation-safety devices and personnel monitoring, and imaging signage including the radiation trefoil, restricted-area notices, pregnancy caution and, where ultrasonography is performed, the statutory PC-PNDT notice — is governed by the laboratory-and-imaging-safety policy of {{HOSPITAL_NAME}}. This policy owns the licences. That policy owns the safety signage. The two are not the same document.
+- Laboratory results, laboratory critical values, laboratory outsourcing and the laboratory quality-assurance programme are governed by the laboratory-services policy of {{HOSPITAL_NAME}}. A critical imaging finding is not a laboratory critical value, and the two lists, the two registers and the two notification routes are kept distinct.
+- The unique identification number is generated at registration under the registration, admission and transfer policy of {{HOSPITAL_NAME}}. This policy requires that number on every imaging report; it does not generate it.
+- Consent to establish or operate under pollution-control law, and biomedical-waste authorisation, are governed by the infection-control and facility-management policies of {{HOSPITAL_NAME}}. They are not imaging licences and are not held on this calendar.
+- The hospital-wide medical-equipment programme — inventory, logs, the preventive and breakdown plan, and qualified operators — is governed by the facility-management policies of {{HOSPITAL_NAME}}. This policy owns that imaging equipment is calibrated and maintained as part of the imaging quality-assurance programme, including the quality-assurance tests the AERB authorisation requires where they apply, and that a report is not issued from equipment overdue for a required test.
+- Verification of staff qualifications and registrations is governed by the human-resource policies of {{HOSPITAL_NAME}}. This policy requires that imaging is staffed for its defined scope; it does not restate the credentialing method.
+- The medical record itself is governed by the information-management policies of {{HOSPITAL_NAME}}. This policy owns the imaging-report content that is written into that record."""
+
+POLICY_STATEMENT = """{{HOSPITAL_NAME}} provides imaging services that comply with legal and other requirements attaching to the modalities it actually performs. Licences and authorisations are current. A named person owns the calendar on which they are kept current.
+
+The scope of imaging is commensurate with the services {{HOSPITAL_NAME}} provides. Imaging does not advertise a modality the clinical services do not use, and it does not leave a modality those services depend on neither provided nor outsourced.
+
+Infrastructure and human resources are adequate for that defined scope.
+
+Imaging results are issued in a standardised manner, against the unique identification number, within a defined turnaround time for each category of study.
+
+Critical imaging results are intimated immediately to the personnel concerned. A result sitting in a queue is not a notification.
+
+Imaging tests not available at {{HOSPITAL_NAME}} are outsourced to an organisation whose quality-assurance system has been examined. Accreditation of a laboratory is not, by itself, evidence that an imaging centre is fit to receive the work.
+
+A quality-assurance programme for imaging is implemented. It includes reject and repeat analysis, equipment-performance checks, a named lead, periodic peer review of protocols and results, and periodic calibration and maintenance of all equipment. A report is not issued from equipment overdue for a required quality-assurance test."""
+
+PROCEDURE_STEPS = [
+"""1. Legal compliance of imaging services
+
+Imaging services at {{HOSPITAL_NAME}} comply with the legal and other requirements that attach to the modalities actually performed. The test is the current licence or authorisation, not a file of expired paper.
+
+For diagnostic radiology using radiation-generating equipment, {{HOSPITAL_NAME}} holds a current authorisation issued by the Atomic Energy Regulatory Board under the Atomic Energy Act, 1962 and the Atomic Energy (Radiation Protection) Rules. Equipment that is not authorised is not used.
+
+Where ultrasonography capable of sex determination is performed, {{HOSPITAL_NAME}} is registered under the Pre-Conception and Pre-Natal Diagnostic Techniques (Prohibition of Sex Selection) Act, 1994, keeps the records that Act requires, and does not determine or communicate the sex of a foetus. The statutory PC-PNDT notice is displayed under the laboratory-and-imaging-safety policy of {{HOSPITAL_NAME}}; this step owns the registration and the records.
+
+Where the Clinical Establishments (Registration and Regulation) Act, 2010 has been adopted by the State, or where the corresponding State clinical-establishments or nursing-home registration law applies, imaging is consistent with that registration. A service the establishment is not registered to provide does not appear in the imaging scope.
+
+The person who owns the imaging-licence compliance calendar is [Hospital to define — the role that owns the imaging-licence compliance calendar]. That person keeps every imaging licence and authorisation current, records the renewal date before it lapses, and holds the set at [Hospital to define — where the current imaging licences and the calendar are held].
+
+This calendar is the imaging-licence calendar. Consent to establish or operate under pollution-control law is not entered on it.""",
+
+"""2. Scope of imaging commensurate with the services provided
+
+The scope of imaging services is commensurate with the services {{HOSPITAL_NAME}} provides. The test is the current service directory and the imaging department's scope of services, both maintained under the definition-and-display policy of {{HOSPITAL_NAME}}.
+
+That policy owns that the imaging department holds a written scope. This step owns the match: every modality the clinical services of this hospital depend on is either performed here, within the hours the scope states, or is outsourced under step 6; and no modality is listed that the clinical services do not use and that this hospital is not equipped and licensed to perform.
+
+When the service directory changes — a specialty added, a service withdrawn — the imaging scope is checked in the same pass. A new clinical service that depends on a study this hospital cannot perform is not opened until the study is provided or outsourced. A withdrawn clinical service does not leave an orphaned imaging claim on the directory or the display.""",
+
+"""3. Infrastructure and human resources
+
+The physical space, the equipment and the people who operate and report are adequate for the imaging scope defined at step 2.
+
+The location of imaging and the equipment inventory that supports the defined scope are [Hospital to define — where imaging is physically located and the equipment inventory for the defined scope]. Equipment that is not in that inventory is not used to issue a report under this policy.
+
+The staffing establishment by role — reporting clinician, technician, and any other role the scope requires — is [Hospital to define — the imaging staffing establishment by role]. Cover for the hours the scope states, including the out-of-hours arrangement, is written. A study is not acquired when the person who must report it is not available and no documented reporting arrangement exists.
+
+Verification of qualifications sits with the human-resource policies of {{HOSPITAL_NAME}}. Adequacy for the defined scope sits here.""",
+
+"""4. Standardised results within a defined time
+
+An imaging result is usable only if a clinician who did not perform the study can act on it without guessing which patient it belongs to, what was asked, what was found, and who takes responsibility for the reading. That is why this step exists as a documented-evidence anchor rather than as a habit of whoever is reporting that day, and why a film or an image sent without a report, or a report that cannot be joined to the unique identification number, is treated as a defect.
+
+Every imaging report issued by {{HOSPITAL_NAME}}, including a report on an outsourced study received back under step 6, is issued in a standardised manner and contains at least:
+
+- the patient's name and unique identification number, matching the registration record;
+- the date and time of the study, and the date and time of the report;
+- the modality and the body part or region examined;
+- the clinical indication, taken from the requisition;
+- the findings;
+- the impression or conclusion;
+- the name and designation of the person who reports, so that the reading is attributable.
+
+A report missing any of those elements is incomplete. The common error is to treat the image as the result and the report as optional paperwork that can follow later. The image is the acquisition; the result is the attributable report. Until the report exists, the study has not been reported.
+
+Results are available within a defined turnaround time. The categories against which turnaround time is defined are [Hospital to define — the categories against which TAT is defined], and the turnaround time for each category is [Hospital to define — the TAT for each category of imaging study]. Categories exist so that an emergency study is not timed as if it were a routine out-patient film. A single hospital-wide number that does not distinguish urgency is not a defined time frame; it is an average that hides the patient who could not wait.
+
+Turnaround time is measured from the completed acquisition (or from receipt of the outsourced report) to the attributable report being available to the requesting clinician. A report that has been typed but not released, or released into a system the requester cannot see, has not met the time.
+
+The report template and the place it is held are [Hospital to define — where the standardised imaging-report template is held].""",
+
+"""5. Critical imaging results intimated immediately
+
+A critical imaging finding is a finding that, if the requesting clinician does not learn of it at once, can reasonably be expected to change management in a way that waiting for the routine report would miss. The list is written because "everyone knows what is critical" is how a pneumothorax sits in a reporting queue while the patient is sent home.
+
+The written list of imaging findings treated as critical at {{HOSPITAL_NAME}} is [Hospital to define — the written list of imaging findings treated as critical]. The list is local. Findings that commonly appear on such lists — for example a pneumothorax on a chest radiograph, or intracranial haemorrhage on a cranial study — are illustrations of the kind of finding the list is for; they are not a mandated set, and they do not replace the hospital's own list. A finding not on the list may still be notified if the reporting clinician judges it cannot wait; a finding on the list is always notified.
+
+This list is not the laboratory critical-value list. Laboratory critical values are owned by the laboratory-services policy of {{HOSPITAL_NAME}}. The two lists are held separately, the two registers are separate, and a staff member asked "what is critical" is able to say which list they mean.
+
+When a critical imaging finding is identified, it is intimated immediately to the personnel concerned — the requesting clinician, or the clinician currently responsible for the patient — and not merely filed. Immediate means before the routine report queue, and by a method that produces a person at the other end, not a result released into a system. The person who notifies, the method, and the out-of-hours route are [Hospital to define — who notifies a critical imaging result, by which method, and the out-of-hours route].
+
+The recipient reads back the patient identity (name and unique identification number) and the finding. The notification is recorded in [Hospital to define — the critical-imaging-result register], with the unique identification number, the finding, the date and time of the study, the date and time of notification, the person who notified, the person who received, and that read-back occurred. A register entry without a recipient is not a notification.
+
+The common error is to treat "the report is in the system" as intimation. It is not. A critical finding that nobody was told of is a missed communication, whether or not the report was later perfect.
+
+If the responsible clinician cannot be reached, the finding is escalated along the out-of-hours route rather than left as a message. The patient remains the reason the call is made.""",
+
+"""6. Outsourcing imaging tests that are not available here
+
+An imaging test that falls within the clinical need of a patient {{HOSPITAL_NAME}} has accepted, and that is not available here, is not simply declined. It is outsourced to an organisation selected because of its quality-assurance system, or the patient is transferred or referred under the registration, admission and transfer policy where the whole episode of care belongs elsewhere.
+
+Outsourcing is a clinical act this hospital remains responsible for. The receiving organisation is identified in writing. The quality-assurance system on which the selection was based is examined and recorded before the first study is sent, and is re-examined at [Hospital to define — the interval at which the outsourced imaging provider's QA is re-examined]. The receiving organisation or organisations, and the QA evidence held for each, are [Hospital to define — the receiving organisation(s) for outsourced imaging and the QA evidence held for each].
+
+The quality-assurance evidence is not restricted to laboratory accreditation. Imaging is not a laboratory test. Acceptable evidence includes, as applicable to the modality: a current AERB authorisation where the receiver uses radiation-generating equipment; accreditation of the receiving organisation under NABH or another healthcare accreditation the hospital has documented as acceptable; or a documented quality-assurance system the hospital has itself examined — equipment quality-assurance records, reporting arrangements, turnaround times, and a critical-result pathway. A National Accreditation Board for Testing and Calibration Laboratories certificate, by itself, does not speak to an imaging centre. Treating it as if it did is the common error this step exists to stop.
+
+The requisition travelling with the patient or the study carries the unique identification number, the clinical indication and the question being asked. The report coming back is issued to the requesting clinician in the standardised manner at step 4, within the turnaround time that applies to that category, and a critical finding is intimated under step 5. Outsourcing does not suspend those two rules.
+
+A verbal arrangement with a nearby centre, or a centre chosen because it is convenient rather than because its quality-assurance system was examined, is not outsourcing under this policy.""",
+
+"""7. Quality-assurance programme for imaging
+
+{{HOSPITAL_NAME}} implements a quality-assurance programme for imaging services. A programme that exists as a file and is not used on the days studies are reported is not implemented. This is a documented-evidence anchor: an assessor will ask who leads it, what it looked at last, and what was done with a reject, a repeat or an equipment-performance failure — not whether a document titled quality assurance can be produced.
+
+The named lead of the imaging quality-assurance programme is [Hospital to define — the named lead of the imaging QA programme]. That person is responsible for the programme running, not merely for the folder.
+
+The programme includes at least:
+
+- reject and repeat analysis — every rejected or repeated acquisition is recorded with the unique identification number, the modality, the reason, and whether the cause was patient factors, positioning, exposure or equipment; the analysis is reviewed at the interval below, because a pattern of repeats is a training problem or an equipment problem and is not visible one film at a time;
+- equipment-performance checks appropriate to each modality in the defined scope, recorded, with a failure removing the equipment from reporting use until it is restored under step 9;
+- the peer review at step 8;
+- the calibration and maintenance at step 9.
+
+The intervals at which reject/repeat analysis and equipment-performance checks are reviewed are [Hospital to define — the intervals at which reject/repeat analysis and equipment-performance checks are reviewed]. Findings, and the action taken, are recorded. A review that never produces an action is still a review; a folder that is never opened is not.
+
+Quality assurance of imaging is not the same as a biomedical service contract. A contract that attends when something breaks is breakdown maintenance. This programme is the continuing look at whether the service is producing usable, attributable, timely results from equipment that is fit to produce them.""",
+
+"""8. Peer review of imaging protocols and results
+
+The quality-assurance programme addresses periodic internal or external peer review of imaging protocols and results, using appropriate sampling.
+
+The sampling method and the interval are [Hospital to define — the sampling method and interval for peer review of imaging protocols and results]. The review looks at whether the protocol used was appropriate to the indication, and whether the result issued was adequate as a report under step 4. Disagreements are recorded and fed to the named lead at step 7.
+
+The American College of Radiology RADPEER programme is listed as chapter reference 14 of the AAC chapter and may be used as a method. It is not mandated. A hospital that uses another documented peer-review method, internal or external, with a stated sample, meets this step. A hospital that names RADPEER in a policy and does not sample does not.""",
+
+"""9. Calibration and maintenance of imaging equipment
+
+The quality-assurance programme includes periodic calibration and maintenance of all imaging equipment. A report is a reading of what the equipment produced. Equipment whose required quality-assurance test is overdue is not a source of reports; it is a source of numbers that look like findings.
+
+Calibration, preventive maintenance, and the quality-assurance tests required by the AERB authorisation where they apply, are performed at [Hospital to define — the calibration and AERB quality-assurance interval for each class of imaging equipment]. Biomedical engineering performs or coordinates the work under the hospital-wide equipment programme; this step owns that imaging equipment is not omitted from that programme, that AERB-required tests are done when they apply, and that the imaging service will not issue a report from a unit that is overdue.
+
+The record for each unit shows the last calibration or required quality-assurance test, the next due date, and the result. A due date that has passed without a recorded test takes that unit out of reporting use until the test is done and the unit is restored. The common error is to keep reporting "until the engineer comes". The engineer coming later does not make the reports issued in the meantime true.
+
+Breakdown maintenance is recorded. A unit that cannot meet its defined scope is treated as a change to capability under the definition-and-display policy of {{HOSPITAL_NAME}} until it is restored: the imaging scope, and if necessary the display, say what is actually available.
+
+This step does not replace the hospital-wide equipment programme. It is the imaging-specific rule that programme must satisfy for these machines.""",
+
+"""10. Records, review and the order of operations
+
+Every imaging licence and authorisation, every report, every critical-result notification, every outsourced study, every reject or repeat, every peer-review sample, and every calibration or required quality-assurance test is recorded against the unique identification number where a patient is involved, and is retrievable.
+
+The quality or accreditation coordinator audits a sample of these records at [Hospital to define — the audit interval for imaging records] for reports that carry the standard elements and met the turnaround time, for critical findings that were intimated with read-back, for outsourced work that sits against examined quality-assurance evidence, for reject/repeat review that happened at the stated interval, and for equipment that was not used to report while overdue.
+
+This policy is reviewed at [Hospital to define — the review interval for this policy], and sooner when a modality is added or withdrawn, when an authorisation is varied, when a critical-result incident exposes a gap, or when the laboratory-and-imaging-safety policy that this document hands safety to is revised."""
+]
+
+RESPONSIBILITY = """The head of the institution is accountable for {{HOSPITAL_NAME}} providing no imaging service it is not licensed to provide, for the imaging scope matching the services the hospital has defined, and for reports not being issued from equipment overdue for a required quality-assurance test.
+
+The person who owns the imaging-licence compliance calendar at step 1 keeps every imaging licence and authorisation current and holds the set.
+
+The head of imaging, or the reporting clinician where there is no separate head, authors the imaging scope against the service directory, leads or nominates the named quality-assurance lead, decides what is outsourced, and remains responsible for the report issued in this hospital's name.
+
+Reporting clinicians issue standardised reports within the defined turnaround time, notify critical findings immediately with read-back, and do not report from equipment that step 9 has taken out of use.
+
+Technicians acquire studies against the defined protocols, record rejects and repeats, use only equipment that is in current quality-assurance status, and do not perform a study the scope does not include.
+
+The named quality-assurance lead runs the programme at steps 7 to 9, including peer-review sampling and the calibration calendar.
+
+Whoever arranges outsourcing holds the quality-assurance evidence for each receiver and does not send a study to a centre that evidence does not support.
+
+Biomedical engineering performs or coordinates calibration and maintenance under the hospital-wide equipment programme, and informs imaging when a unit is overdue or restored.
+
+The quality or accreditation coordinator audits the records at step 10 and reports findings to the head of the institution.
+
+All staff are expected to treat a missing unique identification number, a critical finding that was not notified, or a report issued from overdue equipment, as a defect, and to report it."""
+
+REFERENCES = """- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Access, Assessment and Continuity of Care chapter, standard AAC.5.
+- Pre-Conception and Pre-Natal Diagnostic Techniques (Prohibition of Sex Selection) Act, 1994 — registration, records and the prohibition of sex determination, where ultrasonography capable of sex determination is performed.
+- Atomic Energy Act, 1962, and the Atomic Energy (Radiation Protection) Rules, together with the authorisations issued by the Atomic Energy Regulatory Board for diagnostic radiology.
+- Clinical Establishments (Registration and Regulation) Act, 2010 and the rules under it, where adopted by the State — registration of the establishment; or the corresponding State clinical establishments or nursing home registration law where the 2010 Act is not in force.
+- American College of Radiology RADPEER — listed as chapter reference 14 of the AAC chapter; a method of peer review that may be used and is not mandated.
+- Internal documents of {{HOSPITAL_NAME}}: the service directory and the imaging department scope of services; the imaging-licence compliance calendar; the standardised imaging-report template; the written list of critical imaging findings and the critical-imaging-result register; the outsourcing file with quality-assurance evidence of each receiver; the imaging quality-assurance programme records including reject/repeat analysis, peer review and calibration; the laboratory-and-imaging-safety policy; the laboratory-services policy; the registration, admission and transfer policy; and the hospital-wide equipment programme."""
+
+DISTRIBUTION = """Controlled master copy: office of the head of the institution, {{HOSPITAL_NAME}}, with the quality or accreditation coordinator.
+
+Copies issued to: the imaging department; every reporting clinician; the technicians; the person who owns the imaging-licence calendar; the named quality-assurance lead; whoever arranges outsourcing; biomedical engineering; reception and the emergency area insofar as they requisition imaging; and every head of a clinical department that depends on imaging.
+
+The current version is available to all staff at [Hospital to define — intranet location or nursing station folder]. The report template, the critical-finding list, the licence calendar and the equipment quality-assurance status — the working documents this policy requires — are held in the imaging department.
+
+Superseded versions are withdrawn from all points of use on issue of a revision, and one dated copy of each is retained by the quality or accreditation coordinator."""
+
+ABBREVIATIONS = """Abbreviations already defined in the HIC.1 to HIC.6 master policies are not repeated here. A reader using this document on its own should refer to those policies for the shared glossary, including NABH, SHCO and OE.
+
+The following abbreviations are used in this document and are not defined in HIC.1 to HIC.6:
+
+AERB — Atomic Energy Regulatory Board
+PC-PNDT — Pre-Conception and Pre-Natal Diagnostic Techniques (Prohibition of Sex Selection) Act
+TAT — Turnaround Time
+UID — Unique Identification Number
+
+Any additional abbreviation used locally within {{HOSPITAL_NAME}} is [Hospital to define] and is added to this list at the next revision."""
+
+STATUTE_CLAUSE = (
+    "the Pre-Conception and Pre-Natal Diagnostic Techniques (Prohibition of Sex Selection) Act, 1994, "
+    "the Atomic Energy Act, 1962 and the Atomic Energy (Radiation Protection) Rules together with the "
+    "authorisations issued by the Atomic Energy Regulatory Board, and the Clinical Establishments "
+    "(Registration and Regulation) Act, 2010 and the rules under it, where adopted by the State — or "
+    "the corresponding State clinical establishments or nursing home registration law where the 2010 "
+    "Act is not in force"
+)
+DISCLAIMER = make_disclaimer(STATUTE_CLAUSE)
+
+OE_MAPPING = [
+    {
+        "oe_code": "AAC.5.a",
+        "requirement": "Imaging services comply with legal and other requirements",
+        "steps": "Steps 1, 10",
+        "evidence": "The imaging-licence compliance calendar naming the owner; current AERB authorisation for each radiation-generating equipment in use; PC-PNDT registration and statutory records where ultrasonography capable of sex determination is performed; clinical-establishment or nursing-home registration consistent with the imaging scope, where that law applies; the audit sample at step 10 of licences still current",
+        "responsible": "The named calendar owner keeps licences current; head of the institution is accountable that no unlicensed imaging is provided; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "AAC.5.b",
+        "requirement": "Scope of the imaging services is commensurate to the services provided by the organization",
+        "steps": "Steps 2, 10",
+        "evidence": "The current imaging department scope of services set against the service directory; the record of the match check when the directory last changed; the list of modalities provided here versus outsourced under step 6",
+        "responsible": "Head of imaging authors the scope against the directory; administration maintains the directory under the definition-and-display policy; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "AAC.5.c",
+        "requirement": "The infrastructure (physical and equipment) and human resources are adequate to provide for its defined scope of services",
+        "steps": "Steps 3, 10",
+        "evidence": "The equipment inventory for the defined imaging scope; the staffing establishment by role with the out-of-hours reporting arrangement; the location of imaging as used",
+        "responsible": "Head of imaging and administration keep space, equipment and staff matched to the scope; human-resource policies verify qualifications; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "AAC.5.d",
+        "requirement": "Imaging results are available in the standardised manner within a defined time frame",
+        "steps": "Steps 4, 10",
+        "evidence": "The written standardised imaging-report template requiring, on every report including an outsourced report received back, the patient's name and unique identification number matching the registration record, the date and time of the study and of the report, the modality and region examined, the clinical indication taken from the requisition, the findings, the impression or conclusion, and the name and designation of the person who reports; the written categories against which turnaround time is defined, distinguishing urgency rather than applying a single hospital-wide average, and the stated turnaround time for each category measured from completed acquisition (or from receipt of the outsourced report) to the attributable report being available to the requesting clinician; sample reports across categories showing every standard element present and the unique identification number matching registration; sample timed records showing the acquisition (or receipt) time and the release time against the stated turnaround time for that category, including at least one emergency or urgent category where that category exists; records showing a report missing a standard element, or released into a system the requester cannot see, was treated as incomplete rather than as having met the time; the place the current template is held; induction or briefing records showing reporting clinicians have been shown the template and the times; the audit sample at step 10 of reports for standard elements and for turnaround time actually met",
+        "responsible": "Reporting clinicians issue the standardised report within the defined time; technicians complete acquisition so that the clock can start; whoever receives an outsourced report releases it in the same form; quality or accreditation coordinator audits completeness and time",
+    },
+    {
+        "oe_code": "AAC.5.e",
+        "requirement": "Critical results are intimated immediately to the personnel concerned",
+        "steps": "Steps 5, 10",
+        "evidence": "The written list of imaging findings treated as critical at this hospital, dated and approved, held separately from the laboratory critical-value list, with a recorded statement that the examples used in training are illustrations and not a substitute for the hospital's list; the written notification method naming who notifies, how (a method that produces a person at the other end, not a system release), and the out-of-hours escalation route when the responsible clinician cannot be reached; the instruction that notification is immediate — before the routine report queue — and that read-back of patient identity (name and unique identification number) and of the finding is required; the critical-imaging-result register with unique identification number, finding, date and time of the study, date and time of notification, person who notified, person who received, and that read-back occurred; sample register entries spanning in-hours and out-of-hours, each showing a named recipient rather than a system-release note; records of any finding notified that was not on the list, with the reporting clinician's judgement that it could not wait; briefing records of reporting clinicians and of the staff who may receive a notification; the audit sample at step 10 of critical findings against the list and against register entries that show intimation with read-back rather than filing",
+        "responsible": "Reporting clinicians identify, notify immediately and record read-back; the named notifier and the out-of-hours route operate when the reporter is not the caller; receiving clinicians confirm identity and finding; quality or accreditation coordinator audits the register against the list; laboratory-services policy owns the separate laboratory critical-value pathway",
+    },
+    {
+        "oe_code": "AAC.5.f",
+        "requirement": "Imaging tests not available in the organization are outsourced to organization(s) based on their quality assurance system",
+        "steps": "Steps 6, 10",
+        "evidence": "The written list of imaging tests this hospital outsources, mapped to the defined imaging scope and to the clinical services that depend on them; the named receiving organisation for each test; the quality-assurance evidence held before the first study was sent — current AERB authorisation where the receiver uses radiation-generating equipment, NABH or other documented healthcare accreditation the hospital has recorded as acceptable, or a quality-assurance system the hospital itself examined (equipment quality-assurance records, reporting arrangements, turnaround times, critical-result pathway) — and the record that a laboratory-accreditation certificate was not treated as sufficient evidence for an imaging centre; the interval at which that evidence is re-examined and the last re-examination; sample requisitions travelling with the outsourced study showing unique identification number, indication and the question asked; sample reports received back issued to the requesting clinician in the standardised manner within the turnaround time for that category, with any critical finding intimated under step 5; the audit sample at step 10 of outsourced work sitting against examined quality-assurance evidence rather than against convenience",
+        "responsible": "Head of imaging decides what is outsourced and on what quality-assurance evidence; whoever arranges outsourcing holds the file and does not send to a centre the evidence does not support; reporting path and critical-result path remain this hospital's after the report returns; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "AAC.5.g",
+        "requirement": "The quality assurance programme for imaging services is implemented",
+        "steps": "Steps 7, 8, 9, 10",
+        "evidence": "The written imaging quality-assurance programme naming the lead by role, stating that the programme is the continuing look at usable, attributable, timely results from equipment fit to produce them, and distinguishing that look from a biomedical breakdown-maintenance contract; reject and repeat records with unique identification number, modality, reason (patient factors, positioning, exposure or equipment) and the review of those records at the stated interval with the action taken; equipment-performance check records for each modality in the defined scope, with a recorded failure removing the unit from reporting use until restoration under step 9; the peer-review sampling records at step 8; the calibration and required quality-assurance-test records at step 9; the named lead's review notes showing the programme was opened at the stated intervals rather than held as an unused file; briefing records of technicians and reporting clinicians on recording rejects and repeats; the audit sample at step 10 of reject/repeat review actually occurring at the stated interval and of equipment-performance failures that stopped reporting",
+        "responsible": "The named quality-assurance lead runs the programme; technicians record rejects, repeats and performance checks; reporting clinicians and the head of imaging act on findings; biomedical engineering restores equipment under step 9; quality or accreditation coordinator audits implementation rather than the existence of a folder",
+    },
+    {
+        "oe_code": "AAC.5.h",
+        "requirement": "The programme addresses periodic internal / external peer review of imaging protocols and results using appropriate sampling",
+        "steps": "Steps 8, 10",
+        "evidence": "The written sampling method and interval for peer review of imaging protocols and results, internal or external; sample review records showing protocol appropriateness and report adequacy, with disagreements fed to the quality-assurance lead; where RADPEER is used, the records of that use — RADPEER is optional",
+        "responsible": "The named quality-assurance lead operates the sample; reporting clinicians participate; quality or accreditation coordinator audits that sampling occurred",
+    },
+    {
+        "oe_code": "AAC.5.i",
+        "requirement": "The programme includes periodic calibration and maintenance of all equipment",
+        "steps": "Steps 9, 10",
+        "evidence": "The written calibration and maintenance plan for every imaging unit in the defined-scope inventory, stating for each class of equipment the interval for calibration, for preventive maintenance, and for the quality-assurance tests the AERB authorisation requires where they apply; the record on each unit of the last such test, the next due date and the result; the rule, evidenced in use, that a due date which has passed without a recorded test takes that unit out of reporting use until the test is done and the unit is restored — sample of a unit taken out of use, or a recorded statement that no unit was overdue in the period, either of which shows the rule is applied rather than written; breakdown-maintenance records; records showing a unit that could not meet the defined scope was treated as a change to capability under the definition-and-display policy until restored; the interface with the hospital-wide equipment programme (inventory and logs held there; imaging-specific AERB tests and the no-report-if-overdue rule held here); the audit sample at step 10 of equipment that was not used to report while overdue",
+        "responsible": "Biomedical engineering performs or coordinates calibration and maintenance and informs imaging when a unit is overdue or restored; the named quality-assurance lead and head of imaging refuse reports from overdue equipment; facility-management policies own the hospital-wide equipment programme; quality or accreditation coordinator audits the due-date rule in use",
+    },
+]
+
+UNIVERSAL_FACTS_CHECKLIST = """Universal (non-NABH) facts included in this draft, and where each was verified. Check these first.
+
+SOURCE OF THE OE TEXT
+0. AAC.5 standard text and all nine OEs were read directly from the official NABH SHCO Standards 3rd Edition PDF (August 2022), Chapter 1 Access, Assessment and Continuity of Care, printed pages 52-53 (PDF page index 58-59). The PDF was downloaded on 2026-08-17 from the NABH website's Explore NABH Standards page. Levels: AAC.5.a Core, AAC.5.b Commitment, AAC.5.c Commitment, AAC.5.d Commitment, AAC.5.e Commitment, AAC.5.f Commitment, AAC.5.g Commitment, AAC.5.h Achievement, AAC.5.i Commitment.
+   FIVE OEs CARRY THE ASTERISK -- AAC.5.d, AAC.5.e, AAC.5.f, AAC.5.g and AAC.5.i. The draft builds five separate deep blocks (step 4 for d; step 5 for e; step 6 for f; step 7 for g; step 9 for i). AAC.5.a (Core, legal compliance), AAC.5.b, AAC.5.c and AAC.5.h are unasterisked and are correspondingly Tier 2.
+   Verified three ways on 2026-08-17: scripts/asterisk_extract.py re-run against the freshly downloaded PDF (self-validation passed; output matched committed scripts/shco_oe_asterisks.json on all 408 entries), the AAC.5 pages read directly from the extracted page text, and the committed asterisk file. AAC.5.e was one of the 14 mismatches of the 2026-08-10 audit (asterisk on a wrapped continuation line) and is now correctly true. scripts/shco_book_knowledge.json still carries the pre-correction false for AAC.5.e and was not used as the source of truth.
+
+TIERING UNDER THE STANDING RULE
+1. Two-tier depth standing rule of 2026-08-10 applies. Tier 1: AAC.5.d, AAC.5.e, AAC.5.f, AAC.5.g, AAC.5.i -- procedure steps 4, 5, 6, 7 and 9 carry the reasoning (why a report is the result rather than the image, why "in the system" is not intimation, why laboratory accreditation is not imaging QA, why a QA file is not a programme, why a report from overdue equipment is not a finding). Tier 2: AAC.5.a (step 1), AAC.5.b (step 2), AAC.5.c (step 3) and AAC.5.h (step 8) -- requirement and method without extended rationale. Reviewer to note the shallower treatment of a, b, c and h is a DECISION UNDER THE STANDING RULE, not an omission. AAC.5.a is Core (assessed at every visit) but not asterisked; Core is not a substitute for the asterisk when allocating depth.
+
+CROSS-REFERENCE AND OVERLAP CHECK
+2. Tier 1 cross-check (2026-08-17) of AAC.5.d/e/f/g/i against all six approved HIC masters and the approved AAC.1 master, plus the unapproved AAC.2, AAC.3, AAC.7 and AAC.8 drafts. Files: policies/drafts/hic1_draft.json through hic6_draft.json and aac1_draft.json through aac3, aac7, aac8. Search terms: imaging, radiology, AERB, PC-PNDT, critical result, turnaround, outsource, calibration, quality assurance.
+   AAC.1: deliberate division -- AAC.1 owns that the imaging department scope of services exists and is displayed as part of defined services; this draft owns that the imaging scope matches the hospital's services. AAC.1 already names AERB licensing and PC-PNDT as statutes attaching to specific services. This draft takes those statutes over as the imaging-licence calendar. Not an overlap; the documents agree. AAC.1's service-display vs isolation-signage split is restated from the other side: this document does not own imaging safety signage (AAC.6 does).
+   AAC.2: UID generation is AAC.2.b; this draft requires the number on every report. Not an overlap.
+   HIC.1-6: no subject-matter overlap on imaging reporting, critical imaging findings, imaging outsourcing or imaging equipment QA. HIC.3 owns BMW authorisation and SPCB consent -- explicitly refused here (step 1, Scope). Nothing added to the reconciliation list against the approved set.
+3. FORWARD REFERENCES CREATED BY THIS DRAFT: laboratory services (critical values, lab QA, lab outsourcing) -- AAC.4, expected in the same pass, Scope of this document states the lists and registers are distinct; laboratory and imaging safety (screening, personnel monitoring, imaging signage) -- AAC.6, drafted in the same pass, Scope of both states AAC.5 owns licences and AAC.6 owns safety signage; hospital-wide equipment programme -- FMS.3, not yet drafted (inventory and logs theirs; imaging AERB tests and no-report-if-overdue this document's); credentialing -- HRM, not yet drafted; medical record structure -- IMS, not yet drafted. Each is a deliberate boundary.
+4. T2 QUICK CHECK (not a full cross-reference audit): AAC.5.a licences vs AAC.1 statutory display of PC-PNDT/AERB -- AAC.1 notes that those notices share display space; this owns the licence; AAC.6.e owns safety signage including the PC-PNDT notice. Flagged in both Scopes. AAC.5.a vs HIC.3/FMS PCB consent -- one-line refusal in Scope and step 1; not a contradiction. AAC.5.c infra/HR vs AAC.1.b resourcing of defined services and vs HRM credentialing -- AAC.1.b already flagged toward HRM; this owns adequacy for the imaging scope only. AAC.5.h RADPEER vs nothing approved. None of these is a contradiction with an approved document.
+
+STATUTORY AND EXTERNAL FACTS
+5. PC-PNDT Act, 1994 -- cited at the level of registration, records and the prohibition of sex determination, only where ultrasonography capable of sex determination is performed. No section number. No assertion that {{HOSPITAL_NAME}} performs ultrasonography.
+6. Atomic Energy Act, 1962 and the Atomic Energy (Radiation Protection) Rules -- cited together with AERB authorisations, at the level of the requirement that diagnostic radiology using radiation-generating equipment is authorised. No dose limit is stated. No section number.
+7. Clinical Establishments Act, 2010 -- cited only as applying where the State has adopted it, with the State-law alternative. No section number. No assertion which law applies to {{HOSPITAL_NAME}}.
+8. ACR RADPEER -- chapter reference 14 of the AAC chapter. Cited only as a method that may be used. Not mandated. No RADPEER scoring scale is imported.
+9. EXTERNAL CLINICAL/TECHNICAL FACT-CHECKING (Tier 1 OEs): standard report elements (identity, indication, findings, impression, reporter) are organisational, matching the UID already required by AAC.2 and ordinary diagnostic-report practice; no named reporting lexicon (RadLex, BI-RADS, Fleischner) is prescribed. Critical-result intimation with read-back is the same communication principle AAC.2 already used from WHO Patient Safety Solutions (2007) for handover; no mandated list of critical imaging diagnoses is stated -- the list is [Hospital to define], with pneumothorax and intracranial haemorrhage given only as "for example" illustrations. Outsourcing QA is organisational; NABL-only as a test is refused because NABL accredits laboratories, not as a slur on NABL. No numeric TAT, no sample size for peer review, no calibration interval in months. Consistent with the no-numbers default.
+10. NO NUMBERS ARE STATED as requirements -- no TAT in hours, no reject-rate thresholds, no sample sizes, no occupancy of a reporting roster, no dose limits. Every such value is [Hospital to define].
+
+EDITORIAL POSITIONS TAKEN
+11. Step 4's rule that the image is the acquisition and the result is the attributable report is an editorial position consistent with the OE requiring results in a standardised manner.
+12. Step 5's refusal to treat system-release as intimation, and the requirement for read-back, are editorial positions; the standard requires immediate intimation, not these mechanics.
+13. Step 6's refusal to treat a NABL certificate as sufficient evidence for an imaging receiver is an editorial position required to stop a common category error; the standard requires a quality-assurance system, not a named accreditor.
+14. Step 9's rule that overdue equipment does not issue reports is an editorial position; the standard requires periodic calibration and maintenance, not this operational lock.
+
+DISCLAIMER BLOCK -- STATUTE-MATCHED UNDER THE 2026-08-17 STANDING RULE
+15. Paragraphs 1, 3 and 4 are the shared HIC.3-6 block, hash-checked at build time. Paragraph 2 names the PC-PNDT Act 1994, the Atomic Energy Act 1962 and the Radiation Protection Rules with AERB authorisations, and the Clinical Establishments Act 2010 (or corresponding State law) -- the statutes this document's References actually cite. It does NOT name the Bio-Medical Waste Management Rules, 2016 or the Food Safety and Standards Act, 2006. The HIC wholesale inherit is refused by the build.
+
+DELIBERATELY NOT INCLUDED
+- Imaging safety screening, personnel monitoring (TLD/OSL), lead aprons, ALARA as a working practice, and imaging signage -- AAC.6.
+- Laboratory results, laboratory critical values, laboratory outsourcing, laboratory QA -- AAC.4.
+- PCB consent / SPCB BMW authorisation -- HIC.3 / FMS.
+- Hospital-wide equipment inventory and breakdown logs -- FMS.3.
+- Credentialing method -- HRM.
+- A mandated RADPEER programme or a mandated list of critical diagnoses.
+- Numeric occupational dose limits.
+- The five optional sections are left unset, matching HIC.1-6 and AAC.1.
+
+HOSPITAL-SPECIFIC VALUES LEFT AS [Hospital to define] -- 21 fillable blanks in the rendered document: 2 in the exact form "[Hospital to define]" (one in Abbreviations, one inside the shared Disclaimer block) and 19 in the guidance-bearing form "[Hospital to define - what to state]". A search for the exact string finds 2 of 21; a search for "Hospital to define" without brackets finds all 21, and that is the search a hospital should be told to run. The figure is produced by policy_placeholder_audit.py across every rendered field in both forms, which also asserts that no nested placeholder exists.
+
+The values the hospital must supply: the role that owns the imaging-licence compliance calendar; where the current imaging licences and the calendar are held; where imaging is physically located and the equipment inventory for the defined scope; the imaging staffing establishment by role; the categories against which TAT is defined; the TAT for each category of imaging study; where the standardised imaging-report template is held; the written list of imaging findings treated as critical; who notifies a critical imaging result, by which method, and the out-of-hours route; the critical-imaging-result register; the interval at which the outsourced imaging provider's QA is re-examined; the receiving organisation(s) for outsourced imaging and the QA evidence held for each; the named lead of the imaging QA programme; the intervals at which reject/repeat analysis and equipment-performance checks are reviewed; the sampling method and interval for peer review of imaging protocols and results; the calibration and AERB quality-assurance interval for each class of imaging equipment; the audit interval for imaging records; the review interval for this policy; the intranet or folder location; and any additional local abbreviation."""
+
+SQL_HEADER = """-- Source: NABH SHCO Standards 3rd Edition (August 2022), Chapter 1, printed pages 52-53
+-- (PDF page index 58-59). Levels: a Core, b Commitment, c Commitment, d Commitment,
+-- e Commitment, f Commitment, g Commitment, h Achievement, i Commitment.
+-- FIVE OEs CARRY THE ASTERISK -- AAC.5.d, AAC.5.e, AAC.5.f, AAC.5.g, AAC.5.i.
+-- AAC.5.a is Core and NOT asterisked. AAC.5.e asterisk YES (2026-08-10 correction).
+-- UNAPPROVED DRAFT. Do not run this insert until the owner confirms the write.
+"""
+
+if __name__ == "__main__":
+    emit_and_verify(
+        standard_code=STANDARD_CODE,
+        chapter=CHAPTER,
+        oe_codes=OE_CODES,
+        policy_title=POLICY_TITLE,
+        purpose=PURPOSE,
+        scope=SCOPE,
+        policy_statement=POLICY_STATEMENT,
+        procedure_steps=PROCEDURE_STEPS,
+        responsibility=RESPONSIBILITY,
+        references_text=REFERENCES,
+        distribution=DISTRIBUTION,
+        abbreviations=ABBREVIATIONS,
+        disclaimer=DISCLAIMER,
+        oe_mapping=OE_MAPPING,
+        universal_facts_checklist=UNIVERSAL_FACTS_CHECKLIST,
+        version=VERSION,
+        revision_history=REVISION_HISTORY,
+        tier1_oes=TIER1_OES,
+        statute_clause=STATUTE_CLAUSE,
+        sql_header=SQL_HEADER,
+        json_name="aac5_draft.json",
+        sql_name="aac5_insert.sql",
+    )
