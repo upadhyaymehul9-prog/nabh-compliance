@@ -1,0 +1,294 @@
+# -*- coding: utf-8 -*-
+"""Builds the PRE.1 master policy draft: JSON for review + SQL for later insert.
+
+UNAPPROVED DRAFT. Do not insert, approve, or write this to Supabase until the
+owner confirms.
+
+THIS IS DRAFTED UNDER THE TWO-TIER DEPTH STANDING RULE (2026-08-10) AND THE
+DISCLAIMER STATUTE-MATCHING STANDING RULE (2026-08-17), both in
+scripts/master-policy-todos.md.
+
+Tier is decided by doc_required / the asterisk in the official PDF:
+  Tier 1 (full treatment): PRE.1.a, PRE.1.b
+  Tier 2 (lighter pass):   PRE.1.c, PRE.1.d, PRE.1.e
+
+TWO of five OEs are asterisked. The draft builds deep blocks for a and b.
+c-e are lean.
+
+Official source: NABH Standards for Small Healthcare Organisations, 3rd Edition
+(August 2022), Chapter 4 Patient Rights and Education, standard PRE.1 and OEs
+PRE.1.a-e, read from the official standards PDF (downloaded 2026-08-17 from the
+NABH website's Explore NABH Standards page), printed page 86, PDF page index 92.
+Chapter intent and summary: printed page 85, PDF page index 91.
+
+Asterisks verified 2026-08-17: scripts/asterisk_extract.py re-run against that
+download (self-validation passed, 408 OEs, 132 asterisks, output matched the
+committed scripts/shco_oe_asterisks.json on all 408 PRE entries and all 408
+entries overall) and the PRE.1 page read directly. PRE.1.a and PRE.1.b carry
+the asterisk; PRE.1.c-e are unasterisked.
+"""
+from policy_build_common import emit_and_verify, make_disclaimer
+
+STANDARD_CODE = "PRE.1"
+CHAPTER = "PRE"
+OE_CODES = [
+    "PRE.1.a", "PRE.1.b", "PRE.1.c", "PRE.1.d", "PRE.1.e",
+]
+TIER1_OES = ["PRE.1.a", "PRE.1.b"]
+
+POLICY_TITLE = "Patient and Family Rights and Responsibilities"
+
+VERSION = "1.0"
+REVISION_HISTORY = [
+    {"version": "1.0", "date": "17-08-2026", "description": "Initial release."},
+]
+
+PURPOSE = """This document sets out how {{HOSPITAL_NAME}} documents, displays and makes patients and families aware of their rights and responsibilities; how those rights and responsibilities are actively promoted; how the organisation protects them; how a violation is reported; and how top leadership monitors, analyses and takes corrective and preventive action on violations.
+
+The chapter intent is that the organisation defines, protects and promotes the patient and family's rights and responsibilities, that staff are aware of them and trained to protect them, and that patients are informed of their rights and educated about their responsibilities at the time of entering the organisation. A charter that lives only in the quality file, a poster the patient cannot read, or a rights list that is never mentioned after admission, is not that intent. This document is the process that makes the intent operational for documentation, display, awareness, promotion, protection and the handling of violations.
+
+The content of the rights themselves — dignity, privacy, consent, costs, complaints, records and the rest — is listed under the beliefs-values-and-decision-making policy of {{HOSPITAL_NAME}} (PRE.2, sibling). This document owns that a documented set exists, is displayed, is made known, is promoted and is protected. PRE.2 owns what the set contains."""
+
+SCOPE = """This policy applies to every point at which a patient or family enters or is cared for at {{HOSPITAL_NAME}}: registration, out-patient, emergency, day-care, in-patient wards, intensive or high-dependency areas where they exist, and the operation theatre insofar as rights are displayed and staff there must protect them. It binds the staff who display and explain rights and responsibilities, every clinician and nurse who must protect them, the person who receives a report of a violation, and the top leadership that reviews violations.
+
+It covers: documentation, display and making patients and families aware of rights and responsibilities; active promotion of those rights and responsibilities; protection of patient and family rights; a mechanism to report a violation; and monitoring, analysis and corrective/preventive action by top leadership.
+
+Boundaries with other policies of {{HOSPITAL_NAME}}:
+
+- The list of what the rights include is governed by the beliefs-values-and-decision-making policy of {{HOSPITAL_NAME}} (PRE.2, sibling). This document owns that the documented set exists, is displayed and is protected. PRE.2 does not write the display board.
+- Informed-consent method is governed by the informed-consent policy of {{HOSPITAL_NAME}} (PRE.3, sibling). A right to consent is in the PRE.2 list; obtaining consent is PRE.3.
+- Education about healthcare needs is governed by the information-education-and-communication policy of {{HOSPITAL_NAME}} (PRE.4, sibling). Informing of rights at entry is this document (PRE.1.a). Teaching about the disease, medicines and infection prevention is PRE.4.
+- Information on expected costs is governed by the expected-costs policy of {{HOSPITAL_NAME}} (PRE.5, sibling). A right to cost information is in the PRE.2 list; the pricing policy and tariff list are PRE.5.
+- Feedback and complaint redressal are governed by the feedback-and-complaints policy of {{HOSPITAL_NAME}} (PRE.6, sibling). A right to complain is in the PRE.2 list; the redressal mechanism is PRE.6. A complaint about a rights violation is received under PRE.6 and is also a PRE.1.d report; PRE.6 does not replace leadership review under PRE.1.e.
+- Discharge-summary follow-up advice in an understandable manner is governed by the discharge policy of {{HOSPITAL_NAME}} (AAC.8). AAC.8 owns that the advice is on the paper the patient takes away. This document owns that rights were made known at entry, not the discharge paper.
+- Registration and generation of the unique identification number are governed by the registration, admission and transfer policy of {{HOSPITAL_NAME}} (AAC.2). Awareness of rights at entry happens at or beside that registration; this document does not generate the number.
+- The medical record, including confidentiality of the record as a record-keeping act, is governed by the information-management policies of {{HOSPITAL_NAME}} (IMS, not yet drafted). PRE.2.d owns confidentiality as a patient right. This document does not write the record policy.
+- Staff training records as a human-resource file are governed by the human resource policies of {{HOSPITAL_NAME}} (HRM, not yet drafted). This policy requires that staff are aware of rights and trained to protect them; it does not write the training calendar.
+- Clinical procedures, anaesthesia, sedation and transfusion each own that the relevant consent happened (COP.5, COP.9, COP.10, COP.11). This document does not decide whether a unit was hung with consent."""
+
+POLICY_STATEMENT = """{{HOSPITAL_NAME}} documents patient and family rights and responsibilities, displays them, and makes patients and families aware of them at entry.
+
+{{HOSPITAL_NAME}} actively promotes those rights and responsibilities. A single poster that is never mentioned is not active promotion.
+
+{{HOSPITAL_NAME}} protects patient and family rights in the course of care.
+
+{{HOSPITAL_NAME}} has a mechanism to report a violation of patient and family rights.
+
+{{HOSPITAL_NAME}} requires top leadership to monitor and analyse violations and to take corrective and preventive action."""
+
+PROCEDURE_STEPS = [
+"""1. Documented, displayed, and patients and families made aware
+
+Patient and family rights and responsibilities are documented, displayed, and they are made aware of the same at {{HOSPITAL_NAME}}. This step is the documented-evidence anchor of a requirement the standard asterisks. An assessor will ask how a person arriving today is told their rights and what they must do. The answer must be a documented set, a display they can actually see, and an awareness act at entry — not a charter in the quality office that the ward has never used.
+
+The reason this is written as one step with three acts is that the book names them together, and that each act fails if it is treated as a substitute for the others. A documented charter that is not displayed is a file. A display that is never explained is decoration. An explanation with nothing written is a conversation that cannot be shown. The common error is the English-only board behind the registration clerk, or a signature on a sheet the patient was not given time to hear. Awareness is not a signature harvested to close the file. Awareness is that the person was told, in a language and format they can use, at the time of entering the organisation, as the chapter intent requires.
+
+The documented set of rights and responsibilities is [Hospital to define — the documented patient and family rights and responsibilities, and where that document is held]. The content of the rights list is owned by the beliefs-values-and-decision-making policy of {{HOSPITAL_NAME}}; this step requires that a current documented set exists and matches that list. Responsibilities are what this hospital asks of the patient and family during care (for example to give accurate history, to keep appointments they have agreed, to treat staff without violence). This document does not print a numbered list of duties as a NABH mandate.
+
+How and where the set is displayed — boards, printed material, and any online presence — are [Hospital to define — how and where patient and family rights and responsibilities are displayed]. Display is in a language and a place a person entering can read or have read to them. A board only in a language this hospital's patients do not use is not display for those patients.
+
+How patients and families are made aware at the time of entering the organisation is [Hospital to define — how patients and families are made aware of rights and responsibilities at entry, including the language or format used]. Entry includes out-patient first contact, emergency arrival, and in-patient admission. An unconscious or severely distressed arrival is made aware as soon as they, or the accompanying family, can receive it; the delay and the reason are recorded. A tick that says "rights explained" with no named person and no language is not this step.
+
+WHO Human rights and health (chapter reference 9) may inform why a rights document exists. It is not pasted as this hospital's charter.""",
+
+"""2. Actively promoted
+
+Patient and family rights and responsibilities are actively promoted at {{HOSPITAL_NAME}}. This step is the documented-evidence anchor of a requirement the standard asterisks. An assessor will ask what "actively" adds to the display at step 1. The answer must be promotion that happens in the course of care, not a once-a-year seminar counted as the year's work.
+
+The reason promotion is a separate asterisked OE is that a displayed charter can still be dead. Staff who have never been shown the set cannot protect it. Patients who saw a board at registration and were never told again that they may refuse, complain, or ask the name of the treating doctor, have been displayed-to, not promoted-to. The common error is to treat the step-1 board as promotion, or to treat an induction slide as promotion while the ward practice is to hush a family who asks.
+
+How rights and responsibilities are actively promoted — to staff and to patients and families after entry — is [Hospital to define — how patient and family rights and responsibilities are actively promoted to staff and to patients and families]. Promotion to staff is briefing or induction that the named set exists, that a violation is reportable at step 4, and that PRE.2 lists what the rights include. Promotion to patients and families is that the same set is referred to during care when a right is about to be exercised (consent, refusal, a complaint, a cost question), not only at the door.
+
+This step does not rewrite PRE.3 consent method, PRE.5 cost explanation, or PRE.6 complaint method. It requires that those later processes are spoken of as rights, not as favours.""",
+
+"""3. Organisation protects patient and family rights
+
+The organisation protects patient and family rights. Protection is the daily work of not doing the thing the right forbids: not examining without privacy, not ignoring a refusal, not withholding the name of the treating doctor, not punishing a complaint.
+
+How staff are expected to protect the rights in the documented set, in each care setting, is [Hospital to define — how staff protect patient and family rights in the course of care]. This step does not reprint the PRE.2 list. A failure of protection is a violation and is reported at step 4.""",
+
+"""4. Mechanism to report a violation of patient and family rights
+
+The organisation has a mechanism to report a violation of patient and family rights.
+
+How a violation is reported — by a patient, a family member, or a staff member — who receives it, and how it is recorded, are [Hospital to define — the mechanism to report a violation of patient and family rights, including who receives the report]. A complaint lodged under the feedback-and-complaints policy of {{HOSPITAL_NAME}} that alleges a rights violation is also a report under this step. PRE.6 owns redressal of the complaint as a complaint. This step owns that the same facts enter the violation record that leadership reviews at step 5.
+
+A report that can be made only to the person alleged to have committed the violation is not a mechanism.""",
+
+"""5. Violations monitored, analysed and acted on by top leadership
+
+Violation of patient and family rights are monitored, analysed and corrective/preventive action taken by the top leadership of the organisation.
+
+Who in top leadership receives the violation record, the interval of review, and how corrective and preventive action is recorded, are [Hospital to define — who in top leadership reviews rights-violation reports, the interval, and how corrective and preventive action is recorded]. Analysis looks for repeated settings, repeated rights, and whether step 1 display or step 2 promotion failed. A file of reports that is never opened is not monitoring.
+
+This step does not replace PRE.6 analysis of feedback and complaints. A complaint that is not a rights violation stays PRE.6. A rights violation that never became a patient complaint still comes here.""",
+
+"""6. Records, review and the order of operations
+
+The documented set, the display, the awareness method at entry, the promotion method, the protection expectation, the violation-report mechanism, and leadership review of violations, are retrievable.
+
+The quality or accreditation coordinator audits a sample of these records at [Hospital to define — the audit interval for patient-rights documentation, display, awareness, promotion and violation records] for: a current documented set that matches the PRE.2 list; display a person entering can actually use; awareness at entry rather than a signature harvested without explanation; promotion that is not only the step-1 board; violation reports that did not have to go only to the alleged actor; and leadership review that produced action rather than a dormant file.
+
+This policy is reviewed at [Hospital to define — the review interval for this policy], and sooner when a patient was not made aware at entry, a display was only in an unused language, a violation had no report route, or leadership review did not happen, or when PRE.2–PRE.6 or the registration policy that this document hands work to are revised.""",
+]
+
+RESPONSIBILITY = """The head of the institution is accountable for {{HOSPITAL_NAME}} documenting, displaying and making known patient and family rights and responsibilities, for protecting them, and for leadership review of violations.
+
+The named lead for patient and family rights authors and keeps current the documented set at step 1, the display, the awareness method, the promotion method, and the violation-report mechanism. The named lead is [Hospital to define — the named lead for patient and family rights and responsibilities].
+
+Staff who receive patients at entry make them aware as step 1 requires. All staff protect the rights in the documented set and report a violation through the mechanism at step 4. Top leadership reviews violations at step 5.
+
+The quality or accreditation coordinator audits the records at step 6 and reports findings to the head of the institution.
+
+All staff are expected to treat a hidden charter, an unexplained signature sheet, and a violation with no report route, as defects, and to report them."""
+
+REFERENCES = """- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Patient Rights and Education chapter, standard PRE.1.
+- Human rights and health, World Health Organization (2017) — chapter reference 9; a framework for why a rights document exists; not pasted as this hospital's charter.
+- Consumer Protection Act, 2019 — insofar as healthcare is a service and a patient may seek a consumer remedy for a deficiency; this document does not rewrite District Commission procedure and does not treat that Act as the source of the NABH rights list.
+- Olejarczyk JP and Young M, Patient Rights and Ethics (2021) — chapter reference 15; context for rights as an ethical and clinical practice, not a protocol.
+- Internal documents of {{HOSPITAL_NAME}}: the documented rights and responsibilities; the display; the awareness method at entry; the promotion method; the violation-report mechanism; leadership-review records; the beliefs-values-and-decision-making policy; the informed-consent, education, expected-costs and complaints policies; the registration policy; and the human resource policies."""
+
+DISTRIBUTION = """Controlled master copy: office of the head of the institution, {{HOSPITAL_NAME}}, with the quality or accreditation coordinator.
+
+Copies issued to: registration; every out-patient and emergency point of entry; every in-patient ward; nursing administration; and the named lead.
+
+The current version is available to all staff at [Hospital to define — intranet location or nursing station folder]. The documented rights set and the violation-report method — the working documents this policy requires — are held at points of entry and on the wards.
+
+Superseded versions are withdrawn from all points of use on issue of a revision, and one dated copy of each is retained by the quality or accreditation coordinator."""
+
+ABBREVIATIONS = """Abbreviations already defined in the HIC.1 to HIC.6 master policies are not repeated here. A reader using this document on its own should refer to those policies for the shared glossary, including NABH, SHCO, OE, WHO, SOP and PPE.
+
+This document does not introduce a chapter-specific abbreviation beyond that shared glossary.
+
+Any additional abbreviation used locally within {{HOSPITAL_NAME}} is [Hospital to define] and is added to this list at the next revision."""
+
+STATUTE_CLAUSE = (
+    "the Consumer Protection Act, 2019, insofar as healthcare is a service and a patient "
+    "may seek a consumer remedy for a deficiency, and not as the source of this hospital's "
+    "NABH rights list"
+)
+DISCLAIMER = make_disclaimer(STATUTE_CLAUSE)
+
+OE_MAPPING = [
+    {
+        "oe_code": "PRE.1.a",
+        "requirement": "Patient and family rights and responsibilities are documented, displayed, and they are made aware of the same.",
+        "steps": "Steps 1, 6",
+        "evidence": "The current documented set of patient and family rights and responsibilities, matching the list owned by the beliefs-values-and-decision-making policy rather than a quality-office charter that the wards do not use, and showing responsibilities as what this hospital asks during care rather than a numbered duties table printed as a NABH mandate; the display (boards, printed material, any online presence) in a language and a place a person entering can actually use, rather than an English-only board behind a clerk; the written awareness method at entry for out-patient first contact, emergency arrival and in-patient admission, including language or format, and sample records showing a named person made the patient or accompanying family aware rather than a harvested signature with no explanation; records of delayed awareness for an unconscious or severely distressed arrival with the reason; the recorded use of WHO Human rights and health (chapter reference 9) as a framework not pasted as the charter; the location where the documented set is held; induction or briefing records of staff at points of entry; the audit sample at step 6 of a current set, a usable display, and awareness at entry rather than a signature sheet",
+        "responsible": "Named lead holds the documented set, display and awareness method; staff at entry make patients and families aware; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "PRE.1.b",
+        "requirement": "Patient and family rights and responsibilities are actively promoted.",
+        "steps": "Steps 2, 1, 6",
+        "evidence": "The written promotion method for staff and for patients and families after entry, showing promotion in the course of care rather than the step-1 board counted twice or a once-a-year seminar counted as the year's work; sample records or briefing notes showing staff were shown the set, the violation-report route and that PRE.2 lists the content; sample encounters where a right about to be exercised (consent, refusal, complaint, cost) was referred to as a right; the recorded statement that PRE.3, PRE.5 and PRE.6 own those later methods and this step requires they are spoken of as rights; the audit sample at step 6 of promotion that is not only the display",
+        "responsible": "Named lead holds the promotion method; all staff promote in the course of care; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "PRE.1.c",
+        "requirement": "The organisation protects patient and family rights.",
+        "steps": "Steps 3, 4, 6",
+        "evidence": "The written expectation of how staff protect the rights in the documented set in each care setting, without reprinting the PRE.2 list; sample records or incident files showing a failure of protection was treated as a violation at step 4; the audit sample at step 6",
+        "responsible": "All staff protect the rights in the documented set; named lead holds the expectation; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "PRE.1.d",
+        "requirement": "The organisation has a mechanism to report a violation of patient and family rights.",
+        "steps": "Steps 4, 5, 6",
+        "evidence": "The written report mechanism (who may report, who receives, how it is recorded), showing a route that is not only to the person alleged to have committed the violation; records of PRE.6 complaints that alleged a rights violation also entering this violation record; the audit sample at step 6 of a usable report route",
+        "responsible": "Named receiver holds the violation record; PRE.6 owns complaint redressal; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "PRE.1.e",
+        "requirement": "Violation of patient and family rights are monitored, analysed and corrective/preventive action taken by the top leadership of the organisation.",
+        "steps": "Steps 5, 4, 6",
+        "evidence": "The named top-leadership reviewer, the review interval, and recorded corrective and preventive action; sample reviews showing repeated settings or failed display/promotion were acted on rather than a dormant file; the recorded split that PRE.6 analyses complaints as complaints and this step analyses rights violations; the audit sample at step 6 of leadership review that produced action",
+        "responsible": "Top leadership reviews and acts; named lead prepares the violation record; quality or accreditation coordinator audits",
+    },
+]
+
+UNIVERSAL_FACTS_CHECKLIST = """Universal (non-NABH) facts included in this draft, and where each was verified. Check these first.
+
+SOURCE OF THE OE TEXT
+0. PRE.1 standard text and all five OEs were read directly from the official NABH SHCO Standards 3rd Edition PDF (August 2022), Chapter 4 Patient Rights and Education, printed page 86 (PDF page index 92). Page header quoted from the book: "The organisation protects and promotes patient and family rights and informs them about their responsibilities during care." Chapter intent and summary: printed page 85 (PDF page index 91). The PDF was downloaded on 2026-08-17 from the NABH website's Explore NABH Standards page (md5 39e3bc86d73d651b9cfef283bbf018a9, 188 pages). Levels: PRE.1.a Commitment, PRE.1.b Achievement, PRE.1.c Core, PRE.1.d Core, PRE.1.e Core.
+   TWO OEs CARRY THE ASTERISK -- PRE.1.a and PRE.1.b. The draft builds two deep blocks (step 1 for a; step 2 for b). PRE.1.c-e are unasterisked and are correspondingly Tier 2.
+   Verified three ways on 2026-08-17: scripts/asterisk_extract.py re-run against the freshly downloaded PDF (self-validation passed; output matched committed scripts/shco_oe_asterisks.json on all 408 entries), the PRE.1 page read directly from the extracted page text, and the committed asterisk file. PRE.1 was not among the 14 mismatches of the 2026-08-10 audit.
+
+TIERING UNDER THE STANDING RULE
+1. Two-tier depth standing rule of 2026-08-10 applies. TWO OF FIVE OEs ARE TIER 1. Tier 1: PRE.1.a, PRE.1.b -- procedure steps 1 and 2 carry the reasoning (why a quality-office charter is not awareness, why a board is not active promotion). Tier 2: PRE.1.c, PRE.1.d, PRE.1.e -- requirement and method without extended rationale. Reviewer to note the shallower treatment of c-e is a DECISION UNDER THE STANDING RULE, not an omission.
+
+CROSS-REFERENCE AND OVERLAP CHECK
+2. Tier 1 cross-check (2026-08-17) of PRE.1.a/b against the approved HIC masters and the AAC/COP/MOM drafts. Search terms: patient rights, responsibilities, display, charter, violation, complaint, consent, cost, education.
+   PRE.2 -- content of the rights list vs this document's existence/display/protection of the set. Stated in Purpose, Scope and step 1.
+   PRE.3 / COP.5 / COP.9 / COP.10 / COP.11 -- consent method and that consent happened for transfusion/sedation/anaesthesia/surgery. This document does not decide whether those consents happened.
+   PRE.4 -- education about healthcare needs vs awareness of rights at entry. Stated in Scope.
+   PRE.5 -- expected costs. Right is PRE.2.i; method is PRE.5.
+   PRE.6 -- complaint redressal vs violation report. A complaint that is a rights violation is both; leadership review of violations is this document. Stated in Scope and steps 4-5.
+   AAC.2 -- registration/UID; awareness at entry sits beside it. Stated in Scope.
+   AAC.8 -- discharge-summary advice in an understandable manner. AAC.8 owns the paper; PRE.4 owns teaching method; this document owns rights at entry. Flagged.
+   IMS -- the record. Forward reference.
+   HRM -- training file. Forward reference.
+3. FORWARD REFERENCES: PRE.2-6 siblings; IMS; HRM. Each is a deliberate boundary.
+4. T2 QUICK CHECK: PRE.1.c vs PRE.2 content -- flagged. PRE.1.d/e vs PRE.6 -- flagged. Nothing added to the HIC reconciliation list.
+
+STATUTORY AND EXTERNAL FACTS
+5. Consumer Protection Act, 2019 -- named in P2 and References insofar as healthcare is a service and a patient may seek a consumer remedy. NOT used as the source of the NABH rights list. No District Commission procedure is copied.
+6. Clinical Establishments Act, 2010 -- considered for display-of-rights. The PDF bibliography does not name it. Display of the NABH rights set is PRE.1.a, not an imported CEA schedule. NOT named in P2.
+7. Mental Healthcare Act, 2017 -- capacity is PRE.3.c, not this standard. NOT named in P2.
+8. WHO Human rights and health (chapter reference 9) -- framework, not pasted as the charter.
+9. NO NUMBERS ARE STATED as requirements. Every local method is [Hospital to define].
+10. Bio-Medical Waste Management Rules, 2016, Food Safety and Standards Act, 2006, and Clinical Establishments Act, 2010 are NOT named in P2.
+
+EDITORIAL POSITIONS TAKEN
+11. Step 1's split that PRE.2 owns the content of the list and this step owns that a documented set exists, is displayed and is made known, is an editorial position required by the two standards sitting on facing pages.
+12. Step 1's rule that awareness is not a harvested signature, and that an unused-language board is not display, are editorial positions.
+13. Step 2's rule that the step-1 board is not active promotion, and that later PRE processes must be spoken of as rights, are editorial positions.
+14. Steps 4-5 split with PRE.6 (complaint as complaint vs violation as violation) is an editorial position required so the two asterisked complaint/violation processes do not copy each other.
+
+DISCLAIMER BLOCK -- STATUTE-MATCHED UNDER THE 2026-08-17 STANDING RULE
+15. Paragraphs 1, 3 and 4 are the shared HIC.3-6 block, hash-checked at build time. Paragraph 2 names the Consumer Protection Act, 2019 only insofar as a patient may seek a consumer remedy -- the statute this document's References actually rely on. It does NOT name CEA 2010, MHCA 2017, BMW Rules 2016, or FSS Act 2006. The HIC wholesale inherit is refused by the build. The AAC.1 defaulted-statute bug is refused by not importing CEA as a display statute.
+
+DELIBERATELY NOT INCLUDED
+- Content of the rights list -- PRE.2.
+- Consent method -- PRE.3. Transfusion/sedation/anaesthesia/surgical consent happening -- COP.5/9/10/11.
+- Healthcare-needs education -- PRE.4. Discharge-summary teaching-on-paper -- AAC.8.
+- Pricing policy and tariff -- PRE.5.
+- Feedback and complaint redressal method -- PRE.6.
+- CEA 2010 as a display mandate; MHCA 2017; Contract Act 1872; Samira Kohli as a NABH case-law mandate.
+- The five optional sections are left unset, matching HIC.1-6 and AAC.1.
+
+HOSPITAL-SPECIFIC VALUES LEFT AS [Hospital to define] -- 13 fillable blanks in the rendered document: 2 in the exact form "[Hospital to define]" (one in Abbreviations, one inside the shared Disclaimer block) and 11 in the guidance-bearing form "[Hospital to define — what to state]". A search for the exact string finds 2 of 13; a search for "Hospital to define" without brackets finds all 13, and that is the search a hospital should be told to run. The figure is produced by policy_placeholder_audit.py across every rendered field in both forms, which also asserts that no nested placeholder exists.
+
+The values the hospital must supply: the documented rights and responsibilities and where held; how and where they are displayed; how patients and families are made aware at entry; how they are actively promoted; how staff protect them in the course of care; the violation-report mechanism; who in top leadership reviews violations, the interval, and how CAPA is recorded; the named lead; the audit interval; the review interval; the intranet or folder location; and any additional local abbreviation."""
+
+SQL_HEADER = """-- Source: NABH SHCO Standards 3rd Edition (August 2022), Chapter 4, printed page 86
+-- (PDF page index 92). Levels: a Commitment, b Achievement, c Core, d Core, e Core.
+-- TWO OEs CARRY THE ASTERISK -- PRE.1.a and PRE.1.b.
+-- UNAPPROVED DRAFT. Do not run this insert until the owner confirms the write.
+"""
+
+if __name__ == "__main__":
+    emit_and_verify(
+        standard_code=STANDARD_CODE,
+        chapter=CHAPTER,
+        oe_codes=OE_CODES,
+        policy_title=POLICY_TITLE,
+        purpose=PURPOSE,
+        scope=SCOPE,
+        policy_statement=POLICY_STATEMENT,
+        procedure_steps=PROCEDURE_STEPS,
+        responsibility=RESPONSIBILITY,
+        references_text=REFERENCES,
+        distribution=DISTRIBUTION,
+        abbreviations=ABBREVIATIONS,
+        disclaimer=DISCLAIMER,
+        oe_mapping=OE_MAPPING,
+        universal_facts_checklist=UNIVERSAL_FACTS_CHECKLIST,
+        version=VERSION,
+        revision_history=REVISION_HISTORY,
+        tier1_oes=TIER1_OES,
+        statute_clause=STATUTE_CLAUSE,
+        sql_header=SQL_HEADER,
+        json_name="pre1_draft.json",
+        sql_name="pre1_insert.sql",
+    )

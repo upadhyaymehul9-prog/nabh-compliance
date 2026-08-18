@@ -1,0 +1,417 @@
+# -*- coding: utf-8 -*-
+"""Builds the AAC.4 master policy draft: JSON for review + SQL for later insert.
+
+UNAPPROVED DRAFT. Do not insert, approve, or write this to Supabase.
+
+THIS IS DRAFTED UNDER THE TWO-TIER DEPTH STANDING RULE (2026-08-10) AND THE
+DISCLAIMER STATUTE-MATCHING STANDING RULE (2026-08-17), both in
+scripts/master-policy-todos.md.
+
+Tier is decided by doc_required / the asterisk in the official PDF:
+  Tier 1 (full treatment): AAC.4.c, AAC.4.d, AAC.4.e, AAC.4.f, AAC.4.g, AAC.4.h
+  Tier 2 (lighter pass):   AAC.4.a, AAC.4.b
+
+SIX of eight OEs are asterisked. The draft builds deep blocks for c-h.
+a and b are lean.
+
+Official source: NABH Standards for Small Healthcare Organisations, 3rd Edition
+(August 2022), Chapter 1, standard AAC.4 and OEs AAC.4.a-h, read from the official
+standards PDF (downloaded 2026-08-17 from the NABH website's Explore NABH Standards
+page), printed pages 51-52, PDF page index 57-58.
+
+Asterisks verified 2026-08-17: scripts/asterisk_extract.py re-run against that
+download (self-validation passed, 408 OEs, 132 asterisks, output matched the
+committed scripts/shco_oe_asterisks.json on all 408 entries) and the AAC.4 pages
+read directly. AAC.4.a and AAC.4.b are unasterisked; AAC.4.c-h carry the asterisk.
+"""
+from policy_build_common import emit_and_verify, make_disclaimer
+
+STANDARD_CODE = "AAC.4"
+CHAPTER = "AAC"
+OE_CODES = [
+    "AAC.4.a", "AAC.4.b", "AAC.4.c", "AAC.4.d",
+    "AAC.4.e", "AAC.4.f", "AAC.4.g", "AAC.4.h",
+]
+TIER1_OES = [
+    "AAC.4.c", "AAC.4.d", "AAC.4.e", "AAC.4.f", "AAC.4.g", "AAC.4.h",
+]
+
+POLICY_TITLE = "Laboratory Services"
+
+VERSION = "1.0"
+REVISION_HISTORY = [
+    {"version": "1.0", "date": "17-08-2026", "description": "Initial release."},
+]
+
+PURPOSE = """This document sets out how {{HOSPITAL_NAME}} provides laboratory services that match the healthcare services it has defined, and how those services are run to a written standard: a specimen pathway from requisition to disposal, results within a defined time, critical results intimated to the treating clinician, outsourcing chosen on a documented quality-assurance system, and a laboratory quality-assurance programme that includes calibration and maintenance of equipment.
+
+The chapter intent is that laboratory services are provided as per the scope of services of the organisation and adhere to best practices. A laboratory that cannot support the specialties the hospital holds out, or that issues a result from an unlabelled tube, an unmeasured turnaround, or an uncalibrated instrument, is not that service. This document is the process that makes the intent operational at the bench, at the collection point, and at the telephone when a result cannot wait.
+
+The written definition of the hospital's services (owned by the definition-and-display policy of {{HOSPITAL_NAME}}) is a promise that diagnostics stand behind each specialty. This document is how the laboratory keeps that promise, including when a test is performed elsewhere."""
+
+SCOPE = """This policy applies to the laboratory of {{HOSPITAL_NAME}}, every location at which a specimen is requested, collected or handed over, the staff who request tests, collect, identify, handle, transport, process and dispose of specimens, the staff who report results and intimated critical results, the named laboratory quality lead, and any organisation to which a test is outsourced. It binds employed laboratory personnel and equally any contracted collection or testing arrangement that operates under this hospital's unique identification number.
+
+It covers: the laboratory's scope of services and its alignment with the hospital's defined services; the adequacy of laboratory infrastructure and human resources for that scope; written guidance for requisition, collection, identification, handling, safe transportation, processing and disposal of specimens; defined turnaround times and their measurement; intimating critical results to the treating clinician; outsourcing of tests not available here, selected on a documented quality-assurance system; the laboratory quality-assurance programme; and periodic calibration and maintenance of laboratory equipment as part of that programme.
+
+Boundaries with other policies of {{HOSPITAL_NAME}}:
+
+- The written definition of the healthcare services, the department scopes of services, and the public display of those services are governed by the definition-and-display policy of {{HOSPITAL_NAME}}. This policy aligns the laboratory's own scope to that definition; it does not rewrite the service directory or any other department's scope.
+- Verification of staff qualifications, registrations and credentials is governed by the human resource policies of {{HOSPITAL_NAME}}. This policy requires that laboratory human resources are adequate for the defined scope; it does not restate the credentialing method.
+- The colour-coded hospital-wide biomedical-waste programme, internal transport to the central storage area, handover to the common treatment facility, and State Pollution Control Board authorisation are governed by the support-services infection-control policy of {{HOSPITAL_NAME}} (HIC.3, approved). This policy owns the laboratory's written specimen-disposal pathway, including any on-site pre-treatment of microbiological and laboratory waste that the Bio-Medical Waste Management Rules, 2016 require before that waste enters the hospital-wide stream. It does not restate the four colour categories.
+- Alert-organism and multi-drug-resistant-organism notification to the Infection Control Team is governed by the infection-surveillance policy of {{HOSPITAL_NAME}} (HIC.5, approved). This policy owns notification of critical laboratory results to the treating clinician. The two notifications may be prompted by the same report; they are not the same act and are not substitutes for each other.
+- The laboratory-safety programme — training in safe practices and the safety measures provided to laboratory personnel — is governed by the laboratory-and-imaging safety policy of {{HOSPITAL_NAME}}. This policy owns the specimen pathway and quality assurance; it does not write the safety programme.
+- Calibration and planned maintenance may be performed by facility-management or biomedical-engineering staff under the facility policies of {{HOSPITAL_NAME}}. This policy owns that the laboratory quality-assurance programme includes that work, that a log is kept, and that a result is not issued from an instrument that is overdue or has failed calibration.
+- Generation of the unique identification number at registration is governed by the registration and admission policy of {{HOSPITAL_NAME}}. This policy requires that number on every requisition, specimen, worksheet and report; it does not issue the number.
+- The medical record itself — its structure, retention and confidentiality — is governed by the information-management policies of {{HOSPITAL_NAME}}. This policy owns the laboratory content that is written into that record, including an outsourced report filed under the same unique identification number.
+- Imaging services are governed by the imaging-services policy of {{HOSPITAL_NAME}}. They are a sibling diagnostic service, not this document."""
+
+POLICY_STATEMENT = """{{HOSPITAL_NAME}} provides laboratory services whose scope is commensurate with the healthcare services the hospital has defined. A test the defined services depend on is available here or under a documented outsourcing arrangement; a test the hospital does not use is not held out as a laboratory service.
+
+{{HOSPITAL_NAME}} keeps the physical infrastructure, equipment and human resources of the laboratory adequate for that defined scope.
+
+{{HOSPITAL_NAME}} performs requisition, collection, identification, handling, safe transportation, processing and disposal of specimens according to written guidance. A specimen is identified at collection. An unlabelled or mislabelled specimen is not processed.
+
+{{HOSPITAL_NAME}} makes laboratory results available within a defined time frame for each category of test, and compares actual time with defined time.
+
+{{HOSPITAL_NAME}} intimates a critical result to the treating clinician at the earliest, with read-back, and records who was told, when, and the value. The written list of critical values is this hospital's list. Alert-organism notification to infection control is a different act, owned elsewhere.
+
+{{HOSPITAL_NAME}} outsources tests it does not perform to an organisation chosen on a documented quality-assurance system. National Accreditation Board for Testing and Calibration Laboratories (NABL) accreditation is one acceptable form of that evidence; it is not required, and it is not the only acceptable form.
+
+{{HOSPITAL_NAME}} implements a laboratory quality-assurance programme, including internal quality control, external quality assessment, and corrective action when a result is out of control. International Organization for Standardization (ISO) 15189 and NABL are recognised frameworks this hospital may use; NABH SHCO does not mandate them as the only programme.
+
+{{HOSPITAL_NAME}} includes periodic calibration and maintenance of all laboratory equipment in that programme. A result is not issued from an uncalibrated instrument."""
+
+PROCEDURE_STEPS = [
+"""1. Laboratory scope commensurate with the services of {{HOSPITAL_NAME}}
+
+The laboratory of {{HOSPITAL_NAME}} holds a written scope of services. That scope is commensurate with the healthcare services the hospital provides: it lists the tests and categories of test the laboratory performs, the hours during which each is available, and the tests that are not performed here and are outsourced under step 7.
+
+The test is alignment with the current service directory and the department scopes of services, maintained under the definition-and-display policy of {{HOSPITAL_NAME}}. A specialty held out by the hospital is backed by the laboratory tests that specialty depends on, either in-house or by the outsourcing arrangement at step 7. A test that no defined service uses is not claimed in the laboratory scope.
+
+The laboratory scope is authored by the person in charge of the laboratory, approved with the department-scope set, and reviewed when the service directory changes. It is held at [Hospital to define — the laboratory scope of services, and where it is held].
+
+This step does not rewrite the service directory or any other department's scope.""",
+
+"""2. Infrastructure and human resources adequate for the defined scope
+
+The physical infrastructure, equipment and human resources of the laboratory are adequate to provide the scope at step 1. Adequacy is judged against that written scope, not against a generic laboratory.
+
+Staffing of the laboratory — the roles, the numbers on duty during the hours the scope claims, and the arrangement outside those hours — is [Hospital to define — the laboratory staffing that backs the defined scope]. Qualifications, professional-council registration and credentials of those staff are verified under the human resource policies of {{HOSPITAL_NAME}}; this step uses that verification and does not restate the method.
+
+The equipment inventory that backs the defined scope, and the physical areas in which the work is done, are [Hospital to define — the laboratory equipment inventory and physical areas that back the defined scope]. Equipment that is out of service under step 9 is not counted as backing a test the scope still claims.
+
+Where the laboratory cannot, today, deliver a test that the scope includes, that test is suspended in the same order the definition-and-display policy requires of any service: the people who request tests are told, the outsourcing arrangement at step 7 is used where it exists, and the laboratory scope is updated.""",
+
+"""3. Requisition, collection and identification of specimens
+
+Requisition for a test, collection of the specimen, and identification of that specimen are performed according to written guidance. This step is the first half of that guidance; handling, transport, processing and disposal are step 4. Both are the documented-evidence anchor of a requirement the standard asterisks: an assessor will ask how a specimen is identified, and the answer must be a written method staff apply at the chair, not a claim that the bench will sort it out.
+
+A test is requested on a requisition that carries at least the patient's unique identification number, the patient's name, the test requested, the date and time of request, the requesting clinician, and the specimen type. Further content of the requisition is [Hospital to define — the requisition content and how a test is requested]. A specimen is not collected against a verbal request alone except in a documented emergency, and that emergency request is converted to a requisition as soon as the collection is done. A requisition without the unique identification number is incomplete.
+
+Collection is performed by [Hospital to define — who collects specimens, and in which locations], against the written collection guidance. Before collection, the collector confirms the patient's identity using [Hospital to define — the identifiers used to confirm patient identity before collection] and matches that identity to the requisition. Collection does not start until the match is made. The World Health Organization's Guidelines on Drawing Blood: Best Practices in Phlebotomy (2010) — chapter reference 10 of this standard — is the source of that sequence: identity is checked before the needle, not after.
+
+The specimen is labelled with the unique identification number, and with the other identifiers the written guidance requires, at the point of collection, in the presence of the patient, before the collector leaves that patient. Labelling later, at the bench or at accessioning, is forbidden. The reason is not administrative neatness. A tube that travels unlabelled is a tube whose identity can be swapped, guessed or reconstructed from a tray position. The bench cannot recover the identity of an unlabelled specimen; it can only attach a name to a tube that may not belong to that name. The result issued against the wrong unique identification number is then a true laboratory value on the wrong patient, and every subsequent clinical decision leans on it. That is why identification at collection — not later at the bench — is the safety step, and why this step exists as written guidance rather than as a habit.
+
+The common error is the unlabelled or mislabelled tube, and the workaround that follows it: a collector or a technician labelling at accessioning because "we know whose it is." That workaround is how the error becomes a report. It is forbidden here. An unlabelled or mislabelled specimen is not processed; it is rejected under step 4 and recollected.
+
+Needles used in collection are not recapped by two-handed recapping. A used needle is placed immediately in a puncture-proof sharps container. Two-handed recapping is the practice the 2010 phlebotomy guidance names as the one to stop; this hospital stops it at collection. The laboratory-safety programme, including other safe-practice training and the safety measures provided to laboratory personnel, is governed by the laboratory-and-imaging safety policy of {{HOSPITAL_NAME}} and is not written here.
+
+If an order of draw is used, the order is [Hospital to define — the order of draw, if an order of draw is used]. This document does not prescribe a named sequence.
+
+The written collection and identification guidance, and the named roles that apply it, are held at [Hospital to define — where the written collection and identification guidance is held].""",
+
+"""4. Handling, safe transportation, processing and disposal of specimens
+
+Handling, safe transportation, processing and disposal of specimens are performed according to written guidance. This step is the second half of the pathway that step 3 begins. A specimen correctly identified at collection is still lost if it is transported under the wrong conditions, processed from an unlabelled tube, or discarded without the pre-treatment the law requires of laboratory waste.
+
+Handling after collection follows the written guidance for that specimen type: how the container is closed, how it is mixed if mixing is required, and how it is protected from the conditions that invalidate the test. A specimen whose container is leaking, whose label has become unreadable, or whose integrity is otherwise in doubt is not sent onwards as if it were intact; it is rejected and recollected, and the rejection is recorded.
+
+Safe transportation from the collection point to the laboratory, and between sections of the laboratory, is under conditions that are [Hospital to define — the transport conditions for each specimen type]. The unique identification number travels with the specimen. Transport is in a leak-proof container used for specimens; it is not in a pocket, a paper cover or an unmarked tray of unlabelled tubes. The conditions — temperature, time-to-receipt, and any other limit the test requires — are this hospital's, because the standard requires written guidance, not a borrowed table. A specimen that arrives outside those conditions is rejected, not processed with a disclaimer.
+
+Processing follows written methods for the tests in the laboratory scope. Accessioning checks that the unique identification number on the specimen matches the requisition before any processing starts. An unlabelled or mislabelled specimen is rejected; it is not labelled at the bench and it is not run. The common error at this stage is to process the tube anyway because the test is urgent or because the collector is known. Urgency does not restore identity. Recollection is the method; a guessed label is not.
+
+Disposal of specimens and of laboratory waste follows the laboratory's written pathway. That pathway includes any on-site pre-treatment of microbiological and laboratory waste that the Bio-Medical Waste Management Rules, 2016 require before the waste enters the hospital-wide biomedical-waste stream. The pre-treatment method used at {{HOSPITAL_NAME}} is [Hospital to define — the pre-treatment method used for microbiological and laboratory waste before it enters the hospital biomedical-waste stream]. After that pre-treatment, segregation, internal transport, storage, handover to the common treatment facility, and State Pollution Control Board authorisation are the hospital-wide biomedical-waste programme, governed by the support-services infection-control policy of {{HOSPITAL_NAME}}. This step does not restate that programme and does not restate the four colour categories. Sharps generated at collection enter that same hospital-wide stream; the collection rule at step 3 is that they enter it without two-handed recapping.
+
+The written handling, transport, processing and disposal guidance is held at [Hospital to define — where the written handling, transport, processing and disposal guidance is held].""",
+
+"""5. Laboratory results within a defined time frame
+
+Laboratory results are available within a defined time frame. The time frame is defined in writing for categories of test — at least routine, urgent and stat — and is [Hospital to define — the defined turnaround time for each category of test: routine, urgent and stat]. A test that is outsourced under step 7 has a defined time frame in the agreement with that organisation, and that time is part of this definition, not an exception to it.
+
+A defined time that is never compared with actual time is a list, not a process. That is the common error this step exists to stop: a turnaround-time table on the wall, and no record of whether the table is met. The standard asterisks the requirement because an assessor will ask how the hospital knows results are available within the time it defined, and the answer must be a measurement, not the table.
+
+{{HOSPITAL_NAME}} therefore measures actual turnaround against the defined time. How that measurement is made — from collection or from receipt, which clock, which report, and where it is recorded — is [Hospital to define — how actual turnaround time is measured against the defined time]. The measurement is reviewed at [Hospital to define — the review interval and forum for turnaround-time performance]. A category that is never measured, or a stat definition that is indistinguishable from routine in the record, is a document defect.
+
+The clock that the definition uses is stated, because a time measured from receipt will always look better than a time measured from collection, and mixing the two produces a figure no one can act on. Outsourced tests are measured against their own defined time, not omitted because the work was done elsewhere.
+
+A result that will miss its defined time is communicated to the requesting clinician before the time elapses, with the reason, rather than discovered by the clinician asking where it is. That communication does not reset the definition.""",
+
+"""6. Critical results intimated to the treating clinician
+
+A critical result is intimated to the person concerned at the earliest. In this document, the person concerned is the treating clinician. The written list of critical laboratory values is [Hospital to define — the written list of critical laboratory values]. This document does not print a numeric table of critical values. The list is this hospital's clinical decision, reviewed with the laboratory and the clinicians who will be called, and it is the list staff actually use.
+
+The method of notification is direct, not the routine report alone. The laboratory communicates the result to [Hospital to define — who is notified of a critical result, by what method, including out of hours], at the earliest once the result is verified, including when the result is finalised outside ordinary hours. A critical result that waits in a printer or an inbox until the next working morning has not been intimated at the earliest.
+
+The person who receives the result reads it back. The laboratory confirms that the read-back matches, and only then treats the notification as complete. Read-back is the method used here; it is an editorial choice of method in the Joint Commission National Patient Safety Goal and Clinical and Laboratory Standards Institute GP47 tradition, not a cited numeric requirement, and it is not a substitute for the hospital's own list of values. A voicemail, a note left on a desk, or a report placed in a pile is not notification and is not read-back.
+
+The notification is recorded: the unique identification number, the test, the value, the date and time of the result, the date and time of notification, the name of the person who notified, the name of the person who received, and that read-back was obtained. Where that record is held is [Hospital to define — where the critical-result notification is recorded]. A critical value in the laboratory information system without that notification record is a result that was produced and not intimated.
+
+This step owns notification of a critical result to the treating clinician. Alert-organism and multi-drug-resistant-organism notification to the Infection Control Team is owned by the infection-surveillance policy of {{HOSPITAL_NAME}}. The two may be required by the same report — a critical value that is also an alert organism — and both notifications are then made. Making one is not making the other. The laboratory does not treat a call to infection control as having informed the treating clinician, and it does not treat a call to the treating clinician as having informed infection control.
+
+The common error is a critical-value list that no one can find, a call made to whoever answers the ward telephone, and no record of who was told. The list, the named recipient, the read-back and the record are the method that replaces that error.""",
+
+"""7. Outsourcing tests not available at {{HOSPITAL_NAME}}
+
+Laboratory tests not available in the organisation are outsourced to organisation(s) selected on the basis of their quality-assurance system. Selection is documented. A nearby laboratory, a long-standing informal arrangement, or a rate card is not a quality-assurance system.
+
+The tests that are outsourced, and to which organisation, are [Hospital to define — the tests that are outsourced, and to which organisation]. The quality-assurance evidence required of an outsourced laboratory before it is used, and at review, is [Hospital to define — the quality-assurance evidence required of an outsourced laboratory]. NABL accreditation is one acceptable form of that evidence. It is not required. It is not the only acceptable form. A documented quality-assurance system — internal quality control, external quality assessment, and the records that show they run — may be accepted whether or not NABL accreditation is held. Requiring NABL as a condition of outsourcing would be an editorial mandate this standard does not make.
+
+An agreement is in place with each outsourced organisation before a specimen is sent. The agreement includes the tests covered, the quality-assurance evidence relied on, the defined turnaround time for those tests, the method of transmitting results, the obligation to notify a critical result to {{HOSPITAL_NAME}} at the earliest so that step 6 can be completed here, and the unique identification number that must appear on every report. The agreement, including those turnaround times, is [Hospital to define — the agreement, including turnaround times, with each outsourced laboratory].
+
+Every outsourced specimen is tracked from dispatch to return of the report, against the unique identification number. How that tracking is done, and how the returned report is filed in the patient record under the same unique identification number, is [Hospital to define — how an outsourced report is tracked and filed in the patient record]. An outsourced report that arrives as a loose sheet without that number, or that is filed only in a laboratory folder and never in the patient record, is a result the treating clinician cannot use. Incorporation into the record under the same unique identification number is the last step of outsourcing, not an administrative extra.
+
+Turnaround of outsourced tests is measured under step 5 against the time in the agreement. Critical results received from the outsourced laboratory are intimated under step 6 to the treating clinician of {{HOSPITAL_NAME}}; the outsourced laboratory's own notification to this hospital does not complete step 6.
+
+A test that the laboratory scope at step 1 still claims as in-house is not silently sent out. If it cannot be performed here, step 2's suspension route is used and the outsourcing is visible in the scope.""",
+
+"""8. The laboratory quality-assurance programme
+
+The laboratory quality-assurance programme is implemented. A programme that exists as a file and is not run is not implemented. This step is the documented-evidence anchor of that requirement.
+
+{{HOSPITAL_NAME}} names a laboratory quality lead. The named lead is [Hospital to define — the named laboratory quality lead]. That person is accountable for the programme running, for the records it produces, and for stopping the issue of results from a process that is out of control.
+
+The programme includes internal quality control (IQC) on a schedule that is [Hospital to define — the internal quality-control schedule]. IQC is performed, recorded, and reviewed against written acceptance limits. A control that is out of those limits is not an inconvenience to be re-run until it passes in silence. It is a signal: patient results from the affected run are not issued, the cause is examined, corrective action is taken and recorded, and issue resumes only when the control is back within limits. The common error is to treat IQC as a worksheet that must be filled, and to issue patient results from the same run that failed the control. That is not a quality-assurance programme; it is a record of having ignored one.
+
+The programme includes external quality assessment (EQA) or proficiency testing. The programme used, and its interval, are [Hospital to define — the external quality-assessment or proficiency-testing programme and its interval]. EQA reports are reviewed by the quality lead. An unacceptable EQA result produces documented corrective action, not a filing of the certificate.
+
+ISO 15189 and NABL are recognised frameworks for a medical-laboratory quality-assurance programme. {{HOSPITAL_NAME}} may use them. The framework this laboratory uses, if any, is [Hospital to define — the quality-assurance framework the laboratory uses, if any]. NABH SHCO does not mandate ISO 15189 or NABL accreditation as the only programme, and this document does not convert either into a requirement. A laboratory that runs IQC, EQA and corrective action under a written local programme is meeting this step; a laboratory that holds a certificate and does not run the programme is not.
+
+Calibration and maintenance of equipment are part of this programme and are performed under step 9. They are not a separate courtesy owed to biomedical engineering.
+
+The quality lead reports the programme's findings — IQC failures, EQA performance, corrective actions open and closed, and any period during which issue of results was stopped — at [Hospital to define — the forum and interval at which laboratory quality-assurance findings are reviewed].""",
+
+"""9. Periodic calibration and maintenance of all laboratory equipment
+
+The quality-assurance programme at step 8 includes periodic calibration and maintenance of all laboratory equipment. All means every instrument used to produce a result that is issued against a unique identification number, including equipment that is used infrequently. An instrument that is not on the schedule is not available for reporting.
+
+The calibration and maintenance schedule for each laboratory instrument is [Hospital to define — the calibration and maintenance schedule for each laboratory instrument]. The schedule states what is done, at what interval, and the acceptance criterion. Work is recorded in a log: the instrument, the date, what was done, the result, the person who did it, and the next due date.
+
+Who performs the work, and where the log is held, is [Hospital to define — who performs calibration and maintenance, and where the log is held]. Facility-management or biomedical-engineering staff may perform calibration and maintenance under the facility policies of {{HOSPITAL_NAME}}. This step owns that the laboratory quality-assurance programme includes the work, that the log exists, and that the laboratory does not issue a result from an instrument that is overdue or has failed. The facility policies own how the work is done when it is theirs to do. A forward reference, not a substitute.
+
+When calibration is overdue, or when calibration or maintenance has failed, the instrument is taken out of service. It is labelled as out of service, it is not used, and patient results are not issued from it. The action taken — outsource the test under step 7, use a backup instrument that is itself in calibration, or suspend the test in the laboratory scope under step 2 — is [Hospital to define — the action taken when an instrument is overdue or has failed calibration]. Returning the instrument to service requires a recorded satisfactory calibration, not an assumption that it is probably fine.
+
+The common error is a calibration certificate in a file and an instrument that continued to report throughout the period of being overdue. The certificate is not the control. Out-of-service when overdue or failed, and no result issued in between, is the control.
+
+This step does not write the hospital-wide medical-equipment programme. It writes the laboratory's rule that quality assurance includes calibration, and that an uncalibrated instrument does not produce a report.""",
+
+"""10. Records, review and the order of operations
+
+Every requisition, specimen identifier, rejection, result, turnaround-time measurement, critical-result notification, outsourced dispatch and return, IQC and EQA record, corrective action, and calibration or maintenance log entry is recorded against the unique identification number where a patient is involved, and is retrievable.
+
+The quality or accreditation coordinator audits a sample of these records at [Hospital to define — the audit interval for laboratory records] for: a laboratory scope that matches the service directory; collection records that show identity checked and the unique identification number applied at collection rather than at the bench; rejections of unlabelled specimens rather than bench-labelling; actual turnaround measured against the defined time; critical-result notifications with recipient, time, value and read-back; outsourced reports filed in the patient record under the same unique identification number; IQC and EQA with corrective action when out of control; and no result issued from an instrument that was overdue or failed calibration.
+
+This policy is reviewed at [Hospital to define — the review interval for this policy], and sooner when the service directory changes, when a misidentified specimen, a missed critical result or an out-of-control run exposes a gap, or when the biomedical-waste, infection-surveillance, laboratory-safety or facility policies that this document hands work to are revised.""",
+]
+
+RESPONSIBILITY = """The head of the institution is accountable for {{HOSPITAL_NAME}} providing laboratory services that match the defined healthcare services, for a written specimen pathway that identifies at collection, and for a quality-assurance programme that is run, including calibration.
+
+The person in charge of the laboratory authors and keeps current the laboratory scope at step 1, keeps infrastructure and staffing adequate for that scope at step 2, holds the written guidance at steps 3 and 4, defines and measures turnaround at step 5, holds the critical-value list and the notification method at step 6, manages outsourcing at step 7, and stops issue of results from an out-of-control process or an uncalibrated instrument.
+
+The named laboratory quality lead at step 8 operates the quality-assurance programme, reviews IQC and EQA, records corrective action, and reports findings at the stated forum.
+
+Laboratory personnel apply the written guidance at collection, handling, transport, processing and disposal; label at collection; reject unlabelled or mislabelled specimens; notify critical results with read-back; and do not issue a result from a failed control or an uncalibrated instrument.
+
+Clinicians who request tests complete the requisition with the unique identification number, receive critical-result notifications, and read back the value.
+
+The staff who collect specimens, including in clinical areas, apply step 3: identity before collection, unique identification number on the specimen at collection, no two-handed recapping.
+
+Facility-management or biomedical-engineering staff perform calibration and maintenance when that work is assigned to them, record it in the log at step 9, and do not return an instrument that has failed. The laboratory remains responsible for not issuing results from that instrument.
+
+The contract or administration function holds the outsourcing agreement at step 7 and the quality-assurance evidence on which selection was made.
+
+The quality or accreditation coordinator audits the records at step 10 and reports findings to the head of the institution.
+
+All staff are expected to treat an unlabelled specimen, a critical result that was not intimated, and a result issued from an uncalibrated instrument as defects, and to report them."""
+
+REFERENCES = """- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Access, Assessment and Continuity of Care chapter, standard AAC.4.
+- Bio-Medical Waste Management Rules, 2016, insofar as they govern laboratory and microbiological waste, including on-site pre-treatment where the rules require it before that waste enters the common treatment stream.
+- Clinical Establishments (Registration and Regulation) Act, 2010 and the rules under it, where adopted by the State — insofar as they require the organisation to maintain records of diagnostic services provided to patients; or the corresponding State clinical establishments or nursing home registration law where the 2010 Act is not in force.
+- World Health Organization, Guidelines on Drawing Blood: Best Practices in Phlebotomy (2010) — chapter reference 10 of this standard; used here for identity check before collection, labelling of the specimen at collection, and the prohibition of two-handed recapping. This document does not import a numbered phlebotomy protocol or a mandated order of draw.
+- Clinical and Laboratory Standards Institute, GP47, Management of Critical- and Significant-Risk Results — cited only as informing the read-back method used at critical-result notification; this document does not import that guideline's tables or make it mandatory, and it does not print a numeric critical-value list.
+- ISO 15189, Medical laboratories — Requirements for quality and competence — a recognised framework this hospital may use for the laboratory quality-assurance programme; not mandated by NABH SHCO as the only programme.
+- National Accreditation Board for Testing and Calibration Laboratories (NABL) — one acceptable form of documented quality-assurance evidence for an outsourced laboratory, and a recognised framework this hospital may use; not required by this standard.
+- Internal documents of {{HOSPITAL_NAME}}: the service directory and department scopes of services; the laboratory scope of services; the written specimen-pathway guidance (requisition, collection, identification, handling, transport, processing, disposal); the defined turnaround times and their measurement; the critical-value list and notification record; the outsourcing agreements and tracking; the IQC and EQA records; the calibration and maintenance log; the registration and admission policy; the human resource policies; the support-services infection-control policy; the infection-surveillance policy; the laboratory-and-imaging safety policy; the facility-management policies; and the information-management policies."""
+
+DISTRIBUTION = """Controlled master copy: office of the head of the institution, {{HOSPITAL_NAME}}, with the quality or accreditation coordinator.
+
+Copies issued to: the laboratory; every collection point; every in-patient ward; the emergency area; the out-patient department; nursing administration; the person in charge of the laboratory; the named laboratory quality lead; facility-management or biomedical engineering; the contract or administration function that holds outsourcing agreements; and every head of department whose staff request tests.
+
+The current version is available to all staff at [Hospital to define — intranet location or nursing station folder]. The laboratory scope, the specimen-pathway guidance, the turnaround-time definitions, the critical-value list and the outsourcing list — the working documents this policy requires — are held in the laboratory and at the collection points that use them.
+
+Superseded versions are withdrawn from all points of use on issue of a revision, and one dated copy of each is retained by the quality or accreditation coordinator."""
+
+ABBREVIATIONS = """Abbreviations already defined in the HIC.1 to HIC.6 master policies are not repeated here. A reader using this document on its own should refer to those policies for the shared glossary, including NABH, SHCO, OE, BMW, ICT, MDRO, CLSI, WHO, SOP and PPE.
+
+The following abbreviations are used in this document and are not defined in HIC.1 to HIC.6:
+
+EQA — External Quality Assessment
+IQC — Internal Quality Control
+ISO — International Organization for Standardization
+NABL — National Accreditation Board for Testing and Calibration Laboratories
+TAT — Turnaround Time
+
+Any additional abbreviation used locally within {{HOSPITAL_NAME}} is [Hospital to define] and is added to this list at the next revision."""
+
+STATUTE_CLAUSE = (
+    "the Bio-Medical Waste Management Rules, 2016, insofar as they govern laboratory and "
+    "microbiological waste, and the Clinical Establishments (Registration and Regulation) Act, "
+    "2010 and the rules under it, where adopted by the State — or the corresponding State "
+    "clinical establishments or nursing home registration law where the 2010 Act is not in force"
+)
+DISCLAIMER = make_disclaimer(STATUTE_CLAUSE)
+
+OE_MAPPING = [
+    {
+        "oe_code": "AAC.4.a",
+        "requirement": "Scope of the laboratory services is commensurate to the services provided by the organization",
+        "steps": "Steps 1, 10",
+        "evidence": "The written laboratory scope of services, listing tests performed, hours of availability, and tests outsourced; alignment of that scope with the current service directory and department scopes; the record of review when the directory changes; the location where the laboratory scope is held",
+        "responsible": "Person in charge of the laboratory authors and keeps the scope current; head of the institution is accountable that laboratory services match the defined healthcare services",
+    },
+    {
+        "oe_code": "AAC.4.b",
+        "requirement": "The infrastructure (physical and equipment) and human resources are adequate to provide the defined scope of services",
+        "steps": "Steps 2, 10",
+        "evidence": "The laboratory staffing that backs the defined scope, including the out-of-hours arrangement; human-resource verification of qualifications used, not restated; the equipment inventory and physical areas; records of a test suspended when equipment is out of service rather than still claimed in the scope",
+        "responsible": "Person in charge of the laboratory keeps staffing and equipment adequate for the scope; human resource function verifies qualifications under its own procedures",
+    },
+    {
+        "oe_code": "AAC.4.c",
+        "requirement": "Requisition for tests, collection, identification, handling, safe transportation, processing and disposal of specimens is performed according to written guidance",
+        "steps": "Steps 3, 4, 10",
+        "evidence": "The written requisition content and method of requesting a test, including the unique identification number, patient name, test, date and time, requesting clinician and specimen type, and the rule that a verbal request is converted to a requisition as soon as collection is done; the named roles and locations that collect specimens; the written identifiers used to confirm patient identity before collection starts; sample requisitions and collection records showing the identity check before collection and the unique identification number applied to the specimen at the point of collection, in the presence of the patient, before the collector leaves that patient, rather than at the bench or at accessioning; the written prohibition of two-handed recapping and of labelling at the bench; records of unlabelled or mislabelled specimens rejected and recollected rather than processed; the written order of draw if one is used; the location of the collection and identification guidance; the written handling guidance per specimen type, including the rule that a leaking or unreadable specimen is rejected; the written transport conditions for each specimen type (temperature, time-to-receipt and any other stated limit) and records of specimens arriving outside those conditions being rejected; accessioning records showing the unique identification number on the specimen matched to the requisition before processing; the written processing methods for tests in the laboratory scope; the laboratory's written disposal pathway including the on-site pre-treatment method for microbiological and laboratory waste required by the Bio-Medical Waste Management Rules, 2016, before that waste enters the hospital-wide biomedical-waste stream owned by the support-services infection-control policy; the location of the handling, transport, processing and disposal guidance; induction or briefing records showing collectors and laboratory staff have been shown the written guidance; the audit sample at step 10 covering identity at collection, rejection of unlabelled specimens, and the disposal pathway",
+        "responsible": "Collectors apply identity-before-collection and label at collection; laboratory personnel accession, reject unlabelled specimens, process against written methods, and pre-treat laboratory waste before it enters the hospital-wide stream; person in charge of the laboratory holds the written guidance; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "AAC.4.d",
+        "requirement": "Laboratory results are available within a defined time frame",
+        "steps": "Steps 5, 10",
+        "evidence": "The written turnaround-time definition for at least routine, urgent and stat, stating the clock used (collection or receipt) so that the two are not mixed; the defined turnaround time for each outsourced test as it appears in the outsourcing agreement, included in this definition rather than omitted; the method by which actual turnaround is measured against the defined time, and the records of that measurement for a sample spanning in-house and outsourced, routine and stat; the review record at the stated interval and forum, including any category that was defined but not measured; records of the requesting clinician being told when a result will miss its defined time, with the reason, before the time elapses; the audit sample at step 10 of actual turnaround measured against the defined time rather than a list of times with no measurement",
+        "responsible": "Person in charge of the laboratory defines the times, states the clock, and measures actual against defined; quality lead includes turnaround in the quality-assurance review; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "AAC.4.e",
+        "requirement": "Critical results are intimated to the person concerned at the earliest",
+        "steps": "Steps 6, 10",
+        "evidence": "The written list of critical laboratory values in current use, dated, and showing it is this hospital's list rather than an unadapted printed table; the named recipient of a critical-result notification, the method, and the out-of-hours route; sample notification records showing the unique identification number, the test, the value, the date and time of the result, the date and time of notification, the person who notified, the person who received, and that read-back was obtained, including notifications made outside ordinary hours; records showing a voicemail, a desk note or a printed report alone was not treated as notification; records of any result that was both a critical value and an alert organism, showing notification to the treating clinician under this policy and a separate notification to the Infection Control Team under the infection-surveillance policy, neither treated as a substitute for the other; the location of the notification record; the audit sample at step 10 of critical-result notifications with recipient, time, value and read-back",
+        "responsible": "Laboratory personnel notify the treating clinician at the earliest and obtain read-back; treating clinicians receive and read back; person in charge of the laboratory holds the critical-value list and the method; Infection Control Team is not the recipient of this notification; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "AAC.4.f",
+        "requirement": "Laboratory tests not available in the organization are outsourced to organization(s) based on their quality assurance system",
+        "steps": "Steps 7, 10",
+        "evidence": "The written list of tests that are outsourced and the organisation each is sent to, matching the laboratory scope at step 1; the documented quality-assurance evidence on which each outsourced laboratory was selected and is reviewed, showing a quality-assurance system (internal quality control, external quality assessment, and the records that they run) rather than proximity or a rate card, and showing NABL accreditation accepted where held but not required and not the only acceptable form; the agreement with each outsourced organisation covering tests, quality-assurance evidence, defined turnaround time, method of transmitting results, obligation to notify a critical result to this hospital at the earliest, and the unique identification number on every report; tracking records from dispatch to return of the report against the unique identification number; sample outsourced reports filed in the patient record under the same unique identification number rather than only in a laboratory folder or as an unnumbered loose sheet; turnaround of outsourced tests measured under step 5 against the agreement; critical results received from the outsourced laboratory intimated under step 6 to the treating clinician of this hospital; records of an in-house test that could not be performed being suspended in the laboratory scope rather than silently sent out; the audit sample at step 10 of outsourced reports in the patient record under the same unique identification number",
+        "responsible": "Person in charge of the laboratory selects on documented quality assurance and keeps the outsourced list aligned with the scope; administration or the contract function holds the agreement and the quality-assurance evidence; laboratory personnel track dispatch and file the returned report; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "AAC.4.g",
+        "requirement": "The laboratory quality assurance programme is implemented",
+        "steps": "Steps 8, 9, 10",
+        "evidence": "The named laboratory quality lead and the accountability of that role for stopping issue of results from an out-of-control process; the written internal quality-control schedule, the acceptance limits, and IQC records showing controls performed, recorded and reviewed; records of out-of-limit IQC in which patient results from the affected run were not issued, the cause was examined, corrective action was recorded, and issue resumed only when the control was back within limits, rather than a failed control re-run in silence while patient results went out; the external quality-assessment or proficiency-testing programme in use, its interval, EQA reports reviewed by the quality lead, and documented corrective action on any unacceptable EQA result rather than filing of a certificate alone; the quality-assurance framework the laboratory uses, if any, recorded as a local written programme and/or ISO 15189 or NABL where the hospital has chosen them, with no claim that NABH SHCO mandates those frameworks as the only programme; the forum and interval at which IQC failures, EQA performance, open and closed corrective actions, and any period during which issue was stopped are reviewed; calibration and maintenance included as part of this programme under step 9 rather than treated as a separate courtesy; the audit sample at step 10 of IQC and EQA with corrective action when out of control",
+        "responsible": "Named laboratory quality lead operates the programme, reviews IQC and EQA, records corrective action and reports findings; person in charge of the laboratory is accountable that the programme is run; laboratory personnel perform IQC and do not issue from a failed control; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "AAC.4.h",
+        "requirement": "The programme includes periodic calibration and maintenance of all equipment",
+        "steps": "Steps 9, 8, 10",
+        "evidence": "The calibration and maintenance schedule covering every laboratory instrument used to produce an issued result, including infrequently used instruments, stating what is done, at what interval and the acceptance criterion, with no reporting instrument absent from the schedule; the log of work performed showing the instrument, the date, what was done, the result, the person who did it and the next due date; the named person or function that performs the work — laboratory, facility-management or biomedical engineering — and the location of the log; records of instruments taken out of service when calibration was overdue or when calibration or maintenance failed, labelled out of service, not used, and with no patient result issued from them in that period; the recorded action taken for each such event (outsource under step 7, backup instrument itself in calibration, or suspend the test in the laboratory scope under step 2); records of return to service only after a recorded satisfactory calibration; the distinction recorded that facility policies may perform the work while this policy owns that the laboratory quality-assurance programme includes it and that results are not issued from an uncalibrated instrument; the audit sample at step 10 of no result issued from an instrument that was overdue or had failed calibration",
+        "responsible": "Named quality lead and person in charge of the laboratory keep the schedule and stop issue from an overdue or failed instrument; facility-management or biomedical engineering perform the work when it is assigned to them and record it; laboratory personnel do not use an instrument labelled out of service; quality or accreditation coordinator audits",
+    },
+]
+
+UNIVERSAL_FACTS_CHECKLIST = """Universal (non-NABH) facts included in this draft, and where each was verified. Check these first.
+
+SOURCE OF THE OE TEXT
+0. AAC.4 standard text and all eight OEs were read directly from the official NABH SHCO Standards 3rd Edition PDF (August 2022), Chapter 1 Access, Assessment and Continuity of Care, printed pages 51-52 (PDF page index 57-58). The PDF was downloaded on 2026-08-17 from the NABH website's Explore NABH Standards page. Levels: AAC.4.a Commitment, AAC.4.b Commitment, AAC.4.c Commitment, AAC.4.d Commitment, AAC.4.e Commitment, AAC.4.f Commitment, AAC.4.g Commitment, AAC.4.h Commitment.
+   SIX OEs CARRY THE ASTERISK -- AAC.4.c, AAC.4.d, AAC.4.e, AAC.4.f, AAC.4.g and AAC.4.h. There is no single documented-evidence anchor; the draft builds six separate deep blocks (steps 3-4 for c; step 5 for d; step 6 for e; step 7 for f; step 8 for g; step 9 for h). AAC.4.a (Commitment, laboratory scope commensurate with hospital services) and AAC.4.b (Commitment, infrastructure and human resources adequate) are unasterisked and are correspondingly Tier 2.
+   Verified three ways on 2026-08-17: scripts/asterisk_extract.py re-run against the freshly downloaded PDF (self-validation passed; output matched committed scripts/shco_oe_asterisks.json on all 408 entries), the AAC.4 pages read directly from the extracted page text, and the committed asterisk file's agreement with live shco_full_oes as of 2026-08-13. AAC.4.c-h were not among the 14 mismatches of the 2026-08-10 audit.
+
+TIERING UNDER THE STANDING RULE
+1. Two-tier depth standing rule of 2026-08-10 applies. SIX OF EIGHT OEs ARE TIER 1. Tier 1: AAC.4.c, AAC.4.d, AAC.4.e, AAC.4.f, AAC.4.g, AAC.4.h -- procedure steps 3, 4, 5, 6, 7, 8 and 9 carry the reasoning (why identification at collection is the safety step, why a TAT list that is never measured is not a process, why read-back and a hospital-defined value list, why NABL is not mandated, why IQC that is ignored is not a programme, why an uncalibrated instrument does not report). Tier 2: AAC.4.a (step 1) and AAC.4.b (step 2) -- requirement and method without extended rationale. Reviewer to note the shallower treatment of a and b is a DECISION UNDER THE STANDING RULE, not an omission.
+
+CROSS-REFERENCE AND OVERLAP CHECK
+2. Tier 1 cross-check (2026-08-17) of AAC.4.c/d/e/f/g/h against all six approved HIC masters and the approved AAC.1 master, plus the unapproved AAC.2 and AAC.3 drafts. Files: policies/drafts/hic1_draft.json through hic6_draft.json, aac1_draft.json, aac2_draft.json and aac3_draft.json. Search terms: laboratory, specimen, phlebotomy, requisition, turnaround, critical result, outsource, calibration, NABL, biomedical waste, alert organism, MDRO.
+   AAC.1: laboratory is a diagnostic service the directory and department scopes must name. This draft's Scope and step 1 align the laboratory scope to that definition and do not rewrite AAC.1. Not an overlap; the two documents agree. AAC.1's requirement that each defined service have diagnostic services behind it is now applied from the laboratory side.
+   HIC.3 (approved): hospital-wide four-colour BMW programme, transport, CBMWTF handover, SPCB authorisation, and the statement that microbiological and laboratory waste is pre-treated before disposal where the rules require it. This draft's Scope and step 4 take the laboratory's written pathway and the pre-treatment; they deliberately do not restate the four colour categories. HIC.3 step 21 already forbids recapping at waste handling; this draft's collection rule (no two-handed recapping) is the same practice at the point of draw, sourced from WHO phlebotomy 2010. Not a contradiction; not added to the reconciliation list.
+   HIC.5 (approved): laboratory flags alert organisms and notifies the Infection Control Team (steps 23-24). This draft's Scope and step 6 own critical-result notification to the TREATING CLINICIAN and state that the two notifications are not substitutes. Not an overlap of method; a division of recipient. Not added to the reconciliation list.
+   HIC.1: laboratory representation on the IPCC; notifiable-disease reporting. Neither is restated here. Notifiable disease remains HIC.1.
+   HIC.6: calibration of sterilisers is a different equipment set. No subject-matter overlap with laboratory-instrument calibration.
+   AAC.2 (unapproved): unique identification number generated at registration. This draft requires that number on requisition, specimen and report; it does not issue the number. Division stated in Scope.
+   AAC.3: no subject-matter overlap.
+3. FORWARD REFERENCES CREATED BY THIS DRAFT: laboratory-safety programme -- AAC.6, not yet drafted (this document owns the specimen pathway and QA; AAC.6 owns the safety programme); facility-management / biomedical-engineering method of calibration -- FMS, not yet drafted (this document owns that lab QA includes calibration and that results are not issued from an uncalibrated instrument); human-resource credentialing method -- HRM, not yet drafted; medical-record structure -- IMS, not yet drafted; imaging services -- AAC.5, sibling, not this document. Each is a deliberate boundary.
+4. T2 QUICK CHECK (not a full cross-reference audit): AAC.4.a laboratory scope vs AAC.1 service directory and department scopes -- flagged in Scope, AAC.1 owns the directory, this owns the laboratory's aligned scope. AAC.4.b infrastructure and HR vs AAC.1.b resourcing of defined services and vs HRM credentialing -- flagged in Scope, qualifications via HR policies, this does not restate credentialing. Neither is a contradiction with an approved document.
+
+STATUTORY AND EXTERNAL FACTS
+5. Bio-Medical Waste Management Rules, 2016 -- cited insofar as they govern laboratory and microbiological waste, including on-site pre-treatment where the rules require it. The four colour categories are NOT restated (HIC.3 owns them). No storage-time number is stated here; HIC.3 already carries the untreated-waste storage rule. No assertion which State Pollution Control Board conditions apply to {{HOSPITAL_NAME}}.
+6. Clinical Establishments Act, 2010 -- cited only as applying where the State has adopted it, with the State-law alternative, at the level of the Act's general scheme on records of diagnostic services. No section number. No assertion which law applies to {{HOSPITAL_NAME}}.
+7. WHO Guidelines on Drawing Blood: Best Practices in Phlebotomy (2010) -- chapter reference 10. USED: patient identity check before collection; unique identification number on the specimen at collection, not later at the bench; do not recap needles by two-handed recapping. NOT USED as a numbered protocol; order of draw is [Hospital to define] if mentioned. Common error recorded: unlabelled or mislabelled tubes. Reasoning recorded: identification at collection is the safety step because the bench cannot recover identity.
+8. Critical-result read-back -- stated as an editorial method in the Joint Commission National Patient Safety Goal / CLSI GP47 tradition, not as a cited number. The written list of critical values is [Hospital to define]. NO invented critical-value numbers appear anywhere in this draft.
+9. NABL is NOT mandated. ISO 15189 / NABL are named as recognised frameworks the hospital may use, and NABL accreditation as one acceptable form of documented QA evidence for an outsourced laboratory, not the only form and not a condition of outsourcing.
+10. NO NUMBERS ARE STATED as requirements -- no TAT minutes, no IQC frequencies, no calibration intervals, no critical-value thresholds, no storage-hour limits. Every such value is [Hospital to define]. Consistent with the no-numbers default.
+
+EDITORIAL POSITIONS TAKEN
+11. Step 3's rule that labelling at the bench is forbidden, and that an unlabelled specimen is rejected rather than reconstructed, is an editorial position consistent with WHO 2010's collection-point identification and with the asterisk on written guidance.
+12. Step 5's rule that a TAT definition that is never measured is a document defect, and that the clock (collection vs receipt) must be stated, is an editorial position; the standard requires a defined time frame, not a measurement method.
+13. Step 6's choice of read-back, and the rule that a call to infection control does not complete clinician notification, are editorial positions. The standard requires intimating the person concerned at the earliest; this draft names the treating clinician as that person and separates HIC.5's ICT alert.
+14. Step 7's refusal to require NABL, and step 8's refusal to require ISO 15189 or NABL as the only QA programme, are editorial positions required by the owner's instruction that NABL is not mandated.
+15. Step 9's out-of-service-when-overdue rule, and the refusal to issue results from an uncalibrated instrument, are editorial positions; the standard requires that the QA programme include periodic calibration and maintenance, not this enforcement method.
+
+DISCLAIMER BLOCK -- STATUTE-MATCHED UNDER THE 2026-08-17 STANDING RULE
+16. Paragraphs 1, 3 and 4 are the shared HIC.3-6 block, hash-checked at build time. Paragraph 2 names the Bio-Medical Waste Management Rules, 2016 (insofar as they govern laboratory and microbiological waste) and the Clinical Establishments Act 2010 (or corresponding State law) -- the statutes this document's References actually cite. BMW IS relevant here (unlike AAC.1). It does NOT name the Food Safety and Standards Act, 2006. The HIC wholesale inherit of FSS is refused by the build.
+
+DELIBERATELY NOT INCLUDED
+- Laboratory-safety programme, PPE and safety training -- AAC.6.
+- Hospital-wide BMW colour code, CBMWTF, SPCB authorisation -- HIC.3.
+- Alert-organism / MDRO notification to ICT -- HIC.5.
+- Imaging services -- AAC.5.
+- Blood-bank / transfusion as a separate service.
+- A numeric critical-value table.
+- NABL or ISO 15189 as a mandated programme.
+- The five optional sections are left unset, matching HIC.1-6 and AAC.1.
+
+HOSPITAL-SPECIFIC VALUES LEFT AS [Hospital to define] -- 34 fillable blanks in the rendered document: 2 in the exact form "[Hospital to define]" (one in Abbreviations, one inside the shared Disclaimer block) and 32 in the guidance-bearing form "[Hospital to define - what to state]". A search for the exact string finds 2 of 34; a search for "Hospital to define" without brackets finds all 34, and that is the search a hospital should be told to run. The figure is produced by policy_placeholder_audit.py across every rendered field in both forms, which also asserts that no nested placeholder exists.
+
+The values the hospital must supply: the laboratory scope of services and where it is held; the laboratory staffing that backs the defined scope; the laboratory equipment inventory and physical areas; the requisition content and how a test is requested; who collects specimens and in which locations; the identifiers used to confirm patient identity before collection; the order of draw if one is used; where the collection and identification guidance is held; the transport conditions for each specimen type; the pre-treatment method for microbiological and laboratory waste; where the handling, transport, processing and disposal guidance is held; the defined turnaround time for routine, urgent and stat; how actual turnaround is measured; the review interval and forum for turnaround-time performance; the written list of critical laboratory values; who is notified of a critical result, by what method, including out of hours; where the critical-result notification is recorded; the tests that are outsourced and to which organisation; the quality-assurance evidence required of an outsourced laboratory; the agreement including turnaround times with each outsourced laboratory; how an outsourced report is tracked and filed; the named laboratory quality lead; the internal quality-control schedule; the external quality-assessment programme and its interval; the quality-assurance framework the laboratory uses if any; the forum and interval at which laboratory quality-assurance findings are reviewed; the calibration and maintenance schedule for each laboratory instrument; who performs calibration and maintenance and where the log is held; the action taken when an instrument is overdue or has failed calibration; the audit interval for laboratory records; the review interval for this policy; the intranet or folder location; and any additional local abbreviation."""
+
+SQL_HEADER = """-- Source: NABH SHCO Standards 3rd Edition (August 2022), Chapter 1, printed pages 51-52
+-- (PDF page index 57-58). Levels: a Commitment, b Commitment, c Commitment, d Commitment,
+-- e Commitment, f Commitment, g Commitment, h Commitment.
+-- SIX OEs CARRY THE ASTERISK -- AAC.4.c, AAC.4.d, AAC.4.e, AAC.4.f, AAC.4.g, AAC.4.h.
+-- UNAPPROVED DRAFT. Do not run this insert until the owner confirms the write.
+"""
+
+if __name__ == "__main__":
+    emit_and_verify(
+        standard_code=STANDARD_CODE,
+        chapter=CHAPTER,
+        oe_codes=OE_CODES,
+        policy_title=POLICY_TITLE,
+        purpose=PURPOSE,
+        scope=SCOPE,
+        policy_statement=POLICY_STATEMENT,
+        procedure_steps=PROCEDURE_STEPS,
+        responsibility=RESPONSIBILITY,
+        references_text=REFERENCES,
+        distribution=DISTRIBUTION,
+        abbreviations=ABBREVIATIONS,
+        disclaimer=DISCLAIMER,
+        oe_mapping=OE_MAPPING,
+        universal_facts_checklist=UNIVERSAL_FACTS_CHECKLIST,
+        version=VERSION,
+        revision_history=REVISION_HISTORY,
+        tier1_oes=TIER1_OES,
+        statute_clause=STATUTE_CLAUSE,
+        sql_header=SQL_HEADER,
+        json_name="aac4_draft.json",
+        sql_name="aac4_insert.sql",
+    )
