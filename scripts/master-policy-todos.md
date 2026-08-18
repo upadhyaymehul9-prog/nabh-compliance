@@ -949,7 +949,7 @@ T2 one-line flags (standing rule: flag and move on):
 - [ ] **COP.12.f chemical restraint vs MOM.** Physical/mechanical restraint and seclusion here; chemical restraint as a medication process is MOM, not an undeclared substitute.
 
 - [ ] **COP.12 vs COP.8 child abduction/abuse.** If children are a vulnerable category, COP.12 still owns the vulnerability programme and does not rewrite COP.8.f.
-- [ ] **COP.12 bedside vulnerable/falls/PU/VTE programmes vs PSQ.1.c organisation-level proactive risk analysis now landed.** COP.12 owns the bedside tools. PSQ.1.c is quality-system analysis before harm. PSQ.5 is after-the-fact incidents. ROM.4 (undrafted) is management risk. Do not collapse these four.
+- [ ] **COP.12 bedside vulnerable/falls/PU/VTE programmes vs PSQ.1.c organisation-level proactive risk analysis now landed.** COP.12 owns the bedside tools. PSQ.1.c is quality-system analysis before harm. PSQ.5 is after-the-fact incidents. ROM.4.a (drafted 2026-08-17, UNAPPROVED on `cursor/draft-rom1-rom4-unapproved-9324`) is management ensuring organisation-wide proactive risk. Do not collapse these four. Do not patch COP.12 in this pass.
 
 ---
 
@@ -1503,7 +1503,8 @@ T2 one-line flags:
 - [ ] **COP.6.d / COP.11.h unit QA vs this hospital-wide programme.** Unit findings may feed;
       they do not replace.
 - [ ] **PSQ.1.c proactive risk analysis vs COP.12 bedside vulnerable/falls/PU vs ROM.4.a
-      (undrafted) management risk vs PSQ.5 after-the-fact incidents.** Four different acts.
+      management risk now landed vs PSQ.5 after-the-fact incidents.** Four different acts.
+      ROM.4.a (drafted 2026-08-17, UNAPPROVED) accepts the handoff and does not rewrite PSQ.1.c.
 - [ ] **PSQ.1.d adapted WHO safety goals vs COP.1 / HIC.2 / MOM.6 owning clinical method.**
       Adaptation here; method there.
 - [ ] **HIC.5 HAI surveillance method vs this programme.** Historical "belongs to CQI" in
@@ -1571,10 +1572,12 @@ T2 one-line flags:
 - [ ] **PSQ.4.d workforce feedback vs PRE.6 patient/family complaints.** PRE.6 is drafted
       UNAPPROVED on sibling branch `cursor/draft-pre1-pre6-unapproved-9324`. This OE is workforce
       feedback, not patient complaints.
-- [ ] **PSQ.4.c budget earmark vs ROM.3.a (undrafted) governance budget approval.** This document
-      owns that funds are earmarked from the annual budget; ROM owns the governance budget act.
-- [ ] **ROM.4 (undrafted) management ensuring proactive risk vs PSQ.1.c quality-system analysis.**
-      Flagged for the ROM pass.
+- [ ] **PSQ.4.c budget earmark vs ROM.3.a governance budget approval now landed.** This document
+      owns that funds are earmarked from the annual budget; ROM.3.a (drafted 2026-08-17,
+      UNAPPROVED on `cursor/draft-rom1-rom4-unapproved-9324`) owns governance approval of that
+      budget. Do not patch PSQ.4 in this pass.
+- [ ] **ROM.4.a management ensuring proactive risk now landed vs PSQ.1.c quality-system analysis.**
+      ROM.4 accepts the split; PSQ.1.c remains quality-system analysis.
 
 ---
 
@@ -1608,10 +1611,136 @@ T2 one-line flags:
       CAPA" in MOM.7 is a 2nd Edition name.
 - [ ] **PSQ.5.e informing stakeholders vs PRE.6 complaint redressal.** Informing is this OE;
       redressal of a patient/family complaint is PRE.6 (sibling branch).
-- [ ] **ROM.4.c (undrafted) governance reporting of incidents.** This document owns the quality
-      system; ROM owns what management reports as governance. Flagged for the ROM pass.
+- [ ] **ROM.4.c governance reporting of system and process failures now landed.** PSQ.5 owns the
+      incident SOP; ROM.4.c (drafted 2026-08-17, UNAPPROVED) owns that management ensures
+      internal and external reporting systems are implemented. Do not patch PSQ.5 in this pass.
 - [ ] **Reporting time frame is hospital-defined.** Same as MOM.7: do not invent a 24-hour
       NABH mandate.
+
+---
+
+## Deferred from ROM.1 (drafted 2026-08-17, UNAPPROVED)
+
+Source: official SHCO 3rd Edition PDF md5 `39e3bc86d73d651b9cfef283bbf018a9`, Chapter 7 printed
+pages 109–114 (PDF indices 115–120). TOC printed page 108 is the chapter start in the table of
+contents; intent is printed 109. ROM.1 printed p.110 / index 116. Header: "The organisation
+identifies those responsible for governance and their roles are defined." T1 = ROM.1.a*,
+ROM.1.b*, ROM.1.e*. P2 is accreditation-only. Chapter reference 23 (India Code) is a lookup,
+not a named Act. Companies Act 2013 / Societies Registration Act 1860 / MSME registration
+are not a checklist. Legal form is hospital-defined. OECD G20 principles and Arnwine are
+frameworks, not a mandate that every SHCO is a company.
+
+Insert ROM.1–ROM.4 as `status='draft'` only via
+`python3 policies/build/apply_rom_drafts_supabase.py --insert`. The 2026-08-17 Cloud Agent VM
+did not have `SUPABASE_SERVICE_ROLE_KEY`; dry-run of all four drafts passed; live POST was not
+executed. No row was approved.
+
+T1 overlap flags (full cross-check done in the ROM.1 draft Scope / universal_facts_checklist).
+
+- [ ] **ROM.1 vs ROM.2 — governing entity vs day-to-day head.** ROM.1 identifies those
+      responsible for governance and (d) appoints senior leaders. ROM.2 owns that the head has
+      administrative qualifications and experience, complies with applicable legislations, and
+      is reviewed. Do not use one file for both.
+
+- [ ] **ROM.1.e ethical management framework vs PRE.1/PRE.2 patient rights vs PRE.3 consent vs
+      PSQ.4 culture of safety.** Organisational ethics support is this OE. Patient rights,
+      consent method and safety-culture-as-PSQ-requirement stay those documents. Do not patch
+      PRE/PSQ in this pass.
+
+T2 one-line flags:
+
+- [ ] **ROM.1.c performance against mission vs ROM.3.d service standards vs PSQ.2 indicators vs
+      ROM.2.d review of the leader.** Data may overlap; four different acts.
+- [ ] **ROM.1.d appointment vs HRM employment file (undrafted).** Governance appoints; HRM files.
+- [ ] **PSQ.1 committees are not this governing entity** unless this hospital has recorded that
+      they are the same body — they usually are not.
+- [ ] **FMS (undrafted)** is not this document.
+
+---
+
+## Deferred from ROM.2 (drafted 2026-08-17, UNAPPROVED)
+
+Whole standard is Tier 2 (four OEs a–d, none asterisked). ROM.2.c is Core and still Tier 2
+because it is unasterisked. Header: "The organisation is headed by a leader who shall be
+responsible for operating the organisation on a day-to-day basis." P2 is accreditation-only
+despite ROM.2.c being about legislation: the bibliography names India Code as a repository,
+not an Act. Dumping Companies Act / Societies / CEA / CPA / MHCA as a checklist would be the
+AAC.1 defaulted-statute bug. Applicable list is hospital-defined from legal form and AAC.1
+services. Clay-Williams / Daly are frameworks, not a mandate that the head is (or is not) a
+doctor.
+
+T2 one-line flags:
+
+- [ ] **ROM.1.d appointment vs this qualifications/experience.** See ROM.1 T1 flag.
+- [ ] **ROM.1.c organisation-against-mission vs ROM.2.d review of the leader.**
+- [ ] **PSQ.4 leader awareness of the safety programme vs this administrative-head OE.**
+- [ ] **HRM (undrafted) employment file.** This document names the administrative requirements;
+      HRM files certificates.
+- [ ] **AAC.1 defined services vs the applicable-legislation register.** Unused services do not
+      invent a statute.
+- [ ] **Owning documents keep their own statutes** (HIC.3 BMW, MOM.8 NDPS, AAC.5 PC-PNDT). This
+      step owns that the leader is responsible for the applicable set as a whole.
+
+---
+
+## Deferred from ROM.3 (drafted 2026-08-17, UNAPPROVED)
+
+T1 = ROM.3.d* only. Header: "The organisation displays professionalism in its functioning."
+Official ROM.3.e uses "organization". P2 is accreditation-only. No rupee figure as a NABH
+mandate. **PSQ.4.c budget-earmark forward-ref ACCEPTED:** this OE approves the annual budget;
+PSQ.4.c earmarks programme funds from it.
+
+T1 overlap flags:
+
+- [ ] **ROM.3.d measurable service standards vs AAC.1 defined services vs PSQ.2 key indicators.**
+      AAC.1 names what is offered. PSQ.2 owns indicators as QI tools. This OE owns documented
+      measurable service standards and monitoring them. Do not paste Annexure 1 as this set.
+
+T2 one-line flags:
+
+- [ ] **PSQ.4.c earmark vs this budget approval.** Handoff accepted; do not patch PSQ.4.
+- [ ] **ROM.3.c committee-effectiveness review vs PSQ.1 / HIC.1 / MOM.1 owning what those
+      committees do.** This OE reviews functioning; it does not rewrite those methods.
+- [ ] **ROM.3.e staff rights vs PRE.1/PRE.2 patient rights vs HRM (undrafted) employment and
+      grievance file.** One poster is not both patient and staff rights.
+- [ ] **ROM.1.c mission performance vs this service-standard monitoring.**
+- [ ] **FMS (undrafted) facility KPIs** are not this hospital-wide service-standard set counted
+      twice.
+
+---
+
+## Deferred from ROM.4 (drafted 2026-08-17, UNAPPROVED)
+
+T1 = ROM.4.a*, ROM.4.c*. Header: "Management ensures that patient-safety aspects and
+risk-management issues are an integral part of patient care and hospital management." ROM.4.d
+is Core and still Tier 2 (unasterisked). P2 is accreditation-only. ISO 31000:2018 is a
+framework, not a certified-system mandate. Indian Contract Act 1872 is not imported.
+**PSQ.1.c / COP.12 / PSQ.5 forward-refs ACCEPTED** without absorbing those methods.
+
+T1 overlap flags:
+
+- [ ] **ROM.4.a vs PSQ.1.c vs COP.12 vs PSQ.5 — CRITICAL FOUR-WAY SPLIT ACCEPTED.** PSQ.1.c is
+      quality-system proactive analysis of patient-safety risks. COP.12 is bedside
+      vulnerable/falls/PU/VTE tools. PSQ.5 is after-the-fact incidents. This OE is management
+      ensuring organisation-wide proactive risk across care and hospital management. Do not
+      patch PSQ or COP.12 in this pass.
+
+- [ ] **ROM.4.c vs PSQ.5 — CRITICAL SPLIT ACCEPTED.** PSQ.5 is the incident SOP. This OE is
+      management ensuring systems for internal and external reporting of system and process
+      failures. Dual entry when a clinical incident is also a process failure. PRE.6 remains
+      complaint redressal; MOM.7 remains medication-event capture.
+
+T2 one-line flags:
+
+- [ ] **ROM.4.b integration vs PSQ.1 QI programme vs ROM.3.a strategic plan.** This OE owns that
+      they talk to each other; it does not rewrite those documents.
+- [ ] **PSQ.4 culture of safety vs this risk register.** Culture is PSQ.4.a; the risk duty is here.
+- [ ] **ROM.4.d/e outsourcing vs AAC.4/AAC.5/HIC.6 owning method** where the work is laboratory,
+      imaging or CSSD. This document owns the agreement with service parameters and monitoring.
+- [ ] **AAC.1 unused outsourced services** are a recorded absence, not a copied SLA.
+- [ ] **FMS (undrafted) facility inspection rounds / fire plan.** Management risk duty includes
+      those domains; FMS writes the facility method.
+- [ ] **Reporting time frame is hospital-defined.** Same as PSQ.5 / MOM.7: no 24-hour NABH clock.
 
 ---
 
