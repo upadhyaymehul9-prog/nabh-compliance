@@ -1,0 +1,240 @@
+# -*- coding: utf-8 -*-
+"""Builds the PSQ.3 master policy draft: JSON for review + SQL for later insert.
+
+UNAPPROVED DRAFT. Do not insert, approve, or write this to Supabase until the
+owner confirms.
+
+THIS IS DRAFTED UNDER THE TWO-TIER DEPTH STANDING RULE (2026-08-10) AND THE
+DISCLAIMER STATUTE-MATCHING STANDING RULE (2026-08-17), both in
+scripts/master-policy-todos.md.
+
+THIS CHAPTER IS PSQ in the SHCO 3rd Edition, not 2nd Edition CQI.
+
+NO OE CARRIES THE ASTERISK. The whole standard is Tier 2.
+
+Official source: NABH SHCO 3rd Edition PDF, Chapter 6, PSQ.3, printed page 103
+(PDF page index 109). Intent printed page 101: clinical audits shall be used
+as a tool to improve the quality of patient care; appropriate quality tools
+for QI activities; improvements sustained.
+
+Asterisks verified 2026-08-17: none of PSQ.3.a-e is asterisked.
+"""
+from policy_build_common import emit_and_verify, make_disclaimer_accreditation_only
+
+STANDARD_CODE = "PSQ.3"
+CHAPTER = "PSQ"
+OE_CODES = [
+    "PSQ.3.a", "PSQ.3.b", "PSQ.3.c", "PSQ.3.d", "PSQ.3.e",
+]
+TIER1_OES = []
+
+POLICY_TITLE = "Clinical Audit and Quality Improvement Projects"
+
+VERSION = "1.0"
+REVISION_HISTORY = [
+    {"version": "1.0", "date": "17-08-2026", "description": "Initial release."},
+]
+
+PURPOSE = """This document sets out how {{HOSPITAL_NAME}} performs and documents clinical audits to improve the quality of patient care; how the parameters to be audited are defined; how medical and nursing staff participate; how remedial measures are implemented; and how the organisation undertakes quality-improvement projects.
+
+The chapter intent is that clinical audits are used as a tool to improve patient care, that quality tools are used for improvement activities, and that improvements are sustained. A monitoring audit under PSQ.1.h counted twice, or a project that is only a poster, is not that intent."""
+
+SCOPE = """This policy applies to medical and nursing staff who participate in clinical audit and QI projects at {{HOSPITAL_NAME}}, and to the people who define parameters and implement remedial measures.
+
+It covers: clinical audits performed and documented; defined audit parameters; medical and nursing participation; remedial measures; and quality-improvement projects.
+
+Boundaries with other policies of {{HOSPITAL_NAME}}:
+
+- PSQ.1.h is audit as continuous monitoring of the safety and QI programmes. This document is clinical audit of patient care. Do not use one file for both.
+- PSQ.1.e is the comprehensive QI programme. This document's PSQ.3.e is named QI projects undertaken inside that programme.
+- PSQ.2 indicators may supply data to an audit; they are not the audit.
+- COP.6.d and COP.11.h remain unit QA. A unit may run clinical audits under this method; those unit QA programmes are not this hospital-wide clinical-audit system.
+- COP.4 nursing process is care; nursing participation in clinical audit is this document.
+- HIC.5 surveillance is not a clinical audit. An SSI rate may be an audit parameter; the NHSN-style method stays HIC.5.
+- MOM.7 capture is not a clinical audit of prescribing.
+- This chapter is PSQ, not CQI."""
+
+POLICY_STATEMENT = """{{HOSPITAL_NAME}} performs clinical audits to improve the quality of patient care and documents them.
+
+{{HOSPITAL_NAME}} defines the parameters to be audited.
+
+{{HOSPITAL_NAME}} requires medical and nursing staff to participate in this system.
+
+{{HOSPITAL_NAME}} implements remedial measures.
+
+{{HOSPITAL_NAME}} undertakes quality-improvement projects.
+
+{{HOSPITAL_NAME}} does not treat PSQ.1.h monitoring audits, or a 2nd Edition CQI project list, as this system."""
+
+PROCEDURE_STEPS = [
+"""1. Clinical audits performed and documented
+
+Clinical audits are performed to improve the quality of patient care and documented.
+
+How clinical audits are performed, documented, and shown to improve care, is [Hospital to define — how clinical audits are performed and documented]. Esposito and Canton (chapter reference 8) and Limb et al. (chapter reference 23) are frameworks for audit method, not pasted protocols. A monitoring checklist under PSQ.1.h is not this audit.""",
+
+"""2. Parameters defined by the organisation
+
+The parameters to be audited are defined by the organisation.
+
+The current defined parameters, who defines them, and how they are kept current, are [Hospital to define — the parameters to be audited and who defines them]. Parameters match services this hospital actually runs.""",
+
+"""3. Medical and nursing staff participate
+
+Medical and nursing staff participates in this system.
+
+How doctors and nurses participate (choosing parameters, collecting, reviewing, acting), is [Hospital to define — how medical and nursing staff participate in the clinical-audit system]. Participation by the quality office alone is not this OE.""",
+
+"""4. Remedial measures implemented
+
+Remedial measures are implemented.
+
+How remedial measures are decided, implemented and checked for completion, is [Hospital to define — how remedial measures from clinical audit are implemented and followed through]. A recommendation without implementation is not this OE. Sustained improvement is the chapter intent; a one-off memo is incomplete.""",
+
+"""5. Quality-improvement projects
+
+The organisation undertakes quality improvement projects.
+
+Which projects are undertaken, who leads them, which quality tools are used, and how they sit inside the PSQ.1.e programme, are [Hospital to define — the quality-improvement projects undertaken, who leads them, and how they are documented]. IHI QI Essentials Toolkit (chapter reference 28) and ASQ seven basic tools (chapter reference 36) are frameworks, not mandated toolkits. A project is not the whole QI programme, and the programme is not a substitute for having undertaken a project.""",
+
+"""6. Records, review and the order of operations
+
+Audit reports, defined parameters, participation records, remedial-measure follow-through, and QI project records, are retrievable.
+
+The quality or accreditation coordinator audits a sample of these records at [Hospital to define — the audit interval for clinical-audit and QI-project records] for: clinical audits documented; parameters defined; medical and nursing participation; remedial measures implemented; projects undertaken; and no PSQ.1.h file counted as clinical audit.
+
+This policy is reviewed at [Hospital to define — the review interval for this policy], and sooner when an audit produced no remedial measure, or a monitoring audit was offered as clinical audit, or when PSQ.1 that this document sits inside is revised.""",
+]
+
+RESPONSIBILITY = """The head of the institution is accountable for {{HOSPITAL_NAME}} running clinical audit and undertaking QI projects.
+
+The named lead for clinical audit and QI projects is [Hospital to define — the named lead for clinical audit and QI projects].
+
+Medical and nursing staff participate. The quality office supports; it does not replace them.
+
+The quality or accreditation coordinator audits the records at step 6 and reports findings to the head of the institution."""
+
+REFERENCES = """- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Chapter 6 PSQ, standard PSQ.3.
+- Esposito, P., & Canton, A. D. (2014). Clinical audit, a valuable tool to improve quality of care — chapter reference 8; framework.
+- Limb, C., et al. (2017). How to conduct a clinical audit and quality improvement project — chapter reference 23; framework.
+- Quality Improvement Essentials Toolkit. IHI — chapter reference 28; framework.
+- Seven basic quality tools for process improvement. ASQ — chapter reference 36; framework.
+- Internal documents of {{HOSPITAL_NAME}}: the clinical-audit method and parameter list; participation and remedial-measure records; QI project records; the PSQ.1 QI programme."""
+
+DISTRIBUTION = """Controlled master copy: office of the head of the institution, {{HOSPITAL_NAME}}, with the quality or accreditation coordinator.
+
+Copies issued to: medical and nursing administration; the named lead; and the QI programme coordinator.
+
+The current version is available to all staff at [Hospital to define — intranet location or nursing station folder].
+
+Superseded versions are withdrawn from all points of use on issue of a revision, and one dated copy of each is retained by the quality or accreditation coordinator."""
+
+ABBREVIATIONS = """Abbreviations already defined in the HIC.1 to HIC.6 master policies are not repeated here. A reader using this document on its own should refer to those policies for the shared glossary, including NABH, SHCO, OE, WHO, SOP and PPE.
+
+The following abbreviations are used in this document and are not defined in HIC.1 to HIC.6:
+
+PSQ — Patient Safety and Quality Improvement (SHCO 3rd Edition Chapter 6; not CQI)
+QI — quality improvement
+
+Any additional abbreviation used locally within {{HOSPITAL_NAME}} is [Hospital to define] and is added to this list at the next revision."""
+
+DISCLAIMER, STATUTE_CLAUSE = make_disclaimer_accreditation_only()
+
+OE_MAPPING = [
+    {
+        "oe_code": "PSQ.3.a",
+        "requirement": "Clinical audits are performed to improve the quality of patient care and documented.",
+        "steps": "Steps 1, 6",
+        "evidence": "The written clinical-audit method; sample documented audits of patient care rather than a PSQ.1.h monitoring checklist; the audit sample at step 6",
+        "responsible": "Named lead holds the method; medical and nursing staff perform; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "PSQ.3.b",
+        "requirement": "The parameters to be audited are defined by the organisation.",
+        "steps": "Steps 2, 1, 6",
+        "evidence": "The current defined parameter list matching services actually run; who defines them; the audit sample at step 6",
+        "responsible": "Named definer of parameters; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "PSQ.3.c",
+        "requirement": "Medical and nursing staff participates in this system.",
+        "steps": "Steps 3, 1, 6",
+        "evidence": "Records of medical and nursing participation, not quality-office-only audits; the audit sample at step 6",
+        "responsible": "Medical and nursing staff participate; quality office supports; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "PSQ.3.d",
+        "requirement": "Remedial measures are implemented.",
+        "steps": "Steps 4, 1, 6",
+        "evidence": "Sample remedial measures implemented and followed through rather than recommendations left on paper; the audit sample at step 6",
+        "responsible": "Named owners implement remedial measures; quality or accreditation coordinator audits",
+    },
+    {
+        "oe_code": "PSQ.3.e",
+        "requirement": "The organisation undertakes quality improvement projects.",
+        "steps": "Steps 5, 6",
+        "evidence": "Records of QI projects undertaken, sitting inside the PSQ.1.e programme rather than replacing it; the recorded split that IHI/ASQ tools are frameworks not mandated kits; the audit sample at step 6",
+        "responsible": "Project leads undertake projects; PSQ.1.e owns the programme; quality or accreditation coordinator audits",
+    },
+]
+
+UNIVERSAL_FACTS_CHECKLIST = """Universal (non-NABH) facts included in this draft, and where each was verified. Check these first.
+
+SOURCE OF THE OE TEXT
+0. PSQ.3 standard text and all five OEs were read from the official SHCO 3rd Edition PDF, Chapter 6, printed page 103 (PDF page index 109). Header: "There is an established system for clinical audit and quality improvement programmes." PDF md5 39e3bc86d73d651b9cfef283bbf018a9. Levels: a-d Commitment, e Core.
+   NO OE CARRIES THE ASTERISK. Whole standard is Tier 2. This is PSQ, not CQI.
+
+TIERING UNDER THE STANDING RULE
+1. Whole standard is Tier 2. Shallower treatment of the WHOLE STANDARD is a DECISION UNDER THE STANDING RULE, not an omission.
+
+CROSS-REFERENCE AND OVERLAP CHECK
+2. T2 quick check (2026-08-17). PSQ.1.h monitoring audits vs this clinical audit -- flagged. PSQ.1.e programme vs PSQ.3.e projects -- flagged. COP.6.d / COP.11.h unit QA -- flagged. HIC.5 / MOM.7 not audits -- flagged.
+
+STATUTORY AND EXTERNAL FACTS
+3. No named Act. P2 accreditation-only. Esposito ch 8, Limb ch 23, IHI ch 28, ASQ ch 36 -- frameworks.
+
+EDITORIAL POSITIONS TAKEN
+4. Split of monitoring audit vs clinical audit is required by PSQ.1.h and PSQ.3 sitting in the same chapter.
+
+DISCLAIMER BLOCK -- STATUTE-MATCHED UNDER THE 2026-08-17 STANDING RULE
+5. make_disclaimer_accreditation_only().
+
+DELIBERATELY NOT INCLUDED
+- Programme method -- PSQ.1. Indicator list -- PSQ.2. Incident system -- PSQ.5.
+- A mandated IHI toolkit. A 2nd Edition CQI project catalogue.
+- The five optional sections are left unset.
+
+HOSPITAL-SPECIFIC VALUES LEFT AS [Hospital to define] -- 11 fillable blanks in the rendered document: 2 in the exact form "[Hospital to define]" (one in Abbreviations, one inside the shared Disclaimer block) and 9 in the guidance-bearing form "[Hospital to define — what to state]". A search for the exact string finds 2 of 11; a search for "Hospital to define" without brackets finds all 11, and that is the search a hospital should be told to run. The figure is produced by policy_placeholder_audit.py across every rendered field in both forms, which also asserts that no nested placeholder exists.
+
+The values the hospital must supply: how clinical audits are performed; parameters and who defines them; how medical and nursing participate; how remedial measures are implemented; QI projects; named lead; audit interval; review interval; intranet location; and any additional local abbreviation."""
+
+SQL_HEADER = """-- Source: NABH SHCO Standards 3rd Edition (August 2022), Chapter 6 PSQ, printed page 103.
+-- NO OE CARRIES THE ASTERISK. Whole standard is Tier 2. NOT 2nd Edition CQI.
+-- UNAPPROVED DRAFT. Do not run this insert until the owner confirms the write.
+"""
+
+if __name__ == "__main__":
+    emit_and_verify(
+        standard_code=STANDARD_CODE,
+        chapter=CHAPTER,
+        oe_codes=OE_CODES,
+        policy_title=POLICY_TITLE,
+        purpose=PURPOSE,
+        scope=SCOPE,
+        policy_statement=POLICY_STATEMENT,
+        procedure_steps=PROCEDURE_STEPS,
+        responsibility=RESPONSIBILITY,
+        references_text=REFERENCES,
+        distribution=DISTRIBUTION,
+        abbreviations=ABBREVIATIONS,
+        disclaimer=DISCLAIMER,
+        oe_mapping=OE_MAPPING,
+        universal_facts_checklist=UNIVERSAL_FACTS_CHECKLIST,
+        version=VERSION,
+        revision_history=REVISION_HISTORY,
+        tier1_oes=TIER1_OES,
+        statute_clause=STATUTE_CLAUSE,
+        sql_header=SQL_HEADER,
+        json_name="psq3_draft.json",
+        sql_name="psq3_insert.sql",
+    )

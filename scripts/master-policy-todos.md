@@ -141,6 +141,12 @@ names statutes, and it names **only statutes that standard actually cites** in R
       to capture and monitor infection prevention and control data") under SHCO 3rd Edition, not to
       CQI. The earlier CQI assignment came from the NABH checklist row 9 tag "CQI 2 a", which uses
       the older Entry-Level edition's numbering — the same caveat noted at the top of this file.
+      **PSQ pass 2026-08-17:** CQI is the 2nd Edition chapter name. The 3rd Edition replacement is
+      PSQ (Patient Safety and Quality Improvement), Chapter 6. They are not interchangeable. HAI
+      **surveillance method** remains HIC.5. Hospital-wide **indicators** of infection-control
+      activities are PSQ.2.b (drafted UNAPPROVED). `build_hic1.py` / `build_hic3.py` still say the
+      method "belongs to CQI" — historical wording, not a 3rd Edition map. Do not patch approved
+      HIC.1/HIC.3 in the PSQ insert pass.
       The HIC.2 draft carries a **brief pointer only**, by design — it names the four infection
       types and cites CDC NHSN as the definitions source, then defers method to the owning standard.
       The HIC.4 draft likewise covers bundle-compliance measurement only (a process measure HIC.4
@@ -895,7 +901,7 @@ T2 one-line flags (standing rule: flag and move on):
 
 - [ ] **COP.10.e monitoring under anaesthesia vs HIC.4 SSI-bundle temperature/glycaemia.** Bundle stays HIC.4 even when the anaesthetist is the person who maintains those variables.
 
-- [ ] **COP.10.h intra-operative adverse anaesthesia events vs a future PSQ incident policy.** This requires anaesthesia events to be recorded and reviewed; it does not write the hospital-wide incident system.
+- [ ] **COP.10.h intra-operative adverse anaesthesia events vs PSQ.5 incident system now landed.** COP.10.h still owns that anaesthesia events are recorded and reviewed in the anaesthetic process. PSQ.5 (drafted 2026-08-17, UNAPPROVED) owns the hospital-wide incident system. Dual entry when the event meets this hospital's incident definition. Do not patch COP.10 in this pass.
 
 ---
 
@@ -910,6 +916,7 @@ T2 one-line flags (standing rule: flag and move on):
 - [ ] **COP.11.e standard precautions in OT vs HIC.2.** Follow HIC.2; do not rewrite PPE. Stated in COP.11 Scope and step 5.
 
 - [ ] **COP.11.h process QA vs HIC.5 SSI surveillance.** Process look vs outcome look / NHSN definitions. Stated in step 8.
+- [ ] **COP.11.h unit QA vs PSQ.1 hospital-wide QI programme now landed.** Theatre QA remains COP.11.h. PSQ.1 (drafted 2026-08-17, UNAPPROVED) owns the hospital-wide programmes. Unit findings may feed PSQ.1; they do not replace it.
 
 - [ ] **COP.11.g sterile sets available vs HIC.6 instrument reprocessing.** Availability vs the decontamination cycle. Stated in step 7.
 
@@ -942,6 +949,7 @@ T2 one-line flags (standing rule: flag and move on):
 - [ ] **COP.12.f chemical restraint vs MOM.** Physical/mechanical restraint and seclusion here; chemical restraint as a medication process is MOM, not an undeclared substitute.
 
 - [ ] **COP.12 vs COP.8 child abduction/abuse.** If children are a vulnerable category, COP.12 still owns the vulnerability programme and does not rewrite COP.8.f.
+- [ ] **COP.12 bedside vulnerable/falls/PU/VTE programmes vs PSQ.1.c organisation-level proactive risk analysis now landed.** COP.12 owns the bedside tools. PSQ.1.c is quality-system analysis before harm. PSQ.5 is after-the-fact incidents. ROM.4 (undrafted) is management risk. Do not collapse these four.
 
 ---
 
@@ -1120,6 +1128,7 @@ T2 one-line flags (standing rule: flag and move on):
 - [ ] **COP.6 uses COP.3 CPR; does not write it.** Point only.
 
 - [ ] **HIC.3 housekeeping / BMW colours and HIC.6 reprocessing in the unit.** Pointed at; not restated.
+- [ ] **COP.6.d intensive-care QA vs PSQ.1 hospital-wide QI programme now landed.** Unit QA remains COP.6.d. PSQ.1 owns the hospital-wide programmes. Do not patch COP.6 in this pass.
 
 ---
 
@@ -1265,6 +1274,7 @@ T2 one-line flags:
 - [ ] **AAC.3.e early-warning vs MOM.7.a post-medication monitoring.** Same vital signs may be used; this is effect and harm of the drug. Not automatic ICU admission (COP.6).
 - [ ] **PRE.4.b education about side effects vs MOM.7 still capturing the event.**
 - [ ] **Reporting time frame is hospital-defined.** Do not invent a 24-hour NABH mandate.
+- [ ] **PSQ.5 incident system now landed.** A medication event that meets the hospital incident definition is dual-entered. MOM.7 still captures NM/ME/ADR. PSQ.5 does not replace MOM.7. Historical MOM.7 checklist wording "not HIC or CQI ownership of all CAPA" meant hospital-wide CAPA; under 3rd Edition that hospital-wide incident CAPA is PSQ.5.d, not a CQI chapter. Do not patch MOM.7 in this pass.
 
 ---
 
@@ -1423,6 +1433,185 @@ T2 one-line flags:
 - [ ] **AAC.8.** A complaint about discharge is redressed here; AAC.8 owns the summary.
 - [ ] **ROM/FMS (undrafted)** may own an accounts adjustment; this document owns that the complaint was received and redressed as a patient complaint.
 - [ ] **PRE.6.a satisfaction vs PRE.6.b experience.** Two distinct OEs; the standard does not define the difference — hospital method must.
+
+---
+
+## Cross-cutting: CQI (2nd Edition) is not PSQ (3rd Edition) (flagged 2026-08-17)
+
+The SHCO 3rd Edition **forward** (PDF index 2) states that the chapter on Continuous Quality
+Improvement is **replaced** by Patient Safety and Quality Improvement. PSQ is Chapter 6 of that
+book (printed pages 101–108; PDF indices 107–114). It is not a rename of CQI. Standard count,
+OE count and emphasis differ (increased patient-safety focus). Do not treat CQI and PSQ as
+interchangeable. Do not title, code or cite a 3rd Edition master as CQI.
+
+Existing repo wording that still says "CQI" as if it were this chapter — **flagged, not patched
+in this PSQ insert pass**:
+
+- [ ] **`policies/build/build_hic1.py` (and `hic1_draft.json` / `hic1_insert.sql`)** — HAI
+      surveillance method "belongs to CQI". Under 3rd Edition the method is HIC.5; hospital-wide
+      IC **indicators** are PSQ.2.b. Approved HIC.1 not reopened.
+- [ ] **`policies/build/build_hic3.py` (and drafts)** — same "belongs to CQI" assignment. Approved
+      HIC.3 not reopened.
+- [ ] **`policies/build/build_hic4.py`** — already corrected the tracker to HIC.5 and notes the
+      previous CQI assignment. Keep that correction; do not reverse it into PSQ.
+- [ ] **`policies/build/build_mom7.py`** — checklist "not HIC or CQI ownership of all CAPA".
+      Hospital-wide incident CAPA is now PSQ.5.d. MOM.7 still owns medication-event CAPA. Do not
+      patch MOM.7 in this pass.
+- [ ] **`scripts/master-policy-todos.md` HIC.2 section** — historical checklist tag "CQI 2 a"
+      (Entry-Level numbering). Keep as history; the 2026-08-17 PSQ-pass note above records that
+      CQI ≠ PSQ.
+- [ ] **`policies/build/build_mom5.py`** — NCCMERP "CQI on errors" is NCCMERP's own phrase, **not**
+      the NABH chapter. Do not rewrite that citation into PSQ.
+
+App/KPI content (`shco_kpi_content.md`, `ai-assistant/index.ts`) already uses **PSQ.2a–d** for
+3rd Edition KPIs. That is the correct chapter code.
+
+---
+
+## Deferred from PSQ.1 (drafted 2026-08-17, UNAPPROVED)
+
+Source: official SHCO 3rd Edition PDF md5 `39e3bc86d73d651b9cfef283bbf018a9`, Chapter 6 printed
+pages 101–108 (PDF indices 107–114). PSQ.1 printed p.102 / index 108. Header: "The organisation
+implements a patient-safety programme and a structured quality improvement programme." T1 =
+PSQ.1.a*, PSQ.1.g*, PSQ.1.h*, PSQ.1.i*. P2 is accreditation-only — no named Act in the PSQ
+bibliography. WHO Patient Safety Solutions / High 5s / IHI QI toolkit / AHRQ safety-hazard primer
+are frameworks, not pasted programmes. This is **not** 2nd Edition CQI.
+
+Insert PSQ.1–PSQ.5 as `status='draft'` only via
+`python3 policies/build/apply_psq_drafts_supabase.py --insert`. The 2026-08-17 Cloud Agent VM
+did not have `SUPABASE_SERVICE_ROLE_KEY`; dry-run of all five drafts passed; live POST was not
+executed. No row was approved.
+
+T1 overlap flags (full cross-check done in the PSQ.1 draft Scope / universal_facts_checklist).
+Do not patch approved HIC.1/HIC.3 in this pass.
+
+- [ ] **PSQ.1.h monitoring audits vs PSQ.3 clinical audit.** PSQ.1.h is audit as continuous
+      monitoring of the safety and QI programmes. PSQ.3 is clinical audit of patient care against
+      defined parameters. Do not use one file for both.
+
+- [ ] **PSQ.1.e comprehensive QI programme vs PSQ.3.e named QI projects.** The programme is this
+      document. Named projects sit inside it and are owned by PSQ.3.
+
+- [ ] **PSQ.1.i nursing-care quality monitoring vs COP.4 nursing assignment/process.** COP.4 owns
+      how nursing care is assigned and documented. This OE owns monitoring and improving its
+      quality as a quality-system process.
+
+T2 one-line flags:
+
+- [ ] **PSQ.1 vs PSQ.2 indicators / PSQ.4 management support / PSQ.5 incidents.** Siblings. This
+      document owns the programmes.
+- [ ] **COP.6.d / COP.11.h unit QA vs this hospital-wide programme.** Unit findings may feed;
+      they do not replace.
+- [ ] **PSQ.1.c proactive risk analysis vs COP.12 bedside vulnerable/falls/PU vs ROM.4.a
+      (undrafted) management risk vs PSQ.5 after-the-fact incidents.** Four different acts.
+- [ ] **PSQ.1.d adapted WHO safety goals vs COP.1 / HIC.2 / MOM.6 owning clinical method.**
+      Adaptation here; method there.
+- [ ] **HIC.5 HAI surveillance method vs this programme.** Historical "belongs to CQI" in
+      HIC.1/HIC.3 is a 2nd Edition name. Method stays HIC.5. IC indicators are PSQ.2.b.
+- [ ] **MOM.7 medication-event capture.** This programme may review rates; it does not capture
+      the event.
+
+---
+
+## Deferred from PSQ.2 (drafted 2026-08-17, UNAPPROVED)
+
+Whole standard is Tier 2 (five OEs a–e, none asterisked). Header: "The organisation identifies
+key indicators to monitor the structures, processes and outcomes which are used as tools for
+continual improvement." P2 is accreditation-only. Annexure 1 KPIs of the same book are a
+**framework, not a mandated paste**. Unused ICU SMR (or any unused service indicator) is a
+recorded absence against AAC.1, not a copied ICU SOP.
+
+T2 one-line flags (standing rule: flag and move on):
+
+- [ ] **PSQ.1 programmes vs these indicators.** PSQ.1 owns the programmes that use the data.
+- [ ] **PSQ.2.b IC indicators vs HIC.5 surveillance method.** Inputs from HIC.5/HIC.4; no second
+      case-definition book. Do not revive "CQI owns surveillance".
+- [ ] **PSQ.2.d patient-safety indicators vs COP.12 / MOM.7 / HIC.4 as source rates.** Source
+      rates stay with those documents; this OE oversees them as quality indicators.
+- [ ] **PSQ.3 audit parameters vs these key indicators.** Data may overlap; they are not the
+      same OE.
+- [ ] **ROM/FMS managerial ledger (undrafted) vs PSQ.2.c managerial indicators.** Flagged for
+      the ROM/FMS pass.
+- [ ] **Annexure 1.** Framework. Do not paste as this hospital's mandated set.
+
+---
+
+## Deferred from PSQ.3 (drafted 2026-08-17, UNAPPROVED)
+
+Whole standard is Tier 2 (five OEs a–e, none asterisked). Header: "There is an established
+system for clinical audit and quality improvement programmes." P2 is accreditation-only. IHI
+QI toolkit is a framework, not a mandated project catalogue.
+
+T2 one-line flags:
+
+- [ ] **PSQ.1.h monitoring audits vs this clinical audit.** See PSQ.1 T1 flag.
+- [ ] **PSQ.1.e programme vs PSQ.3.e named QI projects.** See PSQ.1 T1 flag.
+- [ ] **PSQ.2 indicators may supply data; they are not the audit.**
+- [ ] **COP.6.d / COP.11.h unit QA.** A unit may run clinical audits under this method; those
+      unit QA programmes are not this hospital-wide clinical-audit system.
+- [ ] **COP.4 nursing process is care; nursing participation in audit is this document.**
+- [ ] **HIC.5 / MOM.7 are not clinical audits.** Surveillance and medication-event capture stay
+      those documents.
+
+---
+
+## Deferred from PSQ.4 (drafted 2026-08-17, UNAPPROVED)
+
+Whole standard is Tier 2 (four OEs a–d, none asterisked). Header: "The patient safety and
+quality improvement programme are supported by the management." Official PSQ.4.b uses
+"program" (American spelling) in the OE — preserved in the mapping `requirement`. P2 is
+accreditation-only. AHRQ culture-of-safety primers are frameworks.
+
+T2 one-line flags:
+
+- [ ] **PSQ.1 programmes vs this management support.** PSQ.1 owns the programmes; this document
+      owns that management supports them.
+- [ ] **PSQ.5 incident reporting vs PSQ.4.a culture of safety.** Culture includes that reporting
+      is possible; the incident system is PSQ.5.
+- [ ] **PSQ.4.d workforce feedback vs PRE.6 patient/family complaints.** PRE.6 is drafted
+      UNAPPROVED on sibling branch `cursor/draft-pre1-pre6-unapproved-9324`. This OE is workforce
+      feedback, not patient complaints.
+- [ ] **PSQ.4.c budget earmark vs ROM.3.a (undrafted) governance budget approval.** This document
+      owns that funds are earmarked from the annual budget; ROM owns the governance budget act.
+- [ ] **ROM.4 (undrafted) management ensuring proactive risk vs PSQ.1.c quality-system analysis.**
+      Flagged for the ROM pass.
+
+---
+
+## Deferred from PSQ.5 (drafted 2026-08-17, UNAPPROVED)
+
+T1 = PSQ.5.a*, PSQ.5.b*. Header: "Incidents are collected and analysed to ensure continual
+quality improvement" (no terminal period in the book). Official PSQ.5.e uses "organization"
+(American spelling) — preserved in the mapping `requirement`. Levels: a Core, b Commitment,
+c Commitment, d Commitment, e Excellence. P2 is accreditation-only. WHO 2020 incident-reporting
+guidance, AHRQ Reporting Patient Safety Events, Canadian Incident Analysis Framework and RCA2
+are frameworks, not a named software mandate or a pasted national sentinel list. No 24-hour
+NABH reporting clock.
+
+T1 overlap flags:
+
+- [ ] **PSQ.5 vs MOM.7 — CRITICAL DUAL ENTRY.** MOM.7 owns capture, reporting and CAPA of
+      near-miss, medication error and ADR as a **medication process**. A medication event is
+      still an incident under this document when it meets this hospital's incident definition.
+      Both records exist. Neither replaces the other.
+
+- [ ] **PSQ.5.a/b incident system and sentinel-event identification vs specialty logs.** COP.5
+      transfusion-reaction pathway, COP.10.h anaesthesia events, HIC.4 needlestick, HIC.5 HAI
+      case-finding, and PRE.6 complaint-described harm remain those documents. Dual entry when
+      the subject meets this hospital's incident definition. Do not patch those drafts in this
+      pass.
+
+T2 one-line flags:
+
+- [ ] **PSQ.5.c analysis / PSQ.5.d CAPA vs MOM.7 medication-event CAPA.** Hospital-wide incident
+      CAPA is here; medication-event CAPA stays MOM.7. Historical "not CQI ownership of all
+      CAPA" in MOM.7 is a 2nd Edition name.
+- [ ] **PSQ.5.e informing stakeholders vs PRE.6 complaint redressal.** Informing is this OE;
+      redressal of a patient/family complaint is PRE.6 (sibling branch).
+- [ ] **ROM.4.c (undrafted) governance reporting of incidents.** This document owns the quality
+      system; ROM owns what management reports as governance. Flagged for the ROM pass.
+- [ ] **Reporting time frame is hospital-defined.** Same as MOM.7: do not invent a 24-hour
+      NABH mandate.
 
 ---
 
