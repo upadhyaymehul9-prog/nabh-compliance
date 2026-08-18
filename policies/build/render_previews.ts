@@ -106,6 +106,7 @@ const EXPECTED = [
   "PRE.1", "PRE.2", "PRE.3", "PRE.4", "PRE.5", "PRE.6",
   "PSQ.1", "PSQ.2", "PSQ.3", "PSQ.4", "PSQ.5",
   "ROM.1", "ROM.2", "ROM.3", "ROM.4",
+  "FMS.1", "FMS.2", "FMS.3", "FMS.4", "FMS.5",
 ];
 
 async function main() {

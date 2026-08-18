@@ -148,12 +148,23 @@ Only the specific statutes named in paragraph 2 are checked and corrected per do
 
 ### → FMS (facility management and safety)
 
-- [ ] **Potable water testing.** Routine water quality testing to confirm safe and potable supply.
+- [x] **Potable water testing.** Routine water quality testing to confirm safe and potable supply.
       (Checklist row 12, tagged FMS 3 a.) Consider also dialysis water quality and Legionella
       control if the hospital runs dialysis.
-- [ ] **Hazardous material spills other than blood/body fluids.** The HIC.2 draft now covers blood
+      **FMS pass 2026-08-18:** Under the 3rd Edition the Entry-Level tag "FMS 3 a" is stale.
+      Round-the-clock **availability** of potable water is **FMS.1.d** (UNAPPROVED draft).
+      Quality testing uses WHO GDWQ 4th edition (FMS chapter reference 20) as framework;
+      interval is hospital-defined, not a NABH clock. Dialysis water uses Coulliette & Arduino
+      (chapter reference 5) only if dialysis is in AAC.1; otherwise a recorded absence.
+      Legionella/stagnant-water control is hospital-defined for systems actually run.
+      Do not patch approved HIC.2 in this pass.
+- [x] **Hazardous material spills other than blood/body fluids.** The HIC.2 draft now covers blood
       and body fluid spills only. Chemical, cytotoxic and mercury spills belong with FMS.
       (Checklist row 13 is tagged FMS 1 c, e and spans both.)
+      **FMS pass 2026-08-18:** Split landed. HIC.2 remains blood/body-fluid. **FMS.2.g**
+      (UNAPPROVED) owns building chemical/mercury/fuel identification, safe use and spill method.
+      **MOM.8** remains cytotoxic bench spill at preparation/administration. Dual entry when
+      definitions overlap. Do not patch approved HIC.2.
 
 ### → HIC.5 (surveillance)
 
@@ -884,7 +895,7 @@ T2 one-line flags (standing rule: flag and move on):
 
 - [ ] **COP.8.e paediatric nutrition/growth/dev/immunisation assessment vs AAC.3 hospital-wide assessment vs COP.13 nutrition screen vs COP.7.c maternal nutrition vs HIC.3 kitchen.** COP.8 Scope and step 6 state the split.
 
-- [ ] **COP.8.f abduction/abuse care-process vs FMS building security.** COP.8 owns matching, handing-over, nursery access and the missing-child/abuse response; FMS (undrafted) owns locks/cameras/hardware.
+- [x] **COP.8.f abduction/abuse care-process vs FMS building security.** COP.8 owns matching, handing-over, nursery access and the missing-child/abuse response; FMS.2.c (drafted UNAPPROVED 2026-08-18) owns locks/cameras/hardware and the access description. Care process stays COP.8. Do not patch COP.8 in this pass.
 
 - [ ] **HIC.3 BMW of neonatal waste.** Pointed; four colours not restated. Not a method overlap.
 
@@ -961,7 +972,7 @@ T1 overlap flags (full cross-check done in the COP.12 draft Scope / universal_fa
 
 T2 one-line flags (standing rule: flag and move on):
 
-- [ ] **COP.12.b care-environment for the vulnerable patient vs FMS building security.** Locks, CCTV and fabric remain FMS (undrafted). COP.12.b is bedside observation, call method, accompaniment, noticing a missing patient.
+- [x] **COP.12.b care-environment for the vulnerable patient vs FMS building security.** Locks, CCTV and fabric are FMS.2.c (drafted UNAPPROVED 2026-08-18). COP.12.b remains bedside observation, call method, accompaniment, noticing a missing patient. Call-bell **hardware** is FMS.2.a; the observation method that uses it stays COP.12. Do not patch COP.12 in this pass.
 
 - [ ] **COP.12.c falls / COP.12.d pressure ulcers / COP.12.e DVT vs AAC.3.** Same split as the T1 AAC.3 flag; programmes owned here.
 
@@ -1435,7 +1446,8 @@ T2 one-line flags:
 - [ ] **AAC.3 / PRE.2.o care-plan change vs PRE.5.d financial implications.** Clinical modification stays AAC.3/PRE.2.o; this document owns only the money of that change.
 - [ ] **AAC.8 discharge summary.** Not this explanation unless the hospital has defined putting a bill on that paper.
 - [ ] **PRE.3 signed consent is not agreement to an unnamed bill.**
-- [ ] **ROM/FMS billing (undrafted).** PRE.5 owns patient-facing expected-cost information, not the billing ledger, GST, or payer contracts. Flagged for the ROM/FMS pass.
+- [x] **ROM/FMS billing (undrafted).** PRE.5 owns patient-facing expected-cost information, not the billing ledger, GST, or payer contracts.
+      **FMS pass 2026-08-18:** FMS does **not** own billing. Patient-facing expected cost stays PRE.5. Budget approval stays ROM.3.a. Ledger / GST / payer contracts remain accounts, not this chapter. FMS.1–5 Scopes refuse a facilities tariff file. Do not absorb billing into FMS; do not patch PRE.5 in this pass.
 
 ---
 
@@ -1454,7 +1466,8 @@ T2 one-line flags:
 - [ ] **PRE.5 cost disputes** are complaints here; the tariff remains PRE.5.
 - [ ] **MOM.7.** A family complaint about a medication event is redressed here; the event is still captured under MOM.7.
 - [ ] **AAC.8.** A complaint about discharge is redressed here; AAC.8 owns the summary.
-- [ ] **ROM/FMS (undrafted)** may own an accounts adjustment; this document owns that the complaint was received and redressed as a patient complaint.
+- [x] **ROM/FMS (undrafted)** may own an accounts adjustment; this document owns that the complaint was received and redressed as a patient complaint.
+      **FMS pass 2026-08-18:** FMS does not own accounts adjustment. PRE.6 remains complaint redressal. An accounts adjustment, if any, stays with accounts / ROM budget — not FMS.1–5. Do not patch PRE.6 in this pass.
 - [ ] **PRE.6.a satisfaction vs PRE.6.b experience.** Two distinct OEs; the standard does not define the difference — hospital method must.
 
 ---
@@ -1554,8 +1567,10 @@ T2 one-line flags (standing rule: flag and move on):
       rates stay with those documents; this OE oversees them as quality indicators.
 - [ ] **PSQ.3 audit parameters vs these key indicators.** Data may overlap; they are not the
       same OE.
-- [ ] **ROM/FMS managerial ledger (undrafted) vs PSQ.2.c managerial indicators.** Flagged for
-      the ROM/FMS pass.
+- [x] **ROM/FMS managerial ledger (undrafted) vs PSQ.2.c managerial indicators.**
+      **FMS pass 2026-08-18:** A utility-failure or equipment-downtime rate may be supplied from
+      FMS.1 / FMS.3.g records. PSQ.2 still owns the managerial indicator set. FMS does not own
+      the finance ledger (that remains accounts / ROM, not this chapter). Do not patch PSQ.2.
 - [ ] **Annexure 1.** Framework. Do not paste as this hospital's mandated set.
 
 ---
@@ -1677,7 +1692,9 @@ T2 one-line flags:
 - [ ] **ROM.1.d appointment vs HRM employment file (undrafted).** Governance appoints; HRM files.
 - [ ] **PSQ.1 committees are not this governing entity** unless this hospital has recorded that
       they are the same body — they usually are not.
-- [ ] **FMS (undrafted)** is not this document.
+- [x] **FMS (undrafted)** is not this document.
+      **FMS pass 2026-08-18:** FMS.1–5 now drafted (UNAPPROVED). Still not ROM.1. Governance
+      remains ROM.1; facility method remains FMS. Do not patch ROM.1.
 
 ---
 
@@ -1727,8 +1744,11 @@ T2 one-line flags:
 - [ ] **ROM.3.e staff rights vs PRE.1/PRE.2 patient rights vs HRM (undrafted) employment and
       grievance file.** One poster is not both patient and staff rights.
 - [ ] **ROM.1.c mission performance vs this service-standard monitoring.**
-- [ ] **FMS (undrafted) facility KPIs** are not this hospital-wide service-standard set counted
+- [x] **FMS (undrafted) facility KPIs** are not this hospital-wide service-standard set counted
       twice.
+      **FMS pass 2026-08-18:** Utility-failure or equipment-downtime rates may be supplied from
+      FMS.1 / FMS.3.g records. PSQ.2 still owns the managerial indicator set. ROM.3.d still owns
+      hospital-wide measurable service standards. FMS does not write those sets. Do not patch ROM.3.
 
 ---
 
@@ -1761,8 +1781,12 @@ T2 one-line flags:
 - [ ] **ROM.4.d/e outsourcing vs AAC.4/AAC.5/HIC.6 owning method** where the work is laboratory,
       imaging or CSSD. This document owns the agreement with service parameters and monitoring.
 - [ ] **AAC.1 unused outsourced services** are a recorded absence, not a copied SLA.
-- [ ] **FMS (undrafted) facility inspection rounds / fire plan.** Management risk duty includes
+- [x] **FMS (undrafted) facility inspection rounds / fire plan.** Management risk duty includes
       those domains; FMS writes the facility method.
+      **FMS pass 2026-08-18:** Split landed. ROM.4.a remains management's duty that proactive risk
+      exists. **FMS.2.d** writes monthly facility inspection rounds (at least once a month).
+      **FMS.5** writes the fire and non-fire plans. **FMS.2.g** writes hazardous materials.
+      **FMS.3** writes medical-equipment risk as the equipment programme. Do not patch ROM.4.
 - [ ] **Reporting time frame is hospital-defined.** Same as PSQ.5 / MOM.7: no 24-hour NABH clock.
 
 ---
@@ -1823,8 +1847,92 @@ standards are approved on different days.
 - PRE — consent and rights at admission (AAC.2); patient-education method (AAC.8.d).
 - HRM — credentialing behind lab/imaging personnel (AAC.4.b, AAC.5.c) and the "qualified
   individual" (AAC.7.a). Already flagged from AAC.1.b for HRM.7–9; same pass.
-- FMS — hospital-wide equipment programme / fire plans, vs lab and imaging calibration
-  and lab fire as named in AAC.4.h / AAC.5.i / AAC.6.
+- [x] **FMS — hospital-wide equipment programme / fire plans, vs lab and imaging calibration
+  and lab fire as named in AAC.4.h / AAC.5.i / AAC.6.**
+  **FMS pass 2026-08-18:** Split landed in FMS.3 / FMS.5 / FMS.2 Scopes (UNAPPROVED).
+  AAC.4.h remains no-report from an overdue/failed laboratory calibrator. AAC.5.i remains
+  imaging AERB QA and no-report-if-overdue. AAC.6 remains the laboratory safety programme
+  (bench chemical hygiene; lab fire **points at FMS.5**; cabinet certification as a lab-safety
+  condition). **FMS.3** is the hospital-wide inventory/PPM/breakdown/recall programme those
+  due dates sit on. **FMS.5** is the hospital fire and non-fire plan AAC.6 names. **FMS.2.g**
+  is building hazardous materials (not lab-bench hygiene). **FMS.1.c** is wayfinding (not
+  AAC.6.e radiation/PC-PNDT signs). Do not patch AAC.4/5/6 in this pass.
+
+---
+
+## Deferred from FMS.1–FMS.5 (drafted 2026-08-18, UNAPPROVED)
+
+Chapter 8 Facility Management and Safety. Official PDF printed pages **115–120** (PDF indices
+121–126); HRM starts printed **121**. md5 `39e3bc86d73d651b9cfef283bbf018a9`. Five standards,
+29 OEs, nine asterisks (FMS.1.f; FMS.2.f/g; FMS.3.c/f; FMS.4.a/d; FMS.5.a/d). Depth follows
+the two-tier rule with the FMS calibration: technical T2 OEs carry named codes, failure modes
+and test methods; T1 evidence columns remain longer than T2.
+
+P2 split: FMS.1 / FMS.2 / FMS.5 name NBC 2016 as the local building/fire authority applied it.
+FMS.3 names Medical Devices Rules, 2017 read with Drugs and Cosmetics Act, 1940 (CDSCO chapter
+reference 8; FMS.3.f recalls). FMS.4 is accreditation-only (HTM/ISO/NFPA/BCGA frameworks).
+BMW Rules / FSS Act / CPA 2019 / CEA 2010 / MHCA 2017 are not in any FMS P2. PESO / Gas
+Cylinder Rules / Explosives Act are **not** numbered FMS chapter references.
+
+NHM BEMMP (chapter reference 10) is the biomedical-equipment framework — not Clinical
+Establishments Act and not Central Electricity Authority. Owner phrasing "CEA guidelines for
+biomedical equipment" maps to BEMMP.
+
+These five drafts are local only until the owner confirms
+`python3 policies/build/apply_fms_drafts_supabase.py --insert`. No `--approve` flag exists.
+
+### Forward-refs from earlier chapters — LANDED this pass (do not patch those drafts)
+
+- ROM.4 facility inspection rounds / fire plan → FMS.2.d rounds; FMS.5 fire/non-fire plans.
+- AAC.4.h / AAC.5.i / AAC.6 equipment, calibration, lab fire → FMS.3 hospital-wide programme;
+  AAC.4.h/AAC.5.i keep no-report-if-overdue; AAC.6 lab fire points at FMS.5; FMS.2.g building
+  hazardous materials; FMS.1.c wayfinding vs AAC.6.e radiation signs.
+- PRE.5 / PRE.6 "ROM/FMS billing" → **FMS does not own billing or accounts adjustment.**
+- HIC.2 Entry-Level "FMS 3 a" potable water → 3rd Edition availability is FMS.1.d.
+- HIC.2 chemical/mercury spill → FMS.2.g; MOM.8 remains cytotoxic bench; HIC.2 remains blood.
+- COP.8.f / COP.12.b hardware → FMS.2.c (and FMS.2.a call-bell fabric); care process stays COP.
+
+### Intra-chapter divisions (stated in Scopes; not contradictions)
+
+- [ ] **FMS.1.d availability vs FMS.1.e backup testing vs FMS.1.f energy initiatives.** Three
+      acts. Do not cut clinical power in the name of 1.f.
+- [ ] **FMS.1.e DG/UPS loaded test vs FMS.2.e electrical safety audit vs FMS.3 device
+      calibration vs FMS.5.d fire-equipment maintenance.** Four different inspections.
+- [ ] **FMS.2.f unused material vs HIC.3 BMW.** Condemned furniture/equipment vs four-colour
+      clinical waste. WHO chapter reference 21 is a framework only.
+- [ ] **FMS.2.g building hazardous materials vs AAC.6 lab-bench hygiene vs HIC.2 blood vs
+      MOM.8 cytotoxic vs FMS.4 cylinders.** Dual entry when definitions overlap.
+- [ ] **FMS.3 PPM vs HIC.6 steriliser validation vs AAC.4.h/AAC.5.i no-report rules vs COP.3
+      crash-cart kit.** Equipment file here; those methods stay there.
+- [ ] **FMS.4 cylinder/manifold programme vs FMS.4.d piped MGPS.** No piped system = recorded
+      absence against AAC.1; a–c still apply if gases are used.
+- [ ] **FMS.4.c gas-path backup vs FMS.1.e plant electricity vs FMS.5 leak-as-emergency.**
+- [ ] **FMS.5.b exit display vs FMS.1.c wayfinding vs AAC.6.e radiation signs.**
+
+### Statutory / framework flags (not absorbed)
+
+- [ ] **PESO / Gas Cylinder Rules / Explosives Act.** Relevant to cylinders in operations if
+      they apply to this occupancy. **Not** numbered FMS chapter references. Live on
+      **ROM.2.c** applicable-legislation register. Not forced into FMS.4 P2.
+- [ ] **Central Electricity Authority (Measures relating to Safety and Electric Supply)
+      Regulations.** Not a numbered FMS chapter reference. FMS.2.e names IS 732 / IS 3043 as
+      NBC-pointed frameworks only. If CEA electrical regulations apply, they belong on ROM.2.c.
+- [ ] **HRM.3.e/f** (undrafted) will train staff to the FMS.5 plans and to FMS.2/FMS.4 safety
+      programmes. This pass owns the plans, not the training file.
+- [ ] **HRM credentialing** behind FMS.3.e qualified operators/maintainers.
+
+### T2 one-line flags created by this pass
+
+- [ ] **PSQ.2 managerial indicators** may use utility-failure or downtime rates from FMS.1 /
+      FMS.3.g; PSQ.2 owns the indicator set.
+- [ ] **PSQ.5 incidents** dual-enter a safety finding, device adverse event, fire or failed
+      drill that harmed someone; methods stay PSQ.5.
+- [ ] **ROM.4.d/e outsourcing** of pipeline filling, fire AMC or biomedical workshop: service
+      parameters there; technical tests remain FMS.
+- [ ] **FSSAI / HIC.3 kitchen** is not FMS.1.d potable water.
+- [ ] **No invented NABH sprinkler, bed-count, occupancy-subdivision, minutes-to-restore, or
+      universal calibration calendar.** Intervals in the OE (monthly rounds; drills twice a
+      year) are stated; other clocks are hospital-defined against named frameworks.
 
 ---
 
