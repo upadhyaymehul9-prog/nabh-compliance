@@ -35,12 +35,17 @@ OE_CODES = ["FMS.5.a", "FMS.5.b", "FMS.5.c", "FMS.5.d", "FMS.5.e"]
 
 POLICY_TITLE = "Fire and Non-Fire Emergencies"
 
-VERSION = "2.0"
+VERSION = "2.1"
 REVISION_HISTORY = [
     {
         "version": "2.0",
         "date": "18-08-2026",
         "description": "Template-test rebuild: adoptable hospital policy shape. Not an approved master.",
+    },
+    {
+        "version": "2.1",
+        "date": "18-08-2026",
+        "description": "Renumber: 5.1–5.8 under What we do; stop-work as section 6. Disclaimer unchanged.",
     },
 ]
 
@@ -118,7 +123,7 @@ NON_NEGOTIABLES = f"""The following are prohibited. There is no operational exce
 Anyone who sees a prohibited act stops it under the stop-work clause and reports it the same shift to the {D('Maintenance In-Charge')} or, at night, the Night Duty Officer."""
 
 PROCEDURE_STEPS = [
-f"""1. Detection and raising the alarm
+f"""5.1 Detection and raising the alarm
 
 The fire provisions installed in this building are those the local fire authority required for this occupancy under the National Building Code of India, 2016, given this building's height and built-up area. They include, as that NOC required: {D('smoke and/or heat detectors covering occupied corridors, stores, kitchen and plant rooms')}; manual call points on each occupied floor at the {D('Nursing Station and stair landing')}; a fire alarm panel at the {D('Security desk')}, with repeater or sounder coverage of the {D('Nursing Station')} so that a night nurse hears it.
 
@@ -130,7 +135,7 @@ A laboratory fire uses this same alarm path. Bench chemical hygiene remains the 
 
 Medical-gas leaks, earthquake, bomb threat and the other named non-fire events are raised by the person who first knows of them to the Night Duty Officer or Medical Superintendent. There is no requirement to wait for a detector: an earthquake is felt; a bomb threat is a call; a leak is a smell, a hiss, or a manifold alarm.""",
 
-f"""2. First attack and containment
+f"""5.2 First attack and containment
 
 Staff trained in extinguisher use may make a first attack on an incipient fire with the extinguisher for that class, if their own exit is clear behind them. If the fire is larger than a waste-bin, if smoke is already in the corridor, or if the person has not been trained, they close the door, leave, and do not return for belongings.
 
@@ -142,7 +147,7 @@ Containment: fire doors and shutters on the as-built drawings close automaticall
 
 Electrical isolation of the affected zone is ordered by the Medical Superintendent or Night Duty Officer and carried out by the {D('Maintenance In-Charge')} or the trained night technician. Medical-gas isolation of a zone on fire is ordered the same way and carried out only by a person trained under the medical-gases programme. Untrained isolation of oxygen on a floor that still has ventilator-dependent patients is prohibited.""",
 
-f"""3. Evacuation, assembly and dependent patients
+f"""5.3 Evacuation, assembly and dependent patients
 
 The default for fire is evacuate the affected compartment, then the floor, then the building, as the Medical Superintendent or Night Duty Officer directs. The default for earthquake is shelter-in-place away from glass until shaking stops, then evacuate if the structure is unsafe. The default for bomb threat is evacuate away from the named location. The default for medical-gas leak is isolate, ventilate, remove ignition sources, and evacuate the affected zone. The senior person on site may change the default; they say so out loud and it is recorded after the event.
 
@@ -154,7 +159,7 @@ Dependent patients move with a named nurse and with portable oxygen from the med
 
 Lifts are not used for fire evacuation unless the fire authority's occupancy conditions for this building say otherwise in writing. If this hospital has no lift, that sentence does not apply.""",
 
-f"""4. Named non-fire emergencies
+f"""5.4 Named non-fire emergencies
 
 Earthquake. Staff protect patients from falling fixtures, shut off non-essential flame, and wait for shaking to stop before moving. Aftershock is expected. The Maintenance In-Charge inspects stairs, medical-gas manifold, diesel store and electrical panels before anyone is sent back in. National Disaster Management Authority Hospital Safety Guidelines (2016) are the framework for this decision; they are not pasted as a district booklet.
 
@@ -168,11 +173,11 @@ Lift entrapment (if a lift exists). Power is left on unless there is also a fire
 
 Medical-gas leak or oxygen-enriched fire. Ignition sources are removed. Zone isolation follows the medical-gases programme. Evacuation of the affected zone follows this policy. A leaking cylinder is not rolled through an exit route.
 
-Major electrical failure after backup has failed. Continuity decisions in section 8 apply. This is not the routine generator test.
+Major electrical failure after backup has failed. Continuity decisions in section 5.8 apply. This is not the routine generator test.
 
 Violence, bomb threat and civil unrest that become a reportable incident are also entered in the incident system. This policy is the emergency action; the incident form is not a substitute for clearing the floor.""",
 
-f"""5. Exit plan — documented and displayed
+f"""5.5 Exit plan — documented and displayed
 
 Every occupied floor displays, at the {D('Nursing Station and at each stair door')}, a floor plan that shows: the route a person on that floor actually walks to the stair or final exit; the location of extinguishers and manual call points; the assembly point; and "you are here." The plan is in {D('Gujarati and English')}. It matches the controlled as-built drawings. A framed plan in the board room, an arrow pointing at a locked grilled window, or a radiation / PC-PNDT notice is not this display.
 
@@ -180,7 +185,7 @@ When a fire door, a ward, or a stair is taken out of use, the Maintenance In-Cha
 
 Staff on induction walk the route from their workplace to the assembly point once before they work a night shift.""",
 
-f"""6. Maintenance of fire-related equipment and infrastructure
+f"""5.6 Maintenance of fire-related equipment and infrastructure
 
 The Maintenance In-Charge owns the maintenance plan for every fire provision this occupancy actually has. Biomedical preventive maintenance of ventilators, monitors and sterilisers is not this plan.
 
@@ -195,7 +200,7 @@ Schedule (adopt as written; replace a marked interval only with a tighter one):
 
 The fire NOC is not a job card. The last inspection of each class is retrievable. A failed detector zone, discharged extinguisher, or fire pump that will not start is withdrawn from reliance and a compensating provision is put in place until restored.""",
 
-f"""7. Mock drills
+f"""5.7 Mock drills
 
 Mock drills are held at least twice a year. That floor is not optional.
 
@@ -210,7 +215,7 @@ The {D('Quality Coordinator')} observes against a written objective list: alarm 
 
 A drill that harms someone is also an incident. Staff training records for fire and non-fire emergencies are held with the personnel file; this policy is what they are trained to.""",
 
-f"""8. Service continuity
+f"""5.8 Service continuity
 
 When a ward, theatre, labour room, laboratory, imaging room or plant is lost to fire or to a named non-fire event, the Medical Superintendent (day) or Night Duty Officer (night) declares one of: continue in place with restrictions; pause; move internally; or divert.
 
@@ -226,16 +231,16 @@ Divert, if declared, is to {BLANK}. The Medical Superintendent or Night Duty Off
 
 Who cannot be moved without piped oxygen is listed on the continuity card held at the {D('Nursing Station')} and updated when a ventilator-dependent patient is admitted or discharged.""",
 
-f"""9. Stop-work authority
+]
 
-Every person on the premises has the authority and the duty to stop an act that breaches a non-negotiable rule of this policy: a blocked exit, a wedged fire door, a silenced detector, an untrained person at the fire panel, a sparking tool in an oxygen area, a drill being paper-signed.
+STOP_WORK = f"""Every person on the premises has the authority and the duty to stop an act that breaches a non-negotiable rule of this policy: a blocked exit, a wedged fire door, a silenced detector, an untrained person at the fire panel, a sparking tool in an oxygen area, a drill being paper-signed.
 
 The person says "stop" to the act, makes the immediate safe condition (remove the wedge, unblock the door, restore the pin on the call point if they are competent to, or keep people away if they are not), and reports the same shift to the {D('Maintenance In-Charge')} or the Night Duty Officer.
 
 There is no retaliation for a good-faith stop-work. A stop-work that was wrong in hindsight is still recorded; the act is not restarted until the Maintenance In-Charge says so.
 
-A vendor or visiting consultant who refuses to stop is required to leave the area. The Medical Superintendent is informed the same shift.""",
-]
+A vendor or visiting consultant who refuses to stop is required to leave the area. The Medical Superintendent is informed the same shift."""
+
 
 RESPONSIBILITY = f"""Roles below are titles, not vacancies. If one person holds two titles in a small hospital, both duties still apply.
 
@@ -249,7 +254,7 @@ Medical Superintendent (Head of the Institution)
 Maintenance In-Charge (Fire Safety Officer for this policy)
 - Owns detection, first-attack equipment, fire doors, emergency lighting, pumps if installed, drawings and displayed exit plans.
 - Holds the fire NOC and the as-built fire drawings.
-- Runs the maintenance schedule in section 6 and closes fire findings from monthly facility rounds.
+- Runs the maintenance schedule in section 5.6 and closes fire findings from monthly facility rounds.
 - Issues and closes isolation permits for detectors and zones.
 - Trains and names staff who may operate pumps, panels and zone isolation.
 
@@ -336,7 +341,7 @@ Signature: ___________________________
 
 DOCUMENT_CONTROL = f"""Document number: {D('FMS/POL/05')}
 Issue number: {D('01')}
-Version: 2.0 (template test — not an approved master)
+Version: 2.1 (template test — numbering fix; not an approved master)
 Date created: {BLANK}
 Date of implementation: {BLANK}
 Review due: {D('one year from implementation')}
@@ -393,31 +398,31 @@ OE_MAPPING = [
     {
         "oe_code": "FMS.5.a",
         "requirement": "The organisation has plans and provisions for early detection, abatement and containment of the fire, and non-fire emergencies.",
-        "steps": "Safety objective; Policy standards; Detection and alarm; First attack and containment; Named non-fire emergencies; Non-negotiable rules",
+        "steps": "Safety objective; Section 3; 5.1 Detection and alarm; 5.2 First attack and containment; 5.4 Named non-fire emergencies; Section 4",
         "responsible": "Medical Superintendent (accountable); Maintenance In-Charge (provisions); Night Duty Officer (command at night)",
     },
     {
         "oe_code": "FMS.5.b",
         "requirement": "The organisation has a documented and displayed exit plan in case of fire and non-fire emergencies",
-        "steps": "Policy standards; Evacuation, assembly and dependent patients; Exit plan — documented and displayed",
+        "steps": "Section 3; 5.3 Evacuation, assembly and dependent patients; 5.5 Exit plan — documented and displayed",
         "responsible": "Maintenance In-Charge (drawings and display); Nursing Superintendent (notices not covering the plan)",
     },
     {
         "oe_code": "FMS.5.c",
         "requirement": "Mock drills are held at least twice a year.",
-        "steps": "Policy standards; Mock drills; Quality monitoring; Non-negotiable rules (item 10)",
+        "steps": "Section 3; 5.7 Mock drills; Section 8 Quality monitoring; Section 4 item 10",
         "responsible": "Medical Superintendent (accountable); Quality Coordinator (observe and file)",
     },
     {
         "oe_code": "FMS.5.d",
         "requirement": "There is a maintenance plan for fire-related equipment and infrastructure.",
-        "steps": "First attack and containment; Maintenance of fire equipment and infrastructure; Quality monitoring; Non-negotiable rules (items 3, 4, 7)",
+        "steps": "5.2 First attack; 5.6 Maintenance of fire equipment and infrastructure; Section 8 Quality monitoring; Section 4 items 3, 4, 7",
         "responsible": "Maintenance In-Charge",
     },
     {
         "oe_code": "FMS.5.e",
         "requirement": "The organisation has a service continuity plan in case of fire and non-fire emergencies.",
-        "steps": "Policy standards; Service continuity; Governance matrix",
+        "steps": "Section 3; 5.8 Service continuity; Section 7 Governance",
         "responsible": "Medical Superintendent / Night Duty Officer",
     },
 ]
@@ -429,8 +434,17 @@ non-fire emergency. OE letters are a traceability table at the end, not headings
 Defaults are marked « ». True blanks are «________» (assembly point, fire NOC,
 receiving hospital, signature names, implementation dates).
 
+Numbering (v2.1): one sequence. 1 Purpose, 2 Scope, 3 Policy standards,
+4 Non-negotiable rules (internal 1–12 list is prohibitions, not document
+sections), 5 What we do with subsections 5.1–5.8, 6 Stop-work authority
+(promoted: standing duty, not a fire-response step), 7 Governance,
+8 Quality monitoring, 9 Training, 10 References, 11 Distribution,
+12 Abbreviations, 13 Traceability. Shape is mandatory; word count is not.
+Administrative standards keep this order with fewer 4.x rules and fewer
+5.x subsections — length follows the subject.
+
 Disclaimer P1/P3/P4 are the shared block. P2 names NBC 2016 as locally applied.
-BMW/FSS/CPA/CEA 2010/MHCA are not in P2.
+BMW/FSS/CPA/CEA 2010/MHCA are not in P2. P1 is unchanged in this rebuild.
 
 Technical substance retained from v1: NBC 2016 as-applied (no invented sprinkler
 mandate); IS 2190 monthly visual + periodic service; NDMA Hospital Safety 2016
@@ -492,6 +506,7 @@ def _verify_placeholders(draft: dict) -> None:
             draft.get("monitoring_audit") or "",
             draft.get("exceptions") or "",
             draft.get("resources_required") or "",
+            draft.get("stop_work") or "",
         ]
         + draft["procedure_steps"]
         + [json.dumps(draft["oe_mapping"], ensure_ascii=False)]
@@ -544,37 +559,40 @@ def build_markdown(draft: dict) -> str:
     ]
     for step in draft["procedure_steps"]:
         num_title, _, body = step.partition("\n\n")
-        heading = num_title.split(". ", 1)[1] if ". " in num_title else num_title
-        lines.append(f"### {heading}")
+        lines.append(f"### {num_title}")
         lines.append("")
         lines.append(body)
         lines.append("")
     lines += [
-        "## 6. Governance and responsibility",
+        "## 6. Stop-work authority",
+        "",
+        draft["stop_work"],
+        "",
+        "## 7. Governance and responsibility",
         "",
         draft["responsibility"],
         "",
-        "## 7. Quality monitoring (RCA → CAPA)",
+        "## 8. Quality monitoring (RCA → CAPA)",
         "",
         draft["monitoring_audit"],
         "",
-        "## 8. Training and staff acknowledgement",
+        "## 9. Training and staff acknowledgement",
         "",
         draft["training_competency"],
         "",
-        "## 9. References",
+        "## 10. References",
         "",
         draft["references_text"],
         "",
-        "## 10. Distribution",
+        "## 11. Distribution",
         "",
         draft["distribution"],
         "",
-        "## 11. Abbreviations",
+        "## 12. Abbreviations",
         "",
         draft["abbreviations"],
         "",
-        "## 12. Traceability to NABH SHCO 3rd Edition FMS.5",
+        "## 13. Traceability to NABH SHCO 3rd Edition FMS.5",
         "",
         "This table is an index. It is not how the policy is organised.",
         "",
@@ -604,6 +622,7 @@ def main() -> int:
         "scope": SCOPE,
         "policy_statement": POLICY_STATEMENT,
         "procedure_steps": PROCEDURE_STEPS,
+        "stop_work": STOP_WORK,
         "responsibility": RESPONSIBILITY,
         "references_text": REFERENCES,
         "distribution": DISTRIBUTION,
@@ -623,8 +642,10 @@ def main() -> int:
         "template_test": "fms5_v2_adoptable_shape",
     }
 
+    assert len(PROCEDURE_STEPS) == 8, f"expected 8 operational subsections, got {len(PROCEDURE_STEPS)}"
     for i, s in enumerate(PROCEDURE_STEPS, start=1):
-        assert s.startswith(f"{i}. "), f"step {i} numbering"
+        prefix = f"5.{i} "
+        assert s.startswith(prefix), f"step {i} must start with {prefix!r}"
     assert "\r" not in json.dumps(draft)
     _verify_disclaimer(DISCLAIMER, STATUTE_CLAUSE)
     _verify_no_oe_headings(PROCEDURE_STEPS)
@@ -638,6 +659,35 @@ def main() -> int:
     out_md.parent.mkdir(parents=True, exist_ok=True)
     out_json.write_text(json.dumps(draft, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     md = build_markdown(draft)
+    expected_headings = [
+        "## 1. Purpose",
+        "## 2. Scope",
+        "## 3. Policy standards",
+        "## 4. Non-negotiable rules",
+        "## 5. What we do",
+        "### 5.1 Detection and raising the alarm",
+        "### 5.2 First attack and containment",
+        "### 5.3 Evacuation, assembly and dependent patients",
+        "### 5.4 Named non-fire emergencies",
+        "### 5.5 Exit plan — documented and displayed",
+        "### 5.6 Maintenance of fire-related equipment and infrastructure",
+        "### 5.7 Mock drills",
+        "### 5.8 Service continuity",
+        "## 6. Stop-work authority",
+        "## 7. Governance and responsibility",
+        "## 8. Quality monitoring (RCA → CAPA)",
+        "## 9. Training and staff acknowledgement",
+        "## 10. References",
+        "## 11. Distribution",
+        "## 12. Abbreviations",
+        "## 13. Traceability to NABH SHCO 3rd Edition FMS.5",
+    ]
+    numbered = [ln for ln in md.splitlines() if re.match(r"^#{2,3} \d", ln)]
+    assert numbered == expected_headings, (
+        "heading sequence drifted:\n"
+        + "\n".join(f"  got {g!r}" for g in numbered)
+    )
+    print("markdown heading sequence is 1–13 with 5.1–5.8:", True)
     out_md.write_text(md, encoding="utf-8")
     print(f"wrote {out_json}")
     print(f"wrote {out_md} ({len(md.splitlines())} lines)")

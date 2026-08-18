@@ -89,6 +89,7 @@ interface V2Draft {
   monitoring_audit?: string;
   training_competency?: string;
   resources_required?: string;
+  stop_work?: string;
   oe_mapping: { oe_code: string; requirement: string; steps: string; responsible?: string }[];
   version?: string;
   revision_history?: RevisionEntry[];
@@ -96,7 +97,7 @@ interface V2Draft {
 
 function buildV2Document(d: V2Draft): Document {
   const controlRows = [
-    ["Document No.", "«FMS/POL/05»", "Version", d.version ?? "2.0"],
+    ["Document No.", "«FMS/POL/05»", "Version", d.version ?? "2.1"],
     ["Issue No.", "«01»", "Review due", "«one year from implementation»"],
     ["Date created", "«________»", "Date of implementation", "«________»"],
     ["Prepared by", "«Maintenance In-Charge»  Name «________»", "Signature", "«________»"],
@@ -214,21 +215,23 @@ function buildV2Document(d: V2Draft): Document {
 
   for (const step of d.procedure_steps) {
     const normalized = step.replace(/\r\n/g, "\n");
-    const m = normalized.match(/^(\d+)\.\s([^\n]+)\n\n([\s\S]*)$/);
+    const m = normalized.match(/^(\d+\.\d+)\s+([^\n]+)\n\n([\s\S]*)$/);
     if (!m) {
       children.push(...blocks(sub(normalized)));
       continue;
     }
-    children.push(h2(`${m[1]}. ${m[2]}`));
+    children.push(h2(`${m[1]} ${m[2]}`));
     children.push(...blocks(sub(m[3])));
   }
 
   children.push(
-    h1("6. Governance and responsibility"),
+    h1("6. Stop-work authority"),
+    ...blocks(sub(d.stop_work ?? "")),
+    h1("7. Governance and responsibility"),
     ...blocks(sub(d.responsibility)),
-    h1("7. Quality monitoring (RCA → CAPA)"),
+    h1("8. Quality monitoring (RCA → CAPA)"),
     ...blocks(sub(d.monitoring_audit ?? "")),
-    h1("8. Training and staff acknowledgement"),
+    h1("9. Training and staff acknowledgement"),
     ...blocks(sub(d.training_competency ?? "")),
     ackTable,
     new Paragraph({
@@ -239,13 +242,13 @@ function buildV2Document(d: V2Draft): Document {
       })],
       spacing: { before: 120, after: 200 },
     }),
-    h1("9. References"),
+    h1("10. References"),
     ...blocks(sub(d.references_text)),
-    h1("10. Distribution"),
+    h1("11. Distribution"),
     ...blocks(sub(d.distribution)),
-    h1("11. Abbreviations"),
+    h1("12. Abbreviations"),
     ...blocks(sub(d.abbreviations)),
-    h1("12. Traceability to NABH SHCO 3rd Edition FMS.5"),
+    h1("13. Traceability to NABH SHCO 3rd Edition FMS.5"),
     new Paragraph({
       children: [new TextRun({
         text: "This table is an index. It is not how the policy is organised.",
