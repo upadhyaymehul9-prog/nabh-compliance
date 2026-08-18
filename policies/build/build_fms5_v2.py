@@ -35,7 +35,7 @@ OE_CODES = ["FMS.5.a", "FMS.5.b", "FMS.5.c", "FMS.5.d", "FMS.5.e"]
 
 POLICY_TITLE = "Fire and Non-Fire Emergencies"
 
-VERSION = "2.1"
+VERSION = "2.2"
 REVISION_HISTORY = [
     {
         "version": "2.0",
@@ -46,6 +46,11 @@ REVISION_HISTORY = [
         "version": "2.1",
         "date": "18-08-2026",
         "description": "Renumber: 5.1–5.8 under What we do; stop-work as section 6. Disclaimer unchanged.",
+    },
+    {
+        "version": "2.2",
+        "date": "18-08-2026",
+        "description": "Section 14 Required Records / Evidence Checklist after the OE index. Records only; no assessor framing.",
     },
 ]
 
@@ -341,7 +346,7 @@ Signature: ___________________________
 
 DOCUMENT_CONTROL = f"""Document number: {D('FMS/POL/05')}
 Issue number: {D('01')}
-Version: 2.1 (template test — numbering fix; not an approved master)
+Version: 2.2 (template test — records annex; not an approved master)
 Date created: {BLANK}
 Date of implementation: {BLANK}
 Review due: {D('one year from implementation')}
@@ -400,30 +405,70 @@ OE_MAPPING = [
         "requirement": "The organisation has plans and provisions for early detection, abatement and containment of the fire, and non-fire emergencies.",
         "steps": "Safety objective; Section 3; 5.1 Detection and alarm; 5.2 First attack and containment; 5.4 Named non-fire emergencies; Section 4",
         "responsible": "Medical Superintendent (accountable); Maintenance In-Charge (provisions); Night Duty Officer (command at night)",
+        "records": [
+            "Current fire NOC, held by the Maintenance In-Charge with the as-built fire drawings.",
+            "Quarterly functional-test records for the fire alarm panel, detectors, sounders and manual call points.",
+            "Written isolation permits for any isolated detector or zone, with a named watcher and same-shift restoration.",
+            "Trained-operator list for the fire panel, pumps if installed, and medical-gas / electrical zone isolation.",
+            "Named non-fire event list, including any Medical Superintendent record that flood or lift entrapment is not applicable.",
+            "Floor Fire Warden roster for each occupied floor, day and night.",
+            "Incident-file entries for every real activation and every stop-work that met the incident definition.",
+        ],
     },
     {
         "oe_code": "FMS.5.b",
         "requirement": "The organisation has a documented and displayed exit plan in case of fire and non-fire emergencies",
         "steps": "Section 3; 5.3 Evacuation, assembly and dependent patients; 5.5 Exit plan — documented and displayed",
         "responsible": "Maintenance In-Charge (drawings and display); Nursing Superintendent (notices not covering the plan)",
+        "records": [
+            "As-built fire drawings.",
+            "Displayed exit plan on each occupied floor, dated, matching the drawings, naming the assembly point.",
+            "Record that the display was updated the same day a fire door, ward or stair was taken out of use.",
+            "Induction record that each staff member walked the route to the assembly point before a first night shift.",
+        ],
     },
     {
         "oe_code": "FMS.5.c",
         "requirement": "Mock drills are held at least twice a year.",
         "steps": "Section 3; 5.7 Mock drills; Section 8 Quality monitoring; Section 4 item 10",
         "responsible": "Medical Superintendent (accountable); Quality Coordinator (observe and file)",
+        "records": [
+            "Drill file: two dated drills in the last twelve months — one fire, one named non-fire.",
+            "Observed objective list for each drill.",
+            "Dependent-patient move recorded in every drill.",
+            "Record that at least one of the two drills in any twelve-month period was a night or weekend shift.",
+            "Re-drill of any failed objective within thirty days.",
+            "Signed staff acknowledgements, held by the Nursing Superintendent with the induction record.",
+            "CAPA for a drill objective that fails twice, or for a drill that caused harm.",
+        ],
     },
     {
         "oe_code": "FMS.5.d",
         "requirement": "There is a maintenance plan for fire-related equipment and infrastructure.",
         "steps": "5.2 First attack; 5.6 Maintenance of fire equipment and infrastructure; Section 8 Quality monitoring; Section 4 items 3, 4, 7",
         "responsible": "Maintenance In-Charge",
+        "records": [
+            "Monthly extinguisher visual sheets; annual servicing job cards.",
+            "Quarterly panel and detector functional-test records; annual service job cards.",
+            "Isolation permits for failed detector zones, with a compensating watcher until restored.",
+            "Emergency-lighting monthly functional tests and annual duration tests.",
+            "Monthly facility-round findings on fire doors and closers, closed within 24 hours or on a watcher.",
+            "If installed: weekly pump auto-start, quarterly water-flow or valve inspection, annual service job cards.",
+            "Fire NOC (held; not used as a job card).",
+            "CAPA for a failed extinguisher, isolated zone, or pump that will not start.",
+        ],
     },
     {
         "oe_code": "FMS.5.e",
         "requirement": "The organisation has a service continuity plan in case of fire and non-fire emergencies.",
         "steps": "Section 3; 5.8 Service continuity; Section 7 Governance",
         "responsible": "Medical Superintendent / Night Duty Officer",
+        "records": [
+            "Continuity card at the Nursing Station: receiving hospital named; oxygen-dependent in-patients listed.",
+            "Named receiving hospital on the issued document.",
+            "Recorded continuity decision after an activation: continue, pause, move internally, or divert.",
+            "CAPA after a real fire or named non-fire activation.",
+        ],
     },
 ]
 
@@ -434,14 +479,16 @@ non-fire emergency. OE letters are a traceability table at the end, not headings
 Defaults are marked « ». True blanks are «________» (assembly point, fire NOC,
 receiving hospital, signature names, implementation dates).
 
-Numbering (v2.1): one sequence. 1 Purpose, 2 Scope, 3 Policy standards,
+Numbering (v2.2): one sequence. 1 Purpose, 2 Scope, 3 Policy standards,
 4 Non-negotiable rules (internal 1–12 list is prohibitions, not document
 sections), 5 What we do with subsections 5.1–5.8, 6 Stop-work authority
 (promoted: standing duty, not a fire-response step), 7 Governance,
 8 Quality monitoring, 9 Training, 10 References, 11 Distribution,
-12 Abbreviations, 13 Traceability. Shape is mandatory; word count is not.
-Administrative standards keep this order with fewer 4.x rules and fewer
-5.x subsections — length follows the subject.
+12 Abbreviations, 13 Traceability (OE index), 14 Required Records /
+Evidence Checklist (per-OE list of records the hospital holds; annex,
+not organising structure). Shape is mandatory; word count is not.
+Administrative standards keep this order with fewer 4.x rules, fewer
+5.x subsections, and a shorter section-14 list — length follows the subject.
 
 Disclaimer P1/P3/P4 are the shared block. P2 names NBC 2016 as locally applied.
 BMW/FSS/CPA/CEA 2010/MHCA are not in P2. P1 is unchanged in this rebuild.
@@ -483,10 +530,16 @@ def _verify_no_oe_headings(steps: list[str]) -> None:
 
 def _verify_mapping() -> None:
     assert [m["oe_code"] for m in OE_MAPPING] == OE_CODES
+    banned = re.compile(r"assessor|this OE|common error|how to satisfy", re.I)
     for m in OE_MAPPING:
         assert m.get("steps") and m.get("responsible")
-        assert "evidence" not in m, "v2 mapping is traceability only; no assessor evidence column"
-    print("OE mapping is a traceability table covering all 5 OEs:", True)
+        assert "evidence" not in m, "v2 mapping table is traceability only; records live in section 14"
+        recs = m.get("records") or []
+        assert isinstance(recs, list) and len(recs) >= 3, f"{m['oe_code']} records too thin"
+        for r in recs:
+            assert r.strip() and not r.strip().startswith("-")
+            assert banned.search(r) is None, f"assessor framing in records: {r}"
+    print("OE mapping is a traceability table; section 14 lists records per OE:", True)
 
 
 def _verify_placeholders(draft: dict) -> None:
@@ -510,6 +563,7 @@ def _verify_placeholders(draft: dict) -> None:
         ]
         + draft["procedure_steps"]
         + [json.dumps(draft["oe_mapping"], ensure_ascii=False)]
+        + [rec for m in draft["oe_mapping"] for rec in (m.get("records") or [])]
     )
     assert "[Hospital to define" not in body, "v2 body still defers with [Hospital to define]"
     assert "«________»" in body, "true blanks missing"
@@ -604,6 +658,18 @@ def build_markdown(draft: dict) -> str:
         lines.append(f"| {m['oe_code']} | {req} | {m['steps']} | {m['responsible']} |")
     lines += [
         "",
+        "## 14. Required Records / Evidence Checklist",
+        "",
+        "Records the hospital holds under this policy, listed by objective element.",
+        "",
+    ]
+    for m in draft["oe_mapping"]:
+        lines.append(f"### {m['oe_code']} — {m['requirement']}")
+        lines.append("")
+        for rec in m.get("records") or []:
+            lines.append(f"- {rec}")
+        lines.append("")
+    lines += [
         "## Disclaimer",
         "",
         draft["disclaimer"],
@@ -681,13 +747,14 @@ def main() -> int:
         "## 11. Distribution",
         "## 12. Abbreviations",
         "## 13. Traceability to NABH SHCO 3rd Edition FMS.5",
+        "## 14. Required Records / Evidence Checklist",
     ]
     numbered = [ln for ln in md.splitlines() if re.match(r"^#{2,3} \d", ln)]
     assert numbered == expected_headings, (
         "heading sequence drifted:\n"
         + "\n".join(f"  got {g!r}" for g in numbered)
     )
-    print("markdown heading sequence is 1–13 with 5.1–5.8:", True)
+    print("markdown heading sequence is 1–14 with 5.1–5.8:", True)
     out_md.write_text(md, encoding="utf-8")
     print(f"wrote {out_json}")
     print(f"wrote {out_md} ({len(md.splitlines())} lines)")

@@ -90,14 +90,14 @@ interface V2Draft {
   training_competency?: string;
   resources_required?: string;
   stop_work?: string;
-  oe_mapping: { oe_code: string; requirement: string; steps: string; responsible?: string }[];
+  oe_mapping: { oe_code: string; requirement: string; steps: string; responsible?: string; records?: string[] }[];
   version?: string;
   revision_history?: RevisionEntry[];
 }
 
 function buildV2Document(d: V2Draft): Document {
   const controlRows = [
-    ["Document No.", "«FMS/POL/05»", "Version", d.version ?? "2.1"],
+    ["Document No.", "«FMS/POL/05»", "Version", d.version ?? "2.2"],
     ["Issue No.", "«01»", "Review due", "«one year from implementation»"],
     ["Date created", "«________»", "Date of implementation", "«________»"],
     ["Prepared by", "«Maintenance In-Charge»  Name «________»", "Signature", "«________»"],
@@ -258,6 +258,31 @@ function buildV2Document(d: V2Draft): Document {
       spacing: { after: 120 },
     }),
     trace,
+    h1("14. Required Records / Evidence Checklist"),
+    new Paragraph({
+      children: [new TextRun({
+        text: "Records the hospital holds under this policy, listed by objective element.",
+        italics: true,
+        size: 20,
+      })],
+      spacing: { after: 120 },
+    }),
+  );
+
+  for (const m of d.oe_mapping) {
+    children.push(
+      h2(`${m.oe_code} — ${m.requirement}`),
+    );
+    for (const rec of m.records ?? []) {
+      children.push(new Paragraph({
+        children: [new TextRun({ text: rec, size: 22 })],
+        bullet: { level: 0 },
+        spacing: { after: 60 },
+      }));
+    }
+  }
+
+  children.push(
     h1("Disclaimer"),
     ...blocks(sub(d.disclaimer)),
   );

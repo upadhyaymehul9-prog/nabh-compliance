@@ -33,35 +33,75 @@
       "oe_code": "FMS.5.a",
       "requirement": "The organisation has plans and provisions for early detection, abatement and containment of the fire, and non-fire emergencies.",
       "steps": "Safety objective; Section 3; 5.1 Detection and alarm; 5.2 First attack and containment; 5.4 Named non-fire emergencies; Section 4",
-      "responsible": "Medical Superintendent (accountable); Maintenance In-Charge (provisions); Night Duty Officer (command at night)"
+      "responsible": "Medical Superintendent (accountable); Maintenance In-Charge (provisions); Night Duty Officer (command at night)",
+      "records": [
+        "Current fire NOC, held by the Maintenance In-Charge with the as-built fire drawings.",
+        "Quarterly functional-test records for the fire alarm panel, detectors, sounders and manual call points.",
+        "Written isolation permits for any isolated detector or zone, with a named watcher and same-shift restoration.",
+        "Trained-operator list for the fire panel, pumps if installed, and medical-gas / electrical zone isolation.",
+        "Named non-fire event list, including any Medical Superintendent record that flood or lift entrapment is not applicable.",
+        "Floor Fire Warden roster for each occupied floor, day and night.",
+        "Incident-file entries for every real activation and every stop-work that met the incident definition."
+      ]
     },
     {
       "oe_code": "FMS.5.b",
       "requirement": "The organisation has a documented and displayed exit plan in case of fire and non-fire emergencies",
       "steps": "Section 3; 5.3 Evacuation, assembly and dependent patients; 5.5 Exit plan — documented and displayed",
-      "responsible": "Maintenance In-Charge (drawings and display); Nursing Superintendent (notices not covering the plan)"
+      "responsible": "Maintenance In-Charge (drawings and display); Nursing Superintendent (notices not covering the plan)",
+      "records": [
+        "As-built fire drawings.",
+        "Displayed exit plan on each occupied floor, dated, matching the drawings, naming the assembly point.",
+        "Record that the display was updated the same day a fire door, ward or stair was taken out of use.",
+        "Induction record that each staff member walked the route to the assembly point before a first night shift."
+      ]
     },
     {
       "oe_code": "FMS.5.c",
       "requirement": "Mock drills are held at least twice a year.",
       "steps": "Section 3; 5.7 Mock drills; Section 8 Quality monitoring; Section 4 item 10",
-      "responsible": "Medical Superintendent (accountable); Quality Coordinator (observe and file)"
+      "responsible": "Medical Superintendent (accountable); Quality Coordinator (observe and file)",
+      "records": [
+        "Drill file: two dated drills in the last twelve months — one fire, one named non-fire.",
+        "Observed objective list for each drill.",
+        "Dependent-patient move recorded in every drill.",
+        "Record that at least one of the two drills in any twelve-month period was a night or weekend shift.",
+        "Re-drill of any failed objective within thirty days.",
+        "Signed staff acknowledgements, held by the Nursing Superintendent with the induction record.",
+        "CAPA for a drill objective that fails twice, or for a drill that caused harm."
+      ]
     },
     {
       "oe_code": "FMS.5.d",
       "requirement": "There is a maintenance plan for fire-related equipment and infrastructure.",
       "steps": "5.2 First attack; 5.6 Maintenance of fire equipment and infrastructure; Section 8 Quality monitoring; Section 4 items 3, 4, 7",
-      "responsible": "Maintenance In-Charge"
+      "responsible": "Maintenance In-Charge",
+      "records": [
+        "Monthly extinguisher visual sheets; annual servicing job cards.",
+        "Quarterly panel and detector functional-test records; annual service job cards.",
+        "Isolation permits for failed detector zones, with a compensating watcher until restored.",
+        "Emergency-lighting monthly functional tests and annual duration tests.",
+        "Monthly facility-round findings on fire doors and closers, closed within 24 hours or on a watcher.",
+        "If installed: weekly pump auto-start, quarterly water-flow or valve inspection, annual service job cards.",
+        "Fire NOC (held; not used as a job card).",
+        "CAPA for a failed extinguisher, isolated zone, or pump that will not start."
+      ]
     },
     {
       "oe_code": "FMS.5.e",
       "requirement": "The organisation has a service continuity plan in case of fire and non-fire emergencies.",
       "steps": "Section 3; 5.8 Service continuity; Section 7 Governance",
-      "responsible": "Medical Superintendent / Night Duty Officer"
+      "responsible": "Medical Superintendent / Night Duty Officer",
+      "records": [
+        "Continuity card at the Nursing Station: receiving hospital named; oxygen-dependent in-patients listed.",
+        "Named receiving hospital on the issued document.",
+        "Recorded continuity decision after an activation: continue, pause, move internally, or divert.",
+        "CAPA after a real fire or named non-fire activation."
+      ]
     }
   ],
-  "universal_facts_checklist": "FORMAT EXPERIMENT (2026-08-18). This is FMS.5 v2, not the pipeline master.\n\nIntent: an adoptable SHCO policy organised around what staff do in a fire or named\nnon-fire emergency. OE letters are a traceability table at the end, not headings.\nDefaults are marked « ». True blanks are «________» (assembly point, fire NOC,\nreceiving hospital, signature names, implementation dates).\n\nNumbering (v2.1): one sequence. 1 Purpose, 2 Scope, 3 Policy standards,\n4 Non-negotiable rules (internal 1–12 list is prohibitions, not document\nsections), 5 What we do with subsections 5.1–5.8, 6 Stop-work authority\n(promoted: standing duty, not a fire-response step), 7 Governance,\n8 Quality monitoring, 9 Training, 10 References, 11 Distribution,\n12 Abbreviations, 13 Traceability. Shape is mandatory; word count is not.\nAdministrative standards keep this order with fewer 4.x rules and fewer\n5.x subsections — length follows the subject.\n\nDisclaimer P1/P3/P4 are the shared block. P2 names NBC 2016 as locally applied.\nBMW/FSS/CPA/CEA 2010/MHCA are not in P2. P1 is unchanged in this rebuild.\n\nTechnical substance retained from v1: NBC 2016 as-applied (no invented sprinkler\nmandate); IS 2190 monthly visual + periodic service; NDMA Hospital Safety 2016\nfor non-fire and continuity; loaded/functioning tests not paper changeovers;\ndependent-patient move; night/weekend drill sample; fire NOC is not a job card;\nlab fire uses this plan; gas leak is an emergency here and handling stays the\ngas programme; COP matching/observation stay care policies.\n\nNot used: [Hospital to define] in the body (disclaimer P1 still contains that\nphrase because the shared block is unchanged). Assessor-facing \"this OE\" /\n\"an assessor will ask\" / \"common error\" framing. SQL insert. Status remains draft.\n\nOE coverage: a detection/abatement/containment + non-fire; b exit display;\nc drills twice a year; d maintenance schedule; e continuity with a named hospital.\n",
-  "version": "2.1",
+  "universal_facts_checklist": "FORMAT EXPERIMENT (2026-08-18). This is FMS.5 v2, not the pipeline master.\n\nIntent: an adoptable SHCO policy organised around what staff do in a fire or named\nnon-fire emergency. OE letters are a traceability table at the end, not headings.\nDefaults are marked « ». True blanks are «________» (assembly point, fire NOC,\nreceiving hospital, signature names, implementation dates).\n\nNumbering (v2.2): one sequence. 1 Purpose, 2 Scope, 3 Policy standards,\n4 Non-negotiable rules (internal 1–12 list is prohibitions, not document\nsections), 5 What we do with subsections 5.1–5.8, 6 Stop-work authority\n(promoted: standing duty, not a fire-response step), 7 Governance,\n8 Quality monitoring, 9 Training, 10 References, 11 Distribution,\n12 Abbreviations, 13 Traceability (OE index), 14 Required Records /\nEvidence Checklist (per-OE list of records the hospital holds; annex,\nnot organising structure). Shape is mandatory; word count is not.\nAdministrative standards keep this order with fewer 4.x rules, fewer\n5.x subsections, and a shorter section-14 list — length follows the subject.\n\nDisclaimer P1/P3/P4 are the shared block. P2 names NBC 2016 as locally applied.\nBMW/FSS/CPA/CEA 2010/MHCA are not in P2. P1 is unchanged in this rebuild.\n\nTechnical substance retained from v1: NBC 2016 as-applied (no invented sprinkler\nmandate); IS 2190 monthly visual + periodic service; NDMA Hospital Safety 2016\nfor non-fire and continuity; loaded/functioning tests not paper changeovers;\ndependent-patient move; night/weekend drill sample; fire NOC is not a job card;\nlab fire uses this plan; gas leak is an emergency here and handling stays the\ngas programme; COP matching/observation stay care policies.\n\nNot used: [Hospital to define] in the body (disclaimer P1 still contains that\nphrase because the shared block is unchanged). Assessor-facing \"this OE\" /\n\"an assessor will ask\" / \"common error\" framing. SQL insert. Status remains draft.\n\nOE coverage: a detection/abatement/containment + non-fire; b exit display;\nc drills twice a year; d maintenance schedule; e continuity with a named hospital.\n",
+  "version": "2.2",
   "revision_history": [
     {
       "version": "2.0",
@@ -72,6 +112,11 @@
       "version": "2.1",
       "date": "18-08-2026",
       "description": "Renumber: 5.1–5.8 under What we do; stop-work as section 6. Disclaimer unchanged."
+    },
+    {
+      "version": "2.2",
+      "date": "18-08-2026",
+      "description": "Section 14 Required Records / Evidence Checklist after the OE index. Records only; no assessor framing."
     }
   ],
   "status": "draft",
@@ -79,6 +124,6 @@
   "exceptions": "The following are prohibited. There is no operational exception, no festival exception, and no \"until the vendor comes\" exception. Stop-work applies.\n\n1. Blocking an exit, an exit corridor, a stair, or an assembly route with beds, stores, trolleys, construction material or a parked vehicle.\n2. Wedging, tying, or latching open a fire door or fire shutter, or disconnecting its closer.\n3. Covering, painting, silencing, isolating or removing a detector, sounder or manual call point except under a written isolation permit issued by the Maintenance In-Charge for a dated job, with a compensating watcher and restoration recorded the same shift.\n4. Leaving in place an extinguisher that is missing, discharged, unsealed, or past its maintenance date. A failed extinguisher is replaced or the location is given a compensating extinguisher the same shift.\n5. Locking an emergency exit while the floor is occupied.\n6. Using an exit arrow, locked grill, or board-room frame as the exit plan. The displayed plan must match the route a person can actually walk.\n7. Treating the fire NOC, an AMC invoice, or a commissioning certificate as proof that a pump, panel, door closer or extinguisher works today.\n8. Allowing untrained staff to start a fire pump, isolate a fire zone, isolate a medical-gas zone, or silence the fire panel.\n9. Smoking, naked flame, or sparking tools in an oxygen-enriched area or a manifold room.\n10. Skipping, photographing, or paper-signing a mock drill. A drill that did not leave the quality office, that excluded theatre or the night shift for convenience, or that omitted a dependent-patient move, has not been held.\n11. Storing full and empty medical-gas cylinders mixed, or using a cylinder as a doorstop, in a way that blocks egress or feeds a fire. Cylinder handling remains the medical-gases programme; blocking egress is this policy.\n12. Diverting patients to an unnamed hospital, or declaring continuity without naming who cannot be moved without oxygen from the medical-gas reserve.\n\nAnyone who sees a prohibited act stops it under the stop-work clause and reports it the same shift to the «Maintenance In-Charge» or, at night, the Night Duty Officer.",
   "monitoring_audit": "The Quality Coordinator audits this policy «quarterly», and after every real activation or failed drill. The audit looks at the provisions and the records, not at a binder.\n\nWhat is monitored each quarter:\n\n- Extinguishers: monthly visual sheets for the quarter; any gauge in the red closed the same shift.\n- Detectors and panel: last quarterly functional test; any isolated zone has a current permit and a watcher.\n- Fire doors: monthly round findings closed; no door on a watcher older than «24 hours» without Medical Superintendent sign-off.\n- Exit displays: still match the drawings; assembly point still as issued.\n- Drill calendar: two drills dated in the last twelve months, one fire and one named non-fire, one of them night or weekend; dependent-patient move recorded; failed objectives re-drilled inside thirty days.\n- Continuity card: receiving hospital named; oxygen-dependent in-patients listed.\n- Stop-work and incident dual-entry: every activation and every stop-work that met the incident definition is in the incident file.\n- Fire NOC: still current.\n\nAny non-conformity is a finding. The Maintenance In-Charge (equipment and fabric) or the Nursing Superintendent (wardens, displays, dependent-patient move) owns the corrective action. Root-cause analysis is required when: a drill objective fails twice; a real alarm is not heard at the Nursing Station; a fire door is found wedged on two successive rounds; an extinguisher is found discharged or missing; or a person operated a pump, panel or gas isolation without being on the trained list.\n\nCorrective and preventive action is dated, has an owner, and is checked at the next quarterly audit. An open CAPA older than «thirty days» is escalated to the Medical Superintendent.\n\nThis policy is reviewed «annually», and sooner after a real fire, a failed drill, a change to the fire NOC, a change of assembly point, or a change to the receiving hospital.",
   "training_competency": "Every staff member whose work is on an occupied floor is trained against this policy at induction, before a first night shift, and «once a year» thereafter. Training covers: the alarm, the route to the assembly point, first-attack limits, dependent-patient move, stop-work, and the non-negotiable rules. Staff who may operate the fire panel, a pump, or medical-gas isolation are named on a trained-operator list held by the Maintenance In-Charge.\n\nVendors who work in plant rooms or on the fire system are briefed on stop-work and on the isolation-permit rule before they start.\n\nStaff acknowledgement\n\nI have read this Fire and Non-Fire Emergencies policy of {{HOSPITAL_NAME}}. I know the route from my workplace to the assembly point. I understand the non-negotiable rules and the stop-work duty. I will not operate fire pumps, the fire panel, or medical-gas isolation unless I am named on the trained-operator list.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Nursing Superintendent holds the signed acknowledgements with the induction record. A staff member who has not signed does not work a night shift on an occupied floor.)",
-  "resources_required": "Document number: «FMS/POL/05»\nIssue number: «01»\nVersion: 2.1 (template test — numbering fix; not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\nNumber of pages: as printed\n\nPrepared by (designation): «Maintenance In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nFire NOC number: «________»    Issuing authority: «________»    Valid until: «________»\nAssembly point: «________»\nReceiving hospital for diversion: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "resources_required": "Document number: «FMS/POL/05»\nIssue number: «01»\nVersion: 2.2 (template test — records annex; not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\nNumber of pages: as printed\n\nPrepared by (designation): «Maintenance In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nFire NOC number: «________»    Issuing authority: «________»    Valid until: «________»\nAssembly point: «________»\nReceiving hospital for diversion: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "template_test": "fms5_v2_adoptable_shape"
 }
