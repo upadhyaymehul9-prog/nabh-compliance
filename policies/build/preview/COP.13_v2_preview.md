@@ -1,7 +1,7 @@
 # Pain Management, Rehabilitation Services and Nutritional Therapy
 **Preview Hospital**
 
-*Pain, rehabilitation and nutritional therapy in day-to-day care.*
+*Pain management, rehabilitation and nutritional therapy.*
 
 ## Document control
 
@@ -23,117 +23,160 @@ Sr | Section | Change | Reason | Prepared | Approved
 
 ## Statement of intent
 
-Pain management, rehabilitation services and nutritional therapy are provided to the patients in a safe, collaborative and consistent manner — effective pain management, titrated alleviation, commensurate rehabilitation, collaborative rehabilitation planning, nutritional screening and assessment, and collaborative therapeutic diet.
+Pain management, rehabilitation services and nutritional therapy are provided to the patients in a safe, collaborative and consistent manner — not a pain score that is documented but never acted upon, rehabilitation that is ordered but never coordinated, or a diet that arrives without clinical input.
 
 ## 1. Purpose
 
-This policy defines how Preview Hospital manages pain effectively, provides rehabilitation services commensurate with its service scope, plans rehabilitation collaboratively, screens patients for nutritional risk with assessment for those at risk, and plans therapeutic diets collaboratively.
+This policy defines how Preview Hospital provides pain management, rehabilitation services and nutritional therapy to patients in a safe, collaborative and consistent manner.
 
-Boundaries: AAC.3 owns initial patient assessment; this policy owns nutritional screening and nutritional therapy. Rehabilitation scope is limited to services provided per the hospital's service directory.
+It covers six elements: effective management of patients in pain; pain alleviation measures or medications initiated and titrated according to the patient's need and response; rehabilitation services commensurate with services provided; collaborative planning of rehabilitation services; nutritional risk screening and assessment for at-risk patients; and collaborative planning and provision of therapeutic diets.
+
+Boundaries: MOM owns medication management; this policy owns pain-specific medication initiation and titration. COP.4 owns nursing care; this policy owns the pain assessment and nutritional screening that nurses perform. COP.6 owns ICU care; this policy owns pain management and nutritional therapy within ICU.
 
 Words marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.
 
 ## 2. Scope
 
-This policy applies to all clinical staff at Preview Hospital involved in pain management, rehabilitation, and nutritional care: treating doctors, nurses, physiotherapists, rehabilitation therapists, dietitians/nutritionists, and support staff.
+This policy applies to all clinical staff at Preview Hospital involved in pain management, rehabilitation and nutritional therapy: treating doctors, nurses, physiotherapists, occupational therapists, dietitians or nutrition staff, and the «Quality Coordinator».
 
-It covers pain assessment and management, rehabilitation services, and nutritional screening/therapy. It does not own the initial assessment (AAC.3) or services the hospital does not provide (recorded absences).
+It covers the six elements COP.13.a–f name. It does not cover medication management as a system (MOM), nursing care policy (COP.4), or ICU-specific care (COP.6).
+
+Boundaries with other policies of Preview Hospital:
+
+- MOM owns medication management. This policy owns initiation and titration of pain alleviation measures or medications.
+- COP.4 owns nursing care. This policy owns pain assessment, nutritional screening and diet delivery that nurses perform.
+- COP.6 owns ICU care. This policy owns pain management and nutritional therapy within the ICU context.
+- COP.12 owns higher-risk patient management. This policy owns nutritional risk screening and therapeutic diet for at-risk patients.
 
 ## 3. Policy standards
 
-Preview Hospital manages pain effectively and titrates alleviation measures according to the patient's need and response. Rehabilitation services are commensurate with the services provided and are planned collaboratively. Patients are screened for nutritional risk, assessed where at risk, and receive collaboratively planned therapeutic diets.
+Preview Hospital manages patients in pain effectively. Every patient is assessed for pain using a validated pain assessment tool. Pain is treated promptly and reassessed at defined intervals.
 
-Preview Hospital does not leave pain unassessed, rehabilitation unplanned, or nutritional risk unscreened.
+Pain alleviation measures or medications are initiated and titrated according to the patient's need and response. Non-pharmacological measures are considered alongside medications. The patient's response to pain management is documented.
+
+The scope of rehabilitation services at a minimum is commensurate with the services provided by Preview Hospital. Where rehabilitation services are not available on site, referral arrangements are documented.
+
+Care providers collaboratively plan rehabilitation services. Rehabilitation goals are set with the patient, documented, and progress is reviewed.
+
+Patients admitted to Preview Hospital are screened for nutritional risk. Assessment is done for patients found at risk during nutritional screening. The screening tool is «a validated nutritional screening tool such as the Malnutrition Universal Screening Tool (MUST) or Nutritional Risk Screening (NRS-2002)».
+
+The therapeutic diet is planned and provided collaboratively by the treating doctor, nursing staff, and dietitian or nutrition-trained staff. Diet orders are documented and communicated to the kitchen.
+
+Preview Hospital does not treat any of these as meeting this policy: a pain score documented but not acted upon; rehabilitation ordered without goals or coordination; nutritional screening performed without follow-up assessment for at-risk patients; or a diet order that does not reach the kitchen.
 
 ## 4. Non-negotiable rules
 
-1. Every patient is assessed for pain using «a validated pain scale appropriate to age and cognition» at admission, at defined intervals, and after intervention.
-2. Pain alleviation is initiated when pain is identified; it is not deferred to the next round.
-3. Rehabilitation goals are set collaboratively with the patient and/or family.
-4. Nutritional screening is completed for every admitted patient within «24 hours» of admission.
-5. A patient found at nutritional risk receives a documented nutritional assessment and a therapeutic diet plan.
+The following are prohibited. There is no convenience exception.
+
+1. Leaving a patient in pain unassessed or untreated when the patient reports pain or when clinical signs indicate pain.
+2. Initiating or titrating pain medication without documenting the patient's response and reassessing at the defined interval.
+3. Providing rehabilitation services without documented goals set collaboratively with the patient and the treating team.
+4. Failing to screen an admitted patient for nutritional risk using the adopted screening tool.
+5. Failing to perform a nutritional assessment for a patient found at risk during nutritional screening.
+6. Issuing a therapeutic diet order without communicating it to the kitchen and verifying it reaches the patient.
+
+Staff who see one of these acts report it the same shift to the «department in-charge» or the Medical Superintendent.
 
 ## 5. What we do
 
 ### 5.1 Effective pain management
 
-Patients in pain at Preview Hospital are effectively managed. Pain is assessed using «the Numeric Rating Scale (NRS) for adults and the Wong-Baker FACES scale for children or cognitively impaired patients».
+Every patient is assessed for pain using a validated pain assessment tool — «the Numeric Rating Scale (NRS) for adults or the Wong-Baker FACES scale for children or cognitively impaired patients». Pain assessment is performed at admission, at defined intervals («every 4 hours for in-patients or as clinically indicated»), and whenever the patient reports pain.
 
-Pain is assessed at admission, at defined intervals («every shift and after intervention»), and whenever the patient reports pain. The treating team documents pain scores and initiates or adjusts management. Unrelieved pain triggers escalation to the «treating doctor» within «30 minutes». A multidisciplinary approach (pharmacological and non-pharmacological) is used where appropriate.
+A pain score that triggers action («NRS ≥ 4 or equivalent») leads to treatment within the same shift. The treating doctor prescribes pain alleviation measures. The nurse administers and documents.
 
-### 5.2 Pain alleviation titrated to patient need and response
+Pain management covers acute, chronic and procedural pain. The «Quality Coordinator» monitors pain assessment and treatment compliance «quarterly».
 
-Pain alleviation measures or medications are initiated and titrated according to the patient's need and response. The treating doctor prescribes analgesia according to «the WHO analgesic ladder or equivalent stepwise approach».
+### 5.2 Pain alleviation: initiation and titration
 
-Nurses administer as prescribed and reassess within «30 minutes for parenteral and 60 minutes for oral» administration. Dose adjustments are communicated to the prescribing doctor. Adverse effects of analgesics are monitored and documented. Non-pharmacological measures («positioning, cold/heat, distraction, relaxation techniques») are offered and documented.
+Pain alleviation measures or medications are initiated and titrated according to the patient's need and response. The treating doctor selects the agent and route based on the type and severity of pain, patient condition, and contraindications.
 
-### 5.3 Rehabilitation services commensurate with hospital scope
+Non-pharmacological measures — «positioning, hot/cold application, relaxation techniques, and distraction» — are considered alongside medications. The patient's response is documented at each reassessment. The dose or agent is adjusted when the response is inadequate or adverse effects occur.
 
-The scope of rehabilitation services at Preview Hospital is at a minimum commensurate with the services provided by the organisation. Services include «physiotherapy, and other rehabilitation disciplines as per the service directory».
+MOM owns medication management as a system; this policy owns that pain-specific initiation and titration follow the patient's response.
 
-Services not in the service directory are recorded absences, not copied SOPs. The «Physiotherapy In-Charge» maintains the scope document and referral pathways for services this hospital cannot provide internally.
+### 5.3 Rehabilitation services commensurate with scope
 
-### 5.4 Collaborative rehabilitation planning
+The scope of rehabilitation services at a minimum is commensurate with the services provided by Preview Hospital. Rehabilitation includes «physiotherapy, occupational therapy, speech therapy, and post-surgical mobilisation as applicable to the hospital service directory».
 
-Care providers collaboratively plan rehabilitation services. Rehabilitation goals are set with the patient and/or family. The rehabilitation plan documents current functional status, goals, interventions, responsible therapist, and review timeline.
+Where a rehabilitation service is not available on site, referral arrangements with an appropriate provider are documented and communicated to the patient.
 
-The treating doctor, physiotherapist/rehabilitation therapist, nurse, and patient/family participate in planning. Progress is reviewed at «weekly» intervals or more frequently if clinically indicated. Discharge rehabilitation advice is documented.
+The «rehabilitation in-charge or physiotherapist» holds the scope document and reviews it «annually» against the hospital's service directory.
 
-### 5.5 Nutritional screening and assessment
+### 5.4 Collaborative planning of rehabilitation services
 
-Patients admitted to Preview Hospital are screened for nutritional risk within «24 hours» of admission using «the Malnutrition Universal Screening Tool (MUST) or equivalent validated tool». AAC.3 owns initial assessment; this step owns nutritional screening and the follow-on assessment.
+Care providers collaboratively plan rehabilitation services. Rehabilitation goals are set with the patient, documented in the patient record, and reviewed at defined intervals («weekly for in-patients»).
 
-Patients found at nutritional risk receive a documented nutritional assessment by the «dietitian/nutritionist» covering anthropometry, dietary history, biochemical markers, clinical signs, and functional capacity. The assessment results in a nutritional care plan.
+The rehabilitation plan includes: the clinical indication, specific goals, interventions, frequency, expected duration, and outcome measures. The plan is developed by the «physiotherapist or rehabilitation team» in consultation with the treating doctor.
 
-### 5.6 Collaborative therapeutic diet planning
+Progress notes and outcome measures are documented. When goals are met or revised, the change is communicated to the patient and the treating team.
 
-The therapeutic diet is planned and provided collaboratively. The dietitian/nutritionist, treating doctor, and nursing staff plan the diet together based on the nutritional assessment, diagnosis, and patient preferences.
+### 5.5 Nutritional risk screening and assessment
 
-The diet plan documents calorie/protein targets, consistency, allergens, supplements where indicated, and monitoring schedule. Diet is reviewed on clinical change or at «weekly» intervals. Patient/family education on the diet is provided and documented. Kitchen staff receive written diet orders; delivery is verified by the nurse.
+Patients admitted to Preview Hospital are screened for nutritional risk within «24 hours of admission» using «the adopted validated nutritional screening tool». Screening is performed by «the admitting nurse».
+
+Patients found at risk during nutritional screening receive a nutritional assessment by the «dietitian or nutrition-trained staff» within «48 hours». The assessment covers: current nutritional status, dietary intake, clinical condition, and nutritional requirements.
+
+Nutritional reassessment is performed at «defined intervals for patients with a hospital stay exceeding 7 days» or on clinical change. Results are documented in the patient record.
+
+### 5.6 Therapeutic diet planning and provision
+
+The therapeutic diet is planned and provided collaboratively. The treating doctor orders the diet based on the clinical condition and the nutritional assessment. The «dietitian or nutrition-trained staff» translates the order into a meal plan. The nursing staff communicates the diet order to the kitchen and verifies that the correct diet reaches the patient.
+
+Diet orders are documented in the patient record and updated when the clinical condition changes. The kitchen maintains a diet register that matches the patient record.
+
+Patient and family education on dietary needs is provided before discharge where the therapeutic diet continues at home.
 
 ## 6. Governance and responsibility
 
 Medical Superintendent (Head of the Institution)
-- Accountable that pain management, rehabilitation and nutritional therapy are provided safely and collaboratively.
+- Accountable that pain management, rehabilitation services and nutritional therapy are provided as this policy requires.
 
 Treating doctors
-- Prescribe and adjust pain management; refer for rehabilitation and nutritional assessment; participate in collaborative planning.
+- Assess and treat pain. Prescribe pain medications and titrate based on response.
+- Order rehabilitation and set goals collaboratively.
+- Order therapeutic diets based on clinical condition.
 
 Nurses
-- Assess pain; administer analgesia; reassess; deliver diet; screen nutritional risk; communicate.
+- Assess pain using the validated tool at defined intervals and report untreated pain.
+- Screen admitted patients for nutritional risk within the defined timeframe.
+- Communicate diet orders to the kitchen and verify delivery.
 
-Physiotherapist / Rehabilitation therapist
-- Provide rehabilitation services within scope; set goals collaboratively; document progress.
+«Physiotherapist / rehabilitation team»
+- Develop and implement rehabilitation plans collaboratively.
+- Document progress and outcomes.
 
-Dietitian / Nutritionist
-- Perform nutritional assessment for at-risk patients; plan therapeutic diets collaboratively; educate patients/families.
+«Dietitian or nutrition-trained staff»
+- Perform nutritional assessments for at-risk patients.
+- Plan therapeutic diets collaboratively and provide patient education.
 
-Quality Coordinator
+«Quality Coordinator»
 - Audits this policy «quarterly» (see monitoring section).
-- Tracks CAPA when a pain/rehabilitation/nutrition defect recurs.
+- Tracks CAPA for pain management, rehabilitation and nutritional therapy findings.
 
 ## 7. Quality monitoring (RCA → CAPA)
 
 The Quality Coordinator audits this policy «quarterly». The audit covers:
 
-- Pain assessment documented at admission and defined intervals (sample charts).
-- Pain reassessment after intervention within defined timeframe.
-- Rehabilitation plans documented with collaborative goals.
-- Nutritional screening completed within 24 hours of admission.
-- Nutritional assessment and diet plan for at-risk patients.
-- Therapeutic diet orders communicated to kitchen and verified on delivery.
+- Pain assessment documented at admission and at defined intervals (sample charts).
+- Pain treated within the same shift when the score triggers action.
+- Pain medication response documented and dose adjusted when needed.
+- Rehabilitation goals set collaboratively and progress documented.
+- Nutritional risk screening completed within defined timeframe for admitted patients.
+- Nutritional assessment completed for at-risk patients within defined timeframe.
+- Therapeutic diet orders documented, communicated to kitchen, and verified at bedside.
 
-Root-cause analysis is required when a pain/rehabilitation/nutrition defect recurs within six months.
+Root-cause analysis is required when the same pain management gap, rehabilitation coordination failure, or nutritional screening omission recurs within six months.
 
-This policy is reviewed «annually», and sooner when pain guidelines, rehabilitation scope, or nutritional tools change.
+This policy is reviewed «annually», and sooner when pain management guidelines, rehabilitation scope, or nutritional standards change.
 
 ## 8. Training and staff acknowledgement
 
-All clinical staff are trained on this policy at induction and «once a year» after that. Training covers pain assessment tools, analgesic titration, rehabilitation referral and collaborative planning, nutritional screening, and therapeutic diet processes.
+All clinical staff are trained on this policy at induction and «once a year» after that. Training covers pain assessment tools, pain medication titration, rehabilitation goal-setting, nutritional risk screening, and therapeutic diet processes.
 
 Staff acknowledgement
 
-I have read this Pain Management, Rehabilitation Services and Nutritional Therapy policy of Preview Hospital. I will assess pain, plan rehabilitation collaboratively, screen for nutritional risk, and plan therapeutic diets in accordance with this policy.
+I have read this Pain Management, Rehabilitation Services and Nutritional Therapy policy of Preview Hospital. I will assess and manage pain, collaborate on rehabilitation planning, screen for nutritional risk, and ensure therapeutic diets are correctly ordered and delivered.
 
 
 Name: ___________________________    Designation: ___________________________
@@ -148,28 +191,30 @@ Signature: ___________________________
 ## 9. References
 
 - National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Care of Patients chapter, standard COP.13.
-- World Health Organization (WHO), WHO Analgesic Ladder — pain management framework.
-- British Association for Parenteral and Enteral Nutrition (BAPEN), Malnutrition Universal Screening Tool (MUST) — nutritional screening.
-- Internal documents of Preview Hospital: pain assessment forms, analgesic protocols, rehabilitation scope document, nutritional screening tool, therapeutic diet order forms, kitchen communication process.
+- Internal documents of Preview Hospital: pain assessment protocol, pain management guidelines, rehabilitation scope document, rehabilitation referral arrangements, nutritional screening tool, nutritional assessment form, therapeutic diet protocol, MOM medication management policy, COP.4 nursing care policy.
 
 ## 10. Distribution
 
 Official master copy: office of the Medical Superintendent, Preview Hospital, with the Quality Coordinator.
 
-Copies issued to: every in-patient ward; ICU; emergency department; physiotherapy; dietetics/nutrition; kitchen (diet orders section); nursing administration.
+Copies issued to: every in-patient ward; ICU; emergency department; physiotherapy; dietary/kitchen; nursing administration.
 
 The current version is available to all staff at the «ward policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».
+
+When a new version is issued, take old copies out of use.
 
 ## 11. Abbreviations
 
 CAPA — corrective and preventive action
+COP — Care of Patients (NABH SHCO chapter 5)
 ICU — intensive care unit
+MOM — Management of Medication (NABH SHCO chapter 6)
 MUST — Malnutrition Universal Screening Tool
 NABH — National Accreditation Board for Hospitals and Healthcare Providers
-NRS — Numeric Rating Scale
+NRS — Numeric Rating Scale (pain) / Nutritional Risk Screening (nutrition)
 OE — objective element
+RCA — root-cause analysis
 SHCO — Standards for Small Healthcare Organisations
-WHO — World Health Organization
 
 ## 12. Traceability to NABH SHCO 3rd Edition COP.13
 
@@ -177,12 +222,12 @@ This table is an index. It is not how the policy is organised.
 
 | OE | Requirement | Where this policy addresses it | Responsible |
 | --- | --- | --- | --- |
-| COP.13.a | Patients in pain are effectively managed. | Section 3; 5.1 Effective pain management; Section 4 items 1–2 | Treating doctors (prescribe); nurses (assess and administer); Quality Coordinator (audit) |
-| COP.13.b | Pain alleviation measures or medications are initiated and titrated according to the patient's need and response. | Section 3; 5.2 Pain alleviation titrated to patient need and response; Section 4 item 2 | Treating doctors (prescribe and adjust); nurses (administer, reassess, communicate) |
-| COP.13.c | Scope of rehabilitation services at a minimum is commensurate to the services provided by the organization. | Section 3; 5.3 Rehabilitation services commensurate with hospital scope | Physiotherapy In-Charge (scope document); Medical Superintendent (resource allocation) |
-| COP.13.d | Care providers collaboratively plan rehabilitation services. | Section 3; 5.4 Collaborative rehabilitation planning; Section 4 item 3 | Treating doctor, physiotherapist, nurse (plan together); patient/family (participate) |
-| COP.13.e | Patients admitted to the organization are screened for nutritional risk, and assessment is done for patients found at risk during nutritional screening. | Section 3; 5.5 Nutritional screening and assessment; Section 4 items 4–5 | Nurses (screen); dietitian/nutritionist (assess at-risk patients) |
-| COP.13.f | The therapeutic diet is planned and provided collaboratively. | Section 3; 5.6 Collaborative therapeutic diet planning; Section 4 item 5 | Dietitian/nutritionist (plan); treating doctor (approve); nurses (verify delivery); kitchen (prepare) |
+| COP.13.a | Patients in pain are effectively managed. | Section 3; 5.1 Effective pain management; Section 4 items 1–2 | Treating doctors (prescribe); nurses (assess and administer); Quality Coordinator (monitor compliance) |
+| COP.13.b | Pain alleviation measures or medications are initiated and titrated according to the patient's need and response. | Section 3; 5.2 Pain alleviation: initiation and titration; Section 4 item 2 | Treating doctors (select agent and titrate); nurses (administer and document response) |
+| COP.13.c | Scope of rehabilitation services at a minimum is commensurate to the services provided by the organization. | Section 3; 5.3 Rehabilitation services commensurate with scope | Rehabilitation in-charge (scope document); Medical Superintendent (approve scope) |
+| COP.13.d | Care providers collaboratively plan rehabilitation services. | Section 3; 5.4 Collaborative planning of rehabilitation services; Section 4 item 3 | Physiotherapist/rehabilitation team (develop plan); treating doctor (consultation); patient (goal setting) |
+| COP.13.e | Patients admitted to the organization are screened for nutritional risk, and assessment is done for patients found at risk during nutritional screening. | Section 3; 5.5 Nutritional risk screening and assessment; Section 4 items 4–5 | Admitting nurse (screen); dietitian or nutrition-trained staff (assess); treating doctor (order) |
+| COP.13.f | The therapeutic diet is planned and provided collaboratively. | Section 3; 5.6 Therapeutic diet planning and provision; Section 4 item 6 | Treating doctor (order); dietitian (meal plan); nurses (communicate to kitchen and verify delivery) |
 
 ## 13. Required Records / Evidence Checklist
 
@@ -190,44 +235,41 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.13.a — Patients in pain are effectively managed.
 
-- Pain assessment records using validated scale at admission, defined intervals, and after intervention.
-- Documentation of pain management initiated when pain identified.
-- Escalation records for unrelieved pain.
-- Multidisciplinary pain-management plans where applicable.
+- Pain assessment using validated tool documented at admission and defined intervals.
+- Treatment initiated within the same shift when pain score triggers action.
+- Quarterly audit of pain assessment and treatment compliance.
+- Training records on pain assessment tools.
 
 ### COP.13.b — Pain alleviation measures or medications are initiated and titrated according to the patient's need and response.
 
-- Analgesic prescriptions with stepwise approach documented.
-- Reassessment records within defined timeframe after administration.
-- Dose-adjustment communications documented.
-- Non-pharmacological measures offered and documented.
+- Pain medication orders with clinical justification documented.
+- Patient response documented at each reassessment.
+- Dose adjustments or agent changes documented with rationale.
 
 ### COP.13.c — Scope of rehabilitation services at a minimum is commensurate to the services provided by the organization.
 
-- Rehabilitation scope document aligned with hospital service directory.
-- Referral pathways for services not available internally.
-- Recorded absences against service directory for services not provided.
+- Rehabilitation scope document reviewed annually against service directory.
+- Referral arrangements documented where services are not available on site.
+- Service directory showing rehabilitation services available.
 
 ### COP.13.d — Care providers collaboratively plan rehabilitation services.
 
-- Rehabilitation plans with collaborative goals documented.
-- Patient/family participation in goal-setting documented.
-- Progress reviews at defined intervals.
-- Discharge rehabilitation advice documented.
+- Rehabilitation plans with goals set collaboratively documented in the patient record.
+- Progress notes and outcome measures documented at defined intervals.
+- Communication records between rehabilitation team and treating doctor.
 
 ### COP.13.e — Patients admitted to the organization are screened for nutritional risk, and assessment is done for patients found at risk during nutritional screening.
 
-- Nutritional screening completed within 24 hours of admission using validated tool.
-- Nutritional assessment by dietitian for patients identified at risk.
-- Nutritional care plan documented for at-risk patients.
-- Audit sample confirming screening-to-assessment pathway completed.
+- Nutritional risk screening completed within defined timeframe for admitted patients.
+- Nutritional assessment completed for at-risk patients within defined timeframe.
+- Reassessment records for patients with extended stays or clinical change.
+- Training records on the adopted nutritional screening tool.
 
 ### COP.13.f — The therapeutic diet is planned and provided collaboratively.
 
-- Therapeutic diet plans with calorie/protein targets, consistency and monitoring schedule.
-- Collaborative planning documented (dietitian, doctor, nursing input).
-- Diet orders communicated to kitchen with delivery verification.
-- Patient/family education on diet documented.
+- Diet orders documented in patient record and updated on clinical change.
+- Kitchen diet register matching patient records.
+- Bedside verification records that correct diet reached the patient.
 
 ## Disclaimer
 

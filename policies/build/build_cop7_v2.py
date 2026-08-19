@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 """COP.7 v2 — safe obstetric care.
 
-Shape follows PRE.1 v2 (section list and order only). Wording from COP.7 OEs
-(NABH SHCO 3rd Edition PDF, md5 39e3bc86d73d651b9cfef283bbf018a9),
-printed pages 70–71 / PDF indices 70–71.
-
-No stop-work. Disclaimer accreditation-only. Five OEs (COP.7.a–e).
+Shape follows PRE v2 adoptable-policy template. Wording from NABH SHCO 3rd Edition
+PDF (md5 39e3bc86d73d651b9cfef283bbf018a9), PDF indices 70–71.
+No stop-work section. Five OEs (COP.7.a–e).
+Disclaimer P2 is accreditation-only.
 """
 from __future__ import annotations
 
@@ -16,165 +15,145 @@ from pre_v2_common import BLANK, D, HOSPITAL, document_control, emit_pre_v2
 
 STANDARD_CODE = "COP.7"
 CHAPTER = "COP"
-OE_CODES = ["COP.7.a", "COP.7.b", "COP.7.c", "COP.7.d", "COP.7.e"]
+OE_CODES = [
+    "COP.7.a", "COP.7.b", "COP.7.c", "COP.7.d", "COP.7.e",
+]
 POLICY_TITLE = "Safe Obstetric Care"
 VERSION = "2.0"
 REVISION_HISTORY = [
     {
         "version": "2.0",
         "date": "19-08-2026",
-        "description": "COP v2 template: plain English, COP roles, five OEs, no stop-work, accreditation-only disclaimer.",
+        "description": "COP v2 template: adoptable shape, plain English, no stop-work, accreditation-only disclaimer.",
     },
 ]
 
 STATEMENT_OF_INTENT = (
-    "Organization provides safe obstetric care — not a labour room that runs on individual "
-    "habit, and not a high-risk case kept without the competence to manage it."
+    "The organization provides safe obstetric care — not a labour room that runs "
+    "on habit without written guidance, nutritional assessment, or a referral plan "
+    "for high-risk cases."
 )
 
-PURPOSE = f"""This policy says how {HOSPITAL} provides safe obstetric care.
+PURPOSE = f"""This policy defines how {HOSPITAL} provides safe obstetric care.
 
-It covers five elements: obstetric services organised and provided safely; identification and care of high-risk obstetric cases with competent doctors and nurses, and referral where needed; antenatal assessment that includes maternal nutrition; appropriate peri-natal and post-natal monitoring; and human resources and facilities to take care of neonates of high-risk obstetric cases.
+It covers five elements: obstetric services organised and provided safely; identification and care of high-risk obstetric cases with competent staff and referral where needed; antenatal assessment including maternal nutrition; appropriate peri-natal and post-natal monitoring; and human resources and facilities to take care of neonates of high-risk obstetric cases.
 
-The chapter intent is that obstetric care is safe, competent, nutritionally aware, monitored and neonatally supported.
-
-This policy owns obstetric care. COP.1 owns uniform care. PRE.3 owns informed consent. COP.3 owns CPR. COP.5 owns transfusion.
-
-If this hospital does not provide obstetric services, record that as a written absence. Do not copy an obstetric SOP from another hospital.
+Boundaries: COP.8 owns paediatric and neonatal care as a standalone policy; this policy owns neonatal readiness for high-risk obstetric cases. COP.4 owns nursing care; this policy owns obstetric nursing within the labour room and maternity ward.
 
 Words marked {D('like this')} are defaults a small hospital can keep. A blank marked {BLANK} has no sensible default. Fill it in before this document is signed."""
 
-SCOPE = f"""This policy applies to the obstetric services of {HOSPITAL} — antenatal clinics, labour room, post-natal ward and neonatal care area — and to every staff member who provides obstetric care: obstetricians, treating doctors, nurses and midwives, paediatricians or neonatologists where available, anaesthetists where available, and the Medical Superintendent.
+SCOPE = f"""This policy applies to all staff involved in obstetric care at {HOSPITAL}: obstetricians or treating doctors, midwives, labour room nurses, maternity ward nurses, and support staff.
 
-It covers the five elements COP.7.a–e name. It does not cover uniform care (COP.1), informed consent (PRE.3), CPR (COP.3), or transfusion (COP.5).
+It covers the five elements COP.7.a–e name. It does not cover paediatric and neonatal care as a standalone programme (COP.8), nursing care policy (COP.4), or medication management (MOM).
 
 Boundaries with other policies of {HOSPITAL}:
 
-- COP.1 owns uniform care. This policy owns that obstetric care follows adopted guidelines.
-- PRE.3 owns the consent method. This policy owns that consent is obtained for obstetric procedures.
-- COP.3 owns CPR. This policy owns that CPR-trained staff and neonatal resuscitation equipment are available in the labour room.
-- COP.5 owns transfusion. This policy owns that blood is available for obstetric emergencies.
-- If this hospital does not provide obstetric services, record that as a written absence."""
+- COP.8 owns paediatric and neonatal care. This policy owns that the organization caring for high-risk obstetric cases has neonatal readiness.
+- COP.4 owns nursing care. This policy owns obstetric nursing standards within the labour room and maternity ward.
+- PRE.3 owns informed consent. This policy owns that consent is obtained for obstetric procedures as part of safe obstetric care.
+- COP.2 owns emergency clinical care. This policy owns obstetric emergencies within the obstetric service."""
 
-POLICY_STATEMENT = f"""{HOSPITAL} organises and provides obstetric services safely. The labour room, antenatal clinic and post-natal ward are staffed, equipped and guided by written protocols.
+POLICY_STATEMENT = f"""{HOSPITAL} organises and provides obstetric services safely. Obstetric services follow written guidance covering antenatal, intra-natal, and post-natal care.
 
-{HOSPITAL} identifies high-risk obstetric cases and provides care with competent doctors and nurses. Where the hospital cannot manage a high-risk case, it refers the patient to another appropriate centre. Referral criteria are defined in writing.
+{HOSPITAL} identifies high-risk obstetric cases and provides care with competent doctors and nurses. Where the hospital cannot manage a high-risk case, it refers the patient to another appropriate centre. Referral criteria and processes are documented.
 
-Antenatal assessment includes maternal nutrition. Nutritional status is assessed and counselling is provided at every antenatal visit.
+Antenatal assessment includes maternal nutrition. Nutritional screening is performed at the first antenatal visit and at defined intervals. Nutritional counselling and supplementation are provided as indicated.
 
-Appropriate peri-natal and post-natal monitoring is performed. Monitoring follows written protocols that cover labour progress, foetal heart rate, maternal vitals, and post-natal observations.
+Appropriate peri-natal and post-natal monitoring is performed, including {D('partograph use during labour, foetal heart rate monitoring, APGAR scoring, post-partum haemorrhage surveillance, and post-natal maternal and neonatal observations')}.
 
-{HOSPITAL} caring for high-risk obstetric cases has the human resources and facilities to take care of neonates of such cases. This includes neonatal resuscitation equipment and staff trained in neonatal resuscitation.
+Where {HOSPITAL} cares for high-risk obstetric cases, it has the human resources and facilities to take care of neonates of such cases, including {D('a neonatal resuscitation area, trained staff for neonatal resuscitation, and essential neonatal equipment')}.
 
-{HOSPITAL} does not treat any of these as meeting this policy: a labour room without a written partograph protocol; a high-risk case kept without competent staff; nutrition advice given only on a poster; or neonatal resuscitation equipment that has never been checked."""
+{HOSPITAL} does not treat any of these as meeting this policy: a labour room without a partograph; a high-risk case managed without competent staff; antenatal care without nutritional assessment; or a hospital that takes high-risk deliveries without neonatal readiness."""
 
-NON_NEGOTIABLES = f"""The following are prohibited. There is no staffing convenience exception.
+NON_NEGOTIABLES = f"""The following are prohibited. There is no convenience exception.
 
-1. Providing obstetric services without written protocols for labour management, high-risk identification, and neonatal resuscitation.
-2. Keeping a high-risk obstetric case that exceeds the competence of the available doctors and nurses, without documenting the clinical reason and arranging referral.
-3. Omitting maternal nutrition assessment from antenatal care.
-4. Conducting labour without peri-natal monitoring (partograph, foetal heart rate monitoring, maternal vitals) as the written protocol requires.
-5. Caring for high-risk obstetric cases without neonatal resuscitation equipment and staff trained in neonatal resuscitation available in the labour room.
+1. Conducting a delivery without a partograph or equivalent documented labour monitoring tool.
+2. Managing a high-risk obstetric case without a doctor competent in obstetric care being available, or failing to refer when the hospital cannot manage the case.
+3. Completing antenatal assessment without documenting maternal nutritional screening.
+4. Failing to perform post-natal maternal and neonatal observations at defined intervals.
+5. Taking high-risk deliveries without neonatal resuscitation equipment and trained staff available.
 
 Staff who see one of these acts report it the same shift to the {D('obstetric department in-charge')} or the Medical Superintendent."""
 
 PROCEDURE_STEPS = [
 f"""5.1 Obstetric services organised and provided safely
 
-{HOSPITAL} organises obstetric services with written protocols, adequate staffing and appropriate equipment. The labour room is equipped with at minimum: {D('delivery table, radiant warmer, neonatal resuscitation equipment, partograph charts, foetal Doppler or cardiotocograph, suction, oxygen, emergency medications, and crash cart access (COP.3)')}.
+{HOSPITAL} organises obstetric services with written guidance covering antenatal, intra-natal, and post-natal care. The guidance is reviewed {D('annually')} by the {D('obstetric department in-charge in consultation with treating doctors')}.
 
-Staffing includes at minimum: {D('one obstetrician or trained doctor and one nurse or midwife available for every delivery')}. Anaesthetic support is available for operative deliveries.
+The labour room is equipped with {D('delivery table, resuscitation equipment for mother and neonate, partograph forms, emergency medications, and infection prevention supplies')}. Equipment is checked {D('at the start of each shift')}.
 
-Written protocols cover at minimum: {D('normal labour management, operative delivery indications, post-partum haemorrhage, eclampsia, and shoulder dystocia')}. Protocols are reviewed {D('annually')} by the {D('obstetric department in-charge')}.
+Obstetric protocols cover: {D('normal delivery, assisted delivery, caesarean section criteria, induction of labour, management of obstetric emergencies including eclampsia, post-partum haemorrhage, and cord prolapse')}.""",
 
-The {D('obstetric department in-charge')} holds the protocols, staffing roster and equipment inventory.""",
+f"""5.2 High-risk obstetric cases: identification, care and referral
 
-f"""5.2 High-risk obstetric identification, competent care and referral
+{HOSPITAL} identifies high-risk obstetric cases at the earliest antenatal visit and at each subsequent visit. High-risk criteria include {D('pre-eclampsia, gestational diabetes, multiple pregnancy, previous caesarean section, placenta praevia, severe anaemia, and any condition the treating doctor identifies as high risk')}.
 
-{HOSPITAL} identifies high-risk obstetric cases at antenatal registration and at every subsequent visit. High-risk criteria include at minimum: {D('previous caesarean section, pre-eclampsia, gestational diabetes, multiple pregnancy, preterm labour, antepartum haemorrhage, foetal growth restriction, and maternal age above 35 or below 18')}.
+High-risk cases are managed by competent doctors and nurses. Where the hospital cannot manage a case, it is referred to another appropriate centre. Referral criteria are documented and include: {D('condition requiring referral, receiving centre, stabilisation before transfer, and communication with the receiving centre')}.
 
-High-risk cases are managed by competent doctors and nurses. Competence means the doctor has training and experience in managing the identified risk. Where the hospital cannot manage a high-risk case, it refers the patient to another appropriate centre. Referral criteria and the list of referral centres are defined in writing and reviewed {D('annually')}.
-
-The referral decision, the reason, the receiving centre and the patient's condition at transfer are documented. COP.2 and AAC.2 own the transfer process; this policy owns the clinical decision to refer.""",
+The {D('obstetric department in-charge')} maintains a register of high-risk cases and their outcomes.""",
 
 f"""5.3 Antenatal assessment including maternal nutrition
 
-Antenatal assessment includes maternal nutrition. Nutritional status is assessed at the first antenatal visit and at each subsequent visit using {D('weight, haemoglobin, dietary history and BMI or mid-upper arm circumference')}.
+Antenatal assessment follows a structured protocol that includes maternal nutritional screening at the first antenatal visit. Nutritional screening uses {D('a structured questionnaire or BMI-based assessment')}.
 
-Counselling on nutrition is provided at every antenatal visit. Counselling covers: {D('adequate caloric intake, iron and folic acid supplementation, calcium supplementation, and locally available nutritious foods')}. Counselling is documented in the antenatal record.
+Nutritional counselling is provided to all antenatal patients. Supplementation with {D('iron, folic acid, and calcium as per national guidelines')} is prescribed where indicated. Nutritional reassessment is performed at {D('each trimester')}.
 
-The {D('obstetric department in-charge')} holds the antenatal assessment protocol including the nutrition component.""",
+The antenatal record documents nutritional screening, counselling, supplementation, and reassessment findings.""",
 
 f"""5.4 Peri-natal and post-natal monitoring
 
-Appropriate peri-natal and post-natal monitoring is performed. Peri-natal monitoring includes: partograph for labour progress; foetal heart rate monitoring at intervals defined by the protocol; maternal vitals (pulse, blood pressure, temperature); and recognition of danger signs.
+Appropriate peri-natal monitoring is performed during labour: {D('partograph use, foetal heart rate monitoring at defined intervals, maternal vital signs, and progress of labour')}. APGAR scoring is performed at one and five minutes after birth.
 
-Post-natal monitoring includes: maternal observations for the first {D('24 hours')} (pulse, blood pressure, bleeding, uterine tone); neonatal observations (breathing, colour, temperature, feeding); and early identification of post-partum complications.
+Post-natal monitoring covers the mother and the neonate. Maternal monitoring includes: {D('vital signs, uterine involution, lochia assessment, breast-feeding support, and post-partum haemorrhage surveillance')}. Neonatal monitoring includes: {D('weight, feeding, jaundice screening, cord care, and immunisation as per national schedule')}.
 
-Monitoring follows written protocols held by the {D('obstetric department in-charge')} and reviewed {D('annually')}.""",
+Monitoring intervals are documented and followed. Deviations from expected progress are escalated to the treating doctor.""",
 
-f"""5.5 Neonatal care for high-risk obstetric cases
+f"""5.5 Neonatal readiness for high-risk obstetric cases
 
-{HOSPITAL} caring for high-risk obstetric cases has the human resources and facilities to take care of neonates of such cases. This includes: {D('neonatal resuscitation equipment (bag-valve-mask, laryngoscope, endotracheal tubes, suction, radiant warmer, pulse oximeter)')}, a paediatrician or doctor trained in neonatal resuscitation available at every high-risk delivery, and nurses trained in basic neonatal care.
+Where {HOSPITAL} cares for high-risk obstetric cases, it has the human resources and facilities to take care of neonates of such cases. A neonatal resuscitation area is available adjacent to or within the labour room.
 
-Neonatal resuscitation equipment is checked {D('daily')} and after every use. The check is recorded on a dated log.
+Neonatal resuscitation equipment includes {D('radiant warmer, bag and mask, suction, oxygen supply, pulse oximeter, and emergency medications')}. Equipment is checked {D('at the start of each shift')}.
 
-If the hospital identifies a high-risk case whose neonate will require a level of care this hospital cannot provide, the referral decision under 5.2 includes neonatal capability at the receiving centre.
-
-The {D('obstetric department in-charge')} and {D('paediatrician or neonatal care lead')} hold the neonatal care arrangements and review them {D('annually')}.""",
+At least {D('one person trained in neonatal resuscitation')} is available for every high-risk delivery. Training is refreshed {D('annually')}. If the hospital does not have neonatal intensive care, referral arrangements with a facility that does are documented.""",
 ]
 
 RESPONSIBILITY = f"""Medical Superintendent (Head of the Institution)
-- Accountable that obstetric services are safe and compliant as this policy requires.
-- Approves obstetric protocols and referral criteria.
+- Accountable that obstetric care is provided safely as this policy requires.
+- Receives escalations for high-risk cases and neonatal readiness.
 
 {D('Obstetric department in-charge')}
-- Holds protocols, staffing roster, equipment inventory, high-risk criteria, referral criteria and antenatal assessment protocol.
-- Reviews all of the above annually.
+- Holds written guidance, high-risk register, referral criteria, and equipment checklists.
+- Reviews protocols annually.
 
-Obstetricians and treating doctors
-- Follow written protocols for labour management and high-risk care.
-- Identify high-risk cases and arrange referral where needed.
-- Assess maternal nutrition at every antenatal visit.
+Obstetricians / treating doctors
+- Identify and manage high-risk cases. Conduct deliveries following written guidance.
+- Perform antenatal nutritional screening and prescribe supplementation.
 
-Nurses and midwives
-- Perform peri-natal and post-natal monitoring as per written protocols.
-- Check neonatal resuscitation equipment daily.
-- Document all monitoring and counselling.
+Labour room and maternity ward nurses / midwives
+- Use partograph during labour. Perform peri-natal and post-natal monitoring.
+- Assist with neonatal resuscitation as trained.
 
-Paediatricians (where available)
-- Available at every high-risk delivery for neonatal care.
-- Participate in neonatal resuscitation and post-natal assessment.
-
-Anaesthetists (where available)
-- Available for operative deliveries and obstetric emergencies.
-
-Quality Coordinator
+{D('Quality Coordinator')}
 - Audits this policy {D('quarterly')} (see monitoring section).
-- Tracks CAPA when obstetric findings recur."""
+- Tracks CAPA for obstetric findings."""
 
-MONITORING_AUDIT = f"""The Quality Coordinator audits this policy {D('quarterly')}. The audit looks at records and at the labour room.
+MONITORING_AUDIT = f"""The Quality Coordinator audits this policy {D('quarterly')}. The audit covers:
 
-What is monitored each quarter:
+- Partograph or equivalent labour monitoring documented for sampled deliveries.
+- High-risk cases identified, managed, and referred where needed (register review).
+- Antenatal nutritional screening documented at first visit and at defined intervals.
+- Peri-natal and post-natal monitoring at defined intervals documented.
+- Neonatal resuscitation equipment checked and trained staff available for high-risk deliveries.
 
-- Written protocols are current and staff are trained.
-- High-risk identification is performed at registration and at subsequent visits.
-- Referral criteria are current and referrals are documented.
-- Maternal nutrition is assessed and counselled at every antenatal visit.
-- Peri-natal monitoring (partograph, foetal heart rate, maternal vitals) follows written protocols.
-- Post-natal monitoring is completed for all deliveries.
-- Neonatal resuscitation equipment is checked daily with a dated log.
-- Staffing meets the defined requirements for every delivery.
+Root-cause analysis is required when an obstetric or neonatal adverse event occurs or when the same finding recurs within six months.
 
-Root-cause analysis is required when: a high-risk case is kept without competent staff and the patient suffers harm; peri-natal monitoring is omitted and an adverse outcome occurs; or neonatal resuscitation equipment is found non-functional at the time of a delivery.
+This policy is reviewed {D('annually')}, and sooner when obstetric guidelines change or the scope of obstetric services changes."""
 
-This policy is reviewed {D('annually')}, and sooner when obstetric services change or a maternal or neonatal adverse event triggers a review."""
-
-TRAINING_ACKNOWLEDGEMENT = f"""All obstetric care staff are trained on this policy at induction and {D('once a year')} after that. Training covers labour protocols, high-risk identification and referral, maternal nutrition, peri-natal and post-natal monitoring, and neonatal resuscitation.
+TRAINING_ACKNOWLEDGEMENT = f"""All obstetric care staff are trained on this policy at induction and {D('once a year')} after that. Training covers labour monitoring, high-risk identification and referral, nutritional screening, peri-natal and post-natal monitoring, and neonatal resuscitation.
 
 Staff acknowledgement
 
-I have read this Safe Obstetric Care policy of {HOSPITAL}. I will follow written protocols for labour management. I will identify high-risk cases and arrange referral where this hospital cannot manage them. I will assess maternal nutrition at every antenatal visit.
+I have read this Safe Obstetric Care policy of {HOSPITAL}. I will follow written obstetric guidance, identify high-risk cases, perform nutritional screening, and ensure neonatal readiness for high-risk deliveries.
 
 
 Name: ___________________________    Designation: ___________________________
@@ -184,7 +163,7 @@ Department / floor: ____________________    Date: ____________
 Signature: ___________________________
 
 
-(One row per staff member. The obstetric department in-charge holds signed acknowledgements with the training record.)"""
+(One row per staff member. The obstetric department in-charge holds signed acknowledgements with the training file.)"""
 
 DOCUMENT_CONTROL = document_control(
     doc_no=D("COP/POL/07"),
@@ -193,21 +172,21 @@ DOCUMENT_CONTROL = document_control(
 )
 
 REFERENCES = f"""- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Care of Patients chapter, standard COP.7.
-- Internal documents of {HOSPITAL}: obstetric protocols (labour management, operative delivery, emergencies); high-risk criteria and referral criteria; antenatal assessment protocol with nutrition; peri-natal and post-natal monitoring protocols; neonatal resuscitation equipment check log; staffing roster; COP.1 uniform care policy; PRE.3 consent policy; COP.3 CPR policy; COP.5 transfusion policy."""
+- Internal documents of {HOSPITAL}: obstetric protocols (normal delivery, assisted delivery, caesarean section, obstetric emergencies), partograph forms, high-risk obstetric register, referral criteria and agreements, antenatal nutritional screening tool, neonatal resuscitation equipment checklist, COP.8 paediatric and neonatal care policy."""
 
-DISTRIBUTION = f"""Official master copy: office of the Medical Superintendent, {HOSPITAL}, with the obstetric department in-charge and the Quality Coordinator.
+DISTRIBUTION = f"""Official master copy: office of the Medical Superintendent, {HOSPITAL}, with the {D('obstetric department in-charge')} and the Quality Coordinator.
 
-Copies issued to: labour room; antenatal clinic; post-natal ward; neonatal care area; nursing administration.
+Copies issued to: labour room; maternity ward; antenatal clinic; neonatal area; nursing administration.
 
-The current version is available to all staff at the {D('obstetric department policy file')} and, if the hospital keeps an intranet, at {D('staff intranet / policies')}.
+The current version is available to all obstetric care staff at the {D('labour room policy file')} and, if the hospital keeps an intranet, at {D('staff intranet / policies')}.
 
 When a new version is issued, take old copies out of use."""
 
-ABBREVIATIONS = """BMI — body mass index
+ABBREVIATIONS = """APGAR — Appearance, Pulse, Grimace, Activity, Respiration (neonatal scoring)
+BMI — body mass index
 CAPA — corrective and preventive action
 COP — Care of Patients (NABH SHCO chapter 5)
-CPR — cardiopulmonary resuscitation
-MUAC — mid-upper arm circumference
+HDU — high dependency unit
 NABH — National Accreditation Board for Hospitals and Healthcare Providers
 OE — objective element
 RCA — root-cause analysis
@@ -220,66 +199,65 @@ OE_MAPPING = [
         "oe_code": "COP.7.a",
         "requirement": "Obstetric services are organised and provided safely.",
         "steps": "Section 3; 5.1 Obstetric services organised and provided safely; Section 4 item 1",
-        "responsible": "Obstetric department in-charge (protocols, staffing, equipment); Medical Superintendent (accountable)",
+        "responsible": "Obstetric department in-charge (guidance and equipment); treating doctors (deliver care); nurses/midwives (assist)",
         "records": [
-            "Written obstetric protocols reviewed annually.",
-            "Staffing roster showing coverage for every delivery.",
-            "Equipment inventory for the labour room.",
-            "Annual review records for protocols, staffing and equipment.",
+            "Written obstetric guidance documents reviewed annually.",
+            "Labour room equipment checklist completed each shift.",
+            "Obstetric protocols covering normal delivery, assisted delivery, caesarean section, and emergencies.",
+            "Sample delivery records showing protocol adherence.",
         ],
     },
     {
         "oe_code": "COP.7.b",
         "requirement": "The organization identifies and provides care to high risk obstetric cases with competent doctors and nurses, and where needed, refers them to another appropriate centre.",
-        "steps": "Section 3; 5.2 High-risk obstetric identification, competent care and referral; Section 4 item 2",
-        "responsible": "Obstetricians and treating doctors (identify and manage or refer); obstetric department in-charge (criteria)",
+        "steps": "Section 3; 5.2 High-risk obstetric cases: identification, care and referral; Section 4 item 2",
+        "responsible": "Treating doctors (identify and manage); obstetric department in-charge (register and referral criteria)",
         "records": [
-            "Written high-risk criteria and referral criteria reviewed annually.",
-            "High-risk case register showing identification, management and referral decisions.",
-            "Referral documentation with reason, receiving centre and condition at transfer.",
-            "List of referral centres reviewed annually.",
+            "High-risk obstetric register with identification criteria, management plans, and outcomes.",
+            "Referral criteria document with receiving centres and communication records.",
+            "Competency records for doctors and nurses managing high-risk cases.",
         ],
     },
     {
         "oe_code": "COP.7.c",
         "requirement": "Antenatal assessment also includes maternal nutrition.",
         "steps": "Section 3; 5.3 Antenatal assessment including maternal nutrition; Section 4 item 3",
-        "responsible": "Obstetricians and treating doctors (assess); nurses (counsel and document); obstetric department in-charge (protocol)",
+        "responsible": "Treating doctors (screen and prescribe); nurses (counsel and document)",
         "records": [
-            "Antenatal assessment protocol including nutrition component.",
-            "Nutritional status records at each antenatal visit (weight, haemoglobin, dietary history).",
-            "Nutrition counselling records documented in the antenatal record.",
+            "Nutritional screening documented at first antenatal visit.",
+            "Nutritional counselling and supplementation records.",
+            "Reassessment findings documented at each trimester.",
         ],
     },
     {
         "oe_code": "COP.7.d",
         "requirement": "Appropriate peri-natal and post-natal monitoring is performed.",
         "steps": "Section 3; 5.4 Peri-natal and post-natal monitoring; Section 4 item 4",
-        "responsible": "Nurses and midwives (monitor); treating doctors (respond to danger signs)",
+        "responsible": "Nurses/midwives (monitor and document); treating doctors (escalation and intervention)",
         "records": [
-            "Partograph records for labour progress.",
-            "Foetal heart rate monitoring records at protocol-defined intervals.",
-            "Post-natal maternal and neonatal observation records.",
+            "Partograph completed for each labour.",
+            "APGAR scores at one and five minutes documented.",
+            "Post-natal maternal and neonatal observation records at defined intervals.",
         ],
     },
     {
         "oe_code": "COP.7.e",
         "requirement": "The organization caring for high risk obstetric cases has the human resources and facilities to take care of neonates of such cases.",
-        "steps": "Section 3; 5.5 Neonatal care for high-risk obstetric cases; Section 4 item 5",
-        "responsible": "Paediatrician or neonatal care lead (neonatal care); obstetric department in-charge (arrangements); nurses (check equipment)",
+        "steps": "Section 3; 5.5 Neonatal readiness for high-risk obstetric cases; Section 4 item 5",
+        "responsible": "Obstetric department in-charge (equipment and staffing); trained staff (neonatal resuscitation)",
         "records": [
-            "Neonatal resuscitation equipment inventory and daily check log.",
-            "Training records for neonatal resuscitation for doctors and nurses.",
-            "Paediatrician or trained doctor availability records for high-risk deliveries.",
+            "Neonatal resuscitation equipment checklist completed each shift.",
+            "Training records for neonatal resuscitation refreshed annually.",
+            "Referral arrangement documentation with neonatal intensive care facility where applicable.",
         ],
     },
 ]
 
 UNIVERSAL_FACTS_CHECKLIST = """COP.7 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.
 
-SOURCE: Header "Organization provides safe obstetric care." COP.7.a–d PDF page 70; COP.7.e PDF page 71. COP.7.a asterisked (Commitment). COP.7.c asterisked (Commitment). COP.7.b Commitment. COP.7.d Commitment. COP.7.e Commitment.
+SOURCE: Header "Organization provides safe obstetric care." COP.7.a–e PDF indices 70–71. Asterisked OEs: a, c. Levels: all Commitment.
 
-SHAPE: Five What-we-do subsections (5.1–5.5). No stop-work. Disclaimer accreditation-only. COP roles only."""
+SHAPE: Five What-we-do subsections (5.1–5.5). No stop-work. Disclaimer accreditation-only. COP clinical roles."""
 
 
 def main() -> int:
@@ -308,7 +286,7 @@ def main() -> int:
         "training_competency": TRAINING_ACKNOWLEDGEMENT,
         "resources_required": DOCUMENT_CONTROL,
         "template_test": "cop_v2_adoptable_shape",
-        "subtitle": "Safe obstetric care in day-to-day work.",
+        "subtitle": "Safe obstetric care with nutritional assessment and neonatal readiness.",
         "doc_no": D("COP/POL/07"),
     }
     emit_pre_v2(
