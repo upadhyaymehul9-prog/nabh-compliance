@@ -1,0 +1,157 @@
+{
+  "standard_code": "MOM.6",
+  "chapter": "MOM",
+  "oe_codes": [
+    "MOM.6.a",
+    "MOM.6.b",
+    "MOM.6.c",
+    "MOM.6.d",
+    "MOM.6.e",
+    "MOM.6.f",
+    "MOM.6.g",
+    "MOM.6.h",
+    "MOM.6.i"
+  ],
+  "policy_title": "Medications Are Administered Safely",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} administers medications safely: safe administration practice, labelling of prepared medications, patient identification, order and physical verification, strength-route-timing verification, catheter and tubing mis-connection prevention, documentation, self-administration governance, and governance of medications brought from outside.\n\nIt covers MOM.6.a–i.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to nurses, treating doctors, the Pharmacy In-Charge, the Medical Superintendent and Quality Coordinator at {{HOSPITAL_NAME}}.\n\nIt covers MOM.6.a–i: safe administration; prepared medication labelling; patient identification before administration; medication and physical inspection verification; strength, route and timing verification; catheter and tubing mis-connection measures; documentation; self-administration governance; and outside-medication governance.\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- MOM.5 owns dispensing. This policy begins when the medication reaches the administering staff.\n- MOM.7 owns monitoring after administration and adverse-event reporting.\n- PSQ (patient safety goals) owns the patient-identification system. This policy applies it at the point of medication administration.",
+  "policy_statement": "{{HOSPITAL_NAME}} administers medications safely. The patient is identified, the medication is verified against the order and physically inspected, and the administration is documented.\n\nPrepared medications are labelled before a second drug is prepared. Catheter and tubing mis-connection measures are in place. Self-administration and outside medications are governed.",
+  "procedure_steps": [
+    "5.1 Safe medication administration\n\nAdministration of medication is done in a safe manner.\n\nThe administering nurse follows the «five rights: right patient, right drug, right dose, right route, right time». The nurse washes hands, prepares the medication at the bedside or medication preparation area, and administers while the patient is identified and the order is open.\n\nIf any element cannot be confirmed, the nurse does not administer and contacts the prescriber or Pharmacy In-Charge.",
+    "5.2 Labelling of prepared medications\n\nPrepared medication is labelled before preparation of a second drug.\n\nWhen a nurse draws up or reconstitutes a medication, the syringe or container is labelled immediately with drug name and strength. A second drug is not prepared until the first is labelled.\n\nThis rule applies to all settings: wards, emergency, operation theatre, and procedure rooms.",
+    "5.3 Patient identification before administration\n\nThe patient is identified before administration.\n\nThe nurse confirms the patient's identity using «two identifiers: patient name (asked, not assumed) and unique identification number (wristband or bedhead ticket)» immediately before administration.\n\nA medication is never administered to a patient whose identity cannot be confirmed.",
+    "5.4 Medication and physical verification\n\nMedication is verified from the medication order and physically inspected before administration.\n\nThe nurse checks the medication against the written order: drug name, strength, dose, route, frequency. The nurse physically inspects the medication for expiry date, discolouration, particulate matter, and packaging integrity.\n\nAny discrepancy or defect: the medication is not administered. The nurse contacts the prescriber (order discrepancy) or the Pharmacy In-Charge (physical defect).",
+    "5.5 Strength, route and timing verification\n\nStrength, route and timing is verified from the order before administration.\n\nThe nurse confirms the strength to be administered matches the order. The route (oral, IV, IM, SC, topical, etc.) is verified against the order. The timing matches the prescribed frequency or specified time.\n\nA wrong-strength, wrong-route, or wrong-time event is a medication error reported under MOM.7.",
+    "5.6 Catheter and tubing mis-connection prevention\n\nMeasures to avoid catheter and tubing mis-connections during medication administration are implemented.\n\nBefore connecting any line, the nurse traces the tubing from the patient to the infusion source. Enteral and parenteral lines use different connectors where available. Lines are labelled at both ends.\n\nThe «ward in-charge nurse» conducts a «monthly» spot-check of tubing labelling and connection practices.",
+    "5.7 Documentation of administration\n\nMedication administration is documented.\n\nThe administering nurse records: drug name, dose, route, time of administration, and initials or signature in the «medication administration record (MAR)». For withheld or omitted doses, the reason is documented.\n\nDocumentation occurs immediately after administration, not in advance.",
+    "5.8 Self-administration governance\n\nMeasures to govern patient's self-administration of medications are implemented.\n\nSelf-administration is permitted only when:\n1. The treating doctor authorises it in writing.\n2. The nurse assesses the patient as competent to self-administer (oriented, physically able, understands dosing).\n3. The medication and schedule are documented in the MAR.\n\nThe nurse checks self-administered doses at «each medication round» and documents compliance or variance.",
+    "5.9 Outside-medication governance\n\nMeasures to govern patient's medications brought from outside the organisation are implemented.\n\nMedications brought by the patient or family are permitted only when:\n1. The treating doctor approves their use in writing.\n2. The pharmacist verifies the medication (identity, expiry, storage condition).\n3. The medication is recorded in the MAR alongside hospital-dispensed medications.\n\nUnapproved outside medications are stored separately by the nurse and returned to the family at discharge."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable for safe administration standards across the organisation.\n\nTreating doctors (prescribers)\n- Authorise self-administration and outside medications in writing.\n\nNurses\n- Administer medications safely following the five rights; label, identify, verify, document; govern self-administration and outside medications.\n\nWard in-charge nurse\n- Spot-checks tubing labelling and administration practices.\n\nPharmacy In-Charge\n- Verifies outside medications; assesses returned or defective medications.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see section 8).\n- Tracks CAPA when administration lapses recur.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Management of Medication chapter, standard MOM.6.\n- Internal documents of {{HOSPITAL_NAME}}: medication administration record (MAR); patient identification policy (PSQ); MOM.7 monitoring and reporting; tubing labelling protocol.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the ward in-charge nurse and the Quality Coordinator.\n\nCopies issued to: every in-patient ward; emergency room; operation theatre; ICU where it exists; nursing administration; pharmacy.\n\nThe current version is available to all staff at the «nursing station policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "CAPA — corrective and preventive action\nIM — intramuscular\nIV — intravenous\nMAR — medication administration record\nMOM — Management of Medication (NABH SHCO chapter 7)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPSQ — Patient Safety and Quality Improvement (NABH SHCO chapter 3)\nSC — subcutaneous\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "MOM.6.a",
+      "requirement": "Administration of medication is done in a safe manner.",
+      "steps": "Statement of intent; Section 3; 5.1 Safe medication administration",
+      "responsible": "Nurses (administer); prescribers (order); Pharmacy In-Charge (supply)",
+      "records": [
+        "Medication administration records (MARs) showing five-rights compliance.",
+        "Quarterly bedside observation audit results.",
+        "Incident reports for administration errors.",
+        "Training records for all administering staff."
+      ]
+    },
+    {
+      "oe_code": "MOM.6.b",
+      "requirement": "Prepared medication is labelled before preparation of a second drug.",
+      "steps": "Section 4 item 4; 5.2 Labelling of prepared medications",
+      "responsible": "Nurses (label immediately after preparation)",
+      "records": [
+        "Bedside observation audit showing labelling before second-drug preparation.",
+        "Incident reports for unlabelled preparations.",
+        "Training records covering prepared-medication labelling."
+      ]
+    },
+    {
+      "oe_code": "MOM.6.c",
+      "requirement": "The patient is identified before administration.",
+      "steps": "Section 3; Section 4 item 1; 5.3 Patient identification before administration",
+      "responsible": "Nurses (identify using two identifiers)",
+      "records": [
+        "Bedside observation audit of patient identification at administration.",
+        "Patient-identification system records (wristbands or bedhead tickets).",
+        "Incident reports for identification failures."
+      ]
+    },
+    {
+      "oe_code": "MOM.6.d",
+      "requirement": "Medication is verified from the medication order and physically inspected before administration.",
+      "steps": "Section 4 items 2–3; 5.4 Medication and physical verification",
+      "responsible": "Nurses (verify and inspect before administering)",
+      "records": [
+        "MAR entries showing verification against the order.",
+        "Incident reports for physical defects found at administration.",
+        "Quarterly audit sample of verification compliance."
+      ]
+    },
+    {
+      "oe_code": "MOM.6.e",
+      "requirement": "Strength, route and timing is verified from the order before administration.",
+      "steps": "Section 4 item 2; 5.5 Strength, route and timing verification",
+      "responsible": "Nurses (verify strength, route, timing)",
+      "records": [
+        "MAR entries showing strength, route and time match the order.",
+        "Incident reports for wrong-strength, wrong-route or wrong-time events.",
+        "Quarterly audit sample."
+      ]
+    },
+    {
+      "oe_code": "MOM.6.f",
+      "requirement": "Measures to avoid catheter and tubing mis-connections during medication administration are implemented.",
+      "steps": "Section 4 item 5; 5.6 Catheter and tubing mis-connection prevention",
+      "responsible": "Nurses (trace and label); ward in-charge (spot-check)",
+      "records": [
+        "Spot-check records of tubing labelling and connection practices.",
+        "Incident reports for tubing mis-connections or near-misses.",
+        "Evidence of different connectors or labelling at both ends."
+      ]
+    },
+    {
+      "oe_code": "MOM.6.g",
+      "requirement": "Medication administration is documented.",
+      "steps": "Section 4 item 6; 5.7 Documentation of administration",
+      "responsible": "Nurses (document immediately after administration)",
+      "records": [
+        "Completed MARs with drug, dose, route, time and initials.",
+        "Documentation of withheld or omitted doses with reason.",
+        "Quarterly audit of MAR completeness and timeliness."
+      ]
+    },
+    {
+      "oe_code": "MOM.6.h",
+      "requirement": "Measures to govern patient's self-administration of medications are implemented.",
+      "steps": "Section 4 item 7; 5.8 Self-administration governance",
+      "responsible": "Treating doctor (authorise); nurse (assess competence and monitor)",
+      "records": [
+        "Written authorisation by the treating doctor for self-administration.",
+        "Competence assessment by the nurse.",
+        "MAR entries showing self-administered doses checked at medication rounds."
+      ]
+    },
+    {
+      "oe_code": "MOM.6.i",
+      "requirement": "Measures to govern patient's medications brought from outside the organisation are implemented.",
+      "steps": "Section 4 item 8; 5.9 Outside-medication governance",
+      "responsible": "Treating doctor (approve); pharmacist (verify); nurse (record and store)",
+      "records": [
+        "Written approval by the treating doctor for outside medications.",
+        "Pharmacist verification record (identity, expiry, storage condition).",
+        "MAR entries showing outside medications alongside hospital-dispensed medications.",
+        "Records of unapproved medications stored separately and returned at discharge."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "MOM.6 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"Medications are administered safely.\" MOM.6.a–i PDF index 85. MOM.6.a, MOM.6.f, MOM.6.h, MOM.6.i asterisked. MOM.6.c and MOM.6.d Core. MOM.6.h Achievement.\n\nSHAPE: Nine What-we-do subsections (5.1–5.9). Stop-work yes (do not administer without patient ID, order verification, physical inspection). Disclaimer accreditation-only. MOM roles only.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "MOM v2 template: adoptable shape, plain English, MOM roles, nine steps, stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Every medication is administered safely — right patient, right drug, right dose, right route, right time — with labelling of prepared drugs, patient identification, order verification, physical inspection, documentation, and governance of self-administration and outside medications.",
+  "exceptions": "The following rules are non-negotiable.\n\n1. The patient is identified using «two identifiers (name and unique ID number)» before every medication administration.\n2. The medication is verified against the medication order before administration: drug name, strength, route, frequency and timing.\n3. The medication is physically inspected for expiry, discolouration, particulate matter and packaging integrity before administration.\n4. A prepared medication is labelled with drug name and strength before preparation of a second drug begins.\n5. The route of administration is verified against the order. Catheter and tubing connections are traced from the patient to the source before connecting.\n6. Every administration is documented: drug, dose, route, time and administering staff.\n7. Self-administration by the patient is permitted only when authorised by the treating doctor and the patient is assessed as competent.\n8. Medications brought from outside the organisation are permitted only when approved by the treating doctor and verified by the pharmacist.\n9. An administering nurse who cannot verify the patient, the order, or the medication's physical integrity does not administer. The nurse contacts the prescriber or Pharmacy In-Charge.\n\nStaff who cannot complete verification do not administer. They report to the «ward in-charge nurse» immediately.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit looks at administration records and bedside practices.\n\nWhat is monitored each quarter:\n\n- Sample MARs checked for completeness and timeliness of documentation.\n- Bedside observation of patient identification, five-rights check, and prepared-medication labelling.\n- Tubing labelling and connection practices (spot-check).\n- Self-administration authorisation and compliance records.\n- Outside-medication approval and pharmacist-verification records.\n- Administration errors and near-misses reported under MOM.7.\n\nRoot-cause analysis is required when the same administration lapse recurs within six months.\n\nThis policy is reviewed «annually», and sooner when MOM.5 or MOM.7 is revised.",
+  "training_competency": "All nurses and clinical staff who administer medications are trained on this policy at induction and «once a year» after that. Training covers the five rights, labelling, patient identification, verification, documentation, tubing safety, self-administration and outside-medication governance.\n\nStaff acknowledgement\n\nI have read this Medications Are Administered Safely policy of {{HOSPITAL_NAME}}. I will follow the five rights, verify before administering, and never administer when identity or order cannot be confirmed.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The ward in-charge nurse holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: MOM/POL/06\nIssue number: «01»\nVersion: 2.0 (MOM v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Nursing Superintendent / Ward In-Charge Nurse»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "mom_v2_adoptable_shape",
+  "subtitle": "Safe administration: five rights, verification, documentation and governance.",
+  "doc_no": "MOM/POL/06",
+  "stop_work": "Any nurse or staff member who cannot confirm patient identity, cannot verify the medication against the order, or finds a physical defect in the medication:\n\n1. Does not administer the medication.\n2. Sets the medication aside (does not return it to stock without pharmacist assessment).\n3. Contacts the prescriber (order issue) or Pharmacy In-Charge (physical defect).\n4. Documents the event in the «medication administration record» with the reason for withholding.\n\nNo approval is needed to withhold. Patient safety overrides schedule pressure."
+}

@@ -1,0 +1,143 @@
+{
+  "standard_code": "MOM.3",
+  "chapter": "MOM",
+  "oe_codes": [
+    "MOM.3.a",
+    "MOM.3.b",
+    "MOM.3.c",
+    "MOM.3.d",
+    "MOM.3.e",
+    "MOM.3.f",
+    "MOM.3.g",
+    "MOM.3.h"
+  ],
+  "policy_title": "Medications Are Prescribed Safely and Rationally",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} ensures safe and rational prescribing: good practice guidelines, minimum prescription requirements, allergy and adverse-reaction checks, clinical decision support, verbal orders, prescription audit, corrective action, and medication reconciliation at transition points.\n\nIt covers MOM.3.a–h.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to treating doctors (prescribers), the Pharmacy In-Charge, nurses, the Multidisciplinary Medication Committee, the Medical Superintendent and Quality Coordinator at {{HOSPITAL_NAME}}.\n\nIt covers MOM.3.a–h: rational prescribing guidelines; minimum prescription requirements; allergy ascertainment; clinical decision support; verbal orders; prescription audit; corrective and preventive action; and medication reconciliation at transition points.\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- MOM.1 owns the formulary. MOM.4 owns uniform order writing. MOM.5 owns dispensing. MOM.6 owns administration.\n- MOM.7 owns monitoring after administration, near-miss and adverse-drug-reaction reporting. Audit findings under MOM.3.f–g that relate to adverse events feed into MOM.7.\n- PSQ.5 owns the general incident reporting system; medication-related audit findings cross-reference PSQ.5 where applicable.",
+  "policy_statement": "{{HOSPITAL_NAME}} requires that every prescription is rational, complete, and checked for allergies and previous adverse drug reactions before the medication is dispensed.\n\n{{HOSPITAL_NAME}} provides clinical decision support to assist prescribers. Verbal orders are handled safely. Prescription audit drives corrective and preventive action. Medication reconciliation occurs at every transition point.",
+  "procedure_steps": [
+    "5.1 Rational prescribing guidelines\n\nMedication prescription is in consonance with good practices and guidelines for the rational prescription of medications.\n\n{{HOSPITAL_NAME}} adopts «the WHO Guide to Good Prescribing and the National List of Essential Medicines as reference frameworks». The Multidisciplinary Medication Committee reviews prescribing patterns «quarterly» against these guidelines.\n\nPrescribers are expected to prescribe by generic name where the formulary permits and to avoid unnecessary polypharmacy.",
+    "5.2 Minimum prescription requirements\n\n{{HOSPITAL_NAME}} adheres to the determined minimum requirements of a prescription.\n\nEvery prescription includes: patient name; unique identification number; date; prescriber name, signature and registration number; drug name (generic preferred); strength; dose; route; frequency or timing; duration; and quantity where relevant. Incomplete prescriptions are returned to the prescriber before dispensing.\n\nThe Pharmacy In-Charge verifies minimum requirements at the point of dispensing.",
+    "5.3 Allergy and adverse-drug-reaction check\n\nDrug allergies and previous adverse drug reactions are ascertained before prescribing.\n\nAt first contact (registration or admission), the nurse or doctor asks the patient about known drug allergies and previous adverse drug reactions. The response is documented in the «allergy section of the medical record and on the allergy band or alert sticker».\n\nPrescribers check the allergy record before every new prescription. The pharmacy system (manual or electronic) flags known allergies at dispensing.",
+    "5.4 Clinical decision support\n\n{{HOSPITAL_NAME}} has a mechanism to assist the clinician in prescribing appropriate medication.\n\nDecision support includes: «the current formulary with indications and dosing guidance; drug-interaction references available at the pharmacy counter; and allergy alerts». Where the hospital uses an electronic prescribing system, automated interaction and allergy alerts are enabled.\n\nThe Multidisciplinary Medication Committee reviews the adequacy of decision support «annually».",
+    "5.5 Verbal orders\n\nImplementation of verbal orders ensures safe medication management practices.\n\nVerbal orders are permitted only when the prescriber cannot write or electronically enter the order (for example during a procedure or emergency). The receiver (nurse or pharmacist) writes the order, reads it back including drug name, dose, route and frequency, and obtains confirmation. The prescriber countersigns within «24 hours».\n\nVerbal orders are documented in the same location as written orders (see MOM.4.b).",
+    "5.6 Prescription audit\n\nAudit of medication orders and prescriptions is carried out to check for safe and rational prescription of medications.\n\nThe Quality Coordinator or a pharmacist conducts a prescription audit at least «quarterly». The audit sample is «at least 30 prescriptions per quarter» drawn from in-patient, out-patient and emergency.\n\nThe audit checks: minimum requirements (5.2); allergy documentation; rational prescribing markers (generic name, polypharmacy, off-formulary use); verbal-order compliance; and reconciliation at transitions.",
+    "5.7 Corrective and preventive action from audit\n\nCorrective and preventive action is taken based on the audit, where appropriate.\n\nThe Quality Coordinator presents audit findings to the Multidisciplinary Medication Committee. The committee decides corrective and preventive action: education, formulary change, system redesign, or individual feedback.\n\nActions are tracked to closure. Root-cause analysis is required when the same prescribing defect recurs within six months. Findings that relate to adverse events also feed into MOM.7 and PSQ.5.",
+    "5.8 Medication reconciliation at transition points\n\nReconciliation of medications occurs at transition points of patient care.\n\nAt admission, the nurse or pharmacist documents the patient's current medication list (home medications, over-the-counter, and herbal). The treating doctor reconciles this list with the new prescription and documents any intentional changes or discontinuations.\n\nAt internal transfer and at discharge, reconciliation is repeated. The discharge summary (AAC.8) includes the reconciled medication list with clear instructions for the patient."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable for safe and rational prescribing across the organisation.\n\nMultidisciplinary Medication Committee (Pharmacy and Therapeutics)\n- Reviews prescribing patterns and audit findings; decides corrective action; maintains decision-support resources.\n\nTreating doctors (prescribers)\n- Prescribe rationally, check allergies, follow minimum requirements and verbal-order rules.\n\nPharmacy In-Charge\n- Verifies minimum prescription requirements at dispensing; conducts or supports prescription audit; provides decision-support resources.\n\nNurses\n- Ascertain allergies at first contact; receive and document verbal orders safely; perform medication reconciliation.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see section 7).\n- Tracks CAPA and presents findings to the committee.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Management of Medication chapter, standard MOM.3.\n- Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, 1945 — prescription requirements.\n- WHO Guide to Good Prescribing — rational prescribing framework.\n- Internal documents of {{HOSPITAL_NAME}}: formulary (MOM.1); prescription audit reports; allergy documentation; medication reconciliation forms; MOM.7 adverse-event reports.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Pharmacy In-Charge and the Quality Coordinator.\n\nCopies issued to: pharmacy; every in-patient ward; out-patient clinics; emergency room; nursing administration.\n\nThe current version is available to all staff at the «pharmacy counter policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "AAC — Access, Assessment and Continuity of Care (NABH SHCO chapter 5)\nCAPA — corrective and preventive action\nLASA — look-alike sound-alike\nMOM — Management of Medication (NABH SHCO chapter 7)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPSQ — Patient Safety and Quality Improvement (NABH SHCO chapter 3)\nSHCO — Standards for Small Healthcare Organisations\nWHO — World Health Organization",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nSeveral requirements in this document are statutory rather than advisory — in particular those arising under the Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, 1945, insofar as prescriptions meet minimum legal requirements. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "MOM.3.a",
+      "requirement": "Medication prescription is in consonance with good practices/guidelines for the rational prescription of medications.",
+      "steps": "Statement of intent; Section 3; 5.1 Rational prescribing guidelines",
+      "responsible": "Prescribers (prescribe rationally); committee (review patterns)",
+      "records": [
+        "Adopted prescribing guidelines or framework reference.",
+        "Committee review of prescribing patterns (quarterly).",
+        "Generic-name prescribing and polypharmacy monitoring data."
+      ]
+    },
+    {
+      "oe_code": "MOM.3.b",
+      "requirement": "The organisation adheres to the determined minimum requirements of a prescription.",
+      "steps": "Section 3; Section 4 item 1; 5.2 Minimum prescription requirements",
+      "responsible": "Prescribers (write complete prescriptions); Pharmacy In-Charge (verify at dispensing)",
+      "records": [
+        "Defined list of minimum prescription requirements.",
+        "Sample prescriptions verified at dispensing.",
+        "Returned-prescription log for incomplete prescriptions.",
+        "Quarterly audit sample checking minimum requirements."
+      ]
+    },
+    {
+      "oe_code": "MOM.3.c",
+      "requirement": "Drug allergies and previous adverse drug reactions are ascertained before prescribing.",
+      "steps": "Section 3; Section 4 item 2; 5.3 Allergy and adverse-drug-reaction check",
+      "responsible": "Nurses (ascertain at first contact); prescribers (check before prescribing); pharmacy (flag at dispensing)",
+      "records": [
+        "Allergy documentation in medical records.",
+        "Allergy band or alert sticker evidence.",
+        "Pharmacy allergy-flag records."
+      ]
+    },
+    {
+      "oe_code": "MOM.3.d",
+      "requirement": "The organisation has a mechanism to assist the clinician in prescribing appropriate medication.",
+      "steps": "5.4 Clinical decision support",
+      "responsible": "Pharmacy In-Charge (provide resources); committee (review adequacy annually)",
+      "records": [
+        "Decision-support resources available at the pharmacy counter.",
+        "Drug-interaction reference availability evidence.",
+        "Annual review record by the committee."
+      ]
+    },
+    {
+      "oe_code": "MOM.3.e",
+      "requirement": "Implementation of verbal orders ensures safe medication management practices.",
+      "steps": "Section 4 item 3; 5.5 Verbal orders",
+      "responsible": "Prescribers (countersign); nurses or pharmacists (receive, read back, document)",
+      "records": [
+        "Verbal-order entries with read-back documentation.",
+        "Countersignature within the defined time limit.",
+        "Audit sample of verbal-order compliance."
+      ]
+    },
+    {
+      "oe_code": "MOM.3.f",
+      "requirement": "Audit of medication orders/prescription is carried out to check for safe and rational prescription of medications.",
+      "steps": "5.6 Prescription audit",
+      "responsible": "Quality Coordinator or pharmacist (conduct audit); committee (review findings)",
+      "records": [
+        "Quarterly prescription audit reports with sample size and findings.",
+        "Audit criteria checklist.",
+        "Committee meeting minutes reviewing audit findings."
+      ]
+    },
+    {
+      "oe_code": "MOM.3.g",
+      "requirement": "Corrective and/or preventive action(s) is taken based on the audit, where appropriate.",
+      "steps": "5.7 Corrective and preventive action from audit",
+      "responsible": "Committee (decide CAPA); Quality Coordinator (track closure)",
+      "records": [
+        "CAPA log linked to audit findings.",
+        "Root-cause analysis records for recurring defects.",
+        "Closure evidence for each action item."
+      ]
+    },
+    {
+      "oe_code": "MOM.3.h",
+      "requirement": "Reconciliation of medications occurs at transition points of patient care.",
+      "steps": "Section 3; Section 4 item 6; 5.8 Medication reconciliation at transition points",
+      "responsible": "Nurses or pharmacist (document home medications); treating doctor (reconcile); AAC.8 (discharge summary)",
+      "records": [
+        "Medication reconciliation form at admission.",
+        "Reconciliation entries at internal transfer.",
+        "Discharge summary with reconciled medication list."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "MOM.3 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"Medications are prescribed safely and rationally.\" MOM.3.a–h PDF index 83. MOM.3.a, MOM.3.b, MOM.3.e asterisked. MOM.3.d Excellence. MOM.3.f–g Achievement.\n\nSHAPE: Eight What-we-do subsections (5.1–5.8). No stop-work. Disclaimer names Drugs and Cosmetics Act 1940. MOM roles only.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "MOM v2 template: adoptable shape, plain English, MOM roles, eight steps, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Prescribing is safe and rational — guided by good practices, minimum prescription requirements, allergy checks, decision support, safe verbal orders, audit and medication reconciliation.",
+  "exceptions": "The following rules are non-negotiable.\n\n1. Every prescription meets the minimum requirements defined in MOM.3.b before it is dispensed.\n2. Drug allergies and previous adverse drug reactions are ascertained and documented before prescribing.\n3. Verbal orders are used only when the prescriber cannot write or enter the order; they are read back and documented within «24 hours».\n4. Off-formulary prescribing follows MOM.1.c.\n5. Prescription audit is conducted at least «quarterly» and findings are acted upon.\n6. Medication reconciliation is performed at admission, transfer and discharge.\n\nStaff who see a breach report it the same shift to the «Pharmacy In-Charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit looks at prescriptions and reconciliation records.\n\nWhat is monitored each quarter:\n\n- Prescription audit results: minimum requirements, allergy documentation, rational prescribing markers.\n- Verbal-order compliance: read-back documented, countersigned within time limit.\n- Medication reconciliation at admission, transfer and discharge.\n- CAPA closure from previous audit findings.\n- Decision-support adequacy review (annual).\n\nRoot-cause analysis is required when the same prescribing defect recurs within six months.\n\nThis policy is reviewed «annually», and sooner when the formulary or prescribing guidelines change.",
+  "training_competency": "All prescribers, pharmacy staff and nursing staff are trained on this policy at induction and «once a year» after that. Training covers rational prescribing, minimum requirements, allergy checks, verbal orders, audit and reconciliation.\n\nStaff acknowledgement\n\nI have read this Medications Are Prescribed Safely and Rationally policy of {{HOSPITAL_NAME}}. I will follow prescribing standards, check allergies, and participate in audit.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Pharmacy In-Charge holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: MOM/POL/03\nIssue number: «01»\nVersion: 2.0 (MOM v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Pharmacy In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "mom_v2_adoptable_shape",
+  "subtitle": "Rational prescribing, allergy checks, verbal orders, audit and reconciliation.",
+  "doc_no": "MOM/POL/03",
+  "stop_work": ""
+}
