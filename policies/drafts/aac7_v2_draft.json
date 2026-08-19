@@ -1,0 +1,89 @@
+{
+  "standard_code": "AAC.7",
+  "chapter": "AAC",
+  "oe_codes": [
+    "AAC.7.a",
+    "AAC.7.b",
+    "AAC.7.c",
+    "AAC.7.d"
+  ],
+  "policy_title": "Continuity and Multidisciplinary Care",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} ensures that during all phases of care a qualified individual is identified as responsible for the patient, that information about care and response to treatment is shared among medical, nursing and other care-providers, that standardised handover communication is implemented during each staffing shift, between shifts and during transfers, and that patient transfer within the organisation is done safely.\n\nThe chapter intent is that care is continuous, coordinated and safely handed over.\n\nThis policy owns continuity and handover. AAC.2 owns registration, admission and transfer in/out of the hospital. AAC.3 owns assessment and care planning. AAC.8 owns discharge. PRE owns patient consent for transfer (PRE.3).\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to treating doctors, nurses, allied health staff, the Medical Superintendent and the Quality Coordinator at {{HOSPITAL_NAME}}.\n\nIt covers the four elements AAC.7.a–d: responsible individual identified, information sharing, standardised handover, and safe internal transfer.\n\nBoundaries:\n\n- AAC.2 owns transfer-in and transfer-out of the hospital. This policy owns transfer within the hospital (ward to ward, department to department, floor to floor).\n- PRE.3 owns consent. This policy owns the clinical handover that accompanies a transfer.\n- AAC.3 owns the care plan. This policy owns that the care plan information is shared during handover.\n- HIC owns infection-control precautions during transfer. This policy owns the transfer process.",
+  "policy_statement": "{{HOSPITAL_NAME}} ensures that during all phases of care a qualified individual is identified as responsible for the patient. Information about the patient's care and response to treatment is shared among the care team. Standardised handover communication is implemented at every shift change and during transfers between units and departments. Patient transfer within the organisation is done safely.\n\n{{HOSPITAL_NAME}} does not leave a patient without an identified responsible clinician, and does not hand over without standardised communication.",
+  "procedure_steps": [
+    "5.1 Responsible individual identified\n\nDuring all phases of care — out-patient consultation, emergency, in-patient stay, day-care, transfer and discharge — there is a qualified individual identified as responsible for the patient's care at {{HOSPITAL_NAME}}.\n\nThe responsible individual is recorded in the patient file: the treating doctor's name, contact number and expected availability. When the treating doctor is off duty, the covering doctor is identified and the handover recorded.\n\nNo patient is at any time without an identified responsible clinician.",
+    "5.2 Information sharing among care-providers\n\nInformation about the patient's care and response to treatment is shared among medical, nursing and other care-providers, including referrals to other departments:\n\n- the patient file is the primary record and is accessible to all authorised members of the treating team;\n- nursing notes, doctor's progress notes and allied health entries are written in the same file or linked system;\n- when a referral to another department is made, the referring doctor communicates the clinical question, relevant history and urgency, and the referred department documents its opinion in the patient file;\n- verbal orders are documented by the nurse immediately and countersigned by the doctor within «24 hours».\n\nThe care team discusses the patient at «morning rounds or a scheduled team meeting» where multidisciplinary input is needed.",
+    "5.3 Standardised handover communication\n\n{{HOSPITAL_NAME}} implements standardised handover communication during each staffing shift, between shifts and during transfers between units and departments. The handover tool is «SBAR (Situation, Background, Assessment, Recommendation) or the hospital's chosen standardised format».\n\nHandover includes:\n\n- patient identification (name, unique identification number, location);\n- current diagnosis and condition;\n- key events since the last handover (investigations, procedures, changes in treatment);\n- pending tasks and follow-up required;\n- any safety concern or early warning score (EWS) trigger.\n\nHandover is documented: «in a handover register, the patient file or the electronic system». The receiving team acknowledges receipt. Interruptions during handover are minimised.",
+    "5.4 Safe internal transfer\n\nPatient transfer within {{HOSPITAL_NAME}} is done safely. Before transferring a patient between wards, units or departments:\n\n- the reason for transfer is documented;\n- the patient's clinical status is assessed and documented immediately before transfer;\n- the receiving unit is informed and confirms readiness;\n- the patient is accompanied by «a nurse or a trained attendant» with appropriate monitoring and equipment for the patient's condition;\n- medications, infusions and oxygen are continued during transfer;\n- standardised handover (section 5.3) is completed between the transferring and receiving teams;\n- the transfer is documented in the patient file with time of departure and arrival.\n\nCritical or unstable patients are accompanied by a doctor."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that continuity, handover and internal transfer processes are defined and followed.\n\nTreating doctors\n- Identified as responsible for the patient during their phase of care; hand over to the covering doctor; share information with the team.\n\nNurses\n- Perform shift handover using standardised communication; accompany patients during transfer; document handover.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see monitoring section).\n- Tracks CAPA when handover or continuity defects recur.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Access, Assessment and Continuity of Care chapter, standard AAC.7.\n- Internal documents of {{HOSPITAL_NAME}}: handover register or tool; internal transfer checklist; patient file documentation standards; referral process.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator.\n\nCopies issued to: every in-patient ward; emergency; out-patient; day-care; nursing administration.\n\nThe current version is available to all staff at the «front-office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "AAC — Access, Assessment and Continuity of Care (NABH SHCO chapter 2)\nCAPA — corrective and preventive action\nEWS — early warning score\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPRE — Patient Rights and Education (NABH SHCO chapter 4)\nSBAR — Situation, Background, Assessment, Recommendation\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "AAC.7.a",
+      "requirement": "During all phases of care, there is a qualified individual identified as responsible for the patient's care.",
+      "steps": "Section 3; 5.1 Responsible individual identified; Section 4 item 1",
+      "responsible": "Treating doctors (identify and record); Medical Superintendent (accountable)",
+      "records": [
+        "Patient file entry showing responsible clinician for each phase of care.",
+        "Covering-doctor record when treating doctor is off duty.",
+        "Quarterly audit sample of responsible-clinician documentation."
+      ]
+    },
+    {
+      "oe_code": "AAC.7.b",
+      "requirement": "Information about the patient's care and response to treatment is shared among medical, nursing and other care-providers, including referrals to other departments.",
+      "steps": "Section 3; 5.2 Information sharing among care-providers; Section 4 item 2",
+      "responsible": "Treating doctors and nurses (share); referring and referred departments (document)",
+      "records": [
+        "Patient file with nursing notes, doctor notes and allied health entries.",
+        "Referral documentation with clinical question, history, opinion and countersignature.",
+        "Verbal-order documentation and countersignature within time limit."
+      ]
+    },
+    {
+      "oe_code": "AAC.7.c",
+      "requirement": "The organization implements standardised hand-over communication during each staffing shift, between shifts and during transfers between units/departments.",
+      "steps": "Section 3; 5.3 Standardised handover communication; Section 4 item 2",
+      "responsible": "Nurses (shift handover); treating doctors (doctor-to-doctor handover); Quality Coordinator (audit)",
+      "records": [
+        "Handover documentation using the standardised tool for each shift.",
+        "Acknowledgement by receiving team.",
+        "Quarterly audit sample of handover completeness."
+      ]
+    },
+    {
+      "oe_code": "AAC.7.d",
+      "requirement": "Patient transfer within the organization is done safely.",
+      "steps": "Section 3; 5.4 Safe internal transfer; Section 4 item 3",
+      "responsible": "Nurses (accompany); treating doctors (assess and authorise); Quality Coordinator (audit)",
+      "records": [
+        "Internal transfer documentation with reason, clinical status, receiving confirmation and times.",
+        "Handover record between transferring and receiving teams.",
+        "Critical-patient transfer records showing doctor accompaniment."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "AAC.7 v2 (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9. No asterisked OEs. No stop-work. P2: accreditation-only. Four OEs, four What-we-do subsections.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "AAC v2 template: plain English, AAC roles, four steps, no stop-work, accreditation-only P2."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Patient care is continuous and multidisciplinary in nature — so that the patient is never without a responsible clinician and information flows across the team.",
+  "exceptions": "1. Do not leave a patient at any phase of care without a qualified individual identified as responsible.\n2. Do not omit standardised handover communication at shift change or during internal transfer.\n3. Do not transfer a patient within the hospital without documenting the clinical status, reason for transfer and handover to the receiving team.\n4. Staff who see a handover or continuity rule broken report it the same shift to the «treating doctor» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Responsible individual identified and documented in patient files.\n- Information sharing: referral documentation complete; verbal orders countersigned within time limit.\n- Standardised handover: tool used, documentation present, acknowledgement by receiving team.\n- Internal transfer: documentation complete, patient accompanied, receiving team handed over to.\n\nRoot-cause analysis is required when the same handover or continuity defect recurs within six months.\n\nThis policy is reviewed «annually», and sooner when staffing patterns, ward layout or handover tools change.",
+  "training_competency": "All treating doctors, nurses and allied health staff are trained on this policy at induction and «once a year» after that. Training covers the handover tool, documentation requirements, information sharing and safe internal transfer.\n\nStaff acknowledgement\n\nI have read this Continuity and Multidisciplinary Care policy of {{HOSPITAL_NAME}}. I will identify myself as responsible, hand over using the standardised tool, share information and transfer patients safely.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «AAC/POL/07»\nIssue number: «01»\nVersion: 2.0 (AAC v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "aac_v2_adoptable_shape",
+  "subtitle": "Continuity of care, handover and internal transfer.",
+  "doc_no": "«AAC/POL/07»"
+}

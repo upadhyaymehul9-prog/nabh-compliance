@@ -1,0 +1,104 @@
+{
+  "standard_code": "AAC.6",
+  "chapter": "AAC",
+  "oe_codes": [
+    "AAC.6.a",
+    "AAC.6.b",
+    "AAC.6.c",
+    "AAC.6.d",
+    "AAC.6.e"
+  ],
+  "policy_title": "Safety Programme in Laboratory and Imaging Services",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} implements a laboratory safety programme, trains laboratory personnel in safe practices with appropriate safety measures, screens patients before imaging, equips imaging personnel and patients with radiation safety and monitoring devices and trains them in safety practices, and displays imaging signage.\n\nThe chapter intent is that laboratory and imaging staff and patients are safe from hazards specific to those services.\n\nThis policy owns laboratory and imaging safety. AAC.4 owns laboratory services (the service process). AAC.5 owns imaging services (the service process). HIC owns hospital-wide infection control; this policy owns specimen safety and radiation safety specific to lab and imaging.\n\nPPE — personal protective equipment. Words marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to the laboratory in-charge, laboratory technicians, imaging/radiology in-charge, radiographers, treating doctors, nurses, patients undergoing imaging, and the Quality Coordinator at {{HOSPITAL_NAME}}.\n\nIt covers the five elements AAC.6.a–e: laboratory safety programme, laboratory safe practices and safety measures, patient screening before imaging, radiation safety devices and training, and imaging signage.\n\nBoundaries:\n\n- HIC owns infection control in laboratory and imaging (hand hygiene, waste segregation categories, sharps policy). This policy owns specimen-handling safety and radiation safety.\n- AAC.4 owns the laboratory service process. This policy owns the safety programme that wraps it.\n- AAC.5 owns the imaging service process. This policy owns the safety programme that wraps it.\n- Spell out: personal protective equipment (PPE).",
+  "policy_statement": "{{HOSPITAL_NAME}} implements a safety programme in laboratory and imaging services. Laboratory personnel are trained in safe practices and provided appropriate safety measures. Patients are screened before imaging for safety and risk. Imaging personnel and patients use appropriate radiation safety and monitoring devices, and are trained in imaging safety practices and radiation-safety measures. Imaging signage is prominently displayed.\n\n{{HOSPITAL_NAME}} does not image without required safety checks, and does not allow laboratory or imaging staff to work without appropriate PPE and training.",
+  "procedure_steps": [
+    "5.1 Laboratory safety programme\n\nThe laboratory safety programme at {{HOSPITAL_NAME}} is implemented. It covers:\n\n- chemical safety: handling, storage and spill management for reagents and chemicals;\n- biological safety: safe handling of blood, body fluids and infectious specimens;\n- fire safety in the laboratory: extinguisher location, evacuation route, no food or drink in the lab;\n- electrical safety: equipment earthing, no wet hands near electrical panels;\n- waste management: segregation at source per Bio-Medical Waste Management Rules, 2016 (HIC owns the hospital-wide waste stream; this step owns the laboratory source segregation).\n\nThe laboratory in-charge reviews the safety programme «annually» and after any safety incident. Safety incidents are reported, investigated and corrective action is taken.",
+    "5.2 Laboratory safe practices and safety measures\n\nLaboratory personnel are appropriately trained in safe practices and are provided with appropriate safety measures:\n\n- PPE: «gloves, lab coat, eye protection, face shield where splash risk exists»;\n- hand hygiene before and after specimen handling;\n- no mouth pipetting;\n- needle-stick and sharps injury protocol posted and practised;\n- vaccination (hepatitis B at minimum) documented for all laboratory staff;\n- spill kit available and staff trained in its use.\n\nTraining is provided at induction and «annually». Training records are maintained by the laboratory in-charge.",
+    "5.3 Patient screening before imaging\n\nPatients are appropriately screened for safety and risk before imaging:\n\n- pregnancy screening: every female patient of childbearing age is asked about pregnancy before any radiation examination; a positive or uncertain answer triggers the «radiologist or imaging in-charge» review before proceeding;\n- allergy history for contrast media where contrast is planned;\n- implant and device check for MRI where MRI is provided;\n- renal function check where contrast nephrotoxicity is a risk;\n- patient identification confirmed with two identifiers before the examination.\n\nScreening results are documented in the imaging request or a screening checklist.",
+    "5.4 Radiation safety devices and training\n\nImaging personnel and patients use appropriate radiation safety and monitoring devices where applicable, and are trained in imaging safety practices and radiation-safety measures:\n\n- personnel monitoring: TLD badges (or equivalent dosimeters) issued to all staff working with radiation-emitting equipment, read «quarterly» by the approved dosimetry service;\n- patient shielding: lead aprons, gonad shields and thyroid shields used where applicable;\n- protective equipment for staff: lead aprons, gloves and thyroid collars available and inspected «annually» for cracks;\n- ALARA principle (as low as reasonably achievable) applied in technique selection;\n- training at induction and «annually» covering radiation physics basics, dose limits, ALARA, emergency procedures and the hospital's radiation-safety manual.\n\nA radiation-safety officer (where AERB requires one) or the imaging in-charge holds the safety manual and dose records.",
+    "5.5 Imaging signage\n\nImaging signage is prominently displayed in all appropriate locations:\n\n- radiation warning signs (trefoil symbol) at entrances to rooms housing radiation-emitting equipment;\n- \"No entry during exposure\" signs on X-ray room doors;\n- PC-PNDT Act notice (prohibition of sex determination) displayed where ultrasound is provided;\n- pregnancy warning notice at imaging reception and inside examination rooms;\n- emergency contact number for radiation incidents displayed inside each radiation room.\n\nThe imaging in-charge checks signage «quarterly» and replaces damaged or missing signs within «seven working days»."
+  ],
+  "stop_work": "Do not image without required safety checks — complete pregnancy screening for radiation examinations and all other required safety screening before the examination proceeds.\n\nDo not operate radiation-emitting equipment without radiation monitoring devices for personnel — obtain and issue devices before the equipment is used.\n\nStop-work applies to the imaging examination or laboratory procedure, not to emergency stabilisation.\n\nThe person responsible tells the «Medical Superintendent» or the «Imaging In-Charge» the same shift. Refusing to image without safety checks is not a disciplinary matter.",
+  "responsibility": "Medical Superintendent\n- Accountable that laboratory and imaging safety programmes are implemented and resourced.\n\nLaboratory In-Charge\n- Manages the laboratory safety programme, PPE provision, training, and safety-incident investigation.\n\nImaging / Radiology In-Charge\n- Manages radiation safety, patient screening, TLD badges, signage, and safety-incident investigation.\n\nLaboratory technicians\n- Follow safe practices, use PPE, report safety incidents.\n\nRadiographers\n- Follow radiation safety practices, use monitoring devices, screen patients, maintain signage.\n\nTreating doctors and nurses\n- Cooperate with safety screening and follow safety rules when in laboratory or imaging areas.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see monitoring section).\n- Tracks CAPA when safety defects recur.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Access, Assessment and Continuity of Care chapter, standard AAC.6.\n- Atomic Energy (Radiation Protection) Rules, 2004 — radiation safety in imaging.\n- Bio-Medical Waste Management Rules, 2016 — laboratory waste segregation, treatment and disposal.\n- Internal documents of {{HOSPITAL_NAME}}: laboratory safety manual; radiation-safety manual; PPE inventory; TLD dose records; safety-incident register; signage maintenance log.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator.\n\nCopies issued to: laboratory; imaging/radiology department; emergency; nursing administration.\n\nThe current version is available to all staff at the «front-office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "AAC — Access, Assessment and Continuity of Care (NABH SHCO chapter 2)\nAERB — Atomic Energy Regulatory Board\nALARA — as low as reasonably achievable\nBMW — Bio-Medical Waste Management Rules, 2016\nCAPA — corrective and preventive action\nHIC — Hospital Infection Control (NABH SHCO chapter 3)\nMRI — magnetic resonance imaging\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPC-PNDT — Pre-Conception and Pre-Natal Diagnostic Techniques (Prohibition of Sex Selection) Act, 1994\nPPE — personal protective equipment\nSHCO — Standards for Small Healthcare Organisations\nTLD — thermoluminescent dosimeter",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nSeveral requirements in this document are statutory rather than advisory — in particular those arising under the Atomic Energy (Radiation Protection) Rules, 2004, insofar as radiation safety in imaging is governed under those rules, and the Bio-Medical Waste Management Rules, 2016, insofar as laboratory waste is segregated, treated and disposed of under those rules. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "AAC.6.a",
+      "requirement": "The laboratory-safety programme is implemented.",
+      "steps": "Section 3; 5.1 Laboratory safety programme; Section 4 items 1, 2",
+      "responsible": "Laboratory In-Charge (implement); Medical Superintendent (resource)",
+      "records": [
+        "Written laboratory safety programme document.",
+        "Annual review record and post-incident review records.",
+        "Safety-incident reports with investigation and corrective action."
+      ]
+    },
+    {
+      "oe_code": "AAC.6.b",
+      "requirement": "Laboratory personnel are appropriately trained in safe practices and are provided with appropriate safety measures.",
+      "steps": "Section 3; 5.2 Laboratory safe practices and safety measures; Section 4 item 2",
+      "responsible": "Laboratory In-Charge (train and equip); laboratory technicians (comply)",
+      "records": [
+        "PPE inventory and issue records.",
+        "Training records for laboratory safety at induction and annually.",
+        "Vaccination records for laboratory staff."
+      ]
+    },
+    {
+      "oe_code": "AAC.6.c",
+      "requirement": "Patients are appropriately screened for safety / risk before imaging.",
+      "steps": "Section 3; 5.3 Patient screening before imaging; Section 4 item 1",
+      "responsible": "Radiographers (screen); Imaging In-Charge (method); treating doctors (provide clinical info)",
+      "records": [
+        "Screening checklist or imaging request with screening questions completed.",
+        "Pregnancy screening records for female patients of childbearing age.",
+        "Contrast allergy and renal function check records where applicable."
+      ]
+    },
+    {
+      "oe_code": "AAC.6.d",
+      "requirement": "Imaging personnel and patients use appropriate radiation safety and monitoring devices where applicable, and are trained in imaging safety practices and radiation-safety measures.",
+      "steps": "Section 3; 5.4 Radiation safety devices and training; Section 4 items 1, 3",
+      "responsible": "Imaging In-Charge (manage devices and training); radiographers (use and comply)",
+      "records": [
+        "TLD badge issue register and quarterly dose reports.",
+        "Lead apron and shielding inspection records.",
+        "Training records for radiation safety at induction and annually.",
+        "Radiation-safety manual held by imaging in-charge or radiation-safety officer."
+      ]
+    },
+    {
+      "oe_code": "AAC.6.e",
+      "requirement": "Imaging signage is prominently displayed in all appropriate locations.",
+      "steps": "Section 3; 5.5 Imaging signage; Section 4 item 4",
+      "responsible": "Imaging In-Charge (maintain signage); Quality Coordinator (audit)",
+      "records": [
+        "Signage inventory listing each required sign and its location.",
+        "Quarterly signage check log.",
+        "Replacement records for damaged or missing signs."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "AAC.6 v2 (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9. AAC.6.a asterisked. Stop-work section 6. P2: AERP Rules 2004 and BMW Rules 2016. Five OEs, five What-we-do subsections.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "AAC v2 template: plain English, AAC roles, five steps, stop-work, AERP/BMW P2."
+    }
+  ],
+  "status": "draft",
+  "definitions": "There is an established safety programme in the laboratory and imaging services — so that staff and patients are protected from laboratory hazards and radiation.",
+  "exceptions": "1. Do not image a patient without completing the required safety screening (pregnancy screening for radiation, allergy history for contrast, implant check for MRI where applicable).\n2. Do not allow laboratory or imaging staff to handle specimens or operate equipment without appropriate PPE and training.\n3. Do not operate radiation-emitting equipment without radiation monitoring devices (TLD badges or equivalent) for personnel.\n4. Do not remove or obscure imaging safety signage from designated locations.\n5. Staff who see a safety rule broken report it the same shift to the «Laboratory In-Charge», «Imaging In-Charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Laboratory safety programme current and reviewed after incidents.\n- PPE available and used; training records current.\n- Patient screening completed and documented before imaging.\n- TLD badges issued, read on schedule, dose within limits.\n- Patient and staff shielding available and inspected.\n- Imaging signage in place at every required location.\n- Safety incidents reported, investigated and corrective action taken.\n\nRoot-cause analysis is required when the same safety defect recurs within six months.\n\nThis policy is reviewed «annually», and sooner when safety incidents, equipment changes or regulatory changes occur.",
+  "training_competency": "All laboratory staff, imaging staff, nurses and treating doctors who work in laboratory or imaging areas are trained on this policy at induction and «once a year» after that. Training covers laboratory safety, PPE, patient screening, radiation safety, ALARA, monitoring devices and signage.\n\nStaff acknowledgement\n\nI have read this Safety Programme in Laboratory and Imaging Services policy of {{HOSPITAL_NAME}}. I will follow the safety, screening, PPE and radiation-safety processes described.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «AAC/POL/06»\nIssue number: «01»\nVersion: 2.0 (AAC v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Laboratory In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "aac_v2_adoptable_shape",
+  "subtitle": "Laboratory and imaging safety programme.",
+  "doc_no": "«AAC/POL/06»"
+}

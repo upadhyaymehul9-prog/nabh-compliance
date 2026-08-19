@@ -1,0 +1,104 @@
+{
+  "standard_code": "AAC.3",
+  "chapter": "AAC",
+  "oe_codes": [
+    "AAC.3.a",
+    "AAC.3.b",
+    "AAC.3.c",
+    "AAC.3.d",
+    "AAC.3.e"
+  ],
+  "policy_title": "Initial Assessment and Reassessment",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} performs initial assessment for out-patients, day-care, in-patients and emergency patients; documents a care plan from the initial assessment; reassesses patients at appropriate intervals; informs out-patients of follow-up; and identifies early warning signs for prompt intervention.\n\nThe chapter intent is that every patient receives a timely, documented assessment that drives a care plan, and that reassessment detects deterioration early.\n\nThis policy owns assessment and reassessment. AAC.2 owns registration and admission. AAC.7 owns continuity and handover. COP standards own specific clinical procedures. PRE.3 owns consent.\n\nEWS — early warning score. Words marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to treating doctors, nurses and allied health staff at {{HOSPITAL_NAME}} who assess or reassess patients across out-patient, day-care, in-patient and emergency settings.\n\nIt covers the five elements AAC.3.a–e: initial assessment, documented care plan, reassessment, out-patient follow-up, and early warning guidelines.\n\nBoundaries:\n\n- AAC.2 owns registration, admission and acceptance criteria. This policy begins after the patient is accepted.\n- AAC.7 owns continuity and handover communication. This policy owns the clinical assessment and reassessment that handover communicates.\n- AAC.4/AAC.5 own laboratory and imaging results. This policy owns that those results inform assessment and reassessment.\n- PSQ.2 owns quality indicators. Assessment timeliness and EWS compliance feed PSQ.2.\n- Spell out: early warning score (EWS), turnaround time (TAT).",
+  "policy_statement": "{{HOSPITAL_NAME}} performs initial assessment for every out-patient, day-care, in-patient and emergency patient. The initial assessment results in a documented care plan. Patients are reassessed at appropriate intervals. Out-patients are informed of follow-up. Early warning guidelines are implemented to detect deterioration and initiate prompt intervention.\n\n{{HOSPITAL_NAME}} does not leave a deteriorating patient without escalation when the early warning score triggers, and does not proceed without a documented care plan.",
+  "procedure_steps": [
+    "5.1 Initial assessment\n\nThe treating doctor performs an initial assessment for every patient presenting to {{HOSPITAL_NAME}}:\n\n- Out-patients: history, examination and provisional diagnosis documented in the out-patient record within «30 minutes of consultation start».\n- Day-care patients: pre-procedure assessment including fitness for the planned procedure.\n- In-patients: history, examination, provisional diagnosis and initial investigations documented within «one hour of admission».\n- Emergency patients: rapid assessment and stabilisation documented within «15 minutes of arrival»; full assessment within «one hour».\n\nNurses complete nursing assessment (vital signs, allergy status, pain score, fall risk) within «30 minutes of admission» for in-patients and emergency patients.",
+    "5.2 Documented care plan\n\nThe initial assessment results in a documented care plan. The care plan includes:\n\n- provisional or confirmed diagnosis;\n- planned investigations;\n- treatment plan (medications, procedures, therapies);\n- nursing care requirements;\n- expected duration of stay for in-patients;\n- goals of care discussed with the patient and/or family (PRE.2 owns the right to consultation; this policy owns the clinical plan).\n\nThe care plan is recorded in the patient file and is accessible to all treating team members. It is reviewed and updated at every reassessment.",
+    "5.3 Reassessment\n\nPatients are reassessed at appropriate intervals to determine their response to treatment and to plan further treatment or discharge:\n\n- In-patients: reassessed by the treating doctor at least «once daily» and by nurses at least «once per shift».\n- Emergency patients: reassessed as clinical condition requires, at minimum before any decision to admit, discharge or transfer.\n- Day-care patients: reassessed before discharge from the day-care unit.\n\nReassessment findings, response to treatment and any change in the care plan are documented in the patient file.",
+    "5.4 Out-patient follow-up information\n\nOut-patients are informed of their next follow-up, where appropriate. The treating doctor or nurse tells the patient:\n\n- when to return (date or timeframe);\n- what to watch for that should prompt an earlier visit;\n- whom to contact if symptoms worsen before the follow-up date.\n\nThe follow-up instruction is recorded in the out-patient record and, where the hospital issues a follow-up card, on the card.",
+    "5.5 Early warning guidelines\n\n{{HOSPITAL_NAME}} implements guidelines and processes to identify early warning signs of change or deterioration in clinical conditions for initiating prompt intervention. The guideline uses an early warning score (EWS) — «a modified early warning score (MEWS) or the hospital's chosen validated tool».\n\nEWS parameters: «respiratory rate, oxygen saturation, heart rate, systolic blood pressure, level of consciousness, temperature».\n\nFrequency of observations: «every four hours for routine in-patients; more frequently as the score or clinical condition dictates».\n\nEscalation: when the EWS reaches the trigger threshold, the nurse contacts the treating doctor within «15 minutes». The treating doctor reviews the patient within «30 minutes» of being contacted. The response is documented.\n\nTraining: all nursing staff and doctors are trained on the EWS tool at induction and «annually»."
+  ],
+  "stop_work": "Do not leave a deteriorating patient without escalation when the early warning score triggers — escalate immediately per the EWS protocol and document the response.\n\nDo not proceed with in-patient care without a documented care plan from the initial assessment — complete the assessment and document the plan before proceeding with treatment beyond emergency stabilisation.\n\nStop-work applies to the clinical pathway, not to emergency stabilisation.\n\nThe person responsible tells the «Medical Superintendent» or the «treating doctor» the same shift. Refusing to proceed without a documented care plan is not a disciplinary matter.",
+  "responsibility": "Medical Superintendent\n- Accountable that assessment, care planning, reassessment and EWS processes are defined and followed.\n\nTreating doctors\n- Perform initial assessment, document the care plan, reassess at intervals, and respond to EWS triggers.\n\nNurses\n- Complete nursing assessment, perform EWS observations, escalate triggers, and document reassessment.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see monitoring section).\n- Tracks CAPA when assessment or EWS defects recur.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Access, Assessment and Continuity of Care chapter, standard AAC.3.\n- Royal College of Physicians, National Early Warning Score (NEWS) 2 — framework for early warning score tools; not pasted as this hospital's tool.\n- Internal documents of {{HOSPITAL_NAME}}: assessment forms; care plan template; EWS observation chart; escalation protocol; out-patient follow-up card.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator.\n\nCopies issued to: emergency; every in-patient ward; out-patient; day-care; nursing administration.\n\nThe current version is available to all staff at the «front-office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "AAC — Access, Assessment and Continuity of Care (NABH SHCO chapter 2)\nCAPA — corrective and preventive action\nEWS — early warning score\nMEWS — modified early warning score\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nSHCO — Standards for Small Healthcare Organisations\nTAT — turnaround time",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "AAC.3.a",
+      "requirement": "The initial assessment for the out-patients, day-care, in-patients and emergency patients is done.",
+      "steps": "Section 3; 5.1 Initial assessment; Section 4 items 1, 2",
+      "responsible": "Treating doctors (perform); nurses (nursing assessment); Quality Coordinator (audit)",
+      "records": [
+        "Initial assessment records for out-patient, day-care, in-patient and emergency patients.",
+        "Nursing assessment records (vital signs, allergy, pain, fall risk).",
+        "Quarterly audit of assessment completion within defined timeframes."
+      ]
+    },
+    {
+      "oe_code": "AAC.3.b",
+      "requirement": "The initial assessment results in a documented care plan.",
+      "steps": "Section 3; 5.2 Documented care plan; Section 4 item 1",
+      "responsible": "Treating doctors (document); nurses (nursing care requirements)",
+      "records": [
+        "Care plan in every in-patient file with diagnosis, investigations, treatment and goals.",
+        "Evidence of care plan review and update at reassessment.",
+        "Quarterly audit sample of care plan completeness."
+      ]
+    },
+    {
+      "oe_code": "AAC.3.c",
+      "requirement": "Patients are reassessed at appropriate intervals to determine their response to treatment and to plan further treatment or discharge.",
+      "steps": "Section 3; 5.3 Reassessment; Section 4 item 4",
+      "responsible": "Treating doctors (reassess); nurses (shift reassessment)",
+      "records": [
+        "Reassessment entries in patient files with response to treatment.",
+        "Evidence of care plan update after reassessment.",
+        "Quarterly audit sample of reassessment frequency."
+      ]
+    },
+    {
+      "oe_code": "AAC.3.d",
+      "requirement": "Out-patients are informed of their next follow-up, where appropriate.",
+      "steps": "Section 3; 5.4 Out-patient follow-up information; Section 4 item 3",
+      "responsible": "Treating doctors or nurses (inform); registration staff (follow-up card where used)",
+      "records": [
+        "Follow-up instruction recorded in the out-patient record.",
+        "Follow-up card issued where applicable.",
+        "Quarterly audit sample of follow-up documentation."
+      ]
+    },
+    {
+      "oe_code": "AAC.3.e",
+      "requirement": "The organization lays down guidelines and implements processes to identify early warning signs of change or deterioration in clinical conditions for initiating prompt intervention.",
+      "steps": "Section 3; 5.5 Early warning guidelines; Section 4 item 2",
+      "responsible": "Nurses (observe and escalate); treating doctors (respond); Quality Coordinator (audit)",
+      "records": [
+        "EWS protocol document specifying tool, parameters, frequency and escalation thresholds.",
+        "EWS observation charts for in-patients.",
+        "Escalation and response records when trigger threshold reached.",
+        "Training records for EWS tool."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "AAC.3 v2 (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9. AAC.3.a asterisked. Stop-work section 6. P2: accreditation-only. Five OEs, five What-we-do subsections.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "AAC v2 template: plain English, AAC roles, five steps, stop-work, accreditation-only P2."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Patients cared for by the organisation undergo an established initial assessment and regular reassessment — so that care is planned, monitored and adjusted.",
+  "exceptions": "1. Do not admit or continue in-patient care without a documented care plan resulting from the initial assessment.\n2. Do not ignore an early warning score trigger — escalate to the treating doctor or the designated responder within the time the guideline states.\n3. Do not discharge or transfer an out-patient without informing them of the next follow-up, where appropriate.\n4. Do not omit reassessment when the clinical condition changes or at the interval the care plan specifies.\n5. Staff who find an assessment or EWS rule not followed report it the same shift to the «treating doctor» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Initial assessment completed within defined timeframes for each patient category.\n- Documented care plan present in every in-patient file.\n- Reassessment documented at defined intervals.\n- Out-patient follow-up information recorded.\n- EWS observations at defined frequency; triggers escalated and responded to within time limits.\n- Training records for EWS tool.\n\nRoot-cause analysis is required when the same assessment or EWS defect recurs within six months.\n\nThis policy is reviewed «annually», and sooner when clinical protocols, EWS tools or staffing patterns change.",
+  "training_competency": "All treating doctors, nurses and allied health staff are trained on this policy at induction and «once a year» after that. Training covers initial assessment, care plan documentation, reassessment, follow-up information, and the EWS tool and escalation.\n\nStaff acknowledgement\n\nI have read this Initial Assessment and Reassessment policy of {{HOSPITAL_NAME}}. I will assess, plan, reassess and escalate as described.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «AAC/POL/03»\nIssue number: «01»\nVersion: 2.0 (AAC v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "aac_v2_adoptable_shape",
+  "subtitle": "Assessment, care planning, reassessment and early warning.",
+  "doc_no": "«AAC/POL/03»"
+}

@@ -1,0 +1,116 @@
+{
+  "standard_code": "AAC.2",
+  "chapter": "AAC",
+  "oe_codes": [
+    "AAC.2.a",
+    "AAC.2.b",
+    "AAC.2.c",
+    "AAC.2.d",
+    "AAC.2.e",
+    "AAC.2.f"
+  ],
+  "policy_title": "Registration, Admission and Transfer",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} registers and admits patients, generates a unique identification number, accepts only patients it can serve, manages non-availability of beds, prioritises access by clinical need, and handles transfer-in, transfer-out and referral.\n\nThe chapter intent is that registration, admission and transfer are orderly, safe and clinically driven.\n\nThis policy owns registration, admission and transfer. PRE owns patient information and consent. AAC.3 owns assessment and care plan. AAC.7 owns continuity and handover during care. AAC.8 owns discharge.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to registration, front-office, nursing, treating doctors, the Medical Superintendent and the Quality Coordinator at {{HOSPITAL_NAME}}.\n\nIt covers the six elements AAC.2.a–f: registration and admission mechanism, unique identification, acceptance criteria, bed-management when beds are unavailable, clinical prioritisation, and transfer-in / transfer-out / referral.\n\nBoundaries:\n\n- PRE owns patient information at registration (PRE.1) and consent (PRE.3). This policy owns the registration and admission process itself.\n- AAC.7 owns clinical handover communication. This policy owns the transfer logistics (criteria, documentation, transport).\n- AAC.3 owns initial assessment and care plan. This policy owns that a patient is accepted only if the required service can be provided.\n- PSQ.2 owns quality indicators. Registration turnaround and bed-occupancy data feed PSQ.2.",
+  "policy_statement": "{{HOSPITAL_NAME}} registers and admits patients through a defined mechanism. A unique identification number is generated at the end of registration. Patients are accepted only if the organisation can provide the required service. When beds are unavailable there is a documented management plan. Access is prioritised according to clinical need. Transfer-in, transfer-out and referral are done appropriately.\n\n{{HOSPITAL_NAME}} does not admit beyond capacity without a management plan, and does not transfer an unstable patient without transfer criteria met.",
+  "procedure_steps": [
+    "5.1 Registration and admission mechanism\n\n{{HOSPITAL_NAME}} registers every patient who presents for care. Registration captures «name, age, sex, address, contact number, next of kin, and presenting complaint» in the «hospital information system or registration register».\n\nAdmission follows registration when the treating doctor determines the patient needs in-patient care. The admission process records the admitting doctor, date and time of admission, bed/ward allocation, and provisional diagnosis.\n\nRegistration and admission are available during «all working hours; emergency registration is available 24 hours».",
+    "5.2 Unique identification number\n\nA unique identification number is generated at the end of registration for every patient. The number is «system-generated and non-repeating». It appears on every document, request form and report associated with the patient during that episode and any future episode.\n\nNo two patients share the same number. When a returning patient is identified, the existing number is retrieved.",
+    "5.3 Acceptance criteria\n\nPatients are accepted only if {{HOSPITAL_NAME}} can provide the required service. The treating doctor or the doctor on duty confirms that the service, diagnostic capability and treatment capability exist before admission.\n\nWhen the required service is not available, the patient is informed, stabilised if necessary, and referred or transferred under section 5.6. A record is made of the reason for non-acceptance and the referral destination.",
+    "5.4 Management of non-availability of beds\n\n{{HOSPITAL_NAME}} has a documented plan for managing patients when beds are not available. The plan includes:\n\n- «use of extra beds in designated overflow areas»;\n- «prioritised discharge review to free beds»;\n- «transfer to a partner facility with confirmed bed availability»;\n- communication to the patient and family about the situation and expected wait.\n\nThe «Registration In-Charge» activates the plan when occupancy reaches «90 per cent» or when the last bed in a ward is allocated. The Medical Superintendent is informed the same shift.",
+    "5.5 Clinical prioritisation of access\n\nAccess to healthcare services is prioritised according to the clinical needs of the patient. The treating doctor or triage nurse assigns priority based on clinical urgency — «emergency, urgent, routine».\n\nEmergency patients are seen and stabilised first regardless of registration status. Registration is completed after stabilisation. The prioritisation method is displayed at «the emergency entrance and the registration counter».",
+    "5.6 Transfer-in, transfer-out and referral\n\nTransfer-in: a patient transferred from another facility is received with documentation, assessed on arrival, and entered in the register with a unique identification number.\n\nTransfer-out / referral: a patient is transferred out or referred when {{HOSPITAL_NAME}} cannot provide the required service, when the patient requests transfer, or when a higher level of care is needed. Before transfer:\n\n- the patient is stabilised;\n- the receiving facility confirms it can accept;\n- a transfer summary including diagnosis, treatment given, reason for transfer and clinical status at transfer is sent with the patient;\n- appropriate transport is arranged — «hospital ambulance or documented alternative»;\n- the patient or family gives informed consent for the transfer (consent method stays with PRE.3).\n\nTransfer documentation is filed in the patient record."
+  ],
+  "stop_work": "Do not transfer an unstable patient without transfer criteria met — stabilise first, document the clinical state, confirm the receiving facility can accept, and ensure appropriate transport.\n\nDo not admit beyond capacity without a documented management plan — activate the plan (section 5.4) before accepting another patient when beds are full.\n\nStop-work applies to the transfer or the admission, not to emergency stabilisation.\n\nThe person responsible tells the «Medical Superintendent» or «Registration In-Charge» the same shift. Refusing to transfer an unstable patient or to admit without a plan is not a disciplinary matter.",
+  "responsibility": "Medical Superintendent\n- Accountable that registration, admission and transfer processes are defined, resourced and followed.\n\nRegistration / front-office In-Charge\n- Manages day-to-day registration, unique ID generation and bed-management plan activation.\n\nTreating doctors\n- Confirm acceptance criteria, assign clinical priority, and authorise transfers.\n\nNurses\n- Support triage, admission documentation, transfer stabilisation and handover.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see monitoring section).\n- Tracks CAPA when a registration or transfer defect recurs.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Access, Assessment and Continuity of Care chapter, standard AAC.2.\n- Internal documents of {{HOSPITAL_NAME}}: registration process; admission process; bed-management plan; transfer protocols; referral pathways; clinical prioritisation method.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator.\n\nCopies issued to: registration; emergency; every in-patient ward; nursing administration; treating doctors.\n\nThe current version is available to all staff at the «front-office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "AAC — Access, Assessment and Continuity of Care (NABH SHCO chapter 2)\nCAPA — corrective and preventive action\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPRE — Patient Rights and Education (NABH SHCO chapter 4)\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "AAC.2.a",
+      "requirement": "The organization has a mechanism for registering and admitting patients.",
+      "steps": "Section 3; 5.1 Registration and admission mechanism; Section 4 items 1, 2",
+      "responsible": "Registration In-Charge (manage); Medical Superintendent (accountable)",
+      "records": [
+        "Written registration and admission process.",
+        "Registration register or hospital information system entries.",
+        "Admission records with admitting doctor, date, time, bed and provisional diagnosis."
+      ]
+    },
+    {
+      "oe_code": "AAC.2.b",
+      "requirement": "A unique identification number is generated at the end of registration.",
+      "steps": "Section 3; 5.2 Unique identification number; Section 4 item 2",
+      "responsible": "Registration staff (generate); Registration In-Charge (system integrity)",
+      "records": [
+        "Unique identification number on every patient registration.",
+        "System or register showing non-repeating number assignment.",
+        "Sample patient documents bearing the unique number."
+      ]
+    },
+    {
+      "oe_code": "AAC.2.c",
+      "requirement": "Patients are accepted only if the organization can provide the required service.",
+      "steps": "Section 3; 5.3 Acceptance criteria; Section 4 item 1",
+      "responsible": "Treating doctor (confirm service availability); Registration In-Charge (record)",
+      "records": [
+        "Record of service-availability confirmation before admission.",
+        "Non-acceptance log with reason and referral destination.",
+        "Quarterly audit sample of acceptance decisions."
+      ]
+    },
+    {
+      "oe_code": "AAC.2.d",
+      "requirement": "The organization has a mechanism to address management of patients during non-availability of beds.",
+      "steps": "Section 3; 5.4 Management of non-availability of beds; Section 4 item 1",
+      "responsible": "Registration In-Charge (activate plan); Medical Superintendent (informed)",
+      "records": [
+        "Documented bed-management plan.",
+        "Activation log showing when the plan was triggered.",
+        "Communication records to patients and families during bed shortage."
+      ]
+    },
+    {
+      "oe_code": "AAC.2.e",
+      "requirement": "Access to the healthcare services in the organization is prioritized according to the clinical needs of the patient.",
+      "steps": "Section 3; 5.5 Clinical prioritisation of access; Section 4 item 4",
+      "responsible": "Treating doctor or triage nurse (assign priority); Registration In-Charge (process)",
+      "records": [
+        "Written clinical prioritisation method.",
+        "Emergency and admission records showing priority assigned.",
+        "Display of prioritisation method at emergency entrance and registration."
+      ]
+    },
+    {
+      "oe_code": "AAC.2.f",
+      "requirement": "Transfer-in and transfer-out / referral of patients to the organization is done appropriately.",
+      "steps": "Section 3; 5.6 Transfer-in, transfer-out and referral; Section 4 item 3",
+      "responsible": "Treating doctor (authorise); nurses (stabilise and handover); Registration In-Charge (documentation)",
+      "records": [
+        "Transfer-out checklist: stabilisation, receiving confirmation, transfer summary, transport, consent.",
+        "Transfer-in records: arrival assessment, unique ID, documents received.",
+        "Referral log with reason and destination."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "AAC.2 v2 (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9. AAC.2.a, AAC.2.d, AAC.2.e, AAC.2.f asterisked. Stop-work section 6. P2: accreditation-only. Six OEs, six What-we-do subsections.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "AAC v2 template: plain English, AAC roles, six steps, stop-work, accreditation-only P2."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation has a well-defined registration, admission and transfer process — so that every patient is identified, accepted appropriately, and moved safely.",
+  "exceptions": "1. Do not admit a patient when the required service is not available and no documented management plan exists.\n2. Do not register a patient without generating a unique identification number by the end of registration.\n3. Do not transfer an unstable patient without documented transfer criteria being met and the receiving facility confirming acceptance.\n4. Do not bypass clinical prioritisation by admitting on a first-come basis when a more urgent patient is waiting.\n5. Staff who see a registration or transfer rule broken report it the same shift to the «Registration In-Charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Every registration has a unique identification number generated at the end of registration.\n- Acceptance decisions are documented with service-availability confirmation.\n- Bed-management plan exists and was activated when required.\n- Clinical prioritisation evidence in emergency and admission records.\n- Transfer-out documentation: stabilisation, receiving confirmation, transfer summary, transport, consent.\n- Transfer-in documentation: arrival assessment, unique ID, records received.\n\nRoot-cause analysis is required when the same registration or transfer defect recurs within six months.\n\nThis policy is reviewed «annually», and sooner when services, capacity or referral pathways change.",
+  "training_competency": "All registration, nursing and medical staff are trained on this policy at induction and «once a year» after that. Training covers registration, unique ID, acceptance criteria, bed-management plan, clinical prioritisation and transfer process.\n\nStaff acknowledgement\n\nI have read this Registration, Admission and Transfer policy of {{HOSPITAL_NAME}}. I will follow the registration, acceptance, prioritisation and transfer processes described.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «AAC/POL/02»\nIssue number: «01»\nVersion: 2.0 (AAC v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Registration In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "aac_v2_adoptable_shape",
+  "subtitle": "Registration, admission and transfer of patients.",
+  "doc_no": "«AAC/POL/02»"
+}

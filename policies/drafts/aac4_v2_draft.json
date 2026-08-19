@@ -1,0 +1,141 @@
+{
+  "standard_code": "AAC.4",
+  "chapter": "AAC",
+  "oe_codes": [
+    "AAC.4.a",
+    "AAC.4.b",
+    "AAC.4.c",
+    "AAC.4.d",
+    "AAC.4.e",
+    "AAC.4.f",
+    "AAC.4.g",
+    "AAC.4.h"
+  ],
+  "policy_title": "Laboratory Services",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} provides laboratory services commensurate with its scope, ensures adequate infrastructure and human resources, manages the specimen journey from requisition to disposal, delivers results within defined turnaround time (TAT), communicates critical results, outsources tests based on quality assurance, and implements a quality assurance programme including calibration and maintenance.\n\nThe chapter intent is that laboratory services are reliable, timely and quality-assured.\n\nThis policy owns laboratory services. AAC.6 owns laboratory safety. AAC.3 owns clinical assessment that laboratory results inform. PSQ.2 owns quality indicators; laboratory TAT and quality-assurance data feed PSQ.2.\n\nTAT — turnaround time. PPE — personal protective equipment. Words marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to the laboratory in-charge, laboratory technicians, treating doctors who requisition tests, nurses who collect and transport specimens, and the Quality Coordinator at {{HOSPITAL_NAME}}.\n\nIt covers the eight elements AAC.4.a–h: scope of services, infrastructure and human resources, specimen handling, TAT, critical results, outsourcing, quality assurance programme, and calibration and maintenance.\n\nBoundaries:\n\n- AAC.6 owns laboratory safety (safety programme, training, safe practices). This policy owns the laboratory service process.\n- AAC.5 owns imaging services. Where both laboratory and imaging share equipment (e.g. point-of-care), the service-specific policy owns the quality assurance for that equipment.\n- HIC owns infection control in the laboratory. This policy owns specimen handling as a service process.\n- PSQ.2 owns quality indicators. Laboratory TAT and quality-assurance data feed PSQ.2.\n- Spell out: turnaround time (TAT), personal protective equipment (PPE).",
+  "policy_statement": "{{HOSPITAL_NAME}} provides laboratory services commensurate with its defined scope, with adequate infrastructure and qualified personnel. Specimens are requisitioned, collected, identified, handled, transported, processed and disposed of according to written guidance. Results are available within a defined TAT. Critical results are communicated immediately. Tests not available in-house are outsourced to organisations with a quality assurance system. A quality assurance programme is implemented, including periodic calibration and maintenance.\n\n{{HOSPITAL_NAME}} does not report a result without quality assurance, and does not delay a critical result.",
+  "procedure_steps": [
+    "5.1 Scope of laboratory services\n\nThe scope of laboratory services at {{HOSPITAL_NAME}} is commensurate with the clinical services the hospital provides. The laboratory in-charge maintains a test menu that lists every test available in-house and every test outsourced. The menu is reviewed «annually» and whenever clinical services change.\n\nTests not in the menu are not offered. When a treating doctor needs a test not in the menu, it is discussed with the laboratory in-charge and, if appropriate, added to the menu or arranged as an outsourced test under section 5.6.",
+    "5.2 Infrastructure and human resources\n\nThe laboratory infrastructure — physical space, equipment and utilities — is adequate for the defined scope. Equipment is listed in an inventory with model, serial number, date of installation and maintenance schedule.\n\nHuman resources are adequate: qualified laboratory technicians and a laboratory in-charge with qualifications as required under «State rules and NABL norms where applicable». Staff-to-workload ratios are reviewed «annually».",
+    "5.3 Specimen requisition, collection, handling, transport, processing and disposal\n\nRequisition: the treating doctor raises a requisition specifying the test, clinical indication and urgency. The requisition form bears the patient's unique identification number.\n\nCollection: the specimen is collected by a trained person, labelled immediately at the point of collection with patient name, unique identification number, date, time and specimen type. Two-patient identifiers are checked before collection.\n\nHandling and transport: specimens are transported to the laboratory in appropriate containers, at the correct temperature, within «30 minutes of collection». A specimen log tracks receipt.\n\nProcessing: the laboratory processes specimens according to the standard operating procedure for each test. Rejected specimens (haemolysed, clotted, insufficient volume, mislabelled) are documented with the reason and a fresh specimen is requested.\n\nDisposal: specimens after processing are disposed of as per Bio-Medical Waste Management Rules, 2016 (AAC.6 owns laboratory safety; disposal is a service step here).",
+    "5.4 Turnaround time\n\nLaboratory results are available within a defined TAT. The TAT for each category of test is:\n\n- Routine in-patient tests: «within four hours of receipt in the laboratory».\n- Urgent / stat tests: «within one hour of receipt».\n- Routine out-patient tests: «same day or next morning as defined per test».\n\nThe laboratory in-charge monitors TAT compliance «monthly» and reports exceptions to the Quality Coordinator. Persistent TAT breaches trigger root-cause analysis.",
+    "5.5 Critical results communication\n\nCritical results are intimated to the person concerned at the earliest. The laboratory maintains a written critical-value list — «the list approved by the Medical Superintendent and treating doctors».\n\nWhen a critical value is detected:\n\n- the laboratory technician telephones the treating doctor or the nurse caring for the patient within «30 minutes» of result validation;\n- the call is documented: patient name, unique identification number, test, result, caller, receiver, date and time;\n- a read-back is obtained from the receiver.\n\nIf the treating doctor or nurse is unreachable within the time limit, the laboratory in-charge or the «Medical Superintendent» is contacted.",
+    "5.6 Outsourced laboratory tests\n\nTests not available in-house are outsourced to organisation(s) based on their quality assurance system. The hospital maintains a panel of outsourced laboratories selected on documented criteria: «NABL accreditation or equivalent quality assurance, TAT, cost and reliability».\n\nThe outsourced laboratory agreement includes TAT, critical-result communication, quality-assurance evidence, and specimen transport requirements. The laboratory in-charge reviews the panel «annually».\n\nOutsourced results are reviewed by the laboratory in-charge before release to the patient file. The outsourced origin is recorded.",
+    "5.7 Quality assurance programme\n\nThe laboratory quality assurance programme is implemented. It includes:\n\n- internal quality control (IQC) run «daily for each analyte or batch»;\n- external quality assurance scheme (EQAS) participation «as available for the test menu»;\n- pre-analytical, analytical and post-analytical error tracking;\n- corrective action when IQC is out of range or EQAS performance is unsatisfactory;\n- review of quality data «monthly» by the laboratory in-charge and «quarterly» by the Quality Coordinator.\n\nResults from a run where IQC failed are not reported until the failure is resolved and the run is repeated.",
+    "5.8 Calibration and maintenance of equipment\n\nThe quality assurance programme includes periodic calibration and maintenance of all laboratory equipment. Each instrument has a maintenance schedule that specifies:\n\n- frequency of calibration (as per manufacturer recommendation and «at minimum annually»);\n- frequency of preventive maintenance;\n- person responsible for calibration and maintenance;\n- acceptable tolerance limits.\n\nCalibration and maintenance are recorded in an equipment log. Equipment that fails calibration is taken out of service until repaired and recalibrated. Breakdown maintenance is recorded with downtime and impact on service."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that laboratory services are provided as per scope, are quality-assured and meet TAT.\n\nLaboratory In-Charge\n- Manages the laboratory, maintains the test menu, monitors TAT, runs the quality assurance programme, and manages outsourced panel.\n\nLaboratory technicians\n- Perform tests, run IQC, communicate critical results, and maintain equipment logs.\n\nTreating doctors\n- Requisition tests appropriately, respond to critical results, and participate in critical-value list review.\n\nNurses\n- Collect specimens, label at point of collection, and transport safely.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see monitoring section).\n- Tracks CAPA when laboratory defects recur.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Access, Assessment and Continuity of Care chapter, standard AAC.4.\n- Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, 1945 — procurement and storage of reagents and diagnostic kits.\n- Bio-Medical Waste Management Rules, 2016 — specimen disposal (safety programme is AAC.6).\n- Internal documents of {{HOSPITAL_NAME}}: test menu; specimen handling SOP; critical-value list; outsourced laboratory agreements; IQC and EQAS records; equipment inventory and maintenance logs.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator.\n\nCopies issued to: laboratory; emergency; every in-patient ward; out-patient; nursing administration.\n\nThe current version is available to all staff at the «front-office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "AAC — Access, Assessment and Continuity of Care (NABH SHCO chapter 2)\nCAPA — corrective and preventive action\nEQAS — external quality assurance scheme\nHIC — Hospital Infection Control (NABH SHCO chapter 3)\nIQC — internal quality control\nNABL — National Accreditation Board for Testing and Calibration Laboratories\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPPE — personal protective equipment\nPSQ — Patient Safety and Quality (NABH SHCO chapter)\nSHCO — Standards for Small Healthcare Organisations\nTAT — turnaround time",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nSeveral requirements in this document are statutory rather than advisory — in particular those arising under the Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, 1945, insofar as laboratory reagents and diagnostic kits are procured and stored under those rules. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "AAC.4.a",
+      "requirement": "Scope of the laboratory services is commensurate to the services provided by the organization.",
+      "steps": "Section 3; 5.1 Scope of laboratory services",
+      "responsible": "Laboratory In-Charge (maintain test menu); Medical Superintendent (approve)",
+      "records": [
+        "Test menu listing in-house and outsourced tests.",
+        "Annual review record of test menu against clinical services.",
+        "Record of test additions or withdrawals."
+      ]
+    },
+    {
+      "oe_code": "AAC.4.b",
+      "requirement": "The infrastructure (physical and equipment) and human resources are adequate to provide the defined scope of services.",
+      "steps": "Section 3; 5.2 Infrastructure and human resources",
+      "responsible": "Laboratory In-Charge (manage); Medical Superintendent (resource)",
+      "records": [
+        "Equipment inventory with model, serial number, installation date and maintenance schedule.",
+        "Staff list with qualifications and staff-to-workload review.",
+        "Infrastructure adequacy assessment."
+      ]
+    },
+    {
+      "oe_code": "AAC.4.c",
+      "requirement": "Requisition for tests, collection, identification, handling, safe transportation, processing and disposal of specimens is performed according to written guidance.",
+      "steps": "Section 3; 5.3 Specimen requisition, collection, handling, transport, processing and disposal; Section 4 item 3",
+      "responsible": "Laboratory technicians (process); nurses (collect and transport); treating doctors (requisition)",
+      "records": [
+        "Written specimen handling SOP covering requisition through disposal.",
+        "Specimen log with receipt time and two-patient-identifier check.",
+        "Rejection log with reason and re-collection record."
+      ]
+    },
+    {
+      "oe_code": "AAC.4.d",
+      "requirement": "Laboratory results are available within a defined time frame.",
+      "steps": "Section 3; 5.4 Turnaround time; Section 4 item 2",
+      "responsible": "Laboratory In-Charge (monitor TAT); Quality Coordinator (audit)",
+      "records": [
+        "Defined TAT for each test category.",
+        "Monthly TAT compliance report.",
+        "Root-cause analysis for persistent TAT breaches."
+      ]
+    },
+    {
+      "oe_code": "AAC.4.e",
+      "requirement": "Critical results are intimated to the person concerned at the earliest.",
+      "steps": "Section 3; 5.5 Critical results communication; Section 4 item 2",
+      "responsible": "Laboratory technicians (call); treating doctors (respond); Laboratory In-Charge (escalate)",
+      "records": [
+        "Critical-value list approved by Medical Superintendent.",
+        "Critical-result communication log with caller, receiver, read-back, date and time.",
+        "Escalation records when treating doctor was unreachable."
+      ]
+    },
+    {
+      "oe_code": "AAC.4.f",
+      "requirement": "Laboratory tests not available in the organization are outsourced to organization(s) based on their quality assurance system.",
+      "steps": "Section 3; 5.6 Outsourced laboratory tests; Section 4 item 4",
+      "responsible": "Laboratory In-Charge (manage panel); Quality Coordinator (audit criteria)",
+      "records": [
+        "Outsourced laboratory panel with selection criteria.",
+        "Agreements specifying TAT, critical-result communication and quality assurance.",
+        "Annual review of outsourced panel."
+      ]
+    },
+    {
+      "oe_code": "AAC.4.g",
+      "requirement": "The laboratory quality assurance programme is implemented.",
+      "steps": "Section 3; 5.7 Quality assurance programme; Section 4 item 1",
+      "responsible": "Laboratory In-Charge (run programme); Quality Coordinator (quarterly review)",
+      "records": [
+        "IQC records for each analyte or batch.",
+        "EQAS participation and performance records.",
+        "Corrective action records for IQC out-of-range or EQAS unsatisfactory."
+      ]
+    },
+    {
+      "oe_code": "AAC.4.h",
+      "requirement": "The programme includes periodic calibration and maintenance of all equipment.",
+      "steps": "Section 3; 5.8 Calibration and maintenance of equipment; Section 4 item 5",
+      "responsible": "Laboratory technicians (perform); Laboratory In-Charge (schedule); Quality Coordinator (audit)",
+      "records": [
+        "Calibration and maintenance schedule for each instrument.",
+        "Equipment log with calibration results and maintenance records.",
+        "Record of equipment taken out of service for failed calibration."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "AAC.4 v2 (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9. AAC.4.c, AAC.4.d, AAC.4.e, AAC.4.f, AAC.4.g, AAC.4.h asterisked. No stop-work. P2: D&C Act 1940. Eight OEs, eight What-we-do subsections.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "AAC v2 template: plain English, AAC roles, eight steps, no stop-work, D&C Act P2."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Laboratory services are provided as per the scope of services of the organisation and adhere to best practices — so that results are reliable, timely and safe.",
+  "exceptions": "1. Do not report a laboratory result that has not passed quality-assurance checks.\n2. Do not delay communication of a critical result beyond the defined time limit.\n3. Do not accept a specimen that is unlabelled, mislabelled or collected without following written guidance.\n4. Do not outsource tests to a laboratory that has no documented quality assurance system.\n5. Do not operate laboratory equipment that is overdue for calibration or maintenance.\n6. Staff who see a laboratory rule broken report it the same shift to the «Laboratory In-Charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Test menu current and commensurate with clinical services.\n- Infrastructure and staffing adequate for scope.\n- Specimen handling: labelling, transport time, rejection rate and reasons.\n- TAT compliance by test category.\n- Critical-result communication within time limit, with documentation and read-back.\n- Outsourced panel current and based on quality criteria.\n- IQC and EQAS records; corrective actions for failures.\n- Calibration and maintenance logs; no overdue equipment.\n\nRoot-cause analysis is required when the same laboratory defect recurs within six months.\n\nThis policy is reviewed «annually», and sooner when the test menu, equipment or quality assurance programme changes.",
+  "training_competency": "All laboratory staff, nurses who collect specimens, and treating doctors are trained on this policy at induction and «once a year» after that. Training covers specimen handling, critical-result communication, quality assurance and calibration.\n\nStaff acknowledgement\n\nI have read this Laboratory Services policy of {{HOSPITAL_NAME}}. I will follow the specimen, TAT, critical-result, quality assurance and calibration processes described.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «AAC/POL/04»\nIssue number: «01»\nVersion: 2.0 (AAC v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Laboratory In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "aac_v2_adoptable_shape",
+  "subtitle": "Laboratory services, quality assurance and turnaround time.",
+  "doc_no": "«AAC/POL/04»"
+}
