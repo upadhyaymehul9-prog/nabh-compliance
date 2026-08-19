@@ -114,7 +114,9 @@ async function main() {
 
   const files: string[] = [];
   for await (const e of Deno.readDir(DRAFTS)) {
-    if (e.isFile && e.name.endsWith("_draft.json")) files.push(e.name);
+    if (e.isFile && e.name.endsWith("_draft.json") && !e.name.includes("_v2_")) {
+      files.push(e.name);
+    }
   }
   files.sort();
 
