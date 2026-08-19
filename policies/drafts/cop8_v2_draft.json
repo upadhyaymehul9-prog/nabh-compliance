@@ -1,0 +1,119 @@
+{
+  "standard_code": "COP.8",
+  "chapter": "COP",
+  "oe_codes": [
+    "COP.8.a",
+    "COP.8.b",
+    "COP.8.c",
+    "COP.8.d",
+    "COP.8.e",
+    "COP.8.f"
+  ],
+  "policy_title": "Safe Paediatric Services",
+  "purpose": "This policy defines how {{HOSPITAL_NAME}} organises and provides safe paediatric services covering neonatal care, age-specific competency, special provisions for children, nutritional/growth/developmental/immunisation assessment, and prevention of child/neonate abduction and abuse.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to all staff caring for paediatric patients at {{HOSPITAL_NAME}}: paediatricians, treating doctors, nurses, and support staff in paediatric and neonatal areas.\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- AAC.3 owns initial patient assessment. This policy owns nutritional, growth, developmental and immunisation assessment specific to paediatric patients (COP.8.e).\n- COP.12 owns vulnerable-patient identification generally; this policy owns paediatric-specific safety including abduction and abuse prevention.\n- Services not provided by this hospital are recorded absences against the service directory, not copied SOPs.",
+  "policy_statement": "{{HOSPITAL_NAME}} organises paediatric services safely, ensures neonatal care follows national/international guidelines, maintains age-specific competency among staff who care for children, makes special provisions for children, assesses nutrition/growth/development/immunisation, and prevents child/neonate abduction and abuse.\n\n{{HOSPITAL_NAME}} does not import paediatric protocols from tertiary centres that exceed its service directory.",
+  "procedure_steps": [
+    "5.1 Organisation of paediatric services\n\nPaediatric services at {{HOSPITAL_NAME}} are organised with designated paediatric areas, age-appropriate equipment, and staffing that ensures safe care. The «Paediatric In-Charge» holds the operational method for organising these services.\n\nEquipment sizing, drug formulary entries and resuscitation aids are paediatric-specific. Ward layout separates children from adult patients where the facility allows. Where separation is not possible, the documented method explains the safeguards used.",
+    "5.2 Neonatal care aligned with guidelines\n\nNeonatal care at {{HOSPITAL_NAME}} follows «NNF Essential Newborn Care guidelines and IAP Neonatology protocols» or equivalent national/international guidelines adopted by this hospital.\n\nThe «Paediatric In-Charge» maintains the list of adopted guidelines and reviews them «annually» for currency. Deviations are documented with clinical justification in the patient record.",
+    "5.3 Age-specific competency\n\nAll staff who care for children at {{HOSPITAL_NAME}} hold age-specific competency demonstrated through training, certification or supervised practice. The «Paediatric In-Charge» maintains a competency matrix.\n\nNew staff complete a paediatric competency assessment before independent duty. Competency is reassessed «annually». Records are held with the training file.",
+    "5.4 Special provisions for children\n\n{{HOSPITAL_NAME}} makes special provisions for the care of children including «child-friendly environment, parental presence during procedures where safe, play and distraction aids, and paediatric pain assessment tools».\n\nThe provisions are documented and reviewed «annually» by the «Paediatric In-Charge» for adequacy against the patient population served.",
+    "5.5 Nutritional, growth, developmental and immunisation assessment\n\nPatient assessment for paediatric patients includes nutritional screening, growth charting, developmental milestones and immunisation status. AAC.3 owns initial assessment; this step owns the paediatric-specific components.\n\nGrowth is plotted on «WHO/IAP growth charts». Immunisation status is compared against «the National Immunisation Schedule». Gaps trigger a documented referral or counselling note. Developmental screening uses «a validated tool appropriate to age».",
+    "5.6 Prevention of child/neonate abduction and abuse\n\n{{HOSPITAL_NAME}} has measures to prevent child and neonate abduction and abuse. These include «identity-band verification at every handover, restricted access to neonatal areas, CCTV where installed, visitor-pass system, and staff training on recognising abuse signs».\n\nA suspected abduction triggers «immediate lockdown of the ward/floor, security alert, and police notification within 30 minutes». Suspected abuse is reported to the «Paediatric In-Charge» who activates the hospital's child-protection protocol. Records of drills and incidents are maintained."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable that paediatric services are organised safely and that competency, guidelines, and prevention measures are in place.\n\nPaediatric In-Charge\n- Holds operational methods for sections 5.1–5.6.\n- Maintains competency matrix, guideline list, and abduction/abuse prevention protocol.\n\nPaediatricians and treating doctors\n- Provide care with age-specific competency; document assessments per 5.5.\n\nNurses (paediatric and neonatal areas)\n- Apply identity-band checks, growth charting, and special provisions daily.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see monitoring section).\n- Tracks CAPA when a paediatric safety defect recurs.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Care of Patients chapter, standard COP.8.\n- National Neonatology Forum (NNF), Essential Newborn Care guidelines — adopted edition.\n- Indian Academy of Pediatrics (IAP), Neonatology protocols — adopted edition.\n- WHO Child Growth Standards (2006) — growth charting reference.\n- National Immunisation Schedule, Government of India — current edition.\n- Internal documents of {{HOSPITAL_NAME}}: competency matrix, adopted guideline list, abduction/abuse prevention protocol, growth charts, immunisation gap referral pathway.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Paediatric In-Charge and Quality Coordinator.\n\nCopies issued to: paediatric ward; neonatal area; nursing station (paediatric); emergency (paediatric section); OPD (paediatric).\n\nThe current version is available to all staff at the «policy file in the paediatric ward» and, if the hospital keeps an intranet, at «staff intranet / policies».",
+  "abbreviations": "CAPA — corrective and preventive action\nIAP — Indian Academy of Pediatrics\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nNNF — National Neonatology Forum\nOE — objective element\nSHCO — Standards for Small Healthcare Organisations\nWHO — World Health Organization",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "COP.8.a",
+      "requirement": "Paediatric services are organised and provided safely.",
+      "steps": "Section 3; 5.1 Organisation of paediatric services; Section 4 items 1–5",
+      "responsible": "Paediatric In-Charge (method); Medical Superintendent (accountable)",
+      "records": [
+        "Documented method for organising paediatric services including staffing, equipment and layout.",
+        "Paediatric equipment inventory with sizing verification.",
+        "Staffing roster showing paediatric-competent coverage.",
+        "Annual review record of service organisation."
+      ]
+    },
+    {
+      "oe_code": "COP.8.b",
+      "requirement": "Neonatal care is in consonance with the national/international guidelines.",
+      "steps": "Section 3; 5.2 Neonatal care aligned with guidelines",
+      "responsible": "Paediatric In-Charge (guideline adoption and review); paediatricians (adherence)",
+      "records": [
+        "List of adopted national/international neonatal guidelines with edition and adoption date.",
+        "Annual review record confirming guidelines are current.",
+        "Sample neonatal charts showing adherence to adopted protocol.",
+        "Documented deviations with clinical justification where applicable."
+      ]
+    },
+    {
+      "oe_code": "COP.8.c",
+      "requirement": "Those who care for children have age-specific competency.",
+      "steps": "Section 3; 5.3 Age-specific competency; Section 4 item 1",
+      "responsible": "Paediatric In-Charge (competency matrix); HR/training coordinator (records)",
+      "records": [
+        "Competency matrix for all staff caring for children.",
+        "Initial competency assessment records for new staff.",
+        "Annual reassessment records."
+      ]
+    },
+    {
+      "oe_code": "COP.8.d",
+      "requirement": "Provisions are made for special care of children.",
+      "steps": "Section 3; 5.4 Special provisions for children",
+      "responsible": "Paediatric In-Charge (provisions); nurses (daily application)",
+      "records": [
+        "Documented special provisions for children with annual adequacy review.",
+        "Evidence of child-friendly environment and paediatric pain tools in use.",
+        "Quarterly audit sample showing provisions applied."
+      ]
+    },
+    {
+      "oe_code": "COP.8.e",
+      "requirement": "Patient assessment includes nutritional, growth, developmental and immunisation assessment.",
+      "steps": "Section 3; 5.5 Nutritional, growth, developmental and immunisation assessment",
+      "responsible": "Treating doctors and nurses (assess); Paediatric In-Charge (tools and method)",
+      "records": [
+        "Growth charts plotted for paediatric admissions.",
+        "Developmental screening records using validated tool.",
+        "Immunisation status documented with gap referrals where indicated.",
+        "Nutritional screening records for paediatric patients."
+      ]
+    },
+    {
+      "oe_code": "COP.8.f",
+      "requirement": "The organization has measures in place to prevent child/neonate abduction and abuse.",
+      "steps": "Section 3; 5.6 Prevention of child/neonate abduction and abuse; Section 4 items 4–5",
+      "responsible": "Paediatric In-Charge (protocol); security staff (execution); nurses (identity-band checks)",
+      "records": [
+        "Documented abduction-prevention protocol with access-control measures.",
+        "Abuse-recognition training records for all paediatric staff.",
+        "Drill records conducted at defined frequency.",
+        "Incident log for suspected abduction or abuse events with actions taken."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "COP.8 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"Organization provides safe paediatric services.\" COP.8.a–f PDF index 71. Asterisked OEs: a, b, f. All Commitment level.\n\nSHAPE: Six What-we-do subsections (5.1–5.6). No stop-work. Disclaimer accreditation-only. COP paediatric roles.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "COP v2 template: adoptable shape, plain English, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation provides safe paediatric services — age-specific competency, neonatal care aligned with guidelines, special provisions for children, growth and immunisation assessment, and measures to prevent abduction and abuse.",
+  "exceptions": "1. A person without age-specific paediatric competency does not independently care for a paediatric patient.\n2. Neonatal care does not deviate from the national/international guidelines this hospital has adopted without documented clinical justification.\n3. Paediatric drug doses are weight-based; adult doses are not used for children.\n4. No child or neonate is discharged to an unverified person.\n5. A suspected abduction or abuse event is reported immediately to the «Paediatric In-Charge» and hospital security.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit covers:\n\n- Age-specific competency records current for all paediatric staff.\n- Neonatal care adherence to adopted guidelines (sample charts).\n- Growth/development/immunisation assessments completed on paediatric admissions.\n- Abduction-prevention drill conducted «every six months».\n- Abuse-recognition training records current.\n\nRoot-cause analysis is required when a paediatric safety event recurs within six months.\n\nThis policy is reviewed «annually», and sooner when adopted guidelines or the service directory change.",
+  "training_competency": "All staff caring for children are trained on this policy at induction and «once a year» after that. Training covers age-specific competency requirements, neonatal guidelines, growth/immunisation assessment, and abduction/abuse prevention.\n\nStaff acknowledgement\n\nI have read this Safe Paediatric Services policy of {{HOSPITAL_NAME}}. I will provide paediatric care in accordance with the standards and prevention measures described.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Paediatric In-Charge holds signed acknowledgements with the training file.)",
+  "resources_required": "Document number: «COP/POL/08»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Paediatric In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "cop_v2_adoptable_shape",
+  "subtitle": "Safe paediatric and neonatal care.",
+  "doc_no": "«COP/POL/08»"
+}

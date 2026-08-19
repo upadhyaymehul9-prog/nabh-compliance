@@ -1,0 +1,104 @@
+{
+  "standard_code": "COP.9",
+  "chapter": "COP",
+  "oe_codes": [
+    "COP.9.a",
+    "COP.9.b",
+    "COP.9.c",
+    "COP.9.d",
+    "COP.9.e"
+  ],
+  "policy_title": "Procedural Sedation",
+  "purpose": "This policy defines how {{HOSPITAL_NAME}} administers procedural sedation consistently and safely, ensuring informed consent is obtained, competent and trained persons perform and monitor sedation, minimum intra-procedure monitoring is maintained, and patients are discharged from recovery based on objective criteria.\n\nBoundaries: PRE.3 owns the consent method; this policy owns that consent was obtained before sedation. COP.10 owns anaesthesia; this policy owns sedation that is not general or regional anaesthesia.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to all staff involved in procedural sedation at {{HOSPITAL_NAME}}: anaesthetists, treating doctors credentialed to sedate, nurses monitoring sedation, and recovery-area staff.\n\nIt covers sedation administration, consent, competency, intra-procedure monitoring, and post-procedure monitoring with discharge criteria. It does not cover general or regional anaesthesia (COP.10) or the consent method (PRE.3).",
+  "policy_statement": "{{HOSPITAL_NAME}} administers procedural sedation in a consistent manner with informed consent obtained before every sedation event, competent and trained personnel present, minimum monitoring parameters maintained throughout, and objective discharge criteria applied in recovery.\n\n{{HOSPITAL_NAME}} does not sedate a patient without informed consent, a competent sedationist present, and minimum monitoring equipment ready.",
+  "procedure_steps": [
+    "5.1 Consistent administration of procedural sedation\n\nProcedural sedation at {{HOSPITAL_NAME}} is administered according to a documented protocol that includes pre-sedation assessment, sedation-level selection, drug choice, monitoring parameters, and recovery pathway.\n\nThe «Anaesthesia In-Charge» holds the protocol. Sedation levels used at this hospital are «minimal, moderate and deep sedation». The protocol is reviewed «annually» for currency against current guidelines.",
+    "5.2 Informed consent for procedural sedation\n\nInformed consent specific to the sedation is obtained before administration. The consent includes explanation of risks, benefits, alternatives, the sedation level planned, and who will monitor.\n\nPRE.3 owns the consent method. This step owns that consent was obtained and documented in the patient record before sedation begins. Consent is taken by the «sedationist or treating doctor performing the procedure».",
+    "5.3 Competent and trained personnel\n\nProcedural sedation is performed and monitored by persons who are competent and trained. The «Anaesthesia In-Charge» maintains a credentialling list of staff permitted to sedate and to monitor.\n\nCompetency requirements: «completion of sedation training module, BLS/ACLS certification current, and supervised sedation cases as per hospital credentialling criteria». A dedicated monitoring person is present throughout who does not perform the procedure.",
+    "5.4 Intra-procedure monitoring\n\nDuring sedation the following are monitored continuously and documented at intervals of «every five minutes»: heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation, and level of sedation.\n\nEquipment is confirmed functional before sedation begins. Any deterioration triggers the escalation pathway in the sedation protocol. Records are maintained in the sedation monitoring form.",
+    "5.5 Post-procedure monitoring and discharge\n\nPost-procedure monitoring is documented using «the Modified Aldrete Score or equivalent objective tool». Patients are discharged from the recovery area only when objective criteria are met and documented.\n\nDischarge criteria include «stable vital signs for at least 30 minutes, return to baseline consciousness, pain controlled, no nausea/vomiting, and a responsible adult available for escort if outpatient». The discharging clinician signs the recovery record."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable that procedural sedation is provided safely and consistently.\n\nAnaesthesia In-Charge\n- Holds the sedation protocol and credentialling list.\n- Reviews protocol annually; maintains equipment readiness.\n\nAnaesthetists and credentialled sedationists\n- Perform sedation, obtain consent (that it was obtained), monitor intra-procedure.\n\nNurses (sedation and recovery areas)\n- Monitor patients intra- and post-procedure; apply discharge criteria.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see monitoring section).\n- Tracks CAPA when a sedation safety defect recurs.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Care of Patients chapter, standard COP.9.\n- American Society of Anesthesiologists (ASA), Practice Guidelines for Sedation and Analgesia by Non-Anesthesiologists — adopted edition for sedation-level definitions and monitoring standards.\n- Internal documents of {{HOSPITAL_NAME}}: sedation protocol, credentialling list, sedation monitoring form, Modified Aldrete Score form, equipment-check log, stop-work register.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Anaesthesia In-Charge and Quality Coordinator.\n\nCopies issued to: procedure rooms; endoscopy suite; minor OT; recovery area; emergency department.\n\nThe current version is available to all staff at the «policy file in the procedure area» and, if the hospital keeps an intranet, at «staff intranet / policies».",
+  "abbreviations": "ACLS — advanced cardiovascular life support\nBLS — basic life support\nCAPA — corrective and preventive action\nECG — electrocardiogram\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nNIBP — non-invasive blood pressure\nOE — objective element\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "COP.9.a",
+      "requirement": "Procedural sedation is administered in a consistent manner.",
+      "steps": "Section 3; 5.1 Consistent administration of procedural sedation; Section 4 items 1–6",
+      "responsible": "Anaesthesia In-Charge (protocol); sedationists (administer)",
+      "records": [
+        "Documented sedation protocol with pre-assessment, drug selection and monitoring pathway.",
+        "Annual protocol review record.",
+        "Sample sedation records showing protocol adherence.",
+        "Credentialling list of permitted sedationists."
+      ]
+    },
+    {
+      "oe_code": "COP.9.b",
+      "requirement": "Informed consent for administration of procedural sedation is obtained.",
+      "steps": "Section 3; 5.2 Informed consent for procedural sedation; Section 4 item 1",
+      "responsible": "Sedationist or treating doctor (obtain consent); PRE.3 (method)",
+      "records": [
+        "Signed consent forms specific to sedation in patient records.",
+        "Audit sample confirming consent documented before sedation began.",
+        "Recorded boundary that PRE.3 owns consent method."
+      ]
+    },
+    {
+      "oe_code": "COP.9.c",
+      "requirement": "Competent and trained persons perform and monitor sedation.",
+      "steps": "Section 3; 5.3 Competent and trained personnel; Section 4 item 2",
+      "responsible": "Anaesthesia In-Charge (credentialling); HR (training records)",
+      "records": [
+        "Credentialling list with competency criteria and validity dates.",
+        "Training records showing BLS/ACLS and sedation-module completion.",
+        "Evidence that a dedicated monitoring person was present (sedation form signature)."
+      ]
+    },
+    {
+      "oe_code": "COP.9.d",
+      "requirement": "Intra-procedure monitoring includes at a minimum the heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation, and level of sedation.",
+      "steps": "Section 3; 5.4 Intra-procedure monitoring; Section 4 item 3",
+      "responsible": "Dedicated monitoring person (record); sedationist (oversight)",
+      "records": [
+        "Sedation monitoring forms with all six parameters at defined intervals.",
+        "Pre-sedation equipment-check log.",
+        "Escalation records where deterioration was identified."
+      ]
+    },
+    {
+      "oe_code": "COP.9.e",
+      "requirement": "Post procedure monitoring is documented, and patients are discharged from the recovery area based on objective criteria.",
+      "steps": "Section 3; 5.5 Post-procedure monitoring and discharge; Section 4 item 4",
+      "responsible": "Recovery nurses (monitor); discharging clinician (sign-off)",
+      "records": [
+        "Post-procedure monitoring records with objective scoring tool.",
+        "Documented discharge criteria met before patient left recovery.",
+        "Signed recovery discharge record by clinician."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "COP.9 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"Procedural sedation is provided consistently and safely.\" COP.9.a–e PDF index 72. Asterisked OE: a. All Commitment level.\n\nSHAPE: Five What-we-do subsections (5.1–5.5). Stop-work: YES. Disclaimer accreditation-only. COP anaesthesia/sedation roles.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "COP v2 template: adoptable shape, plain English, stop-work authority included."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Procedural sedation is provided consistently and safely — with informed consent, competent personnel, intra-procedure monitoring, and objective discharge criteria.",
+  "exceptions": "1. No sedation is administered without documented informed consent specific to the sedation.\n2. No sedation is performed without a competent and trained person present who is dedicated to monitoring the patient.\n3. Minimum monitoring (heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation, level of sedation) is confirmed operational before sedation begins.\n4. A patient is not discharged from recovery without meeting documented objective discharge criteria.\n5. Emergency resuscitation equipment is present and checked before sedation commences.\n6. Staff who see a violation of items 1–5 invoke stop-work authority immediately.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit covers:\n\n- Consent documented before every sedation (sample charts).\n- Credentialling list current; no uncredentialled person sedated independently.\n- Intra-procedure monitoring records complete (all six parameters).\n- Post-procedure discharge criteria documented and met before discharge.\n- Stop-work events reviewed; no punitive action taken.\n- Equipment checks documented before sedation.\n\nRoot-cause analysis is required when a sedation safety defect recurs within six months.\n\nThis policy is reviewed «annually», and sooner when sedation guidelines or credentialling criteria change.",
+  "training_competency": "All staff involved in procedural sedation are trained on this policy at induction and «once a year» after that. Training covers the sedation protocol, consent requirements, monitoring parameters, stop-work authority, and discharge criteria.\n\nStaff acknowledgement\n\nI have read this Procedural Sedation policy of {{HOSPITAL_NAME}}. I will administer and monitor sedation only in accordance with this policy and will invoke stop-work authority when safety conditions are not met.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Anaesthesia In-Charge holds signed acknowledgements with the credentialling file.)",
+  "resources_required": "Document number: «COP/POL/09»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Anaesthesia In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "cop_v2_adoptable_shape",
+  "subtitle": "Consistent and safe procedural sedation.",
+  "doc_no": "«COP/POL/09»",
+  "stop_work": "Any staff member shall invoke stop-work authority and halt sedation preparation or administration when:\n\n- Informed consent has not been obtained or documented.\n- A competent sedationist or dedicated monitoring person is not present.\n- Minimum monitoring equipment (pulse oximeter, ECG, NIBP, capnography where required) is not available or not functional.\n- Emergency resuscitation equipment is not present or not checked.\n\nStop-work is reported to the «Anaesthesia In-Charge» immediately. The procedure does not proceed until all conditions are met. No punitive action is taken against a person who invokes stop-work in good faith."
+}

@@ -1,0 +1,120 @@
+{
+  "standard_code": "COP.12",
+  "chapter": "COP",
+  "oe_codes": [
+    "COP.12.a",
+    "COP.12.b",
+    "COP.12.c",
+    "COP.12.d",
+    "COP.12.e",
+    "COP.12.f"
+  ],
+  "policy_title": "Higher-Risk Patients: Identification and Management",
+  "purpose": "This policy defines how {{HOSPITAL_NAME}} identifies and manages vulnerable patients, provides a safe and secure environment for them, and identifies and manages patients at risk of falls, pressure ulcers, deep vein thrombosis, and patients who need restraints.\n\nBoundaries: PSQ owns patient safety goals; this policy owns clinical identification and management of higher-risk patients. COP.8 owns paediatric-specific safety; this policy owns the broader vulnerable-patient framework.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to all clinical staff at {{HOSPITAL_NAME}}: treating doctors, nurses, physiotherapists, and support staff who encounter patients at higher risk of morbidity and mortality.\n\nIt covers identification and management of vulnerable patients, fall risk, pressure ulcers, deep vein thrombosis, and restraint use. It does not own patient safety goals (PSQ) or paediatric-specific safety (COP.8).",
+  "policy_statement": "{{HOSPITAL_NAME}} identifies and manages vulnerable patients and provides a safe and secure environment for them. {{HOSPITAL_NAME}} identifies and manages patients at risk of falls, pressure ulcers, and deep vein thrombosis. Where restraints are needed, they are applied safely with documented justification.\n\n{{HOSPITAL_NAME}} does not leave higher-risk patients unidentified or unmanaged because identification tools are absent or staff are untrained.",
+  "procedure_steps": [
+    "5.1 Identification and management of vulnerable patients\n\n{{HOSPITAL_NAME}} identifies vulnerable patients at or soon after admission. Vulnerable categories include «elderly, paediatric (cross-reference COP.8), mentally ill, physically disabled, patients with communication barriers, and any patient the treating team identifies as at higher risk».\n\nIdentification uses «a vulnerability screening tool completed by the admitting nurse». For each vulnerable patient a documented management plan covers the specific risks, interventions, environment checks, and communication needs. The «ward nurse in-charge» ensures the plan is initiated and communicated to the treating team.",
+    "5.2 Safe and secure environment for vulnerable patients\n\n{{HOSPITAL_NAME}} provides a safe and secure environment for vulnerable patients. Environmental measures include «bed-rail use, call-bell accessibility, adequate lighting, non-slip flooring, visual cues for cognitively impaired patients, and secure unit access where needed».\n\nThe «ward nurse in-charge» verifies the environment for each identified vulnerable patient on admission and at each shift change. Deficiencies are escalated to the «facility manager» for correction.",
+    "5.3 Fall-risk identification and management\n\n{{HOSPITAL_NAME}} identifies and manages patients at risk of falls. Screening uses «the Morse Fall Scale or equivalent validated tool» at admission, at defined intervals («every shift for high-risk patients»), and on clinical change.\n\nManagement includes «fall-risk signage, bed-rail protocol, footwear check, medication review for fall-contributing drugs, mobility assessment, toileting assistance, and patient/family education». Falls are reported, investigated, and entered into the incident register. PSQ owns the safety-goal target; this policy owns clinical identification and management.",
+    "5.4 Pressure-ulcer risk identification and management\n\n{{HOSPITAL_NAME}} identifies and manages patients at risk of developing or worsening of pressure ulcers. Screening uses «the Braden Scale or equivalent validated tool» at admission and at defined intervals («daily for at-risk patients»).\n\nManagement includes «repositioning schedule, pressure-relieving devices, skin inspection, nutrition optimisation, moisture management, and documentation of skin status». New or worsening pressure ulcers are reported and investigated. PSQ owns the safety-goal target; this policy owns clinical identification and management.",
+    "5.5 Deep vein thrombosis risk identification and management\n\n{{HOSPITAL_NAME}} identifies and manages patients at risk of developing or worsening of deep vein thrombosis. Screening uses «the Caprini Score or equivalent validated tool» at admission and before surgical procedures.\n\nManagement includes «early mobilisation, mechanical prophylaxis (graduated compression stockings, intermittent pneumatic compression), pharmacological prophylaxis where indicated and not contraindicated, hydration, and patient education». VTE events are reported and investigated. PSQ owns the safety-goal target; this policy owns clinical identification and management.",
+    "5.6 Patients who need restraints\n\n{{HOSPITAL_NAME}} identifies and manages patients who need restraints. Restraints are a last resort used only when less restrictive alternatives have failed or are clinically inappropriate.\n\nRestraints require: «a documented doctor's order specifying indication, type, and maximum duration; patient/family informed; time-limited review (at least every 2 hours); neurovascular and skin checks at defined intervals; documented release and reassessment; and discontinuation as soon as the indication resolves».\n\nThe «ward nurse in-charge» monitors restraint compliance each shift. Prolonged or repeated restraint use is reviewed by the treating team and Quality Coordinator."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable that higher-risk patients are identified and managed and that the environment is safe.\n\nTreating doctors\n- Order risk-specific interventions, restraint orders, and DVT prophylaxis.\n\nNurses (ward and ICU)\n- Screen patients using adopted tools; initiate management plans; monitor restraints; report incidents.\n\nPhysiotherapist / rehabilitation team\n- Contribute to fall-prevention and mobility interventions.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see monitoring section).\n- Tracks CAPA when a higher-risk patient safety defect recurs.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Care of Patients chapter, standard COP.12.\n- Morse JM, Morse Fall Scale — validated fall-risk screening tool.\n- Braden B and Bergstrom N, Braden Scale for Predicting Pressure Sore Risk — adopted edition.\n- Caprini JA, Caprini Risk Assessment Model for VTE — adopted edition.\n- Internal documents of {{HOSPITAL_NAME}}: vulnerability screening tool, fall-risk protocol, pressure-ulcer prevention bundle, DVT prophylaxis protocol, restraint policy and order form, incident register.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator.\n\nCopies issued to: every in-patient ward; ICU; emergency department; nursing administration; physiotherapy.\n\nThe current version is available to all staff at the «ward policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».",
+  "abbreviations": "CAPA — corrective and preventive action\nDVT — deep vein thrombosis\nICU — intensive care unit\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPSQ — Patient Safety and Quality Improvement (NABH SHCO chapter)\nSHCO — Standards for Small Healthcare Organisations\nVTE — venous thromboembolism",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "COP.12.a",
+      "requirement": "The organization identifies and manages vulnerable patients.",
+      "steps": "Section 3; 5.1 Identification and management of vulnerable patients; Section 4 items 1–2",
+      "responsible": "Admitting nurse (screen); treating team (management plan); ward nurse in-charge (initiation)",
+      "records": [
+        "Vulnerability screening completed on admission for all patients.",
+        "Documented management plan for each identified vulnerable patient.",
+        "Audit sample confirming plan initiated within defined timeframe.",
+        "Communication of vulnerability status to treating team documented."
+      ]
+    },
+    {
+      "oe_code": "COP.12.b",
+      "requirement": "The organization provides for a safe and secure environment for the vulnerable patient.",
+      "steps": "Section 3; 5.2 Safe and secure environment for vulnerable patients; Section 4 item 4",
+      "responsible": "Ward nurse in-charge (verify); facility manager (correct deficiencies)",
+      "records": [
+        "Environmental safety checks documented per shift for vulnerable patients.",
+        "Deficiency escalation and correction records.",
+        "Audit sample showing environment verified on admission."
+      ]
+    },
+    {
+      "oe_code": "COP.12.c",
+      "requirement": "The organization identifies and manages patients who are at risk of fall.",
+      "steps": "Section 3; 5.3 Fall-risk identification and management; Section 4 item 1",
+      "responsible": "Nurses (screen and intervene); treating doctors (medication review); physiotherapist (mobility)",
+      "records": [
+        "Fall-risk screening using validated tool on admission and at defined intervals.",
+        "Documented fall-prevention interventions for at-risk patients.",
+        "Fall incident reports with investigation and CAPA.",
+        "Patient/family education records on fall prevention."
+      ]
+    },
+    {
+      "oe_code": "COP.12.d",
+      "requirement": "The organization identifies and manages patients who are at risk of developing / worsening of pressure ulcers.",
+      "steps": "Section 3; 5.4 Pressure-ulcer risk identification and management; Section 4 item 1",
+      "responsible": "Nurses (screen and reposition); treating doctors (nutrition, wound care orders)",
+      "records": [
+        "Pressure-ulcer risk screening using validated tool on admission and daily for at-risk patients.",
+        "Repositioning schedule documented and adhered to.",
+        "Skin inspection records.",
+        "New or worsening pressure-ulcer incident reports with investigation."
+      ]
+    },
+    {
+      "oe_code": "COP.12.e",
+      "requirement": "The organization identifies and manages patients who are at risk of developing or worsening of deep vein thrombosis.",
+      "steps": "Section 3; 5.5 Deep vein thrombosis risk identification and management; Section 4 item 1",
+      "responsible": "Treating doctors (screen and prescribe prophylaxis); nurses (apply mechanical measures)",
+      "records": [
+        "DVT risk screening using validated tool on admission and pre-surgery.",
+        "Documented prophylaxis plan (mechanical and/or pharmacological).",
+        "VTE event reports with investigation.",
+        "Patient education records on DVT prevention."
+      ]
+    },
+    {
+      "oe_code": "COP.12.f",
+      "requirement": "The organization identifies and manages patients who need restraints.",
+      "steps": "Section 3; 5.6 Patients who need restraints; Section 4 item 3",
+      "responsible": "Treating doctor (order); nurses (apply, monitor, release); ward nurse in-charge (compliance)",
+      "records": [
+        "Restraint order with indication, type, and maximum duration documented.",
+        "Patient/family informed and documentation of discussion.",
+        "Neurovascular and skin checks at defined intervals documented.",
+        "Discontinuation documented when indication resolved."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "COP.12 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"The organization identifies and manages patients who are at higher risk of morbidity and mortality.\" COP.12.a–f PDF index 74. Asterisked OEs: a, f. Levels: c/d/e Core, rest Commitment. PDF has \"worsening of developing\" in COP.12.e — clean grammar used.\n\nSHAPE: Six What-we-do subsections (5.1–5.6). No stop-work. Disclaimer accreditation-only. COP clinical roles.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "COP v2 template: adoptable shape, plain English, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation identifies and manages patients who are at higher risk of morbidity and mortality — vulnerable patients, fall risk, pressure ulcers, deep vein thrombosis, and patients who need restraints.",
+  "exceptions": "1. Every admitted patient is screened for vulnerability, fall risk, pressure-ulcer risk, and DVT risk using the tools this hospital has adopted.\n2. A patient identified at risk has a documented management plan initiated within «4 hours» of identification.\n3. Restraints are not applied without documented clinical justification, a doctor's order, and time-limited review.\n4. A vulnerable patient is not left in an environment that has been identified as unsafe for that category of vulnerability.\n5. Risk reassessment occurs at defined intervals and on clinical change.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit covers:\n\n- Vulnerability screening completed on admitted patients (sample charts).\n- Management plans initiated within the defined timeframe.\n- Fall-risk screening and interventions documented.\n- Pressure-ulcer screening and repositioning schedules in place.\n- DVT-risk screening and prophylaxis documented.\n- Restraint use: order, time-limit, checks, and discontinuation documented.\n- Environment safety checks for vulnerable patients completed.\n\nRoot-cause analysis is required when a higher-risk patient safety event (fall, new pressure ulcer, VTE, restraint injury) recurs within six months.\n\nThis policy is reviewed «annually», and sooner when screening tools or evidence-based guidelines change.",
+  "training_competency": "All clinical staff are trained on this policy at induction and «once a year» after that. Training covers screening tools, management plans, environmental safety, fall prevention, pressure-ulcer prevention, DVT prophylaxis, and safe restraint use.\n\nStaff acknowledgement\n\nI have read this Higher-Risk Patients policy of {{HOSPITAL_NAME}}. I will identify and manage patients at higher risk in accordance with the standards described and will report safety events promptly.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The ward nurse in-charge holds signed acknowledgements with the training file.)",
+  "resources_required": "Document number: «COP/POL/12»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "cop_v2_adoptable_shape",
+  "subtitle": "Identifying and managing patients at higher risk.",
+  "doc_no": "«COP/POL/12»"
+}
