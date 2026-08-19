@@ -38,7 +38,7 @@
     },
     {
       "oe_code": "FMS.4.b",
-      "requirement": "Medical gases are handled, stored, distributed and used in a safe manner",
+      "requirement": "Medical gases are handled, stored, distributed and used in a safe manner.",
       "steps": "Section 3; 5.2 Handle, store, distribute and use medical gases safely",
       "responsible": "Gas-Plant In-Charge (store); clinical users (identity check at use)",
       "records": [
@@ -49,7 +49,7 @@
     },
     {
       "oe_code": "FMS.4.c",
-      "requirement": "Alternate sources for medical gases, vacuum and compressed air are provided for, in case of failure and their functioning is tested at a predefined frequency",
+      "requirement": "Alternate sources for medical gases, vacuum and compressed air are provided for, in case of failure and their functioning is tested at a predefined frequency.",
       "steps": "Section 3; 5.3 Prove alternate sources by a functioning test",
       "responsible": "Gas-Plant In-Charge",
       "records": [
