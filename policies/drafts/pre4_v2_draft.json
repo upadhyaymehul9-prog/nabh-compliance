@@ -1,0 +1,120 @@
+{
+  "standard_code": "PRE.4",
+  "chapter": "PRE",
+  "oe_codes": [
+    "PRE.4.a",
+    "PRE.4.b",
+    "PRE.4.c",
+    "PRE.4.d",
+    "PRE.4.e",
+    "PRE.4.f"
+  ],
+  "policy_title": "Information, Education and Communication about Healthcare Needs",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} educates the patient and/or family in a language and format they can understand; covers medicines and side effects when appropriate, food-drug interaction, diet, nutrition and immunisations, the specific disease process with complications and prevention, preventing healthcare-associated infections; and communicates effectively.\n\nRights at entry are PRE.1. The consent conversation is PRE.3. Follow-up advice on the discharge summary is AAC.8.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies wherever a patient or family is taught about healthcare needs: registration after stabilisation, out-patient, emergency, in-patient, day-care, ICU if it exists, and at discharge.\n\nIt binds treating doctors, nurses, the «Patient Rights Officer» as education lead where named, and the «Quality Coordinator» who audits.\n\nBoundaries:\n\n- PRE.3.b is the consent conversation; this policy is ongoing education in the same language.\n- AAC.8 owns follow-up advice on the discharge summary and hands teaching method to PRE.\n- MOM.6 administers; MOM.7 captures NM/ME/ADR; PRE.4.b teaches about medicines and side effects.\n- COP.13, COP.8 and HIC.3 own clinical diet, immunisation and kitchen method; PRE.4.c teaches.\n- HIC.2/HIC.4/HIC.5 own IPC method; PRE.4.e teaches how patients can help prevent HAI.\n- PRE.2.j access to records; IMS owns the file.",
+  "policy_statement": "{{HOSPITAL_NAME}} educates the patient and/or family in a language and format that they can understand.\n\n{{HOSPITAL_NAME}} educates about safe and effective use of medication and potential side effects when appropriate.\n\n{{HOSPITAL_NAME}} educates about food-drug interaction and about diet, nutrition and immunisations.\n\n{{HOSPITAL_NAME}} educates about the specific disease process, complications and prevention strategies.\n\n{{HOSPITAL_NAME}} educates about preventing healthcare-associated infections.\n\n{{HOSPITAL_NAME}} communicates with patients and/or families effectively. A leaflet unread, or a monologue without checking understanding, is not effective communication.",
+  "procedure_steps": [
+    "5.1 Education in a language and format they can understand\n\nPatient and/or family are educated in a language and format that they can understand.\n\nLanguage and format — spoken language, written material, interpreter, accompanying family as translator, and what is done when the patient cannot read — are chosen and recorded in «Hindi and English» or the patient's language. PRE.3.b uses the same language for consent; this step is ongoing education.",
+    "5.2 Medicines and potential side effects, when appropriate\n\nPatient and/or family are educated about the safe and effective use of medication and the potential side effects of the medication, when appropriate.\n\nEducation is given at start of a medicine, at a change, or at discharge as this hospital defines — «at start and at any dose change, and again at discharge if the medicine continues». Administration remains MOM.6. Event capture remains MOM.7.",
+    "5.3 Food-drug interaction, diet, nutrition and immunisations\n\nPatient and/or family are educated about food-drug interaction and about diet, nutrition and immunisations.\n\nTeaching for each topic this hospital uses is recorded. Nutritional-risk screen and therapeutic diet remain COP.13. Paediatric immunisation assessment remains COP.8. Unused immunisation as a service is a recorded absence.",
+    "5.4 Specific disease process, complications and prevention\n\nPatient and/or family are educated about their specific disease process, complications and prevention strategies.\n\nTeaching covers the condition this patient has, not only a generic poster. Diagnosis and care plan remain AAC.3.",
+    "5.5 Preventing healthcare-associated infections\n\nPatient and/or family are educated about preventing healthcare associated infections.\n\nPatients and families are told what they can do — hand hygiene, not touching devices, telling staff of fever — as «a short ward talk at admission and a reminder at discharge». Bundles and surveillance remain HIC.",
+    "5.6 Communication done effectively\n\nCommunication with the patients and/or families is done effectively.\n\nUnderstanding is checked — «the patient or family repeats the key point in their own words». If they cannot, staff adapt and record that. Marcus (2014) EDUCATE and Nouri and Rudd (2015) are frameworks, not mandated acronyms on a form. A harvested signature is not a check of understanding."
+  ],
+  "responsibility": "Medical Superintendent — accountable for education and effective communication.\n\nPatient Rights Officer (or named education lead)\n- Holds language-and-format method, topic methods and effective-communication method.\n\nDoctors and nurses — teach and check understanding.\n\nQuality Coordinator — audits «quarterly».",
+  "references_text": "- NABH SHCO 3rd Edition — standard PRE.4.\n- Badarudeen and Sabharwal (2010) — ch 1; readability framework.\n- Marcus C (2014) EDUCATE — ch 11; verbal education framework.\n- Nouri SS and Rudd RE (2015) — ch 14; oral health literacy framework.\n- Ha JF and Longnecker N (2010) — ch 7; doctor-patient communication framework.\n- Internal documents of {{HOSPITAL_NAME}}: education methods; rights, consent, discharge, medication and infection-prevention policies.",
+  "distribution": "Master copy: Medical Superintendent, Patient Rights Officer, Quality Coordinator.\n\nCopies: out-patient, emergency, wards, ICU if exists, nursing administration.\n\nAvailable at «front-office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».",
+  "abbreviations": "HAI — healthcare-associated infection\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nPRE — Patient Rights and Education\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition rather than duties under a named Act of Parliament. In particular those arising under no named Act of Parliament; the duties in this document are accreditation requirements of the NABH SHCO 3rd Edition are written here as accreditation method, not as a copied statute. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "PRE.4.a",
+      "requirement": "Patient and/or family are educated in a language and format that they can understand.",
+      "steps": "Statement of intent; Section 3; 5.1 Language and format; 5.6 Effective communication",
+      "responsible": "Patient Rights Officer (method); doctors and nurses (teach)",
+      "records": [
+        "Written language-and-format method including illiteracy and interpreter use.",
+        "Sample teaching records in the language used.",
+        "Recorded split that PRE.3.b is the consent conversation.",
+        "Quarterly audit sample."
+      ]
+    },
+    {
+      "oe_code": "PRE.4.b",
+      "requirement": "Patient and/or family are educated about the safe and effective use of medication and the potential side effects of the medication, when appropriate.",
+      "steps": "Section 3; 5.2 Medicines and side effects; Section 4 item 2",
+      "responsible": "Staff who start or change medicines; MOM.6/MOM.7 (administration and events)",
+      "records": [
+        "Written method for medication and side-effect education including when appropriate.",
+        "Sample teaching records at start, change or discharge.",
+        "Recorded split that MOM.7 still captures NM/ME/ADR.",
+        "Quarterly audit sample."
+      ]
+    },
+    {
+      "oe_code": "PRE.4.c",
+      "requirement": "Patient and/or family are educated about food-drug interaction and about diet, nutrition and immunisations.",
+      "steps": "Section 3; 5.3 Food-drug, diet, nutrition and immunisations",
+      "responsible": "Staff who teach; COP.13/COP.8/HIC.3 (clinical and kitchen acts)",
+      "records": [
+        "Written method for food-drug, diet, nutrition and immunisation education.",
+        "Recorded absence for topics not provided.",
+        "Sample teaching records.",
+        "Quarterly audit sample."
+      ]
+    },
+    {
+      "oe_code": "PRE.4.d",
+      "requirement": "Patient and/or family are educated about their specific disease process, complications and prevention strategies.",
+      "steps": "Section 3; 5.4 Disease process, complications and prevention",
+      "responsible": "Treating clinicians; AAC.3 (care plan)",
+      "records": [
+        "Written method for disease-process education specific to the patient's condition.",
+        "Sample records — not a generic poster counted as teaching.",
+        "Quarterly audit sample.",
+        "Review when AAC.3 is revised."
+      ]
+    },
+    {
+      "oe_code": "PRE.4.e",
+      "requirement": "Patient and/or family are educated about preventing healthcare associated infections.",
+      "steps": "Section 3; 5.5 Preventing healthcare-associated infections",
+      "responsible": "Ward nurses and doctors; HIC (IPC method)",
+      "records": [
+        "Written method for patient/family HAI-prevention teaching.",
+        "Sample admission and discharge teaching records.",
+        "Recorded split that HIC owns bundles and surveillance.",
+        "Quarterly audit sample."
+      ]
+    },
+    {
+      "oe_code": "PRE.4.f",
+      "requirement": "Communication with the patients and/or families is done effectively.",
+      "steps": "Section 3; 5.6 Communication done effectively; Sections 5.1–5.5",
+      "responsible": "Patient Rights Officer (method); all staff who teach",
+      "records": [
+        "Written effective-communication method with teach-back and adaptation when not understood.",
+        "Sample encounters recording understanding check, not only signature.",
+        "Framework use of Marcus 2014, Ha and Longnecker 2010, Nouri and Rudd 2015 — not pasted protocols.",
+        "Quarterly audit sample of communication that worked."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "PRE.4 v2 (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9. PRE.4.f asterisked. PRE.4.e uses \"healthcare associated infections\" (no hyphen). Accreditation-only P2. No stop-work.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "PRE v2 template: six steps, plain English, PRE roles, no stop-work, accreditation-only P2."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Patients and families have a right to information, education and communication about their healthcare needs in a language and manner that is understood by them — not a leaflet they cannot read and never hear explained again.",
+  "exceptions": "The following are prohibited.\n\n1. Handing education material only in a language or format the patient cannot use.\n2. Starting or changing a medicine without side-effect education when this hospital's method says it is appropriate.\n3. Treating a generic \"be healthy\" poster as education about this patient's specific disease process.\n4. Counting a harvested signature as proof the patient understood.\n5. Rewriting MOM.6, MOM.7, COP.13, COP.8 or HIC bundles as this education policy.\n\nStaff report defects to the «Patient Rights Officer» or «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits «quarterly» for language and format; medicines when appropriate; food-drug, diet, nutrition and immunisations; disease process; HAI prevention teaching; and evidence communication was effective, not only a leaflet or signature.\n\nReviewed «annually» or sooner when AAC.8, MOM or HIC policies change.",
+  "training_competency": "Clinical staff train at induction and «once a year» on language choice, teach-back, and when to escalate if the family cannot understand.\n\nStaff acknowledgement — I will check understanding, not only hand a leaflet.\n\n\nName: ___________________________    Designation: ___________________________\n\nDate: ____________    Signature: ___________________________\n\n\n(Patient Rights Officer holds acknowledgements.)",
+  "resources_required": "Document number: «PRE/POL/04»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Patient Rights Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "pre_v2_adoptable_shape",
+  "subtitle": "Teaching patients and families about healthcare needs."
+}
