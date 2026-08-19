@@ -1,0 +1,123 @@
+{
+  "standard_code": "HIC.3",
+  "chapter": "HIC",
+  "oe_codes": [
+    "HIC.3.a",
+    "HIC.3.b",
+    "HIC.3.c",
+    "HIC.3.d",
+    "HIC.3.e",
+    "HIC.3.f"
+  ],
+  "policy_title": "Infection Prevention and Control in Support Services",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} implements infection prevention and control in support services: engineering controls, infection risk during construction/renovation, housekeeping, bio-medical waste (BMW) management, laundry and linen management, and kitchen sanitation and food handling.\n\nBoundaries: waste/linen/kitchen infection mechanics are owned here; facilities environment engineering stays with FMS. BMW segregation, treatment and disposal under the Bio-Medical Waste Management Rules, 2016 are addressed here to the extent they are an infection-control requirement.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to all support service areas of {{HOSPITAL_NAME}}: maintenance/engineering, housekeeping, bio-medical waste handling, laundry, kitchen/pantry, and any construction/renovation project.\n\nIt covers the six elements HIC.3.a–f name: engineering controls, construction/renovation ICRA, housekeeping procedures, BMW handling, laundry/linen management, and kitchen sanitation.\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- FMS owns the built environment, HVAC maintenance schedules and fire safety; this policy owns infection-prevention engineering controls.\n- HIC.1 owns programme governance.\n- HIC.2 owns clinical practices (hand hygiene, standard precautions, antimicrobials).\n- HIC.4 owns prevention of specific HAI and occupational health.\n- HIC.5 owns surveillance including housekeeping effectiveness monitoring.\n- HIC.6 owns sterilisation/disinfection of instruments and devices.\n- MOM.9 owns implant procurement/traceability; this policy does not cover procurement.",
+  "policy_statement": "{{HOSPITAL_NAME}} ensures appropriate engineering controls to prevent infections. Construction and renovation projects are planned with an infection control risk assessment (ICRA). Housekeeping procedures follow defined protocols. BMW is handled safely under the Bio-Medical Waste Management Rules, 2016. Laundry and linen management and kitchen sanitation processes are followed to prevent cross-contamination.",
+  "procedure_steps": [
+    "5.1 Engineering controls to prevent infections\n\n{{HOSPITAL_NAME}} maintains appropriate engineering controls including:\n\n- Adequate ventilation and air changes in clinical areas per ASHRAE/ISHRAE or national guidelines — «minimum 6 air changes per hour in general wards, 12 in OT, negative pressure in isolation rooms».\n- HEPA filtration where required (OT, isolation).\n- Potable water quality monitoring and storage tank cleaning «quarterly».\n- Sewage treatment / effluent management to prevent environmental contamination.\n\nThe Infection Control Officer and the maintenance team conduct a joint round «monthly» to verify engineering controls are functioning. Deficiencies are reported to FMS for correction and tracked to closure.",
+    "5.2 Infection control risk during construction and renovation\n\nBefore any construction or renovation in or adjacent to patient-care areas, the Infection Control Officer completes an Infection Control Risk Assessment (ICRA). The ICRA classifies project type and patient-risk group to determine required precautions:\n\n- Dust barriers, negative-pressure in construction zone, sealed windows.\n- Alternate traffic routes for construction workers and debris.\n- Air monitoring during and after the project.\n- Terminal cleaning before the area is returned to clinical use.\n\nThe ICRA and mitigation plan are approved by the «Medical Superintendent» before work begins. Compliance is monitored by the Infection Control Nurse during the project.",
+    "5.3 Housekeeping procedures\n\n{{HOSPITAL_NAME}} adheres to housekeeping procedures that prevent cross-contamination:\n\n- Cleaning schedules define frequency for each area (high-risk areas «three times a day plus terminal cleaning after discharge»).\n- Colour-coded cleaning equipment (mops, buckets, cloths) prevents cross-contamination between areas.\n- Disinfectant selection and dilution are per the Infection Control Committee's approved list.\n- Spill management protocol: contain, disinfect, clean, dispose.\n- Terminal cleaning after isolation/barrier nursing discharge.\n- Housekeeping staff are trained in infection-control cleaning methods at induction and «annually».\n\nEffectiveness is monitored under HIC.5.e (surveillance of housekeeping).",
+    "5.4 Bio-medical waste handling\n\nBMW at {{HOSPITAL_NAME}} is segregated at point of generation into colour-coded categories per the Bio-Medical Waste Management Rules, 2016:\n\n- Yellow: human anatomical waste, soiled waste, expired medicines, chemical waste (cytotoxic).\n- Red: contaminated recyclable waste (tubing, syringes without needles, gloves).\n- White (puncture-proof): sharps (needles, blades, glass).\n- Blue: glassware waste (where applicable).\n\nBMW is stored in a designated, secured intermediate storage area for no longer than «48 hours». Collection, transport, treatment and disposal are handled by the «authorised common biomedical waste treatment facility (CBWTF)» under a valid agreement. Records include daily segregation logs, transport manifests, monthly returns and the annual report to the State Pollution Control Board.",
+    "5.5 Laundry and linen management\n\n{{HOSPITAL_NAME}} adheres to laundry and linen management processes that prevent infection transmission:\n\n- Soiled linen is collected in leak-proof bags/containers at the point of use; colour coding distinguishes infectious linen from routine soiled linen.\n- Transport to the laundry is in covered trolleys on a defined route that avoids clean areas.\n- Washing uses thermal disinfection («65 °C for 10 minutes or 71 °C for 3 minutes») or chemical disinfection for heat-sensitive items.\n- Clean linen is stored in a covered, designated area separate from soiled holding.\n- Linen inventory and replacement schedule ensure no visibly damaged or stained linen is in circulation.\n\nThe laundry area layout follows a one-way dirty-to-clean flow. Staff handling infectious linen wear PPE (heavy-duty gloves, gown, mask).",
+    "5.6 Kitchen sanitation and food handling\n\n{{HOSPITAL_NAME}} adheres to kitchen sanitation and food-handling practices that prevent foodborne infection:\n\n- Kitchen staff undergo pre-employment and «annual» medical fitness screening (stool culture, skin examination).\n- Personal hygiene: hand washing before handling food, hair covering, clean uniform, no jewellery in food-prep areas.\n- Food storage: cold chain maintained («below 5 °C for perishables»); dry stores above floor level; FIFO rotation.\n- Cooking: core temperature of cooked food reaches «74 °C».\n- Serving: food served within «2 hours» of cooking or kept hot at ≥ 63 °C; therapeutic diets labelled and dispatched per dietitian order.\n- Cleaning: kitchen surfaces and equipment sanitised «after every meal service»; pest control «monthly».\n- Water used in kitchen is tested for potability «quarterly».\n\nRecords include food-handler medical clearance, daily temperature logs, pest control reports and cleaning schedules."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable for resources, ICRA approval and support-service standards.\n\nInfection Control Officer\n- Conducts ICRA, approves disinfectant list, oversees engineering controls jointly with maintenance.\n\nInfection Control Nurse\n- Monitors housekeeping, laundry and kitchen practices; trains support staff.\n\nInfection Control Committee\n- Reviews audit findings, approves BMW SOPs and cleaning protocols.\n\nHousekeeping In-Charge\n- Implements cleaning schedules, spill management and colour-coding compliance.\n\nBMW handler / waste management coordinator\n- Ensures segregation, storage, transport and disposal per the BMW Rules, 2016.\n\nLaundry In-Charge\n- Maintains dirty-to-clean flow, thermal/chemical disinfection parameters and linen inventory.\n\nKitchen / Dietetics In-Charge\n- Ensures food-handler hygiene, cold chain, cooking temperatures and kitchen cleaning.\n\nQuality Coordinator\n- Audits this policy «quarterly»; tracks CAPA closure.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — HIC chapter, standard HIC.3.\n- Bio-Medical Waste Management Rules, 2016, and amendments (Ministry of Environment, Forest and Climate Change, India).\n- Guidelines on Airborne Infection Control, National Centre for Disease Control, India.\n- WHO Best Practices for Environmental Cleaning in Healthcare Facilities (2019).\n- Internal documents of {{HOSPITAL_NAME}}: housekeeping SOP, BMW SOP, laundry SOP, kitchen sanitation SOP, ICRA template.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Infection Control Officer and the Quality Coordinator.\n\nCopies issued to: housekeeping, BMW room, laundry, kitchen, maintenance/engineering, nursing administration.\n\nThe current version is available to all staff at the «infection control manual / staff intranet».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "BMW — bio-medical waste\nCAPA — corrective and preventive action\nCBWTF — common biomedical waste treatment facility\nFMS — Facility Management and Safety (NABH SHCO chapter)\nHAI — healthcare-associated infection\nHEPA — high-efficiency particulate air\nHIC — Hospital Infection Prevention and Control (NABH SHCO chapter)\nICRA — infection control risk assessment\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPPE — personal protective equipment\nSHCO — Standards for Small Healthcare Organisations\nWHO — World Health Organization",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nSeveral requirements in this document are statutory rather than advisory — in particular those arising under the Bio-Medical Waste Management Rules, 2016, insofar as biomedical waste is segregated, treated and disposed of under those rules. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "HIC.3.a",
+      "requirement": "The organisation has appropriate engineering controls to prevent infections.",
+      "steps": "Section 3; 5.1 Engineering controls to prevent infections",
+      "responsible": "Infection Control Officer (specify requirements); maintenance team (implement); FMS (infrastructure)",
+      "records": [
+        "Engineering control specifications (air changes, filtration, water treatment) per area.",
+        "Joint monthly verification round records (ICO + maintenance).",
+        "Deficiency reports and closure tracking.",
+        "Water quality test reports (potability, storage tank cleaning)."
+      ]
+    },
+    {
+      "oe_code": "HIC.3.b",
+      "requirement": "The organisation designs and implements a plan to reduce the risk of infection during construction and renovation.",
+      "steps": "Section 3; 5.2 Infection control risk during construction and renovation; Section 4 item 1",
+      "responsible": "Infection Control Officer (ICRA); Medical Superintendent (approve); project contractor (comply)",
+      "records": [
+        "Completed ICRA form for each project with risk classification and precautions.",
+        "Approval record signed before work commences.",
+        "Compliance monitoring records during the project.",
+        "Terminal cleaning verification before area returned to clinical use."
+      ]
+    },
+    {
+      "oe_code": "HIC.3.c",
+      "requirement": "The organisation adheres to housekeeping procedures.",
+      "steps": "Section 3; 5.3 Housekeeping procedures",
+      "responsible": "Housekeeping In-Charge (implement); Infection Control Nurse (monitor); HIC.5.e (surveillance)",
+      "records": [
+        "Area-wise cleaning schedule with frequency and method.",
+        "Colour-coded equipment allocation register.",
+        "Disinfectant dilution and usage log.",
+        "Spill management incident records.",
+        "Terminal cleaning records after isolation discharge."
+      ]
+    },
+    {
+      "oe_code": "HIC.3.d",
+      "requirement": "Biomedical waste (BMW) is handled appropriately and safely.",
+      "steps": "Section 3; 5.4 Bio-medical waste handling; Section 4 items 2, 3",
+      "responsible": "BMW handler/coordinator (day-to-day); Infection Control Officer (oversee); all staff (segregate at source)",
+      "records": [
+        "Daily BMW segregation log by category and weight.",
+        "CBWTF agreement and collection manifests.",
+        "Monthly returns and annual report to State Pollution Control Board.",
+        "Training records for BMW handlers.",
+        "Incident reports for segregation breaches."
+      ]
+    },
+    {
+      "oe_code": "HIC.3.e",
+      "requirement": "The organisation adheres to laundry and linen management processes.",
+      "steps": "Section 3; 5.5 Laundry and linen management; Section 4 item 4",
+      "responsible": "Laundry In-Charge (process); Infection Control Nurse (audit); housekeeping (collection at ward)",
+      "records": [
+        "Laundry process protocol with thermal/chemical disinfection parameters.",
+        "Temperature log of wash cycles.",
+        "Linen inventory and replacement schedule.",
+        "Layout diagram showing dirty-to-clean one-way flow."
+      ]
+    },
+    {
+      "oe_code": "HIC.3.f",
+      "requirement": "The organisation adheres to kitchen sanitation and food-handling issues.",
+      "steps": "Section 3; 5.6 Kitchen sanitation and food handling; Section 4 item 5",
+      "responsible": "Kitchen/Dietetics In-Charge (implement); Infection Control Nurse (audit); Medical Superintendent (medical clearance oversight)",
+      "records": [
+        "Food-handler medical fitness records (pre-employment and annual).",
+        "Daily food temperature logs (storage, cooking, serving).",
+        "Pest control schedule and reports.",
+        "Kitchen cleaning schedule and surface sanitisation records."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HIC.3 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"The organisation implements the infection prevention and control programme in support services.\" HIC.3.a–f PDF index 100. Three asterisked OEs: HIC.3.a, HIC.3.b, HIC.3.e (Commitment). No stop-work.\n\nSHAPE: Six What-we-do subsections (5.1–5.6). No stop-work. Disclaimer with BMW statute clause. HIC roles.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "HIC v2 template: adoptable shape, plain English, HIC roles, six steps, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation implements the infection prevention and control programme in support services — engineering controls, construction/renovation infection risk, housekeeping, bio-medical waste (BMW), laundry/linen and kitchen sanitation.",
+  "exceptions": "The following are prohibited. There is no convenience exception.\n\n1. Undertaking construction or renovation in or adjacent to patient-care areas without a documented infection control risk assessment (ICRA) and mitigation plan.\n2. Mixing BMW colour-coded categories during segregation at source.\n3. Storing untreated BMW beyond «48 hours» (or the time limit prescribed under the BMW Rules, 2016).\n4. Using visibly soiled or damp linen on patient beds.\n5. Allowing kitchen staff to handle food without hand washing, hair covering, and clean protective clothing.\n6. Disabling or bypassing engineering controls (negative-pressure, HEPA filtration, air changes) without written authorisation from the Infection Control Officer.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Engineering control verification records (ventilation, water quality).\n- ICRA completion and compliance for any ongoing construction/renovation.\n- Housekeeping schedule adherence and colour-coding compliance.\n- BMW segregation accuracy, storage time compliance, CBWTF records.\n- Laundry process parameters (temperature logs, clean-linen culture results where done).\n- Kitchen sanitation: food-handler medicals, temperature logs, pest control.\n\nRoot-cause analysis is required when BMW segregation errors exceed «5 %» in a monthly audit or when a foodborne illness cluster is traced to the kitchen.\n\nThis policy is reviewed «annually», and sooner when the BMW Rules are amended or after an infection linked to a support service.",
+  "training_competency": "All support-service staff (housekeeping, BMW handlers, laundry, kitchen) are trained on this policy at induction and «once a year» after that. Training covers colour coding, PPE use, hand hygiene, cleaning methods, and reporting spills or breaches.\n\nStaff acknowledgement\n\nI have read this Infection Prevention and Control in Support Services policy of {{HOSPITAL_NAME}}. I will follow the procedures for my area and report breaches immediately.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / area: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Infection Control Nurse holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: HIC/POL/03\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Infection Control Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "hic_v2_adoptable_shape",
+  "subtitle": "Infection control in engineering, housekeeping, waste, laundry and kitchen.",
+  "doc_no": "HIC/POL/03"
+}
