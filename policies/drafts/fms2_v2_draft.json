@@ -1,0 +1,129 @@
+{
+  "standard_code": "FMS.2",
+  "chapter": "FMS",
+  "oe_codes": [
+    "FMS.2.a",
+    "FMS.2.b",
+    "FMS.2.c",
+    "FMS.2.d",
+    "FMS.2.e",
+    "FMS.2.f",
+    "FMS.2.g"
+  ],
+  "policy_title": "Safety of Patients, Families, Staff and Visitors",
+  "purpose": "This policy governs how {{HOSPITAL_NAME}} keeps the building safe for patients, families, staff and visitors: patient-safety devices and infrastructure, access for the differently-abled, extra-security areas, monthly facility inspection rounds, electrical-installation audits, unused material, and building hazardous materials.\n\nIt is not a generator-load test, a medical-equipment PPM file, a medical-gas SOP, or a fire plan. A finding on a round is recorded here and closed by the programme that owns the plant, the device, the gas or the fire provision.\n\nEditable defaults are marked «like this». True blanks — «________» — have no sensible default and must be completed before this document is signed.",
+  "scope": "This policy applies to the buildings, grounds and occupied spaces of {{HOSPITAL_NAME}} and to the people who inspect devices, keep access usable, control extra-security areas, walk monthly rounds, audit the electrical installation, condemn unused material, and identify building hazardous materials.\n\nIt covers grab rails, wet-area flooring, window restrictors, call-bell hardware and similar fabric; ramps, lifts and accessible toilets this building actually has; locks, access descriptions and CCTV if installed; facility inspection rounds at least once a month; electrical safety audits of the installation; identification and disposal of material not in use; and identification and safe use of housekeeping chemicals, water-treatment chemicals, diesel, mercury if still present, and engineering solvents.\n\nIt does not govern planned utilities and energy initiatives, medical-equipment PPM, medical gases, or fire-equipment maintenance. Fire extinguishers found missing on a round are a finding here that the fire programme must close. Laboratory bench chemical hygiene, blood and body-fluid spills, cytotoxic bench spills, and biomedical-waste colours stay those programmes. Locks and cameras are here; matching a neonate and observing a vulnerable adult stay those care policies. PESO and gas-cylinder rules, if they apply, live on the applicable-legislation register — not as this chemical list counted twice.",
+  "policy_statement": "Patient-safety devices that prevent a foreseeable harm in the building are installed and inspected. Grab rails in toilets and wet areas, anti-skid flooring where water is expected, window restrictors on upper floors, bumper guards on trolley routes, and nurse-call hardware as fabric, are this policy. Fire detection and extinguishers are the fire programme; they appear on a round as found, blocked or missing, not as this install-and-inspect list counted twice. Bed-rail use as a falls decision stays the vulnerable-adult care policy; this policy owns that the hardware exists and is fixed.\n\nFacilities for the differently-abled that this building actually provides — ramps or a working lift to floors used by patients, an accessible toilet, wayfinding a wheelchair user can follow — are kept usable. A single ramp to a locked side door is not that provision. Gudlavalleti (2018) and NBC 2016 access, as the local authority applied them, are the frameworks. This policy does not invent a NABH gradient or door-width for every small hospital.\n\nAreas that need extra security are named: pharmacy stores, medical records if held on site, nursery and labour, server or plant rooms, the gas manifold, and any other area the Medical Superintendent adds. Access by staff, patients and visitors is described. A CCTV monitor that is never watched is not extra security. Matching and handing over a neonate, and bedside observation of a vulnerable adult, stay those care policies; this policy owns the locks and the door.\n\nFacility inspection rounds walk occupied clinical and support spaces at least once a month. That interval is in the standard and is not optional. A register signed from the engineering office with no ward walk has not been held.\n\nElectrical safety audits cover the installation: earthing continuity, residual-current protection on wet-area and patient-care circuits, damaged flexible cords, sockets in wet areas, panel labelling and lockability, and isolated-power or equivalent in OT if an OT exists. IS 732 and IS 3043 are NBC-pointed frameworks. A megger reading from commissioning with no subsequent audit is not this audit. A failed medical device is the equipment programme; a failed building circuit is here.\n\nMaterial not in use — condemned furniture, obsolete equipment struck off the equipment inventory, unused building materials, expired non-biomedical stores — is identified, quarantined so it cannot be reused on a patient, and disposed of or sold. The four-colour clinical waste stream is not this procedure.\n\nHazardous materials this hospital actually holds are listed, labelled, segregated and used with the PPE and spill method for building chemical, mercury and fuel. An SDS folder in quality with an unlabelled jerry-can is not identification. Blood spills, cytotoxic bench spills, biomedical waste and laboratory bench hygiene stay those programmes. Dual entry when a spill meets two definitions.",
+  "procedure_steps": [
+    "5.1 Devices, access and extra security\n\nThe Maintenance In-Charge holds the installed-device list and inspects those devices «monthly», on the facility round. A grab rail that has pulled out of a wet-wall fixing, or a call bell that rings at the panel but not in the room, is withdrawn from reliance and repaired. Inspection from a purchase invoice is not inspection.\n\nDifferently-abled facilities this building has are walked on the same round and kept unblocked. A trolley bay on a ramp is a finding.\n\nExtra-security areas are listed, with the access description for staff, patients and visitors. Security Supervisor holds the hardware (locks, access control, CCTV if installed) and the watch roster. A breach that meets the incident definition is also entered in the incident system.",
+    "5.2 Monthly rounds and electrical safety audits\n\nThe «Maintenance In-Charge» walks occupied clinical and support spaces at least once a month. The circuit includes wards, theatre and labour if running, stores, plant rooms and extra-security areas. Findings — blocked exit, failed grab rail, wet floor without warning, unlabelled chemical, condemned item in a corridor, open electrical panel, missing extinguisher — are recorded, owned and closed. A missed month is a defect. A finding that caused harm is also an incident.\n\nElectrical safety audits of the installation are done «annually» by a «competent in-house person or licensed contractor». Scope: earthing, residual-current protection, wet-area sockets, panel lockability, and OT isolated-power or equivalent if an OT exists. A failed earth or missing ELCB is isolated until repaired. This is not the loaded generator test and not device calibration.",
+    "5.3 Unused material\n\nMaterial not in use is identified with tag, location, date and owner. If the item is equipment, the equipment programme strikes it off the inventory before the carcass is moved. It is stored so it cannot be reused on a patient, then disposed of or sold. A tagged item still in a patient bay is a failure of this policy.\n\nBiomedical waste stays the infection-control waste programme. WHO Safe Management of Wastes from Health-Care Activities is a waste framework only; it does not move colour-code ownership here.",
+    "5.4 Hazardous materials\n\nThe Maintenance In-Charge holds the inventory of classes this hospital actually holds — housekeeping and water-treatment chemicals, diesel and other fuels, mercury if a column still exists, engineering solvents, bulk stores outside the laboratory bench programme — or a recorded absence for a class not held.\n\nEvery container at the point of use is labelled. PPE and the spill method for building chemical, mercury and fuel are displayed at the store. Users are named. NBC 2016 storage provisions apply as the local authority applied them.\n\nBlood and body-fluid spills, cytotoxic preparation spills, biomedical waste and laboratory bench hygiene remain those programmes. Dual entry when a spill meets two definitions."
+  ],
+  "stop_work": "Every person on the premises has the authority and the duty to stop an act that breaches a non-negotiable rule: a monthly round being paper-signed; a condemned bed in a patient bay; an unlabelled chemical in use; a blocked ramp or exit.\n\nThe person says \"stop\", makes the immediate safe condition they are competent to make (remove the trolley from the ramp, take the unlabelled jerry-can out of use), and reports the same shift to the «Maintenance In-Charge» or the Night Duty Officer. There is no retaliation for a good-faith stop-work.",
+  "responsibility": "Roles below are titles, not vacancies.\n\nMedical Superintendent\n- Accountable that this policy is issued and followed.\n- Names extra-security areas not already listed.\n\nMaintenance In-Charge\n- Owns device inspection, monthly rounds, electrical-audit file, unused-material procedure and the hazardous-material inventory.\n\nNursing Superintendent\n- Keeps clinical areas walkable on the monthly round; does not park trolleys on ramps or in exits.\n\nSecurity Supervisor\n- Owns extra-security hardware and the watch roster.\n\nNight Duty Officer\n- Receives a night finding and does not leave a blocked exit or unlabelled chemical until morning.\n\nQuality Coordinator\n- Audits this policy «quarterly».\n\nA RACI snapshot:\n- Device inspection: Maintenance In-Charge (R/A)\n- Monthly round: Maintenance In-Charge (R); Medical Superintendent (A)\n- Electrical audit: competent auditor (R); Maintenance In-Charge (A)\n- Unused material: Maintenance In-Charge (R/A); equipment programme strikes devices off inventory\n- Hazardous materials: Maintenance In-Charge (R/A)\n- Extra security: Security Supervisor (R); Medical Superintendent (A)\n- Stop-work: all staff (R); Maintenance In-Charge (A for restart)",
+  "references_text": "- National Building Code of India, 2016 (Bureau of Indian Standards), building, access and electrical-installation framework as the local authority has applied it. IS 732, IS 3043 and IS 2190 are NBC-pointed practice, not extra disclaimer statutes.\n- Gudlavalleti, V. (2018). Challenges in Accessing Health Care for People with Disability in the South Asian Context. Int J Environ Res Public Health — disability-access framework.\n- Safe Management of Wastes from Health-Care Activities (2nd ed.). World Health Organization (2014) — waste framework only; biomedical-waste colour and authorisation remain the infection-control waste programme.\n- Hospital safety index: guide for evaluators – 2nd ed. World Health Organization (2015) — evaluator framework, not a mandated score.\n- Aggarwal, R., et al. (2010). Technology as applied to patient safety: an overview. Qual Saf Health Care — infrastructure framework.\n- NABH Standards for Small Healthcare Organisations, 3rd Edition, Chapter 8, standard FMS.2 (this policy is written so that those requirements are met in operation; it is not a commentary on the standard).\n- Internal: monthly round form; electrical audit; unused-material procedure; hazardous-material inventory; utilities, equipment, gas and fire programmes; incident system.",
+  "distribution": "Controlled master: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with a working copy held by the Maintenance In-Charge and the Quality Coordinator.\n\nIssued to: Security Supervisor, Nursing Superintendent, staff who walk the monthly round, department in-charges on the circuit.\n\nAvailable to all staff at the «Nursing Station policy folder» and, if the hospital keeps an intranet, at the «staff intranet / policies».\n\nOn revision, every displayed copy is withdrawn the same day. One dated superseded copy is retained by the Quality Coordinator.",
+  "abbreviations": "NBC — National Building Code of India, 2016\nELCB — earth-leakage circuit breaker\nRCCB — residual-current circuit breaker\nCCTV — closed-circuit television\nSDS — safety data sheet\nCAPA — corrective and preventive action\nRCA — root-cause analysis\n\nNight Duty Officer — the senior doctor or senior nurse holding emergency command overnight\nMaintenance In-Charge — the person accountable for rounds, devices and building hazardous materials under this policy\nSecurity Supervisor — the person accountable for extra-security hardware and the watch roster",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nSeveral requirements in this document are statutory rather than advisory — in particular those arising under the National Building Code of India, 2016, insofar as the local building and fire authority has applied it to this facility for occupancy, access and electrical-installation safety. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "FMS.2.a",
+      "requirement": "Patient-safety devices and infrastructure are installed across the organisation and inspected periodically.",
+      "steps": "Section 3; 5.1 Devices, access and extra security",
+      "responsible": "Maintenance In-Charge",
+      "records": [
+        "Installed-device list.",
+        "Monthly inspection records of fabric (grab rails, wet-area flooring, window restrictors, call-bell hardware).",
+        "Repair or withdrawal record for a failed device."
+      ]
+    },
+    {
+      "oe_code": "FMS.2.b",
+      "requirement": "The organisation has facilities for the differently-abled.",
+      "steps": "Section 3; 5.1 Devices, access and extra security",
+      "responsible": "Maintenance In-Charge",
+      "records": [
+        "List of facilities this building actually provides.",
+        "Monthly round findings that ramps and accessible toilets were unblocked.",
+        "Record that a ramp to a locked side door is not counted as the provision."
+      ]
+    },
+    {
+      "oe_code": "FMS.2.c",
+      "requirement": "Operational planning identifies areas which need to have extra security and describes access to different areas in the hospital by staff, patients, and visitors.",
+      "steps": "Section 3; 5.1 Devices, access and extra security",
+      "responsible": "Security Supervisor; Medical Superintendent (names the areas)",
+      "records": [
+        "Extra-security area list and access description.",
+        "Watch roster for CCTV or door control if installed.",
+        "Incident-file entry for a breach that met the incident definition."
+      ]
+    },
+    {
+      "oe_code": "FMS.2.d",
+      "requirement": "Facility inspection rounds to ensure safety are conducted at least once a month.",
+      "steps": "Section 3; 5.2 Monthly rounds and electrical safety audits",
+      "responsible": "Maintenance In-Charge (walks); Medical Superintendent (accountable)",
+      "records": [
+        "Monthly round reports showing a walk of clinical areas.",
+        "Closed findings with owner and date.",
+        "Record of a missed month treated as a defect."
+      ]
+    },
+    {
+      "oe_code": "FMS.2.e",
+      "requirement": "Organisation conducts electrical safety audits for the facility.",
+      "steps": "Section 3; 5.2 Monthly rounds and electrical safety audits",
+      "responsible": "Maintenance In-Charge; named competent auditor",
+      "records": [
+        "Electrical safety audit report at the defined interval.",
+        "Isolation-until-repaired records for a failed earth or missing ELCB.",
+        "Competence of the auditor (in-house or licensed contractor)."
+      ]
+    },
+    {
+      "oe_code": "FMS.2.f",
+      "requirement": "There is a procedure which addresses the identification and disposal of material(s) not in use in the organisation.",
+      "steps": "Section 3; 5.3 Unused material",
+      "responsible": "Maintenance In-Charge; equipment programme strikes devices off inventory",
+      "records": [
+        "Identification tags (location, date, owner).",
+        "Equipment strike-off before a device carcass is moved.",
+        "Quarantine and disposal or sale record."
+      ]
+    },
+    {
+      "oe_code": "FMS.2.g",
+      "requirement": "Hazardous materials are identified and used safely within the organisation.",
+      "steps": "Section 3; 5.4 Hazardous materials",
+      "responsible": "Maintenance In-Charge",
+      "records": [
+        "Inventory of classes actually held, or recorded absences.",
+        "Labels at the point of use; PPE and spill method at the store.",
+        "Named users.",
+        "Spill record or drill for building chemical, mercury or fuel."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "FORMAT EXPERIMENT (2026-08-19). FMS.2 v2 to the FMS.5 v2.2 shape.\n\nTechnical substance retained from v1: monthly interval is in the OE; NBC 2016\nas-applied; IS 732/IS 3043 NBC-pointed not CEA-in-P2; Gudlavalleti; WHO waste\nframework with BMW staying HIC.3; unused material is not BMW; building hazmat\nis not blood/cytotoxic/lab-bench; COP matching/observation stay care policies;\nHospital safety index is not a mandated score.\n\nFour 5.x subsections, five non-negotiables. Stop-work included. P2 NBC 2016.\nNo SQL. Status remains draft.\n",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "Template rebuild to FMS.5 v2.2 shape. Not an approved master."
+    }
+  ],
+  "status": "draft",
+  "definitions": "A round is a walk. An unlabelled jerry-can is not a programme. A condemned bed does not stay in a patient bay.",
+  "exceptions": "The following are prohibited.\n\n1. Signing a monthly facility inspection round without walking occupied clinical space.\n2. Leaving tagged or condemned unused material in a patient bay.\n3. Using an unlabelled hazardous material, or treating an SDS folder as identification when the container at the point of use has no label.\n4. Offering biomedical-waste colours as the unused-material procedure.\n5. Blocking a ramp, accessible toilet or extra-security door, or treating unwatched CCTV as extra security.\n\nAnyone who sees a prohibited act stops it under the stop-work clause and reports it the same shift to the «Maintenance In-Charge» or, at night, the Night Duty Officer.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored:\n- Device inspections that touched fabric, not invoices.\n- Monthly rounds that walked clinical areas; no missed month.\n- Electrical audit of the installation, not a generator-load test counted twice; isolation-until-repaired closed.\n- Unused-material tags that left the clinical floor; not biomedical-waste colours.\n- Hazardous-material labels at the point of use, not only an SDS folder.\n- Extra-security watch actually rostered.\n\nRoot-cause analysis is required when: a month is missed; a condemned item is found in a patient bay on two successive rounds; an unlabelled chemical is found in use; a grab rail fails in service. CAPA older than «thirty days» is escalated to the Medical Superintendent.\n\nThis policy is reviewed «annually», and sooner after a missed month.",
+  "training_competency": "Staff who walk rounds, handle building chemicals, or work on an occupied floor are trained against this policy at induction and «once a year» thereafter.\n\nStaff acknowledgement\n\nI have read this Safety of Patients, Families, Staff and Visitors policy of {{HOSPITAL_NAME}}. I will not sign a round I did not walk. I will not leave unused material in a patient bay. I will not use an unlabelled chemical.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________",
+  "resources_required": "Document number: «FMS/POL/02»\nIssue number: «01»\nVersion: 2.0 (template test — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\nNumber of pages: as printed\n\nPrepared by (designation): «Maintenance In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "fms_v2_adoptable_shape",
+  "doc_no": "«FMS/POL/02»",
+  "subtitle": "Standards for a walkable, labelled, electrically sound building.",
+  "footer_label": "Facility safety",
+  "acknowledgement_note": "The Nursing Superintendent holds signed acknowledgements with the induction record."
+}
