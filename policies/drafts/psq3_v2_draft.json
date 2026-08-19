@@ -1,0 +1,102 @@
+{
+  "standard_code": "PSQ.3",
+  "chapter": "PSQ",
+  "oe_codes": [
+    "PSQ.3.a",
+    "PSQ.3.b",
+    "PSQ.3.c",
+    "PSQ.3.d",
+    "PSQ.3.e"
+  ],
+  "policy_title": "Clinical Audit and Quality Improvement Programmes",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} maintains an established system for clinical audit and quality improvement programmes, satisfying PSQ.3.a–e.\n\nIt covers five elements: clinical audits performed to improve patient care; audit parameters defined by the organisation; medical and nursing staff participation; remedial measures implemented; and quality improvement projects undertaken.\n\nPSQ.3 owns the clinical audit system and QI projects. PSQ.1.h owns regular audits as a monitoring tool within the programmes. PSQ.2 owns indicators that may trigger an audit topic. PSQ.1 owns the QI programme under which QI projects operate.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to all clinical departments at {{HOSPITAL_NAME}} and to medical staff, nursing staff, the «Quality Coordinator» and the patient-safety / QI committee.\n\nIt covers the five objective elements PSQ.3.a–e. It does not cover the patient-safety and QI programmes as a whole (PSQ.1), key indicators (PSQ.2), management support (PSQ.4), or incident analysis (PSQ.5).\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- PSQ.1 owns the patient-safety and QI programmes. PSQ.3 is the clinical audit system that feeds findings into those programmes.\n- PSQ.1.h is regular audits as a monitoring tool. PSQ.3 owns the detailed clinical audit methodology and documentation.\n- PSQ.2 owns indicators. An indicator breach may trigger a clinical audit topic under PSQ.3.\n- PSQ.3.e (QI projects) operates under the QI programme (PSQ.1.e–g). The project method is here; the programme governance is PSQ.1.",
+  "policy_statement": "{{HOSPITAL_NAME}} performs clinical audits to improve the quality of patient care and documents the audit cycle from parameter selection through findings, remedial measures and re-audit.\n\nMedical and nursing staff participate in the clinical audit system. Remedial measures are implemented based on audit findings. {{HOSPITAL_NAME}} undertakes quality improvement projects that follow a structured methodology.\n\nClinical audits and QI projects exist to change practice, not to fill a register before an external visit.",
+  "procedure_steps": [
+    "5.1 Clinical audits to improve patient care\n\nClinical audits are performed at {{HOSPITAL_NAME}} to improve the quality of patient care and are documented. Each audit follows the audit cycle: select topic, define criteria and standards, collect data, analyse findings, implement changes, and re-audit to confirm improvement.\n\nAudit reports include: topic and rationale, parameters audited, method, sample, findings, gaps identified, remedial measures recommended, responsible person, target date and re-audit date. Completed audits are filed with the «Quality Coordinator» and findings are reported to the QI committee.",
+    "5.2 Audit parameters defined by the organisation\n\nThe parameters to be audited are defined by {{HOSPITAL_NAME}} before each audit begins. Parameter selection is based on «clinical risk areas, indicator trends (PSQ.2), incident patterns (PSQ.5), national guidelines, patient feedback and committee priorities».\n\nThe QI committee approves the annual audit plan that lists topics, parameters, frequency and responsible auditors. Ad-hoc audits may be added when an indicator breach, incident cluster or committee decision requires it. Parameters are documented in the audit plan and in each audit report.",
+    "5.3 Medical and nursing staff participation\n\nMedical and nursing staff participate in the clinical audit system. Clinicians serve as audit leads or team members for topics within their practice area. Nursing staff participate in audits related to nursing care, documentation, infection control and medication administration.\n\nParticipation is documented in audit team composition records and meeting attendance. The «Quality Coordinator» ensures that audits are not conducted solely by the quality department and that clinical ownership of audit findings is maintained.",
+    "5.4 Remedial measures implemented\n\nRemedial measures are implemented based on clinical audit findings. Each audit report includes specific remedial actions with a responsible person and target date. The «Quality Coordinator» tracks remedial measures to completion and reports status to the QI committee.\n\nRe-audit is scheduled to verify that remedial measures have achieved the intended improvement. If a re-audit shows that the gap persists, the committee escalates the issue and assigns additional measures. Remedial measures that require resources beyond the department are escalated to management under PSQ.4.",
+    "5.5 Quality improvement projects\n\n{{HOSPITAL_NAME}} undertakes quality improvement projects using a structured methodology — «Plan-Do-Study-Act (PDSA) cycles or an equivalent method documented in the project charter».\n\nEach QI project has a charter that includes: problem statement, aim, measures, baseline data, intervention, results and sustainability plan. Projects operate under the QI programme (PSQ.1.e–g) and are reported to the QI committee at «each quarterly meeting». Completed projects are documented with outcomes and lessons learned. The «Quality Coordinator» maintains a QI project register."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable that the clinical audit system and QI projects are implemented.\n\nQuality Coordinator\n- Maintains audit plan, audit reports and QI project register.\n- Tracks remedial measures and re-audits to completion.\n- Reports to the QI committee.\n\nPatient-Safety / QI Committee\n- Approves annual audit plan and QI project charters.\n- Reviews findings, remedial measures and project outcomes.\n\nTreating Clinicians (Medical Staff)\n- Serve as audit leads or team members; own clinical findings.\n\nNursing Staff\n- Participate in audits relevant to nursing care and documentation.\n\nDepartment Heads\n- Support audit access and implement department-level remedial measures.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Patient Safety and Quality Improvement chapter, standard PSQ.3.\n- Internal documents of {{HOSPITAL_NAME}}: annual clinical audit plan; audit reports; QI project charters and registers; QI committee minutes (PSQ.1); indicator dashboard (PSQ.2).",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator.\n\nCopies issued to: patient-safety / QI committee members; department heads; nursing administration; all clinical areas.\n\nThe current version is available to all staff at the «quality office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "CAPA — corrective and preventive action\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPDSA — Plan-Do-Study-Act\nPSQ — Patient Safety and Quality Improvement (NABH SHCO chapter 9)\nQI — quality improvement\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "PSQ.3.a",
+      "requirement": "Clinical audits are performed to improve the quality of patient care and documented.",
+      "steps": "Statement of intent; Section 3; 5.1 Clinical audits to improve patient care; Section 4 items 1, 4",
+      "responsible": "Quality Coordinator (file and report); treating clinicians (conduct); QI committee (review)",
+      "records": [
+        "Clinical audit reports with topic, criteria, method, findings and remedial measures.",
+        "Audit cycle completion records showing re-audit where applicable.",
+        "QI committee minutes showing audit findings reviewed."
+      ]
+    },
+    {
+      "oe_code": "PSQ.3.b",
+      "requirement": "The parameters to be audited are defined by the organisation.",
+      "steps": "Section 3; 5.2 Audit parameters defined; Section 4 item 2",
+      "responsible": "QI committee (approve plan); Quality Coordinator (document parameters)",
+      "records": [
+        "Annual audit plan with topics, parameters, frequency and auditors approved by committee.",
+        "Individual audit reports showing parameters defined before data collection.",
+        "Ad-hoc audit requests with rationale and parameter definitions."
+      ]
+    },
+    {
+      "oe_code": "PSQ.3.c",
+      "requirement": "Medical and nursing staff participates in this system.",
+      "steps": "Section 3; 5.3 Medical and nursing staff participation; Section 4 item 3",
+      "responsible": "Treating clinicians and nursing staff (participate); Quality Coordinator (ensure participation)",
+      "records": [
+        "Audit team composition records showing medical and nursing members.",
+        "Meeting attendance records for audit-related discussions.",
+        "Evidence that audits are not conducted solely by the quality department."
+      ]
+    },
+    {
+      "oe_code": "PSQ.3.d",
+      "requirement": "Remedial measures are implemented.",
+      "steps": "Section 3; 5.4 Remedial measures implemented; Section 4 item 4",
+      "responsible": "Quality Coordinator (track); department heads (implement); QI committee (escalate)",
+      "records": [
+        "Remedial measure action plans with responsible person and target date.",
+        "Tracking records showing completion status and committee reporting.",
+        "Re-audit reports confirming improvement or escalation records where gap persists."
+      ]
+    },
+    {
+      "oe_code": "PSQ.3.e",
+      "requirement": "The organisation undertakes quality improvement projects.",
+      "steps": "Section 3; 5.5 Quality improvement projects; Section 4 item 5",
+      "responsible": "Quality Coordinator (register and facilitate); QI committee (charter and review)",
+      "records": [
+        "QI project charters with problem statement, aim, measures and intervention.",
+        "Project outcome reports with results and sustainability plan.",
+        "QI project register maintained by the Quality Coordinator."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "PSQ.3 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"There is an established system for clinical audit and quality improvement programmes.\" PSQ.3.a–e PDF page 109. No asterisked OEs. PSQ.3.a/b/c/d Commitment; PSQ.3.e Core.\n\nSHAPE: Five What-we-do subsections (5.1–5.5). No stop-work. Disclaimer accreditation-only. PSQ roles only.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "PSQ v2 template: PRE v2 shape, plain English, PSQ roles, five steps, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "There is an established system for clinical audit and quality improvement programmes — audits that improve patient care, not audits that exist only in a register.",
+  "exceptions": "The following are required. There is no convenience exception.\n\n1. Clinical audits are performed and documented — an undocumented audit does not count.\n2. Audit parameters are defined by the organisation before the audit begins, not chosen retroactively to match available data.\n3. Medical and nursing staff participate in the clinical audit system — audits are not conducted solely by the quality department.\n4. Remedial measures are implemented based on audit findings — a finding without a corrective action is incomplete.\n5. Quality improvement projects are undertaken with a structured methodology — not labelled as QI without a plan, measure, analysis and outcome.\n\nStaff who identify that an audit finding has not been acted upon report it to the «Quality Coordinator» within «one working week».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit covers the clinical audit system and QI projects.\n\nWhat is monitored each quarter:\n\n- Clinical audits performed and documented per the annual plan.\n- Parameters defined before each audit, not retroactively.\n- Medical and nursing staff participation documented.\n- Remedial measures assigned, tracked and re-audited.\n- QI projects chartered, measured and reported to committee.\n\nRoot-cause analysis is required when no clinical audit has been completed in a quarter or when remedial measures remain open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner when PSQ.1, PSQ.2, PSQ.4 or PSQ.5 are revised.",
+  "training_competency": "All medical and nursing staff are trained on the clinical audit system at induction and «once a year» after that. Training covers audit methodology, participation expectations, remedial measures and QI project methodology.\n\nStaff acknowledgement\n\nI have read this Clinical Audit and Quality Improvement Programmes policy of {{HOSPITAL_NAME}}. I understand the audit system and my role in clinical audits and quality improvement.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «PSQ/POL/03»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "pre_v2_adoptable_shape",
+  "subtitle": "Clinical audit and quality improvement in day-to-day practice.",
+  "doc_no": "«PSQ/POL/03»"
+}

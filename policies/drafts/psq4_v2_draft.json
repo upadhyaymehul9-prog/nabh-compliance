@@ -1,0 +1,89 @@
+{
+  "standard_code": "PSQ.4",
+  "chapter": "PSQ",
+  "oe_codes": [
+    "PSQ.4.a",
+    "PSQ.4.b",
+    "PSQ.4.c",
+    "PSQ.4.d"
+  ],
+  "policy_title": "Management Support for Patient Safety and Quality Improvement",
+  "purpose": "This policy describes how management at {{HOSPITAL_NAME}} supports the patient-safety and quality improvement programmes, satisfying PSQ.4.a–d.\n\nIt covers four elements: management creating a culture of safety; leaders at all levels aware of programme intent and implementation approach; adequate resources and earmarked budget; and management using workforce feedback to improve the programmes.\n\nPSQ.4 owns management's role in supporting the programmes. PSQ.1 owns the programmes themselves. ROM.4 owns leadership ownership of organisational risk. PSQ.4 is the bridge: management enables PSQ.1 through culture, awareness, resources and feedback.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to the Medical Superintendent, department heads, the «Quality Coordinator» and all leaders at {{HOSPITAL_NAME}} who have a role in supporting patient safety and quality improvement.\n\nIt covers the four objective elements PSQ.4.a–d. It does not cover the programmes themselves (PSQ.1), key indicators (PSQ.2), the clinical audit system (PSQ.3), or incident analysis (PSQ.5).\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- PSQ.1 owns the patient-safety and QI programmes, their committees and their reviews. PSQ.4 ensures management supports those programmes.\n- ROM.4 owns leadership ownership of organisational risk. PSQ.4.a (culture of safety) and ROM.4 leadership risk are complementary. Cross-reference ROM.4.\n- PSQ.4.c resources include budget for PSQ.2 indicators, PSQ.3 audits and PSQ.5 incident management.",
+  "policy_statement": "Management at {{HOSPITAL_NAME}} creates a culture of safety where staff can report errors and near-misses without fear of punitive action for honest reporting.\n\nLeaders at all levels are aware of the intent of the patient-safety and quality improvement programme and the approach to its implementation.\n\nManagement makes available adequate resources required for patient safety and quality improvement and earmarks adequate funds from the annual budget.\n\nManagement uses workforce feedback to improve the patient-safety and quality improvement programme.",
+  "procedure_steps": [
+    "5.1 Creating a culture of safety\n\nManagement at {{HOSPITAL_NAME}} creates a culture of safety. The Medical Superintendent and department heads communicate that honest reporting of errors, near-misses and safety concerns is expected and will not attract punitive action for the reporter when the report is made in good faith.\n\nThe culture of safety is demonstrated by: «a non-punitive reporting policy communicated at induction and annually; visible leadership participation in patient-safety committee meetings; management response to safety reports documented and fed back to staff; and recognition of departments or individuals who contribute to safety improvement».\n\nA culture of safety does not mean absence of accountability for wilful harm, substance abuse or repeated negligence. It means honest reporters are protected.",
+    "5.2 Leader awareness of programme intent and implementation\n\nLeaders at all levels in {{HOSPITAL_NAME}} are aware of the intent of the patient-safety and quality improvement programme and the approach to its implementation. Awareness is ensured through «an annual leadership briefing by the Quality Coordinator, inclusion of programme updates in department-head meetings, and documented acknowledgement by each leader».\n\nNew leaders (department heads, section in-charges) receive a programme orientation within «30 days» of appointment. Awareness covers: programme objectives, committee structure, indicator framework (PSQ.2), audit system (PSQ.3), incident reporting (PSQ.5), and how the leader's department contributes.",
+    "5.3 Adequate resources and earmarked budget\n\nManagement makes available adequate resources required for patient safety and quality improvement and earmarks adequate funds from the annual budget. Resources include: «dedicated Quality Coordinator time, audit tools, indicator data collection systems, training materials, incident reporting forms or software, and committee meeting facilities».\n\nThe annual budget includes a line item or identified allocation for patient safety and quality improvement activities. The «Quality Coordinator» prepares a resource plan «annually» and presents it to the Medical Superintendent for approval. Shortfalls that compromise programme effectiveness are escalated to management in writing.",
+    "5.4 Workforce feedback to improve the programmes\n\nManagement uses the feedback obtained from the workforce to improve the patient-safety and quality improvement programme. Workforce feedback is collected through «annual staff surveys on safety culture, suggestion boxes, department meetings, and direct reports to the Quality Coordinator or patient-safety committee».\n\nFeedback is reviewed by the QI committee «quarterly» and used to identify barriers, improve processes, adjust training and refine programme design. Actions taken in response to feedback are communicated back to staff. Feedback that is collected but not acted upon or communicated is a defect."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Creates and sustains a culture of safety at the institutional level.\n- Approves resource allocation and earmarked budget for the programmes.\n- Ensures leaders at all levels are aware of programme intent.\n\nQuality Coordinator\n- Prepares resource plans and presents to management.\n- Facilitates leadership briefings and awareness orientation.\n- Collects and consolidates workforce feedback for committee review.\n\nDepartment Heads\n- Demonstrate culture of safety within their departments.\n- Participate in programme awareness activities.\n- Report resource shortfalls and relay workforce feedback upward.\n\nPatient-Safety / QI Committee\n- Reviews workforce feedback and recommends programme improvements.\n- Reports resource gaps to management.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Patient Safety and Quality Improvement chapter, standard PSQ.4.\n- Internal documents of {{HOSPITAL_NAME}}: patient-safety and QI programme documents (PSQ.1); annual budget with safety/QI allocation; workforce feedback records; leadership briefing and acknowledgement records.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator.\n\nCopies issued to: Medical Superintendent; department heads; patient-safety / QI committee members; nursing administration.\n\nThe current version is available to all staff at the «quality office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "CAPA — corrective and preventive action\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPSQ — Patient Safety and Quality Improvement (NABH SHCO chapter 9)\nQI — quality improvement\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "PSQ.4.a",
+      "requirement": "The management creates a culture of safety.",
+      "steps": "Statement of intent; Section 3; 5.1 Creating a culture of safety; Section 4 items 1, 4",
+      "responsible": "Medical Superintendent (create and sustain); department heads (demonstrate in departments)",
+      "records": [
+        "Non-punitive reporting policy communicated at induction and annually.",
+        "Records of management participation in patient-safety committee meetings.",
+        "Feedback to staff on management response to safety reports."
+      ]
+    },
+    {
+      "oe_code": "PSQ.4.b",
+      "requirement": "The leaders at all levels in the organisation are aware of the intent of the patient safety quality improvement programme and the approach to its implementation.",
+      "steps": "Section 3; 5.2 Leader awareness of programme intent and implementation; Section 4 item 2",
+      "responsible": "Quality Coordinator (facilitate briefings); Medical Superintendent (ensure awareness)",
+      "records": [
+        "Annual leadership briefing records with attendance.",
+        "Documented acknowledgement from each leader of programme intent and approach.",
+        "New-leader orientation records within defined period of appointment."
+      ]
+    },
+    {
+      "oe_code": "PSQ.4.c",
+      "requirement": "The management makes available adequate resources required for patient safety and quality improvement programme, earmarks adequate funds from its annual budget in this regard.",
+      "steps": "Section 3; 5.3 Adequate resources and earmarked budget; Section 4 item 3",
+      "responsible": "Medical Superintendent (approve); Quality Coordinator (plan and report shortfalls)",
+      "records": [
+        "Annual resource plan for patient safety and QI activities.",
+        "Budget line item or identified allocation for safety/QI in the annual budget.",
+        "Escalation records where resource shortfalls compromise programme effectiveness."
+      ]
+    },
+    {
+      "oe_code": "PSQ.4.d",
+      "requirement": "The management uses the feedback obtained from the workforce to improve patient safety and quality improvement programme.",
+      "steps": "Section 3; 5.4 Workforce feedback to improve the programmes; Section 4 item 4",
+      "responsible": "Quality Coordinator (collect and consolidate); QI committee (review and act); Medical Superintendent (approve actions)",
+      "records": [
+        "Workforce feedback collection records (surveys, suggestion boxes, meeting notes).",
+        "QI committee minutes showing feedback reviewed and actions taken.",
+        "Communication records showing actions fed back to staff."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "PSQ.4 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"The patient safety and quality improvement programme are supported by the management.\" PSQ.4.a–d PDF pages 109–110. No asterisked OEs. PSQ.4.a Achievement; PSQ.4.b/c Commitment; PSQ.4.d Excellence. PDF uses \"program\" for PSQ.4.b; our wording uses \"programme\".\n\nSHAPE: Four What-we-do subsections (5.1–5.4). No stop-work. Disclaimer accreditation-only. PSQ roles only.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "PSQ v2 template: PRE v2 shape, plain English, PSQ roles, four steps, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The patient safety and quality improvement programme are supported by the management — not as a signature on a quality manual but as culture, awareness, resources and feedback-driven improvement.",
+  "exceptions": "The following are required. There is no convenience exception.\n\n1. Management creates a culture of safety — staff can report errors and near-misses without fear of blame for honest reporting.\n2. Leaders at all levels are aware of the programme intent and implementation approach — awareness is documented, not assumed.\n3. Adequate resources are made available and adequate funds are earmarked from the annual budget for patient safety and quality improvement.\n4. Workforce feedback is collected and used by management to improve the programmes — feedback is not collected and filed without action.\n\nAny leader who discourages honest incident reporting or withholds budgeted safety resources is reported to the «Medical Superintendent» by the «Quality Coordinator».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit covers management support: culture, awareness, resources and feedback.\n\nWhat is monitored each quarter:\n\n- Culture of safety communicated and demonstrated; no punitive action for honest reporting documented.\n- Leader awareness documented through briefings and acknowledgements.\n- Budget allocation for safety and QI activities available and utilised.\n- Workforce feedback collected, reviewed by committee and acted upon.\n\nRoot-cause analysis is required when workforce feedback indicates fear of reporting or when budgeted safety resources are not released for «two consecutive quarters».\n\nThis policy is reviewed «annually», and sooner when PSQ.1, PSQ.2, PSQ.3 or PSQ.5 are revised.",
+  "training_competency": "All leaders and department heads are trained on this policy at appointment and «once a year» after that. Training covers culture of safety, programme awareness, resource planning and feedback mechanisms.\n\nStaff acknowledgement\n\nI have read this Management Support for Patient Safety and Quality Improvement policy of {{HOSPITAL_NAME}}. I understand management's role in creating a culture of safety and supporting the programmes.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «PSQ/POL/04»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "pre_v2_adoptable_shape",
+  "subtitle": "Management support for patient safety and quality improvement.",
+  "doc_no": "«PSQ/POL/04»"
+}
