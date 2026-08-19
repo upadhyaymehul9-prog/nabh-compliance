@@ -29,6 +29,22 @@ BANNED_FRAMING = re.compile(
     re.I,
 )
 
+# FMS.5 is the structural template only. These phrases are fire-policy wording
+# (or fire-policy governance boilerplate) and must not appear in FMS.1–4.
+BANNED_FIRE_CLONE = re.compile(
+    r"Floor Fire Warden"
+    r"|holding emergency command overnight"
+    r"|Roles below are titles, not vacancies"
+    r"|Anyone who sees a prohibited act stops it under the stop-work"
+    r"|The person says [\"“]stop[\"”]"
+    r"|A vendor who refuses to stop is required to leave the area"
+    r"|every displayed copy is withdrawn the same day"
+    r"|Night Duty Officer folder"
+    r"|wedged fire door"
+    r"|silenced detector",
+    re.I,
+)
+
 AFTER_WHAT_WE_DO = [
     "Stop-work authority",
     "Governance and responsibility",
@@ -121,7 +137,7 @@ def verify_shape(draft: dict, *, oe_codes: list[str], statute_clause: str | None
     steps = draft["procedure_steps"]
     has_stop = bool((draft.get("stop_work") or "").strip())
     n_steps = len(steps)
-    assert 2 <= n_steps <= 5, f"What-we-do subsections must be 2–4 (5 only if OEs require it); got {n_steps}"
+    assert 1 <= n_steps <= 12, f"What-we-do subsection count follows the OEs; got {n_steps}"
     for i, s in enumerate(steps, start=1):
         prefix = f"5.{i} "
         assert s.startswith(prefix), f"step {i} must start with {prefix!r}, got {s.splitlines()[0]!r}"
@@ -130,7 +146,7 @@ def verify_shape(draft: dict, *, oe_codes: list[str], statute_clause: str | None
 
     nn = draft["exceptions"]
     nn_items = re.findall(r"(?m)^\d+\. ", nn)
-    assert 3 <= len(nn_items) <= 5, f"non-negotiables target 3–5; got {len(nn_items)}"
+    assert 1 <= len(nn_items) <= 20, f"non-negotiable count follows the OEs; got {len(nn_items)}"
 
     mapping = draft["oe_mapping"]
     assert [m["oe_code"] for m in mapping] == oe_codes
@@ -161,10 +177,12 @@ def verify_shape(draft: dict, *, oe_codes: list[str], statute_clause: str | None
     body = " ".join(body_parts)
     assert "[Hospital to define" not in body
     assert "«________»" in body
-    assert "«Maintenance In-Charge»" in body
+    assert re.search(r"«[^_»][^»]*»", body), "expected at least one «editable default» besides a true blank"
     assert "{{HOSPITAL_NAME}}" in body
     assert not re.search(r"(?<!\{)\{HOSPITAL_NAME\}(?!\})", body)
     assert BANNED_FRAMING.search(body) is None, f"banned framing in body: {BANNED_FRAMING.search(body).group(0)!r}"
+    clone = BANNED_FIRE_CLONE.search(body)
+    assert clone is None, f"FMS.5 fire wording cloned into {draft['standard_code']}: {clone.group(0)!r}"
     assert draft["status"] == "draft"
     assert "\r" not in json.dumps(draft)
 

@@ -95,6 +95,7 @@ interface V2Draft {
   subtitle?: string;
   footer_label?: string;
   acknowledgement_note?: string;
+  prepared_by?: string;
   control_extra_rows?: string[][];
 }
 
@@ -129,7 +130,7 @@ function buildV2Document(d: V2Draft): Document {
     ["Document No.", docNo, "Version", d.version ?? "2.0"],
     ["Issue No.", "«01»", "Review due", "«one year from implementation»"],
     ["Date created", "«________»", "Date of implementation", "«________»"],
-    ["Prepared by", "«Maintenance In-Charge»  Name «________»", "Signature", "«________»"],
+    ["Prepared by", `${d.prepared_by ?? "«named facilities or engineering lead»"}  Name «________»`, "Signature", "«________»"],
     ["Reviewed by", "«Quality Coordinator»  Name «________»", "Signature", "«________»"],
     ["Approved by", "«Medical Superintendent»  Name «________»", "Signature", "«________»"],
     ...(d.control_extra_rows ?? []),

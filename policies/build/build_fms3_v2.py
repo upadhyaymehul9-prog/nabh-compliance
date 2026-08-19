@@ -1,150 +1,251 @@
 # -*- coding: utf-8 -*-
-"""Template-test rebuild of FMS.3 as an adoptable hospital policy.
+"""FMS.3 v2 — medical and support-service equipment programme.
 
-Does NOT overwrite policies/drafts/fms3_draft.json or build_fms3.py.
-Writes policies/drafts/fms3_v2_draft.json only. No SQL. No Supabase insert.
+Shape follows FMS.5 v2.2 (section list and order only). Wording is this
+standard's OEs and v1 substance. Does not overwrite fms3_draft.json or
+build_fms3.py. No SQL. No Supabase insert.
+
+Disclaimer P2 names the Medical Devices Rules, 2017, read with the Drugs and
+Cosmetics Act, 1940 (same statute scoping as v1).
 """
 from __future__ import annotations
 
 import sys
 
-from fms_v2_common import BLANK, D, HOSPITAL, emit_v2, verify_shape
+from fms_v2_common import (
+    BLANK,
+    D,
+    HOSPITAL,
+    emit_v2,
+    verify_shape,
+)
 from policy_build_common import make_disclaimer
 
 STANDARD_CODE = "FMS.3"
 CHAPTER = "FMS"
 OE_CODES = [
-    "FMS.3.a", "FMS.3.b", "FMS.3.c", "FMS.3.d", "FMS.3.e", "FMS.3.f", "FMS.3.g",
+    "FMS.3.a", "FMS.3.b", "FMS.3.c", "FMS.3.d",
+    "FMS.3.e", "FMS.3.f", "FMS.3.g",
 ]
 POLICY_TITLE = "Medical and Support-Service Equipment Programme"
-VERSION = "2.0"
+VERSION = "2.1"
 REVISION_HISTORY = [
     {
         "version": "2.0",
         "date": "19-08-2026",
-        "description": "Template rebuild to FMS.5 v2.2 shape. Not an approved master.",
+        "description": "First v2 shape pass (withdrawn: fire-cloned wording).",
+    },
+    {
+        "version": "2.1",
+        "date": "19-08-2026",
+        "description": "Same section skeleton as FMS.5 v2.2; wording rebuilt from FMS.3 OEs and v1. Not an approved master.",
     },
 ]
 
-PURPOSE = f"""This policy governs how {HOSPITAL} plans, inventories, maintains, inspects, calibrates, recalls and times downtime for medical and support-service equipment.
+PURPOSE = f"""This policy governs how {HOSPITAL} runs its programme for medical and support-service equipment: how equipment is planned against the services actually offered and the strategic plan; how it is inventoried and logged; how the documented operational and maintenance (preventive and breakdown) plan is implemented; how equipment is inspected and calibrated; how only qualified and trained people operate and maintain it; how device-related adverse events, hazard notices and recalls are monitored and complied with; and how downtime for critical-equipment breakdown is timed from the user report to inspection and corrective action.
 
-It is the hospital-wide equipment programme. It is not the laboratory rule that a result is not issued from an overdue calibrator, the imaging AERB quality-assurance file, steriliser load validation, crash-cart contents, or building-plant tests of the generator. Those programmes remain in force. This policy puts the device on an inventory, a PPM job card and a recall search.
+It is the hospital-wide equipment programme. It is not the laboratory rule that a result is not issued from an overdue calibrator, not imaging quality-assurance and no-report-if-overdue, not steriliser validation as a reprocessing act, not crash-cart contents, and not building-plant utilities.
 
-Editable defaults are marked {D('like this')}. True blanks — {BLANK} — have no sensible default and must be completed before this document is signed."""
+Editable defaults in this document are marked {D('like this')}. A hospital that adopts the default keeps the wording. A hospital that needs a different owner, interval or arrangement replaces the marked text before issue. True blanks — {BLANK} — have no sensible default and must be completed before this document is signed."""
 
-SAFETY_OBJECTIVE = """A sticker is not PPM. A recall letter that never left quality has not been complied with. An overdue measuring device is withdrawn."""
+SAFETY_OBJECTIVE = """A machine in use is on the inventory, in date, and operated by someone trained for that class. A sticker is not a maintenance record. Downtime starts when the user reports, not when the engineer arrives."""
 
-SCOPE = f"""This policy applies to medical equipment and support-service equipment of {HOSPITAL} — owned, leased, loaned, consigned or outsourced — and to the people who plan, inventory, operate, maintain, inspect, calibrate, recall and record downtime for that equipment.
+SCOPE = f"""This policy applies to medical equipment and support-service equipment of {HOSPITAL}, whether owned, leased, loaned, consigned or outsourced, and to the people who plan, inventory, operate, maintain, inspect, calibrate, recall and record downtime for that equipment.
 
-It covers planning against the service directory and strategic plan; inventory and logs; implemented preventive and breakdown maintenance; periodic inspection and calibration; qualified operators and maintainers; device adverse events, hazard notices and recalls; and critical-equipment downtime from the user's report to inspection and corrective action.
+It covers: planning equipment against the service directory and strategic plan; inventory and logs; implementation of operational and maintenance (preventive and breakdown) plans; periodic inspection and calibration; qualified and trained operators and maintainers; monitoring of device-related adverse events, hazard notices and recalls; and monitoring of critical-equipment downtime from report to inspection and corrective action.
 
-A generator, pump or UPS that is building plant is the utilities programme. A grab rail is facility-safety infrastructure. Medical-gas plant is the gas programme. A flowmeter may sit on this inventory if this hospital lists it as a device; the gas programme still owns the gas path. Steriliser load validation stays the reprocessing programme; a failed boiler or door seal is here. A crash-cart checklist is the resuscitation-kit policy; the defibrillator on the cart is still equipment here. Credentialing files, when that programme is written, hold the method; this policy requires that the person who pressed the button was trained for that class. Implant selection stays the implant policy. Patient-facing equipment charges stay expected-cost, not this PPM file.
+The defined scope of services is the service-directory programme. Equipment is planned against that directory and against strategy and budget approval. A service the directory does not provide is a recorded absence, not a copied intensive-care equipment list.
 
-NHM Biomedical Equipment Management and Maintenance Program (BEMMP) is the criticality and PPM framework — not a named NHM-contract mandate, not the Clinical Establishments Act, and not Central Electricity Authority guidance. CDSCO and the Medical Devices Rules, 2017, read with the Drugs and Cosmetics Act, 1940, govern regulated devices, adverse events and recalls insofar as they apply to devices this hospital uses. This hospital is not a manufacturer."""
+Laboratory calibration as a condition of issuing a result — no report from an overdue or failed instrument — remains that laboratory programme. This policy owns hospital-wide inventory, preventive maintenance, breakdown logs and the calibration programme as facility work. Two records, two purposes. Imaging calibration and quality-assurance tests, and that an overdue imaging device does not issue a report, remain that imaging programme. This policy owns that the imaging device is on the hospital inventory and has a maintenance and breakdown log.
 
-POLICY_STATEMENT = f"""Equipment is planned against the services the hospital actually offers and the strategic plan. A service the directory does not provide is not given another hospital's ICU list. BEMMP criticality and IPHS 2022 are planning frameworks, not a NABH equipment catalogue.
+Cabinet certification as a laboratory-safety condition remains that laboratory programme. Hospital-wide programme logistics sit here.
 
-Every item that can harm a patient if it fails or is missing is on the inventory: unique identifier, location, owner department, criticality, and whether it is owned, loaned, consigned or outsourced. Logs record acceptance, PPM, breakdown and calibration due. An item in use that is not on the inventory is a defect.
+Steriliser validation, Bowie-Dick, biological indicators and recall of processed items when the sterilisation process fails remain the infection-control sterilisation programme. This policy owns the steriliser as equipment (inventory, preventive maintenance, breakdown). A failed cycle is that sterilisation programme; a failed boiler or door seal is this programme.
 
-The operational and maintenance plan is implemented. Preventive tasks follow criticality and the manufacturer; breakdowns are reported by the user, attended, and closed with a fault, time-to-attend and spare — not an "OK" with no fault. A binder of manufacturer PDFs, or a sticker with no job card, is not implementation. Annual PPM bunched the week before an assessment is not this plan.
+Crash-cart contents, seal and checklist as a resuscitation kit remain that resuscitation programme. Those kits are not this inventory counted twice; a defibrillator on the cart is still equipment here.
 
-Measuring and delivering devices are inspected in service and calibrated against a traceable standard. An overdue measuring device is withdrawn until it passes. The laboratory still does not issue a result from an overdue calibrator; imaging still does not issue a report from an overdue AERB-QA device. Those no-report rules stay those programmes; the due date lives on this inventory. This policy does not invent a SHCO-wide six-month calibration calendar.
+A diesel generator, UPS as building plant, pumps and potable-water plant are the utilities programme. A ventilator compressor is equipment here.
 
-Only named, trained people operate or maintain each class. A visiting technician without a job card, or a nurse using an infusion pump they were never shown, is a failure of this policy.
+Condemned equipment is struck off this inventory then disposed of under the unused-material procedure in the facility-safety programme. Grab-rails are infrastructure, not this list.
 
-Device-related adverse events are captured. Hazard notices and recalls from CDSCO, the manufacturer or the vendor are searched against the inventory; affected items are quarantined and returned or destroyed. A letter in quality that never reached the ward has not been complied with. Harm to a patient is also an incident.
+Medical-gas plant, manifolds and piped installation are the gas programme. A flowmeter or regulator may be equipment here if this hospital inventories it as a device.
 
-Critical equipment — the subset whose failure stops a defined service (ventilator, anaesthesia workstation, autoclave as equipment, imaging device, clinical analyser, blood-bank refrigerator, and others named here) — has downtime timed from the user's report, not from the engineer's arrival, until inspection and corrective action restore it or a defined alternative is in place."""
+Credentialing method, when that human-resources programme is written, holds the credentialing file. This policy requires that the person who pressed the button or opened the cover was qualified and trained for that class.
 
-NON_NEGOTIABLES = f"""The following are prohibited.
+Implantable-prosthesis procurement remains that medication and implant programme. A loaner drill may sit on this inventory; implant selection stays there.
 
-1. Using a medical or support-service device on a patient that is not on the inventory.
-2. Leaving an overdue measuring device in service.
-3. Filing a hazard notice or recall in quality without searching the inventory and quarantining affected serial numbers.
-4. Counting a sticker, a manufacturer PDF, or PPM bunched for assessment week, as implemented maintenance.
-5. Operating or opening a device the person has not been trained and named for.
+Equipment downtime rates may be supplied as managerial indicators; the indicator set remains that quality-indicator programme. A device adverse event that harmed a patient is dual-entered in the incident system.
 
-Anyone who sees a prohibited act stops it under the stop-work clause and reports it the same shift to the {D('Maintenance In-Charge')} or, at night, the Night Duty Officer."""
+Capital for equipment may be approved with the strategic plan and budget; the programme is here.
+
+Patient-facing expected cost is not this preventive-maintenance file.
+
+NHM Biomedical Equipment Management and Maintenance Program (BEMMP) is the preventive-maintenance and inventory framework. It is not the Clinical Establishments Act and not Central Electricity Authority guidance. It is not a mandate to join a named NHM contract.
+
+CDSCO Medical Devices and Diagnostics, and the Medical Devices Rules, 2017, read with the Drugs and Cosmetics Act, 1940, govern regulated devices, adverse-event reporting and recalls insofar as they apply to devices this hospital uses. They do not make this hospital a manufacturer."""
+
+POLICY_STATEMENT = f"""{HOSPITAL} plans medical and support-service equipment in accordance with its services and strategic plan.
+
+{HOSPITAL} inventories medical and support-service equipment, including loaned, consigned and outsourced items, and maintains logs as required. An item in use that is not on the inventory is a defect.
+
+{HOSPITAL} implements the documented operational and maintenance (preventive and breakdown) plan. A binder of manufacturer PDFs, or a sticker with no job card, is not an implemented plan. NHM BEMMP is the criticality framework, not a named-contract mandate and not the Clinical Establishments Act.
+
+{HOSPITAL} periodically inspects and calibrates medical and support-service equipment. An overdue measuring device is withdrawn until it has passed. Laboratory and imaging no-report rules remain those diagnostic programmes.
+
+{HOSPITAL} requires that qualified and trained personnel operate and maintain medical and support-service equipment. A nurse using an infusion pump they were never shown, or a visiting technician without a job card, is a failure of this policy.
+
+{HOSPITAL} monitors medical-equipment and medical-device adverse events and complies with hazard notices and recalls. A letter in the quality office that never reached the user is not compliance.
+
+{HOSPITAL} monitors downtime for critical-equipment breakdown from the user report to inspection and implementation of corrective actions. The clock does not start when the engineer arrives.
+
+{HOSPITAL} does not treat a calibration sticker without a record, a recall letter that never reached the user, or laboratory or imaging specialty quality-assurance offered as this whole programme, as that duty."""
+
+NON_NEGOTIABLES = f"""The following are prohibited. There is no operational exception and no "until the vendor comes" exception.
+
+1. Using a medical or support-service device that is not on the inventory.
+2. Using a device that is overdue for inspection or calibration, that failed its last check, or that is under recall or quarantine.
+3. Operating a device the person has not been trained for, or opening a cover the person is not qualified to maintain.
+4. Treating a manufacturer PDF binder, a sticker, or annual maintenance bunched the week before an assessment, as implemented preventive maintenance.
+5. Counting steriliser process validation (Bowie-Dick, biological indicators, recall of a failed load) as this autoclave's preventive maintenance. Validation of the load remains the infection-control sterilisation programme; a failed boiler or door seal is this programme.
+6. Counting laboratory or imaging no-report-from-overdue-calibrator rules as this whole hospital programme. Those rules remain those diagnostic programmes; this programme still withdraws the device.
+7. Starting the downtime clock from the engineer's arrival rather than from the user report.
+8. Filing a recall against a serial number that is not on the inventory, or leaving a recalled item in the ward because "stores will collect it."
+9. Treating BEMMP as the Clinical Establishments Act, as Central Electricity Authority guidance, or as a mandate to join a named NHM contract.
+10. Offering a crash-cart checklist as the defibrillator's equipment file.
+
+A person who finds an uninventoried device in use, an overdue calibrator still in service, or a recall that did not reach the ward, reports it the same shift to the {D('Biomedical In-Charge')}."""
 
 PROCEDURE_STEPS = [
-f"""5.1 Plan and inventory
+f"""5.1 Plan equipment against the services we offer
 
-The Maintenance In-Charge (biomedical for this policy) holds the equipment plan against the service directory and the strategic plan, including replacement of condemned items. A new service is not offered until the Medical Superintendent has signed that the equipment it needs is present or a dated gap is accepted.
+The services are the service directory. Strategy and budget approval are that management programme. This section is the equipment plan that matches those, including replacement of condemned items, and excluding equipment for a service the directory does not provide.
 
-The inventory includes loaners and outsourced analysers. Each item has a unique identifier, location, owner, criticality and tenure. Logs: acceptance, PPM, breakdown, calibration due. Crash-cart checklists do not replace the defibrillator file.""",
+How the plan is made, who signs that a new service has the equipment it needs before it is offered, and how a gap is recorded, are held by the {D('Biomedical In-Charge')}. BEMMP is a planning and criticality framework, not a named NHM-contract mandate. Indian Public Health Standards 2022 are a planning framework, not a NABH equipment-list mandate.""",
 
-f"""5.2 PPM, breakdown, inspection and calibration
+f"""5.2 Inventory equipment and keep the logs
 
-Preventive maintenance runs to the criticality and manufacturer task list. The user reports a breakdown; the attender records fault, time-to-attend and spare; cannibalisation and loaner rules are written. Sample job cards show last month's PPM and last week's breakdown actually happened.
+The inventory identifies each item that can harm a patient if it fails or is missing: unique identifier, location, owner department, criticality, and whether it is owned, loaned, consigned or outsourced. Logs are the running record BEMMP-style programmes keep (acceptance, preventive maintenance, breakdown, calibration due).
 
-In-service inspection covers housing, leads, alarms and accessories. Calibration against a traceable standard covers monitors, defibrillator energy, infusion pumps, OT table scales, and laboratory or imaging instruments as inventory items. Overdue measuring devices are withdrawn until passed. Steriliser load validation stays the reprocessing programme; a failed door seal is this job card.""",
+Laboratory and imaging specialty registers do not replace this hospital-wide inventory. A crash-cart checklist does not replace the defibrillator's equipment file.
 
-f"""5.3 Qualified operators and maintainers
+What is on the inventory, what a log contains, and how a loaner or outsourced analyser is still listed, are held by the {D('Biomedical In-Charge')}. An item in use that is not on the inventory is a defect.""",
 
-The Maintenance In-Charge holds the trained-operator list and the maintainer list by class. Clinical heads do not let untrained staff press the button. Visiting technicians work only against a job card. Training is recorded at induction, on a new class, and {D('once a year')}.""",
+f"""5.3 Run preventive and breakdown maintenance
 
-f"""5.4 Adverse events, recalls and critical downtime
+Planning and listing are 5.1 and 5.2. This section is that preventive and breakdown maintenance actually run.
 
-A device-related adverse event is recorded here. If a patient was harmed it is also an incident; if it is also a medication-delivery event it is dual-entered with that programme.
+NHM BEMMP is the Indian public-sector framework for criticality-based intervals, user-level care, and workshop or vendor breakdown. It is not a mandate to outsource to a named NHM agency and not "CEA guidelines." Manufacturer instructions inform the task list; they are not a substitute for a hospital plan that names who does the work and what happens when a critical item is down (5.7).
 
-Hazard notices and recalls are received, the inventory is searched, and affected items are quarantined and returned or destroyed. An empty recall log is acceptable only if the search was still run when a notice named a type this hospital holds.
+The documented operational plan (who may operate which class — 5.5), the preventive plan (task, interval by criticality, who attends, what is recorded), the breakdown plan (how a user reports, who attends, cannibalisation rule, loaner rule), and proof of implementation on a sample of critical items, are held by the {D('Biomedical In-Charge')}.
 
-Critical equipment is listed. Downtime starts when the user reports and ends when inspection and corrective action restore the item or a defined alternative (loaner, diversion, recorded pause) is in place. The clock does not start at engineer arrival.""",
+A binder of manufacturer PDFs, a sticker with no job card, or a breakdown register that records "OK" without a fault, time-to-attend or spare, is not an implemented plan. Steriliser process validation remains the infection-control sterilisation programme. Laboratory and imaging no-report rules remain those diagnostic programmes. Generator and UPS plant tests remain the utilities programme.""",
+
+f"""5.4 Inspect and calibrate; withdraw until passed
+
+Inspection is the in-service check that the item is safe to use (housing, leads, alarms, accessories). Calibration is the measurement against a traceable standard for items that measure or deliver a quantity (monitors, defibrillator energy, infusion pumps, operating-table scales, laboratory instruments as inventory items).
+
+Laboratory no-report from an overdue or failed calibrator remains that laboratory programme. Imaging no-report from an overdue quality-assurance device remains that imaging programme. This section is that those due dates live on the hospital programme and that non-laboratory, non-imaging measuring devices are also calibrated.
+
+Which items require calibration versus inspection-only, the interval, the traceable standard or vendor, and the rule that an overdue measuring device is withdrawn until passed, are held by the {D('Biomedical In-Charge')}. BEMMP criticality informs interval; it is not a NABH universal calendar. This policy does not invent a small-hospital-wide six-month calibration mandate.""",
+
+f"""5.5 Qualify the people who operate and who maintain
+
+Operators are the clinical or technical users. Maintainers are biomedical or engineering staff, or the contracted workshop. Credentialing method, when that human-resources programme is written, holds the credentialing file. This section is that the person who pressed the button or opened the cover was qualified and trained for that class.
+
+A visiting technician without a job card, or a nurse using an infusion pump they were never shown, is a failure of this policy.
+
+Which roles may operate which class, which roles may maintain which class, and how training is recorded, are held by the {D('Biomedical In-Charge')} with department heads. After hours, a breakdown is reported to the {D('named person who takes a breakdown call after hours')} — a biomedical or engineering roster, not an emergency-command title imported from the fire programme.""",
+
+f"""5.6 Act on adverse events, hazard notices and recalls
+
+Planned maintenance is 5.3. This section is the after-market safety net.
+
+CDSCO Medical Devices and Diagnostics, and the Medical Devices Rules, 2017, read with the Drugs and Cosmetics Act, 1940, are the Indian regulatory framework for device adverse events and recalls insofar as they apply to devices this hospital uses. This hospital is not a manufacturer.
+
+How a device-related adverse event is captured (dual entry with the incident system when a patient was harmed; with the medication programme when it is also a medication-delivery event), how hazard notices and recalls are received (CDSCO, manufacturer, vendor), how the inventory is searched, how affected items are quarantined and returned or destroyed, and who signs compliance, are held by the {D('Biomedical In-Charge')}.
+
+A letter in the quality office that never reached the user, implant traceability offered as hospital-wide device recall, or a recalled infusion set left in the ward because "stores will collect it," is not compliance. An empty recall log is acceptable only if the inventory search was still run when a notice named a type this hospital holds.""",
+
+f"""5.7 Time critical-equipment downtime from the user report
+
+Critical equipment is the subset of the inventory whose failure stops a defined service (ventilator, anaesthesia workstation, autoclave as equipment, imaging device, clinical analyser, blood-bank refrigerator, and others this hospital names). Named critical list: {BLANK}.
+
+Downtime starts when the user reports and ends when the item is inspected and corrective action has restored it or a defined alternative is in place (loaner, diversion under the admission and referral programmes, recorded service pause). The failure this clock exists to catch is a breakdown register that records the engineer's arrival but not the hours the operating list was stopped.
+
+Which items are critical, how reporting-to-restoration is timed, and how a corrective action is recorded, are held by the {D('Biomedical In-Charge')}. Managerial indicators may use the rate; this policy owns the clock. A diverted service remains the service-directory and referral programmes; this clock still runs.""",
 ]
 
-STOP_WORK = f"""Every person has the authority and the duty to stop an act that breaches a non-negotiable rule: an uninventoried device in use; an overdue measuring device still on a patient; a recalled item left in the ward; an untrained person at a critical device.
+STOP_WORK = f"""A person who is about to do any of the following does not proceed:
 
-The person says "stop", withdraws the device from use if they are competent to, and reports the same shift to the {D('Maintenance In-Charge')} or the Night Duty Officer. There is no retaliation for a good-faith stop-work."""
+- use a device that is not on the inventory, is overdue for inspection or calibration, failed its last check, or is under recall or quarantine;
+- operate a device they have not been trained for;
+- issue a laboratory or imaging report from a device this programme has withdrawn as overdue or failed — those no-report rules remain the diagnostic programmes; this stop is that the device stays out of service;
+- return a recalled or quarantined item to a clinical bay.
 
-RESPONSIBILITY = f"""Roles below are titles, not vacancies.
+They take the device out of the bay if they are competent to, label it withdrawn, and tell the {D('Biomedical In-Charge')} the same shift — or, if that person is not on site, the {D('named person who takes a breakdown call after hours')}.
 
-Medical Superintendent
-- Accountable that this programme is issued and resourced.
-- Signs that a new service has the equipment it needs.
+A good-faith refusal to use an overdue or uninventoried device is not a disciplinary matter. The device is not returned to service until the Biomedical In-Charge says it has passed."""
 
-Maintenance In-Charge (biomedical for this policy)
-- Owns the plan, inventory, PPM, calibration, recall search and downtime clock.
+RESPONSIBILITY = f"""These are the jobs this equipment programme needs. In a small hospital the biomedical lead may be the same person as the facilities Maintenance In-Charge; they still keep this inventory as the equipment file, not as a combined generator-and-ventilator log.
 
-Nursing Superintendent
-- Ensures ward devices in use are on the inventory and that overdue items are not borrowed back into service.
+Medical Superintendent (head of the institution)
+- Accountable that the medical and support-service equipment programme runs as this policy requires.
 
-Night Duty Officer
-- Receives a night breakdown report; the downtime clock starts then.
+{D('Biomedical In-Charge')} (named biomedical or engineering lead)
+- Holds the equipment plan, inventory, preventive-maintenance and breakdown job cards, inspection and calibration, recall file and downtime log.
+- Withdraws an overdue or failed measuring device until it has passed.
+- Runs the inventory search when a hazard notice or recall arrives.
+- Names the {D('named person who takes a breakdown call after hours')}.
+
+Clinical heads / department in-charges
+- Do not operate a device their staff are not trained for.
+- Do not issue a laboratory or imaging report from an overdue calibrator (those no-report rules remain those diagnostic programmes).
+- Report a breakdown when it happens, not when it is convenient.
 
 Quality Coordinator
-- Audits this policy {D('quarterly')}.
+- Audits the records in section 8.
 
-Department in-charges
-- Do not operate a class their staff are not trained for.
-- Do not issue a laboratory or imaging report from an overdue calibrator (those no-report rules stay those programmes).
+Contracted workshop, if maintenance is outsourced
+- Works to the job card and the breakdown clock in this policy. Outsourcing agreements remain that management-agreement programme; the technical tests remain here.
+
+All staff who use equipment
+- Report an uninventoried device in use, an overdue calibrator still in service, and a recall that did not reach the ward.
 
 A RACI snapshot:
-- Plan and inventory: Maintenance In-Charge (R/A)
-- PPM and breakdown: Maintenance In-Charge (R/A); user reports (R)
-- Calibration withdrawal: Maintenance In-Charge (R); department in-charge (A for not using the item)
-- Recall: Maintenance In-Charge (R/A)
-- Downtime clock: Maintenance In-Charge (R); Night Duty Officer (A at night for the start time)
-- Stop-work: all staff (R); Maintenance In-Charge (A for restart)"""
 
-MONITORING_AUDIT = f"""The Quality Coordinator audits this policy {D('quarterly')}.
+- Equipment plan: Biomedical In-Charge (R); Medical Superintendent (A)
+- Inventory and logs: Biomedical In-Charge (R/A)
+- Preventive and breakdown maintenance: Biomedical In-Charge (R/A); users report breakdowns (R)
+- Inspection and calibration: Biomedical In-Charge (R/A)
+- Operator and maintainer training: Biomedical In-Charge (R); department heads (C)
+- Adverse events and recalls: Biomedical In-Charge (R/A); incident system (C when a patient was harmed)
+- Downtime clock: user who reports (R for start); Biomedical In-Charge (A)
+- Audit: Quality Coordinator (R); Medical Superintendent (A)"""
 
-What is monitored:
-- Inventory includes loaners; no device in use off the list.
-- PPM job cards for a sample of critical items, dated when due, not bunched.
-- Overdue measuring devices withdrawn; laboratory and imaging no-report rules still those programmes.
-- Recall file shows inventory search and quarantine.
-- Downtime from user report, not engineer arrival.
-- Trained-operator list current.
+MONITORING_AUDIT = f"""The Quality Coordinator audits this policy {D('quarterly')}. The audit looks at the machines and the records, not at a binder.
 
-Root-cause analysis is required when: a device in use is not on the inventory; a recall did not reach the serial numbers held; an overdue measuring device is found in service; a critical item's PPM was missed. CAPA older than {D('thirty days')} is escalated to the Medical Superintendent.
+What is monitored each quarter:
 
-This policy is reviewed {D('annually')}, and sooner after a missed recall."""
+- Inventory includes loaners, consigned and outsourced items; no item in use is missing from the list.
+- Preventive maintenance happened rather than a sticker; last month's job cards exist for a sample of critical items.
+- Calibration withdrawal is in force; laboratory and imaging no-report rules still sit with those diagnostic programmes.
+- Steriliser process validation is not counted as this autoclave's preventive maintenance.
+- Recalls reached the user; inventory search was run; quarantined items are not in a clinical bay.
+- Downtime is timed from the user report, not from engineer arrival.
+- BEMMP is used as a framework, not as a named-contract mandate or as the Clinical Establishments Act.
+- Patient-facing billing is left with the expected-cost programme.
 
-TRAINING_ACKNOWLEDGEMENT = f"""Operators and maintainers are trained against this policy at induction, before using a new class, and {D('once a year')} thereafter.
+Any non-conformity is a finding. The Biomedical In-Charge owns the corrective action. Root-cause analysis is required when: a device in use is not on the inventory; an overdue measuring device was found in service; a recall did not reach the serial numbers this hospital holds; downtime was timed from engineer arrival; or a person operated a device they were not trained for.
+
+Corrective and preventive action is dated, has an owner, and is checked at the next quarterly audit. An open CAPA older than {D('thirty days')} is escalated to the Medical Superintendent.
+
+This policy is reviewed {D('annually')}, and sooner after a missed recall, a critical-equipment failure that stopped a defined service, or a change to the service directory that should have changed the equipment plan."""
+
+TRAINING_ACKNOWLEDGEMENT = f"""Staff who operate or maintain a class of medical or support-service equipment are trained against this policy at induction, before first unsupervised use of that class, and {D('once a year')} thereafter. Training covers: reporting a breakdown; not using an uninventoried, overdue, failed or recalled device; the downtime clock starting at the user report; and the split that laboratory and imaging no-report rules and steriliser validation remain those other programmes. Maintainers are named on a trained-maintainer list held by the Biomedical In-Charge.
 
 Staff acknowledgement
 
-I have read this Medical and Support-Service Equipment Programme of {HOSPITAL}. I will not use a device that is not on the inventory. I will not use an overdue measuring device. I will not operate a class I am not named for.
+I have read this Medical and Support-Service Equipment Programme policy of {HOSPITAL}. I will not use a device that is not on the inventory, is overdue, has failed, or is under recall. I will not operate a class I have not been trained for. I will report a breakdown when it happens.
 
 
 Name: ___________________________    Designation: ___________________________
@@ -155,45 +256,48 @@ Signature: ___________________________"""
 
 DOCUMENT_CONTROL = f"""Document number: {D('FMS/POL/03')}
 Issue number: {D('01')}
-Version: 2.0 (template test — not an approved master)
+Version: 2.1 (template test — standard-specific wording; not an approved master)
 Date created: {BLANK}
 Date of implementation: {BLANK}
 Review due: {D('one year from implementation')}
 Number of pages: as printed
 
-Prepared by (designation): {D('Maintenance In-Charge')}    Name: {BLANK}    Signature: {BLANK}
+Prepared by (designation): {D('Biomedical In-Charge')}    Name: {BLANK}    Signature: {BLANK}
 Reviewed by (designation): {D('Quality Coordinator')}    Name: {BLANK}    Signature: {BLANK}
 Approved by (designation): {D('Medical Superintendent')}    Name: {BLANK}    Signature: {BLANK}
+
+Critical-equipment list location: {BLANK}
+After-hours breakdown roster: {BLANK}
 
 Amendment sheet (add a line for each change after issue)
 
 Sr | Section | Change | Reason | Prepared | Approved
 1. |  |  |  |  | """
 
-REFERENCES = """- Biomedical Equipment Management and Maintenance Program. National Health Mission — PPM, inventory and criticality framework; not a named-contract mandate and not Clinical Establishments Act or Central Electricity Authority guidance.
+REFERENCES = """- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Chapter 8 FMS, standard FMS.3 (this policy is written so that those requirements are met in operation; it is not a commentary on the standard).
+- Biomedical Equipment Management and Maintenance Program. National Health Mission — preventive-maintenance, inventory and criticality framework, not a named-contract mandate and not Clinical Establishments Act or Central Electricity Authority guidance.
 - Medical Devices and Diagnostics. Central Drugs Standard Control Organisation.
-- Medical Devices Rules, 2017, read with the Drugs and Cosmetics Act, 1940 — regulated devices, adverse events and recalls insofar as they apply to devices this hospital uses; this hospital is not a manufacturer.
-- Indian Public Health Standards (2022). National Health Mission — planning framework, not a NABH equipment-list mandate.
-- NABH Standards for Small Healthcare Organisations, 3rd Edition, Chapter 8, standard FMS.3 (this policy is written so that those requirements are met in operation; it is not a commentary on the standard).
-- Internal: equipment plan; inventory; PPM and breakdown plan; calibration; recall file; downtime log; service directory; laboratory, imaging, reprocessing, crash-cart, utilities, facility-safety and gas programmes; incident system."""
+- Medical Devices Rules, 2017, read with the Drugs and Cosmetics Act, 1940 — Indian instrument for regulated devices, adverse events and recalls insofar as they apply to devices this hospital uses; this hospital is not a manufacturer.
+- Indian Public Health Standards. (2022). National Health Mission — planning framework, not a NABH equipment-list mandate.
+- Internal documents of this hospital: equipment plan; inventory; preventive-maintenance and breakdown plan; calibration; recall file; downtime log; service directory; laboratory and imaging no-report rules; steriliser validation programme; crash-cart programme; utilities, unused-material and gas programmes; incident system."""
 
-DISTRIBUTION = f"""Controlled master: office of the Medical Superintendent, {HOSPITAL}, with a working copy held by the Maintenance In-Charge and the Quality Coordinator.
+DISTRIBUTION = f"""Controlled master copy: office of the Medical Superintendent, {HOSPITAL}, with the {D('Biomedical In-Charge')} and the Quality Coordinator.
 
-Issued to: Nursing Superintendent, department in-charges who operate equipment, contracted workshop if maintenance is outsourced.
+Copies issued to: department heads who operate equipment; contracted workshop if maintenance is outsourced.
 
-Available to all staff at the {D('Nursing Station policy folder')} and, if the hospital keeps an intranet, at the {D('staff intranet / policies')}.
+The current version is available to all staff at the {D('biomedical / engineering office policy file')} and, if the hospital keeps an intranet, at the {D('staff intranet / policies')}.
 
-On revision, every displayed copy is withdrawn the same day. One dated superseded copy is retained by the Quality Coordinator."""
+Superseded versions are withdrawn from all points of use on issue of a revision. One dated copy of each is retained by the Quality Coordinator."""
 
 ABBREVIATIONS = """BEMMP — Biomedical Equipment Management and Maintenance Program (National Health Mission)
 CDSCO — Central Drugs Standard Control Organisation
 PPM — planned preventive maintenance
-AERB — Atomic Energy Regulatory Board (imaging quality assurance remains the imaging programme)
+AERB — Atomic Energy Regulatory Board (imaging quality-assurance remains the imaging programme)
+NHM — National Health Mission
 CAPA — corrective and preventive action
 RCA — root-cause analysis
-
-Night Duty Officer — the senior doctor or senior nurse holding emergency command overnight
-Maintenance In-Charge — the person accountable for the equipment programme under this policy (biomedical)"""
+UPS — uninterruptible power supply (building plant remains the utilities programme)
+AMC — annual maintenance contract"""
 
 STATUTE_CLAUSE = (
     "the Medical Devices Rules, 2017, read with the Drugs and Cosmetics Act, 1940, "
@@ -206,91 +310,100 @@ OE_MAPPING = [
     {
         "oe_code": "FMS.3.a",
         "requirement": "The organisation plans for medical and support service equipment in accordance with its services and strategic plan.",
-        "steps": "Section 3; 5.1 Plan and inventory",
-        "responsible": "Medical Superintendent (accountable); Maintenance In-Charge (plan)",
+        "steps": "Section 3; 5.1 Plan equipment against the services we offer",
+        "responsible": "Medical Superintendent (accountable); Biomedical In-Charge (plan)",
         "records": [
-            "Equipment plan matched to the service directory and strategic plan.",
-            "Signed gap or go-ahead before a new service is offered.",
-            "Recorded absences for services not offered.",
+            "Equipment plan matched to the service directory and the strategic plan.",
+            "Recorded absences for unused services.",
+            "Sign-off that a new service has the equipment it needs before it is offered.",
         ],
     },
     {
         "oe_code": "FMS.3.b",
         "requirement": "Medical equipment and support service equipment are inventoried, and proper logs are maintained as required.",
-        "steps": "Section 3; 5.1 Plan and inventory",
-        "responsible": "Maintenance In-Charge",
+        "steps": "Section 3; 5.2 Inventory equipment and keep the logs",
+        "responsible": "Biomedical In-Charge",
         "records": [
-            "Inventory including loaners and outsourced items.",
-            "Logs: acceptance, PPM, breakdown, calibration due.",
-            "Unique identifier, location, owner and criticality for each item.",
+            "Inventory including owned, loaned, consigned and outsourced items (unique identifier, location, department, criticality).",
+            "Logs: acceptance, preventive maintenance, breakdown, calibration due.",
+            "Record that crash-cart checklists and laboratory or imaging specialty registers do not replace this inventory.",
         ],
     },
     {
         "oe_code": "FMS.3.c",
         "requirement": "The documented operational and maintenance (preventive and breakdown) plan for medical and support service equipment is implemented.",
-        "steps": "Section 3; 5.2 PPM, breakdown, inspection and calibration",
-        "responsible": "Maintenance In-Charge",
+        "steps": "Section 3; 5.3 Run preventive and breakdown maintenance",
+        "responsible": "Biomedical In-Charge",
         "records": [
-            "Written PPM and breakdown plan (criticality, who attends, how a user reports).",
-            "Job cards showing last month's PPM and last week's breakdown actually happened.",
-            "Cannibalisation and loaner rules as written.",
+            "Written operational and maintenance (preventive and breakdown) plan, with criticality-based tasks and who attends.",
+            "Job cards showing last month's preventive maintenance and last week's breakdown actually happened.",
+            "User-report method, cannibalisation rule and loaner rule.",
+            "Record that BEMMP is used as a framework, not as a named NHM-contract mandate.",
+            "Record that steriliser process validation remains the infection-control sterilisation programme.",
         ],
     },
     {
         "oe_code": "FMS.3.d",
         "requirement": "Medical and support service equipment are periodically inspected and calibrated for their proper functioning.",
-        "steps": "Section 3; 5.2 PPM, breakdown, inspection and calibration",
-        "responsible": "Maintenance In-Charge",
+        "steps": "Section 3; 5.4 Inspect and calibrate; withdraw until passed",
+        "responsible": "Biomedical In-Charge; laboratory and imaging no-report rules remain those programmes",
         "records": [
-            "In-service inspection records.",
-            "Calibration certificates against a traceable standard.",
+            "Inspection and calibration records.",
             "Withdrawal-until-passed for overdue measuring devices.",
+            "Traceable standard or vendor for items that measure or deliver a quantity.",
         ],
     },
     {
         "oe_code": "FMS.3.e",
         "requirement": "Qualified and trained personnel operate and maintain medical and support service equipment.",
-        "steps": "Section 3; 5.3 Qualified operators and maintainers",
-        "responsible": "Maintenance In-Charge; department in-charges",
+        "steps": "Section 3; 5.5 Qualify the people who operate and who maintain",
+        "responsible": "Biomedical In-Charge with department heads",
         "records": [
-            "Trained-operator list by class.",
-            "Maintainer list and visiting-technician job cards.",
-            "Annual refresher recorded for each named operator.",
+            "Role-to-class training records for operators.",
+            "Trained-maintainer list.",
+            "After-hours breakdown roster.",
         ],
     },
     {
         "oe_code": "FMS.3.f",
         "requirement": "There is monitoring of medical equipment and medical devices related to adverse events, and compliance hazard notices on recalls.",
-        "steps": "Section 3; 5.4 Adverse events, recalls and critical downtime",
-        "responsible": "Maintenance In-Charge",
+        "steps": "Section 3; 5.6 Act on adverse events, hazard notices and recalls",
+        "responsible": "Biomedical In-Charge; incident system when a patient was harmed",
         "records": [
-            "Device adverse-event records (incident dual-entry if a patient was harmed).",
-            "Hazard-notice and recall file: inventory search, quarantine, return or destruction.",
-            "Signed compliance that the ward received the quarantine instruction.",
+            "Device adverse-event records, dual-entered with the incident system when a patient was harmed.",
+            "Hazard-notice and recall-compliance files showing inventory search, quarantine and return or destruction.",
+            "Record that this hospital is not treated as a manufacturer under the Medical Devices Rules, 2017.",
         ],
     },
     {
         "oe_code": "FMS.3.g",
         "requirement": "Downtime for critical equipment breakdown is monitored from reporting to inspection and implementation of corrective actions.",
-        "steps": "Section 3; 5.4 Adverse events, recalls and critical downtime",
-        "responsible": "Maintenance In-Charge; Night Duty Officer (night start time)",
+        "steps": "Section 3; 5.7 Time critical-equipment downtime from the user report",
+        "responsible": "Biomedical In-Charge; user who reports (clock start)",
         "records": [
-            "Critical-equipment list.",
-            "Downtime logs from user report to inspection and corrective action.",
-            "Defined alternative (loaner, diversion or pause) when the item is not restored.",
+            "Named critical-equipment list.",
+            "Downtime logs timed from user report to inspection and corrective action or defined alternative.",
+            "Loaner, diversion or service-pause record where restoration was not same-shift.",
         ],
     },
 ]
 
-UNIVERSAL_FACTS_CHECKLIST = """FORMAT EXPERIMENT (2026-08-19). FMS.3 v2 to the FMS.5 v2.2 shape.
+UNIVERSAL_FACTS_CHECKLIST = """FORMAT EXPERIMENT (2026-08-19). FMS.3 v2.1 uses the FMS.5 v2.2 section skeleton.
+Wording is this standard's seven OEs and v1 substance. Fire-cloned stop-work,
+Night Duty Officer as emergency command, Floor Fire Warden, and "roles are
+titles not vacancies" do not appear. Biomedical In-Charge is the lead, with
+a note that a small hospital may use the same person as the facilities lead.
 
-Technical substance retained from v1: BEMMP as framework not NHM-contract/CEA/CEA-Act;
-MDR 2017 + D&C 1940 in P2 because recalls; CDSCO chapter ref 8; IPHS planning
-framework; AAC.4.h/AAC.5.i no-report rules stay those programmes; HIC.6 steriliser
-validation vs equipment split; COP.3 crash-cart vs defibrillator file; downtime
-from user report; no invented six-month calibration calendar.
+Technical substance retained from v1: BEMMP is not CEA or Clinical
+Establishments Act; Medical Devices Rules 2017 + Drugs and Cosmetics Act
+1940 in P2; laboratory and imaging no-report rules stay those programmes;
+steriliser validation stays HIC.6; downtime from user report not engineer
+arrival.
 
-Four 5.x subsections, five non-negotiables. Stop-work included. No SQL. Draft.
+Length follows the seven OEs (seven 5.x subsections). Stop-work is the
+genuine do-not-proceed acts for uninventoried, overdue, failed, recalled or
+unqualified use. Disclaimer P2 MDR 2017 + D&C 1940. No SQL. Status remains
+draft.
 """
 
 
@@ -322,9 +435,13 @@ def main() -> int:
         "resources_required": DOCUMENT_CONTROL,
         "template_test": "fms_v2_adoptable_shape",
         "doc_no": "«FMS/POL/03»",
-        "subtitle": "Standards for inventory, implemented PPM, recalls and downtime.",
-        "footer_label": "Equipment programme",
-        "acknowledgement_note": "The Nursing Superintendent holds signed acknowledgements with the induction record. Operators of each class are named on the trained-operator list.",
+        "subtitle": "Standards for the hospital-wide medical and support-service equipment programme.",
+        "footer_label": "Medical and support-service equipment",
+        "prepared_by": "«Biomedical In-Charge»",
+        "acknowledgement_note": "The Biomedical In-Charge holds signed acknowledgements of operators and maintainers with the induction record. Maintainers are named on the trained-maintainer list.",
+        "control_extra_rows": [
+            ["Critical-equipment list", "«________»", "After-hours breakdown roster", "«________»"],
+        ],
     }
     md = verify_shape(
         draft,
