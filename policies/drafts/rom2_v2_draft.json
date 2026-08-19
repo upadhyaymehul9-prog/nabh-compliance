@@ -1,0 +1,89 @@
+{
+  "standard_code": "ROM.2",
+  "chapter": "ROM",
+  "oe_codes": [
+    "ROM.2.a",
+    "ROM.2.b",
+    "ROM.2.c",
+    "ROM.2.d"
+  ],
+  "policy_title": "Organisation's Leader — Qualifications, Experience and Performance",
+  "purpose": "This policy establishes that the person heading {{HOSPITAL_NAME}} has appropriate administrative qualifications and experience, complies with applicable legislation, and is reviewed for effectiveness.\n\nIt covers four elements: administrative qualifications of the leader; administrative experience; compliance with laid-down and applicable legislations, regulations and notifications; and performance review.\n\nThe chapter intent is that the responsibilities of management are defined. The responsibilities of the leaders at all levels are defined. Management executes its responsibility for compliance with all applicable regulations.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to the person heading {{HOSPITAL_NAME}} (the Medical Superintendent or equivalent), the governing body that appoints and reviews that person, and the Quality Coordinator.\n\nIt covers the four elements ROM.2.a–d name. It does not cover governance roles and responsibilities (ROM.1), strategic and operational plans (ROM.3), or risk management and outsourced services (ROM.4).\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- ROM.1 owns identification of governance roles and appointment of senior leaders. This policy owns the qualifications and experience of the person heading the organisation (the appointee).\n- ROM.3 owns strategic and operational plans and service standards. This policy owns the leader's compliance with legislation relevant to those plans.\n- HRM owns general staff qualifications and credentialling. This policy is specific to the person heading the organisation.",
+  "policy_statement": "{{HOSPITAL_NAME}} ensures that the person heading the organisation has requisite and appropriate administrative qualifications and experience.\n\nThe leader complies with laid-down and applicable legislations, regulations and notifications. The governing body reviews the leader's performance for effectiveness.\n\n{{HOSPITAL_NAME}} does not treat a qualification certificate on file as a substitute for verified appropriateness, or a job description as a substitute for a performance review.",
+  "procedure_steps": [
+    "5.1 Administrative qualifications of the leader\n\nThe person heading {{HOSPITAL_NAME}} has requisite and appropriate administrative qualifications. The governing body documents the qualifications required for the role and verifies that the incumbent holds them.\n\nThe «Medical Superintendent» maintains a file of qualification certificates and the governing body's verification record. The file is reviewed when the incumbent changes or when qualifications are re-verified.\n\n«Requisite qualifications» means the qualifications the governing body defines as necessary for the administrative leadership of a small healthcare organisation — «MBBS with a hospital administration diploma or equivalent, or as the governing body determines».",
+    "5.2 Administrative experience of the leader\n\nThe person heading {{HOSPITAL_NAME}} has requisite and appropriate administrative experience. The governing body documents the experience required and verifies that the incumbent has it.\n\nThe experience record includes years of administrative service, the nature of organisations previously led or managed, and any relevant governance or management training. The record is held alongside the qualifications file.\n\n«Requisite experience» means the experience the governing body defines as necessary — «at least three years of healthcare administration or as the governing body determines».",
+    "5.3 Compliance with applicable legislation\n\nThe leader is responsible for and complies with the laid-down and applicable legislations, regulations and notifications. A register of applicable legislation is maintained and reviewed «annually» or when a new regulation or notification is issued.\n\nThe «Medical Superintendent» holds the compliance register. Each entry states the legislation or regulation, the requirement, the compliance status and the date of last verification. Non-compliance is escalated to the governing body.\n\nThis step does not duplicate the detailed statutory requirements addressed in other policies of {{HOSPITAL_NAME}} (for example FMS for fire and safety, HIC for biomedical waste). It records that the leader is responsible for overall compliance and that a register exists.",
+    "5.4 Performance review of the leader\n\nThe performance of the organisation's leader is reviewed for effectiveness. The governing body conducts a documented performance review «annually».\n\nThe review considers «achievement against the organisation mission and strategic plan, compliance status, quality indicators, patient-safety record and leadership competencies». The review outcome and any improvement actions are recorded in the governing body's minutes.\n\nROM.1.c monitors organisation performance against mission. This step reviews the leader's personal effectiveness in delivering that performance."
+  ],
+  "responsibility": "Governing body (owner(s) / board of directors / trustees)\n- Defines required qualifications and experience for the leader role.\n- Verifies qualifications and experience of the incumbent.\n- Conducts and documents annual performance review.\n\nMedical Superintendent (person heading the organisation)\n- Maintains the qualifications and experience file.\n- Holds the compliance register and ensures it is current.\n- Participates in the performance review process.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see section 7).\n- Supports compilation of quality indicators for the leader's performance review.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Responsibilities of Management chapter, standard ROM.2.\n- Internal documents of {{HOSPITAL_NAME}}: leader's qualifications and experience file; compliance register; governing-body meeting minutes with performance review records.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator.\n\nCopies issued to: governing body members; Medical Superintendent; quality office.\n\nThe current version is available to all staff at the «front-office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "CAPA — corrective and preventive action\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nROM — Responsibilities of Management (NABH SHCO chapter 7)\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "ROM.2.a",
+      "requirement": "The person heading the organisation has requisite and appropriate administrative qualifications.",
+      "steps": "Statement of intent; Section 3; 5.1 Administrative qualifications of the leader; Section 4 item 1",
+      "responsible": "Governing body (define and verify); Medical Superintendent (maintain file)",
+      "records": [
+        "Documented qualifications required for the leader role.",
+        "Qualification certificates on file with governing-body verification record.",
+        "Quarterly audit sample showing file is current."
+      ]
+    },
+    {
+      "oe_code": "ROM.2.b",
+      "requirement": "The person heading the organisation has requisite and appropriate administrative experience.",
+      "steps": "Statement of intent; Section 3; 5.2 Administrative experience of the leader; Section 4 item 2",
+      "responsible": "Governing body (define and verify); Medical Superintendent (maintain file)",
+      "records": [
+        "Documented experience required for the leader role.",
+        "Experience record on file with governing-body verification.",
+        "Quarterly audit sample showing file is current."
+      ]
+    },
+    {
+      "oe_code": "ROM.2.c",
+      "requirement": "The leader is responsible for and complies with the laid-down and applicable legislations, regulations and notifications.",
+      "steps": "Section 3; 5.3 Compliance with applicable legislation; Section 4 item 3",
+      "responsible": "Medical Superintendent (hold register and comply); governing body (escalation)",
+      "records": [
+        "Compliance register with legislation, requirement, status and last-verification date.",
+        "Evidence of annual review or update when new regulation is issued.",
+        "Escalation records for non-compliance items."
+      ]
+    },
+    {
+      "oe_code": "ROM.2.d",
+      "requirement": "The performance of the organisation's leader is reviewed for effectiveness.",
+      "steps": "Section 3; 5.4 Performance review of the leader; Section 4 item 4",
+      "responsible": "Governing body (conduct review); Quality Coordinator (quality indicators)",
+      "records": [
+        "Documented annual performance review with criteria and outcome.",
+        "Governing-body meeting minutes recording the review.",
+        "Improvement actions and follow-up where applicable."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "ROM.2 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Chapter intent PDF index 115. ROM.2.a–d PDF page 116. No asterisked OEs. ROM.2.c is Core, ROM.2.d is Achievement, ROM.2.a and ROM.2.b are Commitment.\n\nSHAPE: Four What-we-do subsections (5.1–5.4). No stop-work. Disclaimer accreditation-only. Governance roles only.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "ROM v2 template: PRE v2 shape, plain English, governance roles, four steps, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The person heading the organisation has the appropriate qualifications and experience to lead it, complies with applicable legislation, and is reviewed for effectiveness.",
+  "exceptions": "The following are prohibited. There is no convenience exception.\n\n1. Operating without documented evidence that the person heading the organisation holds requisite and appropriate administrative qualifications.\n2. Operating without documented evidence that the person heading the organisation has requisite and appropriate administrative experience.\n3. Failing to maintain a documented register of applicable legislations, regulations and notifications with which the leader must comply.\n4. Omitting the performance review of the organisation's leader for more than «one year».\n\nStaff who become aware of one of these gaps report it to the «chairperson of the governing body».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit checks records and practice.\n\nWhat is monitored each quarter:\n\n- Qualifications and experience file is current and verified.\n- Compliance register is current with no overdue items.\n- Annual performance review is on schedule.\n- No prohibited gaps from section 4 exist.\n\nRoot-cause analysis is required when the compliance register is overdue by more than «one quarter» or the performance review is overdue.\n\nThis policy is reviewed «annually», and sooner when the leader changes or applicable legislation changes significantly.",
+  "training_competency": "The Medical Superintendent, governing body members and the Quality Coordinator are briefed on this policy at the leader's appointment and «once a year» after that. Briefing covers qualifications, experience, compliance and performance review requirements.\n\nStaff acknowledgement\n\nI have read this Organisation's Leader — Qualifications, Experience and Performance policy of {{HOSPITAL_NAME}}. I understand the requirements for the leadership role and the review process.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per person. The governing body holds signed acknowledgements.)",
+  "resources_required": "Document number: «ROM/POL/02»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "rom_v2_adoptable_shape",
+  "subtitle": "Leader qualifications, experience, compliance and performance review.",
+  "doc_no": "«ROM/POL/02»"
+}
