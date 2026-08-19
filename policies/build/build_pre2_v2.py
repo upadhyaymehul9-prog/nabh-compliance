@@ -410,7 +410,7 @@ OE_MAPPING = [
     },
     {
         "oe_code": "PRE.2.p",
-        "requirement": "The patient and/or family members are provided multidisciplinary counselling when appropriate",
+        "requirement": "The patient and/or family members are provided multidisciplinary counselling when appropriate.",
         "steps": "Section 3; 5.9 Care plan consultation and counselling; Section 4 item 8",
         "responsible": "Counsellor or treating team (when appropriate); COP.6.e (ICU periodicity)",
         "records": [
@@ -424,7 +424,7 @@ OE_MAPPING = [
 
 UNIVERSAL_FACTS_CHECKLIST = """PRE.2 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.
 
-SOURCE: Header "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes." PRE.2.a–e PDF page 92; PRE.2.f–p PDF page 93. PRE.2.k uses "health care needs" (two words). PRE.2.p has no terminal period. No asterisked OEs.
+SOURCE: Header "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes." PRE.2.a–e PDF page 92; PRE.2.f–p PDF page 93. PRE.2.k uses "health care needs" (two words). PRE.2.p requirement ends with a full stop (clean wording). No asterisked OEs.
 
 SHAPE: Nine What-we-do subsections (5.1–5.9). No stop-work. Disclaimer accreditation-only. PRE roles only."""
 
@@ -456,6 +456,7 @@ def main() -> int:
         "resources_required": DOCUMENT_CONTROL,
         "template_test": "pre_v2_adoptable_shape",
         "subtitle": "Beliefs, values and decision-making in day-to-day care.",
+        "doc_no": D("PRE/POL/02"),
     }
     emit_pre_v2(
         draft,

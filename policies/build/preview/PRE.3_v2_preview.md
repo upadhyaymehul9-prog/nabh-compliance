@@ -91,7 +91,7 @@ The National Medical Commission Act, 2019 governs that a registered medical prac
 
 ### 5.2 Information included in informed consent
 
-Informed consent includes information regarding the procedure, it's risks, benefits, alternatives, and as to who will perform the procedure, in a language that they can understand.
+Informed consent includes information regarding the procedure, its risks, benefits, alternatives, and as to who will perform the procedure, in a language that they can understand.
 
 The consent form and conversation cover those elements in «Hindi and English» or the language the patient or family can understand. A form that lists only "surgery" without the procedure, or that is silent on who will perform it, is incomplete. PRE.4 owns ongoing education in that language; this step is the consent conversation.
 
@@ -198,7 +198,7 @@ This table is an index. It is not how the policy is organised.
 | OE | Requirement | Where this policy addresses it | Responsible |
 | --- | --- | --- | --- |
 | PRE.3.a | The organisation obtains informed consent from the patient or family for situations where informed consent is required. Informed consent process adhered to statutory norms. | Statement of intent; Section 3; 5.1 Informed consent where required; Section 6 stop-work; Section 4 items 1, 6 | Patient Rights Officer (list and process); person performing (takes consent); Medical Superintendent (accountable) |
-| PRE.3.b | Informed consent includes information regarding the procedure; it's risks, benefits, alternatives and as to who will perform the procedure in a language that they can understand. | Section 3; 5.2 Information included; Section 4 item 2 | Person taking consent (gives information); Patient Rights Officer (method) |
+| PRE.3.b | Informed consent includes information regarding the procedure; its risks, benefits, alternatives and as to who will perform the procedure in a language that they can understand. | Section 3; 5.2 Information included; Section 4 item 2 | Person taking consent (gives information); Patient Rights Officer (method) |
 | PRE.3.c | The organisation describes who can give consent when a patient is incapable of independent decision making and implements the same. | Section 3; 5.3 Who can give consent when incapable; Section 4 items 3, 5 | Patient Rights Officer (incapacity description); person taking consent (applies it) |
 | PRE.3.d | Informed consent is taken by the person performing the procedure. | Section 3; 5.4 Consent taken by performer; Section 6 stop-work | Person performing the procedure; COP.11 (surgical timing and person) |
 
@@ -213,7 +213,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Sample consents against the unique identification number for listed situations.
 - Quarterly audit sample showing no elective procedure without consent.
 
-### PRE.3.b — Informed consent includes information regarding the procedure; it's risks, benefits, alternatives and as to who will perform the procedure in a language that they can understand.
+### PRE.3.b — Informed consent includes information regarding the procedure; its risks, benefits, alternatives and as to who will perform the procedure in a language that they can understand.
 
 - Written information method covering procedure, risks, benefits, alternatives and who will perform.
 - Sample consents showing those elements — not a form that says only 'surgery'.

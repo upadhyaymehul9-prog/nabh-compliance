@@ -7,7 +7,7 @@ md5 39e3bc86d73d651b9cfef283bbf018a9), printed page 88 / PDF index 94.
 Does NOT overwrite pre3_draft.json or build_pre3.py. No SQL.
 Stop-work section 6 for elective/planned procedures without consent (emergency exception).
 Disclaimer P2 names NMC Act 2019 and MHCA 2017 only when that Act's definition applies.
-PRE.3.b uses PDF wording "it's risks".
+PRE.3.b requirement uses "its risks" (correct grammar).
 """
 from __future__ import annotations
 
@@ -89,7 +89,7 @@ The National Medical Commission Act, 2019 governs that a registered medical prac
 
 f"""5.2 Information included in informed consent
 
-Informed consent includes information regarding the procedure, it's risks, benefits, alternatives, and as to who will perform the procedure, in a language that they can understand.
+Informed consent includes information regarding the procedure, its risks, benefits, alternatives, and as to who will perform the procedure, in a language that they can understand.
 
 The consent form and conversation cover those elements in {D('Hindi and English')} or the language the patient or family can understand. A form that lists only "surgery" without the procedure, or that is silent on who will perform it, is incomplete. PRE.4 owns ongoing education in that language; this step is the consent conversation.""",
 
@@ -206,7 +206,7 @@ OE_MAPPING = [
     },
     {
         "oe_code": "PRE.3.b",
-        "requirement": "Informed consent includes information regarding the procedure; it's risks, benefits, alternatives and as to who will perform the procedure in a language that they can understand.",
+        "requirement": "Informed consent includes information regarding the procedure; its risks, benefits, alternatives and as to who will perform the procedure in a language that they can understand.",
         "steps": "Section 3; 5.2 Information included; Section 4 item 2",
         "responsible": "Person taking consent (gives information); Patient Rights Officer (method)",
         "records": [
@@ -242,7 +242,7 @@ OE_MAPPING = [
     },
 ]
 
-UNIVERSAL_FACTS_CHECKLIST = """PRE.3 v2 (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9. PRE.3.a and PRE.3.c asterisked. PRE.3.b uses "it's risks". Stop-work section 6. P2: NMC Act 2019 and MHCA 2017 only. No CPA/CEA in P2."""
+UNIVERSAL_FACTS_CHECKLIST = """PRE.3 v2 (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9. PRE.3.a and PRE.3.c asterisked. PRE.3.b uses "its risks". Stop-work section 6. P2: NMC Act 2019 and MHCA 2017 only. No CPA/CEA in P2."""
 
 
 def main() -> int:
@@ -273,6 +273,7 @@ def main() -> int:
         "resources_required": DOCUMENT_CONTROL,
         "template_test": "pre_v2_adoptable_shape",
         "subtitle": "Informed consent before procedures and high-risk care.",
+        "doc_no": D("PRE/POL/03"),
     }
     emit_pre_v2(
         draft,

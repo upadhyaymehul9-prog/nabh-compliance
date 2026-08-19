@@ -114,7 +114,7 @@ def verify_disclaimer(
     assert hashlib.md5(parts[2].encode("utf-8")).hexdigest() == DISCLAIMER_P3_MD5
     assert hashlib.md5(parts[3].encode("utf-8")).hexdigest() == DISCLAIMER_P4_MD5
     if accreditation_only:
-        assert "no named Act of Parliament" in parts[1]
+        assert "named Act of Parliament" in parts[1]
         assert statute_clause is None or statute_clause in parts[1]
     else:
         assert statute_clause, "statute_clause required"

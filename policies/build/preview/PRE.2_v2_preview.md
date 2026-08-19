@@ -247,7 +247,7 @@ This table is an index. It is not how the policy is organised.
 | PRE.2.m | The patient and/or family members are explained about the proposed care, including the risks, alternatives and benefits. | Section 3; 5.8 Explanation of proposed care and expected results; Section 4 item 8 | Clinicians (explain); PRE.3/PRE.4 (consent and education splits) |
 | PRE.2.n | The patient and/or family members are explained about the expected results and complications. | Section 3; 5.8 Explanation of proposed care and expected results; Section 4 item 8 | Clinicians (explain expected results and complications) |
 | PRE.2.o | The care plan is prepared and modified in consultation with the patient and/or family members. | Section 3; 5.9 Care plan consultation and counselling; Section 4 item 8 | Treating team (consult); AAC.3 (plan document); PRE.5.d (financial implications) |
-| PRE.2.p | The patient and/or family members are provided multidisciplinary counselling when appropriate | Section 3; 5.9 Care plan consultation and counselling; Section 4 item 8 | Counsellor or treating team (when appropriate); COP.6.e (ICU periodicity) |
+| PRE.2.p | The patient and/or family members are provided multidisciplinary counselling when appropriate. | Section 3; 5.9 Care plan consultation and counselling; Section 4 item 8 | Counsellor or treating team (when appropriate); COP.6.e (ICU periodicity) |
 
 ## 13. Required Records / Evidence Checklist
 
@@ -358,7 +358,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Recorded split that AAC.3 owns clinical plan and PRE.5.d owns money of a change.
 - Quarterly audit sample.
 
-### PRE.2.p — The patient and/or family members are provided multidisciplinary counselling when appropriate
+### PRE.2.p — The patient and/or family members are provided multidisciplinary counselling when appropriate.
 
 - Written description of when multidisciplinary counselling is provided and by whom.
 - Recorded split that COP.6.e owns periodic ICU family counselling where ICU exists.
@@ -369,7 +369,7 @@ Records the hospital holds under this policy, listed by objective element.
 
 This document is a template prepared for the guidance of Preview Hospital and must be reviewed, adapted and formally approved by Preview Hospital before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.
 
-The requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition rather than duties under a named Act of Parliament. In particular those arising under no named Act of Parliament; the duties in this document are accreditation requirements of the NABH SHCO 3rd Edition are written here as accreditation method, not as a copied statute. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of Preview Hospital remain those documents. Preview Hospital is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.
+The requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of Preview Hospital remain those documents. Preview Hospital is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.
 
 The clinical and technical content reflects recognised national and international guidance current at the date of preparation. Preview Hospital remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.
 

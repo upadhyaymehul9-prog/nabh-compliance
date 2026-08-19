@@ -233,6 +233,7 @@ def main() -> int:
         "resources_required": DOCUMENT_CONTROL,
         "template_test": "pre_v2_adoptable_shape",
         "subtitle": "Feedback, complaints and redressal patients can actually use.",
+        "doc_no": D("PRE/POL/06"),
     }
     emit_pre_v2(
         draft,
