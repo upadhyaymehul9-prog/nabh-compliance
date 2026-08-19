@@ -1,0 +1,91 @@
+{
+  "standard_code": "COP.4",
+  "chapter": "COP",
+  "oe_codes": [
+    "COP.4.a",
+    "COP.4.b",
+    "COP.4.c",
+    "COP.4.d"
+  ],
+  "policy_title": "Nursing Care",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} provides nursing care to patients in consonance with clinical protocols.\n\nIt covers four elements: nursing care aligned and integrated with overall patient care and documented in the patient record; assignment of patient care as per current good clinical and nursing practice guidelines; appropriate and adequate equipment for safe and efficient nursing services; and development and implementation of nursing clinical practice guidelines reflecting current standards of practice.\n\nThe chapter intent is that nursing care is aligned with patient care, follows guidelines, is equipped, and is guided by current practice.\n\nThis policy owns nursing care delivery. AAC.3 owns the care plan as a clinical document. COP.1 owns uniform care across settings.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to every nursing staff member at {{HOSPITAL_NAME}} and to the settings in which nursing care is provided: in-patient wards, emergency department, out-patient clinics, ICU where it exists, and any other area where nurses deliver care.\n\nIt covers the four elements COP.4.a–d name. It does not cover the care plan as a clinical document (AAC.3), uniform care across settings (COP.1), or medication administration as a system (MOM).\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- AAC.3 owns the care plan as a clinical document. This policy owns that nursing care is aligned and integrated with that plan.\n- COP.1 owns uniform care. This policy owns that nursing care follows adopted guidelines uniformly.\n- MOM owns medication management. This policy owns that nurses administer medications as part of nursing care following nursing practice guidelines.\n- HIC owns the infection-control programme. This policy owns that nurses follow infection-control practices as part of nursing care.",
+  "policy_statement": "{{HOSPITAL_NAME}} aligns nursing care with the overall patient care plan and documents nursing assessments, interventions and outcomes in the patient record. Nursing documentation is part of the patient record, not a separate file that clinicians never read.\n\n{{HOSPITAL_NAME}} assigns patient care as per current good clinical and nursing practice guidelines. Assignment considers patient acuity, nurse competency and workload. A nurse is not assigned more patients than safe practice allows.\n\n{{HOSPITAL_NAME}} provides nurses with appropriate and adequate equipment for safe and efficient nursing services, including «patient monitoring equipment, wound care supplies, medication administration equipment, and personal protective equipment».\n\n{{HOSPITAL_NAME}} develops and implements nursing clinical practice guidelines reflecting current standards of practice. Guidelines are reviewed «annually» and updated when standards change.\n\n{{HOSPITAL_NAME}} does not treat any of these as meeting this policy: nursing notes that are never read by the treating doctor; patient assignment that ignores acuity; equipment requests that are never fulfilled; or nursing guidelines that exist on paper but are not followed at the bedside.",
+  "procedure_steps": [
+    "5.1 Nursing care aligned and integrated with overall patient care\n\nNursing care is aligned and integrated with overall patient care. Nursing assessments, interventions and outcomes are documented in the patient record — the same record the treating doctor uses. AAC.3 owns the care plan as a clinical document; nursing care follows and contributes to that plan.\n\nThe nurse documents: initial nursing assessment; ongoing assessments at intervals defined by acuity; nursing interventions performed; patient response; and handover notes. Documentation is legible, timed and signed.\n\nThe «Nursing Superintendent» holds the nursing documentation standards and reviews them «annually».",
+    "5.2 Patient care assignment as per good clinical and nursing practice\n\nAssignment of patient care is done as per current good clinical and nursing practice guidelines. Assignment considers: patient acuity; complexity of care required; nurse competency and experience; and workload.\n\nThe «ward in-charge nurse» assigns patients at each shift using a written assignment method. When the patient load exceeds safe limits, the ward in-charge escalates to the «Nursing Superintendent» the same shift.\n\nThe assignment method is reviewed «annually» by the Nursing Superintendent.",
+    "5.3 Appropriate and adequate equipment for nursing services\n\nNurses are provided with appropriate and adequate equipment for providing safe and efficient nursing services. Equipment includes: «patient monitoring equipment, wound care supplies, medication administration equipment, personal protective equipment, and mobility aids».\n\nEquipment needs are assessed «annually» by the Nursing Superintendent in consultation with ward in-charge nurses. Equipment that is broken or missing is reported the same shift and replaced or repaired within «the defined turnaround time».\n\nAn equipment inventory is maintained for each nursing area and reviewed «quarterly».",
+    "5.4 Nursing clinical practice guidelines\n\n{{HOSPITAL_NAME}} develops and implements nursing clinical practice guidelines reflecting current standards of practice. Guidelines cover at minimum: «nursing assessment, pain management, wound care, medication administration, patient safety, infection prevention, and patient education as they apply to nursing».\n\nGuidelines are developed by the «Nursing Superintendent in consultation with senior nurses and treating doctors», adopted formally, and made available to all nursing staff.\n\nGuidelines are reviewed «annually» and updated when standards of practice change. A guideline that is adopted but never read by the nurses who use it is not an adopted guideline. Training on updated guidelines is completed before the updated guideline takes effect."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable that nursing care is provided as this policy requires.\n- Approves nursing clinical practice guidelines.\n\n«Nursing Superintendent»\n- Holds nursing documentation standards, patient assignment method, equipment inventory and nursing clinical practice guidelines.\n- Reviews and updates guidelines annually.\n- Receives escalations when patient load exceeds safe limits.\n\n«Ward in-charge nurses»\n- Assign patients at each shift using the written assignment method.\n- Report broken or missing equipment the same shift.\n- Ensure nursing documentation is completed in the patient record.\n\nNurses\n- Document nursing assessments, interventions and outcomes in the patient record.\n- Follow adopted nursing clinical practice guidelines at the bedside.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see monitoring section).\n- Tracks CAPA when nursing documentation, assignment or guideline adherence findings recur.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Care of Patients chapter, standard COP.4.\n- Internal documents of {{HOSPITAL_NAME}}: nursing documentation standards; patient assignment method; nursing equipment inventory; nursing clinical practice guidelines; AAC.3 care plan policy; COP.1 uniform care policy; MOM medication management policy; HIC infection-control programme.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Nursing Superintendent and the Quality Coordinator.\n\nCopies issued to: every in-patient ward; emergency department; out-patient clinics; ICU where it exists; nursing administration.\n\nThe current version is available to all nursing staff at the «nursing office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "CAPA — corrective and preventive action\nCOP — Care of Patients (NABH SHCO chapter 5)\nHIC — Hospital Infection Control (NABH SHCO chapter 7)\nICU — intensive care unit\nMOM — Management of Medication (NABH SHCO chapter 6)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nRCA — root-cause analysis\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "COP.4.a",
+      "requirement": "Nursing care is aligned and integrated with overall patient care, and is documented in the patient record.",
+      "steps": "Section 3; 5.1 Nursing care aligned and integrated with overall patient care; Section 4 item 1",
+      "responsible": "Nurses (document); Nursing Superintendent (standards); ward in-charge (ensure completion)",
+      "records": [
+        "Nursing documentation standards reviewed annually.",
+        "Sample patient records showing nursing assessments, interventions and outcomes in the patient record.",
+        "Quarterly audit of nursing documentation completeness and alignment with care plan.",
+        "Handover notes in the patient record."
+      ]
+    },
+    {
+      "oe_code": "COP.4.b",
+      "requirement": "Assignment of patient care is done as per current good clinical / nursing practice guidelines.",
+      "steps": "Section 3; 5.2 Patient care assignment as per good clinical and nursing practice; Section 4 item 2",
+      "responsible": "Ward in-charge nurses (assign); Nursing Superintendent (method and escalation)",
+      "records": [
+        "Written patient assignment method reviewed annually.",
+        "Shift assignment records showing acuity and competency considered.",
+        "Escalation records when patient load exceeded safe limits."
+      ]
+    },
+    {
+      "oe_code": "COP.4.c",
+      "requirement": "Nurses are provided with appropriate and adequate equipment for providing safe and efficient nursing services.",
+      "steps": "Section 3; 5.3 Appropriate and adequate equipment for nursing services; Section 4 item 3",
+      "responsible": "Nursing Superintendent (needs assessment); ward in-charge (report and replace)",
+      "records": [
+        "Equipment inventory for each nursing area reviewed quarterly.",
+        "Annual needs assessment record.",
+        "Broken or missing equipment reports and replacement records."
+      ]
+    },
+    {
+      "oe_code": "COP.4.d",
+      "requirement": "The organization develops and implements nursing clinical practice guidelines reflecting current standards of practice.",
+      "steps": "Section 3; 5.4 Nursing clinical practice guidelines; Section 4 item 4",
+      "responsible": "Nursing Superintendent (develop and review); nurses (follow); Medical Superintendent (approve)",
+      "records": [
+        "List of adopted nursing clinical practice guidelines with adoption and review dates.",
+        "Evidence that nursing staff have read the guidelines.",
+        "Annual review records for each guideline.",
+        "Training records when guidelines are updated."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "COP.4 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"Nursing care is provided to patients in the organization in consonance with clinical protocols.\" COP.4.a–d PDF page 69. COP.4.a asterisked (Commitment). COP.4.d asterisked (Excellence). COP.4.b Commitment. COP.4.c Commitment.\n\nSHAPE: Four What-we-do subsections (5.1–5.4). No stop-work. Disclaimer accreditation-only. COP roles only.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "COP v2 template: plain English, COP roles, four OEs, no stop-work, accreditation-only disclaimer."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Nursing care is provided to patients in the organization in consonance with clinical protocols — not a staffing roster that exists on paper while wards run on individual habit.",
+  "exceptions": "The following are prohibited. There is no staffing convenience exception.\n\n1. Delivering nursing care that is not documented in the patient record, or maintaining nursing documentation separate from the patient record so that treating doctors cannot see it.\n2. Assigning patients to nurses without considering patient acuity and nurse competency, or assigning more patients than safe practice allows without escalation to the «Nursing Superintendent».\n3. Continuing to provide nursing care with equipment known to be broken, missing or inadequate without escalating the equipment need.\n4. Adopting a nursing clinical practice guideline on paper while the nurses who deliver the care have never read or been trained on it.\n\nStaff who see one of these acts report it the same shift to the «Nursing Superintendent» or the Medical Superintendent.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit looks at records and at the ward.\n\nWhat is monitored each quarter:\n\n- Nursing assessments, interventions and outcomes are documented in the patient record and aligned with the care plan.\n- Patient assignment considers acuity and competency, with escalation records where load exceeded safe limits.\n- Equipment inventory is current and broken or missing items are reported and replaced within the defined turnaround.\n- Nursing clinical practice guidelines are available to and read by the nurses who use them.\n\nRoot-cause analysis is required when the same nursing documentation gap or the same assignment overload finding recurs twice within six months.\n\nThis policy is reviewed «annually», and sooner when a nursing clinical practice guideline is updated or the scope of nursing services changes.",
+  "training_competency": "All nursing staff are trained on this policy at induction and «once a year» after that. Training covers nursing documentation standards, patient assignment, equipment escalation, and adopted nursing clinical practice guidelines.\n\nStaff acknowledgement\n\nI have read this Nursing Care policy of {{HOSPITAL_NAME}}. I will document nursing care in the patient record. I will follow adopted nursing clinical practice guidelines at the bedside.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Nursing Superintendent holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «COP/POL/04»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Nursing Superintendent»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "cop_v2_adoptable_shape",
+  "subtitle": "Nursing care in consonance with clinical protocols.",
+  "doc_no": "«COP/POL/04»"
+}

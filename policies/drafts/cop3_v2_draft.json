@@ -1,0 +1,92 @@
+{
+  "standard_code": "COP.3",
+  "chapter": "COP",
+  "oe_codes": [
+    "COP.3.a",
+    "COP.3.b",
+    "COP.3.c",
+    "COP.3.d"
+  ],
+  "policy_title": "Cardiopulmonary Resuscitation Services",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} provides cardiopulmonary resuscitation (CPR) services uniformly across the organisation.\n\nIt covers four elements: availability of resuscitation services at all times; assigned roles and responsibilities during CPR with recorded events; equipment and medications for CPR available in various areas; and a multidisciplinary committee that does post-event analysis with corrective and preventive measures.\n\nThe chapter intent is that CPR is available, structured, equipped, and reviewed — not a crash cart gathering dust.\n\nThis policy owns CPR. COP.2 owns emergency department operations. MOM owns medication management. COP.6 owns ICU care.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to every area of {{HOSPITAL_NAME}} where a patient or visitor may suffer a cardiopulmonary arrest, and to every staff member who may respond: treating doctors, nurses, the «CPR committee», anaesthetists where available, and the Medical Superintendent.\n\nIt covers the four elements COP.3.a–d name. It does not cover emergency department operations (COP.2), medication management (MOM), or ICU care (COP.6).\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- COP.2 owns emergency department operations. This policy owns CPR wherever it occurs, including in the emergency department.\n- MOM owns medication management. This policy owns that CPR medications are available and checked on the crash cart.\n- COP.6 owns ICU care. This policy owns CPR in the ICU as in any other area.",
+  "policy_statement": "{{HOSPITAL_NAME}} makes resuscitation services available to patients at all times in every area of the hospital. A code can be called from any ward, out-patient area, emergency department or corridor.\n\nDuring CPR, assigned roles and responsibilities are complied with, and the events during CPR are recorded. The code team has defined roles: «team leader, airway, chest compressions, medications, recorder». Events are recorded contemporaneously, not reconstructed after the fact.\n\nEquipment and medications for use during CPR are available in various areas of the organisation. Crash carts are placed at «emergency department, each in-patient ward and ICU where it exists». Each crash cart is checked «daily» for seal, expiry and completeness. A crash cart that is sealed but never checked is not compliant.\n\nA multidisciplinary «CPR committee» does a post-event analysis of all cardiopulmonary resuscitations, and corrective and preventive measures are taken based on this analysis.\n\n{{HOSPITAL_NAME}} does not treat any of these as meeting this policy: a crash cart that has not been checked since the last seal was placed; a CPR event with no contemporaneous record; or a post-event analysis that leads to no corrective action.",
+  "procedure_steps": [
+    "5.1 Availability of resuscitation services at all times\n\nResuscitation services are available to patients at all times — day, night, weekends and holidays. A code can be called from any area by any staff member using «the code announcement system or emergency extension number».\n\nThe code team responds within «the defined response time». The team includes at least «one doctor trained in advanced life support and one nurse trained in basic life support». Where an anaesthetist is available, the anaesthetist leads airway management.\n\nAll clinical staff are trained in basic life support at induction and «annually». The «CPR committee» holds the training records and the code-call protocol.",
+    "5.2 Assigned roles, compliance and event recording during CPR\n\nDuring CPR, the code team follows assigned roles: «team leader, airway, chest compressions, medications, recorder». The team leader directs the resuscitation. Each member knows their role before the code begins.\n\nEvents during CPR are recorded contemporaneously by the recorder: time of arrest, time of code call, interventions, medications given with dose and time, rhythm checks, and outcome. The record is completed before the team disperses. A record reconstructed from memory hours later is not contemporaneous.\n\nThe completed CPR record is filed in the patient's medical record and a copy sent to the «CPR committee» for post-event analysis.",
+    "5.3 CPR equipment and medications in various areas\n\nEquipment and medications for use during CPR are available in various areas of the organisation. Crash carts are placed at «emergency department, each in-patient ward and ICU where it exists».\n\nEach crash cart contains at minimum: «bag-valve-mask, oropharyngeal airways, laryngoscope, endotracheal tubes, suction, defibrillator or access to defibrillator, IV cannulae, syringes, and emergency medications as per the hospital CPR drug list».\n\nEach crash cart is checked «daily» by the duty nurse for: seal intact, all items present, no expired medications, defibrillator functional. The check is recorded on a dated log attached to the cart.\n\nMedications on the crash cart follow the «hospital CPR drug list reviewed annually» by the CPR committee. MOM owns medication management as a system; this policy owns that CPR medications are on the cart and within expiry.",
+    "5.4 Post-event analysis by a multidisciplinary committee\n\nA multidisciplinary «CPR committee» does a post-event analysis of all cardiopulmonary resuscitations. The committee includes at least «one physician, one nurse and the Quality Coordinator».\n\nThe analysis reviews: response time; adherence to assigned roles; quality of chest compressions and airway management; appropriateness of medications; accuracy of the contemporaneous record; and outcome. The committee identifies what went well and what needs corrective or preventive action.\n\nCorrective and preventive actions are documented, assigned an owner and a due date, and tracked to closure. The committee meets «within one week of each CPR event» and reports findings to the Medical Superintendent «quarterly».\n\nAggregate trends — survival rates, common deficiencies, equipment failures — are reviewed «annually» to inform training and equipment decisions."
+  ],
+  "stop_work": "Do not go ahead if you are about to do any of the following:\n\n- leave a patient in cardiac arrest without initiating CPR;\n- use a CPR crash cart without checking that it is stocked and sealed;\n- continue a resuscitation using a defibrillator known to be non-functional without obtaining a replacement;\n- sign a crash-cart check sheet for a cart you did not actually check.\n\nIf you find a crash cart unstocked or with expired medications, remove the cart from service and replace it. Tell the «CPR committee chairperson» the same shift. If that person is not on site, tell the «duty medical officer».\n\nRefusing in good faith to use an unchecked or unstocked crash cart is not a disciplinary matter.",
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable that CPR services are available, equipped and reviewed as this policy requires.\n\n«CPR committee» (multidisciplinary)\n- Holds the code-call protocol, training records, crash-cart placement plan and CPR drug list.\n- Conducts post-event analysis of every CPR event.\n- Tracks corrective and preventive actions to closure.\n- Reports findings to the Medical Superintendent quarterly.\n\nTreating doctors\n- Respond to code calls and fulfil assigned roles during CPR.\n- Complete the contemporaneous CPR record.\n\nNurses\n- Check crash carts daily and record the check.\n- Initiate basic life support when a cardiac arrest is identified.\n- Call the code and assist during CPR in assigned roles.\n\nAnaesthetists (where available)\n- Lead airway management during CPR.\n\nQuality Coordinator\n- Participates in the CPR committee.\n- Audits this policy «quarterly» (see monitoring section).",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Care of Patients chapter, standard COP.3.\n- Internal documents of {{HOSPITAL_NAME}}: code-call protocol; crash-cart placement plan and daily check log; CPR drug list; post-event analysis records; training records; COP.2 emergency department policy; MOM medication management policy; COP.6 ICU policy.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the CPR committee chairperson and the Quality Coordinator.\n\nCopies issued to: emergency department; each in-patient ward; ICU where it exists; nursing administration; anaesthesia department where it exists.\n\nThe current version is available to all staff at the «quality office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "BLS — basic life support\nCAPA — corrective and preventive action\nCOP — Care of Patients (NABH SHCO chapter 5)\nCPR — cardiopulmonary resuscitation\nICU — intensive care unit\nIV — intravenous\nMOM — Management of Medication (NABH SHCO chapter 6)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nRCA — root-cause analysis\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "COP.3.a",
+      "requirement": "Resuscitation services are available to patients at all times.",
+      "steps": "Section 3; 5.1 Availability of resuscitation services at all times",
+      "responsible": "CPR committee (protocol and training); all clinical staff (respond)",
+      "records": [
+        "Code-call protocol naming the announcement system and response time.",
+        "Code team roster showing coverage at all times.",
+        "Basic life support training records for all clinical staff at induction and annually."
+      ]
+    },
+    {
+      "oe_code": "COP.3.b",
+      "requirement": "During cardiopulmonary resuscitation, assigned roles and responsibilities are complied with, and the events during cardiopulmonary resuscitation are recorded.",
+      "steps": "Section 3; 5.2 Assigned roles, compliance and event recording during CPR; Section 4 item 3",
+      "responsible": "Code team members (assigned roles); recorder (contemporaneous record); CPR committee (review)",
+      "records": [
+        "Defined role assignments for the code team.",
+        "Contemporaneous CPR event records filed in patient records.",
+        "Copy of each CPR record sent to the CPR committee."
+      ]
+    },
+    {
+      "oe_code": "COP.3.c",
+      "requirement": "The equipment and medications for use during cardiopulmonary resuscitation are available in various areas of the organization.",
+      "steps": "Section 3; 5.3 CPR equipment and medications in various areas; Section 4 item 2",
+      "responsible": "CPR committee (drug list and placement plan); duty nurse (daily check); MOM (medication system)",
+      "records": [
+        "Crash-cart placement plan naming locations.",
+        "Daily crash-cart check logs with date, seal, expiry and completeness.",
+        "Hospital CPR drug list reviewed annually.",
+        "Defibrillator functional check records."
+      ]
+    },
+    {
+      "oe_code": "COP.3.d",
+      "requirement": "A multidisciplinary committee does a post-event analysis of all cardiopulmonary resuscitations, and corrective and preventive measures are taken based on this.",
+      "steps": "Section 3; 5.4 Post-event analysis by a multidisciplinary committee; Section 4 item 4",
+      "responsible": "CPR committee (analysis and CAPA); Medical Superintendent (quarterly review)",
+      "records": [
+        "Post-event analysis report for every CPR event within one week.",
+        "Corrective and preventive action records with owner, due date and closure.",
+        "Quarterly report to Medical Superintendent.",
+        "Annual aggregate trend review."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "COP.3 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"Cardio-pulmonary resuscitation services are provided uniformly across the organization.\" COP.3.a–d PDF pages 68–69. COP.3.d Core. All others Commitment. No asterisked OEs.\n\nSHAPE: Four What-we-do subsections (5.1–5.4). Stop-work present. Disclaimer accreditation-only. COP roles only.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "COP v2 template: plain English, COP roles, four OEs, stop-work, accreditation-only disclaimer."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Cardiopulmonary resuscitation services are provided uniformly across the organization — not a crash cart that is sealed but never checked, and not a code team that has never drilled together.",
+  "exceptions": "The following are prohibited. There is no shift convenience exception.\n\n1. Leaving a patient in cardiac arrest without initiating CPR while waiting for the code team to arrive. Any trained staff member initiates basic life support immediately.\n2. Using a CPR crash cart without checking that it is stocked, sealed and within expiry. A cart found unstocked or with expired medications is a finding.\n3. Conducting CPR without a contemporaneous record of events, interventions, medications given and times.\n4. Omitting post-event analysis for any CPR event, or conducting an analysis that identifies no corrective or preventive measures when deficiencies existed.\n\nStaff who see one of these acts report it the same shift to the «CPR committee chairperson» or the Medical Superintendent.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit looks at records and at the floor.\n\nWhat is monitored each quarter:\n\n- Code-call system is functional and known to all clinical staff.\n- Code team response times are within the defined target.\n- Crash carts at all designated locations are checked daily with a dated log.\n- No expired medications or missing items on crash carts.\n- CPR records are contemporaneous and complete.\n- Post-event analysis is conducted for every CPR event with documented corrective and preventive actions.\n\nRoot-cause analysis is required when: a crash cart is found unstocked or expired at the time of a code; the code team response time exceeds the target; or the same deficiency recurs in two consecutive post-event analyses.\n\nThis policy is reviewed «annually», and sooner when the CPR committee identifies a systemic issue or the CPR drug list is revised.",
+  "training_competency": "All clinical staff are trained in basic life support at induction and «once a year» after that. Code team members are trained in advanced life support. Training covers assigned roles, the code-call protocol, crash-cart checking, contemporaneous recording, and stop-work authority.\n\nStaff acknowledgement\n\nI have read this Cardiopulmonary Resuscitation Services policy of {{HOSPITAL_NAME}}. I will initiate basic life support immediately on identifying a cardiac arrest. I will not use a crash cart without checking that it is stocked and sealed.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The CPR committee holds signed acknowledgements with the training record.)",
+  "resources_required": "Document number: «COP/POL/03»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «CPR committee chairperson»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "cop_v2_adoptable_shape",
+  "subtitle": "CPR services uniformly across the organisation.",
+  "doc_no": "«COP/POL/03»"
+}

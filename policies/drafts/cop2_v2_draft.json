@@ -1,0 +1,186 @@
+{
+  "standard_code": "COP.2",
+  "chapter": "COP",
+  "oe_codes": [
+    "COP.2.a",
+    "COP.2.b",
+    "COP.2.c",
+    "COP.2.d",
+    "COP.2.e",
+    "COP.2.f",
+    "COP.2.g",
+    "COP.2.h",
+    "COP.2.i",
+    "COP.2.j",
+    "COP.2.k"
+  ],
+  "policy_title": "Emergency Services, Ambulance and Disaster Management",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} provides emergency services including ambulance, and manages disasters, in accordance with written guidance, applicable laws and regulations.\n\nIt covers eleven elements: an identified, accessible emergency area with adequate resources; medico-legal case management in consonance with statutory requirements; triage-guided initiation of care; reassessment of waiting patients; admission, discharge or transfer documentation; a quality-assurance programme; management of patients dead on arrival or dying within minutes; access to ambulance services; ambulance fitness, equipment and medications; early treatment initiation during transit; and disaster and epidemic management.\n\nThis policy owns emergency clinical care, triage and ambulance. AAC.2 owns the registration, admission, transfer and discharge process. FMS.5 owns fire and non-fire facility emergencies. COP.3 owns CPR.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to the emergency department of {{HOSPITAL_NAME}} and to every staff member who provides emergency care: emergency doctors, emergency nurses, triage nurses, ambulance personnel, the Medical Superintendent, and the «Quality Coordinator».\n\nIt covers the eleven elements COP.2.a–k name. It does not cover fire or non-fire facility emergencies (FMS.5), the registration or transfer process (AAC.2), or CPR (COP.3).\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- AAC.2 owns registration, admission, transfer and discharge process. This policy owns emergency clinical care, triage and ambulance.\n- FMS.5 owns fire and non-fire facility emergencies. This policy owns clinical disaster and epidemic response.\n- COP.3 owns CPR. This policy owns that CPR-trained staff are available in the emergency department.\n- COP.1 owns uniform care. This policy owns that uniform care extends to emergency patients.\n- PRE.3 owns informed consent method. This policy owns that medico-legal cases receive emergency care in consonance with statutory requirements.",
+  "policy_statement": "{{HOSPITAL_NAME}} maintains an identified area that is easily accessible to receive and manage emergency patients, with adequate and appropriate resources including staff, equipment and medications available «24 hours a day, 7 days a week».\n\n{{HOSPITAL_NAME}} manages medico-legal cases and provides emergency care in consonance with statutory requirements and in accordance with written guidance. No emergency patient is refused stabilisation because of a medico-legal concern.\n\n{{HOSPITAL_NAME}} uses a system of triage to guide initiation of appropriate care. Patients waiting in the emergency are reassessed as appropriate for the change in status at intervals defined by the triage category.\n\nAdmission, discharge to home or transfer to another organisation is documented, and a discharge note is given to the patient.\n\n{{HOSPITAL_NAME}} implements a quality-assurance programme for the emergency department.\n\n{{HOSPITAL_NAME}} has systems for managing patients found dead on arrival and patients who die within a few minutes of arrival.\n\n{{HOSPITAL_NAME}} has access to ambulance services commensurate with the scope of services provided. Ambulances are fit for purpose, operated by trained personnel, appropriately equipped, and carry emergency medications.\n\nWhere resources allow, the emergency department identifies opportunities to initiate treatment at the earliest when the patient is in transit to the organisation.\n\n{{HOSPITAL_NAME}} manages potential community emergencies, epidemics and other disasters as per a documented plan.\n\n{{HOSPITAL_NAME}} does not treat any of these as meeting this policy: an emergency department that locks its door at night; a medico-legal case refused stabilisation; a triage tag that is never followed up; or a disaster plan that has never been drilled.",
+  "procedure_steps": [
+    "5.1 Identified and accessible emergency area with adequate resources\n\n{{HOSPITAL_NAME}} maintains an identified area that is easily accessible to receive and manage emergency patients. The area is signposted from the main entrance and from the road. It is accessible to ambulances without obstruction.\n\nResources include: «at least one emergency doctor and one emergency nurse on duty at all times»; resuscitation equipment and crash cart (COP.3 owns CPR); essential medications as per the emergency drug list reviewed «annually»; and diagnostic support commensurate with the scope of services.\n\nThe «emergency department in-charge» holds the resource inventory and reviews it «quarterly».",
+    "5.2 Medico-legal cases and statutory emergency care\n\n{{HOSPITAL_NAME}} manages medico-legal cases and provides emergency care in consonance with statutory requirements. No emergency patient is refused stabilisation. Medico-legal documentation follows written guidance that includes: recording of injuries and their probable cause; informing the police as required; chain-of-custody procedures for evidence; and protection of the patient's rights throughout.\n\nThe written guidance is reviewed «annually» by the Medical Superintendent. Staff are trained on medico-legal documentation at induction and «annually».\n\nThis policy does not rewrite the applicable medico-legal provisions. It requires that {{HOSPITAL_NAME}} has written guidance that is followed.",
+    "5.3 Triage-guided initiation of care\n\n{{HOSPITAL_NAME}} uses a system of triage to guide initiation of appropriate care. The triage system is «a colour-coded or numbered system adopted by the hospital» that assigns a category and a reassessment interval to every patient who presents to the emergency department.\n\nTriage is performed by a «trained triage nurse» at presentation. The triage category, time of triage and reassessment interval are recorded. Initiation of care follows the triage category — the most urgent patients are seen first.\n\nThe triage system is reviewed «annually» and staff are trained on it at induction and «annually».",
+    "5.4 Reassessment of waiting emergency patients\n\nPatients waiting in the emergency are reassessed as appropriate for the change in status. The reassessment interval is defined by the triage category. A patient whose condition worsens is re-triaged and escalated.\n\nThe triage nurse or the emergency nurse monitors waiting patients. A waiting patient who has not been reassessed within the interval is a finding.\n\nReassessment is documented in the patient record.",
+    "5.5 Admission, discharge or transfer documentation\n\nAdmission to in-patient, discharge to home, or transfer to another organisation is documented. A discharge note is given to the patient at discharge. A transfer note accompanies the patient during transfer.\n\nThe discharge note includes: diagnosis or provisional diagnosis; treatment given in the emergency; follow-up instructions; and medications prescribed. The transfer note includes: reason for transfer; condition at transfer; treatment given; and the receiving organisation's acceptance.\n\nAAC.2 owns the transfer process. This policy owns that the documentation is completed before the patient leaves.",
+    "5.6 Emergency department quality-assurance programme\n\n{{HOSPITAL_NAME}} implements a quality-assurance programme for the emergency department. The programme includes: monitoring of triage-to-doctor time; monitoring of left-without-being-seen rates; monitoring of unplanned re-visits within «72 hours»; and review of adverse events.\n\nThe «Quality Coordinator» collects and analyses the indicators «monthly». The emergency department in-charge reviews findings and implements corrective actions.\n\nResults are reported to the Medical Superintendent «quarterly».",
+    "5.7 Dead on arrival and early death management\n\n{{HOSPITAL_NAME}} has systems in place for the management of patients found dead on arrival and patients who die within a few minutes of arrival. The system includes: confirmation of death by a doctor; documentation; informing the police where required; informing the family; and handling of the body with dignity.\n\nThe written guidance is held by the «emergency department in-charge» and reviewed «annually».",
+    "5.8 Access to ambulance services\n\n{{HOSPITAL_NAME}} has access to ambulance services commensurate with the scope of services provided. Access means: «own ambulance or documented tie-up with an ambulance provider» with a response time agreed in writing.\n\nThe ambulance service is available «24 hours a day, 7 days a week». The agreement or internal arrangement is reviewed «annually» by the Medical Superintendent.",
+    "5.9 Ambulance fitness, equipment, personnel and medications\n\nAmbulances used by or on behalf of {{HOSPITAL_NAME}} are fit for purpose, operated by trained personnel, appropriately equipped, and carry emergency medications.\n\nFitness includes: roadworthiness certificate current; insurance current; cleanliness and infection-control compliance. Equipment includes: stretcher, oxygen, suction, basic airway management, first-aid kit, and communication equipment. Medications follow the «emergency ambulance drug list reviewed annually».\n\nPersonnel are trained in basic life support and ambulance operation. Training records are held by the «emergency department in-charge».",
+    "5.10 Early treatment initiation during transit\n\nWhere resources allow, the emergency department identifies opportunities to initiate treatment at the earliest when the patient is in transit to the organisation. This may include: telephonic triage and advice to the ambulance crew; remote monitoring where equipment allows; and pre-alerting the emergency team.\n\nThe written guidance for early treatment initiation is held by the «emergency department in-charge» and reviewed «annually».\n\nIf this hospital does not have the resources for early treatment during transit, record that as a written limitation.",
+    "5.11 Disaster, epidemic and community emergency management\n\n{{HOSPITAL_NAME}} manages potential community emergencies, epidemics and other disasters as per a documented plan. The plan includes: activation criteria; command structure; communication plan; surge capacity; resource mobilisation; staff recall; and deactivation criteria.\n\nThe plan is drilled «annually» with a documented after-action review. Lessons learned are incorporated into the plan.\n\nFMS.5 owns fire and non-fire facility emergencies. This policy owns clinical disaster and epidemic response. The two plans must not contradict each other.\n\nThe plan is reviewed «annually» and after every activation or drill by the Medical Superintendent."
+  ],
+  "stop_work": "Do not go ahead if you are about to do any of the following:\n\n- transfer an emergency patient without documented stabilisation;\n- leave a triaged patient unmonitored beyond the triage reassessment interval;\n- transport a patient in an ambulance without trained personnel and working equipment;\n- refuse stabilisation of an emergency patient for any reason.\n\nIf you can do so safely, keep the patient monitored. Tell the «emergency department in-charge» the same shift. If that person is not on site, tell the Medical Superintendent.\n\nRefusing in good faith to transfer an unstabilised patient is not a disciplinary matter.",
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable that emergency services, ambulance and disaster management operate as this policy requires.\n- Holds the register of applicable medico-legal provisions.\n- Approves the disaster plan and names the command structure.\n\n«Emergency department in-charge»\n- Holds the resource inventory, triage system, medico-legal guidance, dead-on-arrival system, ambulance arrangements, and early-treatment and disaster plans.\n- Reviews emergency department operations and implements corrective actions.\n\nEmergency doctors and nurses\n- Deliver emergency care in consonance with triage, statutory requirements and adopted guidelines.\n\n«Triage nurse»\n- Performs triage at presentation, assigns category and reassessment interval, monitors waiting patients.\n\nAmbulance personnel\n- Operate the ambulance safely, maintain equipment and medications, hold current training in basic life support.\n\nQuality Coordinator\n- Collects and analyses emergency department quality indicators «monthly».\n- Audits this policy «quarterly» (see monitoring section).\n- Tracks CAPA when findings recur.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Care of Patients chapter, standard COP.2.\n- Disaster Management Act, 2005 — insofar as the organisation participates in managing community emergencies and disasters.\n- Internal documents of {{HOSPITAL_NAME}}: emergency department resource inventory; triage system; medico-legal written guidance; dead-on-arrival system; ambulance arrangements; disaster plan; quality-assurance programme indicators; FMS.5 fire and non-fire emergency plan; AAC.2 transfer process; COP.3 CPR policy.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the emergency department in-charge and the Quality Coordinator.\n\nCopies issued to: emergency department; ambulance crew; nursing administration; registration (for transfer documentation).\n\nThe current version is available to all staff at the «emergency department policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "CAPA — corrective and preventive action\nCOP — Care of Patients (NABH SHCO chapter 5)\nCPR — cardiopulmonary resuscitation\nDMA — Disaster Management Act, 2005\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nRCA — root-cause analysis\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nSeveral requirements in this document are statutory rather than advisory — in particular those arising under the applicable medico-legal provisions insofar as emergency care is provided in consonance with statutory requirements, and the Disaster Management Act, 2005, insofar as the organisation participates in managing community emergencies and disasters. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "COP.2.a",
+      "requirement": "There shall be an identified area in the organization, which is easily accessible to receive and manage emergency patients, with adequate and appropriate resources.",
+      "steps": "Section 3; 5.1 Identified and accessible emergency area with adequate resources",
+      "responsible": "Emergency department in-charge (resource inventory); Medical Superintendent (accountable)",
+      "records": [
+        "Resource inventory reviewed quarterly.",
+        "Signposting from main entrance and road.",
+        "Staff roster showing coverage at all times."
+      ]
+    },
+    {
+      "oe_code": "COP.2.b",
+      "requirement": "The organization manages medico-legal cases and provides emergency care in consonance with statutory requirements and in accordance with written guidance.",
+      "steps": "Section 3; 5.2 Medico-legal cases and statutory emergency care; Section 4 item 1",
+      "responsible": "Medical Superintendent (statutory register); emergency doctors (documentation); emergency department in-charge (guidance)",
+      "records": [
+        "Written medico-legal guidance reviewed annually.",
+        "Training records for medico-legal documentation at induction and annually.",
+        "Sample medico-legal case documentation.",
+        "Quarterly audit sample of medico-legal case management."
+      ]
+    },
+    {
+      "oe_code": "COP.2.c",
+      "requirement": "Initiation of appropriate care is guided by a system of triage.",
+      "steps": "Section 3; 5.3 Triage-guided initiation of care; Section 4 item 8",
+      "responsible": "Triage nurse (perform triage); emergency department in-charge (system owner)",
+      "records": [
+        "Written triage system with categories and reassessment intervals.",
+        "Triage records for every emergency patient showing category, time and interval.",
+        "Annual review record of triage system.",
+        "Training records for triage at induction and annually."
+      ]
+    },
+    {
+      "oe_code": "COP.2.d",
+      "requirement": "Patients waiting in the emergency are reassessed as appropriate for the change in status.",
+      "steps": "Section 3; 5.4 Reassessment of waiting emergency patients; Section 4 item 2",
+      "responsible": "Triage nurse or emergency nurse (reassess); emergency department in-charge (monitor compliance)",
+      "records": [
+        "Reassessment records in patient record at intervals defined by triage category.",
+        "Re-triage records when a patient's condition worsens.",
+        "Quarterly audit of reassessment interval compliance."
+      ]
+    },
+    {
+      "oe_code": "COP.2.e",
+      "requirement": "Admission, discharge to home or transfer to another organization is documented, and a discharge note shall be given to the patient.",
+      "steps": "Section 3; 5.5 Admission, discharge or transfer documentation; Section 4 item 3",
+      "responsible": "Emergency doctors (document); emergency nurses (ensure note given); AAC.2 (transfer process)",
+      "records": [
+        "Discharge note given to patient at discharge.",
+        "Transfer note accompanying patient during transfer.",
+        "Quarterly audit of documentation completeness."
+      ]
+    },
+    {
+      "oe_code": "COP.2.f",
+      "requirement": "The organization shall implement a quality assurance programme.",
+      "steps": "Section 3; 5.6 Emergency department quality-assurance programme",
+      "responsible": "Quality Coordinator (collect and analyse); emergency department in-charge (corrective actions); Medical Superintendent (review)",
+      "records": [
+        "Monthly indicator data: triage-to-doctor time, left-without-being-seen, unplanned re-visits, adverse events.",
+        "Quarterly report to Medical Superintendent.",
+        "Corrective action records for findings.",
+        "CAPA records when findings recur."
+      ]
+    },
+    {
+      "oe_code": "COP.2.g",
+      "requirement": "The organization has systems in place for the management of patients found dead on arrival and patients who die within a few minutes of arrival.",
+      "steps": "Section 3; 5.7 Dead on arrival and early death management; Section 4 item 6",
+      "responsible": "Emergency department in-charge (written guidance); emergency doctors (confirm death and document)",
+      "records": [
+        "Written guidance for dead-on-arrival and early-death management reviewed annually.",
+        "Records of dead-on-arrival and early-death cases.",
+        "Police notification records where required."
+      ]
+    },
+    {
+      "oe_code": "COP.2.h",
+      "requirement": "The organization has access to ambulance services commensurate with the scope of services provided by it.",
+      "steps": "Section 3; 5.8 Access to ambulance services",
+      "responsible": "Medical Superintendent (arrangement); emergency department in-charge (operations)",
+      "records": [
+        "Written ambulance arrangement or tie-up with response time.",
+        "Annual review of ambulance arrangement.",
+        "Availability records showing 24/7 access."
+      ]
+    },
+    {
+      "oe_code": "COP.2.i",
+      "requirement": "The ambulance(s) is fit for purpose, is operated by trained personnel, is appropriately equipped, and ensures that emergency medications are available in the ambulance.",
+      "steps": "Section 3; 5.9 Ambulance fitness, equipment, personnel and medications; Section 4 item 5",
+      "responsible": "Emergency department in-charge (fitness and training records); ambulance personnel (operate)",
+      "records": [
+        "Roadworthiness and insurance certificates current.",
+        "Equipment checklist verified regularly.",
+        "Emergency ambulance drug list reviewed annually.",
+        "Personnel training records in basic life support and ambulance operation."
+      ]
+    },
+    {
+      "oe_code": "COP.2.j",
+      "requirement": "The emergency department identifies opportunities to initiate treatment at the earliest, when the patient is in transit to the organization.",
+      "steps": "Section 3; 5.10 Early treatment initiation during transit",
+      "responsible": "Emergency department in-charge (written guidance); emergency doctors (telephonic triage)",
+      "records": [
+        "Written guidance for early treatment initiation during transit reviewed annually.",
+        "Records of telephonic triage or remote advice to ambulance crew.",
+        "Written limitation record if resources do not allow early treatment during transit."
+      ]
+    },
+    {
+      "oe_code": "COP.2.k",
+      "requirement": "The organization manages potential community emergencies, epidemics and other disasters as per a documented plan.",
+      "steps": "Section 3; 5.11 Disaster, epidemic and community emergency management; Section 4 item 7",
+      "responsible": "Medical Superintendent (plan owner and command structure); emergency department in-charge (operational execution)",
+      "records": [
+        "Documented disaster plan with activation criteria, command structure, communication, surge capacity, staff recall and deactivation.",
+        "Annual drill record with after-action review.",
+        "Plan review record annually and after every activation or drill.",
+        "FMS.5 non-contradiction check record."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "COP.2 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"Emergency services including ambulance, and management of disasters, are provided in accordance with written guidance, applicable laws and regulations.\" COP.2.a–e PDF page 67; COP.2.f–k PDF page 68. COP.2.b asterisked (Commitment). COP.2.c asterisked (Core). COP.2.f asterisked (Achievement). COP.2.k asterisked (Commitment). COP.2.j Excellence.\n\nSHAPE: Eleven What-we-do subsections (5.1–5.11). Stop-work present. Disclaimer P2 names medico-legal provisions and Disaster Management Act, 2005. COP roles only.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "COP v2 template: plain English, COP roles, eleven OEs, stop-work, medico-legal/DMA disclaimer."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Emergency services including ambulance, and management of disasters, are provided in accordance with written guidance, applicable laws and regulations — not a poster on the emergency-department wall that no one has drilled.",
+  "exceptions": "The following are prohibited. There is no shift convenience exception.\n\n1. Refusing stabilisation of an emergency patient for any reason, including inability to pay or a medico-legal concern.\n2. Leaving a triaged patient unmonitored beyond the triage reassessment interval assigned to that category.\n3. Discharging or transferring an emergency patient without documented stabilisation and a discharge or transfer note given to the patient.\n4. Operating the emergency department without the minimum staff, equipment and medications needed for the scope of services this hospital offers.\n5. Transporting a patient by ambulance without trained personnel, working equipment and emergency medications on board.\n6. Declaring a patient dead on arrival without following the hospital's written system for dead-on-arrival management.\n7. Ignoring a documented disaster plan during a community emergency, epidemic or disaster, or having a plan that has never been drilled.\n8. Initiating triage without following the adopted triage system, or using triage categories that have no defined reassessment intervals.\n\nStaff who see one of these acts report it the same shift to the «emergency department in-charge» or the Medical Superintendent.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit looks at records and at the emergency department floor.\n\nWhat is monitored each quarter:\n\n- Emergency area is accessible, signposted, and resourced as this policy requires.\n- Medico-legal guidance is current and staff are trained.\n- Triage system is applied to every patient, with reassessment intervals followed.\n- Admission, discharge and transfer documentation is complete, and discharge notes are given.\n- Quality-assurance indicators (triage-to-doctor time, left-without-being-seen, unplanned re-visits, adverse events) are collected and acted upon.\n- Dead-on-arrival and early-death system is current.\n- Ambulance fitness, equipment, medications and personnel training are current.\n- Disaster plan has been drilled within the last twelve months.\n\nRoot-cause analysis is required when: an emergency patient is transferred without documented stabilisation; a triaged patient is found unmonitored beyond the interval; or the disaster plan fails during a drill or activation.\n\nThis policy is reviewed «annually», and sooner when the disaster plan is activated, the scope of services changes, or an applicable medico-legal provision changes.",
+  "training_competency": "All emergency department staff, ambulance personnel and triage nurses are trained on this policy at induction and «once a year» after that. Training covers triage, medico-legal documentation, stop-work authority, ambulance readiness, dead-on-arrival management, and the disaster plan.\n\nStaff acknowledgement\n\nI have read this Emergency Services, Ambulance and Disaster Management policy of {{HOSPITAL_NAME}}. I will not transfer an emergency patient without documented stabilisation. I will not leave a triaged patient unmonitored beyond the reassessment interval.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The emergency department in-charge holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «COP/POL/02»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Emergency department in-charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "cop_v2_adoptable_shape",
+  "subtitle": "Emergency care, ambulance and disaster management in day-to-day work.",
+  "doc_no": "«COP/POL/02»"
+}

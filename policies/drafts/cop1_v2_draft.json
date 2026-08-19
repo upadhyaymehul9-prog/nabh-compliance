@@ -1,0 +1,105 @@
+{
+  "standard_code": "COP.1",
+  "chapter": "COP",
+  "oe_codes": [
+    "COP.1.a",
+    "COP.1.b",
+    "COP.1.c",
+    "COP.1.d",
+    "COP.1.e"
+  ],
+  "policy_title": "Uniform Care to Patients",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} provides uniform care to patients across all settings, guided by written guidance and applicable laws and regulations.\n\nIt covers five elements: a uniform process for patient identification using at least two identifiers; care in consonance with applicable laws and regulations; adoption of evidence-based clinical practice guidelines or clinical protocols; uniform care delivery for a given clinical condition across settings; and safe and secure telemedicine where provided.\n\nThe chapter intent is that care is uniform across settings and guided by written documents, not by individual habit or ward tradition.\n\nThis policy owns the uniformity of care delivery. AAC.2 owns registration, admission and transfer processes. AAC.3 owns the care plan as a clinical document. PRE.3 owns informed consent method.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to every clinical setting at {{HOSPITAL_NAME}} — out-patient, in-patient, emergency, day care and any satellite or extension clinic — and to every staff member who delivers or supports patient care: treating doctors, nurses, registration staff, the «Quality Coordinator», and the Medical Superintendent.\n\nIt covers the five elements COP.1.a–e name. It does not cover the registration or admission process (AAC.2), the individual care plan (AAC.3), or the consent method (PRE.3).\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- AAC.2 owns the registration, admission, transfer and discharge process. This policy owns that care delivered in those settings is uniform.\n- AAC.3 owns the care plan as a clinical document. This policy owns that care plans follow adopted clinical practice guidelines.\n- PRE.3 owns the consent method. This policy owns that uniform processes apply before care begins, including patient identification.\n- COP.2 owns emergency clinical care. This policy owns that emergency care is as uniform as elective care for the same clinical condition.\n- If telemedicine is not provided, record that as a written absence. Do not copy a telemedicine SOP from another hospital.",
+  "policy_statement": "{{HOSPITAL_NAME}} uses a uniform process for patient identification that uses at least two identifiers — «patient name and unique registration number» — in every setting. A bed number is not an identifier.\n\n{{HOSPITAL_NAME}} provides care in consonance with applicable laws and regulations. Staff are made aware of those laws and regulations relevant to their work.\n\n{{HOSPITAL_NAME}} adopts evidence-based clinical practice guidelines and clinical protocols to guide uniform patient care. Guidelines are reviewed «annually» and updated when evidence changes. A guideline that is adopted but never read by the staff who use it is not adopted.\n\nWhen similar care is provided in more than one setting — for example, wound dressing in out-patient and in-patient — the care delivered for a given clinical condition is uniform. A patient with the same condition receives the same standard of care regardless of the setting.\n\n{{HOSPITAL_NAME}} provides telemedicine safely and securely based on written guidance, where telemedicine is on the service directory. If telemedicine is not provided, that is recorded as a written absence.\n\n{{HOSPITAL_NAME}} does not treat any of these as meeting this policy: a patient identified by bed number alone; a clinical guideline that no clinician has read; or care that differs for the same clinical condition depending on the ward.",
+  "procedure_steps": [
+    "5.1 Patient identification using two identifiers\n\nEvery patient is identified using at least two identifiers before any care, treatment, medication or investigation. The identifiers are «patient name and unique registration number». A bed number is never an identifier.\n\nIdentification is verified at registration, before medication administration, before specimen collection, before any procedure, and before transfer. Wristbands or identification labels are used for in-patients, and their accuracy is checked at each handover.\n\nThe «Quality Coordinator» holds the written identification process and trains staff «at induction and annually».",
+    "5.2 Care in consonance with applicable laws and regulations\n\n{{HOSPITAL_NAME}} identifies the laws and regulations applicable to the care it provides. Staff are made aware of those that are relevant to their work. The Medical Superintendent holds a register of applicable laws and regulations and reviews it «annually».\n\nWhen a law or regulation changes, staff are informed and trained before the change takes effect. Care delivered during the transition period follows the later of the old or new requirement, whichever is stricter.\n\nThis policy does not import every statute into a checklist. It requires that applicable laws are known and followed.",
+    "5.3 Evidence-based clinical practice guidelines and protocols\n\n{{HOSPITAL_NAME}} adopts evidence-based clinical practice guidelines and clinical protocols to guide uniform patient care. Guidelines are selected by the «Medical Superintendent in consultation with treating doctors», adopted formally, and made available to the staff who use them.\n\nAdopted guidelines are reviewed «annually» and updated when evidence changes. A guideline review that finds no change records that finding. A guideline that is never read by the staff who deliver the care it covers is not an adopted guideline.\n\nClinical protocols derived from guidelines are written in a form the treating team can follow at the bedside. They are not a photocopy of a textbook chapter.",
+    "5.4 Uniform care across settings\n\nWhen similar care is provided in more than one setting — for example, wound dressing in out-patient and in-patient, or nebulisation in emergency and ward — the care delivered for a given clinical condition is uniform. A patient receives the same standard of care regardless of the setting.\n\nThe «Quality Coordinator» audits at least «two clinical conditions quarterly» that are delivered in more than one setting and records whether the care was uniform. Differences that have a documented clinical reason are accepted. Differences that exist only because the ward has a different habit are findings.\n\nClinical heads confirm at least «annually» that care protocols for conditions treated in their setting are aligned with the hospital-adopted guidelines.",
+    "5.5 Telemedicine — safe and secure provision\n\nIf telemedicine is on the service directory, {{HOSPITAL_NAME}} provides it safely and securely based on written guidance. The guidance covers: patient identification using the same two-identifier process; informed consent for the telemedicine consultation; privacy and data security; prescribing limits as applicable regulations allow; documentation of the consultation in the patient record; and escalation to an in-person visit when the telemedicine consultation is insufficient.\n\nThe «Medical Superintendent» holds the written telemedicine guidance and reviews it «annually».\n\nIf telemedicine is not provided, record that as a written absence. Do not copy a telemedicine SOP from another hospital for a service this hospital does not run."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable that care is uniform across settings, guided by written guidance and applicable laws.\n- Holds the register of applicable laws and regulations.\n- Approves adopted clinical practice guidelines.\n\nTreating doctors\n- Follow adopted clinical practice guidelines and protocols.\n- Identify patients using two identifiers before every care act.\n- Provide telemedicine within written guidance where it is offered.\n\nNurses\n- Verify patient identification at each handover and before medication, specimen collection or procedure.\n- Follow adopted clinical protocols at the bedside.\n\n«Quality Coordinator»\n- Holds the written patient identification process.\n- Audits uniform care across settings «quarterly».\n- Tracks CAPA when care differs for the same clinical condition without a documented clinical reason.\n\nRegistration staff\n- Assign and verify the two identifiers at registration.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Care of Patients chapter, standard COP.1.\n- Telemedicine Practice Guidelines (2020), Board of Governors, Medical Council of India — telemedicine guidance where telemedicine is on the service directory; not pasted as a protocol.\n- Internal documents of {{HOSPITAL_NAME}}: patient identification process; adopted clinical practice guidelines and clinical protocols; register of applicable laws and regulations; telemedicine written guidance where provided; service directory.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator.\n\nCopies issued to: every clinical department; registration; nursing administration; emergency department.\n\nThe current version is available to all staff at the «quality office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "CAPA — corrective and preventive action\nCOP — Care of Patients (NABH SHCO chapter 5)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nRCA — root-cause analysis\nSHCO — Standards for Small Healthcare Organisations\nSOP — standard operating procedure",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "COP.1.a",
+      "requirement": "The organization has a uniform process for identification of patients and at a minimum, uses two identifiers.",
+      "steps": "Section 3; 5.1 Patient identification using two identifiers",
+      "responsible": "Quality Coordinator (process owner); nurses (verify); registration staff (assign)",
+      "records": [
+        "Written patient identification process naming the two identifiers.",
+        "Wristband or identification label records for in-patients.",
+        "Quarterly audit sample of identification before care, medication, specimen and procedure.",
+        "Training records at induction and annually."
+      ]
+    },
+    {
+      "oe_code": "COP.1.b",
+      "requirement": "Care shall be provided in consonance with applicable laws and regulations.",
+      "steps": "Section 3; 5.2 Care in consonance with applicable laws and regulations",
+      "responsible": "Medical Superintendent (register and accountability); all clinical staff (compliance)",
+      "records": [
+        "Register of applicable laws and regulations reviewed annually.",
+        "Staff awareness records when a law or regulation changes.",
+        "Training records for applicable laws relevant to each role."
+      ]
+    },
+    {
+      "oe_code": "COP.1.c",
+      "requirement": "The organization adopts evidence-based clinical practice guidelines and/or clinical protocols to guide uniform patient care.",
+      "steps": "Section 3; 5.3 Evidence-based clinical practice guidelines and protocols",
+      "responsible": "Medical Superintendent (approve adoption); treating doctors (follow); Quality Coordinator (audit)",
+      "records": [
+        "List of adopted clinical practice guidelines with adoption date and review date.",
+        "Evidence that staff who deliver the care have read the guideline.",
+        "Annual review record for each adopted guideline.",
+        "Bedside clinical protocols derived from guidelines."
+      ]
+    },
+    {
+      "oe_code": "COP.1.d",
+      "requirement": "Care delivery is uniform for a given clinical condition when similar care is provided in more than one setting.",
+      "steps": "Section 3; 5.4 Uniform care across settings; Section 4 item 4",
+      "responsible": "Quality Coordinator (audit); clinical heads (confirm alignment); treating doctors and nurses (deliver)",
+      "records": [
+        "Quarterly audit of at least two clinical conditions delivered in more than one setting.",
+        "Record of whether care was uniform or a documented clinical reason for difference.",
+        "Clinical heads' annual confirmation that protocols are aligned with hospital-adopted guidelines.",
+        "CAPA records where non-uniform care was found without clinical justification."
+      ]
+    },
+    {
+      "oe_code": "COP.1.e",
+      "requirement": "Telemedicine facility is provided safely and securely based on written guidance.",
+      "steps": "Section 3; 5.5 Telemedicine — safe and secure provision",
+      "responsible": "Medical Superintendent (written guidance owner); treating doctors (follow guidance)",
+      "records": [
+        "Written telemedicine guidance covering identification, consent, privacy, prescribing limits, documentation and escalation.",
+        "Annual review record of telemedicine guidance.",
+        "Written absence record if telemedicine is not on the service directory."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "COP.1 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"Uniform care to patients is provided in all settings of the organization and is guided by written guidance, and the applicable laws and regulations.\" COP.1.a–e PDF page 67. COP.1.d asterisked (Commitment). COP.1.e asterisked (Excellence). COP.1.a Commitment, COP.1.b Achievement, COP.1.c Core.\n\nSHAPE: Five What-we-do subsections (5.1–5.5). No stop-work. Disclaimer accreditation-only. COP roles only.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "COP v2 template: plain English, COP roles, five OEs, no stop-work, accreditation-only disclaimer."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Uniform care to patients is provided in all settings of the organization and is guided by written guidance, and the applicable laws and regulations — not a set of guidelines that sits in the quality office while wards run on habit.",
+  "exceptions": "The following are prohibited. There is no ward convenience exception.\n\n1. Identifying a patient by bed number alone or by a single identifier. At least two identifiers must be used every time.\n2. Delivering care that violates an applicable law or regulation the hospital is bound by, or treating ignorance of an applicable law as a defence.\n3. Adopting a clinical practice guideline on paper while staff who deliver the care have never read or been trained on it.\n4. Delivering materially different care for the same clinical condition in two settings without a documented clinical reason.\n5. Providing telemedicine without written guidance covering privacy, consent, prescribing limits and documentation, or copying a telemedicine SOP from another hospital for a service this hospital does not run.\n\nStaff who see one of these acts report it the same shift to the «Quality Coordinator» or the Medical Superintendent.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit looks at records and at the floor.\n\nWhat is monitored each quarter:\n\n- Patient identification using two identifiers before care, medication, specimen collection and procedures.\n- Applicable laws and regulations register is current and staff are aware.\n- Adopted clinical practice guidelines are available to and read by the staff who use them.\n- At least two clinical conditions delivered in more than one setting are audited for uniformity.\n- Telemedicine written guidance is current where telemedicine is provided, or recorded absence where it is not.\n\nRoot-cause analysis is required when the same identification failure or the same non-uniform care finding recurs twice within six months.\n\nThis policy is reviewed «annually», and sooner when a clinical practice guideline is updated, an applicable law changes, or a new service is added to the directory.",
+  "training_competency": "All clinical and registration staff are trained on this policy at induction and «once a year» after that. Training covers the two-identifier rule, adopted clinical practice guidelines, uniform care across settings, and telemedicine guidance where applicable.\n\nStaff acknowledgement\n\nI have read this Uniform Care to Patients policy of {{HOSPITAL_NAME}}. I will identify every patient using at least two identifiers. I will follow adopted clinical practice guidelines. I will deliver uniform care for a given clinical condition regardless of the setting.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «COP/POL/01»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "cop_v2_adoptable_shape",
+  "subtitle": "Uniform care guided by written guidance across all settings.",
+  "doc_no": "«COP/POL/01»"
+}

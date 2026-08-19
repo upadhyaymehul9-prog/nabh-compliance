@@ -1,0 +1,118 @@
+{
+  "standard_code": "COP.5",
+  "chapter": "COP",
+  "oe_codes": [
+    "COP.5.a",
+    "COP.5.b",
+    "COP.5.c",
+    "COP.5.d",
+    "COP.5.e",
+    "COP.5.f"
+  ],
+  "policy_title": "Transfusion Services",
+  "purpose": "This policy defines how {{HOSPITAL_NAME}} provides transfusion services safely, in accordance with applicable laws and regulations.\n\nIt covers six elements: transfusion services commensurate with the services provided and governed by applicable laws and regulations; safe transfusion of blood and blood components; rational use of blood and blood components; informed consent for transfusion and donation; availability of blood and blood components for emergencies within a defined time frame; and post-transfusion form collection with reaction identification and analysis.\n\nBoundaries: MOM owns medication management; this policy owns blood and blood-component transfusion. COP.2 owns emergency clinical care; this policy owns emergency blood availability.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to all staff at {{HOSPITAL_NAME}} involved in transfusion services: treating doctors who order transfusions, nurses who administer them, laboratory staff who perform compatibility testing, and the blood bank or blood-storage centre where one exists.\n\nIt covers the six elements COP.5.a–f name. It does not cover medication management (MOM) or emergency clinical care (COP.2).\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- MOM owns medication management. This policy owns blood and blood-component transfusion as a clinical service.\n- COP.2 owns emergency clinical care. This policy owns that blood and blood components are available for emergencies within a defined time frame.\n- PRE.3 owns the consent method. This policy owns that informed consent is obtained for transfusion and for donation.",
+  "policy_statement": "{{HOSPITAL_NAME}} provides transfusion services commensurate with the services it provides. Transfusion services are governed by the applicable laws and regulations, including the Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, 1945, insofar as blood and blood components are procured, stored and transfused under those rules.\n\n{{HOSPITAL_NAME}} transfuses blood and blood components safely. Every transfusion follows identity verification, compatibility testing, and monitoring for reactions. No unit is transfused without verification of the patient's identity using at least two identifiers, cross-match or compatibility confirmation, and visual inspection of the unit.\n\n{{HOSPITAL_NAME}} uses blood and blood components rationally. Blood is not ordered when alternatives exist, and components are used rather than whole blood when clinically appropriate. A blood-utilisation review is conducted «quarterly».\n\nInformed consent is obtained before transfusion and before donation. Consent covers the purpose, risks, benefits, and alternatives. Consent is documented in the patient record.\n\nBlood and blood components are available for use in emergency situations within «30 minutes» of a validated request. The emergency blood release process is documented.\n\nPost-transfusion forms are collected, reactions are identified and analysed, and corrective and preventive actions are taken.\n\n{{HOSPITAL_NAME}} does not treat any of these as meeting this policy: a transfusion without identity verification; a unit issued without compatibility testing; blood ordered without clinical justification; or a transfusion reaction that is not investigated.",
+  "procedure_steps": [
+    "5.1 Transfusion services commensurate with scope and governed by law\n\n{{HOSPITAL_NAME}} provides transfusion services commensurate with the services it provides. Where a blood bank is operated, it is licensed as required. Where blood is procured from an external licensed blood bank, there is a documented agreement that includes supply, quality, traceability and recall.\n\nThe «blood bank in-charge or pathologist» ensures compliance with the Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, 1945, insofar as they apply. Compliance records are maintained and reviewed «annually».\n\nThe Medical Superintendent holds overall accountability for transfusion services.",
+    "5.2 Safe transfusion of blood and blood components\n\nEvery transfusion follows a bedside verification process: the administering nurse verifies the patient's identity using at least two identifiers, confirms compatibility with the cross-match report, and visually inspects the unit. A second person («another nurse or the treating doctor») independently verifies before the transfusion begins.\n\nThe patient is monitored during the first «15 minutes» of transfusion and at intervals thereafter as per the hospital protocol. Vital signs are recorded before, during, and after transfusion.\n\nBlood and blood components are stored, transported and handled as per the manufacturer's or blood bank's instructions. The cold chain is maintained and documented.",
+    "5.3 Rational use of blood and blood components\n\nBlood and blood components are used rationally. The treating doctor documents the clinical indication for every transfusion order. Blood is not ordered when alternatives such as iron infusion or erythropoietin exist and are clinically appropriate. Components are preferred over whole blood when clinically appropriate.\n\nA blood-utilisation review committee or the «Quality Coordinator» reviews transfusion appropriateness «quarterly». Findings of inappropriate use are fed back to the ordering doctor and used for education.\n\nThe «blood bank in-charge» maintains a transfusion register that links patient, indication, component, and outcome.",
+    "5.4 Informed consent for transfusion and donation\n\nInformed consent is obtained before transfusion of blood and blood products and before donation. Consent for transfusion covers: the purpose of transfusion, the blood component to be transfused, common risks and potential reactions, alternatives, and the right to refuse. Consent for donation covers: the donation process, potential side-effects, and the tests that will be performed on donated blood.\n\nConsent is obtained by the treating doctor or a trained nurse and documented in the patient record. For donation, consent is documented in the donation record.\n\nEmergency transfusion without prior consent is permitted only when a delay would endanger the patient's life, and the treating doctor documents the justification.",
+    "5.5 Emergency blood availability\n\nBlood and blood components are available for use in emergency situations within «30 minutes» of a validated request. The emergency blood release process is documented and covers: who may request emergency release, verification steps that may be abbreviated, documentation of the abbreviated process, and retrospective completion of compatibility testing.\n\nThe «blood bank in-charge» ensures that emergency stock («at least 2 units of O-negative packed red cells or as defined by the hospital») is maintained at all times. Stock levels are checked «every shift».\n\nThe emergency release process is drilled «annually» and results are documented.",
+    "5.6 Post-transfusion form and reaction management\n\nA post-transfusion form is collected for every transfusion. The form records: patient identification, component transfused, start and end times, volume transfused, vital signs, and whether a reaction occurred.\n\nTransfusion reactions are identified, graded, reported to the «blood bank in-charge» immediately, and investigated. Investigation includes: type of reaction, clinical management, blood bank investigation (re-cross-match, direct antiglobulin test, culture if febrile), and root-cause determination.\n\nReaction data is analysed «quarterly» by the «Quality Coordinator» for trends. Corrective and preventive actions are implemented and tracked to closure."
+  ],
+  "stop_work": "Do not go ahead if you are about to do any of the following:\n\n- transfuse blood or a blood component without verifying the patient's identity using at least two identifiers;\n- transfuse without a completed compatibility test or cross-match (except documented life-threatening emergency with written authorisation);\n- continue a transfusion when a reaction is suspected — stop the transfusion, maintain IV access, and notify the treating doctor immediately.\n\nIf you can do so safely, keep the patient monitored and the unit preserved for investigation. Tell the «blood bank in-charge» the same shift. If that person is not on site, tell the Medical Superintendent.\n\nRefusing in good faith to transfuse without proper verification is not a disciplinary matter.",
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable that transfusion services are provided safely and in accordance with applicable laws.\n- Holds overall governance of transfusion services.\n\n«Blood bank in-charge or pathologist»\n- Ensures compliance with the Drugs and Cosmetics Act and Rules.\n- Maintains the transfusion register, emergency stock, and reaction investigation records.\n- Reviews emergency blood release drill results.\n\nTreating doctors\n- Document clinical indication for every transfusion order.\n- Obtain informed consent for transfusion.\n- Respond to transfusion reactions.\n\nNurses\n- Perform bedside identity verification and compatibility confirmation before transfusion.\n- Monitor the patient during and after transfusion.\n- Collect the post-transfusion form.\n- Report suspected reactions immediately.\n\n«Quality Coordinator»\n- Audits this policy «quarterly» (see monitoring section).\n- Reviews blood-utilisation data and reaction trends.\n- Tracks CAPA for transfusion safety defects.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Care of Patients chapter, standard COP.5.\n- Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, 1945, insofar as blood and blood components are procured, stored and transfused under those rules.\n- Internal documents of {{HOSPITAL_NAME}}: transfusion protocol, blood-bank agreement (if external), emergency blood release process, blood-utilisation review records, transfusion reaction investigation records, transfusion consent form, donation consent form.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the «blood bank in-charge» and the Quality Coordinator.\n\nCopies issued to: blood bank or blood-storage centre; every in-patient ward; ICU; emergency department; operation theatre; nursing administration.\n\nThe current version is available to all staff at the «blood bank policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "CAPA — corrective and preventive action\nCOP — Care of Patients (NABH SHCO chapter 5)\nDVT — deep vein thrombosis\nICU — intensive care unit\nIV — intravenous\nMOM — Management of Medication (NABH SHCO chapter 6)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nRCA — root-cause analysis\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nSeveral requirements in this document are statutory rather than advisory — in particular those arising under the Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, 1945, insofar as blood and blood components are procured, stored and transfused under those rules. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "COP.5.a",
+      "requirement": "Transfusion services are commensurate with the services provided by the organization, and are governed by the applicable laws and regulations.",
+      "steps": "Section 3; 5.1 Transfusion services commensurate with scope and governed by law",
+      "responsible": "Medical Superintendent (accountability); blood bank in-charge (compliance)",
+      "records": [
+        "Blood bank licence or documented agreement with external licensed blood bank.",
+        "Compliance records with the Drugs and Cosmetics Act and Rules reviewed annually.",
+        "Transfusion register linking patient, indication, component, and outcome."
+      ]
+    },
+    {
+      "oe_code": "COP.5.b",
+      "requirement": "Transfusion of blood and blood components is done safely.",
+      "steps": "Section 3; 5.2 Safe transfusion of blood and blood components; Section 4 items 1–3; Section 6 stop-work",
+      "responsible": "Nurses (bedside verification and monitoring); treating doctors (order and respond to reactions)",
+      "records": [
+        "Bedside verification checklist for each transfusion documenting two-identifier check, compatibility confirmation, and visual inspection.",
+        "Vital signs recorded before, during, and after transfusion.",
+        "Cold-chain maintenance and transport records.",
+        "Second-person independent verification documented."
+      ]
+    },
+    {
+      "oe_code": "COP.5.c",
+      "requirement": "Blood and blood components are used rationally.",
+      "steps": "Section 3; 5.3 Rational use of blood and blood components; Section 4 item 4",
+      "responsible": "Treating doctors (clinical indication); Quality Coordinator (utilisation review)",
+      "records": [
+        "Clinical indication documented for each transfusion order.",
+        "Quarterly blood-utilisation review findings and feedback records.",
+        "Records of component therapy preference over whole blood where appropriate."
+      ]
+    },
+    {
+      "oe_code": "COP.5.d",
+      "requirement": "Informed consent is obtained for transfusion of blood and blood products, and for donation.",
+      "steps": "Section 3; 5.4 Informed consent for transfusion and donation; Section 4 item 5",
+      "responsible": "Treating doctors (obtain consent); nurses (verify and document)",
+      "records": [
+        "Signed transfusion consent form in the patient record covering purpose, risks, benefits, and alternatives.",
+        "Signed donation consent form in the donation record.",
+        "Emergency transfusion without consent: treating doctor's written justification documented."
+      ]
+    },
+    {
+      "oe_code": "COP.5.e",
+      "requirement": "Blood/blood components are available for use in emergency situations within a defined time frame.",
+      "steps": "Section 3; 5.5 Emergency blood availability",
+      "responsible": "Blood bank in-charge (stock and release process); emergency department (request)",
+      "records": [
+        "Emergency blood stock levels checked and documented every shift.",
+        "Emergency release process document with defined time frame.",
+        "Annual drill of emergency blood release with results documented."
+      ]
+    },
+    {
+      "oe_code": "COP.5.f",
+      "requirement": "Post-transfusion form is collected, reactions if any identified and are analysed for corrective and preventive actions.",
+      "steps": "Section 3; 5.6 Post-transfusion form and reaction management; Section 4 item 7",
+      "responsible": "Nurses (collect form, report reactions); blood bank in-charge (investigate); Quality Coordinator (trend analysis)",
+      "records": [
+        "Post-transfusion form for every transfusion with patient ID, component, times, volume, vitals, and reaction status.",
+        "Transfusion reaction investigation records with re-cross-match and root-cause determination.",
+        "Quarterly reaction trend analysis with CAPA records.",
+        "Training records on reaction identification and reporting."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "COP.5 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"Transfusion services are provided as per the scope of services of the organization, safely.\" COP.5.a–f PDF indices 69–70. Asterisked OEs: b, c, e. Levels: b Core, rest Commitment except f Achievement.\n\nSHAPE: Six What-we-do subsections (5.1–5.6). Stop-work present. Disclaimer names Drugs and Cosmetics Act 1940 / Rules 1945. COP clinical roles.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "COP v2 template: adoptable shape, plain English, stop-work, Drugs and Cosmetics Act disclaimer."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Transfusion services are provided as per the scope of services of the organization, safely — not a blood bank that issues units without identity verification or compatibility testing.",
+  "exceptions": "The following are prohibited. There is no convenience exception.\n\n1. Transfusing blood or blood components without verifying the patient's identity using at least two identifiers at the bedside.\n2. Transfusing blood or blood components without a completed compatibility test or cross-match, except in a documented life-threatening emergency with the treating doctor's written authorisation.\n3. Issuing or transfusing a unit that has not been visually inspected for discolouration, clots, or damage.\n4. Ordering whole blood when component therapy is clinically appropriate and available.\n5. Transfusing without documented informed consent, except in a documented life-threatening emergency.\n6. Failing to monitor the patient during the first «15 minutes» of a transfusion.\n7. Failing to report and investigate a suspected transfusion reaction.\n\nStaff who see one of these acts report it the same shift to the «blood bank in-charge» or the Medical Superintendent.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit covers:\n\n- Bedside identity verification and compatibility confirmation documented for sampled transfusions.\n- Clinical indication documented for every transfusion order (sample).\n- Informed consent for transfusion and donation documented.\n- Emergency blood availability within the defined time frame tested or drilled.\n- Post-transfusion forms collected for all transfusions.\n- Transfusion reactions reported, investigated, and CAPA implemented.\n- Blood-utilisation review findings and follow-up actions.\n\nRoot-cause analysis is required when a transfusion safety event (wrong blood, missed reaction, compatibility failure) occurs or when the same finding recurs within six months.\n\nThis policy is reviewed «annually», and sooner when the Drugs and Cosmetics Rules are amended or the scope of transfusion services changes.",
+  "training_competency": "All staff involved in transfusion services are trained on this policy at induction and «once a year» after that. Training covers bedside verification, safe transfusion, rational use, consent, emergency release, and reaction identification and reporting.\n\nStaff acknowledgement\n\nI have read this Transfusion Services policy of {{HOSPITAL_NAME}}. I will verify patient identity and compatibility before every transfusion. I will report suspected transfusion reactions immediately.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The blood bank in-charge holds signed acknowledgements with the training file.)",
+  "resources_required": "Document number: «COP/POL/05»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Blood bank in-charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "cop_v2_adoptable_shape",
+  "subtitle": "Safe transfusion services governed by applicable laws.",
+  "doc_no": "«COP/POL/05»"
+}
