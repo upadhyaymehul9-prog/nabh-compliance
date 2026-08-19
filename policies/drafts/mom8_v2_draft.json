@@ -1,0 +1,106 @@
+{
+  "standard_code": "MOM.8",
+  "chapter": "MOM",
+  "oe_codes": [
+    "MOM.8.a",
+    "MOM.8.b",
+    "MOM.8.c",
+    "MOM.8.d",
+    "MOM.8.e"
+  ],
+  "policy_title": "Narcotic Drugs and Psychotropic Substances, Chemotherapeutic Agents and Radioactive Agents Are Used in a Safe Manner",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} ensures the safe use of narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents: safe use, prescription by appropriate caregivers, secure storage, proper preparation and administration, and record-keeping from procurement to disposal.\n\nIt covers MOM.8.a–e.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to treating doctors (prescribers), the Pharmacy In-Charge, pharmacy staff, nurses, oncology and radiology staff where applicable, the Medical Superintendent and Quality Coordinator at {{HOSPITAL_NAME}}.\n\nIt covers MOM.8.a–e: safe use; prescription by appropriate caregivers; secure storage; safe preparation and administration of chemotherapy and radioactive agents; and record-keeping.\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- MOM.2 owns general medication storage. This policy adds the specific security, register and PPE requirements for narcotics, psychotropics, chemotherapeutic and radioactive agents.\n- MOM.6 owns general administration safety. This policy adds the qualified-personnel and safety requirements specific to these agents.\n- If {{HOSPITAL_NAME}} does not provide chemotherapy or radioactive therapy services, those sections are recorded absences against the service directory.",
+  "policy_statement": "{{HOSPITAL_NAME}} uses narcotic drugs, psychotropic substances, chemotherapeutic agents and radioactive agents safely.\n\nOnly appropriate caregivers prescribe them. They are stored securely with a register. Chemotherapy and radioactive agents are prepared and administered by qualified personnel with proper protective equipment. A complete record is kept from procurement through administration to disposal.",
+  "procedure_steps": [
+    "5.1 Safe use of narcotic drugs, psychotropic substances, chemotherapeutic agents and radioactive agents\n\nNarcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents are used safely.\n\n{{HOSPITAL_NAME}} maintains a written procedure for the safe use of each category. The procedure covers prescription, storage, preparation, administration, monitoring, and disposal. Staff are trained before handling any of these agents.\n\nWhere {{HOSPITAL_NAME}} does not provide chemotherapy or radioactive therapy services, the absence is recorded against the service directory and reviewed «annually» by the Multidisciplinary Medication Committee.",
+    "5.2 Prescription by appropriate caregivers\n\nNarcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents are prescribed by appropriate caregivers.\n\nNarcotic drugs and psychotropic substances are prescribed only by doctors listed by the «Medical Superintendent» as authorised under the NDPS Act, 1985. The authorised-prescriber list is available at the pharmacy.\n\nChemotherapeutic agents are prescribed by «the treating oncologist or a doctor trained in chemotherapy protocols». Radioactive agents are prescribed by «the radiation oncologist or nuclear medicine physician authorised under the AERB rules».",
+    "5.3 Secure storage\n\nNarcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents are stored securely.\n\nNarcotic drugs and psychotropic substances are stored in a double-locked cupboard in the pharmacy. Two keys are held by «the Pharmacy In-Charge and the duty pharmacist». The register is reconciled at every shift change; discrepancies trigger an immediate investigation and an incident report.\n\nChemotherapeutic agents are stored separately from other medications in «a clearly labelled, restricted-access area with spill kit accessible».\n\nRadioactive agents are stored in «the designated radiation-safe area with shielding, signage and access limited to authorised personnel». Storage conditions follow AERB requirements.",
+    "5.4 Safe preparation and administration of chemotherapy and radioactive agents\n\nChemotherapy and radioactive agents are prepared properly and safely, and administered by qualified personnel.\n\nChemotherapeutic agents are prepared in a «biological safety cabinet or designated preparation area» by trained personnel wearing PPE (gown, double gloves, mask, eye protection). A spill kit is immediately accessible.\n\nRadioactive agents are prepared and administered by personnel authorised under the AERB rules with dosimetry badges. Preparation follows the «radiation safety manual of the hospital».\n\nAdministration follows MOM.6 (patient identification, order verification) plus agent-specific protocols. The treating doctor is available during administration for management of acute reactions.",
+    "5.5 Record-keeping from procurement to disposal\n\nA proper record is kept of the usage, administration and disposal of narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents.\n\nFor narcotics and psychotropics: the NDPS register records procurement, receipt, batch, issue to ward, administration to patient (with patient name and prescription reference), balance, and disposal. The register is available for inspection by the licensing authority.\n\nFor chemotherapeutic agents: the cytotoxic medication log records receipt, batch, preparation, administration and waste disposal (cytotoxic waste stream per BMW Rules, 2016).\n\nFor radioactive agents: the radioactive materials log records receipt, activity, use, administration to patient, decay and disposal. Records are maintained per AERB requirements.\n\nThe Pharmacy In-Charge reconciles all registers «monthly» and presents a summary to the Multidisciplinary Medication Committee."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Maintains the authorised-prescriber list for narcotics and psychotropics; accountable for regulatory compliance.\n\nMultidisciplinary Medication Committee (Pharmacy and Therapeutics)\n- Reviews usage data, register summaries and incident trends for narcotics, cytotoxics and radioactive agents.\n\nPharmacy In-Charge\n- Manages secure storage, registers, reconciliation and disposal procedures.\n\nTreating doctors (appropriate caregivers)\n- Prescribe within their authorisation; are available during administration of chemotherapy and radioactive agents.\n\nNurses and oncology/radiology staff\n- Prepare and administer with PPE and containment; maintain shift-change register reconciliation.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see section 8).\n- Tracks CAPA when register discrepancies or safety lapses recur.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Management of Medication chapter, standard MOM.8.\n- Narcotic Drugs and Psychotropic Substances Act, 1985 — procurement, storage, prescribing, administration, record-keeping and disposal of narcotics and psychotropic substances.\n- Atomic Energy (Radiation Protection) Rules, 2004 — handling, storage, administration and disposal of radioactive agents.\n- Bio-Medical Waste Management Rules, 2016 — cytotoxic waste disposal.\n- Internal documents of {{HOSPITAL_NAME}}: NDPS register; cytotoxic medication log; radioactive materials log; authorised-prescriber list; radiation safety manual where applicable.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Pharmacy In-Charge and the Quality Coordinator.\n\nCopies issued to: pharmacy; oncology unit where it exists; radiology and nuclear medicine where it exists; operation theatre; ICU where it exists.\n\nThe current version is available to all staff at the «pharmacy counter policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "AERB — Atomic Energy Regulatory Board\nBMW — Bio-Medical Waste\nCAPA — corrective and preventive action\nMOM — Management of Medication (NABH SHCO chapter 7)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nNDPS — Narcotic Drugs and Psychotropic Substances\nOE — objective element\nPPE — personal protective equipment\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nSeveral requirements in this document are statutory rather than advisory — in particular those arising under the Narcotic Drugs and Psychotropic Substances Act, 1985, insofar as narcotic and psychotropic substances are procured, stored, administered, recorded and disposed of under that Act, and the Atomic Energy (Radiation Protection) Rules, 2004, insofar as radioactive agents are handled under those rules. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "MOM.8.a",
+      "requirement": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents are used safely.",
+      "steps": "Statement of intent; Section 3; 5.1 Safe use overview",
+      "responsible": "All staff handling these agents (follow procedure); Pharmacy In-Charge (oversee)",
+      "records": [
+        "Written procedure for safe use of each category of agent.",
+        "Recorded absence against the service directory where chemotherapy or radioactive therapy is not provided.",
+        "Training records for all staff handling these agents.",
+        "Incident reports related to unsafe use."
+      ]
+    },
+    {
+      "oe_code": "MOM.8.b",
+      "requirement": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents are prescribed by appropriate caregivers.",
+      "steps": "Section 4 item 1; 5.2 Prescription by appropriate caregivers",
+      "responsible": "Medical Superintendent (authorised-prescriber list); prescribers (prescribe within authorisation)",
+      "records": [
+        "Authorised-prescriber list for narcotics and psychotropics.",
+        "Evidence the list is available at the pharmacy.",
+        "Sample prescriptions verified against the authorised list."
+      ]
+    },
+    {
+      "oe_code": "MOM.8.c",
+      "requirement": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents are stored securely.",
+      "steps": "Section 4 items 2–3; 5.3 Secure storage",
+      "responsible": "Pharmacy In-Charge (manage storage and register); duty pharmacist (second key)",
+      "records": [
+        "NDPS register with shift-change reconciliation records.",
+        "Evidence of double-locked cupboard for narcotics and psychotropics.",
+        "Chemotherapy storage area inspection records (labelling, restricted access, spill kit).",
+        "Radioactive-agent storage compliance records (shielding, signage, access log)."
+      ]
+    },
+    {
+      "oe_code": "MOM.8.d",
+      "requirement": "Chemotherapy and radioactive agents are prepared properly and safely, and administered by qualified personnel.",
+      "steps": "Section 4 items 3–4; 5.4 Safe preparation and administration",
+      "responsible": "Trained oncology/radiology staff (prepare and administer); treating doctor (available for reactions)",
+      "records": [
+        "Preparation records showing containment and PPE used.",
+        "Administration records with patient identification and protocol reference.",
+        "Dosimetry records for personnel handling radioactive agents."
+      ]
+    },
+    {
+      "oe_code": "MOM.8.e",
+      "requirement": "A proper record is kept of the usage, administration and disposal of narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents.",
+      "steps": "Section 4 items 5–6; 5.5 Record-keeping from procurement to disposal",
+      "responsible": "Pharmacy In-Charge (reconcile registers); all handling staff (maintain entries)",
+      "records": [
+        "NDPS register (procurement to disposal).",
+        "Cytotoxic medication log (receipt to waste disposal).",
+        "Radioactive materials log (receipt to decay/disposal).",
+        "Monthly reconciliation summaries presented to the committee."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "MOM.8 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"Narcotic drugs and psychotropic substances, chemotherapeutic agents and radioactive agents are used in a safe manner.\" MOM.8.a–e PDF index 86. MOM.8.a asterisked. All Commitment level.\n\nSHAPE: Five What-we-do subsections (5.1–5.5). Stop-work yes (do not proceed without mandated controls). Disclaimer names NDPS Act 1985 and Atomic Energy Rules 2004. MOM roles only.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "MOM v2 template: adoptable shape, plain English, MOM roles, five steps, stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Narcotic drugs, psychotropic substances, chemotherapeutic agents and radioactive agents are used safely — prescribed by appropriate caregivers, stored securely, prepared and administered by qualified personnel with proper PPE, and recorded from procurement to disposal.",
+  "exceptions": "The following rules are non-negotiable.\n\n1. Narcotic drugs and psychotropic substances are prescribed only by «doctors authorised under the NDPS Act, 1985 and listed by the Medical Superintendent».\n2. Narcotic drugs and psychotropic substances are stored in a double-locked cupboard. The register is reconciled at every shift change.\n3. Chemotherapeutic agents are prepared in a «designated preparation area with biological safety cabinet or equivalent containment» by trained personnel wearing appropriate PPE (gown, gloves, mask, eye protection).\n4. Radioactive agents are handled only by personnel authorised under the «Atomic Energy (Radiation Protection) Rules, 2004» with dosimetry monitoring.\n5. A complete record of procurement, receipt, storage, prescription, administration and disposal is maintained for every narcotic, psychotropic, chemotherapeutic and radioactive agent.\n6. Disposal of narcotic and psychotropic substances follows the NDPS Act procedure. Cytotoxic waste follows the Bio-Medical Waste Management Rules, 2016.\n\nStaff who cannot confirm authorisation, register entry, PPE availability or containment do not proceed. They report to the «Pharmacy In-Charge» or «Medical Superintendent» immediately.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit looks at registers, storage and safety practices.\n\nWhat is monitored each quarter:\n\n- NDPS register reconciliation records and discrepancies.\n- Authorised-prescriber list currency.\n- Secure-storage compliance (double lock, restricted access, spill kit, shielding).\n- PPE usage and containment during preparation and administration (observation or record).\n- Cytotoxic and radioactive materials log completeness.\n- Disposal records per NDPS Act, BMW Rules, and AERB requirements.\n\nRoot-cause analysis is required when the same safety lapse recurs within six months.\n\nThis policy is reviewed «annually», and sooner when NDPS, AERB or BMW regulations change.",
+  "training_competency": "All staff who handle narcotic drugs, psychotropic substances, chemotherapeutic agents or radioactive agents are trained on this policy at induction and «once a year» after that. Training covers safe use, secure storage, PPE, register maintenance, and disposal.\n\nStaff acknowledgement\n\nI have read this Safe Use of Narcotic, Psychotropic, Chemotherapeutic and Radioactive Agents policy of {{HOSPITAL_NAME}}. I will follow authorisation, storage, preparation, administration and disposal requirements.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Pharmacy In-Charge holds signed acknowledgements with the training record.)",
+  "resources_required": "Document number: MOM/POL/08\nIssue number: «01»\nVersion: 2.0 (MOM v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Pharmacy In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "mom_v2_adoptable_shape",
+  "subtitle": "Safe use of narcotics, psychotropics, chemotherapeutic and radioactive agents.",
+  "doc_no": "MOM/POL/08",
+  "stop_work": "Any staff member who cannot confirm authorisation (prescriber not on the authorised list), register entry, PPE availability, or containment conditions:\n\n1. Does not proceed with prescription, dispensing, preparation, or administration.\n2. Secures the agent in its current storage.\n3. Reports to the Pharmacy In-Charge or Medical Superintendent immediately.\n\nFor a register discrepancy (narcotic or psychotropic count does not match):\n\n1. Does not issue further stock from the affected batch.\n2. Notifies the Pharmacy In-Charge and the Medical Superintendent the same shift.\n3. Investigation is completed within «24 hours».\n\nNo approval is needed to stop. Regulatory compliance overrides convenience."
+}

@@ -1,0 +1,90 @@
+{
+  "standard_code": "MOM.4",
+  "chapter": "MOM",
+  "oe_codes": [
+    "MOM.4.a",
+    "MOM.4.b",
+    "MOM.4.c",
+    "MOM.4.d"
+  ],
+  "policy_title": "Medication Orders Are Written in a Uniform Manner",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} ensures medication orders are written uniformly: only authorised personnel write orders; orders are in a uniform location in the medical record; orders are legible, dated, timed and signed; and orders contain the required medication details.\n\nIt covers MOM.4.a–d.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to treating doctors (prescribers), the Pharmacy In-Charge, nurses, the Medical Superintendent and Quality Coordinator at {{HOSPITAL_NAME}}.\n\nIt covers MOM.4.a–d: authorised personnel; uniform location with patient identification; legibility, date, time and signature; and required medication details.\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- MOM.3 owns rational prescribing and minimum prescription requirements. This policy owns the format and uniformity of the written order.\n- MOM.5 owns dispensing. The pharmacist verifies order completeness before dispensing.\n- MOM.3.e owns verbal orders. This policy applies to written (and transcribed verbal) orders.",
+  "policy_statement": "{{HOSPITAL_NAME}} requires that medication orders are written only by authorised personnel, in a uniform location in the medical record, and that every order is legible, dated, timed, signed and contains the name of the medicine, route, strength and frequency.\n\nAn illegible, unsigned or incomplete medication order is not dispensed; it is returned to the prescriber.",
+  "procedure_steps": [
+    "5.1 Authorised personnel\n\n{{HOSPITAL_NAME}} ensures that only authorised personnel write medication orders.\n\nThe «Medical Superintendent» maintains a list of personnel authorised to write medication orders. The list includes name, designation, registration number and specimen signature. The list is available at the pharmacy and at each nursing station.\n\nPersonnel not on the list are not permitted to write medication orders. A verbal order received from an authorised prescriber is transcribed under MOM.3.e.",
+    "5.2 Uniform location and patient identification\n\nMedication orders are written in a uniform location in the medical records, which also reflects the patient's name and unique identification number.\n\nThe designated location is the «medication order sheet in the in-patient file and the prescription pad for out-patients». Every page of the medication order section carries the patient's name and unique identification number (pre-printed or hand-written at the top).\n\nOrders written outside the designated location are invalid for dispensing and must be re-written in the correct place.",
+    "5.3 Legibility, date, time and signature\n\nMedication orders are legible, dated, timed and signed.\n\nEvery order is written in «block capitals or clearly legible handwriting». The date (DD/MM/YYYY), time (24-hour clock) and prescriber's signature appear on every order line.\n\nA pharmacist or nurse who cannot read an order does not guess. The order is returned to the prescriber for clarification before dispensing or administration.",
+    "5.4 Required medication details\n\nMedication orders contain the name of the medicine, route of administration, strength to be administered and frequency or time of administration.\n\nAbbreviations for route and frequency follow the «approved abbreviation list maintained by the Pharmacy In-Charge». Unapproved or ambiguous abbreviations are flagged and the order is returned.\n\nWhere additional details are clinically necessary (duration, dilution, infusion rate), the prescriber adds them. The four mandatory elements (name, route, strength, frequency/time) are non-negotiable."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Maintains the authorised-personnel list; accountable for order-writing standards.\n\nTreating doctors (prescribers)\n- Write legible, complete, dated, timed and signed medication orders in the designated location.\n\nPharmacy In-Charge\n- Verifies order completeness at dispensing; maintains the approved abbreviation list; tracks returned orders.\n\nNurses\n- Verify order completeness before administration; return non-compliant orders to prescriber.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see section 8).\n- Tracks CAPA when order-writing defects recur.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Management of Medication chapter, standard MOM.4.\n- Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, 1945 — prescription requirements.\n- Internal documents of {{HOSPITAL_NAME}}: authorised-personnel list; approved abbreviation list; medication order sheet template; returned-order log.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Pharmacy In-Charge and the Quality Coordinator.\n\nCopies issued to: pharmacy; every in-patient ward; out-patient clinics; emergency room; nursing administration.\n\nThe current version is available to all staff at the «pharmacy counter policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "CAPA — corrective and preventive action\nMOM — Management of Medication (NABH SHCO chapter 7)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nSeveral requirements in this document are statutory rather than advisory — in particular those arising under the Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, 1945, insofar as medication orders meet legal prescription requirements. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "MOM.4.a",
+      "requirement": "The organisation ensures that only authorised personnel write orders.",
+      "steps": "Section 3; Section 4 item 1; 5.1 Authorised personnel",
+      "responsible": "Medical Superintendent (maintain list); prescribers (write orders)",
+      "records": [
+        "Authorised-personnel list with name, designation, registration number and specimen signature.",
+        "Evidence the list is available at the pharmacy and nursing stations.",
+        "Audit sample confirming orders are by authorised personnel only."
+      ]
+    },
+    {
+      "oe_code": "MOM.4.b",
+      "requirement": "Medication orders are written in a uniform location in the medical records, which also reflects the patient's name and unique identification number.",
+      "steps": "Section 3; Section 4 items 2–3; 5.2 Uniform location and patient identification",
+      "responsible": "Prescribers (write in designated section); nursing staff (verify)",
+      "records": [
+        "Defined designation of the medication order section in the medical record.",
+        "Sample medical records showing orders in the uniform location with patient name and ID.",
+        "Returned-order records for orders written outside the designated location."
+      ]
+    },
+    {
+      "oe_code": "MOM.4.c",
+      "requirement": "Medication orders are legible, dated, timed and signed.",
+      "steps": "Section 3; Section 4 items 4–6; 5.3 Legibility, date, time and signature",
+      "responsible": "Prescribers (write legibly, date, time, sign); pharmacy and nurses (verify)",
+      "records": [
+        "Sample medication orders showing legible writing, date (DD/MM/YYYY), time (24-hour) and signature.",
+        "Returned-order log entries for illegible or unsigned orders.",
+        "Quarterly audit sample results."
+      ]
+    },
+    {
+      "oe_code": "MOM.4.d",
+      "requirement": "Medication orders contain the name of the medicine, route of administration, strength to be administered and frequency/time of administration.",
+      "steps": "Section 3; Section 4 item 5; 5.4 Required medication details",
+      "responsible": "Prescribers (include all elements); Pharmacy In-Charge (verify and maintain abbreviation list)",
+      "records": [
+        "Sample medication orders showing all four mandatory elements.",
+        "Approved abbreviation list maintained by the pharmacy.",
+        "Returned-order log entries for incomplete orders."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "MOM.4 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"Medication orders are written in a uniform manner.\" MOM.4.a–d PDF index 84. MOM.4.a asterisked. All Commitment level.\n\nSHAPE: Four What-we-do subsections (5.1–5.4). Stop-work yes (do not dispense illegible/unsigned/incomplete order). Disclaimer names Drugs and Cosmetics Act 1940. MOM roles only.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "MOM v2 template: adoptable shape, plain English, MOM roles, four steps, stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Every medication order is written uniformly — authorised personnel, uniform location, legible, dated, timed, signed, and containing all required details — so that the dispensing and administering staff never have to guess.",
+  "exceptions": "The following rules are non-negotiable.\n\n1. Only personnel authorised by {{HOSPITAL_NAME}} write medication orders. The list of authorised personnel is maintained by the «Medical Superintendent».\n2. Medication orders are written in the designated section of the medical record, not on loose paper or verbal instruction alone.\n3. Every medication order includes the patient's name and unique identification number.\n4. Every medication order is legible, dated, timed and signed by the prescriber.\n5. Every medication order includes: name of the medicine, route of administration, strength to be administered, and frequency or time of administration.\n6. An illegible, unsigned, or incomplete medication order is not dispensed. The pharmacist or nurse returns it to the prescriber for correction.\n\nStaff who see a non-compliant order do not dispense against it. They return it to the prescriber and report to the «Pharmacy In-Charge».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit looks at medication orders in medical records.\n\nWhat is monitored each quarter:\n\n- Sample medication orders checked for authorised personnel, uniform location, patient identification, legibility, date, time, signature, and all four required elements.\n- Returned-order log reviewed for patterns.\n- Authorised-personnel list currency.\n- Approved-abbreviation list compliance.\n\nRoot-cause analysis is required when the same order-writing defect recurs within six months.\n\nThis policy is reviewed «annually», and sooner when MOM.3 or MOM.5 is revised.",
+  "training_competency": "All prescribers, pharmacy staff and nursing staff are trained on this policy at induction and «once a year» after that. Training covers uniform order writing, the four mandatory elements, and the return procedure for non-compliant orders.\n\nStaff acknowledgement\n\nI have read this Medication Orders Are Written in a Uniform Manner policy of {{HOSPITAL_NAME}}. I will write complete orders and will not dispense or administer against illegible or incomplete orders.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Pharmacy In-Charge holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: MOM/POL/04\nIssue number: «01»\nVersion: 2.0 (MOM v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Pharmacy In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "mom_v2_adoptable_shape",
+  "subtitle": "Uniform order writing: authorised, legible, complete, signed.",
+  "doc_no": "MOM/POL/04",
+  "stop_work": "Any pharmacist, nurse or other staff member who receives a medication order that is illegible, unsigned, incomplete, or written by unauthorised personnel:\n\n1. Does not dispense or administer the medication.\n2. Returns the order to the prescriber for correction or re-writing.\n3. Documents the return in the «returned-order log» at the pharmacy or nursing station.\n4. Reports to the Pharmacy In-Charge if the pattern recurs.\n\nNo approval is needed to return a non-compliant order. Patient safety overrides convenience."
+}

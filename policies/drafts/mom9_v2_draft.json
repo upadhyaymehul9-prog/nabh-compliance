@@ -1,0 +1,79 @@
+{
+  "standard_code": "MOM.9",
+  "chapter": "MOM",
+  "oe_codes": [
+    "MOM.9.a",
+    "MOM.9.b",
+    "MOM.9.c"
+  ],
+  "policy_title": "Implantable Prostheses and Medical Devices Are Used in Accordance with Laid Down Criteria",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} manages implantable prostheses and medical devices: procurement through written guidance, patient and family counselling, and traceability of batch and serial numbers in the medical record, master logbook and discharge summary.\n\nIt covers MOM.9.a–c. MOM.1.e places implants within the Multidisciplinary Medication Committee's scope; this policy owns the operational detail.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to treating doctors (surgeons and implanting clinicians), the Pharmacy In-Charge, nurses, the store or procurement officer, the Multidisciplinary Medication Committee, the Medical Superintendent and Quality Coordinator at {{HOSPITAL_NAME}}.\n\nIt covers MOM.9.a–c: procurement guidance; patient and family counselling; and batch/serial-number traceability.\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- MOM.1.e lists implants in the committee's scope. This policy owns the procurement guidance, counselling and traceability.\n- PRE.3 owns informed consent for surgery and invasive procedures. This policy owns the implant-specific counselling (including precautions).\n- COP.10 owns surgical safety. This policy owns the implant record in the medical record and discharge summary.",
+  "policy_statement": "{{HOSPITAL_NAME}} procures implantable prostheses and medical devices through written guidance approved by the Multidisciplinary Medication Committee.\n\nThe patient and family are counselled before use, including precautions. The batch and serial number of every implant and medical device are recorded in the patient's medical record, the master logbook and the discharge summary.",
+  "procedure_steps": [
+    "5.1 Procurement of implantable prostheses and medical devices\n\nWritten guidance addresses procurement and usage of implantable prostheses.\n\nThe Multidisciplinary Medication Committee approves the list of implantable prostheses and medical devices used at {{HOSPITAL_NAME}}. Procurement criteria include: clinical indication, supplier licence under the «Medical Devices Rules, 2017», batch traceability, storage requirements, and cost.\n\nThe «store or procurement officer» procures only from the approved-supplier list. On receipt, the Pharmacy In-Charge verifies batch number, serial number, expiry (where applicable), packaging integrity and storage instructions. A goods-receipt entry is made in the implant register.",
+    "5.2 Patient and family counselling\n\nPatient and family are counselled for the usage of the implantable prosthesis and medical devices including precautions if any.\n\nBefore the procedure, the treating doctor (or a «trained counsellor or nurse») explains to the patient and family: the nature and purpose of the implant or device; expected outcome; precautions after implantation (activity restrictions, MRI compatibility, follow-up schedule); and potential complications.\n\nCounselling is documented in the medical record. A signed acknowledgement by the patient or authorised representative is obtained. Informed consent for the surgical procedure remains PRE.3; this step covers the implant-specific counselling.",
+    "5.3 Batch and serial number traceability\n\nThe batch and the serial number of the implantable prosthesis and medical devices are recorded in the patient's medical records, the master logbook and the discharge summary.\n\nImmediately after implantation, the operating team records the following in three places:\n\n1. **Patient's medical record**: implant name, manufacturer, batch number, serial number, date of implantation, and implanting surgeon.\n2. **Master logbook** (maintained by the «Pharmacy In-Charge or store officer»): patient name and ID, implant name, manufacturer, batch number, serial number, date of implantation, and implanting surgeon.\n3. **Discharge summary** (AAC.8): implant name, batch number, serial number, and any precautions for the patient.\n\nThe Pharmacy In-Charge reconciles the master logbook against goods-receipt and theatre records «monthly». A discrepancy triggers investigation."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable for implant governance and traceability.\n\nMultidisciplinary Medication Committee (Pharmacy and Therapeutics)\n- Approves the implant list, procurement criteria and supplier list.\n\nTreating doctors (surgeons / implanting clinicians)\n- Counsel the patient and family; record batch and serial number in the medical record.\n\nPharmacy In-Charge\n- Verifies receipt; maintains the master logbook; reconciles monthly.\n\nStore or procurement officer\n- Procures from the approved-supplier list only.\n\nNurses (operating theatre)\n- Assist in recording the implant details at the time of implantation.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see section 7).\n- Tracks CAPA when traceability gaps are found.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Management of Medication chapter, standard MOM.9.\n- Medical Devices Rules, 2017 — procurement, tracking and adverse-event reporting for implantable devices.\n- Internal documents of {{HOSPITAL_NAME}}: implant register; master logbook; approved-supplier list; MOM.1.e committee scope; PRE.3 informed consent; AAC.8 discharge summary.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Pharmacy In-Charge and the Quality Coordinator.\n\nCopies issued to: pharmacy; operation theatre; orthopaedic and surgical wards where implants are used; store or procurement.\n\nThe current version is available to all staff at the «pharmacy counter policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "AAC — Access, Assessment and Continuity of Care (NABH SHCO chapter 5)\nCAPA — corrective and preventive action\nMOM — Management of Medication (NABH SHCO chapter 7)\nMRI — magnetic resonance imaging\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPRE — Patient Rights and Education (NABH SHCO chapter 4)\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nSeveral requirements in this document are statutory rather than advisory — in particular those arising under the Medical Devices Rules, 2017, insofar as implantable prostheses and medical devices are procured, tracked and reported under those rules. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "MOM.9.a",
+      "requirement": "Written guidance addresses procurement and usage of implantable prostheses.",
+      "steps": "Statement of intent; Section 3; 5.1 Procurement of implantable prostheses and medical devices",
+      "responsible": "Committee (approve list and criteria); store officer (procure); Pharmacy In-Charge (verify receipt)",
+      "records": [
+        "Committee-approved implant list and procurement criteria.",
+        "Approved-supplier list with licence verification.",
+        "Goods-receipt entries in the implant register.",
+        "Pharmacy In-Charge verification records (batch, serial, expiry, packaging)."
+      ]
+    },
+    {
+      "oe_code": "MOM.9.b",
+      "requirement": "Patient and family are counselled for the usage of the implantable prosthesis and medical devices including precautions if any.",
+      "steps": "Section 3; Section 4 item 2; 5.2 Patient and family counselling",
+      "responsible": "Treating doctor (counsel); nurse or counsellor (assist); PRE.3 (surgical consent)",
+      "records": [
+        "Counselling documentation in the medical record.",
+        "Signed acknowledgement by patient or authorised representative.",
+        "Quarterly audit sample of counselling records."
+      ]
+    },
+    {
+      "oe_code": "MOM.9.c",
+      "requirement": "The batch and the serial number of the implantable prosthesis and medical devices are recorded in the patients' medical records, the master logbook and the discharge summary.",
+      "steps": "Section 3; Section 4 item 3; 5.3 Batch and serial number traceability",
+      "responsible": "Operating team (record in medical record); Pharmacy In-Charge (master logbook); AAC.8 (discharge summary)",
+      "records": [
+        "Patient medical record entry with implant name, manufacturer, batch, serial, date, surgeon.",
+        "Master logbook entry with the same details plus patient name and ID.",
+        "Discharge summary (AAC.8) with implant name, batch, serial and precautions.",
+        "Monthly reconciliation records (logbook vs goods-receipt and theatre records)."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "MOM.9 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"Implantable prosthesis and medical devices are used in accordance with laid down criteria.\" MOM.9.a–c PDF index 87. MOM.9.a asterisked. All Commitment level. PDF has \"devises\" in MOM.9.b and MOM.9.c — corrected to \"devices\" in clean wording.\n\nSHAPE: Three What-we-do subsections (5.1–5.3). No stop-work. Disclaimer names Medical Devices Rules 2017. MOM roles only.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "MOM v2 template: adoptable shape, plain English, MOM roles, three steps, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Implantable prostheses and medical devices are procured through written guidance, the patient and family are counselled, and batch and serial numbers are traced in the medical record, master logbook and discharge summary.",
+  "exceptions": "The following rules are non-negotiable.\n\n1. Every implantable prosthesis and medical device used at {{HOSPITAL_NAME}} is procured from «suppliers approved by the committee and licensed under the Medical Devices Rules, 2017».\n2. The patient and family are counselled before the implant procedure, including the nature of the device, expected outcome, precautions, and potential complications.\n3. The batch number and serial number of every implant and medical device are recorded in the patient's medical record, the master logbook and the discharge summary — no exceptions.\n\nStaff who find an implant without a traceable batch or serial number do not use it. They report to the «Pharmacy In-Charge» or the operating surgeon immediately.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit looks at procurement, counselling and traceability records.\n\nWhat is monitored each quarter:\n\n- Implant register: goods-receipt entries verified against supplier approval.\n- Sample medical records checked for batch and serial number documentation.\n- Master logbook reconciliation against theatre records.\n- Discharge summaries checked for implant details.\n- Patient counselling documentation in sample records.\n\nRoot-cause analysis is required when the same traceability gap recurs within six months.\n\nThis policy is reviewed «annually», and sooner when the Medical Devices Rules or the implant list changes.",
+  "training_competency": "All operating-theatre staff, surgeons, pharmacy staff and nursing staff involved in implant procedures are trained on this policy at induction and «once a year» after that. Training covers procurement, counselling, and the three-point traceability requirement.\n\nStaff acknowledgement\n\nI have read this Implantable Prostheses and Medical Devices policy of {{HOSPITAL_NAME}}. I will follow procurement guidance, counsel patients, and record batch and serial numbers in three places.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Pharmacy In-Charge holds signed acknowledgements with the training record.)",
+  "resources_required": "Document number: MOM/POL/09\nIssue number: «01»\nVersion: 2.0 (MOM v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Pharmacy In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "mom_v2_adoptable_shape",
+  "subtitle": "Implant procurement, counselling and batch/serial traceability.",
+  "doc_no": "MOM/POL/09",
+  "stop_work": ""
+}
