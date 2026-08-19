@@ -1,0 +1,119 @@
+{
+  "standard_code": "MOM.1",
+  "chapter": "MOM",
+  "oe_codes": [
+    "MOM.1.a",
+    "MOM.1.b",
+    "MOM.1.c",
+    "MOM.1.d",
+    "MOM.1.e",
+    "MOM.1.f"
+  ],
+  "policy_title": "Multidisciplinary Committee Guides Pharmacy Services and Medication Management",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} establishes and maintains a formulary, governs pharmacy services through a multidisciplinary committee, acquires medications inside and outside the formulary, provides medication access when the pharmacy is closed, includes implantable prostheses and medical devices in the committee's scope, and monitors clinician adherence to the formulary.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to the Multidisciplinary Medication Committee (Pharmacy and Therapeutics Committee), pharmacy staff, treating doctors (prescribers), nurses, the Medical Superintendent and Quality Coordinator at {{HOSPITAL_NAME}}.\n\nIt covers MOM.1.a–f: formulary development; committee governance of pharmacy services; acquisition of formulary and non-formulary medications; medication access when the pharmacy is closed; implantable prostheses and medical devices; and clinician adherence to the formulary.\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- MOM.1.e lists implantable prostheses and medical devices in the committee's scope. MOM.9 owns the detailed guidance on procurement, counselling and traceability of implants.\n- Medication storage is MOM.2. Prescribing is MOM.3. Dispensing is MOM.5. Administration is MOM.6.\n- Safe use of narcotics, chemotherapeutic and radioactive agents is MOM.8.",
+  "policy_statement": "{{HOSPITAL_NAME}} develops and maintains a formulary appropriate for its patient population and scope of services.\n\n{{HOSPITAL_NAME}} governs pharmacy services and medication usage through the Multidisciplinary Medication Committee, not by individual decision.\n\n{{HOSPITAL_NAME}} follows written procedures for acquisition of formulary and non-formulary medications, access when the pharmacy is closed, and the inclusion of implantable prostheses and medical devices in the committee's oversight.\n\nClinicians adhere to the current formulary. Exceptions are documented through the non-formulary acquisition procedure.",
+  "procedure_steps": [
+    "5.1 Formulary development and maintenance\n\nThe Multidisciplinary Medication Committee develops, updates and implements a list of medications appropriate for the patients and the scope of clinical services at {{HOSPITAL_NAME}}.\n\nThe formulary is reviewed at least «annually» and whenever a new clinical service is added or a drug-safety alert warrants a change. The committee records additions, deletions and the clinical rationale.\n\nThe formulary is available to all prescribers at «the pharmacy counter and, if the hospital keeps an intranet, on the staff intranet».",
+    "5.2 Committee governance of pharmacy services\n\nPharmacy services and medication usage are implemented following written guidance through the Multidisciplinary Medication Committee.\n\nThe committee meets at least «quarterly» and includes at a minimum: «Medical Superintendent (or delegate), a treating doctor, the Pharmacy In-Charge, and a nursing representative». Minutes are kept and include decisions, action items and deadlines.\n\nThe committee reviews medication-usage data, adverse drug reactions, medication errors and near-miss trends reported under MOM.7, and recommends changes to formulary, storage, prescribing or dispensing practices.",
+    "5.3 Acquisition of formulary and non-formulary medications\n\n{{HOSPITAL_NAME}} adheres to the procedure for the acquisition of formulary medications and medications not listed in the formulary.\n\nFormulary medications are procured through the pharmacy from «approved suppliers licensed under the Drugs and Cosmetics Act, 1940». The Pharmacy In-Charge maintains supplier records and verifies batch, expiry and storage conditions on receipt.\n\nNon-formulary medications are acquired only with a written request from the prescribing doctor, reviewed and approved by «the Pharmacy In-Charge or a committee member», and documented in the non-formulary register. Emergency non-formulary requests follow the same documentation but may be approved retrospectively within «24 hours».",
+    "5.4 Medication access when the pharmacy is closed\n\nThere is a procedure to obtain medication when the pharmacy is closed.\n\n{{HOSPITAL_NAME}} maintains «a night cupboard / emergency medication stock on each in-patient floor» accessible to the duty nurse. The stock list is defined by the committee and matches MOM.2.e (emergency medications).\n\nThe duty nurse documents every withdrawal against the patient's name and medication order. The Pharmacy In-Charge reconciles withdrawals the next working day. Missing or unreconciled items trigger an incident report under MOM.7.",
+    "5.5 Implantable prostheses and medical devices\n\nImplantable prostheses and medical devices are used in accordance with laid-down criteria and are within the committee's scope.\n\nThe committee defines which implantable prostheses and medical devices are approved for use at {{HOSPITAL_NAME}}. Criteria include clinical indication, supplier qualification, batch traceability and cost disclosure.\n\nDetailed guidance on procurement, patient and family counselling, and traceability of implants is in MOM.9. This step ensures the committee has oversight; MOM.9 owns the operational detail.",
+    "5.6 Clinician adherence to the formulary\n\nClinicians adhere to the current formulary.\n\nPrescribers are expected to prescribe from the current formulary. The Pharmacy In-Charge flags off-formulary prescriptions to the prescriber and records them.\n\nThe committee reviews adherence data «quarterly» and takes action where off-formulary prescribing is frequent or unjustified. Action may include education, formulary revision, or restriction."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable for committee constitution and that pharmacy services follow written guidance.\n\nMultidisciplinary Medication Committee (Pharmacy and Therapeutics)\n- Develops and maintains the formulary; governs pharmacy services and medication usage; reviews adherence, incidents and trends.\n\nPharmacy In-Charge\n- Implements committee decisions; manages formulary stock, non-formulary acquisition and after-hours reconciliation.\n\nTreating doctors (prescribers)\n- Prescribe from the current formulary; follow non-formulary acquisition procedure when needed.\n\nNurses\n- Follow the after-hours medication access procedure; document withdrawals.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see section 7).\n- Tracks CAPA when committee decisions are not implemented.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Management of Medication chapter, standard MOM.1.\n- Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, 1945 — formulary and licensed pharmacy requirements.\n- Pharmacy Act, 1948 — registered pharmacist requirement.\n- Internal documents of {{HOSPITAL_NAME}}: formulary; non-formulary acquisition register; after-hours withdrawal log; committee meeting minutes; MOM.9 implant guidance.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Pharmacy In-Charge and the Quality Coordinator.\n\nCopies issued to: pharmacy; every in-patient ward (after-hours procedure extract); out-patient dispensary; committee members.\n\nThe current version is available to all staff at the «pharmacy counter policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "CAPA — corrective and preventive action\nMOM — Management of Medication (NABH SHCO chapter 7)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nSeveral requirements in this document are statutory rather than advisory — in particular those arising under the Drugs and Cosmetics Act, 1940 and the Drugs and Cosmetics Rules, 1945, insofar as the organisation maintains a formulary and acquires medications through a licensed pharmacy, and the Pharmacy Act, 1948, insofar as pharmacy services are provided by registered pharmacists. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "MOM.1.a",
+      "requirement": "The organisation develops, updates and implements a list of medications appropriate for the patients and as per the scope of the organisation's clinical services.",
+      "steps": "Statement of intent; Section 3; 5.1 Formulary development and maintenance",
+      "responsible": "Multidisciplinary Medication Committee (develop); Pharmacy In-Charge (implement)",
+      "records": [
+        "Current approved formulary with date of last review.",
+        "Committee minutes recording additions, deletions and clinical rationale.",
+        "Evidence the formulary is available to all prescribers."
+      ]
+    },
+    {
+      "oe_code": "MOM.1.b",
+      "requirement": "Pharmacy services and medication usage are implemented following written guidance through a multidisciplinary committee.",
+      "steps": "Statement of intent; Section 3; 5.2 Committee governance of pharmacy services",
+      "responsible": "Multidisciplinary Medication Committee (govern); Medical Superintendent (constitute)",
+      "records": [
+        "Committee constitution and terms of reference.",
+        "Quarterly meeting minutes with attendance, decisions, action items and deadlines.",
+        "Written guidance documents the committee has issued or endorsed.",
+        "Review of medication-usage data and adverse-event trends."
+      ]
+    },
+    {
+      "oe_code": "MOM.1.c",
+      "requirement": "The organisation adheres to the procedure for the acquisition of formulary medications and medications not listed in the formulary.",
+      "steps": "Section 3; Section 4 items 2–3; 5.3 Acquisition of formulary and non-formulary medications",
+      "responsible": "Pharmacy In-Charge (procure and verify); prescriber (non-formulary request); committee member (approve)",
+      "records": [
+        "Supplier records with licence verification.",
+        "Goods-receipt register with batch, expiry and storage check.",
+        "Non-formulary acquisition register with prescriber request and approval.",
+        "Retrospective approval records for emergency non-formulary requests."
+      ]
+    },
+    {
+      "oe_code": "MOM.1.d",
+      "requirement": "There is a procedure to obtain medication when the pharmacy is closed.",
+      "steps": "Section 4 item 4; 5.4 Medication access when the pharmacy is closed",
+      "responsible": "Duty nurse (withdraw and document); Pharmacy In-Charge (reconcile next working day)",
+      "records": [
+        "Written after-hours medication access procedure.",
+        "Night-cupboard stock list defined by the committee.",
+        "Withdrawal log with patient name and medication order reference.",
+        "Next-day reconciliation records and incident reports for discrepancies."
+      ]
+    },
+    {
+      "oe_code": "MOM.1.e",
+      "requirement": "Implantable prosthesis and medical devices are used in accordance with laid down criteria.",
+      "steps": "Section 3; 5.5 Implantable prostheses and medical devices; MOM.9 (detail)",
+      "responsible": "Multidisciplinary Medication Committee (criteria and oversight); MOM.9 (operational detail)",
+      "records": [
+        "Committee-approved list of implantable prostheses and medical devices.",
+        "Criteria for approval including clinical indication and supplier qualification.",
+        "Cross-reference to MOM.9 for procurement, counselling and traceability."
+      ]
+    },
+    {
+      "oe_code": "MOM.1.f",
+      "requirement": "The clinicians adhere to the current formulary.",
+      "steps": "Section 3; Section 4 item 6; 5.6 Clinician adherence to the formulary",
+      "responsible": "Prescribers (adhere); Pharmacy In-Charge (flag); committee (review)",
+      "records": [
+        "Off-formulary prescription log maintained by pharmacy.",
+        "Quarterly adherence data presented to the committee.",
+        "Committee action records where off-formulary prescribing was frequent or unjustified."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "MOM.1 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"Multidisciplinary committee guides pharmacy services and management of medication.\" MOM.1.a–f PDF index 82. MOM.1.b and MOM.1.c asterisked. MOM.1.f is Excellence level.\n\nSHAPE: Six What-we-do subsections (5.1–5.6). No stop-work. Disclaimer names Drugs and Cosmetics Act 1940 and Pharmacy Act 1948. MOM roles only.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "MOM v2 template: adoptable shape, plain English, MOM roles, six steps, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "A multidisciplinary committee governs the formulary, pharmacy services and medication usage — so that medication decisions are clinically led, not left to ad-hoc purchasing.",
+  "exceptions": "The following rules are non-negotiable.\n\n1. The formulary is reviewed at least «annually» by the Multidisciplinary Medication Committee.\n2. No medication is routinely stocked unless it appears in the approved formulary or is acquired through the non-formulary procedure.\n3. The non-formulary acquisition procedure is documented and followed every time — verbal agreements are not a substitute.\n4. When the pharmacy is closed, the procedure for emergency medication access is followed; medications are not taken from the pharmacy without documentation.\n5. Implantable prostheses and medical devices are included in the committee's scope per MOM.1.e; detailed guidance is MOM.9.\n6. Clinicians prescribe from the current formulary; off-formulary prescribing follows the documented acquisition procedure.\n\nStaff who see a breach report it the same shift to the «Pharmacy In-Charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit looks at committee records and pharmacy operations.\n\nWhat is monitored each quarter:\n\n- Formulary currency: last review date, additions or deletions and rationale.\n- Committee meeting minutes and attendance.\n- Non-formulary acquisition register: completeness of documentation.\n- After-hours withdrawal reconciliation and any unreconciled items.\n- Implant list maintained under committee oversight (MOM.9 detail).\n- Formulary adherence data and committee action on off-formulary prescribing.\n\nRoot-cause analysis is required when the same lapse recurs within six months.\n\nThis policy is reviewed «annually», and sooner when MOM.2–MOM.9 or the scope of clinical services changes.",
+  "training_competency": "All pharmacy staff, prescribers and nursing staff are trained on this policy at induction and «once a year» after that. Training covers the formulary, non-formulary procedure, after-hours access, and reporting.\n\nStaff acknowledgement\n\nI have read this Multidisciplinary Committee Guides Pharmacy Services and Medication Management policy of {{HOSPITAL_NAME}}. I will prescribe from the formulary, follow acquisition procedures and report breaches.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Pharmacy In-Charge holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: MOM/POL/01\nIssue number: «01»\nVersion: 2.0 (MOM v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Pharmacy In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "mom_v2_adoptable_shape",
+  "subtitle": "Formulary, committee governance and medication acquisition.",
+  "doc_no": "MOM/POL/01",
+  "stop_work": ""
+}

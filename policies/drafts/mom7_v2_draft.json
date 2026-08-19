@@ -1,0 +1,106 @@
+{
+  "standard_code": "MOM.7",
+  "chapter": "MOM",
+  "oe_codes": [
+    "MOM.7.a",
+    "MOM.7.b",
+    "MOM.7.c",
+    "MOM.7.d",
+    "MOM.7.e"
+  ],
+  "policy_title": "Patients Are Monitored After Medication Administration",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} monitors patients after medication administration, changes medications based on monitoring, captures near-misses, medication errors and adverse drug reactions, reports and analyses them within a specified time frame, and takes corrective and preventive action.\n\nIt covers MOM.7.a–e.\n\nBoundary: medication events captured here feed into the PSQ.5 general incident reporting system. This policy owns the medication-specific capture and analysis; PSQ.5 owns the organisation-wide incident system.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to nurses, treating doctors, the Pharmacy In-Charge, the Multidisciplinary Medication Committee, the Medical Superintendent and Quality Coordinator at {{HOSPITAL_NAME}}.\n\nIt covers MOM.7.a–e: post-administration monitoring; medication changes; capture of near-misses, medication errors and adverse drug reactions; reporting and analysis; and corrective and preventive action.\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- MOM.6 owns administration. This policy begins after the medication has been administered.\n- PSQ.5 owns the general incident reporting and analysis system. Medication events (near-misses, errors, ADRs) captured here are also entered into the PSQ.5 system. This policy owns the medication-specific detail; PSQ.5 owns the aggregate incident picture.\n- MOM.3.f–g owns prescription audit. Findings from this policy's analysis may trigger prescription-audit action under MOM.3.",
+  "policy_statement": "{{HOSPITAL_NAME}} monitors every patient after medication administration for the expected therapeutic effect and for adverse reactions.\n\n{{HOSPITAL_NAME}} captures near-misses, medication errors and adverse drug reactions, reports and analyses them within a defined time frame, and takes corrective and preventive action. Medication events also feed into PSQ.5.",
+  "procedure_steps": [
+    "5.1 Post-administration monitoring\n\nPatients are monitored after medication administration.\n\nThe administering nurse observes the patient for the expected therapeutic effect and for adverse reactions. Monitoring intensity depends on risk: high-risk medications, IV medications and first doses of a new medication are monitored within «30 minutes». Routine oral medications are monitored at the next scheduled round.\n\nObservations are documented in the «medication administration record (MAR) or nursing notes». Abnormal observations trigger immediate notification of the treating doctor.",
+    "5.2 Medication changes based on monitoring\n\nMedications are changed where appropriate based on the monitoring.\n\nWhen monitoring reveals an adverse effect, inadequate response or a change in patient condition, the treating doctor reviews the medication order and makes changes as clinically appropriate. Changes are documented as a new order (MOM.4) and communicated to the nurse and pharmacist.\n\nThe reason for the change is documented in the clinical notes.",
+    "5.3 Capture of near-misses, medication errors and adverse drug reactions\n\n{{HOSPITAL_NAME}} captures near-miss, medication error and adverse drug reaction events.\n\nA near-miss is a medication event caught before reaching the patient (wrong drug selected but intercepted at verification). A medication error is an event that reached the patient (wrong dose administered). An adverse drug reaction (ADR) is an unwanted or harmful reaction to a medication at normal doses.\n\nEvery event is documented on the «medication incident form» which includes: patient name and ID, date and time, medication involved, description of event, severity assessment, and immediate action taken. The form is submitted to the «Pharmacy In-Charge» and a copy entered into the PSQ.5 incident system.",
+    "5.4 Reporting and analysis within a specified time frame\n\nNear-miss, medication error and adverse drug reaction are reported and analysed within a specified time frame.\n\nReporting time frames: ADR within «one hour»; medication error within «one hour»; near-miss within «24 hours». Analysis is completed within «seven days» by the Pharmacy In-Charge (or a pharmacist delegate) with the Quality Coordinator.\n\nAnalysis uses «root-cause analysis for serious events and trend analysis for aggregate data». Findings are presented to the Multidisciplinary Medication Committee «quarterly» and to PSQ.5 as applicable.\n\nPharmacovigilance reporting to the «ADR Monitoring Centre (AMC) under the Pharmacovigilance Programme of India» is completed for serious or unexpected ADRs within the regulatory time frame.",
+    "5.5 Corrective and preventive action\n\nCorrective and preventive action is taken based on the analysis.\n\nThe Multidisciplinary Medication Committee reviews analysis findings and decides CAPA: system redesign, process change, education, formulary restriction, or individual feedback.\n\nActions are tracked to closure by the Quality Coordinator. Root-cause analysis is required when the same event type recurs within six months. Aggregate trends (medication-error rate, ADR rate) are reported to the committee «quarterly» and used to set improvement targets."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable for a functioning medication-event reporting and analysis system.\n\nMultidisciplinary Medication Committee (Pharmacy and Therapeutics)\n- Reviews medication-event analysis and decides CAPA; sets improvement targets.\n\nPharmacy In-Charge\n- Receives medication incident forms; leads or participates in analysis; submits pharmacovigilance reports.\n\nTreating doctors (prescribers)\n- Change medications based on monitoring; report ADRs.\n\nNurses\n- Monitor patients after administration; document observations; capture and report events.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see section 7).\n- Tracks CAPA to closure; maintains aggregate trend data; links to PSQ.5.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Management of Medication chapter, standard MOM.7.\n- Pharmacovigilance Programme of India (PvPI) — ADR reporting requirements.\n- Internal documents of {{HOSPITAL_NAME}}: medication administration record (MAR); medication incident form; PSQ.5 incident reporting system; MOM.3 prescription audit; committee meeting minutes.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Pharmacy In-Charge and the Quality Coordinator.\n\nCopies issued to: pharmacy; every in-patient ward; emergency room; ICU where it exists; nursing administration.\n\nThe current version is available to all staff at the «nursing station policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "ADR — adverse drug reaction\nAMC — ADR Monitoring Centre\nCAPA — corrective and preventive action\nIV — intravenous\nMAR — medication administration record\nMOM — Management of Medication (NABH SHCO chapter 7)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPSQ — Patient Safety and Quality Improvement (NABH SHCO chapter 3)\nPvPI — Pharmacovigilance Programme of India\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "MOM.7.a",
+      "requirement": "Patients are monitored after medication administration.",
+      "steps": "Statement of intent; Section 3; 5.1 Post-administration monitoring",
+      "responsible": "Nurses (monitor and document); treating doctor (review abnormal observations)",
+      "records": [
+        "MAR entries showing post-administration monitoring.",
+        "Nursing notes for abnormal observations and doctor notification.",
+        "Quarterly audit sample of monitoring documentation.",
+        "High-risk medication monitoring records within the defined time."
+      ]
+    },
+    {
+      "oe_code": "MOM.7.b",
+      "requirement": "Medications are changed where appropriate based on the monitoring.",
+      "steps": "5.2 Medication changes based on monitoring",
+      "responsible": "Treating doctor (review and change); nurse and pharmacist (implement)",
+      "records": [
+        "Clinical notes documenting the reason for medication change.",
+        "New medication orders following the change.",
+        "Communication records to nurse and pharmacist."
+      ]
+    },
+    {
+      "oe_code": "MOM.7.c",
+      "requirement": "The organisation captures near miss, medication error and adverse drug reaction.",
+      "steps": "Section 3; Section 4 items 2–4; 5.3 Capture of near-misses, medication errors and ADRs",
+      "responsible": "All staff (capture and report); Pharmacy In-Charge (receive forms); PSQ.5 (cross-reference)",
+      "records": [
+        "Medication incident forms with all required fields completed.",
+        "PSQ.5 incident-system entries for medication events.",
+        "Quarterly count of near-misses, errors and ADRs reported.",
+        "Evidence of no-blame reporting culture (no punitive actions for good-faith reports)."
+      ]
+    },
+    {
+      "oe_code": "MOM.7.d",
+      "requirement": "Near miss, medication error and adverse drug reaction are reported and analysed within a specified time frame.",
+      "steps": "Section 4 items 2–5; 5.4 Reporting and analysis within a specified time frame",
+      "responsible": "Pharmacy In-Charge (analysis); Quality Coordinator (track); committee (review)",
+      "records": [
+        "Reporting time-stamp evidence (form submission time vs event time).",
+        "Analysis records completed within the defined time frame.",
+        "Pharmacovigilance reports submitted to the ADR Monitoring Centre where applicable.",
+        "Committee meeting minutes reviewing analysis findings."
+      ]
+    },
+    {
+      "oe_code": "MOM.7.e",
+      "requirement": "Corrective and/or preventive action(s) are taken based on the analysis.",
+      "steps": "5.5 Corrective and preventive action",
+      "responsible": "Committee (decide CAPA); Quality Coordinator (track closure)",
+      "records": [
+        "CAPA log linked to medication-event analysis.",
+        "Root-cause analysis records for recurring events.",
+        "Closure evidence for each action item."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "MOM.7 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"Patients are monitored after medication administration.\" MOM.7.a–e PDF indices 85–86. MOM.7.a, MOM.7.c, MOM.7.d asterisked. MOM.7.e Core.\n\nSHAPE: Five What-we-do subsections (5.1–5.5). No stop-work. Disclaimer accreditation-only. MOM roles only. PSQ.5 cross-reference for incident system.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "MOM v2 template: adoptable shape, plain English, MOM roles, five steps, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Patients are monitored after medication administration, medications are changed where appropriate, and near-misses, medication errors and adverse drug reactions are captured, reported, analysed and acted upon.",
+  "exceptions": "The following rules are non-negotiable.\n\n1. Patients receiving high-risk medications, IV medications, or first doses of a new medication are monitored within «30 minutes» of administration.\n2. An adverse drug reaction is documented and reported to the «Pharmacy In-Charge» and the treating doctor within «one hour» of identification.\n3. A medication error is documented and reported within «one hour» of discovery, regardless of whether the patient was harmed.\n4. Near-misses (caught before reaching the patient) are documented and reported within «24 hours».\n5. Analysis of medication errors and ADRs is completed within «seven days» of the report.\n6. No staff member is punished for reporting a near-miss or medication error in good faith. A blame culture destroys the reporting system.\n\nStaff who witness a medication event report it to the «ward in-charge nurse» or «Pharmacy In-Charge» without delay.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit looks at monitoring records, incident forms and analysis.\n\nWhat is monitored each quarter:\n\n- Sample MARs checked for post-administration monitoring documentation.\n- Medication incident forms reviewed for completeness and timeliness.\n- Analysis completion within the defined time frame.\n- CAPA closure from previous analysis findings.\n- Aggregate trends: medication-error rate, ADR rate, near-miss rate.\n- PSQ.5 cross-reference: medication events entered into the general system.\n\nRoot-cause analysis is required when the same event type recurs within six months.\n\nThis policy is reviewed «annually», and sooner when MOM.6 or PSQ.5 is revised.",
+  "training_competency": "All nurses, prescribers and pharmacy staff are trained on this policy at induction and «once a year» after that. Training covers post-administration monitoring, event capture, reporting time frames, and the no-blame reporting culture.\n\nStaff acknowledgement\n\nI have read this Patients Are Monitored After Medication Administration policy of {{HOSPITAL_NAME}}. I will monitor, document, and report medication events without delay and without fear of punishment.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Pharmacy In-Charge holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: MOM/POL/07\nIssue number: «01»\nVersion: 2.0 (MOM v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Pharmacy In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "mom_v2_adoptable_shape",
+  "subtitle": "Post-administration monitoring, event capture, reporting and CAPA.",
+  "doc_no": "MOM/POL/07",
+  "stop_work": ""
+}
