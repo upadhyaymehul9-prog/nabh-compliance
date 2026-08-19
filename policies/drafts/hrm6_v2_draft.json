@@ -1,0 +1,94 @@
+{
+  "standard_code": "HRM.6",
+  "chapter": "HRM",
+  "oe_codes": [
+    "HRM.6.a",
+    "HRM.6.b",
+    "HRM.6.c",
+    "HRM.6.d"
+  ],
+  "policy_title": "Documented Personal Information for Each Staff Member",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} maintains a personal file for every staff member, keeps those files confidential, and ensures each file contains the personal information the standard requires.\n\nIt covers four elements: maintaining personal files for all staff with confidentiality ensured; file contents covering qualification, job description, proof of formal engagement, credential verification and health status; in-service training and education records; and results of all evaluations and remarks.\n\nBoundaries: HRM.6 owns the staff personal file. General records management — how clinical and administrative records are created, stored, retained and destroyed — is IMS (not yet built). HRM.7–9 own credentialing and privileging for professionals who provide unsupervised patient care; this policy holds the underlying personal file those processes draw from.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to every staff member at {{HOSPITAL_NAME}} — clinical, nursing, para-clinical, administrative and support — and to the «HR Manager», department heads who contribute evaluation records, the «Medical Superintendent» and the Quality Coordinator.\n\nIt covers the four elements HRM.6.a–d name. It does not cover credentialing and privileging of medical, nursing or para-clinical professionals (HRM.7–9), general staff recruitment (HRM.1–2 when drafted), or the hospital-wide records-management system (IMS, not yet built).\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- IMS (not yet built) owns general records management. This policy owns the staff personal file.\n- HRM.7–9 own credentialing and privileging registers and privilege letters. This policy owns the personal file that holds the underlying qualification and verification documents.\n- ROM.2 owns the qualifications file for the person heading the organisation. HRM.6 owns personal files for all other staff.\n- HIC.4 owns the confidential occupational health file for infection-control exposures. HRM.6 owns the general health-status record in the personal file.",
+  "policy_statement": "{{HOSPITAL_NAME}} maintains a personal file for every staff member. The confidentiality of personal files is ensured.\n\nEach personal file contains qualification, job description, proof of formal engagement, credential verification and health status. In-service training and education records are contained in the personal files. Personal files contain results of all evaluations and remarks.\n\n{{HOSPITAL_NAME}} does not treat an appointment letter alone as a complete personal file, or a training attendance sheet kept only in a department drawer as an in-service record.",
+  "procedure_steps": [
+    "5.1 Personal files maintained for all staff — confidentiality ensured\n\n{{HOSPITAL_NAME}} maintains a personal file for every staff member — permanent, contract, locum and part-time. Each file is assigned a unique personnel file number at joining.\n\nPersonal files are stored in a «locked cabinet in the HR office or a secured HR module in the hospital information system». Access is limited to authorised HR staff and the «Medical Superintendent» for governance purposes. An access log records who opened each file, when and why.\n\nConfidentiality is ensured by a signed confidentiality undertaking from every person who handles personal files. Personal information is not disclosed except as required by law, for credentialing (HRM.7–9), or with the staff member's written consent.\n\nThe «HR Manager» maintains a master register of all personnel file numbers and verifies that every person on the payroll has a corresponding file «quarterly».",
+    "5.2 Personal file contents — qualification, job description, engagement, credentials, health\n\nEach personal file contains personal information regarding the staff member's:\n\n- **Qualification** — certified copies of degrees, diplomas, registration certificates and any licence required for the role.\n- **Job description** — the signed job description for the current role, including scope of work and reporting line.\n- **Proof of formal engagement** — appointment letter or contract, date of joining, and any renewal or extension.\n- **Verification of credentials** — evidence that qualifications and registrations were verified with the issuing body or council at joining (and on renewal where applicable).\n- **Health status** — pre-employment health check report and periodic health check results as required by {{HOSPITAL_NAME}} policy (for example «annual health check for clinical staff»).\n\nA personnel file index at the front of each file lists every mandatory document and its date of filing. The «HR Manager» uses this index during file audits.",
+    "5.3 In-service training and education records in personal files\n\nRecords of in-service training and education are contained in the personal files.\n\nFor every training event the staff member attends — induction, mandatory refresher, skill update, external course — the personal file holds:\n\n- training topic and date;\n- duration and trainer or institution;\n- attendance register entry or certificate of completion;\n- competency assessment result where the training required return demonstration.\n\nA dedicated training section within each personal file holds these records in chronological order. The «HR Manager» maintains a central training register that mirrors individual file entries and allows a report on any staff member's training history within «one working day».\n\nMandatory training gaps identified during the register review are closed within «thirty days» and recorded in the file.",
+    "5.4 Evaluation results and remarks in personal files\n\nPersonal files contain results of all evaluations and remarks.\n\nEvery completed performance appraisal, probation review, commendation, disciplinary action, counselling note and improvement plan is filed in a chronological evaluation section within the personal file. Each document is signed by the appraiser, countersigned by the department head where applicable, and dated before filing.\n\nThe «HR Manager» verifies annually that evaluation records are complete and that appraisals have been conducted at the frequency {{HOSPITAL_NAME}} defines — «annually for permanent staff and at probation completion for new appointees».\n\nA summary sheet at the front of the evaluation section lists the date and outcome of every appraisal to date."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable that every staff member has a complete personal file.\n- May access personal files for governance and credentialing decisions.\n\nHR Manager\n- Creates and maintains personal files; ensures confidentiality and access control.\n- Conducts quarterly file-completeness audits and annual evaluation-record reviews.\n- Maintains the central training register.\n\nDepartment heads\n- Submit signed evaluation records and training attendance to HR within «ten working days».\n- Notify HR when a staff member's role, qualification or registration changes.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see section 7).\n- Tracks CAPA when file gaps recur.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Human Resource Management chapter, standard HRM.6.\n- Internal documents of {{HOSPITAL_NAME}}: personnel file index template; access log; central training register; evaluation summary sheet.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the HR Manager and the Quality Coordinator.\n\nCopies issued to: HR office; department heads (procedure summary only — not personal files); quality office.\n\nThe current version is available to all staff at the «HR office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "CAPA — corrective and preventive action\nHRM — Human Resource Management (NABH SHCO chapter)\nIMS — Information Management System (NABH SHCO chapter; not yet built)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "HRM.6.a",
+      "requirement": "Personal files are maintained with respect to all staff, and their confidentiality is ensured.",
+      "steps": "Statement of intent; Section 3; 5.1 Personal files maintained for all staff; Section 4 items 1–2",
+      "responsible": "HR Manager (create and maintain files); Medical Superintendent (accountable)",
+      "records": [
+        "Master register of personnel file numbers matched to payroll headcount.",
+        "Access log for personal file retrieval.",
+        "Signed confidentiality undertaking from every person who handles personal files.",
+        "Quarterly file-existence audit sample showing every staff member has a file."
+      ]
+    },
+    {
+      "oe_code": "HRM.6.b",
+      "requirement": "The personal files contain personal information regarding the staff's qualification, job description, proof of formal engagement, verification of credentials and health status.",
+      "steps": "Section 3; 5.2 Personal file contents; Section 4 item 3",
+      "responsible": "HR Manager (maintain file contents); department heads (submit documents at joining)",
+      "records": [
+        "Personnel file index listing mandatory documents and filing dates.",
+        "Qualification certificates and registration proof on file.",
+        "Signed job description and appointment letter or contract.",
+        "Credential verification record from issuing body or council.",
+        "Pre-employment and periodic health check reports."
+      ]
+    },
+    {
+      "oe_code": "HRM.6.c",
+      "requirement": "Records of in-service training and education are contained in the personal files.",
+      "steps": "Section 3; 5.3 In-service training and education records; Section 4 item 5",
+      "responsible": "HR Manager (maintain central register and file records); department heads (submit attendance within ten working days)",
+      "records": [
+        "Training section within each personal file with chronological records.",
+        "Central training register mirroring individual file entries.",
+        "Attendance registers or completion certificates for each training event.",
+        "Competency assessment results where return demonstration was required."
+      ]
+    },
+    {
+      "oe_code": "HRM.6.d",
+      "requirement": "Personal files contain results of all evaluations and remarks.",
+      "steps": "Section 3; 5.4 Evaluation results and remarks; Section 4 item 4",
+      "responsible": "HR Manager (file and verify completeness); department heads (submit signed evaluations)",
+      "records": [
+        "Chronological evaluation section in each personal file.",
+        "Signed appraisal forms with appraiser and department-head signatures.",
+        "Evaluation summary sheet listing date and outcome of every appraisal.",
+        "Annual completeness review record showing all evaluations are current."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HRM.6 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"There is documented personal information for each staff member.\" HRM.6.a–d PDF index 131. No asterisked OEs. All Commitment level.\n\nSHAPE: Four What-we-do subsections (5.1–5.4). No stop-work. Disclaimer accreditation-only. Workforce roles (HR Manager, Medical Superintendent, Quality Coordinator). IMS boundary stated.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "HRM v2 template: adoptable shape, plain English, workforce roles, four steps, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "There is documented personal information for each staff member — a personal file maintained for every person, kept confidential, and updated as qualifications, training and evaluations change.",
+  "exceptions": "The following are prohibited. There is no convenience exception.\n\n1. Employing or retaining a staff member without a personal file maintained by HR.\n2. Storing personal files in an unsecured location or allowing access without authorisation and an access log.\n3. Opening a personal file that lacks qualification proof, a signed job description, proof of formal engagement, credential verification and health status.\n4. Completing an appraisal or evaluation without filing the signed result in the staff member's personal file within «ten working days».\n5. Conducting in-service training without filing the attendance record or certificate in the staff member's personal file within «ten working days».\n\nStaff who become aware of a missing or incomplete personal file report it to the «HR Manager» the same working day.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit checks records and practice.\n\nWhat is monitored each quarter:\n\n- Master register matches payroll headcount — every person has a file.\n- Sample of personal files checked against the mandatory document index.\n- Access log reviewed for unauthorised access.\n- Training records in files match the central training register.\n- Evaluation records are current and signed.\n\nRoot-cause analysis is required when more than «ten percent» of sampled files lack a mandatory document, or when evaluation records are overdue for «two consecutive quarters».\n\nThis policy is reviewed «annually», and sooner when a staff member's file is found incomplete at credentialing (HRM.7–9) or when records-management requirements change.",
+  "training_competency": "The HR Manager, department heads and the Quality Coordinator are briefed on this policy at appointment and «once a year» after that. All staff are informed at induction that a personal file is maintained and that confidentiality is protected.\n\nStaff acknowledgement\n\nI have read this Documented Personal Information policy of {{HOSPITAL_NAME}}. I understand that a personal file is maintained for me and that its confidentiality is protected.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The HR Manager holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HRM/POL/06»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «HR Manager»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "hrm_v2_adoptable_shape",
+  "subtitle": "Personal files for every staff member, kept confidential and complete.",
+  "doc_no": "«HRM/POL/06»"
+}
