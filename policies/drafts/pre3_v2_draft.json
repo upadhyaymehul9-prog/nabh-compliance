@@ -1,0 +1,94 @@
+{
+  "standard_code": "PRE.3",
+  "chapter": "PRE",
+  "oe_codes": [
+    "PRE.3.a",
+    "PRE.3.b",
+    "PRE.3.c",
+    "PRE.3.d"
+  ],
+  "policy_title": "Informed Consent",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} obtains informed consent from the patient or family for situations where informed consent is required, in a process that adheres to statutory norms; what information that consent includes; who can give consent when the patient is incapable of independent decision-making; and that consent is taken by the person performing the procedure.\n\nThe chapter intent is that informed consent is obtained for specified procedures and care, and that key components include risks, benefits and alternatives.\n\nThis document is the general consent method. That a transfusion, sedation, anaesthesia or surgical consent actually happened before the act remains COP.5, COP.9, COP.10 and COP.11.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to every situation at {{HOSPITAL_NAME}} in which informed consent is required: transfusion of blood and blood components, anaesthesia, surgery, initiation of any research protocol this hospital runs, and any other invasive or high-risk procedure or treatment the hospital has named.\n\nIt binds the person who performs the procedure, doctors and nurses who explain consent, registration staff who schedule elective work, and the «Patient Rights Officer» who holds the list and process.\n\nBoundaries:\n\n- PRE.2.g lists the right that consent is obtained before those acts. This policy owns the method.\n- COP.5, COP.9, COP.10 and COP.11 own that the relevant consent happened before those acts.\n- PRE.4 owns ongoing education in a language they can understand. PRE.3.b is the consent conversation.\n- PRE.1 and PRE.2.e: refusal is a right; this policy records consent not given.\n- MOM.9 implant usage counselling is not surgical consent.\n- Capacity under the Mental Healthcare Act, 2017 is PRE.3.c when that Act's definition of a person with mental illness is met — not a blanket for every unconscious patient.",
+  "policy_statement": "{{HOSPITAL_NAME}} obtains informed consent from the patient or family for situations where informed consent is required. The process adheres to statutory norms.\n\n{{HOSPITAL_NAME}} includes in that consent the procedure, its risks, benefits, alternatives, and who will perform it, in a language the patient or family can understand.\n\n{{HOSPITAL_NAME}} describes who can give consent when a patient is incapable of independent decision-making, and implements that description.\n\n{{HOSPITAL_NAME}} requires that informed consent is taken by the person performing the procedure.\n\n{{HOSPITAL_NAME}} records a documented emergency that made prior consent impossible; emergency is not a standing exemption for convenience on elective or planned work.",
+  "procedure_steps": [
+    "5.1 Informed consent where required, adhering to statutory norms\n\nThe organisation obtains informed consent from the patient or family for situations where informed consent is required. The informed consent process adheres to statutory norms.\n\nSituations where informed consent is required at {{HOSPITAL_NAME}} include at least: transfusion of blood and blood components; anaesthesia; surgery; initiation of any research protocol this hospital actually runs; and any other invasive or high-risk procedure or treatment this hospital has named in «the consent situations list held by the Patient Rights Officer». A class the service directory does not provide is a recorded absence, not a copied consent SOP.\n\nThe consent process — when it is obtained, how it is recorded, how refusal is recorded, and how a documented emergency that made prior consent impossible is recorded — is held by the «Patient Rights Officer». Emergency means delay would endanger life or limb; it is not a label for convenience on elective work.\n\nThe National Medical Commission Act, 2019 governs that a registered medical practitioner obtains consent consistent with professional practice. Kumar et al. (2015) and Nandimath (2009) are frameworks, not pasted protocols. Samira Kohli v. Dr. Prabha Manchanda is not a numbered PRE chapter reference and is not imported here.",
+    "5.2 Information included in informed consent\n\nInformed consent includes information regarding the procedure, its risks, benefits, alternatives, and as to who will perform the procedure, in a language that they can understand.\n\nThe consent form and conversation cover those elements in «Hindi and English» or the language the patient or family can understand. A form that lists only \"surgery\" without the procedure, or that is silent on who will perform it, is incomplete. PRE.4 owns ongoing education in that language; this step is the consent conversation.",
+    "5.3 Who can give consent when the patient is incapable\n\nThe organisation describes who can give consent when a patient is incapable of independent decision making and implements the same.\n\nThe description distinguishes a child, an unconscious or otherwise non-communicating adult, a documented emergency, and a person with mental illness as defined in the Mental Healthcare Act, 2017 where that Act applies. For MHCA mental illness, nominated representative and advance directive under that Act are used without reprinting those sections. For other incapacity, this hospital's written description applies — held by the «Patient Rights Officer». A single next-of-kin stamp for all three is not enough.",
+    "5.4 Consent taken by the person performing the procedure\n\nInformed consent is taken by the person performing the procedure.\n\nFor surgery, the doctor who will perform the procedure, or a doctor of the same surgical team who will be present and responsible, takes consent — as COP.11 already requires. For other classes in the step-1 list, the named performer is «the doctor who will perform the act». A clerk or nurse taking consent \"for\" the performer on an elective case does not meet the standard."
+  ],
+  "stop_work": "Do not start an elective or planned transfusion, anaesthesia, surgery, research protocol or other invasive or high-risk procedure listed in section 5.1 without valid informed consent from the patient or a person authorised under section 5.3.\n\nEmergency exception: when delay would endanger life or limb, treatment may proceed under the documented emergency method in section 5.1. Record the reason, who decided, and obtain or renew consent as soon as the patient or family can give it. Emergency is not a standing exemption for work that was scheduled.\n\nStop-work applies to the act, not to stabilisation before the consent conversation can happen in a true emergency.\n\nThe person performing tells the «Medical Superintendent» or «Patient Rights Officer» the same shift. Refusing to proceed without consent on an elective case is not a disciplinary matter.",
+  "responsibility": "Medical Superintendent\n- Accountable that informed consent is obtained where required, by the person performing, under a process that adheres to statutory norms.\n\nPatient Rights Officer\n- Authors and keeps current the list of situations, the process, the information method and the incapacity description.\n\nPerson performing the procedure\n- Takes the consent. Staff who explain or witness do not replace that person on elective work.\n\nDoctors and nurses\n- Record refusal as refusal, not as a missing signature to be fetched later.\n\nQuality Coordinator\n- Audits consent records «quarterly».",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — standard PRE.3.\n- Kumar A et al. (2015) — chapter 10; framework; not pasted as protocol.\n- Nandimath O (2009) — chapter 13; framework for statutory norms.\n- National Medical Commission Act, 2019 — registered medical practitioners obtain informed consent consistent with professional practice.\n- Mental Healthcare Act, 2017 — when a person with mental illness as defined in that Act is incapable of independent decision-making.\n- Internal documents of {{HOSPITAL_NAME}}: consent situations list; consent process; incapacity description; transfusion, sedation, anaesthesia and procedures policies.",
+  "distribution": "Official master copy: Medical Superintendent, with Patient Rights Officer and Quality Coordinator.\n\nCopies issued to: every location that performs a procedure on the consent list; operation theatre; anaesthesia; emergency; transfusion; nursing administration.\n\nCurrent version at «front-office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».",
+  "abbreviations": "MHCA — Mental Healthcare Act, 2017\nNMC — National Medical Commission\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nPRE — Patient Rights and Education\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nSeveral requirements in this document are statutory rather than advisory — in particular those arising under the National Medical Commission Act, 2019, insofar as registered medical practitioners obtain informed consent consistent with professional practice, and the Mental Healthcare Act, 2017, insofar as a person with mental illness as defined in that Act is incapable of independent decision-making. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "PRE.3.a",
+      "requirement": "The organisation obtains informed consent from the patient or family for situations where informed consent is required. Informed consent process adhered to statutory norms.",
+      "steps": "Statement of intent; Section 3; 5.1 Informed consent where required; Section 6 stop-work; Section 4 items 1, 6",
+      "responsible": "Patient Rights Officer (list and process); person performing (takes consent); Medical Superintendent (accountable)",
+      "records": [
+        "Written list of situations where informed consent is required, with recorded absences for classes not provided.",
+        "Written process showing statutory norms, refusal recording and documented emergency method.",
+        "Sample consents against the unique identification number for listed situations.",
+        "Quarterly audit sample showing no elective procedure without consent."
+      ]
+    },
+    {
+      "oe_code": "PRE.3.b",
+      "requirement": "Informed consent includes information regarding the procedure; its risks, benefits, alternatives and as to who will perform the procedure in a language that they can understand.",
+      "steps": "Section 3; 5.2 Information included; Section 4 item 2",
+      "responsible": "Person taking consent (gives information); Patient Rights Officer (method)",
+      "records": [
+        "Written information method covering procedure, risks, benefits, alternatives and who will perform.",
+        "Sample consents showing those elements — not a form that says only 'surgery'.",
+        "Recorded split that PRE.4 owns ongoing education in that language.",
+        "Quarterly audit sample."
+      ]
+    },
+    {
+      "oe_code": "PRE.3.c",
+      "requirement": "The organisation describes who can give consent when a patient is incapable of independent decision making and implements the same.",
+      "steps": "Section 3; 5.3 Who can give consent when incapable; Section 4 items 3, 5",
+      "responsible": "Patient Rights Officer (incapacity description); person taking consent (applies it)",
+      "records": [
+        "Written description distinguishing child, unconscious adult, documented emergency, and MHCA mental illness.",
+        "Sample consents where signer matches description, or documented emergency with reason.",
+        "Record that MHCA nominated representative is used only when that Act applies.",
+        "Quarterly audit sample."
+      ]
+    },
+    {
+      "oe_code": "PRE.3.d",
+      "requirement": "Informed consent is taken by the person performing the procedure.",
+      "steps": "Section 3; 5.4 Consent taken by performer; Section 6 stop-work",
+      "responsible": "Person performing the procedure; COP.11 (surgical timing and person)",
+      "records": [
+        "Named person-performing for each class of procedure in use.",
+        "Sample consents showing performer (or COP.11 same-team doctor) took consent — not a clerk.",
+        "Stop-work records when elective work was refused for lack of consent.",
+        "Quarterly audit sample."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "PRE.3 v2 (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9. PRE.3.a and PRE.3.c asterisked. PRE.3.b uses \"its risks\". Stop-work section 6. P2: NMC Act 2019 and MHCA 2017 only. No CPA/CEA in P2.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "PRE v2 template: plain English, PRE roles, stop-work for elective without consent, NMC/MHCA P2."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Informed consent is obtained from the patient or family about their care — not a signature on a blank form, and not a clerk collecting consent for a surgeon who is not in the building.",
+  "exceptions": "The following are prohibited.\n\n1. Starting an elective or planned transfusion, anaesthesia, surgery, research protocol or other invasive or high-risk procedure without valid informed consent (see section 6 stop-work).\n2. A signature on a form that does not state the procedure, risks, benefits, alternatives and who will perform it.\n3. A clerk, nurse, or doctor who will not perform the procedure taking consent \"for\" the performer on an elective case.\n4. Using one next-of-kin stamp for every incapacity — child, unconscious adult, and MHCA mental illness are not the same rule.\n5. Applying a Mental Healthcare Act nominated-representative process to a patient that Act does not cover.\n6. Treating emergency as a standing exemption to skip consent on work that was scheduled.\n\nStaff report defects the same shift to the «Patient Rights Officer» or «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits a sample of consent records «quarterly» for:\n\n- Consent present for situations in the list.\n- Information covering procedure, risks, benefits, alternatives and who will perform, in a language they can understand.\n- Signer matching the incapacity description, or a documented emergency.\n- Consent taken by the person performing.\n- No blank signed form on elective work.\n\nRoot-cause analysis when an elective procedure in the list was done without consent.\n\nThis policy is reviewed «annually», and sooner when COP.5, COP.9, COP.10, COP.11 or PRE.2 are revised.",
+  "training_competency": "Doctors and nurses who take or witness consent are trained at induction, before first unsupervised consent, and «once a year» after that.\n\nStaff acknowledgement\n\nI have read this Informed Consent policy of {{HOSPITAL_NAME}}. I will not start elective or planned high-risk work without valid consent. I will not take consent for a procedure I will not perform.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(The Patient Rights Officer holds signed acknowledgements.)",
+  "resources_required": "Document number: «PRE/POL/03»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Patient Rights Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nConsent situations list location: «Patient Rights Officer office and each procedure area»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "pre_v2_adoptable_shape",
+  "subtitle": "Informed consent before procedures and high-risk care.",
+  "doc_no": "«PRE/POL/03»"
+}

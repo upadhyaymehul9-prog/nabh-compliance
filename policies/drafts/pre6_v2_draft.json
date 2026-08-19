@@ -1,0 +1,93 @@
+{
+  "standard_code": "PRE.6",
+  "chapter": "PRE",
+  "oe_codes": [
+    "PRE.6.a",
+    "PRE.6.b",
+    "PRE.6.c",
+    "PRE.6.d"
+  ],
+  "policy_title": "Patient Feedback and Complaint Redressal",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} captures feedback including patient satisfaction; captures the patient experience; redresses complaints as per a defined mechanism and makes patients and families aware of the procedure; and reviews and analyses within a defined time frame with corrective and/or preventive action where appropriate.\n\nA complaint that is also a rights violation is received here and is also a PRE.1.d report. PRE.1.e owns leadership review of violations. Neither record replaces the other.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies wherever a patient or family can give feedback or lodge a complaint: registration, out-patient, emergency, in-patient, day-care, and after discharge if this hospital accepts post-discharge feedback.\n\nIt binds staff who collect feedback, the «grievance and feedback officer» who receives complaints, the «Patient Rights Officer», and the «Medical Superintendent» who reviews analysis.\n\nBoundaries:\n\n- PRE.2.h lists the right to complain; this policy owns the mechanism.\n- PRE.6.c awareness of this procedure is not the PRE.1.a rights board counted twice.\n- PRE.5 cost disputes are complaints here; tariff remains PRE.5.\n- MOM.7 still captures medication events; family complaints about them are redressed here.",
+  "policy_statement": "{{HOSPITAL_NAME}} has a mechanism to capture feedback from patients, which includes patient satisfaction.\n\n{{HOSPITAL_NAME}} has a mechanism to capture the patient experience.\n\n{{HOSPITAL_NAME}} redresses patient complaints as per the defined mechanism. Patients and/or family members are made aware of the procedure for giving feedback and/or lodging complaints.\n\n{{HOSPITAL_NAME}} reviews and/or analyses feedback and complaints within a defined time frame and takes corrective and/or preventive action based on the analysis where appropriate.\n\n{{HOSPITAL_NAME}} does not treat an unopened box, or a complaint route that goes only to the person complained of, as that mechanism.",
+  "procedure_steps": [
+    "5.1 Feedback including patient satisfaction\n\nThe organisation has a mechanism to capture feedback from patients, which includes patient satisfaction.\n\nFeedback is captured by «a form at registration, a post-discharge phone call, and a conversation when the patient is leaving the ward». Dissatisfied feedback that asks for redressal is also a complaint at section 5.3.",
+    "5.2 Patient experience\n\nThe organisation has a mechanism to capture the patient experience.\n\nExperience capture asks what happened to this patient — «wait time, dignity, communication, pain control» — not only whether they would recommend the hospital. It is distinct from the satisfaction score in section 5.1.",
+    "5.3 Complaint redressal and awareness of the procedure\n\nThe organisation redresses patient complaints as per the defined mechanism. Patient and/or family members are made aware of the procedure for giving feedback and/or lodging complaints.\n\nComplaints are received by the «grievance and feedback officer» using «complaint box, helpline number on the display board, and written form at registration». The route is not only the person complained of. Investigation, outcome to the complainant, and recording are defined in writing held with the Patient Rights Officer.\n\nPatients and families are told the procedure at entry, during stay, and at discharge if post-discharge feedback is accepted — in «Hindi and English». Awareness of this procedure is not the PRE.1 rights board counted twice.\n\nA complaint that alleges a rights violation also enters the PRE.1.d violation log. PRE.1.e still owns leadership review of violations. Reader et al. (2014) is a taxonomy framework, not a pasted coding protocol.",
+    "5.4 Review, analysis and CAPA within a defined time frame\n\nFeedback and complaints are reviewed and/or analysed within a defined time frame. Corrective and/or preventive action(s) are taken based on the analysis where appropriate.\n\nThe Medical Superintendent reviews the complaint log «monthly» (every month). CAPA is dated with an owner. PRE.1.e analyses rights violations as violations; this step analyses feedback and complaints as feedback and complaints."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable for capture, redressal, awareness and analysis.\n- Reviews complaint log monthly; signs CAPA.\n\nGrievance and feedback officer\n- Receives complaints unless the alleged actor is this officer — then the Medical Superintendent receives them.\n- Authors feedback, experience, redressal and awareness methods with Patient Rights Officer.\n\nPatient Rights Officer\n- Holds display of the procedure and links rights-violation complaints to PRE.1.d.\n\nRegistration and ward staff — collect feedback and tell patients the procedure.\n\nQuality Coordinator — audits «quarterly».",
+  "references_text": "- NABH SHCO 3rd Edition — standard PRE.6.\n- Reader TW, Gillespie A and Roberts J (2014) — ch 17; complaint taxonomy framework; not pasted protocol.\n- Internal documents of {{HOSPITAL_NAME}}: feedback mechanism; experience mechanism; complaint-redressal mechanism; awareness method; PRE.1 violation log; PRE.5 expected-costs policy.",
+  "distribution": "Master copy: Medical Superintendent, grievance and feedback officer, Patient Rights Officer, Quality Coordinator.\n\nCopies: registration, every ward, nursing administration, billing desk.\n\nProcedure posted at «registration counter and each ward entrance». Policy at «front-office policy file».",
+  "abbreviations": "CAPA — corrective and preventive action\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nPRE — Patient Rights and Education\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "PRE.6.a",
+      "requirement": "The organisation has a mechanism to capture feedback from patients, which includes patient satisfaction.",
+      "steps": "Statement of intent; Section 3; 5.1 Feedback including patient satisfaction",
+      "responsible": "Grievance and feedback officer (mechanism); staff who collect feedback",
+      "records": [
+        "Written feedback mechanism including how satisfaction is captured.",
+        "Sample feedback records with date and setting.",
+        "Record that dissatisfied feedback asking for redressal enters complaint process.",
+        "Quarterly audit sample."
+      ]
+    },
+    {
+      "oe_code": "PRE.6.b",
+      "requirement": "The organisation has a mechanism to capture the patient experience.",
+      "steps": "Section 3; 5.2 Patient experience",
+      "responsible": "Grievance and feedback officer (experience method); ward and registration staff",
+      "records": [
+        "Written experience-capture method distinct from satisfaction score.",
+        "Sample experience records — what happened to this patient.",
+        "Quarterly audit sample.",
+        "No named survey printed as NABH mandate."
+      ]
+    },
+    {
+      "oe_code": "PRE.6.c",
+      "requirement": "The organisation redresses patient complaints as per the defined mechanism. Patient and/or family members are made aware of the procedure for giving feedback and/or lodging complaints.",
+      "steps": "Statement of intent; Section 3; 5.3 Complaint redressal and awareness; Section 4 items 3, 5",
+      "responsible": "Grievance and feedback officer (redressal and awareness); Medical Superintendent if alleged actor is officer; PRE.1.d for rights violations",
+      "records": [
+        "Written complaint-redressal mechanism: who receives, investigation, outcome to complainant.",
+        "Written awareness method at entry, during stay and after discharge if accepted.",
+        "Sample complaints redressed and sample awareness records.",
+        "Rights-violation complaints also in PRE.1.d log without replacing PRE.1.e review."
+      ]
+    },
+    {
+      "oe_code": "PRE.6.d",
+      "requirement": "Feedback and complaints are reviewed and/or analysed within a defined time frame. Corrective and/or preventive action(s) are taken based on the analysis where appropriate.",
+      "steps": "Section 3; 5.4 Review, analysis and CAPA",
+      "responsible": "Medical Superintendent (review); Quality Coordinator (audit trail); PRE.1.e (violation CAPA when applicable)",
+      "records": [
+        "Written defined time frame and who reviews.",
+        "Monthly review minutes with dated CAPA and owner where appropriate.",
+        "Recorded split that PRE.1.e analyses rights violations separately.",
+        "Quarterly audit sample of reviews within time frame."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "PRE.6 v2 (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9. Header \"organization\"; OEs \"organisation\". PRE.6.c asterisked. Accreditation-only P2 (v2 template). No stop-work. Split with PRE.1.d/e documented.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "PRE v2 template: four steps, grievance officer role, no stop-work, accreditation-only P2."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation has a mechanism to capture patient's feedback and to redress complaints — not a suggestion box that is never opened, or a route that sends the complaint only to the person complained of.",
+  "exceptions": "The following are prohibited.\n\n1. Receiving complaints only through the person alleged to have caused the harm.\n2. Treating a suggestion box as redressal without opening, recording and responding.\n3. Harvesting a \"no complaint\" signature at discharge as awareness of the procedure.\n4. Letting a rights-violation complaint skip the PRE.1.d violation log when it is also a rights violation.\n5. Printing District Commission forms or rupee ex-gratia tables as NABH mandates.\n\nStaff report an unusable route to the «grievance and feedback officer» or «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits «quarterly» for: feedback including satisfaction captured; experience distinct from score; complaints not received only by alleged actor; patients made aware of procedure; analysis within defined time frame with CAPA; rights-violation complaints also in PRE.1.d log.\n\nReviewed «annually» or when PRE.1 or PRE.2 change.",
+  "training_competency": "Registration, ward and billing staff train at induction and «once a year» on how a patient lodges feedback or a complaint and who receives it.\n\nStaff acknowledgement — I will not send a complaint only to the person complained of.\n\n\nName: ___________________________    Designation: ___________________________\n\nDate: ____________    Signature: ___________________________\n\n\n(Grievance and feedback officer holds acknowledgements.)",
+  "resources_required": "Document number: «PRE/POL/06»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «grievance and feedback officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nComplaint route: «complaint box / helpline / registration form»\nReview time frame: «monthly»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "pre_v2_adoptable_shape",
+  "subtitle": "Feedback, complaints and redressal patients can actually use.",
+  "doc_no": "«PRE/POL/06»"
+}

@@ -1,0 +1,93 @@
+{
+  "standard_code": "PRE.5",
+  "chapter": "PRE",
+  "oe_codes": [
+    "PRE.5.a",
+    "PRE.5.b",
+    "PRE.5.c",
+    "PRE.5.d"
+  ],
+  "policy_title": "Information on Expected Costs",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} makes patients and families aware of the pricing policy in different settings; makes the relevant tariff list available; explains expected costs; and informs them of financial implications when the care plan changes.\n\nThe right to cost information is PRE.2.i. Promotion of that right is PRE.1. This policy owns the figures and the explanation. It is not the billing ledger.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies wherever a patient may incur a charge: registration, out-patient, emergency, ICU if it exists, and in-patient.\n\nIt binds «billing and front-desk staff», registration, treating doctors when a plan change affects cost, the «Patient Rights Officer» as cost-information lead, and the «Quality Coordinator».\n\nBoundaries:\n\n- PRE.2.i lists the right; this policy owns tariff and explanation.\n- AAC.3 and PRE.2.o own clinical care-plan change; PRE.5.d owns the money of that change.\n- PRE.3 signed consent is not agreement to an unnamed bill.\n- ROM/FMS billing ledger is not this patient-facing explanation.",
+  "policy_statement": "{{HOSPITAL_NAME}} makes the patient and/or family aware of the pricing policy in out-patient, emergency, ICU (where it exists) and in-patient settings.\n\n{{HOSPITAL_NAME}} makes the relevant tariff list available to patients.\n\n{{HOSPITAL_NAME}} explains expected costs to the patient and/or family.\n\n{{HOSPITAL_NAME}} informs the patient and/or family about financial implications when there is a change in the care plan.\n\n{{HOSPITAL_NAME}} does not treat a signed consent or a hidden tariff as a substitute for that explanation.",
+  "procedure_steps": [
+    "5.1 Pricing policy in different settings\n\nThe patient and/or family members are made aware of the pricing policy in different settings (out-patient, emergency, ICU and in-patient).\n\nThe pricing policy for each setting this hospital runs — itemised, package, or mix — is held by «billing and front-desk staff» with the Patient Rights Officer. Patients are told at «registration or admission» in «Hindi and English». ICU not provided is a recorded absence. Emergency awareness may follow stabilisation; delay and reason are recorded.",
+    "5.2 Relevant tariff list available to patients\n\nThe relevant tariff list is available to patients.\n\nThe list is at «registration, billing counter, and a board patients can read without an accounts-office escort as the only route». Which list applies in each setting is named on the board or handout.",
+    "5.3 Expected costs explained\n\nThe patient and/or family members are explained about the expected costs.\n\nExplanation is when the patient enters a billable pathway, before a package procedure, and when asked — by «billing staff or the admitting nurse». A range or package with inclusions and exclusions is an explanation; \"charges extra\" without a figure or route to the tariff is not. Language is one the family can understand.",
+    "5.4 Financial implications when the care plan changes\n\nPatient and/or family are informed about the financial implications when there is a change in the care plan.\n\nWhen the treating doctor changes the plan in a way that changes cost, «the nurse or doctor tells the family the same day» and billing records it. Clinical modification remains AAC.3 / PRE.2.o; this step is the money."
+  ],
+  "responsibility": "Medical Superintendent — accountable for patient-facing cost information.\n\nPatient Rights Officer (with billing lead)\n- Holds pricing policy, tariff availability and explanation methods.\n\nBilling / front-desk staff — make policy and tariff visible; explain expected costs.\n\nDoctors and nurses — tell financial implications when the plan change changes cost.\n\nQuality Coordinator — audits «quarterly».",
+  "references_text": "- NABH SHCO 3rd Edition — standard PRE.5.\n- Internal documents of {{HOSPITAL_NAME}}: pricing policy; tariff list; expected-cost explanation method; care-plan-change financial method; PRE.2 and PRE.3 policies.",
+  "distribution": "Master copy: Medical Superintendent, Patient Rights Officer, Quality Coordinator.\n\nCopies: registration, billing, out-patient, emergency, wards, ICU if exists.\n\nTariff and pricing policy at «registration and billing counter». Policy file at «front-office policy file».",
+  "abbreviations": "ICU — intensive care unit\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nPRE — Patient Rights and Education\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "PRE.5.a",
+      "requirement": "The patient and/or family members are made aware of the pricing policy in different settings (out-patient, emergency, ICU and in-patient).",
+      "steps": "Statement of intent; Section 3; 5.1 Pricing policy in different settings",
+      "responsible": "Billing staff and Patient Rights Officer (policy); registration (awareness at entry)",
+      "records": [
+        "Written pricing policy for each setting run, or recorded absence for ICU etc.",
+        "Method of making patients and families aware at those settings.",
+        "Sample awareness records including delayed emergency awareness with reason.",
+        "Quarterly audit sample."
+      ]
+    },
+    {
+      "oe_code": "PRE.5.b",
+      "requirement": "The relevant tariff list is available to patients.",
+      "steps": "Section 3; 5.2 Tariff list available",
+      "responsible": "Billing lead (tariff); Patient Rights Officer (availability method)",
+      "records": [
+        "Named locations where tariff is available in each setting.",
+        "Evidence route is not only accounts-office escort.",
+        "Current tariff version date on display.",
+        "Quarterly audit sample of a list patients can actually see."
+      ]
+    },
+    {
+      "oe_code": "PRE.5.c",
+      "requirement": "The patient and/or family members are explained about the expected costs.",
+      "steps": "Section 3; 5.3 Expected costs explained",
+      "responsible": "Billing staff or admitting nurse (explain); Patient Rights Officer (method)",
+      "records": [
+        "Written explanation method — when, by whom, how recorded.",
+        "Sample explanations with range or package inclusions/exclusions.",
+        "Record that signed consent is not this explanation.",
+        "Quarterly audit sample."
+      ]
+    },
+    {
+      "oe_code": "PRE.5.d",
+      "requirement": "Patient and/or family are informed about the financial implications when there is a change in the care plan.",
+      "steps": "Section 3; 5.4 Financial implications of care-plan change",
+      "responsible": "Doctor or nurse (tell when cost changes); billing (record)",
+      "records": [
+        "Written method for informing when care-plan change changes cost.",
+        "Sample records of plan changes that changed cost being told same day.",
+        "Recorded split that AAC.3/PRE.2.o own clinical modification.",
+        "Quarterly audit sample."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "PRE.5 v2 (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9. No asterisked OEs. Accreditation-only P2 (v2 template). No stop-work. Patient-facing cost only — not ledger.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "PRE v2 template: four steps, billing role, no stop-work, accreditation-only P2."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Expected costs of treatment and care are explained clearly — not a tariff locked in accounts that the family never sees.",
+  "exceptions": "The following are prohibited.\n\n1. Withholding the pricing policy or tariff from a patient who asks.\n2. Keeping the only tariff copy in finance where patients cannot see it without an escort as the only route.\n3. Changing the care plan in a way that increases cost without telling the family.\n4. Offering signed consent as the cost conversation.\n5. Printing rupee figures as NABH mandates in this policy.\n\nStaff report defects to the «Patient Rights Officer» or «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits «quarterly» for: pricing-policy awareness per setting; tariff a patient can actually see; expected-cost explanation recorded; financial implications told when plan changed cost; no consent offered as the cost talk.\n\nReviewed «annually» or when PRE.2 or AAC.3 change.",
+  "training_competency": "Registration and billing staff train at induction and «once a year» on pricing policy, tariff location and how to explain a package.\n\nStaff acknowledgement — I will not hide the tariff or bill against a plan the family was not told had changed.\n\n\nName: ___________________________    Designation: ___________________________\n\nDate: ____________    Signature: ___________________________\n\n\n(Billing lead holds acknowledgements with Patient Rights Officer.)",
+  "resources_required": "Document number: «PRE/POL/05»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Patient Rights Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nTariff display locations: «registration and billing counter»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "pre_v2_adoptable_shape",
+  "subtitle": "Expected costs explained clearly to patients and families.",
+  "doc_no": "«PRE/POL/05»"
+}
