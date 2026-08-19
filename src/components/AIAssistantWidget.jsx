@@ -3,7 +3,7 @@ import { GennieHead, GennieFull } from "./GennieMascot";
 
 const ENDPOINT = "https://tbptllgcjtiiqspxqcde.supabase.co/functions/v1/ai-assistant";
 const ANON_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRicHRsbGdjanRpaXFzcHhxY2RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY2NjkzNjAsImV4cCI6MjA5MjI0NTM2MH0.4CPgNp6ytVNRmTU0FJbu2io94QJmsAow5im-vGtoRAU";
+  "sb_publishable_tEu-kA8f9VLW-5uvU4E7ZA_PtaX59bw";
 
 // Below this viewport height the panel at its normal anchor cannot show the
 // whole greeting without scrolling: the greeting is 256px of content plus 108px
