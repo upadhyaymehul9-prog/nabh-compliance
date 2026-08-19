@@ -12,8 +12,9 @@ import { buildPolicyDocument, documentToBuffer, type RevisionEntry } from "../..
 
 const REPO = new URL("../../", import.meta.url);
 const DRAFTS = new URL("policies/drafts/", REPO);
-const OUT = new URL("policies/build/preview/", REPO);
-const HOSPITAL = "Preview Hospital";
+const OUT = new URL(Deno.env.get("OUT_DIR") ?? "policies/build/preview/", REPO);
+const OUT_SUFFIX = Deno.env.get("OUT_SUFFIX") ?? "_v2_preview";
+const HOSPITAL = Deno.env.get("HOSPITAL_PLACEHOLDER") ?? "Preview Hospital";
 
 const sub = (t: string) => t.replaceAll("{{HOSPITAL_NAME}}", HOSPITAL);
 
@@ -346,10 +347,13 @@ async function main() {
 
   const v2Doc = buildV2Document(v2);
 
-  await Deno.writeFile(new URL("FMS.5_v1_compare.docx", OUT), await documentToBuffer(v1Doc));
-  await Deno.writeFile(new URL("FMS.5_v2_preview.docx", OUT), await Packer.toBuffer(v2Doc).then((b) => new Uint8Array(b)));
-  console.log("wrote policies/build/preview/FMS.5_v1_compare.docx  (current OE-skeleton, shipping template)");
-  console.log("wrote policies/build/preview/FMS.5_v2_preview.docx  (adoptable-policy shape)");
+  if (OUT_SUFFIX === "_v2_preview") {
+    await Deno.writeFile(new URL("FMS.5_v1_compare.docx", OUT), await documentToBuffer(v1Doc));
+    console.log("wrote policies/build/preview/FMS.5_v1_compare.docx  (current OE-skeleton, shipping template)");
+  }
+  const outName = `FMS.5${OUT_SUFFIX}.docx`;
+  await Deno.writeFile(new URL(outName, OUT), await Packer.toBuffer(v2Doc).then((b) => new Uint8Array(b)));
+  console.log(`wrote ${outName}  (adoptable-policy shape)`);
 }
 
 await main();

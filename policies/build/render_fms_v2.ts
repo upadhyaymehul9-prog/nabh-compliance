@@ -10,8 +10,9 @@ import {
 
 const REPO = new URL("../../", import.meta.url);
 const DRAFTS = new URL("policies/drafts/", REPO);
-const OUT = new URL("policies/build/preview/", REPO);
-const HOSPITAL = "Preview Hospital";
+const OUT = new URL(Deno.env.get("OUT_DIR") ?? "policies/build/preview/", REPO);
+const OUT_SUFFIX = Deno.env.get("OUT_SUFFIX") ?? "_v2_preview";
+const HOSPITAL = Deno.env.get("HOSPITAL_PLACEHOLDER") ?? "Preview Hospital";
 
 const sub = (t: string) => t.replaceAll("{{HOSPITAL_NAME}}", HOSPITAL);
 
@@ -365,10 +366,11 @@ async function main() {
   for (const name of files) {
     const d: V2Draft = JSON.parse(await Deno.readTextFile(new URL(name, DRAFTS)));
     const code = d.standard_code; // FMS.1
-    const outName = `${code}_v2_preview.docx`;
+    const outName = `${code}${OUT_SUFFIX}.docx`;
     const doc = buildV2Document(d);
     await Deno.writeFile(new URL(outName, OUT), await Packer.toBuffer(doc).then((b) => new Uint8Array(b)));
-    console.log(`wrote policies/build/preview/${outName}`);
+    const outRel = new URL(outName, OUT).pathname.replace(/^\/workspace\/?/, "");
+    console.log(`wrote ${outRel || outName}`);
   }
 }
 
