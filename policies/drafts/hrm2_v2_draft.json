@@ -1,0 +1,102 @@
+{
+  "standard_code": "HRM.2",
+  "chapter": "HRM",
+  "oe_codes": [
+    "HRM.2.a",
+    "HRM.2.b",
+    "HRM.2.c",
+    "HRM.2.d",
+    "HRM.2.e"
+  ],
+  "policy_title": "Induction, Training and Development",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} provides induction training, governs training and development through an ongoing professional programme, ensures job-description-based training, delivers CPR training to direct patient care staff, and evaluates training effectiveness.\n\nIt covers five elements: induction training; written training and development policy; job-description-based training; CPR at induction and periodically; and evaluation of training effectiveness.\n\nHRM.1 owns recruitment and job descriptions. HRM.3 owns safety-programme, disaster, fire and QI training delivery (cross-referenced programmes). HRM.4 owns performance appraisal used for development planning.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to all staff at {{HOSPITAL_NAME}}: clinical, nursing, administrative and support. It applies to the «Training Coordinator», the «HR In-Charge / Personnel Officer», department heads, the «Medical Superintendent» and the «Quality Coordinator».\n\nIt covers HRM.2.a–e. It does not cover safety-programme training content owned by ROM, COP, FMS and PSQ (HRM.3), performance appraisal (HRM.4) or credentialing verification (HRM.7–9).\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- HRM.1 owns recruitment and hands new hires to induction. This policy owns the induction curriculum and ongoing training programme.\n- HRM.3 owns training delivery for safety, disaster, fire and QI programmes defined elsewhere. This policy owns the training framework, calendar and effectiveness evaluation.\n- PSQ.4 owns management support for training resources. This policy owns the training policy and calendar.",
+  "policy_statement": "{{HOSPITAL_NAME}} provides induction training to all new staff.\n\nWritten guidance governs training and development policy for staff through an ongoing programme for professional training and development.\n\nStaff are appropriately trained based on their specific job description. Staff involved in direct patient care receive training on cardiopulmonary resuscitation at induction and periodically thereafter.\n\n{{HOSPITAL_NAME}} evaluates training effectiveness and uses findings to improve the programme.",
+  "procedure_steps": [
+    "5.1 Induction training\n\nStaff are provided with induction training at {{HOSPITAL_NAME}}. The induction checklist covers: hospital mission and policies (including HRM.1 code of conduct and grievance mechanism); department orientation; role-specific briefing; infection-control basics (pointer to HIC.1); patient rights (pointer to PRE.1); and safety reporting (pointer to PSQ.5).\n\nInduction is completed within «the first week» of joining. The new hire and supervisor sign an induction completion form filed in the personnel file. Department heads confirm role-specific items are covered.",
+    "5.2 Training and development policy and ongoing programme\n\nWritten guidance governs training and development policy for staff through an ongoing programme for professional training and development at {{HOSPITAL_NAME}}. The policy covers: training needs assessment; mandatory training frequencies; nomination and approval; budget provision; documentation requirements; and external training approval.\n\nThe «Training Coordinator» maintains an annual training calendar shared with all departments. The calendar lists topics, target groups, trainers, dates and venues. The policy is reviewed «annually» and approved by the Medical Superintendent.",
+    "5.3 Job-description-based training\n\nStaff are appropriately trained based on their specific job description at {{HOSPITAL_NAME}}. The «Training Coordinator» maintains a training matrix that maps each staff category's job description to mandatory competencies and corresponding training programmes.\n\nBefore each training cycle, HR cross-checks completed training against the matrix and schedules gaps. Training completion certificates are filed in personnel files. Department heads confirm role-specific competencies are met «quarterly».",
+    "5.4 Cardiopulmonary resuscitation training\n\nStaff involved in direct patient care are provided training on cardiopulmonary resuscitation at the time of induction and periodically thereafter at {{HOSPITAL_NAME}}. CPR training follows «AHA / Indian Resuscitation Council guidelines or equivalent» and includes adult BLS and AED use where equipment is available.\n\nA master CPR competency register tracks certification date and expiry. Refresher training is scheduled «every 12 months». Reminders are sent «30 days» before expiry. No direct patient care staff member works with an expired CPR certification.",
+    "5.5 Evaluation of training effectiveness\n\nEvaluation of training effectiveness is done by the organisation at {{HOSPITAL_NAME}}. Methods include: post-training knowledge checks; supervisor observation of practice change; training feedback forms; and «annual» review of training completion rates against the matrix.\n\nThe «Training Coordinator» prepares an annual training effectiveness report for the Medical Superintendent and governing body. Findings drive updates to the training calendar, curriculum and delivery methods."
+  ],
+  "responsibility": "Medical Superintendent\n- Approves the training and development policy and annual calendar.\n- Reviews the annual training effectiveness report.\n\nTraining Coordinator\n- Maintains induction checklist, training calendar, training matrix and CPR register.\n- Coordinates training sessions and evaluates effectiveness.\n\nHR In-Charge / Personnel Officer\n- Ensures induction is completed; files certificates in personnel files.\n- Supports training needs assessment from exit interviews and recruitment (HRM.1).\n\nDepartment Heads\n- Confirm role-specific induction and job-description-based training for their staff.\n- Report training gaps and supervise practice change after training.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see section 7).",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Human Resource Management chapter, standard HRM.2.\n- Internal documents of {{HOSPITAL_NAME}}: induction checklist; training and development policy; annual training calendar; role-based training matrix; CPR competency register; training effectiveness reports.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Training Coordinator.\n\nCopies issued to: HR office; department heads; all clinical and nursing areas.\n\nThe current version is available to all staff at the «HR office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "AED — automated external defibrillator\nBLS — basic life support\nCPR — cardiopulmonary resuscitation\nHRM — Human Resource Management (NABH SHCO chapter 8)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "HRM.2.a",
+      "requirement": "Staff are provided with induction training.",
+      "steps": "Statement of intent; Section 3; 5.1 Induction training; Section 4 item 1",
+      "responsible": "Training Coordinator (curriculum); department heads (role-specific items); HR (filing)",
+      "records": [
+        "Structured induction checklist covering hospital policies and role orientation.",
+        "Signed induction completion form in each new hire's personnel file.",
+        "Supervisor confirmation of role-specific induction items."
+      ]
+    },
+    {
+      "oe_code": "HRM.2.b",
+      "requirement": "Written guidance governs training and development policy for the staff through an on-going programme for professional training and development of the staff.",
+      "steps": "Section 3; 5.2 Training and development policy and ongoing programme; Section 4 item 2",
+      "responsible": "Medical Superintendent (approve policy); Training Coordinator (calendar and delivery)",
+      "records": [
+        "Approved training and development policy document.",
+        "Annual training calendar with topics, target groups and dates.",
+        "Annual policy review record."
+      ]
+    },
+    {
+      "oe_code": "HRM.2.c",
+      "requirement": "Staff are appropriately trained based on their specific job description.",
+      "steps": "Section 3; 5.3 Job-description-based training; Section 4 item 3",
+      "responsible": "Training Coordinator (matrix); department heads (confirm competencies)",
+      "records": [
+        "Training matrix mapping job descriptions to mandatory competencies.",
+        "Training completion certificates filed in personnel files.",
+        "Quarterly compliance review showing role-specific training completion rates."
+      ]
+    },
+    {
+      "oe_code": "HRM.2.d",
+      "requirement": "Staff involved in direct patient care are provided training on cardiopulmonary resuscitation at the time of induction and periodically thereafter.",
+      "steps": "Section 3; 5.4 Cardiopulmonary resuscitation training; Section 4 item 4",
+      "responsible": "Training Coordinator (schedule and register); department heads (ensure compliance)",
+      "records": [
+        "CPR training records at induction for each direct patient care staff member.",
+        "Master CPR competency register with certification and expiry dates.",
+        "Periodic refresher training attendance records."
+      ]
+    },
+    {
+      "oe_code": "HRM.2.e",
+      "requirement": "Evaluation of training effectiveness is done by the organisation.",
+      "steps": "Section 3; 5.5 Evaluation of training effectiveness; Section 4 item 5",
+      "responsible": "Training Coordinator (evaluate and report); Medical Superintendent (review findings)",
+      "records": [
+        "Post-training knowledge checks and feedback forms.",
+        "Supervisor observation records of practice change after training.",
+        "Annual training effectiveness report with improvement actions."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HRM.2 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: HRM.2.a–e PDF indices 129–130. No asterisked OEs. HRM.2.a/b/d Core; HRM.2.c Commitment; HRM.2.e Excellence.\n\nSHAPE: Five What-we-do subsections (5.1–5.5). No stop-work. Disclaimer accreditation-only. HR and training roles only.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "HRM v2 template: PRE v2 shape, plain English, HR roles, five steps, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Staff are inducted, trained and developed through an ongoing professional programme — so that every person can perform their job safely and competently, including cardiopulmonary resuscitation for direct patient care staff.",
+  "exceptions": "The following are required. There is no convenience exception.\n\n1. Every new staff member completes induction training within «the first week» of joining — not after they have worked unsupervised.\n2. A written training and development policy governs the ongoing professional programme — not only ad-hoc sessions when a problem arises.\n3. Training is mapped to each role's job description — not a one-size-fits-all lecture for all departments.\n4. Direct patient care staff hold current CPR certification from induction onward — not expired cards on file.\n5. Training effectiveness is evaluated at least «annually» — not assumed because attendance was recorded.\n\nStaff who identify a training gap report it to the «Training Coordinator» or the «HR In-Charge / Personnel Officer» within the same working week.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit covers induction, the training programme, job-description mapping, CPR and effectiveness evaluation.\n\nWhat is monitored each quarter:\n\n- Induction completed within the first week for all new hires in the quarter.\n- Training and development policy current; annual calendar published.\n- Training matrix current; role-specific gaps scheduled and tracked.\n- CPR register current; no direct patient care staff with expired certification.\n- Training effectiveness evaluation conducted and findings acted upon.\n\nRoot-cause analysis is required when a new hire worked without completed induction or when CPR certification lapsed for direct patient care staff.\n\nThis policy is reviewed «annually», and sooner when HRM.3 safety training programmes are revised.",
+  "training_competency": "All staff receive induction training per this policy. Staff acknowledge the training and development policy at induction and «once a year» after that.\n\nStaff acknowledgement\n\nI have read this Induction, Training and Development policy of {{HOSPITAL_NAME}}. I understand the induction requirements, training programme and my role-specific training obligations.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Training Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HRM/POL/02»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Training Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "hrm_v2_adoptable_shape",
+  "subtitle": "Induction, professional development and CPR in day-to-day practice.",
+  "doc_no": "«HRM/POL/02»"
+}

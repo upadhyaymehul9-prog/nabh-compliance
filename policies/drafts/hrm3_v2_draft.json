@@ -1,0 +1,128 @@
+{
+  "standard_code": "HRM.3",
+  "chapter": "HRM",
+  "oe_codes": [
+    "HRM.3.a",
+    "HRM.3.b",
+    "HRM.3.c",
+    "HRM.3.d",
+    "HRM.3.e",
+    "HRM.3.f",
+    "HRM.3.g"
+  ],
+  "policy_title": "Safety, Disaster, Fire and Quality-Improvement Training",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} trains staff in the safety programme, risk detection and handling, incident procedures, occupational safety, disaster management, fire and non-fire emergencies, and the quality improvement programme.\n\nIt covers seven training-delivery elements. Each element cross-references the owning policy for programme content — this document owns that staff are trained, not the programme itself.\n\nHRM.2 owns the training framework, calendar and effectiveness evaluation. ROM/COP own the hospital safety programme. PSQ.5 owns the incident system. COP.2 owns the disaster management plan. FMS.5 owns fire and non-fire emergency plans. PSQ.1 owns the QI programme.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to all staff at {{HOSPITAL_NAME}}. It applies to the «Training Coordinator», department heads, the «Medical Superintendent» and the «Quality Coordinator».\n\nIt covers HRM.3.a–g as training-delivery requirements. It does not own: the safety programme content (ROM.4 / COP standards); the incident reporting and analysis system (PSQ.5); the disaster management plan (COP.2); fire and non-fire emergency plans (FMS.5); or the QI programme structure (PSQ.1).\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- ROM.4 and COP standards own the hospital safety programme. HRM.3.a owns that staff are trained in it.\n- PSQ.5 owns incident collection, analysis and CAPA. HRM.3.c owns that staff know procedures to follow in the event of an incident.\n- COP.2 owns the disaster management plan. HRM.3.e owns staff training on that plan.\n- FMS.5 owns fire and non-fire emergency plans and drills. HRM.3.f owns staff training on handling those emergencies.\n- PSQ.1 owns the patient-safety and QI programmes. HRM.3.g owns that staff are trained in the QI programme.",
+  "policy_statement": "{{HOSPITAL_NAME}} trains staff in the organisation's safety programme, in detection, handling, minimisation and elimination of identified risks, and in occupational safety aspects.\n\nStaff members are made aware of procedures to follow in the event of an incident (per PSQ.5). Staff are trained in the disaster management plan (per COP.2), in handling fire and non-fire emergencies (per FMS.5), and in the quality improvement programme (per PSQ.1).\n\nThis policy delivers training. It does not rewrite the programmes those policies own.",
+  "procedure_steps": [
+    "5.1 Safety programme training\n\nStaff are trained in the organisation's safety programme at {{HOSPITAL_NAME}}. The safety programme is owned by ROM.4 (organisational risk) and COP standards (clinical safety). This step owns training delivery, not programme content.\n\nThe «Training Coordinator» schedules safety-programme training at induction and «annually». Content covers: the hospital safety structure; staff roles in safety; reporting channels; and key safety policies the hospital has adopted. Training attendance is recorded in the training matrix (HRM.2.c).",
+    "5.2 Risk detection, handling, minimisation and elimination\n\nStaff are provided training in the detection, handling, minimisation and elimination of identified risks within the organisation's environment at {{HOSPITAL_NAME}}. Training covers: hazard identification in the workplace; near-miss reporting (PSQ.5); basic risk assessment; and escalation paths.\n\nDepartment heads tailor content to unit-specific risks (for example medication errors in pharmacy, falls in wards, sharps in procedure areas). Training is refreshed «annually» or when a new risk is identified through PSQ.5 or ROM.4.",
+    "5.3 Incident procedures awareness\n\nStaff members are made aware of procedures to follow in the event of an incident at {{HOSPITAL_NAME}}. PSQ.5 owns the incident reporting and analysis system. This step owns that every staff member knows how to report, what to do immediately after an incident, and whom to notify.\n\nTraining at induction covers: incident definition; reporting form or channel; immediate patient safety actions; preservation of evidence; and non-retaliation for reporting. Refresher training is conducted «annually». Incident reporting posters are displayed in clinical areas.",
+    "5.4 Occupational safety aspects\n\nStaff are trained in occupational safety aspects at {{HOSPITAL_NAME}}. Training covers hazards relevant to healthcare workers: manual handling and ergonomics; chemical exposure (pointer to FMS.2.g); electrical safety (pointer to FMS.2.e); workplace violence (pointer to HRM.5.d); and infection-control occupational practices (pointer to HIC.4 for exposure response).\n\nThe «Training Coordinator» maintains role-specific occupational safety modules. Department heads confirm unit hazards are covered. Training records are filed per HRM.2.",
+    "5.5 Disaster management plan training\n\nStaff are trained in the organisation's disaster management plan at {{HOSPITAL_NAME}}. COP.2 owns the disaster management plan. This step owns that all staff know the plan's activation triggers, their role in the plan, evacuation or shelter procedures and communication channels.\n\nDisaster training is conducted at induction and «annually». A tabletop exercise or drill is conducted «once a year» per the COP.2 plan. Attendance and drill outcomes are recorded.",
+    "5.6 Fire and non-fire emergency training\n\nStaff are trained in handling fire and non-fire emergencies at {{HOSPITAL_NAME}}. FMS.5 owns fire and non-fire emergency plans, exit routes and drill schedules. This step owns that all staff know: alarm signals; evacuation routes; assembly points; use of fire extinguishers where trained; and non-fire emergency responses (for example utility failure, gas leak — per FMS.5).\n\nFire and non-fire emergency training is conducted at induction and refreshed after each FMS.5 drill or «annually», whichever is sooner. Drill attendance is cross-checked with FMS.5 records.",
+    "5.7 Quality improvement programme training\n\nStaff are trained in the organisation's quality improvement programme at {{HOSPITAL_NAME}}. PSQ.1 owns the patient-safety and QI programmes. This step owns that staff understand: the purpose of QI; how to identify improvement opportunities; how to participate in audits (PSQ.1.h); and how CAPA works (PSQ.5).\n\nDepartment heads and clinical staff receive QI training at induction and «annually». The «Quality Coordinator» delivers or coordinates sessions. Training covers the indicator dashboard (PSQ.2) at a level appropriate to each role."
+  ],
+  "responsibility": "Medical Superintendent\n- Ensures safety, disaster and emergency training is resourced and conducted.\n- Participates in disaster and fire drills per COP.2 and FMS.5.\n\nTraining Coordinator\n- Schedules and records all HRM.3 training sessions.\n- Coordinates with Quality Coordinator for QI and incident-awareness training.\n\nQuality Coordinator\n- Delivers or coordinates QI programme and incident-awareness training (PSQ.1 / PSQ.5).\n- Audits this policy «quarterly» (see section 7).\n\nDepartment Heads\n- Ensure unit-specific risk and occupational safety content is covered.\n- Confirm all department staff complete required training.\n\nAll Staff\n- Complete safety, incident, disaster, fire and QI training at induction and refreshers.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Human Resource Management chapter, standard HRM.3.\n- Internal documents of {{HOSPITAL_NAME}}: hospital safety programme (ROM.4 / COP); incident management system (PSQ.5); disaster management plan (COP.2); fire and non-fire emergency plans (FMS.5); patient-safety and QI programmes (PSQ.1); training attendance records (HRM.2).",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Training Coordinator.\n\nCopies issued to: department heads; quality office; all clinical and support areas.\n\nThe current version is available to all staff at the «HR office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "CAPA — corrective and preventive action\nCOP — Care of Patients (NABH SHCO chapter 5)\nFMS — Facility Management and Safety (NABH SHCO chapter 7)\nHRM — Human Resource Management (NABH SHCO chapter 8)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPSQ — Patient Safety and Quality Improvement (NABH SHCO chapter 9)\nQI — quality improvement\nROM — Responsibilities of Management (NABH SHCO chapter 6)\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "HRM.3.a",
+      "requirement": "Staff are trained in the organisation's safety programme.",
+      "steps": "Statement of intent; Section 3; 5.1 Safety programme training; Section 4 item 1",
+      "responsible": "Training Coordinator (schedule and record); department heads (ensure attendance)",
+      "records": [
+        "Safety-programme training curriculum cross-referencing ROM.4 / COP.",
+        "Induction and annual safety training attendance records.",
+        "Training matrix entries linking safety training to each staff category."
+      ]
+    },
+    {
+      "oe_code": "HRM.3.b",
+      "requirement": "Staff are provided training in the detection, handling, minimisation and elimination of identified risks within the organisation's environment.",
+      "steps": "Section 3; 5.2 Risk detection, handling, minimisation and elimination; Section 4 item 2",
+      "responsible": "Training Coordinator (curriculum); department heads (unit-specific hazards)",
+      "records": [
+        "Risk-handling training module with hazard identification content.",
+        "Department-specific hazard training records.",
+        "Annual refresher attendance records."
+      ]
+    },
+    {
+      "oe_code": "HRM.3.c",
+      "requirement": "Staff members are made aware of procedures to follow in the event of an incident.",
+      "steps": "Section 3; 5.3 Incident procedures awareness; Section 4 item 3",
+      "responsible": "Quality Coordinator (content from PSQ.5); Training Coordinator (delivery and record)",
+      "records": [
+        "Incident-awareness training content aligned with PSQ.5 procedures.",
+        "Induction and annual refresher attendance records.",
+        "Incident reporting posters displayed in clinical areas."
+      ]
+    },
+    {
+      "oe_code": "HRM.3.d",
+      "requirement": "Staff are trained in occupational safety aspects.",
+      "steps": "Section 3; 5.4 Occupational safety aspects; Section 4 item 4",
+      "responsible": "Training Coordinator (modules); department heads (role-specific hazards)",
+      "records": [
+        "Occupational safety training modules covering relevant healthcare hazards.",
+        "Role-specific training completion records.",
+        "Cross-reference to HRM.5 and HIC.4 for violence and exposure response."
+      ]
+    },
+    {
+      "oe_code": "HRM.3.e",
+      "requirement": "Staff are trained in the organisation's disaster management plan.",
+      "steps": "Section 3; 5.5 Disaster management plan training; Section 4 item 5",
+      "responsible": "Training Coordinator (schedule); Medical Superintendent (drill participation)",
+      "records": [
+        "Disaster training content aligned with current COP.2 plan.",
+        "Induction and annual disaster training attendance records.",
+        "Annual tabletop exercise or drill record with outcomes."
+      ]
+    },
+    {
+      "oe_code": "HRM.3.f",
+      "requirement": "Staff are trained in handling fire and non-fire emergencies.",
+      "steps": "Section 3; 5.6 Fire and non-fire emergency training; Section 4 item 6",
+      "responsible": "Training Coordinator (schedule); cross-check with FMS.5 drill records",
+      "records": [
+        "Fire and non-fire emergency training content aligned with FMS.5 plans.",
+        "Induction and post-drill refresher attendance records.",
+        "Cross-check record matching FMS.5 drill attendance."
+      ]
+    },
+    {
+      "oe_code": "HRM.3.g",
+      "requirement": "Staff are trained in the organisation's quality improvement programme.",
+      "steps": "Section 3; 5.7 Quality improvement programme training; Section 4 item 7",
+      "responsible": "Quality Coordinator (content from PSQ.1); Training Coordinator (schedule and record)",
+      "records": [
+        "QI training content aligned with PSQ.1 programmes.",
+        "Induction and annual QI training attendance records.",
+        "Evidence of staff participation in QI activities after training."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HRM.3 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: HRM.3.a–g PDF index 130. No asterisked OEs. All Commitment except HRM.3.e/f Core.\n\nSHAPE: Seven What-we-do subsections (5.1–5.7). No stop-work. Disclaimer accreditation-only. Cross-ref ROM/COP/PSQ/FMS — does not duplicate owning programmes. HRM.3.e/f forward-ref from FMS.5 deferred items now landed as training delivery only.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "HRM v3 template: PRE v2 shape, cross-ref programmes, seven steps, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Staff are trained in the organisation's safety, disaster, emergency and quality improvement programmes — so they know how to detect and handle risks, respond to incidents and participate in continuous improvement, without duplicating the programmes those other policies own.",
+  "exceptions": "The following are required. There is no convenience exception.\n\n1. All staff complete safety-programme training at induction and «annually» — not only clinical staff.\n2. Risk detection and handling training covers the hospital environment — not only fire drills.\n3. Every staff member knows how to report an incident per PSQ.5 — not only department heads.\n4. Occupational safety training covers hazards relevant to each role — not a generic lecture.\n5. Disaster management plan training follows the COP.2 plan — not an improvised briefing.\n6. Fire and non-fire emergency training follows the FMS.5 plans — not only a video.\n7. QI programme training ensures staff can participate in improvement activities per PSQ.1 — not only the Quality Coordinator.\n\nStaff who identify a training gap report it to the «Training Coordinator» within the same working week.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit covers training delivery across all seven elements and cross-checks with owning policies.\n\nWhat is monitored each quarter:\n\n- Safety-programme training attendance at induction and annual refresh.\n- Risk-handling training current for a sample of departments.\n- All staff can describe incident reporting per PSQ.5 (spot check).\n- Occupational safety training mapped to role-specific hazards.\n- Disaster management training aligned with current COP.2 plan.\n- Fire/non-fire training aligned with current FMS.5 plans and drill records.\n- QI programme training attendance and participation evidence.\n\nRoot-cause analysis is required when a staff member involved in an incident could not describe the reporting procedure.\n\nThis policy is reviewed «annually», and sooner when COP.2, FMS.5 or PSQ.1/PSQ.5 are revised.",
+  "training_competency": "All staff complete the training elements in this policy at induction and at the refresh intervals stated in each subsection. Staff acknowledge completion on the training attendance record maintained by the «Training Coordinator».\n\nStaff acknowledgement\n\nI have received training on safety, incident reporting, occupational safety, disaster management, fire and non-fire emergencies, and the quality improvement programme at {{HOSPITAL_NAME}}. I know how to report an incident and whom to notify in an emergency.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Training Coordinator holds signed acknowledgements.)",
+  "resources_required": "Document number: «HRM/POL/03»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Training Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "hrm_v2_adoptable_shape",
+  "subtitle": "Safety, disaster, fire and QI training — delivery only, programmes owned elsewhere.",
+  "doc_no": "«HRM/POL/03»"
+}
