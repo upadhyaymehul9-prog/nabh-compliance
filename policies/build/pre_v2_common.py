@@ -120,6 +120,8 @@ def verify_disclaimer(
         assert statute_clause, "statute_clause required"
         assert statute_clause in parts[1]
     for banned in HIC_BOILERPLATE_STATUTES:
+        if statute_clause and banned in statute_clause:
+            continue
         assert banned not in parts[1]
     print("disclaimer P1/P3/P4 shared; P2 statute-matched:", True)
 

@@ -1,0 +1,136 @@
+{
+  "standard_code": "HIC.2",
+  "chapter": "HIC",
+  "oe_codes": [
+    "HIC.2.a",
+    "HIC.2.b",
+    "HIC.2.c",
+    "HIC.2.d",
+    "HIC.2.e",
+    "HIC.2.f",
+    "HIC.2.g"
+  ],
+  "policy_title": "Infection Prevention and Control in Clinical Areas",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} implements infection prevention and control in clinical areas through adherence to standard precautions, hand-hygiene guidelines, transmission-based precautions, safe injection and infusion practices, antimicrobial usage policy, monitoring of rational antimicrobial use, and an antibiotic stewardship programme.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to all clinical areas of {{HOSPITAL_NAME}} and to every healthcare provider who delivers patient care — doctors, nurses, technicians, phlebotomists, and allied health professionals.\n\nIt covers the seven elements HIC.2.a–g name: standard precautions, hand hygiene, transmission-based precautions, safe injection/infusion, antimicrobial usage policy, monitoring rational use, and antibiotic stewardship.\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- HIC.1 owns programme governance, committee structure and resources.\n- HIC.3 owns support-service infection control (housekeeping, BMW, laundry, kitchen, engineering).\n- HIC.4 owns prevention of specific HAI (CAUTI, VAP, CLABSI, SSI) and occupational safety.\n- HIC.5 owns surveillance including hand-hygiene compliance monitoring.\n- HIC.6 owns sterilisation and disinfection of instruments and devices.",
+  "policy_statement": "{{HOSPITAL_NAME}} adheres to standard precautions at all times in all clinical areas. Hand-hygiene guidelines are followed by all healthcare providers. Transmission-based precautions are applied when indicated. Safe injection and infusion practices are maintained.\n\nAn antimicrobial usage policy based on local sensitivity data is established and documented. Rational use of antimicrobial agents is monitored. An antibiotic stewardship programme is implemented to optimise antimicrobial use and reduce resistance.",
+  "procedure_steps": [
+    "5.1 Standard precautions\n\nAll healthcare providers at {{HOSPITAL_NAME}} adhere to standard precautions at all times regardless of the patient's diagnosis or presumed infection status. Standard precautions include:\n\n- Hand hygiene before and after patient contact.\n- Use of personal protective equipment (PPE) — gloves, gown, mask, eye protection — based on anticipated exposure.\n- Safe handling and disposal of sharps.\n- Respiratory hygiene and cough etiquette.\n- Safe handling of patient-care equipment and linen.\n- Environmental cleaning.\n- Safe waste management (cross-reference HIC.3.d).\n\nPPE is available at point of use in every clinical area. Correct donning and doffing sequences are displayed.",
+    "5.2 Hand-hygiene guidelines\n\n{{HOSPITAL_NAME}} adheres to the WHO five moments for hand hygiene: before patient contact, before aseptic task, after body-fluid exposure risk, after patient contact, and after contact with patient surroundings.\n\nAlcohol-based hand rub (ABHR) dispensers are placed at «every bed, procedure area entry and nursing station». Soap and running water are available at all hand-wash sinks. Hand-hygiene technique posters (WHO or equivalent) are displayed at every sink and ABHR station.\n\nHand-hygiene compliance is monitored under HIC.5.b. Feedback is shared «monthly» with each clinical unit.",
+    "5.3 Transmission-based precautions\n\nIn addition to standard precautions, {{HOSPITAL_NAME}} applies transmission-based precautions (contact, droplet, airborne) when indicated by the patient's condition, culture results or epidemiological assessment.\n\n- Contact precautions: gown and gloves for all contact; dedicated equipment; single room or cohorting.\n- Droplet precautions: surgical mask within «1 metre» of the patient; single room preferred.\n- Airborne precautions: N95 respirator; negative-pressure room where available (HIC.1.f); door closed.\n\nSignage is placed at the room/bed indicating the precaution type. De-escalation criteria are documented.",
+    "5.4 Safe injection and infusion practices\n\n{{HOSPITAL_NAME}} adheres to safe injection and infusion practices:\n\n- Use a new sterile syringe and needle for each injection.\n- Never recap needles by hand; use a needle destroyer or safety-engineered device.\n- Use single-dose vials whenever possible; if multi-dose vials are used, maintain aseptic technique and label with date of opening and discard after «28 days or manufacturer instruction, whichever is shorter».\n- Prepare injections in a clean, designated area away from contaminated items.\n- Use aseptic technique for all intravenous access and infusion preparation.\n- Change IV administration sets per protocol — «every 72–96 hours for continuous infusions; immediately after blood products or lipids».\n\nPhlebotomy and IV cannulation follow a written aseptic insertion and maintenance bundle.",
+    "5.5 Antimicrobial usage policy\n\n{{HOSPITAL_NAME}} has an antimicrobial usage policy that is established and documented. The policy is based on:\n\n- Local antibiogram data (updated «annually» from the hospital's own culture and sensitivity results or, where volume is insufficient, from regional data).\n- National treatment guidelines (ICMR / IDSA or equivalent).\n- Classification of antimicrobials into unrestricted, restricted and reserve categories.\n\nThe policy defines empirical therapy recommendations for common infections, criteria for escalation/de-escalation, duration guidance, and surgical prophylaxis protocols. The policy is approved by the Infection Control Committee and available to all prescribers.",
+    "5.6 Monitoring rational antimicrobial use\n\nThe Infection Control Committee and the antimicrobial stewardship team monitor rational use of antimicrobial agents at {{HOSPITAL_NAME}}:\n\n- Prescription audits are conducted «monthly» on a sample of inpatient records.\n- Compliance with the antimicrobial usage policy (empirical choice, de-escalation, duration) is measured.\n- Restricted-category antimicrobial usage is tracked by volume and indication.\n- Feedback is provided to prescribers «quarterly».\n- Non-compliance trends are escalated to the Medical Superintendent.",
+    "5.7 Antibiotic stewardship programme\n\n{{HOSPITAL_NAME}} implements an antibiotic stewardship programme (ASP) to optimise antimicrobial therapy, improve patient outcomes and reduce antimicrobial resistance.\n\nThe ASP includes:\n\n- Prospective audit with intervention and feedback (stewardship rounds «twice a week»).\n- Formulary restriction and pre-authorisation for reserve antimicrobials.\n- Automatic stop orders and mandatory review at «72 hours» for empirical therapy.\n- Education of prescribers on resistance patterns and appropriate prescribing.\n- Monitoring of defined daily dose (DDD) / days of therapy (DOT) trends.\n- Annual review of the programme's impact on resistance patterns, consumption and clinical outcomes.\n\nThe ASP team includes at minimum the Infection Control Officer, a clinical pharmacist (or the «senior nurse trained in antibiotic stewardship»), and a microbiologist (or access to microbiology consultation)."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable for resources, antimicrobial policy approval, and stewardship programme support.\n\nInfection Control Officer (doctor)\n- Leads the antimicrobial stewardship programme; chairs stewardship rounds.\n\nInfection Control Nurse\n- Monitors hand-hygiene and standard-precaution compliance; supports training.\n\nInfection Control Committee\n- Approves the antimicrobial usage policy; reviews audit findings and resistance data.\n\nTreating doctors\n- Prescribe antimicrobials per the approved policy; comply with stewardship recommendations.\n\nNurses\n- Apply standard and transmission-based precautions; maintain hand hygiene; administer injections/infusions safely.\n\nQuality Coordinator\n- Audits this policy «quarterly»; tracks CAPA closure.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — HIC chapter, standard HIC.2.\n- WHO Guidelines on Hand Hygiene in Health Care (2009).\n- WHO Guidelines on Core Components of Infection Prevention and Control Programmes (2016).\n- Indian Council of Medical Research (ICMR), Treatment Guidelines for Antimicrobial Use in Common Syndromes (2019).\n- Internal documents of {{HOSPITAL_NAME}}: antimicrobial usage policy, local antibiogram, injection safety protocol, transmission-based precaution guidelines.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Infection Control Officer and the Quality Coordinator.\n\nCopies issued to: all clinical areas (OPD, IPD, emergency, OT, ICU where available), nursing administration, pharmacy.\n\nThe current version is available to all staff at the «infection control manual / staff intranet».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "ABHR — alcohol-based hand rub\nASP — antibiotic stewardship programme\nCAPA — corrective and preventive action\nDDD — defined daily dose\nDOT — days of therapy\nHAI — healthcare-associated infection\nHIC — Hospital Infection Prevention and Control (NABH SHCO chapter)\nICMR — Indian Council of Medical Research\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPPE — personal protective equipment\nSHCO — Standards for Small Healthcare Organisations\nWHO — World Health Organization",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "HIC.2.a",
+      "requirement": "The organisation adheres to standard precautions at all times.",
+      "steps": "Section 3; 5.1 Standard precautions; Section 4 item 1",
+      "responsible": "All clinical staff (apply); Infection Control Nurse (monitor)",
+      "records": [
+        "Written standard-precaution protocol available in all clinical areas.",
+        "PPE stock and availability records at point of use.",
+        "Compliance observation records (direct observation or audit tool).",
+        "Training records showing all clinical staff trained on standard precautions."
+      ]
+    },
+    {
+      "oe_code": "HIC.2.b",
+      "requirement": "The organisation adheres to hand-hygiene guidelines.",
+      "steps": "Section 3; 5.2 Hand-hygiene guidelines; Section 4 item 2",
+      "responsible": "All healthcare providers (comply); Infection Control Nurse (audit and feedback)",
+      "records": [
+        "Written hand-hygiene protocol aligned with WHO five moments.",
+        "ABHR dispenser and soap availability audit records.",
+        "Hand-hygiene compliance rates by unit (data from HIC.5.b).",
+        "Feedback shared with clinical units showing compliance trends."
+      ]
+    },
+    {
+      "oe_code": "HIC.2.c",
+      "requirement": "The organisation adheres to transmission-based precautions.",
+      "steps": "Section 3; 5.3 Transmission-based precautions; Section 4 item 6",
+      "responsible": "Treating doctors (initiate); nurses (implement); Infection Control Officer (oversee criteria)",
+      "records": [
+        "Written transmission-based precaution guidelines (contact, droplet, airborne).",
+        "Signage logs showing precaution type displayed at room/bed.",
+        "De-escalation criteria and records of de-escalation decisions.",
+        "Training records for staff assigned to isolation/precaution areas."
+      ]
+    },
+    {
+      "oe_code": "HIC.2.d",
+      "requirement": "The organisation adheres to safe injection and infusion practices.",
+      "steps": "Section 3; 5.4 Safe injection and infusion practices; Section 4 items 3, 4, 7",
+      "responsible": "Nurses (administer); treating doctors (prescribe); Infection Control Nurse (audit)",
+      "records": [
+        "Written safe injection and infusion protocol.",
+        "Multi-dose vial labelling and discard log.",
+        "IV administration set change records per protocol.",
+        "Safe injection practice observation audit results."
+      ]
+    },
+    {
+      "oe_code": "HIC.2.e",
+      "requirement": "Appropriate antimicrobial usage policy is established and documented.",
+      "steps": "Section 3; 5.5 Antimicrobial usage policy; Section 4 item 5",
+      "responsible": "Infection Control Committee (approve); Infection Control Officer (draft); pharmacy (implement formulary)",
+      "records": [
+        "Documented antimicrobial usage policy with empirical therapy recommendations.",
+        "Local antibiogram updated at defined frequency.",
+        "Classification of antimicrobials into unrestricted, restricted and reserve.",
+        "ICC minutes showing policy approval and review."
+      ]
+    },
+    {
+      "oe_code": "HIC.2.f",
+      "requirement": "The organisation implements the antimicrobial usage policy and monitors the rational use of antimicrobial agents.",
+      "steps": "Section 3; 5.6 Monitoring rational antimicrobial use",
+      "responsible": "Antimicrobial stewardship team (audit); treating doctors (prescribe per policy); Infection Control Committee (review)",
+      "records": [
+        "Monthly prescription audit reports with compliance rates.",
+        "Restricted antimicrobial usage log with indications.",
+        "Feedback records shared with prescribers.",
+        "Escalation records for non-compliance trends."
+      ]
+    },
+    {
+      "oe_code": "HIC.2.g",
+      "requirement": "The organisation implements an antibiotic stewardship programme.",
+      "steps": "Section 3; 5.7 Antibiotic stewardship programme",
+      "responsible": "Infection Control Officer (lead ASP); clinical pharmacist or trained nurse (support); Infection Control Committee (oversight)",
+      "records": [
+        "ASP charter with team composition, scope, goals and meeting schedule.",
+        "Stewardship round records (prospective audit with intervention).",
+        "Pre-authorisation and automatic stop-order implementation records.",
+        "Annual ASP outcome report (DDD/DOT trends, resistance pattern changes, intervention acceptance rate).",
+        "Education session records for prescribers on resistance and prescribing."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HIC.2 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"The organisation implements the infection prevention and control programme in clinical areas.\" HIC.2.a–g PDF indices 99–100. Five asterisked OEs: HIC.2.a, HIC.2.b, HIC.2.d (Core), HIC.2.e (Commitment), HIC.2.g (Excellence). No stop-work.\n\nSHAPE: Seven What-we-do subsections (5.1–5.7). No stop-work. Disclaimer accreditation-only. HIC roles.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "HIC v2 template: adoptable shape, plain English, HIC roles, seven steps, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation implements the infection prevention and control programme in clinical areas — through standard precautions, hand hygiene, transmission-based precautions, safe injection practices, and antimicrobial stewardship.",
+  "exceptions": "The following are prohibited. There is no convenience exception.\n\n1. Providing patient care without applying standard precautions (gloves for contact with blood/body fluids, gown/eye protection when splash is anticipated).\n2. Skipping hand hygiene at any of the WHO five moments.\n3. Recapping needles by hand after use.\n4. Using multi-dose vials without following aseptic technique or beyond the labelled expiry after opening.\n5. Prescribing restricted antimicrobials without authorisation from the antimicrobial stewardship team.\n6. Failing to apply transmission-based precautions when the patient's condition or laboratory results indicate an airborne, droplet or contact transmission risk.\n7. Reusing single-use injection or infusion devices.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Standard-precaution compliance observations in clinical areas.\n- Hand-hygiene compliance rates (data from HIC.5.b).\n- Transmission-based precaution appropriateness and signage.\n- Safe injection/infusion practice observations.\n- Antimicrobial prescription audit results and stewardship intervention acceptance rate.\n- ASP outcome metrics (DDD/DOT trends, resistance patterns).\n\nRoot-cause analysis is required when hand-hygiene compliance falls below «80 %» in any unit for two consecutive months, or when a restricted antimicrobial is used without authorisation.\n\nThis policy is reviewed «annually», and sooner when local antibiogram data changes significantly or after an outbreak.",
+  "training_competency": "All clinical staff are trained on this policy at induction and «once a year» after that. Training covers standard precautions, hand hygiene, transmission-based precautions, safe injection practices, and the antimicrobial usage policy.\n\nStaff acknowledgement\n\nI have read this Infection Prevention and Control in Clinical Areas policy of {{HOSPITAL_NAME}}. I will adhere to standard precautions, hand-hygiene guidelines, and the antimicrobial usage policy.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Infection Control Nurse holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: HIC/POL/02\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Infection Control Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "hic_v2_adoptable_shape",
+  "subtitle": "Clinical infection prevention practices and antimicrobial stewardship.",
+  "doc_no": "HIC/POL/02"
+}

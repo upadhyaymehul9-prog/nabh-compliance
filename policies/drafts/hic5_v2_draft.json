@@ -1,0 +1,121 @@
+{
+  "standard_code": "HIC.5",
+  "chapter": "HIC",
+  "oe_codes": [
+    "HIC.5.a",
+    "HIC.5.b",
+    "HIC.5.c",
+    "HIC.5.d",
+    "HIC.5.e",
+    "HIC.5.f"
+  ],
+  "policy_title": "Infection Prevention and Control Surveillance",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} performs surveillance to capture and monitor infection prevention and control data: tracking and analysing infection risks, rates and trends; monitoring hand-hygiene compliance; capturing multi-drug-resistant organisms (MDRO) and highly virulent infections; identifying and controlling outbreaks; monitoring housekeeping effectiveness; and analysing data for corrective and preventive action with feedback to the healthcare team.\n\nSurveillance data feeds the PSQ quality indicator framework (PSQ.2 owns the indicator framework); this policy owns the surveillance methodology and data generation.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to the Infection Control Team, the Infection Control Committee, the Quality Coordinator and all clinical and support staff who generate or use infection surveillance data at {{HOSPITAL_NAME}}.\n\nIt covers the six elements HIC.5.a–f name: infection risk/rate/trend tracking, hand-hygiene compliance monitoring, MDRO and virulent infection capture, outbreak identification and control, housekeeping surveillance, and data analysis with CAPA and feedback.\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- HIC.1 owns programme governance; this policy owns the surveillance component of that programme.\n- HIC.2 owns clinical practices; HIC.5.b monitors hand-hygiene compliance for HIC.2.b.\n- HIC.3 owns support-service procedures; HIC.5.e monitors housekeeping effectiveness for HIC.3.c.\n- HIC.4 owns device-bundle prevention; surveillance rates feed those bundles.\n- PSQ.2 owns the quality indicator framework; surveillance data is reported into that framework.",
+  "policy_statement": "{{HOSPITAL_NAME}} maintains an active infection surveillance programme that tracks infection risks, rates and trends, monitors hand-hygiene compliance, captures MDRO and highly virulent infections, identifies and controls outbreaks, monitors housekeeping effectiveness, and analyses data to drive corrective and preventive actions with regular feedback to the healthcare team.",
+  "procedure_steps": [
+    "5.1 Tracking and analysing infection risks, rates and trends\n\nThe Infection Control Team maintains surveillance that incorporates tracking and analysing of infection risks, rates and trends at {{HOSPITAL_NAME}}:\n\n- Numerator data: laboratory-confirmed infections, clinically diagnosed infections (using standard case definitions).\n- Denominator data: patient-days, device-days (catheter-days, ventilator-days, line-days where applicable).\n- Rates calculated: CAUTI, CLABSI, SSI, VAP (where applicable), and overall HAI rate per 1000 patient-days.\n- Trends analysed «monthly» and presented to the ICC «quarterly».\n- Risk stratification: high-risk areas (OT, ICU, labour room) receive targeted surveillance.\n\nData sources include microbiology laboratory reports, clinical records, nursing documentation and discharge summaries.",
+    "5.2 Monitoring hand-hygiene compliance\n\nSurveillance includes monitoring compliance with hand-hygiene guidelines (HIC.2.b):\n\n- Direct observation audits using the WHO hand-hygiene observation tool (or equivalent) conducted «monthly» in each clinical unit.\n- Observers are trained and validated using the WHO training module.\n- Compliance rate = (hand-hygiene actions performed / opportunities observed) × 100.\n- Results reported by unit, professional category and moment.\n- Feedback shared with unit leads «within one week» of the audit.\n- Trend analysis and benchmarking against the hospital target of «≥ 80 %».\n\nProduct consumption (ABHR litres per 1000 patient-days) is tracked as a surrogate indicator alongside direct observation.",
+    "5.3 Multi-drug-resistant organisms and highly virulent infections\n\nSurveillance includes mechanisms to capture the occurrence of multi-drug-resistant organisms (MDRO) and highly virulent infections:\n\n- The microbiology laboratory flags MDRO results (MRSA, VRE, ESBL, CRE, multi-drug-resistant Acinetobacter, and others per the ICC's MDRO list) and communicates them to the Infection Control Officer «on the same day».\n- Alert organisms and notifiable diseases are reported to public health authorities as required.\n- A line-list of MDRO cases is maintained with patient demographics, organism, resistance pattern, location, and date.\n- Highly virulent infections (novel influenza, viral haemorrhagic fever, suspected outbreak pathogen) trigger immediate notification to the Infection Control Officer and activation of transmission-based precautions.\n- Antibiogram data is compiled «annually» and shared with prescribers to inform antimicrobial policy (HIC.2.e).",
+    "5.4 Outbreak identification and control\n\nThe organisation identifies and takes appropriate action to control outbreaks of infections:\n\n- An outbreak is suspected when the number of infections of a similar type in a defined area/time exceeds the baseline (or ≥ 2 cases of an unusual organism in a unit within «7 days»).\n- The Infection Control Officer investigates: confirm cases, identify the source, implement control measures (cohorting, enhanced cleaning, contact tracing), and communicate to the ICC and administration.\n- An outbreak log documents timeline, case count, source hypothesis, control measures taken and outcome.\n- The outbreak is declared over when no new cases occur for two incubation periods.\n- A post-outbreak report with lessons learned and preventive recommendations is submitted to the ICC within «2 weeks» of closure.\n- {{HOSPITAL_NAME}} participates in community outbreak investigation when requested by district health authorities (HIC.1.d).",
+    "5.5 Housekeeping effectiveness monitoring\n\nSurveillance activities include monitoring the effectiveness of the housekeeping services (HIC.3.c):\n\n- Visual inspection audits of cleanliness are conducted «daily» by the Housekeeping In-Charge and «weekly» by the Infection Control Nurse.\n- Objective monitoring: «ATP bioluminescence testing or microbiological swab cultures» on high-touch surfaces «monthly» in high-risk areas and «quarterly» in general areas.\n- Results are compared against defined benchmarks («< 250 RLU for ATP; < 5 CFU/cm² for aerobic colony count»).\n- Non-conformances trigger re-cleaning, RCA (if repeated) and CAPA.\n- Housekeeping effectiveness trends are reported to the ICC «quarterly».",
+    "5.6 Data analysis, CAPA and feedback\n\nSurveillance data is analysed, and appropriate corrective and preventive actions are taken and feedback regarding the same is provided regularly to the appropriate health care team:\n\n- The Infection Control Team compiles and analyses surveillance data «monthly».\n- Analysis includes trend comparison, benchmarking, identification of clusters or rising rates.\n- When rates exceed thresholds or trends worsen, RCA is initiated and CAPA is defined with timelines and responsibility.\n- Feedback is provided to unit heads and the healthcare team «monthly» (unit-specific dashboards or reports).\n- A consolidated surveillance report is presented to the ICC «quarterly» and to the Medical Superintendent.\n- Data feeds the hospital quality indicators under PSQ.2.\n- CAPA effectiveness is verified by monitoring the metric in subsequent periods; closure requires evidence that the rate returned to acceptable levels."
+  ],
+  "responsibility": "Medical Superintendent (Head of the Institution)\n- Accountable for surveillance resources and for acting on outbreak notifications.\n\nInfection Control Officer\n- Leads surveillance methodology, outbreak investigation, MDRO tracking, and data analysis.\n\nInfection Control Nurse\n- Conducts hand-hygiene audits, housekeeping monitoring, and maintains surveillance databases.\n\nInfection Control Committee\n- Reviews surveillance reports, approves thresholds, monitors CAPA closure.\n\nMicrobiology laboratory\n- Flags MDRO results and communicates to the Infection Control Officer on the same day.\n\nTreating doctors and nurses\n- Report suspected infections; comply with outbreak control measures.\n\nQuality Coordinator\n- Audits this policy «quarterly»; ensures surveillance data feeds PSQ indicators; tracks CAPA.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — HIC chapter, standard HIC.5.\n- CDC/NHSN Surveillance Definitions for Specific Types of Infections (current edition).\n- WHO Guidelines on Core Components of Infection Prevention and Control Programmes (2016) — surveillance component.\n- ICMR Antimicrobial Resistance Surveillance Network reports.\n- Internal documents of {{HOSPITAL_NAME}}: surveillance protocol, hand-hygiene audit tool, MDRO line-list, outbreak SOP, housekeeping monitoring protocol, ICC reporting template.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Infection Control Officer and the Quality Coordinator.\n\nCopies issued to: microbiology laboratory, all clinical unit leads, housekeeping, nursing administration.\n\nThe current version is available to all staff at the «infection control manual / staff intranet».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "ABHR — alcohol-based hand rub\nATP — adenosine triphosphate\nCAPA — corrective and preventive action\nCAUTI — catheter-associated urinary tract infection\nCFU — colony-forming units\nCLABSI — central-line-associated blood stream infection\nCRE — carbapenem-resistant Enterobacterales\nESBL — extended-spectrum beta-lactamase\nHAI — healthcare-associated infection\nHIC — Hospital Infection Prevention and Control (NABH SHCO chapter)\nICC — Infection Control Committee\nICMR — Indian Council of Medical Research\nMDRO — multi-drug-resistant organism\nMRSA — methicillin-resistant Staphylococcus aureus\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPSQ — Patient Safety and Quality (NABH SHCO chapter)\nRCA — root-cause analysis\nRLU — relative light units\nSHCO — Standards for Small Healthcare Organisations\nSSI — surgical site infection\nVAP — ventilator-associated pneumonia\nVRE — vancomycin-resistant Enterococcus\nWHO — World Health Organization",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "HIC.5.a",
+      "requirement": "The scope of surveillance incorporates tracking and analysing of infection risks, rates and trends.",
+      "steps": "Section 3; 5.1 Tracking and analysing infection risks, rates and trends",
+      "responsible": "Infection Control Team (collect and calculate); ICC (review trends)",
+      "records": [
+        "Monthly infection rate calculations (numerator/denominator) by type and area.",
+        "Trend charts presented to the ICC quarterly.",
+        "Surveillance database or register with case definitions applied.",
+        "Risk stratification showing targeted surveillance in high-risk areas."
+      ]
+    },
+    {
+      "oe_code": "HIC.5.b",
+      "requirement": "Surveillance includes monitoring compliance with hand-hygiene guidelines.",
+      "steps": "Section 3; 5.2 Monitoring hand-hygiene compliance",
+      "responsible": "Infection Control Nurse (audit); unit leads (receive feedback and act)",
+      "records": [
+        "Completed hand-hygiene observation audit forms (WHO tool or equivalent).",
+        "Monthly compliance rates by unit and professional category.",
+        "Feedback records shared with unit leads within one week.",
+        "ABHR consumption data (litres per 1000 patient-days) tracked as surrogate indicator."
+      ]
+    },
+    {
+      "oe_code": "HIC.5.c",
+      "requirement": "Surveillance includes mechanisms to capture the occurrence of multi-drug-resistant organisms and highly virulent infections.",
+      "steps": "Section 3; 5.3 Multi-drug-resistant organisms and highly virulent infections; Section 4 item 2",
+      "responsible": "Microbiology laboratory (flag and notify); Infection Control Officer (line-list and action)",
+      "records": [
+        "MDRO line-list with patient demographics, organism, resistance pattern, location and date.",
+        "Laboratory same-day notification records to the Infection Control Officer.",
+        "Annual antibiogram compiled and shared with prescribers.",
+        "Notification records to public health authorities for notifiable diseases."
+      ]
+    },
+    {
+      "oe_code": "HIC.5.d",
+      "requirement": "The organisation identifies and takes appropriate action to control outbreaks of infections.",
+      "steps": "Section 3; 5.4 Outbreak identification and control; Section 4 item 3",
+      "responsible": "Infection Control Officer (investigate and control); ICC (oversight); Medical Superintendent (resource allocation)",
+      "records": [
+        "Outbreak log with timeline, case count, source hypothesis, control measures and outcome.",
+        "Post-outbreak report with lessons learned submitted to ICC.",
+        "Communication records to administration and (where applicable) district health authority.",
+        "Evidence of control measures implemented (cohorting, enhanced cleaning, contact tracing)."
+      ]
+    },
+    {
+      "oe_code": "HIC.5.e",
+      "requirement": "Surveillance activities include monitoring the effectiveness of the housekeeping services.",
+      "steps": "Section 3; 5.5 Housekeeping effectiveness monitoring; Section 4 item 5",
+      "responsible": "Infection Control Nurse (objective monitoring); Housekeeping In-Charge (daily visual); ICC (review trends)",
+      "records": [
+        "Visual inspection audit records (daily/weekly).",
+        "Objective monitoring results (ATP or microbiological) with benchmark comparison.",
+        "Non-conformance and re-cleaning records.",
+        "Quarterly housekeeping effectiveness trend report to ICC."
+      ]
+    },
+    {
+      "oe_code": "HIC.5.f",
+      "requirement": "Surveillance data is analysed, and appropriate corrective and preventive actions are taken and feedback regarding the same is provided regularly to the appropriate health care team.",
+      "steps": "Section 3; 5.6 Data analysis, CAPA and feedback; Section 4 item 6",
+      "responsible": "Infection Control Team (analyse); Quality Coordinator (CAPA tracking); unit leads (receive feedback and implement actions)",
+      "records": [
+        "Monthly surveillance analysis reports.",
+        "CAPA register linked to surveillance findings with timelines and responsibility.",
+        "Unit-level feedback records (dashboards or reports shared monthly).",
+        "Consolidated quarterly surveillance report presented to ICC and Medical Superintendent."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HIC.5 v2 template test (2026-08-19). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Header \"The organisation performs surveillance to capture and monitor infection prevention and control data.\" HIC.5.a–f PDF index 101. One asterisked OE: HIC.5.d (Commitment). No stop-work.\n\nSHAPE: Six What-we-do subsections (5.1–5.6). No stop-work. Disclaimer accreditation-only. HIC roles.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "19-08-2026",
+      "description": "HIC v2 template: adoptable shape, plain English, HIC roles, six steps, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation performs surveillance to capture and monitor infection prevention and control data — tracking risks, rates and trends; hand-hygiene compliance; multi-drug-resistant organisms; outbreak identification; housekeeping effectiveness; and corrective/preventive action from analysed data.",
+  "exceptions": "The following are prohibited. There is no convenience exception.\n\n1. Operating without active infection surveillance (passive reporting alone is insufficient).\n2. Failing to report a suspected MDRO or highly virulent infection to the Infection Control Officer within «24 hours» of laboratory confirmation or clinical suspicion.\n3. Ignoring an outbreak signal (unusual cluster of similar infections in time/place) without investigation.\n4. Withholding surveillance data or feedback from the clinical team responsible for the area.\n5. Counting housekeeping visual inspection alone as effectiveness monitoring (microbiological or ATP sampling required at defined frequency).\n6. Closing a CAPA arising from surveillance data without evidence of effectiveness.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Surveillance data completeness and timeliness (rates calculated monthly, trends presented quarterly).\n- Hand-hygiene audit completion and feedback timeliness.\n- MDRO line-list currency and laboratory notification compliance.\n- Outbreak log entries and post-outbreak report completion.\n- Housekeeping objective monitoring records and benchmark comparisons.\n- CAPA register linked to surveillance findings and evidence of effectiveness.\n\nRoot-cause analysis is required when surveillance data is incomplete for more than one month, or when an outbreak investigation is not initiated within «48 hours» of the signal.\n\nThis policy is reviewed «annually», and sooner when a new surveillance methodology is adopted or after a major outbreak.",
+  "training_competency": "The Infection Control Team and all unit leads are trained on this policy at induction and «once a year» after that. Training covers surveillance definitions, data collection methods, hand-hygiene audit technique, outbreak recognition, and the feedback loop.\n\nStaff acknowledgement\n\nI have read this Infection Prevention and Control Surveillance policy of {{HOSPITAL_NAME}}. I understand my role in reporting infections and using surveillance feedback to improve practice.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Infection Control Officer holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: HIC/POL/05\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Infection Control Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "hic_v2_adoptable_shape",
+  "subtitle": "Surveillance of infection risks, rates, trends and outcomes.",
+  "doc_no": "HIC/POL/05"
+}
