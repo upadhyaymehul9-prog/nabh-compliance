@@ -1,0 +1,103 @@
+{
+  "standard_code": "IMS.6",
+  "chapter": "IMS",
+  "oe_codes": [
+    "IMS.6.a",
+    "IMS.6.b",
+    "IMS.6.c",
+    "IMS.6.d",
+    "IMS.6.e"
+  ],
+  "policy_title": "Regular Review of Medical Records",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} reviews medical records periodically; uses a representative sample of both active and discharged patients based on statistical principles; has identified individuals conduct the review; reviews against identified parameters; and undertakes appropriate corrective and preventive action (CAPA) on deficiencies pointed out in the review.\n\nIMS.6 owns the medical-record review itself. PSQ owns the wider quality programme (PSQ.1 committees, PSQ.3 clinical audit). Record-review findings may feed PSQ; they do not replace clinical audit.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to the medical-record review committee (or the identified reviewers), the «Medical Records Officer», treating doctors, the Medical Superintendent and the Quality Coordinator at {{HOSPITAL_NAME}}.\n\nIt covers the five elements IMS.6.a–e. It does not cover record structure and entry rules (IMS.2), continuity items (IMS.3), confidentiality (IMS.4), or retention (IMS.5).\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- PSQ.1 owns the quality improvement programme and its committees. PSQ.3 owns clinical audit. This policy owns medical-record review as a records-completeness and records-quality exercise. Findings may be referred to PSQ; the review method stays here.\n- IMS.2 and IMS.3 supply the parameters (unique identifier, authentication, abbreviations, continuity items). This policy owns that those parameters are applied to a sample on a schedule.\n- PRE.6 owns patient complaints. A complaint that reveals a record deficiency may trigger a targeted review; it does not replace the periodic sample.",
+  "policy_statement": "{{HOSPITAL_NAME}} reviews medical records periodically. The review uses a representative sample of both active and discharged patients, based on statistical principles. Identified individuals conduct the review against identified parameters. Appropriate corrective and preventive measures are undertaken on the deficiencies pointed out in the review.\n\n{{HOSPITAL_NAME}} does not treat a one-off look at a few files before an assessment as a review programme, and does not leave deficiencies without CAPA.",
+  "procedure_steps": [
+    "5.1 Periodic review of medical records\n\nMedical records are reviewed periodically.\n\nThe review is conducted «monthly». The «Quality Coordinator» holds the review calendar. A missed month is recorded as a non-conformity and is made up in the following period — it is not skipped.\n\n\"Periodically\" means a planned interval, not an assessment-eve exercise. IMS.6.a is the requirement that the review happens on that interval.",
+    "5.2 Representative sample of active and discharged patients\n\nThe review uses a representative sample of both active and discharged patients, based on statistical principles.\n\nEach review cycle draws:\n\n- active (currently admitted or currently under care) records; and\n- discharged (including deaths and transfers-out) records.\n\nThe sample is drawn from the records register using «systematic sampling from the unique-identifier list, or another documented method that does not let the reviewer pick favourite files». The sample size is «at least ten records per month, or all records if fewer than ten were opened in the period», with both active and discharged represented.\n\nA sample of only complete-looking files, or of one department only, is not representative.",
+    "5.3 Review conducted by identified individuals\n\nThe review is conducted by identified individuals.\n\nThe Medical Superintendent names the reviewers in writing. Reviewers are «the Quality Coordinator, the Medical Records Officer, and at least one treating doctor who did not write the sampled record». Names, designations and the period of appointment are recorded.\n\nA person does not review a record they wrote. The medical-record review committee (or the named reviewer group) meets «monthly» to confirm the sample, the findings and the CAPA.\n\nIdentified means named — not \"the quality team\" as an unnamed group.",
+    "5.4 Review based on identified parameters\n\nThe review of records is based on identified parameters.\n\nThe parameter list is approved by the Medical Superintendent and held by the Quality Coordinator. It includes at least:\n\n- unique identifier present (IMS.2.a);\n- contents complete, up-to-date and chronological (IMS.2.b);\n- author identifiable; entry named, signed, dated and timed (IMS.2.c–d);\n- authorised abbreviations only (IMS.2.e);\n- continuity items: admission reason, diagnosis, plan, assessments, investigations, procedures, care provided (IMS.3.a–b);\n- discharge-summary copy or, in death, cause-of-death certificate copy (IMS.3.d–e);\n- transfer details where applicable (IMS.3.c).\n\nEach sampled record is scored against the list. Parameters are not invented on the day of review.",
+    "5.5 Corrective and preventive action on deficiencies\n\nAppropriate corrective and preventive measures are undertaken on the deficiencies pointed out in the review.\n\nEvery deficiency is logged: record identifier, parameter failed, who will act, due date, and closure. Immediate correction (complete a missing signature, file a missing copy) is done by the treating team. Preventive action (re-brief a department, change a form, add a prompt in the electronic health record (EHR)) is decided by the review committee.\n\nThe Quality Coordinator tracks CAPA to closure. Recurring deficiencies of the same parameter in «two consecutive months» trigger root-cause analysis and a report to the Medical Superintendent.\n\nAggregate findings (deficiency rate by parameter) are reported to the PSQ quality programme «quarterly» as input — they do not replace PSQ.3 clinical audit."
+  ],
+  "responsibility": "Medical Superintendent\n- Names the reviewers and approves the parameter list.\n- Receives reports of recurring deficiencies.\n\nMedical-record review committee (identified reviewers)\n- Draws the sample, scores records against parameters, and decides CAPA.\n\nMedical Records Officer (or the person carrying that role)\n- Produces the records register for sampling.\n- Supports retrieval of active and discharged records for review.\n\nQuality Coordinator\n- Holds the review calendar, parameter list and CAPA tracker.\n- Reports aggregate findings to the PSQ programme.\n- Audits this policy «quarterly» (see section 7).\n\nTreating doctors\n- Complete immediate corrections on records they own.\n- Do not review their own sampled records.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Information Management System chapter, standard IMS.6.\n- Internal documents of {{HOSPITAL_NAME}}: medical-record review calendar; named-reviewer list; parameter list; sample sheets; CAPA log.\n- Cross-referenced policies: IMS.2 and IMS.3 (parameters); PSQ.1 and PSQ.3 (quality programme and clinical audit — not duplicated here).",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator and the Medical Records Officer.\n\nCopies issued to: named reviewers; department heads; records office.\n\nThe current version is available to all staff at the «records-office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "CAPA — corrective and preventive action\nEHR — electronic health record\nIMS — Information Management System (NABH SHCO chapter 10)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPSQ — Patient Safety and Quality (NABH SHCO chapter)\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice. {{HOSPITAL_NAME}} must verify its obligations under applicable data-protection law (data-protection law has evolved since 2022). That verification is the hospital's duty; it is not a cited requirement of this NABH SHCO 3rd Edition standard.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "IMS.6.a",
+      "requirement": "The medical records are reviewed periodically.",
+      "steps": "Statement of intent; Section 3; 5.1 Periodic review of medical records; Section 4 item 1",
+      "responsible": "Quality Coordinator (calendar); medical-record review committee (conduct)",
+      "records": [
+        "Review calendar with the defined interval.",
+        "Minutes or review sheets for each scheduled cycle.",
+        "Record of any missed cycle and the make-up review."
+      ]
+    },
+    {
+      "oe_code": "IMS.6.b",
+      "requirement": "The review uses a representative sample of both active and discharged patients, based on statistical principles.",
+      "steps": "Section 3; 5.2 Representative sample of active and discharged patients; Section 4 item 2",
+      "responsible": "Medical Records Officer (records register); identified reviewers (draw sample)",
+      "records": [
+        "Documented sampling method.",
+        "Each cycle's sample list showing active and discharged records.",
+        "Evidence the reviewer did not hand-pick files."
+      ]
+    },
+    {
+      "oe_code": "IMS.6.c",
+      "requirement": "The review is conducted by identified individuals.",
+      "steps": "Section 3; 5.3 Review conducted by identified individuals; Section 4 item 3",
+      "responsible": "Medical Superintendent (name reviewers); named reviewers (conduct)",
+      "records": [
+        "Written appointment of named reviewers with designation and period.",
+        "Attendance of named reviewers at each review cycle.",
+        "Evidence that a writer did not review their own record."
+      ]
+    },
+    {
+      "oe_code": "IMS.6.d",
+      "requirement": "The review of records is based on identified parameters.",
+      "steps": "Section 3; 5.4 Review based on identified parameters; Section 4 item 4",
+      "responsible": "Medical Superintendent (approve list); Quality Coordinator (hold list); reviewers (score)",
+      "records": [
+        "Approved parameter list covering IMS.2 and IMS.3 items.",
+        "Scored sheets for each sampled record against that list.",
+        "Evidence parameters were not invented on the day of review."
+      ]
+    },
+    {
+      "oe_code": "IMS.6.e",
+      "requirement": "Appropriate corrective and preventive measures are undertaken on the deficiencies pointed out in the review.",
+      "steps": "Section 3; 5.5 Corrective and preventive action on deficiencies; Section 4 item 5",
+      "responsible": "Review committee (decide CAPA); Quality Coordinator (track to closure); treating doctors (immediate correction)",
+      "records": [
+        "CAPA log with deficiency, owner, due date and closure.",
+        "Root-cause analysis when the same parameter fails two consecutive months.",
+        "Quarterly aggregate report to the PSQ programme."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "IMS.6 v2 template test (2026-08-20). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: IMS.6.a–e PDF index 140. No asterisked OEs — whole standard is Tier 2. IMS.6.a is Core.\n\nSHAPE: Five What-we-do subsections (5.1–5.5). No stop-work. Disclaimer accreditation-only plus data-protection forward-note.\n\nBOUNDARY: IMS.6 owns medical-record review; PSQ.1/PSQ.3 own the wider quality programme and clinical audit. Parameters drawn from IMS.2 and IMS.3; methods not duplicated.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "IMS v2 template: PRE v2 shape, plain English, IMS roles, five steps, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation regularly reviews medical records — a representative sample of active and discharged patients, by identified reviewers, against identified parameters — and takes corrective and preventive action on deficiencies.",
+  "exceptions": "The following are prohibited. There is no convenience exception.\n\n1. Going more than the defined review interval without a documented medical-record review.\n2. Sampling only discharged patients, or only active patients, or only \"good\" files.\n3. Allowing unidentified persons to conduct the review.\n4. Reviewing without a written parameter list.\n5. Recording deficiencies without corrective and preventive action and follow-up.\n\nStaff who find that a scheduled review was skipped report it to the «Quality Coordinator» or the «Medical Superintendent» within the same working week.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit checks records and practice.\n\nWhat is monitored each quarter:\n\n- Review calendar: no skipped interval.\n- Sample composition: active and discharged both present; method documented.\n- Reviewers named and current; no self-review.\n- Parameter list used as written.\n- CAPA log: deficiencies closed or escalated.\n\nRoot-cause analysis is required when a scheduled review is skipped, or when the same parameter fails for two consecutive months without CAPA.\n\nThis policy is reviewed «annually», and sooner when IMS.2 or IMS.3 parameters change.",
+  "training_competency": "Named reviewers, the Medical Records Officer, treating doctors and the Quality Coordinator are trained on this policy at appointment to the review role and «once a year» after that. Training covers sampling, the parameter list, self-review prohibition and CAPA.\n\nStaff acknowledgement\n\nI have read this Regular Review of Medical Records policy of {{HOSPITAL_NAME}}. I understand the sampling rule, the identified-reviewer rule, the parameter list and that deficiencies require CAPA.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per person. The Quality Coordinator holds signed acknowledgements with the Medical Records Officer.)",
+  "resources_required": "Document number: «IMS/POL/06»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "ims_v2_adoptable_shape",
+  "subtitle": "Periodic medical-record review, sampling, parameters and CAPA.",
+  "doc_no": "«IMS/POL/06»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the Medical Records Officer."
+}

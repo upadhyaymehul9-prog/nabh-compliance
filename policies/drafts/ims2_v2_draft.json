@@ -1,0 +1,103 @@
+{
+  "standard_code": "IMS.2",
+  "chapter": "IMS",
+  "oe_codes": [
+    "IMS.2.a",
+    "IMS.2.b",
+    "IMS.2.c",
+    "IMS.2.d",
+    "IMS.2.e"
+  ],
+  "policy_title": "Complete and Accurate Medical Record",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} assigns a unique identifier to every medical record; identifies and documents the contents so the record is a complete, up-to-date and chronological account of patient care; restricts entries to authorised staff whose identity can be established; requires every entry to be named, signed, dated and timed; and permits only authorised abbreviations.\n\nIMS.2 owns the medical-record system: structure, who may write, and how an entry is authenticated. Care chapters own the clinical content of those entries. IMS.3 owns continuity items (admission reason, assessments, transfer, discharge-summary copy, cause-of-death copy, access). AAC.2 owns generation of the unique identification number at registration.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to treating doctors, nurses and other authorised record-writers, the «Medical Records Officer», the Medical Superintendent and the Quality Coordinator at {{HOSPITAL_NAME}}.\n\nIt covers the five elements IMS.2.a–e. It does not cover continuity-of-care contents (IMS.3), confidentiality and disclosure (IMS.4), retention (IMS.5), or medical-record review (IMS.6).\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- AAC.2.b generates the unique identification number at the end of registration. This policy assigns that unique identifier to the medical record so every record is the same number as the registration identifier.\n- Care chapters (AAC, COP, MOM, HIC) own what is clinically written. This policy owns that the record is complete, chronological and authenticated.\n- IMS.3 owns specific continuity items (discharge-summary copy, cause-of-death copy, transfer details). This policy owns the general content list and entry rules.\n- HRM.6 owns staff personal files. This policy owns the patient medical record.",
+  "policy_statement": "Every patient cared for by {{HOSPITAL_NAME}} has a complete and accurate medical record.\n\nA unique identifier is assigned to the medical record. Contents are identified and documented and provide a complete, up-to-date and chronological account of patient care. Authorised staff make the entry; the author of the entry can be identified. Every entry is named, signed, dated and timed. The medical record has only authorised abbreviations.\n\n{{HOSPITAL_NAME}} does not keep an unidentified record, an unsigned or undated entry, or an abbreviation that is not on the authorised list.",
+  "procedure_steps": [
+    "5.1 Unique identifier assigned to the medical record\n\nThe unique identifier is assigned to the medical record.\n\nThe identifier is the unique identification number generated at the end of registration under AAC.2.b. The «Medical Records Officer» confirms that the same number appears on the record cover (paper) or the patient header (electronic health record (EHR)), on every continuation sheet, and on every form filed in that record.\n\nA record without the unique identifier is not filed. Duplicate numbers are investigated the same working day. Temporary or \"unknown\" identifiers used in an unidentified-patient emergency are replaced with the registration number as soon as identity is established, with the replacement recorded.",
+    "5.2 Contents identified, documented and chronological\n\nThe contents of the medical record are identified, documented and provide a complete, up-to-date and chronological account of patient care.\n\n{{HOSPITAL_NAME}} maintains a written contents list for the medical record. The list names the sections the hospital uses — «face sheet, consent forms, initial assessment, progress notes, medication record, investigation reports, operative notes, nursing notes, and discharge or death documents». Forms are filed in that order, or the EHR equivalent is structured to the same list.\n\nEntries are chronological. Late entries are marked as late, timed at the time of writing, and cross-referenced to the event they describe. The record is updated during the episode, not assembled only at discharge.\n\nIMS.2.b is asterisked: a contents list that is not followed, or a record that cannot be read in time order, fails the OE. IMS.3 adds specific continuity items on top of this structure.",
+    "5.3 Authorised staff make entries; the author can be identified\n\nAuthorised staff make the entry in the medical record. The author of the entry can be identified.\n\nThe «Medical Superintendent» holds a list of staff categories authorised to write in the medical record — «treating doctors, nurses, the pharmacist for medication-reconciliation entries, and named allied-health professionals for their own notes». A person not on that list does not write in the record.\n\nEach author is identifiable: printed name and designation with a signature (paper), or a unique user identity that is not shared (EHR). Shared logins are prohibited. Students and trainees write only under a named supervisor who countersigns.",
+    "5.4 Named, signed, dated and timed entries\n\nEvery entry in the medical record is named, signed, dated and timed.\n\nThe writer prints or types their name, signs (or authenticates electronically), and records the date and time of the entry. Time is recorded to the minute using the «24-hour clock».\n\nA correction is made by a single line through the error, the word \"error\", the correct text, and the writer's name, signature, date and time. Correction fluid, obliteration and deletion of an electronic entry without an amendment trail are prohibited.\n\nA verbal order is written by the receiving nurse, named, signed, dated and timed, and countersigned by the ordering doctor within «24 hours». MOM.4 owns the medication-order format; this step owns the authentication of the record entry.",
+    "5.5 Authorised abbreviations only\n\nThe medical record has only authorised abbreviations.\n\nThe «Medical Records Officer» holds the authorised-abbreviations list, approved by the Medical Superintendent. The list is available at every nursing station and in the EHR. Abbreviations not on the list are written out in full.\n\nDangerous abbreviations (for example those that can be read as a different dose or drug) are not authorised. The list is reviewed «annually» or when a near-miss related to an abbreviation is reported under PSQ.5.\n\nIMS.6 reviews a sample of records against this list."
+  ],
+  "responsibility": "Medical Superintendent\n- Approves the authorised-writer list and the authorised-abbreviations list.\n- Accountable for the medical-record system.\n\nMedical Records Officer (or the person carrying that role)\n- Assigns the unique identifier to the record and checks filing order.\n- Holds the contents list and the authorised-abbreviations list.\n\nTreating doctors and nurses\n- Make named, signed, dated and timed entries for the care they give.\n- Do not use unauthorised abbreviations.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see section 7).\n- Feeds abbreviation and authentication findings to IMS.6 review.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Information Management System chapter, standard IMS.2.\n- Electronic Health Record (EHR) Standards for India, 2016 — guidance cited by the chapter.\n- Internal documents of {{HOSPITAL_NAME}}: medical-record contents list; authorised-writer list; authorised-abbreviations list; unique-identifier assignment check.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Medical Records Officer and the Quality Coordinator.\n\nCopies issued to: all clinical departments; nursing stations; records office.\n\nThe current version is available to all staff at the «records-office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "CAPA — corrective and preventive action\nEHR — electronic health record\nIMS — Information Management System (NABH SHCO chapter 10)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice. {{HOSPITAL_NAME}} must verify its obligations under applicable data-protection law (data-protection law has evolved since 2022). That verification is the hospital's duty; it is not a cited requirement of this NABH SHCO 3rd Edition standard.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "IMS.2.a",
+      "requirement": "The unique identifier is assigned to the medical record.",
+      "steps": "Statement of intent; Section 3; 5.1 Unique identifier assigned to the medical record; Section 4 item 1",
+      "responsible": "Medical Records Officer (assign and check); registration (source number from AAC.2.b)",
+      "records": [
+        "Medical record showing the unique identification number on cover/header and continuation sheets.",
+        "Same-day investigation record for any duplicate number.",
+        "Quarterly audit sample of identifier presence."
+      ]
+    },
+    {
+      "oe_code": "IMS.2.b",
+      "requirement": "The contents of the medical record are identified, documented and provide a complete, up-to-date and chronological account of patient care.",
+      "steps": "Section 3; 5.2 Contents identified, documented and chronological; Section 4 item 5",
+      "responsible": "Medical Records Officer (contents list); treating doctors and nurses (keep the record current)",
+      "records": [
+        "Written medical-record contents list.",
+        "Sample records filed or structured in that order, chronological, with late entries marked.",
+        "Quarterly audit of completeness against the contents list."
+      ]
+    },
+    {
+      "oe_code": "IMS.2.c",
+      "requirement": "Authorised staff make the entry in the medical record; the author of the entry can be identified.",
+      "steps": "Section 3; 5.3 Authorised staff make entries; Section 4 item 2",
+      "responsible": "Medical Superintendent (authorised-writer list); each writer (identifiable entry)",
+      "records": [
+        "Approved list of staff categories authorised to write in the medical record.",
+        "Sample entries with identifiable author (name/designation or unique user identity).",
+        "Evidence that shared logins are not in use."
+      ]
+    },
+    {
+      "oe_code": "IMS.2.d",
+      "requirement": "Entry in the medical record is named, signed, dated and timed.",
+      "steps": "Section 3; 5.4 Named, signed, dated and timed entries; Section 4 item 3",
+      "responsible": "Treating doctors and nurses (authenticate every entry)",
+      "records": [
+        "Sample entries showing name, signature, date and time.",
+        "Correction samples showing single-line strike-through and re-authentication.",
+        "Verbal-order countersignature records within the defined time."
+      ]
+    },
+    {
+      "oe_code": "IMS.2.e",
+      "requirement": "The medical record has only authorised abbreviations.",
+      "steps": "Section 3; 5.5 Authorised abbreviations only; Section 4 item 4",
+      "responsible": "Medical Records Officer (hold list); Medical Superintendent (approve list)",
+      "records": [
+        "Approved authorised-abbreviations list available at nursing stations and in the EHR.",
+        "Annual review of the list.",
+        "IMS.6 sample findings on unauthorised abbreviations."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "IMS.2 v2 template test (2026-08-20). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: IMS.2.a–e PDF index 138. IMS.2.b is asterisked (Tier 1). IMS.2.a/c/d/e are not asterisked (Tier 2). IMS.2.a and IMS.2.b are Core. Source grammar \"provides a complete\" cleaned to \"provide a complete\".\n\nSHAPE: Five What-we-do subsections (5.1–5.5). No stop-work. Disclaimer accreditation-only plus data-protection forward-note.\n\nBOUNDARY: AAC.2.b generates the unique identification number; IMS.2.a assigns it to the medical record.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "IMS v2 template: PRE v2 shape, plain English, IMS roles, five steps, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Every patient cared for by the organisation has a complete and accurate medical record — uniquely identified, chronological, made only by authorised staff, named, signed, dated and timed, and using only authorised abbreviations.",
+  "exceptions": "The following are prohibited. There is no convenience exception.\n\n1. Opening or filing a medical record without the unique identifier generated at registration (AAC.2.b).\n2. An unauthorised person making an entry in a medical record.\n3. An entry that is not named, signed, dated and timed.\n4. Using an abbreviation that is not on the authorised-abbreviations list.\n5. Leaving the record without a complete, up-to-date and chronological account of the care given.\n\nStaff who find an unauthorised, unsigned, undated or unidentified entry report it the same shift to the «Medical Records Officer» or the «treating doctor».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit checks records and practice.\n\nWhat is monitored each quarter:\n\n- Sample of records: unique identifier present on cover/header and continuation sheets.\n- Sample of entries: author identifiable; named, signed, dated and timed.\n- Unauthorised abbreviations counted against the authorised list.\n- Contents list followed; chronology intact including late-entry marking.\n\nRoot-cause analysis is required when an unauthorised person is found to have written in a record, or when a sampled record has no unique identifier.\n\nThis policy is reviewed «annually», and sooner when the EHR or the forms set changes.",
+  "training_competency": "Treating doctors, nurses, the Medical Records Officer and other authorised writers are trained on this policy at induction and «once a year» after that. Training covers the unique identifier, who may write, authentication of entries, and the authorised-abbreviations list.\n\nStaff acknowledgement\n\nI have read this Complete and Accurate Medical Record policy of {{HOSPITAL_NAME}}. I understand that only authorised staff write in the record, that every entry is named, signed, dated and timed, and that only authorised abbreviations are used.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per person. The Medical Records Officer holds signed acknowledgements.)",
+  "resources_required": "Document number: «IMS/POL/02»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Medical Records Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "ims_v2_adoptable_shape",
+  "subtitle": "Unique identifier, contents, authorised writers and authenticated entries.",
+  "doc_no": "«IMS/POL/02»",
+  "acknowledgement_note": "The Medical Records Officer holds signed acknowledgements."
+}

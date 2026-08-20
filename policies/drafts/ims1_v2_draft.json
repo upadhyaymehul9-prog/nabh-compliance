@@ -1,0 +1,104 @@
+{
+  "standard_code": "IMS.1",
+  "chapter": "IMS",
+  "oe_codes": [
+    "IMS.1.a",
+    "IMS.1.b",
+    "IMS.1.c",
+    "IMS.1.d",
+    "IMS.1.e"
+  ],
+  "policy_title": "Information Needs of Stakeholders — Capture and Analysis of Data",
+  "purpose": "This policy describes how {{HOSPITAL_NAME}} identifies, captures and disseminates the information needs of patients, visitors, staff, management, external agencies and the community; aligns information-management and technology acquisitions with those needs; stores and retrieves data accordingly; contributes to external databases in accordance with law and regulations; and standardises data collection so that data can be analysed.\n\nThe chapter intent is that the right information is available to the right person at the right time, in an authenticated, secure and accurate manner.\n\nIMS.1 owns the information-needs system and the data-capture/analysis method. IMS.2 owns the medical record itself. IMS.4 owns confidentiality, integrity and security. IMS.5 owns document control and retention.\n\nWords marked «like this» are defaults a small hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to the «Medical Records Officer» (or the person carrying that role), the «IT / information-systems in-charge», the Medical Superintendent, the Quality Coordinator, and staff who collect or use organisational information at {{HOSPITAL_NAME}}.\n\nIt covers the five elements IMS.1.a–e. It does not cover medical-record contents (IMS.2), continuity entries (IMS.3), confidentiality/security mechanics (IMS.4), retention and destruction (IMS.5), or medical-record review (IMS.6).\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- IMS.2 owns the complete and accurate medical record. This policy owns organisation-wide information needs and data analysis, not the clinical-record form.\n- PSQ.2 owns key indicators. This policy owns that data collection is standardised so those indicators (and other needs) can be met.\n- IMS.4 owns confidentiality when information is disseminated. This policy owns who needs what information, not the disclosure gate.\n- External-database contribution is done in accordance with law and regulations. This policy does not import a named Act as a checklist.",
+  "policy_statement": "{{HOSPITAL_NAME}} identifies, captures and disseminates the information needs of patients, visitors, staff, management, external agencies and the community.\n\nInformation-management and technology acquisitions and the maintenance plan are in consonance with those identified needs. Data is stored and retrieved according to those needs.\n\n{{HOSPITAL_NAME}} contributes to external databases in accordance with law and regulations. Processes for data collection are standardised, and data is analysed to meet the information needs.\n\n{{HOSPITAL_NAME}} does not buy or keep an information system that does not match identified needs, and does not collect data that nobody uses.",
+  "procedure_steps": [
+    "5.1 Identify, capture and disseminate information needs\n\n{{HOSPITAL_NAME}} identifies, captures and disseminates the information needs of patients, visitors, staff, management, external agencies and the community.\n\nThe «Medical Records Officer» holds an information-needs register. The register lists, for each stakeholder group:\n\n- what information they need (for example waiting times and visiting hours for patients and visitors; duty rosters and protocols for staff; occupancy and quality indicators for management; statutory returns for external agencies; public-health notices for the community);\n- the source of that information;\n- who disseminates it, by what channel (notice board, counselling, intranet, statutory portal), and how often.\n\nThe register is reviewed «annually» and when a new service, a new statutory return or a significant change in patient mix is introduced. Obsolete information is withdrawn so that staff, patients and visitors are not confused by out-of-date notices (chapter intent).\n\nIMS.1.a is asterisked: the register is a documented method, not a remembered list.",
+    "5.2 Information-management and technology acquisitions and maintenance\n\nInformation management and technology acquisitions and the maintenance plan are in consonance with the identified information needs.\n\nBefore {{HOSPITAL_NAME}} buys, upgrades or renews a hospital information system, electronic health record (EHR) module, laboratory or imaging interface, or related hardware, the «IT / information-systems in-charge» checks the proposal against the information-needs register. A purchase that does not serve a documented need is not approved.\n\nA maintenance plan covers backups, user support, version control and planned downtime. The plan is held by the «IT / information-systems in-charge» and reviewed «annually» with the Medical Records Officer.\n\nGuidance the PDF cites for this chapter (EHR Standards for India 2016; Ayushman Bharat Digital Mission (ABDM) Health Data Management Policy; ISO 27001 / ISO 27799) is used as guidance for acquisitions, not as a copied statute.",
+    "5.3 Store and retrieve data according to information needs\n\n{{HOSPITAL_NAME}} stores and retrieves data according to its information needs.\n\nEach entry on the information-needs register names where the data lives (paper file, EHR module, indicator spreadsheet, statutory portal) and how an authorised person retrieves it. Retrieval is tested «quarterly» for a sample of needs — including at least one clinical retrieval and one management retrieval.\n\nStorage media, whether paper or electronic, are labelled and indexed so that a named record can be found without searching the whole store. IMS.5 owns retention periods and document control; this step owns that stored data can be retrieved to meet a current need.\n\nIMS.1.c is asterisked: storage without retrievability fails the OE.",
+    "5.4 Contribute to external databases in accordance with law and regulations\n\n{{HOSPITAL_NAME}} contributes to external databases in accordance with the law and regulations.\n\nThe «Medical Records Officer» keeps a register of external databases the hospital contributes to. Each entry states: the database, the data sent, the frequency, the legal or regulatory basis, and who submits it. Contribution without a recorded basis does not occur.\n\nThe PDF frames contribution as \"in accordance with the law and regulations.\" This step stays at that general level. It does not import a named data-protection Act as a checklist. Examples of databases a small hospital may be required or authorised to contribute to include «notifiable-disease reporting and haemovigilance returns where those programmes apply». The hospital verifies which returns apply to it.\n\nIMS.4 owns the disclosure gate for privileged health information. A contribution that includes patient-identifiable data also meets IMS.4.d (patient authorisation and/or as required by law).",
+    "5.5 Standardised data collection and analysis\n\nProcesses for data collection are standardised and data is analysed to meet the information needs.\n\nThe «Quality Coordinator» and the «Medical Records Officer» issue a data-definition sheet for each data item used to meet an information need: definition, source, collector, frequency, and the analysis it feeds. Departments do not invent parallel definitions.\n\nData is analysed at the interval the information-needs register sets — «monthly» for operational needs and «quarterly» for management and quality needs. Analysis output is disseminated to the stakeholder named on the register.\n\nPSQ.2 owns the key-indicator set. This step owns that collection is standardised so analysis is possible. Indicator choice stays with PSQ."
+  ],
+  "responsibility": "Medical Superintendent\n- Approves the information-needs register and technology-acquisition decisions that depend on it.\n- Accountable for lawful contribution to external databases.\n\nMedical Records Officer (or the person carrying that role)\n- Holds the information-needs register and the external-database register.\n- Tests storage and retrieval with the IT in-charge.\n\nIT / information-systems in-charge\n- Matches acquisitions and the maintenance plan to identified needs.\n- Operates backups and retrieval for electronic stores.\n\nQuality Coordinator\n- Holds data-definition sheets and oversees analysis against information needs.\n- Audits this policy «quarterly» (see section 7).",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Standards for Small Healthcare Organisations, 3rd Edition — Information Management System chapter, standard IMS.1.\n- Electronic Health Record (EHR) Standards for India, 2016 (Ministry of Health and Family Welfare) — guidance cited by the chapter, not a copied statute.\n- Ayushman Bharat Digital Mission (ABDM) Health Data Management Policy (National Health Authority) — guidance cited by the chapter.\n- ISO/IEC 27001 and ISO 27799:2016 — guidance cited by the chapter for information-security management.\n- Internal documents of {{HOSPITAL_NAME}}: information-needs register; technology acquisition and maintenance plan; external-database contribution register; data-definition sheets.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Medical Records Officer and the Quality Coordinator.\n\nCopies issued to: IT / information-systems in-charge; department heads; quality office.\n\nThe current version is available to all staff at the «records-office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "ABDM — Ayushman Bharat Digital Mission\nCAPA — corrective and preventive action\nEHR — electronic health record\nIMS — Information Management System (NABH SHCO chapter 10)\nIT — information technology\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nSHCO — Standards for Small Healthcare Organisations",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH SHCO 3rd Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice. {{HOSPITAL_NAME}} must verify its obligations under applicable data-protection law (data-protection law has evolved since 2022). That verification is the hospital's duty; it is not a cited requirement of this NABH SHCO 3rd Edition standard.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "IMS.1.a",
+      "requirement": "The organisation identifies, captures and disseminates the information needs of the patients, visitors, staff, management, external agencies and community.",
+      "steps": "Statement of intent; Section 3; 5.1 Identify, capture and disseminate information needs; Section 4 item 1",
+      "responsible": "Medical Records Officer (hold register); Medical Superintendent (approve)",
+      "records": [
+        "Information-needs register covering patients, visitors, staff, management, external agencies and community.",
+        "Annual review record and evidence that obsolete notices were withdrawn.",
+        "Sample of disseminated information matched to a register entry (channel and frequency).",
+        "Quarterly audit sample of stakeholder coverage."
+      ]
+    },
+    {
+      "oe_code": "IMS.1.b",
+      "requirement": "Information management and technology acquisitions and maintenance plan are in consonance with the identified information needs.",
+      "steps": "Section 3; 5.2 Information-management and technology acquisitions and maintenance; Section 4 item 2",
+      "responsible": "IT / information-systems in-charge (match acquisitions); Medical Superintendent (approve purchases)",
+      "records": [
+        "Written check of each acquisition against the information-needs register.",
+        "Current technology maintenance plan (backups, support, version control, downtime).",
+        "Annual review of the maintenance plan with the Medical Records Officer."
+      ]
+    },
+    {
+      "oe_code": "IMS.1.c",
+      "requirement": "The organisation stores and retrieves data according to its information needs.",
+      "steps": "Section 3; 5.3 Store and retrieve data according to information needs; Section 4 item 3",
+      "responsible": "Medical Records Officer (index stores); IT / information-systems in-charge (electronic retrieval)",
+      "records": [
+        "Storage location and retrieval method named on each information-needs register entry.",
+        "Quarterly retrieval-test log covering at least one clinical and one management retrieval.",
+        "Index or labelling scheme for paper and electronic stores."
+      ]
+    },
+    {
+      "oe_code": "IMS.1.d",
+      "requirement": "The organisation contributes to external databases in accordance with the law and regulations.",
+      "steps": "Section 3; 5.4 Contribute to external databases; Section 4 item 4",
+      "responsible": "Medical Records Officer (hold register); Medical Superintendent (accountable for basis)",
+      "records": [
+        "External-database contribution register with database, data, frequency, basis and submitter.",
+        "Submission receipts or logs for each contribution.",
+        "Evidence that patient-identifiable contributions also meet IMS.4.d."
+      ]
+    },
+    {
+      "oe_code": "IMS.1.e",
+      "requirement": "Processes for data collection are standardised and data is analysed to meet the information needs.",
+      "steps": "Section 3; 5.5 Standardised data collection and analysis; Section 4 item 5",
+      "responsible": "Quality Coordinator (data-definition sheets and analysis); Medical Records Officer (collection method)",
+      "records": [
+        "Data-definition sheet for each analysed data item.",
+        "Analysis outputs at the interval set on the information-needs register.",
+        "Evidence that department-level parallel definitions were not in use."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "IMS.1 v2 template test (2026-08-20). PDF md5 39e3bc86d73d651b9cfef283bbf018a9.\n\nSOURCE: Chapter intent PDF index 137. IMS.1.a–e PDF index 138. IMS.1.a and IMS.1.c are asterisked (Tier 1). IMS.1.b, IMS.1.d, IMS.1.e are not asterisked (Tier 2). IMS.1.a is Core.\n\nSHAPE: Five What-we-do subsections (5.1–5.5). No stop-work. Disclaimer accreditation-only plus data-protection forward-note (hospital duty to check; DPDP Act 2023 not cited). IMS roles only.\n\nFLAG: IMS.1.d \"in accordance with the law and regulations\" kept at that general level — no named Act imported as a checklist.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "IMS v2 template: PRE v2 shape, plain English, IMS roles, five steps, no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The right information is available to the right person at the right time — stakeholder information needs are identified, captured and disseminated, and data is stored, retrieved and analysed against those needs.",
+  "exceptions": "The following are prohibited. There is no convenience exception.\n\n1. Operating without a current, documented map of information needs covering patients, visitors, staff, management, external agencies and the community.\n2. Acquiring or maintaining an information-management or technology system that is not matched to the identified information needs.\n3. Storing data that cannot be retrieved when a documented information need requires it.\n4. Contributing patient or organisational data to an external database without a recorded legal or regulatory basis.\n5. Collecting the same data by different methods in different departments so that it cannot be analysed.\n\nStaff who identify one of these gaps report it to the «Medical Records Officer» or the «Quality Coordinator» within the same working week.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit checks records and practice.\n\nWhat is monitored each quarter:\n\n- Information-needs register is current and covers all six stakeholder groups.\n- A sample technology acquisition or maintenance item is matched to a documented need.\n- Retrieval test passed for the sampled needs.\n- External-database register entries have a recorded legal or regulatory basis.\n- Data-definition sheets exist for analysed items; parallel definitions are absent.\n\nRoot-cause analysis is required when a documented information need cannot be met from stored data, or when a contribution to an external database has no recorded basis.\n\nThis policy is reviewed «annually», and sooner when a new service or a new statutory return is introduced.",
+  "training_competency": "The Medical Records Officer, the IT / information-systems in-charge, department heads and the Quality Coordinator are briefed on this policy at appointment and «once a year» after that. Briefing covers the information-needs register, retrieval tests and the external-database register.\n\nStaff acknowledgement\n\nI have read this Information Needs of Stakeholders policy of {{HOSPITAL_NAME}}. I understand the information-needs register, standardised data collection and the rule that external-database contribution requires a recorded legal or regulatory basis.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per person. The Medical Records Officer holds signed acknowledgements.)",
+  "resources_required": "Document number: «IMS/POL/01»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Medical Records Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "ims_v2_adoptable_shape",
+  "subtitle": "Information needs, data capture, storage, retrieval and analysis.",
+  "doc_no": "«IMS/POL/01»",
+  "acknowledgement_note": "The Medical Records Officer holds signed acknowledgements."
+}
