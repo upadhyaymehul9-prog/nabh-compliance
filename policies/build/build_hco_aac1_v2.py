@@ -149,6 +149,7 @@ DOCUMENT_CONTROL = document_control(
     doc_no=D("HCO/AAC/POL/01"),
     version=VERSION,
     prepared_by=D("Quality Coordinator"),
+    draft_label="HCO Full v2 draft",
 )
 
 REFERENCES = f"""- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Guidebook to Accreditation Standards for Hospitals, 6th Edition — Access, Assessment and Continuity of Care (AAC), standard AAC.1.
@@ -264,6 +265,8 @@ def main() -> int:
         "doc_no": D("HCO/AAC/POL/01"),
         "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
         "stop_work": "",
+        "edition_label": HCO_EDITION_LABEL,
+        "render_basename": "HCO.AAC.1",
     }
     emit_pre_v2(
         draft,

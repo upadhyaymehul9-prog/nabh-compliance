@@ -332,6 +332,8 @@ def main() -> int:
         "template_test": "hco_aac_v2_adoptable_shape",
         "subtitle": "Laboratory quality assurance, IQC/EQA and safety.",
         "doc_no": D("HCO/AAC/POL/07"),
+        "edition_label": HCO_EDITION_LABEL,
+        "render_basename": "HCO.AAC.7",
     }
     emit_pre_v2(
         draft,

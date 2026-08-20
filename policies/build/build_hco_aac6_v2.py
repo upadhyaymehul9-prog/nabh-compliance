@@ -399,6 +399,8 @@ def main() -> int:
         "template_test": "hco_aac_v2_adoptable_shape",
         "subtitle": "Laboratory services commensurate with clinical scope.",
         "doc_no": D("HCO/AAC/POL/06"),
+        "edition_label": HCO_EDITION_LABEL,
+        "render_basename": "HCO.AAC.6",
     }
     emit_pre_v2(
         draft,

@@ -7,7 +7,7 @@
 
 Document number: «HCO/AAC/POL/04»
 Issue number: «01»
-Version: 2.0 (PRE v2 draft — not an approved master)
+Version: 2.0 (HCO Full v2 draft — not an approved master)
 Date created: «________»
 Date of implementation: «________»
 Review due: «one year from implementation»

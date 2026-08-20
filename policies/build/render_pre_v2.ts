@@ -223,7 +223,7 @@ function buildV2Document(d: V2Draft): Document {
     h1("Document control"),
     new Paragraph({
       children: [new TextRun({
-        text: "« » marks an editable default a small hospital can adopt. «________» is a true blank and must be completed before issue. PRE v2 draft — not an approved master.",
+        text: "« » marks an editable default a small hospital can adopt. «________» is a true blank and must be completed before issue.",
         italics: true,
         size: 18,
       })],

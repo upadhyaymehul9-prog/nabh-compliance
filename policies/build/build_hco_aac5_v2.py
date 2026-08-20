@@ -172,6 +172,7 @@ DOCUMENT_CONTROL = document_control(
     doc_no=D("HCO/AAC/POL/05"),
     version=VERSION,
     prepared_by=D("Quality Coordinator"),
+    draft_label="HCO Full v2 draft",
 )
 
 REFERENCES = f"""- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Guidebook to Accreditation Standards for Hospitals, 6th Edition — Access, Assessment and Continuity of Care (AAC), standard AAC.5.
