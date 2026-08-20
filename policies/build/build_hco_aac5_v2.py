@@ -27,7 +27,7 @@ REVISION_HISTORY = [
     {
         "version": "2.0",
         "date": "20-08-2026",
-        "description": "HCO Full 6th Edition AAC.5 v2 draft: plain English, five steps, stop-work, accreditation-only P2.",
+        "description": "HCO Full 6th Edition AAC.5 v2 draft: plain English, five steps, stop-work (do not defer escalation for non-urgent work), accreditation-only P2.",
     },
 ]
 
@@ -70,7 +70,7 @@ NON_NEGOTIABLES = f"""1. Do not go a calendar day without re-assessment of an in
 
 STOP_WORK = f"""Do not leave a deteriorating patient without escalation when early-warning signs or defined physiological triggers indicate change or deterioration.
 
-If a trigger is met and appropriate medical personnel have not yet been informed and acted, stop other non-urgent tasks, escalate immediately per the early-warning guideline, start prompt intervention within your scope, and document the trigger, time of escalation, responder and actions.
+If a trigger is met and appropriate medical personnel have not yet been informed and acted, do not defer escalation for non-urgent work; escalate immediately per the early-warning guideline, start prompt intervention within your scope, and document the trigger, time of escalation, responder and actions.
 
 Stop-work applies to failure to escalate a deteriorating patient. It does not block emergency life-saving measures — those continue while escalation happens.
 
@@ -301,6 +301,8 @@ def main() -> int:
         "doc_no": D("HCO/AAC/POL/05"),
         "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with clinical induction records.",
         "stop_work": STOP_WORK,
+        "edition_label": HCO_EDITION_LABEL,
+        "render_basename": "HCO.AAC.5",
     }
     emit_pre_v2(
         draft,

@@ -119,6 +119,8 @@ Appropriate safety precautions per AERB guidelines for nuclear medicine and radi
 
 Patients are appropriately screened for safety / risk before imaging. Patients in the child-bearing age group who need radiation exposure are screened for pregnancy. Patients undergoing MRI are screened for any magnetic substance. Screening is documented. Screening also applies to attendants accompanying the patient or child into the imaging area.
 
+As hospital safety practice (not an NABH objective-element requirement), when pregnancy screening is positive or uncertain for a radiation examination, do not proceed until the «radiologist or imaging in-charge» has reviewed and documented the decision.
+
 Informed consent is taken for contrast injection, moderate–deep sedation, interventional procedures, and whenever higher risk due to imaging is found on risk screening. Refer to PRE for consent method.
 
 Incomplete screening triggers stop-work until screening is complete and documented.
@@ -155,7 +157,7 @@ The imaging in-charge and RSO check that signage remains visible and current «m
 
 Do not proceed with radiation or MRI exposure when required safety/risk screening has not been completed and documented for the patient (and for any attendant entering the imaging area).
 
-Do not proceed when pregnancy status is positive or uncertain for a radiation examination until the «radiologist or imaging in-charge» has reviewed and documented the decision; do not proceed with MRI when magnetic-substance screening is incomplete or positive for a contraindication.
+As hospital safety practice (not an NABH objective-element requirement), do not proceed when pregnancy status is positive or uncertain for a radiation examination until the «radiologist or imaging in-charge» has reviewed and documented the decision. Do not proceed with MRI when magnetic-substance screening is incomplete or positive for a contraindication.
 
 Do not proceed when a required radiation-safety or monitoring device has failed its periodic test (for example cracked lead apron) or when required TLD badges are not available for staff working with radiation sources.
 

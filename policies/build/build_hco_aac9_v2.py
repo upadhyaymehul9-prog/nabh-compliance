@@ -4,8 +4,8 @@
 Shape: pre_v2_common.emit_pre_v2 + hco_v2_disclaimer.
 Content from NABH HCO 6th Edition PDF (md5 2c4489ee98de4ae9b49cba168ea9f42a),
 OCR policies/source/hco6_aac_ocr.txt PDF idxs ~82–86. No SHCO AAC wording.
-Stop-work: do not proceed with radiation/MRI exposure without required screening
-or after failed safety-device check. Disclaimer P2: AERB Rules 2004.
+Stop-work: incomplete screening / failed devices; pregnancy hold-for-review is
+hospital safety practice (not an NABH OE requirement). Disclaimer P2: AERB Rules 2004.
 """
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ REVISION_HISTORY = [
     {
         "version": "2.0",
         "date": "20-08-2026",
-        "description": "HCO AAC.9 v2: imaging QA and safety a–k from 6th Edition OCR; AERB P2; stop-work for screening/devices.",
+        "description": "HCO AAC.9 v2: imaging QA and safety a–k from 6th Edition OCR; AERB P2; stop-work for screening/devices; pregnancy hold framed as hospital safety practice (not NABH OE).",
     },
 ]
 
@@ -72,7 +72,7 @@ NON_NEGOTIABLES = f"""1. Do not perform imaging or interventional procedures tha
 
 STOP_WORK = f"""Do not proceed with radiation or MRI exposure when required safety/risk screening has not been completed and documented for the patient (and for any attendant entering the imaging area).
 
-Do not proceed when pregnancy status is positive or uncertain for a radiation examination until the {D('radiologist or imaging in-charge')} has reviewed and documented the decision; do not proceed with MRI when magnetic-substance screening is incomplete or positive for a contraindication.
+As hospital safety practice (not an NABH objective-element requirement), do not proceed when pregnancy status is positive or uncertain for a radiation examination until the {D('radiologist or imaging in-charge')} has reviewed and documented the decision. Do not proceed with MRI when magnetic-substance screening is incomplete or positive for a contraindication.
 
 Do not proceed when a required radiation-safety or monitoring device has failed its periodic test (for example cracked lead apron) or when required TLD badges are not available for staff working with radiation sources.
 
@@ -130,6 +130,8 @@ Appropriate safety precautions per AERB guidelines for nuclear medicine and radi
 f"""5.7 Patient screening before imaging
 
 Patients are appropriately screened for safety / risk before imaging. Patients in the child-bearing age group who need radiation exposure are screened for pregnancy. Patients undergoing MRI are screened for any magnetic substance. Screening is documented. Screening also applies to attendants accompanying the patient or child into the imaging area.
+
+As hospital safety practice (not an NABH objective-element requirement), when pregnancy screening is positive or uncertain for a radiation examination, do not proceed until the {D('radiologist or imaging in-charge')} has reviewed and documented the decision.
 
 Informed consent is taken for contrast injection, moderate–deep sedation, interventional procedures, and whenever higher risk due to imaging is found on risk screening. Refer to PRE for consent method.
 
@@ -398,7 +400,7 @@ OE_MAPPING = [
     },
 ]
 
-UNIVERSAL_FACTS_CHECKLIST = """HCO AAC.9 v2 (2026-08-20). PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. Asterisked: a,e,f,i. Achievement: b,c. Excellence: d. Eleven OEs, eleven What-we-do subsections. Stop-work present. P2: Atomic Energy (Radiation Protection) Rules, 2004."""
+UNIVERSAL_FACTS_CHECKLIST = """HCO AAC.9 v2 (2026-08-20). PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. Asterisked: a,e,f,i. Achievement: b,c. Excellence: d. Eleven OEs, eleven What-we-do subsections. Stop-work owns screening/device gates (moved from AAC.8). Pregnancy hold-for-review is hospital safety practice, not an NABH OE requirement. P2: Atomic Energy (Radiation Protection) Rules, 2004."""
 
 
 def main() -> int:
@@ -430,6 +432,8 @@ def main() -> int:
         "template_test": "hco_aac_v2_adoptable_shape",
         "subtitle": "Imaging quality assurance, ALARA and radiation safety.",
         "doc_no": D("HCO/AAC/POL/09"),
+        "edition_label": HCO_EDITION_LABEL,
+        "render_basename": "HCO.AAC.9",
     }
     emit_pre_v2(
         draft,

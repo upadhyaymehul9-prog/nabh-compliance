@@ -108,7 +108,7 @@ Correlate with COP.5, COP.6, HRM.1 and HRM.5 for related clinical and staffing r
 
 Do not leave a deteriorating patient without escalation when early-warning signs or defined physiological triggers indicate change or deterioration.
 
-If a trigger is met and appropriate medical personnel have not yet been informed and acted, stop other non-urgent tasks, escalate immediately per the early-warning guideline, start prompt intervention within your scope, and document the trigger, time of escalation, responder and actions.
+If a trigger is met and appropriate medical personnel have not yet been informed and acted, do not defer escalation for non-urgent work; escalate immediately per the early-warning guideline, start prompt intervention within your scope, and document the trigger, time of escalation, responder and actions.
 
 Stop-work applies to failure to escalate a deteriorating patient. It does not block emergency life-saving measures — those continue while escalation happens.
 

@@ -90,7 +90,7 @@
     {
       "version": "2.0",
       "date": "20-08-2026",
-      "description": "HCO Full 6th Edition AAC.5 v2 draft: plain English, five steps, stop-work, accreditation-only P2."
+      "description": "HCO Full 6th Edition AAC.5 v2 draft: plain English, five steps, stop-work (do not defer escalation for non-urgent work), accreditation-only P2."
     }
   ],
   "status": "draft",
@@ -103,7 +103,7 @@
   "subtitle": "HCO Full Accreditation, 6th Edition — re-assessment.",
   "doc_no": "«HCO/AAC/POL/05»",
   "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with clinical induction records.",
-  "stop_work": "Do not leave a deteriorating patient without escalation when early-warning signs or defined physiological triggers indicate change or deterioration.\n\nIf a trigger is met and appropriate medical personnel have not yet been informed and acted, stop other non-urgent tasks, escalate immediately per the early-warning guideline, start prompt intervention within your scope, and document the trigger, time of escalation, responder and actions.\n\nStop-work applies to failure to escalate a deteriorating patient. It does not block emergency life-saving measures — those continue while escalation happens.\n\nThe person responsible tells the «treating doctor» and, if there is no timely response, the «Medical Superintendent» the same shift. Refusing to leave a deteriorating patient unescalated is not a disciplinary matter.",
+  "stop_work": "Do not leave a deteriorating patient without escalation when early-warning signs or defined physiological triggers indicate change or deterioration.\n\nIf a trigger is met and appropriate medical personnel have not yet been informed and acted, do not defer escalation for non-urgent work; escalate immediately per the early-warning guideline, start prompt intervention within your scope, and document the trigger, time of escalation, responder and actions.\n\nStop-work applies to failure to escalate a deteriorating patient. It does not block emergency life-saving measures — those continue while escalation happens.\n\nThe person responsible tells the «treating doctor» and, if there is no timely response, the «Medical Superintendent» the same shift. Refusing to leave a deteriorating patient unescalated is not a disciplinary matter.",
   "edition_label": "NABH HCO Full Accreditation 6th Edition",
   "render_basename": "HCO.AAC.5"
 }

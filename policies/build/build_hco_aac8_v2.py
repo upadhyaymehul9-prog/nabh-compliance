@@ -4,8 +4,8 @@
 Shape: pre_v2_common.emit_pre_v2 + hco_v2_disclaimer.
 Content from NABH HCO 6th Edition PDF (md5 2c4489ee98de4ae9b49cba168ea9f42a),
 OCR policies/source/hco6_aac_ocr.txt PDF idxs ~79–82. No SHCO AAC wording.
-Stop-work: do not scan without required safety/pregnancy/MRI screening / legal
-compliance checks. Disclaimer P2: AERB Rules 2004 + PC-PNDT Act 1994.
+Stop-work: legal compliance + personnel monitoring only; screening gates cross-ref
+to AAC.9. Disclaimer P2: AERB Rules 2004 + PC-PNDT Act 1994.
 """
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ REVISION_HISTORY = [
     {
         "version": "2.0",
         "date": "20-08-2026",
-        "description": "HCO AAC.8 v2: imaging a–i from 6th Edition OCR; AERB/PC-PNDT P2; stop-work for legal/safety checks.",
+        "description": "HCO AAC.8 v2: imaging a–i from 6th Edition OCR; AERB/PC-PNDT P2; stop-work for legal compliance and personnel monitoring; screening gates cross-ref AAC.9.",
     },
 ]
 
@@ -69,11 +69,11 @@ NON_NEGOTIABLES = f"""1. Do not operate radiation-emitting imaging equipment wit
 8. Do not proceed with imaging when required legal compliance checks for the modality are missing — stop-work applies.
 9. Staff who see an imaging service rule broken report it the same shift to the {D('Imaging In-Charge')}, the {D('Radiation Safety Officer')} or the {D('Medical Superintendent')}."""
 
-STOP_WORK = f"""Do not scan or expose a patient when required legal compliance for the modality is missing — AERB clearance and RSO cover for radiation equipment; PC-PNDT registration and displays for covered ultrasound.
-
-Do not proceed with radiation or MRI examinations when the safety/pregnancy/MRI screening required under AAC.9 has not been completed for the patient (and attendant entering the area). Complete screening before exposure.
+STOP_WORK = f"""Do not scan or expose a patient when required legal compliance for the modality is missing — AERB clearance and RSO cover for radiation equipment; PC-PNDT registration and displays for covered ultrasound (PC-PNDT only where ultrasound / PC-PNDT scope applies).
 
 Do not use radiation-emitting equipment when mandatory personnel monitoring (dosimeter/TLD) or required lead protection for the examination is unavailable.
+
+Screening gates are in AAC.9.
 
 Stop-work applies to the imaging examination, not to emergency clinical stabilisation outside the imaging room.
 
@@ -359,7 +359,7 @@ OE_MAPPING = [
     },
 ]
 
-UNIVERSAL_FACTS_CHECKLIST = """HCO AAC.8 v2 (2026-08-20). PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. Core: a. Asterisked: e,f,h. Nine OEs, nine What-we-do subsections. Stop-work present. P2: Atomic Energy (Radiation Protection) Rules, 2004 and PC-PNDT Act 1994."""
+UNIVERSAL_FACTS_CHECKLIST = """HCO AAC.8 v2 (2026-08-20). PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. Core: a. Asterisked: e,f,h. Nine OEs, nine What-we-do subsections. Stop-work: legal compliance + personnel monitoring only; screening gates cross-ref AAC.9. P2: Atomic Energy (Radiation Protection) Rules, 2004 and PC-PNDT Act 1994 (PC-PNDT where ultrasound/PC-PNDT scope applies)."""
 
 
 def main() -> int:
@@ -391,6 +391,8 @@ def main() -> int:
         "template_test": "hco_aac_v2_adoptable_shape",
         "subtitle": "Imaging services, legal compliance and turnaround time.",
         "doc_no": D("HCO/AAC/POL/08"),
+        "edition_label": HCO_EDITION_LABEL,
+        "render_basename": "HCO.AAC.8",
     }
     emit_pre_v2(
         draft,

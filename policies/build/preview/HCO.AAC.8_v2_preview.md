@@ -138,11 +138,11 @@ The organisation has an MoU/agreement that incorporates quality assurance and th
 
 ## 6. Stop-work authority
 
-Do not scan or expose a patient when required legal compliance for the modality is missing — AERB clearance and RSO cover for radiation equipment; PC-PNDT registration and displays for covered ultrasound.
-
-Do not proceed with radiation or MRI examinations when the safety/pregnancy/MRI screening required under AAC.9 has not been completed for the patient (and attendant entering the area). Complete screening before exposure.
+Do not scan or expose a patient when required legal compliance for the modality is missing — AERB clearance and RSO cover for radiation equipment; PC-PNDT registration and displays for covered ultrasound (PC-PNDT only where ultrasound / PC-PNDT scope applies).
 
 Do not use radiation-emitting equipment when mandatory personnel monitoring (dosimeter/TLD) or required lead protection for the examination is unavailable.
+
+Screening gates are in AAC.9.
 
 Stop-work applies to the imaging examination, not to emergency clinical stabilisation outside the imaging room.
 
