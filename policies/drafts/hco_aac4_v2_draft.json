@@ -1,0 +1,136 @@
+{
+  "standard_code": "AAC.4",
+  "chapter": "HCO",
+  "oe_codes": [
+    "AAC.4.a",
+    "AAC.4.b",
+    "AAC.4.c",
+    "AAC.4.d",
+    "AAC.4.e",
+    "AAC.4.f",
+    "AAC.4.g"
+  ],
+  "policy_title": "Initial Assessment",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} performs standardised initial assessment for out-patients, day-care, in-patients and emergency patients; ensures assessment is done by qualified personnel within their scope of practice; completes assessment within a time frame based on patient need; includes nursing assessment at admission for day-care and in-patients; documents a care plan from the in-patient initial assessment; obtains countersignature by the clinician in-charge within 24 hours; and identifies special needs regarding care following discharge.\n\nThe chapter intent is that patients undergo initial assessment and periodic reassessments resulting in a care plan.\n\nThis policy owns initial assessment and the care plan that results from it. AAC.5 owns re-assessment and modification of the care plan. AAC.2 owns registration before assessment. COP.10.d and COP.11.e are correlated where the guidebook points (procedural/daycare pathways) — this policy does not rewrite those COP procedures.\n\nWords marked «like this» are defaults a hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to treating doctors, nurses and other caregivers who perform initial assessment at {{HOSPITAL_NAME}} in out-patient, day-care (including dialysis day-care), in-patient wards and emergency. It binds department heads who define who may assess, the Medical Superintendent, Medical Records, and the Quality Coordinator.\n\nIt covers AAC.4.a–g.\n\nBoundaries:\n\n- AAC.5 owns re-assessment intervals, care-plan modification after initial assessment, and early-warning escalation.\n- AAC.2 owns that the patient is registered and admitted before or alongside assessment.\n- COP.10 / COP.11 own specific procedural pathways referenced by the guidebook (COP 10.d, COP 11.e); initial assessment for those pathways still uses this standard's formats.\n- Lab and imaging own result reporting; this policy owns that available diagnostics inform the care plan.\n- Psychological, spiritual, cultural, social and economic aspects of in-patient assessment may be done by various healthcare professionals within their scope — named in the assessment privilege list under AAC.4.b.",
+  "policy_statement": "{{HOSPITAL_NAME}} performs initial assessment of out-patients, day-care, in-patients and emergency patients in a standardised manner. Assessment is performed by qualified personnel within their scope of practice, registration and applicable laws. Assessment is completed within a documented time frame based on patient needs — for in-patients within a maximum of 24 hours from arrival at the ward; for emergency from the time of arrival. Day-care and in-patient initial assessment includes nursing assessment at admission. The in-patient initial assessment results in a documented care plan. The care plan is countersigned by the clinician in-charge within 24 hours. The care plan identifies special needs regarding care following discharge.\n\n{{HOSPITAL_NAME}} does not leave an in-patient without a documented care plan, and does not treat the 24-hour maximum as a target when clinical need requires earlier assessment.",
+  "procedure_steps": [
+    "5.1 Standardised initial assessment (OP, day-care, IP, emergency)\n\n{{HOSPITAL_NAME}} uses a standardised format for initial assessment in the OPD, day-care, in-patient and emergency areas. Formats may differ by department need but are the same within a particular area or unit. Formats capture the laid-down parameters.\n\nEmergency initial assessment includes recording vital parameters.\n\nIn-patient initial assessment covers history, examination including vital signs, documentation of any drug allergies, and provisional diagnosis. If a detailed assessment was done earlier the same day in OPD or emergency, it need not be rewritten in full; a comment links to the earlier assessment, and findings of all such assessments are reviewed and/or verified.\n\nInitial assessment includes reconciliation of medications for in-patients.\n\nAbridged documentation may be used for day-care as appropriate, including patients coming for dialysis.\n\nWhere pathways intersect COP.10.d or COP.11.e, use those COP procedures for the procedural elements and this policy's formats for the initial assessment elements.",
+    "5.2 Performed by qualified personnel within scope of practice\n\n{{HOSPITAL_NAME}} determines who can do which assessment. Caregivers perform initial assessment within their scope of practice, registration and applicable laws and regulations. Psychological, spiritual, cultural, social and economic aspects of in-patient initial assessment may be done by various healthcare professionals as named on the privilege list.\n\nThe organisation defines how contents of assessment (initial and diagnostic) performed by a qualified and privileged healthcare professional associated with the hospital — for example a visiting consultant's referral assessment — are accepted into the patient-care system.\n\nDepartment heads maintain the assessment privilege list; the Medical Superintendent approves it.",
+    "5.3 Within a time frame based on patient needs\n\n{{HOSPITAL_NAME}} defines and documents the time frame for completing initial assessment for day-care, in-patients and emergency, and implements it.\n\nFor in-patients, the clock starts when the patient arrives at the ward and stops when initial assessment is completed. The maximum time is 24 hours. Patients are assessed earlier when clinical need requires — defaults: «unstable or high-dependency within 1 hour; routine ward within 6 hours where staffing allows, and always within 24 hours».\n\nFor emergency, the clock starts at arrival at emergency and stops when initial assessment is completed — default «primary survey and vitals immediately; full emergency initial assessment within 30 minutes unless resuscitation is ongoing».\n\nDay-care time frames are defined per service — default «before the planned procedure or dialysis session begins».",
+    "5.4 Nursing assessment at admission for day-care and in-patients\n\nInitial assessment of day-care and in-patients includes nursing assessment at the time of admission, documented in the record. It identifies nursing needs and any special needs of the patient, completed within a defined time frame — default «within 1 hour of ward or day-care arrival».\n\nA checklist or template may be used. Abridged nursing documentation may be used for day-care as appropriate. Templates may be specific to the speciality or type of admission.",
+    "5.5 Documented care plan from in-patient initial assessment\n\nFor in-patients, the initial assessment results in a documented care plan. The care plan is written by the treating doctor or a doctor member of the treating team in the patient record and is followed.\n\nThe care plan is based on the initial assessment and results of diagnostic tests if available. It includes provisional diagnosis or differential diagnosis, relevant diagnostic investigations when required, initial treatment suggested, and specific instructions if any. It reflects the desired results of the treatment, care or service. It is subject to modification at re-assessment under AAC.5.",
+    "5.6 Care plan countersigned by clinician in-charge within 24 hours\n\nTreatment may be initiated by a junior doctor, but the care plan is countersigned and authorised by the treating doctor — the clinician in-charge — within 24 hours. Countersignature is dated and timed in the record.\n\nIf the clinician in-charge will be unavailable beyond 24 hours, the covering consultant named for that period countersigns and the Medical Superintendent is informed.",
+    "5.7 Special needs regarding care following discharge\n\nThe care plan includes identification of special needs regarding care following discharge. Identification is critical for groups such as extremes of age, restricted mobility, continuing nursing and rehabilitation needs, and assistance with activities of daily living.\n\n{{HOSPITAL_NAME}} begins identifying special discharge needs early in the assessment process — not only on the day of discharge. Nursing and medical assessments both contribute. Detailed discharge process remains under AAC.12; this step owns early identification inside the care plan."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable for standardised formats, privilege lists and time frames.\n- Approves assessment formats and privilege lists.\n\nDepartment heads\n- Maintain area-specific formats and who may assess.\n- Ensure medication reconciliation and care-plan quality in their units.\n\nTreating doctors / clinician in-charge\n- Perform or supervise initial assessment; document care plan; countersign within 24 hours; identify special discharge needs.\n\nJunior doctors\n- May initiate assessment and treatment; must obtain countersignature within 24 hours.\n\nNurses\n- Complete nursing assessment at admission for day-care and in-patients; contribute special-needs identification.\n\nMedical Records\n- Ensure formats are available in records; flag missing care plans or countersignatures in record review.\n\nQuality Coordinator\n- Audits formats, time frames, nursing assessment, care plans, countersignatures and discharge-needs identification «quarterly».",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Guidebook to Accreditation Standards for Hospitals, 6th Edition — Access, Assessment and Continuity of Care (AAC), standard AAC.4.\n- Correlated standards named in the guidebook interpretation: COP.10.d; COP.11.e.\n- Internal documents of {{HOSPITAL_NAME}}: initial-assessment formats (OP, day-care, IP, emergency); assessment privilege list; nursing-assessment templates; care-plan template; medication-reconciliation form; AAC.5 re-assessment policy; AAC.12 discharge policy.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator.\n\nCopies issued to: every clinical department; emergency; day-care; nursing administration; medical records; OPD.\n\nThe current version is available to all staff at the «clinical policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "AAC — Access, Assessment and Continuity of Care (NABH Hospitals chapter)\nCAPA — corrective and preventive action\nCOP — Care of Patients (NABH chapter)\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nIP — in-patient\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nOP / OPD — out-patient / out-patient department",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "AAC.4.a",
+      "requirement": "The initial assessment of the out-patients, daycare, in-patients and emergency patients is done in a standardised manner.",
+      "steps": "Section 3; 5.1 Standardised initial assessment (OP, day-care, IP, emergency); Section 4 items 1–2",
+      "responsible": "Department heads (formats); treating doctors (complete); nurses (contribute); Quality Coordinator (hold formats)",
+      "records": [
+        "Approved standardised initial-assessment formats for OPD, day-care, IP and emergency.",
+        "Emergency records showing vital parameters recorded at initial assessment.",
+        "IP records showing history, examination including vitals, drug allergies, provisional diagnosis and medication reconciliation.",
+        "Day-care records using abridged documentation where appropriate (including dialysis).",
+        "Linking comments when same-day OPD/emergency assessment is reused for IP."
+      ]
+    },
+    {
+      "oe_code": "AAC.4.b",
+      "requirement": "The initial assessment is performed by qualified personnel.",
+      "steps": "Section 3; 5.2 Performed by qualified personnel within scope of practice; Section 4 item 3",
+      "responsible": "Medical Superintendent (approve privilege list); department heads (maintain); caregivers (assess within scope)",
+      "records": [
+        "Assessment privilege list naming who may perform which assessment.",
+        "Credentials and registration evidence for privileged clinicians who perform assessment.",
+        "Process document for accepting assessments from qualified privileged professionals associated with the hospital (e.g. visiting consultant).",
+        "Sample records showing the person who assessed matches the privilege list."
+      ]
+    },
+    {
+      "oe_code": "AAC.4.c",
+      "requirement": "The initial assessment is performed within a time frame based on the needs of the patient.",
+      "steps": "Section 3; 5.3 Within a time frame based on patient needs; Section 4 item 4",
+      "responsible": "Treating doctors (complete on time); department heads (define specialty defaults); Quality Coordinator (audit)",
+      "records": [
+        "Written time-frame document for day-care, IP and emergency initial assessment.",
+        "IP sample with ward-arrival time and assessment-completion time within 24 hours.",
+        "Emergency sample with arrival time and assessment-completion time within the defined frame.",
+        "Day-care sample showing assessment before procedure/session as defined."
+      ]
+    },
+    {
+      "oe_code": "AAC.4.d",
+      "requirement": "Initial assessment of daycare and in-patients includes nursing assessment, which is done at the time of admission and documented.",
+      "steps": "Section 3; 5.4 Nursing assessment at admission for day-care and in-patients; Section 4 item 5",
+      "responsible": "Nurses (perform and document); nursing administration (templates and time frames)",
+      "records": [
+        "Nursing-assessment templates/checklists for IP and day-care.",
+        "Documented nursing assessments at admission identifying nursing and special needs.",
+        "Abridged day-care nursing documentation samples where used.",
+        "Defined time frame for completing nursing assessment and audit against it."
+      ]
+    },
+    {
+      "oe_code": "AAC.4.e",
+      "requirement": "The initial assessment for in-patients results in a documented care plan.",
+      "steps": "Section 3; 5.5 Documented care plan from in-patient initial assessment; Section 4 item 6",
+      "responsible": "Treating doctor or doctor member of treating team (document); Medical Records (presence in record)",
+      "records": [
+        "Documented care plans in IP records including provisional/differential diagnosis.",
+        "Care-plan entries for relevant investigations, initial treatment and specific instructions.",
+        "Evidence the care plan reflects desired results of treatment, care or service.",
+        "Audit sample of IP admissions with care plan present after initial assessment."
+      ]
+    },
+    {
+      "oe_code": "AAC.4.f",
+      "requirement": "The care plan is countersigned by the clinician in-charge of the patient within 24 hours.",
+      "steps": "Section 3; 5.6 Care plan countersigned by clinician in-charge within 24 hours; Section 4 item 7",
+      "responsible": "Clinician in-charge / treating doctor (countersign); junior doctors (seek countersignature)",
+      "records": [
+        "Care plans with dated/timed countersignature by clinician in-charge within 24 hours.",
+        "Covering-consultant countersignatures when treating doctor unavailable, with Medical Superintendent notified.",
+        "Audit log of late or missing countersignatures with corrective action."
+      ]
+    },
+    {
+      "oe_code": "AAC.4.g",
+      "requirement": "The care plan includes the identification of special needs regarding care following discharge.",
+      "steps": "Section 3; 5.7 Special needs regarding care following discharge; Section 4 item 8",
+      "responsible": "Treating doctors and nurses (identify early); AAC.12 owners (execute discharge planning)",
+      "records": [
+        "Care-plan fields or notes identifying special post-discharge needs (age extremes, mobility, nursing/rehab, ADL assistance).",
+        "Evidence identification began early in the assessment process, not only on discharge day.",
+        "Sample of applicable patients with special needs flagged and handed to discharge planning."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO AAC.4 v2 (2026-08-20). HCO Full Accreditation, NABH Hospitals 6th Edition.\nPDF md5 2c4489ee98de4ae9b49cba168ea9f42a. OCR: policies/source/hco6_aac_ocr.txt (PDF indices 69–72).\n\nOE COUNT: 7 (a–g). Asterisked: AAC.4.a, AAC.4.b, AAC.4.c (Tier 1). Core: AAC.4.a, AAC.4.e. Achievement: AAC.4.f. Excellence: AAC.4.g. AAC.4.d Commitment without asterisk (Tier 2).\n\nSHAPE: Seven What-we-do subsections (5.1–5.7). No stop-work (no genuine do-not-proceed gate beyond ordinary clinical escalation). Disclaimer accreditation-only. chapter=HCO, doc_no HCO/AAC/POL/04.\n\nGUIDEBOOK CORRELATION: COP 10.d and COP 11.e referenced in AAC.4.a interpretation — cross-noted, not duplicated.\n\nFLAG: OCR level chrome (C@RE / HM core) ignored; OE letters a–g recovered from inventory + interpretation blocks. No unclear OE remaining.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "HCO Full 6th Edition AAC.4 v2 draft: plain English, seven steps, no stop-work, accreditation-only P2."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Every patient undergoes a standardised initial assessment by qualified personnel within a defined time — producing a documented care plan for in-patients that the clinician in-charge authorises and that notes special needs after discharge.",
+  "exceptions": "1. Do not use a non-standard assessment format in an area that has an approved standardised format for that area.\n2. Do not omit vital parameters in emergency initial assessment; do not omit history, examination including vitals, drug allergies and provisional diagnosis for in-patients; do not omit medication reconciliation for in-patients.\n3. Do not allow a person to perform an assessment outside their defined scope of practice and privilege.\n4. Do not exceed the defined time frames — in-patient initial assessment maximum 24 hours from ward arrival; emergency from arrival to completion as defined.\n5. Do not omit nursing assessment at admission for day-care and in-patients.\n6. Do not continue planned in-patient treatment beyond emergency stabilisation without a documented care plan from the initial assessment.\n7. Do not leave a care plan initiated by a junior doctor without countersignature by the clinician in-charge within 24 hours.\n8. Staff who find assessment or care-plan rules not followed report it the same shift to the «treating doctor» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Standardised formats in use in OPD, day-care, IP and emergency; vitals in emergency; IP content and medication reconciliation complete.\n- Persons who performed initial assessment match the privilege list.\n- In-patient assessments completed within 24 hours of ward arrival; emergency within defined time from arrival.\n- Nursing assessment documented at admission for day-care and IP sample.\n- Care plan present for IP sample; countersigned by clinician in-charge within 24 hours.\n- Special discharge needs identified in care plans for applicable patients.\n\nRoot-cause analysis is required when missing care plans or late countersignatures recur within six months.\n\nThis policy is reviewed «annually», and sooner when formats or privilege lists change.",
+  "training_competency": "Doctors, nurses and other caregivers who assess patients are informed of this policy at induction and «once a year» after that. Training covers area formats, privilege limits, time frames, medication reconciliation, nursing assessment, care-plan content, 24-hour countersignature, and early identification of special discharge needs.\n\nStaff acknowledgement\n\nI have read this Initial Assessment policy of {{HOSPITAL_NAME}}. I will assess only within my privilege, complete assessment within the defined time, document the care plan for in-patients, and obtain or provide countersignature within 24 hours.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with clinical induction records.)",
+  "resources_required": "Document number: «HCO/AAC/POL/04»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "hco_aac_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — initial assessment.",
+  "doc_no": "«HCO/AAC/POL/04»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with clinical induction records.",
+  "stop_work": ""
+}

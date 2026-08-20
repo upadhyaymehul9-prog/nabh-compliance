@@ -1,0 +1,109 @@
+{
+  "standard_code": "AAC.2",
+  "chapter": "HCO",
+  "oe_codes": [
+    "AAC.2.a",
+    "AAC.2.b",
+    "AAC.2.c",
+    "AAC.2.d",
+    "AAC.2.e"
+  ],
+  "policy_title": "Registration and Admission",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} uses written guidance to register and admit patients (including unidentified patients); generates a unique identification number at the end of registration; accepts patients only when it can provide the required service (with life-saving treatment first in emergency); manages non-availability of beds; and prioritises access according to clinical need.\n\nThe chapter intent is that only those patients who can be cared for by the organisation are admitted, and that emergency patients receive life-stabilising treatment and are then either admitted or transferred appropriately.\n\nThis policy owns registration and admission. AAC.1 owns which services exist. AAC.3 owns transfer when the hospital cannot continue care. PRE owns the detailed informed-consent method; this policy only requires that general consent at entry is obtained and its scope explained — not the invasive-procedure consent procedure.\n\nWords marked «like this» are defaults a hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies at every registration and admission point at {{HOSPITAL_NAME}}: front office, out-patient registration, emergency, day-care and in-patient admission desks. It binds registration and front-office staff, treating doctors who authorise admission, nurses who receive admitted patients, the Medical Superintendent, department heads, and the Quality Coordinator.\n\nIt covers AAC.2.a–e for out-patients, day-care, in-patients and emergency patients.\n\nBoundaries:\n\n- AAC.1 owns the service directory used to decide acceptance.\n- AAC.3 owns transfer-out when beds or services are unavailable beyond temporary holding.\n- PRE.3 (informed consent) owns the method for specific and invasive consent. This policy owns that general consent for treatment is obtained at entry and that its scope is defined and explained; general consent must not include invasive procedures that need specific consent.\n- Billing owns tariffs; this policy owns explaining financial implications when the desired bed category is unavailable.\n- Medical Records owns the unique-number master index in coordination with registration.",
+  "policy_statement": "{{HOSPITAL_NAME}} uses written guidance for registering and admitting patients, including unidentified patients. All patients assessed in the hospital are registered. Every admission is authorised by a doctor. A unique identification number is generated at the end of registration and used across the organisation. Patients are accepted only if the organisation can provide the required service; in emergency, life-saving treatment is started before any acceptance decision. Written guidance manages non-availability of beds. Access is prioritised according to clinical need.\n\n{{HOSPITAL_NAME}} does not admit without doctor authorisation, does not leave an assessed patient unregistered, and does not refuse life-saving emergency treatment while deciding acceptance.",
+  "procedure_steps": [
+    "5.1 Written guidance for registering and admitting patients\n\n{{HOSPITAL_NAME}} keeps written guidance for registration and admission covering out-patients, day-care, in-patients and emergency patients. The guidance includes unidentified patients. All patients who are assessed in the hospital are registered. Government regulations that apply to registration and admission are followed. Documentation is designed to avoid duplication — information once generated is available to departments that need it within the organisation.\n\nIdentity verification at registration is done by «government photo ID where available, or two identifiers stated by the patient or accompanying person». All admissions are authorised by a doctor. Additional documentation for foreign nationals is collected as required by applicable rules.\n\nPatients and families are informed of the salient steps for registration and admission through «displays at registration and information on the hospital website».\n\nGeneral consent for treatment is obtained when the patient enters the organisation. The organisation defines the scope of that general consent and explains it to the patient and/or family. General consent does not include invasive procedures or other procedures that need specific consent under the PRE consent policy. The detailed consent method for those procedures is owned by PRE — do not duplicate that procedure here.",
+    "5.2 Unique identification number at end of registration\n\nAt the end of the patient's first registration interaction with {{HOSPITAL_NAME}}, a unique identification number is generated. That number identifies the patient across the organisation and supports continuity of care. All hospital records of the patient carry this number.\n\nUnique means a one-time assignment: a patient has only one unique number. For later out-patient or in-patient visits a visit or encounter number may be generated in addition; those numbers are linked to the unique number. Registration staff must not create a second unique number for the same person.",
+    "5.3 Accept patients only when the required service can be provided\n\nRegistration and admission staff know the services {{HOSPITAL_NAME}} can provide (from the AAC.1 service directory) and whom to contact for clarification — «the duty doctor, the Head of the relevant department, or the Medical Superintendent».\n\nPatients are accepted only if the organisation can provide the required service. In emergency, life-saving treatment is initiated before any decision about acceptance. If after stabilisation the hospital still cannot provide the needed service, AAC.3 transfer-out applies.",
+    "5.4 Managing non-availability of beds\n\nWritten guidance addresses non-availability of beds. {{HOSPITAL_NAME}} maintains a current list of alternate organisations where patients may be directed when beds are unavailable.\n\nIf patients are admitted to a temporary holding area, that area has adequate infrastructure to care for them. The guidance defines how long patients may remain on temporary beds before a transfer-out decision is taken — default «not more than 12 hours unless the Medical Superintendent extends in writing for a named patient».\n\nWhen a bed is not available in the desired bed category or unit, staff manage placement per the guidance and explain the financial implications to the patient and/or family before confirming the alternative category.",
+    "5.5 Prioritise access according to clinical needs\n\nAccess to healthcare services is prioritised according to the patient's clinical needs in out-patient and diagnostic settings. Patients whose clinical problem warrants an earlier response are identified and seen sooner — for example a patient in the OPD who complains of giddiness, or a vulnerable patient attending for a diagnostic test.\n\nAll staff who handle queues and diagnostic flow are oriented to these guidelines. {{HOSPITAL_NAME}} uses a visual identification mechanism — «a coloured sticker on the file or on the patient clothing» — so that all concerned staff can recognise priority patients. The mechanism is defined in writing and taught at induction."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable for registration and admission written guidance, bed non-availability rules and clinical-priority rules.\n- Approves alternate-organisation list and temporary-holding time limits.\n\nRegistration / front-office staff\n- Register all assessed patients, including unidentified patients.\n- Generate the unique identification number at end of registration and never duplicate it.\n- Obtain general consent at entry and explain its scope; do not take invasive-procedure consent under this policy.\n- Apply clinical-priority visual identification in OPD and diagnostics.\n\nTreating doctors\n- Authorise every admission.\n- Decide acceptance against available services; start life-saving treatment in emergency before acceptance decisions.\n\nNursing administration / ward nurses\n- Receive admitted patients; escalate when temporary holding exceeds the defined time.\n\nMedical Records\n- Maintain the unique-number master index linked to visit numbers.\n\nQuality Coordinator\n- Audits registration, unique-number integrity, bed-holding and priority identification «quarterly».\n\nDepartment heads\n- Clarify service availability for registration staff when contacted.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Guidebook to Accreditation Standards for Hospitals, 6th Edition — Access, Assessment and Continuity of Care (AAC), standard AAC.2.\n- Internal documents of {{HOSPITAL_NAME}}: registration and admission written guidance; unique-number procedure; alternate-organisation list; temporary-holding and bed-category guidance; clinical-priority and visual-identification guidance; PRE informed-consent policy (cross-reference for specific consent).",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator.\n\nCopies issued to: registration; front office; medical records; emergency; day-care; every ward; nursing administration; billing (bed-category financial implications).\n\nThe current version is available to all staff at the «front-office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "AAC — Access, Assessment and Continuity of Care (NABH Hospitals chapter)\nCAPA — corrective and preventive action\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nOP / OPD — out-patient / out-patient department\nPRE — Patient Rights and Education (NABH chapter)",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "AAC.2.a",
+      "requirement": "The organisation uses written guidance for registering and admitting patients.",
+      "steps": "Section 3; 5.1 Written guidance for registering and admitting patients; Section 4 items 1–2, 7",
+      "responsible": "Medical Superintendent (approve guidance); Registration / front-office (execute); Treating doctors (authorise admission)",
+      "records": [
+        "Written registration and admission guidance covering OP, day-care, IP, emergency and unidentified patients.",
+        "Sample registration records showing assessed patients registered and general consent obtained at entry with scope explained.",
+        "Admission orders or notes showing doctor authorisation for each admission in the audit sample.",
+        "Display or website evidence that salient registration/admission steps are communicated to patients and families."
+      ]
+    },
+    {
+      "oe_code": "AAC.2.b",
+      "requirement": "A unique identification number is generated at the end of the registration.",
+      "steps": "Section 3; 5.2 Unique identification number at end of registration; Section 4 item 3",
+      "responsible": "Registration / front-office (generate); Medical Records (master index)",
+      "records": [
+        "Unique-number master index showing one unique number per patient.",
+        "Sample clinical records carrying the unique number across departments.",
+        "Visit/encounter numbers linked to the unique number where used.",
+        "Audit log of duplicate-number checks with corrections."
+      ]
+    },
+    {
+      "oe_code": "AAC.2.c",
+      "requirement": "Patients are accepted only if the organisation can provide the required service.",
+      "steps": "Section 3; 5.3 Accept patients only when the required service can be provided; Section 4 item 4",
+      "responsible": "Registration / front-office (screen); Treating doctors (acceptance and emergency life-saving); Department heads (clarify services)",
+      "records": [
+        "Current AAC.1 service directory available at registration points.",
+        "Contact list for service clarification (duty doctor / department head / Medical Superintendent).",
+        "Emergency records showing life-saving treatment started before acceptance decisions where applicable.",
+        "Log of non-accepted non-emergency presentations with reason and advice given."
+      ]
+    },
+    {
+      "oe_code": "AAC.2.d",
+      "requirement": "The written guidance also addresses managing patients during non-availability of beds.",
+      "steps": "Section 3; 5.4 Managing non-availability of beds; Section 4 item 5",
+      "responsible": "Medical Superintendent (approve guidance and time limits); Nursing administration (temporary holding); Registration (alternate organisations and financial explanation)",
+      "records": [
+        "Written bed non-availability guidance including temporary holding, time limits and category mismatch.",
+        "Current list of alternate organisations for redirection.",
+        "Temporary-holding log with arrival time, decision time and outcome.",
+        "Documented explanation of financial implications when desired bed category is unavailable."
+      ]
+    },
+    {
+      "oe_code": "AAC.2.e",
+      "requirement": "Access to the healthcare services in the organisation is prioritised according to the clinical needs of the patient.",
+      "steps": "Section 3; 5.5 Prioritise access according to clinical needs; Section 4 item 6",
+      "responsible": "Registration / front-office and diagnostic reception (apply priority); Quality Coordinator (audit orientation)",
+      "records": [
+        "Written clinical-priority guidelines for OPD and diagnostic services.",
+        "Description of the visual identification mechanism (sticker or equivalent) and where it is placed.",
+        "Staff orientation records for queue and diagnostic staff.",
+        "Sample of priority patients identified and seen earlier, with visual marker noted."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO AAC.2 v2 (2026-08-20). HCO Full Accreditation, NABH Hospitals 6th Edition.\nPDF md5 2c4489ee98de4ae9b49cba168ea9f42a. OCR: policies/source/hco6_aac_ocr.txt (PDF indices 66–68).\n\nOE COUNT: 5 (a–e). Asterisked: AAC.2.a, AAC.2.d, AAC.2.e (Tier 1). Core: AAC.2.b. AAC.2.c Commitment without asterisk (Tier 2).\n\nSHAPE: Five What-we-do subsections (5.1–5.5). No stop-work (transfer instability owned by AAC.3). Disclaimer accreditation-only. chapter=HCO, doc_no HCO/AAC/POL/02.\n\nBOUNDARY: General consent at entry is in AAC.2.a interpretation; specific/invasive consent method is PRE — cross-referenced, not duplicated.\n\nFLAG: OCR label 'Commitment cc.' cleaned to AAC.2.c. No remaining unclear OE.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "HCO Full 6th Edition AAC.2 v2 draft: plain English, five steps, no stop-work, accreditation-only P2."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Every patient who is assessed is registered; every admission is authorised by a doctor; a unique number follows the patient; beds and clinical priority are managed so that the hospital accepts only what it can care for.",
+  "exceptions": "1. Do not leave an assessed patient unregistered — including unidentified patients, who are registered under the unidentified-patient process.\n2. Do not admit a patient without authorisation by a doctor.\n3. Do not complete registration without generating the unique identification number at the end of registration, and do not give a second unique number to the same patient.\n4. Do not accept a non-emergency patient for a service the hospital cannot provide; in emergency, start life-saving treatment before deciding acceptance.\n5. Do not hold a patient on a temporary bed beyond the defined time without a decision to transfer or place; explain financial implications when the desired bed category is unavailable.\n6. Do not ignore clinical priority in out-patient or diagnostic queues when a patient needs earlier response.\n7. Staff who find registration, unique-number or bed-management rules not followed report it the same shift to the «Medical Superintendent» or the «Quality Coordinator».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Written registration and admission guidance is current and covers unidentified patients, OP/IP/day-care/emergency.\n- Sample of admissions shows doctor authorisation and unique identification number on all records.\n- No duplicate unique numbers in the sample; visit numbers are linked where used.\n- Temporary-holding episodes stay within the defined time; financial explanation for category mismatch is documented where applicable.\n- Clinical-priority visual identification is in use in OPD and diagnostics; staff orientation records exist.\n\nRoot-cause analysis is required when a duplicate unique number, an unauthorised admission, or a temporary-holding over-run recurs within six months.\n\nThis policy is reviewed «annually», and sooner when registration systems or bed capacity change.",
+  "training_competency": "Registration, front-office, medical records, treating doctors and nurses who admit patients are informed of this policy at induction and «once a year» after that. Training covers unidentified-patient registration, unique-number rules, general consent scope at entry, bed non-availability, and clinical-priority visual identification.\n\nStaff acknowledgement\n\nI have read this Registration and Admission policy of {{HOSPITAL_NAME}}. I will register every assessed patient, generate one unique number per patient, obtain general consent at entry within its defined scope, and apply clinical priority as trained.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. Registration in-charge and the Quality Coordinator hold signed acknowledgements.)",
+  "resources_required": "Document number: «HCO/AAC/POL/02»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Registration In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "hco_aac_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — registration and admission.",
+  "doc_no": "«HCO/AAC/POL/02»",
+  "acknowledgement_note": "Registration in-charge and the Quality Coordinator hold signed acknowledgements.",
+  "stop_work": ""
+}

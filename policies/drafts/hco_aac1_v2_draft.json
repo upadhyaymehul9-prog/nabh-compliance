@@ -1,0 +1,94 @@
+{
+  "standard_code": "AAC.1",
+  "chapter": "HCO",
+  "oe_codes": [
+    "AAC.1.a",
+    "AAC.1.b",
+    "AAC.1.c",
+    "AAC.1.d"
+  ],
+  "policy_title": "Defined and Displayed Healthcare Services",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} defines the healthcare services it provides in consonance with community needs; ensures each defined clinical service has diagnostic and treatment capability with suitably qualified personnel for out-patient, in-patient, day-care and emergency cover; defines the scope of clinical services of each department; and prominently displays those defined clinical services.\n\nThe chapter intent is that patients are informed of the services provided, that the scope of each healthcare service including diagnostic and therapeutic services is well defined and available to patients and families, and that only patients the organisation can care for are admitted.\n\nThis policy owns the service definition and display. AAC.2 owns registration and admission. AAC.3 owns transfer and referral. AAC.6–AAC.9 own laboratory and imaging detail once those services are named here. PRE.1 owns the patient-rights display; this policy owns the clinical-services display.\n\nWords marked «like this» are defaults a hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to every clinical and diagnostic department at {{HOSPITAL_NAME}}. It binds the Medical Superintendent, Heads of departments (broad speciality, super speciality and diagnostic), the Quality Coordinator, registration and front-office staff, and clinical staff who deliver or describe services.\n\nIt covers AAC.1.a–d: defining services with community needs; diagnostic and treatment capability with qualified personnel including day-care and emergency cover; department scope (including outsourced clinical and diagnostic services); and permanent bi-lingual display.\n\nBoundaries:\n\n- AAC.2 owns registration, admission and acceptance against the services defined here.\n- AAC.6 and AAC.8 own laboratory and imaging service detail. This policy owns that those services appear in the department scope and display.\n- PRE.1 owns the patient-rights display. This policy owns the clinical-services display.\n- Outsourced services are named and known under this policy; the contract and quality oversight of those vendors sit with the owning clinical or diagnostic policy.",
+  "policy_statement": "{{HOSPITAL_NAME}} defines the healthcare services it provides, in consonance with the needs of the community it serves. Each defined clinical service has diagnostic and treatment services with suitably qualified medical, nursing and paramedical personnel who provide out-patient, in-patient, day-care and emergency cover. The scope of clinical services of each department is defined. The defined clinical services are permanently and prominently displayed in at least two languages.\n\n{{HOSPITAL_NAME}} does not claim a clinical service it cannot staff, diagnose for or treat, and does not leave the display out of date or unreadable.",
+  "procedure_steps": [
+    "5.1 Define healthcare services in consonance with community needs\n\nThe Medical Superintendent, with Heads of departments, defines the healthcare services {{HOSPITAL_NAME}} provides. Senior management owns the definition. Community needs are considered when planning new services — captured through «patient and family feedback, referral patterns, district disease-burden data, and changing disease patterns». Starting a new service on the hospital's own judgment is allowed; community need still informs the decision.\n\nThe defined services are recorded in the service directory of {{HOSPITAL_NAME}}. A service not in the directory is not claimed. The directory is reviewed «annually» and whenever a service is added, suspended or withdrawn.",
+    "5.2 Diagnostic and treatment capability with qualified personnel\n\nEach defined clinical service (broad speciality and super speciality) has:\n\n- diagnostic and treatment services appropriate to that clinical service;\n- suitably qualified medical, nursing and paramedical staff for the patient's clinical needs;\n- out-patient services, in-patient services, day-care where the service uses day-care, and emergency cover by the consultant(s).\n\nInfrastructure for diagnostics and treatment follows regulatory requirements and professional-body guidance where available. The «Medical Superintendent» ensures personnel qualifications are verified at appointment and kept current. Where a service limitation exists (for example no day-care for that speciality), the limitation is written in the department scope (section 5.3) and reflected in the display (section 5.4).",
+    "5.3 Define scope of clinical services of each department\n\nEach department — super speciality, broad speciality and diagnostic — has a written scope. Scope may be by inclusion or by exclusion relative to services practised in the department. Example content for a nephrology department could include biopsy, shunts, fistulas, haemodialysis and CAPD where those are practised.\n\nAll clinical and diagnostic outsourced services are documented. Staff know what is outsourced. That information is also available to patients through «the website, display boards and department brochures» as the hospital chooses.\n\nThe Medical Superintendent approves each scope. The «Quality Coordinator» holds the current set. Scopes are reviewed «annually» and on any material change in capability.",
+    "5.4 Prominent permanent bi-lingual display of defined clinical services\n\nThe display states the names of clinical and diagnostic departments of {{HOSPITAL_NAME}}. It is permanent (board, citizen's charter or equivalent; electronic display is allowed as a supplement or alternative where it remains permanently visible). It is placed where patients and visitors can see it — at least at «the main entrance and the registration area».\n\nThe display is at least bi-lingual: «the State language or the language spoken by the majority of people in the catchment» and English. Brochures, standees and the website may supplement the permanent display; they do not replace it.\n\nWhen a service is added or withdrawn, the display is updated within «seven working days». The «Quality Coordinator» checks the display «quarterly» against the service directory and records any mismatch for correction."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that healthcare services are defined, resourced and displayed.\n- Approves the service directory and each department clinical scope.\n\nHeads of departments\n- Define and maintain the clinical scope of their department, including outsourced elements.\n- Ensure diagnostic and treatment capability and qualified personnel for out-patient, in-patient, day-care and emergency cover as applicable.\n\nQuality Coordinator\n- Holds the service directory and department scope statements.\n- Audits the permanent display «quarterly».\n\nRegistration / front-office staff\n- Direct patients only to services listed in the current directory and display.\n\nAll clinical staff\n- Report any mismatch between displayed and actual services the same shift.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Guidebook to Accreditation Standards for Hospitals, 6th Edition — Access, Assessment and Continuity of Care (AAC), standard AAC.1.\n- Internal documents of {{HOSPITAL_NAME}}: service directory; department clinical scope statements; outsourced-services list; personnel qualification records; display maintenance log.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator.\n\nCopies issued to: registration; every clinical and diagnostic department; out-patient; emergency; day-care; nursing administration.\n\nThe current version is available to all staff at the «front-office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "AAC — Access, Assessment and Continuity of Care (NABH Hospitals chapter)\nCAPA — corrective and preventive action\nCAPD — continuous ambulatory peritoneal dialysis\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nOPD — out-patient department",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "AAC.1.a",
+      "requirement": "The healthcare services being provided are defined and are in consonance with the needs of the community.",
+      "steps": "Section 3; 5.1 Define healthcare services in consonance with community needs; Section 4 item 1",
+      "responsible": "Medical Superintendent (approve); Heads of departments (define); Quality Coordinator (hold directory)",
+      "records": [
+        "Service directory listing every healthcare service provided.",
+        "Evidence that community needs informed service planning (feedback, referral, disease-burden or similar).",
+        "Minutes or record of annual review of the service directory."
+      ]
+    },
+    {
+      "oe_code": "AAC.1.b",
+      "requirement": "Each defined clinical service shall have diagnostic and treatment services with suitably qualified personnel who provide out-patient, in-patient, daycare and emergency cover.",
+      "steps": "Section 3; 5.2 Diagnostic and treatment capability with qualified personnel; Section 4 item 1",
+      "responsible": "Heads of departments (ensure capability); Medical Superintendent (verify qualifications)",
+      "records": [
+        "Service directory entry for each clinical service showing diagnostic capability, treatment capability and personnel.",
+        "Personnel qualification and verification records for medical, nursing and paramedical staff per service.",
+        "Record of out-patient, in-patient, day-care and emergency cover arrangements for each defined clinical service.",
+        "Record of any service limitation and the defined referral pathway."
+      ]
+    },
+    {
+      "oe_code": "AAC.1.c",
+      "requirement": "Scope of the clinical services of each department is defined.",
+      "steps": "Section 3; 5.3 Define scope of clinical services of each department; Section 4 items 2–3",
+      "responsible": "Heads of departments (write scope); Medical Superintendent (approve); Quality Coordinator (hold)",
+      "records": [
+        "Written clinical scope statement for each department (super speciality, broad speciality and diagnostic), approved and dated.",
+        "Documented list of clinical and diagnostic outsourced services known to staff.",
+        "Record of annual or change-triggered scope review.",
+        "Brochure or equivalent detailing department scope where the hospital uses one."
+      ]
+    },
+    {
+      "oe_code": "AAC.1.d",
+      "requirement": "The organisation's defined clinical services are prominently displayed.",
+      "steps": "Section 3; 5.4 Prominent permanent bi-lingual display of defined clinical services; Section 4 item 4",
+      "responsible": "Quality Coordinator (maintain display); registration staff (direct patients per directory)",
+      "records": [
+        "Photographs or records of the permanent display at each mandated location.",
+        "Evidence the display is at least bi-lingual (State/majority language and English).",
+        "Quarterly audit log comparing display against the service directory.",
+        "Record of display update when services changed, with date of update."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO AAC.1 v2 (2026-08-20). HCO Full Accreditation, NABH Hospitals 6th Edition.\nPDF md5 2c4489ee98de4ae9b49cba168ea9f42a. OCR: policies/source/hco6_aac_ocr.txt (PDF indices 65–66).\n\nOE COUNT: 4 (a–d). Asterisked: AAC.1.c only (Tier 1 depth). AAC.1.a, AAC.1.b, AAC.1.d are Commitment without asterisk (Tier 2 depth).\n\nSHAPE: Four What-we-do subsections (5.1–5.4). No stop-work. Disclaimer accreditation-only (HCO 6th Edition). chapter=HCO, standard_code=AAC.1, doc_no HCO/AAC/POL/01.\n\nHCO-SPECIFIC (not SHCO): day-care explicitly in AAC.1.b; permanent bi-lingual display in AAC.1.d; outsourced clinical/diagnostic services documented in AAC.1.c interpretation.\n\nFLAG: none — OE wording clear after OCR clean-up (In-patlent→in-patient; GH cone chrome noise ignored).",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "HCO Full 6th Edition AAC.1 v2 draft: plain English, four steps, no stop-work, accreditation-only P2."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Patients, families and referrers must know what this hospital provides — services defined with the community in mind, staffed and equipped, scoped by department, and displayed where people can read them.",
+  "exceptions": "1. Do not claim a clinical service the hospital cannot provide with qualified personnel and diagnostic and treatment capability for the care settings that service covers.\n2. Do not operate a department whose clinical scope has not been defined and approved by the Medical Superintendent.\n3. Do not omit documentation of clinical or diagnostic services that are outsourced; staff must know what is outsourced.\n4. Do not remove the clinical-services display from a location visible to patients and visitors, allow it to become temporary when a permanent display is required, or leave it in only one language.\n5. Staff who find the displayed services differ from what is actually provided report it the same shift to the «Quality Coordinator» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Service directory is current and matches what is actually provided.\n- Each listed clinical service has diagnostic and treatment capability and qualified personnel recorded, including day-care and emergency cover where applicable.\n- Department scope statements exist, are approved, and document outsourced clinical and diagnostic services.\n- Permanent bi-lingual display is legible, current and matches the service directory at every display point.\n\nRoot-cause analysis is required when the same service-display mismatch recurs within six months.\n\nThis policy is reviewed «annually», and sooner when services are added, suspended or withdrawn.",
+  "training_competency": "All staff are informed of this policy at induction and «once a year» after that. Training covers the service directory, department scopes, outsourced services, how to check the display, and how to report a mismatch.\n\nStaff acknowledgement\n\nI have read this Defined and Displayed Healthcare Services policy of {{HOSPITAL_NAME}}. I know where the service directory and permanent display are, and I will report any mismatch the same shift.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/AAC/POL/01»\nIssue number: «01»\nVersion: 2.0 (PRE v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "hco_aac_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — defined and displayed healthcare services.",
+  "doc_no": "«HCO/AAC/POL/01»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": ""
+}
