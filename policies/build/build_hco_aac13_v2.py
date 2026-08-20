@@ -327,6 +327,8 @@ def main() -> int:
         "subtitle": "Standardised discharge-summary content, understandable instructions and death summary.",
         "doc_no": D("HCO/AAC/POL/13"),
         "programme": "HCO Full Accreditation, 6th Edition",
+        "edition_label": HCO_EDITION_LABEL,
+        "render_basename": "HCO.AAC.13",
     }
     emit_pre_v2(
         draft,

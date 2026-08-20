@@ -377,6 +377,8 @@ def main() -> int:
         "subtitle": "Continuous, coordinated care, hand-over, internal transfer and referral.",
         "doc_no": D("HCO/AAC/POL/10"),
         "programme": "HCO Full Accreditation, 6th Edition",
+        "edition_label": HCO_EDITION_LABEL,
+        "render_basename": "HCO.AAC.10",
     }
     emit_pre_v2(
         draft,

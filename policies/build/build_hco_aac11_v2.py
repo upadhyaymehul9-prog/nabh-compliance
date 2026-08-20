@@ -323,6 +323,8 @@ def main() -> int:
         "subtitle": "Preventive and promotive care within scope of services.",
         "doc_no": D("HCO/AAC/POL/11"),
         "programme": "HCO Full Accreditation, 6th Edition",
+        "edition_label": HCO_EDITION_LABEL,
+        "render_basename": "HCO.AAC.11",
     }
     emit_pre_v2(
         draft,
