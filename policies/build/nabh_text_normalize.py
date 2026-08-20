@@ -32,11 +32,14 @@ LIGATURE_MAP = str.maketrans(
 # Built from words observed in HCO extracts; extend as new forms appear.
 # Longer keys first so "identication" wins over shorter stems.
 _STRIPPED_FI_FL: list[tuple[str, str]] = [
+    # Observed in HCO AAC/COP extracts (portal PDF PUA U+F001/U+F002 stripped or lost).
+    ("misidentication", "misidentification"),
     ("identication", "identification"),
     ("identications", "identifications"),
     ("identiying", "identifying"),
     ("identies", "identifies"),
     ("identied", "identified"),
+    ("identiers", "identifiers"),
     ("insufcient", "insufficient"),
     ("sufcient", "sufficient"),
     ("efcient", "efficient"),
@@ -71,6 +74,9 @@ _STRIPPED_FI_FL: list[tuple[str, str]] = [
     ("prole", "profile"),
     ("specied", "specified"),
     ("specic", "specific"),
+    ("condentiality", "confidentiality"),
+    ("confdentiality", "confidentiality"),
+    ("stafng", "staffing"),
     ("afrm", "affirm"),
     ("conrm", "confirm"),
     ("ndings", "findings"),
