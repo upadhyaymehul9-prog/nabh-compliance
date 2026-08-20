@@ -6487,6 +6487,8 @@ export default function App() {
   const [shcoFullTab, setShcoFullTab] = useState('dashboard');
   const [shcoFullSearch, setShcoFullSearch] = useState('');
   const [shcoFullPdfLoading, setShcoFullPdfLoading] = useState(false);
+  const [shcoPolicyDownloading, setShcoPolicyDownloading] = useState(null); // stdCode currently downloading
+  const [shcoPolicyToast, setShcoPolicyToast] = useState(null);
   const [shcoFullShowTip, setShcoFullShowTip] = useState({});
   const [shcoFullGapFilter, setShcoFullGapFilter] = useState('ALL');
   const [shcoFullGapSearch, setShcoFullGapSearch] = useState('');
@@ -7352,6 +7354,51 @@ export default function App() {
       doc.save(`${cleanName}_SHCO_Gap_Report_${fileDateStr}.pdf`);
     } catch(e){ console.error('SHCO Full PDF generation failed:',e); }
     setShcoFullPdfLoading(false);
+  };
+
+  // ── SHCO Full: download a v2 master policy, personalised for this hospital ──
+  // NOTE: this deliberately does NOT use supabase.functions.invoke. functions-js
+  // only blob-decodes application/octet-stream and application/pdf; every other
+  // content type falls through to response.text(), which decodes the .docx zip
+  // as UTF-8 and corrupts it. We call the function endpoint directly instead.
+  const shcoPolicyToastFor = (t) => { setShcoPolicyToast(t); setTimeout(()=>setShcoPolicyToast(null),4000); };
+
+  const downloadShcoV2Policy = async (stdCode) => {
+    if(shcoPolicyDownloading) return;
+    const cleanHospital = (context?.hospitalName||'Hospital').replace(/\s+(New|Trial|Active|Expired)$/i,'').trim();
+    setShcoPolicyDownloading(stdCode);
+    setShcoPolicyToast({type:'PREPARING',sev:'HIGH',msg:`Personalising ${stdCode} for ${cleanHospital}…`});
+    try {
+      const { data:{ session } } = await supabase.auth.getSession();
+      if(!session) throw new Error('Your session has expired — sign in again to download policies.');
+      const res = await fetch(`${supabase.functionsUrl}/download-v2-policy`,{
+        method:'POST',
+        headers:{
+          'Content-Type':'application/json',
+          apikey: supabase.supabaseKey,
+          Authorization:`Bearer ${session.access_token}`,
+        },
+        body: JSON.stringify({ standard_code: stdCode, hospital_name: cleanHospital }),
+      });
+      if(!res.ok){
+        // the function returns {"error":"…"} on every failure path
+        let msg = `Download failed (HTTP ${res.status}).`;
+        try { const j = await res.json(); if(j?.error) msg = j.error; } catch(_){}
+        throw new Error(msg);
+      }
+      const blob = await res.blob();
+      const url  = URL.createObjectURL(blob);
+      const a    = document.createElement('a');
+      a.href = url;
+      a.download = `${stdCode}_${cleanHospital.replace(/[^a-zA-Z0-9]/g,'_')}.docx`;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(()=>URL.revokeObjectURL(url),10000);
+      shcoPolicyToastFor({type:'DOWNLOADED',sev:'SUCCESS',msg:`${stdCode} policy saved, personalised for ${cleanHospital}.`});
+    } catch(e){
+      console.error('SHCO v2 policy download failed:',e);
+      shcoPolicyToastFor({type:'ERROR',sev:'CRITICAL',msg:e.message||'Could not download the policy.'});
+    }
+    setShcoPolicyDownloading(null);
   };
 
   const generateEcoFullPDF = async () => {
@@ -10061,6 +10108,17 @@ export default function App() {
     // ── Score OEs sub-render ──────────────────────────────────────────────
     const renderScoreOEs=()=>(
       <div style={{padding:'12px 16px 80px'}}>
+        {/* policy-download toast (scoped to this screen; App() has no global toast) */}
+        {shcoPolicyToast&&(
+          <div style={{position:'fixed',top:80,right:16,zIndex:999,maxWidth:360,
+            background:shcoPolicyToast.sev==='CRITICAL'?T.redD:shcoPolicyToast.sev==='SUCCESS'?T.greenD:T.goldD,
+            border:`1px solid ${shcoPolicyToast.sev==='CRITICAL'?T.red:shcoPolicyToast.sev==='SUCCESS'?T.green:T.gold}50`,
+            borderRadius:10,padding:'12px 16px',boxShadow:'0 8px 32px rgba(0,0,0,0.5)'}}>
+            <div style={{fontSize:10,letterSpacing:1.5,fontWeight:700,marginBottom:3,
+              color:shcoPolicyToast.sev==='CRITICAL'?T.red:shcoPolicyToast.sev==='SUCCESS'?T.green:T.gold}}>{shcoPolicyToast.type}</div>
+            <div style={{fontSize:13,color:T.text,lineHeight:1.45}}>{shcoPolicyToast.msg}</div>
+          </div>
+        )}
         {/* Search bar */}
         <input
           value={shcoFullSearch} onChange={e=>setShcoFullSearch(e.target.value)}
@@ -10121,6 +10179,14 @@ export default function App() {
                     {stdAvg!==null&&<div style={{fontSize:12,fontWeight:700,color:stdAvg>=4?T.green:T.red}}>avg {stdAvg.toFixed(1)}</div>}
                     {stdLowCount>maxLowPerStd&&<div style={{fontSize:10,color:T.red}}>{stdLowCount} OE(s) ≤2</div>}
                     <div style={{fontSize:10,color:T.muted}}>{stdScoredOes.length}/{stdOes.length} scored</div>
+                    <button onClick={()=>downloadShcoV2Policy(stdCode)} disabled={!!shcoPolicyDownloading}
+                      title={`Download the ${stdCode} policy, personalised for your hospital`}
+                      style={{marginTop:6,padding:'3px 9px',borderRadius:6,border:`1px solid ${T.gold}40`,
+                        background:'transparent',color:T.gold,fontSize:10,fontWeight:700,whiteSpace:'nowrap',
+                        cursor:shcoPolicyDownloading?'default':'pointer',
+                        opacity:shcoPolicyDownloading&&shcoPolicyDownloading!==stdCode?0.4:shcoPolicyDownloading===stdCode?0.6:1}}>
+                      {shcoPolicyDownloading===stdCode?'⏳ Preparing…':'⬇ Download Policy'}
+                    </button>
                   </div>
                 </div>
                 {stdOes.map(oe=>{

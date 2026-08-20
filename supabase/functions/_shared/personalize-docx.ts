@@ -8,29 +8,45 @@ export const V1_HOSPITAL_PLACEHOLDER = "{{HOSPITAL_NAME}}";
 
 const XML_PART = /\.(xml|rels)$/i;
 
-export function substituteHospitalName(text: string, hospitalName: string): string {
-  return text
-    .replaceAll(V2_HOSPITAL_PLACEHOLDER, hospitalName)
-    .replaceAll(V1_HOSPITAL_PLACEHOLDER, hospitalName);
+// The name lands in XML text nodes, so any XML metacharacter in it
+// (& < > and, defensively, quotes) would corrupt the document.
+function escapeXml(s: string): string {
+  return s
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&apos;");
 }
 
-/** Personalise every XML/rels part in the docx buffer. */
+export function substituteHospitalName(
+  text: string,
+  hospitalName: string,
+): { xml: string; count: number } {
+  const safe = escapeXml(hospitalName);
+  let count = 0;
+  const xml = text
+    .replaceAll(V2_HOSPITAL_PLACEHOLDER, () => { count++; return safe; })
+    .replaceAll(V1_HOSPITAL_PLACEHOLDER, () => { count++; return safe; });
+  return { xml, count };
+}
+
+/** Personalise every XML/rels part; returns bytes + total replacement count. */
 export async function personalizeDocx(
   docxBytes: Uint8Array,
   hospitalName: string,
-): Promise<Uint8Array> {
+): Promise<{ bytes: Uint8Array; replacements: number }> {
   const zip = await JSZip.loadAsync(docxBytes);
-  const paths = Object.keys(zip.files);
+  let total = 0;
 
-  for (const path of paths) {
+  for (const path of Object.keys(zip.files)) {
     const entry = zip.files[path];
     if (!entry || entry.dir || !XML_PART.test(path)) continue;
-    const xml = await entry.async("string");
-    zip.file(path, substituteHospitalName(xml, hospitalName));
+    const { xml, count } = substituteHospitalName(await entry.async("string"), hospitalName);
+    if (count > 0) zip.file(path, xml);
+    total += count;
   }
 
-  return new Uint8Array(await zip.generateAsync({
-    type: "uint8array",
-    compression: "DEFLATE",
-  }));
+  const bytes = new Uint8Array(await zip.generateAsync({ type: "uint8array", compression: "DEFLATE" }));
+  return { bytes, replacements: total };
 }
