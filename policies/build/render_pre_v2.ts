@@ -105,6 +105,15 @@ interface V2Draft {
   control_extra_rows?: string[][];
 }
 
+/** Prefer draft.prepared_by; else parse resources_required; else neutral HCO default. */
+function resolvePreparedBy(d: V2Draft): string {
+  if (d.prepared_by && d.prepared_by.trim()) return d.prepared_by.trim();
+  const rr = d.resources_required ?? "";
+  const m = rr.match(/Prepared by \(designation\):\s*(«[^»]+»|[^\n]+?)(?:\s{2,}Name|\s*$)/);
+  if (m) return m[1].trim();
+  return "«Quality Coordinator»";
+}
+
 function sectionAfterWhatWeDo(hasStop: boolean): { n: number; title: string; key: string }[] {
   const rest: { title: string; key: string }[] = [];
   if (hasStop) rest.push({ title: "Stop-work authority", key: "stop" });
@@ -131,7 +140,7 @@ function buildV2Document(d: V2Draft): Document {
     ["Document No.", docNo, "Version", d.version ?? "2.0"],
     ["Issue No.", "«01»", "Review due", "«one year from implementation»"],
     ["Date created", "«________»", "Date of implementation", "«________»"],
-    ["Prepared by", `${d.prepared_by ?? "«Patient Rights Officer»"}  Name «________»`, "Signature", "«________»"],
+    ["Prepared by", `${resolvePreparedBy(d)}  Name «________»`, "Signature", "«________»"],
     ["Reviewed by", "«Quality Coordinator»  Name «________»", "Signature", "«________»"],
     ["Approved by", "«Medical Superintendent»  Name «________»", "Signature", "«________»"],
     ...(d.control_extra_rows ?? []),

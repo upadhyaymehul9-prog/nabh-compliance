@@ -279,6 +279,7 @@ def main() -> int:
         "monitoring_audit": MONITORING_AUDIT,
         "training_competency": TRAINING_ACKNOWLEDGEMENT,
         "resources_required": DOCUMENT_CONTROL,
+        "prepared_by": D("Emergency In-Charge"),
         "template_test": "hco_aac_v2_adoptable_shape",
         "subtitle": "HCO Full Accreditation, 6th Edition — transfer in/out and referral.",
         "doc_no": D("HCO/AAC/POL/03"),

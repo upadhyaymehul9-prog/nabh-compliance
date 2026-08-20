@@ -260,6 +260,7 @@ def main() -> int:
         "monitoring_audit": MONITORING_AUDIT,
         "training_competency": TRAINING_ACKNOWLEDGEMENT,
         "resources_required": DOCUMENT_CONTROL,
+        "prepared_by": D("Quality Coordinator"),
         "template_test": "hco_aac_v2_adoptable_shape",
         "subtitle": "HCO Full Accreditation, 6th Edition — defined and displayed healthcare services.",
         "doc_no": D("HCO/AAC/POL/01"),

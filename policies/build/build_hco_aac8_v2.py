@@ -387,6 +387,7 @@ def main() -> int:
         "monitoring_audit": MONITORING_AUDIT,
         "training_competency": TRAINING_ACKNOWLEDGEMENT,
         "resources_required": DOCUMENT_CONTROL,
+        "prepared_by": D("Imaging In-Charge"),
         "stop_work": STOP_WORK,
         "template_test": "hco_aac_v2_adoptable_shape",
         "subtitle": "Imaging services, legal compliance and turnaround time.",

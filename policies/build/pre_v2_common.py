@@ -326,6 +326,11 @@ def emit_pre_v2(
     accreditation_only: bool,
     edition_label: str = DEFAULT_EDITION_LABEL,
 ) -> None:
+    # Normalize NABH PDF PUA fi/fl ligatures before shape checks and write-out
+    # so masters never carry invisible U+F001/U+F002 glyphs.
+    from nabh_text_normalize import normalize_nabh_obj
+
+    draft = normalize_nabh_obj(draft)
     md = verify_shape(
         draft,
         oe_codes=oe_codes,

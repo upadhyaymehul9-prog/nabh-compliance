@@ -358,6 +358,7 @@ def main() -> int:
         "monitoring_audit": MONITORING_AUDIT,
         "training_competency": TRAINING_ACKNOWLEDGEMENT,
         "resources_required": DOCUMENT_CONTROL,
+        "prepared_by": D("Medical Superintendent"),
         "stop_work": "",
         "template_test": "hco_aac_v2_adoptable_shape",
         "subtitle": "Planned, coordinated discharge process including LAMA and time monitoring.",

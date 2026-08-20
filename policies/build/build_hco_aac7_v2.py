@@ -328,6 +328,7 @@ def main() -> int:
         "monitoring_audit": MONITORING_AUDIT,
         "training_competency": TRAINING_ACKNOWLEDGEMENT,
         "resources_required": DOCUMENT_CONTROL,
+        "prepared_by": D("Laboratory In-Charge"),
         "stop_work": "",
         "template_test": "hco_aac_v2_adoptable_shape",
         "subtitle": "Laboratory quality assurance, IQC/EQA and safety.",
