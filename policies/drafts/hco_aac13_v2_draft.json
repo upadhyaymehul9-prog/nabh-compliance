@@ -1,0 +1,104 @@
+{
+  "standard_code": "AAC.13",
+  "chapter": "HCO",
+  "oe_codes": [
+    "AAC.13.a",
+    "AAC.13.b",
+    "AAC.13.c",
+    "AAC.13.d",
+    "AAC.13.e"
+  ],
+  "policy_title": "Content of the Discharge Summary",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} defines and fills the content of the discharge summary.\n\nIt covers five jobs that match the standard:\n\n- provide the discharge summary at discharge, signed, with receipt acknowledged;\n- use standardised content (identity, treating doctor, dates, reasons, findings/diagnosis/condition, investigations, procedures, medications, other treatment);\n- include follow-up advice, medication and other instructions in an understandable manner (no BD/TID/QID; equipment and wound care where needed);\n- include instructions on when and how to obtain urgent care;\n- in case of death, include the cause of death (and post-mortem documentation when the cause is unclear or MLC).\n\nThe chapter intent is that discharge protocols are well defined and that the patient leaves with a usable clinical record.\n\nThis policy owns summary content. AAC.12 owns the discharge process (planning, coordination, LAMA guidance, that a summary is given, planned discharge, domiciliary visits, discharge-time monitoring). Cross-reference AAC.12 for process; do not rewrite process steps here. Cross-reference AAC.4.g for continued-care education elements that appear as instructions. Cross-reference PSQ.4.d for urgent-care instruction alignment.\n\nWords marked «like this» are defaults a hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to every discharge summary and death summary issued at {{HOSPITAL_NAME}}, including summaries for patients leaving against medical advice.\n\nIt binds:\n\n- treating doctors (or a doctor member of the treating team) who write and sign the summary;\n- nurses who explain instructions and support acknowledgement of receipt;\n- registration / front-office who may record hand-over of the copy;\n- the «discharge coordinator» if used, who checks that a signed summary is present before the patient leaves;\n- the «Medical Superintendent» who is accountable for the standardised template;\n- the «Quality Coordinator» who audits content completeness.\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- AAC.12 owns the discharge process and the duty to give a summary to all leavers. This policy owns what that summary contains and how instructions are written.\n- AAC.4.g owns related continued-care education elements; this policy owns how follow-up, medication and equipment instructions appear on the summary.\n- PSQ.4.d owns related urgent-care communication expectations; this policy owns that the discharge summary incorporates when and how to obtain urgent care.\n- AAC.2 owns the unique identification number used on the summary.\n- MOM owns implant batch/serial traceability where implants are used; if implant identifiers are required on the summary by that chapter, they are not redefined here.",
+  "policy_statement": "{{HOSPITAL_NAME}} provides a discharge summary to the patient at the time of discharge. The summary is signed by the treating doctor or a doctor member of the treating team. The patient or family acknowledges receipt.\n\n{{HOSPITAL_NAME}} uses standardised discharge-summary content covering identification, treating doctor, dates, reasons for admission, significant findings, diagnosis and condition at discharge, investigation results, procedures, medications administered and other treatment given.\n\n{{HOSPITAL_NAME}} writes follow-up advice, medication and other instructions in an understandable manner, includes when and how to obtain urgent care, and in case of death includes the cause of death.\n\n{{HOSPITAL_NAME}} does not issue a summary that uses only Latin dose abbreviations the patient cannot understand, and does not leave process ownership to this document — process remains AAC.12.",
+  "procedure_steps": [
+    "5.1 Summary provided, signed and receipt acknowledged\n\nA discharge summary is provided to the patient at the time of discharge at {{HOSPITAL_NAME}}.\n\nThe discharge summary is signed by the treating doctor or a doctor member of the treating team. The patient or family acknowledges receipt of the summary. Acknowledgement is recorded — «on the summary copy retained in the record, or on a receipt slip» — with date and name of the person receiving it.",
+    "5.2 Standardised content\n\nDischarge summaries at {{HOSPITAL_NAME}} have standardised content. The minimum content is:\n\n- patient's name;\n- unique identification number;\n- name of the treating doctor;\n- date of admission and date of discharge;\n- reasons for admission;\n- significant findings, diagnosis and the patient's condition at the time of discharge;\n- information regarding investigation results;\n- any procedure performed;\n- medication administered;\n- any other treatment given.\n\nIn addition to the treating doctor, the summary may name other consultants involved in treatment. The «Medical Superintendent» holds the current template; treating doctors complete every field or mark a field as not applicable with reason.",
+    "5.3 Understandable follow-up, medication and other instructions\n\nThe discharge summary contains follow-up advice, medication and other instructions in an understandable manner. Preventive aspects are incorporated where appropriate.\n\nFollow-up advice, medication and other instructions are explained to the patient and/or relatives in a language and manner they understand. Medical terms such as BD, TID and QID are not used; frequencies are written in plain words (for example morning and night, three times a day).\n\nOther instructions include safe and effective use of medical equipment at home — for example CPAP, nebulizer, rehab equipment — where applicable. For post-operative patients the summary includes wound-care instructions and pressure-ulcer care after discharge where relevant.\n\nCross-reference AAC.4.g for related continued-care education. Explanation is documented.",
+    "5.4 When and how to obtain urgent care\n\nThe discharge summary incorporates instructions about when and how to obtain urgent care.\n\nAdvice on when the patient shall seek urgent care is specific to the patient's diagnosis and clinical condition at discharge — for example development of fever, or bleeding or discharge from the operative site. Advice may state what medicines to take, when to consult a doctor, how to seek medical help, and the contact number of the hospital or doctor.\n\nInstructions about when and how to obtain urgent care are explained to the patient and/or relatives in a language and manner they understand. Follow-up of post-operative and at-risk patients is good practice from a patient-safety point of view. Cross-reference PSQ.4.d.",
+    "5.5 Cause of death in the death summary\n\nIn case of death, the summary of the case also includes the cause of death.\n\nWhen the cause of death is not clear, a post-mortem is performed (for example in MLC) and the same is documented. The death summary is given to the next of kin under AAC.12 process; this step owns that cause of death (and post-mortem documentation where required) appears in the summary content."
+  ],
+  "responsibility": "Medical Superintendent\n- Holds the standardised discharge-summary template.\n- Accountable that content rules are followed.\n\nTreating doctors (or doctor member of treating team)\n- Write and sign the summary; include all standardised fields; write understandable instructions and urgent-care advice; include cause of death where applicable.\n\nNurses\n- Explain instructions in a language the patient/family understands; support acknowledgement of receipt.\n\nDischarge coordinator (if used)\n- Confirms a signed summary with acknowledgement is present before the patient leaves.\n\nRegistration / front-office\n- May record hand-over of the patient copy where that is local practice.\n\nQuality Coordinator\n- Audits this policy «quarterly» (see monitoring section).\n- Tracks CAPA when summary-content defects recur.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Guidebook to Accreditation Standards for Hospitals, 6th Edition — Access, Assessment and Continuity of Care chapter, standard AAC.13 (PDF indices ~92–93; source OCR policies/source/hco6_aac_ocr.txt; PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).\n- Cross-reference within the same guidebook: AAC.12 (discharge process); AAC.4.g (continued-care education); PSQ.4.d (urgent care).\n- Internal documents of {{HOSPITAL_NAME}}: discharge-summary template; receipt acknowledgement method; death-summary template; urgent-care contact list.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator.\n\nCopies issued to: every in-patient ward; emergency; intensive care; nursing administration; discharge coordinator if that role exists; medical records.\n\nThe current version is available to all staff at the «front-office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "AAC — Access, Assessment and Continuity of Care (NABH HCO chapter)\nCAPA — corrective and preventive action\nCPAP — continuous positive airway pressure\nHCO — Hospital Accreditation Programme (NABH Full Accreditation)\nMLC — medico-legal case\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPSQ — Patient Safety and Quality (NABH HCO chapter)",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "AAC.13.a",
+      "requirement": "A discharge summary is provided to the patients at the time of discharge.",
+      "steps": "Section 3; 5.1 Summary provided, signed and receipt acknowledged; Section 4 item 1",
+      "responsible": "Treating doctors (sign); patient/family (acknowledge); nurses (support)",
+      "records": [
+        "Signed discharge summary issued at discharge.",
+        "Acknowledgement of receipt by patient or family.",
+        "Quarterly audit sample of signed summaries with acknowledgement."
+      ]
+    },
+    {
+      "oe_code": "AAC.13.b",
+      "requirement": "Discharge summary has a standardised content.",
+      "steps": "Section 3; 5.2 Standardised content; Section 4 item 2",
+      "responsible": "Medical Superintendent (template); treating doctors (complete fields)",
+      "records": [
+        "Current standardised discharge-summary template.",
+        "Completed summaries with name, unique ID, treating doctor, dates, reasons, findings/diagnosis/condition, investigations, procedures, medications, other treatment.",
+        "Quarterly completeness audit against the minimum content list."
+      ]
+    },
+    {
+      "oe_code": "AAC.13.c",
+      "requirement": "Discharge summary contains follow-up advice, medication and other instructions in an understandable manner.",
+      "steps": "Section 3; 5.3 Understandable follow-up, medication and other instructions; Section 4 item 3",
+      "responsible": "Treating doctors (write); nurses (explain)",
+      "records": [
+        "Summaries with plain-language medication frequencies (no BD/TID/QID).",
+        "Equipment, wound-care or pressure-ulcer instructions where applicable.",
+        "Record that instructions were explained in a language the patient/family understands."
+      ]
+    },
+    {
+      "oe_code": "AAC.13.d",
+      "requirement": "Discharge summary incorporates instructions about when and how to obtain urgent care.",
+      "steps": "Section 3; 5.4 When and how to obtain urgent care; Section 4 item 4",
+      "responsible": "Treating doctors (write); nurses (explain); Quality Coordinator (audit)",
+      "records": [
+        "Urgent-care section specific to diagnosis and condition at discharge.",
+        "Hospital or doctor contact number on the summary.",
+        "Record of explanation of urgent-care instructions to patient/relatives."
+      ]
+    },
+    {
+      "oe_code": "AAC.13.e",
+      "requirement": "In case of death, the summary of the case also includes the cause of death.",
+      "steps": "Section 3; 5.5 Cause of death in the death summary; Section 4 item 5",
+      "responsible": "Treating doctors (write death summary); Medical Superintendent (MLC/post-mortem oversight)",
+      "records": [
+        "Death summary stating cause of death.",
+        "Post-mortem documentation when cause unclear or MLC.",
+        "Copy retained in the medical record and given to next of kin under AAC.12 process."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO AAC.13 v2 (2026-08-20). PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. Source OCR policies/source/hco6_aac_ocr.txt (PDF idxs ~92–93). Five OEs a–e. No asterisked OEs — whole standard Tier-2 depth under HCO drafting choice; accuracy from guidebook retained. No stop-work. P2: accreditation-only. chapter=HCO. doc_no «HCO/AAC/POL/13». Boundary: AAC.12 owns process; AAC.13 owns summary content — cross-ref only. Cross-ref AAC.4.g and PSQ.4.d. Do not copy SHCO AAC.8 wording.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "HCO Full 6th Edition AAC.13 v2 draft from guidebook OCR; five steps; no asterisk; no stop-work; accreditation-only P2."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation defines the content of the discharge summary — signed, acknowledged, standardised, understandable, and clear about urgent care and cause of death where applicable.",
+  "exceptions": "The following are prohibited. There is no ward convenience exception.\n\n1. Discharging a patient without providing a signed discharge summary at the time of discharge, or without recording acknowledgement of receipt.\n2. Issuing a summary missing standardised minimum content: name, unique ID, treating doctor, admission and discharge dates, reasons for admission, significant findings/diagnosis/condition at discharge, investigation results, procedures, medications administered, or other treatment given.\n3. Writing follow-up or medication instructions only as BD, TID, QID or other abbreviations the patient cannot understand, or omitting equipment/wound-care instructions when they apply.\n4. Omitting specific instructions on when and how to obtain urgent care for that patient's diagnosis and condition.\n5. Issuing a death summary without the cause of death, or failing to document post-mortem when the cause is unclear or the case is medico-legal as required.\n\nStaff who see one of these acts report it the same shift to the «treating doctor» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sampled summaries signed; receipt acknowledged.\n- All standardised minimum content fields present or marked not applicable with reason.\n- Follow-up and medication instructions without BD/TID/QID; equipment and wound-care instructions present when applicable.\n- Urgent-care instructions specific to diagnosis/condition, with contact route.\n- Death summaries include cause of death; post-mortem documented when cause unclear or MLC.\n\nRoot-cause analysis is required when the same summary-content defect recurs within six months.\n\nThis policy is reviewed «annually», and sooner when the summary template or urgent-care contact routes change.",
+  "training_competency": "All treating doctors and nurses who prepare or explain discharge summaries are trained on this policy at induction and «once a year» after that. Training covers the template fields, plain-language medication instructions, urgent-care wording and death-summary cause of death.\n\nStaff acknowledgement\n\nI have read this Content of the Discharge Summary policy of {{HOSPITAL_NAME}}. I will complete the standardised fields, write understandable instructions, include urgent-care advice and document cause of death where applicable.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/AAC/POL/13»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "stop_work": "",
+  "template_test": "hco_aac_v2_adoptable_shape",
+  "subtitle": "Standardised discharge-summary content, understandable instructions and death summary.",
+  "doc_no": "«HCO/AAC/POL/13»",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}
