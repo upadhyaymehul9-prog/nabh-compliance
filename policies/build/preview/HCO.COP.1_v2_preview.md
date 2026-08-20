@@ -52,7 +52,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 ## 4. Non-negotiable rules
 
 1. Do not skip: Uniform care is provided to patients following written guidance .
-2. Do not skip: The organisation has a uniform process for identication of patients and uses at least two identiers.
+2. Do not skip: The organisation has a uniform process for identification of patients and uses at least two identifiers.
 3. Do not skip: The organisation implements evidence-based clinical practice guidelines and / or clinical protocols to guid...
 4. Do not skip: Clinical care pathways are developed, consistently followed across all settings of care, and reviewed perio...
 5. Do not skip: Multi-disciplinary and multi-speciality care, where appropriate, is planned based on best clinical practice...
@@ -67,9 +67,9 @@ Uniform care is provided to patients following written guidance .
 
 Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
 
-### 5.2 The organisation has a uniform process for identication of patients ..
+### 5.2 The organisation has a uniform process for identification of patients..
 
-The organisation has a uniform process for identication of patients and uses at least two identiers.
+The organisation has a uniform process for identification of patients and uses at least two identifiers.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
@@ -150,7 +150,7 @@ Signature: ___________________________
 
 ## 10. Distribution
 
-Medical Superintendent; Quality Coordinator; Quality Coordinator; department clinical staff covered by COP.1.
+Medical Superintendent; Quality Coordinator; department clinical staff covered by COP.1
 
 ## 11. Abbreviations
 
@@ -168,7 +168,7 @@ This table is an index. It is not how the policy is organised.
 | OE | Requirement | Where this policy addresses it | Responsible |
 | --- | --- | --- | --- |
 | COP.1.a | Uniform care is provided to patients following written guidance . | Section 3; 5.1 | Quality Coordinator |
-| COP.1.b | The organisation has a uniform process for identication of patients and uses at least two identiers. | Section 3; 5.2 | Quality Coordinator |
+| COP.1.b | The organisation has a uniform process for identification of patients and uses at least two identifiers. | Section 3; 5.2 | Quality Coordinator |
 | COP.1.c | The organisation implements evidence-based clinical practice guidelines and / or clinical protocols to guide uniform patient care. | Section 3; 5.3 | Quality Coordinator |
 | COP.1.d | Clinical care pathways are developed, consistently followed across all settings of care, and reviewed periodically. | Section 3; 5.4 | Quality Coordinator |
 | COP.1.e | Multi-disciplinary and multi-speciality care, where appropriate, is planned based on best clinical practices / clinical practice guidelines and delivered in a uniform manner across the organisation. | Section 3; 5.5 | Quality Coordinator |
@@ -185,7 +185,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Audit sample notes for COP.1.a reviewed «quarterly».
 - Documented evidence specifically required by the asterisked interpretation.
 
-### COP.1.b — The organisation has a uniform process for identication of patients and uses at least two identiers.
+### COP.1.b — The organisation has a uniform process for identification of patients and uses at least two identifiers.
 
 - Records showing COP.1.b was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).

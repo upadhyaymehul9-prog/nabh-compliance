@@ -53,7 +53,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 1. Do not skip: The organ transplant programme shall be in consonance with the legal requirements and shall be conducted et...
 2. Do not skip: Care of transplant patients is guided by clinical practice guidelines.
-3. Do not skip: The organisation ensures education and counselling of recipient and donor through trained / qualied counse...
+3. Do not skip: The organisation ensures education and counselling of recipient and donor through trained / qualified couns...
 4. Do not skip: The organisation shall take measures to create awareness regarding organ donation.
 5. Staff who see a COP.15 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».
 
@@ -75,7 +75,7 @@ Method note (from guidebook interpretation): Written guidance based on standard 
 
 ### 5.3 The organisation ensures education and counselling of recipient and d..
 
-The organisation ensures education and counselling of recipient and donor through trained / qualied counsellors before organ transplantation.
+The organisation ensures education and counselling of recipient and donor through trained / qualified counsellors before organ transplantation.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
@@ -138,7 +138,7 @@ Signature: ___________________________
 
 ## 10. Distribution
 
-Medical Superintendent; Transplant Programme In-Charge; Quality Coordinator; department clinical staff covered by COP.15.
+Medical Superintendent; Transplant Programme In-Charge; Quality Coordinator; department clinical staff covered by COP.15
 
 ## 11. Abbreviations
 
@@ -157,7 +157,7 @@ This table is an index. It is not how the policy is organised.
 | --- | --- | --- | --- |
 | COP.15.a | The organ transplant programme shall be in consonance with the legal requirements and shall be conducted ethically. | Section 3; 5.1 | Transplant Programme In-Charge |
 | COP.15.b | Care of transplant patients is guided by clinical practice guidelines. | Section 3; 5.2 | Transplant Programme In-Charge |
-| COP.15.c | The organisation ensures education and counselling of recipient and donor through trained / qualied counsellors before organ transplantation. | Section 3; 5.3 | Transplant Programme In-Charge |
+| COP.15.c | The organisation ensures education and counselling of recipient and donor through trained / qualified counsellors before organ transplantation. | Section 3; 5.3 | Transplant Programme In-Charge |
 | COP.15.d | The organisation shall take measures to create awareness regarding organ donation. | Section 3; 5.4 | Transplant Programme In-Charge |
 
 ## 13. Required Records / Evidence Checklist
@@ -177,7 +177,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Audit sample notes for COP.15.b reviewed «quarterly».
 - Documented evidence specifically required by the asterisked interpretation.
 
-### COP.15.c — The organisation ensures education and counselling of recipient and donor through trained / qualied counsellors before organ transplantation.
+### COP.15.c — The organisation ensures education and counselling of recipient and donor through trained / qualified counsellors before organ transplantation.
 
 - Records showing COP.15.c was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).

@@ -53,7 +53,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 1. Do not skip: Paediatric services are organised and provided safely.
 2. Do not skip: Neonatal care is in consonance with the national / international guidelines.
-3. Do not skip: Those who care for children have age-specic competency.
+3. Do not skip: Those who care for children have age-specific competency.
 4. Do not skip: Provisions are made for special care of children.
 5. Do not skip: Paediatric assessment includes growth, developmental, immunisation and nutritional assessment.
 6. Do not skip: The organisation has measures in place to prevent child / neonate abduction and abuse.
@@ -75,9 +75,9 @@ Neonatal care is in consonance with the national / international guidelines.
 
 Method note (from guidebook interpretation): These shall not just be doctors but shall include nursing staff also.
 
-### 5.3 Those who care for children have age-specic competency
+### 5.3 Those who care for children have age-specific competency
 
-Those who care for children have age-specic competency.
+Those who care for children have age-specific competency.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
@@ -162,7 +162,7 @@ Signature: ___________________________
 
 ## 10. Distribution
 
-Medical Superintendent; Paediatric In-Charge; Quality Coordinator; department clinical staff covered by COP.11.
+Medical Superintendent; Paediatric In-Charge; Quality Coordinator; department clinical staff covered by COP.11
 
 ## 11. Abbreviations
 
@@ -181,7 +181,7 @@ This table is an index. It is not how the policy is organised.
 | --- | --- | --- | --- |
 | COP.11.a | Paediatric services are organised and provided safely. | Section 3; 5.1 | Paediatric In-Charge |
 | COP.11.b | Neonatal care is in consonance with the national / international guidelines. | Section 3; 5.2 | Paediatric In-Charge |
-| COP.11.c | Those who care for children have age-specic competency. | Section 3; 5.3 | Paediatric In-Charge |
+| COP.11.c | Those who care for children have age-specific competency. | Section 3; 5.3 | Paediatric In-Charge |
 | COP.11.d | Provisions are made for special care of children. | Section 3; 5.4 | Paediatric In-Charge |
 | COP.11.e | Paediatric assessment includes growth, developmental, immunisation and nutritional assessment. | Section 3; 5.5 | Paediatric In-Charge |
 | COP.11.f | The organisation has measures in place to prevent child / neonate abduction and abuse. | Section 3; 5.6 | Paediatric In-Charge |
@@ -206,7 +206,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Audit sample notes for COP.11.b reviewed «quarterly».
 - Documented evidence specifically required by the asterisked interpretation.
 
-### COP.11.c — Those who care for children have age-specic competency.
+### COP.11.c — Those who care for children have age-specific competency.
 
 - Records showing COP.11.c was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).

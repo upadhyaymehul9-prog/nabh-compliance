@@ -157,7 +157,7 @@ Signature: ___________________________
 
 ## 11. Distribution
 
-Medical Superintendent; CPR Committee Chair; Quality Coordinator; department clinical staff covered by COP.5.
+Medical Superintendent; CPR Committee Chair; Quality Coordinator; department clinical staff covered by COP.5
 
 ## 12. Abbreviations
 

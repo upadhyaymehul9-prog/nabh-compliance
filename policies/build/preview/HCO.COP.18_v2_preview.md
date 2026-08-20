@@ -155,7 +155,7 @@ Signature: ___________________________
 
 ## 10. Distribution
 
-Medical Superintendent; Rehabilitation In-Charge; Quality Coordinator; department clinical staff covered by COP.18.
+Medical Superintendent; Rehabilitation In-Charge; Quality Coordinator; department clinical staff covered by COP.18
 
 ## 11. Abbreviations
 

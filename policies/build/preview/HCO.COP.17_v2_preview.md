@@ -134,7 +134,7 @@ Signature: ___________________________
 
 ## 10. Distribution
 
-Medical Superintendent; Pain Management Lead; Quality Coordinator; department clinical staff covered by COP.17.
+Medical Superintendent; Pain Management Lead; Quality Coordinator; department clinical staff covered by COP.17
 
 ## 11. Abbreviations
 

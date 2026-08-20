@@ -53,7 +53,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 1. Do not skip: Clinical procedures are performed based on the clinical needs of the patient.
 2. Do not skip: Performance of various clinical procedures is based on written guidance and done in a safe manner.
-3. Do not skip: Qualied personnel order, plan, perform and assist in performing procedures.
+3. Do not skip: Qualified personnel order, plan, perform and assist in performing procedures.
 4. Do not skip: Care is taken to prevent adverse events like a wrong patient, wrong procedure and wrong site.
 5. Do not skip: Informed consent is taken by the personnel performing the procedure, where applicable.
 6. Do not skip: Patients are appropriately monitored during and after the procedure.
@@ -75,9 +75,9 @@ Performance of various clinical procedures is based on written guidance and done
 
 Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
 
-### 5.3 Qualied personnel order, plan, perform and assist in performing proc..
+### 5.3 Qualified personnel order, plan, perform and assist in performing pro..
 
-Qualied personnel order, plan, perform and assist in performing procedures.
+Qualified personnel order, plan, perform and assist in performing procedures.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
@@ -166,7 +166,7 @@ Signature: ___________________________
 
 ## 11. Distribution
 
-Medical Superintendent; Quality Coordinator; Quality Coordinator; department clinical staff covered by COP.7.
+Medical Superintendent; Quality Coordinator; department clinical staff covered by COP.7
 
 ## 12. Abbreviations
 
@@ -185,7 +185,7 @@ This table is an index. It is not how the policy is organised.
 | --- | --- | --- | --- |
 | COP.7.a | Clinical procedures are performed based on the clinical needs of the patient. | Section 3; 5.1; Section 6 Stop-work | Quality Coordinator |
 | COP.7.b | Performance of various clinical procedures is based on written guidance and done in a safe manner. | Section 3; 5.2; Section 6 Stop-work | Quality Coordinator |
-| COP.7.c | Qualied personnel order, plan, perform and assist in performing procedures. | Section 3; 5.3; Section 6 Stop-work | Quality Coordinator |
+| COP.7.c | Qualified personnel order, plan, perform and assist in performing procedures. | Section 3; 5.3; Section 6 Stop-work | Quality Coordinator |
 | COP.7.d | Care is taken to prevent adverse events like a wrong patient, wrong procedure and wrong site. | Section 3; 5.4 | Quality Coordinator |
 | COP.7.e | Informed consent is taken by the personnel performing the procedure, where applicable. | Section 3; 5.5 | Quality Coordinator |
 | COP.7.f | Patients are appropriately monitored during and after the procedure. | Section 3; 5.6 | Quality Coordinator |
@@ -208,7 +208,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Audit sample notes for COP.7.b reviewed «quarterly».
 - Documented evidence specifically required by the asterisked interpretation.
 
-### COP.7.c — Qualied personnel order, plan, perform and assist in performing procedures.
+### COP.7.c — Qualified personnel order, plan, perform and assist in performing procedures.
 
 - Records showing COP.7.c was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).

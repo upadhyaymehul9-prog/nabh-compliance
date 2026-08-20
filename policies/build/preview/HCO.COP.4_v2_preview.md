@@ -51,7 +51,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: The organisation identies potential community emergencies, epidemics and other disasters.
+1. Do not skip: The organisation identifies potential community emergencies, epidemics and other disasters.
 2. Do not skip: The organisation manages community emergencies, epidemics and other disasters as per a documented plan.
 3. Do not skip: Provision is made for availability of medical supplies, equipment and materials during such emergencies.
 4. Do not skip: The plan is tested at least twice a year.
@@ -59,9 +59,9 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 The organisation identies potential community emergencies, epidemics..
+### 5.1 The organisation identifies potential community emergencies, epidemic..
 
-The organisation identies potential community emergencies, epidemics and other disasters.
+The organisation identifies potential community emergencies, epidemics and other disasters.
 
 Method note (from guidebook interpretation): The disaster, community emergency and epidemic plan must |
 
@@ -134,7 +134,7 @@ Signature: ___________________________
 
 ## 10. Distribution
 
-Medical Superintendent; Medical Superintendent; Quality Coordinator; department clinical staff covered by COP.4.
+Medical Superintendent; Quality Coordinator; department clinical staff covered by COP.4
 
 ## 11. Abbreviations
 
@@ -151,7 +151,7 @@ This table is an index. It is not how the policy is organised.
 
 | OE | Requirement | Where this policy addresses it | Responsible |
 | --- | --- | --- | --- |
-| COP.4.a | The organisation identies potential community emergencies, epidemics and other disasters. | Section 3; 5.1 | Medical Superintendent |
+| COP.4.a | The organisation identifies potential community emergencies, epidemics and other disasters. | Section 3; 5.1 | Medical Superintendent |
 | COP.4.b | The organisation manages community emergencies, epidemics and other disasters as per a documented plan. | Section 3; 5.2 | Medical Superintendent |
 | COP.4.c | Provision is made for availability of medical supplies, equipment and materials during such emergencies. | Section 3; 5.3 | Medical Superintendent |
 | COP.4.d | The plan is tested at least twice a year. | Section 3; 5.4 | Medical Superintendent |
@@ -160,7 +160,7 @@ This table is an index. It is not how the policy is organised.
 
 Records the hospital holds under this policy, listed by objective element.
 
-### COP.4.a — The organisation identies potential community emergencies, epidemics and other disasters.
+### COP.4.a — The organisation identifies potential community emergencies, epidemics and other disasters.
 
 - Records showing COP.4.a was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).

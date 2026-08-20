@@ -52,9 +52,9 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 ## 4. Non-negotiable rules
 
 1. Do not skip: Care of patients in intensive care and high dependency units is provided based on written guidance.
-2. Do not skip: The dened admission and discharge criteria for intensive care and high dependency units are implemented.
+2. Do not skip: The defined admission and discharge criteria for intensive care and high dependency units are implemented.
 3. Do not skip: Adequate staff and equipment are available.
-4. Do not skip: Dened procedures for the situation of bed shortages are followed.
+4. Do not skip: Defined procedures for the situation of bed shortages are followed.
 5. Do not skip: Infection prevention and control practices are followed.
 6. Do not skip: The organisation shall implement a quality assurance programme.
 7. Do not skip: The organisation has a mechanism to counsel the patient and/or family periodically.
@@ -69,9 +69,9 @@ Care of patients in intensive care and high dependency units is provided based o
 
 Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
 
-### 5.2 The dened admission and discharge criteria for intensive care and hi..
+### 5.2 The defined admission and discharge criteria for intensive care and h..
 
-The dened admission and discharge criteria for intensive care and high dependency units are implemented.
+The defined admission and discharge criteria for intensive care and high dependency units are implemented.
 
 Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
 
@@ -81,9 +81,9 @@ Adequate staff and equipment are available.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.4 Dened procedures for the situation of bed shortages are followed
+### 5.4 Defined procedures for the situation of bed shortages are followed
 
-Dened procedures for the situation of bed shortages are followed.
+Defined procedures for the situation of bed shortages are followed.
 
 Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
 
@@ -164,7 +164,7 @@ Signature: ___________________________
 
 ## 11. Distribution
 
-Medical Superintendent; ICU In-Charge; Quality Coordinator; department clinical staff covered by COP.9.
+Medical Superintendent; ICU In-Charge; Quality Coordinator; department clinical staff covered by COP.9
 
 ## 12. Abbreviations
 
@@ -182,9 +182,9 @@ This table is an index. It is not how the policy is organised.
 | OE | Requirement | Where this policy addresses it | Responsible |
 | --- | --- | --- | --- |
 | COP.9.a | Care of patients in intensive care and high dependency units is provided based on written guidance. | Section 3; 5.1; Section 6 Stop-work | ICU In-Charge |
-| COP.9.b | The dened admission and discharge criteria for intensive care and high dependency units are implemented. | Section 3; 5.2; Section 6 Stop-work | ICU In-Charge |
+| COP.9.b | The defined admission and discharge criteria for intensive care and high dependency units are implemented. | Section 3; 5.2; Section 6 Stop-work | ICU In-Charge |
 | COP.9.c | Adequate staff and equipment are available. | Section 3; 5.3; Section 6 Stop-work | ICU In-Charge |
-| COP.9.d | Dened procedures for the situation of bed shortages are followed. | Section 3; 5.4 | ICU In-Charge |
+| COP.9.d | Defined procedures for the situation of bed shortages are followed. | Section 3; 5.4 | ICU In-Charge |
 | COP.9.e | Infection prevention and control practices are followed. | Section 3; 5.5 | ICU In-Charge |
 | COP.9.f | The organisation shall implement a quality assurance programme. | Section 3; 5.6 | ICU In-Charge |
 | COP.9.g | The organisation has a mechanism to counsel the patient and/or family periodically. | Section 3; 5.7 | ICU In-Charge |
@@ -200,7 +200,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Audit sample notes for COP.9.a reviewed «quarterly».
 - Documented evidence specifically required by the asterisked interpretation.
 
-### COP.9.b — The dened admission and discharge criteria for intensive care and high dependency units are implemented.
+### COP.9.b — The defined admission and discharge criteria for intensive care and high dependency units are implemented.
 
 - Records showing COP.9.b was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).
@@ -213,7 +213,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Written guidance / protocol referenced for this element (where required).
 - Audit sample notes for COP.9.c reviewed «quarterly».
 
-### COP.9.d — Dened procedures for the situation of bed shortages are followed.
+### COP.9.d — Defined procedures for the situation of bed shortages are followed.
 
 - Records showing COP.9.d was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).

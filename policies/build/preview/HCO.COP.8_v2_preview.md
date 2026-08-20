@@ -55,8 +55,8 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 2. Do not skip: The organisation shall establish and implement processes for blood / component collection, testing, storage...
 3. Do not skip: Blood and components are stored safely from the time of collection till transfusion.
 4. Do not skip: The organisation ensures safe and rational use of blood and blood components.
-5. Do not skip: Blood / blood components are available for use in emergency and routine situations within a dened time-frame.
-6. Do not skip: The organisation shall ensure that post-transfusion form is collected, reactions if any identied and are a...
+5. Do not skip: Blood / blood components are available for use in emergency and routine situations within a defined time-fr...
+6. Do not skip: The organisation shall ensure that post-transfusion form is collected, reactions if any identified and are ...
 7. Do not skip: The organisation shall implement a quality assurance programme.
 8. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
 9. Staff who see a COP.8 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».
@@ -91,13 +91,13 @@ This is a CORE objective element — non-compliance is not acceptable for accred
 
 ### 5.5 Blood / blood components are available for use in emergency and routi..
 
-Blood / blood components are available for use in emergency and routine situations within a dened time-frame.
+Blood / blood components are available for use in emergency and routine situations within a defined time-frame.
 
 Method note (from guidebook interpretation): Whenever the patient's clinical condition warrants care from
 
 ### 5.6 The organisation shall ensure that post-transfusion form is collected..
 
-The organisation shall ensure that post-transfusion form is collected, reactions if any identied and are analysed for preventive and corrective actions.
+The organisation shall ensure that post-transfusion form is collected, reactions if any identified and are analysed for preventive and corrective actions.
 
 Method note (from guidebook interpretation): Whenever the telemedicine facility is provided, the organisation
 
@@ -166,7 +166,7 @@ Signature: ___________________________
 
 ## 11. Distribution
 
-Medical Superintendent; Transfusion / Blood Bank In-Charge; Quality Coordinator; department clinical staff covered by COP.8.
+Medical Superintendent; Transfusion / Blood Bank In-Charge; Quality Coordinator; department clinical staff covered by COP.8
 
 ## 12. Abbreviations
 
@@ -187,8 +187,8 @@ This table is an index. It is not how the policy is organised.
 | COP.8.b | The organisation shall establish and implement processes for blood / component collection, testing, storage and distribution under written guidance. | Section 3; 5.2; Section 6 Stop-work | Transfusion / Blood Bank In-Charge |
 | COP.8.c | Blood and components are stored safely from the time of collection till transfusion. | Section 3; 5.3; Section 6 Stop-work | Transfusion / Blood Bank In-Charge |
 | COP.8.d | The organisation ensures safe and rational use of blood and blood components. | Section 3; 5.4 | Transfusion / Blood Bank In-Charge |
-| COP.8.e | Blood / blood components are available for use in emergency and routine situations within a dened time-frame. | Section 3; 5.5 | Transfusion / Blood Bank In-Charge |
-| COP.8.f | The organisation shall ensure that post-transfusion form is collected, reactions if any identied and are analysed for preventive and corrective actions. | Section 3; 5.6 | Transfusion / Blood Bank In-Charge |
+| COP.8.e | Blood / blood components are available for use in emergency and routine situations within a defined time-frame. | Section 3; 5.5 | Transfusion / Blood Bank In-Charge |
+| COP.8.f | The organisation shall ensure that post-transfusion form is collected, reactions if any identified and are analysed for preventive and corrective actions. | Section 3; 5.6 | Transfusion / Blood Bank In-Charge |
 | COP.8.g | The organisation shall implement a quality assurance programme. | Section 3; 5.7 | Transfusion / Blood Bank In-Charge |
 
 ## 14. Required Records / Evidence Checklist
@@ -221,14 +221,14 @@ Records the hospital holds under this policy, listed by objective element.
 - Audit sample notes for COP.8.d reviewed «quarterly».
 - Documented evidence specifically required by the asterisked interpretation.
 
-### COP.8.e — Blood / blood components are available for use in emergency and routine situations within a dened time-frame.
+### COP.8.e — Blood / blood components are available for use in emergency and routine situations within a defined time-frame.
 
 - Records showing COP.8.e was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).
 - Audit sample notes for COP.8.e reviewed «quarterly».
 - Documented evidence specifically required by the asterisked interpretation.
 
-### COP.8.f — The organisation shall ensure that post-transfusion form is collected, reactions if any identied and are analysed for preventive and corrective actions.
+### COP.8.f — The organisation shall ensure that post-transfusion form is collected, reactions if any identified and are analysed for preventive and corrective actions.
 
 - Records showing COP.8.f was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).

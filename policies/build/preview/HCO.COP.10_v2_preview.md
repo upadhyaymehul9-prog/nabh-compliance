@@ -52,16 +52,16 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 ## 4. Non-negotiable rules
 
 1. Do not skip: Obstetric services are organised and provided safely.
-2. Do not skip: The organisation identies and, provides care to high-risk obstetric cases, and where needed, refers them t...
+2. Do not skip: The organisation identifies and, provides care to high-risk obstetric cases, and where needed, refers them ...
 3. Do not skip: Persons caring for high-risk obstetric cases are competent.
 4. Do not skip: Ante-natal services are provided.
 5. Do not skip: Organisation encourages and welcomes the presence of a birth companion during labour.
-6. Do not skip: Organisation treats pregnant woman and her companion cordially and respectfully, ensures privacy and conde...
+6. Do not skip: Organisation treats pregnant woman and her companion cordially and respectfully, ensures privacy and confid...
 7. Do not skip: The treating doctor explains danger signs and important care activities to pregnant woman and her companion.
 8. Do not skip: Obstetric patient’s assessment also includes maternal nutrition.
 9. Do not skip: Appropriate peri-natal and post-natal monitoring is performed.
 10. Do not skip: The organisation caring for high-risk obstetric cases have the facilities to take care of neonates of such ...
-11. Do not skip: Organization shall adhere to legal and dened Assisted Reproductive Technology (ART) practices.
+11. Do not skip: Organization shall adhere to legal and defined Assisted Reproductive Technology (ART) practices.
 12. Staff who see a COP.10 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».
 
 ## 5. What we do
@@ -72,9 +72,9 @@ Obstetric services are organised and provided safely.
 
 Method note (from guidebook interpretation): Written guidance based on standard treatment guidelines/sound |
 
-### 5.2 The organisation identies and, provides care to high-risk obstetric ..
+### 5.2 The organisation identifies and, provides care to high-risk obstetric..
 
-The organisation identies and, provides care to high-risk obstetric cases, and where needed, refers them to another appropriate centre.
+The organisation identifies and, provides care to high-risk obstetric cases, and where needed, refers them to another appropriate centre.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
@@ -98,7 +98,7 @@ Staff follow the written guidance and record the action in the medical record or
 
 ### 5.6 Organisation treats pregnant woman and her companion cordially and re..
 
-Organisation treats pregnant woman and her companion cordially and respectfully, ensures privacy and condentiality for pregnant woman during her stay.
+Organisation treats pregnant woman and her companion cordially and respectfully, ensures privacy and confidentiality for pregnant woman during her stay.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
@@ -126,9 +126,9 @@ The organisation caring for high-risk obstetric cases have the facilities to tak
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.11 Organization shall adhere to legal and dened Assisted Reproductive T..
+### 5.11 Organization shall adhere to legal and defined Assisted Reproductive ..
 
-Organization shall adhere to legal and dened Assisted Reproductive Technology (ART) practices.
+Organization shall adhere to legal and defined Assisted Reproductive Technology (ART) practices.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
@@ -183,7 +183,7 @@ Signature: ___________________________
 
 ## 10. Distribution
 
-Medical Superintendent; Obstetric In-Charge; Quality Coordinator; department clinical staff covered by COP.10.
+Medical Superintendent; Obstetric In-Charge; Quality Coordinator; department clinical staff covered by COP.10
 
 ## 11. Abbreviations
 
@@ -201,16 +201,16 @@ This table is an index. It is not how the policy is organised.
 | OE | Requirement | Where this policy addresses it | Responsible |
 | --- | --- | --- | --- |
 | COP.10.a | Obstetric services are organised and provided safely. | Section 3; 5.1 | Obstetric In-Charge |
-| COP.10.b | The organisation identies and, provides care to high-risk obstetric cases, and where needed, refers them to another appropriate centre. | Section 3; 5.2 | Obstetric In-Charge |
+| COP.10.b | The organisation identifies and, provides care to high-risk obstetric cases, and where needed, refers them to another appropriate centre. | Section 3; 5.2 | Obstetric In-Charge |
 | COP.10.c | Persons caring for high-risk obstetric cases are competent. | Section 3; 5.3 | Obstetric In-Charge |
 | COP.10.d | Ante-natal services are provided. | Section 3; 5.4 | Obstetric In-Charge |
 | COP.10.e | Organisation encourages and welcomes the presence of a birth companion during labour. | Section 3; 5.5 | Obstetric In-Charge |
-| COP.10.f | Organisation treats pregnant woman and her companion cordially and respectfully, ensures privacy and condentiality for pregnant woman during her stay. | Section 3; 5.6 | Obstetric In-Charge |
+| COP.10.f | Organisation treats pregnant woman and her companion cordially and respectfully, ensures privacy and confidentiality for pregnant woman during her stay. | Section 3; 5.6 | Obstetric In-Charge |
 | COP.10.g | The treating doctor explains danger signs and important care activities to pregnant woman and her companion. | Section 3; 5.7 | Obstetric In-Charge |
 | COP.10.h | Obstetric patient’s assessment also includes maternal nutrition. | Section 3; 5.8 | Obstetric In-Charge |
 | COP.10.i | Appropriate peri-natal and post-natal monitoring is performed. | Section 3; 5.9 | Obstetric In-Charge |
 | COP.10.j | The organisation caring for high-risk obstetric cases have the facilities to take care of neonates of such cases. | Section 3; 5.10 | Obstetric In-Charge |
-| COP.10.k | Organization shall adhere to legal and dened Assisted Reproductive Technology (ART) practices. | Section 3; 5.11 | Obstetric In-Charge |
+| COP.10.k | Organization shall adhere to legal and defined Assisted Reproductive Technology (ART) practices. | Section 3; 5.11 | Obstetric In-Charge |
 
 ## 13. Required Records / Evidence Checklist
 
@@ -223,7 +223,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Audit sample notes for COP.10.a reviewed «quarterly».
 - Documented evidence specifically required by the asterisked interpretation.
 
-### COP.10.b — The organisation identies and, provides care to high-risk obstetric cases, and where needed, refers them to another appropriate centre.
+### COP.10.b — The organisation identifies and, provides care to high-risk obstetric cases, and where needed, refers them to another appropriate centre.
 
 - Records showing COP.10.b was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).
@@ -248,7 +248,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Written guidance / protocol referenced for this element (where required).
 - Audit sample notes for COP.10.e reviewed «quarterly».
 
-### COP.10.f — Organisation treats pregnant woman and her companion cordially and respectfully, ensures privacy and condentiality for pregnant woman during her stay.
+### COP.10.f — Organisation treats pregnant woman and her companion cordially and respectfully, ensures privacy and confidentiality for pregnant woman during her stay.
 
 - Records showing COP.10.f was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).
@@ -278,7 +278,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Written guidance / protocol referenced for this element (where required).
 - Audit sample notes for COP.10.j reviewed «quarterly».
 
-### COP.10.k — Organization shall adhere to legal and dened Assisted Reproductive Technology (ART) practices.
+### COP.10.k — Organization shall adhere to legal and defined Assisted Reproductive Technology (ART) practices.
 
 - Records showing COP.10.k was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).

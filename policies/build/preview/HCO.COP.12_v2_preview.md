@@ -171,7 +171,7 @@ Signature: ___________________________
 
 ## 11. Distribution
 
-Medical Superintendent; Anaesthesia / Sedation In-Charge; Quality Coordinator; department clinical staff covered by COP.12.
+Medical Superintendent; Anaesthesia / Sedation In-Charge; Quality Coordinator; department clinical staff covered by COP.12
 
 ## 12. Abbreviations
 

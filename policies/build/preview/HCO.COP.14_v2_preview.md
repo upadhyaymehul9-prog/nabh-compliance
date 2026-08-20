@@ -57,7 +57,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 4. Do not skip: Care is taken to prevent adverse events like the wrong site, wrong patient and wrong surgery.
 5. Do not skip: An operative note is documented before transfer out of patient from recovery.
 6. Do not skip: Post-operative care is guided by a documented plan.
-7. Do not skip: Patient, personnel and material ow conform to infection prevention and control practices.
+7. Do not skip: Patient, personnel and material flow conform to infection prevention and control practices.
 8. Do not skip: Appropriate facilities, equipment, instruments and supplies are available in the operating theatre.
 9. Do not skip: The organisation shall implement a quality assurance programme.
 10. Do not skip: The quality assurance programme includes surveillance of the operation theatre environment.
@@ -104,9 +104,9 @@ Post-operative care is guided by a documented plan.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.7 Patient, personnel and material ow conform to infection prevention a..
+### 5.7 Patient, personnel and material flow conform to infection prevention ..
 
-Patient, personnel and material ow conform to infection prevention and control practices.
+Patient, personnel and material flow conform to infection prevention and control practices.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
@@ -187,7 +187,7 @@ Signature: ___________________________
 
 ## 11. Distribution
 
-Medical Superintendent; OT In-Charge; Quality Coordinator; department clinical staff covered by COP.14.
+Medical Superintendent; OT In-Charge; Quality Coordinator; department clinical staff covered by COP.14
 
 ## 12. Abbreviations
 
@@ -210,7 +210,7 @@ This table is an index. It is not how the policy is organised.
 | COP.14.d | Care is taken to prevent adverse events like the wrong site, wrong patient and wrong surgery. | Section 3; 5.4 | OT In-Charge |
 | COP.14.e | An operative note is documented before transfer out of patient from recovery. | Section 3; 5.5 | OT In-Charge |
 | COP.14.f | Post-operative care is guided by a documented plan. | Section 3; 5.6 | OT In-Charge |
-| COP.14.g | Patient, personnel and material ow conform to infection prevention and control practices. | Section 3; 5.7 | OT In-Charge |
+| COP.14.g | Patient, personnel and material flow conform to infection prevention and control practices. | Section 3; 5.7 | OT In-Charge |
 | COP.14.h | Appropriate facilities, equipment, instruments and supplies are available in the operating theatre. | Section 3; 5.8 | OT In-Charge |
 | COP.14.i | The organisation shall implement a quality assurance programme. | Section 3; 5.9 | OT In-Charge |
 | COP.14.j | The quality assurance programme includes surveillance of the operation theatre environment. | Section 3; 5.10 | OT In-Charge |
@@ -257,7 +257,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Written guidance / protocol referenced for this element (where required).
 - Audit sample notes for COP.14.f reviewed «quarterly».
 
-### COP.14.g — Patient, personnel and material ow conform to infection prevention and control practices.
+### COP.14.g — Patient, personnel and material flow conform to infection prevention and control practices.
 
 - Records showing COP.14.g was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).

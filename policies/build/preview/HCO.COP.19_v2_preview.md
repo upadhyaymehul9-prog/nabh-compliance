@@ -141,7 +141,7 @@ Signature: ___________________________
 
 ## 10. Distribution
 
-Medical Superintendent; Dietetics In-Charge; Quality Coordinator; department clinical staff covered by COP.19.
+Medical Superintendent; Dietetics In-Charge; Quality Coordinator; department clinical staff covered by COP.19
 
 ## 11. Abbreviations
 

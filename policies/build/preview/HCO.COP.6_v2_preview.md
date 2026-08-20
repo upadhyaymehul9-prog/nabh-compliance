@@ -53,9 +53,9 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 1. Do not skip: Nursing care is provided to patients in accordance with written guidance.
 2. Do not skip: Assignment of patient care is done as per good clinical / nursing practice.
-3. Do not skip: The organisation implements acuity-based stafng to improve patient outcomes.
+3. Do not skip: The organisation implements acuity-based staffing to improve patient outcomes.
 4. Do not skip: Nursing care is aligned and integrated with overall patient care which is documented.
-5. Do not skip: Nurses are provided with the appropriate and adequate equipment for providing safe and efcient nursing care.
+5. Do not skip: Nurses are provided with the appropriate and adequate equipment for providing safe and efficient nursing care.
 6. Do not skip: Nurses are empowered to make patient care decisions within their scope of practice.
 7. Staff who see a COP.6 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».
 
@@ -73,9 +73,9 @@ Assignment of patient care is done as per good clinical / nursing practice.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.3 The organisation implements acuity-based stafng to improve patient o..
+### 5.3 The organisation implements acuity-based staffing to improve patient ..
 
-The organisation implements acuity-based stafng to improve patient outcomes.
+The organisation implements acuity-based staffing to improve patient outcomes.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
@@ -87,7 +87,7 @@ Method note: Follow the organisation's written guidance for this asterisked elem
 
 ### 5.5 Nurses are provided with the appropriate and adequate equipment for p..
 
-Nurses are provided with the appropriate and adequate equipment for providing safe and efcient nursing care.
+Nurses are provided with the appropriate and adequate equipment for providing safe and efficient nursing care.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
@@ -148,7 +148,7 @@ Signature: ___________________________
 
 ## 10. Distribution
 
-Medical Superintendent; Nursing Superintendent; Quality Coordinator; department clinical staff covered by COP.6.
+Medical Superintendent; Nursing Superintendent; Quality Coordinator; department clinical staff covered by COP.6
 
 ## 11. Abbreviations
 
@@ -167,9 +167,9 @@ This table is an index. It is not how the policy is organised.
 | --- | --- | --- | --- |
 | COP.6.a | Nursing care is provided to patients in accordance with written guidance. | Section 3; 5.1 | Nursing Superintendent |
 | COP.6.b | Assignment of patient care is done as per good clinical / nursing practice. | Section 3; 5.2 | Nursing Superintendent |
-| COP.6.c | The organisation implements acuity-based stafng to improve patient outcomes. | Section 3; 5.3 | Nursing Superintendent |
+| COP.6.c | The organisation implements acuity-based staffing to improve patient outcomes. | Section 3; 5.3 | Nursing Superintendent |
 | COP.6.d | Nursing care is aligned and integrated with overall patient care which is documented. | Section 3; 5.4 | Nursing Superintendent |
-| COP.6.e | Nurses are provided with the appropriate and adequate equipment for providing safe and efcient nursing care. | Section 3; 5.5 | Nursing Superintendent |
+| COP.6.e | Nurses are provided with the appropriate and adequate equipment for providing safe and efficient nursing care. | Section 3; 5.5 | Nursing Superintendent |
 | COP.6.f | Nurses are empowered to make patient care decisions within their scope of practice. | Section 3; 5.6 | Nursing Superintendent |
 
 ## 13. Required Records / Evidence Checklist
@@ -189,7 +189,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Written guidance / protocol referenced for this element (where required).
 - Audit sample notes for COP.6.b reviewed «quarterly».
 
-### COP.6.c — The organisation implements acuity-based stafng to improve patient outcomes.
+### COP.6.c — The organisation implements acuity-based staffing to improve patient outcomes.
 
 - Records showing COP.6.c was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).
@@ -202,7 +202,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Audit sample notes for COP.6.d reviewed «quarterly».
 - Documented evidence specifically required by the asterisked interpretation.
 
-### COP.6.e — Nurses are provided with the appropriate and adequate equipment for providing safe and efcient nursing care.
+### COP.6.e — Nurses are provided with the appropriate and adequate equipment for providing safe and efficient nursing care.
 
 - Records showing COP.6.e was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).

@@ -51,51 +51,51 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: The organisation identies and manages vulnerable patients.
-2. Do not skip: The organisation identies and manages patients who are at a risk of fall.
-3. Do not skip: The organisation identies and manages patients who are at risk of developing / worsening of pressure ulcers.
-4. Do not skip: The organisation identies and manages patients who are at risk of developing deep vein thrombosis.
-5. Do not skip: The organisation identies and manages patients who need restraints.
+1. Do not skip: The organisation identifies and manages vulnerable patients.
+2. Do not skip: The organisation identifies and manages patients who are at a risk of fall.
+3. Do not skip: The organisation identifies and manages patients who are at risk of developing / worsening of pressure ulcers.
+4. Do not skip: The organisation identifies and manages patients who are at risk of developing deep vein thrombosis.
+5. Do not skip: The organisation identifies and manages patients who need restraints.
 6. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
 7. Staff who see a COP.16 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».
 
 ## 5. What we do
 
-### 5.1 The organisation identies and manages vulnerable patients
+### 5.1 The organisation identifies and manages vulnerable patients
 
-The organisation identies and manages vulnerable patients.
-
-Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
-
-This is a CORE objective element — non-compliance is not acceptable for accreditation.
-
-### 5.2 The organisation identies and manages patients who are at a risk of ..
-
-The organisation identies and manages patients who are at a risk of fall.
+The organisation identifies and manages vulnerable patients.
 
 Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.3 The organisation identies and manages patients who are at risk of de..
+### 5.2 The organisation identifies and manages patients who are at a risk of..
 
-The organisation identies and manages patients who are at risk of developing / worsening of pressure ulcers.
-
-Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
-
-This is a CORE objective element — non-compliance is not acceptable for accreditation.
-
-### 5.4 The organisation identies and manages patients who are at risk of de..
-
-The organisation identies and manages patients who are at risk of developing deep vein thrombosis.
+The organisation identifies and manages patients who are at a risk of fall.
 
 Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.5 The organisation identies and manages patients who need restraints
+### 5.3 The organisation identifies and manages patients who are at risk of d..
 
-The organisation identies and manages patients who need restraints.
+The organisation identifies and manages patients who are at risk of developing / worsening of pressure ulcers.
+
+Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
+
+This is a CORE objective element — non-compliance is not acceptable for accreditation.
+
+### 5.4 The organisation identifies and manages patients who are at risk of d..
+
+The organisation identifies and manages patients who are at risk of developing deep vein thrombosis.
+
+Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
+
+This is a CORE objective element — non-compliance is not acceptable for accreditation.
+
+### 5.5 The organisation identifies and manages patients who need restraints
+
+The organisation identifies and manages patients who need restraints.
 
 Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
 
@@ -160,7 +160,7 @@ Signature: ___________________________
 
 ## 11. Distribution
 
-Medical Superintendent; Quality Coordinator; Quality Coordinator; department clinical staff covered by COP.16.
+Medical Superintendent; Quality Coordinator; department clinical staff covered by COP.16
 
 ## 12. Abbreviations
 
@@ -177,45 +177,45 @@ This table is an index. It is not how the policy is organised.
 
 | OE | Requirement | Where this policy addresses it | Responsible |
 | --- | --- | --- | --- |
-| COP.16.a | The organisation identies and manages vulnerable patients. | Section 3; 5.1; Section 6 Stop-work | Quality Coordinator |
-| COP.16.b | The organisation identies and manages patients who are at a risk of fall. | Section 3; 5.2; Section 6 Stop-work | Quality Coordinator |
-| COP.16.c | The organisation identies and manages patients who are at risk of developing / worsening of pressure ulcers. | Section 3; 5.3; Section 6 Stop-work | Quality Coordinator |
-| COP.16.d | The organisation identies and manages patients who are at risk of developing deep vein thrombosis. | Section 3; 5.4 | Quality Coordinator |
-| COP.16.e | The organisation identies and manages patients who need restraints. | Section 3; 5.5 | Quality Coordinator |
+| COP.16.a | The organisation identifies and manages vulnerable patients. | Section 3; 5.1; Section 6 Stop-work | Quality Coordinator |
+| COP.16.b | The organisation identifies and manages patients who are at a risk of fall. | Section 3; 5.2; Section 6 Stop-work | Quality Coordinator |
+| COP.16.c | The organisation identifies and manages patients who are at risk of developing / worsening of pressure ulcers. | Section 3; 5.3; Section 6 Stop-work | Quality Coordinator |
+| COP.16.d | The organisation identifies and manages patients who are at risk of developing deep vein thrombosis. | Section 3; 5.4 | Quality Coordinator |
+| COP.16.e | The organisation identifies and manages patients who need restraints. | Section 3; 5.5 | Quality Coordinator |
 
 ## 14. Required Records / Evidence Checklist
 
 Records the hospital holds under this policy, listed by objective element.
 
-### COP.16.a — The organisation identies and manages vulnerable patients.
+### COP.16.a — The organisation identifies and manages vulnerable patients.
 
 - Records showing COP.16.a was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).
 - Audit sample notes for COP.16.a reviewed «quarterly».
 - Documented evidence specifically required by the asterisked interpretation.
 
-### COP.16.b — The organisation identies and manages patients who are at a risk of fall.
+### COP.16.b — The organisation identifies and manages patients who are at a risk of fall.
 
 - Records showing COP.16.b was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).
 - Audit sample notes for COP.16.b reviewed «quarterly».
 - Documented evidence specifically required by the asterisked interpretation.
 
-### COP.16.c — The organisation identies and manages patients who are at risk of developing / worsening of pressure ulcers.
+### COP.16.c — The organisation identifies and manages patients who are at risk of developing / worsening of pressure ulcers.
 
 - Records showing COP.16.c was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).
 - Audit sample notes for COP.16.c reviewed «quarterly».
 - Documented evidence specifically required by the asterisked interpretation.
 
-### COP.16.d — The organisation identies and manages patients who are at risk of developing deep vein thrombosis.
+### COP.16.d — The organisation identifies and manages patients who are at risk of developing deep vein thrombosis.
 
 - Records showing COP.16.d was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).
 - Audit sample notes for COP.16.d reviewed «quarterly».
 - Documented evidence specifically required by the asterisked interpretation.
 
-### COP.16.e — The organisation identies and manages patients who need restraints.
+### COP.16.e — The organisation identifies and manages patients who need restraints.
 
 - Records showing COP.16.e was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).

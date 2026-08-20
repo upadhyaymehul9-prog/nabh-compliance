@@ -57,7 +57,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 4. Do not skip: The anaesthesiologist obtains informed consent for administration of anaesthesia.
 5. Do not skip: During anaesthesia, monitoring includes a regular recording of temperature, heart rate, cardiac rhythm, res...
 6. Do not skip: Patient’s post-anaesthesia status is monitored and documented.
-7. Do not skip: The anaesthesiologist applies dened criteria to transfer the patient from the recovery area.
+7. Do not skip: The anaesthesiologist applies defined criteria to transfer the patient from the recovery area.
 8. Do not skip: The type of anaesthesia and anaesthetic medications used are documented in the patient record.
 9. Do not skip: Procedures shall comply with infection prevention and control guidelines to prevent cross-infection between...
 10. Do not skip: Intra-operative adverse anaesthesia events are recorded and monitored.
@@ -106,9 +106,9 @@ Patient’s post-anaesthesia status is monitored and documented.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.7 The anaesthesiologist applies dened criteria to transfer the patient..
+### 5.7 The anaesthesiologist applies defined criteria to transfer the patien..
 
-The anaesthesiologist applies dened criteria to transfer the patient from the recovery area.
+The anaesthesiologist applies defined criteria to transfer the patient from the recovery area.
 
 Method note (from guidebook interpretation): The organisation documents these criteria which shall be based
 
@@ -189,7 +189,7 @@ Signature: ___________________________
 
 ## 11. Distribution
 
-Medical Superintendent; Anaesthesia In-Charge; Quality Coordinator; department clinical staff covered by COP.13.
+Medical Superintendent; Anaesthesia In-Charge; Quality Coordinator; department clinical staff covered by COP.13
 
 ## 12. Abbreviations
 
@@ -212,7 +212,7 @@ This table is an index. It is not how the policy is organised.
 | COP.13.d | The anaesthesiologist obtains informed consent for administration of anaesthesia. | Section 3; 5.4 | Anaesthesia In-Charge |
 | COP.13.e | During anaesthesia, monitoring includes a regular recording of temperature, heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation and end-tidal carbon dioxide. | Section 3; 5.5 | Anaesthesia In-Charge |
 | COP.13.f | Patient’s post-anaesthesia status is monitored and documented. | Section 3; 5.6 | Anaesthesia In-Charge |
-| COP.13.g | The anaesthesiologist applies dened criteria to transfer the patient from the recovery area. | Section 3; 5.7 | Anaesthesia In-Charge |
+| COP.13.g | The anaesthesiologist applies defined criteria to transfer the patient from the recovery area. | Section 3; 5.7 | Anaesthesia In-Charge |
 | COP.13.h | The type of anaesthesia and anaesthetic medications used are documented in the patient record. | Section 3; 5.8 | Anaesthesia In-Charge |
 | COP.13.i | Procedures shall comply with infection prevention and control guidelines to prevent cross-infection between patients. | Section 3; 5.9 | Anaesthesia In-Charge |
 | COP.13.j | Intra-operative adverse anaesthesia events are recorded and monitored. | Section 3; 5.10 | Anaesthesia In-Charge |
@@ -258,7 +258,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Written guidance / protocol referenced for this element (where required).
 - Audit sample notes for COP.13.f reviewed «quarterly».
 
-### COP.13.g — The anaesthesiologist applies dened criteria to transfer the patient from the recovery area.
+### COP.13.g — The anaesthesiologist applies defined criteria to transfer the patient from the recovery area.
 
 - Records showing COP.13.g was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).

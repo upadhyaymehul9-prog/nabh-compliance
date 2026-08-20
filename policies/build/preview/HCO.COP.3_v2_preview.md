@@ -53,11 +53,11 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 1. Do not skip: The organisation has access to ambulance services commensurate with the scope of the services provided by it.
 2. Do not skip: There are adequate access and space for the ambulance(s).
-3. Do not skip: The ambulance(s) is t for purpose and is appropriately equipped.
+3. Do not skip: The ambulance(s) is fit for purpose and is appropriately equipped.
 4. Do not skip: The ambulance(s) is operated by trained personnel.
 5. Do not skip: The ambulance(s) is checked daily for functioning status, medical equipment, emergency medications and cons...
 6. Do not skip: The ambulance(s) has a proper communication system.
-7. Do not skip: The emergency department identies opportunities to initiate treatment at the earliest when the patient is ...
+7. Do not skip: The emergency department identifies opportunities to initiate treatment at the earliest when the patient is...
 8. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
 9. Staff who see a COP.3 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».
 
@@ -75,9 +75,9 @@ There are adequate access and space for the ambulance(s).
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.3 The ambulance(s) is t for purpose and is appropriately equipped
+### 5.3 The ambulance(s) is fit for purpose and is appropriately equipped
 
-The ambulance(s) is t for purpose and is appropriately equipped.
+The ambulance(s) is fit for purpose and is appropriately equipped.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
@@ -99,9 +99,9 @@ The ambulance(s) has a proper communication system.
 
 Method note (from guidebook interpretation): The ambulance shall be connected with the organisation/control
 
-### 5.7 The emergency department identies opportunities to initiate treatmen..
+### 5.7 The emergency department identifies opportunities to initiate treatme..
 
-The emergency department identies opportunities to initiate treatment at the earliest when the patient is in transit to the organisation.
+The emergency department identifies opportunities to initiate treatment at the earliest when the patient is in transit to the organisation.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
@@ -164,7 +164,7 @@ Signature: ___________________________
 
 ## 11. Distribution
 
-Medical Superintendent; Ambulance / Transport In-Charge; Quality Coordinator; department clinical staff covered by COP.3.
+Medical Superintendent; Ambulance / Transport In-Charge; Quality Coordinator; department clinical staff covered by COP.3
 
 ## 12. Abbreviations
 
@@ -183,11 +183,11 @@ This table is an index. It is not how the policy is organised.
 | --- | --- | --- | --- |
 | COP.3.a | The organisation has access to ambulance services commensurate with the scope of the services provided by it. | Section 3; 5.1; Section 6 Stop-work | Ambulance / Transport In-Charge |
 | COP.3.b | There are adequate access and space for the ambulance(s). | Section 3; 5.2; Section 6 Stop-work | Ambulance / Transport In-Charge |
-| COP.3.c | The ambulance(s) is t for purpose and is appropriately equipped. | Section 3; 5.3; Section 6 Stop-work | Ambulance / Transport In-Charge |
+| COP.3.c | The ambulance(s) is fit for purpose and is appropriately equipped. | Section 3; 5.3; Section 6 Stop-work | Ambulance / Transport In-Charge |
 | COP.3.d | The ambulance(s) is operated by trained personnel. | Section 3; 5.4 | Ambulance / Transport In-Charge |
 | COP.3.e | The ambulance(s) is checked daily for functioning status, medical equipment, emergency medications and consumables. | Section 3; 5.5 | Ambulance / Transport In-Charge |
 | COP.3.f | The ambulance(s) has a proper communication system. | Section 3; 5.6 | Ambulance / Transport In-Charge |
-| COP.3.g | The emergency department identies opportunities to initiate treatment at the earliest when the patient is in transit to the organisation. | Section 3; 5.7 | Ambulance / Transport In-Charge |
+| COP.3.g | The emergency department identifies opportunities to initiate treatment at the earliest when the patient is in transit to the organisation. | Section 3; 5.7 | Ambulance / Transport In-Charge |
 
 ## 14. Required Records / Evidence Checklist
 
@@ -205,7 +205,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Written guidance / protocol referenced for this element (where required).
 - Audit sample notes for COP.3.b reviewed «quarterly».
 
-### COP.3.c — The ambulance(s) is t for purpose and is appropriately equipped.
+### COP.3.c — The ambulance(s) is fit for purpose and is appropriately equipped.
 
 - Records showing COP.3.c was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).
@@ -230,7 +230,7 @@ Records the hospital holds under this policy, listed by objective element.
 - Audit sample notes for COP.3.f reviewed «quarterly».
 - Documented evidence specifically required by the asterisked interpretation.
 
-### COP.3.g — The emergency department identies opportunities to initiate treatment at the earliest when the patient is in transit to the organisation.
+### COP.3.g — The emergency department identifies opportunities to initiate treatment at the earliest when the patient is in transit to the organisation.
 
 - Records showing COP.3.g was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).

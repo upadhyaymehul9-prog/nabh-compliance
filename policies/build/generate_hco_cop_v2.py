@@ -17,6 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from nabh_text_normalize import distribution_dedupe  # noqa: E402
 from hco_cop_v2_common import (  # noqa: E402
     BLANK,
     CHAPTER,
@@ -303,6 +304,15 @@ Stop-work: {"YES — JUDGMENT CALL: " + STOP_WORK_PROPOSALS[n] if has_stop else 
 draft_label={DRAFT_LABEL!r} via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/{n:02d}.
 Do not copy SHCO COP wording. Do not touch AAC."""
 
+    distribution = distribution_dedupe(
+        [
+            "Medical Superintendent",
+            PREPARED_BY[n],
+            "Quality Coordinator",
+            f"department clinical staff covered by COP.{n}",
+        ]
+    )
+
     draft = {
         "standard_code": f"COP.{n}",
         "chapter": CHAPTER,
@@ -314,7 +324,7 @@ Do not copy SHCO COP wording. Do not touch AAC."""
         "procedure_steps": steps,
         "responsibility": responsibility,
         "references_text": references,
-        "distribution": f"Medical Superintendent; {PREPARED_BY[n]}; Quality Coordinator; department clinical staff covered by COP.{n}.",
+        "distribution": distribution,
         "abbreviations": abbreviations,
         "disclaimer": disclaimer,
         "oe_mapping": oe_mapping(n, oes, has_stop),
@@ -333,6 +343,7 @@ Do not copy SHCO COP wording. Do not touch AAC."""
         "monitoring_audit": monitoring,
         "training_competency": training,
         "resources_required": hco_document_control(doc_no=doc_no, prepared_by=prepared),
+        "prepared_by": prepared,
         "template_test": "hco_cop_v2_adoptable_shape",
         "subtitle": f"{PROGRAMME} — COP.{n}.",
         "doc_no": doc_no,

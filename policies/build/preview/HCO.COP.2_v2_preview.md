@@ -51,7 +51,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: There shall be an identied area in the organisation which is easily accessible to receive and manage emerg...
+1. Do not skip: There shall be an identified area in the organisation which is easily accessible to receive and manage emer...
 2. Do not skip: Prevention of patient over-crowding is planned and crowd management measures are implemented.
 3. Do not skip: Emergency care is provided in consonance with statutory requirements including medico-legal cases and as pe...
 4. Do not skip: Initiation of appropriate care is guided by a system of triage.
@@ -65,9 +65,9 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 There shall be an identied area in the organisation which is easily ..
+### 5.1 There shall be an identified area in the organisation which is easily..
 
-There shall be an identied area in the organisation which is easily accessible to receive and manage emergency patients, with adequate and appropriate resources.
+There shall be an identified area in the organisation which is easily accessible to receive and manage emergency patients, with adequate and appropriate resources.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
@@ -182,7 +182,7 @@ Signature: ___________________________
 
 ## 11. Distribution
 
-Medical Superintendent; Emergency In-Charge; Quality Coordinator; department clinical staff covered by COP.2.
+Medical Superintendent; Emergency In-Charge; Quality Coordinator; department clinical staff covered by COP.2
 
 ## 12. Abbreviations
 
@@ -199,7 +199,7 @@ This table is an index. It is not how the policy is organised.
 
 | OE | Requirement | Where this policy addresses it | Responsible |
 | --- | --- | --- | --- |
-| COP.2.a | There shall be an identied area in the organisation which is easily accessible to receive and manage emergency patients, with adequate and appropriate resources. | Section 3; 5.1; Section 6 Stop-work | Emergency In-Charge |
+| COP.2.a | There shall be an identified area in the organisation which is easily accessible to receive and manage emergency patients, with adequate and appropriate resources. | Section 3; 5.1; Section 6 Stop-work | Emergency In-Charge |
 | COP.2.b | Prevention of patient over-crowding is planned and crowd management measures are implemented. | Section 3; 5.2; Section 6 Stop-work | Emergency In-Charge |
 | COP.2.c | Emergency care is provided in consonance with statutory requirements including medico-legal cases and as per written guidance. | Section 3; 5.3; Section 6 Stop-work | Emergency In-Charge |
 | COP.2.d | Initiation of appropriate care is guided by a system of triage. | Section 3; 5.4 | Emergency In-Charge |
@@ -213,7 +213,7 @@ This table is an index. It is not how the policy is organised.
 
 Records the hospital holds under this policy, listed by objective element.
 
-### COP.2.a — There shall be an identied area in the organisation which is easily accessible to receive and manage emergency patients, with adequate and appropriate resources.
+### COP.2.a — There shall be an identified area in the organisation which is easily accessible to receive and manage emergency patients, with adequate and appropriate resources.
 
 - Records showing COP.2.a was followed for sampled patients/cases.
 - Written guidance / protocol referenced for this element (where required).
