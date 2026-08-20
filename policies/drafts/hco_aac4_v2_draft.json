@@ -132,5 +132,7 @@
   "subtitle": "HCO Full Accreditation, 6th Edition — initial assessment.",
   "doc_no": "«HCO/AAC/POL/04»",
   "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with clinical induction records.",
-  "stop_work": ""
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.AAC.4"
 }

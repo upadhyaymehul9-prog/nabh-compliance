@@ -164,5 +164,7 @@
   "stop_work": "",
   "template_test": "hco_aac_v2_adoptable_shape",
   "subtitle": "Laboratory services commensurate with clinical scope.",
-  "doc_no": "«HCO/AAC/POL/06»"
+  "doc_no": "«HCO/AAC/POL/06»",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.AAC.6"
 }

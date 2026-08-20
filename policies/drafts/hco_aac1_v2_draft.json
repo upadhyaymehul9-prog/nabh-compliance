@@ -90,5 +90,7 @@
   "subtitle": "HCO Full Accreditation, 6th Edition — defined and displayed healthcare services.",
   "doc_no": "«HCO/AAC/POL/01»",
   "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
-  "stop_work": ""
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.AAC.1"
 }

@@ -177,5 +177,7 @@
   "stop_work": "Do not proceed with radiation or MRI exposure when required safety/risk screening has not been completed and documented for the patient (and for any attendant entering the imaging area).\n\nDo not proceed when pregnancy status is positive or uncertain for a radiation examination until the «radiologist or imaging in-charge» has reviewed and documented the decision; do not proceed with MRI when magnetic-substance screening is incomplete or positive for a contraindication.\n\nDo not proceed when a required radiation-safety or monitoring device has failed its periodic test (for example cracked lead apron) or when required TLD badges are not available for staff working with radiation sources.\n\nStop-work applies to the imaging exposure or MRI examination, not to emergency clinical stabilisation outside the imaging room.\n\nThe person who stops tells the «Imaging In-Charge» or the «Radiation Safety Officer» the same shift. Refusing to expose without screening or with failed safety devices is not a disciplinary matter.",
   "template_test": "hco_aac_v2_adoptable_shape",
   "subtitle": "Imaging quality assurance, ALARA and radiation safety.",
-  "doc_no": "«HCO/AAC/POL/09»"
+  "doc_no": "«HCO/AAC/POL/09»",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.AAC.9"
 }

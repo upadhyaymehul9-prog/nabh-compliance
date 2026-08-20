@@ -151,5 +151,7 @@
   "stop_work": "Do not scan or expose a patient when required legal compliance for the modality is missing — AERB clearance and RSO cover for radiation equipment; PC-PNDT registration and displays for covered ultrasound.\n\nDo not proceed with radiation or MRI examinations when the safety/pregnancy/MRI screening required under AAC.9 has not been completed for the patient (and attendant entering the area). Complete screening before exposure.\n\nDo not use radiation-emitting equipment when mandatory personnel monitoring (dosimeter/TLD) or required lead protection for the examination is unavailable.\n\nStop-work applies to the imaging examination, not to emergency clinical stabilisation outside the imaging room.\n\nThe person who stops tells the «Imaging In-Charge» or the «Radiation Safety Officer» the same shift, and the «Medical Superintendent» if legal clearance is the barrier. Refusing to scan without required checks is not a disciplinary matter.",
   "template_test": "hco_aac_v2_adoptable_shape",
   "subtitle": "Imaging services, legal compliance and turnaround time.",
-  "doc_no": "«HCO/AAC/POL/08»"
+  "doc_no": "«HCO/AAC/POL/08»",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.AAC.8"
 }

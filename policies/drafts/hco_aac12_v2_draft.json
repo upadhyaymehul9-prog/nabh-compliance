@@ -126,5 +126,7 @@
   "template_test": "hco_aac_v2_adoptable_shape",
   "subtitle": "Planned, coordinated discharge process including LAMA and time monitoring.",
   "doc_no": "«HCO/AAC/POL/12»",
-  "programme": "HCO Full Accreditation, 6th Edition"
+  "programme": "HCO Full Accreditation, 6th Edition",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.AAC.12"
 }

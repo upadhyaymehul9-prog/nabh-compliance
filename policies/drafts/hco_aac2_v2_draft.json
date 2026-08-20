@@ -105,5 +105,7 @@
   "subtitle": "HCO Full Accreditation, 6th Edition — registration and admission.",
   "doc_no": "«HCO/AAC/POL/02»",
   "acknowledgement_note": "Registration in-charge and the Quality Coordinator hold signed acknowledgements.",
-  "stop_work": ""
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.AAC.2"
 }
