@@ -1,0 +1,174 @@
+{
+  "standard_code": "COP.13",
+  "chapter": "HCO",
+  "oe_codes": [
+    "COP.13.a",
+    "COP.13.b",
+    "COP.13.c",
+    "COP.13.d",
+    "COP.13.e",
+    "COP.13.f",
+    "COP.13.g",
+    "COP.13.h",
+    "COP.13.i",
+    "COP.13.j"
+  ],
+  "policy_title": "Anaesthesia Services",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard COP.13: Anaesthesia services are provided in a consistent and safe manner.\n\nIt covers objective elements COP.13.a–j (10 elements).\n\nThis policy owns COP.13. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who deliver or oversee the care described in COP.13 at {{HOSPITAL_NAME}}, including the «Anaesthesia In-Charge», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 10 objective elements (COP.13.a, COP.13.b, COP.13.c, COP.13.d, COP.13.e, COP.13.f, COP.13.g, COP.13.h, COP.13.i, COP.13.j).\n\nBoundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.",
+  "policy_statement": "{{HOSPITAL_NAME}} implements COP.13 so that anaesthesia services are provided in a consistent and safe manner..\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Anaesthesia services are provided in a consistent manner\n\nAnaesthesia services are provided in a consistent manner.\n\nMethod note (from guidebook interpretation): Written guidance based on standard treatment guidelines/sound |",
+    "5.2 The pre-anaesthesia assessment results in the formulation of an anaes..\n\nThe pre-anaesthesia assessment results in the formulation of an anaesthesia plan which is documented.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.3 A pre-induction assessment is performed and documented\n\nA pre-induction assessment is performed and documented.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.4 The anaesthesiologist obtains informed consent for administration of ..\n\nThe anaesthesiologist obtains informed consent for administration of anaesthesia.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.5 During anaesthesia, monitoring includes a regular recording of temper..\n\nDuring anaesthesia, monitoring includes a regular recording of temperature, heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation and end-tidal carbon dioxide.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.6 Patient’s post-anaesthesia status is monitored and documented\n\nPatient’s post-anaesthesia status is monitored and documented.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.7 The anaesthesiologist applies dened criteria to transfer the patient..\n\nThe anaesthesiologist applies dened criteria to transfer the patient from the recovery area.\n\nMethod note (from guidebook interpretation): The organisation documents these criteria which shall be based",
+    "5.8 The type of anaesthesia and anaesthetic medications used are document..\n\nThe type of anaesthesia and anaesthetic medications used are documented in the patient record.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.9 Procedures shall comply with infection prevention and control guideli..\n\nProcedures shall comply with infection prevention and control guidelines to prevent cross-infection between patients.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.10 Intra-operative adverse anaesthesia events are recorded and monitored\n\nIntra-operative adverse anaesthesia events are recorded and monitored.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that COP.13 is resourced and followed.\n\nAnaesthesia In-Charge\n- Owns day-to-day implementation and records for this standard.\n\nTreating doctors / nurses / technicians (as applicable)\n- Deliver care as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Care of Patients, standard COP.13.\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — COP.13 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).\n- Internal documents of {{HOSPITAL_NAME}}: written guidance and registers named for COP.13.",
+  "distribution": "Medical Superintendent; Anaesthesia In-Charge; Quality Coordinator; department clinical staff covered by COP.13.",
+  "abbreviations": "COP — Care of Patients (NABH Hospitals chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element\nCORE — Core objective element (NABH)\nRCA — Root Cause Analysis\nCAPA — Corrective and Preventive Action",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "COP.13.a",
+      "requirement": "Anaesthesia services are provided in a consistent manner.",
+      "steps": "Section 3; 5.1; Section 6 Stop-work",
+      "responsible": "Anaesthesia In-Charge",
+      "records": [
+        "Records showing COP.13.a was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.13.a reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked interpretation."
+      ]
+    },
+    {
+      "oe_code": "COP.13.b",
+      "requirement": "The pre-anaesthesia assessment results in the formulation of an anaesthesia plan which is documented.",
+      "steps": "Section 3; 5.2; Section 6 Stop-work",
+      "responsible": "Anaesthesia In-Charge",
+      "records": [
+        "Records showing COP.13.b was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.13.b reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "COP.13.c",
+      "requirement": "A pre-induction assessment is performed and documented.",
+      "steps": "Section 3; 5.3; Section 6 Stop-work",
+      "responsible": "Anaesthesia In-Charge",
+      "records": [
+        "Records showing COP.13.c was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.13.c reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "COP.13.d",
+      "requirement": "The anaesthesiologist obtains informed consent for administration of anaesthesia.",
+      "steps": "Section 3; 5.4",
+      "responsible": "Anaesthesia In-Charge",
+      "records": [
+        "Records showing COP.13.d was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.13.d reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "COP.13.e",
+      "requirement": "During anaesthesia, monitoring includes a regular recording of temperature, heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation and end-tidal carbon dioxide.",
+      "steps": "Section 3; 5.5",
+      "responsible": "Anaesthesia In-Charge",
+      "records": [
+        "Records showing COP.13.e was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.13.e reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "COP.13.f",
+      "requirement": "Patient’s post-anaesthesia status is monitored and documented.",
+      "steps": "Section 3; 5.6",
+      "responsible": "Anaesthesia In-Charge",
+      "records": [
+        "Records showing COP.13.f was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.13.f reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "COP.13.g",
+      "requirement": "The anaesthesiologist applies dened criteria to transfer the patient from the recovery area.",
+      "steps": "Section 3; 5.7",
+      "responsible": "Anaesthesia In-Charge",
+      "records": [
+        "Records showing COP.13.g was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.13.g reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked interpretation."
+      ]
+    },
+    {
+      "oe_code": "COP.13.h",
+      "requirement": "The type of anaesthesia and anaesthetic medications used are documented in the patient record.",
+      "steps": "Section 3; 5.8",
+      "responsible": "Anaesthesia In-Charge",
+      "records": [
+        "Records showing COP.13.h was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.13.h reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "COP.13.i",
+      "requirement": "Procedures shall comply with infection prevention and control guidelines to prevent cross-infection between patients.",
+      "steps": "Section 3; 5.9",
+      "responsible": "Anaesthesia In-Charge",
+      "records": [
+        "Records showing COP.13.i was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.13.i reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "COP.13.j",
+      "requirement": "Intra-operative adverse anaesthesia events are recorded and monitored.",
+      "steps": "Section 3; 5.10",
+      "responsible": "Anaesthesia In-Charge",
+      "records": [
+        "Records showing COP.13.j was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.13.j reviewed «quarterly»."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO COP.13 v2 (2026-08-20). Official Standards PDF OE count 10; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: ag. CORE: be. Achievement: j. Excellence: none.\nStop-work: YES — JUDGMENT CALL: Anaesthesia without documented pre-anaesthesia/pre-induction assessment or required monitoring.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/13.\nDo not copy SHCO COP wording. Do not touch AAC.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "HCO Full 6th Edition COP.13 v2 draft from official Standards PDF + guidebook OCR; draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Anaesthesia services are provided in a consistent and safe manner.",
+  "exceptions": "1. Do not skip: Anaesthesia services are provided in a consistent manner.\n2. Do not skip: The pre-anaesthesia assessment results in the formulation of an anaesthesia plan which is documented.\n3. Do not skip: A pre-induction assessment is performed and documented.\n4. Do not skip: The anaesthesiologist obtains informed consent for administration of anaesthesia.\n5. Do not skip: During anaesthesia, monitoring includes a regular recording of temperature, heart rate, cardiac rhythm, res...\n6. Do not skip: Patient’s post-anaesthesia status is monitored and documented.\n7. Do not skip: The anaesthesiologist applies dened criteria to transfer the patient from the recovery area.\n8. Do not skip: The type of anaesthesia and anaesthetic medications used are documented in the patient record.\n9. Do not skip: Procedures shall comply with infection prevention and control guidelines to prevent cross-infection between...\n10. Do not skip: Intra-operative adverse anaesthesia events are recorded and monitored.\n11. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n12. Staff who see a COP.13 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE COP.13.a–j.\n- Asterisked elements (ag) have document evidence as required.\n- CORE elements (be) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Anaesthesia Services policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/COP/POL/13»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Anaesthesia In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "hco_cop_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — COP.13.",
+  "doc_no": "«HCO/COP/POL/13»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "Do not induce anaesthesia when the pre-anaesthesia assessment and anaesthesia plan are not documented, when pre-induction assessment is not documented, or when required intra-operative monitoring (including ETCO2 where applicable) cannot be provided.\n\nStop-work applies to induction. Immediate life-saving operative care follows emergency anaesthesia rules documented by the organisation.\n\nThe person who stops tells the «Anaesthesiologist / OT In-Charge» the same shift. Refusing unsafe induction is not a disciplinary matter.",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.COP.13",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

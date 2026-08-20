@@ -1,0 +1,112 @@
+{
+  "standard_code": "COP.16",
+  "chapter": "HCO",
+  "oe_codes": [
+    "COP.16.a",
+    "COP.16.b",
+    "COP.16.c",
+    "COP.16.d",
+    "COP.16.e"
+  ],
+  "policy_title": "High-Risk Patients — Identification and Management",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard COP.16: The organisation identifies and manages patients who are at high risk of morbidity / mortality.\n\nIt covers objective elements COP.16.a–e (5 elements).\n\nThis policy owns COP.16. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who deliver or oversee the care described in COP.16 at {{HOSPITAL_NAME}}, including the «Quality Coordinator», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 5 objective elements (COP.16.a, COP.16.b, COP.16.c, COP.16.d, COP.16.e).\n\nBoundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.",
+  "policy_statement": "{{HOSPITAL_NAME}} implements COP.16 so that the organisation identifies and manages patients who are at high risk of morbidity / mortality..\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 The organisation identies and manages vulnerable patients\n\nThe organisation identies and manages vulnerable patients.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.2 The organisation identies and manages patients who are at a risk of ..\n\nThe organisation identies and manages patients who are at a risk of fall.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.3 The organisation identies and manages patients who are at risk of de..\n\nThe organisation identies and manages patients who are at risk of developing / worsening of pressure ulcers.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.4 The organisation identies and manages patients who are at risk of de..\n\nThe organisation identies and manages patients who are at risk of developing deep vein thrombosis.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.5 The organisation identies and manages patients who need restraints\n\nThe organisation identies and manages patients who need restraints.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that COP.16 is resourced and followed.\n\nQuality Coordinator\n- Owns day-to-day implementation and records for this standard.\n\nTreating doctors / nurses / technicians (as applicable)\n- Deliver care as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Care of Patients, standard COP.16.\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — COP.16 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).\n- Internal documents of {{HOSPITAL_NAME}}: written guidance and registers named for COP.16.",
+  "distribution": "Medical Superintendent; Quality Coordinator; Quality Coordinator; department clinical staff covered by COP.16.",
+  "abbreviations": "COP — Care of Patients (NABH Hospitals chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element\nCORE — Core objective element (NABH)\nRCA — Root Cause Analysis\nCAPA — Corrective and Preventive Action",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "COP.16.a",
+      "requirement": "The organisation identies and manages vulnerable patients.",
+      "steps": "Section 3; 5.1; Section 6 Stop-work",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing COP.16.a was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.16.a reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked interpretation."
+      ]
+    },
+    {
+      "oe_code": "COP.16.b",
+      "requirement": "The organisation identies and manages patients who are at a risk of fall.",
+      "steps": "Section 3; 5.2; Section 6 Stop-work",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing COP.16.b was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.16.b reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked interpretation."
+      ]
+    },
+    {
+      "oe_code": "COP.16.c",
+      "requirement": "The organisation identies and manages patients who are at risk of developing / worsening of pressure ulcers.",
+      "steps": "Section 3; 5.3; Section 6 Stop-work",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing COP.16.c was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.16.c reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked interpretation."
+      ]
+    },
+    {
+      "oe_code": "COP.16.d",
+      "requirement": "The organisation identies and manages patients who are at risk of developing deep vein thrombosis.",
+      "steps": "Section 3; 5.4",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing COP.16.d was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.16.d reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked interpretation."
+      ]
+    },
+    {
+      "oe_code": "COP.16.e",
+      "requirement": "The organisation identies and manages patients who need restraints.",
+      "steps": "Section 3; 5.5",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing COP.16.e was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.16.e reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked interpretation."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO COP.16 v2 (2026-08-20). Official Standards PDF OE count 5; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: abcde. CORE: abcd. Achievement: none. Excellence: none.\nStop-work: YES — JUDGMENT CALL: High-risk care (falls/pressure/DVT/restraints/vulnerable) without identification and precautions.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/16.\nDo not copy SHCO COP wording. Do not touch AAC.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "HCO Full 6th Edition COP.16 v2 draft from official Standards PDF + guidebook OCR; draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation identifies and manages patients who are at high risk of morbidity / mortality.",
+  "exceptions": "1. Do not skip: The organisation identies and manages vulnerable patients.\n2. Do not skip: The organisation identies and manages patients who are at a risk of fall.\n3. Do not skip: The organisation identies and manages patients who are at risk of developing / worsening of pressure ulcers.\n4. Do not skip: The organisation identies and manages patients who are at risk of developing deep vein thrombosis.\n5. Do not skip: The organisation identies and manages patients who need restraints.\n6. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n7. Staff who see a COP.16 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE COP.16.a–e.\n- Asterisked elements (abcde) have document evidence as required.\n- CORE elements (abcd) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this High-Risk Patients — Identification and Management policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/COP/POL/16»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "template_test": "hco_cop_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — COP.16.",
+  "doc_no": "«HCO/COP/POL/16»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "Do not leave a patient identified as vulnerable, at fall risk, at pressure-ulcer risk, at DVT risk, or needing restraints without the precautions and monitoring required by the organisation's written guidance.\n\nDo not apply or continue restraints without a documented clinical order and ongoing review.\n\nStop-work applies to missing precautions / unauthorised restraint — not to emergency physical intervention needed to prevent immediate harm, which is followed at once by documentation and medical review.\n\nThe person who stops tells the «treating doctor» and the «Ward / ICU In-Charge» the same shift. Refusing to leave high-risk patients unprotected is not a disciplinary matter.",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.COP.16",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

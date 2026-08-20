@@ -40,3 +40,6 @@ AGENTS.md
 
 # Scanned NABH source PDFs (do not commit)
 policies/source/*.pdf
+
+# Copyrighted NABH source PDFs — do not commit
+policies/source/NABH-HCO-6th-Edition-Standards-Guidebook.pdf
