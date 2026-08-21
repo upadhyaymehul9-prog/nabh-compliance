@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 5 objective elements (MOM.10.a, MOM.10.b, MOM.10.c, MOM.10.d, MOM.10.e).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent.
+Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -68,11 +68,15 @@ Implantable prostheses and medical devices used at Preview Hospital are selected
 
 The OT / cath-lab / relevant clinical head and Biomedical keep an approved-item list. An implant without recognised approval is not used except under a documented trial / compassionate pathway approved by the «Medical Superintendent».
 
+Method note (from guidebook interpretation): The organisation shall ensure that relevant and sufficient scientific data are available before selection. It shall also look for any international (for example US-FDA) or national notification or applicable regulations (Central Drugs Standard Control Organisation notification based on the Drugs and Cosmetics Act) for approval of the particular product. The multidisciplinary committee shall be responsible for approving the use of a particular implant.
+
 ### 5.2 The organisation implements a mechanism for the usage of the implanta...
 
 The organisation implements a written mechanism for using these items: request and approval, sterile-supply chain, intra-operative timeout confirming the implant, and recording of identifiers (section 5.4).
 
 The «OT In-Charge» owns the mechanism for surgical implants; the relevant lab / cath-lab in-charge owns it for devices used there. This asterisked element is the procedure, not only the criteria in 5.1.
+
+Method note (from guidebook interpretation): The organisation shall have written guidance to direct procurement, storage/stocking, issuing and usage of implantable prosthesis and medical devices. Infection prevention and control requirement related to use of prosthesis and medical devices is implemented. This shall address statutory regulations/guidelines and manufacturer’s recommendation(s)
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
@@ -82,17 +86,23 @@ The patient and family are counselled before implantation on what will be implan
 
 Counselling is recorded in the medical record (consent process may sit with PRE; this policy owns the implant-specific content). Emergency life-saving implants are counselled as soon as practicable.
 
+Method note (from guidebook interpretation): Precautions could include non-usage of specific drugs and reporting to the hospital if a particular symptom occurs. The organisation shall document the details of counselling provided to the patient/ his or her family in informed consent.
+
 ### 5.4 The batch and the serial number of the implantable prosthesis and med...
 
 Batch and serial number (or equivalent unique identifier) of the implantable prosthesis or medical device are recorded in three places: the patient's medical record, the master implant logbook, and the discharge summary.
 
 A sticker from the implant pack is the usual source; if it is lost, pharmacy / stores trace the batch before the patient leaves. Missing identifiers are a reportable gap.
 
+Method note (from guidebook interpretation): \n case where implantable prosthesis do not have pre-labelled stickers, the organisation shall have suitable mechanisms in place for identifying the implant (manufacturer, type, size, batch number, serial number and any other important detail)
+
 ### 5.5 Process of recall of implantable prosthesis and medical devices are h...
 
 When an implant or device is recalled, the «OT In-Charge / Biomedical» traces every affected batch from the master logbook, contacts the treating team and, where required, the patient, and follows the supplier / regulator instruction (explant, extra surveillance, or information only).
 
 The recall file holds the notice, patients identified, actions taken and closure. This asterisked Achievement element is evidenced by a drill or a real recall file, not by a sentence in this policy.
+
+Method note (from guidebook interpretation): Process of recall may be based on communication from regulatory authorities, manufacturer or internal feedback. Recall procedure in response to internal feedback also includes providing information to appropriate regulatory authority and the manufacturer. The record shall be maintained on occurrence. Refer to MOM.1.e. and FMS.5.g. —) Commitment al Achievement 4 Excellence — , : NABH Standard Medical supplies and consumables are stored appropriately and are MOM.11. 2 . available where required.
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
@@ -145,8 +155,9 @@ Signature: ___________________________
 
 ## 9. References
 
-- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.10. Official portal PDF.
-- Internal documents of Preview Hospital: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.10.
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.10. Official portal PDF (OE text, counts, levels, asterisks).
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — MOM.10 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_mom_guidebook_ocr.txt).
+- Internal documents of Preview Hospital: Medication Management Manual, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.10.
 
 ## 10. Distribution
 

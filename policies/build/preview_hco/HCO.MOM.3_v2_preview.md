@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 7 objective elements (MOM.3.a, MOM.3.b, MOM.3.c, MOM.3.d, MOM.3.e, MOM.3.f, MOM.3.g).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent.
+Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -73,6 +73,8 @@ Access to the main pharmacy and to controlled-drug cupboards is limited to autho
 
 Pharmacy has oversight of medications stocked outside the pharmacy, as the chapter intent requires.
 
+Method note (from guidebook interpretation): The medication storage space shall be clean, safe and secure. The organisation shall adhere to the storage requirements of drugs as specified by the manufacturer. In the absence of manufacturer's instructions, the organisation shall develop and implement storage requirements. Storage requirements shall apply to all areas where medications are stored, including clinical areas. Medications shall be protected from loss or theft throughout the organisation. Some of the ways of ensuring this is to limit access to medication storage areas to authorised team members, locking medication carts and never leaving them unattended, or storing medications in an area that is continuously staffed. It is preferable that the medication storage area is organised. Overall cleanliness of the storage area shall be maintained. Vaccines shall be stored at the required temperature as per manufacturers recommendations. Where appropriate, temperature monitoring of the room, the cold storage area/refrigerator shall be done at least once a day. In case of areas which are not open all days, it shall be done on all working days. Beyond expiry date drugs (before disposal), shall be stored separately and away from drugs which are intended for patient use.
+
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
 ### 5.2 Sound inventory control practices guide the storage of medications th...
@@ -81,11 +83,15 @@ Inventory control at Preview Hospital uses «FEFO (first expiry, first out), def
 
 The «Pharmacy In-Charge» can account for stock movement from receipt to issue. A location that cannot show its current list and last expiry check is not a compliant storage site.
 
+Method note (from guidebook interpretation): The organisation shall follow inventory control practices like ABC, VED, FSN, First Expiry First Out, lead time analysis, etc. or a combination of these. The medicines could be stored in an alphabetical order of generic name. To check for loss or theft, the organisation could conduct stock verification audits at regular intervals (as defined by the organisation) to verify the inventory and detect instances of loss or theft. The organisation also has a mechanism for handling medications which are not part of the regular inventory. For example, not for sale medications including physician’s samples.
+
 ### 5.3 The organisation defines and updates its list of high-risk medication(s)
 
 The «Drug and Therapeutics Committee» defines the hospital's high-risk medication list and updates it at least «annually» and after a related incident. The list includes, at minimum, look-alike / sound-alike items used here, concentrated electrolytes, anticoagulants, insulin, opioids, chemotherapeutic agents, and any other item the committee names for this hospital's scope.
 
 The current list is posted in pharmacy and at every location that stores those items. Staff who prescribe, dispense or administer are trained on it. A list that exists only in a committee file is not implemented.
+
+Method note (from guidebook interpretation): The organisation shall define and update its list of high risk medications periodically. High risk/high alert medications carry a heightened risk for adverse outcomes and catastrophic harm whenever there is an error. High-risk medications/high alert medications include medicines with low therapeutic window, controlled substances, psychotherapeutic medications, look-alike and sound-alike medications, and concentrated electrolytes. The list shall be available in the pharmacy and all clinical areas where high-risk medications are stored.
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
@@ -97,11 +103,15 @@ High-risk medications are stored only where they are clinically necessary — fo
 
 The «Drug and Therapeutics Committee» names those locations. Pharmacy does not issue high-risk floor stock to an unlisted area. This Achievement element is evidenced by the location list matching actual storage on walk-round.
 
+Method note (from guidebook interpretation): High-risk medications are stored in pre-determined areas of the organisation for example, certain wards, OT, ICU. Clinical needs shall determine the availability of relevant high-risk drugs in such areas. Where applicable, (narcotics), it shall be guided by regulations. In all such areas, safeguards shall be in place to prevent inadvertent administration. a Commitment SS Achievement = Excellence.
+
 ### 5.5 High-risk medications including look-alike, sound-alike medications a...
 
 Look-alike and sound-alike medications, and different concentrations of the same medication, are stored physically apart — separate bins or shelves, with tall-man lettering or equivalent differentiation where the organisation uses it.
 
 They are never stored alphabetically adjacent when that would put LASA pairs together. The «Pharmacy In-Charge» checks physical separation on the monthly storage round. Finding two concentrations of the same drug in one bin is a stop-work trigger (section 6).
+
+Method note (from guidebook interpretation): Many drugs in ampoules, vials or tablets may look-alike or sound-alike. These are identified periodically, and the Look-alike Sound-alike medications (LASA) list shall be made available in all units where drugs are stored. Different concentrations of the same drug need to be identified. The list shall be developed from the hospital formulary. The list will have to be revised at regular intervals depending on the changes in the formulary and changes in the packaging (in case of look-alike). A good practice is to store the two identified look-alike/sound-alike drugs and/or different concentrations of the same drugs as far apart physically as is possible. . This is in addition to regular storage practices. In addition to the pharmacy, these storage practices shall be followed in patient care areas.
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
@@ -113,6 +123,8 @@ The «Drug and Therapeutics Committee» defines the emergency-medication list. T
 
 Each trolley has a sealed or checklist-controlled inventory. The «Nursing Superintendent» and the «Pharmacy In-Charge» agree the layout. Local 'extra' emergency drugs that are not on the defined list are not stored on the trolley unless the committee amends the list.
 
+Method note (from guidebook interpretation): The list of emergency medications shall be prepared in consonance with sound clinical practices and documented. The list of drugs could be modified according to the needs of the clinical department for example ICU, physiotherapy, emergency, CATH lab etc. A crash cart would help the organisation to store these medications, i.e. the rows and drawers have defined medicines. No other drug shall be kept stored with emergency medications.
+
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
 ### 5.7 Emergency medications are available all the time and are replenished ...
@@ -120,6 +132,8 @@ This objective element is asterisked in the official Standards PDF — documenta
 Emergency medications are present 24 hours a day at every defined location. After use, the item is replenished «immediately from pharmacy, and in any case before the trolley is returned to service».
 
 Nursing checks the trolley «each shift» against the list and records the check. A missing or expired emergency drug is a stop-work trigger for that trolley until it is corrected. Pharmacy keeps a replenishment log.
+
+Method note (from guidebook interpretation): Adequate quantity of emergency medicines shall be stocked at all times. An inventory check shall be done at least daily to ensure this. In case the organisation follows a system of sealing the emergency cart, then the check shall be carried out after each use of the cart/once every month. Refer to COP.5.c. lame Commitment = Achievement = Excellence.
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
@@ -184,8 +198,9 @@ Signature: ___________________________
 
 ## 10. References
 
-- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.3. Official portal PDF.
-- Internal documents of Preview Hospital: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.3.
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.3. Official portal PDF (OE text, counts, levels, asterisks).
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — MOM.3 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_mom_guidebook_ocr.txt).
+- Internal documents of Preview Hospital: Medication Management Manual, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.3.
 
 ## 11. Distribution
 

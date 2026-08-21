@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 5 objective elements (MOM.11.a, MOM.11.b, MOM.11.c, MOM.11.d, MOM.11.e).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent.
+Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -68,6 +68,8 @@ Medical supplies and consumables are acquired through a defined process: approve
 
 The «Stores In-Charge» owns acquisition. Informal local purchase is allowed only through the documented emergency-purchase path and is entered the next working day. This asterisked element is the written acquisition process in use, not a poster.
 
+Method note (from guidebook interpretation): In this context, medication supplies and consumables refer to items which are used in patient care excluding medications and implants. The process shall address the issues of vendor selection, vendor evaluation, indenting process, generation of the purchase order and receipt of goods.
+
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
 ### 5.2 Medical supplies and consumables are used in a safe manner, where app...
@@ -76,11 +78,15 @@ Supplies and consumables are used as intended: sterile items stay sterile until 
 
 User departments do not improvise a device against its labelled use. Incidents of unsafe use are reported under the incident system.
 
+Method note (from guidebook interpretation): The items shall be opened and used using relevant precautions to maintain sterility and integrity.
+
 ### 5.3 Medical supplies and consumables are stored in a clean, safe and secu...
 
 Stores and user locations keep supplies in a clean, safe and secure environment and follow manufacturer recommendations (temperature, humidity, light, upright storage, first-expiry). Sterile stores are physically separate from dirty utility.
 
 Food and medications are not mixed into the general consumable racks except where pharmacy owns the item under MOM.3.
+
+Method note (from guidebook interpretation): The organisation shall ensure that the storage requirements specified by the manufacturer are adhered to. This shall apply to all areas where these are stored, including wards. They shall be protected from loss or theft. Overall cleanliness of the storage area shall be maintained. Hazardous materials shall be identified and kept safely.
 
 ### 5.4 Sound inventory control practices guide storage of medical supplies a...
 
@@ -88,11 +94,15 @@ Inventory control uses defined stock levels, FEFO, and a documented indent cycle
 
 The «Stores In-Charge» can show movement from receipt to issue for sampled items.
 
+Method note (from guidebook interpretation): The organisation shall follow or demonstrate ABC, VED, FSN, First Expiry First Out, lead time analysis, etc.
+
 ### 5.5 There is a mechanism in place to verify the condition of medical supp...
 
 Before issue and at defined intervals, staff verify the condition of supplies and consumables: package integrity, sterility indicators where present, expiry, and any cold-chain logger for items that need it.
 
 Failed items are quarantined, not used. User departments may refuse a pack that fails condition check at the point of use and return it with a note.
+
+Method note (from guidebook interpretation): Medical supplies and consumables shall be in a condition suitable for safe usage. The condition of these materials shall be checked before dispensing and usage. For example, opened up package, damp cotton roll, physical damage, and discolouration.
 
 ## 6. Governance and responsibility
 
@@ -143,8 +153,9 @@ Signature: ___________________________
 
 ## 9. References
 
-- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.11. Official portal PDF.
-- Internal documents of Preview Hospital: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.11.
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.11. Official portal PDF (OE text, counts, levels, asterisks).
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — MOM.11 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_mom_guidebook_ocr.txt).
+- Internal documents of Preview Hospital: Medication Management Manual, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.11.
 
 ## 10. Distribution
 

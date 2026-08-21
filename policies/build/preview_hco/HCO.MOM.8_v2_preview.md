@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 6 objective elements (MOM.8.a, MOM.8.b, MOM.8.c, MOM.8.d, MOM.8.e, MOM.8.f).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent.
+Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -69,6 +69,8 @@ After administration, the patient is monitored for the intended effect and for a
 
 The written guidance names what to watch and when to escalate. Monitoring is recorded. This asterisked element is not satisfied by 'observe generally'.
 
+Method note (from guidebook interpretation): Relevant monitoring shall be done collaboratively to verify that the medicine is having its intended effect. It could also include monitoring the effects of medications (beneficial or adverse) through laboratory results. Besides, this shall help identify near misses, medication errors and adverse drug reactions. The organisation shall define those situations and medications where more frequent monitoring is required. For example, administration of high-risk medicines. The effect of medication in high risk patients like those on dialysis, in the ICU and elderly group shall be monitored on a regular basis. Commitment = Achievement lie Excellence Commitment _ b. NABH.
+
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
 ### 5.2 Medications shall be changed based on the monitoring where appropriate
@@ -77,11 +79,15 @@ When monitoring shows the drug is ineffective, poorly tolerated, or causing harm
 
 Nursing does not silently continue a drug that is causing a clear adverse reaction while waiting for a convenient round.
 
+Method note (from guidebook interpretation): Medication changes are based on clinical response and adverse drug reactions, if any.
+
 ### 5.3 The organisation shall capture near misses, medication errors and adv...
 
 Preview Hospital captures near misses, medication errors and adverse drug reactions in a defined reporting system (incident form / electronic equivalent, plus pharmacovigilance reporting where applicable).
 
 Capture includes events that did not reach the patient (near miss) and reactions that did. The «Medication Safety Officer» owns the capture system. Failure to have a working capture route is a CORE gap.
+
+Method note (from guidebook interpretation): Near misses, medication errors and adverse drug reactions shall be defined. This shall be in consonance with best practices. The organisation shall have a written guidance on the process to capture near misses, medication errors and adverse drug reactions. This shall incorporate identifying, documenting, reporting, analysing and action taken regarding.
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
@@ -93,6 +99,8 @@ Near misses, medication errors and adverse drug reactions are reported within a 
 
 The «Drug and Therapeutics Committee» may tighten these times. Late discovery is reported when found, marked as delayed, not hidden.
 
+Method note (from guidebook interpretation): The organisation shall define the timeframe for reporting once any of this has occurred and adhere to the same.
+
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
 ### 5.5 Near misses, medication errors and adverse drug reactions are collect...
@@ -101,11 +109,15 @@ The «Medication Safety Officer» collects reports and the «Drug and Therapeuti
 
 Analysis looks for system causes, not only individual blame. A pile of unanalysed forms is not compliance.
 
+Method note (from guidebook interpretation): Details of the near misses, medication errors and adverse drug reactions are collected and analysed by the multidisciplinary committee. The analysis shall be completed in a defined time frame. It is preferable that a clinical pharmacologist/clinical pharmacist be a part of this exercise.
+
 ### 5.6 Corrective and / or preventive action(s) are taken based on the analysis
 
 Corrective and / or preventive actions from the analysis are assigned, timed and closed. Examples: storage separation after a LASA mix-up, a second-check rule after a dose error, a formulary restriction.
 
 The «Quality Coordinator» includes open medication CAPA in the quarterly audit. Repeat events of the same type trigger a deeper review.
+
+Method note (from guidebook interpretation): Where appropriate, corrective and/or preventive action are taken. The records of the same shall be maintained. It is preferable that corrective and/or preventive action(s) be taken based on the root-cause analysis. Commitment SS Achievement i. Excellence.
 
 ## 6. Governance and responsibility
 
@@ -156,8 +168,9 @@ Signature: ___________________________
 
 ## 9. References
 
-- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.8. Official portal PDF.
-- Internal documents of Preview Hospital: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.8.
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.8. Official portal PDF (OE text, counts, levels, asterisks).
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — MOM.8 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_mom_guidebook_ocr.txt).
+- Internal documents of Preview Hospital: Medication Management Manual, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.8.
 
 ## 10. Distribution
 

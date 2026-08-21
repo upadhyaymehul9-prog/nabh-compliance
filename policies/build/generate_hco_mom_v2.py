@@ -42,7 +42,10 @@ from hco_v2_paths import HCO_DRAFTS, HCO_PREVIEW  # noqa: E402
 from pre_v2_common import emit_pre_v2  # noqa: E402
 
 INVENTORY = ROOT / "policies/source/hco6_mom_inventory.json"
+INTERP_JSON = ROOT / "policies/source/hco6_mom_interpretations.json"
+GUIDEBOOK_OCR = ROOT / "policies/source/hco6_mom_guidebook_ocr.txt"
 BUILD = Path(__file__).resolve().parent
+GUIDEBOOK_MD5 = "2c4489ee98de4ae9b49cba168ea9f42a"
 
 # Statute P2 only where MOM OE text names legal duties.
 # MOM.9: OE line does not cite NDPS; chapter references do. See judgment flags.
@@ -105,7 +108,14 @@ def step_title(i: int, oe_text: str) -> str:
     return f"5.{i} {t}"
 
 
-def build_steps(n: int, oes: list[dict], bodies: dict[str, str]) -> list[str]:
+def load_interpretations() -> dict[str, str]:
+    if not INTERP_JSON.exists():
+        raise FileNotFoundError(INTERP_JSON)
+    data = json.loads(INTERP_JSON.read_text(encoding="utf-8"))
+    return {k: clean_text(v) for k, v in data.items()}
+
+
+def build_steps(n: int, oes: list[dict], bodies: dict[str, str], interps: dict[str, str]) -> list[str]:
     steps = []
     for i, oe in enumerate(oes, start=1):
         title = step_title(i, oe["text"] or oe["oe_code"])
@@ -113,6 +123,14 @@ def build_steps(n: int, oes: list[dict], bodies: dict[str, str]) -> list[str]:
         if not body:
             raise KeyError(f"Missing method body for {oe['oe_code']}")
         extras = []
+        note = (interps.get(oe["oe_code"]) or "").strip()
+        if note:
+            extras.append(f"Method note (from guidebook interpretation): {note}")
+        elif oe.get("star"):
+            extras.append(
+                "Method note: Follow the organisation's written guidance for this asterisked "
+                "element; keep records that show the guidance was followed for the sampled cases."
+            )
         if oe.get("star"):
             extras.append(
                 "This objective element is asterisked in the official Standards PDF "
@@ -174,7 +192,7 @@ def oe_mapping(n: int, oes: list[dict], has_stop: bool) -> list[dict]:
     return mapping
 
 
-def build_one(n: int, inv: dict, bodies: dict[str, str]) -> tuple:
+def build_one(n: int, inv: dict, bodies: dict[str, str], interps: dict[str, str]) -> tuple:
     data = inv[str(n)]
     oes = data["oes"]
     title = POLICY_TITLES[n]
@@ -196,7 +214,7 @@ def build_one(n: int, inv: dict, bodies: dict[str, str]) -> tuple:
 
     doc_no = D(f"HCO/MOM/POL/{n:02d}")
     prepared = D(PREPARED_BY[n])
-    steps = build_steps(n, oes, bodies)
+    steps = build_steps(n, oes, bodies, interps)
     oe_codes = [o["oe_code"] for o in oes]
     letters = f"{oes[0]['letter']}–{oes[-1]['letter']}"
 
@@ -214,7 +232,7 @@ Words marked {D('like this')} are defaults. A blank marked {BLANK} must be fille
 
 It covers {len(oes)} objective elements ({', '.join(oe_codes)}).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent."""
+Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 {GUIDEBOOK_MD5})."""
 
     lead = (std_title[0].lower() + std_title[1:]).rstrip(".") if std_title else "medication management is safe"
     policy_statement = f"""{HOSPITAL} implements MOM.{n} so that {lead}.
@@ -262,8 +280,9 @@ Signature: ___________________________
 
 (One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)"""
 
-    references = f"""- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.{n}. Official portal PDF.
-- Internal documents of {HOSPITAL}: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.{n}."""
+    references = f"""- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.{n}. Official portal PDF (OE text, counts, levels, asterisks).
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — MOM.{n} interpretations (source PDF md5 {GUIDEBOOK_MD5}; OCR policies/source/hco6_mom_guidebook_ocr.txt).
+- Internal documents of {HOSPITAL}: Medication Management Manual, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.{n}."""
 
     abbreviations = f"""ADR — adverse drug reaction
 CAPA — Corrective and Preventive Action
@@ -278,9 +297,9 @@ NABH — National Accreditation Board for Hospitals and Healthcare Providers
 OE — Objective Element"""
 
     ufg = f"""HCO MOM.{n} v2 (2026-08-21). Official Standards PDF OE count {len(oes)}; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: {stars}. CORE: {cores}. Achievement: {ach}. Excellence: {exc}.
-Stop-work: {"YES — JUDGMENT CALL: " + STOP_WORK_PROPOSALS[n] if has_stop else "omitted"}.
+Stop-work: {"YES — approved: " + STOP_WORK_PROPOSALS[n] if has_stop else "omitted (MOM.8 confirmed: no stop-work)"}.
 draft_label={DRAFT_LABEL!r} via hco_document_control. chapter=HCO. doc_no HCO/MOM/POL/{n:02d}.
-Official chapter is 11 standards / 68 OEs — not the SHCO 9-standard MOM set. Guidebook Interpretation paragraphs not available; methods from OE text + chapter intent.
+Official chapter is 11 standards / 68 OEs (confirmed). Guidebook interpretations from scanned PDF md5 {GUIDEBOOK_MD5}. MOM.9 statute P2 approved.
 Do not copy SHCO MOM wording. Do not touch AAC or COP."""
 
     distribution = distribution_dedupe(
@@ -316,7 +335,7 @@ Do not copy SHCO MOM wording. Do not touch AAC or COP."""
             {
                 "version": "2.0",
                 "date": "21-08-2026",
-                "description": f"HCO Full 6th Edition MOM.{n} v2 draft from official Standards PDF OE text + chapter intent; draft_label={DRAFT_LABEL}.",
+                "description": f"HCO Full 6th Edition MOM.{n} v2 draft: portal PDF OE data + Guidebook interpretations (md5 {GUIDEBOOK_MD5}); draft_label={DRAFT_LABEL}.",
             }
         ],
         "status": "draft",
@@ -363,7 +382,8 @@ if __name__ == "__main__":
 def emit_standard(n: int) -> int:
     inv = json.loads(INVENTORY.read_text(encoding="utf-8"))
     bodies = method_bodies(D=D, HOSPITAL=HOSPITAL, BLANK=BLANK)
-    draft, statute_clause, accreditation_only, oe_codes = build_one(n, inv, bodies)
+    interps = load_interpretations()
+    draft, statute_clause, accreditation_only, oe_codes = build_one(n, inv, bodies, interps)
     emit_pre_v2(
         draft,
         f"hco_mom{n}_v2_draft.json",
@@ -383,17 +403,23 @@ def main() -> int:
     total = sum(inv[str(n)]["count"] for n in range(1, 12))
     assert total == 68, total
     bodies = method_bodies(D=D, HOSPITAL=HOSPITAL, BLANK=BLANK)
+    interps = load_interpretations()
     expected = [oe["oe_code"] for n in range(1, 12) for oe in inv[str(n)]["oes"]]
     missing = [c for c in expected if c not in bodies]
     extra = [c for c in bodies if c not in expected]
     if missing or extra:
         raise SystemExit(f"method body mismatch missing={missing} extra={extra}")
+    missing_i = [c for c in expected if not (interps.get(c) or "").strip()]
+    if missing_i:
+        raise SystemExit(f"missing guidebook interpretations: {missing_i}")
     for n in range(1, 12):
         write_builder(n)
-        draft, statute_clause, accreditation_only, oe_codes = build_one(n, inv, bodies)
+        draft, statute_clause, accreditation_only, oe_codes = build_one(n, inv, bodies, interps)
         assert "not an approved master" not in draft["resources_required"]
         assert "not an approved master" not in json.dumps(draft)
         assert DRAFT_LABEL in draft["resources_required"]
+        joined = "\n".join(draft["procedure_steps"])
+        assert joined.count("Method note (from guidebook interpretation):") == len(oe_codes)
         dist = draft["distribution"]
         names = [x.strip() for x in re.split(r"[,;\n]", dist) if x.strip()]
         # prepared_by role must appear once in document control

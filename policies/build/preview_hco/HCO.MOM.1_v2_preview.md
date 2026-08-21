@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 5 objective elements (MOM.1.a, MOM.1.b, MOM.1.c, MOM.1.d, MOM.1.e).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent.
+Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -66,9 +66,11 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 Preview Hospital runs pharmacy services and the rest of medication management from written guidance. The «Medication Safety Officer» and the «Pharmacy In-Charge» keep that guidance current. It covers procurement, storage, prescription, transcription, dispensing, administration, monitoring after administration, and reporting of near misses, medication errors and adverse drug reactions.
 
-The guidance names who does each step, which records are kept, and how after-hours and stock-out supply works (section 5.4). The «Drug and Therapeutics Committee» (the organisation's multi-disciplinary pharmacy committee) approves the guidance. The «Quality Coordinator» holds the current version.
+The guidance names who does each step, which records are kept, and how after-hours and stock-out supply works (section 5.4). The «Drug and Therapeutics Committee» (the organisation's multi-disciplinary pharmacy committee) approves the guidance. The «Quality Coordinator» holds the current version. All required procedures under this chapter sit in the «Medication Management Manual» named by the guidebook.
 
 Staff who prescribe, dispense or administer medications are trained on this guidance at induction and «annually». A current copy is available in pharmacy, emergency, ICU, OT, wards and at «staff intranet / policies».
+
+Method note (from guidebook interpretation): The written guidance shall address aspects related to the formulary, procurement, storage, prescription, dispensing, administration and monitoring the use of medications. A qualified individual shall supervise all the activities of the Pharmacy services. Medication management shall cover all patient care areas across the organisation. All required procedures under this chapter shall be documented as a ‘Medication Management Manual’.
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
@@ -78,11 +80,15 @@ The «Medical Superintendent» constitutes the «Drug and Therapeutics Committee
 
 The committee meets «at least quarterly». Minutes name decisions, owners and due dates. The «Medication Safety Officer» is a standing member and brings incident and audit findings. Pharmacy services and medication-management guidance are not issued or changed without this committee's review.
 
+Method note (from guidebook interpretation): The multidisciplinary committee shall have defined roles and responsibilities for the management of medications. Where applicable, these are in line with legislation and applicable regulations. Some of the responsibilities of the committee include developing medication management processes; developing and revising the organisation's formulary; and evaluating medication use, and patient safety incidents involving medications. The committee shall include representatives of major clinical departments, administration, a pharmacist/clinical pharmacologist and medication safety officer. It shall also have representation from nurses and Quality department. The objectives of this committee, terms of reference like its composition, frequency of meetings, the quorum required shall be defined. At a minimum, the committee shall meet once in three months. The minutes of the meeting shall be documented.
+
 ### 5.3 The multi-disciplinary committee updates medication management processes
 
 The «Drug and Therapeutics Committee» reviews medication-management processes at least «annually» and sooner after a related serious incident, recall, formulary change or audit finding.
 
 An update is a written change to a process (who does what, where, with which record), not only a restatement of the same rule. The «Medication Safety Officer» tracks open actions from the last meeting until they close. Staff who must change practice are informed under section 5.5 before the new process is counted as implemented.
+
+Method note (from guidebook interpretation): This includes information on rational use, medication errors, medication management, adverse drug reactions, patient safety and high-risk medications. The multidisciplinary committee shall conduct Medication Management system review on an annual basis. The organisation designates a medication safety officer, this job responsibility could be handled by the patient safety officer for example monitoring and analysis of medication related adverse events. Refer PSQ.1.d. and PSQ.7.c.
 
 ### 5.4 There is a procedure to obtain medications when the pharmacy is close...
 
@@ -92,6 +98,8 @@ The procedure names: who is authorised to access the after-hours store or night 
 
 Emergency medications in crash carts and emergency trolleys stay under MOM.3; this procedure is for items that are not on those trolleys. The «Pharmacy In-Charge» tests the after-hours path «quarterly».
 
+Method note (from guidebook interpretation): When the pharmacy is closed or in case of stock outs there shall be a standard operating procedure to procure the drugs. It is preferable that the organisation has a 24-hour pharmacy.
+
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
 ### 5.5 The organisation has a mechanism to inform relevant staff of key chan...
@@ -99,6 +107,8 @@ This objective element is asterisked in the official Standards PDF — documenta
 When the «Drug and Therapeutics Committee» changes a medication-management process, a formulary item, a high-risk or emergency list, or a recall action, the «Medication Safety Officer» informs the staff who prescribe, dispense or administer before the change takes effect.
 
 The mechanism is «a dated circular plus a briefing at the next departmental huddle, with the current list posted in pharmacy and on the intranet». The «Quality Coordinator» keeps the distribution list and acknowledgements. A change that is only filed in committee minutes is not counted as communicated.
+
+Method note (from guidebook interpretation): The organisation shall have a process to communicate medication shortages, including stock-outs to relevant staff (clinicians and nurses). The relevant staff shall also be informed of the recall of a drug within 24 hours, any serious adverse events and patient safety incidents associated with medication usage. The Pharmacy-in-charge or a designated authority shall be responsible for communicating the same. This communication shall be documented. Refer to MOM.2., MOM.5.b. and MOM.9.e.
 
 ## 6. Governance and responsibility
 
@@ -149,8 +159,9 @@ Signature: ___________________________
 
 ## 9. References
 
-- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.1. Official portal PDF.
-- Internal documents of Preview Hospital: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.1.
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.1. Official portal PDF (OE text, counts, levels, asterisks).
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — MOM.1 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_mom_guidebook_ocr.txt).
+- Internal documents of Preview Hospital: Medication Management Manual, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.1.
 
 ## 10. Distribution
 

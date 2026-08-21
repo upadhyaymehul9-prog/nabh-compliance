@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 6 objective elements (MOM.6.a, MOM.6.b, MOM.6.c, MOM.6.d, MOM.6.e, MOM.6.f).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent.
+Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -70,6 +70,8 @@ Pharmacy dispenses against a valid order, confirming the right patient, drug, do
 
 High-risk items follow MOM.6.e. Floor-stock issue to wards is still a dispense under this policy and is recorded. Dispensing is done in a workspace that limits interruption for high-risk work.
 
+Method note (from guidebook interpretation): Written guidance shall be laid down for the safe dispensing of medication. Medications shall be dispensed only against a valid prescription or medication order (except for over-the-counter drugs). Medication shall be — CORE _ Commitment t—} Achievement — Excellence checked before dispensing and include a check of the generic composition, formulation, expiry date, and where applicable, the strength. This shall include both bulk and retail pharmacy. Physicians’ samples shall not be sold.
+
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
 ### 5.2 Medication recalls are handled effectively
@@ -77,6 +79,8 @@ This objective element is asterisked in the official Standards PDF — documenta
 When a recall notice reaches Preview Hospital (manufacturer, regulator, or internal quality failure), the «Pharmacy In-Charge» quarantines affected batch(es) in pharmacy and at floor-stock locations the same shift, identifies patients who received the batch where records allow, and informs the «Medication Safety Officer» and treating teams.
 
 Recalled stock is not reissued. The recall file holds the notice, locations checked, quantities recovered, and patient-notification decisions. A recall that sits in an inbox overnight while stock remains on a trolley is not effective handling.
+
+Method note (from guidebook interpretation): The organisation shall have an established system for medication recalls. Recall may be based on communication from regulatory authorities, manufacturer or internal feedback (for example, visible contaminant in IV fluid bottle). The recall procedure in response to internal feedback also includes providing information to the appropriate regulatory authority. A record of the same shall be maintained on occurrence. Refer to MOM.1.e.
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
@@ -86,6 +90,8 @@ Near-expiry medications are identified by the FEFO system and a «monthly» expi
 
 Pharmacy does not issue a medication that cannot be used within its expiry for the intended course. Short-dated items used in emergency trolleys are replaced before expiry, not after.
 
+Method note (from guidebook interpretation): The organisation could define as to what constitutes “near expiry” medications, for example, three months before the expiry date. The organisation’s mechanism shall ensure that near expiry medications are withdrawn and that no beyond expiry date medication is available.
+
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
 ### 5.4 Dispensed medications are labelled
@@ -93,6 +99,8 @@ This objective element is asterisked in the official Standards PDF — documenta
 Every dispensed medication is labelled before it leaves pharmacy (or the after-hours store). The label includes patient identity where the item is patient-specific, name of the medicine, strength, route, frequency / directions, and expiry where relevant.
 
 Ward floor-stock multi-dose containers show drug name, strength, expiry and date of opening where applicable. An unlabelled syringe, cup or strip is not issued. This is a CORE element.
+
+Method note (from guidebook interpretation): At a minimum, the label shall include the dosage instruction in a manner that the patient understands. Labelling is applicable only for out-patients. In instances when medicines are dispensed either as cut strips or from bulk containers, the label must include the drug name, strength, dosage instruction (in a manner that the patient understands) and expiry date. The organisation could consider using technology (for example, QR codes on individual medicines) to optimise the process. This shall be applicable for both in-patients and out- patients. It shall also be applicable where drugs are reconstituted for example Chemotherapy drugs.
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
@@ -104,6 +112,8 @@ Before a high-risk medication is dispensed, an appropriate person (a second phar
 
 The verification is recorded. This is the chapter-intent requirement that every high-risk order is verified. Dispensing a high-risk item on a single unchecked reading is a stop-work trigger.
 
+Method note (from guidebook interpretation): High-risk medications shall be given only after written orders, and it shall be verified by the staff before dispensing. This shall adhere to statutory requirements, where applicable.
+
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
 ### 5.6 Return of medications to the pharmacy is addressed
@@ -111,6 +121,8 @@ This is a CORE objective element — non-compliance is not acceptable for accred
 Unused or discontinued medications returned to pharmacy follow a written return procedure: identity and integrity check, decision to restock or destroy, and a record of the return.
 
 Controlled drugs, reconstituted items, and items that left temperature control are not restocked onto usable shelves. Patient's own medicines follow MOM.7.k, not this return path, unless pharmacy has accepted them into hospital stock under that policy.
+
+Method note (from guidebook interpretation): The organisation shall have written guidance to direct the return of medications to the pharmacy. At a minimum, the written guidance shall address the list of medications which would be accepted for return (either by inclusion or exclusion) and minimum conditions to be met for return of medications. It is preferable that any drug which has a specific temperature storage requirement not be accepted for return once it has gone out of the organisation’s premises, The minimum conditions to be met for return of medications could include the drug name, strength, batch number and expiry date matching the bill; no visible damage etc. It is preferable that the organisation creates awareness regarding the return of medications. Some ways of doing this are having a signage stating the salient points mentioned above, putting up this information on the website, printing the information on the receipt etc.
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
@@ -171,8 +183,9 @@ Signature: ___________________________
 
 ## 10. References
 
-- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.6. Official portal PDF.
-- Internal documents of Preview Hospital: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.6.
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.6. Official portal PDF (OE text, counts, levels, asterisks).
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — MOM.6 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_mom_guidebook_ocr.txt).
+- Internal documents of Preview Hospital: Medication Management Manual, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.6.
 
 ## 11. Distribution
 

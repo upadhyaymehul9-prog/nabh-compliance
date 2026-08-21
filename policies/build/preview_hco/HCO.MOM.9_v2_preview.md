@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 5 objective elements (MOM.9.a, MOM.9.b, MOM.9.c, MOM.9.d, MOM.9.e).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent.
+Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -69,6 +69,8 @@ Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-ph
 
 The «Pharmacy In-Charge» and the «Medication Safety Officer» own the combined programme. Services that Preview Hospital does not provide (for example radio-pharmaceuticals or chemotherapy) are written as out of scope; those items are then not stocked. Where they are in scope, the full chain applies. This asterisked element is the umbrella.
 
+Method note (from guidebook interpretation): Written guidance, developed in consonance with local and national regulations/guidelines shall be implemented. The written guidance could address all the objective elements of this standard. Examples of regulations/guidelines are Narcotic Drugs and Psychotropic Substances Act and AERB guidelines.
+
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
 ### 5.2 Narcotic drugs and psychotropic substances, chemotherapeutic agents a...
@@ -77,11 +79,15 @@ These agents are prescribed only by caregivers authorised for that class: «cons
 
 A verbal chemotherapy order is not used except under the documented emergency rule in MOM.4.f. Pharmacy does not dispense these classes against an unauthorised signature.
 
+Method note (from guidebook interpretation): For narcotic drugs, it shall be the designated/ privileged medical officer(s). Chemotherapy shall be prescribed by those who have the knowledge to monitor and treat the adverse effect of chemotherapy. This is preferably a medical oncologist or a doctor who has been trained and has achieved competency in the same. Radiopharmaceuticals shall be prescribed only by a caregiver authorised by the statutory body.
+
 ### 5.3 Narcotic drugs and psychotropic substances, chemotherapeutic agents a...
 
 Narcotics and psychotropics are stored in a locked, access-controlled cupboard or safe, with a register. Chemotherapeutic agents and radio-pharmaceuticals are stored as their licences and manufacturer instructions require, separate from general stock, with access limited to authorised staff.
 
 Keys / access rights are named. Unsecured opioids in a ward drawer are a stop-work trigger. The extra word 'drugs' in the official OE line ('radio-pharmaceuticals drugs') is kept as printed; practice is secure storage of all three classes.
+
+Method note (from guidebook interpretation): Narcotic drugs shall be stored securely in consonance with statutory requirements. The security measures shall ensure that these medications are not diverted and abused. Chemotherapeutic agents shall be accessible only to authorised personnel. Radiopharmaceuticals shall be labeled and stored as per AERB guidelines. It is preferable that these medications are stored separately from other medications. Hl Commitment Ee Achievement Excellence.
 
 ### 5.4 Chemotherapy and radio-pharmaceuticals shall be prepared properly and...
 
@@ -89,11 +95,15 @@ Chemotherapy and radio-pharmaceuticals are prepared in the required facility (fo
 
 PPE, spill kits and waste streams are in place before preparation starts. Preparation by an unqualified person, or on an open ward bench, is a stop-work trigger. If Preview Hospital does not prepare these on site, preparation is contracted to a named qualified provider and receipt checks still apply.
 
+Method note (from guidebook interpretation): It is required that qualified personnel have received special training in the preparation and administration of chemotherapeutic drugs. A bio-safety cabinet of class II (preferably IIA) with appropriate personal protective equipment shall be used for preparing/mixing chemotherapeutic drugs. Radio-pharmaceuticals shall be prepared and administered by an authorised caregiver.
+
 ### 5.5 A proper record shall be kept of the usage, administration and dispos...
 
 Usage, administration and disposal of these three classes are recorded: narcotic / psychotropic register (receipt, issue, administration, wastage, balance); chemotherapy administration record (protocol, dose, batch, given-by); radio-pharmaceutical log as the radiation programme requires.
 
 Disposal follows biomedical-waste and, where applicable, AERB / radiation rules. A missing register line is investigated the same shift.
+
+Method note (from guidebook interpretation): A strict inventory control shall be kept for narcotic drugs and psychotropic substances, chemotherapeutic agents and radiopharmaceuticals . Record of usage, administration, wastage and disposal of narcotic drugs shall be kept following statutory requirements. These shall be disposed off according to existing statutory requirements (including Narcotic Drugs and Psychotropic Substances Act, AERB rules and Biomedical waste management rules) and the manufacturer's recommendation (where applicable)
 
 ## 6. Stop-work authority
 
@@ -154,8 +164,9 @@ Signature: ___________________________
 
 ## 10. References
 
-- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.9. Official portal PDF.
-- Internal documents of Preview Hospital: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.9.
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.9. Official portal PDF (OE text, counts, levels, asterisks).
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — MOM.9 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_mom_guidebook_ocr.txt).
+- Internal documents of Preview Hospital: Medication Management Manual, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.9.
 
 ## 11. Distribution
 

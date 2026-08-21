@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 8 objective elements (MOM.4.a, MOM.4.b, MOM.4.c, MOM.4.d, MOM.4.e, MOM.4.f, MOM.4.g, MOM.4.h).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent.
+Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -72,6 +72,8 @@ Prescribers follow the organisation's written good-practice / rational-prescribi
 
 The «Drug and Therapeutics Committee» names the reference guidance («WHO / national essential-medicines principles and the hospital antimicrobial policy»). Prescription audit under MOM.4.g samples against this guidance.
 
+Method note (from guidebook interpretation): This shall address both outpatient and in-patient prescription. The organisation shall ensure that clinicians are trained/sensitised on the rational prescription of medications. WHO states: “Rational use of medicines requires that patients receive medications appropriate to their clinical needs, in doses that meet their own individual requirements, for an adequate period of time, and at the lowest cost to them and their community." Code of Medical Ethics-2002" published by Medical Council of India erstwhile National Medical Commission shall be followed. Refer to the glossary for a definition of “prescription”.
+
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
 ### 5.2 The organisation adheres to the determined minimum requirements of a ...
@@ -79,6 +81,8 @@ This objective element is asterisked in the official Standards PDF — documenta
 Every prescription at Preview Hospital meets the determined minimum requirements, which include: patient name and unique identification number; generic or approved name of the medicine; route; strength; frequency / time; date and time of the order; and the prescriber's signature (or authenticated electronic equivalent) and identifier.
 
 The «Drug and Therapeutics Committee» publishes this minimum list. Pharmacy and nursing do not act on an order that fails the minimum, except through the documented emergency-prescription path, which is completed as soon as the patient is stable.
+
+Method note (from guidebook interpretation): Prescriptions generated within the organisation (IPD, OPD and emergency) shall be in accordance with national/international guidelines and regulatory bodies. At a minimum, the prescription shall have the name of the patient; unique hospital number; name of the drug (generic composition is mandatory except in the case of combinations of vitamins and/or minerals), strength, dosage instruction, duration and total quantity of the medicine; name, signature and registration number of the prescribing doctor. Error-prone abbreviations shall not be used. All prescriptions shall be written in capital letters. Itis preferable to use digital prescription system to reduce errors. Prescription errors or illegible prescriptions will be initialled after a single strikethrough and rewritten. Good references are the Drugs and Cosmetics Act and the Code of Medical Ethics and Institute for Safe Medication Practices guidelines. = Commitment.
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
@@ -90,17 +94,23 @@ Before prescribing, the clinician ascertains known drug allergies and previous a
 
 A red-alert allergy band or equivalent is used when an allergy is recorded. Prescribing without this check is a stop-work trigger. Admission and transfer notes carry the allergy status forward (MOM.4.e).
 
+Method note (from guidebook interpretation): Drug allergy and previous adverse drug reaction shall be ascertained during the initial consultation, before prescribing or at any point of time during care. It is a good practice to document drug allergies prominently in the medical record, both in OP and IP.
+
 ### 5.4 The organisation has a mechanism to assist the clinician in prescribi...
 
 Preview Hospital assists clinicians to prescribe the appropriate medication through «formulary access at the point of prescribing, dose-range information for high-risk drugs, and pharmacy clarification of unclear orders before dispensing».
 
 Where the hospital uses e-prescribing or clinical decision support, that is the mechanism; where it uses paper, the mechanism is the current formulary plus pharmacy review of orders. This Excellence element is evidenced by a working assistance mechanism, not by a poster.
 
+Method note (from guidebook interpretation): The organisation needs to provide its clinicians with a mechanism(s) to help identify drug interactions, food-drug interactions, alcohol-drug interactions, therapeutic duplication, dose adjustments etc. This could either be in electronic or in the physical form.
+
 ### 5.5 Reconciliation of medications occurs at transition points of patient ...
 
 Medication reconciliation is done at transition points: admission, transfer between units (including ICU to ward), and discharge.
 
 The «treating doctor or designated nurse» compares the patient's current medication list (home + in-hospital) with the new orders, resolves discrepancies with the prescriber, and records the reconciled list in the medical record. Pharmacy supports high-risk and polypharmacy reconciliations. A transfer without a reconciled list is incomplete.
+
+Method note (from guidebook interpretation): The purpose of medication reconciliation is to ensure that the list of medications that a patient has to receive is complete and up to date with past clinical conditions and present care plan. The prescribed medications shall be checked for accuracy at the transition points, such as the time of admission, either direct or after admission from the emergency, transfer of the patient from one ward setting/department to another, or at the time of discharge. It is preferable that medication reconciliation also occurs after cross-consultation. Medication reconciliation shall be documented. There is a system for effective communication during handover regarding the reconciliation of medications.
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
@@ -109,6 +119,8 @@ This is a CORE objective element — non-compliance is not acceptable for accred
 Verbal (including telephone) medication orders are used only when the prescriber cannot write or enter the order in time for safe care. The receiver writes the order, reads it back (drug, dose, route, frequency, patient), and the prescriber confirms.
 
 The prescriber countersigns «within 24 hours, and before the next dose where practicable». Verbal orders are not used for «chemotherapy» except under a documented emergency rule. Acting on a verbal order without read-back is a stop-work trigger.
+
+Method note (from guidebook interpretation): The organisation shall ensure safe medication management practices through written guidance and implementation of the same. The written guidance shall mention who can give a verbal order, when can it be given and how the order will be authenticated. Verbal orders shall be limited to urgent situations where immediate written or electronic communication is not practical. To the extent possible, their usage shall be limited. The organisation shall have an approved list of formulary drugs which can be ordered verbally. This list can be defined either by inclusion or exclusion. = Commitment iL Achievement =i Excellence NAB’ It shall ensure that the procedure incorporates good practices like “repeat back/read back”. A verbal order shall be counter-signed by the doctor who ordered it within 24 hours of ordering. For the definition of ‘verbal order’, refer to the glossary.
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
@@ -120,11 +132,15 @@ The «Medication Safety Officer» (or Quality with pharmacy) audits medication o
 
 The sample size is «at least 20 prescriptions per quarter, including emergency and inpatient». Results go to the «Drug and Therapeutics Committee».
 
+Method note (from guidebook interpretation): The scope of the audit shall include: * legibility, use of capitals in written orders; * the appropriateness of the drug, dose, frequency, and route of administration; * the presence of therapeutic duplication; * the possibility of drug interaction and measures taken to avoid the same; * the possibility of food-drug interaction and measures taken to avoid the same. * scope for dosage adjustment in renal and hepatic impairment. * the possibility of intravenous incompatibility. * presence of inappropriate dilutions and duration of medications Infusions. * the requirements of this standard (MOM 4b, e-h). This shall be done at least once a month using a representative sample size. It could preferably be done by a clinical pharmacologist/clinical pharmacist. In case there is no clinical pharmacologist/clinical pharmacist, it could be done by a multidisciplinary committee/team, who is trained in audit of medication orders/ prescriptions. It is preferable that this is done for all prescriptions as ‘live audit’ before the medicines are dispensed.
+
 ### 5.8 Corrective and / or preventive action(s) is taken based on the audit,...
 
 When the prescription audit finds a gap, the «Drug and Therapeutics Committee» assigns corrective and / or preventive action with an owner and a due date. The «Medication Safety Officer» tracks closure.
 
 Actions may include feedback to a prescriber, a formulary or guidance change, or training. An audit without follow-up is not Achievement for this element.
+
+Method note (from guidebook interpretation): Where appropriate, a corrective and/or preventive action(s) is taken based on the root-cause analysis. The records of the same shall be maintained. Commitment = Achievement = Excellence 4 MOM.5. Medications orders are written in a uniform manner.
 
 ## 6. Stop-work authority
 
@@ -187,8 +203,9 @@ Signature: ___________________________
 
 ## 10. References
 
-- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.4. Official portal PDF.
-- Internal documents of Preview Hospital: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.4.
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.4. Official portal PDF (OE text, counts, levels, asterisks).
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — MOM.4 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_mom_guidebook_ocr.txt).
+- Internal documents of Preview Hospital: Medication Management Manual, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.4.
 
 ## 11. Distribution
 

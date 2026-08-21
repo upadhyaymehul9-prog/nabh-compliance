@@ -22,7 +22,7 @@ def method_bodies(*, D, HOSPITAL, BLANK) -> dict[str, str]:
     return {
         "MOM.1.a": f"""{HOSPITAL} runs pharmacy services and the rest of medication management from written guidance. The {mso} and the {pharm} keep that guidance current. It covers procurement, storage, prescription, transcription, dispensing, administration, monitoring after administration, and reporting of near misses, medication errors and adverse drug reactions.
 
-The guidance names who does each step, which records are kept, and how after-hours and stock-out supply works (section 5.4). The {dtc} (the organisation's multi-disciplinary pharmacy committee) approves the guidance. The {qc} holds the current version.
+The guidance names who does each step, which records are kept, and how after-hours and stock-out supply works (section 5.4). The {dtc} (the organisation's multi-disciplinary pharmacy committee) approves the guidance. The {qc} holds the current version. All required procedures under this chapter sit in the {D('Medication Management Manual')} named by the guidebook.
 
 Staff who prescribe, dispense or administer medications are trained on this guidance at induction and {yearly}. A current copy is available in pharmacy, emergency, ICU, OT, wards and at {D('staff intranet / policies')}.""",
 

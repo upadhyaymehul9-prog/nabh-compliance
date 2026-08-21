@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 4 objective elements (MOM.5.a, MOM.5.b, MOM.5.c, MOM.5.d).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent.
+Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -67,6 +67,8 @@ Only personnel authorised by Preview Hospital write medication orders. The autho
 
 Nursing and pharmacy do not write prescribing orders except where law and hospital privilege expressly allow (for example a documented nurse-prescribing protocol, if any). An order from a person not on the list is not acted on.
 
+Method note (from guidebook interpretation): Medication orders shall be written by a doctor who at a minimum, holds an MBBS qualification. In case there is any other category of staff authorised to write medication orders, the same shall be backed by a legislation or government order. The medication order card in the IP shall have the orders written by a doctor, even if it is the case of transcribing orders of the treating consultant from an OP record or an admission note. In facilities which use Electronic Medical Record (EMR), the doctor shall directly enter the prescription in the Hospital Information System (HIS) using his or her unique login. In case the HIS entry is made by an assistant, the same shall be verified and authorised by the doctor. Commitment _b. HM cone.
+
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
 ### 5.2 Medication orders are written in a uniform location in the medical re...
@@ -75,17 +77,23 @@ Medication orders are written in one uniform location in the medical record — 
 
 Orders are not scattered across progress notes as the only copy. Stickers or loose slips are transcribed onto the uniform chart the same shift. The «Nursing Superintendent» checks location uniformity on record audit.
 
+Method note (from guidebook interpretation): All the orders for medicines shall be recorded on a uniform location of the medical record. Only medications written in this location shall be administered to the patient. It is imperative that medication orders that are written in any other location of the medical record be moved to this location, electronic orders, when typed, shall again follow the same principles. It is preferable that the prescription and the administration record is on the same sheet. This would help minimise medication errors. A drug ‘Kardex’ could be used for this purpose. The treatment orders are written daily or authorised daily in a ‘Kardex’ like format. Phrases like “CST”/“ continue same treatment”/“repeat all”/“repeat 1,4,5,8” shall not be accepted. Whenever there is a modification in the medication order in the existing order fora particular drug, a fresh order will have to be written for that drug for example, Tab. Paracetamol 500 mg QID changed to Tab. Paracetamol 500 mg BD - this shall warrant the first order to be discontinued and a fresh medication order to be written. A strike-through or over-writing of the previous order is not acceptable. == Commitment —_ Achievement - Excellence a.
+
 ### 5.3 Medication orders are legible, dated, timed and signed
 
 Every medication order is legible, dated, timed and signed (or authenticated in the electronic record). Illegible orders are not guessed — the prescriber is contacted and the order rewritten.
 
 Late entries follow the medical-record rules (timed, marked as late). Pharmacy and nursing have the authority to hold an unsigned or untimed order.
 
+Method note (from guidebook interpretation): All hand-written medication orders shall be written in capital letters. In case abbreviations are used, a list of approved standardised abbreviations for medication orders shall be used throughout the organisation, Error-prone abbreviations shall not be used. A good reference is the Institute for Safe Medication Practices guidelines. The identity of the person who has written the medication order shall be traceable, This could be done by either writing the name against every order or by having a ‘master signature list’ in the medical record which has the name of the person against the signature or by stating the employee code number against every medication order.
+
 ### 5.4 Medication orders contain the name of the medicine, route of administ...
 
 Each order states the name of the medicine, the route, the strength to be administered, and the frequency or time of administration. 'Continue same' or 'as usual' is not an order unless it points to a current, complete charted regimen.
 
 PRN orders include the indication and the maximum frequency. The missing-element check is part of MOM.4.b minimum requirements and of pharmacy verification.
+
+Method note (from guidebook interpretation): In case of medication orders which have two or more drugs (tablet/capsule/injection) the strength of all the individual drugs shall be written. This may not be applicable for preparations having a combination of vitamins and/or minerals. Medication orders shall be recorded separately if the strength differs for each time of administration. There shall be a mechanism for taking action when medications orders are incomplete with respect to any of the above parameters. Refer to MOM.7.d.
 
 ## 6. Governance and responsibility
 
@@ -136,8 +144,9 @@ Signature: ___________________________
 
 ## 9. References
 
-- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.5. Official portal PDF.
-- Internal documents of Preview Hospital: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.5.
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.5. Official portal PDF (OE text, counts, levels, asterisks).
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — MOM.5 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_mom_guidebook_ocr.txt).
+- Internal documents of Preview Hospital: Medication Management Manual, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.5.
 
 ## 10. Distribution
 

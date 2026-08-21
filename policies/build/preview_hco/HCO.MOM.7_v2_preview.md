@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 11 objective elements (MOM.7.a, MOM.7.b, MOM.7.c, MOM.7.d, MOM.7.e, MOM.7.f, MOM.7.g, MOM.7.h, MOM.7.i, MOM.7.j, MOM.7.k).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent.
+Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -75,11 +75,15 @@ Only persons permitted by law and by Preview Hospital's authorised list administ
 
 Students administer only under documented supervision. A person who is not on the list does not give the drug, including 'just this once'. This element names the law; statutory duties remain those of the applicable professional and drugs legislation — this policy is not legal advice.
 
+Method note (from guidebook interpretation): Only a registered nurse or doctor with a minimum of MBBS qualification shall administer medication. In case there is any other category of staff authorised to administer medication, a legislation or government order shall back the same.
+
 ### 5.2 Prepared medication is labelled before preparation of a second drug
 
 When a medication is prepared (drawn up, reconstituted, mixed), it is labelled before a second drug is prepared. The label names the drug, strength, patient (if patient-specific), route and time prepared.
 
 Two unlabelled syringes on the same tray are a stop-work condition. This applies in OT, ICU, emergency and wards.
+
+Method note (from guidebook interpretation): Labelling is required when more than one drug is prepared and loaded. Examples of these are anaesthetic drug preparation in OTs, chemotherapy drugs etc.
 
 ### 5.3 The patient is identified before administration
 
@@ -87,11 +91,15 @@ The person administering identifies the patient immediately before administratio
 
 Asking only the attendant, or matching the bed number alone, is not identification. If identity cannot be confirmed, administration stops.
 
+Method note (from guidebook interpretation): At a minimum, two identifiers shall be used for patient identification, with one of them being the unique identification number (for example hospital number/IP number, etc.) and full name of the patient. Refer to COP.1.b.
+
 ### 5.4 Medication is verified from the medication order and physically inspe...
 
 Before administration the person checks the labelled product against the medication order (right drug) and physically inspects it (clarity, integrity, expiry, correct formulation). A mismatch or defect stops administration.
 
 This CORE check is separate from strength, route and timing (5.5–5.7) and is recorded by the administration entry.
+
+Method note (from guidebook interpretation): Staff administering medications shall verify the medication order and ensure that medications are administered appropriately. The general appearance of the medication (for example melting, clumping, etc.) and the expiry dates shall be checked before administration. If any of the parameters concerning an order, such as name, strength, route or frequency or time are missing/incomplete, the medication administration shall be deferred, pending early verification by the treating team. In case the confirmation is obtained verbally, it shall be considered a verbal order and the procedure for verbal orders shall be adhered to. In case of high-risk medication(s), the verification shall be done by at least two staff (nurse-nurse or nurse-doctor), independently and documented. The nurses shall be knowledgeable regarding high-risk medications and shall be empowered to highlight prescription errors noted while verifying the orders.
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
@@ -101,19 +109,27 @@ Strength / dose is verified from the order before administration, including any 
 
 If the strength on the product does not match the order, do not convert at the bedside unless the conversion is a documented pharmacy-prepared change.
 
+Method note (from guidebook interpretation): The person administering the drug shall verify the strength from the medication order before administration. In case of discrepancy, medication administration shall be deferred. Refer to MOM.7.d.
+
 ### 5.6 The route is verified from the order before administration
 
 Route is verified from the order before administration. Oral products are not given intravenously; epidural and intravenous lines are distinguished (see 5.8). If the route on the product or device does not match the order, administration stops.
 
+Method note (from guidebook interpretation): Where applicable, the site/ route of administration shall also be verified. Refer to MOM.7.d.
+
 ### 5.7 Timing is verified from the order before administration
 
 Timing is verified from the order before administration: scheduled time, interval since the last dose, and any 'before food / with food / hold if …' instruction. Early or late doses outside the organisation's allowed window are not given without prescriber review, except documented emergency use.
+
+Method note (from guidebook interpretation): The organisation shall have documentation to support the time of administration of drugs for which the time has not been written. For example, 1-1-1, BD etc. The suggested timings for these medicines have to be adhered. “ISMP Acute Care Guidelines for Timely Administration of Scheduled Medications” provide guidance on scheduling medications and classifies them into time-critical and non-time-critical. The organisation could adopt/adapt the same.
 
 ### 5.8 Measures to avoid catheter and tubing mis-connections during medicati...
 
 Before injecting or infusing into a catheter or tubing, staff trace the line from the patient to the source, confirm the intended lumen, and label lines where more than one lumen or device is in use.
 
 Oral syringes are used for oral liquids so they cannot connect to IV ports. This CORE asterisked element is trained at induction for ICU, OT, emergency and ward staff who give IV / epidural / feeding-tube medicines. Untreated mis-connection risk is a stop-work trigger.
+
+Method note (from guidebook interpretation): The organisation ensures that inadvertent administration of a drug through the wrong route is avoided. This could be done by using design features that prevent misconnections and prompt the user to take the correct action. Intravenous (IV) extension tubes shall not be used for epidurals, irrigation, drains, and central lines or to extend enteric feeding tubes. Care shall be taken to position functionally dissimilar tubes used in patient care away from one another. Staff administering medications shall trace all lines from their origin to the connection port to verify attachments before making any connections or reconnections, or administering medications, solutions, or other products. Medication administration is documented.
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
@@ -125,11 +141,15 @@ Every administration is documented on the medication chart at the time of giving
 
 Documentation is not left to the end of the shift. The portal PDF prints this objective-element letter as 'I.'; Preview Hospital treats it as MOM.7.i.
 
+Method note (from guidebook interpretation): The organisation shall ensure that documentation of medication administration is done in a uniform location. It shall include the name of the medication, strength, route of administration, timing and the name/employee ID number and signature of the person who has administered the medication. Medicines administered shall be documented each time for each dose of the same medication separately. The records shall reflect the actual administration. For example, if brand Y was given in place of brand X (same generically), the documentation shall be of brand Y. Similarly, if the order was for a tablet of 250 mg, but the administration was /2a tablet of 500 mg, the latter shall be documented. In the case of infusions, it shall capture the start time, the rate/volume of infusion and end time. In case of continuous infusion, the drop rate/volume shall be documented and the total volume infused shall be calculated for each shift. = Commitment = Achievement = Excellence.
+
 ### 5.10 Measures to govern patient's self-administration of medications are i...
 
 Patients self-administer medications only under written measures: the «Drug and Therapeutics Committee» / treating team decides when self-administration is allowed, which drugs, how they are stored at the bedside, and how nursing still records that the dose was taken.
 
 Uncontrolled bedside hoarding of hospital stock is not self-administration. If self-administration is not used at Preview Hospital, that decision is written and staff do not permit it informally.
+
+Method note (from guidebook interpretation): At the outset, the organisation could define if it would permit the self-administration of medications. In case the organisation permits the same, the written guidance shall define the medications which the patient can self- administer. It is preferable that the organisation also incorporates a method for assisting self-administration of medications. The organisation shall ensure that the patient is reminded to take the medication (before every dose) and document the same. For example, self-administration of insulin. Commitment _ k. Measures to govern patient’s medications brought from outside the organisation shall be implemented.
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
@@ -138,6 +158,8 @@ This objective element is asterisked in the official Standards PDF — documenta
 Medications brought from outside are declared at admission, identified by pharmacy or the treating doctor, and either taken into a documented patient's-own-medicines process (labelled, stored securely, ordered on the chart) or sent home / stored away from the bedside.
 
 Staff do not give an unidentified home tablet from a loose strip. The measures are written; this is an asterisked element.
+
+Method note (from guidebook interpretation): At the outset, the organisation could define if it would permit the patient getting his/her medications. In case of the organisation permitting the same, written guidance shall include the pre-requisites for such a medication (for example, clear label with mention of the name, strength, expiry date, batch number etc.)
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
@@ -200,8 +222,9 @@ Signature: ___________________________
 
 ## 10. References
 
-- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.7. Official portal PDF.
-- Internal documents of Preview Hospital: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.7.
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.7. Official portal PDF (OE text, counts, levels, asterisks).
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — MOM.7 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_mom_guidebook_ocr.txt).
+- Internal documents of Preview Hospital: Medication Management Manual, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.7.
 
 ## 11. Distribution
 
