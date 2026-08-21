@@ -43,7 +43,7 @@ This policy applies to staff who register, admit, treat, counsel, bill, take con
 
 It covers 12 objective elements (PRE.2.a, PRE.2.b, PRE.2.c, PRE.2.d, PRE.2.e, PRE.2.f, PRE.2.g, PRE.2.h, PRE.2.i, PRE.2.j, PRE.2.k, PRE.2.l).
 
-Boundaries: do not copy SHCO PRE wording. Do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,17 +53,17 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Patients and family rights include respecting values and beliefs, any special preferences, cultural needs, ...
-2. Do not skip: Patient and family rights include respect for personal dignity and privacy during examination, procedures a...
+1. Do not skip: Patients and family rights include respecting values and beliefs, any special preferences, cultural needs...
+2. Do not skip: Patient and family rights include respect for personal dignity and privacy during examination, procedures and...
 3. Do not skip: Patient and family rights include protection from neglect or abuse.
 4. Do not skip: Patient and family rights include treating patient information as confidential.
 5. Do not skip: Patient and family rights include the refusal of treatment.
 6. Do not skip: Patient and family rights include a right to seek an additional opinion regarding clinical care.
-7. Do not skip: Patient and family rights include informed consent before the transfusion of blood and blood components, an...
+7. Do not skip: Patient and family rights include informed consent before the transfusion of blood and blood components...
 8. Do not skip: Patient and family rights include a right to complain and information on how to voice a complaint.
 9. Do not skip: Patient and family rights include information on the expected cost of the treatment.
 10. Do not skip: Patient and family rights include access to their clinical records.
-11. Do not skip: Patient and family rights include information on the name of the treating doctor, care plan, progress and i...
+11. Do not skip: Patient and family rights include information on the name of the treating doctor, care plan, progress and...
 12. Do not skip: Patient rights include determining what information regarding their care would be provided to self and family.
 13. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
 14. Staff who see a PRE.2 rule broken report it the same shift to the «department in-charge» or the «Quality Coordinator».
@@ -78,7 +78,7 @@ Spiritual-need requests go to «the hospital arranged faith / counselling contac
 
 Method note (from guidebook interpretation): This could include how they wish to be addressed, dietary preferences and worship requirements. This may also include any specific requirement following death.
 
-### 5.2 Patient and family rights include respect for personal dignity and pr...
+### 5.2 Patient and family rights include respect for personal dignity and...
 
 During examination, procedures and treatment the patient is exposed only immediately before the actual procedure; screens, drapes and a closed door (or equivalent) are used. The organisation's privacy-and-dignity guidelines sit with the «Nursing Superintendent».
 
@@ -94,7 +94,7 @@ Any suspected neglect or abuse is stopped, the patient is protected, and the inc
 
 Method note (from guidebook interpretation): Examples of this include falling from the bed/trolley due to negligence, assault, repeated internal examinations (unwarranted), manhandling, etc. Special precautions shall be taken, especially concerning vulnerable patients, for example elderly, neonates, physically and mentally challenged patients, comatose patients, patients under anaesthesia etc.
 
-### 5.4 Patient and family rights include treating patient information as con...
+### 5.4 Patient and family rights include treating patient information as...
 
 Patient information is confidential. Staff do not discuss patients in public places (lifts, corridors, cafeterias). HIV status and other confidential information are not written or pasted on the cover of the medical record, and are not displayed in a way the public can read.
 
@@ -112,7 +112,7 @@ The note records what was offered, what was refused, and who witnessed the expla
 
 Method note (from guidebook interpretation): The treating doctor shall discuss all the available options and allow the patient to make an informed choice. In case of refusal, the treating doctor shall explain the consequences of the refusal of treatment and document the same. After explanation of consequences, if the patient still refuses treatment, the same must be respected. z = h. HB cone.
 
-### 5.6 Patient and family rights include a right to seek an additional opini...
+### 5.6 Patient and family rights include a right to seek an additional opinion...
 
 Patients and families may seek an additional opinion from inside or outside Preview Hospital. Staff respect that decision and facilitate access to relevant information and clinical evaluation (copies of records, imaging, reports).
 
@@ -120,7 +120,7 @@ A request for information on a particular physician's qualifications and experie
 
 Method note (from guidebook interpretation): There is a mechanism for patient and family to seek a second opinion if they wish, from within or outside the organisation. The organisation shall respect the decision of the patient and family and facilitate access to all relevant information or clinical evaluation. Request for additional information on a particular physician in terms of qualifications and experience may be provided.
 
-### 5.7 Patient and family rights include informed consent before the transfu...
+### 5.7 Patient and family rights include informed consent before the...
 
 Informed consent is obtained by the treating doctor or a doctor member of the treating team before transfusion of blood or blood components, anaesthesia, surgery, initiation of any research protocol, and any other invasive / high-risk procedure / treatment.
 
@@ -154,7 +154,7 @@ Cross-reference IMS.4.h for the records procedure. Refusal to show a competent a
 
 Method note (from guidebook interpretation): The organisation shall ensure that every patient has access to his/her record. This shall be in consonance with the Code of Medical Ethics laid down by the Medical Council of India and statutory requirements. Refer to IMS.4.h.
 
-### 5.11 Patient and family rights include information on the name of the trea...
+### 5.11 Patient and family rights include information on the name of the...
 
 The patient and family are told the name of the treating doctor, the care plan, progress, and information on healthcare needs. The «treating doctor» does this at admission and at significant plan changes; nursing reinforces the name of the consultant on the board / wristband process.
 
@@ -162,7 +162,7 @@ A patient who cannot name their treating doctor on a sample walk-round is a gap 
 
 Method note (from guidebook interpretation): Information on the name of the treating doctor, care plan, the progress of the patient and the healthcare needs are discussed with patient and family.
 
-### 5.12 Patient rights include determining what information regarding their c...
+### 5.12 Patient rights include determining what information regarding their...
 
 The patient decides what information about their care is given to self and to family. Sensitive or confidential information goes to the patient and to the next of kin only if the patient wants that. For minors, information is given to at least one parent or guardian.
 
@@ -199,14 +199,13 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE PRE.2.a–l.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (dg) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related rights incident, consent failure or complaint cluster.
 
@@ -275,77 +274,75 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### PRE.2.a — Patients and family rights include respecting values and beliefs, any special preferences, cultural needs, and responding to requests for spiritual needs.
 
-- Records showing PRE.2.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.2.a reviewed «quarterly».
+- Recorded patient preference (form of address, diet, worship, post-death requirement) on the kardex or admission sheet.
+- Record of action taken on the preference by the treating doctor or nurse.
+- Spiritual-need-request routing record.
 
 ### PRE.2.b — Patient and family rights include respect for personal dignity and privacy during examination, procedures and treatment.
 
-- Records showing PRE.2.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.2.b reviewed «quarterly».
+- Privacy-and-dignity guideline document held by the Nursing Superintendent.
+- Screen, drape or closed-door practice-observation record.
+- Consent record for any photograph or recording of a procedure.
 
 ### PRE.2.c — Patient and family rights include protection from neglect or abuse.
 
-- Records showing PRE.2.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.2.c reviewed «quarterly».
+- Extra-precaution record for vulnerable patients (elderly, neonate, physically or mentally challenged, comatose, anaesthetised).
+- Incident record for any suspected neglect or abuse, reported the same shift.
+- Confirmation the incident routed through the PRE.1.d violation mechanism.
 
 ### PRE.2.d — Patient and family rights include treating patient information as confidential.
 
-- Records showing PRE.2.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.2.d reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Confidentiality training record within the annual rights training.
+- Record confirming HIV status or other confidential information is not visible on the record cover.
+- Disclosure-without-permission incident record, where applicable.
 
 ### PRE.2.e — Patient and family rights include the refusal of treatment.
 
-- Records showing PRE.2.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.2.e reviewed «quarterly».
+- Documented discussion-of-refusal note — options offered, consequences explained.
+- Record of who witnessed the explanation.
+- Confirmation the refusal was respected after explanation, not overridden.
 
 ### PRE.2.f — Patient and family rights include a right to seek an additional opinion regarding clinical care.
 
-- Records showing PRE.2.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.2.f reviewed «quarterly».
+- Record of facilitation for a second-opinion request — records, imaging or reports copied.
+- Credential-file response record for a physician-qualification query.
+- Named internal second-opinion arrangement record.
 
 ### PRE.2.g — Patient and family rights include informed consent before the transfusion of blood and blood components, anaesthesia, surgery, initiation of any research protocol and any other invasive / high-risk procedures / treatment.
 
-- Records showing PRE.2.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.2.g reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Informed-consent record for transfusion, anaesthesia, surgery, research or an invasive/high-risk procedure.
+- Cross-reference to the PRE.4 consent process and list.
+- Confirmation the consent was taken by the treating doctor or a doctor member of the team.
 
 ### PRE.2.h — Patient and family rights include a right to complain and information on how to voice a complaint.
 
-- Records showing PRE.2.h was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.2.h reviewed «quarterly».
+- Rights-display record naming the right to complain.
+- Admission-counselling record confirming the complaint method was explained.
+- Cross-reference to the PRE.7 complaint mechanism.
 
 ### PRE.2.i — Patient and family rights include information on the expected cost of the treatment.
 
-- Records showing PRE.2.i was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.2.i reviewed «quarterly».
+- Cost-information record given during rights counselling.
+- Cross-reference to the PRE.6 tariff and cost-estimate process.
+- Confirmation cost information was part of counselling, not only available in accounts.
 
 ### PRE.2.j — Patient and family rights include access to their clinical records.
 
-- Records showing PRE.2.j was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.2.j reviewed «quarterly».
+- Written clinical-record access-request record.
+- Turnaround-time record against the organisation-defined period.
+- Cross-reference to the medical-records procedure.
 
 ### PRE.2.k — Patient and family rights include information on the name of the treating doctor, care plan, progress and information on their health care needs.
 
-- Records showing PRE.2.k was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.2.k reviewed «quarterly».
+- Admission record naming the treating doctor, care plan and progress information given.
+- Consultant-name display record — board or wristband process.
+- Walk-round record confirming patients can name their treating doctor.
 
 ### PRE.2.l — Patient rights include determining what information regarding their care would be provided to self and family.
 
-- Records showing PRE.2.l was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.2.l reviewed «quarterly».
+- Patient's documented choice on information-sharing — self/family, named family member, or do-not-share instruction.
+- Minor's-guardian information record, where applicable.
+- Confirmation the choice was respected in practice.
 
 ## Disclaimer
 

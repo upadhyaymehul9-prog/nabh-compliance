@@ -43,7 +43,7 @@ This policy applies to those responsible for governance, the person heading the 
 
 It covers 5 objective elements (ROM.4.a, ROM.4.b, ROM.4.c, ROM.4.d, ROM.4.e).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,16 +53,16 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: The person heading the organisation has requisite and appropriate administrative qualifications and experie...
-2. Do not skip: The leader is responsible for and complies with the laid-down and applicable legislations, regulations and ...
-3. Do not skip: The leader appoints / participates in the recruitment of department leaders of the organisation who will as...
+1. Do not skip: The person heading the organisation has requisite and appropriate administrative qualifications and...
+2. Do not skip: The leader is responsible for and complies with the laid-down and applicable legislations, regulations and...
+3. Do not skip: The leader appoints / participates in the recruitment of department leaders of the organisation who will...
 4. Do not skip: The leader ensures that each organisational programme, service, site or department has effective leadership.
 5. Do not skip: The performance of the organisation’s leader is reviewed for effectiveness.
 6. Staff who see a ROM.4 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».
 
 ## 5. What we do
 
-### 5.1 The person heading the organisation has requisite and appropriate adm...
+### 5.1 The person heading the organisation has requisite and appropriate...
 
 The person heading the organisation has requisite and appropriate administrative qualifications and experience: qualification in hospital management / administration, and administrative experience in a hospital, as «those responsible for governance» define for this hospital's legal form and size.
 
@@ -70,7 +70,7 @@ Certificates and a CV are on file. «those responsible for governance» check th
 
 Method note (from guidebook interpretation): Appropriate qualification implies qualification in hospital management/ administration. Appropriate experience implies administrative experience in a hospital.
 
-### 5.2 The leader is responsible for and complies with the laid-down and app...
+### 5.2 The leader is responsible for and complies with the laid-down and...
 
 The leader is responsible for and complies with laid-down and applicable legislations, regulations and notifications. A current register of what applies to this hospital (legal form and services actually run) is maintained; India Code is the lookup, not a paste of every central Act.
 
@@ -80,7 +80,7 @@ Method note (from guidebook interpretation): The leader is conversant with the d
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.3 The leader appoints / participates in the recruitment of department l...
+### 5.3 The leader appoints / participates in the recruitment of department...
 
 The leader appoints or participates in recruiting department leaders who assist day-to-day functioning. Appointment files show the leader's role in the decision.
 
@@ -88,7 +88,7 @@ A department running without an identified leader is escalated to the «Medical 
 
 Method note (from guidebook interpretation): This includes at least the next rung of the organogram. Some examples of the department leaders of the organisation are Medical Director or Medical Superintendent, Nursing Director, Head of Human Resources. Each departmental/service leader shall document the services to be provided by the department and have an integrated approach to align these with the services of other departments. The leaders participate in patient safety and quality improvement activities based on institutional priorities.
 
-### 5.4 The leader ensures that each organisational programme, service, site ...
+### 5.4 The leader ensures that each organisational programme, service, site or...
 
 The leader ensures each organisational programme, service, site or department has effective leadership: a named person, time allocation and a reporting line.
 
@@ -96,7 +96,7 @@ The «Medical Superintendent» keeps the current leadership map. This Achievemen
 
 Method note (from guidebook interpretation): There needs to be a minimum essential qualification and/or relevant experience of the leader. The respective leader shall have domain knowledge of that particular department. The organisation needs to develop its metrics for measuring the effectiveness of leaders.
 
-### 5.5 The performance of the organisation’s leader is reviewed for effectiv...
+### 5.5 The performance of the organisation’s leader is reviewed for...
 
 The performance of the organisation's leader is reviewed for effectiveness at least «annually» by «those responsible for governance» (or the appointing authority).
 
@@ -124,14 +124,13 @@ departmental leaders
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE ROM.4.a–e.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (b) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related governance change, statutory-register gap or outsourced-service failure.
 
@@ -191,34 +190,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### ROM.4.a — The person heading the organisation has requisite and appropriate administrative qualifications and experience.
 
-- Records showing ROM.4.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.4.a reviewed «quarterly».
+- Qualification certificates and CV of the person heading the organisation, on file.
+- Governance record confirming the qualification/experience check at appointment.
+- Updated record if the role-holder changes.
 
 ### ROM.4.b — The leader is responsible for and complies with the laid-down and applicable legislations, regulations and notifications.
 
-- Records showing ROM.4.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.4.b reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Current applicable-legislation register for this hospital's legal form and services actually run.
+- Evidence of compliance against each item on the register.
+- Dated review or update record of the register.
 
 ### ROM.4.c — The leader appoints / participates in the recruitment of department leaders of the organisation who will assist in the day-to-day functioning of the organisation.
 
-- Records showing ROM.4.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.4.c reviewed «quarterly».
+- Appointment file for each department leader showing the organisation-head's role in the decision.
+- Current list of department leaders with appointment dates.
+- Escalation record for any department without an identified leader.
 
 ### ROM.4.d — The leader ensures that each organisational programme, service, site or department has effective leadership.
 
-- Records showing ROM.4.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.4.d reviewed «quarterly».
+- Leadership map naming a person, time allocation and reporting line for each programme, service, site or department.
+- Vacancy-coverage record for any gap.
+- Dated review of the leadership map.
 
 ### ROM.4.e — The performance of the organisation’s leader is reviewed for effectiveness.
 
-- Records showing ROM.4.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.4.e reviewed «quarterly».
+- Dated annual performance-review record for the organisation's leader.
+- Review criteria or method used.
+- Filed outcome and any follow-up action.
 
 ## Disclaimer
 

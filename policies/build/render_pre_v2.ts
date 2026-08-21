@@ -81,6 +81,48 @@ function blocks(text: string): Paragraph[] {
   return out;
 }
 
+// Governance-section-only renderer. `d.responsibility` blocks are shaped as
+// "Role name\n- duty line\n- duty line", separated by blank lines. The
+// generic blocks() above bullets every line in a "- "-containing block,
+// including the role-name header line, so a reader sees a flat bullet list
+// with no way to tell a role from what it does. This renders the first
+// (non-"- ") line of each block as a bold, non-bulleted sub-heading and
+// only the following "- " lines as bullets. Deliberately not reused for any
+// other field — References/Distribution/Abbreviations etc. keep using the
+// generic blocks() unchanged.
+function responsibilityBlocks(text: string): Paragraph[] {
+  const normalized = text.replace(/\r\n/g, "\n").trim();
+  const out: Paragraph[] = [];
+  for (const block of normalized.split(/\n\n+/)) {
+    const trimmed = block.trim();
+    if (!trimmed) continue;
+    const lines = trimmed.split("\n").map((l) => l.trim()).filter(Boolean);
+    const dutyLines = lines.filter((l) => l.startsWith("- "));
+    const roleLines = lines.filter((l) => !l.startsWith("- "));
+    // Only treat this as a role/duty pair when the shape actually matches:
+    // exactly one role-name line followed by one or more "- " duty lines.
+    // Anything else (a block with no "- " line, or "- " lines mixed with
+    // more than one non-"- " line) falls back to the generic renderer so
+    // this never silently reshapes content it wasn't designed for.
+    if (roleLines.length === 1 && dutyLines.length >= 1) {
+      out.push(new Paragraph({
+        children: [new TextRun({ text: roleLines[0], bold: true, size: 22 })],
+        spacing: { before: 100, after: 20 },
+      }));
+      for (const line of dutyLines) {
+        out.push(new Paragraph({
+          children: [new TextRun({ text: line.replace(/^- /, ""), size: 22 })],
+          bullet: { level: 0 },
+          spacing: { after: 60 },
+        }));
+      }
+      continue;
+    }
+    out.push(...blocks(trimmed));
+  }
+  return out;
+}
+
 interface V2Draft {
   standard_code: string;
   chapter?: string;
@@ -280,7 +322,7 @@ function buildV2Document(d: V2Draft): Document {
     if (row.key === "stop") {
       children.push(h1(`${row.n}. ${row.title}`), ...blocks(sub(d.stop_work ?? "")));
     } else if (row.key === "gov") {
-      children.push(h1(`${row.n}. ${row.title}`), ...blocks(sub(d.responsibility)));
+      children.push(h1(`${row.n}. ${row.title}`), ...responsibilityBlocks(sub(d.responsibility)));
     } else if (row.key === "mon") {
       children.push(h1(`${row.n}. ${row.title}`), ...blocks(sub(d.monitoring_audit ?? "")));
     } else if (row.key === "train") {

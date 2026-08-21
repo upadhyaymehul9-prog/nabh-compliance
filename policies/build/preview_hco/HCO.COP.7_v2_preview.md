@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.7 
 
 It covers 7 objective elements (COP.7.a, COP.7.b, COP.7.c, COP.7.d, COP.7.e, COP.7.f, COP.7.g).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -63,25 +63,25 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 Clinical procedures are performed based on the clinical needs of the ..
+### 5.1 Clinical procedures are performed based on the clinical needs of the..
 
 Clinical procedures are performed based on the clinical needs of the patient.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.2 Performance of various clinical procedures is based on written guidan..
+### 5.2 Performance of various clinical procedures is based on written guidance..
 
 Performance of various clinical procedures is based on written guidance and done in a safe manner.
 
 Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
 
-### 5.3 Qualified personnel order, plan, perform and assist in performing pro..
+### 5.3 Qualified personnel order, plan, perform and assist in performing..
 
 Qualified personnel order, plan, perform and assist in performing procedures.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.4 Care is taken to prevent adverse events like a wrong patient, wrong p..
+### 5.4 Care is taken to prevent adverse events like a wrong patient, wrong..
 
 Care is taken to prevent adverse events like a wrong patient, wrong procedure and wrong site.
 
@@ -89,7 +89,7 @@ Method note: Follow the organisation's written guidance for this asterisked elem
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.5 Informed consent is taken by the personnel performing the procedure, ..
+### 5.5 Informed consent is taken by the personnel performing the procedure..
 
 Informed consent is taken by the personnel performing the procedure, where applicable.
 
@@ -131,14 +131,14 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.7.a–g.
-- Asterisked elements (bd) have document evidence as required.
-- CORE elements (d) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -197,47 +197,45 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.7.a — Clinical procedures are performed based on the clinical needs of the patient.
 
-- Records showing COP.7.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.7.a reviewed «quarterly».
+- Clinical-indication documentation for a sampled procedure.
+- Justification record in the medical record.
+- Confirmation the procedure matched clinical need.
 
 ### COP.7.b — Performance of various clinical procedures is based on written guidance and done in a safe manner.
 
-- Records showing COP.7.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.7.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written procedure-specific guidance or protocol.
+- Safety-checklist record for the procedure.
+- Staff-training record on the guidance.
 
 ### COP.7.c — Qualified personnel order, plan, perform and assist in performing procedures.
 
-- Records showing COP.7.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.7.c reviewed «quarterly».
+- Credentialing or privileging cross-reference (HRM.11–13) for personnel performing the procedure.
+- Order and performer-identification record.
+- Assisting-personnel qualification record.
 
 ### COP.7.d — Care is taken to prevent adverse events like a wrong patient, wrong procedure and wrong site.
 
-- Records showing COP.7.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.7.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Site, procedure and patient verification checklist for a sampled procedure.
+- Time-out record before the procedure.
+- Near-miss or adverse-event record, where applicable.
 
 ### COP.7.e — Informed consent is taken by the personnel performing the procedure, where applicable.
 
-- Records showing COP.7.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.7.e reviewed «quarterly».
+- Consent form signed by the performing personnel.
+- Cross-reference to the PRE.4/PRE.2.g consent process.
+- Consent-completeness check.
 
 ### COP.7.f — Patients are appropriately monitored during and after the procedure.
 
-- Records showing COP.7.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.7.f reviewed «quarterly».
+- Intra- and post-procedure monitoring record.
+- Monitoring-parameter documentation.
+- Escalation record for an abnormal finding.
 
 ### COP.7.g — Procedures are documented accurately in the patient record.
 
-- Records showing COP.7.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.7.g reviewed «quarterly».
+- Procedure-note documentation in the patient record.
+- Documentation-completeness and accuracy check.
+- Timeliness-of-entry record.
 
 ## Disclaimer
 

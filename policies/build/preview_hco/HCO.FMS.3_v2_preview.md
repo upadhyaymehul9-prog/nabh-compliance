@@ -43,7 +43,7 @@ This policy applies to engineering, biomedical, nursing and departmental leaders
 
 It covers 6 objective elements (FMS.3.a, FMS.3.b, FMS.3.c, FMS.3.d, FMS.3.e, FMS.3.f).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,10 +53,10 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Operational planning identifies areas which need to have extra security and describes access to different a...
-2. Do not skip: Patient safety aspects in terms of structural safety of hospitals, especially of critical areas are conside...
+1. Do not skip: Operational planning identifies areas which need to have extra security and describes access to different...
+2. Do not skip: Patient safety aspects in terms of structural safety of hospitals, especially of critical areas are...
 3. Do not skip: The organisation conducts electrical safety audits for the facility.
-4. Do not skip: There is a procedure which addresses the identification and disposal of material(s) not in use in the organ...
+4. Do not skip: There is a procedure which addresses the identification and disposal of material(s) not in use in the...
 5. Do not skip: Hazardous materials are identified and used safely within the organisation.
 6. Do not skip: The plan for managing spills of hazardous materials is implemented.
 7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
@@ -64,7 +64,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 Operational planning identifies areas which need to have extra securi...
+### 5.1 Operational planning identifies areas which need to have extra security...
 
 Operational planning identifies extra-security areas and describes access for staff, patients and visitors (at a minimum operating theatre, intensive-care units including neonatal if in scope, labour room and emergency). Vulnerable spots (dark areas, long corridors, critical-area doors) have a defined control such as closed-circuit television.
 
@@ -74,7 +74,7 @@ Method note (from guidebook interpretation): Written guidance on security of pat
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.2 Patient safety aspects in terms of structural safety of hospitals, es...
+### 5.2 Patient safety aspects in terms of structural safety of hospitals...
 
 When this hospital plans, designs or constructs a new building, or re-plans or retrofits an existing one, patient-safety structural aspects of critical areas are considered. Indian Seismic Code IS 1893 (Part 1), latest version, is the minimum structural reference named in the Guidebook.
 
@@ -90,7 +90,7 @@ The «Engineering In-Charge» holds the last audit and actions.
 
 Method note (from guidebook interpretation): The intent of electrical safety audits is to minimise the electrical risks to persons and property and ensure that occurrence of fire due to short-circuiting is prevented. It shall be performed at least once a year. It could be incorporated into the electric system maintenance plan. The help of new technology like thermal imaging equipment can help detect loose connections in the system and thereby prevent fire incidents. This shall incorporate statutory requirements where applicable. National Electrical Code of India 2023 could be used as a reference document.
 
-### 5.4 There is a procedure which addresses the identification and disposal ...
+### 5.4 There is a procedure which addresses the identification and disposal of...
 
 There is a written procedure for identifying and disposing of material not in use (non-functioning items, excess stock, general scrap). Condemnation records sit with the «Engineering In-Charge». This is an asterisked element.
 
@@ -98,7 +98,7 @@ Method note (from guidebook interpretation): The Organisation shall condemn and 
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.5 Hazardous materials are identified and used safely within the organis...
+### 5.5 Hazardous materials are identified and used safely within the...
 
 Hazardous materials used here are identified and used safely: sorting, storage, handling, transport and disposal, using Material Safety Data Sheets. Common examples the Guidebook names include chemicals, blood and cultures, mercury, nuclear isotopes, medical gases, liquefied petroleum gas, steam and ethylene oxide.
 
@@ -144,14 +144,14 @@ departmental leaders
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE FMS.3.a–f.
-- Asterisked elements (adef) have document evidence as required.
-- CORE elements (e) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related facility change, utility failure, equipment recall or fire-plan change.
 
@@ -217,44 +217,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### FMS.3.a — Operational planning identifies areas which need to have extra security and describes access to different areas in the hospital by staff, patients, and visitors.
 
-- Records showing FMS.3.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.3.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written security operational plan naming extra-security areas (operating theatre, ICU/NICU, labour room, emergency) and access rules for staff, patients and visitors.
+- Vulnerable-spot control record — closed-circuit television coverage or equivalent for dark areas and long corridors.
+- Review or update record of the security plan.
 
 ### FMS.3.b — Patient safety aspects in terms of structural safety of hospitals, especially of critical areas are considered while planning, design and construction of new hospitals and re-planning, assessment and retrofitting of existing hospitals.
 
-- Records showing FMS.3.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.3.b reviewed «quarterly».
+- Structural-safety design reference actually applied (for example Indian Seismic Code IS 1893 Part 1) for the specific building project.
+- Engineering sign-off record for that construction, re-planning or retrofit project.
+- Evidence of what was applied to real building work, not a policy statement alone.
 
 ### FMS.3.c — The organisation conducts electrical safety audits for the facility.
 
-- Records showing FMS.3.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.3.c reviewed «quarterly».
+- Completed electrical safety audit report, at least annually.
+- Action-taken record against audit findings.
+- Reference to the National Electrical Code or thermal-imaging method used.
 
 ### FMS.3.d — There is a procedure which addresses the identification and disposal of material(s) not in use in the organisation.
 
-- Records showing FMS.3.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.3.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written procedure for identifying and disposing of material not in use.
+- Condemnation register listing items, dates and disposal method.
+- Engineering In-Charge sign-off on the register.
 
 ### FMS.3.e — Hazardous materials are identified and used safely within the organisation.
 
-- Records showing FMS.3.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.3.e reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Current hazardous-materials inventory (for example chemicals, blood/cultures, mercury, isotopes, medical gases, LPG, steam, ethylene oxide).
+- Material Safety Data Sheet on file for each identified material.
+- Handling, storage, transport and disposal record for a sample of materials.
 
 ### FMS.3.f — The plan for managing spills of hazardous materials is implemented.
 
-- Records showing FMS.3.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.3.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Summarised Material Safety Data Sheet accessible on the floor where the material is stored.
+- Hazardous-materials spill-kit inventory and location log.
+- Training record for staff handling that material.
 
 ## Disclaimer
 

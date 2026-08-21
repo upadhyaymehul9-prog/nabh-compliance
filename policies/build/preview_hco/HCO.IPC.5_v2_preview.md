@@ -43,7 +43,7 @@ This policy applies to staff who deliver clinical care, run support services (ho
 
 It covers 4 objective elements (IPC.5.a, IPC.5.b, IPC.5.c, IPC.5.d).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -62,7 +62,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 The organisation takes action to prevent catheter-associated urinary ...
+### 5.1 The organisation takes action to prevent catheter-associated urinary...
 
 Actions to prevent catheter-associated urinary tract infection: insert only when indicated, aseptic insertion, closed system, daily review for removal, and standard plus transmission-based precautions as required.
 
@@ -70,7 +70,7 @@ Inserting a Foley without this bundle is a stop-work trigger (section 6). Nursin
 
 Method note (from guidebook interpretation): The basic principles of infection prevention, namely standard Precautions and transmission-based precautions, shall be adhered. The organisation shall develop, implement and monitor a care bundle to prevent catheter-associated urinary tract infections. A good reference is the CDC/WHO/SHEA guidelines. Theorganisation takes action to prevent ventilator- associated pneumonia.
 
-### 5.2 The organisation takes action to prevent ventilator- associated pneum...
+### 5.2 The organisation takes action to prevent ventilator- associated...
 
 Actions to prevent ventilator-associated pneumonia: head-of-bed elevation as clinically allowed, oral care, sedation/weaning review, circuit handling as the bundle states, and standard plus transmission-based precautions.
 
@@ -78,7 +78,7 @@ Starting invasive ventilation without the VAP bundle in place (as soon as the ai
 
 Method note (from guidebook interpretation): The basic principles of infection prevention, namely standard precautions and transmission-based precautions, shall be adhered. The organisation shall develop, implement and monitor a care bundle to prevent ventilator-associated pneumonia. A good reference is the CDC/WHO/SHEA guidelines.
 
-### 5.3 The organisation takes action to prevent central line associated bloo...
+### 5.3 The organisation takes action to prevent central line associated blood...
 
 Actions to prevent central-line associated bloodstream infection: maximal barrier insertion, chlorhexidine skin prep (or the organisation's equivalent), daily line necessity review, and hub care.
 
@@ -122,14 +122,12 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE IPC.5.a–d.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related outbreak, sterilisation failure or exposure cluster.
 
@@ -197,27 +195,27 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### IPC.5.a — The organisation takes action to prevent catheter-associated urinary tract Infections.
 
-- Records showing IPC.5.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.5.a reviewed «quarterly».
+- CAUTI-prevention bundle: insertion-indication record, aseptic-insertion checklist, daily removal-review log.
+- Closed-system maintenance record.
+- Nursing documentation confirming the bundle was followed for a sampled case.
 
 ### IPC.5.b — The organisation takes action to prevent ventilator- associated pneumonia.
 
-- Records showing IPC.5.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.5.b reviewed «quarterly».
+- VAP-prevention bundle: head-of-bed-elevation record, oral-care log, sedation/weaning review record.
+- Circuit-handling record per the bundle.
+- Nursing or respiratory-therapy documentation confirming bundle compliance for a sampled case.
 
 ### IPC.5.c — The organisation takes action to prevent central line associated blood stream infections.
 
-- Records showing IPC.5.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.5.c reviewed «quarterly».
+- CLABSI-prevention bundle: maximal-barrier insertion checklist, skin-prep record, daily line-necessity review.
+- Hub-care record.
+- Nursing documentation confirming bundle compliance for a sampled case.
 
 ### IPC.5.d — The organisation takes action to prevent surgical site infections.
 
-- Records showing IPC.5.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.5.d reviewed «quarterly».
+- SSI-prevention bundle: antimicrobial-prophylaxis timing record, skin-prep record, glycaemic and temperature-control log.
+- Sterile-technique confirmation for the case.
+- Cross-reference to the surgical-safety checklist.
 
 ## Disclaimer
 

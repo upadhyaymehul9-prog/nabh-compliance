@@ -43,7 +43,7 @@ This policy applies to human resources, nursing, medical, and departmental leade
 
 It covers 6 objective elements (HRM.8.a, HRM.8.b, HRM.8.c, HRM.8.d, HRM.8.e, HRM.8.f).
 
-Boundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
 
 ## 3. Policy standards
 
@@ -71,19 +71,19 @@ Method note (from guidebook interpretation): The documentation shall be done kee
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.2 The disciplinary and grievance handling mechanism is known to all cat...
+### 5.2 The disciplinary and grievance handling mechanism is known to all...
 
 The disciplinary and grievance handling mechanism at Preview Hospital is known to all categories of staff, who are aware of the procedure to follow if they feel aggrieved.
 
 Method note (from guidebook interpretation): All staff shall be aware of the disciplinary procedure and the process to be followed in case they feel aggrieved.
 
-### 5.3 The disciplinary policy and procedure are based on the principles of ...
+### 5.3 The disciplinary policy and procedure are based on the principles of...
 
 The disciplinary policy and procedure at Preview Hospital are based on the principles of natural justice — both parties (employee and employer) are allowed to present their case before a decision is taken.
 
 Method note (from guidebook interpretation): Principles of natural justice imply that both parties (employee and employer) are allowed to present their case and decision is taken accordingly.
 
-### 5.4 The disciplinary and grievance procedure is in consonance with the pr...
+### 5.4 The disciplinary and grievance procedure is in consonance with the...
 
 The disciplinary and grievance procedure at Preview Hospital is in consonance with the prevailing laws — the applicable labour laws for this hospital's staff. An Internal Complaints Committee is established to handle complaints of sexual harassment. This is a CORE element.
 
@@ -121,14 +121,14 @@ departmental leaders
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE HRM.8.a–f.
-- Asterisked elements (a) have document evidence as required.
-- CORE elements (d) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.
 
@@ -195,41 +195,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### HRM.8.a — Written guidance governs disciplinary and grievance handling mechanisms.
 
-- Records showing HRM.8.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.8.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written disciplinary and grievance handling guidance.
+- Coverage record for the HRM.8.c–e elements.
+- Workplace-issue inclusion record — bullying, harassment.
 
 ### HRM.8.b — The disciplinary and grievance handling mechanism is known to all categories of staff of the organisation.
 
-- Records showing HRM.8.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.8.b reviewed «quarterly».
+- Staff-awareness record of the disciplinary and grievance mechanism.
+- Communication record — induction, notice board, policy circulation.
+- Confirmation across all staff categories.
 
 ### HRM.8.c — The disciplinary policy and procedure are based on the principles of natural justice.
 
-- Records showing HRM.8.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.8.c reviewed «quarterly».
+- Natural-justice-principle record — both parties heard before a decision.
+- Disciplinary case record demonstrating the principle applied.
+- Policy-document reference.
 
 ### HRM.8.d — The disciplinary and grievance procedure is in consonance with the prevailing laws.
 
-- Records showing HRM.8.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.8.d reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Labour-law compliance record for the disciplinary and grievance procedure.
+- Internal Complaints Committee constitution record for sexual-harassment complaints.
+- Legal-currency review record of the procedure.
 
 ### HRM.8.e — There is a provision for appeals in all disciplinary cases.
 
-- Records showing HRM.8.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.8.e reviewed «quarterly».
+- Appellate-authority designation record, higher than the disciplinary authority.
+- Appeal-case record showing the provision was used.
+- Policy-document reference.
 
 ### HRM.8.f — Actions are taken to redress the grievance.
 
-- Records showing HRM.8.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.8.f reviewed «quarterly».
+- Grievance-redress action record.
+- Documentation and communication record to the aggrieved staff member.
+- Closure-tracking record.
 
 ## Disclaimer
 

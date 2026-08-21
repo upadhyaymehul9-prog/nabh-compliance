@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.15
 
 It covers 4 objective elements (COP.15.a, COP.15.b, COP.15.c, COP.15.d).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -51,15 +51,15 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: The organ transplant programme shall be in consonance with the legal requirements and shall be conducted et...
+1. Do not skip: The organ transplant programme shall be in consonance with the legal requirements and shall be conducted...
 2. Do not skip: Care of transplant patients is guided by clinical practice guidelines.
-3. Do not skip: The organisation ensures education and counselling of recipient and donor through trained / qualified couns...
+3. Do not skip: The organisation ensures education and counselling of recipient and donor through trained / qualified...
 4. Do not skip: The organisation shall take measures to create awareness regarding organ donation.
 5. Staff who see a COP.15 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».
 
 ## 5. What we do
 
-### 5.1 The organ transplant programme shall be in consonance with the legal ..
+### 5.1 The organ transplant programme shall be in consonance with the legal..
 
 The organ transplant programme shall be in consonance with the legal requirements and shall be conducted ethically.
 
@@ -73,13 +73,13 @@ Care of transplant patients is guided by clinical practice guidelines.
 
 Method note (from guidebook interpretation): Written guidance based on standard treatment guidelines/sound
 
-### 5.3 The organisation ensures education and counselling of recipient and d..
+### 5.3 The organisation ensures education and counselling of recipient and..
 
 The organisation ensures education and counselling of recipient and donor through trained / qualified counsellors before organ transplantation.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.4 The organisation shall take measures to create awareness regarding or..
+### 5.4 The organisation shall take measures to create awareness regarding..
 
 The organisation shall take measures to create awareness regarding organ donation.
 
@@ -103,14 +103,14 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.15.a–d.
-- Asterisked elements (b) have document evidence as required.
-- CORE elements (ad) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -166,28 +166,27 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.15.a — The organ transplant programme shall be in consonance with the legal requirements and shall be conducted ethically.
 
-- Records showing COP.15.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.15.a reviewed «quarterly».
+- Transplant-programme documentation confirming legal-requirement compliance (Transplantation of Human Organs Act).
+- Ethics-committee approval record.
+- Compliance-review record.
 
 ### COP.15.b — Care of transplant patients is guided by clinical practice guidelines.
 
-- Records showing COP.15.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.15.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Adopted transplant clinical-practice-guideline reference.
+- Guideline-compliance record for a sampled case.
+- Staff-training record.
 
 ### COP.15.c — The organisation ensures education and counselling of recipient and donor through trained / qualified counsellors before organ transplantation.
 
-- Records showing COP.15.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.15.c reviewed «quarterly».
+- Trained-counsellor education and counselling record for recipient and donor.
+- Counselling-documentation record before transplantation.
+- Counsellor-qualification record.
 
 ### COP.15.d — The organisation shall take measures to create awareness regarding organ donation.
 
-- Records showing COP.15.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.15.d reviewed «quarterly».
+- Organ-donation awareness-activity record.
+- IEC-material record.
+- Awareness-campaign documentation.
 
 ## Disclaimer
 

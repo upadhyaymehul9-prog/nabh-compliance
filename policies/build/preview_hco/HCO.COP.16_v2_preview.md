@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.16
 
 It covers 5 objective elements (COP.16.a, COP.16.b, COP.16.c, COP.16.d, COP.16.e).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -77,7 +77,7 @@ Method note: Follow the organisation's written guidance for this asterisked elem
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.3 The organisation identifies and manages patients who are at risk of d..
+### 5.3 The organisation identifies and manages patients who are at risk of..
 
 The organisation identifies and manages patients who are at risk of developing / worsening of pressure ulcers.
 
@@ -85,7 +85,7 @@ Method note: Follow the organisation's written guidance for this asterisked elem
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.4 The organisation identifies and manages patients who are at risk of d..
+### 5.4 The organisation identifies and manages patients who are at risk of..
 
 The organisation identifies and manages patients who are at risk of developing deep vein thrombosis.
 
@@ -125,14 +125,14 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.16.a–e.
-- Asterisked elements (abcde) have document evidence as required.
-- CORE elements (abcd) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -189,38 +189,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.16.a — The organisation identifies and manages vulnerable patients.
 
-- Records showing COP.16.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.16.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written vulnerable-patient identification criteria.
+- Identification and management-plan record for a sampled vulnerable patient.
+- Staff-training record.
 
 ### COP.16.b — The organisation identifies and manages patients who are at a risk of fall.
 
-- Records showing COP.16.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.16.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Fall-risk-assessment tool and record.
+- Fall-prevention-measure implementation record.
+- Fall-incident log and analysis.
 
 ### COP.16.c — The organisation identifies and manages patients who are at risk of developing / worsening of pressure ulcers.
 
-- Records showing COP.16.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.16.c reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Pressure-ulcer-risk-assessment tool and record.
+- Prevention-measure implementation record.
+- Pressure-ulcer-incidence tracking record.
 
 ### COP.16.d — The organisation identifies and manages patients who are at risk of developing deep vein thrombosis.
 
-- Records showing COP.16.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.16.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- DVT-risk-assessment tool and record.
+- Prophylaxis-measure implementation record.
+- DVT-incidence tracking record.
 
 ### COP.16.e — The organisation identifies and manages patients who need restraints.
 
-- Records showing COP.16.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.16.e reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written restraint-need identification criteria.
+- Documented restraint order with periodic review.
+- Restraint-monitoring record.
 
 ## Disclaimer
 

@@ -43,7 +43,7 @@ This policy applies to human resources, nursing, medical, and departmental leade
 
 It covers 4 objective elements (HRM.2.a, HRM.2.b, HRM.2.c, HRM.2.d).
 
-Boundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
 
 ## 3. Policy standards
 
@@ -115,14 +115,14 @@ departmental leaders
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE HRM.2.a–d.
-- Asterisked elements (ad) have document evidence as required.
-- CORE elements (ac) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.
 
@@ -187,31 +187,27 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### HRM.2.a — Written guidance governs the process of recruitment.
 
-- Records showing HRM.2.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.2.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Written recruitment guidance document.
+- Recruitment register — vacancy, candidates, selection rationale, fill date.
+- Statutory-requirement compliance record where applicable.
 
 ### HRM.2.b — A pre-employment medical examination is conducted on the staff.
 
-- Records showing HRM.2.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.2.b reviewed «quarterly».
+- Pre-employment medical examination record on file.
+- Consent record for any testing performed, confirming no non-consensual testing.
+- Fitness-to-work determination record.
 
 ### HRM.2.c — The organisation defines and implements a code of conduct for its staff.
 
-- Records showing HRM.2.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.2.c reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Written code of conduct document.
+- Signed staff acknowledgement at joining.
+- Confidentiality-protection clause record within the code.
 
 ### HRM.2.d — Administrative procedures for human resource management are documented.
 
-- Records showing HRM.2.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.2.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Documented administrative procedures — attendance, leave, conduct, replacement.
+- Current-version record held by HR.
+- Cross-reference to induction training covering these procedures (HRM.3.h).
 
 ## Disclaimer
 

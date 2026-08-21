@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.1 
 
 It covers 6 objective elements (COP.1.a, COP.1.b, COP.1.c, COP.1.d, COP.1.e, COP.1.f).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -53,9 +53,9 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 1. Do not skip: Uniform care is provided to patients following written guidance .
 2. Do not skip: The organisation has a uniform process for identification of patients and uses at least two identifiers.
-3. Do not skip: The organisation implements evidence-based clinical practice guidelines and / or clinical protocols to guid...
-4. Do not skip: Clinical care pathways are developed, consistently followed across all settings of care, and reviewed perio...
-5. Do not skip: Multi-disciplinary and multi-speciality care, where appropriate, is planned based on best clinical practice...
+3. Do not skip: The organisation implements evidence-based clinical practice guidelines and / or clinical protocols to guide...
+4. Do not skip: Clinical care pathways are developed, consistently followed across all settings of care, and reviewed...
+5. Do not skip: Multi-disciplinary and multi-speciality care, where appropriate, is planned based on best clinical practices...
 6. Do not skip: Telemedicine facility is provided safely and securely based on written guidance.
 7. Staff who see a COP.1 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».
 
@@ -75,25 +75,25 @@ Staff follow the written guidance and record the action in the medical record or
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.3 The organisation implements evidence-based clinical practice guidelin..
+### 5.3 The organisation implements evidence-based clinical practice guidelines..
 
 The organisation implements evidence-based clinical practice guidelines and / or clinical protocols to guide uniform patient care.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.4 Clinical care pathways are developed, consistently followed across al..
+### 5.4 Clinical care pathways are developed, consistently followed across all..
 
 Clinical care pathways are developed, consistently followed across all settings of care, and reviewed periodically.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.5 Multi-disciplinary and multi-speciality care, where appropriate, is p..
+### 5.5 Multi-disciplinary and multi-speciality care, where appropriate, is..
 
 Multi-disciplinary and multi-speciality care, where appropriate, is planned based on best clinical practices / clinical practice guidelines and delivered in a uniform manner across the organisation.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.6 Telemedicine facility is provided safely and securely based on writte..
+### 5.6 Telemedicine facility is provided safely and securely based on written..
 
 Telemedicine facility is provided safely and securely based on written guidance.
 
@@ -115,14 +115,14 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.1.a–f.
-- Asterisked elements (af) have document evidence as required.
-- CORE elements (b) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -180,41 +180,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.1.a — Uniform care is provided to patients following written guidance .
 
-- Records showing COP.1.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.1.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written uniform-care guidance or protocol document.
+- Staff training record on the guidance.
+- Cross-setting consistency-check record (OPD, IPD, emergency).
 
 ### COP.1.b — The organisation has a uniform process for identification of patients and uses at least two identifiers.
 
-- Records showing COP.1.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.1.b reviewed «quarterly».
+- Written patient-identification procedure naming the two identifiers used.
+- Identification-practice observation record for a sampled encounter.
+- Wristband or ID-card record, where used.
 
 ### COP.1.c — The organisation implements evidence-based clinical practice guidelines and / or clinical protocols to guide uniform patient care.
 
-- Records showing COP.1.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.1.c reviewed «quarterly».
+- Adopted clinical practice guideline or protocol list.
+- Reference-source record (professional body, national or international guideline).
+- Staff-access record to the current guidelines.
 
 ### COP.1.d — Clinical care pathways are developed, consistently followed across all settings of care, and reviewed periodically.
 
-- Records showing COP.1.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.1.d reviewed «quarterly».
+- Developed care-pathway document for a selected condition.
+- Consistency-check record across care settings.
+- Periodic-review record of the pathway.
 
 ### COP.1.e — Multi-disciplinary and multi-speciality care, where appropriate, is planned based on best clinical practices / clinical practice guidelines and delivered in a uniform manner across the organisation.
 
-- Records showing COP.1.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.1.e reviewed «quarterly».
+- Multi-disciplinary care-planning record for a sampled complex case.
+- Best-practice or guideline reference used.
+- Uniform-delivery record across the organisation.
 
 ### COP.1.f — Telemedicine facility is provided safely and securely based on written guidance.
 
-- Records showing COP.1.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.1.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written telemedicine guidance covering safety and security.
+- Telemedicine Practice Guidelines (MoHFW) compliance record.
+- Consultation-documentation record for a sampled telemedicine encounter.
 
 ## Disclaimer
 

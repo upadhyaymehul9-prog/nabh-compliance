@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.14
 
 It covers 10 objective elements (COP.14.a, COP.14.b, COP.14.c, COP.14.d, COP.14.e, COP.14.f, COP.14.g, COP.14.h, COP.14.i, COP.14.j).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -72,7 +72,7 @@ Surgical services are provided in a consistent and safe manner.
 
 Method note (from guidebook interpretation): Written guidance based on standard treatment guidelines/sound
 
-### 5.2 Surgical patients have a pre-operative assessment, a documented pre- ..
+### 5.2 Surgical patients have a pre-operative assessment, a documented pre-..
 
 Surgical patients have a pre-operative assessment, a documented pre- operative diagnosis, and pre-operative instructions are provided before surgery.
 
@@ -84,7 +84,7 @@ Informed consent is obtained by a surgeon before the procedure.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.4 Care is taken to prevent adverse events like the wrong site, wrong pa..
+### 5.4 Care is taken to prevent adverse events like the wrong site, wrong..
 
 Care is taken to prevent adverse events like the wrong site, wrong patient and wrong surgery.
 
@@ -92,7 +92,7 @@ Method note (from guidebook interpretation): Written guidance shall be available
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.5 An operative note is documented before transfer out of patient from r..
+### 5.5 An operative note is documented before transfer out of patient from..
 
 An operative note is documented before transfer out of patient from recovery.
 
@@ -104,13 +104,13 @@ Post-operative care is guided by a documented plan.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.7 Patient, personnel and material flow conform to infection prevention ..
+### 5.7 Patient, personnel and material flow conform to infection prevention..
 
 Patient, personnel and material flow conform to infection prevention and control practices.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.8 Appropriate facilities, equipment, instruments and supplies are avail..
+### 5.8 Appropriate facilities, equipment, instruments and supplies are..
 
 Appropriate facilities, equipment, instruments and supplies are available in the operating theatre.
 
@@ -122,7 +122,7 @@ The organisation shall implement a quality assurance programme.
 
 Method note (from guidebook interpretation): Surveillance activities shall include the daily monitoring of
 
-### 5.10 The quality assurance programme includes surveillance of the operatio..
+### 5.10 The quality assurance programme includes surveillance of the operation..
 
 The quality assurance programme includes surveillance of the operation theatre environment.
 
@@ -152,14 +152,14 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.14.a–j.
-- Asterisked elements (adij) have document evidence as required.
-- CORE elements (d) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -221,67 +221,63 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.14.a — Surgical services are provided in a consistent and safe manner.
 
-- Records showing COP.14.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.14.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written surgical-service protocol.
+- Consistency-check record.
+- Staff-credentialing record.
 
 ### COP.14.b — Surgical patients have a pre-operative assessment, a documented pre- operative diagnosis, and pre-operative instructions are provided before surgery.
 
-- Records showing COP.14.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.14.b reviewed «quarterly».
+- Pre-operative assessment record.
+- Documented pre-operative diagnosis.
+- Pre-operative instruction record given to the patient.
 
 ### COP.14.c — Informed consent is obtained by a surgeon before the procedure.
 
-- Records showing COP.14.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.14.c reviewed «quarterly».
+- Surgical consent form signed by the surgeon.
+- Consent-process documentation.
+- Cross-reference to PRE.4.
 
 ### COP.14.d — Care is taken to prevent adverse events like the wrong site, wrong patient and wrong surgery.
 
-- Records showing COP.14.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.14.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Site, patient and procedure verification checklist.
+- Surgical time-out record.
+- Near-miss or adverse-event record, where applicable.
 
 ### COP.14.e — An operative note is documented before transfer out of patient from recovery.
 
-- Records showing COP.14.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.14.e reviewed «quarterly».
+- Operative note documented before transfer out of recovery.
+- Note-completeness check.
+- Timeliness-of-documentation record.
 
 ### COP.14.f — Post-operative care is guided by a documented plan.
 
-- Records showing COP.14.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.14.f reviewed «quarterly».
+- Documented post-operative care plan.
+- Plan-implementation record.
+- Post-operative monitoring record.
 
 ### COP.14.g — Patient, personnel and material flow conform to infection prevention and control practices.
 
-- Records showing COP.14.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.14.g reviewed «quarterly».
+- Patient, personnel and material-flow IPC-compliance record for the OT.
+- Traffic-control observation record.
+- Cross-reference to IPC.4.
 
 ### COP.14.h — Appropriate facilities, equipment, instruments and supplies are available in the operating theatre.
 
-- Records showing COP.14.h was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.14.h reviewed «quarterly».
+- OT facility, equipment, instrument and supply inventory.
+- Availability-and-readiness check record.
+- Pre-list equipment-check record.
 
 ### COP.14.i — The organisation shall implement a quality assurance programme.
 
-- Records showing COP.14.i was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.14.i reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written OT quality assurance programme.
+- Indicator-monitoring record.
+- Improvement-action record.
 
 ### COP.14.j — The quality assurance programme includes surveillance of the operation theatre environment.
 
-- Records showing COP.14.j was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.14.j reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- OT environmental-surveillance record — air quality, surface swabs as applicable.
+- Surveillance-frequency documentation.
+- Corrective-action record for a surveillance finding.
 
 ## Disclaimer
 

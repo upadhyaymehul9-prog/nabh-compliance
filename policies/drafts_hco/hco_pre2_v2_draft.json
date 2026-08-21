@@ -17,21 +17,21 @@
   ],
   "policy_title": "Patient and Family Rights in Care and Decision-Making",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard PRE.2: Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.\n\nIt covers objective elements PRE.2.a–l (12 elements).\n\nChapter intent (official Standards PDF): The organisation defines, protects and promotes the patient and family's rights and responsibilities. The staff is aware of these rights and is trained to protect them. Patients are informed of their rights and educated about their responsibilities at the time of entering the organisation. The expected costs of treatment and care are explained clearly to the patient and / or family. The organisation encourages patient engagement to enhance clinical outcomes, safety and quality. Patients are educated about the mechanisms available for addressing grievances. Informed consent is obtained from the patient or family for specified procedures / care. The key components of information shall include risks, benefits and alternatives. Patients and families have a right to get information and education about their healthcare needs in a language and manner that is understood by them. The organisation has a mechanism to capture the patient experience including patient reported experience measures (PREM). The organisation develops effective patient-centred communication.\n\nThis policy owns PRE.2. Related AAC, COP, MOM, IPC/HIC and IMS duties stay with those policies — cross-reference only. Other PRE standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to staff who register, admit, treat, counsel, bill, take consent from, or communicate with patients and families at {{HOSPITAL_NAME}}, including the «Medical Superintendent», treating doctors, nursing, Guest Relations / Patient Rights, Patient Accounts and the Quality Coordinator.\n\nIt covers 12 objective elements (PRE.2.a, PRE.2.b, PRE.2.c, PRE.2.d, PRE.2.e, PRE.2.f, PRE.2.g, PRE.2.h, PRE.2.i, PRE.2.j, PRE.2.k, PRE.2.l).\n\nBoundaries: do not copy SHCO PRE wording. Do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
+  "scope": "This policy applies to staff who register, admit, treat, counsel, bill, take consent from, or communicate with patients and families at {{HOSPITAL_NAME}}, including the «Medical Superintendent», treating doctors, nursing, Guest Relations / Patient Rights, Patient Accounts and the Quality Coordinator.\n\nIt covers 12 objective elements (PRE.2.a, PRE.2.b, PRE.2.c, PRE.2.d, PRE.2.e, PRE.2.f, PRE.2.g, PRE.2.h, PRE.2.i, PRE.2.j, PRE.2.k, PRE.2.l).\n\nBoundaries: do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
   "policy_statement": "{{HOSPITAL_NAME}} implements PRE.2 so that patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
   "procedure_steps": [
     "5.1 Patients and family rights include respecting values and beliefs, any...\n\nStaff ask how the patient wishes to be addressed, and record dietary preferences, worship requirements and any specific requirement following death. The «treating doctor and the assigned nurse» act on those preferences unless a documented clinical or statutory reason prevents it.\n\nSpiritual-need requests go to «the hospital arranged faith / counselling contact» without delaying care. Preferences are visible on the nursing kardex / admission sheet.\n\nMethod note (from guidebook interpretation): This could include how they wish to be addressed, dietary preferences and worship requirements. This may also include any specific requirement following death.",
-    "5.2 Patient and family rights include respect for personal dignity and pr...\n\nDuring examination, procedures and treatment the patient is exposed only immediately before the actual procedure; screens, drapes and a closed door (or equivalent) are used. The organisation's privacy-and-dignity guidelines sit with the «Nursing Superintendent».\n\nPhotographs or recordings of a procedure require explicit informed consent and must not reveal the patient's identity in teaching or publicity material. A privacy breach in progress is a stop-work trigger (section 6).\n\nMethod note (from guidebook interpretation): During all stages of patient care, be it in the examination or carrying out a procedure, hospital staff shall ensure that the patient’s privacy and dignity are maintained. The organisation shall develop the necessary guidelines for the same. During procedures, the organisation shall ensure that the patient is exposed just before the actual procedure. With regards to photographs/recording procedures, the organisation shall ensure that explicit informed consent is taken and that the patient’s identity is not revealed..",
+    "5.2 Patient and family rights include respect for personal dignity and...\n\nDuring examination, procedures and treatment the patient is exposed only immediately before the actual procedure; screens, drapes and a closed door (or equivalent) are used. The organisation's privacy-and-dignity guidelines sit with the «Nursing Superintendent».\n\nPhotographs or recordings of a procedure require explicit informed consent and must not reveal the patient's identity in teaching or publicity material. A privacy breach in progress is a stop-work trigger (section 6).\n\nMethod note (from guidebook interpretation): During all stages of patient care, be it in the examination or carrying out a procedure, hospital staff shall ensure that the patient’s privacy and dignity are maintained. The organisation shall develop the necessary guidelines for the same. During procedures, the organisation shall ensure that the patient is exposed just before the actual procedure. With regards to photographs/recording procedures, the organisation shall ensure that explicit informed consent is taken and that the patient’s identity is not revealed..",
     "5.3 Patient and family rights include protection from neglect or abuse\n\nStaff protect patients from neglect or abuse: unattended fall from bed/trolley, assault, unwarranted repeated internal examination, manhandling. Extra precautions apply to elderly, neonate, physically or mentally challenged, comatose and anaesthetised patients.\n\nAny suspected neglect or abuse is stopped, the patient is protected, and the incident is reported the same shift under PRE.1.d. This is a stop-work trigger (section 6).\n\nMethod note (from guidebook interpretation): Examples of this include falling from the bed/trolley due to negligence, assault, repeated internal examinations (unwarranted), manhandling, etc. Special precautions shall be taken, especially concerning vulnerable patients, for example elderly, neonates, physically and mentally challenged patients, comatose patients, patients under anaesthesia etc.",
-    "5.4 Patient and family rights include treating patient information as con...\n\nPatient information is confidential. Staff do not discuss patients in public places (lifts, corridors, cafeterias). HIV status and other confidential information are not written or pasted on the cover of the medical record, and are not displayed in a way the public can read.\n\nStatutory requirements on privileged communication are followed. Disclosure without the patient's permission is an incident under PRE.1.d. The «Quality Coordinator» includes confidentiality in the «annually» rights training.\n\nMethod note (from guidebook interpretation): The organisation and the treating team shall take effective measures to maintain the confidentiality of all patient-related information. Staff shall avoid having patient-related discussions in public places. Statutory requirements regarding privileged communication shall be followed at all times (refer the glossary for a definition of privileged communication). Confidential information, including HIV status, shall not be revealed without the patient’s permission. It shall not be explicitly written/pasted on the cover of the medical record, nor shall it be displayed in a manner that is easily understandable by the public at large.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.4 Patient and family rights include treating patient information as...\n\nPatient information is confidential. Staff do not discuss patients in public places (lifts, corridors, cafeterias). HIV status and other confidential information are not written or pasted on the cover of the medical record, and are not displayed in a way the public can read.\n\nStatutory requirements on privileged communication are followed. Disclosure without the patient's permission is an incident under PRE.1.d. The «Quality Coordinator» includes confidentiality in the «annually» rights training.\n\nMethod note (from guidebook interpretation): The organisation and the treating team shall take effective measures to maintain the confidentiality of all patient-related information. Staff shall avoid having patient-related discussions in public places. Statutory requirements regarding privileged communication shall be followed at all times (refer the glossary for a definition of privileged communication). Confidential information, including HIV status, shall not be revealed without the patient’s permission. It shall not be explicitly written/pasted on the cover of the medical record, nor shall it be displayed in a manner that is easily understandable by the public at large.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
     "5.5 Patient and family rights include the refusal of treatment\n\nWhen a patient refuses treatment, the treating doctor discusses the available options, explains the consequences of refusal, and documents the discussion. If the patient still refuses after that explanation, the refusal is respected.\n\nThe note records what was offered, what was refused, and who witnessed the explanation. Coercing a competent adult to accept treatment is a rights violation.\n\nMethod note (from guidebook interpretation): The treating doctor shall discuss all the available options and allow the patient to make an informed choice. In case of refusal, the treating doctor shall explain the consequences of the refusal of treatment and document the same. After explanation of consequences, if the patient still refuses treatment, the same must be respected. z = h. HB cone.",
-    "5.6 Patient and family rights include a right to seek an additional opini...\n\nPatients and families may seek an additional opinion from inside or outside {{HOSPITAL_NAME}}. Staff respect that decision and facilitate access to relevant information and clinical evaluation (copies of records, imaging, reports).\n\nA request for information on a particular physician's qualifications and experience is answered from the credential file. The «Medical Superintendent» names how an internal second opinion is arranged («another consultant of the same specialty, documented in the record»).\n\nMethod note (from guidebook interpretation): There is a mechanism for patient and family to seek a second opinion if they wish, from within or outside the organisation. The organisation shall respect the decision of the patient and family and facilitate access to all relevant information or clinical evaluation. Request for additional information on a particular physician in terms of qualifications and experience may be provided.",
-    "5.7 Patient and family rights include informed consent before the transfu...\n\nInformed consent is obtained by the treating doctor or a doctor member of the treating team before transfusion of blood or blood components, anaesthesia, surgery, initiation of any research protocol, and any other invasive / high-risk procedure / treatment.\n\nThe consent list and the process live in PRE.4. Starting any listed item without that consent is a stop-work trigger (section 6). Emergency life-saving exceptions follow PRE.4.\n\nMethod note (from guidebook interpretation): Informed consent shall be obtained by treating doctor or a doctor member of the treating team. Refer to PRE.4.a.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.6 Patient and family rights include a right to seek an additional opinion...\n\nPatients and families may seek an additional opinion from inside or outside {{HOSPITAL_NAME}}. Staff respect that decision and facilitate access to relevant information and clinical evaluation (copies of records, imaging, reports).\n\nA request for information on a particular physician's qualifications and experience is answered from the credential file. The «Medical Superintendent» names how an internal second opinion is arranged («another consultant of the same specialty, documented in the record»).\n\nMethod note (from guidebook interpretation): There is a mechanism for patient and family to seek a second opinion if they wish, from within or outside the organisation. The organisation shall respect the decision of the patient and family and facilitate access to all relevant information or clinical evaluation. Request for additional information on a particular physician in terms of qualifications and experience may be provided.",
+    "5.7 Patient and family rights include informed consent before the...\n\nInformed consent is obtained by the treating doctor or a doctor member of the treating team before transfusion of blood or blood components, anaesthesia, surgery, initiation of any research protocol, and any other invasive / high-risk procedure / treatment.\n\nThe consent list and the process live in PRE.4. Starting any listed item without that consent is a stop-work trigger (section 6). Emergency life-saving exceptions follow PRE.4.\n\nMethod note (from guidebook interpretation): Informed consent shall be obtained by treating doctor or a doctor member of the treating team. Refer to PRE.4.a.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
     "5.8 Patient and family rights include a right to complain and information...\n\nThe displayed rights include the right to complain and the method to voice a complaint. The mechanism is accessible (written, verbal, telephone) and redressal is fair and transparent.\n\nComplaint process detail is owned by PRE.7. This element is met when the rights display and the admission counselling actually tell people how to complain, not only when a complaints SOP exists in a file.\n\nMethod note (from guidebook interpretation): The displayed patient rights shall include the right to make a complaint and also mention the methodology to voice the same. Complaint mechanism must be accessible, and redressal of complaint must be fair and transparent. Refer to PRE.7.c.",
     "5.9 Patient and family rights include information on the expected cost of...\n\nPatients and families are told the expected cost of treatment in a transparent way — consultations, procedures and investigations — by written estimate or by making the relevant tariff available.\n\nDetailed pricing, tariff and change-in-plan rules are owned by PRE.6. This element is met when the rights counselling includes cost information, not only when a tariff exists in accounts.\n\nMethod note (from guidebook interpretation): Patients and families are explained about the expected costs of treatment in a transparent manner. This includes consultations, procedures and investigations. It may involve giving written estimates or making the concerned tariff available. Refer to PRE.6. a. fey 4 7 - NABH Patient and family rights include access to their clinical records.",
     "5.10 Patient and family rights include access to their clinical records\n\nEvery patient has access to their clinical record, in line with the Code of Medical Ethics and statutory requirements. The request path is «written application to Medical Records, copies within the organisation-defined time».\n\nCross-reference IMS.4.h for the records procedure. Refusal to show a competent adult their record is a rights violation under PRE.1.d.\n\nMethod note (from guidebook interpretation): The organisation shall ensure that every patient has access to his/her record. This shall be in consonance with the Code of Medical Ethics laid down by the Medical Council of India and statutory requirements. Refer to IMS.4.h.",
-    "5.11 Patient and family rights include information on the name of the trea...\n\nThe patient and family are told the name of the treating doctor, the care plan, progress, and information on healthcare needs. The «treating doctor» does this at admission and at significant plan changes; nursing reinforces the name of the consultant on the board / wristband process.\n\nA patient who cannot name their treating doctor on a sample walk-round is a gap for this element.\n\nMethod note (from guidebook interpretation): Information on the name of the treating doctor, care plan, the progress of the patient and the healthcare needs are discussed with patient and family.",
-    "5.12 Patient rights include determining what information regarding their c...\n\nThe patient decides what information about their care is given to self and to family. Sensitive or confidential information goes to the patient and to the next of kin only if the patient wants that. For minors, information is given to at least one parent or guardian.\n\nThe «treating doctor» records the patient's choice in the medical record (including 'share with named family member X' or 'do not share diagnosis with family').\n\nMethod note (from guidebook interpretation): The organisation needs to evolve a mechanism to provide sensitive and/or confidential information to the patient and the next of kin if desired by the patient. In the case of minors, it will be provided to at least one of the parents / guardian."
+    "5.11 Patient and family rights include information on the name of the...\n\nThe patient and family are told the name of the treating doctor, the care plan, progress, and information on healthcare needs. The «treating doctor» does this at admission and at significant plan changes; nursing reinforces the name of the consultant on the board / wristband process.\n\nA patient who cannot name their treating doctor on a sample walk-round is a gap for this element.\n\nMethod note (from guidebook interpretation): Information on the name of the treating doctor, care plan, the progress of the patient and the healthcare needs are discussed with patient and family.",
+    "5.12 Patient rights include determining what information regarding their...\n\nThe patient decides what information about their care is given to self and to family. Sensitive or confidential information goes to the patient and to the next of kin only if the patient wants that. For minors, information is given to at least one parent or guardian.\n\nThe «treating doctor» records the patient's choice in the medical record (including 'share with named family member X' or 'do not share diagnosis with family').\n\nMethod note (from guidebook interpretation): The organisation needs to evolve a mechanism to provide sensitive and/or confidential information to the patient and the next of kin if desired by the patient. In the case of minors, it will be provided to at least one of the parents / guardian."
   ],
   "responsibility": "Medical Superintendent\n- Accountable that PRE.2 is resourced and followed.\n- Acts on rights violations, consent failures and communication breaches that reach top leadership.\n\nMedical Superintendent\n- Owns day-to-day implementation and records for this standard.\n\nGuest Relations / Patient Rights Officer\n- Supports rights display, counselling, complaint access and family communication as this standard requires.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
   "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Patient Rights and Education, standard PRE.2. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — PRE.2 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_pre_guidebook_ocr.txt).\n- Internal documents of {{HOSPITAL_NAME}}: Patient Rights display and pamphlet, informed-consent list and forms, tariff and estimate process, feedback and complaints guidance, and communication models named for PRE.2.",
@@ -45,9 +45,9 @@
       "steps": "Section 3; 5.1; Section 6 Stop-work",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PRE.2.a was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.2.a reviewed «quarterly»."
+        "Recorded patient preference (form of address, diet, worship, post-death requirement) on the kardex or admission sheet.",
+        "Record of action taken on the preference by the treating doctor or nurse.",
+        "Spiritual-need-request routing record."
       ]
     },
     {
@@ -56,9 +56,9 @@
       "steps": "Section 3; 5.2; Section 6 Stop-work",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PRE.2.b was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.2.b reviewed «quarterly»."
+        "Privacy-and-dignity guideline document held by the Nursing Superintendent.",
+        "Screen, drape or closed-door practice-observation record.",
+        "Consent record for any photograph or recording of a procedure."
       ]
     },
     {
@@ -67,9 +67,9 @@
       "steps": "Section 3; 5.3; Section 6 Stop-work",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PRE.2.c was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.2.c reviewed «quarterly»."
+        "Extra-precaution record for vulnerable patients (elderly, neonate, physically or mentally challenged, comatose, anaesthetised).",
+        "Incident record for any suspected neglect or abuse, reported the same shift.",
+        "Confirmation the incident routed through the PRE.1.d violation mechanism."
       ]
     },
     {
@@ -78,10 +78,9 @@
       "steps": "Section 3; 5.4; Section 6 Stop-work",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PRE.2.d was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.2.d reviewed «quarterly».",
-        "CORE-element sample with no critical gaps in the quarter under review."
+        "Confidentiality training record within the annual rights training.",
+        "Record confirming HIV status or other confidential information is not visible on the record cover.",
+        "Disclosure-without-permission incident record, where applicable."
       ]
     },
     {
@@ -90,9 +89,9 @@
       "steps": "Section 3; 5.5; Section 6 Stop-work",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PRE.2.e was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.2.e reviewed «quarterly»."
+        "Documented discussion-of-refusal note — options offered, consequences explained.",
+        "Record of who witnessed the explanation.",
+        "Confirmation the refusal was respected after explanation, not overridden."
       ]
     },
     {
@@ -101,9 +100,9 @@
       "steps": "Section 3; 5.6; Section 6 Stop-work",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PRE.2.f was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.2.f reviewed «quarterly»."
+        "Record of facilitation for a second-opinion request — records, imaging or reports copied.",
+        "Credential-file response record for a physician-qualification query.",
+        "Named internal second-opinion arrangement record."
       ]
     },
     {
@@ -112,10 +111,9 @@
       "steps": "Section 3; 5.7; Section 6 Stop-work",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PRE.2.g was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.2.g reviewed «quarterly».",
-        "CORE-element sample with no critical gaps in the quarter under review."
+        "Informed-consent record for transfusion, anaesthesia, surgery, research or an invasive/high-risk procedure.",
+        "Cross-reference to the PRE.4 consent process and list.",
+        "Confirmation the consent was taken by the treating doctor or a doctor member of the team."
       ]
     },
     {
@@ -124,9 +122,9 @@
       "steps": "Section 3; 5.8; Section 6 Stop-work",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PRE.2.h was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.2.h reviewed «quarterly»."
+        "Rights-display record naming the right to complain.",
+        "Admission-counselling record confirming the complaint method was explained.",
+        "Cross-reference to the PRE.7 complaint mechanism."
       ]
     },
     {
@@ -135,9 +133,9 @@
       "steps": "Section 3; 5.9; Section 6 Stop-work",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PRE.2.i was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.2.i reviewed «quarterly»."
+        "Cost-information record given during rights counselling.",
+        "Cross-reference to the PRE.6 tariff and cost-estimate process.",
+        "Confirmation cost information was part of counselling, not only available in accounts."
       ]
     },
     {
@@ -146,9 +144,9 @@
       "steps": "Section 3; 5.10; Section 6 Stop-work",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PRE.2.j was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.2.j reviewed «quarterly»."
+        "Written clinical-record access-request record.",
+        "Turnaround-time record against the organisation-defined period.",
+        "Cross-reference to the medical-records procedure."
       ]
     },
     {
@@ -157,9 +155,9 @@
       "steps": "Section 3; 5.11; Section 6 Stop-work",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PRE.2.k was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.2.k reviewed «quarterly»."
+        "Admission record naming the treating doctor, care plan and progress information given.",
+        "Consultant-name display record — board or wristband process.",
+        "Walk-round record confirming patients can name their treating doctor."
       ]
     },
     {
@@ -168,13 +166,13 @@
       "steps": "Section 3; 5.12; Section 6 Stop-work",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PRE.2.l was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.2.l reviewed «quarterly»."
+        "Patient's documented choice on information-sharing — self/family, named family member, or do-not-share instruction.",
+        "Minor's-guardian information record, where applicable.",
+        "Confirmation the choice was respected in practice."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO PRE.2 v2 (2026-08-21). Official Standards PDF OE count 12; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: none. CORE: dg. Achievement: l. Excellence: none.\nStop-work: YES — proposed: Neglect or abuse; examination/procedure without privacy and dignity; listed invasive care without informed consent.\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/PRE/POL/02.\nOfficial chapter is 8 standards / 52 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. PRE.4 statute P2 proposed (guidebook names MTP, PC-PNDT, THOA, HIV/AIDS Act 2017).\nDo not copy SHCO PRE wording. Do not touch AAC, COP or MOM.",
+  "universal_facts_checklist": "HCO PRE.2 v2 (2026-08-21). Official Standards PDF OE count 12; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: none. CORE: dg. Achievement: l. Excellence: none.\nStop-work: YES — proposed: Neglect or abuse; examination/procedure without privacy and dignity; listed invasive care without informed consent.\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/PRE/POL/02.\nOfficial chapter is 8 standards / 52 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. PRE.4 statute P2 proposed (guidebook names MTP, PC-PNDT, THOA, HIV/AIDS Act 2017).\nDo not touch AAC, COP or MOM.",
   "version": "2.0",
   "revision_history": [
     {
@@ -185,8 +183,8 @@
   ],
   "status": "draft",
   "definitions": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
-  "exceptions": "1. Do not skip: Patients and family rights include respecting values and beliefs, any special preferences, cultural needs, ...\n2. Do not skip: Patient and family rights include respect for personal dignity and privacy during examination, procedures a...\n3. Do not skip: Patient and family rights include protection from neglect or abuse.\n4. Do not skip: Patient and family rights include treating patient information as confidential.\n5. Do not skip: Patient and family rights include the refusal of treatment.\n6. Do not skip: Patient and family rights include a right to seek an additional opinion regarding clinical care.\n7. Do not skip: Patient and family rights include informed consent before the transfusion of blood and blood components, an...\n8. Do not skip: Patient and family rights include a right to complain and information on how to voice a complaint.\n9. Do not skip: Patient and family rights include information on the expected cost of the treatment.\n10. Do not skip: Patient and family rights include access to their clinical records.\n11. Do not skip: Patient and family rights include information on the name of the treating doctor, care plan, progress and i...\n12. Do not skip: Patient rights include determining what information regarding their care would be provided to self and family.\n13. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n14. Staff who see a PRE.2 rule broken report it the same shift to the «department in-charge» or the «Quality Coordinator».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE PRE.2.a–l.\n- Asterisked elements (none) have document evidence as required.\n- CORE elements (dg) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related rights incident, consent failure or complaint cluster.",
+  "exceptions": "1. Do not skip: Patients and family rights include respecting values and beliefs, any special preferences, cultural needs...\n2. Do not skip: Patient and family rights include respect for personal dignity and privacy during examination, procedures and...\n3. Do not skip: Patient and family rights include protection from neglect or abuse.\n4. Do not skip: Patient and family rights include treating patient information as confidential.\n5. Do not skip: Patient and family rights include the refusal of treatment.\n6. Do not skip: Patient and family rights include a right to seek an additional opinion regarding clinical care.\n7. Do not skip: Patient and family rights include informed consent before the transfusion of blood and blood components...\n8. Do not skip: Patient and family rights include a right to complain and information on how to voice a complaint.\n9. Do not skip: Patient and family rights include information on the expected cost of the treatment.\n10. Do not skip: Patient and family rights include access to their clinical records.\n11. Do not skip: Patient and family rights include information on the name of the treating doctor, care plan, progress and...\n12. Do not skip: Patient rights include determining what information regarding their care would be provided to self and family.\n13. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n14. Staff who see a PRE.2 rule broken report it the same shift to the «department in-charge» or the «Quality Coordinator».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related rights incident, consent failure or complaint cluster.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Patient and Family Rights in Care and Decision-Making policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/PRE/POL/02»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«Medical Superintendent»",

@@ -11,15 +11,15 @@
   ],
   "policy_title": "Cardio-Pulmonary Resuscitation Services",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard COP.5: Cardio-pulmonary resuscitation services are provided uniformly across the organisation.\n\nIt covers objective elements COP.5.a–f (6 elements).\n\nThis policy owns COP.5. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to staff who deliver or oversee the care described in COP.5 at {{HOSPITAL_NAME}}, including the «CPR Committee Chair», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 6 objective elements (COP.5.a, COP.5.b, COP.5.c, COP.5.d, COP.5.e, COP.5.f).\n\nBoundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.",
+  "scope": "This policy applies to staff who deliver or oversee the care described in COP.5 at {{HOSPITAL_NAME}}, including the «CPR Committee Chair», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 6 objective elements (COP.5.a, COP.5.b, COP.5.c, COP.5.d, COP.5.e, COP.5.f).\n\nBoundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.",
   "policy_statement": "{{HOSPITAL_NAME}} implements COP.5 so that cardio-pulmonary resuscitation services are provided uniformly across the organisation..\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
   "procedure_steps": [
     "5.1 Cardio-pulmonary resuscitation services are available and provided to..\n\nCardio-pulmonary resuscitation services are available and provided to patients at all times.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.2 During cardio-pulmonary resuscitation, assigned roles and responsibil..\n\nDuring cardio-pulmonary resuscitation, assigned roles and responsibilities are complied with.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.3 Medical equipment and medications for use during cardio-pulmonary res..\n\nMedical equipment and medications for use during cardio-pulmonary resuscitation are available in various areas of the organisation.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.2 During cardio-pulmonary resuscitation, assigned roles and..\n\nDuring cardio-pulmonary resuscitation, assigned roles and responsibilities are complied with.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.3 Medical equipment and medications for use during cardio-pulmonary..\n\nMedical equipment and medications for use during cardio-pulmonary resuscitation are available in various areas of the organisation.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
     "5.4 The events during cardio-pulmonary resuscitation are recorded\n\nThe events during cardio-pulmonary resuscitation are recorded.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.5 A multi-disciplinary committee does a post-event analysis of cardio- ..\n\nA multi-disciplinary committee does a post-event analysis of cardio- pulmonary resuscitations.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.6 Corrective and preventive measures are taken based on the post-event ..\n\nCorrective and preventive measures are taken based on the post-event analysis.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element."
+    "5.5 A multi-disciplinary committee does a post-event analysis of cardio-..\n\nA multi-disciplinary committee does a post-event analysis of cardio- pulmonary resuscitations.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.6 Corrective and preventive measures are taken based on the post-event..\n\nCorrective and preventive measures are taken based on the post-event analysis.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element."
   ],
   "responsibility": "Medical Superintendent\n- Accountable that COP.5 is resourced and followed.\n\nCPR Committee Chair\n- Owns day-to-day implementation and records for this standard.\n\nTreating doctors / nurses / technicians (as applicable)\n- Deliver care as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
   "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Care of Patients, standard COP.5.\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — COP.5 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).\n- Internal documents of {{HOSPITAL_NAME}}: written guidance and registers named for COP.5.",
@@ -33,9 +33,9 @@
       "steps": "Section 3; 5.1; Section 6 Stop-work",
       "responsible": "CPR Committee Chair",
       "records": [
-        "Records showing COP.5.a was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.5.a reviewed «quarterly»."
+        "CPR-availability record across all areas and shifts.",
+        "Response-time record for a sampled call.",
+        "Trained-responder roster."
       ]
     },
     {
@@ -44,9 +44,9 @@
       "steps": "Section 3; 5.2; Section 6 Stop-work",
       "responsible": "CPR Committee Chair",
       "records": [
-        "Records showing COP.5.b was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.5.b reviewed «quarterly»."
+        "Written CPR-team role-assignment record.",
+        "Role-compliance observation or debrief record.",
+        "Team-composition record for a sampled event."
       ]
     },
     {
@@ -55,9 +55,9 @@
       "steps": "Section 3; 5.3; Section 6 Stop-work",
       "responsible": "CPR Committee Chair",
       "records": [
-        "Records showing COP.5.c was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.5.c reviewed «quarterly»."
+        "Crash-cart or emergency-equipment inventory by area.",
+        "Medication-stock record matching the emergency-medication list (MOM.3.f).",
+        "Availability-check record."
       ]
     },
     {
@@ -66,9 +66,9 @@
       "steps": "Section 3; 5.4",
       "responsible": "CPR Committee Chair",
       "records": [
-        "Records showing COP.5.d was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.5.d reviewed «quarterly»."
+        "CPR event record — time, interventions, outcome.",
+        "Documentation-completeness check.",
+        "Record filed in the patient's medical record."
       ]
     },
     {
@@ -77,9 +77,9 @@
       "steps": "Section 3; 5.5",
       "responsible": "CPR Committee Chair",
       "records": [
-        "Records showing COP.5.e was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.5.e reviewed «quarterly»."
+        "Multi-disciplinary CPR-committee post-event analysis record.",
+        "Analysis-timeliness record.",
+        "Findings documentation."
       ]
     },
     {
@@ -88,13 +88,13 @@
       "steps": "Section 3; 5.6",
       "responsible": "CPR Committee Chair",
       "records": [
-        "Records showing COP.5.f was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.5.f reviewed «quarterly»."
+        "CAPA record from CPR post-event analysis, with owner and due date.",
+        "Closure-tracking record.",
+        "Repeat-event trend record."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO COP.5 v2 (2026-08-20). Official Standards PDF OE count 6; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: none. CORE: none. Achievement: none. Excellence: none.\nStop-work: YES — JUDGMENT CALL: CPR without named team roles, emergency drugs/equipment, or post-event documentation trigger.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/05.\nDo not copy SHCO COP wording. Do not touch AAC.",
+  "universal_facts_checklist": "HCO COP.5 v2 (2026-08-20). Official Standards PDF OE count 6; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: none. CORE: none. Achievement: none. Excellence: none.\nStop-work: YES — JUDGMENT CALL: CPR without named team roles, emergency drugs/equipment, or post-event documentation trigger.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/05.\nDo not touch AAC.",
   "version": "2.0",
   "revision_history": [
     {
@@ -105,8 +105,8 @@
   ],
   "status": "draft",
   "definitions": "Cardio-pulmonary resuscitation services are provided uniformly across the organisation.",
-  "exceptions": "1. Do not skip: Cardio-pulmonary resuscitation services are available and provided to patients at all times.\n2. Do not skip: During cardio-pulmonary resuscitation, assigned roles and responsibilities are complied with.\n3. Do not skip: Medical equipment and medications for use during cardio-pulmonary resuscitation are available in various ar...\n4. Do not skip: The events during cardio-pulmonary resuscitation are recorded.\n5. Do not skip: A multi-disciplinary committee does a post-event analysis of cardio- pulmonary resuscitations.\n6. Do not skip: Corrective and preventive measures are taken based on the post-event analysis.\n7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n8. Staff who see a COP.5 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE COP.5.a–f.\n- Asterisked elements (none) have document evidence as required.\n- CORE elements (none) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
+  "exceptions": "1. Do not skip: Cardio-pulmonary resuscitation services are available and provided to patients at all times.\n2. Do not skip: During cardio-pulmonary resuscitation, assigned roles and responsibilities are complied with.\n3. Do not skip: Medical equipment and medications for use during cardio-pulmonary resuscitation are available in various...\n4. Do not skip: The events during cardio-pulmonary resuscitation are recorded.\n5. Do not skip: A multi-disciplinary committee does a post-event analysis of cardio- pulmonary resuscitations.\n6. Do not skip: Corrective and preventive measures are taken based on the post-event analysis.\n7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n8. Staff who see a COP.5 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Cardio-Pulmonary Resuscitation Services policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/COP/POL/05»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «CPR Committee Chair»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«CPR Committee Chair»",

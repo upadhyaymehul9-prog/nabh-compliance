@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.13
 
 It covers 10 objective elements (COP.13.a, COP.13.b, COP.13.c, COP.13.d, COP.13.e, COP.13.f, COP.13.g, COP.13.h, COP.13.i, COP.13.j).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -55,7 +55,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 2. Do not skip: The pre-anaesthesia assessment results in the formulation of an anaesthesia plan which is documented.
 3. Do not skip: A pre-induction assessment is performed and documented.
 4. Do not skip: The anaesthesiologist obtains informed consent for administration of anaesthesia.
-5. Do not skip: During anaesthesia, monitoring includes a regular recording of temperature, heart rate, cardiac rhythm, res...
+5. Do not skip: During anaesthesia, monitoring includes a regular recording of temperature, heart rate, cardiac rhythm...
 6. Do not skip: Patient’s post-anaesthesia status is monitored and documented.
 7. Do not skip: The anaesthesiologist applies defined criteria to transfer the patient from the recovery area.
 8. Do not skip: The type of anaesthesia and anaesthetic medications used are documented in the patient record.
@@ -72,7 +72,7 @@ Anaesthesia services are provided in a consistent manner.
 
 Method note (from guidebook interpretation): Written guidance based on standard treatment guidelines/sound |
 
-### 5.2 The pre-anaesthesia assessment results in the formulation of an anaes..
+### 5.2 The pre-anaesthesia assessment results in the formulation of an..
 
 The pre-anaesthesia assessment results in the formulation of an anaesthesia plan which is documented.
 
@@ -86,13 +86,13 @@ A pre-induction assessment is performed and documented.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.4 The anaesthesiologist obtains informed consent for administration of ..
+### 5.4 The anaesthesiologist obtains informed consent for administration of..
 
 The anaesthesiologist obtains informed consent for administration of anaesthesia.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.5 During anaesthesia, monitoring includes a regular recording of temper..
+### 5.5 During anaesthesia, monitoring includes a regular recording of..
 
 During anaesthesia, monitoring includes a regular recording of temperature, heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation and end-tidal carbon dioxide.
 
@@ -106,19 +106,19 @@ Patient’s post-anaesthesia status is monitored and documented.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.7 The anaesthesiologist applies defined criteria to transfer the patien..
+### 5.7 The anaesthesiologist applies defined criteria to transfer the patient..
 
 The anaesthesiologist applies defined criteria to transfer the patient from the recovery area.
 
 Method note (from guidebook interpretation): The organisation documents these criteria which shall be based
 
-### 5.8 The type of anaesthesia and anaesthetic medications used are document..
+### 5.8 The type of anaesthesia and anaesthetic medications used are documented..
 
 The type of anaesthesia and anaesthetic medications used are documented in the patient record.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.9 Procedures shall comply with infection prevention and control guideli..
+### 5.9 Procedures shall comply with infection prevention and control..
 
 Procedures shall comply with infection prevention and control guidelines to prevent cross-infection between patients.
 
@@ -154,14 +154,14 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.13.a–j.
-- Asterisked elements (ag) have document evidence as required.
-- CORE elements (be) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -223,65 +223,63 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.13.a — Anaesthesia services are provided in a consistent manner.
 
-- Records showing COP.13.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.13.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written anaesthesia-service protocol.
+- Consistency-check record.
+- Staff-credentialing record.
 
 ### COP.13.b — The pre-anaesthesia assessment results in the formulation of an anaesthesia plan which is documented.
 
-- Records showing COP.13.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.13.b reviewed «quarterly».
+- Documented pre-anaesthesia assessment and anaesthesia plan.
+- Plan-completeness check.
+- Assessment-timing record before the procedure.
 
 ### COP.13.c — A pre-induction assessment is performed and documented.
 
-- Records showing COP.13.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.13.c reviewed «quarterly».
+- Documented pre-induction assessment.
+- Assessment-timing record immediately before induction.
+- Completeness check.
 
 ### COP.13.d — The anaesthesiologist obtains informed consent for administration of anaesthesia.
 
-- Records showing COP.13.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.13.d reviewed «quarterly».
+- Anaesthesia consent form signed by the anaesthesiologist.
+- Consent-process documentation.
+- Cross-reference to PRE.4.
 
 ### COP.13.e — During anaesthesia, monitoring includes a regular recording of temperature, heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation and end-tidal carbon dioxide.
 
-- Records showing COP.13.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.13.e reviewed «quarterly».
+- Intra-anaesthesia monitoring record — temperature, heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation, end-tidal CO2.
+- Monitoring-frequency documentation.
+- Equipment-calibration record.
 
 ### COP.13.f — Patient’s post-anaesthesia status is monitored and documented.
 
-- Records showing COP.13.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.13.f reviewed «quarterly».
+- Post-anaesthesia monitoring record.
+- Documentation-completeness check.
+- Recovery-status tracking record.
 
 ### COP.13.g — The anaesthesiologist applies defined criteria to transfer the patient from the recovery area.
 
-- Records showing COP.13.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.13.g reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written recovery-transfer criteria.
+- Criteria-application record for a sampled transfer.
+- Anaesthesiologist sign-off record.
 
 ### COP.13.h — The type of anaesthesia and anaesthetic medications used are documented in the patient record.
 
-- Records showing COP.13.h was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.13.h reviewed «quarterly».
+- Anaesthesia-type and medication documentation in the patient record.
+- Record-completeness check.
+- Batch or dose documentation, where applicable.
 
 ### COP.13.i — Procedures shall comply with infection prevention and control guidelines to prevent cross-infection between patients.
 
-- Records showing COP.13.i was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.13.i reviewed «quarterly».
+- IPC-compliance record for anaesthesia procedures (cross-reference the IPC chapter).
+- Equipment sterilisation or disinfection record.
+- Cross-infection-prevention observation record.
 
 ### COP.13.j — Intra-operative adverse anaesthesia events are recorded and monitored.
 
-- Records showing COP.13.j was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.13.j reviewed «quarterly».
+- Adverse-anaesthesia-event log.
+- Monitoring and analysis record.
+- CAPA record, where applicable.
 
 ## Disclaimer
 

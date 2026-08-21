@@ -11,7 +11,7 @@
   ],
   "policy_title": "Clinical Audit",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard PSQ.5: There is an established system for clinical audit.\n\nIt covers objective elements PSQ.5.a–f (6 elements).\n\nChapter intent (official Standards PDF): The standards encourage an environment of patient safety and continual quality improvement. The patient safety and quality programme should be documented and involve all areas of the organisation and all staff members. The management creates a culture of safety in the organisation. Patient safety officer(s) shall be designated for the implementation of patient-safety programme. National / International patient-safety goals / solutions / framework shall be implemented. The organisation shall collect data on structures, processes and outcomes, especially in areas of high-risk situations. Quality indicators specific to clinical specialities shall be used to involve clinical departments in the quality improvement programme. The collected data shall be collated, analysed and trends are used for further improvement. Appropriate quality tools shall be used for carrying out quality improvement projects. Clinical audits shall be used as a tool to improve the quality of patient care in a sustained manner. Department leaders play an active role in patient safety and quality improvement. The organisation has a mechanism to capture patient reported outcome measures. The organisation shall have a robust incident reporting system. Sentinel events shall be defined. All incidents are investigated and appropriate action is taken. The management shall support the patient safety and quality programme.\n\nThis policy owns PSQ.5. Related AAC, COP, MOM, PRE and IPC duties stay with those policies — cross-reference only. Other PSQ standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to staff who deliver care, run quality or patient-safety work, lead departments, or hold management duties for safety and quality at {{HOSPITAL_NAME}}, including the «Quality Coordinator», the Patient Safety Officer, the Quality Coordinator, departmental leaders, treating doctors, nursing and the Medical Superintendent.\n\nIt covers 6 objective elements (PSQ.5.a, PSQ.5.b, PSQ.5.c, PSQ.5.d, PSQ.5.e, PSQ.5.f).\n\nBoundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
+  "scope": "This policy applies to staff who deliver care, run quality or patient-safety work, lead departments, or hold management duties for safety and quality at {{HOSPITAL_NAME}}, including the «Quality Coordinator», the Patient Safety Officer, the Quality Coordinator, departmental leaders, treating doctors, nursing and the Medical Superintendent.\n\nIt covers 6 objective elements (PSQ.5.a, PSQ.5.b, PSQ.5.c, PSQ.5.d, PSQ.5.e, PSQ.5.f).\n\nBoundaries: do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
   "policy_statement": "{{HOSPITAL_NAME}} implements PSQ.5 so that there is an established system for clinical audit.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
   "procedure_steps": [
     "5.1 Clinical audits are performed to improve the quality of patient care\n\nClinical audits are performed to improve the quality of patient care, not only for documentation completeness and not as research projects.\n\nThe «Quality Improvement Committee» keeps a clinical-audit calendar. At a minimum the organisation conducts one clinical audit per clinical department once in two years, as per the scope of services. Topics may be disease-based, cost-based, community-based or morbidity-based (length of stay). Completed reports are filed.\n\nMethod note (from guidebook interpretation): The organisation shall use clinical audits as a quality improvement tool to improve the quality of patient care. The clinical audit could be retrospective/prospective in nature. The topic for audit could be disease-based, cost-based, community-based or based on morbidity (length of stay). The organisation shall conduct one clinical audit per clinical department once in two years as per the scope of services. The organisation needs to take care to differentiate clinical audit from research projects. — Excellence g G _ b. ©:",
@@ -33,9 +33,9 @@
       "steps": "Section 3; 5.1",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing PSQ.5.a was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PSQ.5.a reviewed «quarterly»."
+        "Clinical-audit calendar with at least one audit per clinical department once in two years.",
+        "Completed audit report on file.",
+        "Topic record — disease-based, cost-based, community-based or morbidity-based."
       ]
     },
     {
@@ -44,9 +44,9 @@
       "steps": "Section 3; 5.2",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing PSQ.5.b was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PSQ.5.b reviewed «quarterly»."
+        "Written pre-audit parameter document: objectives, standards/criteria, sample, period and exclusions.",
+        "Sign-off record between the audit lead and the Quality Coordinator.",
+        "Record of any audit restarted for missing predefined parameters."
       ]
     },
     {
@@ -55,9 +55,9 @@
       "steps": "Section 3; 5.3",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing PSQ.5.c was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PSQ.5.c reviewed «quarterly»."
+        "Attendance and role record for medical and nursing staff in each audit.",
+        "Audit-lead or data-collector assignment record.",
+        "Confirmation clinical participation occurred, not a quality-office-only audit."
       ]
     },
     {
@@ -66,9 +66,9 @@
       "steps": "Section 3; 5.4",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing PSQ.5.d was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PSQ.5.d reviewed «quarterly»."
+        "De-identified or coded audit report and presentation.",
+        "Key-holder record showing the identifier key is held separately by the Quality Coordinator.",
+        "Confirmation open-meeting materials do not name patients or staff."
       ]
     },
     {
@@ -77,9 +77,9 @@
       "steps": "Section 3; 5.5",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing PSQ.5.e was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PSQ.5.e reviewed «quarterly»."
+        "Complete audit pack: protocol/parameters, data, findings, recommendations, attendees and date.",
+        "Filed record with the Quality Coordinator.",
+        "Confirmation no undocumented verbal audit was treated as complete."
       ]
     },
     {
@@ -88,13 +88,13 @@
       "steps": "Section 3; 5.6",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing PSQ.5.f was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PSQ.5.f reviewed «quarterly»."
+        "Recommendation-tracking log with owner and due date per audit finding.",
+        "Later-check record confirming the remedy was actually done.",
+        "Quality Improvement Committee open-action review record."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO PSQ.5 v2 (2026-08-21). Official Standards PDF OE count 6; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: none. CORE: none. Achievement: c. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/PSQ/POL/05.\nOfficial chapter is 7 standards / 46 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. No statute P2 proposed (accreditation-only).\nDo not copy SHCO equivalent-chapter wording. Do not touch AAC, COP, MOM, PRE or IPC.",
+  "universal_facts_checklist": "HCO PSQ.5 v2 (2026-08-21). Official Standards PDF OE count 6; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: none. CORE: none. Achievement: c. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/PSQ/POL/05.\nOfficial chapter is 7 standards / 46 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. No statute P2 proposed (accreditation-only).\nDo not touch AAC, COP, MOM, PRE or IPC.",
   "version": "2.0",
   "revision_history": [
     {
@@ -106,7 +106,7 @@
   "status": "draft",
   "definitions": "There is an established system for clinical audit.",
   "exceptions": "1. Do not skip: Clinical audits are performed to improve the quality of patient care.\n2. Do not skip: The parameters to be audited are defined by the organisation.\n3. Do not skip: Medical and nursing staff participate in clinical audit.\n4. Do not skip: Patient and staff anonymity are maintained.\n5. Do not skip: Clinical audits are documented.\n6. Do not skip: Remedial measures are implemented.\n7. Staff who see a PSQ.5 rule broken report it the same shift to the «department in-charge» or the «Patient Safety Officer» / «Quality Coordinator».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE PSQ.5.a–f.\n- Asterisked elements (none) have document evidence as required.\n- CORE elements (none) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related sentinel event, indicator failure cluster or failed clinical-audit cycle.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related sentinel event, indicator failure cluster or failed clinical-audit cycle.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Clinical Audit policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/PSQ/POL/05»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«Quality Coordinator»",

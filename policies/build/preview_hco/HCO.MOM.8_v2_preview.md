@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 6 objective elements (MOM.8.a, MOM.8.b, MOM.8.c, MOM.8.d, MOM.8.e, MOM.8.f).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -81,7 +81,7 @@ Nursing does not silently continue a drug that is causing a clear adverse reacti
 
 Method note (from guidebook interpretation): Medication changes are based on clinical response and adverse drug reactions, if any.
 
-### 5.3 The organisation shall capture near misses, medication errors and adv...
+### 5.3 The organisation shall capture near misses, medication errors and...
 
 Preview Hospital captures near misses, medication errors and adverse drug reactions in a defined reporting system (incident form / electronic equivalent, plus pharmacovigilance reporting where applicable).
 
@@ -93,7 +93,7 @@ This objective element is asterisked in the official Standards PDF — documenta
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.4 Near misses, medication errors and adverse drug reactions shall be re...
+### 5.4 Near misses, medication errors and adverse drug reactions shall be...
 
 Near misses, medication errors and adverse drug reactions are reported within a specified time frame: «unsafe ongoing situations immediately; all other medication incidents the same shift; ADRs as soon as recognised and in any case within 24 hours».
 
@@ -103,7 +103,7 @@ Method note (from guidebook interpretation): The organisation shall define the t
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.5 Near misses, medication errors and adverse drug reactions are collect...
+### 5.5 Near misses, medication errors and adverse drug reactions are collected...
 
 The «Medication Safety Officer» collects reports and the «Drug and Therapeutics Committee» analyses them «quarterly» (and sooner for a serious event): type, stage (prescribing / dispensing / administration), high-risk drug involvement, and harm.
 
@@ -139,14 +139,14 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE MOM.8.a–f.
-- Asterisked elements (acd) have document evidence as required.
-- CORE elements (c) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event or recall.
 
@@ -209,43 +209,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### MOM.8.a — Patients shall be monitored after medication administration.
 
-- Records showing MOM.8.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.8.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written monitoring guidance naming what to watch and when to escalate, matched to drug and clinical setting.
+- Recorded post-administration monitoring for a sampled case (for example post-opioid sedation/respiration, post-chemotherapy).
+- Escalation record where monitoring triggered a response.
 
 ### MOM.8.b — Medications shall be changed based on the monitoring where appropriate.
 
-- Records showing MOM.8.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.8.b reviewed «quarterly».
+- Medication-change record based on monitoring findings — drug changed, held or dose-adjusted.
+- Rewritten-order record under MOM.5 for the change.
+- Confirmation the treating doctor was informed, not silently continued.
 
 ### MOM.8.c — The organisation shall capture near misses, medication errors and adverse drug reactions.
 
-- Records showing MOM.8.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.8.c reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Defined near-miss, medication-error and ADR reporting system — incident form or electronic equivalent, plus pharmacovigilance reporting where applicable.
+- Sample of captured near-miss and error reports.
+- Medication Safety Officer's ownership record of the capture system.
 
 ### MOM.8.d — Near misses, medication errors and adverse drug reactions shall be reported within a specified time frame.
 
-- Records showing MOM.8.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.8.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Reporting-timeframe record — immediate for unsafe situations, same-shift for other incidents, within 24 hours for ADRs.
+- Delayed-discovery record marked as delayed when found late.
+- DTC record of any tightened reporting time.
 
 ### MOM.8.e — Near misses, medication errors and adverse drug reactions are collected and analysed.
 
-- Records showing MOM.8.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.8.e reviewed «quarterly».
+- Quarterly analysis record by the DTC — type, stage, high-risk-drug involvement, harm.
+- System-cause analysis record, not individual-blame-only.
+- Medication Safety Officer's collected-report file.
 
 ### MOM.8.f — Corrective and / or preventive action(s) are taken based on the analysis.
 
-- Records showing MOM.8.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.8.f reviewed «quarterly».
+- CAPA record from analysis, timed and closed (for example storage separation, second-check rule, formulary restriction).
+- Quarterly audit inclusion record for open medication CAPA.
+- Deeper-review record triggered by repeat events of the same type.
 
 ## Disclaimer
 

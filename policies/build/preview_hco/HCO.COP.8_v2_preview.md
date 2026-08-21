@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.8 
 
 It covers 7 objective elements (COP.8.a, COP.8.b, COP.8.c, COP.8.d, COP.8.e, COP.8.f, COP.8.g).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -55,33 +55,33 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 2. Do not skip: The organisation shall establish and implement processes for blood / component collection, testing, storage...
 3. Do not skip: Blood and components are stored safely from the time of collection till transfusion.
 4. Do not skip: The organisation ensures safe and rational use of blood and blood components.
-5. Do not skip: Blood / blood components are available for use in emergency and routine situations within a defined time-fr...
-6. Do not skip: The organisation shall ensure that post-transfusion form is collected, reactions if any identified and are ...
+5. Do not skip: Blood / blood components are available for use in emergency and routine situations within a defined...
+6. Do not skip: The organisation shall ensure that post-transfusion form is collected, reactions if any identified and are...
 7. Do not skip: The organisation shall implement a quality assurance programme.
 8. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
 9. Staff who see a COP.8 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».
 
 ## 5. What we do
 
-### 5.1 Scope of transfusion services is commensurate with the services provi..
+### 5.1 Scope of transfusion services is commensurate with the services..
 
 Scope of transfusion services is commensurate with the services provided by the organisation.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.2 The organisation shall establish and implement processes for blood / ..
+### 5.2 The organisation shall establish and implement processes for blood /..
 
 The organisation shall establish and implement processes for blood / component collection, testing, storage and distribution under written guidance.
 
 Method note (from guidebook interpretation): The mechanism for identification of patients shall be uniform
 
-### 5.3 Blood and components are stored safely from the time of collection ti..
+### 5.3 Blood and components are stored safely from the time of collection till..
 
 Blood and components are stored safely from the time of collection till transfusion.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.4 The organisation ensures safe and rational use of blood and blood com..
+### 5.4 The organisation ensures safe and rational use of blood and blood..
 
 The organisation ensures safe and rational use of blood and blood components.
 
@@ -89,7 +89,7 @@ Method note (from guidebook interpretation): Clinical care pathways shall be mul
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.5 Blood / blood components are available for use in emergency and routi..
+### 5.5 Blood / blood components are available for use in emergency and routine..
 
 Blood / blood components are available for use in emergency and routine situations within a defined time-frame.
 
@@ -131,14 +131,14 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.8.a–g.
-- Asterisked elements (bdefg) have document evidence as required.
-- CORE elements (d) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -197,50 +197,45 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.8.a — Scope of transfusion services is commensurate with the services provided by the organisation.
 
-- Records showing COP.8.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.8.a reviewed «quarterly».
+- Transfusion-service scope document matched to services provided.
+- Service-scope review record.
+- Cross-reference to the AAC.1 service definition.
 
 ### COP.8.b — The organisation shall establish and implement processes for blood / component collection, testing, storage and distribution under written guidance.
 
-- Records showing COP.8.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.8.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written guidance for blood/component collection, testing, storage and distribution.
+- Process-compliance record for a sampled unit.
+- National Blood Transfusion Standards reference.
 
 ### COP.8.c — Blood and components are stored safely from the time of collection till transfusion.
 
-- Records showing COP.8.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.8.c reviewed «quarterly».
+- Blood-storage temperature log and equipment-monitoring record.
+- Cold-chain maintenance record from collection to transfusion.
+- Storage-condition compliance check.
 
 ### COP.8.d — The organisation ensures safe and rational use of blood and blood components.
 
-- Records showing COP.8.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.8.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Two-identifier patient-verification and compatibility-check record before transfusion.
+- Rational-use or blood-utilisation review record.
+- Informed-consent record for transfusion.
 
 ### COP.8.e — Blood / blood components are available for use in emergency and routine situations within a defined time-frame.
 
-- Records showing COP.8.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.8.e reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Blood or component availability record for emergency and routine requests.
+- Turnaround-time log against the defined timeframe.
+- Escalation record for a delayed request.
 
 ### COP.8.f — The organisation shall ensure that post-transfusion form is collected, reactions if any identified and are analysed for preventive and corrective actions.
 
-- Records showing COP.8.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.8.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Post-transfusion form collected for a sampled transfusion.
+- Transfusion-reaction identification and analysis record.
+- CAPA record from reaction analysis.
 
 ### COP.8.g — The organisation shall implement a quality assurance programme.
 
-- Records showing COP.8.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.8.g reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written transfusion-service quality assurance programme.
+- Indicator-monitoring record for the programme.
+- Improvement-action record from QA findings.
 
 ## Disclaimer
 

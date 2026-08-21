@@ -43,7 +43,7 @@ This policy applies to human resources, nursing, medical, and departmental leade
 
 It covers 5 objective elements (HRM.13.a, HRM.13.b, HRM.13.c, HRM.13.d, HRM.13.e).
 
-Boundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
 
 ## 3. Policy standards
 
@@ -53,17 +53,17 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Para-clinical professionals permitted by law, regulation and the organisation to provide patient care witho...
-2. Do not skip: The education, registration, training and experience of para-clinical professionals are appropriately verif...
-3. Do not skip: Para-clinical professionals are granted privileges in consonance with their qualification, training, experi...
-4. Do not skip: The requisite services to be provided by the para-clinical professionals are known to them as well as the c...
+1. Do not skip: Para-clinical professionals permitted by law, regulation and the organisation to provide patient care without...
+2. Do not skip: The education, registration, training and experience of para-clinical professionals are appropriately...
+3. Do not skip: Para-clinical professionals are granted privileges in consonance with their qualification, training...
+4. Do not skip: The requisite services to be provided by the para-clinical professionals are known to them as well as the...
 5. Do not skip: Para-clinical professionals care for patients as per their privileging.
 6. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
 7. Staff who see a HRM.13 rule broken report it the same shift to the «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
 
 ## 5. What we do
 
-### 5.1 Para-clinical professionals permitted by law, regulation and the orga...
+### 5.1 Para-clinical professionals permitted by law, regulation and the...
 
 Preview Hospital identifies para-clinical professionals (for example physiotherapist, rehabilitation therapist, dietician, pharmacist, clinical pharmacist, technologist) permitted by law, regulation and the organisation to provide patient care without supervision — individuals with the required qualification(s), training and experience, in consonance with the law. Providing unsupervised care outside this identified list is a stop-work trigger (section 6). This is a CORE element.
 
@@ -85,7 +85,7 @@ Method note (from guidebook interpretation): The organisation shall specify as t
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.4 The requisite services to be provided by the para-clinical profession...
+### 5.4 The requisite services to be provided by the para-clinical...
 
 The requisite services a para-clinical professional at Preview Hospital is authorised to provide are known to that professional and to the concerned departments, communicated internally.
 
@@ -121,14 +121,13 @@ departmental leaders
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE HRM.13.a–e.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (ac) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.
 
@@ -194,35 +193,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### HRM.13.a — Para-clinical professionals permitted by law, regulation and the organisation to provide patient care without supervision are identified.
 
-- Records showing HRM.13.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.13.a reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Identified-para-clinical-professional list permitted to provide unsupervised patient care.
+- Qualification, training and experience verification record.
+- Cross-reference to the HRM.13 stop-work trigger for unlisted practice.
 
 ### HRM.13.b — The education, registration, training and experience of para-clinical professionals are appropriately verified, documented and updated periodically.
 
-- Records showing HRM.13.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.13.b reviewed «quarterly».
+- Education, registration, training and experience verification and documentation record, updated periodically.
+- Personal-file record of the update.
+- Verification-with-awarding-organisation record.
 
 ### HRM.13.c — Para-clinical professionals are granted privileges in consonance with their qualification, training, experience and registration.
 
-- Records showing HRM.13.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.13.c reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Granted-privilege record naming what each para-clinical professional is authorised to do.
+- Registration or licence-on-file record, where applicable.
+- Cross-reference to the HRM.13 stop-work trigger for privileging outside this record.
 
 ### HRM.13.d — The requisite services to be provided by the para-clinical professionals are known to them as well as the concerned departments/units of the organisation.
 
-- Records showing HRM.13.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.13.d reviewed «quarterly».
+- Communicated-service record to the professional and to concerned departments.
+- Internal-communication record.
+- Confirmation record of awareness.
 
 ### HRM.13.e — Para-clinical professionals care for patients as per their privileging.
 
-- Records showing HRM.13.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.13.e reviewed «quarterly».
+- Supervision record for new staff until independent privileges are granted.
+- Mechanism-confirmation record that para-clinical professionals provide only privileged services.
+- Privileging-compliance spot-check record.
 
 ## Disclaimer
 

@@ -43,7 +43,7 @@ This policy applies to staff who deliver clinical care, run support services (ho
 
 It covers 10 objective elements (IPC.1.a, IPC.1.b, IPC.1.c, IPC.1.d, IPC.1.e, IPC.1.f, IPC.1.g, IPC.1.h, IPC.1.i, IPC.1.j).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,21 +53,21 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: The infection prevention and control programme is documented, which aims at preventing and reducing the ris...
-2. Do not skip: The infection prevention and control programme identifies high-risk activities and has written guidance to ...
+1. Do not skip: The infection prevention and control programme is documented, which aims at preventing and reducing the risk...
+2. Do not skip: The infection prevention and control programme identifies high-risk activities and has written guidance to...
 3. Do not skip: The infection prevention and control programme is reviewed and updated at least once a year.
-4. Do not skip: The infection prevention and control programme is reviewed based on infection prevention and control assess...
-5. Do not skip: The organisation has a multi-disciplinary infection prevention and control committee, which co-ordinates al...
-6. Do not skip: The organisation has an infection Prevention and control team, which coordinates the implementation of all ...
-7. Do not skip: The organisation has designated infection prevention and control officer as part of the infection preventio...
-8. Do not skip: The organisation has designated infection prevention and control nurse(s) as part of the infection preventi...
+4. Do not skip: The infection prevention and control programme is reviewed based on infection prevention and control...
+5. Do not skip: The organisation has a multi-disciplinary infection prevention and control committee, which co-ordinates all...
+6. Do not skip: The organisation has an infection Prevention and control team, which coordinates the implementation of all...
+7. Do not skip: The organisation has designated infection prevention and control officer as part of the infection prevention...
+8. Do not skip: The organisation has designated infection prevention and control nurse(s) as part of the infection prevention...
 9. Do not skip: The organisation implements information, education and communication programme for infection prevention and...
 10. Do not skip: The organisation participates in managing community outbreaks.
 11. Staff who see an IPC.1 rule broken report it the same shift to the «department in-charge» or the «Infection Prevention and Control Officer».
 
 ## 5. What we do
 
-### 5.1 The infection prevention and control programme is documented, which a...
+### 5.1 The infection prevention and control programme is documented, which...
 
 Preview Hospital documents its infection prevention and control programme. The written guidance covers clinical areas and support services and aims at preventing and reducing healthcare-associated infection in patients, visitors and staff.
 
@@ -79,7 +79,7 @@ This objective element is asterisked in the official Standards PDF — documenta
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.2 The infection prevention and control programme identifies high-risk a...
+### 5.2 The infection prevention and control programme identifies high-risk...
 
 The «Infection Prevention and Control Committee» identifies high-risk activities (for example OT, ICU, dialysis, CSSD, kitchen, laundry, BMW, construction) from scientific literature and this hospital's scope, and writes guidance to prevent and manage infection for each.
 
@@ -89,7 +89,7 @@ Method note (from guidebook interpretation): The high-risk activities are identi
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.3 The infection prevention and control programme is reviewed and update...
+### 5.3 The infection prevention and control programme is reviewed and updated...
 
 The «Infection Prevention and Control Committee» reviews and updates the programme at least «annually» and sooner after an outbreak, a new service, or a change in national guidance.
 
@@ -97,7 +97,7 @@ An update is a dated change to the manual or high-risk list, not only a restatem
 
 Method note (from guidebook interpretation): The update shall be done based on newer literature on infection prevention and outbreak prevention mechanisms, infection trends and outcomes ofthe audit processes. In case the annual review does not identify any opportunities for improvement, the same shall be documented in the minutes of the infection prevention and control committee meeting.
 
-### 5.4 The infection prevention and control programme is reviewed based on i...
+### 5.4 The infection prevention and control programme is reviewed based on...
 
 The annual (or more frequent) review uses a validated infection-prevention assessment tool (for example WHO IPCAF or an equivalent the «Infection Prevention and Control Committee» names). Gaps from the tool become actions with owners and due dates.
 
@@ -105,7 +105,7 @@ This Achievement element is evidenced by a completed tool plus follow-up, not by
 
 Method note (from guidebook interpretation): The organisation shall use any validated tool for performing infection prevention and control assessment tool. Examples of validated tools include WHO’s Infection Prevention and Control Assessment Framework at the Facility Level and CDC’s Infection Prevention and Control Assessment Tool for Acute Care Hospitals. HEB cone.
 
-### 5.5 The organisation has a multi-disciplinary infection prevention and co...
+### 5.5 The organisation has a multi-disciplinary infection prevention and...
 
 The «Medical Superintendent» constitutes a multi-disciplinary «Infection Prevention and Control Committee» that coordinates all IPC activities. Membership preferably includes administration, microbiology, a physician / IPC specialist, nursing, OT, CSSD, housekeeping and quality.
 
@@ -115,7 +115,7 @@ Method note (from guidebook interpretation): This shall preferably have Hospital
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.6 The organisation has an infection Prevention and control team, which ...
+### 5.6 The organisation has an infection Prevention and control team, which...
 
 An infection prevention and control team runs day-to-day implementation: the «Infection Prevention and Control Officer», «Infection Prevention and Control Nurse» (one or more) and named link staff. The team supports wards, investigates clusters, and brings findings to the «Infection Prevention and Control Committee».
 
@@ -125,7 +125,7 @@ Method note (from guidebook interpretation): The team is responsible for the day
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.7 The organisation has designated infection prevention and control offi...
+### 5.7 The organisation has designated infection prevention and control...
 
 The «Medical Superintendent» designates an infection prevention and control officer — a doctor knowledgeable in infection prevention and control — as part of the team. The designation letter, time allocation and reporting line are on file.
 
@@ -135,7 +135,7 @@ Method note (from guidebook interpretation): The infection prevention and contro
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.8 The organisation has designated infection prevention and control nurs...
+### 5.8 The organisation has designated infection prevention and control...
 
 The «Medical Superintendent» designates infection prevention and control nurse(s): registered nurses with additional structured IPC training. Their responsibilities (surveillance, hand-hygiene audit, staff education, outbreak support) are in writing.
 
@@ -145,7 +145,7 @@ Method note (from guidebook interpretation): The criteria for designating shall 
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.9 The organisation implements information, education and communication ...
+### 5.9 The organisation implements information, education and communication...
 
 Preview Hospital runs information, education and communication on IPC for the community it serves — at least hand hygiene, cough etiquette and when to seek care — with stakeholders as needed (posters, OPD talks, local messaging).
 
@@ -181,14 +181,14 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE IPC.1.a–j.
-- Asterisked elements (abefgh) have document evidence as required.
-- CORE elements (a) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related outbreak, sterilisation failure or exposure cluster.
 
@@ -262,70 +262,63 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### IPC.1.a — The infection prevention and control programme is documented, which aims at preventing and reducing the risk of healthcare associated infections in the hospital.
 
-- Records showing IPC.1.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.1.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Documented infection prevention and control programme in the IPC Manual, covering clinical areas and support services.
+- IPC Committee approval record for the programme.
+- Confirmation the programme is a standing document, not meeting-minutes-only.
 
 ### IPC.1.b — The infection prevention and control programme identifies high-risk activities and has written guidance to prevent and manage infections for these activities.
 
-- Records showing IPC.1.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.1.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written high-risk-activity list (for example OT, ICU, dialysis, CSSD, kitchen, laundry, BMW, construction).
+- Guidance document for each identified high-risk activity.
+- Training record for staff working in those areas.
 
 ### IPC.1.c — The infection prevention and control programme is reviewed and updated at least once a year.
 
-- Records showing IPC.1.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.1.c reviewed «quarterly».
+- Dated annual review or update record of the programme.
+- Record of the change made to the manual or high-risk list at that review.
+- Trigger record for any earlier review after an outbreak, new service, or change in national guidance.
 
 ### IPC.1.d — The infection prevention and control programme is reviewed based on infection prevention and control assessment tool.
 
-- Records showing IPC.1.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.1.d reviewed «quarterly».
+- Completed infection-prevention assessment tool (for example WHO IPCAF or an equivalent validated tool).
+- Gap list from the tool with owner and due date.
+- Follow-up record confirming gaps were closed.
 
 ### IPC.1.e — The organisation has a multi-disciplinary infection prevention and control committee, which co-ordinates all infection prevention and control activities.
 
-- Records showing IPC.1.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.1.e reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- IPC Committee terms of reference, membership list and meeting-frequency record.
+- Minutes naming decisions, owners and due dates.
+- Constitution record signed by the Medical Superintendent.
 
 ### IPC.1.f — The organisation has an infection Prevention and control team, which coordinates the implementation of all infection prevention and control activities.
 
-- Records showing IPC.1.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.1.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- IPC team written terms of reference (IPC Officer, IPC Nurse(s), link staff).
+- Ward-support and cluster-investigation record.
+- Record of findings brought from the team to the Committee.
 
 ### IPC.1.g — The organisation has designated infection prevention and control officer as part of the infection prevention and control team.
 
-- Records showing IPC.1.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.1.g reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Designation letter for the IPC Officer with time allocation and reporting line.
+- Record confirming committee membership or chair role.
+- Contactability record for outbreaks and exposure events.
 
 ### IPC.1.h — The organisation has designated infection prevention and control nurse(s) as part of the infection prevention and control team.
 
-- Records showing IPC.1.h was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.1.h reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Designation letter(s) for IPC Nurse(s) with IPC training record.
+- Written responsibility list — surveillance, hand-hygiene audit, staff education, outbreak support.
+- Coverage record matching this hospital's size and risk.
 
 ### IPC.1.i — The organisation implements information, education and communication programme for infection prevention and control activities for the community.
 
-- Records showing IPC.1.i was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.1.i reviewed «quarterly».
+- Community IEC materials and session record (hand hygiene, cough etiquette, when to seek care).
+- Dated samples of community-facing IEC activity.
+- Record confirming this is community-facing, separate from staff induction training.
 
 ### IPC.1.j — The organisation participates in managing community outbreaks.
 
-- Records showing IPC.1.j was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.1.j reviewed «quarterly».
+- Written contact path to the public-health or statutory agency for outbreak participation.
+- Internal role and staff-briefing record for a declared outbreak.
+- Drill or real-event record from the last year.
 
 ## Disclaimer
 

@@ -43,7 +43,7 @@ This policy applies to staff who deliver care, run quality or patient-safety wor
 
 It covers 7 objective elements (PSQ.1.a, PSQ.1.b, PSQ.1.c, PSQ.1.d, PSQ.1.e, PSQ.1.f, PSQ.1.g).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,7 +53,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: The patient safety programme is developed, implemented and maintained by a multi-disciplinary safety commit...
+1. Do not skip: The patient safety programme is developed, implemented and maintained by a multi-disciplinary safety...
 2. Do not skip: The patient safety programme is comprehensive and covers all the major elements related to patient safety.
 3. Do not skip: The programme covers incidents ranging from “no harm” to “sentinel events”.
 4. Do not skip: Designated patient safety officer(s) coordinates implementation of the patient safety programme.
@@ -76,7 +76,7 @@ This objective element is asterisked in the official Standards PDF — documenta
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.2 The patient safety programme is comprehensive and covers all the majo...
+### 5.2 The patient safety programme is comprehensive and covers all the major...
 
 The programme covers the major patient-safety elements this hospital's scope requires: identification, communication, medication safety, procedure safety, falls and other high-risk care, infection-related safety (cross-reference IPC), and incident reporting.
 
@@ -84,7 +84,7 @@ The «Patient Safety Committee» keeps a current element list in the manual. Sta
 
 Method note (from guidebook interpretation): The patient safety programme shall address all elements of safety for clinical and support services. Refer to AAC.7.e. AAC.7.f, AAC.7.g., AAC.9.f., AAC.9.g., AAC.9.h. AAC.9.i., AAC.9.j., AAC.9.k. and ROM.6.
 
-### 5.3 The programme covers incidents ranging from “no harm” to “sentinel ev...
+### 5.3 The programme covers incidents ranging from “no harm” to “sentinel...
 
 The programme covers incidents from no-harm events through sentinel events. Written definitions of no-harm, near miss, adverse event and sentinel event sit in the manual (glossary plus local examples).
 
@@ -92,7 +92,7 @@ Every defined class can be reported through the incident system under PSQ.7. A p
 
 Method note (from guidebook interpretation): The organisation shall clearly define as to what constitutes “no harm” and “sentinel events” with regards to the patient. Refer to the glossary for a definition of “no harm” and "sentinel events".
 
-### 5.4 Designated patient safety officer(s) coordinates implementation of th...
+### 5.4 Designated patient safety officer(s) coordinates implementation of the...
 
 The «Medical Superintendent» designates one or more patient safety officers to coordinate implementation. The «Patient Safety Officer» is a doctor or nurse with experience applying risk management in clinical work, reports to top management, and has written roles.
 
@@ -100,7 +100,7 @@ The designation letter, time allocation and reporting line are on file. Champion
 
 Method note (from guidebook interpretation): The patient safety officer(s) shall be a person having a good knowledge of both patient and general safety. The patient safety officer(s) shall report to the Top Management. The role and responsibilities of the patient safety officer(s) shall be defined and documented. The patient safety officer shall be a doctor/nurse with experience in the application of risk management to clinical domains. Also, champions in patient safety are identified and developed across the organisation and are supported to drive patient safety.
 
-### 5.5 The organisation performs proactive analysis of patient safety risks ...
+### 5.5 The organisation performs proactive analysis of patient safety risks...
 
 The «Patient Safety Committee» performs proactive analysis of patient-safety risks using tools such as HIRA, FMEA, HVA, fault-tree analysis or simulation, as the committee names for the process.
 
@@ -108,7 +108,7 @@ At a minimum, one patient-safety-related risk undergoes proactive analysis every
 
 Method note (from guidebook interpretation): Proactive analysis could be done using tools like Hazard Identification and Risk Analysis (HIRA), Failure Modes and Effects Analysis (FMEA), Hazard Vulnerability Analysis (HVA), fault tree analysis and simulations. At a minimum, one patient safety related risk shall undergo proactive analysis every year, and appropriate improvements are made as a result. The intent is to eliminate unsafe actions and conditions that can lead to harmful incidents.
 
-### 5.6 The patient safety programme is reviewed and updated at least once a ...
+### 5.6 The patient safety programme is reviewed and updated at least once a...
 
 The «Patient Safety Committee» reviews and updates the patient safety programme at least «annually» and sooner after a sentinel event, a new service, or a change in national patient-safety goals.
 
@@ -116,7 +116,7 @@ An update is a dated change to the manual or element list. The «Quality Coordin
 
 Method note (from guidebook interpretation): The update shall be done based on newer literature on patient safety and the findings of reviews. In case the annual review does not identify any opportunities for improvement, the same shall be documented in the minutes of the safety committee meeting. The patient safety programme identifies opportunities for improvement based on the review at pre-defined intervals (as defined by the organisation in the Safety manual but at least once in a year). The review shall be done by safety committee and at a minimum includes report of facility inspection rounds, patient safety incidents, risk management and analysis of key-safety indicators. The minutes of the review meetings shall be recorded and maintained.
 
-### 5.7 The organisation adapts and implements national / international patie...
+### 5.7 The organisation adapts and implements national / international...
 
 Preview Hospital adapts and implements current national / international patient-safety goals, solutions or framework. At a minimum this is the current National Patient-Safety Framework, WHO Patient Safety Solutions and/or International Patient Safety Goals, as the «Patient Safety Committee» adopts them for this hospital's scope.
 
@@ -147,14 +147,14 @@ Nursing Superintendent
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE PSQ.1.a–g.
-- Asterisked elements (a) have document evidence as required.
-- CORE elements (ag) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related sentinel event, indicator failure cluster or failed clinical-audit cycle.
 
@@ -218,48 +218,45 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### PSQ.1.a — The patient safety programme is developed, implemented and maintained by a multi-disciplinary safety committee.
 
-- Records showing PSQ.1.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.1.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Documented patient safety programme in the Patient Safety Manual.
+- Patient Safety Committee terms of reference, membership list and meeting-frequency record.
+- Minutes showing the committee actually developed and maintains the programme, not minutes-only notes.
 
 ### PSQ.1.b — The patient safety programme is comprehensive and covers all the major elements related to patient safety.
 
-- Records showing PSQ.1.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.1.b reviewed «quarterly».
+- Current element list in the manual (identification, communication, medication safety, procedure safety, falls/high-risk care, infection-related safety, incident reporting).
+- Training record for staff working in those areas.
+- Cross-reference record to IPC for the infection-related-safety element.
 
 ### PSQ.1.c — The programme covers incidents ranging from “no harm” to “sentinel events”.
 
-- Records showing PSQ.1.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.1.c reviewed «quarterly».
+- Written definitions of no-harm event, near miss, adverse event and sentinel event in the manual.
+- Incident-system report samples showing each defined class was actually reported.
+- Confirmation the programme is not limited to death or major-harm events only.
 
 ### PSQ.1.d — Designated patient safety officer(s) coordinates implementation of the patient safety programme.
 
-- Records showing PSQ.1.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.1.d reviewed «quarterly».
+- Designation letter for the Patient Safety Officer(s) with time allocation and reporting line.
+- Written role description for the position.
+- List of named patient-safety champions across departments.
 
 ### PSQ.1.e — The organisation performs proactive analysis of patient safety risks and makes improvements accordingly.
 
-- Records showing PSQ.1.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.1.e reviewed «quarterly».
+- Completed proactive risk-analysis file for at least one patient-safety risk in the year (for example HIRA, FMEA, HVA or fault-tree analysis).
+- Improvement actions from that analysis with owner and due date.
+- Quality Coordinator's analysis-file record.
 
 ### PSQ.1.f — The patient safety programme is reviewed and updated at least once a year.
 
-- Records showing PSQ.1.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.1.f reviewed «quarterly».
+- Dated review minute of the patient safety programme.
+- Record of the change made to the manual or element list at that review.
+- Evidence of an earlier review after a sentinel event, new service, or national-goal change, where applicable.
 
 ### PSQ.1.g — The organisation adapts and implements national / international patient- safety goals / solutions / framework.
 
-- Records showing PSQ.1.g was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.1.g reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Current adopted list of national/international patient-safety goals or solutions (for example the National Patient Safety Framework, WHO Patient Safety Solutions, International Patient Safety Goals).
+- Local-adaptation record showing how each goal is implemented for this hospital's scope.
+- Measurement record for each adopted goal.
 
 ## Disclaimer
 

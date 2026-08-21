@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.6 
 
 It covers 6 objective elements (COP.6.a, COP.6.b, COP.6.c, COP.6.d, COP.6.e, COP.6.f).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -67,31 +67,31 @@ Nursing care is provided to patients in accordance with written guidance.
 
 Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
 
-### 5.2 Assignment of patient care is done as per good clinical / nursing pra..
+### 5.2 Assignment of patient care is done as per good clinical / nursing..
 
 Assignment of patient care is done as per good clinical / nursing practice.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.3 The organisation implements acuity-based staffing to improve patient ..
+### 5.3 The organisation implements acuity-based staffing to improve patient..
 
 The organisation implements acuity-based staffing to improve patient outcomes.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.4 Nursing care is aligned and integrated with overall patient care whic..
+### 5.4 Nursing care is aligned and integrated with overall patient care which..
 
 Nursing care is aligned and integrated with overall patient care which is documented.
 
 Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
 
-### 5.5 Nurses are provided with the appropriate and adequate equipment for p..
+### 5.5 Nurses are provided with the appropriate and adequate equipment for..
 
 Nurses are provided with the appropriate and adequate equipment for providing safe and efficient nursing care.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.6 Nurses are empowered to make patient care decisions within their scop..
+### 5.6 Nurses are empowered to make patient care decisions within their scope..
 
 Nurses are empowered to make patient care decisions within their scope of practice.
 
@@ -113,14 +113,13 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.6.a–f.
-- Asterisked elements (ad) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -178,41 +177,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.6.a — Nursing care is provided to patients in accordance with written guidance.
 
-- Records showing COP.6.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.6.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written nursing-care guidance or protocol.
+- Nursing documentation record confirming the guidance was followed.
+- Staff training record on the guidance.
 
 ### COP.6.b — Assignment of patient care is done as per good clinical / nursing practice.
 
-- Records showing COP.6.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.6.b reviewed «quarterly».
+- Patient-care assignment record — nurse-to-patient ratio, competency match.
+- Assignment-policy document.
+- Shift-roster record.
 
 ### COP.6.c — The organisation implements acuity-based staffing to improve patient outcomes.
 
-- Records showing COP.6.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.6.c reviewed «quarterly».
+- Acuity-scoring tool and record.
+- Staffing-adjustment record based on acuity.
+- Outcome-tracking record linked to acuity-based staffing.
 
 ### COP.6.d — Nursing care is aligned and integrated with overall patient care which is documented.
 
-- Records showing COP.6.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.6.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Nursing-care-plan documentation integrated with the overall patient-care plan.
+- Multidisciplinary care-record cross-reference.
+- Documentation-completeness check.
 
 ### COP.6.e — Nurses are provided with the appropriate and adequate equipment for providing safe and efficient nursing care.
 
-- Records showing COP.6.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.6.e reviewed «quarterly».
+- Nursing-equipment inventory and adequacy record.
+- Equipment-maintenance record.
+- Equipment-availability check by unit.
 
 ### COP.6.f — Nurses are empowered to make patient care decisions within their scope of practice.
 
-- Records showing COP.6.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.6.f reviewed «quarterly».
+- Written scope-of-practice document for nursing decision-making.
+- Example decision record within that scope.
+- Nurse-empowerment policy reference.
 
 ## Disclaimer
 

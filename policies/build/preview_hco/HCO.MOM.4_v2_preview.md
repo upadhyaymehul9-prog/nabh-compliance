@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 8 objective elements (MOM.4.a, MOM.4.b, MOM.4.c, MOM.4.d, MOM.4.e, MOM.4.f, MOM.4.g, MOM.4.h).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,20 +53,20 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Medication prescription is in consonance with good practices / guidelines for rational prescription of medi...
+1. Do not skip: Medication prescription is in consonance with good practices / guidelines for rational prescription of...
 2. Do not skip: The organisation adheres to the determined minimum requirements of a prescription.
 3. Do not skip: Drug allergies and previous adverse drug reactions are ascertained before prescribing.
 4. Do not skip: The organisation has a mechanism to assist the clinician in prescribing appropriate medication.
 5. Do not skip: Reconciliation of medications occurs at transition points of patient care.
 6. Do not skip: Verbal orders are implemented by ensuring safe medication management practices.
-7. Do not skip: Audit of medication orders / prescription is carried out to check for safe and rational prescription of med...
+7. Do not skip: Audit of medication orders / prescription is carried out to check for safe and rational prescription of...
 8. Do not skip: Corrective and / or preventive action(s) is taken based on the audit, where appropriate.
 9. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
 10. Staff who see a MOM.4 rule broken report it the same shift to the «department in-charge» or the «Medication Safety Officer».
 
 ## 5. What we do
 
-### 5.1 Medication prescription is in consonance with good practices / guidel...
+### 5.1 Medication prescription is in consonance with good practices /...
 
 Prescribers follow the organisation's written good-practice / rational-prescribing guidance: indication, dose appropriate to age/weight/organ function, duration, and avoidance of unnecessary polypharmacy and restricted antimicrobials except per the hospital antimicrobial policy.
 
@@ -76,7 +76,7 @@ Method note (from guidebook interpretation): This shall address both outpatient 
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.2 The organisation adheres to the determined minimum requirements of a ...
+### 5.2 The organisation adheres to the determined minimum requirements of a...
 
 Every prescription at Preview Hospital meets the determined minimum requirements, which include: patient name and unique identification number; generic or approved name of the medicine; route; strength; frequency / time; date and time of the order; and the prescriber's signature (or authenticated electronic equivalent) and identifier.
 
@@ -88,7 +88,7 @@ This objective element is asterisked in the official Standards PDF — documenta
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.3 Drug allergies and previous adverse drug reactions are ascertained be...
+### 5.3 Drug allergies and previous adverse drug reactions are ascertained...
 
 Before prescribing, the clinician ascertains known drug allergies and previous adverse drug reactions from the patient / family and from the medical record, and records the result (including 'none known').
 
@@ -96,7 +96,7 @@ A red-alert allergy band or equivalent is used when an allergy is recorded. Pres
 
 Method note (from guidebook interpretation): Drug allergy and previous adverse drug reaction shall be ascertained during the initial consultation, before prescribing or at any point of time during care. It is a good practice to document drug allergies prominently in the medical record, both in OP and IP.
 
-### 5.4 The organisation has a mechanism to assist the clinician in prescribi...
+### 5.4 The organisation has a mechanism to assist the clinician in prescribing...
 
 Preview Hospital assists clinicians to prescribe the appropriate medication through «formulary access at the point of prescribing, dose-range information for high-risk drugs, and pharmacy clarification of unclear orders before dispensing».
 
@@ -104,7 +104,7 @@ Where the hospital uses e-prescribing or clinical decision support, that is the 
 
 Method note (from guidebook interpretation): The organisation needs to provide its clinicians with a mechanism(s) to help identify drug interactions, food-drug interactions, alcohol-drug interactions, therapeutic duplication, dose adjustments etc. This could either be in electronic or in the physical form.
 
-### 5.5 Reconciliation of medications occurs at transition points of patient ...
+### 5.5 Reconciliation of medications occurs at transition points of patient...
 
 Medication reconciliation is done at transition points: admission, transfer between units (including ICU to ward), and discharge.
 
@@ -114,7 +114,7 @@ Method note (from guidebook interpretation): The purpose of medication reconcili
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.6 Verbal orders are implemented by ensuring safe medication management ...
+### 5.6 Verbal orders are implemented by ensuring safe medication management...
 
 Verbal (including telephone) medication orders are used only when the prescriber cannot write or enter the order in time for safe care. The receiver writes the order, reads it back (drug, dose, route, frequency, patient), and the prescriber confirms.
 
@@ -134,7 +134,7 @@ The sample size is «at least 20 prescriptions per quarter, including emergency 
 
 Method note (from guidebook interpretation): The scope of the audit shall include: * legibility, use of capitals in written orders; * the appropriateness of the drug, dose, frequency, and route of administration; * the presence of therapeutic duplication; * the possibility of drug interaction and measures taken to avoid the same; * the possibility of food-drug interaction and measures taken to avoid the same. * scope for dosage adjustment in renal and hepatic impairment. * the possibility of intravenous incompatibility. * presence of inappropriate dilutions and duration of medications Infusions. * the requirements of this standard (MOM 4b, e-h). This shall be done at least once a month using a representative sample size. It could preferably be done by a clinical pharmacologist/clinical pharmacist. In case there is no clinical pharmacologist/clinical pharmacist, it could be done by a multidisciplinary committee/team, who is trained in audit of medication orders/ prescriptions. It is preferable that this is done for all prescriptions as ‘live audit’ before the medicines are dispensed.
 
-### 5.8 Corrective and / or preventive action(s) is taken based on the audit,...
+### 5.8 Corrective and / or preventive action(s) is taken based on the audit...
 
 When the prescription audit finds a gap, the «Drug and Therapeutics Committee» assigns corrective and / or preventive action with an owner and a due date. The «Medication Safety Officer» tracks closure.
 
@@ -174,14 +174,14 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE MOM.4.a–h.
-- Asterisked elements (abf) have document evidence as required.
-- CORE elements (bef) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event or recall.
 
@@ -246,57 +246,51 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### MOM.4.a — Medication prescription is in consonance with good practices / guidelines for rational prescription of medications.
 
-- Records showing MOM.4.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.4.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- DTC-named rational-prescribing reference (for example WHO/national essential-medicines principles, hospital antimicrobial policy).
+- Prescription-audit record sampled against this guidance.
+- Training record on rational prescribing.
 
 ### MOM.4.b — The organisation adheres to the determined minimum requirements of a prescription.
 
-- Records showing MOM.4.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.4.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Published minimum-prescription-requirement list — patient name/ID, generic name, route, strength, frequency, date/time, prescriber signature.
+- Pharmacy/nursing hold record for any order failing the minimum, except through the documented emergency path.
+- Sample-prescription record confirming the minimum was met.
 
 ### MOM.4.c — Drug allergies and previous adverse drug reactions are ascertained before prescribing.
 
-- Records showing MOM.4.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.4.c reviewed «quarterly».
+- Drug-allergy and previous-ADR ascertainment record before prescribing, including "none known" entries.
+- Red-alert allergy-band record where an allergy is recorded.
+- Allergy-status carry-forward record on admission and transfer notes.
 
 ### MOM.4.d — The organisation has a mechanism to assist the clinician in prescribing appropriate medication.
 
-- Records showing MOM.4.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.4.d reviewed «quarterly».
+- Prescribing-assistance mechanism record — formulary access, dose-range information, pharmacy clarification of unclear orders, or e-prescribing/CDS where used.
+- Record of orders clarified by pharmacy before dispensing.
+- Confirmation the mechanism is working, not a static poster.
 
 ### MOM.4.e — Reconciliation of medications occurs at transition points of patient care.
 
-- Records showing MOM.4.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.4.e reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Reconciled-medication-list record at admission, unit transfer and discharge.
+- Discrepancy-resolution record between the reconciling clinician and the prescriber.
+- Pharmacy support record for high-risk or polypharmacy reconciliations.
 
 ### MOM.4.f — Verbal orders are implemented by ensuring safe medication management practices.
 
-- Records showing MOM.4.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.4.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Verbal-order record showing read-back — drug, dose, route, frequency, patient — before administration.
+- Prescriber countersignature record within 24 hours, or before the next dose.
+- Confirmation verbal orders were not used for excluded categories except under the documented emergency rule.
 
 ### MOM.4.g — Audit of medication orders / prescription is carried out to check for safe and rational prescription of medications.
 
-- Records showing MOM.4.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.4.g reviewed «quarterly».
+- Quarterly prescription-audit record — minimum requirements, allergy documentation, formulary adherence, high-risk dose checks.
+- Sample-size record meeting the defined minimum per quarter.
+- DTC presentation record of audit results.
 
 ### MOM.4.h — Corrective and / or preventive action(s) is taken based on the audit, where appropriate.
 
-- Records showing MOM.4.h was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.4.h reviewed «quarterly».
+- CAPA record from audit findings with owner and due date.
+- Closure-tracking record by the Medication Safety Officer.
+- Example action record — prescriber feedback, guidance change, or training.
 
 ## Disclaimer
 

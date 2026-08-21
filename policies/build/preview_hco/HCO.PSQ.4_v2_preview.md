@@ -43,7 +43,7 @@ This policy applies to staff who deliver care, run quality or patient-safety wor
 
 It covers 4 objective elements (PSQ.4.a, PSQ.4.b, PSQ.4.c, PSQ.4.d).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -54,8 +54,8 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 ## 4. Non-negotiable rules
 
 1. Do not skip: The organisation undertakes quality improvement projects.
-2. Do not skip: The Quality improvement projects shall include improvements in patient care delivery and hospital operation...
-3. Do not skip: The organisation uses appropriate analytical managerial and statistical tools for its quality improvement a...
+2. Do not skip: The Quality improvement projects shall include improvements in patient care delivery and hospital operations...
+3. Do not skip: The organisation uses appropriate analytical managerial and statistical tools for its quality improvement...
 4. Do not skip: The organisation has a mechanism to capture patient reported outcome measures.
 5. Staff who see a PSQ.4 rule broken report it the same shift to the «department in-charge» or the «Patient Safety Officer» / «Quality Coordinator».
 
@@ -71,7 +71,7 @@ Method note (from guidebook interpretation): At a minimum, every year, the organ
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.2 The Quality improvement projects shall include improvements in patien...
+### 5.2 The Quality improvement projects shall include improvements in patient...
 
 Quality improvement projects are centred on the six domains of healthcare quality: patient safety, cost-effectiveness, patient-centredness, timeliness, efficiency and equity.
 
@@ -79,7 +79,7 @@ The register tags how each project maps to those domains, including improvements
 
 Method note (from guidebook interpretation): Quality improvement projects shall be centered on six domains of health care quality which include patient safety, cost effectiveness, patient centered, timeliness, efficiency and equity in healthcare.
 
-### 5.3 The organisation uses appropriate analytical managerial and statistic...
+### 5.3 The organisation uses appropriate analytical managerial and statistical...
 
 Projects use appropriate analytical, managerial and statistical tools (for example PDCA, run charts, Pareto, fishbone, 5-Why — the «Quality Improvement Committee» names the toolkit).
 
@@ -87,7 +87,7 @@ Project files show which tool was used and what it showed. A project that is onl
 
 Method note (from guidebook interpretation): Depending on the project, the organisation shall identify and use appropriate analytical tools. For example, root cause analysis, run chart, Es stratification diagram, normalisation table, flow chart, Pareto analysis, histogram etc. Depending on the project, the organisation shall identify and use appropriate statistical tools such as sampling, control chart, ANOVA, six sigma etc. Depending on the project, the organisation shall identify and use appropriate managerial tools. For example, Lean, Six Sigma, Plan Do Study Act (PDSA), Force Field Analysis, Affinity Diagram, Matrix Diagram, Tree Diagram, etc.
 
-### 5.4 The organisation has a mechanism to capture patient reported outcome ...
+### 5.4 The organisation has a mechanism to capture patient reported outcome...
 
 Preview Hospital has a mechanism to capture patient-reported outcome measures (PROM) for defined conditions or pathways the «Quality Improvement Committee» names.
 
@@ -116,14 +116,13 @@ Nursing Superintendent
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE PSQ.4.a–d.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (a) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related sentinel event, indicator failure cluster or failed clinical-audit cycle.
 
@@ -184,28 +183,27 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### PSQ.4.a — The organisation undertakes quality improvement projects.
 
-- Records showing PSQ.4.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.4.a reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Live quality-improvement project register with aim, owner, start date and status.
+- Evidence of at least two quality-improvement projects undertaken in the year.
+- Before/after measurement record for each project.
 
 ### PSQ.4.b — The Quality improvement projects shall include improvements in patient care delivery and hospital operations which will have an impact on cost and efficiency.
 
-- Records showing PSQ.4.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.4.b reviewed «quarterly».
+- Project register tagged against the six quality domains (patient safety, cost-effectiveness, patient-centredness, timeliness, efficiency, equity).
+- Completed-project evidence covering those domains over the review period.
+- Cost or efficiency impact record where applicable.
 
 ### PSQ.4.c — The organisation uses appropriate analytical managerial and statistical tools for its quality improvement activities.
 
-- Records showing PSQ.4.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.4.c reviewed «quarterly».
+- Project file showing the analytical, managerial or statistical tool used (for example PDCA, run chart, Pareto, fishbone, 5-Why).
+- Record of what the tool's output showed.
+- Confirmation the project is not a memo without a tool.
 
 ### PSQ.4.d — The organisation has a mechanism to capture patient reported outcome measures.
 
-- Records showing PSQ.4.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.4.d reviewed «quarterly».
+- Written patient-reported-outcome-measure collection method, frequency and defined conditions or pathways.
+- PROM data-collection record.
+- Record showing PROM results fed an improvement action.
 
 ## Disclaimer
 

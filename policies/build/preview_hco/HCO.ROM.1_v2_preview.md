@@ -43,7 +43,7 @@ This policy applies to those responsible for governance, the person heading the 
 
 It covers 9 objective elements (ROM.1.a, ROM.1.b, ROM.1.c, ROM.1.d, ROM.1.e, ROM.1.f, ROM.1.g, ROM.1.h, ROM.1.i).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,12 +53,12 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Those responsible for governance are identified and their roles and responsibilities are defined and docume...
+1. Do not skip: Those responsible for governance are identified and their roles and responsibilities are defined and...
 2. Do not skip: Those responsible for governance lay down the organisation’s vision, mission and values.
-3. Do not skip: Those responsible for governance approve the documented strategic and operational plans and the organisatio...
+3. Do not skip: Those responsible for governance approve the documented strategic and operational plans and the...
 4. Do not skip: Those responsible for governance monitor and measure the performance of the organisation against the stated...
 5. Do not skip: Those responsible for governance appoint the senior leaders in the organisation.
-6. Do not skip: Those responsible for governance support safety initiatives, clinical governance framework and quality impr...
+6. Do not skip: Those responsible for governance support safety initiatives, clinical governance framework and quality...
 7. Do not skip: Those responsible for governance shall develop clinical governance framework.
 8. Do not skip: Those responsible for governance support the ethical management framework of the organisation.
 9. Do not skip: Those responsible for governance inform the public of the quality and performance of services.
@@ -66,7 +66,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 Those responsible for governance are identified and their roles and r...
+### 5.1 Those responsible for governance are identified and their roles and...
 
 Preview Hospital identifies «those responsible for governance» by name and role (owner, partners, trustees, board, or the responsible ministry for a public hospital) and documents their roles and responsibilities.
 
@@ -78,7 +78,7 @@ This objective element is asterisked in the official Standards PDF — documenta
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.2 Those responsible for governance lay down the organisation’s vision, ...
+### 5.2 Those responsible for governance lay down the organisation’s vision...
 
 «those responsible for governance» lay down the organisation's vision, mission and values in writing. They are made public (display, website, induction pack as the organisation defines).
 
@@ -98,7 +98,7 @@ Method note (from guidebook interpretation): The methodology and frequency of pr
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.4 Those responsible for governance monitor and measure the performance ...
+### 5.4 Those responsible for governance monitor and measure the performance of...
 
 «those responsible for governance» monitor and measure organisational performance against the stated mission at a defined interval (default «quarterly» dashboard plus «annually» review).
 
@@ -106,7 +106,7 @@ Minutes record what was reviewed and any decision. The «Quality Coordinator» p
 
 Method note (from guidebook interpretation): The head of the organisation shall develop periodically (preferably quarterly) performance reports based on the strategic and operational plans. This shall include quality and patient safety parameters. Performance shall be discussed in the meeting of those responsible for governance, and action items are regularly followed up.
 
-### 5.5 Those responsible for governance appoint the senior leaders in the or...
+### 5.5 Those responsible for governance appoint the senior leaders in the...
 
 «those responsible for governance» appoint the senior leaders (including the person heading the organisation). Appointment letters, dates and reporting lines are on file with the «Medical Superintendent».
 
@@ -124,7 +124,7 @@ Method note (from guidebook interpretation): Reports of the safety and quality i
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.7 Those responsible for governance shall develop clinical governance fr...
+### 5.7 Those responsible for governance shall develop clinical governance...
 
 «those responsible for governance» develop a clinical-governance framework covering clinical audit, clinical pathways, education and research as they apply to this hospital's scope.
 
@@ -132,7 +132,7 @@ The framework is written, dated and owned by the «Medical Superintendent» with
 
 Method note (from guidebook interpretation): Clinical governance framework shall consist of patient safety, medication safety, clinical audits, clinical pathways, clinical indicators, education and research.
 
-### 5.8 Those responsible for governance support the ethical management frame...
+### 5.8 Those responsible for governance support the ethical management...
 
 «those responsible for governance» support the ethical-management framework (ROM.2): they receive ethics issues that reach governance, resource the framework, and minute decisions.
 
@@ -168,14 +168,14 @@ departmental leaders
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE ROM.1.a–i.
-- Asterisked elements (abcf) have document evidence as required.
-- CORE elements (a) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related governance change, statutory-register gap or outsourced-service failure.
 
@@ -239,62 +239,57 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### ROM.1.a — Those responsible for governance are identified and their roles and responsibilities are defined and documented.
 
-- Records showing ROM.1.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.1.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Named list of those responsible for governance, with each member's role and responsibility documented.
+- Governance resolution or minute formally identifying the list.
+- Dated record of the last review or update of the list.
 
 ### ROM.1.b — Those responsible for governance lay down the organisation’s vision, mission and values.
 
-- Records showing ROM.1.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.1.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Governance-approved vision, mission and values statement, with approval date.
+- Evidence of public display — photograph or location log, website page, or induction-pack copy.
+- Record of when the statement was last reviewed or reaffirmed.
 
 ### ROM.1.c — Those responsible for governance approve the documented strategic and operational plans and the organisation’s annual budget.
 
-- Records showing ROM.1.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.1.c reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Governance minutes approving the strategic plan, operational plan and annual budget before the cycle starts.
+- The approved strategic plan, operational plan and budget documents themselves.
+- Dated resolution or sign-off evidencing approval, not just circulation.
 
 ### ROM.1.d — Those responsible for governance monitor and measure the performance of the organisation against the stated mission.
 
-- Records showing ROM.1.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.1.d reviewed «quarterly».
+- Quarterly performance dashboard pack presented to governance.
+- Governance minutes recording what was reviewed and any decision taken.
+- Annual performance-review report measured against the stated mission.
 
 ### ROM.1.e — Those responsible for governance appoint the senior leaders in the organisation.
 
-- Records showing ROM.1.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.1.e reviewed «quarterly».
+- Appointment letters for senior leaders, including the person heading the organisation, with dates.
+- Governance minutes recording the appointment decision.
+- Current reporting-line document naming who each senior leader reports to.
 
 ### ROM.1.f — Those responsible for governance support safety initiatives, clinical governance framework and quality improvement plans.
 
-- Records showing ROM.1.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.1.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Governance minutes showing safety, clinical-governance or quality-improvement reports were received.
+- Budget line or resource allocation record supporting those initiatives.
+- Decisions recorded in minutes in response to those reports.
 
 ### ROM.1.g — Those responsible for governance shall develop clinical governance framework.
 
-- Records showing ROM.1.g was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.1.g reviewed «quarterly».
+- The written clinical-governance framework document (clinical audit, clinical pathways, education, research).
+- Dated approval record naming who owns the framework.
+- Evidence of periodic review or update of the framework.
 
 ### ROM.1.h — Those responsible for governance support the ethical management framework of the organisation.
 
-- Records showing ROM.1.h was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.1.h reviewed «quarterly».
+- Governance minutes showing an ethics issue was escalated to and considered by governance.
+- Resource allocation record supporting the ethical-management framework.
+- Decisions recorded on ethics matters raised.
 
 ### ROM.1.i — Those responsible for governance inform the public of the quality and performance of services.
 
-- Records showing ROM.1.i was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.1.i reviewed «quarterly».
+- Published quality/performance indicators, accreditation status, or the defined public-information set.
+- Dated samples of what was published (display photograph, website snapshot, or notice).
+- Record of the feedback channel offered to the public and how it is publicised.
 
 ## Disclaimer
 

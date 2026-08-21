@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.5 
 
 It covers 6 objective elements (COP.5.a, COP.5.b, COP.5.c, COP.5.d, COP.5.e, COP.5.f).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -53,7 +53,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 1. Do not skip: Cardio-pulmonary resuscitation services are available and provided to patients at all times.
 2. Do not skip: During cardio-pulmonary resuscitation, assigned roles and responsibilities are complied with.
-3. Do not skip: Medical equipment and medications for use during cardio-pulmonary resuscitation are available in various ar...
+3. Do not skip: Medical equipment and medications for use during cardio-pulmonary resuscitation are available in various...
 4. Do not skip: The events during cardio-pulmonary resuscitation are recorded.
 5. Do not skip: A multi-disciplinary committee does a post-event analysis of cardio- pulmonary resuscitations.
 6. Do not skip: Corrective and preventive measures are taken based on the post-event analysis.
@@ -68,13 +68,13 @@ Cardio-pulmonary resuscitation services are available and provided to patients a
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.2 During cardio-pulmonary resuscitation, assigned roles and responsibil..
+### 5.2 During cardio-pulmonary resuscitation, assigned roles and..
 
 During cardio-pulmonary resuscitation, assigned roles and responsibilities are complied with.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.3 Medical equipment and medications for use during cardio-pulmonary res..
+### 5.3 Medical equipment and medications for use during cardio-pulmonary..
 
 Medical equipment and medications for use during cardio-pulmonary resuscitation are available in various areas of the organisation.
 
@@ -86,13 +86,13 @@ The events during cardio-pulmonary resuscitation are recorded.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.5 A multi-disciplinary committee does a post-event analysis of cardio- ..
+### 5.5 A multi-disciplinary committee does a post-event analysis of cardio-..
 
 A multi-disciplinary committee does a post-event analysis of cardio- pulmonary resuscitations.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.6 Corrective and preventive measures are taken based on the post-event ..
+### 5.6 Corrective and preventive measures are taken based on the post-event..
 
 Corrective and preventive measures are taken based on the post-event analysis.
 
@@ -122,14 +122,12 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.5.a–f.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -187,39 +185,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.5.a — Cardio-pulmonary resuscitation services are available and provided to patients at all times.
 
-- Records showing COP.5.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.5.a reviewed «quarterly».
+- CPR-availability record across all areas and shifts.
+- Response-time record for a sampled call.
+- Trained-responder roster.
 
 ### COP.5.b — During cardio-pulmonary resuscitation, assigned roles and responsibilities are complied with.
 
-- Records showing COP.5.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.5.b reviewed «quarterly».
+- Written CPR-team role-assignment record.
+- Role-compliance observation or debrief record.
+- Team-composition record for a sampled event.
 
 ### COP.5.c — Medical equipment and medications for use during cardio-pulmonary resuscitation are available in various areas of the organisation.
 
-- Records showing COP.5.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.5.c reviewed «quarterly».
+- Crash-cart or emergency-equipment inventory by area.
+- Medication-stock record matching the emergency-medication list (MOM.3.f).
+- Availability-check record.
 
 ### COP.5.d — The events during cardio-pulmonary resuscitation are recorded.
 
-- Records showing COP.5.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.5.d reviewed «quarterly».
+- CPR event record — time, interventions, outcome.
+- Documentation-completeness check.
+- Record filed in the patient's medical record.
 
 ### COP.5.e — A multi-disciplinary committee does a post-event analysis of cardio- pulmonary resuscitations.
 
-- Records showing COP.5.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.5.e reviewed «quarterly».
+- Multi-disciplinary CPR-committee post-event analysis record.
+- Analysis-timeliness record.
+- Findings documentation.
 
 ### COP.5.f — Corrective and preventive measures are taken based on the post-event analysis.
 
-- Records showing COP.5.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.5.f reviewed «quarterly».
+- CAPA record from CPR post-event analysis, with owner and due date.
+- Closure-tracking record.
+- Repeat-event trend record.
 
 ## Disclaimer
 

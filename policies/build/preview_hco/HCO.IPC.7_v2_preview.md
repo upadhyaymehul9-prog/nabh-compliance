@@ -43,7 +43,7 @@ This policy applies to staff who deliver clinical care, run support services (ho
 
 It covers 5 objective elements (IPC.7.a, IPC.7.b, IPC.7.c, IPC.7.d, IPC.7.e).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -54,7 +54,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 ## 4. Non-negotiable rules
 
 1. Do not skip: The organisation provides adequate space and appropriate zoning for sterilisation activities.
-2. Do not skip: Cleaning, packing, disinfection and / or sterilisation, storing and the issue of items is done as per the w...
+2. Do not skip: Cleaning, packing, disinfection and / or sterilisation, storing and the issue of items is done as per the...
 3. Do not skip: Reprocessing of instruments, equipment and devices are done as per written guidance.
 4. Do not skip: Regular validation tests for sterilisation are carried out and documented.
 5. Do not skip: The established recall procedure is implemented when a breakdown in the sterilisation system is identified.
@@ -63,7 +63,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 The organisation provides adequate space and appropriate zoning for s...
+### 5.1 The organisation provides adequate space and appropriate zoning for...
 
 CSSD (or the sterilisation area the organisation uses) has adequate space and zoning: dirty, clean, sterile, with a one-way flow and a suitable location away from traffic that would contaminate packs.
 
@@ -71,7 +71,7 @@ The «CSSD In-Charge» and the «Infection Prevention and Control Officer» walk
 
 Method note (from guidebook interpretation): Adequacy of space refers to the central sterile services department (CSSD), which shall have a suitable location, proper layout (unidirectional flow, zoning) and separation of clean and dirty areas. Sufficient space shall be available to ensure that the activities can be performed properly. It is preferable to have separate areas for receiving, washing, cleaning, packing, sterilisation, sterile storage and issue. A good reference is Hospital Infection Society India (HIS!) and WHO guidelines. HB cone.
 
-### 5.2 Cleaning, packing, disinfection and / or sterilisation, storing and t...
+### 5.2 Cleaning, packing, disinfection and / or sterilisation, storing and the...
 
 Cleaning, packing, disinfection and/or sterilisation, storage and issue follow written guidance aligned with national/international references (CDC guideline for disinfection and sterilisation is a named Guidebook example).
 
@@ -83,7 +83,7 @@ This objective element is asterisked in the official Standards PDF — documenta
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.3 Reprocessing of instruments, equipment and devices are done as per wr...
+### 5.3 Reprocessing of instruments, equipment and devices are done as per...
 
 Instruments, equipment and devices suitable for re-use are identified. The number of re-uses (where limited) and the reprocessing method for each class are in written guidance.
 
@@ -93,7 +93,7 @@ Method note (from guidebook interpretation): The organisation identifies instrum
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.4 Regular validation tests for sterilisation are carried out and docume...
+### 5.4 Regular validation tests for sterilisation are carried out and...
 
 Validation tests for sterilisation are done and documented: physical/chemical indicators each load (at least daily physical/chemical as the Guidebook states) and biologic indicators on the defined schedule.
 
@@ -103,7 +103,7 @@ Method note (from guidebook interpretation): This shall be done by accepted meth
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.5 The established recall procedure is implemented when a breakdown in t...
+### 5.5 The established recall procedure is implemented when a breakdown in the...
 
 When a sterilisation breakdown is identified, the recall procedure is implemented: stop issue, retrieve items from that load/machine (batch, date, machine number), notify users, and reprocess or discard.
 
@@ -141,14 +141,14 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE IPC.7.a–e.
-- Asterisked elements (bcde) have document evidence as required.
-- CORE elements (b) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related outbreak, sterilisation failure or exposure cluster.
 
@@ -217,38 +217,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### IPC.7.a — The organisation provides adequate space and appropriate zoning for sterilisation activities.
 
-- Records showing IPC.7.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.7.a reviewed «quarterly».
+- CSSD or sterilisation-area zoning plan — dirty, clean, sterile, with one-way flow.
+- Quarterly zoning walk-round record by the CSSD In-Charge and IPC Officer.
+- Corrective record for any dirty/sterile mixing found.
 
 ### IPC.7.b — Cleaning, packing, disinfection and / or sterilisation, storing and the issue of items is done as per the written guidance.
 
-- Records showing IPC.7.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.7.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Written guidance for cleaning, packing, disinfection/sterilisation, storage and issue, aligned with a named reference (for example the CDC disinfection and sterilisation guideline).
+- Issue log confirming items were processed per that guidance before release.
+- Escalation record for any item issued outside the guidance.
 
 ### IPC.7.c — Reprocessing of instruments, equipment and devices are done as per written guidance.
 
-- Records showing IPC.7.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.7.c reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written reprocessing guidance per instrument or device class, including the permitted re-use count where limited.
+- Single-use-item reprocessing risk-assessment record, where applicable.
+- CSSD In-Charge's current reprocessing list.
 
 ### IPC.7.d — Regular validation tests for sterilisation are carried out and documented.
 
-- Records showing IPC.7.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.7.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Daily physical or chemical indicator record per load.
+- Biological-indicator record on the defined schedule.
+- Failed-validation hold record confirming the load was not issued.
 
 ### IPC.7.e — The established recall procedure is implemented when a breakdown in the sterilisation system is identified.
 
-- Records showing IPC.7.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.7.e reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written recall procedure — stop issue, retrieve by batch/date/machine, notify users, reprocess or discard.
+- Annual mock-recall record.
+- Escalation record for any issue attempted during an active recall.
 
 ## Disclaimer
 

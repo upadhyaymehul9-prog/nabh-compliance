@@ -15,6 +15,41 @@ VERSION = "2.0"
 PROGRAMME = "HCO Full Accreditation, 6th Edition"
 
 
+def hco_boundaries_clause(other_chapters: list[str]) -> str:
+    """Reader-facing HCO-chapter-boundary sentence.
+
+    HCO-only — never mentions SHCO. An HCO reader has never heard of SHCO
+    (a different NABH programme); an internal drafting instruction not to
+    copy SHCO wording has no business in a hospital-facing policy. Lists
+    only the other HCO chapters this policy must not overwrite.
+    """
+    if not other_chapters:
+        return (
+            "Boundaries: this is the first HCO chapter drafted; there are no "
+            "other HCO policies to cross-reference yet."
+        )
+    if len(other_chapters) == 1:
+        joined = other_chapters[0]
+    else:
+        joined = ", ".join(other_chapters[:-1]) + f" or {other_chapters[-1]}"
+    return f"Boundaries: do not overwrite HCO {joined} policies."
+
+
+def truncate_word_safe(text: str, limit: int) -> str:
+    """Cut `text` to at most `limit` characters without breaking mid-word.
+
+    Returns `text` unchanged if it already fits. Cuts at the last space at
+    or before `limit`, so a heading never ends mid-word (e.g. "...superv").
+    """
+    if len(text) <= limit:
+        return text
+    cut = text[:limit]
+    last_space = cut.rfind(" ")
+    if last_space > 0:
+        cut = cut[:last_space]
+    return cut.rstrip(" ,;:") + "..."
+
+
 def hco_document_control(*, doc_no: str, prepared_by: str) -> str:
     """Document-control block with explicit HCO draft label and no leftover phrase."""
     return f"""Document number: {doc_no}
@@ -121,6 +156,8 @@ __all__ = [
     "VERSION",
     "PROGRAMME",
     "hco_document_control",
+    "hco_boundaries_clause",
+    "truncate_word_safe",
     "STOP_WORK_PROPOSALS",
     "stop_work_text",
 ]

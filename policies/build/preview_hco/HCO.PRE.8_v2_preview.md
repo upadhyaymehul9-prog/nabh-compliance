@@ -43,7 +43,7 @@ This policy applies to staff who register, admit, treat, counsel, bill, take con
 
 It covers 5 objective elements (PRE.8.a, PRE.8.b, PRE.8.c, PRE.8.d, PRE.8.e).
 
-Boundaries: do not copy SHCO PRE wording. Do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -54,7 +54,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 ## 4. Non-negotiable rules
 
 1. Do not skip: Communication with the patients and / or families is done effectively.
-2. Do not skip: The organisation shall identify special situations where enhanced communication with patients and / or fami...
+2. Do not skip: The organisation shall identify special situations where enhanced communication with patients and / or...
 3. Do not skip: Enhanced communication with the patients and/or families is done effectively.
 4. Do not skip: The organisation ensures that there is no unacceptable communication.
 5. Do not skip: The organisation has a system to monitor and review the implementation of effective communication.
@@ -72,7 +72,7 @@ Method note (from guidebook interpretation): Communication is considered to be e
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.2 The organisation shall identify special situations where enhanced com...
+### 5.2 The organisation shall identify special situations where enhanced...
 
 The «Medical Superintendent» keeps a written list of special situations that need enhanced communication: breaking bad news, handling adverse events, an aggressive patient or family, talking with the family after a death, counselling for a complicated intervention, and others this hospital adds.
 
@@ -82,7 +82,7 @@ Method note (from guidebook interpretation): Some of these situations could incl
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.3 Enhanced communication with the patients and/or families is done effe...
+### 5.3 Enhanced communication with the patients and/or families is done...
 
 For each listed special situation, the organisation details the enhanced communication required. Breaking bad news uses SPIKES (Setting, Perception, Invitation or information, Knowledge, Empathy, Summarize or strategize) or another named model the «Medical Superintendent» adopts.
 
@@ -100,7 +100,7 @@ The «Medical Superintendent» acts on a confirmed breach the same as any other 
 
 Method note (from guidebook interpretation): The organisation shall not allow unacceptable communication. For example, abusing patients, hurting the religious or cultural sentiments, communicating with disrespect, etc. HM.
 
-### 5.5 The organisation has a system to monitor and review the implementatio...
+### 5.5 The organisation has a system to monitor and review the implementation...
 
 Implementation of effective communication is monitored and reviewed through patient and stakeholder feedback and complaints (PRE.7) and through «quarterly» observation or record sample by the «Quality Coordinator».
 
@@ -125,14 +125,13 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE PRE.8.a–e.
-- Asterisked elements (abc) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related rights incident, consent failure or complaint cluster.
 
@@ -194,36 +193,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### PRE.8.a — Communication with the patients and / or families is done effectively.
 
-- Records showing PRE.8.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.8.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Communication-training record at induction and annually.
+- Barrier-identification and interpreter-arrangement record — language, hearing, literacy.
+- Observed-practice record confirming effective communication, not training alone.
 
 ### PRE.8.b — The organisation shall identify special situations where enhanced communication with patients and / or families would be required.
 
-- Records showing PRE.8.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.8.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written list of special situations needing enhanced communication — breaking bad news, adverse events, aggressive patient or family, death, complicated-intervention counselling.
+- Training-pack record covering the list.
+- Staff-awareness record for emergency, ICU, OT and ward staff.
 
 ### PRE.8.c — Enhanced communication with the patients and/or families is done effectively.
 
-- Records showing PRE.8.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.8.c reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Enhanced-communication model record (for example SPIKES) adopted for breaking bad news.
+- Note confirming the enhanced-communication conversation happened for a sampled case.
+- Treating-doctor-led, nursing-supported record.
 
 ### PRE.8.d — The organisation ensures that there is no unacceptable communication.
 
-- Records showing PRE.8.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.8.d reviewed «quarterly».
+- Conduct-incident record for any unacceptable communication — abuse, disrespect, cultural or religious insult.
+- Action-taken record by the Medical Superintendent for a confirmed breach.
+- Training-example record so staff can recognise the line.
 
 ### PRE.8.e — The organisation has a system to monitor and review the implementation of effective communication.
 
-- Records showing PRE.8.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.8.e reviewed «quarterly».
+- Quarterly observation or record-sample review by the Quality Coordinator.
+- Findings record reported to the Medical Superintendent.
+- Action-taken record when a communication failure was found.
 
 ## Disclaimer
 

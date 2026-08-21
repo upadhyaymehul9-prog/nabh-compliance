@@ -43,7 +43,7 @@ This policy applies to human resources, nursing, medical, and departmental leade
 
 It covers 6 objective elements (HRM.12.a, HRM.12.b, HRM.12.c, HRM.12.d, HRM.12.e, HRM.12.f).
 
-Boundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
 
 ## 3. Policy standards
 
@@ -56,15 +56,15 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 1. Do not skip: Nursing staff permitted by law, regulation and the organisation to provide patient care without supervision...
 2. Do not skip: The education, registration, training and experience of nursing staff are documented and updated periodically.
 3. Do not skip: The information about the nursing staff is appropriately verified when possible.
-4. Do not skip: Nursing staff are granted privileges in consonance with their qualification, training, experience and regis...
-5. Do not skip: The requisite services to be provided by the nursing staff are known to them as well as the concerned depar...
+4. Do not skip: Nursing staff are granted privileges in consonance with their qualification, training, experience and...
+5. Do not skip: The requisite services to be provided by the nursing staff are known to them as well as the concerned...
 6. Do not skip: Nursing professionals care for patients as per their privileging.
 7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
 8. Staff who see a HRM.12 rule broken report it the same shift to the «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
 
 ## 5. What we do
 
-### 5.1 Nursing staff permitted by law, regulation and the organisation to pr...
+### 5.1 Nursing staff permitted by law, regulation and the organisation to...
 
 Preview Hospital identifies nursing staff permitted by law, regulation and the organisation to provide patient care without supervision — individuals with the required qualification(s), training and experience, in consonance with the law (Indian Nursing Council Act, 1947). Providing unsupervised care outside this identified list is a stop-work trigger (section 6). This is a CORE element.
 
@@ -78,13 +78,13 @@ The education, registration, training and experience of nursing staff at Preview
 
 Method note (from guidebook interpretation): Update is done after the acquisition of new skills and/or qualification.
 
-### 5.3 The information about the nursing staff is appropriately verified whe...
+### 5.3 The information about the nursing staff is appropriately verified when...
 
 Information about nursing staff at Preview Hospital is appropriately verified when possible, by checking with the organisation that awarded the qualification or training.
 
 Method note (from guidebook interpretation): The organisation shall do the same by verifying the credentials from the organisation which has awarded the qualification/training. Refer to HRM.12.b.
 
-### 5.4 Nursing staff are granted privileges in consonance with their qualifi...
+### 5.4 Nursing staff are granted privileges in consonance with their...
 
 Preview Hospital grants nursing staff privileges in consonance with their qualification, training, experience and registration — identifying what each nurse is authorised to do (for example, an infection-prevention-and-control nurse needs the requisite in-house or external training, experience, aptitude and knowledge for that role). Privileges are reviewed at least «annually» and revised where necessary. Granting or exercising privileges outside this record is a stop-work trigger (section 6). This is a CORE element.
 
@@ -92,7 +92,7 @@ Method note (from guidebook interpretation): The organisation shall identify as 
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.5 The requisite services to be provided by the nursing staff are known ...
+### 5.5 The requisite services to be provided by the nursing staff are known to...
 
 The requisite services a nursing professional at Preview Hospital is authorised to provide are known to that professional, to nursing services and to the concerned departments, communicated internally.
 
@@ -128,14 +128,13 @@ departmental leaders
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE HRM.12.a–f.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (ad) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.
 
@@ -202,41 +201,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### HRM.12.a — Nursing staff permitted by law, regulation and the organisation to provide patient care without supervision are identified.
 
-- Records showing HRM.12.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.12.a reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Identified-nursing-professional list permitted to provide unsupervised patient care.
+- Qualification, training and experience verification record, referencing the Indian Nursing Council Act, 1947.
+- Cross-reference to the HRM.12 stop-work trigger for unlisted practice.
 
 ### HRM.12.b — The education, registration, training and experience of nursing staff are documented and updated periodically.
 
-- Records showing HRM.12.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.12.b reviewed «quarterly».
+- Education, registration, training and experience documentation record, updated periodically.
+- Personal-file record of the update.
+- New-qualification acquisition update record.
 
 ### HRM.12.c — The information about the nursing staff is appropriately verified when possible.
 
-- Records showing HRM.12.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.12.c reviewed «quarterly».
+- Verification record with the awarding organisation.
+- Verification-completeness record.
+- Cross-reference to HRM.12.b.
 
 ### HRM.12.d — Nursing staff are granted privileges in consonance with their qualification, training, experience and registration.
 
-- Records showing HRM.12.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.12.d reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Granted-privilege record naming what each nurse is authorised to do.
+- Annual privilege-review record.
+- Cross-reference to the HRM.12 stop-work trigger for privileging outside this record.
 
 ### HRM.12.e — The requisite services to be provided by the nursing staff are known to them as well as the concerned departments / units of the organisation.
 
-- Records showing HRM.12.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.12.e reviewed «quarterly».
+- Communicated-service record to the nurse and to nursing services and concerned departments.
+- Internal-communication record.
+- Confirmation record of awareness.
 
 ### HRM.12.f — Nursing professionals care for patients as per their privileging.
 
-- Records showing HRM.12.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.12.f reviewed «quarterly».
+- Supervision record for new staff until independent privileges are granted.
+- Mechanism-confirmation record that nurses provide only privileged services.
+- Privileging-compliance spot-check record.
 
 ## Disclaimer
 

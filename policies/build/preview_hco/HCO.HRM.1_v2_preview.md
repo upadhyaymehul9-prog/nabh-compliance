@@ -43,7 +43,7 @@ This policy applies to human resources, nursing, medical, and departmental leade
 
 It covers 7 objective elements (HRM.1.a, HRM.1.b, HRM.1.c, HRM.1.d, HRM.1.e, HRM.1.f, HRM.1.g).
 
-Boundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
 
 ## 3. Policy standards
 
@@ -53,9 +53,9 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Human resource planning supports the organisation’s current and future ability to meet the care, treatment ...
-2. Do not skip: The organisation maintains an adequate number and mix of staff to meet the care, treatment and service need...
-3. Do not skip: The organisation has contingency plans to manage long and short-term workforce shortages, including unplann...
+1. Do not skip: Human resource planning supports the organisation’s current and future ability to meet the care, treatment...
+2. Do not skip: The organisation maintains an adequate number and mix of staff to meet the care, treatment and service needs...
+3. Do not skip: The organisation has contingency plans to manage long and short-term workforce shortages, including unplanned...
 4. Do not skip: The job specification and job description are defined for each category of staff.
 5. Do not skip: The organisation performs a background check of new staff.
 6. Do not skip: Reporting relationships are defined for each category of staff.
@@ -64,7 +64,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 Human resource planning supports the organisation’s current and futur...
+### 5.1 Human resource planning supports the organisation’s current and future...
 
 Human resource planning at Preview Hospital supports the organisation's current and future ability to meet the care, treatment and service needs of the patient. The «HR In-Charge / Personnel Officer» prepares a workforce plan «annually» that compares current staff numbers and skill mix against the hospital's mission, patient volume and mix, services offered and medical technology in use, with input from department heads and other stakeholders.
 
@@ -72,7 +72,7 @@ Recognised methods are used to set staffing levels against the strategic and ope
 
 Method note (from guidebook interpretation): Human resource planning shall be done in a structured manner for all categories of staff keeping in mind the hospital's mission, volume and mix of patients, services, and medical technology. This is done with the involvement of various stakeholders. It shall use recognised methods for determining levels of staffing to match the strategic and operational plan of the organisation. Where appropriate, corrective action is taken on variances found during the year and shall be incorporated in the subsequent plan.
 
-### 5.2 The organisation maintains an adequate number and mix of staff to mee...
+### 5.2 The organisation maintains an adequate number and mix of staff to meet...
 
 Preview Hospital maintains an adequate number and mix of staff to meet the care, treatment and service needs of the patient, commensurate with workload and clinical requirement. Nursing staffing follows published guidelines (the WHO Workload Indicators of Staffing Need — WISN — method is a recognised reference).
 
@@ -84,7 +84,7 @@ This objective element is asterisked in the official Standards PDF — documenta
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.3 The organisation has contingency plans to manage long and short-term ...
+### 5.3 The organisation has contingency plans to manage long and short-term...
 
 Preview Hospital has contingency plans to manage long- and short-term workforce shortages, including unplanned shortages (a shift-by-shift gap, a short-term crisis or a sustained long-term shortfall). The plan may include reprioritising tasks, reallocating tasks across available staff, and drawing on a pool of filler staff — previous employees and agency-sourced casual staff are named by the Guidebook as a typical source.
 
@@ -92,7 +92,7 @@ Each shortage event is logged with cause, measure used and outcome. The plan is 
 
 Method note (from guidebook interpretation): At various times, the mix of skills required for the organisation to function at peak efficiency may not be immediately available due to workforce shortages, which can occur on a shift-by-shift, short-term or long-term basis. Existing staff crises can be managed using a contingency plan, which may include strategies such as reprioritising tasks, allocating tasks to different staff members, and relying on a pool of filler staff, which may consist predominantly of previous employees and casual staff sourced from agencies.
 
-### 5.4 The job specification and job description are defined for each catego...
+### 5.4 The job specification and job description are defined for each category...
 
 The job specification and job description are defined for each category of staff at Preview Hospital, including full-time, part-time, employed, honorary, voluntary and temporary staff. Each job description lays down the content of the job and the qualifications, skills and experience required, commensurate with the qualification set for that role.
 
@@ -118,7 +118,7 @@ Method note (from guidebook interpretation): The organisation shall document thi
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.7 Exit interviews are conducted and used as a tool to improve human res...
+### 5.7 Exit interviews are conducted and used as a tool to improve human...
 
 Preview Hospital conducts exit interviews and uses them as a tool to improve human resource practices. A personal interview is the default method; the exercise is voluntary for the departing staff member.
 
@@ -142,14 +142,14 @@ departmental leaders
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE HRM.1.a–g.
-- Asterisked elements (bf) have document evidence as required.
-- CORE elements (b) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.
 
@@ -217,48 +217,45 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### HRM.1.a — Human resource planning supports the organisation’s current and future ability to meet the care, treatment and service needs of the patient.
 
-- Records showing HRM.1.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.1.a reviewed «quarterly».
+- Annual workforce plan comparing current and projected staffing against services and patient volume.
+- Department-head input record into the plan.
+- Corrective-action record for a variance found during the year.
 
 ### HRM.1.b — The organisation maintains an adequate number and mix of staff to meet the care, treatment and service needs of the patient.
 
-- Records showing HRM.1.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.1.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Sanctioned-versus-actual staffing comparison record by department.
+- Staffing-norm reference used (for example the WHO WISN method for nursing).
+- Escalation record for an unresolved shortfall.
 
 ### HRM.1.c — The organisation has contingency plans to manage long and short-term workforce shortages, including unplanned shortages.
 
-- Records showing HRM.1.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.1.c reviewed «quarterly».
+- Written contingency plan for long- and short-term workforce shortages, including unplanned shortages.
+- Shortage-event log with cause, measure used and outcome.
+- Test record of the contingency plan, at least twice a year.
 
 ### HRM.1.d — The job specification and job description are defined for each category of staff.
 
-- Records showing HRM.1.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.1.d reviewed «quarterly».
+- Job description on file for each staff category, including qualification, skill and experience requirements.
+- Signed acknowledgement record from a new hire receiving their job description.
+- Minimum-qualification exemption record, where applicable.
 
 ### HRM.1.e — The organisation performs a background check of new staff.
 
-- Records showing HRM.1.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.1.e reviewed «quarterly».
+- Background-check register recording method, date and outcome per new hire.
+- Completion record before or within one month of joining.
+- Escalation record for any staff member with no background check on file.
 
 ### HRM.1.f — Reporting relationships are defined for each category of staff.
 
-- Records showing HRM.1.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.1.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Current organisation structure or chart showing hierarchy and reporting lines.
+- Department- or service-level reporting-relationship record.
+- Dissemination record to stakeholders.
 
 ### HRM.1.g — Exit interviews are conducted and used as a tool to improve human resource practices.
 
-- Records showing HRM.1.g was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.1.g reviewed «quarterly».
+- Completed exit-interview record for a departing staff member.
+- Quarterly trend report compiled from exit interviews.
+- HR-improvement action record from exit-interview findings.
 
 ## Disclaimer
 

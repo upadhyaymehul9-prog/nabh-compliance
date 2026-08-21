@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 7 objective elements (MOM.3.a, MOM.3.b, MOM.3.c, MOM.3.d, MOM.3.e, MOM.3.f, MOM.3.g).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,11 +53,11 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Medications are stored in a clean, safe and secure environment while incorporating the manufacturer's recom...
+1. Do not skip: Medications are stored in a clean, safe and secure environment while incorporating the manufacturer's...
 2. Do not skip: Sound inventory control practices guide the storage of medications throughout the organisation.
 3. Do not skip: The organisation defines and updates its list of high-risk medication(s).
 4. Do not skip: High-risk medications are stored in areas of the organisation where it is clinically necessary.
-5. Do not skip: High-risk medications including look-alike, sound-alike medications and different concentrations of the sam...
+5. Do not skip: High-risk medications including look-alike, sound-alike medications and different concentrations of the same...
 6. Do not skip: The list of emergency medications is defined and is stored uniformly.
 7. Do not skip: Emergency medications are available all the time and are replenished promptly when used.
 8. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
@@ -65,7 +65,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 Medications are stored in a clean, safe and secure environment while ...
+### 5.1 Medications are stored in a clean, safe and secure environment while...
 
 Pharmacy and every floor-stock location store medications in a clean, safe and secure area. Manufacturer recommendations for temperature, light, humidity and reconstitution are followed. Refrigerated items go in a dedicated medicines refrigerator with a recorded temperature «twice daily»; excursions are reported to pharmacy the same shift.
 
@@ -77,7 +77,7 @@ Method note (from guidebook interpretation): The medication storage space shall 
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.2 Sound inventory control practices guide the storage of medications th...
+### 5.2 Sound inventory control practices guide the storage of medications...
 
 Inventory control at Preview Hospital uses «FEFO (first expiry, first out), defined maximum–minimum levels, and a documented indent cycle». Pharmacy reviews expiry and slow-moving stock «monthly». Floor-stock lists are authorised by the «Drug and Therapeutics Committee»; unofficial hoarding in clinical areas is removed.
 
@@ -97,7 +97,7 @@ This objective element is asterisked in the official Standards PDF — documenta
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.4 High-risk medications are stored in areas of the organisation where i...
+### 5.4 High-risk medications are stored in areas of the organisation where it...
 
 High-risk medications are stored only where they are clinically necessary — for example concentrated electrolytes in ICU/OT as the committee defines, not in every ward cupboard.
 
@@ -105,7 +105,7 @@ The «Drug and Therapeutics Committee» names those locations. Pharmacy does not
 
 Method note (from guidebook interpretation): High-risk medications are stored in pre-determined areas of the organisation for example, certain wards, OT, ICU. Clinical needs shall determine the availability of relevant high-risk drugs in such areas. Where applicable, (narcotics), it shall be guided by regulations. In all such areas, safeguards shall be in place to prevent inadvertent administration. a Commitment SS Achievement = Excellence.
 
-### 5.5 High-risk medications including look-alike, sound-alike medications a...
+### 5.5 High-risk medications including look-alike, sound-alike medications and...
 
 Look-alike and sound-alike medications, and different concentrations of the same medication, are stored physically apart — separate bins or shelves, with tall-man lettering or equivalent differentiation where the organisation uses it.
 
@@ -127,7 +127,7 @@ Method note (from guidebook interpretation): The list of emergency medications s
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.7 Emergency medications are available all the time and are replenished ...
+### 5.7 Emergency medications are available all the time and are replenished...
 
 Emergency medications are present 24 hours a day at every defined location. After use, the item is replenished «immediately from pharmacy, and in any case before the trolley is returned to service».
 
@@ -169,14 +169,14 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE MOM.3.a–g.
-- Asterisked elements (cef) have document evidence as required.
-- CORE elements (aceg) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event or recall.
 
@@ -240,52 +240,45 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### MOM.3.a — Medications are stored in a clean, safe and secure environment while incorporating the manufacturer's recommendation(s).
 
-- Records showing MOM.3.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.3.a reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Storage-condition record (temperature, light, humidity) against manufacturer recommendation.
+- Twice-daily refrigerator-temperature log with excursion-reporting record.
+- Access-control record for the main pharmacy and controlled-drug cupboards.
 
 ### MOM.3.b — Sound inventory control practices guide the storage of medications throughout the organisation.
 
-- Records showing MOM.3.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.3.b reviewed «quarterly».
+- Documented inventory-control method — FEFO, maximum/minimum levels, indent cycle.
+- Monthly expiry and slow-moving-stock review record.
+- Stock-movement traceability record from receipt to issue for a sampled item.
 
 ### MOM.3.c — The organisation defines and updates its list of high-risk medication(s).
 
-- Records showing MOM.3.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.3.c reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Current DTC-defined high-risk medication list, updated at least annually and after a related incident.
+- Posted-list record at pharmacy and every location storing high-risk items.
+- Staff training record on the high-risk list.
 
 ### MOM.3.d — High-risk medications are stored in areas of the organisation where it is clinically necessary.
 
-- Records showing MOM.3.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.3.d reviewed «quarterly».
+- DTC record naming locations where each high-risk medication is clinically necessary.
+- Pharmacy issue record confirming no high-risk floor stock went to an unlisted area.
+- Walk-round record matching the location list to actual storage.
 
 ### MOM.3.e — High-risk medications including look-alike, sound-alike medications and different concentrations of the same medication are stored physically apart from each other.
 
-- Records showing MOM.3.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.3.e reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Physical-separation record for LASA items and different concentrations — separate bins/shelves, tall-man lettering where used.
+- Monthly storage-round check record by the Pharmacy In-Charge.
+- Escalation record for any LASA pair or concentration found stored together.
 
 ### MOM.3.f — The list of emergency medications is defined and is stored uniformly.
 
-- Records showing MOM.3.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.3.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- DTC-defined emergency-medication list with uniform layout across crash carts and trolleys.
+- Sealed or checklist-controlled trolley-inventory record.
+- Nursing Superintendent and Pharmacy In-Charge layout-agreement record.
 
 ### MOM.3.g — Emergency medications are available all the time and are replenished promptly when used.
 
-- Records showing MOM.3.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.3.g reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Twenty-four-hour availability confirmation record for emergency medications at every defined location.
+- Immediate-replenishment log after use, before the trolley returns to service.
+- Each-shift nursing check record against the emergency-medication list.
 
 ## Disclaimer
 

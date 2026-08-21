@@ -43,7 +43,7 @@ This policy applies to staff who deliver care, run quality or patient-safety wor
 
 It covers 6 objective elements (PSQ.5.a, PSQ.5.b, PSQ.5.c, PSQ.5.d, PSQ.5.e, PSQ.5.f).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -132,14 +132,12 @@ Nursing Superintendent
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE PSQ.5.a–f.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related sentinel event, indicator failure cluster or failed clinical-audit cycle.
 
@@ -202,39 +200,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### PSQ.5.a — Clinical audits are performed to improve the quality of patient care.
 
-- Records showing PSQ.5.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.5.a reviewed «quarterly».
+- Clinical-audit calendar with at least one audit per clinical department once in two years.
+- Completed audit report on file.
+- Topic record — disease-based, cost-based, community-based or morbidity-based.
 
 ### PSQ.5.b — The parameters to be audited are defined by the organisation.
 
-- Records showing PSQ.5.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.5.b reviewed «quarterly».
+- Written pre-audit parameter document: objectives, standards/criteria, sample, period and exclusions.
+- Sign-off record between the audit lead and the Quality Coordinator.
+- Record of any audit restarted for missing predefined parameters.
 
 ### PSQ.5.c — Medical and nursing staff participate in clinical audit.
 
-- Records showing PSQ.5.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.5.c reviewed «quarterly».
+- Attendance and role record for medical and nursing staff in each audit.
+- Audit-lead or data-collector assignment record.
+- Confirmation clinical participation occurred, not a quality-office-only audit.
 
 ### PSQ.5.d — Patient and staff anonymity are maintained.
 
-- Records showing PSQ.5.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.5.d reviewed «quarterly».
+- De-identified or coded audit report and presentation.
+- Key-holder record showing the identifier key is held separately by the Quality Coordinator.
+- Confirmation open-meeting materials do not name patients or staff.
 
 ### PSQ.5.e — Clinical audits are documented.
 
-- Records showing PSQ.5.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.5.e reviewed «quarterly».
+- Complete audit pack: protocol/parameters, data, findings, recommendations, attendees and date.
+- Filed record with the Quality Coordinator.
+- Confirmation no undocumented verbal audit was treated as complete.
 
 ### PSQ.5.f — Remedial measures are implemented.
 
-- Records showing PSQ.5.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.5.f reviewed «quarterly».
+- Recommendation-tracking log with owner and due date per audit finding.
+- Later-check record confirming the remedy was actually done.
+- Quality Improvement Committee open-action review record.
 
 ## Disclaimer
 

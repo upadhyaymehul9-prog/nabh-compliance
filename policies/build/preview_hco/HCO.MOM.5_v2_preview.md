@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 4 objective elements (MOM.5.a, MOM.5.b, MOM.5.c, MOM.5.d).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -54,9 +54,9 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 ## 4. Non-negotiable rules
 
 1. Do not skip: The organisation ensures that only authorised personnel write orders.
-2. Do not skip: Medication orders are written in a uniform location in the medical records, which also include the patient'...
+2. Do not skip: Medication orders are written in a uniform location in the medical records, which also include the patient's...
 3. Do not skip: Medication orders are legible, dated, timed and signed.
-4. Do not skip: Medication orders contain the name of the medicine, route of administration, strength to be administered an...
+4. Do not skip: Medication orders contain the name of the medicine, route of administration, strength to be administered and...
 5. Staff who see a MOM.5 rule broken report it the same shift to the «department in-charge» or the «Medication Safety Officer».
 
 ## 5. What we do
@@ -71,7 +71,7 @@ Method note (from guidebook interpretation): Medication orders shall be written 
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.2 Medication orders are written in a uniform location in the medical re...
+### 5.2 Medication orders are written in a uniform location in the medical...
 
 Medication orders are written in one uniform location in the medical record — «the medication chart / order sheet» — which already shows the patient's name and unique identification number on that sheet.
 
@@ -87,7 +87,7 @@ Late entries follow the medical-record rules (timed, marked as late). Pharmacy a
 
 Method note (from guidebook interpretation): All hand-written medication orders shall be written in capital letters. In case abbreviations are used, a list of approved standardised abbreviations for medication orders shall be used throughout the organisation, Error-prone abbreviations shall not be used. A good reference is the Institute for Safe Medication Practices guidelines. The identity of the person who has written the medication order shall be traceable, This could be done by either writing the name against every order or by having a ‘master signature list’ in the medical record which has the name of the person against the signature or by stating the employee code number against every medication order.
 
-### 5.4 Medication orders contain the name of the medicine, route of administ...
+### 5.4 Medication orders contain the name of the medicine, route of...
 
 Each order states the name of the medicine, the route, the strength to be administered, and the frequency or time of administration. 'Continue same' or 'as usual' is not an order unless it points to a current, complete charted regimen.
 
@@ -115,14 +115,13 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE MOM.5.a–d.
-- Asterisked elements (a) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event or recall.
 
@@ -183,28 +182,27 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### MOM.5.a — The organisation ensures that only authorised personnel write orders.
 
-- Records showing MOM.5.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.5.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Authorised-prescriber list held by the Medical Superintendent.
+- Supervised-order record for interns/residents naming a supervisor.
+- Confirmation an order from a person not on the list was not acted on.
 
 ### MOM.5.b — Medication orders are written in a uniform location in the medical records, which also include the patient's name and unique identification number.
 
-- Records showing MOM.5.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.5.b reviewed «quarterly».
+- Medication-chart/order-sheet record showing the uniform location with patient name and unique ID.
+- Same-shift transcription record for any sticker or loose-slip order onto the uniform chart.
+- Nursing Superintendent's record-audit check for location uniformity.
 
 ### MOM.5.c — Medication orders are legible, dated, timed and signed.
 
-- Records showing MOM.5.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.5.c reviewed «quarterly».
+- Legible, dated, timed and signed (or authenticated) order sample.
+- Illegible-order contact-and-rewrite record.
+- Late-entry record following medical-record rules — timed and marked as late.
 
 ### MOM.5.d — Medication orders contain the name of the medicine, route of administration, strength to be administered and frequency / time of administration.
 
-- Records showing MOM.5.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.5.d reviewed «quarterly».
+- Order-content completeness record — medicine name, route, strength, frequency/time.
+- PRN-order record including indication and maximum frequency.
+- Cross-reference to the MOM.4.b minimum-requirement check.
 
 ## Disclaimer
 

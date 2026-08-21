@@ -11,15 +11,15 @@
   ],
   "policy_title": "Patient Feedback, Experience and Complaint Redressal",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard PRE.7: The organisation has a mechanism to capture patient’s feedback, experience and to redress complaints.\n\nIt covers objective elements PRE.7.a–f (6 elements).\n\nChapter intent (official Standards PDF): The organisation defines, protects and promotes the patient and family's rights and responsibilities. The staff is aware of these rights and is trained to protect them. Patients are informed of their rights and educated about their responsibilities at the time of entering the organisation. The expected costs of treatment and care are explained clearly to the patient and / or family. The organisation encourages patient engagement to enhance clinical outcomes, safety and quality. Patients are educated about the mechanisms available for addressing grievances. Informed consent is obtained from the patient or family for specified procedures / care. The key components of information shall include risks, benefits and alternatives. Patients and families have a right to get information and education about their healthcare needs in a language and manner that is understood by them. The organisation has a mechanism to capture the patient experience including patient reported experience measures (PREM). The organisation develops effective patient-centred communication.\n\nThis policy owns PRE.7. Related AAC, COP, MOM, IPC/HIC and IMS duties stay with those policies — cross-reference only. Other PRE standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to staff who register, admit, treat, counsel, bill, take consent from, or communicate with patients and families at {{HOSPITAL_NAME}}, including the «Quality Coordinator», treating doctors, nursing, Guest Relations / Patient Rights, Patient Accounts and the Quality Coordinator.\n\nIt covers 6 objective elements (PRE.7.a, PRE.7.b, PRE.7.c, PRE.7.d, PRE.7.e, PRE.7.f).\n\nBoundaries: do not copy SHCO PRE wording. Do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
+  "scope": "This policy applies to staff who register, admit, treat, counsel, bill, take consent from, or communicate with patients and families at {{HOSPITAL_NAME}}, including the «Quality Coordinator», treating doctors, nursing, Guest Relations / Patient Rights, Patient Accounts and the Quality Coordinator.\n\nIt covers 6 objective elements (PRE.7.a, PRE.7.b, PRE.7.c, PRE.7.d, PRE.7.e, PRE.7.f).\n\nBoundaries: do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
   "policy_statement": "{{HOSPITAL_NAME}} implements PRE.7 so that the organisation has a mechanism to capture patient’s feedback, experience and to redress complaints.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
   "procedure_steps": [
-    "5.1 The organisation has a mechanism to capture feedback from patients, w...\n\nFeedback is captured physically or electronically and includes patient satisfaction. Out-patient and in-patient data are kept separate. The «Quality Coordinator» owns the tool and the response rate target («a defined sample of discharges and a defined OPD sample each month»).\n\nA visitor book that is never tabulated is not a feedback mechanism.\n\nMethod note (from guidebook interpretation): The feedback could be captured either physically or electronically. It is preferable that separate data is obtained from out-patients and in-patients. Theorganisation has a mechanism to capture the patient experience.",
+    "5.1 The organisation has a mechanism to capture feedback from patients...\n\nFeedback is captured physically or electronically and includes patient satisfaction. Out-patient and in-patient data are kept separate. The «Quality Coordinator» owns the tool and the response rate target («a defined sample of discharges and a defined OPD sample each month»).\n\nA visitor book that is never tabulated is not a feedback mechanism.\n\nMethod note (from guidebook interpretation): The feedback could be captured either physically or electronically. It is preferable that separate data is obtained from out-patients and in-patients. Theorganisation has a mechanism to capture the patient experience.",
     "5.2 The organisation has a mechanism to capture the patient experience\n\nPatient experience is captured beyond satisfaction: communication with doctors and nurses, pain management, hospital environment (cleanliness and quietness), staff responsiveness, discharge information, communication about medications, overall rating, and patient-reported experience measures (PREMs).\n\nThe «Quality Coordinator» reports PREM / experience results «quarterly» to the «Medical Superintendent». Satisfaction scores alone are not Achievement for this element.\n\nMethod note (from guidebook interpretation): Patient experience goes beyond patient satisfaction and making the patient happy. In addition to collecting patient feedback, the organisation shall also capture patient experience which may include parameters such as communication with doctors and nurses, pain management, hospital environment (cleanliness and quietness), the responsiveness of hospital staff, z =) fe al discharge information, communication about medications and overall rating of the hospitals. The organisation has a mechanism to capture patient reported experience measures. (PREMs). Patient-reported experience measures (PREMs) are a critically important tool to ensure that the patient safety policies and protocols are implemented.",
     "5.3 The organisation redress patient complaints as per the defined mechanism\n\nWritten guidance names how to lodge a complaint (including verbal or telephonic), how complaints are compiled and analysed, the time frame, the person responsible, and how action is documented. Anonymous complaints may be given credence as the organisation decides. Complaints against healthcare workers are included.\n\nThe «Guest Relations / Patient Rights Officer» logs every complaint. Redressal without a defined mechanism is not this CORE asterisked element.\n\nMethod note (from guidebook interpretation): The written guidance shall incorporate the mechanism for lodging complaints (including verbal or telephonic complaints), method of compiling them, analysing complaints including the time frame, the person(s) responsible and documenting the action taken. It is for the organisation to decide if it wants to give credence to anonymous complaints. Patient complaints include those against healthcare workers.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
-    "5.4 Patient and / or family members are made aware of the procedure for g...\n\nPatients and families are made aware of how to give feedback and lodge complaints — by display and/or written information — in an environment of trust. The path is on the rights display (PRE.2.h) and in the admission pamphlet.\n\nThe «Quality Coordinator» checks that the displayed path matches the actual complaints desk / phone / form.\n\nMethod note (from guidebook interpretation): The awareness shall be either by display or providing written information. The organisation must create an environment of trust wherein the patients would be comfortable to air their views. HR cone Feedback and complaints are reviewed and / or analysed within a defined time frame.",
-    "5.5 Feedback and complaints are reviewed and / or analysed within a defin...\n\nFeedback and complaints are reviewed and/or analysed within a defined time frame («complaints within 7 days; feedback tabulated monthly»). The process is documented. Where appropriate the patient and/or family are involved and told the outcome.\n\nOverdue open complaints are listed for the «Medical Superintendent» each month.\n\nMethod note (from guidebook interpretation): The entire process shall be documented. Where appropriate, the patient and/or family could be involved in the discussions and also informed regarding the outcome. :",
-    "5.6 Corrective and / or preventive action(s) are taken based on the analy...\n\nWhere analysis shows a gap, corrective and/or preventive action is taken and recorded (owner, due date, closure). The «Quality Coordinator» tracks CAPA from feedback and complaints together with PRE.1.e rights-violation CAPA when the subject overlaps.\n\nAnalysis without action is not this element.\n\nMethod note (from guidebook interpretation): The analysis identifies opportunities for improvement and the same are carried out."
+    "5.4 Patient and / or family members are made aware of the procedure for...\n\nPatients and families are made aware of how to give feedback and lodge complaints — by display and/or written information — in an environment of trust. The path is on the rights display (PRE.2.h) and in the admission pamphlet.\n\nThe «Quality Coordinator» checks that the displayed path matches the actual complaints desk / phone / form.\n\nMethod note (from guidebook interpretation): The awareness shall be either by display or providing written information. The organisation must create an environment of trust wherein the patients would be comfortable to air their views. HR cone Feedback and complaints are reviewed and / or analysed within a defined time frame.",
+    "5.5 Feedback and complaints are reviewed and / or analysed within a defined...\n\nFeedback and complaints are reviewed and/or analysed within a defined time frame («complaints within 7 days; feedback tabulated monthly»). The process is documented. Where appropriate the patient and/or family are involved and told the outcome.\n\nOverdue open complaints are listed for the «Medical Superintendent» each month.\n\nMethod note (from guidebook interpretation): The entire process shall be documented. Where appropriate, the patient and/or family could be involved in the discussions and also informed regarding the outcome. :",
+    "5.6 Corrective and / or preventive action(s) are taken based on the...\n\nWhere analysis shows a gap, corrective and/or preventive action is taken and recorded (owner, due date, closure). The «Quality Coordinator» tracks CAPA from feedback and complaints together with PRE.1.e rights-violation CAPA when the subject overlaps.\n\nAnalysis without action is not this element.\n\nMethod note (from guidebook interpretation): The analysis identifies opportunities for improvement and the same are carried out."
   ],
   "responsibility": "Medical Superintendent\n- Accountable that PRE.7 is resourced and followed.\n- Acts on rights violations, consent failures and communication breaches that reach top leadership.\n\nQuality Coordinator\n- Owns day-to-day implementation and records for this standard.\n\nGuest Relations / Patient Rights Officer\n- Supports rights display, counselling, complaint access and family communication as this standard requires.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
   "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Patient Rights and Education, standard PRE.7. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — PRE.7 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_pre_guidebook_ocr.txt).\n- Internal documents of {{HOSPITAL_NAME}}: Patient Rights display and pamphlet, informed-consent list and forms, tariff and estimate process, feedback and complaints guidance, and communication models named for PRE.7.",
@@ -33,9 +33,9 @@
       "steps": "Section 3; 5.1",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing PRE.7.a was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.7.a reviewed «quarterly»."
+        "Feedback-tool record capturing patient satisfaction, with out-patient and in-patient data kept separate.",
+        "Response-rate record against the defined sample target.",
+        "Confirmation feedback is tabulated, not left as an untabulated visitor book."
       ]
     },
     {
@@ -44,9 +44,9 @@
       "steps": "Section 3; 5.2",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing PRE.7.b was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.7.b reviewed «quarterly»."
+        "Patient-experience data record — doctor/nurse communication, pain management, environment, responsiveness, discharge information, medication communication, overall rating, PREM.",
+        "Quarterly PREM/experience report to the Medical Superintendent.",
+        "Confirmation this goes beyond satisfaction scores alone."
       ]
     },
     {
@@ -55,11 +55,9 @@
       "steps": "Section 3; 5.3",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing PRE.7.c was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.7.c reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked objective element.",
-        "CORE-element sample with no critical gaps in the quarter under review."
+        "Written complaint-redressal guidance — lodging method, compilation, analysis timeframe, responsible person, documentation of action.",
+        "Complaint log held by Guest Relations/Patient Rights Officer, including anonymous complaints and those against healthcare workers.",
+        "Redressal-outcome record for a sampled complaint."
       ]
     },
     {
@@ -68,9 +66,9 @@
       "steps": "Section 3; 5.4",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing PRE.7.d was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.7.d reviewed «quarterly»."
+        "Displayed feedback/complaint-procedure record — rights display, admission pamphlet.",
+        "Verification record confirming the displayed path matches the actual complaints desk, phone or form.",
+        "Awareness spot-check record."
       ]
     },
     {
@@ -79,9 +77,9 @@
       "steps": "Section 3; 5.5",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing PRE.7.e was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.7.e reviewed «quarterly»."
+        "Review or analysis record within the defined timeframe (for example complaints within 7 days, feedback tabulated monthly).",
+        "Documented process record.",
+        "Overdue-complaint list reported to the Medical Superintendent each month."
       ]
     },
     {
@@ -90,13 +88,13 @@
       "steps": "Section 3; 5.6",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing PRE.7.f was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PRE.7.f reviewed «quarterly»."
+        "CAPA record from feedback or complaint analysis, with owner, due date and closure.",
+        "Cross-reference record with PRE.1.e rights-violation CAPA where subjects overlap.",
+        "Confirmation analysis led to action, not analysis alone."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO PRE.7 v2 (2026-08-21). Official Standards PDF OE count 6; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: c. CORE: c. Achievement: b. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/PRE/POL/07.\nOfficial chapter is 8 standards / 52 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. PRE.4 statute P2 proposed (guidebook names MTP, PC-PNDT, THOA, HIV/AIDS Act 2017).\nDo not copy SHCO PRE wording. Do not touch AAC, COP or MOM.",
+  "universal_facts_checklist": "HCO PRE.7 v2 (2026-08-21). Official Standards PDF OE count 6; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: c. CORE: c. Achievement: b. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/PRE/POL/07.\nOfficial chapter is 8 standards / 52 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. PRE.4 statute P2 proposed (guidebook names MTP, PC-PNDT, THOA, HIV/AIDS Act 2017).\nDo not touch AAC, COP or MOM.",
   "version": "2.0",
   "revision_history": [
     {
@@ -107,8 +105,8 @@
   ],
   "status": "draft",
   "definitions": "The organisation has a mechanism to capture patient’s feedback, experience and to redress complaints.",
-  "exceptions": "1. Do not skip: The organisation has a mechanism to capture feedback from patients, which includes patient satisfaction.\n2. Do not skip: The organisation has a mechanism to capture the patient experience.\n3. Do not skip: The organisation redress patient complaints as per the defined mechanism.\n4. Do not skip: Patient and / or family members are made aware of the procedure for giving feedback and / or lodging compla...\n5. Do not skip: Feedback and complaints are reviewed and / or analysed within a defined time frame.\n6. Do not skip: Corrective and / or preventive action(s) are taken based on the analysis where appropriate.\n7. Staff who see a PRE.7 rule broken report it the same shift to the «department in-charge» or the «Quality Coordinator».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE PRE.7.a–f.\n- Asterisked elements (c) have document evidence as required.\n- CORE elements (c) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related rights incident, consent failure or complaint cluster.",
+  "exceptions": "1. Do not skip: The organisation has a mechanism to capture feedback from patients, which includes patient satisfaction.\n2. Do not skip: The organisation has a mechanism to capture the patient experience.\n3. Do not skip: The organisation redress patient complaints as per the defined mechanism.\n4. Do not skip: Patient and / or family members are made aware of the procedure for giving feedback and / or lodging...\n5. Do not skip: Feedback and complaints are reviewed and / or analysed within a defined time frame.\n6. Do not skip: Corrective and / or preventive action(s) are taken based on the analysis where appropriate.\n7. Staff who see a PRE.7 rule broken report it the same shift to the «department in-charge» or the «Quality Coordinator».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related rights incident, consent failure or complaint cluster.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Patient Feedback, Experience and Complaint Redressal policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/PRE/POL/07»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«Quality Coordinator»",

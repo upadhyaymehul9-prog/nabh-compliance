@@ -43,7 +43,7 @@ This policy applies to staff who register, admit, treat, counsel, bill, take con
 
 It covers 10 objective elements (PRE.5.a, PRE.5.b, PRE.5.c, PRE.5.d, PRE.5.e, PRE.5.f, PRE.5.g, PRE.5.h, PRE.5.i, PRE.5.j).
 
-Boundaries: do not copy SHCO PRE wording. Do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -54,20 +54,20 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 ## 4. Non-negotiable rules
 
 1. Do not skip: Patient and / or family are educated in a language and format that they can understand.
-2. Do not skip: Patient and / or family are educated about the safe and effective use of medication and the potential side ...
+2. Do not skip: Patient and / or family are educated about the safe and effective use of medication and the potential side...
 3. Do not skip: Patient and / or family are educated about food-drug interaction.
 4. Do not skip: Patient and / or family are educated about diet and nutrition.
 5. Do not skip: Patient and / or family are educated about immunisations.
 6. Do not skip: Patient and /or family are educated on various pain management techniques, when appropriate.
-7. Do not skip: Patient and/or family are educated about their specific disease process, complications and prevention strat...
+7. Do not skip: Patient and/or family are educated about their specific disease process, complications and prevention...
 8. Do not skip: Patient and/or family are educated about preventing healthcare associated infections.
 9. Do not skip: The patients and/or family members’ special educational needs are identified and addressed.
-10. Do not skip: The organisation has a mechanism to promote patient engagement to enhance clinical outcomes, safety and qua...
+10. Do not skip: The organisation has a mechanism to promote patient engagement to enhance clinical outcomes, safety and...
 11. Staff who see a PRE.5 rule broken report it the same shift to the «department in-charge» or the «Quality Coordinator».
 
 ## 5. What we do
 
-### 5.1 Patient and / or family are educated in a language and format that th...
+### 5.1 Patient and / or family are educated in a language and format that they...
 
 Staff screen (informally) the patient and/or family's understanding and language needs, then educate in that language and format — counselling, printed material, audio-visual aids. Material uses the language identified at PRE.1.a, not only English.
 
@@ -109,7 +109,7 @@ The «treating doctor or immunisation clinic nurse» records the advice and vacc
 
 Method note (from guidebook interpretation): In adults, it could be for influenza, Streptococcus pneumonia, typhoid, hepatitis B, Neisseria meningitides, etc. Paediatric immunization shall follow universal immunisation program. HE cone.
 
-### 5.6 Patient and /or family are educated on various pain management techni...
+### 5.6 Patient and /or family are educated on various pain management...
 
 Pain-management education is given when the patient is likely to have long-term pain because the underlying condition is not treatable, and it stays within their personal, cultural and religious beliefs. Acute post-operative pain teaching is additional, not a substitute for this element.
 
@@ -117,7 +117,7 @@ Cross-reference COP pain-management policy. The «Nursing Superintendent» names
 
 Method note (from guidebook interpretation): The education on pain management techniques could be done only for patients who are likely to have long-term pain because of the underlying condition not being treatable. This shall be done within the framework of their personal, cultural and religious beliefs.
 
-### 5.7 Patient and/or family are educated about their specific disease proce...
+### 5.7 Patient and/or family are educated about their specific disease...
 
 Disease-specific education covers the process, complications and prevention: lifestyle (stress, exercise, smoking and substance cessation), diet and immunisation where appropriate. Booklets, videos or leaflets matching the hospital's common conditions support the counselling.
 
@@ -125,7 +125,7 @@ The «treating doctor» assigns the education; nursing or a health educator deli
 
 Method note (from guidebook interpretation): The education shall include information on lifestyle modifications (stress management, physical exercise, cessation of smoking and substance abuse), diet changes and immunisations where appropriate. The education could also be done through patient education booklets/videos/leaflets, etc. hh.
 
-### 5.8 Patient and/or family are educated about preventing healthcare associ...
+### 5.8 Patient and/or family are educated about preventing healthcare...
 
 Patients and families are educated on preventing healthcare-associated infections — at least hand washing and avoiding overcrowding at the bedside. IPC posters support, they do not replace, person-to-person education at admission.
 
@@ -133,7 +133,7 @@ Cross-reference the IPC chapter for the hospital's infection-prevention programm
 
 Method note (from guidebook interpretation): For example, hand washing and avoiding overcrowding near the Patient.
 
-### 5.9 The patients and/or family members’ special educational needs are ide...
+### 5.9 The patients and/or family members’ special educational needs are...
 
 Special educational needs are identified during treatment (for example ADHD, autism support, physical disability, speech-language-communication needs, social and emotional health needs) and addressed with counselling, print or audio-visual aids that fit that need.
 
@@ -141,7 +141,7 @@ The «treating doctor with nursing» flags the need in the record and names how 
 
 Method note (from guidebook interpretation): During the patient’s treatment, his/her special educational needs are identified. The patients and/or family members are educated through counselling, use of printed material, audio-visual aids etc. For example Attention deficit hyperactivity disorder (ADHD), needs Autism support, physical disabilities and speech language and communication needs, Social and emotional health needs.
 
-### 5.10 The organisation has a mechanism to promote patient engagement to enh...
+### 5.10 The organisation has a mechanism to promote patient engagement to...
 
 Preview Hospital promotes patient engagement: disease-based support groups where the scope allows, involvement in patient safety and quality improvement, encouragement to report safety incidents, near misses and concerns, and — where the «Medical Superintendent» implements it — a patient advisory council and named patient-safety champions.
 
@@ -166,14 +166,13 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE PRE.5.a–j.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (a) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related rights incident, consent failure or complaint cluster.
 
@@ -240,64 +239,63 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### PRE.5.a — Patient and / or family are educated in a language and format that they can understand.
 
-- Records showing PRE.5.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.5.a reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Language and format screening record for patient or family understanding.
+- Education material in the identified language — counselling, print, audio-visual.
+- Confirmation education was delivered in a format the patient could understand.
 
 ### PRE.5.b — Patient and / or family are educated about the safe and effective use of medication and the potential side effects of the medication, when appropriate.
 
-- Records showing PRE.5.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.5.b reviewed «quarterly».
+- Current medication-education list — drugs needing extra safety or side-effect counselling.
+- Nursing or pharmacy education record against that list.
+- Confirmation this is separate from the MOM administration checks.
 
 ### PRE.5.c — Patient and / or family are educated about food-drug interaction.
 
-- Records showing PRE.5.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.5.c reviewed «quarterly».
+- Current food-drug-interaction list relevant to this hospital.
+- Diet or nursing education record when a listed drug is prescribed.
+- Medication-counselling or diet-note record.
 
 ### PRE.5.d — Patient and / or family are educated about diet and nutrition.
 
-- Records showing PRE.5.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.5.d reviewed «quarterly».
+- Therapeutic-diet education record for in-patients.
+- Out-patient diet-education record when requested by the treating doctor.
+- Confirmation education was patient-specific, not a generic poster.
 
 ### PRE.5.e — Patient and / or family are educated about immunisations.
 
-- Records showing PRE.5.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.5.e reviewed «quarterly».
+- Immunisation-advice record, adult and paediatric as applicable.
+- Vaccines-due record kept by the treating doctor or immunisation-clinic nurse.
+- Universal Immunisation Programme reference for paediatric advice.
 
 ### PRE.5.f — Patient and /or family are educated on various pain management techniques, when appropriate.
 
-- Records showing PRE.5.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.5.f reviewed «quarterly».
+- Long-term pain-management education record, within the patient's personal, cultural or religious beliefs.
+- Named record of who delivers long-term pain education.
+- Record distinguishing this from acute post-operative pain teaching.
 
 ### PRE.5.g — Patient and/or family are educated about their specific disease process, complications and prevention strategies.
 
-- Records showing PRE.5.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.5.g reviewed «quarterly».
+- Disease-specific education record — process, complications, prevention, lifestyle, diet, immunisation.
+- Supporting material (booklet, video, leaflet) used.
+- Treating-doctor assignment and nursing/health-educator delivery record.
 
 ### PRE.5.h — Patient and/or family are educated about preventing healthcare associated infections.
 
-- Records showing PRE.5.h was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.5.h reviewed «quarterly».
+- HAI-prevention education record on the admission checklist — hand hygiene, avoiding overcrowding.
+- Cross-reference to the IPC chapter's infection-prevention programme.
+- Confirmation person-to-person education occurred, not posters alone.
 
 ### PRE.5.i — The patients and/or family members’ special educational needs are identified and addressed.
 
-- Records showing PRE.5.i was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.5.i reviewed «quarterly».
+- Special-educational-need identification record in the patient's chart (for example ADHD, autism, physical disability, communication needs).
+- Adapted counselling or material record addressing that need.
+- Confirmation the identified need was actually met, not only flagged.
 
 ### PRE.5.j — The organisation has a mechanism to promote patient engagement to enhance clinical outcomes, safety and quality.
 
-- Records showing PRE.5.j was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.5.j reviewed «quarterly».
+- Patient-engagement activity record — support group, safety-improvement involvement, incident-reporting encouragement.
+- Patient advisory council or safety-champion record, where implemented.
+- Quarterly engagement-activity log by the Quality Coordinator.
 
 ## Disclaimer
 

@@ -43,7 +43,7 @@ This policy applies to human resources, nursing, medical, and departmental leade
 
 It covers 4 objective elements (HRM.9.a, HRM.9.b, HRM.9.c, HRM.9.d).
 
-Boundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
 
 ## 3. Policy standards
 
@@ -53,15 +53,15 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Health problems of the staff, including occupational health hazards, are taken care of in accordance with t...
-2. Do not skip: Health checks of staff dealing with direct patient care are done at least once a year and the findings / re...
+1. Do not skip: Health problems of the staff, including occupational health hazards, are taken care of in accordance with the...
+2. Do not skip: Health checks of staff dealing with direct patient care are done at least once a year and the findings /...
 3. Do not skip: Organisation provides treatment to staff who sustain workplace-related injuries.
 4. Do not skip: The organisation has measures in place for prevention and handling workplace violence.
 5. Staff who see a HRM.9 rule broken report it the same shift to the «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
 
 ## 5. What we do
 
-### 5.1 Health problems of the staff, including occupational health hazards, ...
+### 5.1 Health problems of the staff, including occupational health hazards...
 
 Preview Hospital has written guidance on staff health and safety addressing physical and mental health and safe working conditions across all shifts, in consonance with the law of the land and good work practice. The hospital runs a staff vaccination and immunisation programme, provides appropriate personal protective equipment with training on its use, and supports staff (as "second victim") involved in unanticipated adverse events, medical error or patient-related injury. This is an asterisked element.
 
@@ -69,19 +69,19 @@ Method note (from guidebook interpretation): The organisation has a written guid
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.2 Health checks of staff dealing with direct patient care are done at l...
+### 5.2 Health checks of staff dealing with direct patient care are done at...
 
 Health checks for staff dealing with direct patient care are done at least «once a year» at Preview Hospital, with findings and results documented in the personal file. Parameters may differ by staff category; competent individuals may be identified to perform the checks. The staff member is not charged for the check; more frequent checks may be done where needed.
 
 Method note (from guidebook interpretation): The results of examination, investigations (if any) and outcome of the evaluation shall be documented in the personal file. The organisation could define the parameters, and it could be different for different categories of personnel. The organisation could also identify competent individuals to perform the same. The staff member shall not be charged for this health check. The organisation could do health checks more frequently if required.
 
-### 5.3 Organisation provides treatment to staff who sustain workplace-relate...
+### 5.3 Organisation provides treatment to staff who sustain workplace-related...
 
 Preview Hospital provides treatment to staff who sustain workplace-related injuries — for example needle-stick injuries, back injuries from patient transport, or noise-related hearing impairment — including counselling where appropriate. Injuries from workplace violence are included.
 
 Method note (from guidebook interpretation): Examples of workplace-related injuries are needlestick injuries, back injuries sustained during patient transport, hearing impairments due to noise levels etc. Treatment also includes counselling where appropriate. Injuries due to workplace violence are included.
 
-### 5.4 The organisation has measures in place for prevention and handling wo...
+### 5.4 The organisation has measures in place for prevention and handling...
 
 Preview Hospital has measures in place for prevention and handling of workplace violence, using an integrative and participative approach: workplace risk assessment identifying situations of special risk, workplace interventions (information and communication), environmental interventions (signage, security, restricted access) and individual interventions (training). A mechanism handles these situations, including liaison with law enforcement where applicable and counselling for affected staff, as part of the hospital's written security guidance. This is a CORE, asterisked element.
 
@@ -109,14 +109,14 @@ departmental leaders
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE HRM.9.a–d.
-- Asterisked elements (ad) have document evidence as required.
-- CORE elements (d) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.
 
@@ -181,30 +181,27 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### HRM.9.a — Health problems of the staff, including occupational health hazards, are taken care of in accordance with the organisation’s policy.
 
-- Records showing HRM.9.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.9.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written staff health and safety policy covering physical and mental health.
+- Staff vaccination and immunisation programme record.
+- PPE-provision and second-victim-support record.
 
 ### HRM.9.b — Health checks of staff dealing with direct patient care are done at least once a year and the findings / results are documented.
 
-- Records showing HRM.9.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.9.b reviewed «quarterly».
+- Annual health-check record for direct-patient-care staff.
+- Findings and results documentation in the personal file.
+- No-charge-to-staff confirmation record.
 
 ### HRM.9.c — Organisation provides treatment to staff who sustain workplace-related injuries.
 
-- Records showing HRM.9.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.9.c reviewed «quarterly».
+- Workplace-injury treatment record — needlestick, patient-transport injury, noise-related, etc.
+- Counselling record where appropriate.
+- Workplace-violence-injury inclusion record.
 
 ### HRM.9.d — The organisation has measures in place for prevention and handling workplace violence.
 
-- Records showing HRM.9.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.9.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Workplace-violence risk-assessment record.
+- Written security guidance covering workplace-violence prevention and handling.
+- Law-enforcement-liaison and counselling record for affected staff.
 
 ## Disclaimer
 

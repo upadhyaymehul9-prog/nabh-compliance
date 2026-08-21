@@ -43,7 +43,7 @@ This policy applies to staff who register, admit, treat, counsel, bill, take con
 
 It covers 5 objective elements (PRE.3.a, PRE.3.b, PRE.3.c, PRE.3.d, PRE.3.e).
 
-Boundaries: do not copy SHCO PRE wording. Do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,16 +53,16 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: The patient and / or family members are explained about the proposed care (including the risks, benefits, a...
+1. Do not skip: The patient and / or family members are explained about the proposed care (including the risks, benefits...
 2. Do not skip: The care plan is prepared and modified in consultation with the patient and / or family members.
 3. Do not skip: The patient and/or family members are informed about the results of diagnostic tests and the diagnosis.
-4. Do not skip: The patient and/or family members are explained about any change in the patient’s condition in a timely man...
+4. Do not skip: The patient and/or family members are explained about any change in the patient’s condition in a timely...
 5. Do not skip: The patient and/or family members are provided multi-disciplinary counselling when appropriate.
 6. Staff who see a PRE.3 rule broken report it the same shift to the «department in-charge» or the «Quality Coordinator».
 
 ## 5. What we do
 
-### 5.1 The patient and / or family members are explained about the proposed ...
+### 5.1 The patient and / or family members are explained about the proposed...
 
 The attending doctor discusses proposed care — including referral to internal or external services — with the patient and/or family in a language they understand: risks, benefits, alternatives, expected results and possible complications.
 
@@ -72,7 +72,7 @@ Method note (from guidebook interpretation): The proposed care, including referr
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.2 The care plan is prepared and modified in consultation with the patie...
+### 5.2 The care plan is prepared and modified in consultation with the patient...
 
 The care plan is prepared and modified in consultation with the patient and/or family. Treatment options, risks and benefits are explained while the plan is being written. Where possible the plan incorporates their concerns and requests, limited by statutory requirements, and takes religious, cultural and spiritual views into account.
 
@@ -80,7 +80,7 @@ The «treating doctor» records that consultation. A plan written only in the do
 
 Method note (from guidebook interpretation): During the preparation of the care plan, the patient and/or family members are explained about the various treatment options, risks and benefits. The care plan, where possible, incorporates patient and/or family concerns and requests. The religious, cultural and spiritual views of the patient and/or family shall be considered during the process of care delivery. Incorporating patient and/or family requests shall be limited by the statutory requirements. The organisation could develop a structured mechanism to implement and capture the same.
 
-### 5.3 The patient and/or family members are informed about the results of d...
+### 5.3 The patient and/or family members are informed about the results of...
 
 Results of diagnostic tests are explained at least in broad terms, including what they mean for progress and treatment. The «treating doctor» does this; abnormal results that change the plan are explained the same day they are available (or as soon as the patient/family can be reached).
 
@@ -88,7 +88,7 @@ Dumping a printout in the file without explanation is not informing.
 
 Method note (from guidebook interpretation): The results of all diagnostic tests are explained at least in broad terms to patient and family members and their implication on progress and treatment. HB cone.
 
-### 5.4 The patient and/or family members are explained about any change in t...
+### 5.4 The patient and/or family members are explained about any change in the...
 
 Changes in condition — improvement, deterioration or complications — are explained in a timely manner. Withholding-of-resuscitation requests from relatives are discussed only within ethical and legal parameters (the competent patient's own decision governs).
 
@@ -96,7 +96,7 @@ Night and emergency deterioration is communicated by the «on-call doctor» with
 
 Method note (from guidebook interpretation): The counselling includes improvement, deterioration or occurrence of complications. Withholding of resuscitation requests from relatives and family could be discussed within ethical and legal parameters. i.
 
-### 5.5 The patient and/or family members are provided multi-disciplinary cou...
+### 5.5 The patient and/or family members are provided multi-disciplinary...
 
 Preview Hospital identifies situations that need multi-disciplinary counselling: family of a critically ill patient, potential organ donor and/or family, long-stay patients, and other situations the «Medical Superintendent» adds. The treating clinician leads; doctors from involved specialties, nurses and physiotherapists join as required.
 
@@ -121,14 +121,13 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE PRE.3.a–e.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (a) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related rights incident, consent failure or complaint cluster.
 
@@ -190,34 +189,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### PRE.3.a — The patient and / or family members are explained about the proposed care (including the risks, benefits, alternatives), expected results and possible complications.
 
-- Records showing PRE.3.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.3.a reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Documented and signed explanation of proposed care — risks, benefits, alternatives, expected results, complications.
+- Record of the explanation being repeated at periodic intervals.
+- Confirmation this discussion is distinct from the signed consent form.
 
 ### PRE.3.b — The care plan is prepared and modified in consultation with the patient and / or family members.
 
-- Records showing PRE.3.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.3.b reviewed «quarterly».
+- Care-plan document showing patient or family consultation.
+- Record of concerns or requests incorporated, or the reason noted where not possible.
+- Religious, cultural or spiritual consideration record.
 
 ### PRE.3.c — The patient and/or family members are informed about the results of diagnostic tests and the diagnosis.
 
-- Records showing PRE.3.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.3.c reviewed «quarterly».
+- Record of diagnostic-result explanation to the patient or family.
+- Same-day explanation record for an abnormal result changing the plan.
+- Confirmation results were not left as an unexplained printout in the file.
 
 ### PRE.3.d — The patient and/or family members are explained about any change in the patient’s condition in a timely manner.
 
-- Records showing PRE.3.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.3.d reviewed «quarterly».
+- Timely condition-change explanation record.
+- On-call doctor communication record for night or emergency deterioration.
+- Withholding-of-resuscitation discussion record within ethical and legal limits, where applicable.
 
 ### PRE.3.e — The patient and/or family members are provided multi-disciplinary counselling when appropriate.
 
-- Records showing PRE.3.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.3.e reviewed «quarterly».
+- Multi-disciplinary counselling session record — attendees, topic, date.
+- Situation-identification record (critically ill family, organ donor, long-stay patient, etc.).
+- Cross-reference to COP.1.e for uniform-care counselling overlap.
 
 ## Disclaimer
 

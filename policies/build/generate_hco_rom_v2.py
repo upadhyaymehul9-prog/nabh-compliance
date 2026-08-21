@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from nabh_text_normalize import distribution_dedupe  # noqa: E402
+from hco_cop_v2_common import hco_boundaries_clause, truncate_word_safe  # noqa: E402
 from hco_rom_v2_common import (  # noqa: E402
     BLANK,
     CHAPTER,
@@ -93,8 +94,7 @@ def clean_text(s: str) -> str:
 
 def step_title(i: int, oe_text: str) -> str:
     t = oe_text.split(".")[0].strip()
-    if len(t) > 72:
-        t = t[:69] + "..."
+    t = truncate_word_safe(t, 72)
     return f"5.{i} {t}"
 
 
@@ -139,8 +139,7 @@ def non_negotiables(n: int, oes: list[dict]) -> str:
     items = []
     for i, oe in enumerate(oes, start=1):
         short = clean_text(oe["text"] or oe["oe_code"])
-        if len(short) > 110:
-            short = short[:107] + "..."
+        short = truncate_word_safe(short, 110)
         items.append(f"{i}. Do not skip: {short}")
     if n in STOP_WORK_PROPOSALS:
         items.append(
@@ -153,6 +152,201 @@ def non_negotiables(n: int, oes: list[dict]) -> str:
     return "\n".join(items)
 
 
+# Fix #5 pilot chapter — hand-authored per-OE evidence records, matching the
+# quality bar AAC.1 and SHCO HIC.1 already demonstrate: concrete, subject-
+# specific documents a hospital would actually hold, not a generic template
+# restating the OE code. See policies/build/generate_hco_rom_v2.py review
+# notes / handoff for the before/after sample used to approve this approach
+# before it is repeated for the remaining 7 chapters.
+ROM_RECORDS: dict[str, list[str]] = {
+    "ROM.1.a": [
+        "Named list of those responsible for governance, with each member's role and responsibility documented.",
+        "Governance resolution or minute formally identifying the list.",
+        "Dated record of the last review or update of the list.",
+    ],
+    "ROM.1.b": [
+        "Governance-approved vision, mission and values statement, with approval date.",
+        "Evidence of public display — photograph or location log, website page, or induction-pack copy.",
+        "Record of when the statement was last reviewed or reaffirmed.",
+    ],
+    "ROM.1.c": [
+        "Governance minutes approving the strategic plan, operational plan and annual budget before the cycle starts.",
+        "The approved strategic plan, operational plan and budget documents themselves.",
+        "Dated resolution or sign-off evidencing approval, not just circulation.",
+    ],
+    "ROM.1.d": [
+        "Quarterly performance dashboard pack presented to governance.",
+        "Governance minutes recording what was reviewed and any decision taken.",
+        "Annual performance-review report measured against the stated mission.",
+    ],
+    "ROM.1.e": [
+        "Appointment letters for senior leaders, including the person heading the organisation, with dates.",
+        "Governance minutes recording the appointment decision.",
+        "Current reporting-line document naming who each senior leader reports to.",
+    ],
+    "ROM.1.f": [
+        "Governance minutes showing safety, clinical-governance or quality-improvement reports were received.",
+        "Budget line or resource allocation record supporting those initiatives.",
+        "Decisions recorded in minutes in response to those reports.",
+    ],
+    "ROM.1.g": [
+        "The written clinical-governance framework document (clinical audit, clinical pathways, education, research).",
+        "Dated approval record naming who owns the framework.",
+        "Evidence of periodic review or update of the framework.",
+    ],
+    "ROM.1.h": [
+        "Governance minutes showing an ethics issue was escalated to and considered by governance.",
+        "Resource allocation record supporting the ethical-management framework.",
+        "Decisions recorded on ethics matters raised.",
+    ],
+    "ROM.1.i": [
+        "Published quality/performance indicators, accreditation status, or the defined public-information set.",
+        "Dated samples of what was published (display photograph, website snapshot, or notice).",
+        "Record of the feedback channel offered to the public and how it is publicised.",
+    ],
+    "ROM.2.a": [
+        "The written ethical-management framework: principles, decision authority and escalation path.",
+        "Dated approval record naming who owns the framework.",
+        "Evidence the framework is a standing document, not minutes-only notes.",
+    ],
+    "ROM.2.b": [
+        "Named escalation path and timeline for handling an ethical issue, dilemma or concern.",
+        "Log of ethical issues raised, with resolution and date.",
+        "At least one example case record showing the process was actually used.",
+    ],
+    "ROM.2.c": [
+        "Current ownership-disclosure text.",
+        "Evidence of public display — reception, website, or the statutory board where applicable.",
+        "Annual check or update record for the disclosure.",
+    ],
+    "ROM.2.d": [
+        "Current list of affiliations and accreditations shown in public materials.",
+        "Quarterly review record confirming no expired or applied-for status is shown as awarded.",
+        "Correction record for any instance found and fixed.",
+    ],
+    "ROM.3.a": [
+        "Written ESG (Environment, Social and Governance) sustainability programme with a named owner.",
+        "Governance-meeting agenda or minutes tabling the programme.",
+        "Annual review record of the programme.",
+    ],
+    "ROM.3.b": [
+        "Dated log of energy-efficiency and environmental initiatives and their results.",
+        "Cross-reference to the ESG/engineering file (FMS owns the engineering controls; this is the initiative record).",
+        "Before/after data or savings evidence where available.",
+    ],
+    "ROM.3.c": [
+        "Documented social-responsibility programme (community access, charity care, local health initiatives).",
+        "Annual activity report for the programme.",
+        "Governance minutes noting the programme.",
+    ],
+    "ROM.3.d": [
+        "Documented work-hour monitoring method for staff.",
+        "Record of healthy-lifestyle support and scheduled-break arrangements.",
+        "Record of the channel for raising workload concerns and any concerns logged through it.",
+    ],
+    "ROM.3.e": [
+        "Purchase policy naming environmental and social tender criteria.",
+        "Completed procurement file showing those criteria were applied.",
+        "At least one tender evaluation reflecting the sustainable-procurement criteria.",
+    ],
+    "ROM.3.f": [
+        "Current staff communication promoting common or public transport for commuting.",
+        "Documentation of any incentive scheme offered.",
+        "Record that the offer was communicated to staff (not that every staff member complied).",
+    ],
+    "ROM.3.g": [
+        "Budget-versus-actual review document.",
+        "Record of cash and credit discipline for the period.",
+        "Annual financial-sustainability view tabled to governance.",
+    ],
+    "ROM.4.a": [
+        "Qualification certificates and CV of the person heading the organisation, on file.",
+        "Governance record confirming the qualification/experience check at appointment.",
+        "Updated record if the role-holder changes.",
+    ],
+    "ROM.4.b": [
+        "Current applicable-legislation register for this hospital's legal form and services actually run.",
+        "Evidence of compliance against each item on the register.",
+        "Dated review or update record of the register.",
+    ],
+    "ROM.4.c": [
+        "Appointment file for each department leader showing the organisation-head's role in the decision.",
+        "Current list of department leaders with appointment dates.",
+        "Escalation record for any department without an identified leader.",
+    ],
+    "ROM.4.d": [
+        "Leadership map naming a person, time allocation and reporting line for each programme, service, site or department.",
+        "Vacancy-coverage record for any gap.",
+        "Dated review of the leadership map.",
+    ],
+    "ROM.4.e": [
+        "Dated annual performance-review record for the organisation's leader.",
+        "Review criteria or method used.",
+        "Filed outcome and any follow-up action.",
+    ],
+    "ROM.5.a": [
+        "Strategic and operational plan documents naming owners and timeframes.",
+        "Stakeholder-consultation record for plan development.",
+        "Current approved plan set held by the Quality Coordinator and Medical Superintendent.",
+    ],
+    "ROM.5.b": [
+        "Coordination minutes with departments and external agencies.",
+        "Progress-tracking report against defined goals and objectives.",
+        "Corrective-action record where progress lagged.",
+    ],
+    "ROM.5.c": [
+        "Annual operational plan linked to the strategic plan.",
+        "Annual budget document.",
+        "Governance approval record for the plan and budget (cross-reference ROM.1.c).",
+    ],
+    "ROM.5.d": [
+        "Committee list with defined meeting frequency.",
+        "Effectiveness-review report — whether each committee met, decided and closed actions.",
+        "Action-item closure log.",
+    ],
+    "ROM.5.e": [
+        "Documented measurable service-standard set (the measure and review interval) for selected services.",
+        "Monitoring results log against each standard.",
+        "Review record showing the standards were actually checked.",
+    ],
+    "ROM.5.f": [
+        "Written change-management guidance: approval authority, staff communication method, continuity method.",
+        "A completed change record following that guidance.",
+        "Service-continuity evidence for a change actually made.",
+    ],
+    "ROM.6.a": [
+        "Risk-management system document.",
+        "Risk register showing identified clinical and organisational risks (for example falls, infection, vulnerable-patient risks such as DVT, clinical alarms).",
+        "Assessment, action and review log for a sample of risks on the register.",
+    ],
+    "ROM.6.b": [
+        "Budget or resource-allocation record for risk-assessment and risk-reduction activity.",
+        "Training record for staff involved in risk activities.",
+        "Contingency-allocation evidence for preventive action.",
+    ],
+    "ROM.6.c": [
+        "Quality Improvement Committee minutes showing risk findings feeding the plan.",
+        "Strategic plan referencing risk-management and quality work.",
+        "Governance pack showing the link between risk, quality and planning.",
+    ],
+    "ROM.6.d": [
+        "Reporting-system document naming what is reported, to whom internally, and to which external agency, with timelines.",
+        "Sampled internal and external failure reports (for example equipment breakdown, an external-agency notification such as AERB for a radiation-source event).",
+        "Tested service-continuity plan covering fire and non-fire emergencies for critical operations.",
+    ],
+    "ROM.6.e": [
+        "Signed agreement for each outsourced service naming service parameters (quality, numbers, reports, timelines) and dispute-resolution method.",
+        "Current list of outsourced services.",
+        "Evidence any affiliate or group-firm arrangement also has an agreement on file.",
+    ],
+    "ROM.6.f": [
+        "Periodic quality-monitoring review per outsourced service, at a frequency matched to how critical that service is.",
+        "Vendor improvement-action record where a gap was found.",
+        "Documented exemption record for any service outsourced solely under prescribed statutory norms (where the Guidebook does not require monitoring).",
+    ],
+}
+
+
 def oe_mapping(n: int, oes: list[dict], has_stop: bool) -> list[dict]:
     mapping = []
     prepared = PREPARED_BY[n]
@@ -161,15 +355,9 @@ def oe_mapping(n: int, oes: list[dict], has_stop: bool) -> list[dict]:
         steps = f"Section 3; 5.{i}"
         if has_stop and n in STOP_WORK_PROPOSALS:
             steps += "; Section 6 Stop-work"
-        records = [
-            f"Records showing ROM.{n}.{oe['letter']} was followed for sampled cases.",
-            "Written guidance / protocol referenced for this element (where required).",
-            f"Audit sample notes for ROM.{n}.{oe['letter']} reviewed {D('quarterly')}.",
-        ]
-        if oe.get("star"):
-            records.append("Documented evidence specifically required by the asterisked objective element.")
-        if oe["level"] == "CORE":
-            records.append("CORE-element sample with no critical gaps in the quarter under review.")
+        records = ROM_RECORDS.get(oe["oe_code"])
+        if not records:
+            raise KeyError(f"Missing hand-authored evidence records for {oe['oe_code']}")
         mapping.append(
             {
                 "oe_code": oe["oe_code"],
@@ -227,7 +415,7 @@ Words marked {D('like this')} are defaults. A blank marked {BLANK} must be fille
 
 It covers {len(oes)} objective elements ({', '.join(oe_codes)}).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 {GUIDEBOOK_MD5})."""
+{hco_boundaries_clause(["AAC", "COP", "MOM", "PRE", "IPC", "PSQ"])} Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 {GUIDEBOOK_MD5})."""
 
     lead = (std_title[0].lower() + std_title[1:]).rstrip(".") if std_title else "responsibilities of management are implemented"
     policy_statement = f"""{HOSPITAL} implements ROM.{n} so that {lead}.
@@ -250,14 +438,19 @@ Quality Coordinator
 departmental leaders
 - Run the department-level duties this standard names."""
 
-    monitoring = f"""The Quality Coordinator audits this policy {D('quarterly')}.
+    monitoring_bullets = ["Records for a sample of this standard's objective elements, checked against the What-we-do steps."]
+    if stars != "none":
+        monitoring_bullets.append("Documentary evidence is on file for each asterisked objective element in the sample.")
+    if cores != "none":
+        monitoring_bullets.append("CORE objective elements show no critical gaps in the sample.")
+    monitoring_bullets.append("Stop-work events (if any) are logged with outcome.")
+    monitoring_bullet_text = "\n".join(f"- {b}" for b in monitoring_bullets)
 
-What is monitored each quarter:
+    monitoring = f"""The Quality Coordinator audits this policy {D('quarterly')}. The audit reviews:
 
-- Sample of records for each OE ROM.{n}.{letters}.
-- Asterisked elements ({stars}) have document evidence as required.
-- CORE elements ({cores}) show no critical gaps in the sample.
-- Stop-work events (if any) are logged with outcome.
+{monitoring_bullet_text}
+
+Root-cause analysis is required when a gap found in this audit remains open beyond {D('90 days')}.
 
 This policy is reviewed {D('annually')}, and sooner after a related governance change, statutory-register gap or outsourced-service failure."""
 
@@ -293,7 +486,7 @@ SWOT — Strengths, Weaknesses, Opportunities and Threats"""
 Stop-work: {"YES — proposed: " + STOP_WORK_PROPOSALS[n] if has_stop else "omitted (proposed default: no stop-work on this standard)"}.
 draft_label={DRAFT_LABEL!r} via hco_document_control. chapter=HCO. doc_no HCO/ROM/POL/{n:02d}.
 Official chapter is 6 standards / 37 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 {GUIDEBOOK_MD5}. No statute P2 proposed (accreditation-only); ROM.4.b legislations and ROM.6.d AERB example stay in method notes.
-Do not copy SHCO equivalent-chapter wording. Do not touch AAC, COP, MOM, PRE, IPC or PSQ."""
+Do not touch AAC, COP, MOM, PRE, IPC or PSQ."""
 
     distribution = distribution_dedupe(
         [

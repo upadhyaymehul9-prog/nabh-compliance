@@ -10,13 +10,13 @@
   ],
   "policy_title": "Credentialing and Privileging of Para-Clinical Professionals",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard HRM.13: There is a process for credentialing and privileging of para-clinical professionals, permitted to provide patient care without supervision.\n\nIt covers objective elements HRM.13.a–e (5 elements).\n\nChapter intent (official Standards PDF): The most important resource of the organisation is its human resource. Human resources are an asset for the effective and efficient functioning of the organisation. The management plans on identifying the right number and skill mix of staff required to render safe care to the patients. Recruitment of staff is accomplished by having a uniform and standardised system. The organisation must orient the staff including outsourced staff, volunteers, students and trainees to its environment and also orient them to specific duties and responsibilities related to their position. The organisation should plan to have an ongoing professional training / in-service education to enhance the competencies and skills of the staff continually. A systematic and structured appraisal system must be used for staff development. The organisation uses this as an opportunity to discuss, motivate, identify gaps in the performance of the staff. The organisation promotes the physical and mental well-being of staff. A grievance handling mechanism and disciplinary procedure should be in place. Credentialing and privileging of health-care professionals (medical, nursing and other para-clinical professional) are done to ensure patient safety. A document containing all such personal information has to be maintained for all staff.\n\nThis policy owns HRM.13. Related AAC, COP, MOM, PRE, IPC, PSQ, ROM and FMS duties stay with those policies — cross-reference only. Other HRM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to human resources, nursing, medical, and departmental leaders, and all staff of {{HOSPITAL_NAME}}, including the «HR In-Charge / Personnel Officer», the «Medical Superintendent», departmental leaders and the Quality Coordinator.\n\nIt covers 5 objective elements (HRM.13.a, HRM.13.b, HRM.13.c, HRM.13.d, HRM.13.e).\n\nBoundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).",
+  "scope": "This policy applies to human resources, nursing, medical, and departmental leaders, and all staff of {{HOSPITAL_NAME}}, including the «HR In-Charge / Personnel Officer», the «Medical Superintendent», departmental leaders and the Quality Coordinator.\n\nIt covers 5 objective elements (HRM.13.a, HRM.13.b, HRM.13.c, HRM.13.d, HRM.13.e).\n\nBoundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).",
   "policy_statement": "{{HOSPITAL_NAME}} implements HRM.13 so that there is a process for credentialing and privileging of para-clinical professionals, permitted to provide patient care without supervision.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).",
   "procedure_steps": [
-    "5.1 Para-clinical professionals permitted by law, regulation and the orga...\n\n{{HOSPITAL_NAME}} identifies para-clinical professionals (for example physiotherapist, rehabilitation therapist, dietician, pharmacist, clinical pharmacist, technologist) permitted by law, regulation and the organisation to provide patient care without supervision — individuals with the required qualification(s), training and experience, in consonance with the law. Providing unsupervised care outside this identified list is a stop-work trigger (section 6). This is a CORE element.\n\nMethod note (from guidebook interpretation): The organisation identifies other clinical professionals such as a physiotherapist, rehabilitation therapist, dietician, pharmacist, clinical pharmacist, technologist who have the required qualification(s), training and experience to provide patient care in consonance with the law.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.1 Para-clinical professionals permitted by law, regulation and the...\n\n{{HOSPITAL_NAME}} identifies para-clinical professionals (for example physiotherapist, rehabilitation therapist, dietician, pharmacist, clinical pharmacist, technologist) permitted by law, regulation and the organisation to provide patient care without supervision — individuals with the required qualification(s), training and experience, in consonance with the law. Providing unsupervised care outside this identified list is a stop-work trigger (section 6). This is a CORE element.\n\nMethod note (from guidebook interpretation): The organisation identifies other clinical professionals such as a physiotherapist, rehabilitation therapist, dietician, pharmacist, clinical pharmacist, technologist who have the required qualification(s), training and experience to provide patient care in consonance with the law.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
     "5.2 The education, registration, training and experience of para-clinical...\n\nThe education, registration, training and experience of para-clinical professionals at {{HOSPITAL_NAME}} are appropriately verified, documented and updated periodically, after acquisition of new skills or qualification, by checking with the organisation that awarded the qualification or training.\n\nMethod note (from guidebook interpretation): Updating is done after the acquisition of new skills and/or qualification. The organisation shall do the same by verifying the credentials from the organisation which has awarded the qualification/training.",
     "5.3 Para-clinical professionals are granted privileges in consonance with...\n\n{{HOSPITAL_NAME}} grants para-clinical professionals privileges in consonance with their qualification, training, experience and registration — specifying what each is authorised to do, with the requisite registration or licence held where applicable. Granting or exercising privileges outside this record is a stop-work trigger (section 6). This is a CORE element.\n\nMethod note (from guidebook interpretation): The organisation shall specify as to what each para-clinical professional is authorised to do. Where applicable, the para-clinical professional shall have the requisite registration/license.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
-    "5.4 The requisite services to be provided by the para-clinical profession...\n\nThe requisite services a para-clinical professional at {{HOSPITAL_NAME}} is authorised to provide are known to that professional and to the concerned departments, communicated internally.\n\nMethod note (from guidebook interpretation): This could be done through internal communication.",
+    "5.4 The requisite services to be provided by the para-clinical...\n\nThe requisite services a para-clinical professional at {{HOSPITAL_NAME}} is authorised to provide are known to that professional and to the concerned departments, communicated internally.\n\nMethod note (from guidebook interpretation): This could be done through internal communication.",
     "5.5 Para-clinical professionals care for patients as per their privileging\n\nPara-clinical professionals at {{HOSPITAL_NAME}} care for patients as per their privileging. New staff may work under supervision until independent privileges are granted; the hospital maintains a mechanism confirming para-clinical professionals provide only the services they are privileged for.\n\nMethod note (from guidebook interpretation): New staff members can be under supervision until independent privilege is provided for each staff. The organisation could evolve a mechanism to ensure that para-clinical professionals are providing only those services that they have been privileged to offer."
   ],
   "responsibility": "Medical Superintendent\n- Accountable that HRM.13 is resourced and followed.\n\nHR In-Charge / Personnel Officer\n- Owns day-to-day implementation and records for this standard.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.\n\ndepartmental leaders\n- Run the department-level duties this standard names.",
@@ -31,10 +31,9 @@
       "steps": "Section 3; 5.1; Section 6 Stop-work",
       "responsible": "HR In-Charge / Personnel Officer",
       "records": [
-        "Records showing HRM.13.a was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for HRM.13.a reviewed «quarterly».",
-        "CORE-element sample with no critical gaps in the quarter under review."
+        "Identified-para-clinical-professional list permitted to provide unsupervised patient care.",
+        "Qualification, training and experience verification record.",
+        "Cross-reference to the HRM.13 stop-work trigger for unlisted practice."
       ]
     },
     {
@@ -43,9 +42,9 @@
       "steps": "Section 3; 5.2; Section 6 Stop-work",
       "responsible": "HR In-Charge / Personnel Officer",
       "records": [
-        "Records showing HRM.13.b was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for HRM.13.b reviewed «quarterly»."
+        "Education, registration, training and experience verification and documentation record, updated periodically.",
+        "Personal-file record of the update.",
+        "Verification-with-awarding-organisation record."
       ]
     },
     {
@@ -54,10 +53,9 @@
       "steps": "Section 3; 5.3; Section 6 Stop-work",
       "responsible": "HR In-Charge / Personnel Officer",
       "records": [
-        "Records showing HRM.13.c was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for HRM.13.c reviewed «quarterly».",
-        "CORE-element sample with no critical gaps in the quarter under review."
+        "Granted-privilege record naming what each para-clinical professional is authorised to do.",
+        "Registration or licence-on-file record, where applicable.",
+        "Cross-reference to the HRM.13 stop-work trigger for privileging outside this record."
       ]
     },
     {
@@ -66,9 +64,9 @@
       "steps": "Section 3; 5.4; Section 6 Stop-work",
       "responsible": "HR In-Charge / Personnel Officer",
       "records": [
-        "Records showing HRM.13.d was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for HRM.13.d reviewed «quarterly»."
+        "Communicated-service record to the professional and to concerned departments.",
+        "Internal-communication record.",
+        "Confirmation record of awareness."
       ]
     },
     {
@@ -77,13 +75,13 @@
       "steps": "Section 3; 5.5; Section 6 Stop-work",
       "responsible": "HR In-Charge / Personnel Officer",
       "records": [
-        "Records showing HRM.13.e was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for HRM.13.e reviewed «quarterly»."
+        "Supervision record for new staff until independent privileges are granted.",
+        "Mechanism-confirmation record that para-clinical professionals provide only privileged services.",
+        "Privileging-compliance spot-check record."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO HRM.13 v2 (2026-08-21). Official Standards PDF OE count 5; levels and asterisks from portal body text (Guidebook's own copy of the OE matrix agrees on every letter). Asterisked: none. CORE: ac. Achievement: none. Excellence: none.\nStop-work: YES — proposed: A para-clinical professional not on the organisation's identified and privileged list provides patient care without supervision.\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/HRM/POL/13.\nOfficial chapter is 13 standards / 76 OEs (confirmed against portal summary and against the Guidebook's own copy of the same matrix). Guidebook interpretations transcribed from a scanned PDF with no text layer — verified against rendered page images (no tesseract/pdftoppm available on this machine), not run through a mechanical OCR pass; see policies/source/hco6_hrm_chapter_notes.md. Statute P2 proposed on HRM.12 only (Indian Nursing Council Act, 1947).\nDo not copy SHCO equivalent-chapter wording — including the already-deployed SHCO 3rd Edition HRM chapter (build_hrm1_v2.py..build_hrm9_v2.py, policies/drafts/hrm*_v2_draft.json), a separate programme and edition. Do not touch AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS.",
+  "universal_facts_checklist": "HCO HRM.13 v2 (2026-08-21). Official Standards PDF OE count 5; levels and asterisks from portal body text (Guidebook's own copy of the OE matrix agrees on every letter). Asterisked: none. CORE: ac. Achievement: none. Excellence: none.\nStop-work: YES — proposed: A para-clinical professional not on the organisation's identified and privileged list provides patient care without supervision.\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/HRM/POL/13.\nOfficial chapter is 13 standards / 76 OEs (confirmed against portal summary and against the Guidebook's own copy of the same matrix). Guidebook interpretations transcribed from a scanned PDF with no text layer — verified against rendered page images (no tesseract/pdftoppm available on this machine), not run through a mechanical OCR pass; see policies/source/hco6_hrm_chapter_notes.md. Statute P2 proposed on HRM.12 only (Indian Nursing Council Act, 1947).\nNot the same as the already-deployed SHCO 3rd Edition HRM chapter (build_hrm1_v2.py..build_hrm9_v2.py, policies/drafts/hrm*_v2_draft.json) — separate programme and edition, not touched. Do not touch AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS.",
   "version": "2.0",
   "revision_history": [
     {
@@ -94,8 +92,8 @@
   ],
   "status": "draft",
   "definitions": "There is a process for credentialing and privileging of para-clinical professionals, permitted to provide patient care without supervision.",
-  "exceptions": "1. Do not skip: Para-clinical professionals permitted by law, regulation and the organisation to provide patient care witho...\n2. Do not skip: The education, registration, training and experience of para-clinical professionals are appropriately verif...\n3. Do not skip: Para-clinical professionals are granted privileges in consonance with their qualification, training, experi...\n4. Do not skip: The requisite services to be provided by the para-clinical professionals are known to them as well as the c...\n5. Do not skip: Para-clinical professionals care for patients as per their privileging.\n6. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n7. Staff who see a HRM.13 rule broken report it the same shift to the «HR In-Charge / Personnel Officer» or the «Medical Superintendent».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE HRM.13.a–e.\n- Asterisked elements (none) have document evidence as required.\n- CORE elements (ac) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.",
+  "exceptions": "1. Do not skip: Para-clinical professionals permitted by law, regulation and the organisation to provide patient care without...\n2. Do not skip: The education, registration, training and experience of para-clinical professionals are appropriately...\n3. Do not skip: Para-clinical professionals are granted privileges in consonance with their qualification, training...\n4. Do not skip: The requisite services to be provided by the para-clinical professionals are known to them as well as the...\n5. Do not skip: Para-clinical professionals care for patients as per their privileging.\n6. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n7. Staff who see a HRM.13 rule broken report it the same shift to the «HR In-Charge / Personnel Officer» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Credentialing and Privileging of Para-Clinical Professionals policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/HRM/POL/13»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «HR In-Charge / Personnel Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«HR In-Charge / Personnel Officer»",

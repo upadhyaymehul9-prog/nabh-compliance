@@ -9,11 +9,11 @@
   ],
   "policy_title": "Ethical Management of the Organisation",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard ROM.2: Those responsible for governance manage the organisation in an ethical manner.\n\nIt covers objective elements ROM.2.a–d (4 elements).\n\nChapter intent (official Standards PDF): The management of the healthcare organisation is aware of and manages all the key components of governance. Those responsible for governance are identified and their roles defined. The standards encourage the governance of the organisation professionally and ethically. Clinical governance framework is established, that includes clinical audits, clinical pathways, education and research. The responsibilities of management are defined. The responsibilities of the leaders at all levels are defined. The management executes its responsibility for compliance with all applicable regulations. Those responsible for governance address the organisations social responsibility. Leaders ensure that patient-safety and risk-management issues are an integral part of patient care and hospital management. The Organisation has a written guidance in place for change management and service continuity plan.\n\nThis policy owns ROM.2. Related AAC, COP, MOM, PRE, IPC and PSQ duties stay with those policies — cross-reference only. Other ROM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to those responsible for governance, the person heading the organisation, departmental leaders, and staff who run ethics, sustainability, risk or outsourcing at {{HOSPITAL_NAME}}, including the «Medical Superintendent», «those responsible for governance» as identified under ROM.1, departmental leaders and the Quality Coordinator.\n\nIt covers 4 objective elements (ROM.2.a, ROM.2.b, ROM.2.c, ROM.2.d).\n\nBoundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
+  "scope": "This policy applies to those responsible for governance, the person heading the organisation, departmental leaders, and staff who run ethics, sustainability, risk or outsourcing at {{HOSPITAL_NAME}}, including the «Medical Superintendent», «those responsible for governance» as identified under ROM.1, departmental leaders and the Quality Coordinator.\n\nIt covers 4 objective elements (ROM.2.a, ROM.2.b, ROM.2.c, ROM.2.d).\n\nBoundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
   "policy_statement": "{{HOSPITAL_NAME}} implements ROM.2 so that those responsible for governance manage the organisation in an ethical manner.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
   "procedure_steps": [
     "5.1 The leaders establish the organisation’s ethical management framework\n\nLeaders establish a written ethical-management framework: principles, who decides, how issues are raised, and how decisions are recorded.\n\nThe «Medical Superintendent» keeps the current framework. Minutes-only notes are not this CORE asterisked element.\n\nMethod note (from guidebook interpretation): The organisation shall function ethically. Transparency in its actions shall be one of its guiding principles. Handling of complaints, grievances, clinical care delivery and research shall be some of the areas to address. The framework includes codes of conduct. A good reference guide for minimum code of conduct for doctors is \"Code of medical ethics, 2002\" published by Medical Council of India.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
-    "5.2 The ethical management framework includes processes for managing issu...\n\nThe framework includes processes for managing issues with ethical implications, dilemmas and concerns (clinical and organisational examples the organisation names).\n\nA named path, timeline and record exist. An informal corridor discussion is not this asterisked element.\n\nMethod note (from guidebook interpretation): The issues may be clinical or non-clinical. Some examples include conflict of interest, breach of confidentiality, ethical behaviour, informed consent, and withdrawing life-sustaining treatment. There shall be a consistent approach to ethical decision making throughout the organisation based on the guiding principle(s). Staff shall be provided with appropriate guidance with respect to their actions based on these principles. The approach shall include process for collecting, collating and analysing ethical dilemmas for taking corrective and preventive actions within a defined time frame. Ethical dilemma could arise when there are conflicting decisions regarding provision or withdrawal of life support or treatment. Decisions made regarding ethical issues shall be documented, and opportunities for improvement could be identified.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.2 The ethical management framework includes processes for managing issues...\n\nThe framework includes processes for managing issues with ethical implications, dilemmas and concerns (clinical and organisational examples the organisation names).\n\nA named path, timeline and record exist. An informal corridor discussion is not this asterisked element.\n\nMethod note (from guidebook interpretation): The issues may be clinical or non-clinical. Some examples include conflict of interest, breach of confidentiality, ethical behaviour, informed consent, and withdrawing life-sustaining treatment. There shall be a consistent approach to ethical decision making throughout the organisation based on the guiding principle(s). Staff shall be provided with appropriate guidance with respect to their actions based on these principles. The approach shall include process for collecting, collating and analysing ethical dilemmas for taking corrective and preventive actions within a defined time frame. Ethical dilemma could arise when there are conflicting decisions regarding provision or withdrawal of life support or treatment. Decisions made regarding ethical issues shall be documented, and opportunities for improvement could be identified.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
     "5.3 The organisation discloses its ownership\n\nThe organisation discloses its ownership in a defined public place (reception display, website, statutory board as applicable).\n\nThe «Medical Superintendent» holds the current disclosure text and checks it «annually».\n\nMethod note (from guidebook interpretation): Hospitals are governed under the provisions of Companies Act, Charitable Trust Act, Societies Registration Act, Limited Liability Partnership Act, sole proprietorship and Government of India/State Government. The ownership of the hospital shall be disclosed accordingly. The disclosure could be in the form of a registration certificate.",
     "5.4 The organisation honestly portrays its affiliations and accreditations\n\nThe organisation honestly portrays its affiliations and accreditations: only current, in-scope programmes are displayed; expired or applied-for status is not shown as awarded.\n\nThe «Quality Coordinator» reviews public materials «quarterly».\n\nMethod note (from guidebook interpretation): It implies that the organisation conveys its affiliations, accreditations for specific departments or whole hospital in an honest manner, wherever such exist."
   ],
@@ -29,11 +29,9 @@
       "steps": "Section 3; 5.1",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing ROM.2.a was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for ROM.2.a reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked objective element.",
-        "CORE-element sample with no critical gaps in the quarter under review."
+        "The written ethical-management framework: principles, decision authority and escalation path.",
+        "Dated approval record naming who owns the framework.",
+        "Evidence the framework is a standing document, not minutes-only notes."
       ]
     },
     {
@@ -42,10 +40,9 @@
       "steps": "Section 3; 5.2",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing ROM.2.b was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for ROM.2.b reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked objective element."
+        "Named escalation path and timeline for handling an ethical issue, dilemma or concern.",
+        "Log of ethical issues raised, with resolution and date.",
+        "At least one example case record showing the process was actually used."
       ]
     },
     {
@@ -54,9 +51,9 @@
       "steps": "Section 3; 5.3",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing ROM.2.c was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for ROM.2.c reviewed «quarterly»."
+        "Current ownership-disclosure text.",
+        "Evidence of public display — reception, website, or the statutory board where applicable.",
+        "Annual check or update record for the disclosure."
       ]
     },
     {
@@ -65,13 +62,13 @@
       "steps": "Section 3; 5.4",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing ROM.2.d was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for ROM.2.d reviewed «quarterly»."
+        "Current list of affiliations and accreditations shown in public materials.",
+        "Quarterly review record confirming no expired or applied-for status is shown as awarded.",
+        "Correction record for any instance found and fixed."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO ROM.2 v2 (2026-08-21). Official Standards PDF OE count 4; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: ab. CORE: a. Achievement: none. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/ROM/POL/02.\nOfficial chapter is 6 standards / 37 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. No statute P2 proposed (accreditation-only); ROM.4.b legislations and ROM.6.d AERB example stay in method notes.\nDo not copy SHCO equivalent-chapter wording. Do not touch AAC, COP, MOM, PRE, IPC or PSQ.",
+  "universal_facts_checklist": "HCO ROM.2 v2 (2026-08-21). Official Standards PDF OE count 4; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: ab. CORE: a. Achievement: none. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/ROM/POL/02.\nOfficial chapter is 6 standards / 37 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. No statute P2 proposed (accreditation-only); ROM.4.b legislations and ROM.6.d AERB example stay in method notes.\nDo not touch AAC, COP, MOM, PRE, IPC or PSQ.",
   "version": "2.0",
   "revision_history": [
     {
@@ -83,7 +80,7 @@
   "status": "draft",
   "definitions": "Those responsible for governance manage the organisation in an ethical manner.",
   "exceptions": "1. Do not skip: The leaders establish the organisation’s ethical management framework.\n2. Do not skip: The ethical management framework includes processes for managing issues with ethical implications, dilemmas...\n3. Do not skip: The organisation discloses its ownership.\n4. Do not skip: The organisation honestly portrays its affiliations and accreditations.\n5. Staff who see a ROM.2 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE ROM.2.a–d.\n- Asterisked elements (ab) have document evidence as required.\n- CORE elements (a) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related governance change, statutory-register gap or outsourced-service failure.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related governance change, statutory-register gap or outsourced-service failure.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Ethical Management of the Organisation policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/ROM/POL/02»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«Medical Superintendent»",

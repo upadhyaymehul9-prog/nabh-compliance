@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.17
 
 It covers 4 objective elements (COP.17.a, COP.17.b, COP.17.c, COP.17.d).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -54,7 +54,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 1. Do not skip: Patients in pain are effectively managed.
 2. Do not skip: Patients are screened for pain.
 3. Do not skip: Patients with pain undergo detailed assessment and periodic re- assessment .
-4. Do not skip: Pain alleviation measures or medications are initiated and titrated according to the patient’s need and res...
+4. Do not skip: Pain alleviation measures or medications are initiated and titrated according to the patient’s need and...
 5. Staff who see a COP.17 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».
 
 ## 5. What we do
@@ -71,13 +71,13 @@ Patients are screened for pain.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.3 Patients with pain undergo detailed assessment and periodic re- asses..
+### 5.3 Patients with pain undergo detailed assessment and periodic re-..
 
 Patients with pain undergo detailed assessment and periodic re- assessment .
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.4 Pain alleviation measures or medications are initiated and titrated a..
+### 5.4 Pain alleviation measures or medications are initiated and titrated..
 
 Pain alleviation measures or medications are initiated and titrated according to the patient’s need and response.
 
@@ -99,14 +99,13 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.17.a–d.
-- Asterisked elements (a) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -162,28 +161,27 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.17.a — Patients in pain are effectively managed.
 
-- Records showing COP.17.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.17.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written pain-management guidance.
+- Pain-management outcome record for a sampled patient.
+- Staff-training record.
 
 ### COP.17.b — Patients are screened for pain.
 
-- Records showing COP.17.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.17.b reviewed «quarterly».
+- Pain-screening record at defined points (for example admission).
+- Screening-tool documentation.
+- Screening-frequency record.
 
 ### COP.17.c — Patients with pain undergo detailed assessment and periodic re- assessment .
 
-- Records showing COP.17.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.17.c reviewed «quarterly».
+- Detailed pain-assessment record for a screened-positive patient.
+- Periodic-reassessment record.
+- Assessment-tool documentation.
 
 ### COP.17.d — Pain alleviation measures or medications are initiated and titrated according to the patient’s need and response.
 
-- Records showing COP.17.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.17.d reviewed «quarterly».
+- Pain-alleviation or medication record titrated to patient need and response.
+- Titration-documentation record.
+- Response-monitoring record.
 
 ## Disclaimer
 

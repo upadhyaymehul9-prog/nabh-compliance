@@ -11,7 +11,7 @@
   ],
   "policy_title": "Safe Dispensing of Medications",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard MOM.6: Medications are dispensed in a safe manner.\n\nIt covers objective elements MOM.6.a–f (6 elements).\n\nChapter intent (official Standards PDF): The organisation has a safe and organised medication management process. Availability, safe storage, prescription, dispensing and administration of medications are governed by written guidance. A medication safety officer is designated. The hospital formulary is developed, implemented and updated. Pharmacy has oversight of medications stocked out of the pharmacy. Reconciliation occurs at transition points. Patients are monitored after administration. Near misses, medication errors and adverse drug reactions are reported and analysed. Medications also include blood, implants and devices. Medical supplies and consumables are available for use.\n\nThis policy owns MOM.6. Related AAC, COP, PRE, IPC/HIC and HRM duties stay with those policies — cross-reference only. Other MOM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to staff who prescribe, dispense, administer, store, monitor or oversee medications (or, for MOM.10–11, implants / medical devices / medical supplies) at {{HOSPITAL_NAME}}, including the «Pharmacy In-Charge», pharmacy, nursing, treating doctors and the Quality Coordinator.\n\nIt covers 6 objective elements (MOM.6.a, MOM.6.b, MOM.6.c, MOM.6.d, MOM.6.e, MOM.6.f).\n\nBoundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
+  "scope": "This policy applies to staff who prescribe, dispense, administer, store, monitor or oversee medications (or, for MOM.10–11, implants / medical devices / medical supplies) at {{HOSPITAL_NAME}}, including the «Pharmacy In-Charge», pharmacy, nursing, treating doctors and the Quality Coordinator.\n\nIt covers 6 objective elements (MOM.6.a, MOM.6.b, MOM.6.c, MOM.6.d, MOM.6.e, MOM.6.f).\n\nBoundaries: do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
   "policy_statement": "{{HOSPITAL_NAME}} implements MOM.6 so that medications are dispensed in a safe manner.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
   "procedure_steps": [
     "5.1 Dispensing of medications is done safely\n\nPharmacy dispenses against a valid order, confirming the right patient, drug, dose, route and frequency, and inspecting the product (integrity, expiry, storage condition) before it leaves the pharmacy or after-hours store.\n\nHigh-risk items follow MOM.6.e. Floor-stock issue to wards is still a dispense under this policy and is recorded. Dispensing is done in a workspace that limits interruption for high-risk work.\n\nMethod note (from guidebook interpretation): Written guidance shall be laid down for the safe dispensing of medication. Medications shall be dispensed only against a valid prescription or medication order (except for over-the-counter drugs). Medication shall be — CORE _ Commitment t—} Achievement — Excellence checked before dispensing and include a check of the generic composition, formulation, expiry date, and where applicable, the strength. This shall include both bulk and retail pharmacy. Physicians’ samples shall not be sold.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
@@ -33,10 +33,9 @@
       "steps": "Section 3; 5.1; Section 6 Stop-work",
       "responsible": "Pharmacy In-Charge",
       "records": [
-        "Records showing MOM.6.a was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for MOM.6.a reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked objective element."
+        "Dispensing record confirming right patient, drug, dose, route and frequency against a valid order.",
+        "Product-inspection record — integrity, expiry, storage condition — before issue.",
+        "Floor-stock issue-to-ward dispensing record."
       ]
     },
     {
@@ -45,10 +44,9 @@
       "steps": "Section 3; 5.2; Section 6 Stop-work",
       "responsible": "Pharmacy In-Charge",
       "records": [
-        "Records showing MOM.6.b was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for MOM.6.b reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked objective element."
+        "Recall-notice file with affected batch(es), quarantine record and date.",
+        "Patient-identification record where the recalled batch was administered.",
+        "Medication Safety Officer and treating-team notification record."
       ]
     },
     {
@@ -57,10 +55,9 @@
       "steps": "Section 3; 5.3; Section 6 Stop-work",
       "responsible": "Pharmacy In-Charge",
       "records": [
-        "Records showing MOM.6.c was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for MOM.6.c reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked objective element."
+        "FEFO and monthly expiry-round record.",
+        "Withdrawal-from-clinical-area record for near-expiry items.",
+        "Emergency-trolley short-dated-item replacement record before expiry."
       ]
     },
     {
@@ -69,11 +66,9 @@
       "steps": "Section 3; 5.4; Section 6 Stop-work",
       "responsible": "Pharmacy In-Charge",
       "records": [
-        "Records showing MOM.6.d was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for MOM.6.d reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked objective element.",
-        "CORE-element sample with no critical gaps in the quarter under review."
+        "Labelled-dispensed-medication sample — patient identity where applicable, medicine name, strength, route, frequency, expiry.",
+        "Ward floor-stock multi-dose container labelling record — drug name, strength, expiry, date opened.",
+        "Confirmation no unlabelled syringe, cup or strip was issued."
       ]
     },
     {
@@ -82,10 +77,9 @@
       "steps": "Section 3; 5.5; Section 6 Stop-work",
       "responsible": "Pharmacy In-Charge",
       "records": [
-        "Records showing MOM.6.e was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for MOM.6.e reviewed «quarterly».",
-        "CORE-element sample with no critical gaps in the quarter under review."
+        "High-risk dispensing-verification record — second pharmacist or trained second checker against the order and patient record.",
+        "Recorded verification for a sampled high-risk dispense.",
+        "Escalation record for any single-unchecked-reading dispense."
       ]
     },
     {
@@ -94,14 +88,13 @@
       "steps": "Section 3; 5.6; Section 6 Stop-work",
       "responsible": "Pharmacy In-Charge",
       "records": [
-        "Records showing MOM.6.f was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for MOM.6.f reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked objective element."
+        "Written medication-return procedure — identity/integrity check, restock-or-destroy decision, record of return.",
+        "Confirmation controlled drugs, reconstituted items and temperature-excursion items were not restocked.",
+        "Cross-reference to the MOM.7.k patient's-own-medicines process."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO MOM.6 v2 (2026-08-21). Official Standards PDF OE count 6; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: abcdf. CORE: de. Achievement: none. Excellence: none.\nStop-work: YES — approved: Dispense unlabelled medication; high-risk order not verified before dispensing; recalled or expired item.\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/MOM/POL/06.\nOfficial chapter is 11 standards / 68 OEs (confirmed). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. MOM.9 statute P2 approved.\nDo not copy SHCO MOM wording. Do not touch AAC or COP.",
+  "universal_facts_checklist": "HCO MOM.6 v2 (2026-08-21). Official Standards PDF OE count 6; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: abcdf. CORE: de. Achievement: none. Excellence: none.\nStop-work: YES — approved: Dispense unlabelled medication; high-risk order not verified before dispensing; recalled or expired item.\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/MOM/POL/06.\nOfficial chapter is 11 standards / 68 OEs (confirmed). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. MOM.9 statute P2 approved.\nDo not touch AAC or COP.",
   "version": "2.0",
   "revision_history": [
     {
@@ -113,7 +106,7 @@
   "status": "draft",
   "definitions": "Medications are dispensed in a safe manner.",
   "exceptions": "1. Do not skip: Dispensing of medications is done safely.\n2. Do not skip: Medication recalls are handled effectively.\n3. Do not skip: Near-expiry medications are handled effectively.\n4. Do not skip: Dispensed medications are labelled.\n5. Do not skip: High-risk medication orders are verified before dispensing.\n6. Do not skip: Return of medications to the pharmacy is addressed.\n7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n8. Staff who see a MOM.6 rule broken report it the same shift to the «department in-charge» or the «Medication Safety Officer».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE MOM.6.a–f.\n- Asterisked elements (abcdf) have document evidence as required.\n- CORE elements (de) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event or recall.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related adverse event or recall.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Safe Dispensing of Medications policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/MOM/POL/06»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Pharmacy In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«Pharmacy In-Charge»",

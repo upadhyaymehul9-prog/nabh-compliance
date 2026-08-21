@@ -43,7 +43,7 @@ This policy applies to staff who deliver clinical care, run support services (ho
 
 It covers 6 objective elements (IPC.3.a, IPC.3.b, IPC.3.c, IPC.3.d, IPC.3.e, IPC.3.f).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -58,7 +58,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 3. Do not skip: The organisation adheres to transmission-based precautions.
 4. Do not skip: The organisation adheres to safe injection and infusion practices.
 5. Do not skip: Appropriate antimicrobial usage policy is established and documented
-6. Do not skip: The organisation implements the antimicrobial stewardship programme and monitors the use of antimicrobial a...
+6. Do not skip: The organisation implements the antimicrobial stewardship programme and monitors the use of antimicrobial...
 7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
 8. Staff who see an IPC.3 rule broken report it the same shift to the «department in-charge» or the «Infection Prevention and Control Officer».
 
@@ -120,7 +120,7 @@ Method note (from guidebook interpretation): The organisation shall identify cli
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.6 The organisation implements the antimicrobial stewardship programme a...
+### 5.6 The organisation implements the antimicrobial stewardship programme and...
 
 The antimicrobial stewardship programme is implemented: restricted agents are ordered through the defined path; deviations are fed back to the clinician; use is monitored (days of therapy / restricted-agent audit) and reported to the «Infection Prevention and Control Committee».
 
@@ -160,14 +160,14 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE IPC.3.a–f.
-- Asterisked elements (abcde) have document evidence as required.
-- CORE elements (abdf) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related outbreak, sterilisation failure or exposure cluster.
 
@@ -237,48 +237,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### IPC.3.a — The organisation adheres to standard precautions at all times.
 
-- Records showing IPC.3.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.3.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Written standard-precautions guidance covering hand hygiene, PPE, respiratory hygiene, sharps safety, linen and equipment handling.
+- Monthly practice-audit record by the IPC Nurse.
+- Escalation record for any procedure started without standard precautions.
 
 ### IPC.3.b — The organisation adheres to hand-hygiene guidelines.
 
-- Records showing IPC.3.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.3.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Hand-hygiene guideline reference adopted (for example WHO 5 Moments).
+- Training record at induction and annually.
+- Cross-reference to the IPC.6.d compliance-monitoring result.
 
 ### IPC.3.c — The organisation adheres to transmission-based precautions.
 
-- Records showing IPC.3.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.3.c reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Transmission-based-precaution guidance by mode — contact, droplet, airborne — with PPE and room placement.
+- Doctor's order and nursing door/kardex alert record for a sampled case.
+- Escalation record for any case without the defined placement or PPE.
 
 ### IPC.3.d — The organisation adheres to safe injection and infusion practices.
 
-- Records showing IPC.3.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.3.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Safe injection and infusion written rule — one needle, one syringe, one time; multi-dose-vial rule.
+- Point-of-use sharps-container placement record.
+- Quarterly infusion-preparation-area check by pharmacy and nursing.
 
 ### IPC.3.e — Appropriate antimicrobial usage policy is established and documented
 
-- Records showing IPC.3.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.3.e reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Documented antimicrobial usage policy — agents, monotherapy/combination, escalation/de-escalation, dose, duration, restricted list aligned with WHO AWaRe.
+- Annual policy-review record against local susceptibility data.
+- Ownership record — Microbiologist, Drug and Therapeutics Committee, IPC Officer.
 
 ### IPC.3.f — The organisation implements the antimicrobial stewardship programme and monitors the use of antimicrobial agents.
 
-- Records showing IPC.3.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.3.f reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Antimicrobial stewardship programme document with the restricted-agent order path.
+- Days-of-therapy or restricted-agent audit record.
+- Regularisation record for any emergency first dose given off-path.
 
 ## Disclaimer
 

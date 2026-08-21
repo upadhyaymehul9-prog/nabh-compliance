@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.4 
 
 It covers 4 objective elements (COP.4.a, COP.4.b, COP.4.c, COP.4.d).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -59,13 +59,13 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 The organisation identifies potential community emergencies, epidemic..
+### 5.1 The organisation identifies potential community emergencies, epidemics..
 
 The organisation identifies potential community emergencies, epidemics and other disasters.
 
 Method note (from guidebook interpretation): The disaster, community emergency and epidemic plan must |
 
-### 5.2 The organisation manages community emergencies, epidemics and other d..
+### 5.2 The organisation manages community emergencies, epidemics and other..
 
 The organisation manages community emergencies, epidemics and other disasters as per a documented plan.
 
@@ -99,14 +99,13 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.4.a–d.
-- Asterisked elements (ab) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -162,29 +161,27 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.4.a — The organisation identifies potential community emergencies, epidemics and other disasters.
 
-- Records showing COP.4.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.4.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written community emergency, epidemic or disaster risk-identification record.
+- Local hazard-assessment record.
+- Periodic-review record of identified risks.
 
 ### COP.4.b — The organisation manages community emergencies, epidemics and other disasters as per a documented plan.
 
-- Records showing COP.4.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.4.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Documented community-emergency management plan.
+- Roles-and-responsibilities record within the plan.
+- Activation record for a real event, where applicable.
 
 ### COP.4.c — Provision is made for availability of medical supplies, equipment and materials during such emergencies.
 
-- Records showing COP.4.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.4.c reviewed «quarterly».
+- Emergency-supply and equipment-provision record for community emergencies.
+- Stock-adequacy check record.
+- Replenishment record after use.
 
 ### COP.4.d — The plan is tested at least twice a year.
 
-- Records showing COP.4.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.4.d reviewed «quarterly».
+- Mock-drill or test record, at least twice a year.
+- Debrief and corrective-action record.
+- Test-schedule tracking record.
 
 ## Disclaimer
 

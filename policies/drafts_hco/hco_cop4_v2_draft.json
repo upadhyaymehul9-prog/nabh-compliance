@@ -9,11 +9,11 @@
   ],
   "policy_title": "Community Emergencies, Epidemics and Disasters",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard COP.4: The organisation plans and implements mechanisms for the care of patients during community emergencies, epidemics and other disasters.\n\nIt covers objective elements COP.4.a–d (4 elements).\n\nThis policy owns COP.4. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to staff who deliver or oversee the care described in COP.4 at {{HOSPITAL_NAME}}, including the «Medical Superintendent», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 4 objective elements (COP.4.a, COP.4.b, COP.4.c, COP.4.d).\n\nBoundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.",
+  "scope": "This policy applies to staff who deliver or oversee the care described in COP.4 at {{HOSPITAL_NAME}}, including the «Medical Superintendent», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 4 objective elements (COP.4.a, COP.4.b, COP.4.c, COP.4.d).\n\nBoundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.",
   "policy_statement": "{{HOSPITAL_NAME}} implements COP.4 so that the organisation plans and implements mechanisms for the care of patients during community emergencies, epidemics and other disasters..\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
   "procedure_steps": [
-    "5.1 The organisation identifies potential community emergencies, epidemic..\n\nThe organisation identifies potential community emergencies, epidemics and other disasters.\n\nMethod note (from guidebook interpretation): The disaster, community emergency and epidemic plan must |",
-    "5.2 The organisation manages community emergencies, epidemics and other d..\n\nThe organisation manages community emergencies, epidemics and other disasters as per a documented plan.\n\nMethod note (from guidebook interpretation): Resource availability shall be according to threat perception. The",
+    "5.1 The organisation identifies potential community emergencies, epidemics..\n\nThe organisation identifies potential community emergencies, epidemics and other disasters.\n\nMethod note (from guidebook interpretation): The disaster, community emergency and epidemic plan must |",
+    "5.2 The organisation manages community emergencies, epidemics and other..\n\nThe organisation manages community emergencies, epidemics and other disasters as per a documented plan.\n\nMethod note (from guidebook interpretation): Resource availability shall be according to threat perception. The",
     "5.3 Provision is made for availability of medical supplies, equipment and..\n\nProvision is made for availability of medical supplies, equipment and materials during such emergencies.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
     "5.4 The plan is tested at least twice a year\n\nThe plan is tested at least twice a year.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element."
   ],
@@ -29,10 +29,9 @@
       "steps": "Section 3; 5.1",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing COP.4.a was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.4.a reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Written community emergency, epidemic or disaster risk-identification record.",
+        "Local hazard-assessment record.",
+        "Periodic-review record of identified risks."
       ]
     },
     {
@@ -41,10 +40,9 @@
       "steps": "Section 3; 5.2",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing COP.4.b was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.4.b reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Documented community-emergency management plan.",
+        "Roles-and-responsibilities record within the plan.",
+        "Activation record for a real event, where applicable."
       ]
     },
     {
@@ -53,9 +51,9 @@
       "steps": "Section 3; 5.3",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing COP.4.c was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.4.c reviewed «quarterly»."
+        "Emergency-supply and equipment-provision record for community emergencies.",
+        "Stock-adequacy check record.",
+        "Replenishment record after use."
       ]
     },
     {
@@ -64,13 +62,13 @@
       "steps": "Section 3; 5.4",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing COP.4.d was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.4.d reviewed «quarterly»."
+        "Mock-drill or test record, at least twice a year.",
+        "Debrief and corrective-action record.",
+        "Test-schedule tracking record."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO COP.4 v2 (2026-08-20). Official Standards PDF OE count 4; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: ab. CORE: none. Achievement: none. Excellence: none.\nStop-work: omitted.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/04.\nDo not copy SHCO COP wording. Do not touch AAC.",
+  "universal_facts_checklist": "HCO COP.4 v2 (2026-08-20). Official Standards PDF OE count 4; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: ab. CORE: none. Achievement: none. Excellence: none.\nStop-work: omitted.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/04.\nDo not touch AAC.",
   "version": "2.0",
   "revision_history": [
     {
@@ -82,7 +80,7 @@
   "status": "draft",
   "definitions": "The organisation plans and implements mechanisms for the care of patients during community emergencies, epidemics and other disasters.",
   "exceptions": "1. Do not skip: The organisation identifies potential community emergencies, epidemics and other disasters.\n2. Do not skip: The organisation manages community emergencies, epidemics and other disasters as per a documented plan.\n3. Do not skip: Provision is made for availability of medical supplies, equipment and materials during such emergencies.\n4. Do not skip: The plan is tested at least twice a year.\n5. Staff who see a COP.4 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE COP.4.a–d.\n- Asterisked elements (ab) have document evidence as required.\n- CORE elements (none) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Community Emergencies, Epidemics and Disasters policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/COP/POL/04»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«Medical Superintendent»",

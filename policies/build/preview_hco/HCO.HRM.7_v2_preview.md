@@ -43,7 +43,7 @@ This policy applies to human resources, nursing, medical, and departmental leade
 
 It covers 5 objective elements (HRM.7.a, HRM.7.b, HRM.7.c, HRM.7.d, HRM.7.e).
 
-Boundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
 
 ## 3. Policy standards
 
@@ -70,7 +70,7 @@ Method note (from guidebook interpretation): Performance appraisal shall be done
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.2 The staff are made aware of the system of appraisal at the time of in...
+### 5.2 The staff are made aware of the system of appraisal at the time of...
 
 Staff at Preview Hospital are made aware of the appraisal system at the time of induction — for example through the service booklet and as part of induction training (HRM.3).
 
@@ -88,7 +88,7 @@ Preview Hospital uses the appraisal system as a tool for further development —
 
 Method note (from guidebook interpretation): This can be done by identifying training requirements and accordingly providing for the same (wherever possible). Key result areas are identified for each staff and training need assessment is also done. The organisation shall have written guidance for management of underperformance effectively.
 
-### 5.5 Performance appraisal is carried out at defined intervals and is docu...
+### 5.5 Performance appraisal is carried out at defined intervals and is...
 
 Performance appraisal at Preview Hospital is carried out at a defined interval and documented, at least «once a year».
 
@@ -110,14 +110,13 @@ departmental leaders
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE HRM.7.a–e.
-- Asterisked elements (a) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.
 
@@ -183,34 +182,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### HRM.7.a — Performance appraisal is done for staff within the organisation.
 
-- Records showing HRM.7.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.7.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Performance-appraisal record for all staff categories, including the organisation head and doctors.
+- Competency-assessment record where appropriate.
+- Contractor-conducted appraisal record for outsourced staff.
 
 ### HRM.7.b — The staff are made aware of the system of appraisal at the time of induction.
 
-- Records showing HRM.7.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.7.b reviewed «quarterly».
+- Appraisal-system-awareness record at induction.
+- Service-booklet or induction-material reference.
+- Staff-acknowledgement record.
 
 ### HRM.7.c — Performance is evaluated based on the pre-determined criteria.
 
-- Records showing HRM.7.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.7.c reviewed «quarterly».
+- Pre-determined-criteria document — key performance indicators or key result areas derived from the job description.
+- Evaluation record against those criteria.
+- Job-description cross-reference record.
 
 ### HRM.7.d — The appraisal system is used as a tool for further development.
 
-- Records showing HRM.7.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.7.d reviewed «quarterly».
+- Development-action record from the appraisal — training requirement identified.
+- Key-result-area and training-need-assessment record.
+- Underperformance-management written-guidance record.
 
 ### HRM.7.e — Performance appraisal is carried out at defined intervals and is documented.
 
-- Records showing HRM.7.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.7.e reviewed «quarterly».
+- Dated performance-appraisal record, at least annually.
+- Documentation-completeness record.
+- Appraisal-cycle-tracking record confirming no missed year.
 
 ## Disclaimer
 

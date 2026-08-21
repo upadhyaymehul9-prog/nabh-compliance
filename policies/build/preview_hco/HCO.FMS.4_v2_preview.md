@@ -43,7 +43,7 @@ This policy applies to engineering, biomedical, nursing and departmental leaders
 
 It covers 8 objective elements (FMS.4.a, FMS.4.b, FMS.4.c, FMS.4.d, FMS.4.e, FMS.4.f, FMS.4.g, FMS.4.h).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,20 +53,20 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: The organisation plans for utility and engineering equipment in accordance with its services and strategic ...
+1. Do not skip: The organisation plans for utility and engineering equipment in accordance with its services and strategic...
 2. Do not skip: Equipment is inventoried, and proper logs are maintained as required.
 3. Do not skip: The documented operational and maintenance (preventive and breakdown) plan is implemented.
-4. Do not skip: Utility equipment, are periodically inspected and calibrated (wherever applicable) for their proper functio...
+4. Do not skip: Utility equipment, are periodically inspected and calibrated (wherever applicable) for their proper...
 5. Do not skip: Competent personnel operate, inspect, test and maintain equipment and utility systems.
 6. Do not skip: Maintenance staff is contactable round the clock for emergency repairs.
-7. Do not skip: Downtime for critical equipment breakdowns is monitored from reporting to inspection and implementation of ...
+7. Do not skip: Downtime for critical equipment breakdowns is monitored from reporting to inspection and implementation of...
 8. Do not skip: Written guidance supports equipment replacement, identification of unwanted material and disposal.
 9. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
 10. Staff who see a FMS.4 rule broken report it the same shift to the «Engineering In-Charge» or the «Medical Superintendent».
 
 ## 5. What we do
 
-### 5.1 The organisation plans for utility and engineering equipment in accor...
+### 5.1 The organisation plans for utility and engineering equipment in...
 
 The organisation plans utility and engineering equipment to match services and the strategic plan, including future needs (diesel generator, chiller). Plans are implemented and reviewed at a defined interval. Selection, rental, update or upgrade is collaborative (end-user, management, finance, engineering).
 
@@ -94,7 +94,7 @@ This objective element is asterisked in the official Standards PDF — documenta
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.4 Utility equipment, are periodically inspected and calibrated (whereve...
+### 5.4 Utility equipment, are periodically inspected and calibrated (wherever...
 
 Utility equipment is periodically inspected and calibrated where applicable (for example steam-steriliser pressure gauges, medication-refrigerator temperature gauges), in-house or outsourced, with traceability to prescribed standards.
 
@@ -118,7 +118,7 @@ A night call with no answer path is not this element.
 
 Method note (from guidebook interpretation): The maintenance escalation matrix (if an emergency repair is not possible by staff on duty, more qualified/experienced staff shall be available) is available at the nursing station and other departments.
 
-### 5.7 Downtime for critical equipment breakdowns is monitored from reportin...
+### 5.7 Downtime for critical equipment breakdowns is monitored from reporting...
 
 Downtime for critical engineering and utility equipment breakdowns is monitored from reporting to inspection and corrective action. At a minimum the critical list includes diesel generator, lifts, uninterruptible power supply, fire-related equipment, dialysis reverse-osmosis and water pumps. A complaint register records receipt, job allotment and user-ratified completion.
 
@@ -126,7 +126,7 @@ Start of downtime is complaint time; end is user-ratified completion.
 
 Method note (from guidebook interpretation): The organisation shall define the critical engineering and utility equipment. At a minimum, this shall include DG set, lifts, UPS, fire related equipment, RO water plant for dialysis, water pumps etc. A complaint attendance register shall be maintained (physical or electronic) to indicate the date and time of receipt of the complaint, allotment of job and completion of the job. Completion of the job shall always be ratified by the user department. The start of downtime shall be the time when the complaint was lodged, and the end of the downtime shall be the time at which completion of the job was ratified by the user department.
 
-### 5.8 Written guidance supports equipment replacement, identification of un...
+### 5.8 Written guidance supports equipment replacement, identification of...
 
 Written guidance supports equipment replacement, identification of unwanted material and disposal. Unusable utility and engineering equipment is condemned in a systematic way. Records are kept.
 
@@ -160,14 +160,14 @@ departmental leaders
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE FMS.4.a–h.
-- Asterisked elements (ch) have document evidence as required.
-- CORE elements (c) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related facility change, utility failure, equipment recall or fire-plan change.
 
@@ -235,54 +235,51 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### FMS.4.a — The organisation plans for utility and engineering equipment in accordance with its services and strategic plan.
 
-- Records showing FMS.4.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.4.a reviewed «quarterly».
+- Written utility and engineering equipment plan matched to services and the strategic plan, including future needs (for example diesel generator, chiller).
+- Periodic review record of the plan.
+- Record showing collaborative selection (end-user, management, finance, engineering) for equipment decisions.
 
 ### FMS.4.b — Equipment is inventoried, and proper logs are maintained as required.
 
-- Records showing FMS.4.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.4.b reviewed «quarterly».
+- Equipment inventory with a unique identifier per item.
+- Quality-conformance, factory test or installation certificate on file where applicable.
+- Log-completeness check confirming no item without an identity.
 
 ### FMS.4.c — The documented operational and maintenance (preventive and breakdown) plan is implemented.
 
-- Records showing FMS.4.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.4.c reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Documented operational and maintenance (preventive and breakdown) plan for utility and engineering equipment.
+- Preventive-maintenance schedule and completion log for the critical-equipment list.
+- Breakdown-response record showing the plan was actually followed.
 
 ### FMS.4.d — Utility equipment, are periodically inspected and calibrated (wherever applicable) for their proper functioning.
 
-- Records showing FMS.4.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.4.d reviewed «quarterly».
+- Calibration schedule for utility equipment (for example steam-steriliser pressure gauges, medication-refrigerator temperature gauges).
+- Calibration certificate with traceability to a prescribed standard.
+- In-house or outsourced calibration record.
 
 ### FMS.4.e — Competent personnel operate, inspect, test and maintain equipment and utility systems.
 
-- Records showing FMS.4.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.4.e reviewed «quarterly».
+- Competency or training record for staff operating utility equipment.
+- Roster showing a named competent person for each shift.
+- Escalation record for any shift with no competent person named.
 
 ### FMS.4.f — Maintenance staff is contactable round the clock for emergency repairs.
 
-- Records showing FMS.4.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.4.f reviewed «quarterly».
+- Escalation matrix displayed at the nursing station and departments.
+- On-call roster for maintenance staff, round the clock.
+- Night-call response-time log.
 
 ### FMS.4.g — Downtime for critical equipment breakdowns is monitored from reporting to inspection and implementation of corrective actions.
 
-- Records showing FMS.4.g was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.4.g reviewed «quarterly».
+- Complaint register logging receipt, job allotment and user-ratified completion for critical equipment (diesel generator, lifts, UPS, fire-related, dialysis RO, water pumps).
+- Downtime-duration record from complaint time to ratified completion.
+- Trend report reviewed against the critical-equipment list.
 
 ### FMS.4.h — Written guidance supports equipment replacement, identification of unwanted material and disposal.
 
-- Records showing FMS.4.h was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.4.h reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written equipment-replacement and disposal guidance.
+- Condemnation record for utility and engineering equipment.
+- Systematic disposal log.
 
 ## Disclaimer
 

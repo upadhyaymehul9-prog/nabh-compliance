@@ -11,15 +11,15 @@
   ],
   "policy_title": "Management Support for Patient Safety and Quality",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard PSQ.6: The patient safety and quality improvement programme are supported by the management.\n\nIt covers objective elements PSQ.6.a–f (6 elements).\n\nChapter intent (official Standards PDF): The standards encourage an environment of patient safety and continual quality improvement. The patient safety and quality programme should be documented and involve all areas of the organisation and all staff members. The management creates a culture of safety in the organisation. Patient safety officer(s) shall be designated for the implementation of patient-safety programme. National / International patient-safety goals / solutions / framework shall be implemented. The organisation shall collect data on structures, processes and outcomes, especially in areas of high-risk situations. Quality indicators specific to clinical specialities shall be used to involve clinical departments in the quality improvement programme. The collected data shall be collated, analysed and trends are used for further improvement. Appropriate quality tools shall be used for carrying out quality improvement projects. Clinical audits shall be used as a tool to improve the quality of patient care in a sustained manner. Department leaders play an active role in patient safety and quality improvement. The organisation has a mechanism to capture patient reported outcome measures. The organisation shall have a robust incident reporting system. Sentinel events shall be defined. All incidents are investigated and appropriate action is taken. The management shall support the patient safety and quality programme.\n\nThis policy owns PSQ.6. Related AAC, COP, MOM, PRE and IPC duties stay with those policies — cross-reference only. Other PSQ standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to staff who deliver care, run quality or patient-safety work, lead departments, or hold management duties for safety and quality at {{HOSPITAL_NAME}}, including the «Medical Superintendent», the Patient Safety Officer, the Quality Coordinator, departmental leaders, treating doctors, nursing and the Medical Superintendent.\n\nIt covers 6 objective elements (PSQ.6.a, PSQ.6.b, PSQ.6.c, PSQ.6.d, PSQ.6.e, PSQ.6.f).\n\nBoundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
+  "scope": "This policy applies to staff who deliver care, run quality or patient-safety work, lead departments, or hold management duties for safety and quality at {{HOSPITAL_NAME}}, including the «Medical Superintendent», the Patient Safety Officer, the Quality Coordinator, departmental leaders, treating doctors, nursing and the Medical Superintendent.\n\nIt covers 6 objective elements (PSQ.6.a, PSQ.6.b, PSQ.6.c, PSQ.6.d, PSQ.6.e, PSQ.6.f).\n\nBoundaries: do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
   "policy_statement": "{{HOSPITAL_NAME}} implements PSQ.6 so that the patient safety and quality improvement programme are supported by the management.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
   "procedure_steps": [
     "5.1 The management creates a culture of safety\n\nManagement creates a culture of safety: sharing information, reporting incidents, learning from analysis, a just (blame-free) culture, and collaboration across disciplines.\n\nThe «Medical Superintendent» signs the safety-culture statement in the patient-safety manual. Safety culture is measured at least «annually» with a validated survey (for example MaPSaF, Safety Attitudes Questionnaire, or AHRQ SOPS) and management acts on the results. This Achievement element is evidenced by those actions, not by a poster alone.\n\nMethod note (from guidebook interpretation): The management needs to ensure the adoption of behaviours that promote patient safety. Some of the key features required for a culture of safety are sharing information, reporting occurrences of incidents, learning from safety incident analysis, blame-free culture and encouragement of collaboration across disciplines and departments. The key components of patient safety culture are informed culture, reporting culture, learning culture, just culture and flexible culture. The management needs to measure its safety culture regularly (at least once a year). This shall be measured using validated surveys. For example, the Manchester Patient Safety Framework (MaPSaF), Safety Attitudes Questionnaire, AHRQ Surveys on Patient Safety Culture (SOPS™). The management shall act on their patient safety culture assessment results.",
     "5.2 The leaders at all levels in the organisation are aware of the intent...\n\nLeaders at all levels are aware of the intent of the patient safety and quality improvement programme and the approach to implementation.\n\nDepartment heads receive a briefing at induction to the role and «annually». The «Quality Coordinator» holds acknowledgement or attendance. A programme unknown to floor leaders is not this element.\n\nMethod note (from guidebook interpretation): The organisation and departmental leaders are aware of the patient safety and quality improvement programme, its intent and applicability to the respective areas and how it contributes to the organisation as a whole.",
-    "5.3 Departmental leaders are involved in patient safety and quality impro...\n\nDepartmental leaders are involved in patient safety and quality improvement: they attend the relevant committee or send a named delegate, own department indicators and projects, and brief their teams.\n\nInvolvement is visible in minutes and department quality files.\n\nMethod note (from guidebook interpretation): To effectively implement this, each department could have its department objectives/key performance indicators including clinical indicators, and the responsibility of achieving them could be that of the leader/designated person. This could be discussed during departmental meeting.",
-    "5.4 Organisation earmarks adequate funds from its annual budget in this r...\n\nThe organisation earmarks adequate funds from its annual budget for the patient safety and quality programme (training, audit time, safety equipment, improvement projects, information systems as required).\n\nThe «Medical Superintendent» signs the budget line. Mid-year stock-out of a funded safety item is reported to management.\n\nMethod note (from guidebook interpretation): Appropriate fund allocation is done by the organisation for the smooth functioning of the patient safety and quality improvement programme. The budget could be earmarked based on previous year's spending. If no data is available, the organisation could make a beginning by earmarking a budget but reviewing it at the end of six months to make any necessary modifications. The management makes available adequate resources required for patient safety and quality improvement programme. Resources shall include men, material, machine, money, milieu, measurement and method. These shall be in steady supply to ensure that the programme functions smoothly.",
+    "5.3 Departmental leaders are involved in patient safety and quality...\n\nDepartmental leaders are involved in patient safety and quality improvement: they attend the relevant committee or send a named delegate, own department indicators and projects, and brief their teams.\n\nInvolvement is visible in minutes and department quality files.\n\nMethod note (from guidebook interpretation): To effectively implement this, each department could have its department objectives/key performance indicators including clinical indicators, and the responsibility of achieving them could be that of the leader/designated person. This could be discussed during departmental meeting.",
+    "5.4 Organisation earmarks adequate funds from its annual budget in this...\n\nThe organisation earmarks adequate funds from its annual budget for the patient safety and quality programme (training, audit time, safety equipment, improvement projects, information systems as required).\n\nThe «Medical Superintendent» signs the budget line. Mid-year stock-out of a funded safety item is reported to management.\n\nMethod note (from guidebook interpretation): Appropriate fund allocation is done by the organisation for the smooth functioning of the patient safety and quality improvement programme. The budget could be earmarked based on previous year's spending. If no data is available, the organisation could make a beginning by earmarking a budget but reviewing it at the end of six months to make any necessary modifications. The management makes available adequate resources required for patient safety and quality improvement programme. Resources shall include men, material, machine, money, milieu, measurement and method. These shall be in steady supply to ensure that the programme functions smoothly.",
     "5.5 The management identifies organisational performance improvement targets\n\nManagement identifies organisational and department-level performance-improvement targets, monitors them at least once in three months, and modifies the target at least «annually».\n\nTargets are shared with faculty and staff with regular feedback. This Achievement element is evidenced by the current target set plus review, not by an informal wish list.\n\nMethod note (from guidebook interpretation): The management shall identify the organisation and department level quality objectives, set targets, monitor them (at least once in three months) and modify the target (at least annually). The targets shall be shared with the faculty and staff and regular feedback taken.",
-    "5.6 The management uses the feedback obtained from the work force to impr...\n\nManagement uses workforce feedback (staff survey, safety huddle themes, suggestion scheme) to improve the patient safety and quality programme.\n\nFeedback themes and resulting changes are minuted. This Excellence element is evidenced by a closed loop from staff input to a programme change.\n\nMethod note (from guidebook interpretation): The feedback shall be obtained from the staff on their understanding and use of the safety and quality systems. Feedback may be obtained once a year through staff surveys, but it is also important that staff workforce feel able to raise concerns whenever they occur. These inputs shall be used to improve patient safety and quality improvement programmes."
+    "5.6 The management uses the feedback obtained from the work force to...\n\nManagement uses workforce feedback (staff survey, safety huddle themes, suggestion scheme) to improve the patient safety and quality programme.\n\nFeedback themes and resulting changes are minuted. This Excellence element is evidenced by a closed loop from staff input to a programme change.\n\nMethod note (from guidebook interpretation): The feedback shall be obtained from the staff on their understanding and use of the safety and quality systems. Feedback may be obtained once a year through staff surveys, but it is also important that staff workforce feel able to raise concerns whenever they occur. These inputs shall be used to improve patient safety and quality improvement programmes."
   ],
   "responsibility": "Medical Superintendent\n- Accountable that PSQ.6 is resourced and followed.\n- Acts on sentinel events, safety-culture failures and quality-programme gaps that reach top leadership.\n\nMedical Superintendent\n- Owns day-to-day implementation and records for this standard.\n\nPatient Safety Officer\n- Coordinates the patient-safety programme and incident/sentinel-event path across standards.\n\nQuality Coordinator\n- Coordinates the quality-improvement programme, indicators, audits and projects as this standard requires.\n- Audits this policy «quarterly»; holds training acknowledgements.\n\nNursing Superintendent\n- Owns nursing-care quality monitoring where this standard requires it.",
   "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Patient Safety and Quality Improvement, standard PSQ.6. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — PSQ.6 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_psq_guidebook_ocr.txt).\n- Internal documents of {{HOSPITAL_NAME}}: Patient Safety Manual, Quality Manual, indicator definitions, clinical-audit calendar, incident and sentinel-event guidance named for PSQ.6.",
@@ -33,9 +33,9 @@
       "steps": "Section 3; 5.1",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PSQ.6.a was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PSQ.6.a reviewed «quarterly»."
+        "Signed safety-culture statement in the patient-safety manual.",
+        "Validated safety-culture survey result at least annually (for example MaPSaF, Safety Attitudes Questionnaire, AHRQ SOPS).",
+        "Management action record responding to the survey results."
       ]
     },
     {
@@ -44,9 +44,9 @@
       "steps": "Section 3; 5.2",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PSQ.6.b was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PSQ.6.b reviewed «quarterly»."
+        "Department-head briefing record at induction to the role and annually thereafter.",
+        "Acknowledgement or attendance record held by the Quality Coordinator.",
+        "Confirmation floor leaders can describe the programme's intent and implementation approach."
       ]
     },
     {
@@ -55,9 +55,9 @@
       "steps": "Section 3; 5.3",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PSQ.6.c was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PSQ.6.c reviewed «quarterly»."
+        "Committee attendance or named-delegate record for departmental leaders.",
+        "Department quality file showing owned indicators or projects.",
+        "Team-briefing record from the departmental leader."
       ]
     },
     {
@@ -66,9 +66,9 @@
       "steps": "Section 3; 5.4",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PSQ.6.d was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PSQ.6.d reviewed «quarterly»."
+        "Signed annual budget line for patient safety and quality (training, audit time, safety equipment, projects, information systems).",
+        "Record of any mid-year stock-out of a funded safety item, reported to management.",
+        "Budget-utilisation record for the year."
       ]
     },
     {
@@ -77,9 +77,9 @@
       "steps": "Section 3; 5.5",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PSQ.6.e was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PSQ.6.e reviewed «quarterly»."
+        "Current organisational and department-level performance-improvement target set.",
+        "Review record at least once in three months and modification record at least annually.",
+        "Record of targets shared with faculty and staff with feedback."
       ]
     },
     {
@@ -88,13 +88,13 @@
       "steps": "Section 3; 5.6",
       "responsible": "Medical Superintendent",
       "records": [
-        "Records showing PSQ.6.f was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for PSQ.6.f reviewed «quarterly»."
+        "Staff-feedback source record (survey, safety-huddle theme log, suggestion scheme).",
+        "Minuted record of feedback themes considered.",
+        "Record of a programme change resulting from that feedback — the closed loop."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO PSQ.6 v2 (2026-08-21). Official Standards PDF OE count 6; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: none. CORE: none. Achievement: ae. Excellence: f.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/PSQ/POL/06.\nOfficial chapter is 7 standards / 46 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. No statute P2 proposed (accreditation-only).\nDo not copy SHCO equivalent-chapter wording. Do not touch AAC, COP, MOM, PRE or IPC.",
+  "universal_facts_checklist": "HCO PSQ.6 v2 (2026-08-21). Official Standards PDF OE count 6; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: none. CORE: none. Achievement: ae. Excellence: f.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/PSQ/POL/06.\nOfficial chapter is 7 standards / 46 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. No statute P2 proposed (accreditation-only).\nDo not touch AAC, COP, MOM, PRE or IPC.",
   "version": "2.0",
   "revision_history": [
     {
@@ -105,8 +105,8 @@
   ],
   "status": "draft",
   "definitions": "The patient safety and quality improvement programme are supported by the management.",
-  "exceptions": "1. Do not skip: The management creates a culture of safety.\n2. Do not skip: The leaders at all levels in the organisation are aware of the intent of the patient safety and quality imp...\n3. Do not skip: Departmental leaders are involved in patient safety and quality improvement.\n4. Do not skip: Organisation earmarks adequate funds from its annual budget in this regard.\n5. Do not skip: The management identifies organisational performance improvement targets.\n6. Do not skip: The management uses the feedback obtained from the work force to improve patient safety and quality improve...\n7. Staff who see a PSQ.6 rule broken report it the same shift to the «department in-charge» or the «Patient Safety Officer» / «Quality Coordinator».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE PSQ.6.a–f.\n- Asterisked elements (none) have document evidence as required.\n- CORE elements (none) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related sentinel event, indicator failure cluster or failed clinical-audit cycle.",
+  "exceptions": "1. Do not skip: The management creates a culture of safety.\n2. Do not skip: The leaders at all levels in the organisation are aware of the intent of the patient safety and quality...\n3. Do not skip: Departmental leaders are involved in patient safety and quality improvement.\n4. Do not skip: Organisation earmarks adequate funds from its annual budget in this regard.\n5. Do not skip: The management identifies organisational performance improvement targets.\n6. Do not skip: The management uses the feedback obtained from the work force to improve patient safety and quality...\n7. Staff who see a PSQ.6 rule broken report it the same shift to the «department in-charge» or the «Patient Safety Officer» / «Quality Coordinator».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related sentinel event, indicator failure cluster or failed clinical-audit cycle.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Management Support for Patient Safety and Quality policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/PSQ/POL/06»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«Medical Superintendent»",

@@ -43,7 +43,7 @@ This policy applies to engineering, biomedical, nursing and departmental leaders
 
 It covers 5 objective elements (FMS.6.a, FMS.6.b, FMS.6.c, FMS.6.d, FMS.6.e).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,7 +53,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Written guidance governs the implementation of procurement, handling, storage, distribution, usage and repl...
+1. Do not skip: Written guidance governs the implementation of procurement, handling, storage, distribution, usage and...
 2. Do not skip: Medical gases are handled, stored, distributed and used in a safe manner.
 3. Do not skip: There is an operational, inspection, testing and maintenance plan for piped medical gas, compressed air and...
 4. Do not skip: Alternate sources for medical gases, vacuum and compressed air are provided for, in case of failure.
@@ -63,7 +63,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 Written guidance governs the implementation of procurement, handling,...
+### 5.1 Written guidance governs the implementation of procurement, handling...
 
 Written guidance governs procurement, handling, storage, distribution, usage and replenishment of all medical gases used here, including colour coding and full/empty signage. HTM 02-01 or the National Fire Protection Association medical-gas handbook is a reference.
 
@@ -93,7 +93,7 @@ Method note (from guidebook interpretation): This shall adhere to the manufactur
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.4 Alternate sources for medical gases, vacuum and compressed air are pr...
+### 5.4 Alternate sources for medical gases, vacuum and compressed air are...
 
 Alternate sources for medical gases, vacuum and compressed air are provided for failure (stand-by compressor and vacuum pump; stand-by manifold or bulk cylinders).
 
@@ -103,7 +103,7 @@ Method note (from guidebook interpretation): In the case of an air compressor an
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.5 The organisation regularly tests the functioning of these alternate s...
+### 5.5 The organisation regularly tests the functioning of these alternate...
 
 The organisation regularly tests these alternate sources. Results are documented. Default interval «monthly» unless the manufacturer or the written plan states a shorter one.
 
@@ -133,14 +133,14 @@ departmental leaders
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE FMS.6.a–e.
-- Asterisked elements (ac) have document evidence as required.
-- CORE elements (bd) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related facility change, utility failure, equipment recall or fire-plan change.
 
@@ -205,37 +205,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### FMS.6.a — Written guidance governs the implementation of procurement, handling, storage, distribution, usage and replenishment of medical gases.
 
-- Records showing FMS.6.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.6.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written medical-gas procurement, handling, storage, distribution, usage and replenishment guidance, including colour-coding and signage.
+- Reference used (for example HTM 02-01 or the NFPA medical-gas handbook).
+- Statutory-provision record (Explosives Act, Gas Cylinder Rules, Static and Mobile Pressure Vessels Rules) where those apply to this hospital's gases.
 
 ### FMS.6.b — Medical gases are handled, stored, distributed and used in a safe manner.
 
-- Records showing FMS.6.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.6.b reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Colour-coded cylinder and pipeline inventory with alarm and valve-box log.
+- Twenty-four-hour plant-alarm monitoring record.
+- Pin-indexed outlet and automatic-changeover verification record.
 
 ### FMS.6.c — There is an operational, inspection, testing and maintenance plan for piped medical gas, compressed air and vacuum installation.
 
-- Records showing FMS.6.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.6.c reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Documented operational, inspection, testing and maintenance plan for piped medical gas, compressed air and vacuum.
+- Compressed-air purity test record, at least annually, at operating-theatre and intensive-care terminal outlets.
+- Manufacturer-following maintenance log.
 
 ### FMS.6.d — Alternate sources for medical gases, vacuum and compressed air are provided for, in case of failure.
 
-- Records showing FMS.6.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.6.d reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Stand-by compressor/vacuum-pump and stand-by manifold or bulk-cylinder inventory.
+- Automatic-changeover test record.
+- Alternate-source readiness confirmation log.
 
 ### FMS.6.e — The organisation regularly tests the functioning of these alternate sources.
 
-- Records showing FMS.6.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.6.e reviewed «quarterly».
+- Test log for alternate medical-gas sources at the defined interval (default monthly).
+- Manufacturer or written-plan interval reference used.
+- Corrective-action record for any failed test.
 
 ## Disclaimer
 

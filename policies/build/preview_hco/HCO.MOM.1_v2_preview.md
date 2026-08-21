@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 5 objective elements (MOM.1.a, MOM.1.b, MOM.1.c, MOM.1.d, MOM.1.e).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -54,10 +54,10 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 ## 4. Non-negotiable rules
 
 1. Do not skip: Pharmacy services and medication management are implemented following written guidance.
-2. Do not skip: A multi-disciplinary committee guides the formulation and implementation of pharmacy services and medicatio...
+2. Do not skip: A multi-disciplinary committee guides the formulation and implementation of pharmacy services and medication...
 3. Do not skip: The multi-disciplinary committee updates medication management processes.
 4. Do not skip: There is a procedure to obtain medications when the pharmacy is closed or in case of stock outs.
-5. Do not skip: The organisation has a mechanism to inform relevant staff of key changes in pharmacy services and medicatio...
+5. Do not skip: The organisation has a mechanism to inform relevant staff of key changes in pharmacy services and medication...
 6. Staff who see a MOM.1 rule broken report it the same shift to the «department in-charge» or the «Medication Safety Officer».
 
 ## 5. What we do
@@ -74,7 +74,7 @@ Method note (from guidebook interpretation): The written guidance shall address 
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.2 A multi-disciplinary committee guides the formulation and implementat...
+### 5.2 A multi-disciplinary committee guides the formulation and...
 
 The «Medical Superintendent» constitutes the «Drug and Therapeutics Committee» with at least pharmacy, medical, nursing and «one clinical specialty representative matching the hospital's scope». The committee's written terms of reference cover formulary, high-risk and emergency medication lists, storage and floor-stock oversight, verbal-order and reconciliation rules, and medication-error review.
 
@@ -90,7 +90,7 @@ An update is a written change to a process (who does what, where, with which rec
 
 Method note (from guidebook interpretation): This includes information on rational use, medication errors, medication management, adverse drug reactions, patient safety and high-risk medications. The multidisciplinary committee shall conduct Medication Management system review on an annual basis. The organisation designates a medication safety officer, this job responsibility could be handled by the patient safety officer for example monitoring and analysis of medication related adverse events. Refer PSQ.1.d. and PSQ.7.c.
 
-### 5.4 There is a procedure to obtain medications when the pharmacy is close...
+### 5.4 There is a procedure to obtain medications when the pharmacy is closed...
 
 When the main pharmacy is closed, or when a required item is out of stock, staff obtain medications through a named after-hours / stock-out procedure.
 
@@ -102,7 +102,7 @@ Method note (from guidebook interpretation): When the pharmacy is closed or in c
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.5 The organisation has a mechanism to inform relevant staff of key chan...
+### 5.5 The organisation has a mechanism to inform relevant staff of key...
 
 When the «Drug and Therapeutics Committee» changes a medication-management process, a formulary item, a high-risk or emergency list, or a recall action, the «Medication Safety Officer» informs the staff who prescribe, dispense or administer before the change takes effect.
 
@@ -130,14 +130,13 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE MOM.1.a–e.
-- Asterisked elements (ad) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event or recall.
 
@@ -199,35 +198,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### MOM.1.a — Pharmacy services and medication management are implemented following written guidance.
 
-- Records showing MOM.1.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.1.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Documented Medication Management Manual covering procurement through administration, monitoring and error reporting.
+- Drug and Therapeutics Committee approval record for the guidance.
+- Staff training record at induction and annually, with current copies available in pharmacy, emergency, ICU, OT and wards.
 
 ### MOM.1.b — A multi-disciplinary committee guides the formulation and implementation of pharmacy services and medication management.
 
-- Records showing MOM.1.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.1.b reviewed «quarterly».
+- DTC constitution record naming pharmacy, medical, nursing and specialty representation.
+- Written terms of reference covering formulary, high-risk/emergency lists, storage oversight, verbal-order/reconciliation rules and error review.
+- Quarterly meeting minutes naming decisions, owners and due dates.
 
 ### MOM.1.c — The multi-disciplinary committee updates medication management processes.
 
-- Records showing MOM.1.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.1.c reviewed «quarterly».
+- Annual, or sooner, process-review record by the DTC.
+- Written change record to a specific process, not a restatement of the same rule.
+- Open-action tracking record until closure by the Medication Safety Officer.
 
 ### MOM.1.d — There is a procedure to obtain medications when the pharmacy is closed or in case of stock outs.
 
-- Records showing MOM.1.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.1.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written after-hours/stock-out procedure naming who is authorised and how a second-person check is used.
+- Reconciliation record showing after-hours issues entered the next working day.
+- Quarterly test record of the after-hours path by the Pharmacy In-Charge.
 
 ### MOM.1.e — The organisation has a mechanism to inform relevant staff of key changes in pharmacy services and medication management to ensure uninterrupted and safe care.
 
-- Records showing MOM.1.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.1.e reviewed «quarterly».
+- Dated circular or briefing record for a medication-management process, formulary, high-risk/emergency list or recall change.
+- Distribution list and acknowledgement record held by the Quality Coordinator.
+- Confirmation the change was communicated before it took effect, not only filed in minutes.
 
 ## Disclaimer
 

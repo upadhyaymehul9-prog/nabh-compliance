@@ -43,7 +43,7 @@ This policy applies to those responsible for governance, the person heading the 
 
 It covers 6 objective elements (ROM.5.a, ROM.5.b, ROM.5.c, ROM.5.d, ROM.5.e, ROM.5.f).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -54,7 +54,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 ## 4. Non-negotiable rules
 
 1. Do not skip: The organisation has strategic and operational plans, including long-term and short-term goals commensurate...
-2. Do not skip: The organisation coordinates the functioning with departments and external agencies and monitors the progre...
+2. Do not skip: The organisation coordinates the functioning with departments and external agencies and monitors the progress...
 3. Do not skip: The organisation plans and budgets for its activities annually.
 4. Do not skip: The functioning of committees is reviewed for their effectiveness.
 5. Do not skip: The organisation documents the service standards that are measurable and monitors them.
@@ -63,7 +63,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 The organisation has strategic and operational plans, including long-...
+### 5.1 The organisation has strategic and operational plans, including...
 
 The organisation has strategic and operational plans, including long-term and short-term goals commensurate with vision, mission and values, developed in consultation with stakeholders.
 
@@ -71,7 +71,7 @@ Plans name owners and timeframes. The «Quality Coordinator» holds the current 
 
 Method note (from guidebook interpretation): The leader(s) shall define and develop the process for strategic and operational plans to achieve the organisational vision and mission statement and adhere to the values. It shall be discussed with all stakeholders. Stakeholders include the community that the organisation serves. The strategic plan development shall take into consideration both external and internal scan. The same can be done using tools like SWOT(strengths, weakness, opportunities and threats) analysis. Some of the inputs that shall be considered while finalising these plans shall be the findings of the risk management plan, patient safety goals and results of facility rounds. Operational plan(s) shall be done on an annual basis. The strategic and operational plan shall have defined goals and objectives which are measurable and have defined time frames. Refer to the glossary for “strategic plan” and “operational plan”.
 
-### 5.2 The organisation coordinates the functioning with departments and ext...
+### 5.2 The organisation coordinates the functioning with departments and...
 
 The organisation coordinates functioning with departments and external agencies and monitors progress against defined goals and objectives.
 
@@ -95,7 +95,7 @@ The «Quality Coordinator» prepares the review. A list of committees without an
 
 Method note (from guidebook interpretation): The review shall be done by the leadership. The review of the functioning shall include whether the purpose of having the committee is being met, whether the committee is meeting at the prescribed frequency and whether the committee is suggesting remedial measures and if there is adequate monitoring of the corrective and preventive action suggested by the committee by way of risk mitigation within the scope of the particular committee. For an effective review, the organisation could document the scope of every committee, the roles and responsibilities assigned to various members and the frequency of meetings. Minutes of the meeting for each committee meeting will be maintained.
 
-### 5.5 The organisation documents the service standards that are measurable ...
+### 5.5 The organisation documents the service standards that are measurable...
 
 The organisation documents measurable service standards and monitors them (what good looks like for selected services, the measure, and the review interval).
 
@@ -135,14 +135,13 @@ departmental leaders
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE ROM.5.a–f.
-- Asterisked elements (bef) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related governance change, statutory-register gap or outsourced-service failure.
 
@@ -203,42 +202,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### ROM.5.a — The organisation has strategic and operational plans, including long-term and short-term goals commensurate to the organisation’s vision, mission and values in consultation with the various stakeholders.
 
-- Records showing ROM.5.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.5.a reviewed «quarterly».
+- Strategic and operational plan documents naming owners and timeframes.
+- Stakeholder-consultation record for plan development.
+- Current approved plan set held by the Quality Coordinator and Medical Superintendent.
 
 ### ROM.5.b — The organisation coordinates the functioning with departments and external agencies and monitors the progress in achieving the defined goals and objectives.
 
-- Records showing ROM.5.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.5.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Coordination minutes with departments and external agencies.
+- Progress-tracking report against defined goals and objectives.
+- Corrective-action record where progress lagged.
 
 ### ROM.5.c — The organisation plans and budgets for its activities annually.
 
-- Records showing ROM.5.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.5.c reviewed «quarterly».
+- Annual operational plan linked to the strategic plan.
+- Annual budget document.
+- Governance approval record for the plan and budget (cross-reference ROM.1.c).
 
 ### ROM.5.d — The functioning of committees is reviewed for their effectiveness.
 
-- Records showing ROM.5.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.5.d reviewed «quarterly».
+- Committee list with defined meeting frequency.
+- Effectiveness-review report — whether each committee met, decided and closed actions.
+- Action-item closure log.
 
 ### ROM.5.e — The organisation documents the service standards that are measurable and monitors them.
 
-- Records showing ROM.5.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.5.e reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Documented measurable service-standard set (the measure and review interval) for selected services.
+- Monitoring results log against each standard.
+- Review record showing the standards were actually checked.
 
 ### ROM.5.f — Systems and processes are in place for change management.
 
-- Records showing ROM.5.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.5.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written change-management guidance: approval authority, staff communication method, continuity method.
+- A completed change record following that guidance.
+- Service-continuity evidence for a change actually made.
 
 ## Disclaimer
 

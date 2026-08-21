@@ -12,14 +12,14 @@
   ],
   "policy_title": "Safe Clinical Procedures",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard COP.7: Clinical procedures are performed safely.\n\nIt covers objective elements COP.7.a–g (7 elements).\n\nThis policy owns COP.7. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to staff who deliver or oversee the care described in COP.7 at {{HOSPITAL_NAME}}, including the «Quality Coordinator», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 7 objective elements (COP.7.a, COP.7.b, COP.7.c, COP.7.d, COP.7.e, COP.7.f, COP.7.g).\n\nBoundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.",
+  "scope": "This policy applies to staff who deliver or oversee the care described in COP.7 at {{HOSPITAL_NAME}}, including the «Quality Coordinator», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 7 objective elements (COP.7.a, COP.7.b, COP.7.c, COP.7.d, COP.7.e, COP.7.f, COP.7.g).\n\nBoundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.",
   "policy_statement": "{{HOSPITAL_NAME}} implements COP.7 so that clinical procedures are performed safely..\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
   "procedure_steps": [
-    "5.1 Clinical procedures are performed based on the clinical needs of the ..\n\nClinical procedures are performed based on the clinical needs of the patient.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.2 Performance of various clinical procedures is based on written guidan..\n\nPerformance of various clinical procedures is based on written guidance and done in a safe manner.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.",
-    "5.3 Qualified personnel order, plan, perform and assist in performing pro..\n\nQualified personnel order, plan, perform and assist in performing procedures.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.4 Care is taken to prevent adverse events like a wrong patient, wrong p..\n\nCare is taken to prevent adverse events like a wrong patient, wrong procedure and wrong site.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
-    "5.5 Informed consent is taken by the personnel performing the procedure, ..\n\nInformed consent is taken by the personnel performing the procedure, where applicable.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.1 Clinical procedures are performed based on the clinical needs of the..\n\nClinical procedures are performed based on the clinical needs of the patient.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.2 Performance of various clinical procedures is based on written guidance..\n\nPerformance of various clinical procedures is based on written guidance and done in a safe manner.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.",
+    "5.3 Qualified personnel order, plan, perform and assist in performing..\n\nQualified personnel order, plan, perform and assist in performing procedures.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.4 Care is taken to prevent adverse events like a wrong patient, wrong..\n\nCare is taken to prevent adverse events like a wrong patient, wrong procedure and wrong site.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.5 Informed consent is taken by the personnel performing the procedure..\n\nInformed consent is taken by the personnel performing the procedure, where applicable.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
     "5.6 Patients are appropriately monitored during and after the procedure\n\nPatients are appropriately monitored during and after the procedure.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
     "5.7 Procedures are documented accurately in the patient record\n\nProcedures are documented accurately in the patient record.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element."
   ],
@@ -35,9 +35,9 @@
       "steps": "Section 3; 5.1; Section 6 Stop-work",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing COP.7.a was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.7.a reviewed «quarterly»."
+        "Clinical-indication documentation for a sampled procedure.",
+        "Justification record in the medical record.",
+        "Confirmation the procedure matched clinical need."
       ]
     },
     {
@@ -46,10 +46,9 @@
       "steps": "Section 3; 5.2; Section 6 Stop-work",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing COP.7.b was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.7.b reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Written procedure-specific guidance or protocol.",
+        "Safety-checklist record for the procedure.",
+        "Staff-training record on the guidance."
       ]
     },
     {
@@ -58,9 +57,9 @@
       "steps": "Section 3; 5.3; Section 6 Stop-work",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing COP.7.c was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.7.c reviewed «quarterly»."
+        "Credentialing or privileging cross-reference (HRM.11–13) for personnel performing the procedure.",
+        "Order and performer-identification record.",
+        "Assisting-personnel qualification record."
       ]
     },
     {
@@ -69,10 +68,9 @@
       "steps": "Section 3; 5.4",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing COP.7.d was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.7.d reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Site, procedure and patient verification checklist for a sampled procedure.",
+        "Time-out record before the procedure.",
+        "Near-miss or adverse-event record, where applicable."
       ]
     },
     {
@@ -81,9 +79,9 @@
       "steps": "Section 3; 5.5",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing COP.7.e was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.7.e reviewed «quarterly»."
+        "Consent form signed by the performing personnel.",
+        "Cross-reference to the PRE.4/PRE.2.g consent process.",
+        "Consent-completeness check."
       ]
     },
     {
@@ -92,9 +90,9 @@
       "steps": "Section 3; 5.6",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing COP.7.f was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.7.f reviewed «quarterly»."
+        "Intra- and post-procedure monitoring record.",
+        "Monitoring-parameter documentation.",
+        "Escalation record for an abnormal finding."
       ]
     },
     {
@@ -103,13 +101,13 @@
       "steps": "Section 3; 5.7",
       "responsible": "Quality Coordinator",
       "records": [
-        "Records showing COP.7.g was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.7.g reviewed «quarterly»."
+        "Procedure-note documentation in the patient record.",
+        "Documentation-completeness and accuracy check.",
+        "Timeliness-of-entry record."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO COP.7 v2 (2026-08-20). Official Standards PDF OE count 7; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: bd. CORE: d. Achievement: none. Excellence: none.\nStop-work: YES — JUDGMENT CALL: Clinical procedure without clinical need, written guidance, or qualified performers.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/07.\nDo not copy SHCO COP wording. Do not touch AAC.",
+  "universal_facts_checklist": "HCO COP.7 v2 (2026-08-20). Official Standards PDF OE count 7; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: bd. CORE: d. Achievement: none. Excellence: none.\nStop-work: YES — JUDGMENT CALL: Clinical procedure without clinical need, written guidance, or qualified performers.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/07.\nDo not touch AAC.",
   "version": "2.0",
   "revision_history": [
     {
@@ -121,7 +119,7 @@
   "status": "draft",
   "definitions": "Clinical procedures are performed safely.",
   "exceptions": "1. Do not skip: Clinical procedures are performed based on the clinical needs of the patient.\n2. Do not skip: Performance of various clinical procedures is based on written guidance and done in a safe manner.\n3. Do not skip: Qualified personnel order, plan, perform and assist in performing procedures.\n4. Do not skip: Care is taken to prevent adverse events like a wrong patient, wrong procedure and wrong site.\n5. Do not skip: Informed consent is taken by the personnel performing the procedure, where applicable.\n6. Do not skip: Patients are appropriately monitored during and after the procedure.\n7. Do not skip: Procedures are documented accurately in the patient record.\n8. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n9. Staff who see a COP.7 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE COP.7.a–g.\n- Asterisked elements (bd) have document evidence as required.\n- CORE elements (d) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Safe Clinical Procedures policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/COP/POL/07»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«Quality Coordinator»",

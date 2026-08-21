@@ -43,7 +43,7 @@ This policy applies to staff who deliver clinical care, run support services (ho
 
 It covers 5 objective elements (IPC.8.a, IPC.8.b, IPC.8.c, IPC.8.d, IPC.8.e).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,7 +53,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: The organisation implements occupational health and safety practices as per written guidance to reduce the ...
+1. Do not skip: The organisation implements occupational health and safety practices as per written guidance to reduce the...
 2. Do not skip: The organisation implements an immunisation policy for its staff.
 3. Do not skip: The organisation implements work restrictions for health care providers with transmissible infections.
 4. Do not skip: The organisation implements measures for blood and body fluid exposure prevention.
@@ -63,7 +63,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 The organisation implements occupational health and safety practices ...
+### 5.1 The organisation implements occupational health and safety practices as...
 
 Occupational health and safety practices to reduce transmission among healthcare providers are in written guidance: PPE, vaccination access, exposure reporting, and work restriction. Resources to implement it are available.
 
@@ -83,7 +83,7 @@ Method note (from guidebook interpretation): The organisation’s immunisation p
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.3 The organisation implements work restrictions for health care provide...
+### 5.3 The organisation implements work restrictions for health care providers...
 
 Work restrictions for staff with transmissible infections (for example conjunctivitis, chickenpox, acute respiratory infection as the «Occupational Health Physician» lists) limit role until cleared. Staff know how to report illness.
 
@@ -91,7 +91,7 @@ Working against a restriction is a stop-work trigger (section 6). This Achieveme
 
 Method note (from guidebook interpretation): The restrictions could include limiting role and responsibilities for health care providers with transmissible infections. The organisation encourages health care providers to report their illness or exposures and does not penalise them. Examples of transmissible infections include acute conjunctivitis, chickenpox, acute respiratory infections, smear-positive case of tuberculosis etc.
 
-### 5.4 The organisation implements measures for blood and body fluid exposur...
+### 5.4 The organisation implements measures for blood and body fluid exposure...
 
 Blood and body-fluid exposure prevention: appropriate PPE, safe sharps, no recapping, splash protection for procedures that spray. Sharps containers are at the point of use and replaced before full.
 
@@ -99,7 +99,7 @@ The «Infection Prevention and Control Nurse» includes this in the monthly IPC 
 
 Method note (from guidebook interpretation): The organisation ensures that health care providers use appropriate personnel protective equipment to prevent blood and body fluid exposures. The organisation shall strive to eliminate the use of needle devices whenever safe and effective alternatives are available. It could consider providing needle devices with safety features.
 
-### 5.5 Appropriate post-exposure prophylaxis is provided to all staff member...
+### 5.5 Appropriate post-exposure prophylaxis is provided to all staff members...
 
 Post-exposure prophylaxis for hepatitis B and HIV is provided to concerned staff, aligned with national/international guidelines. First aid is immediate; the «Occupational Health Physician» or emergency doctor starts the PEP path the same shift; the «Infection Prevention and Control Nurse» keeps the file.
 
@@ -139,14 +139,13 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE IPC.8.a–e.
-- Asterisked elements (abe) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related outbreak, sterilisation failure or exposure cluster.
 
@@ -215,36 +214,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### IPC.8.a — The organisation implements occupational health and safety practices as per written guidance to reduce the risk of transmitting microorganisms among health care providers.
 
-- Records showing IPC.8.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.8.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written occupational-health-and-safety guidance — PPE, vaccination access, exposure reporting, work restriction.
+- Resource-availability record to implement the guidance.
+- Training record at induction and annually.
 
 ### IPC.8.b — The organisation implements an immunisation policy for its staff.
 
-- Records showing IPC.8.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.8.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Staff immunisation policy document.
+- Immunisation register (dose, date, booster), at minimum hepatitis B for direct-care staff.
+- Documented contraindication or refusal record for any unvaccinated direct-care worker.
 
 ### IPC.8.c — The organisation implements work restrictions for health care providers with transmissible infections.
 
-- Records showing IPC.8.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.8.c reviewed «quarterly».
+- Written work-restriction list for transmissible infections.
+- Illness-reporting record from staff.
+- Restriction-application record confirming it was actually enforced.
 
 ### IPC.8.d — The organisation implements measures for blood and body fluid exposure prevention.
 
-- Records showing IPC.8.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.8.d reviewed «quarterly».
+- PPE and safe-sharps-practice record — no recapping, splash protection.
+- Point-of-use sharps-container placement and replaced-before-full record.
+- Monthly IPC-round record that includes this check.
 
 ### IPC.8.e — Appropriate post-exposure prophylaxis is provided to all staff members concerned.
 
-- Records showing IPC.8.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.8.e reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Post-exposure-prophylaxis protocol for hepatitis B and HIV, aligned with national/international guidelines.
+- Same-shift PEP-initiation record for a qualifying exposure.
+- Confidential PEP file held by the Occupational Health Physician or IPC Nurse.
 
 ## Disclaimer
 

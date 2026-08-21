@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.3 
 
 It covers 7 objective elements (COP.3.a, COP.3.b, COP.3.c, COP.3.d, COP.3.e, COP.3.f, COP.3.g).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -55,7 +55,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 2. Do not skip: There are adequate access and space for the ambulance(s).
 3. Do not skip: The ambulance(s) is fit for purpose and is appropriately equipped.
 4. Do not skip: The ambulance(s) is operated by trained personnel.
-5. Do not skip: The ambulance(s) is checked daily for functioning status, medical equipment, emergency medications and cons...
+5. Do not skip: The ambulance(s) is checked daily for functioning status, medical equipment, emergency medications and...
 6. Do not skip: The ambulance(s) has a proper communication system.
 7. Do not skip: The emergency department identifies opportunities to initiate treatment at the earliest when the patient is...
 8. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
@@ -63,7 +63,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 The organisation has access to ambulance services commensurate with t..
+### 5.1 The organisation has access to ambulance services commensurate with the..
 
 The organisation has access to ambulance services commensurate with the scope of the services provided by it.
 
@@ -87,7 +87,7 @@ The ambulance(s) is operated by trained personnel.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.5 The ambulance(s) is checked daily for functioning status, medical equ..
+### 5.5 The ambulance(s) is checked daily for functioning status, medical..
 
 The ambulance(s) is checked daily for functioning status, medical equipment, emergency medications and consumables.
 
@@ -99,7 +99,7 @@ The ambulance(s) has a proper communication system.
 
 Method note (from guidebook interpretation): The ambulance shall be connected with the organisation/control
 
-### 5.7 The emergency department identifies opportunities to initiate treatme..
+### 5.7 The emergency department identifies opportunities to initiate treatment..
 
 The emergency department identifies opportunities to initiate treatment at the earliest when the patient is in transit to the organisation.
 
@@ -129,14 +129,13 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.3.a–g.
-- Asterisked elements (f) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -195,46 +194,45 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.3.a — The organisation has access to ambulance services commensurate with the scope of the services provided by it.
 
-- Records showing COP.3.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.3.a reviewed «quarterly».
+- Ambulance-service agreement or ownership record matched to service scope.
+- Access-arrangement record — owned, contracted, or on-call.
+- Scope-matching confirmation record.
 
 ### COP.3.b — There are adequate access and space for the ambulance(s).
 
-- Records showing COP.3.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.3.b reviewed «quarterly».
+- Ambulance bay or access-route layout record.
+- Space-adequacy confirmation record.
+- Unobstructed-access check record.
 
 ### COP.3.c — The ambulance(s) is fit for purpose and is appropriately equipped.
 
-- Records showing COP.3.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.3.c reviewed «quarterly».
+- Ambulance equipment inventory matching purpose.
+- Vehicle fitness or registration record.
+- Equipment-adequacy check record.
 
 ### COP.3.d — The ambulance(s) is operated by trained personnel.
 
-- Records showing COP.3.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.3.d reviewed «quarterly».
+- Training record for ambulance driver and attendant staff.
+- Competency-verification record.
+- Currency-of-training record.
 
 ### COP.3.e — The ambulance(s) is checked daily for functioning status, medical equipment, emergency medications and consumables.
 
-- Records showing COP.3.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.3.e reviewed «quarterly».
+- Daily ambulance-check log — functioning status, medical equipment, medications, consumables.
+- Defect or deficiency-reporting record.
+- Corrective-action record for a failed check.
 
 ### COP.3.f — The ambulance(s) has a proper communication system.
 
-- Records showing COP.3.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.3.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Ambulance communication-system record — radio, mobile, GPS tracking.
+- Functionality-check record.
+- Control-room or hospital contact-log record.
 
 ### COP.3.g — The emergency department identifies opportunities to initiate treatment at the earliest when the patient is in transit to the organisation.
 
-- Records showing COP.3.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.3.g reviewed «quarterly».
+- Written protocol for initiating treatment during transit.
+- Pre-arrival-notification record from ambulance to emergency department.
+- Sample record of treatment initiated in transit.
 
 ## Disclaimer
 

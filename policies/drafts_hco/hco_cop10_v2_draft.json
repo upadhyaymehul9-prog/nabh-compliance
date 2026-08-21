@@ -16,20 +16,20 @@
   ],
   "policy_title": "Safe Obstetric Care",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard COP.10: Organisation provides safe obstetric care.\n\nIt covers objective elements COP.10.a–k (11 elements).\n\nThis policy owns COP.10. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to staff who deliver or oversee the care described in COP.10 at {{HOSPITAL_NAME}}, including the «Obstetric In-Charge», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 11 objective elements (COP.10.a, COP.10.b, COP.10.c, COP.10.d, COP.10.e, COP.10.f, COP.10.g, COP.10.h, COP.10.i, COP.10.j, COP.10.k).\n\nBoundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.",
+  "scope": "This policy applies to staff who deliver or oversee the care described in COP.10 at {{HOSPITAL_NAME}}, including the «Obstetric In-Charge», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 11 objective elements (COP.10.a, COP.10.b, COP.10.c, COP.10.d, COP.10.e, COP.10.f, COP.10.g, COP.10.h, COP.10.i, COP.10.j, COP.10.k).\n\nBoundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.",
   "policy_statement": "{{HOSPITAL_NAME}} implements COP.10 so that organisation provides safe obstetric care..\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
   "procedure_steps": [
     "5.1 Obstetric services are organised and provided safely\n\nObstetric services are organised and provided safely.\n\nMethod note (from guidebook interpretation): Written guidance based on standard treatment guidelines/sound |",
     "5.2 The organisation identifies and, provides care to high-risk obstetric..\n\nThe organisation identifies and, provides care to high-risk obstetric cases, and where needed, refers them to another appropriate centre.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
     "5.3 Persons caring for high-risk obstetric cases are competent\n\nPersons caring for high-risk obstetric cases are competent.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
     "5.4 Ante-natal services are provided\n\nAnte-natal services are provided.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.",
-    "5.5 Organisation encourages and welcomes the presence of a birth companio..\n\nOrganisation encourages and welcomes the presence of a birth companion during labour.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.6 Organisation treats pregnant woman and her companion cordially and re..\n\nOrganisation treats pregnant woman and her companion cordially and respectfully, ensures privacy and confidentiality for pregnant woman during her stay.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.7 The treating doctor explains danger signs and important care activiti..\n\nThe treating doctor explains danger signs and important care activities to pregnant woman and her companion.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.5 Organisation encourages and welcomes the presence of a birth companion..\n\nOrganisation encourages and welcomes the presence of a birth companion during labour.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.6 Organisation treats pregnant woman and her companion cordially and..\n\nOrganisation treats pregnant woman and her companion cordially and respectfully, ensures privacy and confidentiality for pregnant woman during her stay.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.7 The treating doctor explains danger signs and important care activities..\n\nThe treating doctor explains danger signs and important care activities to pregnant woman and her companion.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
     "5.8 Obstetric patient’s assessment also includes maternal nutrition\n\nObstetric patient’s assessment also includes maternal nutrition.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
     "5.9 Appropriate peri-natal and post-natal monitoring is performed\n\nAppropriate peri-natal and post-natal monitoring is performed.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.10 The organisation caring for high-risk obstetric cases have the facili..\n\nThe organisation caring for high-risk obstetric cases have the facilities to take care of neonates of such cases.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.11 Organization shall adhere to legal and defined Assisted Reproductive ..\n\nOrganization shall adhere to legal and defined Assisted Reproductive Technology (ART) practices.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element."
+    "5.10 The organisation caring for high-risk obstetric cases have the..\n\nThe organisation caring for high-risk obstetric cases have the facilities to take care of neonates of such cases.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.11 Organization shall adhere to legal and defined Assisted Reproductive..\n\nOrganization shall adhere to legal and defined Assisted Reproductive Technology (ART) practices.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element."
   ],
   "responsibility": "Medical Superintendent\n- Accountable that COP.10 is resourced and followed.\n\nObstetric In-Charge\n- Owns day-to-day implementation and records for this standard.\n\nTreating doctors / nurses / technicians (as applicable)\n- Deliver care as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
   "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Care of Patients, standard COP.10.\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — COP.10 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).\n- Internal documents of {{HOSPITAL_NAME}}: written guidance and registers named for COP.10.",
@@ -43,10 +43,9 @@
       "steps": "Section 3; 5.1",
       "responsible": "Obstetric In-Charge",
       "records": [
-        "Records showing COP.10.a was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.10.a reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Written obstetric-service organisation document.",
+        "Safety-protocol compliance record.",
+        "Staff-competency record."
       ]
     },
     {
@@ -55,9 +54,9 @@
       "steps": "Section 3; 5.2",
       "responsible": "Obstetric In-Charge",
       "records": [
-        "Records showing COP.10.b was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.10.b reviewed «quarterly»."
+        "High-risk obstetric-case identification record.",
+        "Referral record to an appropriate centre where needed.",
+        "Care-plan record for identified high-risk cases."
       ]
     },
     {
@@ -66,9 +65,9 @@
       "steps": "Section 3; 5.3",
       "responsible": "Obstetric In-Charge",
       "records": [
-        "Records showing COP.10.c was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.10.c reviewed «quarterly»."
+        "Competency or training record for staff caring for high-risk obstetric cases.",
+        "Credentialing cross-reference.",
+        "Case-assignment record."
       ]
     },
     {
@@ -77,10 +76,9 @@
       "steps": "Section 3; 5.4",
       "responsible": "Obstetric In-Charge",
       "records": [
-        "Records showing COP.10.d was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.10.d reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Ante-natal care record and visit schedule.",
+        "Ante-natal service documentation.",
+        "Risk-screening record during ante-natal visits."
       ]
     },
     {
@@ -89,9 +87,9 @@
       "steps": "Section 3; 5.5",
       "responsible": "Obstetric In-Charge",
       "records": [
-        "Records showing COP.10.e was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.10.e reviewed «quarterly»."
+        "Birth-companion policy document.",
+        "Birth-companion-presence record for a sampled labour case.",
+        "Staff-awareness record of the policy."
       ]
     },
     {
@@ -100,9 +98,9 @@
       "steps": "Section 3; 5.6",
       "responsible": "Obstetric In-Charge",
       "records": [
-        "Records showing COP.10.f was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.10.f reviewed «quarterly»."
+        "Privacy-and-dignity practice record for obstetric patients.",
+        "Patient-feedback record on treatment and privacy.",
+        "Confidentiality-practice observation record."
       ]
     },
     {
@@ -111,9 +109,9 @@
       "steps": "Section 3; 5.7",
       "responsible": "Obstetric In-Charge",
       "records": [
-        "Records showing COP.10.g was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.10.g reviewed «quarterly»."
+        "Documented explanation-of-danger-signs record.",
+        "Patient or companion education record.",
+        "Treating-doctor documentation of the explanation."
       ]
     },
     {
@@ -122,9 +120,9 @@
       "steps": "Section 3; 5.8",
       "responsible": "Obstetric In-Charge",
       "records": [
-        "Records showing COP.10.h was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.10.h reviewed «quarterly»."
+        "Nutritional-assessment record within obstetric assessment.",
+        "Cross-reference to COP.19 nutritional therapy.",
+        "Documentation-completeness check."
       ]
     },
     {
@@ -133,9 +131,9 @@
       "steps": "Section 3; 5.9",
       "responsible": "Obstetric In-Charge",
       "records": [
-        "Records showing COP.10.i was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.10.i reviewed «quarterly»."
+        "Peri-natal monitoring record.",
+        "Post-natal monitoring record.",
+        "Monitoring-parameter documentation."
       ]
     },
     {
@@ -144,9 +142,9 @@
       "steps": "Section 3; 5.10",
       "responsible": "Obstetric In-Charge",
       "records": [
-        "Records showing COP.10.j was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.10.j reviewed «quarterly»."
+        "Neonatal-care facility or equipment record for high-risk obstetric cases.",
+        "Staff-availability record for neonatal care.",
+        "Referral-arrangement record where facilities are insufficient."
       ]
     },
     {
@@ -155,13 +153,13 @@
       "steps": "Section 3; 5.11",
       "responsible": "Obstetric In-Charge",
       "records": [
-        "Records showing COP.10.k was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.10.k reviewed «quarterly»."
+        "Documented adherence record to legal and defined ART practices.",
+        "ART registration or licence record, where applicable.",
+        "Compliance-review record."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO COP.10 v2 (2026-08-20). Official Standards PDF OE count 11; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: ad. CORE: none. Achievement: e. Excellence: none.\nStop-work: omitted.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/10.\nDo not copy SHCO COP wording. Do not touch AAC.",
+  "universal_facts_checklist": "HCO COP.10 v2 (2026-08-20). Official Standards PDF OE count 11; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: ad. CORE: none. Achievement: e. Excellence: none.\nStop-work: omitted.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/10.\nDo not touch AAC.",
   "version": "2.0",
   "revision_history": [
     {
@@ -172,8 +170,8 @@
   ],
   "status": "draft",
   "definitions": "Organisation provides safe obstetric care.",
-  "exceptions": "1. Do not skip: Obstetric services are organised and provided safely.\n2. Do not skip: The organisation identifies and, provides care to high-risk obstetric cases, and where needed, refers them ...\n3. Do not skip: Persons caring for high-risk obstetric cases are competent.\n4. Do not skip: Ante-natal services are provided.\n5. Do not skip: Organisation encourages and welcomes the presence of a birth companion during labour.\n6. Do not skip: Organisation treats pregnant woman and her companion cordially and respectfully, ensures privacy and confid...\n7. Do not skip: The treating doctor explains danger signs and important care activities to pregnant woman and her companion.\n8. Do not skip: Obstetric patient’s assessment also includes maternal nutrition.\n9. Do not skip: Appropriate peri-natal and post-natal monitoring is performed.\n10. Do not skip: The organisation caring for high-risk obstetric cases have the facilities to take care of neonates of such ...\n11. Do not skip: Organization shall adhere to legal and defined Assisted Reproductive Technology (ART) practices.\n12. Staff who see a COP.10 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE COP.10.a–k.\n- Asterisked elements (ad) have document evidence as required.\n- CORE elements (none) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
+  "exceptions": "1. Do not skip: Obstetric services are organised and provided safely.\n2. Do not skip: The organisation identifies and, provides care to high-risk obstetric cases, and where needed, refers them to...\n3. Do not skip: Persons caring for high-risk obstetric cases are competent.\n4. Do not skip: Ante-natal services are provided.\n5. Do not skip: Organisation encourages and welcomes the presence of a birth companion during labour.\n6. Do not skip: Organisation treats pregnant woman and her companion cordially and respectfully, ensures privacy and...\n7. Do not skip: The treating doctor explains danger signs and important care activities to pregnant woman and her companion.\n8. Do not skip: Obstetric patient’s assessment also includes maternal nutrition.\n9. Do not skip: Appropriate peri-natal and post-natal monitoring is performed.\n10. Do not skip: The organisation caring for high-risk obstetric cases have the facilities to take care of neonates of such...\n11. Do not skip: Organization shall adhere to legal and defined Assisted Reproductive Technology (ART) practices.\n12. Staff who see a COP.10 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Safe Obstetric Care policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/COP/POL/10»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Obstetric In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«Obstetric In-Charge»",

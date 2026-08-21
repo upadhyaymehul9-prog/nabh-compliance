@@ -43,7 +43,7 @@ This policy applies to human resources, nursing, medical, and departmental leade
 
 It covers 6 objective elements (HRM.11.a, HRM.11.b, HRM.11.c, HRM.11.d, HRM.11.e, HRM.11.f).
 
-Boundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
 
 ## 3. Policy standards
 
@@ -53,10 +53,10 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Medical professionals permitted by law, regulation and the organisation provide patient care without superv...
+1. Do not skip: Medical professionals permitted by law, regulation and the organisation provide patient care without...
 2. Do not skip: The education, registration, training and experience of the identified medical professionals are documented...
 3. Do not skip: The information about medical professionals is appropriately verified when possible.
-4. Do not skip: Medical professionals are granted privileges to admit and care for patients in consonance with their qualif...
+4. Do not skip: Medical professionals are granted privileges to admit and care for patients in consonance with their...
 5. Do not skip: The requisite services to be provided by the medical professionals are known to them as well as the various...
 6. Do not skip: Medical professionals admit and care for patients as per their privileging.
 7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
@@ -64,7 +64,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 Medical professionals permitted by law, regulation and the organisati...
+### 5.1 Medical professionals permitted by law, regulation and the organisation...
 
 Preview Hospital identifies medical professionals permitted by law, regulation and the organisation to provide patient care without supervision — individuals with the required qualification(s), training and experience, in consonance with the law. Providing unsupervised care outside this identified list is a stop-work trigger (section 6). This is a CORE element.
 
@@ -72,7 +72,7 @@ Method note (from guidebook interpretation): The organisation identifies the ind
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.2 The education, registration, training and experience of the identifie...
+### 5.2 The education, registration, training and experience of the identified...
 
 The education, registration, training and experience of identified medical professionals at Preview Hospital are documented and updated periodically — after acquisition of new skills or qualification — and maintained in each professional's personal file.
 
@@ -84,7 +84,7 @@ Information about medical professionals at Preview Hospital is appropriately ver
 
 Method note (from guidebook interpretation): The organisation shall do the same by verifying the credentials from the organisation which has awarded the qualification/training. A good reference could be National Medical Commission's website. Refer to HRM.11.b.
 
-### 5.4 Medical professionals are granted privileges to admit and care for pa...
+### 5.4 Medical professionals are granted privileges to admit and care for...
 
 Preview Hospital grants medical professionals privileges to admit and care for patients in consonance with their qualification, training, experience and registration — identifying the clinical services each is authorised to perform (for example, radiotherapy only by a radiation oncologist). Privileges are reviewed at least «annually» and revised where necessary. Granting or exercising privileges outside this record is a stop-work trigger (section 6). This is a CORE element.
 
@@ -92,13 +92,13 @@ Method note (from guidebook interpretation): The organisation shall identify cli
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.5 The requisite services to be provided by the medical professionals ar...
+### 5.5 The requisite services to be provided by the medical professionals are...
 
 The requisite services a medical professional at Preview Hospital is authorised to provide are known to that professional and to the relevant departments — for example OP consultation rights, admission rights and rights to specific procedures or surgeries (inclusion or exclusion). Concerned departments (for example, front desk for admission rights, the operation theatre for surgical rights) are informed of the relevant privileging.
 
 Method note (from guidebook interpretation): This could be done through internal communication. The communication to the medical professionals shall include aspects like OP consultation rights, admission rights and rights to certain procedures and/or surgeries (either by inclusion or exclusion). Concerned departments are informed of the relevant privileging rights of medical professionals. For example, front desk shall be informed of the admission rights; the operation theatre shall be informed of the surgical rights.
 
-### 5.6 Medical professionals admit and care for patients as per their privil...
+### 5.6 Medical professionals admit and care for patients as per their...
 
 Medical professionals at Preview Hospital admit and care for patients as per their privileging, using a standardised format applied uniformly. New faculty may work under proctorship until independent privileges are granted; the hospital maintains a mechanism confirming professionals provide only the services they are privileged for.
 
@@ -128,14 +128,13 @@ departmental leaders
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE HRM.11.a–f.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (ad) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.
 
@@ -202,41 +201,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### HRM.11.a — Medical professionals permitted by law, regulation and the organisation provide patient care without supervision are identified.
 
-- Records showing HRM.11.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.11.a reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Identified-medical-professional list permitted to provide unsupervised patient care.
+- Qualification, training and experience verification record.
+- Cross-reference to the HRM.11 stop-work trigger for unlisted practice.
 
 ### HRM.11.b — The education, registration, training and experience of the identified medical professionals are documented and updated periodically.
 
-- Records showing HRM.11.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.11.b reviewed «quarterly».
+- Education, registration, training and experience documentation record, updated periodically.
+- Personal-file record of the update.
+- New-qualification acquisition update record.
 
 ### HRM.11.c — The information about medical professionals is appropriately verified when possible.
 
-- Records showing HRM.11.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.11.c reviewed «quarterly».
+- Verification record with the awarding organisation.
+- National Medical Commission or equivalent reference-check record.
+- Verification-completeness record.
 
 ### HRM.11.d — Medical professionals are granted privileges to admit and care for patients in consonance with their qualification, training, experience and registration.
 
-- Records showing HRM.11.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.11.d reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Granted-privilege record naming the clinical services each professional is authorised for.
+- Annual privilege-review record.
+- Cross-reference to the HRM.11 stop-work trigger for privileging outside this record.
 
 ### HRM.11.e — The requisite services to be provided by the medical professionals are known to them as well as the various departments / units of the organisation.
 
-- Records showing HRM.11.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.11.e reviewed «quarterly».
+- Communicated-service record to the professional and to relevant departments.
+- Admission-rights or surgical-rights notification record (front desk, OT, etc.).
+- Internal-communication record.
 
 ### HRM.11.f — Medical professionals admit and care for patients as per their privileging.
 
-- Records showing HRM.11.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.11.f reviewed «quarterly».
+- Standardised privileging-format record.
+- Proctorship record for new faculty until independent privileges are granted.
+- Mechanism-confirmation record that professionals provide only privileged services.
 
 ## Disclaimer
 

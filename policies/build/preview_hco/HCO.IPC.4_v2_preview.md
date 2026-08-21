@@ -43,7 +43,7 @@ This policy applies to staff who deliver clinical care, run support services (ho
 
 It covers 6 objective elements (IPC.4.a, IPC.4.b, IPC.4.c, IPC.4.d, IPC.4.e, IPC.4.f).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -54,7 +54,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 ## 4. Non-negotiable rules
 
 1. Do not skip: The organisation has appropriate engineering controls to prevent infections.
-2. Do not skip: The organisation designs and implements a plan to reduce the risk of infection during construction and reno...
+2. Do not skip: The organisation designs and implements a plan to reduce the risk of infection during construction and...
 3. Do not skip: The organisation adheres to housekeeping procedures.
 4. Do not skip: Biomedical waste (BMW) is handled appropriately and safely.
 5. Do not skip: The organisation adheres to laundry and linen management processes.
@@ -64,7 +64,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 The organisation has appropriate engineering controls to prevent infe...
+### 5.1 The organisation has appropriate engineering controls to prevent...
 
 Engineering controls to prevent infection include layout of patient-care areas (including spacing between beds as the organisation defines, default one–two metres where the building allows), OT air-handling as designed, and water/plumbing that does not create infection risk.
 
@@ -74,7 +74,7 @@ Method note (from guidebook interpretation): This shall include the design of pa
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.2 The organisation designs and implements a plan to reduce the risk of ...
+### 5.2 The organisation designs and implements a plan to reduce the risk of...
 
 Before construction or renovation in or next to a patient-care area, an infection-control risk assessment (ICRA or equivalent validated tool) is completed and a written plan of barriers, traffic, dust and water controls is implemented.
 
@@ -156,14 +156,14 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE IPC.4.a–f.
-- Asterisked elements (abcef) have document evidence as required.
-- CORE elements (cd) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related outbreak, sterilisation failure or exposure cluster.
 
@@ -233,46 +233,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### IPC.4.a — The organisation has appropriate engineering controls to prevent infections.
 
-- Records showing IPC.4.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.4.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Engineering-controls record — patient-area layout/spacing, OT air-handling, water/plumbing.
+- Annual and post-renovation review record by the Engineering In-Charge and IPC Officer.
+- Corrective record for any control found deficient.
 
 ### IPC.4.b — The organisation designs and implements a plan to reduce the risk of infection during construction and renovation.
 
-- Records showing IPC.4.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.4.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Completed infection-control risk assessment (ICRA or equivalent) before construction or renovation.
+- Written barrier, traffic, dust and water-control plan for the project.
+- IPC Officer sign-off record before works started.
 
 ### IPC.4.c — The organisation adheres to housekeeping procedures.
 
-- Records showing IPC.4.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.4.c reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Written housekeeping procedures by area — wards, OT, public areas, support areas — with frequency, product and method.
+- Terminal-clean record after isolation use.
+- Cross-reference to the IPC.6.f effectiveness-monitoring result.
 
 ### IPC.4.d — Biomedical waste (BMW) is handled appropriately and safely.
 
-- Records showing IPC.4.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.4.d reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Biomedical-waste segregation record at source, colour-coded per statute.
+- PPE-use record for BMW handling.
+- Authorised-vendor handover record — manifest or log.
 
 ### IPC.4.e — The organisation adheres to laundry and linen management processes.
 
-- Records showing IPC.4.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.4.e reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written laundry and linen process — collection, transport, wash, change frequency.
+- Isolation-linen bagging record.
+- Quarterly audit record by the IPC Nurse.
 
 ### IPC.4.f — The organisation adheres to kitchen sanitation and food-handling issues.
 
-- Records showing IPC.4.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.4.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Kitchen sanitation and food-handling written procedure, including food-handler screening record.
+- Daily check record by the Kitchen/Dietary In-Charge.
+- IPC round record that includes the kitchen.
 
 ## Disclaimer
 

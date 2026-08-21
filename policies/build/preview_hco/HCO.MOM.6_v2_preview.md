@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 6 objective elements (MOM.6.a, MOM.6.b, MOM.6.c, MOM.6.d, MOM.6.e, MOM.6.f).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -154,14 +154,14 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE MOM.6.a–f.
-- Asterisked elements (abcdf) have document evidence as required.
-- CORE elements (de) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event or recall.
 
@@ -224,46 +224,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### MOM.6.a — Dispensing of medications is done safely.
 
-- Records showing MOM.6.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.6.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Dispensing record confirming right patient, drug, dose, route and frequency against a valid order.
+- Product-inspection record — integrity, expiry, storage condition — before issue.
+- Floor-stock issue-to-ward dispensing record.
 
 ### MOM.6.b — Medication recalls are handled effectively.
 
-- Records showing MOM.6.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.6.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Recall-notice file with affected batch(es), quarantine record and date.
+- Patient-identification record where the recalled batch was administered.
+- Medication Safety Officer and treating-team notification record.
 
 ### MOM.6.c — Near-expiry medications are handled effectively.
 
-- Records showing MOM.6.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.6.c reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- FEFO and monthly expiry-round record.
+- Withdrawal-from-clinical-area record for near-expiry items.
+- Emergency-trolley short-dated-item replacement record before expiry.
 
 ### MOM.6.d — Dispensed medications are labelled.
 
-- Records showing MOM.6.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.6.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Labelled-dispensed-medication sample — patient identity where applicable, medicine name, strength, route, frequency, expiry.
+- Ward floor-stock multi-dose container labelling record — drug name, strength, expiry, date opened.
+- Confirmation no unlabelled syringe, cup or strip was issued.
 
 ### MOM.6.e — High-risk medication orders are verified before dispensing.
 
-- Records showing MOM.6.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.6.e reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- High-risk dispensing-verification record — second pharmacist or trained second checker against the order and patient record.
+- Recorded verification for a sampled high-risk dispense.
+- Escalation record for any single-unchecked-reading dispense.
 
 ### MOM.6.f — Return of medications to the pharmacy is addressed.
 
-- Records showing MOM.6.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.6.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written medication-return procedure — identity/integrity check, restock-or-destroy decision, record of return.
+- Confirmation controlled drugs, reconstituted items and temperature-excursion items were not restocked.
+- Cross-reference to the MOM.7.k patient's-own-medicines process.
 
 ## Disclaimer
 

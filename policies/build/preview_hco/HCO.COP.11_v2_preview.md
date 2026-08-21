@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.11
 
 It covers 8 objective elements (COP.11.a, COP.11.b, COP.11.c, COP.11.d, COP.11.e, COP.11.f, COP.11.g, COP.11.h).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -69,7 +69,7 @@ Paediatric services are organised and provided safely.
 
 Method note (from guidebook interpretation): Ante-natal examination(s) shall guide the early identification of
 
-### 5.2 Neonatal care is in consonance with the national / international guid..
+### 5.2 Neonatal care is in consonance with the national / international..
 
 Neonatal care is in consonance with the national / international guidelines.
 
@@ -87,13 +87,13 @@ Provisions are made for special care of children.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.5 Paediatric assessment includes growth, developmental, immunisation an..
+### 5.5 Paediatric assessment includes growth, developmental, immunisation and..
 
 Paediatric assessment includes growth, developmental, immunisation and nutritional assessment.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.6 The organisation has measures in place to prevent child / neonate abd..
+### 5.6 The organisation has measures in place to prevent child / neonate..
 
 The organisation has measures in place to prevent child / neonate abduction and abuse.
 
@@ -127,14 +127,13 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.11.a–h.
-- Asterisked elements (abf) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -194,54 +193,51 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.11.a — Paediatric services are organised and provided safely.
 
-- Records showing COP.11.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.11.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written paediatric-service organisation document.
+- Safety-protocol compliance record.
+- Staff-competency record.
 
 ### COP.11.b — Neonatal care is in consonance with the national / international guidelines.
 
-- Records showing COP.11.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.11.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- National or international neonatal-care guideline reference.
+- Neonatal-care protocol compliance record.
+- Staff-training record on the guidelines.
 
 ### COP.11.c — Those who care for children have age-specific competency.
 
-- Records showing COP.11.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.11.c reviewed «quarterly».
+- Age-specific competency-training record for staff caring for children.
+- Competency-verification record.
+- Training-currency record.
 
 ### COP.11.d — Provisions are made for special care of children.
 
-- Records showing COP.11.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.11.d reviewed «quarterly».
+- Special-care facility or equipment record for children.
+- Provision-adequacy check.
+- Age-appropriate-care record.
 
 ### COP.11.e — Paediatric assessment includes growth, developmental, immunisation and nutritional assessment.
 
-- Records showing COP.11.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.11.e reviewed «quarterly».
+- Paediatric assessment record covering growth, development, immunisation and nutrition.
+- Assessment-completeness check.
+- Growth-chart documentation.
 
 ### COP.11.f — The organisation has measures in place to prevent child / neonate abduction and abuse.
 
-- Records showing COP.11.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.11.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written child or neonate security measures — access control, identification bands, alarm systems.
+- Abduction-drill record.
+- Abuse-identification and reporting record.
 
 ### COP.11.g — The child’s family members are educated about nutrition, immunisation and safe parenting.
 
-- Records showing COP.11.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.11.g reviewed «quarterly».
+- Family-education record on nutrition, immunisation and safe parenting.
+- Education-material record.
+- Documentation of education delivered.
 
 ### COP.11.h — The organisation provides for adolescent friendly health care services.
 
-- Records showing COP.11.h was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.11.h reviewed «quarterly».
+- Adolescent-friendly service provision record.
+- Dedicated space or counselling record for adolescents.
+- Staff-training record on adolescent-friendly care.
 
 ## Disclaimer
 

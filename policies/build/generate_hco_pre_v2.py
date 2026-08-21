@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from nabh_text_normalize import distribution_dedupe  # noqa: E402
+from hco_cop_v2_common import hco_boundaries_clause, truncate_word_safe  # noqa: E402
 from hco_pre_v2_common import (  # noqa: E402
     BLANK,
     CHAPTER,
@@ -109,8 +110,7 @@ def clean_text(s: str) -> str:
 
 def step_title(i: int, oe_text: str) -> str:
     t = oe_text.split(".")[0].strip()
-    if len(t) > 72:
-        t = t[:69] + "..."
+    t = truncate_word_safe(t, 72)
     return f"5.{i} {t}"
 
 
@@ -155,8 +155,7 @@ def non_negotiables(n: int, oes: list[dict]) -> str:
     items = []
     for i, oe in enumerate(oes, start=1):
         short = clean_text(oe["text"] or oe["oe_code"])
-        if len(short) > 110:
-            short = short[:107] + "..."
+        short = truncate_word_safe(short, 110)
         items.append(f"{i}. Do not skip: {short}")
     if n in STOP_WORK_PROPOSALS:
         items.append(
@@ -169,6 +168,272 @@ def non_negotiables(n: int, oes: list[dict]) -> str:
     return "\n".join(items)
 
 
+# Fix #5 — hand-authored per-OE evidence records, matching the quality bar
+# AAC.1 / SHCO HIC.1 / HCO ROM / HCO FMS / HCO PSQ / HCO IPC already demonstrate.
+PRE_RECORDS: dict[str, list[str]] = {
+    "PRE.1.a": [
+        "Current documented patient-and-family rights-and-responsibilities text.",
+        "Display record at registration, OPD waiting, ward notice boards and emergency.",
+        "Bilingual pamphlet or IEC material on file.",
+    ],
+    "PRE.1.b": [
+        "Admission-counselling record showing rights and responsibilities were explained to an in-patient.",
+        "OPD display/access record for educational material.",
+        "Quarterly spot-check record of display and counselling.",
+    ],
+    "PRE.1.c": [
+        "Induction and annual training record on protecting patient and family rights.",
+        "Named Guest Relations / Patient Rights Officer record as day-to-day owner.",
+        "Conduct-observation record confirming staff practice matches the duty.",
+    ],
+    "PRE.1.d": [
+        "Written list of rights-infringement examples.",
+        "Incident-form record for a reported violation.",
+        "Patient- or family-reported violation log (feedback form or direct report), including anonymous reports.",
+    ],
+    "PRE.1.e": [
+        "Investigation record for each logged rights violation.",
+        "Top-leadership (Medical Superintendent with Quality Coordinator) documented outcome and CAPA assignment.",
+        "Open-action tracking record to closure within the defined timeframe.",
+    ],
+    "PRE.2.a": [
+        "Recorded patient preference (form of address, diet, worship, post-death requirement) on the kardex or admission sheet.",
+        "Record of action taken on the preference by the treating doctor or nurse.",
+        "Spiritual-need-request routing record.",
+    ],
+    "PRE.2.b": [
+        "Privacy-and-dignity guideline document held by the Nursing Superintendent.",
+        "Screen, drape or closed-door practice-observation record.",
+        "Consent record for any photograph or recording of a procedure.",
+    ],
+    "PRE.2.c": [
+        "Extra-precaution record for vulnerable patients (elderly, neonate, physically or mentally challenged, comatose, anaesthetised).",
+        "Incident record for any suspected neglect or abuse, reported the same shift.",
+        "Confirmation the incident routed through the PRE.1.d violation mechanism.",
+    ],
+    "PRE.2.d": [
+        "Confidentiality training record within the annual rights training.",
+        "Record confirming HIV status or other confidential information is not visible on the record cover.",
+        "Disclosure-without-permission incident record, where applicable.",
+    ],
+    "PRE.2.e": [
+        "Documented discussion-of-refusal note — options offered, consequences explained.",
+        "Record of who witnessed the explanation.",
+        "Confirmation the refusal was respected after explanation, not overridden.",
+    ],
+    "PRE.2.f": [
+        "Record of facilitation for a second-opinion request — records, imaging or reports copied.",
+        "Credential-file response record for a physician-qualification query.",
+        "Named internal second-opinion arrangement record.",
+    ],
+    "PRE.2.g": [
+        "Informed-consent record for transfusion, anaesthesia, surgery, research or an invasive/high-risk procedure.",
+        "Cross-reference to the PRE.4 consent process and list.",
+        "Confirmation the consent was taken by the treating doctor or a doctor member of the team.",
+    ],
+    "PRE.2.h": [
+        "Rights-display record naming the right to complain.",
+        "Admission-counselling record confirming the complaint method was explained.",
+        "Cross-reference to the PRE.7 complaint mechanism.",
+    ],
+    "PRE.2.i": [
+        "Cost-information record given during rights counselling.",
+        "Cross-reference to the PRE.6 tariff and cost-estimate process.",
+        "Confirmation cost information was part of counselling, not only available in accounts.",
+    ],
+    "PRE.2.j": [
+        "Written clinical-record access-request record.",
+        "Turnaround-time record against the organisation-defined period.",
+        "Cross-reference to the medical-records procedure.",
+    ],
+    "PRE.2.k": [
+        "Admission record naming the treating doctor, care plan and progress information given.",
+        "Consultant-name display record — board or wristband process.",
+        "Walk-round record confirming patients can name their treating doctor.",
+    ],
+    "PRE.2.l": [
+        "Patient's documented choice on information-sharing — self/family, named family member, or do-not-share instruction.",
+        "Minor's-guardian information record, where applicable.",
+        "Confirmation the choice was respected in practice.",
+    ],
+    "PRE.3.a": [
+        "Documented and signed explanation of proposed care — risks, benefits, alternatives, expected results, complications.",
+        "Record of the explanation being repeated at periodic intervals.",
+        "Confirmation this discussion is distinct from the signed consent form.",
+    ],
+    "PRE.3.b": [
+        "Care-plan document showing patient or family consultation.",
+        "Record of concerns or requests incorporated, or the reason noted where not possible.",
+        "Religious, cultural or spiritual consideration record.",
+    ],
+    "PRE.3.c": [
+        "Record of diagnostic-result explanation to the patient or family.",
+        "Same-day explanation record for an abnormal result changing the plan.",
+        "Confirmation results were not left as an unexplained printout in the file.",
+    ],
+    "PRE.3.d": [
+        "Timely condition-change explanation record.",
+        "On-call doctor communication record for night or emergency deterioration.",
+        "Withholding-of-resuscitation discussion record within ethical and legal limits, where applicable.",
+    ],
+    "PRE.3.e": [
+        "Multi-disciplinary counselling session record — attendees, topic, date.",
+        "Situation-identification record (critically ill family, organ donor, long-stay patient, etc.).",
+        "Cross-reference to COP.1.e for uniform-care counselling overlap.",
+    ],
+    "PRE.4.a": [
+        "Written list of procedures requiring informed consent, cross-referencing applicable statutes (for example the MTP Act, PC-PNDT Act, Transplantation of Human Organs Act, HIV Act/NACO policy where in scope).",
+        "Staff training record on the consent process.",
+        "Escalation record for any listed procedure started without consent.",
+    ],
+    "PRE.4.b": [
+        "Consent form showing at least one witness present for the full doctor-patient communication.",
+        "Repeat-procedure consent-validity record (for example dialysis, six-month validity, endorsement at each repeat).",
+        "Quarterly consent-form audit record by the Quality Coordinator.",
+    ],
+    "PRE.4.c": [
+        "Consent form naming the performing doctor, and each principal surgeon where multiple specialties operate.",
+        "Trainee-doctor and supervising-doctor naming record, where applicable.",
+        "Bilingual form and interpreter record, where used.",
+    ],
+    "PRE.4.d": [
+        "Written description of who can consent when the patient is incapable — the next-of-kin order.",
+        "Consent record showing the correct order was followed for a sampled incapable-patient case.",
+        "Same-shift dual-clinician life-threatening-decision record, where applicable.",
+    ],
+    "PRE.4.e": [
+        "Consent record confirming the performing doctor, or a doctor member of that team, obtained it — not delegated to nursing.",
+        "Quarterly record-audit sample by the Medical Superintendent.",
+        "Cross-reference to procedure-, sedation-, anaesthesia- and surgery-specific consent policies (COP.7/12/13/14).",
+    ],
+    "PRE.5.a": [
+        "Language and format screening record for patient or family understanding.",
+        "Education material in the identified language — counselling, print, audio-visual.",
+        "Confirmation education was delivered in a format the patient could understand.",
+    ],
+    "PRE.5.b": [
+        "Current medication-education list — drugs needing extra safety or side-effect counselling.",
+        "Nursing or pharmacy education record against that list.",
+        "Confirmation this is separate from the MOM administration checks.",
+    ],
+    "PRE.5.c": [
+        "Current food-drug-interaction list relevant to this hospital.",
+        "Diet or nursing education record when a listed drug is prescribed.",
+        "Medication-counselling or diet-note record.",
+    ],
+    "PRE.5.d": [
+        "Therapeutic-diet education record for in-patients.",
+        "Out-patient diet-education record when requested by the treating doctor.",
+        "Confirmation education was patient-specific, not a generic poster.",
+    ],
+    "PRE.5.e": [
+        "Immunisation-advice record, adult and paediatric as applicable.",
+        "Vaccines-due record kept by the treating doctor or immunisation-clinic nurse.",
+        "Universal Immunisation Programme reference for paediatric advice.",
+    ],
+    "PRE.5.f": [
+        "Long-term pain-management education record, within the patient's personal, cultural or religious beliefs.",
+        "Named record of who delivers long-term pain education.",
+        "Record distinguishing this from acute post-operative pain teaching.",
+    ],
+    "PRE.5.g": [
+        "Disease-specific education record — process, complications, prevention, lifestyle, diet, immunisation.",
+        "Supporting material (booklet, video, leaflet) used.",
+        "Treating-doctor assignment and nursing/health-educator delivery record.",
+    ],
+    "PRE.5.h": [
+        "HAI-prevention education record on the admission checklist — hand hygiene, avoiding overcrowding.",
+        "Cross-reference to the IPC chapter's infection-prevention programme.",
+        "Confirmation person-to-person education occurred, not posters alone.",
+    ],
+    "PRE.5.i": [
+        "Special-educational-need identification record in the patient's chart (for example ADHD, autism, physical disability, communication needs).",
+        "Adapted counselling or material record addressing that need.",
+        "Confirmation the identified need was actually met, not only flagged.",
+    ],
+    "PRE.5.j": [
+        "Patient-engagement activity record — support group, safety-improvement involvement, incident-reporting encouragement.",
+        "Patient advisory council or safety-champion record, where implemented.",
+        "Quarterly engagement-activity log by the Quality Coordinator.",
+    ],
+    "PRE.6.a": [
+        "Displayed pricing-policy components at the registration or admission desk for OP, emergency, ICU and IP settings.",
+        "Current-version record kept by the Patient Accounts In-Charge.",
+        "Confirmation the policy is visible at the desk, not only held in accounts.",
+    ],
+    "PRE.6.b": [
+        "Current dated tariff list available to patients.",
+        "Charge-versus-tariff reconciliation record.",
+        "Confirmation no undisclosed additional charge was applied.",
+    ],
+    "PRE.6.c": [
+        "Written treatment-cost estimate on file, prepared in consultation with the treating doctor.",
+        "Record of limitations discussed (for example emergency admission).",
+        "Estimate filed in the patient account or medical record.",
+    ],
+    "PRE.6.d": [
+        "Revised-estimate record when the care plan changes cost materially (ICU shift, medical-to-surgical, expensive investigation).",
+        "Timing record confirming the patient or family was informed before or as soon as practicable after the change.",
+        "Confirmation no surprise discharge charge occurred for a known plan change.",
+    ],
+    "PRE.7.a": [
+        "Feedback-tool record capturing patient satisfaction, with out-patient and in-patient data kept separate.",
+        "Response-rate record against the defined sample target.",
+        "Confirmation feedback is tabulated, not left as an untabulated visitor book.",
+    ],
+    "PRE.7.b": [
+        "Patient-experience data record — doctor/nurse communication, pain management, environment, responsiveness, discharge information, medication communication, overall rating, PREM.",
+        "Quarterly PREM/experience report to the Medical Superintendent.",
+        "Confirmation this goes beyond satisfaction scores alone.",
+    ],
+    "PRE.7.c": [
+        "Written complaint-redressal guidance — lodging method, compilation, analysis timeframe, responsible person, documentation of action.",
+        "Complaint log held by Guest Relations/Patient Rights Officer, including anonymous complaints and those against healthcare workers.",
+        "Redressal-outcome record for a sampled complaint.",
+    ],
+    "PRE.7.d": [
+        "Displayed feedback/complaint-procedure record — rights display, admission pamphlet.",
+        "Verification record confirming the displayed path matches the actual complaints desk, phone or form.",
+        "Awareness spot-check record.",
+    ],
+    "PRE.7.e": [
+        "Review or analysis record within the defined timeframe (for example complaints within 7 days, feedback tabulated monthly).",
+        "Documented process record.",
+        "Overdue-complaint list reported to the Medical Superintendent each month.",
+    ],
+    "PRE.7.f": [
+        "CAPA record from feedback or complaint analysis, with owner, due date and closure.",
+        "Cross-reference record with PRE.1.e rights-violation CAPA where subjects overlap.",
+        "Confirmation analysis led to action, not analysis alone.",
+    ],
+    "PRE.8.a": [
+        "Communication-training record at induction and annually.",
+        "Barrier-identification and interpreter-arrangement record — language, hearing, literacy.",
+        "Observed-practice record confirming effective communication, not training alone.",
+    ],
+    "PRE.8.b": [
+        "Written list of special situations needing enhanced communication — breaking bad news, adverse events, aggressive patient or family, death, complicated-intervention counselling.",
+        "Training-pack record covering the list.",
+        "Staff-awareness record for emergency, ICU, OT and ward staff.",
+    ],
+    "PRE.8.c": [
+        "Enhanced-communication model record (for example SPIKES) adopted for breaking bad news.",
+        "Note confirming the enhanced-communication conversation happened for a sampled case.",
+        "Treating-doctor-led, nursing-supported record.",
+    ],
+    "PRE.8.d": [
+        "Conduct-incident record for any unacceptable communication — abuse, disrespect, cultural or religious insult.",
+        "Action-taken record by the Medical Superintendent for a confirmed breach.",
+        "Training-example record so staff can recognise the line.",
+    ],
+    "PRE.8.e": [
+        "Quarterly observation or record-sample review by the Quality Coordinator.",
+        "Findings record reported to the Medical Superintendent.",
+        "Action-taken record when a communication failure was found.",
+    ],
+}
+
+
 def oe_mapping(n: int, oes: list[dict], has_stop: bool) -> list[dict]:
     mapping = []
     prepared = PREPARED_BY[n]
@@ -177,15 +442,9 @@ def oe_mapping(n: int, oes: list[dict], has_stop: bool) -> list[dict]:
         steps = f"Section 3; 5.{i}"
         if has_stop and n in STOP_WORK_PROPOSALS:
             steps += "; Section 6 Stop-work"
-        records = [
-            f"Records showing PRE.{n}.{oe['letter']} was followed for sampled patients/cases.",
-            "Written guidance / protocol referenced for this element (where required).",
-            f"Audit sample notes for PRE.{n}.{oe['letter']} reviewed {D('quarterly')}.",
-        ]
-        if oe.get("star"):
-            records.append("Documented evidence specifically required by the asterisked objective element.")
-        if oe["level"] == "CORE":
-            records.append("CORE-element sample with no critical gaps in the quarter under review.")
+        records = PRE_RECORDS.get(oe["oe_code"])
+        if not records:
+            raise KeyError(f"Missing hand-authored evidence records for {oe['oe_code']}")
         mapping.append(
             {
                 "oe_code": oe["oe_code"],
@@ -238,7 +497,7 @@ Words marked {D('like this')} are defaults. A blank marked {BLANK} must be fille
 
 It covers {len(oes)} objective elements ({', '.join(oe_codes)}).
 
-Boundaries: do not copy SHCO PRE wording. Do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 {GUIDEBOOK_MD5})."""
+{hco_boundaries_clause(["AAC", "COP", "MOM"])} Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 {GUIDEBOOK_MD5})."""
 
     lead = (std_title[0].lower() + std_title[1:]).rstrip(".") if std_title else "patient and family rights are protected"
     policy_statement = f"""{HOSPITAL} implements PRE.{n} so that {lead}.
@@ -258,14 +517,19 @@ Guest Relations / Patient Rights Officer
 Quality Coordinator
 - Audits this policy {D('quarterly')}; holds training acknowledgements."""
 
-    monitoring = f"""The Quality Coordinator audits this policy {D('quarterly')}.
+    monitoring_bullets = ["Records for a sample of this standard's objective elements, checked against the What-we-do steps."]
+    if stars != "none":
+        monitoring_bullets.append("Documentary evidence is on file for each asterisked objective element in the sample.")
+    if cores != "none":
+        monitoring_bullets.append("CORE objective elements show no critical gaps in the sample.")
+    monitoring_bullets.append("Stop-work events (if any) are logged with outcome.")
+    monitoring_bullet_text = "\n".join(f"- {b}" for b in monitoring_bullets)
 
-What is monitored each quarter:
+    monitoring = f"""The Quality Coordinator audits this policy {D('quarterly')}. The audit reviews:
 
-- Sample of records for each OE PRE.{n}.{letters}.
-- Asterisked elements ({stars}) have document evidence as required.
-- CORE elements ({cores}) show no critical gaps in the sample.
-- Stop-work events (if any) are logged with outcome.
+{monitoring_bullet_text}
+
+Root-cause analysis is required when a gap found in this audit remains open beyond {D('90 days')}.
 
 This policy is reviewed {D('annually')}, and sooner after a related rights incident, consent failure or complaint cluster."""
 
@@ -303,7 +567,7 @@ SPIKES — Setting, Perception, Invitation/information, Knowledge, Empathy, Summ
 Stop-work: {"YES — proposed: " + STOP_WORK_PROPOSALS[n] if has_stop else "omitted (proposed default: no stop-work on this standard)"}.
 draft_label={DRAFT_LABEL!r} via hco_document_control. chapter=HCO. doc_no HCO/PRE/POL/{n:02d}.
 Official chapter is 8 standards / 52 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 {GUIDEBOOK_MD5}. PRE.4 statute P2 proposed (guidebook names MTP, PC-PNDT, THOA, HIV/AIDS Act 2017).
-Do not copy SHCO PRE wording. Do not touch AAC, COP or MOM."""
+Do not touch AAC, COP or MOM."""
 
     distribution = distribution_dedupe(
         [

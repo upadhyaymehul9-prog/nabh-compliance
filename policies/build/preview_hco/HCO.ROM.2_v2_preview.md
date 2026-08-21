@@ -43,7 +43,7 @@ This policy applies to those responsible for governance, the person heading the 
 
 It covers 4 objective elements (ROM.2.a, ROM.2.b, ROM.2.c, ROM.2.d).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -73,7 +73,7 @@ This objective element is asterisked in the official Standards PDF — documenta
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.2 The ethical management framework includes processes for managing issu...
+### 5.2 The ethical management framework includes processes for managing issues...
 
 The framework includes processes for managing issues with ethical implications, dilemmas and concerns (clinical and organisational examples the organisation names).
 
@@ -119,14 +119,14 @@ departmental leaders
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE ROM.2.a–d.
-- Asterisked elements (ab) have document evidence as required.
-- CORE elements (a) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related governance change, statutory-register gap or outsourced-service failure.
 
@@ -185,30 +185,27 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### ROM.2.a — The leaders establish the organisation’s ethical management framework.
 
-- Records showing ROM.2.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.2.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- The written ethical-management framework: principles, decision authority and escalation path.
+- Dated approval record naming who owns the framework.
+- Evidence the framework is a standing document, not minutes-only notes.
 
 ### ROM.2.b — The ethical management framework includes processes for managing issues with ethical implications, dilemmas and concerns.
 
-- Records showing ROM.2.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.2.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Named escalation path and timeline for handling an ethical issue, dilemma or concern.
+- Log of ethical issues raised, with resolution and date.
+- At least one example case record showing the process was actually used.
 
 ### ROM.2.c — The organisation discloses its ownership.
 
-- Records showing ROM.2.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.2.c reviewed «quarterly».
+- Current ownership-disclosure text.
+- Evidence of public display — reception, website, or the statutory board where applicable.
+- Annual check or update record for the disclosure.
 
 ### ROM.2.d — The organisation honestly portrays its affiliations and accreditations.
 
-- Records showing ROM.2.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.2.d reviewed «quarterly».
+- Current list of affiliations and accreditations shown in public materials.
+- Quarterly review record confirming no expired or applied-for status is shown as awarded.
+- Correction record for any instance found and fixed.
 
 ## Disclaimer
 

@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.19
 
 It covers 5 objective elements (COP.19.a, COP.19.b, COP.19.c, COP.19.d, COP.19.e).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -66,7 +66,7 @@ Patients admitted to the organisation are screened for nutritional risk.
 
 Method note (from guidebook interpretation): Nutritional screening is done by the caregiver (doctor or nurse).
 
-### 5.2 Nutritional assessment is done for patients found at risk during nutr..
+### 5.2 Nutritional assessment is done for patients found at risk during..
 
 Nutritional assessment is done for patients found at risk during nutritional screening.
 
@@ -84,7 +84,7 @@ Patients receive food according to the written order for the diet.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.5 When families provide food, they are educated about the patient’s die..
+### 5.5 When families provide food, they are educated about the patient’s diet..
 
 When families provide food, they are educated about the patient’s diet limitations.
 
@@ -106,14 +106,13 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.19.a–e.
-- Asterisked elements (a) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -170,34 +169,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.19.a — Patients admitted to the organisation are screened for nutritional risk.
 
-- Records showing COP.19.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.19.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Nutritional-screening record at admission.
+- Screening-tool documentation.
+- Screening-completion-rate record.
 
 ### COP.19.b — Nutritional assessment is done for patients found at risk during nutritional screening.
 
-- Records showing COP.19.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.19.b reviewed «quarterly».
+- Nutritional-assessment record for screened-positive patients.
+- Assessment-tool documentation.
+- Dietitian-involvement record.
 
 ### COP.19.c — The therapeutic diet is planned and provided collaboratively.
 
-- Records showing COP.19.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.19.c reviewed «quarterly».
+- Multi-disciplinary therapeutic-diet plan record.
+- Diet-plan documentation.
+- Care-provider-involvement record.
 
 ### COP.19.d — Patients receive food according to the written order for the diet.
 
-- Records showing COP.19.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.19.d reviewed «quarterly».
+- Written diet-order record.
+- Food-service-versus-order matching record.
+- Order-change tracking record.
 
 ### COP.19.e — When families provide food, they are educated about the patient’s diet limitations.
 
-- Records showing COP.19.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.19.e reviewed «quarterly».
+- Family-education record on diet limitations when families provide food.
+- Education-material record.
+- Documentation of education delivered.
 
 ## Disclaimer
 

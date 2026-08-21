@@ -43,7 +43,7 @@ This policy applies to those responsible for governance, the person heading the 
 
 It covers 7 objective elements (ROM.3.a, ROM.3.b, ROM.3.c, ROM.3.d, ROM.3.e, ROM.3.f, ROM.3.g).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,18 +53,18 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Those responsible for governance address the organisation’s sustainability programme in terms of Environmen...
+1. Do not skip: Those responsible for governance address the organisation’s sustainability programme in terms of Environment...
 2. Do not skip: The organisation takes initiatives towards an energy-efficient and environmentally friendly hospital.
 3. Do not skip: Those responsible for governance address the organisations social responsibility.
 4. Do not skip: Staff well-being is promoted.
 5. Do not skip: The organisation follows sustainable procurement practices.
-6. Do not skip: Hospitals shall encourage employees to use common / public transportation to reduce the environmental impac...
-7. Do not skip: The organisation ensures financial sustainability of the hospital by balancing the financial aspects of hea...
+6. Do not skip: Hospitals shall encourage employees to use common / public transportation to reduce the environmental impact...
+7. Do not skip: The organisation ensures financial sustainability of the hospital by balancing the financial aspects of...
 8. Staff who see a ROM.3 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».
 
 ## 5. What we do
 
-### 5.1 Those responsible for governance address the organisation’s sustainab...
+### 5.1 Those responsible for governance address the organisation’s...
 
 «those responsible for governance» address the organisation's sustainability programme in Environment, Social and Governance (ESG) terms: a written programme, named owner and a review at least «annually».
 
@@ -72,7 +72,7 @@ The «Medical Superintendent» tables the programme at a governance meeting. A s
 
 Method note (from guidebook interpretation): Environmental sustainability includes energy usage and efficiency, climate change strategy, waste reduction, biodiversity loss, greenhouse gas emissions and carbon footprint reduction. Social sustainability includes fair pay and living wages, equal employment opportunity, employee benefits, workplace health and safety, community engagement, responsible supply chain partnerships, adhering to labour laws. Governance sustainability includes corporate governance, risk management, compliance, ethical business practises, avoiding conflicts of interest, accounting integrity and transparency.
 
-### 5.2 The organisation takes initiatives towards an energy-efficient and en...
+### 5.2 The organisation takes initiatives towards an energy-efficient and...
 
 The organisation takes documented initiatives toward an energy-efficient and environmentally friendly hospital (energy, water, waste-to-environment as FMS owns the engineering controls).
 
@@ -82,7 +82,7 @@ Method note (from guidebook interpretation): This includes using the concepts of
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.3 Those responsible for governance address the organisations social res...
+### 5.3 Those responsible for governance address the organisations social...
 
 «those responsible for governance» address the organisation's social responsibility (community access, charity care, local health initiatives as the hospital defines).
 
@@ -106,7 +106,7 @@ Purchase files show those criteria were applied. This Excellence element is evid
 
 Method note (from guidebook interpretation): These involve sourcing products and services that have a lower environmental impact. Hospitals can work with suppliers to prioritize environmentally friendly and socially responsible products.
 
-### 5.6 Hospitals shall encourage employees to use common / public transporta...
+### 5.6 Hospitals shall encourage employees to use common / public...
 
 The hospital encourages employees to use common / public transport to reduce commuting impact (information, any incentive the organisation defines, and a record that it was offered).
 
@@ -114,7 +114,7 @@ HR keeps the current offer. This Achievement element is encouragement, not a man
 
 Method note (from guidebook interpretation): Hospital shall encourage employees for carpooling, cycling and wherever possible use of public transport to reduce environmental impact. Efficient environmental friendly logistics and transportation management within the hospital can also contribute to sustainability.
 
-### 5.7 The organisation ensures financial sustainability of the hospital by ...
+### 5.7 The organisation ensures financial sustainability of the hospital by...
 
 The organisation ensures financial sustainability by balancing the financial aspects of healthcare delivery: budget vs actual, cash and credit discipline, and a «annually» view that services can continue.
 
@@ -142,14 +142,13 @@ departmental leaders
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE ROM.3.a–g.
-- Asterisked elements (b) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related governance change, statutory-register gap or outsourced-service failure.
 
@@ -211,46 +210,45 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### ROM.3.a — Those responsible for governance address the organisation’s sustainability programme in terms of Environment Social and Governance (ESG) responsibility.
 
-- Records showing ROM.3.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.3.a reviewed «quarterly».
+- Written ESG (Environment, Social and Governance) sustainability programme with a named owner.
+- Governance-meeting agenda or minutes tabling the programme.
+- Annual review record of the programme.
 
 ### ROM.3.b — The organisation takes initiatives towards an energy-efficient and environmentally friendly hospital.
 
-- Records showing ROM.3.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.3.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Dated log of energy-efficiency and environmental initiatives and their results.
+- Cross-reference to the ESG/engineering file (FMS owns the engineering controls; this is the initiative record).
+- Before/after data or savings evidence where available.
 
 ### ROM.3.c — Those responsible for governance address the organisations social responsibility.
 
-- Records showing ROM.3.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.3.c reviewed «quarterly».
+- Documented social-responsibility programme (community access, charity care, local health initiatives).
+- Annual activity report for the programme.
+- Governance minutes noting the programme.
 
 ### ROM.3.d — Staff well-being is promoted.
 
-- Records showing ROM.3.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.3.d reviewed «quarterly».
+- Documented work-hour monitoring method for staff.
+- Record of healthy-lifestyle support and scheduled-break arrangements.
+- Record of the channel for raising workload concerns and any concerns logged through it.
 
 ### ROM.3.e — The organisation follows sustainable procurement practices.
 
-- Records showing ROM.3.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.3.e reviewed «quarterly».
+- Purchase policy naming environmental and social tender criteria.
+- Completed procurement file showing those criteria were applied.
+- At least one tender evaluation reflecting the sustainable-procurement criteria.
 
 ### ROM.3.f — Hospitals shall encourage employees to use common / public transportation to reduce the environmental impact of commuting and carbon footprint.
 
-- Records showing ROM.3.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.3.f reviewed «quarterly».
+- Current staff communication promoting common or public transport for commuting.
+- Documentation of any incentive scheme offered.
+- Record that the offer was communicated to staff (not that every staff member complied).
 
 ### ROM.3.g — The organisation ensures financial sustainability of the hospital by balancing the financial aspects of healthcare delivery.
 
-- Records showing ROM.3.g was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.3.g reviewed «quarterly».
+- Budget-versus-actual review document.
+- Record of cash and credit discipline for the period.
+- Annual financial-sustainability view tabled to governance.
 
 ## Disclaimer
 

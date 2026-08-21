@@ -43,7 +43,7 @@ This policy applies to staff who deliver clinical care, run support services (ho
 
 It covers 4 objective elements (IPC.2.a, IPC.2.b, IPC.2.c, IPC.2.d).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,15 +53,15 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: The management makes available resources required for the infection prevention and control programme includ...
-2. Do not skip: Adequate and appropriate personal protective equipment, soaps, and disinfectants are available and used cor...
+1. Do not skip: The management makes available resources required for the infection prevention and control programme...
+2. Do not skip: Adequate and appropriate personal protective equipment, soaps, and disinfectants are available and used...
 3. Do not skip: Adequate and appropriate facilities for hand hygiene in all patient-care areas are accessible to healthcare...
 4. Do not skip: Isolation / barrier nursing facilities are available.
 5. Staff who see an IPC.2 rule broken report it the same shift to the «department in-charge» or the «Infection Prevention and Control Officer».
 
 ## 5. What we do
 
-### 5.1 The management makes available resources required for the infection p...
+### 5.1 The management makes available resources required for the infection...
 
 Management makes resources for the IPC programme available on a continual basis, including a line in the annual budget for PPE, hand-hygiene products, disinfectants, isolation capacity, laboratory support, training and the «Infection Prevention and Control Officer»/«Infection Prevention and Control Nurse» time.
 
@@ -71,7 +71,7 @@ Method note (from guidebook interpretation): The management shall ensure that th
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.2 Adequate and appropriate personal protective equipment, soaps, and di...
+### 5.2 Adequate and appropriate personal protective equipment, soaps, and...
 
 Adequate and appropriate PPE, soaps and disinfectants are at the point of use, with an inventory so they do not run out. Staff are trained to use them correctly (donning/doffing, dilution of disinfectant as the manufacturer states).
 
@@ -79,7 +79,7 @@ The «Infection Prevention and Control Nurse» spot-checks availability and corr
 
 Method note (from guidebook interpretation): They shall be available at the point of use, and the organisation shall ensure that it maintains an adequate inventory. Personal protective equipment includes: * Gloves ¢ Protective eyewear (goggles) ° Mask * Gown * Boots/shoe covers and * Cap/hair cover The staff use PPE appropriate to the risks involved and guidance available. The PPE is removed as soon as the purpose is served.
 
-### 5.3 Adequate and appropriate facilities for hand hygiene in all patient-c...
+### 5.3 Adequate and appropriate facilities for hand hygiene in all...
 
 Every patient-care area has at least one easily accessible hand-hygiene point (washbasin with running water and/or alcohol-based handrub) for healthcare providers. Placement follows the organisation's hand-hygiene plan.
 
@@ -117,14 +117,13 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE IPC.2.a–d.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (ac) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related outbreak, sterilisation failure or exposure cluster.
 
@@ -192,29 +191,27 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### IPC.2.a — The management makes available resources required for the infection prevention and control programme including allocation of adequate funds from its annual budget.
 
-- Records showing IPC.2.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.2.a reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Signed annual budget line for the IPC programme.
+- Resource-availability record — PPE, hand-hygiene products, disinfectants, isolation capacity, laboratory support, training.
+- Stock-out escalation record to the IPC Committee.
 
 ### IPC.2.b — Adequate and appropriate personal protective equipment, soaps, and disinfectants are available and used correctly.
 
-- Records showing IPC.2.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.2.b reviewed «quarterly».
+- PPE, soap and disinfectant inventory record at the point of use.
+- Correct-use training record — donning/doffing, disinfectant dilution.
+- Monthly spot-check record by the IPC Nurse.
 
 ### IPC.2.c — Adequate and appropriate facilities for hand hygiene in all patient-care areas are accessible to healthcare providers.
 
-- Records showing IPC.2.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.2.c reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Hand-hygiene-point map for every patient-care area.
+- Quarterly walk-round record confirming accessibility.
+- Corrective record for any blocked or unstocked point found.
 
 ### IPC.2.d — Isolation / barrier nursing facilities are available.
 
-- Records showing IPC.2.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.2.d reviewed «quarterly».
+- Written isolation and barrier-nursing criteria.
+- Isolation-room or barrier-nursing-kit inventory matching the criteria.
+- Location-list agreement record between the Nursing Superintendent and the IPC Officer.
 
 ## Disclaimer
 

@@ -12,14 +12,14 @@
   ],
   "policy_title": "Safe Transfusion Services",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard COP.8: Transfusion services are provided as per the scope of services of the organisation, safely.\n\nIt covers objective elements COP.8.a–g (7 elements).\n\nThis policy owns COP.8. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to staff who deliver or oversee the care described in COP.8 at {{HOSPITAL_NAME}}, including the «Transfusion / Blood Bank In-Charge», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 7 objective elements (COP.8.a, COP.8.b, COP.8.c, COP.8.d, COP.8.e, COP.8.f, COP.8.g).\n\nBoundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.",
+  "scope": "This policy applies to staff who deliver or oversee the care described in COP.8 at {{HOSPITAL_NAME}}, including the «Transfusion / Blood Bank In-Charge», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 7 objective elements (COP.8.a, COP.8.b, COP.8.c, COP.8.d, COP.8.e, COP.8.f, COP.8.g).\n\nBoundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.",
   "policy_statement": "{{HOSPITAL_NAME}} implements COP.8 so that transfusion services are provided as per the scope of services of the organisation, safely..\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
   "procedure_steps": [
-    "5.1 Scope of transfusion services is commensurate with the services provi..\n\nScope of transfusion services is commensurate with the services provided by the organisation.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.2 The organisation shall establish and implement processes for blood / ..\n\nThe organisation shall establish and implement processes for blood / component collection, testing, storage and distribution under written guidance.\n\nMethod note (from guidebook interpretation): The mechanism for identification of patients shall be uniform",
-    "5.3 Blood and components are stored safely from the time of collection ti..\n\nBlood and components are stored safely from the time of collection till transfusion.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.4 The organisation ensures safe and rational use of blood and blood com..\n\nThe organisation ensures safe and rational use of blood and blood components.\n\nMethod note (from guidebook interpretation): Clinical care pathways shall be multidisciplinary, and based on\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
-    "5.5 Blood / blood components are available for use in emergency and routi..\n\nBlood / blood components are available for use in emergency and routine situations within a defined time-frame.\n\nMethod note (from guidebook interpretation): Whenever the patient's clinical condition warrants care from",
+    "5.1 Scope of transfusion services is commensurate with the services..\n\nScope of transfusion services is commensurate with the services provided by the organisation.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.2 The organisation shall establish and implement processes for blood /..\n\nThe organisation shall establish and implement processes for blood / component collection, testing, storage and distribution under written guidance.\n\nMethod note (from guidebook interpretation): The mechanism for identification of patients shall be uniform",
+    "5.3 Blood and components are stored safely from the time of collection till..\n\nBlood and components are stored safely from the time of collection till transfusion.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.4 The organisation ensures safe and rational use of blood and blood..\n\nThe organisation ensures safe and rational use of blood and blood components.\n\nMethod note (from guidebook interpretation): Clinical care pathways shall be multidisciplinary, and based on\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.5 Blood / blood components are available for use in emergency and routine..\n\nBlood / blood components are available for use in emergency and routine situations within a defined time-frame.\n\nMethod note (from guidebook interpretation): Whenever the patient's clinical condition warrants care from",
     "5.6 The organisation shall ensure that post-transfusion form is collected..\n\nThe organisation shall ensure that post-transfusion form is collected, reactions if any identified and are analysed for preventive and corrective actions.\n\nMethod note (from guidebook interpretation): Whenever the telemedicine facility is provided, the organisation",
     "5.7 The organisation shall implement a quality assurance programme\n\nThe organisation shall implement a quality assurance programme.\n\nMethod note (from guidebook interpretation): The identified area to treat emergency patients shall be easily"
   ],
@@ -35,9 +35,9 @@
       "steps": "Section 3; 5.1; Section 6 Stop-work",
       "responsible": "Transfusion / Blood Bank In-Charge",
       "records": [
-        "Records showing COP.8.a was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.8.a reviewed «quarterly»."
+        "Transfusion-service scope document matched to services provided.",
+        "Service-scope review record.",
+        "Cross-reference to the AAC.1 service definition."
       ]
     },
     {
@@ -46,10 +46,9 @@
       "steps": "Section 3; 5.2; Section 6 Stop-work",
       "responsible": "Transfusion / Blood Bank In-Charge",
       "records": [
-        "Records showing COP.8.b was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.8.b reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Written guidance for blood/component collection, testing, storage and distribution.",
+        "Process-compliance record for a sampled unit.",
+        "National Blood Transfusion Standards reference."
       ]
     },
     {
@@ -58,9 +57,9 @@
       "steps": "Section 3; 5.3; Section 6 Stop-work",
       "responsible": "Transfusion / Blood Bank In-Charge",
       "records": [
-        "Records showing COP.8.c was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.8.c reviewed «quarterly»."
+        "Blood-storage temperature log and equipment-monitoring record.",
+        "Cold-chain maintenance record from collection to transfusion.",
+        "Storage-condition compliance check."
       ]
     },
     {
@@ -69,10 +68,9 @@
       "steps": "Section 3; 5.4",
       "responsible": "Transfusion / Blood Bank In-Charge",
       "records": [
-        "Records showing COP.8.d was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.8.d reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Two-identifier patient-verification and compatibility-check record before transfusion.",
+        "Rational-use or blood-utilisation review record.",
+        "Informed-consent record for transfusion."
       ]
     },
     {
@@ -81,10 +79,9 @@
       "steps": "Section 3; 5.5",
       "responsible": "Transfusion / Blood Bank In-Charge",
       "records": [
-        "Records showing COP.8.e was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.8.e reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Blood or component availability record for emergency and routine requests.",
+        "Turnaround-time log against the defined timeframe.",
+        "Escalation record for a delayed request."
       ]
     },
     {
@@ -93,10 +90,9 @@
       "steps": "Section 3; 5.6",
       "responsible": "Transfusion / Blood Bank In-Charge",
       "records": [
-        "Records showing COP.8.f was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.8.f reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Post-transfusion form collected for a sampled transfusion.",
+        "Transfusion-reaction identification and analysis record.",
+        "CAPA record from reaction analysis."
       ]
     },
     {
@@ -105,14 +101,13 @@
       "steps": "Section 3; 5.7",
       "responsible": "Transfusion / Blood Bank In-Charge",
       "records": [
-        "Records showing COP.8.g was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.8.g reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Written transfusion-service quality assurance programme.",
+        "Indicator-monitoring record for the programme.",
+        "Improvement-action record from QA findings."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO COP.8 v2 (2026-08-20). Official Standards PDF OE count 7; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: bdefg. CORE: d. Achievement: fg. Excellence: none.\nStop-work: YES — JUDGMENT CALL: Transfusion without two-identifier check, compatibility, or informed consent where required.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/08.\nDo not copy SHCO COP wording. Do not touch AAC.",
+  "universal_facts_checklist": "HCO COP.8 v2 (2026-08-20). Official Standards PDF OE count 7; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: bdefg. CORE: d. Achievement: fg. Excellence: none.\nStop-work: YES — JUDGMENT CALL: Transfusion without two-identifier check, compatibility, or informed consent where required.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/08.\nDo not touch AAC.",
   "version": "2.0",
   "revision_history": [
     {
@@ -123,8 +118,8 @@
   ],
   "status": "draft",
   "definitions": "Transfusion services are provided as per the scope of services of the organisation, safely.",
-  "exceptions": "1. Do not skip: Scope of transfusion services is commensurate with the services provided by the organisation.\n2. Do not skip: The organisation shall establish and implement processes for blood / component collection, testing, storage...\n3. Do not skip: Blood and components are stored safely from the time of collection till transfusion.\n4. Do not skip: The organisation ensures safe and rational use of blood and blood components.\n5. Do not skip: Blood / blood components are available for use in emergency and routine situations within a defined time-fr...\n6. Do not skip: The organisation shall ensure that post-transfusion form is collected, reactions if any identified and are ...\n7. Do not skip: The organisation shall implement a quality assurance programme.\n8. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n9. Staff who see a COP.8 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE COP.8.a–g.\n- Asterisked elements (bdefg) have document evidence as required.\n- CORE elements (d) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
+  "exceptions": "1. Do not skip: Scope of transfusion services is commensurate with the services provided by the organisation.\n2. Do not skip: The organisation shall establish and implement processes for blood / component collection, testing, storage...\n3. Do not skip: Blood and components are stored safely from the time of collection till transfusion.\n4. Do not skip: The organisation ensures safe and rational use of blood and blood components.\n5. Do not skip: Blood / blood components are available for use in emergency and routine situations within a defined...\n6. Do not skip: The organisation shall ensure that post-transfusion form is collected, reactions if any identified and are...\n7. Do not skip: The organisation shall implement a quality assurance programme.\n8. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n9. Staff who see a COP.8 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Safe Transfusion Services policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/COP/POL/08»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Transfusion / Blood Bank In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«Transfusion / Blood Bank In-Charge»",

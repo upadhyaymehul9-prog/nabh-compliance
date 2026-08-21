@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from nabh_text_normalize import distribution_dedupe  # noqa: E402
+from hco_cop_v2_common import hco_boundaries_clause, truncate_word_safe  # noqa: E402
 from hco_hrm_v2_common import (  # noqa: E402
     BLANK,
     CHAPTER,
@@ -105,8 +106,7 @@ def clean_text(s: str) -> str:
 
 def step_title(i: int, oe_text: str) -> str:
     t = oe_text.split(".")[0].strip()
-    if len(t) > 72:
-        t = t[:69] + "..."
+    t = truncate_word_safe(t, 72)
     return f"5.{i} {t}"
 
 
@@ -151,8 +151,7 @@ def non_negotiables(n: int, oes: list[dict]) -> str:
     items = []
     for i, oe in enumerate(oes, start=1):
         short = clean_text(oe["text"] or oe["oe_code"])
-        if len(short) > 110:
-            short = short[:107] + "..."
+        short = truncate_word_safe(short, 110)
         items.append(f"{i}. Do not skip: {short}")
     if n in STOP_WORK_PROPOSALS:
         items.append(
@@ -165,6 +164,393 @@ def non_negotiables(n: int, oes: list[dict]) -> str:
     return "\n".join(items)
 
 
+# Fix #5 — hand-authored per-OE evidence records, matching the quality bar
+# AAC.1 / SHCO HIC.1 / HCO ROM / HCO FMS / HCO PSQ / HCO IPC / HCO PRE /
+# HCO MOM already demonstrate.
+HRM_RECORDS: dict[str, list[str]] = {
+    "HRM.1.a": [
+        "Annual workforce plan comparing current and projected staffing against services and patient volume.",
+        "Department-head input record into the plan.",
+        "Corrective-action record for a variance found during the year.",
+    ],
+    "HRM.1.b": [
+        "Sanctioned-versus-actual staffing comparison record by department.",
+        "Staffing-norm reference used (for example the WHO WISN method for nursing).",
+        "Escalation record for an unresolved shortfall.",
+    ],
+    "HRM.1.c": [
+        "Written contingency plan for long- and short-term workforce shortages, including unplanned shortages.",
+        "Shortage-event log with cause, measure used and outcome.",
+        "Test record of the contingency plan, at least twice a year.",
+    ],
+    "HRM.1.d": [
+        "Job description on file for each staff category, including qualification, skill and experience requirements.",
+        "Signed acknowledgement record from a new hire receiving their job description.",
+        "Minimum-qualification exemption record, where applicable.",
+    ],
+    "HRM.1.e": [
+        "Background-check register recording method, date and outcome per new hire.",
+        "Completion record before or within one month of joining.",
+        "Escalation record for any staff member with no background check on file.",
+    ],
+    "HRM.1.f": [
+        "Current organisation structure or chart showing hierarchy and reporting lines.",
+        "Department- or service-level reporting-relationship record.",
+        "Dissemination record to stakeholders.",
+    ],
+    "HRM.1.g": [
+        "Completed exit-interview record for a departing staff member.",
+        "Quarterly trend report compiled from exit interviews.",
+        "HR-improvement action record from exit-interview findings.",
+    ],
+    "HRM.2.a": [
+        "Written recruitment guidance document.",
+        "Recruitment register — vacancy, candidates, selection rationale, fill date.",
+        "Statutory-requirement compliance record where applicable.",
+    ],
+    "HRM.2.b": [
+        "Pre-employment medical examination record on file.",
+        "Consent record for any testing performed, confirming no non-consensual testing.",
+        "Fitness-to-work determination record.",
+    ],
+    "HRM.2.c": [
+        "Written code of conduct document.",
+        "Signed staff acknowledgement at joining.",
+        "Confidentiality-protection clause record within the code.",
+    ],
+    "HRM.2.d": [
+        "Documented administrative procedures — attendance, leave, conduct, replacement.",
+        "Current-version record held by HR.",
+        "Cross-reference to induction training covering these procedures (HRM.3.h).",
+    ],
+    "HRM.3.a": [
+        "Induction-training record within one month of joining.",
+        "Attendance record covering doctors, consultants, outsourced staff, volunteers, students and trainees.",
+        "Induction-content record covering HRM.3.b–h and hospital-specific requirements.",
+    ],
+    "HRM.3.b": [
+        "Vision, mission and values orientation record within induction training.",
+        "Staff-awareness confirmation record.",
+        "Outsourced-staff inclusion record.",
+    ],
+    "HRM.3.c": [
+        "Staff-rights-and-responsibilities and patient-rights-and-responsibilities training record.",
+        "Violation-identification-and-reporting awareness confirmation.",
+        "Induction attendance record.",
+    ],
+    "HRM.3.d": [
+        "Safety training record within induction — patient, visitor and staff safety, emergency codes.",
+        "Emergency-code awareness confirmation.",
+        "Induction attendance record.",
+    ],
+    "HRM.3.e": [
+        "CPR/BLS training record within induction.",
+        "Advanced-training record for ICU or high-dependency-unit staff (ACLS/PALS/NRP or equivalent).",
+        "Valid-certificate exemption record, where applicable.",
+    ],
+    "HRM.3.f": [
+        "Hospital infection prevention and control training record within induction.",
+        "Content record covering IPC programme policies and practices.",
+        "Induction attendance record.",
+    ],
+    "HRM.3.g": [
+        "Service-standards orientation record within induction.",
+        "Staff-awareness confirmation.",
+        "Induction attendance record.",
+    ],
+    "HRM.3.h": [
+        "Administrative-procedures orientation record within induction — attendance, leave, conduct.",
+        "Organisation-wide policy-awareness record.",
+        "Cross-reference to HRM.2.d.",
+    ],
+    "HRM.3.i": [
+        "Department, unit, service or programme-level policy-and-procedure orientation record.",
+        "Delivery-location record confirming it was given at that level.",
+        "Induction attendance record.",
+    ],
+    "HRM.3.j": [
+        "Information-systems, information-security and data-use training record.",
+        "Job-responsibility-matched training-content record.",
+        "EMR-access training record, where the hospital uses electronic health records.",
+    ],
+    "HRM.4.a": [
+        "Written training and development policy or manual.",
+        "Training-needs-identification, methodology, assessment and calendar record.",
+        "Coverage record for all staff categories, including doctors and outsourced staff.",
+    ],
+    "HRM.4.b": [
+        "Training record with title, trainer, date, duration and trainee list with signatures.",
+        "Digital or physical training-record system.",
+        "Content-capture record where possible.",
+    ],
+    "HRM.4.c": [
+        "Training record triggered by a job-responsibility change or new-equipment introduction.",
+        "Operational-and-maintenance training record for new equipment.",
+        "Training-completion confirmation before independent use.",
+    ],
+    "HRM.4.d": [
+        "Feedback-mechanism record for training-programme improvement.",
+        "Feedback data on course material, facilities and trainer capability.",
+        "Both internal and external training coverage record.",
+    ],
+    "HRM.4.e": [
+        "Immediate post-training evaluation record — pre/post-test.",
+        "Later workplace-effectiveness evaluation record.",
+        "Retraining record where the evaluation showed a need.",
+    ],
+    "HRM.4.f": [
+        "Continuing-professional-development support record — courses, conferences, e-learning access.",
+        "Minimum mandatory annual training-hours specification record.",
+        "Staff-participation record against the mandatory hours.",
+    ],
+    "HRM.5.a": [
+        "Blood-and-blood-product handling training record for relevant staff (doctors, nurses, technicians, transport staff).",
+        "Cross-reference to COP.8 blood transfusion service practice.",
+        "Training-content record — safe transport, informed consent, documentation, transfusion-reaction handling.",
+    ],
+    "HRM.5.b": [
+        "Vulnerable-patient identification-and-care training record.",
+        "Cross-reference to COP.16.a.",
+        "Relevant-staff coverage record.",
+    ],
+    "HRM.5.c": [
+        "Control-and-restraint-technique training record.",
+        "Cross-reference to COP.16.e.",
+        "Relevant-staff coverage record.",
+    ],
+    "HRM.5.d": [
+        "Healthcare-communication-technique training record.",
+        "Training-needs source record — complaints, incident reports, appraisals, feedback.",
+        "Cross-reference to PRE.8.e.",
+    ],
+    "HRM.5.e": [
+        "Periodic CPR-training record for direct-patient-care staff, at least once in two years or sooner after protocol change.",
+        "Advanced-training record for emergency, ICU or high-dependency staff.",
+        "Refresher-schedule tracking record.",
+    ],
+    "HRM.5.f": [
+        "Infection-prevention-and-control training record at least annually.",
+        "Antimicrobial-stewardship-content record for medical professionals, IPC nurses, clinical pharmacist and support staff.",
+        "Attendance record.",
+    ],
+    "HRM.6.a": [
+        "Safety-programme training record.",
+        "Laboratory- or imaging-specific safety-training record where applicable.",
+        "Cross-reference to PSQ.1.a.",
+    ],
+    "HRM.6.b": [
+        "Risk-detection-and-handling training record — physical, chemical, environmental, process-related risks.",
+        "Practical-demonstration record — blood-spill management, hazardous-material handling.",
+        "Training-content coverage record.",
+    ],
+    "HRM.6.c": [
+        "Incident-procedure awareness record.",
+        "Staff confirmation of knowing the sequence of actions to take.",
+        "Training or briefing record.",
+    ],
+    "HRM.6.d": [
+        "Occupational-safety-aspect training record — needle-stick, radiation, laser, medical-gas, chemotherapy, noise exposure.",
+        "Cross-reference to IPC.8.a.",
+        "Area-specific hazard-training record.",
+    ],
+    "HRM.6.e": [
+        "Disaster-management-plan training record.",
+        "Specific-role training record for an external or internal disaster.",
+        "Attendance record.",
+    ],
+    "HRM.6.f": [
+        "Fire-and-non-fire-emergency training record.",
+        "Fire-extinguisher and evacuation-procedure demonstration record.",
+        "Specific-role training record for non-fire emergencies.",
+    ],
+    "HRM.6.g": [
+        "Quality-improvement-programme training record.",
+        "Role-in-programme awareness record.",
+        "Department-specific quality-assurance training record where applicable (laboratory, imaging, emergency, ICU, blood centre, surgical services).",
+    ],
+    "HRM.7.a": [
+        "Performance-appraisal record for all staff categories, including the organisation head and doctors.",
+        "Competency-assessment record where appropriate.",
+        "Contractor-conducted appraisal record for outsourced staff.",
+    ],
+    "HRM.7.b": [
+        "Appraisal-system-awareness record at induction.",
+        "Service-booklet or induction-material reference.",
+        "Staff-acknowledgement record.",
+    ],
+    "HRM.7.c": [
+        "Pre-determined-criteria document — key performance indicators or key result areas derived from the job description.",
+        "Evaluation record against those criteria.",
+        "Job-description cross-reference record.",
+    ],
+    "HRM.7.d": [
+        "Development-action record from the appraisal — training requirement identified.",
+        "Key-result-area and training-need-assessment record.",
+        "Underperformance-management written-guidance record.",
+    ],
+    "HRM.7.e": [
+        "Dated performance-appraisal record, at least annually.",
+        "Documentation-completeness record.",
+        "Appraisal-cycle-tracking record confirming no missed year.",
+    ],
+    "HRM.8.a": [
+        "Written disciplinary and grievance handling guidance.",
+        "Coverage record for the HRM.8.c–e elements.",
+        "Workplace-issue inclusion record — bullying, harassment.",
+    ],
+    "HRM.8.b": [
+        "Staff-awareness record of the disciplinary and grievance mechanism.",
+        "Communication record — induction, notice board, policy circulation.",
+        "Confirmation across all staff categories.",
+    ],
+    "HRM.8.c": [
+        "Natural-justice-principle record — both parties heard before a decision.",
+        "Disciplinary case record demonstrating the principle applied.",
+        "Policy-document reference.",
+    ],
+    "HRM.8.d": [
+        "Labour-law compliance record for the disciplinary and grievance procedure.",
+        "Internal Complaints Committee constitution record for sexual-harassment complaints.",
+        "Legal-currency review record of the procedure.",
+    ],
+    "HRM.8.e": [
+        "Appellate-authority designation record, higher than the disciplinary authority.",
+        "Appeal-case record showing the provision was used.",
+        "Policy-document reference.",
+    ],
+    "HRM.8.f": [
+        "Grievance-redress action record.",
+        "Documentation and communication record to the aggrieved staff member.",
+        "Closure-tracking record.",
+    ],
+    "HRM.9.a": [
+        "Written staff health and safety policy covering physical and mental health.",
+        "Staff vaccination and immunisation programme record.",
+        "PPE-provision and second-victim-support record.",
+    ],
+    "HRM.9.b": [
+        "Annual health-check record for direct-patient-care staff.",
+        "Findings and results documentation in the personal file.",
+        "No-charge-to-staff confirmation record.",
+    ],
+    "HRM.9.c": [
+        "Workplace-injury treatment record — needlestick, patient-transport injury, noise-related, etc.",
+        "Counselling record where appropriate.",
+        "Workplace-violence-injury inclusion record.",
+    ],
+    "HRM.9.d": [
+        "Workplace-violence risk-assessment record.",
+        "Written security guidance covering workplace-violence prevention and handling.",
+        "Law-enforcement-liaison and counselling record for affected staff.",
+    ],
+    "HRM.10.a": [
+        "Personal-file maintenance record for all staff, current and updated.",
+        "Confidentiality and access-restriction record.",
+        "Electronic-format record, where used.",
+    ],
+    "HRM.10.b": [
+        "Personal-file content record — qualification, job description, credential verification, health status.",
+        "Completeness-check record.",
+        "Update-currency record.",
+    ],
+    "HRM.10.c": [
+        "In-service training and education record maintained in, or traceable from, the personal file.",
+        "Annual training-summary record for internal training.",
+        "Attendance-verification supporting document.",
+    ],
+    "HRM.10.d": [
+        "Personal-file record of evaluation results and remarks — appraisals, training assessment, health-check outcome, achievement/complaint/warning/memo.",
+        "Completeness-check record.",
+        "Confidential-handling record.",
+    ],
+    "HRM.11.a": [
+        "Identified-medical-professional list permitted to provide unsupervised patient care.",
+        "Qualification, training and experience verification record.",
+        "Cross-reference to the HRM.11 stop-work trigger for unlisted practice.",
+    ],
+    "HRM.11.b": [
+        "Education, registration, training and experience documentation record, updated periodically.",
+        "Personal-file record of the update.",
+        "New-qualification acquisition update record.",
+    ],
+    "HRM.11.c": [
+        "Verification record with the awarding organisation.",
+        "National Medical Commission or equivalent reference-check record.",
+        "Verification-completeness record.",
+    ],
+    "HRM.11.d": [
+        "Granted-privilege record naming the clinical services each professional is authorised for.",
+        "Annual privilege-review record.",
+        "Cross-reference to the HRM.11 stop-work trigger for privileging outside this record.",
+    ],
+    "HRM.11.e": [
+        "Communicated-service record to the professional and to relevant departments.",
+        "Admission-rights or surgical-rights notification record (front desk, OT, etc.).",
+        "Internal-communication record.",
+    ],
+    "HRM.11.f": [
+        "Standardised privileging-format record.",
+        "Proctorship record for new faculty until independent privileges are granted.",
+        "Mechanism-confirmation record that professionals provide only privileged services.",
+    ],
+    "HRM.12.a": [
+        "Identified-nursing-professional list permitted to provide unsupervised patient care.",
+        "Qualification, training and experience verification record, referencing the Indian Nursing Council Act, 1947.",
+        "Cross-reference to the HRM.12 stop-work trigger for unlisted practice.",
+    ],
+    "HRM.12.b": [
+        "Education, registration, training and experience documentation record, updated periodically.",
+        "Personal-file record of the update.",
+        "New-qualification acquisition update record.",
+    ],
+    "HRM.12.c": [
+        "Verification record with the awarding organisation.",
+        "Verification-completeness record.",
+        "Cross-reference to HRM.12.b.",
+    ],
+    "HRM.12.d": [
+        "Granted-privilege record naming what each nurse is authorised to do.",
+        "Annual privilege-review record.",
+        "Cross-reference to the HRM.12 stop-work trigger for privileging outside this record.",
+    ],
+    "HRM.12.e": [
+        "Communicated-service record to the nurse and to nursing services and concerned departments.",
+        "Internal-communication record.",
+        "Confirmation record of awareness.",
+    ],
+    "HRM.12.f": [
+        "Supervision record for new staff until independent privileges are granted.",
+        "Mechanism-confirmation record that nurses provide only privileged services.",
+        "Privileging-compliance spot-check record.",
+    ],
+    "HRM.13.a": [
+        "Identified-para-clinical-professional list permitted to provide unsupervised patient care.",
+        "Qualification, training and experience verification record.",
+        "Cross-reference to the HRM.13 stop-work trigger for unlisted practice.",
+    ],
+    "HRM.13.b": [
+        "Education, registration, training and experience verification and documentation record, updated periodically.",
+        "Personal-file record of the update.",
+        "Verification-with-awarding-organisation record.",
+    ],
+    "HRM.13.c": [
+        "Granted-privilege record naming what each para-clinical professional is authorised to do.",
+        "Registration or licence-on-file record, where applicable.",
+        "Cross-reference to the HRM.13 stop-work trigger for privileging outside this record.",
+    ],
+    "HRM.13.d": [
+        "Communicated-service record to the professional and to concerned departments.",
+        "Internal-communication record.",
+        "Confirmation record of awareness.",
+    ],
+    "HRM.13.e": [
+        "Supervision record for new staff until independent privileges are granted.",
+        "Mechanism-confirmation record that para-clinical professionals provide only privileged services.",
+        "Privileging-compliance spot-check record.",
+    ],
+}
+
+
 def oe_mapping(n: int, oes: list[dict], has_stop: bool) -> list[dict]:
     mapping = []
     prepared = PREPARED_BY[n]
@@ -173,15 +559,9 @@ def oe_mapping(n: int, oes: list[dict], has_stop: bool) -> list[dict]:
         steps = f"Section 3; 5.{i}"
         if has_stop and n in STOP_WORK_PROPOSALS:
             steps += "; Section 6 Stop-work"
-        records = [
-            f"Records showing HRM.{n}.{oe['letter']} was followed for sampled cases.",
-            "Written guidance / protocol referenced for this element (where required).",
-            f"Audit sample notes for HRM.{n}.{oe['letter']} reviewed {D('quarterly')}.",
-        ]
-        if oe.get("star"):
-            records.append("Documented evidence specifically required by the asterisked objective element.")
-        if oe["level"] == "CORE":
-            records.append("CORE-element sample with no critical gaps in the quarter under review.")
+        records = HRM_RECORDS.get(oe["oe_code"])
+        if not records:
+            raise KeyError(f"Missing hand-authored evidence records for {oe['oe_code']}")
         mapping.append(
             {
                 "oe_code": oe["oe_code"],
@@ -239,7 +619,7 @@ Words marked {D('like this')} are defaults. A blank marked {BLANK} must be fille
 
 It covers {len(oes)} objective elements ({', '.join(oe_codes)}).
 
-Boundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md)."""
+{hco_boundaries_clause(["AAC", "COP", "MOM", "PRE", "IPC", "PSQ", "ROM", "FMS"])} Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md)."""
 
     lead = (std_title[0].lower() + std_title[1:]).rstrip(".") if std_title else "human resource management requirements are implemented"
     policy_statement = f"""{HOSPITAL} implements HRM.{n} so that {lead}.
@@ -258,14 +638,19 @@ Quality Coordinator
 departmental leaders
 - Run the department-level duties this standard names."""
 
-    monitoring = f"""The Quality Coordinator audits this policy {D('quarterly')}.
+    monitoring_bullets = ["Records for a sample of this standard's objective elements, checked against the What-we-do steps."]
+    if stars != "none":
+        monitoring_bullets.append("Documentary evidence is on file for each asterisked objective element in the sample.")
+    if cores != "none":
+        monitoring_bullets.append("CORE objective elements show no critical gaps in the sample.")
+    monitoring_bullets.append("Stop-work events (if any) are logged with outcome.")
+    monitoring_bullet_text = "\n".join(f"- {b}" for b in monitoring_bullets)
 
-What is monitored each quarter:
+    monitoring = f"""The Quality Coordinator audits this policy {D('quarterly')}. The audit reviews:
 
-- Sample of records for each OE HRM.{n}.{letters}.
-- Asterisked elements ({stars}) have document evidence as required.
-- CORE elements ({cores}) show no critical gaps in the sample.
-- Stop-work events (if any) are logged with outcome.
+{monitoring_bullet_text}
+
+Root-cause analysis is required when a gap found in this audit remains open beyond {D('90 days')}.
 
 This policy is reviewed {D('annually')}, and sooner after a related credentialing, staffing or disciplinary-process change."""
 
@@ -307,7 +692,7 @@ WISN — Workload Indicators of Staffing Need (WHO method)"""
 Stop-work: {"YES — proposed: " + STOP_WORK_PROPOSALS[n] if has_stop else "omitted (proposed default: no stop-work on this standard)"}.
 draft_label={DRAFT_LABEL!r} via hco_document_control. chapter=HCO. doc_no HCO/HRM/POL/{n:02d}.
 Official chapter is 13 standards / 76 OEs (confirmed against portal summary and against the Guidebook's own copy of the same matrix). Guidebook interpretations transcribed from a scanned PDF with no text layer — verified against rendered page images (no tesseract/pdftoppm available on this machine), not run through a mechanical OCR pass; see policies/source/hco6_hrm_chapter_notes.md. Statute P2 proposed on HRM.12 only (Indian Nursing Council Act, 1947).
-Do not copy SHCO equivalent-chapter wording — including the already-deployed SHCO 3rd Edition HRM chapter (build_hrm1_v2.py..build_hrm9_v2.py, policies/drafts/hrm*_v2_draft.json), a separate programme and edition. Do not touch AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS."""
+Not the same as the already-deployed SHCO 3rd Edition HRM chapter (build_hrm1_v2.py..build_hrm9_v2.py, policies/drafts/hrm*_v2_draft.json) — separate programme and edition, not touched. Do not touch AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS."""
 
     distribution = distribution_dedupe(
         [

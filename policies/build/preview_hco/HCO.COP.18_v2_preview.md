@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.18
 
 It covers 7 objective elements (COP.18.a, COP.18.b, COP.18.c, COP.18.d, COP.18.e, COP.18.f, COP.18.g).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -51,7 +51,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Scope of the rehabilitation services at a minimum is commensurate to the services provided by the organisat...
+1. Do not skip: Scope of the rehabilitation services at a minimum is commensurate to the services provided by the...
 2. Do not skip: Rehabilitation services are provided in a consistent manner.
 3. Do not skip: Care providers collaboratively plan rehabilitation services.
 4. Do not skip: There are adequate space and equipment to provide rehabilitation.
@@ -62,7 +62,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 Scope of the rehabilitation services at a minimum is commensurate to ..
+### 5.1 Scope of the rehabilitation services at a minimum is commensurate to..
 
 Scope of the rehabilitation services at a minimum is commensurate to the services provided by the organisation.
 
@@ -86,13 +86,13 @@ There are adequate space and equipment to provide rehabilitation.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.5 Care is guided by functional assessment and periodic re-assessments w..
+### 5.5 Care is guided by functional assessment and periodic re-assessments..
 
 Care is guided by functional assessment and periodic re-assessments which are done and documented.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.6 Care is provided adhering to infection prevention and control and saf..
+### 5.6 Care is provided adhering to infection prevention and control and..
 
 Care is provided adhering to infection prevention and control and safety practices.
 
@@ -120,14 +120,12 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.18.a–g.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -186,45 +184,45 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.18.a — Scope of the rehabilitation services at a minimum is commensurate to the services provided by the organisation.
 
-- Records showing COP.18.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.18.a reviewed «quarterly».
+- Rehabilitation-service scope document matched to services provided.
+- Service-scope review record.
+- Cross-reference to AAC.1.
 
 ### COP.18.b — Rehabilitation services are provided in a consistent manner.
 
-- Records showing COP.18.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.18.b reviewed «quarterly».
+- Written rehabilitation-service protocol.
+- Consistency-check record.
+- Staff-training record.
 
 ### COP.18.c — Care providers collaboratively plan rehabilitation services.
 
-- Records showing COP.18.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.18.c reviewed «quarterly».
+- Multi-disciplinary rehabilitation care-plan record.
+- Collaborative-planning documentation.
+- Care-provider-involvement record.
 
 ### COP.18.d — There are adequate space and equipment to provide rehabilitation.
 
-- Records showing COP.18.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.18.d reviewed «quarterly».
+- Rehabilitation space and equipment inventory.
+- Adequacy-check record.
+- Equipment-maintenance record.
 
 ### COP.18.e — Care is guided by functional assessment and periodic re-assessments which are done and documented.
 
-- Records showing COP.18.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.18.e reviewed «quarterly».
+- Functional-assessment record at admission.
+- Periodic-reassessment record.
+- Documentation-completeness check.
 
 ### COP.18.f — Care is provided adhering to infection prevention and control and safety practices.
 
-- Records showing COP.18.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.18.f reviewed «quarterly».
+- IPC and safety-practice compliance record for rehabilitation.
+- Equipment cleaning or disinfection record.
+- Safety-observation record.
 
 ### COP.18.g — Care pathways are developed, implemented, and reviewed periodically.
 
-- Records showing COP.18.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.18.g reviewed «quarterly».
+- Developed rehabilitation care-pathway document.
+- Implementation and consistency-check record.
+- Periodic-review record.
 
 ## Disclaimer
 

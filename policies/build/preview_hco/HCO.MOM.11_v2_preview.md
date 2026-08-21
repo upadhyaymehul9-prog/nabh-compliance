@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 5 objective elements (MOM.11.a, MOM.11.b, MOM.11.c, MOM.11.d, MOM.11.e).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -55,14 +55,14 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 1. Do not skip: The organisation adheres to the defined process for the acquisition of medical supplies and consumables.
 2. Do not skip: Medical supplies and consumables are used in a safe manner, where appropriate.
-3. Do not skip: Medical supplies and consumables are stored in a clean, safe and secure environment; incorporating the manu...
+3. Do not skip: Medical supplies and consumables are stored in a clean, safe and secure environment; incorporating the...
 4. Do not skip: Sound inventory control practices guide storage of medical supplies and consumables.
 5. Do not skip: There is a mechanism in place to verify the condition of medical supplies and consumables.
 6. Staff who see a MOM.11 rule broken report it the same shift to the «department in-charge» or the «Medication Safety Officer».
 
 ## 5. What we do
 
-### 5.1 The organisation adheres to the defined process for the acquisition o...
+### 5.1 The organisation adheres to the defined process for the acquisition of...
 
 Medical supplies and consumables are acquired through a defined process: approved vendors, specifications, receipt check (identity, quantity, integrity, expiry where applicable), and entry into stores.
 
@@ -72,7 +72,7 @@ Method note (from guidebook interpretation): In this context, medication supplie
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.2 Medical supplies and consumables are used in a safe manner, where app...
+### 5.2 Medical supplies and consumables are used in a safe manner, where...
 
 Supplies and consumables are used as intended: sterile items stay sterile until use; single-use items are not reused; opening-date is written on multi-use bottles where the manufacturer requires.
 
@@ -80,7 +80,7 @@ User departments do not improvise a device against its labelled use. Incidents o
 
 Method note (from guidebook interpretation): The items shall be opened and used using relevant precautions to maintain sterility and integrity.
 
-### 5.3 Medical supplies and consumables are stored in a clean, safe and secu...
+### 5.3 Medical supplies and consumables are stored in a clean, safe and secure...
 
 Stores and user locations keep supplies in a clean, safe and secure environment and follow manufacturer recommendations (temperature, humidity, light, upright storage, first-expiry). Sterile stores are physically separate from dirty utility.
 
@@ -88,7 +88,7 @@ Food and medications are not mixed into the general consumable racks except wher
 
 Method note (from guidebook interpretation): The organisation shall ensure that the storage requirements specified by the manufacturer are adhered to. This shall apply to all areas where these are stored, including wards. They shall be protected from loss or theft. Overall cleanliness of the storage area shall be maintained. Hazardous materials shall be identified and kept safely.
 
-### 5.4 Sound inventory control practices guide storage of medical supplies a...
+### 5.4 Sound inventory control practices guide storage of medical supplies and...
 
 Inventory control uses defined stock levels, FEFO, and a documented indent cycle. Expiry and damaged stock are removed on the «monthly» stores round. Floor hoarding of sterile packs past a usable dating is returned to stores.
 
@@ -96,7 +96,7 @@ The «Stores In-Charge» can show movement from receipt to issue for sampled ite
 
 Method note (from guidebook interpretation): The organisation shall follow or demonstrate ABC, VED, FSN, First Expiry First Out, lead time analysis, etc.
 
-### 5.5 There is a mechanism in place to verify the condition of medical supp...
+### 5.5 There is a mechanism in place to verify the condition of medical...
 
 Before issue and at defined intervals, staff verify the condition of supplies and consumables: package integrity, sterility indicators where present, expiry, and any cold-chain logger for items that need it.
 
@@ -124,14 +124,13 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE MOM.11.a–e.
-- Asterisked elements (a) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event or recall.
 
@@ -193,34 +192,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### MOM.11.a — The organisation adheres to the defined process for the acquisition of medical supplies and consumables.
 
-- Records showing MOM.11.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.11.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Defined acquisition process — approved vendors, specifications, receipt check.
+- Stores In-Charge ownership record.
+- Next-working-day entry record for any documented emergency purchase.
 
 ### MOM.11.b — Medical supplies and consumables are used in a safe manner, where appropriate.
 
-- Records showing MOM.11.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.11.b reviewed «quarterly».
+- Intended-use record — sterile items kept sterile, single-use items not reused, opening-date on multi-use bottles.
+- Incident record for any unsafe-use event reported.
+- Confirmation no improvised off-label device use occurred.
 
 ### MOM.11.c — Medical supplies and consumables are stored in a clean, safe and secure environment; incorporating the manufacturer's recommendation(s).
 
-- Records showing MOM.11.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.11.c reviewed «quarterly».
+- Clean, safe, secure storage record following manufacturer recommendation.
+- Sterile-store physical-separation record from dirty utility.
+- Confirmation food and medications were not mixed into general consumable racks.
 
 ### MOM.11.d — Sound inventory control practices guide storage of medical supplies and consumables.
 
-- Records showing MOM.11.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.11.d reviewed «quarterly».
+- Documented inventory-control method — stock levels, FEFO, indent cycle.
+- Monthly stores-round expiry/damaged-stock removal record.
+- Stock-movement traceability record from receipt to issue for a sampled item.
 
 ### MOM.11.e — There is a mechanism in place to verify the condition of medical supplies and consumables.
 
-- Records showing MOM.11.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.11.e reviewed «quarterly».
+- Pre-issue condition-verification record — package integrity, sterility indicator, expiry, cold-chain logger where needed.
+- Quarantine record for any failed item.
+- User-department return-with-note record for a failed pack.
 
 ## Disclaimer
 

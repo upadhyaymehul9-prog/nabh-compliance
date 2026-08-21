@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 5 objective elements (MOM.9.a, MOM.9.b, MOM.9.c, MOM.9.d, MOM.9.e).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -54,16 +54,16 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 ## 4. Non-negotiable rules
 
 1. Do not skip: Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are used safely.
-2. Do not skip: Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are prescribe...
-3. Do not skip: Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals drugs shall b...
-4. Do not skip: Chemotherapy and radio-pharmaceuticals shall be prepared properly and safely and administered by qualified ...
-5. Do not skip: A proper record shall be kept of the usage, administration and disposal of narcotic drugs and psychotropic ...
+2. Do not skip: Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are prescribed...
+3. Do not skip: Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals drugs shall be...
+4. Do not skip: Chemotherapy and radio-pharmaceuticals shall be prepared properly and safely and administered by qualified...
+5. Do not skip: A proper record shall be kept of the usage, administration and disposal of narcotic drugs and psychotropic...
 6. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
 7. Staff who see a MOM.9 rule broken report it the same shift to the «department in-charge» or the «Medication Safety Officer».
 
 ## 5. What we do
 
-### 5.1 Narcotic drugs and psychotropic substances, chemotherapeutic agents a...
+### 5.1 Narcotic drugs and psychotropic substances, chemotherapeutic agents and...
 
 Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are used only under the written safety measures in this policy: authorised prescriber, secure storage, qualified preparation and administration, and complete records (9.b–9.e).
 
@@ -73,7 +73,7 @@ Method note (from guidebook interpretation): Written guidance, developed in cons
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.2 Narcotic drugs and psychotropic substances, chemotherapeutic agents a...
+### 5.2 Narcotic drugs and psychotropic substances, chemotherapeutic agents and...
 
 These agents are prescribed only by caregivers authorised for that class: «consultants / privileged doctors for narcotics and psychotropics; oncology-privileged prescribers for chemotherapy; radiation-medicine / nuclear-medicine privileged prescribers for radio-pharmaceuticals».
 
@@ -81,7 +81,7 @@ A verbal chemotherapy order is not used except under the documented emergency ru
 
 Method note (from guidebook interpretation): For narcotic drugs, it shall be the designated/ privileged medical officer(s). Chemotherapy shall be prescribed by those who have the knowledge to monitor and treat the adverse effect of chemotherapy. This is preferably a medical oncologist or a doctor who has been trained and has achieved competency in the same. Radiopharmaceuticals shall be prescribed only by a caregiver authorised by the statutory body.
 
-### 5.3 Narcotic drugs and psychotropic substances, chemotherapeutic agents a...
+### 5.3 Narcotic drugs and psychotropic substances, chemotherapeutic agents and...
 
 Narcotics and psychotropics are stored in a locked, access-controlled cupboard or safe, with a register. Chemotherapeutic agents and radio-pharmaceuticals are stored as their licences and manufacturer instructions require, separate from general stock, with access limited to authorised staff.
 
@@ -97,7 +97,7 @@ PPE, spill kits and waste streams are in place before preparation starts. Prepar
 
 Method note (from guidebook interpretation): It is required that qualified personnel have received special training in the preparation and administration of chemotherapeutic drugs. A bio-safety cabinet of class II (preferably IIA) with appropriate personal protective equipment shall be used for preparing/mixing chemotherapeutic drugs. Radio-pharmaceuticals shall be prepared and administered by an authorised caregiver.
 
-### 5.5 A proper record shall be kept of the usage, administration and dispos...
+### 5.5 A proper record shall be kept of the usage, administration and disposal...
 
 Usage, administration and disposal of these three classes are recorded: narcotic / psychotropic register (receipt, issue, administration, wastage, balance); chemotherapy administration record (protocol, dose, batch, given-by); radio-pharmaceutical log as the radiation programme requires.
 
@@ -135,14 +135,13 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE MOM.9.a–e.
-- Asterisked elements (a) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event or recall.
 
@@ -204,34 +203,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### MOM.9.a — Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are used safely.
 
-- Records showing MOM.9.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.9.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Combined-programme ownership record by the Pharmacy In-Charge and Medication Safety Officer for narcotics/psychotropics, chemotherapy and radio-pharmaceuticals.
+- Out-of-scope declaration record for any class not provided, confirming it is not stocked.
+- Confirmation the full chain (9.b–9.e) applies where in scope.
 
 ### MOM.9.b — Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are prescribed by appropriate caregivers.
 
-- Records showing MOM.9.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.9.b reviewed «quarterly».
+- Authorised-prescriber record by class — narcotics/psychotropics, chemotherapy, radio-pharmaceuticals.
+- Confirmation no verbal chemotherapy order was used except under the documented emergency rule.
+- Pharmacy dispensing-refusal record for an unauthorised signature.
 
 ### MOM.9.c — Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals drugs shall be stored securely.
 
-- Records showing MOM.9.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.9.c reviewed «quarterly».
+- Locked, access-controlled storage record with register for narcotics and psychotropics.
+- Separate-storage record for chemotherapeutic agents and radio-pharmaceuticals per licence/manufacturer instruction.
+- Named key/access-rights record.
 
 ### MOM.9.d — Chemotherapy and radio-pharmaceuticals shall be prepared properly and safely and administered by qualified personnel.
 
-- Records showing MOM.9.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.9.d reviewed «quarterly».
+- Required-facility preparation record — cytotoxic cabinet or designated hot lab — by qualified personnel.
+- PPE, spill-kit and waste-stream readiness record before preparation.
+- Contracted-provider receipt-check record where preparation is off-site.
 
 ### MOM.9.e — A proper record shall be kept of the usage, administration and disposal of narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals.
 
-- Records showing MOM.9.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.9.e reviewed «quarterly».
+- Narcotic/psychotropic register — receipt, issue, administration, wastage, balance.
+- Chemotherapy administration record — protocol, dose, batch, given-by.
+- Radio-pharmaceutical log and biomedical-waste/AERB disposal record.
 
 ## Disclaimer
 

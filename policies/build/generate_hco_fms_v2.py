@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from nabh_text_normalize import distribution_dedupe  # noqa: E402
+from hco_cop_v2_common import hco_boundaries_clause, truncate_word_safe  # noqa: E402
 from hco_fms_v2_common import (  # noqa: E402
     BLANK,
     CHAPTER,
@@ -105,8 +106,7 @@ def clean_text(s: str) -> str:
 
 def step_title(i: int, oe_text: str) -> str:
     t = oe_text.split(".")[0].strip()
-    if len(t) > 72:
-        t = t[:69] + "..."
+    t = truncate_word_safe(t, 72)
     return f"5.{i} {t}"
 
 
@@ -151,8 +151,7 @@ def non_negotiables(n: int, oes: list[dict]) -> str:
     items = []
     for i, oe in enumerate(oes, start=1):
         short = clean_text(oe["text"] or oe["oe_code"])
-        if len(short) > 110:
-            short = short[:107] + "..."
+        short = truncate_word_safe(short, 110)
         items.append(f"{i}. Do not skip: {short}")
     if n in STOP_WORK_PROPOSALS:
         items.append(
@@ -165,6 +164,229 @@ def non_negotiables(n: int, oes: list[dict]) -> str:
     return "\n".join(items)
 
 
+# Fix #5 — hand-authored per-OE evidence records, matching the quality bar
+# AAC.1 / SHCO HIC.1 / HCO ROM already demonstrate: concrete, subject-specific
+# documents a hospital would actually hold, not a generic template restating
+# the OE code.
+FMS_RECORDS: dict[str, list[str]] = {
+    "FMS.1.a": [
+        "Current inventory of patient-safety devices and infrastructure (grab bars, bed rails, call bells, fire-safety devices) by area.",
+        "Inspection log showing the last-inspection date for each device or area.",
+        "Escalation record for any missing device found in an in-use care area.",
+    ],
+    "FMS.1.b": [
+        "Facility list showing the wheelchair-accessible entrance and toilet location(s).",
+        "Regulatory-requirement reference for the accessibility provision made.",
+        "Documented alternative arrangement for any area with step-only access.",
+    ],
+    "FMS.1.c": [
+        "Monthly facility-inspection-round checklist, completed and dated.",
+        "Round calendar showing no missed month.",
+        "List of identified safety, security-risk or restricted areas being monitored.",
+    ],
+    "FMS.1.d": [
+        "Documented inspection reports of facility rounds.",
+        "Corrective and preventive action record for each finding.",
+        "Safety-committee review record of the reports.",
+    ],
+    "FMS.1.e": [
+        "Dated risk-assessment record covering noise, vibration and infection prevention, completed before work started.",
+        "Engineering In-Charge sign-off before construction, renovation or expansion began.",
+        "Cross-reference to the IPC.4 construction-infection-control measures applied alongside.",
+    ],
+    "FMS.2.a": [
+        "Current space-versus-services map for each department.",
+        "National or international guidance reference used (for example AERB guidance for a radiation area).",
+        "Escalation record for any service listed without matching space.",
+    ],
+    "FMS.2.b": [
+        "Current as-built and updated drawing set: site layout, floor plans, floor-wise evacuation plans, and separate civil, electrical, ELV, plumbing, HVAC, medical-gas and IT drawings.",
+        "Named custodian record for the drawing set.",
+        "Date of last update against a facility change.",
+    ],
+    "FMS.2.c": [
+        "Signage inventory or walk log by area, noting language and/or pictorial form and bilingual coverage.",
+        "Statutory posting-requirement reference applicable to this site.",
+        "Quarterly signage-walk record.",
+    ],
+    "FMS.2.d": [
+        "Potable-water test results: biochemical at least quarterly and microbiological at least monthly, against IS 10500.",
+        "Dialysis reverse-osmosis inlet-water endotoxin test record, where dialysis is in scope.",
+        "Continuity log confirming no unplanned water or power outage in a care area without the FMS.7 continuity plan activating.",
+    ],
+    "FMS.2.e": [
+        "Backup-source inventory: diesel generator, solar, uninterruptible power supply, bore/tanker/extra tanks as named.",
+        "Electric-load calculation matching demand.",
+        "Continuity-action record naming each critical area's backup path.",
+    ],
+    "FMS.2.f": [
+        "Diesel-generator test log at the defined frequency (default monthly).",
+        "Water-acceptance test record for any occasion an emergency water source was used.",
+        "Corrective-action record for any failed alternate-source test.",
+    ],
+    "FMS.3.a": [
+        "Written security operational plan naming extra-security areas (operating theatre, ICU/NICU, labour room, emergency) and access rules for staff, patients and visitors.",
+        "Vulnerable-spot control record — closed-circuit television coverage or equivalent for dark areas and long corridors.",
+        "Review or update record of the security plan.",
+    ],
+    "FMS.3.b": [
+        "Structural-safety design reference actually applied (for example Indian Seismic Code IS 1893 Part 1) for the specific building project.",
+        "Engineering sign-off record for that construction, re-planning or retrofit project.",
+        "Evidence of what was applied to real building work, not a policy statement alone.",
+    ],
+    "FMS.3.c": [
+        "Completed electrical safety audit report, at least annually.",
+        "Action-taken record against audit findings.",
+        "Reference to the National Electrical Code or thermal-imaging method used.",
+    ],
+    "FMS.3.d": [
+        "Written procedure for identifying and disposing of material not in use.",
+        "Condemnation register listing items, dates and disposal method.",
+        "Engineering In-Charge sign-off on the register.",
+    ],
+    "FMS.3.e": [
+        "Current hazardous-materials inventory (for example chemicals, blood/cultures, mercury, isotopes, medical gases, LPG, steam, ethylene oxide).",
+        "Material Safety Data Sheet on file for each identified material.",
+        "Handling, storage, transport and disposal record for a sample of materials.",
+    ],
+    "FMS.3.f": [
+        "Summarised Material Safety Data Sheet accessible on the floor where the material is stored.",
+        "Hazardous-materials spill-kit inventory and location log.",
+        "Training record for staff handling that material.",
+    ],
+    "FMS.4.a": [
+        "Written utility and engineering equipment plan matched to services and the strategic plan, including future needs (for example diesel generator, chiller).",
+        "Periodic review record of the plan.",
+        "Record showing collaborative selection (end-user, management, finance, engineering) for equipment decisions.",
+    ],
+    "FMS.4.b": [
+        "Equipment inventory with a unique identifier per item.",
+        "Quality-conformance, factory test or installation certificate on file where applicable.",
+        "Log-completeness check confirming no item without an identity.",
+    ],
+    "FMS.4.c": [
+        "Documented operational and maintenance (preventive and breakdown) plan for utility and engineering equipment.",
+        "Preventive-maintenance schedule and completion log for the critical-equipment list.",
+        "Breakdown-response record showing the plan was actually followed.",
+    ],
+    "FMS.4.d": [
+        "Calibration schedule for utility equipment (for example steam-steriliser pressure gauges, medication-refrigerator temperature gauges).",
+        "Calibration certificate with traceability to a prescribed standard.",
+        "In-house or outsourced calibration record.",
+    ],
+    "FMS.4.e": [
+        "Competency or training record for staff operating utility equipment.",
+        "Roster showing a named competent person for each shift.",
+        "Escalation record for any shift with no competent person named.",
+    ],
+    "FMS.4.f": [
+        "Escalation matrix displayed at the nursing station and departments.",
+        "On-call roster for maintenance staff, round the clock.",
+        "Night-call response-time log.",
+    ],
+    "FMS.4.g": [
+        "Complaint register logging receipt, job allotment and user-ratified completion for critical equipment (diesel generator, lifts, UPS, fire-related, dialysis RO, water pumps).",
+        "Downtime-duration record from complaint time to ratified completion.",
+        "Trend report reviewed against the critical-equipment list.",
+    ],
+    "FMS.4.h": [
+        "Written equipment-replacement and disposal guidance.",
+        "Condemnation record for utility and engineering equipment.",
+        "Systematic disposal log.",
+    ],
+    "FMS.5.a": [
+        "Written medical-equipment plan matched to services and the strategic plan, referencing the Indian Public Health Standards minimum set.",
+        "Collaborative-selection record (end-user, management, finance, engineering, biomedical).",
+        "Periodic review record of the plan.",
+    ],
+    "FMS.5.b": [
+        "Medical-equipment inventory classified by device risk, with a unique identifier including rental and demonstration items.",
+        "Factory test or conformance certificate on file.",
+        "In-use device check confirming no device without an identity.",
+    ],
+    "FMS.5.c": [
+        "Documented operational and maintenance (preventive and breakdown) plan for medical equipment.",
+        "Operator-training record and daily operating-check log.",
+        "Breakdown-response record, including nights and weekends.",
+    ],
+    "FMS.5.d": [
+        "Calibration schedule (weekly, monthly or annual as the manufacturer defines) with traceability.",
+        "Pre-commissioning and post-repair conformance-check record.",
+        "Calibration-due tracking log confirming no overdue device in clinical use.",
+    ],
+    "FMS.5.e": [
+        "Operator-training record per device type (for example blood-gas analyser, electrocardiograph, syringe pump).",
+        "Biomedical or instrumentation engineer/technologist qualification record for maintenance staff.",
+        "Training-currency check for operators and maintainers.",
+    ],
+    "FMS.5.f": [
+        "Written medical-equipment replacement and disposal guidance.",
+        "Condemnation record, systematically applied.",
+        "Disposal log.",
+    ],
+    "FMS.5.g": [
+        "Adverse-event and hazard-notice/recall log for medical equipment and devices.",
+        "Record showing a recalled device was withdrawn from clinical use until the issue closed.",
+        "Materiovigilance Programme of India participation record, where applicable.",
+    ],
+    "FMS.5.h": [
+        "Complaint register for critical medical equipment (ventilators, X-ray, MRI, cath lab, CT, anaesthesia machines, monitors, laboratory, ultrasound).",
+        "Downtime-duration record from reporting to corrective action.",
+        "Alternative-equipment-use record where no backup device exists.",
+    ],
+    "FMS.6.a": [
+        "Written medical-gas procurement, handling, storage, distribution, usage and replenishment guidance, including colour-coding and signage.",
+        "Reference used (for example HTM 02-01 or the NFPA medical-gas handbook).",
+        "Statutory-provision record (Explosives Act, Gas Cylinder Rules, Static and Mobile Pressure Vessels Rules) where those apply to this hospital's gases.",
+    ],
+    "FMS.6.b": [
+        "Colour-coded cylinder and pipeline inventory with alarm and valve-box log.",
+        "Twenty-four-hour plant-alarm monitoring record.",
+        "Pin-indexed outlet and automatic-changeover verification record.",
+    ],
+    "FMS.6.c": [
+        "Documented operational, inspection, testing and maintenance plan for piped medical gas, compressed air and vacuum.",
+        "Compressed-air purity test record, at least annually, at operating-theatre and intensive-care terminal outlets.",
+        "Manufacturer-following maintenance log.",
+    ],
+    "FMS.6.d": [
+        "Stand-by compressor/vacuum-pump and stand-by manifold or bulk-cylinder inventory.",
+        "Automatic-changeover test record.",
+        "Alternate-source readiness confirmation log.",
+    ],
+    "FMS.6.e": [
+        "Test log for alternate medical-gas sources at the defined interval (default monthly).",
+        "Manufacturer or written-plan interval reference used.",
+        "Corrective-action record for any failed test.",
+    ],
+    "FMS.7.a": [
+        "Written fire-safety plan covering detection, abatement, containment and evacuation, naming qualified personnel and current NABH minimum fire-safety measures.",
+        "Mock-drill schedule and drill record, including table-top exercises.",
+        "Displayed evacuation plan and emergency-illumination check record.",
+    ],
+    "FMS.7.b": [
+        "Written non-fire-emergency plan (for example earthquake, flood, toxic leak, structural collapse, utility failure, boiler burst, violence, stray animals).",
+        "NDMA, State or District guideline reference used.",
+        "Liaison record with civil, police and fire authorities.",
+    ],
+    "FMS.7.c": [
+        "Exit plan displayed on each floor, near lifts and inside enclosed rooms and laboratories.",
+        "Exit-door check record (open or push-bar) and fire-signage reference (fire service or National Building Code).",
+        "Refuge-area signage and maintenance record, where applicable.",
+    ],
+    "FMS.7.d": [
+        "Mock-drill record showing at least two drills a year covering fire and the named non-fire events.",
+        "Debrief and corrective-action record for variations found.",
+        "Confirmation that simulated, not real, patients were used.",
+    ],
+    "FMS.7.e": [
+        "Written maintenance plan for fire-related equipment and infrastructure.",
+        "Inspection, testing, preventive and breakdown maintenance log following manufacturer and statutory recommendations.",
+        "Last-service evidence on file.",
+    ],
+}
+
+
 def oe_mapping(n: int, oes: list[dict], has_stop: bool) -> list[dict]:
     mapping = []
     prepared = PREPARED_BY[n]
@@ -173,15 +395,9 @@ def oe_mapping(n: int, oes: list[dict], has_stop: bool) -> list[dict]:
         steps = f"Section 3; 5.{i}"
         if has_stop and n in STOP_WORK_PROPOSALS:
             steps += "; Section 6 Stop-work"
-        records = [
-            f"Records showing FMS.{n}.{oe['letter']} was followed for sampled cases.",
-            "Written guidance / protocol referenced for this element (where required).",
-            f"Audit sample notes for FMS.{n}.{oe['letter']} reviewed {D('quarterly')}.",
-        ]
-        if oe.get("star"):
-            records.append("Documented evidence specifically required by the asterisked objective element.")
-        if oe["level"] == "CORE":
-            records.append("CORE-element sample with no critical gaps in the quarter under review.")
+        records = FMS_RECORDS.get(oe["oe_code"])
+        if not records:
+            raise KeyError(f"Missing hand-authored evidence records for {oe['oe_code']}")
         mapping.append(
             {
                 "oe_code": oe["oe_code"],
@@ -239,7 +455,7 @@ Words marked {D('like this')} are defaults. A blank marked {BLANK} must be fille
 
 It covers {len(oes)} objective elements ({', '.join(oe_codes)}).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 {GUIDEBOOK_MD5})."""
+{hco_boundaries_clause(["AAC", "COP", "MOM", "PRE", "IPC", "PSQ", "ROM"])} Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 {GUIDEBOOK_MD5})."""
 
     lead = (std_title[0].lower() + std_title[1:]).rstrip(".") if std_title else "facility management and safety requirements are implemented"
     policy_statement = f"""{HOSPITAL} implements FMS.{n} so that {lead}.
@@ -258,14 +474,19 @@ Quality Coordinator
 departmental leaders
 - Run the department-level duties this standard names."""
 
-    monitoring = f"""The Quality Coordinator audits this policy {D('quarterly')}.
+    monitoring_bullets = ["Records for a sample of this standard's objective elements, checked against the What-we-do steps."]
+    if stars != "none":
+        monitoring_bullets.append("Documentary evidence is on file for each asterisked objective element in the sample.")
+    if cores != "none":
+        monitoring_bullets.append("CORE objective elements show no critical gaps in the sample.")
+    monitoring_bullets.append("Stop-work events (if any) are logged with outcome.")
+    monitoring_bullet_text = "\n".join(f"- {b}" for b in monitoring_bullets)
 
-What is monitored each quarter:
+    monitoring = f"""The Quality Coordinator audits this policy {D('quarterly')}. The audit reviews:
 
-- Sample of records for each OE FMS.{n}.{letters}.
-- Asterisked elements ({stars}) have document evidence as required.
-- CORE elements ({cores}) show no critical gaps in the sample.
-- Stop-work events (if any) are logged with outcome.
+{monitoring_bullet_text}
+
+Root-cause analysis is required when a gap found in this audit remains open beyond {D('90 days')}.
 
 This policy is reviewed {D('annually')}, and sooner after a related facility change, utility failure, equipment recall or fire-plan change."""
 
@@ -306,7 +527,7 @@ STP — Sewage Treatment Plant"""
 Stop-work: {"YES — proposed: " + STOP_WORK_PROPOSALS[n] if has_stop else "omitted (proposed default: no stop-work on this standard)"}.
 draft_label={DRAFT_LABEL!r} via hco_document_control. chapter=HCO. doc_no HCO/FMS/POL/{n:02d}.
 Official chapter is 7 standards / 43 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 {GUIDEBOOK_MD5}. Statute P2 proposed on FMS.5 (Medical Devices Rules as cited) and FMS.6 (Explosives Act / Gas Cylinder Rules / SMPV).
-Do not copy SHCO equivalent-chapter wording. Do not touch AAC, COP, MOM, PRE, IPC, PSQ or ROM."""
+Do not touch AAC, COP, MOM, PRE, IPC, PSQ or ROM."""
 
     distribution = distribution_dedupe(
         [

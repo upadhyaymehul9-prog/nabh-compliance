@@ -43,7 +43,7 @@ This policy applies to staff who register, admit, treat, counsel, bill, take con
 
 It covers 5 objective elements (PRE.4.a, PRE.4.b, PRE.4.c, PRE.4.d, PRE.4.e).
 
-Boundaries: do not copy SHCO PRE wording. Do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,17 +53,17 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: The organisation obtains informed consent from the patient or family for situations where informed consent ...
+1. Do not skip: The organisation obtains informed consent from the patient or family for situations where informed consent is...
 2. Do not skip: Informed consent process adheres to statutory norms.
 3. Do not skip: Informed consent includes information regarding the procedure; it’s risks, benefits, alternatives and as to...
-4. Do not skip: The organisation describes who can give consent when a patient is incapable of independent decision making ...
+4. Do not skip: The organisation describes who can give consent when a patient is incapable of independent decision making...
 5. Do not skip: Informed consent is taken by the person performing the procedure.
 6. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
 7. Staff who see a PRE.4 rule broken report it the same shift to the «department in-charge» or the «Quality Coordinator».
 
 ## 5. What we do
 
-### 5.1 The organisation obtains informed consent from the patient or family ...
+### 5.1 The organisation obtains informed consent from the patient or family...
 
 The «Medical Superintendent» keeps a written list of procedures for which informed consent is required. The list is built from this standard and from statutory requirements — including, where they apply to Preview Hospital's scope, the MTP Act, the PC-PNDT Act, the Transplantation of Human Organs Act, and HIV testing under the HIV and AIDS (Prevention and Control) Act 2017 and NACO policy.
 
@@ -83,7 +83,7 @@ For a procedure repeated over a long time (for example dialysis), consent is tak
 
 Method note (from guidebook interpretation): This includes (but is not limited to): 1. Taking consent before the procedure; 2. At least one witness signing the consent form. The witness shall be a person who was present for the entire duration of the communication between the doctor and the patient. In case the patient has to undergo a procedure repeatedly for a long time (for example dialysis) ,informed consent is taken at the first instance. Such consent shall have a defined validity period but not more than six months. The patient endorses the consent at each repeat treatment. However, if there is a change in the treatment modality or an addition of another modality, then fresh consent shall be obtained.
 
-### 5.3 Informed consent includes information regarding the procedure; it’s r...
+### 5.3 Informed consent includes information regarding the procedure; it’s...
 
 The consent names the doctor performing the procedure. If more than one specialty operates, the consent names the principal surgeon from each specialty; each explains their own role, benefits, risks and alternatives. A doctor under training is specified, and the supervising qualified doctor is named.
 
@@ -93,7 +93,7 @@ Method note (from guidebook interpretation): The consent shall have the name of 
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.4 The organisation describes who can give consent when a patient is inc...
+### 5.4 The organisation describes who can give consent when a patient is...
 
 Consent is taken from the patient whenever the patient is capable and above the legal age. No one consents on behalf of a competent adult. When the patient is incapable, next of kin / legal guardian is used, in the order spouse, son/daughter, parents, brothers/sister, unless a statute applicable to that case says otherwise.
 
@@ -140,14 +140,14 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE PRE.4.a–e.
-- Asterisked elements (ad) have document evidence as required.
-- CORE elements (ace) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related rights incident, consent failure or complaint cluster.
 
@@ -209,38 +209,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### PRE.4.a — The organisation obtains informed consent from the patient or family for situations where informed consent is required.
 
-- Records showing PRE.4.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.4.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Written list of procedures requiring informed consent, cross-referencing applicable statutes (for example the MTP Act, PC-PNDT Act, Transplantation of Human Organs Act, HIV Act/NACO policy where in scope).
+- Staff training record on the consent process.
+- Escalation record for any listed procedure started without consent.
 
 ### PRE.4.b — Informed consent process adheres to statutory norms.
 
-- Records showing PRE.4.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.4.b reviewed «quarterly».
+- Consent form showing at least one witness present for the full doctor-patient communication.
+- Repeat-procedure consent-validity record (for example dialysis, six-month validity, endorsement at each repeat).
+- Quarterly consent-form audit record by the Quality Coordinator.
 
 ### PRE.4.c — Informed consent includes information regarding the procedure; it’s risks, benefits, alternatives and as to who will perform the procedure in a language that they can understand.
 
-- Records showing PRE.4.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.4.c reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Consent form naming the performing doctor, and each principal surgeon where multiple specialties operate.
+- Trainee-doctor and supervising-doctor naming record, where applicable.
+- Bilingual form and interpreter record, where used.
 
 ### PRE.4.d — The organisation describes who can give consent when a patient is incapable of independent decision making and implements the same.
 
-- Records showing PRE.4.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.4.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written description of who can consent when the patient is incapable — the next-of-kin order.
+- Consent record showing the correct order was followed for a sampled incapable-patient case.
+- Same-shift dual-clinician life-threatening-decision record, where applicable.
 
 ### PRE.4.e — Informed consent is taken by the person performing the procedure.
 
-- Records showing PRE.4.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.4.e reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Consent record confirming the performing doctor, or a doctor member of that team, obtained it — not delegated to nursing.
+- Quarterly record-audit sample by the Medical Superintendent.
+- Cross-reference to procedure-, sedation-, anaesthesia- and surgery-specific consent policies (COP.7/12/13/14).
 
 ## Disclaimer
 

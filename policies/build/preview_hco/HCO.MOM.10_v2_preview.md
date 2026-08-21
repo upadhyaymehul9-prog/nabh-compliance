@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 5 objective elements (MOM.10.a, MOM.10.b, MOM.10.c, MOM.10.d, MOM.10.e).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,16 +53,16 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Usage of implantable prosthesis and medical devices is guided by scientific criteria for each item and nati...
+1. Do not skip: Usage of implantable prosthesis and medical devices is guided by scientific criteria for each item and...
 2. Do not skip: The organisation implements a mechanism for the usage of the implantable prosthesis and medical devices.
-3. Do not skip: Patient and his / her family are counselled for the usage of the implantable prosthesis and medical device,...
-4. Do not skip: The batch and the serial number of the implantable prosthesis and medical devices are recorded in the patie...
+3. Do not skip: Patient and his / her family are counselled for the usage of the implantable prosthesis and medical device...
+4. Do not skip: The batch and the serial number of the implantable prosthesis and medical devices are recorded in the...
 5. Do not skip: Process of recall of implantable prosthesis and medical devices are handled effectively.
 6. Staff who see a MOM.10 rule broken report it the same shift to the «department in-charge» or the «Medication Safety Officer».
 
 ## 5. What we do
 
-### 5.1 Usage of implantable prosthesis and medical devices is guided by scie...
+### 5.1 Usage of implantable prosthesis and medical devices is guided by...
 
 Implantable prostheses and medical devices used at Preview Hospital are selected against scientific criteria and national / international recognised guidelines or approvals for that item (for example CDSCO / Medical Devices Rules approvals, BIS where named, and specialty-society indications).
 
@@ -70,7 +70,7 @@ The OT / cath-lab / relevant clinical head and Biomedical keep an approved-item 
 
 Method note (from guidebook interpretation): The organisation shall ensure that relevant and sufficient scientific data are available before selection. It shall also look for any international (for example US-FDA) or national notification or applicable regulations (Central Drugs Standard Control Organisation notification based on the Drugs and Cosmetics Act) for approval of the particular product. The multidisciplinary committee shall be responsible for approving the use of a particular implant.
 
-### 5.2 The organisation implements a mechanism for the usage of the implanta...
+### 5.2 The organisation implements a mechanism for the usage of the...
 
 The organisation implements a written mechanism for using these items: request and approval, sterile-supply chain, intra-operative timeout confirming the implant, and recording of identifiers (section 5.4).
 
@@ -80,7 +80,7 @@ Method note (from guidebook interpretation): The organisation shall have written
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.3 Patient and his / her family are counselled for the usage of the impl...
+### 5.3 Patient and his / her family are counselled for the usage of the...
 
 The patient and family are counselled before implantation on what will be implanted, expected benefit, material risks, alternatives, and precautions after implant (MRI compatibility, anticoagulation, infection signs, follow-up).
 
@@ -88,7 +88,7 @@ Counselling is recorded in the medical record (consent process may sit with PRE;
 
 Method note (from guidebook interpretation): Precautions could include non-usage of specific drugs and reporting to the hospital if a particular symptom occurs. The organisation shall document the details of counselling provided to the patient/ his or her family in informed consent.
 
-### 5.4 The batch and the serial number of the implantable prosthesis and med...
+### 5.4 The batch and the serial number of the implantable prosthesis and...
 
 Batch and serial number (or equivalent unique identifier) of the implantable prosthesis or medical device are recorded in three places: the patient's medical record, the master implant logbook, and the discharge summary.
 
@@ -96,7 +96,7 @@ A sticker from the implant pack is the usual source; if it is lost, pharmacy / s
 
 Method note (from guidebook interpretation): \n case where implantable prosthesis do not have pre-labelled stickers, the organisation shall have suitable mechanisms in place for identifying the implant (manufacturer, type, size, batch number, serial number and any other important detail)
 
-### 5.5 Process of recall of implantable prosthesis and medical devices are h...
+### 5.5 Process of recall of implantable prosthesis and medical devices are...
 
 When an implant or device is recalled, the «OT In-Charge / Biomedical» traces every affected batch from the master logbook, contacts the treating team and, where required, the patient, and follows the supplier / regulator instruction (explant, extra surveillance, or information only).
 
@@ -126,14 +126,13 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE MOM.10.a–e.
-- Asterisked elements (be) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event or recall.
 
@@ -195,35 +194,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### MOM.10.a — Usage of implantable prosthesis and medical devices is guided by scientific criteria for each item and national / international recognised guidelines / approvals for such specific item(s).
 
-- Records showing MOM.10.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.10.a reviewed «quarterly».
+- Approved-item list against national/international recognised guidelines or approvals (for example CDSCO/Medical Devices Rules).
+- OT/cath-lab and Biomedical ownership record of the list.
+- Documented trial or compassionate-pathway approval record for any item without recognised approval.
 
 ### MOM.10.b — The organisation implements a mechanism for the usage of the implantable prosthesis and medical devices.
 
-- Records showing MOM.10.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.10.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written mechanism for implant/device use — request and approval, sterile-supply chain, intra-operative timeout confirming the implant.
+- OT In-Charge or relevant lab in-charge ownership record.
+- Identifier-recording record — cross-reference MOM.10.d.
 
 ### MOM.10.c — Patient and his / her family are counselled for the usage of the implantable prosthesis and medical device, including precautions if any.
 
-- Records showing MOM.10.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.10.c reviewed «quarterly».
+- Pre-implant counselling record — expected benefit, material risks, alternatives, post-implant precautions.
+- Medical-record entry confirming counselling occurred.
+- Emergency-implant as-soon-as-practicable counselling record.
 
 ### MOM.10.d — The batch and the serial number of the implantable prosthesis and medical devices are recorded in the patient's medical record, the master logbook and the discharge summary.
 
-- Records showing MOM.10.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.10.d reviewed «quarterly».
+- Batch/serial number recorded in the patient's medical record.
+- Same identifier recorded in the master implant logbook.
+- Same identifier recorded in the discharge summary.
 
 ### MOM.10.e — Process of recall of implantable prosthesis and medical devices are handled effectively.
 
-- Records showing MOM.10.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.10.e reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Recall-trace record from the master logbook for every affected batch.
+- Treating-team and patient-contact record where required.
+- Recall-file closure record — notice, patients identified, actions taken.
 
 ## Disclaimer
 

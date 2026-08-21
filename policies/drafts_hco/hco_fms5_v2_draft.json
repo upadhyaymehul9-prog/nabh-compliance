@@ -13,16 +13,16 @@
   ],
   "policy_title": "Medical Equipment Management",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard FMS.5: The organisation has a programme for medical equipment management.\n\nIt covers objective elements FMS.5.a–h (8 elements).\n\nChapter intent (official Standards PDF): The standards guide the provision of a safe and secure environment for patients, their families, staff and visitors. The organisation attends to the facility, equipment, and internal physical environment for improving patient safety and quality of services by consistently addressing issues that may arise out of the same. The organisation does this through proactive risk analysis, safety rounds, training of staff on the enhancement of safety and management of disasters. To ensure this, the organisation conducts regular facility inspection rounds and takes the appropriate action to ensure safety. The organisation provides for safe water, electricity, medical gases and vacuum systems. The organisation has a programme for medical and utility equipment management. The organisation plans for fire and non-fire emergencies within the facilities. The organisation is a no-smoking area. The organisation safely manages hazardous materials. The organisation works towards measures on being energy efficient.\n\nThis policy owns FMS.5. Related AAC, COP, MOM, PRE, IPC, PSQ and ROM duties stay with those policies — cross-reference only. Other FMS standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to engineering, biomedical, nursing and departmental leaders, and staff who run facilities, utilities, medical gases, fire and non-fire emergencies at {{HOSPITAL_NAME}}, including the «Engineering In-Charge», the «Medical Superintendent», departmental leaders and the Quality Coordinator.\n\nIt covers 8 objective elements (FMS.5.a, FMS.5.b, FMS.5.c, FMS.5.d, FMS.5.e, FMS.5.f, FMS.5.g, FMS.5.h).\n\nBoundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
+  "scope": "This policy applies to engineering, biomedical, nursing and departmental leaders, and staff who run facilities, utilities, medical gases, fire and non-fire emergencies at {{HOSPITAL_NAME}}, including the «Engineering In-Charge», the «Medical Superintendent», departmental leaders and the Quality Coordinator.\n\nIt covers 8 objective elements (FMS.5.a, FMS.5.b, FMS.5.c, FMS.5.d, FMS.5.e, FMS.5.f, FMS.5.g, FMS.5.h).\n\nBoundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
   "policy_statement": "{{HOSPITAL_NAME}} implements FMS.5 so that the organisation has a programme for medical equipment management.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).",
   "procedure_steps": [
-    "5.1 The organisation plans for medical equipment in accordance with its s...\n\nThe organisation plans medical equipment to match services and the strategic plan, including future needs. Indian Public Health Standards are a reference for a minimum set. Selection, rental, update or upgrade is collaborative (end-user, management, finance, engineering, biomedical).\n\nThe «Engineering In-Charge» holds the current medical-equipment plan with the «Medical Superintendent».\n\nMethod note (from guidebook interpretation): This shall also take into consideration future requirements. The medical equipment shall be appropriate to its scope of services. A good reference for minimum medical equipment is the IPHS guideline. Medical equipment is selected, rented, updated or upgraded by a collaborative process. Collaborative process implies that during equipment selection, there is involvement of end- user, management, finance, engineering and biomedical departments. The organisation could define differential financial clearance in accordance with the policy. For example, the purchase of BP apparatus can be made by the departmental head.",
-    "5.2 Medical equipment is inventoried and proper logs are maintained as re...\n\nMedical equipment is inventoried and logs are maintained. Items are classified by medical-device risk. Each has a unique identifier, including rental and demonstration items. Factory test and conformance certificates are kept.\n\nAn in-use device with no identity is incomplete under this element.\n\nMethod note (from guidebook interpretation): Medical equipment and medical devices will be classified as per the risk defined by medical devices regulations. A unique identifier is provided for each equipment. This includes equipment on a rental basis and equipment kept for demonstration purpose. The relevant quality conformance certificates/marks along with manufacturer factory test certificate need to be retained as part of the documentation for all equipment.",
+    "5.1 The organisation plans for medical equipment in accordance with its...\n\nThe organisation plans medical equipment to match services and the strategic plan, including future needs. Indian Public Health Standards are a reference for a minimum set. Selection, rental, update or upgrade is collaborative (end-user, management, finance, engineering, biomedical).\n\nThe «Engineering In-Charge» holds the current medical-equipment plan with the «Medical Superintendent».\n\nMethod note (from guidebook interpretation): This shall also take into consideration future requirements. The medical equipment shall be appropriate to its scope of services. A good reference for minimum medical equipment is the IPHS guideline. Medical equipment is selected, rented, updated or upgraded by a collaborative process. Collaborative process implies that during equipment selection, there is involvement of end- user, management, finance, engineering and biomedical departments. The organisation could define differential financial clearance in accordance with the policy. For example, the purchase of BP apparatus can be made by the departmental head.",
+    "5.2 Medical equipment is inventoried and proper logs are maintained as...\n\nMedical equipment is inventoried and logs are maintained. Items are classified by medical-device risk. Each has a unique identifier, including rental and demonstration items. Factory test and conformance certificates are kept.\n\nAn in-use device with no identity is incomplete under this element.\n\nMethod note (from guidebook interpretation): Medical equipment and medical devices will be classified as per the risk defined by medical devices regulations. A unique identifier is provided for each equipment. This includes equipment on a rental basis and equipment kept for demonstration purpose. The relevant quality conformance certificates/marks along with manufacturer factory test certificate need to be retained as part of the documentation for all equipment.",
     "5.3 The documented operational and maintenance (preventive and breakdown)...\n\nThe documented operational and maintenance (preventive and breakdown) plan for medical equipment is implemented: operator training, daily operating checks, preventive-maintenance tracker, and breakdown response including nights and weekends.\n\nUsing equipment with no implemented plan is a stop-work trigger (section 6). This is a CORE asterisked element.\n\nMethod note (from guidebook interpretation): The operator is trained in handling the medical equipment. The operational plan must assist the operator in operating the medical equipment daily. The original equipment manual is a good source for this. In case this is not available, the organisation shall develop the operational plan for the concerned equipment. The operational plan of medical equipment includes evaluation of safe usage of equipment like validation with respect to the instruction manual, user training on equipment, operational check of equipment and verification of set parameter. The maintenance plan includes periodic checks, execution of timely preventive maintenance, and response to any breakdown issues including at i night and weekends. There shall be a planned preventive maintenance tracker.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
-    "5.4 Medical equipment is periodically inspected and calibrated for their ...\n\nMedical equipment that measures is inspected and calibrated on a weekly, monthly or annual schedule as the manufacturer and this hospital define, in-house or outsourced, with traceability. Conformance is checked before commissioning and again after repair.\n\nA measuring device past its calibration due date is a stop-work trigger (section 6).\n\nMethod note (from guidebook interpretation): The organisation has weekly/monthly/annual schedules of inspection and calibration of equipment, which involve measurement, appropriately. The organisation either calibrates the equipment in-house or outsources, maintaining traceability to national or international or manufacturer's guidelines / standards. The organisation shall ensure that calibration and conformance testing of the equipment has been done before commissioning. Medical equipment is re-calibrated after its repairs/breakdown.",
+    "5.4 Medical equipment is periodically inspected and calibrated for their...\n\nMedical equipment that measures is inspected and calibrated on a weekly, monthly or annual schedule as the manufacturer and this hospital define, in-house or outsourced, with traceability. Conformance is checked before commissioning and again after repair.\n\nA measuring device past its calibration due date is a stop-work trigger (section 6).\n\nMethod note (from guidebook interpretation): The organisation has weekly/monthly/annual schedules of inspection and calibration of equipment, which involve measurement, appropriately. The organisation either calibrates the equipment in-house or outsources, maintaining traceability to national or international or manufacturer's guidelines / standards. The organisation shall ensure that calibration and conformance testing of the equipment has been done before commissioning. Medical equipment is re-calibrated after its repairs/breakdown.",
     "5.5 Qualified and trained personnel operate and maintain medical equipment\n\nQualified and trained personnel operate and maintain medical equipment. Operators are trained for the devices they use (for example blood-gas analyser, electrocardiograph, syringe pump). Maintenance is by a biomedical engineer or technologist, or an instrumentation engineer or technologist, with relevant training and experience.\n\nMethod note (from guidebook interpretation): The operator of the medical equipment is trained to use medical equipment safely and effectively. For example Nurse trained to use Blood gas analyser, ECG machine and syringe pump etc. Maintenance of medical equipment shall be done by a bio-medical engineer/technologist or instrumentation engineer/technologist with relevant training and experience.",
     "5.6 Written guidance supports medical equipment replacement and disposal\n\nWritten guidance supports medical equipment replacement and disposal. Condemnation is systematic and recorded. This is an asterisked element.\n\nMethod note (from guidebook interpretation): The organisation shall plan for this keeping in mind the strategic plans, upgrade/update path and the equipment log. The organisation shall condemn (dispose of) equipment in a systematic manner.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
-    "5.7 There is monitoring of medical equipment and medical devices related ...\n\nMedical equipment and devices are monitored for adverse events. Hazard notices and recalls from the manufacturer or regulator are acted on at once; the device is not returned to clinical use until the issue is closed. The Guidebook names Gazette of India GSR 78(E) 2023 / Medical Devices Rules 2023 and participation in the Materiovigilance Programme of India. MOM.10 remains the home of medication-supply recall; this element is equipment and devices.\n\nAn open recall left in use is a stop-work trigger (section 6). This is an asterisked element.\n\nMethod note (from guidebook interpretation): The monitoring shall include medical device-related adverse events. All statutory requirements and procedures shall be adhered to (Gazette of India GSR 78(E) 2023. Medical device rules 2023). The organisation shall participate in Materio-vigilance programme of India (MvPI). Recalls are based on letters/hazard notice issued from the manufacturer and or regulatory authorities. This may not be a routine occurrence, but whenever hospital authorities receive or become aware of such recalls, it shall be immediately acted upon, and the said medical equipment and the medical device shall not be put into further clinical use till the issue is resolved. Refer to MOM.10.e.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.7 There is monitoring of medical equipment and medical devices related to...\n\nMedical equipment and devices are monitored for adverse events. Hazard notices and recalls from the manufacturer or regulator are acted on at once; the device is not returned to clinical use until the issue is closed. The Guidebook names Gazette of India GSR 78(E) 2023 / Medical Devices Rules 2023 and participation in the Materiovigilance Programme of India. MOM.10 remains the home of medication-supply recall; this element is equipment and devices.\n\nAn open recall left in use is a stop-work trigger (section 6). This is an asterisked element.\n\nMethod note (from guidebook interpretation): The monitoring shall include medical device-related adverse events. All statutory requirements and procedures shall be adhered to (Gazette of India GSR 78(E) 2023. Medical device rules 2023). The organisation shall participate in Materio-vigilance programme of India (MvPI). Recalls are based on letters/hazard notice issued from the manufacturer and or regulatory authorities. This may not be a routine occurrence, but whenever hospital authorities receive or become aware of such recalls, it shall be immediately acted upon, and the said medical equipment and the medical device shall not be put into further clinical use till the issue is resolved. Refer to MOM.10.e.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
     "5.8 Downtime for critical equipment breakdown is monitored from reporting...\n\nDowntime for critical medical-equipment breakdown is monitored from reporting to inspection and corrective action. At a minimum the critical list includes ventilators, X-ray, magnetic resonance imaging, catheterisation laboratory, computed tomography, anaesthesia machines, monitors, laboratory and ultrasound — especially where there is no alternative. The complaint register works as in FMS.4.g.\n\nPortal wording uses “breakdown” (singular); FMS.4.g uses “breakdowns”. Each is kept as printed.\n\nMethod note (from guidebook interpretation): The organisation shall define critical medical equipment. At a minimum, this shall include ventilators, X- Ray, MRI, Cath lab, CT scan, anaesthesia machines, monitors, laboratory, ultrasound etc. and especially where there is no alternative available. A complaint attendance register is to be maintained (physical or electronic) to indicate the date and time of receipt of the complaint, allotment of job and completion of the job. Completion of the job shall always be ratified by the user department. The start of downtime shall be the time when the complaint was lodged and the end of the downtime shall be the time at which completion of the job was ratified by the user department."
   ],
   "responsibility": "Medical Superintendent\n- Accountable that FMS.5 is resourced and followed.\n\nEngineering In-Charge\n- Owns day-to-day implementation and records for this standard.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.\n\ndepartmental leaders\n- Run the department-level duties this standard names.",
@@ -37,9 +37,9 @@
       "steps": "Section 3; 5.1; Section 6 Stop-work",
       "responsible": "Engineering In-Charge",
       "records": [
-        "Records showing FMS.5.a was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for FMS.5.a reviewed «quarterly»."
+        "Written medical-equipment plan matched to services and the strategic plan, referencing the Indian Public Health Standards minimum set.",
+        "Collaborative-selection record (end-user, management, finance, engineering, biomedical).",
+        "Periodic review record of the plan."
       ]
     },
     {
@@ -48,9 +48,9 @@
       "steps": "Section 3; 5.2; Section 6 Stop-work",
       "responsible": "Engineering In-Charge",
       "records": [
-        "Records showing FMS.5.b was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for FMS.5.b reviewed «quarterly»."
+        "Medical-equipment inventory classified by device risk, with a unique identifier including rental and demonstration items.",
+        "Factory test or conformance certificate on file.",
+        "In-use device check confirming no device without an identity."
       ]
     },
     {
@@ -59,11 +59,9 @@
       "steps": "Section 3; 5.3; Section 6 Stop-work",
       "responsible": "Engineering In-Charge",
       "records": [
-        "Records showing FMS.5.c was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for FMS.5.c reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked objective element.",
-        "CORE-element sample with no critical gaps in the quarter under review."
+        "Documented operational and maintenance (preventive and breakdown) plan for medical equipment.",
+        "Operator-training record and daily operating-check log.",
+        "Breakdown-response record, including nights and weekends."
       ]
     },
     {
@@ -72,9 +70,9 @@
       "steps": "Section 3; 5.4; Section 6 Stop-work",
       "responsible": "Engineering In-Charge",
       "records": [
-        "Records showing FMS.5.d was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for FMS.5.d reviewed «quarterly»."
+        "Calibration schedule (weekly, monthly or annual as the manufacturer defines) with traceability.",
+        "Pre-commissioning and post-repair conformance-check record.",
+        "Calibration-due tracking log confirming no overdue device in clinical use."
       ]
     },
     {
@@ -83,9 +81,9 @@
       "steps": "Section 3; 5.5; Section 6 Stop-work",
       "responsible": "Engineering In-Charge",
       "records": [
-        "Records showing FMS.5.e was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for FMS.5.e reviewed «quarterly»."
+        "Operator-training record per device type (for example blood-gas analyser, electrocardiograph, syringe pump).",
+        "Biomedical or instrumentation engineer/technologist qualification record for maintenance staff.",
+        "Training-currency check for operators and maintainers."
       ]
     },
     {
@@ -94,10 +92,9 @@
       "steps": "Section 3; 5.6; Section 6 Stop-work",
       "responsible": "Engineering In-Charge",
       "records": [
-        "Records showing FMS.5.f was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for FMS.5.f reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked objective element."
+        "Written medical-equipment replacement and disposal guidance.",
+        "Condemnation record, systematically applied.",
+        "Disposal log."
       ]
     },
     {
@@ -106,10 +103,9 @@
       "steps": "Section 3; 5.7; Section 6 Stop-work",
       "responsible": "Engineering In-Charge",
       "records": [
-        "Records showing FMS.5.g was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for FMS.5.g reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked objective element."
+        "Adverse-event and hazard-notice/recall log for medical equipment and devices.",
+        "Record showing a recalled device was withdrawn from clinical use until the issue closed.",
+        "Materiovigilance Programme of India participation record, where applicable."
       ]
     },
     {
@@ -118,13 +114,13 @@
       "steps": "Section 3; 5.8; Section 6 Stop-work",
       "responsible": "Engineering In-Charge",
       "records": [
-        "Records showing FMS.5.h was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for FMS.5.h reviewed «quarterly»."
+        "Complaint register for critical medical equipment (ventilators, X-ray, MRI, cath lab, CT, anaesthesia machines, monitors, laboratory, ultrasound).",
+        "Downtime-duration record from reporting to corrective action.",
+        "Alternative-equipment-use record where no backup device exists."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO FMS.5 v2 (2026-08-21). Official Standards PDF OE count 8; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: cfg. CORE: c. Achievement: h. Excellence: none.\nStop-work: YES — proposed: Use medical equipment that is past due preventive maintenance or calibration, or that is under an open recall or hazard notice.\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/FMS/POL/05.\nOfficial chapter is 7 standards / 43 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. Statute P2 proposed on FMS.5 (Medical Devices Rules as cited) and FMS.6 (Explosives Act / Gas Cylinder Rules / SMPV).\nDo not copy SHCO equivalent-chapter wording. Do not touch AAC, COP, MOM, PRE, IPC, PSQ or ROM.",
+  "universal_facts_checklist": "HCO FMS.5 v2 (2026-08-21). Official Standards PDF OE count 8; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: cfg. CORE: c. Achievement: h. Excellence: none.\nStop-work: YES — proposed: Use medical equipment that is past due preventive maintenance or calibration, or that is under an open recall or hazard notice.\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/FMS/POL/05.\nOfficial chapter is 7 standards / 43 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. Statute P2 proposed on FMS.5 (Medical Devices Rules as cited) and FMS.6 (Explosives Act / Gas Cylinder Rules / SMPV).\nDo not touch AAC, COP, MOM, PRE, IPC, PSQ or ROM.",
   "version": "2.0",
   "revision_history": [
     {
@@ -135,8 +131,8 @@
   ],
   "status": "draft",
   "definitions": "The organisation has a programme for medical equipment management.",
-  "exceptions": "1. Do not skip: The organisation plans for medical equipment in accordance with its services and strategic plan.\n2. Do not skip: Medical equipment is inventoried and proper logs are maintained as required.\n3. Do not skip: The documented operational and maintenance (preventive and breakdown) plan for medical equipment is impleme...\n4. Do not skip: Medical equipment is periodically inspected and calibrated for their proper functioning.\n5. Do not skip: Qualified and trained personnel operate and maintain medical equipment.\n6. Do not skip: Written guidance supports medical equipment replacement and disposal.\n7. Do not skip: There is monitoring of medical equipment and medical devices related to adverse events, and compliance haza...\n8. Do not skip: Downtime for critical equipment breakdown is monitored from reporting to inspection and implementation of c...\n9. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n10. Staff who see a FMS.5 rule broken report it the same shift to the «Engineering In-Charge» or the «Medical Superintendent».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE FMS.5.a–h.\n- Asterisked elements (cfg) have document evidence as required.\n- CORE elements (c) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related facility change, utility failure, equipment recall or fire-plan change.",
+  "exceptions": "1. Do not skip: The organisation plans for medical equipment in accordance with its services and strategic plan.\n2. Do not skip: Medical equipment is inventoried and proper logs are maintained as required.\n3. Do not skip: The documented operational and maintenance (preventive and breakdown) plan for medical equipment is...\n4. Do not skip: Medical equipment is periodically inspected and calibrated for their proper functioning.\n5. Do not skip: Qualified and trained personnel operate and maintain medical equipment.\n6. Do not skip: Written guidance supports medical equipment replacement and disposal.\n7. Do not skip: There is monitoring of medical equipment and medical devices related to adverse events, and compliance hazard...\n8. Do not skip: Downtime for critical equipment breakdown is monitored from reporting to inspection and implementation of...\n9. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n10. Staff who see a FMS.5 rule broken report it the same shift to the «Engineering In-Charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related facility change, utility failure, equipment recall or fire-plan change.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Medical Equipment Management policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/FMS/POL/05»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Engineering In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«Engineering In-Charge»",

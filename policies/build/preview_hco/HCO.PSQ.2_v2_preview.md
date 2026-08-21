@@ -43,7 +43,7 @@ This policy applies to staff who deliver care, run quality or patient-safety wor
 
 It covers 9 objective elements (PSQ.2.a, PSQ.2.b, PSQ.2.c, PSQ.2.d, PSQ.2.e, PSQ.2.f, PSQ.2.g, PSQ.2.h, PSQ.2.i).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -54,11 +54,11 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 ## 4. Non-negotiable rules
 
 1. Do not skip: The quality improvement programme is developed, implemented and maintained by a multi-disciplinary committee.
-2. Do not skip: The quality improvement programme is comprehensive and covers all the major elements related to quality ass...
+2. Do not skip: The quality improvement programme is comprehensive and covers all the major elements related to quality...
 3. Do not skip: The quality improvement programme improves process efficiency and effectiveness.
 4. Do not skip: The quality improvement programme focuses on appropriateness of clinical care.
 5. Do not skip: There is a designated individual for coordinating and implementing the quality improvement programme.
-6. Do not skip: The quality improvement programme identifies opportunities for improvement based on the review at pre-defin...
+6. Do not skip: The quality improvement programme identifies opportunities for improvement based on the review at pre-defined...
 7. Do not skip: The quality improvement programme is reviewed and updated at least once a year.
 8. Do not skip: Audits are conducted at regular intervals as a means of continuous monitoring.
 9. Do not skip: There is an established process in the organisation to monitor and improve the quality of nursing care.
@@ -66,7 +66,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 The quality improvement programme is developed, implemented and maint...
+### 5.1 The quality improvement programme is developed, implemented and...
 
 Preview Hospital documents a quality improvement and continuous monitoring programme. A multi-disciplinary «Quality Improvement Committee» develops, implements and maintains it.
 
@@ -88,7 +88,7 @@ Method note (from guidebook interpretation): The quality improvement programme s
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.3 The quality improvement programme improves process efficiency and eff...
+### 5.3 The quality improvement programme improves process efficiency and...
 
 Quality-improvement work includes projects that improve process efficiency and effectiveness (time, waste, reliability of a defined process), not only clinical outcome counts.
 
@@ -96,7 +96,7 @@ Each such project has an aim, a measure and a before/after result held by the «
 
 Method note (from guidebook interpretation): The quality improvement programme encourages the use of quality tools, novel strategies to improve both clinical and managerial processes, The impact of the managerial process innovations may be at the level of the department or organisation-wide. Innovations may be targeted to improve patient safety, improve care delivery, to reduce costs, to introduce environmentally-friendly measures etc. The management of the organisation promotes these innovations.
 
-### 5.4 The quality improvement programme focuses on appropriateness of clini...
+### 5.4 The quality improvement programme focuses on appropriateness of...
 
 Quality-improvement work includes projects that focus on appropriateness of clinical care (right care, indicated care, variation against agreed protocols).
 
@@ -104,7 +104,7 @@ The «Quality Improvement Committee» selects topics from clinical indicators, a
 
 Method note (from guidebook interpretation): The doctors and nurses participate in utilization review which includes appropriateness of length of the stay, procedures, investigations and treatment.
 
-### 5.5 There is a designated individual for coordinating and implementing th...
+### 5.5 There is a designated individual for coordinating and implementing the...
 
 The «Medical Superintendent» designates an individual (default: the «Quality Coordinator») to coordinate and implement the quality improvement programme. That person completes structured training in implementation of accreditation standards (NABH Programme on Implementation of NABH Standards) and has knowledge of hospital quality-improvement principles, evaluation methods and operations.
 
@@ -114,7 +114,7 @@ Method note (from guidebook interpretation): The designated individual shall und
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.6 The quality improvement programme identifies opportunities for improv...
+### 5.6 The quality improvement programme identifies opportunities for...
 
 The programme identifies opportunities for improvement from review at pre-defined intervals. The «Quality Improvement Committee» reviews the programme at least once in three months (and more often if the quality manual says so).
 
@@ -124,7 +124,7 @@ Method note (from guidebook interpretation): The quality improvement programme i
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.7 The quality improvement programme is reviewed and updated at least on...
+### 5.7 The quality improvement programme is reviewed and updated at least once...
 
 The «Quality Improvement Committee» reviews and updates the quality improvement programme at least «annually» and sooner after a major service change or a cluster of failed audits.
 
@@ -132,7 +132,7 @@ An update is a dated change to the manual, indicator set or audit calendar. The 
 
 Method note (from guidebook interpretation): The update shall be done based on newer literature on quality improvement based on audits, feedback mechanisms, the review carried out by the quality improvement committee, etc. In case the annual review does not identify any opportunities for improvement, the same shall be documented in the minutes of the quality improvement committee meeting.
 
-### 5.8 Audits are conducted at regular intervals as a means of continuous mo...
+### 5.8 Audits are conducted at regular intervals as a means of continuous...
 
 Audits are conducted at regular intervals as continuous monitoring. Choice and frequency cover priority areas and areas of concern from indicators or risk.
 
@@ -142,7 +142,7 @@ Method note (from guidebook interpretation): Choice and frequency of audits shal
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.9 There is an established process in the organisation to monitor and im...
+### 5.9 There is an established process in the organisation to monitor and...
 
 There is an established process to monitor and improve the quality of nursing care: nursing audits and/or competency evaluation (written or witnessed demonstration) for key procedures, plus nursing quality indicators.
 
@@ -175,14 +175,14 @@ Nursing Superintendent
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE PSQ.2.a–i.
-- Asterisked elements (abefhi) have document evidence as required.
-- CORE elements (ai) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related sentinel event, indicator failure cluster or failed clinical-audit cycle.
 
@@ -248,65 +248,57 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### PSQ.2.a — The quality improvement programme is developed, implemented and maintained by a multi-disciplinary committee.
 
-- Records showing PSQ.2.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.2.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Documented quality improvement programme in the Quality Manual.
+- Quality Improvement Committee terms of reference, membership list and meeting-frequency record.
+- Minutes showing the committee actually developed and maintains the programme.
 
 ### PSQ.2.b — The quality improvement programme is comprehensive and covers all the major elements related to quality assurance.
 
-- Records showing PSQ.2.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.2.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Current element list (indicator monitoring, QI projects and tools, clinical audit, incident learning, department-level review).
+- Record confirming each element has its own active file.
+- Review record confirming the list stays comprehensive at each update.
 
 ### PSQ.2.c — The quality improvement programme improves process efficiency and effectiveness.
 
-- Records showing PSQ.2.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.2.c reviewed «quarterly».
+- Completed QI project file with aim, measure and before/after result focused on process efficiency.
+- Record of the process improved (time, waste, reliability of a defined process).
+- Quality Coordinator's project-outcome file.
 
 ### PSQ.2.d — The quality improvement programme focuses on appropriateness of clinical care.
 
-- Records showing PSQ.2.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.2.d reviewed «quarterly».
+- Completed QI project file focused on appropriateness of clinical care (indicated care, protocol variation).
+- Topic-selection record showing the source — clinical indicator, audit or incident.
+- Results-communication record to the clinical department.
 
 ### PSQ.2.e — There is a designated individual for coordinating and implementing the quality improvement programme.
 
-- Records showing PSQ.2.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.2.e reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Designation letter for the QI coordinator with time allocation and reporting line to top management.
+- Training-completion record (for example the NABH Programme on Implementation of NABH Standards).
+- List of named quality-improvement champions across departments.
 
 ### PSQ.2.f — The quality improvement programme identifies opportunities for improvement based on the review at pre-defined intervals.
 
-- Records showing PSQ.2.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.2.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Quality Improvement Committee review minutes at least once in three months.
+- List of identified improvement opportunities with owner and next step.
+- Record showing audits, organisational performance and key indicators were part of that review.
 
 ### PSQ.2.g — The quality improvement programme is reviewed and updated at least once a year.
 
-- Records showing PSQ.2.g was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.2.g reviewed «quarterly».
+- Dated review minute of the QI programme.
+- Record of the change made to the manual, indicator set or audit calendar.
+- Trigger record for any earlier review after a major service change or a cluster of failed audits.
 
 ### PSQ.2.h — Audits are conducted at regular intervals as a means of continuous monitoring.
 
-- Records showing PSQ.2.h was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.2.h reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Audit calendar covering priority areas and areas of concern from indicators or risk.
+- Hospital-wide internal audit report completed at least once in six months, by trained multi-disciplinary staff.
+- CAPA and verification-of-change record for the audit findings.
 
 ### PSQ.2.i — There is an established process in the organisation to monitor and improve the quality of nursing care.
 
-- Records showing PSQ.2.i was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.2.i reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Written nursing-audit and/or competency-evaluation process for key procedures.
+- Nursing quality-indicator set and results.
+- Nursing Superintendent's record showing integration with the quality improvement programme.
 
 ## Disclaimer
 

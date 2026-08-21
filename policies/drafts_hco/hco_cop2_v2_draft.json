@@ -14,18 +14,18 @@
   ],
   "policy_title": "Emergency Services",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard COP.2: Emergency services are provided in accordance with written guidance, applicable laws and regulations.\n\nIt covers objective elements COP.2.a–i (9 elements).\n\nThis policy owns COP.2. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to staff who deliver or oversee the care described in COP.2 at {{HOSPITAL_NAME}}, including the «Emergency In-Charge», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 9 objective elements (COP.2.a, COP.2.b, COP.2.c, COP.2.d, COP.2.e, COP.2.f, COP.2.g, COP.2.h, COP.2.i).\n\nBoundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.",
+  "scope": "This policy applies to staff who deliver or oversee the care described in COP.2 at {{HOSPITAL_NAME}}, including the «Emergency In-Charge», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 9 objective elements (COP.2.a, COP.2.b, COP.2.c, COP.2.d, COP.2.e, COP.2.f, COP.2.g, COP.2.h, COP.2.i).\n\nBoundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.",
   "policy_statement": "{{HOSPITAL_NAME}} implements COP.2 so that emergency services are provided in accordance with written guidance, applicable laws and regulations..\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
   "procedure_steps": [
     "5.1 There shall be an identified area in the organisation which is easily..\n\nThere shall be an identified area in the organisation which is easily accessible to receive and manage emergency patients, with adequate and appropriate resources.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.2 Prevention of patient over-crowding is planned and crowd management m..\n\nPrevention of patient over-crowding is planned and crowd management measures are implemented.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.3 Emergency care is provided in consonance with statutory requirements ..\n\nEmergency care is provided in consonance with statutory requirements including medico-legal cases and as per written guidance.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.2 Prevention of patient over-crowding is planned and crowd management..\n\nPrevention of patient over-crowding is planned and crowd management measures are implemented.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.3 Emergency care is provided in consonance with statutory requirements..\n\nEmergency care is provided in consonance with statutory requirements including medico-legal cases and as per written guidance.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
     "5.4 Initiation of appropriate care is guided by a system of triage\n\nInitiation of appropriate care is guided by a system of triage.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.",
-    "5.5 Patients waiting in the emergency are re-assessed as appropriate for ..\n\nPatients waiting in the emergency are re-assessed as appropriate for the change in status.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.6 Admission, discharge to home or transfer to another organisation is d..\n\nAdmission, discharge to home or transfer to another organisation is documented.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.7 In case of discharge to home or transfer to another organisation, a d..\n\nIn case of discharge to home or transfer to another organisation, a discharge / transfer note shall be given to the patient.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.5 Patients waiting in the emergency are re-assessed as appropriate for..\n\nPatients waiting in the emergency are re-assessed as appropriate for the change in status.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.6 Admission, discharge to home or transfer to another organisation is..\n\nAdmission, discharge to home or transfer to another organisation is documented.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.7 In case of discharge to home or transfer to another organisation, a..\n\nIn case of discharge to home or transfer to another organisation, a discharge / transfer note shall be given to the patient.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
     "5.8 The organisation shall implement a quality assurance programme\n\nThe organisation shall implement a quality assurance programme.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.",
-    "5.9 The organisation has systems in place for the management of patients ..\n\nThe organisation has systems in place for the management of patients found dead on arrival and patients who die within a few minutes of arrival.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases."
+    "5.9 The organisation has systems in place for the management of patients..\n\nThe organisation has systems in place for the management of patients found dead on arrival and patients who die within a few minutes of arrival.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases."
   ],
   "responsibility": "Medical Superintendent\n- Accountable that COP.2 is resourced and followed.\n\nEmergency In-Charge\n- Owns day-to-day implementation and records for this standard.\n\nTreating doctors / nurses / technicians (as applicable)\n- Deliver care as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
   "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Care of Patients, standard COP.2.\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — COP.2 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).\n- Internal documents of {{HOSPITAL_NAME}}: written guidance and registers named for COP.2.",
@@ -39,9 +39,9 @@
       "steps": "Section 3; 5.1; Section 6 Stop-work",
       "responsible": "Emergency In-Charge",
       "records": [
-        "Records showing COP.2.a was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.2.a reviewed «quarterly»."
+        "Emergency-area location and resource-inventory record.",
+        "Accessibility-confirmation record.",
+        "Resource-adequacy check against service scope."
       ]
     },
     {
@@ -50,9 +50,9 @@
       "steps": "Section 3; 5.2; Section 6 Stop-work",
       "responsible": "Emergency In-Charge",
       "records": [
-        "Records showing COP.2.b was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.2.b reviewed «quarterly»."
+        "Written overcrowding-management plan.",
+        "Crowd-management measure implementation record.",
+        "Overcrowding-incident log and response record."
       ]
     },
     {
@@ -61,10 +61,9 @@
       "steps": "Section 3; 5.3; Section 6 Stop-work",
       "responsible": "Emergency In-Charge",
       "records": [
-        "Records showing COP.2.c was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.2.c reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Written emergency-care guidance covering medico-legal case handling.",
+        "Medico-legal case register with statutory-notification record.",
+        "Staff training record on the medico-legal case procedure."
       ]
     },
     {
@@ -73,10 +72,9 @@
       "steps": "Section 3; 5.4",
       "responsible": "Emergency In-Charge",
       "records": [
-        "Records showing COP.2.d was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.2.d reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Written triage protocol or system document.",
+        "Triage-category assignment record for a sampled patient.",
+        "Triage-training record for emergency staff."
       ]
     },
     {
@@ -85,9 +83,9 @@
       "steps": "Section 3; 5.5",
       "responsible": "Emergency In-Charge",
       "records": [
-        "Records showing COP.2.e was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.2.e reviewed «quarterly»."
+        "Re-assessment record for a waiting emergency patient.",
+        "Documented trigger or frequency for re-assessment.",
+        "Status-change escalation record."
       ]
     },
     {
@@ -96,9 +94,9 @@
       "steps": "Section 3; 5.6",
       "responsible": "Emergency In-Charge",
       "records": [
-        "Records showing COP.2.f was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.2.f reviewed «quarterly»."
+        "Documented admission, discharge-to-home or transfer record.",
+        "Disposition-decision documentation.",
+        "Record-completeness check."
       ]
     },
     {
@@ -107,9 +105,9 @@
       "steps": "Section 3; 5.7",
       "responsible": "Emergency In-Charge",
       "records": [
-        "Records showing COP.2.g was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.2.g reviewed «quarterly»."
+        "Discharge or transfer note issued to the patient, on file.",
+        "Content-completeness record — diagnosis, treatment given, follow-up.",
+        "Receiving-organisation transfer-note record, where applicable."
       ]
     },
     {
@@ -118,10 +116,9 @@
       "steps": "Section 3; 5.8",
       "responsible": "Emergency In-Charge",
       "records": [
-        "Records showing COP.2.h was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.2.h reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Written emergency-department quality assurance programme.",
+        "Indicator-monitoring record for the programme.",
+        "Improvement-action record from QA findings."
       ]
     },
     {
@@ -130,14 +127,13 @@
       "steps": "Section 3; 5.9",
       "responsible": "Emergency In-Charge",
       "records": [
-        "Records showing COP.2.i was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.2.i reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Written system for managing patients found dead on arrival or who die within minutes of arrival.",
+        "Documentation record for a sampled such case.",
+        "Family-communication and statutory-notification record."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO COP.2 v2 (2026-08-20). Official Standards PDF OE count 9; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: cdhi. CORE: c. Achievement: bh. Excellence: none.\nStop-work: YES — JUDGMENT CALL: Emergency overcrowding / missing triage competence / dead-on-arrival pathway gaps.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/02.\nDo not copy SHCO COP wording. Do not touch AAC.",
+  "universal_facts_checklist": "HCO COP.2 v2 (2026-08-20). Official Standards PDF OE count 9; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: cdhi. CORE: c. Achievement: bh. Excellence: none.\nStop-work: YES — JUDGMENT CALL: Emergency overcrowding / missing triage competence / dead-on-arrival pathway gaps.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/02.\nDo not touch AAC.",
   "version": "2.0",
   "revision_history": [
     {
@@ -148,8 +144,8 @@
   ],
   "status": "draft",
   "definitions": "Emergency services are provided in accordance with written guidance, applicable laws and regulations.",
-  "exceptions": "1. Do not skip: There shall be an identified area in the organisation which is easily accessible to receive and manage emer...\n2. Do not skip: Prevention of patient over-crowding is planned and crowd management measures are implemented.\n3. Do not skip: Emergency care is provided in consonance with statutory requirements including medico-legal cases and as pe...\n4. Do not skip: Initiation of appropriate care is guided by a system of triage.\n5. Do not skip: Patients waiting in the emergency are re-assessed as appropriate for the change in status.\n6. Do not skip: Admission, discharge to home or transfer to another organisation is documented.\n7. Do not skip: In case of discharge to home or transfer to another organisation, a discharge / transfer note shall be give...\n8. Do not skip: The organisation shall implement a quality assurance programme.\n9. Do not skip: The organisation has systems in place for the management of patients found dead on arrival and patients who...\n10. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n11. Staff who see a COP.2 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE COP.2.a–i.\n- Asterisked elements (cdhi) have document evidence as required.\n- CORE elements (c) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
+  "exceptions": "1. Do not skip: There shall be an identified area in the organisation which is easily accessible to receive and manage...\n2. Do not skip: Prevention of patient over-crowding is planned and crowd management measures are implemented.\n3. Do not skip: Emergency care is provided in consonance with statutory requirements including medico-legal cases and as per...\n4. Do not skip: Initiation of appropriate care is guided by a system of triage.\n5. Do not skip: Patients waiting in the emergency are re-assessed as appropriate for the change in status.\n6. Do not skip: Admission, discharge to home or transfer to another organisation is documented.\n7. Do not skip: In case of discharge to home or transfer to another organisation, a discharge / transfer note shall be given...\n8. Do not skip: The organisation shall implement a quality assurance programme.\n9. Do not skip: The organisation has systems in place for the management of patients found dead on arrival and patients who...\n10. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n11. Staff who see a COP.2 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Emergency Services policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/COP/POL/02»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Emergency In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«Emergency In-Charge»",

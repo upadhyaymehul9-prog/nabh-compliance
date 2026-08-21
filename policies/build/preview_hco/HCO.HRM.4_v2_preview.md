@@ -43,7 +43,7 @@ This policy applies to human resources, nursing, medical, and departmental leade
 
 It covers 6 objective elements (HRM.4.a, HRM.4.b, HRM.4.c, HRM.4.d, HRM.4.e, HRM.4.f).
 
-Boundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
 
 ## 3. Policy standards
 
@@ -81,13 +81,13 @@ The «HR In-Charge / Personnel Officer» maintains the training record for Previ
 
 Method note (from guidebook interpretation): The Human Resources Department shall maintain a record of all training provided to staff of the organisation. At a minimum, it shall include the title of the training, the trainer(s), date and duration of the training list of trainees (with name and signatures). Where possible, the contents of the training may also be captured. Training records could be in digital format.
 
-### 5.3 Training also occurs when job responsibilities change/new equipment i...
+### 5.3 Training also occurs when job responsibilities change/new equipment is...
 
 Training at Preview Hospital also occurs when job responsibilities change or new equipment is introduced, focused on the revised responsibilities or the newly introduced equipment and technology. For new equipment, operating staff are trained on both operational use and daily maintenance.
 
 Method note (from guidebook interpretation): The training shall focus on the revised job responsibilities as well as on the newly introduced equipment and technology. In the case of new equipment, the operating staff shall receive training on operational as well as daily maintenance aspects.
 
-### 5.4 Feedback mechanisms are in place for improvement of training and deve...
+### 5.4 Feedback mechanisms are in place for improvement of training and...
 
 Feedback mechanisms are in place at Preview Hospital for improving the training and development programme, covering both internal and external training — appropriateness of course material, training facilities and trainer capability.
 
@@ -101,7 +101,7 @@ The evaluation covers knowledge, skills and attitude; retraining is provided whe
 
 Method note (from guidebook interpretation): The evaluation shall be done immediately after the training and after a defined period has lapsed. The immediate effectiveness could be captured using a pre and post-test. To ensure that that the training has resulted in improvement of competency at the workplace, the effect of training shall be evaluated after a defined period has lapsed. The organisation may consider defining the time frame for capturing the effectiveness at the workplace based on the type of training imparted. One of the tools that the organisation could use is incident reports and non-conformities pointed out during assessments. The evaluation shall focus on knowledge, skills and attitude. Based on the evaluation, where appropriate, re training has to be provided.
 
-### 5.6 The organisation supports continuing professional development and lea...
+### 5.6 The organisation supports continuing professional development and...
 
 Preview Hospital supports continuing professional development and learning, so staff can keep up with advancements in their field — encouraging and resourcing attendance at courses or conferences, and providing access to distance learning or e-learning. The hospital specifies minimum mandatory training hours every staff member attends each year.
 
@@ -123,14 +123,14 @@ departmental leaders
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE HRM.4.a–f.
-- Asterisked elements (a) have document evidence as required.
-- CORE elements (a) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.
 
@@ -197,41 +197,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### HRM.4.a — Written guidance governs training and development policy for the staff.
 
-- Records showing HRM.4.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.4.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Written training and development policy or manual.
+- Training-needs-identification, methodology, assessment and calendar record.
+- Coverage record for all staff categories, including doctors and outsourced staff.
 
 ### HRM.4.b — The organisation maintains the training record.
 
-- Records showing HRM.4.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.4.b reviewed «quarterly».
+- Training record with title, trainer, date, duration and trainee list with signatures.
+- Digital or physical training-record system.
+- Content-capture record where possible.
 
 ### HRM.4.c — Training also occurs when job responsibilities change/new equipment is introduced.
 
-- Records showing HRM.4.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.4.c reviewed «quarterly».
+- Training record triggered by a job-responsibility change or new-equipment introduction.
+- Operational-and-maintenance training record for new equipment.
+- Training-completion confirmation before independent use.
 
 ### HRM.4.d — Feedback mechanisms are in place for improvement of training and development programme.
 
-- Records showing HRM.4.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.4.d reviewed «quarterly».
+- Feedback-mechanism record for training-programme improvement.
+- Feedback data on course material, facilities and trainer capability.
+- Both internal and external training coverage record.
 
 ### HRM.4.e — Evaluation of training effectiveness is done by the organisation.
 
-- Records showing HRM.4.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.4.e reviewed «quarterly».
+- Immediate post-training evaluation record — pre/post-test.
+- Later workplace-effectiveness evaluation record.
+- Retraining record where the evaluation showed a need.
 
 ### HRM.4.f — The organisation supports continuing professional development and learning.
 
-- Records showing HRM.4.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.4.f reviewed «quarterly».
+- Continuing-professional-development support record — courses, conferences, e-learning access.
+- Minimum mandatory annual training-hours specification record.
+- Staff-participation record against the mandatory hours.
 
 ## Disclaimer
 

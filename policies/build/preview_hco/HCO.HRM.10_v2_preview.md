@@ -43,7 +43,7 @@ This policy applies to human resources, nursing, medical, and departmental leade
 
 It covers 4 objective elements (HRM.10.a, HRM.10.b, HRM.10.c, HRM.10.d).
 
-Boundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
 
 ## 3. Policy standards
 
@@ -54,14 +54,14 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 ## 4. Non-negotiable rules
 
 1. Do not skip: Personal files are maintained with respect to all staff, and their confidentiality is ensured.
-2. Do not skip: The personal files contain personal information regarding the staff’s qualification, job description, verif...
+2. Do not skip: The personal files contain personal information regarding the staff’s qualification, job description...
 3. Do not skip: Records of in-service training and education are maintained.
 4. Do not skip: Personal files contain results of all evaluations and remarks.
 5. Staff who see a HRM.10 rule broken report it the same shift to the «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
 
 ## 5. What we do
 
-### 5.1 Personal files are maintained with respect to all staff, and their co...
+### 5.1 Personal files are maintained with respect to all staff, and their...
 
 Personal files are maintained for all staff at Preview Hospital, kept current and updated (electronic format is acceptable), with confidentiality maintained and access restricted.
 
@@ -101,14 +101,12 @@ departmental leaders
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE HRM.10.a–d.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.
 
@@ -173,27 +171,27 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### HRM.10.a — Personal files are maintained with respect to all staff, and their confidentiality is ensured.
 
-- Records showing HRM.10.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.10.a reviewed «quarterly».
+- Personal-file maintenance record for all staff, current and updated.
+- Confidentiality and access-restriction record.
+- Electronic-format record, where used.
 
 ### HRM.10.b — The personal files contain personal information regarding the staff’s qualification, job description, verification of credentials and health status.
 
-- Records showing HRM.10.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.10.b reviewed «quarterly».
+- Personal-file content record — qualification, job description, credential verification, health status.
+- Completeness-check record.
+- Update-currency record.
 
 ### HRM.10.c — Records of in-service training and education are maintained.
 
-- Records showing HRM.10.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.10.c reviewed «quarterly».
+- In-service training and education record maintained in, or traceable from, the personal file.
+- Annual training-summary record for internal training.
+- Attendance-verification supporting document.
 
 ### HRM.10.d — Personal files contain results of all evaluations and remarks.
 
-- Records showing HRM.10.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.10.d reviewed «quarterly».
+- Personal-file record of evaluation results and remarks — appraisals, training assessment, health-check outcome, achievement/complaint/warning/memo.
+- Completeness-check record.
+- Confidential-handling record.
 
 ## Disclaimer
 

@@ -43,7 +43,7 @@ This policy applies to human resources, nursing, medical, and departmental leade
 
 It covers 7 objective elements (HRM.6.a, HRM.6.b, HRM.6.c, HRM.6.d, HRM.6.e, HRM.6.f, HRM.6.g).
 
-Boundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
 
 ## 3. Policy standards
 
@@ -54,7 +54,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 ## 4. Non-negotiable rules
 
 1. Do not skip: Staff are trained in the organisation’s safety programme.
-2. Do not skip: Staff are provided training in the detection, handling, minimisation and elimination of identified risks wi...
+2. Do not skip: Staff are provided training in the detection, handling, minimisation and elimination of identified risks...
 3. Do not skip: Staff members are made aware of procedures to follow in the event of an incident.
 4. Do not skip: Staff are trained in occupational safety aspects.
 5. Do not skip: Staff are trained in the organisation’s disaster management plan.
@@ -70,13 +70,13 @@ Staff at Preview Hospital are trained in the organisation's safety programme, in
 
 Method note (from guidebook interpretation): Staff are trained on identified aspects of safety including patient safety in the organisation. This could be done through a regular training programme or printed materials. Staff working in laboratory and imaging services are trained in their respective safety programmes. Refer to PSQ.1.a.
 
-### 5.2 Staff are provided training in the detection, handling, minimisation ...
+### 5.2 Staff are provided training in the detection, handling, minimisation...
 
 Staff at Preview Hospital are trained in detecting, handling, minimising and eliminating identified risks in the organisation's environment — physical (poor lighting, slippery floors, blind corners, open electrical points, exposed wiring), chemical (mishandling, spills, aerosolisation), environmental (noise, smoke, dampness, heat) and process-related (needle-stick injury, blood and body-fluid exposure, cytotoxic drugs, soiled linen). Staff can practically demonstrate actions such as managing a blood spill or handling hazardous materials.
 
 Method note (from guidebook interpretation): The organisation shall identify such risks that shall include patient, visitors and staff-related risks. These risks could be physical (poor lighting, slippery floors, blind corners, open electrical points, naked wires etc.), chemical (improper handling, spills, aerosolisation etc.), environmental (noise, smoke, dampness, heat etc.) or process-related (needle-stick injury, blood and body fluid chemicals, cytotoxic drugs, spills, soiled linen etc.). Further, staff shall be able to practically demonstrate actions like taking care of blood spills, handling hazardous materials etc.
 
-### 5.3 Staff members are made aware of procedures to follow in the event of ...
+### 5.3 Staff members are made aware of procedures to follow in the event of an...
 
 Staff at Preview Hospital are made aware of the procedure to follow in the event of an incident, able to describe the sequence of events they will undertake if one occurs.
 
@@ -126,14 +126,13 @@ departmental leaders
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE HRM.6.a–g.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (ef) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.
 
@@ -201,47 +200,45 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### HRM.6.a — Staff are trained in the organisation’s safety programme.
 
-- Records showing HRM.6.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.6.a reviewed «quarterly».
+- Safety-programme training record.
+- Laboratory- or imaging-specific safety-training record where applicable.
+- Cross-reference to PSQ.1.a.
 
 ### HRM.6.b — Staff are provided training in the detection, handling, minimisation and elimination of identified risks within the organisation’s environment.
 
-- Records showing HRM.6.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.6.b reviewed «quarterly».
+- Risk-detection-and-handling training record — physical, chemical, environmental, process-related risks.
+- Practical-demonstration record — blood-spill management, hazardous-material handling.
+- Training-content coverage record.
 
 ### HRM.6.c — Staff members are made aware of procedures to follow in the event of an incident.
 
-- Records showing HRM.6.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.6.c reviewed «quarterly».
+- Incident-procedure awareness record.
+- Staff confirmation of knowing the sequence of actions to take.
+- Training or briefing record.
 
 ### HRM.6.d — Staff are trained in occupational safety aspects.
 
-- Records showing HRM.6.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.6.d reviewed «quarterly».
+- Occupational-safety-aspect training record — needle-stick, radiation, laser, medical-gas, chemotherapy, noise exposure.
+- Cross-reference to IPC.8.a.
+- Area-specific hazard-training record.
 
 ### HRM.6.e — Staff are trained in the organisation’s disaster management plan.
 
-- Records showing HRM.6.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.6.e reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Disaster-management-plan training record.
+- Specific-role training record for an external or internal disaster.
+- Attendance record.
 
 ### HRM.6.f — Staff are trained in handling fire and non-fire emergencies.
 
-- Records showing HRM.6.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.6.f reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Fire-and-non-fire-emergency training record.
+- Fire-extinguisher and evacuation-procedure demonstration record.
+- Specific-role training record for non-fire emergencies.
 
 ### HRM.6.g — Staff are trained in the organisation’s quality improvement programme.
 
-- Records showing HRM.6.g was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.6.g reviewed «quarterly».
+- Quality-improvement-programme training record.
+- Role-in-programme awareness record.
+- Department-specific quality-assurance training record where applicable (laboratory, imaging, emergency, ICU, blood centre, surgical services).
 
 ## Disclaimer
 

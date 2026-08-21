@@ -43,7 +43,7 @@ This policy applies to engineering, biomedical, nursing and departmental leaders
 
 It covers 8 objective elements (FMS.5.a, FMS.5.b, FMS.5.c, FMS.5.d, FMS.5.e, FMS.5.f, FMS.5.g, FMS.5.h).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -55,18 +55,18 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 1. Do not skip: The organisation plans for medical equipment in accordance with its services and strategic plan.
 2. Do not skip: Medical equipment is inventoried and proper logs are maintained as required.
-3. Do not skip: The documented operational and maintenance (preventive and breakdown) plan for medical equipment is impleme...
+3. Do not skip: The documented operational and maintenance (preventive and breakdown) plan for medical equipment is...
 4. Do not skip: Medical equipment is periodically inspected and calibrated for their proper functioning.
 5. Do not skip: Qualified and trained personnel operate and maintain medical equipment.
 6. Do not skip: Written guidance supports medical equipment replacement and disposal.
-7. Do not skip: There is monitoring of medical equipment and medical devices related to adverse events, and compliance haza...
-8. Do not skip: Downtime for critical equipment breakdown is monitored from reporting to inspection and implementation of c...
+7. Do not skip: There is monitoring of medical equipment and medical devices related to adverse events, and compliance hazard...
+8. Do not skip: Downtime for critical equipment breakdown is monitored from reporting to inspection and implementation of...
 9. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
 10. Staff who see a FMS.5 rule broken report it the same shift to the «Engineering In-Charge» or the «Medical Superintendent».
 
 ## 5. What we do
 
-### 5.1 The organisation plans for medical equipment in accordance with its s...
+### 5.1 The organisation plans for medical equipment in accordance with its...
 
 The organisation plans medical equipment to match services and the strategic plan, including future needs. Indian Public Health Standards are a reference for a minimum set. Selection, rental, update or upgrade is collaborative (end-user, management, finance, engineering, biomedical).
 
@@ -74,7 +74,7 @@ The «Engineering In-Charge» holds the current medical-equipment plan with the 
 
 Method note (from guidebook interpretation): This shall also take into consideration future requirements. The medical equipment shall be appropriate to its scope of services. A good reference for minimum medical equipment is the IPHS guideline. Medical equipment is selected, rented, updated or upgraded by a collaborative process. Collaborative process implies that during equipment selection, there is involvement of end- user, management, finance, engineering and biomedical departments. The organisation could define differential financial clearance in accordance with the policy. For example, the purchase of BP apparatus can be made by the departmental head.
 
-### 5.2 Medical equipment is inventoried and proper logs are maintained as re...
+### 5.2 Medical equipment is inventoried and proper logs are maintained as...
 
 Medical equipment is inventoried and logs are maintained. Items are classified by medical-device risk. Each has a unique identifier, including rental and demonstration items. Factory test and conformance certificates are kept.
 
@@ -94,7 +94,7 @@ This objective element is asterisked in the official Standards PDF — documenta
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.4 Medical equipment is periodically inspected and calibrated for their ...
+### 5.4 Medical equipment is periodically inspected and calibrated for their...
 
 Medical equipment that measures is inspected and calibrated on a weekly, monthly or annual schedule as the manufacturer and this hospital define, in-house or outsourced, with traceability. Conformance is checked before commissioning and again after repair.
 
@@ -116,7 +116,7 @@ Method note (from guidebook interpretation): The organisation shall plan for thi
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.7 There is monitoring of medical equipment and medical devices related ...
+### 5.7 There is monitoring of medical equipment and medical devices related to...
 
 Medical equipment and devices are monitored for adverse events. Hazard notices and recalls from the manufacturer or regulator are acted on at once; the device is not returned to clinical use until the issue is closed. The Guidebook names Gazette of India GSR 78(E) 2023 / Medical Devices Rules 2023 and participation in the Materiovigilance Programme of India. MOM.10 remains the home of medication-supply recall; this element is equipment and devices.
 
@@ -158,14 +158,14 @@ departmental leaders
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE FMS.5.a–h.
-- Asterisked elements (cfg) have document evidence as required.
-- CORE elements (c) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related facility change, utility failure, equipment recall or fire-plan change.
 
@@ -233,55 +233,51 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### FMS.5.a — The organisation plans for medical equipment in accordance with its services and strategic plan.
 
-- Records showing FMS.5.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.5.a reviewed «quarterly».
+- Written medical-equipment plan matched to services and the strategic plan, referencing the Indian Public Health Standards minimum set.
+- Collaborative-selection record (end-user, management, finance, engineering, biomedical).
+- Periodic review record of the plan.
 
 ### FMS.5.b — Medical equipment is inventoried and proper logs are maintained as required.
 
-- Records showing FMS.5.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.5.b reviewed «quarterly».
+- Medical-equipment inventory classified by device risk, with a unique identifier including rental and demonstration items.
+- Factory test or conformance certificate on file.
+- In-use device check confirming no device without an identity.
 
 ### FMS.5.c — The documented operational and maintenance (preventive and breakdown) plan for medical equipment is implemented.
 
-- Records showing FMS.5.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.5.c reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Documented operational and maintenance (preventive and breakdown) plan for medical equipment.
+- Operator-training record and daily operating-check log.
+- Breakdown-response record, including nights and weekends.
 
 ### FMS.5.d — Medical equipment is periodically inspected and calibrated for their proper functioning.
 
-- Records showing FMS.5.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.5.d reviewed «quarterly».
+- Calibration schedule (weekly, monthly or annual as the manufacturer defines) with traceability.
+- Pre-commissioning and post-repair conformance-check record.
+- Calibration-due tracking log confirming no overdue device in clinical use.
 
 ### FMS.5.e — Qualified and trained personnel operate and maintain medical equipment.
 
-- Records showing FMS.5.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.5.e reviewed «quarterly».
+- Operator-training record per device type (for example blood-gas analyser, electrocardiograph, syringe pump).
+- Biomedical or instrumentation engineer/technologist qualification record for maintenance staff.
+- Training-currency check for operators and maintainers.
 
 ### FMS.5.f — Written guidance supports medical equipment replacement and disposal.
 
-- Records showing FMS.5.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.5.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written medical-equipment replacement and disposal guidance.
+- Condemnation record, systematically applied.
+- Disposal log.
 
 ### FMS.5.g — There is monitoring of medical equipment and medical devices related to adverse events, and compliance hazard notices on recalls.
 
-- Records showing FMS.5.g was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.5.g reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Adverse-event and hazard-notice/recall log for medical equipment and devices.
+- Record showing a recalled device was withdrawn from clinical use until the issue closed.
+- Materiovigilance Programme of India participation record, where applicable.
 
 ### FMS.5.h — Downtime for critical equipment breakdown is monitored from reporting to inspection and implementation of corrective actions.
 
-- Records showing FMS.5.h was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.5.h reviewed «quarterly».
+- Complaint register for critical medical equipment (ventilators, X-ray, MRI, cath lab, CT, anaesthesia machines, monitors, laboratory, ultrasound).
+- Downtime-duration record from reporting to corrective action.
+- Alternative-equipment-use record where no backup device exists.
 
 ## Disclaimer
 

@@ -43,7 +43,7 @@ This policy applies to engineering, biomedical, nursing and departmental leaders
 
 It covers 5 objective elements (FMS.7.a, FMS.7.b, FMS.7.c, FMS.7.d, FMS.7.e).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,7 +53,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: The organisation has plans and provisions for early detection, abatement, containment of fire and evacuatio...
+1. Do not skip: The organisation has plans and provisions for early detection, abatement, containment of fire and evacuation...
 2. Do not skip: The organisation has plans and provisions for identification, and management of non-fire emergencies.
 3. Do not skip: The organisation has a documented and displayed exit plan in case of fire and non-fire emergencies.
 4. Do not skip: Mock drills are held at least twice a year.
@@ -63,7 +63,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 The organisation has plans and provisions for early detection, abatem...
+### 5.1 The organisation has plans and provisions for early detection...
 
 Preview Hospital has plans and provisions for early detection, abatement, containment of fire and evacuation: a fire plan (inflammable items, explosion, short-circuit, negligence or incompetence), qualified personnel, current NABH minimum fire-safety measures, smoke control, training, mock-drill schedules including table-top, drill records, displayed exits, evacuation of patients, staff and visitors, and emergency illumination.
 
@@ -75,7 +75,7 @@ This objective element is asterisked in the official Standards PDF — documenta
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.2 The organisation has plans and provisions for identification, and man...
+### 5.2 The organisation has plans and provisions for identification, and...
 
 The organisation has plans and provisions for identification and management of non-fire emergencies (examples the Guidebook names include earthquake, flood, toxic leak, structural collapse, utility failure, boiler burst, violence, stray animals). National Disaster Management Authority / State / District guidelines are referred to. Liaison with civil, police and fire authorities is as required by law.
 
@@ -87,7 +87,7 @@ This objective element is asterisked in the official Standards PDF — documenta
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.3 The organisation has a documented and displayed exit plan in case of ...
+### 5.3 The organisation has a documented and displayed exit plan in case of...
 
 A documented exit plan is displayed on each floor, especially near lifts and inside enclosed rooms and laboratories. Exit doors remain open or have push bars. Fire signage follows the fire service and/or National Building Code. Refuge areas are signed and maintained where they apply.
 
@@ -103,7 +103,7 @@ A year with fewer than two drills is a gap under this element.
 
 Method note (from guidebook interpretation): Testing twice a year is only the minimum frequency, and this may be increased. This includes fire and important non-fire emergencies (as identified by the organisation). The plan can be tested using a table-top exercise, or a mock drill. At a minimum, at least one mock drills shall be held once in 6 months. This shall test all the components of the plan and not just awareness/demonstration of practices. In the case of a mock drill, simulated patients (not real) shall be used. After every table- top exercise/mock drill, the variations are identified, the reason for the same is analysed, debriefing conducted and where appropriate the necessary corrective and/or preventive actions are taken.
 
-### 5.5 There is a maintenance plan for fire-related equipment and infrastruc...
+### 5.5 There is a maintenance plan for fire-related equipment and...
 
 There is a maintenance plan for fire-related equipment and infrastructure: inspection, testing, preventive and breakdown maintenance, following the manufacturer and applicable statutory recommendations.
 
@@ -137,14 +137,14 @@ departmental leaders
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE FMS.7.a–e.
-- Asterisked elements (abe) have document evidence as required.
-- CORE elements (ab) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related facility change, utility failure, equipment recall or fire-plan change.
 
@@ -209,38 +209,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### FMS.7.a — The organisation has plans and provisions for early detection, abatement, containment of fire and evacuation in the event of fire emergencies.
 
-- Records showing FMS.7.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.7.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Written fire-safety plan covering detection, abatement, containment and evacuation, naming qualified personnel and current NABH minimum fire-safety measures.
+- Mock-drill schedule and drill record, including table-top exercises.
+- Displayed evacuation plan and emergency-illumination check record.
 
 ### FMS.7.b — The organisation has plans and provisions for identification, and management of non-fire emergencies.
 
-- Records showing FMS.7.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.7.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Written non-fire-emergency plan (for example earthquake, flood, toxic leak, structural collapse, utility failure, boiler burst, violence, stray animals).
+- NDMA, State or District guideline reference used.
+- Liaison record with civil, police and fire authorities.
 
 ### FMS.7.c — The organisation has a documented and displayed exit plan in case of fire and non-fire emergencies.
 
-- Records showing FMS.7.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.7.c reviewed «quarterly».
+- Exit plan displayed on each floor, near lifts and inside enclosed rooms and laboratories.
+- Exit-door check record (open or push-bar) and fire-signage reference (fire service or National Building Code).
+- Refuge-area signage and maintenance record, where applicable.
 
 ### FMS.7.d — Mock drills are held at least twice a year.
 
-- Records showing FMS.7.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.7.d reviewed «quarterly».
+- Mock-drill record showing at least two drills a year covering fire and the named non-fire events.
+- Debrief and corrective-action record for variations found.
+- Confirmation that simulated, not real, patients were used.
 
 ### FMS.7.e — There is a maintenance plan for fire-related equipment and infrastructure
 
-- Records showing FMS.7.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.7.e reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written maintenance plan for fire-related equipment and infrastructure.
+- Inspection, testing, preventive and breakdown maintenance log following manufacturer and statutory recommendations.
+- Last-service evidence on file.
 
 ## Disclaimer
 

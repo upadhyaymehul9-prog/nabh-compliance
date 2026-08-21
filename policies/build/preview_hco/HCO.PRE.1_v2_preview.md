@@ -43,7 +43,7 @@ This policy applies to staff who register, admit, treat, counsel, bill, take con
 
 It covers 5 objective elements (PRE.1.a, PRE.1.b, PRE.1.c, PRE.1.d, PRE.1.e).
 
-Boundaries: do not copy SHCO PRE wording. Do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -62,7 +62,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 Patient and family rights and responsibilities are documented, displa...
+### 5.1 Patient and family rights and responsibilities are documented...
 
 Preview Hospital documents patient and family rights and responsibilities in consonance with the Charter of Patients' Rights named by the statutory body. The current text is displayed where patients, families and visitors can see it (registration, OPD waiting, ward notice boards, emergency). Pamphlets or equivalent IEC material are available; the material is at least bilingual.
 
@@ -102,7 +102,7 @@ Method note (from guidebook interpretation): The organisation may develop a list
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.5 Violation of patient and family rights are monitored, analysed, and c...
+### 5.5 Violation of patient and family rights are monitored, analysed, and...
 
 Every logged rights violation is investigated. Top leadership («Medical Superintendent» with the «Quality Coordinator») documents the incident, the investigation and the outcome, and assigns corrective and/or preventive action in a time frame the organisation defines («within 15 days of the report, sooner if the patient is still in hospital»).
 
@@ -129,14 +129,14 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE PRE.1.a–e.
-- Asterisked elements (ab) have document evidence as required.
-- CORE elements (cde) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related rights incident, consent failure or complaint cluster.
 
@@ -198,38 +198,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### PRE.1.a — Patient and family rights and responsibilities are documented, displayed, and they are made aware of the same.
 
-- Records showing PRE.1.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.1.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Current documented patient-and-family rights-and-responsibilities text.
+- Display record at registration, OPD waiting, ward notice boards and emergency.
+- Bilingual pamphlet or IEC material on file.
 
 ### PRE.1.b — Patient and family rights and responsibilities are actively promoted.
 
-- Records showing PRE.1.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.1.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Admission-counselling record showing rights and responsibilities were explained to an in-patient.
+- OPD display/access record for educational material.
+- Quarterly spot-check record of display and counselling.
 
 ### PRE.1.c — The organisation protects patient and family rights.
 
-- Records showing PRE.1.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.1.c reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Induction and annual training record on protecting patient and family rights.
+- Named Guest Relations / Patient Rights Officer record as day-to-day owner.
+- Conduct-observation record confirming staff practice matches the duty.
 
 ### PRE.1.d — The organisation has a mechanism to report a violation of patient and family rights.
 
-- Records showing PRE.1.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.1.d reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Written list of rights-infringement examples.
+- Incident-form record for a reported violation.
+- Patient- or family-reported violation log (feedback form or direct report), including anonymous reports.
 
 ### PRE.1.e — Violation of patient and family rights are monitored, analysed, and corrective / preventive action taken by the top leadership of the organisation.
 
-- Records showing PRE.1.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.1.e reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Investigation record for each logged rights violation.
+- Top-leadership (Medical Superintendent with Quality Coordinator) documented outcome and CAPA assignment.
+- Open-action tracking record to closure within the defined timeframe.
 
 ## Disclaimer
 

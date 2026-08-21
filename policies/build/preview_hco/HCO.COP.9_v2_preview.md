@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.9 
 
 It covers 7 objective elements (COP.9.a, COP.9.b, COP.9.c, COP.9.d, COP.9.e, COP.9.f, COP.9.g).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -63,13 +63,13 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 Care of patients in intensive care and high dependency units is provi..
+### 5.1 Care of patients in intensive care and high dependency units is..
 
 Care of patients in intensive care and high dependency units is provided based on written guidance.
 
 Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
 
-### 5.2 The defined admission and discharge criteria for intensive care and h..
+### 5.2 The defined admission and discharge criteria for intensive care and..
 
 The defined admission and discharge criteria for intensive care and high dependency units are implemented.
 
@@ -129,14 +129,13 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.9.a–g.
-- Asterisked elements (abdef) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -195,50 +194,45 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.9.a — Care of patients in intensive care and high dependency units is provided based on written guidance.
 
-- Records showing COP.9.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.9.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written ICU/HDU care guidance.
+- Documentation record confirming the guidance was followed.
+- Staff training record.
 
 ### COP.9.b — The defined admission and discharge criteria for intensive care and high dependency units are implemented.
 
-- Records showing COP.9.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.9.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written ICU/HDU admission and discharge criteria.
+- Criteria-application record for a sampled admission or discharge.
+- Criteria-review record.
 
 ### COP.9.c — Adequate staff and equipment are available.
 
-- Records showing COP.9.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.9.c reviewed «quarterly».
+- Staffing-ratio record for ICU/HDU.
+- Equipment inventory and adequacy record.
+- Availability-check record.
 
 ### COP.9.d — Defined procedures for the situation of bed shortages are followed.
 
-- Records showing COP.9.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.9.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written bed-shortage procedure.
+- Activation record for a bed-shortage event.
+- Triage or prioritisation record during shortage.
 
 ### COP.9.e — Infection prevention and control practices are followed.
 
-- Records showing COP.9.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.9.e reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- IPC-practice compliance record for ICU/HDU (cross-reference the IPC chapter).
+- Surveillance-data record for the unit.
+- Hand-hygiene compliance record.
 
 ### COP.9.f — The organisation shall implement a quality assurance programme.
 
-- Records showing COP.9.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.9.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written ICU/HDU quality assurance programme.
+- Indicator-monitoring record.
+- Improvement-action record.
 
 ### COP.9.g — The organisation has a mechanism to counsel the patient and/or family periodically.
 
-- Records showing COP.9.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.9.g reviewed «quarterly».
+- Periodic counselling record for patient/family.
+- Counselling-frequency documentation.
+- Named responsible person for counselling.
 
 ## Disclaimer
 

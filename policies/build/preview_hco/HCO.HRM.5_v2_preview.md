@@ -43,7 +43,7 @@ This policy applies to human resources, nursing, medical, and departmental leade
 
 It covers 6 objective elements (HRM.5.a, HRM.5.b, HRM.5.c, HRM.5.d, HRM.5.e, HRM.5.f).
 
-Boundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
 
 ## 3. Policy standards
 
@@ -63,7 +63,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 Staff involved in blood transfusion services are trained in the handl...
+### 5.1 Staff involved in blood transfusion services are trained in the...
 
 Staff involved in blood transfusion services at Preview Hospital are trained in handling blood and blood products — safe transport, obtaining informed consent, required documentation, identifying and handling transfusion reactions, and educating the patient and family on donation. Relevant staff (doctors, nurses, technicians and staff transporting blood from the blood bank or storage unit) are trained on the aspects that apply to them. Cross-reference: COP.8 owns blood transfusion service practice; this element is the staff training layer.
 
@@ -87,7 +87,7 @@ Staff at Preview Hospital are trained in healthcare communication techniques, in
 
 Method note (from guidebook interpretation): The staff shall be trained to handle challenging situations as well as good practices in health care communication. The training needs for communication skills can also be identified by analysing patient complaints, incident reports, appraisals and employee feedback. Refer to PRE.8.e.
 
-### 5.5 Staff involved in direct patient care are provided training on cardio...
+### 5.5 Staff involved in direct patient care are provided training on cardio-...
 
 Staff involved in direct patient care at Preview Hospital are provided training on cardio-pulmonary resuscitation periodically, at the level (basic or advanced) appropriate to their role. Doctors, nurses and rehabilitation staff refresh at least once in two years, or sooner if protocol changes; staff in emergency, intensive care or high-dependency units undergo appropriate advanced training (for example ACLS, ATLS, PALS or NRP, or an equivalent). Trainers may be internal or external, using updated evidence-based protocols. This is a CORE element.
 
@@ -117,14 +117,13 @@ departmental leaders
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE HRM.5.a–f.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (e) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.
 
@@ -191,40 +190,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### HRM.5.a — Staff involved in blood transfusion services are trained in the handling of blood and blood products.
 
-- Records showing HRM.5.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.5.a reviewed «quarterly».
+- Blood-and-blood-product handling training record for relevant staff (doctors, nurses, technicians, transport staff).
+- Cross-reference to COP.8 blood transfusion service practice.
+- Training-content record — safe transport, informed consent, documentation, transfusion-reaction handling.
 
 ### HRM.5.b — Staff are trained in handling vulnerable patients.
 
-- Records showing HRM.5.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.5.b reviewed «quarterly».
+- Vulnerable-patient identification-and-care training record.
+- Cross-reference to COP.16.a.
+- Relevant-staff coverage record.
 
 ### HRM.5.c — Staff are trained in control and restraint techniques.
 
-- Records showing HRM.5.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.5.c reviewed «quarterly».
+- Control-and-restraint-technique training record.
+- Cross-reference to COP.16.e.
+- Relevant-staff coverage record.
 
 ### HRM.5.d — Staff are trained in healthcare communication techniques.
 
-- Records showing HRM.5.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.5.d reviewed «quarterly».
+- Healthcare-communication-technique training record.
+- Training-needs source record — complaints, incident reports, appraisals, feedback.
+- Cross-reference to PRE.8.e.
 
 ### HRM.5.e — Staff involved in direct patient care are provided training on cardio- pulmonary resuscitation periodically.
 
-- Records showing HRM.5.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.5.e reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Periodic CPR-training record for direct-patient-care staff, at least once in two years or sooner after protocol change.
+- Advanced-training record for emergency, ICU or high-dependency staff.
+- Refresher-schedule tracking record.
 
 ### HRM.5.f — Staff are provided training on infection prevention and control.
 
-- Records showing HRM.5.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for HRM.5.f reviewed «quarterly».
+- Infection-prevention-and-control training record at least annually.
+- Antimicrobial-stewardship-content record for medical professionals, IPC nurses, clinical pharmacist and support staff.
+- Attendance record.
 
 ## Disclaimer
 

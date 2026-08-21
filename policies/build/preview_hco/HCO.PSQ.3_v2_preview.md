@@ -43,7 +43,7 @@ This policy applies to staff who deliver care, run quality or patient-safety wor
 
 It covers 8 objective elements (PSQ.3.a, PSQ.3.b, PSQ.3.c, PSQ.3.d, PSQ.3.e, PSQ.3.f, PSQ.3.g, PSQ.3.h).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,8 +53,8 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: The organisation identifies and monitors key indicators to oversee the clinical structures, processes and o...
-2. Do not skip: The organisation identifies and monitors the key indicators to oversee infection prevention and control act...
+1. Do not skip: The organisation identifies and monitors key indicators to oversee the clinical structures, processes and...
+2. Do not skip: The organisation identifies and monitors the key indicators to oversee infection prevention and control...
 3. Do not skip: The organisation identifies and monitors key indicators to oversee the managerial structures, processes and...
 4. Do not skip: The organisation identifies and monitors key indicators to oversee patient safety activities.
 5. Do not skip: Verification of data is done regularly by the quality team.
@@ -65,7 +65,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 The organisation identifies and monitors key indicators to oversee th...
+### 5.1 The organisation identifies and monitors key indicators to oversee the...
 
 The «Quality Improvement Committee» identifies and monitors key indicators for clinical structures, processes and outcomes matching this hospital's clinical scope. Any indicator mandated by the Government of India, the State Government or NABH is included. Specialty indicators from the NABH Key Performance Indicators set are used as they apply to the scope of services.
 
@@ -73,7 +73,7 @@ Each indicator has a defined numerator, denominator and multiplier (and definiti
 
 Method note (from guidebook interpretation): The organisation identifies and monitors the priority aspects of its patient care. Any indicator mandated by the Government of India/ State Government or the National Accreditation Board for Hospitals and Healthcare Providers (NABH) shall be monitored. Some of the indicators that could be monitored pertain to patient assessment, safety and quality-control programmes of all the diagnostic services, medication management, use of blood and blood components, surgical services including use of anaesthesia and mortality and morbidity indicators. Quality indicators pertaining to clinical specialities and sub specialities have been added in the Key Performance Indicators for greater involvement of clinicians in the quality improvement program. Few of these indicators have been mandatory for the organisation as per the scope of services. Refer to NABH Key Performance Indicators. These indicators are based on available literature or created in accordance with good practice. Every indicator shall have a defined numerator, denominator and multiplier. Where appropriate, the definition of terms shall be provided.
 
-### 5.2 The organisation identifies and monitors the key indicators to overse...
+### 5.2 The organisation identifies and monitors the key indicators to oversee...
 
 The «Quality Improvement Committee» identifies and monitors key indicators for infection prevention and control activities (cross-reference IPC.6 surveillance). Any indicator mandated by the Government of India or NABH is included. Healthcare-associated infection definitions follow the current CDC National Healthcare Safety Network definitions (CAUTI, CLABSI, SSI, VAP as applicable).
 
@@ -83,7 +83,7 @@ Method note (from guidebook interpretation): The organisation shall identify and
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.3 The organisation identifies and monitors key indicators to oversee th...
+### 5.3 The organisation identifies and monitors key indicators to oversee the...
 
 The «Quality Improvement Committee» identifies and monitors key indicators for managerial structures, processes and outcomes. Any indicator mandated by the Government of India, the State Government or NABH is included (including digital-health indicators as they apply).
 
@@ -91,7 +91,7 @@ Each indicator has a defined numerator, denominator and multiplier. Results go t
 
 Method note (from guidebook interpretation): The organisation identifies and monitors priority managerial activities in the organisation. Any indicator mandated by the Government of India/ State Government or the National Accreditation Board for Hospitals and Healthcare Providers (NABH) shall be monitored. Some of the indicators that could be monitored pertaining to medication procurement, utilisation rates, patient and staff satisfaction, waiting time for consultation and diagnostics, and availability and content of medical records. Two indicators pertaining to digital health have been added. These indicators are based on available literature or created in accordance with good practice, Every indicator shall have a defined numerator, denominator and multiplier. Where appropriate, the definition of terms shall be provided.
 
-### 5.4 The organisation identifies and monitors key indicators to oversee pa...
+### 5.4 The organisation identifies and monitors key indicators to oversee...
 
 The «Quality Improvement Committee» identifies and monitors key indicators for patient-safety activities (patient-safety goals and risk management). Any indicator mandated by the Government of India, the State Government or NABH is included.
 
@@ -109,7 +109,7 @@ Verification notes sit with the indicator file. Unverified data are not used for
 
 Method note (from guidebook interpretation): The data which is collected is verified from time to time and in response to queries or when an unexplained trend occurs, etc. The data collected shall be authenticated by the quality team after going through every data or by using random sampling. The verification process shall also include if the stated sampling strategy (where applicable) was adhered. Whenever errors are detected in the process of collection of data, they are corrected.
 
-### 5.6 There is a mechanism for analysis of data which results in identifyin...
+### 5.6 There is a mechanism for analysis of data which results in identifying...
 
 There is a written mechanism to analyse indicator data (trend, target, outlier, comparison where defined) so that opportunities for improvement are identified.
 
@@ -154,14 +154,13 @@ Nursing Superintendent
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE PSQ.3.a–h.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (bd) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related sentinel event, indicator failure cluster or failed clinical-audit cycle.
 
@@ -226,53 +225,51 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### PSQ.3.a — The organisation identifies and monitors key indicators to oversee the clinical structures, processes and outcomes.
 
-- Records showing PSQ.3.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.3.a reviewed «quarterly».
+- Current clinical-indicator set with numerator, denominator and multiplier defined.
+- Record confirming any Government of India, State Government or NABH-mandated indicator is included.
+- Quality Improvement Committee presentation record at the defined interval.
 
 ### PSQ.3.b — The organisation identifies and monitors the key indicators to oversee infection prevention and control activities.
 
-- Records showing PSQ.3.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.3.b reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Current infection-prevention-and-control indicator set (for example CAUTI, CLABSI, SSI, VAP as applicable) following CDC NHSN definitions.
+- Mandated-indicator inclusion record.
+- Joint review record between the Quality Improvement Committee and the infection committee.
 
 ### PSQ.3.c — The organisation identifies and monitors key indicators to oversee the managerial structures, processes and outcomes.
 
-- Records showing PSQ.3.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.3.c reviewed «quarterly».
+- Current managerial-indicator set with numerator, denominator and multiplier defined.
+- Mandated-indicator inclusion record, including digital-health indicators where applicable.
+- Results record shared with the relevant departmental leader.
 
 ### PSQ.3.d — The organisation identifies and monitors key indicators to oversee patient safety activities.
 
-- Records showing PSQ.3.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.3.d reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Current patient-safety-indicator set (safety goals, risk management) with numerator, denominator and multiplier defined.
+- Mandated-indicator inclusion record.
+- Quality Improvement Committee review record of results.
 
 ### PSQ.3.e — Verification of data is done regularly by the quality team.
 
-- Records showing PSQ.3.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.3.e reviewed «quarterly».
+- Monthly sample-check record of source data versus the reported figure.
+- Quarterly deeper-verification record of a rotating indicator subset.
+- Record confirming unverified data were not used on dashboards or management targets.
 
 ### PSQ.3.f — There is a mechanism for analysis of data which results in identifying opportunities for improvement.
 
-- Records showing PSQ.3.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.3.f reviewed «quarterly».
+- Written analysis mechanism (trend, target, outlier or comparison as defined).
+- Quality Improvement Committee minutes recording the analysis.
+- Record of each identified opportunity, or a documented "no action needed" conclusion.
 
 ### PSQ.3.g — The improvements are implemented and evaluated.
 
-- Records showing PSQ.3.g was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.3.g reviewed «quarterly».
+- Action-tracking log from indicator analysis through to closure.
+- Later evaluation record confirming the measure moved as intended.
+- Quality Coordinator's tracking file.
 
 ### PSQ.3.h — Feedback about care and service is communicated to staff.
 
-- Records showing PSQ.3.h was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.3.h reviewed «quarterly».
+- Sample of shared feedback materials (dashboard, huddle notes, meeting minutes) with dates.
+- Record of the channel used — department meeting, huddle or dashboard.
+- Confirmation feedback reached staff level, not only committee minutes.
 
 ## Disclaimer
 

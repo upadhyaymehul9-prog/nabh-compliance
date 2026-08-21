@@ -43,7 +43,7 @@ This policy applies to staff who register, admit, treat, counsel, bill, take con
 
 It covers 4 objective elements (PRE.6.a, PRE.6.b, PRE.6.c, PRE.6.d).
 
-Boundaries: do not copy SHCO PRE wording. Do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -61,7 +61,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 The patient and / or family members are made aware of the pricing pol...
+### 5.1 The patient and / or family members are made aware of the pricing...
 
 Pricing-policy components — consultation charges, bed charges, nursing charges, security deposit — are available near registration and/or the admission desk for out-patient, emergency, ICU and in-patient settings, based on the billing policy.
 
@@ -87,7 +87,7 @@ The estimate is filed in the patient account / medical record. 'We'll see at dis
 
 Method note (from guidebook interpretation): Patients shall be given an estimate of the expenses on account of the treatment, preferably in a written form. This estimate shall be prepared based on the treatment plan. It could be prepared by the OPD/Registration/Admission staff in consultation with the treating doctor. The limitations of the estimate if any (for example emergency admissions) could also be discussed with the patient.
 
-### 5.4 Patient and/or family are informed about the financial implications w...
+### 5.4 Patient and/or family are informed about the financial implications...
 
 When the care plan changes in a way that affects cost — shift to or from ICU, medical to surgical management, further expensive investigations — the patient and/or family are informed of the financial implication before the change is treated as agreed (emergencies: as soon as practicable).
 
@@ -112,14 +112,13 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE PRE.6.a–d.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (a) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related rights incident, consent failure or complaint cluster.
 
@@ -180,28 +179,27 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### PRE.6.a — The patient and / or family members are made aware of the pricing policy in different settings (out-patient, emergency, ICU and in-patient).
 
-- Records showing PRE.6.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.6.a reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Displayed pricing-policy components at the registration or admission desk for OP, emergency, ICU and IP settings.
+- Current-version record kept by the Patient Accounts In-Charge.
+- Confirmation the policy is visible at the desk, not only held in accounts.
 
 ### PRE.6.b — The relevant tariff list is available to patients.
 
-- Records showing PRE.6.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.6.b reviewed «quarterly».
+- Current dated tariff list available to patients.
+- Charge-versus-tariff reconciliation record.
+- Confirmation no undisclosed additional charge was applied.
 
 ### PRE.6.c — The patient and/or family members are explained about the expected costs.
 
-- Records showing PRE.6.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.6.c reviewed «quarterly».
+- Written treatment-cost estimate on file, prepared in consultation with the treating doctor.
+- Record of limitations discussed (for example emergency admission).
+- Estimate filed in the patient account or medical record.
 
 ### PRE.6.d — Patient and/or family are informed about the financial implications when there is a change in the care plan.
 
-- Records showing PRE.6.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PRE.6.d reviewed «quarterly».
+- Revised-estimate record when the care plan changes cost materially (ICU shift, medical-to-surgical, expensive investigation).
+- Timing record confirming the patient or family was informed before or as soon as practicable after the change.
+- Confirmation no surprise discharge charge occurred for a known plan change.
 
 ## Disclaimer
 

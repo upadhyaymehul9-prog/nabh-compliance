@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 6 objective elements (MOM.2.a, MOM.2.b, MOM.2.c, MOM.2.d, MOM.2.e, MOM.2.f).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -53,7 +53,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: A list of medications appropriate for the patients and as per the scope of the organisation's clinical serv...
+1. Do not skip: A list of medications appropriate for the patients and as per the scope of the organisation's clinical...
 2. Do not skip: The list is reviewed and updated collaboratively by the multi-disciplinary committee at least annually.
 3. Do not skip: The current formulary is available for clinicians to refer to.
 4. Do not skip: The clinicians adhere to the current formulary.
@@ -63,7 +63,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 A list of medications appropriate for the patients and as per the sco...
+### 5.1 A list of medications appropriate for the patients and as per the scope...
 
 The «Drug and Therapeutics Committee» develops the hospital formulary: the list of medications appropriate for the patients Preview Hospital actually treats, matched to the defined clinical scope (AAC.1). The list is built collaboratively — pharmacy proposes; clinicians from the services that use the drugs agree; nursing flags administration constraints.
 
@@ -73,7 +73,7 @@ Method note (from guidebook interpretation): The multidisciplinary committee sha
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.2 The list is reviewed and updated collaboratively by the multi-discipl...
+### 5.2 The list is reviewed and updated collaboratively by the...
 
 The «Drug and Therapeutics Committee» reviews the formulary at least «annually» and whenever a service is added or withdrawn. Additions, deletions and restrictions are minuted with a clinical reason.
 
@@ -97,7 +97,7 @@ Pharmacy flags non-formulary prescribing to the «Medication Safety Officer». R
 
 Method note (from guidebook interpretation): The organisation shall ensure that prescriptions are as per the formulary. It shall monitor the frequency of prescriptions being rejected/local purchase done because it contained non-formulary drugs. = Commitment = Achievement Excellence.
 
-### 5.5 The organisation adheres to the procedure for the acquisition of form...
+### 5.5 The organisation adheres to the procedure for the acquisition of...
 
 Formulary medications are acquired through the organisation's written procurement procedure: approved supplier, quality checks on receipt, batch and expiry recorded, and storage handed to pharmacy.
 
@@ -107,7 +107,7 @@ Method note (from guidebook interpretation): The procedure shall address the iss
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.6 The organisation adheres to the procedure to obtain medications not l...
+### 5.6 The organisation adheres to the procedure to obtain medications not...
 
 A medication not on the formulary is obtained only through a written non-formulary request: clinical justification, approval by «the treating consultant and the Pharmacy In-Charge or DTC chair», and a record of source, batch and indication.
 
@@ -137,14 +137,14 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE MOM.2.a–f.
-- Asterisked elements (ef) have document evidence as required.
-- CORE elements (a) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event or recall.
 
@@ -207,42 +207,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### MOM.2.a — A list of medications appropriate for the patients and as per the scope of the organisation's clinical services is developed collaboratively by the multi-disciplinary committee.
 
-- Records showing MOM.2.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.2.a reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Formulary list built collaboratively by pharmacy, clinicians and nursing, matched to the defined clinical scope (AAC.1).
+- Formulary entries recording generic name, strength, dosage form and high-risk flag.
+- Medical Superintendent's approval record for the first issue.
 
 ### MOM.2.b — The list is reviewed and updated collaboratively by the multi-disciplinary committee at least annually.
 
-- Records showing MOM.2.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.2.b reviewed «quarterly».
+- Annual formulary review record with additions, deletions and restrictions minuted with clinical reason.
+- Urgent-addition or shortage-substitution record ratified at the next meeting.
+- Dated current-formulary cover record.
 
 ### MOM.2.c — The current formulary is available for clinicians to refer to.
 
-- Records showing MOM.2.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.2.c reviewed «quarterly».
+- Formulary availability record at prescribing locations — OPD, wards, ICU, emergency, OT, HIS/intranet.
+- Outdated-copy removal record when a new version is issued.
+- Quarterly availability spot-check record by the Quality Coordinator.
 
 ### MOM.2.d — The clinicians adhere to the current formulary.
 
-- Records showing MOM.2.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.2.d reviewed «quarterly».
+- Prescription-versus-formulary audit record.
+- Non-formulary-prescribing flag record from pharmacy to the Medication Safety Officer.
+- DTC record of any department's repeated non-adherence tabled for review.
 
 ### MOM.2.e — The organisation adheres to the procedure for the acquisition of formulary medications.
 
-- Records showing MOM.2.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.2.e reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Procurement record showing approved supplier, receipt quality checks, batch and expiry logged.
+- Rejected-delivery record for any item failing identity, integrity or cold-chain check.
+- Cross-reference to the MOM.1.d stock-out procedure for any off-procedure purchase.
 
 ### MOM.2.f — The organisation adheres to the procedure to obtain medications not listed in the formulary.
 
-- Records showing MOM.2.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.2.f reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written non-formulary request record — clinical justification, approval, source, batch and indication.
+- Formulary-amendment consideration record where an item is needed routinely.
+- Same-shift retrospective documentation record for emergency non-formulary use.
 
 ## Disclaimer
 

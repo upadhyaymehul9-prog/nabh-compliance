@@ -43,7 +43,7 @@ This policy applies to those responsible for governance, the person heading the 
 
 It covers 6 objective elements (ROM.6.a, ROM.6.b, ROM.6.c, ROM.6.d, ROM.6.e, ROM.6.f).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -55,9 +55,9 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 1. Do not skip: Leadership ensures proactive risk management across the organisation.
 2. Do not skip: Leadership provides resources for proactive risk-assessment and risk- reduction activities.
-3. Do not skip: Leadership ensures integration between quality improvement, risk- management and strategic planning within ...
-4. Do not skip: Leadership ensures implementation of systems for internal and external reporting of system and process fail...
-5. Do not skip: Leadership ensures that it has a documented agreement for all outsourced services that include service para...
+3. Do not skip: Leadership ensures integration between quality improvement, risk- management and strategic planning within...
+4. Do not skip: Leadership ensures implementation of systems for internal and external reporting of system and process...
+5. Do not skip: Leadership ensures that it has a documented agreement for all outsourced services that include service...
 6. Do not skip: Leadership monitors the quality of the outsourced services and improvements are made as required.
 7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
 8. Staff who see a ROM.6 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».
@@ -84,7 +84,7 @@ The «Medical Superintendent» signs the resource line. A risk system with no ti
 
 Method note (from guidebook interpretation): There shall be sufficient resources kept as a contingency to address the risk reduction activities as and when the leaders proactively suggest. These shall be directed at preventive actions wherever feasible. Refer to the glossary for a definition of “risk assessment” and “risk reduction”.
 
-### 5.3 Leadership ensures integration between quality improvement, risk- man...
+### 5.3 Leadership ensures integration between quality improvement, risk-...
 
 Leadership ensures integration between quality improvement, risk management and strategic planning: risk and quality findings feed the plan; the plan names risk and quality work.
 
@@ -92,7 +92,7 @@ The «Quality Coordinator» shows the join in the «Quality Improvement Committe
 
 Method note (from guidebook interpretation): The leadership ensures that strategic planning incorporates risk management aspects in its strategic plan. Further, quality improvement shall also incorporate risk management aspects. Refer to PSQ.2.a.
 
-### 5.4 Leadership ensures implementation of systems for internal and externa...
+### 5.4 Leadership ensures implementation of systems for internal and external...
 
 Leadership ensures systems for internal and external reporting of system and process failures (what is reported, to whom inside, and to which external agency when required, with timelines). The Guidebook example: MRI breakdown is reported internally to the head and to patients; a radiation-source event is reported to AERB; fire needs strong internal and external reporting.
 
@@ -102,7 +102,7 @@ Method note (from guidebook interpretation): The organisation has a system in pl
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.5 Leadership ensures that it has a documented agreement for all outsour...
+### 5.5 Leadership ensures that it has a documented agreement for all...
 
 Leadership ensures a documented agreement for every outsourced service, including service parameters (quality, numbers, reports, timelines) and how disputes are resolved. An affiliate or group firm still has an agreement.
 
@@ -110,7 +110,7 @@ Starting or continuing outsourced work without that agreement is a stop-work tri
 
 Method note (from guidebook interpretation): The agreement shall specify the service parameters. Examples of service parameters include quality, numbers, reports and timelines. The agreement shall include agreed dispute resolution mechanisms. Even if a group/affiliate firm is providing services, there shall be an agreement with that unit.
 
-### 5.6 Leadership monitors the quality of the outsourced services and improv...
+### 5.6 Leadership monitors the quality of the outsourced services and...
 
 Leadership monitors the quality of outsourced services against the agreement at least «annually» (more often if the service is critical to patient care) and makes improvements with the vendor as required.
 
@@ -148,14 +148,14 @@ departmental leaders
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE ROM.6.a–f.
-- Asterisked elements (ad) have document evidence as required.
-- CORE elements (a) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related governance change, statutory-register gap or outsourced-service failure.
 
@@ -216,42 +216,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### ROM.6.a — Leadership ensures proactive risk management across the organisation.
 
-- Records showing ROM.6.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.6.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Risk-management system document.
+- Risk register showing identified clinical and organisational risks (for example falls, infection, vulnerable-patient risks such as DVT, clinical alarms).
+- Assessment, action and review log for a sample of risks on the register.
 
 ### ROM.6.b — Leadership provides resources for proactive risk-assessment and risk- reduction activities.
 
-- Records showing ROM.6.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.6.b reviewed «quarterly».
+- Budget or resource-allocation record for risk-assessment and risk-reduction activity.
+- Training record for staff involved in risk activities.
+- Contingency-allocation evidence for preventive action.
 
 ### ROM.6.c — Leadership ensures integration between quality improvement, risk- management and strategic planning within the organisation.
 
-- Records showing ROM.6.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.6.c reviewed «quarterly».
+- Quality Improvement Committee minutes showing risk findings feeding the plan.
+- Strategic plan referencing risk-management and quality work.
+- Governance pack showing the link between risk, quality and planning.
 
 ### ROM.6.d — Leadership ensures implementation of systems for internal and external reporting of system and process failures.
 
-- Records showing ROM.6.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.6.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Reporting-system document naming what is reported, to whom internally, and to which external agency, with timelines.
+- Sampled internal and external failure reports (for example equipment breakdown, an external-agency notification such as AERB for a radiation-source event).
+- Tested service-continuity plan covering fire and non-fire emergencies for critical operations.
 
 ### ROM.6.e — Leadership ensures that it has a documented agreement for all outsourced services that include service parameters.
 
-- Records showing ROM.6.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.6.e reviewed «quarterly».
+- Signed agreement for each outsourced service naming service parameters (quality, numbers, reports, timelines) and dispute-resolution method.
+- Current list of outsourced services.
+- Evidence any affiliate or group-firm arrangement also has an agreement on file.
 
 ### ROM.6.f — Leadership monitors the quality of the outsourced services and improvements are made as required.
 
-- Records showing ROM.6.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for ROM.6.f reviewed «quarterly».
+- Periodic quality-monitoring review per outsourced service, at a frequency matched to how critical that service is.
+- Vendor improvement-action record where a gap was found.
+- Documented exemption record for any service outsourced solely under prescribed statutory norms (where the Guidebook does not require monitoring).
 
 ## Disclaimer
 

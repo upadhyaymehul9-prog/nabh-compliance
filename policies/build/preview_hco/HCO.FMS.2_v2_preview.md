@@ -43,7 +43,7 @@ This policy applies to engineering, biomedical, nursing and departmental leaders
 
 It covers 6 objective elements (FMS.2.a, FMS.2.b, FMS.2.c, FMS.2.d, FMS.2.e, FMS.2.f).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -55,7 +55,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 1. Do not skip: Facilities and space provisions are appropriate to the scope of services.
 2. Do not skip: As built and updated drawings are maintained as per statutory requirements.
-3. Do not skip: There are internal and external sign postings in the organisation in a manner understood by the patient, fa...
+3. Do not skip: There are internal and external sign postings in the organisation in a manner understood by the patient...
 4. Do not skip: Potable water and electricity are available round the clock.
 5. Do not skip: Alternate sources for electricity and water are provided as a backup for any failure / shortage.
 6. Do not skip: The organisation tests the functioning of these alternate sources at a predefined frequency.
@@ -72,7 +72,7 @@ The «Engineering In-Charge» and «Medical Superintendent» keep the current sp
 
 Method note (from guidebook interpretation): The basis of the appropriateness of facilities and space provisions will be as per the national/international guidelines. For example, regulatory requirements, the directive of Government agencies like AERB guidelines. The organisation endeavours to upgrade its physical infrastructure to meet national and international guidelines. The infrastructure and equipment shall be upgraded, commensurate with the scope and complexities of functioning.
 
-### 5.2 As built and updated drawings are maintained as per statutory require...
+### 5.2 As built and updated drawings are maintained as per statutory...
 
 As-built and updated drawings are maintained as required by the applicable registering authority for this site: site layout, floor plans, floor-wise fire-evacuation plans, and separate civil, electrical, extra-low-voltage, plumbing, heating-ventilation-air-conditioning, piped medical-gas and information-technology drawings.
 
@@ -80,7 +80,7 @@ A named person under the «Engineering In-Charge» holds the current set. This e
 
 Method note (from guidebook interpretation): A designated person maintains as built and updated site layout, floor drawings, floor wise fire evacuation plans, separate civil, electrical, extra low voltage (ELV), plumbing, HVAC piped medical gas drawings and IT network.
 
-### 5.3 There are internal and external sign postings in the organisation in ...
+### 5.3 There are internal and external sign postings in the organisation in a...
 
 Internal and external sign posting is in a manner patients, families and the community understand (language and/or pictorial; bilingual where this hospital defines). Signs meet applicable statutory posting rules for this site.
 
@@ -100,7 +100,7 @@ Method note (from guidebook interpretation): The organisation shall make arrange
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.5 Alternate sources for electricity and water are provided as a backup ...
+### 5.5 Alternate sources for electricity and water are provided as a backup...
 
 Alternate sources for electricity and water are provided as backup for any failure or shortage (diesel generator, solar, uninterruptible power supply; bore or tanker or extra tanks as this hospital names). Electric load matches demand. National Building Code is a reference for water quantity, not a paste of every clause.
 
@@ -108,7 +108,7 @@ The «Engineering In-Charge» owns the backup list. Critical areas have a named 
 
 Method note (from guidebook interpretation): The organisation shall ensure that there is sufficient water supply to meet the requirements. The electric load shall be appropriate to the requirements of the organisation and adhere to the regulatory requirements. Alternate sources for water and electricity shall be made available all the times. A good reference for estimating the water requirement is the National Building Code. Alternate electric supply could be from DG sets, solar energy, UPS and any other suitable source. The organisation identifies and mitigates the risk of critical areas/services during electrical supply failure, or when water is contaminated or interrupted. In case of electrical supply through alternate sources (Diesel generator or uninterrupted power supply), the capacity and longevity of power availability based on usage are considered. Alternate source of water can be bore/open well, supply through water tanker or extra storage tanks.
 
-### 5.6 The organisation tests the functioning of these alternate sources at ...
+### 5.6 The organisation tests the functioning of these alternate sources at a...
 
 The organisation tests these alternate sources at a predefined frequency (default «monthly» for the diesel generator and a documented water-acceptance test when an emergency source is used). Results are recorded. Refer to FMS.2.d for water quality.
 
@@ -140,14 +140,13 @@ departmental leaders
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE FMS.2.a–f.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (cd) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related facility change, utility failure, equipment recall or fire-plan change.
 
@@ -213,41 +212,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### FMS.2.a — Facilities and space provisions are appropriate to the scope of services.
 
-- Records showing FMS.2.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.2.a reviewed «quarterly».
+- Current space-versus-services map for each department.
+- National or international guidance reference used (for example AERB guidance for a radiation area).
+- Escalation record for any service listed without matching space.
 
 ### FMS.2.b — As built and updated drawings are maintained as per statutory requirements.
 
-- Records showing FMS.2.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.2.b reviewed «quarterly».
+- Current as-built and updated drawing set: site layout, floor plans, floor-wise evacuation plans, and separate civil, electrical, ELV, plumbing, HVAC, medical-gas and IT drawings.
+- Named custodian record for the drawing set.
+- Date of last update against a facility change.
 
 ### FMS.2.c — There are internal and external sign postings in the organisation in a manner understood by the patient, families and community.
 
-- Records showing FMS.2.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.2.c reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Signage inventory or walk log by area, noting language and/or pictorial form and bilingual coverage.
+- Statutory posting-requirement reference applicable to this site.
+- Quarterly signage-walk record.
 
 ### FMS.2.d — Potable water and electricity are available round the clock.
 
-- Records showing FMS.2.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.2.d reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Potable-water test results: biochemical at least quarterly and microbiological at least monthly, against IS 10500.
+- Dialysis reverse-osmosis inlet-water endotoxin test record, where dialysis is in scope.
+- Continuity log confirming no unplanned water or power outage in a care area without the FMS.7 continuity plan activating.
 
 ### FMS.2.e — Alternate sources for electricity and water are provided as a backup for any failure / shortage.
 
-- Records showing FMS.2.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.2.e reviewed «quarterly».
+- Backup-source inventory: diesel generator, solar, uninterruptible power supply, bore/tanker/extra tanks as named.
+- Electric-load calculation matching demand.
+- Continuity-action record naming each critical area's backup path.
 
 ### FMS.2.f — The organisation tests the functioning of these alternate sources at a predefined frequency.
 
-- Records showing FMS.2.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.2.f reviewed «quarterly».
+- Diesel-generator test log at the defined frequency (default monthly).
+- Water-acceptance test record for any occasion an emergency water source was used.
+- Corrective-action record for any failed alternate-source test.
 
 ## Disclaimer
 

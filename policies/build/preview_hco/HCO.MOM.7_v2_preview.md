@@ -43,7 +43,7 @@ This policy applies to staff who prescribe, dispense, administer, store, monitor
 
 It covers 11 objective elements (MOM.7.a, MOM.7.b, MOM.7.c, MOM.7.d, MOM.7.e, MOM.7.f, MOM.7.g, MOM.7.h, MOM.7.i, MOM.7.j, MOM.7.k).
 
-Boundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -93,7 +93,7 @@ Asking only the attendant, or matching the bed number alone, is not identificati
 
 Method note (from guidebook interpretation): At a minimum, two identifiers shall be used for patient identification, with one of them being the unique identification number (for example hospital number/IP number, etc.) and full name of the patient. Refer to COP.1.b.
 
-### 5.4 Medication is verified from the medication order and physically inspe...
+### 5.4 Medication is verified from the medication order and physically...
 
 Before administration the person checks the labelled product against the medication order (right drug) and physically inspects it (clarity, integrity, expiry, correct formulation). A mismatch or defect stops administration.
 
@@ -123,7 +123,7 @@ Timing is verified from the order before administration: scheduled time, interva
 
 Method note (from guidebook interpretation): The organisation shall have documentation to support the time of administration of drugs for which the time has not been written. For example, 1-1-1, BD etc. The suggested timings for these medicines have to be adhered. “ISMP Acute Care Guidelines for Timely Administration of Scheduled Medications” provide guidance on scheduling medications and classifies them into time-critical and non-time-critical. The organisation could adopt/adapt the same.
 
-### 5.8 Measures to avoid catheter and tubing mis-connections during medicati...
+### 5.8 Measures to avoid catheter and tubing mis-connections during medication...
 
 Before injecting or infusing into a catheter or tubing, staff trace the line from the patient to the source, confirm the intended lumen, and label lines where more than one lumen or device is in use.
 
@@ -143,7 +143,7 @@ Documentation is not left to the end of the shift. The portal PDF prints this ob
 
 Method note (from guidebook interpretation): The organisation shall ensure that documentation of medication administration is done in a uniform location. It shall include the name of the medication, strength, route of administration, timing and the name/employee ID number and signature of the person who has administered the medication. Medicines administered shall be documented each time for each dose of the same medication separately. The records shall reflect the actual administration. For example, if brand Y was given in place of brand X (same generically), the documentation shall be of brand Y. Similarly, if the order was for a tablet of 250 mg, but the administration was /2a tablet of 500 mg, the latter shall be documented. In the case of infusions, it shall capture the start time, the rate/volume of infusion and end time. In case of continuous infusion, the drop rate/volume shall be documented and the total volume infused shall be calculated for each shift. = Commitment = Achievement = Excellence.
 
-### 5.10 Measures to govern patient's self-administration of medications are i...
+### 5.10 Measures to govern patient's self-administration of medications are...
 
 Patients self-administer medications only under written measures: the «Drug and Therapeutics Committee» / treating team decides when self-administration is allowed, which drugs, how they are stored at the bedside, and how nursing still records that the dose was taken.
 
@@ -153,7 +153,7 @@ Method note (from guidebook interpretation): At the outset, the organisation cou
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.11 Measures to govern patient's medications brought from outside the org...
+### 5.11 Measures to govern patient's medications brought from outside the...
 
 Medications brought from outside are declared at admission, identified by pharmacy or the treating doctor, and either taken into a documented patient's-own-medicines process (labelled, stored securely, ordered on the chart) or sent home / stored away from the bedside.
 
@@ -193,14 +193,14 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE MOM.7.a–k.
-- Asterisked elements (hjk) have document evidence as required.
-- CORE elements (dh) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event or recall.
 
@@ -268,74 +268,69 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### MOM.7.a — Medications are administered by those who are permitted by law to do so.
 
-- Records showing MOM.7.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.7.a reviewed «quarterly».
+- Authorised-administration-personnel list held by the Nursing Superintendent and Medical Superintendent.
+- Documented-supervision record for student administration.
+- Confirmation no unlisted person administered a drug.
 
 ### MOM.7.b — Prepared medication is labelled before preparation of a second drug.
 
-- Records showing MOM.7.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.7.b reviewed «quarterly».
+- Prepared-medication labelling record — drug, strength, patient, route, time prepared — before a second drug preparation.
+- Observation record confirming no two unlabelled syringes on one tray.
+- Applicability record across OT, ICU, emergency and wards.
 
 ### MOM.7.c — The patient is identified before administration.
 
-- Records showing MOM.7.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.7.c reviewed «quarterly».
+- Patient-identification record using at least two identifiers immediately before administration.
+- Confirmation identification was not based on bed number or attendant statement alone.
+- Stopped-administration record where identity could not be confirmed.
 
 ### MOM.7.d — Medication is verified from the medication order and physically inspected before administration.
 
-- Records showing MOM.7.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.7.d reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Medication-verification-against-order record before administration.
+- Physical-inspection record — clarity, integrity, expiry, formulation.
+- Stopped-administration record for a mismatch or defect found.
 
 ### MOM.7.e — Strength is verified from the order before administration.
 
-- Records showing MOM.7.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.7.e reviewed «quarterly».
+- Strength/dose verification-from-order record, including calculation check for weight-based or infusion doses.
+- Second-check record for high-risk medications.
+- Confirmation no bedside conversion occurred outside a documented pharmacy-prepared change.
 
 ### MOM.7.f — The route is verified from the order before administration.
 
-- Records showing MOM.7.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.7.f reviewed «quarterly».
+- Route-verification-from-order record before administration.
+- Confirmation oral products were not given intravenously.
+- Stopped-administration record for a route mismatch.
 
 ### MOM.7.g — Timing is verified from the order before administration.
 
-- Records showing MOM.7.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.7.g reviewed «quarterly».
+- Timing-verification-from-order record — scheduled time, interval, hold instructions.
+- Prescriber-review record for a dose given outside the allowed window, except documented emergency use.
+- Administration-time entry on the medication chart.
 
 ### MOM.7.h — Measures to avoid catheter and tubing mis-connections during medication administration are implemented.
 
-- Records showing MOM.7.h was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.7.h reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Line-tracing record from patient to source before injecting or infusing into a catheter or tubing.
+- Line-labelling record where more than one lumen or device is in use.
+- Training record for ICU, OT, emergency and ward staff on catheter/tubing mis-connection prevention.
 
 ### MOM.7.i — Medication administration is documented.
 
-- Records showing MOM.7.i was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.7.i reviewed «quarterly».
+- Medication-chart documentation record at time of giving — drug, dose, route, time, administrator identifier.
+- Omitted or held-dose record with reason.
+- Confirmation documentation was not left to end of shift.
 
 ### MOM.7.j — Measures to govern patient's self-administration of medications are implemented.
 
-- Records showing MOM.7.j was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.7.j reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written self-administration measures naming which drugs, bedside storage and nursing-recording method.
+- DTC or treating-team decision record on when self-administration is allowed.
+- Confirmation no uncontrolled bedside hoarding of hospital stock occurred.
 
 ### MOM.7.k — Measures to govern patient's medications brought from outside the organisation shall be implemented.
 
-- Records showing MOM.7.k was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for MOM.7.k reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Declared-outside-medication record at admission.
+- Pharmacy or treating-doctor identification record for the brought-in medication.
+- Patient's-own-medicines documentation — labelled, stored securely, charted — or sent-home record.
 
 ## Disclaimer
 

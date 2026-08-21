@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.12
 
 It covers 8 objective elements (COP.12.a, COP.12.b, COP.12.c, COP.12.d, COP.12.e, COP.12.f, COP.12.g, COP.12.h).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -55,7 +55,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 2. Do not skip: Informed consent for administration of procedural sedation is obtained.
 3. Do not skip: Competent and trained persons administer procedural sedation.
 4. Do not skip: The person monitoring sedation is different from the person performing the procedure.
-5. Do not skip: Intra-procedure monitoring includes at a minimum the heart rate, cardiac rhythm, respiratory rate, blood pr...
+5. Do not skip: Intra-procedure monitoring includes at a minimum the heart rate, cardiac rhythm, respiratory rate, blood...
 6. Do not skip: Patients are monitored after procedural sedation, and the same is documented.
 7. Do not skip: Criteria are used to determine the appropriateness of discharge from the observation / recovery area.
 8. Do not skip: Equipment and workforce are available to manage patients who have gone into a deeper level of sedation than...
@@ -82,31 +82,31 @@ Competent and trained persons administer procedural sedation.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.4 The person monitoring sedation is different from the person performin..
+### 5.4 The person monitoring sedation is different from the person performing..
 
 The person monitoring sedation is different from the person performing the procedure.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.5 Intra-procedure monitoring includes at a minimum the heart rate, card..
+### 5.5 Intra-procedure monitoring includes at a minimum the heart rate..
 
 Intra-procedure monitoring includes at a minimum the heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation, and level of sedation.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.6 Patients are monitored after procedural sedation, and the same is doc..
+### 5.6 Patients are monitored after procedural sedation, and the same is..
 
 Patients are monitored after procedural sedation, and the same is documented.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.7 Criteria are used to determine the appropriateness of discharge from ..
+### 5.7 Criteria are used to determine the appropriateness of discharge from..
 
 Criteria are used to determine the appropriateness of discharge from the observation / recovery area.
 
 Method note (from guidebook interpretation): Criteria shall be developed and documented by the organisation
 
-### 5.8 Equipment and workforce are available to manage patients who have gon..
+### 5.8 Equipment and workforce are available to manage patients who have gone..
 
 Equipment and workforce are available to manage patients who have gone into a deeper level of sedation than initially intended.
 
@@ -136,14 +136,13 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.12.a–h.
-- Asterisked elements (ag) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -203,53 +202,51 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.12.a — Procedural sedation is administered in a consistent manner.
 
-- Records showing COP.12.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.12.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written procedural-sedation protocol.
+- Consistency-check record across sedation locations.
+- Staff-training record.
 
 ### COP.12.b — Informed consent for administration of procedural sedation is obtained.
 
-- Records showing COP.12.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.12.b reviewed «quarterly».
+- Sedation-specific consent form on file.
+- Consent-process documentation.
+- Cross-reference to PRE.4.
 
 ### COP.12.c — Competent and trained persons administer procedural sedation.
 
-- Records showing COP.12.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.12.c reviewed «quarterly».
+- Sedation-privileging or training record for personnel administering sedation.
+- Competency-verification record.
+- Currency-of-training record.
 
 ### COP.12.d — The person monitoring sedation is different from the person performing the procedure.
 
-- Records showing COP.12.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.12.d reviewed «quarterly».
+- Role-separation record — monitoring person distinct from the procedure performer.
+- Staffing record for a sampled sedation case.
+- Confirmation of role separation in practice.
 
 ### COP.12.e — Intra-procedure monitoring includes at a minimum the heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation, and level of sedation.
 
-- Records showing COP.12.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.12.e reviewed «quarterly».
+- Intra-procedure monitoring record — heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation, sedation level.
+- Monitoring-frequency documentation.
+- Equipment-availability record.
 
 ### COP.12.f — Patients are monitored after procedural sedation, and the same is documented.
 
-- Records showing COP.12.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.12.f reviewed «quarterly».
+- Post-sedation monitoring record.
+- Documentation-completeness check.
+- Recovery-status tracking record.
 
 ### COP.12.g — Criteria are used to determine the appropriateness of discharge from the observation / recovery area.
 
-- Records showing COP.12.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.12.g reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written discharge or recovery criteria for sedation.
+- Criteria-application record for a sampled discharge.
+- Discharge-authorisation record.
 
 ### COP.12.h — Equipment and workforce are available to manage patients who have gone into a deeper level of sedation than initially intended.
 
-- Records showing COP.12.h was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.12.h reviewed «quarterly».
+- Rescue-equipment inventory for deeper-than-intended sedation.
+- Trained-workforce availability record for airway rescue.
+- Emergency-response record for a sampled deeper-sedation event.
 
 ## Disclaimer
 

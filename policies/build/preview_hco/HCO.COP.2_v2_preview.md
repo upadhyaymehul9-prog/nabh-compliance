@@ -41,7 +41,7 @@ This policy applies to staff who deliver or oversee the care described in COP.2 
 
 It covers 9 objective elements (COP.2.a, COP.2.b, COP.2.c, COP.2.d, COP.2.e, COP.2.f, COP.2.g, COP.2.h, COP.2.i).
 
-Boundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.
+Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
@@ -51,13 +51,13 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: There shall be an identified area in the organisation which is easily accessible to receive and manage emer...
+1. Do not skip: There shall be an identified area in the organisation which is easily accessible to receive and manage...
 2. Do not skip: Prevention of patient over-crowding is planned and crowd management measures are implemented.
-3. Do not skip: Emergency care is provided in consonance with statutory requirements including medico-legal cases and as pe...
+3. Do not skip: Emergency care is provided in consonance with statutory requirements including medico-legal cases and as per...
 4. Do not skip: Initiation of appropriate care is guided by a system of triage.
 5. Do not skip: Patients waiting in the emergency are re-assessed as appropriate for the change in status.
 6. Do not skip: Admission, discharge to home or transfer to another organisation is documented.
-7. Do not skip: In case of discharge to home or transfer to another organisation, a discharge / transfer note shall be give...
+7. Do not skip: In case of discharge to home or transfer to another organisation, a discharge / transfer note shall be given...
 8. Do not skip: The organisation shall implement a quality assurance programme.
 9. Do not skip: The organisation has systems in place for the management of patients found dead on arrival and patients who...
 10. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
@@ -71,13 +71,13 @@ There shall be an identified area in the organisation which is easily accessible
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.2 Prevention of patient over-crowding is planned and crowd management m..
+### 5.2 Prevention of patient over-crowding is planned and crowd management..
 
 Prevention of patient over-crowding is planned and crowd management measures are implemented.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.3 Emergency care is provided in consonance with statutory requirements ..
+### 5.3 Emergency care is provided in consonance with statutory requirements..
 
 Emergency care is provided in consonance with statutory requirements including medico-legal cases and as per written guidance.
 
@@ -91,19 +91,19 @@ Initiation of appropriate care is guided by a system of triage.
 
 Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
 
-### 5.5 Patients waiting in the emergency are re-assessed as appropriate for ..
+### 5.5 Patients waiting in the emergency are re-assessed as appropriate for..
 
 Patients waiting in the emergency are re-assessed as appropriate for the change in status.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.6 Admission, discharge to home or transfer to another organisation is d..
+### 5.6 Admission, discharge to home or transfer to another organisation is..
 
 Admission, discharge to home or transfer to another organisation is documented.
 
 Staff follow the written guidance and record the action in the medical record or the department register named for this element.
 
-### 5.7 In case of discharge to home or transfer to another organisation, a d..
+### 5.7 In case of discharge to home or transfer to another organisation, a..
 
 In case of discharge to home or transfer to another organisation, a discharge / transfer note shall be given to the patient.
 
@@ -115,7 +115,7 @@ The organisation shall implement a quality assurance programme.
 
 Method note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.
 
-### 5.9 The organisation has systems in place for the management of patients ..
+### 5.9 The organisation has systems in place for the management of patients..
 
 The organisation has systems in place for the management of patients found dead on arrival and patients who die within a few minutes of arrival.
 
@@ -147,14 +147,14 @@ Quality Coordinator
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE COP.2.a–i.
-- Asterisked elements (cdhi) have document evidence as required.
-- CORE elements (c) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related adverse event.
 
@@ -215,61 +215,57 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### COP.2.a — There shall be an identified area in the organisation which is easily accessible to receive and manage emergency patients, with adequate and appropriate resources.
 
-- Records showing COP.2.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.2.a reviewed «quarterly».
+- Emergency-area location and resource-inventory record.
+- Accessibility-confirmation record.
+- Resource-adequacy check against service scope.
 
 ### COP.2.b — Prevention of patient over-crowding is planned and crowd management measures are implemented.
 
-- Records showing COP.2.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.2.b reviewed «quarterly».
+- Written overcrowding-management plan.
+- Crowd-management measure implementation record.
+- Overcrowding-incident log and response record.
 
 ### COP.2.c — Emergency care is provided in consonance with statutory requirements including medico-legal cases and as per written guidance.
 
-- Records showing COP.2.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.2.c reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written emergency-care guidance covering medico-legal case handling.
+- Medico-legal case register with statutory-notification record.
+- Staff training record on the medico-legal case procedure.
 
 ### COP.2.d — Initiation of appropriate care is guided by a system of triage.
 
-- Records showing COP.2.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.2.d reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written triage protocol or system document.
+- Triage-category assignment record for a sampled patient.
+- Triage-training record for emergency staff.
 
 ### COP.2.e — Patients waiting in the emergency are re-assessed as appropriate for the change in status.
 
-- Records showing COP.2.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.2.e reviewed «quarterly».
+- Re-assessment record for a waiting emergency patient.
+- Documented trigger or frequency for re-assessment.
+- Status-change escalation record.
 
 ### COP.2.f — Admission, discharge to home or transfer to another organisation is documented.
 
-- Records showing COP.2.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.2.f reviewed «quarterly».
+- Documented admission, discharge-to-home or transfer record.
+- Disposition-decision documentation.
+- Record-completeness check.
 
 ### COP.2.g — In case of discharge to home or transfer to another organisation, a discharge / transfer note shall be given to the patient.
 
-- Records showing COP.2.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.2.g reviewed «quarterly».
+- Discharge or transfer note issued to the patient, on file.
+- Content-completeness record — diagnosis, treatment given, follow-up.
+- Receiving-organisation transfer-note record, where applicable.
 
 ### COP.2.h — The organisation shall implement a quality assurance programme.
 
-- Records showing COP.2.h was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.2.h reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written emergency-department quality assurance programme.
+- Indicator-monitoring record for the programme.
+- Improvement-action record from QA findings.
 
 ### COP.2.i — The organisation has systems in place for the management of patients found dead on arrival and patients who die within a few minutes of arrival.
 
-- Records showing COP.2.i was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for COP.2.i reviewed «quarterly».
-- Documented evidence specifically required by the asterisked interpretation.
+- Written system for managing patients found dead on arrival or who die within minutes of arrival.
+- Documentation record for a sampled such case.
+- Family-communication and statutory-notification record.
 
 ## Disclaimer
 

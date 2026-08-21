@@ -43,7 +43,7 @@ This policy applies to staff who deliver clinical care, run support services (ho
 
 It covers 9 objective elements (IPC.6.a, IPC.6.b, IPC.6.c, IPC.6.d, IPC.6.e, IPC.6.f, IPC.6.g, IPC.6.h, IPC.6.i).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -66,7 +66,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 The scope of surveillance incorporates tracking and analysing of infe...
+### 5.1 The scope of surveillance incorporates tracking and analysing of...
 
 Surveillance mixes active and passive methods and tracks infection risks, rates and trends for the HAIs and processes the «Infection Prevention and Control Committee» names (at least the HAIs in IPC.5 plus hand hygiene and BMW as applicable).
 
@@ -76,7 +76,7 @@ Method note (from guidebook interpretation): The organisation shall use a judici
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.2 Verification of data is done regularly by the infection prevention an...
+### 5.2 Verification of data is done regularly by the infection prevention and...
 
 The IPC team verifies surveillance data regularly — by reviewing each case or a defined sample — before rates are issued.
 
@@ -102,7 +102,7 @@ Method note (from guidebook interpretation): The monitoring shall be done at a m
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.5 Surveillance includes mechanisms to capture the occurrence of multi-d...
+### 5.5 Surveillance includes mechanisms to capture the occurrence of...
 
 Surveillance captures occurrence of multi-drug-resistant organisms (for example MRSA, VRE, carbapenem-resistant Enterobacterales as microbiology reports them). Infection vs colonisation is distinguished as the «Infection Prevention and Control Committee» defines.
 
@@ -110,7 +110,7 @@ The «Microbiologist» alerts the «Infection Prevention and Control Nurse» of 
 
 Method note (from guidebook interpretation): The organisation shall monitor the occurrence and spread of multi-drug resistant organisms (MDROs) for example methicillin-resistant Staphylococcus aureus (MRSA), multi-drug resistant gram-negative bacteria, Vancomycin-resistant enterococci (VRE) etc.
 
-### 5.6 Surveillance includes monitoring the effectiveness of housekeeping se...
+### 5.6 Surveillance includes monitoring the effectiveness of housekeeping...
 
 Effectiveness of housekeeping is monitored on a defined schedule (visual plus, where used, fluorescent marker or ATP as the «Infection Prevention and Control Committee» chooses) in high-risk and public areas.
 
@@ -120,7 +120,7 @@ Method note (from guidebook interpretation): Monitoring of the effectiveness of 
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.7 Feedback regarding surveillance data is provided regularly to the app...
+### 5.7 Feedback regarding surveillance data is provided regularly to the...
 
 Surveillance feedback — adherence rates, HAI rates, trends and opportunities — is given regularly to the healthcare providers who can act on it (unit in-charges, «Infection Prevention and Control Committee», treating doctors).
 
@@ -128,7 +128,7 @@ A rate that sits only in the IPC office is not feedback. The «Infection Prevent
 
 Method note (from guidebook interpretation): The feedback shall include the adherence rates, healthcare associated infection (HAI) rates, trends and opportunities for improvement, including data from other surveillance activities. It could also provide specific inputs to reduce the HAI rate. This could be in the form ofa bulletin/newsletter. I —h.
 
-### 5.8 The organisation identifies and takes appropriate action to control o...
+### 5.8 The organisation identifies and takes appropriate action to control...
 
 Outbreaks are defined using baseline rates. Written guidance names who declares an outbreak, isolation/cohorting, communication and when to call the statutory agency.
 
@@ -138,7 +138,7 @@ Method note (from guidebook interpretation): Surveillance shall help early ident
 
 This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
-### 5.9 Surveillance data is analysed and appropriate corrective and preventi...
+### 5.9 Surveillance data is analysed and appropriate corrective and preventive...
 
 The «Infection Prevention and Control Committee» analyses surveillance data and assigns corrective and preventive action with owners and due dates. The «Infection Prevention and Control Officer» tracks closure.
 
@@ -166,14 +166,14 @@ Quality Coordinator
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE IPC.6.a–i.
-- Asterisked elements (h) have document evidence as required.
-- CORE elements (adf) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related outbreak, sterilisation failure or exposure cluster.
 
@@ -246,61 +246,57 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### IPC.6.a — The scope of surveillance incorporates tracking and analysing of infection risks, rates and trends.
 
-- Records showing IPC.6.a was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.6.a reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Written surveillance scope naming tracked HAIs, processes and denominator rules.
+- Monthly rate-compilation record by the IPC Nurse.
+- IPC Committee presentation record.
 
 ### IPC.6.b — Verification of data is done regularly by the infection prevention and control team.
 
-- Records showing IPC.6.b was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.6.b reviewed «quarterly».
+- Case-level or sample verification record before rates are issued.
+- IPC Officer's monthly verification sign-off.
+- Confirmation unverified counts were not issued as official rates.
 
 ### IPC.6.c — Surveillance is directed towards the identified high-risk activities.
 
-- Records showing IPC.6.c was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.6.c reviewed «quarterly».
+- Surveillance record specific to each identified high-risk activity (OT, ICU, dialysis, CSSD, etc.).
+- High-risk-area breakout in the surveillance report.
+- Cross-reference to the IPC.1.b high-risk-activity list.
 
 ### IPC.6.d — Surveillance includes monitoring compliance with hand-hygiene guidelines.
 
-- Records showing IPC.6.d was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.6.d reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Monthly hand-hygiene-compliance monitoring record across staff categories.
+- Results record shared with the IPC Committee and the units.
+- Sample-size and methodology record.
 
 ### IPC.6.e — Surveillance includes mechanisms to capture the occurrence of multi-drug- resistant organisms.
 
-- Records showing IPC.6.e was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.6.e reviewed «quarterly».
+- Multi-drug-resistant-organism capture log (for example MRSA, VRE, carbapenem-resistant Enterobacterales) from microbiology reports.
+- Same-working-day alert record from the Microbiologist to the IPC Nurse.
+- Infection-versus-colonisation distinction record.
 
 ### IPC.6.f — Surveillance includes monitoring the effectiveness of housekeeping services.
 
-- Records showing IPC.6.f was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.6.f reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Housekeeping-effectiveness monitoring record (visual, fluorescent marker or ATP as chosen) in high-risk and public areas.
+- Results record shared with housekeeping and the IPC Committee.
+- Retraining or method-change record for repeat failures.
 
 ### IPC.6.g — Feedback regarding surveillance data is provided regularly to the appropriate health care provider.
 
-- Records showing IPC.6.g was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.6.g reviewed «quarterly».
+- Surveillance-feedback distribution record (adherence rates, HAI rates, trends) to unit in-charges and treating doctors.
+- Dated feedback log kept by the IPC Nurse.
+- Confirmation feedback reached providers, not only the IPC office.
 
 ### IPC.6.h — The organisation identifies and takes appropriate action to control outbreaks of infections.
 
-- Records showing IPC.6.h was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.6.h reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written outbreak definition using baseline rates.
+- Outbreak-response record — isolation/cohorting, communication, statutory-agency contact.
+- Escalation record for any delay in declaring an outbreak once the definition was met.
 
 ### IPC.6.i — Surveillance data is analysed and appropriate corrective and preventive actions are taken.
 
-- Records showing IPC.6.i was followed for sampled patients/cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for IPC.6.i reviewed «quarterly».
+- IPC Committee analysis record of surveillance data.
+- CAPA record with owner and due date.
+- Closure-tracking record by the IPC Officer.
 
 ## Disclaimer
 

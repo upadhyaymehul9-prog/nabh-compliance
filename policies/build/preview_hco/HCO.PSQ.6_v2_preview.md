@@ -43,7 +43,7 @@ This policy applies to staff who deliver care, run quality or patient-safety wor
 
 It covers 6 objective elements (PSQ.6.a, PSQ.6.b, PSQ.6.c, PSQ.6.d, PSQ.6.e, PSQ.6.f).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -54,11 +54,11 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 ## 4. Non-negotiable rules
 
 1. Do not skip: The management creates a culture of safety.
-2. Do not skip: The leaders at all levels in the organisation are aware of the intent of the patient safety and quality imp...
+2. Do not skip: The leaders at all levels in the organisation are aware of the intent of the patient safety and quality...
 3. Do not skip: Departmental leaders are involved in patient safety and quality improvement.
 4. Do not skip: Organisation earmarks adequate funds from its annual budget in this regard.
 5. Do not skip: The management identifies organisational performance improvement targets.
-6. Do not skip: The management uses the feedback obtained from the work force to improve patient safety and quality improve...
+6. Do not skip: The management uses the feedback obtained from the work force to improve patient safety and quality...
 7. Staff who see a PSQ.6 rule broken report it the same shift to the «department in-charge» or the «Patient Safety Officer» / «Quality Coordinator».
 
 ## 5. What we do
@@ -79,7 +79,7 @@ Department heads receive a briefing at induction to the role and «annually». T
 
 Method note (from guidebook interpretation): The organisation and departmental leaders are aware of the patient safety and quality improvement programme, its intent and applicability to the respective areas and how it contributes to the organisation as a whole.
 
-### 5.3 Departmental leaders are involved in patient safety and quality impro...
+### 5.3 Departmental leaders are involved in patient safety and quality...
 
 Departmental leaders are involved in patient safety and quality improvement: they attend the relevant committee or send a named delegate, own department indicators and projects, and brief their teams.
 
@@ -87,7 +87,7 @@ Involvement is visible in minutes and department quality files.
 
 Method note (from guidebook interpretation): To effectively implement this, each department could have its department objectives/key performance indicators including clinical indicators, and the responsibility of achieving them could be that of the leader/designated person. This could be discussed during departmental meeting.
 
-### 5.4 Organisation earmarks adequate funds from its annual budget in this r...
+### 5.4 Organisation earmarks adequate funds from its annual budget in this...
 
 The organisation earmarks adequate funds from its annual budget for the patient safety and quality programme (training, audit time, safety equipment, improvement projects, information systems as required).
 
@@ -103,7 +103,7 @@ Targets are shared with faculty and staff with regular feedback. This Achievemen
 
 Method note (from guidebook interpretation): The management shall identify the organisation and department level quality objectives, set targets, monitor them (at least once in three months) and modify the target (at least annually). The targets shall be shared with the faculty and staff and regular feedback taken.
 
-### 5.6 The management uses the feedback obtained from the work force to impr...
+### 5.6 The management uses the feedback obtained from the work force to...
 
 Management uses workforce feedback (staff survey, safety huddle themes, suggestion scheme) to improve the patient safety and quality programme.
 
@@ -132,14 +132,12 @@ Nursing Superintendent
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE PSQ.6.a–f.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (none) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related sentinel event, indicator failure cluster or failed clinical-audit cycle.
 
@@ -202,39 +200,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### PSQ.6.a — The management creates a culture of safety.
 
-- Records showing PSQ.6.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.6.a reviewed «quarterly».
+- Signed safety-culture statement in the patient-safety manual.
+- Validated safety-culture survey result at least annually (for example MaPSaF, Safety Attitudes Questionnaire, AHRQ SOPS).
+- Management action record responding to the survey results.
 
 ### PSQ.6.b — The leaders at all levels in the organisation are aware of the intent of the patient safety and quality improvement programme and the approach to its implementation.
 
-- Records showing PSQ.6.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.6.b reviewed «quarterly».
+- Department-head briefing record at induction to the role and annually thereafter.
+- Acknowledgement or attendance record held by the Quality Coordinator.
+- Confirmation floor leaders can describe the programme's intent and implementation approach.
 
 ### PSQ.6.c — Departmental leaders are involved in patient safety and quality improvement.
 
-- Records showing PSQ.6.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.6.c reviewed «quarterly».
+- Committee attendance or named-delegate record for departmental leaders.
+- Department quality file showing owned indicators or projects.
+- Team-briefing record from the departmental leader.
 
 ### PSQ.6.d — Organisation earmarks adequate funds from its annual budget in this regard.
 
-- Records showing PSQ.6.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.6.d reviewed «quarterly».
+- Signed annual budget line for patient safety and quality (training, audit time, safety equipment, projects, information systems).
+- Record of any mid-year stock-out of a funded safety item, reported to management.
+- Budget-utilisation record for the year.
 
 ### PSQ.6.e — The management identifies organisational performance improvement targets.
 
-- Records showing PSQ.6.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.6.e reviewed «quarterly».
+- Current organisational and department-level performance-improvement target set.
+- Review record at least once in three months and modification record at least annually.
+- Record of targets shared with faculty and staff with feedback.
 
 ### PSQ.6.f — The management uses the feedback obtained from the work force to improve patient safety and quality improvement programme.
 
-- Records showing PSQ.6.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.6.f reviewed «quarterly».
+- Staff-feedback source record (survey, safety-huddle theme log, suggestion scheme).
+- Minuted record of feedback themes considered.
+- Record of a programme change resulting from that feedback — the closed loop.
 
 ## Disclaimer
 

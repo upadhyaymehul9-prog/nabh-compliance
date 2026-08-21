@@ -43,7 +43,7 @@ This policy applies to staff who deliver care, run quality or patient-safety wor
 
 It covers 6 objective elements (PSQ.7.a, PSQ.7.b, PSQ.7.c, PSQ.7.d, PSQ.7.e, PSQ.7.f).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -58,7 +58,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 3. Do not skip: The organisation has established processes for analysis of incidents.
 4. Do not skip: Corrective and preventive actions are taken based on the findings of such analysis.
 5. Do not skip: The organisation incorporates risks identified in the analysis of incidents into the risk management system.
-6. Do not skip: The organisation shall have a process for informing various stakeholders in case of a near miss / adverse e...
+6. Do not skip: The organisation shall have a process for informing various stakeholders in case of a near miss / adverse...
 7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
 8. Staff who see a PSQ.7 rule broken report it the same shift to the «department in-charge» or the «Patient Safety Officer» / «Quality Coordinator».
 
@@ -94,7 +94,7 @@ The immediate response is urgent care and support for those involved — that do
 
 Method note (from guidebook interpretation): The safety committee (Refer to PSQ.1.a.) shall be responsible for this activity. This could preferably be done by identifying the root cause. Inputs could be sought from the units/discipline/departments concerned. Where possible, patients and other stakeholders could be included in analysing the feedback and complaint. The immediate response to a safety incident shall be to address the urgent care and support needs of those involved. This shall not await analysis. In case of sentinel events, correction if any shall be initiated within 24-working hours of occurrence or reporting. The analysis of sentinel events shall be completed within seven working days of occurrence or reporting. z.
 
-### 5.4 Corrective and preventive actions are taken based on the findings of ...
+### 5.4 Corrective and preventive actions are taken based on the findings of...
 
 Corrective and preventive actions are taken from analysis findings. Actions have owners, due dates and a later effectiveness check.
 
@@ -102,7 +102,7 @@ Findings and recommendations are communicated to the personnel concerned. Contin
 
 Method note (from guidebook interpretation): The objective of this is to improve the quality of patient-care services continually. All such action shall be documented. The findings and recommendations arrived at after the analysis shall be communicated to all personnel concerned to correct the systems and processes to prevent recurrences. Any change in the policy or procedure is reflected as an amendment in the organisation’s documentation.
 
-### 5.5 The organisation incorporates risks identified in the analysis of inc...
+### 5.5 The organisation incorporates risks identified in the analysis of...
 
 Risks identified in incident analysis are incorporated into the organisation's risk-management system (risk register update, residual risk, owner).
 
@@ -110,7 +110,7 @@ The «Quality Coordinator» or risk owner files the update. A CAPA without a ris
 
 Method note (from guidebook interpretation): If the incident analysis reveals the presence of an unidentified risk, the same shall be subjected to risk management.
 
-### 5.6 The organisation shall have a process for informing various stakehold...
+### 5.6 The organisation shall have a process for informing various...
 
 There is a written process for informing stakeholders after a near miss, adverse event or sentinel event: who is told (patient/family as the organisation defines, treating team, leadership, and external agencies when required), by whom, and within what time.
 
@@ -151,14 +151,14 @@ Nursing Superintendent
 
 ## 8. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE PSQ.7.a–f.
-- Asterisked elements (ab) have document evidence as required.
-- CORE elements (a) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- Documentary evidence is on file for each asterisked objective element in the sample.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related sentinel event, indicator failure cluster or failed clinical-audit cycle.
 
@@ -221,42 +221,39 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### PSQ.7.a — The organisation implements an incident management system.
 
-- Records showing PSQ.7.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.7.a reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
-- CORE-element sample with no critical gaps in the quarter under review.
+- Written incident-management guidance covering identification, reporting, review and action.
+- Reporting-channel record (form or digital) and recipient list.
+- Sample of captured incidents showing all severities reported, not filtered by harm level.
 
 ### PSQ.7.b — The organisation has a mechanism to identify sentinel events.
 
-- Records showing PSQ.7.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.7.b reviewed «quarterly».
-- Documented evidence specifically required by the asterisked objective element.
+- Written sentinel-event definition and hospital-specific examples.
+- Same-shift flagging record in the incident system for a recognised sentinel event.
+- Notification record to the Patient Safety Officer and Medical Superintendent.
 
 ### PSQ.7.c — The organisation has established processes for analysis of incidents.
 
-- Records showing PSQ.7.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.7.c reviewed «quarterly».
+- Root-cause-analysis record for a sampled incident, led by the Patient Safety Committee.
+- Timeliness record for sentinel events — correction within 24 working hours, analysis within 7 working days.
+- Open-analysis tracking log held by the Patient Safety Officer.
 
 ### PSQ.7.d — Corrective and preventive actions are taken based on the findings of such analysis.
 
-- Records showing PSQ.7.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.7.d reviewed «quarterly».
+- CAPA record with owner, due date and effectiveness check.
+- Communication record to the personnel concerned.
+- Confirmation no process continued after analysis showed it caused a sentinel event, before controls were in place.
 
 ### PSQ.7.e — The organisation incorporates risks identified in the analysis of incidents into the risk management system.
 
-- Records showing PSQ.7.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.7.e reviewed «quarterly».
+- Risk-register update record from incident-analysis findings.
+- Residual-risk and owner assignment.
+- Cross-reference record between the CAPA and the risk register.
 
 ### PSQ.7.f — The organisation shall have a process for informing various stakeholders in case of a near miss / adverse event / sentinel event.
 
-- Records showing PSQ.7.f was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for PSQ.7.f reviewed «quarterly».
+- Written communication process naming who is told, by whom, and within what time for a near miss, adverse event or sentinel event.
+- Communication log for sentinel and defined serious events.
+- Confirmation the process sits beside, not in place of, any statutory notification requirement.
 
 ## Disclaimer
 

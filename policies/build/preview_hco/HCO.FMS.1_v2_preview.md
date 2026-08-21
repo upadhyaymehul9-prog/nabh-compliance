@@ -43,7 +43,7 @@ This policy applies to engineering, biomedical, nursing and departmental leaders
 
 It covers 5 objective elements (FMS.1.a, FMS.1.b, FMS.1.c, FMS.1.d, FMS.1.e).
 
-Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 
@@ -62,7 +62,7 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 ## 5. What we do
 
-### 5.1 Patient safety devices and infrastructure are installed across the or...
+### 5.1 Patient safety devices and infrastructure are installed across the...
 
 Patient-safety devices and infrastructure (grab bars, bed rails, stretcher and wheelchair belts, call bells, alarms, radiation or biohazard warning signs, fire-safety devices as listed for each area) are installed across Preview Hospital and inspected at a defined interval (default «monthly»).
 
@@ -80,7 +80,7 @@ The «Engineering In-Charge» keeps the current access list. A step-only entranc
 
 Method note (from guidebook interpretation): Provisions are made for differently-abled persons like the physically challenged, the visually impaired and mentally impaired person. At a minimum, this shall be as per regulatory requirement. For example, a special toilet for differently-abled, wheelchair accessible entrance etc.
 
-### 5.3 Facility inspection rounds to ensure safety are conducted at least on...
+### 5.3 Facility inspection rounds to ensure safety are conducted at least once...
 
 Facility inspection rounds to ensure safety are conducted at least once a month using a checklist. Potential safety and security-risk / restricted areas are identified and monitored.
 
@@ -90,7 +90,7 @@ Method note (from guidebook interpretation): Potential safety risks are identifi
 
 This is a CORE objective element — non-compliance is not acceptable for accreditation.
 
-### 5.4 Inspection reports of facility rounds are documented and corrective a...
+### 5.4 Inspection reports of facility rounds are documented and corrective and...
 
 Inspection reports of facility rounds are documented. Corrective and preventive measures are undertaken. The safety committee reviews the reports «monthly». Pre- and post-correction evidence is kept for at least one accreditation cycle.
 
@@ -98,7 +98,7 @@ The «Quality Coordinator» files the reviewed reports with the «Engineering In
 
 Method note (from guidebook interpretation): The facility inspection reports are reviewed monthly by the safety committee and appropriate action(s) taken. Evidence of pre and post corrective actions are maintained at least for one accreditation cycle.
 
-### 5.5 Before construction, renovation and expansion of the existing hospita...
+### 5.5 Before construction, renovation and expansion of the existing hospital...
 
 Before construction, renovation or expansion of the existing hospital, a risk-assessment is carried out covering noise, vibration and infection prevention and control. IPC.4 remains the home of construction-infection controls; this element is that the assessment happens before work starts.
 
@@ -122,14 +122,13 @@ departmental leaders
 
 ## 7. Quality monitoring (RCA → CAPA)
 
-The Quality Coordinator audits this policy «quarterly».
+The Quality Coordinator audits this policy «quarterly». The audit reviews:
 
-What is monitored each quarter:
-
-- Sample of records for each OE FMS.1.a–e.
-- Asterisked elements (none) have document evidence as required.
-- CORE elements (ac) show no critical gaps in the sample.
+- Records for a sample of this standard's objective elements, checked against the What-we-do steps.
+- CORE objective elements show no critical gaps in the sample.
 - Stop-work events (if any) are logged with outcome.
+
+Root-cause analysis is required when a gap found in this audit remains open beyond «90 days».
 
 This policy is reviewed «annually», and sooner after a related facility change, utility failure, equipment recall or fire-plan change.
 
@@ -194,35 +193,33 @@ Records the hospital holds under this policy, listed by objective element.
 
 ### FMS.1.a — Patient safety devices and infrastructure are installed across the organisation and inspected periodically.
 
-- Records showing FMS.1.a was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.1.a reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Current inventory of patient-safety devices and infrastructure (grab bars, bed rails, call bells, fire-safety devices) by area.
+- Inspection log showing the last-inspection date for each device or area.
+- Escalation record for any missing device found in an in-use care area.
 
 ### FMS.1.b — The organisation has facilities for the differently-abled.
 
-- Records showing FMS.1.b was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.1.b reviewed «quarterly».
+- Facility list showing the wheelchair-accessible entrance and toilet location(s).
+- Regulatory-requirement reference for the accessibility provision made.
+- Documented alternative arrangement for any area with step-only access.
 
 ### FMS.1.c — Facility inspection rounds to ensure safety are conducted at least once a month.
 
-- Records showing FMS.1.c was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.1.c reviewed «quarterly».
-- CORE-element sample with no critical gaps in the quarter under review.
+- Monthly facility-inspection-round checklist, completed and dated.
+- Round calendar showing no missed month.
+- List of identified safety, security-risk or restricted areas being monitored.
 
 ### FMS.1.d — Inspection reports of facility rounds are documented and corrective and preventive measures are undertaken.
 
-- Records showing FMS.1.d was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.1.d reviewed «quarterly».
+- Documented inspection reports of facility rounds.
+- Corrective and preventive action record for each finding.
+- Safety-committee review record of the reports.
 
 ### FMS.1.e — Before construction, renovation and expansion of the existing hospital, risk- assessment is carried out.
 
-- Records showing FMS.1.e was followed for sampled cases.
-- Written guidance / protocol referenced for this element (where required).
-- Audit sample notes for FMS.1.e reviewed «quarterly».
+- Dated risk-assessment record covering noise, vibration and infection prevention, completed before work started.
+- Engineering In-Charge sign-off before construction, renovation or expansion began.
+- Cross-reference to the IPC.4 construction-infection-control measures applied alongside.
 
 ## Disclaimer
 

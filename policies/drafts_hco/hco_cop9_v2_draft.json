@@ -12,11 +12,11 @@
   ],
   "policy_title": "Intensive Care and High Dependency Units",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard COP.9: The organisation provides care in intensive care and high dependency units in a systematic manner.\n\nIt covers objective elements COP.9.a–g (7 elements).\n\nThis policy owns COP.9. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to staff who deliver or oversee the care described in COP.9 at {{HOSPITAL_NAME}}, including the «ICU In-Charge», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 7 objective elements (COP.9.a, COP.9.b, COP.9.c, COP.9.d, COP.9.e, COP.9.f, COP.9.g).\n\nBoundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.",
+  "scope": "This policy applies to staff who deliver or oversee the care described in COP.9 at {{HOSPITAL_NAME}}, including the «ICU In-Charge», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 7 objective elements (COP.9.a, COP.9.b, COP.9.c, COP.9.d, COP.9.e, COP.9.f, COP.9.g).\n\nBoundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.",
   "policy_statement": "{{HOSPITAL_NAME}} implements COP.9 so that the organisation provides care in intensive care and high dependency units in a systematic manner..\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
   "procedure_steps": [
-    "5.1 Care of patients in intensive care and high dependency units is provi..\n\nCare of patients in intensive care and high dependency units is provided based on written guidance.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.",
-    "5.2 The defined admission and discharge criteria for intensive care and h..\n\nThe defined admission and discharge criteria for intensive care and high dependency units are implemented.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.",
+    "5.1 Care of patients in intensive care and high dependency units is..\n\nCare of patients in intensive care and high dependency units is provided based on written guidance.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.",
+    "5.2 The defined admission and discharge criteria for intensive care and..\n\nThe defined admission and discharge criteria for intensive care and high dependency units are implemented.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.",
     "5.3 Adequate staff and equipment are available\n\nAdequate staff and equipment are available.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
     "5.4 Defined procedures for the situation of bed shortages are followed\n\nDefined procedures for the situation of bed shortages are followed.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.",
     "5.5 Infection prevention and control practices are followed\n\nInfection prevention and control practices are followed.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.",
@@ -35,10 +35,9 @@
       "steps": "Section 3; 5.1; Section 6 Stop-work",
       "responsible": "ICU In-Charge",
       "records": [
-        "Records showing COP.9.a was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.9.a reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Written ICU/HDU care guidance.",
+        "Documentation record confirming the guidance was followed.",
+        "Staff training record."
       ]
     },
     {
@@ -47,10 +46,9 @@
       "steps": "Section 3; 5.2; Section 6 Stop-work",
       "responsible": "ICU In-Charge",
       "records": [
-        "Records showing COP.9.b was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.9.b reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Written ICU/HDU admission and discharge criteria.",
+        "Criteria-application record for a sampled admission or discharge.",
+        "Criteria-review record."
       ]
     },
     {
@@ -59,9 +57,9 @@
       "steps": "Section 3; 5.3; Section 6 Stop-work",
       "responsible": "ICU In-Charge",
       "records": [
-        "Records showing COP.9.c was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.9.c reviewed «quarterly»."
+        "Staffing-ratio record for ICU/HDU.",
+        "Equipment inventory and adequacy record.",
+        "Availability-check record."
       ]
     },
     {
@@ -70,10 +68,9 @@
       "steps": "Section 3; 5.4",
       "responsible": "ICU In-Charge",
       "records": [
-        "Records showing COP.9.d was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.9.d reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Written bed-shortage procedure.",
+        "Activation record for a bed-shortage event.",
+        "Triage or prioritisation record during shortage."
       ]
     },
     {
@@ -82,10 +79,9 @@
       "steps": "Section 3; 5.5",
       "responsible": "ICU In-Charge",
       "records": [
-        "Records showing COP.9.e was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.9.e reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "IPC-practice compliance record for ICU/HDU (cross-reference the IPC chapter).",
+        "Surveillance-data record for the unit.",
+        "Hand-hygiene compliance record."
       ]
     },
     {
@@ -94,10 +90,9 @@
       "steps": "Section 3; 5.6",
       "responsible": "ICU In-Charge",
       "records": [
-        "Records showing COP.9.f was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.9.f reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Written ICU/HDU quality assurance programme.",
+        "Indicator-monitoring record.",
+        "Improvement-action record."
       ]
     },
     {
@@ -106,13 +101,13 @@
       "steps": "Section 3; 5.7",
       "responsible": "ICU In-Charge",
       "records": [
-        "Records showing COP.9.g was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.9.g reviewed «quarterly»."
+        "Periodic counselling record for patient/family.",
+        "Counselling-frequency documentation.",
+        "Named responsible person for counselling."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO COP.9 v2 (2026-08-20). Official Standards PDF OE count 7; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: abdef. CORE: none. Achievement: f. Excellence: none.\nStop-work: YES — JUDGMENT CALL: ICU/HDU admission beyond defined criteria / without competent staffing or monitoring.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/09.\nDo not copy SHCO COP wording. Do not touch AAC.",
+  "universal_facts_checklist": "HCO COP.9 v2 (2026-08-20). Official Standards PDF OE count 7; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: abdef. CORE: none. Achievement: f. Excellence: none.\nStop-work: YES — JUDGMENT CALL: ICU/HDU admission beyond defined criteria / without competent staffing or monitoring.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/09.\nDo not touch AAC.",
   "version": "2.0",
   "revision_history": [
     {
@@ -124,7 +119,7 @@
   "status": "draft",
   "definitions": "The organisation provides care in intensive care and high dependency units in a systematic manner.",
   "exceptions": "1. Do not skip: Care of patients in intensive care and high dependency units is provided based on written guidance.\n2. Do not skip: The defined admission and discharge criteria for intensive care and high dependency units are implemented.\n3. Do not skip: Adequate staff and equipment are available.\n4. Do not skip: Defined procedures for the situation of bed shortages are followed.\n5. Do not skip: Infection prevention and control practices are followed.\n6. Do not skip: The organisation shall implement a quality assurance programme.\n7. Do not skip: The organisation has a mechanism to counsel the patient and/or family periodically.\n8. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n9. Staff who see a COP.9 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE COP.9.a–g.\n- Asterisked elements (abdef) have document evidence as required.\n- CORE elements (none) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Intensive Care and High Dependency Units policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/COP/POL/09»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «ICU In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«ICU In-Charge»",

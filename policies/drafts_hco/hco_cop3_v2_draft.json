@@ -12,16 +12,16 @@
   ],
   "policy_title": "Ambulance Services and Safe Transportation",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard COP.3: Ambulance services ensure safe patient transportation with appropriate care.\n\nIt covers objective elements COP.3.a–g (7 elements).\n\nThis policy owns COP.3. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to staff who deliver or oversee the care described in COP.3 at {{HOSPITAL_NAME}}, including the «Ambulance / Transport In-Charge», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 7 objective elements (COP.3.a, COP.3.b, COP.3.c, COP.3.d, COP.3.e, COP.3.f, COP.3.g).\n\nBoundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.",
+  "scope": "This policy applies to staff who deliver or oversee the care described in COP.3 at {{HOSPITAL_NAME}}, including the «Ambulance / Transport In-Charge», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 7 objective elements (COP.3.a, COP.3.b, COP.3.c, COP.3.d, COP.3.e, COP.3.f, COP.3.g).\n\nBoundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.",
   "policy_statement": "{{HOSPITAL_NAME}} implements COP.3 so that ambulance services ensure safe patient transportation with appropriate care..\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
   "procedure_steps": [
-    "5.1 The organisation has access to ambulance services commensurate with t..\n\nThe organisation has access to ambulance services commensurate with the scope of the services provided by it.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.1 The organisation has access to ambulance services commensurate with the..\n\nThe organisation has access to ambulance services commensurate with the scope of the services provided by it.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
     "5.2 There are adequate access and space for the ambulance(s)\n\nThere are adequate access and space for the ambulance(s).\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
     "5.3 The ambulance(s) is fit for purpose and is appropriately equipped\n\nThe ambulance(s) is fit for purpose and is appropriately equipped.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
     "5.4 The ambulance(s) is operated by trained personnel\n\nThe ambulance(s) is operated by trained personnel.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
-    "5.5 The ambulance(s) is checked daily for functioning status, medical equ..\n\nThe ambulance(s) is checked daily for functioning status, medical equipment, emergency medications and consumables.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.5 The ambulance(s) is checked daily for functioning status, medical..\n\nThe ambulance(s) is checked daily for functioning status, medical equipment, emergency medications and consumables.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
     "5.6 The ambulance(s) has a proper communication system\n\nThe ambulance(s) has a proper communication system.\n\nMethod note (from guidebook interpretation): The ambulance shall be connected with the organisation/control",
-    "5.7 The emergency department identifies opportunities to initiate treatme..\n\nThe emergency department identifies opportunities to initiate treatment at the earliest when the patient is in transit to the organisation.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element."
+    "5.7 The emergency department identifies opportunities to initiate treatment..\n\nThe emergency department identifies opportunities to initiate treatment at the earliest when the patient is in transit to the organisation.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element."
   ],
   "responsibility": "Medical Superintendent\n- Accountable that COP.3 is resourced and followed.\n\nAmbulance / Transport In-Charge\n- Owns day-to-day implementation and records for this standard.\n\nTreating doctors / nurses / technicians (as applicable)\n- Deliver care as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
   "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Care of Patients, standard COP.3.\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — COP.3 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).\n- Internal documents of {{HOSPITAL_NAME}}: written guidance and registers named for COP.3.",
@@ -35,9 +35,9 @@
       "steps": "Section 3; 5.1; Section 6 Stop-work",
       "responsible": "Ambulance / Transport In-Charge",
       "records": [
-        "Records showing COP.3.a was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.3.a reviewed «quarterly»."
+        "Ambulance-service agreement or ownership record matched to service scope.",
+        "Access-arrangement record — owned, contracted, or on-call.",
+        "Scope-matching confirmation record."
       ]
     },
     {
@@ -46,9 +46,9 @@
       "steps": "Section 3; 5.2; Section 6 Stop-work",
       "responsible": "Ambulance / Transport In-Charge",
       "records": [
-        "Records showing COP.3.b was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.3.b reviewed «quarterly»."
+        "Ambulance bay or access-route layout record.",
+        "Space-adequacy confirmation record.",
+        "Unobstructed-access check record."
       ]
     },
     {
@@ -57,9 +57,9 @@
       "steps": "Section 3; 5.3; Section 6 Stop-work",
       "responsible": "Ambulance / Transport In-Charge",
       "records": [
-        "Records showing COP.3.c was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.3.c reviewed «quarterly»."
+        "Ambulance equipment inventory matching purpose.",
+        "Vehicle fitness or registration record.",
+        "Equipment-adequacy check record."
       ]
     },
     {
@@ -68,9 +68,9 @@
       "steps": "Section 3; 5.4",
       "responsible": "Ambulance / Transport In-Charge",
       "records": [
-        "Records showing COP.3.d was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.3.d reviewed «quarterly»."
+        "Training record for ambulance driver and attendant staff.",
+        "Competency-verification record.",
+        "Currency-of-training record."
       ]
     },
     {
@@ -79,9 +79,9 @@
       "steps": "Section 3; 5.5",
       "responsible": "Ambulance / Transport In-Charge",
       "records": [
-        "Records showing COP.3.e was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.3.e reviewed «quarterly»."
+        "Daily ambulance-check log — functioning status, medical equipment, medications, consumables.",
+        "Defect or deficiency-reporting record.",
+        "Corrective-action record for a failed check."
       ]
     },
     {
@@ -90,10 +90,9 @@
       "steps": "Section 3; 5.6",
       "responsible": "Ambulance / Transport In-Charge",
       "records": [
-        "Records showing COP.3.f was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.3.f reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked interpretation."
+        "Ambulance communication-system record — radio, mobile, GPS tracking.",
+        "Functionality-check record.",
+        "Control-room or hospital contact-log record."
       ]
     },
     {
@@ -102,13 +101,13 @@
       "steps": "Section 3; 5.7",
       "responsible": "Ambulance / Transport In-Charge",
       "records": [
-        "Records showing COP.3.g was followed for sampled patients/cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for COP.3.g reviewed «quarterly»."
+        "Written protocol for initiating treatment during transit.",
+        "Pre-arrival-notification record from ambulance to emergency department.",
+        "Sample record of treatment initiated in transit."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO COP.3 v2 (2026-08-20). Official Standards PDF OE count 7; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: f. CORE: none. Achievement: g. Excellence: none.\nStop-work: YES — JUDGMENT CALL: Ambulance departure without functioning equipment, competent crew, or communication link.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/03.\nDo not copy SHCO COP wording. Do not touch AAC.",
+  "universal_facts_checklist": "HCO COP.3 v2 (2026-08-20). Official Standards PDF OE count 7; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: f. CORE: none. Achievement: g. Excellence: none.\nStop-work: YES — JUDGMENT CALL: Ambulance departure without functioning equipment, competent crew, or communication link.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/03.\nDo not touch AAC.",
   "version": "2.0",
   "revision_history": [
     {
@@ -119,8 +118,8 @@
   ],
   "status": "draft",
   "definitions": "Ambulance services ensure safe patient transportation with appropriate care.",
-  "exceptions": "1. Do not skip: The organisation has access to ambulance services commensurate with the scope of the services provided by it.\n2. Do not skip: There are adequate access and space for the ambulance(s).\n3. Do not skip: The ambulance(s) is fit for purpose and is appropriately equipped.\n4. Do not skip: The ambulance(s) is operated by trained personnel.\n5. Do not skip: The ambulance(s) is checked daily for functioning status, medical equipment, emergency medications and cons...\n6. Do not skip: The ambulance(s) has a proper communication system.\n7. Do not skip: The emergency department identifies opportunities to initiate treatment at the earliest when the patient is...\n8. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n9. Staff who see a COP.3 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE COP.3.a–g.\n- Asterisked elements (f) have document evidence as required.\n- CORE elements (none) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
+  "exceptions": "1. Do not skip: The organisation has access to ambulance services commensurate with the scope of the services provided by it.\n2. Do not skip: There are adequate access and space for the ambulance(s).\n3. Do not skip: The ambulance(s) is fit for purpose and is appropriately equipped.\n4. Do not skip: The ambulance(s) is operated by trained personnel.\n5. Do not skip: The ambulance(s) is checked daily for functioning status, medical equipment, emergency medications and...\n6. Do not skip: The ambulance(s) has a proper communication system.\n7. Do not skip: The emergency department identifies opportunities to initiate treatment at the earliest when the patient is...\n8. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n9. Staff who see a COP.3 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Ambulance Services and Safe Transportation policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/COP/POL/03»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Ambulance / Transport In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«Ambulance / Transport In-Charge»",

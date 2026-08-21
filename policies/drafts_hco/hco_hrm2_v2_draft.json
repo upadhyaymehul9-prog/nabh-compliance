@@ -9,7 +9,7 @@
   ],
   "policy_title": "Staff Recruitment",
   "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard HRM.2: The organisation implements a defined process for staff recruitment.\n\nIt covers objective elements HRM.2.a–d (4 elements).\n\nChapter intent (official Standards PDF): The most important resource of the organisation is its human resource. Human resources are an asset for the effective and efficient functioning of the organisation. The management plans on identifying the right number and skill mix of staff required to render safe care to the patients. Recruitment of staff is accomplished by having a uniform and standardised system. The organisation must orient the staff including outsourced staff, volunteers, students and trainees to its environment and also orient them to specific duties and responsibilities related to their position. The organisation should plan to have an ongoing professional training / in-service education to enhance the competencies and skills of the staff continually. A systematic and structured appraisal system must be used for staff development. The organisation uses this as an opportunity to discuss, motivate, identify gaps in the performance of the staff. The organisation promotes the physical and mental well-being of staff. A grievance handling mechanism and disciplinary procedure should be in place. Credentialing and privileging of health-care professionals (medical, nursing and other para-clinical professional) are done to ensure patient safety. A document containing all such personal information has to be maintained for all staff.\n\nThis policy owns HRM.2. Related AAC, COP, MOM, PRE, IPC, PSQ, ROM and FMS duties stay with those policies — cross-reference only. Other HRM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
-  "scope": "This policy applies to human resources, nursing, medical, and departmental leaders, and all staff of {{HOSPITAL_NAME}}, including the «HR In-Charge / Personnel Officer», the «Medical Superintendent», departmental leaders and the Quality Coordinator.\n\nIt covers 4 objective elements (HRM.2.a, HRM.2.b, HRM.2.c, HRM.2.d).\n\nBoundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).",
+  "scope": "This policy applies to human resources, nursing, medical, and departmental leaders, and all staff of {{HOSPITAL_NAME}}, including the «HR In-Charge / Personnel Officer», the «Medical Superintendent», departmental leaders and the Quality Coordinator.\n\nIt covers 4 objective elements (HRM.2.a, HRM.2.b, HRM.2.c, HRM.2.d).\n\nBoundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).",
   "policy_statement": "{{HOSPITAL_NAME}} implements HRM.2 so that the organisation implements a defined process for staff recruitment.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).",
   "procedure_steps": [
     "5.1 Written guidance governs the process of recruitment\n\nWritten guidance governs the process of recruitment at {{HOSPITAL_NAME}}, based on defined criteria for each staff category, ensuring an adequate number and skill mix to provide the organisation's services. The procedure confirms that a candidate has the necessary registration, qualifications, skills and experience before appointment, and follows statutory requirements where they apply.\n\nThe process is documented and carried out transparently; the «HR In-Charge / Personnel Officer» maintains a recruitment register logging vacancy, candidates considered, selection rationale and fill date. This is a CORE, asterisked element.\n\nMethod note (from guidebook interpretation): Recruitment of staff shall be based on defined criteria for each category. The recruitment process ensures an adequate number and skill mix of staff to provide the organisation's services. The procedure shall ensure that the staff has the necessary registration, qualifications, skills and experience to perform its work. Recruitment is undertaken following statutory requirements, where applicable. The process shall be documented and carried out transparently.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
@@ -29,11 +29,9 @@
       "steps": "Section 3; 5.1",
       "responsible": "HR In-Charge / Personnel Officer",
       "records": [
-        "Records showing HRM.2.a was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for HRM.2.a reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked objective element.",
-        "CORE-element sample with no critical gaps in the quarter under review."
+        "Written recruitment guidance document.",
+        "Recruitment register — vacancy, candidates, selection rationale, fill date.",
+        "Statutory-requirement compliance record where applicable."
       ]
     },
     {
@@ -42,9 +40,9 @@
       "steps": "Section 3; 5.2",
       "responsible": "HR In-Charge / Personnel Officer",
       "records": [
-        "Records showing HRM.2.b was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for HRM.2.b reviewed «quarterly»."
+        "Pre-employment medical examination record on file.",
+        "Consent record for any testing performed, confirming no non-consensual testing.",
+        "Fitness-to-work determination record."
       ]
     },
     {
@@ -53,10 +51,9 @@
       "steps": "Section 3; 5.3",
       "responsible": "HR In-Charge / Personnel Officer",
       "records": [
-        "Records showing HRM.2.c was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for HRM.2.c reviewed «quarterly».",
-        "CORE-element sample with no critical gaps in the quarter under review."
+        "Written code of conduct document.",
+        "Signed staff acknowledgement at joining.",
+        "Confidentiality-protection clause record within the code."
       ]
     },
     {
@@ -65,14 +62,13 @@
       "steps": "Section 3; 5.4",
       "responsible": "HR In-Charge / Personnel Officer",
       "records": [
-        "Records showing HRM.2.d was followed for sampled cases.",
-        "Written guidance / protocol referenced for this element (where required).",
-        "Audit sample notes for HRM.2.d reviewed «quarterly».",
-        "Documented evidence specifically required by the asterisked objective element."
+        "Documented administrative procedures — attendance, leave, conduct, replacement.",
+        "Current-version record held by HR.",
+        "Cross-reference to induction training covering these procedures (HRM.3.h)."
       ]
     }
   ],
-  "universal_facts_checklist": "HCO HRM.2 v2 (2026-08-21). Official Standards PDF OE count 4; levels and asterisks from portal body text (Guidebook's own copy of the OE matrix agrees on every letter). Asterisked: ad. CORE: ac. Achievement: none. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/HRM/POL/02.\nOfficial chapter is 13 standards / 76 OEs (confirmed against portal summary and against the Guidebook's own copy of the same matrix). Guidebook interpretations transcribed from a scanned PDF with no text layer — verified against rendered page images (no tesseract/pdftoppm available on this machine), not run through a mechanical OCR pass; see policies/source/hco6_hrm_chapter_notes.md. Statute P2 proposed on HRM.12 only (Indian Nursing Council Act, 1947).\nDo not copy SHCO equivalent-chapter wording — including the already-deployed SHCO 3rd Edition HRM chapter (build_hrm1_v2.py..build_hrm9_v2.py, policies/drafts/hrm*_v2_draft.json), a separate programme and edition. Do not touch AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS.",
+  "universal_facts_checklist": "HCO HRM.2 v2 (2026-08-21). Official Standards PDF OE count 4; levels and asterisks from portal body text (Guidebook's own copy of the OE matrix agrees on every letter). Asterisked: ad. CORE: ac. Achievement: none. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/HRM/POL/02.\nOfficial chapter is 13 standards / 76 OEs (confirmed against portal summary and against the Guidebook's own copy of the same matrix). Guidebook interpretations transcribed from a scanned PDF with no text layer — verified against rendered page images (no tesseract/pdftoppm available on this machine), not run through a mechanical OCR pass; see policies/source/hco6_hrm_chapter_notes.md. Statute P2 proposed on HRM.12 only (Indian Nursing Council Act, 1947).\nNot the same as the already-deployed SHCO 3rd Edition HRM chapter (build_hrm1_v2.py..build_hrm9_v2.py, policies/drafts/hrm*_v2_draft.json) — separate programme and edition, not touched. Do not touch AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS.",
   "version": "2.0",
   "revision_history": [
     {
@@ -84,7 +80,7 @@
   "status": "draft",
   "definitions": "The organisation implements a defined process for staff recruitment.",
   "exceptions": "1. Do not skip: Written guidance governs the process of recruitment.\n2. Do not skip: A pre-employment medical examination is conducted on the staff.\n3. Do not skip: The organisation defines and implements a code of conduct for its staff.\n4. Do not skip: Administrative procedures for human resource management are documented.\n5. Staff who see a HRM.2 rule broken report it the same shift to the «HR In-Charge / Personnel Officer» or the «Medical Superintendent».",
-  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE HRM.2.a–d.\n- Asterisked elements (ad) have document evidence as required.\n- CORE elements (ac) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.",
   "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Staff Recruitment policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
   "resources_required": "Document number: «HCO/HRM/POL/02»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «HR In-Charge / Personnel Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
   "prepared_by": "«HR In-Charge / Personnel Officer»",
