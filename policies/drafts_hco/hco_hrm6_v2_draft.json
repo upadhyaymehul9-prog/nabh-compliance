@@ -1,0 +1,136 @@
+{
+  "standard_code": "HRM.6",
+  "chapter": "HCO",
+  "oe_codes": [
+    "HRM.6.a",
+    "HRM.6.b",
+    "HRM.6.c",
+    "HRM.6.d",
+    "HRM.6.e",
+    "HRM.6.f",
+    "HRM.6.g"
+  ],
+  "policy_title": "Safety and Quality-Related Staff Training",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard HRM.6: Staff are trained in safety and quality-related aspects.\n\nIt covers objective elements HRM.6.a–g (7 elements).\n\nChapter intent (official Standards PDF): The most important resource of the organisation is its human resource. Human resources are an asset for the effective and efficient functioning of the organisation. The management plans on identifying the right number and skill mix of staff required to render safe care to the patients. Recruitment of staff is accomplished by having a uniform and standardised system. The organisation must orient the staff including outsourced staff, volunteers, students and trainees to its environment and also orient them to specific duties and responsibilities related to their position. The organisation should plan to have an ongoing professional training / in-service education to enhance the competencies and skills of the staff continually. A systematic and structured appraisal system must be used for staff development. The organisation uses this as an opportunity to discuss, motivate, identify gaps in the performance of the staff. The organisation promotes the physical and mental well-being of staff. A grievance handling mechanism and disciplinary procedure should be in place. Credentialing and privileging of health-care professionals (medical, nursing and other para-clinical professional) are done to ensure patient safety. A document containing all such personal information has to be maintained for all staff.\n\nThis policy owns HRM.6. Related AAC, COP, MOM, PRE, IPC, PSQ, ROM and FMS duties stay with those policies — cross-reference only. Other HRM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to human resources, nursing, medical, and departmental leaders, and all staff of {{HOSPITAL_NAME}}, including the «HR In-Charge / Personnel Officer», the «Medical Superintendent», departmental leaders and the Quality Coordinator.\n\nIt covers 7 objective elements (HRM.6.a, HRM.6.b, HRM.6.c, HRM.6.d, HRM.6.e, HRM.6.f, HRM.6.g).\n\nBoundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).",
+  "policy_statement": "{{HOSPITAL_NAME}} implements HRM.6 so that staff are trained in safety and quality-related aspects.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Staff are trained in the organisation’s safety programme\n\nStaff at {{HOSPITAL_NAME}} are trained in the organisation's safety programme, including patient safety, through a regular training programme or printed materials. Staff working in laboratory and imaging services are additionally trained in their respective safety programmes. Cross-reference: PSQ.1.a owns the safety programme itself; this element is the staff training layer.\n\nMethod note (from guidebook interpretation): Staff are trained on identified aspects of safety including patient safety in the organisation. This could be done through a regular training programme or printed materials. Staff working in laboratory and imaging services are trained in their respective safety programmes. Refer to PSQ.1.a.",
+    "5.2 Staff are provided training in the detection, handling, minimisation ...\n\nStaff at {{HOSPITAL_NAME}} are trained in detecting, handling, minimising and eliminating identified risks in the organisation's environment — physical (poor lighting, slippery floors, blind corners, open electrical points, exposed wiring), chemical (mishandling, spills, aerosolisation), environmental (noise, smoke, dampness, heat) and process-related (needle-stick injury, blood and body-fluid exposure, cytotoxic drugs, soiled linen). Staff can practically demonstrate actions such as managing a blood spill or handling hazardous materials.\n\nMethod note (from guidebook interpretation): The organisation shall identify such risks that shall include patient, visitors and staff-related risks. These risks could be physical (poor lighting, slippery floors, blind corners, open electrical points, naked wires etc.), chemical (improper handling, spills, aerosolisation etc.), environmental (noise, smoke, dampness, heat etc.) or process-related (needle-stick injury, blood and body fluid chemicals, cytotoxic drugs, spills, soiled linen etc.). Further, staff shall be able to practically demonstrate actions like taking care of blood spills, handling hazardous materials etc.",
+    "5.3 Staff members are made aware of procedures to follow in the event of ...\n\nStaff at {{HOSPITAL_NAME}} are made aware of the procedure to follow in the event of an incident, able to describe the sequence of events they will undertake if one occurs.\n\nMethod note (from guidebook interpretation): The staff shall be able to intimate the sequence of events that they will undertake in the eventuality of occurrence of any incident.",
+    "5.4 Staff are trained in occupational safety aspects\n\nStaff at {{HOSPITAL_NAME}} are trained in occupational safety aspects for the areas with identified occupational hazards — for example needle-stick injury and blood/body-fluid exposure, radiation exposure, laser exposure, medical-gas exposure, chemotherapy exposure and noise in utility areas — and in the preventive actions to avoid each risk. Cross-reference: IPC.8.a owns occupational-exposure IPC practice; this element is the staff training layer.\n\nMethod note (from guidebook interpretation): The organisation shall identify the areas with potential occupational hazards. Staff are made aware of the possible risks involved and the preventive actions to avoid risks. For example, needle stick injury and blood/body fluid exposure, radiation exposure, LASER exposure, medical gases, chemotherapy exposure, noise in utility areas etc. Refer to IPC.8.a.",
+    "5.5 Staff are trained in the organisation’s disaster management plan\n\nStaff at {{HOSPITAL_NAME}} are trained in the organisation's disaster management plan, including their specific role in managing an internal or external disaster. This is a CORE element.\n\nMethod note (from guidebook interpretation): The training shall include the various elements of the disaster management plan. They are also trained in their specific role during management of external / internal disaster.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.6 Staff are trained in handling fire and non-fire emergencies\n\nStaff at {{HOSPITAL_NAME}} are trained in handling fire and non-fire emergencies: classes of fire, use of fire extinguishers, evacuation plans and fire procedures, plus the hospital's identified non-fire emergencies and each staff member's specific role in them. This is a CORE element.\n\nMethod note (from guidebook interpretation): In case of fire, training shall include the various classes of fires, information and demonstration on how to use fire extinguishers, evacuation plans and other procedures to be followed in case of fire. Staff in the organisation shall be trained on identified non-fire emergencies. They are also trained on their specific role in such emergencies.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.7 Staff are trained in the organisation’s quality improvement programme\n\nStaff at {{HOSPITAL_NAME}} are trained in the organisation's quality improvement programme — its structure and their own role in contributing to it. Staff working in laboratory, imaging, emergency, intensive care, the blood centre and surgical services are additionally trained on their respective quality assurance programmes.\n\nMethod note (from guidebook interpretation): Staff is made aware of the structure of the quality improvement programme of the organisation. The staff are also made aware of their roles in contributing to the quality improvement programme. Staff working in the laboratory, imaging services, emergency, intensive care units, blood centre and surgical services are trained on their respective quality assurance programmes."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that HRM.6 is resourced and followed.\n\nHR In-Charge / Personnel Officer\n- Owns day-to-day implementation and records for this standard.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.\n\ndepartmental leaders\n- Run the department-level duties this standard names.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Human Resource Management, standard HRM.6. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — HRM.6 interpretations (source PDF has no text layer; transcribed and verified against rendered page images — policies/source/hco6_hrm_guidebook_ocr.txt).\n- Internal documents of {{HOSPITAL_NAME}}: workforce plan, recruitment and induction records, training records, appraisal records, disciplinary and grievance registers, staff health records, personal files, and credentialing/privileging files named for HRM.6.",
+  "distribution": "Medical Superintendent; HR In-Charge / Personnel Officer; Quality Coordinator; departmental leaders; staff covered by HRM.6",
+  "abbreviations": "ACLS — Advanced Cardiac Life Support\nBLS — Basic Life Support\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nCPR — Cardio-Pulmonary Resuscitation\nEMR — Electronic Medical Record\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nHR — Human Resource(s)\nHRM — Human Resource Management (NABH Hospitals 6th Edition chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nNRP — Neonatal Resuscitation Program\nOE — Objective Element\nPALS — Paediatric Advanced Life Support\nPPE — Personal Protective Equipment\nWISN — Workload Indicators of Staffing Need (WHO method)",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "HRM.6.a",
+      "requirement": "Staff are trained in the organisation’s safety programme.",
+      "steps": "Section 3; 5.1",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.6.a was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.6.a reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.6.b",
+      "requirement": "Staff are provided training in the detection, handling, minimisation and elimination of identified risks within the organisation’s environment.",
+      "steps": "Section 3; 5.2",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.6.b was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.6.b reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.6.c",
+      "requirement": "Staff members are made aware of procedures to follow in the event of an incident.",
+      "steps": "Section 3; 5.3",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.6.c was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.6.c reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.6.d",
+      "requirement": "Staff are trained in occupational safety aspects.",
+      "steps": "Section 3; 5.4",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.6.d was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.6.d reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.6.e",
+      "requirement": "Staff are trained in the organisation’s disaster management plan.",
+      "steps": "Section 3; 5.5",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.6.e was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.6.e reviewed «quarterly».",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "HRM.6.f",
+      "requirement": "Staff are trained in handling fire and non-fire emergencies.",
+      "steps": "Section 3; 5.6",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.6.f was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.6.f reviewed «quarterly».",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "HRM.6.g",
+      "requirement": "Staff are trained in the organisation’s quality improvement programme.",
+      "steps": "Section 3; 5.7",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.6.g was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.6.g reviewed «quarterly»."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO HRM.6 v2 (2026-08-21). Official Standards PDF OE count 7; levels and asterisks from portal body text (Guidebook's own copy of the OE matrix agrees on every letter). Asterisked: none. CORE: ef. Achievement: none. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/HRM/POL/06.\nOfficial chapter is 13 standards / 76 OEs (confirmed against portal summary and against the Guidebook's own copy of the same matrix). Guidebook interpretations transcribed from a scanned PDF with no text layer — verified against rendered page images (no tesseract/pdftoppm available on this machine), not run through a mechanical OCR pass; see policies/source/hco6_hrm_chapter_notes.md. Statute P2 proposed on HRM.12 only (Indian Nursing Council Act, 1947).\nDo not copy SHCO equivalent-chapter wording — including the already-deployed SHCO 3rd Edition HRM chapter (build_hrm1_v2.py..build_hrm9_v2.py, policies/drafts/hrm*_v2_draft.json), a separate programme and edition. Do not touch AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition HRM.6 v2 draft: portal PDF OE data + Guidebook interpretations (verified visual transcription, no text layer in source PDF); draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Staff are trained in safety and quality-related aspects.",
+  "exceptions": "1. Do not skip: Staff are trained in the organisation’s safety programme.\n2. Do not skip: Staff are provided training in the detection, handling, minimisation and elimination of identified risks wi...\n3. Do not skip: Staff members are made aware of procedures to follow in the event of an incident.\n4. Do not skip: Staff are trained in occupational safety aspects.\n5. Do not skip: Staff are trained in the organisation’s disaster management plan.\n6. Do not skip: Staff are trained in handling fire and non-fire emergencies.\n7. Do not skip: Staff are trained in the organisation’s quality improvement programme.\n8. Staff who see a HRM.6 rule broken report it the same shift to the «HR In-Charge / Personnel Officer» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE HRM.6.a–g.\n- Asterisked elements (none) have document evidence as required.\n- CORE elements (ef) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Safety and Quality-Related Staff Training policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/HRM/POL/06»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «HR In-Charge / Personnel Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«HR In-Charge / Personnel Officer»",
+  "template_test": "hco_hrm_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — HRM.6.",
+  "doc_no": "«HCO/HRM/POL/06»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.HRM.6",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

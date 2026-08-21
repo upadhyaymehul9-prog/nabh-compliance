@@ -1,0 +1,95 @@
+{
+  "standard_code": "HRM.10",
+  "chapter": "HCO",
+  "oe_codes": [
+    "HRM.10.a",
+    "HRM.10.b",
+    "HRM.10.c",
+    "HRM.10.d"
+  ],
+  "policy_title": "Staff Personal Information and Records",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard HRM.10: There is documented personal information for each staff member.\n\nIt covers objective elements HRM.10.a–d (4 elements).\n\nChapter intent (official Standards PDF): The most important resource of the organisation is its human resource. Human resources are an asset for the effective and efficient functioning of the organisation. The management plans on identifying the right number and skill mix of staff required to render safe care to the patients. Recruitment of staff is accomplished by having a uniform and standardised system. The organisation must orient the staff including outsourced staff, volunteers, students and trainees to its environment and also orient them to specific duties and responsibilities related to their position. The organisation should plan to have an ongoing professional training / in-service education to enhance the competencies and skills of the staff continually. A systematic and structured appraisal system must be used for staff development. The organisation uses this as an opportunity to discuss, motivate, identify gaps in the performance of the staff. The organisation promotes the physical and mental well-being of staff. A grievance handling mechanism and disciplinary procedure should be in place. Credentialing and privileging of health-care professionals (medical, nursing and other para-clinical professional) are done to ensure patient safety. A document containing all such personal information has to be maintained for all staff.\n\nThis policy owns HRM.10. Related AAC, COP, MOM, PRE, IPC, PSQ, ROM and FMS duties stay with those policies — cross-reference only. Other HRM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to human resources, nursing, medical, and departmental leaders, and all staff of {{HOSPITAL_NAME}}, including the «HR In-Charge / Personnel Officer», the «Medical Superintendent», departmental leaders and the Quality Coordinator.\n\nIt covers 4 objective elements (HRM.10.a, HRM.10.b, HRM.10.c, HRM.10.d).\n\nBoundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).",
+  "policy_statement": "{{HOSPITAL_NAME}} implements HRM.10 so that there is documented personal information for each staff member.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Personal files are maintained with respect to all staff, and their co...\n\nPersonal files are maintained for all staff at {{HOSPITAL_NAME}}, kept current and updated (electronic format is acceptable), with confidentiality maintained and access restricted.\n\nMethod note (from guidebook interpretation): Each file must be current, updated and could be in the electronic format. The organisation maintains confidentiality and access to personal files is restricted.",
+    "5.2 The personal files contain personal information regarding the staff’s...\n\nEach staff member's personal file at {{HOSPITAL_NAME}} contains their qualification, job description, verification of credentials and health status.\n\nMethod note (from guidebook interpretation): The personal file shall contain these records.",
+    "5.3 Records of in-service training and education are maintained\n\nRecords of in-service training and education are maintained for staff at {{HOSPITAL_NAME}}. For internal training, an annual summary may be filed, with a supporting document verifying attendance. Where training records are held elsewhere, the personal file carries traceability to them; electronic training records are acceptable.\n\nMethod note (from guidebook interpretation): In the case of internal training, the organisation could file a summary of all trainings attended by the staff on an annual basis. However, there shall be a supporting document (hard/soft copy) to verify that the staff has attended the training. In case the organisation maintains training records elsewhere, traceability shall be provided in the personal file to ensure that the intent of the objective element is addressed. Electronic training records are acceptable.",
+    "5.4 Personal files contain results of all evaluations and remarks\n\nPersonal files at {{HOSPITAL_NAME}} contain the results of all evaluations and remarks — performance appraisals, training assessments, health-check outcomes, and records of achievement, appreciation, complaint, warning or memo.\n\nMethod note (from guidebook interpretation): Evaluations would include performance appraisals, training assessment and outcome of health checks. The personal file would include records of achievement/ appreciation/complaint/warning/memo etc."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that HRM.10 is resourced and followed.\n\nHR In-Charge / Personnel Officer\n- Owns day-to-day implementation and records for this standard.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.\n\ndepartmental leaders\n- Run the department-level duties this standard names.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Human Resource Management, standard HRM.10. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — HRM.10 interpretations (source PDF has no text layer; transcribed and verified against rendered page images — policies/source/hco6_hrm_guidebook_ocr.txt).\n- Internal documents of {{HOSPITAL_NAME}}: workforce plan, recruitment and induction records, training records, appraisal records, disciplinary and grievance registers, staff health records, personal files, and credentialing/privileging files named for HRM.10.",
+  "distribution": "Medical Superintendent; HR In-Charge / Personnel Officer; Quality Coordinator; departmental leaders; staff covered by HRM.10",
+  "abbreviations": "ACLS — Advanced Cardiac Life Support\nBLS — Basic Life Support\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nCPR — Cardio-Pulmonary Resuscitation\nEMR — Electronic Medical Record\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nHR — Human Resource(s)\nHRM — Human Resource Management (NABH Hospitals 6th Edition chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nNRP — Neonatal Resuscitation Program\nOE — Objective Element\nPALS — Paediatric Advanced Life Support\nPPE — Personal Protective Equipment\nWISN — Workload Indicators of Staffing Need (WHO method)",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "HRM.10.a",
+      "requirement": "Personal files are maintained with respect to all staff, and their confidentiality is ensured.",
+      "steps": "Section 3; 5.1",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.10.a was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.10.a reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.10.b",
+      "requirement": "The personal files contain personal information regarding the staff’s qualification, job description, verification of credentials and health status.",
+      "steps": "Section 3; 5.2",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.10.b was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.10.b reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.10.c",
+      "requirement": "Records of in-service training and education are maintained.",
+      "steps": "Section 3; 5.3",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.10.c was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.10.c reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.10.d",
+      "requirement": "Personal files contain results of all evaluations and remarks.",
+      "steps": "Section 3; 5.4",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.10.d was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.10.d reviewed «quarterly»."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO HRM.10 v2 (2026-08-21). Official Standards PDF OE count 4; levels and asterisks from portal body text (Guidebook's own copy of the OE matrix agrees on every letter). Asterisked: none. CORE: none. Achievement: none. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/HRM/POL/10.\nOfficial chapter is 13 standards / 76 OEs (confirmed against portal summary and against the Guidebook's own copy of the same matrix). Guidebook interpretations transcribed from a scanned PDF with no text layer — verified against rendered page images (no tesseract/pdftoppm available on this machine), not run through a mechanical OCR pass; see policies/source/hco6_hrm_chapter_notes.md. Statute P2 proposed on HRM.12 only (Indian Nursing Council Act, 1947).\nDo not copy SHCO equivalent-chapter wording — including the already-deployed SHCO 3rd Edition HRM chapter (build_hrm1_v2.py..build_hrm9_v2.py, policies/drafts/hrm*_v2_draft.json), a separate programme and edition. Do not touch AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition HRM.10 v2 draft: portal PDF OE data + Guidebook interpretations (verified visual transcription, no text layer in source PDF); draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "There is documented personal information for each staff member.",
+  "exceptions": "1. Do not skip: Personal files are maintained with respect to all staff, and their confidentiality is ensured.\n2. Do not skip: The personal files contain personal information regarding the staff’s qualification, job description, verif...\n3. Do not skip: Records of in-service training and education are maintained.\n4. Do not skip: Personal files contain results of all evaluations and remarks.\n5. Staff who see a HRM.10 rule broken report it the same shift to the «HR In-Charge / Personnel Officer» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE HRM.10.a–d.\n- Asterisked elements (none) have document evidence as required.\n- CORE elements (none) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Staff Personal Information and Records policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/HRM/POL/10»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «HR In-Charge / Personnel Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«HR In-Charge / Personnel Officer»",
+  "template_test": "hco_hrm_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — HRM.10.",
+  "doc_no": "«HCO/HRM/POL/10»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.HRM.10",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

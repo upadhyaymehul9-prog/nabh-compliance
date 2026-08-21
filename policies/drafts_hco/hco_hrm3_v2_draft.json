@@ -1,0 +1,174 @@
+{
+  "standard_code": "HRM.3",
+  "chapter": "HCO",
+  "oe_codes": [
+    "HRM.3.a",
+    "HRM.3.b",
+    "HRM.3.c",
+    "HRM.3.d",
+    "HRM.3.e",
+    "HRM.3.f",
+    "HRM.3.g",
+    "HRM.3.h",
+    "HRM.3.i",
+    "HRM.3.j"
+  ],
+  "policy_title": "Staff Induction Training",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard HRM.3: Staff are provided induction training at the time of joining the organisation.\n\nIt covers objective elements HRM.3.a–j (10 elements).\n\nChapter intent (official Standards PDF): The most important resource of the organisation is its human resource. Human resources are an asset for the effective and efficient functioning of the organisation. The management plans on identifying the right number and skill mix of staff required to render safe care to the patients. Recruitment of staff is accomplished by having a uniform and standardised system. The organisation must orient the staff including outsourced staff, volunteers, students and trainees to its environment and also orient them to specific duties and responsibilities related to their position. The organisation should plan to have an ongoing professional training / in-service education to enhance the competencies and skills of the staff continually. A systematic and structured appraisal system must be used for staff development. The organisation uses this as an opportunity to discuss, motivate, identify gaps in the performance of the staff. The organisation promotes the physical and mental well-being of staff. A grievance handling mechanism and disciplinary procedure should be in place. Credentialing and privileging of health-care professionals (medical, nursing and other para-clinical professional) are done to ensure patient safety. A document containing all such personal information has to be maintained for all staff.\n\nThis policy owns HRM.3. Related AAC, COP, MOM, PRE, IPC, PSQ, ROM and FMS duties stay with those policies — cross-reference only. Other HRM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to human resources, nursing, medical, and departmental leaders, and all staff of {{HOSPITAL_NAME}}, including the «HR In-Charge / Personnel Officer», the «Medical Superintendent», departmental leaders and the Quality Coordinator.\n\nIt covers 10 objective elements (HRM.3.a, HRM.3.b, HRM.3.c, HRM.3.d, HRM.3.e, HRM.3.f, HRM.3.g, HRM.3.h, HRM.3.i, HRM.3.j).\n\nBoundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).",
+  "policy_statement": "{{HOSPITAL_NAME}} implements HRM.3 so that staff are provided induction training at the time of joining the organisation.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Staff are provided with induction training\n\n{{HOSPITAL_NAME}} provides induction training to its staff, including doctors, consultants (including visiting), outsourced staff, volunteers, students and trainees, oriented to the hospital and to their specific assignment or responsibilities. Induction is completed within one month of joining and covers objective elements HRM.3.b–h, along with any other requirement this hospital defines.\n\nThe contents may be issued as a booklet; separate induction may run at organisational and departmental level. The «HR In-Charge / Personnel Officer» keeps the training record. This is a CORE element.\n\nMethod note (from guidebook interpretation): The organisation's staff, including doctors, consultants (including visiting) and the outsourced staff, are provided induction training. Volunteers, students and trainees are also oriented to the hospital and their specific assignments or responsibilities. The organisation shall determine as to when induction training shall be conducted. However, it shall be within a month of the staff joining. Objective elements \"b\" to \"h\" shall be covered in this training. Similarly, all other requirements of this standard could be covered. The contents of this training could be provided to every staff in the form of a booklet. There can be separate induction training at the organisational level and for the respective departments. The records of the training shall be maintained.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.2 The induction training includes orientation to the organisation’s vis...\n\nInduction training at {{HOSPITAL_NAME}} includes orientation to the organisation's vision, mission and values, so that staff (including outsourced staff) are aware of and can correctly interpret them.\n\nMethod note (from guidebook interpretation): The organisation's staff, including the outsourced staff, shall be aware and shall correctly interpret the vision, mission and values of the organisation.",
+    "5.3 The induction training includes awareness on staff rights and respons...\n\nInduction training at {{HOSPITAL_NAME}} includes awareness of staff rights and responsibilities and of patient rights and responsibilities, so that staff can comprehend the implications of both and can identify and report a violation of patient rights when it occurs.\n\nMethod note (from guidebook interpretation): The organisation's staff shall be able to comprehend the implications of their rights and responsibilities. The staff shall be able to identify and report a violation of patient rights as and when it occurs.",
+    "5.4 The induction training includes training on safety\n\nInduction training at {{HOSPITAL_NAME}} includes training on safety — patient, visitor and staff safety, including the hospital's emergency 'codes'.\n\nMethod note (from guidebook interpretation): The training shall incorporate aspects of patient, visitor and staff safety. This includes training on emergency 'codes'.",
+    "5.5 The induction training includes training on cardio-pulmonary resuscit...\n\nInduction training at {{HOSPITAL_NAME}} includes training on cardio-pulmonary resuscitation for staff. At minimum, doctors, nursing staff, technologists and rehabilitation staff are trained to at least basic life support (BLS); doctors and nurses working in intensive-care or high-dependency units undergo appropriate advanced training (for example ACLS, PALS or NRP, or an equivalent programme).\n\nA staff member with a valid current training certificate does not repeat the training. Trainers may be internal or external, using established evidence-based protocols.\n\nMethod note (from guidebook interpretation): All staff members including doctors, nursing staff, technologists and rehabilitation staff must at least be trained to provide cardio-pulmonary resuscitation for example basic life support (BLS). All doctors and nurses working in intensive care/high dependency units shall undergo appropriate training, for example, advanced cardiac life support (ACLS), paediatric advanced life support (PALS) and neonatal resuscitation program (NRP) or any other equivalent/similar programme. In case the staff has a valid training certificate, the same is not necessary. The training could be imparted by trainers from within or outside the organisation using established evidence-based protocols.",
+    "5.6 The induction training includes training in hospital infection preven...\n\nInduction training at {{HOSPITAL_NAME}} includes training in hospital infection prevention and control — the policies, procedures and practices of the infection prevention and control programme.\n\nMethod note (from guidebook interpretation): The trainings shall include the policies, procedures and practices of the infection prevention and control programme.",
+    "5.7 The induction training includes orientation to the service standards ...\n\nInduction training at {{HOSPITAL_NAME}} includes orientation to the organisation's service standards, so that staff are trained to implement them.\n\nMethod note (from guidebook interpretation): The staff shall be trained to implement the service standards of the organisation.",
+    "5.8 The induction training includes an orientation on administrative proc...\n\nInduction training at {{HOSPITAL_NAME}} includes an orientation on administrative procedures — attendance, leave, conduct and similar matters (HRM.2.d) — and awareness of organisation-wide policies and procedures.\n\nMethod note (from guidebook interpretation): This shall include all administrative procedures like attendance, leave, conduct, etc. This shall also include awareness of organisation-wide policies and procedures. Refer to HRM.2.d.",
+    "5.9 The induction training includes an orientation on relevant department...\n\nInduction training at {{HOSPITAL_NAME}} includes an orientation on the policies and procedures of the specific department, unit, service or programme the staff member will work in, delivered at that department/unit/service/programme level.\n\nMethod note (from guidebook interpretation): The staff shall be provided training regarding policies and procedures of the department/ unit/service in which they are performing the requisite duties. This training shall be provided at the department/unit /service/programme level.",
+    "5.10 Staff is trained on information systems, information security, inform...\n\nStaff at {{HOSPITAL_NAME}} are trained on information systems, information security, information use and management, according to their job responsibility, job description and data and information needs. Where the hospital uses electronic health records, staff who access, review or document in the EMR are trained to ensure it is used correctly.\n\nMethod note (from guidebook interpretation): Staff shall be trained on the use of information systems according to their job responsibility, job descriptions and data and information needs. If the organisation uses electronic health records, the staff who need to access, review and/or document in the EMR shall be trained to ensure use of the same."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that HRM.3 is resourced and followed.\n\nHR In-Charge / Personnel Officer\n- Owns day-to-day implementation and records for this standard.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.\n\ndepartmental leaders\n- Run the department-level duties this standard names.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Human Resource Management, standard HRM.3. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — HRM.3 interpretations (source PDF has no text layer; transcribed and verified against rendered page images — policies/source/hco6_hrm_guidebook_ocr.txt).\n- Internal documents of {{HOSPITAL_NAME}}: workforce plan, recruitment and induction records, training records, appraisal records, disciplinary and grievance registers, staff health records, personal files, and credentialing/privileging files named for HRM.3.",
+  "distribution": "Medical Superintendent; HR In-Charge / Personnel Officer; Quality Coordinator; departmental leaders; staff covered by HRM.3",
+  "abbreviations": "ACLS — Advanced Cardiac Life Support\nBLS — Basic Life Support\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nCPR — Cardio-Pulmonary Resuscitation\nEMR — Electronic Medical Record\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nHR — Human Resource(s)\nHRM — Human Resource Management (NABH Hospitals 6th Edition chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nNRP — Neonatal Resuscitation Program\nOE — Objective Element\nPALS — Paediatric Advanced Life Support\nPPE — Personal Protective Equipment\nWISN — Workload Indicators of Staffing Need (WHO method)",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "HRM.3.a",
+      "requirement": "Staff are provided with induction training.",
+      "steps": "Section 3; 5.1",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.3.a was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.3.a reviewed «quarterly».",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "HRM.3.b",
+      "requirement": "The induction training includes orientation to the organisation’s vision, mission and values.",
+      "steps": "Section 3; 5.2",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.3.b was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.3.b reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.3.c",
+      "requirement": "The induction training includes awareness on staff rights and responsibilities and patient rights and responsibilities.",
+      "steps": "Section 3; 5.3",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.3.c was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.3.c reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.3.d",
+      "requirement": "The induction training includes training on safety.",
+      "steps": "Section 3; 5.4",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.3.d was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.3.d reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.3.e",
+      "requirement": "The induction training includes training on cardio-pulmonary resuscitation for staff.",
+      "steps": "Section 3; 5.5",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.3.e was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.3.e reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.3.f",
+      "requirement": "The induction training includes training in hospital infection prevention and control.",
+      "steps": "Section 3; 5.6",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.3.f was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.3.f reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.3.g",
+      "requirement": "The induction training includes orientation to the service standards of the organisation.",
+      "steps": "Section 3; 5.7",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.3.g was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.3.g reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.3.h",
+      "requirement": "The induction training includes an orientation on administrative procedures.",
+      "steps": "Section 3; 5.8",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.3.h was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.3.h reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.3.i",
+      "requirement": "The induction training includes an orientation on relevant department / unit / service / programme’s policies and procedures.",
+      "steps": "Section 3; 5.9",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.3.i was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.3.i reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.3.j",
+      "requirement": "Staff is trained on information systems, information security, information use and management.",
+      "steps": "Section 3; 5.10",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.3.j was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.3.j reviewed «quarterly»."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO HRM.3 v2 (2026-08-21). Official Standards PDF OE count 10; levels and asterisks from portal body text (Guidebook's own copy of the OE matrix agrees on every letter). Asterisked: none. CORE: a. Achievement: none. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/HRM/POL/03.\nOfficial chapter is 13 standards / 76 OEs (confirmed against portal summary and against the Guidebook's own copy of the same matrix). Guidebook interpretations transcribed from a scanned PDF with no text layer — verified against rendered page images (no tesseract/pdftoppm available on this machine), not run through a mechanical OCR pass; see policies/source/hco6_hrm_chapter_notes.md. Statute P2 proposed on HRM.12 only (Indian Nursing Council Act, 1947).\nDo not copy SHCO equivalent-chapter wording — including the already-deployed SHCO 3rd Edition HRM chapter (build_hrm1_v2.py..build_hrm9_v2.py, policies/drafts/hrm*_v2_draft.json), a separate programme and edition. Do not touch AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition HRM.3 v2 draft: portal PDF OE data + Guidebook interpretations (verified visual transcription, no text layer in source PDF); draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Staff are provided induction training at the time of joining the organisation.",
+  "exceptions": "1. Do not skip: Staff are provided with induction training.\n2. Do not skip: The induction training includes orientation to the organisation’s vision, mission and values.\n3. Do not skip: The induction training includes awareness on staff rights and responsibilities and patient rights and respo...\n4. Do not skip: The induction training includes training on safety.\n5. Do not skip: The induction training includes training on cardio-pulmonary resuscitation for staff.\n6. Do not skip: The induction training includes training in hospital infection prevention and control.\n7. Do not skip: The induction training includes orientation to the service standards of the organisation.\n8. Do not skip: The induction training includes an orientation on administrative procedures.\n9. Do not skip: The induction training includes an orientation on relevant department / unit / service / programme’s polici...\n10. Do not skip: Staff is trained on information systems, information security, information use and management.\n11. Staff who see a HRM.3 rule broken report it the same shift to the «HR In-Charge / Personnel Officer» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE HRM.3.a–j.\n- Asterisked elements (none) have document evidence as required.\n- CORE elements (a) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Staff Induction Training policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/HRM/POL/03»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «HR In-Charge / Personnel Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«HR In-Charge / Personnel Officer»",
+  "template_test": "hco_hrm_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — HRM.3.",
+  "doc_no": "«HCO/HRM/POL/03»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.HRM.3",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

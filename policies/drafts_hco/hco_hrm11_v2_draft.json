@@ -1,0 +1,123 @@
+{
+  "standard_code": "HRM.11",
+  "chapter": "HCO",
+  "oe_codes": [
+    "HRM.11.a",
+    "HRM.11.b",
+    "HRM.11.c",
+    "HRM.11.d",
+    "HRM.11.e",
+    "HRM.11.f"
+  ],
+  "policy_title": "Credentialing and Privileging of Medical Professionals",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard HRM.11: There is a process for credentialing and privileging of medical professionals, permitted to provide patient care without supervision.\n\nIt covers objective elements HRM.11.a–f (6 elements).\n\nChapter intent (official Standards PDF): The most important resource of the organisation is its human resource. Human resources are an asset for the effective and efficient functioning of the organisation. The management plans on identifying the right number and skill mix of staff required to render safe care to the patients. Recruitment of staff is accomplished by having a uniform and standardised system. The organisation must orient the staff including outsourced staff, volunteers, students and trainees to its environment and also orient them to specific duties and responsibilities related to their position. The organisation should plan to have an ongoing professional training / in-service education to enhance the competencies and skills of the staff continually. A systematic and structured appraisal system must be used for staff development. The organisation uses this as an opportunity to discuss, motivate, identify gaps in the performance of the staff. The organisation promotes the physical and mental well-being of staff. A grievance handling mechanism and disciplinary procedure should be in place. Credentialing and privileging of health-care professionals (medical, nursing and other para-clinical professional) are done to ensure patient safety. A document containing all such personal information has to be maintained for all staff.\n\nThis policy owns HRM.11. Related AAC, COP, MOM, PRE, IPC, PSQ, ROM and FMS duties stay with those policies — cross-reference only. Other HRM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to human resources, nursing, medical, and departmental leaders, and all staff of {{HOSPITAL_NAME}}, including the «HR In-Charge / Personnel Officer», the «Medical Superintendent», departmental leaders and the Quality Coordinator.\n\nIt covers 6 objective elements (HRM.11.a, HRM.11.b, HRM.11.c, HRM.11.d, HRM.11.e, HRM.11.f).\n\nBoundaries: do not copy SHCO equivalent-chapter wording (including the already-deployed SHCO 3rd Edition HRM chapter). Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).",
+  "policy_statement": "{{HOSPITAL_NAME}} implements HRM.11 so that there is a process for credentialing and privileging of medical professionals, permitted to provide patient care without supervision.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Medical professionals permitted by law, regulation and the organisati...\n\n{{HOSPITAL_NAME}} identifies medical professionals permitted by law, regulation and the organisation to provide patient care without supervision — individuals with the required qualification(s), training and experience, in consonance with the law. Providing unsupervised care outside this identified list is a stop-work trigger (section 6). This is a CORE element.\n\nMethod note (from guidebook interpretation): The organisation identifies the individuals who have the required qualification(s), training and experience to provide patient care in consonance with the law. For the definition of \"credentialing\" refer to the glossary.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.2 The education, registration, training and experience of the identifie...\n\nThe education, registration, training and experience of identified medical professionals at {{HOSPITAL_NAME}} are documented and updated periodically — after acquisition of new skills or qualification — and maintained in each professional's personal file.\n\nMethod note (from guidebook interpretation): Update is done after the acquisition of new skills and/or qualification. All credentials required by organisation are documented and maintained for each medical staff member in his or her personal file.",
+    "5.3 The information about medical professionals is appropriately verified...\n\nInformation about medical professionals at {{HOSPITAL_NAME}} is appropriately verified when possible, by checking with the organisation that awarded the qualification or training. The National Medical Commission's website is a useful reference for verification.\n\nMethod note (from guidebook interpretation): The organisation shall do the same by verifying the credentials from the organisation which has awarded the qualification/training. A good reference could be National Medical Commission's website. Refer to HRM.11.b.",
+    "5.4 Medical professionals are granted privileges to admit and care for pa...\n\n{{HOSPITAL_NAME}} grants medical professionals privileges to admit and care for patients in consonance with their qualification, training, experience and registration — identifying the clinical services each is authorised to perform (for example, radiotherapy only by a radiation oncologist). Privileges are reviewed at least «annually» and revised where necessary. Granting or exercising privileges outside this record is a stop-work trigger (section 6). This is a CORE element.\n\nMethod note (from guidebook interpretation): The organisation shall identify clinical services which each medical professional is authorised to do. This shall be done based on qualification, experience and any additional training received. For example, radiotherapy can only be given by a radiation oncologist. Privileges shall be reviewed every year and where necessary revised.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.5 The requisite services to be provided by the medical professionals ar...\n\nThe requisite services a medical professional at {{HOSPITAL_NAME}} is authorised to provide are known to that professional and to the relevant departments — for example OP consultation rights, admission rights and rights to specific procedures or surgeries (inclusion or exclusion). Concerned departments (for example, front desk for admission rights, the operation theatre for surgical rights) are informed of the relevant privileging.\n\nMethod note (from guidebook interpretation): This could be done through internal communication. The communication to the medical professionals shall include aspects like OP consultation rights, admission rights and rights to certain procedures and/or surgeries (either by inclusion or exclusion). Concerned departments are informed of the relevant privileging rights of medical professionals. For example, front desk shall be informed of the admission rights; the operation theatre shall be informed of the surgical rights.",
+    "5.6 Medical professionals admit and care for patients as per their privil...\n\nMedical professionals at {{HOSPITAL_NAME}} admit and care for patients as per their privileging, using a standardised format applied uniformly. New faculty may work under proctorship until independent privileges are granted; the hospital maintains a mechanism confirming professionals provide only the services they are privileged for.\n\nMethod note (from guidebook interpretation): A standardised format can be used for each faculty, and a norm for providing privilege shall be practised uniformly. New faculty members can be under proctorship till independent privileges are provided. The organisation could evolve a mechanism to ensure that medical professionals are providing only those services that they have been privileged to offer."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that HRM.11 is resourced and followed.\n\nHR In-Charge / Personnel Officer\n- Owns day-to-day implementation and records for this standard.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.\n\ndepartmental leaders\n- Run the department-level duties this standard names.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Human Resource Management, standard HRM.11. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — HRM.11 interpretations (source PDF has no text layer; transcribed and verified against rendered page images — policies/source/hco6_hrm_guidebook_ocr.txt).\n- Internal documents of {{HOSPITAL_NAME}}: workforce plan, recruitment and induction records, training records, appraisal records, disciplinary and grievance registers, staff health records, personal files, and credentialing/privileging files named for HRM.11.",
+  "distribution": "Medical Superintendent; HR In-Charge / Personnel Officer; Quality Coordinator; departmental leaders; staff covered by HRM.11",
+  "abbreviations": "ACLS — Advanced Cardiac Life Support\nBLS — Basic Life Support\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nCPR — Cardio-Pulmonary Resuscitation\nEMR — Electronic Medical Record\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nHR — Human Resource(s)\nHRM — Human Resource Management (NABH Hospitals 6th Edition chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nNRP — Neonatal Resuscitation Program\nOE — Objective Element\nPALS — Paediatric Advanced Life Support\nPPE — Personal Protective Equipment\nWISN — Workload Indicators of Staffing Need (WHO method)",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "HRM.11.a",
+      "requirement": "Medical professionals permitted by law, regulation and the organisation provide patient care without supervision are identified.",
+      "steps": "Section 3; 5.1; Section 6 Stop-work",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.11.a was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.11.a reviewed «quarterly».",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "HRM.11.b",
+      "requirement": "The education, registration, training and experience of the identified medical professionals are documented and updated periodically.",
+      "steps": "Section 3; 5.2; Section 6 Stop-work",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.11.b was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.11.b reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.11.c",
+      "requirement": "The information about medical professionals is appropriately verified when possible.",
+      "steps": "Section 3; 5.3; Section 6 Stop-work",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.11.c was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.11.c reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.11.d",
+      "requirement": "Medical professionals are granted privileges to admit and care for patients in consonance with their qualification, training, experience and registration.",
+      "steps": "Section 3; 5.4; Section 6 Stop-work",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.11.d was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.11.d reviewed «quarterly».",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "HRM.11.e",
+      "requirement": "The requisite services to be provided by the medical professionals are known to them as well as the various departments / units of the organisation.",
+      "steps": "Section 3; 5.5; Section 6 Stop-work",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.11.e was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.11.e reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "HRM.11.f",
+      "requirement": "Medical professionals admit and care for patients as per their privileging.",
+      "steps": "Section 3; 5.6; Section 6 Stop-work",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Records showing HRM.11.f was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for HRM.11.f reviewed «quarterly»."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO HRM.11 v2 (2026-08-21). Official Standards PDF OE count 6; levels and asterisks from portal body text (Guidebook's own copy of the OE matrix agrees on every letter). Asterisked: none. CORE: ad. Achievement: none. Excellence: none.\nStop-work: YES — proposed: A medical professional not on the organisation's identified and privileged list provides patient care without supervision.\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/HRM/POL/11.\nOfficial chapter is 13 standards / 76 OEs (confirmed against portal summary and against the Guidebook's own copy of the same matrix). Guidebook interpretations transcribed from a scanned PDF with no text layer — verified against rendered page images (no tesseract/pdftoppm available on this machine), not run through a mechanical OCR pass; see policies/source/hco6_hrm_chapter_notes.md. Statute P2 proposed on HRM.12 only (Indian Nursing Council Act, 1947).\nDo not copy SHCO equivalent-chapter wording — including the already-deployed SHCO 3rd Edition HRM chapter (build_hrm1_v2.py..build_hrm9_v2.py, policies/drafts/hrm*_v2_draft.json), a separate programme and edition. Do not touch AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition HRM.11 v2 draft: portal PDF OE data + Guidebook interpretations (verified visual transcription, no text layer in source PDF); draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "There is a process for credentialing and privileging of medical professionals, permitted to provide patient care without supervision.",
+  "exceptions": "1. Do not skip: Medical professionals permitted by law, regulation and the organisation provide patient care without superv...\n2. Do not skip: The education, registration, training and experience of the identified medical professionals are documented...\n3. Do not skip: The information about medical professionals is appropriately verified when possible.\n4. Do not skip: Medical professionals are granted privileges to admit and care for patients in consonance with their qualif...\n5. Do not skip: The requisite services to be provided by the medical professionals are known to them as well as the various...\n6. Do not skip: Medical professionals admit and care for patients as per their privileging.\n7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n8. Staff who see a HRM.11 rule broken report it the same shift to the «HR In-Charge / Personnel Officer» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE HRM.11.a–f.\n- Asterisked elements (none) have document evidence as required.\n- CORE elements (ad) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Credentialing and Privileging of Medical Professionals policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/HRM/POL/11»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «HR In-Charge / Personnel Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«HR In-Charge / Personnel Officer»",
+  "template_test": "hco_hrm_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — HRM.11.",
+  "doc_no": "«HCO/HRM/POL/11»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "Do not let a medical professional provide patient care without supervision unless the «HR In-Charge / Personnel Officer» and the credentialing file show that professional identified and privileged for that care under HRM.11.\n\nStop-work applies to starting or continuing unsupervised care by that professional. Care already under way is handed to a privileged professional or brought under supervision; immediate life-saving care is not withdrawn while that handover happens.\n\nThe person who stops tells the «HR In-Charge / Personnel Officer» and the «Medical Superintendent» the same shift. Refusing to let an uncredentialed or unprivileged professional practise unsupervised is not a disciplinary matter.",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.HRM.11",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}
