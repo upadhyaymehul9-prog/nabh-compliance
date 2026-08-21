@@ -1,0 +1,253 @@
+# Fire and Non-Fire Emergencies
+**Preview Hospital**
+
+*HCO Full Accreditation, 6th Edition — FMS.7.*
+
+## Document control
+
+Document number: «HCO/FMS/POL/07»
+Issue number: «01»
+Version: 2.0 (HCO Full v2 draft)
+Date created: «________»
+Date of implementation: «________»
+Review due: «one year from implementation»
+
+Prepared by (designation): «Engineering In-Charge»    Name: «________»    Signature: «________»
+Reviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»
+Approved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»
+
+Amendment sheet (add a line for each change after issue)
+
+Sr | Section | Change | Reason | Prepared | Approved
+1. |  |  |  |  | 
+
+## Statement of intent
+
+The organisation has plans for fire and non-fire emergencies within the facilities.
+
+## 1. Purpose
+
+This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard FMS.7: The organisation has plans for fire and non-fire emergencies within the facilities.
+
+It covers objective elements FMS.7.a–e (5 elements).
+
+Chapter intent (official Standards PDF): The standards guide the provision of a safe and secure environment for patients, their families, staff and visitors. The organisation attends to the facility, equipment, and internal physical environment for improving patient safety and quality of services by consistently addressing issues that may arise out of the same. The organisation does this through proactive risk analysis, safety rounds, training of staff on the enhancement of safety and management of disasters. To ensure this, the organisation conducts regular facility inspection rounds and takes the appropriate action to ensure safety. The organisation provides for safe water, electricity, medical gases and vacuum systems. The organisation has a programme for medical and utility equipment management. The organisation plans for fire and non-fire emergencies within the facilities. The organisation is a no-smoking area. The organisation safely manages hazardous materials. The organisation works towards measures on being energy efficient.
+
+This policy owns FMS.7. Related AAC, COP, MOM, PRE, IPC, PSQ and ROM duties stay with those policies — cross-reference only. Other FMS standards stay with their own policies.
+
+Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
+
+## 2. Scope
+
+This policy applies to engineering, biomedical, nursing and departmental leaders, and staff who run facilities, utilities, medical gases, fire and non-fire emergencies at Preview Hospital, including the «Engineering In-Charge», the «Medical Superintendent», departmental leaders and the Quality Coordinator.
+
+It covers 5 objective elements (FMS.7.a, FMS.7.b, FMS.7.c, FMS.7.d, FMS.7.e).
+
+Boundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+
+## 3. Policy standards
+
+Preview Hospital implements FMS.7 so that the organisation has plans for fire and non-fire emergencies within the facilities.
+
+Staff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).
+
+## 4. Non-negotiable rules
+
+1. Do not skip: The organisation has plans and provisions for early detection, abatement, containment of fire and evacuatio...
+2. Do not skip: The organisation has plans and provisions for identification, and management of non-fire emergencies.
+3. Do not skip: The organisation has a documented and displayed exit plan in case of fire and non-fire emergencies.
+4. Do not skip: Mock drills are held at least twice a year.
+5. Do not skip: There is a maintenance plan for fire-related equipment and infrastructure
+6. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
+7. Staff who see a FMS.7 rule broken report it the same shift to the «Engineering In-Charge» or the «Medical Superintendent».
+
+## 5. What we do
+
+### 5.1 The organisation has plans and provisions for early detection, abatem...
+
+Preview Hospital has plans and provisions for early detection, abatement, containment of fire and evacuation: a fire plan (inflammable items, explosion, short-circuit, negligence or incompetence), qualified personnel, current NABH minimum fire-safety measures, smoke control, training, mock-drill schedules including table-top, drill records, displayed exits, evacuation of patients, staff and visitors, and emergency illumination.
+
+Occupying a patient-care floor without required detection, abatement or evacuation provision is a stop-work trigger (section 6). This is a CORE asterisked element.
+
+Method note (from guidebook interpretation): The organisation shall: * have a fire plan covering fire arising out of burning of inflammable items, explosion, electric short-circuiting or acts of negligence or due to the incompetence of the staff on duty; * deploy adequate and qualified personnel for this; * follow current NABH minimum fire safety guidelines; * have safety measures in place to minimise the effect of smoke during the fire; * have adequate training plans; * have schedules for the conduct of mock fire drills including table top exercise; * document and maintain mock drill records; * display exit plans prominently; * have evacuation plans for patient, staff and visitors * have a dedicated emergency illumination system, which comes into effect in case of fire. The organisation shall take care of fire emergencies by identifying them and by deciding the appropriate course of action. The organisation shall establish liaison with civil and police authorities and fire brigade as required by law for enlisting their help and support in case of an emergency.
+
+This objective element is asterisked in the official Standards PDF — documentation of the process is required.
+
+This is a CORE objective element — non-compliance is not acceptable for accreditation.
+
+### 5.2 The organisation has plans and provisions for identification, and man...
+
+The organisation has plans and provisions for identification and management of non-fire emergencies (examples the Guidebook names include earthquake, flood, toxic leak, structural collapse, utility failure, boiler burst, violence, stray animals). National Disaster Management Authority / State / District guidelines are referred to. Liaison with civil, police and fire authorities is as required by law.
+
+This is a CORE asterisked element. Portal wording “identification, and management” is kept as printed.
+
+Method note (from guidebook interpretation): The organisation shall take care of non-fire emergency situations by identifying them and by deciding appropriate course of action. These may include: * terrorist attack; * invasion of swarms of insects and pests; * earthquake; * floods; * invasion of stray animals; * civil disorders effecting the organisation; * anti-social behaviour by patients/relatives; * mob violence; * toxic gas and chemical leaks; * building or structural collapse; * fall or slips (from height or on floor) or collision of personnel in passageway; * bursting of pipelines; * sudden flooding of areas for example basements due to clogging in pipelines; * sudden failure of supply of electricity, gas, vacuum, etc.; * bursting of boilers and/or autoclaves; The organisation shall establish liaison with civil and police authorities and fire brigade as required by law for enlisting their help and support in case of an emergency. Guidelines of NDMA/ SDMA/DDMA shall be referred to.
+
+This objective element is asterisked in the official Standards PDF — documentation of the process is required.
+
+This is a CORE objective element — non-compliance is not acceptable for accreditation.
+
+### 5.3 The organisation has a documented and displayed exit plan in case of ...
+
+A documented exit plan is displayed on each floor, especially near lifts and inside enclosed rooms and laboratories. Exit doors remain open or have push bars. Fire signage follows the fire service and/or National Building Code. Refuge areas are signed and maintained where they apply.
+
+A patient-care floor with no displayed exit plan is a stop-work trigger (section 6).
+
+Method note (from guidebook interpretation): Exit plan shall be displayed on each floor, particularly close to the lifts and inside all enclosed areas like individual rooms and laboratories. Exit doors shall remain open or have push bars on them. Fire signage shall follow the norms laid down by respective statutory body (for example, fire service) and/or National Building Code. Signage and maintenance of refuge area as applicable shall be done.
+
+### 5.4 Mock drills are held at least twice a year
+
+Mock drills are held at least twice a year (minimum; more often if this hospital defines). This covers fire and the important non-fire events this hospital names. A table-top exercise or a mock drill may be used; at a minimum one mock drill every six months tests the whole plan, not only awareness. Simulated patients, not real patients, are used. Variations are debriefed and corrected.
+
+A year with fewer than two drills is a gap under this element.
+
+Method note (from guidebook interpretation): Testing twice a year is only the minimum frequency, and this may be increased. This includes fire and important non-fire emergencies (as identified by the organisation). The plan can be tested using a table-top exercise, or a mock drill. At a minimum, at least one mock drills shall be held once in 6 months. This shall test all the components of the plan and not just awareness/demonstration of practices. In the case of a mock drill, simulated patients (not real) shall be used. After every table- top exercise/mock drill, the variations are identified, the reason for the same is analysed, debriefing conducted and where appropriate the necessary corrective and/or preventive actions are taken.
+
+### 5.5 There is a maintenance plan for fire-related equipment and infrastruc...
+
+There is a maintenance plan for fire-related equipment and infrastructure: inspection, testing, preventive and breakdown maintenance, following the manufacturer and applicable statutory recommendations.
+
+The «Engineering In-Charge» holds the plan and last service evidence. This is an asterisked element.
+
+Method note (from guidebook interpretation): The plan shall address inspection, testing, preventive and breakdown maintenance. This shall adhere to manufacturers and/or statutory recommendations.
+
+This objective element is asterisked in the official Standards PDF — documentation of the process is required.
+
+## 6. Stop-work authority
+
+Do not occupy a patient-care floor when required fire detection, abatement or evacuation provision is not in place, or when the exit plan for that floor is not displayed.
+
+Stop-work applies to placing or keeping patients on that floor as a planned location of care. Immediate life-saving evacuation and life-saving care continue.
+
+The person who stops tells the «Engineering In-Charge» and the «Medical Superintendent» the same shift. Refusing to occupy an unprotected floor is not a disciplinary matter.
+
+## 7. Governance and responsibility
+
+Medical Superintendent
+- Accountable that FMS.7 is resourced and followed.
+
+Engineering In-Charge
+- Owns day-to-day implementation and records for this standard.
+
+Quality Coordinator
+- Audits this policy «quarterly»; holds training acknowledgements.
+
+departmental leaders
+- Run the department-level duties this standard names.
+
+## 8. Quality monitoring (RCA → CAPA)
+
+The Quality Coordinator audits this policy «quarterly».
+
+What is monitored each quarter:
+
+- Sample of records for each OE FMS.7.a–e.
+- Asterisked elements (abe) have document evidence as required.
+- CORE elements (ab) show no critical gaps in the sample.
+- Stop-work events (if any) are logged with outcome.
+
+This policy is reviewed «annually», and sooner after a related facility change, utility failure, equipment recall or fire-plan change.
+
+## 9. Training and staff acknowledgement
+
+Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).
+
+Staff acknowledgement
+
+I have read this Fire and Non-Fire Emergencies policy of Preview Hospital. I will follow the processes described.
+
+Name: ___________________________    Designation: ___________________________
+
+Department / floor: ____________________    Date: ____________
+
+Signature: ___________________________
+
+(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)
+
+## 10. References
+
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.7. Official portal PDF (OE text, counts, levels, asterisks).
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.7 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_fms_guidebook_ocr.txt).
+- Internal documents of Preview Hospital: facility-inspection records, as-built drawings, utility and medical-equipment logs, medical-gas records, fire and non-fire plans named for FMS.7.
+
+## 11. Distribution
+
+Medical Superintendent; Engineering In-Charge; Quality Coordinator; departmental leaders; staff covered by FMS.7
+
+## 12. Abbreviations
+
+AHU — Air Handling Unit
+CAPA — Corrective and Preventive Action
+CORE — Core objective element (NABH)
+DG — Diesel Generator
+ELV — Extra Low Voltage
+FMS — Facility Management and Safety (NABH Hospitals 6th Edition chapter)
+HCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)
+HVAC — Heating, Ventilation and Air Conditioning
+MSDS — Material Safety Data Sheet
+NABH — National Accreditation Board for Hospitals and Healthcare Providers
+OE — Objective Element
+PPE — Personal Protective Equipment
+RO — Reverse Osmosis
+STP — Sewage Treatment Plant
+
+## 13. Traceability to NABH HCO Full Accreditation 6th Edition FMS.7
+
+This table is an index. It is not how the policy is organised.
+
+| OE | Requirement | Where this policy addresses it | Responsible |
+| --- | --- | --- | --- |
+| FMS.7.a | The organisation has plans and provisions for early detection, abatement, containment of fire and evacuation in the event of fire emergencies. | Section 3; 5.1; Section 6 Stop-work | Engineering In-Charge |
+| FMS.7.b | The organisation has plans and provisions for identification, and management of non-fire emergencies. | Section 3; 5.2; Section 6 Stop-work | Engineering In-Charge |
+| FMS.7.c | The organisation has a documented and displayed exit plan in case of fire and non-fire emergencies. | Section 3; 5.3; Section 6 Stop-work | Engineering In-Charge |
+| FMS.7.d | Mock drills are held at least twice a year. | Section 3; 5.4; Section 6 Stop-work | Engineering In-Charge |
+| FMS.7.e | There is a maintenance plan for fire-related equipment and infrastructure | Section 3; 5.5; Section 6 Stop-work | Engineering In-Charge |
+
+## 14. Required Records / Evidence Checklist
+
+Records the hospital holds under this policy, listed by objective element.
+
+### FMS.7.a — The organisation has plans and provisions for early detection, abatement, containment of fire and evacuation in the event of fire emergencies.
+
+- Records showing FMS.7.a was followed for sampled cases.
+- Written guidance / protocol referenced for this element (where required).
+- Audit sample notes for FMS.7.a reviewed «quarterly».
+- Documented evidence specifically required by the asterisked objective element.
+- CORE-element sample with no critical gaps in the quarter under review.
+
+### FMS.7.b — The organisation has plans and provisions for identification, and management of non-fire emergencies.
+
+- Records showing FMS.7.b was followed for sampled cases.
+- Written guidance / protocol referenced for this element (where required).
+- Audit sample notes for FMS.7.b reviewed «quarterly».
+- Documented evidence specifically required by the asterisked objective element.
+- CORE-element sample with no critical gaps in the quarter under review.
+
+### FMS.7.c — The organisation has a documented and displayed exit plan in case of fire and non-fire emergencies.
+
+- Records showing FMS.7.c was followed for sampled cases.
+- Written guidance / protocol referenced for this element (where required).
+- Audit sample notes for FMS.7.c reviewed «quarterly».
+
+### FMS.7.d — Mock drills are held at least twice a year.
+
+- Records showing FMS.7.d was followed for sampled cases.
+- Written guidance / protocol referenced for this element (where required).
+- Audit sample notes for FMS.7.d reviewed «quarterly».
+
+### FMS.7.e — There is a maintenance plan for fire-related equipment and infrastructure
+
+- Records showing FMS.7.e was followed for sampled cases.
+- Written guidance / protocol referenced for this element (where required).
+- Audit sample notes for FMS.7.e reviewed «quarterly».
+- Documented evidence specifically required by the asterisked objective element.
+
+## Disclaimer
+
+This document is a template prepared for the guidance of Preview Hospital and must be reviewed, adapted and formally approved by Preview Hospital before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.
+
+The requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of Preview Hospital remain those documents. Preview Hospital is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.
+
+The clinical and technical content reflects recognised national and international guidance current at the date of preparation. Preview Hospital remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.
+
+This document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.

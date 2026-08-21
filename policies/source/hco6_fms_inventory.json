@@ -1,0 +1,352 @@
+{
+  "1": {
+    "standard_code": "FMS.1",
+    "title": "The organisation has a system in place to provide a safe and secure environment.",
+    "oes": [
+      {
+        "oe_code": "FMS.1.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": false,
+        "text": "Patient safety devices and infrastructure are installed across the organisation and inspected periodically."
+      },
+      {
+        "oe_code": "FMS.1.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation has facilities for the differently-abled."
+      },
+      {
+        "oe_code": "FMS.1.c",
+        "letter": "c",
+        "level": "CORE",
+        "star": false,
+        "text": "Facility inspection rounds to ensure safety are conducted at least once a month."
+      },
+      {
+        "oe_code": "FMS.1.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Inspection reports of facility rounds are documented and corrective and preventive measures are undertaken."
+      },
+      {
+        "oe_code": "FMS.1.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Before construction, renovation and expansion of the existing hospital, risk- assessment is carried out."
+      }
+    ],
+    "count": 5
+  },
+  "2": {
+    "standard_code": "FMS.2",
+    "title": "The organisation’s environment and facilities operate in a planned manner and promotes environment-friendly measures.",
+    "oes": [
+      {
+        "oe_code": "FMS.2.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "Facilities and space provisions are appropriate to the scope of services."
+      },
+      {
+        "oe_code": "FMS.2.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "As built and updated drawings are maintained as per statutory requirements."
+      },
+      {
+        "oe_code": "FMS.2.c",
+        "letter": "c",
+        "level": "CORE",
+        "star": false,
+        "text": "There are internal and external sign postings in the organisation in a manner understood by the patient, families and community."
+      },
+      {
+        "oe_code": "FMS.2.d",
+        "letter": "d",
+        "level": "CORE",
+        "star": false,
+        "text": "Potable water and electricity are available round the clock."
+      },
+      {
+        "oe_code": "FMS.2.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Alternate sources for electricity and water are provided as a backup for any failure / shortage."
+      },
+      {
+        "oe_code": "FMS.2.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation tests the functioning of these alternate sources at a predefined frequency."
+      }
+    ],
+    "count": 6
+  },
+  "3": {
+    "standard_code": "FMS.3",
+    "title": "The organisation’s environment and facilities operate to ensure the safety of patients, their families, staff and visitors.",
+    "oes": [
+      {
+        "oe_code": "FMS.3.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Operational planning identifies areas which need to have extra security and describes access to different areas in the hospital by staff, patients, and visitors."
+      },
+      {
+        "oe_code": "FMS.3.b",
+        "letter": "b",
+        "level": "Excellence",
+        "star": false,
+        "text": "Patient safety aspects in terms of structural safety of hospitals, especially of critical areas are considered while planning, design and construction of new hospitals and re-planning, assessment and retrofitting of existing hospitals."
+      },
+      {
+        "oe_code": "FMS.3.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation conducts electrical safety audits for the facility."
+      },
+      {
+        "oe_code": "FMS.3.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": true,
+        "text": "There is a procedure which addresses the identification and disposal of material(s) not in use in the organisation."
+      },
+      {
+        "oe_code": "FMS.3.e",
+        "letter": "e",
+        "level": "CORE",
+        "star": true,
+        "text": "Hazardous materials are identified and used safely within the organisation."
+      },
+      {
+        "oe_code": "FMS.3.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": true,
+        "text": "The plan for managing spills of hazardous materials is implemented."
+      }
+    ],
+    "count": 6
+  },
+  "4": {
+    "standard_code": "FMS.4",
+    "title": "The organisation has a programme for the facility, engineering support services and utility system.",
+    "oes": [
+      {
+        "oe_code": "FMS.4.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation plans for utility and engineering equipment in accordance with its services and strategic plan."
+      },
+      {
+        "oe_code": "FMS.4.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Equipment is inventoried, and proper logs are maintained as required."
+      },
+      {
+        "oe_code": "FMS.4.c",
+        "letter": "c",
+        "level": "CORE",
+        "star": true,
+        "text": "The documented operational and maintenance (preventive and breakdown) plan is implemented."
+      },
+      {
+        "oe_code": "FMS.4.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Utility equipment, are periodically inspected and calibrated (wherever applicable) for their proper functioning."
+      },
+      {
+        "oe_code": "FMS.4.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Competent personnel operate, inspect, test and maintain equipment and utility systems."
+      },
+      {
+        "oe_code": "FMS.4.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "Maintenance staff is contactable round the clock for emergency repairs."
+      },
+      {
+        "oe_code": "FMS.4.g",
+        "letter": "g",
+        "level": "Achievement",
+        "star": false,
+        "text": "Downtime for critical equipment breakdowns is monitored from reporting to inspection and implementation of corrective actions."
+      },
+      {
+        "oe_code": "FMS.4.h",
+        "letter": "h",
+        "level": "Commitment",
+        "star": true,
+        "text": "Written guidance supports equipment replacement, identification of unwanted material and disposal."
+      }
+    ],
+    "count": 8
+  },
+  "5": {
+    "standard_code": "FMS.5",
+    "title": "The organisation has a programme for medical equipment management.",
+    "oes": [
+      {
+        "oe_code": "FMS.5.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation plans for medical equipment in accordance with its services and strategic plan."
+      },
+      {
+        "oe_code": "FMS.5.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Medical equipment is inventoried and proper logs are maintained as required."
+      },
+      {
+        "oe_code": "FMS.5.c",
+        "letter": "c",
+        "level": "CORE",
+        "star": true,
+        "text": "The documented operational and maintenance (preventive and breakdown) plan for medical equipment is implemented."
+      },
+      {
+        "oe_code": "FMS.5.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Medical equipment is periodically inspected and calibrated for their proper functioning."
+      },
+      {
+        "oe_code": "FMS.5.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Qualified and trained personnel operate and maintain medical equipment."
+      },
+      {
+        "oe_code": "FMS.5.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": true,
+        "text": "Written guidance supports medical equipment replacement and disposal."
+      },
+      {
+        "oe_code": "FMS.5.g",
+        "letter": "g",
+        "level": "Commitment",
+        "star": true,
+        "text": "There is monitoring of medical equipment and medical devices related to adverse events, and compliance hazard notices on recalls."
+      },
+      {
+        "oe_code": "FMS.5.h",
+        "letter": "h",
+        "level": "Achievement",
+        "star": false,
+        "text": "Downtime for critical equipment breakdown is monitored from reporting to inspection and implementation of corrective actions."
+      }
+    ],
+    "count": 8
+  },
+  "6": {
+    "standard_code": "FMS.6",
+    "title": "The organisation has a programme for medical gases, vacuum and compressed air.",
+    "oes": [
+      {
+        "oe_code": "FMS.6.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Written guidance governs the implementation of procurement, handling, storage, distribution, usage and replenishment of medical gases."
+      },
+      {
+        "oe_code": "FMS.6.b",
+        "letter": "b",
+        "level": "CORE",
+        "star": false,
+        "text": "Medical gases are handled, stored, distributed and used in a safe manner."
+      },
+      {
+        "oe_code": "FMS.6.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": true,
+        "text": "There is an operational, inspection, testing and maintenance plan for piped medical gas, compressed air and vacuum installation."
+      },
+      {
+        "oe_code": "FMS.6.d",
+        "letter": "d",
+        "level": "CORE",
+        "star": false,
+        "text": "Alternate sources for medical gases, vacuum and compressed air are provided for, in case of failure."
+      },
+      {
+        "oe_code": "FMS.6.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation regularly tests the functioning of these alternate sources."
+      }
+    ],
+    "count": 5
+  },
+  "7": {
+    "standard_code": "FMS.7",
+    "title": "The organisation has plans for fire and non-fire emergencies within the facilities.",
+    "oes": [
+      {
+        "oe_code": "FMS.7.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation has plans and provisions for early detection, abatement, containment of fire and evacuation in the event of fire emergencies."
+      },
+      {
+        "oe_code": "FMS.7.b",
+        "letter": "b",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation has plans and provisions for identification, and management of non-fire emergencies."
+      },
+      {
+        "oe_code": "FMS.7.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation has a documented and displayed exit plan in case of fire and non-fire emergencies."
+      },
+      {
+        "oe_code": "FMS.7.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Mock drills are held at least twice a year."
+      },
+      {
+        "oe_code": "FMS.7.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": true,
+        "text": "There is a maintenance plan for fire-related equipment and infrastructure"
+      }
+    ],
+    "count": 5
+  }
+}
