@@ -29,11 +29,11 @@ Staff are trained in safety and quality-related aspects.
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard HRM.6: Staff are trained in safety and quality-related aspects.
 
-It covers objective elements HRM.6.a–g (7 elements).
+This policy covers all 7 requirements under this standard, listed in detail below.
 
 Chapter intent (official Standards PDF): The most important resource of the organisation is its human resource. Human resources are an asset for the effective and efficient functioning of the organisation. The management plans on identifying the right number and skill mix of staff required to render safe care to the patients. Recruitment of staff is accomplished by having a uniform and standardised system. The organisation must orient the staff including outsourced staff, volunteers, students and trainees to its environment and also orient them to specific duties and responsibilities related to their position. The organisation should plan to have an ongoing professional training / in-service education to enhance the competencies and skills of the staff continually. A systematic and structured appraisal system must be used for staff development. The organisation uses this as an opportunity to discuss, motivate, identify gaps in the performance of the staff. The organisation promotes the physical and mental well-being of staff. A grievance handling mechanism and disciplinary procedure should be in place. Credentialing and privileging of health-care professionals (medical, nursing and other para-clinical professional) are done to ensure patient safety. A document containing all such personal information has to be maintained for all staff.
 
-This policy owns HRM.6. Related AAC, COP, MOM, PRE, IPC, PSQ, ROM and FMS duties stay with those policies — cross-reference only. Other HRM standards stay with their own policies.
+This policy covers safety and quality-related staff training specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, hospital governance, or facility safety — are covered in the hospital's other policies, not repeated here. Other HRM standards stay with their own policies.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -41,9 +41,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to human resources, nursing, medical, and departmental leaders, and all staff of Preview Hospital, including the «HR In-Charge / Personnel Officer», the «Medical Superintendent», departmental leaders and the Quality Coordinator.
 
-It covers 7 objective elements (HRM.6.a, HRM.6.b, HRM.6.c, HRM.6.d, HRM.6.e, HRM.6.f, HRM.6.g).
+This policy covers all 7 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
+This policy covers safety and quality-related staff training specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, hospital governance, or facility safety — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
 
 ## 3. Policy standards
 

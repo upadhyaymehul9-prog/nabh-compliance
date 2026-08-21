@@ -29,9 +29,9 @@ Organisation provides safe paediatric services.
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard COP.11: Organisation provides safe paediatric services.
 
-It covers objective elements COP.11.a–h (8 elements).
+This policy covers all 8 requirements under this standard, listed in detail below.
 
-This policy owns COP.11. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.
+This policy covers safe paediatric services specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -39,9 +39,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to staff who deliver or oversee the care described in COP.11 at Preview Hospital, including the «Paediatric In-Charge», treating doctors, nurses and the Quality Coordinator.
 
-It covers 8 objective elements (COP.11.a, COP.11.b, COP.11.c, COP.11.d, COP.11.e, COP.11.f, COP.11.g, COP.11.h).
+This policy covers all 8 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
+This policy covers safe paediatric services specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 

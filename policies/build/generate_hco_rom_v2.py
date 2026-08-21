@@ -20,7 +20,11 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from nabh_text_normalize import distribution_dedupe  # noqa: E402
-from hco_cop_v2_common import hco_boundaries_clause, truncate_word_safe  # noqa: E402
+from hco_cop_v2_common import (  # noqa: E402
+    hco_oe_count_clause,
+    hco_related_duties_clause,
+    truncate_word_safe,
+)
 from hco_rom_v2_common import (  # noqa: E402
     BLANK,
     CHAPTER,
@@ -394,28 +398,29 @@ def build_one(n: int, inv: dict, bodies: dict[str, str], interps: dict[str, str]
     prepared = D(PREPARED_BY[n])
     steps = build_steps(n, oes, bodies, interps)
     oe_codes = [o["oe_code"] for o in oes]
-    letters = f"{oes[0]['letter']}–{oes[-1]['letter']}"
     gov = D("those responsible for governance")
     gov_scope = (
         "those responsible for governance, the person heading the organisation, "
         "departmental leaders, and staff who run ethics, sustainability, risk or outsourcing"
     )
+    own_topic = POLICY_TITLES[n].lower()
+    related_chapters = ["AAC", "COP", "MOM", "PRE", "IPC", "PSQ"]
 
     purpose = f"""This policy says how {HOSPITAL} meets NABH Hospitals 6th Edition standard ROM.{n}: {std_title}
 
-It covers objective elements ROM.{n}.{letters} ({len(oes)} elements).
+{hco_oe_count_clause(len(oes))}
 
 Chapter intent (official Standards PDF): {CHAPTER_INTENT}
 
-This policy owns ROM.{n}. Related AAC, COP, MOM, PRE, IPC and PSQ duties stay with those policies — cross-reference only. Other ROM standards stay with their own policies.
+{hco_related_duties_clause(own_topic, related_chapters)} Other ROM standards stay with their own policies.
 
 Words marked {D('like this')} are defaults. A blank marked {BLANK} must be filled before issue."""
 
     scope = f"""This policy applies to {gov_scope} at {HOSPITAL}, including the {prepared}, {gov} as identified under ROM.1, departmental leaders and the Quality Coordinator.
 
-It covers {len(oes)} objective elements ({', '.join(oe_codes)}).
+{hco_oe_count_clause(len(oes))}
 
-{hco_boundaries_clause(["AAC", "COP", "MOM", "PRE", "IPC", "PSQ"])} Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 {GUIDEBOOK_MD5})."""
+{hco_related_duties_clause(own_topic, related_chapters)} Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 {GUIDEBOOK_MD5})."""
 
     lead = (std_title[0].lower() + std_title[1:]).rstrip(".") if std_title else "responsibilities of management are implemented"
     policy_statement = f"""{HOSPITAL} implements ROM.{n} so that {lead}.

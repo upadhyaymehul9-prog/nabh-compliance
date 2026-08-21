@@ -29,11 +29,11 @@ The organisation implements a structured patient safety programme.
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard PSQ.1: The organisation implements a structured patient safety programme.
 
-It covers objective elements PSQ.1.a–g (7 elements).
+This policy covers all 7 requirements under this standard, listed in detail below.
 
 Chapter intent (official Standards PDF): The standards encourage an environment of patient safety and continual quality improvement. The patient safety and quality programme should be documented and involve all areas of the organisation and all staff members. The management creates a culture of safety in the organisation. Patient safety officer(s) shall be designated for the implementation of patient-safety programme. National / International patient-safety goals / solutions / framework shall be implemented. The organisation shall collect data on structures, processes and outcomes, especially in areas of high-risk situations. Quality indicators specific to clinical specialities shall be used to involve clinical departments in the quality improvement programme. The collected data shall be collated, analysed and trends are used for further improvement. Appropriate quality tools shall be used for carrying out quality improvement projects. Clinical audits shall be used as a tool to improve the quality of patient care in a sustained manner. Department leaders play an active role in patient safety and quality improvement. The organisation has a mechanism to capture patient reported outcome measures. The organisation shall have a robust incident reporting system. Sentinel events shall be defined. All incidents are investigated and appropriate action is taken. The management shall support the patient safety and quality programme.
 
-This policy owns PSQ.1. Related AAC, COP, MOM, PRE and IPC duties stay with those policies — cross-reference only. Other PSQ standards stay with their own policies.
+This policy covers patient safety programme specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, or infection control — are covered in the hospital's other policies, not repeated here. Other PSQ standards stay with their own policies.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -41,9 +41,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to staff who deliver care, run quality or patient-safety work, lead departments, or hold management duties for safety and quality at Preview Hospital, including the «Patient Safety Officer», the Patient Safety Officer, the Quality Coordinator, departmental leaders, treating doctors, nursing and the Medical Superintendent.
 
-It covers 7 objective elements (PSQ.1.a, PSQ.1.b, PSQ.1.c, PSQ.1.d, PSQ.1.e, PSQ.1.f, PSQ.1.g).
+This policy covers all 7 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+This policy covers patient safety programme specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, or infection control — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 

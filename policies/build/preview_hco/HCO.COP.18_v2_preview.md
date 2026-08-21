@@ -29,9 +29,9 @@ Rehabilitation services are provided to the patients in a safe, collaborative an
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard COP.18: Rehabilitation services are provided to the patients in a safe, collaborative and consistent manner.
 
-It covers objective elements COP.18.a–g (7 elements).
+This policy covers all 7 requirements under this standard, listed in detail below.
 
-This policy owns COP.18. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.
+This policy covers rehabilitation services specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -39,9 +39,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to staff who deliver or oversee the care described in COP.18 at Preview Hospital, including the «Rehabilitation In-Charge», treating doctors, nurses and the Quality Coordinator.
 
-It covers 7 objective elements (COP.18.a, COP.18.b, COP.18.c, COP.18.d, COP.18.e, COP.18.f, COP.18.g).
+This policy covers all 7 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
+This policy covers rehabilitation services specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 

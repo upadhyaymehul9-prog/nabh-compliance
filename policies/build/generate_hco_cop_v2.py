@@ -29,8 +29,9 @@ from hco_cop_v2_common import (  # noqa: E402
     PROGRAMME,
     STOP_WORK_PROPOSALS,
     VERSION,
-    hco_boundaries_clause,
     hco_document_control,
+    hco_oe_count_clause,
+    hco_related_duties_clause,
     stop_work_text,
     truncate_word_safe,
 )
@@ -918,20 +919,22 @@ def build_one(n: int, inv: dict, interps: dict[int, list[str]]) -> dict:
     prepared = D(PREPARED_BY[n])
     steps = build_steps(n, oes, interps.get(n, []))
     oe_codes = [o["oe_code"] for o in oes]
+    own_topic = POLICY_TITLES[n].lower()
+    related_chapters = ["AAC", "PRE", "IPC", "HRM", "MOM"]
 
     purpose = f"""This policy says how {HOSPITAL} meets NABH Hospitals 6th Edition standard COP.{n}: {std_title}
 
-It covers objective elements COP.{n}.{oes[0]['letter']}–{oes[-1]['letter']} ({len(oes)} elements).
+{hco_oe_count_clause(len(oes))}
 
-This policy owns COP.{n}. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.
+{hco_related_duties_clause(own_topic, related_chapters)}
 
 Words marked {D('like this')} are defaults. A blank marked {BLANK} must be filled before issue."""
 
     scope = f"""This policy applies to staff who deliver or oversee the care described in COP.{n} at {HOSPITAL}, including the {prepared}, treating doctors, nurses and the Quality Coordinator.
 
-It covers {len(oes)} objective elements ({', '.join(oe_codes)}).
+{hco_oe_count_clause(len(oes))}
 
-{hco_boundaries_clause(["AAC"])} Spell out abbreviations on first use in training materials."""
+{hco_related_duties_clause(own_topic, related_chapters)} Spell out abbreviations on first use in training materials."""
 
     policy_statement = f"""{HOSPITAL} implements COP.{n} so that {std_title[0].lower() + std_title[1:] if std_title else "care is safe and uniform"}.
 

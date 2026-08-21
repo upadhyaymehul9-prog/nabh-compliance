@@ -29,9 +29,9 @@ Transfusion services are provided as per the scope of services of the organisati
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard COP.8: Transfusion services are provided as per the scope of services of the organisation, safely.
 
-It covers objective elements COP.8.a–g (7 elements).
+This policy covers all 7 requirements under this standard, listed in detail below.
 
-This policy owns COP.8. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.
+This policy covers safe transfusion services specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -39,9 +39,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to staff who deliver or oversee the care described in COP.8 at Preview Hospital, including the «Transfusion / Blood Bank In-Charge», treating doctors, nurses and the Quality Coordinator.
 
-It covers 7 objective elements (COP.8.a, COP.8.b, COP.8.c, COP.8.d, COP.8.e, COP.8.f, COP.8.g).
+This policy covers all 7 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
+This policy covers safe transfusion services specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 

@@ -29,9 +29,9 @@ Pain management for patients is done in a consistent manner.
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard COP.17: Pain management for patients is done in a consistent manner.
 
-It covers objective elements COP.17.a–d (4 elements).
+This policy covers all 4 requirements under this standard, listed in detail below.
 
-This policy owns COP.17. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.
+This policy covers pain management specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -39,9 +39,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to staff who deliver or oversee the care described in COP.17 at Preview Hospital, including the «Pain Management Lead», treating doctors, nurses and the Quality Coordinator.
 
-It covers 4 objective elements (COP.17.a, COP.17.b, COP.17.c, COP.17.d).
+This policy covers all 4 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
+This policy covers pain management specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 

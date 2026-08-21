@@ -29,11 +29,11 @@ The organisation displays professionalism in its functioning.
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard ROM.5: The organisation displays professionalism in its functioning.
 
-It covers objective elements ROM.5.a–f (6 elements).
+This policy covers all 6 requirements under this standard, listed in detail below.
 
 Chapter intent (official Standards PDF): The management of the healthcare organisation is aware of and manages all the key components of governance. Those responsible for governance are identified and their roles defined. The standards encourage the governance of the organisation professionally and ethically. Clinical governance framework is established, that includes clinical audits, clinical pathways, education and research. The responsibilities of management are defined. The responsibilities of the leaders at all levels are defined. The management executes its responsibility for compliance with all applicable regulations. Those responsible for governance address the organisations social responsibility. Leaders ensure that patient-safety and risk-management issues are an integral part of patient care and hospital management. The Organisation has a written guidance in place for change management and service continuity plan.
 
-This policy owns ROM.5. Related AAC, COP, MOM, PRE, IPC and PSQ duties stay with those policies — cross-reference only. Other ROM standards stay with their own policies.
+This policy covers professional functioning of the organisation specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, or quality and safety monitoring — are covered in the hospital's other policies, not repeated here. Other ROM standards stay with their own policies.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -41,9 +41,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to those responsible for governance, the person heading the organisation, departmental leaders, and staff who run ethics, sustainability, risk or outsourcing at Preview Hospital, including the «Quality Coordinator», «those responsible for governance» as identified under ROM.1, departmental leaders and the Quality Coordinator.
 
-It covers 6 objective elements (ROM.5.a, ROM.5.b, ROM.5.c, ROM.5.d, ROM.5.e, ROM.5.f).
+This policy covers all 6 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+This policy covers professional functioning of the organisation specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, or quality and safety monitoring — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 

@@ -29,9 +29,9 @@ Uniform care to patients is provided in all settings of the organisation and is 
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard COP.1: Uniform care to patients is provided in all settings of the organisation and is guided by written guidance.
 
-It covers objective elements COP.1.a–f (6 elements).
+This policy covers all 6 requirements under this standard, listed in detail below.
 
-This policy owns COP.1. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.
+This policy covers uniform care guided by written guidance specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -39,9 +39,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to staff who deliver or oversee the care described in COP.1 at Preview Hospital, including the «Quality Coordinator», treating doctors, nurses and the Quality Coordinator.
 
-It covers 6 objective elements (COP.1.a, COP.1.b, COP.1.c, COP.1.d, COP.1.e, COP.1.f).
+This policy covers all 6 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
+This policy covers uniform care guided by written guidance specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 

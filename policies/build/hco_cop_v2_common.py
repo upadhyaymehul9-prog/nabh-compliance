@@ -15,24 +15,54 @@ VERSION = "2.0"
 PROGRAMME = "HCO Full Accreditation, 6th Edition"
 
 
-def hco_boundaries_clause(other_chapters: list[str]) -> str:
-    """Reader-facing HCO-chapter-boundary sentence.
+# Plain-language topic per HCO chapter abbreviation — for reader-facing
+# cross-reference sentences. A hospital-floor reader has not memorised which
+# chapter letter-code owns which subject; naming the topic means something on
+# first read, an abbreviation does not.
+HCO_CHAPTER_TOPIC: dict[str, str] = {
+    "AAC": "patient assessment",
+    "COP": "clinical care",
+    "FMS": "facility safety",
+    "HRM": "staffing",
+    "IPC": "infection control",
+    "MOM": "medication management",
+    "PRE": "patient rights",
+    "PSQ": "quality and safety monitoring",
+    "ROM": "hospital governance",
+    "IMS": "medical records and information management",
+}
 
-    HCO-only — never mentions SHCO. An HCO reader has never heard of SHCO
-    (a different NABH programme); an internal drafting instruction not to
-    copy SHCO wording has no business in a hospital-facing policy. Lists
-    only the other HCO chapters this policy must not overwrite.
+
+def hco_oe_count_clause(n_oe: int) -> str:
+    """Reader-facing objective-element count sentence — no raw OE letter-codes.
+
+    The codes themselves are already spelled out in section 5 (What we do)
+    and the traceability table; repeating a bare list of them here
+    ("COP.20.a, COP.20.b, ...") just asks a hospital-floor reader to decode
+    NABH's internal a/b/c lettering for no benefit.
     """
+    return f"This policy covers all {n_oe} requirements under this standard, listed in detail below."
+
+
+def hco_related_duties_clause(own_topic: str, other_chapters: list[str]) -> str:
+    """Reader-facing cross-reference sentence — names topics, not chapter codes.
+
+    Replaces the old "This policy owns X. Related AAC, PRE, IPC/HIC... duties
+    stay with those policies" phrasing, which assumed the reader already
+    knows what each NABH chapter abbreviation covers.
+    """
+    sentence = f"This policy covers {own_topic} specifically."
     if not other_chapters:
-        return (
-            "Boundaries: this is the first HCO chapter drafted; there are no "
-            "other HCO policies to cross-reference yet."
-        )
-    if len(other_chapters) == 1:
-        joined = other_chapters[0]
+        return sentence
+    topics = [HCO_CHAPTER_TOPIC[c] for c in other_chapters]
+    if len(topics) == 1:
+        joined = topics[0]
     else:
-        joined = ", ".join(other_chapters[:-1]) + f" or {other_chapters[-1]}"
-    return f"Boundaries: do not overwrite HCO {joined} policies."
+        joined = ", ".join(topics[:-1]) + f", or {topics[-1]}"
+    return (
+        f"{sentence} Related duties — like {joined} — are covered in the "
+        "hospital's other policies, not repeated here."
+    )
 
 
 def truncate_word_safe(text: str, limit: int) -> str:
@@ -156,7 +186,9 @@ __all__ = [
     "VERSION",
     "PROGRAMME",
     "hco_document_control",
-    "hco_boundaries_clause",
+    "HCO_CHAPTER_TOPIC",
+    "hco_oe_count_clause",
+    "hco_related_duties_clause",
     "truncate_word_safe",
     "STOP_WORK_PROPOSALS",
     "stop_work_text",

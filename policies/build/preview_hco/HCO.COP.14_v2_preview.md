@@ -29,9 +29,9 @@ Surgical services are provided in a consistent and safe manner.
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard COP.14: Surgical services are provided in a consistent and safe manner.
 
-It covers objective elements COP.14.a–j (10 elements).
+This policy covers all 10 requirements under this standard, listed in detail below.
 
-This policy owns COP.14. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.
+This policy covers surgical services specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -39,9 +39,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to staff who deliver or oversee the care described in COP.14 at Preview Hospital, including the «OT In-Charge», treating doctors, nurses and the Quality Coordinator.
 
-It covers 10 objective elements (COP.14.a, COP.14.b, COP.14.c, COP.14.d, COP.14.e, COP.14.f, COP.14.g, COP.14.h, COP.14.i, COP.14.j).
+This policy covers all 10 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
+This policy covers surgical services specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 

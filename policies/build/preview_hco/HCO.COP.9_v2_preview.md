@@ -29,9 +29,9 @@ The organisation provides care in intensive care and high dependency units in a 
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard COP.9: The organisation provides care in intensive care and high dependency units in a systematic manner.
 
-It covers objective elements COP.9.a–g (7 elements).
+This policy covers all 7 requirements under this standard, listed in detail below.
 
-This policy owns COP.9. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.
+This policy covers intensive care and high dependency units specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -39,9 +39,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to staff who deliver or oversee the care described in COP.9 at Preview Hospital, including the «ICU In-Charge», treating doctors, nurses and the Quality Coordinator.
 
-It covers 7 objective elements (COP.9.a, COP.9.b, COP.9.c, COP.9.d, COP.9.e, COP.9.f, COP.9.g).
+This policy covers all 7 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
+This policy covers intensive care and high dependency units specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 

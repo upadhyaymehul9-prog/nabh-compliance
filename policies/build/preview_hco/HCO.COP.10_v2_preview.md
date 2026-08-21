@@ -29,9 +29,9 @@ Organisation provides safe obstetric care.
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard COP.10: Organisation provides safe obstetric care.
 
-It covers objective elements COP.10.a–k (11 elements).
+This policy covers all 11 requirements under this standard, listed in detail below.
 
-This policy owns COP.10. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.
+This policy covers safe obstetric care specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -39,9 +39,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to staff who deliver or oversee the care described in COP.10 at Preview Hospital, including the «Obstetric In-Charge», treating doctors, nurses and the Quality Coordinator.
 
-It covers 11 objective elements (COP.10.a, COP.10.b, COP.10.c, COP.10.d, COP.10.e, COP.10.f, COP.10.g, COP.10.h, COP.10.i, COP.10.j, COP.10.k).
+This policy covers all 11 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
+This policy covers safe obstetric care specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 

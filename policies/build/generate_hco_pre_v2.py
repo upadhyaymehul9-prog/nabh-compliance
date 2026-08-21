@@ -20,7 +20,11 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from nabh_text_normalize import distribution_dedupe  # noqa: E402
-from hco_cop_v2_common import hco_boundaries_clause, truncate_word_safe  # noqa: E402
+from hco_cop_v2_common import (  # noqa: E402
+    hco_oe_count_clause,
+    hco_related_duties_clause,
+    truncate_word_safe,
+)
 from hco_pre_v2_common import (  # noqa: E402
     BLANK,
     CHAPTER,
@@ -481,23 +485,24 @@ def build_one(n: int, inv: dict, bodies: dict[str, str], interps: dict[str, str]
     prepared = D(PREPARED_BY[n])
     steps = build_steps(n, oes, bodies, interps)
     oe_codes = [o["oe_code"] for o in oes]
-    letters = f"{oes[0]['letter']}–{oes[-1]['letter']}"
+    own_topic = POLICY_TITLES[n].lower()
+    related_chapters = ["AAC", "COP", "MOM", "IPC", "IMS"]
 
     purpose = f"""This policy says how {HOSPITAL} meets NABH Hospitals 6th Edition standard PRE.{n}: {std_title}
 
-It covers objective elements PRE.{n}.{letters} ({len(oes)} elements).
+{hco_oe_count_clause(len(oes))}
 
 Chapter intent (official Standards PDF): {CHAPTER_INTENT}
 
-This policy owns PRE.{n}. Related AAC, COP, MOM, IPC/HIC and IMS duties stay with those policies — cross-reference only. Other PRE standards stay with their own policies.
+{hco_related_duties_clause(own_topic, related_chapters)} Other PRE standards stay with their own policies.
 
 Words marked {D('like this')} are defaults. A blank marked {BLANK} must be filled before issue."""
 
     scope = f"""This policy applies to staff who register, admit, treat, counsel, bill, take consent from, or communicate with patients and families at {HOSPITAL}, including the {prepared}, treating doctors, nursing, Guest Relations / Patient Rights, Patient Accounts and the Quality Coordinator.
 
-It covers {len(oes)} objective elements ({', '.join(oe_codes)}).
+{hco_oe_count_clause(len(oes))}
 
-{hco_boundaries_clause(["AAC", "COP", "MOM"])} Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 {GUIDEBOOK_MD5})."""
+{hco_related_duties_clause(own_topic, related_chapters)} Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 {GUIDEBOOK_MD5})."""
 
     lead = (std_title[0].lower() + std_title[1:]).rstrip(".") if std_title else "patient and family rights are protected"
     policy_statement = f"""{HOSPITAL} implements PRE.{n} so that {lead}.

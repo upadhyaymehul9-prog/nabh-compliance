@@ -29,11 +29,11 @@ The organisation takes action to prevent or reduce healthcare associated infecti
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard IPC.8: The organisation takes action to prevent or reduce healthcare associated infections in its staff.
 
-It covers objective elements IPC.8.a–e (5 elements).
+This policy covers all 5 requirements under this standard, listed in detail below.
 
 Chapter intent (official Standards PDF): The organisation implements an effective healthcare associated infection prevention and control programme. The programme is documented and aims at reducing / eliminating infection risks to patients, visitors and providers of care. The programme is implemented across the organisation, including clinical areas and support services. The organisation provides proper facilities and adequate resources to support the infection prevention and control programme. The organisation measures and acts to prevent or reduce the risk of healthcare associated infection in patients and staff. The organisation has an effective antimicrobial management programme through regularly updated antimicrobial policy based on local data and monitors its implementation. Programme also includes monitoring of antimicrobials usage in the organisation. Surveillance activities are incorporated in the infection prevention and control programme. The programme includes disinfection / sterilisation activities and biomedical waste (BMW) management.
 
-This policy owns IPC.8. Related AAC, COP, MOM and PRE duties stay with those policies — cross-reference only. Other IPC standards stay with their own policies.
+This policy covers prevention of healthcare associated infections in staff specifically. Related duties — like patient assessment, clinical care, medication management, or patient rights — are covered in the hospital's other policies, not repeated here. Other IPC standards stay with their own policies.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -41,9 +41,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to staff who deliver clinical care, run support services (housekeeping, laundry, kitchen, CSSD, engineering), handle biomedical waste, or hold occupational-health duties at Preview Hospital, including the «Occupational Health Physician», the Infection Prevention and Control Officer and Nurse, treating doctors, nursing, CSSD, Occupational Health and the Quality Coordinator.
 
-It covers 5 objective elements (IPC.8.a, IPC.8.b, IPC.8.c, IPC.8.d, IPC.8.e).
+This policy covers all 5 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC, COP, MOM or PRE policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+This policy covers prevention of healthcare associated infections in staff specifically. Related duties — like patient assessment, clinical care, medication management, or patient rights — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 

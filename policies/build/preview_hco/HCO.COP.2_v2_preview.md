@@ -29,9 +29,9 @@ Emergency services are provided in accordance with written guidance, applicable 
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard COP.2: Emergency services are provided in accordance with written guidance, applicable laws and regulations.
 
-It covers objective elements COP.2.a–i (9 elements).
+This policy covers all 9 requirements under this standard, listed in detail below.
 
-This policy owns COP.2. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.
+This policy covers emergency services specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -39,9 +39,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to staff who deliver or oversee the care described in COP.2 at Preview Hospital, including the «Emergency In-Charge», treating doctors, nurses and the Quality Coordinator.
 
-It covers 9 objective elements (COP.2.a, COP.2.b, COP.2.c, COP.2.d, COP.2.e, COP.2.f, COP.2.g, COP.2.h, COP.2.i).
+This policy covers all 9 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
+This policy covers emergency services specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 

@@ -29,11 +29,11 @@ The organisation has a programme for medical equipment management.
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard FMS.5: The organisation has a programme for medical equipment management.
 
-It covers objective elements FMS.5.a–h (8 elements).
+This policy covers all 8 requirements under this standard, listed in detail below.
 
 Chapter intent (official Standards PDF): The standards guide the provision of a safe and secure environment for patients, their families, staff and visitors. The organisation attends to the facility, equipment, and internal physical environment for improving patient safety and quality of services by consistently addressing issues that may arise out of the same. The organisation does this through proactive risk analysis, safety rounds, training of staff on the enhancement of safety and management of disasters. To ensure this, the organisation conducts regular facility inspection rounds and takes the appropriate action to ensure safety. The organisation provides for safe water, electricity, medical gases and vacuum systems. The organisation has a programme for medical and utility equipment management. The organisation plans for fire and non-fire emergencies within the facilities. The organisation is a no-smoking area. The organisation safely manages hazardous materials. The organisation works towards measures on being energy efficient.
 
-This policy owns FMS.5. Related AAC, COP, MOM, PRE, IPC, PSQ and ROM duties stay with those policies — cross-reference only. Other FMS standards stay with their own policies.
+This policy covers medical equipment management specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards stay with their own policies.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -41,9 +41,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to engineering, biomedical, nursing and departmental leaders, and staff who run facilities, utilities, medical gases, fire and non-fire emergencies at Preview Hospital, including the «Engineering In-Charge», the «Medical Superintendent», departmental leaders and the Quality Coordinator.
 
-It covers 8 objective elements (FMS.5.a, FMS.5.b, FMS.5.c, FMS.5.d, FMS.5.e, FMS.5.f, FMS.5.g, FMS.5.h).
+This policy covers all 8 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC, COP, MOM, PRE, IPC, PSQ or ROM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+This policy covers medical equipment management specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 

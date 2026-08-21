@@ -29,9 +29,9 @@ Nursing care is provided to patients in the organisation in consonance with clin
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard COP.6: Nursing care is provided to patients in the organisation in consonance with clinical protocols.
 
-It covers objective elements COP.6.a–f (6 elements).
+This policy covers all 6 requirements under this standard, listed in detail below.
 
-This policy owns COP.6. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.
+This policy covers nursing care in consonance with clinical protocols specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -39,9 +39,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to staff who deliver or oversee the care described in COP.6 at Preview Hospital, including the «Nursing Superintendent», treating doctors, nurses and the Quality Coordinator.
 
-It covers 6 objective elements (COP.6.a, COP.6.b, COP.6.c, COP.6.d, COP.6.e, COP.6.f).
+This policy covers all 6 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
+This policy covers nursing care in consonance with clinical protocols specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 

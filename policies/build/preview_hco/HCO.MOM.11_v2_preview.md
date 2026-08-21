@@ -29,11 +29,11 @@ Medical supplies and consumables are stored appropriately and are available wher
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard MOM.11: Medical supplies and consumables are stored appropriately and are available where required.
 
-It covers objective elements MOM.11.a–e (5 elements).
+This policy covers all 5 requirements under this standard, listed in detail below.
 
 Chapter intent (official Standards PDF): The organisation has a safe and organised medication management process. Availability, safe storage, prescription, dispensing and administration of medications are governed by written guidance. A medication safety officer is designated. The hospital formulary is developed, implemented and updated. Pharmacy has oversight of medications stocked out of the pharmacy. Reconciliation occurs at transition points. Patients are monitored after administration. Near misses, medication errors and adverse drug reactions are reported and analysed. Medications also include blood, implants and devices. Medical supplies and consumables are available for use.
 
-This policy owns MOM.11. Related AAC, COP, PRE, IPC/HIC and HRM duties stay with those policies — cross-reference only. Other MOM standards stay with their own policies.
+This policy covers storage and availability of medical supplies and consumables specifically. Related duties — like patient assessment, clinical care, patient rights, infection control, or staffing — are covered in the hospital's other policies, not repeated here. Other MOM standards stay with their own policies.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -41,9 +41,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to staff who prescribe, dispense, administer, store, monitor or oversee medications (or, for MOM.10–11, implants / medical devices / medical supplies) at Preview Hospital, including the «Stores In-Charge», pharmacy, nursing, treating doctors and the Quality Coordinator.
 
-It covers 5 objective elements (MOM.11.a, MOM.11.b, MOM.11.c, MOM.11.d, MOM.11.e).
+This policy covers all 5 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+This policy covers storage and availability of medical supplies and consumables specifically. Related duties — like patient assessment, clinical care, patient rights, infection control, or staffing — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 

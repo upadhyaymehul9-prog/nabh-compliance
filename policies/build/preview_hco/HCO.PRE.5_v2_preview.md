@@ -29,11 +29,11 @@ Patient and families have a right to information and education about their healt
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard PRE.5: Patient and families have a right to information and education about their healthcare needs.
 
-It covers objective elements PRE.5.a–j (10 elements).
+This policy covers all 10 requirements under this standard, listed in detail below.
 
 Chapter intent (official Standards PDF): The organisation defines, protects and promotes the patient and family's rights and responsibilities. The staff is aware of these rights and is trained to protect them. Patients are informed of their rights and educated about their responsibilities at the time of entering the organisation. The expected costs of treatment and care are explained clearly to the patient and / or family. The organisation encourages patient engagement to enhance clinical outcomes, safety and quality. Patients are educated about the mechanisms available for addressing grievances. Informed consent is obtained from the patient or family for specified procedures / care. The key components of information shall include risks, benefits and alternatives. Patients and families have a right to get information and education about their healthcare needs in a language and manner that is understood by them. The organisation has a mechanism to capture the patient experience including patient reported experience measures (PREM). The organisation develops effective patient-centred communication.
 
-This policy owns PRE.5. Related AAC, COP, MOM, IPC/HIC and IMS duties stay with those policies — cross-reference only. Other PRE standards stay with their own policies.
+This policy covers information and education about healthcare needs specifically. Related duties — like patient assessment, clinical care, medication management, infection control, or medical records and information management — are covered in the hospital's other policies, not repeated here. Other PRE standards stay with their own policies.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -41,9 +41,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to staff who register, admit, treat, counsel, bill, take consent from, or communicate with patients and families at Preview Hospital, including the «Nursing Superintendent», treating doctors, nursing, Guest Relations / Patient Rights, Patient Accounts and the Quality Coordinator.
 
-It covers 10 objective elements (PRE.5.a, PRE.5.b, PRE.5.c, PRE.5.d, PRE.5.e, PRE.5.f, PRE.5.g, PRE.5.h, PRE.5.i, PRE.5.j).
+This policy covers all 10 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+This policy covers information and education about healthcare needs specifically. Related duties — like patient assessment, clinical care, medication management, infection control, or medical records and information management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 
 ## 3. Policy standards
 

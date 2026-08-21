@@ -29,9 +29,9 @@ Ambulance services ensure safe patient transportation with appropriate care.
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard COP.3: Ambulance services ensure safe patient transportation with appropriate care.
 
-It covers objective elements COP.3.a–g (7 elements).
+This policy covers all 7 requirements under this standard, listed in detail below.
 
-This policy owns COP.3. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.
+This policy covers ambulance services and safe transportation specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -39,9 +39,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to staff who deliver or oversee the care described in COP.3 at Preview Hospital, including the «Ambulance / Transport In-Charge», treating doctors, nurses and the Quality Coordinator.
 
-It covers 7 objective elements (COP.3.a, COP.3.b, COP.3.c, COP.3.d, COP.3.e, COP.3.f, COP.3.g).
+This policy covers all 7 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
+This policy covers ambulance services and safe transportation specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 

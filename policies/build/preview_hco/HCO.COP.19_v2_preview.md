@@ -29,9 +29,9 @@ Nutritional therapy is provided to patients consistently and collaboratively.
 
 This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard COP.19: Nutritional therapy is provided to patients consistently and collaboratively.
 
-It covers objective elements COP.19.a–e (5 elements).
+This policy covers all 5 requirements under this standard, listed in detail below.
 
-This policy owns COP.19. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.
+This policy covers nutritional therapy specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -39,9 +39,9 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to staff who deliver or oversee the care described in COP.19 at Preview Hospital, including the «Dietetics In-Charge», treating doctors, nurses and the Quality Coordinator.
 
-It covers 5 objective elements (COP.19.a, COP.19.b, COP.19.c, COP.19.d, COP.19.e).
+This policy covers all 5 requirements under this standard, listed in detail below.
 
-Boundaries: do not overwrite HCO AAC policies. Spell out abbreviations on first use in training materials.
+This policy covers nutritional therapy specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.
 
 ## 3. Policy standards
 
