@@ -10,11 +10,18 @@ import {
 } from "npm:docx";
 
 const REPO = new URL("../../", import.meta.url);
-const DRAFTS = new URL("policies/drafts/", REPO);
-const OUT = new URL(Deno.env.get("OUT_DIR") ?? "policies/build/preview/", REPO);
+const DRAFT_JSON = Deno.env.get("DRAFT_JSON") ?? "pre2_v2_draft.json";
+const isHcoDraft = DRAFT_JSON.startsWith("hco_");
+const DRAFTS = new URL(
+  Deno.env.get("DRAFTS_DIR") ?? (isHcoDraft ? "policies/drafts_hco/" : "policies/drafts/"),
+  REPO,
+);
+const OUT = new URL(
+  Deno.env.get("OUT_DIR") ?? (isHcoDraft ? "policies/build/preview_hco/" : "policies/build/preview/"),
+  REPO,
+);
 const OUT_SUFFIX = Deno.env.get("OUT_SUFFIX") ?? "_v2_preview";
 const HOSPITAL = Deno.env.get("HOSPITAL_PLACEHOLDER") ?? "Preview Hospital";
-const DRAFT_JSON = Deno.env.get("DRAFT_JSON") ?? "pre2_v2_draft.json";
 
 const sub = (t: string) => t.replaceAll("{{HOSPITAL_NAME}}", HOSPITAL);
 

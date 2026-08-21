@@ -325,6 +325,8 @@ def emit_pre_v2(
     statute_clause: str | None,
     accreditation_only: bool,
     edition_label: str = DEFAULT_EDITION_LABEL,
+    drafts_dir: Path | None = None,
+    preview_dir: Path | None = None,
 ) -> None:
     # Normalize NABH PDF PUA fi/fl ligatures before shape checks and write-out
     # so masters never carry invisible U+F001/U+F002 glyphs.
@@ -338,8 +340,20 @@ def emit_pre_v2(
         accreditation_only=accreditation_only,
         edition_label=edition_label,
     )
-    out_json = POLICIES / "drafts" / json_name
-    out_md = POLICIES / "build" / "preview" / md_name
+    # HCO Full output is physically separate from SHCO. HCO builders pass
+    # drafts_dir/preview_dir; if a caller forgets, json_name "hco_*" still
+    # must not land in the SHCO folders.
+    is_hco = json_name.startswith("hco_") or str(draft.get("chapter", "")).upper() == "HCO"
+    if is_hco:
+        from hco_v2_paths import HCO_DRAFTS, HCO_PREVIEW
+        out_json_dir = drafts_dir or HCO_DRAFTS
+        out_md_dir = preview_dir or HCO_PREVIEW
+    else:
+        out_json_dir = drafts_dir or (POLICIES / "drafts")
+        out_md_dir = preview_dir or (POLICIES / "build" / "preview")
+    out_json = out_json_dir / json_name
+    out_md = out_md_dir / md_name
+    out_json.parent.mkdir(parents=True, exist_ok=True)
     out_md.parent.mkdir(parents=True, exist_ok=True)
     out_json.write_text(json.dumps(draft, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     out_md.write_text(md, encoding="utf-8")

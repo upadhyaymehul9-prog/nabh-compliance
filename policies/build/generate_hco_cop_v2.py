@@ -6,6 +6,7 @@ Usage (from policies/build):
 
 Does not touch AAC or SHCO. Always sets explicit HCO draft_label via
 hco_cop_v2_common.hco_document_control (no \"not an approved master\" leftover).
+HCO drafts/previews write to policies/drafts_hco and policies/build/preview_hco.
 """
 from __future__ import annotations
 
@@ -35,6 +36,7 @@ from hco_v2_disclaimer import (  # noqa: E402
     make_hco_disclaimer_accreditation_only,
     make_hco_disclaimer_statute,
 )
+from hco_v2_paths import HCO_DRAFTS, HCO_PREVIEW  # noqa: E402
 from pre_v2_common import emit_pre_v2  # noqa: E402
 
 INVENTORY = ROOT / "policies/source/hco6_cop_inventory.json"
@@ -391,6 +393,8 @@ def emit_standard(n: int) -> int:
         statute_clause=statute_clause,
         accreditation_only=accreditation_only,
         edition_label=HCO_EDITION_LABEL,
+        drafts_dir=HCO_DRAFTS,
+        preview_dir=HCO_PREVIEW,
     )
     return 0
 
@@ -413,6 +417,8 @@ def main() -> int:
             statute_clause=statute_clause,
             accreditation_only=accreditation_only,
             edition_label=HCO_EDITION_LABEL,
+            drafts_dir=HCO_DRAFTS,
+            preview_dir=HCO_PREVIEW,
         )
         print(f"COP.{n}: {len(oe_codes)} OEs; stop_work={'yes' if draft['stop_work'] else 'no'}")
     return 0
