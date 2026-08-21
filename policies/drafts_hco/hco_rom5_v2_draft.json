@@ -1,0 +1,124 @@
+{
+  "standard_code": "ROM.5",
+  "chapter": "HCO",
+  "oe_codes": [
+    "ROM.5.a",
+    "ROM.5.b",
+    "ROM.5.c",
+    "ROM.5.d",
+    "ROM.5.e",
+    "ROM.5.f"
+  ],
+  "policy_title": "Professional Functioning of the Organisation",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard ROM.5: The organisation displays professionalism in its functioning.\n\nIt covers objective elements ROM.5.a–f (6 elements).\n\nChapter intent (official Standards PDF): The management of the healthcare organisation is aware of and manages all the key components of governance. Those responsible for governance are identified and their roles defined. The standards encourage the governance of the organisation professionally and ethically. Clinical governance framework is established, that includes clinical audits, clinical pathways, education and research. The responsibilities of management are defined. The responsibilities of the leaders at all levels are defined. The management executes its responsibility for compliance with all applicable regulations. Those responsible for governance address the organisations social responsibility. Leaders ensure that patient-safety and risk-management issues are an integral part of patient care and hospital management. The Organisation has a written guidance in place for change management and service continuity plan.\n\nThis policy owns ROM.5. Related AAC, COP, MOM, PRE, IPC and PSQ duties stay with those policies — cross-reference only. Other ROM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to those responsible for governance, the person heading the organisation, departmental leaders, and staff who run ethics, sustainability, risk or outsourcing at {{HOSPITAL_NAME}}, including the «Quality Coordinator», «those responsible for governance» as identified under ROM.1, departmental leaders and the Quality Coordinator.\n\nIt covers 6 objective elements (ROM.5.a, ROM.5.b, ROM.5.c, ROM.5.d, ROM.5.e, ROM.5.f).\n\nBoundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE, IPC or PSQ policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
+  "policy_statement": "{{HOSPITAL_NAME}} implements ROM.5 so that the organisation displays professionalism in its functioning.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 The organisation has strategic and operational plans, including long-...\n\nThe organisation has strategic and operational plans, including long-term and short-term goals commensurate with vision, mission and values, developed in consultation with stakeholders.\n\nPlans name owners and timeframes. The «Quality Coordinator» holds the current set with the «Medical Superintendent».\n\nMethod note (from guidebook interpretation): The leader(s) shall define and develop the process for strategic and operational plans to achieve the organisational vision and mission statement and adhere to the values. It shall be discussed with all stakeholders. Stakeholders include the community that the organisation serves. The strategic plan development shall take into consideration both external and internal scan. The same can be done using tools like SWOT(strengths, weakness, opportunities and threats) analysis. Some of the inputs that shall be considered while finalising these plans shall be the findings of the risk management plan, patient safety goals and results of facility rounds. Operational plan(s) shall be done on an annual basis. The strategic and operational plan shall have defined goals and objectives which are measurable and have defined time frames. Refer to the glossary for “strategic plan” and “operational plan”.",
+    "5.2 The organisation coordinates the functioning with departments and ext...\n\nThe organisation coordinates functioning with departments and external agencies and monitors progress against defined goals and objectives.\n\nCoordination minutes and a progress view sit with the «Quality Coordinator». This is an asterisked element.\n\nMethod note (from guidebook interpretation): The goals and objectives shall be drawn from the strategic plan and operational plan. They shall be consistent with the mission and values. They shall have measurable outcomes. The reasons for not achieving any particular goal shall be analysed and appropriate action shall be taken. This could be done through periodic reviews and/or formal management review meetings which shall be documented.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.3 The organisation plans and budgets for its activities annually\n\nThe organisation plans and budgets for its activities «annually». The operational plan is linked to the strategic plan. The «Medical Superintendent» tables the annual plan and budget for governance approval (ROM.1.c).\n\nMethod note (from guidebook interpretation): The planning shall be done, taking into consideration the strategic and operational plans of the organisation. The budget development and review process shall include a review of budgeted expenditure against actual. Responsibilities for these activities shall be clearly defined and followed. An adequate budget shall be allocated for infection prevention and control and quality improvement activities. This could be either done on a calendar year (January-December) basis or financial year (April-March) basis. Refer to IPC.2.b. and PSQ.6.d.",
+    "5.4 The functioning of committees is reviewed for their effectiveness\n\nThe functioning of committees is reviewed for effectiveness at a defined interval (default «annually»): whether they met, decided, and closed actions.\n\nThe «Quality Coordinator» prepares the review. A list of committees without an effectiveness review is not this Achievement element.\n\nMethod note (from guidebook interpretation): The review shall be done by the leadership. The review of the functioning shall include whether the purpose of having the committee is being met, whether the committee is meeting at the prescribed frequency and whether the committee is suggesting remedial measures and if there is adequate monitoring of the corrective and preventive action suggested by the committee by way of risk mitigation within the scope of the particular committee. For an effective review, the organisation could document the scope of every committee, the roles and responsibilities assigned to various members and the frequency of meetings. Minutes of the meeting for each committee meeting will be maintained.",
+    "5.5 The organisation documents the service standards that are measurable ...\n\nThe organisation documents measurable service standards and monitors them (what good looks like for selected services, the measure, and the review interval).\n\nThe «Quality Coordinator» keeps the standard set and results. This is an asterisked element.\n\nMethod note (from guidebook interpretation): The organisation shall develop benchmarks for different aspects of the services being provided. This could be based on the organisation's values. The organisation shall decide the responsibility for and frequency of monitoring.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.6 Systems and processes are in place for change management\n\nSystems and processes are in place for change management: written guidance for operational, clinical or structural change, including who approves, how staff are told, and how service continuity is kept.\n\nA change started with no record on that path is incomplete under this Excellence asterisked element.\n\nMethod note (from guidebook interpretation): Organisation has a written guidance in place for change management. Change may be operational, financial or departmental. It also involves succession planning and a change in leadership. This shall address aspects like communication, ownership, organisational culture.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that ROM.5 is resourced and followed.\n- Acts as the person heading the organisation unless «those responsible for governance» have appointed another leader.\n\nQuality Coordinator\n- Owns day-to-day implementation and records for this standard.\n\nthose responsible for governance\n- Hold the duties ROM.1 assigns to the governing entity.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements; supports dashboards and committee reviews as this standard requires.\n\ndepartmental leaders\n- Run the department-level duties this standard names.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Responsibilities of Management, standard ROM.5. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — ROM.5 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_rom_guidebook_ocr.txt).\n- Internal documents of {{HOSPITAL_NAME}}: governance role document, ethical-management framework, ESG / social-responsibility programme, applicable-legislation register, risk-management plan, outsourcing agreements named for ROM.5.",
+  "distribution": "Medical Superintendent; Quality Coordinator; those responsible for governance; departmental leaders; staff covered by ROM.5",
+  "abbreviations": "AERB — Atomic Energy Regulatory Board\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nESG — Environment, Social and Governance\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element\nROM — Responsibilities of Management (NABH Hospitals 6th Edition chapter)\nSWOT — Strengths, Weaknesses, Opportunities and Threats",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "ROM.5.a",
+      "requirement": "The organisation has strategic and operational plans, including long-term and short-term goals commensurate to the organisation’s vision, mission and values in consultation with the various stakeholders.",
+      "steps": "Section 3; 5.1",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing ROM.5.a was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for ROM.5.a reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "ROM.5.b",
+      "requirement": "The organisation coordinates the functioning with departments and external agencies and monitors the progress in achieving the defined goals and objectives.",
+      "steps": "Section 3; 5.2",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing ROM.5.b was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for ROM.5.b reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    },
+    {
+      "oe_code": "ROM.5.c",
+      "requirement": "The organisation plans and budgets for its activities annually.",
+      "steps": "Section 3; 5.3",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing ROM.5.c was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for ROM.5.c reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "ROM.5.d",
+      "requirement": "The functioning of committees is reviewed for their effectiveness.",
+      "steps": "Section 3; 5.4",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing ROM.5.d was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for ROM.5.d reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "ROM.5.e",
+      "requirement": "The organisation documents the service standards that are measurable and monitors them.",
+      "steps": "Section 3; 5.5",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing ROM.5.e was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for ROM.5.e reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    },
+    {
+      "oe_code": "ROM.5.f",
+      "requirement": "Systems and processes are in place for change management.",
+      "steps": "Section 3; 5.6",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing ROM.5.f was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for ROM.5.f reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO ROM.5 v2 (2026-08-21). Official Standards PDF OE count 6; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: bef. CORE: none. Achievement: d. Excellence: f.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/ROM/POL/05.\nOfficial chapter is 6 standards / 37 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. No statute P2 proposed (accreditation-only); ROM.4.b legislations and ROM.6.d AERB example stay in method notes.\nDo not copy SHCO equivalent-chapter wording. Do not touch AAC, COP, MOM, PRE, IPC or PSQ.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition ROM.5 v2 draft: portal PDF OE data + Guidebook interpretations (md5 2c4489ee98de4ae9b49cba168ea9f42a); draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation displays professionalism in its functioning.",
+  "exceptions": "1. Do not skip: The organisation has strategic and operational plans, including long-term and short-term goals commensurate...\n2. Do not skip: The organisation coordinates the functioning with departments and external agencies and monitors the progre...\n3. Do not skip: The organisation plans and budgets for its activities annually.\n4. Do not skip: The functioning of committees is reviewed for their effectiveness.\n5. Do not skip: The organisation documents the service standards that are measurable and monitors them.\n6. Do not skip: Systems and processes are in place for change management.\n7. Staff who see a ROM.5 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE ROM.5.a–f.\n- Asterisked elements (bef) have document evidence as required.\n- CORE elements (none) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related governance change, statutory-register gap or outsourced-service failure.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Professional Functioning of the Organisation policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/ROM/POL/05»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Quality Coordinator»",
+  "template_test": "hco_rom_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — ROM.5.",
+  "doc_no": "«HCO/ROM/POL/05»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.ROM.5",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}
