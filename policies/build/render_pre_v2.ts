@@ -76,6 +76,9 @@ function blocks(text: string): Paragraph[] {
 
 interface V2Draft {
   standard_code: string;
+  chapter?: string;
+  edition_label?: string;
+  render_basename?: string;
   policy_title: string;
   purpose: string;
   scope: string;
@@ -100,6 +103,15 @@ interface V2Draft {
   acknowledgement_note?: string;
   prepared_by?: string;
   control_extra_rows?: string[][];
+}
+
+/** Prefer draft.prepared_by; else parse resources_required; else neutral HCO default. */
+function resolvePreparedBy(d: V2Draft): string {
+  if (d.prepared_by && d.prepared_by.trim()) return d.prepared_by.trim();
+  const rr = d.resources_required ?? "";
+  const m = rr.match(/Prepared by \(designation\):\s*(«[^»]+»|[^\n]+?)(?:\s{2,}Name|\s*$)/);
+  if (m) return m[1].trim();
+  return "«Quality Coordinator»";
 }
 
 function sectionAfterWhatWeDo(hasStop: boolean): { n: number; title: string; key: string }[] {
@@ -128,7 +140,7 @@ function buildV2Document(d: V2Draft): Document {
     ["Document No.", docNo, "Version", d.version ?? "2.0"],
     ["Issue No.", "«01»", "Review due", "«one year from implementation»"],
     ["Date created", "«________»", "Date of implementation", "«________»"],
-    ["Prepared by", `${d.prepared_by ?? "«Patient Rights Officer»"}  Name «________»`, "Signature", "«________»"],
+    ["Prepared by", `${resolvePreparedBy(d)}  Name «________»`, "Signature", "«________»"],
     ["Reviewed by", "«Quality Coordinator»  Name «________»", "Signature", "«________»"],
     ["Approved by", "«Medical Superintendent»  Name «________»", "Signature", "«________»"],
     ...(d.control_extra_rows ?? []),
@@ -220,7 +232,7 @@ function buildV2Document(d: V2Draft): Document {
     h1("Document control"),
     new Paragraph({
       children: [new TextRun({
-        text: "« » marks an editable default a small hospital can adopt. «________» is a true blank and must be completed before issue. PRE v2 draft — not an approved master.",
+        text: "« » marks an editable default a small hospital can adopt. «________» is a true blank and must be completed before issue.",
         italics: true,
         size: 18,
       })],
@@ -294,7 +306,7 @@ function buildV2Document(d: V2Draft): Document {
   }
 
   children.push(
-    h1(`${nTrace}. Traceability to NABH SHCO 3rd Edition ${d.standard_code}`),
+    h1(`${nTrace}. Traceability to ${d.edition_label ?? "NABH SHCO 3rd Edition"} ${d.standard_code}`),
     new Paragraph({
       children: [new TextRun({
         text: "This table is an index. It is not how the policy is organised.",
@@ -356,7 +368,11 @@ function buildV2Document(d: V2Draft): Document {
 async function main() {
   await Deno.mkdir(OUT, { recursive: true });
   const d: V2Draft = JSON.parse(await Deno.readTextFile(new URL(DRAFT_JSON, DRAFTS)));
-  const outName = `${d.standard_code}${OUT_SUFFIX}.docx`;
+  const basename =
+    Deno.env.get("OUT_BASENAME") ??
+    d.render_basename ??
+    (d.chapter === "HCO" ? `HCO.${d.standard_code}` : d.standard_code);
+  const outName = `${basename}${OUT_SUFFIX}.docx`;
   const doc = buildV2Document(d);
   await Deno.writeFile(new URL(outName, OUT), await Packer.toBuffer(doc).then((b) => new Uint8Array(b)));
   const outRel = new URL(outName, OUT).pathname.replace(/^\/workspace\/?/, "");

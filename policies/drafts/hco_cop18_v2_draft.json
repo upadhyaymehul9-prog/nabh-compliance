@@ -1,0 +1,134 @@
+{
+  "standard_code": "COP.18",
+  "chapter": "HCO",
+  "oe_codes": [
+    "COP.18.a",
+    "COP.18.b",
+    "COP.18.c",
+    "COP.18.d",
+    "COP.18.e",
+    "COP.18.f",
+    "COP.18.g"
+  ],
+  "policy_title": "Rehabilitation Services",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard COP.18: Rehabilitation services are provided to the patients in a safe, collaborative and consistent manner.\n\nIt covers objective elements COP.18.a–g (7 elements).\n\nThis policy owns COP.18. Related AAC, PRE, IPC/HIC, HRM and MOM duties stay with those policies — cross-reference only.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who deliver or oversee the care described in COP.18 at {{HOSPITAL_NAME}}, including the «Rehabilitation In-Charge», treating doctors, nurses and the Quality Coordinator.\n\nIt covers 7 objective elements (COP.18.a, COP.18.b, COP.18.c, COP.18.d, COP.18.e, COP.18.f, COP.18.g).\n\nBoundaries: do not copy SHCO COP wording. Do not overwrite AAC policies. Spell out abbreviations on first use in training materials.",
+  "policy_statement": "{{HOSPITAL_NAME}} implements COP.18 so that rehabilitation services are provided to the patients in a safe, collaborative and consistent manner..\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Scope of the rehabilitation services at a minimum is commensurate to ..\n\nScope of the rehabilitation services at a minimum is commensurate to the services provided by the organisation.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.2 Rehabilitation services are provided in a consistent manner\n\nRehabilitation services are provided in a consistent manner.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.3 Care providers collaboratively plan rehabilitation services\n\nCare providers collaboratively plan rehabilitation services.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.4 There are adequate space and equipment to provide rehabilitation\n\nThere are adequate space and equipment to provide rehabilitation.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.5 Care is guided by functional assessment and periodic re-assessments w..\n\nCare is guided by functional assessment and periodic re-assessments which are done and documented.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.6 Care is provided adhering to infection prevention and control and saf..\n\nCare is provided adhering to infection prevention and control and safety practices.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.7 Care pathways are developed, implemented, and reviewed periodically\n\nCare pathways are developed, implemented, and reviewed periodically.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that COP.18 is resourced and followed.\n\nRehabilitation In-Charge\n- Owns day-to-day implementation and records for this standard.\n\nTreating doctors / nurses / technicians (as applicable)\n- Deliver care as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Care of Patients, standard COP.18.\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — COP.18 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).\n- Internal documents of {{HOSPITAL_NAME}}: written guidance and registers named for COP.18.",
+  "distribution": "Medical Superintendent; Rehabilitation In-Charge; Quality Coordinator; department clinical staff covered by COP.18",
+  "abbreviations": "COP — Care of Patients (NABH Hospitals chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element\nCORE — Core objective element (NABH)\nRCA — Root Cause Analysis\nCAPA — Corrective and Preventive Action",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "COP.18.a",
+      "requirement": "Scope of the rehabilitation services at a minimum is commensurate to the services provided by the organisation.",
+      "steps": "Section 3; 5.1",
+      "responsible": "Rehabilitation In-Charge",
+      "records": [
+        "Records showing COP.18.a was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.18.a reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "COP.18.b",
+      "requirement": "Rehabilitation services are provided in a consistent manner.",
+      "steps": "Section 3; 5.2",
+      "responsible": "Rehabilitation In-Charge",
+      "records": [
+        "Records showing COP.18.b was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.18.b reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "COP.18.c",
+      "requirement": "Care providers collaboratively plan rehabilitation services.",
+      "steps": "Section 3; 5.3",
+      "responsible": "Rehabilitation In-Charge",
+      "records": [
+        "Records showing COP.18.c was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.18.c reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "COP.18.d",
+      "requirement": "There are adequate space and equipment to provide rehabilitation.",
+      "steps": "Section 3; 5.4",
+      "responsible": "Rehabilitation In-Charge",
+      "records": [
+        "Records showing COP.18.d was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.18.d reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "COP.18.e",
+      "requirement": "Care is guided by functional assessment and periodic re-assessments which are done and documented.",
+      "steps": "Section 3; 5.5",
+      "responsible": "Rehabilitation In-Charge",
+      "records": [
+        "Records showing COP.18.e was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.18.e reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "COP.18.f",
+      "requirement": "Care is provided adhering to infection prevention and control and safety practices.",
+      "steps": "Section 3; 5.6",
+      "responsible": "Rehabilitation In-Charge",
+      "records": [
+        "Records showing COP.18.f was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.18.f reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "COP.18.g",
+      "requirement": "Care pathways are developed, implemented, and reviewed periodically.",
+      "steps": "Section 3; 5.7",
+      "responsible": "Rehabilitation In-Charge",
+      "records": [
+        "Records showing COP.18.g was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for COP.18.g reviewed «quarterly»."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO COP.18 v2 (2026-08-20). Official Standards PDF OE count 7; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: none. CORE: none. Achievement: none. Excellence: g.\nStop-work: omitted.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/18.\nDo not copy SHCO COP wording. Do not touch AAC.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "HCO Full 6th Edition COP.18 v2 draft from official Standards PDF + guidebook OCR; draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Rehabilitation services are provided to the patients in a safe, collaborative and consistent manner.",
+  "exceptions": "1. Do not skip: Scope of the rehabilitation services at a minimum is commensurate to the services provided by the organisat...\n2. Do not skip: Rehabilitation services are provided in a consistent manner.\n3. Do not skip: Care providers collaboratively plan rehabilitation services.\n4. Do not skip: There are adequate space and equipment to provide rehabilitation.\n5. Do not skip: Care is guided by functional assessment and periodic re-assessments which are done and documented.\n6. Do not skip: Care is provided adhering to infection prevention and control and safety practices.\n7. Do not skip: Care pathways are developed, implemented, and reviewed periodically.\n8. Staff who see a COP.18 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE COP.18.a–g.\n- Asterisked elements (none) have document evidence as required.\n- CORE elements (none) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Rehabilitation Services policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/COP/POL/18»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Rehabilitation In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Rehabilitation In-Charge»",
+  "template_test": "hco_cop_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — COP.18.",
+  "doc_no": "«HCO/COP/POL/18»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.COP.18",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}
