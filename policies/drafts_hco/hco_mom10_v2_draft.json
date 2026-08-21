@@ -1,0 +1,110 @@
+{
+  "standard_code": "MOM.10",
+  "chapter": "HCO",
+  "oe_codes": [
+    "MOM.10.a",
+    "MOM.10.b",
+    "MOM.10.c",
+    "MOM.10.d",
+    "MOM.10.e"
+  ],
+  "policy_title": "Implantable Prosthesis and Medical Devices",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard MOM.10: Implantable prosthesis and medical devices shall be used in accordance with laid down criteria.\n\nIt covers objective elements MOM.10.a–e (5 elements).\n\nChapter intent (official Standards PDF): The organisation has a safe and organised medication management process. Availability, safe storage, prescription, dispensing and administration of medications are governed by written guidance. A medication safety officer is designated. The hospital formulary is developed, implemented and updated. Pharmacy has oversight of medications stocked out of the pharmacy. Reconciliation occurs at transition points. Patients are monitored after administration. Near misses, medication errors and adverse drug reactions are reported and analysed. Medications also include blood, implants and devices. Medical supplies and consumables are available for use.\n\nThis policy owns MOM.10. Related AAC, COP, PRE, IPC/HIC and HRM duties stay with those policies — cross-reference only. Other MOM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who prescribe, dispense, administer, store, monitor or oversee medications (or, for MOM.10–11, implants / medical devices / medical supplies) at {{HOSPITAL_NAME}}, including the «OT In-Charge», pharmacy, nursing, treating doctors and the Quality Coordinator.\n\nIt covers 5 objective elements (MOM.10.a, MOM.10.b, MOM.10.c, MOM.10.d, MOM.10.e).\n\nBoundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent.",
+  "policy_statement": "{{HOSPITAL_NAME}} implements MOM.10 so that implantable prosthesis and medical devices shall be used in accordance with laid down criteria.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Usage of implantable prosthesis and medical devices is guided by scie...\n\nImplantable prostheses and medical devices used at {{HOSPITAL_NAME}} are selected against scientific criteria and national / international recognised guidelines or approvals for that item (for example CDSCO / Medical Devices Rules approvals, BIS where named, and specialty-society indications).\n\nThe OT / cath-lab / relevant clinical head and Biomedical keep an approved-item list. An implant without recognised approval is not used except under a documented trial / compassionate pathway approved by the «Medical Superintendent».",
+    "5.2 The organisation implements a mechanism for the usage of the implanta...\n\nThe organisation implements a written mechanism for using these items: request and approval, sterile-supply chain, intra-operative timeout confirming the implant, and recording of identifiers (section 5.4).\n\nThe «OT In-Charge» owns the mechanism for surgical implants; the relevant lab / cath-lab in-charge owns it for devices used there. This asterisked element is the procedure, not only the criteria in 5.1.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.3 Patient and his / her family are counselled for the usage of the impl...\n\nThe patient and family are counselled before implantation on what will be implanted, expected benefit, material risks, alternatives, and precautions after implant (MRI compatibility, anticoagulation, infection signs, follow-up).\n\nCounselling is recorded in the medical record (consent process may sit with PRE; this policy owns the implant-specific content). Emergency life-saving implants are counselled as soon as practicable.",
+    "5.4 The batch and the serial number of the implantable prosthesis and med...\n\nBatch and serial number (or equivalent unique identifier) of the implantable prosthesis or medical device are recorded in three places: the patient's medical record, the master implant logbook, and the discharge summary.\n\nA sticker from the implant pack is the usual source; if it is lost, pharmacy / stores trace the batch before the patient leaves. Missing identifiers are a reportable gap.",
+    "5.5 Process of recall of implantable prosthesis and medical devices are h...\n\nWhen an implant or device is recalled, the «OT In-Charge / Biomedical» traces every affected batch from the master logbook, contacts the treating team and, where required, the patient, and follows the supplier / regulator instruction (explant, extra surveillance, or information only).\n\nThe recall file holds the notice, patients identified, actions taken and closure. This asterisked Achievement element is evidenced by a drill or a real recall file, not by a sentence in this policy.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that MOM.10 is resourced and followed.\n- Designates the Medication Safety Officer (chapter intent) where that role is required for this standard.\n\nOT In-Charge\n- Owns day-to-day implementation and records for this standard.\n\nMedication Safety Officer\n- Coordinates medication-safety processes that cut across MOM standards; brings incidents and audits to the Drug and Therapeutics Committee.\n\nPharmacy / nursing / treating doctors (as applicable)\n- Deliver the process as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.10. Official portal PDF.\n- Internal documents of {{HOSPITAL_NAME}}: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.10.",
+  "distribution": "Medical Superintendent; OT In-Charge; Medication Safety Officer; Pharmacy In-Charge; Nursing Superintendent; Quality Coordinator; department clinical staff covered by MOM.10",
+  "abbreviations": "ADR — adverse drug reaction\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nDTC — Drug and Therapeutics Committee (or the organisation's equivalent multi-disciplinary pharmacy committee)\nFEFO — first expiry, first out\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nLASA — look-alike, sound-alike\nMOM — Management of Medication (NABH Hospitals chapter)\nMSO — Medication Safety Officer\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "MOM.10.a",
+      "requirement": "Usage of implantable prosthesis and medical devices is guided by scientific criteria for each item and national / international recognised guidelines / approvals for such specific item(s).",
+      "steps": "Section 3; 5.1",
+      "responsible": "OT In-Charge",
+      "records": [
+        "Records showing MOM.10.a was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.10.a reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "MOM.10.b",
+      "requirement": "The organisation implements a mechanism for the usage of the implantable prosthesis and medical devices.",
+      "steps": "Section 3; 5.2",
+      "responsible": "OT In-Charge",
+      "records": [
+        "Records showing MOM.10.b was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.10.b reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    },
+    {
+      "oe_code": "MOM.10.c",
+      "requirement": "Patient and his / her family are counselled for the usage of the implantable prosthesis and medical device, including precautions if any.",
+      "steps": "Section 3; 5.3",
+      "responsible": "OT In-Charge",
+      "records": [
+        "Records showing MOM.10.c was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.10.c reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "MOM.10.d",
+      "requirement": "The batch and the serial number of the implantable prosthesis and medical devices are recorded in the patient's medical record, the master logbook and the discharge summary.",
+      "steps": "Section 3; 5.4",
+      "responsible": "OT In-Charge",
+      "records": [
+        "Records showing MOM.10.d was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.10.d reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "MOM.10.e",
+      "requirement": "Process of recall of implantable prosthesis and medical devices are handled effectively.",
+      "steps": "Section 3; 5.5",
+      "responsible": "OT In-Charge",
+      "records": [
+        "Records showing MOM.10.e was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.10.e reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO MOM.10 v2 (2026-08-21). Official Standards PDF OE count 5; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: be. CORE: none. Achievement: e. Excellence: none.\nStop-work: omitted.\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/MOM/POL/10.\nOfficial chapter is 11 standards / 68 OEs — not the SHCO 9-standard MOM set. Guidebook Interpretation paragraphs not available; methods from OE text + chapter intent.\nDo not copy SHCO MOM wording. Do not touch AAC or COP.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition MOM.10 v2 draft from official Standards PDF OE text + chapter intent; draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Implantable prosthesis and medical devices shall be used in accordance with laid down criteria.",
+  "exceptions": "1. Do not skip: Usage of implantable prosthesis and medical devices is guided by scientific criteria for each item and nati...\n2. Do not skip: The organisation implements a mechanism for the usage of the implantable prosthesis and medical devices.\n3. Do not skip: Patient and his / her family are counselled for the usage of the implantable prosthesis and medical device,...\n4. Do not skip: The batch and the serial number of the implantable prosthesis and medical devices are recorded in the patie...\n5. Do not skip: Process of recall of implantable prosthesis and medical devices are handled effectively.\n6. Staff who see a MOM.10 rule broken report it the same shift to the «department in-charge» or the «Medication Safety Officer».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE MOM.10.a–e.\n- Asterisked elements (be) have document evidence as required.\n- CORE elements (none) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event or recall.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Implantable Prosthesis and Medical Devices policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/MOM/POL/10»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «OT In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«OT In-Charge»",
+  "template_test": "hco_mom_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — MOM.10.",
+  "doc_no": "«HCO/MOM/POL/10»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.MOM.10",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

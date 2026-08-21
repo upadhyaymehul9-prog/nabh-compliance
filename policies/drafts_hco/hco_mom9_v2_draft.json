@@ -1,0 +1,109 @@
+{
+  "standard_code": "MOM.9",
+  "chapter": "HCO",
+  "oe_codes": [
+    "MOM.9.a",
+    "MOM.9.b",
+    "MOM.9.c",
+    "MOM.9.d",
+    "MOM.9.e"
+  ],
+  "policy_title": "Narcotics, Psychotropics, Chemotherapy and Radio-pharmaceuticals",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard MOM.9: Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are used in a safe manner.\n\nIt covers objective elements MOM.9.a–e (5 elements).\n\nChapter intent (official Standards PDF): The organisation has a safe and organised medication management process. Availability, safe storage, prescription, dispensing and administration of medications are governed by written guidance. A medication safety officer is designated. The hospital formulary is developed, implemented and updated. Pharmacy has oversight of medications stocked out of the pharmacy. Reconciliation occurs at transition points. Patients are monitored after administration. Near misses, medication errors and adverse drug reactions are reported and analysed. Medications also include blood, implants and devices. Medical supplies and consumables are available for use.\n\nThis policy owns MOM.9. Related AAC, COP, PRE, IPC/HIC and HRM duties stay with those policies — cross-reference only. Other MOM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who prescribe, dispense, administer, store, monitor or oversee medications (or, for MOM.10–11, implants / medical devices / medical supplies) at {{HOSPITAL_NAME}}, including the «Pharmacy In-Charge», pharmacy, nursing, treating doctors and the Quality Coordinator.\n\nIt covers 5 objective elements (MOM.9.a, MOM.9.b, MOM.9.c, MOM.9.d, MOM.9.e).\n\nBoundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent.",
+  "policy_statement": "{{HOSPITAL_NAME}} implements MOM.9 so that narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are used in a safe manner.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Narcotic drugs and psychotropic substances, chemotherapeutic agents a...\n\nNarcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are used only under the written safety measures in this policy: authorised prescriber, secure storage, qualified preparation and administration, and complete records (9.b–9.e).\n\nThe «Pharmacy In-Charge» and the «Medication Safety Officer» own the combined programme. Services that {{HOSPITAL_NAME}} does not provide (for example radio-pharmaceuticals or chemotherapy) are written as out of scope; those items are then not stocked. Where they are in scope, the full chain applies. This asterisked element is the umbrella.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.2 Narcotic drugs and psychotropic substances, chemotherapeutic agents a...\n\nThese agents are prescribed only by caregivers authorised for that class: «consultants / privileged doctors for narcotics and psychotropics; oncology-privileged prescribers for chemotherapy; radiation-medicine / nuclear-medicine privileged prescribers for radio-pharmaceuticals».\n\nA verbal chemotherapy order is not used except under the documented emergency rule in MOM.4.f. Pharmacy does not dispense these classes against an unauthorised signature.",
+    "5.3 Narcotic drugs and psychotropic substances, chemotherapeutic agents a...\n\nNarcotics and psychotropics are stored in a locked, access-controlled cupboard or safe, with a register. Chemotherapeutic agents and radio-pharmaceuticals are stored as their licences and manufacturer instructions require, separate from general stock, with access limited to authorised staff.\n\nKeys / access rights are named. Unsecured opioids in a ward drawer are a stop-work trigger. The extra word 'drugs' in the official OE line ('radio-pharmaceuticals drugs') is kept as printed; practice is secure storage of all three classes.",
+    "5.4 Chemotherapy and radio-pharmaceuticals shall be prepared properly and...\n\nChemotherapy and radio-pharmaceuticals are prepared in the required facility (for example a cytotoxic cabinet / designated hot lab) by personnel qualified and trained for that preparation, and administered by personnel qualified for that administration.\n\nPPE, spill kits and waste streams are in place before preparation starts. Preparation by an unqualified person, or on an open ward bench, is a stop-work trigger. If {{HOSPITAL_NAME}} does not prepare these on site, preparation is contracted to a named qualified provider and receipt checks still apply.",
+    "5.5 A proper record shall be kept of the usage, administration and dispos...\n\nUsage, administration and disposal of these three classes are recorded: narcotic / psychotropic register (receipt, issue, administration, wastage, balance); chemotherapy administration record (protocol, dose, batch, given-by); radio-pharmaceutical log as the radiation programme requires.\n\nDisposal follows biomedical-waste and, where applicable, AERB / radiation rules. A missing register line is investigated the same shift."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that MOM.9 is resourced and followed.\n- Designates the Medication Safety Officer (chapter intent) where that role is required for this standard.\n\nPharmacy In-Charge\n- Owns day-to-day implementation and records for this standard.\n\nMedication Safety Officer\n- Coordinates medication-safety processes that cut across MOM standards; brings incidents and audits to the Drug and Therapeutics Committee.\n\nPharmacy / nursing / treating doctors (as applicable)\n- Deliver the process as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.9. Official portal PDF.\n- Internal documents of {{HOSPITAL_NAME}}: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.9.",
+  "distribution": "Medical Superintendent; Pharmacy In-Charge; Medication Safety Officer; Nursing Superintendent; Quality Coordinator; department clinical staff covered by MOM.9",
+  "abbreviations": "ADR — adverse drug reaction\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nDTC — Drug and Therapeutics Committee (or the organisation's equivalent multi-disciplinary pharmacy committee)\nFEFO — first expiry, first out\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nLASA — look-alike, sound-alike\nMOM — Management of Medication (NABH Hospitals chapter)\nMSO — Medication Safety Officer\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nSeveral requirements in this document are statutory rather than advisory — in particular those arising under the Narcotic Drugs and Psychotropic Substances Act, 1985, and applicable rules for chemotherapeutic agents and radio-pharmaceuticals as referenced for NABH MOM.9. Statutory requirements change, and State authorities impose additional or stricter conditions. {{HOSPITAL_NAME}} is responsible for verifying the current text of any rule cited here and the conditions attached to its own authorisations and licences; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "MOM.9.a",
+      "requirement": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are used safely.",
+      "steps": "Section 3; 5.1; Section 6 Stop-work",
+      "responsible": "Pharmacy In-Charge",
+      "records": [
+        "Records showing MOM.9.a was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.9.a reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    },
+    {
+      "oe_code": "MOM.9.b",
+      "requirement": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are prescribed by appropriate caregivers.",
+      "steps": "Section 3; 5.2; Section 6 Stop-work",
+      "responsible": "Pharmacy In-Charge",
+      "records": [
+        "Records showing MOM.9.b was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.9.b reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "MOM.9.c",
+      "requirement": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals drugs shall be stored securely.",
+      "steps": "Section 3; 5.3; Section 6 Stop-work",
+      "responsible": "Pharmacy In-Charge",
+      "records": [
+        "Records showing MOM.9.c was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.9.c reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "MOM.9.d",
+      "requirement": "Chemotherapy and radio-pharmaceuticals shall be prepared properly and safely and administered by qualified personnel.",
+      "steps": "Section 3; 5.4; Section 6 Stop-work",
+      "responsible": "Pharmacy In-Charge",
+      "records": [
+        "Records showing MOM.9.d was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.9.d reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "MOM.9.e",
+      "requirement": "A proper record shall be kept of the usage, administration and disposal of narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals.",
+      "steps": "Section 3; 5.5; Section 6 Stop-work",
+      "responsible": "Pharmacy In-Charge",
+      "records": [
+        "Records showing MOM.9.e was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.9.e reviewed «quarterly»."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO MOM.9 v2 (2026-08-21). Official Standards PDF OE count 5; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: a. CORE: none. Achievement: none. Excellence: none.\nStop-work: YES — JUDGMENT CALL: Chemo/radiopharmaceutical preparation without qualified personnel; unsecured narcotics/psychotropics.\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/MOM/POL/09.\nOfficial chapter is 11 standards / 68 OEs — not the SHCO 9-standard MOM set. Guidebook Interpretation paragraphs not available; methods from OE text + chapter intent.\nDo not copy SHCO MOM wording. Do not touch AAC or COP.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition MOM.9 v2 draft from official Standards PDF OE text + chapter intent; draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are used in a safe manner.",
+  "exceptions": "1. Do not skip: Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are used safely.\n2. Do not skip: Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are prescribe...\n3. Do not skip: Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals drugs shall b...\n4. Do not skip: Chemotherapy and radio-pharmaceuticals shall be prepared properly and safely and administered by qualified ...\n5. Do not skip: A proper record shall be kept of the usage, administration and disposal of narcotic drugs and psychotropic ...\n6. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n7. Staff who see a MOM.9 rule broken report it the same shift to the «department in-charge» or the «Medication Safety Officer».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE MOM.9.a–e.\n- Asterisked elements (a) have document evidence as required.\n- CORE elements (none) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event or recall.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Narcotics, Psychotropics, Chemotherapy and Radio-pharmaceuticals policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/MOM/POL/09»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Pharmacy In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Pharmacy In-Charge»",
+  "template_test": "hco_mom_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — MOM.9.",
+  "doc_no": "«HCO/MOM/POL/09»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "Do not prepare or administer chemotherapeutic agents or radio-pharmaceuticals without qualified personnel and the required preparation conditions.\n\nDo not leave narcotic drugs or psychotropic substances unsecured, or issue them without the required register entry and authorised prescriber.\n\nStop-work applies to preparation, issue and administration of these classes. Immediate life-saving analgesia / anaesthesia using a controlled drug follows the documented emergency-controlled-drug rules and is entered in the register the same shift.\n\nThe person who stops tells the «Pharmacy In-Charge» and the «Medical Superintendent» the same shift. Refusing unsafe handling of these agents is not a disciplinary matter.",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.MOM.9",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

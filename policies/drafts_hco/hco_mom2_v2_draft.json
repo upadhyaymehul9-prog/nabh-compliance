@@ -1,0 +1,124 @@
+{
+  "standard_code": "MOM.2",
+  "chapter": "HCO",
+  "oe_codes": [
+    "MOM.2.a",
+    "MOM.2.b",
+    "MOM.2.c",
+    "MOM.2.d",
+    "MOM.2.e",
+    "MOM.2.f"
+  ],
+  "policy_title": "Hospital Formulary",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard MOM.2: The organisation develops, updates and implements a hospital formulary.\n\nIt covers objective elements MOM.2.a–f (6 elements).\n\nChapter intent (official Standards PDF): The organisation has a safe and organised medication management process. Availability, safe storage, prescription, dispensing and administration of medications are governed by written guidance. A medication safety officer is designated. The hospital formulary is developed, implemented and updated. Pharmacy has oversight of medications stocked out of the pharmacy. Reconciliation occurs at transition points. Patients are monitored after administration. Near misses, medication errors and adverse drug reactions are reported and analysed. Medications also include blood, implants and devices. Medical supplies and consumables are available for use.\n\nThis policy owns MOM.2. Related AAC, COP, PRE, IPC/HIC and HRM duties stay with those policies — cross-reference only. Other MOM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who prescribe, dispense, administer, store, monitor or oversee medications (or, for MOM.10–11, implants / medical devices / medical supplies) at {{HOSPITAL_NAME}}, including the «Drug and Therapeutics Committee Chair», pharmacy, nursing, treating doctors and the Quality Coordinator.\n\nIt covers 6 objective elements (MOM.2.a, MOM.2.b, MOM.2.c, MOM.2.d, MOM.2.e, MOM.2.f).\n\nBoundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent.",
+  "policy_statement": "{{HOSPITAL_NAME}} implements MOM.2 so that the organisation develops, updates and implements a hospital formulary.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 A list of medications appropriate for the patients and as per the sco...\n\nThe «Drug and Therapeutics Committee» develops the hospital formulary: the list of medications appropriate for the patients {{HOSPITAL_NAME}} actually treats, matched to the defined clinical scope (AAC.1). The list is built collaboratively — pharmacy proposes; clinicians from the services that use the drugs agree; nursing flags administration constraints.\n\nThe formulary records generic name, strength(s), dosage form, and whether the item is high-risk. It is not a wholesale catalogue. Items outside scope (for example a chemotherapy agent when the hospital has no oncology service) are not listed as routine stock. The «Medical Superintendent» approves the first issue of the list.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.2 The list is reviewed and updated collaboratively by the multi-discipl...\n\nThe «Drug and Therapeutics Committee» reviews the formulary at least «annually» and whenever a service is added or withdrawn. Additions, deletions and restrictions are minuted with a clinical reason.\n\nBetween annual reviews, urgent additions (a new essential item, a shortage substitution) go through the same committee or a documented emergency sub-process and are ratified at the next meeting. The «Pharmacy In-Charge» dates the current list on the cover.",
+    "5.3 The current formulary is available for clinicians to refer to\n\nThe current formulary is available where clinicians prescribe: «OPD consulting rooms, wards, ICU, emergency, OT and the hospital information system / intranet». An outdated printed copy is removed when a new version is issued.\n\nPharmacy keeps the master. The «Quality Coordinator» checks availability of the current version at a sample of prescribing locations «quarterly».",
+    "5.4 The clinicians adhere to the current formulary\n\nClinicians prescribe from the current formulary. A non-formulary item is obtained only through the MOM.2.f procedure, not by informal purchase.\n\nPharmacy flags non-formulary prescribing to the «Medication Safety Officer». Repeated non-adherence by a department is tabled at the «Drug and Therapeutics Committee». This Achievement element is evidenced by prescription-versus-formulary audit, not by a poster.",
+    "5.5 The organisation adheres to the procedure for the acquisition of form...\n\nFormulary medications are acquired through the organisation's written procurement procedure: approved supplier, quality checks on receipt, batch and expiry recorded, and storage handed to pharmacy.\n\nThe «Pharmacy In-Charge» does not accept a delivery that fails identity, integrity or cold-chain checks. Purchase of a formulary item off-procedure (cash from a nearby shop without record) is not acquisition under this policy except as documented in the stock-out procedure (MOM.1.d) and then entered the next working day.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.6 The organisation adheres to the procedure to obtain medications not l...\n\nA medication not on the formulary is obtained only through a written non-formulary request: clinical justification, approval by «the treating consultant and the Pharmacy In-Charge or DTC chair», and a record of source, batch and indication.\n\nThe request does not by itself add the item to the formulary. If the item will be needed routinely, the «Drug and Therapeutics Committee» considers a formulary amendment. Emergency life-saving non-formulary use is documented retrospectively the same shift.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that MOM.2 is resourced and followed.\n- Designates the Medication Safety Officer (chapter intent) where that role is required for this standard.\n\nDrug and Therapeutics Committee Chair\n- Owns day-to-day implementation and records for this standard.\n\nMedication Safety Officer\n- Coordinates medication-safety processes that cut across MOM standards; brings incidents and audits to the Drug and Therapeutics Committee.\n\nPharmacy / nursing / treating doctors (as applicable)\n- Deliver the process as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.2. Official portal PDF.\n- Internal documents of {{HOSPITAL_NAME}}: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.2.",
+  "distribution": "Medical Superintendent; Drug and Therapeutics Committee Chair; Medication Safety Officer; Pharmacy In-Charge; Nursing Superintendent; Quality Coordinator; department clinical staff covered by MOM.2",
+  "abbreviations": "ADR — adverse drug reaction\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nDTC — Drug and Therapeutics Committee (or the organisation's equivalent multi-disciplinary pharmacy committee)\nFEFO — first expiry, first out\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nLASA — look-alike, sound-alike\nMOM — Management of Medication (NABH Hospitals chapter)\nMSO — Medication Safety Officer\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "MOM.2.a",
+      "requirement": "A list of medications appropriate for the patients and as per the scope of the organisation's clinical services is developed collaboratively by the multi-disciplinary committee.",
+      "steps": "Section 3; 5.1",
+      "responsible": "Drug and Therapeutics Committee Chair",
+      "records": [
+        "Records showing MOM.2.a was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.2.a reviewed «quarterly».",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "MOM.2.b",
+      "requirement": "The list is reviewed and updated collaboratively by the multi-disciplinary committee at least annually.",
+      "steps": "Section 3; 5.2",
+      "responsible": "Drug and Therapeutics Committee Chair",
+      "records": [
+        "Records showing MOM.2.b was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.2.b reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "MOM.2.c",
+      "requirement": "The current formulary is available for clinicians to refer to.",
+      "steps": "Section 3; 5.3",
+      "responsible": "Drug and Therapeutics Committee Chair",
+      "records": [
+        "Records showing MOM.2.c was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.2.c reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "MOM.2.d",
+      "requirement": "The clinicians adhere to the current formulary.",
+      "steps": "Section 3; 5.4",
+      "responsible": "Drug and Therapeutics Committee Chair",
+      "records": [
+        "Records showing MOM.2.d was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.2.d reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "MOM.2.e",
+      "requirement": "The organisation adheres to the procedure for the acquisition of formulary medications.",
+      "steps": "Section 3; 5.5",
+      "responsible": "Drug and Therapeutics Committee Chair",
+      "records": [
+        "Records showing MOM.2.e was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.2.e reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    },
+    {
+      "oe_code": "MOM.2.f",
+      "requirement": "The organisation adheres to the procedure to obtain medications not listed in the formulary.",
+      "steps": "Section 3; 5.6",
+      "responsible": "Drug and Therapeutics Committee Chair",
+      "records": [
+        "Records showing MOM.2.f was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.2.f reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO MOM.2 v2 (2026-08-21). Official Standards PDF OE count 6; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: ef. CORE: a. Achievement: d. Excellence: none.\nStop-work: omitted.\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/MOM/POL/02.\nOfficial chapter is 11 standards / 68 OEs — not the SHCO 9-standard MOM set. Guidebook Interpretation paragraphs not available; methods from OE text + chapter intent.\nDo not copy SHCO MOM wording. Do not touch AAC or COP.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition MOM.2 v2 draft from official Standards PDF OE text + chapter intent; draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation develops, updates and implements a hospital formulary.",
+  "exceptions": "1. Do not skip: A list of medications appropriate for the patients and as per the scope of the organisation's clinical serv...\n2. Do not skip: The list is reviewed and updated collaboratively by the multi-disciplinary committee at least annually.\n3. Do not skip: The current formulary is available for clinicians to refer to.\n4. Do not skip: The clinicians adhere to the current formulary.\n5. Do not skip: The organisation adheres to the procedure for the acquisition of formulary medications.\n6. Do not skip: The organisation adheres to the procedure to obtain medications not listed in the formulary.\n7. Staff who see a MOM.2 rule broken report it the same shift to the «department in-charge» or the «Medication Safety Officer».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE MOM.2.a–f.\n- Asterisked elements (ef) have document evidence as required.\n- CORE elements (a) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event or recall.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Hospital Formulary policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/MOM/POL/02»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Drug and Therapeutics Committee Chair»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Drug and Therapeutics Committee Chair»",
+  "template_test": "hco_mom_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — MOM.2.",
+  "doc_no": "«HCO/MOM/POL/02»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.MOM.2",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

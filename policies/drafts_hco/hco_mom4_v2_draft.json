@@ -1,0 +1,153 @@
+{
+  "standard_code": "MOM.4",
+  "chapter": "HCO",
+  "oe_codes": [
+    "MOM.4.a",
+    "MOM.4.b",
+    "MOM.4.c",
+    "MOM.4.d",
+    "MOM.4.e",
+    "MOM.4.f",
+    "MOM.4.g",
+    "MOM.4.h"
+  ],
+  "policy_title": "Safe and Rational Prescription of Medications",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard MOM.4: Medications are prescribed safely and rationally.\n\nIt covers objective elements MOM.4.a–h (8 elements).\n\nChapter intent (official Standards PDF): The organisation has a safe and organised medication management process. Availability, safe storage, prescription, dispensing and administration of medications are governed by written guidance. A medication safety officer is designated. The hospital formulary is developed, implemented and updated. Pharmacy has oversight of medications stocked out of the pharmacy. Reconciliation occurs at transition points. Patients are monitored after administration. Near misses, medication errors and adverse drug reactions are reported and analysed. Medications also include blood, implants and devices. Medical supplies and consumables are available for use.\n\nThis policy owns MOM.4. Related AAC, COP, PRE, IPC/HIC and HRM duties stay with those policies — cross-reference only. Other MOM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who prescribe, dispense, administer, store, monitor or oversee medications (or, for MOM.10–11, implants / medical devices / medical supplies) at {{HOSPITAL_NAME}}, including the «Medical Superintendent», pharmacy, nursing, treating doctors and the Quality Coordinator.\n\nIt covers 8 objective elements (MOM.4.a, MOM.4.b, MOM.4.c, MOM.4.d, MOM.4.e, MOM.4.f, MOM.4.g, MOM.4.h).\n\nBoundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent.",
+  "policy_statement": "{{HOSPITAL_NAME}} implements MOM.4 so that medications are prescribed safely and rationally.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Medication prescription is in consonance with good practices / guidel...\n\nPrescribers follow the organisation's written good-practice / rational-prescribing guidance: indication, dose appropriate to age/weight/organ function, duration, and avoidance of unnecessary polypharmacy and restricted antimicrobials except per the hospital antimicrobial policy.\n\nThe «Drug and Therapeutics Committee» names the reference guidance («WHO / national essential-medicines principles and the hospital antimicrobial policy»). Prescription audit under MOM.4.g samples against this guidance.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.2 The organisation adheres to the determined minimum requirements of a ...\n\nEvery prescription at {{HOSPITAL_NAME}} meets the determined minimum requirements, which include: patient name and unique identification number; generic or approved name of the medicine; route; strength; frequency / time; date and time of the order; and the prescriber's signature (or authenticated electronic equivalent) and identifier.\n\nThe «Drug and Therapeutics Committee» publishes this minimum list. Pharmacy and nursing do not act on an order that fails the minimum, except through the documented emergency-prescription path, which is completed as soon as the patient is stable.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.3 Drug allergies and previous adverse drug reactions are ascertained be...\n\nBefore prescribing, the clinician ascertains known drug allergies and previous adverse drug reactions from the patient / family and from the medical record, and records the result (including 'none known').\n\nA red-alert allergy band or equivalent is used when an allergy is recorded. Prescribing without this check is a stop-work trigger. Admission and transfer notes carry the allergy status forward (MOM.4.e).",
+    "5.4 The organisation has a mechanism to assist the clinician in prescribi...\n\n{{HOSPITAL_NAME}} assists clinicians to prescribe the appropriate medication through «formulary access at the point of prescribing, dose-range information for high-risk drugs, and pharmacy clarification of unclear orders before dispensing».\n\nWhere the hospital uses e-prescribing or clinical decision support, that is the mechanism; where it uses paper, the mechanism is the current formulary plus pharmacy review of orders. This Excellence element is evidenced by a working assistance mechanism, not by a poster.",
+    "5.5 Reconciliation of medications occurs at transition points of patient ...\n\nMedication reconciliation is done at transition points: admission, transfer between units (including ICU to ward), and discharge.\n\nThe «treating doctor or designated nurse» compares the patient's current medication list (home + in-hospital) with the new orders, resolves discrepancies with the prescriber, and records the reconciled list in the medical record. Pharmacy supports high-risk and polypharmacy reconciliations. A transfer without a reconciled list is incomplete.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.6 Verbal orders are implemented by ensuring safe medication management ...\n\nVerbal (including telephone) medication orders are used only when the prescriber cannot write or enter the order in time for safe care. The receiver writes the order, reads it back (drug, dose, route, frequency, patient), and the prescriber confirms.\n\nThe prescriber countersigns «within 24 hours, and before the next dose where practicable». Verbal orders are not used for «chemotherapy» except under a documented emergency rule. Acting on a verbal order without read-back is a stop-work trigger.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.7 Audit of medication orders / prescription is carried out to check for...\n\nThe «Medication Safety Officer» (or Quality with pharmacy) audits medication orders / prescriptions «quarterly» for safe and rational prescribing: minimum requirements, allergy documentation, formulary adherence, and high-risk dose checks.\n\nThe sample size is «at least 20 prescriptions per quarter, including emergency and inpatient». Results go to the «Drug and Therapeutics Committee».",
+    "5.8 Corrective and / or preventive action(s) is taken based on the audit,...\n\nWhen the prescription audit finds a gap, the «Drug and Therapeutics Committee» assigns corrective and / or preventive action with an owner and a due date. The «Medication Safety Officer» tracks closure.\n\nActions may include feedback to a prescriber, a formulary or guidance change, or training. An audit without follow-up is not Achievement for this element."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that MOM.4 is resourced and followed.\n- Designates the Medication Safety Officer (chapter intent) where that role is required for this standard.\n\nMedical Superintendent\n- Owns day-to-day implementation and records for this standard.\n\nMedication Safety Officer\n- Coordinates medication-safety processes that cut across MOM standards; brings incidents and audits to the Drug and Therapeutics Committee.\n\nPharmacy / nursing / treating doctors (as applicable)\n- Deliver the process as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.4. Official portal PDF.\n- Internal documents of {{HOSPITAL_NAME}}: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.4.",
+  "distribution": "Medical Superintendent; Medication Safety Officer; Pharmacy In-Charge; Nursing Superintendent; Quality Coordinator; department clinical staff covered by MOM.4",
+  "abbreviations": "ADR — adverse drug reaction\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nDTC — Drug and Therapeutics Committee (or the organisation's equivalent multi-disciplinary pharmacy committee)\nFEFO — first expiry, first out\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nLASA — look-alike, sound-alike\nMOM — Management of Medication (NABH Hospitals chapter)\nMSO — Medication Safety Officer\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "MOM.4.a",
+      "requirement": "Medication prescription is in consonance with good practices / guidelines for rational prescription of medications.",
+      "steps": "Section 3; 5.1; Section 6 Stop-work",
+      "responsible": "Medical Superintendent",
+      "records": [
+        "Records showing MOM.4.a was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.4.a reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    },
+    {
+      "oe_code": "MOM.4.b",
+      "requirement": "The organisation adheres to the determined minimum requirements of a prescription.",
+      "steps": "Section 3; 5.2; Section 6 Stop-work",
+      "responsible": "Medical Superintendent",
+      "records": [
+        "Records showing MOM.4.b was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.4.b reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element.",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "MOM.4.c",
+      "requirement": "Drug allergies and previous adverse drug reactions are ascertained before prescribing.",
+      "steps": "Section 3; 5.3; Section 6 Stop-work",
+      "responsible": "Medical Superintendent",
+      "records": [
+        "Records showing MOM.4.c was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.4.c reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "MOM.4.d",
+      "requirement": "The organisation has a mechanism to assist the clinician in prescribing appropriate medication.",
+      "steps": "Section 3; 5.4; Section 6 Stop-work",
+      "responsible": "Medical Superintendent",
+      "records": [
+        "Records showing MOM.4.d was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.4.d reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "MOM.4.e",
+      "requirement": "Reconciliation of medications occurs at transition points of patient care.",
+      "steps": "Section 3; 5.5; Section 6 Stop-work",
+      "responsible": "Medical Superintendent",
+      "records": [
+        "Records showing MOM.4.e was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.4.e reviewed «quarterly».",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "MOM.4.f",
+      "requirement": "Verbal orders are implemented by ensuring safe medication management practices.",
+      "steps": "Section 3; 5.6; Section 6 Stop-work",
+      "responsible": "Medical Superintendent",
+      "records": [
+        "Records showing MOM.4.f was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.4.f reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element.",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "MOM.4.g",
+      "requirement": "Audit of medication orders / prescription is carried out to check for safe and rational prescription of medications.",
+      "steps": "Section 3; 5.7; Section 6 Stop-work",
+      "responsible": "Medical Superintendent",
+      "records": [
+        "Records showing MOM.4.g was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.4.g reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "MOM.4.h",
+      "requirement": "Corrective and / or preventive action(s) is taken based on the audit, where appropriate.",
+      "steps": "Section 3; 5.8; Section 6 Stop-work",
+      "responsible": "Medical Superintendent",
+      "records": [
+        "Records showing MOM.4.h was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.4.h reviewed «quarterly»."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO MOM.4 v2 (2026-08-21). Official Standards PDF OE count 8; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: abf. CORE: bef. Achievement: gh. Excellence: d.\nStop-work: YES — JUDGMENT CALL: Prescribe without allergy/ADR check; verbal order outside the documented safe process; prescription that fails minimum requirements.\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/MOM/POL/04.\nOfficial chapter is 11 standards / 68 OEs — not the SHCO 9-standard MOM set. Guidebook Interpretation paragraphs not available; methods from OE text + chapter intent.\nDo not copy SHCO MOM wording. Do not touch AAC or COP.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition MOM.4 v2 draft from official Standards PDF OE text + chapter intent; draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Medications are prescribed safely and rationally.",
+  "exceptions": "1. Do not skip: Medication prescription is in consonance with good practices / guidelines for rational prescription of medi...\n2. Do not skip: The organisation adheres to the determined minimum requirements of a prescription.\n3. Do not skip: Drug allergies and previous adverse drug reactions are ascertained before prescribing.\n4. Do not skip: The organisation has a mechanism to assist the clinician in prescribing appropriate medication.\n5. Do not skip: Reconciliation of medications occurs at transition points of patient care.\n6. Do not skip: Verbal orders are implemented by ensuring safe medication management practices.\n7. Do not skip: Audit of medication orders / prescription is carried out to check for safe and rational prescription of med...\n8. Do not skip: Corrective and / or preventive action(s) is taken based on the audit, where appropriate.\n9. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n10. Staff who see a MOM.4 rule broken report it the same shift to the «department in-charge» or the «Medication Safety Officer».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE MOM.4.a–h.\n- Asterisked elements (abf) have document evidence as required.\n- CORE elements (bef) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event or recall.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Safe and Rational Prescription of Medications policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/MOM/POL/04»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Medical Superintendent»",
+  "template_test": "hco_mom_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — MOM.4.",
+  "doc_no": "«HCO/MOM/POL/04»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "Do not prescribe (or transcribe a prescription for action) when drug allergies and previous adverse drug reactions have not been ascertained.\n\nDo not act on a verbal medication order except through the organisation's documented verbal-order process (read-back, documentation, countersignature within the defined time).\n\nDo not accept a prescription that fails the organisation's determined minimum requirements.\n\nStop-work applies to writing or acting on the unsafe order. Immediate life-saving medication in an emergency follows the documented emergency-prescription rules and is written up as soon as the patient is stable.\n\nThe person who stops tells the «treating doctor» and the «Medication Safety Officer» the same shift. Refusing an unsafe prescription is not a disciplinary matter.",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.MOM.4",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

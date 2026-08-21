@@ -1,0 +1,141 @@
+{
+  "standard_code": "MOM.3",
+  "chapter": "HCO",
+  "oe_codes": [
+    "MOM.3.a",
+    "MOM.3.b",
+    "MOM.3.c",
+    "MOM.3.d",
+    "MOM.3.e",
+    "MOM.3.f",
+    "MOM.3.g"
+  ],
+  "policy_title": "Storage and Availability of Medications",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard MOM.3: Medications are stored appropriately and are available where required.\n\nIt covers objective elements MOM.3.a–g (7 elements).\n\nChapter intent (official Standards PDF): The organisation has a safe and organised medication management process. Availability, safe storage, prescription, dispensing and administration of medications are governed by written guidance. A medication safety officer is designated. The hospital formulary is developed, implemented and updated. Pharmacy has oversight of medications stocked out of the pharmacy. Reconciliation occurs at transition points. Patients are monitored after administration. Near misses, medication errors and adverse drug reactions are reported and analysed. Medications also include blood, implants and devices. Medical supplies and consumables are available for use.\n\nThis policy owns MOM.3. Related AAC, COP, PRE, IPC/HIC and HRM duties stay with those policies — cross-reference only. Other MOM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who prescribe, dispense, administer, store, monitor or oversee medications (or, for MOM.10–11, implants / medical devices / medical supplies) at {{HOSPITAL_NAME}}, including the «Pharmacy In-Charge», pharmacy, nursing, treating doctors and the Quality Coordinator.\n\nIt covers 7 objective elements (MOM.3.a, MOM.3.b, MOM.3.c, MOM.3.d, MOM.3.e, MOM.3.f, MOM.3.g).\n\nBoundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent.",
+  "policy_statement": "{{HOSPITAL_NAME}} implements MOM.3 so that medications are stored appropriately and are available where required.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Medications are stored in a clean, safe and secure environment while ...\n\nPharmacy and every floor-stock location store medications in a clean, safe and secure area. Manufacturer recommendations for temperature, light, humidity and reconstitution are followed. Refrigerated items go in a dedicated medicines refrigerator with a recorded temperature «twice daily»; excursions are reported to pharmacy the same shift.\n\nAccess to the main pharmacy and to controlled-drug cupboards is limited to authorised staff. Floor-stock cupboards are locked when the area is unmanned. Food, specimens and staff belongings are not stored with medicines.\n\nPharmacy has oversight of medications stocked outside the pharmacy, as the chapter intent requires.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.2 Sound inventory control practices guide the storage of medications th...\n\nInventory control at {{HOSPITAL_NAME}} uses «FEFO (first expiry, first out), defined maximum–minimum levels, and a documented indent cycle». Pharmacy reviews expiry and slow-moving stock «monthly». Floor-stock lists are authorised by the «Drug and Therapeutics Committee»; unofficial hoarding in clinical areas is removed.\n\nThe «Pharmacy In-Charge» can account for stock movement from receipt to issue. A location that cannot show its current list and last expiry check is not a compliant storage site.",
+    "5.3 The organisation defines and updates its list of high-risk medication(s)\n\nThe «Drug and Therapeutics Committee» defines the hospital's high-risk medication list and updates it at least «annually» and after a related incident. The list includes, at minimum, look-alike / sound-alike items used here, concentrated electrolytes, anticoagulants, insulin, opioids, chemotherapeutic agents, and any other item the committee names for this hospital's scope.\n\nThe current list is posted in pharmacy and at every location that stores those items. Staff who prescribe, dispense or administer are trained on it. A list that exists only in a committee file is not implemented.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.4 High-risk medications are stored in areas of the organisation where i...\n\nHigh-risk medications are stored only where they are clinically necessary — for example concentrated electrolytes in ICU/OT as the committee defines, not in every ward cupboard.\n\nThe «Drug and Therapeutics Committee» names those locations. Pharmacy does not issue high-risk floor stock to an unlisted area. This Achievement element is evidenced by the location list matching actual storage on walk-round.",
+    "5.5 High-risk medications including look-alike, sound-alike medications a...\n\nLook-alike and sound-alike medications, and different concentrations of the same medication, are stored physically apart — separate bins or shelves, with tall-man lettering or equivalent differentiation where the organisation uses it.\n\nThey are never stored alphabetically adjacent when that would put LASA pairs together. The «Pharmacy In-Charge» checks physical separation on the monthly storage round. Finding two concentrations of the same drug in one bin is a stop-work trigger (section 6).\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.6 The list of emergency medications is defined and is stored uniformly\n\nThe «Drug and Therapeutics Committee» defines the emergency-medication list. The same list, in the same layout, is used in crash carts / emergency trolleys across {{HOSPITAL_NAME}} so staff moving between areas find drugs in the same place.\n\nEach trolley has a sealed or checklist-controlled inventory. The «Nursing Superintendent» and the «Pharmacy In-Charge» agree the layout. Local 'extra' emergency drugs that are not on the defined list are not stored on the trolley unless the committee amends the list.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.7 Emergency medications are available all the time and are replenished ...\n\nEmergency medications are present 24 hours a day at every defined location. After use, the item is replenished «immediately from pharmacy, and in any case before the trolley is returned to service».\n\nNursing checks the trolley «each shift» against the list and records the check. A missing or expired emergency drug is a stop-work trigger for that trolley until it is corrected. Pharmacy keeps a replenishment log.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that MOM.3 is resourced and followed.\n- Designates the Medication Safety Officer (chapter intent) where that role is required for this standard.\n\nPharmacy In-Charge\n- Owns day-to-day implementation and records for this standard.\n\nMedication Safety Officer\n- Coordinates medication-safety processes that cut across MOM standards; brings incidents and audits to the Drug and Therapeutics Committee.\n\nPharmacy / nursing / treating doctors (as applicable)\n- Deliver the process as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.3. Official portal PDF.\n- Internal documents of {{HOSPITAL_NAME}}: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.3.",
+  "distribution": "Medical Superintendent; Pharmacy In-Charge; Medication Safety Officer; Nursing Superintendent; Quality Coordinator; department clinical staff covered by MOM.3",
+  "abbreviations": "ADR — adverse drug reaction\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nDTC — Drug and Therapeutics Committee (or the organisation's equivalent multi-disciplinary pharmacy committee)\nFEFO — first expiry, first out\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nLASA — look-alike, sound-alike\nMOM — Management of Medication (NABH Hospitals chapter)\nMSO — Medication Safety Officer\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "MOM.3.a",
+      "requirement": "Medications are stored in a clean, safe and secure environment while incorporating the manufacturer's recommendation(s).",
+      "steps": "Section 3; 5.1; Section 6 Stop-work",
+      "responsible": "Pharmacy In-Charge",
+      "records": [
+        "Records showing MOM.3.a was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.3.a reviewed «quarterly».",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "MOM.3.b",
+      "requirement": "Sound inventory control practices guide the storage of medications throughout the organisation.",
+      "steps": "Section 3; 5.2; Section 6 Stop-work",
+      "responsible": "Pharmacy In-Charge",
+      "records": [
+        "Records showing MOM.3.b was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.3.b reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "MOM.3.c",
+      "requirement": "The organisation defines and updates its list of high-risk medication(s).",
+      "steps": "Section 3; 5.3; Section 6 Stop-work",
+      "responsible": "Pharmacy In-Charge",
+      "records": [
+        "Records showing MOM.3.c was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.3.c reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element.",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "MOM.3.d",
+      "requirement": "High-risk medications are stored in areas of the organisation where it is clinically necessary.",
+      "steps": "Section 3; 5.4; Section 6 Stop-work",
+      "responsible": "Pharmacy In-Charge",
+      "records": [
+        "Records showing MOM.3.d was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.3.d reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "MOM.3.e",
+      "requirement": "High-risk medications including look-alike, sound-alike medications and different concentrations of the same medication are stored physically apart from each other.",
+      "steps": "Section 3; 5.5; Section 6 Stop-work",
+      "responsible": "Pharmacy In-Charge",
+      "records": [
+        "Records showing MOM.3.e was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.3.e reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element.",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "MOM.3.f",
+      "requirement": "The list of emergency medications is defined and is stored uniformly.",
+      "steps": "Section 3; 5.6; Section 6 Stop-work",
+      "responsible": "Pharmacy In-Charge",
+      "records": [
+        "Records showing MOM.3.f was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.3.f reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    },
+    {
+      "oe_code": "MOM.3.g",
+      "requirement": "Emergency medications are available all the time and are replenished promptly when used.",
+      "steps": "Section 3; 5.7; Section 6 Stop-work",
+      "responsible": "Pharmacy In-Charge",
+      "records": [
+        "Records showing MOM.3.g was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.3.g reviewed «quarterly».",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO MOM.3 v2 (2026-08-21). Official Standards PDF OE count 7; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: cef. CORE: aceg. Achievement: d. Excellence: none.\nStop-work: YES — JUDGMENT CALL: LASA / different concentrations stored together; emergency medications missing or unreplenished; storage outside manufacturer recommendations.\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/MOM/POL/03.\nOfficial chapter is 11 standards / 68 OEs — not the SHCO 9-standard MOM set. Guidebook Interpretation paragraphs not available; methods from OE text + chapter intent.\nDo not copy SHCO MOM wording. Do not touch AAC or COP.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition MOM.3 v2 draft from official Standards PDF OE text + chapter intent; draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Medications are stored appropriately and are available where required.",
+  "exceptions": "1. Do not skip: Medications are stored in a clean, safe and secure environment while incorporating the manufacturer's recom...\n2. Do not skip: Sound inventory control practices guide the storage of medications throughout the organisation.\n3. Do not skip: The organisation defines and updates its list of high-risk medication(s).\n4. Do not skip: High-risk medications are stored in areas of the organisation where it is clinically necessary.\n5. Do not skip: High-risk medications including look-alike, sound-alike medications and different concentrations of the sam...\n6. Do not skip: The list of emergency medications is defined and is stored uniformly.\n7. Do not skip: Emergency medications are available all the time and are replenished promptly when used.\n8. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n9. Staff who see a MOM.3 rule broken report it the same shift to the «department in-charge» or the «Medication Safety Officer».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE MOM.3.a–g.\n- Asterisked elements (cef) have document evidence as required.\n- CORE elements (aceg) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event or recall.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Storage and Availability of Medications policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/MOM/POL/03»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Pharmacy In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Pharmacy In-Charge»",
+  "template_test": "hco_mom_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — MOM.3.",
+  "doc_no": "«HCO/MOM/POL/03»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "Do not store look-alike, sound-alike medications, or different concentrations of the same medication, physically together.\n\nDo not leave an emergency-medication location without the defined list, or leave a used emergency medication unreplenished.\n\nDo not issue or use a medication that has been stored outside the manufacturer's temperature, light or security recommendations until pharmacy has assessed it.\n\nStop-work applies to the storage location and to issue from that location. Immediate life-saving use of the only available dose continues while escalation happens, and is documented.\n\nThe person who stops tells the «Pharmacy In-Charge» and the «Medication Safety Officer» the same shift. Refusing unsafe storage or issue is not a disciplinary matter.",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.MOM.3",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

@@ -1,0 +1,125 @@
+{
+  "standard_code": "MOM.8",
+  "chapter": "HCO",
+  "oe_codes": [
+    "MOM.8.a",
+    "MOM.8.b",
+    "MOM.8.c",
+    "MOM.8.d",
+    "MOM.8.e",
+    "MOM.8.f"
+  ],
+  "policy_title": "Monitoring after Medication Administration",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard MOM.8: Patients are monitored after medication administration.\n\nIt covers objective elements MOM.8.a–f (6 elements).\n\nChapter intent (official Standards PDF): The organisation has a safe and organised medication management process. Availability, safe storage, prescription, dispensing and administration of medications are governed by written guidance. A medication safety officer is designated. The hospital formulary is developed, implemented and updated. Pharmacy has oversight of medications stocked out of the pharmacy. Reconciliation occurs at transition points. Patients are monitored after administration. Near misses, medication errors and adverse drug reactions are reported and analysed. Medications also include blood, implants and devices. Medical supplies and consumables are available for use.\n\nThis policy owns MOM.8. Related AAC, COP, PRE, IPC/HIC and HRM duties stay with those policies — cross-reference only. Other MOM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who prescribe, dispense, administer, store, monitor or oversee medications (or, for MOM.10–11, implants / medical devices / medical supplies) at {{HOSPITAL_NAME}}, including the «Medication Safety Officer», pharmacy, nursing, treating doctors and the Quality Coordinator.\n\nIt covers 6 objective elements (MOM.8.a, MOM.8.b, MOM.8.c, MOM.8.d, MOM.8.e, MOM.8.f).\n\nBoundaries: do not copy SHCO MOM wording. Do not overwrite HCO AAC or COP policies. Spell out abbreviations on first use in training materials. Guidebook Interpretation paragraphs were not available for MOM in this drafting environment — methods follow official OE text and chapter intent.",
+  "policy_statement": "{{HOSPITAL_NAME}} implements MOM.8 so that patients are monitored after medication administration.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Patients shall be monitored after medication administration\n\nAfter administration, the patient is monitored for the intended effect and for adverse effects, with intensity matching the drug and the clinical setting (for example post-IV opioid sedation and respiration; post-chemotherapy as the protocol states; routine oral doses as the chart and NEWS/EWS require).\n\nThe written guidance names what to watch and when to escalate. Monitoring is recorded. This asterisked element is not satisfied by 'observe generally'.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.2 Medications shall be changed based on the monitoring where appropriate\n\nWhen monitoring shows the drug is ineffective, poorly tolerated, or causing harm, the treating doctor is informed and the medication is changed, held or the dose adjusted as clinically indicated, with the order rewritten under MOM.5.\n\nNursing does not silently continue a drug that is causing a clear adverse reaction while waiting for a convenient round.",
+    "5.3 The organisation shall capture near misses, medication errors and adv...\n\n{{HOSPITAL_NAME}} captures near misses, medication errors and adverse drug reactions in a defined reporting system (incident form / electronic equivalent, plus pharmacovigilance reporting where applicable).\n\nCapture includes events that did not reach the patient (near miss) and reactions that did. The «Medication Safety Officer» owns the capture system. Failure to have a working capture route is a CORE gap.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.4 Near misses, medication errors and adverse drug reactions shall be re...\n\nNear misses, medication errors and adverse drug reactions are reported within a specified time frame: «unsafe ongoing situations immediately; all other medication incidents the same shift; ADRs as soon as recognised and in any case within 24 hours».\n\nThe «Drug and Therapeutics Committee» may tighten these times. Late discovery is reported when found, marked as delayed, not hidden.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.5 Near misses, medication errors and adverse drug reactions are collect...\n\nThe «Medication Safety Officer» collects reports and the «Drug and Therapeutics Committee» analyses them «quarterly» (and sooner for a serious event): type, stage (prescribing / dispensing / administration), high-risk drug involvement, and harm.\n\nAnalysis looks for system causes, not only individual blame. A pile of unanalysed forms is not compliance.",
+    "5.6 Corrective and / or preventive action(s) are taken based on the analysis\n\nCorrective and / or preventive actions from the analysis are assigned, timed and closed. Examples: storage separation after a LASA mix-up, a second-check rule after a dose error, a formulary restriction.\n\nThe «Quality Coordinator» includes open medication CAPA in the quarterly audit. Repeat events of the same type trigger a deeper review."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that MOM.8 is resourced and followed.\n- Designates the Medication Safety Officer (chapter intent) where that role is required for this standard.\n\nMedication Safety Officer\n- Owns day-to-day implementation and records for this standard.\n\nMedication Safety Officer\n- Coordinates medication-safety processes that cut across MOM standards; brings incidents and audits to the Drug and Therapeutics Committee.\n\nPharmacy / nursing / treating doctors (as applicable)\n- Deliver the process as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.8. Official portal PDF.\n- Internal documents of {{HOSPITAL_NAME}}: written guidance, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.8.",
+  "distribution": "Medical Superintendent; Medication Safety Officer; Pharmacy In-Charge; Nursing Superintendent; Quality Coordinator; department clinical staff covered by MOM.8",
+  "abbreviations": "ADR — adverse drug reaction\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nDTC — Drug and Therapeutics Committee (or the organisation's equivalent multi-disciplinary pharmacy committee)\nFEFO — first expiry, first out\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nLASA — look-alike, sound-alike\nMOM — Management of Medication (NABH Hospitals chapter)\nMSO — Medication Safety Officer\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "MOM.8.a",
+      "requirement": "Patients shall be monitored after medication administration.",
+      "steps": "Section 3; 5.1",
+      "responsible": "Medication Safety Officer",
+      "records": [
+        "Records showing MOM.8.a was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.8.a reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    },
+    {
+      "oe_code": "MOM.8.b",
+      "requirement": "Medications shall be changed based on the monitoring where appropriate.",
+      "steps": "Section 3; 5.2",
+      "responsible": "Medication Safety Officer",
+      "records": [
+        "Records showing MOM.8.b was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.8.b reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "MOM.8.c",
+      "requirement": "The organisation shall capture near misses, medication errors and adverse drug reactions.",
+      "steps": "Section 3; 5.3",
+      "responsible": "Medication Safety Officer",
+      "records": [
+        "Records showing MOM.8.c was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.8.c reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element.",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "MOM.8.d",
+      "requirement": "Near misses, medication errors and adverse drug reactions shall be reported within a specified time frame.",
+      "steps": "Section 3; 5.4",
+      "responsible": "Medication Safety Officer",
+      "records": [
+        "Records showing MOM.8.d was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.8.d reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    },
+    {
+      "oe_code": "MOM.8.e",
+      "requirement": "Near misses, medication errors and adverse drug reactions are collected and analysed.",
+      "steps": "Section 3; 5.5",
+      "responsible": "Medication Safety Officer",
+      "records": [
+        "Records showing MOM.8.e was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.8.e reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "MOM.8.f",
+      "requirement": "Corrective and / or preventive action(s) are taken based on the analysis.",
+      "steps": "Section 3; 5.6",
+      "responsible": "Medication Safety Officer",
+      "records": [
+        "Records showing MOM.8.f was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for MOM.8.f reviewed «quarterly»."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO MOM.8 v2 (2026-08-21). Official Standards PDF OE count 6; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: acd. CORE: c. Achievement: none. Excellence: none.\nStop-work: omitted.\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/MOM/POL/08.\nOfficial chapter is 11 standards / 68 OEs — not the SHCO 9-standard MOM set. Guidebook Interpretation paragraphs not available; methods from OE text + chapter intent.\nDo not copy SHCO MOM wording. Do not touch AAC or COP.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition MOM.8 v2 draft from official Standards PDF OE text + chapter intent; draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Patients are monitored after medication administration.",
+  "exceptions": "1. Do not skip: Patients shall be monitored after medication administration.\n2. Do not skip: Medications shall be changed based on the monitoring where appropriate.\n3. Do not skip: The organisation shall capture near misses, medication errors and adverse drug reactions.\n4. Do not skip: Near misses, medication errors and adverse drug reactions shall be reported within a specified time frame.\n5. Do not skip: Near misses, medication errors and adverse drug reactions are collected and analysed.\n6. Do not skip: Corrective and / or preventive action(s) are taken based on the analysis.\n7. Staff who see a MOM.8 rule broken report it the same shift to the «department in-charge» or the «Medication Safety Officer».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE MOM.8.a–f.\n- Asterisked elements (acd) have document evidence as required.\n- CORE elements (c) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related adverse event or recall.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Monitoring after Medication Administration policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/MOM/POL/08»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Medication Safety Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Medication Safety Officer»",
+  "template_test": "hco_mom_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — MOM.8.",
+  "doc_no": "«HCO/MOM/POL/08»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.MOM.8",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}
