@@ -1,0 +1,168 @@
+{
+  "standard_code": "PSQ.2",
+  "chapter": "HCO",
+  "oe_codes": [
+    "PSQ.2.a",
+    "PSQ.2.b",
+    "PSQ.2.c",
+    "PSQ.2.d",
+    "PSQ.2.e",
+    "PSQ.2.f",
+    "PSQ.2.g",
+    "PSQ.2.h",
+    "PSQ.2.i"
+  ],
+  "policy_title": "Quality Improvement and Continuous Monitoring Programme",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard PSQ.2: The organisation implements a structured quality improvement and continuous monitoring programme.\n\nIt covers objective elements PSQ.2.a–i (9 elements).\n\nChapter intent (official Standards PDF): The standards encourage an environment of patient safety and continual quality improvement. The patient safety and quality programme should be documented and involve all areas of the organisation and all staff members. The management creates a culture of safety in the organisation. Patient safety officer(s) shall be designated for the implementation of patient-safety programme. National / International patient-safety goals / solutions / framework shall be implemented. The organisation shall collect data on structures, processes and outcomes, especially in areas of high-risk situations. Quality indicators specific to clinical specialities shall be used to involve clinical departments in the quality improvement programme. The collected data shall be collated, analysed and trends are used for further improvement. Appropriate quality tools shall be used for carrying out quality improvement projects. Clinical audits shall be used as a tool to improve the quality of patient care in a sustained manner. Department leaders play an active role in patient safety and quality improvement. The organisation has a mechanism to capture patient reported outcome measures. The organisation shall have a robust incident reporting system. Sentinel events shall be defined. All incidents are investigated and appropriate action is taken. The management shall support the patient safety and quality programme.\n\nThis policy owns PSQ.2. Related AAC, COP, MOM, PRE and IPC duties stay with those policies — cross-reference only. Other PSQ standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who deliver care, run quality or patient-safety work, lead departments, or hold management duties for safety and quality at {{HOSPITAL_NAME}}, including the «Quality Coordinator», the Patient Safety Officer, the Quality Coordinator, departmental leaders, treating doctors, nursing and the Medical Superintendent.\n\nIt covers 9 objective elements (PSQ.2.a, PSQ.2.b, PSQ.2.c, PSQ.2.d, PSQ.2.e, PSQ.2.f, PSQ.2.g, PSQ.2.h, PSQ.2.i).\n\nBoundaries: do not copy SHCO equivalent-chapter wording. Do not overwrite HCO AAC, COP, MOM, PRE or IPC policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
+  "policy_statement": "{{HOSPITAL_NAME}} implements PSQ.2 so that the organisation implements a structured quality improvement and continuous monitoring programme.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 The quality improvement programme is developed, implemented and maint...\n\n{{HOSPITAL_NAME}} documents a quality improvement and continuous monitoring programme. A multi-disciplinary «Quality Improvement Committee» develops, implements and maintains it.\n\nThe «Medical Superintendent» constitutes the committee. Membership includes administration, clinical, nursing and quality. Terms of reference, quorum and meeting frequency («at least monthly») are written. The current programme sits in the «Quality Manual». This is a CORE asterisked element.\n\nMethod note (from guidebook interpretation): The quality improvement programme shall be developed, implemented and maintained in a structured manner. It shall be integrated across the organisation and provide a framework for risk management, ongoing monitoring and performing improvements based on reviews. The roles and responsibilities of the multidisciplinary committee are defined, and it shall have representation from management, various clinical and support departments of the organisation. This committee shall receive inputs on significant deliberations from other committees in the organisation. The committee may be called as the core committee, quality improvement committee etc.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.2 The quality improvement programme is comprehensive and covers all the...\n\nThe quality improvement programme covers the major quality-assurance elements: indicator monitoring (PSQ.3), quality-improvement projects and tools (PSQ.4), clinical audit (PSQ.5), incident learning (PSQ.7), and department-level review.\n\nThe «Quality Improvement Committee» keeps a current element list. A programme that only lists indicators without review is not comprehensive under this asterisked element.\n\nMethod note (from guidebook interpretation): The quality improvement programme shall be documented in the form of Quality Improvement Manual. The quality improvement programme shall incorporate the goals and objectives of the programme, framework for performing quality improvement activities including data collection, important indicators as identified, frequency of mock drills, audit schedules, committees and their terms of reference, review policy and implementation of corrective and preventive action. Utilisation review preferably could be part of quality improvement program. The quality assurance programme for specific areas like Laboratory, Imaging, Emergency, Blood center, Operation theatre and the Intensive Care Unit(s) is also summarised. Refer to AAC.7.a., AAC.9.a., COP.2.h., COP.8.g., COP.9.f., COP.14.i. COP.14.j. and PSQ.2.d.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.3 The quality improvement programme improves process efficiency and eff...\n\nQuality-improvement work includes projects that improve process efficiency and effectiveness (time, waste, reliability of a defined process), not only clinical outcome counts.\n\nEach such project has an aim, a measure and a before/after result held by the «Quality Coordinator». This Excellence element is evidenced by completed projects with those measures.\n\nMethod note (from guidebook interpretation): The quality improvement programme encourages the use of quality tools, novel strategies to improve both clinical and managerial processes, The impact of the managerial process innovations may be at the level of the department or organisation-wide. Innovations may be targeted to improve patient safety, improve care delivery, to reduce costs, to introduce environmentally-friendly measures etc. The management of the organisation promotes these innovations.",
+    "5.4 The quality improvement programme focuses on appropriateness of clini...\n\nQuality-improvement work includes projects that focus on appropriateness of clinical care (right care, indicated care, variation against agreed protocols).\n\nThe «Quality Improvement Committee» selects topics from clinical indicators, audits and incidents. Results go back to the clinical department. This Excellence element is evidenced by those topics and outcomes.\n\nMethod note (from guidebook interpretation): The doctors and nurses participate in utilization review which includes appropriateness of length of the stay, procedures, investigations and treatment.",
+    "5.5 There is a designated individual for coordinating and implementing th...\n\nThe «Medical Superintendent» designates an individual (default: the «Quality Coordinator») to coordinate and implement the quality improvement programme. That person completes structured training in implementation of accreditation standards (NABH Programme on Implementation of NABH Standards) and has knowledge of hospital quality-improvement principles, evaluation methods and operations.\n\nThe designation letter, time allocation, written roles and reporting line to top management are on file. Champions in quality improvement are named across departments. This is an asterisked element.\n\nMethod note (from guidebook interpretation): The designated individual shall undergo a structured training programme in the implementation of accreditation standards (NABH Programme on Implementation of NABH Standards) and with knowledge of statutory requirements, hospital quality improvement principles and evaluation methodologies, hospital functioning and operations. For example, accreditation coordinator, quality management representative, quality manager. The designated individual shall report to the Top Management. The role and responsibilities of the designated individual shall be defined and documented. Also, champions in quality improvement are identified and developed across the organisation and supported to drive improvement.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.6 The quality improvement programme identifies opportunities for improv...\n\nThe programme identifies opportunities for improvement from review at pre-defined intervals. The «Quality Improvement Committee» reviews the programme at least once in three months (and more often if the quality manual says so).\n\nThe review includes audits, organisational performance and key indicators. Minutes are kept. Each identified opportunity has an owner and a next step. This is an asterisked element.\n\nMethod note (from guidebook interpretation): The quality improvement programme is a dynamic process. There is an outline of the periodic review mechanisms at different levels, such as department/senior administration/management reviews, etc. The Quality improvement programme needs to be reviewed by the quality improvement committee at regular pre-defined intervals as defined by the organisation in the quality improvement manual but at least once in three months. The review shall include findings of audits, organisational performance, analysis of key indicators as identified and determined by the organisation. The minutes of the review meetings shall be recorded and maintained.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.7 The quality improvement programme is reviewed and updated at least on...\n\nThe «Quality Improvement Committee» reviews and updates the quality improvement programme at least «annually» and sooner after a major service change or a cluster of failed audits.\n\nAn update is a dated change to the manual, indicator set or audit calendar. The «Quality Coordinator» holds the review minute.\n\nMethod note (from guidebook interpretation): The update shall be done based on newer literature on quality improvement based on audits, feedback mechanisms, the review carried out by the quality improvement committee, etc. In case the annual review does not identify any opportunities for improvement, the same shall be documented in the minutes of the quality improvement committee meeting.",
+    "5.8 Audits are conducted at regular intervals as a means of continuous mo...\n\nAudits are conducted at regular intervals as continuous monitoring. Choice and frequency cover priority areas and areas of concern from indicators or risk.\n\nIn addition, a hospital-wide internal audit covers all areas at least once in six months, done by identified staff or a multi-disciplinary team trained in NABH Accreditation Standards for Hospitals, assessing areas independent of their own work, against applicable standards and objective elements. Findings, CAPA and verification of changes are documented. A calendar without completed audits in the period is not this asterisked element.\n\nMethod note (from guidebook interpretation): Choice and frequency of audits shall be defined for priority areas in the organisation and for areas of concern as identified by trends in key performance indicators, identified risk, etc. However, all the areas of the organisation shall be covered by a hospital-wide internal audit at least once in 6 months as per a scheduled plan. This internal audit shall be done by an identified staff or a multidisciplinary team trained in NABH Accreditation standards for Hospitals. They shall assess areas independent of their area of work. The internal audit of a particular area shall include all the applicable standards and objective elements of NABH Accreditation standards for Hospitals. At the end of the audit, there shall be a formal meeting to summarise the findings and corrective and preventive measures shall be taken and documented. Implementation of changes is verified and recorded. al EE.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.9 There is an established process in the organisation to monitor and im...\n\nThere is an established process to monitor and improve the quality of nursing care: nursing audits and/or competency evaluation (written or witnessed demonstration) for key procedures, plus nursing quality indicators.\n\nThe «Nursing Superintendent» and the «Quality Coordinator» keep the current process in writing and integrate it with the quality improvement programme. This CORE asterisked element is not met by a one-off lecture without monitoring.\n\nMethod note (from guidebook interpretation): Monitoring shall be done through nursing audits. This could also be in the form of a competency evaluation by written questionnaire or witnessed demonstration for key nursing procedures such as medication administration, peripheral intravenous cannula placement, tracheostomy care etc. The organisation shall identify key performance indicators that reflect excellence in nursing care. This shall be integrated with quality improvement programme of the organisation.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that PSQ.2 is resourced and followed.\n- Acts on sentinel events, safety-culture failures and quality-programme gaps that reach top leadership.\n\nQuality Coordinator\n- Owns day-to-day implementation and records for this standard.\n\nPatient Safety Officer\n- Coordinates the patient-safety programme and incident/sentinel-event path across standards.\n\nQuality Coordinator\n- Coordinates the quality-improvement programme, indicators, audits and projects as this standard requires.\n- Audits this policy «quarterly»; holds training acknowledgements.\n\nNursing Superintendent\n- Owns nursing-care quality monitoring where this standard requires it.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Patient Safety and Quality Improvement, standard PSQ.2. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — PSQ.2 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_psq_guidebook_ocr.txt).\n- Internal documents of {{HOSPITAL_NAME}}: Patient Safety Manual, Quality Manual, indicator definitions, clinical-audit calendar, incident and sentinel-event guidance named for PSQ.2.",
+  "distribution": "Medical Superintendent; Quality Coordinator; Patient Safety Officer; Nursing Superintendent; departmental leaders; department clinical and support staff covered by PSQ.2",
+  "abbreviations": "CAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nFMEA — Failure Mode and Effects Analysis\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nIPC — Infection Prevention and Control (NABH Hospitals 6th Edition chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element\nPDCA — Plan-Do-Check-Act\nPROM — Patient-Reported Outcome Measure\nPSQ — Patient Safety and Quality Improvement (NABH Hospitals 6th Edition chapter)\nWHO — World Health Organization",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "PSQ.2.a",
+      "requirement": "The quality improvement programme is developed, implemented and maintained by a multi-disciplinary committee.",
+      "steps": "Section 3; 5.1",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing PSQ.2.a was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PSQ.2.a reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element.",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "PSQ.2.b",
+      "requirement": "The quality improvement programme is comprehensive and covers all the major elements related to quality assurance.",
+      "steps": "Section 3; 5.2",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing PSQ.2.b was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PSQ.2.b reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    },
+    {
+      "oe_code": "PSQ.2.c",
+      "requirement": "The quality improvement programme improves process efficiency and effectiveness.",
+      "steps": "Section 3; 5.3",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing PSQ.2.c was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PSQ.2.c reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "PSQ.2.d",
+      "requirement": "The quality improvement programme focuses on appropriateness of clinical care.",
+      "steps": "Section 3; 5.4",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing PSQ.2.d was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PSQ.2.d reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "PSQ.2.e",
+      "requirement": "There is a designated individual for coordinating and implementing the quality improvement programme.",
+      "steps": "Section 3; 5.5",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing PSQ.2.e was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PSQ.2.e reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    },
+    {
+      "oe_code": "PSQ.2.f",
+      "requirement": "The quality improvement programme identifies opportunities for improvement based on the review at pre-defined intervals.",
+      "steps": "Section 3; 5.6",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing PSQ.2.f was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PSQ.2.f reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    },
+    {
+      "oe_code": "PSQ.2.g",
+      "requirement": "The quality improvement programme is reviewed and updated at least once a year.",
+      "steps": "Section 3; 5.7",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing PSQ.2.g was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PSQ.2.g reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "PSQ.2.h",
+      "requirement": "Audits are conducted at regular intervals as a means of continuous monitoring.",
+      "steps": "Section 3; 5.8",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing PSQ.2.h was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PSQ.2.h reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    },
+    {
+      "oe_code": "PSQ.2.i",
+      "requirement": "There is an established process in the organisation to monitor and improve the quality of nursing care.",
+      "steps": "Section 3; 5.9",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing PSQ.2.i was followed for sampled cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PSQ.2.i reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element.",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO PSQ.2 v2 (2026-08-21). Official Standards PDF OE count 9; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: abefhi. CORE: ai. Achievement: none. Excellence: cd.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/PSQ/POL/02.\nOfficial chapter is 7 standards / 46 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. No statute P2 proposed (accreditation-only).\nDo not copy SHCO equivalent-chapter wording. Do not touch AAC, COP, MOM, PRE or IPC.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition PSQ.2 v2 draft: portal PDF OE data + Guidebook interpretations (md5 2c4489ee98de4ae9b49cba168ea9f42a); draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation implements a structured quality improvement and continuous monitoring programme.",
+  "exceptions": "1. Do not skip: The quality improvement programme is developed, implemented and maintained by a multi-disciplinary committee.\n2. Do not skip: The quality improvement programme is comprehensive and covers all the major elements related to quality ass...\n3. Do not skip: The quality improvement programme improves process efficiency and effectiveness.\n4. Do not skip: The quality improvement programme focuses on appropriateness of clinical care.\n5. Do not skip: There is a designated individual for coordinating and implementing the quality improvement programme.\n6. Do not skip: The quality improvement programme identifies opportunities for improvement based on the review at pre-defin...\n7. Do not skip: The quality improvement programme is reviewed and updated at least once a year.\n8. Do not skip: Audits are conducted at regular intervals as a means of continuous monitoring.\n9. Do not skip: There is an established process in the organisation to monitor and improve the quality of nursing care.\n10. Staff who see a PSQ.2 rule broken report it the same shift to the «department in-charge» or the «Patient Safety Officer» / «Quality Coordinator».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE PSQ.2.a–i.\n- Asterisked elements (abefhi) have document evidence as required.\n- CORE elements (ai) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related sentinel event, indicator failure cluster or failed clinical-audit cycle.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Quality Improvement and Continuous Monitoring Programme policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/PSQ/POL/02»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Quality Coordinator»",
+  "template_test": "hco_psq_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — PSQ.2.",
+  "doc_no": "«HCO/PSQ/POL/02»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.PSQ.2",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}
