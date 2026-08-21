@@ -1,0 +1,113 @@
+{
+  "standard_code": "PRE.1",
+  "chapter": "HCO",
+  "oe_codes": [
+    "PRE.1.a",
+    "PRE.1.b",
+    "PRE.1.c",
+    "PRE.1.d",
+    "PRE.1.e"
+  ],
+  "policy_title": "Protecting and Promoting Patient and Family Rights",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard PRE.1: The organisation protects and promotes patient and family rights and informs them about their responsibilities during care.\n\nIt covers objective elements PRE.1.a–e (5 elements).\n\nChapter intent (official Standards PDF): The organisation defines, protects and promotes the patient and family's rights and responsibilities. The staff is aware of these rights and is trained to protect them. Patients are informed of their rights and educated about their responsibilities at the time of entering the organisation. The expected costs of treatment and care are explained clearly to the patient and / or family. The organisation encourages patient engagement to enhance clinical outcomes, safety and quality. Patients are educated about the mechanisms available for addressing grievances. Informed consent is obtained from the patient or family for specified procedures / care. The key components of information shall include risks, benefits and alternatives. Patients and families have a right to get information and education about their healthcare needs in a language and manner that is understood by them. The organisation has a mechanism to capture the patient experience including patient reported experience measures (PREM). The organisation develops effective patient-centred communication.\n\nThis policy owns PRE.1. Related AAC, COP, MOM, IPC/HIC and IMS duties stay with those policies — cross-reference only. Other PRE standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who register, admit, treat, counsel, bill, take consent from, or communicate with patients and families at {{HOSPITAL_NAME}}, including the «Quality Coordinator», treating doctors, nursing, Guest Relations / Patient Rights, Patient Accounts and the Quality Coordinator.\n\nIt covers 5 objective elements (PRE.1.a, PRE.1.b, PRE.1.c, PRE.1.d, PRE.1.e).\n\nBoundaries: do not copy SHCO PRE wording. Do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
+  "policy_statement": "{{HOSPITAL_NAME}} implements PRE.1 so that the organisation protects and promotes patient and family rights and informs them about their responsibilities during care.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Patient and family rights and responsibilities are documented, displa...\n\n{{HOSPITAL_NAME}} documents patient and family rights and responsibilities in consonance with the Charter of Patients' Rights named by the statutory body. The current text is displayed where patients, families and visitors can see it (registration, OPD waiting, ward notice boards, emergency). Pamphlets or equivalent IEC material are available; the material is at least bilingual.\n\nThe «Quality Coordinator» owns the current version. Staff who register or admit patients point to the display and offer the pamphlet at first contact. A rights-and-responsibilities file that exists only in a quality folder is not implemented.\n\nMethod note (from guidebook interpretation): Organisation shall document the patient's rights and inform them of their responsibilities. These shall be documented in consonance with the Charter of Patients’ Rights laid down by the statutory body. The rights and responsibilities of the patients shall be displayed in the hospital where it is prominently visible to patients, families and visitors. Pamphlets could be used to make them aware. Information, education and communication material shall at least be bilingual.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.2 Patient and family rights and responsibilities are actively promoted\n\nRights and responsibilities are actively promoted, not only posted. For in-patients, «the admitting nurse or Guest Relations» counsels the patient and/or family on rights and responsibilities in a format and language they can understand, and records that counselling in the admission note.\n\nFor out-patients, educational material is easily accessible and prominently displayed in OPD. The «Quality Coordinator» spot-checks display and counselling records «quarterly».\n\nMethod note (from guidebook interpretation): Organisation shall take steps to actively promote patient and family rights and responsibilities. For in-patients, the organisation shall counsel the patient and/or family on their rights and responsibilities. Counselling is done in a format and language that they can understand. For the out-patients, educational material shall be easily accessible and prominently displayed. Theorganisation protects patient and family rights.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.3 The organisation protects patient and family rights\n\nStaff are trained at induction and «annually» on their duty to protect and respect patient and family rights. Conduct during examination, communication and record-handling must convey that duty.\n\nThe «Medical Superintendent» names the «Guest Relations / Patient Rights Officer» as the day-to-day owner of rights protection. A rights poster without staff training is not protection under this element.\n\nMethod note (from guidebook interpretation): The first measure to protect patient and family rights is making staff aware of their responsibility in protecting and respecting patient and family rights. The staff shall conduct themselves in a manner wherein their actions convey a positive attitude towards the protection of patient and family rights..\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.4 The organisation has a mechanism to report a violation of patient and...\n\nThe organisation keeps a written list of examples of rights infringements (privacy compromise, confidentiality breach, disrespect of religious or cultural needs, records not provided in the stipulated time, and other items the «Medical Superintendent» adds for this hospital). Staff report a violation on the incident form, including how the right was violated and, where applicable, by whom.\n\nPatients and families can report a violation themselves — through the feedback form (rights worded so a lay person can tick them) or by speaking to the «Guest Relations / Patient Rights Officer». Anonymous reports are logged. The «Quality Coordinator» holds the incident file.\n\nMethod note (from guidebook interpretation): The organisation may develop a list of such instances which could be considered as infringements of patients’ and families’ rights and train the staff accordingly. For example, compromising the privacy, breaching confidentiality, disrespect to the religious and cultural needs, not providing medical records within the stipulated time etc. Violation of patient and family rights is reported through an incident reporting form. It shall provide details of how the right was violated and where applicable by whom. Also, there shall be a mechanism for the patient and/or family to report a violation of their rights. The patient feedback form (by incorporating patient rights worded appropriately) could be used as a tool to capture violation of patient rights.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.5 Violation of patient and family rights are monitored, analysed, and c...\n\nEvery logged rights violation is investigated. Top leadership («Medical Superintendent» with the «Quality Coordinator») documents the incident, the investigation and the outcome, and assigns corrective and/or preventive action in a time frame the organisation defines («within 15 days of the report, sooner if the patient is still in hospital»).\n\nOpen actions are tracked until closed. A log without investigation or CAPA is not compliance with this CORE element.\n\nMethod note (from guidebook interpretation): Whenever patients' rights have been infringed upon, management shall document the said violations, investigate and maintain the record of the incident and its outcomes. Corrective and/or preventive actions shall be taken in a time frame defined by the organisation.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that PRE.1 is resourced and followed.\n- Acts on rights violations, consent failures and communication breaches that reach top leadership.\n\nQuality Coordinator\n- Owns day-to-day implementation and records for this standard.\n\nGuest Relations / Patient Rights Officer\n- Supports rights display, counselling, complaint access and family communication as this standard requires.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Patient Rights and Education, standard PRE.1. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — PRE.1 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_pre_guidebook_ocr.txt).\n- Internal documents of {{HOSPITAL_NAME}}: Patient Rights display and pamphlet, informed-consent list and forms, tariff and estimate process, feedback and complaints guidance, and communication models named for PRE.1.",
+  "distribution": "Medical Superintendent; Quality Coordinator; Nursing Superintendent; Guest Relations / Patient Rights Officer; Patient Accounts In-Charge; department clinical staff covered by PRE.1",
+  "abbreviations": "CAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nIEC — Information, Education and Communication\nIMS — Information Management System (NABH Hospitals chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nNACO — National AIDS Control Organisation\nOE — Objective Element\nPRE — Patient Rights and Education (NABH Hospitals chapter)\nPREM — Patient-Reported Experience Measure\nSPIKES — Setting, Perception, Invitation/information, Knowledge, Empathy, Summarize/strategize (breaking-bad-news model named in the Guidebook)",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "PRE.1.a",
+      "requirement": "Patient and family rights and responsibilities are documented, displayed, and they are made aware of the same.",
+      "steps": "Section 3; 5.1",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing PRE.1.a was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PRE.1.a reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    },
+    {
+      "oe_code": "PRE.1.b",
+      "requirement": "Patient and family rights and responsibilities are actively promoted.",
+      "steps": "Section 3; 5.2",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing PRE.1.b was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PRE.1.b reviewed «quarterly».",
+        "Documented evidence specifically required by the asterisked objective element."
+      ]
+    },
+    {
+      "oe_code": "PRE.1.c",
+      "requirement": "The organisation protects patient and family rights.",
+      "steps": "Section 3; 5.3",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing PRE.1.c was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PRE.1.c reviewed «quarterly».",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "PRE.1.d",
+      "requirement": "The organisation has a mechanism to report a violation of patient and family rights.",
+      "steps": "Section 3; 5.4",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing PRE.1.d was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PRE.1.d reviewed «quarterly».",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "PRE.1.e",
+      "requirement": "Violation of patient and family rights are monitored, analysed, and corrective / preventive action taken by the top leadership of the organisation.",
+      "steps": "Section 3; 5.5",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Records showing PRE.1.e was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PRE.1.e reviewed «quarterly».",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO PRE.1 v2 (2026-08-21). Official Standards PDF OE count 5; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: ab. CORE: cde. Achievement: b. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/PRE/POL/01.\nOfficial chapter is 8 standards / 52 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. PRE.4 statute P2 proposed (guidebook names MTP, PC-PNDT, THOA, HIV/AIDS Act 2017).\nDo not copy SHCO PRE wording. Do not touch AAC, COP or MOM.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition PRE.1 v2 draft: portal PDF OE data + Guidebook interpretations (md5 2c4489ee98de4ae9b49cba168ea9f42a); draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation protects and promotes patient and family rights and informs them about their responsibilities during care.",
+  "exceptions": "1. Do not skip: Patient and family rights and responsibilities are documented, displayed, and they are made aware of the same.\n2. Do not skip: Patient and family rights and responsibilities are actively promoted.\n3. Do not skip: The organisation protects patient and family rights.\n4. Do not skip: The organisation has a mechanism to report a violation of patient and family rights.\n5. Do not skip: Violation of patient and family rights are monitored, analysed, and corrective / preventive action taken by...\n6. Staff who see a PRE.1 rule broken report it the same shift to the «department in-charge» or the «Quality Coordinator».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE PRE.1.a–e.\n- Asterisked elements (ab) have document evidence as required.\n- CORE elements (cde) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related rights incident, consent failure or complaint cluster.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Protecting and Promoting Patient and Family Rights policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/PRE/POL/01»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Quality Coordinator»",
+  "template_test": "hco_pre_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — PRE.1.",
+  "doc_no": "«HCO/PRE/POL/01»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.PRE.1",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

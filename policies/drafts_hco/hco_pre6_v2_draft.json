@@ -1,0 +1,96 @@
+{
+  "standard_code": "PRE.6",
+  "chapter": "HCO",
+  "oe_codes": [
+    "PRE.6.a",
+    "PRE.6.b",
+    "PRE.6.c",
+    "PRE.6.d"
+  ],
+  "policy_title": "Information on Expected Costs",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard PRE.6: Patients and families have a right to information on expected costs.\n\nIt covers objective elements PRE.6.a–d (4 elements).\n\nChapter intent (official Standards PDF): The organisation defines, protects and promotes the patient and family's rights and responsibilities. The staff is aware of these rights and is trained to protect them. Patients are informed of their rights and educated about their responsibilities at the time of entering the organisation. The expected costs of treatment and care are explained clearly to the patient and / or family. The organisation encourages patient engagement to enhance clinical outcomes, safety and quality. Patients are educated about the mechanisms available for addressing grievances. Informed consent is obtained from the patient or family for specified procedures / care. The key components of information shall include risks, benefits and alternatives. Patients and families have a right to get information and education about their healthcare needs in a language and manner that is understood by them. The organisation has a mechanism to capture the patient experience including patient reported experience measures (PREM). The organisation develops effective patient-centred communication.\n\nThis policy owns PRE.6. Related AAC, COP, MOM, IPC/HIC and IMS duties stay with those policies — cross-reference only. Other PRE standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who register, admit, treat, counsel, bill, take consent from, or communicate with patients and families at {{HOSPITAL_NAME}}, including the «Patient Accounts In-Charge», treating doctors, nursing, Guest Relations / Patient Rights, Patient Accounts and the Quality Coordinator.\n\nIt covers 4 objective elements (PRE.6.a, PRE.6.b, PRE.6.c, PRE.6.d).\n\nBoundaries: do not copy SHCO PRE wording. Do not overwrite HCO AAC, COP or MOM policies. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
+  "policy_statement": "{{HOSPITAL_NAME}} implements PRE.6 so that patients and families have a right to information on expected costs.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 The patient and / or family members are made aware of the pricing pol...\n\nPricing-policy components — consultation charges, bed charges, nursing charges, security deposit — are available near registration and/or the admission desk for out-patient, emergency, ICU and in-patient settings, based on the billing policy.\n\nThe «Patient Accounts In-Charge» keeps the displayed components current. A policy that exists only in accounts and is not visible at the desk is not CORE compliance.\n\nMethod note (from guidebook interpretation): The key components of pricing, namely consultation charges, bed charges, nursing charges, security deposit, are available to patients near registration and/or admission desk. This shall be based on the billing policy, which defines the charges to be levied for various healthcare activities in a given setting. The relevant tariff list is available to patients.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.2 The relevant tariff list is available to patients\n\nAn updated tariff list is available for patients to review. {{HOSPITAL_NAME}} charges as per that list; any additional charge is enumerated in the tariff and communicated. Rates are uniform in a given setting and transparent.\n\nThe «Patient Accounts In-Charge» dates the current list. Informal 'extra' charges that are not on the tariff are not permitted.\n\nMethod note (from guidebook interpretation): The organisation shall ensure that there is an updated tariff list and that the relevant tariff is available for review to patients when required. The organisation shall charge as per the tariff list. Any additional charge shall also be enumerated in the tariff and the same communicated to the patients. The tariff rates shall be uniform (in a given setting) and transparent. = ‘ \" g The patient and/or family members are explained about the expected costs.",
+    "5.3 The patient and/or family members are explained about the expected costs\n\nPatients receive an estimate of treatment expenses, preferably written, based on the treatment plan. OPD / registration / admission staff prepare it in consultation with the treating doctor. Limitations (for example emergency admission) are discussed.\n\nThe estimate is filed in the patient account / medical record. 'We'll see at discharge' is not an explanation of expected costs.\n\nMethod note (from guidebook interpretation): Patients shall be given an estimate of the expenses on account of the treatment, preferably in a written form. This estimate shall be prepared based on the treatment plan. It could be prepared by the OPD/Registration/Admission staff in consultation with the treating doctor. The limitations of the estimate if any (for example emergency admissions) could also be discussed with the patient.",
+    "5.4 Patient and/or family are informed about the financial implications w...\n\nWhen the care plan changes in a way that affects cost — shift to or from ICU, medical to surgical management, further expensive investigations — the patient and/or family are informed of the financial implication before the change is treated as agreed (emergencies: as soon as practicable).\n\nThe «Patient Accounts In-Charge» or the «treating doctor» records the revised estimate. Surprise charges at discharge for a known plan change are a gap.\n\nMethod note (from guidebook interpretation): Change in the care plan entails that the patient and/or family are informed of the financial implications. Example of change in care plan include patients are shifted from one setting to another, typically to and from ICUs, the shift from medical to surgical management, need to conduct further expensive investigations etc."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that PRE.6 is resourced and followed.\n- Acts on rights violations, consent failures and communication breaches that reach top leadership.\n\nPatient Accounts In-Charge\n- Owns day-to-day implementation and records for this standard.\n\nGuest Relations / Patient Rights Officer\n- Supports rights display, counselling, complaint access and family communication as this standard requires.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Patient Rights and Education, standard PRE.6. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — PRE.6 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_pre_guidebook_ocr.txt).\n- Internal documents of {{HOSPITAL_NAME}}: Patient Rights display and pamphlet, informed-consent list and forms, tariff and estimate process, feedback and complaints guidance, and communication models named for PRE.6.",
+  "distribution": "Medical Superintendent; Patient Accounts In-Charge; Nursing Superintendent; Guest Relations / Patient Rights Officer; Quality Coordinator; department clinical staff covered by PRE.6",
+  "abbreviations": "CAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nIEC — Information, Education and Communication\nIMS — Information Management System (NABH Hospitals chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nNACO — National AIDS Control Organisation\nOE — Objective Element\nPRE — Patient Rights and Education (NABH Hospitals chapter)\nPREM — Patient-Reported Experience Measure\nSPIKES — Setting, Perception, Invitation/information, Knowledge, Empathy, Summarize/strategize (breaking-bad-news model named in the Guidebook)",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "PRE.6.a",
+      "requirement": "The patient and / or family members are made aware of the pricing policy in different settings (out-patient, emergency, ICU and in-patient).",
+      "steps": "Section 3; 5.1",
+      "responsible": "Patient Accounts In-Charge",
+      "records": [
+        "Records showing PRE.6.a was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PRE.6.a reviewed «quarterly».",
+        "CORE-element sample with no critical gaps in the quarter under review."
+      ]
+    },
+    {
+      "oe_code": "PRE.6.b",
+      "requirement": "The relevant tariff list is available to patients.",
+      "steps": "Section 3; 5.2",
+      "responsible": "Patient Accounts In-Charge",
+      "records": [
+        "Records showing PRE.6.b was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PRE.6.b reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "PRE.6.c",
+      "requirement": "The patient and/or family members are explained about the expected costs.",
+      "steps": "Section 3; 5.3",
+      "responsible": "Patient Accounts In-Charge",
+      "records": [
+        "Records showing PRE.6.c was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PRE.6.c reviewed «quarterly»."
+      ]
+    },
+    {
+      "oe_code": "PRE.6.d",
+      "requirement": "Patient and/or family are informed about the financial implications when there is a change in the care plan.",
+      "steps": "Section 3; 5.4",
+      "responsible": "Patient Accounts In-Charge",
+      "records": [
+        "Records showing PRE.6.d was followed for sampled patients/cases.",
+        "Written guidance / protocol referenced for this element (where required).",
+        "Audit sample notes for PRE.6.d reviewed «quarterly»."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO PRE.6 v2 (2026-08-21). Official Standards PDF OE count 4; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: none. CORE: a. Achievement: none. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/PRE/POL/06.\nOfficial chapter is 8 standards / 52 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. PRE.4 statute P2 proposed (guidebook names MTP, PC-PNDT, THOA, HIV/AIDS Act 2017).\nDo not copy SHCO PRE wording. Do not touch AAC, COP or MOM.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition PRE.6 v2 draft: portal PDF OE data + Guidebook interpretations (md5 2c4489ee98de4ae9b49cba168ea9f42a); draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Patients and families have a right to information on expected costs.",
+  "exceptions": "1. Do not skip: The patient and / or family members are made aware of the pricing policy in different settings (out-patient...\n2. Do not skip: The relevant tariff list is available to patients.\n3. Do not skip: The patient and/or family members are explained about the expected costs.\n4. Do not skip: Patient and/or family are informed about the financial implications when there is a change in the care plan.\n5. Staff who see a PRE.6 rule broken report it the same shift to the «department in-charge» or the «Quality Coordinator».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- Sample of records for each OE PRE.6.a–d.\n- Asterisked elements (none) have document evidence as required.\n- CORE elements (a) show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nThis policy is reviewed «annually», and sooner after a related rights incident, consent failure or complaint cluster.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Information on Expected Costs policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/PRE/POL/06»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Patient Accounts In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Patient Accounts In-Charge»",
+  "template_test": "hco_pre_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — PRE.6.",
+  "doc_no": "«HCO/PRE/POL/06»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.PRE.6",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}
