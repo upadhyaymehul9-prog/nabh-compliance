@@ -1,0 +1,3830 @@
+[
+  {
+    "code": "AAC.1.a",
+    "short": "AAC 1a",
+    "file_stem": "AAC-1a",
+    "headline": "The healthcare services being provided are defined and are in consonance with the needs of the community?",
+    "oe_text": "The healthcare services being provided are defined and are in consonance with the needs of the community.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The healthcare services being provided are defined and are in consonance with the needs of the community."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Implement, document, and train staff on this OE."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Implement, document, and train staff on this OE."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.1.a and review current practice against the OE text.",
+      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
+      "Brief the involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.1.b",
+    "short": "AAC 1b",
+    "file_stem": "AAC-1b",
+    "headline": "Each defined clinical service shall have diagnostic and treatment services with suitably qualified?",
+    "oe_text": "Each defined clinical service shall have diagnostic and treatment services with suitably qualified personnel who provide out-patient, in-patient, daycare and emergency cover.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Each defined clinical service shall have diagnostic and treatment services with suitably qualified personnel who provide out-patient."
+      },
+      {
+        "title": "Key point 2",
+        "body": "daycare and emergency cover."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Implement, document, and train staff on this OE."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.1.b and review current practice against the OE text.",
+      "List gaps with owners and due dates; fix the highest patient-safety risk first.",
+      "Brief the involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.1.c",
+    "short": "AAC 1c",
+    "file_stem": "AAC-1c",
+    "headline": "2 a ES @ Haemodialysis Is Each Department's © Fistula Scope Written Clearly — © Biopsy Including What You eae",
+    "oe_text": "Scope of the clinical services of each department is defined.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "Scope of clinical services of each department is defined* iB."
+      },
+      {
+        "title": "Inclusion or exclusion",
+        "body": "Scope can be by inclusion or exclusion for services practised in the department."
+      },
+      {
+        "title": "Outsourced services known",
+        "body": "Clinical and diagnostic outsourced services are documented and known to staff."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "SCOPE NOT WRITTEN",
+        "body": "Departments are named but scope of services is not documented."
+      },
+      {
+        "title": "NO EXCLUSIONS LIST",
+        "body": "What the department does not do is never stated."
+      },
+      {
+        "title": "OUTSOURCE UNKNOWN",
+        "body": "Staff cannot name outsourced clinical or diagnostic services."
+      },
+      {
+        "title": "STAFF GUESS SCOPE",
+        "body": "Frontline teams describe scope from habit, not the approved document."
+      }
+    ],
+    "steps": [
+      "Write or refresh each department scope — by inclusion or exclusion.",
+      "Document outsourced clinical and diagnostic services and brief staff.",
+      "Verify registration and clinical teams can state the scope this week."
+    ]
+  },
+  {
+    "code": "AAC.1.d",
+    "short": "AAC 1d",
+    "file_stem": "AAC-1d",
+    "headline": "@ Neuro e hy a 10} Can Every Patient +. a See Your Service List Mo | & ener",
+    "oe_text": "The organisation's defined clinical services are prominently displayed.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "Defined clinical services are prominently displayed Z CITIZEN."
+      },
+      {
+        "title": "Visible and permanent",
+        "body": "Display names clinical and diagnostic departments, visible to patients and visitors, and is permanent."
+      },
+      {
+        "title": "At least bilingual",
+        "body": "Display is at least bilingual where required for the population served."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "LIST IN A DRAWER",
+        "body": "Service list exists in a file but is not displayed publicly."
+      },
+      {
+        "title": "OUTDATED BOARD",
+        "body": "Display still shows departments that were closed or renamed."
+      },
+      {
+        "title": "ENGLISH ONLY",
+        "body": "Display is not understandable for the local patient population."
+      },
+      {
+        "title": "HIDDEN LOCATION",
+        "body": "Board is behind a pillar or only inside admin areas."
+      }
+    ],
+    "steps": [
+      "Print the approved clinical and diagnostic service list for public display.",
+      "Place it permanently where patients and visitors can read it without asking.",
+      "Make it at least bilingual and update it whenever scope changes."
+    ]
+  },
+  {
+    "code": "AAC.2.a",
+    "short": "AAC 2a",
+    "file_stem": "AAC-2a",
+    "headline": "—————————— Is Registration and | vison . . . & Admission Running on ADMISSION :",
+    "oe_text": "The organisation uses written guidance for registering and admitting patients, including unidentified patients, covering out-patients, day-care, in-patients and emergency patients.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "admitting patients (including unidentified patients) E."
+      },
+      {
+        "title": "All care settings",
+        "body": "Guidance addresses out-patients, day-care, in-patients and emergency patients."
+      },
+      {
+        "title": "Patients are informed",
+        "body": "Patients and families are informed of salient registration and admission steps."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "NO WRITTEN SOP",
+        "body": "Staff train new joiners from memory instead of an approved SOP."
+      },
+      {
+        "title": "EMERGENCY LEFT OUT",
+        "body": "Guidance covers OPD only; emergency and unidentified patients are missing."
+      },
+      {
+        "title": "CONSENT NOT EXPLAINED",
+        "body": "General consent scope is never explained at registration."
+      },
+      {
+        "title": "INCONSISTENT PRACTICE",
+        "body": "Each shift registers patients differently."
+      }
+    ],
+    "steps": [
+      "Approve one registration and admission SOP covering OP, daycare, IP, emergency and unidentified patients.",
+      "Train registration and casualty teams on the SOP this week.",
+      "Spot-check five registrations against the SOP and close gaps."
+    ]
+  },
+  {
+    "code": "AAC.2.b",
+    "short": "AAC 2b",
+    "file_stem": "AAC-2b",
+    "headline": "A AC 2 b ( UHID: AR-20458 a | @_ UID: AR-20. seg eel Aig PT That Follows Them —— U L",
+    "oe_text": "A unique identification number is generated at the end of registration, and visit numbers if used are linked back to that unique number.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "A unique identification number is generated at the end of registration, and visit numbers if used are linked back to that unique number."
+      },
+      {
+        "title": "Visit numbers linked",
+        "body": "Visit numbers, if used, are linked back to that unique number."
+      },
+      {
+        "title": "Same ID across records",
+        "body": "The unique ID follows the patient across OP slips, files and reports."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "DUPLICATE UHIDS",
+        "body": "The same patient receives multiple unique IDs over time."
+      },
+      {
+        "title": "VISIT NOT LINKED",
+        "body": "Visit numbers are not mapped to the master unique ID."
+      },
+      {
+        "title": "MANUAL GAPS",
+        "body": "IDs are handwritten and recreated at each department."
+      },
+      {
+        "title": "NO LOOKUP",
+        "body": "Staff cannot retrieve prior visits using the unique ID."
+      }
+    ],
+    "steps": [
+      "Confirm your registration system always issues one master unique ID.",
+      "Link every visit number to that master ID and test retrieval.",
+      "Audit last week’s registrations for duplicate IDs and fix the process."
+    ]
+  },
+  {
+    "code": "AAC.2.c",
+    "short": "AAC 2c",
+    "file_stem": "AAC-2c",
+    "headline": "CAN WE PROVIDE ve E) caroiovocy ° £} vom repuacem Are You Accepting AY?",
+    "oe_text": "Patients are accepted only if the organisation can provide the required service.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "organisation can provide the required service START G:."
+      },
+      {
+        "title": "Staff know the list",
+        "body": "Registration and admission staff know the services the organisation provides."
+      },
+      {
+        "title": "Refer when needed",
+        "body": "Patients outside scope are guided or referred appropriately."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "ACCEPT ANYWAY",
+        "body": "Patients outside scope are admitted without a referral plan."
+      },
+      {
+        "title": "STAFF UNSURE",
+        "body": "Registration cannot say which specialties are in scope."
+      },
+      {
+        "title": "NO REFERRAL PATH",
+        "body": "There is no written path for patients the hospital cannot treat."
+      },
+      {
+        "title": "EMERGENCY CONFUSION",
+        "body": "Life-saving first aid is mixed up with definitive out-of-scope admission."
+      }
+    ],
+    "steps": [
+      "Give registration a one-page approved service list.",
+      "Define the accept vs refer rule for out-of-scope requests.",
+      "Role-play three scenarios with registration this week."
+    ]
+  },
+  {
+    "code": "AAC.2.d",
+    "short": "AAC 2d",
+    "file_stem": "AAC-2d",
+    "headline": "TEMPORARY HOLDING AREA What Happens When — Every Bed Is Full — . = Is It Written Down? et eld",
+    "oe_text": "Written guidance addresses managing patients during non-availability of beds.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "Written guidance addresses managing patients Ds . = 7."
+      },
+      {
+        "title": "Alternate organisations",
+        "body": "Alternate organisations for redirection are known to staff."
+      },
+      {
+        "title": "Holding area rules",
+        "body": "Temporary holding areas, if used, have adequate infrastructure and a defined timeframe."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "NO FULL-BED SOP",
+        "body": "Staff improvise when beds are unavailable."
+      },
+      {
+        "title": "UNKNOWN REDIRECTS",
+        "body": "Alternate hospitals for redirection are not listed."
+      },
+      {
+        "title": "HOLDING WITHOUT LIMITS",
+        "body": "Patients wait in corridors with no defined timeframe or monitoring."
+      },
+      {
+        "title": "FAMILY NOT INFORMED",
+        "body": "Families are not told the plan when admission is delayed."
+      }
+    ],
+    "steps": [
+      "Write the full-bed / diversion SOP with named alternate organisations.",
+      "Define temporary holding rules, monitoring and maximum timeframe.",
+      "Brief casualty and bed-management teams and post the alternate list."
+    ]
+  },
+  {
+    "code": "AAC.2.e",
+    "short": "AAC 2e",
+    "file_stem": "AAC-2e",
+    "headline": "‘CLINICAL PRIOR Assess eng Y Priortise Is Access Basedon 4% vozl",
+    "oe_text": "Access to healthcare services is prioritised according to the clinical needs of the patient.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "according to the clinical needs of the patient gb iBETabeTaynd."
+      },
+      {
+        "title": "Identify urgent patients",
+        "body": "Patients needing earlier response are identified and prioritised."
+      },
+      {
+        "title": "OP and diagnostics",
+        "body": "Prioritisation applies in outpatient and diagnostic settings — not only emergency."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "FIRST-COME ONLY",
+        "body": "Queues ignore clinical urgency."
+      },
+      {
+        "title": "NO TRIAGE CUES",
+        "body": "OPD and diagnostics have no method to flag earlier-response patients."
+      },
+      {
+        "title": "STAFF NOT TRAINED",
+        "body": "Reception cannot identify priority patients."
+      },
+      {
+        "title": "NO DOCUMENTATION",
+        "body": "Priority decisions are never recorded."
+      }
+    ],
+    "steps": [
+      "Define simple priority categories for OPD and diagnostics.",
+      "Train reception and nursing to identify and escalate earlier-response patients.",
+      "Audit one OPD session for priority handling and fix gaps."
+    ]
+  },
+  {
+    "code": "AAC.3.a",
+    "short": "AAC 3a",
+    "file_stem": "AAC-3a",
+    "headline": "Are Transfer-In Patients Handled With a Clear, Appropriate Process?",
+    "oe_text": "Transfer-in of patients to the organisation is done appropriately.",
+    "requirements": [
+      {
+        "title": "Transfer-in process",
+        "body": "Transfer-in of patients is done appropriately using a defined process."
+      },
+      {
+        "title": "Clinical readiness",
+        "body": "The organisation confirms it can care for the transferred patient."
+      },
+      {
+        "title": "Information received",
+        "body": "Essential clinical information accompanies the transfer-in."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "AD-HOC ACCEPTANCE",
+        "body": "Transfer-ins are accepted by phone with no checklist."
+      },
+      {
+        "title": "NO BED CONFIRMATION",
+        "body": "Patients arrive before bed and team readiness are confirmed."
+      },
+      {
+        "title": "MISSING HANDOVER INFO",
+        "body": "Critical clinical details do not arrive with the patient."
+      },
+      {
+        "title": "NO RECORD",
+        "body": "Transfer-in rationale and acceptance are not documented."
+      }
+    ],
+    "steps": [
+      "Write a transfer-in checklist covering accept criteria and required clinical information.",
+      "Train casualty and admitting teams on the checklist.",
+      "Audit the next five transfer-ins against the checklist."
+    ]
+  },
+  {
+    "code": "AAC.3.b",
+    "short": "AAC 3b",
+    "file_stem": "AAC-3b",
+    "headline": "When You Refer Out, Is the Transfer Safe — Or Just a Phone Call?",
+    "oe_text": "Transfer-out or referral to another facility is done appropriately.",
+    "requirements": [
+      {
+        "title": "Appropriate referral",
+        "body": "Transfer-out or referral to another facility is done appropriately."
+      },
+      {
+        "title": "Safe handover",
+        "body": "Clinical information and reason for transfer are communicated to the receiving facility."
+      },
+      {
+        "title": "Patient stability",
+        "body": "Patients are stabilised as far as possible before transfer."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "PHONE-ONLY REFERRAL",
+        "body": "No structured clinical summary accompanies the patient."
+      },
+      {
+        "title": "UNSTABLE TRANSFER",
+        "body": "Patients are moved before essential stabilisation."
+      },
+      {
+        "title": "NO RECEIVING CONFIRMATION",
+        "body": "Receiving facility acceptance is not confirmed."
+      },
+      {
+        "title": "FAMILY UNINFORMED",
+        "body": "Risks and destination are not explained to the family."
+      }
+    ],
+    "steps": [
+      "Standardise a transfer-out / referral note template.",
+      "Require receiving-facility confirmation before dispatch.",
+      "Review five recent referrals for completeness this week."
+    ]
+  },
+  {
+    "code": "AAC.3.c",
+    "short": "AAC 3c",
+    "file_stem": "AAC-3c",
+    "headline": "Who Rides With the Patient — And Are They Skilled Enough?",
+    "oe_text": "Patients are accompanied by a suitably trained person during transfer, appropriate to their clinical condition.",
+    "requirements": [
+      {
+        "title": "Trained escort",
+        "body": "A suitably trained person accompanies the patient during transfer."
+      },
+      {
+        "title": "Skill matches condition",
+        "body": "Escort competence matches the patient’s clinical condition."
+      },
+      {
+        "title": "Equipment ready",
+        "body": "Required monitoring and emergency equipment travel with the patient."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "UNTRAINED ESCORT",
+        "body": "A helper without clinical skills accompanies unstable patients."
+      },
+      {
+        "title": "NO EQUIPMENT",
+        "body": "Ambulance or trolley moves lack essential monitoring gear."
+      },
+      {
+        "title": "UNCLEAR ROLE",
+        "body": "Nobody owns escort competence decisions."
+      },
+      {
+        "title": "INTERNAL TRANSFERS IGNORED",
+        "body": "Only external transfers get escorts; internal ICU moves do not."
+      }
+    ],
+    "steps": [
+      "Define escort competence by patient risk category.",
+      "Create an escort and equipment checklist for transfers.",
+      "Brief nursing and transport teams and test on next high-risk transfer."
+    ]
+  },
+  {
+    "code": "AAC.3.d",
+    "short": "AAC 3d",
+    "file_stem": "AAC-3d",
+    "headline": "Does Every Transfer Carry a Clear Clinical Summary?",
+    "oe_text": "A clinical summary is provided during transfer of patients.",
+    "requirements": [
+      {
+        "title": "Clinical summary",
+        "body": "A clinical summary is provided during transfer of patients."
+      },
+      {
+        "title": "Continuity information",
+        "body": "Relevant clinical information supports continuity of care."
+      },
+      {
+        "title": "Timely handover",
+        "body": "The summary is available at the time of transfer — not later."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "NO SUMMARY",
+        "body": "Patients move with only a verbal note."
+      },
+      {
+        "title": "INCOMPLETE DETAILS",
+        "body": "Allergies, pending results or treatment given are missing."
+      },
+      {
+        "title": "LATE PAPERWORK",
+        "body": "Summary arrives after the patient."
+      },
+      {
+        "title": "ILLEGIBLE NOTES",
+        "body": "Handwritten summaries cannot be read by the receiving team."
+      }
+    ],
+    "steps": [
+      "Mandate a transfer clinical summary template for internal and external moves.",
+      "Include allergies, working diagnosis, treatment given and pending results.",
+      "Audit five transfers for summary completeness this week."
+    ]
+  },
+  {
+    "code": "AAC.4.a",
+    "short": "AAC 4a",
+    "file_stem": "AAC-4a",
+    "headline": "The initial assessment of out-patients?",
+    "oe_text": "The initial assessment of out-patients, daycare, in-patients and emergency patients is done in a standardised manner.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The initial assessment of out-patients, daycare, in-patients and emergency patients is done in a standardised manner."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.4.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.4.b",
+    "short": "AAC 4b",
+    "file_stem": "AAC-4b",
+    "headline": "The initial assessment includes screening for nutritional needs?",
+    "oe_text": "The initial assessment includes screening for nutritional needs, pain, fall risk and other relevant risks as applicable.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The initial assessment includes screening for nutritional needs, pain, fall risk and other relevant risks as applicable."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.4.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.4.c",
+    "short": "AAC 4c",
+    "file_stem": "AAC-4c",
+    "headline": "The initial assessment is completed within a defined time frame appropriate to the setting?",
+    "oe_text": "The initial assessment is completed within a defined time frame appropriate to the setting.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The initial assessment is completed within a defined time frame appropriate to the setting."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.4.c and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.4.d",
+    "short": "AAC 4d",
+    "file_stem": "AAC-4d",
+    "headline": "Qualified individuals perform the initial assessment in their area of competence?",
+    "oe_text": "Qualified individuals perform the initial assessment in their area of competence.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Qualified individuals perform the initial assessment in their area of competence."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.4.d and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.4.e",
+    "short": "AAC 4e",
+    "file_stem": "AAC-4e",
+    "headline": "Does Every In-Patient Leave Assessment With a Documented Care Plan? 1h?",
+    "oe_text": "The initial assessment for in-patients results in a documented care plan.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "The initial assessment for in-patients results in a documented care plan prepared by the treating doctor."
+      },
+      {
+        "title": "Treating doctor owns it",
+        "body": "The care plan is prepared or authenticated by the treating doctor."
+      },
+      {
+        "title": "Guides further care",
+        "body": "The care plan drives investigations, treatment and reviews."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "ASSESSMENT ONLY",
+        "body": "Assessment notes exist without a care plan."
+      },
+      {
+        "title": "UNSIGNED PLAN",
+        "body": "Care plan is not authenticated by the treating doctor."
+      },
+      {
+        "title": "COPY-PASTE PLANS",
+        "body": "Plans are generic and not patient-specific."
+      },
+      {
+        "title": "NOT UPDATED",
+        "body": "Care plan is never revised after reassessment."
+      }
+    ],
+    "steps": [
+      "Mandate a care-plan section at the end of every IP initial assessment.",
+      "Audit ten current IP files for authenticated care plans.",
+      "Coach doctors on writing specific, actionable plans."
+    ]
+  },
+  {
+    "code": "AAC.4.f",
+    "short": "AAC 4f",
+    "file_stem": "AAC-4f",
+    "headline": "Patients are reassessed at appropriate intervals to determine response to treatment and to plan further care?",
+    "oe_text": "Patients are reassessed at appropriate intervals to determine response to treatment and to plan further care.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Patients are reassessed at appropriate intervals to determine response to treatment and to plan further care."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.4.f and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.4.g",
+    "short": "AAC 4g",
+    "file_stem": "AAC-4g",
+    "headline": "Does the Care Plan Already Think About | 7°\" Needs After Discharge?",
+    "oe_text": "The care plan includes identification of needs regarding care following discharge.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "The care plan includes identification of needs regarding care following discharge, especially for patients with extremes of age or complex needs."
+      },
+      {
+        "title": "High-risk focus",
+        "body": "This is critical for patients with extremes of age or complex needs."
+      },
+      {
+        "title": "Early planning",
+        "body": "Discharge-related needs are considered during the care plan — not only on the day of discharge."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "DISCHARGE AS AFTERTHOUGHT",
+        "body": "Post-discharge needs appear only at the billing desk."
+      },
+      {
+        "title": "NO HIGH-RISK FLAG",
+        "body": "Elderly or complex patients lack early discharge planning."
+      },
+      {
+        "title": "FAMILY NOT INVOLVED",
+        "body": "Caregivers are not prepared for home care needs."
+      },
+      {
+        "title": "NO REFERRAL PLANNED",
+        "body": "Needed follow-up or step-down care is not arranged."
+      }
+    ],
+    "steps": [
+      "Add a post-discharge needs prompt to the IP care-plan template.",
+      "Flag extremes of age and complex cases for early discharge planning.",
+      "Review five upcoming discharges for documented post-discharge needs."
+    ]
+  },
+  {
+    "code": "AAC.5.a",
+    "short": "AAC 5a",
+    "file_stem": "AAC-5a",
+    "headline": "Patients are reassessed at appropriate intervals to determine their response to treatment and to?",
+    "oe_text": "Patients are reassessed at appropriate intervals to determine their response to treatment and to plan for further treatment or discharge.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Patients are reassessed at appropriate intervals to determine their response to treatment and to plan for further treatment or discharge."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.5.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.5.b",
+    "short": "AAC 5b",
+    "file_stem": "AAC-5b",
+    "headline": "The organisation lays down guidelines and implements processes to identify early warning signs of?",
+    "oe_text": "The organisation lays down guidelines and implements processes to identify early warning signs of change or deterioration in clinical conditions.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The organisation lays down guidelines and implements processes to identify early warning signs of change or deterioration in clinical conditions."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.5.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.5.c",
+    "short": "AAC 5c",
+    "file_stem": "AAC-5c",
+    "headline": "Is hand-over communication standardised at every transition?",
+    "oe_text": "The organisation implements standardised hand-over communication during each staffing shift and between patient care units.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The organisation implements standardised hand-over communication during each staffing shift and between patient care units."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.5.c and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.5.d",
+    "short": "AAC 5d",
+    "file_stem": "AAC-5d",
+    "headline": "During all phases of care?",
+    "oe_text": "During all phases of care, there is a qualified individual identified as responsible for the patient's care.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "During all phases of care, there is a qualified individual identified as responsible for the patient's care."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.5.d and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.5.e",
+    "short": "AAC 5e",
+    "file_stem": "AAC-5e",
+    "headline": "Patient care is continuous and coordinated across settings and services?",
+    "oe_text": "Patient care is continuous and coordinated across settings and services.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Patient care is continuous and coordinated across settings and services."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.5.e and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.6.a",
+    "short": "AAC 6a",
+    "file_stem": "AAC-6a",
+    "headline": "Scope of the laboratory services is commensurate to the services provided by the organisation?",
+    "oe_text": "Scope of the laboratory services is commensurate to the services provided by the organisation.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Scope of the laboratory services is commensurate to the services provided by the organisation."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.6.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.6.b",
+    "short": "AAC 6b",
+    "file_stem": "AAC-6b",
+    "headline": "The infrastructure (physical and equipment) is adequate to provide the defined scope of laboratory services?",
+    "oe_text": "The infrastructure (physical and equipment) is adequate to provide the defined scope of laboratory services.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The infrastructure (physical and equipment) is adequate to provide the defined scope of laboratory services."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.6.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.6.c",
+    "short": "AAC 6c",
+    "file_stem": "AAC-6c",
+    "headline": "Human resources are adequate to provide the defined scope of laboratory services?",
+    "oe_text": "Human resources are adequate to provide the defined scope of laboratory services.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Human resources are adequate to provide the defined scope of laboratory services."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.6.c and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.6.d",
+    "short": "AAC 6d",
+    "file_stem": "AAC-6d",
+    "headline": "Qualified and trained personnel perform and supervise the investigations and report the results?",
+    "oe_text": "Qualified and trained personnel perform and supervise the investigations and report the results.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Qualified and trained personnel perform and supervise the investigations and report the results."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.6.d and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.6.e",
+    "short": "AAC 6e",
+    "file_stem": "AAC-6e",
+    "headline": "Policies and procedures guide the collection?",
+    "oe_text": "Policies and procedures guide the collection, identification, handling, safe transportation, processing and disposal of specimens.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Policies and procedures guide the collection, identification, handling, safe transportation, processing and disposal of specimens."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.6.e and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.6.f",
+    "short": "AAC 6f",
+    "file_stem": "AAC-6f",
+    "headline": "Laboratory results are reported in a standardised manner within a defined time frame?",
+    "oe_text": "Laboratory results are reported in a standardised manner within a defined time frame.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Laboratory results are reported in a standardised manner within a defined time frame."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.6.f and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.6.g",
+    "short": "AAC 6g",
+    "file_stem": "AAC-6g",
+    "headline": "Critical results are intimated to the concerned personnel promptly?",
+    "oe_text": "Critical results are intimated to the concerned personnel promptly.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Critical results are intimated to the concerned personnel promptly."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.6.g and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.6.h",
+    "short": "AAC 6h",
+    "file_stem": "AAC-6h",
+    "headline": "Are Lab Reports Standardised So Cliniciz Can Trust the Format?",
+    "oe_text": "Laboratory reports are available in a standardised manner within a defined time frame.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "Laboratory reports are available in a standardised manner within a defined time frame."
+      },
+      {
+        "title": "Defined turnaround",
+        "body": "Reports are available within a defined time frame."
+      },
+      {
+        "title": "Clinician readability",
+        "body": "Clinicians can interpret reports consistently across departments."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "MIXED FORMATS",
+        "body": "Each analyser or vendor uses a different report layout."
+      },
+      {
+        "title": "NO TAT TARGET",
+        "body": "Turnaround times are not defined or monitored."
+      },
+      {
+        "title": "MISSING UNITS",
+        "body": "Reports omit units, ranges or method notes."
+      },
+      {
+        "title": "LATE WITHOUT ALERT",
+        "body": "Delayed reports are not escalated."
+      }
+    ],
+    "steps": [
+      "Approve one standardised lab report template.",
+      "Publish TAT targets by test category and monitor them.",
+      "Fix the top three formatting inconsistencies this week."
+    ]
+  },
+  {
+    "code": "AAC.6.i",
+    "short": "AAC 6i",
+    "file_stem": "AAC-6i",
+    "headline": "Laboratory safety programme is implemented and laboratory personnel are trained in safe practices?",
+    "oe_text": "Laboratory safety programme is implemented and laboratory personnel are trained in safe practices.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Laboratory safety programme is implemented and laboratory personnel are trained in safe practices."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.6.i and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.6.j",
+    "short": "AAC 6j",
+    "file_stem": "AAC-6j",
+    "headline": "When You _—— Outsource Lab Tests, Brat) Is Quality Locked nets | iti ? OUTSOURCED aes?",
+    "oe_text": "Laboratory tests not available in the organisation are outsourced to organisations based on quality.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "Laboratory tests not available in the organisation are outsourced to organisations selected on quality and competence, with written arrangements."
+      },
+      {
+        "title": "Written arrangement",
+        "body": "Outsourcing is covered by a written agreement or MoU."
+      },
+      {
+        "title": "Staff know the list",
+        "body": "Teams know which tests are outsourced and to whom."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "NO VENDOR CRITERIA",
+        "body": "Outsourcing is based on price or habit alone."
+      },
+      {
+        "title": "NO WRITTEN MoU",
+        "body": "There is no agreement covering quality, TAT and critical results."
+      },
+      {
+        "title": "UNKNOWN VENDORS",
+        "body": "Clinical staff do not know where samples go."
+      },
+      {
+        "title": "NO QUALITY REVIEW",
+        "body": "Outsourced lab performance is never reviewed."
+      }
+    ],
+    "steps": [
+      "List all outsourced tests and current vendors.",
+      "Put quality, TAT and critical-result clauses into a written agreement.",
+      "Brief clinicians on the outsourced test list this week."
+    ]
+  },
+  {
+    "code": "AAC.7.a",
+    "short": "AAC 7a",
+    "file_stem": "AAC-7a",
+    "headline": "Is your laboratory QA programme running — or only written?",
+    "oe_text": "The laboratory quality assurance programme is implemented.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The laboratory quality assurance programme is implemented."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.7.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.7.b",
+    "short": "AAC 7b",
+    "file_stem": "AAC-7b",
+    "headline": "Is your laboratory QA programme running — or only written?",
+    "oe_text": "The laboratory quality assurance programme includes internal quality control.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The laboratory quality assurance programme includes internal quality control."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.7.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.7.c",
+    "short": "AAC 7c",
+    "file_stem": "AAC-7c",
+    "headline": "The laboratory participates in external quality assurance programmes as applicable?",
+    "oe_text": "The laboratory participates in external quality assurance programmes as applicable.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The laboratory participates in external quality assurance programmes as applicable."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.7.c and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.7.d",
+    "short": "AAC 7d",
+    "file_stem": "AAC-7d",
+    "headline": "Corrective and preventive actions from laboratory QA are documented and implemented?",
+    "oe_text": "Corrective and preventive actions from laboratory QA are documented and implemented.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Corrective and preventive actions from laboratory QA are documented and implemented."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.7.d and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.7.e",
+    "short": "AAC 7e",
+    "file_stem": "AAC-7e",
+    "headline": "Laboratory equipment is calibrated and maintained as per defined schedule?",
+    "oe_text": "Laboratory equipment is calibrated and maintained as per defined schedule.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Laboratory equipment is calibrated and maintained as per defined schedule."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.7.e and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.7.f",
+    "short": "AAC 7f",
+    "file_stem": "AAC-7f",
+    "headline": "Reagents and consumables are stored and used as per manufacturer guidance?",
+    "oe_text": "Reagents and consumables are stored and used as per manufacturer guidance.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Reagents and consumables are stored and used as per manufacturer guidance."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.7.f and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.7.g",
+    "short": "AAC 7g",
+    "file_stem": "AAC-7g",
+    "headline": "The laboratory has a documented procedure for dealing with out-of-range quality control results?",
+    "oe_text": "The laboratory has a documented procedure for dealing with out-of-range quality control results.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The laboratory has a documented procedure for dealing with out-of-range quality control results."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.7.g and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.8.a",
+    "short": "AAC 8a",
+    "file_stem": "AAC-8a",
+    "headline": "Do your imaging services meet legal and regulatory requirements?",
+    "oe_text": "Imaging services comply with legal and other requirements.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Imaging services comply with legal and other requirements."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.8.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.8.b",
+    "short": "AAC 8b",
+    "file_stem": "AAC-8b",
+    "headline": "Scope of the imaging services is commensurate to the services provided by the organisation?",
+    "oe_text": "Scope of the imaging services is commensurate to the services provided by the organisation.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Scope of the imaging services is commensurate to the services provided by the organisation."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.8.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.8.c",
+    "short": "AAC 8c",
+    "file_stem": "AAC-8c",
+    "headline": "Are Machines and Staf Adequate for Your Imaging Scope?",
+    "oe_text": "Infrastructure and human resources are adequate to provide the defined scope of imaging services.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "adequate to provide defined scope of imaging services."
+      },
+      {
+        "title": "Staffing adequacy",
+        "body": "Human resources are adequate for the defined imaging services."
+      },
+      {
+        "title": "Scope alignment",
+        "body": "Capacity is reviewed whenever imaging scope expands."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "SCOPE BIGGER THAN CAPACITY",
+        "body": "Services are advertised beyond equipment or staffing reality."
+      },
+      {
+        "title": "DOWNTIME BLIND SPOT",
+        "body": "Broken equipment has no backup or downtime pathway."
+      },
+      {
+        "title": "SHIFT GAPS",
+        "body": "Imaging staff cover is missing for advertised hours."
+      },
+      {
+        "title": "NO CAPACITY REVIEW",
+        "body": "Scope changed but staffing and machines did not."
+      }
+    ],
+    "steps": [
+      "Map each imaging service to equipment and named staff cover.",
+      "Close any scope-vs-capacity mismatch before assessment.",
+      "Document downtime and backup arrangements."
+    ]
+  },
+  {
+    "code": "AAC.8.d",
+    "short": "AAC 8d",
+    "file_stem": "AAC-8d",
+    "headline": "Who Performs and Interprets Imaging — Are They Trained and Superv?",
+    "oe_text": "Qualified and trained personnel perform, supervise and interpret the imaging investigations.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "Qualified and trained personnel perform, supervise and interpret the imaging investigations."
+      },
+      {
+        "title": "Supervision",
+        "body": "Investigations are supervised by competent personnel."
+      },
+      {
+        "title": "Interpretation",
+        "body": "Reports are interpreted by qualified personnel."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "UNSUPERVISED TRAINEES",
+        "body": "Trainees perform studies without defined supervision."
+      },
+      {
+        "title": "CREDENTIAL GAPS",
+        "body": "Privilege lists do not match who actually reports."
+      },
+      {
+        "title": "AFTER-HOURS RISK",
+        "body": "Night studies are done without a competent interpreter pathway."
+      },
+      {
+        "title": "NO COMPETENCY FILE",
+        "body": "Training and competency records are incomplete."
+      }
+    ],
+    "steps": [
+      "Align imaging privilege lists with who performs and reports.",
+      "Define supervision rules for trainees and after-hours cover.",
+      "Update competency files for imaging personnel this month."
+    ]
+  },
+  {
+    "code": "AAC.8.e",
+    "short": "AAC 8e",
+    "file_stem": "AAC-8e",
+    "headline": "Policies and procedures guide identification and safe transportation of patients to imaging?",
+    "oe_text": "Policies and procedures guide identification and safe transportation of patients to imaging.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Policies and procedures guide identification and safe transportation of patients to imaging."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.8.e and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.8.f",
+    "short": "AAC 8f",
+    "file_stem": "AAC-8f",
+    "headline": "Imaging results are reported within a defined time frame?",
+    "oe_text": "Imaging results are reported within a defined time frame.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Imaging results are reported within a defined time frame."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.8.f and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.8.g",
+    "short": "AAC 8g",
+    "file_stem": "AAC-8g",
+    "headline": "Critical imaging findings are intimated promptly to the concerned personnel?",
+    "oe_text": "Critical imaging findings are intimated promptly to the concerned personnel.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Critical imaging findings are intimated promptly to the concerned personnel."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.8.g and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.8.h",
+    "short": "AAC 8h",
+    "file_stem": "AAC-8h",
+    "headline": "Patients are prepared for imaging procedures as per defined protocols?",
+    "oe_text": "Patients are prepared for imaging procedures as per defined protocols.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Patients are prepared for imaging procedures as per defined protocols."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.8.h and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.8.i",
+    "short": "AAC 8i",
+    "file_stem": "AAC-8i",
+    "headline": "Imaging safety programme including radiation safety is implemented?",
+    "oe_text": "Imaging safety programme including radiation safety is implemented.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Imaging safety programme including radiation safety is implemented."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.8.i and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.9.a",
+    "short": "AAC 9a",
+    "file_stem": "AAC-9a",
+    "headline": "The quality assurance programme for imaging services is implemented?",
+    "oe_text": "The quality assurance programme for imaging services is implemented.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The quality assurance programme for imaging services is implemented."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.9.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.9.b",
+    "short": "AAC 9b",
+    "file_stem": "AAC-9b",
+    "headline": "Imaging equipment is calibrated and maintained as per defined schedule?",
+    "oe_text": "Imaging equipment is calibrated and maintained as per defined schedule.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Imaging equipment is calibrated and maintained as per defined schedule."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.9.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.9.c",
+    "short": "AAC 9c",
+    "file_stem": "AAC-9c",
+    "headline": "Do You Peer-Review CT/MRI Reports ona Defined Sample? cash at?",
+    "oe_text": "Periodic peer review of imaging results is done using appropriate sampling.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "external peer review of imaging results O = :."
+      },
+      {
+        "title": "Sampling defined",
+        "body": "Peer review uses an appropriate defined sample."
+      },
+      {
+        "title": "Findings acted on",
+        "body": "Peer-review findings feed improvement actions."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "NO PEER REVIEW",
+        "body": "Reports are never sampled for peer review."
+      },
+      {
+        "title": "RANDOM ONLY",
+        "body": "There is no defined sampling method or frequency."
+      },
+      {
+        "title": "FINDINGS IGNORED",
+        "body": "Discrepancies are noted but not closed with CAPA."
+      },
+      {
+        "title": "ONLY ONE MODALITY",
+        "body": "Peer review ignores key modalities like CT or MRI."
+      }
+    ],
+    "steps": [
+      "Define monthly peer-review sampling for key modalities.",
+      "Record discrepancies and assign CAPA owners.",
+      "Present peer-review trends in the imaging QA meeting."
+    ]
+  },
+  {
+    "code": "AAC.9.d",
+    "short": "AAC 9d",
+    "file_stem": "AAC-9d",
+    "headline": "Internal quality control activities for imaging are implemented as applicable?",
+    "oe_text": "Internal quality control activities for imaging are implemented as applicable.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Internal quality control activities for imaging are implemented as applicable."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.9.d and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.9.e",
+    "short": "AAC 9e",
+    "file_stem": "AAC-9e",
+    "headline": "Are CAPA Actions Fro! Imaging QA Document and Closed?",
+    "oe_text": "Corrective and preventive actions from imaging QA are documented.",
+    "requirements": [
+      {
+        "title": "CAPA documented",
+        "body": "Corrective and preventive actions from imaging QA are documented."
+      },
+      {
+        "title": "Actions closed",
+        "body": "CAPA items are tracked to closure with evidence."
+      },
+      {
+        "title": "Learning shared",
+        "body": "Preventive actions are communicated to imaging teams."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "QA WITHOUT CAPA",
+        "body": "QA meetings discuss issues without written actions."
+      },
+      {
+        "title": "OPEN FOREVER",
+        "body": "CAPA items stay open with no due date or owner."
+      },
+      {
+        "title": "NO EVIDENCE",
+        "body": "Closure is claimed without supporting records."
+      },
+      {
+        "title": "NOT SHARED",
+        "body": "Only one person knows what changed."
+      }
+    ],
+    "steps": [
+      "Start a simple imaging CAPA register with owners and due dates.",
+      "Close the oldest open actions with evidence this week.",
+      "Share preventive actions in the next imaging huddle."
+    ]
+  },
+  {
+    "code": "AAC.9.f",
+    "short": "AAC 9f",
+    "file_stem": "AAC-9f",
+    "headline": "Radiation safety measures are implemented and monitored?",
+    "oe_text": "Radiation safety measures are implemented and monitored.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Radiation safety measures are implemented and monitored."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.9.f and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.9.g",
+    "short": "AAC 9g",
+    "file_stem": "AAC-9g",
+    "headline": "Are Patients Screened for Risk SAFETY sorte Before Every aa Radiation Exposure? seroma [V?",
+    "oe_text": "Patients are screened for safety and risk before imaging.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "Patients are appropriately screened for safety and risk before imaging that involves radiation or other imaging hazards."
+      },
+      {
+        "title": "Radiation focus",
+        "body": "Screening covers radiation-related and modality-specific risks."
+      },
+      {
+        "title": "Documented check",
+        "body": "Screening is recorded before the study proceeds."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "NO SCREENING FORM",
+        "body": "Studies start without a safety screen."
+      },
+      {
+        "title": "PREGNANCY NOT ASKED",
+        "body": "Pregnancy/possibility checks are skipped."
+      },
+      {
+        "title": "CONTRAINDICATIONS MISSED",
+        "body": "Implants or contrast risks are not checked."
+      },
+      {
+        "title": "PAPER NOT USED",
+        "body": "A form exists but technologists do not complete it."
+      }
+    ],
+    "steps": [
+      "Mandate a pre-imaging safety screen for relevant modalities.",
+      "Train technologists on hard stops when risk flags appear.",
+      "Audit one day of imaging files for completed screens."
+    ]
+  },
+  {
+    "code": "AAC.9.h",
+    "short": "AAC 9h",
+    "file_stem": "AAC-9h",
+    "headline": "Pregnancy status is ascertained where relevant before radiation exposure?",
+    "oe_text": "Pregnancy status is ascertained where relevant before radiation exposure.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Pregnancy status is ascertained where relevant before radiation exposure."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.9.h and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.9.i",
+    "short": "AAC 9i",
+    "file_stem": "AAC-9i",
+    "headline": "Lead aprons and protective devices are available and checked?",
+    "oe_text": "Lead aprons and protective devices are available and checked.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Lead aprons and protective devices are available and checked."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.9.i and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.9.j",
+    "short": "AAC 9j",
+    "file_stem": "AAC-9j",
+    "headline": "Are Imaging and Ancillary Staff Trained in Imaging and Radiation Safety e Imaging and ancillary personnel trained in imaging safety?",
+    "oe_text": "Imaging and ancillary personnel are trained in imaging and radiation safety.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "e Imaging and ancillary personnel trained in imaging safety."
+      },
+      {
+        "title": "Radiation safety",
+        "body": "Training covers radiation-safety measures."
+      },
+      {
+        "title": "Ancillary included",
+        "body": "Non-clinical staff who enter imaging areas are trained on relevant hazards."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "ONLY RADIOGRAPHERS",
+        "body": "Housekeeping and security entering MRI/CT are untrained."
+      },
+      {
+        "title": "NO REFRESHER",
+        "body": "One-time induction with no annual refresh."
+      },
+      {
+        "title": "MRI ZONES UNKNOWN",
+        "body": "Staff cannot explain MRI safety zones."
+      },
+      {
+        "title": "NO ATTENDANCE RECORD",
+        "body": "Training cannot be evidenced."
+      }
+    ],
+    "steps": [
+      "List all staff who enter imaging areas, including ancillary roles.",
+      "Run imaging and radiation safety training with attendance records.",
+      "Post MRI zone and radiation hazard reminders at entrances."
+    ]
+  },
+  {
+    "code": "AAC.9.k",
+    "short": "AAC 9k",
+    "file_stem": "AAC-9k",
+    "headline": "Is Imaging Signage Prominently Displayed Where It Must Be?",
+    "oe_text": "Signage related to imaging and radiation safety is prominently displayed.",
+    "requirements": [
+      {
+        "title": "Safety signage",
+        "body": "Required imaging and radiation safety signage is displayed."
+      },
+      {
+        "title": "Right locations",
+        "body": "Signage is placed at entrances and controlled areas where staff and patients will see it."
+      },
+      {
+        "title": "Kept current",
+        "body": "Damaged or outdated signs are replaced promptly."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "MISSING SIGNS",
+        "body": "Radiation or MRI caution signs are absent."
+      },
+      {
+        "title": "WRONG PLACE",
+        "body": "Signs are inside the room, not at the entrance."
+      },
+      {
+        "title": "FADED OR LOCAL ONLY",
+        "body": "Signage is unreadable or not understood by patients."
+      },
+      {
+        "title": "NO OWNER",
+        "body": "Nobody is responsible for checking signage."
+      }
+    ],
+    "steps": [
+      "Walk the imaging department with a signage checklist.",
+      "Install or replace missing radiation/MRI caution signs.",
+      "Assign a monthly signage check owner."
+    ]
+  },
+  {
+    "code": "AAC.10.a",
+    "short": "AAC 10a",
+    "file_stem": "AAC-10a",
+    "headline": "During all phases of care?",
+    "oe_text": "During all phases of care, there is a qualified individual identified as responsible for the patient.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "During all phases of care, there is a qualified individual identified as responsible for the patient."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.10.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.10.b",
+    "short": "AAC 10b",
+    "file_stem": "AAC-10b",
+    "headline": "Patient care is continuous and multidisciplinary in nature?",
+    "oe_text": "Patient care is continuous and multidisciplinary in nature.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Patient care is continuous and multidisciplinary in nature."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.10.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.10.c",
+    "short": "AAC 10c",
+    "file_stem": "AAC-10c",
+    "headline": "Information about the patient's care is shared among care providers?",
+    "oe_text": "Information about the patient's care is shared among care providers.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Information about the patient's care is shared among care providers."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.10.c and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.10.d",
+    "short": "AAC 10d",
+    "file_stem": "AAC-10d",
+    "headline": "Is Hand-Over Communication a Standardised at ele Every Transition? “oan OD)?",
+    "oe_text": "Standardised hand-over communication is implemented during shifts and transitions of care.",
+    "requirements": [
+      {
+        "title": "Core requirement",
+        "body": "The organisation implements standardised hand-over communication during each staffing shift and at every transition of care."
+      },
+      {
+        "title": "Shift changes",
+        "body": "Hand-over happens during each staffing shift."
+      },
+      {
+        "title": "All transitions",
+        "body": "Transitions of care use the same structured method."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "VERBAL ONLY",
+        "body": "Hand-overs are informal with no structure."
+      },
+      {
+        "title": "MISSED TRANSITIONS",
+        "body": "OT-to-ward or ER-to-IP hand-overs are skipped."
+      },
+      {
+        "title": "NO READ-BACK",
+        "body": "Critical information is not confirmed."
+      },
+      {
+        "title": "NOT DOCUMENTED",
+        "body": "Hand-over content cannot be evidenced."
+      }
+    ],
+    "steps": [
+      "Adopt one structured hand-over format for shifts and transitions.",
+      "Train nursing and medical teams and post the template.",
+      "Observe three hand-overs and close gaps the same day."
+    ]
+  },
+  {
+    "code": "AAC.10.e",
+    "short": "AAC 10e",
+    "file_stem": "AAC-10e",
+    "headline": "The organisation provides laboratory and imaging services commensurate to its scope of services?",
+    "oe_text": "The organisation provides laboratory and imaging services commensurate to its scope of services.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The organisation provides laboratory and imaging services commensurate to its scope of services."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.10.e and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.10.f",
+    "short": "AAC 10f",
+    "file_stem": "AAC-10f",
+    "headline": "Care planning is coordinated across disciplines as required by patient need?",
+    "oe_text": "Care planning is coordinated across disciplines as required by patient need.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Care planning is coordinated across disciplines as required by patient need."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.10.f and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.10.g",
+    "short": "AAC 10g",
+    "file_stem": "AAC-10g",
+    "headline": "Patients and families are informed and involved in care decisions as appropriate?",
+    "oe_text": "Patients and families are informed and involved in care decisions as appropriate.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Patients and families are informed and involved in care decisions as appropriate."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.10.g and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.10.h",
+    "short": "AAC 10h",
+    "file_stem": "AAC-10h",
+    "headline": "The organisation has a process to address patients' rights and education needs during care?",
+    "oe_text": "The organisation has a process to address patients' rights and education needs during care.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The organisation has a process to address patients' rights and education needs during care."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.10.h and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.11.a",
+    "short": "AAC 11a",
+    "file_stem": "AAC-11a",
+    "headline": "Written guidance governs preventive and promotive health services where provided?",
+    "oe_text": "Written guidance governs preventive and promotive health services where provided.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Written guidance governs preventive and promotive health services where provided."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.11.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.11.b",
+    "short": "AAC 11b",
+    "file_stem": "AAC-11b",
+    "headline": "Patients are screened for nutritional needs and provided appropriate intervention?",
+    "oe_text": "Patients are screened for nutritional needs and provided appropriate intervention.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Patients are screened for nutritional needs and provided appropriate intervention."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.11.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.11.c",
+    "short": "AAC 11c",
+    "file_stem": "AAC-11c",
+    "headline": "Is Mental Health Screening Built Into — Care Where It Applies? J ======?",
+    "oe_text": "Mental health screening and appropriate intervention are advised wherever applicable.",
+    "requirements": [
+      {
+        "title": "Screening where applicable",
+        "body": "Mental health screening is done for patients wherever applicable."
+      },
+      {
+        "title": "Intervention pathway",
+        "body": "Positive screens lead to appropriate intervention or referral."
+      },
+      {
+        "title": "Documented advice",
+        "body": "Screening and advice are recorded in the clinical record."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "NEVER SCREENED",
+        "body": "No mental health screen is offered in applicable settings."
+      },
+      {
+        "title": "NO REFERRAL PATH",
+        "body": "Positive screens have nowhere to go."
+      },
+      {
+        "title": "STAFF UNTRAINED",
+        "body": "Teams are unsure when screening applies."
+      },
+      {
+        "title": "NOT RECORDED",
+        "body": "Screens happen informally without documentation."
+      }
+    ],
+    "steps": [
+      "Define where mental health screening applies in your services.",
+      "Add a simple screen and referral path to the relevant pathways.",
+      "Train teams and audit five applicable records this week."
+    ]
+  },
+  {
+    "code": "AAC.11.d",
+    "short": "AAC 11d",
+    "file_stem": "AAC-11d",
+    "headline": "Pain assessment and management are carried out in a standardised manner?",
+    "oe_text": "Pain assessment and management are carried out in a standardised manner.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Pain assessment and management are carried out in a standardised manner."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.11.d and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.11.e",
+    "short": "AAC 11e",
+    "file_stem": "AAC-11e",
+    "headline": "Fall-risk assessment and preventive measures are implemented for at-risk patients?",
+    "oe_text": "Fall-risk assessment and preventive measures are implemented for at-risk patients.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Fall-risk assessment and preventive measures are implemented for at-risk patients."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.11.e and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.12.a",
+    "short": "AAC 12a",
+    "file_stem": "AAC-12a",
+    "headline": "The patient's discharge process is planned in consultation with the patient and/or family?",
+    "oe_text": "The patient's discharge process is planned in consultation with the patient and/or family.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The patient's discharge process is planned in consultation with the patient and/or family."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.12.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.12.b",
+    "short": "AAC 12b",
+    "file_stem": "AAC-12b",
+    "headline": "The discharge process is coordinated to ensure continuity of care?",
+    "oe_text": "The discharge process is coordinated to ensure continuity of care.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The discharge process is coordinated to ensure continuity of care."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.12.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.12.c",
+    "short": "AAC 12c",
+    "file_stem": "AAC-12c",
+    "headline": "Patients and families are educated about post-discharge care and follow-up?",
+    "oe_text": "Patients and families are educated about post-discharge care and follow-up.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Patients and families are educated about post-discharge care and follow-up."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.12.c and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.12.d",
+    "short": "AAC 12d",
+    "file_stem": "AAC-12d",
+    "headline": "Medications to be continued after discharge are clearly communicated?",
+    "oe_text": "Medications to be continued after discharge are clearly communicated.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Medications to be continued after discharge are clearly communicated."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.12.d and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.12.e",
+    "short": "AAC 12e",
+    "file_stem": "AAC-12e",
+    "headline": "Follow-up advice and warning signs are explained at discharge?",
+    "oe_text": "Follow-up advice and warning signs are explained at discharge.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Follow-up advice and warning signs are explained at discharge."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.12.e and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.12.f",
+    "short": "AAC 12f",
+    "file_stem": "AAC-12f",
+    "headline": "Medico-legal and special-category discharges follow written guidance?",
+    "oe_text": "Medico-legal and special-category discharges follow written guidance.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Medico-legal and special-category discharges follow written guidance."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.12.f and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.12.g",
+    "short": "AAC 12g",
+    "file_stem": "AAC-12g",
+    "headline": "Discharge against medical advice is managed as per written guidance?",
+    "oe_text": "Discharge against medical advice is managed as per written guidance.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "Discharge against medical advice is managed as per written guidance."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.12.g and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.13.a",
+    "short": "AAC 13a",
+    "file_stem": "AAC-13a",
+    "headline": "Is the discharge summary handed over at discharge — not later?",
+    "oe_text": "A discharge summary is provided to the patients at the time of discharge.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "A discharge summary is provided to the patients at the time of discharge."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.13.a and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.13.b",
+    "short": "AAC 13b",
+    "file_stem": "AAC-13b",
+    "headline": "Is the discharge summary handed over at discharge — not later?",
+    "oe_text": "The discharge summary contains relevant clinical information for continuity of care.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The discharge summary contains relevant clinical information for continuity of care."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.13.b and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.13.c",
+    "short": "AAC 13c",
+    "file_stem": "AAC-13c",
+    "headline": "Is the discharge summary handed over at discharge — not later?",
+    "oe_text": "The discharge summary is prepared by a competent doctor.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "The discharge summary is prepared by a competent doctor."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.13.c and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.13.d",
+    "short": "AAC 13d",
+    "file_stem": "AAC-13d",
+    "headline": "Is the discharge summary handed over at discharge — not later?",
+    "oe_text": "A copy of the discharge summary is retained in the medical record.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "A copy of the discharge summary is retained in the medical record."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.13.d and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  },
+  {
+    "code": "AAC.13.e",
+    "short": "AAC 13e",
+    "file_stem": "AAC-13e",
+    "headline": "In case of death?",
+    "oe_text": "In case of death, an appropriate summary of the case is provided.",
+    "requirements": [
+      {
+        "title": "Key point 1",
+        "body": "In case of death, an appropriate summary of the case is provided."
+      },
+      {
+        "title": "Key point 2",
+        "body": "Document the process, train staff, and verify with a spot check."
+      },
+      {
+        "title": "Key point 3",
+        "body": "Document the process, train staff, and verify with a spot check."
+      }
+    ],
+    "gaps": [
+      {
+        "title": "POLICY ON PAPER ONLY",
+        "body": "A document exists, but day-to-day practice does not follow it."
+      },
+      {
+        "title": "STAFF CAN'T EXPLAIN",
+        "body": "Frontline teams cannot describe the required steps to an assessor."
+      },
+      {
+        "title": "RECORDS INCOMPLETE",
+        "body": "Evidence is missing, late, or not attributable to a named owner."
+      },
+      {
+        "title": "NO MONITORING LOOP",
+        "body": "Gaps are not tracked, trending, or closed with corrective action."
+      }
+    ],
+    "steps": [
+      "Assign a process owner for AAC.13.e and review practice against the OE.",
+      "List gaps with owners and due dates; fix the highest clinical risk first.",
+      "Brief involved teams this week and verify with a quick spot audit."
+    ]
+  }
+]
