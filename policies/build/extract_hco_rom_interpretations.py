@@ -117,6 +117,9 @@ def tidy(note: str, next_oe_text: str | None = None) -> str:
         "day-to- day": "day-to-day",
         "il CORE ty ® Leaders": "Leaders",
         "il CORE ty Leaders": "Leaders",
+        "il CORE ty.": "",
+        "il CORE ty": "",
+        "ensure ~ continuity": "ensure continuity",
         "Documented i z i Excellence -~_ e. f. operational": "Documented operational",
         "committee.For": "committee. For",
         "values- The": "values. The",
@@ -156,6 +159,8 @@ def tidy(note: str, next_oe_text: str | None = None) -> str:
     note = re.sub(r"(?i)Documented\s+.{0,80}?operational plans", "Documented operational plans", note)
     note = re.sub(r"(?i)\s*z\s*z\s*.{0,50}TM core\s*\*?\s*", " ", note)
     note = re.sub(r"^\s*t implies", "It implies", note)
+    note = re.sub(r"(?i)\s*il\s+CORE\s+ty\.?\s*$", "", note)
+    note = note.replace("ensure ~ continuity", "ensure continuity")
     note = re.sub(r"\s+", " ", note).strip(" .*=-_")
     if note and note[-1] not in ".;:":
         note += "."
@@ -194,6 +199,8 @@ def extract(ocr_text: str, oes: list[dict], titles: list[str] | None = None) -> 
         chunk = re.sub(r"(?i)\s*Commitment\s*®.*$", "", chunk)
         chunk = re.sub(r"(?i)\s*a\)\s*Achievement\.?$", "", chunk)
         chunk = re.sub(r"\s*=\]\.?\s*$", "", chunk)
+        chunk = re.sub(r"(?i)\s*il\s+CORE\s+ty\.?\s*$", "", chunk)
+        chunk = chunk.replace("ensure ~ continuity", "ensure continuity")
         chunk = chunk.strip(" .")
         if chunk and chunk[-1] not in ".;:":
             chunk += "."

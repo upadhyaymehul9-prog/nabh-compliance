@@ -130,7 +130,7 @@ This objective element is asterisked in the official Standards PDF — documenta
 
 The framework is written, dated and owned by the «Medical Superintendent» with the «Quality Coordinator». ROM.1.f is support of that framework; this element is that the framework exists.
 
-Method note (from guidebook interpretation): Clinical governance framework shall consist of patient safety, medication safety, clinical audits, clinical pathways, clinical indicators, education and research. il CORE ty.
+Method note (from guidebook interpretation): Clinical governance framework shall consist of patient safety, medication safety, clinical audits, clinical pathways, clinical indicators, education and research.
 
 ### 5.8 Those responsible for governance support the ethical management frame...
 

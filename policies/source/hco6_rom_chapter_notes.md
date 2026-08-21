@@ -74,6 +74,10 @@ ethics, ESG, leadership, professionalism — no procedure-start gate).
 - **ROM.6.b** body wrap “risk- reduction”; **ROM.6.c** “risk- management”.
   Inventory keeps the joined body form.
 - Official chapter title is **Responsibilities** (plural), not “Responsibility”.
+- **ROM.1.g** Guidebook OCR bleed `il CORE ty.` (chrome from the next page)
+  stripped after approval — interpretation now ends at “education and research.”
+- **ROM.4.b** OCR tilde `ensure ~ continuity` stripped after approval —
+  now `ensure continuity`.
 
 ### Prepared by
 
