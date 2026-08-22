@@ -934,7 +934,7 @@ Words marked {D('like this')} are defaults. A blank marked {BLANK} must be fille
 
 {hco_oe_count_clause(len(oes))}
 
-{hco_related_duties_clause(own_topic, related_chapters)} Spell out abbreviations on first use in training materials."""
+{hco_related_duties_clause(own_topic, related_chapters)}"""
 
     policy_statement = f"""{HOSPITAL} implements COP.{n} so that {std_title[0].lower() + std_title[1:] if std_title else "care is safe and uniform"}.
 
@@ -1028,7 +1028,7 @@ Do not touch AAC."""
             {
                 "version": "2.0",
                 "date": "20-08-2026",
-                "description": f"HCO Full 6th Edition COP.{n} v2 draft from official Standards PDF + guidebook OCR; draft_label={DRAFT_LABEL}.",
+                "description": f"HCO Full 6th Edition COP.{n} v2 draft from official Standards PDF + guidebook OCR.",
             }
         ],
         "status": "draft",

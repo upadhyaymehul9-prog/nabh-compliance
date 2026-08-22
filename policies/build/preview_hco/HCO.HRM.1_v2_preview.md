@@ -43,7 +43,7 @@ This policy applies to human resources, nursing, medical, and departmental leade
 
 This policy covers all 7 requirements under this standard, listed in detail below.
 
-This policy covers human resource planning and governance specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, hospital governance, or facility safety — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).
+This policy covers human resource planning and governance specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, hospital governance, or facility safety — are covered in the hospital's other policies, not repeated here.
 
 ## 3. Policy standards
 
@@ -172,7 +172,7 @@ Signature: ___________________________
 ## 9. References
 
 - National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Human Resource Management, standard HRM.1. Official portal PDF (OE text, counts, levels, asterisks).
-- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — HRM.1 interpretations (source PDF has no text layer; transcribed and verified against rendered page images — policies/source/hco6_hrm_guidebook_ocr.txt).
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — HRM.1 interpretations (source PDF has no text layer; transcribed and verified against rendered page images).
 - Internal documents of Preview Hospital: workforce plan, recruitment and induction records, training records, appraisal records, disciplinary and grievance registers, staff health records, personal files, and credentialing/privileging files named for HRM.1.
 
 ## 10. Distribution

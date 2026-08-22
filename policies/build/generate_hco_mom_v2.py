@@ -577,7 +577,7 @@ Words marked {D('like this')} are defaults. A blank marked {BLANK} must be fille
 
 {hco_oe_count_clause(len(oes))}
 
-{hco_related_duties_clause(own_topic, related_chapters)} Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 {GUIDEBOOK_MD5})."""
+{hco_related_duties_clause(own_topic, related_chapters)}"""
 
     lead = (std_title[0].lower() + std_title[1:]).rstrip(".") if std_title else "medication management is safe"
     policy_statement = f"""{HOSPITAL} implements MOM.{n} so that {lead}.
@@ -631,7 +631,7 @@ Signature: ___________________________
 (One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)"""
 
     references = f"""- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Management of Medication, standard MOM.{n}. Official portal PDF (OE text, counts, levels, asterisks).
-- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — MOM.{n} interpretations (source PDF md5 {GUIDEBOOK_MD5}; OCR policies/source/hco6_mom_guidebook_ocr.txt).
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — MOM.{n} interpretations (source PDF md5 {GUIDEBOOK_MD5}).
 - Internal documents of {HOSPITAL}: Medication Management Manual, formulary, high-risk and emergency-medication lists, registers and incident forms named for MOM.{n}."""
 
     abbreviations = f"""ADR — adverse drug reaction
@@ -685,7 +685,7 @@ Do not touch AAC or COP."""
             {
                 "version": "2.0",
                 "date": "21-08-2026",
-                "description": f"HCO Full 6th Edition MOM.{n} v2 draft: portal PDF OE data + Guidebook interpretations (md5 {GUIDEBOOK_MD5}); draft_label={DRAFT_LABEL}.",
+                "description": f"HCO Full 6th Edition MOM.{n} v2 draft: portal PDF OE data + Guidebook interpretations.",
             }
         ],
         "status": "draft",

@@ -624,7 +624,7 @@ Words marked {D('like this')} are defaults. A blank marked {BLANK} must be fille
 
 {hco_oe_count_clause(len(oes))}
 
-{hco_related_duties_clause(own_topic, related_chapters)} Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md)."""
+{hco_related_duties_clause(own_topic, related_chapters)}"""
 
     lead = (std_title[0].lower() + std_title[1:]).rstrip(".") if std_title else "human resource management requirements are implemented"
     policy_statement = f"""{HOSPITAL} implements HRM.{n} so that {lead}.
@@ -674,7 +674,7 @@ Signature: ___________________________
 (One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)"""
 
     references = f"""- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Human Resource Management, standard HRM.{n}. Official portal PDF (OE text, counts, levels, asterisks).
-- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — HRM.{n} interpretations (source PDF has no text layer; transcribed and verified against rendered page images — policies/source/hco6_hrm_guidebook_ocr.txt).
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — HRM.{n} interpretations (source PDF has no text layer; transcribed and verified against rendered page images).
 - Internal documents of {HOSPITAL}: workforce plan, recruitment and induction records, training records, appraisal records, disciplinary and grievance registers, staff health records, personal files, and credentialing/privileging files named for HRM.{n}."""
 
     abbreviations = f"""ACLS — Advanced Cardiac Life Support
@@ -731,7 +731,7 @@ Not the same as the already-deployed SHCO 3rd Edition HRM chapter (build_hrm1_v2
             {
                 "version": "2.0",
                 "date": "21-08-2026",
-                "description": f"HCO Full 6th Edition HRM.{n} v2 draft: portal PDF OE data + Guidebook interpretations (verified visual transcription, no text layer in source PDF); draft_label={DRAFT_LABEL}.",
+                "description": f"HCO Full 6th Edition HRM.{n} v2 draft: portal PDF OE data + Guidebook interpretations (verified visual transcription, no text layer in source PDF).",
             }
         ],
         "status": "draft",

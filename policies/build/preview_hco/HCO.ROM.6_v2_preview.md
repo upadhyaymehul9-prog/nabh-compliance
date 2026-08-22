@@ -43,7 +43,7 @@ This policy applies to those responsible for governance, the person heading the 
 
 This policy covers all 6 requirements under this standard, listed in detail below.
 
-This policy covers patient safety, risk management and outsourced services specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, or quality and safety monitoring — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+This policy covers patient safety, risk management and outsourced services specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, or quality and safety monitoring — are covered in the hospital's other policies, not repeated here.
 
 ## 3. Policy standards
 
@@ -178,7 +178,7 @@ Signature: ___________________________
 ## 10. References
 
 - National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Responsibilities of Management, standard ROM.6. Official portal PDF (OE text, counts, levels, asterisks).
-- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — ROM.6 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_rom_guidebook_ocr.txt).
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — ROM.6 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
 - Internal documents of Preview Hospital: governance role document, ethical-management framework, ESG / social-responsibility programme, applicable-legislation register, risk-management plan, outsourcing agreements named for ROM.6.
 
 ## 11. Distribution
