@@ -1,7 +1,7 @@
-# Medical Equipment Management
+# Policy on Medical Equipment Management
 **Preview Hospital**
 
-*HCO Full Accreditation, 6th Edition — FMS.5.*
+*HCO Full Accreditation, 6th Edition — medical equipment management.*
 
 ## Document control
 
@@ -27,13 +27,9 @@ The organisation has a programme for medical equipment management.
 
 ## 1. Purpose
 
-This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard FMS.5: The organisation has a programme for medical equipment management.
+This policy defines how Preview Hospital plans medical-equipment procurement, inventories and identifies every device, implements operational and maintenance plans, keeps calibration current, ensures only qualified personnel operate and maintain equipment, monitors adverse events and recalls, and guides replacement and disposal.
 
-This policy covers all 8 requirements under this standard, listed in detail below.
-
-Chapter intent (official Standards PDF): The standards guide the provision of a safe and secure environment for patients, their families, staff and visitors. The organisation attends to the facility, equipment, and internal physical environment for improving patient safety and quality of services by consistently addressing issues that may arise out of the same. The organisation does this through proactive risk analysis, safety rounds, training of staff on the enhancement of safety and management of disasters. To ensure this, the organisation conducts regular facility inspection rounds and takes the appropriate action to ensure safety. The organisation provides for safe water, electricity, medical gases and vacuum systems. The organisation has a programme for medical and utility equipment management. The organisation plans for fire and non-fire emergencies within the facilities. The organisation is a no-smoking area. The organisation safely manages hazardous materials. The organisation works towards measures on being energy efficient.
-
-This policy covers medical equipment management specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards stay with their own policies.
+This policy covers medical equipment management specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards have their own policies too.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -41,28 +37,24 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to engineering, biomedical, nursing and departmental leaders, and staff who run facilities, utilities, medical gases, fire and non-fire emergencies at Preview Hospital, including the «Engineering In-Charge», the «Medical Superintendent», departmental leaders and the Quality Coordinator.
 
-This policy covers all 8 requirements under this standard, listed in detail below.
-
-This policy covers medical equipment management specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+This policy covers medical equipment management specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards have their own policies too.
 
 ## 3. Policy standards
 
-Preview Hospital implements FMS.5 so that the organisation has a programme for medical equipment management.
+Preview Hospital plans medical equipment against services and the strategic plan. Every device is inventoried, classified by risk and given a unique identifier. Implemented operational and maintenance plans cover operator training, daily checks and breakdown response. Calibration is current before commissioning and after every repair. Operators and maintainers are qualified. Adverse events and recalls are monitored and acted on without delay. Disposal follows written guidance.
 
-Staff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).
+Staff follow written guidance and keep the records listed in the traceability table.
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: The organisation plans for medical equipment in accordance with its services and strategic plan.
-2. Do not skip: Medical equipment is inventoried and proper logs are maintained as required.
-3. Do not skip: The documented operational and maintenance (preventive and breakdown) plan for medical equipment is...
-4. Do not skip: Medical equipment is periodically inspected and calibrated for their proper functioning.
-5. Do not skip: Qualified and trained personnel operate and maintain medical equipment.
-6. Do not skip: Written guidance supports medical equipment replacement and disposal.
-7. Do not skip: There is monitoring of medical equipment and medical devices related to adverse events, and compliance hazard...
-8. Do not skip: Downtime for critical equipment breakdown is monitored from reporting to inspection and implementation of...
-9. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
-10. Staff who see a FMS.5 rule broken report it the same shift to the «Engineering In-Charge» or the «Medical Superintendent».
+1. Do not put medical equipment into clinical use without a unique identifier and an entry in the medical-equipment inventory.
+2. Do not use medical equipment that does not have an implemented, documented operational and maintenance plan.
+3. Do not use medical equipment that measures patient parameters past its scheduled calibration due date; remove it from clinical use until calibration is complete.
+4. Do not allow an operator to use a medical device they have not been trained for; do not allow maintenance by personnel who are not a biomedical or instrumentation engineer or technologist with relevant training and experience.
+5. Do not continue clinical use of any medical device subject to an open manufacturer or regulatory recall or hazard notice.
+6. Do not condemn or dispose of medical equipment without following the written replacement-and-disposal guidance.
+7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
+8. Staff who see a FMS.5 rule broken report it the same shift to the Engineering In-Charge or the Medical Superintendent.
 
 ## 5. What we do
 
@@ -72,27 +64,17 @@ The organisation plans medical equipment to match services and the strategic pla
 
 The «Engineering In-Charge» holds the current medical-equipment plan with the «Medical Superintendent».
 
-Method note (from guidebook interpretation): This shall also take into consideration future requirements. The medical equipment shall be appropriate to its scope of services. A good reference for minimum medical equipment is the IPHS guideline. Medical equipment is selected, rented, updated or upgraded by a collaborative process. Collaborative process implies that during equipment selection, there is involvement of end- user, management, finance, engineering and biomedical departments. The organisation could define differential financial clearance in accordance with the policy. For example, the purchase of BP apparatus can be made by the departmental head.
-
 ### 5.2 Medical equipment is inventoried and proper logs are maintained as...
 
 Medical equipment is inventoried and logs are maintained. Items are classified by medical-device risk. Each has a unique identifier, including rental and demonstration items. Factory test and conformance certificates are kept.
 
-An in-use device with no identity is incomplete under this element.
-
-Method note (from guidebook interpretation): Medical equipment and medical devices will be classified as per the risk defined by medical devices regulations. A unique identifier is provided for each equipment. This includes equipment on a rental basis and equipment kept for demonstration purpose. The relevant quality conformance certificates/marks along with manufacturer factory test certificate need to be retained as part of the documentation for all equipment.
+An in-use device with no identity does not satisfy this element.
 
 ### 5.3 The documented operational and maintenance (preventive and breakdown)...
 
 The documented operational and maintenance (preventive and breakdown) plan for medical equipment is implemented: operator training, daily operating checks, preventive-maintenance tracker, and breakdown response including nights and weekends.
 
-Using equipment with no implemented plan is a stop-work trigger (section 6). This is a CORE asterisked element.
-
-Method note (from guidebook interpretation): The operator is trained in handling the medical equipment. The operational plan must assist the operator in operating the medical equipment daily. The original equipment manual is a good source for this. In case this is not available, the organisation shall develop the operational plan for the concerned equipment. The operational plan of medical equipment includes evaluation of safe usage of equipment like validation with respect to the instruction manual, user training on equipment, operational check of equipment and verification of set parameter. The maintenance plan includes periodic checks, execution of timely preventive maintenance, and response to any breakdown issues including at i night and weekends. There shall be a planned preventive maintenance tracker.
-
-This objective element is asterisked in the official Standards PDF — documentation of the process is required.
-
-This is a CORE objective element — non-compliance is not acceptable for accreditation.
+Using equipment with no implemented plan is a stop-work trigger (section 6).
 
 ### 5.4 Medical equipment is periodically inspected and calibrated for their...
 
@@ -100,39 +82,25 @@ Medical equipment that measures is inspected and calibrated on a weekly, monthly
 
 A measuring device past its calibration due date is a stop-work trigger (section 6).
 
-Method note (from guidebook interpretation): The organisation has weekly/monthly/annual schedules of inspection and calibration of equipment, which involve measurement, appropriately. The organisation either calibrates the equipment in-house or outsources, maintaining traceability to national or international or manufacturer's guidelines / standards. The organisation shall ensure that calibration and conformance testing of the equipment has been done before commissioning. Medical equipment is re-calibrated after its repairs/breakdown.
-
 ### 5.5 Qualified and trained personnel operate and maintain medical equipment
 
 Qualified and trained personnel operate and maintain medical equipment. Operators are trained for the devices they use (for example blood-gas analyser, electrocardiograph, syringe pump). Maintenance is by a biomedical engineer or technologist, or an instrumentation engineer or technologist, with relevant training and experience.
 
-Method note (from guidebook interpretation): The operator of the medical equipment is trained to use medical equipment safely and effectively. For example Nurse trained to use Blood gas analyser, ECG machine and syringe pump etc. Maintenance of medical equipment shall be done by a bio-medical engineer/technologist or instrumentation engineer/technologist with relevant training and experience.
-
 ### 5.6 Written guidance supports medical equipment replacement and disposal
 
-Written guidance supports medical equipment replacement and disposal. Condemnation is systematic and recorded. This is an asterisked element.
-
-Method note (from guidebook interpretation): The organisation shall plan for this keeping in mind the strategic plans, upgrade/update path and the equipment log. The organisation shall condemn (dispose of) equipment in a systematic manner.
-
-This objective element is asterisked in the official Standards PDF — documentation of the process is required.
+Written guidance supports medical equipment replacement and disposal. Condemnation is systematic and recorded.
 
 ### 5.7 There is monitoring of medical equipment and medical devices related to...
 
 Medical equipment and devices are monitored for adverse events. Hazard notices and recalls from the manufacturer or regulator are acted on at once; the device is not returned to clinical use until the issue is closed. The Guidebook names Gazette of India GSR 78(E) 2023 / Medical Devices Rules 2023 and participation in the Materiovigilance Programme of India. MOM.10 remains the home of medication-supply recall; this element is equipment and devices.
 
-An open recall left in use is a stop-work trigger (section 6). This is an asterisked element.
-
-Method note (from guidebook interpretation): The monitoring shall include medical device-related adverse events. All statutory requirements and procedures shall be adhered to (Gazette of India GSR 78(E) 2023. Medical device rules 2023). The organisation shall participate in Materio-vigilance programme of India (MvPI). Recalls are based on letters/hazard notice issued from the manufacturer and or regulatory authorities. This may not be a routine occurrence, but whenever hospital authorities receive or become aware of such recalls, it shall be immediately acted upon, and the said medical equipment and the medical device shall not be put into further clinical use till the issue is resolved. Refer to MOM.10.e.
-
-This objective element is asterisked in the official Standards PDF — documentation of the process is required.
+An open recall left in use is a stop-work trigger (section 6).
 
 ### 5.8 Downtime for critical equipment breakdown is monitored from reporting...
 
-Downtime for critical medical-equipment breakdown is monitored from reporting to inspection and corrective action. At a minimum the critical list includes ventilators, X-ray, magnetic resonance imaging, catheterisation laboratory, computed tomography, anaesthesia machines, monitors, laboratory and ultrasound — especially where there is no alternative. The complaint register works as in FMS.4.g.
+Downtime for critical medical-equipment breakdown is monitored from reporting to inspection and corrective action. At a minimum the critical list includes ventilators, X-ray, magnetic resonance imaging, catheterisation laboratory, computed tomography, anaesthesia machines, monitors, laboratory and ultrasound — especially where there is no alternative. A complaint register records receipt, job allotment and user-ratified completion.
 
-Portal wording uses “breakdown” (singular); FMS.4.g uses “breakdowns”. Each is kept as printed.
-
-Method note (from guidebook interpretation): The organisation shall define critical medical equipment. At a minimum, this shall include ventilators, X- Ray, MRI, Cath lab, CT scan, anaesthesia machines, monitors, laboratory, ultrasound etc. and especially where there is no alternative available. A complaint attendance register is to be maintained (physical or electronic) to indicate the date and time of receipt of the complaint, allotment of job and completion of the job. Completion of the job shall always be ratified by the user department. The start of downtime shall be the time when the complaint was lodged and the end of the downtime shall be the time at which completion of the job was ratified by the user department.
+Start of downtime is complaint time; end is user-ratified completion.
 
 ## 6. Stop-work authority
 
@@ -175,7 +143,7 @@ Staff covered by this policy are trained at induction and «once a year» after 
 
 Staff acknowledgement
 
-I have read this Medical Equipment Management policy of Preview Hospital. I will follow the processes described.
+I have read the Policy on Medical Equipment Management of Preview Hospital. I will follow the processes described.
 
 Name: ___________________________    Designation: ___________________________
 
@@ -187,8 +155,8 @@ Signature: ___________________________
 
 ## 10. References
 
-- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.5. Official portal PDF (OE text, counts, levels, asterisks).
-- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.5 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_fms_guidebook_ocr.txt).
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.5.
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.5 interpretations.
 - Internal documents of Preview Hospital: facility-inspection records, as-built drawings, utility and medical-equipment logs, medical-gas records, fire and non-fire plans named for FMS.5.
 
 ## 11. Distribution
@@ -218,14 +186,14 @@ This table is an index. It is not how the policy is organised.
 
 | OE | Requirement | Where this policy addresses it | Responsible |
 | --- | --- | --- | --- |
-| FMS.5.a | The organisation plans for medical equipment in accordance with its services and strategic plan. | Section 3; 5.1; Section 6 Stop-work | Engineering In-Charge |
-| FMS.5.b | Medical equipment is inventoried and proper logs are maintained as required. | Section 3; 5.2; Section 6 Stop-work | Engineering In-Charge |
+| FMS.5.a | The organisation plans for medical equipment in accordance with its services and strategic plan. | Section 3; 5.1 | Engineering In-Charge |
+| FMS.5.b | Medical equipment is inventoried and proper logs are maintained as required. | Section 3; 5.2 | Engineering In-Charge |
 | FMS.5.c | The documented operational and maintenance (preventive and breakdown) plan for medical equipment is implemented. | Section 3; 5.3; Section 6 Stop-work | Engineering In-Charge |
 | FMS.5.d | Medical equipment is periodically inspected and calibrated for their proper functioning. | Section 3; 5.4; Section 6 Stop-work | Engineering In-Charge |
-| FMS.5.e | Qualified and trained personnel operate and maintain medical equipment. | Section 3; 5.5; Section 6 Stop-work | Engineering In-Charge |
-| FMS.5.f | Written guidance supports medical equipment replacement and disposal. | Section 3; 5.6; Section 6 Stop-work | Engineering In-Charge |
+| FMS.5.e | Qualified and trained personnel operate and maintain medical equipment. | Section 3; 5.5 | Engineering In-Charge |
+| FMS.5.f | Written guidance supports medical equipment replacement and disposal. | Section 3; 5.6 | Engineering In-Charge |
 | FMS.5.g | There is monitoring of medical equipment and medical devices related to adverse events, and compliance hazard notices on recalls. | Section 3; 5.7; Section 6 Stop-work | Engineering In-Charge |
-| FMS.5.h | Downtime for critical equipment breakdown is monitored from reporting to inspection and implementation of corrective actions. | Section 3; 5.8; Section 6 Stop-work | Engineering In-Charge |
+| FMS.5.h | Downtime for critical equipment breakdown is monitored from reporting to inspection and implementation of corrective actions. | Section 3; 5.8 | Engineering In-Charge |
 
 ## 14. Required Records / Evidence Checklist
 

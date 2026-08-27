@@ -1,7 +1,7 @@
-# Planned Facilities and Environment-Friendly Measures
+# Policy on Planned Facilities and Environment-Friendly Measures
 **Preview Hospital**
 
-*HCO Full Accreditation, 6th Edition — FMS.2.*
+*HCO Full Accreditation, 6th Edition — planned facilities and environment-friendly measures.*
 
 ## Document control
 
@@ -27,13 +27,9 @@ The organisation’s environment and facilities operate in a planned manner and 
 
 ## 1. Purpose
 
-This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard FMS.2: The organisation’s environment and facilities operate in a planned manner and promotes environment-friendly measures.
+This policy defines how Preview Hospital ensures facilities and space match services, keeps as-built drawings current, maintains comprehensible signage, provides potable water and electricity around the clock, and provides and regularly tests backup sources for both.
 
-This policy covers all 6 requirements under this standard, listed in detail below.
-
-Chapter intent (official Standards PDF): The standards guide the provision of a safe and secure environment for patients, their families, staff and visitors. The organisation attends to the facility, equipment, and internal physical environment for improving patient safety and quality of services by consistently addressing issues that may arise out of the same. The organisation does this through proactive risk analysis, safety rounds, training of staff on the enhancement of safety and management of disasters. To ensure this, the organisation conducts regular facility inspection rounds and takes the appropriate action to ensure safety. The organisation provides for safe water, electricity, medical gases and vacuum systems. The organisation has a programme for medical and utility equipment management. The organisation plans for fire and non-fire emergencies within the facilities. The organisation is a no-smoking area. The organisation safely manages hazardous materials. The organisation works towards measures on being energy efficient.
-
-This policy covers planned facilities and environment-friendly measures specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards stay with their own policies.
+This policy covers planned facilities and environment-friendly measures specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards have their own policies too.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -41,26 +37,24 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to engineering, biomedical, nursing and departmental leaders, and staff who run facilities, utilities, medical gases, fire and non-fire emergencies at Preview Hospital, including the «Engineering In-Charge», the «Medical Superintendent», departmental leaders and the Quality Coordinator.
 
-This policy covers all 6 requirements under this standard, listed in detail below.
-
-This policy covers planned facilities and environment-friendly measures specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+This policy covers planned facilities and environment-friendly measures specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards have their own policies too.
 
 ## 3. Policy standards
 
-Preview Hospital implements FMS.2 so that the organisation’s environment and facilities operate in a planned manner and promotes environment-friendly measures.
+Facilities and space at Preview Hospital match the services offered. As-built and updated drawings are maintained by a named custodian. Internal and external signage is in a form patients, families and the community can understand, and meets statutory posting requirements. Potable water and electricity are available round the clock with tested backup sources for any failure.
 
-Staff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).
+Staff follow written guidance and keep the records listed in the traceability table.
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Facilities and space provisions are appropriate to the scope of services.
-2. Do not skip: As built and updated drawings are maintained as per statutory requirements.
-3. Do not skip: There are internal and external sign postings in the organisation in a manner understood by the patient...
-4. Do not skip: Potable water and electricity are available round the clock.
-5. Do not skip: Alternate sources for electricity and water are provided as a backup for any failure / shortage.
-6. Do not skip: The organisation tests the functioning of these alternate sources at a predefined frequency.
+1. Do not operate a clinical service without matching facility space; any service without a corresponding documented space is not available from this hospital for accreditation purposes.
+2. Do not let the as-built and updated drawing set become incomplete or without a named custodian; a drawing that does not reflect the current facility is not an as-built drawing.
+3. Do not allow signage that cannot be understood by patients, families or the community, or that does not meet applicable statutory posting requirements.
+4. Do not leave a care area without potable water or electricity; test potable-water quality biochemically at least once in three months and microbiologically at least once a month, collected at the tap.
+5. Do not operate without identified backup electricity and water sources available for every critical area.
+6. Do not count an alternate source as available if it has not been tested at the defined frequency with documented results.
 7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
-8. Staff who see a FMS.2 rule broken report it the same shift to the «Engineering In-Charge» or the «Medical Superintendent».
+8. Staff who see a FMS.2 rule broken report it the same shift to the Engineering In-Charge or the Medical Superintendent.
 
 ## 5. What we do
 
@@ -70,35 +64,23 @@ Facilities and space provisions match the scope of services this hospital actual
 
 The «Engineering In-Charge» and «Medical Superintendent» keep the current space-vs-services map. A service listed without a matching space is escalated.
 
-Method note (from guidebook interpretation): The basis of the appropriateness of facilities and space provisions will be as per the national/international guidelines. For example, regulatory requirements, the directive of Government agencies like AERB guidelines. The organisation endeavours to upgrade its physical infrastructure to meet national and international guidelines. The infrastructure and equipment shall be upgraded, commensurate with the scope and complexities of functioning.
-
 ### 5.2 As built and updated drawings are maintained as per statutory...
 
 As-built and updated drawings are maintained as required by the applicable registering authority for this site: site layout, floor plans, floor-wise fire-evacuation plans, and separate civil, electrical, extra-low-voltage, plumbing, heating-ventilation-air-conditioning, piped medical-gas and information-technology drawings.
 
 A named person under the «Engineering In-Charge» holds the current set. This element does not import a named Act as a checklist for the whole standard.
 
-Method note (from guidebook interpretation): A designated person maintains as built and updated site layout, floor drawings, floor wise fire evacuation plans, separate civil, electrical, extra low voltage (ELV), plumbing, HVAC piped medical gas drawings and IT network.
-
 ### 5.3 There are internal and external sign postings in the organisation in a...
 
 Internal and external sign posting is in a manner patients, families and the community understand (language and/or pictorial; bilingual where this hospital defines). Signs meet applicable statutory posting rules for this site.
 
-The «Engineering In-Charge» walks the signs «quarterly». This is a CORE element.
-
-Method note (from guidebook interpretation): Manner implies language and/or pictorial signs. Signage could be bilingual and shall meet statutory requirements.
-
-This is a CORE objective element — non-compliance is not acceptable for accreditation.
+The «Engineering In-Charge» walks the signs «quarterly».
 
 ### 5.4 Potable water and electricity are available round the clock
 
-Potable water and electricity are available round the clock. Potable-water quality is tested at the tap: biochemical at least once in three months and microbiological at least once a month, against the current IS 10500. Dialysis reverse-osmosis inlet water is tested for endotoxin «monthly» where dialysis is in scope.
+Potable water and electricity are available round the clock. Potable-water quality is tested at the tap: biochemical at least once in three months and microbiological at least once a month, against the current IS 10500. Dialysis reverse-osmosis inlet water is tested for endotoxin every month where dialysis is in scope.
 
-A care area without water or power is a stop-work trigger (section 6). This is a CORE element.
-
-Method note (from guidebook interpretation): The organisation shall make arrangements for the supply of adequate potable water and electricity. Potable water quality is monitored and documented. Water testing includes biochemical (once in three months) and microbiological analysis (once in a month). Water shall be collected at the user end (tap). For water quality, refer to the current version IS 10500. In case of an RO plant of the dialysis unit, the water from the inlet port of dialysis machine shall be tested for endotoxin levels every month to ensure that levels shall conform to national and/or international guidelines.
-
-This is a CORE objective element — non-compliance is not acceptable for accreditation.
+A care area without water or power is a stop-work trigger (section 6).
 
 ### 5.5 Alternate sources for electricity and water are provided as a backup...
 
@@ -106,15 +88,11 @@ Alternate sources for electricity and water are provided as backup for any failu
 
 The «Engineering In-Charge» owns the backup list. Critical areas have a named continuity action when supply fails.
 
-Method note (from guidebook interpretation): The organisation shall ensure that there is sufficient water supply to meet the requirements. The electric load shall be appropriate to the requirements of the organisation and adhere to the regulatory requirements. Alternate sources for water and electricity shall be made available all the times. A good reference for estimating the water requirement is the National Building Code. Alternate electric supply could be from DG sets, solar energy, UPS and any other suitable source. The organisation identifies and mitigates the risk of critical areas/services during electrical supply failure, or when water is contaminated or interrupted. In case of electrical supply through alternate sources (Diesel generator or uninterrupted power supply), the capacity and longevity of power availability based on usage are considered. Alternate source of water can be bore/open well, supply through water tanker or extra storage tanks.
-
 ### 5.6 The organisation tests the functioning of these alternate sources at a...
 
 The organisation tests these alternate sources at a predefined frequency (default «monthly» for the diesel generator and a documented water-acceptance test when an emergency source is used). Results are recorded. Refer to FMS.2.d for water quality.
 
-A backup that is never tested is not this element.
-
-Method note (from guidebook interpretation): The results of these tests shall be documented. In case of water, if the organisation uses alternate sources for making up the shortfall, water testing shall be done on acceptance and at a pre-defined frequency. If the organisation uses alternate sources only as an emergency measure, water testing shall be done on acceptance. Water shall be collected for testing at the point where it is received from the source. Refer to FMS.2.d.
+A backup that is never tested does not satisfy this element.
 
 ## 6. Stop-work authority
 
@@ -156,7 +134,7 @@ Staff covered by this policy are trained at induction and «once a year» after 
 
 Staff acknowledgement
 
-I have read this Planned Facilities and Environment-Friendly Measures policy of Preview Hospital. I will follow the processes described.
+I have read the Policy on Planned Facilities and Environment-Friendly Measures of Preview Hospital. I will follow the processes described.
 
 Name: ___________________________    Designation: ___________________________
 
@@ -168,8 +146,8 @@ Signature: ___________________________
 
 ## 10. References
 
-- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.2. Official portal PDF (OE text, counts, levels, asterisks).
-- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.2 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_fms_guidebook_ocr.txt).
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.2.
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.2 interpretations.
 - Internal documents of Preview Hospital: facility-inspection records, as-built drawings, utility and medical-equipment logs, medical-gas records, fire and non-fire plans named for FMS.2.
 
 ## 11. Distribution
@@ -199,12 +177,12 @@ This table is an index. It is not how the policy is organised.
 
 | OE | Requirement | Where this policy addresses it | Responsible |
 | --- | --- | --- | --- |
-| FMS.2.a | Facilities and space provisions are appropriate to the scope of services. | Section 3; 5.1; Section 6 Stop-work | Engineering In-Charge |
-| FMS.2.b | As built and updated drawings are maintained as per statutory requirements. | Section 3; 5.2; Section 6 Stop-work | Engineering In-Charge |
-| FMS.2.c | There are internal and external sign postings in the organisation in a manner understood by the patient, families and community. | Section 3; 5.3; Section 6 Stop-work | Engineering In-Charge |
+| FMS.2.a | Facilities and space provisions are appropriate to the scope of services. | Section 3; 5.1 | Engineering In-Charge |
+| FMS.2.b | As built and updated drawings are maintained as per statutory requirements. | Section 3; 5.2 | Engineering In-Charge |
+| FMS.2.c | There are internal and external sign postings in the organisation in a manner understood by the patient, families and community. | Section 3; 5.3 | Engineering In-Charge |
 | FMS.2.d | Potable water and electricity are available round the clock. | Section 3; 5.4; Section 6 Stop-work | Engineering In-Charge |
-| FMS.2.e | Alternate sources for electricity and water are provided as a backup for any failure / shortage. | Section 3; 5.5; Section 6 Stop-work | Engineering In-Charge |
-| FMS.2.f | The organisation tests the functioning of these alternate sources at a predefined frequency. | Section 3; 5.6; Section 6 Stop-work | Engineering In-Charge |
+| FMS.2.e | Alternate sources for electricity and water are provided as a backup for any failure / shortage. | Section 3; 5.5 | Engineering In-Charge |
+| FMS.2.f | The organisation tests the functioning of these alternate sources at a predefined frequency. | Section 3; 5.6 | Engineering In-Charge |
 
 ## 14. Required Records / Evidence Checklist
 

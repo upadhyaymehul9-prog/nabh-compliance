@@ -1,7 +1,7 @@
-# Medical Gases, Vacuum and Compressed Air
+# Policy on Medical Gases, Vacuum and Compressed Air
 **Preview Hospital**
 
-*HCO Full Accreditation, 6th Edition — FMS.6.*
+*HCO Full Accreditation, 6th Edition — medical gases, vacuum and compressed air.*
 
 ## Document control
 
@@ -27,13 +27,9 @@ The organisation has a programme for medical gases, vacuum and compressed air.
 
 ## 1. Purpose
 
-This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard FMS.6: The organisation has a programme for medical gases, vacuum and compressed air.
+This policy defines how Preview Hospital governs the procurement, handling, storage, distribution, use and replenishment of medical gases, compressed air and vacuum; maintains safety measures at every level; keeps operational and maintenance plans current; and provides and tests backup sources.
 
-This policy covers all 5 requirements under this standard, listed in detail below.
-
-Chapter intent (official Standards PDF): The standards guide the provision of a safe and secure environment for patients, their families, staff and visitors. The organisation attends to the facility, equipment, and internal physical environment for improving patient safety and quality of services by consistently addressing issues that may arise out of the same. The organisation does this through proactive risk analysis, safety rounds, training of staff on the enhancement of safety and management of disasters. To ensure this, the organisation conducts regular facility inspection rounds and takes the appropriate action to ensure safety. The organisation provides for safe water, electricity, medical gases and vacuum systems. The organisation has a programme for medical and utility equipment management. The organisation plans for fire and non-fire emergencies within the facilities. The organisation is a no-smoking area. The organisation safely manages hazardous materials. The organisation works towards measures on being energy efficient.
-
-This policy covers medical gases, vacuum and compressed air specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards stay with their own policies.
+This policy covers medical gases, vacuum and compressed air specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards have their own policies too.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -41,25 +37,24 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to engineering, biomedical, nursing and departmental leaders, and staff who run facilities, utilities, medical gases, fire and non-fire emergencies at Preview Hospital, including the «Engineering In-Charge», the «Medical Superintendent», departmental leaders and the Quality Coordinator.
 
-This policy covers all 5 requirements under this standard, listed in detail below.
-
-This policy covers medical gases, vacuum and compressed air specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+This policy covers medical gases, vacuum and compressed air specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards have their own policies too.
 
 ## 3. Policy standards
 
-Preview Hospital implements FMS.6 so that the organisation has a programme for medical gases, vacuum and compressed air.
+Written guidance governs every stage of medical-gas management at Preview Hospital. Gases are handled, stored and distributed with standardised colour coding, alarms, valve boxes, pin-indexed outlets and automatic changeover. An operational, inspection, testing and maintenance plan follows the manufacturer. Backup sources are in place and tested regularly.
 
-Staff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).
+Staff follow written guidance and keep the records listed in the traceability table.
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Written guidance governs the implementation of procurement, handling, storage, distribution, usage and...
-2. Do not skip: Medical gases are handled, stored, distributed and used in a safe manner.
-3. Do not skip: There is an operational, inspection, testing and maintenance plan for piped medical gas, compressed air and...
-4. Do not skip: Alternate sources for medical gases, vacuum and compressed air are provided for, in case of failure.
-5. Do not skip: The organisation regularly tests the functioning of these alternate sources.
-6. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
-7. Staff who see a FMS.6 rule broken report it the same shift to the «Engineering In-Charge» or the «Medical Superintendent».
+1. Do not procure, store, distribute or use any medical gas without written guidance covering colour coding, signage, handling and replenishment in place for that gas.
+2. Do not use a medical-gas outlet or manifold that lacks the required colour coding, alarm, valve box, pin-indexed outlet or automatic changeover to the alternate source.
+3. Do not silence a plant-room alarm for a medical-gas system without a documented reason and corrective action.
+4. Do not operate piped medical gas, compressed air or vacuum without an implemented operational, inspection, testing and maintenance plan following the manufacturer.
+5. Do not operate without a required alternate source (stand-by compressor, stand-by vacuum pump, stand-by manifold or bulk cylinders) for each gas, compressed air and vacuum line in use.
+6. Do not count an alternate source as available if it has not been tested at the defined frequency with documented results.
+7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
+8. Staff who see a FMS.6 rule broken report it the same shift to the Engineering In-Charge or the Medical Superintendent.
 
 ## 5. What we do
 
@@ -67,47 +62,27 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 Written guidance governs procurement, handling, storage, distribution, usage and replenishment of all medical gases used here, including colour coding and full/empty signage. HTM 02-01 or the National Fire Protection Association medical-gas handbook is a reference.
 
-The Guidebook names the Explosives Act, Gas Cylinder Rules and Static and Mobile Pressure Vessels (Unfired) Rules. Those duties stay with the named statute; this policy does not paste the Act. This is an asterisked element.
-
-Method note (from guidebook interpretation): This shall apply to all gases used in the organisation. It shall also address the issue of statutory requirements and approvals wherever applicable. It shall follow a uniform colour coding system. A good reference is HTM 02-01 or NFPA’s Medical Gas and Vacuum Systems Installation Handbook (NFPA 2018 99C solution). Proper signage is kept for full and empty cylinders. The organisation shall adhere to statutory requirements under the provisions of the Indian Explosives Act, Gas Cylinder rules and Static and Mobile Pressure Vessel (unfired) rules.
-
-This objective element is asterisked in the official Standards PDF — documentation of the process is required.
+The Guidebook names the Explosives Act, Gas Cylinder Rules and Static and Mobile Pressure Vessels (Unfired) Rules. Those duties stay with the named statute; this policy does not paste the Act.
 
 ### 5.2 Medical gases are handled, stored, distributed and used in a safe manner
 
 Medical gases are handled, stored, distributed and used safely: colour-coded cylinders and pipelines; alarms and valve boxes; twenty-four-hour monitoring of plant alarms; pin-indexed outlets; automatic change-over to the alternate source.
 
-A live leak or a silenced required alarm is a stop-work trigger (section 6). This is a CORE element.
-
-Method note (from guidebook interpretation): Standardised colour coding of the cylinders and pipelines shall be maintained. The procedures for medical gases address the safety issues at all levels from the point of storage/source area, gas supply lines and the end-user area. Appropriate safety measures shall be developed and implemented for all levels. This shall include alarm units and valve boxes installation at various locations and 24X7 monitoring of plant alarm unit for gas pressure going beyond the set limit, pin-indexed medical gas outlets, auto-change over from one source to an alternate source.
-
-This is a CORE objective element — non-compliance is not acceptable for accreditation.
+A live leak or a silenced required alarm is a stop-work trigger (section 6).
 
 ### 5.3 There is an operational, inspection, testing and maintenance plan for...
 
-There is an operational, inspection, testing and maintenance plan for piped medical gas, compressed air and vacuum, following the manufacturer. Compressed-air purity is checked at a terminal outlet at least «annually», at least one terminal in the operating theatre and one in intensive care if those areas exist.
-
-This is an asterisked element.
-
-Method note (from guidebook interpretation): This shall adhere to the manufacturer's recommendations. Compressed air purity shall be checked (at the level of the terminal outlet) once in a year at least in one terminal from OT and ICU.
-
-This objective element is asterisked in the official Standards PDF — documentation of the process is required.
+There is an operational, inspection, testing and maintenance plan for piped medical gas, compressed air and vacuum, following the manufacturer. Compressed-air purity is checked at a terminal outlet at least once a year, at least one terminal in the operating theatre and one in intensive care if those areas exist.
 
 ### 5.4 Alternate sources for medical gases, vacuum and compressed air are...
 
 Alternate sources for medical gases, vacuum and compressed air are provided for failure (stand-by compressor and vacuum pump; stand-by manifold or bulk cylinders).
 
-No required alternate source is a stop-work trigger (section 6). This is a CORE element.
-
-Method note (from guidebook interpretation): In the case of an air compressor and vacuum pump, it could be the stand-by air compressor and vacuum pump unit. For medical gases, it could be standby gas manifold/bulk cylinders.
-
-This is a CORE objective element — non-compliance is not acceptable for accreditation.
+No required alternate source is a stop-work trigger (section 6).
 
 ### 5.5 The organisation regularly tests the functioning of these alternate...
 
-The organisation regularly tests these alternate sources. Results are documented. Default interval «monthly» unless the manufacturer or the written plan states a shorter one.
-
-Method note (from guidebook interpretation): The results of these tests shall be documented.
+The organisation tests these alternate sources at a defined frequency (default «monthly»). Results are documented.
 
 ## 6. Stop-work authority
 
@@ -150,7 +125,7 @@ Staff covered by this policy are trained at induction and «once a year» after 
 
 Staff acknowledgement
 
-I have read this Medical Gases, Vacuum and Compressed Air policy of Preview Hospital. I will follow the processes described.
+I have read the Policy on Medical Gases, Vacuum and Compressed Air of Preview Hospital. I will follow the processes described.
 
 Name: ___________________________    Designation: ___________________________
 
@@ -162,8 +137,8 @@ Signature: ___________________________
 
 ## 10. References
 
-- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.6. Official portal PDF (OE text, counts, levels, asterisks).
-- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.6 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_fms_guidebook_ocr.txt).
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.6.
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.6 interpretations.
 - Internal documents of Preview Hospital: facility-inspection records, as-built drawings, utility and medical-equipment logs, medical-gas records, fire and non-fire plans named for FMS.6.
 
 ## 11. Distribution
@@ -193,11 +168,11 @@ This table is an index. It is not how the policy is organised.
 
 | OE | Requirement | Where this policy addresses it | Responsible |
 | --- | --- | --- | --- |
-| FMS.6.a | Written guidance governs the implementation of procurement, handling, storage, distribution, usage and replenishment of medical gases. | Section 3; 5.1; Section 6 Stop-work | Engineering In-Charge |
+| FMS.6.a | Written guidance governs the implementation of procurement, handling, storage, distribution, usage and replenishment of medical gases. | Section 3; 5.1 | Engineering In-Charge |
 | FMS.6.b | Medical gases are handled, stored, distributed and used in a safe manner. | Section 3; 5.2; Section 6 Stop-work | Engineering In-Charge |
-| FMS.6.c | There is an operational, inspection, testing and maintenance plan for piped medical gas, compressed air and vacuum installation. | Section 3; 5.3; Section 6 Stop-work | Engineering In-Charge |
+| FMS.6.c | There is an operational, inspection, testing and maintenance plan for piped medical gas, compressed air and vacuum installation. | Section 3; 5.3 | Engineering In-Charge |
 | FMS.6.d | Alternate sources for medical gases, vacuum and compressed air are provided for, in case of failure. | Section 3; 5.4; Section 6 Stop-work | Engineering In-Charge |
-| FMS.6.e | The organisation regularly tests the functioning of these alternate sources. | Section 3; 5.5; Section 6 Stop-work | Engineering In-Charge |
+| FMS.6.e | The organisation regularly tests the functioning of these alternate sources. | Section 3; 5.5 | Engineering In-Charge |
 
 ## 14. Required Records / Evidence Checklist
 

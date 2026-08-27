@@ -21,7 +21,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from nabh_text_normalize import distribution_dedupe  # noqa: E402
 from hco_cop_v2_common import (  # noqa: E402
-    hco_oe_count_clause,
     hco_related_duties_clause,
     truncate_word_safe,
 )
@@ -84,21 +83,177 @@ POLICY_TITLES: dict[int, str] = {
     7: "Fire and Non-Fire Emergencies",
 }
 
-CHAPTER_INTENT = (
-    "The standards guide the provision of a safe and secure environment for patients, "
-    "their families, staff and visitors. The organisation attends to the facility, "
-    "equipment, and internal physical environment for improving patient safety and "
-    "quality of services by consistently addressing issues that may arise out of the "
-    "same. The organisation does this through proactive risk analysis, safety rounds, "
-    "training of staff on the enhancement of safety and management of disasters. To "
-    "ensure this, the organisation conducts regular facility inspection rounds and "
-    "takes the appropriate action to ensure safety. The organisation provides for "
-    "safe water, electricity, medical gases and vacuum systems. The organisation has "
-    "a programme for medical and utility equipment management. The organisation plans "
-    "for fire and non-fire emergencies within the facilities. The organisation is a "
-    "no-smoking area. The organisation safely manages hazardous materials. The "
-    "organisation works towards measures on being energy efficient."
-)
+
+# ── Per-standard hand-authored content ──────────────────────────────────────
+# Non-negotiable rules: real prohibitions derived from OE + Guidebook modals.
+# Every entry is the complete numbered-list body for Section 4 of that standard.
+FMS_NON_NEGOTIABLES: dict[int, str] = {
+    1: """\
+1. Do not run a patient-care area that lacks required patient-safety devices (grab bars, bed rails, call bells, alarms, warning signs and fire-safety devices as applicable to that area) or for which no periodic inspection record exists.
+2. Do not operate without providing at minimum the accessibility facilities for differently-abled persons that applicable regulatory requirements mandate — a wheelchair-accessible entrance and an adapted toilet at minimum.
+3. Do not let a calendar month pass without a completed, checklist-based facility-inspection round; a round without a completed checklist is not a round for this purpose.
+4. Do not leave a finding from a facility inspection round without a documented corrective and preventive action and a safety-committee review within the same calendar month.
+5. Do not start construction, renovation or expansion of the existing hospital without a completed risk assessment covering noise, vibration and infection prevention and control in place before work begins.
+6. Staff who see a FMS.1 rule broken report it the same shift to the Engineering In-Charge or the Medical Superintendent.""",
+
+    2: """\
+1. Do not operate a clinical service without matching facility space; any service without a corresponding documented space is not available from this hospital for accreditation purposes.
+2. Do not let the as-built and updated drawing set become incomplete or without a named custodian; a drawing that does not reflect the current facility is not an as-built drawing.
+3. Do not allow signage that cannot be understood by patients, families or the community, or that does not meet applicable statutory posting requirements.
+4. Do not leave a care area without potable water or electricity; test potable-water quality biochemically at least once in three months and microbiologically at least once a month, collected at the tap.
+5. Do not operate without identified backup electricity and water sources available for every critical area.
+6. Do not count an alternate source as available if it has not been tested at the defined frequency with documented results.
+7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
+8. Staff who see a FMS.2 rule broken report it the same shift to the Engineering In-Charge or the Medical Superintendent.""",
+
+    3: """\
+1. Do not operate critical areas (operating theatre, ICUs including NICU, labour room, emergency) without a written security plan defining access for staff, patients and visitors; designated extra-security areas must have documented controls such as CCTV.
+2. Do not start or continue using a hazardous material that has not been identified and documented, or for which a sorting, storage, handling, transport and disposal procedure does not exist.
+3. Do not use a hazardous material in an area where the summarised Material Safety Data Sheet is not accessible to floor staff and the hazardous-materials spill kit is not reachable.
+4. Do not condemn or dispose of material not in use without following the written identification-and-disposal procedure.
+5. Do not allow a calendar year to pass without a completed electrical safety audit of the facility with documented actions.
+6. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
+7. Staff who see a FMS.3 rule broken report it the same shift to the Engineering In-Charge or the Medical Superintendent.""",
+
+    4: """\
+1. Do not run utility or engineering equipment that is not in the current equipment inventory with a unique identifier.
+2. Do not run critical utility equipment (diesel generator, lifts, uninterruptible power supply, fire-related equipment, dialysis reverse-osmosis plant, water pumps) without an implemented, documented operational and maintenance plan.
+3. Do not let utility equipment become overdue for calibration without a corrective action in place.
+4. Do not operate a shift without a named competent person available for each plant system that is running.
+5. Do not leave the maintenance escalation matrix unavailable at the nursing station and departments during any shift.
+6. Do not condemn or dispose of utility or engineering equipment without following the written equipment-replacement and disposal guidance.
+7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
+8. Staff who see a FMS.4 rule broken report it the same shift to the Engineering In-Charge or the Medical Superintendent.""",
+
+    5: """\
+1. Do not put medical equipment into clinical use without a unique identifier and an entry in the medical-equipment inventory.
+2. Do not use medical equipment that does not have an implemented, documented operational and maintenance plan.
+3. Do not use medical equipment that measures patient parameters past its scheduled calibration due date; remove it from clinical use until calibration is complete.
+4. Do not allow an operator to use a medical device they have not been trained for; do not allow maintenance by personnel who are not a biomedical or instrumentation engineer or technologist with relevant training and experience.
+5. Do not continue clinical use of any medical device subject to an open manufacturer or regulatory recall or hazard notice.
+6. Do not condemn or dispose of medical equipment without following the written replacement-and-disposal guidance.
+7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
+8. Staff who see a FMS.5 rule broken report it the same shift to the Engineering In-Charge or the Medical Superintendent.""",
+
+    6: """\
+1. Do not procure, store, distribute or use any medical gas without written guidance covering colour coding, signage, handling and replenishment in place for that gas.
+2. Do not use a medical-gas outlet or manifold that lacks the required colour coding, alarm, valve box, pin-indexed outlet or automatic changeover to the alternate source.
+3. Do not silence a plant-room alarm for a medical-gas system without a documented reason and corrective action.
+4. Do not operate piped medical gas, compressed air or vacuum without an implemented operational, inspection, testing and maintenance plan following the manufacturer.
+5. Do not operate without a required alternate source (stand-by compressor, stand-by vacuum pump, stand-by manifold or bulk cylinders) for each gas, compressed air and vacuum line in use.
+6. Do not count an alternate source as available if it has not been tested at the defined frequency with documented results.
+7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
+8. Staff who see a FMS.6 rule broken report it the same shift to the Engineering In-Charge or the Medical Superintendent.""",
+
+    7: """\
+1. Do not occupy a patient-care floor without an implemented fire plan covering detection, abatement, containment and evacuation — with qualified personnel, current NABH fire-safety measures, smoke-control provisions and emergency illumination in place.
+2. Do not occupy a patient-care floor without a documented and displayed exit plan on that floor, including near lifts and inside enclosed rooms and laboratories; exit doors must remain open or have push bars.
+3. Do not operate without written plans for the non-fire emergencies this hospital has identified (at minimum earthquake, flood, structural collapse, utility failure and toxic leak), developed with reference to NDMA/State/District guidelines.
+4. Do not let six months pass without at least one mock drill testing the full fire or non-fire emergency plan; each drill uses simulated, not real, patients and is followed by a debrief and corrective action.
+5. Do not operate fire-related equipment and infrastructure without an implemented maintenance plan covering inspection, testing, preventive and breakdown maintenance.
+6. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
+7. Staff who see a FMS.7 rule broken report it the same shift to the Engineering In-Charge or the Medical Superintendent.""",
+}
+
+# Per-standard Purpose paragraphs (replaces the restated-OE opener).
+FMS_PURPOSE: dict[int, str] = {
+    1: (
+        "This policy defines how {hospital} installs and inspects patient-safety devices and "
+        "infrastructure, provides accessible facilities for differently-abled persons, conducts "
+        "monthly safety-inspection rounds, documents findings and acts on them, and carries out "
+        "risk assessments before any construction, renovation or expansion of the facility."
+    ),
+    2: (
+        "This policy defines how {hospital} ensures facilities and space match services, keeps "
+        "as-built drawings current, maintains comprehensible signage, provides potable water and "
+        "electricity around the clock, and provides and regularly tests backup sources for both."
+    ),
+    3: (
+        "This policy defines how {hospital} controls access to high-security areas, identifies "
+        "and safely manages hazardous materials, implements spill-response plans, conducts "
+        "electrical safety audits, and manages material not in use."
+    ),
+    4: (
+        "This policy defines how {hospital} plans, inventories, operates and maintains utility "
+        "and engineering equipment, keeps competent maintenance personnel available round the "
+        "clock, and guides equipment replacement and disposal."
+    ),
+    5: (
+        "This policy defines how {hospital} plans medical-equipment procurement, inventories "
+        "and identifies every device, implements operational and maintenance plans, keeps "
+        "calibration current, ensures only qualified personnel operate and maintain equipment, "
+        "monitors adverse events and recalls, and guides replacement and disposal."
+    ),
+    6: (
+        "This policy defines how {hospital} governs the procurement, handling, storage, "
+        "distribution, use and replenishment of medical gases, compressed air and vacuum; "
+        "maintains safety measures at every level; keeps operational and maintenance plans "
+        "current; and provides and tests backup sources."
+    ),
+    7: (
+        "This policy defines how {hospital} plans and maintains provisions for fire and "
+        "non-fire emergencies — including fire detection, abatement, containment and "
+        "evacuation; non-fire emergency identification and management; displayed exit plans; "
+        "regular mock drills; and maintenance of fire-related equipment and infrastructure."
+    ),
+}
+
+# Per-standard Policy standards paragraphs (replaces the restated-OE sentence).
+FMS_POLICY_STATEMENT: dict[int, str] = {
+    1: (
+        "Patient-safety devices and infrastructure are installed and periodically inspected "
+        "across {hospital}. Accessibility facilities meet regulatory minimums for differently-abled "
+        "persons. Monthly facility-inspection rounds identify and monitor safety, security-risk "
+        "and restricted areas. Every finding is documented, acted on and reviewed by the safety "
+        "committee. No construction, renovation or expansion begins without a completed risk "
+        "assessment covering noise, vibration and infection prevention and control."
+    ),
+    2: (
+        "Facilities and space at {hospital} match the services offered. As-built and updated "
+        "drawings are maintained by a named custodian. Internal and external signage is in a "
+        "form patients, families and the community can understand, and meets statutory posting "
+        "requirements. Potable water and electricity are available round the clock with tested "
+        "backup sources for any failure."
+    ),
+    3: (
+        "{hospital} defines extra-security areas and controls access for staff, patients and "
+        "visitors. Hazardous materials are identified, documented and handled safely at every "
+        "stage. Spill plans are implemented with floor-accessible summaries and kits. Electrical "
+        "safety audits are conducted annually. Material not in use is systematically identified "
+        "and disposed of."
+    ),
+    4: (
+        "{hospital} plans utility and engineering equipment against services and the strategic "
+        "plan. All equipment is inventoried with unique identifiers. Implemented operational and "
+        "maintenance plans cover every system. Calibration is kept current. Competent personnel "
+        "are available for every shift. Maintenance is contactable round the clock. Downtime on "
+        "critical equipment is tracked from complaint to completion. Equipment replacement and "
+        "disposal follows written guidance."
+    ),
+    5: (
+        "{hospital} plans medical equipment against services and the strategic plan. Every "
+        "device is inventoried, classified by risk and given a unique identifier. Implemented "
+        "operational and maintenance plans cover operator training, daily checks and breakdown "
+        "response. Calibration is current before commissioning and after every repair. Operators "
+        "and maintainers are qualified. Adverse events and recalls are monitored and acted on "
+        "without delay. Disposal follows written guidance."
+    ),
+    6: (
+        "Written guidance governs every stage of medical-gas management at {hospital}. Gases "
+        "are handled, stored and distributed with standardised colour coding, alarms, valve "
+        "boxes, pin-indexed outlets and automatic changeover. An operational, inspection, "
+        "testing and maintenance plan follows the manufacturer. Backup sources are in place "
+        "and tested regularly."
+    ),
+    7: (
+        "{hospital} has implemented fire plans covering detection, abatement, containment and "
+        "evacuation, with qualified personnel and current NABH fire-safety measures. Non-fire "
+        "emergencies are identified and planned for, with NDMA/State/District guidelines as a "
+        "reference. Exit plans are documented and displayed on every floor. Mock drills are "
+        "held at least twice a year. Fire-related equipment and infrastructure are maintained "
+        "under an active plan."
+    ),
+}
 
 
 def clean_text(s: str) -> str:
@@ -128,44 +283,15 @@ def build_steps(n: int, oes: list[dict], bodies: dict[str, str], interps: dict[s
         body = bodies.get(oe["oe_code"])
         if not body:
             raise KeyError(f"Missing method body for {oe['oe_code']}")
-        extras = []
-        note = (interps.get(oe["oe_code"]) or "").strip()
-        if note:
-            extras.append(f"Method note (from guidebook interpretation): {note}")
-        elif oe.get("star"):
-            extras.append(
-                "Method note: Follow the organisation's written guidance for this asterisked "
-                "element; keep records that show the guidance was followed for the sampled cases."
-            )
-        if oe.get("star"):
-            extras.append(
-                "This objective element is asterisked in the official Standards PDF "
-                "— documentation of the process is required."
-            )
-        if oe["level"] == "CORE":
-            extras.append(
-                "This is a CORE objective element — non-compliance is not acceptable for accreditation."
-            )
-        extra = ("\n\n" + "\n\n".join(extras)) if extras else ""
-        steps.append(f"{title}\n\n{body}{extra}")
+        steps.append(f"{title}\n\n{body}")
     return steps
 
 
 def non_negotiables(n: int, oes: list[dict]) -> str:
-    items = []
-    for i, oe in enumerate(oes, start=1):
-        short = clean_text(oe["text"] or oe["oe_code"])
-        short = truncate_word_safe(short, 110)
-        items.append(f"{i}. Do not skip: {short}")
-    if n in STOP_WORK_PROPOSALS:
-        items.append(
-            f"{len(items)+1}. Do not bypass the stop-work authority in section 6 when the trigger conditions are met."
-        )
-    items.append(
-        f"{len(items)+1}. Staff who see a FMS.{n} rule broken report it the same shift to the "
-        f"{D('Engineering In-Charge')} or the {D('Medical Superintendent')}."
-    )
-    return "\n".join(items)
+    text = FMS_NON_NEGOTIABLES.get(n)
+    if not text:
+        raise KeyError(f"Missing hand-authored non-negotiables for FMS.{n}")
+    return text
 
 
 # Fix #5 — hand-authored per-OE evidence records, matching the quality bar
@@ -391,13 +517,27 @@ FMS_RECORDS: dict[str, list[str]] = {
 }
 
 
+# Maps each standard to the specific OE codes that actually trigger stop-work.
+# Only these OEs show "Section 6 Stop-work" in the traceability table steps column.
+# Derived from the method body sentences that say "is a stop-work trigger (section 6)".
+STOP_WORK_OES: dict[int, frozenset[str]] = {
+    2: frozenset({"FMS.2.d"}),
+    3: frozenset({"FMS.3.e"}),
+    4: frozenset({"FMS.4.c"}),
+    5: frozenset({"FMS.5.c", "FMS.5.d", "FMS.5.g"}),
+    6: frozenset({"FMS.6.b", "FMS.6.d"}),
+    7: frozenset({"FMS.7.a", "FMS.7.c"}),
+}
+
+
 def oe_mapping(n: int, oes: list[dict], has_stop: bool) -> list[dict]:
     mapping = []
     prepared = PREPARED_BY[n]
+    sw_oes = STOP_WORK_OES.get(n, frozenset())
     for i, oe in enumerate(oes, start=1):
         short = clean_text(oe["text"] or "")
         steps = f"Section 3; 5.{i}"
-        if has_stop and n in STOP_WORK_PROPOSALS:
+        if oe["oe_code"] in sw_oes:
             steps += "; Section 6 Stop-work"
         records = FMS_RECORDS.get(oe["oe_code"])
         if not records:
@@ -446,26 +586,21 @@ def build_one(n: int, inv: dict, bodies: dict[str, str], interps: dict[str, str]
     own_topic = POLICY_TITLES[n].lower()
     related_chapters = ["AAC", "COP", "MOM", "PRE", "IPC", "PSQ", "ROM"]
 
-    purpose = f"""This policy says how {HOSPITAL} meets NABH Hospitals 6th Edition standard FMS.{n}: {std_title}
+    purpose_body = FMS_PURPOSE[n].format(hospital=HOSPITAL)
+    purpose = f"""{purpose_body}
 
-{hco_oe_count_clause(len(oes))}
-
-Chapter intent (official Standards PDF): {CHAPTER_INTENT}
-
-{hco_related_duties_clause(own_topic, related_chapters)} Other FMS standards stay with their own policies.
+{hco_related_duties_clause(own_topic, related_chapters)} Other FMS standards have their own policies too.
 
 Words marked {D('like this')} are defaults. A blank marked {BLANK} must be filled before issue."""
 
     scope = f"""This policy applies to {gov_scope} at {HOSPITAL}, including the {prepared}, the {D('Medical Superintendent')}, departmental leaders and the Quality Coordinator.
 
-{hco_oe_count_clause(len(oes))}
+{hco_related_duties_clause(own_topic, related_chapters)} Other FMS standards have their own policies too."""
 
-{hco_related_duties_clause(own_topic, related_chapters)}"""
+    ps_body = FMS_POLICY_STATEMENT[n].format(hospital=HOSPITAL)
+    policy_statement = f"""{ps_body}
 
-    lead = (std_title[0].lower() + std_title[1:]).rstrip(".") if std_title else "facility management and safety requirements are implemented"
-    policy_statement = f"""{HOSPITAL} implements FMS.{n} so that {lead}.
-
-Staff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section)."""
+Staff follow written guidance and keep the records listed in the traceability table."""
 
     responsibility = f"""Medical Superintendent
 - Accountable that FMS.{n} is resourced and followed.
@@ -499,7 +634,7 @@ This policy is reviewed {D('annually')}, and sooner after a related facility cha
 
 Staff acknowledgement
 
-I have read this {title} policy of {HOSPITAL}. I will follow the processes described.
+I have read the Policy on {title} of {HOSPITAL}. I will follow the processes described.
 
 Name: ___________________________    Designation: ___________________________
 
@@ -509,8 +644,8 @@ Signature: ___________________________
 
 (One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)"""
 
-    references = f"""- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.{n}. Official portal PDF (OE text, counts, levels, asterisks).
-- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.{n} interpretations (source PDF md5 {GUIDEBOOK_MD5}).
+    references = f"""- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.{n}.
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.{n} interpretations.
 - Internal documents of {HOSPITAL}: facility-inspection records, as-built drawings, utility and medical-equipment logs, medical-gas records, fire and non-fire plans named for FMS.{n}."""
 
     abbreviations = f"""AHU — Air Handling Unit
@@ -549,7 +684,7 @@ Do not touch AAC, COP, MOM, PRE, IPC, PSQ or ROM."""
         "standard_code": f"FMS.{n}",
         "chapter": CHAPTER,
         "oe_codes": oe_codes,
-        "policy_title": title,
+        "policy_title": f"Policy on {title}",
         "purpose": purpose,
         "scope": scope,
         "policy_statement": policy_statement,
@@ -577,7 +712,7 @@ Do not touch AAC, COP, MOM, PRE, IPC, PSQ or ROM."""
         "resources_required": hco_document_control(doc_no=doc_no, prepared_by=prepared),
         "prepared_by": prepared,
         "template_test": "hco_fms_v2_adoptable_shape",
-        "subtitle": f"{PROGRAMME} — FMS.{n}.",
+        "subtitle": f"{PROGRAMME} — {title.lower()}.",
         "doc_no": doc_no,
         "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
         "stop_work": sw,

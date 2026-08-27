@@ -1,7 +1,7 @@
-# Safe and Secure Environment
+# Policy on Safe and Secure Environment
 **Preview Hospital**
 
-*HCO Full Accreditation, 6th Edition — FMS.1.*
+*HCO Full Accreditation, 6th Edition — safe and secure environment.*
 
 ## Document control
 
@@ -27,13 +27,9 @@ The organisation has a system in place to provide a safe and secure environment.
 
 ## 1. Purpose
 
-This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard FMS.1: The organisation has a system in place to provide a safe and secure environment.
+This policy defines how Preview Hospital installs and inspects patient-safety devices and infrastructure, provides accessible facilities for differently-abled persons, conducts monthly safety-inspection rounds, documents findings and acts on them, and carries out risk assessments before any construction, renovation or expansion of the facility.
 
-This policy covers all 5 requirements under this standard, listed in detail below.
-
-Chapter intent (official Standards PDF): The standards guide the provision of a safe and secure environment for patients, their families, staff and visitors. The organisation attends to the facility, equipment, and internal physical environment for improving patient safety and quality of services by consistently addressing issues that may arise out of the same. The organisation does this through proactive risk analysis, safety rounds, training of staff on the enhancement of safety and management of disasters. To ensure this, the organisation conducts regular facility inspection rounds and takes the appropriate action to ensure safety. The organisation provides for safe water, electricity, medical gases and vacuum systems. The organisation has a programme for medical and utility equipment management. The organisation plans for fire and non-fire emergencies within the facilities. The organisation is a no-smoking area. The organisation safely manages hazardous materials. The organisation works towards measures on being energy efficient.
-
-This policy covers safe and secure environment specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards stay with their own policies.
+This policy covers safe and secure environment specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards have their own policies too.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -41,24 +37,22 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to engineering, biomedical, nursing and departmental leaders, and staff who run facilities, utilities, medical gases, fire and non-fire emergencies at Preview Hospital, including the «Engineering In-Charge», the «Medical Superintendent», departmental leaders and the Quality Coordinator.
 
-This policy covers all 5 requirements under this standard, listed in detail below.
-
-This policy covers safe and secure environment specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+This policy covers safe and secure environment specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards have their own policies too.
 
 ## 3. Policy standards
 
-Preview Hospital implements FMS.1 so that the organisation has a system in place to provide a safe and secure environment.
+Patient-safety devices and infrastructure are installed and periodically inspected across Preview Hospital. Accessibility facilities meet regulatory minimums for differently-abled persons. Monthly facility-inspection rounds identify and monitor safety, security-risk and restricted areas. Every finding is documented, acted on and reviewed by the safety committee. No construction, renovation or expansion begins without a completed risk assessment covering noise, vibration and infection prevention and control.
 
-Staff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).
+Staff follow written guidance and keep the records listed in the traceability table.
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Patient safety devices and infrastructure are installed across the organisation and inspected periodically.
-2. Do not skip: The organisation has facilities for the differently-abled.
-3. Do not skip: Facility inspection rounds to ensure safety are conducted at least once a month.
-4. Do not skip: Inspection reports of facility rounds are documented and corrective and preventive measures are undertaken.
-5. Do not skip: Before construction, renovation and expansion of the existing hospital, risk- assessment is carried out.
-6. Staff who see a FMS.1 rule broken report it the same shift to the «Engineering In-Charge» or the «Medical Superintendent».
+1. Do not run a patient-care area that lacks required patient-safety devices (grab bars, bed rails, call bells, alarms, warning signs and fire-safety devices as applicable to that area) or for which no periodic inspection record exists.
+2. Do not operate without providing at minimum the accessibility facilities for differently-abled persons that applicable regulatory requirements mandate — a wheelchair-accessible entrance and an adapted toilet at minimum.
+3. Do not let a calendar month pass without a completed, checklist-based facility-inspection round; a round without a completed checklist is not a round for this purpose.
+4. Do not leave a finding from a facility inspection round without a documented corrective and preventive action and a safety-committee review within the same calendar month.
+5. Do not start construction, renovation or expansion of the existing hospital without a completed risk assessment covering noise, vibration and infection prevention and control in place before work begins.
+6. Staff who see a FMS.1 rule broken report it the same shift to the Engineering In-Charge or the Medical Superintendent.
 
 ## 5. What we do
 
@@ -68,43 +62,29 @@ Patient-safety devices and infrastructure (grab bars, bed rails, stretcher and w
 
 The «Engineering In-Charge» holds the current list and last inspection. A missing device in a care area that is in use is escalated the same shift.
 
-Method note (from guidebook interpretation): For example, grab bars, bed rails, sign posting, safety belts on stretchers and wheelchairs, alarms both visual and auditory where applicable, warning signs like radiation or biohazard, call bells, fire-safety devices, etc.
-
-This is a CORE objective element — non-compliance is not acceptable for accreditation.
-
 ### 5.2 The organisation has facilities for the differently-abled
 
-Preview Hospital has facilities for the differently-abled (at a minimum a wheelchair-accessible entrance and a toilet, as regulatory requirement and this hospital's building allow).
+Preview Hospital has facilities for the differently-abled (at a minimum a wheelchair-accessible entrance and an adapted toilet, as regulatory requirement and this hospital's building allow).
 
-The «Engineering In-Charge» keeps the current access list. A step-only entrance with no documented alternative is not this element.
-
-Method note (from guidebook interpretation): Provisions are made for differently-abled persons like the physically challenged, the visually impaired and mentally impaired person. At a minimum, this shall be as per regulatory requirement. For example, a special toilet for differently-abled, wheelchair accessible entrance etc.
+The «Engineering In-Charge» keeps the current access list. A step-only entrance with no documented alternative does not satisfy this element.
 
 ### 5.3 Facility inspection rounds to ensure safety are conducted at least once...
 
 Facility inspection rounds to ensure safety are conducted at least once a month using a checklist. Potential safety and security-risk / restricted areas are identified and monitored.
 
-The «Engineering In-Charge» owns the round calendar. A month without a completed round is a gap under this CORE element.
-
-Method note (from guidebook interpretation): Potential safety risks are identified during the rounds using a checklist. The potential security risk areas and restricted areas are identified and are monitored. The organisation plans and budgets for upgrading or replacing key systems, buildings, or components based on the facility inspection.
-
-This is a CORE objective element — non-compliance is not acceptable for accreditation.
+The «Engineering In-Charge» owns the round calendar. A month without a completed round is a gap.
 
 ### 5.4 Inspection reports of facility rounds are documented and corrective and...
 
-Inspection reports of facility rounds are documented. Corrective and preventive measures are undertaken. The safety committee reviews the reports «monthly». Pre- and post-correction evidence is kept for at least one accreditation cycle.
+Inspection reports of facility rounds are documented. Corrective and preventive measures are undertaken. The safety committee reviews the reports monthly. Pre- and post-correction evidence is kept for at least one accreditation cycle.
 
 The «Quality Coordinator» files the reviewed reports with the «Engineering In-Charge».
-
-Method note (from guidebook interpretation): The facility inspection reports are reviewed monthly by the safety committee and appropriate action(s) taken. Evidence of pre and post corrective actions are maintained at least for one accreditation cycle.
 
 ### 5.5 Before construction, renovation and expansion of the existing hospital...
 
 Before construction, renovation or expansion of the existing hospital, a risk-assessment is carried out covering noise, vibration and infection prevention and control. IPC.4 remains the home of construction-infection controls; this element is that the assessment happens before work starts.
 
-The «Engineering In-Charge» holds the dated assessment. Work started with no assessment is incomplete under this element.
-
-Method note (from guidebook interpretation): The risk assessment shall cover noise, vibration and infection prevention and control. This is carried out before the commencement of renovation and expansion of the facility. Refer to IPC.4.b.
+The «Engineering In-Charge» holds the dated assessment. Work started with no assessment does not satisfy this element.
 
 ## 6. Governance and responsibility
 
@@ -138,7 +118,7 @@ Staff covered by this policy are trained at induction and «once a year» after 
 
 Staff acknowledgement
 
-I have read this Safe and Secure Environment policy of Preview Hospital. I will follow the processes described.
+I have read the Policy on Safe and Secure Environment of Preview Hospital. I will follow the processes described.
 
 Name: ___________________________    Designation: ___________________________
 
@@ -150,8 +130,8 @@ Signature: ___________________________
 
 ## 9. References
 
-- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.1. Official portal PDF (OE text, counts, levels, asterisks).
-- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.1 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_fms_guidebook_ocr.txt).
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.1.
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.1 interpretations.
 - Internal documents of Preview Hospital: facility-inspection records, as-built drawings, utility and medical-equipment logs, medical-gas records, fire and non-fire plans named for FMS.1.
 
 ## 10. Distribution

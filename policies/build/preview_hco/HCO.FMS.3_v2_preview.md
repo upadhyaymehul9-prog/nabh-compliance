@@ -1,7 +1,7 @@
-# Safety of Patients, Families, Staff and Visitors
+# Policy on Safety of Patients, Families, Staff and Visitors
 **Preview Hospital**
 
-*HCO Full Accreditation, 6th Edition — FMS.3.*
+*HCO Full Accreditation, 6th Edition — safety of patients, families, staff and visitors.*
 
 ## Document control
 
@@ -27,13 +27,9 @@ The organisation’s environment and facilities operate to ensure the safety of 
 
 ## 1. Purpose
 
-This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard FMS.3: The organisation’s environment and facilities operate to ensure the safety of patients, their families, staff and visitors.
+This policy defines how Preview Hospital controls access to high-security areas, identifies and safely manages hazardous materials, implements spill-response plans, conducts electrical safety audits, and manages material not in use.
 
-This policy covers all 6 requirements under this standard, listed in detail below.
-
-Chapter intent (official Standards PDF): The standards guide the provision of a safe and secure environment for patients, their families, staff and visitors. The organisation attends to the facility, equipment, and internal physical environment for improving patient safety and quality of services by consistently addressing issues that may arise out of the same. The organisation does this through proactive risk analysis, safety rounds, training of staff on the enhancement of safety and management of disasters. To ensure this, the organisation conducts regular facility inspection rounds and takes the appropriate action to ensure safety. The organisation provides for safe water, electricity, medical gases and vacuum systems. The organisation has a programme for medical and utility equipment management. The organisation plans for fire and non-fire emergencies within the facilities. The organisation is a no-smoking area. The organisation safely manages hazardous materials. The organisation works towards measures on being energy efficient.
-
-This policy covers safety of patients, families, staff and visitors specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards stay with their own policies.
+This policy covers safety of patients, families, staff and visitors specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards have their own policies too.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -41,26 +37,23 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to engineering, biomedical, nursing and departmental leaders, and staff who run facilities, utilities, medical gases, fire and non-fire emergencies at Preview Hospital, including the «Engineering In-Charge», the «Medical Superintendent», departmental leaders and the Quality Coordinator.
 
-This policy covers all 6 requirements under this standard, listed in detail below.
-
-This policy covers safety of patients, families, staff and visitors specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+This policy covers safety of patients, families, staff and visitors specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards have their own policies too.
 
 ## 3. Policy standards
 
-Preview Hospital implements FMS.3 so that the organisation’s environment and facilities operate to ensure the safety of patients, their families, staff and visitors.
+Preview Hospital defines extra-security areas and controls access for staff, patients and visitors. Hazardous materials are identified, documented and handled safely at every stage. Spill plans are implemented with floor-accessible summaries and kits. Electrical safety audits are conducted annually. Material not in use is systematically identified and disposed of.
 
-Staff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).
+Staff follow written guidance and keep the records listed in the traceability table.
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: Operational planning identifies areas which need to have extra security and describes access to different...
-2. Do not skip: Patient safety aspects in terms of structural safety of hospitals, especially of critical areas are...
-3. Do not skip: The organisation conducts electrical safety audits for the facility.
-4. Do not skip: There is a procedure which addresses the identification and disposal of material(s) not in use in the...
-5. Do not skip: Hazardous materials are identified and used safely within the organisation.
-6. Do not skip: The plan for managing spills of hazardous materials is implemented.
-7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
-8. Staff who see a FMS.3 rule broken report it the same shift to the «Engineering In-Charge» or the «Medical Superintendent».
+1. Do not operate critical areas (operating theatre, ICUs including NICU, labour room, emergency) without a written security plan defining access for staff, patients and visitors; designated extra-security areas must have documented controls such as CCTV.
+2. Do not start or continue using a hazardous material that has not been identified and documented, or for which a sorting, storage, handling, transport and disposal procedure does not exist.
+3. Do not use a hazardous material in an area where the summarised Material Safety Data Sheet is not accessible to floor staff and the hazardous-materials spill kit is not reachable.
+4. Do not condemn or dispose of material not in use without following the written identification-and-disposal procedure.
+5. Do not allow a calendar year to pass without a completed electrical safety audit of the facility with documented actions.
+6. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
+7. Staff who see a FMS.3 rule broken report it the same shift to the Engineering In-Charge or the Medical Superintendent.
 
 ## 5. What we do
 
@@ -68,57 +61,35 @@ Staff follow written guidance, keep the records listed in the OE table, and esca
 
 Operational planning identifies extra-security areas and describes access for staff, patients and visitors (at a minimum operating theatre, intensive-care units including neonatal if in scope, labour room and emergency). Vulnerable spots (dark areas, long corridors, critical-area doors) have a defined control such as closed-circuit television.
 
-Written security guidance exists. This is an asterisked element.
-
-Method note (from guidebook interpretation): Written guidance on security of patients, visitors, staff and materials shall be incorporated in the form of a manual. Manual shall also include the planning process shall begin by identifying various categories of people in a hospital. At a minimum, this shall include staff, patients and visitors, in the hospital. The hospital shall have a mechanism to identify the defined categories. The hospital shall define access to different areas in the hospital for the defined categories as per the operational security plan. The process shall give details of access to OT, ICU(s) including NICU, labour room, and emergency room. Vulnerable areas like dark areas, long corridors, entrances to critical areas need to be identified, and appropriate security is in place such as CCTV coverage.
-
-This objective element is asterisked in the official Standards PDF — documentation of the process is required.
+Written security guidance exists.
 
 ### 5.2 Patient safety aspects in terms of structural safety of hospitals...
 
 When this hospital plans, designs or constructs a new building, or re-plans or retrofits an existing one, patient-safety structural aspects of critical areas are considered. Indian Seismic Code IS 1893 (Part 1), latest version, is the minimum structural reference named in the Guidebook.
 
-The «Engineering In-Charge» files what was applied. This Excellence element is evidenced on actual building work, not by a sentence alone.
-
-Method note (from guidebook interpretation): At a minimum, Indian Seismic Code IS: 1893(part 1) latest version shall be followed while making provisions for structural and non-structural elements. Some good references are National Disaster Management guidelines; Hospital safety, 2016 and WHO's guide on hospital safety index: guide for evaluators 2nd edition 2015.
+The «Engineering In-Charge» files what was applied. This element is evidenced on actual building work, not by a policy sentence alone.
 
 ### 5.3 The organisation conducts electrical safety audits for the facility
 
-The organisation conducts electrical safety audits of the facility at least «annually» to reduce risk to people and property and to prevent fire from short-circuiting. National Electrical Code of India 2023 is a reference. Thermal imaging may be used.
+The organisation conducts electrical safety audits of the facility at least once a year to reduce risk to people and property and to prevent fire from short-circuiting. National Electrical Code of India 2023 is a reference. Thermal imaging may be used.
 
 The «Engineering In-Charge» holds the last audit and actions.
 
-Method note (from guidebook interpretation): The intent of electrical safety audits is to minimise the electrical risks to persons and property and ensure that occurrence of fire due to short-circuiting is prevented. It shall be performed at least once a year. It could be incorporated into the electric system maintenance plan. The help of new technology like thermal imaging equipment can help detect loose connections in the system and thereby prevent fire incidents. This shall incorporate statutory requirements where applicable. National Electrical Code of India 2023 could be used as a reference document.
-
 ### 5.4 There is a procedure which addresses the identification and disposal of...
 
-There is a written procedure for identifying and disposing of material not in use (non-functioning items, excess stock, general scrap). Condemnation records sit with the «Engineering In-Charge». This is an asterisked element.
-
-Method note (from guidebook interpretation): The Organisation shall condemn and dispose of the material which is not in usage such as non-functioning items, excess unwanted material, general waste, scrap material etc.
-
-This objective element is asterisked in the official Standards PDF — documentation of the process is required.
+There is a written procedure for identifying and disposing of material not in use (non-functioning items, excess stock, general scrap). Condemnation records sit with the «Engineering In-Charge».
 
 ### 5.5 Hazardous materials are identified and used safely within the...
 
 Hazardous materials used here are identified and used safely: sorting, storage, handling, transport and disposal, using Material Safety Data Sheets. Common examples the Guidebook names include chemicals, blood and cultures, mercury, nuclear isotopes, medical gases, liquefied petroleum gas, steam and ethylene oxide.
 
-Using an unidentified hazardous material is a stop-work trigger (section 6). This is a CORE asterisked element.
-
-Method note (from guidebook interpretation): The organisation shall identify and document the hazardous materials and have a documented procedure for their sorting, storage, handling, transportation and disposal. In addition to chemicals, biological materials like blood, body fluids and microbiological cultures, mercury, nuclear isotopes, medical gases, LPG gas, steam, ETO, etc. are some of the other common hazardous materials. The organisation could develop its procedures based on Material Safety Data Sheets (MSDS). Applicable statutory requirements shall be complied.
-
-This objective element is asterisked in the official Standards PDF — documentation of the process is required.
-
-This is a CORE objective element — non-compliance is not acceptable for accreditation.
+Using an unidentified hazardous material is a stop-work trigger (section 6).
 
 ### 5.6 The plan for managing spills of hazardous materials is implemented
 
 The spill plan for hazardous materials is implemented: a summarised Material Safety Data Sheet the floor can read, a hazardous-materials kit where those materials are stored, and trained handlers.
 
-A kit in a locked office the floor cannot reach is not this asterisked element.
-
-Method note (from guidebook interpretation): The plan shall be developed based on information provided in MSDS. The key elements shall be summarised in a manner that is easy to understand (if necessary, translated in local language) and available for staff to refer to wherever such materials are stored. Personnel who handle such material are accordingly trained. The organisation has a HAZMAT kit(s) for handling spills of hazardous materials.
-
-This objective element is asterisked in the official Standards PDF — documentation of the process is required.
+A kit in a locked office the floor cannot reach does not satisfy this element.
 
 ## 6. Stop-work authority
 
@@ -161,7 +132,7 @@ Staff covered by this policy are trained at induction and «once a year» after 
 
 Staff acknowledgement
 
-I have read this Safety of Patients, Families, Staff and Visitors policy of Preview Hospital. I will follow the processes described.
+I have read the Policy on Safety of Patients, Families, Staff and Visitors of Preview Hospital. I will follow the processes described.
 
 Name: ___________________________    Designation: ___________________________
 
@@ -173,8 +144,8 @@ Signature: ___________________________
 
 ## 10. References
 
-- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.3. Official portal PDF (OE text, counts, levels, asterisks).
-- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.3 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_fms_guidebook_ocr.txt).
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.3.
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.3 interpretations.
 - Internal documents of Preview Hospital: facility-inspection records, as-built drawings, utility and medical-equipment logs, medical-gas records, fire and non-fire plans named for FMS.3.
 
 ## 11. Distribution
@@ -204,12 +175,12 @@ This table is an index. It is not how the policy is organised.
 
 | OE | Requirement | Where this policy addresses it | Responsible |
 | --- | --- | --- | --- |
-| FMS.3.a | Operational planning identifies areas which need to have extra security and describes access to different areas in the hospital by staff, patients, and visitors. | Section 3; 5.1; Section 6 Stop-work | Engineering In-Charge |
-| FMS.3.b | Patient safety aspects in terms of structural safety of hospitals, especially of critical areas are considered while planning, design and construction of new hospitals and re-planning, assessment and retrofitting of existing hospitals. | Section 3; 5.2; Section 6 Stop-work | Engineering In-Charge |
-| FMS.3.c | The organisation conducts electrical safety audits for the facility. | Section 3; 5.3; Section 6 Stop-work | Engineering In-Charge |
-| FMS.3.d | There is a procedure which addresses the identification and disposal of material(s) not in use in the organisation. | Section 3; 5.4; Section 6 Stop-work | Engineering In-Charge |
+| FMS.3.a | Operational planning identifies areas which need to have extra security and describes access to different areas in the hospital by staff, patients, and visitors. | Section 3; 5.1 | Engineering In-Charge |
+| FMS.3.b | Patient safety aspects in terms of structural safety of hospitals, especially of critical areas are considered while planning, design and construction of new hospitals and re-planning, assessment and retrofitting of existing hospitals. | Section 3; 5.2 | Engineering In-Charge |
+| FMS.3.c | The organisation conducts electrical safety audits for the facility. | Section 3; 5.3 | Engineering In-Charge |
+| FMS.3.d | There is a procedure which addresses the identification and disposal of material(s) not in use in the organisation. | Section 3; 5.4 | Engineering In-Charge |
 | FMS.3.e | Hazardous materials are identified and used safely within the organisation. | Section 3; 5.5; Section 6 Stop-work | Engineering In-Charge |
-| FMS.3.f | The plan for managing spills of hazardous materials is implemented. | Section 3; 5.6; Section 6 Stop-work | Engineering In-Charge |
+| FMS.3.f | The plan for managing spills of hazardous materials is implemented. | Section 3; 5.6 | Engineering In-Charge |
 
 ## 14. Required Records / Evidence Checklist
 

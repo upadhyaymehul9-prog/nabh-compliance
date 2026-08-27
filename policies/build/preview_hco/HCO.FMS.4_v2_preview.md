@@ -1,7 +1,7 @@
-# Facility, Engineering Support and Utility Systems
+# Policy on Facility, Engineering Support and Utility Systems
 **Preview Hospital**
 
-*HCO Full Accreditation, 6th Edition — FMS.4.*
+*HCO Full Accreditation, 6th Edition — facility, engineering support and utility systems.*
 
 ## Document control
 
@@ -27,13 +27,9 @@ The organisation has a programme for the facility, engineering support services 
 
 ## 1. Purpose
 
-This policy says how Preview Hospital meets NABH Hospitals 6th Edition standard FMS.4: The organisation has a programme for the facility, engineering support services and utility system.
+This policy defines how Preview Hospital plans, inventories, operates and maintains utility and engineering equipment, keeps competent maintenance personnel available round the clock, and guides equipment replacement and disposal.
 
-This policy covers all 8 requirements under this standard, listed in detail below.
-
-Chapter intent (official Standards PDF): The standards guide the provision of a safe and secure environment for patients, their families, staff and visitors. The organisation attends to the facility, equipment, and internal physical environment for improving patient safety and quality of services by consistently addressing issues that may arise out of the same. The organisation does this through proactive risk analysis, safety rounds, training of staff on the enhancement of safety and management of disasters. To ensure this, the organisation conducts regular facility inspection rounds and takes the appropriate action to ensure safety. The organisation provides for safe water, electricity, medical gases and vacuum systems. The organisation has a programme for medical and utility equipment management. The organisation plans for fire and non-fire emergencies within the facilities. The organisation is a no-smoking area. The organisation safely manages hazardous materials. The organisation works towards measures on being energy efficient.
-
-This policy covers facility, engineering support and utility systems specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards stay with their own policies.
+This policy covers facility, engineering support and utility systems specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards have their own policies too.
 
 Words marked «like this» are defaults. A blank marked «________» must be filled before issue.
 
@@ -41,28 +37,24 @@ Words marked «like this» are defaults. A blank marked «________» must be fil
 
 This policy applies to engineering, biomedical, nursing and departmental leaders, and staff who run facilities, utilities, medical gases, fire and non-fire emergencies at Preview Hospital, including the «Engineering In-Charge», the «Medical Superintendent», departmental leaders and the Quality Coordinator.
 
-This policy covers all 8 requirements under this standard, listed in detail below.
-
-This policy covers facility, engineering support and utility systems specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+This policy covers facility, engineering support and utility systems specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards have their own policies too.
 
 ## 3. Policy standards
 
-Preview Hospital implements FMS.4 so that the organisation has a programme for the facility, engineering support services and utility system.
+Preview Hospital plans utility and engineering equipment against services and the strategic plan. All equipment is inventoried with unique identifiers. Implemented operational and maintenance plans cover every system. Calibration is kept current. Competent personnel are available for every shift. Maintenance is contactable round the clock. Downtime on critical equipment is tracked from complaint to completion. Equipment replacement and disposal follows written guidance.
 
-Staff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).
+Staff follow written guidance and keep the records listed in the traceability table.
 
 ## 4. Non-negotiable rules
 
-1. Do not skip: The organisation plans for utility and engineering equipment in accordance with its services and strategic...
-2. Do not skip: Equipment is inventoried, and proper logs are maintained as required.
-3. Do not skip: The documented operational and maintenance (preventive and breakdown) plan is implemented.
-4. Do not skip: Utility equipment, are periodically inspected and calibrated (wherever applicable) for their proper...
-5. Do not skip: Competent personnel operate, inspect, test and maintain equipment and utility systems.
-6. Do not skip: Maintenance staff is contactable round the clock for emergency repairs.
-7. Do not skip: Downtime for critical equipment breakdowns is monitored from reporting to inspection and implementation of...
-8. Do not skip: Written guidance supports equipment replacement, identification of unwanted material and disposal.
-9. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
-10. Staff who see a FMS.4 rule broken report it the same shift to the «Engineering In-Charge» or the «Medical Superintendent».
+1. Do not run utility or engineering equipment that is not in the current equipment inventory with a unique identifier.
+2. Do not run critical utility equipment (diesel generator, lifts, uninterruptible power supply, fire-related equipment, dialysis reverse-osmosis plant, water pumps) without an implemented, documented operational and maintenance plan.
+3. Do not let utility equipment become overdue for calibration without a corrective action in place.
+4. Do not operate a shift without a named competent person available for each plant system that is running.
+5. Do not leave the maintenance escalation matrix unavailable at the nursing station and departments during any shift.
+6. Do not condemn or dispose of utility or engineering equipment without following the written equipment-replacement and disposal guidance.
+7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
+8. Staff who see a FMS.4 rule broken report it the same shift to the Engineering In-Charge or the Medical Superintendent.
 
 ## 5. What we do
 
@@ -72,35 +64,23 @@ The organisation plans utility and engineering equipment to match services and t
 
 The «Engineering In-Charge» holds the current plan.
 
-Method note (from guidebook interpretation): This shall also take into consideration future requirements like DG sets, Chiller plant. The plans shall be fully implemented, and there shall be a process for periodic review of plans. Equipment is selected, rented, updated or upgraded by a collaborative process. Collaborative process implies that during equipment selection, there is involvement of end-user, management, finance and engineering departments.
-
 ### 5.2 Equipment is inventoried, and proper logs are maintained as required
 
 Equipment is inventoried and logs are maintained. Each item has a unique identifier. Quality-conformance certificates, factory test certificates and installation reports are kept where they apply.
 
-A plant item with no identity number is incomplete under this element.
-
-Method note (from guidebook interpretation): A unique identification is provided to each equipment. Where applicable, the relevant quality conformance certificates/marks along with manufacturer factory test certificate, and installation report need to be retained as part of the documentation.
+A plant item with no identity number does not satisfy this element.
 
 ### 5.3 The documented operational and maintenance (preventive and breakdown)...
 
 The documented operational and maintenance (preventive and breakdown) plan is implemented for utility and engineering equipment, electrical systems, water, heating-ventilation-air-conditioning, facility and furniture — including transformers, low-tension and high-tension panels, lifts, tanks, reverse-osmosis and sewage-treatment if present, chillers, air-handling units and filters.
 
-Running critical utility equipment with no implemented plan is a stop-work trigger (section 6). This is a CORE asterisked element.
-
-Method note (from guidebook interpretation): This includes plans for all utility equipment, engineering equipment, electrical systems, water management, HVAC, facility and furniture. The operator is trained in handling the equipment. The operational plan must assist the operator in operating the equipment daily. The original equipment manual is a good source for this. In case this is not available, the organisation shall develop the operational plan for the concerned equipment. The maintenance plan shall consider the manufacturer's recommendations, risk level and past maintenance history. There shall be a planned preventive maintenance tracker for utility equipment, facility items and furniture items. Electrical maintenance plans shall incorporate statutory requirements where applicable. Transformers, LT and/or HT panel maintenance shall also be included. All lifts shall be included in this maintenance plan. Water maintenance plans shall include cleaning of water storage tanks at regular intervals and treating of water, where appropriate. It shall also include the RO unit and STP in case it is available in the organisation. HVAC maintenance plans shall include chiller unit, AHU, FCU and various air-conditioners. This shall adhere to the manufacturer’s recommendations and good infection-control practice requirement. This includes timely cleaning and/or replacement of filters. Facility and furniture maintenance plans shall include civil work such a wall, floor and roof, etc., fixed furniture like nurse station, shoe racks, etc., loose furniture like emergency cart, chairs and trolleys. This shall adhere to the manufacturer’s recommendations, good infection-control practice requirement, etc. This includes regular inspections, timely repair of civil structure like walls, servicing of furniture etc.
-
-This objective element is asterisked in the official Standards PDF — documentation of the process is required.
-
-This is a CORE objective element — non-compliance is not acceptable for accreditation.
+Running critical utility equipment with no implemented plan is a stop-work trigger (section 6).
 
 ### 5.4 Utility equipment, are periodically inspected and calibrated (wherever...
 
 Utility equipment is periodically inspected and calibrated where applicable (for example steam-steriliser pressure gauges, medication-refrigerator temperature gauges), in-house or outsourced, with traceability to prescribed standards.
 
-The «Engineering In-Charge» holds the calibration schedule. Portal wording “Utility equipment, are” is kept as printed.
-
-Method note (from guidebook interpretation): For example, pressure gauges of the steam steriliser, temperature gauges of medication refrigerators. The organisation either calibrates the utility equipment in-house or outsources, maintaining traceability to the prescribed standards.
+The «Engineering In-Charge» holds the calibration schedule.
 
 ### 5.5 Competent personnel operate, inspect, test and maintain equipment and...
 
@@ -108,15 +88,11 @@ Competent personnel (qualification, experience or training) operate, inspect, te
 
 A plant running with no competent person named for that shift is escalated to the «Engineering In-Charge».
 
-Method note (from guidebook interpretation): The person could be competent by qualification/ experience or training. The organisation needs to ensure that it has a sufficient number of supervisors and tradesmen, including personnel trained in fire safety and electrical safety. The necessary infrastructure and tools are available like a ladder, voltmeter, spanner and relevant PPE norms like safety boots, gloves. They shall be provided necessary inventories like bulbs, taps, paints etc.
-
 ### 5.6 Maintenance staff is contactable round the clock for emergency repairs
 
 Maintenance staff are contactable round the clock for emergency repairs. An escalation matrix (who to call if the person on duty cannot complete the job) is at the nursing station and departments.
 
-A night call with no answer path is not this element.
-
-Method note (from guidebook interpretation): The maintenance escalation matrix (if an emergency repair is not possible by staff on duty, more qualified/experienced staff shall be available) is available at the nursing station and other departments.
+A night call with no answer path does not satisfy this element.
 
 ### 5.7 Downtime for critical equipment breakdowns is monitored from reporting...
 
@@ -124,17 +100,9 @@ Downtime for critical engineering and utility equipment breakdowns is monitored 
 
 Start of downtime is complaint time; end is user-ratified completion.
 
-Method note (from guidebook interpretation): The organisation shall define the critical engineering and utility equipment. At a minimum, this shall include DG set, lifts, UPS, fire related equipment, RO water plant for dialysis, water pumps etc. A complaint attendance register shall be maintained (physical or electronic) to indicate the date and time of receipt of the complaint, allotment of job and completion of the job. Completion of the job shall always be ratified by the user department. The start of downtime shall be the time when the complaint was lodged, and the end of the downtime shall be the time at which completion of the job was ratified by the user department.
-
 ### 5.8 Written guidance supports equipment replacement, identification of...
 
 Written guidance supports equipment replacement, identification of unwanted material and disposal. Unusable utility and engineering equipment is condemned in a systematic way. Records are kept.
-
-This is an asterisked element.
-
-Method note (from guidebook interpretation): The organisation shall plan for this, keeping in mind the strategic plans, upgrade/update path and the equipment log. The organisation shall dispose off (condemn) unusable utility and engineering equipment and other waste material in a systematic manner. All records about condemnation and disposal of equipment and waste shall be maintained.
-
-This objective element is asterisked in the official Standards PDF — documentation of the process is required.
 
 ## 6. Stop-work authority
 
@@ -177,7 +145,7 @@ Staff covered by this policy are trained at induction and «once a year» after 
 
 Staff acknowledgement
 
-I have read this Facility, Engineering Support and Utility Systems policy of Preview Hospital. I will follow the processes described.
+I have read the Policy on Facility, Engineering Support and Utility Systems of Preview Hospital. I will follow the processes described.
 
 Name: ___________________________    Designation: ___________________________
 
@@ -189,8 +157,8 @@ Signature: ___________________________
 
 ## 10. References
 
-- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.4. Official portal PDF (OE text, counts, levels, asterisks).
-- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.4 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_fms_guidebook_ocr.txt).
+- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.4.
+- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.4 interpretations.
 - Internal documents of Preview Hospital: facility-inspection records, as-built drawings, utility and medical-equipment logs, medical-gas records, fire and non-fire plans named for FMS.4.
 
 ## 11. Distribution
@@ -220,14 +188,14 @@ This table is an index. It is not how the policy is organised.
 
 | OE | Requirement | Where this policy addresses it | Responsible |
 | --- | --- | --- | --- |
-| FMS.4.a | The organisation plans for utility and engineering equipment in accordance with its services and strategic plan. | Section 3; 5.1; Section 6 Stop-work | Engineering In-Charge |
-| FMS.4.b | Equipment is inventoried, and proper logs are maintained as required. | Section 3; 5.2; Section 6 Stop-work | Engineering In-Charge |
+| FMS.4.a | The organisation plans for utility and engineering equipment in accordance with its services and strategic plan. | Section 3; 5.1 | Engineering In-Charge |
+| FMS.4.b | Equipment is inventoried, and proper logs are maintained as required. | Section 3; 5.2 | Engineering In-Charge |
 | FMS.4.c | The documented operational and maintenance (preventive and breakdown) plan is implemented. | Section 3; 5.3; Section 6 Stop-work | Engineering In-Charge |
-| FMS.4.d | Utility equipment, are periodically inspected and calibrated (wherever applicable) for their proper functioning. | Section 3; 5.4; Section 6 Stop-work | Engineering In-Charge |
-| FMS.4.e | Competent personnel operate, inspect, test and maintain equipment and utility systems. | Section 3; 5.5; Section 6 Stop-work | Engineering In-Charge |
-| FMS.4.f | Maintenance staff is contactable round the clock for emergency repairs. | Section 3; 5.6; Section 6 Stop-work | Engineering In-Charge |
-| FMS.4.g | Downtime for critical equipment breakdowns is monitored from reporting to inspection and implementation of corrective actions. | Section 3; 5.7; Section 6 Stop-work | Engineering In-Charge |
-| FMS.4.h | Written guidance supports equipment replacement, identification of unwanted material and disposal. | Section 3; 5.8; Section 6 Stop-work | Engineering In-Charge |
+| FMS.4.d | Utility equipment, are periodically inspected and calibrated (wherever applicable) for their proper functioning. | Section 3; 5.4 | Engineering In-Charge |
+| FMS.4.e | Competent personnel operate, inspect, test and maintain equipment and utility systems. | Section 3; 5.5 | Engineering In-Charge |
+| FMS.4.f | Maintenance staff is contactable round the clock for emergency repairs. | Section 3; 5.6 | Engineering In-Charge |
+| FMS.4.g | Downtime for critical equipment breakdowns is monitored from reporting to inspection and implementation of corrective actions. | Section 3; 5.7 | Engineering In-Charge |
+| FMS.4.h | Written guidance supports equipment replacement, identification of unwanted material and disposal. | Section 3; 5.8 | Engineering In-Charge |
 
 ## 14. Required Records / Evidence Checklist
 
