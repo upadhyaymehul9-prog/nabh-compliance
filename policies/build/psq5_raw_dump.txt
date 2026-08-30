@@ -1,0 +1,160 @@
+PSQ.5 — Raw Source Dump
+=======================
+
+Standard text (verbatim):
+There is an established system for clinical audit.
+
+OE count: 6 | COREs: none | Stars: none
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.5.a
+Level: Commitment | No star
+
+Verbatim OE text:
+Clinical audits are performed to improve the quality of patient care.
+
+Guidebook interpretation (PDF p. 227):
+The organisation shall use clinical audits as a quality improvement tool to
+improve the quality of patient care. The clinical audit could be
+retrospective/prospective in nature. The topic for audit could be
+disease-based, cost-based, community-based or based on morbidity (length of
+stay). The organisation shall conduct one clinical audit per clinical
+department once in two years as per the scope of services. The organisation
+needs to take care to differentiate clinical audit from research projects.
+
+Stop-work check: Commitment — no stop-work trigger. Note: "once in two years"
+is verbatim in the source (shall) — preserve this exact frequency without
+replacing it with a vaguer term. The clinical audit topics (disease-based,
+cost-based, community-based, morbidity/LOS) are illustrative examples; the
+organisation selects its own topics.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.5.b
+Level: Commitment | No star
+
+Verbatim OE text:
+The parameters to be audited are defined by the organisation.
+
+Guidebook interpretation (PDF p. 228):
+As clinical audits are standards-based, they must be done using predefined
+parameters so that there is no bias. The organisation shall lay down the
+objectives, the standards against which the audit will be conducted, develop
+a checklist where required, sampling and data collection guidelines and
+preparation of the report. The audit shall encompass aspects of clinical and
+nursing care.
+
+Stop-work check: Commitment — no stop-work trigger. The predefined-parameters
+requirement (objectives, standards, checklist, sampling/data-collection
+guidelines, report) is mandatory (shall) — all components must be referenced
+in any draft.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.5.c
+Level: Achievement | No star
+
+Verbatim OE text:
+Medical and nursing staff participate in clinical audit.
+
+Guidebook interpretation (PDF p. 228):
+The organisation shall identify such personnel. It could be a mix of
+clinicians, administrators and nurses. These could be members of the core
+committee/quality assurance committee etc.
+
+Stop-work check: Achievement — no stop-work trigger. The personnel
+composition (clinicians, administrators, nurses) is illustrative; the
+organisation identifies the specific mix. Quality assurance committee
+membership is one acceptable mechanism, not the only one.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.5.d
+Level: Commitment | No star
+
+Verbatim OE text:
+Patient and staff anonymity are maintained.
+
+Guidebook interpretation (PDF p. 228):
+This means that the names of the patients and the hospital staff who may
+figure in the audit documents must not be disclosed nor any reference is made
+to them in public discussions/conferences. This is at the stage of report
+preparation and dissemination. The staff participating in the audit shall
+maintain patient and staff anonymity and not reveal names.
+
+Stop-work check: Commitment — no stop-work trigger. Anonymity applies at two
+points: report preparation and dissemination — both are covered by the shall.
+Any draft must reflect both stages, not just one.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.5.e
+Level: Commitment | No star
+
+Verbatim OE text:
+Clinical audits are documented.
+
+Guidebook interpretation (PDF p. 228):
+The organisation could use a checklist with the predefined parameters, and the
+audit findings could be recorded on this sheet. After the audit, a report shall
+be prepared, highlighting the key findings of the audit.
+
+Stop-work check: Commitment — no stop-work trigger. The post-audit report is
+mandatory (shall); the checklist/recording mechanism is recommended (could).
+Any draft must reflect the mandatory report while treating the checklist
+format as one acceptable option.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.5.f
+Level: Commitment | No star
+
+Verbatim OE text:
+Remedial measures are implemented.
+
+Guidebook interpretation (PDF p. 228):
+All remedial measures as ascertained shall be documented and implemented, and
+improvements thereof recorded to complete the audit cycle. This shall
+preferably be done based on the root-cause analysis.
+
+Stop-work check: Commitment — no stop-work trigger. Three mandatory (shall)
+actions: document, implement, and record improvements — all three close the
+audit cycle. Root-cause analysis is preferred but not mandatory (shall
+preferably). Any draft must reflect all three mandatory steps.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table
+
+OE   Level        Star   Stop-work   Key constraint
+a    Commitment   No     No          One clinical audit per clinical department
+                                     once in two years (shall — preserve exact
+                                     frequency); retrospective or prospective;
+                                     topics are illustrative; differentiate from
+                                     research projects
+b    Commitment   No     No          Predefined parameters required (shall): lay
+                                     down objectives, standards, checklist,
+                                     sampling/data-collection guidelines, report;
+                                     audit covers clinical and nursing care
+c    Achievement  No     No          Organisation identifies audit personnel; mix
+                                     of clinicians, administrators, nurses;
+                                     QA-committee membership is one option only
+d    Commitment   No     No          Anonymity for both patients and staff at two
+                                     stages: report preparation and dissemination;
+                                     auditors shall not reveal names
+e    Commitment   No     No          Post-audit report is mandatory (shall);
+                                     checklist format is recommended (could);
+                                     report must highlight key findings
+f    Commitment   No     No          Three mandatory steps to close audit cycle:
+                                     document remedial measures, implement them,
+                                     record improvements; root-cause analysis
+                                     preferred but not mandatory
+
+
+─────────────────────────────────────────────────────────────────────────────
+
+Source files:
+  policies/source/hco6_psq_ocr.txt          (verbatim OE text)
+  policies/source/hco6_psq_guidebook_ocr.txt (Guidebook interpretations, PDF pp. 227-228)
+  policies/source/hco6_psq_inventory.json    (levels, stars, OE codes)
