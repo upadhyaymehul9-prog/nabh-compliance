@@ -1813,6 +1813,755 @@ def gen_cop4():
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# COP.5 — Cardio-pulmonary Resuscitation Services   (STOP-WORK YES)
+# Content: ChatGPT final draft (approved, COP%2005.pdf).
+# Structure: Stop-work Section 6, Governance Section 7, Quality monitoring Section 8.
+# All OEs: Commitment | No stars | No COREs
+# Exact frequency: "at least once a quarter" (3.5/5.5)
+# 9 coverage areas (3.3/5.3) | 5 record items (3.4/5.4) | 5 analysis foci (3.5/5.5)
+# 4 committee roles (3.5/5.5)
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_cop5():
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Cardio-pulmonary Resuscitation Services")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/COP/POL/05", "Medical Superintendent")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Cardio-pulmonary resuscitation services shall be available and provided to patients "
+      f"at all times. {HN} shall maintain a documented CPR procedure, appropriate equipment "
+      "and medications, trained team roles, event recording, post-event analysis and corrective "
+      "and preventive measures.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      "This policy establishes requirements for providing cardio-pulmonary resuscitation "
+      "services, maintaining CPR readiness, recording CPR events and mock drills, analysing "
+      "outcomes, and implementing corrective and preventive measures. Those requirements are "
+      "covered in the hospital's other policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies across all areas of {HN} where cardio-pulmonary resuscitation "
+      "may be required, including the patient care areas identified in this policy.")
+
+    # 3. Policy standards
+    h(doc, 1, "3. Policy standards")
+
+    h(doc, 2, "3.1 CPR procedure and immediate response")
+    p(doc,
+      "The organisation shall document the procedure for cardio-pulmonary resuscitation (CPR) "
+      "for adults across all areas in the organisation. This shall be in consonance with "
+      "accepted practices.")
+    p(doc,
+      "Where appropriate, it shall also address obstetric, paediatric and neonatal patients.")
+    p(doc,
+      "The organisation shall ensure that medical equipment for resuscitation and medications "
+      "for basic and advanced life support are provided in standardised manner.")
+    p(doc,
+      "Basic life support shall be initiated as soon as a condition requiring CPR is identified. "
+      "This shall be implemented in all areas of the organisation.")
+    p(doc,
+      "The protocols could be displayed prominently in all critical areas such as emergency, "
+      "ICU, OT and all crash carts.")
+
+    h(doc, 2, "3.2 CPR team roles and responsibilities")
+    p(doc,
+      "CPR team members shall have a clear understanding of their roles and responsibilities "
+      "during resuscitation and shall comply with their assigned roles and responsibilities "
+      "to effectively function as a team.")
+
+    h(doc, 2, "3.3 Equipment and medications")
+    p(doc,
+      "At a minimum, emergency medications and equipment for intubation based on the needs "
+      "of the patients served shall be available in patient care areas including the blood "
+      "centre, radiology, day care, dialysis, chemo ward, OPD, rehabilitation services areas, "
+      "endoscopy, and in areas where any invasive procedure is performed.")
+    p(doc,
+      "Other equipment like defibrillator shall be easily accessible to ensure that there is "
+      "no delay in cardio-pulmonary resuscitation.")
+    p(doc,
+      "It is preferable that the minimum emergency medication is standardised across the "
+      "organisation.")
+
+    h(doc, 2, "3.4 Recording CPR events and mock drills")
+    p(doc,
+      "In the actual event of cardio-pulmonary resuscitation, or a mock drill of the same, "
+      "all the activities along with the personnel attended shall be recorded.")
+    p(doc,
+      "At the minimum, it will include timeliness of response, availability of human resources, "
+      "equipment, drugs, and barriers if any.")
+    p(doc,
+      "The recording could be done using the pre-defined procedural checklist and by monitoring "
+      "whether the prescribed activity has been performed properly and in the right sequence.")
+    p(doc,
+      "It is a good practice to debrief team members regarding the necessary immediate "
+      "corrective and preventive action.")
+
+    h(doc, 2, "3.5 Post-event analysis")
+    p(doc,
+      "The frequency of the committee meeting shall be at least once a quarter.")
+    p(doc,
+      "The analysis shall focus on the initiation of CPR, time of arrival of the team, "
+      "availability of required resources, recording of the sequence of events during CPR "
+      "(including technique) and the overall coordination.")
+    p(doc,
+      "The organisation shall monitor outcome of CPR and identify areas for improvement.")
+    p(doc,
+      "The multidisciplinary committee shall be independent and include at least one "
+      "physician/cardiologist, one anaesthesiologist, one member from the code blue team "
+      "and one nurse.")
+    p(doc,
+      "The analysis shall be completed within a defined time frame.")
+
+    h(doc, 2, "3.6 Corrective and preventive measures")
+    p(doc,
+      "Corrective and preventive measures shall be completed within a defined time frame.")
+    p(doc,
+      "The findings of the post-event analysis shall be communicated to the personnel who "
+      "participated in the CPR.")
+    p(doc,
+      "Any lapses shall be discussed, with the view to improve the outcomes in future.")
+    p(doc,
+      "During subsequent resuscitations, it is preferable that implementation of these actions "
+      "is noted and training be modified, if necessary.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not start CPR without initiating basic life support as soon as a condition "
+       "requiring CPR is identified.")
+    lb(doc,
+       "Do not start a planned resuscitation response without a named CPR team with clear "
+       "roles and without the minimum emergency medications and equipment available at the "
+       "location.")
+    lb(doc,
+       "Do not use a CPR process without the documented CPR procedure and standardised "
+       "resuscitation equipment and medications required by this policy.")
+    lb(doc,
+       "Do not omit emergency medications and intubation equipment from the specified "
+       "patient care areas.")
+    lb(doc,
+       "Do not conduct CPR where the defibrillator cannot be accessed without delay.")
+    lb(doc,
+       "Do not omit recording of an actual CPR event or mock drill, including timeliness "
+       "of response, availability of human resources, equipment, drugs, and barriers if any.")
+    lb(doc,
+       "Do not complete a post-event analysis without the multidisciplinary committee meeting "
+       "at least once a quarter and analysing the specified CPR performance areas.")
+    lb(doc,
+       "Do not omit the independent multidisciplinary committee composition specified in "
+       "this policy.")
+    lb(doc,
+       "Do not leave corrective and preventive measures incomplete beyond the defined time "
+       "frame.")
+    lb(doc,
+       "Do not withhold post-event analysis findings from personnel who participated in "
+       "the CPR.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 CPR procedure and readiness")
+    lb(doc,
+       "Maintain a documented adult CPR procedure across all areas in consonance with "
+       "accepted practices.")
+    lb(doc, "Where appropriate, address obstetric, paediatric and neonatal patients.")
+    lb(doc,
+       "Provide resuscitation equipment and basic and advanced life-support medications in "
+       "a standardised manner.")
+    lb(doc,
+       "Initiate basic life support as soon as a condition requiring CPR is identified in "
+       "all areas.")
+    lb(doc,
+       "Protocols could be displayed prominently in critical areas such as emergency, ICU, "
+       "OT and crash carts.")
+
+    h(doc, 2, "5.2 CPR team")
+    lb(doc,
+       "Ensure CPR team members understand and comply with their assigned roles and "
+       "responsibilities.")
+
+    h(doc, 2, "5.3 Equipment and medication coverage")
+    lb(doc,
+       "Keep at least the required emergency medications and intubation equipment based on "
+       "patient needs in the blood centre, radiology, day care, dialysis, chemo ward, OPD, "
+       "rehabilitation services areas, endoscopy, and areas where an invasive procedure is "
+       "performed.")
+    lb(doc, "Keep the defibrillator easily accessible so there is no delay in CPR.")
+    lb(doc, "Standardisation of the minimum emergency medication is preferable.")
+
+    h(doc, 2, "5.4 Event recording")
+    lb(doc, "Record all activities and personnel involved in actual CPR events and mock drills.")
+    lb(doc,
+       "Record timeliness of response, availability of human resources, equipment, drugs, "
+       "and barriers if any.")
+    lb(doc, "A predefined procedural checklist could be used.")
+    lb(doc,
+       "Debriefing team members regarding immediate corrective and preventive action is "
+       "good practice.")
+
+    h(doc, 2, "5.5 Post-event analysis")
+    lb(doc, "Have the multidisciplinary committee meet at least once a quarter.")
+    lb(doc,
+       "Analyse initiation of CPR, time of arrival of the team, availability of required "
+       "resources, recording of the sequence of events during CPR including technique, and "
+       "overall coordination.")
+    lb(doc, "Monitor CPR outcomes and identify areas for improvement.")
+    lb(doc,
+       "Maintain an independent multidisciplinary committee with at least one "
+       "physician/cardiologist, one anaesthesiologist, one member from the code blue team "
+       "and one nurse.")
+    lb(doc, "Complete the analysis within a defined time frame.")
+
+    h(doc, 2, "5.6 Corrective and preventive measures")
+    lb(doc, "Complete corrective and preventive measures within a defined time frame.")
+    lb(doc,
+       "Communicate post-event analysis findings to personnel who participated in the CPR.")
+    lb(doc, "Discuss lapses to improve outcomes in future.")
+    lb(doc,
+       "Preferably note implementation of actions during subsequent resuscitations and "
+       "modify training if necessary.")
+
+    # 6. Stop-work authority
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Do not start a planned resuscitation response (or mock drill counted as CPR "
+      "competence evidence) without a named CPR team with clear roles and without the "
+      "minimum emergency medications and equipment available at the location. Stop-work "
+      "does not block an unexpected cardiac arrest already in progress — start CPR "
+      "with available staff and escalate for equipment/team immediately. The person "
+      "responsible tells the CPR Committee chair or Emergency In-Charge the same shift. "
+      "Refusing to run a hollow CPR response is not a disciplinary matter.")
+    p(doc,
+      "The post-event analysis committee is a separate governance and quality loop, not "
+      "part of the stop-work trigger. Stop-work concerns CPR readiness at the moment of "
+      "need, not analysis-timeline compliance.")
+
+    # 7. Governance and responsibility — proper table
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("CPR team members",
+         "CPR team members are responsible for understanding and complying with their "
+         "assigned roles and responsibilities during resuscitation."),
+        ("Multidisciplinary CPR committee",
+         "Responsible for post-event analysis, CPR outcome monitoring and identification "
+         "of areas for improvement. The committee shall be independent and include at least "
+         "one physician/cardiologist, one anaesthesiologist, one member from the code blue "
+         "team and one nurse."),
+    ])
+
+    # 8. Quality monitoring — proper table
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("CPR event recording",
+         "CPR events and mock drills, including the required minimum record content"),
+        ("Committee meetings",
+         "Committee meetings at least once a quarter"),
+        ("Analysis coverage",
+         "Analysis of initiation of CPR, time of arrival of the team, availability of "
+         "required resources, recording of the sequence of events during CPR including "
+         "technique, and overall coordination"),
+        ("CPR outcomes",
+         "CPR outcomes and areas for improvement"),
+        ("CAPA completion",
+         "Completion of corrective and preventive measures within the defined time frame"),
+        ("Post-event communication",
+         "Communication of post-event findings to CPR participants"),
+    ])
+
+    # 9. Training and staff acknowledgement
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      "Training and mock drills form part of the documented CPR arrangements. CPR team "
+      "members shall understand their assigned roles and responsibilities.")
+    p(doc,
+      f"I have read the Policy on Cardio-pulmonary Resuscitation Services of {HN}. "
+      "I will follow the processes described.")
+    sig_tbl(doc)
+
+    # 10. Distribution
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "The policy shall be available to personnel involved in CPR services, including CPR "
+      "team members and personnel working in patient care areas.")
+
+    # 11. Abbreviations
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("BLS",  "Basic Life Support"),
+        ("ALS",  "Advanced Life Support"),
+        ("CPR",  "Cardio-pulmonary Resuscitation"),
+        ("CAPA", "Corrective and Preventive Action"),
+        ("ICU",  "Intensive Care Unit"),
+        ("OT",   "Operation Theatre"),
+        ("OPD",  "Outpatient Department"),
+    ])
+
+    # 12. Traceability table
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk in the "
+      "Level column means documentation of the process is required.")
+    tr = tbl(doc, 7, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("COP.5.a", "Commitment",
+         "Sections 3.1 and 5.1 address the documented CPR procedure for adults across all "
+         "areas, standardised resuscitation equipment and medications, and immediate BLS "
+         "initiation."),
+        ("COP.5.b", "Commitment",
+         "Sections 3.2 and 5.2 address CPR team compliance with assigned roles and "
+         "responsibilities."),
+        ("COP.5.c", "Commitment",
+         "Sections 3.3 and 5.3 address emergency medications and intubation equipment in "
+         "the nine specified areas and areas where invasive procedures are performed, and "
+         "defibrillator accessibility."),
+        ("COP.5.d", "Commitment",
+         "Sections 3.4 and 5.4 address recording of actual CPR events and mock drills, "
+         "including the five minimum content items."),
+        ("COP.5.e", "Commitment",
+         "Sections 3.5 and 5.5 address post-event analysis: quarterly committee meetings, "
+         "five analysis areas, CPR outcome monitoring, independent committee with minimum "
+         "composition and analysis within a defined time frame."),
+        ("COP.5.f", "Commitment",
+         "Sections 3.6 and 5.6 address CAPA within a defined time frame, findings "
+         "communicated to CPR participants, and lapses discussed for future improvement."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 13. Required Records/Evidence Checklist
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "CPR procedure and readiness")
+    lb(doc,
+       "Documented adult CPR procedure across all areas in consonance with accepted practices.")
+    lb(doc,
+       "Written provisions, where appropriate, for obstetric, paediatric and neonatal CPR.")
+    lb(doc,
+       "Standardised resuscitation equipment and BLS/ALS medications across the organisation.")
+    lb(doc,
+       "Evidence that BLS is initiated immediately on identification of a CPR-requiring "
+       "condition in all areas.")
+
+    h(doc, 2, "Equipment and medication coverage")
+    lb(doc,
+       "Emergency medications and intubation equipment available in the blood centre, "
+       "radiology, day care, dialysis, chemo ward, OPD, rehabilitation services areas, "
+       "endoscopy, and all areas where invasive procedures are performed.")
+    lb(doc, "Defibrillator accessible without delay in CPR locations.")
+
+    h(doc, 2, "CPR event and mock drill recording")
+    lb(doc, "Records of actual CPR events and mock drills including personnel attended.")
+    lb(doc,
+       "Minimum record content: timeliness of response, availability of human resources, "
+       "equipment, drugs, and barriers if any.")
+
+    h(doc, 2, "Post-event analysis")
+    lb(doc,
+       "Evidence that the multidisciplinary committee meets at least once a quarter.")
+    lb(doc,
+       "Analysis records covering: initiation of CPR, time of arrival of the team, "
+       "availability of required resources, recording of event sequence including technique, "
+       "and overall coordination.")
+    lb(doc, "CPR outcome records and identified areas for improvement.")
+    lb(doc,
+       "Evidence of independent multidisciplinary committee with at least one "
+       "physician/cardiologist, one anaesthesiologist, one member from the code blue team "
+       "and one nurse.")
+    lb(doc, "Evidence of analysis completed within the defined time frame.")
+
+    h(doc, 2, "CAPA and communication")
+    lb(doc, "CAPA records showing measures completed within the defined time frame.")
+    lb(doc,
+       "Evidence that post-event analysis findings were communicated to CPR participants.")
+    lb(doc, "Records of lapses discussed and actions taken for future improvement.")
+
+    # 14. References
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. COP.5.")
+    ln(doc, "Guidebook interpretation supplied for COP.5.a through COP.5.f.")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied COP.5 objective elements and Guidebook "
+      "interpretation into plain language. Mandatory requirements and their stated modal "
+      "strength have been retained. Illustrative examples, optional approaches and references "
+      "have not been converted into mandatory requirements.")
+
+    save_and_verify(doc, "HCO_COP_5_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# COP.6 — Nursing Care   (NO stop-work)
+# Content: raw source dump cop_raw_dump_5-8.txt (no ChatGPT PDF — rebuilt from source)
+# Structure: Governance Section 6, Quality monitoring Section 7 (no stop-work shift)
+# Stars: a★, d★ | Achievement: c | All other OEs: Commitment
+# Exact frequency: "reviewed annually at the minimum" (3.1/5.1)
+# Five nursing care plan components (3.4/5.4): assessment, plan of care,
+#   implementation of care, evaluation, modification of plan of care as may be required
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_cop6():
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Nursing Care")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/COP/POL/06", "Nursing Superintendent")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      f"{HN} ensures that nursing care is provided to patients in consonance with clinical "
+      "protocols. Nursing care follows written guidance, is assigned based on clinical need and "
+      "competence, is documented in an individualised nursing care plan, and is supported by "
+      "appropriate equipment. Nurses are empowered to make patient care decisions within their "
+      "defined scope of practice.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      "This policy establishes requirements for providing nursing care through written guidance "
+      "and clinical practice guidelines, assigning patient care based on clinical requirements "
+      "and nursing competence, implementing acuity-based staffing, maintaining individualised "
+      "nursing care plans, providing appropriate nursing equipment, and defining the scope of "
+      "nursing practice decisions.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to all nursing staff providing patient care across all wards, "
+      f"departments and care settings of {HN}.")
+
+    # 3. Policy standards
+    h(doc, 1, "3. Policy standards")
+
+    h(doc, 2, "3.1 Written guidance and clinical practice guidelines")
+    p(doc,
+      "Nursing care is provided in accordance with written guidance. The written guidance could "
+      "be in the form of a nursing manual or standard operating procedures incorporating various "
+      "basic nursing practices and procedures.")
+    p(doc,
+      "Care of patients in specific clinical situations shall be guided by nursing clinical "
+      "practice guidelines based on best clinical practices.")
+    p(doc,
+      "Nursing clinical care guidelines and pathways shall be reviewed annually at the minimum, "
+      "and revised as appropriate.")
+    p(doc,
+      "Examples of nursing clinical practice guidelines include prevention of fall, prevention "
+      "of development of pressure ulcers in an in-patient, and deep venous thrombosis risk "
+      "assessment and prevention. These examples are illustrative; the organisation selects "
+      "guidelines appropriate to its clinical scope.")
+
+    h(doc, 2, "3.2 Assignment of patient care")
+    p(doc,
+      "Assignment of patient care shall be based on the patient's clinical requirements and "
+      "the competence of the nursing staff, and shall align with the guidelines laid down by "
+      "regulatory and professional bodies.")
+
+    h(doc, 2, "3.3 Acuity-based staffing")
+    p(doc,
+      "The organisation implements acuity-based staffing — matching both the number and "
+      "competence of nursing personnel to patient acuity — to improve patient outcomes.")
+    p(doc,
+      "Patient outcomes linked to acuity-based staffing may include incidence of pressure "
+      "sores, falls, medication administration errors, and ventilator-associated pneumonia. "
+      "The organisation selects relevant outcome indicators for its own scope of services.")
+
+    h(doc, 2, "3.4 Nursing care plan")
+    p(doc,
+      "Care shall be provided as per the nursing care plan, which shall be individualised as "
+      "per the clinical needs of each patient. Where a patient care plan has been developed, "
+      "the nursing care plan shall be aligned with it. Uniformity and continuity of care shall "
+      "be practised.")
+    p(doc,
+      "Components of the nursing care plan include: Assessment; Plan of care; Implementation "
+      "of care; Evaluation; and Modification of plan of care as may be required.")
+    p(doc,
+      "Documentation includes all nursing-related care and not just monitoring of vitals and "
+      "documentation of medication administration. Nursing progress shall be documented in a "
+      "timely manner for each patient.")
+
+    h(doc, 2, "3.5 Nursing equipment")
+    p(doc,
+      "There shall be an adequate number of basic nursing equipment and gadgets necessary for "
+      "functioning in each designated area. Examples include nebuliser machines, glucometers, "
+      "sphygmomanometers, thermometers and weighing scales — the organisation determines the "
+      "appropriate equipment for its scope and patient population.")
+    p(doc,
+      "The equipment shall be appropriate for the area. For example, BP cuffs in a paediatric "
+      "area shall be of appropriate size for the patient population served.")
+
+    h(doc, 2, "3.6 Scope of nursing practice decisions")
+    p(doc,
+      "The organisation shall define the patient care decisions that come under the scope of "
+      "nursing practice.")
+    p(doc,
+      "Nurses shall be aware of their defined scope and shall be able to make appropriate "
+      "nursing-related decisions in a timely manner.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not provide nursing care for specific clinical situations without nursing clinical "
+       "practice guidelines based on best clinical practices.")
+    lb(doc,
+       "Do not let nursing clinical care guidelines and pathways go more than one year without "
+       "review.")
+    lb(doc,
+       "Do not assign patient care without considering the patient's clinical requirements and "
+       "the competence of the nursing staff.")
+    lb(doc,
+       "Do not omit the nursing care plan for any patient where one is required; the plan shall "
+       "be individualised as per the patient's clinical needs.")
+    lb(doc,
+       "Do not omit any of the five nursing care plan components: Assessment; Plan of care; "
+       "Implementation of care; Evaluation; and Modification of plan of care as may be required.")
+    lb(doc,
+       "Do not leave a ward or department without an adequate number of nursing equipment "
+       "appropriate for the area and patient population.")
+    lb(doc,
+       "Do not leave the scope of nursing practice decisions undefined or leave nurses unaware "
+       "of their defined scope.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Written guidance and clinical practice guidelines")
+    lb(doc,
+       "Provide written guidance for nursing care — this could be a nursing manual or SOPs "
+       "covering basic nursing practices and procedures.")
+    lb(doc,
+       "Guide care of patients in specific clinical situations through nursing clinical practice "
+       "guidelines based on best clinical practices.")
+    lb(doc,
+       "Review nursing clinical care guidelines and pathways annually at the minimum and revise "
+       "as appropriate.")
+    lb(doc,
+       "Examples of applicable guidelines include fall prevention, pressure ulcer prevention "
+       "and DVT risk assessment — the organisation selects relevant guidelines for its scope.")
+
+    h(doc, 2, "5.2 Assignment of patient care")
+    lb(doc,
+       "Assign patient care based on the patient's clinical requirements and the competence of "
+       "the nursing staff, aligned with regulatory and professional body guidelines.")
+
+    h(doc, 2, "5.3 Acuity-based staffing")
+    lb(doc,
+       "Implement acuity-based staffing — match the number and competence of nursing personnel "
+       "to patient acuity — to improve patient outcomes.")
+    lb(doc,
+       "Monitor patient outcomes linked to acuity-based staffing and use results for "
+       "improvement.")
+
+    h(doc, 2, "5.4 Nursing care plan")
+    lb(doc,
+       "Provide nursing care as per an individualised nursing care plan based on each patient's "
+       "clinical needs; where a patient care plan exists, align the nursing care plan with it.")
+    lb(doc, "Practise uniformity and continuity of care.")
+    lb(doc,
+       "Ensure every nursing care plan covers all five components: Assessment; Plan of care; "
+       "Implementation of care; Evaluation; and Modification of plan of care as may be required.")
+    lb(doc,
+       "Document all nursing-related care — not just monitoring of vitals and medication "
+       "administration — in a timely manner for each patient.")
+
+    h(doc, 2, "5.5 Nursing equipment")
+    lb(doc,
+       "Maintain an adequate number of basic nursing equipment appropriate for each ward and "
+       "department and the patient population it serves.")
+    lb(doc,
+       "Ensure equipment is appropriate for the area — e.g., appropriate-size BP cuffs in "
+       "paediatric areas.")
+
+    h(doc, 2, "5.6 Scope of nursing practice decisions")
+    lb(doc,
+       "Define the patient care decisions that come under the scope of nursing practice and "
+       "ensure all nurses are aware of their defined scope.")
+    lb(doc,
+       "Ensure nurses are able to make appropriate nursing-related decisions in a timely manner.")
+
+    # 6. Governance and responsibility — proper table (no stop-work, so Section 6)
+    h(doc, 1, "6. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Nursing Superintendent",
+         "Owns day-to-day implementation of nursing care processes; ensures nursing clinical "
+         "practice guidelines are reviewed annually at the minimum; oversees individualised "
+         "nursing care plan documentation and compliance."),
+        ("Medical Superintendent",
+         "Accountable that this policy is followed and appropriately resourced."),
+        ("Quality Coordinator",
+         "Supports audit of nursing care documentation, CPG review records and nursing "
+         "equipment adequacy."),
+    ])
+
+    # 7. Quality monitoring — proper table
+    h(doc, 1, "7. Quality monitoring")
+    mon_tbl(doc, [
+        ("Written guidance and CPG review",
+         "Nursing written guidance in place; nursing CPGs/pathways reviewed annually at the "
+         "minimum and revised as appropriate"),
+        ("Nursing care plans",
+         "Individualised nursing care plans present and documented, covering all five "
+         "components: assessment, plan of care, implementation of care, evaluation, and "
+         "modification of plan of care as may be required"),
+        ("Nursing progress documentation",
+         "Nursing progress documented in a timely manner for each patient, covering all "
+         "nursing-related care and not only vitals and medication administration"),
+        ("Care assignment",
+         "Patient care assignment based on clinical requirements and nursing staff competence, "
+         "aligned with regulatory and professional body guidelines"),
+        ("Nursing equipment",
+         "Adequate and area-appropriate nursing equipment present in all wards and departments"),
+        ("Scope of practice",
+         "Defined scope of nursing practice decisions; nurses aware and making timely decisions"),
+    ])
+
+    # 8. Training and staff acknowledgement
+    h(doc, 1, "8. Training and staff acknowledgement")
+    p(doc,
+      "Nursing staff shall have access to ongoing training on nursing care processes, clinical "
+      "practice guidelines and care plan documentation.")
+    p(doc,
+      f"I have read the Policy on Nursing Care of {HN}. I will follow the processes described.")
+    sig_tbl(doc)
+
+    # 9. Distribution
+    h(doc, 1, "9. Distribution")
+    p(doc,
+      "This policy shall be available to all nursing staff, the Nursing Superintendent, "
+      "ward in-charges and the Quality Coordinator.")
+
+    # 10. Abbreviations
+    h(doc, 1, "10. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CPG",  "Clinical Practice Guideline"),
+        ("DVT",  "Deep Venous Thrombosis"),
+        ("SOP",  "Standard Operating Procedure"),
+        ("VAP",  "Ventilator-Associated Pneumonia"),
+    ])
+
+    # 11. Traceability table
+    h(doc, 1, "11. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk in the "
+      "Level column means documentation of the process is required.")
+    tr = tbl(doc, 7, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("COP.6.a", "Commitment*",
+         "Sections 3.1 and 5.1 address nursing care in accordance with written guidance, "
+         "nursing CPGs based on best clinical practices for specific clinical situations, and "
+         "annual review of nursing CPGs/pathways at the minimum."),
+        ("COP.6.b", "Commitment",
+         "Sections 3.2 and 5.2 address assignment of patient care based on clinical "
+         "requirements and nursing staff competence, aligned with regulatory and professional "
+         "body guidelines."),
+        ("COP.6.c", "Achievement",
+         "Sections 3.3 and 5.3 address implementation of acuity-based staffing — matching "
+         "numbers and competence to patient acuity — to improve patient outcomes."),
+        ("COP.6.d", "Commitment*",
+         "Sections 3.4 and 5.4 address the individualised nursing care plan aligned with the "
+         "overall patient care plan where one exists; uniformity and continuity of care; all "
+         "five nursing care plan components; and timely documentation of all nursing-related "
+         "care."),
+        ("COP.6.e", "Commitment",
+         "Sections 3.5 and 5.5 address adequate nursing equipment in adequate numbers, "
+         "appropriate for each area and patient population."),
+        ("COP.6.f", "Commitment",
+         "Sections 3.6 and 5.6 address the defined scope of nursing practice decisions and "
+         "nurses' ability to make timely nursing decisions within that scope."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 12. Required Records/Evidence Checklist
+    h(doc, 1, "12. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Written guidance and CPG review")
+    lb(doc,
+       "Nursing written guidance (nursing manual, SOPs, or clinical practice guidelines) "
+       "covering basic nursing practices and procedures.")
+    lb(doc,
+       "Nursing clinical practice guidelines for specific clinical situations, based on best "
+       "clinical practices.")
+    lb(doc,
+       "Evidence of annual review and revision of nursing CPGs and pathways at the minimum.")
+
+    h(doc, 2, "Nursing care plan and documentation")
+    lb(doc,
+       "Individualised nursing care plans covering all five components: assessment, plan of "
+       "care, implementation of care, evaluation, and modification of plan of care as may be "
+       "required.")
+    lb(doc,
+       "Evidence that the nursing care plan is aligned with the overall patient care plan "
+       "where one exists.")
+    lb(doc,
+       "Nursing progress records documenting all nursing-related care in a timely manner, "
+       "not limited to vitals and medication administration.")
+
+    h(doc, 2, "Care assignment and staffing")
+    lb(doc,
+       "Evidence that patient care assignment is based on clinical requirements and nursing "
+       "staff competence, aligned with regulatory and professional body guidelines.")
+    lb(doc,
+       "Acuity-based staffing arrangements — numbers and competence matched to patient acuity "
+       "— and patient outcome monitoring.")
+
+    h(doc, 2, "Nursing equipment")
+    lb(doc,
+       "Adequate number of basic nursing equipment present in each ward and department, "
+       "appropriate for the area and patient population served.")
+
+    h(doc, 2, "Scope of nursing practice")
+    lb(doc,
+       "Written definition of patient care decisions within the scope of nursing practice.")
+    lb(doc,
+       "Evidence that nurses are aware of their defined scope and make timely nursing decisions.")
+
+    # 13. References
+    h(doc, 1, "13. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. COP.6.")
+    ln(doc, "Guidebook interpretation supplied for COP.6.a through COP.6.f.")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied COP.6 objective elements and Guidebook "
+      "interpretation into plain language. Mandatory requirements and their stated modal "
+      "strength have been retained. Illustrative examples, optional approaches and references "
+      "have not been converted into mandatory requirements.")
+
+    save_and_verify(doc, "HCO_COP_6_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 if __name__ == "__main__":
     gen_cop1()
     print("\nCOP.1 draft generated.")
@@ -1822,3 +2571,7 @@ if __name__ == "__main__":
     print("\nCOP.3 draft generated.")
     gen_cop4()
     print("\nCOP.4 draft generated.")
+    gen_cop5()
+    print("\nCOP.5 draft generated.")
+    gen_cop6()
+    print("\nCOP.6 draft generated.")
