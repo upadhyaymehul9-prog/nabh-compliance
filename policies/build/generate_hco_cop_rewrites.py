@@ -2562,6 +2562,369 @@ def gen_cop6():
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# COP.7 — Clinical Procedures Performed Safely   (HAS stop-work: Section 6)
+# Content: Approved plain-language draft (cop7_content.txt), checked against source.
+# Structure: Document control table, Stop-work Section 6, Governance Section 7,
+#            Quality monitoring Section 8, Traceability Section 12, Checklist Section 13.
+# OEs: a: Commitment | b: Commitment* | c: Commitment | d: CORE* | e: Commitment |
+#      f: Commitment | g: Commitment
+# Exact quantities: two identifiers (3.4/5.4) | three monitoring parameters: pulse,
+#   blood pressure, respiratory rate (3.6/5.6) | five documentation elements (3.7/5.7):
+#   procedure name, who performed it, salient steps, key findings, post-procedure care |
+#   four meta-elements: name, date, time, signature (3.7/5.7)
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_cop7():
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Clinical Procedures Performed Safely")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/COP/POL/07", "Medical Superintendent")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Clinical procedures are performed based on genuine clinical need, by qualified "
+      "personnel, with the right patient, procedure, and site verified every time.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} decides when a clinical procedure is needed, makes "
+      "sure only qualified personnel perform or assist it, verifies the correct patient, "
+      "procedure, and site before starting, and documents what was done.")
+    p(doc,
+      "This policy does not cover informed consent content, patient assessment, or "
+      "privileging criteria in detail — those are covered in other hospital policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to all clinical staff who order, plan, perform, or assist "
+      f"in performing clinical procedures at {HN}.")
+
+    # 3. Policy standards
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} bases every clinical procedure on genuine clinical need, uses only privileged "
+      "personnel to perform or assist, follows a documented checklist to verify the correct "
+      "patient, procedure, and site before starting, takes informed consent where applicable, "
+      "monitors patients during and after the procedure, and documents every procedure "
+      "accurately.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not perform a procedure unless it is based on the patient's clinical need and "
+       "consistent with standard treatment guidelines or sound clinical practice.")
+    lb(doc,
+       "Do not perform any procedure — diagnostic, therapeutic, or supportive — without "
+       "written guidance covering who does it, pre-procedure instructions, the conduct of "
+       "the procedure, and post-procedure care.")
+    lb(doc,
+       "Do not skip the pre-procedure assessment, which must include at least the patient's "
+       "vitals.")
+    lb(doc,
+       "Do not let anyone who is not privileged for a procedure perform it or assist in it.")
+    lb(doc,
+       "Do not proceed with any procedure without completing the documented "
+       "patient/procedure/site verification checklist, using at least two identifiers, one "
+       "of which is the unique identification number.")
+    lb(doc,
+       "Do not skip the attempt to verify patient/procedure/site in an emergency — where "
+       "full verification isn't possible, document the exception in the medical record.")
+    lb(doc,
+       "Do not proceed with a procedure requiring informed consent without obtaining it from "
+       "the person performing the procedure or a doctor from the treating team.")
+    lb(doc,
+       "Do not skip the minimum monitoring parameters — pulse, blood pressure, and "
+       "respiratory rate — during and after an invasive procedure.")
+    lb(doc,
+       "Do not document a procedure without including the procedure name, who performed it, "
+       "the salient steps, key findings, and post-procedure care, along with name, date, "
+       "time, and signature.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Base every procedure on clinical need")
+    p(doc,
+      "The decision to perform a procedure is based on the patient's clinical needs, "
+      "following standard treatment guidelines or sound clinical practice.")
+    p(doc, "A qualified medical practitioner decides whether the procedure is indicated.")
+    p(doc,
+      "Where more than one procedure option exists, the choice is based on the likely best "
+      "outcome, taking the patient's wishes and safety into account.")
+    p(doc,
+      f"{HN} could audit its procedures over time to help achieve the best outcomes.")
+
+    h(doc, 2, "5.2 Follow written guidance for every type of procedure")
+    p(doc,
+      "Written guidance covers all procedures — diagnostic, therapeutic, and supportive.")
+    p(doc,
+      "The guidance states who performs the procedure, pre-procedure instructions where "
+      "applicable, how the procedure is carried out, and post-procedure instructions and "
+      "care where applicable.")
+    p(doc, "Equipment used for procedures is set up and used safely.")
+    p(doc,
+      "Before any procedure, a brief assessment is done that includes at least the "
+      "patient's vitals.")
+
+    h(doc, 2, "5.3 Use only privileged personnel")
+    p(doc,
+      "Anyone who orders, plans, performs, or assists in a procedure is privileged to "
+      "do so.")
+
+    h(doc, 2, "5.4 Verify the correct patient, procedure, and site every time")
+    p(doc,
+      "Before any procedure, staff use a documented checklist to prevent wrong-patient, "
+      "wrong-procedure, and wrong-site events.")
+    p(doc,
+      "At least two identifiers are used to confirm the patient, one of which is the "
+      "unique identification number generated at registration.")
+    p(doc,
+      "Every team member shares responsibility; the person performing the procedure carries "
+      "the final responsibility. Where a trainee performs the procedure, the supervising "
+      "clinician carries the final responsibility.")
+    p(doc,
+      "In an emergency, staff still attempt verification; exceptions are documented in the "
+      "medical record. Patients or their relatives are involved in site marking whenever "
+      "possible.")
+
+    h(doc, 2, "5.5 Take informed consent")
+    p(doc,
+      "Where applicable, informed consent is taken by the person performing the procedure "
+      "or a doctor from the treating team.")
+    p(doc,
+      "If a trainee performs the procedure, this is stated in the consent documentation "
+      "and the treating doctor supervises.")
+
+    h(doc, 2, "5.6 Monitor patients during and after the procedure")
+    p(doc,
+      "For invasive procedures, monitoring includes at minimum pulse, blood pressure, and "
+      "respiratory rate, plus any other parameter the patient's condition calls for.")
+    p(doc,
+      "The extent and duration of monitoring depends on procedure complexity and the "
+      "patient's other health conditions.")
+
+    h(doc, 2, "5.7 Document every procedure accurately")
+    p(doc,
+      "Every procedure is documented with the procedure name, who performed it, the key "
+      "steps taken, the findings, and the post-procedure care given.")
+    p(doc, "Every entry includes name, date, time, and signature.")
+
+    # 6. Stop-work authority
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Do not perform a clinical procedure that is not based on the patient's clinical "
+      "need, that lacks written guidance where required, or that is ordered, performed, or "
+      "assisted by personnel not qualified for that procedure.")
+    p(doc,
+      "Stop-work applies to the elective or non-emergent procedure start. Emergent "
+      "life-saving procedures continue with the best available qualified help and are "
+      "documented afterward.")
+    p(doc,
+      "The person who stops tells the treating doctor and the Medical Superintendent the "
+      "same shift. Refusing an unsafe procedure is not a disciplinary matter.")
+
+    # 7. Governance and responsibility — proper table
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable that this policy is followed and appropriately resourced; receives "
+         "stop-work notifications the same shift."),
+        ("Treating doctor / clinical team",
+         "Decides clinical indication, ensures the correct patient/procedure/site "
+         "verification checklist is completed, takes or supervises informed consent, and "
+         "is notified of stop-work the same shift."),
+        ("Person performing the procedure",
+         "Carries final responsibility for the verification checklist and for accurate "
+         "procedure documentation."),
+        ("Supervising clinician (where a trainee performs)",
+         "Carries final responsibility for the verification checklist and supervises "
+         "consent documentation when a person in training performs the procedure."),
+        ("All clinical staff involved",
+         "Follow the applicable written guidance; participate in pre-procedure "
+         "patient/procedure/site verification; share responsibility for correct "
+         "verification."),
+    ])
+
+    # 8. Quality monitoring — proper table
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Clinical indication",
+         "Procedures based on clinical need and consistent with standard treatment "
+         "guidelines or sound clinical practice"),
+        ("Written guidance",
+         "Written guidance in place for all types of procedure performed"),
+        ("Patient/procedure/site verification",
+         "Documented checklist completed before every procedure, with at least two "
+         "identifiers including the unique identification number"),
+        ("Emergency verification exceptions",
+         "Exceptions documented in the medical record where full verification was not "
+         "possible in an emergency"),
+        ("Invasive procedure monitoring",
+         "Minimum monitoring parameters — pulse, blood pressure, and respiratory rate — "
+         "recorded for invasive procedures"),
+        ("Procedure documentation completeness",
+         "Procedure records containing all five documentation elements and all four "
+         "meta-elements"),
+    ])
+
+    # 9. Training and staff acknowledgement
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      "Staff involved in clinical procedures shall be familiar with the written guidance "
+      "for the procedures they perform or assist, the patient/procedure/site verification "
+      "process, the minimum monitoring requirements, and the procedure documentation "
+      "requirements applicable to their work.")
+    p(doc,
+      f"I have read the Policy on Clinical Procedures Performed Safely of {HN}. "
+      "I will follow the processes described.")
+    sig_tbl(doc)
+
+    # 10. Distribution
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to all clinical staff who order, plan, perform, or "
+      "assist in performing clinical procedures.")
+
+    # 11. Abbreviations
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("SOP", "Standard Operating Procedure"),
+        ("WHO", "World Health Organisation"),
+    ])
+
+    # 12. Traceability table
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk in the "
+      "Level column means documentation of the process is required.")
+    tr = tbl(doc, 8, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("COP.7.a", "Commitment",
+         "Section 5.1 addresses basing every procedure on clinical need, practitioner "
+         "decision on indication, outcome-based choice where options exist, and optional "
+         "auditing of procedures."),
+        ("COP.7.b", "Commitment*",
+         "Section 5.2 addresses written guidance for all types of procedure, the "
+         "required content of that guidance, safe equipment set-up and use, and the minimum "
+         "pre-procedure assessment including vitals."),
+        ("COP.7.c", "Commitment",
+         "Section 5.3 addresses use of only privileged personnel to order, plan, "
+         "perform, or assist in any procedure."),
+        ("COP.7.d", "CORE*",
+         "Section 5.4 addresses the documented patient/procedure/site verification "
+         "checklist, at least two identifiers including the unique identification number, "
+         "responsibility allocation, emergency exception documentation, and patient/relative "
+         "involvement in site marking."),
+        ("COP.7.e", "Commitment",
+         "Section 5.5 addresses informed consent by the person performing the "
+         "procedure or a treating-team doctor, and trainee-performer consent documentation "
+         "and supervision."),
+        ("COP.7.f", "Commitment",
+         "Section 5.6 addresses the three minimum monitoring parameters — pulse, "
+         "blood pressure, and respiratory rate — for invasive procedures, plus additional "
+         "monitoring as clinically indicated."),
+        ("COP.7.g", "Commitment",
+         "Section 5.7 addresses the five documentation elements — procedure name, "
+         "who performed it, key steps, findings, post-procedure care — and the four "
+         "meta-elements — name, date, time, signature."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 13. Required Records/Evidence Checklist
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Clinical indication and written guidance")
+    lb(doc,
+       "Evidence that every procedure performed is based on the patient's clinical need "
+       "and consistent with standard treatment guidelines or sound clinical practice.")
+    lb(doc,
+       "Written guidance for all types of procedure performed — diagnostic, therapeutic, "
+       "and supportive — covering who performs the procedure, pre-procedure instructions, "
+       "procedure conduct, and post-procedure care where applicable.")
+    lb(doc, "Evidence of safe equipment set-up and use for procedures.")
+    lb(doc,
+       "Pre-procedure assessment records showing at least the patient's vitals were "
+       "assessed before every procedure.")
+
+    h(doc, 2, "Personnel privileging")
+    lb(doc,
+       "Evidence that anyone who orders, plans, performs, or assists in a procedure is "
+       "privileged to do so.")
+
+    h(doc, 2, "Patient/procedure/site verification")
+    lb(doc,
+       "Documented patient/procedure/site verification checklist completed before every "
+       "procedure.")
+    lb(doc,
+       "Verification records showing use of at least two identifiers, one of which is the "
+       "unique identification number generated at registration.")
+    lb(doc,
+       "Records showing the person performing the procedure carries final verification "
+       "responsibility, or the supervising clinician where a trainee performs the procedure.")
+    lb(doc,
+       "Medical record entries documenting exceptions where full verification could not be "
+       "completed in an emergency.")
+    lb(doc,
+       "Evidence of patient or relative involvement in site marking whenever possible.")
+
+    h(doc, 2, "Informed consent")
+    lb(doc,
+       "Informed consent documentation signed by the person performing the procedure or "
+       "a doctor from the treating team.")
+    lb(doc,
+       "Consent documentation stating that a person in training performed the procedure "
+       "and that the treating doctor supervised, where applicable.")
+
+    h(doc, 2, "Monitoring")
+    lb(doc,
+       "Monitoring records for invasive procedures showing at minimum pulse, blood pressure, "
+       "and respiratory rate, with additional parameters recorded as clinically indicated.")
+
+    h(doc, 2, "Procedure documentation")
+    lb(doc,
+       "Procedure records containing all five documentation elements: procedure name, who "
+       "performed it, key steps, key findings, and post-procedure care.")
+    lb(doc,
+       "Procedure records containing all four meta-elements: name, date, time, and "
+       "signature.")
+
+    # 14. References
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. COP.7.")
+    ln(doc, "Guidebook interpretation supplied for COP.7.a through COP.7.g.")
+    ln(doc,
+       "WHO Surgical Safety Checklist (reference for patient/procedure/site verification).")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied COP.7 objective elements and approved "
+      "plain-language content into policy format. The stop-work text is reproduced exactly "
+      "as supplied. Mandatory requirements and their stated modal strength have been "
+      "retained. The exact two-identifier quantity, three minimum monitoring parameters, "
+      "five procedure documentation elements, and four meta-elements have been preserved "
+      "throughout.")
+
+    save_and_verify(doc, "HCO_COP_7_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 if __name__ == "__main__":
     gen_cop1()
     print("\nCOP.1 draft generated.")
@@ -2575,3 +2938,5 @@ if __name__ == "__main__":
     print("\nCOP.5 draft generated.")
     gen_cop6()
     print("\nCOP.6 draft generated.")
+    gen_cop7()
+    print("\nCOP.7 draft generated.")
