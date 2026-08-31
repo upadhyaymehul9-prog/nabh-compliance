@@ -2925,6 +2925,532 @@ def gen_cop7():
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# COP.8 — Transfusion Services   (HAS stop-work: Section 6)
+# Content: Approved plain-language draft (cop8_content.txt), checked against source.
+# Structure: Document control table, Stop-work Section 6, Governance Section 7,
+#            Quality monitoring Section 8, Traceability Section 12, Checklist Section 13.
+# OEs: a: Commitment | b: Commitment* | c: Commitment | d: CORE* | e: Commitment* |
+#      f: Achievement* | g: Achievement*
+# Exact quantities:
+#   Nine COP.8.b blood-centre written-guidance activities (5.2):
+#     donor selection; TTI screening; blood collection incl apheresis; storage;
+#     compatibility testing; distribution; transfusion in clinical areas;
+#     discard of sero-positive/unutilised; donor/patient family education.
+#   Eight COP.8.d transfusion written-guidance elements (5.4):
+#     patient consent; safe procurement/transportation; patient identification;
+#     verification of order; safe storage prior to transfusion; blood administration;
+#     patient monitoring; identification of/response to transfusion reactions.
+#   HBTC composition: clinical departments, blood transfusion officer, nursing,
+#     Quality Coordinator, management — preferably chaired by a clinician.
+#   Stop-work: "minimum two identifiers" exact.
+#   Haemovigilance Programme participation: mandatory (not advisory).
+#   Emergency blood availability time frame: organisation-defined — no invented number.
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_cop8():
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Transfusion Services")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/COP/POL/08", "Blood Transfusion Officer")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Blood and blood components are collected, tested, stored, and given to patients "
+      "safely, with rational use and complete pre-transfusion verification every time.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} keeps its blood supply available and safe, from "
+      "donor collection through to giving blood to a patient, verifies the correct patient "
+      "and correct blood before every transfusion, tracks and responds to transfusion "
+      "reactions, and runs a rational-use committee for blood.")
+    p(doc,
+      "This policy does not cover general informed consent procedures or infection control "
+      "in detail — those are covered in other hospital policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to blood centre staff, transfusion services staff, and clinical "
+      f"staff involved in ordering, administering, or monitoring blood transfusions at {HN}.")
+
+    # 3. Policy standards — two summary paragraphs only
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} keeps blood and blood components available from a registered blood centre — "
+      "in-house or outsourced — collects, tests, stores, and distributes them under "
+      "written guidance, ensures safe and rational use through a Hospital Blood Transfusion "
+      "Committee, defines how quickly blood must be available in an emergency, and tracks "
+      "and responds to transfusion reactions.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not use an unregistered blood centre — blood and blood components come only "
+       "from a registered in-house or outsourced blood centre, with an MoU if outsourced, "
+       "and patient care must not suffer for want of blood or components.")
+    lb(doc,
+       "Do not release blood before all required pre-transfusion tests, including "
+       "Transfusion Transmissible Infections (TTI) testing and Red Cell Serology, are "
+       "complete using approved methods.")
+    lb(doc,
+       "Do not take a quarantined unit into inventory before re-testing is complete.")
+    lb(doc,
+       "Do not mix untested and tested blood units in storage, and do not label a unit's "
+       "serology status before TTI screening reports are released.")
+    lb(doc,
+       "Do not start a transfusion without completing all eight elements of the written "
+       "guidance: patient consent for blood administration, safe procurement and "
+       "transportation maintaining the cold chain, patient identification, verification of "
+       "the blood administration order, safe storage prior to transfusion, blood "
+       "administration, monitoring of the patient, and identification of and response to "
+       "potential transfusion reactions.")
+    lb(doc,
+       "Do not start transfusion of blood or blood components when patient identification "
+       "(minimum two identifiers) is incomplete, compatibility checks are missing, or "
+       "required informed consent has not been obtained, except where the organisation's "
+       "documented emergency-transfusion guidance applies.")
+    lb(doc,
+       "Do not leave the emergency-use time frame for blood availability undefined, or "
+       "leave routine and emergency turnaround times undefined or unmonitored.")
+    lb(doc,
+       "Do not skip detection, reporting, evaluation, or analysis of a suspected adverse "
+       "transfusion reaction, and do not skip corrective and preventive action based on "
+       "that analysis.")
+    lb(doc,
+       "Do not operate without participating in the Haemovigilance Programme of India.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Keep blood available from a registered blood centre")
+    p(doc,
+      "Blood and blood components are available from either an in-house or an outsourced "
+      "registered blood centre. The blood centre has adequate infrastructure, staff, and "
+      "equipment for its workload and scope, so operations run smoothly without delays.")
+    p(doc,
+      "Where the blood centre is outsourced, there is a signed MoU, and patient care does "
+      "not suffer for want of blood or components — blood is transported from the external "
+      "blood centre safely and properly.")
+    p(doc, "The NABH standards for blood centres are a useful reference.")
+
+    h(doc, 2, "5.2 Follow written guidance for blood centre activities")
+    p(doc,
+      "Written guidance covers nine blood centre activities: blood donor selection; blood "
+      "screening for transfusion-transmissible diseases; blood collection, including "
+      "apheresis procedures; blood storage; compatibility testing; blood distribution; "
+      "transfusion of blood and products in clinical areas; discard of sero-positive or "
+      "unutilised blood; and education of families of potential donors and patients "
+      "regarding blood donation.")
+    p(doc,
+      "Blood and apheresis products are collected only from voluntary, non-remunerated, "
+      "low-risk, safe, and healthy donors, with pre- and post-donation counselling and "
+      "informed consent. Apheresis procedures follow relevant guidelines. Blood donation "
+      "drives follow national and statutory guidelines. Drugs and equipment for treating "
+      "donor reactions are available, and staff are trained to use them. Adverse donor "
+      "reactions are identified, managed, and reported in line with the National "
+      "Haemovigilance Programme of India.")
+    p(doc,
+      "All pre-transfusion tests — including Transfusion Transmissible Infections (TTI) "
+      "testing and Red Cell Serology — are carried out using approved methods before blood "
+      "is released. Recipient and donor blood samples are retained and stored after each "
+      "transfusion, as per guidelines. If a quality-control failure occurs during TTI "
+      "testing, quarantined units are not taken into inventory until re-testing is "
+      "complete. There is a process for retesting, recall, and referral of reactive blood "
+      "donors, in line with national guidelines. Whole blood or components from any unit "
+      "that tests positive or reactive are discarded as per written guidance.")
+
+    h(doc, 2, "5.3 Store blood safely from collection to transfusion")
+    p(doc,
+      "The blood centre prepares components according to its scope. The temperature of "
+      "whole blood, its components, and the storage environment is maintained and recorded "
+      "as per guidelines.")
+    p(doc,
+      "Untested blood and products are quarantined, with separate, designated storage for "
+      "untested and tested units based on serology status. Labelling — including serology "
+      "status — happens only after TTI screening reports are released, so that untested "
+      "and tested blood cannot get mixed up.")
+
+    h(doc, 2, "5.4 Ensure safe and rational transfusion")
+    p(doc,
+      "Transfusion of blood and blood components follows written guidance covering eight "
+      "things: patient consent for blood administration; safe procurement and "
+      "transportation, maintaining the cold chain and correct source; patient "
+      "identification; verification of blood administration orders; safe storage prior to "
+      "transfusion; blood administration; monitoring of the patient; and identification of "
+      "and response to potential transfusion reactions.")
+    p(doc,
+      "Measures are in place to prevent mismatched transfusion under all circumstances — "
+      "for example, confirming patient identity at cross-matching, attaching the "
+      "compatibility testing label to the unit at issue, confirming patient identity and "
+      "blood group again at the time of transfusion, keeping a portion of the integral "
+      "tubing with its segment number attached to the blood bag at issue, and keeping all "
+      "labels attached to the blood bag until the transfusion is complete, so any adverse "
+      "reaction can be properly investigated. These are examples of how the prevention "
+      "principle is put into practice, not a fixed checklist.")
+    p(doc,
+      "Written guidance also governs the indications for using blood and blood components, "
+      "based on standard practice guidelines or sound clinical practice from national and "
+      "international professional bodies, and covers inventory and ordering schedules, both "
+      "planned and unplanned. Protocols could address specific clinical situations relevant "
+      "to the hospital's scope — for example, neonatal transfusions, autoimmune haemolytic "
+      "anaemia, incompatible transfusion, or massive transfusion.")
+    p(doc,
+      "A Hospital Blood Transfusion Committee (HBTC) ensures the rational use of blood by "
+      "adopting or adapting rational-use guidelines. It is preferably chaired by a "
+      "clinician, and includes representation from clinical departments, the blood "
+      "transfusion officer, nursing, the Quality Coordinator, and management. The committee "
+      "meets periodically and monitors the availability of blood and components, transfusion "
+      "practices and audits, adverse transfusion reactions, and wastage of blood or "
+      "products. The committee could also seek periodic feedback from clinicians on the "
+      "availability and effectiveness of blood and components.")
+
+    h(doc, 2, "5.5 Define how fast blood must be available")
+    p(doc,
+      f"{HN} defines what counts as an emergency use of blood — covering both actual and "
+      "anticipated need — and puts procedures in place to make sure blood is available "
+      "for it.")
+    p(doc,
+      f"The time frame within which blood must be available in an emergency is defined by "
+      f"{HN}. Turnaround time for both routine and emergency blood issues is defined and "
+      "monitored. This applies even if the hospital does not have its own in-house blood "
+      "centre.")
+
+    h(doc, 2, "5.6 Track and respond to transfusion reactions")
+    p(doc,
+      "Suspected adverse transfusion reactions are detected, reported, evaluated, and "
+      "analysed, with corrective and preventive action taken afterward. It is preferable "
+      "to capture feedback on every transfusion, so no reaction goes unnoticed — analysis "
+      f"can be done by an individual or a committee, as {HN} decides. A record of "
+      "transfusion reactions is maintained.")
+    p(doc,
+      f"{HN} participates in the Haemovigilance Programme of India. (Related requirements "
+      "are covered in the hospital's other policies.)")
+
+    h(doc, 2, "5.7 Run a quality assurance programme for the blood centre")
+    p(doc,
+      "The quality assurance programme — whether standalone or part of the hospital's "
+      "overall quality improvement programme — covers every aspect of the blood centre's "
+      "work.")
+    p(doc,
+      "The blood centre takes part in an External Quality Assurance Scheme (EQAS) or "
+      "Proficiency Testing (PT) programme, or a suitable interlaboratory comparison if "
+      "EQAS/PT is not available. Results from internal quality control, EQAS, PT, or "
+      "interlaboratory testing are monitored, with corrective and preventive action taken "
+      "and records kept. Blood, products, and reagents are sampled at a defined frequency "
+      "for internal quality control, following guidelines.")
+    p(doc,
+      "The blood centre collects data on key performance indicators as part of its quality "
+      "improvement work — for example, wastage of blood and products, or the rate of "
+      "transfusion reactions. This data is collated, analysed, and used to drive further "
+      "improvements, which are monitored to make sure they hold.")
+
+    # 6. Stop-work authority — text exactly as given in cop8_content.txt
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Do not start transfusion of blood or blood components when patient identification "
+      "(minimum two identifiers) is incomplete, compatibility checks are missing, or "
+      "required informed consent has not been obtained, except where the organisation's "
+      "documented emergency-transfusion guidance applies.")
+    p(doc,
+      "Stop-work applies to the transfusion start. Life-saving emergency transfusion "
+      "follows the organisation's emergency-transfusion written guidance and is documented.")
+    p(doc,
+      "The person who stops tells the Transfusion / Blood Bank In-Charge and the treating "
+      "doctor the same shift. Refusing an unsafe transfusion is not a disciplinary matter.")
+
+    # 7. Governance and responsibility
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable that this policy is followed and appropriately resourced."),
+        ("Blood Transfusion Officer",
+         "Oversees blood centre operations, written guidance for all nine activities, "
+         "pre-transfusion testing, storage, and quality assurance; receives stop-work "
+         "notifications the same shift."),
+        ("Hospital Blood Transfusion Committee (HBTC)",
+         "Ensures rational use of blood; preferably chaired by a clinician; includes "
+         "representation from clinical departments, the blood transfusion officer, nursing, "
+         "the Quality Coordinator, and management; meets periodically."),
+        ("Clinical staff (ordering and administering transfusions)",
+         "Follow all eight transfusion written-guidance elements; complete pre-transfusion "
+         "verification; monitor patients; report suspected adverse reactions."),
+        ("Blood centre staff",
+         "Follow written guidance for all nine blood centre activities; maintain storage "
+         "and quarantine requirements; carry out pre-transfusion testing using approved "
+         "methods."),
+    ])
+
+    # 8. Quality monitoring
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Registered blood centre",
+         "Use of a registered blood centre; MoU in place where outsourced"),
+        ("Pre-transfusion testing",
+         "TTI testing and Red Cell Serology complete using approved methods before blood "
+         "is released"),
+        ("Storage and quarantine",
+         "Separate storage of untested and tested units; labelling only after TTI reports "
+         "released"),
+        ("Transfusion verification",
+         "All eight written-guidance elements completed before every transfusion"),
+        ("Blood availability",
+         "Defined emergency and routine turnaround times; monitoring against the "
+         "organisation's defined time frames"),
+        ("Adverse transfusion reactions",
+         "Detection, reporting, evaluation, analysis, and CAPA for suspected adverse "
+         "reactions; record of transfusion reactions maintained"),
+        ("Haemovigilance",
+         "Active participation in the Haemovigilance Programme of India"),
+        ("Quality assurance programme",
+         "EQAS/PT participation; internal quality control at defined frequency; KPI data "
+         "collected, analysed, and used for improvement"),
+    ])
+
+    # 9. Training and staff acknowledgement
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      "Blood centre staff and clinical staff involved in transfusion shall be familiar "
+      "with the written guidance applicable to their work, including pre-transfusion "
+      "testing, storage requirements, the eight-element transfusion process, adverse "
+      "reaction reporting, and Haemovigilance Programme requirements.")
+    p(doc,
+      f"I have read the Policy on Transfusion Services of {HN}. I will follow the "
+      "processes described.")
+    sig_tbl(doc)
+
+    # 10. Distribution
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to blood centre staff, transfusion services staff, "
+      "and clinical staff involved in ordering, administering, or monitoring blood "
+      "transfusions.")
+
+    # 11. Abbreviations
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CAPA", "Corrective and Preventive Action"),
+        ("EQAS", "External Quality Assurance Scheme"),
+        ("HBTC", "Hospital Blood Transfusion Committee"),
+        ("MoU",  "Memorandum of Understanding"),
+        ("PT",   "Proficiency Testing"),
+        ("TTI",  "Transfusion Transmissible Infections"),
+    ])
+
+    # 12. Traceability table
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk in the "
+      "Level column means documentation of the process is required.")
+    tr = tbl(doc, 8, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("COP.8.a", "Commitment",
+         "Section 5.1 addresses availability of blood and blood components from a "
+         "registered in-house or outsourced blood centre, with an MoU where outsourced, "
+         "and adequate infrastructure, staff, and equipment."),
+        ("COP.8.b", "Commitment*",
+         "Section 5.2 addresses written guidance for all nine blood centre activities: "
+         "blood donor selection; TTI screening; blood collection including apheresis; "
+         "blood storage; compatibility testing; blood distribution; transfusion in clinical "
+         "areas; discard of sero-positive or unutilised blood; and donor/patient family "
+         "education."),
+        ("COP.8.c", "Commitment",
+         "Section 5.3 addresses safe storage from collection to transfusion: component "
+         "preparation, temperature maintenance and recording, quarantine of untested units, "
+         "separate designated storage by serology status, and labelling only after TTI "
+         "reports are released."),
+        ("COP.8.d", "CORE*",
+         "Section 5.4 addresses written guidance covering all eight transfusion elements: "
+         "patient consent; safe procurement and transportation; patient identification; "
+         "verification of blood administration orders; safe storage prior to transfusion; "
+         "blood administration; patient monitoring; and identification of and response to "
+         "potential transfusion reactions. Also addresses mismatch prevention measures, "
+         "rational-use indications, and the HBTC."),
+        ("COP.8.e", "Commitment*",
+         "Section 5.5 addresses the organisation-defined emergency blood availability time "
+         "frame and defined, monitored turnaround times for routine and emergency blood "
+         "issues."),
+        ("COP.8.f", "Achievement*",
+         "Section 5.6 addresses detection, reporting, evaluation, analysis, and CAPA for "
+         "suspected adverse transfusion reactions; maintenance of a transfusion reaction "
+         "record; and mandatory participation in the Haemovigilance Programme of India."),
+        ("COP.8.g", "Achievement*",
+         "Section 5.7 addresses the quality assurance programme covering all blood centre "
+         "activities, EQAS/PT participation or interlaboratory comparison, internal quality "
+         "control at a defined frequency, and KPI data collection, analysis, and "
+         "improvement monitoring."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 13. Required Records/Evidence Checklist
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Registered blood centre and outsourcing")
+    lb(doc,
+       "Evidence that blood and blood components come from a registered in-house or "
+       "outsourced blood centre.")
+    lb(doc, "Signed MoU with the outsourced blood centre where applicable.")
+    lb(doc,
+       "Evidence that patient care does not suffer for want of blood or components.")
+
+    h(doc, 2, "Written guidance — nine blood centre activities")
+    lb(doc, "Written guidance for blood donor selection.")
+    lb(doc, "Written guidance for blood screening for transfusion-transmissible diseases.")
+    lb(doc, "Written guidance for blood collection, including apheresis procedures.")
+    lb(doc, "Written guidance for blood storage.")
+    lb(doc, "Written guidance for compatibility testing.")
+    lb(doc, "Written guidance for blood distribution.")
+    lb(doc, "Written guidance for transfusion of blood and products in clinical areas.")
+    lb(doc, "Written guidance for discard of sero-positive or unutilised blood.")
+    lb(doc,
+       "Written guidance for education of families of potential donors and patients "
+       "regarding blood donation.")
+
+    h(doc, 2, "Donor selection and blood collection")
+    lb(doc,
+       "Records showing blood and apheresis products collected only from voluntary, "
+       "non-remunerated, low-risk, safe, and healthy donors.")
+    lb(doc, "Evidence of pre- and post-donation counselling and informed consent.")
+    lb(doc,
+       "Drugs and equipment for treating donor reactions available; staff trained to "
+       "use them.")
+    lb(doc,
+       "Adverse donor reaction records reported in line with the National Haemovigilance "
+       "Programme of India.")
+
+    h(doc, 2, "Pre-transfusion testing and quarantine")
+    lb(doc,
+       "Records showing TTI testing and Red Cell Serology carried out using approved "
+       "methods before blood is released.")
+    lb(doc,
+       "Records of recipient and donor blood sample retention and storage after each "
+       "transfusion.")
+    lb(doc,
+       "Evidence that quarantined units are not taken into inventory until re-testing is "
+       "complete after a quality-control failure.")
+    lb(doc,
+       "Process records for retesting, recall, and referral of reactive blood donors in "
+       "line with national guidelines.")
+    lb(doc,
+       "Records showing whole blood or components from reactive units discarded as per "
+       "written guidance.")
+
+    h(doc, 2, "Storage")
+    lb(doc,
+       "Temperature records for whole blood, components, and the storage environment.")
+    lb(doc,
+       "Evidence of separate, designated storage for untested and tested units by serology "
+       "status.")
+    lb(doc,
+       "Records showing labelling — including serology status — done only after TTI "
+       "screening reports are released.")
+
+    h(doc, 2, "Transfusion — eight written-guidance elements")
+    lb(doc, "Patient consent for blood administration.")
+    lb(doc,
+       "Records showing safe procurement and transportation maintaining the cold chain "
+       "and correct source.")
+    lb(doc, "Patient identification completed before transfusion.")
+    lb(doc, "Verification of blood administration orders.")
+    lb(doc, "Safe storage prior to transfusion.")
+    lb(doc, "Blood administration records.")
+    lb(doc, "Patient monitoring records during and after transfusion.")
+    lb(doc,
+       "Records of identification of and response to potential transfusion reactions.")
+
+    h(doc, 2, "Mismatch prevention and rational use")
+    lb(doc,
+       "Evidence of mismatch-prevention measures in place under all circumstances.")
+    lb(doc,
+       "Written guidance on indications for blood and blood components based on standard "
+       "practice guidelines or sound clinical practice.")
+    lb(doc, "Inventory and ordering schedules, both planned and unplanned.")
+
+    h(doc, 2, "Hospital Blood Transfusion Committee")
+    lb(doc,
+       "Evidence that an HBTC is in place, preferably chaired by a clinician, with "
+       "representation from clinical departments, the blood transfusion officer, nursing, "
+       "the Quality Coordinator, and management.")
+    lb(doc,
+       "Records of periodic HBTC meetings monitoring blood availability, transfusion "
+       "practices and audits, adverse reactions, and blood/product wastage.")
+
+    h(doc, 2, "Emergency blood availability")
+    lb(doc,
+       "Documented definition of emergency use of blood, covering actual and anticipated "
+       "need.")
+    lb(doc,
+       f"Defined emergency blood availability time frame (set by {HN}), with evidence of "
+       "monitoring against it.")
+    lb(doc,
+       "Defined and monitored turnaround times for both routine and emergency blood "
+       "issues.")
+
+    h(doc, 2, "Adverse reactions and Haemovigilance")
+    lb(doc,
+       "Records showing suspected adverse transfusion reactions detected, reported, "
+       "evaluated, and analysed.")
+    lb(doc, "CAPA records for adverse transfusion reactions.")
+    lb(doc, "Record of transfusion reactions maintained.")
+    lb(doc,
+       "Evidence of active participation in the Haemovigilance Programme of India.")
+
+    h(doc, 2, "Quality assurance programme")
+    lb(doc,
+       "Quality assurance programme covering all blood centre activities — standalone or "
+       "part of the overall quality improvement programme.")
+    lb(doc,
+       "Evidence of EQAS or PT participation, or interlaboratory comparison where "
+       "EQAS/PT is not available.")
+    lb(doc,
+       "Records showing internal quality control, EQAS/PT/interlaboratory results "
+       "monitored, with CAPA and records kept.")
+    lb(doc,
+       "Evidence of blood, product, and reagent sampling at a defined frequency for "
+       "internal quality control.")
+    lb(doc,
+       "KPI data (for example, blood/product wastage, transfusion reaction rates) "
+       "collected, analysed, and used for improvement; improvements monitored.")
+
+    # 14. References
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. COP.8.")
+    ln(doc, "Guidebook interpretation supplied for COP.8.a through COP.8.g.")
+    ln(doc, "National Haemovigilance Programme of India guidelines.")
+    ln(doc,
+       "NABH Standards for Blood Centres (reference for blood centre requirements).")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied COP.8 objective elements and approved "
+      "plain-language content into policy format. The stop-work text is reproduced exactly "
+      "as supplied. Mandatory requirements and their stated modal strength have been "
+      "retained. The nine COP.8.b blood-centre written-guidance activities, the eight "
+      "COP.8.d transfusion written-guidance elements, the HBTC mandatory composition, "
+      "mandatory Haemovigilance Programme participation, and the minimum-two-identifiers "
+      "stop-work quantity have been preserved. No numerical time frame for emergency blood "
+      "availability has been invented; the time frame is defined by the organisation.")
+
+    save_and_verify(doc, "HCO_COP_8_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 if __name__ == "__main__":
     gen_cop1()
     print("\nCOP.1 draft generated.")
@@ -2940,3 +3466,5 @@ if __name__ == "__main__":
     print("\nCOP.6 draft generated.")
     gen_cop7()
     print("\nCOP.7 draft generated.")
+    gen_cop8()
+    print("\nCOP.8 draft generated.")
