@@ -3451,6 +3451,2603 @@ def gen_cop8():
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# COP.9 — Intensive Care and High Dependency Units   (stop-work YES)
+# Content: approved plain-language content (cop9_content.txt).
+# Structure: Section 3 two summary paragraphs; full detail Section 5.
+# Stars: a*, b*, d*, e*, f* | Achievement: f | CORE: none
+# Exact quantities: four-direction criteria (admission/transfer-in/discharge/transfer-out);
+#   DAMA mechanism separate; "at least once a day" counselling exact.
+# ══════════════════════════════════════════════════════════════════════════════
+
+def gen_cop9():
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Intensive Care and High Dependency Units")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/COP/POL/09", "ICU/HDU In-Charge")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Care in intensive care and high dependency units follows written guidance, "
+      "uses defined admission and discharge criteria, and is backed by adequate "
+      "staff, equipment, and infection control.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} provides ICU/HDU care based on written "
+      "guidance, applies defined criteria for admitting, transferring, and "
+      "discharging patients, keeps adequate trained staff and equipment available, "
+      "handles bed shortages, follows infection prevention and control practices, "
+      "and counsels patients and families.")
+    p(doc,
+      "This policy does not cover general infection control procedures or nursing "
+      "staffing ratios in detail — those are covered in other hospital policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to all clinical and nursing staff working in the "
+      f"intensive care and high dependency units at {HN}.")
+
+    # 3. Policy standards — two summary paragraphs only
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} provides ICU/HDU care under written guidance that, at a minimum, "
+      "covers everything in this policy, applies defined admission, transfer-in, "
+      "discharge, and transfer-out criteria, keeps adequate trained staff and "
+      "necessary equipment available, has a procedure for bed shortages, follows "
+      "infection prevention and control practices, runs a quality assurance "
+      "programme, and counsels patients and families at least once a day.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not provide ICU/HDU care without written guidance based on standard "
+       "treatment guidelines or sound clinical practice — at a minimum, this "
+       "guidance must cover everything else in this policy.")
+    lb(doc,
+       "Do not admit, transfer in, discharge, or transfer out an ICU/HDU patient "
+       "without applying the hospital's defined criteria for that decision.")
+    lb(doc,
+       "Do not leave a mechanism for \"discharge against medical advice\" undefined.")
+    lb(doc,
+       "Do not staff or equip the ICU/HDU with anything less than the necessary "
+       "lifesaving and monitoring equipment and competent, trained staff, or without "
+       "following applicable statutory requirements.")
+    lb(doc,
+       "Do not leave a bed-shortage situation without following the hospital's "
+       "defined procedure for it.")
+    lb(doc,
+       "Do not depart from infection prevention and control practices consistent "
+       "with standard treatment guidelines or sound clinical practice.")
+    lb(doc,
+       "Do not skip counselling the patient or family at least once a day, and "
+       "whenever the patient's condition changes significantly, by a doctor of the "
+       "treating team.")
+    lb(doc,
+       "Do not counsel a patient or family on a significant change without "
+       "documenting it in writing or by audio-video recording.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Follow written guidance covering the whole standard")
+    p(doc,
+      "Care in the ICU/HDU is based on written guidance drawn from standard "
+      "treatment guidelines or sound clinical practice for intensive/critical care. "
+      "At a minimum, this guidance addresses everything else in this policy — "
+      "admission and discharge criteria, staffing and equipment, bed-shortage "
+      f"procedure, infection control, quality assurance, and counselling. {HN} "
+      "could adapt care-bundles where appropriate.")
+
+    h(doc, 2, "5.2 Apply defined admission, transfer, and discharge criteria")
+    p(doc,
+      f"{HN} develops and adheres to criteria — based on physiologic and/or "
+      "diagnostic parameters — covering four situations: admission, transfer-in, "
+      "discharge, and transfer-out of ICU/HDU patients. There is also a defined "
+      "mechanism for discharge against medical advice. Staff are trained to apply "
+      "these criteria. National and international critical care society guidelines "
+      "are a useful starting point.")
+
+    h(doc, 2, "5.3 Keep adequate staff and equipment")
+    p(doc,
+      "The ICU/HDU is equipped with all necessary lifesaving and monitoring "
+      "equipment, handled by trained staff. Staff working in the ICU/HDU are "
+      "competent, based on qualification and/or training. Applicable statutory "
+      f"requirements are followed. The exact equipment and staffing requirements are "
+      f"{HN}'s own determination, based on the scope and complexity of its services "
+      "and guided by standard treatment guidelines or best clinical practice. The "
+      "Indian Nursing Council's recommendations are a useful reference for nursing "
+      "workforce planning.")
+
+    h(doc, 2, "5.4 Have a procedure for bed shortages")
+    p(doc,
+      "Whenever there are no vacant ICU beds and a patient needs one, "
+      f"{HN} follows a detailed, pre-established policy and procedure to address "
+      "the situation — not something improvised at the time.")
+
+    h(doc, 2, "5.5 Follow infection prevention and control practices")
+    p(doc,
+      "Infection prevention and control practices in the ICU/HDU are consistent "
+      "with standard treatment guidelines or sound clinical practice. Written "
+      "guidance for this could stand alone or be part of the hospital's overall "
+      "infection prevention and control manual. (Related requirements are covered "
+      "in the hospital's other policies.)")
+
+    h(doc, 2, "5.6 Run a quality assurance programme")
+    p(doc,
+      "The quality assurance programme covers every aspect of ICU/HDU functioning, "
+      "consistent with standard treatment guidelines or sound clinical practice. "
+      "Care outcomes are monitored — for example, risk-adjusted standardised "
+      "mortality rate, infection rates, re-admission rates, or re-intubation rates. "
+      f"These are examples; {HN} chooses the outcomes most relevant to its patients. "
+      "National and international critical care society guidelines are a useful "
+      "starting point for this programme, and the written guidance for it could "
+      "stand alone or be part of the hospital's overall quality-improvement "
+      "programme.")
+
+    h(doc, 2, "5.7 Counsel patients and families")
+    p(doc,
+      "A doctor from the treating team counsels the patient and/or family at least "
+      "once a day, and whenever there's a significant change in the patient's "
+      "condition. Counselling covers significant events since the last session, "
+      "expected outcomes, and the family's queries about the patient's changing "
+      "condition. Counselling is documented in writing, by audio-video recording, "
+      "or both. It's preferable to also obtain an acknowledgement.")
+
+    # 6. Stop-work authority — text exactly as given in cop9_content.txt
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Do not admit, transfer, or continue managing an ICU/HDU patient when "
+      "defined admission/discharge criteria are not applied, required minimum "
+      "staffing or equipment is absent, or the bed-shortage escalation procedure "
+      "has not been followed when no bed is available.")
+    p(doc,
+      "Stop-work applies to non-emergent admission/transfer decisions and elective "
+      "bed allocation. A patient already in the ICU/HDU or in an active emergency "
+      "continues receiving care while the gap is escalated.")
+    p(doc,
+      "The person who stops tells the ICU In-Charge and the Medical Superintendent "
+      "the same shift. Refusing an unsafe ICU/HDU admission or continuation is not "
+      "a disciplinary matter.")
+
+    # 7. Governance and responsibility
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable that this policy is followed and appropriately resourced; "
+         "receives stop-work notifications the same shift."),
+        ("ICU/HDU In-Charge",
+         "Oversees ICU/HDU operations; ensures written guidance, defined criteria "
+         "for all four admission/transfer/discharge/transfer-out situations, "
+         "bed-shortage procedure, IPC practices, and QA programme are in place; "
+         "receives stop-work notifications the same shift."),
+        ("Treating doctors (ICU/HDU)",
+         "Apply defined criteria for every admission, transfer-in, discharge, and "
+         "transfer-out decision; counsel patients and families at least once a day "
+         "and whenever the patient's condition changes significantly; document "
+         "counselling in writing or by audio-video recording."),
+        ("ICU/HDU nursing staff",
+         "Maintain care standards; follow IPC practices; assist with daily "
+         "documentation; support quality assurance monitoring."),
+    ])
+
+    # 8. Quality monitoring
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Written guidance",
+         "Written guidance covering all required elements is in place and current"),
+        ("Criteria application",
+         "Defined criteria applied for all four situations (admission, transfer-in, "
+         "discharge, transfer-out); DAMA mechanism defined and in use"),
+        ("Staffing and equipment",
+         "ICU/HDU staffed with competent personnel and equipped with required "
+         "lifesaving and monitoring equipment; statutory requirements followed"),
+        ("Bed-shortage procedure",
+         "Pre-established procedure followed whenever ICU beds are unavailable; "
+         "deviations escalated and documented"),
+        ("Infection prevention and control",
+         "IPC practices in ICU/HDU consistent with standard treatment guidelines "
+         "or sound clinical practice"),
+        ("Quality assurance",
+         "Defined care outcomes monitored and analysed (e.g., mortality rates, "
+         "infection rates, re-admission or re-intubation rates)"),
+        ("Counselling documentation",
+         "Daily counselling by treating team doctor documented; counselling on "
+         "significant changes documented in writing or audio-video recording"),
+    ])
+
+    # 9. Training and staff acknowledgement
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      "All clinical and nursing staff working in the ICU/HDU shall be familiar "
+      "with the written guidance applicable to their work, including admission and "
+      "discharge criteria for all four situations, the bed-shortage procedure, "
+      "infection prevention and control practices, the quality assurance "
+      "programme, and daily counselling requirements.")
+    p(doc,
+      f"I have read the Policy on Intensive Care and High Dependency Units of "
+      f"{HN}. I will follow the processes described.")
+    sig_tbl(doc)
+
+    # 10. Distribution
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to all clinical and nursing staff working "
+      "in the intensive care and high dependency units.")
+
+    # 11. Abbreviations
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("DAMA", "Discharge Against Medical Advice"),
+        ("HDU",  "High Dependency Unit"),
+        ("ICU",  "Intensive Care Unit"),
+        ("IPC",  "Infection Prevention and Control"),
+        ("QA",   "Quality Assurance"),
+    ])
+
+    # 12. Traceability table
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 8, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("COP.9.a", "Commitment*",
+         "Section 5.1 addresses written guidance for ICU/HDU care drawn from "
+         "standard treatment guidelines or sound clinical practice, covering "
+         "at a minimum all other elements of this standard."),
+        ("COP.9.b", "Commitment*",
+         "Section 5.2 addresses defined criteria covering four situations: "
+         "admission, transfer-in, discharge, and transfer-out of ICU/HDU "
+         "patients. Also addresses the defined mechanism for discharge against "
+         "medical advice (DAMA) as a separate requirement."),
+        ("COP.9.c", "Commitment",
+         "Section 5.3 addresses adequacy of lifesaving and monitoring equipment, "
+         "trained and competent ICU/HDU staff based on qualification and/or "
+         "training, and compliance with applicable statutory requirements."),
+        ("COP.9.d", "Commitment*",
+         "Section 5.4 addresses the pre-established, detailed bed-shortage "
+         "procedure followed whenever ICU beds are unavailable."),
+        ("COP.9.e", "Commitment*",
+         "Section 5.5 addresses infection prevention and control practices in "
+         "the ICU/HDU consistent with standard treatment guidelines or sound "
+         "clinical practice."),
+        ("COP.9.f", "Achievement*",
+         "Section 5.6 addresses the quality assurance programme covering all "
+         "aspects of ICU/HDU functioning, with defined outcomes monitored "
+         "(e.g., mortality rate, infection rates, re-admission and re-intubation "
+         "rates)."),
+        ("COP.9.g", "Commitment",
+         "Section 5.7 addresses counselling by a treating team doctor at least "
+         "once a day and on every significant condition change, with documentation "
+         "in writing or by audio-video recording."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 13. Required Records/Evidence Checklist
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Written guidance")
+    lb(doc,
+       "Written guidance for ICU/HDU care based on standard treatment guidelines "
+       "or sound clinical practice, covering all required elements.")
+
+    h(doc, 2, "Admission, transfer, and discharge criteria")
+    lb(doc,
+       "Defined criteria (based on physiologic and/or diagnostic parameters) "
+       "covering admission, transfer-in, discharge, and transfer-out.")
+    lb(doc,
+       "Defined mechanism for discharge against medical advice (DAMA).")
+    lb(doc, "Evidence that staff are trained to apply the criteria.")
+
+    h(doc, 2, "Staffing and equipment")
+    lb(doc,
+       "Evidence of lifesaving and monitoring equipment in the ICU/HDU.")
+    lb(doc,
+       "Evidence that ICU/HDU staff are competent based on qualification and/or "
+       "training.")
+    lb(doc, "Evidence of compliance with applicable statutory requirements.")
+
+    h(doc, 2, "Bed-shortage procedure")
+    lb(doc,
+       "Documented bed-shortage procedure; records of application when beds are "
+       "unavailable.")
+
+    h(doc, 2, "Infection prevention and control")
+    lb(doc,
+       "Written guidance for IPC practices in the ICU/HDU (standalone or part of "
+       "the hospital's IPC manual).")
+
+    h(doc, 2, "Quality assurance programme")
+    lb(doc,
+       "Quality assurance programme documentation covering all aspects of ICU/HDU "
+       "functioning.")
+    lb(doc,
+       "Records of defined care outcomes monitored and analysed.")
+
+    h(doc, 2, "Counselling records")
+    lb(doc,
+       "Daily counselling entries in patient records (in writing or audio-video "
+       "recording).")
+    lb(doc,
+       "Counselling records for every significant change in patient condition.")
+
+    # 14. References
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. COP.9.")
+    ln(doc, "Guidebook interpretation supplied for COP.9.a through COP.9.g.")
+    ln(doc,
+       "National and international critical care society guidelines (reference for "
+       "written guidance, criteria development, and quality assurance programme).")
+    ln(doc,
+       "Indian Nursing Council recommendations (reference for nursing workforce "
+       "planning in ICU/HDU).")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied COP.9 objective elements and approved "
+      "plain-language content into policy format. The stop-work text is reproduced "
+      "exactly as supplied. Mandatory requirements and their stated modal strength "
+      "have been retained. The four-direction criteria (admission, transfer-in, "
+      "discharge, transfer-out) and the separate DAMA mechanism are preserved "
+      "exactly as stated. The exact phrase \"at least once a day\" for counselling "
+      "frequency is preserved. No specific staffing ratios, equipment lists, or "
+      "outcome thresholds have been invented; these are the hospital's own "
+      "determination.")
+
+    save_and_verify(doc, "HCO_COP_9_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# COP.10 — Obstetric Care   (stop-work YES)
+# Content: approved plain-language content (cop10_content.txt).
+# Structure: Section 3 two summary paragraphs; full detail Section 5.
+# Stars: a*, d* | Achievement: e | CORE: none
+# Exact quantities: three minimum written-guidance areas (5.1); four minimum
+#   ante-natal areas (5.4); three minimum monitoring items (5.8);
+#   six ART scope elements (5.10); COP.10.j and COP.10.k scope-conditional.
+# ══════════════════════════════════════════════════════════════════════════════
+
+def gen_cop10():
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Obstetric Care")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/COP/POL/10", "Obstetric In-Charge")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Obstetric care is organised and delivered safely, with high-risk cases "
+      "identified and cared for by competent staff, ante-natal services following "
+      "written guidance, and mothers treated with dignity and privacy throughout.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} organises and delivers safe obstetric care, "
+      "identifies and manages high-risk obstetric cases, runs ante-natal services "
+      "under written guidance, welcomes birth companions, treats mothers "
+      "respectfully and confidentially, explains danger signs, monitors mother and "
+      "baby through labour and after birth, and — where these services are within "
+      "scope — provides neonatal intensive care and Assisted Reproductive "
+      "Technology services in line with the law.")
+    p(doc,
+      "This policy does not cover general patient assessment, informed consent "
+      "procedures, or newborn care in detail — those are covered in other hospital "
+      "policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to all obstetric, nursing, and neonatal staff at {HN}. "
+      f"Sections on neonatal intensive care (5.9) and Assisted Reproductive "
+      f"Technology (5.10) apply only if {HN} provides those specific services.")
+
+    # 3. Policy standards — two summary paragraphs only
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} delivers obstetric care under written guidance covering "
+      "pregnant-patient assessment, ante-natal, peri-natal, and post-natal care, "
+      "identifies and either manages or refers high-risk obstetric cases using "
+      "competent staff, runs ante-natal services with a complete ante-natal card "
+      "for every patient, welcomes birth companions, treats mothers with privacy, "
+      "respect, and confidentiality, explains danger signs, monitors labour and "
+      "the post-natal period for key risks, and — where in scope — provides NICU "
+      "care and follows Assisted Reproductive Technology law.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not deliver obstetric care without written guidance covering, at "
+       "minimum, pregnant-patient assessment (nutrition, immunisation, education), "
+       "ante-natal care, and peri-natal and post-natal care.")
+    lb(doc,
+       f"Do not leave whether {HN} provides high-risk obstetric care undefined, "
+       "or leave what counts as \"high-risk\" undefined.")
+    lb(doc,
+       "Do not manage a high-risk obstetric case without competent workforce and "
+       "facilities for both mother and neonate — refer proactively to another "
+       "centre if high-risk care is out of scope.")
+    lb(doc,
+       "Do not let anyone other than a competent doctor or nurse — qualified, "
+       "experienced, or trained — care for a high-risk obstetric case.")
+    lb(doc,
+       "Do not run ante-natal services without written guidance covering "
+       "assessment, immunisation, diet counselling, and frequency of visits, and "
+       "without a complete ante-natal card (or equivalent) for every patient.")
+    lb(doc,
+       "Do not skip monitoring foetal heart rate during labour, the progression "
+       "of labour, and post-natal monitoring for post-partum haemorrhage.")
+    lb(doc,
+       f"Where {HN} provides high-risk obstetric care, do not do so without a "
+       "NICU staffed with competent, qualified paediatric/neonatal personnel.")
+    lb(doc,
+       f"Where {HN} provides Assisted Reproductive Technology services, do not "
+       "provide them without the required infrastructure, ART lab, operation "
+       "theatre, competent team, consent process, and screening/SOPs, and without "
+       "complying with the Assisted Reproductive Technology (Regulation) Act as "
+       "amended.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Organise obstetric care under written guidance")
+    p(doc,
+      "Written guidance based on standard treatment guidelines or sound clinical "
+      "practice governs the organisation and delivery of obstetric care. At a "
+      "minimum it covers three things: assessment of pregnant patients, including "
+      "nutrition, immunisation, and education; ante-natal care guidelines; and "
+      "peri-natal and post-natal care guidelines. "
+      f"{HN} states in this guidance whether it provides care for high-risk "
+      "obstetric cases, and defines what counts as high-risk, in line with best "
+      "clinical practice. Staff are trained in managing obstetric emergencies, "
+      "based on evidence-based clinical practice guidelines.")
+
+    h(doc, 2, "5.2 Identify and manage high-risk obstetric cases")
+    p(doc,
+      "Ante-natal examinations guide the early identification of high-risk "
+      "obstetric cases, which have more frequent check-ups where appropriate. "
+      f"Where high-risk obstetric care isn't in {HN}'s scope, patients are "
+      f"proactively referred to an appropriate centre. Where {HN} does provide "
+      "high-risk care, it has a competent workforce and the facilities to care "
+      "for both mothers and neonates in these cases.")
+
+    h(doc, 2, "5.3 Use competent staff for high-risk cases")
+    p(doc,
+      "Persons caring for high-risk obstetric cases are competent — this includes "
+      "both doctors and nursing staff, not doctors alone. Competency is based on "
+      "qualification, experience, or training, or a combination of these.")
+
+    h(doc, 2, "5.4 Provide ante-natal services under written guidance")
+    p(doc,
+      "Written guidance governs ante-natal services, covering at minimum four "
+      "things: assessment, immunisation, diet counselling, and frequency of "
+      "visits. Every patient has an ante-natal card (or an equivalent record), "
+      "complete with her medical and obstetric history.")
+
+    h(doc, 2, "5.5 Welcome birth companions")
+    p(doc,
+      "Staff encourage and welcome the presence of a birth companion during "
+      "labour.")
+
+    h(doc, 2, "5.6 Treat mothers with dignity and privacy")
+    p(doc,
+      "The Labour/Delivery Room has provisions for privacy — for example, "
+      "curtains, partitions between tables, or non-see-through windows. Staff "
+      "treat the pregnant woman and her companion cordially and respectfully, "
+      "and her confidentiality is protected throughout her stay.")
+
+    h(doc, 2, "5.7 Explain danger signs")
+    p(doc,
+      "A treating doctor, or a doctor from the treating team, explains danger "
+      "signs and important care activities to the expecting mother and her "
+      "companion.")
+
+    h(doc, 2, "5.8 Assess and monitor through pregnancy and birth")
+    p(doc,
+      "Maternal nutrition is part of every obstetric patient's assessment, "
+      "documented in her ante-natal card. It's preferable for a dietician to "
+      "carry out this assessment. Appropriate peri-natal and post-natal "
+      "monitoring is performed — at a minimum, this covers foetal heart rate "
+      "during labour, the progression of labour, and post-natal monitoring for "
+      "post-partum haemorrhage.")
+
+    h(doc, 2, "5.9 Provide neonatal care for high-risk cases, where this service is offered")
+    p(doc,
+      f"Where {HN} provides care for high-risk obstetric cases, it also has a "
+      "NICU — level I, II, or III, depending on scope — with appropriate "
+      "equipment and staff, including a competent paediatrician or neonatologist "
+      "and nurses, qualified and trained for neonatal care. This section does not "
+      f"apply where high-risk obstetric care is outside {HN}'s scope.")
+
+    h(doc, 2, "5.10 Follow Assisted Reproductive Technology law, where this service is offered")
+    p(doc,
+      f"Where {HN} provides Assisted Reproductive Technology (ART) services, it "
+      "maintains the required infrastructure, an ART lab, an operation theatre, "
+      "a competent ART team with trained counsellors and counselling techniques, "
+      "a consent process, and patient screening and SOPs following national "
+      "guidelines. All of this complies with the Assisted Reproductive Technology "
+      f"(Regulation) Act as amended. This section does not apply where ART "
+      f"services are outside {HN}'s scope.")
+
+    # 6. Stop-work authority — text exactly as given in cop10_content.txt
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Do not manage a high-risk obstetric emergency without trained staff or "
+      "without applying defined admission/referral criteria; do not continue "
+      "labour without foetal heart rate monitoring; do not provide Assisted "
+      "Reproductive Technology services in breach of the ART Act as amended.")
+    p(doc,
+      "Stop-work applies to non-emergent obstetric care decisions and ART service "
+      "delivery. A mother already in active labour or an obstetric emergency "
+      "already in progress continues receiving the best available qualified care "
+      "while the gap is escalated.")
+    p(doc,
+      "The person who stops tells the Obstetric In-Charge and the Medical "
+      "Superintendent the same shift. Refusing unsafe obstetric or ART care is "
+      "not a disciplinary matter.")
+
+    # 7. Governance and responsibility
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable that this policy is followed and appropriately resourced; "
+         "receives stop-work notifications the same shift."),
+        ("Obstetric In-Charge",
+         "Oversees delivery of obstetric care; ensures written guidance, trained "
+         "staff, and required facilities are in place; receives stop-work "
+         "notifications the same shift."),
+        ("Treating obstetricians and doctors",
+         "Apply high-risk identification criteria; explain danger signs to mothers "
+         "and companions; document assessment and monitoring in ante-natal cards."),
+        ("Obstetric and nursing staff",
+         "Follow written guidance for ante-natal, peri-natal, and post-natal care; "
+         "monitor foetal heart rate during labour, labour progression, and "
+         "post-natal post-partum haemorrhage; support birth companions; maintain "
+         "privacy and dignity in the Labour/Delivery Room."),
+        ("ART team (where ART services are in scope)",
+         "Follows ART Act requirements and national ART guidelines; maintains "
+         "consent process, patient screening, and SOPs."),
+        ("NICU staff (where high-risk obstetric care is in scope)",
+         "Provides competent paediatric/neonatal care using qualified and trained "
+         "personnel; maintains appropriate equipment."),
+    ])
+
+    # 8. Quality monitoring
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Written guidance",
+         "Written guidance covering minimum three areas (pregnant-patient "
+         "assessment, ante-natal care, peri-natal and post-natal care) in place "
+         "and current"),
+        ("High-risk identification",
+         "High-risk cases identified via ante-natal examination; proactive referral "
+         "where high-risk care is out of scope; \"high-risk\" criteria defined in "
+         "written guidance"),
+        ("Ante-natal written guidance",
+         "Written guidance for ante-natal services covering all four minimum areas "
+         "(assessment, immunisation, diet counselling, frequency of visits)"),
+        ("Ante-natal card",
+         "Complete ante-natal card (or equivalent) maintained for every patient, "
+         "with medical and obstetric history including maternal nutrition "
+         "assessment"),
+        ("Labour and post-natal monitoring",
+         "Foetal heart rate during labour, labour progression, and post-natal "
+         "PPH monitoring performed and documented for every patient"),
+        ("Privacy and dignity",
+         "Privacy provisions in Labour/Delivery Room; mothers and companions "
+         "treated respectfully; confidentiality maintained"),
+        ("Danger signs",
+         "Danger signs and important care activities explained to mother and "
+         "companion by a treating doctor; documented"),
+        ("NICU (where in scope)",
+         "NICU with appropriate equipment and competent paediatric/neonatal staff "
+         "in place where high-risk obstetric care is provided"),
+        ("ART compliance (where in scope)",
+         "Required ART infrastructure, lab, OT, team, consent, and screening/SOPs "
+         "in line with the ART Act where ART services are provided"),
+    ])
+
+    # 9. Training and staff acknowledgement
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      "All obstetric, nursing, and neonatal staff shall be familiar with the "
+      "written guidance applicable to their work, including high-risk obstetric "
+      "criteria, ante-natal care requirements, labour and post-natal monitoring "
+      "requirements, privacy and dignity obligations, and — where applicable — "
+      "NICU care standards and ART Act requirements.")
+    p(doc,
+      f"I have read the Policy on Obstetric Care of {HN}. I will follow the "
+      "processes described.")
+    sig_tbl(doc)
+
+    # 10. Distribution
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to all obstetric, nursing, and neonatal "
+      f"staff at {HN}.")
+
+    # 11. Abbreviations
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("ART",  "Assisted Reproductive Technology"),
+        ("NICU", "Neonatal Intensive Care Unit"),
+        ("OT",   "Operation Theatre"),
+        ("PPH",  "Post-Partum Haemorrhage"),
+        ("SOP",  "Standard Operating Procedure"),
+    ])
+
+    # 12. Traceability table
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 12, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("COP.10.a", "Commitment*",
+         "Section 5.1 addresses written guidance covering at minimum three areas: "
+         "assessment of pregnant patients including nutrition, immunisation, and "
+         "education; ante-natal care guidelines; and peri-natal and post-natal "
+         "care guidelines."),
+        ("COP.10.b", "Commitment",
+         "Sections 5.1 and 5.2 address whether high-risk obstetric care is "
+         "provided, the definition of high-risk, early identification via "
+         "ante-natal examination, more frequent check-ups for high-risk cases, "
+         "proactive referral where high-risk care is out of scope, and staff "
+         "training in obstetric emergency management."),
+        ("COP.10.c", "Commitment",
+         "Section 5.3 addresses competency requirements for persons caring for "
+         "high-risk obstetric cases — both doctors and nursing staff — based on "
+         "qualification, experience, or training; and proactive referral when "
+         "high-risk care is outside scope."),
+        ("COP.10.d", "Commitment*",
+         "Section 5.4 addresses written guidance for ante-natal services covering "
+         "at minimum four areas: assessment, immunisation, diet counselling, and "
+         "frequency of visits. Also addresses the mandatory ante-natal card (or "
+         "equivalent) with complete medical and obstetric history for every "
+         "patient."),
+        ("COP.10.e", "Achievement",
+         "Section 5.5 addresses welcoming and encouraging the presence of a birth "
+         "companion during labour."),
+        ("COP.10.f", "Commitment",
+         "Section 5.6 addresses privacy provisions in the Labour/Delivery Room "
+         "(e.g., curtains, partitions, non-see-through windows), cordial and "
+         "respectful treatment of the pregnant woman and companion, and "
+         "confidentiality throughout her stay."),
+        ("COP.10.g", "Commitment",
+         "Section 5.7 addresses explanation of danger signs and important care "
+         "activities to the expecting mother and companion by the treating doctor "
+         "or a doctor from the treating team."),
+        ("COP.10.h", "Commitment",
+         "Section 5.8 addresses maternal nutrition as a mandatory component of "
+         "every obstetric patient's assessment, documented in the ante-natal card, "
+         "with a dietician performing the assessment where possible."),
+        ("COP.10.i", "Commitment",
+         "Section 5.8 addresses appropriate peri-natal and post-natal monitoring, "
+         "covering at minimum three items: foetal heart rate during labour, the "
+         "progression of labour, and post-natal monitoring for post-partum "
+         "haemorrhage."),
+        ("COP.10.j", "Commitment",
+         "Section 5.9 addresses NICU provision (level I, II, or III) with "
+         "appropriate equipment and competent paediatric/neonatal personnel where "
+         "high-risk obstetric care is in scope. Explicitly scope-conditional: does "
+         "not apply where high-risk obstetric care is outside scope."),
+        ("COP.10.k", "Commitment",
+         "Section 5.10 addresses ART service provision including required "
+         "infrastructure, ART lab, operation theatre, competent ART team with "
+         "trained counsellors, consent process, patient screening, and SOPs "
+         "following national guidelines, in compliance with the Assisted "
+         "Reproductive Technology (Regulation) Act as amended. Explicitly "
+         "scope-conditional: does not apply where ART services are outside scope."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 13. Required Records/Evidence Checklist
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Written guidance — obstetric care")
+    lb(doc,
+       "Written guidance based on standard treatment guidelines or sound clinical "
+       "practice covering pregnant-patient assessment (nutrition, immunisation, "
+       "education), ante-natal care guidelines, and peri-natal and post-natal "
+       "care guidelines.")
+    lb(doc,
+       "Written guidance stating whether high-risk obstetric care is provided and "
+       "defining what counts as high-risk.")
+    lb(doc,
+       "Evidence of staff training in managing obstetric emergencies.")
+
+    h(doc, 2, "High-risk identification and management")
+    lb(doc,
+       "Records showing high-risk cases identified via ante-natal examinations.")
+    lb(doc,
+       "Evidence of more frequent check-ups for high-risk cases where appropriate.")
+    lb(doc,
+       "Referral records for high-risk cases where high-risk care is out of scope.")
+    lb(doc,
+       "Evidence of competent workforce and facilities for high-risk care "
+       "where provided.")
+
+    h(doc, 2, "Ante-natal services")
+    lb(doc,
+       "Written guidance for ante-natal services covering assessment, "
+       "immunisation, diet counselling, and frequency of visits.")
+    lb(doc,
+       "Complete ante-natal card (or equivalent) for every patient, with medical "
+       "and obstetric history including maternal nutrition assessment.")
+
+    h(doc, 2, "Privacy, dignity, and danger signs")
+    lb(doc,
+       "Evidence of privacy provisions in the Labour/Delivery Room (e.g., "
+       "curtains, partitions, non-see-through windows).")
+    lb(doc,
+       "Records of danger signs explained to mothers and companions by a treating "
+       "doctor.")
+
+    h(doc, 2, "Labour and post-natal monitoring")
+    lb(doc,
+       "Records of foetal heart rate monitoring during labour.")
+    lb(doc,
+       "Records of labour progression monitoring.")
+    lb(doc,
+       "Records of post-natal monitoring for post-partum haemorrhage.")
+
+    h(doc, 2, "NICU (where high-risk obstetric care is in scope)")
+    lb(doc,
+       "Evidence of NICU provision (level I, II, or III) with appropriate "
+       "equipment and competent paediatric/neonatal staff.")
+
+    h(doc, 2, "ART services (where in scope)")
+    lb(doc,
+       "Evidence of required ART infrastructure, ART lab, and operation theatre.")
+    lb(doc,
+       "Evidence of competent ART team including trained counsellors.")
+    lb(doc,
+       "ART consent process documentation and patient screening records.")
+    lb(doc,
+       "SOPs following national guidelines for ART services.")
+    lb(doc,
+       "Evidence of compliance with the Assisted Reproductive Technology "
+       "(Regulation) Act as amended.")
+
+    # 14. References
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. COP.10.")
+    ln(doc, "Guidebook interpretation supplied for COP.10.a through COP.10.k.")
+    ln(doc,
+       "Assisted Reproductive Technology (Regulation) Act as amended (reference "
+       "for COP.10.k ART compliance requirements).")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied COP.10 objective elements and approved "
+      "plain-language content into policy format. The stop-work text is reproduced "
+      "exactly as supplied. Mandatory requirements and their stated modal strength "
+      "have been retained. The three minimum written-guidance areas (COP.10.a), "
+      "four minimum ante-natal written-guidance areas (COP.10.d), three minimum "
+      "monitoring items (COP.10.i), and six ART scope elements (infrastructure, "
+      "ART lab, operation theatre, competent team, consent process, "
+      "screening/SOPs) are preserved exactly as stated. COP.10.j (NICU) and "
+      "COP.10.k (ART) are explicitly presented as scope-conditional, not universal "
+      "requirements.")
+
+    save_and_verify(doc, "HCO_COP_10_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# COP.11 — Paediatric Services   (stop-work YES)
+# Content: approved plain-language content (cop11_content.txt).
+# Structure: Section 3 two summary paragraphs; full detail Section 5.
+# Stars: a*, b*, f* | Excellence: h (scope-conditional)
+# CORE: none
+# Exact quantities: four assessment components (growth, developmental,
+#   immunisation, nutritional); "actively promotes breastfeeding" exact phrase;
+#   testing interval for rapid-response is hospital-defined — NOT invented;
+#   four mandatory nutrition education sub-topics.
+# ══════════════════════════════════════════════════════════════════════════════
+
+def gen_cop11():
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Paediatric Services")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/COP/POL/11", "Paediatric In-Charge")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Paediatric services are organised and delivered safely, by staff with "
+      "age-specific competency, with active safeguards against child and neonate "
+      "abduction and abuse.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} organises and delivers safe paediatric "
+      "care, provides neonatal care in line with national and international "
+      "guidelines, ensures staff have age-specific competency, prevents child and "
+      "neonate abduction and abuse, assesses children's growth and development, "
+      "educates families, and — where in scope — provides adolescent-friendly "
+      "health services.")
+    p(doc,
+      "This policy does not cover general infection control, general patient "
+      "assessment, or informed consent in detail — those are covered in other "
+      "hospital policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to all doctors, nursing staff, and other personnel "
+      f"caring for children and neonates at {HN}. If {HN} does not provide "
+      "paediatric services, this policy does not apply.")
+
+    # 3. Policy standards — two summary paragraphs only
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} delivers paediatric care under written guidance that defines its "
+      "scope, provides neonatal care in line with national and international "
+      "guidelines, ensures doctors and nurses have age-specific competency, gives "
+      "children adequate amenities, assesses growth, development, immunisation, "
+      "and nutrition, actively prevents child and neonate abduction and abuse, "
+      "educates families, and — where offered — provides adolescent-friendly "
+      "health services.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not provide paediatric services without written guidance covering, "
+       "at minimum, patient assessment, organisation of care, and addressing "
+       "special needs, and defining the scope of paediatric services offered.")
+    lb(doc,
+       "Do not deliver neonatal care that isn't in line with national and "
+       "international guidelines, and do not fail to actively promote "
+       "breastfeeding.")
+    lb(doc,
+       "Do not let anyone without age-specific competency — by qualification, "
+       "experience, or training — care for children, whether doctor or nurse.")
+    lb(doc,
+       "Do not skip any of the four paediatric assessment components: growth, "
+       "development, immunisation, and nutrition.")
+    lb(doc,
+       "Do not operate without a defined, tested rapid-response process for child "
+       "or neonate abduction and abuse, adequate security and surveillance, and "
+       "trained staff.")
+    lb(doc,
+       "Do not educate families about nutrition, immunisation, or safe parenting "
+       "in a language they don't understand, or skip any of the mandatory "
+       "nutrition sub-topics — breastfeeding, weaning, protein-energy "
+       "malnutrition, and childhood obesity.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Organise paediatric care under written guidance")
+    p(doc,
+      "Written guidance based on standard treatment guidelines or sound clinical "
+      "practice governs paediatric care. At a minimum, it covers three things: "
+      "assessment of paediatric patients, organisation of care, and addressing "
+      f"special needs. It also defines the scope of {HN}'s paediatric services — "
+      "for example, well-baby clinics, different NICU levels, or a PICU. These "
+      f"are examples; {HN} defines its own scope.")
+
+    h(doc, 2, "5.2 Deliver neonatal care to guideline standards")
+    p(doc,
+      "Written guidance for neonatal care is in line with guidelines from national "
+      f"and international bodies. {HN} actively promotes breastfeeding practices.")
+
+    h(doc, 2, "5.3 Use age-specific competency")
+    p(doc,
+      "Both doctors and nursing staff caring for children have age-specific "
+      "competency, based on qualification, experience, or training, or a "
+      "combination of these.")
+
+    h(doc, 2, "5.4 Provide adequate amenities")
+    p(doc,
+      "Adequate amenities for the care of infants and children are available — "
+      "for example, a breastfeeding room or a play area. These are examples; "
+      f"{HN} determines what's appropriate for its paediatric population.")
+
+    h(doc, 2, "5.5 Carry out a complete paediatric assessment")
+    p(doc,
+      "Paediatric assessment covers four things: growth, developmental, "
+      "immunisation, and nutritional assessment, done using appropriate tools — "
+      "preferably validated ones — and documented. Growth charts and immunisation "
+      "records are maintained and kept up to date.")
+
+    h(doc, 2, "5.6 Prevent child and neonate abduction and abuse")
+    p(doc,
+      f"Written guidance directs how {HN} prevents child and neonate abduction "
+      "and abuse. Adequate security and surveillance is in place — for example, "
+      "CCTV cameras — and there's a defined rapid-response process for any "
+      "eventuality. This process is tested at intervals "
+      f"{HN} defines, using a table-top exercise or a mock drill. Staff are "
+      "trained in prevention and rapid response, and know how to recognise and "
+      "escalate suspected child abuse.")
+
+    h(doc, 2, "5.7 Educate families")
+    p(doc,
+      "Families are educated about nutrition, immunisation, and safe parenting, "
+      "in a language they understand — using educational material if helpful. "
+      "Nutrition education covers breastfeeding, weaning, and aspects of "
+      "malnutrition, including protein-energy malnutrition and childhood obesity. "
+      "Parents are also given appropriate at-home growth-monitoring information.")
+
+    h(doc, 2, "5.8 Provide adolescent-friendly health care, where this service is offered")
+    p(doc,
+      f"Where {HN} offers adolescent health services, these are need-based — "
+      "preventive, curative, and counselling — delivered with a respectful, "
+      "non-judgemental attitude throughout registration, reception, consultation, "
+      "and treatment, with confidentiality maintained throughout. Services could "
+      "include managing physical and mental health conditions, counselling "
+      "(including premarital counselling and anti-substance-abuse counselling), "
+      "preventive health check-ups, immunisation such as HPV vaccination, and "
+      "health education on topics like development, nutrition, sleep, and safe "
+      "sexual practices. These are examples; the specific service mix is "
+      f"{HN}'s own decision based on need.")
+
+    # 6. Stop-work authority — text exactly as given in cop11_content.txt
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Do not care for a child or neonate without an active, tested process to "
+      "prevent abduction or abuse in place, or without staff who have age-specific "
+      "competency for that patient.")
+    p(doc,
+      "Stop-work applies to routine paediatric admission and ongoing care "
+      "arrangements. A child already receiving emergency care continues to receive "
+      "it while the gap is escalated.")
+    p(doc,
+      "The person who stops tells the Paediatric In-Charge and the Medical "
+      "Superintendent the same shift. Refusing to place a child in an unsafe care "
+      "arrangement is not a disciplinary matter.")
+
+    # 7. Governance and responsibility
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable that this policy is followed and appropriately resourced; "
+         "receives stop-work notifications the same shift."),
+        ("Paediatric In-Charge",
+         "Oversees paediatric services; ensures written guidance, age-specific "
+         "competency, four-component assessment, abduction/abuse prevention, and "
+         "family education are in place; receives stop-work notifications the "
+         "same shift."),
+        ("Paediatric doctors and nursing staff",
+         "Apply age-specific competency; carry out all four paediatric assessment "
+         "components (growth, developmental, immunisation, nutritional); follow "
+         "neonatal care guidelines; actively promote breastfeeding; educate "
+         "families in a language they understand; recognise and escalate suspected "
+         "child abuse."),
+        ("Security/surveillance staff",
+         "Maintain CCTV and other security measures; respond to rapid-response "
+         "process activations for abduction or abuse; participate in mock drills "
+         "and table-top exercises at intervals defined by the organisation."),
+    ])
+
+    # 8. Quality monitoring
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Written guidance",
+         "Written guidance covering assessment, organisation of care, and "
+         "addressing special needs; scope of paediatric services defined"),
+        ("Neonatal care guideline alignment",
+         "Written guidance for neonatal care in line with national and "
+         "international guidelines; active promotion of breastfeeding practices"),
+        ("Age-specific competency",
+         "Doctors and nursing staff caring for children have documented "
+         "age-specific competency by qualification, experience, or training"),
+        ("Paediatric assessment completeness",
+         "All four assessment components completed and documented for every "
+         "child: growth, developmental, immunisation, and nutritional assessment"),
+        ("Abduction/abuse prevention",
+         "Written guidance in place; adequate security and surveillance; "
+         "rapid-response process defined and tested at organisation-defined "
+         "intervals; staff trained in prevention, response, and abuse recognition"),
+        ("Family education",
+         "Families educated in a language they understand; all four mandatory "
+         "nutrition sub-topics covered (breastfeeding, weaning, protein-energy "
+         "malnutrition, childhood obesity); at-home growth-monitoring information "
+         "provided"),
+        ("Adolescent services (where in scope)",
+         "Need-based adolescent health services delivered with respectful, "
+         "non-judgemental attitude and confidentiality where offered"),
+    ])
+
+    # 9. Training and staff acknowledgement
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      "All doctors, nursing staff, and other personnel caring for children and "
+      "neonates shall be familiar with the written guidance applicable to their "
+      "work, including neonatal care guidelines, age-specific competency "
+      "requirements, the four-component paediatric assessment, abduction and abuse "
+      "prevention procedures, the rapid-response process, and family education "
+      "requirements.")
+    p(doc,
+      f"I have read the Policy on Paediatric Services of {HN}. I will follow "
+      "the processes described.")
+    sig_tbl(doc)
+
+    # 10. Distribution
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to all doctors, nursing staff, and other "
+      f"personnel caring for children and neonates at {HN}.")
+
+    # 11. Abbreviations
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CCTV", "Closed-Circuit Television"),
+        ("HPV",  "Human Papillomavirus"),
+        ("NICU", "Neonatal Intensive Care Unit"),
+        ("PICU", "Paediatric Intensive Care Unit"),
+    ])
+
+    # 12. Traceability table
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 9, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("COP.11.a", "Commitment*",
+         "Section 5.1 addresses written guidance for paediatric care based on "
+         "standard treatment guidelines or sound clinical practice, covering at "
+         "minimum assessment, organisation of care, and addressing special needs; "
+         "and defining the scope of paediatric services offered."),
+        ("COP.11.b", "Commitment*",
+         "Section 5.2 addresses written guidance for neonatal care in line with "
+         "national and international guidelines, and the active promotion of "
+         "breastfeeding practices. The phrase \"actively promotes\" is preserved "
+         "exactly from the source — not softened."),
+        ("COP.11.c", "Commitment",
+         "Section 5.3 addresses age-specific competency for both doctors and "
+         "nursing staff caring for children, based on qualification, experience, "
+         "or training, or a combination of these."),
+        ("COP.11.d", "Commitment",
+         "Section 5.4 addresses adequate amenities for infants and children "
+         "(e.g., breastfeeding room, play area); specific amenities are the "
+         "organisation's own determination."),
+        ("COP.11.e", "Commitment",
+         "Section 5.5 addresses the four-component paediatric assessment: growth, "
+         "developmental, immunisation, and nutritional assessment, using "
+         "appropriate (preferably validated) tools and documented. Growth charts "
+         "and immunisation records maintained and updated."),
+        ("COP.11.f", "Commitment*",
+         "Section 5.6 addresses written guidance for preventing child and neonate "
+         "abduction and abuse, adequate security and surveillance (e.g., CCTV), a "
+         "defined rapid-response process tested at intervals the organisation "
+         "defines using table-top exercise or mock drill, and trained staff who "
+         "can recognise and escalate suspected child abuse. No specific testing "
+         "interval has been invented."),
+        ("COP.11.g", "Commitment",
+         "Section 5.7 addresses family education on nutrition, immunisation, and "
+         "safe parenting in a language the family understands. Nutrition education "
+         "covers four mandatory sub-topics: breastfeeding, weaning, protein-energy "
+         "malnutrition, and childhood obesity. At-home growth-monitoring "
+         "information is also provided."),
+        ("COP.11.h", "Excellence",
+         "Section 5.8 addresses adolescent-friendly health services where offered: "
+         "need-based preventive, curative, and counselling services with a "
+         "respectful, non-judgemental attitude and maintained confidentiality. "
+         "Scope-conditional: applies only where the organisation offers adolescent "
+         "health services."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 13. Required Records/Evidence Checklist
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Written guidance — paediatric services")
+    lb(doc,
+       "Written guidance for paediatric care covering assessment, organisation "
+       "of care, and addressing special needs.")
+    lb(doc,
+       "Defined scope of paediatric services offered by the organisation.")
+
+    h(doc, 2, "Neonatal care and breastfeeding")
+    lb(doc,
+       "Written guidance for neonatal care in line with national and "
+       "international guidelines.")
+    lb(doc,
+       "Evidence that breastfeeding is actively promoted.")
+
+    h(doc, 2, "Age-specific competency")
+    lb(doc,
+       "Evidence of age-specific competency for doctors and nursing staff caring "
+       "for children (by qualification, experience, or training).")
+
+    h(doc, 2, "Amenities")
+    lb(doc,
+       "Evidence of adequate amenities for infants and children appropriate to "
+       "the organisation's paediatric population.")
+
+    h(doc, 2, "Paediatric assessment records")
+    lb(doc,
+       "Assessment records documenting all four components for every child: "
+       "growth, developmental, immunisation, and nutritional assessment.")
+    lb(doc, "Growth charts maintained and kept up to date.")
+    lb(doc, "Immunisation records maintained and kept up to date.")
+
+    h(doc, 2, "Abduction and abuse prevention")
+    lb(doc,
+       "Written guidance for preventing child and neonate abduction and abuse.")
+    lb(doc,
+       "Evidence of adequate security and surveillance (e.g., CCTV).")
+    lb(doc,
+       "Defined rapid-response process; records of testing at "
+       "organisation-defined intervals (table-top exercise or mock drill).")
+    lb(doc,
+       "Evidence of staff training in prevention, rapid response, and recognising "
+       "and escalating suspected child abuse.")
+
+    h(doc, 2, "Family education records")
+    lb(doc,
+       "Records of family education on nutrition, immunisation, and safe "
+       "parenting, in a language the family understands.")
+    lb(doc,
+       "Evidence that all four mandatory nutrition sub-topics were covered: "
+       "breastfeeding, weaning, protein-energy malnutrition, and childhood "
+       "obesity.")
+    lb(doc,
+       "Evidence that at-home growth-monitoring information was provided to "
+       "parents.")
+
+    h(doc, 2, "Adolescent services (where in scope)")
+    lb(doc,
+       "Evidence of need-based adolescent health services with a respectful, "
+       "non-judgemental approach and maintained confidentiality where offered.")
+
+    # 14. References
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. COP.11.")
+    ln(doc, "Guidebook interpretation supplied for COP.11.a through COP.11.h.")
+    ln(doc,
+       "National and international guidelines for neonatal care (reference for "
+       "COP.11.b written guidance).")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied COP.11 objective elements and approved "
+      "plain-language content into policy format. The stop-work text is reproduced "
+      "exactly as supplied. Mandatory requirements and their stated modal strength "
+      "have been retained. The phrase \"actively promotes breastfeeding\" is "
+      "preserved exactly — it has not been softened to \"encourages\" or any "
+      "weaker formulation. The four paediatric assessment components (growth, "
+      "developmental, immunisation, nutritional) are preserved exactly. The "
+      "testing interval for the abduction/abuse rapid-response process is "
+      "hospital-defined — no specific interval has been invented. The four "
+      "mandatory family-education nutrition sub-topics (breastfeeding, weaning, "
+      "protein-energy malnutrition, childhood obesity) are preserved. "
+      "COP.11.h (adolescent services, Excellence level) is presented as "
+      "scope-conditional.")
+
+    save_and_verify(doc, "HCO_COP_11_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# COP.12 — Procedural Sedation   (stop-work YES)
+# Content: approved plain-language content (cop12_content.txt).
+# Structure: Section 3 two summary paragraphs; full detail Section 5.
+# Stars: a*, g* | CORE: none
+# Exact quantities preserved:
+#   5.1: six written-guidance areas (areas/orders/pre-assessment/intra/post/dc)
+#   5.3: technician NEVER administers — absolute prohibition, no exception
+#   5.4: monitor ALWAYS different from procedure performer — absolute, no exception
+#   5.5: six intra-procedure parameters (incl. cardiac rhythm)
+#   5.6: five post-sedation parameters (NO cardiac rhythm — different list)
+#   5.8: five emergency equipment items
+# ══════════════════════════════════════════════════════════════════════════════
+
+def gen_cop12():
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Procedural Sedation")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/COP/POL/12", "Anaesthesia/Sedation In-Charge")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Procedural sedation is administered consistently across the hospital, by "
+      "competent staff, with continuous monitoring and equipment ready for a deeper "
+      "level of sedation than planned.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} administers procedural sedation "
+      "consistently, obtains informed consent, ensures only competent staff "
+      "administer it, keeps the person monitoring separate from the person "
+      "performing the procedure, monitors patients during and after sedation, "
+      "applies discharge criteria, and keeps equipment ready for deeper-than-"
+      "intended sedation.")
+    p(doc,
+      "This policy does not cover general informed consent procedures or general "
+      "anaesthesia in detail — those are covered in other hospital policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to all staff who administer, monitor, or are otherwise "
+      f"involved in procedural sedation at {HN}.")
+
+    # 3. Policy standards — two summary paragraphs only
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} administers procedural sedation under written guidance that is "
+      "standardised across the organisation, obtains informed consent covering "
+      "risks, benefits, and alternatives, uses only competent staff to administer "
+      "sedation with the monitoring role kept separate from the procedure role, "
+      "monitors a defined set of parameters during and after the procedure, applies "
+      "documented discharge criteria, and keeps emergency equipment ready in case a "
+      "patient goes into a deeper level of sedation than intended.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not administer procedural sedation without written guidance covering, "
+       "at minimum, where sedation is given, how orders are written, pre-procedure "
+       "assessment, during-procedure monitoring, after-procedure monitoring, and "
+       "discharge/transfer-out criteria.")
+    lb(doc,
+       "Do not administer sedation without a documented pre-sedation assessment.")
+    lb(doc,
+       "Do not administer sedation without informed consent covering risks, "
+       "benefits, and alternatives, taken by the person administering sedation or "
+       "a doctor on the sedation team.")
+    lb(doc,
+       "Do not let a technician administer procedural sedation, under any "
+       "circumstances.")
+    lb(doc,
+       "Where the parenteral route is used, do not let a nurse administer sedation "
+       "without a doctor's supervision.")
+    lb(doc,
+       "Do not let the same person both perform the procedure and monitor the "
+       "sedation.")
+    lb(doc,
+       "Do not skip any of the six required intra-procedure monitoring parameters: "
+       "heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen "
+       "saturation, and level of sedation.")
+    lb(doc,
+       "Do not skip any of the five required post-sedation monitoring parameters: "
+       "heart rate, respiratory rate, blood pressure, oxygen saturation, and level "
+       "of sedation.")
+    lb(doc,
+       "Do not discharge a patient from the observation/recovery area without a "
+       "qualified individual applying documented discharge criteria.")
+    lb(doc,
+       "Do not administer sedation in a room without all five emergency equipment "
+       "items in working order: emergency resuscitation equipment, suction, "
+       "advanced airway equipment, positive pressure ventilation, and supplemental "
+       "oxygen.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Follow written guidance for consistent sedation")
+    p(doc,
+      "Written guidance based on standard treatment guidelines or sound clinical "
+      "practice governs procedural sedation. At a minimum, it covers six things: "
+      "identification of the areas where sedation is administered and procedures "
+      "performed, the mechanism for writing orders, pre-procedure assessment, "
+      "monitoring during the procedure, monitoring after the procedure, and "
+      "discharge or transfer-out criteria. A pre-sedation assessment is performed "
+      "and documented for every patient, evaluating the risk and appropriateness "
+      "of sedation, with its scope and content based on professional guidelines. "
+      f"Sedation is administered in a standardised way across the whole "
+      "organisation.")
+
+    h(doc, 2, "5.2 Obtain informed consent")
+    p(doc,
+      "Informed consent for procedural sedation is taken by the person "
+      "administering sedation, or by a doctor on the sedation team. The patient "
+      "is informed of the risks, benefits, and alternatives, and the patient and "
+      "family are educated about post-procedural pain relief. (Related "
+      "requirements are covered in the hospital's other policies.)")
+
+    h(doc, 2, "5.3 Use only competent, trained personnel")
+    p(doc,
+      "Where the parenteral route is used, sedation is administered by a doctor, "
+      "or by a nurse under a doctor's supervision. A technician never administers "
+      "sedation, without exception.")
+
+    h(doc, 2, "5.4 Keep the monitoring role separate from the procedure role")
+    p(doc,
+      "The person monitoring a sedated patient is always different from the person "
+      "performing the procedure, without exception. The monitoring person is "
+      "trained to detect abnormalities in monitoring parameters and to recognise "
+      "apnoea and airway obstruction.")
+
+    h(doc, 2, "5.5 Monitor patients during the procedure")
+    p(doc,
+      "Intra-procedure monitoring covers, at a minimum, six parameters: heart "
+      "rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation, "
+      "and level of sedation. Additional parameters may be monitored case by case. "
+      "Monitored parameters are documented; routine cardiac rhythm need not be "
+      "documented continuously on a monitor, but any rhythm abnormality is "
+      "documented.")
+
+    h(doc, 2, "5.6 Monitor patients after the procedure")
+    p(doc,
+      "After sedation, the patient's vitals are monitored at intervals "
+      f"{HN} decides, until the patient has fully recovered. At a minimum, this "
+      "covers five parameters: heart rate, respiratory rate, blood pressure, "
+      "oxygen saturation, and level of sedation. The extent and duration of "
+      "monitoring can be adjusted for the complexity of the procedure and the "
+      "patient's other health conditions. Level of sedation could be monitored "
+      "using a checklist covering mild, moderate, and deep sedation. Monitoring "
+      "is documented.")
+
+    h(doc, 2, "5.7 Apply discharge criteria")
+    p(doc,
+      "Discharge or transfer-out from the observation/recovery area follows "
+      f"criteria {HN} has developed and documented, in line with physiologic "
+      "parameters and sound clinical practice. A qualified individual applies "
+      "these criteria, and that application is documented.")
+
+    h(doc, 2, "5.8 Keep equipment ready for deeper sedation than intended")
+    p(doc,
+      "The room where procedural sedation is given has, in working order: "
+      "equipment for emergency resuscitation, suction, advanced airway equipment, "
+      "positive pressure ventilation, and supplemental oxygen. Emergency equipment "
+      "and supplies are immediately available and suited to the type of sedation, "
+      "the patient's age, and the patient's medical condition. A person trained in "
+      f"airway management, or an anaesthesiologist, is available in {HN} and able "
+      "to respond quickly to the area.")
+
+    # 6. Stop-work authority — text exactly as given in cop12_content.txt
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Do not start procedural sedation without consent, without the required "
+      "monitoring in place, or without a competent person qualified to administer "
+      "it; do not administer sedation with a technician, or without a separate "
+      "person monitoring, or where the sedation room lacks emergency equipment for "
+      "a deeper level of sedation than intended.")
+    p(doc,
+      "Stop-work applies to the start of a planned sedation procedure. Where "
+      "sedation is already under way and a patient's condition changes "
+      "unexpectedly, the response continues with the best available qualified help "
+      "while the gap is escalated.")
+    p(doc,
+      "The person who stops tells the Anaesthesia/Sedation In-Charge and the "
+      "Medical Superintendent the same shift. Refusing to proceed with unsafe "
+      "sedation is not a disciplinary matter.")
+
+    # 7. Governance and responsibility
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable that this policy is followed and appropriately resourced; "
+         "receives stop-work notifications the same shift."),
+        ("Anaesthesia/Sedation In-Charge",
+         "Oversees the sedation programme; ensures written guidance, competency "
+         "requirements, role-separation rule, and emergency equipment standards "
+         "are in place; receives stop-work notifications the same shift."),
+        ("Doctors administering sedation",
+         "Perform and document pre-sedation assessment; obtain informed consent "
+         "covering risks, benefits, and alternatives; administer sedation (or "
+         "supervise nurses where parenteral route is used); apply and document "
+         "discharge criteria."),
+        ("Monitoring personnel",
+         "Maintain role separation from procedure performer at all times; monitor "
+         "all six intra-procedure and five post-sedation parameters; detect "
+         "abnormalities, apnoea, and airway obstruction; document monitored "
+         "parameters."),
+        ("Nursing staff",
+         "May administer parenteral sedation only under direct doctor supervision; "
+         "never administer sedation independently via the parenteral route; a "
+         "technician never administers sedation."),
+    ])
+
+    # 8. Quality monitoring
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Written guidance",
+         "Written guidance covering all six required areas in place and current; "
+         "pre-sedation assessment performed and documented for every patient"),
+        ("Informed consent",
+         "Consent records covering risks, benefits, and alternatives; taken by "
+         "administering doctor or sedation team doctor"),
+        ("Staff competency — no technician",
+         "Parenteral sedation administered only by a doctor or nurse under "
+         "supervision; no technician administers sedation under any circumstances"),
+        ("Role separation",
+         "Person monitoring is always different from procedure performer; "
+         "monitoring person's training in abnormality detection documented"),
+        ("Intra-procedure monitoring",
+         "All six parameters monitored and documented for every procedure: heart "
+         "rate, cardiac rhythm, respiratory rate, blood pressure, oxygen "
+         "saturation, level of sedation"),
+        ("Post-sedation monitoring",
+         "All five parameters monitored at organisation-defined intervals until "
+         "full recovery: heart rate, respiratory rate, blood pressure, oxygen "
+         "saturation, level of sedation; monitoring documented"),
+        ("Discharge criteria",
+         "Documented discharge/transfer-out criteria applied by a qualified "
+         "individual; application documented for every patient"),
+        ("Emergency equipment",
+         "All five items in working order checked and recorded: emergency "
+         "resuscitation equipment, suction, advanced airway equipment, positive "
+         "pressure ventilation, supplemental oxygen"),
+    ])
+
+    # 9. Training and staff acknowledgement
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      "All staff who administer, monitor, or are otherwise involved in procedural "
+      "sedation shall be familiar with the written guidance applicable to their "
+      "work, including pre-sedation assessment, informed consent requirements, the "
+      "absolute prohibition on technicians administering sedation, the role-"
+      "separation rule, the six intra-procedure and five post-sedation monitoring "
+      "parameters, discharge criteria, and emergency equipment requirements.")
+    p(doc,
+      f"I have read the Policy on Procedural Sedation of {HN}. I will follow "
+      "the processes described.")
+    sig_tbl(doc)
+
+    # 10. Distribution
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to all staff who administer, monitor, or "
+      f"are otherwise involved in procedural sedation at {HN}.")
+
+    # 11. Abbreviations
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("BP",   "Blood pressure"),
+        ("SpO2", "Peripheral oxygen saturation"),
+    ])
+
+    # 12. Traceability table
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 9, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("COP.12.a", "Commitment*",
+         "Section 5.1 addresses written guidance covering at minimum six areas: "
+         "identification of sedation areas and procedure locations, order-writing "
+         "mechanism, pre-procedure assessment, intra-procedure monitoring, "
+         "post-procedure monitoring, and discharge/transfer-out criteria. Also "
+         "addresses the pre-sedation assessment performed and documented for every "
+         "patient."),
+        ("COP.12.b", "Commitment",
+         "Section 5.2 addresses informed consent for procedural sedation covering "
+         "risks, benefits, and alternatives, taken by the administering doctor or "
+         "a sedation team doctor. Also addresses patient/family education on "
+         "post-procedural pain relief."),
+        ("COP.12.c", "Commitment",
+         "Section 5.3 addresses competency requirements: parenteral sedation by a "
+         "doctor or nurse under doctor supervision only. States the absolute "
+         "prohibition: a technician never administers sedation, without exception."),
+        ("COP.12.d", "Commitment",
+         "Section 5.4 addresses the absolute rule that the monitoring person is "
+         "always different from the procedure performer, without exception. Also "
+         "addresses training of the monitoring person in detecting abnormalities, "
+         "apnoea, and airway obstruction."),
+        ("COP.12.e", "Commitment",
+         "Section 5.5 addresses intra-procedure monitoring of at minimum six "
+         "parameters: heart rate, cardiac rhythm, respiratory rate, blood "
+         "pressure, oxygen saturation, and level of sedation. Notes that routine "
+         "cardiac rhythm need not be documented continuously, but rhythm "
+         "abnormalities must be documented."),
+        ("COP.12.f", "Commitment",
+         "Section 5.6 addresses post-sedation monitoring of at minimum five "
+         "parameters: heart rate, respiratory rate, blood pressure, oxygen "
+         "saturation, and level of sedation. Cardiac rhythm is NOT in the "
+         "post-sedation list. Monitoring at organisation-defined intervals until "
+         "full recovery; monitoring documented."),
+        ("COP.12.g", "Commitment*",
+         "Section 5.7 addresses discharge/transfer-out criteria developed and "
+         "documented by the organisation, in line with physiologic parameters and "
+         "sound clinical practice. A qualified individual applies the criteria, "
+         "and the application is documented."),
+        ("COP.12.h", "Commitment",
+         "Section 5.8 addresses the five emergency equipment items that must be "
+         "in working order in the sedation room: emergency resuscitation "
+         "equipment, suction, advanced airway equipment, positive pressure "
+         "ventilation, and supplemental oxygen. Also addresses availability of a "
+         "trained airway manager or anaesthesiologist able to respond quickly."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 13. Required Records/Evidence Checklist
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Written guidance and pre-sedation assessment")
+    lb(doc,
+       "Written guidance for procedural sedation covering all six minimum areas: "
+       "sedation areas, order-writing, pre-procedure assessment, intra-procedure "
+       "monitoring, post-procedure monitoring, discharge/transfer-out criteria.")
+    lb(doc,
+       "Pre-sedation assessment documented for every patient, covering risk and "
+       "appropriateness of sedation.")
+
+    h(doc, 2, "Informed consent")
+    lb(doc,
+       "Informed consent records covering risks, benefits, and alternatives for "
+       "every sedation procedure.")
+    lb(doc,
+       "Evidence that consent was taken by the administering doctor or a sedation "
+       "team doctor.")
+    lb(doc,
+       "Records of patient/family education on post-procedural pain relief.")
+
+    h(doc, 2, "Staff competency and role separation")
+    lb(doc,
+       "Evidence that parenteral sedation is administered only by a doctor or a "
+       "nurse under direct doctor supervision — no technician administers sedation "
+       "under any circumstances.")
+    lb(doc,
+       "Evidence that the monitoring role is kept separate from the procedure role "
+       "for every sedation.")
+    lb(doc,
+       "Evidence of monitoring person's training in detecting abnormalities in "
+       "monitoring parameters and recognising apnoea and airway obstruction.")
+
+    h(doc, 2, "Intra-procedure monitoring records")
+    lb(doc,
+       "Intra-procedure monitoring records documenting all six parameters: heart "
+       "rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation, "
+       "and level of sedation.")
+    lb(doc,
+       "Records of any cardiac rhythm abnormalities documented per episode.")
+
+    h(doc, 2, "Post-sedation monitoring and discharge records")
+    lb(doc,
+       "Post-sedation monitoring records documenting at minimum five parameters: "
+       "heart rate, respiratory rate, blood pressure, oxygen saturation, and level "
+       "of sedation — at organisation-defined intervals until full recovery.")
+    lb(doc,
+       "Discharge/transfer-out records showing a qualified individual applied "
+       "documented criteria; application documented for every patient.")
+
+    h(doc, 2, "Emergency equipment")
+    lb(doc,
+       "Equipment check records confirming all five items in working order: "
+       "emergency resuscitation equipment, suction, advanced airway equipment, "
+       "positive pressure ventilation, and supplemental oxygen.")
+    lb(doc,
+       "Evidence that a trained airway manager or anaesthesiologist is available "
+       f"in {HN} and able to respond quickly to the sedation area.")
+
+    # 14. References
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. COP.12.")
+    ln(doc, "Guidebook interpretation supplied for COP.12.a through COP.12.h.")
+    ln(doc,
+       "Standard treatment guidelines and professional society guidelines on "
+       "procedural sedation (reference for written guidance, pre-sedation "
+       "assessment, and monitoring parameters).")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied COP.12 objective elements and approved "
+      "plain-language content into policy format. The stop-work text is reproduced "
+      "exactly as supplied. Mandatory requirements and their stated modal strength "
+      "have been retained. The six written-guidance areas (COP.12.a), the absolute "
+      "prohibition on technicians administering sedation (COP.12.c — \"without "
+      "exception\"), the absolute role-separation rule (COP.12.d — \"always "
+      "different\", \"without exception\"), the six intra-procedure monitoring "
+      "parameters (COP.12.e, including cardiac rhythm), the five post-sedation "
+      "monitoring parameters (COP.12.f — cardiac rhythm is absent from this list), "
+      "and the five emergency equipment items (COP.12.h) are all preserved "
+      "exactly. No monitoring interval has been invented for post-sedation "
+      "monitoring; the interval is organisation-defined.")
+
+    save_and_verify(doc, "HCO_COP_12_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# COP.13 — Anaesthesia Services   (stop-work YES)
+# Content: approved plain-language content (cop13_content.txt).
+# Structure: Section 3 two summary paragraphs; full detail Section 5.
+# Stars: a*, g* | CORE: b (pre-anaesthesia assessment/plan), e (monitoring)
+# Exact quantities preserved:
+#   Local anaesthesia excluded from scope (Purpose, Scope, 5.1)
+#   5.2: five anaesthesia plan elements
+#   5.4: anaesthesia consent ALWAYS separate from surgery consent
+#   5.5: seven intra-anaesthesia monitoring parameters (incl. temperature);
+#        regional-anaesthesia ETCO2 exception; anaesthesiologist present
+#        throughout (absolute statement)
+#   5.8: five anaesthesia chart elements
+# ══════════════════════════════════════════════════════════════════════════════
+
+def gen_cop13():
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Anaesthesia Services")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/COP/POL/13", "Anaesthesia In-Charge")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Anaesthesia services are provided consistently and safely, with a documented "
+      "pre-anaesthesia assessment and plan for every patient, continuous "
+      "intra-anaesthesia monitoring, and defined criteria for recovery-area "
+      "transfer.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} provides anaesthesia consistently, assesses "
+      "patients before anaesthesia and before induction, obtains separate "
+      "anaesthesia consent, monitors patients during and after anaesthesia, applies "
+      "transfer criteria from the recovery area, documents anaesthesia given, "
+      "follows infection prevention and control guidelines, and tracks "
+      "intra-operative adverse anaesthesia events.")
+    p(doc,
+      "This policy does not cover local anaesthesia, general informed consent "
+      "procedures, or infection control in detail — those are covered in other "
+      "hospital policies. This policy does not apply to local anaesthesia.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to all anaesthesiologists and supporting staff involved "
+      f"in administering, monitoring, or documenting anaesthesia at {HN}, "
+      "excluding local anaesthesia.")
+
+    # 3. Policy standards — two summary paragraphs only
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} provides anaesthesia under written guidance applied consistently "
+      "across the organisation, with a documented pre-anaesthesia assessment and "
+      "plan and a pre-induction assessment for every patient, separate informed "
+      "consent for anaesthesia, continuous monitoring of a defined set of "
+      "parameters during the procedure, post-anaesthesia monitoring until complete "
+      "recovery, defined transfer criteria from the recovery area, complete "
+      "documentation in the anaesthesia chart, compliance with infection prevention "
+      "and control guidelines, and tracking of intra-operative adverse anaesthesia "
+      "events.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not provide anaesthesia without written guidance documenting the "
+       "indications, the type of anaesthesia, and the procedure — this policy does "
+       "not apply to local anaesthesia.")
+    lb(doc,
+       "Do not wheel a patient into the OT complex without a completed "
+       "pre-anaesthesia assessment and documented plan by a qualified "
+       "anaesthesiologist — this applies to both routine and emergency cases.")
+    lb(doc,
+       "Do not skip any of the five mandatory anaesthesia plan elements: "
+       "pre-medications, type of anaesthesia, anaesthesia agent and dose, special "
+       "requirements, and anticipated post-anaesthesia care including post-operative "
+       "pain management where appropriate.")
+    lb(doc,
+       "Do not induce anaesthesia without a pre-induction assessment by an "
+       "anaesthesiologist, done immediately before induction.")
+    lb(doc,
+       "Do not obtain anaesthesia consent from anyone other than the "
+       "anaesthesiologist, and do not combine anaesthesia consent with surgery "
+       "consent — they must be separate.")
+    lb(doc,
+       "Do not administer anaesthesia without monitoring all seven required "
+       "parameters: temperature, heart rate, cardiac rhythm, respiratory rate, "
+       "blood pressure, oxygen saturation, and end-tidal carbon dioxide — except "
+       "for regional anaesthesia, where end-tidal carbon dioxide is replaced by "
+       "continual observation of ventilation adequacy.")
+    lb(doc,
+       "Do not leave the anaesthesiologist absent at any point during the "
+       "procedure.")
+    lb(doc,
+       "Do not transfer a patient from the recovery area without the "
+       "anaesthesiologist applying documented transfer criteria.")
+    lb(doc,
+       "Do not administer anaesthesia in breach of infection prevention and "
+       "control guidelines.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Provide anaesthesia under consistent written guidance")
+    p(doc,
+      "Written guidance based on standard treatment guidelines or sound clinical "
+      f"practice governs anaesthesia services across {HN}. The indications, type "
+      "of anaesthesia, and procedure are documented for every patient. This policy "
+      "does not apply to local anaesthesia; \"anaesthesia\" is defined as in the "
+      "NABH glossary.")
+
+    h(doc, 2, "5.2 Complete a pre-anaesthesia assessment and plan")
+    p(doc,
+      "Every patient has a pre-anaesthesia assessment by a qualified "
+      "anaesthesiologist, done before being wheeled into the OT complex. This "
+      "applies to both routine and emergency cases. For elective surgery, the "
+      "assessment may be done before admission; for emergency or obstetric "
+      "patients, it may be done shortly before the procedure. The resulting plan "
+      "covers five things: pre-medications, type of anaesthesia, anaesthesia agent "
+      "and dose, special requirements, and anticipated post-anaesthesia care, "
+      "including post-operative pain management where appropriate. The "
+      "anaesthesiologist reviews the patient's current medications. The plan is "
+      "documented in the patient's medical record.")
+
+    h(doc, 2, "5.3 Complete a pre-induction assessment")
+    p(doc,
+      "Immediately before inducing anaesthesia, an anaesthesiologist re-evaluates "
+      "the patient in a pre-induction assessment. Any changes to the anaesthesia "
+      "plan are documented. In urgent cases, the pre-anaesthesia and pre-induction "
+      "assessments may be done one after another or simultaneously, but each is "
+      "documented separately in the patient's medical record.")
+
+    h(doc, 2, "5.4 Obtain separate anaesthesia consent")
+    p(doc,
+      "The anaesthesiologist obtains informed consent for anaesthesia, educating "
+      "the patient and/or family on the risks, benefits, and alternatives. "
+      "Anaesthesia consent is always separate from surgery consent. (Related "
+      "requirements are covered in the hospital's other policies.)")
+
+    h(doc, 2, "5.5 Monitor patients throughout anaesthesia")
+    p(doc,
+      "During anaesthesia, monitoring covers seven parameters at minimum: "
+      "temperature, heart rate, cardiac rhythm, respiratory rate, blood pressure, "
+      "oxygen saturation, and end-tidal carbon dioxide. For regional anaesthesia, "
+      "end-tidal carbon dioxide is replaced by continual observation of qualitative "
+      "clinical signs showing ventilation is adequate. Other parameters may be "
+      "monitored case by case. Routine cardiac rhythm need not be documented "
+      "continuously, but any rhythm abnormality is documented. The anaesthesiologist "
+      "is present throughout the procedure. Monitoring results are documented in "
+      "the patient's medical record.")
+
+    h(doc, 2, "5.6 Monitor patients after anaesthesia")
+    p(doc,
+      "Post-anaesthesia status is monitored in the recovery area or OT and "
+      "documented, at minimum covering vitals, until the patient recovers "
+      "completely from anaesthesia. This is done by an anaesthesiologist. If the "
+      "patient is unstable and needs ICU care, monitoring continues there. Where a "
+      "patient is transferred directly from OT to ICU, monitoring and "
+      "documentation match what would be required in the recovery room.")
+
+    h(doc, 2, "5.7 Apply defined transfer criteria")
+    p(doc,
+      "The anaesthesiologist applies criteria — documented by "
+      f"{HN}, based on physiologic parameters and sound clinical practice — to "
+      "decide when a patient can be transferred from the recovery area.")
+
+    h(doc, 2, "5.8 Document anaesthesia given")
+    p(doc,
+      "The anaesthesia chart records five things for every patient: the name of "
+      "the anaesthesiologist who performed the procedure, the names and "
+      "designations of anyone who assisted, the type of anaesthesia used, the "
+      "medications used, and the date, time, and signature of the person making "
+      "the entry. (Related requirements are covered in the hospital's other "
+      "policies.)")
+
+    h(doc, 2, "5.9 Follow infection prevention and control guidelines")
+    p(doc,
+      "Anaesthesia procedures comply with infection prevention and control "
+      "guidelines to prevent cross-infection between patients — for example, in "
+      "how circuits are managed. These guidelines are documented, either separately "
+      "or as part of the infection prevention and control manual. (Related "
+      "requirements are covered in the hospital's other policies.)")
+
+    h(doc, 2, "5.10 Track intra-operative adverse anaesthesia events")
+    p(doc,
+      f"{HN} defines the intra-operative adverse anaesthesia events relevant to "
+      "its scope — for example, cardiac arrest, anaesthesia gas failure, "
+      "endotracheal tube slippage, or air embolism. These are examples; "
+      f"{HN} decides what's relevant to it. There's a mechanism to make sure "
+      "every such event is captured — for instance, a dedicated heading in the "
+      "anaesthesia record — documented and monitored so corrective and preventive "
+      "action can follow.")
+
+    # 6. Stop-work authority — text exactly as given in cop13_content.txt
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Do not wheel a patient into the OT without a completed pre-anaesthesia "
+      "assessment and plan by a qualified anaesthesiologist; do not administer "
+      "anaesthesia without the seven required monitoring parameters in place (or "
+      "the regional-anaesthesia alternative); do not proceed without anaesthesia "
+      "consent.")
+    p(doc,
+      "Stop-work applies to elective and non-emergent anaesthesia starts. A "
+      "genuine life-threatening emergency continues with the best available "
+      "qualified anaesthesia support while the gap is escalated and documented.")
+    p(doc,
+      "The person who stops tells the Anaesthesia In-Charge and the Medical "
+      "Superintendent the same shift. Refusing to proceed with unsafe anaesthesia "
+      "is not a disciplinary matter.")
+
+    # 7. Governance and responsibility
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable that this policy is followed and appropriately resourced; "
+         "receives stop-work notifications the same shift."),
+        ("Anaesthesia In-Charge",
+         "Oversees the anaesthesia programme; ensures written guidance, "
+         "assessment/plan completion, monitoring compliance, chart documentation, "
+         "and adverse event tracking are in place; receives stop-work notifications "
+         "the same shift."),
+        ("Anaesthesiologists",
+         "Perform and document pre-anaesthesia assessment and plan (five elements) "
+         "before OT, for all patients including emergencies; perform pre-induction "
+         "assessment immediately before induction; obtain anaesthesia consent "
+         "separately from surgery consent; monitor all seven required parameters "
+         "throughout; remain present throughout the procedure; apply and document "
+         "transfer criteria; complete anaesthesia chart (five elements) for every "
+         "patient; follow IPC guidelines."),
+        ("Supporting anaesthesia staff",
+         "Assist anaesthesiologists during procedures; follow IPC guidelines; "
+         "support adverse anaesthesia event capture."),
+    ])
+
+    # 8. Quality monitoring
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Written guidance",
+         "Written guidance covering indications, type of anaesthesia, and "
+         "procedure; excludes local anaesthesia explicitly"),
+        ("Pre-anaesthesia assessment and plan",
+         "Assessment completed before OT complex for all patients (routine and "
+         "emergency); plan covers all five elements; patient's current medications "
+         "reviewed; documented in medical record"),
+        ("Pre-induction assessment",
+         "Completed immediately before induction by an anaesthesiologist; changes "
+         "to plan documented; separately documented in urgent cases"),
+        ("Anaesthesia consent",
+         "Informed consent obtained by the anaesthesiologist, always separate from "
+         "surgery consent; covers risks, benefits, and alternatives"),
+        ("Intra-anaesthesia monitoring",
+         "All seven parameters monitored throughout: temperature, heart rate, "
+         "cardiac rhythm, respiratory rate, blood pressure, oxygen saturation, "
+         "ETCO2 (or continual qualitative observation for regional anaesthesia); "
+         "anaesthesiologist present throughout; documented"),
+        ("Post-anaesthesia monitoring",
+         "Vitals monitored until complete recovery by anaesthesiologist; ICU "
+         "monitoring continues if patient is unstable; documented"),
+        ("Transfer criteria",
+         "Criteria applied by anaesthesiologist and documented for every transfer "
+         "from the recovery area"),
+        ("Anaesthesia chart",
+         "Five elements documented for every patient: anaesthesiologist name, "
+         "assistant names and designations, type of anaesthesia, medications, "
+         "date/time/signature"),
+        ("Adverse anaesthesia events",
+         "Defined events captured through a named mechanism; documented and "
+         "monitored; CAPA applied"),
+    ])
+
+    # 9. Training and staff acknowledgement
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      "All anaesthesiologists and supporting staff shall be familiar with the "
+      "written guidance applicable to their work, including the pre-anaesthesia "
+      "assessment and five-element plan requirements, pre-induction assessment, "
+      "separate anaesthesia consent, the seven intra-anaesthesia monitoring "
+      "parameters (including the regional-anaesthesia ETCO2 alternative), the "
+      "requirement for the anaesthesiologist to be present throughout, transfer "
+      "criteria, anaesthesia chart requirements, IPC guidelines, and adverse event "
+      "capture.")
+    p(doc,
+      f"I have read the Policy on Anaesthesia Services of {HN}. I will follow "
+      "the processes described.")
+    sig_tbl(doc)
+
+    # 10. Distribution
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to all anaesthesiologists and supporting "
+      f"staff involved in administering, monitoring, or documenting anaesthesia "
+      f"at {HN}.")
+
+    # 11. Abbreviations
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CAPA",  "Corrective and Preventive Action"),
+        ("ETCO2", "End-tidal carbon dioxide"),
+        ("ICU",   "Intensive Care Unit"),
+        ("IPC",   "Infection Prevention and Control"),
+        ("OT",    "Operation Theatre"),
+    ])
+
+    # 12. Traceability table
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 11, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("COP.13.a", "Commitment*",
+         "Section 5.1 addresses written guidance for anaesthesia services based on "
+         "standard treatment guidelines or sound clinical practice, covering "
+         "indications, type of anaesthesia, and procedure documented for every "
+         "patient. Explicitly excludes local anaesthesia."),
+        ("COP.13.b", "CORE",
+         "Section 5.2 addresses the mandatory pre-anaesthesia assessment and plan "
+         "by a qualified anaesthesiologist, completed before the patient is wheeled "
+         "into the OT complex, for all patients including emergencies. The plan "
+         "covers five elements: pre-medications, type of anaesthesia, anaesthesia "
+         "agent and dose, special requirements, and anticipated post-anaesthesia "
+         "care including post-operative pain management where appropriate."),
+        ("COP.13.c", "Commitment",
+         "Section 5.3 addresses the pre-induction assessment by an "
+         "anaesthesiologist done immediately before induction; changes to the plan "
+         "documented. In urgent cases, assessments may be sequential or "
+         "simultaneous but each documented separately."),
+        ("COP.13.d", "Commitment",
+         "Section 5.4 addresses informed consent for anaesthesia, obtained by the "
+         "anaesthesiologist and always separate from surgery consent. Covers risks, "
+         "benefits, and alternatives."),
+        ("COP.13.e", "CORE",
+         "Section 5.5 addresses intra-anaesthesia monitoring of seven minimum "
+         "parameters: temperature, heart rate, cardiac rhythm, respiratory rate, "
+         "blood pressure, oxygen saturation, and end-tidal carbon dioxide. For "
+         "regional anaesthesia, ETCO2 is replaced by continual observation of "
+         "qualitative clinical signs showing ventilation is adequate. The "
+         "anaesthesiologist is present throughout the procedure (absolute). "
+         "Documented in the medical record."),
+        ("COP.13.f", "Commitment",
+         "Section 5.6 addresses post-anaesthesia monitoring of vitals until "
+         "complete recovery, by an anaesthesiologist, in the recovery area or OT. "
+         "If patient is unstable, monitoring continues in ICU. ICU-direct "
+         "transfers are documented to recovery-room standard."),
+        ("COP.13.g", "Commitment*",
+         "Section 5.7 addresses the anaesthesiologist applying organisation-"
+         "defined transfer criteria based on physiologic parameters and sound "
+         "clinical practice; application documented for every transfer."),
+        ("COP.13.h", "Commitment",
+         "Section 5.8 addresses the anaesthesia chart recording five elements for "
+         "every patient: name of the anaesthesiologist, names and designations of "
+         "assistants, type of anaesthesia, medications used, and date/time/"
+         "signature of entry."),
+        ("COP.13.i", "Commitment",
+         "Section 5.9 addresses compliance with IPC guidelines to prevent "
+         "cross-infection between patients (e.g., circuit management); guidelines "
+         "documented standalone or within the IPC manual."),
+        ("COP.13.j", "Achievement",
+         "Section 5.10 addresses organisation-defined intra-operative adverse "
+         "anaesthesia events, a capture mechanism, documentation, monitoring, and "
+         "corrective and preventive action."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 13. Required Records/Evidence Checklist
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Written guidance")
+    lb(doc,
+       "Written guidance for anaesthesia services documenting indications, type of "
+       "anaesthesia, and procedure; explicitly excluding local anaesthesia.")
+
+    h(doc, 2, "Pre-anaesthesia assessment and plan")
+    lb(doc,
+       "Pre-anaesthesia assessment completed before OT for every patient (routine "
+       "and emergency), by a qualified anaesthesiologist.")
+    lb(doc,
+       "Anaesthesia plan covering all five elements: pre-medications, type, agent "
+       "and dose, special requirements, anticipated post-anaesthesia care.")
+    lb(doc,
+       "Review of patient's current medications documented.")
+    lb(doc, "Plan documented in the patient's medical record.")
+
+    h(doc, 2, "Pre-induction assessment")
+    lb(doc,
+       "Pre-induction assessment by an anaesthesiologist, done immediately before "
+       "induction; changes to plan documented.")
+    lb(doc,
+       "In urgent cases: each assessment documented separately even if done "
+       "sequentially or simultaneously.")
+
+    h(doc, 2, "Anaesthesia consent")
+    lb(doc,
+       "Informed consent records for anaesthesia obtained by the anaesthesiologist, "
+       "separate from surgery consent.")
+
+    h(doc, 2, "Intra-anaesthesia monitoring")
+    lb(doc,
+       "Monitoring records covering all seven parameters for every patient: "
+       "temperature, heart rate, cardiac rhythm, respiratory rate, blood pressure, "
+       "oxygen saturation, ETCO2 (or continual qualitative ventilation observation "
+       "for regional anaesthesia).")
+    lb(doc,
+       "Evidence that the anaesthesiologist was present throughout every procedure.")
+
+    h(doc, 2, "Post-anaesthesia monitoring and transfer")
+    lb(doc,
+       "Post-anaesthesia monitoring records (vitals until complete recovery) in "
+       "the recovery area, OT, or ICU as appropriate.")
+    lb(doc,
+       "Transfer criteria documented; anaesthesiologist's application of criteria "
+       "recorded for every transfer from recovery.")
+
+    h(doc, 2, "Anaesthesia chart")
+    lb(doc,
+       "Anaesthesia chart for every patient recording all five elements: "
+       "anaesthesiologist's name, assistants' names and designations, type of "
+       "anaesthesia, medications, date/time/signature.")
+
+    h(doc, 2, "IPC compliance and adverse events")
+    lb(doc,
+       "IPC guidelines for anaesthesia procedures documented (standalone or in IPC "
+       "manual); evidence of compliance.")
+    lb(doc,
+       "Organisation-defined list of intra-operative adverse anaesthesia events; "
+       "capture mechanism in place; records of events documented; CAPA applied.")
+
+    # 14. References
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. COP.13.")
+    ln(doc, "Guidebook interpretation supplied for COP.13.a through COP.13.j.")
+    ln(doc,
+       "NABH Glossary (reference for the definition of \"anaesthesia\" as "
+       "applicable to this policy).")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied COP.13 objective elements and approved "
+      "plain-language content into policy format. The stop-work text is reproduced "
+      "exactly as supplied. Mandatory requirements and their stated modal strength "
+      "have been retained. Local anaesthesia is explicitly excluded from scope in "
+      "the Purpose, Scope, and Section 5.1. The five anaesthesia plan elements "
+      "(COP.13.b) are preserved exactly. The seven intra-anaesthesia monitoring "
+      "parameters (COP.13.e) including temperature — the anaesthesia-specific "
+      "addition — are preserved exactly, as is the regional-anaesthesia ETCO2 "
+      "exception (continual observation of qualitative clinical signs). The "
+      "statement that the anaesthesiologist is present throughout the procedure is "
+      "preserved as an absolute. The five anaesthesia chart elements (COP.13.h) "
+      "are preserved exactly. Anaesthesia consent is stated as always separate "
+      "from surgery consent. No specific time frames have been invented for "
+      "assessment completion in emergency cases.")
+
+    save_and_verify(doc, "HCO_COP_13_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# COP.14 — Surgical Services   (stop-work YES)
+# Content: approved plain-language content (cop14_content.txt).
+# Structure: Section 3 two summary paragraphs; full detail Section 5.
+# Stars: a*, d* (CORE), i*, j* | Achievement: i, j | CORE: d
+# Exact quantities preserved:
+#   5.3: fresh consent except life-saving exception
+#   5.4: three site-marking triggers (laterality/multiple structures/levels);
+#        time-out immediately before with three mandatory agreements
+#   5.5: eight operative-note elements; before transfer from recovery
+#   5.8: seven OT facility areas (+recovery room where applicable)
+#   5.10: two distinct monitoring frequencies — daily (humidity/pressure/temp)
+#         vs. at least every six months (filter integrity) — kept separate
+# ══════════════════════════════════════════════════════════════════════════════
+
+def gen_cop14():
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Surgical Services")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/COP/POL/14", "OT In-Charge")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Surgical services are provided consistently and safely, with wrong-site, "
+      "wrong-patient, and wrong-surgery events prevented through mandatory site "
+      "marking and time-out, and complete documentation from pre-operative "
+      "assessment through to the operative note.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} provides surgical services under written "
+      "guidance, assesses patients and obtains consent before surgery, prevents "
+      "wrong-site, wrong-patient, and wrong-surgery events, documents every "
+      "operation, plans post-operative care, keeps the operating theatre safe and "
+      "properly equipped, and runs a quality assurance programme including "
+      "environmental surveillance.")
+    p(doc,
+      "This policy does not cover general informed consent procedures or infection "
+      "control in detail — those are covered in other hospital policies. If "
+      f"{HN} does not provide surgical services, this policy does not apply.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to all surgeons, anaesthesiologists, and operating "
+      f"theatre staff involved in surgical services at {HN}.")
+
+    # 3. Policy standards — two summary paragraphs only
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} provides surgical services under written guidance listing the "
+      "procedures offered and the competency needed for each, assesses and obtains "
+      "consent from every surgical patient, prevents wrong-site, wrong-patient, "
+      "and wrong-surgery events through mandatory site marking and time-out, "
+      "documents every operation completely before the patient leaves recovery, "
+      "plans post-operative care, keeps the operating theatre free of "
+      "sterile/unsterile mix-ups and properly equipped, and runs a quality "
+      "assurance programme that includes environmental surveillance of the "
+      "operating theatre.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not perform a surgical procedure that isn't on the hospital's "
+       "documented list, or perform it with personnel below the competency level "
+       "the guidance defines for that procedure.")
+    lb(doc,
+       "Do not proceed with elective surgery without a pre-operative assessment, "
+       "a documented pre-operative diagnosis, and pre-operative instructions given "
+       "to the patient and family — do the same for emergency cases whenever "
+       "possible, and document when it wasn't possible.")
+    lb(doc,
+       "Do not proceed with surgery without informed consent taken by the "
+       "operating surgeon or a doctor on the operating team.")
+    lb(doc,
+       "Do not perform a new or additional procedure that wasn't planned or "
+       "consented to, without fresh consent — except where the procedure is "
+       "life-saving.")
+    lb(doc,
+       "Do not begin a surgical or invasive procedure without completing site "
+       "marking, where the procedure involves laterality, multiple structures, or "
+       "multiple levels.")
+    lb(doc,
+       "Do not begin a surgical procedure without holding a time-out immediately "
+       "beforehand, with every team member present, confirming the correct patient "
+       "identity, the correct procedure, and the correct surgical site.")
+    lb(doc,
+       "Do not transfer a patient out of recovery before the operative note is "
+       "completed, covering all eight required elements.")
+    lb(doc,
+       "Do not let an operating theatre run without resuscitation equipment, "
+       "without instruments in verified working condition, or in a way that mixes "
+       "sterile and unsterile materials.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Provide surgical services under written guidance")
+    p(doc,
+      "Written guidance based on standard treatment guidelines or sound clinical "
+      f"practice governs surgical services. It includes the list of surgical "
+      f"procedures {HN} offers and the competency level required to perform each "
+      "one.")
+
+    h(doc, 2, "5.2 Assess and prepare patients before surgery")
+    p(doc,
+      "Every surgical patient has a pre-operative assessment, a documented "
+      "pre-operative diagnosis, and pre-operative instructions given to everyone "
+      "concerned, including the patient and family. This applies to all elective "
+      "cases, and to emergency cases whenever possible — where it isn't possible "
+      "for an emergency case, that's documented too. This is done by the operating "
+      "surgeon or a doctor on the operating team.")
+
+    h(doc, 2, "5.3 Obtain informed consent")
+    p(doc,
+      "Consent is taken by the operating surgeon or a doctor on the operating "
+      "team. If the patient's clinical status or expected outcome changes after "
+      "consent but before surgery, this is explained to the patient and family and "
+      "documented. If a new or additional procedure comes up that wasn't planned or "
+      "consented to, fresh consent is obtained — except where the procedure is "
+      "life-saving, in which case the situation is documented instead. (Related "
+      "requirements are covered in the hospital's other policies.)")
+
+    h(doc, 2, "5.4 Prevent wrong-site, wrong-patient, and wrong-surgery events")
+    p(doc,
+      f"Written guidance sets out how {HN} prevents these events — for example, "
+      "through identification tags, badges, cross-checks, and time-outs.")
+    p(doc,
+      "Site marking is done wherever a procedure involves laterality, multiple "
+      "structures (like fingers, toes, or lesions), or multiple levels (like the "
+      "spine). The mark is instantly recognisable, unambiguous, and used the same "
+      "way throughout the hospital. It's made by the person — or a team member — "
+      "who will perform the entire procedure and stay with the patient throughout. "
+      "The patient is actively involved in marking their own site whenever "
+      "possible. Marking can happen any time before the procedure starts, but the "
+      "mark stays visible once prepping and draping are complete.")
+    p(doc,
+      "A time-out is held immediately before the procedure starts, with every team "
+      "member present, to confirm three things together: the correct patient "
+      "identity, the correct procedure, and the correct surgical site.")
+
+    h(doc, 2, "5.5 Document the operation")
+    p(doc,
+      "Before the patient is transferred out of recovery, an operative note is "
+      "completed by the surgeon or a doctor on the operating team. If someone "
+      "other than the chief surgeon writes it, the chief surgeon countersigns it. "
+      "At a minimum, it covers eight things: the surgery performed, the name(s) of "
+      "the surgeon(s), the name(s) of the anaesthesiologist(s), the post-operative "
+      "diagnosis, any peri-operative complications, the amount of blood loss, the "
+      "salient steps of the procedure, and the key intra-operative findings.")
+
+    h(doc, 2, "5.6 Plan post-operative care")
+    p(doc,
+      "Post-operative care follows a documented plan, written by the operating "
+      "surgeon or a member of the operating team. The plan addresses whatever is "
+      "clinically relevant — for example, IV fluids, medication, wound care, "
+      "nursing care, or watching for complications.")
+
+    h(doc, 2, "5.7 Keep the operating theatre safe from cross-contamination")
+    p(doc,
+      "The layout and practices of the operating theatre prevent sterile and "
+      "unsterile materials from mixing. It's preferable to use separate closed "
+      "trolleys for sterile and unsterile goods, though any method that achieves "
+      "the same outcome is acceptable.")
+
+    h(doc, 2, "5.8 Keep the operating theatre properly equipped")
+    p(doc,
+      "The operating theatre complex has, at minimum, seven facility areas: a "
+      "pre-op holding area, changing rooms, hand-washing facilities, operating "
+      "rooms, a waiting area for relatives, a storage area, and a collection area "
+      "for waste and linen — plus a recovery room, where applicable. Beyond "
+      "anaesthesia and surgical equipment, there's resuscitation equipment, and "
+      "radiation protection equipment where applicable. Instruments are kept in "
+      "working condition, checked through a defined verification mechanism — "
+      "feedback from surgeons or anaesthesiologists is one way to do this. "
+      "Supplies match the scope and complexity of the surgery performed.")
+
+    h(doc, 2, "5.9 Run a quality assurance programme")
+    p(doc,
+      "The quality assurance programme monitors care-related outcomes — for "
+      "example, intra-operative mishaps like cautery burns, patient falls, or "
+      "position-related nerve injuries, and peri-operative events like surgical "
+      "site infections or deep venous thrombosis. These are examples; "
+      f"{HN} decides which outcomes matter most for its own surgical practice. "
+      "The programme also covers pre-operative preparation, antimicrobial "
+      "prophylaxis, and adherence to procedures that prevent adverse events.")
+
+    h(doc, 2, "5.10 Monitor the operating theatre environment")
+    p(doc,
+      "The quality assurance programme includes surveillance of the operating "
+      "theatre environment — daily monitoring of humidity, pressure differential, "
+      f"and temperature, and monitoring of filter integrity at least every six "
+      f"months. {HN} follows the applicable NABH guidelines for OT "
+      "air-conditioning.")
+
+    # 6. Stop-work authority — text exactly as given in cop14_content.txt
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Do not begin or continue a surgical or invasive procedure without completed "
+      "site marking (where laterality, multiple structures, or multiple levels "
+      "apply) and a completed time-out confirming correct patient, procedure, and "
+      "site with the whole team present.")
+    p(doc,
+      "Stop-work applies to the start of the procedure. A genuine life-threatening "
+      "emergency continues with the best available qualified team while the gap is "
+      "escalated and documented.")
+    p(doc,
+      "The person who stops tells the OT In-Charge and the Medical Superintendent "
+      "the same shift. Refusing to proceed without site marking or time-out is not "
+      "a disciplinary matter.")
+
+    # 7. Governance and responsibility
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable that this policy is followed and appropriately resourced; "
+         "receives stop-work notifications the same shift."),
+        ("OT In-Charge",
+         "Oversees OT operations; ensures written guidance, site-marking and "
+         "time-out compliance, operative note completion, OT safety, equipment "
+         "readiness, and environmental surveillance are in place; receives "
+         "stop-work notifications the same shift."),
+        ("Operating surgeons",
+         "Perform or supervise pre-operative assessment; obtain consent (including "
+         "fresh consent for unplanned procedures except life-saving); perform site "
+         "marking; hold time-out; complete operative note before patient leaves "
+         "recovery (eight elements); write post-operative care plan; countersign "
+         "operative note where applicable."),
+        ("Anaesthesiologists",
+         "Participate in time-out; comply with COP.13 for anaesthesia-specific "
+         "obligations."),
+        ("OT nursing and supporting staff",
+         "Maintain sterile/unsterile separation; verify instrument working "
+         "condition; support time-out; assist with daily and periodic "
+         "environmental monitoring."),
+    ])
+
+    # 8. Quality monitoring
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Written guidance",
+         "List of surgical procedures and competency levels documented and "
+         "current; procedures performed only by staff at the required competency "
+         "level"),
+        ("Pre-operative assessment",
+         "Pre-operative assessment, documented diagnosis, and pre-operative "
+         "instructions completed for all elective cases; documented for emergency "
+         "cases when possible, with documented reason when not"),
+        ("Informed consent",
+         "Consent taken by operating surgeon or team; fresh consent for new/"
+         "additional procedures; exception for life-saving procedures documented"),
+        ("Site marking",
+         "Site marking completed for all procedures involving laterality, multiple "
+         "structures, or multiple levels; mark stays visible after draping"),
+        ("Time-out",
+         "Time-out held immediately before every procedure with all team members "
+         "present, confirming correct patient identity, procedure, and surgical "
+         "site; documented"),
+        ("Operative note",
+         "Operative note completed with all eight elements before patient leaves "
+         "recovery; countersigned by chief surgeon where applicable"),
+        ("Post-operative care plan",
+         "Documented post-operative care plan written by operating surgeon or "
+         "team for every patient"),
+        ("OT sterile/unsterile separation",
+         "No mixing of sterile and unsterile materials; defined method in place"),
+        ("OT facility and equipment",
+         "All seven facility areas present; resuscitation equipment available; "
+         "instruments verified working; supplies matched to surgical scope"),
+        ("QA programme — outcomes",
+         "Defined care outcomes monitored and analysed (e.g., SSI, DVT, "
+         "intra-operative mishaps); CAPA applied"),
+        ("Environmental surveillance — daily",
+         "Daily monitoring of humidity, pressure differential, and temperature "
+         "in the OT complex; results recorded"),
+        ("Environmental surveillance — filter integrity",
+         "Filter integrity monitored at least every six months; results recorded"),
+    ])
+
+    # 9. Training and staff acknowledgement
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      "All surgeons, anaesthesiologists, and operating theatre staff shall be "
+      "familiar with the written guidance applicable to their work, including "
+      "pre-operative assessment requirements, informed consent obligations "
+      "(including the fresh-consent-except-life-saving rule), site marking for "
+      "laterality/multiple structures/multiple levels, the time-out process, "
+      "operative note requirements (eight elements), OT sterile/unsterile "
+      "separation, instrument verification, and environmental monitoring "
+      "frequencies.")
+    p(doc,
+      f"I have read the Policy on Surgical Services of {HN}. I will follow "
+      "the processes described.")
+    sig_tbl(doc)
+
+    # 10. Distribution
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to all surgeons, anaesthesiologists, and "
+      f"operating theatre staff involved in surgical services at {HN}.")
+
+    # 11. Abbreviations
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CAPA", "Corrective and Preventive Action"),
+        ("DVT",  "Deep Venous Thrombosis"),
+        ("OT",   "Operation Theatre"),
+        ("SSI",  "Surgical Site Infection"),
+    ])
+
+    # 12. Traceability table
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 11, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("COP.14.a", "Commitment*",
+         "Section 5.1 addresses written guidance for surgical services including "
+         "the list of procedures offered and the competency level required for "
+         "each procedure."),
+        ("COP.14.b", "Commitment",
+         "Section 5.2 addresses pre-operative assessment, documented pre-operative "
+         "diagnosis, and pre-operative instructions for all elective and, where "
+         "possible, emergency cases; documents when not possible for emergencies."),
+        ("COP.14.c", "Commitment",
+         "Section 5.3 addresses informed consent by operating surgeon or team; "
+         "documenting changes in patient status after consent; obtaining fresh "
+         "consent for new or additional unplanned procedures — except where the "
+         "procedure is life-saving, in which case the situation is documented."),
+        ("COP.14.d", "CORE*",
+         "Section 5.4 addresses wrong-site/patient/surgery prevention. Site "
+         "marking required for three triggers: laterality, multiple structures "
+         "(e.g., fingers, toes, lesions), and multiple levels (e.g., spine). Mark "
+         "is recognisable, unambiguous, consistent, made by the procedure performer "
+         "or a team member who stays with the patient, and remains visible after "
+         "draping. Time-out held immediately before the procedure with all team "
+         "members present, confirming three things: correct patient identity, "
+         "correct procedure, and correct surgical site."),
+        ("COP.14.e", "Commitment",
+         "Section 5.5 addresses the operative note completed before the patient "
+         "leaves recovery, covering eight elements: surgery performed, "
+         "surgeon name(s), anaesthesiologist name(s), post-operative diagnosis, "
+         "peri-operative complications, blood loss, salient steps, and key "
+         "intra-operative findings. Chief surgeon countersigns if not primary "
+         "author."),
+        ("COP.14.f", "Commitment",
+         "Section 5.6 addresses a documented post-operative care plan written by "
+         "the operating surgeon or a member of the operating team, covering "
+         "clinically relevant elements."),
+        ("COP.14.g", "Commitment",
+         "Section 5.7 addresses prevention of sterile/unsterile mix-ups in the "
+         "OT through layout and practices; preferred method is separate closed "
+         "trolleys, though any equivalent method is acceptable."),
+        ("COP.14.h", "Commitment",
+         "Section 5.8 addresses OT complex facility requirements: at minimum seven "
+         "areas (pre-op holding, changing rooms, hand-washing, operating rooms, "
+         "relatives waiting, storage, waste and linen collection) plus recovery "
+         "room where applicable. Also addresses resuscitation equipment, radiation "
+         "protection where applicable, instrument verification, and supply adequacy."),
+        ("COP.14.i", "Achievement*",
+         "Section 5.9 addresses the quality assurance programme monitoring "
+         "care-related outcomes (e.g., SSI, DVT, intra-operative mishaps), "
+         "pre-operative preparation, antimicrobial prophylaxis, and adherence to "
+         "adverse-event prevention procedures."),
+        ("COP.14.j", "Achievement*",
+         "Section 5.10 addresses OT environmental surveillance at two distinct "
+         "frequencies: daily monitoring of humidity, pressure differential, and "
+         "temperature; and monitoring of filter integrity at least every six months. "
+         "These two frequencies are separate requirements. NABH OT "
+         "air-conditioning guidelines are followed."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 13. Required Records/Evidence Checklist
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Written guidance and procedure list")
+    lb(doc,
+       "Written guidance for surgical services including the list of procedures "
+       "offered and the competency level required for each.")
+
+    h(doc, 2, "Pre-operative assessment and consent")
+    lb(doc,
+       "Pre-operative assessment, documented diagnosis, and pre-operative "
+       "instructions for every elective surgical patient.")
+    lb(doc,
+       "Documentation when pre-operative assessment was not possible for an "
+       "emergency case.")
+    lb(doc,
+       "Informed consent records for every surgical patient, taken by the "
+       "operating surgeon or team.")
+    lb(doc,
+       "Fresh consent records for unplanned procedures; or documentation of "
+       "life-saving circumstances where fresh consent was not obtained.")
+
+    h(doc, 2, "Site marking and time-out")
+    lb(doc,
+       "Site marking records for all procedures involving laterality, multiple "
+       "structures, or multiple levels; mark documented as visible after draping.")
+    lb(doc,
+       "Time-out records for every procedure, confirming correct patient identity, "
+       "correct procedure, and correct surgical site with all team members present.")
+
+    h(doc, 2, "Operative note and post-operative care")
+    lb(doc,
+       "Operative note completed before patient leaves recovery, covering all "
+       "eight required elements; chief surgeon's countersignature where applicable.")
+    lb(doc,
+       "Documented post-operative care plan for every surgical patient.")
+
+    h(doc, 2, "OT safety and equipment")
+    lb(doc,
+       "Evidence of sterile/unsterile separation method in use in the OT.")
+    lb(doc,
+       "OT facility checklist confirming all seven areas are present and "
+       "functional; recovery room where applicable.")
+    lb(doc,
+       "Evidence of resuscitation equipment and radiation protection equipment "
+       "where applicable.")
+    lb(doc,
+       "Instrument verification records (defined mechanism; working condition "
+       "confirmed).")
+
+    h(doc, 2, "Quality assurance and environmental surveillance")
+    lb(doc,
+       "QA programme documentation: defined outcome metrics, monitoring records, "
+       "and CAPA for surgical care.")
+    lb(doc,
+       "Daily OT environmental monitoring records: humidity, pressure differential, "
+       "and temperature.")
+    lb(doc,
+       "Filter integrity monitoring records: at least every six months.")
+
+    # 14. References
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. COP.14.")
+    ln(doc, "Guidebook interpretation supplied for COP.14.a through COP.14.j.")
+    ln(doc,
+       "NABH guidelines for OT air-conditioning (reference for COP.14.j "
+       "environmental surveillance).")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied COP.14 objective elements and approved "
+      "plain-language content into policy format. The stop-work text — which "
+      "corresponds to COP.14.d (CORE*) — is reproduced exactly as supplied. "
+      "Mandatory requirements and their stated modal strength have been retained. "
+      "The three site-marking triggers (laterality, multiple structures, multiple "
+      "levels), the time-out's three mandatory agreements (correct patient identity, "
+      "correct procedure, correct surgical site), the eight operative-note elements, "
+      "the seven OT facility areas, and the two distinct environmental monitoring "
+      "frequencies (daily: humidity/pressure differential/temperature; at least "
+      "every six months: filter integrity) are all preserved exactly and kept "
+      "separate. The fresh-consent-except-life-saving exception (COP.14.c) is "
+      "preserved exactly. The policy is scope-conditional: it does not apply if "
+      "surgical services are not provided.")
+
+    save_and_verify(doc, "HCO_COP_14_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 if __name__ == "__main__":
     gen_cop1()
     print("\nCOP.1 draft generated.")
@@ -3468,3 +6065,15 @@ if __name__ == "__main__":
     print("\nCOP.7 draft generated.")
     gen_cop8()
     print("\nCOP.8 draft generated.")
+    gen_cop9()
+    print("\nCOP.9 draft generated.")
+    gen_cop10()
+    print("\nCOP.10 draft generated.")
+    gen_cop11()
+    print("\nCOP.11 draft generated.")
+    gen_cop12()
+    print("\nCOP.12 draft generated.")
+    gen_cop13()
+    print("\nCOP.13 draft generated.")
+    gen_cop14()
+    print("\nCOP.14 draft generated.")
