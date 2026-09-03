@@ -6048,6 +6048,1979 @@ def gen_cop14():
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# COP.15 — Organ Transplant Programme   (no stop-work)
+# Content: cop15_content.txt (approved).
+# COREs: a, d | Stars: b* | Commitment: b, c
+# Scope split: 5.1–5.3 transplant-only; 5.4 universal (all organisations)
+# Statute: Transplantation of Human Organs Act (named in 5.1 and Disclaimer)
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_cop15():
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Organ Transplant Programme")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/COP/POL/15", "Transplant Coordinator")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "The organ transplant programme is carried out safely, legally, and ethically, "
+      "and every hospital — whether or not it performs transplants — raises awareness "
+      "of organ donation.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} runs its organ transplant programme in line "
+      "with the Transplantation of Human Organs Act, guides transplant care with "
+      "clinical practice guidelines, counsels recipients and donors before "
+      "transplantation, and raises awareness of organ donation.")
+    p(doc,
+      "This policy does not cover general informed consent procedures in detail — "
+      "those are covered in other hospital policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"Sections 5.1 through 5.3 of this policy apply only where {HN} provides "
+      "organ transplantation services. Section 5.4 (organ donation awareness) "
+      f"applies to {HN} regardless of whether it provides transplantation.")
+
+    # 3. Policy standards
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"Where {HN} provides organ transplantation, it runs the programme in "
+      "consonance with the Transplantation of Human Organs Act and ethical practice, "
+      "guides transplant care through documented clinical practice guidelines and "
+      "individualised care plans, and counsels recipients and donors before "
+      f"transplantation using trained counsellors. {HN} takes measures to raise "
+      "organ donation awareness regardless of whether it transplants organs.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not run an organ transplant programme without valid regulatory licences, "
+       "without medical professionals permitted by the appropriate authorities, "
+       "without a designated transplant coordinator, and without submitting required "
+       "reports to the appropriate authorities within the defined timeframe.")
+    lb(doc,
+       "Do not provide transplant care without documented clinical practice guidelines "
+       "covering indication for transplant, recipient fitness, donor fitness, education "
+       "and consent, organ recovery, and organ compatibility, and without organ-specific "
+       "guidelines for the pre-transplant, transplant, and discharge phases.")
+    lb(doc,
+       "Do not proceed with organ transplantation without qualified or trained "
+       "counsellors having counselled both the recipient and the donor beforehand, "
+       "covering benefits, risks, immunosuppression, and monitoring and follow-up.")
+    lb(doc,
+       "Do not skip taking measures to raise organ donation awareness, or skip "
+       "counselling the family of a brain-dead patient about organ transplant where "
+       "appropriate, done in a sensitive and courteous manner — this applies to "
+       f"{HN} whether or not it transplants organs.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Run the transplant programme legally and ethically")
+    p(doc,
+      f"Where {HN} provides organ transplantation, it holds the required regulatory "
+      "licences and follows the Transplantation of Human Organs Act. Only medical "
+      "professionals permitted by the appropriate authorities take part in the "
+      "programme. A designated transplant coordinator is in place. Required reports "
+      "are submitted to the appropriate authorities within the timeframe the Act "
+      "defines.")
+
+    h(doc, 2, "5.2 Guide transplant care with clinical practice guidelines")
+    p(doc,
+      "Written guidance based on standard treatment guidelines or sound clinical "
+      "practice covers six areas: indication for transplant, recipient fitness, donor "
+      "fitness, the education and consent process, organ recovery, and organ "
+      "compatibility. Organ-specific clinical practice guidelines are documented for "
+      "three phases — pre-transplant, transplant, and discharge. Individualised care "
+      "plans guide each transplant patient's care; it's preferable for departments "
+      "to also develop care pathways. A multi-disciplinary team is in place, "
+      "including nurses, a dietician, rehabilitation services, a psychologist or "
+      "medical social worker, and an infection prevention and control specialist. "
+      "Resources specifically needed for transplant — consumables, pharmaceutical "
+      "supplies, and diagnostic requirements — are made available.")
+
+    h(doc, 2, "5.3 Counsel recipients and donors before transplantation")
+    p(doc,
+      "Qualified or trained counsellors are available to counsel the recipient and "
+      "donor before transplantation. Counselling covers the benefits and risks of "
+      "donation and transplantation, and for recipients, immunosuppression and the "
+      "monitoring and follow-up it requires. Counselling could take place during an "
+      "interview with the Local Authorisation Committee. Evidence of counselling is "
+      "recorded and kept, both in the required statutory formats and in "
+      f"{HN}'s own records.")
+
+    h(doc, 2, "5.4 Raise organ donation awareness")
+    p(doc,
+      f"{HN} takes measures to raise public awareness of organ donation — for "
+      "example, standees or handouts — and addresses common myths about it. This "
+      f"applies whether or not {HN} performs transplantation. Whenever a patient is "
+      "declared brain dead, the family is counselled about organ transplant where "
+      "appropriate, in a very sensitive and courteous manner.")
+
+    # 6. Governance and responsibility  (no stop-work section for COP.15)
+    h(doc, 1, "6. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable that this policy is followed and appropriately resourced."),
+        ("Transplant Coordinator",
+         "Designated coordinator for the organ transplant programme; ensures "
+         "regulatory licences are current, that programme reports are submitted "
+         "within the defined timeframe, and that clinical practice guidelines "
+         "and individualised care plans are in place."),
+        ("Transplant surgeons / treating doctors",
+         "Ensure transplant care is guided by CPGs and individualised care plans; "
+         "participate in counselling of recipients and donors; confirm counselling "
+         "is completed before transplantation."),
+        ("Counsellors",
+         "Counsel recipients and donors before transplantation, covering benefits, "
+         "risks, immunosuppression, and monitoring/follow-up; record evidence of "
+         "counselling in statutory and hospital formats."),
+        ("All clinical staff",
+         "Participate in organ donation awareness measures; counsel families of "
+         "brain-dead patients in a very sensitive and courteous manner where "
+         "appropriate."),
+    ])
+
+    # 7. Quality monitoring
+    h(doc, 1, "7. Quality monitoring")
+    mon_tbl(doc, [
+        ("Regulatory compliance",
+         "Regulatory licences current; medical professionals hold required authority; "
+         "transplant coordinator designated; programme reports submitted within the "
+         "timeframe defined by the Act"),
+        ("Clinical practice guidelines",
+         "Written guidance covering all six content areas in place; organ-specific "
+         "CPGs for pre-transplant, transplant, and discharge phases documented"),
+        ("Individualised care plans",
+         "Care plan documented for each transplant patient"),
+        ("Counselling",
+         "Evidence of counselling by qualified or trained counsellors recorded in "
+         "statutory formats and hospital records before transplantation for each case"),
+        ("Organ donation awareness",
+         "Awareness measures in place (e.g., standees, handouts, myth-addressing "
+         "content); brain-dead family counselling documented where appropriate"),
+    ])
+
+    # 8. Training and staff acknowledgement
+    h(doc, 1, "8. Training and staff acknowledgement")
+    p(doc,
+      "All staff involved in the organ transplant programme and in organ donation "
+      "awareness activities shall be familiar with the requirements of this policy, "
+      "including the conditional scope split (Sections 5.1 through 5.3 for "
+      "transplant hospitals only; Section 5.4 for all), the six CPG content areas, "
+      "the three CPG phases, counselling-before-transplantation timing, and the "
+      "very sensitive and courteous manner required for brain-dead family counselling.")
+    p(doc,
+      f"I have read the Policy on Organ Transplant Programme of {HN}. "
+      "I will follow the processes described.")
+    sig_tbl(doc)
+
+    # 9. Distribution
+    h(doc, 1, "9. Distribution")
+    p(doc,
+      "This policy shall be available to all transplant programme staff, treating "
+      f"doctors, nurses, counsellors, and quality staff at {HN}. Section 5.4 is "
+      "distributed to all clinical staff.")
+
+    # 10. Abbreviations
+    h(doc, 1, "10. Abbreviations")
+    abbrev_tbl(doc, [
+        ("COP",  "Care of Patients (NABH Hospitals chapter)"),
+        ("CPG",  "Clinical Practice Guideline"),
+        ("IPC",  "Infection Prevention and Control"),
+        ("LAC",  "Local Authorisation Committee"),
+        ("NABH", "National Accreditation Board for Hospitals and Healthcare Providers"),
+    ])
+
+    # 11. Traceability table
+    h(doc, 1, "11. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 5, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("COP.15.a", "CORE",
+         "Section 5.1 addresses regulatory licences, adherence to the Transplantation "
+         "of Human Organs Act, professional authorisation by appropriate authorities, "
+         "designated transplant coordinator, and report submission within the "
+         "timeframe the Act defines. All five requirements are mandatory. CORE — "
+         "non-compliance not acceptable for accreditation. Applies only where "
+         "transplantation is provided."),
+        ("COP.15.b", "Commitment*",
+         "Section 5.2 addresses written guidance covering all six mandatory content "
+         "areas (indication for transplant, recipient fitness, donor fitness, "
+         "education and consent process, organ recovery, organ compatibility), "
+         "organ-specific CPGs for all three phases (pre-transplant, transplant, "
+         "discharge), individualised care plans, MDT composition, and resource "
+         "availability. Applies only where transplantation is provided."),
+        ("COP.15.c", "Commitment",
+         "Section 5.3 addresses counselling of recipients and donors by qualified or "
+         "trained counsellors before transplantation, covering benefits, risks, "
+         "immunosuppression, and monitoring/follow-up. Evidence recorded in statutory "
+         "formats and hospital records. Applies only where transplantation is provided."),
+        ("COP.15.d", "CORE",
+         "Section 5.4 addresses organ donation awareness measures and brain-dead "
+         "patient family counselling where appropriate, in a very sensitive and "
+         "courteous manner. Applies universally to all organisations regardless of "
+         "whether transplantation is provided. CORE — non-compliance not acceptable."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 12. Required Records/Evidence Checklist
+    h(doc, 1, "12. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Regulatory compliance (COP.15.a)")
+    lb(doc, "Copies of current regulatory licences for the organ transplant programme.")
+    lb(doc,
+       "Documentary evidence that medical professionals hold the required authority "
+       "from the appropriate authorities to participate in the programme.")
+    lb(doc, "Designation record or letter for the transplant coordinator.")
+    lb(doc,
+       "Programme reports submitted to the appropriate authorities within the "
+       "timeframe the Act defines — submission records or acknowledgements.")
+
+    h(doc, 2, "Clinical practice guidelines and care plans (COP.15.b)")
+    lb(doc,
+       "Written guidance covering all six content areas: indication for transplant, "
+       "recipient fitness, donor fitness, education and consent process, organ "
+       "recovery, and organ compatibility.")
+    lb(doc,
+       "Organ-specific CPGs for the pre-transplant, transplant, and discharge phases.")
+    lb(doc, "Individualised care plans documented for each transplant patient.")
+
+    h(doc, 2, "Counselling (COP.15.c)")
+    lb(doc,
+       "Evidence of counselling in statutory formats and hospital records for each "
+       "case — confirming counselling took place before transplantation.")
+
+    h(doc, 2, "Organ donation awareness (COP.15.d)")
+    lb(doc,
+       "Evidence of awareness measures in place (e.g., standees, handouts, "
+       "myth-addressing content).")
+    lb(doc,
+       "Documentation of family counselling following a brain-dead patient "
+       "declaration, where appropriate.")
+
+    # 13. References
+    h(doc, 1, "13. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. COP.15.")
+    ln(doc, "Guidebook interpretation supplied for COP.15.a through COP.15.d.")
+    ln(doc,
+       "Transplantation of Human Organs Act (as amended) — governing legislation "
+       "for organ transplant programmes in India.")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied COP.15 objective elements and approved "
+      "plain-language content into policy format. No formal stop-work section is "
+      "included — COP.15 is not in the accreditation stop-work proposals. Operating "
+      "an organ transplant programme without valid regulatory licences or without "
+      "medical professionals permitted by the appropriate authorities constitutes a "
+      "statutory violation under the Transplantation of Human Organs Act — a legal "
+      "compliance pre-condition, not merely an accreditation requirement. The "
+      "conditional scope split is preserved exactly: Sections 5.1 through 5.3 apply "
+      "only where transplantation is provided; Section 5.4 applies universally to "
+      "all organisations. The six CPG content areas, the three CPG phases, the "
+      "counselling-before-transplantation timing, and the very-sensitive-and-courteous "
+      "manner for brain-dead family counselling are all preserved exactly. The "
+      "Transplantation of Human Organs Act is named as the statutory reference in "
+      "Section 5.1, the Non-negotiable rules, and Section 13 References.")
+
+    save_and_verify(doc, "HCO_COP_15_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# COP.16 — High-Risk Patients — Identification and Management   (stop-work YES)
+# Content: cop16_content.txt (approved).
+# COREs: a*, b*, c*, d* | Stars: all 5 OEs | Commitment: e*
+# Stop-work: five risk categories + unauthorised restraint
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_cop16():
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on High-Risk Patients — Identification and Management")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/COP/POL/16", "Nursing In-Charge")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Patients at risk of falls, pressure ulcers, deep vein thrombosis, or who are "
+      "otherwise vulnerable, are identified using validated tools and protected by "
+      "required precautions, and restraints are used only under a documented order "
+      "with ongoing review.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} identifies vulnerable patients, patients at "
+      "risk of falls, pressure ulcers, and deep vein thrombosis, manages them under "
+      "written guidance, and uses restraints — physical or chemical — only when "
+      "authorised, monitored, and documented.")
+    p(doc,
+      "This policy does not cover general patient assessment or general informed "
+      "consent procedures in detail — those are covered in other hospital policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      "This policy applies to all clinical and nursing staff involved in identifying "
+      f"and managing high-risk patients at {HN}.")
+
+    # 3. Policy standards
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} identifies vulnerable patients, patients at risk of falls, pressure "
+      "ulcers, and deep vein thrombosis, using validated tools and its own defined "
+      "guidance, monitors vulnerable patients at least twice a day, and uses "
+      "restraints only under a documented clinical order with ongoing review and "
+      "required monitoring.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not leave a patient identified as vulnerable without the precautions, "
+       "monitoring, and consent process the written guidance requires, including "
+       "monitoring at least twice a day.")
+    lb(doc,
+       "Do not assess fall risk, pressure-ulcer risk, or DVT risk with anything "
+       "other than a validated tool, and do not leave a patient found at risk "
+       "without management under written guidance.")
+    lb(doc,
+       "Do not leave the pressure-ulcer risk assessment covering only new ulcers — "
+       "it must also cover worsening of existing ones.")
+    lb(doc,
+       "Do not apply or continue a restraint — physical or chemical — without a "
+       "documented clinical order, without ongoing review, and without recording the "
+       "reason and the time frame of use in the medical record.")
+    lb(doc,
+       "Do not skip the required elements of restraint guidance: who can authorise "
+       "it, how often the patient is monitored, how long an order remains valid, and "
+       "how the need for it is regularly reassessed.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Identify and manage vulnerable patients")
+    p(doc,
+      "Written guidance for identifying and managing vulnerable patients is developed "
+      "in line with statutory requirements and national and international guidelines. "
+      "It covers groups such as the elderly, children, differently-abled or mentally "
+      "challenged patients, patients at risk of suicide or self-harm, comatose or "
+      "critically ill patients, patients under sedation or anaesthesia, pregnant "
+      "women, patients on dialysis, patients receiving chemotherapy, and "
+      "immunosuppressed patients — these are examples, not the complete list; "
+      f"{HN} maintains its own comprehensive list.")
+    p(doc,
+      "The guidance states who is responsible for identifying these patients, how "
+      "their risk is managed, and how they are monitored — at least twice a day. "
+      "It also covers how informed consent is obtained from a vulnerable patient, "
+      "and from the family or legal representative when the patient can't make an "
+      "independent decision. Care for vulnerable patients follows this written "
+      "guidance.")
+
+    h(doc, 2, "5.2 Identify and manage patients at risk of falls")
+    p(doc,
+      "A validated tool is used to assess fall risk. Patients found to be at risk "
+      "are managed according to written guidance — universal fall precautions are a "
+      "useful reference point.")
+
+    h(doc, 2, "5.3 Identify and manage patients at risk of pressure ulcers")
+    p(doc,
+      "A validated tool is used to assess the risk of developing pressure ulcers "
+      "and of existing ones getting worse — for example, the Braden scale, or the "
+      "EPUAP/NPUAP staging systems for tracking worsening. Patients found at risk "
+      "are managed according to written guidance.")
+
+    h(doc, 2, "5.4 Identify and manage patients at risk of deep vein thrombosis")
+    p(doc,
+      "A validated tool — for example, Well's criteria — is used to assess DVT "
+      "risk. Patients found at risk are managed according to written guidance.")
+
+    h(doc, 2, "5.5 Identify and manage patients who need restraints")
+    p(doc,
+      "\"Restraints\" covers both physical and chemical restraints. Written guidance "
+      "identifies which patients need restraints and how they're cared for. "
+      f"{HN} minimises restraint use wherever possible, with patient safety in mind. "
+      "The guidance covers situations where restraints could be used, who can "
+      "authorise them, how often a restrained patient is monitored, and how long a "
+      "restraint order stays valid. The need for restraint is regularly reassessed, "
+      "and the least invasive option is chosen when one is needed. The rationale is "
+      "explained to the family, with consent obtained where statutory requirements "
+      "call for it. Restrained patients are monitored more frequently than usual, "
+      "watching for complications the restraint itself could cause — for example, "
+      "neurovascular deficit. When restraints are used, the medical record documents "
+      "the reason for using them and the time frame during which they were used.")
+
+    # 6. Stop-work authority — exact text as supplied; plain text role names, no guillemets
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Do not leave a patient identified as vulnerable, at fall risk, at "
+      "pressure-ulcer risk, at DVT risk, or needing restraints without the "
+      "precautions and monitoring required by the organisation's written guidance.")
+    p(doc,
+      "Do not apply or continue restraints without a documented clinical order and "
+      "ongoing review.")
+    p(doc,
+      "Stop-work applies to missing precautions or unauthorised restraint — not to "
+      "emergency physical intervention needed to prevent immediate harm, which is "
+      "followed at once by documentation and medical review.")
+    p(doc,
+      "The person who stops tells the treating doctor and the Ward/ICU In-Charge "
+      "the same shift. Refusing to leave high-risk patients unprotected is not a "
+      "disciplinary matter.")
+
+    # 7. Governance and responsibility
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable that this policy is followed and appropriately resourced; "
+         "receives stop-work notifications the same shift."),
+        ("Nursing In-Charge / Ward In-Charge",
+         "Ensures written guidance for all five high-risk categories is in place, "
+         "current, and followed; ensures monitoring records are complete; receives "
+         "stop-work notifications the same shift."),
+        ("Treating doctors",
+         "Initiate validated-tool assessments; issue and review restraint orders; "
+         "respond to stop-work notifications the same shift; document clinical orders "
+         "and the reason and time frame for any restraint use in the medical record."),
+        ("Nursing staff",
+         "Carry out validated-tool assessments; apply required precautions and "
+         "monitoring (at least twice a day for vulnerable patients); monitor "
+         "restrained patients more frequently; document as required; exercise "
+         "stop-work authority when precautions are missing or restraints are "
+         "unauthorised."),
+        ("Quality Coordinator",
+         "Audits this policy quarterly; holds training acknowledgements."),
+    ])
+
+    # 8. Quality monitoring
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Vulnerable patient identification",
+         "Vulnerable patients identified using written guidance; monitoring conducted "
+         "at least twice a day; consent process for incapable patients documented"),
+        ("Fall risk assessment",
+         "Validated tool used for every fall-risk assessment; patients at risk managed "
+         "per written guidance; fall-precaution compliance monitored"),
+        ("Pressure ulcer risk assessment",
+         "Validated tool used; assessment covers both developing and worsening "
+         "pressure ulcers — both scenarios; patients at risk managed per written "
+         "guidance"),
+        ("DVT risk assessment",
+         "Validated tool used for DVT risk assessment; patients at risk managed per "
+         "written guidance"),
+        ("Restraint use",
+         "Restraints (physical and chemical) applied and continued only under a "
+         "documented clinical order; need reassessed regularly; all eight guidance "
+         "elements present in written guidance; medical record documents reason and "
+         "time frame for every restraint episode — both elements required"),
+        ("Stop-work events",
+         "Stop-work events logged with action taken and outcome; reviewed at "
+         "next audit cycle"),
+    ])
+
+    # 9. Training and staff acknowledgement
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      "All clinical and nursing staff shall be familiar with the requirements of "
+      "this policy, including the five high-risk categories, the validated-tool "
+      "requirement for fall, pressure-ulcer, and DVT risk assessment, the exact "
+      "monitoring frequency for vulnerable patients (at least twice a day), the "
+      "pressure-ulcer dual scope (developing and worsening), the eight restraint "
+      "guidance elements, the two mandatory medical record documentation requirements "
+      "for restraints (reason and time frame), and the stop-work authority and "
+      "escalation pathway.")
+    p(doc,
+      f"I have read the Policy on High-Risk Patients — Identification and Management "
+      f"of {HN}. I will follow the processes described.")
+    sig_tbl(doc)
+
+    # 10. Distribution
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to all treating doctors, nursing and clinical "
+      f"staff involved in patient care at {HN}.")
+
+    # 11. Abbreviations
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("COP",   "Care of Patients (NABH Hospitals chapter)"),
+        ("DVT",   "Deep Vein Thrombosis"),
+        ("EPUAP", "European Pressure Ulcer Advisory Panel"),
+        ("NABH",  "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("NPUAP", "National Pressure Ulcer Advisory Panel"),
+    ])
+
+    # 12. Traceability table
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 6, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("COP.16.a", "CORE*",
+         "Section 5.1 addresses written guidance for vulnerable patients developed "
+         "in line with statutory requirements and national/international guidelines, "
+         "covering identification criteria, responsible persons, risk management, "
+         "and monitoring at least twice a day, and the consent process for capable "
+         "and incapable patients. CORE — non-compliance not acceptable."),
+        ("COP.16.b", "CORE*",
+         "Section 5.2 addresses validated-tool assessment for fall risk and management "
+         "of patients found at risk under written guidance. A validated tool is "
+         "required — a non-validated tool does not satisfy this OE. CORE."),
+        ("COP.16.c", "CORE*",
+         "Section 5.3 addresses validated-tool assessment for pressure-ulcer risk, "
+         "covering both the risk of developing pressure ulcers and of existing ones "
+         "getting worse — both scenarios are mandatory scope and are kept separate. "
+         "Patients at risk managed per written guidance. CORE."),
+        ("COP.16.d", "CORE*",
+         "Section 5.4 addresses validated-tool assessment for DVT risk and management "
+         "of patients found at risk under written guidance. CORE."),
+        ("COP.16.e", "Commitment*",
+         "Section 5.5 addresses restraints (physical and chemical): written guidance "
+         "covers eight mandatory elements (identification criteria, care provision, "
+         "situations for use, who can authorise, monitoring frequency, order validity, "
+         "reassessment process, least-invasive selection); restraint minimisation; "
+         "family explanation and consent where statutory requirements call for it; "
+         "more-frequent monitoring for complications; medical record documentation "
+         "of reason and time frame for every episode — both elements required. "
+         "Stop-work authority covers missing precautions and unauthorised restraint."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 13. Required Records/Evidence Checklist
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Vulnerable patients (COP.16.a)")
+    lb(doc,
+       "Written guidance for vulnerable patient identification and management, "
+       "developed in line with statutory requirements and national/international "
+       "guidelines.")
+    lb(doc,
+       "Monitoring records showing vulnerable patients assessed at least twice a "
+       "day.")
+    lb(doc,
+       "Consent records: capable vulnerable patient's own consent, and family or "
+       "legal representative consent for incapable patients.")
+
+    h(doc, 2, "Fall risk (COP.16.b)")
+    lb(doc,
+       "Validated fall-risk tool used for each assessment — tool identified and "
+       "documented.")
+    lb(doc,
+       "Management records for patients found at fall risk, in line with written "
+       "guidance.")
+
+    h(doc, 2, "Pressure ulcer risk (COP.16.c)")
+    lb(doc,
+       "Validated pressure-ulcer risk tool used for each assessment — covering both "
+       "the risk of developing new pressure ulcers and the worsening of existing "
+       "ones; both scenarios addressed.")
+    lb(doc,
+       "Management records for patients found at pressure-ulcer risk.")
+
+    h(doc, 2, "DVT risk (COP.16.d)")
+    lb(doc, "Validated DVT risk tool used for each assessment.")
+    lb(doc, "Management records for patients found at DVT risk.")
+
+    h(doc, 2, "Restraints (COP.16.e)")
+    lb(doc,
+       "Written guidance covering all eight mandatory elements: identification "
+       "criteria, care provision, situations for use, authorisation, monitoring "
+       "frequency, order validity, reassessment process, and least-invasive "
+       "selection.")
+    lb(doc,
+       "Clinical orders for each restraint episode — documented before or at "
+       "initiation; review records on file.")
+    lb(doc,
+       "Medical record entries for each restraint episode: reason for use and time "
+       "frame of use — both elements required for every episode.")
+    lb(doc,
+       "Records of family explanation and consent where statutory requirements call "
+       "for it.")
+
+    h(doc, 2, "Stop-work")
+    lb(doc,
+       "Stop-work events logged, with action taken and outcome documented.")
+
+    # 14. References
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. COP.16.")
+    ln(doc, "Guidebook interpretation supplied for COP.16.a through COP.16.e.")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied COP.16 objective elements and approved "
+      "plain-language content into policy format. The stop-work text — covering all "
+      "five high-risk categories (vulnerable, fall, pressure-ulcer, DVT, restraints) "
+      "— is reproduced exactly as supplied, with role names in plain text (treating "
+      "doctor; Ward/ICU In-Charge) and no guillemets. The exact monitoring frequency "
+      "for vulnerable patients (at least twice a day) is preserved verbatim. The "
+      "validated-tool requirement for fall, pressure-ulcer, and DVT risk is stated "
+      "as mandatory — a non-validated tool does not satisfy the requirement. The "
+      "pressure-ulcer OE scope covers both developing and worsening pressure ulcers "
+      "— both scenarios are preserved and kept separate, and the Non-negotiable rules "
+      "section states this as a distinct requirement. The eight restraint guidance "
+      "elements and the two mandatory medical record documentation requirements "
+      "(reason and time frame) are all preserved exactly.")
+
+    save_and_verify(doc, "HCO_COP_16_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# COP.17 — Pain Management   (no stop-work)
+# Content: cop17_content.txt (approved).
+# COREs: none | Stars: a* | All Commitment
+# Key: fifth-vital-sign stated; two separate assessment triggers (predominant
+#   symptom + all post-op); angina/labour exclusions preserved; five assessment
+#   content elements; four WHO pain-ladder technique categories.
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_cop17():
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Pain Management")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/COP/POL/17", "Clinical Lead (Pain Management)")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Pain is treated as the fifth vital sign — every patient entering the hospital "
+      "is screened for it, patients with significant pain get a detailed assessment, "
+      "and pain relief is initiated and adjusted based on how each patient responds.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} screens patients for pain, carries out a "
+      "detailed pain assessment where needed, and initiates and adjusts pain relief "
+      "based on the patient's response.")
+    p(doc,
+      "This policy does not cover general patient assessment or medication management "
+      "in detail — those are covered in other hospital policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      "This policy applies to all clinical staff involved in screening, assessing, "
+      f"and treating pain at {HN}.")
+
+    # 3. Policy standards
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} treats pain as the fifth vital sign, screening every patient entering "
+      "the hospital for it. Patients whose pain is a predominant symptom, and all "
+      "post-operative patients, get a detailed, validated pain assessment. Pain "
+      "relief — non-pharmacological, medical, surgical, or anaesthetic — is "
+      "initiated based on assessment, monitored for response, and adjusted accordingly.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not manage pain without written guidance covering how patients are "
+       "screened, how detailed assessment is carried out, what mitigation techniques "
+       "are used, and how pain is monitored.")
+    lb(doc,
+       "Do not skip pain screening for any patient entering the hospital, and do "
+       "not fail to document it in the medical record.")
+    lb(doc,
+       "Do not skip a detailed pain assessment for a patient whose pain is a "
+       "predominant symptom, or for any post-operative patient — use only a "
+       "validated, age-appropriate tool, covering intensity, character, frequency, "
+       "location, and duration and radiation.")
+    lb(doc,
+       "Do not initiate pain relief without monitoring the patient's response and "
+       "adjusting the approach based on that response.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Guide pain management with written guidance")
+    p(doc,
+      f"Written guidance based on sound clinical practice governs how {HN} manages "
+      "pain, covering how patients are screened for pain, how a detailed pain "
+      "assessment is carried out when needed, the pain mitigation techniques used, "
+      "and how pain is monitored. Care follows both pain management guidelines and "
+      "the patient's own goals for managing their pain.")
+
+    h(doc, 2, "5.2 Screen every patient for pain")
+    p(doc,
+      "Pain is treated as the fifth vital sign. Every patient entering the hospital "
+      "is screened for it — this could be as simple as a yes/no question during the "
+      "initial assessment. Screening is documented by the doctor or nurse in the "
+      "medical record. Where an OPD patient's screening comes back positive, that "
+      "could point to the need for a more detailed assessment.")
+
+    h(doc, 2, "5.3 Carry out a detailed assessment where needed")
+    p(doc,
+      "A detailed pain assessment is done when pain is the predominant symptom, or "
+      "one of the main symptoms — for example, cancer pain, neuralgia, or arthralgia. "
+      "This does not include chest pain from angina, or pain with a physiological "
+      "cause like labour pain. Regardless of symptom presentation, a detailed "
+      "assessment is also done for every post-operative patient.")
+    p(doc,
+      "A validated tool — appropriate to the patient type, whether neonate, "
+      "paediatric, adult, or a patient on a ventilator — is used for this assessment. "
+      "It covers the intensity of the pain (using an age-appropriate validated pain "
+      "rating scale), its character, frequency, location, and duration and any "
+      "referral or radiation. The assessment is done objectively, so it can be "
+      "reliably compared at reassessment.")
+
+    h(doc, 2, "5.4 Initiate and adjust pain relief based on response")
+    p(doc,
+      "Based on the assessment and the patient's underlying condition, pain "
+      f"alleviation methods or medication are started. {HN}'s approach to pain "
+      "management spans non-pharmacological, medical, surgical, and anaesthetic "
+      "techniques, guided by the WHO pain ladder scale. The patient is monitored "
+      "for how they respond, and measures or medication are adjusted accordingly. "
+      f"Where {HN} doesn't have facilities for further pain management, it could "
+      "refer the patient to a specialist pain-management centre.")
+
+    # 6. Governance and responsibility  (no stop-work section)
+    h(doc, 1, "6. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable that this policy is followed and appropriately resourced."),
+        ("Clinical Lead (Pain Management)",
+         "Owns day-to-day implementation; maintains written guidance; ensures "
+         "validated assessment tools are in place and appropriate to patient type; "
+         "ensures monitoring and adjustment processes are followed."),
+        ("Treating doctors",
+         "Screen patients for pain; initiate detailed assessments for patients with "
+         "predominant pain symptoms and for all post-operative patients; initiate, "
+         "monitor, and titrate pain relief; document in the medical record."),
+        ("Nursing staff",
+         "Screen patients for pain on admission and document in the medical record; "
+         "participate in pain assessment; monitor patient response to pain relief; "
+         "escalate uncontrolled pain."),
+        ("Quality Coordinator",
+         "Audits this policy quarterly; holds training acknowledgements."),
+    ])
+
+    # 7. Quality monitoring
+    h(doc, 1, "7. Quality monitoring")
+    mon_tbl(doc, [
+        ("Written guidance",
+         "Written guidance covering four areas — screening, detailed assessment, "
+         "mitigation techniques, monitoring — in place, current, and followed"),
+        ("Pain screening",
+         "All patients entering the hospital screened for pain; documented by "
+         "doctor or nurse in the medical record"),
+        ("Detailed pain assessment — trigger 1",
+         "Detailed assessment conducted for patients with pain as a predominant or "
+         "main symptom, excluding chest pain from angina and physiological pain "
+         "(labour); validated, age-appropriate tool used"),
+        ("Detailed pain assessment — trigger 2",
+         "Detailed assessment conducted for all post-operative patients; validated, "
+         "age-appropriate tool used"),
+        ("Assessment content",
+         "Assessment covers all five elements: intensity (using age-appropriate "
+         "validated pain rating scale), character, frequency, location, and duration "
+         "and referral/radiation"),
+        ("Pain relief — initiation and adjustment",
+         "Pain alleviation initiated after assessment; patient monitored for "
+         "response; measures and medication adjusted accordingly; four technique "
+         "categories available per WHO pain ladder: non-pharmacological, medical, "
+         "surgical, anaesthetic"),
+    ])
+
+    # 8. Training and staff acknowledgement
+    h(doc, 1, "8. Training and staff acknowledgement")
+    p(doc,
+      "All clinical staff shall be familiar with the requirements of this policy, "
+      "including: pain as the fifth vital sign and universal entry screening; the "
+      "two separate detailed-assessment triggers (predominant symptom AND all "
+      "post-operative patients); the exclusions (chest pain from angina; pain with "
+      "a physiological cause such as labour pain); the five assessment content "
+      "elements (intensity, character, frequency, location, duration and referral/"
+      "radiation); and the four pain management technique categories per the WHO "
+      "pain ladder scale (non-pharmacological, medical, surgical, anaesthetic).")
+    p(doc,
+      f"I have read the Policy on Pain Management of {HN}. "
+      "I will follow the processes described.")
+    sig_tbl(doc)
+
+    # 9. Distribution
+    h(doc, 1, "9. Distribution")
+    p(doc,
+      "This policy shall be available to all treating doctors, nurses, and clinical "
+      f"staff involved in patient care at {HN}.")
+
+    # 10. Abbreviations
+    h(doc, 1, "10. Abbreviations")
+    abbrev_tbl(doc, [
+        ("COP",  "Care of Patients (NABH Hospitals chapter)"),
+        ("NABH", "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("OPD",  "Outpatient Department"),
+        ("WHO",  "World Health Organization"),
+    ])
+
+    # 11. Traceability table
+    h(doc, 1, "11. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 5, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("COP.17.a", "Commitment*",
+         "Section 5.1 addresses written guidance based on sound clinical practice, "
+         "covering four mandatory content areas: how patients are screened for pain, "
+         "how a detailed pain assessment is carried out when needed, what pain "
+         "mitigation techniques are used, and how pain is monitored. Care follows "
+         "both pain management guidelines and the patient's own goals."),
+        ("COP.17.b", "Commitment",
+         "Section 5.2 addresses pain as the fifth vital sign — stated explicitly. "
+         "Every patient entering the hospital is screened for pain. Screening is "
+         "documented by the doctor or nurse in the medical record."),
+        ("COP.17.c", "Commitment",
+         "Section 5.3 addresses detailed pain assessment under two separate "
+         "triggers: (1) pain is the predominant symptom or one of the main symptoms "
+         "(examples: cancer pain, neuralgia, arthralgia) — excluding chest pain from "
+         "angina and pain with a physiological cause such as labour pain; and (2) all "
+         "post-operative patients, regardless of symptom presentation. A validated, "
+         "age-appropriate tool is used. The assessment covers five mandatory content "
+         "elements: intensity (using an age-appropriate validated pain rating scale), "
+         "character, frequency, location, and duration and any referral or radiation. "
+         "The assessment is done objectively to allow reliable reassessment comparison."),
+        ("COP.17.d", "Commitment",
+         "Section 5.4 addresses pain alleviation initiated based on assessment and "
+         "underlying condition; patient monitored for response; measures and "
+         "medication adjusted based on that response. Pain management spans four "
+         "technique categories per the WHO pain ladder scale: non-pharmacological, "
+         "medical, surgical, and anaesthetic."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 12. Required Records/Evidence Checklist
+    h(doc, 1, "12. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Written guidance (COP.17.a)")
+    lb(doc,
+       "Written guidance covering: pain screening process, detailed assessment "
+       "mechanism, pain mitigation techniques, and pain monitoring process.")
+
+    h(doc, 2, "Pain screening (COP.17.b)")
+    lb(doc,
+       "Pain screening records in the medical record, documented by the doctor or "
+       "nurse, for each patient on admission.")
+
+    h(doc, 2, "Detailed pain assessment (COP.17.c)")
+    lb(doc,
+       "Detailed assessment records for patients with pain as a predominant or main "
+       "symptom (trigger 1) and for all post-operative patients (trigger 2).")
+    lb(doc,
+       "Validated pain assessment tool identified and appropriate to patient type "
+       "(neonate, paediatric, adult, ventilated).")
+    lb(doc,
+       "Assessment records covering all five elements: intensity (validated scale), "
+       "character, frequency, location, and duration and referral/radiation.")
+
+    h(doc, 2, "Pain relief — initiation and adjustment (COP.17.d)")
+    lb(doc,
+       "Records of pain alleviation method or medication initiated for each patient "
+       "assessed.")
+    lb(doc,
+       "Monitoring records showing patient response to pain alleviation.")
+    lb(doc,
+       "Records showing adjustment of measures or medication based on response.")
+
+    # 13. References
+    h(doc, 1, "13. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. COP.17.")
+    ln(doc, "Guidebook interpretation supplied for COP.17.a through COP.17.d.")
+    ln(doc,
+       "World Health Organization. WHO pain ladder scale — governing framework for "
+       "pain management technique categories (COP.17.d).")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied COP.17 objective elements and approved "
+      "plain-language content into policy format. No formal stop-work section is "
+      "included — COP.17 is not in the accreditation stop-work proposals. The "
+      "fifth-vital-sign framing is stated explicitly in the Statement of intent, "
+      "Section 3, Section 5.2, and the training section. The two detailed-assessment "
+      "triggers are preserved separately and kept distinct: (1) pain as predominant "
+      "or main symptom, and (2) all post-operative patients regardless of symptom "
+      "presentation. The two scope exclusions from the Guidebook — chest pain from "
+      "angina and pain with a physiological cause such as labour pain — are preserved "
+      "in Section 5.3 and the Non-negotiable rules. The five assessment content "
+      "elements (intensity using age-appropriate validated scale, character, "
+      "frequency, location, duration and referral/radiation) are preserved exactly. "
+      "The four WHO pain ladder technique categories (non-pharmacological, medical, "
+      "surgical, anaesthetic) are all present in Section 5.4, the traceability table, "
+      "and the training section.")
+
+    save_and_verify(doc, "HCO_COP_17_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# COP.18 — Rehabilitation Services   (no stop-work)
+# Content: cop18_content.txt (approved).
+# COREs: none | Stars: none | Commitment: a-f | Excellence: g
+# Key: scope-matching principle; resuscitation equipment as separate explicit
+#   requirement; functional assessment AND periodic re-assessment as distinct
+#   obligations; all three care-pathway obligations (develop/implement/review).
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_cop18():
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Rehabilitation Services")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/COP/POL/18", "Head of Rehabilitation Services")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      f"Rehabilitation services match the clinical care {HN} provides, are planned "
+      "collaboratively, guided by functional assessment, and continuously improved "
+      "through care pathways.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} matches its rehabilitation service scope to "
+      "its clinical services, plans rehabilitation collaboratively, equips and staffs "
+      "rehabilitation areas, guides care through functional assessment, follows "
+      "infection prevention and safety practices, and develops care pathways.")
+    p(doc,
+      "This policy does not cover general infection prevention and control practices "
+      f"in detail — those are covered in other hospital policies. If {HN} provides "
+      "no clinical services requiring rehabilitation, this policy is not applicable.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      "This policy applies to all staff involved in providing rehabilitation "
+      f"services at {HN}.")
+
+    # 3. Policy standards
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} provides rehabilitation services matched, at minimum, to its clinical "
+      "services, under written guidance applied consistently. Rehabilitation is "
+      "planned collaboratively by the treating doctor, a rehabilitation therapist, "
+      "and other relevant professionals, with adequate space, equipment, and "
+      "resuscitation equipment available. Care is guided by functional assessment "
+      "and periodic re-assessment by qualified individuals, follows infection "
+      f"prevention and safety practices, and {HN} develops, implements, and "
+      "periodically reviews rehabilitation care pathways.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not provide a clinical service that needs rehabilitation without also "
+       "making at least basic rehabilitation available for it.")
+    lb(doc,
+       "Do not deliver rehabilitation inconsistently across the organisation — "
+       "follow the written guidance based on standard treatment guidelines or sound "
+       "clinical practice.")
+    lb(doc,
+       "Do not plan rehabilitation care without collaboration between at minimum "
+       "the treating doctor and a rehabilitation therapist.")
+    lb(doc,
+       "Do not run a rehabilitation area without resuscitation equipment available.")
+    lb(doc,
+       "Do not guide rehabilitation care without a functional assessment and "
+       "periodic, documented re-assessment carried out by a qualified individual.")
+    lb(doc,
+       "Do not deliver rehabilitation care in breach of infection prevention and "
+       "safety practices.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Match rehabilitation scope to clinical services")
+    p(doc,
+      "Rehabilitation services — for example physiotherapy, occupational therapy, "
+      "speech therapy, or clinical psychology — are available, at minimum, matching "
+      f"the clinical services {HN} provides. For instance, a hospital offering "
+      "neurological services also has at least basic neuro-rehabilitation. Where "
+      f"{HN} doesn't have facilities for advanced rehabilitation, it could refer "
+      "patients to a centre that does.")
+
+    h(doc, 2, "5.2 Provide rehabilitation consistently")
+    p(doc,
+      "Written guidance, based on standard treatment guidelines or sound clinical "
+      "practice, governs how rehabilitation is provided, so care is consistent "
+      "across the organisation.")
+
+    h(doc, 2, "5.3 Plan rehabilitation collaboratively")
+    p(doc,
+      "Rehabilitation care is planned collaboratively, involving at minimum the "
+      "treating doctor and a rehabilitation therapist, along with other professional "
+      "experts as the patient's needs require.")
+
+    h(doc, 2, "5.4 Keep space and equipment adequate")
+    p(doc,
+      "Space and equipment for rehabilitation match the scope of services provided "
+      "— professional guidance or documented literature can inform this. Resuscitation "
+      "equipment is available in rehabilitation areas.")
+
+    h(doc, 2, "5.5 Guide care through functional assessment")
+    p(doc,
+      "Care is guided by a functional assessment, done using relevant functional "
+      "assessment scales. Periodic re-assessment is also carried out and documented. "
+      "Both the initial assessment and the periodic re-assessments are done by a "
+      "qualified individual.")
+
+    h(doc, 2, "5.6 Follow infection prevention and safety practices")
+    p(doc,
+      f"Staff providing rehabilitation follow the infection prevention and control "
+      f"practices and safety guidelines {HN} defines — for example, making sure hot "
+      "wax treatments don't burn a patient. (Related requirements are covered in "
+      "the hospital's other policies.)")
+
+    h(doc, 2, "5.7 Develop, implement, and review care pathways")
+    p(doc,
+      f"{HN} develops rehabilitation care pathways based on evidence or sound "
+      "clinical practice, actually implements them, and reviews them periodically. "
+      "Developing care pathways is an ongoing process, not a one-time task.")
+
+    # 6. Governance and responsibility  (no stop-work section)
+    h(doc, 1, "6. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable that this policy is followed and appropriately resourced."),
+        ("Head of Rehabilitation Services",
+         "Ensures rehabilitation scope matches clinical services; maintains written "
+         "guidance; oversees MDT collaborative planning; ensures space, equipment, "
+         "and resuscitation equipment are adequate; ensures functional assessment "
+         "and re-assessment processes are followed; leads care pathway development, "
+         "implementation, and review."),
+        ("Rehabilitation therapists",
+         "Participate in collaborative care planning; carry out functional "
+         "assessments and periodic re-assessments; document assessments; follow "
+         "IPC and safety practices; contribute to care pathway development."),
+        ("Treating doctors",
+         "Participate in collaborative planning of rehabilitation care."),
+        ("All rehabilitation staff",
+         "Follow IPC practices and safety guidelines defined by the organisation."),
+        ("Quality Coordinator",
+         "Audits this policy quarterly; holds training acknowledgements."),
+    ])
+
+    # 7. Quality monitoring
+    h(doc, 1, "7. Quality monitoring")
+    mon_tbl(doc, [
+        ("Rehabilitation scope vs clinical services",
+         "At minimum, basic rehabilitation is available for each clinical service "
+         "the organisation provides that requires it; scope matching documented"),
+        ("Written guidance and consistency",
+         "Written guidance based on STG or sound clinical practice in place; "
+         "rehabilitation delivered consistently per guidance across the organisation"),
+        ("Collaborative planning",
+         "Rehabilitation care planned involving at minimum the treating doctor and "
+         "a rehabilitation therapist; collaboration documented"),
+        ("Space and equipment",
+         "Space and equipment adequate for the scope of rehabilitation services "
+         "provided; resuscitation equipment available in rehabilitation areas — "
+         "confirmed as a separate check"),
+        ("Functional assessment — initial",
+         "Initial functional assessment done using relevant scales; done by a "
+         "qualified individual; documented"),
+        ("Functional assessment — periodic re-assessment",
+         "Periodic re-assessments done by a qualified individual; documented; "
+         "separate obligation from initial assessment"),
+        ("IPC and safety practices",
+         "Staff follow IPC practices and safety guidelines in rehabilitation areas"),
+        ("Care pathways — develop, implement, review",
+         "Rehabilitation care pathways developed based on evidence or sound clinical "
+         "practice; implemented (in active use); periodically reviewed — all three "
+         "obligations evidenced separately"),
+    ])
+
+    # 8. Training and staff acknowledgement
+    h(doc, 1, "8. Training and staff acknowledgement")
+    p(doc,
+      "All rehabilitation staff shall be familiar with the requirements of this "
+      "policy, including: the scope-matching principle (at minimum, rehabilitation "
+      "available for each clinical service requiring it); written guidance and "
+      "consistent delivery; the minimum collaborative planning pair (treating doctor "
+      "and rehabilitation therapist); resuscitation equipment as a separate mandatory "
+      "requirement for rehabilitation areas; the distinction between the initial "
+      "functional assessment and periodic re-assessments (both done by a qualified "
+      "individual, both documented); IPC and safety practices; and all three "
+      "care-pathway obligations — develop, implement, and review periodically.")
+    p(doc,
+      f"I have read the Policy on Rehabilitation Services of {HN}. "
+      "I will follow the processes described.")
+    sig_tbl(doc)
+
+    # 9. Distribution
+    h(doc, 1, "9. Distribution")
+    p(doc,
+      "This policy shall be available to all rehabilitation therapists, treating "
+      f"doctors, and clinical staff involved in rehabilitation care at {HN}.")
+
+    # 10. Abbreviations
+    h(doc, 1, "10. Abbreviations")
+    abbrev_tbl(doc, [
+        ("COP",  "Care of Patients (NABH Hospitals chapter)"),
+        ("IPC",  "Infection Prevention and Control"),
+        ("MDT",  "Multi-Disciplinary Team"),
+        ("NABH", "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("STG",  "Standard Treatment Guideline"),
+    ])
+
+    # 11. Traceability table
+    h(doc, 1, "11. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 8, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("COP.18.a", "Commitment",
+         "Section 5.1 addresses the scope-matching principle: rehabilitation "
+         "services are available at minimum matching the clinical services the "
+         "organisation provides. For each clinical service requiring rehabilitation, "
+         "at least basic rehabilitation is available for that service. Referral to "
+         "centres with advanced rehabilitation is an acceptable alternative for "
+         "services beyond the organisation's rehabilitation scope."),
+        ("COP.18.b", "Commitment",
+         "Section 5.2 addresses written guidance based on standard treatment "
+         "guidelines or sound clinical practice governing rehabilitation services, "
+         "ensuring consistent delivery across the organisation."),
+        ("COP.18.c", "Commitment",
+         "Section 5.3 addresses collaborative planning involving at minimum the "
+         "treating doctor and a rehabilitation therapist, plus other professional "
+         "experts as the patient's needs require."),
+        ("COP.18.d", "Commitment",
+         "Section 5.4 addresses space and equipment adequate for the scope of "
+         "rehabilitation services provided. Resuscitation equipment is stated as a "
+         "separate, explicit requirement for rehabilitation areas — not folded into "
+         "general equipment adequacy."),
+        ("COP.18.e", "Commitment",
+         "Section 5.5 addresses two distinct mandatory obligations: (1) initial "
+         "functional assessment done using relevant scales by a qualified individual, "
+         "documented; and (2) periodic re-assessments, also done by a qualified "
+         "individual and documented. Both are separate requirements; both must be "
+         "evidenced."),
+        ("COP.18.f", "Commitment",
+         "Section 5.6 addresses IPC practices and safety guidelines followed by "
+         "rehabilitation staff, as defined by the organisation."),
+        ("COP.18.g", "Excellence",
+         "Section 5.7 addresses all three care-pathway obligations from the OE text: "
+         "develop (based on evidence or sound clinical practice), implement (actually "
+         "in active use), and review periodically. Development is described as an "
+         "ongoing process. All three obligations must be evidenced separately at "
+         "Excellence assessment."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 12. Required Records/Evidence Checklist
+    h(doc, 1, "12. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Rehabilitation scope (COP.18.a)")
+    lb(doc,
+       "Documentation of the hospital's rehabilitation service scope and "
+       "the clinical services it matches — confirming at minimum basic rehabilitation "
+       "is available for each clinical service that requires it.")
+
+    h(doc, 2, "Written guidance (COP.18.b)")
+    lb(doc,
+       "Written guidance based on STG or sound clinical practice, governing "
+       "rehabilitation services across the organisation.")
+
+    h(doc, 2, "Collaborative planning (COP.18.c)")
+    lb(doc,
+       "Records showing collaborative planning between at minimum the treating "
+       "doctor and a rehabilitation therapist for each patient's rehabilitation care.")
+
+    h(doc, 2, "Space, equipment, and resuscitation equipment (COP.18.d)")
+    lb(doc,
+       "Confirmation that space and equipment are adequate for the scope of "
+       "rehabilitation services provided.")
+    lb(doc,
+       "Separate confirmation that resuscitation equipment is available in "
+       "rehabilitation areas.")
+
+    h(doc, 2, "Functional assessment — initial (COP.18.e)")
+    lb(doc,
+       "Initial functional assessment records: scale used, assessor (qualified "
+       "individual), and documentation.")
+
+    h(doc, 2, "Functional assessment — periodic re-assessment (COP.18.e)")
+    lb(doc,
+       "Periodic re-assessment records: reassessment done by a qualified individual "
+       "and documented — separate from initial assessment records.")
+
+    h(doc, 2, "IPC and safety practices (COP.18.f)")
+    lb(doc,
+       "Evidence that IPC practices and safety guidelines are defined and followed "
+       "in rehabilitation areas.")
+
+    h(doc, 2, "Care pathways (COP.18.g)")
+    lb(doc,
+       "Evidence that rehabilitation care pathways are developed (based on evidence "
+       "or sound clinical practice).")
+    lb(doc,
+       "Evidence that care pathways are implemented — in active clinical use, "
+       "not merely documented.")
+    lb(doc,
+       "Evidence of periodic review of care pathways — review records on file.")
+
+    # 13. References
+    h(doc, 1, "13. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. COP.18.")
+    ln(doc, "Guidebook interpretation supplied for COP.18.a through COP.18.g.")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied COP.18 objective elements and approved "
+      "plain-language content into policy format. No formal stop-work section is "
+      "included — COP.18 is not in the accreditation stop-work proposals. The "
+      "scope-matching principle is stated in the Non-negotiable rules, Section 5.1, "
+      "the traceability table, and the training section. Resuscitation equipment is "
+      "stated as a separate, explicit requirement in the Non-negotiable rules, "
+      "Section 5.4, the quality monitoring table, the traceability table, and the "
+      "evidence checklist — it is not folded into general equipment adequacy. The "
+      "initial functional assessment and periodic re-assessments are stated as two "
+      "distinct mandatory obligations in Section 5.5, the Non-negotiable rules, the "
+      "quality monitoring table, the traceability table, and the evidence checklist. "
+      "All three care-pathway obligations from COP.18.g — develop, implement, and "
+      "review periodically — are present in Section 5.7, the quality monitoring "
+      "table, the traceability table, and the evidence checklist, and are described "
+      "as separately evidenceable requirements.")
+
+    save_and_verify(doc, "HCO_COP_18_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# COP.19 — Nutritional Therapy   (no stop-work)
+# Content: cop19_content.txt (approved).
+# COREs: none | Stars: a* | All Commitment
+# Key: screening by doctor/nurse only (not dietician); assessment by dietician
+#   only (roles distinct); three minimum assessment output elements
+#   (planning/preparation/distribution); three-party diet planning
+#   (dietician + doctor + patient/relative); three patient factors
+#   (allergies/food habits/likes-dislikes); uniform MR location for diet
+#   orders; both education AND monitoring obligations for family-provided food.
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_cop19():
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Nutritional Therapy")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/COP/POL/19", "Dietetics In-Charge")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Every admitted patient is screened for nutritional risk, at-risk patients "
+      "get a dietician-led assessment, and the resulting diet is planned "
+      "collaboratively and delivered exactly as ordered.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} screens admitted patients for nutritional "
+      "risk, assesses at-risk patients, plans and delivers therapeutic and normal "
+      "diets collaboratively, and educates and monitors families who bring in food.")
+    p(doc,
+      "This policy does not cover general patient assessment in detail — that is "
+      "covered in other hospital policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      "This policy applies to all doctors, nurses, and dieticians involved in "
+      f"nutritional screening, assessment, and diet planning at {HN}.")
+
+    # 3. Policy standards
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} screens every admitted patient for nutritional risk, and a dietician "
+      "carries out a full nutritional assessment for anyone found at risk. "
+      "Therapeutic diets are planned collaboratively between the dietician, the "
+      "treating doctor, and the patient or their relative, accounting for allergies, "
+      "food habits, and preferences. Every patient has a written diet order kept in "
+      "a consistent place in the medical record, and receives food accordingly. "
+      "Where families bring in food, they're educated about the patient's diet "
+      "limitations, and their compliance is monitored.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not admit a patient without screening them for nutritional risk, and do "
+       "not let anyone other than a doctor or nurse carry out that screening.")
+    lb(doc,
+       "Do not skip a dietician-led nutritional assessment for any patient found "
+       "at risk during screening — the assessment must at minimum result in a plan "
+       "for the diet's planning, preparation, and distribution.")
+    lb(doc,
+       "Do not plan a therapeutic diet without involving the dietician, the treating "
+       "doctor, and the patient or their relative together, and without accounting "
+       "for the patient's food allergies, food habits, and likes and dislikes.")
+    lb(doc,
+       "Do not give a patient food without a written diet order kept in a consistent, "
+       "uniform location in the medical record.")
+    lb(doc,
+       "Do not let a family bring in food for a patient without educating them on "
+       "the patient's diet limitations and monitoring their compliance with the "
+       "prescribed diet.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Screen every admitted patient")
+    p(doc,
+      f"Every patient admitted to {HN} is screened for nutritional risk by a doctor "
+      "or nurse. This could include a validated tool — for example NRS-2002, the "
+      "Mini Nutritional Assessment Short Form, MUST, or the GLIM criteria — "
+      "alongside clinical assessment.")
+
+    h(doc, 2, "5.2 Assess patients found at risk")
+    p(doc,
+      "A dietician carries out a nutritional assessment for every patient found at "
+      "risk during screening. It's preferable to use a validated tool for this. At "
+      "minimum, the assessment covers the planning, preparation, and distribution "
+      "of the patient's diet.")
+
+    h(doc, 2, "5.3 Plan the therapeutic diet collaboratively")
+    p(doc,
+      "The nutritional assessment results in a therapeutic diet. The dietician plans "
+      "this in consultation with the treating doctor and the patient or their "
+      "relative, taking into account the patient's food allergies, food habits — "
+      "vegetarian or non-vegetarian — and likes and dislikes. The patient then "
+      "receives food matching the diet order.")
+
+    h(doc, 2, "5.4 Deliver food according to the written order")
+    p(doc,
+      "Every patient receives food according to a written diet order — either a "
+      "normal diet, for patients found at no nutritional risk, or a therapeutic "
+      "diet. The order is kept in a consistent, uniform location in the medical "
+      "record. For a therapeutic diet, the dietician prepares a diet sheet, and "
+      "the patient receives food matching it — for example a diabetic diet, a "
+      "high-protein diet, or total parenteral nutrition.")
+
+    h(doc, 2, "5.5 Educate and monitor families who bring food")
+    p(doc,
+      "Where a patient's family provides food, the dietician or a nurse educates "
+      "them on the patient's diet limitations — ideally at the planning stage. The "
+      "dietician then monitors the family's food against the prescribed diet, to "
+      "make sure it stays within those limitations.")
+
+    # 6. Governance and responsibility  (no stop-work section)
+    h(doc, 1, "6. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable that this policy is followed and appropriately resourced."),
+        ("Dietetics In-Charge",
+         "Owns day-to-day implementation; maintains written guidance; conducts or "
+         "oversees dietician-led nutritional assessments for all at-risk patients; "
+         "leads collaborative diet planning; ensures diet sheets are prepared for "
+         "therapeutic diets; monitors compliance of families who bring food."),
+        ("Treating doctors",
+         "Participate in collaborative therapeutic diet planning; write or countersign "
+         "diet orders in the uniform location in the medical record."),
+        ("Nursing staff",
+         "Carry out nutritional screening at admission (screeners must be doctor or "
+         "nurse); educate families on diet limitations when families provide food; "
+         "document screening in the medical record."),
+        ("Quality Coordinator",
+         "Audits this policy quarterly; holds training acknowledgements."),
+    ])
+
+    # 7. Quality monitoring
+    h(doc, 1, "7. Quality monitoring")
+    mon_tbl(doc, [
+        ("Nutritional screening",
+         "Every admitted patient screened for nutritional risk; screening done by "
+         "a doctor or nurse only; documented in the medical record"),
+        ("Dietician-led assessment",
+         "Dietician carries out nutritional assessment for every patient found at "
+         "risk; assessment covers at minimum planning, preparation, and distribution "
+         "of the diet; validated tool used where applicable"),
+        ("Collaborative diet planning",
+         "Therapeutic diet planned by dietician in consultation with treating doctor "
+         "and patient or their relative — all three parties involved; three patient "
+         "factors accounted for: food allergies, food habits, likes and dislikes"),
+        ("Written diet order — normal or therapeutic",
+         "Written diet order in place for every patient; kept in a consistent, "
+         "uniform location in the medical record; food delivered matching the order"),
+        ("Therapeutic diet sheet",
+         "Dietician prepares a diet sheet for every therapeutic diet; patient "
+         "receives food matching the sheet"),
+        ("Family-provided food — education",
+         "Family educated on patient's diet limitations by dietician or nurse when "
+         "family brings food"),
+        ("Family-provided food — monitoring",
+         "Dietician monitors family's food against the prescribed diet when family "
+         "brings food — separate from education; both obligations must be evidenced"),
+    ])
+
+    # 8. Training and staff acknowledgement
+    h(doc, 1, "8. Training and staff acknowledgement")
+    p(doc,
+      "All doctors, nurses, and dieticians shall be familiar with the requirements "
+      "of this policy, including: the screener role (doctor or nurse only — not "
+      "delegated to non-clinical staff); the assessor role (dietician only — "
+      "distinct from screener); the three minimum assessment output elements "
+      "(planning, preparation, and distribution of the diet); the three-party "
+      "collaborative diet planning requirement (dietician + treating doctor + "
+      "patient or relative); the three mandatory patient factors in diet planning "
+      "(food allergies, food habits, and likes and dislikes); the uniform location "
+      "in the medical record for diet orders; and the two distinct obligations when "
+      "families provide food (education by dietician or nurse AND monitoring by "
+      "dietician — both mandatory).")
+    p(doc,
+      f"I have read the Policy on Nutritional Therapy of {HN}. "
+      "I will follow the processes described.")
+    sig_tbl(doc)
+
+    # 9. Distribution
+    h(doc, 1, "9. Distribution")
+    p(doc,
+      "This policy shall be available to all treating doctors, nurses, dieticians, "
+      f"and quality staff at {HN}.")
+
+    # 10. Abbreviations
+    h(doc, 1, "10. Abbreviations")
+    abbrev_tbl(doc, [
+        ("COP",  "Care of Patients (NABH Hospitals chapter)"),
+        ("GLIM", "Global Leadership Initiative on Malnutrition"),
+        ("MUST", "Malnutrition Universal Screening Tool"),
+        ("NABH", "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("NRS",  "Nutritional Risk Screening"),
+        ("TPN",  "Total Parenteral Nutrition"),
+    ])
+
+    # 11. Traceability table
+    h(doc, 1, "11. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 6, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("COP.19.a", "Commitment*",
+         "Section 5.1 addresses nutritional screening of every admitted patient, "
+         "done by a doctor or nurse only — not by a dietician or non-clinical staff. "
+         "Validated tools (NRS-2002, MNA-SF, MUST, GLIM criteria) may be used "
+         "alongside clinical assessment. Screening is documented in the medical record."),
+        ("COP.19.b", "Commitment",
+         "Section 5.2 addresses dietician-led nutritional assessment for every "
+         "patient found at risk during screening — the dietician role is mandatory "
+         "and distinct from the screener role. The assessment must cover at minimum "
+         "three output elements: planning, preparation, and distribution of the "
+         "patient's diet. Use of a validated tool is preferable."),
+        ("COP.19.c", "Commitment",
+         "Section 5.3 addresses collaborative therapeutic diet planning requiring "
+         "three parties: the dietician, the treating doctor, and the patient or "
+         "their relative — all three must be involved. Three patient factors are "
+         "mandatory inputs: food allergies, food habits (vegetarian or non-vegetarian), "
+         "and likes and dislikes. The patient receives food matching the diet order."),
+        ("COP.19.d", "Commitment",
+         "Section 5.4 addresses written diet orders for every patient — normal diet "
+         "for patients at no nutritional risk, or therapeutic diet for at-risk "
+         "patients. The order is kept in a consistent, uniform location in the "
+         "medical record. For therapeutic diets, the dietician prepares a diet sheet "
+         "and the patient receives food matching it."),
+        ("COP.19.e", "Commitment",
+         "Section 5.5 addresses two distinct mandatory obligations when families "
+         "provide food: (1) education of the family on the patient's diet limitations "
+         "by the dietician or a nurse; and (2) monitoring of the family's food "
+         "against the prescribed diet by the dietician. Both obligations are "
+         "mandatory and must be evidenced separately."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 12. Required Records/Evidence Checklist
+    h(doc, 1, "12. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Nutritional screening (COP.19.a)")
+    lb(doc,
+       "Nutritional screening records for every admitted patient — documented in "
+       "the medical record by the doctor or nurse who carried out the screening.")
+    lb(doc,
+       "Validated screening tool used where applicable — tool identified and "
+       "documented.")
+
+    h(doc, 2, "Dietician-led assessment (COP.19.b)")
+    lb(doc,
+       "Nutritional assessment records for every patient found at risk — conducted "
+       "by a dietician (not the screener).")
+    lb(doc,
+       "Assessment covers at minimum: planning, preparation, and distribution of "
+       "the patient's diet — all three elements documented.")
+
+    h(doc, 2, "Collaborative diet planning (COP.19.c)")
+    lb(doc,
+       "Records showing collaborative planning between the dietician, the treating "
+       "doctor, and the patient or their relative — all three parties involved.")
+    lb(doc,
+       "Records confirming all three patient factors accounted for: food allergies, "
+       "food habits, and likes and dislikes.")
+
+    h(doc, 2, "Written diet order (COP.19.d)")
+    lb(doc,
+       "Written diet order for every patient — kept in a consistent, uniform "
+       "location in the medical record.")
+    lb(doc,
+       "For therapeutic diets: diet sheet prepared by the dietician; food delivered "
+       "matching the diet sheet.")
+
+    h(doc, 2, "Family-provided food — education (COP.19.e)")
+    lb(doc,
+       "Records of education delivered to the family on the patient's diet "
+       "limitations when the family brings food — conducted by dietician or nurse.")
+
+    h(doc, 2, "Family-provided food — monitoring (COP.19.e)")
+    lb(doc,
+       "Records of dietician monitoring the family's food against the prescribed "
+       "diet — separate from the education records.")
+
+    # 13. References
+    h(doc, 1, "13. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. COP.19.")
+    ln(doc, "Guidebook interpretation supplied for COP.19.a through COP.19.e.")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied COP.19 objective elements and approved "
+      "plain-language content into policy format. No formal stop-work section is "
+      "included — COP.19 is not in the accreditation stop-work proposals. The "
+      "screener role (doctor or nurse only) and the assessor role (dietician only) "
+      "are stated as distinct mandatory roles in the Non-negotiable rules, Section "
+      "5.1 and 5.2, the governance table, the quality monitoring table, the "
+      "traceability table, the evidence checklist, and the training section — "
+      "neither role may be performed by the other. The three minimum assessment "
+      "output elements (planning, preparation, distribution) are preserved exactly. "
+      "The three-party diet planning collaboration (dietician, treating doctor, "
+      "patient or relative) and the three mandatory patient factors (food allergies, "
+      "food habits, likes and dislikes) are all preserved. The uniform medical "
+      "record location requirement for diet orders is stated in the Non-negotiable "
+      "rules and Section 5.4. The two distinct obligations for family-provided food "
+      "(education AND monitoring) are preserved separately in Section 5.5, the "
+      "quality monitoring table, the traceability table, and the evidence checklist.")
+
+    save_and_verify(doc, "HCO_COP_19_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# COP.20 — End-of-Life Care   (no stop-work)
+# Content: cop20_content.txt (approved).
+# COREs: none | Stars: a* | Achievement: b | Commitment: a, c, d, e
+# Key: five written-guidance content areas in 5.1; "only as per statutory laws"
+#   absolute framing for DNR/DNI/AND; all five need dimensions in 5.4
+#   (psychological/emotional/cultural/religious/socio-cultural); both "addressed
+#   and respected" verbs; staff education separate mandatory item.
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_cop20():
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on End-of-Life Care")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/COP/POL/20", "Palliative / End-of-Life Care Lead")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "End-of-life care is provided compassionately and consistently, respecting "
+      "the patient and family's values and wishes, with DNR, DNI, and Allow Natural "
+      "Death decisions made only within the applicable legal and judicial framework.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} provides end-of-life care under written "
+      "guidance, uses a multi-professional team, ensures decisions like DNR, DNI, "
+      "and Allow Natural Death follow the law, identifies and responds to the unique "
+      "needs of dying patients and their families, and provides symptomatic "
+      "treatment and pain relief.")
+    p(doc,
+      "This policy does not cover general informed consent procedures in detail — "
+      "that is covered in other hospital policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      "This policy applies to all clinical and support staff providing care to "
+      f"patients at the end of life at {HN}.")
+
+    # 3. Policy standards
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} provides end-of-life care under written guidance based on national "
+      "and international good practice and the law of the land, using a "
+      "multi-professional approach where possible. Decisions like DNR, DNI, and "
+      "Allow Natural Death are made only within the applicable statutory and "
+      "judicial framework. The unique psychological, emotional, cultural, religious, "
+      "and socio-cultural needs of the patient and family are identified and "
+      "respected, staff are trained accordingly, and symptomatic treatment and pain "
+      "relief are provided with the patient and family involved throughout.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not provide end-of-life care without written guidance covering pain, "
+       "rehabilitative, and palliative care aligned with the patient and family's "
+       "wishes; sensitively addressing autopsy and organ donation; respecting the "
+       "patient's values, religion, and culture; involving the patient and family "
+       "in every aspect of care; and responding to their psychological, emotional, "
+       "spiritual, and cultural concerns where possible.")
+    lb(doc,
+       "Do not make a DNR, DNI, Allow Natural Death, or similar decision except as "
+       "the applicable statutory laws and judicial guidelines require.")
+    lb(doc,
+       "Do not fail to identify and respond to the patient and family's "
+       "psychological, emotional, cultural, religious, and socio-cultural needs, "
+       "and do not skip training staff on these unique needs.")
+    lb(doc,
+       "Do not exclude the patient or family from decisions about symptomatic "
+       "treatment and comfort care.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Provide end-of-life care under written guidance")
+    p(doc,
+      "Written guidance for end-of-life care is developed based on national and "
+      "international good practice and in line with the law of the land. It covers "
+      "five areas: giving appropriate pain, rehabilitative, and palliative care in "
+      "line with the patient and family's wishes; sensitively addressing issues like "
+      "autopsy and organ donation; respecting the patient's values, religion, and "
+      "cultural preferences; involving the patient and family in every aspect of "
+      "care; and responding to their psychological, emotional, spiritual, and "
+      "cultural concerns, where possible. This guidance also incorporates the legal "
+      "framework for DNR, DNI, and similar decisions described in Section 5.3, and "
+      "is prepared with the multi-professional approach in Section 5.2 in mind.")
+
+    h(doc, 2, "5.2 Use a multi-professional approach")
+    p(doc,
+      "End-of-life care is provided using a multi-professional approach — the team "
+      "could include a doctor, nurse, clinical psychologist, and rehabilitation "
+      "expert, among others. It's preferable for someone trained in palliative care "
+      "to lead the team.")
+
+    h(doc, 2, "5.3 Follow the legal framework for end-of-life decisions")
+    p(doc,
+      "Decisions like Do Not Resuscitate, Do Not Intubate, and Allow Natural Death "
+      "are made only as the applicable statutory laws and the guidelines framed by "
+      "the legal system require — for example, the ICMR Do Not Resuscitate "
+      "Guideline and the Supreme Court's 2023 directives on Advance Directives and "
+      f"Living Wills. {HN} is responsible for verifying the current version of "
+      "these and any other applicable statutory or judicial requirements, including "
+      "any State-specific rules.")
+
+    h(doc, 2, "5.4 Identify and respond to unique needs")
+    p(doc,
+      "The psychological, emotional, cultural, religious, and socio-cultural needs "
+      "of the patient and family are identified, addressed, and respected. Staff "
+      "are trained on the unique needs of patients and families at the end of life.")
+
+    h(doc, 2, "5.5 Provide symptomatic treatment and involve the patient and family")
+    p(doc,
+      "The emphasis is on providing symptomatic treatment and preventing "
+      "complications as far as possible. The patient and/or family are involved in "
+      "every such decision, and their choices are respected to the extent possible "
+      "and as the law allows. Where appropriate, measures are taken to relieve pain.")
+
+    # 6. Governance and responsibility  (no stop-work section)
+    h(doc, 1, "6. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable that this policy is followed and appropriately resourced."),
+        ("Palliative / End-of-Life Care Lead",
+         "Owns day-to-day implementation; maintains written guidance covering all "
+         "five content areas; convenes and coordinates the multi-professional team; "
+         "ensures DNR/DNI/AND decisions are made only within the applicable statutory "
+         "and judicial framework; ensures staff training on unique needs of "
+         "end-of-life patients and families."),
+        ("Treating doctors",
+         "Provide symptomatic treatment and pain relief; involve the patient and "
+         "family in all relevant decisions; make DNR/DNI/AND decisions only within "
+         "the legal framework; document decisions in the medical record."),
+        ("Nursing and support staff",
+         "Identify and respond to the psychological, emotional, cultural, religious, "
+         "and socio-cultural needs of the patient and family; involve the patient "
+         "and family in care decisions; follow written guidance."),
+        ("Multi-professional team members",
+         "Participate in collaborative end-of-life care planning and delivery as "
+         "appropriate to their role (e.g., clinical psychologist, rehabilitation "
+         "expert)."),
+        ("Quality Coordinator",
+         "Audits this policy quarterly; holds training acknowledgements."),
+    ])
+
+    # 7. Quality monitoring
+    h(doc, 1, "7. Quality monitoring")
+    mon_tbl(doc, [
+        ("Written guidance",
+         "Written guidance for end-of-life care in place, based on national and "
+         "international good practice and law of the land; covers all five content "
+         "areas; incorporates the DNR/DNI/AND legal framework; reviewed regularly"),
+        ("Multi-professional approach",
+         "Multi-professional team involved in end-of-life care; team composition "
+         "documented"),
+        ("DNR / DNI / AND decisions",
+         "Every DNR, DNI, Allow Natural Death, or similar decision made only as "
+         "the applicable statutory laws and judicial guidelines require; documented "
+         "with basis for the decision; current applicable instruments verified"),
+        ("Unique needs — identified and responded to",
+         "Psychological, emotional, cultural, religious, and socio-cultural needs "
+         "of patient and family identified, addressed, and respected; all five "
+         "dimensions evidenced"),
+        ("Staff training on unique needs",
+         "Staff trained on unique needs of end-of-life patients and families — "
+         "separate mandatory obligation; training records on file"),
+        ("Symptomatic treatment and family involvement",
+         "Symptomatic treatment and pain relief provided; patient and/or family "
+         "involved in all such decisions; choices respected within legal limits; "
+         "documented"),
+    ])
+
+    # 8. Training and staff acknowledgement
+    h(doc, 1, "8. Training and staff acknowledgement")
+    p(doc,
+      "All clinical and support staff shall be familiar with the requirements of "
+      "this policy, including: the five mandatory written-guidance content areas "
+      "(pain/rehabilitative/palliative care aligned with patient and family wishes; "
+      "sensitively addressing autopsy and organ donation; respecting values/religion/"
+      "culture; involving patient and family; responding to psychological/emotional/"
+      "spiritual/cultural concerns where possible); the absolute framing that "
+      "DNR/DNI/AND decisions are made only as applicable statutory laws and judicial "
+      "guidelines require; the five need dimensions in Section 5.4 (psychological, "
+      "emotional, cultural, religious, and socio-cultural — all five must be "
+      "identified, addressed, and respected — both verbs mandatory); and staff "
+      "training on end-of-life unique needs as a separate mandatory obligation.")
+    p(doc,
+      f"I have read the Policy on End-of-Life Care of {HN}. "
+      "I will follow the processes described.")
+    sig_tbl(doc)
+
+    # 9. Distribution
+    h(doc, 1, "9. Distribution")
+    p(doc,
+      "This policy shall be available to all clinical and support staff providing "
+      f"care to patients at the end of life at {HN}.")
+
+    # 10. Abbreviations
+    h(doc, 1, "10. Abbreviations")
+    abbrev_tbl(doc, [
+        ("AND",  "Allow Natural Death"),
+        ("COP",  "Care of Patients (NABH Hospitals chapter)"),
+        ("DNI",  "Do Not Intubate"),
+        ("DNR",  "Do Not Resuscitate"),
+        ("ICMR", "Indian Council of Medical Research"),
+        ("NABH", "National Accreditation Board for Hospitals and Healthcare Providers"),
+    ])
+
+    # 11. Traceability table
+    h(doc, 1, "11. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 6, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("COP.20.a", "Commitment*",
+         "Section 5.1 addresses written guidance based on national and international "
+         "good practice and law of the land, covering five mandatory content areas: "
+         "(1) appropriate pain, rehabilitative, and palliative care aligned with "
+         "patient and family wishes; (2) sensitively addressing autopsy and organ "
+         "donation; (3) respecting values, religion, and cultural preferences; "
+         "(4) involving patient and family in every aspect of care; (5) responding "
+         "to psychological, emotional, spiritual, and cultural concerns where "
+         "possible. The guidance incorporates the DNR/DNI/AND legal framework from "
+         "COP.20.c."),
+        ("COP.20.b", "Achievement",
+         "Section 5.2 addresses a multi-professional approach to end-of-life care. "
+         "Team composition is illustrative (doctor, nurse, clinical psychologist, "
+         "rehabilitation expert). Someone trained in palliative care leading the "
+         "team is preferable — advisory. Achievement level."),
+        ("COP.20.c", "Commitment",
+         "Section 5.3 addresses the absolute requirement that DNR, DNI, Allow "
+         "Natural Death, and similar decisions are made only as the applicable "
+         "statutory laws and guidelines framed by the legal system require. Named "
+         "instruments are illustrative examples: ICMR DNR Guideline; Supreme Court "
+         "2023 directives on Advance Directives and Living Wills. The organisation "
+         "is responsible for verifying the current version and any State-specific "
+         "requirements. The word 'only' is absolute — no discretionary departure "
+         "from the legal framework is permitted."),
+        ("COP.20.d", "Commitment",
+         "Section 5.4 addresses two distinct mandatory obligations: (1) identifying, "
+         "addressing, and respecting the patient and family's unique needs across "
+         "all five dimensions — psychological, emotional, cultural, religious, and "
+         "socio-cultural (all five named; both 'addressed' and 'respected' are "
+         "mandatory verbs); and (2) staff training on the unique needs of end-of-life "
+         "patients and families — a separate mandatory obligation with its own "
+         "training records requirement."),
+        ("COP.20.e", "Commitment",
+         "Section 5.5 addresses symptomatic treatment and complication prevention "
+         "as the emphasis; patient and/or family involved in every such decision; "
+         "their choices respected to the extent possible and as the law allows; "
+         "pain alleviation measures taken where appropriate."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 12. Required Records/Evidence Checklist
+    h(doc, 1, "12. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Written guidance (COP.20.a)")
+    lb(doc,
+       "Written end-of-life care guidance covering all five content areas, based "
+       "on national and international good practice and law of the land, with the "
+       "DNR/DNI/AND legal framework incorporated.")
+
+    h(doc, 2, "Multi-professional approach (COP.20.b)")
+    lb(doc,
+       "Records of multi-professional team involvement in end-of-life care cases "
+       "— team composition documented.")
+
+    h(doc, 2, "DNR / DNI / AND decisions (COP.20.c)")
+    lb(doc,
+       "Documentation of every DNR, DNI, Allow Natural Death, or similar decision "
+       "— confirming it was made within the applicable statutory and judicial "
+       "framework; legal basis stated.")
+    lb(doc,
+       "Evidence that applicable instruments (ICMR DNR Guideline; Supreme Court "
+       "2023 directives; any State-specific requirements) are current versions "
+       "verified by the organisation.")
+
+    h(doc, 2, "Unique needs — addressed and respected (COP.20.d)")
+    lb(doc,
+       "Records showing identification, addressing, and respect of all five need "
+       "dimensions for each patient and family: psychological, emotional, cultural, "
+       "religious, and socio-cultural.")
+
+    h(doc, 2, "Staff training on unique needs (COP.20.d)")
+    lb(doc,
+       "Staff training records on the unique needs of end-of-life patients and "
+       "families — separate from general EOL care training records.")
+
+    h(doc, 2, "Symptomatic treatment and family involvement (COP.20.e)")
+    lb(doc,
+       "Records of symptomatic treatment and pain relief provided.")
+    lb(doc,
+       "Records confirming patient and/or family involvement in symptomatic "
+       "treatment decisions.")
+
+    # 13. References
+    h(doc, 1, "13. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. COP.20.")
+    ln(doc, "Guidebook interpretation supplied for COP.20.a through COP.20.e.")
+    ln(doc,
+       "Indian Council of Medical Research. ICMR Do Not Resuscitate Guideline "
+       "(current version — organisation to verify).")
+    ln(doc,
+       "Supreme Court of India. Directives on Advance Directives and Living Wills, "
+       "2023 (current version — organisation to verify).")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied COP.20 objective elements and approved "
+      "plain-language content into policy format. No formal stop-work section is "
+      "included — COP.20 is not in the accreditation stop-work proposals. The five "
+      "mandatory written-guidance content areas (COP.20.a) are preserved exactly "
+      "and listed in Section 5.1, the Non-negotiable rules, the quality monitoring "
+      "table, the traceability table, and the training section. The absolute framing "
+      "for DNR/DNI/AND decisions — 'only as the applicable statutory laws and "
+      "judicial guidelines require' — is preserved verbatim in the Statement of "
+      "intent, Section 3, Section 5.3, the Non-negotiable rules, the quality "
+      "monitoring table, and the traceability table; 'only' is not qualified or "
+      "softened. All five need dimensions (psychological, emotional, cultural, "
+      "religious, socio-cultural) are stated explicitly in Section 5.4, the "
+      "Non-negotiable rules, Section 3, the quality monitoring table, the "
+      "traceability table, and the training section. Both mandatory verbs — "
+      "'addressed' and 'respected' — are preserved in Section 5.4 and the "
+      "traceability table. Staff training on unique needs is stated as a separate "
+      "mandatory obligation in Section 5.4, the Non-negotiable rules, the quality "
+      "monitoring table (separate row), the traceability table, and the evidence "
+      "checklist (separate sub-section with its own record requirement).")
+
+    save_and_verify(doc, "HCO_COP_20_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 if __name__ == "__main__":
     gen_cop1()
     print("\nCOP.1 draft generated.")
