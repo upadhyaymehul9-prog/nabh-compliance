@@ -1,0 +1,1594 @@
+MOM.1–MOM.6 — Batched Raw Source Dump
+======================================
+Purpose: Draft input for six standards in one pull.
+Each standard drafted and verified individually — same process as all prior chapters.
+Source: Official NABH Hospitals 6th Edition Standards PDF (OE text, levels, asterisks)
+        + NABH Guidebook (interpretations scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+
+CROSS-REFERENCE NOTE (applies throughout this file):
+The Guidebook cites specific NABH OE codes in several places (e.g., "Refer to PSQ.1.d,
+COP.1.b, MOM.5.b"). In policy drafts, these must NOT be reproduced as code citations.
+Use generic phrasing: "Those requirements are covered in the hospital's other policies."
+The specific codes are preserved here for source accuracy only.
+
+STOP-WORK STATUS BY STANDARD:
+  MOM.1 — NO stop-work authority
+  MOM.2 — NO stop-work authority
+  MOM.3 — YES (STOP_WORK_PROPOSALS: LASA/different concentrations stored together;
+                emergency medications missing or unreplenished; storage outside
+                manufacturer recommendations)
+  MOM.4 — YES (STOP_WORK_PROPOSALS: prescribe without allergy/ADR check; verbal order
+                outside the documented safe process; prescription that fails minimum
+                requirements)
+  MOM.5 — NO stop-work authority
+  MOM.6 — YES (STOP_WORK_PROPOSALS: dispense unlabelled medication; high-risk order not
+                verified before dispensing; recalled or expired item)
+
+STATUTE DISCLAIMER STATUS:
+  MOM.7 — YES (applicable laws governing who may administer medications — NOT in this batch)
+  MOM.9 — YES (NDPS Act, AERB rules — NOT in this batch)
+  MOM.1–MOM.6 — Accreditation-only disclaimer (no statute P2 designation)
+
+POLICY TITLES AND PREPARED-BY:
+  MOM.1 — Safe Pharmacy Services and Medication Management | Prepared by: Medication Safety Officer | Doc: HCO/MOM/POL/01
+  MOM.2 — Hospital Formulary | Prepared by: Drug and Therapeutics Committee Chair | Doc: HCO/MOM/POL/02
+  MOM.3 — Storage and Availability of Medications | Prepared by: Pharmacy In-Charge | Doc: HCO/MOM/POL/03
+  MOM.4 — Safe and Rational Prescription of Medications | Prepared by: Medical Superintendent | Doc: HCO/MOM/POL/04
+  MOM.5 — Uniform Medication Orders | Prepared by: Medical Superintendent | Doc: HCO/MOM/POL/05
+  MOM.6 — Safe Dispensing of Medications | Prepared by: Pharmacy In-Charge | Doc: HCO/MOM/POL/06
+
+CHAPTER INTENT (official Standards PDF, verbatim):
+The organisation has a safe and organised medication management process. Availability,
+safe storage, prescription, dispensing and administration of medications are governed by
+written guidance. A medication safety officer is designated. The hospital formulary is
+developed, implemented and updated. Pharmacy has oversight of medications stocked out of
+the pharmacy. Reconciliation occurs at transition points. Patients are monitored after
+administration. Near misses, medication errors and adverse drug reactions are reported and
+analysed. Medications also include blood, implants and devices. Medical supplies and
+consumables are available for use.
+
+
+══════════════════════════════════════════════════════════════════════════════
+MOM.1 — Safe Pharmacy Services and Medication Management
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Pharmacy services and medication management is done safely.
+
+Standard is NOT starred.
+
+OE count: 5 | COREs: none | Stars: a★, d★ | Achievement: c | Excellence: none
+No stop-work authority.
+
+Prepared by: Medication Safety Officer | Doc no: HCO/MOM/POL/01
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.1.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Pharmacy services and medication management are implemented following written guidance.
+
+Guidebook interpretation:
+The written guidance shall address aspects related to the formulary, procurement, storage,
+prescription, dispensing, administration and monitoring the use of medications. A qualified
+individual shall supervise all the activities of the Pharmacy services. Medication
+management shall cover all patient care areas across the organisation. All required
+procedures under this chapter shall be documented as a 'Medication Management Manual'.
+
+Stop-work check: Commitment — no stop-work trigger. MOM.1 not in STOP_WORK_PROPOSALS.
+
+Mandatory (shall):
+  1. Written guidance shall address: formulary, procurement, storage, prescription,
+     dispensing, administration and monitoring the use of medications.
+  2. A qualified individual shall supervise all pharmacy service activities.
+  3. Medication management shall cover all patient care areas across the organisation.
+  4. All required procedures under this chapter shall be documented as a
+     'Medication Management Manual' — this is the specific container the Guidebook names.
+
+Illustrative only:
+  — No "for example" or "preferable" items in this OE's interpretation. All elements above
+    are mandatory (shall).
+
+Documentation: OE is starred — written guidance implementing pharmacy services and
+medication management must be on file. The Medication Management Manual is the named
+documentary requirement.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.1.b
+Level: Commitment | No star
+
+Verbatim OE text:
+A multi-disciplinary committee guides the formulation and implementation of pharmacy
+services and medication management.
+
+Guidebook interpretation:
+The multidisciplinary committee shall have defined roles and responsibilities for the
+management of medications. Where applicable, these are in line with legislation and
+applicable regulations. Some of the responsibilities of the committee include developing
+medication management processes; developing and revising the organisation's formulary;
+and evaluating medication use, and patient safety incidents involving medications. The
+committee shall include representatives of major clinical departments, administration,
+a pharmacist/clinical pharmacologist and medication safety officer. It shall also have
+representation from nurses and Quality department. The objectives of this committee, terms
+of reference like its composition, frequency of meetings, the quorum required shall be
+defined. At a minimum, the committee shall meet once in three months. The minutes of the
+meeting shall be documented.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. Committee shall have defined roles and responsibilities for medication management.
+  2. Committee composition shall include: major clinical departments, administration,
+     pharmacist/clinical pharmacologist, medication safety officer, nurses, Quality
+     department.
+  3. Terms of reference shall be defined: composition, frequency of meetings, quorum.
+  4. Meeting frequency: at a minimum, once in three months — exact minimum; do not soften.
+  5. Minutes shall be documented.
+  6. Where applicable, roles and responsibilities shall be in line with legislation and
+     applicable regulations.
+
+Illustrative only:
+  — "Some of the responsibilities include..." — the word "some" signals this is not an
+    exclusive list; examples are illustrative of scope, not exhaustive enumeration.
+  — Specific responsibilities listed (developing processes, revising formulary, evaluating
+    medication use, patient safety incidents) are illustrative examples.
+
+Documentation: No star — process must be in place, but a separate starred artifact is not
+required by this OE. Minutes and terms of reference are nevertheless explicit mandatory
+records.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.1.c
+Level: Achievement | No star
+
+Verbatim OE text:
+The multi-disciplinary committee updates medication management processes.
+
+Guidebook interpretation:
+This includes information on rational use, medication errors, medication management,
+adverse drug reactions, patient safety and high-risk medications. The multidisciplinary
+committee shall conduct Medication Management system review on an annual basis. The
+organisation designates a medication safety officer, this job responsibility could be
+handled by the patient safety officer for example monitoring and analysis of medication
+related adverse events. Refer PSQ.1.d. and PSQ.7.c.
+
+[Guidebook cross-ref: PSQ.1.d and PSQ.7.c — in policy draft: "those requirements are
+covered in the hospital's other policies."]
+
+Stop-work check: Achievement — no stop-work trigger.
+
+Mandatory (shall):
+  1. Multidisciplinary committee shall conduct Medication Management system review on an
+     annual basis — annual is the minimum frequency stated with "shall".
+
+Illustrative only:
+  — Topics listed (rational use, medication errors, ADRs, patient safety, high-risk meds)
+    are examples of what updates may cover — "includes information on" is not an exhaustive
+    mandatory checklist; the process review is the mandatory act.
+  — MSO role: "could be handled by the patient safety officer" — permissive, not a
+    requirement. The designation of an MSO is the chapter-intent requirement; the PSO
+    handling it is one option.
+  — "Monitoring and analysis of medication related adverse events" is cited as an example
+    of what the PSO-as-MSO would do, not a separate standalone requirement at this OE.
+
+Achievement level note: This OE is Achievement — evidence of the committee actually
+having conducted process updates (not only having met) is what assessors look for.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.1.d
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+There is a procedure to obtain medications when the pharmacy is closed or in case of
+stock outs.
+
+Guidebook interpretation:
+When the pharmacy is closed or in case of stock outs there shall be a standard operating
+procedure to procure the drugs. It is preferable that the organisation has a 24-hour
+pharmacy.
+
+Stop-work check: Commitment — no stop-work trigger. MOM.1 not in STOP_WORK_PROPOSALS.
+
+Mandatory (shall):
+  1. A standard operating procedure shall exist to procure drugs when the pharmacy is
+     closed or in a stock-out situation.
+
+Illustrative only:
+  — 24-hour pharmacy: "It is preferable" — aspirational. Absence of a 24-hour pharmacy
+    is not a non-compliance finding; absence of the SOP is.
+
+Documentation: OE is starred — the written SOP must be on file and demonstrably in use.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.1.e
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation has a mechanism to inform relevant staff of key changes in pharmacy
+services and medication management to ensure uninterrupted and safe care.
+
+Guidebook interpretation:
+The organisation shall have a process to communicate medication shortages, including
+stock-outs to relevant staff (clinicians and nurses). The relevant staff shall also be
+informed of the recall of a drug within 24 hours, any serious adverse events and patient
+safety incidents associated with medication usage. The Pharmacy-in-charge or a designated
+authority shall be responsible for communicating the same. This communication shall be
+documented. Refer to MOM.2., MOM.5.b. and MOM.9.e.
+
+[Guidebook cross-refs: MOM.2, MOM.5.b, MOM.9.e — in policy draft: "those requirements
+are covered in the hospital's other policies."]
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. Process shall exist to communicate medication shortages and stock-outs to clinicians
+     and nurses.
+  2. Staff shall be informed of drug recalls within 24 hours — 24-hour timeframe is
+     explicit; preserve verbatim.
+  3. Staff shall be informed of serious adverse events and patient safety incidents
+     associated with medication usage.
+  4. Pharmacy-in-charge or a designated authority shall be responsible for communicating.
+  5. Communication shall be documented.
+
+Illustrative only:
+  — No illustrative-only items here. All elements carry "shall".
+
+
+══════════════════════════════════════════════════════════════════════════════
+MOM.2 — Hospital Formulary
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+The organisation develops, updates and implements a hospital formulary.
+
+Standard is NOT starred.
+
+OE count: 6 | COREs: a | Stars: e★, f★ | Achievement: d | Excellence: none
+No stop-work authority.
+
+Prepared by: Drug and Therapeutics Committee Chair | Doc no: HCO/MOM/POL/02
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.2.a
+Level: CORE | No star
+
+Verbatim OE text:
+A list of medications appropriate for the patients and as per the scope of the
+organisation's clinical services is developed collaboratively by the multi-disciplinary
+committee.
+
+Guidebook interpretation:
+The multidisciplinary committee shall prepare the organisation's formulary. The formulary
+shall include medications necessary to meet the organisation's mission, patient needs and
+scope of services. The formulary could be prepared keeping in view the "National List of
+Essential Medicines" and "WHO Model List of Essential Medicines". It could also take into
+consideration the harm potential of the medication, interactions with other medications
+and likelihood of patient safety incidents. The organisation could look at the possibility
+of having system-wise/speciality wise formulary. At a minimum, the formulary shall include
+the name of the molecule, formulation and strength(s). The organisation shall endeavour
+to limit the number of drug concentrations of a particular drug in the formulary. Implants
+and devices are included in drugs and shall be included in the formulary.
+
+Stop-work check: CORE — non-compliance is accreditation-blocking. MOM.2 has no
+designated stop-work authority section. CORE status means a formulary must exist and be
+committee-prepared; it does not create a stop-work trigger clause in this policy.
+
+Mandatory (shall):
+  1. Committee shall prepare the formulary — collaborative preparation is mandatory.
+  2. Formulary shall include medications necessary to meet the organisation's mission,
+     patient needs and scope of services.
+  3. At minimum, formulary entries shall include: name of the molecule, formulation,
+     and strength(s) — this is the explicit minimum; preserve verbatim.
+  4. Implants and devices are included in drugs and shall be included in the formulary —
+     mandatory scope extension; do not omit.
+  5. The organisation shall endeavour to limit the number of drug concentrations —
+     "shall endeavour" is aspirational-mandatory (directional duty, not a hard cap).
+
+Illustrative only:
+  — NLEM and WHO Model List are examples ("could be prepared keeping in view") — not
+    mandatory adoption of either specific list.
+  — Harm potential, drug interactions, patient safety incidents "could also take into
+    consideration" — evaluative criteria the organisation may apply; not a mandatory
+    scoring framework.
+  — System-wise/specialty-wise formulary "could look at the possibility" — optional.
+
+CORE status: A formulary that does not exist, or exists but was not prepared by the
+multidisciplinary committee, is a CORE gap.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.2.b
+Level: Commitment | No star
+
+Verbatim OE text:
+The list is reviewed and updated collaboratively by the multi-disciplinary committee at
+least annually.
+
+Guidebook interpretation:
+The committee may review and update all medications or only certain medication categories.
+The review may be done speciality wise. Non-formulary drugs, which were procured in the
+previous year regularly, may be included in the revised list. Aspects of patient safety,
+including adverse drug reactions, changing disease pattern, changing resistance pattern,
+and cost, could be taken into consideration during the review.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. Review and update at least annually — "at least annually" is from the OE text itself;
+     the frequency is mandatory.
+  2. Review must be collaborative (committee) — also from OE text.
+
+Illustrative only (all "may" / "could"):
+  — Whether to review all medications or only certain categories — committee's choice.
+  — Specialty-wise review — optional approach.
+  — Including previously regularly procured non-formulary drugs — permissive option.
+  — ADRs, changing disease/resistance patterns, cost as review criteria — aspirational
+    guidance ("could be taken into consideration").
+
+Documentation: No star — the review output (updated list with dated cover) is the
+required evidence, but no separately starred document is designated.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.2.c
+Level: Commitment | No star
+
+Verbatim OE text:
+The current formulary is available for clinicians to refer to.
+
+Guidebook interpretation:
+The current formulary shall be made available to all treating doctors of the organisation.
+The organisation needs to ensure that clinicians have access to the current version of the
+formulary. The formulary could be made available in either physical or electronic form.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. Current formulary shall be made available to all treating doctors.
+  2. Clinicians shall have access to the current version — "needs to ensure" carries
+     mandatory force in this regulatory context.
+
+Illustrative only:
+  — Physical or electronic form — the organisation's choice; both are acceptable.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.2.d
+Level: Achievement | No star
+
+Verbatim OE text:
+The clinicians adhere to the current formulary.
+
+Guidebook interpretation:
+The organisation shall ensure that prescriptions are as per the formulary. It shall
+monitor the frequency of prescriptions being rejected/local purchase done because it
+contained non-formulary drugs.
+
+Stop-work check: Achievement — no stop-work trigger.
+
+Mandatory (shall):
+  1. Organisation shall ensure prescriptions are as per the formulary.
+  2. Organisation shall monitor the frequency of non-formulary prescriptions,
+     rejections, and local purchases due to non-formulary items.
+
+Achievement level note: Evidence of active monitoring and adherence (audit data,
+rejection logs) is what assessors look for — not merely a policy statement that clinicians
+must adhere.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.2.e
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation adheres to the procedure for the acquisition of formulary medications.
+
+Guidebook interpretation:
+The procedure shall address the issues of vendor selection, vendor evaluation, reorder
+levels, indenting process, generation of the purchase order, and receipt of goods. The
+procedure also addresses managing stock-outs due to various reasons.
+
+Stop-work check: Commitment — no stop-work trigger. MOM.2 not in STOP_WORK_PROPOSALS.
+
+Mandatory (shall):
+  1. Procedure shall address: vendor selection, vendor evaluation, reorder levels,
+     indenting process, generation of the purchase order, and receipt of goods — these
+     six elements are explicitly named; all are mandatory procedure content.
+  2. Procedure shall address managing stock-outs due to various reasons.
+
+Illustrative only:
+  — No "for example" or "preferable" items in this OE's interpretation. All elements
+    are mandatory procedure content.
+
+Documentation: OE is starred — the written acquisition procedure must be on file and
+demonstrated in use (purchase records, receipt logs).
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.2.f
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation adheres to the procedure to obtain medications not listed in the
+formulary.
+
+Guidebook interpretation:
+Local purchase/hotline, which takes care of the immediate requirement are examples of
+the procedure to obtain medications not listed in the formulary. Whenever there is the
+local purchase of a medication that's not listed in the formulary, the organisation shall
+have a process of evaluation, authorisation and ratification and decision-making on its
+subsequent inclusion in the formulary if necessary. Standard Medications are stored
+appropriately and are available where MOM.3. — required.
+
+[Note: The trailing "Standard Medications are stored..." text in the Guidebook is a
+typographic artifact from OCR — it belongs to the MOM.3 standard header that follows in
+the PDF. Discard it for this OE's interpretation.]
+
+Stop-work check: Commitment — no stop-work trigger. MOM.2 not in STOP_WORK_PROPOSALS.
+
+Mandatory (shall):
+  1. Organisation shall have a process of evaluation, authorisation and ratification
+     for local purchases of non-formulary medications — each of the three steps
+     (evaluate, authorise, ratify) is explicitly required.
+  2. Decision-making on subsequent formulary inclusion — required as a step, but
+     "if necessary" qualifies the outcome (inclusion is not automatic; the decision
+     step is mandatory, not the inclusion itself).
+
+Illustrative only:
+  — Local purchase and hotline are cited as "examples of the procedure" — the procedure
+    itself is mandatory; the mechanism the organisation chooses is not prescribed.
+
+Documentation: OE is starred — the non-formulary procurement procedure and records
+of evaluation/authorisation/ratification must be on file.
+
+
+══════════════════════════════════════════════════════════════════════════════
+MOM.3 — Storage and Availability of Medications
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Medications are stored appropriately and are available where required.
+
+Standard is NOT starred.
+
+OE count: 7 | COREs: a, c, e, g | Stars: c★, e★, f★ | Achievement: d | Excellence: none
+STOP-WORK: YES — LASA/different concentrations stored together; emergency medications
+missing or unreplenished; storage outside manufacturer recommendations.
+
+Prepared by: Pharmacy In-Charge | Doc no: HCO/MOM/POL/03
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.3.a
+Level: CORE | No star
+
+Verbatim OE text:
+Medications are stored in a clean, safe and secure environment while incorporating the
+manufacturer's recommendation(s).
+
+Guidebook interpretation:
+The medication storage space shall be clean, safe and secure. The organisation shall
+adhere to the storage requirements of drugs as specified by the manufacturer. In the
+absence of manufacturer's instructions, the organisation shall develop and implement
+storage requirements. Storage requirements shall apply to all areas where medications are
+stored, including clinical areas. Medications shall be protected from loss or theft
+throughout the organisation. Some of the ways of ensuring this is to limit access to
+medication storage areas to authorised team members, locking medication carts and never
+leaving them unattended, or storing medications in an area that is continuously staffed.
+It is preferable that the medication storage area is organised. Overall cleanliness of the
+storage area shall be maintained. Vaccines shall be stored at the required temperature as
+per manufacturers recommendations. Where appropriate, temperature monitoring of the room,
+the cold storage area/refrigerator shall be done at least once a day. In case of areas
+which are not open all days, it shall be done on all working days. Beyond expiry date drugs
+(before disposal), shall be stored separately and away from drugs which are intended for
+patient use.
+
+Stop-work check: CORE — non-compliance is accreditation-blocking. MOM.3 stop-work
+applies specifically to: LASA/concentration pairs stored together; emergency medications
+missing/unreplenished; storage outside manufacturer recommendations. An immediate storage
+condition that violates manufacturer requirements (e.g., unrefrigerated cold-chain
+product) is a stop-work trigger at the storage location level.
+
+Mandatory (shall):
+  1. Storage space shall be clean, safe and secure.
+  2. Manufacturer storage requirements shall be adhered to throughout — applies to all
+     drugs in all areas.
+  3. In absence of manufacturer's instructions, the organisation shall develop and
+     implement its own storage requirements.
+  4. Storage requirements shall apply to all areas where medications are stored,
+     including clinical areas — mandatory scope breadth.
+  5. Medications shall be protected from loss or theft throughout the organisation.
+  6. Overall cleanliness shall be maintained.
+  7. Vaccines shall be stored at required temperature per manufacturer.
+  8. Temperature monitoring of cold storage/refrigerator: at least once a day (or on all
+     working days for areas not open daily).
+  9. Beyond-expiry drugs shall be stored separately and away from drugs intended for
+     patient use — mandatory physical separation.
+
+Illustrative only:
+  — Specific ways to prevent loss/theft (limit access, lock carts, continuously staffed
+    area) are examples ("some of the ways").
+  — "It is preferable that the medication storage area is organised" — organised storage
+    is best practice, not a standalone mandatory standard.
+
+CORE status: A clinical area storing drugs without applying manufacturer requirements
+(e.g., unrefrigerated insulin in a ward) is a CORE gap and a stop-work trigger.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.3.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Sound inventory control practices guide the storage of medications throughout the
+organisation.
+
+Guidebook interpretation:
+The organisation shall follow inventory control practices like ABC, VED, FSN, First Expiry
+First Out, lead time analysis, etc. or a combination of these. The medicines could be
+stored in an alphabetical order of generic name. To check for loss or theft, the
+organisation could conduct stock verification audits at regular intervals (as defined by
+the organisation) to verify the inventory and detect instances of loss or theft. The
+organisation also has a mechanism for handling medications which are not part of the
+regular inventory. For example, not for sale medications including physician's samples.
+
+Stop-work check: Commitment — no stop-work trigger (storage condition issues fall
+under MOM.3.a stop-work; inventory method gaps are a Commitment-level finding).
+
+Mandatory (shall):
+  1. The organisation shall follow sound inventory control practices — the "shall follow"
+     applies to the practice category, not to any specific named method.
+  2. A mechanism shall exist for handling medications not part of the regular inventory
+     (implied "also has" reads as a present-tense requirement).
+
+Illustrative only:
+  — ABC, VED, FSN, FEFO, lead time analysis are examples ("like...or a combination").
+    The organisation may choose which method(s).
+  — Alphabetical storage by generic name — option ("could be").
+  — Stock verification audits at regular intervals — stated as "could conduct"; the
+    organisation defines the interval. Loss/theft audits are a good practice, not an
+    explicit mandatory frequency.
+  — Physicians' samples are cited as an example of non-regular-inventory items.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.3.c
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation defines and updates its list of high-risk medication(s).
+
+Guidebook interpretation:
+The organisation shall define and update its list of high risk medications periodically.
+High risk/high alert medications carry a heightened risk for adverse outcomes and
+catastrophic harm whenever there is an error. High-risk medications/high alert medications
+include medicines with low therapeutic window, controlled substances, psychotherapeutic
+medications, look-alike and sound-alike medications, and concentrated electrolytes. The
+list shall be available in the pharmacy and all clinical areas where high-risk medications
+are stored.
+
+Stop-work check: CORE and starred. The high-risk list must exist and be current. Its
+absence or failure to post it at all locations where high-risk meds are stored is a CORE
+gap. The storage-together stop-work trigger (MOM.3.e) is the direct action trigger; this
+OE is about the list itself.
+
+Mandatory (shall):
+  1. Organisation shall define and update the list periodically — both definition and
+     periodic update are explicit.
+  2. List shall be available in the pharmacy and all clinical areas where high-risk
+     medications are stored — mandatory availability at all relevant locations.
+
+Illustrative only:
+  — Categories listed (low therapeutic window, controlled substances, psychotherapeutics,
+    LASA, concentrated electrolytes) are examples of what belongs on the list ("include")
+    — not an exhaustive closed set; the organisation's list may contain additional items.
+
+CORE status: A high-risk list that does not exist, or exists but is not updated or posted
+at clinical areas, is a CORE gap.
+
+Documentation: OE is starred — the current, committee-approved high-risk list must be on
+file and posted.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.3.d
+Level: Achievement | No star
+
+Verbatim OE text:
+High-risk medications are stored in areas of the organisation where it is clinically
+necessary.
+
+Guidebook interpretation:
+High-risk medications are stored in pre-determined areas of the organisation for example,
+certain wards, OT, ICU. Clinical needs shall determine the availability of relevant
+high-risk drugs in such areas. Where applicable, (narcotics), it shall be guided by
+regulations. In all such areas, safeguards shall be in place to prevent inadvertent
+administration.
+
+Stop-work check: Achievement — the stop-work section for MOM.3 does not fire at this OE
+specifically; however, a high-risk medication found stored in an area that is neither
+predetermined nor clinically necessary is a finding against this OE and indirectly
+implicates the MOM.3.a storage stop-work.
+
+Mandatory (shall):
+  1. Clinical needs shall determine availability of high-risk drugs in each area —
+     clinical justification is required.
+  2. Where applicable (narcotics), storage shall be guided by regulations.
+  3. Safeguards shall be in place in all areas where high-risk meds are stored to prevent
+     inadvertent administration.
+  4. Areas shall be pre-determined (implied by "pre-determined areas" framing).
+
+Illustrative only:
+  — Wards, OT, ICU are examples of pre-determined areas; not a closed list.
+
+Achievement level note: Evidence of the pre-determined location list and walk-round
+verification that high-risk meds are only in those locations is what assessors look for.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.3.e
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+High-risk medications including look-alike, sound-alike medications and different
+concentrations of the same medication are stored physically apart from each other.
+
+Guidebook interpretation:
+Many drugs in ampoules, vials or tablets may look-alike or sound-alike. These are
+identified periodically, and the Look-alike Sound-alike medications (LASA) list shall be
+made available in all units where drugs are stored. Different concentrations of the same
+drug need to be identified. The list shall be developed from the hospital formulary. The
+list will have to be revised at regular intervals depending on the changes in the formulary
+and changes in the packaging (in case of look-alike). A good practice is to store the two
+identified look-alike/sound-alike drugs and/or different concentrations of the same drugs
+as far apart physically as is possible. This is in addition to regular storage practices.
+In addition to the pharmacy, these storage practices shall be followed in patient care areas.
+
+Stop-work check: CORE and starred. STOP-WORK TRIGGER: Finding LASA pairs or different
+concentrations of the same drug stored physically together is an immediate stop-work
+condition for that storage location. The stop-work authority in section 6 of this policy
+applies. Issue from a non-compliant storage location is halted; immediate life-saving use
+of the only available dose continues with escalation documented.
+
+Mandatory (shall):
+  1. LASA medications shall be identified periodically.
+  2. LASA list shall be made available in all units where drugs are stored —
+     mandatory availability at every storage location, not only pharmacy.
+  3. Different concentrations of the same drug shall be identified.
+  4. List shall be developed from the hospital formulary.
+  5. List shall be revised at regular intervals (formulary changes, packaging changes).
+  6. LASA storage practices shall be followed in patient care areas in addition to pharmacy.
+
+Mandatory (from OE text itself):
+  7. LASA meds and different concentrations shall be stored physically apart — this is
+     the core requirement. Physical separation is mandatory, not advisory.
+
+Illustrative only:
+  — "As far apart as is possible" qualifies the degree of separation as a good practice
+    aspiration; the mandatory floor is physical separation (separate bins/shelves),
+    not maximum possible distance.
+  — Tall-man lettering is not mentioned in the Guidebook for this OE — it is a
+    supplementary good practice that may be added in policy; it is not a requirement here.
+
+CORE status: LASA pairs or different concentrations found together are a CORE gap and
+stop-work trigger.
+
+Documentation: OE is starred — the LASA list and evidence of physical separation practices
+must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.3.f
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The list of emergency medications is defined and is stored uniformly.
+
+Guidebook interpretation:
+The list of emergency medications shall be prepared in consonance with sound clinical
+practices and documented. The list of drugs could be modified according to the needs of
+the clinical department for example ICU, physiotherapy, emergency, CATH lab etc. A crash
+cart would help the organisation to store these medications, i.e. the rows and drawers
+have defined medicines. No other drug shall be kept stored with emergency medications.
+
+Stop-work check: The direct stop-work trigger for emergency medications is MOM.3.g
+(unavailability/unreplenishment). This OE governs list definition and uniform storage.
+An unlisted drug found on an emergency trolley, or a different layout across trolleys,
+is a finding against this OE — not itself named as a standalone stop-work trigger, but
+directly supports the MOM.3.g stop-work condition.
+
+Mandatory (shall):
+  1. Emergency medication list shall be prepared in consonance with sound clinical
+     practices and documented — both preparation and documentation are mandatory.
+  2. No other drug shall be kept stored with emergency medications — strong "shall"; no
+     exceptions except through a formal list amendment.
+
+Illustrative only:
+  — The list "could be modified according to the needs of the clinical department" —
+    department-specific modification is permitted but not required.
+  — ICU, physiotherapy, emergency, CATH lab — examples of departments, not an exhaustive
+    mandatory set.
+  — Crash cart with defined rows/drawers — cited as something that "would help"; it is
+    the dominant best practice but the OE requires uniform storage, not specifically a
+    crash cart.
+
+Documentation: OE is starred — the defined emergency medication list must be documented
+and the uniform storage layout must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.3.g
+Level: CORE | No star
+
+Verbatim OE text:
+Emergency medications are available all the time and are replenished promptly when used.
+
+Guidebook interpretation:
+Adequate quantity of emergency medicines shall be stocked at all times. An inventory
+check shall be done at least daily to ensure this. In case the organisation follows a
+system of sealing the emergency cart, then the check shall be carried out after each use
+of the cart/once every month. Refer to COP.5.c.
+
+[Guidebook cross-ref: COP.5.c — in policy draft: "those requirements are covered in
+the hospital's other policies."]
+
+Stop-work check: CORE. STOP-WORK TRIGGER: An emergency medication location that does not
+have the defined list stocked, or a used emergency medication that has not been
+replenished before the trolley is returned to service, is a stop-work condition for that
+trolley/location until corrected. Immediate life-saving use of the only available dose
+continues during escalation.
+
+Mandatory (shall):
+  1. Adequate quantity of emergency medicines shall be stocked at all times.
+  2. Inventory check shall be done at least daily — daily is the stated minimum for
+     unsealed-cart systems; preserve verbatim.
+  3. Sealed-cart system alternative: check after each use of the cart or once every
+     month — whichever comes first is implied; the organisation chooses the system but
+     must then follow its own rules.
+
+Illustrative only:
+  — No "for example" or "preferable" items in this OE's interpretation beyond the sealed-
+    cart alternative check schedule. All elements above are mandatory.
+
+CORE status: An emergency cart that is not stocked or has been used and not replenished
+is a CORE gap and stop-work trigger.
+
+
+══════════════════════════════════════════════════════════════════════════════
+MOM.4 — Safe and Rational Prescription of Medications
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Medications are prescribed safely and rationally.
+
+Standard is NOT starred.
+
+OE count: 8 | COREs: b, e, f | Stars: a★, b★, f★ | Achievement: g, h | Excellence: d
+STOP-WORK: YES — prescribe without allergy/ADR check; verbal order outside the documented
+safe process; prescription that fails minimum requirements.
+
+Prepared by: Medical Superintendent | Doc no: HCO/MOM/POL/04
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.4.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Medication prescription is in consonance with good practices / guidelines for rational
+prescription of medications.
+
+Guidebook interpretation:
+This shall address both outpatient and in-patient prescription. The organisation shall
+ensure that clinicians are trained/sensitised on the rational prescription of medications.
+WHO states: "Rational use of medicines requires that patients receive medications
+appropriate to their clinical needs, in doses that meet their own individual requirements,
+for an adequate period of time, and at the lowest cost to them and their community." "Code
+of Medical Ethics-2002" published by Medical Council of India erstwhile National Medical
+Commission shall be followed. Refer to the glossary for a definition of "prescription".
+
+Stop-work check: Commitment — no direct stop-work trigger at this OE. The stop-work
+trigger for prescriptions failing minimum requirements is at MOM.4.b; the allergy-check
+stop-work is at MOM.4.c. This OE is the overarching rational-prescribing framework.
+
+Mandatory (shall):
+  1. Applies to both outpatient and inpatient prescription — mandatory scope breadth.
+  2. Organisation shall ensure clinicians are trained/sensitised on rational prescription.
+  3. Code of Medical Ethics-2002 (MCI/NMC) shall be followed — explicitly "shall".
+
+Illustrative only:
+  — WHO definition of rational use is reproduced for context; "lowest cost" is a WHO
+    policy goal, not a standalone organisational mandate under NABH.
+  — Reference to the glossary is informational — no separate glossary requirement is
+    created by this OE in the policy document.
+
+Documentation: OE is starred — evidence that rational prescribing guidance exists and
+that training has been conducted must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.4.b
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation adheres to the determined minimum requirements of a prescription.
+
+Guidebook interpretation:
+Prescriptions generated within the organisation (IPD, OPD and emergency) shall be in
+accordance with national/international guidelines and regulatory bodies. At a minimum,
+the prescription shall have the name of the patient; unique hospital number; name of the
+drug (generic composition is mandatory except in the case of combinations of vitamins
+and/or minerals), strength, dosage instruction, duration and total quantity of the
+medicine; name, signature and registration number of the prescribing doctor. Error-prone
+abbreviations shall not be used. All prescriptions shall be written in capital letters.
+It is preferable to use digital prescription system to reduce errors. Prescription errors
+or illegible prescriptions will be initialled after a single strikethrough and rewritten.
+Good references are the Drugs and Cosmetics Act and the Code of Medical Ethics and
+Institute for Safe Medication Practices guidelines.
+
+Stop-work check: CORE and starred. STOP-WORK TRIGGER: A prescription that fails the
+organisation's determined minimum requirements shall not be dispensed or administered.
+Pharmacy and nursing have the authority to hold a non-compliant order (except through
+the documented emergency-prescription path). Refusing an unsafe prescription is not
+a disciplinary matter.
+
+Mandatory (shall):
+  1. Prescriptions (IPD, OPD, emergency) shall be in accordance with national/
+     international guidelines and regulatory bodies.
+  2. Minimum elements — all mandatory ("At a minimum... shall have"):
+       a. Name of the patient
+       b. Unique hospital number
+       c. Name of the drug [generic composition is mandatory — except for combination
+          vitamins/minerals]
+       d. Strength
+       e. Dosage instruction
+       f. Duration and total quantity of the medicine
+       g. Name, signature and registration number of the prescribing doctor
+  3. Error-prone abbreviations shall not be used.
+  4. Prescriptions shall be written in capital letters.
+  5. Illegible prescriptions: initialled after single strikethrough and rewritten —
+     the correction method is explicitly prescribed.
+
+Illustrative only:
+  — Digital prescription system: "It is preferable" — not mandatory.
+  — Specific references (Drugs & Cosmetics Act, Code of Medical Ethics, ISMP) are cited
+    as "good references" — not a mandatory adoption of any specific external list.
+
+CORE status: A prescription missing any of the mandatory minimum elements is a CORE
+finding and a stop-work trigger for dispensing or administration.
+
+Documentation: OE is starred — sample prescriptions demonstrating adherence to minimum
+requirements must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.4.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Drug allergies and previous adverse drug reactions are ascertained before prescribing.
+
+Guidebook interpretation:
+Drug allergy and previous adverse drug reaction shall be ascertained during the initial
+consultation, before prescribing or at any point of time during care. It is a good
+practice to document drug allergies prominently in the medical record, both in OP and IP.
+
+Stop-work check: STOP-WORK TRIGGER: Prescribing (or transcribing a prescription for
+action) without having ascertained drug allergies and previous adverse drug reactions
+is a stop-work condition. The person who identifies the gap (pharmacist, nurse, reviewing
+doctor) shall halt the prescription process and inform the treating doctor and MSO the
+same shift. Immediate life-saving medication in a crash follows the documented emergency
+rules and is written up when the patient is stable.
+
+Mandatory (shall):
+  1. Drug allergy and previous ADR shall be ascertained before prescribing —
+     mandatory timing ("before prescribing").
+  2. Ascertainment may occur during initial consultation or at any point during care —
+     this is a scope broadener (not a narrowing): the check must happen, and it applies
+     throughout care.
+
+Illustrative only:
+  — Prominent documentation in the medical record: "It is a good practice" — aspirational.
+    The Guidebook does not state "shall document prominently"; the requirement to document
+    is implicit in the ascertainment duty but the specific placement is a best practice.
+
+Note for policy writer: While the Guidebook says "good practice" on prominent recording,
+the policy method body (MOM.4.c) may appropriately require allergy recording and an
+alert mechanism (e.g., allergy band) as an implementation of the ascertainment duty —
+just do not attribute mandatory force for the prominence/band to this OE's Guidebook text.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.4.d
+Level: Excellence | No star
+
+Verbatim OE text:
+The organisation has a mechanism to assist the clinician in prescribing appropriate
+medication.
+
+Guidebook interpretation:
+The organisation needs to provide its clinicians with a mechanism(s) to help identify drug
+interactions, food-drug interactions, alcohol-drug interactions, therapeutic duplication,
+dose adjustments etc. This could either be in electronic or in the physical form.
+
+Stop-work check: Excellence — no stop-work trigger.
+
+Mandatory (shall):
+  1. Organisation needs to provide clinicians with a mechanism to help identify drug
+     interactions, food-drug interactions, alcohol-drug interactions, therapeutic
+     duplication, dose adjustments — "needs to provide" carries mandatory force at
+     Excellence level; the mechanism must exist and be working.
+
+Illustrative only:
+  — Electronic or physical form — organisation's choice.
+  — Specific categories (drug interactions, food-drug, etc.) are examples of what the
+    mechanism helps with ("etc." signals the list is not exhaustive).
+
+Excellence level note: This OE demands a working mechanism demonstrable to assessors,
+not a poster. Evidence is a working system (HIS-based CDS, formulary with interaction
+notes, pharmacy review process).
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.4.e
+Level: CORE | No star
+
+Verbatim OE text:
+Reconciliation of medications occurs at transition points of patient care.
+
+Guidebook interpretation:
+The purpose of medication reconciliation is to ensure that the list of medications that a
+patient has to receive is complete and up to date with past clinical conditions and present
+care plan. The prescribed medications shall be checked for accuracy at the transition
+points, such as the time of admission, either direct or after admission from the
+emergency, transfer of the patient from one ward setting/department to another, or at the
+time of discharge. It is preferable that medication reconciliation also occurs after
+cross-consultation. Medication reconciliation shall be documented. There is a system for
+effective communication during handover regarding the reconciliation of medications.
+
+Stop-work check: CORE — non-compliance is accreditation-blocking. MOM.4 stop-work does
+not fire specifically at this OE (the stop-work triggers are allergy check, verbal order,
+and minimum prescription requirements). A missing reconciliation at a transition point is
+a CORE gap evidenced in the medical record.
+
+Mandatory (shall):
+  1. Prescribed medications shall be checked for accuracy at the following transition
+     points (all mandatory):
+       a. Time of admission — direct or after admission from emergency
+       b. Transfer of patient from one ward setting/department to another
+       c. Time of discharge
+  2. Medication reconciliation shall be documented.
+  3. System for effective communication during handover regarding reconciliation —
+     "there is a system" asserts its mandatory existence.
+
+Illustrative only:
+  — Reconciliation after cross-consultation: "It is preferable" — aspirational, not
+    a mandatory transition point.
+
+CORE status: A patient transferred between wards without a documented medication
+reconciliation is a CORE gap.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.4.f
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+Verbal orders are implemented by ensuring safe medication management practices.
+
+Guidebook interpretation:
+The organisation shall ensure safe medication management practices through written
+guidance and implementation of the same. The written guidance shall mention who can give
+a verbal order, when can it be given and how the order will be authenticated. Verbal
+orders shall be limited to urgent situations where immediate written or electronic
+communication is not practical. To the extent possible, their usage shall be limited.
+The organisation shall have an approved list of formulary drugs which can be ordered
+verbally. This list can be defined either by inclusion or exclusion. It shall ensure that
+the procedure incorporates good practices like "repeat back/read back". A verbal order
+shall be counter-signed by the doctor who ordered it within 24 hours of ordering. For the
+definition of 'verbal order', refer to the glossary.
+
+Stop-work check: CORE and starred. STOP-WORK TRIGGER: Acting on a verbal medication
+order that is outside the organisation's documented verbal-order process (no read-back
+performed, no documentation at the time of receipt, or no countersignature within
+24 hours) is a stop-work condition. Immediate life-saving medication in a crash follows
+the documented emergency rules.
+
+Mandatory (shall):
+  1. Written guidance shall exist, covering:
+       a. Who can give a verbal order
+       b. When it can be given
+       c. How the order will be authenticated
+  2. Verbal orders shall be limited to urgent situations where immediate written or
+     electronic communication is not practical.
+  3. Approved list of formulary drugs that can be ordered verbally shall exist
+     (defined by inclusion or exclusion).
+  4. Procedure shall incorporate read-back/repeat-back — "shall ensure that the procedure
+     incorporates" makes read-back mandatory, not merely a "good practice" for this OE.
+  5. Counter-signature by the ordering doctor within 24 hours — mandatory and specific.
+
+Illustrative only:
+  — "To the extent possible, their usage shall be limited" — directional duty to minimise
+    verbal orders; not a hard numerical cap.
+  — The Guidebook references a glossary definition of 'verbal order' — informational; no
+    separate glossary artifact is required in the policy document.
+
+CORE status: Absence of written guidance governing verbal orders, or verbal orders used
+without read-back or countersignature, is a CORE gap and stop-work trigger.
+
+Documentation: OE is starred — written verbal-order procedure and sample records showing
+read-back and countersignature must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.4.g
+Level: Achievement | No star
+
+Verbatim OE text:
+Audit of medication orders / prescription is carried out to check for safe and rational
+prescription of medications.
+
+Guidebook interpretation:
+The scope of the audit shall include: legibility, use of capitals in written orders;
+the appropriateness of the drug, dose, frequency, and route of administration; the
+presence of therapeutic duplication; the possibility of drug interaction and measures
+taken to avoid the same; the possibility of food-drug interaction and measures taken to
+avoid the same; scope for dosage adjustment in renal and hepatic impairment; the
+possibility of intravenous incompatibility; presence of inappropriate dilutions and
+duration of medications/infusions; the requirements of this standard (MOM 4b, e-h).
+This shall be done at least once a month using a representative sample size. It could
+preferably be done by a clinical pharmacologist/clinical pharmacist. In case there is no
+clinical pharmacologist/clinical pharmacist, it could be done by a multidisciplinary
+committee/team, who is trained in audit of medication orders/prescriptions. It is
+preferable that this is done for all prescriptions as 'live audit' before the medicines
+are dispensed.
+
+Stop-work check: Achievement — no stop-work trigger.
+
+Mandatory (shall):
+  1. Audit scope shall include the parameters listed (legibility, appropriateness,
+     therapeutic duplication, drug interactions, food-drug interactions, dosage
+     adjustment in renal/hepatic impairment, IV incompatibility, inappropriate
+     dilutions/infusion durations, requirements of MOM.4.b/e-h) — "shall include"
+     makes all these parameters mandatory scope.
+  2. Frequency: at least once a month — monthly is the stated minimum.
+  3. Sample size: representative sample — the specification of "representative" is
+     mandatory (arbitrary small samples are insufficient).
+
+Illustrative only:
+  — Clinical pharmacologist/pharmacist as auditor: "could preferably" — best practice.
+    A multidisciplinary trained team is an acceptable alternative.
+  — Live audit before dispensing: "It is preferable" — aspirational.
+
+Achievement level note: Evidence of actual audit reports with findings, not only a
+policy that says audits will be conducted.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.4.h
+Level: Achievement | No star
+
+Verbatim OE text:
+Corrective and / or preventive action(s) is taken based on the audit, where appropriate.
+
+Guidebook interpretation:
+Where appropriate, a corrective and/or preventive action(s) is taken based on the
+root-cause analysis. The records of the same shall be maintained.
+
+Stop-work check: Achievement — no stop-work trigger.
+
+Mandatory (shall):
+  1. Records of corrective/preventive actions shall be maintained — "shall" is explicit.
+
+Illustrative only:
+  — "Where appropriate" — the organisation exercises judgement on whether CAPA is
+    warranted in a given audit cycle; not every audit finding mandates CAPA.
+  — Root-cause analysis informing CAPA: "It is preferable" (implied — Guidebook says
+    "based on root-cause analysis" without "shall"; this is best practice guidance).
+
+Achievement level note: An audit (MOM.4.g) without follow-up action records does not
+satisfy this OE. At minimum, the decision on whether CAPA was appropriate must be
+documented.
+
+
+══════════════════════════════════════════════════════════════════════════════
+MOM.5 — Uniform Medication Orders
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Medications orders are written in a uniform manner.
+
+Standard is NOT starred.
+
+OE count: 4 | COREs: none | Stars: a★ | Achievement: none | Excellence: none
+No stop-work authority.
+
+Prepared by: Medical Superintendent | Doc no: HCO/MOM/POL/05
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.5.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation ensures that only authorised personnel write orders.
+
+Guidebook interpretation:
+Medication orders shall be written by a doctor who at a minimum, holds an MBBS
+qualification. In case there is any other category of staff authorised to write medication
+orders, the same shall be backed by a legislation or government order. The medication
+order card in the IP shall have the orders written by a doctor, even if it is the case of
+transcribing orders of the treating consultant from an OP record or an admission note.
+In facilities which use Electronic Medical Record (EMR), the doctor shall directly enter
+the prescription in the Hospital Information System (HIS) using his or her unique login.
+In case the HIS entry is made by an assistant, the same shall be verified and authorised
+by the doctor. Commitment _b. HM cone.
+
+[Note: "Commitment _b. HM cone." is a typographic OCR artifact from the Guidebook PDF's
+level-indicator and OE-transition formatting. Discard; it is not part of the interpretation.]
+
+Stop-work check: Commitment — no stop-work trigger. MOM.5 not in STOP_WORK_PROPOSALS.
+However, an order written by a person not on the authorised list must not be acted upon
+(per the method body and non-negotiables); the person who identifies it should escalate.
+
+Mandatory (shall):
+  1. Medication orders shall be written by a doctor at minimum holding an MBBS
+     qualification — this is the regulatory floor.
+  2. Any other category of staff authorised to write orders shall be backed by legislation
+     or government order — no internal hospital decision alone is sufficient.
+  3. IP medication order card shall have orders written by a doctor, even when
+     transcribing from an OP record or admission note.
+  4. In HIS, if an assistant enters the order, the doctor shall verify and authorise —
+     mandatory; the doctor cannot outsource the prescription to an unverified assistant
+     entry.
+
+Illustrative only:
+  — Doctor entering directly in HIS using unique login — stated as the primary scenario;
+    the underlying requirement is that the doctor's authority is on record (via direct
+    entry or verified authorisation).
+
+Documentation: OE is starred — the authorised-prescriber list and sample records showing
+only authorised personnel wrote orders must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.5.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Medication orders are written in a uniform location in the medical records, which also
+include the patient's name and unique identification number.
+
+Guidebook interpretation:
+All the orders for medicines shall be recorded on a uniform location of the medical
+record. Only medications written in this location shall be administered to the patient.
+It is imperative that medication orders that are written in any other location of the
+medical record be moved to this location, electronic orders, when typed, shall again
+follow the same principles. It is preferable that the prescription and the administration
+record is on the same sheet. This would help minimise medication errors. A drug 'Kardex'
+could be used for this purpose. The treatment orders are written daily or authorised daily
+in a 'Kardex' like format. Phrases like "CST"/"continue same treatment"/"repeat all"/
+"repeat 1,4,5,8" shall not be accepted. Whenever there is a modification in the
+medication order in the existing order for a particular drug, a fresh order will have to
+be written for that drug for example, Tab. Paracetamol 500 mg QID changed to Tab.
+Paracetamol 500 mg BD — this shall warrant the first order to be discontinued and a fresh
+medication order to be written. A strike-through or over-writing of the previous order
+is not acceptable.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. All orders shall be recorded in a uniform location in the medical record.
+  2. Only medications written in this location shall be administered.
+  3. Orders written elsewhere shall be moved to this location — mandatory transfer.
+  4. Electronic orders shall follow the same uniform-location principle.
+  5. Phrases like "CST"/"continue same treatment"/"repeat all"/"repeat 1,4,5,8" shall
+     not be accepted.
+  6. Modification to a drug order: a fresh order shall be written; first order
+     discontinued — rewriting is mandatory, not optional.
+  7. Strike-through or over-writing of the previous order is not acceptable —
+     explicitly prohibited.
+
+Illustrative only:
+  — Prescription and administration record on the same sheet: "It is preferable" —
+    aspirational; a Kardex format is one option, not the only one.
+  — Drug Kardex "could be used" — example mechanism.
+
+Note for policy writer: The OE text itself includes the requirement that the uniform
+location also contains the patient's name and unique identification number — this is an
+OE-level requirement, not only a Guidebook guidance point.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.5.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Medication orders are legible, dated, timed and signed.
+
+Guidebook interpretation:
+All hand-written medication orders shall be written in capital letters. In case
+abbreviations are used, a list of approved standardised abbreviations for medication
+orders shall be used throughout the organisation. Error-prone abbreviations shall not be
+used. A good reference is the Institute for Safe Medication Practices guidelines. The
+identity of the person who has written the medication order shall be traceable. This could
+be done by either writing the name against every order or by having a 'master signature
+list' in the medical record which has the name of the person against the signature or by
+stating the employee code number against every medication order.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. Hand-written orders shall be written in capital letters.
+  2. If abbreviations are used, only an approved standardised abbreviation list shall be
+     used — and that list shall apply throughout the organisation.
+  3. Error-prone abbreviations shall not be used.
+  4. Identity of the prescriber shall be traceable — "shall be traceable" is mandatory;
+     the mechanism is the organisation's choice.
+
+Illustrative only:
+  — ISMP guidelines: "A good reference" — informational; not a mandatory adoption of
+    that specific external list.
+  — Methods for traceability (name per order, master signature list, employee code) are
+    examples ("This could be done by either...or...").
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.5.d
+Level: Commitment | No star
+
+Verbatim OE text:
+Medication orders contain the name of the medicine, route of administration, strength
+to be administered and frequency / time of administration.
+
+Guidebook interpretation:
+In case of medication orders which have two or more drugs (tablet/capsule/injection)
+the strength of all the individual drugs shall be written. This may not be applicable
+for preparations having a combination of vitamins and/or minerals. Medication orders
+shall be recorded separately if the strength differs for each time of administration.
+There shall be a mechanism for taking action when medications orders are incomplete
+with respect to any of the above parameters. Refer to MOM.7.d.
+
+[Guidebook cross-ref: MOM.7.d — in policy draft: "those requirements are covered in
+the hospital's other policies."]
+
+Stop-work check: Commitment — no stop-work trigger. However, an order missing any of
+the OE-required elements (drug name, route, strength, frequency/time) shall not be
+dispensed or administered under MOM.4.b minimum requirements; this OE specifies what
+must be present.
+
+Mandatory (shall):
+  1. For multi-drug orders (tablet/capsule/injection), strength of all individual drugs
+     shall be written — not just one drug in a combination.
+  2. Exception: combination vitamins/minerals — may not require individual strengths
+     (permissive carve-out, not mandatory exemption; the organisation may still require it).
+  3. Separate orders shall be recorded when the strength differs for each time of
+     administration.
+  4. A mechanism shall exist for taking action when orders are incomplete with respect to
+     the OE-required parameters (drug name, route, strength, frequency/time).
+
+Illustrative only:
+  — No "for example" or "preferable" items beyond the vitamins/minerals exception noted
+    above. All elements are mandatory.
+
+
+══════════════════════════════════════════════════════════════════════════════
+MOM.6 — Safe Dispensing of Medications
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Medications are dispensed in a safe manner.
+
+Standard is NOT starred.
+
+OE count: 6 | COREs: d, e | Stars: a★, b★, c★, d★, f★ | Achievement: none | Excellence: none
+STOP-WORK: YES — dispense unlabelled medication; high-risk order not verified before
+dispensing; recalled or expired item.
+
+Prepared by: Pharmacy In-Charge | Doc no: HCO/MOM/POL/06
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.6.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Dispensing of medications is done safely.
+
+Guidebook interpretation:
+Written guidance shall be laid down for the safe dispensing of medication. Medications
+shall be dispensed only against a valid prescription or medication order (except for
+over-the-counter drugs). Medication shall be checked before dispensing and include a
+check of the generic composition, formulation, expiry date, and where applicable, the
+strength. This shall include both bulk and retail pharmacy. Physicians' samples shall
+not be sold.
+
+Stop-work check: Commitment (umbrella OE). The specific dispense stop-work triggers
+(unlabelled, high-risk unverified, recalled/expired) fire at MOM.6.d and MOM.6.e.
+This OE establishes the overarching written-guidance and valid-prescription requirements
+that underpin those triggers.
+
+Mandatory (shall):
+  1. Written guidance shall be laid down for safe dispensing of medication.
+  2. Medications shall be dispensed only against a valid prescription or medication order.
+     Exception: over-the-counter drugs.
+  3. Pre-dispense check shall include: generic composition, formulation, expiry date, and
+     (where applicable) strength — all four elements are mandatory check points.
+  4. Shall include both bulk and retail pharmacy — no exemption for bulk dispensing.
+  5. Physicians' samples shall not be sold.
+
+Illustrative only:
+  — No "for example" or "preferable" items in this OE's interpretation. All elements
+    carry "shall".
+
+Documentation: OE is starred — written dispensing guidance and sample dispense records
+must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.6.b
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Medication recalls are handled effectively.
+
+Guidebook interpretation:
+The organisation shall have an established system for medication recalls. Recall may be
+based on communication from regulatory authorities, manufacturer or internal feedback
+(for example, visible contaminant in IV fluid bottle). The recall procedure in response
+to internal feedback also includes providing information to the appropriate regulatory
+authority. A record of the same shall be maintained on occurrence. Refer to MOM.1.e.
+
+[Guidebook cross-ref: MOM.1.e — in policy draft: "those requirements are covered in
+the hospital's other policies."]
+
+Stop-work check: STOP-WORK TRIGGER: A recalled medication (whether from a regulatory
+notice, manufacturer communication, or internal identification) remaining in usable stock
+or on an emergency trolley is a stop-work condition for that batch/lot until quarantined.
+This trigger is part of the MOM.6 stop-work authority (recalled or expired item).
+
+Mandatory (shall):
+  1. Established recall system shall exist.
+  2. When recall arises from internal feedback: information shall be provided to the
+     appropriate regulatory authority — mandatory reporting step, not optional.
+  3. Record shall be maintained on occurrence — event-triggered documentation; not a
+     periodic record.
+
+Illustrative only:
+  — Sources of recall (regulatory, manufacturer, internal) are examples of how a recall
+    may arise ("may be based on") — not a closed list.
+  — Visible contaminant in IV fluid bottle — example of internal feedback trigger.
+
+Documentation: OE is starred — the established recall system, recall records, and
+regulatory-notification records must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.6.c
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Near-expiry medications are handled effectively.
+
+Guidebook interpretation:
+The organisation could define as to what constitutes "near expiry" medications, for
+example, three months before the expiry date. The organisation's mechanism shall ensure
+that near expiry medications are withdrawn and that no beyond expiry date medication
+is available.
+
+Stop-work check: STOP-WORK TRIGGER: An expired medication in usable stock or on an
+emergency trolley is a stop-work condition for that item until removed. This is captured
+in the MOM.6 stop-work authority (recalled or expired item). A near-expiry item still
+in stock past the organisation's own defined withdrawal date is treated equivalently
+for stop-work purposes.
+
+Mandatory (shall):
+  1. Mechanism shall ensure near-expiry medications are withdrawn from usable stock.
+  2. No beyond-expiry-date medication shall be available in usable clinical stock —
+     this is absolute; no exceptions.
+
+Illustrative only:
+  — "Three months before the expiry date" is cited as an example of how to define "near
+    expiry" — the organisation "could define" its own threshold. The choice of threshold
+    is illustrative; having a defined threshold is mandatory (because the mechanism
+    depends on it).
+
+Documentation: OE is starred — the near-expiry definition, withdrawal records, and
+evidence of no expired stock in clinical areas must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.6.d
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+Dispensed medications are labelled.
+
+Guidebook interpretation:
+At a minimum, the label shall include the dosage instruction in a manner that the patient
+understands. Labelling is applicable only for out-patients. In instances when medicines
+are dispensed either as cut strips or from bulk containers, the label must include the
+drug name, strength, dosage instruction (in a manner that the patient understands) and
+expiry date. The organisation could consider using technology (for example, QR codes on
+individual medicines) to optimise the process. This shall be applicable for both
+in-patients and out-patients. It shall also be applicable where drugs are reconstituted
+for example Chemotherapy drugs.
+
+GUIDEBOOK INTERNAL INCONSISTENCY FLAG (for policy writer):
+The Guidebook first states "Labelling is applicable only for out-patients" and then
+immediately states "This shall be applicable for both in-patients and out-patients."
+The later statement is the correct, expanded scope and should be treated as the
+operative requirement. The earlier statement is likely an OCR artefact or an obsolete
+draft phrase that was not fully removed. The policy must reflect the broader scope:
+in-patients and out-patients, and reconstituted drugs.
+
+Stop-work check: CORE and starred. STOP-WORK TRIGGER: Dispensing an unlabelled
+medication (or one with a label missing mandatory elements) is a stop-work condition for
+that dispense. This is the primary dispense stop-work trigger in the MOM.6 stop-work
+authority.
+
+Mandatory (shall):
+  1. At minimum, label shall include dosage instruction in a manner the patient
+     understands.
+  2. For cut strips or bulk container dispensing, the label must include:
+       a. Drug name
+       b. Strength
+       c. Dosage instruction (patient-understandable)
+       d. Expiry date
+  3. Labelling shall be applicable for both in-patients and out-patients.
+  4. Labelling shall apply where drugs are reconstituted (e.g., chemotherapy drugs).
+
+Illustrative only:
+  — QR codes on individual medicines — "could consider using technology to optimise" —
+    optional enhancement.
+
+CORE status: An unlabelled or incompletely labelled dispensed medication is a CORE gap
+and stop-work trigger.
+
+Documentation: OE is starred — sample labelled medications and dispensing records must
+be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.6.e
+Level: CORE | No star
+
+Verbatim OE text:
+High-risk medication orders are verified before dispensing.
+
+Guidebook interpretation:
+High-risk medications shall be given only after written orders, and it shall be verified
+by the staff before dispensing. This shall adhere to statutory requirements, where
+applicable.
+
+Stop-work check: CORE. STOP-WORK TRIGGER: Dispensing a high-risk medication on a single
+unchecked reading — without the required verification — is a stop-work condition for that
+dispense. This is the second primary dispense stop-work trigger in the MOM.6 stop-work
+authority.
+
+Mandatory (shall):
+  1. High-risk medications shall be dispensed only after written orders — no verbal-only
+     high-risk dispense except under the documented emergency path.
+  2. Verification by staff shall occur before dispensing — "shall be verified" is
+     mandatory; single-person unchecked dispense is not compliant.
+  3. Statutory requirements shall be adhered to where applicable.
+
+Illustrative only:
+  — The Guidebook for this OE is brief; the specific verification mechanism (who verifies,
+    second-pharmacist check) is derived from chapter intent and built into the method
+    body. The mandatory floor from this OE is: written order + verified before dispensing.
+
+CORE status: High-risk medication dispensed without verification is a CORE gap and
+stop-work trigger.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.6.f
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Return of medications to the pharmacy is addressed.
+
+Guidebook interpretation:
+The organisation shall have written guidance to direct the return of medications to the
+pharmacy. At a minimum, the written guidance shall address the list of medications which
+would be accepted for return (either by inclusion or exclusion) and minimum conditions
+to be met for return of medications. It is preferable that any drug which has a specific
+temperature storage requirement not be accepted for return once it has gone out of the
+organisation's premises. The minimum conditions to be met for return of medications could
+include the drug name, strength, batch number and expiry date matching the bill; no
+visible damage etc.
+
+Stop-work check: Commitment — no direct stop-work trigger at this OE. A recalled or
+expired returned medication falls under the MOM.6 stop-work (recalled or expired item)
+once it is identified, not at return receipt.
+
+Mandatory (shall):
+  1. Written guidance shall exist to direct medication returns to pharmacy.
+  2. Written guidance shall address at minimum:
+       a. List of medications accepted for return (defined by inclusion or exclusion)
+       b. Minimum conditions for acceptance of return
+
+Illustrative only:
+  — Not accepting temperature-sensitive drugs returned from outside premises: "It is
+    preferable" — aspirational, not mandatory.
+  — Specific minimum conditions (drug name, strength, batch number, expiry date matching
+    bill; no visible damage): "could include" — examples of what the guidance may require,
+    not a mandatory closed list.
+
+Documentation: OE is starred — written medication-return guidance and return records
+must be on file.
+
+
+══════════════════════════════════════════════════════════════════════════════
+STOP-WORK SECTION OUTPUTS — MOM.3, MOM.4, MOM.6
+(Complete stop_work_text() function output for the three flagged standards)
+══════════════════════════════════════════════════════════════════════════════
+
+─────────────────────────────────────────────────────────────────────────────
+STOP-WORK — MOM.3 (Standard 3: Storage and Availability of Medications)
+─────────────────────────────────────────────────────────────────────────────
+
+Do not store look-alike, sound-alike medications, or different concentrations of the
+same medication, physically together.
+
+Do not leave an emergency-medication location without the defined list, or leave a used
+emergency medication unreplenished.
+
+Do not issue or use a medication that has been stored outside the manufacturer's
+temperature, light or security recommendations until pharmacy has assessed it.
+
+Stop-work applies to the storage location and to issue from that location. Immediate
+life-saving use of the only available dose continues while escalation happens, and is
+documented.
+
+The person who stops tells the [Pharmacy In-Charge] and the [Medication Safety Officer]
+the same shift. Refusing unsafe storage or issue is not a disciplinary matter.
+
+
+─────────────────────────────────────────────────────────────────────────────
+STOP-WORK — MOM.4 (Standard 4: Safe and Rational Prescription of Medications)
+─────────────────────────────────────────────────────────────────────────────
+
+Do not prescribe (or transcribe a prescription for action) when drug allergies and
+previous adverse drug reactions have not been ascertained.
+
+Do not act on a verbal medication order except through the organisation's documented
+verbal-order process (read-back, documentation, countersignature within the defined
+time).
+
+Do not accept a prescription that fails the organisation's determined minimum
+requirements.
+
+Stop-work applies to writing or acting on the unsafe order. Immediate life-saving
+medication in an emergency follows the documented emergency-prescription rules and is
+written up as soon as the patient is stable.
+
+The person who stops tells the [treating doctor] and the [Medication Safety Officer]
+the same shift. Refusing an unsafe prescription is not a disciplinary matter.
+
+
+─────────────────────────────────────────────────────────────────────────────
+STOP-WORK — MOM.6 (Standard 6: Safe Dispensing of Medications)
+─────────────────────────────────────────────────────────────────────────────
+
+Do not dispense a medication that is unlabelled, recalled, expired, or a high-risk order
+that has not been verified for dose, frequency and route.
+
+Stop-work applies to the dispense. Immediate life-saving issue from floor stock in an
+emergency follows the documented after-hours / emergency-dispense rules and is recorded.
+
+The person who stops tells the [Pharmacy In-Charge] the same shift. Refusing an unsafe
+dispense is not a disciplinary matter.
+
+
+══════════════════════════════════════════════════════════════════════════════
+END OF MOM.1–MOM.6 RAW SOURCE DUMP
+══════════════════════════════════════════════════════════════════════════════
