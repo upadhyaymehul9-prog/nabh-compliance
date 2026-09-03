@@ -2263,16 +2263,1930 @@ def gen_mom6():
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# MOM.7 — Safe Administration of Medications   (HAS stop-work: Section 6)
+# Content: mom7_content.txt (approved).
+# Structure: Document control, Sec 3 standards, Sec 4 non-negotiables,
+#            Sec 5 (11 subsections), Sec 6 Stop-work, Sec 7 Governance,
+#            Sec 8 Monitoring, Sec 9 Training, Sec 10 Distribution,
+#            Sec 11 Abbreviations, Sec 12 Traceability, Sec 13 Records,
+#            Sec 14 References, Disclaimer.
+# COREs: d, h | Stars: h*, j*, k* | Achievement: none | Excellence: none
+# Statute: YES (P2) — applicable laws governing who may administer medications.
+# Exact items verified:
+#   5.1: "registered nurse or a doctor with at minimum an MBBS qualification" exact
+#   5.3: two identifiers — unique identification number + full name; bed-number alone excluded
+#   5.4: five-parameter completeness check (name/strength/route/frequency/time) with
+#        deferral — not adjustment — where any is missing; two-staff independent
+#        documented check for high-risk medications
+#   5.8: IV-extension-tube absolute prohibitions — epidurals/irrigation/drains/
+#        central lines/enteric feeding tubes; line-trace before every connection
+#   5.9: each dose documented separately — not batched at shift-end; actual
+#        administration (not original order) reflected
+#   Sec 6: four-trigger stop-work (identification / medication·strength·route·timing
+#           verification / physical inspection / permitted-person) + tubing mis-
+#           connection trigger; plain-text role names as specified
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_mom7():
+    """MOM.7 — Safe Administration of Medications (stop-work Section 6; sections 1-14 + Disclaimer)"""
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Safe Administration of Medications")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/MOM/POL/07", "Nursing Superintendent")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Medications are administered only by permitted personnel, only after the "
+      "patient's identity and the medication order are fully verified, with tubing "
+      "connections traced to prevent misconnection, and every dose documented accurately.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} ensures only permitted personnel administer "
+      "medications, verifies patient identity and the order before every dose, "
+      "prevents tubing and catheter mis-connections, documents every administration, "
+      "and governs self-administration and outside medications.")
+    p(doc,
+      "This policy does not cover prescription, dispensing, or storage of medications "
+      "in detail — those are covered in other hospital policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc, f"This policy applies to all staff who administer medications at {HN}.")
+
+    # 3. Policy standards
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} ensures medications are administered only by those permitted by law, "
+      "with the patient identified using at least two identifiers and the medication, "
+      "strength, route, and timing verified against the order and physically inspected "
+      "before every dose. Measures prevent catheter and tubing mis-connections. Every "
+      "administration is documented in a uniform location, and where self-administration "
+      "or outside medications are permitted, written guidance governs how.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not let anyone administer medication who isn't a registered nurse or doctor "
+       "with at minimum an MBBS qualification, unless another staff category is "
+       "specifically backed by legislation or a government order.")
+    lb(doc,
+       "Do not prepare a second drug before labelling the first one, wherever more "
+       "than one drug is prepared and loaded.")
+    lb(doc,
+       "Do not administer medication without identifying the patient using at least "
+       "two identifiers, one of which is the unique identification number and one of "
+       "which is the patient's full name.")
+    lb(doc,
+       "Do not administer medication without verifying it against the order and "
+       "physically inspecting it — checking general appearance and expiry date — and "
+       "do not proceed if any order parameter (name, strength, route, frequency, or "
+       "time) is missing or incomplete; defer instead, pending verification with the "
+       "treating team.")
+    lb(doc,
+       "Do not treat a verbal confirmation of an order as anything other than a verbal "
+       "order — follow the organisation's verbal-order process, including "
+       "countersignature within 24 hours.")
+    lb(doc,
+       "Do not administer a high-risk medication without independent verification by "
+       "at least two staff members, documented.")
+    lb(doc,
+       "Do not skip verifying strength, route, or timing against the order before "
+       "administration — where a discrepancy is found, defer administration.")
+    lb(doc,
+       "Do not use an IV extension tube for an epidural, irrigation, a drain, a "
+       "central line, or to extend an enteric feeding tube, and do not make any "
+       "connection or reconnection without first tracing the line from its origin to "
+       "the connection port.")
+    lb(doc,
+       "Do not document medication administration anywhere other than the uniform "
+       "location, and do not batch-chart multiple doses at shift-end instead of "
+       "documenting each dose separately as it happens.")
+    lb(doc,
+       "Do not permit patient self-administration, or accept medications brought from "
+       "outside the organisation, without written guidance governing it.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Administer medications only by permitted personnel")
+    p(doc,
+      "Only a registered nurse or a doctor with at minimum an MBBS qualification "
+      "administers medication. Where another staff category is authorised to administer "
+      "medication, that authorisation is backed by legislation or a government order, "
+      f"not an informal internal decision. {HN} keeps an authorised-personnel list.")
+
+    h(doc, 2, "5.2 Label medications when preparing more than one")
+    p(doc,
+      "Wherever more than one drug is prepared and loaded — for example anaesthetic "
+      "drugs in the OT, or chemotherapy drugs — the first medication is labelled "
+      "before the second is prepared. This applies throughout the organisation, not "
+      "just in these example areas.")
+
+    h(doc, 2, "5.3 Identify the patient before administering")
+    p(doc,
+      "At least two identifiers are used to confirm the patient before administration "
+      "— one is the unique identification number (for example the hospital or IP "
+      "number), and one is the patient's full name. Matching only by bed number, or "
+      "relying on an attendant's confirmation alone, doesn't meet this requirement. "
+      "(Related requirements are covered in the hospital's other policies.)")
+
+    h(doc, 2, "5.4 Verify and inspect the medication before administering")
+    p(doc,
+      "Staff verify the medication order and physically inspect the medication — "
+      "checking its general appearance (for example, unusual melting or clumping) "
+      "and its expiry date — before administration. If any parameter of the order "
+      "(name, strength, route, frequency, or time) is missing or incomplete, "
+      "administration is deferred pending verification with the treating team. Any "
+      "verbal confirmation obtained is treated as a verbal order, following the "
+      "organisation's verbal-order process, including countersignature within 24 "
+      "hours. For high-risk medications, verification is done independently by at "
+      "least two staff members — nurse and nurse, or nurse and doctor — and "
+      "documented. Nurses are trained on high-risk medications and empowered to "
+      "raise concerns about a prescription while verifying it.")
+
+    h(doc, 2, "5.5 Verify strength before administering")
+    p(doc,
+      "The strength of the medication is verified from the order before "
+      "administration. Where a discrepancy is found, administration is deferred "
+      "rather than adjusted at the bedside. (Related requirements are covered in "
+      "the hospital's other policies.)")
+
+    h(doc, 2, "5.6 Verify route before administering")
+    p(doc,
+      "Where applicable, the site or route of administration is verified from the "
+      "order before administration. (Related requirements are covered in the "
+      "hospital's other policies.)")
+
+    h(doc, 2, "5.7 Verify timing before administering")
+    p(doc,
+      f"Where a medication order doesn't state an explicit administration time — "
+      "for example, standard frequency codes like once-daily-three-times or "
+      f"twice-daily — {HN} maintains documentation supporting the correct timing, "
+      "and these suggested timings are followed. The ISMP Acute Care Guidelines "
+      "for Timely Administration of Scheduled Medications, which classify medications "
+      "as time-critical or non-time-critical, are a useful reference "
+      f"{HN} could adopt or adapt.")
+
+    h(doc, 2, "5.8 Prevent catheter and tubing mis-connections")
+    p(doc,
+      f"{HN} ensures inadvertent administration of a drug through the wrong route "
+      "is avoided. IV extension tubes are never used for epidurals, irrigation, "
+      "drains, or central lines, and never used to extend enteric feeding tubes. "
+      "Functionally dissimilar tubes used in patient care are positioned away from "
+      "one another. Staff trace every line from its origin to the connection port "
+      "to verify the correct attachment before making any connection or reconnection, "
+      "or before administering any medication, solution, or other product.")
+
+    h(doc, 2, "5.9 Document every administration")
+    p(doc,
+      "Documentation of medication administration happens in a uniform location. "
+      "It includes the medication's name, strength, route, timing, and the name "
+      "(or employee ID) and signature of the person who administered it. Each dose "
+      "is documented separately — not batched together at shift-end. Documentation "
+      "reflects what was actually administered, not what was originally ordered — "
+      "for example, if a different brand of the same generic drug was given, or "
+      "half a 500 mg tablet was given in place of a 250 mg tablet, the record "
+      "shows what was actually given. For infusions, the start time, rate or volume, "
+      "and end time are captured; for continuous infusions, the drop rate or volume "
+      "is documented and the total volume infused calculated for each shift.")
+
+    h(doc, 2, "5.10 Govern patient self-administration")
+    p(doc,
+      f"{HN} decides, and documents, whether it permits patients to self-administer "
+      "medications — for example, self-administration of insulin. Where permitted, "
+      "written guidance defines which medications a patient may self-administer, "
+      "it's preferable to also have a method for assisting self-administration, and "
+      "the patient is reminded to take each dose, with reminders documented.")
+
+    h(doc, 2, "5.11 Govern medications brought from outside")
+    p(doc,
+      f"{HN} decides whether it permits patients to use medications they've brought "
+      "from outside the organisation, and implements the necessary measures either "
+      "way. Where permitted, written guidance sets out the pre-requisites such "
+      "medications must meet — for example, a clear label showing name, strength, "
+      "expiry date, and batch number.")
+
+    # 6. Stop-work authority
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Do not administer a medication when the patient has not been identified with "
+      "the organisation's identifiers, when the medication, strength, route, or "
+      "timing has not been verified against the order, when the product fails "
+      f"physical inspection, or when you are not on the list of persons permitted "
+      f"by law and by {HN} to administer that medication.")
+    p(doc,
+      "Do not connect a catheter or tubing for medication administration until the "
+      "line has been traced from the patient to the source.")
+    p(doc,
+      "Stop-work applies to the administration start. Immediate life-saving "
+      "administration in a crash continues with the best available permitted staff "
+      "and is documented afterward.")
+    p(doc,
+      "The person who stops tells the Nurse In-Charge and the treating doctor the "
+      "same shift. Refusing an unsafe administration is not a disciplinary matter.")
+
+    # 7. Governance and responsibility
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for ensuring safe medication administration is resourced and "
+         "implemented; maintains the authorised-administration-personnel list "
+         "together with the Nursing Superintendent."),
+        ("Nursing Superintendent",
+         "Owns day-to-day implementation of this policy; maintains the authorised-"
+         "administration-personnel list; ensures identification, verification, "
+         "documentation, and line-tracing practices are followed; receives stop-work "
+         "escalations."),
+        ("Medication Safety Officer",
+         "Coordinates medication-safety processes; brings administration incidents "
+         "and audit findings to the Drug and Therapeutics Committee."),
+        ("Treating doctors",
+         "Provide clear, complete medication orders; countersign verbal orders "
+         "within 24 hours; respond to stop-work escalations from administering staff."),
+        ("Pharmacy In-Charge",
+         "Ensures medications are correctly labelled and verified before reaching "
+         "the administering nurse or doctor; supports the high-risk medication "
+         "verification process."),
+        ("Quality Coordinator",
+         "Audits this policy; holds training records and staff acknowledgements."),
+    ])
+
+    # 8. Quality monitoring
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Authorised administration personnel",
+         "Only registered nurses, MBBS-minimum doctors, or legislation-backed staff "
+         "administer medications; authorised-personnel list current."),
+        ("Medication preparation labelling",
+         "First medication labelled before a second is prepared wherever more than "
+         "one drug is prepared and loaded; applies throughout the organisation."),
+        ("Patient identification",
+         "At least two identifiers — unique identification number plus full name — "
+         "confirmed before every administration; bed number or attendant alone "
+         "not accepted."),
+        ("Medication verification and physical inspection",
+         "Order verified (name, strength, route, frequency, time) and medication "
+         "physically inspected (appearance and expiry) before every dose; "
+         "administration deferred when any parameter is missing or incomplete; "
+         "two-staff independent documented check for high-risk medications."),
+        ("Strength, route, and timing verification",
+         "Strength, route (where applicable), and timing verified from the order "
+         "before every administration; discrepancies result in deferral."),
+        ("Catheter and tubing mis-connection prevention",
+         "IV extension tubes never used for epidurals, irrigation, drains, central "
+         "lines, or enteric feeding tubes; line traced before every connection or "
+         "reconnection; training records current."),
+        ("Administration documentation",
+         "Documentation in a uniform location for every dose — name, strength, "
+         "route, timing, administrator identity; each dose documented separately, "
+         "not batched; actual administration reflected, not original order alone "
+         "where different; infusion records complete."),
+        ("Patient self-administration",
+         "Decision documented; written guidance in place where permitted; patient "
+         "reminders documented per dose."),
+        ("Outside medications",
+         "Decision documented; written pre-requisites guidance in place where "
+         "permitted."),
+        ("Stop-work events",
+         "Stop-work events logged with trigger, action taken, and outcome."),
+    ])
+
+    # 9. Training and staff acknowledgement
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      "All staff who administer medications shall be familiar with the authorised-"
+      "personnel requirements, patient identification, medication verification and "
+      "inspection, line-tracing and IV-extension-tube prohibition, administration "
+      "documentation, and stop-work authority in this policy.")
+    p(doc,
+      f"I have read the Policy on Safe Administration of Medications of {HN}. "
+      "I will follow the processes described.")
+    sig_tbl(doc)
+
+    # 10. Distribution
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to all staff who administer medications, "
+      "the Nursing Superintendent, treating doctors, pharmacy staff, the Medication "
+      "Safety Officer, and the Quality Coordinator.")
+
+    # 11. Abbreviations
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("ADR",  "Adverse drug reaction"),
+        ("CORE", "Core objective element (NABH)"),
+        ("ICU",  "Intensive Care Unit"),
+        ("ISMP", "Institute for Safe Medication Practices"),
+        ("IV",   "Intravenous"),
+        ("MBBS", "Bachelor of Medicine, Bachelor of Surgery"),
+        ("MOM",  "Management of Medication (NABH Hospitals chapter)"),
+        ("NABH", "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("OT",   "Operation Theatre"),
+    ])
+
+    # 12. Traceability table
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 12, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("MOM.7.a", "Commitment",
+         "Sections 3 and 5.1 address the registered-nurse or MBBS-minimum-doctor "
+         "requirement and the legislation-or-government-order basis for any other "
+         "authorised category. This is also a stop-work trigger in Section 6."),
+        ("MOM.7.b", "Commitment",
+         "Section 5.2 addresses the labelling requirement before preparing a second "
+         "drug, wherever more than one drug is prepared and loaded."),
+        ("MOM.7.c", "Commitment",
+         "Sections 3 and 5.3 address two-identifier patient identification — unique "
+         "identification number and full name — before every administration; bed-"
+         "number matching alone is explicitly excluded. This is also a stop-work "
+         "trigger in Section 6."),
+        ("MOM.7.d", "CORE",
+         "Sections 3 and 5.4 address medication-order verification and physical "
+         "inspection before administration, the five-parameter completeness check "
+         "(name, strength, route, frequency, time) with deferral — not adjustment "
+         "— where any parameter is missing, and two-staff independent documented "
+         "verification for high-risk medications. This is also a stop-work trigger "
+         "in Section 6."),
+        ("MOM.7.e", "Commitment",
+         "Section 5.5 addresses strength verification from the order before "
+         "administration, and deferral — not bedside adjustment — where a "
+         "discrepancy is found."),
+        ("MOM.7.f", "Commitment",
+         "Section 5.6 addresses route (and site, where applicable) verification "
+         "from the order before administration."),
+        ("MOM.7.g", "Commitment",
+         "Section 5.7 addresses timing verification — including documentation "
+         "supporting the correct time where the order uses a frequency code only."),
+        ("MOM.7.h", "CORE*",
+         "Sections 3 and 5.8 address the absolute prohibition on using IV extension "
+         "tubes for epidurals, irrigation, drains, central lines, or enteric feeding "
+         "tubes, the line-trace requirement before every connection or reconnection, "
+         "and positioning of dissimilar tubes away from each other. This is also a "
+         "stop-work trigger in Section 6."),
+        ("MOM.7.i", "Commitment",
+         "Section 5.9 addresses documentation of every administration in a uniform "
+         "location, each dose separately (not batched), reflecting actual "
+         "administration, with full infusion detail."),
+        ("MOM.7.j", "Commitment*",
+         "Section 5.10 addresses the decision on whether patient self-administration "
+         "is permitted, written guidance where it is, and documented dose reminders."),
+        ("MOM.7.k", "Commitment*",
+         "Section 5.11 addresses the decision on whether outside medications are "
+         "permitted, and written pre-requisites guidance where they are."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 13. Required Records/Evidence Checklist
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Authorised administration personnel — MOM.7.a")
+    lb(doc,
+       "Authorised-administration-personnel list held by the Nursing Superintendent "
+       "and Medical Superintendent, naming registered nurses, MBBS-minimum doctors, "
+       "and any other category with its legislative or government-order backing.")
+    lb(doc, "Documented supervision records where student staff administer under supervision.")
+    lb(doc, "Confirmation no unlisted person administered a medication.")
+
+    h(doc, 2, "Medication preparation labelling — MOM.7.b")
+    lb(doc,
+       "Observation or audit records confirming the first medication is labelled "
+       "before a second drug is prepared, across OT, ICU, emergency, and wards.")
+    lb(doc,
+       "Training records on the labelling rule for areas where more than one drug "
+       "is prepared and loaded.")
+
+    h(doc, 2, "Patient identification — MOM.7.c")
+    lb(doc,
+       "Administration records showing at least two identifiers used — unique "
+       "identification number and full name — before each administration.")
+    lb(doc, "Training records confirming bed-number-only matching is not accepted.")
+    lb(doc, "Records of administrations stopped where identity could not be confirmed.")
+
+    h(doc, 2, "Medication verification and physical inspection — MOM.7.d (CORE)")
+    lb(doc,
+       "Pre-administration verification records showing medication matched against "
+       "order and physically inspected for appearance and expiry.")
+    lb(doc,
+       "Deferral records where any order parameter (name, strength, route, frequency, "
+       "or time) was missing or incomplete, pending treating-team verification.")
+    lb(doc,
+       "Two-staff independent documented verification records for high-risk "
+       "medications before administration.")
+    lb(doc,
+       "Training records confirming nurses are trained on high-risk medications "
+       "and empowered to raise concerns.")
+
+    h(doc, 2, "Strength, route, and timing verification — MOM.7.e, MOM.7.f, MOM.7.g")
+    lb(doc,
+       "Strength verification records from order before administration; deferral "
+       "records for discrepancies.")
+    lb(doc, "Route verification records (where applicable) before administration.")
+    lb(doc,
+       "Timing documentation showing correct administration time where the order "
+       "uses a frequency code only.")
+
+    h(doc, 2, "Catheter and tubing mis-connection prevention — MOM.7.h (CORE*)")
+    lb(doc,
+       "Written measures in place describing the IV-extension-tube prohibition "
+       "(epidurals, irrigation, drains, central lines, enteric feeding tubes) and "
+       "the line-trace requirement before every connection or reconnection.")
+    lb(doc,
+       "Line-tracing records or observation evidence before connections for IV, "
+       "epidural, and enteral medication administration.")
+    lb(doc,
+       "Training records for ICU, OT, emergency, and ward staff on catheter and "
+       "tubing mis-connection prevention.")
+
+    h(doc, 2, "Administration documentation — MOM.7.i")
+    lb(doc,
+       "Medication chart or equivalent uniform-location records showing name, "
+       "strength, route, timing, and administrator identity for each dose.")
+    lb(doc,
+       "Confirmation each dose is documented separately — no shift-end batch-charting.")
+    lb(doc,
+       "Records reflecting actual administration where it differed from the original "
+       "order (brand substitution, half-tablet, infusion rate or volume adjustment).")
+    lb(doc,
+       "Infusion records showing start time, rate or volume, and end time; "
+       "continuous-infusion records showing drop rate and total volume per shift.")
+
+    h(doc, 2, "Patient self-administration — MOM.7.j (Commitment*)")
+    lb(doc,
+       "Documented organisational decision on whether patient self-administration "
+       "is permitted.")
+    lb(doc,
+       "Written guidance defining which medications a patient may self-administer, "
+       "where permitted.")
+    lb(doc, "Dose-reminder documentation records, where self-administration is permitted.")
+
+    h(doc, 2, "Outside medications — MOM.7.k (Commitment*)")
+    lb(doc,
+       "Documented organisational decision on whether patients may bring their own "
+       "medications.")
+    lb(doc,
+       "Written pre-requisites guidance (for example, clear label showing name, "
+       "strength, expiry date, and batch number), where outside medications are "
+       "permitted.")
+    lb(doc,
+       "Records showing outside medications identified by pharmacy or the treating "
+       "doctor before use.")
+
+    # 14. References
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. MOM.7.")
+    ln(doc, "Guidebook interpretation supplied for MOM.7.a through MOM.7.k.")
+    ln(doc,
+       "Institute for Safe Medication Practices (ISMP). Acute Care Guidelines for "
+       "Timely Administration of Scheduled Medications.")
+    ln(doc,
+       f"Internal documents of {HN}: authorised-administration-personnel list; "
+       "high-risk medication list; medication administration records; line-tracing "
+       "procedures; self-administration and outside-medication guidance.")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied MOM.7 objective-element wording and "
+      "Guidebook interpretation into plain-language policy format. The modal strength "
+      "of the source has been preserved. Optional examples and mechanisms have not "
+      "been converted into mandatory requirements. The exact requirements of the "
+      "registered-nurse or MBBS-minimum-doctor qualification, two-identifier patient "
+      "identification (unique identification number plus full name; bed-number alone "
+      "explicitly excluded), the five-parameter completeness check (name, strength, "
+      "route, frequency, time) with deferral — not adjustment — for any missing "
+      "parameter, two-staff independent documented verification for high-risk "
+      "medications (nurse-nurse or nurse-doctor), the absolute IV-extension-tube "
+      "prohibitions (epidurals, irrigation, drains, central lines, enteric feeding "
+      "tubes), line-tracing before every connection or reconnection, each-dose "
+      "documentation separately and not batched at shift-end, and the stop-work "
+      "text with all four administration triggers (patient identification, "
+      "medication/strength/route/timing verification, physical inspection, permitted-"
+      "person check) plus the tubing mis-connection trigger have been retained "
+      "verbatim. Role names in the stop-work section are in plain text as specified.")
+
+    save_and_verify(doc, "HCO_MOM_7_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# MOM.8 — Monitoring after Medication Administration   (NO stop-work)
+# Content: mom8_content.txt (approved).
+# Structure: Document control, Sec 3 standards, Sec 4 non-negotiables,
+#            Sec 5 (6 subsections), Sec 6 Governance, Sec 7 Monitoring,
+#            Sec 8 Training, Sec 9 Distribution, Sec 10 Abbreviations,
+#            Sec 11 Traceability, Sec 12 Records, Sec 13 References, Disclaimer.
+# COREs: c | Stars: a*, c*, d* | Achievement: none | Excellence: none
+# Exact items verified:
+#   5.1: three named high-risk patient categories — dialysis / ICU / elderly —
+#        retained as examples, not exhaustive list
+#   5.3: five mandatory capture steps — identifying / documenting / reporting /
+#        analysing / acting on — treated as exhaustive mandatory list, not a pick-list
+#   5.4: reporting timeframe = organisation defines it then adheres to it;
+#        NO specific hours or days substituted
+#   MOM.8.c CORE does NOT create a stop-work section (confirmed: MOM.8 not in
+#        stop-work proposals)
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_mom8():
+    """MOM.8 — Monitoring after Medication Administration (no stop-work; sections 1-13 + Disclaimer)"""
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Monitoring after Medication Administration")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/MOM/POL/08", "Medication Safety Officer")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Every patient is monitored after medication administration to confirm the "
+      "intended effect, high-risk patients are monitored regularly, and near misses, "
+      "medication errors, and adverse drug reactions are captured, reported, analysed, "
+      "and acted on.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} monitors patients after medication "
+      "administration, adjusts medication based on that monitoring, and captures, "
+      "reports, analyses, and acts on near misses, medication errors, and adverse "
+      "drug reactions.")
+    p(doc,
+      "This policy does not cover medication administration or prescription in detail "
+      "— those are covered in other hospital policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to all clinical staff involved in monitoring patients "
+      f"after medication administration at {HN}.")
+
+    # 3. Policy standards
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} monitors patients collaboratively after medication administration to "
+      "confirm the intended effect, defines which situations and medications need "
+      "closer monitoring, monitors high-risk patients — including those on dialysis, "
+      "in the ICU, and the elderly — regularly, and changes medication based on "
+      "monitoring where appropriate. Near misses, medication errors, and adverse "
+      "drug reactions are defined, captured under written guidance, reported within "
+      "a defined time frame, analysed by the multidisciplinary committee, and "
+      "followed up with corrective or preventive action where appropriate.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not skip monitoring a patient after medication administration, and do not "
+       "leave situations and medications requiring more frequent monitoring undefined.")
+    lb(doc,
+       "Do not leave high-risk patients — those on dialysis, in the ICU, or the "
+       "elderly — without regular monitoring of medication effects.")
+    lb(doc,
+       "Do not operate without written guidance defining near misses, medication "
+       "errors, and adverse drug reactions, and without a defined process for "
+       "identifying, documenting, reporting, analysing, and acting on them.")
+    lb(doc,
+       "Do not leave the reporting time frame for near misses, medication errors, "
+       "or adverse drug reactions undefined, and do not miss the defined time frame "
+       "once it's set.")
+    lb(doc,
+       "Do not skip multidisciplinary committee analysis of collected near misses, "
+       "medication errors, and adverse drug reactions, or let that analysis run "
+       "without a defined completion time frame.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Monitor patients after medication administration")
+    p(doc,
+      "Monitoring after administration is done collaboratively, to confirm the "
+      "medicine is having its intended effect — this could include monitoring "
+      "through laboratory results. Monitoring also helps identify near misses, "
+      f"medication errors, and adverse drug reactions. {HN} defines the situations "
+      "and medications that call for more frequent monitoring — for example, "
+      "administration of high-risk medicines. Medication effects in high-risk "
+      "patients — those on dialysis, in the ICU, and the elderly — are monitored "
+      "on a regular basis; these are examples of high-risk groups, not an "
+      "exhaustive list.")
+
+    h(doc, 2, "5.2 Change medication based on monitoring")
+    p(doc,
+      "Where appropriate, medications are changed based on clinical response and "
+      "any adverse drug reactions identified through monitoring.")
+
+    h(doc, 2, "5.3 Capture near misses, medication errors, and adverse drug reactions")
+    p(doc,
+      f"Near misses, medication errors, and adverse drug reactions are defined by "
+      f"{HN}, in line with best practice. Written guidance sets out the process for "
+      "capturing them, covering five steps: identifying, documenting, reporting, "
+      "analysing, and taking action.")
+
+    h(doc, 2, "5.4 Report within a defined time frame")
+    p(doc,
+      f"{HN} defines the time frame for reporting a near miss, medication error, "
+      "or adverse drug reaction once it occurs, and adheres to that time frame.")
+
+    h(doc, 2, "5.5 Collect and analyse")
+    p(doc,
+      "Details of near misses, medication errors, and adverse drug reactions are "
+      "collected and analysed by the multidisciplinary committee, within a defined "
+      "time frame. It's preferable for a clinical pharmacologist or clinical "
+      "pharmacist to take part in this analysis.")
+
+    h(doc, 2, "5.6 Take corrective and preventive action")
+    p(doc,
+      "Where appropriate, corrective or preventive action is taken based on the "
+      "analysis, and records of these actions are kept. It's preferable for "
+      "corrective and preventive action to be based on root-cause analysis.")
+
+    # 6. Governance and responsibility
+    h(doc, 1, "6. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for ensuring post-administration monitoring and the "
+         "near-miss/error/ADR capture system are resourced and implemented."),
+        ("Medication Safety Officer",
+         "Owns day-to-day implementation of this policy; coordinates the capture, "
+         "reporting, and analysis of near misses, medication errors, and ADRs; "
+         "brings findings to the multidisciplinary committee."),
+        ("Multidisciplinary committee (DTC)",
+         "Analyses near misses, medication errors, and ADRs within the defined "
+         "time frame; takes or approves corrective and preventive action."),
+        ("Treating doctors / clinical staff",
+         "Monitor patients collaboratively after medication administration; change "
+         "medications based on monitoring where appropriate; report near misses, "
+         "medication errors, and ADRs within the defined time frame."),
+        ("Nursing staff",
+         "Monitor patients after administration; capture and report near misses, "
+         "medication errors, and ADRs per the defined process and time frame."),
+        ("Quality Coordinator",
+         "Audits this policy; holds training records and staff acknowledgements."),
+    ])
+
+    # 7. Quality monitoring
+    h(doc, 1, "7. Quality monitoring")
+    mon_tbl(doc, [
+        ("Post-administration monitoring",
+         "Done collaboratively; situations and medications needing more frequent "
+         "monitoring defined; high-risk patients (those on dialysis, in the ICU, "
+         "and the elderly) monitored regularly; monitoring records present."),
+        ("Medication changes from monitoring",
+         "Changes based on clinical response and ADRs where appropriate; "
+         "rewritten orders present."),
+        ("Near-miss/error/ADR definitions and capture guidance",
+         "Definitions in place and in line with best practice; written guidance "
+         "covering all five steps (identifying, documenting, reporting, analysing, "
+         "acting on); MOM.8.c is CORE — absence of definitions or a working "
+         "capture system is accreditation-blocking; no stop-work section applies."),
+        ("Reporting time frame",
+         "Time frame defined by the organisation; adherence evidenced by comparing "
+         "event date to report date on a sample of incident forms."),
+        ("Multidisciplinary committee analysis",
+         "Analysis conducted within the defined time frame; DTC record shows "
+         "collection and analysis, not just individual review."),
+        ("Corrective and preventive action",
+         "CAPA records maintained where appropriate; open actions tracked."),
+    ])
+
+    # 8. Training and staff acknowledgement
+    h(doc, 1, "8. Training and staff acknowledgement")
+    p(doc,
+      "All clinical staff involved in monitoring patients after medication "
+      "administration shall be familiar with the monitoring requirements, the "
+      "near-miss/error/ADR definitions, the capture and reporting process, the "
+      "defined reporting time frame, and the roles in analysis and action in "
+      "this policy.")
+    p(doc,
+      f"I have read the Policy on Monitoring after Medication Administration of "
+      f"{HN}. I will follow the processes described.")
+    sig_tbl(doc)
+
+    # 9. Distribution
+    h(doc, 1, "9. Distribution")
+    p(doc,
+      "This policy shall be available to all clinical staff who monitor patients "
+      "after medication administration, the Medication Safety Officer, the "
+      "multidisciplinary committee, and the Quality Coordinator.")
+
+    # 10. Abbreviations
+    h(doc, 1, "10. Abbreviations")
+    abbrev_tbl(doc, [
+        ("ADR",  "Adverse drug reaction"),
+        ("CAPA", "Corrective and Preventive Action"),
+        ("CORE", "Core objective element (NABH)"),
+        ("DTC",  "Drug and Therapeutics Committee (the organisation's "
+                  "multidisciplinary medication management committee)"),
+        ("ICU",  "Intensive Care Unit"),
+        ("MOM",  "Management of Medication (NABH Hospitals chapter)"),
+        ("MSO",  "Medication Safety Officer"),
+        ("NABH", "National Accreditation Board for Hospitals and Healthcare Providers"),
+    ])
+
+    # 11. Traceability table
+    h(doc, 1, "11. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 7, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("MOM.8.a", "Commitment*",
+         "Sections 3 and 5.1 address collaborative post-administration monitoring, "
+         "the organisation's definition of situations and medications requiring more "
+         "frequent monitoring, and the three named high-risk patient categories: "
+         "those on dialysis, in the ICU, and the elderly."),
+        ("MOM.8.b", "Commitment",
+         "Section 5.2 addresses medication changes based on clinical response and "
+         "adverse drug reactions identified through monitoring, where appropriate."),
+        ("MOM.8.c", "CORE*",
+         "Sections 3 and 5.3 address the definition of near misses, medication "
+         "errors, and adverse drug reactions in line with best practice, and written "
+         "guidance covering all five mandatory capture steps: identifying, documenting, "
+         "reporting, analysing, and acting on them. MOM.8.c carries CORE status — "
+         "this policy does not contain a stop-work section, which is correct, as "
+         "MOM.8 is not in the MOM stop-work proposals."),
+        ("MOM.8.d", "Commitment*",
+         "Sections 3 and 5.4 address the definition of the reporting time frame and "
+         "the requirement to adhere to it. The specific time frame is set by "
+         f"{HN} — this policy does not substitute a specific number of hours or days."),
+        ("MOM.8.e", "Commitment",
+         "Section 5.5 addresses collection and analysis by the multidisciplinary "
+         "committee within a defined time frame, with a preference for clinical "
+         "pharmacologist or pharmacist involvement."),
+        ("MOM.8.f", "Commitment",
+         "Section 5.6 addresses corrective or preventive action taken where "
+         "appropriate, with records kept, and a preference for root-cause analysis "
+         "as the basis."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 12. Required Records/Evidence Checklist
+    h(doc, 1, "12. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Post-administration monitoring — MOM.8.a (Commitment*)")
+    lb(doc,
+       "Written monitoring guidance naming what to watch for and when to escalate, "
+       "matched to the drug and clinical setting.")
+    lb(doc,
+       "Record of situations and medications where more frequent monitoring is "
+       "required, as defined by the organisation.")
+    lb(doc,
+       "Recorded monitoring for a sample of patients — including high-risk patients "
+       "(those on dialysis, in the ICU, and the elderly) — after medication "
+       "administration.")
+
+    h(doc, 2, "Medication changes from monitoring — MOM.8.b")
+    lb(doc,
+       "Medication-change records based on monitoring findings — drug changed, held, "
+       "or dose adjusted based on clinical response or ADR.")
+    lb(doc,
+       "Rewritten-order records for any medication change.")
+    lb(doc,
+       "Confirmation the treating doctor was informed and the situation was not "
+       "silently continued.")
+
+    h(doc, 2, "Near-miss/error/ADR capture — MOM.8.c (CORE*)")
+    lb(doc,
+       "Written definitions of near misses, medication errors, and adverse drug "
+       "reactions, in line with best practice.")
+    lb(doc,
+       "Written guidance setting out the five mandatory capture steps: identifying, "
+       "documenting, reporting, analysing, and acting on.")
+    lb(doc,
+       "Sample of captured near-miss and incident reports demonstrating the process "
+       "is working.")
+
+    h(doc, 2, "Reporting time frame — MOM.8.d (Commitment*)")
+    lb(doc,
+       "Defined reporting time frame for near misses, medication errors, and adverse "
+       "drug reactions — as set by the organisation.")
+    lb(doc,
+       "Adherence evidence: comparison of event date/time to report date/time on a "
+       "sample of incident forms.")
+
+    h(doc, 2, "Multidisciplinary committee analysis — MOM.8.e")
+    lb(doc,
+       "DTC analysis records showing details of near misses, medication errors, and "
+       "ADRs collected and analysed as a committee.")
+    lb(doc,
+       "Defined analysis completion time frame, evidenced in committee minutes or "
+       "terms of reference.")
+
+    h(doc, 2, "Corrective and preventive action — MOM.8.f")
+    lb(doc,
+       "CAPA records where corrective or preventive action was taken — with owner "
+       "and due date.")
+    lb(doc, "Open-action tracking records.")
+    lb(doc,
+       "Decision record where CAPA was considered but judged not required, where "
+       "that is the case.")
+
+    # 13. References
+    h(doc, 1, "13. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. MOM.8.")
+    ln(doc, "Guidebook interpretation supplied for MOM.8.a through MOM.8.f.")
+    ln(doc,
+       f"Internal documents of {HN}: post-administration monitoring guidance; "
+       "near-miss/error/ADR definitions and written guidance; incident reporting "
+       "system; DTC analysis records; CAPA records.")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied MOM.8 objective-element wording and "
+      "Guidebook interpretation into plain-language policy format. The modal strength "
+      "of the source has been preserved. Optional examples and mechanisms have not "
+      "been converted into mandatory requirements. The three named high-risk patient "
+      "categories (those on dialysis, in the ICU, and the elderly) have been retained "
+      "verbatim as examples of high-risk groups, not converted to an exhaustive "
+      "mandatory list. The five mandatory capture-process steps (identifying, "
+      "documenting, reporting, analysing, and acting on) have been retained as an "
+      "exhaustive mandatory list, not a pick-list. The reporting-timeframe requirement "
+      "is stated as the organisation defines it and then adheres to it — no specific "
+      "number of hours or days has been substituted. MOM.8.c carries CORE status; "
+      "this policy does not contain a stop-work section — this is correct, as MOM.8 "
+      "is not in the MOM stop-work proposals.")
+
+    save_and_verify(doc, "HCO_MOM_8_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# MOM.9 — Narcotics, Psychotropics, Chemotherapy and Radio-pharmaceuticals
+#         (HAS stop-work: Section 6)
+# Content: mom9_content.txt (approved).
+# Structure: Document control, Sec 3 standards, Sec 4 non-negotiables,
+#            Sec 5 (5 subsections), Sec 6 Stop-work, Sec 7 Governance,
+#            Sec 8 Monitoring, Sec 9 Training, Sec 10 Distribution,
+#            Sec 11 Abbreviations, Sec 12 Traceability, Sec 13 Records,
+#            Sec 14 References, Disclaimer.
+# COREs: none | Stars: a* | Statute: YES (P2)
+# Exact items verified:
+#   5.2: three distinct prescriber-authorisation tiers —
+#        narcotics: designated/privileged medical officer;
+#        chemotherapy: demonstrated knowledge/competency (preferably oncologist);
+#        radio-pharmaceuticals: statutorily authorised caregiver
+#   5.4: class II biosafety cabinet (preferably IIA) + appropriate PPE for
+#        chemotherapy preparation — explicit requirement
+#   Sec 6: two trigger clauses (chemo/radio-pharma preparation + narcotics
+#           security/issue); emergency-controlled-drug carve-out; plain-text
+#           role names "Pharmacy In-Charge" and "Medical Superintendent"
+#   No NDPS Act section numbers, AERB rule numbers, or other regulation-specific
+#   citations invented — only generic "applicable regulations/law" language used
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_mom9():
+    """MOM.9 — Narcotics, Psychotropics, Chemotherapy, Radio-pharmaceuticals
+    (stop-work Section 6; sections 1-14 + Disclaimer)"""
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Narcotics, Psychotropics, Chemotherapy and Radio-pharmaceuticals")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/MOM/POL/09", "Pharmacy In-Charge")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Narcotic drugs, psychotropic substances, chemotherapeutic agents, and "
+      "radio-pharmaceuticals are prescribed only by appropriate caregivers, stored "
+      "securely, prepared only by qualified personnel, and every use is recorded "
+      "and disposed of in line with applicable law.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} handles narcotic drugs, psychotropic "
+      "substances, chemotherapeutic agents, and radio-pharmaceuticals safely — "
+      "how they're prescribed, stored, prepared, administered, recorded, and "
+      "disposed of.")
+    p(doc,
+      "This policy does not cover general medication prescription, storage, or "
+      "dispensing in detail — those are covered in other hospital policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to all staff involved in prescribing, storing, "
+      f"preparing, administering, or disposing of narcotic drugs, psychotropic "
+      f"substances, chemotherapeutic agents, and radio-pharmaceuticals at {HN}.")
+
+    # 3. Policy standards
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} handles narcotic drugs, psychotropic substances, chemotherapeutic "
+      "agents, and radio-pharmaceuticals under written guidance developed in line "
+      "with applicable law, prescribed only by appropriately authorised caregivers, "
+      "stored securely, and prepared and administered only by qualified personnel. "
+      "Usage, administration, and disposal are recorded and comply with applicable "
+      "statutory requirements.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not operate without written guidance, developed in line with applicable "
+       "law, covering how narcotic drugs, psychotropic substances, chemotherapeutic "
+       "agents, and radio-pharmaceuticals are handled.")
+    lb(doc,
+       "Do not let anyone other than a designated or privileged medical officer "
+       "prescribe a narcotic drug, do not let anyone without demonstrated knowledge "
+       "and competency prescribe chemotherapy, and do not let anyone other than a "
+       "statutorily authorised caregiver prescribe a radio-pharmaceutical.")
+    lb(doc,
+       "Do not leave narcotic drugs or psychotropic substances unsecured, and do not "
+       "issue them without a register entry and an authorised prescriber.")
+    lb(doc,
+       "Do not leave chemotherapeutic agents accessible to unauthorised personnel, "
+       "and do not store or label radio-pharmaceuticals outside applicable regulatory "
+       "guidelines.")
+    lb(doc,
+       "Do not prepare or administer chemotherapeutic agents or radio-pharmaceuticals "
+       "without qualified, specially trained personnel and the required preparation "
+       "conditions, including a class II biosafety cabinet with appropriate personal "
+       "protective equipment for chemotherapy preparation.")
+    lb(doc,
+       "Do not skip strict inventory control, or skip recording usage, administration, "
+       "wastage, and disposal of these medications in line with applicable statutory "
+       "requirements.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Follow written guidance developed in line with applicable law")
+    p(doc,
+      "Written guidance, developed in consonance with applicable local and national "
+      "regulations and guidelines, is implemented for the safe use of narcotic drugs, "
+      "psychotropic substances, chemotherapeutic agents, and radio-pharmaceuticals. "
+      "It could address all the requirements in this policy in one document.")
+
+    h(doc, 2, "5.2 Ensure prescription by appropriate caregivers")
+    p(doc,
+      "Narcotic drugs are prescribed only by a designated or privileged medical "
+      "officer. Chemotherapy is prescribed only by someone with the knowledge to "
+      "monitor and treat its adverse effects — preferably a medical oncologist, or "
+      "another doctor trained and competent in chemotherapy. Radio-pharmaceuticals "
+      "are prescribed only by a caregiver authorised under applicable regulations.")
+
+    h(doc, 2, "5.3 Store these medications securely")
+    p(doc,
+      "Narcotic drugs are stored securely in line with applicable regulatory "
+      "requirements, with security measures that prevent diversion and abuse. "
+      "Chemotherapeutic agents are accessible only to authorised personnel. "
+      "Radio-pharmaceuticals are labelled and stored following applicable regulatory "
+      "guidelines. It's preferable to store all of these separately from other "
+      "medications.")
+
+    h(doc, 2, "5.4 Prepare and administer only through qualified personnel")
+    p(doc,
+      "Personnel preparing and administering chemotherapeutic drugs have received "
+      "special training for it. A class II biosafety cabinet — preferably class IIA "
+      "— with appropriate personal protective equipment is used for preparing or "
+      "mixing chemotherapeutic drugs. Radio-pharmaceuticals are prepared and "
+      "administered only by an authorised caregiver.")
+
+    h(doc, 2, "5.5 Keep proper records of usage and disposal")
+    p(doc,
+      "Strict inventory control is kept for narcotic drugs, psychotropic substances, "
+      "chemotherapeutic agents, and radio-pharmaceuticals. Records of the usage, "
+      "administration, wastage, and disposal of narcotic drugs are kept in line with "
+      "applicable statutory requirements. Disposal of all these medications follows "
+      "applicable statutory requirements and, where relevant, the manufacturer's "
+      "recommendation.")
+
+    # 6. Stop-work authority
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Do not prepare or administer chemotherapeutic agents or radio-pharmaceuticals "
+      "without qualified personnel and the required preparation conditions.")
+    p(doc,
+      "Do not leave narcotic drugs or psychotropic substances unsecured, or issue "
+      "them without the required register entry and authorised prescriber.")
+    p(doc,
+      "Stop-work applies to preparation, issue, and administration of these classes. "
+      "Immediate life-saving analgesia or anaesthesia using a controlled drug follows "
+      "the documented emergency-controlled-drug rules and is entered in the register "
+      "the same shift.")
+    p(doc,
+      "The person who stops tells the Pharmacy In-Charge and the Medical "
+      "Superintendent the same shift. Refusing unsafe handling of these agents is "
+      "not a disciplinary matter.")
+
+    # 7. Governance and responsibility
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for ensuring this policy is resourced and implemented; "
+         "receives stop-work escalations from the Pharmacy In-Charge."),
+        ("Pharmacy In-Charge",
+         "Owns day-to-day implementation; maintains the narcotic and psychotropic "
+         "register; ensures secure storage, issue controls, and inventory records; "
+         "receives stop-work escalations and escalates to the Medical Superintendent."),
+        ("Medical Oncologist / Trained Chemotherapy Doctor",
+         "Prescribes chemotherapy; has demonstrated knowledge to monitor and treat "
+         "adverse effects; oversees chemotherapy preparation safety."),
+        ("Authorised Caregiver — Radio-pharmaceuticals",
+         "Prescribes, prepares, and administers radio-pharmaceuticals under "
+         "applicable regulatory authorisation; ensures regulatory storage and "
+         "labelling requirements are met."),
+        ("Quality Coordinator",
+         "Audits this policy; holds training records and staff acknowledgements."),
+    ])
+
+    # 8. Quality monitoring
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Written guidance",
+         "In place, developed in line with applicable law, covering prescription, "
+         "storage, preparation, records, and disposal for all four drug classes."),
+        ("Narcotic and psychotropic prescription authorisation",
+         "Narcotics prescribed only by a designated or privileged medical officer; "
+         "prescriber category documented."),
+        ("Chemotherapy prescriber authorisation",
+         "Chemotherapy prescribed only by a doctor with demonstrated knowledge and "
+         "competency — preferably a medical oncologist; training or privileging "
+         "records current."),
+        ("Radio-pharmaceutical prescriber authorisation",
+         "Radio-pharmaceuticals prescribed only by a statutorily authorised caregiver; "
+         "authorisation records current."),
+        ("Narcotic and psychotropic security and issue controls",
+         "Drugs stored securely; narcotic register maintained; issue only with "
+         "register entry and authorised prescriber."),
+        ("Chemotherapy preparation — class II biosafety cabinet and PPE",
+         "Class II biosafety cabinet (preferably IIA) in use for preparation; "
+         "appropriate PPE used; preparation staff specially trained and records "
+         "current."),
+        ("Radio-pharmaceutical storage and preparation",
+         "Labelled and stored per applicable regulatory guidelines; prepared and "
+         "administered only by authorised caregiver."),
+        ("Inventory, wastage, and disposal records",
+         "Strict inventory control; usage, administration, wastage, and disposal "
+         "records in line with applicable statutory requirements."),
+        ("Stop-work events",
+         "Stop-work events logged with trigger, action taken, and outcome."),
+    ])
+
+    # 9. Training and staff acknowledgement
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      "All staff involved in prescribing, storing, preparing, administering, or "
+      "disposing of narcotic drugs, psychotropic substances, chemotherapeutic agents, "
+      "or radio-pharmaceuticals shall be familiar with the written guidance, "
+      "prescriber-authorisation requirements, security and issue controls, "
+      "preparation conditions (including class II biosafety cabinet and PPE for "
+      "chemotherapy), inventory and disposal requirements, and stop-work authority "
+      "in this policy.")
+    p(doc,
+      f"I have read the Policy on Narcotics, Psychotropics, Chemotherapy and "
+      f"Radio-pharmaceuticals of {HN}. I will follow the processes described.")
+    sig_tbl(doc)
+
+    # 10. Distribution
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to the Pharmacy In-Charge, pharmacists, "
+      "nurses and doctors authorised to prescribe or administer these agents, "
+      "the Medical Oncologist, the authorised radio-pharmaceutical caregiver, "
+      "the Medical Superintendent, and the Quality Coordinator.")
+
+    # 11. Abbreviations
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("AERB",  "Atomic Energy Regulatory Board"),
+        ("CORE",  "Core objective element (NABH)"),
+        ("MOM",   "Management of Medication (NABH Hospitals chapter)"),
+        ("NABH",  "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("NDPS",  "Narcotic Drugs and Psychotropic Substances"),
+        ("OE",    "Objective Element (NABH)"),
+        ("PPE",   "Personal Protective Equipment"),
+    ])
+
+    # 12. Traceability table
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 6, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("MOM.9.a", "Commitment*",
+         "Sections 3 and 5.1 address written guidance developed in consonance with "
+         "applicable local and national regulations and guidelines, covering all "
+         "handling requirements for narcotic drugs, psychotropic substances, "
+         "chemotherapeutic agents, and radio-pharmaceuticals."),
+        ("MOM.9.b", "Commitment",
+         "Section 5.2 addresses the three distinct prescriber-authorisation tiers: "
+         "narcotics (designated or privileged medical officer), chemotherapy "
+         "(demonstrated knowledge and competency, preferably medical oncologist), "
+         "and radio-pharmaceuticals (caregiver authorised under applicable regulations). "
+         "No NDPS Act section numbers or AERB rule citations are stated."),
+        ("MOM.9.c", "Commitment",
+         "Section 5.3 addresses secure narcotic and psychotropic storage preventing "
+         "diversion and abuse, authorised-personnel-only access for chemotherapy, "
+         "and regulatory-compliant labelling and storage for radio-pharmaceuticals."),
+        ("MOM.9.d", "Commitment",
+         "Section 5.4 addresses the class II biosafety cabinet (preferably class IIA) "
+         "with appropriate PPE for chemotherapy preparation, special training of "
+         "preparation personnel, and authorised-caregiver requirement for "
+         "radio-pharmaceutical preparation and administration."),
+        ("MOM.9.e", "Commitment",
+         "Section 5.5 addresses strict inventory control and records of usage, "
+         "administration, wastage, and disposal for narcotic drugs in line with "
+         "applicable statutory requirements, and statutory-compliant disposal for "
+         "all four drug classes."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 13. Required Records/Evidence Checklist
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Written guidance — MOM.9.a (Commitment*)")
+    lb(doc,
+       "Written guidance in place, developed in line with applicable local and "
+       "national regulations and guidelines, covering prescription, storage, "
+       "preparation, administration, record-keeping, and disposal of narcotic "
+       "drugs, psychotropic substances, chemotherapeutic agents, and "
+       "radio-pharmaceuticals.")
+    lb(doc,
+       "Date of last review and evidence that the guidance reflects current "
+       "applicable statutory requirements.")
+
+    h(doc, 2, "Prescription by appropriate caregivers — MOM.9.b")
+    lb(doc,
+       "List of designated or privileged medical officers authorised to prescribe "
+       "narcotic drugs; narcotic prescriptions bearing authorised-prescriber identity.")
+    lb(doc,
+       "Records confirming the chemotherapy prescriber's demonstrated knowledge and "
+       "competency — for example, training records, privileging documents, or "
+       "oncology credentials.")
+    lb(doc,
+       "Authorisation document confirming the radio-pharmaceutical prescriber is "
+       "authorised under applicable regulations.")
+
+    h(doc, 2, "Secure storage — MOM.9.c")
+    lb(doc,
+       "Physical security measures for narcotic and psychotropic drug storage "
+       "(for example, locked cabinet, restricted key access) that prevent diversion "
+       "and abuse; in line with applicable regulatory requirements.")
+    lb(doc,
+       "Access controls confirming chemotherapeutic agents are accessible only to "
+       "authorised personnel.")
+    lb(doc,
+       "Storage and labelling records for radio-pharmaceuticals confirming compliance "
+       "with applicable regulatory guidelines.")
+
+    h(doc, 2, "Qualified preparation and administration — MOM.9.d")
+    lb(doc,
+       "Training records for personnel preparing and administering chemotherapeutic "
+       "drugs confirming special training.")
+    lb(doc,
+       "Evidence of class II biosafety cabinet (preferably class IIA) in use for "
+       "chemotherapy preparation, with appropriate PPE available and used.")
+    lb(doc,
+       "Authorisation records confirming radio-pharmaceuticals are prepared and "
+       "administered only by an authorised caregiver.")
+
+    h(doc, 2, "Records of usage and disposal — MOM.9.e")
+    lb(doc,
+       "Narcotic register showing usage, administration, wastage, and disposal in "
+       "line with applicable statutory requirements; cross-checked against inventory.")
+    lb(doc,
+       "Strict inventory control records for narcotic drugs, psychotropic substances, "
+       "chemotherapeutic agents, and radio-pharmaceuticals.")
+    lb(doc,
+       "Disposal records for all four drug classes, following applicable statutory "
+       "requirements and manufacturer recommendations where relevant.")
+
+    # 14. References
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. MOM.9.")
+    ln(doc, "Guidebook interpretation supplied for MOM.9.a through MOM.9.e.")
+    ln(doc,
+       "Applicable local and national regulations and guidelines for narcotic drugs, "
+       "psychotropic substances, chemotherapeutic agents, and radio-pharmaceuticals "
+       "(including, but not limited to, NDPS regulations and AERB guidelines where "
+       "applicable — specific instruments identified by the organisation).")
+    ln(doc,
+       f"Internal documents of {HN}: written narcotic/psychotropic/chemotherapy/"
+       "radio-pharmaceutical handling guidance; narcotic register; class II "
+       "biosafety cabinet procedures; chemotherapy preparation records.")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied MOM.9 objective-element wording and "
+      "Guidebook interpretation into plain-language policy format. The modal strength "
+      "of the source has been preserved. Optional examples and mechanisms have not "
+      "been converted into mandatory requirements. The three distinct prescriber-"
+      "authorisation tiers (narcotic drugs: designated or privileged medical officer; "
+      "chemotherapy: demonstrated knowledge and competency, preferably medical "
+      "oncologist; radio-pharmaceuticals: statutorily authorised caregiver), the "
+      "class II biosafety cabinet with appropriate PPE requirement for chemotherapy "
+      "preparation, and the stop-work text with both trigger clauses (chemotherapy "
+      "and radio-pharmaceutical preparation; narcotic security and issue) have been "
+      "retained verbatim. No specific NDPS Act section numbers, AERB rule numbers, "
+      "or other regulation-specific citations have been invented — only generic "
+      "applicable-regulations language is used throughout. Role names in the "
+      "stop-work section are in plain text as specified.")
+
+    save_and_verify(doc, "HCO_MOM_9_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# MOM.10 — Implantable Prosthesis and Medical Devices   (NO stop-work)
+# Content: mom10_content.txt (approved).
+# Structure: Document control, Sec 3 standards, Sec 4 non-negotiables,
+#            Sec 5 (5 subsections), Sec 6 Governance, Sec 7 Monitoring,
+#            Sec 8 Training, Sec 9 Distribution, Sec 10 Abbreviations,
+#            Sec 11 Traceability, Sec 12 Records, Sec 13 References, Disclaimer.
+# COREs: none | Stars: b*, e* | Achievement: e | Statute: none
+# Exact items verified:
+#   5.2: four lifecycle-stage elements in written guidance —
+#        procurement / storage / issuing / use — all four named explicitly
+#   5.4: three-location batch/serial number —
+#        medical record / master logbook / discharge summary — all three named
+#   5.5: internal-feedback recall triggers BOTH regulatory authority AND
+#        manufacturer notification (not just one of them)
+#   No stop-work section created (MOM.10 not in stop-work proposals)
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_mom10():
+    """MOM.10 — Implantable Prosthesis and Medical Devices
+    (no stop-work; sections 1-13 + Disclaimer)"""
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Implantable Prosthesis and Medical Devices")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/MOM/POL/10", "OT In-Charge")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Implantable prosthesis and medical devices are used only when backed by "
+      "scientific evidence and recognised regulatory approval, tracked from "
+      "procurement through to the patient's discharge summary, and recalled "
+      "effectively when needed.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} selects and approves implantable prosthesis "
+      "and medical devices, manages their procurement and use, counsels patients "
+      "on precautions, records batch and serial numbers, and handles recalls.")
+    p(doc,
+      "This policy does not cover general informed consent procedures or infection "
+      "prevention and control in detail — those are covered in other hospital "
+      "policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to all staff involved in selecting, procuring, using, "
+      f"or recalling implantable prosthesis and medical devices at {HN}.")
+
+    # 3. Policy standards
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} selects implantable prosthesis and medical devices only where "
+      "sufficient scientific data and recognised national or international "
+      "regulatory approval exist, with the multidisciplinary committee approving "
+      "each item. Written guidance governs procurement, storage, issuing, and use, "
+      "and follows infection prevention and control requirements. Patients and "
+      "families are counselled on precautions, batch and serial numbers are "
+      "recorded in the patient's medical record, the master logbook, and the "
+      "discharge summary, and recalls are handled effectively.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not select an implantable prosthesis or medical device without sufficient "
+       "scientific data and recognised national or international regulatory approval, "
+       "and without the multidisciplinary committee's approval for that item.")
+    lb(doc,
+       "Do not procure, store, issue, or use an implantable prosthesis or medical "
+       "device without written guidance covering all four of those stages, addressing "
+       "statutory regulations and manufacturer recommendations.")
+    lb(doc,
+       "Do not skip documenting counselling given to the patient or family about "
+       "the device, including any precautions.")
+    lb(doc,
+       "Do not skip recording the batch and serial number of an implant in all "
+       "three places: the patient's medical record, the master logbook, and the "
+       "discharge summary.")
+    lb(doc,
+       "Do not respond to a recall — whether from a regulatory authority, the "
+       "manufacturer, or internal feedback — without maintaining a record of it, "
+       "and where the recall arises from internal feedback, without informing "
+       "the appropriate regulatory authority and the manufacturer.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Select devices based on evidence and approval")
+    p(doc,
+      f"{HN} ensures relevant and sufficient scientific data are available before "
+      "selecting an implant or device, and checks for applicable national or "
+      "international regulatory approval — for example US-FDA notification, or "
+      "Central Drugs Standard Control Organisation notification under the Drugs "
+      "and Cosmetics Act. These are examples; other relevant national or "
+      "international approvals also satisfy this requirement. The multidisciplinary "
+      "committee approves the use of each particular implant.")
+
+    h(doc, 2, "5.2 Manage the full lifecycle under written guidance")
+    p(doc,
+      "Written guidance directs the procurement, storage, issuing, and use of "
+      "implantable prosthesis and medical devices, addressing applicable statutory "
+      "regulations and manufacturer recommendations. Infection prevention and "
+      "control requirements related to using these devices are implemented.")
+
+    h(doc, 2, "5.3 Counsel patients and families on precautions")
+    p(doc,
+      "The patient and family are counselled about using the implant or device, "
+      "including any precautions — for example, avoiding specific drugs, or "
+      "reporting particular symptoms to the hospital. These are examples of "
+      "precautions; the actual content depends on the device and clinical "
+      "situation. Details of this counselling are documented in the informed "
+      "consent record.")
+
+    h(doc, 2, "5.4 Record batch and serial numbers")
+    p(doc,
+      "The batch and serial number of every implantable prosthesis and medical "
+      "device are recorded in three places: the patient's medical record, the "
+      "master logbook, and the discharge summary. Where an implant doesn't come "
+      f"with a pre-labelled sticker, {HN} has a mechanism to identify it — for "
+      "example, by manufacturer, type, size, batch number, and serial number.")
+
+    h(doc, 2, "5.5 Handle recalls effectively")
+    p(doc,
+      "A recall could arise from a regulatory authority, the manufacturer, or "
+      f"internal feedback. Where a recall arises from internal feedback, {HN} "
+      "also informs the appropriate regulatory authority and the manufacturer. "
+      "A record is maintained whenever a recall occurs.")
+
+    # 6. Governance and responsibility
+    h(doc, 1, "6. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for ensuring this policy is resourced and implemented; "
+         "approves or delegates approval of implant and device selection with "
+         "the multidisciplinary committee."),
+        ("OT In-Charge",
+         "Owns day-to-day implementation of this policy; ensures written guidance "
+         "covers procurement, storage, issuing, and use; coordinates batch and "
+         "serial number recording; manages recall response."),
+        ("Multidisciplinary Committee",
+         "Approves the use of each particular implantable prosthesis and medical "
+         "device on the basis of scientific data and regulatory approval."),
+        ("Treating doctors",
+         "Counsel patients and families on precautions; document counselling in "
+         "the informed consent record; record batch and serial numbers in the "
+         "medical record."),
+        ("Quality Coordinator",
+         "Audits this policy; holds training records and staff acknowledgements; "
+         "tracks open recall actions."),
+    ])
+
+    # 7. Quality monitoring
+    h(doc, 1, "7. Quality monitoring")
+    mon_tbl(doc, [
+        ("Device selection — scientific data and regulatory approval",
+         "Scientific data available before selection; national or international "
+         "regulatory approval confirmed; multidisciplinary committee approval "
+         "documented for each item."),
+        ("Lifecycle written guidance — all four stages",
+         "Written guidance covering procurement, storage, issuing, and use; "
+         "addresses statutory regulations and manufacturer recommendations; "
+         "infection prevention and control requirements implemented."),
+        ("Patient and family counselling",
+         "Counselling on precautions documented in the informed consent record "
+         "for each implant or device; no gaps."),
+        ("Batch and serial number recording — three locations",
+         "Batch and serial number in the patient's medical record, the master "
+         "logbook, and the discharge summary — all three confirmed for every "
+         "procedure; identification mechanism in place where no pre-labelled "
+         "sticker exists."),
+        ("Recall management",
+         "Recall records maintained for every recall event; internal-feedback "
+         "recalls trigger both regulatory authority and manufacturer notification; "
+         "open actions tracked."),
+    ])
+
+    # 8. Training and staff acknowledgement
+    h(doc, 1, "8. Training and staff acknowledgement")
+    p(doc,
+      "All staff involved in selecting, procuring, using, or recalling implantable "
+      "prosthesis and medical devices shall be familiar with the selection criteria, "
+      "lifecycle written guidance, counselling documentation, batch and serial number "
+      "recording requirements, and recall handling in this policy.")
+    p(doc,
+      f"I have read the Policy on Implantable Prosthesis and Medical Devices of "
+      f"{HN}. I will follow the processes described.")
+    sig_tbl(doc)
+
+    # 9. Distribution
+    h(doc, 1, "9. Distribution")
+    p(doc,
+      "This policy shall be available to the OT In-Charge, treating doctors, the "
+      "multidisciplinary committee, the procurement team, and the Quality "
+      "Coordinator.")
+
+    # 10. Abbreviations
+    h(doc, 1, "10. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CDSCO", "Central Drugs Standard Control Organisation"),
+        ("FDA",   "Food and Drug Administration (United States)"),
+        ("MOM",   "Management of Medication (NABH Hospitals chapter)"),
+        ("NABH",  "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("OT",    "Operation Theatre"),
+    ])
+
+    # 11. Traceability table
+    h(doc, 1, "11. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 6, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("MOM.10.a", "Commitment",
+         "Section 5.1 addresses selection of implants and devices only where "
+         "relevant and sufficient scientific data are available and applicable "
+         "national or international regulatory approval is confirmed, with "
+         "multidisciplinary committee approval for each item."),
+        ("MOM.10.b", "Commitment*",
+         "Sections 3 and 5.2 address written guidance covering all four lifecycle "
+         "stages — procurement, storage, issuing, and use — addressing statutory "
+         "regulations and manufacturer recommendations, and implementing infection "
+         "prevention and control requirements."),
+        ("MOM.10.c", "Commitment",
+         "Section 5.3 addresses counselling of the patient and family on "
+         "precautions, with documentation in the informed consent record for "
+         "each device."),
+        ("MOM.10.d", "Commitment",
+         "Sections 3 and 5.4 address the three-location batch and serial number "
+         "recording requirement: the patient's medical record, the master logbook, "
+         "and the discharge summary — all three for every implant — and the "
+         "identification mechanism where no pre-labelled sticker exists."),
+        ("MOM.10.e", "Achievement*",
+         "Sections 3 and 5.5 address recall management: records maintained for "
+         "every recall; internal-feedback recalls trigger notification of both the "
+         "appropriate regulatory authority and the manufacturer. This is an "
+         "Achievement-level OE — it requires evidence of an effective recall "
+         "system, not just a documented process."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 12. Required Records/Evidence Checklist
+    h(doc, 1, "12. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Device selection — MOM.10.a")
+    lb(doc,
+       "Scientific data on file for each approved implant or device, reviewed "
+       "before selection.")
+    lb(doc,
+       "Regulatory approval records (national or international) for each approved "
+       "item — for example, CDSCO notification or US-FDA notification.")
+    lb(doc,
+       "Multidisciplinary committee approval records for each particular implant "
+       "or device in use.")
+
+    h(doc, 2, "Lifecycle written guidance — MOM.10.b (Commitment*)")
+    lb(doc,
+       "Written guidance covering procurement, storage, issuing, and use of "
+       "implantable prosthesis and medical devices — all four stages present.")
+    lb(doc,
+       "Evidence that statutory regulations and manufacturer recommendations are "
+       "addressed in the guidance.")
+    lb(doc,
+       "Evidence that infection prevention and control requirements for using these "
+       "devices are implemented.")
+
+    h(doc, 2, "Patient and family counselling — MOM.10.c")
+    lb(doc,
+       "Informed consent records documenting counselling on precautions for each "
+       "patient receiving an implant or device — no gaps.")
+    lb(doc,
+       "Examples of precautions documented (drugs to avoid, symptoms to report, etc.).")
+
+    h(doc, 2, "Batch and serial number recording — MOM.10.d")
+    lb(doc,
+       "Patient's medical record showing batch and serial number for each implant "
+       "or device used.")
+    lb(doc,
+       "Master logbook entries showing batch and serial number for each procedure.")
+    lb(doc,
+       "Discharge summary showing batch and serial number for each implant or device.")
+    lb(doc,
+       "Identification mechanism in place for implants without pre-labelled stickers "
+       "(recording manufacturer, type, size, batch number, and serial number manually).")
+
+    h(doc, 2, "Recall management — MOM.10.e (Achievement*)")
+    lb(doc,
+       "Recall log maintained, with a record for every recall event — including "
+       "source (regulatory authority, manufacturer, or internal feedback).")
+    lb(doc,
+       "For recalls arising from internal feedback: evidence that the appropriate "
+       "regulatory authority was notified and the manufacturer was notified.")
+    lb(doc, "Open recall actions tracked to closure.")
+
+    # 13. References
+    h(doc, 1, "13. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. MOM.10.")
+    ln(doc, "Guidebook interpretation supplied for MOM.10.a through MOM.10.e.")
+    ln(doc,
+       f"Internal documents of {HN}: implant and device approved-list; "
+       "multidisciplinary committee minutes; lifecycle written guidance; "
+       "batch and serial number master logbook; recall log.")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied MOM.10 objective-element wording and "
+      "Guidebook interpretation into plain-language policy format. The modal "
+      "strength of the source has been preserved. Optional examples and mechanisms "
+      "have not been converted into mandatory requirements. The four lifecycle-stage "
+      "elements in written guidance (procurement, storage, issuing, and use) have "
+      "been retained as an exhaustive mandatory list. The three-location batch and "
+      "serial number requirement (medical record, master logbook, and discharge "
+      "summary) has been retained verbatim. The internal-feedback recall requirement "
+      "triggering notification of both the appropriate regulatory authority and the "
+      "manufacturer has been retained verbatim. This policy does not contain a "
+      "stop-work section — this is correct, as MOM.10 is not in the MOM stop-work "
+      "proposals.")
+
+    save_and_verify(doc, "HCO_MOM_10_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# MOM.11 — Storage and Availability of Medical Supplies and Consumables
+#          (NO stop-work)
+# Content: mom11_content.txt (approved).
+# Structure: Document control, Sec 3 standards, Sec 4 non-negotiables,
+#            Sec 5 (5 subsections), Sec 6 Governance, Sec 7 Monitoring,
+#            Sec 8 Training, Sec 9 Distribution, Sec 10 Abbreviations,
+#            Sec 11 Traceability, Sec 12 Records, Sec 13 References, Disclaimer.
+# COREs: none | Stars: a* | Statute: none
+# Exact items verified:
+#   Purpose: scope-clarifying note — "medical supplies and consumables" means
+#            items used in patient care OTHER THAN medications and implants;
+#            both exclusions stated explicitly
+#   5.1: five acquisition-process elements —
+#        vendor selection / vendor evaluation / indenting / purchase order
+#        generation / receipt of goods — all five named
+#   5.3: "including wards" universal storage scope stated explicitly
+#   5.4: no specific inventory method mandated — examples given (ABC, VED,
+#        FSN, FEFO, lead-time) but requirement is "sound inventory control
+#        practice" demonstrably in use, not any particular method
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_mom11():
+    """MOM.11 — Storage and Availability of Medical Supplies and Consumables
+    (no stop-work; sections 1-13 + Disclaimer)"""
+    doc = Document()
+
+    # Title
+    h(doc, 0, "Policy on Storage and Availability of Medical Supplies and Consumables")
+    p(doc, HN)
+
+    # Document control
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/MOM/POL/11", "Stores In-Charge")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    # Statement of intent
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      "Medical supplies and consumables are acquired through a defined process, "
+      "stored safely and cleanly, controlled through sound inventory practice, "
+      "and checked for condition before every use.")
+
+    # 1. Purpose
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} acquires medical supplies and consumables, "
+      "stores them safely, controls inventory soundly, and verifies their condition "
+      "before they're used. In this policy, \"medical supplies and consumables\" "
+      "means items used in patient care other than medications and implants — "
+      "those are covered in other hospital policies.")
+    p(doc,
+      "This policy does not cover medication or implant storage in detail — those "
+      "are covered in other hospital policies.")
+
+    # 2. Scope
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to Stores staff and all clinical staff who acquire, "
+      f"store, or use medical supplies and consumables at {HN}.")
+
+    # 3. Policy standards
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} acquires medical supplies and consumables through a defined process, "
+      "uses them safely with precautions to maintain sterility and integrity where "
+      "appropriate, stores them in a clean, safe, and secure environment following "
+      "manufacturer recommendations, applies sound inventory control practices, "
+      "and verifies their condition before dispensing and use.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    # 4. Non-negotiable rules
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not acquire medical supplies or consumables outside the defined process "
+       "covering vendor selection, vendor evaluation, indenting, purchase order "
+       "generation, and receipt of goods.")
+    lb(doc,
+       "Do not open or use a medical supply or consumable without the precautions "
+       "needed to maintain its sterility and integrity, where appropriate.")
+    lb(doc,
+       "Do not store medical supplies or consumables outside the manufacturer's "
+       "recommendations, in any area including wards, and do not leave hazardous "
+       "materials unidentified or unsafely stored.")
+    lb(doc,
+       "Do not store medical supplies or consumables without following a sound "
+       "inventory control practice.")
+    lb(doc,
+       "Do not dispense or use a medical supply or consumable without first "
+       "checking its condition.")
+
+    # 5. What we do
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Acquire supplies through a defined process")
+    p(doc,
+      "The acquisition process for medical supplies and consumables addresses "
+      "five things: vendor selection, vendor evaluation, the indenting process, "
+      "purchase order generation, and receipt of goods.")
+
+    h(doc, 2, "5.2 Use supplies safely")
+    p(doc,
+      "Where appropriate, medical supplies and consumables are opened and used "
+      "with the precautions needed to maintain their sterility and integrity.")
+
+    h(doc, 2, "5.3 Store supplies safely")
+    p(doc,
+      "Storage requirements specified by the manufacturer are followed, in every "
+      "area supplies are stored, including wards. Supplies are protected from loss "
+      "or theft, storage areas are kept clean, and hazardous materials are "
+      "identified and kept safely.")
+
+    h(doc, 2, "5.4 Apply sound inventory control")
+    p(doc,
+      f"{HN} follows or demonstrates sound inventory control practices — for "
+      "example ABC analysis, VED (vital/essential/desirable), FSN (fast/slow/"
+      "non-moving), First-Expiry-First-Out, or lead-time analysis. These are "
+      f"examples; {HN} may use any combination of practices it can demonstrate "
+      "is actually in use, not just documented.")
+
+    h(doc, 2, "5.5 Verify condition before use")
+    p(doc,
+      "Medical supplies and consumables are kept in a condition suitable for safe "
+      "use, and that condition is checked before dispensing and use — for example "
+      "checking for an opened package, a damp cotton roll, physical damage, or "
+      "discolouration. These are examples of defects to check for, not an "
+      "exhaustive list.")
+
+    # 6. Governance and responsibility
+    h(doc, 1, "6. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for ensuring this policy is resourced and implemented."),
+        ("Stores In-Charge",
+         "Owns day-to-day implementation of this policy; manages the defined "
+         "acquisition process; maintains inventory control; ensures storage "
+         "conditions are met in the main stores area."),
+        ("Clinical staff — ward and department heads",
+         "Ensure manufacturer storage requirements are followed in their areas, "
+         "including wards; check condition of supplies before use; ensure safe "
+         "use precautions are applied where appropriate."),
+        ("Quality Coordinator",
+         "Audits this policy; holds training records and staff acknowledgements."),
+    ])
+
+    # 7. Quality monitoring
+    h(doc, 1, "7. Quality monitoring")
+    mon_tbl(doc, [
+        ("Defined acquisition process — all five elements",
+         "Process in place covering vendor selection, vendor evaluation, indenting, "
+         "purchase order generation, and receipt of goods; all five elements "
+         "present and working."),
+        ("Safe use — sterility and integrity precautions",
+         "Precautions applied when opening and using supplies where appropriate; "
+         "no instances of inappropriate opening technique or sterility break."),
+        ("Storage compliance — including wards",
+         "Manufacturer storage requirements followed in all storage areas, "
+         "including wards; supplies protected from loss or theft; storage areas "
+         "clean; hazardous materials identified and safely stored."),
+        ("Inventory control",
+         "Sound inventory control practice demonstrated as actually in use — not "
+         "just documented; method(s) employed consistent with those declared."),
+        ("Condition check before use",
+         "Condition checked before dispensing and use; defective supplies "
+         "(opened, damaged, discoloured, damp) identified and removed."),
+    ])
+
+    # 8. Training and staff acknowledgement
+    h(doc, 1, "8. Training and staff acknowledgement")
+    p(doc,
+      "All Stores staff and clinical staff who acquire, store, or use medical "
+      "supplies and consumables shall be familiar with the defined acquisition "
+      "process, safe-use precautions, storage requirements (including in wards), "
+      "inventory control expectations, and condition-checking requirements in "
+      "this policy.")
+    p(doc,
+      f"I have read the Policy on Storage and Availability of Medical Supplies "
+      f"and Consumables of {HN}. I will follow the processes described.")
+    sig_tbl(doc)
+
+    # 9. Distribution
+    h(doc, 1, "9. Distribution")
+    p(doc,
+      "This policy shall be available to the Stores In-Charge, Stores staff, "
+      "ward and department heads, and the Quality Coordinator.")
+
+    # 10. Abbreviations
+    h(doc, 1, "10. Abbreviations")
+    abbrev_tbl(doc, [
+        ("ABC",  "Activity-Based Classification — value analysis method for inventory"),
+        ("FEFO", "First-Expiry-First-Out"),
+        ("FSN",  "Fast/Slow/Non-moving — inventory turnover classification"),
+        ("MOM",  "Management of Medication (NABH Hospitals chapter)"),
+        ("NABH", "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("VED",  "Vital/Essential/Desirable — inventory criticality classification"),
+    ])
+
+    # 11. Traceability table
+    h(doc, 1, "11. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk "
+      "in the Level column means documentation of the process is required.")
+    tr = tbl(doc, 6, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("MOM.11.a", "Commitment*",
+         "Sections 3 and 5.1 address the defined acquisition process, covering "
+         "all five elements: vendor selection, vendor evaluation, the indenting "
+         "process, purchase order generation, and receipt of goods. The Purpose "
+         "section also clarifies that this policy covers items used in patient "
+         "care other than medications and implants — those are covered elsewhere."),
+        ("MOM.11.b", "Commitment",
+         "Section 5.2 addresses the safe opening and use of medical supplies and "
+         "consumables with precautions to maintain sterility and integrity, "
+         "where appropriate."),
+        ("MOM.11.c", "Commitment",
+         "Section 5.3 addresses storage per manufacturer requirements in every "
+         "storage area, including wards — the \"including wards\" scope is stated "
+         "explicitly. Also addresses protection from loss or theft, clean storage "
+         "areas, and identification and safe storage of hazardous materials."),
+        ("MOM.11.d", "Commitment",
+         "Section 5.4 addresses sound inventory control practice — demonstrated "
+         "as actually in use. Examples are given (ABC, VED, FSN, FEFO, lead-time "
+         "analysis) but no specific method is mandated; the requirement is "
+         "demonstrable practice, not any particular system."),
+        ("MOM.11.e", "Commitment",
+         "Section 5.5 addresses verification of condition before dispensing and "
+         "use — for example checking for an opened package, a damp cotton roll, "
+         "physical damage, or discolouration. Examples are not an exhaustive list."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    # 12. Required Records/Evidence Checklist
+    h(doc, 1, "12. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Defined acquisition process — MOM.11.a (Commitment*)")
+    lb(doc,
+       "Documented acquisition process covering all five elements: vendor "
+       "selection, vendor evaluation, indenting, purchase order generation, and "
+       "receipt of goods.")
+    lb(doc,
+       "Working evidence for each element — for example, approved vendor list, "
+       "vendor-evaluation records, indent forms, purchase orders, and goods-receipt "
+       "notes.")
+    lb(doc,
+       "Confirmation that supplies are not acquired outside this defined process.")
+
+    h(doc, 2, "Safe use — MOM.11.b")
+    lb(doc,
+       "Training records or SOPs confirming staff know the precautions for "
+       "maintaining sterility and integrity of the supplies they use.")
+    lb(doc,
+       "Audit or observation evidence that appropriate precautions are followed "
+       "when opening and using supplies.")
+
+    h(doc, 2, "Storage compliance including wards — MOM.11.c")
+    lb(doc,
+       "Manufacturer storage-requirement records on file for each major category "
+       "of supply.")
+    lb(doc,
+       "Audit evidence that storage requirements are followed in all areas, "
+       "including wards — temperature, humidity, light, and packaging requirements "
+       "where applicable.")
+    lb(doc,
+       "Hazardous materials identified and safely stored; inventory of hazardous "
+       "materials on file.")
+
+    h(doc, 2, "Inventory control — MOM.11.d")
+    lb(doc,
+       "Declaration of the inventory control method(s) in use (from the documented "
+       "practice, not just from the policy).")
+    lb(doc,
+       "Working records demonstrating the declared method is actually applied — "
+       "for example ABC classification outputs, VED analysis records, FEFO stock "
+       "rotation records, or lead-time analysis sheets.")
+
+    h(doc, 2, "Condition check before use — MOM.11.e")
+    lb(doc,
+       "SOP or checklist for condition inspection before dispensing and use, "
+       "naming the defects to check for.")
+    lb(doc, "Audit evidence that condition checks happen before dispensing and use.")
+    lb(doc, "Records of defective items identified, removed, and replaced.")
+
+    # 13. References
+    h(doc, 1, "13. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. MOM.11.")
+    ln(doc, "Guidebook interpretation supplied for MOM.11.a through MOM.11.e.")
+    ln(doc,
+       f"Internal documents of {HN}: acquisition process documentation; approved "
+       "vendor list; inventory control records; storage SOPs; condition-check "
+       "checklists.")
+
+    # Disclaimer
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied MOM.11 objective-element wording and "
+      "Guidebook interpretation into plain-language policy format. The modal "
+      "strength of the source has been preserved. Optional examples and mechanisms "
+      "have not been converted into mandatory requirements. The scope-clarifying "
+      "note in the Purpose section (\"medical supplies and consumables\" means "
+      "items used in patient care other than medications and implants) has been "
+      "retained verbatim. All five acquisition-process elements (vendor selection, "
+      "vendor evaluation, indenting, purchase order generation, and receipt of "
+      "goods) have been retained as an exhaustive mandatory list. The \"including "
+      "wards\" universal storage scope has been stated explicitly. No specific "
+      "inventory method has been mandated — the requirement is sound inventory "
+      "control practice demonstrably in use, not any particular system. This "
+      "policy does not contain a stop-work section — this is correct, as MOM.11 "
+      "is not in the MOM stop-work proposals.")
+
+    save_and_verify(doc, "HCO_MOM_11_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 if __name__ == "__main__":
-    gen_mom1()
-    print("\nMOM.1 draft generated.")
-    gen_mom2()
-    print("\nMOM.2 draft generated.")
-    gen_mom3()
-    print("\nMOM.3 draft generated.")
-    gen_mom4()
-    print("\nMOM.4 draft generated.")
-    gen_mom5()
-    print("\nMOM.5 draft generated.")
-    gen_mom6()
-    print("\nMOM.6 draft generated.")
+    gen_mom9()
+    print("\nMOM.9 draft generated.")
+    gen_mom10()
+    print("\nMOM.10 draft generated.")
+    gen_mom11()
+    print("\nMOM.11 draft generated.")
