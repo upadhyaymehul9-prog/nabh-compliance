@@ -1,0 +1,530 @@
+IPC.7–IPC.8 — Batched Raw Source Dump
+======================================
+Purpose: Draft input for two standards in one pull.
+Each standard drafted and verified individually — same process as IPC.1-6.
+Source: Official NABH Hospitals 6th Edition Standards PDF (OE text, levels, asterisks)
+        + NABH Guidebook (interpretations scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+
+CROSS-REFERENCE NOTE (applies throughout this file):
+The Guidebook cites specific NABH OE codes (e.g., "Refer to IPC.2.c., IPC.3.a., IPC.3.b.
+and HRM.2.b."). In policy drafts, these must NOT be reproduced as code citations. Use
+generic phrasing: "Those requirements are covered in the hospital's other policies." The
+specific codes are preserved here for source accuracy only.
+
+OCR ARTIFACT NOTICE:
+The Guidebook source PDF contains OCR artefacts. Strings such as "HB cone.", "_b. HB.",
+"HB cone. = BB J = J 6." are typographic artefacts from the scanned PDF's level-indicator
+and OE-transition formatting. They are preserved in interpretation transcriptions but
+flagged and discarded for policy drafting.
+
+STOP-WORK STATUS BY STANDARD:
+  IPC.7 — YES (STOP_WORK_PROPOSALS: issue an item when sterilisation validation failed
+                or a recall of that load or machine is in effect)
+  IPC.8 — YES (STOP_WORK_PROPOSALS: continue duty against a work restriction; skip
+                post-exposure prophylaxis after a blood/body-fluid exposure)
+
+STATUTE DISCLAIMER STATUS:
+  IPC.7 — Accreditation-only disclaimer (no statute P2)
+  IPC.8 — Accreditation-only disclaimer (no statute P2)
+
+POLICY TITLES AND PREPARED-BY:
+  IPC.7 — Sterilisation and Disinfection of Instruments, Equipment and Devices
+           Prepared by: CSSD In-Charge | Doc: HCO/IPC/POL/07
+  IPC.8 — Prevention of Healthcare Associated Infections in Staff
+           Prepared by: Infection Prevention and Control Officer | Doc: HCO/IPC/POL/08
+
+
+══════════════════════════════════════════════════════════════════════════════
+IPC.7 — Infection Prevention Measures include Sterilisation and/or Disinfection
+         of Instruments, Equipment and Devices
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Infection prevention measures include sterilisation and / or disinfection of
+instruments, equipment and devices.
+
+Standard is NOT starred.
+
+OE count: 5 | COREs: b | Stars: b★, c★, d★, e★ | Achievement: none | Excellence: none
+STOP-WORK: YES — issue an item from CSSD/sterile store when sterilisation validation
+                   has failed or a recall is in effect.
+
+Prepared by: CSSD In-Charge | Doc no: HCO/IPC/POL/07
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.7.a
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation provides adequate space and appropriate zoning for sterilisation
+activities.
+
+Guidebook interpretation:
+Adequacy of space refers to the central sterile services department (CSSD), which
+shall have a suitable location, proper layout (unidirectional flow, zoning) and
+separation of clean and dirty areas. Sufficient space shall be available to ensure
+that the activities can be performed properly. It is preferable to have separate
+areas for receiving, washing, cleaning, packing, sterilisation, sterile storage and
+issue. A good reference is Hospital Infection Society India (HISI) and WHO guidelines.
+
+[Note: "HB cone." at end of Guidebook source is an OCR artefact. Discarded.]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. The IPC.7
+stop-work applies to item issue; layout deficiencies are CAPA items raised at assessment
+and IPC rounds. A CSSD without a clean/dirty separation or unidirectional flow is an
+audit gap, not an immediate stop-work trigger.
+
+Mandatory (shall):
+  1. CSSD (or the sterilisation area the organisation uses) shall have a suitable
+     location.
+  2. Layout shall have unidirectional flow and zoning.
+  3. Separation of clean and dirty areas shall be maintained.
+  4. Sufficient space shall be available to ensure sterilisation activities can be
+     performed properly.
+
+Illustrative only:
+  — Separate areas for receiving, washing, cleaning, packing, sterilisation, sterile
+    storage and issue: "It is preferable" — aspirational; the mandatory requirement is
+    adequate space with clean/dirty separation and proper flow/zoning.
+  — HISI and WHO guidelines: named references, informational.
+
+Documentation: No star — IPC round/audit records confirming adequate space and correct
+zoning are the required evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.7.b
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+Cleaning, packing, disinfection and / or sterilisation, storing and the issue of
+items is done as per the written guidance.
+
+Guidebook interpretation:
+The written guidance shall be in consonance with national and/or international guidelines.
+A good reference is "CDC Guideline for Disinfection and Sterilization in Healthcare
+Facilities, 2008". Other references include the Hospital Infection Society India (HISI)
+guidelines. Cleaning of used instrument/equipment/device shall preferably be done in the
+CSSD. However, if the same is done in patient care areas, adequate measures are taken for
+infection prevention. Cleaning ensures that visible biological material and dirt is
+removed. After cleaning the instrument, sets are prepared and packed using the appropriate
+material. Shelf life of sterilised items is defined and monitored to increase efficacy.
+Spaulding's classification guides the decision to do high/intermediate/low-level
+disinfection. Disinfection/sterilisation is performed as per the written guidance. Flash
+sterilisation shall only be done in exceptional situations when there is insufficient time
+to sterilise an item by the preferred method. The sterilised/disinfected equipment/sets
+shall be stored appropriately across the organisation and not just in CSSD. The expiry
+date of sterilised instruments/equipment shall be guided by the packing material used and
+the mode of sterilisation.
+
+Stop-work check: CORE and starred. STOP-WORK TRIGGER: Issue of an item from CSSD/sterile
+store when the sterilisation or disinfection process for that load was not performed as per
+written guidance, or when load validation has failed, is a stop-work trigger. The IPC.7
+stop-work authority in Section 6 of this policy applies.
+
+Mandatory (shall):
+  1. Written guidance shall be in consonance with national/international guidelines.
+  2. Cleaning shall remove visible biological material and dirt.
+  3. Sets shall be prepared and packed using appropriate material after cleaning.
+  4. Shelf life of sterilised items shall be defined and monitored.
+  5. Spaulding's classification shall guide the decision to do high/intermediate/low-level
+     disinfection.
+  6. Disinfection/sterilisation shall be performed as per the written guidance.
+  7. Flash sterilisation shall only be done in exceptional situations when there is
+     insufficient time to sterilise by the preferred method — this is an explicit
+     prohibition on routine flash sterilisation.
+  8. Sterilised/disinfected equipment/sets shall be stored appropriately across the
+     organisation, not only in CSSD.
+  9. Expiry date of sterilised items shall be guided by the packing material and mode
+     of sterilisation.
+
+Illustrative only:
+  — Cleaning preferably done in CSSD: "preferably" — aspirational; if done in patient-
+    care areas, adequate IPC measures shall be in place.
+  — CDC Guideline for Disinfection and Sterilization 2008 and HISI guidelines: named
+    references, informational.
+
+CORE status: Absence of written guidance for the full cleaning-packing-sterilisation-
+storage-issue cycle is a CORE gap. Issue without following written guidance is a CORE gap
+and stop-work trigger.
+
+Documentation: OE is starred — written guidance covering all steps, shelf-life definition,
+Spaulding classification decision table, and load/issue records must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.7.c
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Reprocessing of instruments, equipment and devices are done as per written guidance.
+
+Guidebook interpretation:
+The organisation identifies instruments, equipment and devices which are suitable for
+re-use. The number of re-uses and the process of re-use of these items are defined and
+monitored. The patient is informed about the same. The written guidance addresses
+cleaning, disinfection or sterilisation between patients. The written guidance shall be
+in consonance with the available good practices.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Issue of a
+reprocessed single-use item without a documented, accepted method and risk assessment is
+a gap evidenced at assessment; it does not independently trigger the IPC.7 stop-work
+section (which is triggered at load validation failure or recall, not reprocessing-status
+checks).
+
+Mandatory (shall):
+  1. Instruments, equipment and devices suitable for re-use shall be identified.
+  2. The number of re-uses for each identified item shall be defined and monitored.
+  3. The process of re-use (reprocessing method) shall be defined and monitored.
+  4. The patient shall be informed about re-use of items — this is explicitly mandatory
+     from the Guidebook.
+  5. Written guidance shall address cleaning, disinfection or sterilisation between
+     patients for each reprocessed item.
+  6. Written guidance shall be in consonance with available good practices.
+
+Illustrative only:
+  — No "for example" or "preferable" items in this OE's interpretation beyond what
+    is listed above. All elements above carry "shall" force or equivalent.
+
+Note for policy writer: The patient-information requirement is an explicit mandatory
+item from the Guidebook ("The patient is informed about the same"). It should appear in
+the policy as a requirement, not as an optional step.
+
+Documentation: OE is starred — a documented list of items identified for re-use (with
+maximum re-use count), reprocessing method per item, patient information records, and
+compliance monitoring records must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.7.d
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Regular validation tests for sterilisation are carried out and documented.
+
+Guidebook interpretation:
+This shall be done by accepted methods, for example bacteriologic, strips, etc.
+Physical/chemical tests shall be done daily, and biological tests at least weekly.
+Engineering validations like Bowie-Dick tape test and leak rate test need to be carried
+out. Each load shall have a unique number and content description. Where applicable,
+temperature, pressure and time-record chart shall be maintained. A good reference is
+"CDC Guideline for Disinfection and Sterilization in Healthcare Facilities, 2008".
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. However, a
+failed validation test is the trigger for IPC.7.e (recall procedure) and the IPC.7
+stop-work section. A load that fails validation may not be issued; if issue has already
+occurred, the recall procedure in IPC.7.e applies.
+
+Mandatory (shall):
+  1. Physical/chemical tests shall be done daily — the daily minimum is explicit and
+     mandatory; do not soften to "regularly".
+  2. Biological tests shall be done at least weekly — the weekly minimum is explicit
+     and mandatory.
+  3. Engineering validations — including Bowie-Dick tape test and leak rate test —
+     shall be carried out.
+  4. Each load shall have a unique number and content description.
+  5. Where applicable, temperature, pressure and time-record chart shall be maintained.
+
+Illustrative only:
+  — Bacteriologic, strips: examples of accepted methods ("for example"). The organisation
+    uses validated methods; these are examples, not a closed list.
+  — CDC Guideline 2008: named reference, informational.
+
+Documentation: OE is starred — load records (unique load number, content description,
+physical/chemical indicator results, biological indicator results, temperature/pressure/
+time charts as applicable) must be on file for each sterilisation load.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.7.e
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The established recall procedure is implemented when a breakdown in the sterilisation
+system is identified.
+
+Guidebook interpretation:
+The organisation shall ensure that the sterilisation procedure is regularly monitored
+and in the eventuality of a breakdown it has written guidance for withdrawal of such
+items. The organisation could have a batch-processing system with date and machine number
+for effective recall. The processes could be verified through a mock drill.
+
+Stop-work check: STOP-WORK TRIGGER: Issue of an instrument, device or pack from sterile
+storage when a recall of that load or machine is in effect is a stop-work trigger. The
+stop-work authority in Section 6 of this policy applies.
+
+Mandatory (shall):
+  1. The sterilisation procedure shall be regularly monitored.
+  2. Written guidance for withdrawal (recall) of items when a breakdown is identified
+     shall exist.
+  3. The recall procedure shall be implemented when a breakdown is identified — both
+     the procedure and its implementation are mandatory.
+
+Illustrative only:
+  — Batch-processing system with date and machine number: "could have" — aspirational
+    mechanism for effective recall; the underlying requirement is the ability to trace
+    and withdraw items. A batch system is the recommended approach.
+  — Mock drill: "could be verified through a mock drill" — the Guidebook uses "could"
+    (aspirational). The policy implementation (method_bodies) treats a mock recall run
+    at least annually as a mandatory practice to verify the procedure. The policy draft
+    should include this as a mandatory practice; this is a policy enhancement beyond the
+    bare Guidebook text.
+
+DISCREPANCY NOTE: Guidebook says "could be verified through a mock drill" (aspirational).
+The method_bodies policy implementation states "A mock recall is run at least annually"
+(mandatory). The policy draft treats the annual mock drill as mandatory. This is documented
+here for traceability.
+
+Documentation: OE is starred — written recall procedure, records of any actual recalls
+implemented, and records of at least one annual mock recall exercise must be on file.
+
+
+══════════════════════════════════════════════════════════════════════════════
+IPC.8 — Prevention of Healthcare Associated Infections in Staff
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+The organisation takes action to prevent or reduce healthcare associated infections
+in its staff.
+
+Standard is NOT starred.
+
+OE count: 5 | COREs: none | Stars: a★, b★, e★ | Achievement: c | Excellence: none
+All OEs except IPC.8.c are Commitment level.
+STOP-WORK: YES — continue duty against a work restriction; skip post-exposure
+                   prophylaxis after a blood/body-fluid exposure.
+
+Prepared by: Infection Prevention and Control Officer | Doc no: HCO/IPC/POL/08
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.8.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation implements occupational health and safety practices as per written
+guidance to reduce the risk of transmitting microorganisms among health care providers.
+
+Guidebook interpretation:
+Written guidance shall be available on occupational health and safety practices. The
+organisation provides adequate resources to its staff for infection prevention and
+control. Staff shall adhere to standard precautions. Where appropriate, the organisation
+shall have a pre-employment health screening and capture immunisation status. Refer to
+IPC.2.c., IPC.3.a., IPC.3.b. and HRM.2.b.
+
+[Note: "_b. HB." at end of Guidebook source is an OCR artefact. Discarded. Cross-refs
+to IPC.2.c, IPC.3.a, IPC.3.b, HRM.2.b are informational — in policy draft: "those
+requirements are covered in the hospital's other policies."]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. IPC.8 stop-work
+triggers are at IPC.8.c (work restrictions) and IPC.8.e (PEP). This OE governs the
+written occupational-health framework.
+
+Mandatory (shall):
+  1. Written guidance shall be available on occupational health and safety practices —
+     the OE text requires implementation "as per written guidance"; the guidance must
+     exist.
+  2. Adequate resources shall be provided to staff for infection prevention and control.
+  3. Staff shall adhere to standard precautions — this "shall" is from the Guidebook text;
+     it is cross-referenced to IPC.3.a which covers the detail.
+  4. Pre-employment health screening and capture of immunisation status: "Where
+     appropriate" — this is a qualified mandatory; the organisation defines what is
+     appropriate for its staffing model.
+
+Illustrative only:
+  — The specific cross-references to IPC.2.c, IPC.3.a, IPC.3.b, and HRM.2.b are
+    informational — those requirements are covered in the hospital's other policies.
+
+Documentation: OE is starred — written occupational health and safety guidance (covering
+PPE, vaccination access, exposure reporting, work restriction, and pre-employment
+screening) must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.8.b
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation implements an immunisation policy for its staff.
+
+Guidebook interpretation:
+The organisation's immunisation policy for its staff shall be in consonance with the
+available evidence. At a minimum, Hepatitis B vaccination shall be provided to staff
+involved in direct patient care. Other relevant immunisation is provided as per the risk
+from time to time and in accordance with applicable statutory requirements.
+
+Stop-work check: Commitment — no stop-work trigger at this OE.
+
+Mandatory (shall):
+  1. The immunisation policy shall be in consonance with the available evidence.
+  2. At minimum, Hepatitis B vaccination shall be provided to staff involved in direct
+     patient care — the Hepatitis B vaccination floor is explicitly mandatory.
+  3. Other relevant immunisation shall be provided as per the risk from time to time and
+     in accordance with applicable statutory requirements.
+
+Illustrative only:
+  — No "for example" or "preferable" items beyond what is stated above. All elements
+    carry mandatory force.
+
+Documentation: OE is starred — written immunisation policy, immunisation register (staff
+name, vaccine, dose, date, booster schedule), and evidence of Hepatitis B vaccination
+coverage for all direct-patient-care staff must be on file.
+
+Note for policy writer: An unvaccinated direct-care worker without a documented
+contraindication or documented refusal is a gap at this starred element.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.8.c
+Level: Achievement | No star
+
+Verbatim OE text:
+The organisation implements work restrictions for health care providers with transmissible
+infections.
+
+Guidebook interpretation:
+The restrictions could include limiting role and responsibilities for health care providers
+with transmissible infections. The organisation encourages health care providers to report
+their illness or exposures and does not penalise them. Examples of transmissible infections
+include acute conjunctivitis, chickenpox, acute respiratory infections, smear-positive
+case of tuberculosis etc.
+
+Stop-work check: Achievement. STOP-WORK TRIGGER: A healthcare provider continuing
+clinical duty when a work restriction for a transmissible infection applies to them is
+a stop-work trigger. The colleague who identifies the situation has stop-work authority.
+The stop-work authority in Section 6 of this policy applies.
+
+Mandatory (shall):
+  1. Work restrictions for healthcare providers with transmissible infections shall be
+     implemented — the OE text uses "implements", carrying mandatory force.
+  2. The organisation shall encourage healthcare providers to report illness or exposures
+     and shall not penalise them for reporting.
+
+Illustrative only:
+  — "Could include limiting role and responsibilities" — describes how restrictions may
+    be structured; the form is for the organisation to determine.
+  — Acute conjunctivitis, chickenpox, acute respiratory infections, smear-positive TB:
+    examples of transmissible infections ("Examples of transmissible infections include
+    ... etc.") — not a closed list; the Guidebook uses "etc." signalling the list is
+    open.
+
+Achievement level note: Evidence of restrictions that were actually applied (not just
+a policy document), and a culture of reporting without fear of penalty, is what
+assessors look for. A policy statement alone is insufficient for this Achievement OE.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.8.d
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation implements measures for blood and body fluid exposure prevention.
+
+Guidebook interpretation:
+The organisation ensures that health care providers use appropriate personnel protective
+equipment to prevent blood and body fluid exposures. The organisation shall strive to
+eliminate the use of needle devices whenever safe and effective alternatives are available.
+It could consider providing needle devices with safety features.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. IPC.8.e (PEP)
+is the stop-work trigger for the post-exposure event. This OE governs prevention of
+exposure. From method_bodies, a recapping culture on a unit is treated as an incident;
+this is the enforcement mechanism for the prevention obligation.
+
+Mandatory (shall):
+  1. Healthcare providers shall use appropriate PPE to prevent blood and body fluid
+     exposures.
+  2. The organisation shall strive to eliminate the use of needle devices whenever safe
+     and effective alternatives are available — "shall strive" carries a strong
+     aspiration approaching mandatory obligation.
+
+Illustrative only:
+  — Needle devices with safety features: "could consider" — aspirational.
+
+Note for policy writer: From the method_bodies, the practice of sharps containers being
+at the point of use and replaced before they are full is a standard policy practice
+implementation for this OE, going beyond the bare Guidebook text. Include it in the policy.
+
+Documentation: No star — IPC round records confirming PPE availability and safe-sharps
+practices (including no-recapping observation records) are the required evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.8.e
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Appropriate post-exposure prophylaxis is provided to all staff members concerned.
+
+Guidebook interpretation:
+The organisation provides post-exposure prophylaxis for hepatitis B and HIV exposure.
+This shall align with National and/or International guidelines. Infection prevention and
+control Nurse maintains documentation of post-exposure prophylaxis records. For example,
+PEP for needle stick injury.
+
+Stop-work check: STOP-WORK TRIGGER: Leaving a blood or body-fluid exposure (including
+a needle-stick) without starting the organisation's post-exposure path the same shift is
+a stop-work trigger. The stop-work authority in Section 6 of this policy applies.
+
+Mandatory (shall):
+  1. PEP for hepatitis B exposure shall be provided — the hepatitis B PEP is explicitly
+     named as mandatory.
+  2. PEP for HIV exposure shall be provided — the HIV PEP is explicitly named as
+     mandatory.
+  3. PEP shall align with national/international guidelines.
+  4. The IPC Nurse shall maintain documentation of PEP records.
+
+Illustrative only:
+  — PEP for needle-stick injury: example of a qualifying exposure event ("For example");
+    not the only type of exposure requiring PEP.
+
+Documentation: OE is starred — written PEP protocol aligned with national/international
+guidelines, and a PEP record file maintained by the IPC Nurse (with the staff member's
+name, date, type of exposure, PEP given, follow-up) must be on file. Confidentiality of
+the record follows the hospital's patient/staff confidentiality policy.
+
+
+══════════════════════════════════════════════════════════════════════════════
+STOP-WORK SECTION OUTPUTS — IPC.7, IPC.8
+(Complete stop_work_text() function output for the two flagged standards)
+══════════════════════════════════════════════════════════════════════════════
+
+─────────────────────────────────────────────────────────────────────────────
+STOP-WORK — IPC.7 (Standard 7: Sterilisation and Disinfection of Instruments,
+             Equipment and Devices)
+─────────────────────────────────────────────────────────────────────────────
+
+Do not issue an instrument, device or pack from sterile storage when validation of
+that sterilisation load has failed, or when a recall of that load or machine is in
+effect.
+
+Stop-work applies to issue from CSSD / sterile store. Immediate life-saving use of
+the only available item is documented and the CSSD In-Charge is told the same shift.
+
+The person who stops tells the CSSD In-Charge and the Infection Prevention and Control
+Officer the same shift. Refusing to issue a failed or recalled load is not a
+disciplinary matter.
+
+
+─────────────────────────────────────────────────────────────────────────────
+STOP-WORK — IPC.8 (Standard 8: Prevention of Healthcare Associated Infections in Staff)
+─────────────────────────────────────────────────────────────────────────────
+
+Do not continue clinical duty when a work restriction for a transmissible infection
+applies to you.
+
+Do not leave a blood or body-fluid exposure (including a needle-stick) without starting
+the organisation's post-exposure path the same shift.
+
+Stop-work applies to the restricted duty and to delay of PEP. Immediate first aid at
+the exposure site starts at once.
+
+The person who stops (or the colleague who sees the restriction being ignored) tells
+the Occupational Health Physician and the Infection Prevention and Control Officer the
+same shift. Reporting an exposure or observing a restriction is not a disciplinary matter.
+
+
+══════════════════════════════════════════════════════════════════════════════
+END OF IPC.7–IPC.8 RAW SOURCE DUMP
+══════════════════════════════════════════════════════════════════════════════

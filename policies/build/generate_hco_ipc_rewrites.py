@@ -1780,15 +1780,8 @@ def gen_ipc5():
        "Accreditation Standards for Hospitals, 6th Edition. IPC.5.")
     ln(doc, "Guidebook interpretation supplied for IPC.5.a through IPC.5.d.")
     ln(doc,
-       "CDC Guidelines for Prevention of Catheter-Associated Urinary Tract Infections.")
-    ln(doc,
-       "CDC/HICPAC Guidelines for Prevention of Healthcare-Associated Pneumonia "
-       "(VAP reference).")
-    ln(doc,
-       "CDC Guidelines for the Prevention of Intravascular Catheter-Related "
-       "Infections (CLABSI reference).")
-    ln(doc,
-       "CDC Guidelines for the Prevention of Surgical Site Infection.")
+       "CDC/WHO/SHEA guidelines for prevention of healthcare-associated infections "
+       "(referenced for the CAUTI, VAP, CLABSI and SSI bundles).")
     ln(doc,
        f"Internal documents of {HN}: CAUTI, VAP, CLABSI and SSI bundle documents; "
        "compliance monitoring records; HAI rate reports.")
@@ -2196,6 +2189,713 @@ def gen_ipc6():
       "IPC.6 has no stop-work section.")
 
     save_and_verify(doc, "HCO_IPC_6_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# IPC.7 — Sterilisation and Disinfection of Instruments, Equipment and Devices
+#          (HAS stop-work: Section 6)
+# COREs: b | Stars: b*, c*, d*, e* | Achievement: none
+# Prepared by: CSSD In-Charge | Doc: HCO/IPC/POL/07
+# Stop-work trigger: issue from CSSD / sterile store when load validation failed
+#   or a recall is in effect
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_ipc7():
+    doc = Document()
+
+    h(doc, 0, "Policy on Sterilisation and Disinfection of Instruments, Equipment and Devices")
+    p(doc, HN)
+
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/IPC/POL/07", "CSSD In-Charge")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      f"{HN} provides adequate space and appropriate zoning in the CSSD, follows written "
+      "guidance aligned with national/international standards for the full cleaning-packing-"
+      "sterilisation-storage-issue cycle, conducts daily physical/chemical and at least "
+      "weekly biological validation tests, implements a documented recall procedure on any "
+      "sterilisation breakdown, and does not issue from a failed or recalled load.")
+
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} implements infection prevention through sterilisation "
+      "and disinfection of instruments, equipment and devices: providing adequate CSSD space "
+      "and zoning; following written guidance for every step of the cleaning-packing-"
+      "sterilisation-storage-issue cycle; managing reprocessing of identified re-usable "
+      "items; carrying out and documenting regular validation tests; and implementing the "
+      "recall procedure when a sterilisation breakdown is identified.")
+    p(doc,
+      "IPC in clinical areas, support services, HAI-prevention bundles, and IPC surveillance "
+      "are covered in separate hospital policies.")
+
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to CSSD staff, nursing staff who handle sterile instruments "
+      f"and equipment in clinical areas, and all staff responsible for sterilisation, "
+      f"disinfection, storage and issue of instruments, equipment and devices at {HN}.")
+
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN}'s CSSD has a suitable location, unidirectional flow, and defined zoning with "
+      "separation of clean and dirty areas and sufficient space. The full cycle — cleaning, "
+      "packing, disinfection/sterilisation, storage, and issue — is performed as per written "
+      "guidance that is in consonance with national/international guidelines. Cleaning removes "
+      "visible biological material and dirt. Spaulding's classification guides the level of "
+      "disinfection. Shelf life is defined by packing material and mode of sterilisation. "
+      "Flash sterilisation is used only in exceptional situations. Sterilised items are stored "
+      "appropriately across the organisation. Instruments identified for re-use are listed; "
+      "the number of re-uses and reprocessing method are defined, monitored, and patients are "
+      "informed. Physical/chemical tests are performed daily and biological tests at least "
+      "weekly; Bowie-Dick and leak rate tests are carried out; each load has a unique number. "
+      "Written recall guidance exists; the recall procedure is implemented on any breakdown; "
+      "a mock recall is run at least annually.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not issue an instrument, device or pack from sterile storage when validation "
+       "of that sterilisation load has failed, or when a recall of that load or machine "
+       "is in effect.")
+    lb(doc,
+       "Do not perform flash sterilisation routinely — use it only in exceptional situations "
+       "when there is insufficient time to sterilise by the preferred method.")
+    lb(doc,
+       "Do not skip daily physical/chemical tests or weekly biological tests for any "
+       "sterilisation cycle.")
+    lb(doc,
+       "Do not issue sterilised items without confirming the load number, content, and "
+       "expiry date.")
+    lb(doc,
+       "Do not reprocess an item beyond its defined number of re-uses, and do not "
+       "reprocess single-use items unless a documented, accepted method and risk "
+       "assessment exist.")
+    lb(doc,
+       "Do not handle used instruments without adequate infection prevention measures "
+       "in place, whether cleaning is done in CSSD or in a patient-care area.")
+
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Provide adequate space and appropriate zoning")
+    p(doc,
+      f"{HN}'s CSSD (or designated sterilisation area) has a suitable location with a "
+      "proper layout providing unidirectional flow and zoning. Clean and dirty areas are "
+      "separated. Sufficient space is available to ensure sterilisation activities can "
+      "be performed properly. The layout aims to have separate areas for receiving, "
+      "washing, cleaning, packing, sterilisation, sterile storage and issue; this is the "
+      "optimal arrangement. The CSSD In-Charge and the IPC Officer walk the zoning "
+      "regularly.")
+
+    h(doc, 2, "5.2 Follow written guidance for cleaning, packing, disinfection/sterilisation, "
+      "storage and issue")
+    p(doc,
+      "The full cycle is performed as per written guidance that is in consonance with "
+      "national/international guidelines. The CDC Guideline for Disinfection and "
+      "Sterilization in Healthcare Facilities and HISI guidelines are reference sources. "
+      "Cleaning of used instruments/equipment/devices removes visible biological material "
+      "and dirt; it is preferably done in the CSSD, but if done in patient-care areas, "
+      "adequate IPC measures are in place. After cleaning, sets are prepared and packed "
+      "using appropriate material. Spaulding's classification guides the decision on high/"
+      "intermediate/low-level disinfection. Disinfection/sterilisation is performed as per "
+      "written guidance. Flash sterilisation is used only in exceptional situations when "
+      "there is insufficient time to sterilise by the preferred method. Sterilised/"
+      "disinfected equipment and sets are stored appropriately across the organisation — "
+      "not only in CSSD. Shelf life and expiry date of sterilised items are guided by the "
+      "packing material used and the mode of sterilisation.")
+
+    h(doc, 2, "5.3 Manage reprocessing of instruments, equipment and devices")
+    p(doc,
+      f"{HN} identifies instruments, equipment and devices that are suitable for re-use. "
+      "The number of re-uses and the reprocessing method for each identified item are "
+      "defined and monitored. Patients are informed about the re-use of items. Written "
+      "guidance addresses cleaning, disinfection or sterilisation between patients for "
+      "each reprocessed item. The written guidance is in consonance with available good "
+      "practices. The CSSD In-Charge maintains the re-use register.")
+
+    h(doc, 2, "5.4 Carry out and document validation tests for sterilisation")
+    p(doc,
+      "Validation tests for sterilisation are carried out by accepted methods. "
+      "Physical/chemical indicator tests are performed daily. Biological indicator tests "
+      "are performed at least weekly. Engineering validations — including the Bowie-Dick "
+      "tape test and leak rate test — are carried out. Each sterilisation load has a unique "
+      "load number and content description. Where applicable, temperature, pressure and "
+      "time-record charts are maintained. The CDC Guideline for Disinfection and "
+      "Sterilization in Healthcare Facilities 2008 is a reference for validation methods. "
+      "A load that fails any validation test is not issued.")
+
+    h(doc, 2, "5.5 Implement the recall procedure on sterilisation breakdown")
+    p(doc,
+      "The sterilisation procedure is regularly monitored. When a breakdown in the "
+      "sterilisation system is identified, the written recall procedure is implemented: "
+      "issue from the affected load/machine is stopped, items from that load (traced by "
+      "unique load number, machine number, and date) are retrieved from all areas, users "
+      "are notified, and items are reprocessed or discarded. The organisation uses a "
+      "batch-processing system with date and machine number to enable effective recall. "
+      "The recall procedure is verified through a mock drill at least annually.")
+
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Do not issue an instrument, device or pack from sterile storage when validation "
+      "of that sterilisation load has failed, or when a recall of that load or machine "
+      "is in effect.")
+    p(doc,
+      "Stop-work applies to issue from CSSD / sterile store. Immediate life-saving use "
+      "of the only available item is documented and the CSSD In-Charge is told the "
+      "same shift.")
+    p(doc,
+      f"The person who stops tells the CSSD In-Charge and the Infection Prevention and "
+      "Control Officer the same shift. Refusing to issue a failed or recalled load is "
+      "not a disciplinary matter.")
+
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for ensuring the CSSD is adequately resourced, staffed, and "
+         "operating as required by this policy."),
+        ("CSSD In-Charge",
+         "Owns day-to-day implementation of this policy; maintains the processing "
+         "guidance, re-use register, and load records; approves issue; leads recalls; "
+         "receives stop-work escalations and notifies the IPC Officer the same shift."),
+        ("Infection Prevention and Control Officer",
+         "Monitors CSSD processes in IPC rounds; receives stop-work escalations; "
+         "brings sterilisation audit findings to the IPC committee."),
+        ("Nursing Superintendent",
+         "Ensures nursing staff in clinical areas check expiry dates and load numbers "
+         "of sterile items before use, and escalate any doubt about sterility."),
+        ("Quality Coordinator",
+         "Audits this policy; holds training records, staff acknowledgements, and "
+         "stop-work event logs."),
+    ])
+
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("CSSD space and zoning",
+         "Regular IPC/CSSD round records confirming adequate space, unidirectional "
+         "flow, and clean/dirty separation."),
+        ("Processing guidance compliance",
+         "Load records confirming cleaning, packing, sterilisation, storage and issue "
+         "per written guidance; Spaulding classification applied correctly."),
+        ("Re-use register",
+         "Re-use register updated; patient information records for re-used items on "
+         "file; no item issued beyond defined re-use count."),
+        ("Validation tests",
+         "Daily physical/chemical test records; weekly biological test records; "
+         "Bowie-Dick and leak rate test records; all loads with unique number and "
+         "content description."),
+        ("Recall procedure",
+         "Written recall procedure on file; annual mock recall record; records of any "
+         "actual recalls with tracing and retrieval evidence."),
+        ("Flash sterilisation",
+         "Flash sterilisation log confirming use only in exceptional documented "
+         "situations."),
+        ("Stop-work events",
+         "Stop-work events logged with trigger, action taken, and outcome."),
+    ])
+
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      "CSSD staff and nursing staff who handle sterile instruments shall be familiar "
+      "with the cleaning-packing-sterilisation-storage-issue cycle, the Spaulding "
+      "classification, the validation test schedule, the re-use register and patient "
+      "information requirement, the recall procedure, and the stop-work authority in "
+      "this policy.")
+    p(doc,
+      f"I have read the Policy on Sterilisation and Disinfection of Instruments, "
+      f"Equipment and Devices of {HN}. I will follow the processes described, including "
+      "the stop-work authority in Section 6.")
+    sig_tbl(doc)
+
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to CSSD staff, nursing staff, the IPC Officer, "
+      "department heads, and the Quality Coordinator.")
+
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CAPA",  "Corrective and Preventive Action"),
+        ("CDC",   "Centers for Disease Control and Prevention"),
+        ("CSSD",  "Central Sterile Services Department"),
+        ("HISI",  "Hospital Infection Society India"),
+        ("IPC",   "Infection Prevention and Control"),
+        ("IPCO",  "Infection Prevention and Control Officer"),
+        ("NABH",  "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("OT",    "Operation Theatre"),
+        ("PEP",   "Post-Exposure Prophylaxis"),
+        ("PPE",   "Personal Protective Equipment"),
+        ("SSI",   "Surgical Site Infection"),
+    ])
+
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk in "
+      "the Level column means documentation of the process is required.")
+    tr = tbl(doc, 6, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("IPC.7.a", "Commitment",
+         "Sections 3 and 5.1 address adequate CSSD space, suitable location, "
+         "unidirectional flow and zoning, and clean/dirty area separation."),
+        ("IPC.7.b", "CORE*",
+         "Sections 3, 5.2 and 6 address written guidance for the full cleaning-packing-"
+         "sterilisation-storage-issue cycle, in consonance with national/international "
+         "guidelines; Spaulding classification; flash sterilisation restriction; shelf "
+         "life and expiry; appropriate storage; stop-work trigger at issue of a failed "
+         "or recalled load."),
+        ("IPC.7.c", "Commitment*",
+         "Sections 3 and 5.3 address identification of re-usable items, defined re-use "
+         "count and reprocessing method, patient information, and written guidance "
+         "for cleaning/disinfection/sterilisation between patients."),
+        ("IPC.7.d", "Commitment*",
+         "Sections 3 and 5.4 address daily physical/chemical tests, at least weekly "
+         "biological tests, Bowie-Dick and leak rate tests, unique load numbers, and "
+         "temperature/pressure/time charts."),
+        ("IPC.7.e", "Commitment*",
+         "Sections 3, 5.5 and 6 address written recall procedure, implementation on "
+         "any breakdown, batch tracing by load/machine/date, and at least annual mock "
+         "recall; stop-work trigger when a recall is in effect."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "CSSD space and zoning — IPC.7.a")
+    lb(doc,
+       "CSSD layout diagram or floor plan showing unidirectional flow and clean/dirty "
+       "area zoning.")
+    lb(doc,
+       "Regular CSSD/IPC round records confirming adequate space and clean/dirty "
+       "separation.")
+
+    h(doc, 2, "Cleaning-packing-sterilisation-storage-issue guidance — IPC.7.b (CORE*)")
+    lb(doc,
+       "Written processing guidance covering all steps of the cycle, in consonance "
+       "with named national/international guidelines.")
+    lb(doc,
+       "Spaulding classification decision table in the guidance.")
+    lb(doc,
+       "Flash sterilisation log confirming use only in documented exceptional situations.")
+    lb(doc,
+       "Shelf-life and expiry-date record per packing material and sterilisation mode.")
+    lb(doc,
+       "Load records showing sterilised items stored appropriately (not only in CSSD).")
+    lb(doc,
+       "Stop-work event log for any issue-from-failed-load events.")
+
+    h(doc, 2, "Re-use register and patient information — IPC.7.c (Commitment*)")
+    lb(doc,
+       "Re-use register listing identified re-usable items with defined re-use count "
+       "and reprocessing method for each.")
+    lb(doc,
+       "Patient information records confirming patients were informed about re-use.")
+    lb(doc,
+       "Compliance monitoring records confirming no item is issued beyond its defined "
+       "re-use count.")
+
+    h(doc, 2, "Validation test records — IPC.7.d (Commitment*)")
+    lb(doc,
+       "Daily physical/chemical indicator records for each sterilisation load.")
+    lb(doc,
+       "Weekly biological indicator records.")
+    lb(doc,
+       "Bowie-Dick tape test and leak rate test records.")
+    lb(doc,
+       "Load log with unique load number, content description, and (where applicable) "
+       "temperature/pressure/time chart.")
+
+    h(doc, 2, "Recall procedure — IPC.7.e (Commitment*)")
+    lb(doc,
+       "Written recall procedure naming: stop-issue step, retrieval method by load/"
+       "machine/date, user notification path, and reprocess-or-discard decision.")
+    lb(doc,
+       "Annual mock recall exercise record with findings and any CAPA.")
+    lb(doc,
+       "Records of any actual recalls implemented, with tracing and retrieval evidence.")
+
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. IPC.7.")
+    ln(doc, "Guidebook interpretation supplied for IPC.7.a through IPC.7.e.")
+    ln(doc,
+       "CDC Guideline for Disinfection and Sterilization in Healthcare Facilities, 2008. "
+       "Centers for Disease Control and Prevention.")
+    ln(doc,
+       "Hospital Infection Society India (HISI). Guidelines for Central Sterile "
+       "Services Department.")
+    ln(doc,
+       f"Internal documents of {HN}: CSSD processing guidance; re-use register; "
+       "load records; validation test records; recall procedure; mock recall records.")
+
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied IPC.7 objective-element wording and "
+      "Guidebook interpretation into plain-language policy format. The modal strength "
+      "of the source has been preserved. Optional examples and mechanisms have not been "
+      "converted into mandatory requirements, with one exception: the annual mock recall "
+      "drill is treated as mandatory in this policy (following the standard method_bodies "
+      "implementation) although the Guidebook uses 'could be verified through a mock drill' "
+      "(aspirational). This discrepancy is documented in the IPC.7-8 raw source dump. "
+      "The prohibition on routine flash sterilisation, the daily physical/chemical and "
+      "minimum weekly biological validation test frequencies, the load-unique-number "
+      "requirement, the patient-information requirement for re-use, and the recall-on-"
+      "breakdown obligation have been retained verbatim. IPC.7 carries stop-work authority "
+      "as stated in Section 6: no issue from a failed or recalled load.")
+
+    save_and_verify(doc, "HCO_IPC_7_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# IPC.8 — Prevention of Healthcare Associated Infections in Staff
+#          (HAS stop-work: Section 6)
+# COREs: none | Stars: a*, b*, e* | Achievement: c | Excellence: none
+# Prepared by: Infection Prevention and Control Officer | Doc: HCO/IPC/POL/08
+# Stop-work triggers: continue duty against a work restriction;
+#   skip PEP after blood/body-fluid exposure
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_ipc8():
+    doc = Document()
+
+    h(doc, 0, "Policy on Prevention of Healthcare Associated Infections in Staff")
+    p(doc, HN)
+
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/IPC/POL/08", "Infection Prevention and Control Officer")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      f"{HN} implements occupational health and safety practices as per written guidance, "
+      "provides Hepatitis B vaccination to all direct-patient-care staff and other "
+      "relevant immunisation as per risk, implements work restrictions for staff with "
+      "transmissible infections, implements blood and body fluid exposure prevention "
+      "measures, and provides post-exposure prophylaxis for Hepatitis B and HIV exposure "
+      "the same shift.")
+
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} takes action to prevent or reduce healthcare "
+      "associated infections in staff: implementing occupational health and safety "
+      "practices as per written guidance; maintaining a staff immunisation programme "
+      "with a Hepatitis B vaccination floor; implementing work restrictions for "
+      "healthcare providers with transmissible infections; preventing blood and body "
+      "fluid exposures; and providing post-exposure prophylaxis aligned with national/"
+      "international guidelines.")
+    p(doc,
+      "Standard precautions, hand-hygiene guidelines, and IPC resources are covered "
+      "in the hospital's other policies.")
+
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to all staff — clinical, nursing, allied health, laboratory, "
+      f"housekeeping, CSSD, and support staff — working at {HN}, and to the Occupational "
+      f"Health Physician and the IPC Officer in their roles under this policy.")
+
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} maintains written guidance on occupational health and safety practices and "
+      "provides adequate resources to staff for IPC. Pre-employment health screening and "
+      "capture of immunisation status are conducted where appropriate. The immunisation "
+      "policy is in consonance with available evidence; at minimum, Hepatitis B vaccination "
+      "is provided to all staff in direct patient care; other relevant immunisation is "
+      "provided as per risk and statutory requirements. Work restrictions for healthcare "
+      "providers with transmissible infections are implemented; the organisation encourages "
+      "reporting of illness and does not penalise staff for reporting. Healthcare providers "
+      "use appropriate PPE to prevent blood and body fluid exposures; the organisation "
+      "strives to eliminate needle devices when safe alternatives exist; sharps containers "
+      "are at the point of use and replaced before full. PEP for Hepatitis B and HIV "
+      "exposure is provided the same shift, aligned with national/international guidelines, "
+      "and documented by the IPC Nurse.")
+    p(doc, "Staff follow the written guidance below and keep the records it requires.")
+
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not continue clinical duty when a work restriction for a transmissible "
+       "infection applies to you.")
+    lb(doc,
+       "Do not leave a blood or body-fluid exposure — including a needle-stick — "
+       "without starting the organisation's post-exposure path the same shift.")
+    lb(doc,
+       "Do not operate without Hepatitis B vaccination being available to and provided "
+       "for all staff in direct patient care.")
+    lb(doc,
+       "Do not leave a staff member's exposure event undocumented in the IPC Nurse's "
+       "PEP record file.")
+    lb(doc,
+       "Do not penalise any healthcare provider for reporting illness, an exposure, "
+       "or observing a colleague's work restriction.")
+    lb(doc,
+       "Do not recap used needles — place sharps in the puncture-proof container at "
+       "the point of use immediately after use.")
+
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Implement occupational health and safety practices as per written guidance")
+    p(doc,
+      "Written guidance on occupational health and safety practices is available and "
+      f"implemented at {HN}. The guidance covers PPE use, access to vaccination, "
+      "exposure reporting, and work restriction for transmissible infections. The "
+      "organisation provides adequate resources to staff for IPC. Staff adhere to "
+      "standard precautions as required by the hospital's IPC policies. Where "
+      "appropriate, pre-employment health screening is conducted and immunisation "
+      "status is captured. The Occupational Health Physician and the IPC Officer own "
+      "this guidance jointly. Staff are trained at induction and at least annually.")
+
+    h(doc, 2, "5.2 Implement a staff immunisation programme")
+    p(doc,
+      f"{HN}'s immunisation policy for staff is in consonance with available evidence. "
+      "At minimum, Hepatitis B vaccination is provided to all staff involved in direct "
+      "patient care. Other relevant immunisation is provided as per the risk from time "
+      "to time and in accordance with applicable statutory requirements. The Occupational "
+      "Health Physician maintains an immunisation register recording staff name, vaccine, "
+      "dose, date, and booster schedule. An unvaccinated direct-care worker without a "
+      "documented contraindication or documented refusal is a gap at this element.")
+
+    h(doc, 2, "5.3 Implement work restrictions for healthcare providers with transmissible infections")
+    p(doc,
+      f"{HN} implements work restrictions for healthcare providers with transmissible "
+      "infections. Restrictions limit the role and responsibilities of the affected "
+      "staff member until they are cleared. Examples of transmissible infections that "
+      "may trigger restrictions include acute conjunctivitis, chickenpox, acute "
+      "respiratory infections, and smear-positive tuberculosis; the list is not "
+      "exhaustive. The organisation actively encourages healthcare providers to report "
+      "their illness or exposures and does not penalise them for doing so. Evidence "
+      "of restrictions that were actually applied — not only a policy document — is "
+      "maintained.")
+
+    h(doc, 2, "5.4 Implement blood and body fluid exposure prevention measures")
+    p(doc,
+      "Healthcare providers use appropriate PPE to prevent blood and body fluid "
+      f"exposures. {HN} strives to eliminate the use of needle devices whenever safe "
+      "and effective alternatives are available. Sharps containers are at the point "
+      "of use in all clinical areas and are replaced before they are full. A recapping "
+      "culture on a unit is treated as an incident and investigated. The IPC Nurse "
+      "includes sharps safety in regular IPC rounds.")
+
+    h(doc, 2, "5.5 Provide post-exposure prophylaxis")
+    p(doc,
+      f"{HN} provides post-exposure prophylaxis (PEP) to all concerned staff members "
+      "following blood or body-fluid exposures, including needle-stick injuries. "
+      "PEP for Hepatitis B and HIV exposure is provided and aligned with national/"
+      "international guidelines. Immediate first aid at the exposure site is the first "
+      "step. The Occupational Health Physician or the emergency doctor starts the PEP "
+      "path the same shift. The IPC Nurse maintains the PEP record file in confidence, "
+      "with the staff member's name, date, type of exposure, PEP given, and follow-up "
+      "schedule. Confidentiality follows the hospital's staff confidentiality policy.")
+
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Do not continue clinical duty when a work restriction for a transmissible "
+      "infection applies to you.")
+    p(doc,
+      "Do not leave a blood or body-fluid exposure (including a needle-stick) without "
+      "starting the organisation's post-exposure path the same shift.")
+    p(doc,
+      "Stop-work applies to the restricted duty and to delay of PEP. Immediate first "
+      "aid at the exposure site starts at once.")
+    p(doc,
+      f"The person who stops (or the colleague who sees the restriction being ignored) "
+      "tells the Occupational Health Physician and the Infection Prevention and Control "
+      "Officer the same shift. Reporting an exposure or observing a restriction is not "
+      "a disciplinary matter.")
+
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for ensuring staff occupational health and IPC protections are "
+         "resourced and implemented."),
+        ("Infection Prevention and Control Officer",
+         "Owns implementation of this policy; monitors compliance; receives stop-work "
+         "escalations the same shift; brings staff infection data to the IPC committee."),
+        ("Occupational Health Physician",
+         "Owns the staff immunisation programme and immunisation register; manages "
+         "work restrictions; starts or coordinates the PEP path on the same shift as "
+         "an exposure; holds exposure event records."),
+        ("Infection Prevention and Control Nurse(s)",
+         "Maintains PEP documentation file; includes sharps safety and PPE compliance "
+         "in regular IPC rounds; raises stop-work when a trigger is observed."),
+        ("Nursing Superintendent",
+         "Ensures nursing staff comply with blood/body-fluid exposure prevention "
+         "measures and report exposures without delay."),
+        ("Department Heads",
+         "Ensure staff in their departments comply with work restrictions when applied "
+         "and support reporting without fear of penalty."),
+        ("Quality Coordinator",
+         "Audits this policy; holds training records, staff acknowledgements, and "
+         "stop-work event logs."),
+    ])
+
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Occupational health guidance",
+         "Written guidance available and current; pre-employment screening conducted "
+         "where appropriate; staff trained at induction and annually."),
+        ("Immunisation programme",
+         "Immunisation register current; Hepatitis B coverage confirmed for all direct-"
+         "patient-care staff; statutory requirements met."),
+        ("Work restrictions",
+         "Records of work restrictions applied; reporting culture evidenced (staff "
+         "report illness without penalty)."),
+        ("Blood/body-fluid exposure prevention",
+         "Sharps containers at the point of use in all clinical areas; regular IPC "
+         "rounds confirm no recapping; PPE availability confirmed."),
+        ("PEP provision",
+         "PEP record file maintained by IPC Nurse; PEP aligned with national/"
+         "international guidelines; no missed same-shift starts."),
+        ("Stop-work events",
+         "Stop-work events logged with trigger, action taken, and outcome."),
+    ])
+
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      "All clinical and nursing staff shall be familiar with the occupational health "
+      "and safety guidance, the immunisation programme, the work restriction process, "
+      "blood and body fluid exposure prevention (including safe-sharps practice), and "
+      "the PEP path and stop-work authority in this policy.")
+    p(doc,
+      f"I have read the Policy on Prevention of Healthcare Associated Infections in "
+      f"Staff of {HN}. I will follow the processes described, including the stop-work "
+      "authority in Section 6.")
+    sig_tbl(doc)
+
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to the IPC Officer, the Occupational Health "
+      "Physician, IPC Nurse(s), all clinical and nursing staff, department heads, "
+      "and the Quality Coordinator.")
+
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CAPA",  "Corrective and Preventive Action"),
+        ("CSSD",  "Central Sterile Services Department"),
+        ("HIV",   "Human Immunodeficiency Virus"),
+        ("IPC",   "Infection Prevention and Control"),
+        ("IPCO",  "Infection Prevention and Control Officer"),
+        ("IPCN",  "Infection Prevention and Control Nurse"),
+        ("NABH",  "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("PEP",   "Post-Exposure Prophylaxis"),
+        ("PPE",   "Personal Protective Equipment"),
+        ("TB",    "Tuberculosis"),
+        ("WHO",   "World Health Organization"),
+    ])
+
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk in "
+      "the Level column means documentation of the process is required.")
+    tr = tbl(doc, 6, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("IPC.8.a", "Commitment*",
+         "Sections 3 and 5.1 address written occupational health and safety guidance, "
+         "adequate IPC resources for staff, standard-precaution adherence, and where-"
+         "appropriate pre-employment screening and immunisation-status capture."),
+        ("IPC.8.b", "Commitment*",
+         "Sections 3 and 5.2 address the staff immunisation policy in consonance with "
+         "evidence, the Hepatitis B vaccination floor for direct-patient-care staff, "
+         "and other relevant immunisation as per risk and statutory requirements."),
+        ("IPC.8.c", "Achievement",
+         "Sections 3, 5.3 and 6 address work restrictions for healthcare providers "
+         "with transmissible infections, the culture of reporting without penalty, and "
+         "the stop-work trigger when a restriction is disregarded."),
+        ("IPC.8.d", "Commitment",
+         "Sections 3 and 5.4 address PPE for blood/body-fluid exposure prevention, "
+         "striving to eliminate needle devices, sharps containers at the point of use, "
+         "and a no-recapping rule."),
+        ("IPC.8.e", "Commitment*",
+         "Sections 3, 5.5 and 6 address PEP for Hepatitis B and HIV exposure, "
+         "alignment with national/international guidelines, same-shift start, IPC Nurse "
+         "documentation, and the stop-work trigger for delayed PEP."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Occupational health and safety guidance — IPC.8.a (Commitment*)")
+    lb(doc,
+       "Written occupational health and safety guidance covering PPE, vaccination "
+       "access, exposure reporting, and work restriction.")
+    lb(doc,
+       "Pre-employment health screening records (where conducted) and immunisation "
+       "status capture at induction.")
+    lb(doc,
+       "Staff training records for occupational health and safety at induction and "
+       "annually.")
+
+    h(doc, 2, "Staff immunisation programme — IPC.8.b (Commitment*)")
+    lb(doc,
+       "Written staff immunisation policy in consonance with available evidence.")
+    lb(doc,
+       "Immunisation register: staff name, vaccine, dose(s), date(s), booster schedule "
+       "— current for all staff.")
+    lb(doc,
+       "Hepatitis B vaccination coverage record confirming all direct-patient-care "
+       "staff are vaccinated (or have a documented contraindication or refusal).")
+
+    h(doc, 2, "Work restrictions — IPC.8.c (Achievement)")
+    lb(doc,
+       "Written work restriction policy/guideline listing conditions and restriction "
+       "types.")
+    lb(doc,
+       "Records of actual work restrictions applied (case records) — policy alone "
+       "does not satisfy this Achievement OE.")
+    lb(doc,
+       "Evidence of reporting culture: documentation that staff are encouraged to "
+       "report illness/exposure and are not penalised.")
+
+    h(doc, 2, "Blood and body fluid exposure prevention — IPC.8.d")
+    lb(doc,
+       "Sharps container availability records confirming containers are at the point "
+       "of use in all clinical areas and replaced before full.")
+    lb(doc,
+       "Regular IPC round records confirming no recapping practice observed.")
+    lb(doc,
+       "Needle-stick / exposure incident records and investigation outcomes.")
+
+    h(doc, 2, "PEP provision — IPC.8.e (Commitment*)")
+    lb(doc,
+       "Written PEP protocol for Hepatitis B and HIV exposure, aligned with named "
+       "national/international guidelines.")
+    lb(doc,
+       "PEP record file maintained by the IPC Nurse: staff name, date, exposure type, "
+       "PEP administered, follow-up schedule.")
+    lb(doc,
+       "Evidence of same-shift start for each PEP event.")
+    lb(doc,
+       "Stop-work event log for any delayed-PEP events.")
+
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. IPC.8.")
+    ln(doc, "Guidebook interpretation supplied for IPC.8.a through IPC.8.e.")
+    ln(doc,
+       f"Internal documents of {HN}: occupational health guidance; staff immunisation "
+       "register; work restriction records; PEP protocol and PEP record file.")
+
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      "This policy reorganises the supplied IPC.8 objective-element wording and "
+      "Guidebook interpretation into plain-language policy format. The modal strength "
+      "of the source has been preserved. Optional examples and mechanisms have not been "
+      "converted into mandatory requirements. The Hepatitis B vaccination floor for "
+      "direct-patient-care staff, the same-shift PEP start requirement, the IPC Nurse "
+      "documentation obligation, the non-penalisation requirement for staff who report "
+      "illness or exposures, and the no-recapping practice requirement have been retained "
+      "as mandatory requirements. The examples of transmissible infections triggering work "
+      "restrictions (conjunctivitis, chickenpox, ARI, smear-positive TB) are treated as "
+      "illustrative, not as a closed list. IPC.8 carries stop-work authority as stated "
+      "in Section 6: continued duty against a work restriction, and delay of PEP after "
+      "a qualifying exposure.")
+
+    save_and_verify(doc, "HCO_IPC_8_v2_REWRITE_DRAFT.docx")
 
 
 # ══════════════════════════════════════════════════════════════════════════════
