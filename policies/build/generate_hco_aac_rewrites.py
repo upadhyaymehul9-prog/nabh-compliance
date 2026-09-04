@@ -2103,6 +2103,1034 @@ def gen_aac8():
     save_and_verify(doc,"HCO_AAC_8_v2_REWRITE_DRAFT.docx")
 
 
+# ══════════════════════════════════════════════════════════════════════════════
+# AAC.9 — Imaging Quality Assurance and Safety Programme  [HAS STOP-WORK]
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_aac9():
+    doc = Document()
+    h(doc, 0, "Policy on Imaging Quality Assurance and Safety Programme")
+    p(doc, HN)
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/AAC/POL/09", "Imaging In-Charge")
+    h(doc, 1, "Statement of intent")
+    p(doc, f"{HN} implements a comprehensive quality assurance and safety programme for imaging "
+          f"services, meeting statutory AERB requirements, screening patients before radiation or "
+          f"MRI exposure, using and testing radiation-safety devices, and training imaging and "
+          f"ancillary staff in safety practices.")
+    h(doc, 1, "1. Purpose")
+    p(doc, f"This policy explains how {HN} maintains an imaging quality assurance and safety "
+          f"programme: equipment and protocol quality assurance, appropriateness screening of "
+          f"investigation orders, peer review of imaging results, clinico-radiological meetings, "
+          f"CAPA on QA deviations, the radiation-safety programme and ALARA principle, pre-imaging "
+          f"safety screening, radiation-safety device use and testing, staff training, and imaging signage.")
+    p(doc, "Informed consent for contrast, sedation or interventional procedures is covered in "
+          "the hospital's other policies. AERB clearance and PC-PNDT registration for imaging "
+          "services are covered in the hospital's other policies.")
+    h(doc, 1, "2. Scope")
+    p(doc, f"This policy applies to the Imaging In-Charge, radiologists, radiographers, MRI/CT "
+          f"technologists, ancillary imaging staff, and all patients and attendants entering imaging areas.")
+    h(doc, 1, "3. Policy standards")
+    p(doc, f"{HN} implements a comprehensive quality assurance programme addressing imaging "
+          f"equipment, protocols, surveillance and safety, meeting statutory AERB requirements, "
+          f"and including CAPA for deviations.")
+    p(doc, "A radiation-safety programme is implemented following AERB guidelines and the ALARA "
+          "principle. Patients and attendants are appropriately screened for safety and risk before "
+          "imaging. Radiation-safety and monitoring devices are used and periodically tested. "
+          "Imaging and ancillary personnel are trained in safety practices, and imaging signage "
+          "is prominently displayed.")
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc, "Do not proceed with radiation or MRI exposure when required safety/risk screening "
+           "has not been completed and documented for the patient, or for any attendant entering "
+           "the imaging area.")
+    lb(doc, "Do not proceed with a radiation examination when a required radiation-safety or "
+           "monitoring device has failed its periodic test — for example a cracked lead "
+           "apron — until it is repaired or replaced.")
+    lb(doc, "Do not proceed with a radiation examination when required TLD badges are not "
+           "available for staff working with radiation sources.")
+    lb(doc, "Do not order routine, unjustified radiation exposure — for example a routine "
+           "daily chest radiograph for all ICU patients without clinical indication, especially "
+           "in paediatric or neonatal ICUs.")
+    lb(doc, "Do not display imaging signage inconsistently with regulatory requirements or omit "
+           "it from procedure rooms and operation theatres where imaging equipment is used.")
+    h(doc, 1, "5. What we do")
+    h(doc, 2, "5.1 Implement the imaging quality assurance programme")
+    p(doc, "A comprehensive quality assurance programme for imaging services is implemented, "
+          "addressing equipment, protocols, surveillance and safety, and meeting statutory AERB "
+          "requirements. Equipment tests are performed as applicable to the modalities present. "
+          "Quality assurance for nuclear medicine and radiotherapy, where those services exist, "
+          "follows AERB guidelines. Imaging protocols are reviewed to ensure optimum image quality "
+          "with minimum possible dosage.")
+    h(doc, 2, "5.2 Screen investigation orders for appropriateness")
+    p(doc, "A system screens investigation orders before imaging or interventional procedures to "
+          "ensure they are appropriate for the clinical indication, in terms of current best-practice "
+          "guidelines and patient safety. If a request is not appropriate, alternate investigations "
+          "are offered in consultation with the treating doctor. A record is maintained of instances "
+          "where the requested test was modified after consultation.")
+    h(doc, 2, "5.3 Conduct peer review of imaging results")
+    p(doc, "A peer review system reviews imaging results of CT and MRI in a structured manner. "
+          "Sample size and periodicity for each modality are defined by the organisation, at a "
+          "minimum one percent. Discrepancies are graded on severity and impact on patient "
+          "management, and CAPA to minimise recurrence is documented.")
+    h(doc, 2, "5.4 Hold clinico-radiological meetings")
+    p(doc, "Clinico-radiological meetings are conducted at pre-defined intervals to correlate "
+          "imaging results — at a minimum CT and MRI — with referring clinicians, and "
+          "are used to improve the quality of imaging results.")
+    h(doc, 2, "5.5 Document CAPA for QA deviations")
+    p(doc, "When deviations from the laid-down quality assurance programme are noted, the "
+          "organisation institutes corrective and preventive action as appropriate, and this is "
+          "documented as part of the QA programme.")
+    h(doc, 2, "5.6 Implement the radiation-safety programme")
+    p(doc, "The radiation-safety programme follows AERB guidelines and implements the As Low As "
+          "Reasonably Achievable (ALARA) principle in all investigations involving radiation, "
+          "including screening of patients at high risk for radiation. Routine unjustified radiation "
+          "is avoided. CT protocols use the lowest exposure parameters that maintain image quality "
+          "appropriate for the clinical indication. The programme is aligned with the "
+          "organisation's safety programme.")
+    h(doc, 2, "5.7 Screen patients for safety and risk before imaging")
+    p(doc, "Patients in the child-bearing age group requiring radiation exposure are screened for "
+          "pregnancy before the examination. Patients undergoing MRI are screened for any magnetic "
+          "substance. Screening is documented and applies to attendants accompanying a patient or "
+          "child into the imaging area. Informed consent is taken for contrast injection, "
+          "moderate-deep sedation, interventional procedures, and higher-risk findings on risk screening.")
+    h(doc, 2, "5.8 Use radiation-safety and monitoring devices")
+    p(doc, "Imaging personnel and patients use appropriate radiation-safety and monitoring devices "
+          "where applicable. Shielding of body parts of staff, patients and attendants uses "
+          "appropriate aprons and shields, in numbers adequate for all workers. Staff directly "
+          "working with radiation sources possess and use thermo-luminescent dosimeter (TLD) badges.")
+    h(doc, 2, "5.9 Test radiation-safety devices periodically")
+    p(doc, "Radiation-safety and monitoring devices are periodically tested and results documented. "
+          "Protective devices such as lead aprons are exposed to X-ray, fluoroscopy or CT scout "
+          "view to verify cracks and damage; images of the checks are stored. CAPA is taken and "
+          "documented where a device test result warrants it. TLD badges are replaced by fresh "
+          "badges from accredited laboratories at the frequency recommended by AERB.")
+    h(doc, 2, "5.10 Train imaging and ancillary personnel")
+    p(doc, "Imaging personnel are trained in imaging safety practices — such as MRI safety, "
+          "tube kinking, fall prevention and patient handling — and radiation-safety measures. "
+          "Ancillary staff posted in imaging, including nurses, helpers, stretcher-bearers, "
+          "housekeeping and security as applicable, are also trained.")
+    h(doc, 2, "5.11 Display imaging signage")
+    p(doc, "Imaging signage, including safety signage and signage required by regulatory "
+          "authorities, is prominently displayed in all appropriate locations — including "
+          "procedure rooms and operation theatres where imaging equipment is used.")
+    h(doc, 1, "6. Stop-work authority")
+    p(doc, "Do not proceed with radiation or MRI exposure when required safety/risk screening has "
+          "not been completed and documented for the patient (and for any attendant entering the imaging area).")
+    p(doc, "As hospital safety practice (not an NABH objective-element requirement), do not "
+          "proceed when pregnancy status is positive or uncertain for a radiation examination "
+          "until the hospital radiologist or imaging in-charge has reviewed and "
+          "documented the decision. Do not proceed with MRI when magnetic-substance screening "
+          "is incomplete or positive for a contraindication.")
+    p(doc, "Do not proceed when a required radiation-safety or monitoring device has failed its "
+          "periodic test (for example a cracked lead apron) or when required TLD badges are not "
+          "available for staff working with radiation sources.")
+    p(doc, "Stop-work applies to the imaging exposure or MRI examination, not to emergency "
+          "clinical stabilisation outside the imaging room.")
+    p(doc, "The person who stops tells the Imaging In-Charge or the "
+          "Radiation Safety Officer the same shift. Refusing to expose without "
+          "screening or with failed safety devices is not a disciplinary matter.")
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for the imaging quality assurance and safety programme; receives stop-work escalations."),
+        ("Imaging In-Charge",
+         "Owns implementation of this policy; maintains the QA programme, appropriateness screening "
+         "system, peer review, and clinico-radiological meeting schedule."),
+        ("Radiation Safety Officer",
+         "Oversees the radiation-safety programme, ALARA implementation, device testing, and TLD "
+         "badge management; receives stop-work escalations."),
+        ("Radiologists/Radiographers/Technologists",
+         "Perform pre-imaging screening, use safety devices, and follow appropriateness and ALARA protocols."),
+        ("Quality Coordinator",
+         "Audits this policy; holds training records, CAPA logs, and stop-work event logs."),
+    ])
+    h(doc, 1, "8. Quality monitoring")
+    mon9 = [
+        ("QA programme",
+         "Equipment test records; protocol review file; nuclear medicine/radiotherapy QA records where applicable."),
+        ("Appropriateness screening", "Modification log; consultation records with treating doctors."),
+        ("Peer review", "Discrepancy grading records; CAPA for recurring findings."),
+        ("Clinico-radiological meetings", "Meeting minutes; quality improvement actions arising."),
+        ("CAPA on deviations", "CAPA log with root cause, owner, and closure evidence."),
+        ("Radiation-safety programme", "ALARA protocol records; unjustified-exposure avoidance records."),
+        ("Pre-imaging screening", "Pregnancy and magnetic-substance screening records; consent records."),
+        ("Safety device use and testing",
+         "Apron/shield inventory; TLD issue and wear records; periodic test images and results."),
+        ("Training", "Induction and periodic training records for imaging and ancillary staff."),
+        ("Signage", "Signage location checklist; periodic visibility check log."),
+    ]
+    mt = tbl(doc, len(mon9)+1, 2)
+    mt.cell(0,0).text="Monitoring area"; mt.cell(0,1).text="What is monitored"
+    for ri,(a,b) in enumerate(mon9, 1): mt.cell(ri,0).text=a; mt.cell(ri,1).text=b
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc, "All imaging and ancillary personnel shall be trained in imaging safety practices and "
+          "radiation-safety measures, including the stop-work triggers in this policy, at induction and periodically.")
+    p(doc, f"I have read the Policy on Imaging Quality Assurance and Safety Programme of {HN} "
+          f"and understand my responsibilities under it.")
+    h(doc, 1, "10. Distribution")
+    p(doc, "This policy shall be available to all imaging and ancillary staff, the Radiation "
+          "Safety Officer, the Imaging In-Charge, and the Quality Coordinator.")
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("AERB",  "Atomic Energy Regulatory Board"),
+        ("ALARA", "As Low As Reasonably Achievable"),
+        ("CAPA",  "Corrective and Preventive Action"),
+        ("CT",    "Computed Tomography"),
+        ("MRI",   "Magnetic Resonance Imaging"),
+        ("NABH",  "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("TLD",   "Thermo-Luminescent Dosimeter"),
+    ])
+    h(doc, 1, "12. Traceability table")
+    p(doc, "This table is an index. It is not how the policy is organised. An asterisk in the "
+          "Level column means the objective element is starred and requires documented evidence.")
+    tr9 = [
+        ("AAC.9.a", "Commitment*", "Sections 3 and 5.1 address the imaging QA programme."),
+        ("AAC.9.b", "Achievement",  "Section 5.2 addresses appropriateness screening of investigation orders."),
+        ("AAC.9.c", "Achievement",  "Section 5.3 addresses peer review of imaging results."),
+        ("AAC.9.d", "Excellence",   "Section 5.4 addresses clinico-radiological meetings."),
+        ("AAC.9.e", "Commitment*",  "Section 5.5 addresses CAPA documentation for QA deviations."),
+        ("AAC.9.f", "Commitment*",  "Sections 3 and 5.6 address the radiation-safety programme and ALARA principle."),
+        ("AAC.9.g", "Commitment",   "Sections 3, 5.7 and 6 address pre-imaging safety screening and the related stop-work trigger."),
+        ("AAC.9.h", "Commitment",   "Section 5.8 addresses use of radiation-safety and monitoring devices."),
+        ("AAC.9.i", "Commitment*",  "Sections 5.9 and 6 address periodic testing of safety devices and the related stop-work trigger."),
+        ("AAC.9.j", "Commitment",   "Section 5.10 addresses training of imaging and ancillary personnel."),
+        ("AAC.9.k", "Commitment",   "Section 5.11 addresses imaging signage."),
+    ]
+    tt = tbl(doc, len(tr9)+1, 3)
+    tt.cell(0,0).text="Objective Element"; tt.cell(0,1).text="Level"
+    tt.cell(0,2).text="Traceability to this policy"
+    for ri,(a,b,c) in enumerate(tr9, 1): tt.cell(ri,0).text=a; tt.cell(ri,1).text=b; tt.cell(ri,2).text=c
+    h(doc, 1, "13. Required records/evidence checklist")
+    h(doc, 2, "QA programme — AAC.9.a (Commitment*)")
+    lb(doc, "QA programme document, equipment test records, protocol review file.")
+    lb(doc, "Nuclear medicine/radiotherapy QA records where applicable.")
+    h(doc, 2, "Appropriateness screening — AAC.9.b (Achievement)")
+    lb(doc, "Appropriateness screening method or checklist.")
+    lb(doc, "Modification log and consultation records with treating doctors.")
+    h(doc, 2, "Peer review — AAC.9.c (Achievement)")
+    lb(doc, "Peer-review records with discrepancy grading and CAPA.")
+    lb(doc, "Discrepancy meeting notes where held.")
+    h(doc, 2, "Clinico-radiological meetings — AAC.9.d (Excellence)")
+    lb(doc, "Meeting schedule and minutes recording correlations with clinicians.")
+    lb(doc, "Documented quality improvement actions.")
+    h(doc, 2, "CAPA on QA deviations — AAC.9.e (Commitment*)")
+    lb(doc, "CAPA log for QA and radiation-safety deviations with root-cause notes, owners, "
+           "due dates and closure evidence.")
+    h(doc, 2, "Radiation-safety programme — AAC.9.f (Commitment*)")
+    lb(doc, "Radiation-safety programme document aligned with AERB and organisation safety.")
+    lb(doc, "ALARA protocol examples and unjustified-exposure avoidance records.")
+    h(doc, 2, "Pre-imaging screening — AAC.9.g (Commitment)")
+    lb(doc, "Documented pregnancy screening and MRI magnetic-substance screening.")
+    lb(doc, "Consent records for contrast/sedation/interventional procedures.")
+    h(doc, 2, "Safety device use — AAC.9.h (Commitment)")
+    lb(doc, "Apron and shield inventory adequate for all workers.")
+    lb(doc, "TLD badge issue and wear records.")
+    h(doc, 2, "Safety device testing — AAC.9.i (Commitment*)")
+    lb(doc, "Periodic lead-apron/shield test images and results.")
+    lb(doc, "TLD replacement records per AERB-recommended frequency.")
+    lb(doc, "CAPA/removal-from-use records for failed devices.")
+    h(doc, 2, "Staff training — AAC.9.j (Commitment)")
+    lb(doc, "Induction and periodic training records for imaging and ancillary staff, with "
+           "content and attendance lists.")
+    h(doc, 2, "Imaging signage — AAC.9.k (Commitment)")
+    lb(doc, "Signage location checklist including procedure rooms and OTs with imaging equipment.")
+    lb(doc, "Periodic signage visibility check log.")
+    h(doc, 1, "14. References")
+    ln(doc, "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+           "Accreditation Standards for Hospitals, 6th Edition. AAC.9.")
+    ln(doc, "Guidebook interpretation supplied for AAC.9.a through AAC.9.k.")
+    ln(doc, f"Atomic Energy (Radiation Protection) Rules, 2004 — applicable to {HN} to "
+           f"the extent its imaging services fall within the scope of these rules.")
+    ln(doc, f"Internal documents of {HN}: QA programme document; radiation-safety programme "
+           f"document; screening and consent records; device test and TLD records; training "
+           f"records; signage checklist.")
+    h(doc, 1, "Disclaimer")
+    p(doc, f"This policy reorganises the supplied AAC.9 objective-element wording and Guidebook "
+          f"interpretation into plain-language guidance for {HN}. It does not replace the NABH "
+          f"Accreditation Standards for Hospitals, 6th Edition, or the Guidebook, which remain "
+          f"the authoritative source in case of any conflict.")
+    p(doc, f"This policy references the Atomic Energy (Radiation Protection) Rules, 2004, as "
+          f"the statutory framework for radiation-safety duties to the extent {HN}’s imaging "
+          f"services fall within its scope. This policy is not a statement of, or substitute for, "
+          f"compliance with that or any other statute; {HN} remains separately responsible for "
+          f"meeting all applicable statutory and regulatory requirements, including AERB clearance "
+          f"and monitoring obligations.")
+    p(doc, "This policy shall be reviewed at least once every year, or earlier if NABH standards "
+          "or applicable AERB regulations change.")
+    p(doc, f"This policy is the property of {HN} and is not to be reproduced or distributed "
+          f"outside the organisation without authorisation.")
+    save_and_verify(doc, "HCO_AAC_9_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# AAC.10 — Continuous and Multi-Disciplinary Patient Care
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_aac10():
+    doc = Document()
+    h(doc, 0, "Policy on Continuous and Multi-Disciplinary Patient Care")
+    p(doc, HN)
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/AAC/POL/10", "Medical Superintendent")
+    h(doc, 1, "Statement of intent")
+    p(doc, f"{HN} ensures patient care is continuous and multi-disciplinary: a named responsible "
+          f"doctor at all times, coordinated care across settings, shared clinical information, "
+          f"standardised hand-over communication, safe internal transfer, written referral guidance, "
+          f"predictable service delivery, and monitoring of the response to critical value alerts.")
+    h(doc, 1, "1. Purpose")
+    p(doc, f"This policy explains how {HN} maintains continuity and coordination of patient care "
+          f"across all care settings: naming a responsible doctor, coordinating care, sharing "
+          f"clinical information among providers, standardising hand-over, transferring patients "
+          f"safely, referring within the organisation, communicating schedule changes, and "
+          f"monitoring the response to critical value alerts.")
+    p(doc, "Multi-disciplinary care-plan discussion and transfer to another facility are covered "
+          "in the hospital's other policies.")
+    h(doc, 1, "2. Scope")
+    p(doc, f"This policy applies to all doctors and nurses providing direct patient care in "
+          f"out-patient, emergency, in-patient, intensive care, and any other care setting at {HN}.")
+    h(doc, 1, "3. Policy standards")
+    p(doc, f"{HN} identifies a qualified individual responsible for each patient's care during "
+          f"all phases of care, coordinates care among providers in each setting, and shares "
+          f"information about care and response to treatment among medical, nursing and other care providers.")
+    p(doc, "Standardised hand-over communication is implemented during shifts, between shifts, "
+          "and during transfers; patient transfer within the organisation is done safely; referral "
+          "to other departments follows written guidance; service delivery is predictable and "
+          "schedule changes are communicated; and a mechanism monitors the clinical response to "
+          "critical value alerts.")
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc, "Do not leave a patient without a named responsible doctor in any phase or setting of care.")
+    lb(doc, "Do not allow a hand-over between shifts, units or departments to proceed "
+           "undocumented, or without acknowledgement by the receiving clinician.")
+    lb(doc, "Do not transfer a patient within the organisation without documented hand-over and "
+           "takeover, or without defined accompaniment and monitoring for an unstable patient.")
+    lb(doc, "Do not refer a patient to another department or speciality outside the organisation's "
+           "written referral guidance on grades, timeframes and who may accept a referral.")
+    lb(doc, "Do not leave a critical value alert without a documented, monitored clinical response.")
+    h(doc, 1, "5. What we do")
+    h(doc, 2, "5.1 Name a responsible doctor for every patient")
+    p(doc, "During all phases of care, a qualified doctor is identified as responsible for the "
+          "patient's care. The responsible doctor's name is recorded in the patient record at "
+          "first contact and updated when responsibility changes. When the named doctor is off "
+          "duty, the covering doctor is identified and the change is recorded.")
+    h(doc, 2, "5.2 Coordinate care across settings")
+    p(doc, "Patient care is coordinated among care providers in each care setting — "
+          "out-patient, emergency, in-patient, intensive care, and any other setting the "
+          "organisation uses. The patient's requirements are communicated to providers in the "
+          "receiving setting so that orders, observations and pending tasks are not lost when "
+          "the patient moves.")
+    h(doc, 2, "5.3 Share care and response information among providers")
+    p(doc, "Information about the patient's care and response to treatment is shared among "
+          "medical, nursing and other care providers through entries in the case sheet or "
+          "electronic medical record. The patient record remains available to authorised providers.")
+    h(doc, 2, "5.4 Implement standardised hand-over communication")
+    p(doc, "Standardised hand-over communication is implemented during each staffing shift, "
+          "between shifts, and during transfers between units or departments. Hand-over by doctors "
+          "and nurses in direct patient care is documented and covers the patient's current "
+          "condition, recent changes, ongoing treatment, and possible changes or complications. "
+          "The receiving clinician acknowledges the hand-over, and interruptions during "
+          "hand-over are minimised.")
+    h(doc, 2, "5.5 Refer within the organisation following written guidance")
+    p(doc, "Referral to other departments or specialities within the organisation follows written "
+          "guidance. Referral may be for opinion, co-management or takeover, and the referral note "
+          "states the reason. Urgency is graded, and every referral is seen within a defined "
+          "timeframe per grade. Written guidance covers grades, timeframes and who may accept a referral.")
+    h(doc, 2, "5.6 Transfer patients within the organisation safely")
+    p(doc, "Patients are transported in a safe and timely manner within the organisation. Proper "
+          "hand-over and takeover are documented. Transfers to and from imaging follow the same "
+          "rule so that imaging is not delayed by transport failure. Unstable patients are "
+          "transferred with the accompaniment and monitoring defined for their clinical status.")
+    h(doc, 2, "5.7 Ensure predictable service delivery")
+    p(doc, "The organisation ensures predictable service delivery by adhering to defined timelines "
+          "for services such as laboratory, radiology, and OPD waiting time. Patients are informed "
+          "of the applicable timelines. When delivery will deviate, the patient, family and/or "
+          "caregiver is informed of the changed schedule, and the service area records that the "
+          "change was communicated.")
+    h(doc, 2, "5.8 Monitor response to critical value alerts")
+    p(doc, "A mechanism monitors whether an adequate clinical intervention has taken place in "
+          "response to a critical value alert. The attending clinician's response is documented "
+          "in progress notes or medication orders. Interventions are periodically reviewed for "
+          "timeliness and appropriateness. For out-patients, efforts are taken to alert the "
+          "patient or family about critical values.")
+    h(doc, 1, "6. Stop-work authority")
+    p(doc, "Not applicable. This standard has no stop-work authority. Gaps in continuity of care "
+          "— a missing responsible doctor, an undocumented hand-over, an uncoordinated "
+          "transfer, or an unmonitored critical value response — are addressed through the "
+          "hospital's quality monitoring and CAPA process (Section 8), not through an immediate "
+          "stop-work trigger.")
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for continuity and coordination of patient care across all settings."),
+        ("Treating/Responsible Doctor",
+         "Named as responsible for the patient's care; ensures hand-over and referral guidance "
+         "is followed; responds to critical value alerts."),
+        ("Nursing Superintendent",
+         "Ensures standardised hand-over and safe internal transfer practice among nursing staff."),
+        ("Quality Coordinator",
+         "Audits this policy; holds hand-over, referral, transfer, and critical-value-response records."),
+    ])
+    h(doc, 1, "8. Quality monitoring")
+    mon10 = [
+        ("Responsible doctor",
+         "Patient record entries naming the responsible doctor across care settings; covering-doctor records."),
+        ("Care coordination",
+         "Communication or transfer notes when patients move across care settings."),
+        ("Information sharing",
+         "Case sheet or EMR entries by multiple provider types on the same patient."),
+        ("Hand-over",
+         "Documented hand-over records for each staffing shift and transfer, with receiving-clinician acknowledgement."),
+        ("Internal referral",
+         "Referral notes with reason and grade; response-time log against defined timeframes."),
+        ("Internal transfer",
+         "Internal transfer records with hand-over/takeover; unstable-patient accompaniment and monitoring records."),
+        ("Schedule predictability",
+         "Defined service timelines; records of schedule-change communication to patient/family/caregiver."),
+        ("Critical value response",
+         "Critical value alert log; documented clinical intervention; periodic review of timeliness and appropriateness."),
+    ]
+    mt = tbl(doc, len(mon10)+1, 2)
+    mt.cell(0,0).text="Monitoring area"; mt.cell(0,1).text="What is monitored"
+    for ri,(a,b) in enumerate(mon10, 1): mt.cell(ri,0).text=a; mt.cell(ri,1).text=b
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc, "All doctors and nurses providing direct patient care shall be trained on the "
+          "responsible-doctor rule, standardised hand-over, safe internal transfer, and internal "
+          "referral guidance in this policy, at induction and periodically.")
+    p(doc, f"I have read the Policy on Continuous and Multi-Disciplinary Patient Care of {HN} "
+          f"and understand my responsibilities under it.")
+    h(doc, 1, "10. Distribution")
+    p(doc, "This policy shall be available to all clinical and nursing staff, department heads, "
+          "and the Quality Coordinator.")
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CAPA", "Corrective and Preventive Action"),
+        ("EMR",  "Electronic Medical Record"),
+        ("ICU",  "Intensive Care Unit"),
+        ("NABH", "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("OPD",  "Out-Patient Department"),
+    ])
+    h(doc, 1, "12. Traceability table")
+    p(doc, "This table is an index. It is not how the policy is organised. An asterisk in the "
+          "Level column means the objective element is starred and requires documented evidence.")
+    tr10 = [
+        ("AAC.10.a", "Commitment",  "Sections 3 and 5.1 address naming a responsible doctor for all phases of care."),
+        ("AAC.10.b", "Commitment",  "Sections 3 and 5.2 address coordination of care across settings."),
+        ("AAC.10.c", "Commitment",  "Sections 3 and 5.3 address sharing of care and response information among providers."),
+        ("AAC.10.d", "CORE",        "Sections 3 and 5.4 address standardised hand-over communication."),
+        ("AAC.10.e", "Commitment",  "Sections 3 and 5.6 address safe internal patient transfer."),
+        ("AAC.10.f", "Commitment*", "Section 5.5 addresses written referral guidance within the organisation."),
+        ("AAC.10.g", "Commitment",  "Sections 3 and 5.7 address predictable service delivery and schedule-change communication."),
+        ("AAC.10.h", "Commitment",  "Sections 3 and 5.8 address monitoring the response to critical value alerts."),
+    ]
+    tt = tbl(doc, len(tr10)+1, 3)
+    tt.cell(0,0).text="Objective Element"; tt.cell(0,1).text="Level"
+    tt.cell(0,2).text="Traceability to this policy"
+    for ri,(a,b,c) in enumerate(tr10, 1): tt.cell(ri,0).text=a; tt.cell(ri,1).text=b; tt.cell(ri,2).text=c
+    h(doc, 1, "13. Required records/evidence checklist")
+    h(doc, 2, "Responsible doctor — AAC.10.a (Commitment)")
+    lb(doc, "Patient record entry naming the responsible doctor for each phase of care.")
+    lb(doc, "Covering-doctor record when the named doctor is off duty.")
+    h(doc, 2, "Care coordination — AAC.10.b (Commitment)")
+    lb(doc, "Communication or transfer notes when patients move across care settings.")
+    h(doc, 2, "Information sharing — AAC.10.c (Commitment)")
+    lb(doc, "Case sheet or EMR entries by multiple provider types on the same patient.")
+    lb(doc, "Record of team meetings where used.")
+    h(doc, 2, "Hand-over — AAC.10.d (CORE)")
+    lb(doc, "Documented hand-over records using the standardised framework for each staffing shift.")
+    lb(doc, "Transfer hand-over with acknowledgement by the receiving team.")
+    h(doc, 2, "Internal transfer — AAC.10.e (Commitment)")
+    lb(doc, "Internal transfer record with reason, clinical status, times, hand-over and takeover.")
+    lb(doc, "Imaging transfer records; unstable-patient transfer records with accompaniment and monitoring.")
+    h(doc, 2, "Internal referral guidance — AAC.10.f (Commitment*)")
+    lb(doc, "Current written guidance for internal referral (opinion/co-management/takeover; "
+           "urgency grades; timeframes).")
+    lb(doc, "Referral notes with reason and grade; response-time log.")
+    h(doc, 2, "Predictable service delivery — AAC.10.g (Commitment)")
+    lb(doc, "Defined service timelines; record that patients were informed of timelines.")
+    lb(doc, "Record of schedule-change communication to patient/family/caregiver.")
+    h(doc, 2, "Critical value response — AAC.10.h (Commitment)")
+    lb(doc, "Critical value alert log with time and clinician notified.")
+    lb(doc, "Progress notes or orders documenting the clinical intervention.")
+    lb(doc, "Periodic review records of response timeliness and appropriateness.")
+    h(doc, 1, "14. References")
+    ln(doc, "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+           "Accreditation Standards for Hospitals, 6th Edition. AAC.10.")
+    ln(doc, "Guidebook interpretation supplied for AAC.10.a through AAC.10.h.")
+    ln(doc, f"Internal documents of {HN}: hand-over framework; internal referral guidance; "
+           f"transfer records; critical value alert log.")
+    h(doc, 1, "Disclaimer")
+    p(doc, f"This policy reorganises the supplied AAC.10 objective-element wording and Guidebook "
+          f"interpretation into plain-language guidance for {HN}. It does not replace the NABH "
+          f"Accreditation Standards for Hospitals, 6th Edition, or the Guidebook, which remain "
+          f"the authoritative source in case of any conflict.")
+    p(doc, f"This policy is intended for accreditation and internal governance purposes and is "
+          f"not a statement of, or substitute for, compliance with any specific statute; {HN} "
+          f"remains separately responsible for meeting all applicable statutory and regulatory requirements.")
+    p(doc, "This policy shall be reviewed at least once every year, or earlier if NABH standards change.")
+    p(doc, f"This policy is the property of {HN} and is not to be reproduced or distributed "
+          f"outside the organisation without authorisation.")
+    save_and_verify(doc, "HCO_AAC_10_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# AAC.11 — Preventive and Promotive Health Services
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_aac11():
+    doc = Document()
+    h(doc, 0, "Policy on Preventive and Promotive Health Services")
+    p(doc, HN)
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/AAC/POL/11", "Medical Superintendent")
+    h(doc, 1, "Statement of intent")
+    p(doc, f"{HN} provides preventive and promotive health services within its scope of services: "
+          f"written guidance for preventive and promotive care, age-appropriate screening for "
+          f"non-communicable diseases, mental health screening, immunisation, and multi-disciplinary "
+          f"health education on lifestyle modifications.")
+    h(doc, 1, "1. Purpose")
+    p(doc, f"This policy explains how {HN} provides preventive and promotive health services "
+          f"within its defined scope: written guidance governing implementation, non-communicable "
+          f"disease screening, mental health screening, paediatric and adult immunisation, and "
+          f"multi-disciplinary lifestyle health education.")
+    p(doc, f"A hospital that does not offer a particular preventive or promotive service — such "
+          f"as community outreach, a specific immunisation, or a specific screening type — does "
+          f"not claim that service; the written guidance under Section 5.1 names what is in scope.")
+    h(doc, 1, "2. Scope")
+    p(doc, f"This policy applies to treating doctors, nurses, and any other clinical staff "
+          f"involved in delivering preventive and promotive health services within the scope of "
+          f"services defined by {HN}.")
+    h(doc, 1, "3. Policy standards")
+    p(doc, f"Written guidance governs the implementation of preventive and promotive care as per "
+          f"{HN}'s scope of services. The organisation defines evidence-based, age-appropriate "
+          f"screening for non-communicable diseases and advises mental health screening and "
+          f"appropriate intervention wherever applicable.")
+    p(doc, "Evidence-based paediatric and adult immunisation is advised wherever applicable, "
+          "and a multi-disciplinary approach is adopted in imparting health education on lifestyle modifications.")
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc, "Do not deliver preventive or promotive care without written guidance defining what "
+           "is in scope, who delivers it, and how it is documented.")
+    lb(doc, f"Do not claim or promise a preventive or promotive service that falls outside "
+           f"{HN}'s defined scope of services.")
+    lb(doc, "Do not advise non-communicable disease screening that is not evidence-based or age-appropriate.")
+    lb(doc, "Do not adhere to paediatric immunisation outside the Universal Immunisation "
+           "Programme without a documented evidence-based reason.")
+    h(doc, 1, "5. What we do")
+    h(doc, 2, "5.1 Maintain written guidance for preventive and promotive care")
+    p(doc, f"Written guidance governs the implementation of preventive and promotive care as per "
+          f"{HN}'s scope of services. Preventive care focuses on measures to prevent the onset of "
+          f"diseases or health conditions — for example immunisation, health screening, health "
+          f"education and lifestyle counselling, based on age, gender and medical history. "
+          f"Promotive care involves efforts to promote overall health and well-being — for "
+          f"example healthy diet, regular exercise, stress management, mental health support, "
+          f"and patient and family education. The guidance names which preventive and promotive "
+          f"services are in scope, who delivers them, and how they are documented. Services "
+          f"outside scope are not promised or claimed.")
+    h(doc, 2, "5.2 Screen for non-communicable diseases")
+    p(doc, "The organisation defines evidence-based and contextual age-appropriate screening for "
+          "non-communicable diseases — for example screening for various cancers, diabetes and "
+          "osteoporosis. Frequency of screening increases when predisposing factors apply. "
+          "Treating doctors document the screening advised, accepted or declined, and its basis "
+          "(age, risk factors, guidance reference).")
+    h(doc, 2, "5.3 Advise mental health screening")
+    p(doc, "Mental health screening and appropriate intervention are advised for patients wherever "
+          "applicable, using validated tools where available. A positive screen leads to documented "
+          "advice, referral or intervention appropriate to the finding and to the hospital's scope.")
+    h(doc, 2, "5.4 Advise immunisation")
+    p(doc, "Evidence-based and contextual paediatric and adult immunisation is advised wherever "
+          "applicable. The Universal Immunisation Programme is adhered to for all neonates and "
+          "paediatric patients, including catch-up immunisation. Adult immunisation, where offered, "
+          "follows evidence-based guidelines. Advice, administration and refusals are recorded "
+          "in the patient record or immunisation register.")
+    h(doc, 2, "5.5 Deliver multi-disciplinary lifestyle health education")
+    p(doc, "A multi-disciplinary approach is adopted in imparting health education on lifestyle "
+          "modifications, with contributors including the clinician, nurse, dietician, "
+          "physiotherapist, occupational therapist, psychologist and medico-social worker where "
+          "those roles exist. Family members are also educated towards cessation of tobacco, "
+          "alcohol and substance abuse where relevant. Education given and disciplines involved are recorded.")
+    h(doc, 1, "6. Stop-work authority")
+    p(doc, "Not applicable. This standard has no stop-work authority. Gaps in preventive or "
+          "promotive care delivery are addressed through the hospital's quality monitoring and "
+          "CAPA process (Section 8), not through an immediate stop-work trigger.")
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for defining the scope of preventive and promotive services and ensuring "
+         "written guidance exists."),
+        ("Treating Doctor",
+         "Advises and documents NCD screening, mental health screening, and immunisation as "
+         "applicable to each patient."),
+        ("Nursing Superintendent",
+         "Supports delivery of preventive and promotive care in nursing practice; maintains immunisation records."),
+        ("Quality Coordinator",
+         "Audits this policy; holds written guidance, screening, and education records."),
+    ])
+    h(doc, 1, "8. Quality monitoring")
+    mon11 = [
+        ("Written guidance",
+         "Current written guidance for preventive and promotive care aligned to scope; "
+         "periodic audit confirming practice matches guidance."),
+        ("NCD screening",
+         "Defined NCD screening list; patient record entries of screening advised, accepted or declined."),
+        ("Mental health screening",
+         "Documented use of validated screening tools; records of intervention, advice or referral "
+         "after a positive screen."),
+        ("Immunisation",
+         "Paediatric immunisation records aligned to UIP including catch-up; adult immunisation "
+         "records where offered."),
+        ("Lifestyle education",
+         "Patient education records naming disciplines involved; periodic sample showing "
+         "multi-disciplinary input where available."),
+    ]
+    mt = tbl(doc, len(mon11)+1, 2)
+    mt.cell(0,0).text="Monitoring area"; mt.cell(0,1).text="What is monitored"
+    for ri,(a,b) in enumerate(mon11, 1): mt.cell(ri,0).text=a; mt.cell(ri,1).text=b
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc, "All treating doctors, nurses and clinical staff involved in preventive and promotive "
+          "care shall be trained on the written guidance, screening protocols, and immunisation "
+          "requirements in this policy, at induction and periodically.")
+    p(doc, f"I have read the Policy on Preventive and Promotive Health Services of {HN} and "
+          f"understand my responsibilities under it.")
+    h(doc, 1, "10. Distribution")
+    p(doc, "This policy shall be available to all clinical staff, department heads, and the Quality Coordinator.")
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CAPA", "Corrective and Preventive Action"),
+        ("NABH", "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("NCD",  "Non-Communicable Disease"),
+        ("UIP",  "Universal Immunisation Programme"),
+    ])
+    h(doc, 1, "12. Traceability table")
+    p(doc, "This table is an index. It is not how the policy is organised. An asterisk in the "
+          "Level column means the objective element is starred and requires documented evidence.")
+    tr11 = [
+        ("AAC.11.a", "Commitment*", "Sections 3 and 5.1 address written guidance for preventive and promotive care as per scope."),
+        ("AAC.11.b", "Commitment",  "Sections 3 and 5.2 address age-appropriate non-communicable disease screening."),
+        ("AAC.11.c", "Commitment",  "Sections 3 and 5.3 address mental health screening and intervention."),
+        ("AAC.11.d", "Commitment",  "Sections 3 and 5.4 address paediatric and adult immunisation."),
+        ("AAC.11.e", "Commitment",  "Sections 3 and 5.5 address multi-disciplinary lifestyle health education."),
+    ]
+    tt = tbl(doc, len(tr11)+1, 3)
+    tt.cell(0,0).text="Objective Element"; tt.cell(0,1).text="Level"
+    tt.cell(0,2).text="Traceability to this policy"
+    for ri,(a,b,c) in enumerate(tr11, 1): tt.cell(ri,0).text=a; tt.cell(ri,1).text=b; tt.cell(ri,2).text=c
+    h(doc, 1, "13. Required records/evidence checklist")
+    h(doc, 2, "Written guidance — AAC.11.a (Commitment*)")
+    lb(doc, "Current written guidance for preventive and promotive care aligned to scope, with "
+           "version and issue date.")
+    h(doc, 2, "NCD screening — AAC.11.b (Commitment)")
+    lb(doc, "Defined NCD screening list with age and risk-context criteria.")
+    lb(doc, "Patient record entries of screening advised, accepted or declined.")
+    h(doc, 2, "Mental health screening — AAC.11.c (Commitment)")
+    lb(doc, "Documented use of validated screening tools where applicable.")
+    lb(doc, "Records of intervention, advice or referral after a positive screen.")
+    h(doc, 2, "Immunisation — AAC.11.d (Commitment)")
+    lb(doc, "Paediatric immunisation records aligned to UIP including catch-up.")
+    lb(doc, "Adult immunisation advice or administration records where offered.")
+    lb(doc, "Immunisation register or patient-file entries.")
+    h(doc, 2, "Lifestyle health education — AAC.11.e (Commitment)")
+    lb(doc, "Patient education record naming disciplines involved.")
+    lb(doc, "Documentation of diet, exercise, ADL, pain or substance-cessation education where given.")
+    h(doc, 1, "14. References")
+    ln(doc, "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+           "Accreditation Standards for Hospitals, 6th Edition. AAC.11.")
+    ln(doc, "Guidebook interpretation supplied for AAC.11.a through AAC.11.e.")
+    ln(doc, "Universal Immunisation Programme, as adopted for paediatric immunisation guidance.")
+    ln(doc, f"Internal documents of {HN}: written guidance for preventive and promotive care; "
+           f"NCD screening list; immunisation register.")
+    h(doc, 1, "Disclaimer")
+    p(doc, f"This policy reorganises the supplied AAC.11 objective-element wording and Guidebook "
+          f"interpretation into plain-language guidance for {HN}. It does not replace the NABH "
+          f"Accreditation Standards for Hospitals, 6th Edition, or the Guidebook, which remain "
+          f"the authoritative source in case of any conflict.")
+    p(doc, f"This policy references the Universal Immunisation Programme as the programme method "
+          f"for paediatric immunisation guidance; it is not a statement of, or substitute for, "
+          f"compliance with any statute. {HN} remains separately responsible for meeting all "
+          f"applicable statutory and regulatory requirements.")
+    p(doc, "This policy shall be reviewed at least once every year, or earlier if NABH standards change.")
+    p(doc, f"This policy is the property of {HN} and is not to be reproduced or distributed "
+          f"outside the organisation without authorisation.")
+    save_and_verify(doc, "HCO_AAC_11_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# AAC.12 — Established Discharge Process
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_aac12():
+    doc = Document()
+    h(doc, 0, "Policy on the Established Discharge Process")
+    p(doc, HN)
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/AAC/POL/12", "Medical Superintendent")
+    h(doc, 1, "Statement of intent")
+    p(doc, f"{HN} has an established discharge process: planned in consultation with the patient "
+          f"and/or family, coordinated among departments and agencies including medico-legal and "
+          f"absconded cases, governed by written LAMA guidance, issuing a discharge summary to "
+          f"every patient, adhering to planned discharge, expanding access through domiciliary "
+          f"visits where applicable, and monitoring discharge time for continual improvement.")
+    h(doc, 1, "1. Purpose")
+    p(doc, f"This policy explains how {HN} manages the discharge process: planning discharge "
+          f"with the patient and family, coordinating discharge across departments and agencies, "
+          f"governing discharge against medical advice, issuing a discharge summary to every "
+          f"leaving patient, adhering to planned discharge, providing domiciliary visits where "
+          f"applicable, and monitoring and improving discharge time.")
+    p(doc, "The content of the discharge summary is covered in the hospital's other policies.")
+    h(doc, 1, "2. Scope")
+    p(doc, f"This policy applies to treating doctors, nursing staff, accounts and other "
+          f"departments involved in discharge, and all patients and families at {HN}.")
+    h(doc, 1, "3. Policy standards")
+    p(doc, f"The discharge process is planned in consultation with the patient and/or family and "
+          f"coordinated among all departments and agencies involved, including medico-legal and "
+          f"absconded cases. Written guidance governs the discharge of patients leaving against "
+          f"medical advice, and a discharge summary is given to all patients leaving the organisation.")
+    p(doc, f"The organisation adheres to planned discharge, expands access to health practices "
+          f"through domiciliary visits wherever applicable, and monitors discharge time, setting "
+          f"appropriate benchmarks for continual improvement.")
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc, "Do not discharge a patient without planning the process in consultation with the "
+           "patient and/or family.")
+    lb(doc, "Do not discharge a medico-legal case without informing the police, or handle an "
+           "absconded case outside the organisation's coordination discipline.")
+    lb(doc, "Do not allow a patient to leave against medical advice without following the written "
+           "LAMA guidance and recording the declaration in the required format.")
+    lb(doc, "Do not let any patient leave the organisation — including one leaving against "
+           "medical advice or in case of death — without issuing a discharge or death summary.")
+    lb(doc, "Do not fabricate a domiciliary visit service that falls outside the "
+           "organisation's defined scope.")
+    h(doc, 1, "5. What we do")
+    h(doc, 2, "5.1 Plan discharge in consultation with the patient and family")
+    p(doc, "The discharge process is planned in consultation with the patient and/or family. "
+          "The treating doctor determines readiness for discharge during regular reassessments "
+          "and discusses the plan with the patient and family, covering expected timing, "
+          "continued care needs, and who will receive the discharge summary.")
+    h(doc, 2, "5.2 Coordinate discharge among departments and agencies")
+    p(doc, "The discharge process is coordinated among all departments and agencies involved, "
+          "including accounts, so that discharge papers are completed within time. For "
+          "medico-legal cases, the police are informed about the discharge. Absconded-patient "
+          "workflows follow the same coordination discipline when the patient is found or the "
+          "case is otherwise closed.")
+    h(doc, 2, "5.3 Govern discharge against medical advice")
+    p(doc, "Written guidance governs the discharge of patients leaving against medical advice "
+          "(LAMA). The treating doctor explains the consequences of leaving to the patient or "
+          "attendant. The written guidance addresses reasons for LAMA so the organisation can "
+          "take corrective and/or preventive action where patterns appear. The "
+          "patient/attendant declaration is recorded in a proper format. LAMA does not cancel "
+          "the duty to give a discharge summary and reports.")
+    h(doc, 2, "5.4 Issue a discharge summary to every leaving patient")
+    p(doc, "A discharge summary is given to all patients leaving the organisation, including "
+          "patients leaving against medical advice. In case of death, a death summary is given "
+          "to the next of kin or relatives. The organisation hands over the discharge summary "
+          "and reports to the patient or attendant in all cases and retains a copy in the "
+          "medical record.")
+    h(doc, 2, "5.5 Adhere to planned discharge")
+    p(doc, "Discharge is planned at least 24 hours in advance. Planning includes preparation "
+          "of the draft discharge summary, refund of medications where applicable, patient "
+          "education on continued care, and identification of special needs — for example "
+          "special equipment, devices, or transportation. Unplanned discharges are minimised.")
+    h(doc, 2, "5.6 Provide domiciliary visits where applicable")
+    p(doc, f"Where the organisation's scope includes domiciliary visits, trained healthcare "
+          f"workers visit patients at their residences to deliver care and support — for "
+          f"example for chronic conditions, fall prevention, memory care, nutrition, exercise, "
+          f"or palliative catheter care. Visits are scheduled at discharge planning when "
+          f"applicable and recorded. A hospital whose scope does not include domiciliary visits "
+          f"records this as not applicable and does not fabricate the service.")
+    h(doc, 2, "5.7 Monitor discharge time and improve it continually")
+    p(doc, "The organisation monitors discharge time, setting appropriate benchmarks and making "
+          "continual improvement. Discharge time is defined from when the treating doctor "
+          "declares the patient fit for discharge to when the patient vacates the bed. "
+          "Benchmarks may differ by payer mix. Delays are monitored, reasons identified, "
+          "and improvement activities performed.")
+    h(doc, 1, "6. Stop-work authority")
+    p(doc, "Not applicable. This standard has no stop-work authority. Gaps in discharge "
+          "planning, coordination, LAMA guidance, or discharge-summary issuance are addressed "
+          "through the hospital's quality monitoring and CAPA process (Section 8), not through "
+          "an immediate stop-work trigger. The patient's right to refuse treatment and leave "
+          "against medical advice is a patient right, not a stop-work matter.")
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for the discharge process across all departments and agencies."),
+        ("Treating Doctor",
+         "Determines discharge readiness; explains LAMA consequences; ensures discharge summary "
+         "is prepared and handed over."),
+        ("Nursing Superintendent",
+         "Coordinates discharge planning and domiciliary visit scheduling with nursing staff."),
+        ("Accounts/Administration",
+         "Completes discharge papers within the defined coordination timeframe."),
+        ("Quality Coordinator",
+         "Audits this policy; monitors discharge time and holds LAMA and CAPA records."),
+    ])
+    h(doc, 1, "8. Quality monitoring")
+    mon12 = [
+        ("Discharge planning",
+         "Reassessment notes stating readiness; discussion records with patient/family."),
+        ("Departmental coordination",
+         "Documented discharge procedure; MLC police intimation records; absconded-case "
+         "coordination records."),
+        ("LAMA",
+         "Written LAMA guidance; patient/attendant declarations; record of consequences explained."),
+        ("Discharge summary issuance",
+         "Copy of discharge summary retained in the medical record for every leaver sampled; "
+         "death summary acknowledgement."),
+        ("Planned discharge",
+         "Expected discharge noted in advance; draft summary and special-needs preparation; "
+         "unplanned discharge log with reasons."),
+        ("Domiciliary visits",
+         "Scope statement; visit schedule and notes for eligible patients."),
+        ("Discharge-time monitoring",
+         "Discharge-time log from fit-for-discharge to bed vacated; delay analysis with "
+         "improvement actions."),
+    ]
+    mt = tbl(doc, len(mon12)+1, 2)
+    mt.cell(0,0).text="Monitoring area"; mt.cell(0,1).text="What is monitored"
+    for ri,(a,b) in enumerate(mon12, 1): mt.cell(ri,0).text=a; mt.cell(ri,1).text=b
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc, "All treating doctors, nursing staff, and departments involved in discharge shall be "
+          "trained on the discharge process, LAMA guidance, and discharge-summary requirements "
+          "in this policy, at induction and periodically.")
+    p(doc, f"I have read the Policy on the Established Discharge Process of {HN} and "
+          f"understand my responsibilities under it.")
+    h(doc, 1, "10. Distribution")
+    p(doc, "This policy shall be available to all clinical staff, accounts and administration, "
+          "department heads, and the Quality Coordinator.")
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CAPA", "Corrective and Preventive Action"),
+        ("LAMA", "Leaving/Left Against Medical Advice"),
+        ("MLC",  "Medico-Legal Case"),
+        ("NABH", "National Accreditation Board for Hospitals and Healthcare Providers"),
+    ])
+    h(doc, 1, "12. Traceability table")
+    p(doc, "This table is an index. It is not how the policy is organised. An asterisk in the "
+          "Level column means the objective element is starred and requires documented evidence.")
+    tr12 = [
+        ("AAC.12.a", "Commitment",  "Sections 3 and 5.1 address discharge planning in consultation with the patient and family."),
+        ("AAC.12.b", "Commitment*", "Sections 3 and 5.2 address coordination of discharge among departments and agencies."),
+        ("AAC.12.c", "Commitment*", "Sections 3 and 5.3 address written guidance for discharge against medical advice."),
+        ("AAC.12.d", "Commitment",  "Sections 3 and 5.4 address issuing a discharge summary to every leaving patient."),
+        ("AAC.12.e", "Commitment",  "Sections 3 and 5.5 address adherence to planned discharge."),
+        ("AAC.12.f", "Commitment",  "Sections 3 and 5.6 address domiciliary visits where applicable."),
+        ("AAC.12.g", "Commitment",  "Sections 3 and 5.7 address monitoring and improving discharge time."),
+    ]
+    tt = tbl(doc, len(tr12)+1, 3)
+    tt.cell(0,0).text="Objective Element"; tt.cell(0,1).text="Level"
+    tt.cell(0,2).text="Traceability to this policy"
+    for ri,(a,b,c) in enumerate(tr12, 1): tt.cell(ri,0).text=a; tt.cell(ri,1).text=b; tt.cell(ri,2).text=c
+    h(doc, 1, "13. Required records/evidence checklist")
+    h(doc, 2, "Discharge planning — AAC.12.a (Commitment)")
+    lb(doc, "Reassessment note stating readiness for discharge.")
+    lb(doc, "Record of discussion with patient and/or family about the discharge plan.")
+    h(doc, 2, "Departmental coordination — AAC.12.b (Commitment*)")
+    lb(doc, "Documented discharge procedure covering department coordination including accounts.")
+    lb(doc, "MLC discharge file with police intimation record.")
+    lb(doc, "Absconded-case coordination record where applicable.")
+    h(doc, 2, "LAMA guidance — AAC.12.c (Commitment*)")
+    lb(doc, "Current LAMA written guidance.")
+    lb(doc, "Patient/attendant LAMA declaration in the required format.")
+    lb(doc, "Record that the treating doctor explained consequences.")
+    h(doc, 2, "Discharge summary issuance — AAC.12.d (Commitment)")
+    lb(doc, "Copy of discharge summary retained in the medical record for every leaver sampled.")
+    lb(doc, "LAMA cases with summary handed over; death summary acknowledgement by next of kin.")
+    h(doc, 2, "Planned discharge — AAC.12.e (Commitment)")
+    lb(doc, "Expected discharge noted at least 24 hours in advance for planned cases.")
+    lb(doc, "Draft discharge summary and special-needs preparation before discharge.")
+    lb(doc, "Log of unplanned discharges with reasons and minimisation actions.")
+    h(doc, 2, "Domiciliary visits — AAC.12.f (Commitment)")
+    lb(doc, "Scope statement or written note of when domiciliary visits apply.")
+    lb(doc, "Domiciliary visit schedule and visit notes for eligible patients.")
+    h(doc, 2, "Discharge-time monitoring — AAC.12.g (Commitment)")
+    lb(doc, "Defined discharge-time benchmarks (by payer mix where used).")
+    lb(doc, "Discharge-time log; delay analysis with continual-improvement actions.")
+    h(doc, 1, "14. References")
+    ln(doc, "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+           "Accreditation Standards for Hospitals, 6th Edition. AAC.12.")
+    ln(doc, "Guidebook interpretation supplied for AAC.12.a through AAC.12.g.")
+    ln(doc, f"Internal documents of {HN}: discharge procedure; LAMA written guidance; "
+           f"discharge-time benchmarks; domiciliary visit schedule.")
+    h(doc, 1, "Disclaimer")
+    p(doc, f"This policy reorganises the supplied AAC.12 objective-element wording and Guidebook "
+          f"interpretation into plain-language guidance for {HN}. It does not replace the NABH "
+          f"Accreditation Standards for Hospitals, 6th Edition, or the Guidebook, which remain "
+          f"the authoritative source in case of any conflict.")
+    p(doc, f"This policy is intended for accreditation and internal governance purposes and is "
+          f"not a statement of, or substitute for, compliance with any specific statute; {HN} "
+          f"remains separately responsible for meeting all applicable statutory and regulatory "
+          f"requirements, including medico-legal reporting obligations.")
+    p(doc, "This policy shall be reviewed at least once every year, or earlier if NABH standards change.")
+    p(doc, f"This policy is the property of {HN} and is not to be reproduced or distributed "
+          f"outside the organisation without authorisation.")
+    save_and_verify(doc, "HCO_AAC_12_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# AAC.13 — Content of the Discharge Summary
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_aac13():
+    doc = Document()
+    h(doc, 0, "Policy on the Content of the Discharge Summary")
+    p(doc, HN)
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/AAC/POL/13", "Medical Superintendent")
+    h(doc, 1, "Statement of intent")
+    p(doc, f"{HN} defines the content of the discharge summary: provided at the time of "
+          f"discharge, signed and acknowledged, standardised in content, written in an "
+          f"understandable manner with follow-up and medication instructions, incorporating "
+          f"urgent-care instructions, and including cause of death where applicable.")
+    h(doc, 1, "1. Purpose")
+    p(doc, f"This policy explains what {HN}'s discharge summary contains and how instructions "
+          f"are written: provision and acknowledgement at discharge, standardised minimum "
+          f"content, understandable follow-up and medication instructions, urgent-care "
+          f"instructions, and cause of death in case of death.")
+    p(doc, "The discharge process itself — planning, coordination, LAMA guidance, and that a "
+          "summary is given — is covered in the hospital's other policies.")
+    h(doc, 1, "2. Scope")
+    p(doc, f"This policy applies to treating doctors and doctor members of treating teams who "
+          f"prepare and sign discharge summaries, and to all patients and families receiving a "
+          f"discharge or death summary at {HN}.")
+    h(doc, 1, "3. Policy standards")
+    p(doc, f"A discharge summary is provided to the patient at the time of discharge, signed by "
+          f"the treating doctor or a doctor member of the treating team, and acknowledged by the "
+          f"patient or family. The discharge summary has standardised minimum content.")
+    p(doc, "The summary contains follow-up advice, medication and other instructions in an "
+          "understandable manner, incorporates instructions about when and how to obtain urgent "
+          "care, and, in case of death, includes the cause of death.")
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc, "Do not issue a discharge summary without the signature of the treating doctor or a "
+           "doctor member of the treating team, or without a recorded acknowledgement of receipt "
+           "by the patient or family.")
+    lb(doc, "Do not omit any of the standardised minimum content fields from a discharge summary "
+           "without recording the reason it is not applicable.")
+    lb(doc, "Do not write medication frequencies using abbreviations such as BD, TID or QID — "
+           "write them in plain words the patient can understand.")
+    lb(doc, "Do not omit urgent-care instructions specific to the patient's diagnosis and "
+           "condition, or the hospital or doctor contact number, from the discharge summary.")
+    lb(doc, "Do not issue a death summary without stating the cause of death, or without "
+           "documenting a post-mortem when the cause is unclear.")
+    h(doc, 1, "5. What we do")
+    h(doc, 2, "5.1 Provide and acknowledge the discharge summary")
+    p(doc, "A discharge summary is provided to the patient at the time of discharge. The "
+          "discharge summary is signed by the treating doctor or a doctor member of the treating "
+          "team. The patient or family acknowledges receipt of the summary, and this "
+          "acknowledgement is recorded with date and name of the person receiving it.")
+    h(doc, 2, "5.2 Standardise discharge summary content")
+    p(doc, "Discharge summaries have standardised minimum content: patient's name; unique "
+          "identification number; name of the treating doctor; date of admission and date of "
+          "discharge; reasons for admission; significant findings, diagnosis and the patient's "
+          "condition at discharge; investigation results; any procedure performed; medication "
+          "administered; and any other treatment given. The summary may also name other "
+          "consultants involved in treatment.")
+    h(doc, 2, "5.3 Write understandable follow-up and medication instructions")
+    p(doc, "The discharge summary contains follow-up advice, medication and other instructions "
+          "in an understandable manner. Instructions are explained to the patient and/or "
+          "relatives in a language and manner they understand. Medical abbreviations such as BD, "
+          "TID and QID are not used; frequencies are written in plain words — for example "
+          "morning and night, three times a day. Instructions include safe and effective use of "
+          "medical equipment at home where applicable, and wound-care or pressure-ulcer care "
+          "instructions for post-operative patients where relevant.")
+    h(doc, 2, "5.4 Incorporate urgent-care instructions")
+    p(doc, "The discharge summary incorporates instructions about when and how to obtain urgent "
+          "care, specific to the patient's diagnosis and clinical condition at discharge — for "
+          "example development of fever, or bleeding or discharge from the operative site. "
+          "Instructions may state what medicines to take, when to consult a doctor, how to seek "
+          "medical help, and the contact number of the hospital or doctor. These instructions "
+          "are explained to the patient and/or relatives in a language and manner they understand.")
+    h(doc, 2, "5.5 Include cause of death where applicable")
+    p(doc, "In case of death, the summary of the case includes the cause of death. When the "
+          "cause of death is not clear, a post-mortem is performed — for example in a "
+          "medico-legal case — and documented.")
+    h(doc, 1, "6. Stop-work authority")
+    p(doc, "Not applicable. This standard has no stop-work authority. Gaps in discharge summary "
+          "content, signature, acknowledgement, or urgent-care instructions are addressed through "
+          "the hospital's quality monitoring and CAPA process (Section 8), not through an "
+          "immediate stop-work trigger.")
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for the standardised discharge summary template and content requirements."),
+        ("Treating Doctor",
+         "Prepares, signs, and explains the discharge summary, including urgent-care instructions, "
+         "in an understandable manner."),
+        ("Nursing Superintendent",
+         "Supports acknowledgement recording and equipment/wound-care instruction delivery."),
+        ("Quality Coordinator",
+         "Audits this policy; holds discharge summary templates and completed-summary samples."),
+    ])
+    h(doc, 1, "8. Quality monitoring")
+    mon13 = [
+        ("Provision and acknowledgement",
+         "Signed discharge summary issued at discharge; acknowledgement of receipt with date and name."),
+        ("Standardised content",
+         "Current standardised discharge-summary template; completed summaries with all minimum content fields."),
+        ("Follow-up and medication instructions",
+         "Summaries with plain-language medication frequencies; equipment and wound-care instructions where applicable."),
+        ("Urgent-care instructions",
+         "Urgent-care section specific to diagnosis/condition at discharge, with hospital or doctor contact."),
+        ("Cause of death",
+         "Death summary stating cause of death; post-mortem documentation when required."),
+    ]
+    mt = tbl(doc, len(mon13)+1, 2)
+    mt.cell(0,0).text="Monitoring area"; mt.cell(0,1).text="What is monitored"
+    for ri,(a,b) in enumerate(mon13, 1): mt.cell(ri,0).text=a; mt.cell(ri,1).text=b
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc, "All treating doctors and doctor members of treating teams shall be trained on the "
+          "standardised discharge summary content, plain-language instruction requirements, and "
+          "urgent-care instruction content in this policy, at induction and periodically.")
+    p(doc, f"I have read the Policy on the Content of the Discharge Summary of {HN} and "
+          f"understand my responsibilities under it.")
+    h(doc, 1, "10. Distribution")
+    p(doc, "This policy shall be available to all treating doctors, department heads, and the Quality Coordinator.")
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CAPA", "Corrective and Preventive Action"),
+        ("MLC",  "Medico-Legal Case"),
+        ("NABH", "National Accreditation Board for Hospitals and Healthcare Providers"),
+    ])
+    h(doc, 1, "12. Traceability table")
+    p(doc, "This table is an index. It is not how the policy is organised. An asterisk in the "
+          "Level column means the objective element is starred and requires documented evidence.")
+    tr13 = [
+        ("AAC.13.a", "Commitment", "Sections 3 and 5.1 address provision and acknowledgement of the discharge summary."),
+        ("AAC.13.b", "Commitment", "Sections 3 and 5.2 address standardised minimum content."),
+        ("AAC.13.c", "Commitment", "Sections 3 and 5.3 address understandable follow-up and medication instructions."),
+        ("AAC.13.d", "Commitment", "Sections 3 and 5.4 address urgent-care instructions."),
+        ("AAC.13.e", "Commitment", "Sections 3 and 5.5 address cause of death in case of death."),
+    ]
+    tt = tbl(doc, len(tr13)+1, 3)
+    tt.cell(0,0).text="Objective Element"; tt.cell(0,1).text="Level"
+    tt.cell(0,2).text="Traceability to this policy"
+    for ri,(a,b,c) in enumerate(tr13, 1): tt.cell(ri,0).text=a; tt.cell(ri,1).text=b; tt.cell(ri,2).text=c
+    h(doc, 1, "13. Required records/evidence checklist")
+    h(doc, 2, "Provision and acknowledgement — AAC.13.a (Commitment)")
+    lb(doc, "Signed discharge summary issued at discharge.")
+    lb(doc, "Acknowledgement of receipt by patient or family (with date and name).")
+    h(doc, 2, "Standardised content — AAC.13.b (Commitment)")
+    lb(doc, "Current standardised discharge-summary template.")
+    lb(doc, "Completed summaries with all minimum content fields.")
+    h(doc, 2, "Follow-up and medication instructions — AAC.13.c (Commitment)")
+    lb(doc, "Summaries with plain-language medication frequencies.")
+    lb(doc, "Equipment and wound-care instructions where applicable.")
+    h(doc, 2, "Urgent-care instructions — AAC.13.d (Commitment)")
+    lb(doc, "Urgent-care section specific to diagnosis/condition at discharge, with hospital or doctor contact.")
+    lb(doc, "Record of explanation to patient/relatives.")
+    h(doc, 2, "Cause of death — AAC.13.e (Commitment)")
+    lb(doc, "Death summary stating cause of death.")
+    lb(doc, "Post-mortem documentation when cause is unclear or MLC.")
+    h(doc, 1, "14. References")
+    ln(doc, "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+           "Accreditation Standards for Hospitals, 6th Edition. AAC.13.")
+    ln(doc, "Guidebook interpretation supplied for AAC.13.a through AAC.13.e.")
+    ln(doc, f"Internal documents of {HN}: standardised discharge-summary template; completed "
+           f"summaries; death summary records.")
+    h(doc, 1, "Disclaimer")
+    p(doc, f"This policy reorganises the supplied AAC.13 objective-element wording and Guidebook "
+          f"interpretation into plain-language guidance for {HN}. It does not replace the NABH "
+          f"Accreditation Standards for Hospitals, 6th Edition, or the Guidebook, which remain "
+          f"the authoritative source in case of any conflict.")
+    p(doc, f"This policy is intended for accreditation and internal governance purposes and is "
+          f"not a statement of, or substitute for, compliance with any specific statute; {HN} "
+          f"remains separately responsible for meeting all applicable statutory and regulatory "
+          f"requirements, including medico-legal reporting obligations.")
+    p(doc, "This policy shall be reviewed at least once every year, or earlier if NABH standards change.")
+    p(doc, f"This policy is the property of {HN} and is not to be reproduced or distributed "
+          f"outside the organisation without authorisation.")
+    save_and_verify(doc, "HCO_AAC_13_v2_REWRITE_DRAFT.docx")
+
+
 if __name__ == "__main__":
     gen_aac1()
     gen_aac2()

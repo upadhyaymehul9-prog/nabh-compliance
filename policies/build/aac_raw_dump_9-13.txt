@@ -1,0 +1,1575 @@
+AAC.9–AAC.13 — Batched Raw Source Dump
+========================================
+Purpose: Draft input for five standards in one pull.
+Each standard drafted and verified individually — same process as PRE.1-4, IPC.1-8, COP.1-20, MOM.1-11.
+Source: Official NABH HCO Full Accreditation 6th Edition Standards PDF (OE text, levels, asterisks)
+        PDF md5 2c4489ee98de4ae9b49cba168ea9f42a | OCR source: policies/source/hco6_aac_ocr.txt
+        Guidebook (same PDF): PDF indices ~82–93 for AAC.9–13.
+        Build files: build_hco_aac9_v2.py through build_hco_aac13_v2.py
+        Draft JSONs: policies/drafts_hco/hco_aac9_v2_draft.json through hco_aac13_v2_draft.json
+
+CROSS-REFERENCE NOTE (applies throughout this file):
+The Guidebook cites specific NABH OE codes (e.g., "Refer to PRE.4.a", "Refer to COP.1.e",
+"Refer to AAC.4.g", "Refer to AAC.13", "Refer to PSQ.4.d"). In policy drafts, these must NOT
+be reproduced as code citations. Use generic phrasing: "Those requirements are covered in the
+hospital's other policies." The specific codes are preserved here for source accuracy only.
+
+STOP-WORK STATUS BY STANDARD:
+  AAC.9  — YES (STOP_WORK_PROPOSALS: incomplete safety/risk screening before radiation or MRI
+              exposure; failed radiation-safety or monitoring device used in a radiation
+              examination. Pregnancy hold-for-review is framed as hospital safety practice,
+              not an NABH OE requirement.)
+  AAC.10 — NO stop-work (continuity and hand-over standard; non-compliance is a CAPA gap)
+  AAC.11 — NO stop-work (preventive and promotive health standard)
+  AAC.12 — NO stop-work (discharge process standard)
+  AAC.13 — NO stop-work (discharge summary content standard)
+
+STATUTE DISCLAIMER STATUS:
+  AAC.9  — Statute P2: Atomic Energy (Radiation Protection) Rules, 2004 — radiation
+             protection, monitoring devices and related imaging-safety duties arising under
+             those rules. The statute is named in the disclaimer; the policy does not create
+             obligations beyond AERB scope.
+  AAC.10 — Accreditation-only disclaimer (no statute P2)
+  AAC.11 — Accreditation-only disclaimer (UIP named as programme method, not as statute P2;
+             no MHCA/CPA/CEA checklist imported)
+  AAC.12 — Accreditation-only disclaimer (no statute P2)
+  AAC.13 — Accreditation-only disclaimer (no statute P2)
+
+POLICY TITLES AND PREPARED-BY:
+  AAC.9  — Imaging Quality Assurance and Safety Programme
+             Prepared by: Imaging In-Charge | Doc: HCO/AAC/POL/09
+  AAC.10 — Continuous and Multi-Disciplinary Patient Care
+             Prepared by: Medical Superintendent | Doc: HCO/AAC/POL/10
+  AAC.11 — Preventive and Promotive Health Services
+             Prepared by: Medical Superintendent | Doc: HCO/AAC/POL/11
+  AAC.12 — Established Discharge Process
+             Prepared by: Medical Superintendent | Doc: HCO/AAC/POL/12
+  AAC.13 — Content of the Discharge Summary
+             Prepared by: Medical Superintendent | Doc: HCO/AAC/POL/13
+
+
+══════════════════════════════════════════════════════════════════════════════
+AAC.9 — There is an established quality assurance and safety programme
+         for imaging services.
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+There is an established quality assurance and safety programme for imaging services.
+
+Standard is NOT starred.
+
+OE count: 11 | COREs: none | Stars: a★, e★, f★, i★ | Achievement: b, c | Excellence: d
+STOP-WORK: YES — incomplete required safety/risk screening before radiation or MRI exposure;
+                  failed or absent required radiation-safety or monitoring device for an
+                  examination that would rely on it.
+                  Pregnancy hold-for-review is hospital safety practice, not an NABH OE requirement.
+
+AERB NOTE: The quality assurance programme for imaging services must meet statutory AERB
+requirements. The Atomic Energy (Radiation Protection) Rules, 2004, govern radiation
+protection, monitoring devices and related imaging-safety duties. This standard and AAC.8
+both cross-reference AERB but from different angles: AAC.8 owns the AERB clearance and
+PC-PNDT registration as service legal compliance; AAC.9 owns the ongoing QA tests, ALARA
+protocols, screening, device testing and safety training.
+
+BOUNDARY NOTE:
+  — AAC.8 owns AERB clearance/PC-PNDT registration (legal compliance), TAT and critical
+    intimation for imaging.
+  — AAC.9 (this standard) owns the QA programme, ALARA, screening, device use/testing,
+    training and signage.
+  — PRE.4.a is cross-referenced in the Guidebook for consent before contrast, moderate–deep
+    sedation, interventional procedures, and higher-risk findings on screening. Must not
+    reproduce as code citation in policy.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.9.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The quality assurance programme for imaging services is implemented.
+
+Guidebook interpretation:
+The quality assurance programme for imaging services is implemented. It is comprehensive —
+addressing equipment, protocols, surveillance and safety — and meets statutory AERB
+requirements. The programme includes tests for imaging equipment. Examples include
+congruence of optical and radiation field, focal spot size, output consistency, leakage
+rate, magnetic field homogeneity, slice position accuracy, phantom checks, and other tests
+as applicable to the modalities present. Quality assurance for nuclear medicine (PET/gamma
+camera/SPECT CT) and radiotherapy (linear accelerator, brachytherapy) is implemented as
+per AERB guidelines where those services exist. The programme includes review of imaging
+protocols to ensure optimum image quality with minimum possible dosage. Protocols follow
+professional-body/academic guidance and, where relevant, the clinical diagnosis.
+
+Stop-work check: Commitment and starred — no standalone stop-work at this OE for QA
+schedule gaps. The stop-work for AAC.9 applies to screening failures (AAC.9.g) and device
+failures (AAC.9.i). A failure to run the QA programme is a starred Commitment gap requiring
+documented CAPA but is not itself an immediate stop-work trigger.
+
+Mandatory (shall):
+  1. A comprehensive quality assurance programme for imaging services shall be implemented.
+  2. The programme shall address equipment, protocols, surveillance and safety.
+  3. The programme shall meet statutory AERB requirements.
+  4. Equipment tests shall be performed as applicable to the modalities present (field
+     congruence, output consistency, phantom checks, etc.).
+  5. Nuclear medicine and radiotherapy QA shall be implemented per AERB guidelines where
+     those services exist.
+  6. Protocol review shall be included to ensure optimum image quality with minimum
+     possible dosage.
+
+Illustrative only:
+  — The equipment-test examples (congruence, focal spot, output, leakage, homogeneity,
+    slice position, phantom checks) are illustrative; the list is not exhaustive and
+    applies to modalities the hospital operates.
+
+Documentation: OE is starred — QA programme document, equipment test records, protocol
+review file, and nuclear medicine/radiotherapy QA records where applicable must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.9.b
+Level: Achievement | No star
+
+Verbatim OE text:
+A system is in place to ensure the appropriateness of the investigations and procedures
+for the clinical indication.
+
+Guidebook interpretation:
+A system is in place to ensure the appropriateness of investigations and procedures for
+the clinical indication. Investigation orders are screened before imaging or interventional
+procedures to ensure they are appropriate — in terms of current best-practice guidelines
+and patient safety — for the clinical indication. If a request is not appropriate,
+alternate investigations are offered in consultation with the treating doctor. For example,
+if breast abscess is suspected as the cause of fever and breast lump in a lactating
+25-year-old woman, mammography is inappropriate; ultrasound of the breast is appropriate.
+The organisation maintains a record of instances where the requested test was modified
+after consultation and may audit effectiveness; findings may be discussed in clinico-
+radiological meetings.
+
+Stop-work check: Achievement — no standalone stop-work trigger at this OE. An
+inappropriateness system gap is an Achievement accreditation gap and a CAPA item, not an
+immediate stop-work trigger. (The AAC.9 stop-work applies to screening and device failure,
+not to appropriateness decisions.)
+
+Mandatory (shall, Achievement level):
+  1. A system shall be in place to screen investigation orders before imaging or
+     interventional procedures for appropriateness to the clinical indication.
+  2. If a request is not appropriate, alternate investigations shall be offered in
+     consultation with the treating doctor.
+
+Illustrative only:
+  — The mammography vs ultrasound example is an illustrative case, not an exhaustive rule.
+  — "The organisation maintains a record... and may audit effectiveness" — maintaining the
+    record is the mandatory expectation; effectiveness audit via clinico-radiological
+    meetings is aspirational best practice.
+
+Achievement status: Evidenced by an appropriateness screening method or checklist, a log
+of modified investigations, and records of consultation with treating doctors.
+
+Documentation: OE is not starred — appropriateness screening method, modification log,
+and audit notes discussed in clinico-radiological meetings are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.9.c
+Level: Achievement | No star
+
+Verbatim OE text:
+The programme addresses periodic internal / external peer review of imaging results using
+appropriate sampling.
+
+Guidebook interpretation:
+The programme addresses periodic internal or external peer review of imaging results using
+appropriate sampling. A peer review system reviews imaging results of CT and MRI in a
+structured manner. Sample size and periodicity for each modality are defined by the
+organisation; at a minimum, one percent. Peer review may be performed by the head of
+department or a group of peers, with blinding of original reports. Discrepancies are
+graded on severity and impact on patient management; CAPA to minimise recurrence is
+documented. RADPEER is one such scoring scale. The purpose is prevention of future errors
+and continuous quality improvement, not computation of individual error rates. Results may
+be discussed in discrepancy meetings and documented.
+
+Stop-work check: Achievement — no standalone stop-work trigger at this OE. Failure to
+conduct peer review is an Achievement accreditation gap, not an immediate stop-work trigger.
+
+Mandatory (shall, Achievement level):
+  1. A peer review system shall review imaging results of CT and MRI in a structured manner.
+  2. Sample size and periodicity shall be defined by the organisation; at a minimum, one
+     percent.
+  3. Discrepancies shall be graded on severity and impact on patient management.
+  4. CAPA to minimise recurrence shall be documented.
+
+Illustrative only:
+  — RADPEER is a named scoring example; the organisation may use any recognised grading scale.
+  — Blinding of original reports, discrepancy meetings — aspirational methodology; the
+    mandatory requirement is structured review with graded discrepancies and CAPA.
+
+Achievement status: Evidenced by defined sample size (minimum one percent), blinded peer-
+review records with discrepancy grading, discrepancy meeting notes and related CAPA.
+
+Documentation: OE is not starred — peer-review records with grading and CAPA, and
+discrepancy meeting notes where held, are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.9.d
+Level: Excellence | No star
+
+Verbatim OE text:
+The programme addresses the clinico-radiological meeting(s).
+
+Guidebook interpretation:
+The programme addresses clinico-radiological meeting(s). The organisation conducts
+clinico-radiological meetings at pre-defined intervals for correlating imaging results
+(at a minimum CT and MRI) with referring clinicians and uses them to improve quality of
+imaging results.
+
+Stop-work check: Excellence — no standalone stop-work trigger at this OE. Absence of
+clinico-radiological meetings is an Excellence-level accreditation gap, not a stop-work trigger.
+
+Mandatory (shall, Excellence level):
+  1. Clinico-radiological meetings shall be conducted at pre-defined intervals.
+  2. Meetings shall correlate imaging results (at a minimum CT and MRI) with referring
+     clinicians.
+  3. Meetings shall be used to improve quality of imaging results.
+
+Illustrative only:
+  (none — all elements above are "shall")
+
+Excellence status: Evidenced by a defined meeting schedule, minutes recording correlations
+with clinicians, and documented quality improvement actions arising from meetings.
+
+Documentation: OE is not starred — meeting schedule, minutes and follow-up quality
+improvement actions are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.9.e
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The programme includes the documentation of corrective and preventive actions.
+
+Guidebook interpretation:
+The programme includes the documentation of corrective and preventive actions. When
+deviations from the laid-down quality assurance programme are noted, the organisation
+institutes CAPA as appropriate.
+
+Stop-work check: Commitment and starred — no standalone stop-work trigger at this OE.
+Failure to document CAPA is a starred Commitment gap requiring documented evidence of
+corrective action; it is not itself a stop-work trigger.
+
+Mandatory (shall):
+  1. Deviations from the laid-down QA programme shall be noted and acted on.
+  2. CAPA shall be instituted as appropriate when deviations occur.
+  3. CAPA documentation shall be maintained as part of the QA programme.
+
+Illustrative only:
+  (none — all elements above are "shall")
+
+Documentation: OE is starred — the CAPA log for QA and radiation-safety deviations, with
+root-cause notes, owners, due dates and closure evidence, must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.9.f
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The radiation-safety programme is implemented.
+
+Guidebook interpretation:
+The radiation-safety programme is implemented. It follows guidelines laid down by AERB
+and implements the As Low As Reasonably Achievable (ALARA) principle in investigations
+involving radiation, including screening of patients at high risk for radiation. Routine
+unjustified radiation is avoided — for example routine daily chest radiograph for all ICU
+patients cannot be justified, more so in paediatric or neonatal ICUs. CT protocols are
+modified to use the lowest exposure parameters that maintain image quality appropriate for
+the clinical indication — for example low-dose CT for ureteric calculi versus higher dose
+for renal tumour. Appropriate safety precautions per AERB guidelines for nuclear medicine
+and radiation oncology are followed where those services exist. This programme is aligned
+with the organisation's safety programme.
+
+Stop-work check: Commitment and starred — no standalone stop-work trigger at this OE
+specifically. The AAC.9 stop-work for missing screening (AAC.9.g) and failed devices
+(AAC.9.i) is where the immediate stop gates sit. A failure to implement the radiation-
+safety programme overall is a starred Commitment gap; individual radiation violations
+that continue after identification are escalated through the stop-work and CAPA path.
+
+Mandatory (shall):
+  1. The radiation-safety programme shall follow AERB guidelines.
+  2. The ALARA principle shall be implemented in all investigations involving radiation.
+  3. Routine unjustified radiation shall be avoided (ICU daily chest radiograph example;
+     paediatric and neonatal ICU especially).
+  4. CT protocols shall use the lowest exposure parameters that maintain adequate image
+     quality for the clinical indication.
+  5. AERB precautions for nuclear medicine and radiation oncology shall be followed where
+     those services exist.
+  6. The programme shall be aligned with the organisation's safety programme.
+
+Illustrative only:
+  — The ICU chest radiograph and low-dose CT examples are illustrative of the ALARA
+    principle; the rule extends to all modalities and clinical contexts.
+
+Documentation: OE is starred — radiation-safety programme document aligned with AERB and
+organisation safety, ALARA protocol examples and unjustified-exposure avoidance records,
+and nuclear medicine/radiation-oncology AERB precaution records (where applicable) must
+be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.9.g
+Level: Commitment | No star
+
+Verbatim OE text:
+Patients are appropriately screened for safety / risk before imaging.
+
+Guidebook interpretation:
+Patients are appropriately screened for safety/risk before imaging. Patients in the
+child-bearing age group who need radiation exposure are screened for pregnancy. Patients
+undergoing MRI are screened for any magnetic substance. Screening is documented. Screening
+also applies to attendants accompanying the patient or child into the imaging area.
+Informed consent is taken for contrast injection, moderate–deep sedation, interventional
+procedures, and whenever higher risk due to imaging is found on risk screening. Refer to
+PRE.4.a.
+
+[Note: "Refer to PRE.4.a" is a cross-reference to another OE code — must not appear in
+policy text. The informed-consent method for these situations is owned by the PRE chapter.]
+
+Stop-work check: Commitment — STOP-WORK TRIGGER: do not proceed with radiation or MRI
+exposure when required safety/risk screening has not been completed and documented for the
+patient (and for any attendant entering the imaging area). As hospital safety practice
+(not an NABH OE requirement), do not proceed when pregnancy status is positive or
+uncertain for a radiation examination until the «radiologist or imaging in-charge» has
+reviewed and documented the decision. Do not proceed with MRI when magnetic-substance
+screening is incomplete or positive for a contraindication.
+
+Mandatory (shall):
+  1. Patients in the child-bearing age group requiring radiation exposure shall be screened
+     for pregnancy before the examination.
+  2. Patients undergoing MRI shall be screened for any magnetic substance before the
+     examination.
+  3. Screening shall be documented.
+  4. Screening also applies to attendants accompanying a patient or child into the imaging
+     area — they shall be screened before entry.
+  5. Informed consent shall be taken for contrast injection, moderate–deep sedation,
+     interventional procedures, and higher-risk findings on risk screening (consent method
+     per PRE).
+
+Illustrative only:
+  — The pregnancy-hold safety practice (no-proceed until reviewed) is hospital safety
+    governance; it is not an NABH OE-level mandate but is strongly recommended as a stop-
+    work control.
+
+Documentation: OE is not starred — documented pregnancy screening, MRI magnetic-substance
+screening, and consent records for contrast/sedation/interventional procedures are the
+expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.9.h
+Level: Commitment | No star
+
+Verbatim OE text:
+Imaging personnel and patients use appropriate radiation-safety and monitoring devices
+where applicable.
+
+Guidebook interpretation:
+Imaging personnel and patients use appropriate radiation-safety and monitoring devices
+where applicable. Shielding of body parts of staff, patients and attendants uses
+appropriate aprons and shields. The number of devices shall be adequate so that all
+workers have proper protection. Staff directly working with radiation sources shall possess
+and use thermo-luminescent dosimeter (TLD) badges.
+
+Stop-work check: Commitment — STOP-WORK TRIGGER (derivative of AAC.9 stop-work): when
+required TLD badges are not available for staff working with radiation sources, the
+examination shall not proceed. Missing required devices for a radiation examination trigger
+stop-work. This is implemented through the AAC.9 stop-work section; the trigger at this
+OE is missing TLD or absent protective shielding for a specific examination.
+
+Mandatory (shall):
+  1. Imaging personnel and patients shall use appropriate radiation-safety and monitoring
+     devices where applicable.
+  2. Shielding of body parts of staff, patients and attendants shall use appropriate
+     aprons and shields.
+  3. The number of devices shall be adequate so that all workers have proper protection.
+  4. Staff directly working with radiation sources shall possess and use TLD badges.
+
+Illustrative only:
+  (none — all elements above are "shall")
+
+Documentation: OE is not starred — apron and shield inventory adequate for all workers,
+TLD badge issue and wear records, and audit notes on shielding of patients and attendants
+are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.9.i
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Radiation-safety and monitoring devices are periodically tested, and results are documented.
+
+Guidebook interpretation:
+Radiation-safety and monitoring devices are periodically tested, and results are
+documented. Protective devices such as lead aprons are exposed to X-ray, fluoroscopy or
+CT scout view to verify cracks and damage. Monitoring is done periodically as per national
+guidelines. Images of the checks are stored (physical or electronic). Corrective and/or
+preventive action is taken and documented where appropriate. TLD badges are replaced by
+fresh badges supplied by accredited laboratories according to the frequency recommended
+by AERB.
+
+Stop-work check: Commitment and starred — STOP-WORK TRIGGER: do not proceed with a
+radiation examination that would rely on a radiation-safety or monitoring device that has
+failed its periodic test (for example a cracked lead apron). A failed device is removed
+from use until repaired or replaced; the stop-work applies to examinations that would have
+relied on that specific device.
+
+Mandatory (shall):
+  1. Radiation-safety and monitoring devices shall be periodically tested.
+  2. Test results shall be documented.
+  3. Protective devices (lead aprons) shall be exposed to X-ray, fluoroscopy or CT scout
+     view to verify cracks and damage.
+  4. Monitoring shall be done periodically as per national guidelines.
+  5. Images of the checks shall be stored (physical or electronic).
+  6. CAPA shall be taken and documented where a device test result warrants it.
+  7. TLD badges shall be replaced per AERB-recommended frequency by fresh badges from
+     accredited laboratories.
+
+Illustrative only:
+  (none — all elements above are "shall")
+
+Documentation: OE is starred — periodic lead-apron/shield test images and results, TLD
+replacement records per AERB-recommended frequency, and CAPA/removal-from-use records
+for failed devices must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.9.j
+Level: Commitment | No star
+
+Verbatim OE text:
+Imaging and ancillary personnel are trained in imaging safety practices and radiation-
+safety measures.
+
+Guidebook interpretation:
+Imaging and ancillary personnel are trained in imaging safety practices and radiation-
+safety measures. Imaging safety practices include training on MRI safety, kinking of
+tubes, fall prevention and handling patients in imaging areas. Radiation-safety measures
+protect patient and staff from unwanted radiation. Ancillary staff are those posted in
+imaging who support the radiologist, radiographers and MRI/CT technologists — including
+nurses, helpers, stretcher-bearers, housekeeping and security as applicable.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Failure to
+train imaging or ancillary staff is a Commitment accreditation gap addressed through CAPA,
+not an immediate stop-work trigger.
+
+Mandatory (shall):
+  1. Imaging personnel shall be trained in imaging safety practices (MRI safety, tube
+     kinking, fall prevention, patient handling) and radiation-safety measures.
+  2. Ancillary staff posted in imaging (nurses, helpers, stretcher-bearers, housekeeping,
+     security as applicable) shall also be trained.
+
+Illustrative only:
+  — MRI safety, kinking of tubes, fall prevention and patient handling are illustrative
+    examples of imaging safety content; the list is not exhaustive.
+
+Documentation: OE is not starred — induction and periodic training records for imaging
+and ancillary staff, training content, and attendance lists are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.9.k
+Level: Commitment | No star
+
+Verbatim OE text:
+Imaging signage is prominently displayed in all appropriate locations.
+
+Guidebook interpretation:
+Imaging signage is prominently displayed in all appropriate locations. This includes
+safety signage and display of signage required by regulatory authorities. It includes
+procedure rooms (for example ERCP) and operation theatres where imaging equipment is used.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Obscured or
+missing required signage is a Commitment gap and a safety finding that must be corrected
+urgently (same shift) but does not independently block an imaging examination from
+proceeding. Signage removal that violates AERB regulatory display requirements is a
+statutory compliance gap addressed through the CAPA and escalation path.
+
+Mandatory (shall):
+  1. Imaging signage shall be prominently displayed in all appropriate locations.
+  2. Safety signage and signage required by regulatory authorities shall be displayed.
+  3. Signage applies to all areas with imaging equipment — including procedure rooms
+     (ERCP) and operation theatres.
+
+Illustrative only:
+  (none — all elements above are "shall")
+
+Documentation: OE is not starred — signage location checklist (including procedure rooms
+and OTs with imaging), periodic signage visibility check log, and regulatory display
+evidence are the expected evidence.
+
+
+══════════════════════════════════════════════════════════════════════════════
+AAC.10 — Patient care is continuous and multi-disciplinary.
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Patient care is continuous and multi-disciplinary.
+
+Standard is NOT starred.
+
+OE count: 8 | COREs: d | Stars: f★ | Achievement: none | Excellence: none
+STOP-WORK: NO
+
+BOUNDARY NOTE:
+  — AAC.3 owns transfer-in and transfer-out to another facility. This standard owns
+    transfer within the organisation and referral to other departments or specialities
+    inside the organisation.
+  — COP.1.e owns multi-disciplinary care planning. This standard owns that care and
+    response information is shared among providers (AAC.10.c).
+  — AAC.12 owns the discharge process. This standard owns continuity until discharge begins.
+  — AAC.6/AAC.8 own laboratory and imaging service delivery. This standard owns safe
+    transport to and from imaging and monitoring of clinical response to critical value alerts.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.10.a
+Level: Commitment | No star
+
+Verbatim OE text:
+During all phases of care, there is a qualified individual identified as responsible for
+the patient's care.
+
+Guidebook interpretation:
+During all phases of care at the organisation, a qualified individual is identified as
+responsible for the patient's care. That individual is a qualified doctor. A team may
+deliver care; the hospital record still names one doctor as responsible. The responsible
+doctor's name is recorded in the patient record at first contact and updated when
+responsibility changes. When the named doctor is off duty, the covering doctor is identified
+and the change is recorded. Out-patient, emergency, in-patient, intensive care and day-
+care each keep the same rule: no patient is without a named responsible doctor.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. A patient
+without a named responsible doctor in any care setting is a Commitment gap and a safety
+concern addressed through the non-negotiable rule and CAPA, not an immediate stop-work
+gate.
+
+Mandatory (shall):
+  1. A qualified individual (doctor) shall be identified as responsible for the patient's
+     care during all phases of care.
+  2. The responsible doctor's name shall be recorded in the patient record.
+  3. When the named doctor is off duty, the covering doctor shall be identified and
+     the change recorded.
+
+Illustrative only:
+  (none — all elements above are "shall")
+
+Documentation: OE is not starred — patient record entry naming the responsible doctor
+for each phase of care, covering-doctor record when the named doctor is off duty, and
+quarterly audit sample of responsible-doctor documentation across care settings are the
+expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.10.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Patient care is coordinated in all care settings within the organisation.
+
+Guidebook interpretation:
+Patient care is coordinated among care providers in each care setting within the
+organisation: out-patient, emergency, in-patient, intensive care and any other setting
+the organisation uses. Coordination means the patient's requirements are communicated to
+the providers working in that setting so that orders, observations and pending tasks are
+not lost when the patient moves from one setting to another. The treating doctor and the
+nurse in charge of the area ensure the receiving setting knows the clinical status and
+the next required actions before the patient arrives or as soon as care begins there.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Gaps in cross-
+setting coordination are a Commitment gap and CAPA item, not an immediate stop-work trigger.
+
+Mandatory (shall):
+  1. Patient care shall be coordinated among care providers in each care setting — OPD,
+     emergency, in-patient, ICU and any other setting the organisation uses.
+  2. The patient's requirements shall be communicated to providers in the receiving setting
+     so that orders, observations and pending tasks are not lost.
+
+Illustrative only:
+  (none — both elements above are "shall")
+
+Documentation: OE is not starred — communication or transfer notes when patients move
+across care settings, and quarterly audit sample of cross-setting coordination, are the
+expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.10.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Information about the patient's care and response to treatment is shared among medical,
+nursing and other care providers.
+
+Guidebook interpretation:
+Information about the patient's care and response to treatment is shared among medical,
+nursing and other care providers. Sharing is done through entries in the case sheet or
+electronic medical record so that authorised care providers can read the same clinical
+picture. Other modalities include team meetings and grand rounds where they are part of
+practice. The patient record remains available to authorised providers. Refer to COP.1.e
+for multi-disciplinary care-plan discussion.
+
+[Note: "Refer to COP.1.e" is a cross-reference to another OE code — must not appear in
+policy text. Multi-disciplinary care-plan discussion is owned by the COP chapter policy.
+This OE owns day-to-day sharing of care and response information.]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Withholding
+care information from authorised providers is a Commitment gap and safety concern
+addressed through CAPA, not an immediate stop-work gate.
+
+Mandatory (shall):
+  1. Information about the patient's care and response to treatment shall be shared among
+     medical, nursing and other care providers through entries in the case sheet or EMR.
+  2. The patient record shall remain available to authorised providers.
+
+Illustrative only:
+  — Team meetings and grand rounds as sharing modalities — aspirational examples where
+    they form part of existing practice; the mandatory requirement is information sharing,
+    not a specific modality.
+
+Documentation: OE is not starred — case sheet or EMR entries by multiple provider types
+on the same patient, and record of team meetings where used, are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.10.d
+Level: CORE | No star
+
+Verbatim OE text:
+The organisation implements standardised hand-over communication during each staffing
+shift, between shifts and during transfers between units / departments.
+
+Guidebook interpretation:
+The organisation implements standardised hand-over communication during each staffing
+shift, between shifts and during transfers between units and departments. Change-of-shift
+and change-of-unit hand-over by doctors and nurses in direct patient care is standardised
+and documented. Information shared covers the patient's current condition, recent changes,
+ongoing treatment and possible changes or complications. Read-back, multidisciplinary
+rounds, teach-back and involving patients and families may be used to strengthen the
+hand-over. The receiving clinician acknowledges the hand-over. Interruptions during
+hand-over are minimised.
+
+Stop-work check: CORE — no standalone stop-work trigger at this OE. Non-implementation
+of standardised hand-over is a CORE accreditation gap that blocks accreditation, but it
+is addressed through the quality monitoring and CAPA path, not through an immediate stop-
+work gate during an individual hand-over event.
+
+Mandatory (shall):
+  1. Standardised hand-over communication shall be implemented during each staffing shift,
+     between shifts and during transfers between units or departments.
+  2. Hand-over by doctors and nurses in direct patient care shall be documented.
+  3. Hand-over shall cover current condition, recent changes, ongoing treatment and
+     possible changes or complications.
+  4. The receiving clinician shall acknowledge the hand-over.
+  5. Interruptions during hand-over shall be minimised.
+
+Illustrative only:
+  — SBAR is an example hand-over framework; the organisation may use another recognised
+    structure.
+  — Read-back, multidisciplinary rounds, teach-back and patient/family involvement —
+    aspirational strengthening methods; not mandatory beyond the core documented hand-over.
+
+CORE status: Absence of any standardised hand-over — or hand-over that is consistently
+undocumented — is a CORE gap. A hand-over system where the receiving clinician does not
+acknowledge receipt is a CORE gap.
+
+Documentation: OE is not starred — documented hand-over records using the standardised
+framework for each staffing shift (sample), transfer hand-over with acknowledgement by the
+receiving team, and quarterly audit of hand-over content are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.10.e
+Level: Commitment | No star
+
+Verbatim OE text:
+Patient transfer within the organisation is done safely.
+
+Guidebook interpretation:
+Patient transfer within the organisation is done safely. Patients are transported in a
+safe and timely manner. Proper hand-over and takeover are documented. Transfers to and
+from imaging follow the same rule so that imaging is not delayed by transport failure.
+Unstable patients are transferred with the accompaniment and monitoring defined for their
+clinical status; a doctor accompanies unstable patients. The receiving area confirms
+readiness before departure.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Moving a
+patient without safe-transport requirements is a Commitment gap and a safety incident
+handled through incident reporting and CAPA, not an immediate stop-work gate.
+
+Mandatory (shall):
+  1. Patient transfer within the organisation shall be done safely and in a timely manner.
+  2. Proper hand-over and takeover shall be documented for every transfer.
+  3. Transfers to and from imaging shall follow the same safe-transport rule.
+  4. Unstable patients shall be transferred with defined accompaniment and monitoring for
+     their clinical status.
+
+Illustrative only:
+  — "A doctor accompanies unstable patients" — an example of defined accompaniment; the
+    organisation defines the accompaniment level by clinical status.
+  — "The receiving area confirms readiness before departure" — best-practice step; the
+    mandatory requirement is safe transport and documented hand-over.
+
+Documentation: OE is not starred — internal transfer record with reason, clinical status,
+times, hand-over and takeover; imaging transfer records; unstable-patient transfer records
+with accompaniment and monitoring are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.10.f
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Referral of patients to other departments / specialities follow written guidance.
+
+Guidebook interpretation:
+Referral of patients to other departments or specialities follows written guidance.
+Referral may be for opinion, co-management or takeover. The referral note states the
+reason for referral. Urgency is graded and every referral is seen within a defined
+timeframe; the timeframe differs by urgency grade. Written guidance holds the grades, the
+timeframes and who may accept a referral.
+
+Stop-work check: Commitment and starred — no standalone stop-work trigger at this OE.
+Referring outside the written guidance is a starred Commitment gap requiring documented
+evidence of written guidance, not an immediate stop-work trigger.
+
+Mandatory (shall):
+  1. Referral to other departments or specialities shall follow written guidance.
+  2. Referral may be for opinion, co-management or takeover; the referral note shall
+     state the reason.
+  3. Urgency shall be graded and every referral shall be seen within a defined timeframe
+     per grade.
+  4. Written guidance shall exist covering grades, timeframes and who may accept a referral.
+
+Illustrative only:
+  — Urgency grade labels (immediate, urgent, priority, routine) are examples; the
+    organisation may define its own labels and corresponding timeframes.
+
+Documentation: OE is starred — current written guidance for internal referral (opinion/
+co-management/takeover; urgency grades; timeframes), referral notes with reason and grade,
+and response-time log showing referral seen within timeframe must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.10.g
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation ensures predictable service delivery by adhering to defined timelines
+and informs the patient / family and / or caregiver whenever there is a change in schedule.
+
+Guidebook interpretation:
+The organisation ensures predictable service delivery by adhering to defined timelines
+and informs the patient, family and/or caregiver whenever there is a change in schedule.
+Defined timelines cover services such as laboratory, radiology and OPD waiting time.
+Patients are informed of the applicable timelines. When delivery will deviate, the patient
+or family is told of the changed schedule and the caregiver is informed so that
+effectiveness of care is not compromised. The service area records that the change was
+communicated.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Failing to
+communicate a schedule change is a Commitment gap addressed through CAPA, not an
+immediate stop-work gate.
+
+Mandatory (shall):
+  1. Defined timelines shall exist for services (laboratory, radiology, OPD waiting).
+  2. Patients shall be informed of the applicable timelines.
+  3. When a schedule changes, the patient, family and/or caregiver shall be informed.
+  4. That the schedule change was communicated shall be recorded.
+
+Illustrative only:
+  — Laboratory, radiology and OPD waiting time are illustrative service examples; the
+    rule applies to all services with defined timelines.
+
+Documentation: OE is not starred — defined service timelines, record that patients were
+informed of timelines, and record of schedule-change communication to patient/family or
+caregiver are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.10.h
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation has a mechanism in place to monitor whether an adequate clinical
+intervention has taken place in response to a critical value alert.
+
+Guidebook interpretation:
+The organisation has a mechanism to monitor whether an adequate clinical intervention has
+taken place in response to a critical value alert. The attending clinician responds to
+the alert. Evidence of the response is documented in progress notes or medication orders.
+The organisation periodically reviews interventions for timeliness and appropriateness.
+For out-patients, efforts are taken to alert the patient or family about critical values.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Absence of a
+monitoring mechanism for critical-value responses is a Commitment gap addressed through
+CAPA, not an immediate stop-work gate.
+
+Mandatory (shall):
+  1. A mechanism shall exist to monitor whether an adequate clinical intervention has
+     taken place after a critical value alert.
+  2. The attending clinician's response shall be documented in progress notes or medication
+     orders.
+  3. Interventions shall be periodically reviewed for timeliness and appropriateness.
+  4. For out-patients, efforts shall be taken to alert the patient or family about critical
+     values.
+
+Illustrative only:
+  (none — all elements above are "shall")
+
+Documentation: OE is not starred — critical value alert log with time and clinician
+notified, progress notes or orders documenting the clinical intervention, and periodic
+review records of response timeliness and appropriateness are the expected evidence.
+
+
+══════════════════════════════════════════════════════════════════════════════
+AAC.11 — Preventive and promotive health services are provided.
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Preventive and promotive health services are provided.
+
+Standard is NOT starred.
+
+OE count: 5 | COREs: none | Stars: a★ | Achievement: none | Excellence: none
+STOP-WORK: NO
+
+SCOPE NOTE: This standard requires preventive and promotive care within the organisation's
+scope of services. A hospital that does not offer community outreach, immunisation, or a
+specific screening type does not fabricate those services to meet this standard. The
+written guidance under AAC.11.a names what is in scope.
+
+STATUTE NOTE: The Universal Immunisation Programme (UIP) is named as a programme method
+for paediatric immunisation guidance; it is not imported as a statute P2 disclaimer item.
+The Mental Healthcare Act is not imported into this standard's scope.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.11.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Written guidance governs the implementation of preventive and promotive care as per the
+scope of services.
+
+Guidebook interpretation:
+Written guidance governs the implementation of preventive and promotive care as per the
+scope of services. Preventive care focuses on measures taken to prevent the onset of
+diseases or health conditions before they occur — for example immunization, health
+screening, health education and lifestyle counselling — based on age, gender and medical
+history. Promotive care involves efforts to promote overall health and well-being among
+patients, families and community — for example healthy diet, regular exercise, stress
+management, mental health support and initiatives to improve quality of life through
+patient and family education, health literacy and community activities.
+
+Stop-work check: Commitment and starred — no standalone stop-work trigger at this OE.
+Delivering preventive or promotive care without written guidance is a starred Commitment
+gap requiring documented evidence of written guidance.
+
+Mandatory (shall):
+  1. Written guidance shall govern the implementation of preventive and promotive care
+     as per the scope of services.
+  2. The guidance shall name which preventive and promotive services are in scope, who
+     delivers them, and how they are documented.
+  3. Services outside scope shall not be promised or claimed.
+
+Illustrative only:
+  — Immunization, health screening, health education, lifestyle counselling (preventive
+    examples) and diet, exercise, stress management, mental health support, community
+    activities (promotive examples) are illustrations of what the guidance may cover
+    within scope; the list is not prescriptive.
+
+Documentation: OE is starred — current written guidance for preventive and promotive care
+aligned to scope, its version and issue date, and quarterly audit confirming practice
+matches guidance must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.11.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Organisation shall define evidenced based and contextual age-appropriate screening for
+non-communicable diseases.
+
+Guidebook interpretation:
+The organisation defines evidenced-based and contextual age-appropriate screening for
+non-communicable diseases. For prevention of non-communicable diseases, evidence-based
+screening of patients at an appropriate age is advised — for example screening for various
+cancers, diabetes and osteoporosis. Frequency of screening may increase when predisposing
+factors apply. Treating doctors document the screening advised, accepted or declined, and
+the basis (age, risk factors, guidance reference).
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Advising non-
+evidence-based or non-age-appropriate NCD screening is a Commitment gap addressed through
+CAPA, not an immediate stop-work trigger.
+
+Mandatory (shall):
+  1. The organisation shall define evidenced-based and contextual age-appropriate screening
+     for non-communicable diseases.
+  2. Evidence-based screening shall be advised at an appropriate age.
+  3. Frequency of screening shall increase when predisposing factors apply.
+
+Illustrative only:
+  — Cancers, diabetes and osteoporosis are illustrative examples of NCDs for which
+    screening is advised; the organisation's defined list governs in practice.
+
+Documentation: OE is not starred — defined NCD screening list with age and risk-context
+criteria, and patient record entries of screening advised, accepted or declined, are the
+expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.11.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Mental health screening and appropriate intervention is advised for patients wherever
+applicable.
+
+Guidebook interpretation:
+Mental health screening and appropriate intervention are advised for patients wherever
+applicable. Screening may use validated tools. De-stressing interventions may be
+considered for patients seeking healthcare — for example yoga and meditation. Positive
+screens lead to documented advice, referral or intervention appropriate to the finding
+and to the hospital's scope.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Ignoring
+applicable mental health screening is a Commitment gap addressed through CAPA.
+
+Mandatory (shall):
+  1. Mental health screening shall be advised for patients wherever applicable.
+  2. Appropriate intervention shall be advised following a positive screen.
+  3. Advice, referral or intervention following a positive screen shall be documented.
+
+Illustrative only:
+  — Validated tools (e.g., PHQ-9, distress thermometer) are illustrative; the
+    organisation defines which tools are in scope.
+  — Yoga and meditation as de-stressing examples — aspirational; the mandatory
+    requirement is screening and appropriate intervention, not a specific modality.
+
+Documentation: OE is not starred — documented use of validated screening tools where
+applicable, and records of intervention, advice or referral after a positive screen, are
+the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.11.d
+Level: Commitment | No star
+
+Verbatim OE text:
+Evidence based and contextual paediatric and adult immunisation shall be advised wherever
+applicable.
+
+Guidebook interpretation:
+Evidence-based and contextual paediatric and adult immunisation shall be advised wherever
+applicable. The Universal Immunisation Programme is adhered to for all neonates and
+paediatric patients, including catch-up immunisation for children. Adult immunisation,
+where offered, focuses on preventable diseases such as pneumococcal pneumonia, HPV,
+influenza, COVID and meningococcal disease, adhering to evidence-based guidelines.
+Advice, administration and refusals are recorded in the patient record or immunisation
+register.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Advising
+immunisation outside UIP or evidence-based guidance is a Commitment gap addressed through
+CAPA.
+
+Mandatory (shall):
+  1. Evidence-based and contextual paediatric and adult immunisation shall be advised
+     wherever applicable.
+  2. The Universal Immunisation Programme shall be adhered to for all neonates and
+     paediatric patients, including catch-up immunisation.
+  3. Adult immunisation, where offered, shall follow evidence-based guidelines.
+  4. Advice, administration and refusals shall be recorded.
+
+Illustrative only:
+  — Pneumococcal pneumonia, HPV, influenza, COVID and meningococcal disease are
+    illustrative adult preventable diseases; the organisation's evidence-based list governs.
+
+Documentation: OE is not starred — paediatric immunisation records aligned to UIP
+including catch-up, adult immunisation advice or administration records where offered,
+and immunisation register or patient-file entries are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.11.e
+Level: Commitment | No star
+
+Verbatim OE text:
+A multi-disciplinary approach is adopted in imparting health education on life-style
+modifications.
+
+Guidebook interpretation:
+A multi-disciplinary approach is adopted in imparting health education on lifestyle
+modifications. Contributors may include the clinician, nurse, dietician, physiotherapist,
+occupational therapist, psychologist and medico-social worker where those roles exist.
+Education may incorporate exercises, training in activities of daily living, and effective
+pain and inflammation management. Healthcare providers educate to optimise health and
+well-being, particularly in geriatric care. Family members are also educated towards
+cessation of tobacco, alcohol and substance abuse where relevant. Education given and
+disciplines involved are recorded.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Delivering
+lifestyle education as a single-discipline activity when multi-disciplinary input was
+available is a Commitment gap addressed through CAPA.
+
+Mandatory (shall):
+  1. A multi-disciplinary approach shall be adopted in imparting health education on
+     lifestyle modifications.
+  2. Education given and disciplines involved shall be recorded.
+
+Illustrative only:
+  — Contributors (dietician, physiotherapist, occupational therapist, psychologist,
+    medico-social worker) — listed where those roles exist; the mandatory requirement
+    is multi-disciplinary participation, not each specific role.
+  — Geriatric care, tobacco/alcohol/substance-abuse cessation — illustrative contexts;
+    the multi-disciplinary requirement is not limited to these.
+
+Documentation: OE is not starred — patient education record naming disciplines involved,
+documentation of diet, exercise, ADL, pain or substance-cessation education where given,
+and quarterly sample showing multi-disciplinary input where available are the expected
+evidence.
+
+
+══════════════════════════════════════════════════════════════════════════════
+AAC.12 — The organisation has an established discharge process.
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+The organisation has an established discharge process.
+
+Standard is NOT starred.
+
+OE count: 7 | COREs: none | Stars: b★, c★ | Achievement: none | Excellence: none
+STOP-WORK: NO
+
+BOUNDARY NOTE:
+  — AAC.12 (this standard) owns the discharge process — planning, coordination, LAMA
+    guidance, that a summary is given, planned discharge, domiciliary visits, discharge-
+    time monitoring.
+  — AAC.13 owns the content of the discharge summary. Cross-reference AAC.13; do not
+    duplicate the content field list here.
+  — AAC.4.g is cross-referenced for continued-care education elements that planned
+    discharge prepares; the 24-hour planning rule is owned here.
+  — AAC.3 owns transfer-out to another facility; this standard owns discharge from the
+    organisation's care.
+  — PRE owns patient rights and consent for LAMA declaration (refusal of treatment);
+    this standard owns the LAMA written guidance and that a summary is still given.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.12.a
+Level: Commitment | No star
+
+Verbatim OE text:
+The patient's discharge process is planned in consultation with the patient and / or family.
+
+Guidebook interpretation:
+The patient's discharge process is planned in consultation with the patient and/or family.
+The treating doctor determines readiness for discharge during regular reassessments and
+discusses the plan with the patient and family. The discussion covers expected timing,
+continued care needs and who will receive the discharge summary. Agreement or concerns
+are recorded in the patient file.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Discharging
+without consultation is a Commitment gap and a rights concern (PRE), addressed through
+CAPA and the non-negotiable rule, not an immediate stop-work gate.
+
+Mandatory (shall):
+  1. The discharge process shall be planned in consultation with the patient and/or family.
+  2. The treating doctor shall determine readiness for discharge during regular reassessments.
+  3. The discussion shall cover expected timing, continued care needs and who will receive
+     the discharge summary.
+
+Illustrative only:
+  — "Agreement or concerns recorded in the patient file" — best-practice documentation
+    step; the mandatory requirement is the consultation itself.
+
+Documentation: OE is not starred — reassessment note stating readiness for discharge, and
+record of discussion with patient and/or family about the discharge plan, are the expected
+evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.12.b
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The discharge process is coordinated among various departments and agencies involved
+(including medico-legal and absconded cases).
+
+Guidebook interpretation:
+The discharge process is coordinated among various departments and agencies involved,
+including medico-legal and absconded cases. Discharge procedures are documented so that
+departments — including accounts — complete discharge papers within time. For medico-legal
+cases (MLC), the organisation ensures that the police are informed about the discharge.
+Absconded-patient workflows follow the same coordination discipline when the patient is
+found or the case is otherwise closed.
+
+Stop-work check: Commitment and starred — no standalone stop-work trigger at this OE.
+A failure to coordinate discharge departments (including MLC police intimation) is a
+starred Commitment gap requiring documented evidence, addressed through CAPA.
+
+Mandatory (shall):
+  1. The discharge process shall be coordinated among all departments and agencies
+     involved, including accounts.
+  2. Discharge procedures shall be documented covering department coordination so papers
+     complete within time.
+  3. For MLC cases, the police shall be informed about the discharge.
+  4. Absconded-case workflows shall follow the same coordination discipline.
+
+Illustrative only:
+  (none — all elements above are "shall")
+
+Documentation: OE is starred — documented discharge procedure covering department
+coordination including accounts, MLC discharge file with police intimation record, and
+absconded-case coordination record where applicable must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.12.c
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Written guidance governs the discharge of patients leaving against medical advice.
+
+Guidebook interpretation:
+Written guidance governs the discharge of patients leaving against medical advice. The
+treating doctor explains the consequences of leaving to the patient or attendant. The
+written guidance addresses reasons for LAMA so the organisation can take corrective and/or
+preventive action where patterns appear. The patient/attendant declaration is recorded
+in a proper format. LAMA does not cancel the duty to give a discharge summary and reports.
+
+Stop-work check: Commitment and starred — no standalone stop-work trigger at this OE.
+Allowing LAMA without following written guidance is a starred Commitment gap; the LAMA
+act itself is a patient right (PRE), not a stop-work trigger.
+
+Mandatory (shall):
+  1. Written guidance shall govern the discharge of patients leaving against medical advice.
+  2. The treating doctor shall explain the consequences of leaving to the patient or
+     attendant.
+  3. The written guidance shall address reasons for LAMA to enable CAPA where patterns
+     appear.
+  4. The patient/attendant LAMA declaration shall be recorded in a proper format.
+  5. A discharge summary and reports shall still be given at LAMA (AAC.12.d applies).
+
+Illustrative only:
+  (none — all elements above are "shall")
+
+Documentation: OE is starred — current LAMA written guidance, patient/attendant LAMA
+declaration in the required format, and record that the treating doctor explained
+consequences must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.12.d
+Level: Commitment | No star
+
+Verbatim OE text:
+A discharge summary is given to all the patients leaving the organisation including
+patients leaving against medical advice.
+
+Guidebook interpretation:
+A discharge summary is given to all patients leaving the organisation, including patients
+leaving against medical advice. In case of death, a death summary is given to the next
+of kin or relatives. The organisation hands over the discharge summary and reports to the
+patient or attendant in all cases and retains a copy in the medical record. For LAMA,
+the patient's right to refuse treatment and request to leave is respected; the declaration
+is recorded; the summary and reports are still handed over.
+
+[Note: The content of the discharge summary is owned by AAC.13. This OE owns that a
+summary is issued as part of the discharge process — not what it contains.]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Letting a
+patient leave without a discharge summary is a Commitment gap addressed through CAPA.
+The obligation applies even in LAMA; the patient's right to leave does not cancel the
+duty to provide the summary.
+
+Mandatory (shall):
+  1. A discharge summary shall be given to all patients leaving the organisation.
+  2. Patients leaving against medical advice shall also receive a discharge summary.
+  3. In case of death, a death summary shall be given to the next of kin or relatives.
+  4. The organisation shall retain a copy of the discharge summary in the medical record.
+
+Illustrative only:
+  (none — all elements above are "shall")
+
+Documentation: OE is not starred — copy of discharge summary retained in the medical
+record for every leaver sampled, LAMA cases with summary handed over, and death summary
+acknowledgement by next of kin are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.12.e
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation adheres to planned discharge.
+
+Guidebook interpretation:
+The organisation adheres to planned discharge. Discharge is planned at least 24 hours in
+advance. Planning includes preparation of the draft discharge summary, refund of
+medications where applicable, patient education on continued care, and identification of
+special needs — for example requirement of special equipment, devices, transportation
+(wheelchair), and safe and effective use of medical equipment. Unplanned discharges are
+minimised. Refer to AAC.4.g for continued-care education elements; refer to AAC.13 for
+summary content.
+
+[Note: "Refer to AAC.4.g" and "Refer to AAC.13" are cross-references to other OE codes —
+must not appear in policy text. Those requirements are covered in the hospital's other
+policies.]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Treating same-
+day surprise discharge as planned when the standard requires 24-hour advance planning is
+a Commitment gap; unplanned discharges are to be minimised through the monitoring process.
+
+Mandatory (shall):
+  1. Discharge shall be planned at least 24 hours in advance.
+  2. Planning shall include preparation of the draft discharge summary, refund of
+     medications where applicable, patient education on continued care, and identification
+     of special needs (equipment, devices, transportation).
+  3. Unplanned discharges shall be minimised.
+
+Illustrative only:
+  — Wheelchair as transportation example — illustrative of special needs that discharge
+    planning must address; not limited to wheelchair.
+
+Documentation: OE is not starred — expected discharge noted at least 24 hours in advance
+for planned cases, draft discharge summary and special-needs preparation before discharge,
+and log of unplanned discharges with reasons and minimisation actions are the expected
+evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.12.f
+Level: Commitment | No star
+
+Verbatim OE text:
+The care shall be provided by expanding access to health practices through domiciliary
+visits, wherever applicable.
+
+Guidebook interpretation:
+Care shall be provided by expanding access to health practices through domiciliary visits,
+wherever applicable. Trained healthcare workers visit patients at their residences to
+deliver medical care, treatment and/or support when the hospital's scope includes that
+service. Domiciliary visits may address chronic conditions, fall prevention, memory care,
+nutrition, exercise and other health concerns. For palliative care patients, home visits
+for change of catheters and/or other support care may be conducted. Visits are scheduled
+at discharge planning when applicable and recorded.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Ignoring
+applicable domiciliary visit arrangements is a Commitment gap addressed through CAPA.
+A hospital whose scope does not include domiciliary visits records "not applicable" and
+does not fabricate a service.
+
+Mandatory (shall):
+  1. Where the organisation's scope includes domiciliary visits, trained healthcare
+     workers shall visit patients at their residences to deliver care and support.
+  2. Visits shall be scheduled at discharge planning when applicable and recorded.
+
+Illustrative only:
+  — Chronic conditions, fall prevention, memory care, nutrition, exercise and palliative
+    catheter change are illustrative use cases; the service scope governs which apply.
+
+Documentation: OE is not starred — scope statement or written note of when domiciliary
+visits apply, domiciliary visit schedule and visit notes for eligible patients, and
+discharge plan entries linking home visits where applicable are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.12.g
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation monitors the discharge time, sets appropriate benchmarks and makes
+continual improvement.
+
+Guidebook interpretation:
+The organisation monitors the discharge time, sets appropriate benchmarks and makes
+continual improvement. The organisation defines the time taken for discharge. The timeframe
+may differ by payer mix — for example cash, insurance, corporate. The organisation
+conforms to the defined timeframe. Delays are monitored; reasons are identified;
+improvement activities are performed. The start-point for calculating discharge time is
+when the treating doctor declares the patient fit for discharge. The end-point is when
+the patient vacates the bed.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Failure to
+monitor discharge time or act on delays is a Commitment gap addressed through CAPA and
+continual improvement, not a stop-work trigger.
+
+Mandatory (shall):
+  1. The organisation shall monitor discharge time.
+  2. Discharge time shall be defined (start: fit-for-discharge; end: bed vacated).
+  3. Appropriate benchmarks shall be set; the timeframe may differ by payer mix.
+  4. The organisation shall conform to the defined timeframe.
+  5. Delays shall be monitored; reasons identified; improvement activities performed.
+
+Illustrative only:
+  — Cash, insurance, corporate payer mix — illustrative categories that may justify
+    different benchmark timeframes; the organisation defines its own payer-mix groups.
+
+Documentation: OE is not starred — defined discharge-time benchmarks (by payer mix where
+used), discharge-time log from fit-for-discharge to bed vacated, and delay analysis with
+continual-improvement actions are the expected evidence.
+
+
+══════════════════════════════════════════════════════════════════════════════
+AAC.13 — The organisation defines the content of the discharge summary.
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+The organisation defines the content of the discharge summary.
+
+Standard is NOT starred.
+
+OE count: 5 | COREs: none | Stars: none | Achievement: none | Excellence: none
+STOP-WORK: NO
+
+BOUNDARY NOTE:
+  — AAC.12 owns the discharge process — planning, coordination, LAMA guidance, that a
+    summary is given, planned discharge, domiciliary visits, discharge-time monitoring.
+  — AAC.13 (this standard) owns what the discharge summary contains and how instructions
+    are written. Do not rewrite discharge process steps here.
+  — AAC.4.g owns continued-care education elements that appear in the summary as
+    instructions; this standard owns how those instructions are written.
+  — PSQ.4.d is cross-referenced for urgent-care instruction alignment; this standard owns
+    that urgent-care instructions appear in the summary content.
+  — AAC.2 owns the unique identification number used on the summary.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.13.a
+Level: Commitment | No star
+
+Verbatim OE text:
+A discharge summary is provided to the patients at the time of discharge.
+
+Guidebook interpretation:
+A discharge summary is provided to the patient at the time of discharge. The discharge
+summary is signed by the treating doctor or a doctor member of the treating team. The
+patient or family acknowledges receipt of the summary. Acknowledgement is recorded with
+date and name of the person receiving it.
+
+[Note: AAC.12.d owns that a summary is given to all leavers; AAC.13.a owns the signing
+and acknowledgement that are part of the summary content/handover act. Cross-reference
+AAC.12.d; do not duplicate process ownership.]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Discharging
+without a signed summary or without acknowledgement of receipt is a Commitment gap
+addressed through CAPA.
+
+Mandatory (shall):
+  1. A discharge summary shall be provided to the patient at the time of discharge.
+  2. The discharge summary shall be signed by the treating doctor or a doctor member of
+     the treating team.
+  3. The patient or family shall acknowledge receipt of the summary.
+  4. Acknowledgement shall be recorded with date and name of the person receiving it.
+
+Illustrative only:
+  — Acknowledgement on the retained copy or on a receipt slip — illustrative methods;
+    the mandatory requirement is a recorded acknowledgement.
+
+Documentation: OE is not starred — signed discharge summary issued at discharge and
+acknowledgement of receipt by patient or family (with date and name) are the expected
+evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.13.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Discharge summary has a standardised content.
+
+Guidebook interpretation:
+Discharge summaries have standardised content. The minimum content is: patient's name;
+unique identification number; name of the treating doctor; date of admission and date of
+discharge; reasons for admission; significant findings, diagnosis and the patient's
+condition at the time of discharge; information regarding investigation results; any
+procedure performed; medication administered; any other treatment given. In addition to
+the treating doctor, the summary may name other consultants involved in treatment.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Issuing a
+summary missing standardised minimum content is a Commitment gap addressed through CAPA.
+
+Mandatory (shall):
+  1. Discharge summaries shall have standardised content.
+  2. The minimum content shall include: patient's name; unique identification number;
+     treating doctor's name; date of admission and discharge; reasons for admission;
+     significant findings, diagnosis and condition at discharge; investigation results;
+     procedures performed; medications administered; other treatment given.
+  3. A standardised template shall exist; treating doctors shall complete every field or
+     mark it not applicable with reason.
+
+Illustrative only:
+  — Additional consultant names on the summary — aspirational best practice; the mandatory
+    requirement is the minimum content list.
+
+Documentation: OE is not starred — current standardised discharge-summary template and
+completed summaries with all minimum content fields are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.13.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Discharge summary contains follow-up advice, medication and other instructions in an
+understandable manner.
+
+Guidebook interpretation:
+The discharge summary contains follow-up advice, medication and other instructions in an
+understandable manner. Preventive aspects are incorporated where appropriate. Follow-up
+advice, medication and other instructions are explained to the patient and/or relatives in
+a language and manner they understand. Medical terms such as BD, TID and QID are not
+used; frequencies are written in plain words — for example morning and night, three times
+a day. Other instructions include safe and effective use of medical equipment at home —
+for example CPAP, nebulizer, rehab equipment — where applicable. For post-operative
+patients the summary includes wound-care instructions and pressure-ulcer care after
+discharge where relevant. Refer to AAC.4.g.
+
+[Note: "Refer to AAC.4.g" is a cross-reference — must not appear in policy text. Those
+requirements are covered in the hospital's other policies.]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Writing
+medication instructions only as BD/TID/QID or omitting equipment/wound-care instructions
+when applicable is a Commitment gap addressed through CAPA.
+
+Mandatory (shall):
+  1. Follow-up advice, medication and other instructions shall be written in an
+     understandable manner — not as BD, TID, QID or other abbreviations the patient
+     cannot understand.
+  2. Instructions shall be explained to the patient and/or relatives in a language they
+     understand.
+  3. Equipment instructions (CPAP, nebulizer, rehab) shall be included where applicable.
+  4. Wound-care and pressure-ulcer care instructions shall be included for post-operative
+     patients where relevant.
+  5. Preventive aspects shall be incorporated where appropriate.
+
+Illustrative only:
+  — CPAP, nebulizer, rehab equipment — illustrative examples; the rule applies to any
+    medical equipment the patient will use at home.
+
+Documentation: OE is not starred — summaries with plain-language medication frequencies,
+equipment and wound-care instructions where applicable, and record that instructions were
+explained are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.13.d
+Level: Commitment | No star
+
+Verbatim OE text:
+Discharge summary incorporates instructions about when and how to obtain urgent care.
+
+Guidebook interpretation:
+The discharge summary incorporates instructions about when and how to obtain urgent care.
+Advice on when the patient shall seek urgent care is specific to the patient's diagnosis
+and clinical condition at discharge — for example development of fever, or bleeding or
+discharge from the operative site. Advice may state what medicines to take, when to
+consult a doctor, how to seek medical help, and the contact number of the hospital or
+doctor. Instructions about when and how to obtain urgent care are explained to the patient
+and/or relatives in a language and manner they understand. Follow-up of post-operative
+and at-risk patients is good practice from a patient-safety point of view. Refer to
+PSQ.4.d.
+
+[Note: "Refer to PSQ.4.d" is a cross-reference — must not appear in policy text. Those
+requirements are covered in the hospital's other policies.]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Omitting
+specific urgent-care instructions from the discharge summary is a Commitment gap addressed
+through CAPA.
+
+Mandatory (shall):
+  1. The discharge summary shall incorporate instructions about when and how to obtain
+     urgent care specific to the patient's diagnosis and condition at discharge.
+  2. A contact number for the hospital or doctor shall be on the summary.
+  3. Urgent-care instructions shall be explained to the patient and/or relatives in a
+     language they understand.
+
+Illustrative only:
+  — Development of fever, bleeding or discharge from the operative site — illustrative
+    urgent-care trigger examples; specific triggers must match the patient's diagnosis
+    and condition.
+  — What medicines to take, when to consult a doctor, how to seek help — illustrative
+    content for urgent-care advice; not a rigid template.
+
+Documentation: OE is not starred — urgent-care section specific to diagnosis/condition
+at discharge (with hospital or doctor contact), and record of explanation to patient/
+relatives, are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+AAC.13.e
+Level: Commitment | No star
+
+Verbatim OE text:
+In case of death, the summary of the case also includes the cause of death.
+
+Guidebook interpretation:
+In case of death, the summary of the case also includes the cause of death. When the
+cause of death is not clear, a post-mortem is performed — for example in MLC — and the
+same is documented.
+
+[Note: That the death summary is given to the next of kin is owned by AAC.12.d. This OE
+owns that cause of death (and post-mortem documentation where required) appears in the
+summary content.]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Issuing a
+death summary without cause of death, or failing to document post-mortem when required,
+is a Commitment gap addressed through CAPA.
+
+Mandatory (shall):
+  1. In case of death, the summary of the case shall include the cause of death.
+  2. When the cause of death is not clear, a post-mortem shall be performed and documented
+     (for example in MLC).
+
+Illustrative only:
+  — MLC as a post-mortem trigger example — illustrative; unclear cause of death in any
+    case may warrant post-mortem under applicable law and ethics.
+
+Documentation: OE is not starred — death summary stating cause of death, post-mortem
+documentation when cause is unclear or MLC, and copy retained in the medical record are
+the expected evidence.
+
+
+══════════════════════════════════════════════════════════════════════════════
+STOP-WORK TEXT OUTPUT (verbatim from build_hco_aac9_v2.py STOP_WORK variable)
+══════════════════════════════════════════════════════════════════════════════
+
+Only AAC.9 has a stop-work section. AAC.10–13 have no stop-work.
+
+────────────────────────────────────────────────────────────────────
+stop_work_text() — AAC.9 Stop-work authority section
+────────────────────────────────────────────────────────────────────
+
+Do not proceed with radiation or MRI exposure when required safety/risk screening has not
+been completed and documented for the patient (and for any attendant entering the imaging
+area).
+
+As hospital safety practice (not an NABH objective-element requirement), do not proceed
+when pregnancy status is positive or uncertain for a radiation examination until the
+«radiologist or imaging in-charge» has reviewed and documented the decision. Do not
+proceed with MRI when magnetic-substance screening is incomplete or positive for a
+contraindication.
+
+Do not proceed when a required radiation-safety or monitoring device has failed its
+periodic test (for example cracked lead apron) or when required TLD badges are not
+available for staff working with radiation sources.
+
+Stop-work applies to the imaging exposure or MRI examination, not to emergency clinical
+stabilisation outside the imaging room.
+
+The person who stops tells the «Imaging In-Charge» or the «Radiation Safety Officer»
+the same shift. Refusing to expose without screening or with failed safety devices is
+not a disciplinary matter.
