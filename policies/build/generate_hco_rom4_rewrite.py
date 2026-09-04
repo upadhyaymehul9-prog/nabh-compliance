@@ -216,7 +216,7 @@ for ri, (role, resp) in enumerate([
      "Verify the leader's qualifications at appointment; carry out or assign "
      "the annual performance review."),
     ("Quality Coordinator",
-     "Audits this policy every quarter; keeps training records; supports "
+     "Audits this policy periodically; keeps training records; supports "
      "governance packs and committee reviews this policy requires."),
     ("Departmental leaders",
      "Maintain documentation of their department's services; participate in "
@@ -227,12 +227,12 @@ for ri, (role, resp) in enumerate([
 
 # ── 7. Quality monitoring ─────────────────────────────────────────────────────
 h(1, "7. Quality monitoring")
-p("The Quality Coordinator audits this policy every quarter, checking a sample "
+p("The Quality Coordinator audits this policy periodically, checking a sample "
   "of records against each of the What-we-do steps.")
 p("CORE objective elements show no critical gaps in the sample "
   "(ROM.4.b is the CORE element in this standard — see Level column, "
   "Section 11).")
-p("If an audit finds a gap that is still open after 90 days, the hospital "
+p("If an audit finds a gap that is still open after a defined timeframe, the hospital "
   "carries out a root-cause analysis and records the findings and corrective "
   "actions.")
 p("This policy is reviewed every year, and sooner if the legislation register, "

@@ -231,7 +231,7 @@ for ri, (role, resp) in enumerate([
      "Approve the strategic plan and annual budget; receive and act on "
      "committee effectiveness reviews."),
     ("Quality Coordinator",
-     "Audits this policy every quarter; keeps training records; coordinates "
+     "Audits this policy periodically; keeps training records; coordinates "
      "management review meetings; supports governance packs this policy "
      "requires."),
     ("Departmental leaders",
@@ -244,11 +244,11 @@ for ri, (role, resp) in enumerate([
 
 # ── 7. Quality monitoring ─────────────────────────────────────────────────────
 h(1, "7. Quality monitoring")
-p("The Quality Coordinator audits this policy every quarter, checking a sample "
+p("The Quality Coordinator audits this policy periodically, checking a sample "
   "of records against each of the What-we-do steps.")
 p("Documentary evidence is on file for each asterisked objective element "
   "(marked * in the Level column of Section 11).")
-p("If an audit finds a gap that is still open after 90 days, the hospital "
+p("If an audit finds a gap that is still open after a defined timeframe, the hospital "
   "carries out a root-cause analysis and records the findings and corrective "
   "actions.")
 p("This policy is reviewed every year, and sooner if the strategic plan, "
