@@ -745,6 +745,559 @@ def gen_pre2():
     save_and_verify(doc, "HCO_PRE_2_v2_REWRITE_DRAFT.docx")
 
 
+# ══════════════════════════════════════════════════════════════════════════════
+# PRE.3 — Informed Decision-Making, Care Planning and Patient Education  (NO stop-work)
+# COREs: a | Stars: none | Achievement: b, e | Commitment: c, d
+# Prepared by: Patient Rights Officer | Doc: HCO/PRE/POL/03
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_pre3():
+    doc = Document()
+
+    h(doc, 0, "Policy on Informed Decision-Making, Care Planning and Patient Education")
+    p(doc, HN)
+
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/PRE/POL/03", "Patient Rights Officer")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      f"{HN} explains proposed care, risks, benefits, alternatives, and expected outcomes "
+      "to patients and families; involves them in preparing and modifying the care plan; "
+      "keeps them informed of diagnostic results and any change in condition; and provides "
+      "multi-disciplinary counselling where appropriate.")
+
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} educates patients and/or family members to make "
+      "informed decisions and involves them in the care planning and delivery process: "
+      "explaining proposed care and its risks, benefits and alternatives; involving them "
+      "in the care plan; informing them of diagnostic results and condition changes; and "
+      "providing multi-disciplinary counselling when appropriate.")
+    p(doc,
+      "The formal consent process for high-risk procedures is covered in the hospital's "
+      "other policies.")
+
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to attending doctors, treating physicians and their teams, "
+      f"and all patients and/or family members receiving care at {HN}.")
+
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN}'s attending doctors explain the proposed care, its risks, benefits, "
+      "alternatives, expected results and possible complications to the patient and/or "
+      "family in a language they can understand, and involve them in preparing and "
+      "modifying the care plan.")
+    p(doc,
+      "Patients and/or family members are informed about diagnostic results, the "
+      "diagnosis, and any change in the patient's condition in a timely manner, and "
+      "receive multi-disciplinary counselling when the situation calls for it.")
+
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not proceed with proposed care without explaining it, including risks, benefits "
+       "and alternatives, to the patient and/or family in a language they can understand.")
+    lb(doc,
+       "Do not withhold explanation of diagnostic test results and the diagnosis from "
+       "the patient and/or family.")
+    lb(doc,
+       "Do not delay explaining a change in the patient's condition — improvement, "
+       "deterioration or complications — once the change is known.")
+    lb(doc,
+       "Do not exclude the multi-disciplinary team from counselling in situations that "
+       "call for it.")
+
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Explain the proposed care, risks, benefits and alternatives")
+    p(doc,
+      "The proposed care, including referral to internal and/or external services, is "
+      "discussed by the attending doctor with the patient and/or family members, in a "
+      "language they can understand. Expected outcomes of treatment are explained at "
+      "periodic intervals by the treating physician or their team. Possible complications "
+      "are clearly communicated.")
+
+    h(doc, 2, "5.2 Involve the patient and family in the care plan")
+    p(doc,
+      "The care plan is prepared and modified in consultation with the patient and/or "
+      "family members. During preparation, the patient and/or family are explained the "
+      "various treatment options, risks and benefits. Religious, cultural and spiritual "
+      "views of the patient and/or family are considered during care delivery, within "
+      "the limits of applicable statutory requirements.")
+
+    h(doc, 2, "5.3 Inform patients and family of diagnostic results")
+    p(doc,
+      "Results of all diagnostic tests are explained, at least in broad terms, to the "
+      "patient and family members, along with their implication on progress and treatment.")
+
+    h(doc, 2, "5.4 Explain any change in the patient's condition")
+    p(doc,
+      "The patient and/or family members are explained about any change in the patient's "
+      "condition — improvement, deterioration or complications — in a timely manner.")
+
+    h(doc, 2, "5.5 Provide multi-disciplinary counselling when appropriate")
+    p(doc,
+      f"{HN} identifies situations requiring multi-disciplinary counselling — such as "
+      "counselling for family members of critically ill patients, potential organ donors "
+      "and/or their family, and long-stay patients. Members of the multi-disciplinary "
+      "team — doctors from different specialties, nurses and physiotherapists — take "
+      "part in the counselling as relevant to the situation.")
+
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Not applicable. This standard has no stop-work authority. Gaps in explaining "
+      "proposed care, care-plan consultation, or condition updates are addressed through "
+      "the hospital's quality monitoring and CAPA process (Section 8), not through an "
+      "immediate stop-work trigger. Consent requirements for high-risk procedures are "
+      "covered in the hospital's other policies.")
+
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for ensuring patients and families are informed and involved in "
+         "decision-making across all departments."),
+        ("Patient Rights Officer",
+         "Owns implementation of this policy; monitors compliance with explanation and "
+         "counselling requirements."),
+        ("Attending/Treating Doctor",
+         "Explains proposed care, risks, benefits, alternatives and outcomes; involves "
+         "the patient/family in care-plan preparation; explains diagnostic results and "
+         "condition changes; documents these discussions."),
+        ("Nursing Superintendent",
+         "Supports patient/family understanding through nursing communication and "
+         "escalates unaddressed information gaps."),
+        ("Quality Coordinator",
+         "Audits this policy; holds training records and staff acknowledgements."),
+    ])
+
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Explanation of proposed care",
+         "Clinical notes/consultation records showing explanation of risks, benefits "
+         "and alternatives."),
+        ("Care-plan involvement",
+         "Medical record notes of care-plan consultation with patient/family."),
+        ("Diagnostic result communication",
+         "Clinical notes showing diagnostic results were communicated."),
+        ("Condition-change communication",
+         "Clinical notes showing timely communication of condition changes."),
+        ("Multi-disciplinary counselling",
+         "Written situation list; counselling records showing attendance and participation."),
+    ])
+
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      "All attending doctors, treating physicians and their teams shall be familiar with "
+      "the informed decision-making, care-planning, and patient-education requirements "
+      "of this policy, at induction and periodically.")
+    p(doc,
+      f"I have read the Policy on Informed Decision-Making, Care Planning and Patient "
+      f"Education of {HN} and understand my responsibilities under it.")
+    sig_tbl(doc)
+
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to all clinical staff, the Patient Rights Officer, "
+      "department heads, and the Quality Coordinator.")
+
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CAPA", "Corrective and Preventive Action"),
+        ("NABH", "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("OPD",  "Out-Patient Department"),
+    ])
+
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk in "
+      "the Level column means the objective element is starred and requires documented "
+      "evidence.")
+    tr = tbl(doc, 6, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("PRE.3.a", "CORE",
+         "Sections 3 and 5.1 address explanation of proposed care, risks, benefits, "
+         "alternatives, expected results and complications."),
+        ("PRE.3.b", "Achievement",
+         "Sections 3 and 5.2 address patient/family involvement in care-plan preparation "
+         "and modification."),
+        ("PRE.3.c", "Commitment",
+         "Sections 3 and 5.3 address explanation of diagnostic results and diagnosis."),
+        ("PRE.3.d", "Commitment",
+         "Sections 3 and 5.4 address timely explanation of condition changes."),
+        ("PRE.3.e", "Achievement",
+         "Sections 3 and 5.5 address multi-disciplinary counselling when appropriate."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Explanation of proposed care — PRE.3.a (CORE)")
+    lb(doc,
+       "Clinical notes or consultation records showing explanation of proposed care, "
+       "risks, benefits and alternatives was given.")
+
+    h(doc, 2, "Care-plan involvement — PRE.3.b (Achievement)")
+    lb(doc,
+       "Medical record notes documenting care-plan consultation with the patient and/or "
+       "family.")
+
+    h(doc, 2, "Diagnostic result communication — PRE.3.c (Commitment)")
+    lb(doc,
+       "Clinical notes showing diagnostic results and their implications were communicated.")
+
+    h(doc, 2, "Condition-change communication — PRE.3.d (Commitment)")
+    lb(doc,
+       "Clinical notes showing timely communication of condition changes, with dates.")
+
+    h(doc, 2, "Multi-disciplinary counselling — PRE.3.e (Achievement)")
+    lb(doc, "Written list of situations requiring multi-disciplinary counselling.")
+    lb(doc, "Counselling records (attendees, date, what was discussed).")
+
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. PRE.3.")
+    ln(doc, "Guidebook interpretation supplied for PRE.3.a through PRE.3.e.")
+    ln(doc,
+       f"Internal documents of {HN}: clinical notes/consultation records; care-plan "
+       "consultation records; multi-disciplinary counselling situation list and records.")
+
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      f"This policy reorganises the supplied PRE.3 objective-element wording and "
+      f"Guidebook interpretation into plain-language guidance for {HN}. It does not "
+      "replace the NABH Accreditation Standards for Hospitals, 6th Edition, or the "
+      "Guidebook, which remain the authoritative source in case of any conflict.")
+    p(doc,
+      "This policy is intended for accreditation and internal governance purposes and "
+      "is not a statement of, or substitute for, compliance with any specific statute; "
+      f"{HN} remains separately responsible for meeting all applicable statutory and "
+      "regulatory requirements.")
+    p(doc,
+      "This policy shall be reviewed at least once every year, or earlier if NABH "
+      "standards change.")
+    p(doc,
+      f"This policy is the property of {HN} and is not to be reproduced or distributed "
+      "outside the organisation without authorisation.")
+
+    save_and_verify(doc, "HCO_PRE_3_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# PRE.4 — Informed Consent   (HAS stop-work)
+# COREs: a*, c, e | Stars: a*, d* | Commitment: b, d*
+# Stop-work: procedure started without valid consent; consent by nurse/clerk without
+#   performer explanation
+# Prepared by: Patient Rights Officer | Doc: HCO/PRE/POL/04
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_pre4():
+    doc = Document()
+
+    h(doc, 0, "Policy on Informed Consent")
+    p(doc, HN)
+
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/PRE/POL/04", "Patient Rights Officer")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      f"{HN} obtains valid informed consent, from the patient or the person who may "
+      "consent on their behalf, before any procedure on its written consent list — as a "
+      "process of effective communication about the procedure, its risks, benefits, "
+      "alternatives, and who will perform it, in a language the patient can understand.")
+
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy explains how {HN} obtains informed consent from the patient or "
+      "family about their care: maintaining a written list of procedures requiring "
+      "consent, following statutory norms for the consent process, ensuring consent "
+      "includes procedure information in an understandable language, describing who may "
+      "consent when the patient cannot, and ensuring the person performing the procedure "
+      "is responsible for the consent process.")
+    p(doc,
+      "The definition of specific invasive/high-risk procedures requiring consent under "
+      "the hospital's rights policy is covered in the hospital's other policies.")
+
+    h(doc, 1, "2. Scope")
+    p(doc,
+      "This policy applies to all doctors and clinical teams performing procedures on "
+      f"the organisation's informed-consent list, and to all patients and persons who "
+      f"may consent on a patient's behalf.")
+
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} maintains a written list of procedures requiring informed consent and "
+      "written guidance on the consent process, taking into account applicable statutory "
+      "requirements such as the MTP Act, PC-PNDT Act, Transplantation of Human Organs "
+      "Act, and HIV and AIDS (Prevention and Control) Act 2017/NACO HIV-testing policy "
+      "where relevant to the services provided.")
+    p(doc,
+      "Consent is taken before the procedure, witnessed, includes the procedure's risks, "
+      "benefits, alternatives and who will perform it, is obtained from the patient or "
+      "the person who may consent when the patient is incapable, and is the "
+      "responsibility of the person performing the procedure.")
+
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not start a procedure on the organisation's informed-consent list until valid "
+       "informed consent has been obtained from the patient, or from the person who may "
+       "consent when the patient is incapable of independent decision-making, in a "
+       "language they can understand.")
+    lb(doc,
+       "Do not accept a consent form signed by a nurse or clerk as the only consent "
+       "when the person performing the procedure (or a doctor member of that team) has "
+       "not explained the procedure, its risks, benefits, alternatives and who will "
+       "perform it.")
+    lb(doc, "Do not allow anyone to consent on behalf of a competent adult.")
+    lb(doc,
+       "Do not use a consent validity period longer than six months for a procedure "
+       "repeated over a long time without obtaining fresh consent.")
+    lb(doc,
+       "Do not change or add a treatment modality without obtaining fresh consent.")
+
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Maintain a written consent list and consent process guidance")
+    p(doc,
+      "A written list of procedures requiring informed consent is maintained, taking "
+      "into account this standard's requirements and applicable statutory requirements. "
+      "Written guidance explains the steps of the informed consent process and the "
+      "person responsible. Staff are made aware of this guidance.")
+
+    h(doc, 2, "5.2 Follow statutory norms in the consent process")
+    p(doc,
+      "Consent is taken before the procedure. At least one witness — present for the "
+      "entire duration of the doctor-patient communication — signs the consent form. "
+      "For procedures repeated over a long time (for example, dialysis), consent is "
+      "taken at the first instance with a defined validity period not exceeding six "
+      "months, and the patient endorses the consent at each repeat treatment. Fresh "
+      "consent is obtained if there is a change in treatment modality or an addition "
+      "of another modality.")
+
+    h(doc, 2, "5.3 Ensure consent includes procedure information in an understandable language")
+    p(doc,
+      "Consent includes information regarding the procedure, its risks, benefits, "
+      "alternatives, and who will perform it, in a language the patient can understand. "
+      "The consent names the doctor performing the procedure; where multiple specialties "
+      "are involved, it names the principal surgeon from each specialty, and each doctor "
+      "explains their own role, risks, benefits and alternatives. If a doctor under "
+      "training performs the procedure, this is specified along with the name of the "
+      "supervising qualified doctor. The consent form is at a minimum bilingual, and "
+      "where consent is taken in a language other than what the patient understands, "
+      "the language of counselling and any interpreter used is clearly documented.")
+
+    h(doc, 2, "5.4 Describe who may consent when the patient is incapable")
+    p(doc,
+      "Consent is taken from the patient when the patient is capable and above the "
+      "legal age for giving consent; no one may consent on behalf of a competent adult. "
+      f"When the patient is incapable of independent decision-making, {HN} follows "
+      "applicable statutory norms and takes consent from the next of kin/legal guardian "
+      "in the order: spouse, son/daughter, parents, brothers/sister. For life-threatening "
+      "situations where the patient is incapable and next of kin is not available, the "
+      "treating doctor and another clinician may decide to safeguard the patient's life; "
+      "both names and the reason are documented.")
+
+    h(doc, 2, "5.5 Ensure the performer is responsible for consent")
+    p(doc,
+      "The person performing the procedure is responsible for the entire consent process, "
+      "including explanation and taking the signature. It is not acceptable for the "
+      "person performing to only explain while a nurse or clerk takes the written consent. "
+      "A doctor member of the performing team may take consent on behalf of the person "
+      "performing the procedure.")
+
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Do not start a procedure on the organisation's informed-consent list until valid "
+      "informed consent has been obtained from the patient, or from the person who may "
+      "consent when the patient is incapable of independent decision-making, in a "
+      "language they can understand.")
+    p(doc,
+      "Do not accept a consent form signed by a nurse or clerk as the only consent "
+      "when the person performing the procedure (or a doctor member of that team) has "
+      "not explained the procedure, its risks, benefits, alternatives and who will "
+      "perform it.")
+    p(doc,
+      "Stop-work applies to the procedure start. Immediate life-saving care when the "
+      "patient is incapable and next of kin is not available follows the two-clinician "
+      "emergency rule in Section 5.4, and is documented the same shift.")
+    p(doc,
+      "The person who stops tells the person performing the procedure and the Medical "
+      "Superintendent the same shift. Refusing to start without valid consent is not "
+      "a disciplinary matter.")
+
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for ensuring the informed-consent list and process are maintained "
+         "and followed; receives stop-work escalations."),
+        ("Patient Rights Officer",
+         "Owns implementation of this policy; maintains the consent list and process "
+         "guidance; audits consent forms."),
+        ("Person Performing the Procedure",
+         "Responsible for the entire consent process — explanation and signature — for "
+         "their own procedure; receives stop-work escalations for their procedure."),
+        ("Nursing Superintendent",
+         "Ensures nursing staff do not accept consent forms without the performer's "
+         "explanation; escalates stop-work triggers."),
+        ("Quality Coordinator",
+         "Audits this policy; holds training records, staff acknowledgements, and "
+         "stop-work event logs."),
+    ])
+
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Consent list and guidance",
+         "Written consent list current; process guidance available; staff awareness "
+         "records."),
+        ("Statutory norms",
+         "Witness signatures; validity periods for repeat procedures; fresh-consent "
+         "records on modality change."),
+        ("Consent content and language",
+         "Bilingual consent forms; documentation of performer name(s), risks, benefits, "
+         "alternatives; interpreter records where used."),
+        ("Consent for incapable patients",
+         "Next-of-kin consent records showing order of preference followed; two-clinician "
+         "emergency decision records."),
+        ("Performer responsibility",
+         "Consent forms showing the performer or team doctor as the responsible party; "
+         "stop-work event log."),
+    ])
+
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      "All doctors and clinical teams who perform procedures on the informed-consent "
+      "list shall be familiar with the consent process, statutory norms, and stop-work "
+      "triggers in this policy, at induction and periodically.")
+    p(doc,
+      f"I have read the Policy on Informed Consent of {HN} and understand my "
+      "responsibilities under it.")
+    sig_tbl(doc)
+
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to all doctors and clinical teams, the Patient "
+      "Rights Officer, department heads, and the Quality Coordinator.")
+
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CAPA",    "Corrective and Preventive Action"),
+        ("MTP",     "Medical Termination of Pregnancy"),
+        ("NABH",    "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("NACO",    "National AIDS Control Organisation"),
+        ("PC-PNDT", "Pre-Conception and Pre-Natal Diagnostic Techniques"),
+    ])
+
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk in "
+      "the Level column means the objective element is starred and requires documented "
+      "evidence.")
+    tr = tbl(doc, 6, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("PRE.4.a", "CORE*",
+         "Sections 3, 5.1 and 6 address the written consent list, process guidance, "
+         "staff awareness, and the stop-work trigger for procedures started without "
+         "consent."),
+        ("PRE.4.b", "Commitment",
+         "Sections 3 and 5.2 address statutory norms in the consent process, including "
+         "witness and repeat-procedure validity requirements."),
+        ("PRE.4.c", "CORE",
+         "Sections 3, 5.3 and 6 address consent content, language, multi-specialty "
+         "consent, and the stop-work trigger for consent taken without performer "
+         "explanation."),
+        ("PRE.4.d", "Commitment*",
+         "Sections 3 and 5.4 address who may consent when the patient is incapable, "
+         "including the order of preference and the two-clinician emergency rule."),
+        ("PRE.4.e", "CORE",
+         "Sections 3, 5.5 and 6 address performer responsibility for the consent "
+         "process and the related stop-work trigger."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Consent list and process guidance — PRE.4.a (CORE*)")
+    lb(doc, "Written list of procedures requiring informed consent.")
+    lb(doc, "Written consent process guidance naming the person responsible.")
+    lb(doc, "Staff awareness records.")
+    lb(doc, "Completed consent forms for listed procedures.")
+
+    h(doc, 2, "Statutory norms in consent — PRE.4.b (Commitment)")
+    lb(doc, "Consent forms showing pre-procedure signature and witness signature.")
+    lb(doc,
+       "Validity period documentation for repeat procedures (not exceeding six months).")
+    lb(doc, "Patient endorsement records at repeat treatments.")
+    lb(doc, "Fresh-consent records on treatment modality change.")
+
+    h(doc, 2, "Consent content and language — PRE.4.c (CORE)")
+    lb(doc,
+       "Completed bilingual consent forms naming the performer(s), risks, benefits "
+       "and alternatives.")
+    lb(doc, "Interpreter records where used.")
+    lb(doc, "Multi-specialty consent forms where applicable.")
+
+    h(doc, 2, "Consent for incapable patients — PRE.4.d (Commitment*)")
+    lb(doc,
+       "Written description of who may consent when the patient is incapable, including "
+       "order of preference.")
+    lb(doc, "Consent forms showing next-of-kin signatory and relationship.")
+    lb(doc, "Two-clinician emergency decision records, when applicable.")
+
+    h(doc, 2, "Performer responsibility — PRE.4.e (CORE)")
+    lb(doc, "Consent forms showing the performer or team doctor as the responsible party.")
+    lb(doc, "Audit records of consent form review.")
+
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. PRE.4.")
+    ln(doc, "Guidebook interpretation supplied for PRE.4.a through PRE.4.e.")
+    ln(doc,
+       "Medical Termination of Pregnancy Act; Pre-Conception and Pre-Natal Diagnostic "
+       "Techniques Act, 1994; Transplantation of Human Organs Act; HIV and AIDS "
+       "(Prevention and Control) Act, 2017 and the National AIDS Control Organisation's "
+       "national HIV-testing policy — applicable to "
+       f"{HN} only to the extent its services fall within the scope of these statutes.")
+    ln(doc,
+       f"Internal documents of {HN}: informed-consent list; consent process guidance; "
+       "consent forms; two-clinician emergency decision records; stop-work event log.")
+
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      f"This policy reorganises the supplied PRE.4 objective-element wording and "
+      f"Guidebook interpretation into plain-language guidance for {HN}. It does not "
+      "replace the NABH Accreditation Standards for Hospitals, 6th Edition, or the "
+      "Guidebook, which remain the authoritative source in case of any conflict.")
+    p(doc,
+      "This policy references certain statutes (MTP Act, PC-PNDT Act, Transplantation "
+      "of Human Organs Act, HIV and AIDS (Prevention and Control) Act 2017) as examples "
+      "of statutory requirements that may shape "
+      f"{HN}'s consent list, where its services fall within their scope. This policy is "
+      "not a statement of, or substitute for, compliance with any of these statutes; "
+      f"{HN} remains separately responsible for meeting all applicable statutory and "
+      "regulatory requirements.")
+    p(doc,
+      "This policy shall be reviewed at least once every year, or earlier if NABH "
+      "standards or applicable law changes.")
+    p(doc,
+      f"This policy is the property of {HN} and is not to be reproduced or distributed "
+      "outside the organisation without authorisation.")
+
+    save_and_verify(doc, "HCO_PRE_4_v2_REWRITE_DRAFT.docx")
+
+
 if __name__ == "__main__":
     gen_pre1()
     gen_pre2()
