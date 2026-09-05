@@ -340,9 +340,6 @@ def gen_pre1():
        "Accreditation Standards for Hospitals, 6th Edition. PRE.1.")
     ln(doc, "Guidebook interpretation supplied for PRE.1.a through PRE.1.e.")
     ln(doc, "Charter of Patients’ Rights, as laid down by the statutory body.")
-    ln(doc,
-       f"Internal documents of {HN}: rights and responsibilities charter; display "
-       "boards; counselling records; violation log; leadership review minutes.")
 
     h(doc, 1, "Disclaimer")
     p(doc,
@@ -719,10 +716,6 @@ def gen_pre2():
        "Accreditation Standards for Hospitals, 6th Edition. PRE.2.")
     ln(doc, "Guidebook interpretation supplied for PRE.2.a through PRE.2.l.")
     ln(doc, "Code of Medical Ethics, Medical Council of India.")
-    ln(doc,
-       f"Internal documents of {HN}: privacy and confidentiality guidelines; consent "
-       "forms; second-opinion mechanism; complaint mechanism; records-access procedure; "
-       "stop-work event log.")
 
     h(doc, 1, "Disclaimer")
     p(doc,
@@ -964,9 +957,6 @@ def gen_pre3():
        "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
        "Accreditation Standards for Hospitals, 6th Edition. PRE.3.")
     ln(doc, "Guidebook interpretation supplied for PRE.3.a through PRE.3.e.")
-    ln(doc,
-       f"Internal documents of {HN}: clinical notes/consultation records; care-plan "
-       "consultation records; multi-disciplinary counselling situation list and records.")
 
     h(doc, 1, "Disclaimer")
     p(doc,
@@ -1270,9 +1260,6 @@ def gen_pre4():
        "(Prevention and Control) Act, 2017 and the National AIDS Control Organisation's "
        "national HIV-testing policy — applicable to "
        f"{HN} only to the extent its services fall within the scope of these statutes.")
-    ln(doc,
-       f"Internal documents of {HN}: informed-consent list; consent process guidance; "
-       "consent forms; two-clinician emergency decision records; stop-work event log.")
 
     h(doc, 1, "Disclaimer")
     p(doc,
@@ -1298,6 +1285,1157 @@ def gen_pre4():
     save_and_verify(doc, "HCO_PRE_4_v2_REWRITE_DRAFT.docx")
 
 
+# ══════════════════════════════════════════════════════════════════════════════
+# PRE.5 — Information and Education about Healthcare Needs  (NO stop-work)
+# COREs: a | Stars: none | Achievement: i | Excellence: j
+# Prepared by: Nursing Superintendent | Doc: HCO/PRE/POL/05
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_pre5():
+    doc = Document()
+
+    h(doc, 0, "Policy on Information and Education about Healthcare Needs")
+    p(doc, HN)
+
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/PRE/POL/05", "Nursing Superintendent")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      f"Patients and families at {HN} have a right to information and education about "
+      "their healthcare needs, delivered in a way they can understand and act on.")
+
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy sets out how {HN} educates patients and families — in a language "
+      "and format they understand, on medication safety, food-drug interaction, diet and "
+      "nutrition, immunisation, pain management, their specific disease process, and "
+      "preventing healthcare-associated infections — and how special educational needs "
+      "and patient engagement are addressed.")
+    p(doc,
+      "This policy does not cover informed consent, patient rights generally, or "
+      "information on costs — those are covered in other hospital policies. The other "
+      "PRE standards have their own policies too.")
+
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to all patients and families receiving care at {HN}, across "
+      "out-patient and in-patient settings.")
+
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} educates patients and families in a language and format they can understand; "
+      "about the safe and effective use of medication and its potential side effects when "
+      "appropriate; about food-drug interaction; about diet and nutrition; about "
+      "immunisations; on pain management techniques when appropriate; about their "
+      "specific disease process, complications and prevention strategies; and about "
+      "preventing healthcare-associated infections.")
+    p(doc,
+      f"{HN} identifies and addresses patients' and families' special educational needs, "
+      "and has a mechanism to promote patient engagement to enhance clinical outcomes, "
+      "safety and quality.")
+
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not educate a patient or family in a language or format they cannot understand "
+       "— screen for understanding and language needs first.")
+    lb(doc,
+       "Do not skip educating a patient or family on the safe and effective use of "
+       "medication and its potential side effects, where appropriate.")
+    lb(doc,
+       "Do not skip educating a patient or family about food-drug interaction for drugs "
+       "on the hospital's identified list.")
+    lb(doc,
+       "Do not give diet and nutrition education that omits general recommendations for "
+       "a healthy diet.")
+    lb(doc,
+       "Do not skip paediatric immunisation education that follows the universal "
+       "immunisation programme.")
+    lb(doc,
+       "Do not deliver pain-management education outside the patient's personal, cultural "
+       "and religious beliefs.")
+    lb(doc,
+       "Do not give disease-specific education that omits lifestyle modifications, diet "
+       "changes or immunisation where appropriate.")
+    lb(doc,
+       "Do not skip educating a patient or family about preventing healthcare-associated "
+       "infections.")
+    lb(doc, "Do not identify a special educational need without addressing it.")
+    lb(doc,
+       "Staff who see a rule under this policy broken report it the same shift to the "
+       "Nursing Superintendent or the Medical Superintendent.")
+
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Education in an understood language and format")
+    p(doc,
+      f"During treatment, patients and/or families at {HN} are screened — at least "
+      "informally — for their understanding abilities and language requirements. Education "
+      "is delivered through counselling, printed material or audio-visual aids in the "
+      "language and format identified from that screening.")
+
+    h(doc, 2, "5.2 Medication safety education")
+    p(doc,
+      f"{HN} maintains a list of drugs for which education on safe and effective use and "
+      "potential side effects is required — for example digoxin — and educates patients "
+      "and/or families against that list when those drugs are prescribed or dispensed, "
+      "including the importance of taking a drug at a specific time where relevant.")
+
+    h(doc, 2, "5.3 Food-drug interaction education")
+    p(doc,
+      f"{HN} maintains a list of drugs, or drug classes, for which food-drug interactions "
+      "are clinically relevant — for example no alcohol when taking metronidazole — and "
+      "educates patients and families about their diet during medication when a drug on "
+      "that list is prescribed.")
+
+    h(doc, 2, "5.4 Diet and nutrition education")
+    p(doc,
+      f"Education on diet and nutrition at {HN} incorporates general recommendations for "
+      "following a healthy diet, and may also cover the relationship between specific "
+      "foods or supplements and particular health conditions.")
+
+    h(doc, 2, "5.5 Immunisation education")
+    p(doc,
+      f"Paediatric immunisation education at {HN} follows the universal immunisation "
+      "programme. Adult patients are educated on relevant vaccines — for example "
+      "influenza, pneumococcal, typhoid, hepatitis B, or meningococcal vaccines — as "
+      "determined by the treating doctor based on the patient's condition and risk profile.")
+
+    h(doc, 2, "5.6 Pain management education")
+    p(doc,
+      f"Where appropriate — typically for patients likely to have long-term pain because "
+      "the underlying condition is not treatable — {HN} educates the patient and/or "
+      "family on pain management techniques, within the framework of their personal, "
+      "cultural and religious beliefs.")
+
+    h(doc, 2, "5.7 Disease-specific education")
+    p(doc,
+      f"Education on a patient's specific disease process, complications and prevention "
+      f"strategies at {HN} includes lifestyle modifications — stress management, physical "
+      "exercise, cessation of smoking and substance abuse — and covers diet changes and "
+      "immunisations where appropriate to the condition. This may be delivered through "
+      "booklets, videos or leaflets.")
+
+    h(doc, 2, "5.8 Healthcare-associated infection prevention education")
+    p(doc,
+      f"{HN} educates patients and families about preventing healthcare-associated "
+      "infections — for example hand washing and avoiding overcrowding near the patient.")
+
+    h(doc, 2, "5.9 Special educational needs")
+    p(doc,
+      "Special educational needs of patients and/or family members — for example related "
+      "to ADHD, autism support, physical disabilities, speech and communication needs, "
+      "or social and emotional health needs — are identified during treatment and "
+      "addressed through counselling, printed material, audio-visual aids or other "
+      "adapted means.")
+
+    h(doc, 2, "5.10 Patient engagement")
+    p(doc,
+      f"{HN} works to create an enabling environment for partnership between patients, "
+      "families, communities and healthcare providers, and encourages patients to become "
+      "actively involved in reporting safety incidents, near misses and safety concerns. "
+      "This may include disease-based patient support groups, a patient advisory council, "
+      "and designated patient safety champions or advocates, where appropriate.")
+
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Not applicable. This standard has no stop-work authority — gaps in patient and "
+      "family education are addressed through the hospital's quality monitoring and CAPA "
+      "process (Section 8), not through an immediate stop-work trigger.")
+
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for ensuring patients and families receive education as required by "
+         "this policy; receives escalations under Section 4."),
+        ("Nursing Superintendent",
+         "Owns implementation of this policy; coordinates patient and family education "
+         "across departments; holds education records."),
+        ("Pharmacy In-Charge",
+         "Maintains the medication-safety and food-drug interaction education lists; "
+         "keeps these current with the formulary."),
+        ("Treating Doctor / Care Team",
+         "Delivers or assigns disease-specific, pain-management and immunisation education "
+         "relevant to the individual patient."),
+        ("Quality Coordinator",
+         "Audits this policy; holds training records and staff acknowledgements."),
+    ])
+
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Language and format",
+         "Evidence of language/format screening; education given in the identified "
+         "language and format."),
+        ("Medication safety",
+         "Written drug-education list; counselling records for patients receiving "
+         "listed drugs."),
+        ("Food-drug interaction",
+         "Written food-drug interaction list; counselling or diet-note records."),
+        ("Diet and nutrition",
+         "In-patient diet education records; out-patient diet counselling records."),
+        ("Immunisation",
+         "Adult immunisation advice records; paediatric immunisation counselling "
+         "records referencing the universal immunisation programme."),
+        ("Pain management",
+         "Long-term pain education records for identified patients."),
+        ("Disease-specific education",
+         "Education records covering disease process, lifestyle, diet and immunisation."),
+        ("HAI prevention",
+         "Admission-checklist education records confirming person-to-person education."),
+        ("Special educational needs",
+         "Identified-need records; corresponding adapted-education or counselling records."),
+        ("Patient engagement",
+         "Engagement activity records — support groups, advisory council, safety "
+         "champion appointments, patient safety incident reports received."),
+    ])
+
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      f"All staff covered by this policy are trained on the education requirements "
+      "described in Section 5 at induction and periodically.")
+    p(doc,
+      f"I have read the Policy on Information and Education about Healthcare Needs of "
+      f"{HN} and understand my responsibilities under it.")
+    sig_tbl(doc)
+
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to the Nursing department, Pharmacy, all clinical "
+      "department heads, and all staff through the hospital intranet and department "
+      "policy folders.")
+
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("ADHD", "Attention Deficit Hyperactivity Disorder"),
+        ("CAPA", "Corrective and Preventive Action"),
+        ("HAI",  "Healthcare-Associated Infection"),
+        ("NABH", "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("OPD",  "Out-Patient Department"),
+        ("PREM", "Patient-Reported Experience Measure"),
+    ])
+
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk in "
+      "the Level column means the objective element is starred and requires documented "
+      "evidence.")
+    tr = tbl(doc, 11, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("PRE.5.a", "CORE",
+         "Sections 3 and 5.1 address education in a language and format the patient "
+         "and/or family can understand, including informal screening for language needs."),
+        ("PRE.5.b", "Commitment",
+         "Sections 3 and 5.2 address education on safe and effective medication use and "
+         "potential side effects, using the hospital's drug-education list."),
+        ("PRE.5.c", "Commitment",
+         "Sections 3 and 5.3 address education on food-drug interactions, using the "
+         "hospital's food-drug interaction list."),
+        ("PRE.5.d", "Commitment",
+         "Sections 3 and 5.4 address diet and nutrition education, including general "
+         "healthy-diet recommendations."),
+        ("PRE.5.e", "Commitment",
+         "Sections 3 and 5.5 address immunisation education, following the universal "
+         "immunisation programme for paediatric patients."),
+        ("PRE.5.f", "Commitment",
+         "Sections 3 and 5.6 address pain-management education for patients likely to "
+         "have long-term pain, within personal, cultural and religious beliefs."),
+        ("PRE.5.g", "Commitment",
+         "Sections 3 and 5.7 address disease-specific education, including lifestyle "
+         "modifications, diet changes and immunisation where appropriate."),
+        ("PRE.5.h", "Commitment",
+         "Sections 3 and 5.8 address education on preventing healthcare-associated "
+         "infections, including hand washing and avoiding overcrowding."),
+        ("PRE.5.i", "Achievement",
+         "Sections 3 and 5.9 address identification and addressing of patients' and "
+         "families' special educational needs."),
+        ("PRE.5.j", "Excellence",
+         "Sections 3 and 5.10 address mechanisms to promote patient engagement, including "
+         "support groups, advisory council and safety champions."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Education language and format — PRE.5.a (CORE)")
+    lb(doc,
+       "Language/format screening record (admission note, nursing kardex or counselling "
+       "record), education given, and the format used.")
+
+    h(doc, 2, "Medication safety education — PRE.5.b (Commitment)")
+    lb(doc, "Written drug-education list (current version).")
+    lb(doc, "Counselling records for sampled patients who received a listed drug.")
+
+    h(doc, 2, "Food-drug interaction education — PRE.5.c (Commitment)")
+    lb(doc, "Written food-drug interaction list.")
+    lb(doc, "Counselling or diet-note records for sampled patients who received a listed drug.")
+
+    h(doc, 2, "Diet and nutrition education — PRE.5.d (Commitment)")
+    lb(doc, "In-patient diet education records (for patients on therapeutic diets).")
+    lb(doc, "Out-patient diet counselling records when ordered by the treating doctor.")
+
+    h(doc, 2, "Immunisation education — PRE.5.e (Commitment)")
+    lb(doc, "Records of immunisation advice given to adults, noting vaccines discussed or due.")
+    lb(doc,
+       "Paediatric immunisation counselling records referencing the universal immunisation "
+       "programme.")
+
+    h(doc, 2, "Pain management education — PRE.5.f (Commitment)")
+    lb(doc,
+       "Records of long-term pain-management education for identified patients, noting "
+       "the treating doctor's rationale and the cultural/religious framework respected.")
+
+    h(doc, 2, "Disease-specific education — PRE.5.g (Commitment)")
+    lb(doc,
+       "Education records for sampled patients, covering disease process, complications, "
+       "lifestyle modifications, diet and immunisation.")
+    lb(doc, "Supporting materials used (booklets, videos, leaflets).")
+
+    h(doc, 2, "HAI prevention education — PRE.5.h (Commitment)")
+    lb(doc,
+       "HAI-prevention education records on the admission checklist confirming "
+       "person-to-person education occurred.")
+
+    h(doc, 2, "Special educational needs — PRE.5.i (Achievement)")
+    lb(doc, "Identified-need records in the patient chart.")
+    lb(doc, "Corresponding adapted-education or counselling records showing the need was met.")
+
+    h(doc, 2, "Patient engagement — PRE.5.j (Excellence)")
+    lb(doc,
+       "Engagement activity records — support group sessions, advisory council meetings, "
+       "safety champion appointments, and patient safety incident reports received from "
+       "patients or families.")
+
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. PRE.5.")
+    ln(doc, "Guidebook interpretation supplied for PRE.5.a through PRE.5.j.")
+
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      f"This policy reorganises the supplied PRE.5 objective-element wording and "
+      f"Guidebook interpretation into plain-language guidance for {HN}. It does not "
+      "replace the NABH Accreditation Standards for Hospitals, 6th Edition, or the "
+      "Guidebook, which remain the authoritative source in case of any conflict.")
+    p(doc,
+      "This policy is intended for accreditation and internal governance purposes and "
+      "is not a statement of, or substitute for, compliance with any specific statute; "
+      f"{HN} remains separately responsible for meeting all applicable statutory and "
+      "regulatory requirements.")
+    p(doc,
+      "This policy shall be reviewed at least once every year, or earlier if NABH "
+      "standards change.")
+    p(doc,
+      f"This policy is the property of {HN} and is not to be reproduced or distributed "
+      "outside the organisation without authorisation.")
+
+    save_and_verify(doc, "HCO_PRE_5_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# PRE.6 — Information on Expected Costs   (NO stop-work)
+# COREs: a | Stars: none | Achievement: none | Excellence: none
+# Prepared by: Patient Accounts In-Charge | Doc: HCO/PRE/POL/06
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_pre6():
+    doc = Document()
+
+    h(doc, 0, "Policy on Information on Expected Costs")
+    p(doc, HN)
+
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/PRE/POL/06", "Patient Accounts In-Charge")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      f"Patients and families at {HN} have a right to information on expected costs, "
+      "so they can make informed decisions about their care without surprise charges.")
+
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy sets out how {HN} makes its pricing policy and tariff available to "
+      "patients and families, explains expected treatment costs, and informs them of "
+      "financial implications when the care plan changes.")
+    p(doc,
+      "This policy does not cover informed consent, patient education about healthcare "
+      "needs, or complaint redressal — those are covered in other hospital policies. "
+      "The other PRE standards have their own policies too.")
+
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to all patients and families across out-patient, emergency, "
+      f"ICU and in-patient settings at {HN}.")
+
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} makes patients and families aware of the pricing policy in each setting — "
+      "out-patient, emergency, ICU and in-patient — and makes the relevant tariff list "
+      "available to patients.")
+    p(doc,
+      f"{HN} explains expected costs to patients and families and informs them about "
+      "financial implications when there is a change in the care plan.")
+
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not leave the pricing policy undisplayed at the registration or admission "
+       "desk for any setting — out-patient, emergency, ICU or in-patient.")
+    lb(doc,
+       "Do not charge outside the current tariff list, and do not leave an additional "
+       "charge un-enumerated or uncommunicated to the patient.")
+    lb(doc,
+       "Do not skip giving a patient an estimate of expected treatment costs, based on "
+       "the treatment plan.")
+    lb(doc,
+       "Do not leave a patient or family uninformed of the financial implications when "
+       "the care plan changes.")
+    lb(doc,
+       "Staff who see a rule under this policy broken report it the same shift to the "
+       "Patient Accounts In-Charge or the Medical Superintendent.")
+
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Pricing policy display")
+    p(doc,
+      f"Key components of pricing — at minimum consultation charges, bed charges, nursing "
+      f"charges and security deposit — are available to patients near the registration "
+      f"and/or admission desk at {HN}, based on the billing policy that defines charges "
+      "for various healthcare activities. Pricing information is available for "
+      "out-patient, emergency, ICU and in-patient settings.")
+
+    h(doc, 2, "5.2 Tariff list availability")
+    p(doc,
+      f"{HN} maintains an updated tariff list, available for review to patients when "
+      "required. Charges follow the tariff list; any additional charge is enumerated in "
+      "the tariff and communicated to patients. Tariff rates are uniform within a given "
+      "setting and transparent.")
+
+    h(doc, 2, "5.3 Cost estimates")
+    p(doc,
+      f"Patients at {HN} are given an estimate of expected treatment expenses, based on "
+      "the treatment plan, preferably in written form. The estimate may be prepared by "
+      "OPD, registration or admission staff in consultation with the treating doctor. "
+      "Any limitations of the estimate — for example for emergency admissions — may "
+      "also be discussed with the patient.")
+
+    h(doc, 2, "5.4 Financial implications of care plan changes")
+    p(doc,
+      f"When there is a change in the care plan at {HN} — for example a shift between "
+      "settings such as to or from the ICU, a shift from medical to surgical management, "
+      "or the need for further expensive investigations — the patient and/or family are "
+      "informed of the financial implications.")
+
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Not applicable. This standard has no stop-work authority — gaps in cost "
+      "information are addressed through the hospital's quality monitoring and CAPA "
+      "process (Section 8), not through an immediate stop-work trigger.")
+
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for ensuring patients and families receive cost information as "
+         "required by this policy; receives escalations under Section 4."),
+        ("Patient Accounts In-Charge",
+         "Owns implementation of this policy; maintains the billing policy, pricing "
+         "display and tariff list; keeps these current."),
+        ("OPD / Registration / Admission Staff",
+         "Prepare cost estimates in consultation with the treating doctor; direct "
+         "patients to pricing and tariff information."),
+        ("Treating Doctor",
+         "Confirms the treatment plan behind each cost estimate; informs the patient "
+         "and family of care-plan changes affecting cost."),
+        ("Quality Coordinator",
+         "Audits this policy; holds training records and staff acknowledgements."),
+    ])
+
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Pricing policy display",
+         "Displayed pricing-policy document (with date); billing policy it is based on; "
+         "audit or observation record confirming display is in place across settings."),
+        ("Tariff list availability",
+         "Dated tariff list (current version); charge-versus-tariff reconciliation record "
+         "for a sampled bill; confirmation no undisclosed charge was applied."),
+        ("Cost estimates",
+         "Cost-estimate records given to patients (written where possible), filed in the "
+         "patient account or medical record; record of limitations discussed."),
+        ("Care plan change communication",
+         "Revised-estimate or cost-change notification records; confirmation no surprise "
+         "charge appeared at discharge for a known plan change."),
+    ])
+
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      f"All staff covered by this policy are trained on how to direct patients to pricing "
+      "and cost information and on the estimate and care-plan-change notification "
+      "requirements, at induction and periodically.")
+    p(doc,
+      f"I have read the Policy on Information on Expected Costs of {HN} and understand "
+      "my responsibilities under it.")
+    sig_tbl(doc)
+
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to the Patient Accounts department, OPD and "
+      "Admission desks, treating doctors, and all staff through the hospital intranet "
+      "and department policy folders.")
+
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CAPA", "Corrective and Preventive Action"),
+        ("ICU",  "Intensive Care Unit"),
+        ("NABH", "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("OPD",  "Out-Patient Department"),
+    ])
+
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk in "
+      "the Level column means the objective element is starred and requires documented "
+      "evidence.")
+    tr = tbl(doc, 5, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("PRE.6.a", "CORE",
+         "Sections 3 and 5.1 address display of pricing policy components across "
+         "out-patient, emergency, ICU and in-patient settings."),
+        ("PRE.6.b", "Commitment",
+         "Sections 3 and 5.2 address availability of an updated tariff list and "
+         "charging as per the tariff."),
+        ("PRE.6.c", "Commitment",
+         "Sections 3 and 5.3 address explanation of expected treatment costs, "
+         "preferably in written form, based on the treatment plan."),
+        ("PRE.6.d", "Commitment",
+         "Sections 3 and 5.4 address informing the patient and/or family of the "
+         "financial implications of a care plan change."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Pricing policy display — PRE.6.a (CORE)")
+    lb(doc,
+       "Displayed pricing-policy document (with date) and the billing policy it is "
+       "based on.")
+    lb(doc,
+       "Audit or observation record confirming the display is in place at registration "
+       "and/or admission desk across all applicable settings.")
+
+    h(doc, 2, "Tariff list — PRE.6.b (Commitment)")
+    lb(doc, "Dated tariff list (current version).")
+    lb(doc, "Charge-versus-tariff reconciliation record for a sampled bill.")
+    lb(doc, "Confirmation that no undisclosed additional charge was applied.")
+
+    h(doc, 2, "Cost estimates — PRE.6.c (Commitment)")
+    lb(doc,
+       "Cost-estimate records given to patients (written where possible), filed in the "
+       "patient account or medical record.")
+    lb(doc, "Records of any limitations discussed (for example for emergency admissions).")
+
+    h(doc, 2, "Care plan change financial communication — PRE.6.d (Commitment)")
+    lb(doc,
+       "Records of revised-estimate or cost-change notification when the care plan "
+       "shifted, noting the change and the date the patient or family was informed.")
+    lb(doc,
+       "Confirmation no surprise discharge charge occurred for a known plan change.")
+
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. PRE.6.")
+    ln(doc, "Guidebook interpretation supplied for PRE.6.a through PRE.6.d.")
+
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      f"This policy reorganises the supplied PRE.6 objective-element wording and "
+      f"Guidebook interpretation into plain-language guidance for {HN}. It does not "
+      "replace the NABH Accreditation Standards for Hospitals, 6th Edition, or the "
+      "Guidebook, which remain the authoritative source in case of any conflict.")
+    p(doc,
+      "This policy is intended for accreditation and internal governance purposes and "
+      "is not a statement of, or substitute for, compliance with any specific statute; "
+      f"{HN} remains separately responsible for meeting all applicable statutory and "
+      "regulatory requirements.")
+    p(doc,
+      "This policy shall be reviewed at least once every year, or earlier if NABH "
+      "standards change.")
+    p(doc,
+      f"This policy is the property of {HN} and is not to be reproduced or distributed "
+      "outside the organisation without authorisation.")
+
+    save_and_verify(doc, "HCO_PRE_6_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# PRE.7 — Patient Feedback, Experience and Complaint Redressal  (NO stop-work)
+# COREs: c* | Stars: c* | Achievement: b | Excellence: none
+# Prepared by: Quality Coordinator | Doc: HCO/PRE/POL/07
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_pre7():
+    doc = Document()
+
+    h(doc, 0, "Policy on Patient Feedback, Experience and Complaint Redressal")
+    p(doc, HN)
+
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/PRE/POL/07", "Quality Coordinator")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      f"{HN} has a mechanism to capture patient feedback and experience, and to redress "
+      "complaints, so patient voices shape how care is delivered.")
+
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy sets out how {HN} captures patient feedback and patient experience, "
+      "redresses complaints, makes patients aware of how to give feedback or complain, "
+      "reviews and analyses what it receives, and acts on what it finds.")
+    p(doc,
+      "This policy does not cover informed consent, patient education about healthcare "
+      "needs, or information on costs — those are covered in other hospital policies. "
+      "The other PRE standards have their own policies too.")
+
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to feedback, experience data and complaints from all patients "
+      f"and families at {HN}, across out-patient and in-patient settings, including "
+      "complaints against healthcare workers.")
+
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} has a mechanism to capture feedback from patients, including patient "
+      "satisfaction, and a mechanism to capture the patient experience, beyond "
+      "satisfaction, including patient-reported experience measures.")
+    p(doc,
+      f"{HN} redresses patient complaints as per a defined, written mechanism; makes "
+      "patients and families aware of the procedure for giving feedback and/or lodging "
+      "complaints; reviews and/or analyses feedback and complaints within a defined time "
+      "frame; and takes corrective and/or preventive action based on that analysis "
+      "where appropriate.")
+
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not operate without a mechanism to capture feedback from patients, including "
+       "patient satisfaction.")
+    lb(doc,
+       "Do not limit patient experience capture to satisfaction alone — it must go "
+       "beyond, and must include patient-reported experience measures.")
+    lb(doc,
+       "Do not redress patient complaints outside a defined, written mechanism — and do "
+       "not exclude verbal, telephonic, or healthcare-worker complaints from that "
+       "mechanism.")
+    lb(doc,
+       "Do not leave patients and families unaware of how to give feedback or lodge "
+       "a complaint.")
+    lb(doc,
+       "Do not let feedback or complaints sit unreviewed beyond the defined time frame, "
+       "or leave the review process undocumented.")
+    lb(doc,
+       "Do not leave a pattern or systemic gap identified through analysis without "
+       "corrective or preventive action.")
+    lb(doc,
+       "Staff who see a rule under this policy broken report it the same shift to the "
+       "Quality Coordinator or the Medical Superintendent.")
+
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Capturing patient feedback")
+    p(doc,
+      f"A mechanism to capture feedback from patients — including patient satisfaction "
+      f"— exists at {HN}, captured physically or electronically. Out-patient and "
+      "in-patient data are kept separate as best practice.")
+
+    h(doc, 2, "5.2 Capturing patient experience")
+    p(doc,
+      f"Beyond patient feedback, {HN} also captures patient experience — covering, at "
+      "a minimum, communication with doctors and nurses, pain management, hospital "
+      "environment (cleanliness and quietness), responsiveness of hospital staff, "
+      "discharge information, communication about medications, and overall rating. "
+      f"{HN} captures patient-reported experience measures (PREMs) as part of this.")
+
+    h(doc, 2, "5.3 Complaint redressal mechanism")
+    p(doc,
+      f"{HN} has written guidance covering the mechanism for lodging complaints "
+      "(including verbal or telephonic complaints), the method of compiling and "
+      "analysing complaints and the time frame for doing so, the person(s) responsible, "
+      "and how action taken is documented. Patient complaints include those against "
+      f"healthcare workers. Whether to give credence to anonymous complaints is for "
+      f"{HN} to decide.")
+
+    h(doc, 2, "5.4 Awareness of the feedback and complaint procedure")
+    p(doc,
+      f"Patients and families at {HN} are made aware of the procedure for giving "
+      "feedback and/or lodging complaints, through display or written information. "
+      f"{HN} works to create an environment of trust in which patients are comfortable "
+      "airing their views.")
+
+    h(doc, 2, "5.5 Review and analysis")
+    p(doc,
+      f"Feedback and complaints at {HN} are reviewed and/or analysed within a defined "
+      "time frame, and the entire process is documented. Where appropriate, the patient "
+      "and/or family may be involved in the discussion and informed of the outcome.")
+
+    h(doc, 2, "5.6 Corrective and preventive action")
+    p(doc,
+      "Where the analysis in Section 5.5 identifies an opportunity for improvement, "
+      f"{HN} carries out corrective and/or preventive action.")
+
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Not applicable. This standard has no stop-work authority — gaps in feedback "
+      "capture, complaint redressal or analysis are addressed through the hospital's "
+      "quality monitoring and CAPA process (Section 8), not through an immediate "
+      "stop-work trigger.")
+
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for ensuring the feedback, experience and complaint mechanisms "
+         "are in place and effective; receives escalations under Section 4."),
+        ("Quality Coordinator",
+         "Owns implementation of this policy; maintains the feedback and complaint "
+         "mechanisms, complaint log and analysis records; tracks CAPA to closure."),
+        ("Department Heads / Unit In-Charges",
+         "Support complaint investigation and implement corrective/preventive action "
+         "in their area."),
+        ("All Staff",
+         "Direct patients to the feedback and complaint channels; report identified "
+         "risks and rule breaches."),
+    ])
+
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Patient feedback mechanism",
+         "Feedback tool or form; response rate record; tabulated satisfaction data "
+         "with out-patient and in-patient data kept separate."),
+        ("Patient experience capture",
+         "Experience capture tool showing the listed parameters; PREM/"
+         "experience reports to the Medical Superintendent; action records."),
+        ("Complaint redressal mechanism",
+         "Written complaint-mechanism guidance; complaint log (including verbal, "
+         "telephonic, anonymous and healthcare-worker complaints); documented action "
+         "records for sampled complaints."),
+        ("Awareness",
+         "Display records (rights board, admission pamphlet, ward notice) matching "
+         "the actual complaints desk/phone/form."),
+        ("Review and analysis",
+         "Documented review/analysis process record; timelines for complaints and "
+         "feedback; overdue-item list reported to the Medical Superintendent."),
+        ("CAPA",
+         "CAPA records from feedback and complaint analysis, with owner, due date "
+         "and closure."),
+    ])
+
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      f"All staff covered by this policy are trained on the feedback and complaint "
+      "mechanisms described in Section 5 at induction and periodically.")
+    p(doc,
+      f"I have read the Policy on Patient Feedback, Experience and Complaint Redressal "
+      f"of {HN} and understand my responsibilities under it.")
+    sig_tbl(doc)
+
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to the Quality department, all department "
+      "heads/unit in-charges, and all staff through the hospital intranet and department "
+      "policy folders.")
+
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CAPA", "Corrective and Preventive Action"),
+        ("NABH", "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("OPD",  "Out-Patient Department"),
+        ("PREM", "Patient-Reported Experience Measure"),
+    ])
+
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk in "
+      "the Level column means the objective element is starred and requires documented "
+      "evidence.")
+    tr = tbl(doc, 7, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("PRE.7.a", "Commitment",
+         "Sections 3 and 5.1 address the mechanism to capture patient feedback, "
+         "including patient satisfaction, with out-patient and in-patient data separate."),
+        ("PRE.7.b", "Achievement",
+         "Sections 3 and 5.2 address the mechanism to capture patient experience beyond "
+         "satisfaction, including PREMs and the listed experience parameters."),
+        ("PRE.7.c", "CORE*",
+         "Sections 3 and 5.3 address the written complaint redressal mechanism, "
+         "covering verbal/telephonic/healthcare-worker complaints and documented action."),
+        ("PRE.7.d", "Commitment",
+         "Sections 3 and 5.4 address making patients and families aware of the feedback "
+         "and complaint procedure through display and written information."),
+        ("PRE.7.e", "Commitment",
+         "Sections 3 and 5.5 address review and/or analysis of feedback and complaints "
+         "within a defined time frame, with the process fully documented."),
+        ("PRE.7.f", "Commitment",
+         "Sections 3 and 5.6 address corrective and/or preventive action based on "
+         "feedback and complaint analysis where appropriate."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Patient feedback — PRE.7.a (Commitment)")
+    lb(doc,
+       "Feedback tool or form, response rate record against the target, and tabulated "
+       "satisfaction data with out-patient and in-patient data kept separate.")
+
+    h(doc, 2, "Patient experience — PRE.7.b (Achievement)")
+    lb(doc,
+       "Experience capture tool showing the listed parameters (communication, pain, "
+       "environment, responsiveness, discharge information, medications, overall rating).")
+    lb(doc, "PREM/experience reports to the Medical Superintendent.")
+    lb(doc, "Action records from those reports.")
+
+    h(doc, 2, "Complaint redressal mechanism — PRE.7.c (CORE*)")
+    lb(doc,
+       "Written complaint-mechanism guidance document covering lodging, compiling, "
+       "analysing, time frame, responsible person, and documentation of action taken.")
+    lb(doc,
+       "Complaint log including verbal, telephonic, anonymous and healthcare-worker "
+       "complaints.")
+    lb(doc, "Documented action records for sampled complaints.")
+
+    h(doc, 2, "Awareness — PRE.7.d (Commitment)")
+    lb(doc,
+       "Display records (rights board, admission pamphlet, ward notice) naming the "
+       "feedback and complaint procedure.")
+    lb(doc, "Verification that the displayed path matches the actual complaints desk/phone/form.")
+
+    h(doc, 2, "Review and analysis — PRE.7.e (Commitment)")
+    lb(doc,
+       "Documented review/analysis process record and the defined review time frame.")
+    lb(doc, "Overdue-complaint list reported to the Medical Superintendent.")
+
+    h(doc, 2, "CAPA — PRE.7.f (Commitment)")
+    lb(doc,
+       "CAPA records from feedback and complaint analysis, with owner, due date "
+       "and closure.")
+    lb(doc, "Confirmation that analysis led to action, not analysis alone.")
+
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. PRE.7.")
+    ln(doc, "Guidebook interpretation supplied for PRE.7.a through PRE.7.f.")
+
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      f"This policy reorganises the supplied PRE.7 objective-element wording and "
+      f"Guidebook interpretation into plain-language guidance for {HN}. It does not "
+      "replace the NABH Accreditation Standards for Hospitals, 6th Edition, or the "
+      "Guidebook, which remain the authoritative source in case of any conflict.")
+    p(doc,
+      "This policy is intended for accreditation and internal governance purposes and "
+      "is not a statement of, or substitute for, compliance with any specific statute; "
+      f"{HN} remains separately responsible for meeting all applicable statutory and "
+      "regulatory requirements.")
+    p(doc,
+      "This policy shall be reviewed at least once every year, or earlier if NABH "
+      "standards change.")
+    p(doc,
+      f"This policy is the property of {HN} and is not to be reproduced or distributed "
+      "outside the organisation without authorisation.")
+
+    save_and_verify(doc, "HCO_PRE_7_v2_REWRITE_DRAFT.docx")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# PRE.8 — Effective Communication with Patients and Families  (NO stop-work)
+# COREs: none | Stars: a*, b*, c* | Achievement: e | Commitment: a*, b*, c*, d
+# PRE.8.d is a conduct prohibition, not a procedure-start stop-work gate
+# Prepared by: Quality Coordinator | Doc: HCO/PRE/POL/08
+# ══════════════════════════════════════════════════════════════════════════════
+def gen_pre8():
+    doc = Document()
+
+    h(doc, 0, "Policy on Effective Communication with Patients and Families")
+    p(doc, HN)
+
+    h(doc, 1, "Document control")
+    doc_ctrl(doc, "HCO/PRE/POL/08", "Quality Coordinator")
+    p(doc, "A blank marked ________ must be completed before issue.")
+
+    h(doc, 1, "Statement of intent")
+    p(doc,
+      f"{HN} has a system for effective communication with patients and/or families, "
+      "so that communication serves its purpose, meets patients where they are, and "
+      "never crosses into disrespect.")
+
+    h(doc, 1, "1. Purpose")
+    p(doc,
+      f"This policy sets out how {HN} communicates effectively with patients and "
+      "families, identifies special situations needing enhanced communication, ensures "
+      "that enhanced communication is done well, prevents unacceptable communication, "
+      "and monitors how well all of this works.")
+    p(doc,
+      "This policy does not cover informed consent, patient education about healthcare "
+      "needs, or complaint redressal — those are covered in other hospital policies. "
+      "The other PRE standards have their own policies too.")
+
+    h(doc, 1, "2. Scope")
+    p(doc,
+      f"This policy applies to all communication between staff and patients and/or "
+      f"families at {HN}.")
+
+    h(doc, 1, "3. Policy standards")
+    p(doc,
+      f"{HN} communicates with patients and/or families effectively; identifies special "
+      "situations where enhanced communication is required; carries out enhanced "
+      "communication effectively for each identified special situation; and ensures "
+      "there is no unacceptable communication.")
+    p(doc,
+      f"{HN} monitors and reviews the implementation of effective communication.")
+
+    h(doc, 1, "4. Non-negotiable rules")
+    lb(doc,
+       "Do not communicate with a patient or family in a way that fails to serve its "
+       "purpose — identify and work to overcome communication barriers.")
+    lb(doc,
+       "Do not leave special situations requiring enhanced communication unidentified.")
+    lb(doc,
+       "Do not leave an identified special situation without a detailed, trained approach "
+       "to the enhanced communication it requires.")
+    lb(doc,
+       "Do not allow unacceptable communication — abusing patients, hurting religious "
+       "or cultural sentiments, or communicating with disrespect.")
+    lb(doc,
+       "Do not leave the effectiveness of communication unmonitored and unreviewed.")
+    lb(doc,
+       "Staff who see a rule under this policy broken report it the same shift to the "
+       "Quality Coordinator or the Medical Superintendent.")
+
+    h(doc, 1, "5. What we do")
+
+    h(doc, 2, "5.1 Effective communication")
+    p(doc,
+      f"Communication with patients and/or families at {HN} is done effectively — "
+      "serving its purpose. {HN} identifies potential communication barriers and has "
+      "plans to overcome them — for example, a language barrier may be overcome through "
+      "an interpreter. Any recognised model of effective communication may be adopted.")
+
+    h(doc, 2, "5.2 Identifying special situations")
+    p(doc,
+      f"{HN} identifies special situations where enhanced communication with patients "
+      "and/or families is required — for example breaking bad news, handling adverse "
+      "events, handling an aggressive patient or family, talking to the family of a "
+      "patient who has died, or counselling for a complicated intervention.")
+
+    h(doc, 2, "5.3 Delivering enhanced communication")
+    p(doc,
+      "For each special situation identified under Section 5.2, "
+      f"{HN} details the nature of the enhanced communication required — for example, "
+      "one recognised model for delivering bad news is SPIKES (Setting, Perception, "
+      "Invitation or information, Knowledge, Empathy, Summarize or strategize). Any "
+      "named or documented model may be adopted for each situation.")
+
+    h(doc, 2, "5.4 No unacceptable communication")
+    p(doc,
+      f"{HN} does not allow unacceptable communication — for example abusing patients, "
+      "hurting religious or cultural sentiments, or communicating with disrespect. "
+      "Anyone who witnesses such conduct stops the interaction, protects the patient, "
+      "and reports it under Section 4.")
+
+    h(doc, 2, "5.5 Monitoring communication")
+    p(doc,
+      f"{HN} has a system to monitor and review how effective communication is "
+      "implemented — for example through feedback or complaint analysis from patients "
+      "and other stakeholders.")
+
+    h(doc, 1, "6. Stop-work authority")
+    p(doc,
+      "Not applicable in the procedure-start sense. PRE.8.d prohibits unacceptable "
+      "communication as a conduct obligation — anyone who witnesses such conduct stops "
+      "the interaction, protects the patient, and reports it the same shift under "
+      "Section 4. The Medical Superintendent acts on a confirmed breach as a conduct "
+      "matter. This is not a procedure-start stop-work gate.")
+
+    h(doc, 1, "7. Governance and responsibility")
+    gov_tbl(doc, [
+        ("Medical Superintendent",
+         "Accountable for ensuring effective communication across the organisation; "
+         "acts on confirmed unacceptable-communication breaches; receives escalations "
+         "under Section 4."),
+        ("Quality Coordinator",
+         "Owns implementation of this policy; maintains the list of special situations; "
+         "monitors communication effectiveness and reports findings."),
+        ("Department Heads / Unit In-Charges",
+         "Train staff on effective and enhanced communication for their area; escalate "
+         "unacceptable-communication incidents."),
+        ("All Staff",
+         "Communicate effectively; recognise and report unacceptable communication "
+         "the same shift."),
+    ])
+
+    h(doc, 1, "8. Quality monitoring")
+    mon_tbl(doc, [
+        ("Effective communication",
+         "Training records at induction and periodically; barrier-identification and "
+         "interpreter-arrangement records; observed-practice records for sampled cases."),
+        ("Special situations identified",
+         "Written list of special situations; training pack covering that list; "
+         "staff-awareness records for emergency, ICU, OT and ward staff."),
+        ("Enhanced communication delivered",
+         "Detailed description of enhanced communication for each listed situation; "
+         "records confirming enhanced communication was carried out for sampled cases; "
+         "training records showing staff know the models in use."),
+        ("No unacceptable communication",
+         "Conduct-incident records for confirmed breaches; action records by the "
+         "Medical Superintendent; training records naming examples."),
+        ("Monitoring and review",
+         "Observation or record-sample review; findings reported to the "
+         "Medical Superintendent; action records when communication failures found."),
+    ])
+
+    h(doc, 1, "9. Training and staff acknowledgement")
+    p(doc,
+      f"All staff covered by this policy are trained on effective and enhanced "
+      "communication principles, including recognising and reporting unacceptable "
+      "communication, at induction and periodically.")
+    p(doc,
+      f"I have read the Policy on Effective Communication with Patients and Families "
+      f"of {HN} and understand my responsibilities under it.")
+    sig_tbl(doc)
+
+    h(doc, 1, "10. Distribution")
+    p(doc,
+      "This policy shall be available to the Quality department, all department "
+      "heads/unit in-charges, and all staff through the hospital intranet and department "
+      "policy folders.")
+
+    h(doc, 1, "11. Abbreviations")
+    abbrev_tbl(doc, [
+        ("CAPA",   "Corrective and Preventive Action"),
+        ("ICU",    "Intensive Care Unit"),
+        ("NABH",   "National Accreditation Board for Hospitals and Healthcare Providers"),
+        ("OT",     "Operation Theatre"),
+        ("SPIKES", "Setting, Perception, Invitation or information, Knowledge, Empathy, "
+                   "Summarize or strategize (breaking-bad-news model)"),
+    ])
+
+    h(doc, 1, "12. Traceability table")
+    p(doc,
+      "This table is an index. It is not how the policy is organised. An asterisk in "
+      "the Level column means the objective element is starred and requires documented "
+      "evidence.")
+    tr = tbl(doc, 6, 3)
+    for ci, hdr in enumerate(("Objective Element", "Level", "Traceability to this policy")):
+        tr.cell(0, ci).text = hdr
+    trace_rows = [
+        ("PRE.8.a", "Commitment*",
+         "Sections 3 and 5.1 address effective communication serving its purpose, "
+         "identifying and overcoming communication barriers."),
+        ("PRE.8.b", "Commitment*",
+         "Sections 3 and 5.2 address identification of special situations where "
+         "enhanced communication is required."),
+        ("PRE.8.c", "Commitment*",
+         "Sections 3 and 5.3 address detailing and delivering enhanced communication "
+         "for each identified special situation, including the SPIKES model for bad news."),
+        ("PRE.8.d", "Commitment",
+         "Sections 3 and 5.4 address the prohibition on unacceptable communication "
+         "and the conduct-reporting obligation when it occurs."),
+        ("PRE.8.e", "Achievement",
+         "Sections 3 and 5.5 address the system to monitor and review implementation "
+         "of effective communication, with findings reported and acted on."),
+    ]
+    for ri, (oe, lvl, txt) in enumerate(trace_rows, 1):
+        tr.cell(ri, 0).text = oe
+        tr.cell(ri, 1).text = lvl
+        tr.cell(ri, 2).text = txt
+
+    h(doc, 1, "13. Required Records/Evidence Checklist")
+
+    h(doc, 2, "Effective communication — PRE.8.a (Commitment*)")
+    lb(doc,
+       "Training records on effective communication principles (induction and periodic).")
+    lb(doc,
+       "Barrier-identification and interpreter-arrangement records.")
+    lb(doc,
+       "Observed-practice records confirming effective communication in sampled cases.")
+
+    h(doc, 2, "Special situations identified — PRE.8.b (Commitment*)")
+    lb(doc,
+       "Written list of special situations requiring enhanced communication.")
+    lb(doc,
+       "Training pack covering that list, with staff-awareness records for emergency, "
+       "ICU, OT and ward staff.")
+
+    h(doc, 2, "Enhanced communication delivered — PRE.8.c (Commitment*)")
+    lb(doc,
+       "Detailed description of enhanced communication for each listed special situation "
+       "(including the adopted model for breaking bad news, for example SPIKES).")
+    lb(doc,
+       "Records confirming enhanced communication was carried out for sampled cases.")
+    lb(doc,
+       "Training records showing staff know the models in use.")
+
+    h(doc, 2, "No unacceptable communication — PRE.8.d (Commitment)")
+    lb(doc,
+       "Conduct-incident records for confirmed unacceptable-communication breaches.")
+    lb(doc, "Action records by the Medical Superintendent for confirmed breaches.")
+    lb(doc,
+       "Training records naming examples so staff can recognise the line.")
+
+    h(doc, 2, "Monitoring and review — PRE.8.e (Achievement)")
+    lb(doc,
+       "Communication-monitoring review records (observations, record samples, "
+       "or feedback/complaint analysis focused on communication).")
+    lb(doc, "Findings reported to the Medical Superintendent.")
+    lb(doc, "Action records when communication failures were identified.")
+
+    h(doc, 1, "14. References")
+    ln(doc,
+       "National Accreditation Board for Hospitals and Healthcare Providers. NABH "
+       "Accreditation Standards for Hospitals, 6th Edition. PRE.8.")
+    ln(doc, "Guidebook interpretation supplied for PRE.8.a through PRE.8.e.")
+
+    h(doc, 1, "Disclaimer")
+    p(doc,
+      f"This policy reorganises the supplied PRE.8 objective-element wording and "
+      f"Guidebook interpretation into plain-language guidance for {HN}. It does not "
+      "replace the NABH Accreditation Standards for Hospitals, 6th Edition, or the "
+      "Guidebook, which remain the authoritative source in case of any conflict.")
+    p(doc,
+      "This policy is intended for accreditation and internal governance purposes and "
+      "is not a statement of, or substitute for, compliance with any specific statute; "
+      f"{HN} remains separately responsible for meeting all applicable statutory and "
+      "regulatory requirements.")
+    p(doc,
+      "This policy shall be reviewed at least once every year, or earlier if NABH "
+      "standards change.")
+    p(doc,
+      f"This policy is the property of {HN} and is not to be reproduced or distributed "
+      "outside the organisation without authorisation.")
+
+    save_and_verify(doc, "HCO_PRE_8_v2_REWRITE_DRAFT.docx")
+
+
 if __name__ == "__main__":
     gen_pre1()
     gen_pre2()
+    gen_pre3()
+    gen_pre4()
+    gen_pre5()
+    gen_pre6()
+    gen_pre7()
+    gen_pre8()
