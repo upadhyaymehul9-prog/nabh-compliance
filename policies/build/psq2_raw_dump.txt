@@ -1,0 +1,277 @@
+PSQ.2 — Raw Source Dump
+=======================
+
+Standard text (verbatim):
+The organisation implements a structured quality improvement and continuous monitoring
+programme.
+
+OE count: 9 | COREs: a, i | Stars: a★, b★, e★, f★, h★, i★
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.2.a
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+The quality improvement programme is developed, implemented and maintained by a
+multi-disciplinary committee.*
+
+Guidebook interpretation (PDF p. 219):
+The quality improvement programme shall be developed, implemented and maintained in a
+structured manner.
+
+It shall be integrated across the organisation and provide a framework for risk
+management, ongoing monitoring and performing improvements based on reviews.
+
+The roles and responsibilities of the multidisciplinary committee are defined, and it
+shall have representation from management, various clinical and support departments of
+the organisation. This committee shall receive inputs on significant deliberations from
+other committees in the organisation. The committee may be called as the core
+committee, quality improvement committee etc.
+
+Stop-work check: CORE — non-negotiable. Absence of a multidisciplinary committee
+developing, implementing and maintaining the quality improvement programme is CORE
+non-compliance.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.2.b
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The quality improvement programme is comprehensive and covers all the major elements
+related to quality assurance.*
+
+Guidebook interpretation (PDF pp. 219–220):
+The quality improvement programme shall be documented in the form of Quality
+Improvement Manual. The quality improvement programme shall incorporate the goals and
+objectives of the programme, framework for performing quality improvement activities
+including data collection, important indicators as identified, frequency of mock drills,
+audit schedules, committees and their terms of reference, review policy and
+implementation of corrective and preventive action. Utilisation review preferably could
+be part of quality improvement program. The quality assurance programme for specific
+areas like Laboratory, Imaging, Emergency, Blood center, Operation theatre and the
+Intensive Care Unit(s) is also summarised.
+
+Refer to AAC.7.a., AAC.9.a., COP2.h., COP8.g., COP9.f., COP 14.i., COP 14.j. and
+PSQ.2.d.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.2.c
+Level: Excellence | No star
+
+Verbatim OE text:
+The quality improvement programme improves process efficiency and effectiveness.
+
+Guidebook interpretation (PDF p. 220):
+The quality improvement programme encourages the use of quality tools, novel strategies
+to improve both clinical and managerial processes. The impact of the managerial process
+innovations may be at the level of the department or organisation-wide. Innovations may
+be targeted to improve patient safety, improve care delivery, to reduce costs, to
+introduce environmentally-friendly measures etc. The management of the organisation
+promotes these innovations.
+
+Stop-work check: Excellence — no stop-work trigger.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.2.d
+Level: Excellence | No star
+
+Verbatim OE text:
+The quality improvement programme focuses on appropriateness of clinical care.
+
+Guidebook interpretation (PDF p. 220):
+The doctors and nurses participate in utilization review which includes appropriateness
+of length of the stay, procedures, investigations and treatment.
+
+Stop-work check: Excellence — no stop-work trigger.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.2.e
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+There is a designated individual for coordinating and implementing the quality
+improvement programme.*
+
+Guidebook interpretation (PDF p. 220):
+The designated individual shall undergo a structured training programme in the
+implementation of accreditation standards (NABH Programme on Implementation of NABH
+Standards) and with knowledge of statutory requirements, hospital quality improvement
+principles and evaluation methodologies, hospital functioning and operations. For
+example, accreditation coordinator, quality management representative, quality manager.
+
+The designated individual shall report to the Top Management. The role and
+responsibilities of the designated individual shall be defined and documented.
+
+Also, champions in quality improvement are identified and developed across the
+organisation and supported to drive improvement.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.2.f
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The quality improvement programme identifies opportunities for improvement based on the
+review at pre-defined intervals.*
+
+Guidebook interpretation (PDF p. 221):
+The quality improvement programme is a dynamic process. There is an outline of the
+periodic review mechanisms at different levels, such as department/senior
+administration/management reviews, etc. The Quality improvement programme needs to be
+reviewed by the quality improvement committee at regular pre-defined intervals as
+defined by the organisation in the quality improvement manual but at least once in
+three months. The review shall include findings of audits, organisational performance,
+analysis of key indicators as identified and determined by the organisation. The
+minutes of the review meetings shall be recorded and maintained.
+
+Stop-work check: Commitment — no stop-work trigger. Note: the "at least once in three
+months" frequency is verbatim in the source and is mandatory (shall) — preserve it in
+any draft without converting it to "regularly" or another vaguer term.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.2.g
+Level: Commitment | No star
+
+Verbatim OE text:
+The quality improvement programme is reviewed and updated at least once a year.
+
+Guidebook interpretation (PDF p. 221):
+The update shall be done based on newer literature on quality improvement based on
+audits, feedback mechanisms, the review carried out by the quality improvement
+committee, etc.
+
+In case the annual review does not identify any opportunities for improvement, the same
+shall be documented in the minutes of the quality improvement committee meeting.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.2.h
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Audits are conducted at regular intervals as a means of continuous monitoring.*
+
+Guidebook interpretation (PDF pp. 221–222):
+Choice and frequency of audits shall be defined for priority areas in the organisation
+and for areas of concern as identified by trends in key performance indicators,
+identified risk, etc. However, all the areas of the organisation shall be covered by a
+hospital-wide internal audit at least once in 6 months as per a scheduled plan. This
+internal audit shall be done by an identified staff or a multidisciplinary team trained
+in NABH Accreditation standards for Hospitals. They shall assess areas independent of
+their area of work. The internal audit of a particular area shall include all the
+applicable standards and objective elements of NABH Accreditation standards for
+Hospitals. At the end of the audit, there shall be a formal meeting to summarise the
+findings and corrective and preventive measures shall be taken and documented.
+Implementation of changes is verified and recorded.
+
+Stop-work check: Commitment — no stop-work trigger. Note: "at least once in 6 months"
+is verbatim in the source (shall) — preserve this exact frequency.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.2.i
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+There is an established process in the organisation to monitor and improve the quality
+of nursing care.*
+
+Guidebook interpretation (PDF p. 222):
+Monitoring shall be done through nursing audits. This could also be in the form of a
+competency evaluation by written questionnaire or witnessed demonstration for key
+nursing procedures such as medication administration, peripheral and intravenous cannula
+placement, tracheostomy care etc. The organisation shall identify key performance
+indicators that reflect excellence in nursing care. This shall be integrated with
+quality improvement programme of the organisation.
+
+Stop-work check: CORE — non-negotiable. Absence of an established process to monitor
+and improve nursing care quality is CORE non-compliance. Note: the nursing procedure
+examples (medication administration, cannula placement, tracheostomy care) are
+illustrative ("could") — the organisation selects procedures appropriate to its scope.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+Summary Table
+
+OE   Level        Star   Stop-work   Key constraint
+a    CORE         Yes★   YES         Multidisciplinary committee mandatory; structured
+                                     development, implementation and maintenance
+b    Commitment   Yes★   No          Quality Improvement Manual required; comprehensive
+                                     coverage including goals, framework, data collection,
+                                     indicators, mock drills, audit schedules, ToRs,
+                                     CAPA review; area-specific QA summarised;
+                                     cross-refs: AAC.7.a, AAC.9.a, COP2.h, COP8.g,
+                                     COP9.f, COP14.i, COP14.j, PSQ.2.d
+c    Excellence   No     No          Process efficiency/effectiveness via quality tools
+                                     and novel strategies — management promotes
+                                     innovations; no mandatory methodology
+d    Excellence   No     No          Utilization review for appropriateness of LOS,
+                                     procedures, investigations and treatment
+e    Commitment   Yes★   No          Designated individual (e.g. accreditation
+                                     coordinator); must report to Top Management; role
+                                     and responsibilities defined and documented; QI
+                                     champions also to be identified across the org
+f    Commitment   Yes★   No          QI committee review at least once in three months
+                                     (shall — preserve exact frequency); minutes
+                                     recorded and maintained
+g    Commitment   No     No          Annual review and update; if no OFIs found, that
+                                     finding itself shall be documented in committee
+                                     minutes
+h    Commitment   Yes★   No          Hospital-wide internal audit at least once in 6
+                                     months (shall — preserve exact frequency); auditors
+                                     independent of their own area; all NABH standards
+                                     covered; formal findings meeting + CAPA documented
+i    CORE         Yes★   YES         Established nursing monitoring process — nursing
+                                     audits mandatory; KPIs for nursing excellence
+                                     identified; integrated with QI programme; specific
+                                     nursing procedure examples are illustrative only
+
+
+─────────────────────────────────────────────────────────────────────────────────
+NOTE ON "REFER TO APPENDED LIST" / NOTIFIABLE AND SENTINEL EVENTS
+─────────────────────────────────────────────────────────────────────────────────
+
+CONFIRMED: The PSQ.2 source text (both the standards OCR and the Guidebook OCR)
+contains NO "Refer to appended list" phrase and NO reference to notifiable or sentinel
+event categories within any of its 9 OEs.
+
+The user noted in a prior session that a ChatGPT draft for PSQ.2 included content
+about reporting notifiable/sentinel events with what appeared to be an enumerated or
+appended list of categories. That list was NOT sourced from NABH — it was ChatGPT
+invention.
+
+In the NABH 6th Edition source:
+  — Sentinel events are defined in the Glossary (referenced at PSQ.1.c).
+  — The requirement for the organisation to document its OWN list of sentinel events
+    appears at PSQ.7.b ("The sentinel events relating to system or process deficiencies
+    that are relevant and important to the organisation must be clearly defined. The list
+    of the identified and relevant sentinel events shall be documented.").
+  — PSQ.2 does not require a separate list of notifiable or sentinel events, and no
+    such list is appended to or referenced within the PSQ.2 source text.
+
+DRAFTING INSTRUCTION: Any PSQ.2 policy draft that mentions incident reporting,
+notifiable events, or sentinel events must describe the obligation generically:
+  — Example: "The organisation reports notifiable and sentinel events as defined in its
+    own internal list" — do NOT enumerate specific event categories.
+  — If the ChatGPT draft for PSQ.2 contains a bullet list of specific notifiable event
+    types or sentinel event categories, those bullets should be removed or replaced with
+    a generic reference to the organisation's internal definitions.
+  — This note and the feedback rule apply across all PSQ drafts.
+
+
+Source files:
+  policies/source/hco6_psq_ocr.txt          (verbatim OE text)
+  policies/source/hco6_psq_guidebook_ocr.txt (Guidebook interpretations, PDF pp. 219-222)
+  policies/source/hco6_psq_inventory.json    (levels, stars, OE codes)

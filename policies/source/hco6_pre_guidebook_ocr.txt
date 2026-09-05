@@ -1,0 +1,1012 @@
+# HCO 6th Edition Guidebook OCR — Patient Rights and Education (PRE)
+# Source: policies/source/NABH 6th Edition Standards & Guidebook-1.pdf
+# md5 2c4489ee98de4ae9b49cba168ea9f42a; scanned, no text layer.
+# pytesseract + pypdfium2 scale=2.2; 0-based indices 175-194 (PDF pages 176-195).
+# Printed TOC cited 167–186; verified PRE intent at PDF page 176, IPC at 196.
+# Do not commit the PDF (policies/source/*.pdf is gitignored).
+
+
+===== PDF_IDX 175 (pdf page 176) =====
+
+(PRE]
+
+Intent of the chapter
+
+The organisation defines, protects and promotes the patient and family’s rights and responsibilities. The staff
+is aware of these rights and is trained to protect them. Patients are informed of their rights and educated about
+their responsibilities at the time of entering the organisation.
+
+The expected costs of treatment and care are explained clearly to the patient and / or family.
+The organisation encourages patient engagement to enhance clinical outcomes, safety and quality.
+Patients are educated about the mechanisms available for addressing grievances.
+
+Informed consent is obtained from the patient or family for specified procedures / care. The key components
+ofinformation shall include risks, benefits and alternatives.
+
+Patients and families have a right to get information and education about their healthcare needs in a language
+and manner that is understood by them.
+
+The organisation has a mechanism to capture the patient experience including patient reported experience
+measures. (PREM).
+
+The organisation develops effective patient-centred communication.
+
+SUMMARY OF STAN Ss
+
+PRE.1 The organisation protects and promotes patient and family rights and informs them about their
+"s responsibilities during care.
+
+PRE.2. Patient and family rights support individual beliefs, values and involve the patient and family in decision-
+_ making processes.
+
+PRE.3 The patient and / or family members are educated to make informed decisions and are involved in the care
+in planning and delivery process.
+
+PRE.4, Informed consent is obtained from the patient or family about their care,
+
+PRE.5. Patient and families have a right to information and education about their healthcare needs.
+
+PRE.6, Patients and families have a right to information on expected costs.
+
+PRE.7. The organisation has a mechanism to capture patient's feedback and to redress complaints.
+
+PRE.8. The organisation has a system for effective communication with patients and / or families.
+
+“This implies that the objective element requires documentation.
+
+
+
+===== PDF_IDX 176 (pdf page 177) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+NAB re
+
+Standard 8
+Objective elements 52
+CQ@RE 12
+Commitment 32
+Achievement 7
+Excellence : 1
+pear PREA PREZ. PRE.3. PRE.A. PRE.S. PREG. PRE,T PRE,
+a Commitment | Commitment C@RE C@RE C@RE CQRE Commitment Commitment
+b | ebovoment | Commitment | Achteverent | ommitnent Commitment it a Achievement Commitment
+c CQRE | Commitment | fl | CQRE — Commitment CQRE comin
+(i) i CORE | CQRE Commitment Commitment Commitment Commitment oma a |
+e [ CARE | — ‘Achievement C@RE Commitment | Commitment ‘Achievement |
+f | Commitment | | | Commitment commitnes — |
+Q CQRE : | Commitment | i |
+— ——— + { ————— — —
+h Commitment | commument |
+i Commitment ae ‘Achievement ; | =y
+i | canminet | ft | | :
+k 1 Commitment | | |
+— —_ 4 iz = =
+I Aetievnent | |
+
+
+
+===== PDF_IDX 177 (pdf page 178) =====
+
+a yidebook to NABH Accreditation Standards for Hospitals
+NABH
+
+Standards and Objective Elements
+
+The organisation protects and promotes patient and family rights
+
+Et.
+ay and informs them about their responsibilities during care.
+
+Objective Elements
+
+Commitment a. Patient and family rights and responsibilities are documented, displayed,
+and they are made aware of the same. *
+
+Interpretation: Organisation shall document the patient's rights and inform them
+of their responsibilities. These shall be documented in consonance with the
+Charter of Patients’ Rights laid down by the statutory body. The rights and
+responsibilities of the patients shall be displayed in the hospital where it is
+prominently visible to patients, families and visitors. Pamphlets could be used to
+make them aware. Information, education and communication material shall at
+least be bilingual.
+
+Achievement b. Patient and family rights and responsibilities are actively promoted. *
+
+Interpretation: Organisation shall take steps to actively promote patient and
+family rights and responsibilities. For in-patients, the organisation shall counsel
+the patient and/or family on their rights and responsibilities. Counselling is done in
+a format and language that they can understand. For the out-patients,
+educational material shall be easily accessible and prominently displayed.
+
+CQRE c. Theorganisation protects patient and family rights.
+
+Interpretation: The first measure to protect patient and family rights is making
+staff aware of their responsibility in protecting and respecting patient and family
+rights. The staff shall conduct themselves in a manner wherein their actions
+convey a positive attitude towards the protection of patient and family rights.
+
+= CQRE HER Commitment ml Achievement -—-| Excellence
+
+
+
+===== PDF_IDX 178 (pdf page 179) =====
+
+| Gdebook to NABH Accreditation Standards for Hospitals
+
+CQRE
+
+NABR’
+
+The organisation has a mechanism to report a violation of patient and family
+rights.
+
+Interpretation: The organisation may develop a list of such instances which
+could be considered as infringements of patients’ and families’ rights and train the
+staff accordingly. For example, compromising the privacy, breaching
+confidentiality, disrespect to the religious and cultural needs, not providing
+medical records within the stipulated time etc. Violation of patient and family
+rights is reported through an incident reporting form. It shall provide details of how
+the right was violated and where applicable by whom. Also, there shall be a
+mechanism for the patient and/or family to report a violation of their rights. The
+patient feedback form (by incorporating patient rights worded appropriately)
+could be used as a tool to capture violation of patient rights.
+
+CQRE
+
+Violation of patient and family rights are monitored, analysed, and corrective
+/ preventive action taken by the top leadership of the organisation.
+
+Interpretation: Whenever patients' rights have been infringed upon,
+management shall document the said violations, investigate and maintain the
+record of the incident and its outcomes. Corrective and/or preventive actions shall
+be taken in a time frame defined by the organisation.
+
+Standard
+
+Patient and family rights support individual beliefs, values and
+
+involve the patient and family in decision-making processes.
+
+Objective Elements
+
+Commitment
+
+HMM core
+
+Patients and family rights include respecting values and beliefs, any special
+preferences, cultural needs, and responding to requests for spiritual needs.
+
+Interpretation: This could include how they wish to be addressed, dietary
+preferences and worship requirements. This may also include any specific
+requirement following death.
+
+HE commitment HE Achievement HR exceitence
+
+
+
+===== PDF_IDX 179 (pdf page 180) =====
+
+sjdebook to NABH Accreditation Standards for Hospitals
+
+NABH
+
+Commitment b. Patient and family rights include respect for personal dignity and privacy
+during examination, procedures and treatment.
+
+Interpretation: During all stages of patient care, be it in the examination or
+carrying out a procedure, hospital staff shall ensure that the patient’s privacy
+and dignity are maintained. The organisation shall develop the necessary
+guidelines for the same. During procedures, the organisation shall ensure that
+the patient is exposed just before the actual procedure. With regards to
+photographs/recording procedures, the organisation shall ensure that explicit
+informed consent is taken and that the patient’s identity is not revealed.
+
+Commitment cc. Patientand family rights include protection from neglect or abuse.
+
+Interpretation: Examples of this include falling from the bed/trolley due to
+negligence, assault, repeated internal examinations (unwarranted),
+manhandling, etc. Special precautions shall be taken, especially concerning
+vulnerable patients, for example elderly, neonates, physically and mentally
+challenged patients, comatose patients, patients under anaesthesia etc.
+
+C@RE d. Patient and family rights include treating patient information as confidential.
+
+Interpretation: The organisation and the treating team shall take effective
+measures to maintain the confidentiality of all patient-related information. Staff
+shall avoid having patient-related discussions in public places. Statutory
+requirements regarding privileged communication shall be followed at all times
+(refer the glossary for a definition of privileged communication). Confidential
+information, including HIV status, shall not be revealed without the patient’s
+permission. It shall not be explicitly written/pasted on the cover of the medical
+record, nor shall it be displayed in a manner that is easily understandable by the
+public at large.
+
+Commitment e. Patient and family rights include the refusal of treatment.
+
+Interpretation: The treating doctor shall discuss all the available options and
+allow the patient to make an informed choice. In case of refusal, the treating
+doctor shall explain the consequences of the refusal of treatment and document
+the same. After explanation of consequences, if the patient still refuses treatment,
+the same must be respected.
+
+| | C@RE | | Commitment z= Achievement = Excellence
+
+- |
+
+
+
+===== PDF_IDX 180 (pdf page 181) =====
+
+Commitment f.
+
+CQRE g.
+
+Commitment = h.
+
+Commitment i.
+
+HB cone
+
+NABH’
+
+Patient and family rights include a right to seek an additional opinion
+regarding clinical care.
+
+Interpretation: There is a mechanism for patient and family to seek a second
+opinion if they wish, from within or outside the organisation. The organisation
+shall respect the decision of the patient and family and facilitate access to all
+relevant information or clinical evaluation. Request for additional information ona
+particular physician in terms of qualifications and experience may be provided.
+
+Patient and family rights include informed consent before the transfusion of
+blood and blood components, anaesthesia, surgery, initiation of any
+research protocol and any other invasive / high-risk procedures / treatment.
+
+Interpretation: Informed consent shall be obtained by treating doctor or a doctor
+member of the treating team.
+
+Refer to PRE.4.a.
+
+Patient and family rights include a right to complain and information on how
+to voice a complaint.
+
+Interpretation: The displayed patient rights shall include the right to make a
+complaint and also mention the methodology to voice the same. Complaint
+mechanism must be accessible, and redressal of complaint must be fair and
+transparent.
+
+Refer to PRE.7.c.
+
+Patient and family rights include information on the expected cost of the
+treatment.
+
+Interpretation: Patients and families are explained about the expected costs of
+treatment in a transparent manner. This includes consultations, procedures and
+investigations. It may involve giving written estimates or making the concerned
+tariff available.
+
+Refer to PRE.6. a.
+
+=| Commitment | | Achievement fey Excellence
+
+
+
+===== PDF_IDX 181 (pdf page 182) =====
+
+4
+7 - NABH
+
+Commitment j. Patientand family rights include access to their clinical records.
+
+Interpretation: The organisation shall ensure that every patient has access to
+his/her record. This shall be in consonance with the Code of Medical Ethics laid
+down by the Medical Council of India and statutory requirements.
+
+Refer to IMS.4.h.
+
+Commitment k. Patient and family rights include information on the name of the treating
+doctor, care plan, progress and information on their health care needs.
+
+Interpretation: Information on the name of the treating doctor, care plan, the
+progress of the patient and the healthcare needs are discussed with patient and
+family.
+
+Achievement |. Patient rights include determining what information regarding their care
+would be provided to self and family.
+
+Interpretation: The organisation needs to evolve a mechanism to provide
+sensitive and/or confidential information to the patient and the next of kin if
+desired by the patient. In the case of minors, it will be provided to at least one of
+the parents / guardian.
+
+Standard
+
+The patient and / or family members are educated to make informed
+
+decisions and are involved in the care planning and delivery process
+
+Objective Elements
+
+CQRE a. The patient and / or family members are explained about the proposed care
+(including the risks, benefits, alternatives), expected results and_possible
+complications.
+
+Interpretation: The proposed care, including referral to internal and/or external
+services, is discussed by the attending doctor with the patient and/or family
+members. This shall be done in a language that the patient/attendant can
+
+= CQRE i Commitment = Achievement al Excellence
+
+
+
+===== PDF_IDX 182 (pdf page 183) =====
+
+NABH’
+
+understand. The above information could be documented and signed by the
+doctor concerned.
+
+The patients and/or family members are explained in detail by the treating
+physician or his/her team about the expected outcomes of such treatment at
+periodic intervals.
+
+Possible complications of the treatment, if any, are clearly communicated to the
+patient and/or family members.
+
+Achievement b.
+
+The care plan is prepared and modified in consultation with the patient and /
+or family members.
+
+Interpretation: During the preparation of the care plan, the patient and/or family
+members are explained about the various treatment options, risks and benefits.
+The care plan, where possible, incorporates patient and/or family concerns and
+requests. The religious, cultural and spiritual views of the patient and/or family
+shall be considered during the process of care delivery. Incorporating patient
+and/or family requests shall be limited by the statutory requirements. The
+organisation could develop a structured mechanism to implement and capture
+the same.
+
+Commitment c.
+
+The patient and/or family members are informed about the results of
+diagnostic tests and the diagnosis.
+
+Interpretation: The results of all diagnostic tests are explained at least in broad
+terms to patient and family members and their implication on progress and
+treatment.
+
+Commitment d.
+
+HB cone
+
+The patient and/or family members are explained about any change in the
+patient’s condition in a timely manner.
+
+Interpretation: The counselling includes improvement, deterioration or
+occurrence of complications. Withholding of resuscitation requests from relatives
+and family could be discussed within ethical and legal parameters.
+
+= Commitment = Achievement i Excellence
+
+
+
+===== PDF_IDX 183 (pdf page 184) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+NABH
+
+Achievement e. The patient and/or family members are provided multi-disciplinary
+counselling when appropriate.
+
+Interpretation: The organisation shall identify situations where multidisciplinary
+counselling is required. This could include counselling of family members of
+critically ill patients, potential organ donors and/or family, long-stay patients.
+
+Members of the multidisciplinary team involved in providing care like doctors from
+different specialities, nurses and physiotherapists shall be a part of the
+counselling. The counselling could be led by clinician in-charge of the patient.
+
+Refer to COP 1.e.
+
+Standard
+
+Informed consent is obtained from the patient or family about their
+care.
+
+PRE.4.
+
+Objective Elements
+
+C@RE a. The organisation obtains informed consent from the patient or family for
+situations where informed consent is required. *
+
+Interpretation: A list of procedures shall be made for which informed consent is
+required. This shall be prepared to keep in mind the requirements of this standard
+and statutory requirement. For example, some statutory requirements are MTP
+Act, PC-PNDT Act and The Transplantation of Human Organs Act. The policy for
+HIV testing shall follow HIV and AIDS (prevention and control) act 2017 and the
+national policy on HIV testing laid down by National AIDS Control Organisation
+(NACO). The organisation shall have written guidance explaining the various
+steps involved in the informed consent process and the person responsible. The
+staff are made aware of the same.
+
+Commitment b. Informed consent process adheres to statutory norms.
+Interpretation: This includes (but is not limited to):
+1. Taking consent before the procedure;
+
+2. Atleast one witness signing the consent form.
+
+= CQRE = Commitment = Achievement = Excellence
+
+
+
+===== PDF_IDX 184 (pdf page 185) =====
+
+CQRE Ci
+
+Commitment d.
+
+= C@RE
+
+Guidebook to NABH Accreditation Standards for Hospitals —
+
+The witness shall be a person who was present for the entire duration of the
+communication between the doctor and the patient.
+
+In case the patient has to undergo a procedure repeatedly for a long time (for
+example dialysis) ,informed consent is taken at the first instance. Such consent
+shall have a defined validity period but not more than six months. The patient
+endorses the consent at each repeat treatment. However, if there is a change in
+the treatment modality or an addition of another modality, then fresh consent shall
+be obtained.
+
+Informed consent includes information regarding the procedure; it’s risks,
+benefits, alternatives and as to who will perform the procedure in a language
+that they can understand.
+
+Interpretation: The consent shall have the name of the doctor performing the
+procedure. In case a procedure requires more than one doctor from different
+specialities, then the same will have to be explained to the patient and consent
+shall include the name of the principal surgeon from each speciality who is
+performing the procedure. Each doctor will have to explain his role and address
+all aspects required for informed consent. for example, if the surgery involves the
+requirement of a Neurosurgeon, ENT surgeon and an Ophthalmologist, the
+consent shall reflect the same. It shall have the names of the principal surgeons of
+the three specialities. It is the responsibility of each of the surgeons/team to
+explain their role and the benefits/risks and alternatives of the procedures they are
+performing on the patient.
+
+Ifit is a “doctor under training” the same shall be specified. However, the name of
+the qualified doctor supervising the procedure shall also be mentioned.
+
+The consent form shall at a minimum be bilingual. When consent is taken in a
+language other than what the patient understands, there shall be clear
+documentation detailing the language in which the patient has been counselled
+and if any interpreter has been used.
+
+It shall have the risks, benefits and alternatives of the procedure as a part of the
+documentation. The focus is on informed consent as a process of effective
+communication between a doctor and patient and not a signature ona form.
+
+The organisation describes who can give consent when a patient is
+incapable of independent decision making and implements the same. *
+
+Interpretation: The consent shall be taken from the patient in all cases when
+the patient is capable of giving consent and above the legal age for giving
+consent. No one can consent on behalf of a competent adult. The organisation
+
+= Commitment == Achievement zi Excellence
+
+dj
+NABH
+
+; =
+
+
+===== PDF_IDX 185 (pdf page 186) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+NABH
+
+shall take into consideration the statutory norms when the patient is incapable
+i of independent decision making. This would include next of kin/legal guardian.
+The order of preference of next of kin/legal guardian is spouse,
+son/daughter/parents/brothers/sister. For life-threatening situations when a
+patient is incapable and next of kin is not available, in the interest of the
+| patient, the treating doctor and another clinician can decide to safeguard the
+patients’ life.
+
+i" C@RE e. Informed consentis taken by the person performing the procedure.
+
+Interpretation: The person performing shall be responsible for the entire consent
+process, including providing explanation and taking the signature. For example, it
+is not acceptable if the person performing the procedure only explains, and the
+written consentis taken by the nurse.
+
+Adoctor member of the team can take consent on behalf of the person performing
+the procedure.
+
+Refer to COP7.e., COR 12.b., COP. 13.d. and COP 14.c.
+
+Standard
+
+Patient and families have a right to information and education about
+
+PRE.5.
+their healthcare needs.
+
+Objective Elements
+
+SO@RE a. Patient and / or family are educated in a language and format that they can
+understand.
+
+Interpretation: During the patient’s treatment, patient and/or family are screened
+(informally) for their understanding abilities and language requirements. The
+patients and/or family members are educated through counselling/use of printed
+material/audio-visual aids etc.
+
+Hi C@QRE = Commitment = Achievement =! Excellence
+
+
+
+===== PDF_IDX 186 (pdf page 187) =====
+
+Commitment b. Patient and / or family are educated about the safe and effective use of
+medication and the potential side effects of the medication, when
+
+appropriate.
+Interpretation: The organisation shall make a list of such drugs and accordingly
+
+educate, for example digoxin. This could also include education regarding the
+importance of taking a drug at a specific time.
+
+Commitment cc. Patient and/or family are educated about food-drug interaction.
+
+Interpretation: The organisation shall make a list of such drugs, and accordingly,
+patient and family shall be educated about their diet during medication, for
+example no alcohol when taking metronidazole.
+
+Commitment d. Patientand/or family are educated about diet and nutrition.
+
+Interpretation: The education could include the relationships between various
+foods or supplements and specific health conditions. !t shall also incorporate
+general recommendations for following a healthy diet.
+
+Commitment e. Patientand/or family are educated about immunisations.
+
+Interpretation: In adults, it could be for influenza, Streptococcus pneumonia,
+typhoid, hepatitis B, Neisseria meningitides, etc.
+
+Paediatric immunization shall follow universal immunisation program.
+
+HE cone HE Commitment = Achievement HBB Excettence
+
+
+
+===== PDF_IDX 187 (pdf page 188) =====
+
+Commitment  f.
+
+NABH
+
+Patient and /or family are educated on various pain management techniques,
+when appropriate.
+
+Interpretation: The education on pain management techniques could be done
+only for patients who are likely to have long-term pain because of the underlying
+condition not being treatable. This shall be done within the framework of their
+personal, cultural and religious beliefs.
+
+Commitment g.
+
+Patient and/or family are educated about their specific disease process,
+complications and prevention strategies.
+
+Interpretation: The education shall include information on lifestyle modifications
+(stress management, physical exercise, cessation of smoking and substance
+abuse), diet changes and immunisations where appropriate. The education
+could also be done through patient education booklets/videos/leaflets, etc.
+
+Commitment hh.
+
+Patient and/or family are educated about preventing healthcare associated
+infections.
+
+Interpretation: For example, hand washing and avoiding overcrowding near the
+Patient.
+
+Achievement i.
+
+Hy core
+
+The patients and/or family members’ special educational needs are
+identified and addressed.
+
+Interpretation: During the patient’s treatment, his/her special educational needs
+are identified. The patients and/or family members are educated through
+counselling, use of printed material, audio-visual aids etc. For example Attention
+deficit hyperactivity disorder (ADHD), needs Autism support, physical disabilities
+and speech language and communication needs, Social and emotional health
+needs.
+
+| | Commitment Ss Achievement el Excellence
+
+
+
+===== PDF_IDX 188 (pdf page 189) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+NABH.
+
+Excellence j. The organisation has a mechanism to promote Patient engagement to
+enhance clinical outcomes, safety and quality.
+Interpretation: Patient care engagement could involve disease-based patient
+support groups, involvement of patient in patient safety and quality improvement.
+
+The organisation shall create an enabling environment for partnership between
+patient, families, communities and health care providers.
+
+Patients shall be encouraged to become actively involved in reporting safety
+incidents, near misses and safety concerns. Formation of patient advisory council
+in hospital is recommendedas part of patient engagement.
+
+The organisation has to recognise that patients are part of social groups, families
+and communities and that these broader networks can be a positive force for
+change.
+
+The organisation has to designate and support patient safety champions or
+advocates, where appropriate, to help facilitate patient engagement;
+
+For ‘Patient engagement refer glossary
+
+Standard
+
+PRE.6. Patients and families have a right to information on expected costs.
+
+Objective Elements
+
+~C@RE a. The patient and / or family members are made aware of the pricing policy in
+different settings (out-patient, emergency, ICU and in-patient).
+
+Interpretation: The key components of pricing, namely consultation charges,
+bed charges, nursing charges, security deposit,are available to patients near
+registration and/or admission desk. This shall be based on the billing policy,
+which defines the charges to be levied for various healthcare activities in a given
+setting.
+
+Commitment b. Therelevanttarifflistis available to patients.
+
+Interpretation: The organisation shall ensure that there is an updated tariff list
+and that the relevant tariff is available for review to patients when required. The
+organisation shall charge as per the tariff list. Any additional charge shall also be
+enumerated in the tariff and the same communicated to the patients. The tariff
+rates shall be uniform (in a given setting) and transparent.
+
+|| CQRE = ‘Commitment = Achievement = Excellence
+
+
+
+===== PDF_IDX 189 (pdf page 190) =====
+
+" guidebook to NABH Accreditation Standards for Hospitals
+
+NABH
+
+Commitment c. Thepatientand/or family members are explained about the expected costs.
+
+Interpretation: Patients shall be given an estimate of the expenses on account of
+the treatment, preferably in a written form. This estimate shall be prepared based
+on the treatment plan. It could be prepared by the OPD/Registration/Admission
+staff in consultation with the treating doctor. The limitations of the estimate if any
+(for example emergency admissions) could also be discussed with the patient.
+
+Commitment d. Patient and/or family are informed about the financial implications when
+there is a change inthe care plan.
+
+Interpretation: Change in the care plan entails that the patient and/or family are
+informed of the financial implications. Example of change in care plan include
+patients are shifted from one setting to another, typically to and from ICUs, the
+shift from medical to surgical management, need to conduct further expensive
+investigations etc.
+
+Standard
+
+The organisation has a mechanism to capture patient’s feedback,
+experience and to redress complaints.
+
+PRE.7.
+
+Objective Elements
+
+Commitment a. The organisation has a mechanism to capture feedback from patients, which
+includes patient satisfaction.
+
+Interpretation: The feedback could be captured either physically or
+electronically. It is preferable that separate data is obtained from out-patients and
+in-patients.
+
+Achievement b. Theorganisation has a mechanism to capture the patient experience.
+
+Interpretation: Patient experience goes beyond patient satisfaction and making
+the patient happy. In addition to collecting patient feedback, the organisation shall
+also capture patient experience which may include parameters such as
+communication with doctors and nurses, pain management, hospital
+environment (cleanliness and quietness), the responsiveness of hospital staff,
+
+z= CORE =) Commitment Tl Achievement fe al Excellence
+
+
+
+===== PDF_IDX 190 (pdf page 191) =====
+
+Q)
+
+NABH
+
+discharge information, communication about medications and overall rating of
+the hospitals.
+
+The organisation has a mechanism to capture patient reported experience
+measures. (PREMs). Patient-reported experience measures (PREMs) are a
+critically important tool to ensure that the patient safety policies and protocols are
+implemented.
+
+CQRE c.
+
+The organisation redress patient complaints as per the defined
+mechanism. *
+
+Interpretation: The written guidance shall incorporate the mechanism for lodging
+complaints (including verbal or telephonic complaints), method of compiling
+them, analysing complaints including the time frame, the person(s) responsible
+and documenting the action taken. It is for the organisation to decide if it wants to
+give credence to anonymous complaints.
+
+Patient complaints include those against healthcare workers.
+
+Commitment d.
+
+Patient and / or family members are made aware of the procedure for giving
+feedback and/or lodging complaints.
+
+Interpretation: The awareness shall be either by display or providing written
+information. The organisation must create an environment of trust wherein the
+patients would be comfortable to air their views.
+
+Commitment e.
+
+HR cone
+
+Feedback and compiaints are reviewed and / or analysed within a defined
+time frame.
+
+Interpretation: The entire process shall be documented. Where appropriate, the
+patient and/or family could be involved in the discussions and also informed
+regarding the outcome.
+
+= Commitment | | Achievement = Excellence
+
+
+
+===== PDF_IDX 191 (pdf page 192) =====
+
+: uidebook to NABH Accreditation Standards for Hospitals
+
+NABH
+
+Commitment f. Corrective and / or preventive action(s) are taken based on the analysis
+where appropriate.
+
+Interpretation: The analysis identifies opportunities for improvement and the
+same are carried out.
+
+Standard
+
+The organisation has a system for effective communication with
+
+patients and/or families.
+
+Objective Elements
+
+Commitment a. Communication with the patients and / or families is done effectively. *
+
+Interpretation: Communication is considered to be effective if it serves the
+purpose. The principles of effective communication are complied. For example,
+the seven C’s namely clear, correct, complete, concrete, concise, considerate
+and courteous.
+
+The organisation has plans to identify and overcome potential communication
+barriers. For example, the language barrier could be overcome by having
+interpreters.
+
+The organisation could adopt any model of effective communication.
+
+Refer to the glossary for “effective communication”.
+
+Commitment b. The organisation shall identify special situations where enhanced
+communication with patients and / or families would be required. *
+
+Interpretation: Some of these situations could include communication during
+challenging situations like breaking bad news, handling adverse events, handling
+an aggressive patient/family, talking to a family of a patient who has expired,
+counselling for a complicated intervention etc.
+
+Refer to Glossary for “enhanced communication”.
+
+|= C@RE i Commitment yl Achievement = Excellence
+
+
+
+===== PDF_IDX 192 (pdf page 193) =====
+
+| dean NAG Aeration Snr < NABR:
+
+Commitment c.
+
+Enhanced communication with the patients and/or families is dong
+effectively. *
+
+Interpretation: For each identified special situation, the organisation shall detai|
+the nature of the enhanced communication that may be required. For example, a
+model for delivering bad news is SPIKES (S stands for setting, P for perception, |
+for invitation or information, K for knowledge, E for empathy, and S for summarize
+or strategize.)
+
+Commitment d.
+
+The organisation ensures that there is no unacceptable communication.
+
+Interpretation: The organisation shall not allow unacceptable communication.
+For example, abusing patients, hurting the religious or cultural sentiments,
+communicating with disrespect, etc.
+
+Achlevement e.
+
+HM core
+
+The organisation has a system to monitor and review the Implementation of
+effective communication.
+
+Interpretation: This could be done through feedback/ complaint from patients
+and other stakeholders.
+
+= Commitment z= Achievement _ Excellence
+
+
+
+===== PDF_IDX 193 (pdf page 194) =====
+
+joke Aon Sn oe @
+
+NABH
+
+References
+
+ds
+
+10.
+
+13.
+
+14,
+
+15.
+
+16.
+
+17.
+
+Badarudeen S, Sabharwal S. Assessing readability of patient education materials: current role in
+orthopaedics. Clinical Orthopaedics and Related Research®. 2010 Oct; 468:2572-80.
+
+Baile WF, Buckman R, Lenzi R, Glober G, Beale EA, Kudelka AP. SPIKES—a six-step protocol for
+delivering bad news: application to the patient with cancer. The oncologist. 2000 Aug 1;5(4):302-11.
+
+Marcelle Kaplan RN. SPIKES: a framework for breaking bad news to patients with cancer. Clinical journal
+of oncology nursing. 2010 Aug 1;14(4):514.
+
+Parker PA, Baile WF, de Moor C, Lenzi R, Kudelka APR, Cohen L. Breaking bad news about cancer:
+patients’ preferences for communication. Journal of clinical oncology. 2001 Apr 1;19(7):2049-56.
+
+Boissy A, Gilligan T. Communication the Cleveland Clinic Way: How to Drive a Relationship-Centered
+Strategy for Exceptional Patient Experience. New York, NY: McGraw Hill Professional.
+
+Burgener AM. Enhancing communication to improve patient safety and to increase patient satisfaction.
+The health care manager. 2020 Jul 1;39(3):128-32.
+
+E-medicinehealth. (2017, November 20). Patient Rights: Confidentiality & Informed Consent. [cited
+2023 Dec 5]. Available from: https://www.emedicinehealth.com/patient_rights/article_em.htm.
+
+Gaglio B. Health literacy—An important element in patient-centered outcomes research. Journal of
+Health Communication. 2016 Aug 1;21 (sup2):1-3.
+
+Nguyen TV, Hong J, Prose NS. Compassionate care: Enhancing physician-patient communication and
+education in dermatology: Part |: Patient-centered communication. Journal of the American Academy of
+Dermatology. 2013 Mar 1;68(3):353-e1
+
+Hawryluck L. lan Anderson continuing education program in end-of-life care, Module 5: Communication
+with patients and families. University of Toronto, Canada. 2000.
+
+Lamba S, Tyrie LS, Bryczkowski S, Nagurka R. Teaching surgery residents the skills to communicate
+difficult news to patient and family members: a literature review. Journal of Palliative Medicine. 2016 Jan
+1;19(1):101-7.
+
+Marcus C. Strategies for improving the quality of verbal patient and family education: a review of the
+literature and creation of the EDUCATE model. Health Psychology and Behavioral Medicine: An Open
+Access Journal. 2014 Jan 1;2(1):482-95.
+
+Kumar A, Mullick P. Prakash S, Bharadwaj A. Consent and the Indian medical practitioner. Indian Journal
+of Anaesthesia. 2015 Nov;59(11):695.
+
+Health. Wolters Kluwer. Five strategies for providing effective patient education. [cited 2023 Dec 5].
+Available from: https://www.wolterskluwer.com/en/expert-insights/5-strategies-for-providing-effective-
+patient-education.
+
+Munro CL, Savel RH. Communicating and connecting with patients and their families. American journal
+of critical care. 2013 Jan 1;22(1):4-6.
+
+Nandimath OV. Consent and medical treatment: The legal paradigm in India. Indian journal of urology:
+IJU: journal of the Urological Society of India. 2009 Jul;25(3):343.
+
+Newitt VN. The Art of Breaking Bad News to Patients.
+
+
+
+===== PDF_IDX 194 (pdf page 195) =====
+
+18.
+
+19.
+
+20.
+
+21.
+
+22.
+
+23.
+
+24.
+
+25.
+
+26.
+
+27.
+
+Q
+
+NABH
+
+Sengupta M, Roy A, Gupta S, Chakrabarti S, Mukhopadhyay I. Art of breaking bad news: A qualitative
+study in Indian healthcare perspective. Indian Journal of Psychiatry. 2022 Jan;64(1):25.
+
+Nouri SS, Rudd RE. Health literacy in the “oral exchange”: An important element of patient-provider
+communication. Patient education and counselling. 2015 May 1;98(5):565-71.
+
+Provider-Patient Communication. (2016). Health Communication for Health Care Professionals,
+doi:10.1891/9780826124425.0004
+
+Reader TW, Gillespie A, Roberts J. Patient complaints in healthcare systems: a systematic review and
+coding taxonomy. BMJ quality & safety. 2014 Aug 1;23(8):678-89.
+
+Roberts H, Zhang D, Dyer GS. The readability of AAOS patient education materials: evaluating the
+progress since 2008. JBJS. 2016 Sep 7;98(17):e70.
+
+Rosenbaum ME, Ferguson KJ, Lobas JG. Teaching medical students and residents skills for delivering
+bad news: a review of strategies. Academic Medicine. 2004 Feb 1;79(2):107-17.
+
+US National Library of Medicine. (n.d.). Patient Rights: MedlinePlus. [cited 2023 Dec 5]. Available from:
+https://medlineplus.gov/patientrights.html.
+
+Williams AM, Muir KW, Rosdahl JA. Readability of patient education materials in ophthalmology: a
+single-institution study and systematic review. BMC ophthalmology. 2016 Dec;16(1):1-1.
+
+Galal SM, Vyas D, Mayberry J, Caringal C, Bui V, Rogan E, Ndung'u M. Training pharmacy students to
+deliver bad news using the SPIKES model. Currents in Pharmacy Teaching and Learning. 2023 Mar
+1;15(3):283-8.
+
+Prior SJ, Campbell S. Patient and family involvement: a discussion of co-led redesign of healthcare
+services. Journal of Participatory Medicine. 2018 Feb 1;10(1):e8957.
+

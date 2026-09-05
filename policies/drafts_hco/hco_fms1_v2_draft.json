@@ -1,0 +1,108 @@
+{
+  "standard_code": "FMS.1",
+  "chapter": "HCO",
+  "oe_codes": [
+    "FMS.1.a",
+    "FMS.1.b",
+    "FMS.1.c",
+    "FMS.1.d",
+    "FMS.1.e"
+  ],
+  "policy_title": "Policy on Safe and Secure Environment",
+  "purpose": "This policy defines how {{HOSPITAL_NAME}} installs and inspects patient-safety devices and infrastructure, provides accessible facilities for differently-abled persons, conducts monthly safety-inspection rounds, documents findings and acts on them, and carries out risk assessments before any construction, renovation or expansion of the facility.\n\nThis policy covers safe and secure environment specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards have their own policies too.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to engineering, biomedical, nursing and departmental leaders, and staff who run facilities, utilities, medical gases, fire and non-fire emergencies at {{HOSPITAL_NAME}}, including the «Engineering In-Charge», the «Medical Superintendent», departmental leaders and the Quality Coordinator.\n\nThis policy covers safe and secure environment specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards have their own policies too.",
+  "policy_statement": "Patient-safety devices and infrastructure are installed and periodically inspected across {{HOSPITAL_NAME}}. Accessibility facilities meet regulatory minimums for differently-abled persons. Monthly facility-inspection rounds identify and monitor safety, security-risk and restricted areas. Every finding is documented, acted on and reviewed by the safety committee. No construction, renovation or expansion begins without a completed risk assessment covering noise, vibration and infection prevention and control.\n\nStaff follow written guidance and keep the records listed in the traceability table.",
+  "procedure_steps": [
+    "5.1 Patient safety devices and infrastructure are installed across the...\n\nPatient-safety devices and infrastructure (grab bars, bed rails, stretcher and wheelchair belts, call bells, alarms, radiation or biohazard warning signs, fire-safety devices as listed for each area) are installed across {{HOSPITAL_NAME}} and inspected at a defined interval (default «monthly»).\n\nThe «Engineering In-Charge» holds the current list and last inspection. A missing device in a care area that is in use is escalated the same shift.",
+    "5.2 The organisation has facilities for the differently-abled\n\n{{HOSPITAL_NAME}} has facilities for the differently-abled (at a minimum a wheelchair-accessible entrance and an adapted toilet, as regulatory requirement and this hospital's building allow).\n\nThe «Engineering In-Charge» keeps the current access list. A step-only entrance with no documented alternative does not satisfy this element.",
+    "5.3 Facility inspection rounds to ensure safety are conducted at least once...\n\nFacility inspection rounds to ensure safety are conducted at least once a month using a checklist. Potential safety and security-risk / restricted areas are identified and monitored.\n\nThe «Engineering In-Charge» owns the round calendar. A month without a completed round is a gap.",
+    "5.4 Inspection reports of facility rounds are documented and corrective and...\n\nInspection reports of facility rounds are documented. Corrective and preventive measures are undertaken. The safety committee reviews the reports monthly. Pre- and post-correction evidence is kept for at least one accreditation cycle.\n\nThe «Quality Coordinator» files the reviewed reports with the «Engineering In-Charge».",
+    "5.5 Before construction, renovation and expansion of the existing hospital...\n\nBefore construction, renovation or expansion of the existing hospital, a risk-assessment is carried out covering noise, vibration and infection prevention and control. IPC.4 remains the home of construction-infection controls; this element is that the assessment happens before work starts.\n\nThe «Engineering In-Charge» holds the dated assessment. Work started with no assessment does not satisfy this element."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that FMS.1 is resourced and followed.\n\nEngineering In-Charge\n- Owns day-to-day implementation and records for this standard.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.\n\ndepartmental leaders\n- Run the department-level duties this standard names.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.1.\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.1 interpretations.\n- Internal documents of {{HOSPITAL_NAME}}: facility-inspection records, as-built drawings, utility and medical-equipment logs, medical-gas records, fire and non-fire plans named for FMS.1.",
+  "distribution": "Medical Superintendent; Engineering In-Charge; Quality Coordinator; departmental leaders; staff covered by FMS.1",
+  "abbreviations": "AHU — Air Handling Unit\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nDG — Diesel Generator\nELV — Extra Low Voltage\nFMS — Facility Management and Safety (NABH Hospitals 6th Edition chapter)\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nHVAC — Heating, Ventilation and Air Conditioning\nMSDS — Material Safety Data Sheet\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element\nPPE — Personal Protective Equipment\nRO — Reverse Osmosis\nSTP — Sewage Treatment Plant",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "FMS.1.a",
+      "requirement": "Patient safety devices and infrastructure are installed across the organisation and inspected periodically.",
+      "steps": "Section 3; 5.1",
+      "responsible": "Engineering In-Charge",
+      "records": [
+        "Current inventory of patient-safety devices and infrastructure (grab bars, bed rails, call bells, fire-safety devices) by area.",
+        "Inspection log showing the last-inspection date for each device or area.",
+        "Escalation record for any missing device found in an in-use care area."
+      ]
+    },
+    {
+      "oe_code": "FMS.1.b",
+      "requirement": "The organisation has facilities for the differently-abled.",
+      "steps": "Section 3; 5.2",
+      "responsible": "Engineering In-Charge",
+      "records": [
+        "Facility list showing the wheelchair-accessible entrance and toilet location(s).",
+        "Regulatory-requirement reference for the accessibility provision made.",
+        "Documented alternative arrangement for any area with step-only access."
+      ]
+    },
+    {
+      "oe_code": "FMS.1.c",
+      "requirement": "Facility inspection rounds to ensure safety are conducted at least once a month.",
+      "steps": "Section 3; 5.3",
+      "responsible": "Engineering In-Charge",
+      "records": [
+        "Monthly facility-inspection-round checklist, completed and dated.",
+        "Round calendar showing no missed month.",
+        "List of identified safety, security-risk or restricted areas being monitored."
+      ]
+    },
+    {
+      "oe_code": "FMS.1.d",
+      "requirement": "Inspection reports of facility rounds are documented and corrective and preventive measures are undertaken.",
+      "steps": "Section 3; 5.4",
+      "responsible": "Engineering In-Charge",
+      "records": [
+        "Documented inspection reports of facility rounds.",
+        "Corrective and preventive action record for each finding.",
+        "Safety-committee review record of the reports."
+      ]
+    },
+    {
+      "oe_code": "FMS.1.e",
+      "requirement": "Before construction, renovation and expansion of the existing hospital, risk- assessment is carried out.",
+      "steps": "Section 3; 5.5",
+      "responsible": "Engineering In-Charge",
+      "records": [
+        "Dated risk-assessment record covering noise, vibration and infection prevention, completed before work started.",
+        "Engineering In-Charge sign-off before construction, renovation or expansion began.",
+        "Cross-reference to the IPC.4 construction-infection-control measures applied alongside."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO FMS.1 v2 (2026-08-21). Official Standards PDF OE count 5; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: none. CORE: ac. Achievement: none. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/FMS/POL/01.\nOfficial chapter is 7 standards / 43 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. Statute P2 proposed on FMS.5 (Medical Devices Rules as cited) and FMS.6 (Explosives Act / Gas Cylinder Rules / SMPV).\nDo not touch AAC, COP, MOM, PRE, IPC, PSQ or ROM.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition FMS.1 v2 draft: portal PDF OE data + Guidebook interpretations."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation has a system in place to provide a safe and secure environment.",
+  "exceptions": "1. Do not run a patient-care area that lacks required patient-safety devices (grab bars, bed rails, call bells, alarms, warning signs and fire-safety devices as applicable to that area) or for which no periodic inspection record exists.\n2. Do not operate without providing at minimum the accessibility facilities for differently-abled persons that applicable regulatory requirements mandate — a wheelchair-accessible entrance and an adapted toilet at minimum.\n3. Do not let a calendar month pass without a completed, checklist-based facility-inspection round; a round without a completed checklist is not a round for this purpose.\n4. Do not leave a finding from a facility inspection round without a documented corrective and preventive action and a safety-committee review within the same calendar month.\n5. Do not start construction, renovation or expansion of the existing hospital without a completed risk assessment covering noise, vibration and infection prevention and control in place before work begins.\n6. Staff who see a FMS.1 rule broken report it the same shift to the Engineering In-Charge or the Medical Superintendent.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related facility change, utility failure, equipment recall or fire-plan change.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read the Policy on Safe and Secure Environment of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/FMS/POL/01»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Engineering In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Engineering In-Charge»",
+  "template_test": "hco_fms_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — safe and secure environment.",
+  "doc_no": "«HCO/FMS/POL/01»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.FMS.1",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

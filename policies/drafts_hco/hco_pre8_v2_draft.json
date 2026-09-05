@@ -1,0 +1,108 @@
+{
+  "standard_code": "PRE.8",
+  "chapter": "HCO",
+  "oe_codes": [
+    "PRE.8.a",
+    "PRE.8.b",
+    "PRE.8.c",
+    "PRE.8.d",
+    "PRE.8.e"
+  ],
+  "policy_title": "Effective Communication with Patients and Families",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard PRE.8: The organisation has a system for effective communication with patients and/or families.\n\nThis policy covers all 5 requirements under this standard, listed in detail below.\n\nChapter intent (official Standards PDF): The organisation defines, protects and promotes the patient and family's rights and responsibilities. The staff is aware of these rights and is trained to protect them. Patients are informed of their rights and educated about their responsibilities at the time of entering the organisation. The expected costs of treatment and care are explained clearly to the patient and / or family. The organisation encourages patient engagement to enhance clinical outcomes, safety and quality. Patients are educated about the mechanisms available for addressing grievances. Informed consent is obtained from the patient or family for specified procedures / care. The key components of information shall include risks, benefits and alternatives. Patients and families have a right to get information and education about their healthcare needs in a language and manner that is understood by them. The organisation has a mechanism to capture the patient experience including patient reported experience measures (PREM). The organisation develops effective patient-centred communication.\n\nThis policy covers effective communication with patients and families specifically. Related duties — like patient assessment, clinical care, medication management, infection control, or medical records and information management — are covered in the hospital's other policies, not repeated here. Other PRE standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who register, admit, treat, counsel, bill, take consent from, or communicate with patients and families at {{HOSPITAL_NAME}}, including the «Quality Coordinator», treating doctors, nursing, Guest Relations / Patient Rights, Patient Accounts and the Quality Coordinator.\n\nThis policy covers all 5 requirements under this standard, listed in detail below.\n\nThis policy covers effective communication with patients and families specifically. Related duties — like patient assessment, clinical care, medication management, infection control, or medical records and information management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
+  "policy_statement": "{{HOSPITAL_NAME}} implements PRE.8 so that the organisation has a system for effective communication with patients and/or families.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Communication with the patients and / or families is done effectively\n\nCommunication with patients and/or families is done so that it serves its purpose — clear, correct, complete, concrete, concise, considerate and courteous (or another model the organisation adopts). Barriers (language, hearing, literacy) are identified and overcome; interpreters are arranged when needed.\n\nStaff are trained on this at induction and «annually». Cross-reference the glossary for 'effective communication'. This asterisked element is evidenced by training plus observed practice, not by a poster of the seven Cs.\n\nMethod note (from guidebook interpretation): Communication is considered to be effective if it serves the purpose. The principles of effective communication are complied. For example, the seven C’s namely clear, correct, complete, concrete, concise, considerate and courteous. The organisation has plans to identify and overcome potential communication barriers. For example, the language barrier could be overcome by having interpreters. The organisation could adopt any model of effective communication. Refer to the glossary for “effective communication”.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.2 The organisation shall identify special situations where enhanced...\n\nThe «Medical Superintendent» keeps a written list of special situations that need enhanced communication: breaking bad news, handling adverse events, an aggressive patient or family, talking with the family after a death, counselling for a complicated intervention, and others this hospital adds.\n\nThe list is in this policy's training pack. Staff who work in emergency, ICU, OT and wards are taught which situations are on it.\n\nMethod note (from guidebook interpretation): Some of these situations could include communication during challenging situations like breaking bad news, handling adverse events, handling an aggressive patient/family, talking to a family of a patient who has expired, counselling for a complicated intervention etc. Refer to Glossary for “enhanced communication”. i Enhanced communication with the patients and/or families is done effectively.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.3 Enhanced communication with the patients and/or families is done...\n\nFor each listed special situation, the organisation details the enhanced communication required. Breaking bad news uses SPIKES (Setting, Perception, Invitation or information, Knowledge, Empathy, Summarize or strategize) or another named model the «Medical Superintendent» adopts.\n\nThe «treating doctor» leads enhanced communication; nursing supports. A note records that the conversation happened (without reducing it to a tick-box that replaces the conversation).\n\nMethod note (from guidebook interpretation): For each identified special situation, the organisation shall detail the nature of the enhanced communication that may be required. For example, a model for delivering bad news is SPIKES (S stands for setting, P for perception, I for invitation or information, K for knowledge, E for empathy, and S for summarize or strategize.).\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.4 The organisation ensures that there is no unacceptable communication\n\nUnacceptable communication is not allowed: abusing patients, hurting religious or cultural sentiments, communicating with disrespect. A breach is a conduct incident and a rights incident (PRE.1.d).\n\nThe «Medical Superintendent» acts on a confirmed breach the same as any other serious conduct issue. Training names examples so staff can recognise the line.\n\nMethod note (from guidebook interpretation): The organisation shall not allow unacceptable communication. For example, abusing patients, hurting the religious or cultural sentiments, communicating with disrespect, etc. HM.",
+    "5.5 The organisation has a system to monitor and review the implementation...\n\nImplementation of effective communication is monitored and reviewed through patient and stakeholder feedback and complaints (PRE.7) and through «quarterly» observation or record sample by the «Quality Coordinator».\n\nFindings go to the «Medical Superintendent». This Achievement element is evidenced by the review happening and by actions when communication fails, not by the existence of PRE.8.a training alone.\n\nMethod note (from guidebook interpretation): This could be done through feedback/ complaint from patients and other stakeholders."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that PRE.8 is resourced and followed.\n- Acts on rights violations, consent failures and communication breaches that reach top leadership.\n\nQuality Coordinator\n- Owns day-to-day implementation and records for this standard.\n\nGuest Relations / Patient Rights Officer\n- Supports rights display, counselling, complaint access and family communication as this standard requires.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Patient Rights and Education, standard PRE.8. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — PRE.8 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_pre_guidebook_ocr.txt).\n- Internal documents of {{HOSPITAL_NAME}}: Patient Rights display and pamphlet, informed-consent list and forms, tariff and estimate process, feedback and complaints guidance, and communication models named for PRE.8.",
+  "distribution": "Medical Superintendent; Quality Coordinator; Nursing Superintendent; Guest Relations / Patient Rights Officer; Patient Accounts In-Charge; department clinical staff covered by PRE.8",
+  "abbreviations": "CAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nIEC — Information, Education and Communication\nIMS — Information Management System (NABH Hospitals chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nNACO — National AIDS Control Organisation\nOE — Objective Element\nPRE — Patient Rights and Education (NABH Hospitals chapter)\nPREM — Patient-Reported Experience Measure\nSPIKES — Setting, Perception, Invitation/information, Knowledge, Empathy, Summarize/strategize (breaking-bad-news model named in the Guidebook)",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "PRE.8.a",
+      "requirement": "Communication with the patients and / or families is done effectively.",
+      "steps": "Section 3; 5.1",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Communication-training record at induction and annually.",
+        "Barrier-identification and interpreter-arrangement record — language, hearing, literacy.",
+        "Observed-practice record confirming effective communication, not training alone."
+      ]
+    },
+    {
+      "oe_code": "PRE.8.b",
+      "requirement": "The organisation shall identify special situations where enhanced communication with patients and / or families would be required.",
+      "steps": "Section 3; 5.2",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Written list of special situations needing enhanced communication — breaking bad news, adverse events, aggressive patient or family, death, complicated-intervention counselling.",
+        "Training-pack record covering the list.",
+        "Staff-awareness record for emergency, ICU, OT and ward staff."
+      ]
+    },
+    {
+      "oe_code": "PRE.8.c",
+      "requirement": "Enhanced communication with the patients and/or families is done effectively.",
+      "steps": "Section 3; 5.3",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Enhanced-communication model record (for example SPIKES) adopted for breaking bad news.",
+        "Note confirming the enhanced-communication conversation happened for a sampled case.",
+        "Treating-doctor-led, nursing-supported record."
+      ]
+    },
+    {
+      "oe_code": "PRE.8.d",
+      "requirement": "The organisation ensures that there is no unacceptable communication.",
+      "steps": "Section 3; 5.4",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Conduct-incident record for any unacceptable communication — abuse, disrespect, cultural or religious insult.",
+        "Action-taken record by the Medical Superintendent for a confirmed breach.",
+        "Training-example record so staff can recognise the line."
+      ]
+    },
+    {
+      "oe_code": "PRE.8.e",
+      "requirement": "The organisation has a system to monitor and review the implementation of effective communication.",
+      "steps": "Section 3; 5.5",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Quarterly observation or record-sample review by the Quality Coordinator.",
+        "Findings record reported to the Medical Superintendent.",
+        "Action-taken record when a communication failure was found."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO PRE.8 v2 (2026-08-21). Official Standards PDF OE count 5; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: abc. CORE: none. Achievement: e. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/PRE/POL/08.\nOfficial chapter is 8 standards / 52 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. PRE.4 statute P2 proposed (guidebook names MTP, PC-PNDT, THOA, HIV/AIDS Act 2017).\nDo not touch AAC, COP or MOM.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition PRE.8 v2 draft: portal PDF OE data + Guidebook interpretations (md5 2c4489ee98de4ae9b49cba168ea9f42a); draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation has a system for effective communication with patients and/or families.",
+  "exceptions": "1. Do not skip: Communication with the patients and / or families is done effectively.\n2. Do not skip: The organisation shall identify special situations where enhanced communication with patients and / or...\n3. Do not skip: Enhanced communication with the patients and/or families is done effectively.\n4. Do not skip: The organisation ensures that there is no unacceptable communication.\n5. Do not skip: The organisation has a system to monitor and review the implementation of effective communication.\n6. Staff who see a PRE.8 rule broken report it the same shift to the «department in-charge» or the «Quality Coordinator».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related rights incident, consent failure or complaint cluster.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Effective Communication with Patients and Families policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/PRE/POL/08»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Quality Coordinator»",
+  "template_test": "hco_pre_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — PRE.8.",
+  "doc_no": "«HCO/PRE/POL/08»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.PRE.8",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

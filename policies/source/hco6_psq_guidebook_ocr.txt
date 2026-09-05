@@ -1,0 +1,1459 @@
+# HCO 6th Edition Guidebook OCR — Patient Safety and Quality Improvement (PSQ)
+# Source: policies/source/NABH 6th Edition Standards & Guidebook-1.pdf
+# md5 2c4489ee98de4ae9b49cba168ea9f42a; scanned, no text layer.
+# pytesseract + pypdfium2 scale=2.2; 0-based indices 215-237 (PDF pages 216-238).
+# Verified PSQ Intent at PDF page 216 (idx 215); ROM Intent at PDF page 239 (idx 238).
+# Do not commit the PDF (policies/source/*.pdf is gitignored).
+
+
+===== PDF_IDX 215 (pdf page 216) =====
+
+Patient Safety and Quality
+Improvement [PSQ}
+
+Intent of the chapter
+
+The standards encourage an environment of patient safety and continual quality improvement. The patient
+safety and quality programme should be documented and involve all areas of the organisation and all staff
+members.
+
+The management creates a culture of safety in the organisation. Patient safety officer(s) shall be designated
+for the implementation of patient-safety programme.
+
+National / International patient-safety goals / solutions / framework shall be implemented.
+
+The organisation shall collect data on structures, processes and outcomes, especially in areas of high-risk
+situations. Quality indicators specific to clinical specialities shall be used to involve clinical departments in the
+quality improvement programme. The collected data shall be collated, analysed and trends are used for
+further improvement. Appropriate quality tools shall be used for carrying out quality improvement projects.
+Clinical audits shall be used as a tool to improve the quality of patient care in a sustained manner. Department
+leaders play an active role in patient safety and quality improvement.
+
+The organisation has a mechanism to capture patient reported outcome measures.
+
+The organisation shall have a robust incident reporting system. Sentinel events shall be defined. All incidents
+are investigated and appropriate action is taken.
+
+The management shall support the patient safety and quality programme.
+
+a MMARY OF STANDARDS
+
+PSQ.1. The organisation implements a structured patient safety programme.
+
+Psa. The organisation implements a structured quality improvement and continuous monitoring
+_ programme.
+
+Psa.3, The organisation identifies key indicators to monitor the structures, processes and outcomes,
+c which are used as tools for continual improvement.
+
+Psq.a. The organisation uses appropriate quality improvement tools for its quality improvement
+“| activities.
+
+Psa.s. There is an established system for clinical audit.
+
+PSQ.6. The patient safety and quality improvement programme are supported by the management.
+
+PsQ.7. Incidents are collected and analysed to ensure continual quality improvement.
+
+“This implies that the objective element requires documentation.
+
+
+===== PDF_IDX 216 (pdf page 217) =====
+
+00k to NABH Accreditation Standards for Hospitals
+
+NABH’
+Standard 7
+objective ana “6
+CQRE 8
+Commitment : 28
+‘Achievement 7
+Excellence =
+Psat PSQ.2 PSQ.3. Psa.4 PSQ.5. PSO.6 PSQ.7.
+a C@RE C@RE Commitment C@RE Commitment Achievement C@RE
+oy = Commitment C@RE Achievement Commitment Commitment commitnt
+c Commitment Excellence Commitment | Commitment Achlevement Commitment Commitment
+: d | conitmest Excellence C@RE Achievement 7 Commitment | Commitment | conmitnet |
+e Commitment Commitment Commitment Commitment : Achtevement Achievement
+i i canriineat Commitment Commitment - Commitment Excellence i canton |
+9 | C@RE ee | Commitment a Pit | Gl “yl
+h : : commie | Achievement —_
+! CRE a
+
+
+===== PDF_IDX 217 (pdf page 218) =====
+
+) ae
+
+£ guidebook to NABH Accreditation Standards for Hospitals
+
+NABH
+
+Standard
+
+Standards and Objective Elements
+
+PSQ.1. The organisation implements a structured patient safety programme.
+
+Objective Elements
+
+C@RE a.
+
+The patient safety programme is developed, implemented and maintained by
+amulti-disciplinary safety committee. *
+
+Interpretation: The safety committee must include representatives from
+administration, facility management, safety officers (patient and others),
+clinicians, nurses, paramedical staff and various clinical and support
+departments of the organisation. The organisation ensures that the safety
+committee meets every month to co-ordinate development, implementation and
+monitoring of the safety plans and policies to provide a safe and secure facility
+and environment. The committee shall ensure that patients are protected from
+harm either from the environment or from lack of appropriate care or lack of safety
+measures. The plans are implemented and reviewed in a monthly meeting.
+
+The committee is responsible for proactive risk assessment. The same shall be
+done using tools like Hazard Identification and Risk Analysis (HIRA), Failure
+Modes and Effects Analysis (FMEA) in both clinical and non-clinical processes
+and areas.
+
+The patient safety programme is documented as a manual. The manual shall
+incorporate all the requirements of this standard. This shall be documented,
+keeping in mind the requirements of other objective elements in the standard.
+
+Refer to the glossary for a definition of "safety programme".
+
+Refer to HRM.6.a. and PRE.5.j
+
+Commitment _b.
+
+HM cone
+
+The patient safety programme is comprehensive and covers all the major
+elements related to patient safety.
+
+Interpretation: The patient safety programme shall address all elements of safety
+for clinical and support services.
+
+Refer to AAC.7.e. AAC.7.f, AAC.7.g., AAC.9.f., AAC.9.g., AAC.9.h. AAC.9.i.,
+AAC.9,j., AAC.9.k. and ROM.6.
+
+= Commitment Zi Achievement =i Excellence
+
+
+===== PDF_IDX 218 (pdf page 219) =====
+
+Guidebook to NABH Accreditation Standards
+
+Commitment c.
+
+Commitment d.
+
+Commitment e.
+
+NABH.
+
+The programme covers incidents ranging from “no harm” to “sentinel
+events”.
+
+Interpretation: The organisation shall clearly define as to what constitutes “no
+harm” and “sentinel events” with regards to the patient.
+
+Refer to the glossary for a definition of “no harm” and "sentinel events".
+
+Designated patient safety officer(s) coordinates implementation of the
+patient safety programme.
+
+Interpretation: The patient safety officer(s) shall be a person having a good
+knowledge of both patient and general safety. The patient safety officer(s) shall
+report to the Top Management. The role and responsibilities of the patient safety
+officer(s) shall be defined and documented. The patient safety officer shall be a
+doctor/nurse with experience in the application of risk management to clinical
+domains. Also, champions in patient safety are identified and developed across
+the organisation and are supported to drive patient safety.
+
+The organisation performs proactive analysis of patient safety risks and
+makes improvements accordingly.
+
+Interpretation: Proactive analysis could be done using tools like Hazard
+Identification and Risk Analysis (HIRA), Failure Modes and Effects Analysis
+(FMEA), Hazard Vulnerability Analysis (HVA), fault tree analysis and simulations.
+At a minimum, one patient safety related risk shall undergo proactive analysis
+every year, and appropriate improvements are made as a result. The intent is to
+eliminate unsafe actions and conditions that can lead to harmful incidents.
+
+Commitment f.
+
+He core
+
+The patient safety programme is reviewed and updated at least once a year.
+
+Interpretation: The update shall be done based on newer literature on patient
+safety and the findings of reviews.
+
+In case the annual review does not identify any opportunities for improvement, the
+same shall be documented in the minutes of the safety committee meeting.
+
+The patient safety programme identifies opportunities for improvement based on
+the review at pre-defined intervals (as defined by the organisation in the Safety
+manual but at least once in a year). The review shall be done by safety committee
+and at a minimum includes report of facility inspection rounds, patient safety
+incidents, risk management and analysis of key-safety indicators. The minutes of
+the review meetings shall be recorded and maintained.
+
+= Commitment i— Achievement | | Excellence
+
+
+===== PDF_IDX 219 (pdf page 220) =====
+
+‘Guidebook to NABH Accreditation Standards for Hospitals
+
+B
+
+NABH
+
+C@RE g. The organisation adapts and implements national / international patient-
+safety goals / solutions / framework.
+
+| Interpretation: At a minimum, the organisation shall adhere to the current
+National Patient-Safety Framework, WHO Patient Safety Solutions and/or
+International Patient Safety Goals.
+
+Refer to AAC.10.d., COR1.b., COP7.d., COP.14.d., MOM.3.c., MOM.3.e.,
+MOM.4.e., MOM.6.e., MOM.7.h., IPC.3.b. and IPC.3.d.
+
+Standard
+
+Pso.2 The organisation implements a structured quality improvement and
+
+continuous monitoring programme.
+
+Objective Elements
+
+CORE a. The quality improvement programme is developed, implemented and
+maintained by a multi-disciplinary committee. *
+
+Interpretation: The quality improvement programme shall be developed,
+implemented and maintained in a structured manner.
+
+It shall be integrated across the organisation and provide a framework for risk
+management, ongoing monitoring and performing improvements based on
+reviews.
+
+The roles and responsibilities of the multidisciplinary committee are defined, and
+it shall have representation from management, various clinical and support
+departments of the organisation. This committee shall receive inputs on
+significant deliberations from other committees in the organisation. The
+committee may be called as the core committee, quality improvement committee
+etc.
+
+Commitment b. The quality improvement programme is comprehensive and covers all the
+major elements related to quality assurance.*
+
+Interpretation: The quality improvement programme shall be documented in the
+form of Quality Improvement Manual. The quality improvement programme shall
+incorporate the goals and objectives of the programme, framework for
+performing quality improvement activities including data collection, important
+
+= CORE | | Commitment = Achievement = Excellence
+
+_ ®
+
+
+===== PDF_IDX 220 (pdf page 221) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals 69
+° —
+
+Excellence c.
+
+Excellence d.
+
+Commitment e.
+
+WM cone
+
+4
+NABH
+
+indicators as identified, frequency of mock drills, audit schedules, committees
+and their terms of reference, review policy and implementation of corrective and
+preventive action. Utilisation review preferably could be part of quality
+improvement program. The quality assurance programme for specific areas like
+Laboratory, Imaging, Emergency, Blood center, Operation theatre and the
+Intensive Care Unit(s) is also summarised.
+
+Refer to AAC.7.a., AAC.9.a., COP2.h., COP8.g., COP9.f., COP 14.1. COP 14,j. and
+PSQ.2.d.
+
+The quality improvement programme improves process efficiency and
+effectiveness.
+
+Interpretation: The quality improvement programme encourages the use of
+quality tools, novel strategies to improve both clinical and managerial processes,
+The impact of the managerial process innovations may be at the level of the
+department or organisation-wide. Innovations may be targeted to improve patient
+safety, improve care delivery, to reduce costs, to introduce environmentally-
+friendly measures etc. The management of the organisation promotes these
+innovations.
+
+The quality improvement programme focuses on appropriateness of clinical
+care.
+
+Interpretation: The doctors and nurses participate in utilization review which
+includes appropriateness of length of the stay, procedures, investigations and
+treatment.
+
+There is a designated individual! for coordinating and implementing the
+quality improvement programme.*
+
+Interpretation: The designated individual shall undergo a structured training
+programme in the implementation of accreditation standards (NABH Programme
+on Implementation of NABH Standards) and with knowledge of statutory
+requirements, hospital quality improvement principles and evaluation
+methodologies, hospital functioning and operations. For example, accreditation
+coordinator, quality management representative, quality manager.
+
+The designated individual shall report to the Top Management. The role and
+responsibilities of the designated individual shall be defined and documented.
+
+Also, champions in quality improvement are identified and developed across the
+organisation and supported to drive improvement.
+
+|| Commitment = Achievement =| Excellence
+
+
+===== PDF_IDX 221 (pdf page 222) =====
+
+-
+
+Commitment _ f.
+
+Commitment  g.
+
+NABH
+
+The quality improvement programme identifies opportunities for
+improvement based on the review at pre-defined intervals.*
+
+Interpretation: The quality improvement programme is a dynamic process.
+There is an outline of the periodic review mechanisms at different levels, such as
+department/senior administration/management reviews, etc. The Quality
+improvement programme needs to be reviewed by the quality improvement
+committee at regular pre-defined intervals as defined by the organisation in the
+quality improvement manual but at least once in three months. The review shall
+include findings of audits, organisational performance, analysis of key indicators
+as identified and determined by the organisation. The minutes of the review
+meetings shall be recorded and maintained.
+
+The quality improvement programme is reviewed and updated at least once a
+year.
+
+Interpretation: The update shall be done based on newer literature on quality
+improvement based on audits, feedback mechanisms, the review carried out by
+the quality improvement committee, etc.
+
+In case the annual review does not identify any opportunities for improvement, the
+same shall be documented in the minutes of the quality inprovement committee
+meeting.
+
+Commitment —h.
+
+HM core
+
+Audits are conducted at regular intervals as a means of continuous
+monitoring.*
+
+Interpretation: Choice and frequency of audits shall be defined for priority areas
+in the organisation and for areas of concern as identified by trends in key
+performance indicators, identified risk, etc. However, all the areas of the
+organisation shall be covered by a hospital-wide internal audit at least once in 6
+months as per a scheduled plan. This internal audit shall be done by an identified
+staff or a multidisciplinary team trained in NABH Accreditation standards for
+Hospitals. They shall assess areas independent of their area of work. The internal
+audit of a particular area shall include all the applicable standards and objective
+elements of NABH Accreditation standards for Hospitals. At the end of the audit,
+there shall be a formal meeting to summarise the findings and corrective and
+preventive measures shall be taken and documented. Implementation of
+changes is verified and recorded.
+
+= Commitment al Achievement EE Excellence
+
+===== PDF_IDX 222 (pdf page 223) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+
+CQRE i.
+
+Standard
+The
+
+NABH’
+
+There is an established process in the organisation to monitor and improve
+the quality of nursing care.*
+
+Interpretation: Monitoring shall be done through nursing audits. This could also
+be in the form of a competency evaluation by written questionnaire or witnessed
+demonstration for key nursing procedures such as medication administration,
+peripheral and intravenous cannula placement, tracheostomy care etc. The
+organisation shall identify key performance indicators that reflect excellence in
+nursing care. This shall be integrated with quality improvement programme of the
+organisation.
+
+organisation identifies key indicators to monitor the structures,
+
+PSQ.3. processes and outcomes, which are used as tools for continual
+improvement.
+
+Objective Elements
+
+Commitment a.
+
+HM core
+
+The organisation identifies and monitors key indicators to oversee the
+clinical structures, processes and outcomes.
+
+Interpretation: The organisation identifies and monitors the priority aspects of its
+patient care. Any indicator mandated by the Government of India/ State
+Government or the National Accreditation Board for Hospitals and Healthcare
+Providers (NABH) shall be monitored.
+
+Some of the indicators that could be monitored pertain to patient assessment,
+safety and quality-control programmes of all the diagnostic services, medication
+management, use of blood and blood componenis, surgical services including
+use of anaesthesia and mortality and morbidity indicators.
+
+Quality indicators pertaining to clinical specialities and sub specialities have been
+added in the Key Performance Indicators for greater involvement of clinicians in
+the quality improvement program. Few of these indicators have been mandatory
+for the organisation as per the scope of services.
+
+Refer to NABH Key Performance Indicators.
+
+These indicators are based on available literature or created in accordance with
+good practice. Every indicator shall have a defined numerator, denominator and
+multiplier. Where appropriate, the definition of terms shall be provided.
+
+= Commitment Hi Achievement i] Excellence
+
+
+===== PDF_IDX 223 (pdf page 224) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+
+CQRE
+
+Commitment c.
+
+CQRE
+
+d.
+
+HB cone
+
+NABH
+
+The organisation identifies and monitors the key indicators to oversee
+infection prevention and control activities.
+
+Interpretation: The organisation shall identify and monitor appropriate key
+performance indicators suitable to it. Any indicator mandated by the Government
+of India or the National Accreditation Board for Hospitals and Healthcare
+Providers (NABH) shall be monitored.
+
+Some of the indicators that could be monitored include the rate of Catheter
+Associated Urinary Tract Infection (CAUTI), Central Line Associated Blood Stream
+Infection (CLABSI), Surgical Site Infection (SSI) and Ventilator Associated
+Pneumonia (VAP).
+
+These indicators are based on available literature or created in accordance with
+good practice. Every indicator shall have a defined numerator, denominator and
+multiplier. Where appropriate, the definition of terms shall be provided. In the case
+of healthcare associated infections, the current surveillance definitions provided
+by the CDC’s National Healthcare Safety Network definitions shall be used.
+
+The organisation identifies and monitors key indicators to oversee the
+managerial structures, processes and outcomes.
+
+Interpretation: The organisation identifies and monitors priority managerial
+activities in the organisation. Any indicator mandated by the Government of India/
+State Government or the National Accreditation Board for Hospitals and
+Healthcare Providers (NABH) shall be monitored.
+
+Some of the indicators that could be monitored pertaining to medication
+procurement, utilisation rates, patient and staff satisfaction, waiting time for
+consultation and diagnostics, and availability and content of medical records.
+
+Two indicators pertaining to digital health have been added.
+
+These indicators are based on available literature or created in accordance with
+good practice, Every indicator shall have a defined numerator, denominator and
+multiplier. Where appropriate, the definition of terms shall be provided.
+
+The organisation identifies and monitors key indicators to oversee patient
+safety activities.
+
+Interpretation: The organisation shall identify and monitor appropriate key
+performance indicators suitable to it. Any indicator mandated by the Government
+of India / State Government or the National Accreditation Board for Hospitals and
+Healthcare Providers (NABH) shall be monitored.
+
+= Commitment i= Achievement | | Excellence
+
+
+===== PDF_IDX 224 (pdf page 225) =====
+
+NABH:
+
+Some of the indicators that could be monitored pertain to patient safety goals and
+risk management.
+
+These indicators are based on available literature or created in accordance with
+good practice. Every indicator shall have a defined numerator, denominator and
+multiplier. Where appropriate, the definition of terms shall be provided.
+
+Commitment e. Verification of datais done regularly by the quality team.
+
+Interpretation: The data which is collected is verified from time to time and in
+response to queries or when an unexplained trend occurs, etc.
+
+The data collected shall be authenticated by the quality team after going through
+every data or by using random sampling. The verification process shall also
+include if the stated sampling strategy (where applicable) was adhered.
+
+Whenever errors are detected in the process of collection of data, they are
+corrected.
+
+Commitment f. There is a mechanism for analysis of data which results in identifying
+opportunities for improvement.
+
+Interpretation: The data is analysed and based on this corrective and
+preventive actions are taken, where necessary. The organisation could also
+consider developing benchmarks/acceptable quality levels based on national/
+international norms. This also includes undertaking quality improvement
+projects when the benchmark/acceptable quality levels are consistently not
+met, or the trend is unfavourable.
+
+In case the organisation is consistently meeting benchmark/acceptable quality
+levels, they could reduce the frequency of monitoring.
+
+Commitment g. Theimprovements are implemented and evaluated.
+
+Interpretation: The improvement activities carried out by the organisation shall
+have an evaluable outcome. The same shall be documented.
+
+HB cone HE Commitment HM Achievement TB Excetience
+
+
+===== PDF_IDX 225 (pdf page 226) =====
+
+guidebook to NABH Accreditation Standards for Hospitals
+NABH
+
+Achievement h. Feedback about care and service is communicated to staff.
+
+Interpretation: The feedback shall include the rates, trends and opportunities for
+improvement. It could also provide specific inputs to improve/reduce the rate.
+This could be in the form of a bulletin/newsletter. It is equally important that
+positive feedback about care and service is communicated to staff.
+
+Standard
+
+The organisation uses appropriate quality improvement tools for its
+
+|
+PSQ.4. quality improvement activities.
+
+Objective Elements
+
+C@RE a. Theorganisation undertakes quality improvement projects.
+
+Interpretation: At a minimum, every year, the organisation shall undertake two
+quality improvement projects.
+
+A project shall have a definite purpose, beginning and end. It shall be a time-
+bound activity. There shall be a measurement of parameters under improvement
+atthe beginning and end of the project.
+
+Achievement b. The Quality improvement projects shall include improvements in patient
+care delivery and hospital operations which will have an impact on cost and
+efficiency.
+
+Interpretation: Quality improvement projects shall be centered on six domains of
+health care quality which include patient safety, cost effectiveness, patient
+centered, timeliness, efficiency and equity in healthcare.
+
+Commitment c. The organisation uses appropriate analytical managerial and statistical tools
+for its quality improvement activities.
+
+Interpretation: Depending on the project, the organisation shall identify and use
+appropriate analytical tools. For example, root cause analysis, run chart,
+
+Es CQRE = Commitment = Achievement = Excellence
+
+
+===== PDF_IDX 226 (pdf page 227) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+
+NABH
+
+stratification diagram, normalisation table, flow chart, Pareto analysis, histogram
+etc.
+
+Depending on the project, the organisation shall identify and use appropriate
+statistical tools such as sampling, control chart, ANOVA, six sigma etc.
+
+Depending on the project, the organisation shall identify and use appropriate
+managerial tools. For example, Lean, Six Sigma, Plan Do Study Act (PDSA), Force
+Field Analysis, Affinity Diagram, Matrix Diagram, Tree Diagram, etc.
+
+Achievement d.
+
+The organisation has a mechanism to capture patient reported outcome
+measures.
+
+Interpretation: The organisation shall develop a mechanism to capture patient
+reported outcome measures (PROMs). The organisation needs to ensure that the
+measurement instruments that patients complete to provide information on
+aspects of their health status incorporate information that is relevant to their
+quality of life, including symptoms, functionality and physical, mental and social
+health. PROMs can be classified as either generic or disease-specific. The
+organisation shall use PROMs to better communication and decision making
+between doctors and patients and improve patient satisfaction with care.
+
+Standard
+
+PSQ.5. There is an established system for clinical audit.
+
+Objective Elements
+
+Commitment a.
+
+HB core
+
+Clinical audits are performed to improve the quality of patient care.
+
+Interpretation: The organisation shall use clinical audits as a quality
+improvement tool to improve the quality of patient care. The clinical audit could be
+retrospective/prospective in nature. The topic for audit could be disease-based,
+cost-based, community-based or based on morbidity (length of stay). The
+organisation shall conduct one clinical audit per clinical department once in two
+years as per the scope of services. The organisation needs to take care to
+differentiate clinical audit from research projects.
+
+—| Commitment = Achievement || Excellence
+
+
+===== PDF_IDX 227 (pdf page 228) =====
+
+g Guidebook to NABH Accreditation Standards for Hospitals
+
+Commitment _ b.
+
+Achievement ©:
+
+NABH
+
+The parameters to be audited are defined by the organisation.
+
+Interpretation: As clinical audits are standards-based, they must be done using
+predefined parameters so that there is no bias. The organisation shall lay down
+the objectives, the standards against which the audit will be conducted, developa
+checklist where required, sampling and data collection guidelines and
+preparation of the report. The audit shall encompass aspects of clinical and
+nursing care.
+
+Medical and nursing staff participate in clinical audit.
+
+Interpretation: The organisation shall identify such personnel. It could be a mix of
+
+_ clinicians, administrators and nurses. These could be members of the core
+
+Commitment d.
+
+Commitment e.
+
+Commitment _ f.
+
+HM core
+
+committee/quality assurance committee etc.
+
+Patient and staff anonymity are maintained.
+
+Interpretation: This means that the names of the patients and the hospital staff
+who may figure in the audit documents must not be disclosed nor any reference is
+made to them in public discussions/conferences. This is at the stage of report
+preparation and dissemination. The staff participating in the audit shall maintain
+patient and staff anonymity and not reveal names.
+
+Clinical audits are documented.
+
+Interpretation: The organisation could use a checklist with the predefined
+parameters, and the audit findings could be recorded on this sheet. After the
+audit, a report shall be prepared, highlighting the key findings of the audit.
+
+Remedial measures are implemented.
+
+Interpretation: All remedial measures as ascertained shall be documented and
+implemented, and improvements thereof recorded to complete the audit cycle.
+This shall preferably be done based on the root-cause analysis.
+
+Ta Commitment zi Achievement i= a Excellence
+®
+
+
+===== PDF_IDX 228 (pdf page 229) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+
+Standard
+
+The
+
+PSQ.6.
+
+4
+NABH
+
+patient safety and quality improvement programme are supported
+
+by the management.
+
+Objective Elements
+
+Achievement a.
+
+The management creates a culture of safety.
+
+Interpretation: The management needs to ensure the adoption of behaviours
+that promote patient safety. Some of the key features required for a culture of
+safety are sharing information, reporting occurrences of incidents, learning from
+safety incident analysis, blame-free culture and encouragement of collaboration
+across disciplines and departments. The key components of patient safety
+culture are informed culture, reporting culture, learning culture, just culture and
+flexible culture.
+
+The management needs to measure its safety culture regularly (at least once a
+year). This shall be measured using validated surveys. For example, the
+Manchester Patient Safety Framework (MaPSaF), Safety Attitudes Questionnaire,
+AHRQ Surveys on Patient Safety Culture (SOPS™). The management shall act on
+their patient safety culture assessment results.
+
+Commitment _b.
+
+The leaders at all levels in the organisation are aware of the intent of the
+patient safety and quality improvement programme and the approach to its
+implementation.
+
+Interpretation: The organisation and departmental leaders are aware of the
+patient safety and quality improvement programme, its intent and applicability to
+the respective areas and howit contributes to the organisation as a whole.
+
+Commitment c.
+
+TB core
+
+Departmental leaders are involved in patient safety and quality
+improvement.
+
+Interpretation: To effectively implement this, each department could have its
+department objectives/key performance indicators including clinical indicators,
+and the responsibility of achieving them could be that of the leader/designated
+person. This could be discussed during departmental meeting.
+
+= Commitment = Achievement = Excellence
+
+
+===== PDF_IDX 229 (pdf page 230) =====
+
+C Guidebook to NABH Accreditation Standards for Hospitals
+
+Commitment d. Organisation earmarks adequate funds from its annual budgetin this regard.
+
+Interpretation: Appropriate fund allocation is done by the organisation for the
+smooth functioning of the patient safety and quality improvement programme.
+The budget could be earmarked based on previous year's spending. If no datais
+available, the organisation could make a beginning by earmarking a budget but
+reviewing it at the end of six months to make any necessary modifications. The
+} management makes available adequate resources required for patient safety and
+quality improvement programme. Resources shall include men, material,
+machine, money, milieu, measurement and method. These shall be in steady
+supply to ensure that the programme functions smoothly.
+
+Achievement e. The management identifies organisational performance improvement
+targets.
+
+Interpretation: The management shall identify the organisation and department
+level quality objectives, set targets, monitor them (at least once in three months)
+and modify the target (at least annually). The targets shall be shared with the
+faculty and staff and regular feedback taken.
+
+Excellence f. | The managementuses the feedback obtained from the work force to improve
+patient safety and quality improvement programme.
+
+Interpretation: The feedback shall be obtained from the staff on their
+understanding and use of the safety and quality systems. Feedback may be
+obtained once a year through staff surveys, but it is also important that staff
+workforce feel able to raise concerns whenever they occur. These inputs shall be
+used to improve patient safety and quality improvement programmes.
+
+Standard
+
+Incidents are collected and analysed to ensure continual quality
+
+improvement.
+
+zz CQRE Ee) Commitment = Achievement = Excellence
+
+
+===== PDF_IDX 230 (pdf page 231) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+
+NABH.
+
+Objective Elements
+
+CQRE a.
+
+Commitment b.
+
+Commitment c.
+
+HB cone
+
+The organisation implements an incident management system.*
+
+Interpretation: The incident management system includes:
+* identification
+
+* reporting
+
+* review
+
+* action on incidents
+
+This system supports factual reporting and learning and is based on the principle
+ofjust culture.
+
+The organisation shall have a mechanism for reporting the occurrence of
+incidents on standardised incident report forms. It is preferable that the reporting
+system is simple (a few steps), clear (what needs to be reported, how to report,
+and to whom), confidential, and focused on process improvement.
+
+While capturing the incidents, the organisation shall capture all incidents without
+going into the severity or whether harm was caused.
+
+The organisation has a mechanism to identify sentinel events.*
+
+Interpretation: The sentinel events relating to system or process deficiencies that
+are relevant and important to the organisation must be clearly defined. The list of
+the identified and relevant sentinel events shall be documented.
+
+Refer to the glossary for a definition of "sentinel events".
+
+The organisation has established processes for analysis of incidents.
+
+Interpretation: The safety committee (Refer to PSQ.1.a.) shall be responsible for
+this activity. This could preferably be done by identifying the root cause. Inputs
+could be sought from the units/discipline/departments concerned. Where
+possible, patients and other stakeholders could be included in analysing the
+feedback and complaint.
+
+The immediate response to a safety incident shall be to address the urgent care
+and support needs of those involved. This shall not await analysis
+
+In case of sentinel events, correction if any shall be initiated within 24-working
+hours of occurrence or reporting. The analysis of sentinel events shall be
+completed within seven working days of occurrence or reporting.
+
+= Commitment | Achievement z= Excellence
+
+
+===== PDF_IDX 231 (pdf page 232) =====
+
+guidebook to NABH A\
+
+Commitment d.
+
+Achievement e.
+
+Commitment _f.
+
+GM core
+
+NABH
+
+Corrective and preventive actions are taken based on the findings of such
+analysis.
+
+Interpretation: The objective of this is to improve the quality of patient-care
+services continually. All such action shall be documented. The findings and
+recommendations arrived at after the analysis shall be communicated to all
+personnel concerned to correct the systems and processes to prevent
+recurrences. Any change in the policy or procedure is reflected as an amendment
+in the organisation’s documentation.
+
+The organisation incorporates risks identified in the analysis of incidents
+into the risk management system.
+
+Interpretation: Ifthe incident analysis reveals the presence of an unidentified risk,
+the same shall be subjected to risk management.
+
+The organisation shall have a process for informing various stakeholders in
+case of anear miss / adverse event / sentinel event.
+
+Interpretation: After due analysis, an incident could be termed as a near miss or
+adverse event or sentinel event. Based on the nature of the near miss or adverse
+event or sentinel event, the organisation shall inform the stakeholders (including
+patient and family where applicable) regarding the relevant concerns in addition
+to initiating the corrective and preventive action.
+
+z= Commitment zs Achievement lie Excellence
+
+
+===== PDF_IDX 232 (pdf page 233) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+
+References
+
+UB
+
+10.
+11.
+
+12.
+
+13.
+
+14,
+
+15.
+16.
+
+Leotsakos A, Zheng H, Croteau R, Loeb JM, Sherman H, Hoffman C, Morganstein L, O'leary D, Bruneay
+C, Lee P. Duguid M. Standardization in patient safety: the WHO High 5s project. International journal for
+quality in health care. 2014 Apr 1;26(2):109-16.
+
+Chou D. Health IT and patient safety: building safer systems for better care. Jama. 2012 Dec
+5;308(21):2282.
+
+Frankel A, Federico F, Frush K, Haraden C, Kaplan GS. The essential guide for patient safety officers,
+Leonard M, editor. Oakbrook Terrace, IL: Joint Commission Resources [and] Institute for Healthcare
+Improvement; 2013.
+
+World Health Organization. (n.d.). Patient Safety Solutions. [cited 2023 Dec 5]. Available from:
+https://www.who.int/teams/integrated-health-services/patient-safety/research/patient-safety-solutions
+
+de Souza Gomes AP. Querido DL, da Silva GR, de Almeida LF, Rocha RG. Identificagao do paciente em
+neonatologia para assisténcia segura. Cogitare Enfermagem. 2017 Aug 29;22(3).
+
+ECRI Institute. ECRI Institute PSO Deep Dive: Patient Identification: Executive Summary. Aug 2016.
+[cited 2023 Dec 5]. Available from:
+https://www.ecri.org/Resources/Whitepapers_and_reports/PSO%20Deep%20Dives/Deep%20Dive_P
+T_ID_2016_exec%20summary.pdf
+
+Montgomery C, Wei E. Patient Identification. InPatient Safety: A Case-based Innovative Playbook for
+Safer Care 2023 Oct 17 (pp. 75-87). Cham: Springer International Publishing.
+
+ECRI Institute. Patient Identification Errors. Jun 2016. [cited 2023 Dec 5]. Available from:
+https://www.ecri.org/Resources/HIT/Patient%20ID/Patient_ldentification_Evidence_Based_Literature_
+final.pdf
+
+ECRI Partnership for Health IT and Patient Safety. Health IT Safe Practices: Toolkit for the Safe Use of
+Health IT for Patient Identification. Feb 2017. [cited 2023 Dec 5]. Available from:
+https://www.ecri.org/Resources/HIT/Patient%20ID/Patient_Identification_Toolkit_final.pdf
+
+Hughes P Latino Ru, Kelly T. Preventing Patient Identification Errors.
+
+Desai KN, Chaudhari S. Analysis of critical values in NABL (National Accreditation Board for Testing and
+Calibration Laboratories) accredited hematology and clinical pathology laboratory. Ann Appl Bio-
+Sciences. 2017 Feb 14;4(1):A14-8.
+
+Patton LJ, Tidwell JD, Falder-Saeed KL, Young VB, Lewis BD, Binder JF. Ensuring safe transfer of
+pediatric patients: a quality improvement project to standardize handoff communication. Journal of
+Pediatric Nursing. 2017 May 1;34:44-52.
+
+Starmer AJ, Schnock KO, Lyons A, Hehn RS, Graham DA, Keohane C, Landrigan CP. Effects of the I-
+PASS Nursing Handoff Bundle on communication quality and workflow. BMJ quality & safety. 2017 Dec
+1;26(12):949-57.
+
+Institute for Safe Medication Practices. ISMP List of High-Alert Medications in Acute Care Settings. 2018.
+[cited 2023 Dec 5]. Available from: https://www.ismp.org/sites/default/files/attachments/2018
+98/highAlert2018-Acute-Final.pdf
+
+World Health Organization. Medication safety in high-risk situations. World Health Organization; 2019.
+
+Cabral RA, Eggenberger T, Keller K, Gallison BS, Newman D. Use of a surgical safety checklist
+improve team communication. AORN journal. 2016 Sep 1;104(3):206-16
+
+2)
+
+
+===== PDF_IDX 233 (pdf page 234) =====
+
+rr
+
+Guidebook to NABH Accreditation Standards for Hospitals
+
+17.
+
+18.
+
+20.
+21.
+22.
+23.
+
+24.
+25.
+26.
+27.
+28.
+
+29.
+
+30.
+31,
+32.
+
+33,
+
+NABH
+
+Jain D, Sharma R, Reddy S. WHO safe surgery checklist: Barriers to universal acceptance. Journal of
+anaesthesiology, clinical pharmacology. 2018 Jan;34(1):7.
+
+World Health Organization. Surgical Safety Checklist. (Updated: Jan 1, 2009.) [cited 2023 Dec 5].
+Available from: https://www.who.int/teams/integrated-health-services/patient-safety/research/safe-
+surgery/tool-and-resources.
+
+Resar R, Griffin FA, Haraden C, Nolan TW. Using care bundles to improve health care quality. IHI
+innovation series white paper. Cambridge, Massachusetts: Institute for Healthcare Improvement.
+2012;14:15-6.
+
+World Health Organization. Infection Prevention and Control. Hand Hygiene: The Evidence for Clean
+Hands. [cited 2023 Dec 5]. Available from: https://www.who.int/teams/integrated-health-
+services/infection-prevention-control/hand-hygiene
+
+Lotfinejad N, Peters A, Tartari E, Fankhauser-Rodriguez C, Pires D, Pittet D. Hand hygiene in health care:
+20 years of ongoing advances and perspectives. The Lancet infectious diseases. 2021 Aug
+1;21(8):€209-21.
+
+Agency for Healthcare Research and Quality. Preventing Falls in Hospitals: A Toolkit for Improving
+Quality of Care. AHRQ Publication No. 12-0015-EF. Jan 2013. [cited 2023 Dec 5]. Available from:
+https://www.ahrq.gov/patient-safety/settings/hospital/fall-prevention/toolkit/index.html
+
+France D, Slayton J, Moore S, Domenico H, Matthews J, Steaban RL, Choma N. A multicomponent fall
+prevention strategy reduces falls at an academic medical center. The Joint Commission Journal on
+Quality and Patient Safety. 2017 Sep 1;43(9):460-70.
+
+World Health Organization. Falls. 26 April,2021. [cited 2023 Dec 5]. Available from:
+https://www.who.int/news-room/fact-sheets/detail/falls
+
+Donabedian A. Quality assessment and monitoring: retrospect and prospect. Evaluation & the health
+professions. 1983 Sep;6(3):363-75.
+
+Duffy JR. Quality caring in nursing and health systems: Implications for clinicians, educators, and
+leaders. Springer Publishing Company; 2022 Dec 22.
+
+Zarei E, Karimi S, Mahfoozpour S, Marzban S. Assessing hospital quality management systems:
+evidence from Iran. International journal of health care quality assurance. 2019 Feb 11;32(1):87-96.
+
+Lee SE, Scott LD, Dahinten VS, Vincent C, Lopez KD, Park CG. Safety culture, patient safety, and quality
+of care outcomes: a literature review. Western journal of nursing research. 2019 Feb;41 (2):279-304.
+Jones P Shepherd M, Wells S, Le Fevre J, Ameratunga S. What makes a good healthcare quality
+indicator? A systematic review and validation study. Emergency Medicine Australasia. 2014
+Apr;26(2):113-24.
+
+K6tter T, Blozik E, Scherer M. Methods for the guideline-based development of quality indicators--a
+systematic review. Implementation Science. 2012 Dec;7:1-22.
+
+Dimick JB. What makes a “good” quality indicator?: comment on “Quality indicators for evaluating
+trauma care”. Archives of Surgery. 2010 Mar 1;145(3):295-.
+
+Doyle C, Lennox L, Bell D. A systematic review of evidence on the links between patient experience and
+Clinical safety and effectiveness. BMJ open. 2013 Jan 1;3(1):e001570.
+
+Fung CH, Lim YW, Mattke S, Damberg C, Shekelle PG. Systematic review: the evidence that publishing
+patient care performance data improves quality of care. Annals of internal medicine. 2008 Jan
+15;148(2):111-23.
+
+@
+
+
+===== PDF_IDX 234 (pdf page 235) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+
+34.
+
+35.
+
+36.
+
+37.
+
+38.
+39.
+
+40.
+
+41.
+
+42.
+
+43.
+44.
+
+45.
+
+46.
+
+47.
+
+48.
+
+49.
+
+50.
+
+51,
+52.
+
+NAB”
+
+Gruen RL, Gabbe BJ, Stelfox HT, Cameron PA. Indicators of the quality of trauma care and the
+performance of trauma systems. Journal of British Surgery. 2012 Jan;99(Supplement_1):97-104.
+
+US Centers for Disease Control and Prevention, National Healthcare Safety Network. NHSN Data
+Validation. (Updated: Apr 3, 2019.) [cited 2023 Dec 5]. Available from,
+https://www.cde.gov/nhsn/validation/index.html
+
+Jones P Shepherd M, Wells S, Le Fevre J, Ameratunga S. What makes a good healthcare quality
+indicator? A systematic review and validation study. Emergency Medicine Australasia. 2014
+Apr;26(2):113-24.
+
+K6tter T, Blozik E, Scherer M. Methods for the guideline-based development of quality indicators--a
+systematic review. Implementation Science. 2012 Dec;7:1-22.
+
+Catalyst NE. Whatis risk managementin healthcare?. NEJM Catalyst. 2018 Apr 25;4(2).
+
+Rubin HR, Pronovost P Diette GB. The advantages and disadvantages of process-based measures of
+health care quality. International Journal for Quality in Health Care. 2001 Dec 1;13(6):469-74.
+
+Santana MJ, Ahmed S, Lorenzetti D, Jolley RJ, Manalili K, Zelinsky S, Quan H, Lu M. Measuring patient-
+centred system performance: a scoping review of patient-centred care quality indicators. BMJ open.
+2019 Jan 1;9(1):e023596.
+
+Institute for Healthcare Improvement. (n.d.). Quality Improvement Essentials Toolkit [cited 2023 Dec 5].
+Available from: http://www.ihi.org/resources
+
+Hughes RG. Tools and strategies for quality improvement and patient safety. Patient safety and quality:
+An evidence-based handbook for nurses. 2008 Apr.
+
+Smith DL. FMEA: preventing a failure before any harm is done. isixsigma magazine, march. 2004.
+
+American Society for Quality. (n.d.). 7 Basic Quality Tools: Quality Management Tools. [cited 2023 Dec
+5]. Available from: https://asq.org/quality-resources/seven-basic-quality-tools
+
+Agency for Healthcare Research and Quality. (n.d.). Section 4: Ways To Approach the Quality
+Improvement Process (Page 1 of 2). [cited 2023 Dec 5]. Available from:
+https://www.ahrq.gov/cahps/quality-improvement/improvement-guide/4-approach-qi-
+process/index.htm!
+
+Agency for Healthcare Research and Quality. (n.d.). TeamStepps: Strategies and Tools to Enhance
+Performance and Patient Safety. [cited 2023 Dec 5]. Available from:
+http://www.ahrq.gov/professionals/education
+
+American Society for Quality. (n.d.). Quality Statistics - Statistical Methods for Quality Improvement.
+[cited 2023 Dec 5]. Available from: https://asq.org/quality-resources/statistics
+
+American Society for Quality. (n.d.). What is Root Cause Analysis (RCA)? [cited 2023 Dec 5]. Available
+from: https://asq.org/quality-resources/root%20cause%20analysis
+
+Quality Improvement Essentials Toolkit. (n.d.). Institute for Healthcare Improvement. [cited 2023 Dec 5].
+Available from: https://www.ihi.org/resources/tools
+
+Quality Statistics - Statistical Methods for Quality Improvement. (n.d.). American Society for Quality
+[cited 2023 Dec 5]. Available from: https://asq.org/quality-resources/statistics
+
+Krause C. The case for quality improvement. Healthc Q. 2017 Jan 1;20(1):25-7.
+
+Kingsley C, Patel S. Patient-reported outcome measures and patient-reported experience measures. Bja
+Education. 2017 Apr 1;17(4):137-44.
+
+®
+
+ee
+
+of
+
+
+===== PDF_IDX 235 (pdf page 236) =====
+
+_ guidebook to NABH Accreditation Standards for Hospitals
+
+53.
+
+54.
+
+56.
+
+56.
+
+66.
+
+68.
+
+57.
+
+58.
+
+59.
+
+60.
+
+61.
+
+62.
+
+63.
+
+64.
+
+65,
+
+NABH
+
+Gilmore KJ, Corazza |, Coletta L, Allin S. The uses of patient reported experience measures in health
+systems: a systematic narrative review. Health policy. 2023 Feb 1;128:1-0.
+
+Monmouth Partners. A Guide to Patient Reported Measures - Theory, Landscape and Uses. [cited 2023
+Dec 5]. Available from: https://silo.tips/download/a-guide-to-patient-reported-measures-theory-
+landscape-and-uses#google_vignette
+
+What are PROMs? Centre for Health Services and Policy Research at University of British Columbia.
+{cited 2023 Dec 5]. Available from: https://patientreportedoutcomes.ca/what-are-pros/proms/
+
+Bull C, Teede H, Watson D, Callander EJ. Selecting and implementing patient-reported outcome and
+experience measures to assess health system performance. In JAMA Health Forum 2022 Apr 1 (Vol. 3,
+No. 4, pp. €220326-e220326). American Medical Association.
+
+Withers K, Palmer R, Lewis S, Carolan-Rees G. First steps in PROMs and PREMs collection in Wales as
+part of the prudent and value-based healthcare agenda. Quality of life research. 2021 Nov;30:3157-70.
+
+Jonsson A, Orwelius L, Dahlstrom U, Kristenson M. Evaluation of the usefulness of EQ-5D as a patient-
+reported outcome measure using the Paretian classification of health change among patients with
+chronic heart failure. Journal of patient-reported outcomes. 2020 Dec;4(1):1-1.
+
+Bull C, Byrnes J, Hettiarachchi R, Downes M. A systematic review of the validity and reliability of patient-
+reported experience measures. Health services research. 2019 Oct;54(5):1023-35.
+
+Kingsley C, Patel S. Patient-reported outcome measures and patient-reported experience measures. Bja
+Education. 2017 Apr 1;17(4):137-44,
+
+Bull C, Latimer S, Crilly J, Gillespie BM. A systematic mixed studies review of patient experiences in the
+ED. Emergency Medicine Journal. 2021 Aug 1;38(8):643-9.
+
+Churruca K, Pomare C, Ellis LA, Long JC, Henderson SB, Murphy LE, Leahy Cu, Braithwaite J. Patient-
+reported outcome measures (PROMs): a review of generic and condition-specific measures and a
+discussion of trends and issues. Health Expectations. 2021 Aug;24(4):1015-24.
+
+Black N, Varaganum M, Hutchings A. Relationship between patient reported experience (PREMs) and
+patient reported outcomes (PROMs) in elective surgery. BMJ quality & safety. 2014 Jul 1;23(7):534-42.
+
+Australian Commission on Safety and Quality in Healthcare. November 2016. Patient Reported
+Outcome Measures. Literature Review [cited 2023 Dec 5]. Available from:
+https://www.safetyandquality.gov.au/sites/default/files/migrated/PROMs-Literature-Review-December-
+2016.pdf
+
+Patient reported outcome measures (PROMs) in England—2011-2012, special topic, EQ-5D™ Index
+analysis. NHS Digital. [cited 2023 Dec 5]. Available from: https://digital.nhs.uk/data-and-
+information/publications/statistical/patient-reported-outcome-measures-proms/patient-reported-
+outcome-measures-proms-in-england-201 1-201 2-special-topic-eq-5d-index-analysis
+
+Weldring T, Smith SM. Article commentary: patient-reported outcomes (pros) and patient-reported
+outcome measures (PROMs). Health services insights. 2013 Jan;6:HSI-S11093.
+
+Lagha E, Noble A, Smith A, Denvir MA, Leslie SJ. Patient Reported Experience Measures (PREMs) in
+chronic heart failure. The Journal of the Royal College of Physicians of Edinburgh. 2012 Jan 1;42(4):301-
+5.
+
+Dawson J, Doll H, Fitzpatrick R, Jenkinson C, Carr AJ. The routine use of patient reported outcome
+measures in healthcare settings. Bmj. 2010 Jan 18;340.
+
+
+===== PDF_IDX 236 (pdf page 237) =====
+
+NABH
+
+69.
+
+70.
+
+71.
+
+72.
+
+73.
+
+74.
+
+75.
+
+76.
+
+77.
+
+78.
+
+79.
+
+80.
+
+81.
+
+82.
+
+83.
+
+Shariff R, AbuGhazaleh S, Sagr E, Ebdah M, Baumhauer J. Leveraging Patient-Reported Experience
+Measures (PREMs) Data to Deploy Patient-Reported Outcome Measures (PROMs). NEJM Catalyst
+Innovations in Care Delivery. 2022 Jun 15;3(7):CAT-22.
+
+Hart AR. Principles for Best Practice in Clinical Audit: By NHS, National Institute for Clinical Excellence,
+CHI (Commission for Health Improvement), Royal College of Nursing, University of Leicester.(Pp 196,
+paperback plus CD ROM;£ 19.95 for NHS staff and organisations,£ 29.95 for those not working for the
+NHS.) Radcliffe Medical Press, 2002. ISBN 1-85775-976-1.
+
+Limb C, Fowler A, Gundogan B, Koshy K, Agha R. How to conduct a clinical audit and quality
+improvement project. IJS Oncology. 2017 Jul 1;2(6):e24.
+
+University Hospitals Bristol. (n.d.). How To Guides. [cited 2023 Dec 5]. Available from:
+http://www.uhbristol.nhs.uk/for-clinicians/clinicalaudit/how-to-guides/
+
+Knight H, Gurol-Urganci |, Mahmood T. Clinical Audit for Quality Improvement. Introduction to Research
+Methodology for Specialists and Trainees. 2017 Aug 17:53. Knight H, Gurol-Urganci |, Mahmood T,
+Clinical Audit for Quality Improvement. Introduction to Research Methodology for Specialists and
+Trainees. 2017 Aug 17:53.
+
+National Clinical Audit and Patient Outcomes Programme. Secondary National Clinical Audit and Patient
+Outcomes Programme 2014. [cited 2023 Dec 5]. Available from: www.hqip.org.uk/national-clinical-
+audits-managed-by-hqip
+
+Healthcare Quality Improvement Partnership. / A-Z of National Clinical Audits. The National Clinical
+Audit Programme. [cited 2023 Dec 5]. Available from: https://www.hqip.org.uk/a-z-of-nca/.
+
+Frankel A, Leonard M. 2013 Aug 22.The PS Net Collection. Perspectives. Update on Safety Culture.
+Agency for Healthcare Research and Quality. Patient Safety Network. [cited 2023 Dec 5]. Available from:
+https://psnet.ahrq.gov/perspective/update-safety-culture
+
+Agency for Healthcare Research and Quality. Patient Safety Network. (2019, January). Culture of Safety.
+[cited 2023 Dec 5]. Available from: http://psnet.ahrq.gov/primer.aspx?primerID=5
+
+Agency for Healthcare Research and Quality. SOPS Surveys. Hospital Survey on Patient Safety Culture
+[cited 2023 Dec 5]. Available fromhttps://www.ahrq.gov/sops/surveys/hospital/index.html
+
+The Health Foundation. (2012, May). How can leaders influence a safety culture? [cited 2023 Dec 5].
+Available from:
+https://www.health.org.uk/sites/default/files/HowCanLeadersinfluenceASafetyCulture.paf
+
+Secanell M, Groene O, Arah OA, Lopez MA, Kutryba B, Pfaff H, Klazinga N, Wagner C, Kristensen S,
+Bartels PD, Garel P Deepening our understanding of quality improvement in Europe (DUQuE): overview
+of a study of hospital quality management in seven countries. International journal for quality in health
+care. 2014 Apr 1;26(suppl_1):5-15.
+
+Swensen Su, Dilling JA, Mc Carty PM, Bolton JW, Harper Jr CM. The business case for health-care
+quality improvement. Journal of patient safety. 2013 Mar 1;9(1):44-52.
+
+Fung CH, Lim YW, Mattke S, Damberg C, Shekelle PG. Systematic review: the evidence that publishing
+patient care performance data improves quality of care. Annals of internal medicine. 2008 Jan
+15;148(2):111-23.
+
+Thomas Eu. The future of measuring patient safety: prospective clinical surveillance. BMJ Quality &
+Safety. 2015 Apr 1;24(4):244-5.
+
+
+===== PDF_IDX 237 (pdf page 238) =====
+
+84.
+
+85.
+86.
+
+87.
+
+88.
+
+89.
+
+90.
+
+91.
+
+92.
+
+93.
+
+94,
+
+95,
+
+96.
+
+97,
+
+NABH
+
+Thomas L, Galla C. Republished: building a culture of safety through team training and engagement.
+Postgraduate Medical Journal. 2013 Jul;89(1053):394-401.
+
+Trbovich PL, Griffin M. Measuring and improving patient safety culture: still a long way to go.
+
+Tsai TC, Jha AK, Gawande AA, Huckman RS, Bloom N, Sadun R. Hospital board and management
+practices are strongly related to hospital performance on clinical quality metrics. Health affairs. 2015
+Aug 1;34(8):1304-11.
+
+Wagner C, Smits M, Sorra J, Huang CC. Assessing patient safety culture in hospitals across countries.
+International Journal for Quality in Health Care. 2013 Jul 1;25(3):213-21.
+
+Weaver SJ, Lubomksi LH, Wilson RF, Pfoh ER, Martinez KA, Dy SM. Promoting a culture of safety as a
+patient safety strategy: a systematic review. Annals of internal medicine. 2013 Mar 5;158(5_Part_2):369-
+74.
+
+Beard P. Greenall J, Hoffman CE, Nettleton S, Popescu IC, Ste-Marie M, Walsh D, White J. Canadian
+incident analysis framework.
+
+Agency for Healthcare Research and Quality. Patient Safety Network. (2019, January). Root Cause
+Analysis. [cited 2023 Dec 5]. Available from:, from https://psnet.ahrq.gov/primers/primer/10/Root-
+Cause-Analysis
+
+Agency for Healthcare Research and Quality. Patient Safety Network. (2019, January). Reporting
+Patient Safety Events. [cited 2023 Dec 5]. Available from:
+https://psnet.ahrq.gov/primers/primer/13/reporting-patient-safety-events%200n%20April%2016
+Agency for Healthcare Research and Quality. Patient Safety Primers. (2019, January). Detection of
+Safety Hazards. [cited 2023 Dec 5]. Available from:
+https://psnet.ahrg.gov/primers/primer/24/Detection-of-Safety-Hazards
+
+Beard P. Greenall J, Hoffman CE, Nettleton S, Popescu IC, Ste-Marie M, Walsh D, White J. Canadian
+incident analysis framework.
+
+Charles R, Hood B, Derosier JM, Gosbee JW, Li Y, Caird MS, Biermann JS, Hake ME. How to perform a
+root cause analysis for workup and future prevention of medical errors: a review. Patient safety in
+surgery. 2016 Dec;10:1-5.
+
+Ewen BM, Bucher G. Root cause analysis: Responding to a sentinel event. Home Healthcare Now. 2013
+Sep 1;31 (8):435-43.
+
+Bagian JP. Bonacum D, DeRosier J, Frost J, Fairbanks RJ, Gandhi T, Sheppard F. RCA 2: Improving Root
+Cause Analyses and Actions to Prevent Harm
+
+Carayon P. Human factors in patient safety as an innovation. Applied ergonomics. 2010 Sep 1;41 (§):657-
+65.
+

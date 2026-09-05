@@ -1,0 +1,134 @@
+{
+  "standard_code": "HRM.1",
+  "chapter": "HCO",
+  "oe_codes": [
+    "HRM.1.a",
+    "HRM.1.b",
+    "HRM.1.c",
+    "HRM.1.d",
+    "HRM.1.e",
+    "HRM.1.f",
+    "HRM.1.g"
+  ],
+  "policy_title": "Human Resource Planning and Governance",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard HRM.1: The organisation has a documented system of human resource planning.\n\nThis policy covers all 7 requirements under this standard, listed in detail below.\n\nChapter intent (official Standards PDF): The most important resource of the organisation is its human resource. Human resources are an asset for the effective and efficient functioning of the organisation. The management plans on identifying the right number and skill mix of staff required to render safe care to the patients. Recruitment of staff is accomplished by having a uniform and standardised system. The organisation must orient the staff including outsourced staff, volunteers, students and trainees to its environment and also orient them to specific duties and responsibilities related to their position. The organisation should plan to have an ongoing professional training / in-service education to enhance the competencies and skills of the staff continually. A systematic and structured appraisal system must be used for staff development. The organisation uses this as an opportunity to discuss, motivate, identify gaps in the performance of the staff. The organisation promotes the physical and mental well-being of staff. A grievance handling mechanism and disciplinary procedure should be in place. Credentialing and privileging of health-care professionals (medical, nursing and other para-clinical professional) are done to ensure patient safety. A document containing all such personal information has to be maintained for all staff.\n\nThis policy covers human resource planning and governance specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, hospital governance, or facility safety — are covered in the hospital's other policies, not repeated here. Other HRM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to human resources, nursing, medical, and departmental leaders, and all staff of {{HOSPITAL_NAME}}, including the «HR In-Charge / Personnel Officer», the «Medical Superintendent», departmental leaders and the Quality Coordinator.\n\nThis policy covers all 7 requirements under this standard, listed in detail below.\n\nThis policy covers human resource planning and governance specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, hospital governance, or facility safety — are covered in the hospital's other policies, not repeated here.",
+  "policy_statement": "{{HOSPITAL_NAME}} implements HRM.1 so that the organisation has a documented system of human resource planning.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Human resource planning supports the organisation’s current and future...\n\nHuman resource planning at {{HOSPITAL_NAME}} supports the organisation's current and future ability to meet the care, treatment and service needs of the patient. The «HR In-Charge / Personnel Officer» prepares a workforce plan «annually» that compares current staff numbers and skill mix against the hospital's mission, patient volume and mix, services offered and medical technology in use, with input from department heads and other stakeholders.\n\nRecognised methods are used to set staffing levels against the strategic and operational plan. Where the year's actuals vary from plan, the «HR In-Charge / Personnel Officer» records the corrective action taken and carries it into the next plan.\n\nMethod note (from guidebook interpretation): Human resource planning shall be done in a structured manner for all categories of staff keeping in mind the hospital's mission, volume and mix of patients, services, and medical technology. This is done with the involvement of various stakeholders. It shall use recognised methods for determining levels of staffing to match the strategic and operational plan of the organisation. Where appropriate, corrective action is taken on variances found during the year and shall be incorporated in the subsequent plan.",
+    "5.2 The organisation maintains an adequate number and mix of staff to meet...\n\n{{HOSPITAL_NAME}} maintains an adequate number and mix of staff to meet the care, treatment and service needs of the patient, commensurate with workload and clinical requirement. Nursing staffing follows published guidelines (the WHO Workload Indicators of Staffing Need — WISN — method is a recognised reference).\n\nWhere a shortfall exists, the contingency plan at HRM.1.c is triggered, covering support staff as well as clinical staff. The «HR In-Charge / Personnel Officer» compares sanctioned versus actual strength «monthly» and escalates unresolved shortfalls to the «Medical Superintendent».\n\nMethod note (from guidebook interpretation): The staff shall be commensurate with the workload and the clinical requirement of the patients. Staffing norms for nurses shall be as per published guidelines. A good reference is the WHO's Workload Indicators of Staffing Need (WISN) method. Whenever there is a shortfall of staff, contingency plans to meet the workforce shortage exists. This includes support staff too. Refer to HRM.1.c.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.3 The organisation has contingency plans to manage long and short-term...\n\n{{HOSPITAL_NAME}} has contingency plans to manage long- and short-term workforce shortages, including unplanned shortages (a shift-by-shift gap, a short-term crisis or a sustained long-term shortfall). The plan may include reprioritising tasks, reallocating tasks across available staff, and drawing on a pool of filler staff — previous employees and agency-sourced casual staff are named by the Guidebook as a typical source.\n\nEach shortage event is logged with cause, measure used and outcome. The plan is tested at a defined interval (default «twice a year»).\n\nMethod note (from guidebook interpretation): At various times, the mix of skills required for the organisation to function at peak efficiency may not be immediately available due to workforce shortages, which can occur on a shift-by-shift, short-term or long-term basis. Existing staff crises can be managed using a contingency plan, which may include strategies such as reprioritising tasks, allocating tasks to different staff members, and relying on a pool of filler staff, which may consist predominantly of previous employees and casual staff sourced from agencies.",
+    "5.4 The job specification and job description are defined for each category...\n\nThe job specification and job description are defined for each category of staff at {{HOSPITAL_NAME}}, including full-time, part-time, employed, honorary, voluntary and temporary staff. Each job description lays down the content of the job and the qualifications, skills and experience required, commensurate with the qualification set for that role.\n\nFor a role requiring the skills of a doctor or a nurse, the minimum qualification is an MBBS or GNM degree respectively, unless government or statutory exemption has been granted. The «HR In-Charge / Personnel Officer» holds the current job-description set; new hires sign that they have received and understood theirs.\n\nMethod note (from guidebook interpretation): The content of each job shall be defined and the qualifications, skills and experience required for performing the job shall be laid down. The job description shall be commensurate with the qualification. Refer to the glossary for a definition of \"job description\" and \"job specification\". For a job which requires the skills of a doctor or a nurse, the minimum qualification shall be an MBBS and GNM degree respectively. The exception would be in cases where exemption has been granted by government/statutory body. The requirements of this objective element if applicable to all types of \"staff\" who require job descriptions (for example, full-time, part-time, employed, honorary, voluntary or temporary).",
+    "5.5 The organisation performs a background check of new staff\n\n{{HOSPITAL_NAME}} performs a background check of new staff, using a defined methodology, either before the person joins or within one month of joining. The «HR In-Charge / Personnel Officer» maintains a background-check register recording the method used, date completed and outcome for each new hire.\n\nA staff member with no background check on file is escalated to the «Medical Superintendent»; this is not a box left for later.\n\nMethod note (from guidebook interpretation): The organisation shall have a suitable methodology to implement the same. This shall be done either before the person joins the organisation or within one month of joining.",
+    "5.6 Reporting relationships are defined for each category of staff\n\nReporting relationships are defined for each category of staff at {{HOSPITAL_NAME}}, documented as an organisation structure or chart showing hierarchy, line of control and functions at each level. The chart is transparent and disseminated to all stakeholders, and the reporting relationship is also defined at department or service level.\n\nThe «HR In-Charge / Personnel Officer» holds the current chart; a role with no defined reporting line is incomplete under this element.\n\nMethod note (from guidebook interpretation): The organisation shall document this as the organisation structure/chart, and this shall document the hierarchy, line of control, along with the functions at various levels. Organogram shall be transparent and disseminated to all stakeholders. The reporting relationship at department/ service level shall be defined.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.7 Exit interviews are conducted and used as a tool to improve human...\n\n{{HOSPITAL_NAME}} conducts exit interviews and uses them as a tool to improve human resource practices. A personal interview is the default method; the exercise is voluntary for the departing staff member.\n\nThe «HR In-Charge / Personnel Officer» compiles findings at a defined interval (default «quarterly») into a trend report for the «Medical Superintendent» and, where the hospital has one, the «governing body», with proposed HR improvements tracked to closure.\n\nMethod note (from guidebook interpretation): The organisation conducts exit interviews to obtain feedback from employees leaving the organisation. This could be done through personal interview. This shall be a voluntary exercise."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that HRM.1 is resourced and followed.\n\nHR In-Charge / Personnel Officer\n- Owns day-to-day implementation and records for this standard.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.\n\ndepartmental leaders\n- Run the department-level duties this standard names.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Human Resource Management, standard HRM.1. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — HRM.1 interpretations (source PDF has no text layer; transcribed and verified against rendered page images).\n- Internal documents of {{HOSPITAL_NAME}}: workforce plan, recruitment and induction records, training records, appraisal records, disciplinary and grievance registers, staff health records, personal files, and credentialing/privileging files named for HRM.1.",
+  "distribution": "Medical Superintendent; HR In-Charge / Personnel Officer; Quality Coordinator; departmental leaders; staff covered by HRM.1",
+  "abbreviations": "ACLS — Advanced Cardiac Life Support\nBLS — Basic Life Support\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nCPR — Cardio-Pulmonary Resuscitation\nEMR — Electronic Medical Record\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nHR — Human Resource(s)\nHRM — Human Resource Management (NABH Hospitals 6th Edition chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nNRP — Neonatal Resuscitation Program\nOE — Objective Element\nPALS — Paediatric Advanced Life Support\nPPE — Personal Protective Equipment\nWISN — Workload Indicators of Staffing Need (WHO method)",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "HRM.1.a",
+      "requirement": "Human resource planning supports the organisation’s current and future ability to meet the care, treatment and service needs of the patient.",
+      "steps": "Section 3; 5.1",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Annual workforce plan comparing current and projected staffing against services and patient volume.",
+        "Department-head input record into the plan.",
+        "Corrective-action record for a variance found during the year."
+      ]
+    },
+    {
+      "oe_code": "HRM.1.b",
+      "requirement": "The organisation maintains an adequate number and mix of staff to meet the care, treatment and service needs of the patient.",
+      "steps": "Section 3; 5.2",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Sanctioned-versus-actual staffing comparison record by department.",
+        "Staffing-norm reference used (for example the WHO WISN method for nursing).",
+        "Escalation record for an unresolved shortfall."
+      ]
+    },
+    {
+      "oe_code": "HRM.1.c",
+      "requirement": "The organisation has contingency plans to manage long and short-term workforce shortages, including unplanned shortages.",
+      "steps": "Section 3; 5.3",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Written contingency plan for long- and short-term workforce shortages, including unplanned shortages.",
+        "Shortage-event log with cause, measure used and outcome.",
+        "Test record of the contingency plan, at least twice a year."
+      ]
+    },
+    {
+      "oe_code": "HRM.1.d",
+      "requirement": "The job specification and job description are defined for each category of staff.",
+      "steps": "Section 3; 5.4",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Job description on file for each staff category, including qualification, skill and experience requirements.",
+        "Signed acknowledgement record from a new hire receiving their job description.",
+        "Minimum-qualification exemption record, where applicable."
+      ]
+    },
+    {
+      "oe_code": "HRM.1.e",
+      "requirement": "The organisation performs a background check of new staff.",
+      "steps": "Section 3; 5.5",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Background-check register recording method, date and outcome per new hire.",
+        "Completion record before or within one month of joining.",
+        "Escalation record for any staff member with no background check on file."
+      ]
+    },
+    {
+      "oe_code": "HRM.1.f",
+      "requirement": "Reporting relationships are defined for each category of staff.",
+      "steps": "Section 3; 5.6",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Current organisation structure or chart showing hierarchy and reporting lines.",
+        "Department- or service-level reporting-relationship record.",
+        "Dissemination record to stakeholders."
+      ]
+    },
+    {
+      "oe_code": "HRM.1.g",
+      "requirement": "Exit interviews are conducted and used as a tool to improve human resource practices.",
+      "steps": "Section 3; 5.7",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Completed exit-interview record for a departing staff member.",
+        "Quarterly trend report compiled from exit interviews.",
+        "HR-improvement action record from exit-interview findings."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO HRM.1 v2 (2026-08-21). Official Standards PDF OE count 7; levels and asterisks from portal body text (Guidebook's own copy of the OE matrix agrees on every letter). Asterisked: bf. CORE: b. Achievement: cg. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/HRM/POL/01.\nOfficial chapter is 13 standards / 76 OEs (confirmed against portal summary and against the Guidebook's own copy of the same matrix). Guidebook interpretations transcribed from a scanned PDF with no text layer — verified against rendered page images (no tesseract/pdftoppm available on this machine), not run through a mechanical OCR pass; see policies/source/hco6_hrm_chapter_notes.md. Statute P2 proposed on HRM.12 only (Indian Nursing Council Act, 1947).\nNot the same as the already-deployed SHCO 3rd Edition HRM chapter (build_hrm1_v2.py..build_hrm9_v2.py, policies/drafts/hrm*_v2_draft.json) — separate programme and edition, not touched. Do not touch AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition HRM.1 v2 draft: portal PDF OE data + Guidebook interpretations (verified visual transcription, no text layer in source PDF)."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation has a documented system of human resource planning.",
+  "exceptions": "1. Do not skip: Human resource planning supports the organisation’s current and future ability to meet the care, treatment...\n2. Do not skip: The organisation maintains an adequate number and mix of staff to meet the care, treatment and service needs...\n3. Do not skip: The organisation has contingency plans to manage long and short-term workforce shortages, including unplanned...\n4. Do not skip: The job specification and job description are defined for each category of staff.\n5. Do not skip: The organisation performs a background check of new staff.\n6. Do not skip: Reporting relationships are defined for each category of staff.\n7. Do not skip: Exit interviews are conducted and used as a tool to improve human resource practices.\n8. Staff who see a HRM.1 rule broken report it the same shift to the «HR In-Charge / Personnel Officer» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Human Resource Planning and Governance policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/HRM/POL/01»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «HR In-Charge / Personnel Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«HR In-Charge / Personnel Officer»",
+  "template_test": "hco_hrm_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — HRM.1.",
+  "doc_no": "«HCO/HRM/POL/01»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.HRM.1",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

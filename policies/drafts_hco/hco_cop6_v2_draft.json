@@ -1,0 +1,121 @@
+{
+  "standard_code": "COP.6",
+  "chapter": "HCO",
+  "oe_codes": [
+    "COP.6.a",
+    "COP.6.b",
+    "COP.6.c",
+    "COP.6.d",
+    "COP.6.e",
+    "COP.6.f"
+  ],
+  "policy_title": "Nursing Care in Consonance with Clinical Protocols",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard COP.6: Nursing care is provided to patients in the organisation in consonance with clinical protocols.\n\nThis policy covers all 6 requirements under this standard, listed in detail below.\n\nThis policy covers nursing care in consonance with clinical protocols specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who deliver or oversee the care described in COP.6 at {{HOSPITAL_NAME}}, including the «Nursing Superintendent», treating doctors, nurses and the Quality Coordinator.\n\nThis policy covers all 6 requirements under this standard, listed in detail below.\n\nThis policy covers nursing care in consonance with clinical protocols specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.",
+  "policy_statement": "{{HOSPITAL_NAME}} implements COP.6 so that nursing care is provided to patients in the organisation in consonance with clinical protocols..\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Nursing care is provided to patients in accordance with written guidance\n\nNursing care is provided to patients in accordance with written guidance.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.",
+    "5.2 Assignment of patient care is done as per good clinical / nursing..\n\nAssignment of patient care is done as per good clinical / nursing practice.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.3 The organisation implements acuity-based staffing to improve patient..\n\nThe organisation implements acuity-based staffing to improve patient outcomes.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.4 Nursing care is aligned and integrated with overall patient care which..\n\nNursing care is aligned and integrated with overall patient care which is documented.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.",
+    "5.5 Nurses are provided with the appropriate and adequate equipment for..\n\nNurses are provided with the appropriate and adequate equipment for providing safe and efficient nursing care.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.6 Nurses are empowered to make patient care decisions within their scope..\n\nNurses are empowered to make patient care decisions within their scope of practice.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that COP.6 is resourced and followed.\n\nNursing Superintendent\n- Owns day-to-day implementation and records for this standard.\n\nTreating doctors / nurses / technicians (as applicable)\n- Deliver care as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Care of Patients, standard COP.6.\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — COP.6 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).\n- Internal documents of {{HOSPITAL_NAME}}: written guidance and registers named for COP.6.",
+  "distribution": "Medical Superintendent; Nursing Superintendent; Quality Coordinator; department clinical staff covered by COP.6",
+  "abbreviations": "COP — Care of Patients (NABH Hospitals chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element\nCORE — Core objective element (NABH)\nRCA — Root Cause Analysis\nCAPA — Corrective and Preventive Action",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "COP.6.a",
+      "requirement": "Nursing care is provided to patients in accordance with written guidance.",
+      "steps": "Section 3; 5.1",
+      "responsible": "Nursing Superintendent",
+      "records": [
+        "Written nursing-care guidance or protocol.",
+        "Nursing documentation record confirming the guidance was followed.",
+        "Staff training record on the guidance."
+      ]
+    },
+    {
+      "oe_code": "COP.6.b",
+      "requirement": "Assignment of patient care is done as per good clinical / nursing practice.",
+      "steps": "Section 3; 5.2",
+      "responsible": "Nursing Superintendent",
+      "records": [
+        "Patient-care assignment record — nurse-to-patient ratio, competency match.",
+        "Assignment-policy document.",
+        "Shift-roster record."
+      ]
+    },
+    {
+      "oe_code": "COP.6.c",
+      "requirement": "The organisation implements acuity-based staffing to improve patient outcomes.",
+      "steps": "Section 3; 5.3",
+      "responsible": "Nursing Superintendent",
+      "records": [
+        "Acuity-scoring tool and record.",
+        "Staffing-adjustment record based on acuity.",
+        "Outcome-tracking record linked to acuity-based staffing."
+      ]
+    },
+    {
+      "oe_code": "COP.6.d",
+      "requirement": "Nursing care is aligned and integrated with overall patient care which is documented.",
+      "steps": "Section 3; 5.4",
+      "responsible": "Nursing Superintendent",
+      "records": [
+        "Nursing-care-plan documentation integrated with the overall patient-care plan.",
+        "Multidisciplinary care-record cross-reference.",
+        "Documentation-completeness check."
+      ]
+    },
+    {
+      "oe_code": "COP.6.e",
+      "requirement": "Nurses are provided with the appropriate and adequate equipment for providing safe and efficient nursing care.",
+      "steps": "Section 3; 5.5",
+      "responsible": "Nursing Superintendent",
+      "records": [
+        "Nursing-equipment inventory and adequacy record.",
+        "Equipment-maintenance record.",
+        "Equipment-availability check by unit."
+      ]
+    },
+    {
+      "oe_code": "COP.6.f",
+      "requirement": "Nurses are empowered to make patient care decisions within their scope of practice.",
+      "steps": "Section 3; 5.6",
+      "responsible": "Nursing Superintendent",
+      "records": [
+        "Written scope-of-practice document for nursing decision-making.",
+        "Example decision record within that scope.",
+        "Nurse-empowerment policy reference."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO COP.6 v2 (2026-08-20). Official Standards PDF OE count 6; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: ad. CORE: none. Achievement: c. Excellence: none.\nStop-work: omitted.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/06.\nDo not touch AAC.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "HCO Full 6th Edition COP.6 v2 draft from official Standards PDF + guidebook OCR; draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Nursing care is provided to patients in the organisation in consonance with clinical protocols.",
+  "exceptions": "1. Do not skip: Nursing care is provided to patients in accordance with written guidance.\n2. Do not skip: Assignment of patient care is done as per good clinical / nursing practice.\n3. Do not skip: The organisation implements acuity-based staffing to improve patient outcomes.\n4. Do not skip: Nursing care is aligned and integrated with overall patient care which is documented.\n5. Do not skip: Nurses are provided with the appropriate and adequate equipment for providing safe and efficient nursing care.\n6. Do not skip: Nurses are empowered to make patient care decisions within their scope of practice.\n7. Staff who see a COP.6 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Nursing Care in Consonance with Clinical Protocols policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/COP/POL/06»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Nursing Superintendent»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Nursing Superintendent»",
+  "template_test": "hco_cop_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — COP.6.",
+  "doc_no": "«HCO/COP/POL/06»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.COP.6",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

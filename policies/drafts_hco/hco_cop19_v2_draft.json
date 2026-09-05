@@ -1,0 +1,108 @@
+{
+  "standard_code": "COP.19",
+  "chapter": "HCO",
+  "oe_codes": [
+    "COP.19.a",
+    "COP.19.b",
+    "COP.19.c",
+    "COP.19.d",
+    "COP.19.e"
+  ],
+  "policy_title": "Nutritional Therapy",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard COP.19: Nutritional therapy is provided to patients consistently and collaboratively.\n\nThis policy covers all 5 requirements under this standard, listed in detail below.\n\nThis policy covers nutritional therapy specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who deliver or oversee the care described in COP.19 at {{HOSPITAL_NAME}}, including the «Dietetics In-Charge», treating doctors, nurses and the Quality Coordinator.\n\nThis policy covers all 5 requirements under this standard, listed in detail below.\n\nThis policy covers nutritional therapy specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.",
+  "policy_statement": "{{HOSPITAL_NAME}} implements COP.19 so that nutritional therapy is provided to patients consistently and collaboratively..\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Patients admitted to the organisation are screened for nutritional risk\n\nPatients admitted to the organisation are screened for nutritional risk.\n\nMethod note (from guidebook interpretation): Nutritional screening is done by the caregiver (doctor or nurse).",
+    "5.2 Nutritional assessment is done for patients found at risk during..\n\nNutritional assessment is done for patients found at risk during nutritional screening.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.3 The therapeutic diet is planned and provided collaboratively\n\nThe therapeutic diet is planned and provided collaboratively.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.4 Patients receive food according to the written order for the diet\n\nPatients receive food according to the written order for the diet.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.5 When families provide food, they are educated about the patient’s diet..\n\nWhen families provide food, they are educated about the patient’s diet limitations.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that COP.19 is resourced and followed.\n\nDietetics In-Charge\n- Owns day-to-day implementation and records for this standard.\n\nTreating doctors / nurses / technicians (as applicable)\n- Deliver care as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Care of Patients, standard COP.19.\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — COP.19 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).\n- Internal documents of {{HOSPITAL_NAME}}: written guidance and registers named for COP.19.",
+  "distribution": "Medical Superintendent; Dietetics In-Charge; Quality Coordinator; department clinical staff covered by COP.19",
+  "abbreviations": "COP — Care of Patients (NABH Hospitals chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element\nCORE — Core objective element (NABH)\nRCA — Root Cause Analysis\nCAPA — Corrective and Preventive Action",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "COP.19.a",
+      "requirement": "Patients admitted to the organisation are screened for nutritional risk.",
+      "steps": "Section 3; 5.1",
+      "responsible": "Dietetics In-Charge",
+      "records": [
+        "Nutritional-screening record at admission.",
+        "Screening-tool documentation.",
+        "Screening-completion-rate record."
+      ]
+    },
+    {
+      "oe_code": "COP.19.b",
+      "requirement": "Nutritional assessment is done for patients found at risk during nutritional screening.",
+      "steps": "Section 3; 5.2",
+      "responsible": "Dietetics In-Charge",
+      "records": [
+        "Nutritional-assessment record for screened-positive patients.",
+        "Assessment-tool documentation.",
+        "Dietitian-involvement record."
+      ]
+    },
+    {
+      "oe_code": "COP.19.c",
+      "requirement": "The therapeutic diet is planned and provided collaboratively.",
+      "steps": "Section 3; 5.3",
+      "responsible": "Dietetics In-Charge",
+      "records": [
+        "Multi-disciplinary therapeutic-diet plan record.",
+        "Diet-plan documentation.",
+        "Care-provider-involvement record."
+      ]
+    },
+    {
+      "oe_code": "COP.19.d",
+      "requirement": "Patients receive food according to the written order for the diet.",
+      "steps": "Section 3; 5.4",
+      "responsible": "Dietetics In-Charge",
+      "records": [
+        "Written diet-order record.",
+        "Food-service-versus-order matching record.",
+        "Order-change tracking record."
+      ]
+    },
+    {
+      "oe_code": "COP.19.e",
+      "requirement": "When families provide food, they are educated about the patient’s diet limitations.",
+      "steps": "Section 3; 5.5",
+      "responsible": "Dietetics In-Charge",
+      "records": [
+        "Family-education record on diet limitations when families provide food.",
+        "Education-material record.",
+        "Documentation of education delivered."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO COP.19 v2 (2026-08-20). Official Standards PDF OE count 5; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: a. CORE: none. Achievement: none. Excellence: none.\nStop-work: omitted.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/19.\nDo not touch AAC.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "HCO Full 6th Edition COP.19 v2 draft from official Standards PDF + guidebook OCR; draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Nutritional therapy is provided to patients consistently and collaboratively.",
+  "exceptions": "1. Do not skip: Patients admitted to the organisation are screened for nutritional risk.\n2. Do not skip: Nutritional assessment is done for patients found at risk during nutritional screening.\n3. Do not skip: The therapeutic diet is planned and provided collaboratively.\n4. Do not skip: Patients receive food according to the written order for the diet.\n5. Do not skip: When families provide food, they are educated about the patient’s diet limitations.\n6. Staff who see a COP.19 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Nutritional Therapy policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/COP/POL/19»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Dietetics In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Dietetics In-Charge»",
+  "template_test": "hco_cop_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — COP.19.",
+  "doc_no": "«HCO/COP/POL/19»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.COP.19",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

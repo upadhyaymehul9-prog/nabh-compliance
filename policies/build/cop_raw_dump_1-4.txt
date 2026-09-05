@@ -1,0 +1,1258 @@
+COP.1–COP.4 — Batched Raw Source Dump
+======================================
+Purpose: ChatGPT draft input for four standards in one pull.
+Each standard drafted and verified individually — same process as all prior chapters.
+
+CROSS-REFERENCE NOTE (applies throughout this file):
+The Guidebook cites specific NABH OE codes in several places (e.g., "Refer to AAC.4,
+AAC.5 and PRE.4"). In policy drafts, these must NOT be reproduced as code citations.
+Use generic phrasing: "Those requirements are covered in the hospital's other policies."
+The specific codes are preserved here for source accuracy only.
+
+STOP-WORK STATUS BY STANDARD:
+  COP.1 — NO stop-work authority
+  COP.2 — YES (STOP_WORK_PROPOSALS: emergency intake triggers)
+  COP.3 — YES (STOP_WORK_PROPOSALS: ambulance dispatch triggers)
+  COP.4 — NO stop-work authority
+
+STATUTE DISCLAIMER STATUS:
+  COP.2 — YES (applicable laws and regulations governing emergency services)
+  COP.3 — YES (statutory requirements for ambulance vehicles and drivers)
+  COP.1 / COP.4 — No specific statute P2 designation
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.1 — Uniform Care Guided by Written Guidance
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Uniform care to patients is provided in all settings of the organisation and is guided
+by written guidance.
+
+Standard is starred (★).
+
+OE count: 6 | COREs: b | Stars: a★, f★
+Excellence level: d, e | No stop-work authority
+
+Prepared by: Quality Coordinator | Doc no: HCO/COP/POL/01
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.1.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Uniform care is provided to patients following written guidance.*
+
+Guidebook interpretation (PDF p. 100):
+The organisation needs to implement mechanisms to ensure that the care, the patient
+receives in out-patient/day care/in-patient/emergency is uniform. Uniform patient care
+is linked to access, appropriateness of care and treatment. It does not depend on the
+patient's ability to pay or the source of payment. The level of care provided to patients
+shall be the same throughout the organisation.
+
+Care delivery is uniform for a given clinical condition when similar care is provided in
+more than one setting. When similar treatment/care is provided in various settings such
+as out-patients, day care, in-patients, and different categories of wards, the
+organisation shall ensure that patients with the same clinical condition and care needs
+receive the same quality of health care throughout the organisation. Care delivery shall
+be applicable irrespective of the setting and category of the ward, and whether the
+patient is paying or non-paying, and/or is supported from a governmental/private
+insurance scheme or not. For example, the decision to offer any form of intervention or
+medication, frequency of consultant visit, nature of support care, decision to discharge
+is not influenced by the class or category of the patient but is decided by the clinical
+needs of the patient. Further, in case the organisation has separate OPDs for different
+category of patients, the methodology for care delivery shall be uniform in all OPDs.
+
+[Guidebook cross-ref: AAC.4, AAC.5, PRE.4 — in policy draft: "those requirements are
+covered in the hospital's other policies."]
+
+Stop-work check: Commitment — no stop-work trigger. COP.1 not in STOP_WORK_PROPOSALS.
+
+Mandatory (shall):
+  — The level of care shall be the same throughout the organisation.
+  — Care delivery shall apply irrespective of setting, ward category, and payment status.
+  — Where the same clinical condition is treated in multiple settings, uniformity across
+    those settings is required.
+
+Illustrative only (not a mandatory checklist):
+  — Specific examples (OPD categories, consultant visit frequency, discharge decision,
+    intervention/medication offers) illustrate uniformity — they are "for example" items.
+  — The mechanism for ensuring uniformity is for the organisation to determine.
+
+Documentation: OE is starred — the written guidance operationalising uniform care must
+be documented.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.1.b
+Level: CORE | No star
+
+Verbatim OE text:
+The organisation has a uniform process for identification of patients and uses at least
+two identifiers.
+
+Guidebook interpretation (PDF p. 100):
+The mechanism for identification of patients shall be uniform across the organisation.
+For example, the use of ID bands with the patient's name and unique identification
+number. The same shall be used in imaging, diagnostic and therapeutic procedures,
+blood transfusion, day care and nutrition/diet. For any care related aspect, at a
+minimum, two identifiers shall be used. One of the identifiers shall be the unique
+identification number generated at the time of registration.
+
+[Guidebook cross-ref: AAC.2.b — in policy draft: "those requirements are covered in
+the hospital's other policies."]
+
+Stop-work check: CORE — non-compliance is accreditation-blocking. COP.1 has no
+designated stop-work authority section. CORE status means the process must be present
+and functional; it does not create a stop-work trigger clause in this policy.
+
+Mandatory (shall):
+  1. Identification mechanism shall be uniform across the organisation.
+  2. At a minimum, two identifiers shall be used for any care-related aspect —
+     exact minimum: two. Preserve verbatim; do not soften.
+  3. One identifier shall be the unique identification number generated at registration —
+     mandatory (shall); registration-number is specified as a required identifier.
+  4. The same process shall apply in imaging, diagnostic and therapeutic procedures,
+     blood transfusion, day care, and nutrition/diet — mandatory scope breadth.
+
+Illustrative only:
+  — ID bands with name and unique ID number are one example of a mechanism —
+    the specific mechanism (wristband, card, etc.) is the organisation's choice.
+  — The second identifier (beyond registration number) is the organisation's to select.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.1.c
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation implements evidence-based clinical practice guidelines and/or clinical
+protocols to guide uniform patient care.
+
+Guidebook interpretation (PDF p. 101):
+Clinical practice guidelines brought out by National and International professional
+organisations may be used. Standard treatment guidelines (STGs) brought out by the
+Government of India are a good starting point. In the absence of evidence-based
+clinical practice guidelines or where adapting the clinical practice guidelines are not
+feasible, sound clinical practices shall guide the delivery of care.
+
+For definitions of "evidence-based medicine" and "clinical practice guidelines", refer
+to the glossary.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  — Where evidence-based CPGs are unavailable or adaptation is not feasible, sound
+    clinical practices shall guide care — mandatory fallback (shall).
+  — "Implements" in the OE text means adoption and active use of CPGs and/or protocols
+    is required, not merely aspired to.
+
+Illustrative / non-mandatory:
+  — National/International professional organisation CPGs "may" be used — permissible,
+    not the exclusive source.
+  — Government of India STGs are "a good starting point" — recommended, not prescribed.
+  — No specific CPG titles or clinical topics are mandated; the organisation selects
+    per its scope.
+
+Definitions: "evidence-based medicine" and "clinical practice guidelines" are in the
+Glossary — do not paraphrase these in the policy body; reference the Glossary.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.1.d
+Level: Excellence | No star
+
+Verbatim OE text:
+Clinical care pathways are developed, consistently followed across all settings of care,
+and reviewed periodically.
+
+Guidebook interpretation (PDF p. 101):
+Clinical care pathways shall be multidisciplinary, and based on the evidence and/or
+best clinical practices which provides detailed guidance at various stages of care. At
+a minimum the organisation shall develop two clinical care pathways every year. The
+clinical care pathways shall be reviewed and updated annually.
+
+Stop-work check: Excellence — no stop-work trigger.
+
+Mandatory (shall) — EXACT QUANTITIES AND FREQUENCIES, PRESERVE VERBATIM:
+  1. Pathways shall be multidisciplinary.
+  2. Pathways shall be based on evidence and/or best clinical practices.
+  3. Minimum two clinical care pathways shall be developed every year — exact minimum
+     quantity: two per year. Do not soften.
+  4. Pathways shall be reviewed and updated annually — exact frequency.
+
+Illustrative:
+  — Specific clinical topics are for the organisation to select.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.1.e
+Level: Excellence | No star
+
+Verbatim OE text:
+Multi-disciplinary and multi-speciality care, where appropriate, is planned based on
+best clinical practices / clinical practice guidelines and delivered in a uniform manner
+across the organisation.
+
+Guidebook interpretation (PDF p. 101):
+Whenever the patient's clinical condition warrants care from multiple disciplines for
+example doctors, nurses, rehabilitation specialist, dietician, psychologist, etc and/or
+multiple specialties for example cardiology, endocrinology, surgery, internal medicine;
+multidisciplinary and multi-speciality care plan shall be charted out based on
+established best clinical practices/clinical practice guidelines for the specific
+clinical condition. An integrated care plan, including medical professional, nursing,
+nutritional, supportive care professionals, shall be developed and implemented
+appropriately by the representatives of various disciplines and specialities.
+
+Some examples of scenarios where multidisciplinary care plan is required are care of
+a cancer patient to be determined by a multi-disciplinary tumour board; care of
+transplant patients; diabetes patient to be cared for by multiple specialists to prevent
+and manage end-organ damage; palliative/end-of-life care to be provided to terminally
+ill patients; long-stay patients.
+
+[Guidebook cross-ref: PRE.3.e — in policy draft: "those requirements are covered in
+the hospital's other policies."]
+
+Stop-work check: Excellence — no stop-work trigger.
+
+Mandatory (shall) — clinically triggered:
+  — When clinical condition warrants multi-disciplinary/multi-speciality involvement,
+    the care plan shall be charted out based on established best clinical
+    practices/CPGs — mandatory (shall), but only when triggered by clinical need.
+  — An integrated care plan shall be developed and implemented by representatives of
+    the relevant disciplines and specialities.
+
+Trigger conditionality: "where appropriate" / "whenever the patient's clinical condition
+warrants" — the policy must reflect this; not all patients require multi-disciplinary
+plans regardless of clinical need.
+
+Illustrative:
+  — Lists of disciplines and specialties are examples, not a mandatory composition.
+  — Clinical scenarios (cancer, transplant, diabetes, palliative, long-stay) are
+    examples of triggers, not a closed list.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.1.f
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Telemedicine facility is provided safely and securely based on written guidance.*
+
+Guidebook interpretation (PDF p. 102):
+Whenever the telemedicine facility is provided, the organisation shall develop written
+guidance in consonance with prevailing laws and guidelines and implement the same. The
+written guidance shall include protection of the patient's identity and confidentiality.
+The limitations of information and communication technologies shall be explicitly
+addressed. The organisation shall have a mechanism for appropriate data storage and
+retrieval.
+
+The organisation shall have an MoU for its telemedicine services if outsourced.
+
+Reference: Telemedicine Practice ICMR Guidelines, 2020, MoHFW.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+CONDITIONAL OE — applies only where the organisation provides telemedicine services.
+The policy must include an applicability statement: "This section applies where the
+organisation provides telemedicine services." Do not write requirements as unconditional.
+
+Mandatory (shall) where telemedicine is provided:
+  1. Written guidance shall be developed in consonance with prevailing laws/guidelines
+     and implemented.
+  2. Written guidance shall include protection of patient identity and confidentiality.
+  3. ICT limitations shall be explicitly addressed in the written guidance — "explicitly"
+     is the source word; a general statement is not sufficient.
+  4. A mechanism for appropriate data storage and retrieval shall exist.
+  5. An MoU shall exist if telemedicine is outsourced.
+
+Illustrative:
+  — Telemedicine Practice ICMR Guidelines, 2020, are a reference source — do not
+    enumerate their specific clauses as mandatory NABH requirements.
+
+Documentation: OE is starred — the written guidance is the required documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.1 Summary Table
+
+OE   Level        Star   CORE   Key constraint
+a    Commitment   Yes★   No     Uniform care across all settings/categories (shall);
+                                not payment-dependent; written guidance required;
+                                examples illustrative, not mandatory checklist
+b    CORE         No     Yes    Uniform identification (shall); at least two
+                                identifiers — exact minimum (shall); registration-
+                                number as one identifier (shall); applies in imaging,
+                                diagnostics, therapeutic, transfusion, day care,
+                                nutrition; mechanism is organisation's choice
+c    Commitment   No     No     Implements CPGs and/or protocols; sound clinical
+                                practices as mandatory fallback (shall); no specific
+                                CPG titles mandated; glossary defines key terms
+d    Excellence   No     No     Multidisciplinary (shall); evidence-based (shall);
+                                min two per year — exact minimum (shall); reviewed
+                                and updated annually — exact frequency (shall)
+e    Excellence   No     No     Clinically triggered multi-disciplinary plan (shall
+                                where warranted); integrated plan (shall); examples
+                                of disciplines/scenarios are illustrative not
+                                exhaustive; conditionality "where appropriate" must
+                                appear in policy
+f    Commitment   Yes★   No     CONDITIONAL on telemedicine being provided;
+                                written guidance required (shall); patient identity/
+                                confidentiality and explicit ICT-limitation (shall);
+                                data storage/retrieval (shall); MoU if outsourced
+                                (shall where applicable); ICMR guidelines are
+                                reference source only
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.2 — Emergency Services
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Emergency services are provided in accordance with written guidance, applicable laws
+and regulations.
+
+OE count: 9 | COREs: c | Stars: c★, d★, h★, i★
+Stop-work: YES | Statute disclaimer: YES
+Prepared by: Emergency In-Charge | Doc no: HCO/COP/POL/02
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.2.a
+Level: Commitment | No star
+
+Verbatim OE text:
+There shall be an identified area in the organisation which is easily accessible to
+receive and manage emergency patients, with adequate and appropriate resources.
+
+Guidebook interpretation (PDF p. 102):
+The identified area to treat emergency patients shall be easily accessible for the
+initiation of care. There shall be signage and directions in an understandable manner
+leading to the emergency area of the organisation. Emergency services preferably have
+designated triage, resuscitation treatment and patient holding areas identified. The
+organisation shall also specify the minimum number of beds based on its scope of
+services. At a minimum, adequate and appropriate human resource, basic resuscitation
+equipment, equipment for monitoring vital parameters, appropriate consumables and
+life-saving and emergency care drugs shall be available.
+
+The personnel operating the emergency area shall be privileged to work in this area
+and have access to ongoing training programme.
+
+[Guidebook cross-refs: other facility, HR and staffing policies — in policy draft:
+"those requirements are covered in the hospital's other policies."]
+
+Stop-work check: Commitment — but feeds the COP.2 stop-work trigger (see Section 6
+of policy). The OE itself is Commitment level; the stop-work authority draws on the
+combined failure of identified area + triage competence + basic equipment.
+
+Mandatory (shall):
+  — There shall be an identified area easily accessible — mandatory existence (shall).
+  — Signage and directions in understandable manner shall be present (shall).
+  — The organisation shall specify the minimum number of beds per scope (shall).
+  — At a minimum: adequate human resource, basic resuscitation equipment, vital-
+    parameter monitoring equipment, consumables, and life-saving/emergency drugs
+    shall be available (shall) — this minimum resource list is mandatory.
+  — Personnel shall be privileged to work in the area and have access to ongoing
+    training (shall).
+
+Illustrative:
+  — Designated separate triage, resuscitation, and holding areas are "preferably"
+    identified — preferred, not mandatory.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.2.b
+Level: Achievement | No star
+
+Verbatim OE text:
+Prevention of patient over-crowding is planned and crowd management measures are
+implemented.
+
+Guidebook interpretation (PDF p. 103):
+Prevention of patient overcrowding in the emergency department includes monitoring
+the footfall trends, developing a strategy to manage overcrowding and violence. It is
+expected that high footfall times will be anticipated, and adequate human resources
+assigned and strategies to manage overcrowding are put in place.
+
+Crowd management shall include having an appropriate policy for patient
+relatives/attendants/visitors.
+
+Stop-work check: Achievement — but the COP.2 stop-work text includes: "Do not leave
+overcrowding unmanaged when it blocks triage, resuscitation or safe holding." The
+stop-work trigger is at the point of blocking clinical safety, not overcrowding per se.
+
+Mandatory (shall):
+  — Crowd management shall include an appropriate policy for patient
+    relatives/attendants/visitors — mandatory component (shall).
+
+Illustrative / expected but not prescriptive:
+  — Footfall trend monitoring, violence management strategy, anticipation of high
+    footfall times, and resource assignment are described as expected good practice
+    but the specific mechanisms are for the organisation to determine.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.2.c
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+Emergency care is provided in consonance with statutory requirements including
+medico-legal cases and as per written guidance.*
+
+Guidebook interpretation (PDF pp. 103–104):
+Written guidance shall include guidelines/SOPs/protocols to provide general emergency
+care as well as management of specific conditions, for example poisoning, road traffic
+accidents, patients with acute stroke and coronary disease, etc. It shall address both
+adult and paediatric patients. The procedure shall incorporate at a minimum
+identification, assessment and provision of care. In case, emergency services are out
+of the scope of the organisation, or the organisation does not have facilities for
+appropriate emergency care of a given clinical condition, at a minimum, such patients
+shall be provided with first aid before transferring them to another organisation.
+
+Processes shall be in place to ensure patient safety.
+
+The organisation shall also define as to what constitutes a medico-legal case (MLC).
+The care provided, especially the documentation and intimation to appropriate
+authorities, shall be in accordance with statutory requirements. The organisation shall
+have policy on management of suspected sexual assault and guidance on storage of
+samples of MLC patients.
+
+[Guidebook cross-ref: COP.1.a–e — in policy draft: "those requirements are covered
+in the hospital's other policies."]
+
+Stop-work check: CORE — non-compliance is accreditation-blocking. COP.2 has a
+stop-work authority section. The CORE trigger is absent or non-functional written
+guidance and statutory compliance, not an individual case event.
+
+Mandatory (shall):
+  1. Written guidance shall include protocols for general emergency care and specific
+     conditions (examples: poisoning, RTA, acute stroke, coronary disease — these are
+     examples, not a closed mandatory list) — shall cover adult and paediatric.
+  2. The procedure shall incorporate at a minimum: identification, assessment, and
+     provision of care — this three-element minimum is mandatory.
+  3. Where emergency services are out of scope or facilities are inadequate for a given
+     condition, first aid before transfer shall be provided — mandatory fallback (shall).
+  4. The organisation shall define what constitutes an MLC — mandatory (shall).
+  5. Documentation and intimation to appropriate authorities shall be per statutory
+     requirements — mandatory (shall).
+  6. Policy on management of suspected sexual assault shall exist (shall).
+  7. Guidance on storage of MLC patient samples shall exist (shall).
+
+Illustrative:
+  — Specific conditions named (poisoning, RTA, stroke, coronary disease) are "for
+    example" — the organisation's written guidance covers its actual scope of emergency
+    presentations; no specific conditions are individually mandated.
+
+Documentation: CORE and starred — the written guidance is required documentation.
+Statutory disclaimer applies: applicable laws and regulations governing emergency
+services govern MLC handling and statutory notification.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.2.d
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Initiation of appropriate care is guided by a system of triage.*
+
+Guidebook interpretation (PDF p. 103):
+Triage shall be done only by qualified/trained personnel. Written guidance based on
+evidence/sound clinical practices shall guide these activities. The triage shall be part
+of the routine day-to-day functioning of the emergency department and not from the
+perspective of managing a large number of patients during a disaster. The criteria
+could be separate for trauma and non-trauma patients and adults and children, for
+example, paediatric assessment triangle (PAT) / paediatric observation priority score
+(POPS). If several clients are waiting to be triaged, a visual triage assessment may
+be conducted.
+
+For "triage" refer to the glossary.
+
+Stop-work check: Commitment — feeds into the COP.2 stop-work trigger (absence of
+triage-competent personnel is a stop-work condition per STOP_WORK_PROPOSALS).
+
+Mandatory (shall):
+  1. Triage shall be done only by qualified/trained personnel — "only" makes this
+     absolute (shall).
+  2. Written guidance based on evidence/sound clinical practices shall guide triage
+     activities (shall).
+  3. Triage shall be part of routine day-to-day functioning, not only for disaster
+     management (shall).
+
+Illustrative:
+  — Separate criteria for trauma/non-trauma and adult/children are described as a
+    possibility (could) — the organisation decides.
+  — PAT/POPS are examples of paediatric triage tools — not mandated.
+  — Visual triage assessment for simultaneous waiting patients "may" be used —
+    optional.
+
+Definition: "triage" is defined in the Glossary — reference it; do not paraphrase.
+Documentation: OE is starred — the triage written guidance is required documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.2.e
+Level: Commitment | No star
+
+Verbatim OE text:
+Patients waiting in the emergency are re-assessed as appropriate for the change in
+status.
+
+Guidebook interpretation (PDF p. 104):
+A patient's condition may worsen or improve, and so a reassessment is needed for
+early identification of deterioration or improvement, and modification of care
+accordingly. The findings of reassessment shall be documented in the patients'
+medical record.
+
+Stop-work check: Commitment — no stop-work trigger from this OE alone.
+
+Mandatory (shall):
+  — Findings of reassessment shall be documented in the medical record (shall).
+  — Reassessment shall occur as appropriate for change in status — "as appropriate"
+    means the frequency is clinically determined, not prescribed.
+
+No specific reassessment interval is stated in the source — do not invent one.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.2.f
+Level: Commitment | No star
+
+Verbatim OE text:
+Admission, discharge to home or transfer to another organisation is documented.
+
+Guidebook interpretation (PDF p. 104):
+The organisation shall maintain documentation to indicate if a patient who came to
+the emergency was sent home after providing initial care / was admitted for further
+care in the organisation / admitted in an emergency for a short stay and then
+discharged / transferred to another organisation. The staff shall have a clear
+understanding of the scope of the activities of the organisation and the procedure of
+referral and transfer to an appropriate another centre, of patients who cannot be cared
+for in-house, after administering the due first-aid/emergency care.
+
+[Guidebook cross-ref: AAC.3.b — in policy draft: "those requirements are covered in
+the hospital's other policies."]
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  — Documentation shall be maintained for each disposition: home after initial care,
+    admission, short-stay then discharge, or transfer — mandatory documentation scope
+    (shall).
+  — Staff shall have a clear understanding of the scope and referral/transfer procedure
+    (shall).
+
+No specific form or template is mandated — the method of documentation is the
+organisation's to determine.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.2.g
+Level: Commitment | No star
+
+Verbatim OE text:
+In case of discharge to home or transfer to another organisation, a discharge/transfer
+note shall be given to the patient.
+
+Guidebook interpretation (PDF p. 104):
+The discharge/transfer note shall contain salient clinical findings, investigations
+done, treatment given and condition at discharge/transfer. The reasons for discharge
+or transfer shall be documented.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  — A discharge/transfer note shall be given to the patient — mandatory issuance
+    (shall).
+  — The note shall contain: salient clinical findings, investigations done, treatment
+    given, and condition at discharge/transfer — these four elements are the mandatory
+    minimum content (shall).
+  — Reasons for discharge or transfer shall be documented (shall).
+
+No specific format is mandated — content elements are prescribed, not template.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.2.h
+Level: Achievement | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation shall implement a quality assurance programme.*
+
+Guidebook interpretation (PDF p. 104):
+The written guidance for quality assurance shall be developed individually, or it could
+be a part of the organisation's overall quality-improvement programme. The quality
+assurance programme shall involve all aspects of the functioning in the Emergency
+department. The Emergency department shall collect data on key performance indicators,
+including care outcomes, as part of its quality improvement programme. An example of
+a care outcome measure is return to the emergency department for the same complaint.
+The collected data shall be collated, analysed and used for further improvements. The
+improvements shall be monitored for sustenance.
+
+Stop-work check: Achievement — no stop-work trigger.
+
+Mandatory (shall):
+  1. A written QA guidance shall be developed — either standalone or as part of the
+     overall QI programme (both are permissible, neither mandated over the other).
+  2. The programme shall involve all aspects of ED functioning (shall).
+  3. KPI data including care outcomes shall be collected (shall).
+  4. Collected data shall be collated, analysed and used for improvements (shall).
+  5. Improvements shall be monitored for sustenance (shall).
+
+Illustrative:
+  — Return to ED for the same complaint is "an example" of a care outcome measure —
+    not a mandatory KPI. The organisation selects its own KPIs.
+
+Documentation: OE is starred — the written QA guidance is required documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.2.i
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation has systems in place for the management of patients found dead on
+arrival and patients who die within a few minutes of arrival.*
+
+Guidebook interpretation (PDF p. 105):
+There is written guidance for managing situations where a patient is either found dead
+on arrival or dies within a few minutes of arrival (after a failed attempt at
+resuscitation). The written guidance shall conform to the relevant local laws.
+
+The written guidance in case of a patient found dead on arrival (brought in dead) shall
+address:
+  * Maintaining a logbook of patients found dead on arrival.
+  * The decision on whether to perform a post-mortem.
+  * The decision regarding the issue of medical certificate of cause of death.
+  * The temporary storage of the body in appropriate conditions.
+  * What to do in case of unclaimed/unaccompanied bodies.
+
+In case of death of a patient within a few minutes after arrival (after a failed attempt
+at resuscitation), the written guidance shall address:
+  * Process of registration of such patients and recording the entire resuscitation
+    events.
+  * The decision on whether to perform a post-mortem.
+  * The temporary storage of the body in appropriate conditions.
+  * Issue of medical certificate of cause of death and handing over of the body.
+
+Stop-work check: Commitment — no stop-work trigger from this OE alone.
+
+Mandatory (shall):
+  1. Written guidance shall exist — covering BOTH categories (brought in dead AND
+     death within minutes after failed resuscitation) — two distinct scenarios, each
+     requiring its own written guidance content.
+  2. Written guidance shall conform to relevant local laws.
+  3. For brought-in-dead: the five bullet elements listed above are mandatory content
+     of the written guidance (shall address — each of the five).
+  4. For death after failed resuscitation: the four bullet elements listed above are
+     mandatory content (shall address — each of the four).
+
+DRAFTING NOTE: These bullet elements are verbatim Guidebook content — not invented.
+Preserve all nine elements (5+4) in the policy. Do not collapse or paraphrase them
+into a shorter list. The local-law conformance obligation is mandatory.
+
+Documentation: OE is starred — the written guidance is required documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.2 Stop-work Authority (from STOP_WORK_PROPOSALS / hco_cop_v2_common.py)
+
+Internal reason: "Emergency overcrowding / missing triage competence / dead-on-arrival
+pathway gaps"
+
+Hospital-facing text (verbatim from source):
+Do not receive and treat an emergency patient in an area that is not the identified
+emergency area, or when triage-competent personnel and basic resuscitation equipment
+are not available.
+
+Do not leave overcrowding unmanaged when it blocks triage, resuscitation or safe
+holding.
+
+Stop-work applies to unsafe emergency intake, not to immediate life-saving measures
+already under way — those continue while escalation happens.
+
+The person who stops tells the Emergency In-Charge and the Medical Superintendent
+the same shift. Refusing unsafe emergency intake is not a disciplinary matter.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.2 Summary Table
+
+OE   Level        Star   CORE   Key constraint
+a    Commitment   No     No     Identified accessible area (shall); signage (shall);
+                                minimum resources including HR, basic resus equipment,
+                                monitoring, consumables, emergency drugs (shall);
+                                personnel privileged and trained (shall); designated
+                                sub-areas preferred not mandatory
+b    Achievement  No     No     Policy for relatives/attendants/visitors (shall);
+                                overcrowding strategy expected; stop-work trigger
+                                when overcrowding blocks clinical safety
+c    CORE         Yes★   Yes    Written guidance for general + specific conditions
+                                (shall — specific conditions are examples only);
+                                adult and paediatric (shall); min: identification +
+                                assessment + provision of care (shall — exact three-
+                                element minimum); first aid before transfer if out of
+                                scope (shall); MLC defined (shall); statutory
+                                documentation and notification (shall); sexual assault
+                                policy (shall); MLC sample storage guidance (shall);
+                                statute disclaimer applies
+d    Commitment   Yes★   No     Triage by qualified/trained personnel only (shall —
+                                absolute); written guidance (shall); routine day-to-day
+                                not disaster-only (shall); separate criteria and
+                                specific tools are illustrative; glossary defines
+                                triage; stop-work feeds from this OE
+e    Commitment   No     No     Reassessment as clinically appropriate; findings
+                                documented in medical record (shall); no prescribed
+                                interval — do not invent one
+f    Commitment   No     No     Documentation of disposition for all emergency
+                                patient outcomes (shall); staff know scope and
+                                referral procedure (shall); no specific form mandated
+g    Commitment   No     No     Discharge/transfer note shall be given to patient
+                                (shall); mandatory content: salient findings +
+                                investigations + treatment + condition (shall —
+                                four elements); reasons documented (shall)
+h    Achievement  Yes★   No     QA programme (standalone or within overall QI —
+                                both permissible); all ED functions covered (shall);
+                                KPI data including outcomes collected (shall); data
+                                collated/analysed/used (shall); improvements
+                                monitored (shall); KPIs are organisation's choice
+i    Commitment   Yes★   No     Two-scenario written guidance (BID and death after
+                                failed resus — separate content for each); conform
+                                to local laws (shall); 5 elements for BID and 4 for
+                                death after failed resus are mandatory Guidebook
+                                content — preserve all nine, do not collapse
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.3 — Ambulance Services and Safe Transportation
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Ambulance services ensure safe patient transportation with appropriate care.
+
+OE count: 7 | COREs: none | Stars: f★
+Stop-work: YES | Statute disclaimer: YES
+Prepared by: Ambulance / Transport In-Charge | Doc no: HCO/COP/POL/03
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.3.a
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation has access to ambulance services commensurate with the scope of the
+services provided by it.
+
+Guidebook interpretation (PDF p. 105):
+Commensurate to its scope of services, the organisation may provide in-house or use
+outsourced ambulance service for safe patient transport with appropriate care.
+
+The organisation shall decide the appropriate level of an ambulance to be provided
+based on the National Ambulance Code AIS-125.
+
+Stop-work check: Commitment — no stop-work trigger from this OE alone. Feeds into
+the COP.3 stop-work trigger when readiness conditions are absent.
+
+Mandatory (shall):
+  — The organisation shall decide the appropriate ambulance level per National
+    Ambulance Code AIS-125 — mandatory (shall); AIS-125 is the reference standard.
+  — Access (in-house or outsourced) is required — the form of access is the
+    organisation's choice (may).
+
+External reference: National Ambulance Code AIS-125 — reference only; do not
+enumerate AIS-125 clauses as NABH requirements.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.3.b
+Level: Commitment | No star
+
+Verbatim OE text:
+There are adequate access and space for the ambulance(s).
+
+Guidebook interpretation (PDF pp. 105–106):
+The organisation shall demarcate a proper space for the ambulance(s). The demarcation
+shall be done keeping in mind easy accessibility for receiving patients and enabling
+the ambulance(s) to exit quickly. Adequate and prominent signage shall exist to guide
+the ambulance drivers to the ambulance entry and route to the emergency department.
+It is preferable that the organisation has an ambulance parking bay.
+
+Stop-work check: Commitment — no stop-work trigger from this OE alone.
+
+Mandatory (shall):
+  1. A proper space shall be demarcated (shall).
+  2. Demarcation shall enable easy accessibility for receiving patients and quick exit
+     (shall).
+  3. Adequate and prominent signage shall exist guiding drivers to ambulance entry
+     and emergency route (shall).
+
+Illustrative:
+  — Ambulance parking bay is "preferable" — preferred, not mandatory.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.3.c
+Level: Commitment | No star
+
+Verbatim OE text:
+The ambulance(s) is fit for purpose and is appropriately equipped.
+
+Guidebook interpretation (PDF p. 106):
+The vehicle used as an ambulance shall adhere to statutory requirements for example
+registration as an ambulance under the Motor Vehicle Act, valid fitness certificate,
+pollution control certificate, and insurance of the vehicle.
+
+An ambulance shall have at least basic life support equipment, for both adult and
+paediatric patients. Based on the organisation's scope, additional equipment, for
+example monitoring and resuscitative equipment, shall be available in the ambulance.
+
+Reference: National Ambulance Code AIS-125.
+
+Stop-work check: Commitment — feeds into the COP.3 stop-work trigger (non-functional
+equipment is a stop-work condition).
+
+Mandatory (shall):
+  1. The vehicle shall adhere to statutory requirements — mandatory, governed by law.
+     The listed examples (Motor Vehicle Act registration, fitness certificate, pollution
+     control, insurance) are examples of statutory requirements — not an exhaustive
+     list substituting for the applicable law.
+  2. At least basic life support equipment for adult and paediatric patients shall be
+     available — exact minimum (shall).
+  3. Additional equipment based on scope shall be available (shall — scope-dependent).
+
+Statutory disclaimer: Vehicle compliance is governed by applicable laws (Motor Vehicle
+Act and related regulations) — these are statutory requirements, not NABH-prescribed
+checklists.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.3.d
+Level: Commitment | No star
+
+Verbatim OE text:
+The ambulance(s) is operated by trained personnel.
+
+Guidebook interpretation (PDF p. 106):
+The ambulance shall be operated by a driver with a valid driving licence. Additionally,
+technician/nurse and/or doctor may be there depending on the situation and scope of
+the ambulance. Personnel in the ambulance shall have training in basic life support and
+be trained in basic cardiopulmonary resuscitation.
+
+Stop-work check: Commitment — feeds into the COP.3 stop-work trigger (driver not
+licensed for vehicle class is a stop-work condition).
+
+Mandatory (shall):
+  1. Driver shall have a valid driving licence — mandatory (shall).
+  2. All ambulance personnel shall have training in basic life support and basic CPR —
+     mandatory (shall); applies to whoever is in the ambulance.
+
+Illustrative:
+  — Technician, nurse, and/or doctor presence "may" depend on situation and scope —
+    optional additional crew beyond the driver; the organisation determines based on
+    scope.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.3.e
+Level: Commitment | No star
+
+Verbatim OE text:
+The ambulance(s) is checked daily for functioning status, medical equipment, emergency
+medications and consumables.
+
+Guidebook interpretation (PDF p. 106):
+The check shall indicate the functioning status of the ambulance like lights, siren,
+beacon lights, fuel, tyres etc. The checks shall indicate the functioning status of the
+medical equipment based on a documented checklist. Emergency medications are available
+in the ambulance during patient transport. Based on a checklist, a daily check is done
+to ensure availability and expiry dates of emergency medications and documented. After
+the return from every trip, medications used shall be topped up if used and the same
+verified and documented. The medications shall be stored in a safe environment as per
+policy of the organisation. In case the organisation follows a system of sealing the
+emergency medication kit, then the check shall be carried out after each use of the kit.
+
+Stop-work check: Commitment — feeds into the COP.3 stop-work trigger (non-functional
+equipment is a stop-work condition; the daily check is the mechanism for verifying
+readiness before dispatch).
+
+Mandatory (shall):
+  1. Daily check shall be done and documented — mandatory frequency and documentation.
+  2. Check shall cover functioning status of the vehicle (lights, siren, beacon,
+     fuel, tyres — these are examples of vehicle systems, not an exclusive list).
+  3. Medical equipment functioning status shall be checked per a documented checklist.
+  4. Emergency medication availability and expiry dates shall be checked daily and
+     documented.
+  5. After each trip, medications used shall be topped up, verified, and documented
+     (shall — post-trip obligation, not just daily).
+  6. Medications shall be stored per the organisation's policy (shall).
+  7. Where sealed emergency medication kits are used, the check shall be after each
+     use of the kit.
+
+DRAFTING NOTE: The daily check and post-trip top-up are two separate mandatory
+obligations — both must appear in the policy. The daily check is not sufficient alone.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.3.f
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The ambulance(s) has a proper communication system.*
+
+Guidebook interpretation (PDF p. 107):
+The ambulance shall be connected with the organisation/control room by wireless/mobile
+phones. The communication system shall encompass the whole process of patient
+transport. There shall be written guidance by the organisation as to how a call for
+patient transport is received, who are the people expected to respond and organise the
+transport. The communication ensures that the ambulance leaves the hospital within a
+predefined timeframe based upon the patient's needs.
+
+Stop-work check: Commitment — feeds directly into the COP.3 stop-work trigger
+(communication link down = stop-work condition).
+
+Mandatory (shall):
+  1. The ambulance shall be connected with the organisation/control room via
+     wireless/mobile (shall) — connectivity is mandatory.
+  2. The communication system shall encompass the whole transport process (shall).
+  3. Written guidance shall exist covering: how a transport call is received; who
+     responds and organises transport (shall).
+  4. The ambulance shall leave within a predefined timeframe based on the patient's
+     needs (shall) — the specific timeframe is for the organisation to define based on
+     patient need; no NABH-prescribed number of minutes is stated.
+
+Documentation: OE is starred — the written guidance for the communication process is
+required documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.3.g
+Level: Achievement | No star
+
+Verbatim OE text:
+The emergency department identifies opportunities to initiate treatment at the earliest
+when the patient is in transit to the organisation.
+
+Guidebook interpretation (PDF p. 107):
+From the time of first communication with the patient/patient's attendant, a file is
+created to record appropriate information, attempts are made to gather important
+clinical information (patient's age, weight, provisional diagnosis and ongoing
+treatment at the referring organisation). This information is used by the ambulance
+personnel of the receiving organisation to be better prepared to assess, initiate
+emergency care/interventions during transit and transport the patient safely.
+
+During the transit, when required, there is an exchange of information between the
+ambulance personnel and the medical professional at the receiving organisation. The
+information will help the doctor at the receiving organisation guide the ambulance
+personnel to facilitate the management during the transit.
+
+When the patient is being shifted by an external agency, wherever possible, an attempt
+is made by the doctor of the receiving organisation to communicate with the ambulance
+personnel of the external agency to ascertain the clinical situation and make
+appropriate suggestions. However, the medical professional in the ambulance would be
+responsible for decision-making regarding the care/interventions during the transit.
+
+Stop-work check: Achievement — no stop-work trigger.
+
+Key operational elements (descriptive — no explicit "shall" for most steps):
+  — A file shall be created from first communication to record clinical information
+    (the Guidebook uses "is created" declaratively — treat as operational expectation).
+  — Clinical information gathered: age, weight, provisional diagnosis, ongoing
+    treatment — these are examples of what to gather, not an exhaustive mandatory list.
+  — Exchange of information during transit is expected "when required" — clinically
+    triggered.
+  — When shifted by external agency: the receiving doctor attempts to communicate
+    "wherever possible" — qualified, not absolute.
+  — Medical professional in the ambulance is responsible for in-transit care decisions
+    regardless of who provides the ambulance — this is a clear responsibility allocation.
+
+DRAFTING NOTE: This is an Achievement-level OE that describes a pre-hospital care
+readiness process. The language is largely declarative rather than prescriptive. Draft
+as operational practice without inventing mandatory timeframes or information elements
+beyond what the source states.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.3 Stop-work Authority (from STOP_WORK_PROPOSALS / hco_cop_v2_common.py)
+
+Internal reason: "Ambulance departure without functioning equipment, competent crew,
+or communication link"
+
+Hospital-facing text (verbatim from source):
+Do not dispatch or continue an ambulance transfer when the vehicle fails its readiness
+check, required equipment is non-functional, the driver is not licensed for the vehicle
+class, or the organisation/control-room communication link is down.
+
+Stop-work applies to the transfer dispatch, not to on-scene life-saving measures.
+
+The person who stops tells the Ambulance / Transport In-Charge and the Medical
+Superintendent the same shift. Refusing an unsafe ambulance dispatch is not a
+disciplinary matter.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.3 Summary Table
+
+OE   Level        Star   CORE   Key constraint
+a    Commitment   No     No     Access (in-house or outsourced); ambulance level per
+                                AIS-125 (shall); in-house vs outsourced is org's choice
+b    Commitment   No     No     Space demarcated (shall); easy access + quick exit
+                                (shall); adequate prominent signage (shall); parking
+                                bay preferred not mandatory
+c    Commitment   No     No     Statutory vehicle compliance (shall — governed by law,
+                                examples given not exhaustive list); basic life support
+                                equipment for adults and paediatric — exact minimum
+                                (shall); additional equipment per scope (shall);
+                                statute disclaimer applies; AIS-125 reference
+d    Commitment   No     No     Valid driver licence (shall); basic life support and
+                                basic CPR training for all ambulance personnel (shall);
+                                additional crew (tech/nurse/doctor) is optional per
+                                scope (may)
+e    Commitment   No     No     Daily check documented (shall — exact frequency);
+                                vehicle functioning + medical equipment + medications
+                                (availability and expiry) checked daily (shall);
+                                post-trip top-up + verification + documentation (shall
+                                — separate obligation from daily check); sealed kit
+                                checked after each use (where applicable)
+f    Commitment   Yes★   No     Connected to org/control room by wireless/mobile
+                                (shall); whole transport process covered (shall);
+                                written guidance on call receipt and response (shall);
+                                predefined departure timeframe per patient need (shall
+                                — org defines the timeframe); stop-work feeds directly
+                                from this OE; written guidance is starred documentation
+g    Achievement  No     No     File created from first communication; clinical
+                                information gathered (examples: age, weight, diagnosis,
+                                treatment — not exhaustive); in-transit information
+                                exchange when required; external agency: attempt to
+                                communicate where possible; in-ambulance medical
+                                professional is responsible for in-transit decisions
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.4 — Community Emergencies, Epidemics and Disasters
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+The organisation plans and implements mechanisms for the care of patients during
+community emergencies, epidemics and other disasters.
+
+OE count: 4 | COREs: none | Stars: a★, b★
+No stop-work authority | No statute disclaimer
+Prepared by: Medical Superintendent | Doc no: HCO/COP/POL/04
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.4.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation identifies potential community emergencies, epidemics and other
+disasters.*
+
+Guidebook interpretation (PDF p. 108):
+The organisation shall identify potential community emergencies, epidemics and other
+disasters likely to cause a sudden rush of victims. Some examples include earthquake,
+floods, train accident, civil unrest outside the organisation's premises, major fire
+and outbreak of disease/epidemics.
+
+These shall be identified based on geographical location and the community served by
+the organisation. For example, an organisation in an industrial town shall identify the
+industrial hazards that may occur in its vicinity.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  — The organisation shall identify potential community emergencies, epidemics and
+    disasters based on geographical location and community served (shall).
+
+Illustrative:
+  — The specific emergencies listed (earthquake, floods, train accident, civil unrest,
+    major fire, disease outbreak, industrial hazards) are examples of what may be
+    relevant — not a mandatory enumerated list. The organisation identifies what is
+    applicable to its geography and community.
+
+Documentation: OE is starred — the identification process and its output (the
+identified list) must be documented.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.4.b
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation manages community emergencies, epidemics and other disasters as per
+a documented plan.*
+
+Guidebook interpretation (PDF p. 108):
+The disaster, community emergency and epidemic plan must incorporate essential
+elements of alert code, information and communication, action cards for each of the
+staff, availability and earmarking of resources including adequacy of medical supplies,
+equipment, materials, trained personnel, establishment of command nucleus, training
+and mock drills, and managing clinical activities during the event. The emergency room
+could follow triage policy according to the National Disaster Management Authority
+(NDMA) guidelines.
+
+It shall also include aspects like activating and deactivating plan; receive, identify
+and triage casualties; defined areas for reception and treatment for casualties;
+transportation aids; communication aids; manage visitors, and control the movement of
+individuals and vehicles, relocate/discharge admitted patients wherever needed.
+
+The plans shall conform to the relevant local laws and national plans on disaster
+management. A good reference is NDMA guidelines.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. A documented plan shall exist.
+  2. The plan must incorporate (mandatory content — "must"):
+     — Alert code
+     — Information and communication systems
+     — Action cards for each staff member
+     — Availability and earmarking of resources (medical supplies, equipment,
+        materials, trained personnel)
+     — Establishment of command nucleus
+     — Training and mock drills
+     — Managing clinical activities during the event
+  3. The plan shall also include (mandatory — "shall include"):
+     — Activating and deactivating the plan
+     — Receive, identify and triage casualties
+     — Defined areas for reception and treatment of casualties
+     — Transportation aids
+     — Communication aids
+     — Managing visitors and movement of individuals and vehicles
+     — Relocating/discharging admitted patients wherever needed
+  4. Plans shall conform to relevant local laws and national disaster management plans
+     (shall).
+
+NOTE: The two lists above are both mandatory content elements of the documented plan
+— "must incorporate" and "shall also include" both carry obligatory force. Preserve
+all elements from both lists in the policy.
+
+Illustrative:
+  — Triage per NDMA guidelines in the ER "could" — optional, not mandatory.
+  — NDMA guidelines are "a good reference" — not a prescribed compliance document.
+
+Documentation: OE is starred — the documented plan is the required documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.4.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Provision is made for availability of medical supplies, equipment and materials during
+such emergencies.
+
+Guidebook interpretation (PDF p. 108):
+Resource availability shall be according to threat perception. The number of resources
+i.e. medical consumables, equipment, etc. to be commensurate with the expected
+workload.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory:
+  — Resources (medical supplies, equipment, materials) shall be available according to
+    threat perception and commensurate with expected workload.
+
+No specific quantities or stockpile levels are mandated — the organisation determines
+what is commensurate with its threat assessment and expected workload.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.4.d
+Level: Commitment | No star
+
+Verbatim OE text:
+The plan is tested at least twice a year.
+
+Guidebook interpretation (PDF p. 109):
+Testing twice a year is only the minimum frequency, and this may be increased. In case
+the organisation has different plans for different disasters, each of the plans shall be
+tested at least twice a year.
+
+The plan can be tested using a table-top exercise, or a mock drill. At a minimum, at
+least one mock drill shall be held once in 12 months. This shall test all the
+components of the plan and not just awareness. In the case of a mock drill, simulated
+patients (not real) shall be used. After every table-top exercise/mock drill, the
+variations are identified, the reason for the same is analysed, debriefing conducted
+and where appropriate the necessary corrective and/or preventive actions are taken.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+TWO MANDATORY FREQUENCIES — PRESERVE BOTH VERBATIM:
+  1. The plan shall be tested at least twice a year — mandatory minimum (shall).
+     Where multiple disaster-type plans exist, each plan shall be tested at least
+     twice a year (shall).
+  2. At least one mock drill shall be held once in 12 months — this is a separate
+     additional obligation within the testing requirement (shall). The overall testing
+     frequency is twice a year; within that, at least one event must be a mock drill
+     (not a table-top exercise).
+
+Additional mandatory elements:
+  — Testing shall cover all components of the plan, not just awareness — this is a
+    content-of-test obligation (shall).
+  — Mock drills shall use simulated patients, not real patients (shall).
+  — After every exercise/drill: variations identified, reason analysed, debriefing
+    conducted, corrective/preventive actions taken where appropriate (shall — all four
+    post-test steps).
+
+Illustrative:
+  — Testing "may" be increased beyond twice a year — permitted, not mandated.
+  — Table-top exercise or mock drill — both are acceptable methods; the organisation
+    chooses, subject to the mock-drill minimum.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.4 Summary Table
+
+OE   Level        Star   CORE   Key constraint
+a    Commitment   Yes★   No     Identify potential emergencies per geography and
+                                community served (shall); examples are illustrative
+                                not a mandatory enumerated list; identification
+                                must be documented; tailored to actual local context
+b    Commitment   Yes★   No     Documented plan required (shall); two mandatory
+                                content lists — "must incorporate" (7 elements) and
+                                "shall include" (7 elements) — all 14 elements are
+                                mandatory plan content; conform to local laws and
+                                national disaster plans (shall); NDMA guidelines
+                                as reference not prescribed compliance; documented
+                                plan is starred documentation
+c    Commitment   No     No     Resources available per threat perception and
+                                commensurate with expected workload; no specific
+                                quantities mandated; org determines level
+d    Commitment   No     No     At least twice a year — exact minimum frequency
+                                (shall — preserve verbatim); each plan tested if
+                                multiple plans exist (shall); at least one mock
+                                drill in 12 months — separate additional obligation
+                                (shall — preserve verbatim); all plan components
+                                tested not just awareness (shall); simulated not
+                                real patients (shall); post-test: variations
+                                identified + reason analysed + debriefing + CAPA
+                                where appropriate (shall — four-step post-test
+                                sequence)
+
+
+─────────────────────────────────────────────────────────────────────────────
+MASTER EXACT-FREQUENCY AND EXACT-QUANTITY REGISTER FOR COP.1–COP.4
+─────────────────────────────────────────────────────────────────────────────
+
+Standard    OE    Exact verbatim obligation
+COP.1.b     b     "at least two identifiers" — exact minimum, do not soften
+COP.1.d     d     "two clinical care pathways every year" — exact minimum quantity
+COP.1.d     d     "reviewed and updated annually" — exact frequency
+COP.4.d     d     "at least twice a year" — exact frequency for plan testing
+COP.4.d     d     "at least one mock drill... once in 12 months" — exact additional
+                  obligation within the testing requirement; separate from twice-a-year
+
+All other temporal or quantitative language in COP.1–4 is either:
+  — Scope-qualified ("based on scope", "commensurate with", "per patient's needs")
+  — Qualitative ("adequate", "appropriate", "minimum number of beds") — org decides
+  — "At minimum" for a content list (not a numerical count)
+
+
+─────────────────────────────────────────────────────────────────────────────
+
+Source files:
+  policies/source/hco6_cop_ocr.txt          (verbatim OE text + Guidebook interpretations)
+  policies/source/hco6_cop_inventory.json    (levels, stars, OE codes, counts)
+  policies/build/hco_cop_v2_common.py        (STOP_WORK_PROPOSALS, stop_work_text(),
+                                              STATUTE_BY_STD, PREPARED_BY)

@@ -1,0 +1,108 @@
+{
+  "standard_code": "ROM.4",
+  "chapter": "HCO",
+  "oe_codes": [
+    "ROM.4.a",
+    "ROM.4.b",
+    "ROM.4.c",
+    "ROM.4.d",
+    "ROM.4.e"
+  ],
+  "policy_title": "Day-to-Day Leadership of the Organisation",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard ROM.4: The organisation is headed by a leader who shall be responsible for operating the organisation on a day-to-day basis.\n\nThis policy covers all 5 requirements under this standard, listed in detail below.\n\nChapter intent (official Standards PDF): The management of the healthcare organisation is aware of and manages all the key components of governance. Those responsible for governance are identified and their roles defined. The standards encourage the governance of the organisation professionally and ethically. Clinical governance framework is established, that includes clinical audits, clinical pathways, education and research. The responsibilities of management are defined. The responsibilities of the leaders at all levels are defined. The management executes its responsibility for compliance with all applicable regulations. Those responsible for governance address the organisations social responsibility. Leaders ensure that patient-safety and risk-management issues are an integral part of patient care and hospital management. The Organisation has a written guidance in place for change management and service continuity plan.\n\nThis policy covers day-to-day leadership of the organisation specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, or quality and safety monitoring — are covered in the hospital's other policies, not repeated here. Other ROM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to those responsible for governance, the person heading the organisation, departmental leaders, and staff who run ethics, sustainability, risk or outsourcing at {{HOSPITAL_NAME}}, including the «Medical Superintendent», «those responsible for governance» as identified under ROM.1, departmental leaders and the Quality Coordinator.\n\nThis policy covers all 5 requirements under this standard, listed in detail below.\n\nThis policy covers day-to-day leadership of the organisation specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, or quality and safety monitoring — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).",
+  "policy_statement": "{{HOSPITAL_NAME}} implements ROM.4 so that the organisation is headed by a leader who shall be responsible for operating the organisation on a day-to-day basis.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 The person heading the organisation has requisite and appropriate...\n\nThe person heading the organisation has requisite and appropriate administrative qualifications and experience: qualification in hospital management / administration, and administrative experience in a hospital, as «those responsible for governance» define for this hospital's legal form and size.\n\nCertificates and a CV are on file. «those responsible for governance» check this at appointment and if the role-holder changes. The default title is «Medical Superintendent».\n\nMethod note (from guidebook interpretation): Appropriate qualification implies qualification in hospital management/ administration. Appropriate experience implies administrative experience in a hospital.",
+    "5.2 The leader is responsible for and complies with the laid-down and...\n\nThe leader is responsible for and complies with laid-down and applicable legislations, regulations and notifications. A current register of what applies to this hospital (legal form and services actually run) is maintained; India Code is the lookup, not a paste of every central Act.\n\nThe «Medical Superintendent» owns the register and evidence of compliance. This CORE element does not import a named Act as a checklist for the whole standard; statutory duties that already live in other documents of {{HOSPITAL_NAME}} remain those documents.\n\nMethod note (from guidebook interpretation): The leader is conversant with the different statutory requirements as per the scope of services and takes measures to adhere to the same. The organisation conducts its functioning as a duly permitted legal entity under the relevant registering authority(s). The leader could develop a mechanism which ensures implementation of various requirements stated in the laws and regulations. There shall be a mechanism to regularly update any amendments in the prevailing laws of the land. A tracker sheet could be developed for this purpose. Applications to update statutory documents must be made in accordance with the timelines set out in the relevant laws/registration authority requirements to ensure continuity of statutory compliances. Research, including clinical trials, shall be conducted in accordance with statutory norms.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.3 The leader appoints / participates in the recruitment of department...\n\nThe leader appoints or participates in recruiting department leaders who assist day-to-day functioning. Appointment files show the leader's role in the decision.\n\nA department running without an identified leader is escalated to the «Medical Superintendent» the same week.\n\nMethod note (from guidebook interpretation): This includes at least the next rung of the organogram. Some examples of the department leaders of the organisation are Medical Director or Medical Superintendent, Nursing Director, Head of Human Resources. Each departmental/service leader shall document the services to be provided by the department and have an integrated approach to align these with the services of other departments. The leaders participate in patient safety and quality improvement activities based on institutional priorities.",
+    "5.4 The leader ensures that each organisational programme, service, site or...\n\nThe leader ensures each organisational programme, service, site or department has effective leadership: a named person, time allocation and a reporting line.\n\nThe «Medical Superintendent» keeps the current leadership map. This Achievement element is evidenced by that map plus how vacancies are covered.\n\nMethod note (from guidebook interpretation): There needs to be a minimum essential qualification and/or relevant experience of the leader. The respective leader shall have domain knowledge of that particular department. The organisation needs to develop its metrics for measuring the effectiveness of leaders.",
+    "5.5 The performance of the organisation’s leader is reviewed for...\n\nThe performance of the organisation's leader is reviewed for effectiveness at least «annually» by «those responsible for governance» (or the appointing authority).\n\nThe review is dated and filed. A year without a review is a gap under this Achievement element.\n\nMethod note (from guidebook interpretation): Key result areas of the person heading the organisation can be established, or it can be done through performance appraisal. This shall be done by those responsible for governance. This would be by self-evaluation in instances where those responsible for governance and the leader responsible for the day-to-day functioning of the organisation are the same."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that ROM.4 is resourced and followed.\n- Acts as the person heading the organisation unless «those responsible for governance» have appointed another leader.\n\nMedical Superintendent\n- Owns day-to-day implementation and records for this standard.\n\nthose responsible for governance\n- Hold the duties ROM.1 assigns to the governing entity.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements; supports dashboards and committee reviews as this standard requires.\n\ndepartmental leaders\n- Run the department-level duties this standard names.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Responsibilities of Management, standard ROM.4. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — ROM.4 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a; OCR policies/source/hco6_rom_guidebook_ocr.txt).\n- Internal documents of {{HOSPITAL_NAME}}: governance role document, ethical-management framework, ESG / social-responsibility programme, applicable-legislation register, risk-management plan, outsourcing agreements named for ROM.4.",
+  "distribution": "Medical Superintendent; those responsible for governance; Quality Coordinator; departmental leaders; staff covered by ROM.4",
+  "abbreviations": "AERB — Atomic Energy Regulatory Board\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nESG — Environment, Social and Governance\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element\nROM — Responsibilities of Management (NABH Hospitals 6th Edition chapter)\nSWOT — Strengths, Weaknesses, Opportunities and Threats",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "ROM.4.a",
+      "requirement": "The person heading the organisation has requisite and appropriate administrative qualifications and experience.",
+      "steps": "Section 3; 5.1",
+      "responsible": "Medical Superintendent",
+      "records": [
+        "Qualification certificates and CV of the person heading the organisation, on file.",
+        "Governance record confirming the qualification/experience check at appointment.",
+        "Updated record if the role-holder changes."
+      ]
+    },
+    {
+      "oe_code": "ROM.4.b",
+      "requirement": "The leader is responsible for and complies with the laid-down and applicable legislations, regulations and notifications.",
+      "steps": "Section 3; 5.2",
+      "responsible": "Medical Superintendent",
+      "records": [
+        "Current applicable-legislation register for this hospital's legal form and services actually run.",
+        "Evidence of compliance against each item on the register.",
+        "Dated review or update record of the register."
+      ]
+    },
+    {
+      "oe_code": "ROM.4.c",
+      "requirement": "The leader appoints / participates in the recruitment of department leaders of the organisation who will assist in the day-to-day functioning of the organisation.",
+      "steps": "Section 3; 5.3",
+      "responsible": "Medical Superintendent",
+      "records": [
+        "Appointment file for each department leader showing the organisation-head's role in the decision.",
+        "Current list of department leaders with appointment dates.",
+        "Escalation record for any department without an identified leader."
+      ]
+    },
+    {
+      "oe_code": "ROM.4.d",
+      "requirement": "The leader ensures that each organisational programme, service, site or department has effective leadership.",
+      "steps": "Section 3; 5.4",
+      "responsible": "Medical Superintendent",
+      "records": [
+        "Leadership map naming a person, time allocation and reporting line for each programme, service, site or department.",
+        "Vacancy-coverage record for any gap.",
+        "Dated review of the leadership map."
+      ]
+    },
+    {
+      "oe_code": "ROM.4.e",
+      "requirement": "The performance of the organisation’s leader is reviewed for effectiveness.",
+      "steps": "Section 3; 5.5",
+      "responsible": "Medical Superintendent",
+      "records": [
+        "Dated annual performance-review record for the organisation's leader.",
+        "Review criteria or method used.",
+        "Filed outcome and any follow-up action."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO ROM.4 v2 (2026-08-21). Official Standards PDF OE count 5; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: none. CORE: b. Achievement: de. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/ROM/POL/04.\nOfficial chapter is 6 standards / 37 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. No statute P2 proposed (accreditation-only); ROM.4.b legislations and ROM.6.d AERB example stay in method notes.\nDo not touch AAC, COP, MOM, PRE, IPC or PSQ.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition ROM.4 v2 draft: portal PDF OE data + Guidebook interpretations (md5 2c4489ee98de4ae9b49cba168ea9f42a); draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation is headed by a leader who shall be responsible for operating the organisation on a day-to-day basis.",
+  "exceptions": "1. Do not skip: The person heading the organisation has requisite and appropriate administrative qualifications and...\n2. Do not skip: The leader is responsible for and complies with the laid-down and applicable legislations, regulations and...\n3. Do not skip: The leader appoints / participates in the recruitment of department leaders of the organisation who will...\n4. Do not skip: The leader ensures that each organisational programme, service, site or department has effective leadership.\n5. Do not skip: The performance of the organisation’s leader is reviewed for effectiveness.\n6. Staff who see a ROM.4 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related governance change, statutory-register gap or outsourced-service failure.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Day-to-Day Leadership of the Organisation policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/ROM/POL/04»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Medical Superintendent»",
+  "template_test": "hco_rom_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — ROM.4.",
+  "doc_no": "«HCO/ROM/POL/04»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.ROM.4",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

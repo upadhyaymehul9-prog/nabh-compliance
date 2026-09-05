@@ -1,0 +1,173 @@
+{
+  "standard_code": "COP.14",
+  "chapter": "HCO",
+  "oe_codes": [
+    "COP.14.a",
+    "COP.14.b",
+    "COP.14.c",
+    "COP.14.d",
+    "COP.14.e",
+    "COP.14.f",
+    "COP.14.g",
+    "COP.14.h",
+    "COP.14.i",
+    "COP.14.j"
+  ],
+  "policy_title": "Surgical Services",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard COP.14: Surgical services are provided in a consistent and safe manner.\n\nThis policy covers all 10 requirements under this standard, listed in detail below.\n\nThis policy covers surgical services specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who deliver or oversee the care described in COP.14 at {{HOSPITAL_NAME}}, including the «OT In-Charge», treating doctors, nurses and the Quality Coordinator.\n\nThis policy covers all 10 requirements under this standard, listed in detail below.\n\nThis policy covers surgical services specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.",
+  "policy_statement": "{{HOSPITAL_NAME}} implements COP.14 so that surgical services are provided in a consistent and safe manner..\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Surgical services are provided in a consistent and safe manner\n\nSurgical services are provided in a consistent and safe manner.\n\nMethod note (from guidebook interpretation): Written guidance based on standard treatment guidelines/sound",
+    "5.2 Surgical patients have a pre-operative assessment, a documented pre-..\n\nSurgical patients have a pre-operative assessment, a documented pre- operative diagnosis, and pre-operative instructions are provided before surgery.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.3 Informed consent is obtained by a surgeon before the procedure\n\nInformed consent is obtained by a surgeon before the procedure.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.4 Care is taken to prevent adverse events like the wrong site, wrong..\n\nCare is taken to prevent adverse events like the wrong site, wrong patient and wrong surgery.\n\nMethod note (from guidebook interpretation): Written guidance shall be available for preventing adverse events\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.5 An operative note is documented before transfer out of patient from..\n\nAn operative note is documented before transfer out of patient from recovery.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.6 Post-operative care is guided by a documented plan\n\nPost-operative care is guided by a documented plan.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.7 Patient, personnel and material flow conform to infection prevention..\n\nPatient, personnel and material flow conform to infection prevention and control practices.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.8 Appropriate facilities, equipment, instruments and supplies are..\n\nAppropriate facilities, equipment, instruments and supplies are available in the operating theatre.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.9 The organisation shall implement a quality assurance programme\n\nThe organisation shall implement a quality assurance programme.\n\nMethod note (from guidebook interpretation): Surveillance activities shall include the daily monitoring of",
+    "5.10 The quality assurance programme includes surveillance of the operation..\n\nThe quality assurance programme includes surveillance of the operation theatre environment.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that COP.14 is resourced and followed.\n\nOT In-Charge\n- Owns day-to-day implementation and records for this standard.\n\nTreating doctors / nurses / technicians (as applicable)\n- Deliver care as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Care of Patients, standard COP.14.\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — COP.14 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).\n- Internal documents of {{HOSPITAL_NAME}}: written guidance and registers named for COP.14.",
+  "distribution": "Medical Superintendent; OT In-Charge; Quality Coordinator; department clinical staff covered by COP.14",
+  "abbreviations": "COP — Care of Patients (NABH Hospitals chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element\nCORE — Core objective element (NABH)\nRCA — Root Cause Analysis\nCAPA — Corrective and Preventive Action",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "COP.14.a",
+      "requirement": "Surgical services are provided in a consistent and safe manner.",
+      "steps": "Section 3; 5.1; Section 6 Stop-work",
+      "responsible": "OT In-Charge",
+      "records": [
+        "Written surgical-service protocol.",
+        "Consistency-check record.",
+        "Staff-credentialing record."
+      ]
+    },
+    {
+      "oe_code": "COP.14.b",
+      "requirement": "Surgical patients have a pre-operative assessment, a documented pre- operative diagnosis, and pre-operative instructions are provided before surgery.",
+      "steps": "Section 3; 5.2; Section 6 Stop-work",
+      "responsible": "OT In-Charge",
+      "records": [
+        "Pre-operative assessment record.",
+        "Documented pre-operative diagnosis.",
+        "Pre-operative instruction record given to the patient."
+      ]
+    },
+    {
+      "oe_code": "COP.14.c",
+      "requirement": "Informed consent is obtained by a surgeon before the procedure.",
+      "steps": "Section 3; 5.3; Section 6 Stop-work",
+      "responsible": "OT In-Charge",
+      "records": [
+        "Surgical consent form signed by the surgeon.",
+        "Consent-process documentation.",
+        "Cross-reference to PRE.4."
+      ]
+    },
+    {
+      "oe_code": "COP.14.d",
+      "requirement": "Care is taken to prevent adverse events like the wrong site, wrong patient and wrong surgery.",
+      "steps": "Section 3; 5.4",
+      "responsible": "OT In-Charge",
+      "records": [
+        "Site, patient and procedure verification checklist.",
+        "Surgical time-out record.",
+        "Near-miss or adverse-event record, where applicable."
+      ]
+    },
+    {
+      "oe_code": "COP.14.e",
+      "requirement": "An operative note is documented before transfer out of patient from recovery.",
+      "steps": "Section 3; 5.5",
+      "responsible": "OT In-Charge",
+      "records": [
+        "Operative note documented before transfer out of recovery.",
+        "Note-completeness check.",
+        "Timeliness-of-documentation record."
+      ]
+    },
+    {
+      "oe_code": "COP.14.f",
+      "requirement": "Post-operative care is guided by a documented plan.",
+      "steps": "Section 3; 5.6",
+      "responsible": "OT In-Charge",
+      "records": [
+        "Documented post-operative care plan.",
+        "Plan-implementation record.",
+        "Post-operative monitoring record."
+      ]
+    },
+    {
+      "oe_code": "COP.14.g",
+      "requirement": "Patient, personnel and material flow conform to infection prevention and control practices.",
+      "steps": "Section 3; 5.7",
+      "responsible": "OT In-Charge",
+      "records": [
+        "Patient, personnel and material-flow IPC-compliance record for the OT.",
+        "Traffic-control observation record.",
+        "Cross-reference to IPC.4."
+      ]
+    },
+    {
+      "oe_code": "COP.14.h",
+      "requirement": "Appropriate facilities, equipment, instruments and supplies are available in the operating theatre.",
+      "steps": "Section 3; 5.8",
+      "responsible": "OT In-Charge",
+      "records": [
+        "OT facility, equipment, instrument and supply inventory.",
+        "Availability-and-readiness check record.",
+        "Pre-list equipment-check record."
+      ]
+    },
+    {
+      "oe_code": "COP.14.i",
+      "requirement": "The organisation shall implement a quality assurance programme.",
+      "steps": "Section 3; 5.9",
+      "responsible": "OT In-Charge",
+      "records": [
+        "Written OT quality assurance programme.",
+        "Indicator-monitoring record.",
+        "Improvement-action record."
+      ]
+    },
+    {
+      "oe_code": "COP.14.j",
+      "requirement": "The quality assurance programme includes surveillance of the operation theatre environment.",
+      "steps": "Section 3; 5.10",
+      "responsible": "OT In-Charge",
+      "records": [
+        "OT environmental-surveillance record — air quality, surface swabs as applicable.",
+        "Surveillance-frequency documentation.",
+        "Corrective-action record for a surveillance finding."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO COP.14 v2 (2026-08-20). Official Standards PDF OE count 10; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: adij. CORE: d. Achievement: ij. Excellence: none.\nStop-work: YES — JUDGMENT CALL: Surgery without site/procedure verification or incomplete surgical safety checks.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/14.\nDo not touch AAC.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "HCO Full 6th Edition COP.14 v2 draft from official Standards PDF + guidebook OCR; draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Surgical services are provided in a consistent and safe manner.",
+  "exceptions": "1. Do not skip: Surgical services are provided in a consistent and safe manner.\n2. Do not skip: Surgical patients have a pre-operative assessment, a documented pre- operative diagnosis, and pre-operative...\n3. Do not skip: Informed consent is obtained by a surgeon before the procedure.\n4. Do not skip: Care is taken to prevent adverse events like the wrong site, wrong patient and wrong surgery.\n5. Do not skip: An operative note is documented before transfer out of patient from recovery.\n6. Do not skip: Post-operative care is guided by a documented plan.\n7. Do not skip: Patient, personnel and material flow conform to infection prevention and control practices.\n8. Do not skip: Appropriate facilities, equipment, instruments and supplies are available in the operating theatre.\n9. Do not skip: The organisation shall implement a quality assurance programme.\n10. Do not skip: The quality assurance programme includes surveillance of the operation theatre environment.\n11. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n12. Staff who see a COP.14 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Surgical Services policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/COP/POL/14»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «OT In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«OT In-Charge»",
+  "template_test": "hco_cop_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — COP.14.",
+  "doc_no": "«HCO/COP/POL/14»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "Do not make the incision or start the interventional procedure when site/procedure/patient verification is incomplete or when required surgical-safety checks for the case are not done.\n\nStop-work applies to incision/start. Immediate life-saving surgery continues with verification completed at the earliest safe pause and documented.\n\nThe person who stops tells the «Surgeon / OT In-Charge» the same shift. Refusing to start without verification is not a disciplinary matter.",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.COP.14",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}
