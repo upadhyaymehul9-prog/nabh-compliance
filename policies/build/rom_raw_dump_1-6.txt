@@ -1,0 +1,1487 @@
+ROM.1–ROM.6 RAW SOURCE DUMP
+NABH HCO Full Accreditation Standards, 6th Edition
+Source: policies/source/hco6_rom_inventory.json (verbatim OE text + levels)
+       policies/source/hco6_rom_interpretations.json (Guidebook interpretations)
+       policies/build/hco_rom_v2_methods.py (hospital-facing method content)
+       policies/build/generate_hco_rom_v2.py (ROM_RECORDS per OE)
+       policies/build/hco_rom_v2_common.py (STOP_WORK_PROPOSALS, stop_work_text)
+Chapter total: 6 standards / 37 OEs (confirmed against portal summary)
+Guidebook source md5: 2c4489ee98de4ae9b49cba168ea9f42a
+Generated: 2026-09-04
+
+════════════════════════════════════════════════════════════════════════════════
+STANDARD: ROM.1 — Those Responsible for Governance
+════════════════════════════════════════════════════════════════════════════════
+Standard title (verbatim): "The organisation identifies those responsible for
+  governance and their roles are defined."
+OE count: 9
+Levels:
+  CORE:        a
+  Commitment:  b, c, d, e, f, g, i
+  Achievement: h
+  Excellence:  (none)
+Stars (★ = documented evidence required): a, b, c, f
+Stop-work applicable: NO — accreditation-only; governance gaps addressed through
+  quality monitoring and CAPA, not an immediate stop-work trigger.
+Statute P2: NO — accreditation-only disclaimer
+Prepared by: Medical Superintendent
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.1.a | Level: CORE ★
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Those responsible for governance are identified and their roles and
+responsibilities are defined and documented."
+
+GUIDEBOOK INTERPRETATION:
+Those responsible for governance are accountable for the quality of care and
+help the healthcare organisation to achieve its goals. The structure of the
+hospital's governing body/entity is described in a written document. The
+document(s) describe when and how the authority of the governing entity can be
+delegated and to whom. The terms of reference, by-laws and membership of those
+responsible for governance is documented. This may require that those
+responsible for governance receive formal orientation regarding their role.
+Those responsible for governance meet at defined intervals and minutes of the
+meeting are maintained.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Governing body/entity structure described in a written document
+- Delegation of authority — when and how and to whom — documented
+- Terms of reference, by-laws and membership documented
+- Meet at defined intervals; minutes of meetings maintained
+
+ILLUSTRATIVE ONLY:
+- Formal orientation for governing body members on their role
+
+DOCUMENTATION NOTE (starred): Named list of those responsible, with roles and
+responsibilities, plus governance minutes confirming identification, required.
+
+REQUIRED RECORDS:
+1. Named list of those responsible for governance, with each member's role
+   and responsibility documented.
+2. Governance resolution or minute formally identifying the list.
+3. Dated record of the last review or update of the list.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.1.b | Level: Commitment ★
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Those responsible for governance lay down the organisation's vision, mission
+and values."
+
+GUIDEBOOK INTERPRETATION:
+The organisation shall enunciate its vision, mission and values through an
+authorised document. These shall be developed and reviewed by those responsible
+for governance in consultation with the organisation's leaders. Further, inputs
+could be from external stakeholders, including patients, families and community.
+The vision, mission and values of the organisation shall be displayed
+prominently. Only a display on its website would not be appropriate. The same
+could be translated and displayed in the local language also. For the definition
+of "mission", "vision" and "values" refer to the glossary.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Vision, mission and values enacted through an authorised (governance-approved)
+  document
+- Developed/reviewed by governance in consultation with leaders
+- Displayed prominently (website alone is not sufficient)
+
+ILLUSTRATIVE ONLY:
+- External stakeholder inputs (patients, families, community)
+- Translation and display in local language
+
+DOCUMENTATION NOTE (starred): Governance-approved VM&V document with approval
+date, plus evidence of public display, required.
+
+REQUIRED RECORDS:
+1. Governance-approved vision, mission and values statement, with approval date.
+2. Evidence of public display — photograph or location log, website page, or
+   induction-pack copy.
+3. Record of when the statement was last reviewed or reaffirmed.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.1.c | Level: Commitment ★
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Those responsible for governance approve the documented strategic and
+operational plans and the organisation's annual budget."
+
+GUIDEBOOK INTERPRETATION:
+The methodology and frequency of preparation of strategic plan may differ
+according to the size and type of organisation. Documented operational plans and
+budget / expenditure shall be approved annually. The operational plan shall be
+linked to the strategic plan. The strategic and operational plans shall identify
+responsibility and possible timeframes for achievement. The documented annual
+budget shall include both capital expenditure and operating expenditure. Refer to
+the glossary for "strategic and operational plans".
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Operational plans and budget approved annually
+- Operational plan linked to the strategic plan
+- Plans identify responsibility and timeframes
+- Annual budget includes both capital and operating expenditure
+
+ILLUSTRATIVE ONLY:
+- Frequency of strategic plan preparation may vary by organisation size/type
+
+DOCUMENTATION NOTE (starred): Governance minutes approving the plans and budget
+before the cycle starts, plus the approved documents themselves, required.
+
+REQUIRED RECORDS:
+1. Governance minutes approving the strategic plan, operational plan and annual
+   budget before the cycle starts.
+2. The approved strategic plan, operational plan and budget documents themselves.
+3. Dated resolution or sign-off evidencing approval, not just circulation.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.1.d | Level: Commitment
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Those responsible for governance monitor and measure the performance of the
+organisation against the stated mission."
+
+GUIDEBOOK INTERPRETATION:
+The head of the organisation shall develop periodically (preferably quarterly)
+performance reports based on the strategic and operational plans. This shall
+include quality and patient safety parameters. Performance shall be discussed in
+the meeting of those responsible for governance, and action items are regularly
+followed up.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Periodic performance reports developed (preferably quarterly)
+- Reports based on strategic and operational plans
+- Reports include quality and patient safety parameters
+- Performance discussed in governance meetings; action items followed up
+
+ILLUSTRATIVE ONLY:
+- Quarterly cadence (stated as preferred, not absolute minimum)
+
+DOCUMENTATION NOTE: No star — no mandatory documentation of the process per se,
+but meeting minutes and dashboard packs are the natural evidence.
+
+REQUIRED RECORDS:
+1. Quarterly performance dashboard pack presented to governance.
+2. Governance minutes recording what was reviewed and any decision taken.
+3. Annual performance-review report measured against the stated mission.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.1.e | Level: Commitment
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Those responsible for governance appoint the senior leaders in the
+organisation."
+
+GUIDEBOOK INTERPRETATION:
+At a minimum, the person responsible for managing the day-to-day functioning of
+the organisation shall be appointed by those responsible for governance. This may
+be based on qualifications, training, experience and skills.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Person responsible for day-to-day functioning appointed by those responsible
+  for governance (this is the minimum; other senior leaders may follow the same
+  route)
+
+ILLUSTRATIVE ONLY:
+- Appointment criteria: qualifications, training, experience and skills
+  (illustrative basis, not a mandatory checklist)
+
+DOCUMENTATION NOTE: No star.
+
+REQUIRED RECORDS:
+1. Appointment letters for senior leaders, including the person heading the
+   organisation, with dates.
+2. Governance minutes recording the appointment decision.
+3. Current reporting-line document naming who each senior leader reports to.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.1.f | Level: Commitment ★
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Those responsible for governance support safety initiatives, clinical governance
+framework and quality improvement plans."
+
+GUIDEBOOK INTERPRETATION:
+Reports of the safety and quality improvement committee's minutes are shared with
+those responsible for governance, and funds and resources are allocated for
+corrective and preventive action. The information shared shall include the salient
+points of risk management, process of reporting risk, sentinel events and quality
+improvement activities.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Safety and quality improvement committee minutes shared with governance
+- Funds and resources allocated for CAPA
+- Information shared must include risk management, reporting processes, sentinel
+  events, and quality improvement activities
+
+ILLUSTRATIVE ONLY:
+(none — requirements here are all mandatory)
+
+DOCUMENTATION NOTE (starred): Governance minutes showing safety/quality reports
+were received and budget/resource allocation decisions recorded, required.
+
+REQUIRED RECORDS:
+1. Governance minutes showing safety, clinical-governance or quality-improvement
+   reports were received.
+2. Budget line or resource allocation record supporting those initiatives.
+3. Decisions recorded in minutes in response to those reports.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.1.g | Level: Commitment
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Those responsible for governance shall develop clinical governance framework."
+
+GUIDEBOOK INTERPRETATION:
+Clinical governance framework shall consist of patient safety, medication safety,
+clinical audits, clinical pathways, clinical indicators, education and research.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Clinical governance framework developed
+- Framework consists of: patient safety, medication safety, clinical audits,
+  clinical pathways, clinical indicators, education and research
+
+ILLUSTRATIVE ONLY:
+(none — these components are the framework definition, not examples)
+
+DOCUMENTATION NOTE: No star.
+
+REQUIRED RECORDS:
+1. The written clinical-governance framework document (clinical audit, clinical
+   pathways, education, research).
+2. Dated approval record naming who owns the framework.
+3. Evidence of periodic review or update of the framework.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.1.h | Level: Achievement
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Those responsible for governance support the ethical management framework of
+the organisation."
+
+GUIDEBOOK INTERPRETATION:
+This includes the ethical management framework, resolving ethical issues in a
+defined time frame and addressing conflicts of interest. It also includes support
+for the ethical conduct of research.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (at Achievement level, demonstrated):
+- Governance supports the ethical management framework
+- Governance supports resolving ethical issues in a defined timeframe
+- Governance addresses conflicts of interest
+- Governance supports ethical conduct of research
+
+ILLUSTRATIVE ONLY:
+(none — these are the scope components stated verbatim)
+
+DOCUMENTATION NOTE: No star; Achievement level means evidence of actual support
+(minutes of ethics issues escalated to governance, resource decisions) rather than
+existence of the framework (that is ROM.2.a).
+
+REQUIRED RECORDS:
+1. Governance minutes showing an ethics issue was escalated to and considered by
+   governance.
+2. Resource allocation record supporting the ethical-management framework.
+3. Decisions recorded on ethics matters raised.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.1.i | Level: Commitment
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Those responsible for governance inform the public of the quality and
+performance of services."
+
+GUIDEBOOK INTERPRETATION:
+This could be done in the form of displays or brochures or on the website. This
+could include positive and negative feedback received from the stakeholders,
+results of surveys done by independent third parties and results of benchmarking
+done by professional bodies.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Public is informed of quality and performance of services (the form is flexible)
+
+ILLUSTRATIVE ONLY:
+- Displays, brochures, or website
+- Stakeholder feedback (positive and negative)
+- Independent third-party survey results
+- Professional body benchmarking results
+
+DOCUMENTATION NOTE: No star.
+
+REQUIRED RECORDS:
+1. Published quality/performance indicators, accreditation status, or the defined
+   public-information set.
+2. Dated samples of what was published (display photograph, website snapshot, or
+   notice).
+3. Record of the feedback channel offered to the public and how it is publicised.
+
+
+════════════════════════════════════════════════════════════════════════════════
+STANDARD: ROM.2 — Ethical Management of the Organisation
+════════════════════════════════════════════════════════════════════════════════
+Standard title (verbatim): "Those responsible for governance manage the
+  organisation in an ethical manner."
+OE count: 4
+Levels:
+  CORE:        a
+  Commitment:  b, c, d
+  Achievement: (none)
+  Excellence:  (none)
+Stars (★ = documented evidence required): a, b
+Stop-work applicable: NO — accreditation-only.
+Statute P2: NO — accreditation-only disclaimer
+Prepared by: Medical Superintendent
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.2.a | Level: CORE ★
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The leaders establish the organisation's ethical management framework."
+
+GUIDEBOOK INTERPRETATION:
+The organisation shall function ethically. Transparency in its actions shall be
+one of its guiding principles. Handling of complaints, grievances, clinical care
+delivery and research shall be some of the areas to address. The framework
+includes codes of conduct. A good reference guide for minimum code of conduct for
+doctors is "Code of medical ethics, 2002" published by Medical Council of India.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Organisation functions ethically; transparency is a guiding principle
+- Framework addresses: complaints, grievances, clinical care delivery, research
+- Framework includes codes of conduct
+
+ILLUSTRATIVE ONLY:
+- MCI Code of Medical Ethics 2002 as a reference (not a compliance mandate for
+  this OE)
+
+DOCUMENTATION NOTE (starred): Written ethical-management framework document with
+approval and ownership, required. Minutes-only notes are not sufficient.
+
+REQUIRED RECORDS:
+1. The written ethical-management framework: principles, decision authority and
+   escalation path.
+2. Dated approval record naming who owns the framework.
+3. Evidence the framework is a standing document, not minutes-only notes.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.2.b | Level: Commitment ★
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The ethical management framework includes processes for managing issues with
+ethical implications, dilemmas and concerns."
+
+GUIDEBOOK INTERPRETATION:
+The issues may be clinical or non-clinical. Some examples include conflict of
+interest, breach of confidentiality, ethical behaviour, informed consent, and
+withdrawing life-sustaining treatment. There shall be a consistent approach to
+ethical decision making throughout the organisation based on the guiding
+principle(s). Staff shall be provided with appropriate guidance with respect to
+their actions based on these principles. The approach shall include process for
+collecting, collating and analysing ethical dilemmas for taking corrective and
+preventive actions within a defined time frame. Ethical dilemma could arise when
+there are conflicting decisions regarding provision or withdrawal of life support
+or treatment. Decisions made regarding ethical issues shall be documented, and
+opportunities for improvement could be identified.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Consistent approach to ethical decision making throughout the organisation
+- Staff provided with guidance based on the ethical principles
+- Process for collecting, collating and analysing ethical dilemmas
+- CAPA taken within a defined time frame
+- Decisions regarding ethical issues documented
+
+ILLUSTRATIVE ONLY:
+- Conflict of interest, breach of confidentiality, informed consent, withdrawing
+  life-sustaining treatment (examples of issue types; hospital names its own list)
+- Opportunities for improvement identification
+
+DOCUMENTATION NOTE (starred): Named escalation path and timeline, plus log of
+ethical issues raised with resolution and date, required.
+
+REQUIRED RECORDS:
+1. Named escalation path and timeline for handling an ethical issue, dilemma or
+   concern.
+2. Log of ethical issues raised, with resolution and date.
+3. At least one example case record showing the process was actually used.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.2.c | Level: Commitment
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The organisation discloses its ownership."
+
+GUIDEBOOK INTERPRETATION:
+Hospitals are governed under the provisions of Companies Act, Charitable Trust
+Act, Societies Registration Act, Limited Liability Partnership Act, sole
+proprietorship and Government of India/State Government. The ownership of the
+hospital shall be disclosed accordingly. The disclosure could be in the form of a
+registration certificate.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Ownership disclosed per the legal form under which the hospital is governed
+
+ILLUSTRATIVE ONLY:
+- Registration certificate as the form of disclosure
+- Applicable legal forms (Companies Act, Trust, Society, LLP, sole proprietor,
+  Government) — this is the universe of options, not a checklist requirement for
+  each
+
+DOCUMENTATION NOTE: No star.
+
+REQUIRED RECORDS:
+1. Current ownership-disclosure text.
+2. Evidence of public display — reception, website, or the statutory board where
+   applicable.
+3. Annual check or update record for the disclosure.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.2.d | Level: Commitment
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The organisation honestly portrays its affiliations and accreditations."
+
+GUIDEBOOK INTERPRETATION:
+It implies that the organisation conveys its affiliations, accreditations for
+specific departments or whole hospital in an honest manner, wherever such exist.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Affiliations and accreditations portrayed honestly (only current, in-scope
+  programmes shown; expired or applied-for status not shown as awarded)
+
+ILLUSTRATIVE ONLY:
+(none)
+
+DOCUMENTATION NOTE: No star.
+
+REQUIRED RECORDS:
+1. Current list of affiliations and accreditations shown in public materials.
+2. Quarterly review record confirming no expired or applied-for status is shown
+   as awarded.
+3. Correction record for any instance found and fixed.
+
+
+════════════════════════════════════════════════════════════════════════════════
+STANDARD: ROM.3 — Sustainability, Social Responsibility and Staff Well-being
+════════════════════════════════════════════════════════════════════════════════
+Standard title (verbatim): "Those responsible for governance ensure
+  sustainability in hospitals by addressing environmental, social and economic
+  factors from long term well-being of healthcare system and community."
+OE count: 7
+Levels:
+  CORE:        (none)
+  Commitment:  a, b, c, d
+  Achievement: f, g
+  Excellence:  e
+Stars (★ = documented evidence required): b
+Stop-work applicable: NO — accreditation-only.
+Statute P2: NO — accreditation-only disclaimer
+Prepared by: Medical Superintendent
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.3.a | Level: Commitment
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Those responsible for governance address the organisation's sustainability
+programme in terms of Environment Social and Governance (ESG) responsibility."
+
+GUIDEBOOK INTERPRETATION:
+Environmental sustainability includes energy usage and efficiency, climate change
+strategy, waste reduction, biodiversity loss, greenhouse gas emissions and carbon
+footprint reduction. Social sustainability includes fair pay and living wages,
+equal employment opportunity, employee benefits, workplace health and safety,
+community engagement, responsible supply chain partnerships, adhering to labour
+laws. Governance sustainability includes corporate governance, risk management,
+compliance, ethical business practises, avoiding conflicts of interest, accounting
+integrity and transparency.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Sustainability programme addressed by governance in ESG terms
+
+ILLUSTRATIVE ONLY:
+- Environmental: energy usage/efficiency, climate change strategy, waste
+  reduction, greenhouse gas emissions, carbon footprint reduction
+- Social: fair pay, equal employment, employee benefits, workplace health and
+  safety, community engagement, responsible supply chain, labour laws
+- Governance: corporate governance, risk management, compliance, ethical business
+  practices, conflicts of interest, accounting integrity and transparency
+
+DOCUMENTATION NOTE: No star.
+
+REQUIRED RECORDS:
+1. Written ESG sustainability programme with a named owner.
+2. Governance-meeting agenda or minutes tabling the programme.
+3. Annual review record of the programme.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.3.b | Level: Commitment ★
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The organisation takes initiatives towards an energy-efficient and
+environmentally friendly hospital."
+
+GUIDEBOOK INTERPRETATION:
+This includes using the concepts of reduce, recycle and reuse in promoting the
+basic concepts of the green hospital. Energy-efficient lighting, rainwater
+harvesting, increase usage of solar power, wind energy, use of battery-operated
+or e-vehicles, recycling of STP/ETP water for gardening and flush water,
+reduction of plastic usage where possible, use of 'green' materials in
+construction, use of volatile organic compounds free paints are some of the
+examples. The organisation shall focus on efficient and sustainable use of energy,
+water and other utilities. The organisation shall take measures to create
+awareness among staff and patients regarding saving electricity and water.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Initiatives taken toward energy-efficient and environmentally friendly hospital
+- Focus on efficient and sustainable use of energy, water and other utilities
+- Measures to create awareness among staff and patients regarding saving
+  electricity and water
+
+ILLUSTRATIVE ONLY:
+- Energy-efficient lighting, rainwater harvesting, solar/wind power, e-vehicles,
+  STP/ETP water recycling, plastic reduction, green construction materials, VOC-
+  free paints (illustrative list; hospital defines what applies to its context)
+- Reduce, recycle, reuse framing
+
+DOCUMENTATION NOTE (starred): Dated log of energy-efficiency and environmental
+initiatives with results, required.
+
+REQUIRED RECORDS:
+1. Dated log of energy-efficiency and environmental initiatives and their results.
+2. Cross-reference to the ESG/engineering file (FMS owns engineering controls;
+   this is the sustainability initiative record).
+3. Before/after data or savings evidence where available.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.3.c | Level: Commitment
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Those responsible for governance address the organisations social
+responsibility."
+[Note: "organisations" (no apostrophe) is as printed in the Standards PDF —
+kept verbatim.]
+
+GUIDEBOOK INTERPRETATION:
+The board of governance and leaders shall develop social responsibility policy
+and implement it. Free camps, outreach programs for below poverty line population
+are some of the examples. At a minimum all regulatory requirement like corporate
+social responsibility shall be met.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Social responsibility policy developed and implemented by governance and leaders
+- At minimum all regulatory CSR requirements met
+
+ILLUSTRATIVE ONLY:
+- Free camps, outreach programs for BPL population (examples; hospital defines
+  its own programme)
+
+DOCUMENTATION NOTE: No star.
+
+REQUIRED RECORDS:
+1. Documented social-responsibility programme (community access, charity care,
+   local health initiatives).
+2. Annual activity report for the programme.
+3. Governance minutes noting the programme.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.3.d | Level: Commitment
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Staff well-being is promoted."
+
+GUIDEBOOK INTERPRETATION:
+Organisation takes proactive steps to ensure staff well-being. Examples of these
+include promoting healthy lifestyle programmes, having defined work hours and
+workload monitoring, providing scheduled breaks, stress management, access to
+dining facilities, rewards and recognition, staff engagement activities. Tracking
+absenteeism or over-time could help organisations to monitor stress and fatigue
+indirectly. The staff satisfaction survey is another tool to capture this data.
+The organisation shall have facilities for staff to seek support and advice when
+necessary.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Proactive steps taken to ensure staff well-being
+- Facilities for staff to seek support and advice when necessary
+
+ILLUSTRATIVE ONLY:
+- Healthy lifestyle programmes, defined work hours, workload monitoring,
+  scheduled breaks, stress management, dining facilities, rewards and recognition,
+  staff engagement activities (examples; hospital defines its own measures)
+- Absenteeism/overtime tracking as indirect stress monitoring
+- Staff satisfaction survey
+
+DOCUMENTATION NOTE: No star.
+
+REQUIRED RECORDS:
+1. Documented work-hour monitoring method for staff.
+2. Record of healthy-lifestyle support and scheduled-break arrangements.
+3. Record of the channel for raising workload concerns and any concerns logged
+   through it.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.3.e | Level: Excellence
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The organisation follows sustainable procurement practices."
+
+GUIDEBOOK INTERPRETATION:
+These involve sourcing products and services that have a lower environmental
+impact. Hospitals can work with suppliers to prioritize environmentally friendly
+and socially responsible products.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (at Excellence level, demonstrated in practice):
+- Sustainable procurement practices followed (environmental and social criteria
+  applied in sourcing)
+
+ILLUSTRATIVE ONLY:
+- Working with suppliers to prioritise environmentally friendly and socially
+  responsible products
+
+DOCUMENTATION NOTE: No star; Excellence level means evidence of completed
+procurements applying these criteria, not just a policy sentence.
+
+REQUIRED RECORDS:
+1. Purchase policy naming environmental and social tender criteria.
+2. Completed procurement file showing those criteria were applied.
+3. At least one tender evaluation reflecting the sustainable-procurement criteria.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.3.f | Level: Achievement
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Hospitals shall encourage employees to use common / public transportation to
+reduce the environmental impact of commuting and carbon footprint."
+
+GUIDEBOOK INTERPRETATION:
+Hospital shall encourage employees for carpooling, cycling and wherever possible
+use of public transport to reduce environmental impact. Efficient environmental
+friendly logistics and transportation management within the hospital can also
+contribute to sustainability.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (at Achievement level):
+- Employees encouraged to use common/public transportation
+
+ILLUSTRATIVE ONLY:
+- Carpooling, cycling, public transport (modes to encourage; not mandated)
+- Environmental-friendly logistics and transportation management within the
+  hospital
+
+DOCUMENTATION NOTE: No star; Achievement level means evidence the encouragement
+was communicated to staff — not that every employee must commute that way.
+
+REQUIRED RECORDS:
+1. Current staff communication promoting common or public transport for commuting.
+2. Documentation of any incentive scheme offered.
+3. Record that the offer was communicated to staff.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.3.g | Level: Achievement
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The organisation ensures financial sustainability of the hospital by balancing
+the financial aspects of healthcare delivery."
+
+GUIDEBOOK INTERPRETATION:
+Balancing the financial aspects of healthcare delivery is crucial for long-term
+sustainability. This involves efficient resource allocation, cost management, and
+revenue generation strategies.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (at Achievement level):
+- Financial sustainability ensured through balancing financial aspects of
+  healthcare delivery
+
+ILLUSTRATIVE ONLY:
+- Efficient resource allocation, cost management, revenue generation strategies
+  (the Guidebook names these as the components of "balancing"; the hospital
+  defines its own metrics)
+
+DOCUMENTATION NOTE: No star.
+
+REQUIRED RECORDS:
+1. Budget-versus-actual review document.
+2. Record of cash and credit discipline for the period.
+3. Annual financial-sustainability view tabled to governance.
+
+
+════════════════════════════════════════════════════════════════════════════════
+STANDARD: ROM.4 — Day-to-Day Leadership of the Organisation
+════════════════════════════════════════════════════════════════════════════════
+Standard title (verbatim): "The organisation is headed by a leader who shall be
+  responsible for operating the organisation on a day-to-day basis."
+OE count: 5
+Levels:
+  CORE:        b
+  Commitment:  a, c
+  Achievement: d, e
+  Excellence:  (none)
+Stars (★ = documented evidence required): (none)
+Stop-work applicable: NO — accreditation-only.
+Statute P2: NO — accreditation-only disclaimer
+Prepared by: Medical Superintendent
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.4.a | Level: Commitment
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The person heading the organisation has requisite and appropriate administrative
+qualifications and experience."
+
+GUIDEBOOK INTERPRETATION:
+Appropriate qualification implies qualification in hospital management/
+administration. Appropriate experience implies administrative experience in a
+hospital.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Person heading the organisation holds qualification in hospital management or
+  administration
+- Person holds administrative experience in a hospital
+
+ILLUSTRATIVE ONLY:
+(none — both qualification and experience requirements are stated definitively)
+
+DOCUMENTATION NOTE: No star.
+
+REQUIRED RECORDS:
+1. Qualification certificates and CV of the person heading the organisation,
+   on file.
+2. Governance record confirming the qualification/experience check at appointment.
+3. Updated record if the role-holder changes.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.4.b | Level: CORE
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The leader is responsible for and complies with the laid-down and applicable
+legislations, regulations and notifications."
+
+GUIDEBOOK INTERPRETATION:
+The leader is conversant with the different statutory requirements as per the
+scope of services and takes measures to adhere to the same. The organisation
+conducts its functioning as a duly permitted legal entity under the relevant
+registering authority(s). The leader could develop a mechanism which ensures
+implementation of various requirements stated in the laws and regulations. There
+shall be a mechanism to regularly update any amendments in the prevailing laws of
+the land. A tracker sheet could be developed for this purpose. Applications to
+update statutory documents must be made in accordance with the timelines set out
+in the relevant laws/registration authority requirements to ensure continuity of
+statutory compliances. Research, including clinical trials, shall be conducted in
+accordance with statutory norms.
+
+STOP-WORK CHECK: No stop-work trigger on this OE. (Statutory compliance gaps are
+addressed through the applicable-legislation register and CAPA, not an
+immediate stop-work. Note: AERB non-compliance triggers stop-work under AAC.8/9,
+not here.)
+
+MANDATORY (shall):
+- Leader responsible for and compliant with applicable legislations, regulations
+  and notifications
+- Organisation functioning as a duly permitted legal entity
+- Mechanism to regularly update any amendments in prevailing laws
+- Applications to update statutory documents made within timelines set by
+  registering authority
+- Research (including clinical trials) conducted in accordance with statutory
+  norms
+
+ILLUSTRATIVE ONLY:
+- Tracker sheet for legislation monitoring (illustrative tool, not mandated form)
+
+DOCUMENTATION NOTE: No star; CORE level means non-compliance is not acceptable.
+The key evidence is a current applicable-legislation register with compliance
+status.
+
+REQUIRED RECORDS:
+1. Current applicable-legislation register for this hospital's legal form and
+   services actually run.
+2. Evidence of compliance against each item on the register.
+3. Dated review or update record of the register.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.4.c | Level: Commitment
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The leader appoints / participates in the recruitment of department leaders of
+the organisation who will assist in the day-to-day functioning of the
+organisation."
+
+GUIDEBOOK INTERPRETATION:
+This includes at least the next rung of the organogram. Some examples of the
+department leaders of the organisation are Medical Director or Medical
+Superintendent, Nursing Director, Head of Human Resources. Each
+departmental/service leader shall document the services to be provided by the
+department and have an integrated approach to align these with the services of
+other departments. The leaders participate in patient safety and quality
+improvement activities based on institutional priorities.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Leader appoints or participates in recruiting at least the next rung of the
+  organogram (department leaders)
+- Each departmental/service leader shall document the services to be provided by
+  the department
+- Departmental leaders shall have an integrated approach to align their services
+  with other departments
+- Leaders participate in patient safety and quality improvement activities based
+  on institutional priorities
+
+ILLUSTRATIVE ONLY:
+- Medical Director/Medical Superintendent, Nursing Director, Head of Human
+  Resources (examples of "department leaders")
+
+DOCUMENTATION NOTE: No star.
+
+REQUIRED RECORDS:
+1. Appointment file for each department leader showing the organisation-head's
+   role in the decision.
+2. Current list of department leaders with appointment dates.
+3. Escalation record for any department without an identified leader.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.4.d | Level: Achievement
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The leader ensures that each organisational programme, service, site or
+department has effective leadership."
+
+GUIDEBOOK INTERPRETATION:
+There needs to be a minimum essential qualification and/or relevant experience
+of the leader. The respective leader shall have domain knowledge of that
+particular department. The organisation needs to develop its metrics for
+measuring the effectiveness of leaders.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (at Achievement level):
+- Each programme, service, site or department has a named leader with effective
+  leadership
+- Leader has minimum essential qualification and/or relevant experience
+- Leader has domain knowledge of the department
+- Organisation develops metrics for measuring leader effectiveness
+
+ILLUSTRATIVE ONLY:
+(none)
+
+DOCUMENTATION NOTE: No star; Achievement level means evidence of a leadership
+map plus how vacancies are covered and how effectiveness is measured.
+
+REQUIRED RECORDS:
+1. Leadership map naming a person, time allocation and reporting line for each
+   programme, service, site or department.
+2. Vacancy-coverage record for any gap.
+3. Dated review of the leadership map.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.4.e | Level: Achievement
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The performance of the organisation's leader is reviewed for effectiveness."
+
+GUIDEBOOK INTERPRETATION:
+Key result areas of the person heading the organisation can be established, or
+it can be done through performance appraisal. This shall be done by those
+responsible for governance. This would be by self-evaluation in instances where
+those responsible for governance and the leader responsible for the day-to-day
+functioning of the organisation are the same.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (at Achievement level):
+- Performance of the organisation's leader reviewed for effectiveness
+- Review done by those responsible for governance (or self-evaluation where
+  governance and leader are the same person/body)
+
+ILLUSTRATIVE ONLY:
+- Key result areas, performance appraisal (illustrative methods)
+
+DOCUMENTATION NOTE: No star; Achievement level means a dated, filed review record.
+
+REQUIRED RECORDS:
+1. Dated annual performance-review record for the organisation's leader.
+2. Review criteria or method used.
+3. Filed outcome and any follow-up action.
+
+
+════════════════════════════════════════════════════════════════════════════════
+STANDARD: ROM.5 — Professional Functioning of the Organisation
+════════════════════════════════════════════════════════════════════════════════
+Standard title (verbatim): "The organisation displays professionalism in its
+  functioning."
+OE count: 6
+Levels:
+  CORE:        (none)
+  Commitment:  a, b, c, e
+  Achievement: d
+  Excellence:  f
+Stars (★ = documented evidence required): b, e, f
+Stop-work applicable: NO — accreditation-only.
+Statute P2: NO — accreditation-only disclaimer
+Prepared by: Quality Coordinator
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.5.a | Level: Commitment
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The organisation has strategic and operational plans, including long-term and
+short-term goals commensurate to the organisation's vision, mission and values
+in consultation with the various stakeholders."
+
+GUIDEBOOK INTERPRETATION:
+The leader(s) shall define and develop the process for strategic and operational
+plans to achieve the organisational vision and mission statement and adhere to
+the values. It shall be discussed with all stakeholders. Stakeholders include the
+community that the organisation serves. The strategic plan development shall take
+into consideration both external and internal scan. The same can be done using
+tools like SWOT (strengths, weakness, opportunities and threats) analysis. Some
+of the inputs that shall be considered while finalising these plans shall be the
+findings of the risk management plan, patient safety goals and results of facility
+rounds. Operational plan(s) shall be done on an annual basis. The strategic and
+operational plan shall have defined goals and objectives which are measurable and
+have defined time frames. Refer to the glossary for "strategic plan" and
+"operational plan".
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Strategic and operational plans exist with long-term and short-term goals
+- Plans commensurate to vision, mission and values
+- Plans developed in consultation with stakeholders (including the community)
+- Operational plan done on annual basis
+- Plans have defined goals and objectives that are measurable with defined
+  timeframes
+
+ILLUSTRATIVE ONLY:
+- SWOT analysis (illustrative tool)
+- Risk management plan findings, patient safety goals, facility round results
+  as inputs (illustrative inputs; not an exhaustive requirement list)
+
+DOCUMENTATION NOTE: No star.
+
+REQUIRED RECORDS:
+1. Strategic and operational plan documents naming owners and timeframes.
+2. Stakeholder-consultation record for plan development.
+3. Current approved plan set held by the Quality Coordinator and Medical
+   Superintendent.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.5.b | Level: Commitment ★
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The organisation coordinates the functioning with departments and external
+agencies and monitors the progress in achieving the defined goals and
+objectives."
+
+GUIDEBOOK INTERPRETATION:
+The goals and objectives shall be drawn from the strategic plan and operational
+plan. They shall be consistent with the mission and values. They shall have
+measurable outcomes. The reasons for not achieving any particular goal shall be
+analysed and appropriate action shall be taken. This could be done through
+periodic reviews and/or formal management review meetings which shall be
+documented.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Goals and objectives drawn from strategic and operational plans
+- Consistent with mission and values; have measurable outcomes
+- Reasons for not achieving goals analysed and appropriate action taken
+- Progress monitoring through periodic reviews and/or formal management review
+  meetings — documented
+
+ILLUSTRATIVE ONLY:
+(none — all requirements here are mandatory)
+
+DOCUMENTATION NOTE (starred): Coordination minutes and progress-tracking report
+against defined goals, with corrective-action records for lagging goals, required.
+
+REQUIRED RECORDS:
+1. Coordination minutes with departments and external agencies.
+2. Progress-tracking report against defined goals and objectives.
+3. Corrective-action record where progress lagged.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.5.c | Level: Commitment
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The organisation plans and budgets for its activities annually."
+
+GUIDEBOOK INTERPRETATION:
+The planning shall be done, taking into consideration the strategic and
+operational plans of the organisation. The budget development and review process
+shall include a review of budgeted expenditure against actual. Responsibilities
+for these activities shall be clearly defined and followed. An adequate budget
+shall be allocated for infection prevention and control and quality improvement
+activities. This could be either done on a calendar year (January-December) basis
+or financial year (April-March) basis. Refer to IPC.2.b. and PSQ.6.d.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Annual planning and budgeting done, considering the strategic and operational
+  plans
+- Budget review includes budgeted expenditure against actual
+- Responsibilities for planning and budgeting clearly defined
+- Adequate budget allocated for IPC and quality improvement activities
+
+ILLUSTRATIVE ONLY:
+- Calendar year or financial year basis (both are acceptable)
+
+DOCUMENTATION NOTE: No star. Cross-reference: IPC.2.b and PSQ.6.d.
+
+REQUIRED RECORDS:
+1. Annual operational plan linked to the strategic plan.
+2. Annual budget document.
+3. Governance approval record for the plan and budget (cross-reference ROM.1.c).
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.5.d | Level: Achievement
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The functioning of committees is reviewed for their effectiveness."
+
+GUIDEBOOK INTERPRETATION:
+The review shall be done by the leadership. The review of the functioning shall
+include whether the purpose of having the committee is being met, whether the
+committee is meeting at the prescribed frequency and whether the committee is
+suggesting remedial measures and if there is adequate monitoring of the corrective
+and preventive action suggested by the committee by way of risk mitigation within
+the scope of the particular committee. For an effective review, the organisation
+could document the scope of every committee, the roles and responsibilities
+assigned to various members and the frequency of meetings. Minutes of the meeting
+for each committee meeting will be maintained.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (at Achievement level):
+- Leadership reviews committee functioning for effectiveness
+- Review includes: whether committee purpose is being met, whether meeting at
+  prescribed frequency, whether suggesting remedial measures, and whether CAPA
+  actions are adequately monitored
+- Minutes maintained for each committee meeting
+
+ILLUSTRATIVE ONLY:
+- Documenting scope of every committee, roles and responsibilities, meeting
+  frequency (good-practice support for the review, not independently mandatory)
+
+DOCUMENTATION NOTE: No star; Achievement level means a dated effectiveness-review
+report with action closure records.
+
+REQUIRED RECORDS:
+1. Committee list with defined meeting frequency.
+2. Effectiveness-review report — whether each committee met, decided and closed
+   actions.
+3. Action-item closure log.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.5.e | Level: Commitment ★
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"The organisation documents the service standards that are measurable and
+monitors them."
+
+GUIDEBOOK INTERPRETATION:
+The organisation shall develop benchmarks for different aspects of the services
+being provided. This could be based on the organisation's values. The organisation
+shall decide the responsibility for and frequency of monitoring.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Measurable service standards documented
+- Monitoring of service standards done
+- Responsibility and frequency of monitoring defined
+
+ILLUSTRATIVE ONLY:
+- Benchmarks based on the organisation's values (the hospital decides its own
+  benchmark set and basis)
+
+DOCUMENTATION NOTE (starred): Documented measurable service-standard set plus
+monitoring results log required.
+
+REQUIRED RECORDS:
+1. Documented measurable service-standard set (the measure and review interval)
+   for selected services.
+2. Monitoring results log against each standard.
+3. Review record showing the standards were actually checked.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.5.f | Level: Excellence ★
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Systems and processes are in place for change management."
+
+GUIDEBOOK INTERPRETATION:
+Organisation has a written guidance in place for change management. Change may be
+operational, financial or departmental. It also involves succession planning and
+a change in leadership. This shall address aspects like communication, ownership,
+organisational culture.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (at Excellence level, demonstrated):
+- Written guidance in place for change management
+- Guidance addresses: communication, ownership, organisational culture
+- Covers: operational, financial, departmental change, succession planning, and
+  change in leadership
+
+ILLUSTRATIVE ONLY:
+(none — all scope components are stated definitively in the Guidebook)
+
+DOCUMENTATION NOTE (starred): Written change-management guidance plus a completed
+change record and service-continuity evidence for an actual change, required.
+Excellence level means evidence of practiced systems, not just a written policy.
+
+REQUIRED RECORDS:
+1. Written change-management guidance: approval authority, staff communication
+   method, continuity method.
+2. A completed change record following that guidance.
+3. Service-continuity evidence for a change actually made.
+
+
+════════════════════════════════════════════════════════════════════════════════
+STANDARD: ROM.6 — Patient Safety, Risk Management and Outsourced Services
+════════════════════════════════════════════════════════════════════════════════
+Standard title (verbatim): "Leadership ensures that patient-safety aspects and
+  risk-management issues are an integral part of patient care and hospital
+  management."
+OE count: 6
+Levels:
+  CORE:        a
+  Commitment:  b, c, e
+  Achievement: d, f
+  Excellence:  (none)
+Stars (★ = documented evidence required): a, d
+Stop-work applicable: YES — ROM.6 is the only ROM standard with stop-work.
+  Triggers: (1) start or continue an outsourced service without a documented
+  agreement including service parameters; (2) skip required internal/external
+  reporting of a system or process failure.
+Statute P2: NO — accreditation-only disclaimer
+Prepared by: Medical Superintendent
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.6.a | Level: CORE ★
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Leadership ensures proactive risk management across the organisation."
+
+GUIDEBOOK INTERPRETATION:
+Risk management shall include clinical and non-clinical (strategic, financial,
+operational and hazard) risks. It shall include risk identification at every level
+of the organisation, analysis, prioritisation and risk alleviation. The same shall
+be documented. At a minimum, analysis of potential risks must include the
+likelihood of its occurrence and the potential severity of the impact or
+consequences. The identified risks shall be documented in a risk register, which
+shall be updated at regular intervals. This shall be documented as a "risk
+management plan". It shall include the various risks identified, the action taken
+for risk alleviation of each of these risks and the mechanism for informing staff
+regarding the same. Other components of the risk management plan include
+contingency plans and education and training of staff. Further, the risk
+management plan shall be monitored and reviewed for continued effectiveness at
+least annually. The results of the review shall be communicated to the relevant
+stakeholders in the organisation. This could be done using a matrix.
+Clinical-risk assessment could include:
+* Medication management (patient/service-user allergies, antimicrobial resistance,
+  cytotoxic drugs, narcotics and controlled drugs management)
+* Equipment risks — fire/injury from LASER, cautery
+* Use of ionising radiation, radioactive isotopes and nuclear medicine
+* Risks from long-term conditions
+* Patient falls
+* Infections
+* Risks related to vulnerable patients (e.g. Deep Venous Thrombosis)
+* Risk associated with clinical alarms
+
+STOP-WORK CHECK: No direct stop-work trigger on this OE. The proactive risk
+management system is what identifies the conditions that make other stop-work
+triggers fire (ROM.6.d, ROM.6.e).
+
+MANDATORY (shall):
+- Risk management includes clinical and non-clinical risks (strategic, financial,
+  operational and hazard)
+- Risk identification at every level of the organisation
+- Analysis includes at minimum: likelihood of occurrence and severity of
+  impact/consequences
+- Identified risks documented in a risk register, updated at regular intervals
+- Risk management plan documented, including: identified risks, alleviation
+  actions, mechanism for informing staff, contingency plans, education and
+  training
+- Risk management plan monitored and reviewed for effectiveness at least annually
+- Results of review communicated to relevant stakeholders
+
+ILLUSTRATIVE ONLY:
+- Clinical risk categories listed above (examples; hospital defines its own
+  complete risk register)
+- Matrix format for risk assessment
+
+DOCUMENTATION NOTE (starred): Risk management system document, risk register,
+and assessment/action/review log required.
+
+REQUIRED RECORDS:
+1. Risk-management system document.
+2. Risk register showing identified clinical and organisational risks (for
+   example falls, infection, vulnerable-patient risks such as DVT, clinical
+   alarms).
+3. Assessment, action and review log for a sample of risks on the register.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.6.b | Level: Commitment
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Leadership provides resources for proactive risk-assessment and risk-reduction
+activities."
+[Note: "risk- reduction" printed with hyphen break in Standards PDF — kept.]
+
+GUIDEBOOK INTERPRETATION:
+There shall be sufficient resources kept as a contingency to address the risk
+reduction activities as and when the leaders proactively suggest. These shall be
+directed at preventive actions wherever feasible. Refer to the glossary for a
+definition of "risk assessment" and "risk reduction".
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Sufficient resources kept as contingency for risk-reduction activities
+- Resources directed at preventive actions wherever feasible
+
+ILLUSTRATIVE ONLY:
+(none)
+
+DOCUMENTATION NOTE: No star.
+
+REQUIRED RECORDS:
+1. Budget or resource-allocation record for risk-assessment and risk-reduction
+   activity.
+2. Training record for staff involved in risk activities.
+3. Contingency-allocation evidence for preventive action.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.6.c | Level: Commitment
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Leadership ensures integration between quality improvement, risk-management and
+strategic planning within the organisation."
+[Note: "risk- management" printed with hyphen break in Standards PDF — kept.]
+
+GUIDEBOOK INTERPRETATION:
+The leadership ensures that strategic planning incorporates risk management
+aspects in its strategic plan. Further, quality improvement shall also incorporate
+risk management aspects. Refer to PSQ.2.a.
+
+STOP-WORK CHECK: No stop-work trigger on this OE.
+
+MANDATORY (shall):
+- Strategic planning incorporates risk management aspects
+- Quality improvement incorporates risk management aspects
+
+ILLUSTRATIVE ONLY:
+(none)
+
+DOCUMENTATION NOTE: No star. Cross-reference: PSQ.2.a.
+
+REQUIRED RECORDS:
+1. Quality Improvement Committee minutes showing risk findings feeding the plan.
+2. Strategic plan referencing risk-management and quality work.
+3. Governance pack showing the link between risk, quality and planning.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.6.d | Level: Achievement ★
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Leadership ensures implementation of systems for internal and external reporting
+of system and process failures."
+
+GUIDEBOOK INTERPRETATION:
+The organisation has a system in place for internal and external reporting of
+system and process failures. The contingency plan shall be in place to deal with
+the situation of system and process failure anticipated within the organisation.
+In case the MRI machine of the organisation breaks down, internal reporting is
+to be done to head of the organisation and external reporting to be done to the
+patients. In case of a radiation source, external agency reporting is to AERB.
+In case of fire incidents, strong internal and external reporting systems are
+required. The system for reporting shall be documented. The organisation has a
+service continuity plan in case of fire and non-fire emergencies. The plan
+includes a mechanism for maintaining service continuity of the organisation's
+critical operations. This plan shall help the organisation to improve its ability
+to respond when such incidents occur. The plan shall ensure that critical systems
+and services do not fail or that failures are recovered within minimum time
+frames. The plan shall be tested at regular intervals.
+
+STOP-WORK CHECK: ★ STOP-WORK TRIGGER — Skipping a required internal or external
+report for a system or process failure (per the organisation's documented
+reporting guidance) is a stop-work trigger under Section 6 of this policy.
+
+MANDATORY (shall):
+- System in place for internal and external reporting of system and process
+  failures, documented
+- Contingency plan in place for anticipated system/process failures
+- Service continuity plan in place for fire and non-fire emergencies, covering
+  critical operations
+- Continuity plan ensures critical systems/services do not fail, or that failures
+  are recovered within minimum timeframes
+- Plan tested at regular intervals
+
+ILLUSTRATIVE ONLY:
+- MRI breakdown → internal report to head, external to patients (illustrative
+  routing; hospital defines its own routing per failure type)
+- Radiation source event → AERB (example of an external agency requirement; this
+  is AERB's regulatory requirement, not an NABH accreditation requirement)
+- Fire → strong internal and external reporting (example of failure type)
+
+DOCUMENTATION NOTE (starred): Reporting-system document, sampled failure reports
+(internal and external), and tested service-continuity plan required.
+
+REQUIRED RECORDS:
+1. Reporting-system document naming what is reported, to whom internally, and to
+   which external agency, with timelines.
+2. Sampled internal and external failure reports (e.g. equipment breakdown record;
+   external-agency notification where applicable).
+3. Tested service-continuity plan covering fire and non-fire emergencies for
+   critical operations.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.6.e | Level: Commitment
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Leadership ensures that it has a documented agreement for all outsourced
+services that include service parameters."
+
+GUIDEBOOK INTERPRETATION:
+The agreement shall specify the service parameters. Examples of service
+parameters include quality, numbers, reports and timelines. The agreement shall
+include agreed dispute resolution mechanisms. Even if a group/affiliate firm is
+providing services, there shall be an agreement with that unit.
+
+STOP-WORK CHECK: ★ STOP-WORK TRIGGER — Starting or continuing an outsourced
+service when there is no documented agreement that includes service parameters
+(quality, numbers, reports, timelines and how disputes are resolved) is a
+stop-work trigger under Section 6 of this policy.
+
+MANDATORY (shall):
+- Documented agreement for all outsourced services
+- Agreement specifies service parameters (quality, numbers, reports, timelines)
+- Agreement includes agreed dispute resolution mechanisms
+- Even a group/affiliate firm providing services requires an agreement on file
+
+ILLUSTRATIVE ONLY:
+- Quality, numbers, reports, timelines (listed as examples of service parameters;
+  the actual parameters depend on the service; these four are the minimum
+  expected from the Guidebook)
+
+DOCUMENTATION NOTE: No star; the stop-work trigger makes the agreement itself
+the critical evidence.
+
+REQUIRED RECORDS:
+1. Signed agreement for each outsourced service naming service parameters
+   (quality, numbers, reports, timelines) and dispute-resolution method.
+2. Current list of outsourced services.
+3. Evidence any affiliate or group-firm arrangement also has an agreement on file.
+
+────────────────────────────────────────────────────────────────────────────────
+OE: ROM.6.f | Level: Achievement
+────────────────────────────────────────────────────────────────────────────────
+VERBATIM OE TEXT:
+"Leadership monitors the quality of the outsourced services and improvements
+are made as required."
+
+GUIDEBOOK INTERPRETATION:
+The frequency of monitoring shall be determined by the organisation but shall
+not be less than once a year. This shall be done keeping in mind the criticality
+of that service towards providing patient care. It is preferable that the
+monitoring is done as per the service standards laid down by the organisation.
+Based on the results of the monitoring, the organisation shall work with the
+vendor to try and ensure that the agreed service parameters are met. In instances
+where the outsourcing has been done based on prescribed statutory norms/
+regulations, it is not mandatory to monitor the quality of the outsourced
+services.
+
+STOP-WORK CHECK: No direct stop-work trigger on this OE.
+
+MANDATORY (at Achievement level):
+- Quality of outsourced services monitored, not less than once a year
+- Monitoring done considering criticality of the service to patient care
+- Organisation works with vendor to ensure agreed service parameters are met
+  based on monitoring results
+
+MANDATORY EXCEPTION:
+- Where outsourcing is done based on prescribed statutory norms/regulations,
+  monitoring the quality of that outsourced service is NOT mandatory.
+
+ILLUSTRATIVE ONLY:
+- Monitoring as per the service standards laid down by the organisation
+  (preferred but not required)
+
+DOCUMENTATION NOTE: No star; Achievement level means evidence of periodic
+monitoring per service with improvement-action records where a gap was found.
+
+REQUIRED RECORDS:
+1. Periodic quality-monitoring review per outsourced service, at a frequency
+   matched to how critical that service is.
+2. Vendor improvement-action record where a gap was found.
+3. Documented exemption record for any service outsourced solely under prescribed
+   statutory norms (where monitoring is not mandatory).
+
+
+════════════════════════════════════════════════════════════════════════════════
+STOP-WORK TEXT — ROM.6 ONLY (verbatim stop_work_text(6) output)
+════════════════════════════════════════════════════════════════════════════════
+
+Do not start or continue an outsourced service when there is no documented
+agreement that includes service parameters (quality, numbers, reports, timelines
+and how disputes are resolved).
+
+Do not skip the organisation's internal or external reporting path for a system
+or process failure that the written guidance requires to be reported.
+
+Stop-work applies to the outsourced-service start/continue and to delay of
+required failure reporting. Immediate life-saving care continues.
+
+The person who stops tells the «Medical Superintendent» the same shift. Refusing
+to start an unsigned outsourced service, or reporting a system failure, is not a
+disciplinary matter.
+
+════════════════════════════════════════════════════════════════════════════════
+CHAPTER SUMMARY
+════════════════════════════════════════════════════════════════════════════════
+ROM.1: 9 OEs | CORE: a | Stars: a,b,c,f | Achievement: h | No stop-work
+ROM.2: 4 OEs | CORE: a | Stars: a,b      | No stop-work
+ROM.3: 7 OEs | No CORE | Stars: b | Achievement: f,g | Excellence: e | No stop-work
+ROM.4: 5 OEs | CORE: b | No stars | Achievement: d,e | No stop-work
+ROM.5: 6 OEs | No CORE | Stars: b,e,f | Achievement: d | Excellence: f | No stop-work
+ROM.6: 6 OEs | CORE: a | Stars: a,d | Achievement: d,f | STOP-WORK: YES (ROM.6.d, ROM.6.e)
+Total:       37 OEs | Standards with stop-work: ROM.6 only

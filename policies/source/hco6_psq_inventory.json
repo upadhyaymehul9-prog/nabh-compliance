@@ -1,0 +1,373 @@
+{
+  "1": {
+    "standard_code": "PSQ.1",
+    "title": "The organisation implements a structured patient safety programme.",
+    "oes": [
+      {
+        "oe_code": "PSQ.1.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": true,
+        "text": "The patient safety programme is developed, implemented and maintained by a multi-disciplinary safety committee."
+      },
+      {
+        "oe_code": "PSQ.1.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "The patient safety programme is comprehensive and covers all the major elements related to patient safety."
+      },
+      {
+        "oe_code": "PSQ.1.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The programme covers incidents ranging from “no harm” to “sentinel events”."
+      },
+      {
+        "oe_code": "PSQ.1.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Designated patient safety officer(s) coordinates implementation of the patient safety programme."
+      },
+      {
+        "oe_code": "PSQ.1.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation performs proactive analysis of patient safety risks and makes improvements accordingly."
+      },
+      {
+        "oe_code": "PSQ.1.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "The patient safety programme is reviewed and updated at least once a year."
+      },
+      {
+        "oe_code": "PSQ.1.g",
+        "letter": "g",
+        "level": "CORE",
+        "star": false,
+        "text": "The organisation adapts and implements national / international patient- safety goals / solutions / framework."
+      }
+    ],
+    "count": 7
+  },
+  "2": {
+    "standard_code": "PSQ.2",
+    "title": "The organisation implements a structured quality improvement and continuous monitoring programme.",
+    "oes": [
+      {
+        "oe_code": "PSQ.2.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": true,
+        "text": "The quality improvement programme is developed, implemented and maintained by a multi-disciplinary committee."
+      },
+      {
+        "oe_code": "PSQ.2.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "The quality improvement programme is comprehensive and covers all the major elements related to quality assurance."
+      },
+      {
+        "oe_code": "PSQ.2.c",
+        "letter": "c",
+        "level": "Excellence",
+        "star": false,
+        "text": "The quality improvement programme improves process efficiency and effectiveness."
+      },
+      {
+        "oe_code": "PSQ.2.d",
+        "letter": "d",
+        "level": "Excellence",
+        "star": false,
+        "text": "The quality improvement programme focuses on appropriateness of clinical care."
+      },
+      {
+        "oe_code": "PSQ.2.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": true,
+        "text": "There is a designated individual for coordinating and implementing the quality improvement programme."
+      },
+      {
+        "oe_code": "PSQ.2.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": true,
+        "text": "The quality improvement programme identifies opportunities for improvement based on the review at pre-defined intervals."
+      },
+      {
+        "oe_code": "PSQ.2.g",
+        "letter": "g",
+        "level": "Commitment",
+        "star": false,
+        "text": "The quality improvement programme is reviewed and updated at least once a year."
+      },
+      {
+        "oe_code": "PSQ.2.h",
+        "letter": "h",
+        "level": "Commitment",
+        "star": true,
+        "text": "Audits are conducted at regular intervals as a means of continuous monitoring."
+      },
+      {
+        "oe_code": "PSQ.2.i",
+        "letter": "i",
+        "level": "CORE",
+        "star": true,
+        "text": "There is an established process in the organisation to monitor and improve the quality of nursing care."
+      }
+    ],
+    "count": 9
+  },
+  "3": {
+    "standard_code": "PSQ.3",
+    "title": "The organisation identifies key indicators to monitor the structures, processes and outcomes, which are used as tools for continual improvement.",
+    "oes": [
+      {
+        "oe_code": "PSQ.3.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation identifies and monitors key indicators to oversee the clinical structures, processes and outcomes."
+      },
+      {
+        "oe_code": "PSQ.3.b",
+        "letter": "b",
+        "level": "CORE",
+        "star": false,
+        "text": "The organisation identifies and monitors the key indicators to oversee infection prevention and control activities."
+      },
+      {
+        "oe_code": "PSQ.3.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation identifies and monitors key indicators to oversee the managerial structures, processes and outcomes."
+      },
+      {
+        "oe_code": "PSQ.3.d",
+        "letter": "d",
+        "level": "CORE",
+        "star": false,
+        "text": "The organisation identifies and monitors key indicators to oversee patient safety activities."
+      },
+      {
+        "oe_code": "PSQ.3.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Verification of data is done regularly by the quality team."
+      },
+      {
+        "oe_code": "PSQ.3.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "There is a mechanism for analysis of data which results in identifying opportunities for improvement."
+      },
+      {
+        "oe_code": "PSQ.3.g",
+        "letter": "g",
+        "level": "Commitment",
+        "star": false,
+        "text": "The improvements are implemented and evaluated."
+      },
+      {
+        "oe_code": "PSQ.3.h",
+        "letter": "h",
+        "level": "Achievement",
+        "star": false,
+        "text": "Feedback about care and service is communicated to staff."
+      }
+    ],
+    "count": 8
+  },
+  "4": {
+    "standard_code": "PSQ.4",
+    "title": "The organisation uses appropriate quality improvement tools for its quality improvement activities.",
+    "oes": [
+      {
+        "oe_code": "PSQ.4.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": false,
+        "text": "The organisation undertakes quality improvement projects."
+      },
+      {
+        "oe_code": "PSQ.4.b",
+        "letter": "b",
+        "level": "Achievement",
+        "star": false,
+        "text": "The Quality improvement projects shall include improvements in patient care delivery and hospital operations which will have an impact on cost and efficiency."
+      },
+      {
+        "oe_code": "PSQ.4.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation uses appropriate analytical managerial and statistical tools for its quality improvement activities."
+      },
+      {
+        "oe_code": "PSQ.4.d",
+        "letter": "d",
+        "level": "Achievement",
+        "star": false,
+        "text": "The organisation has a mechanism to capture patient reported outcome measures."
+      }
+    ],
+    "count": 4
+  },
+  "5": {
+    "standard_code": "PSQ.5",
+    "title": "There is an established system for clinical audit.",
+    "oes": [
+      {
+        "oe_code": "PSQ.5.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "Clinical audits are performed to improve the quality of patient care."
+      },
+      {
+        "oe_code": "PSQ.5.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "The parameters to be audited are defined by the organisation."
+      },
+      {
+        "oe_code": "PSQ.5.c",
+        "letter": "c",
+        "level": "Achievement",
+        "star": false,
+        "text": "Medical and nursing staff participate in clinical audit."
+      },
+      {
+        "oe_code": "PSQ.5.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and staff anonymity are maintained."
+      },
+      {
+        "oe_code": "PSQ.5.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Clinical audits are documented."
+      },
+      {
+        "oe_code": "PSQ.5.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "Remedial measures are implemented."
+      }
+    ],
+    "count": 6
+  },
+  "6": {
+    "standard_code": "PSQ.6",
+    "title": "The patient safety and quality improvement programme are supported by the management.",
+    "oes": [
+      {
+        "oe_code": "PSQ.6.a",
+        "letter": "a",
+        "level": "Achievement",
+        "star": false,
+        "text": "The management creates a culture of safety."
+      },
+      {
+        "oe_code": "PSQ.6.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "The leaders at all levels in the organisation are aware of the intent of the patient safety and quality improvement programme and the approach to its implementation."
+      },
+      {
+        "oe_code": "PSQ.6.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Departmental leaders are involved in patient safety and quality improvement."
+      },
+      {
+        "oe_code": "PSQ.6.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Organisation earmarks adequate funds from its annual budget in this regard."
+      },
+      {
+        "oe_code": "PSQ.6.e",
+        "letter": "e",
+        "level": "Achievement",
+        "star": false,
+        "text": "The management identifies organisational performance improvement targets."
+      },
+      {
+        "oe_code": "PSQ.6.f",
+        "letter": "f",
+        "level": "Excellence",
+        "star": false,
+        "text": "The management uses the feedback obtained from the work force to improve patient safety and quality improvement programme."
+      }
+    ],
+    "count": 6
+  },
+  "7": {
+    "standard_code": "PSQ.7",
+    "title": "Incidents are collected and analysed to ensure continual quality improvement.",
+    "oes": [
+      {
+        "oe_code": "PSQ.7.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation implements an incident management system."
+      },
+      {
+        "oe_code": "PSQ.7.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation has a mechanism to identify sentinel events."
+      },
+      {
+        "oe_code": "PSQ.7.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation has established processes for analysis of incidents."
+      },
+      {
+        "oe_code": "PSQ.7.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Corrective and preventive actions are taken based on the findings of such analysis."
+      },
+      {
+        "oe_code": "PSQ.7.e",
+        "letter": "e",
+        "level": "Achievement",
+        "star": false,
+        "text": "The organisation incorporates risks identified in the analysis of incidents into the risk management system."
+      },
+      {
+        "oe_code": "PSQ.7.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation shall have a process for informing various stakeholders in case of a near miss / adverse event / sentinel event."
+      }
+    ],
+    "count": 6
+  }
+}

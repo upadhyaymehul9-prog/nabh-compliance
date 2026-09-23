@@ -1,0 +1,401 @@
+{
+  "1": {
+    "standard_code": "IPC.1",
+    "title": "The organisation has a comprehensive and coordinated Infection Prevention and Control (IPC) programme aimed at reducing / eliminating risks to patients, visitors, providers of care and community.",
+    "oes": [
+      {
+        "oe_code": "IPC.1.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": true,
+        "text": "The infection prevention and control programme is documented, which aims at preventing and reducing the risk of healthcare associated infections in the hospital."
+      },
+      {
+        "oe_code": "IPC.1.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "The infection prevention and control programme identifies high-risk activities and has written guidance to prevent and manage infections for these activities."
+      },
+      {
+        "oe_code": "IPC.1.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The infection prevention and control programme is reviewed and updated at least once a year."
+      },
+      {
+        "oe_code": "IPC.1.d",
+        "letter": "d",
+        "level": "Achievement",
+        "star": false,
+        "text": "The infection prevention and control programme is reviewed based on infection prevention and control assessment tool."
+      },
+      {
+        "oe_code": "IPC.1.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation has a multi-disciplinary infection prevention and control committee, which co-ordinates all infection prevention and control activities."
+      },
+      {
+        "oe_code": "IPC.1.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation has an infection Prevention and control team, which coordinates the implementation of all infection prevention and control activities."
+      },
+      {
+        "oe_code": "IPC.1.g",
+        "letter": "g",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation has designated infection prevention and control officer as part of the infection prevention and control team."
+      },
+      {
+        "oe_code": "IPC.1.h",
+        "letter": "h",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation has designated infection prevention and control nurse(s) as part of the infection prevention and control team."
+      },
+      {
+        "oe_code": "IPC.1.i",
+        "letter": "i",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation implements information, education and communication programme for infection prevention and control activities for the community."
+      },
+      {
+        "oe_code": "IPC.1.j",
+        "letter": "j",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation participates in managing community outbreaks."
+      }
+    ],
+    "count": 10
+  },
+  "2": {
+    "standard_code": "IPC.2",
+    "title": "The organisation provides adequate and appropriate resources for infection prevention and control.",
+    "oes": [
+      {
+        "oe_code": "IPC.2.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": false,
+        "text": "The management makes available resources required for the infection prevention and control programme including allocation of adequate funds from its annual budget."
+      },
+      {
+        "oe_code": "IPC.2.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Adequate and appropriate personal protective equipment, soaps, and disinfectants are available and used correctly."
+      },
+      {
+        "oe_code": "IPC.2.c",
+        "letter": "c",
+        "level": "CORE",
+        "star": false,
+        "text": "Adequate and appropriate facilities for hand hygiene in all patient-care areas are accessible to healthcare providers."
+      },
+      {
+        "oe_code": "IPC.2.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Isolation / barrier nursing facilities are available."
+      }
+    ],
+    "count": 4
+  },
+  "3": {
+    "standard_code": "IPC.3",
+    "title": "The organisation implements the infection prevention and control processes in clinical areas.",
+    "oes": [
+      {
+        "oe_code": "IPC.3.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation adheres to standard precautions at all times."
+      },
+      {
+        "oe_code": "IPC.3.b",
+        "letter": "b",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation adheres to hand-hygiene guidelines."
+      },
+      {
+        "oe_code": "IPC.3.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation adheres to transmission-based precautions."
+      },
+      {
+        "oe_code": "IPC.3.d",
+        "letter": "d",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation adheres to safe injection and infusion practices."
+      },
+      {
+        "oe_code": "IPC.3.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": true,
+        "text": "Appropriate antimicrobial usage policy is established and documented"
+      },
+      {
+        "oe_code": "IPC.3.f",
+        "letter": "f",
+        "level": "CORE",
+        "star": false,
+        "text": "The organisation implements the antimicrobial stewardship programme and monitors the use of antimicrobial agents."
+      }
+    ],
+    "count": 6
+  },
+  "4": {
+    "standard_code": "IPC.4",
+    "title": "The organisation implements the infection prevention and control processes in support services.",
+    "oes": [
+      {
+        "oe_code": "IPC.4.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation has appropriate engineering controls to prevent infections."
+      },
+      {
+        "oe_code": "IPC.4.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation designs and implements a plan to reduce the risk of infection during construction and renovation."
+      },
+      {
+        "oe_code": "IPC.4.c",
+        "letter": "c",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation adheres to housekeeping procedures."
+      },
+      {
+        "oe_code": "IPC.4.d",
+        "letter": "d",
+        "level": "CORE",
+        "star": false,
+        "text": "Biomedical waste (BMW) is handled appropriately and safely."
+      },
+      {
+        "oe_code": "IPC.4.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation adheres to laundry and linen management processes."
+      },
+      {
+        "oe_code": "IPC.4.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation adheres to kitchen sanitation and food-handling issues."
+      }
+    ],
+    "count": 6
+  },
+  "5": {
+    "standard_code": "IPC.5",
+    "title": "The organisation takes actions to prevent healthcare associated infections (HAI) in patients.",
+    "oes": [
+      {
+        "oe_code": "IPC.5.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation takes action to prevent catheter-associated urinary tract Infections."
+      },
+      {
+        "oe_code": "IPC.5.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation takes action to prevent ventilator- associated pneumonia."
+      },
+      {
+        "oe_code": "IPC.5.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation takes action to prevent central line associated blood stream infections."
+      },
+      {
+        "oe_code": "IPC.5.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation takes action to prevent surgical site infections."
+      }
+    ],
+    "count": 4
+  },
+  "6": {
+    "standard_code": "IPC.6",
+    "title": "The organisation performs surveillance to capture and monitor infection prevention and control data.",
+    "oes": [
+      {
+        "oe_code": "IPC.6.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": false,
+        "text": "The scope of surveillance incorporates tracking and analysing of infection risks, rates and trends."
+      },
+      {
+        "oe_code": "IPC.6.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Verification of data is done regularly by the infection prevention and control team."
+      },
+      {
+        "oe_code": "IPC.6.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Surveillance is directed towards the identified high-risk activities."
+      },
+      {
+        "oe_code": "IPC.6.d",
+        "letter": "d",
+        "level": "CORE",
+        "star": false,
+        "text": "Surveillance includes monitoring compliance with hand-hygiene guidelines."
+      },
+      {
+        "oe_code": "IPC.6.e",
+        "letter": "e",
+        "level": "Achievement",
+        "star": false,
+        "text": "Surveillance includes mechanisms to capture the occurrence of multi-drug- resistant organisms."
+      },
+      {
+        "oe_code": "IPC.6.f",
+        "letter": "f",
+        "level": "CORE",
+        "star": false,
+        "text": "Surveillance includes monitoring the effectiveness of housekeeping services."
+      },
+      {
+        "oe_code": "IPC.6.g",
+        "letter": "g",
+        "level": "Commitment",
+        "star": false,
+        "text": "Feedback regarding surveillance data is provided regularly to the appropriate health care provider."
+      },
+      {
+        "oe_code": "IPC.6.h",
+        "letter": "h",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation identifies and takes appropriate action to control outbreaks of infections."
+      },
+      {
+        "oe_code": "IPC.6.i",
+        "letter": "i",
+        "level": "Commitment",
+        "star": false,
+        "text": "Surveillance data is analysed and appropriate corrective and preventive actions are taken."
+      }
+    ],
+    "count": 9
+  },
+  "7": {
+    "standard_code": "IPC.7",
+    "title": "Infection prevention measures include sterilisation and / or disinfection of instruments, equipment and devices.",
+    "oes": [
+      {
+        "oe_code": "IPC.7.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation provides adequate space and appropriate zoning for sterilisation activities."
+      },
+      {
+        "oe_code": "IPC.7.b",
+        "letter": "b",
+        "level": "CORE",
+        "star": true,
+        "text": "Cleaning, packing, disinfection and / or sterilisation, storing and the issue of items is done as per the written guidance."
+      },
+      {
+        "oe_code": "IPC.7.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": true,
+        "text": "Reprocessing of instruments, equipment and devices are done as per written guidance."
+      },
+      {
+        "oe_code": "IPC.7.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": true,
+        "text": "Regular validation tests for sterilisation are carried out and documented."
+      },
+      {
+        "oe_code": "IPC.7.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": true,
+        "text": "The established recall procedure is implemented when a breakdown in the sterilisation system is identified."
+      }
+    ],
+    "count": 5
+  },
+  "8": {
+    "standard_code": "IPC.8",
+    "title": "The organisation takes action to prevent or reduce healthcare associated infections in its staff.",
+    "oes": [
+      {
+        "oe_code": "IPC.8.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation implements occupational health and safety practices as per written guidance to reduce the risk of transmitting microorganisms among health care providers."
+      },
+      {
+        "oe_code": "IPC.8.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation implements an immunisation policy for its staff."
+      },
+      {
+        "oe_code": "IPC.8.c",
+        "letter": "c",
+        "level": "Achievement",
+        "star": false,
+        "text": "The organisation implements work restrictions for health care providers with transmissible infections."
+      },
+      {
+        "oe_code": "IPC.8.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation implements measures for blood and body fluid exposure prevention."
+      },
+      {
+        "oe_code": "IPC.8.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": true,
+        "text": "Appropriate post-exposure prophylaxis is provided to all staff members concerned."
+      }
+    ],
+    "count": 5
+  }
+}

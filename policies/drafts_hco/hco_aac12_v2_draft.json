@@ -1,0 +1,133 @@
+{
+  "standard_code": "AAC.12",
+  "chapter": "HCO",
+  "oe_codes": [
+    "AAC.12.a",
+    "AAC.12.b",
+    "AAC.12.c",
+    "AAC.12.d",
+    "AAC.12.e",
+    "AAC.12.f",
+    "AAC.12.g"
+  ],
+  "policy_title": "Established Discharge Process",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} runs an established discharge process.\n\nIt covers seven jobs that match the standard:\n\n- plan discharge in consultation with the patient and/or family;\n- coordinate discharge among departments and agencies involved, including medico-legal and absconded cases;\n- written guidance for patients leaving against medical advice (LAMA);\n- give a discharge summary to all patients leaving, including LAMA, and a death summary to next of kin;\n- adhere to planned discharge (at least 24 hours' advance planning; minimise unplanned discharges);\n- expand access through domiciliary visits wherever applicable;\n- monitor discharge time, set benchmarks and make continual improvement.\n\nThe chapter intent is that transfer and discharge protocols are well defined and that continuity of care may extend to the community through home health care services where applicable.\n\nThis policy owns the discharge process. AAC.13 owns the content of the discharge summary. Cross-reference AAC.13 for what the summary must contain; do not duplicate that content list here. AAC.4.g is cross-referenced for planned-discharge education elements. AAC.3 owns transfer-out to another facility (not discharge home).\n\nWords marked «like this» are defaults a hospital can keep. A blank marked «________» has no sensible default. Fill it in before this document is signed.",
+  "scope": "This policy applies to every patient leaving {{HOSPITAL_NAME}}'s care by planned discharge, LAMA, absconding recovery workflows, or death (death summary to next of kin), and to the staff who run that process.\n\nIt binds:\n\n- treating doctors who determine readiness and plan discharge with the patient and family;\n- nurses who prepare the patient for leaving and support education;\n- registration / front-office and accounts who complete papers within time;\n- the «discharge coordinator» where this hospital uses that role;\n- the «Medical Superintendent» who is accountable for coordination including MLC and police intimation;\n- the «Quality Coordinator» who audits discharge time and process.\n\nBoundaries with other policies of {{HOSPITAL_NAME}}:\n\n- AAC.13 owns discharge-summary content (identification, clinical fields, follow-up wording, urgent care, cause of death). This policy owns that a summary is given and that the process runs; it does not redefine summary fields.\n- AAC.3 owns transfer-out / referral to another facility. This policy owns discharge from the organisation's care.\n- AAC.4.g owns elements of patient education for continued care that planned discharge prepares; this policy owns the 24-hour planning and minimising unplanned discharges.\n- PRE owns rights and consent method for refusal / LAMA declaration. This policy owns LAMA written guidance for the discharge act and that a summary is still given.\n- Billing / PRE cost explanation owns tariff conversation. This policy owns coordination with accounts so papers complete in time.",
+  "policy_statement": "{{HOSPITAL_NAME}} plans the patient's discharge in consultation with the patient and/or family. Discharge is coordinated among the departments and agencies involved, including medico-legal and absconded cases. Written guidance governs LAMA. A discharge summary is given to all patients leaving, including LAMA; in case of death, a death summary is given to the next of kin.\n\n{{HOSPITAL_NAME}} adheres to planned discharge, expands access through domiciliary visits wherever applicable, monitors discharge time against benchmarks and improves continually.\n\n{{HOSPITAL_NAME}} does not discharge without consultation and coordination, and does not treat AAC.13 summary content as a substitute for this process.",
+  "procedure_steps": [
+    "5.1 Discharge planned with patient and family\n\nThe patient's discharge process is planned in consultation with the patient and/or family at {{HOSPITAL_NAME}}.\n\nThe treating doctor determines readiness for discharge during regular reassessments and discusses the plan with the patient and family. The discussion covers expected timing, continued care needs and who will receive the discharge summary. Agreement or concerns are recorded in the patient file.",
+    "5.2 Coordinated discharge including MLC and absconded cases\n\nThe discharge process is coordinated among various departments and agencies involved at {{HOSPITAL_NAME}}, including medico-legal and absconded cases.\n\nDischarge procedures are documented so that departments — including accounts — complete discharge papers within time. For medico-legal cases (MLC), the organisation ensures that the police are informed about the discharge. Absconded-patient workflows follow the same coordination discipline when the patient is found or when the case is closed under this hospital's written process. The «discharge coordinator or ward nurse in charge» tracks open tasks until the patient vacates the bed or the case is otherwise closed.",
+    "5.3 Written guidance for leaving against medical advice\n\nWritten guidance governs the discharge of patients leaving against medical advice at {{HOSPITAL_NAME}}.\n\nThe treating doctor explains the consequences of leaving to the patient or attendant. The written guidance addresses reasons for LAMA so the organisation can take corrective and/or preventive action where patterns appear. The patient/attendant declaration is recorded in a proper format. LAMA does not cancel the duty to hand over a discharge summary and reports (see section 5.4). The «Medical Superintendent» holds the current LAMA written guidance.",
+    "5.4 Discharge summary given to all leaving patients\n\nA discharge summary is given to all patients leaving {{HOSPITAL_NAME}}, including patients leaving against medical advice. In case of death, a death summary is given to the next of kin or relatives.\n\nThe organisation hands over the discharge summary and reports to the patient or attendant in all cases, and retains a copy in the medical record. For LAMA, the patient's right to refuse treatment and request to leave is respected; the declaration is recorded; the summary and reports are still handed over. Terminology for such patients may differ; the intent of issuing the summary with reports remains the same.\n\nWhat the summary must contain is owned by AAC.13. This step owns that the summary is issued as part of the discharge process.",
+    "5.5 Adherence to planned discharge\n\n{{HOSPITAL_NAME}} adheres to planned discharge. Discharge is planned at least 24 hours in advance. Planning includes preparation of the draft discharge summary, refund of medications where applicable, patient education on continued care, and identified special needs — for example requirement of special equipment, devices, transportation (wheelchair), and safe and effective use of medical equipment. Unplanned discharges are minimised.\n\nCross-reference AAC.4.g for related continued-care education elements. Cross-reference AAC.13 for summary content and understandable instructions.",
+    "5.6 Domiciliary visits wherever applicable\n\nWherever applicable, care is provided by expanding access through domiciliary visits.\n\nTrained healthcare workers visit patients at their residences to deliver medical care, treatment and/or support when this hospital's scope includes that service. Domiciliary visits may address chronic conditions, fall prevention, memory care, nutrition, exercise and other health concerns. For palliative care patients, home visits for change of catheters and/or other support care may be conducted. Visits are scheduled at discharge planning when applicable and recorded.",
+    "5.7 Monitoring discharge time and continual improvement\n\n{{HOSPITAL_NAME}} monitors the discharge time, sets appropriate benchmarks and makes continual improvement.\n\nThe organisation defines the time taken for discharge. The timeframe may differ by payer mix — for example cash, insurance, corporate. The organisation conforms to the defined timeframe. Delays are monitored; reasons are identified; improvement activities are performed.\n\nThe start-point for calculating discharge time is when the treating doctor declares the patient fit for discharge. The end-point is when the patient vacates the bed. The «Quality Coordinator» reviews delay themes «monthly» and reports to the Medical Superintendent."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable for the discharge process, MLC police intimation and LAMA written guidance.\n- Reviews discharge-time improvement actions.\n\nTreating doctors\n- Determine readiness; consult patient/family; explain LAMA consequences; declare fit for discharge; ensure summary is issued (content per AAC.13).\n\nNurses\n- Support preparation, education and hand-over of reports; record LAMA declaration support; confirm bed vacated time.\n\nDischarge coordinator (if used)\n- Tracks department tasks (ward, accounts, pharmacy, MLC paperwork) until papers complete and bed vacated.\n\nRegistration / front-office and accounts\n- Complete discharge papers within the defined timeframe; support payer-mix timing benchmarks.\n\nQuality Coordinator\n- Audits this policy «quarterly» and monitors discharge-time data (see monitoring section).\n- Tracks CAPA when discharge-process defects recur.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Guidebook to Accreditation Standards for Hospitals, 6th Edition — Access, Assessment and Continuity of Care chapter, standard AAC.12 (PDF indices ~90–92; source OCR policies/source/hco6_aac_ocr.txt; PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).\n- Cross-reference within the same guidebook: AAC.13 (discharge summary content); AAC.4.g (continued-care education elements).\n- Internal documents of {{HOSPITAL_NAME}}: discharge checklist; LAMA written guidance and declaration form; MLC police intimation log; discharge-time register; domiciliary visit records where applicable.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator.\n\nCopies issued to: every in-patient ward; emergency; intensive care; accounts; registration/front-office; nursing administration; discharge coordinator if that role exists.\n\nThe current version is available to all staff at the «front-office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "AAC — Access, Assessment and Continuity of Care (NABH HCO chapter)\nCAPA — corrective and preventive action\nHCO — Hospital Accreditation Programme (NABH Full Accreditation)\nLAMA — leaving against medical advice\nMLC — medico-legal case\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPRE — Patient Rights and Education (NABH HCO chapter)",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "AAC.12.a",
+      "requirement": "The patient's discharge process is planned in consultation with the patient and / or family.",
+      "steps": "Section 3; 5.1 Discharge planned with patient and family; Section 4 item 1",
+      "responsible": "Treating doctors (plan and consult); nurses (support)",
+      "records": [
+        "Reassessment note stating readiness for discharge.",
+        "Record of discussion with patient and/or family about the discharge plan.",
+        "Quarterly audit sample of consultation before discharge."
+      ]
+    },
+    {
+      "oe_code": "AAC.12.b",
+      "requirement": "The discharge process is coordinated among various departments and agencies involved (including medico-legal and absconded cases).",
+      "steps": "Section 3; 5.2 Coordinated discharge including MLC and absconded cases; Section 4 item 2",
+      "responsible": "Discharge coordinator if used; ward nurse in charge; accounts; Medical Superintendent (MLC/police)",
+      "records": [
+        "Documented discharge procedure covering department coordination including accounts.",
+        "MLC discharge file with police intimation record.",
+        "Absconded-case coordination record where applicable."
+      ]
+    },
+    {
+      "oe_code": "AAC.12.c",
+      "requirement": "Written guidance governs the discharge of patients leaving against medical advice.",
+      "steps": "Section 3; 5.3 Written guidance for leaving against medical advice; Section 4 item 3",
+      "responsible": "Medical Superintendent (holds guidance); treating doctors (explain and record)",
+      "records": [
+        "Current LAMA written guidance.",
+        "Patient/attendant LAMA declaration in the required format.",
+        "Record that consequences of leaving were explained by the treating doctor."
+      ]
+    },
+    {
+      "oe_code": "AAC.12.d",
+      "requirement": "A discharge summary is given to all the patients leaving the organisation including patients leaving against medical advice.",
+      "steps": "Section 3; 5.4 Discharge summary given to all leaving patients; Section 4 item 4",
+      "responsible": "Treating doctors (issue); nurses/registration (hand-over support)",
+      "records": [
+        "Copy of discharge summary retained in the medical record for every leaver sampled.",
+        "LAMA cases with summary and reports handed over.",
+        "Death summary acknowledgement by next of kin where applicable."
+      ]
+    },
+    {
+      "oe_code": "AAC.12.e",
+      "requirement": "The organisation adheres to planned discharge.",
+      "steps": "Section 3; 5.5 Adherence to planned discharge; Section 4 item 5",
+      "responsible": "Treating doctors and nurses; Quality Coordinator (audit)",
+      "records": [
+        "Expected discharge noted at least 24 hours in advance for planned cases.",
+        "Draft discharge summary and special-needs preparation before discharge.",
+        "Log of unplanned discharges with reasons and minimisation actions."
+      ]
+    },
+    {
+      "oe_code": "AAC.12.f",
+      "requirement": "The care shall be provided by expanding access to health practices through domiciliary visits, wherever applicable.",
+      "steps": "Section 3; 5.6 Domiciliary visits wherever applicable; Section 4 item 6",
+      "responsible": "Treating doctors (plan); trained healthcare workers (visit); Quality Coordinator (audit)",
+      "records": [
+        "Scope statement or written note of when domiciliary visits apply.",
+        "Domiciliary visit schedule and visit notes for eligible patients.",
+        "Discharge plan entries linking home visits where applicable."
+      ]
+    },
+    {
+      "oe_code": "AAC.12.g",
+      "requirement": "The organisation monitors the discharge time, sets appropriate benchmarks and makes continual improvement.",
+      "steps": "Section 3; 5.7 Monitoring discharge time and continual improvement; Section 4 item 7",
+      "responsible": "Quality Coordinator (monitor); Medical Superintendent (improvement); ward and accounts (timestamps)",
+      "records": [
+        "Defined discharge-time benchmarks (including by payer mix where used).",
+        "Discharge-time log from fit-for-discharge to bed vacated.",
+        "Delay analysis and continual-improvement actions."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO AAC.12 v2 (2026-08-20). PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. Source OCR policies/source/hco6_aac_ocr.txt (PDF idxs ~90–92). Seven OEs a–g. Asterisk: b (coordination incl MLC/absconded), c (LAMA written guidance) — fuller procedure and evidence. No stop-work. P2: accreditation-only. chapter=HCO. doc_no «HCO/AAC/POL/12». Boundary: AAC.12 owns process; AAC.13 owns summary content — cross-ref, do not duplicate field list. Cross-ref AAC.4.g for planned-discharge education. Do not copy SHCO AAC.8 wording.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "HCO Full 6th Edition AAC.12 v2 draft from guidebook OCR; seven steps; asterisk b,c; no stop-work; accreditation-only P2."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation has an established discharge process — planned with the patient and family, coordinated across departments, and monitored from fit-for-discharge to bed vacated.",
+  "exceptions": "The following are prohibited. There is no ward convenience exception.\n\n1. Declaring a patient ready for discharge without consulting the patient and/or family.\n2. Completing discharge without coordinating the departments and agencies involved — including accounts, and police intimation for medico-legal cases.\n3. Allowing LAMA without following written guidance and without recording the patient/attendant declaration.\n4. Letting a patient leave (including LAMA) without a discharge summary, or failing to give a death summary to next of kin.\n5. Treating same-day surprise discharge as planned when the standard requires planning at least 24 hours in advance, without documenting why unplanned discharge could not be avoided.\n6. Ignoring domiciliary visit arrangements where this hospital's scope makes them applicable and they were part of the discharge plan.\n7. Failing to measure discharge time from fit-for-discharge to bed vacated, or ignoring repeated delay without improvement action.\n\nStaff who see one of these acts report it the same shift to the «treating doctor», the «discharge coordinator» if used, or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly» and reviews discharge-time data «monthly».\n\nWhat is monitored:\n\n- Evidence of patient/family consultation before discharge.\n- Coordination completeness including accounts and MLC police intimation where applicable.\n- LAMA cases following written guidance with recorded declaration and summary issued.\n- Discharge or death summary handed over for all sampled leavers.\n- Proportion of discharges planned ≥24 hours in advance; reasons for unplanned discharges.\n- Domiciliary visits completed where applicable and planned.\n- Discharge time from fit-for-discharge to bed vacated against benchmarks by payer mix; delay reasons and CAPA.\n\nRoot-cause analysis is required when the same discharge-process defect or delay theme recurs within six months.\n\nThis policy is reviewed «annually», and sooner when bed management, payer mix or MLC workflows change.",
+  "training_competency": "All treating doctors, nurses, registration/accounts staff and the discharge coordinator (if used) are trained on this policy at induction and «once a year» after that. Training covers consultation, coordination including MLC, LAMA guidance, issuing summaries, 24-hour planning, domiciliary visits where applicable and discharge-time measurement.\n\nStaff acknowledgement\n\nI have read this Established Discharge Process policy of {{HOSPITAL_NAME}}. I will plan discharge with the patient and family, coordinate departments, follow LAMA guidance and measure discharge time from fit-for-discharge to bed vacated.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/AAC/POL/12»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "stop_work": "",
+  "template_test": "hco_aac_v2_adoptable_shape",
+  "subtitle": "Planned, coordinated discharge process including LAMA and time monitoring.",
+  "doc_no": "«HCO/AAC/POL/12»",
+  "programme": "HCO Full Accreditation, 6th Edition",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.AAC.12",
+  "prepared_by": "«Medical Superintendent»"
+}

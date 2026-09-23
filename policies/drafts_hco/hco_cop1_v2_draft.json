@@ -1,0 +1,121 @@
+{
+  "standard_code": "COP.1",
+  "chapter": "HCO",
+  "oe_codes": [
+    "COP.1.a",
+    "COP.1.b",
+    "COP.1.c",
+    "COP.1.d",
+    "COP.1.e",
+    "COP.1.f"
+  ],
+  "policy_title": "Uniform Care Guided by Written Guidance",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard COP.1: Uniform care to patients is provided in all settings of the organisation and is guided by written guidance.\n\nThis policy covers all 6 requirements under this standard, listed in detail below.\n\nThis policy covers uniform care guided by written guidance specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who deliver or oversee the care described in COP.1 at {{HOSPITAL_NAME}}, including the «Quality Coordinator», treating doctors, nurses and the Quality Coordinator.\n\nThis policy covers all 6 requirements under this standard, listed in detail below.\n\nThis policy covers uniform care guided by written guidance specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.",
+  "policy_statement": "{{HOSPITAL_NAME}} implements COP.1 so that uniform care to patients is provided in all settings of the organisation and is guided by written guidance..\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Uniform care is provided to patients following written guidance\n\nUniform care is provided to patients following written guidance .\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases.",
+    "5.2 The organisation has a uniform process for identification of patients..\n\nThe organisation has a uniform process for identification of patients and uses at least two identifiers.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.3 The organisation implements evidence-based clinical practice guidelines..\n\nThe organisation implements evidence-based clinical practice guidelines and / or clinical protocols to guide uniform patient care.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.4 Clinical care pathways are developed, consistently followed across all..\n\nClinical care pathways are developed, consistently followed across all settings of care, and reviewed periodically.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.5 Multi-disciplinary and multi-speciality care, where appropriate, is..\n\nMulti-disciplinary and multi-speciality care, where appropriate, is planned based on best clinical practices / clinical practice guidelines and delivered in a uniform manner across the organisation.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.6 Telemedicine facility is provided safely and securely based on written..\n\nTelemedicine facility is provided safely and securely based on written guidance.\n\nMethod note: Follow the organisation's written guidance for this asterisked element; keep records that show the guidance was followed for the sampled cases."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that COP.1 is resourced and followed.\n\nQuality Coordinator\n- Owns day-to-day implementation and records for this standard.\n\nTreating doctors / nurses / technicians (as applicable)\n- Deliver care as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Care of Patients, standard COP.1.\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — COP.1 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).\n- Internal documents of {{HOSPITAL_NAME}}: written guidance and registers named for COP.1.",
+  "distribution": "Medical Superintendent; Quality Coordinator; department clinical staff covered by COP.1",
+  "abbreviations": "COP — Care of Patients (NABH Hospitals chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element\nCORE — Core objective element (NABH)\nRCA — Root Cause Analysis\nCAPA — Corrective and Preventive Action",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "COP.1.a",
+      "requirement": "Uniform care is provided to patients following written guidance .",
+      "steps": "Section 3; 5.1",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Written uniform-care guidance or protocol document.",
+        "Staff training record on the guidance.",
+        "Cross-setting consistency-check record (OPD, IPD, emergency)."
+      ]
+    },
+    {
+      "oe_code": "COP.1.b",
+      "requirement": "The organisation has a uniform process for identification of patients and uses at least two identifiers.",
+      "steps": "Section 3; 5.2",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Written patient-identification procedure naming the two identifiers used.",
+        "Identification-practice observation record for a sampled encounter.",
+        "Wristband or ID-card record, where used."
+      ]
+    },
+    {
+      "oe_code": "COP.1.c",
+      "requirement": "The organisation implements evidence-based clinical practice guidelines and / or clinical protocols to guide uniform patient care.",
+      "steps": "Section 3; 5.3",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Adopted clinical practice guideline or protocol list.",
+        "Reference-source record (professional body, national or international guideline).",
+        "Staff-access record to the current guidelines."
+      ]
+    },
+    {
+      "oe_code": "COP.1.d",
+      "requirement": "Clinical care pathways are developed, consistently followed across all settings of care, and reviewed periodically.",
+      "steps": "Section 3; 5.4",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Developed care-pathway document for a selected condition.",
+        "Consistency-check record across care settings.",
+        "Periodic-review record of the pathway."
+      ]
+    },
+    {
+      "oe_code": "COP.1.e",
+      "requirement": "Multi-disciplinary and multi-speciality care, where appropriate, is planned based on best clinical practices / clinical practice guidelines and delivered in a uniform manner across the organisation.",
+      "steps": "Section 3; 5.5",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Multi-disciplinary care-planning record for a sampled complex case.",
+        "Best-practice or guideline reference used.",
+        "Uniform-delivery record across the organisation."
+      ]
+    },
+    {
+      "oe_code": "COP.1.f",
+      "requirement": "Telemedicine facility is provided safely and securely based on written guidance.",
+      "steps": "Section 3; 5.6",
+      "responsible": "Quality Coordinator",
+      "records": [
+        "Written telemedicine guidance covering safety and security.",
+        "Telemedicine Practice Guidelines (MoHFW) compliance record.",
+        "Consultation-documentation record for a sampled telemedicine encounter."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO COP.1 v2 (2026-08-20). Official Standards PDF OE count 6; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: af. CORE: b. Achievement: none. Excellence: de.\nStop-work: omitted.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/01.\nDo not touch AAC.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "HCO Full 6th Edition COP.1 v2 draft from official Standards PDF + guidebook OCR; draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Uniform care to patients is provided in all settings of the organisation and is guided by written guidance.",
+  "exceptions": "1. Do not skip: Uniform care is provided to patients following written guidance .\n2. Do not skip: The organisation has a uniform process for identification of patients and uses at least two identifiers.\n3. Do not skip: The organisation implements evidence-based clinical practice guidelines and / or clinical protocols to guide...\n4. Do not skip: Clinical care pathways are developed, consistently followed across all settings of care, and reviewed...\n5. Do not skip: Multi-disciplinary and multi-speciality care, where appropriate, is planned based on best clinical practices...\n6. Do not skip: Telemedicine facility is provided safely and securely based on written guidance.\n7. Staff who see a COP.1 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Uniform Care Guided by Written Guidance policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/COP/POL/01»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Quality Coordinator»",
+  "template_test": "hco_cop_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — COP.1.",
+  "doc_no": "«HCO/COP/POL/01»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.COP.1",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

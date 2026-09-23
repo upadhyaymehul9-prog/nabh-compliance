@@ -1,0 +1,121 @@
+{
+  "standard_code": "HRM.5",
+  "chapter": "HCO",
+  "oe_codes": [
+    "HRM.5.a",
+    "HRM.5.b",
+    "HRM.5.c",
+    "HRM.5.d",
+    "HRM.5.e",
+    "HRM.5.f"
+  ],
+  "policy_title": "Job-Specific Staff Training",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard HRM.5: Staff are appropriately trained based on their specific job description.\n\nThis policy covers all 6 requirements under this standard, listed in detail below.\n\nChapter intent (official Standards PDF): The most important resource of the organisation is its human resource. Human resources are an asset for the effective and efficient functioning of the organisation. The management plans on identifying the right number and skill mix of staff required to render safe care to the patients. Recruitment of staff is accomplished by having a uniform and standardised system. The organisation must orient the staff including outsourced staff, volunteers, students and trainees to its environment and also orient them to specific duties and responsibilities related to their position. The organisation should plan to have an ongoing professional training / in-service education to enhance the competencies and skills of the staff continually. A systematic and structured appraisal system must be used for staff development. The organisation uses this as an opportunity to discuss, motivate, identify gaps in the performance of the staff. The organisation promotes the physical and mental well-being of staff. A grievance handling mechanism and disciplinary procedure should be in place. Credentialing and privileging of health-care professionals (medical, nursing and other para-clinical professional) are done to ensure patient safety. A document containing all such personal information has to be maintained for all staff.\n\nThis policy covers job-specific staff training specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, hospital governance, or facility safety — are covered in the hospital's other policies, not repeated here. Other HRM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to human resources, nursing, medical, and departmental leaders, and all staff of {{HOSPITAL_NAME}}, including the «HR In-Charge / Personnel Officer», the «Medical Superintendent», departmental leaders and the Quality Coordinator.\n\nThis policy covers all 6 requirements under this standard, listed in detail below.\n\nThis policy covers job-specific staff training specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, hospital governance, or facility safety — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).",
+  "policy_statement": "{{HOSPITAL_NAME}} implements HRM.5 so that staff are appropriately trained based on their specific job description.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Staff involved in blood transfusion services are trained in the...\n\nStaff involved in blood transfusion services at {{HOSPITAL_NAME}} are trained in handling blood and blood products — safe transport, obtaining informed consent, required documentation, identifying and handling transfusion reactions, and educating the patient and family on donation. Relevant staff (doctors, nurses, technicians and staff transporting blood from the blood bank or storage unit) are trained on the aspects that apply to them. Cross-reference: COP.8 owns blood transfusion service practice; this element is the staff training layer.\n\nMethod note (from guidebook interpretation): Staffs shall be trained on various aspects of transfusion services such as safe transport of blood, obtaining informed consent, various documents to be maintained, identification of transfusion reactions, process of handling transfusion reactions and educating patient and family on donation. Relevant staff shall be trained on aspects that apply to them. Relevant staff include doctors, nurses, technicians and staff involved in the transport of blood from the blood bank/blood storage unit. Refer to COP.8.",
+    "5.2 Staff are trained in handling vulnerable patients\n\nRelevant staff at {{HOSPITAL_NAME}} are trained in identifying and rendering care to vulnerable patients, per the hospital's written guidance. Cross-reference: COP.16.a owns the vulnerable-patient care process; this element is the staff training layer.\n\nMethod note (from guidebook interpretation): Relevant staff shall be trained in identifying and rendering care to vulnerable patients as per the written guidance. Refer to COP.16.a.",
+    "5.3 Staff are trained in control and restraint techniques\n\nRelevant staff at {{HOSPITAL_NAME}} are trained in the appropriate use of control and restraint techniques, per the hospital's written guidance. Cross-reference: COP.16.e owns the control-and-restraint process; this element is the staff training layer.\n\nMethod note (from guidebook interpretation): Relevant staff shall be trained in the appropriate use of control and restraint techniques as per written guidance. Refer to COP.16.e.",
+    "5.4 Staff are trained in healthcare communication techniques\n\nStaff at {{HOSPITAL_NAME}} are trained in healthcare communication techniques, including handling challenging situations and good communication practice. Training needs may be identified from patient complaints, incident reports, appraisals and employee feedback. Cross-reference: PRE.8.e owns patient-facing communication practice; this element is the staff training layer.\n\nMethod note (from guidebook interpretation): The staff shall be trained to handle challenging situations as well as good practices in health care communication. The training needs for communication skills can also be identified by analysing patient complaints, incident reports, appraisals and employee feedback. Refer to PRE.8.e.",
+    "5.5 Staff involved in direct patient care are provided training on cardio-...\n\nStaff involved in direct patient care at {{HOSPITAL_NAME}} are provided training on cardio-pulmonary resuscitation periodically, at the level (basic or advanced) appropriate to their role. Doctors, nurses and rehabilitation staff refresh at least once in two years, or sooner if protocol changes; staff in emergency, intensive care or high-dependency units undergo appropriate advanced training (for example ACLS, ATLS, PALS or NRP, or an equivalent). Trainers may be internal or external, using updated evidence-based protocols. This is a CORE element.\n\nMethod note (from guidebook interpretation): The hospital identifies the level of training (basic or advanced life support), appropriate to their roles in the hospital, for all staff who provide patient care. The desired level of training for each individual is repeated based on the requirements and/or time frames. Doctors, nurses and rehabilitation staff are provided with an update on cardiopulmonary resuscitation at least once in two years or earlier if there is a change in protocol. All doctors and nurses working in emergency, intensive care/high dependency units, shall undergo appropriate training. For example, advanced cardiac life support (ACLS), advanced trauma life support (ATLS), paediatric advanced life support (PALS), and neonatal resuscitation program (NRP) or any other equivalent/similar programme. The training could be imparted by trainers from within or outside the organisation using updated evidence-based protocols.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.6 Staff are provided training on infection prevention and control\n\n{{HOSPITAL_NAME}} provides staff training on infection prevention and control through in-service sessions at least «once a year», including antimicrobial policy and antimicrobial stewardship content for medical professionals, infection-prevention-and-control nurses, the clinical pharmacist and support staff.\n\nMethod note (from guidebook interpretation): The organisation conducts appropriate in-service training sessions for all staff at least once a year. It shall include anti-microbial policy and anti-microbial stewardship program for medical professionals, infection prevention and control nurses and clinical pharmacist and support staff."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that HRM.5 is resourced and followed.\n\nHR In-Charge / Personnel Officer\n- Owns day-to-day implementation and records for this standard.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.\n\ndepartmental leaders\n- Run the department-level duties this standard names.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Human Resource Management, standard HRM.5. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — HRM.5 interpretations (source PDF has no text layer; transcribed and verified against rendered page images — policies/source/hco6_hrm_guidebook_ocr.txt).\n- Internal documents of {{HOSPITAL_NAME}}: workforce plan, recruitment and induction records, training records, appraisal records, disciplinary and grievance registers, staff health records, personal files, and credentialing/privileging files named for HRM.5.",
+  "distribution": "Medical Superintendent; HR In-Charge / Personnel Officer; Quality Coordinator; departmental leaders; staff covered by HRM.5",
+  "abbreviations": "ACLS — Advanced Cardiac Life Support\nBLS — Basic Life Support\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nCPR — Cardio-Pulmonary Resuscitation\nEMR — Electronic Medical Record\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nHR — Human Resource(s)\nHRM — Human Resource Management (NABH Hospitals 6th Edition chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nNRP — Neonatal Resuscitation Program\nOE — Objective Element\nPALS — Paediatric Advanced Life Support\nPPE — Personal Protective Equipment\nWISN — Workload Indicators of Staffing Need (WHO method)",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "HRM.5.a",
+      "requirement": "Staff involved in blood transfusion services are trained in the handling of blood and blood products.",
+      "steps": "Section 3; 5.1",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Blood-and-blood-product handling training record for relevant staff (doctors, nurses, technicians, transport staff).",
+        "Cross-reference to COP.8 blood transfusion service practice.",
+        "Training-content record — safe transport, informed consent, documentation, transfusion-reaction handling."
+      ]
+    },
+    {
+      "oe_code": "HRM.5.b",
+      "requirement": "Staff are trained in handling vulnerable patients.",
+      "steps": "Section 3; 5.2",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Vulnerable-patient identification-and-care training record.",
+        "Cross-reference to COP.16.a.",
+        "Relevant-staff coverage record."
+      ]
+    },
+    {
+      "oe_code": "HRM.5.c",
+      "requirement": "Staff are trained in control and restraint techniques.",
+      "steps": "Section 3; 5.3",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Control-and-restraint-technique training record.",
+        "Cross-reference to COP.16.e.",
+        "Relevant-staff coverage record."
+      ]
+    },
+    {
+      "oe_code": "HRM.5.d",
+      "requirement": "Staff are trained in healthcare communication techniques.",
+      "steps": "Section 3; 5.4",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Healthcare-communication-technique training record.",
+        "Training-needs source record — complaints, incident reports, appraisals, feedback.",
+        "Cross-reference to PRE.8.e."
+      ]
+    },
+    {
+      "oe_code": "HRM.5.e",
+      "requirement": "Staff involved in direct patient care are provided training on cardio- pulmonary resuscitation periodically.",
+      "steps": "Section 3; 5.5",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Periodic CPR-training record for direct-patient-care staff, at least once in two years or sooner after protocol change.",
+        "Advanced-training record for emergency, ICU or high-dependency staff.",
+        "Refresher-schedule tracking record."
+      ]
+    },
+    {
+      "oe_code": "HRM.5.f",
+      "requirement": "Staff are provided training on infection prevention and control.",
+      "steps": "Section 3; 5.6",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Infection-prevention-and-control training record at least annually.",
+        "Antimicrobial-stewardship-content record for medical professionals, IPC nurses, clinical pharmacist and support staff.",
+        "Attendance record."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO HRM.5 v2 (2026-08-21). Official Standards PDF OE count 6; levels and asterisks from portal body text (Guidebook's own copy of the OE matrix agrees on every letter). Asterisked: none. CORE: e. Achievement: none. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/HRM/POL/05.\nOfficial chapter is 13 standards / 76 OEs (confirmed against portal summary and against the Guidebook's own copy of the same matrix). Guidebook interpretations transcribed from a scanned PDF with no text layer — verified against rendered page images (no tesseract/pdftoppm available on this machine), not run through a mechanical OCR pass; see policies/source/hco6_hrm_chapter_notes.md. Statute P2 proposed on HRM.12 only (Indian Nursing Council Act, 1947).\nNot the same as the already-deployed SHCO 3rd Edition HRM chapter (build_hrm1_v2.py..build_hrm9_v2.py, policies/drafts/hrm*_v2_draft.json) — separate programme and edition, not touched. Do not touch AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition HRM.5 v2 draft: portal PDF OE data + Guidebook interpretations (verified visual transcription, no text layer in source PDF); draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Staff are appropriately trained based on their specific job description.",
+  "exceptions": "1. Do not skip: Staff involved in blood transfusion services are trained in the handling of blood and blood products.\n2. Do not skip: Staff are trained in handling vulnerable patients.\n3. Do not skip: Staff are trained in control and restraint techniques.\n4. Do not skip: Staff are trained in healthcare communication techniques.\n5. Do not skip: Staff involved in direct patient care are provided training on cardio- pulmonary resuscitation periodically.\n6. Do not skip: Staff are provided training on infection prevention and control.\n7. Staff who see a HRM.5 rule broken report it the same shift to the «HR In-Charge / Personnel Officer» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Job-Specific Staff Training policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/HRM/POL/05»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «HR In-Charge / Personnel Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«HR In-Charge / Personnel Officer»",
+  "template_test": "hco_hrm_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — HRM.5.",
+  "doc_no": "«HCO/HRM/POL/05»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.HRM.5",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

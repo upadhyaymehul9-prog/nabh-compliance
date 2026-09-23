@@ -1,0 +1,1094 @@
+{
+  "1": {
+    "standard_code": "COP.1",
+    "title": "Uniform care to patients is provided in all settings of the organisation and is guided by written guidance.",
+    "oes": [
+      {
+        "oe_code": "COP.1.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Uniform care is provided to patients following written guidance ."
+      },
+      {
+        "oe_code": "COP.1.b",
+        "letter": "b",
+        "level": "CORE",
+        "star": false,
+        "text": "The organisation has a uniform process for identification of patients and uses at least two identifiers."
+      },
+      {
+        "oe_code": "COP.1.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation implements evidence-based clinical practice guidelines and / or clinical protocols to guide uniform patient care."
+      },
+      {
+        "oe_code": "COP.1.d",
+        "letter": "d",
+        "level": "Excellence",
+        "star": false,
+        "text": "Clinical care pathways are developed, consistently followed across all settings of care, and reviewed periodically."
+      },
+      {
+        "oe_code": "COP.1.e",
+        "letter": "e",
+        "level": "Excellence",
+        "star": false,
+        "text": "Multi-disciplinary and multi-speciality care, where appropriate, is planned based on best clinical practices / clinical practice guidelines and delivered in a uniform manner across the organisation."
+      },
+      {
+        "oe_code": "COP.1.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": true,
+        "text": "Telemedicine facility is provided safely and securely based on written guidance."
+      }
+    ],
+    "count": 6
+  },
+  "2": {
+    "standard_code": "COP.2",
+    "title": "Emergency services are provided in accordance with written guidance, applicable laws and regulations.",
+    "oes": [
+      {
+        "oe_code": "COP.2.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "There shall be an identified area in the organisation which is easily accessible to receive and manage emergency patients, with adequate and appropriate resources."
+      },
+      {
+        "oe_code": "COP.2.b",
+        "letter": "b",
+        "level": "Achievement",
+        "star": false,
+        "text": "Prevention of patient over-crowding is planned and crowd management measures are implemented."
+      },
+      {
+        "oe_code": "COP.2.c",
+        "letter": "c",
+        "level": "CORE",
+        "star": true,
+        "text": "Emergency care is provided in consonance with statutory requirements including medico-legal cases and as per written guidance."
+      },
+      {
+        "oe_code": "COP.2.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": true,
+        "text": "Initiation of appropriate care is guided by a system of triage."
+      },
+      {
+        "oe_code": "COP.2.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patients waiting in the emergency are re-assessed as appropriate for the change in status."
+      },
+      {
+        "oe_code": "COP.2.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "Admission, discharge to home or transfer to another organisation is documented."
+      },
+      {
+        "oe_code": "COP.2.g",
+        "letter": "g",
+        "level": "Commitment",
+        "star": false,
+        "text": "In case of discharge to home or transfer to another organisation, a discharge / transfer note shall be given to the patient."
+      },
+      {
+        "oe_code": "COP.2.h",
+        "letter": "h",
+        "level": "Achievement",
+        "star": true,
+        "text": "The organisation shall implement a quality assurance programme."
+      },
+      {
+        "oe_code": "COP.2.i",
+        "letter": "i",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation has systems in place for the management of patients found dead on arrival and patients who die within a few minutes of arrival."
+      }
+    ],
+    "count": 9
+  },
+  "3": {
+    "standard_code": "COP.3",
+    "title": "Ambulance services ensure safe patient transportation with appropriate care.",
+    "oes": [
+      {
+        "oe_code": "COP.3.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation has access to ambulance services commensurate with the scope of the services provided by it."
+      },
+      {
+        "oe_code": "COP.3.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "There are adequate access and space for the ambulance(s)."
+      },
+      {
+        "oe_code": "COP.3.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The ambulance(s) is fit for purpose and is appropriately equipped."
+      },
+      {
+        "oe_code": "COP.3.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "The ambulance(s) is operated by trained personnel."
+      },
+      {
+        "oe_code": "COP.3.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "The ambulance(s) is checked daily for functioning status, medical equipment, emergency medications and consumables."
+      },
+      {
+        "oe_code": "COP.3.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": true,
+        "text": "The ambulance(s) has a proper communication system."
+      },
+      {
+        "oe_code": "COP.3.g",
+        "letter": "g",
+        "level": "Achievement",
+        "star": false,
+        "text": "The emergency department identifies opportunities to initiate treatment at the earliest when the patient is in transit to the organisation."
+      }
+    ],
+    "count": 7
+  },
+  "4": {
+    "standard_code": "COP.4",
+    "title": "The organisation plans and implements mechanisms for the care of patients during community emergencies, epidemics and other disasters.",
+    "oes": [
+      {
+        "oe_code": "COP.4.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation identifies potential community emergencies, epidemics and other disasters."
+      },
+      {
+        "oe_code": "COP.4.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation manages community emergencies, epidemics and other disasters as per a documented plan."
+      },
+      {
+        "oe_code": "COP.4.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Provision is made for availability of medical supplies, equipment and materials during such emergencies."
+      },
+      {
+        "oe_code": "COP.4.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "The plan is tested at least twice a year."
+      }
+    ],
+    "count": 4
+  },
+  "5": {
+    "standard_code": "COP.5",
+    "title": "Cardio-pulmonary resuscitation services are provided uniformly across the organisation.",
+    "oes": [
+      {
+        "oe_code": "COP.5.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "Cardio-pulmonary resuscitation services are available and provided to patients at all times."
+      },
+      {
+        "oe_code": "COP.5.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "During cardio-pulmonary resuscitation, assigned roles and responsibilities are complied with."
+      },
+      {
+        "oe_code": "COP.5.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Medical equipment and medications for use during cardio-pulmonary resuscitation are available in various areas of the organisation."
+      },
+      {
+        "oe_code": "COP.5.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "The events during cardio-pulmonary resuscitation are recorded."
+      },
+      {
+        "oe_code": "COP.5.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "A multi-disciplinary committee does a post-event analysis of cardio- pulmonary resuscitations."
+      },
+      {
+        "oe_code": "COP.5.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "Corrective and preventive measures are taken based on the post-event analysis."
+      }
+    ],
+    "count": 6
+  },
+  "6": {
+    "standard_code": "COP.6",
+    "title": "Nursing care is provided to patients in the organisation in consonance with clinical protocols.",
+    "oes": [
+      {
+        "oe_code": "COP.6.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Nursing care is provided to patients in accordance with written guidance."
+      },
+      {
+        "oe_code": "COP.6.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Assignment of patient care is done as per good clinical / nursing practice."
+      },
+      {
+        "oe_code": "COP.6.c",
+        "letter": "c",
+        "level": "Achievement",
+        "star": false,
+        "text": "The organisation implements acuity-based staffing to improve patient outcomes."
+      },
+      {
+        "oe_code": "COP.6.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": true,
+        "text": "Nursing care is aligned and integrated with overall patient care which is documented."
+      },
+      {
+        "oe_code": "COP.6.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Nurses are provided with the appropriate and adequate equipment for providing safe and efficient nursing care."
+      },
+      {
+        "oe_code": "COP.6.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "Nurses are empowered to make patient care decisions within their scope of practice."
+      }
+    ],
+    "count": 6
+  },
+  "7": {
+    "standard_code": "COP.7",
+    "title": "Clinical procedures are performed safely.",
+    "oes": [
+      {
+        "oe_code": "COP.7.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "Clinical procedures are performed based on the clinical needs of the patient."
+      },
+      {
+        "oe_code": "COP.7.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "Performance of various clinical procedures is based on written guidance and done in a safe manner."
+      },
+      {
+        "oe_code": "COP.7.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Qualified personnel order, plan, perform and assist in performing procedures."
+      },
+      {
+        "oe_code": "COP.7.d",
+        "letter": "d",
+        "level": "CORE",
+        "star": true,
+        "text": "Care is taken to prevent adverse events like a wrong patient, wrong procedure and wrong site."
+      },
+      {
+        "oe_code": "COP.7.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Informed consent is taken by the personnel performing the procedure, where applicable."
+      },
+      {
+        "oe_code": "COP.7.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patients are appropriately monitored during and after the procedure."
+      },
+      {
+        "oe_code": "COP.7.g",
+        "letter": "g",
+        "level": "Commitment",
+        "star": false,
+        "text": "Procedures are documented accurately in the patient record."
+      }
+    ],
+    "count": 7
+  },
+  "8": {
+    "standard_code": "COP.8",
+    "title": "Transfusion services are provided as per the scope of services of the organisation, safely.",
+    "oes": [
+      {
+        "oe_code": "COP.8.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "Scope of transfusion services is commensurate with the services provided by the organisation."
+      },
+      {
+        "oe_code": "COP.8.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation shall establish and implement processes for blood / component collection, testing, storage and distribution under written guidance."
+      },
+      {
+        "oe_code": "COP.8.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Blood and components are stored safely from the time of collection till transfusion."
+      },
+      {
+        "oe_code": "COP.8.d",
+        "letter": "d",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation ensures safe and rational use of blood and blood components."
+      },
+      {
+        "oe_code": "COP.8.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": true,
+        "text": "Blood / blood components are available for use in emergency and routine situations within a defined time-frame."
+      },
+      {
+        "oe_code": "COP.8.f",
+        "letter": "f",
+        "level": "Achievement",
+        "star": true,
+        "text": "The organisation shall ensure that post-transfusion form is collected, reactions if any identified and are analysed for preventive and corrective actions."
+      },
+      {
+        "oe_code": "COP.8.g",
+        "letter": "g",
+        "level": "Achievement",
+        "star": true,
+        "text": "The organisation shall implement a quality assurance programme."
+      }
+    ],
+    "count": 7
+  },
+  "9": {
+    "standard_code": "COP.9",
+    "title": "The organisation provides care in intensive care and high dependency units in a systematic manner.",
+    "oes": [
+      {
+        "oe_code": "COP.9.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Care of patients in intensive care and high dependency units is provided based on written guidance."
+      },
+      {
+        "oe_code": "COP.9.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "The defined admission and discharge criteria for intensive care and high dependency units are implemented."
+      },
+      {
+        "oe_code": "COP.9.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Adequate staff and equipment are available."
+      },
+      {
+        "oe_code": "COP.9.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": true,
+        "text": "Defined procedures for the situation of bed shortages are followed."
+      },
+      {
+        "oe_code": "COP.9.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": true,
+        "text": "Infection prevention and control practices are followed."
+      },
+      {
+        "oe_code": "COP.9.f",
+        "letter": "f",
+        "level": "Achievement",
+        "star": true,
+        "text": "The organisation shall implement a quality assurance programme."
+      },
+      {
+        "oe_code": "COP.9.g",
+        "letter": "g",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation has a mechanism to counsel the patient and/or family periodically."
+      }
+    ],
+    "count": 7
+  },
+  "10": {
+    "standard_code": "COP.10",
+    "title": "Organisation provides safe obstetric care.",
+    "oes": [
+      {
+        "oe_code": "COP.10.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Obstetric services are organised and provided safely."
+      },
+      {
+        "oe_code": "COP.10.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation identifies and, provides care to high-risk obstetric cases, and where needed, refers them to another appropriate centre."
+      },
+      {
+        "oe_code": "COP.10.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Persons caring for high-risk obstetric cases are competent."
+      },
+      {
+        "oe_code": "COP.10.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": true,
+        "text": "Ante-natal services are provided."
+      },
+      {
+        "oe_code": "COP.10.e",
+        "letter": "e",
+        "level": "Achievement",
+        "star": false,
+        "text": "Organisation encourages and welcomes the presence of a birth companion during labour."
+      },
+      {
+        "oe_code": "COP.10.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "Organisation treats pregnant woman and her companion cordially and respectfully, ensures privacy and confidentiality for pregnant woman during her stay."
+      },
+      {
+        "oe_code": "COP.10.g",
+        "letter": "g",
+        "level": "Commitment",
+        "star": false,
+        "text": "The treating doctor explains danger signs and important care activities to pregnant woman and her companion."
+      },
+      {
+        "oe_code": "COP.10.h",
+        "letter": "h",
+        "level": "Commitment",
+        "star": false,
+        "text": "Obstetric patient’s assessment also includes maternal nutrition."
+      },
+      {
+        "oe_code": "COP.10.i",
+        "letter": "i",
+        "level": "Commitment",
+        "star": false,
+        "text": "Appropriate peri-natal and post-natal monitoring is performed."
+      },
+      {
+        "oe_code": "COP.10.j",
+        "letter": "j",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation caring for high-risk obstetric cases have the facilities to take care of neonates of such cases."
+      },
+      {
+        "oe_code": "COP.10.k",
+        "letter": "k",
+        "level": "Commitment",
+        "star": false,
+        "text": "Organization shall adhere to legal and defined Assisted Reproductive Technology (ART) practices."
+      }
+    ],
+    "count": 11
+  },
+  "11": {
+    "standard_code": "COP.11",
+    "title": "Organisation provides safe paediatric services.",
+    "oes": [
+      {
+        "oe_code": "COP.11.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Paediatric services are organised and provided safely."
+      },
+      {
+        "oe_code": "COP.11.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "Neonatal care is in consonance with the national / international guidelines."
+      },
+      {
+        "oe_code": "COP.11.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Those who care for children have age-specific competency."
+      },
+      {
+        "oe_code": "COP.11.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Provisions are made for special care of children."
+      },
+      {
+        "oe_code": "COP.11.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Paediatric assessment includes growth, developmental, immunisation and nutritional assessment."
+      },
+      {
+        "oe_code": "COP.11.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation has measures in place to prevent child / neonate abduction and abuse."
+      },
+      {
+        "oe_code": "COP.11.g",
+        "letter": "g",
+        "level": "Commitment",
+        "star": false,
+        "text": "The child’s family members are educated about nutrition, immunisation and safe parenting."
+      },
+      {
+        "oe_code": "COP.11.h",
+        "letter": "h",
+        "level": "Excellence",
+        "star": false,
+        "text": "The organisation provides for adolescent friendly health care services."
+      }
+    ],
+    "count": 8
+  },
+  "12": {
+    "standard_code": "COP.12",
+    "title": "Procedural sedation is provided consistently and safely.",
+    "oes": [
+      {
+        "oe_code": "COP.12.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Procedural sedation is administered in a consistent manner."
+      },
+      {
+        "oe_code": "COP.12.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Informed consent for administration of procedural sedation is obtained."
+      },
+      {
+        "oe_code": "COP.12.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Competent and trained persons administer procedural sedation."
+      },
+      {
+        "oe_code": "COP.12.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "The person monitoring sedation is different from the person performing the procedure."
+      },
+      {
+        "oe_code": "COP.12.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Intra-procedure monitoring includes at a minimum the heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation, and level of sedation."
+      },
+      {
+        "oe_code": "COP.12.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patients are monitored after procedural sedation, and the same is documented."
+      },
+      {
+        "oe_code": "COP.12.g",
+        "letter": "g",
+        "level": "Commitment",
+        "star": true,
+        "text": "Criteria are used to determine the appropriateness of discharge from the observation / recovery area."
+      },
+      {
+        "oe_code": "COP.12.h",
+        "letter": "h",
+        "level": "Commitment",
+        "star": false,
+        "text": "Equipment and workforce are available to manage patients who have gone into a deeper level of sedation than initially intended."
+      }
+    ],
+    "count": 8
+  },
+  "13": {
+    "standard_code": "COP.13",
+    "title": "Anaesthesia services are provided in a consistent and safe manner.",
+    "oes": [
+      {
+        "oe_code": "COP.13.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Anaesthesia services are provided in a consistent manner."
+      },
+      {
+        "oe_code": "COP.13.b",
+        "letter": "b",
+        "level": "CORE",
+        "star": false,
+        "text": "The pre-anaesthesia assessment results in the formulation of an anaesthesia plan which is documented."
+      },
+      {
+        "oe_code": "COP.13.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "A pre-induction assessment is performed and documented."
+      },
+      {
+        "oe_code": "COP.13.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "The anaesthesiologist obtains informed consent for administration of anaesthesia."
+      },
+      {
+        "oe_code": "COP.13.e",
+        "letter": "e",
+        "level": "CORE",
+        "star": false,
+        "text": "During anaesthesia, monitoring includes a regular recording of temperature, heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation and end-tidal carbon dioxide."
+      },
+      {
+        "oe_code": "COP.13.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient’s post-anaesthesia status is monitored and documented."
+      },
+      {
+        "oe_code": "COP.13.g",
+        "letter": "g",
+        "level": "Commitment",
+        "star": true,
+        "text": "The anaesthesiologist applies defined criteria to transfer the patient from the recovery area."
+      },
+      {
+        "oe_code": "COP.13.h",
+        "letter": "h",
+        "level": "Commitment",
+        "star": false,
+        "text": "The type of anaesthesia and anaesthetic medications used are documented in the patient record."
+      },
+      {
+        "oe_code": "COP.13.i",
+        "letter": "i",
+        "level": "Commitment",
+        "star": false,
+        "text": "Procedures shall comply with infection prevention and control guidelines to prevent cross-infection between patients."
+      },
+      {
+        "oe_code": "COP.13.j",
+        "letter": "j",
+        "level": "Achievement",
+        "star": false,
+        "text": "Intra-operative adverse anaesthesia events are recorded and monitored."
+      }
+    ],
+    "count": 10
+  },
+  "14": {
+    "standard_code": "COP.14",
+    "title": "Surgical services are provided in a consistent and safe manner.",
+    "oes": [
+      {
+        "oe_code": "COP.14.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Surgical services are provided in a consistent and safe manner."
+      },
+      {
+        "oe_code": "COP.14.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Surgical patients have a pre-operative assessment, a documented pre- operative diagnosis, and pre-operative instructions are provided before surgery."
+      },
+      {
+        "oe_code": "COP.14.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Informed consent is obtained by a surgeon before the procedure."
+      },
+      {
+        "oe_code": "COP.14.d",
+        "letter": "d",
+        "level": "CORE",
+        "star": true,
+        "text": "Care is taken to prevent adverse events like the wrong site, wrong patient and wrong surgery."
+      },
+      {
+        "oe_code": "COP.14.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "An operative note is documented before transfer out of patient from recovery."
+      },
+      {
+        "oe_code": "COP.14.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "Post-operative care is guided by a documented plan."
+      },
+      {
+        "oe_code": "COP.14.g",
+        "letter": "g",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient, personnel and material flow conform to infection prevention and control practices."
+      },
+      {
+        "oe_code": "COP.14.h",
+        "letter": "h",
+        "level": "Commitment",
+        "star": false,
+        "text": "Appropriate facilities, equipment, instruments and supplies are available in the operating theatre."
+      },
+      {
+        "oe_code": "COP.14.i",
+        "letter": "i",
+        "level": "Achievement",
+        "star": true,
+        "text": "The organisation shall implement a quality assurance programme."
+      },
+      {
+        "oe_code": "COP.14.j",
+        "letter": "j",
+        "level": "Achievement",
+        "star": true,
+        "text": "The quality assurance programme includes surveillance of the operation theatre environment."
+      }
+    ],
+    "count": 10
+  },
+  "15": {
+    "standard_code": "COP.15",
+    "title": "The organ transplant programme is carried out safely.",
+    "oes": [
+      {
+        "oe_code": "COP.15.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": false,
+        "text": "The organ transplant programme shall be in consonance with the legal requirements and shall be conducted ethically."
+      },
+      {
+        "oe_code": "COP.15.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "Care of transplant patients is guided by clinical practice guidelines."
+      },
+      {
+        "oe_code": "COP.15.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation ensures education and counselling of recipient and donor through trained / qualified counsellors before organ transplantation."
+      },
+      {
+        "oe_code": "COP.15.d",
+        "letter": "d",
+        "level": "CORE",
+        "star": false,
+        "text": "The organisation shall take measures to create awareness regarding organ donation."
+      }
+    ],
+    "count": 4
+  },
+  "16": {
+    "standard_code": "COP.16",
+    "title": "The organisation identifies and manages patients who are at high risk of morbidity / mortality.",
+    "oes": [
+      {
+        "oe_code": "COP.16.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation identifies and manages vulnerable patients."
+      },
+      {
+        "oe_code": "COP.16.b",
+        "letter": "b",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation identifies and manages patients who are at a risk of fall."
+      },
+      {
+        "oe_code": "COP.16.c",
+        "letter": "c",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation identifies and manages patients who are at risk of developing / worsening of pressure ulcers."
+      },
+      {
+        "oe_code": "COP.16.d",
+        "letter": "d",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation identifies and manages patients who are at risk of developing deep vein thrombosis."
+      },
+      {
+        "oe_code": "COP.16.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation identifies and manages patients who need restraints."
+      }
+    ],
+    "count": 5
+  },
+  "17": {
+    "standard_code": "COP.17",
+    "title": "Pain management for patients is done in a consistent manner.",
+    "oes": [
+      {
+        "oe_code": "COP.17.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Patients in pain are effectively managed."
+      },
+      {
+        "oe_code": "COP.17.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patients are screened for pain."
+      },
+      {
+        "oe_code": "COP.17.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patients with pain undergo detailed assessment and periodic re- assessment ."
+      },
+      {
+        "oe_code": "COP.17.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Pain alleviation measures or medications are initiated and titrated according to the patient’s need and response."
+      }
+    ],
+    "count": 4
+  },
+  "18": {
+    "standard_code": "COP.18",
+    "title": "Rehabilitation services are provided to the patients in a safe, collaborative and consistent manner.",
+    "oes": [
+      {
+        "oe_code": "COP.18.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "Scope of the rehabilitation services at a minimum is commensurate to the services provided by the organisation."
+      },
+      {
+        "oe_code": "COP.18.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Rehabilitation services are provided in a consistent manner."
+      },
+      {
+        "oe_code": "COP.18.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Care providers collaboratively plan rehabilitation services."
+      },
+      {
+        "oe_code": "COP.18.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "There are adequate space and equipment to provide rehabilitation."
+      },
+      {
+        "oe_code": "COP.18.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Care is guided by functional assessment and periodic re-assessments which are done and documented."
+      },
+      {
+        "oe_code": "COP.18.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "Care is provided adhering to infection prevention and control and safety practices."
+      },
+      {
+        "oe_code": "COP.18.g",
+        "letter": "g",
+        "level": "Excellence",
+        "star": false,
+        "text": "Care pathways are developed, implemented, and reviewed periodically."
+      }
+    ],
+    "count": 7
+  },
+  "19": {
+    "standard_code": "COP.19",
+    "title": "Nutritional therapy is provided to patients consistently and collaboratively.",
+    "oes": [
+      {
+        "oe_code": "COP.19.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Patients admitted to the organisation are screened for nutritional risk."
+      },
+      {
+        "oe_code": "COP.19.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Nutritional assessment is done for patients found at risk during nutritional screening."
+      },
+      {
+        "oe_code": "COP.19.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The therapeutic diet is planned and provided collaboratively."
+      },
+      {
+        "oe_code": "COP.19.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patients receive food according to the written order for the diet."
+      },
+      {
+        "oe_code": "COP.19.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "When families provide food, they are educated about the patient’s diet limitations."
+      }
+    ],
+    "count": 5
+  },
+  "20": {
+    "standard_code": "COP.20",
+    "title": "End-of-life care is provided in a compassionate and considerate manner.",
+    "oes": [
+      {
+        "oe_code": "COP.20.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "End-of-life care is provided in a consistent manner in the organisation."
+      },
+      {
+        "oe_code": "COP.20.b",
+        "letter": "b",
+        "level": "Achievement",
+        "star": false,
+        "text": "A multi-professional approach is used to provide end-of-life care."
+      },
+      {
+        "oe_code": "COP.20.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "End-of-life care is in consonance with the legal requirements."
+      },
+      {
+        "oe_code": "COP.20.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "End-of-life care also addresses the identification of the unique needs of such patient and family."
+      },
+      {
+        "oe_code": "COP.20.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Symptomatic treatment is provided and where appropriate measures are taken for the alleviation of pain."
+      }
+    ],
+    "count": 5
+  }
+}

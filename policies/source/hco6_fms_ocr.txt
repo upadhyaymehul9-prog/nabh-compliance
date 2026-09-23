@@ -1,0 +1,510 @@
+                                      Facility Management and Safety
+Chapter 8                             (FMS)
+
+     Intent of the chapter
+
+The standards guide the provision of a safe and secure environment for patients, their families, staff and
+visitors. The organisation attends to the facility, equipment, and internal physical environment for improving
+patient safety and quality of services by consistently addressing issues that may arise out of the same. The
+organisation does this through proactive risk analysis, safety rounds, training of staff on the enhancement of
+safety and management of disasters. To ensure this, the organisation conducts regular facility inspection
+rounds and takes the appropriate action to ensure safety.
+The organisation provides for safe water, electricity, medical gases and vacuum systems.
+The organisation has a programme for medical and utility equipment management.
+The organisation plans for re and non-re emergencies within the facilities.
+The organisation is a no-smoking area.
+The organisation safely manages hazardous materials.
+The organisation works towards measures on being energy efcient.
+
+
+                                          SUMMARY OF STANDARDS
+   FMS.1.       The organisation has a system in place to provide a safe and secure environment.
+
+                The organisation’s environment and facilities operate in a planned manner and promotes environment-
+   FMS.2.
+                friendly measures.
+
+                The organisation’s environment and facilities operate to ensure the safety of patients, their families, staff and
+   FMS.3.
+                visitors.
+
+   FMS.4.       The organisation has a programme for the facility, engineering support services and utility system.
+
+   FMS.5.       The organisation has a programme for medical equipment management.
+
+   FMS.6.       The organisation has a programme for medical gases, vacuum and compressed air.
+
+
+   FMS.7.       The organisation has plans for re and non-re emergencies within the facilities.
+
+*This implies that the objective element requires documentation.
+
+
+
+
+                                                                   140
+NABH Accreditation Standards for Hospitals
+                                                                                                                       ®
+
+
+
+
+                                         Summary of Objective Elements
+
+
+
+                                      Standard                            7
+
+                                      Objective elements                 43
+
+
+                                      CORE                               11
+
+                                      Commitment                         29
+
+                                      Achievement                         2
+
+                                      Excellence                          1
+
+
+
+
+   Objective
+                FMS.1.       FMS.2.            FMS.3.             FMS.4.        FMS.5.        FMS.6.       FMS.7.
+   Element
+
+      a        CORE         Commitment       Commitment          Commitment    Commitment    Commitment    CORE
+
+      b        Commitment   Commitment        Excellence         Commitment    Commitment     CORE         CORE
+
+      c        CORE         CORE             Commitment           CORE          CORE         Commitment   Commitment
+
+
+      d        Commitment   CORE             Commitment          Commitment    Commitment     CORE        Commitment
+
+
+      e        Commitment   Commitment        CORE               Commitment    Commitment    Commitment   Commitment
+
+
+       f                    Commitment       Commitment          Commitment    Commitment
+
+
+      g                                                          Achievement   Commitment
+
+
+      h                                                          Commitment    Achievement
+
+
+
+
+                                                           141
+NABH Accreditation Standards for Hospitals
+                                                                                                         ®
+
+
+
+
+                            Standards and Objective Elements
+
+
+Standard
+
+                   The organisation has a system in place to provide a safe and secure
+    FMS.1.
+                   environment.
+
+
+Objective Elements
+   CORE            a.    Patient safety devices and infrastructure are installed across the
+                         organisation and inspected periodically.
+
+
+   Commitment      b.    The organisation has facilities for the differently-abled.
+
+
+   CORE            c.    Facility inspection rounds to ensure safety are conducted at least once a
+                         month.
+
+   Commitment      d.    Inspection reports of facility rounds are documented and corrective and
+                         preventive measures are undertaken.
+
+   Commitment      e.    Before construction, renovation and expansion of the existing hospital, risk-
+                         assessment is carried out.
+
+
+
+Standard
+
+                   The organisation’s environment and facilities operate in a planned
+    FMS.2.
+                   manner and promotes environment-friendly measures.
+
+
+Objective Elements
+   Commitment      a.    Facilities and space provisions are appropriate to the scope of services.
+
+
+   Commitment      b.    As built and updated drawings are maintained as per statutory requirements.
+
+
+   CORE            c.    There are internal and external sign postings in the organisation in a manner
+                         understood by the patient, families and community.
+
+   CORE            d.    Potable water and electricity are available round the clock.
+
+
+
+                  CORE              Commitment              Achievement               Excellence
+
+
+                                                   142
+NABH Accreditation Standards for Hospitals
+                                                                                                            ®
+
+
+
+
+   Commitment      e.    Alternate sources for electricity and water are provided as a backup for any
+                         failure / shortage.
+
+   Commitment      f.    The organisation tests the functioning of these alternate sources at a
+                         predened frequency.
+
+
+
+Standard
+
+                   The organisation’s environment and facilities operate to ensure
+    FMS.3.
+                   the safety of patients, their families, staff and visitors.
+
+
+Objective Elements
+   Commitment      a.    Operational planning identies areas which need to have extra security and
+                         describes access to different areas in the hospital by staff, patients, and
+                         visitors.*
+
+   Excellence      b.    Patient safety aspects in terms of structural safety of hospitals, especially of
+                         critical areas are considered while planning, design and construction of new
+                         hospitals and re-planning, assessment and retrotting of existing hospitals.
+
+
+   Commitment      c.    The organisation conducts electrical safety audits for the facility.
+
+
+   Commitment      d.    There is a procedure which addresses the identication and disposal of
+                         material(s) not in use in the organisation. *
+
+   CORE            e.    Hazardous materials are identied and used safely within the organisation.*
+
+
+   Commitment      f.    The plan for managing spills of hazardous materials is implemented. *
+
+
+
+Standard
+
+                   The organisation has a programme for the facility, engineering support
+    FMS.4.
+                   services and utility system.
+
+
+Objective Elements
+   Commitment      a.    The organisation plans for utility and engineering equipment in accordance
+                         with its services and strategic plan.
+
+
+                  CORE              Commitment              Achievement             Excellence
+
+
+                                                   143
+NABH Accreditation Standards for Hospitals
+                                                                                                       ®
+
+
+
+
+   Commitment      b.    Equipment is inventoried, and proper logs are maintained as required.
+
+
+   CORE            c.    The documented operational and maintenance (preventive and breakdown)
+                         plan is implemented. *
+
+   Commitment      d.    Utility equipment, are periodically inspected and calibrated (wherever
+                         applicable) for their proper functioning.
+
+   Commitment      e.    Competent personnel operate, inspect, test and maintain equipment and
+                         utility systems.
+
+   Commitment      f.    Maintenance staff is contactable round the clock for emergency repairs.
+
+
+   Achievement     g.    Downtime for critical equipment breakdowns is monitored from reporting to
+                         inspection and implementation of corrective actions.
+
+   Commitment      h.    Written guidance supports equipment replacement, identication of
+                         unwanted material and disposal. *
+
+
+
+Standard
+
+                   The organisation has a programme for medical equipment
+    FMS.5.
+                   management.
+
+
+Objective Elements
+   Commitment      a.    The organisation plans for medical equipment in accordance with its
+                         services and strategic plan.
+
+   Commitment      b.    Medical equipment is inventoried and proper logs are maintained as
+                         required.
+
+   CORE            c.    The documented operational and maintenance (preventive and breakdown)
+                         plan for medical equipment is implemented. *
+
+   Commitment      d.    Medical equipment is periodically inspected and calibrated for their proper
+                         functioning.
+
+
+   Commitment      e.    Qualied and trained personnel operate and maintain medical equipment.
+
+
+   Commitment      f.    Written guidance supports medical equipment replacement and disposal. *
+
+
+                  CORE             Commitment             Achievement           Excellence
+
+
+                                                  144
+NABH Accreditation Standards for Hospitals
+                                                                                                        ®
+
+
+
+
+   Commitment      g.    There is monitoring of medical equipment and medical devices related to
+                         adverse events, and compliance hazard notices on recalls.*
+
+   Achievement     h.    Downtime for critical equipment breakdown is monitored from reporting to
+                         inspection and implementation of corrective actions.
+
+
+
+Standard
+
+                   The organisation has a programme for medical gases, vacuum and
+    FMS.6.
+                   compressed air.
+
+
+Objective Elements
+   Commitment      a.    Written guidance governs the implementation of procurement, handling,
+                         storage, distribution, usage and replenishment of medical gases. *
+
+   CORE            b.    Medical gases are handled, stored, distributed and used in a safe manner.
+
+   Commitment      c.    There is an operational, inspection, testing and maintenance plan for piped
+                         medical gas, compressed air and vacuum installation. *
+
+   CORE            d.    Alternate sources for medical gases, vacuum and compressed air are
+                         provided for, in case of failure.
+
+
+   Commitment      e.    The organisation regularly tests the functioning of these alternate sources.
+
+
+
+
+Standard
+
+                   The organisation has plans for re and non-re emergencies within
+    FMS.7.
+                   the facilities.
+
+
+Objective Elements
+   CORE            a.    The organisation has plans and provisions for early detection, abatement,
+                         containment of re and evacuation in the event of re emergencies. *
+
+   CORE            b.    The organisation has plans and provisions for identication, and
+                         management of non-re emergencies. *
+
+
+
+
+                  CORE              Commitment             Achievement            Excellence
+
+
+                                                  145
+NABH Accreditation Standards for Hospitals
+                                                                                                      ®
+
+
+
+
+   Commitment      c.    The organisation has a documented and displayed exit plan in case of re
+                         and non-re emergencies.
+
+
+   Commitment      d.    Mock drills are held at least twice a year.
+
+
+   Commitment      e.    There is a maintenance plan for re-related equipment and infrastructure *
+
+
+
+
+                  CORE              Commitment               Achievement         Excellence
+
+
+                                                    146
+NABH Accreditation Standards for Hospitals
+                                                                                                                 ®
+
+
+
+
+References
+1.   Ulrich R, Quan X, Zimring C, et al. The role of the physical environment in the hospital of the 21st century:
+     a once-in-a-lifetime opportunity. Report to The Center for Health Design, for the designing for the 21st
+     century hospital project. 2004. [cited 2023 Dec 5]. Available from:
+     www?.healthdesign.org?/research/reports/physical_environ.php.
+2.   Reiling J, Hughes RG, Murphy MR. The Impact of Facility Design on Patient Safety. In: Hughes RG, editor.
+     Patient Safety and Quality: An Evidence-Based Handbook for Nurses. Rockville (MD): Agency for
+     Healthcare Research and Quality (US); 2008 Apr. Chapter 28. [cited 2023 Dec 5]. Available from:
+     https://www.ncbi.nlm.nih.gov/books/NBK2633
+3.   Mirza M, Goyal T, Goyal L. Barrier-Free Healthcare Design for Patients with Disabilities. InA Guide to
+     Hospital Administration and Planning 2023 Jan 5 (pp. 251-266). Singapore: Springer Nature Singapore.
+4.   Nischith KR, Bhargava M, Akshaya KM. Physical accessibility audit of primary health centers for people
+     with disabilities: An on-site assessment from Dakshina Kannada district in Southern India. Journal of
+     Family Medicine and Primary Care. 2018 Nov;7(6):1300.
+5.   World Health Organization. Global patient safety action plan 2021-2030: towards eliminating avoidable
+     harm in health care. World Health Organization; 2021 Aug 3.
+6.   Herrscher P, Goepfert A. Implementation of Risk Management in Hospitals. InRisk Management in
+     Medicine 2016 (pp. 133-140). Berlin, Heidelberg: Springer Berlin Heidelberg.
+7.   Singh D, Garg R, Kamal MA. Area Requirement Analysis and Zoning Criteria for Architectural
+     Programming of Healthcare Buildings in India. 2023.
+8.   Rungta N, Zirpe KG, Dixit SB, Mehta Y, Chaudhry D, Govil D, Mishra RC, Sharma J, Amin P, Rao BK,
+     Khilnani GC. Indian society of critical care medicine experts committee consensus statement on ICU
+     planning and designing, 2020. Indian journal of critical care medicine: peer-reviewed, ofcial publication
+     of Indian Society of Critical Care Medicine. 2020 Jan;24(Suppl 1):S43.
+9.   Maqbool T, Raju S. Importance of patient-centred signage and navigation guide in an orthopaedic and
+     plastics clinic. BMJ Open Quality. 2016 Jan 1;5(1):u209473-w3887.
+10. Rousek JB, Hallbeck MS. Improving and analyzing signage within a healthcare setting. Applied
+    ergonomics. 2011 Nov 1;42(6):771-84.
+11. Bansal H, Mittal R, Kumar V. Hospital Designing and Planning. InA Guide to Hospital Administration and
+    Planning 2023 Jan 5 (pp. 1-24). Singapore: Springer Nature Singapore.
+12. Gudlavalleti, V. (2018). Challenges in Accessing Health Care for People with Disability in the South Asian
+    Context: A Review. International Journal of Environmental Research and Public Health, 15(11), 2366.
+    doi:10.3390/ijerph15112366
+13. de León AE. National building code of India and the international building code: An introduction. Indo-
+    US Forensic Practices: Investigation Techniques and Technology. 2010:111-20.
+14. Coulliette, A. D., & Arduino, M. J. (2015). Hemodialysis and Water Quality. Semin Dial, 26(4), 427-438.
+15. Bhalchandra R, Chandy M, Ramanan VR, Mahajan A, Soundaranayagam JR, Garai S, Bhattacharya S.
+    Role of water quality assessments in hospital infection control: experience from a new oncology center
+    in eastern India. Indian Journal of Pathology and Microbiology. 2014 Jul 1;57(3):435.
+16. Dhillon VS, Kaur D. Green hospital and climate change: Their interrelationship and the way forward.
+    Journal of clinical and diagnostic research: JCDR. 2015 Dec;9(12):LE01.
+
+
+
+
+                                                       147
+NABH Accreditation Standards for Hospitals
+                                                                                                              ®
+
+
+
+
+17. Ahmad M, Murli JS. The importance of hospital safety in Indian scenario. Journal of the Academy of
+    Hospital Administration. 2012;23.
+18. Singh J. Fire & Life Safety in Hospitals. Fire Engineer. 2017;42(2):13-6.
+19. Badida P, Janakiraman S, Jayaprakash J. Occupational health and safety risk assessment using a fuzzy
+    multi-criteria approach in a hospital in Chennai, India. International journal of occupational safety and
+    ergonomics. 2023 Jul 3;29(3):1047-56.
+20. Government of India. National Disaster Management Authority. (n.d.). National Disaster Management
+    G u i d e l i n e s . H o s p i t a l S a f e t y. [ c i t e d 2 0 2 3 D e c 5 ] . Av a i l a b l e f r o m
+    https://ndma.gov.in/images/guidelines/Guidelines-Hospital-Safety.pdf
+21. Salvaraji L, Jeffree MS, Lukman KA, Saupin S, Avoi R. Electrical safety in a hospital setting: A narrative
+    review. Annals of Medicine and Surgery. 2022 Jun 1;78:103781.
+22. Malviya AK, Mulchandani M, Singh J, Singh A, Gupta A. Increasing Hospital Fires During the COVID-19
+    Pandemic in India: Are the Current Policies and Infrastructure Adequate?. Journal of Patient Safety. 2022
+    Aug 1;18(5): e869-70.
+23. Goddu VK, Duvvuri K, Bakki VK. A critical analysis of healthcare waste management in developed and
+    developing countries: Case studies from India and England. In Proceedings of the International
+    Conference on Sustainable Solid Waste Management, Chennai, India 2007 Sep (pp. 134-141).
+24. Capoor MR, Bhowmik KT. Cytotoxic Drug Dispersal, Cytotoxic Safety, and Cytotoxic Waste
+    Management: Practices and Proposed Indiaspecic Guidelines. Indian Journal of Medical and
+    Paediatric Oncology. 2017 Apr;38(02):190-7.
+25. Noor MM, Ram DC, Magray IA, Chawla ES. Maintenance and modelling strategies of biomedical
+    equipment’s in hospitals: a review. Adv Life Sci Technol. 2016;40:31-5.
+26. Chowdhuri IR, Kar A, Pal AK. A New Approach for Effective Reliability Management of Biomedical
+    Equipment. European Journal of Theoretical and Applied Sciences. 2023 Sep 1;1(5):281-93.
+27. Government of India. National Health MIssion. (n.d.). Biomedical Equipment Management and
+    Maintenance Program. [cited 2023 Dec 5]. Available from
+    https://nhm.gov.in/New_Updates_2018/NHM_Components/Health_System_Stregthening/BEMMP/Bi
+    omedical_Equipment_Revised_Guidelines.pdf
+28. Aggarwal R, Mytton OT, Greaves F, Vincent C. Technology as applied to patient safety: an overview. BMJ
+    Quality & Safety. 2010 Aug 1;19(Suppl 2):i3-8.Hertz E. Medical equipment management program
+    standards—ANSI/AAMI EQ56 and ANSI/AAMI EQ89. InClinical Engineering Handbook 2020 Jan 1 (pp.
+    736-741). Academic Press.
+29. Al-Mawali A, Pinto AD, Al-Hinai AT. Medical equipment and healthcare technology: health vision 2050.
+    Biomedical instrumentation & technology. 2018 Nov;52(6):442-50.
+30. Müller H. Medical Gases: Production, Applications, and Safety. John Wiley & Sons; 2015 Jul 7.
+31. Raju R. An Evaluation of Centralized Medical Gas and Vacuum Supply System in a Multispeciality
+    Hospital (Doctoral dissertation, Rajiv Gandhi University of Health Sciences (India)).
+32. World Health Organization. Foundations of medical oxygen systems, 17 February 2023. World Health
+    Organization; 2023.
+33. Hart, J. R. (2018). Medical Gas and Vacuum Systems Handbook. National Fire Protection Association.
+34. Health Facilities Management. (2015, December 2). Infrastructures to improve patient safety. [cited
+    2023 Dec 5].Available from https://www.hfmmagazine.com/articles/1827-infrastructures-to-improve-
+    patient-safety
+
+
+                                                      148
+NABH Accreditation Standards for Hospitals
+                                                                                                            ®
+
+
+
+
+35. International Organization for Standardization. (n.d.). ISO 10524-1:2018. Pressure regulators with ow-
+    metering devices. [cited 2023 Dec 5]. Available from https://www.iso.org/standard/67190.html
+36. International Organization for Standardization. (n.d.). ISO 10524-3:2019. Pressure regulators for use
+    with medical gases. [cited 2023 Dec 5]. Available from https://www.iso.org/standard/66691.html
+37. International Organization for Standardization. (n.d.). ISO 10524-4:2008. Low pressure regulators.[cited
+    2023 Dec 5].Available from https://www.iso.org/standard/41931.html
+38. International Organization for Standardization. (n.d.). ISO 11197:2019. Medical supply units. [cited 2023
+    Dec 5]. Available from https://www.iso.org/standard/60316.html
+39. International Organization for Standardization. (n.d.). ISO 12500-1:2007. Filters for compressed air test
+    methods. [cited 2023 Dec 5]. Available from https://www.iso.org/standard/41150.html
+40. International Organization for Standardization. (n.d.). ISO 15002:2023. Flow metering devices for
+    connection to terminal units of MGPS. [cited 2023 Dec 5Available from
+    https://www.iso.org/standard/42057.html].
+41. International Organization for Standardization. (n.d.). ISO 7396-1:2016.medical gas pipeline systems.
+    Part 1 safety. [cited 2023 Dec 5]. Available from: https://www.iso.org/standard/60061.html
+42. International Organization for Standardization. (n.d.). ISO 7396-2:2007. Anaesthetic gas scavenging
+    disposal systems. [cited 2023 Dec 5]. Available from: https://www.iso.org/standard/41945.html
+43. International Organization for Standardization. (n.d.). ISO 8573-1:2010.compressed air purity. [cited
+    2023 Dec 5]. Available from: https://www.iso.org/standard/46418.html
+44. International Organization for Standardization. (n.d.). ISO 9170-1:2017. Terminal units for use with
+    compressed medical gases and vacuum. [cited 2023 Dec 5 Available from :
+    https://www.iso.org/standard/67451.html].
+45. International Organization for Standardization. (n.d.). ISO 9170-2:2008. Terminal units for anaesthetic
+    gas scavenging system. [cited 2023 Dec 5].Available from : https://www.iso.org/standard/42056.html
+46. National Fire Protection Association. (2018, January). Medical Gas Cylinder Storage. [cited 2023 Dec
+    5]. Available from : https://www.nfpa.org/~/media/4B6B534171E04E369864672EBB319C4F.pdf
+47. National Health Mission. Ministry of Health & Family Welfare, Government of India. (n.d.). Indian Public
+    H e a l t h S t a n d a r d s . [ c i t e d 2 0 2 3 D e c 5 ] . A v a i l a b l e f r o m :
+    https://nhm.gov.in/index1.php?lang=1&level=2&sublinkid=971&lid=154
+48. Sarangi, S., Babbar, S., & Taneja, D. (n.d.). Safety of the medical gas pipeline system. Journal of
+    Anaesthesiology Clinical Pharmacology, 34(1), 99-102. [cited 2023 Dec 5].Available from:
+    http://www.joacp.org/text.asp?2018/34/1/99/227571
+49. Advisory for minimum essential re safety measures NABH : September 20, 2022.
+
+
+
+
+                                                     149

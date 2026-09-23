@@ -44,8 +44,17 @@ AFTER_WHAT_WE_DO = [
     "Abbreviations",
 ]
 
+DEFAULT_EDITION_LABEL = "NABH SHCO 3rd Edition"
+HCO_EDITION_LABEL = "NABH HCO Full Accreditation 6th Edition"
 
-def numbered_headings(standard_code: str, n_steps: int, has_stop_work: bool) -> list[str]:
+
+def numbered_headings(
+    standard_code: str,
+    n_steps: int,
+    has_stop_work: bool,
+    *,
+    edition_label: str = DEFAULT_EDITION_LABEL,
+) -> list[str]:
     heads = [
         "## 1. Purpose",
         "## 2. Scope",
@@ -71,7 +80,7 @@ def numbered_headings(standard_code: str, n_steps: int, has_stop_work: bool) -> 
     for label in rest:
         heads.append(labels[label].format(n=n))
         n += 1
-    heads.append(f"## {n}. Traceability to NABH SHCO 3rd Edition {standard_code}")
+    heads.append(f"## {n}. Traceability to {edition_label} {standard_code}")
     n += 1
     heads.append(f"## {n}. Required Records / Evidence Checklist")
     return heads
@@ -132,6 +141,7 @@ def verify_shape(
     oe_codes: list[str],
     statute_clause: str | None,
     accreditation_only: bool,
+    edition_label: str = DEFAULT_EDITION_LABEL,
 ) -> str:
     steps = draft["procedure_steps"]
     has_stop = bool((draft.get("stop_work") or "").strip())
@@ -183,8 +193,10 @@ def verify_shape(
     verify_disclaimer(draft["disclaimer"], statute_clause, accreditation_only=accreditation_only)
     print("defaults marked « »; no body [Hospital to define]; no assessor framing:", True)
 
-    md = build_markdown(draft)
-    expected = numbered_headings(draft["standard_code"], n_steps, has_stop)
+    md = build_markdown(draft, edition_label=edition_label)
+    expected = numbered_headings(
+        draft["standard_code"], n_steps, has_stop, edition_label=edition_label
+    )
     numbered = [ln for ln in md.splitlines() if re.match(r"^#{2,3} \d", ln)]
     got_norm = []
     for ln in numbered:
@@ -205,7 +217,7 @@ def verify_shape(
     return md
 
 
-def build_markdown(draft: dict) -> str:
+def build_markdown(draft: dict, *, edition_label: str = DEFAULT_EDITION_LABEL) -> str:
     has_stop = bool((draft.get("stop_work") or "").strip())
     nums = section_numbers(has_stop)
     code = draft["standard_code"]
@@ -277,7 +289,7 @@ def build_markdown(draft: dict) -> str:
         "",
         draft["abbreviations"],
         "",
-        f"## {nums['traceability']}. Traceability to NABH SHCO 3rd Edition {code}",
+        f"## {nums['traceability']}. Traceability to {edition_label} {code}",
         "",
         "This table is an index. It is not how the policy is organised.",
         "",
@@ -312,15 +324,36 @@ def emit_pre_v2(
     oe_codes: list[str],
     statute_clause: str | None,
     accreditation_only: bool,
+    edition_label: str = DEFAULT_EDITION_LABEL,
+    drafts_dir: Path | None = None,
+    preview_dir: Path | None = None,
 ) -> None:
+    # Normalize NABH PDF PUA fi/fl ligatures before shape checks and write-out
+    # so masters never carry invisible U+F001/U+F002 glyphs.
+    from nabh_text_normalize import normalize_nabh_obj
+
+    draft = normalize_nabh_obj(draft)
     md = verify_shape(
         draft,
         oe_codes=oe_codes,
         statute_clause=statute_clause,
         accreditation_only=accreditation_only,
+        edition_label=edition_label,
     )
-    out_json = POLICIES / "drafts" / json_name
-    out_md = POLICIES / "build" / "preview" / md_name
+    # HCO Full output is physically separate from SHCO. HCO builders pass
+    # drafts_dir/preview_dir; if a caller forgets, json_name "hco_*" still
+    # must not land in the SHCO folders.
+    is_hco = json_name.startswith("hco_") or str(draft.get("chapter", "")).upper() == "HCO"
+    if is_hco:
+        from hco_v2_paths import HCO_DRAFTS, HCO_PREVIEW
+        out_json_dir = drafts_dir or HCO_DRAFTS
+        out_md_dir = preview_dir or HCO_PREVIEW
+    else:
+        out_json_dir = drafts_dir or (POLICIES / "drafts")
+        out_md_dir = preview_dir or (POLICIES / "build" / "preview")
+    out_json = out_json_dir / json_name
+    out_md = out_md_dir / md_name
+    out_json.parent.mkdir(parents=True, exist_ok=True)
     out_md.parent.mkdir(parents=True, exist_ok=True)
     out_json.write_text(json.dumps(draft, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     out_md.write_text(md, encoding="utf-8")
@@ -335,10 +368,11 @@ def document_control(
     version: str,
     prepared_by: str,
     extra_lines: str = "",
+    draft_label: str = "PRE v2 draft",
 ) -> str:
     base = f"""Document number: {doc_no}
 Issue number: {D('01')}
-Version: {version} (PRE v2 draft — not an approved master)
+Version: {version} ({draft_label} — not an approved master)
 Date created: {BLANK}
 Date of implementation: {BLANK}
 Review due: {D('one year from implementation')}

@@ -1,0 +1,1240 @@
+PRE.1–PRE.4 — Batched Raw Source Dump
+======================================
+Purpose: Draft input for four standards in one pull.
+Each standard drafted and verified individually — same process as IPC.1-8, COP.1-20, MOM.1-11.
+Source: Official NABH HCO Full Accreditation 6th Edition Standards PDF (OE text, levels, asterisks)
+        Printed pages 101–109 / PDF pages 113–121  |  hco6_pre_ocr.txt
+        + NABH Guidebook (interpretations scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+        Guidebook PRE chapter: PDF pages 176–195 (0-based idx 175–194)  |  hco6_pre_guidebook_ocr.txt
+        Cleaned per-OE notes: hco6_pre_interpretations.json (52 interpretation blocks, 1:1 with inventory OEs).
+
+CROSS-REFERENCE NOTE (applies throughout this file):
+The Guidebook cites specific NABH OE codes (e.g., "Refer to PRE.4.a", "Refer to PRE.6.a",
+"Refer to PRE.7.c", "Refer to IMS.4.h", "Refer to COP 1.e", "Refer to COP7.e., COR 12.b.,
+COP. 13.d. and COP 14.c."). In policy drafts, these must NOT be reproduced as code citations.
+Use generic phrasing: "Those requirements are covered in the hospital's other policies." The
+specific codes are preserved here for source accuracy only.
+
+OCR ARTIFACT NOTICE:
+The Guidebook source PDF contains OCR artefacts. Known artefacts in PRE.1–4:
+  — "Theorganisation" (PRE.1.b end) — "The" and "organisation" merged; marks start of the
+     CORE transition in the scanned format; discarded.
+  — ".." (PRE.1.c, PRE.2.b, PRE.2.d, PRE.2.e end) — double-period scan artefact; discarded.
+  — "z = h. HB cone." (PRE.2.e end) — level-indicator artefact; discarded.
+  — "fey 4 7 - NABH Patient and family rights include access to their clinical records."
+     (PRE.2.i end) — the text from "fey 4 7" onward is a bleed-through of the next OE heading
+     (PRE.2.j); discard from PRE.2.i interpretation.
+  — "i al" within PRE.3.a ("i al understand") — scan split of the word "understand"; discard.
+  — "HB cone." (PRE.3.c end) — level-indicator artefact; discarded.
+  — "i." (PRE.3.d end) — scan artefact; discarded.
+  — "zi" within PRE.4.d ("The organisation zi shall take") — artefact; discard; read as
+     "The organisation shall take".
+
+WORDING NOTES (kept exactly as printed in portal PDF):
+  — PRE.4.c prints "it's risks" (apostrophe on "it's"). Kept verbatim per inventory policy.
+
+STOP-WORK STATUS BY STANDARD:
+  PRE.1 — NO stop-work (rights documentation and reporting standard; violations go through
+           the PRE.1.d/e reporting and CAPA path)
+  PRE.2 — YES (STOP_WORK_PROPOSALS: neglect or abuse in progress; examination/procedure
+              without privacy and dignity; listed invasive care without informed consent)
+  PRE.3 — NO stop-work (informed decision-making and education standard)
+  PRE.4 — YES (STOP_WORK_PROPOSALS: start a listed procedure without valid informed consent
+              from the person who may consent)
+
+STATUTE DISCLAIMER STATUS:
+  PRE.1 — Accreditation-only disclaimer (no statute P2)
+  PRE.2 — Accreditation-only disclaimer (Code of Medical Ethics stays in method note, not
+           imported as statute P2 for the whole standard; Mental Healthcare Act not imported)
+  PRE.3 — Accreditation-only disclaimer (no statute P2)
+  PRE.4 — Statute P2 (MTP Act, PC-PNDT Act, Transplantation of Human Organs Act, and
+           HIV and AIDS (Prevention and Control) Act 2017 / NACO HIV-testing policy —
+           named in PRE.4.a as examples of statutory requirements that shape the consent
+           list; PRE.4.b OE text itself says "adheres to statutory norms")
+
+POLICY TITLES AND PREPARED-BY:
+  PRE.1 — Patient and Family Rights and Responsibilities
+           Prepared by: Patient Rights Officer | Doc: HCO/PRE/POL/01
+  PRE.2 — Patient and Family Rights in Care and Decision-Making
+           Prepared by: Patient Rights Officer | Doc: HCO/PRE/POL/02
+  PRE.3 — Informed Decision-Making, Care Planning and Patient Education
+           Prepared by: Patient Rights Officer | Doc: HCO/PRE/POL/03
+  PRE.4 — Informed Consent
+           Prepared by: Patient Rights Officer | Doc: HCO/PRE/POL/04
+
+
+══════════════════════════════════════════════════════════════════════════════
+PRE.1 — The organisation protects and promotes patient and family rights and
+         informs them about their responsibilities during care.
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+The organisation protects and promotes patient and family rights and informs them
+about their responsibilities during care.
+
+Standard is NOT starred.
+
+OE count: 5 | COREs: c, d, e | Stars: a★, b★ | Achievement: b | Excellence: none
+STOP-WORK: NO
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.1.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Patient and family rights and responsibilities are documented, displayed, and they
+are made aware of the same.
+
+Guidebook interpretation:
+Organisation shall document the patient's rights and inform them of their
+responsibilities. These shall be documented in consonance with the Charter of
+Patients' Rights laid down by the statutory body. The rights and responsibilities
+of the patients shall be displayed in the hospital where it is prominently visible
+to patients, families and visitors. Pamphlets could be used to make them aware.
+Information, education and communication material shall at least be bilingual.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. PRE.1 has
+no stop-work section. Failure to document, display or create awareness is a CAPA gap,
+not an immediate stop-work trigger.
+
+Mandatory (shall):
+  1. Patient rights and responsibilities shall be documented in consonance with the
+     Charter of Patients' Rights laid down by the statutory body.
+  2. Rights and responsibilities shall be displayed where prominently visible to
+     patients, families and visitors.
+  3. Information, education and communication (IEC) material shall be at least bilingual.
+
+Illustrative only:
+  — "Pamphlets could be used to make them aware" — aspirational mechanism; the
+    mandatory requirement is awareness, not pamphlets specifically.
+
+Documentation: OE is starred — the documented set, display boards, and awareness records
+(with date, language and named staff) must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.1.b
+Level: Achievement | Star ★ (documentation required)
+
+Verbatim OE text:
+Patient and family rights and responsibilities are actively promoted.
+
+Guidebook interpretation:
+Organisation shall take steps to actively promote patient and family rights and
+responsibilities. For in-patients, the organisation shall counsel the patient and/or
+family on their rights and responsibilities. Counselling is done in a format and
+language that they can understand. For the out-patients, educational material shall
+be easily accessible and prominently displayed.
+
+[Note: "Theorganisation protects patient and family rights." at end of source is an
+OCR artefact — "The" and "organisation" merged, followed by the CORE level transition
+text from the scanned format. Discarded.]
+
+Stop-work check: Achievement — no stop-work trigger at this OE. Absence of active
+promotion is an Achievement-level accreditation gap, not an immediate stop-work trigger.
+
+Mandatory (shall, Achievement level):
+  1. Active promotion steps shall be taken beyond static display.
+  2. For in-patients: counselling of patient and/or family on rights and responsibilities
+     shall be done.
+  3. Counselling shall be in a format and language that the patient/family can understand.
+  4. For out-patients: educational material shall be easily accessible and prominently
+     displayed in OPD.
+
+Illustrative only:
+  (none — all elements above are "shall")
+
+Achievement status: This OE requires evidence of active promotion beyond the PRE.1.a
+display board — counselling records for in-patients and accessible OPD material for
+out-patients.
+
+Documentation: OE is starred — promotion method, in-patient counselling records (with
+format, language, named staff), and OPD display records must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.1.c
+Level: CORE | No star
+
+Verbatim OE text:
+The organisation protects patient and family rights.
+
+Guidebook interpretation:
+The first measure to protect patient and family rights is making staff aware of their
+responsibility in protecting and respecting patient and family rights. The staff shall
+conduct themselves in a manner wherein their actions convey a positive attitude towards
+the protection of patient and family rights.
+
+[Note: ".." at end of source is a double-period OCR artefact; discarded.]
+
+Stop-work check: CORE — no standalone stop-work trigger at this OE. A specific act of
+rights violation is addressed through PRE.1.d (reporting mechanism) and PRE.1.e
+(leadership CAPA), not through a stop-work gate at this OE.
+
+Mandatory (shall):
+  1. Staff shall be made aware of their responsibility in protecting and respecting
+     patient and family rights.
+  2. Staff shall conduct themselves in a manner that conveys a positive attitude toward
+     the protection of patient and family rights.
+
+Illustrative only:
+  (none — both elements above are "shall")
+
+CORE status: Absence of staff awareness of their protection duty is a CORE gap. A rights
+charter without corresponding staff training and conduct expectations is a CORE gap.
+
+Documentation: OE is not starred — evidence of staff training records and, where relevant,
+conduct records or incident investigation outcomes are the expected supporting evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.1.d
+Level: CORE | No star
+
+Verbatim OE text:
+The organisation has a mechanism to report a violation of patient and family rights.
+
+Guidebook interpretation:
+The organisation may develop a list of such instances which could be considered as
+infringements of patients' and families' rights and train the staff accordingly. For
+example, compromising the privacy, breaching confidentiality, disrespect to the
+religious and cultural needs, not providing medical records within the stipulated time
+etc. Violation of patient and family rights is reported through an incident reporting
+form. It shall provide details of how the right was violated and where applicable by
+whom. Also, there shall be a mechanism for the patient and/or family to report a
+violation of their rights. The patient feedback form (by incorporating patient rights
+worded appropriately) could be used as a tool to capture violation of patient rights.
+
+Stop-work check: CORE — no standalone stop-work trigger at this OE. This OE is the
+reporting mechanism for rights violations; violations themselves are reported here, they
+are not individually stop-work triggers under PRE.1. (PRE.2 has its own stop-work for
+abuse/privacy/consent violations in progress.)
+
+Mandatory (shall):
+  1. There shall be a mechanism for the patient and/or family to report a violation of
+     their rights.
+  2. The violation report shall provide details of how the right was violated and,
+     where applicable, by whom.
+  3. Violations of patient and family rights shall be reported through an incident
+     reporting form.
+
+Illustrative only:
+  — "The organisation may develop a list of such instances" — aspirational; the list
+    itself is not mandatory by this OE, but training staff on what constitutes an
+    infringement is good practice.
+  — Examples given (privacy compromise, confidentiality breach, disrespect to religious/
+    cultural needs, records not provided in time) — illustrative list, not exhaustive.
+  — "The patient feedback form... could be used as a tool" — aspirational mechanism;
+    the mandatory requirement is the mechanism, not the specific tool.
+
+CORE status: Absence of any mechanism for patients or families to report a rights
+violation is a CORE gap. A mechanism that routes all reports only to the alleged
+violator is not a valid mechanism.
+
+Documentation: OE is not starred — the written mechanism (complaint box, helpline,
+form), violation log with entries, and records of routes used by patients/families
+are the expected supporting evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.1.e
+Level: CORE | No star
+
+Verbatim OE text:
+Violation of patient and family rights are monitored, analysed, and corrective /
+preventive action taken by the top leadership of the organisation.
+
+Guidebook interpretation:
+Whenever patients' rights have been infringed upon, management shall document the
+said violations, investigate and maintain the record of the incident and its outcomes.
+Corrective and/or preventive actions shall be taken in a time frame defined by the
+organisation.
+
+Stop-work check: CORE — no standalone stop-work trigger at this OE. This OE is the
+CAPA and leadership oversight gate for violations already reported through PRE.1.d.
+
+Mandatory (shall):
+  1. Management shall document violations of patient and family rights.
+  2. Management shall investigate violations and maintain the record of the incident
+     and its outcomes.
+  3. Corrective and/or preventive action shall be taken in a time frame defined by the
+     organisation.
+  4. Action shall be taken by the top leadership of the organisation (not delegated to
+     line staff alone).
+
+Illustrative only:
+  — The specific time frame is for the organisation to define (the Guidebook does not
+    prescribe a fixed number of days).
+
+CORE status: Absence of documented investigation, absence of CAPA, or delegating
+leadership review away from top leadership is a CORE gap. A dormant violation file
+with no investigation is a CORE gap.
+
+Documentation: OE is not starred — dated leadership review minutes, CAPA records with
+owners and closure evidence, and the violation log are the expected supporting evidence.
+
+
+══════════════════════════════════════════════════════════════════════════════
+PRE.2 — Patient and family rights support individual beliefs, values and involve
+         the patient and family in decision-making processes.
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Patient and family rights support individual beliefs, values and involve the patient
+and family in decision-making processes.
+
+Standard is NOT starred.
+
+OE count: 12 | COREs: d, g | Stars: none | Achievement: l | Excellence: none
+STOP-WORK: YES — neglect or abuse in progress; examination or procedure without
+                  privacy and dignity; start of transfusion/anaesthesia/surgery/research/
+                  other invasive or high-risk care without informed consent.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.2.a
+Level: Commitment | No star
+
+Verbatim OE text:
+Patients and family rights include respecting values and beliefs, any special
+preferences, cultural needs, and responding to requests for spiritual needs.
+
+Guidebook interpretation:
+This could include how they wish to be addressed, dietary preferences and worship
+requirements. This may also include any specific requirement following death.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Failure to
+respect values/beliefs/preferences is a CAPA gap and a potential rights violation
+reported under PRE.1.d; it is not itself a PRE.2 stop-work trigger (the stop-work covers
+abuse, privacy breach and missing consent — see section 6 of PRE.2 policy).
+
+Mandatory (shall):
+  (The OE text states the right exists; the Guidebook provides guidance on what it covers.
+   No explicit "shall" items in this interpretation beyond the OE right itself.)
+  1. Patient and family rights shall include respecting values and beliefs, special
+     preferences, cultural needs, and responding to requests for spiritual needs.
+
+Illustrative only:
+  — "This could include how they wish to be addressed, dietary preferences and worship
+    requirements" — aspirational examples, not an exhaustive mandatory list.
+  — "This may also include any specific requirement following death" — additional example;
+    "may" marks it as aspirational.
+
+Documentation: OE is not starred — awareness records and any preferences noted in the
+admission sheet/nursing kardex are the expected supporting evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.2.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Patient and family rights include respect for personal dignity and privacy during
+examination, procedures and treatment.
+
+Guidebook interpretation:
+During all stages of patient care, be it in the examination or carrying out a
+procedure, hospital staff shall ensure that the patient's privacy and dignity are
+maintained. The organisation shall develop the necessary guidelines for the same.
+During procedures, the organisation shall ensure that the patient is exposed just
+before the actual procedure. With regards to photographs/recording procedures, the
+organisation shall ensure that explicit informed consent is taken and that the
+patient's identity is not revealed.
+
+[Note: ".." at end of source is a double-period OCR artefact; discarded.]
+
+Stop-work check: Commitment — STOP-WORK TRIGGER: an examination or procedure that
+exposes the patient beyond what the procedure requires, or that leaves the patient
+without privacy, is a PRE.2 stop-work trigger (section 6). The stop-work applies to
+the ongoing examination or procedure start.
+
+Mandatory (shall):
+  1. Hospital staff shall ensure that the patient's privacy and dignity are maintained
+     during all stages of care — examination, procedures and treatment.
+  2. The organisation shall develop written guidelines for maintaining privacy and dignity.
+  3. The patient shall be exposed just before the actual procedure (not before).
+  4. Explicit informed consent shall be taken for photographs or recordings of procedures.
+  5. The patient's identity shall not be revealed in any photograph or recording.
+
+Illustrative only:
+  (none — all elements above are "shall")
+
+Documentation: OE is not starred — privacy guidelines, any consent forms for
+photography, and audit/observation records of privacy practice are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.2.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Patient and family rights include protection from neglect or abuse.
+
+Guidebook interpretation:
+Examples of this include falling from the bed/trolley due to negligence, assault,
+repeated internal examinations (unwarranted), manhandling, etc. Special precautions
+shall be taken, especially concerning vulnerable patients, for example elderly, neonates,
+physically and mentally challenged patients, comatose patients, patients under
+anaesthesia etc.
+
+Stop-work check: Commitment — STOP-WORK TRIGGER: an active situation of neglect or
+abuse — unattended fall risk, unwarranted repeated examination, manhandling, or failure
+to protect a vulnerable patient — is a PRE.2 stop-work trigger (section 6). The person
+who identifies the situation stops it, protects the patient and reports the same shift.
+
+Mandatory (shall):
+  1. Patient and family rights shall include protection from neglect or abuse.
+  2. Special precautions shall be taken concerning vulnerable patients (elderly, neonates,
+     physically and mentally challenged patients, comatose patients, patients under
+     anaesthesia).
+
+Illustrative only:
+  — The examples of neglect/abuse (falling from bed/trolley, assault, unwarranted
+    repeated internal examinations, manhandling) are illustrative; the protection right
+    is not limited to the listed examples.
+  — The list of vulnerable patient groups is illustrative, not exhaustive.
+
+Documentation: OE is not starred — any incident reports, fall-prevention and vulnerable-
+patient protection records, and stop-work event logs (if triggered) are the expected
+evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.2.d
+Level: CORE | No star
+
+Verbatim OE text:
+Patient and family rights include treating patient information as confidential.
+
+Guidebook interpretation:
+The organisation and the treating team shall take effective measures to maintain the
+confidentiality of all patient-related information. Staff shall avoid having
+patient-related discussions in public places. Statutory requirements regarding
+privileged communication shall be followed at all times (refer the glossary for a
+definition of privileged communication). Confidential information, including HIV status,
+shall not be revealed without the patient's permission. It shall not be explicitly
+written/pasted on the cover of the medical record, nor shall it be displayed in a
+manner that is easily understandable by the public at large.
+
+[Note: ".." at end of source is a double-period OCR artefact; discarded.]
+
+Stop-work check: CORE — no standalone stop-work trigger at this OE. A confidentiality
+breach is a rights violation reported under PRE.1.d. It is a CORE accreditation gap,
+but not a PRE.2 stop-work trigger (the stop-work is limited to abuse, privacy and
+missing consent).
+
+Mandatory (shall):
+  1. Effective measures shall be taken to maintain the confidentiality of all
+     patient-related information.
+  2. Staff shall avoid having patient-related discussions in public places.
+  3. Statutory requirements regarding privileged communication shall be followed at
+     all times.
+  4. Confidential information, including HIV status, shall not be revealed without
+     the patient's permission.
+  5. Confidential information shall not be written/pasted on the cover of the medical
+     record.
+  6. Confidential information shall not be displayed in a manner easily understandable
+     by the public at large.
+
+Illustrative only:
+  (none — all elements above are "shall")
+
+CORE status: Absence of any confidentiality measure, or a practice of disclosing HIV
+status or other confidential information without permission, is a CORE gap.
+
+Documentation: OE is not starred — confidentiality guidelines, staff training records,
+and any incident records involving disclosure are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.2.e
+Level: Commitment | No star
+
+Verbatim OE text:
+Patient and family rights include the refusal of treatment.
+
+Guidebook interpretation:
+The treating doctor shall discuss all the available options and allow the patient to
+make an informed choice. In case of refusal, the treating doctor shall explain the
+consequences of the refusal of treatment and document the same. After explanation of
+consequences, if the patient still refuses treatment, the same must be respected.
+
+[Note: "z = h. HB cone." at end of source is a level-indicator artefact; discarded.]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. A refusal
+of treatment by a competent adult is a patient right to be respected, not a stop-work
+trigger. Coercing a patient to accept treatment is a rights violation under PRE.1.d.
+
+Mandatory (shall/must):
+  1. The treating doctor shall discuss all available options and allow the patient to
+     make an informed choice.
+  2. In case of refusal, the treating doctor shall explain the consequences of refusal.
+  3. The discussion and explanation shall be documented.
+  4. After explanation of consequences, if the patient still refuses treatment, the
+     refusal must be respected.
+
+Illustrative only:
+  (none — all elements above are "shall/must")
+
+Documentation: OE is not starred — the medical record entry documenting the options
+offered, the consequences explained, and the patient's sustained refusal (with
+documentation and witness) is the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.2.f
+Level: Commitment | No star
+
+Verbatim OE text:
+Patient and family rights include a right to seek an additional opinion regarding
+clinical care.
+
+Guidebook interpretation:
+There is a mechanism for patient and family to seek a second opinion if they wish,
+from within or outside the organisation. The organisation shall respect the decision
+of the patient and family and facilitate access to all relevant information or clinical
+evaluation. Request for additional information on a particular physician in terms of
+qualifications and experience may be provided.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Blocking a
+patient from seeking a second opinion is a rights violation reported under PRE.1.d;
+it is not a PRE.2 stop-work trigger.
+
+Mandatory (shall):
+  1. A mechanism shall exist for patients and families to seek a second opinion from
+     within or outside the organisation.
+  2. The organisation shall respect the patient's and family's decision.
+  3. The organisation shall facilitate access to all relevant information or clinical
+     evaluation when a second opinion is sought.
+
+Illustrative only:
+  — "Request for additional information on a particular physician in terms of
+    qualifications and experience may be provided" — aspirational; the mandatory
+    requirement is the mechanism and facilitated access.
+
+Documentation: OE is not starred — the written mechanism and any records of facilitated
+second-opinion access are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.2.g
+Level: CORE | No star
+
+Verbatim OE text:
+Patient and family rights include informed consent before the transfusion of blood and
+blood components, anaesthesia, surgery, initiation of any research protocol and any
+other invasive / high-risk procedures / treatment.
+
+Guidebook interpretation:
+Informed consent shall be obtained by treating doctor or a doctor member of the treating
+team. Refer to PRE.4.a.
+
+[Note: "Refer to PRE.4.a" is a cross-reference to another OE code. Must not appear in
+policy text — replace with generic phrasing. The consent method detail is owned by PRE.4.]
+
+Stop-work check: CORE — STOP-WORK TRIGGER: starting transfusion of blood or blood
+components, anaesthesia, surgery, a research protocol, or any other invasive/high-risk
+procedure/treatment without informed consent is a PRE.2 stop-work trigger (section 6).
+Emergency life-saving exceptions follow the PRE.4 two-clinician emergency rule.
+
+Mandatory (shall):
+  1. Informed consent shall be obtained before transfusion of blood and blood components,
+     anaesthesia, surgery, initiation of any research protocol, and any other invasive/
+     high-risk procedure/treatment.
+  2. Informed consent shall be obtained by the treating doctor or a doctor member of the
+     treating team.
+
+Illustrative only:
+  (none — both elements above are "shall")
+
+CORE status: Starting any of the listed acts without informed consent is a CORE gap and
+a stop-work trigger.
+
+Documentation: OE is not starred — consent forms on file for each listed act, and the
+stop-work event log if triggered, are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.2.h
+Level: Commitment | No star
+
+Verbatim OE text:
+Patient and family rights include a right to complain and information on how to voice
+a complaint.
+
+Guidebook interpretation:
+The displayed patient rights shall include the right to make a complaint and also mention
+the methodology to voice the same. Complaint mechanism must be accessible, and redressal
+of complaint must be fair and transparent. Refer to PRE.7.c.
+
+[Note: "Refer to PRE.7.c" is a cross-reference to another OE code — must not appear in
+policy text. The complaint redressal mechanism detail is owned by that standard.]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Absence of
+complaint information on the rights display is a CAPA gap, not a stop-work trigger.
+
+Mandatory (shall/must):
+  1. The displayed patient rights shall include the right to make a complaint.
+  2. The displayed rights shall mention the methodology to voice a complaint.
+  3. The complaint mechanism must be accessible.
+  4. Redressal of complaints must be fair and transparent.
+
+Illustrative only:
+  (none — all elements above are "shall/must")
+
+Documentation: OE is not starred — display boards including complaint information and
+the complaint mechanism description are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.2.i
+Level: Commitment | No star
+
+Verbatim OE text:
+Patient and family rights include information on the expected cost of the treatment.
+
+Guidebook interpretation:
+Patients and families are explained about the expected costs of treatment in a
+transparent manner. This includes consultations, procedures and investigations. It may
+involve giving written estimates or making the concerned tariff available. Refer to
+PRE.6.a.
+
+[Note: "fey 4 7 - NABH Patient and family rights include access to their clinical
+records." at end of source is a bleed-through of the PRE.2.j OE heading from the
+scan layout. Discarded from PRE.2.i interpretation.]
+
+[Note: "Refer to PRE.6.a" is a cross-reference to another OE code — must not appear
+in policy text. Cost explanation detail is owned by that standard.]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Withholding
+cost information is a rights violation reported under PRE.1.d; it is not a PRE.2
+stop-work trigger.
+
+Mandatory (shall):
+  1. Patients and families shall be explained about the expected costs of treatment in
+     a transparent manner.
+  2. The explanation shall include consultations, procedures and investigations.
+
+Illustrative only:
+  — "It may involve giving written estimates or making the concerned tariff available"
+    — aspirational methods; the mandatory requirement is the transparent explanation.
+
+Documentation: OE is not starred — records of cost explanation or estimate provided
+to patients, and the tariff availability mechanism, are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.2.j
+Level: Commitment | No star
+
+Verbatim OE text:
+Patient and family rights include access to their clinical records.
+
+Guidebook interpretation:
+The organisation shall ensure that every patient has access to his/her record. This
+shall be in consonance with the Code of Medical Ethics laid down by the Medical Council
+of India and statutory requirements. Refer to IMS.4.h.
+
+[Note: "Refer to IMS.4.h" is a cross-reference — must not appear in policy text. The
+records-access procedure is owned by the IMS chapter policy.]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Denial of
+access to records is a rights violation reported under PRE.1.d; it is not a PRE.2
+stop-work trigger.
+
+Mandatory (shall):
+  1. The organisation shall ensure every patient has access to their clinical record.
+  2. Access shall be in consonance with the Code of Medical Ethics and statutory
+     requirements.
+
+Illustrative only:
+  (none — both elements above are "shall")
+
+Documentation: OE is not starred — the written access procedure (how a patient may
+request their record, the time frame) and any records of access provided are the
+expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.2.k
+Level: Commitment | No star
+
+Verbatim OE text:
+Patient and family rights include information on the name of the treating doctor, care
+plan, progress and information on their health care needs.
+
+Guidebook interpretation:
+Information on the name of the treating doctor, care plan, the progress of the patient
+and the healthcare needs are discussed with patient and family.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Withholding
+the treating doctor's name or care-plan information is a rights violation under PRE.1.d;
+not a PRE.2 stop-work trigger.
+
+Mandatory (shall):
+  1. Patient and family rights shall include information on the name of the treating
+     doctor, care plan, progress and healthcare needs.
+  2. This information shall be discussed with the patient and family.
+
+Illustrative only:
+  (none)
+
+Documentation: OE is not starred — admission notes and clinical records showing the
+treating doctor is named and care plan is discussed are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.2.l
+Level: Achievement | No star
+
+Verbatim OE text:
+Patient rights include determining what information regarding their care would be
+provided to self and family.
+
+Guidebook interpretation:
+The organisation needs to evolve a mechanism to provide sensitive and/or confidential
+information to the patient and the next of kin if desired by the patient. In the case
+of minors, it will be provided to at least one of the parents / guardian.
+
+Stop-work check: Achievement — no standalone stop-work trigger at this OE.
+
+Mandatory (shall, Achievement level):
+  1. A mechanism shall exist for the patient to determine what information about their
+     care is provided to self and to family.
+  2. For minors, information shall be provided to at least one parent or guardian.
+
+Illustrative only:
+  — "The organisation needs to evolve a mechanism" — the Guidebook uses "needs to evolve"
+    as process language, but the OE itself ("Patient rights include determining...") makes
+    the right mandatory at Achievement level.
+
+Achievement status: Evidenced by a documented mechanism and records of patient-expressed
+preferences on information sharing (including "share with named family member" or "do
+not share diagnosis with family").
+
+Documentation: OE is not starred — written mechanism and records of patient preferences
+on information sharing are the expected evidence.
+
+
+══════════════════════════════════════════════════════════════════════════════
+PRE.3 — The patient and / or family members are educated to make informed decisions
+         and are involved in the care planning and delivery process
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+The patient and / or family members are educated to make informed decisions and are
+involved in the care planning and delivery process
+
+[Note: No terminal period on this standard heading in the portal body — kept as printed.]
+
+Standard is NOT starred.
+
+OE count: 5 | COREs: a | Stars: none | Achievement: b, e | Excellence: none
+STOP-WORK: NO
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.3.a
+Level: CORE | No star
+
+Verbatim OE text:
+The patient and / or family members are explained about the proposed care (including
+the risks, benefits, alternatives), expected results and possible complications.
+
+Guidebook interpretation:
+The proposed care, including referral to internal and/or external services, is discussed
+by the attending doctor with the patient and/or family members. This shall be done in
+a language that the patient/attendant can understand. The above information could be
+documented and signed by the doctor concerned. The patients and/or family members are
+explained in detail by the treating physician or his/her team about the expected outcomes
+of such treatment at periodic intervals. Possible complications of the treatment, if any,
+are clearly communicated to the patient and/or family members.
+
+[Note: "i al" within "i al understand" is a scan split of the word "understand";
+discarded. Read as "This shall be done in a language that the patient/attendant can
+understand."]
+
+Stop-work check: CORE — no standalone stop-work trigger at this OE. Failure to explain
+proposed care, risks, benefits and alternatives is a CORE gap for this standard; it is
+not a PRE.3 stop-work trigger (PRE.3 has no stop-work section). The consent requirement
+for high-risk acts is owned by PRE.2.g and PRE.4.
+
+Mandatory (shall):
+  1. Proposed care, including referral, shall be discussed by the attending doctor with
+     the patient and/or family members.
+  2. The discussion shall be done in a language the patient/attendant can understand.
+  3. Expected outcomes of treatment shall be explained at periodic intervals by the
+     treating physician or their team.
+  4. Possible complications shall be clearly communicated to the patient and/or family.
+
+Illustrative only:
+  — "The above information could be documented and signed by the doctor concerned"
+    — "could" marks this as aspirational at the Guidebook level. The documentation is
+    best practice but not explicitly mandated by the Guidebook wording (note: the
+    consenting documentation requirement lives in PRE.4.c, not here).
+
+CORE status: Absence of any doctor-led explanation of proposed care, risks, benefits
+and alternatives to the patient/family is a CORE gap.
+
+Documentation: OE is not starred — clinical notes or consultation records showing the
+explanation was given are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.3.b
+Level: Achievement | No star
+
+Verbatim OE text:
+The care plan is prepared and modified in consultation with the patient and / or family
+members.
+
+Guidebook interpretation:
+During the preparation of the care plan, the patient and/or family members are explained
+about the various treatment options, risks and benefits. The care plan, where possible,
+incorporates patient and/or family concerns and requests. The religious, cultural and
+spiritual views of the patient and/or family shall be considered during the process of
+care delivery. Incorporating patient and/or family requests shall be limited by the
+statutory requirements. The organisation could develop a structured mechanism to implement
+and capture the same.
+
+Stop-work check: Achievement — no standalone stop-work trigger at this OE.
+
+Mandatory (shall, Achievement level):
+  1. The patient and/or family shall be explained about treatment options, risks and
+     benefits during care-plan preparation.
+  2. Religious, cultural and spiritual views of the patient and/or family shall be
+     considered during the process of care delivery.
+  3. Incorporating patient/family requests shall be limited by statutory requirements.
+
+Illustrative only:
+  — "The care plan, where possible, incorporates patient and/or family concerns and
+    requests" — "where possible" qualifies this; the mandatory requirement is consultation
+    and explanation, not that every request is incorporated.
+  — "The organisation could develop a structured mechanism to implement and capture the
+    same" — aspirational; not a mandatory document requirement.
+
+Achievement status: Evidenced by medical records showing the care plan was discussed
+with the patient/family, their concerns were heard, and the plan reflects that input.
+
+Documentation: OE is not starred — medical record notes of care-plan consultation
+are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.3.c
+Level: Commitment | No star
+
+Verbatim OE text:
+The patient and/or family members are informed about the results of diagnostic tests
+and the diagnosis.
+
+Guidebook interpretation:
+The results of all diagnostic tests are explained at least in broad terms to patient
+and family members and their implication on progress and treatment.
+
+[Note: "HB cone." at end of source is a level-indicator OCR artefact; discarded.]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE.
+
+Mandatory (shall):
+  1. Results of all diagnostic tests shall be explained at least in broad terms to
+     the patient and family members.
+  2. The implication of results on progress and treatment shall be explained.
+
+Illustrative only:
+  (none — both elements above are "shall")
+
+Documentation: OE is not starred — clinical notes showing diagnostic results were
+communicated to the patient/family are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.3.d
+Level: Commitment | No star
+
+Verbatim OE text:
+The patient and/or family members are explained about any change in the patient's
+condition in a timely manner.
+
+Guidebook interpretation:
+The counselling includes improvement, deterioration or occurrence of complications.
+Withholding of resuscitation requests from relatives and family could be discussed
+within ethical and legal parameters.
+
+[Note: "i." at end of source is a scan artefact; discarded.]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE.
+
+Mandatory (shall):
+  1. The patient and/or family shall be explained about any change in the patient's
+     condition — improvement, deterioration or complications — in a timely manner.
+
+Illustrative only:
+  — "Withholding of resuscitation requests from relatives and family could be discussed
+    within ethical and legal parameters" — "could be discussed" marks this as
+    aspirational guidance; not a mandatory requirement.
+
+Documentation: OE is not starred — clinical notes showing that changes in condition
+were communicated to the patient/family and when are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.3.e
+Level: Achievement | No star
+
+Verbatim OE text:
+The patient and/or family members are provided multi-disciplinary counselling when
+appropriate.
+
+Guidebook interpretation:
+The organisation shall identify situations where multidisciplinary counselling is
+required. This could include counselling of family members of critically ill patients,
+potential organ donors and/or family, long-stay patients. Members of the multidisciplinary
+team involved in providing care like doctors from different specialities, nurses and
+physiotherapists shall be a part of the counselling. The counselling could be led by
+clinician in-charge of the patient. Refer to COP 1.e.
+
+[Note: "Refer to COP 1.e" is a cross-reference — must not appear in policy text.
+Those requirements are covered in the hospital's other policies.]
+
+Stop-work check: Achievement — no standalone stop-work trigger at this OE.
+
+Mandatory (shall, Achievement level):
+  1. The organisation shall identify situations where multidisciplinary counselling
+     is required.
+  2. Members of the multidisciplinary team (doctors from different specialties, nurses,
+     physiotherapists) shall be part of the counselling.
+
+Illustrative only:
+  — "This could include counselling of family members of critically ill patients,
+    potential organ donors and/or family, long-stay patients" — aspirational examples;
+    the organisation defines its own situation list.
+  — "The counselling could be led by clinician in-charge of the patient" — aspirational;
+    the mandatory requirement is multi-disciplinary participation.
+
+Achievement status: Evidenced by a written list of situations requiring multidisciplinary
+counselling and counselling records showing the team was actually present.
+
+Documentation: OE is not starred — the written situation list, counselling records
+(who attended, what was discussed), and records of multi-disciplinary participation
+are the expected evidence.
+
+
+══════════════════════════════════════════════════════════════════════════════
+PRE.4 — Informed consent is obtained from the patient or family about their care.
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Informed consent is obtained from the patient or family about their care.
+
+Standard is NOT starred.
+
+OE count: 5 | COREs: a, c, e | Stars: a★, d★ | Achievement: none | Excellence: none
+STOP-WORK: YES — start a listed procedure without valid informed consent from the
+                  person who may consent; nurse/clerk signature alone when the performer
+                  has not explained.
+
+STATUTE NOTE: PRE.4.a names MTP Act, PC-PNDT Act, Transplantation of Human Organs Act,
+and HIV and AIDS (Prevention and Control) Act 2017 / NACO policy as examples of statutory
+requirements that shape the consent list. PRE.4.b OE text states consent "adheres to
+statutory norms." Statute P2 applies to this standard's disclaimer.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.4.a
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation obtains informed consent from the patient or family for situations
+where informed consent is required.
+
+Guidebook interpretation:
+A list of procedures shall be made for which informed consent is required. This shall be
+prepared to keep in mind the requirements of this standard and statutory requirement.
+For example, some statutory requirements are MTP Act, PC-PNDT Act and The Transplantation
+of Human Organs Act. The policy for HIV testing shall follow HIV and AIDS (prevention and
+control) act 2017 and the national policy on HIV testing laid down by National AIDS Control
+Organisation (NACO). The organisation shall have written guidance explaining the various
+steps involved in the informed consent process and the person responsible. The staff are
+made aware of the same.
+
+Stop-work check: CORE and starred. STOP-WORK TRIGGER: starting a procedure on the
+consent list without valid informed consent from the patient (or from the person who
+may consent when the patient is incapable) is a PRE.4 stop-work trigger (section 6).
+
+Mandatory (shall):
+  1. A written list of procedures requiring informed consent shall be made, taking into
+     account this standard's requirements and applicable statutory requirements.
+  2. Applicable statutory requirements shall be considered — the Guidebook names MTP Act,
+     PC-PNDT Act, Transplantation of Human Organs Act, and HIV/AIDS (Prevention and
+     Control) Act 2017 / NACO HIV-testing policy as examples.
+  3. Written guidance shall explain the steps of the informed consent process and the
+     person responsible.
+  4. Staff shall be made aware of the written guidance.
+
+Illustrative only:
+  — The statutes named (MTP Act, PC-PNDT Act, Transplantation Act, HIV/AIDS Act 2017/
+    NACO) are examples in the Guidebook ("For example, some statutory requirements are
+    ..."). The hospital's applicable list depends on the scope of services it provides.
+    These are not universal mandates for every hospital; hospitals without those services
+    need not apply the specific statute.
+
+CORE status: Absence of a written consent list or written guidance for the consent
+process is a CORE gap. Starting a listed procedure without consent is a CORE gap and
+stop-work trigger.
+
+Documentation: OE is starred — the written procedure list, the consent guidance, staff
+awareness records, and completed consent forms for listed procedures must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.4.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Informed consent process adheres to statutory norms.
+
+Guidebook interpretation:
+This includes (but is not limited to): 1. Taking consent before the procedure; 2. At
+least one witness signing the consent form. The witness shall be a person who was present
+for the entire duration of the communication between the doctor and the patient. In case
+the patient has to undergo a procedure repeatedly for a long time (for example dialysis),
+informed consent is taken at the first instance. Such consent shall have a defined
+validity period but not more than six months. The patient endorses the consent at each
+repeat treatment. However, if there is a change in the treatment modality or an addition
+of another modality, then fresh consent shall be obtained.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE beyond the
+general PRE.4 stop-work (which applies when any listed procedure is started without
+valid consent). The specific statutory norms here (witness, timing, repeat-procedure
+validity) are compliance requirements, not additional stop-work gates.
+
+Mandatory (shall):
+  1. Consent shall be taken before the procedure.
+  2. At least one witness shall sign the consent form.
+  3. The witness shall have been present for the entire duration of the doctor–patient
+     communication.
+  4. For procedures repeated over a long time, consent shall be taken at the first
+     instance with a defined validity period not more than six months.
+  5. The patient shall endorse the consent at each repeat treatment.
+  6. If there is a change in treatment modality or an addition of another modality,
+     fresh consent shall be obtained.
+
+Illustrative only:
+  — The dialysis example is illustrative of a long-term repeat procedure; the rules
+    apply to any such procedure.
+
+Documentation: OE is not starred — consent forms showing pre-procedure signature, witness
+signature, validity period for repeat procedures, and patient endorsements at repeat
+treatments are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.4.c
+Level: CORE | No star
+
+Verbatim OE text:
+Informed consent includes information regarding the procedure; it's risks, benefits,
+alternatives and as to who will perform the procedure in a language that they can
+understand.
+
+[Note: "it's risks" with apostrophe is printed verbatim in the portal body; kept as
+printed per inventory policy.]
+
+Guidebook interpretation:
+The consent shall have the name of the doctor performing the procedure. In case a
+procedure requires more than one doctor from different specialities, then the same will
+have to be explained to the patient and consent shall include the name of the principal
+surgeon from each speciality who is performing the procedure. Each doctor will have to
+explain his role and address all aspects required for informed consent. For example, if
+the surgery involves the requirement of a Neurosurgeon, ENT surgeon and an
+Ophthalmologist, the consent shall reflect the same. It shall have the names of the
+principal surgeons of the three specialities. It is the responsibility of each of the
+surgeons/team to explain their role and the benefits/risks and alternatives of the
+procedures they are performing on the patient. If it is a "doctor under training" the
+same shall be specified. However, the name of the qualified doctor supervising the
+procedure shall also be mentioned. The consent form shall at a minimum be bilingual.
+When consent is taken in a language other than what the patient understands, there shall
+be clear documentation detailing the language in which the patient has been counselled
+and if any interpreter has been used. It shall have the risks, benefits and alternatives
+of the procedure as a part of the documentation. The focus is on informed consent as a
+process of effective communication between a doctor and patient and not a signature on
+a form.
+
+[Note: Cross-references at end ("Refer to COP7.e., COR 12.b., COP. 13.d. and COP 14.c.")
+— "COR 12.b." is likely a scan error for COP.12.b. All are cross-references to other OE
+codes; must not appear in policy text.]
+
+Stop-work check: CORE — STOP-WORK TRIGGER (via PRE.4 global stop-work): a consent
+signed by a nurse or clerk as the only consent, when the person performing the procedure
+has not explained the procedure, its risks, benefits, alternatives and who will perform
+it, is a PRE.4 stop-work trigger (section 6).
+
+Mandatory (shall/will):
+  1. The consent shall name the doctor performing the procedure.
+  2. If multiple specialties operate, the consent shall name the principal surgeon from
+     each specialty.
+  3. Each doctor will have to explain their role and address all aspects of informed
+     consent for their part of the procedure.
+  4. If a doctor under training performs the procedure, that shall be specified and the
+     supervising qualified doctor's name shall also be mentioned.
+  5. The consent form shall at a minimum be bilingual.
+  6. When consent is taken in a language other than what the patient understands, the
+     language of counselling and any interpreter shall be clearly documented.
+  7. The consent shall include risks, benefits and alternatives of the procedure.
+
+Illustrative only:
+  — The multi-specialty surgery example (Neurosurgeon, ENT, Ophthalmologist) is
+    illustrative of the multi-specialty consent requirement.
+  — "The focus is on informed consent as a process of effective communication... not
+    a signature on a form" — contextual interpretive statement, not a new mandatory item.
+
+CORE status: A consent form that lacks the performer's name, risks, benefits and
+alternatives, or that is in a language the patient cannot understand without documentation
+of the interpreter, is a CORE gap.
+
+Documentation: OE is not starred — completed bilingual consent forms naming the
+performer(s), risks, benefits and alternatives, interpreter records where used, and
+multi-specialty consent forms where applicable are the expected evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.4.d
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation describes who can give consent when a patient is incapable of
+independent decision making and implements the same.
+
+Guidebook interpretation:
+The consent shall be taken from the patient in all cases when the patient is capable of
+giving consent and above the legal age for giving consent. No one can consent on behalf
+of a competent adult. The organisation shall take into consideration the statutory norms
+when the patient is incapable of independent decision making. This would include next of
+kin/legal guardian. The order of preference of next of kin/legal guardian is spouse,
+son/daughter/parents/brothers/sister. For life-threatening situations when a patient is
+incapable and next of kin is not available, in the interest of the patient, the treating
+doctor and another clinician can decide to safeguard the patients' life.
+
+[Note: "zi" before "shall take" in source is a scan artefact; discarded. Read as
+"The organisation shall take into consideration the statutory norms..."]
+
+Stop-work check: Commitment and starred — no standalone additional stop-work trigger
+beyond the PRE.4 global stop-work. This OE defines who may consent when the patient
+cannot; the PRE.4 stop-work applies when no valid consent from any permitted person
+was obtained before a listed procedure is started.
+
+Mandatory (shall):
+  1. Consent shall be taken from the patient when the patient is capable and above the
+     legal age for giving consent.
+  2. No one may consent on behalf of a competent adult.
+  3. Statutory norms shall be followed when the patient is incapable of independent
+     decision-making.
+  4. When the patient is incapable, next of kin/legal guardian shall be used in the
+     order: spouse, son/daughter, parents, brothers/sister.
+  5. For life-threatening situations when the patient is incapable and next of kin is
+     not available, the treating doctor and another clinician (two-clinician rule) may
+     decide to safeguard the patient's life; both names and the reason shall be
+     documented.
+
+Illustrative only:
+  (none — all elements above are "shall")
+
+Documentation: OE is starred — the written description of who may consent when the
+patient is incapable (including the order of preference), consent forms showing the
+next-of-kin signatory and their relationship, and two-clinician emergency decision
+records (when applicable) must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PRE.4.e
+Level: CORE | No star
+
+Verbatim OE text:
+Informed consent is taken by the person performing the procedure.
+
+Guidebook interpretation:
+The person performing shall be responsible for the entire consent process, including
+providing explanation and taking the signature. For example, it is not acceptable if
+the person performing the procedure only explains, and the written consent is taken by
+the nurse. A doctor member of the team can take consent on behalf of the person
+performing the procedure. Refer to COP7.e., COR 12.b., COP. 13.d. and COP 14.c.
+
+[Note: Cross-references ("Refer to COP7.e., COR 12.b., COP. 13.d. and COP 14.c.") are
+OE code citations — must not appear in policy text. "COR 12.b." is likely a scan error
+for COP.12.b. Those requirements are covered in the hospital's other policies.]
+
+Stop-work check: CORE — STOP-WORK TRIGGER (via PRE.4 global stop-work): accepting a
+consent form signed by a nurse or clerk as the only consent — when the performing doctor
+has not explained — is a PRE.4 stop-work trigger (section 6). The performing doctor (or
+a doctor member of that team) must be responsible for the entire process.
+
+Mandatory (shall/is not acceptable):
+  1. The person performing the procedure shall be responsible for the entire consent
+     process — both explanation and taking the signature.
+  2. It is not acceptable for the person performing to only explain while a nurse or
+     clerk takes the written consent.
+  3. A doctor member of the performing team may take consent on behalf of the person
+     performing the procedure.
+
+Illustrative only:
+  — The nurse-taking-signature example is an explicit "not acceptable" statement from
+    the Guidebook, confirming the "shall" above.
+
+CORE status: A consent form where the person performing the procedure played no role in
+obtaining it (neither the explanation nor the signature) is a CORE gap and stop-work
+trigger.
+
+Documentation: OE is not starred — consent forms showing the performer or a team doctor
+as the responsible party for consent are the expected evidence. Audit records of consent
+form review for this element are also expected.
+
+
+══════════════════════════════════════════════════════════════════════════════
+STOP-WORK TEXT OUTPUTS (verbatim from hco_pre_v2_common.stop_work_text())
+══════════════════════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────────
+stop_work_text(2) — PRE.2 Stop-work authority section
+────────────────────────────────────────────────────
+
+Do not continue an examination, procedure or treatment that exposes the patient beyond
+what the procedure requires, or that leaves the patient without privacy (screens, drapes,
+closed door or equivalent).
+
+Do not leave a patient in a situation of neglect or abuse (unattended fall risk,
+unwarranted repeated examination, manhandling, or failure to protect a vulnerable
+patient). Stop the unsafe situation, protect the patient, and report it the same shift.
+
+Do not start transfusion of blood or blood components, anaesthesia, surgery, a research
+protocol, or any other invasive / high-risk procedure / treatment without informed consent
+obtained under PRE.4 (except where this policy's documented emergency-life-saving rule
+applies).
+
+Stop-work applies to the examination or procedure start. Immediate life-saving measures
+continue while escalation happens, and are documented.
+
+The person who stops tells the «treating doctor» and the «Medical Superintendent» the
+same shift. Refusing an unsafe examination or a procedure without consent is not a
+disciplinary matter.
+
+────────────────────────────────────────────────────
+stop_work_text(4) — PRE.4 Stop-work authority section
+────────────────────────────────────────────────────
+
+Do not start a procedure on the organisation's informed-consent list until valid informed
+consent has been obtained from the patient, or from the person who may consent when the
+patient is incapable of independent decision-making, in a language they can understand.
+
+Do not accept a consent form signed by a nurse or clerk as the only consent when the
+person performing the procedure (or a doctor member of that team) has not explained the
+procedure, its risks, benefits, alternatives and who will perform it.
+
+Stop-work applies to the procedure start. Immediate life-saving care when the patient is
+incapable and next of kin is not available follows the two-clinician emergency rule in
+section 5, and is documented the same shift.
+
+The person who stops tells the «person performing the procedure» and the «Medical
+Superintendent» the same shift. Refusing to start without valid consent is not a
+disciplinary matter.

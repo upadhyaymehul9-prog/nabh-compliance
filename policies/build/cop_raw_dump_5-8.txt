@@ -1,0 +1,1603 @@
+COP.5–COP.8 — Batched Raw Source Dump
+======================================
+Purpose: ChatGPT draft input for four standards in one pull.
+Each standard drafted and verified individually — same process as all prior chapters.
+
+CROSS-REFERENCE NOTE (applies throughout this file):
+The Guidebook cites specific NABH OE codes in several places (e.g., "Refer to HRM.11.d.",
+"Refer to PRE.4.", "Refer to IPC.3."). In policy drafts, these must NOT be reproduced as
+code citations. Use generic phrasing: "Those requirements are covered in the hospital's
+other policies." The specific codes are preserved here for source accuracy only.
+
+STOP-WORK STATUS BY STANDARD:
+  COP.5 — YES (STOP_WORK_PROPOSALS: CPR-readiness triggers)
+  COP.6 — NO stop-work authority
+  COP.7 — YES (STOP_WORK_PROPOSALS: wrong-patient/procedure/site triggers)
+  COP.8 — YES (STOP_WORK_PROPOSALS: pre-transfusion verification triggers)
+
+STATUTE DISCLAIMER STATUS:
+  COP.8 — YES (Motor Vehicles Act for ambulance, Transplantation of Human Organs Act
+              not applicable here; relevant blood-centre statutory requirements)
+  COP.5 / COP.6 / COP.7 — No specific statute P2 designation
+
+STAR NOTE:
+  The OCR source reliably captures "*" markers where they appear (confirmed by COP.4.a★,
+  COP.6.a★ etc.). COP.5 shows no stars in the OCR text — this is treated as accurate.
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.5 — Cardio-Pulmonary Resuscitation Services
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Cardio-pulmonary resuscitation services are provided uniformly across the
+organisation.
+
+OE count: 6 | COREs: none | Stars: none
+All OEs: Commitment level | Stop-work: YES
+
+Doc no: HCO/COP/POL/05
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.5.a
+Level: Commitment | No star
+
+Verbatim OE text:
+Cardio-pulmonary resuscitation services are available and provided to patients
+at all times.
+
+Guidebook interpretation (PDF p. 109):
+The organisation shall document the procedure for cardio-pulmonary
+resuscitation (CPR) for adults across all areas in the organisation. This shall
+be in consonance with accepted practices. Where appropriate, it shall also
+address obstetric, paediatric and neonatal patients. The organisation shall
+ensure that medical equipment for resuscitation and medications for basic and
+advanced life support are provided in standardised manner. Basic life support
+shall be initiated as soon as a condition requiring CPR is identified. This shall
+be implemented in all areas of the organisation. The protocols could be
+displayed prominently in all critical areas such as emergency, ICU, OT and
+all crash carts etc.
+
+Stop-work check: YES — COP.5 is in STOP_WORK_PROPOSALS. The stop-work
+trigger arises from the "at all times" and "all areas" requirements. Not having
+CPR-capable personnel or equipment in a patient-care area at the moment of
+need is the triggering condition.
+
+Mandatory (shall):
+  — The CPR procedure for adults shall be documented across all areas.
+  — Documentation shall be in consonance with accepted practices.
+  — Medical equipment for resuscitation and medications for BLS and ALS shall
+    be provided in a standardised manner (shall).
+  — Basic life support shall be initiated as soon as a condition requiring CPR
+    is identified (shall — time-critical trigger, no delay permitted).
+  — Implemented in all areas of the organisation (shall — no area exception).
+
+Non-mandatory (illustrative/optional):
+  — Obstetric, paediatric and neonatal CPR addressed "where appropriate" — the
+    scope modifier is conditional on the organisation's services.
+  — Displaying protocols prominently in critical areas "could" be done —
+    advisory, not mandatory placement requirement.
+  — Specific critical areas listed (ICU, OT, crash carts) are examples, not an
+    exhaustive mandatory list.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.5.b
+Level: Commitment | No star
+
+Verbatim OE text:
+During cardio-pulmonary resuscitation, assigned roles and responsibilities are
+complied with.
+
+Guidebook interpretation (PDF p. 109):
+The CPR team members have a clear understanding of their roles and
+responsibilities during the resuscitation to effectively function as a team.
+
+Stop-work check: YES — COP.5 stop-work. Complying with assigned roles is an
+absolute requirement during a CPR event; it is not advisory. Departure from
+assigned roles during an active resuscitation event is a stop-work trigger.
+
+Mandatory:
+  — CPR team members shall have a clear understanding of their roles and
+    responsibilities during resuscitation — mandatory (clear understanding is
+    required, not aspirational).
+  — Roles and responsibilities are "complied with" — the OE text uses compliance
+    language, not aspiration.
+
+Non-mandatory:
+  — How roles are defined, assigned, and rehearsed is the organisation's choice;
+    the outcome (team compliance during the event) is mandatory.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.5.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Medical equipment and medications for use during cardio-pulmonary
+resuscitation are available in various areas of the organisation.
+
+Guidebook interpretation (PDF p. 110):
+At a minimum, emergency medications and equipment for intubation based on
+the needs of the patients served shall be available in patient care areas
+including the blood centre, radiology, day care, dialysis, chemo ward, OPD,
+rehabilitation services areas, endoscopy, and in areas where any invasive
+procedure is performed. Other equipment like defibrillator shall be easily
+accessible to ensure that there is no delay in cardio-pulmonary resuscitation.
+It is preferable that the minimum emergency medication is standardised across
+the organisation.
+
+Stop-work check: YES — COP.5 stop-work. Absence of the minimum required
+equipment and medications in a patient-care area is a stop-work trigger for
+any procedure or care activity in that area until the gap is remedied.
+
+Mandatory (shall / minimum):
+  — At a minimum, emergency medications and equipment for intubation based
+    on the needs of patients served shall be available in specified patient care
+    areas (mandatory minimum; list below is the stated scope).
+  — Defibrillator shall be easily accessible to ensure no delay in CPR (shall;
+    "no delay" sets the functional standard).
+
+Minimum coverage scope (source states these areas explicitly — not fabricated):
+  blood centre, radiology, day care, dialysis, chemo ward, OPD, rehabilitation
+  services areas, endoscopy, and any area where an invasive procedure is
+  performed.
+
+Non-mandatory:
+  — Standardising the minimum emergency medication across the organisation is
+    "preferable" — recommended best practice, not a shall.
+  — The specific composition of the medication kit is for the organisation to
+    decide based on patient population served.
+
+DRAFTING NOTE: The area list above is the stated minimum coverage scope from
+the Guidebook. It is not an exhaustive list of all areas that must have CPR
+equipment — the phrase "in areas where any invasive procedure is performed"
+extends it. Do not soften the listed areas to "key areas" or "critical areas only."
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.5.d
+Level: Commitment | No star
+
+Verbatim OE text:
+The events during cardio-pulmonary resuscitation are recorded.
+
+Guidebook interpretation (PDF p. 110):
+In the actual event of cardio-pulmonary resuscitation, or a mock drill of the
+same, all the activities along with the personnel attended shall be recorded.
+At the minimum, it will include timeliness of response, availability of human
+resources, equipment, drugs, and barriers if any. The recording could be done
+using the pre-defined procedural checklist and by monitoring whether the
+prescribed activity has been performed properly and in the right sequence.
+
+It is a good practice to debrief team members regarding the necessary
+immediate corrective and preventive action.
+
+Stop-work check: YES — the recording requirement applies to both actual CPR
+events and mock drills. Failure to record is a compliance gap but is not itself
+a stop-work trigger during the event; the recording can follow. However, the
+stop-work framework for COP.5 covers the absence of CPR-readiness, not the
+recording gap.
+
+Mandatory (shall / minimum):
+  — All activities and personnel attending shall be recorded — both actual events
+    and mock drills (shall).
+  — At a minimum, the record shall include: timeliness of response, availability
+    of human resources, equipment, drugs, and barriers if any (minimum content
+    — preserve these five categories verbatim).
+
+Non-mandatory:
+  — The recording method "could" be a pre-defined procedural checklist — the
+    form of recording is the organisation's choice; the content minimum is fixed.
+  — Debriefing on immediate CAPA is "a good practice" — recommended but
+    not a shall in this OE.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.5.e
+Level: Commitment | No star
+
+Verbatim OE text:
+A multi-disciplinary committee does a post-event analysis of cardio-pulmonary
+resuscitations.
+
+Guidebook interpretation (PDF p. 110–111):
+The frequency of the committee meeting shall be at least once a quarter. The
+analysis shall focus on the initiation of CPR, time of arrival of the team,
+availability of required resources, recording of the sequence of events during
+CPR (including technique) and the overall coordination. The organisation shall
+monitor outcome of CPR and identifies areas for improvement. The
+multidisciplinary committee shall be independent and include at least one
+physician/cardiologist, anaesthesiologist, one member from the code blue team
+and nurse. The analysis shall be completed within a defined time frame.
+
+Stop-work check: Commitment level — the committee is a governance mechanism,
+not a real-time stop-work trigger. COP.5 stop-work applies to CPR readiness, not
+to the post-event review cycle.
+
+EXACT MANDATORY FREQUENCY — preserve verbatim:
+  — "at least once a quarter" — the committee shall meet at least once a quarter.
+    Do not soften to "periodically" or "regularly".
+
+Mandatory (shall):
+  — Frequency: at least once a quarter (shall — exact minimum).
+  — Analysis scope (all five areas are mandatory focus; do not reduce):
+      1. initiation of CPR
+      2. time of arrival of the team
+      3. availability of required resources
+      4. recording of the sequence of events during CPR (including technique)
+      5. overall coordination
+  — The organisation shall monitor outcome of CPR (shall).
+  — The committee shall be independent (shall).
+  — Minimum committee composition (shall — exact minimum membership):
+      at least one physician/cardiologist
+      one anaesthesiologist
+      one member from the code blue team
+      one nurse
+  — The analysis shall be completed within a defined time frame (shall — the
+    time frame is organisation-defined, not prescribed in the Guidebook; the
+    existence of a defined time frame is mandatory).
+
+Non-mandatory:
+  — The committee may include other members beyond the minimum specified.
+  — How "independent" is operationalised is the organisation's choice.
+
+DRAFTING NOTE: Preserve all five analysis-focus areas verbatim. Do not collapse
+them into "general CPR performance." Preserve the committee-composition minimum
+("at least one physician/cardiologist, one anaesthesiologist, one member from the
+code blue team and nurse") — do not invent additional mandatory members.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.5.f
+Level: Commitment | No star
+
+Verbatim OE text:
+Corrective and preventive measures are taken based on the post-event analysis.
+
+Guidebook interpretation (PDF p. 111):
+Corrective and preventive measures shall be completed within a defined time
+frame. The findings of the post-event analysis are communicated to the
+personnel participated in the CPR. Any lapses shall be discussed, with the view
+to improve the outcomes in future. During subsequent resuscitations, it is
+preferable that implementation of these actions is noted and training be
+modified, if necessary.
+
+Stop-work check: Commitment — no real-time trigger. CAPA on CPR analysis is
+a governance/quality loop.
+
+Mandatory (shall):
+  — CAPA shall be completed within a defined time frame (shall — time frame is
+    organisation-defined; its existence is mandatory).
+  — Findings shall be communicated to the personnel who participated in the CPR
+    (shall — communication scope is the CPR team, not "all staff").
+  — Lapses shall be discussed with a view to improve future outcomes (shall).
+
+Non-mandatory:
+  — Noting implementation during subsequent resuscitations is "preferable"
+    — recommended practice, not a shall.
+  — Training modification "if necessary" is conditional — the decision whether
+    modification is needed is clinical/operational.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table — COP.5
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    Commitment   No     No     YES         CPR procedure documented for adults across all areas
+                                            (shall); BLS/ALS equipment in standardised manner
+                                            (shall); BLS initiated immediately on condition
+                                            identification (shall, no delay); obstetric/paediatric
+                                            scope "where appropriate" (conditional); display in
+                                            critical areas "could" (advisory)
+b    Commitment   No     No     YES         Team compliance with assigned roles during CPR is
+                                            mandatory; role definition method is organisation's
+                                            choice; stop-work trigger if roles not complied with
+c    Commitment   No     No     YES         Minimum: emergency meds + intubation equipment in
+                                            specified areas (blood centre, radiology, day care,
+                                            dialysis, chemo ward, OPD, rehab, endoscopy, invasive-
+                                            procedure areas — all mandatory scope); defibrillator
+                                            easily accessible for no delay (shall); standardising
+                                            minimum meds across org "preferable" (advisory)
+d    Commitment   No     No     YES         All activities + personnel shall be recorded for actual
+                                            events AND mock drills (shall); minimum record content:
+                                            timeliness, HR availability, equipment, drugs, barriers
+                                            (exact five categories); debriefing on CAPA "good
+                                            practice" (advisory)
+e    Commitment   No     No     NO          EXACT FREQUENCY: "at least once a quarter" (shall);
+                                            five mandatory analysis foci (initiation, team arrival
+                                            time, resources, event sequence/technique, coordination);
+                                            CPR outcomes monitored (shall); committee independent
+                                            (shall); minimum composition: physician/cardiologist,
+                                            anaesthesiologist, code-blue-team member, nurse (all
+                                            shall); analysis within defined time frame (org-defined)
+f    Commitment   No     No     NO          CAPA within defined time frame (shall — org-defined);
+                                            findings communicated to CPR participants (shall);
+                                            lapses discussed for future improvement (shall); noting
+                                            implementation in subsequent resuscitations "preferable"
+                                            (advisory); training modification conditional
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES — COP.5
+─────────────────────────────────────────────────────────────────────────────
+
+1. ONE EXACT FREQUENCY:
+   — COP.5.e: "at least once a quarter" — do not change to "periodically" or
+     "at regular intervals".
+
+2. FIVE ANALYSIS FOCUS AREAS (COP.5.e) — preserve verbatim:
+   1. initiation of CPR
+   2. time of arrival of the team
+   3. availability of required resources
+   4. recording of the sequence of events during CPR (including technique)
+   5. overall coordination
+
+3. FIVE MINIMUM RECORD ITEMS (COP.5.d) — preserve verbatim:
+   1. timeliness of response
+   2. availability of human resources
+   3. equipment
+   4. drugs
+   5. barriers if any
+
+4. AREA COVERAGE (COP.5.c): The nine areas named are the stated minimum scope.
+   Do not limit to "critical care areas only."
+
+5. COMMITTEE COMPOSITION (COP.5.e): Four roles are the stated minimum —
+   physician/cardiologist, anaesthesiologist, code-blue-team member, nurse.
+   Do not add or remove.
+
+6. STOP-WORK (COP.5): The trigger is absence of CPR-ready equipment, personnel,
+   or protocol in a patient-care area, or non-compliance with assigned roles
+   during an active CPR event. Stop-work is NOT triggered by post-event analysis
+   delays or CAPA timeframe breaches.
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.6 — Nursing Care
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Nursing care is provided to patients in the organisation in consonance with
+clinical protocols.
+
+OE count: 6 | COREs: none | Stars: a★, d★
+Achievement level: c | No stop-work authority
+
+Doc no: HCO/COP/POL/06
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.6.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Nursing care is provided to patients in accordance with written guidance.*
+
+Guidebook interpretation (PDF p. 111–112):
+The written guidance could be in the form of a nursing manual/SOPs
+incorporating various basic nursing practices and procedures. Examples of these
+are monitoring vital parameters, administration of medications, basic hygiene
+needs of the patient, etc.
+
+Care of patients in specific clinical situations shall be guided by nursing clinical
+practice guidelines based on best clinical practices. The nursing clinical care
+guidelines/pathways shall be reviewed annually at the minimum, and revised as
+appropriate.
+
+Examples of nursing clinical practice guidelines include prevention of fall,
+prevention of development of pressure ulcers in an in-patient, and deep venous
+thrombosis risk assessment and prevention.
+
+Stop-work check: Commitment — COP.6 not in STOP_WORK_PROPOSALS. No
+stop-work trigger.
+
+Mandatory (shall):
+  — Nursing clinical practice guidelines based on best clinical practices shall
+    guide care of patients in specific clinical situations (shall).
+  — Nursing clinical care guidelines/pathways shall be reviewed annually at the
+    minimum, and revised as appropriate (shall — exact minimum frequency:
+    annually; "revised as appropriate" is conditional).
+
+EXACT MANDATORY FREQUENCY — preserve verbatim:
+  — "reviewed annually at the minimum" — do not soften to "periodically."
+
+Non-mandatory (illustrative):
+  — Written guidance "could" be a nursing manual/SOPs — the form is the
+    organisation's choice.
+  — Examples of basic nursing practices (vital parameters, medications, hygiene)
+    are illustrative — not a mandatory checklist of what the guidance must cover.
+  — Examples of clinical practice guidelines (fall prevention, pressure ulcer
+    prevention, DVT risk assessment) are illustrative — not the only guidelines
+    required; the organisation selects guidelines appropriate to its clinical scope.
+
+Documentation: This OE is starred — the written guidance is the required
+documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.6.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Assignment of patient care is done as per good clinical/nursing practice.
+
+Guidebook interpretation (PDF p. 112):
+Assignment shall be based on the patient's clinical requirements, the competence
+of the nursing staff, and shall align with the guidelines laid down by regulatory
+and professional bodies in this regard.
+
+Stop-work check: No stop-work trigger.
+
+Mandatory (shall):
+  — Assignment shall be based on patient's clinical requirements (shall).
+  — Assignment shall be based on competence of nursing staff (shall).
+  — Assignment shall align with guidelines from regulatory and professional
+    bodies (shall — the requirement is alignment, not a specific body's guideline).
+
+Non-mandatory:
+  — How competence is assessed (qualification, experience, training) is for the
+    organisation to determine within the constraints of regulatory and professional
+    body guidelines.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.6.c
+Level: Achievement | No star
+
+Verbatim OE text:
+The organisation implements acuity-based staffing to improve patient outcomes.
+
+Guidebook interpretation (PDF p. 112):
+Patient outcomes are linked to acuity-based staffing of nursing personnel, in
+terms of numbers and competence. Examples of outcomes include incidence of
+pressure sores, falls, medication administration errors, ventilator-associated
+pneumonia, etc.
+
+Stop-work check: Achievement — no stop-work trigger.
+
+Mandatory:
+  — Implementation of acuity-based staffing is the OE requirement — both
+    numbers and competence dimensions are stated.
+
+Non-mandatory (illustrative):
+  — The outcome examples (pressure sores, falls, medication errors, VAP) are
+    illustrative measures of outcome, not a mandatory monitoring list. The
+    organisation selects relevant outcome indicators for its scope.
+
+Note: This is Achievement level — the highest tier with a defined outcome
+orientation. It should not be presented in the policy at the same weight as
+basic Commitment OEs.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.6.d
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Nursing care is aligned and integrated with overall patient care which is
+documented.*
+
+Guidebook interpretation (PDF p. 112):
+Care shall be provided as per the nursing care plan, which is individualised as
+per the clinical needs of the patient. Wherever a patient care plan has been
+developed, the nursing care plan shall be aligned with the same.
+
+Uniformity and continuity of care shall be practised.
+
+Components of the nursing care plan include:
+  • Assessment
+  • Plan of care
+  • Implementation of care
+  • Evaluation
+  • Modification of plan of care as may be required
+
+The documentation includes all nursing-related care and not just monitoring of
+vitals and documentation of medication administration. The nursing progress
+shall be documented in a timely manner for the individual patient.
+
+Stop-work check: No stop-work trigger.
+
+Mandatory (shall):
+  — Care shall be provided as per the nursing care plan (shall).
+  — The nursing care plan shall be individualised as per the patient's clinical
+    needs (shall).
+  — Where a patient care plan exists, the nursing care plan shall be aligned with
+    it (shall — trigger is the existence of a patient care plan).
+  — Uniformity and continuity of care shall be practised (shall).
+  — Nursing progress shall be documented in a timely manner (shall).
+  — Documentation includes all nursing-related care, not just vitals and
+    medication administration (shall — scope of documentation is explicitly broad).
+
+Five mandatory nursing care plan components (from "include" — these are stated
+components, not examples; preserve all five):
+  1. Assessment
+  2. Plan of care
+  3. Implementation of care
+  4. Evaluation
+  5. Modification of plan of care as may be required
+
+Documentation: This OE is starred — the nursing care plan is the required
+documentation.
+
+DRAFTING NOTE: The five nursing care plan components are stated as inclusions,
+not as "for example" items. Do not reduce or paraphrase them.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.6.e
+Level: Commitment | No star
+
+Verbatim OE text:
+Nurses are provided with the appropriate and adequate equipment for providing
+safe and efficient nursing care.
+
+Guidebook interpretation (PDF p. 112–113):
+There shall be an adequate number of nebuliser machines, glucometers,
+sphygmomanometers, thermometers, weighing scale(s), and other basic
+equipment/gadgets necessary for functioning in the designated area. Further,
+the equipment shall be appropriate for the area. For example, the BP cuffs in
+the Paediatric area shall be of appropriate size.
+
+Stop-work check: No stop-work trigger.
+
+Mandatory (shall):
+  — Adequate number of basic nursing equipment shall be present (shall).
+  — Equipment shall be appropriate for the area served (shall — "appropriate
+    for the area" is a mandatory functional standard, not merely a
+    recommendation).
+
+Non-mandatory (illustrative):
+  — The equipment list (nebulisers, glucometers, sphygmomanometers,
+    thermometers, weighing scales) is illustrative ("and other basic
+    equipment/gadgets"). Do not present these as the only required items.
+  — The paediatric BP cuff example illustrates the "appropriate for the area"
+    principle — it is not a standalone mandatory requirement for paediatric-
+    sized equipment. The principle is: equipment must suit the patient population
+    in that area.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.6.f
+Level: Commitment | No star
+
+Verbatim OE text:
+Nurses are empowered to make patient care decisions within their scope of
+practice.
+
+Guidebook interpretation (PDF p. 113):
+The organisation shall define the patient care decisions that come under the
+scope of nursing practice. Nurses shall be aware of the same and be able to
+make appropriate nursing-related decisions in a timely manner.
+
+Stop-work check: No stop-work trigger.
+
+Mandatory (shall):
+  — The organisation shall define the scope of nursing practice decisions (shall).
+  — Nurses shall be aware of their defined scope (shall).
+  — Nurses shall be able to make appropriate nursing-related decisions in a
+    timely manner (shall — "timely manner" is a mandatory functional standard).
+
+Non-mandatory:
+  — The specific content of the nursing scope of practice is determined by the
+    organisation within applicable regulatory and professional body frameworks.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table — COP.6
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    Commitment   Yes★   No     No          Written guidance for nursing care (shall); nursing CPGs
+                                            based on best clinical practices for specific clinical
+                                            situations (shall); EXACT FREQUENCY: reviewed annually
+                                            at minimum (shall) and revised as appropriate; form of
+                                            guidance "could" be manual/SOPs (advisory); examples
+                                            of basic practices and CPG topics are illustrative, not
+                                            mandatory checklists; written guidance is starred doc
+d    Commitment   Yes★   No     No          Nursing care plan shall be provided per patient need
+                                            (shall); individualised (shall); aligned with overall care
+                                            plan where one exists (shall — conditional trigger);
+                                            uniformity and continuity shall be practised (shall);
+                                            nursing progress documented in timely manner (shall);
+                                            documentation covers all nursing care, not just vitals;
+                                            FIVE MANDATORY COMPONENTS: assessment, plan of care,
+                                            implementation, evaluation, modification (all stated
+                                            inclusions — not examples)
+b    Commitment   No     No     No          Assignment based on clinical requirements and nursing
+                                            competence (shall); aligned with regulatory/professional
+                                            body guidelines (shall); method of competence assessment
+                                            is org's choice
+c    Achievement  No     No     No          Acuity-based staffing (numbers + competence dimensions);
+                                            outcome examples are illustrative, not a mandatory
+                                            monitoring list; highest tier — present at appropriate
+                                            weight
+e    Commitment   No     No     No          Adequate number of basic nursing equipment (shall);
+                                            appropriate for area served (shall); equipment list
+                                            (nebulisers, glucometers, sphygmomanometers,
+                                            thermometers, weighing scales) illustrative only; area-
+                                            appropriate sizing principle (not just for paediatrics)
+f    Commitment   No     No     No          Scope of nursing practice decisions shall be defined by
+                                            org (shall); nurses shall be aware (shall); timely
+                                            decision-making (shall); content of scope is org's choice
+                                            within regulatory/professional constraints
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES — COP.6
+─────────────────────────────────────────────────────────────────────────────
+
+1. ONE EXACT FREQUENCY:
+   — COP.6.a: "reviewed annually at the minimum" — do not soften.
+
+2. FIVE MANDATORY NURSING CARE PLAN COMPONENTS (COP.6.d) — stated inclusions,
+   not examples. Preserve all five in sequence:
+   1. Assessment
+   2. Plan of care
+   3. Implementation of care
+   4. Evaluation
+   5. Modification of plan of care as may be required
+
+3. ACUITY-BASED STAFFING (COP.6.c): This is Achievement level. Present it as
+   an organisational commitment to the highest-tier standard, not as a basic
+   compliance requirement equal to Commitment-level OEs.
+
+4. ILLUSTRATION vs. OBLIGATION:
+   — Equipment list in COP.6.e: illustrative. The principle (adequate and
+     appropriate for the area) is mandatory.
+   — CPG examples in COP.6.a: illustrative. The organisation selects guidelines
+     appropriate to its patient population.
+   — Outcome examples in COP.6.c: illustrative. The organisation determines
+     relevant outcomes for its scope.
+
+5. NO STOP-WORK SECTION for COP.6.
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.7 — Clinical Procedures Performed Safely
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Clinical procedures are performed in a safe manner.
+
+OE count: 7 | COREs: d | Stars: b★, d★
+All other OEs: Commitment | Stop-work: YES
+
+Doc no: HCO/COP/POL/07
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.7.a
+Level: Commitment | No star
+
+Verbatim OE text:
+Clinical procedures are performed based on the clinical needs of the patient.
+
+Guidebook interpretation (PDF p. 113):
+The decision to perform a procedure shall be based on the clinical needs of the
+patient, in consonance with standard treatment guidelines and/or sound clinical
+practice for the given condition/procedure. A qualified medical practitioner
+decides if the procedure is indicated. When multiple procedure options exist,
+the decision shall be based on which option is likely to provide the best
+outcome, and also taking into consideration, the patient wishes and safety.
+The organisation could conduct a clinical audit of various procedures to achieve
+the best possible outcomes.
+
+Stop-work check: YES — COP.7 is in STOP_WORK_PROPOSALS. The stop-work
+trigger for COP.7 centres on wrong-patient/wrong-procedure/wrong-site
+verification (COP.7.d), not on COP.7.a's clinical indication decision.
+
+Mandatory (shall):
+  — Decision shall be based on clinical needs (shall).
+  — Decision shall be in consonance with standard treatment guidelines and/or
+    sound clinical practice (shall).
+  — A qualified medical practitioner shall decide if the procedure is indicated
+    (shall — qualification requirement is mandatory).
+  — When multiple options exist, decision based on best outcome and patient
+    wishes and safety (shall).
+
+Non-mandatory:
+  — Clinical audit of procedures "could" be conducted — advisory, not mandatory.
+
+[Guidebook cross-ref: none for COP.7.a specifically.]
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.7.b
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Performance of various clinical procedures is based on written guidance and
+done in a safe manner.*
+
+Guidebook interpretation (PDF p. 113–114):
+The written guidance is a broad guideline applicable to all procedures —
+diagnostic, therapeutic, and supportive. The written guidance shall incorporate
+as to who will do the procedure, the pre-procedure instructions where
+applicable, the conduct of the procedure and post-procedure instructions and
+care, where applicable.
+
+The organisation shall establish and implement safe use of equipment used for
+performing procedures and treatments. A brief assessment, including at least
+patient's vitals is done prior to performing the procedure.
+
+Stop-work check: YES — COP.7 stop-work. Proceeding with a procedure without
+written guidance, or without the mandatory pre-procedure assessment including
+vitals, is a trigger.
+
+Mandatory (shall):
+  — Written guidance shall cover all procedure types: diagnostic, therapeutic,
+    and supportive (shall — scope is broad, not specialty-specific).
+  — Written guidance shall specify: who does the procedure; pre-procedure
+    instructions where applicable; conduct of the procedure; post-procedure
+    instructions and care where applicable (shall — four content elements).
+  — Organisation shall establish and implement safe use of equipment (shall).
+  — A brief assessment including at least patient's vitals shall be done prior to
+    any procedure (shall — "at least" sets the minimum pre-procedure assessment
+    scope; vitals is the floor, not the ceiling).
+
+Non-mandatory:
+  — What constitutes "at least vitals" beyond pulse, BP, and respiratory rate may
+    be tailored to the procedure type; the minimum floor is vitals.
+
+Documentation: This OE is starred — the written guidance is the required
+documentation.
+
+DRAFTING NOTE: The "at least patient's vitals" pre-procedure assessment is a
+shall, not an advisory. Do not weaken to "a brief assessment may be done."
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.7.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Qualified personnel order, plan, perform and assist in performing procedures.
+
+Guidebook interpretation (PDF p. 114):
+The personnel performing or assisting a procedure shall be privileged for the
+same.
+
+[Guidebook cross-ref: HRM.11.d., HRM.12.d. and HRM.13.c. — in policy draft:
+"those requirements are covered in the hospital's other policies."]
+
+Stop-work check: YES — COP.7 stop-work. Performing a procedure by a person
+who is not privileged for it is a direct stop-work trigger.
+
+Mandatory (shall):
+  — Personnel performing a procedure shall be privileged for it (shall).
+  — Personnel assisting a procedure shall be privileged for it (shall).
+  — The privilege requirement applies to both ordering, planning, performing,
+    and assisting — all four verbs in the OE text are covered.
+
+Non-mandatory:
+  — The specific privileging mechanism (credentialing, training records) is
+    covered by HRM standards; this OE requires the outcome (privilege), not
+    the mechanism.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.7.d
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+Care is taken to prevent adverse events like a wrong patient, wrong procedure
+and wrong site.*
+
+Guidebook interpretation (PDF p. 114):
+The organisation shall use a documented check-list to prevent adverse events
+like a wrong patient, wrong procedure and wrong site. This could be based on
+the WHO safety check-list or its modification. At least two identifiers shall be
+used to identify the patient out of which one shall be the unique identification
+number. Besides, the organisation shall have a procedure to identify the site of
+the procedure, where appropriate.
+
+The organisation identifies those invasive procedures within its scope where a
+pre-procedure checklist could be used to mitigate the risk of wrong-site/side,
+wrong patient and wrong procedure.
+
+The responsibility for ensuring the correct site and side where applicable /
+patient/procedure verification rests with all team members. However, the person
+performing the procedure carries ultimate responsibility. In case the procedure
+is being performed by a person in training, the supervising clinician carries
+ultimate responsibility.
+
+In emergencies, all attempts shall still be made to identify the correct site
+(including side where applicable)/patient/procedure according to the laid down
+guidance, although it may not be possible or appropriate to complete all the
+checks. Any exceptions to the full protocol shall be documented in the medical
+record.
+
+Patient and/or relatives shall be involved during site marking in ensuring
+correct patient, correct procedure and correct site whenever possible.
+
+[Guidebook cross-ref: AAC.2.b. and COP1.b. — in policy draft: "those
+requirements are covered in the hospital's other policies."]
+
+Stop-work check: CORE — the most critical OE in COP.7. Not completing the
+required patient/procedure/site verification before a procedure is the primary
+stop-work trigger for COP.7. This is non-negotiable and accreditation-blocking.
+
+EXACT MANDATORY QUANTITY — preserve verbatim:
+  — "At least two identifiers" — the exact minimum. One shall be the unique
+    identification number. Do not weaken to "appropriate identifiers."
+
+Mandatory (shall):
+  — A documented checklist shall be used (shall).
+  — At least two identifiers shall be used for patient identification; one shall
+    be the unique identification number (shall — exact quantity and composition).
+  — A procedure to identify the procedure site shall exist, where appropriate
+    (shall — trigger: invasive procedures with laterality or multiple structures).
+  — All team members are responsible for correct verification; the person
+    performing carries ultimate responsibility (shall — distributed responsibility
+    with a designated primary).
+  — In training situations, the supervising clinician carries ultimate
+    responsibility (shall).
+  — In emergencies, all attempts shall still be made to follow laid down guidance;
+    any exceptions shall be documented in the medical record (shall — both the
+    attempt and the documentation of exceptions are mandatory).
+  — Patient/relatives shall be involved in site marking whenever possible (shall —
+    the qualifier "whenever possible" is part of the mandatory standard, not
+    an exception to it).
+
+Non-mandatory:
+  — "Could be based on the WHO safety check-list or its modification" — the
+    source of the checklist is advisory; the checklist itself is mandatory.
+  — Which specific invasive procedures have checklists is identified by the
+    organisation based on its scope.
+
+Documentation: This OE is starred — the documented checklist is the primary
+documentation requirement.
+
+DRAFTING NOTE: "At least two identifiers" is a CORE mandatory quantity. Preserve
+it exactly as written. The emergency exception does NOT exempt the organisation
+from the attempt — it only permits (with documentation) that not all checks may
+be completable in practice.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.7.e
+Level: Commitment | No star
+
+Verbatim OE text:
+Informed consent is taken by the personnel performing the procedure, where
+applicable.
+
+Guidebook interpretation (PDF p. 115):
+The informed consent shall be taken by the person performing the procedure or
+a doctor from the treating team. In case the procedure is being done by a person
+in training, it shall specify the same and shall be supervised by the treating
+doctor.
+
+[Guidebook cross-ref: PRE.4.e. — in policy draft: "those requirements are
+covered in the hospital's other policies."]
+
+Stop-work check: YES — COP.7 stop-work. Proceeding with a procedure requiring
+consent without having obtained informed consent is a trigger.
+
+Mandatory (shall):
+  — Informed consent shall be taken by the person performing the procedure or
+    a doctor from the treating team (shall).
+  — In training situations: consent documentation shall specify that the procedure
+    is being done by a person in training; supervision by the treating doctor is
+    required (shall).
+  — The OE itself says "where applicable" — the trigger for consent is the nature
+    of the procedure (applicability is clinically determined, not blanket).
+
+Non-mandatory:
+  — Consent content, format, and language are covered by PRE.4; this OE
+    addresses who obtains it and the training-situation obligation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.7.f
+Level: Commitment | No star
+
+Verbatim OE text:
+Patients are appropriately monitored during and after the procedure.
+
+Guidebook interpretation (PDF p. 115):
+At a minimum, for invasive procedures, this shall include pulse, blood pressure
+and respiratory rate and any other parameter as clinically required. The extent
+and duration of monitoring may be tailored to the need based on the complexity
+of the procedure and the co-morbidities of the patient.
+
+Stop-work check: YES — COP.7 stop-work. Proceeding or continuing an invasive
+procedure without the minimum monitoring parameters in place is a trigger.
+
+Mandatory (shall):
+  — At a minimum, for invasive procedures, monitoring shall include pulse, blood
+    pressure and respiratory rate (shall — stated minimum; exact three parameters;
+    do not reduce).
+  — Any other parameters as clinically required shall also be monitored (shall —
+    the clinical-need trigger expands beyond the three-parameter floor).
+
+Non-mandatory:
+  — The extent and duration of monitoring may be tailored based on procedure
+    complexity and patient co-morbidities (permissible variation; tailoring is
+    allowed above the mandatory floor, not below it).
+
+DRAFTING NOTE: The three minimum parameters (pulse, blood pressure, respiratory
+rate) are the stated floor for invasive procedures. They must not be softened to
+"appropriate vital signs" or "key parameters."
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.7.g
+Level: Commitment | No star
+
+Verbatim OE text:
+Procedures are documented accurately in the patient record.
+
+Guidebook interpretation (PDF p. 115):
+The documentation shall mention the name of the procedure, the person who
+performed the procedure, salient steps of the procedure, key findings and the
+post-procedure care. All documentation shall have name, date, time and signature.
+
+[Guidebook cross-ref: IMS.3.e. — in policy draft: "those requirements are
+covered in the hospital's other policies."]
+
+Stop-work check: YES — COP.7 stop-work framework applies. Inadequate
+documentation can be a patient-safety trigger; procedural documentation is
+a required step before patient transfer or discharge from care.
+
+Mandatory (shall):
+  — Documentation shall mention (five content elements — all mandatory):
+      1. name of the procedure
+      2. person who performed the procedure
+      3. salient steps of the procedure
+      4. key findings
+      5. post-procedure care
+  — All documentation shall have name, date, time and signature (shall — four
+    mandatory meta-elements on every entry).
+
+Non-mandatory:
+  — How findings are recorded (structured form, free text, electronic record) is
+    the organisation's choice.
+
+DRAFTING NOTE: All five content elements and all four meta-elements are stated
+as mandatory. Do not collapse "salient steps" and "key findings" into "procedure
+notes" — they are distinct requirements.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table — COP.7
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    Commitment   No     No     YES         Decision based on clinical needs + STG/sound clinical
+                                            practice (shall); qualified medical practitioner decides
+                                            indication (shall); best-outcome + patient-wishes basis
+                                            when options exist (shall); clinical audit "could"
+                                            (advisory)
+b    Commitment   Yes★   No     YES         Written guidance covers all procedures (diagnostic,
+                                            therapeutic, supportive) — scope is broad (shall); four
+                                            content elements (who does, pre-procedure instructions,
+                                            conduct, post-procedure instructions/care — all shall);
+                                            safe equipment use shall be established and implemented;
+                                            pre-procedure assessment including at least vitals is
+                                            a shall; written guidance is starred documentation
+c    Commitment   No     No     YES         Privileged personnel only for performing AND assisting
+                                            (shall); privilege covers all four verbs in OE text;
+                                            non-privileged performance is stop-work trigger;
+                                            privileging mechanism covered by HRM standards
+d    CORE         Yes★   YES    YES         CORE + stop-work: documented checklist mandatory (shall);
+                                            EXACT QUANTITY: "at least two identifiers" one of which
+                                            is the unique ID number (shall); site-identification
+                                            procedure where appropriate (shall); distributed
+                                            responsibility — performer carries ultimate (shall);
+                                            in training: supervisor carries ultimate (shall);
+                                            emergencies: attempt mandatory + exceptions documented
+                                            (shall); patient/relative involvement in site marking
+                                            "whenever possible" (shall-qualified); WHO checklist
+                                            "could" be base (advisory); starred documentation
+e    Commitment   No     No     YES         Consent by performer or treating team doctor (shall);
+                                            training situations: documented + supervised (shall);
+                                            "where applicable" — scope is clinically determined;
+                                            consent content covered by PRE.4 standards
+f    Commitment   No     No     YES         Minimum monitoring for invasive procedures: pulse, BP,
+                                            respiratory rate (shall — exact three; do not reduce);
+                                            additional clinically required parameters also mandatory;
+                                            extent and duration may be tailored above the floor
+g    Commitment   No     No     YES         Five mandatory documentation content elements: procedure
+                                            name, performer name, salient steps, key findings,
+                                            post-procedure care (all shall); four mandatory meta-
+                                            elements on every entry: name, date, time, signature
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES — COP.7
+─────────────────────────────────────────────────────────────────────────────
+
+1. STOP-WORK TRIGGER (COP.7): The primary trigger is performing a procedure
+   without completing the patient/procedure/site verification checklist (COP.7.d).
+   Secondary triggers: non-privileged personnel performing, no pre-procedure
+   assessment including vitals, no informed consent where applicable.
+
+2. EXACT QUANTITY (COP.7.d): "at least two identifiers" — preserve verbatim.
+
+3. FIVE DOCUMENTATION CONTENT ELEMENTS (COP.7.g) — preserve all five:
+   procedure name, performer name, salient steps, key findings, post-procedure care.
+
+4. FOUR META-ELEMENTS (COP.7.g): name, date, time, signature — all mandatory
+   on every entry.
+
+5. THREE MINIMUM MONITORING PARAMETERS (COP.7.f): pulse, blood pressure,
+   respiratory rate — do not reduce or generalise.
+
+6. FOUR WRITTEN GUIDANCE CONTENT ELEMENTS (COP.7.b): who does the procedure,
+   pre-procedure instructions (where applicable), conduct of the procedure,
+   post-procedure instructions and care (where applicable).
+
+7. EMERGENCY EXCEPTION (COP.7.d): does NOT remove the obligation to attempt
+   verification — it only acknowledges that completing all checks may not always
+   be possible. The exception requires documentation in the medical record.
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.8 — Transfusion Services
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Transfusion services are provided as per the scope of services of the
+organisation, safely.
+
+OE count: 7 | COREs: d | Stars: b★, d★, e★, f★, g★
+Achievement level: f, g | Stop-work: YES
+
+Doc no: HCO/COP/POL/08
+
+CROSS-REFERENCE INTERNAL NOTE: COP.8.d's Guidebook text references "COP8.h."
+in one bullet point. Based on the OCR source, COP.8 has seven OEs (a–g) in the
+6th Edition — there is no current COP.8.h. This appears to be a legacy reference
+from an earlier draft. Do not invent a COP.8.h; treat the content of that bullet
+("identification and responding to potential transfusion reactions") as part of
+COP.8.d's written-guidance scope, covered within COP.8.f.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.8.a
+Level: Commitment | No star
+
+Verbatim OE text:
+Scope of transfusion services is commensurate with the services provided by
+the organisation.
+
+Guidebook interpretation (PDF p. 116):
+The organisation shall have blood/blood components available from either an
+in-house or out-sourced registered blood centre.
+
+The blood centre shall have adequate resources (infrastructure, manpower and
+equipment) as per workload, scope in order to ensure the smooth functioning
+of its operations and to avoid delays.
+
+In case the organisation uses an out-sourced blood centre, it shall have an MoU
+and ensure that patient care does not suffer for want of blood/blood components.
+The blood shall be transported from the external blood centre safely and
+properly.
+
+A good reference guide is the NABH standards for blood centre.
+
+Stop-work check: YES — COP.8 is in STOP_WORK_PROPOSALS. The stop-work trigger
+centres on pre-transfusion verification failures (COP.8.d), not on scope matching.
+
+Mandatory (shall):
+  — Blood/blood components shall be available from an in-house or out-sourced
+    registered blood centre (shall).
+  — Blood centre shall have adequate resources (infrastructure, manpower,
+    equipment) as per workload and scope (shall).
+  — Where outsourced: an MoU shall exist (shall).
+  — Where outsourced: patient care shall not suffer for want of blood/components
+    (shall — outcome obligation).
+  — Transported blood shall be transported safely and properly (shall).
+
+Non-mandatory:
+  — NABH standards for blood centre is a "good reference guide" — advisory,
+    not a mandatory compliance obligation within COP.8.a.
+  — Whether the blood centre is in-house or outsourced is the organisation's
+    operational decision.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.8.b
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation shall establish and implement processes for blood/component
+collection, testing, storage and distribution under written guidance.*
+
+Guidebook interpretation (PDF pp. 116–117):
+The blood centre shall use written guidance for procedures pertaining the
+following activities:
+  • blood donor selection
+  • blood screening for transfusion transmissible diseases
+  • blood collection including apheresis procedures
+  • blood storage
+  • compatibility testing
+  • blood distribution
+  • transfusion of blood/products in clinical areas
+  • discard of sero positive/unutilised blood
+  • education of family (potential donors) and patient regarding blood donation
+
+Blood/apheresis products shall be collected from voluntary, non-remunerated,
+low risk, safe and healthy donors with due emphasis on pre-donation and
+post-donation counselling (including consent) and procedures and the informed
+consent process. Apheresis procedures shall be carried out as per guidelines
+while ensuring the quality of the product. Blood donation drives shall be
+organised as per national and statutory guidelines.
+
+Necessary drugs and equipment shall be available for treatment of donor
+reaction, if any, and staff is trained on using the same. The blood centre shall
+have mechanisms to identify, manage and report adverse donor reactions in line
+with the National Haemovigilance Programme of India (NHVPI).
+
+All pre-transfusion tests including Transfusion Transmissible Infections (TTI)
+and Red Cell Serology are carried out by an approved methods before release
+of blood.
+
+Blood centre shall retain and store recipient's and donor's blood samples after
+each transfusion as per guidelines.
+
+In event of quality control failure, in case of TTI testing, defined procedures
+shall ensure that quarantined units are not taken into inventory till re-testing
+is completed.
+
+The Blood Centre shall have a process for retesting, recall and referral of
+reactive blood donors in line with national guidelines.
+
+The whole blood or components from any unit that tests positive/reactive shall
+be discarded as per written guidance.
+
+Stop-work check: YES — COP.8 stop-work. Releasing blood without completing all
+required pre-transfusion tests (TTI, Red Cell Serology) is a direct trigger.
+Taking quarantined units into inventory before re-testing is a stop-work trigger.
+
+NINE MANDATORY WRITTEN-GUIDANCE SCOPE ELEMENTS — preserve all nine verbatim:
+  1. blood donor selection
+  2. blood screening for transfusion transmissible diseases
+  3. blood collection including apheresis procedures
+  4. blood storage
+  5. compatibility testing
+  6. blood distribution
+  7. transfusion of blood/products in clinical areas
+  8. discard of sero positive/unutilised blood
+  9. education of family (potential donors) and patient regarding blood donation
+
+Mandatory (shall):
+  — Written guidance shall cover all nine listed activities (stated as written-
+    guidance scope, not "for example" — preserve all nine).
+  — Collection from voluntary, non-remunerated, low-risk, safe and healthy
+    donors (shall); pre- and post-donation counselling including consent (shall).
+  — Apheresis procedures as per guidelines (shall).
+  — Blood donation drives as per national and statutory guidelines (shall).
+  — Drugs and equipment for donor reaction treatment shall be available; staff
+    trained (shall).
+  — Adverse donor reactions shall be identified, managed and reported in line
+    with NHVPI (shall — NHVPI is named as the reference standard; alignment
+    with it is the compliance bar).
+  — All pre-transfusion tests (TTI and Red Cell Serology) shall be carried out
+    by approved methods before release of blood (shall — "before release" is
+    the absolute trigger condition).
+  — Recipient's and donor's blood samples shall be retained and stored after
+    each transfusion as per guidelines (shall).
+  — Quarantined units shall not be taken into inventory until re-testing is
+    complete in case of QC failure on TTI testing (shall — stop-work relevant).
+  — A process for retesting, recall and referral of reactive blood donors in line
+    with national guidelines shall exist (shall).
+  — Blood/components from any unit testing positive/reactive shall be discarded
+    as per written guidance (shall).
+
+Documentation: This OE is starred — written guidance for all nine activities is
+the required documentation.
+
+DRAFTING NOTE: All nine written-guidance scope elements are stated inclusions.
+Do not reduce them to "key blood centre activities" or similar.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.8.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Blood and components are stored safely from the time of collection till
+transfusion.
+
+Guidebook interpretation (PDF p. 117):
+The Blood Centre shall prepare components as per their scope. The blood centre
+shall ensure that the temperature of whole blood and its component and the
+environment are maintained and recorded as per guidelines. Untested
+blood/products shall be quarantined with designated and separate storage of
+untested and tested units for their serology status. Labelling (inclusive of
+serology status) of blood/components shall be done after the reports of TTI
+screening are released to act as a check against untested blood/products
+getting mixed with tested blood/products.
+
+Stop-work check: YES — COP.8 stop-work. Mixing untested and tested
+blood/components or mislabelling serology status are stop-work triggers.
+
+Mandatory (shall):
+  — Temperature of whole blood and components and environment shall be
+    maintained and recorded as per guidelines (shall).
+  — Untested blood/products shall be quarantined (shall).
+  — Separate, designated storage of untested and tested units for serology
+    status is required (shall — physical separation is mandatory).
+  — Labelling including serology status shall be done only after TTI screening
+    reports are released (shall — the release-report trigger is mandatory; no
+    labelling before reports).
+
+Non-mandatory:
+  — Which components are prepared is determined by the blood centre's scope.
+  — Specific temperature ranges are defined by applicable guidelines (NBTC,
+    etc.); the OE requires compliance with guidelines, not a specific number.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.8.d
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation ensures safe and rational use of blood and blood components.*
+
+Guidebook interpretation (PDF pp. 117–118):
+Transfusion of blood and blood components is managed by written guidance to
+ensure recipient safety. The written guidance shall include:
+  • patient consent for blood administration (covered by the organisation's
+    consent policy — in policy draft: "those requirements are covered in the
+    hospital's other policies")
+  • safe procurement and transportation (from blood centre or outsourced blood
+    centre) while maintaining the cold chain and delivery at the right source
+  • patient identification
+  • verification of blood administration orders
+  • safe storage as per requirements, prior to transfusion
+  • blood administration
+  • monitoring of patient
+  • identification and responding to potential transfusion reactions
+
+Measures shall be taken to prevent the possibility of mismatched transfusion,
+under all situations. For example:
+  • correct patient identification at the time of cross-matching
+  • the compatibility testing label is attached to the unit at the time of issue
+  • correct patient identification and verification of patient and donor blood
+    group at the time blood transfusion
+  • ensuring that a portion of the integral tubing together with segment number
+    remains attached to blood bag at the time of issue from blood centre
+  • ensuring all labels shall continue to remain attached to the blood bag till
+    the completion of transfusion to facilitate appropriate investigation of an
+    adverse transfusion reaction when required
+
+Blood and blood component usage shall be governed by written guidance which
+shall address the indications for the use of blood and blood components. These
+shall be based on the standard practice guidelines/sound clinical practices
+brought out by the national and international professional organisations. It
+shall also address inventory and ordering schedules (planned and unplanned).
+The blood centre protocols could include specific clinical situations, based
+on the scope of services of the organisation, for example, neonatal transfusions,
+auto-immune haemolytic anaemia, incompatible transfusion, massive transfusion.
+
+A Hospital Blood Transfusion Committee (HBTC) shall ensure the rational use
+of blood at the organisation by adopting/adapting guidelines for the rational
+use of blood/products. The committee shall preferably be chaired by a clinician
+and shall have representation from different clinical departments, blood
+transfusion officer, Nursing, quality coordinator and the management. The
+committee shall meet periodically and shall monitor the availability of
+blood/components, transfusion practices and their audits, adverse transfusion
+reactions, wastage of blood/products etc. The committee could also obtain
+feedback from clinicians periodically to assess the availability and efficacy
+of blood/components.
+
+Stop-work check: CORE — the most critical OE in COP.8. Not completing the
+pre-transfusion verification steps (patient ID, blood group verification,
+compatibility label, label integrity to completion of transfusion) is the primary
+stop-work trigger for COP.8.
+
+EIGHT MANDATORY WRITTEN-GUIDANCE CONTENT ELEMENTS — preserve all eight:
+  1. patient consent for blood administration
+  2. safe procurement and transportation maintaining cold chain
+  3. patient identification
+  4. verification of blood administration orders
+  5. safe storage prior to transfusion
+  6. blood administration
+  7. monitoring of patient
+  8. identification and responding to potential transfusion reactions
+
+Mandatory (shall):
+  — Written guidance shall include all eight elements above (shall).
+  — Indications for blood/blood component use shall be governed by written
+    guidance based on standard practice guidelines/sound clinical practices
+    (shall).
+  — Indications guidance shall address inventory and ordering schedules
+    (planned and unplanned) (shall).
+  — HBTC shall ensure rational use of blood (shall — the committee is mandatory).
+  — HBTC shall have representation from clinical departments, blood transfusion
+    officer, Nursing, quality coordinator and management (shall — stated
+    composition; "preferably chaired by a clinician" is advisory for chairperson).
+  — HBTC shall meet periodically (shall — frequency is "periodically", not a
+    specific interval; do not invent a specific number).
+  — HBTC shall monitor: availability, transfusion practices and audits, adverse
+    transfusion reactions, wastage (shall — four monitoring areas stated).
+
+Mismatch-prevention measures: The five example measures in the Guidebook are
+examples ("For example") of how to prevent mismatched transfusion under all
+situations. They are illustrative of the principle, not a mandatory step-by-step
+checklist. The obligation is the prevention principle; the examples illustrate
+how to achieve it. Do not present the five bullets as a mandatory sequential
+protocol — present them as illustrative approaches.
+
+Non-mandatory:
+  — HBTC chair being a clinician is "preferable" — advisory for chairperson role.
+  — Clinical situation protocols (neonatal transfusions, AIHA, incompatible,
+    massive transfusion) "could" be included based on scope — advisory/
+    scope-conditional.
+  — Clinician feedback by committee is "could" — advisory.
+
+Documentation: This OE is starred — the written guidance covering all eight
+elements is the primary documentation requirement.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.8.e
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Blood/blood components are available for use in emergency and routine
+situations within a defined time-frame.*
+
+Guidebook interpretation (PDF p. 118):
+The organisation shall define and document as to what constitutes "use in an
+emergency situation" and accordingly develop procedures to ensure the
+availability of blood/blood components.
+
+The organisation shall define the time frame within which blood shall be
+available for use in an emergency situation. Use in an emergency includes both
+actual and anticipated need.
+
+Turn-around time for routine and emergency issues of blood/product is defined
+and monitored.
+
+The objective element is applicable even if the organisation doesn't have the
+blood centre facility in-house.
+
+Stop-work check: YES — COP.8 stop-work framework applies. Not having blood
+available within the defined emergency timeframe is a patient-safety trigger.
+
+Mandatory (shall):
+  — The organisation shall define what constitutes "emergency use" (shall).
+  — Procedures shall ensure availability of blood/blood components for emergency
+    use (shall).
+  — The time frame within which blood shall be available in an emergency shall
+    be defined (shall — time frame is organisation-defined, not prescribed by
+    the Guidebook; its existence is mandatory).
+  — Turn-around time for routine AND emergency issues shall be defined and
+    monitored (shall — both scenarios must be defined and monitored).
+  — Applicable even without in-house blood centre (explicit universal scope
+    statement — the OE cannot be waived on the grounds of outsourced blood
+    centre).
+
+Non-mandatory:
+  — The specific numerical time frame is organisation-defined — the Guidebook
+    does not prescribe a number of minutes or hours. Do not invent one.
+
+Documentation: This OE is starred — the defined time frames and documented
+procedures are the required documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.8.f
+Level: Achievement | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation shall ensure that post-transfusion form is collected, reactions
+if any identified and are analysed for preventive and corrective actions.*
+
+Guidebook interpretation (PDF pp. 118–119):
+The organisation shall ensure detection, reporting, evaluation and analysis of
+suspected adverse transfusion reactions followed by necessary corrective and
+preventive action.
+
+It is preferable that the organisation capture feedback regarding every
+transfusion as this would enable it to capture all transfusion reactions. These
+are then analysed (by individual/committee as decided by the organisation),
+and appropriate corrective/preventive action is taken. The organisation shall
+maintain a record of transfusion reactions.
+
+The organisation shall participate in the Haemovigilance Programme of India.
+
+[Guidebook cross-ref: IMS.1.g. — in policy draft: "those requirements are
+covered in the hospital's other policies."]
+For "transfusion reactions" refer to the Guidebook Glossary.
+
+Stop-work check: YES — COP.8 stop-work framework applies. Not detecting or
+reporting a suspected adverse transfusion reaction is a patient-safety trigger.
+
+Mandatory (shall):
+  — Detection, reporting, evaluation and analysis of suspected adverse
+    transfusion reactions shall be ensured (shall — four-step pipeline).
+  — CAPA shall follow the analysis (shall).
+  — A record of transfusion reactions shall be maintained (shall).
+  — The organisation shall participate in the Haemovigilance Programme of
+    India (shall — stated as a direct obligation, not "should" or "preferably").
+
+Non-mandatory:
+  — Capturing feedback on every transfusion is "preferable" — not a shall.
+  — Whether analysis is done by an individual or committee is the organisation's
+    decision.
+
+Documentation: This OE is starred — post-transfusion forms and transfusion
+reaction records are the required documentation.
+
+DRAFTING NOTE: Participation in the Haemovigilance Programme of India is a
+mandatory "shall" — not advisory. Do not weaken to "should participate."
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.8.g
+Level: Achievement | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation shall implement a quality assurance programme.*
+
+Guidebook interpretation (PDF p. 119):
+The written guidance for quality assurance could be developed individually, or
+it could be a part of the organisation's overall quality-improvement programme.
+The quality assurance programme shall involve all aspects of the functioning
+in the blood centre.
+
+The blood centre participates in External Quality Assurance Scheme (EQAS)/
+Proficiency Testing Programme (PT) or a suitable interlaboratory comparison
+when the same is not available.
+
+Results of IQC/EQAS/PT/inter-lab testing are monitored and appropriate
+corrective and preventive action taken for continual quality improvement and
+records of the same maintained.
+
+Appropriate sampling of blood/products and reagents shall be done at defined
+frequency for internal quality control, as per guidelines.
+
+The blood centre shall collect data on key performance indicators as part of its
+quality improvement programme. An example of a process measure is wastage
+of blood and blood products and an example of outcome measure is transfusion
+reactions.
+
+The collected data shall be collated, analysed and used for further improvements.
+The improvements shall be monitored for sustenance.
+
+Stop-work check: Achievement — no real-time stop-work trigger from the QA
+programme itself.
+
+Mandatory (shall):
+  — QA programme shall involve all aspects of blood centre functioning (shall).
+  — Blood centre participates in EQAS/PT or suitable interlaboratory comparison
+    when EQAS/PT is not available (stated without "should" or "preferably" —
+    participation is mandatory, with an alternative path when EQAS/PT is
+    unavailable).
+  — IQC/EQAS/PT/inter-lab results shall be monitored and CAPA taken (shall);
+    records maintained (shall).
+  — Appropriate sampling of blood/products and reagents shall be done at defined
+    frequency for internal quality control, as per guidelines (shall — frequency
+    is guideline-driven, not a specific number to invent).
+  — KPI data shall be collected (shall); data shall be collated, analysed and used
+    for improvements (shall); improvements monitored for sustenance (shall).
+
+Non-mandatory:
+  — QA guidance "could" be developed individually or as part of overall QI —
+    the form is the organisation's choice.
+  — Examples of KPIs (wastage, transfusion reactions) are illustrative — the
+    organisation selects appropriate indicators for its scope.
+
+Documentation: This OE is starred — records of IQC/EQAS/PT results, CAPA,
+and KPI data are the required documentation.
+
+Note: This is Achievement level. Present it as an advanced quality commitment
+in the policy, not at the same weight as basic Commitment OEs.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table — COP.8
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    Commitment   No     No     YES         Blood available from in-house or outsourced registered
+                                            blood centre (shall); adequate resources (shall); MoU
+                                            if outsourced (shall); patient care must not suffer
+                                            (outcome obligation, shall); safe transport (shall);
+                                            NABH blood centre standards are reference (advisory)
+b    Commitment   Yes★   No     YES         NINE mandatory written-guidance scope elements (all shall
+                                            inclusions — not examples); voluntary, non-remunerated
+                                            donors + counselling + consent (shall); apheresis per
+                                            guidelines (shall); donation drives per statutory
+                                            guidelines (shall); donor-reaction drugs + training
+                                            (shall); adverse donor reactions reported per NHVPI
+                                            (shall); TTI + Red Cell Serology by approved method
+                                            before release (shall — absolute trigger); sample
+                                            retention post-transfusion (shall); quarantine during
+                                            QC failure (stop-work relevant, shall); retesting/recall
+                                            process per national guidelines (shall); discard of
+                                            positive/reactive units per written guidance (shall)
+c    Commitment   No     No     YES         Temperature of whole blood and components maintained and
+                                            recorded as per guidelines (shall); untested units
+                                            quarantined (shall); designated separate storage for
+                                            untested vs tested units (shall — physical separation);
+                                            labelling only after TTI reports released (shall —
+                                            report-release trigger is mandatory)
+d    CORE         Yes★   YES    YES         CORE + stop-work: EIGHT mandatory written-guidance
+                                            content elements (all shall — list above); indications
+                                            guidance based on STG/sound clinical practices (shall);
+                                            inventory and ordering schedules covered (shall);
+                                            HBTC mandatory (shall); HBTC composition includes
+                                            clinical depts, BTO, nursing, quality coord, management
+                                            (shall); HBTC meets periodically (shall); HBTC monitors
+                                            four areas (availability, practices/audits, reactions,
+                                            wastage — all shall); HBTC chair clinician "preferably"
+                                            (advisory); mismatch-prevention examples illustrative;
+                                            clinical situation protocols scope-conditional (could)
+e    Commitment   Yes★   No     YES         Define emergency-use scope (shall); procedures ensure
+                                            availability (shall); define time frame for emergency
+                                            availability (org-defined, not specified by Guidebook —
+                                            shall); TAT for routine AND emergency defined and
+                                            monitored (shall); applicable even without in-house
+                                            blood centre (explicit universal scope); do not invent
+                                            a numerical time frame
+f    Achievement  Yes★   No     YES         Detection, reporting, evaluation, analysis of adverse
+                                            reactions (four-step pipeline, shall); CAPA (shall);
+                                            transfusion reaction records maintained (shall);
+                                            Haemovigilance Programme of India participation (shall
+                                            — mandatory, not advisory); feedback on every
+                                            transfusion "preferable" (advisory); analysis method
+                                            (individual/committee) is org's choice; Achievement
+                                            level
+g    Achievement  Yes★   No     NO          QA covers all blood centre functions (shall); EQAS/PT
+                                            participation mandatory with interlaboratory alternative
+                                            when unavailable (stated obligation); IQC/EQAS/PT
+                                            results monitored + CAPA + records (shall); sampling at
+                                            defined frequency per guidelines (shall — no specific
+                                            number to invent); KPI data collected, collated,
+                                            analysed, improvements monitored (shall); form of QA
+                                            guidance "could" be standalone or part of QI (advisory);
+                                            KPI examples (wastage, reactions) illustrative;
+                                            Achievement level
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES — COP.8
+─────────────────────────────────────────────────────────────────────────────
+
+1. STOP-WORK TRIGGER (COP.8): The primary trigger is releasing or administering
+   blood without completing pre-transfusion verification steps (patient ID,
+   blood group verification, compatibility label, label retention, TTI/serology
+   before release). Secondary triggers: quarantined units into inventory before
+   re-testing, mixing untested and tested units, failure to detect/respond to
+   suspected adverse reactions.
+
+2. NINE WRITTEN-GUIDANCE SCOPE ELEMENTS (COP.8.b) — preserve all nine verbatim;
+   they are stated inclusions, not examples.
+
+3. EIGHT TRANSFUSION WRITTEN-GUIDANCE ELEMENTS (COP.8.d) — preserve all eight;
+   they are stated mandatory content requirements.
+
+4. HBTC IS MANDATORY (COP.8.d): A Hospital Blood Transfusion Committee shall
+   exist. Its composition has four named mandatory roles; chair being a clinician
+   is advisory. HBTC meeting frequency is "periodically" — do not specify a
+   number (none is given).
+
+5. HAEMOVIGILANCE PROGRAMME OF INDIA (COP.8.f): Participation is a shall —
+   not advisory. Do not weaken.
+
+6. EQAS/PT PARTICIPATION (COP.8.g): Mandatory, with interlaboratory comparison
+   as the alternative when EQAS/PT is unavailable.
+
+7. TIME FRAMES (COP.8.e): Emergency and routine TATs are organisation-defined.
+   Do not invent numerical time frames (minutes, hours) — the Guidebook
+   prescribes none.
+
+8. MISMATCH PREVENTION (COP.8.d): The five example measures are illustrative,
+   not a mandatory checklist. The obligation is the prevention principle; the
+   examples show how to achieve it.
+
+9. ACHIEVEMENT OELEVELS (COP.8.f, g): Present these as advanced quality and
+   haemovigilance commitments — at a higher weight than Commitment OEs but
+   clearly not basic compliance floors.
+
+
+─────────────────────────────────────────────────────────────────────────────
+
+Source files:
+  policies/source/hco6_cop_ocr.txt     (verbatim OE text + Guidebook, PDF pp. 109–119)
+  policies/build/cop_raw_dump_1-4.txt  (format reference for this file)

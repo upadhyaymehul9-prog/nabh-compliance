@@ -1,0 +1,422 @@
+{
+  "1": {
+    "standard_code": "PRE.1",
+    "title": "The organisation protects and promotes patient and family rights and informs them about their responsibilities during care.",
+    "oes": [
+      {
+        "oe_code": "PRE.1.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Patient and family rights and responsibilities are documented, displayed, and they are made aware of the same."
+      },
+      {
+        "oe_code": "PRE.1.b",
+        "letter": "b",
+        "level": "Achievement",
+        "star": true,
+        "text": "Patient and family rights and responsibilities are actively promoted."
+      },
+      {
+        "oe_code": "PRE.1.c",
+        "letter": "c",
+        "level": "CORE",
+        "star": false,
+        "text": "The organisation protects patient and family rights."
+      },
+      {
+        "oe_code": "PRE.1.d",
+        "letter": "d",
+        "level": "CORE",
+        "star": false,
+        "text": "The organisation has a mechanism to report a violation of patient and family rights."
+      },
+      {
+        "oe_code": "PRE.1.e",
+        "letter": "e",
+        "level": "CORE",
+        "star": false,
+        "text": "Violation of patient and family rights are monitored, analysed, and corrective / preventive action taken by the top leadership of the organisation."
+      }
+    ],
+    "count": 5
+  },
+  "2": {
+    "standard_code": "PRE.2",
+    "title": "Patient and family rights support individual beliefs, values and involve the patient and family in decision-making processes.",
+    "oes": [
+      {
+        "oe_code": "PRE.2.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patients and family rights include respecting values and beliefs, any special preferences, cultural needs, and responding to requests for spiritual needs."
+      },
+      {
+        "oe_code": "PRE.2.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and family rights include respect for personal dignity and privacy during examination, procedures and treatment."
+      },
+      {
+        "oe_code": "PRE.2.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and family rights include protection from neglect or abuse."
+      },
+      {
+        "oe_code": "PRE.2.d",
+        "letter": "d",
+        "level": "CORE",
+        "star": false,
+        "text": "Patient and family rights include treating patient information as confidential."
+      },
+      {
+        "oe_code": "PRE.2.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and family rights include the refusal of treatment."
+      },
+      {
+        "oe_code": "PRE.2.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and family rights include a right to seek an additional opinion regarding clinical care."
+      },
+      {
+        "oe_code": "PRE.2.g",
+        "letter": "g",
+        "level": "CORE",
+        "star": false,
+        "text": "Patient and family rights include informed consent before the transfusion of blood and blood components, anaesthesia, surgery, initiation of any research protocol and any other invasive / high-risk procedures / treatment."
+      },
+      {
+        "oe_code": "PRE.2.h",
+        "letter": "h",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and family rights include a right to complain and information on how to voice a complaint."
+      },
+      {
+        "oe_code": "PRE.2.i",
+        "letter": "i",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and family rights include information on the expected cost of the treatment."
+      },
+      {
+        "oe_code": "PRE.2.j",
+        "letter": "j",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and family rights include access to their clinical records."
+      },
+      {
+        "oe_code": "PRE.2.k",
+        "letter": "k",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and family rights include information on the name of the treating doctor, care plan, progress and information on their health care needs."
+      },
+      {
+        "oe_code": "PRE.2.l",
+        "letter": "l",
+        "level": "Achievement",
+        "star": false,
+        "text": "Patient rights include determining what information regarding their care would be provided to self and family."
+      }
+    ],
+    "count": 12
+  },
+  "3": {
+    "standard_code": "PRE.3",
+    "title": "The patient and / or family members are educated to make informed decisions and are involved in the care planning and delivery process",
+    "oes": [
+      {
+        "oe_code": "PRE.3.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": false,
+        "text": "The patient and / or family members are explained about the proposed care (including the risks, benefits, alternatives), expected results and possible complications."
+      },
+      {
+        "oe_code": "PRE.3.b",
+        "letter": "b",
+        "level": "Achievement",
+        "star": false,
+        "text": "The care plan is prepared and modified in consultation with the patient and / or family members."
+      },
+      {
+        "oe_code": "PRE.3.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The patient and/or family members are informed about the results of diagnostic tests and the diagnosis."
+      },
+      {
+        "oe_code": "PRE.3.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "The patient and/or family members are explained about any change in the patient’s condition in a timely manner."
+      },
+      {
+        "oe_code": "PRE.3.e",
+        "letter": "e",
+        "level": "Achievement",
+        "star": false,
+        "text": "The patient and/or family members are provided multi-disciplinary counselling when appropriate."
+      }
+    ],
+    "count": 5
+  },
+  "4": {
+    "standard_code": "PRE.4",
+    "title": "Informed consent is obtained from the patient or family about their care.",
+    "oes": [
+      {
+        "oe_code": "PRE.4.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation obtains informed consent from the patient or family for situations where informed consent is required."
+      },
+      {
+        "oe_code": "PRE.4.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Informed consent process adheres to statutory norms."
+      },
+      {
+        "oe_code": "PRE.4.c",
+        "letter": "c",
+        "level": "CORE",
+        "star": false,
+        "text": "Informed consent includes information regarding the procedure; it’s risks, benefits, alternatives and as to who will perform the procedure in a language that they can understand."
+      },
+      {
+        "oe_code": "PRE.4.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation describes who can give consent when a patient is incapable of independent decision making and implements the same."
+      },
+      {
+        "oe_code": "PRE.4.e",
+        "letter": "e",
+        "level": "CORE",
+        "star": false,
+        "text": "Informed consent is taken by the person performing the procedure."
+      }
+    ],
+    "count": 5
+  },
+  "5": {
+    "standard_code": "PRE.5",
+    "title": "Patient and families have a right to information and education about their healthcare needs.",
+    "oes": [
+      {
+        "oe_code": "PRE.5.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": false,
+        "text": "Patient and / or family are educated in a language and format that they can understand."
+      },
+      {
+        "oe_code": "PRE.5.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and / or family are educated about the safe and effective use of medication and the potential side effects of the medication, when appropriate."
+      },
+      {
+        "oe_code": "PRE.5.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and / or family are educated about food-drug interaction."
+      },
+      {
+        "oe_code": "PRE.5.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and / or family are educated about diet and nutrition."
+      },
+      {
+        "oe_code": "PRE.5.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and / or family are educated about immunisations."
+      },
+      {
+        "oe_code": "PRE.5.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and /or family are educated on various pain management techniques, when appropriate."
+      },
+      {
+        "oe_code": "PRE.5.g",
+        "letter": "g",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and/or family are educated about their specific disease process, complications and prevention strategies."
+      },
+      {
+        "oe_code": "PRE.5.h",
+        "letter": "h",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and/or family are educated about preventing healthcare associated infections."
+      },
+      {
+        "oe_code": "PRE.5.i",
+        "letter": "i",
+        "level": "Achievement",
+        "star": false,
+        "text": "The patients and/or family members’ special educational needs are identified and addressed."
+      },
+      {
+        "oe_code": "PRE.5.j",
+        "letter": "j",
+        "level": "Excellence",
+        "star": false,
+        "text": "The organisation has a mechanism to promote patient engagement to enhance clinical outcomes, safety and quality."
+      }
+    ],
+    "count": 10
+  },
+  "6": {
+    "standard_code": "PRE.6",
+    "title": "Patients and families have a right to information on expected costs.",
+    "oes": [
+      {
+        "oe_code": "PRE.6.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": false,
+        "text": "The patient and / or family members are made aware of the pricing policy in different settings (out-patient, emergency, ICU and in-patient)."
+      },
+      {
+        "oe_code": "PRE.6.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "The relevant tariff list is available to patients."
+      },
+      {
+        "oe_code": "PRE.6.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The patient and/or family members are explained about the expected costs."
+      },
+      {
+        "oe_code": "PRE.6.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and/or family are informed about the financial implications when there is a change in the care plan."
+      }
+    ],
+    "count": 4
+  },
+  "7": {
+    "standard_code": "PRE.7",
+    "title": "The organisation has a mechanism to capture patient’s feedback, experience and to redress complaints.",
+    "oes": [
+      {
+        "oe_code": "PRE.7.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation has a mechanism to capture feedback from patients, which includes patient satisfaction."
+      },
+      {
+        "oe_code": "PRE.7.b",
+        "letter": "b",
+        "level": "Achievement",
+        "star": false,
+        "text": "The organisation has a mechanism to capture the patient experience."
+      },
+      {
+        "oe_code": "PRE.7.c",
+        "letter": "c",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation redress patient complaints as per the defined mechanism."
+      },
+      {
+        "oe_code": "PRE.7.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and / or family members are made aware of the procedure for giving feedback and / or lodging complaints."
+      },
+      {
+        "oe_code": "PRE.7.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Feedback and complaints are reviewed and / or analysed within a defined time frame."
+      },
+      {
+        "oe_code": "PRE.7.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "Corrective and / or preventive action(s) are taken based on the analysis where appropriate."
+      }
+    ],
+    "count": 6
+  },
+  "8": {
+    "standard_code": "PRE.8",
+    "title": "The organisation has a system for effective communication with patients and/or families.",
+    "oes": [
+      {
+        "oe_code": "PRE.8.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Communication with the patients and / or families is done effectively."
+      },
+      {
+        "oe_code": "PRE.8.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation shall identify special situations where enhanced communication with patients and / or families would be required."
+      },
+      {
+        "oe_code": "PRE.8.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": true,
+        "text": "Enhanced communication with the patients and/or families is done effectively."
+      },
+      {
+        "oe_code": "PRE.8.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation ensures that there is no unacceptable communication."
+      },
+      {
+        "oe_code": "PRE.8.e",
+        "letter": "e",
+        "level": "Achievement",
+        "star": false,
+        "text": "The organisation has a system to monitor and review the implementation of effective communication."
+      }
+    ],
+    "count": 5
+  }
+}

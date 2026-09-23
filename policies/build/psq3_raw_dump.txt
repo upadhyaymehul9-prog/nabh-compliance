@@ -1,0 +1,222 @@
+PSQ.3 — Raw Source Dump
+=======================
+
+Standard text (verbatim):
+The organisation identifies key indicators to monitor the structures, processes and
+outcomes, which are used as tools for continual improvement.
+
+OE count: 8 | COREs: b, d | Stars: none
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.3.a
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation identifies and monitors key indicators to oversee the clinical
+structures, processes and outcomes.
+
+Guidebook interpretation (PDF p. 223):
+The organisation identifies and monitors the priority aspects of its patient care.
+Any indicator mandated by the Government of India / State Government or the National
+Accreditation Board for Hospitals and Healthcare Providers (NABH) shall be monitored.
+
+Some of the indicators that could be monitored pertain to patient assessment, safety
+and quality-control programmes of all the diagnostic services, medication management,
+use of blood and blood components, surgical services including use of anaesthesia and
+mortality and morbidity indicators.
+
+Quality indicators pertaining to clinical specialities and sub specialities have been
+added in the Key Performance Indicators for greater involvement of clinicians in the
+quality improvement program. Few of these indicators have been mandatory for the
+organisation as per the scope of services.
+
+Refer to NABH Key Performance Indicators.
+
+These indicators are based on available literature or created in accordance with good
+practice. Every indicator shall have a defined numerator, denominator and multiplier.
+Where appropriate, the definition of terms shall be provided.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.3.b
+Level: CORE | No star
+
+Verbatim OE text:
+The organisation identifies and monitors the key indicators to oversee infection
+prevention and control activities.
+
+Guidebook interpretation (PDF p. 224):
+The organisation shall identify and monitor appropriate key performance indicators
+suitable to it. Any indicator mandated by the Government of India or the National
+Accreditation Board for Hospitals and Healthcare Providers (NABH) shall be monitored.
+
+Some of the indicators that could be monitored include the rate of Catheter Associated
+Urinary Tract Infection (CAUTI), Central Line Associated Blood Stream Infection
+(CLABSI), Surgical Site Infection (SSI) and Ventilator Associated Pneumonia (VAP).
+
+These indicators are based on available literature or created in accordance with good
+practice. Every indicator shall have a defined numerator, denominator and multiplier.
+Where appropriate, the definition of terms shall be provided. In the case of healthcare
+associated infections, the current surveillance definitions provided by the CDC's
+National Healthcare Safety Network definitions shall be used.
+
+Stop-work check: CORE — non-negotiable. Absence of IPC indicator monitoring is a CORE
+non-compliance. The guidebook examples (CAUTI, CLABSI, SSI, VAP) are illustrative; the
+organisation selects indicators appropriate to its scope plus any mandated by GOI/NABH.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.3.c
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation identifies and monitors key indicators to oversee the managerial
+structures, processes and outcomes.
+
+Guidebook interpretation (PDF p. 224):
+The organisation identifies and monitors priority managerial activities in the
+organisation. Any indicator mandated by the Government of India / State Government or
+the National Accreditation Board for Hospitals and Healthcare Providers (NABH) shall
+be monitored.
+
+Some of the indicators that could be monitored pertaining to medication procurement,
+utilisation rates, patient and staff satisfaction, waiting time for consultation and
+diagnostics, and availability and content of medical records.
+
+Two indicators pertaining to digital health have been added.
+
+These indicators are based on available literature or created in accordance with good
+practice. Every indicator shall have a defined numerator, denominator and multiplier.
+Where appropriate, the definition of terms shall be provided.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.3.d
+Level: CORE | No star
+
+Verbatim OE text:
+The organisation identifies and monitors key indicators to oversee patient safety
+activities.
+
+Guidebook interpretation (PDF pp. 224–225):
+The organisation shall identify and monitor appropriate key performance indicators
+suitable to it. Any indicator mandated by the Government of India / State Government or
+the National Accreditation Board for Hospitals and Healthcare Providers (NABH) shall
+be monitored.
+
+Some of the indicators that could be monitored pertain to patient safety goals and
+risk management.
+
+These indicators are based on available literature or created in accordance with good
+practice. Every indicator shall have a defined numerator, denominator and multiplier.
+Where appropriate, the definition of terms shall be provided.
+
+Stop-work check: CORE — non-negotiable. No patient safety KPI monitoring = CORE
+non-compliance.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.3.e
+Level: Commitment | No star
+
+Verbatim OE text:
+Verification of data is done regularly by the quality team.
+
+Guidebook interpretation (PDF p. 225):
+The data which is collected is verified from time to time and in response to queries
+or when an unexplained trend occurs, etc.
+
+The data collected shall be authenticated by the quality team after going through every
+data or by using random sampling. The verification process shall also include if the
+stated sampling strategy (where applicable) was adhered.
+
+Whenever errors are detected in the process of collection of data, they are corrected.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.3.f
+Level: Commitment | No star
+
+Verbatim OE text:
+There is a mechanism for analysis of data which results in identifying opportunities
+for improvement.
+
+Guidebook interpretation (PDF p. 225):
+The data is analysed and based on this corrective and preventive actions are taken,
+where necessary. The organisation could also consider developing benchmarks / acceptable
+quality levels based on national / international norms. This also includes undertaking
+quality improvement projects when the benchmark / acceptable quality levels are
+consistently not met, or the trend is unfavourable.
+
+In case the organisation is consistently meeting benchmark / acceptable quality levels,
+they could reduce the frequency of monitoring.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.3.g
+Level: Commitment | No star
+
+Verbatim OE text:
+The improvements are implemented and evaluated.
+
+Guidebook interpretation (PDF p. 225):
+The improvement activities carried out by the organisation shall have an evaluable
+outcome. The same shall be documented.
+
+Stop-work check: Commitment — no stop-work trigger. Terse but firm: every improvement
+must produce a documentable, evaluable outcome — implementation alone is not sufficient.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+PSQ.3.h
+Level: Achievement | No star
+
+Verbatim OE text:
+Feedback about care and service is communicated to staff.
+
+Guidebook interpretation (PDF p. 226):
+The feedback shall include the rates, trends and opportunities for improvement. It
+could also provide specific inputs to improve / reduce the rate. This could be in the
+form of a bulletin / newsletter. It is equally important that positive feedback about
+care and service is communicated to staff.
+
+Stop-work check: Achievement — no stop-work trigger.
+
+
+─────────────────────────────────────────────────────────────────────────────────
+Summary Table
+
+OE   Level        Star   Stop-work   Key constraint
+a    Commitment   No     No          Clinical KPIs; all GOI/NABH-mandated indicators
+                                     included; every indicator needs numerator /
+                                     denominator / multiplier
+b    CORE         No     YES         IPC KPIs; CDC NHSN surveillance definitions apply
+                                     for HAIs; examples are illustrative not exhaustive
+c    Commitment   No     No          Managerial KPIs; digital health indicators added in
+                                     6th Ed; same numerator/denominator/multiplier rule
+d    CORE         No     YES         Patient safety KPIs covering safety goals and risk
+                                     management; all mandated indicators included
+e    Commitment   No     No          Quality team authenticates data — 100% check or
+                                     random sampling; sampling adherence itself verified;
+                                     errors corrected
+f    Commitment   No     No          Analysis drives CAPA; benchmarking encouraged;
+                                     frequency may reduce if target consistently met
+g    Commitment   No     No          Every improvement must have evaluable, documented
+                                     outcome — implementation alone insufficient
+h    Achievement  No     No          Feedback covers rates, trends, OFIs, and positive
+                                     feedback; bulletin/newsletter format acceptable
+
+
+Source files:
+  policies/source/hco6_psq_ocr.txt          (verbatim OE text)
+  policies/source/hco6_psq_guidebook_ocr.txt (Guidebook interpretations, PDF pp. 223-226)
+  policies/source/hco6_psq_inventory.json    (levels, stars, OE codes)

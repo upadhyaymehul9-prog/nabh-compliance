@@ -1,0 +1,931 @@
+# HCO 6th Edition Guidebook OCR — Responsibilities of Management (ROM)
+# Source: policies/source/NABH 6th Edition Standards & Guidebook-1.pdf
+# md5 2c4489ee98de4ae9b49cba168ea9f42a; scanned, no text layer.
+# pytesseract + pypdfium2 scale=2.2; 0-based indices 238-253 (PDF pages 239-254).
+# Verified ROM Intent at PDF page 239 (idx 238); FMS Intent at PDF page 255 (idx 254).
+# Do not commit the PDF (policies/source/*.pdf is gitignored).
+
+
+===== PDF_IDX 238 (pdf page 239) =====
+
+Responsibilities of Management
+(ROM)
+
+Intent of the jpter
+
+The management of the healthcare organisation is aware of and manages all the key components of
+governance. Those responsible for governance are identified and their roles defined. The standards
+encourage the governance of the organisation professionally and ethically.
+
+Clinical governance framework is established, that includes clinical audits, clinical pathways, education and
+research. The responsibilities of management are defined. The responsibilities of the leaders at all levels are
+defined. The management executes its responsibility for compliance with all applicable regulations. Those
+responsible for governance address the organisations social responsibility.
+
+Leaders ensure that patient-safety and risk-management issues are an integral part of patient care and
+hospital management. The Organisation has a written guidance in place for change management and service
+continuity plan.
+Note 1: “Responsible for Governance’ refers to the governing entity of the healthcare organisation and can
+exist in many configurations. For example, the owner(s), partners in partnership firm, trustees in
+charitable trust, the board of directors, or in the case of public hospitals, the respective Ministry
+(Health / Railways / Labour).
+
+Note 2: “Leadership” refers to appointed leader for example CEO, COO, Managing Director, Dean /
+Director, Medical Director / Medical Superintendent.
+
+in case of single owner / partners all the standards and objective elements shall be applicable.
+
+MMARY OF STANDARDS
+
+ROM.1. The organisation identifies those responsible for governance and their roles are defined,
+
+ROM.2. Those responsible for governance manage the organisation in an ethical manner.
+Those responsible for governance ensure sustainability in hospital by addressing environmental, social and
+economic factors from long term well-being of healthcare system and community.
+
+RON.3.
+
+The organisation is headed by a leader who shall be responsible for operating the organisation on a day-to-
+
+ROMS: day basis.
+
+ROM.5. The organisation displays professionalism in its functioning.
+
+=|
+
+ROM. Management ensures that patient-safety aspects and risk-management issues are an integral part of patient
+_ care and hospital management.
+
+*This implies that the objective element requires documentation.
+
+
+===== PDF_IDX 239 (pdf page 240) =====
+
+Gui
+
+jdebook to NABH Accreditation Standards for Hospitals
+
+Standard 6
+Objective elements 37
+CQRE 4
+Commitment 23
+Achievement 8
+Excellence 2
+bl ROM. ROM. ROM. 0M.4
+| a CORE CORE Commitment Commitment
+| b Commitment Commitment Commitment CORE
+a Commitment Commitment a | Commitment
+| d Svan cman Commitment | ‘Achievement
+e an aL Excellence | ‘Achievement
+f Commitment a Achievement |
+g Commitment a ‘Achievement
+~ — |
+h Achiovement
+i. 7 i a |
+
+RO!
+
+Commitment
+Commitment
+Commitment
+Achievement
+Commitment
+
+Excellence |
+
+NABH
+
+Summary of Objective Elements
+
+CORE
+
+Commitment
+
+Commitment
+
+Achievement
+
+Commitment
+
+Achievement
+
+
+===== PDF_IDX 240 (pdf page 241) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+NAB t
+
+Standards and Objective Elements
+
+Standard
+
+The organisation identifies those responsible for governance and
+
+OM.1. their roles are defined.
+
+Objective Elements
+
+CORE a. Those responsible for governance are identified and their roles and
+responsibilities are defined and documented. *
+
+Interpretation: Those responsible for governance are accountable for the quality
+of care and help the healthcare organisation to achieve its goals. The structure of
+the hospital’s governing body/entity is described in a written document. The
+document(s) describe when and how the authority of the governing entity can be
+delegated and to whom. The terms of reference, by-laws and membership of
+those responsible for governance is documented. This may require that those
+responsible for governance receive formal orientation regarding their role. Those
+responsible for governance meet at defined intervals and minutes of the meeting
+are maintained.
+
+Commitment b. Those responsible for governance lay down the organisation’s vision,
+mission and values.*
+
+Interpretation: The organisation shall enunciate its vision, mission and values
+through an authorised document. These shall be developed and reviewed by
+those responsible for governance in consultation with the organisation’s leaders.
+Further, inputs could be from external stakeholders, including patients, families
+and community. The vision, mission and values of the organisation shall be
+displayed prominently. Only a display on its website would not be appropriate.
+The same could be translated and displayed in the local language also.
+
+For the definition of "mission", “vision” and “values” refer to the glossary.
+
+Commitment c. Those responsible for governance approve the documented strategic and
+operational plans and the organisation’s annual budget.*
+
+Interpretation: The methodology and frequency of preparation of strategic plan
+may differ according to the size and type of organisation. Documented
+
+= C@RE i Commitment z= Achievement i Excellence
+
+
+===== PDF_IDX 241 (pdf page 242) =====
+
+-~_
+
+Guidebook to NABH Accreditation Standards for Hospitals —
+
+Commitment
+
+Commitment
+
+Commitment
+
+Commitment
+
+d.
+
+e.
+
+f.
+
+NABH
+
+operational plans and budget/expenditure shall be approved annually. The
+operational plan shall be linked to the strategic plan. The strategic and
+operational plans shall identify responsibility and possible timeframes for
+achievement. The documented annual budget shall include both capital
+expenditure and operating expenditure.
+
+Refer to the glossary for “strategic and operational plans”.
+
+Those responsible for governance monitor and measure the performance of
+the organisation against the stated mission.
+
+Interpretation: The head of the organisation shall develop periodically
+(preferably quarterly) performance reports based on the strategic and operational
+plans. This shall include quality and patient safety parameters. Performance shall
+be discussed in the meeting of those responsible for governance, and action
+items are regularly followed up.
+
+Those responsible for governance appoint the senior leaders in the
+organisation.
+
+Interpretation: At a minimum, the person responsible for managing the day-to-
+day functioning of the organisation shall be appointed by those responsible for
+governance. This may be based on qualifications, training, experience and skills.
+
+Those responsible for governance support safety initiatives, clinical
+governance framework and quality improvement plans.*
+
+Interpretation: Reports of the safety and quality improvement committee’s
+minutes are shared with those responsible for governance, and funds and
+resources are allocated for corrective and preventive action. The information
+shared shall include the salient points of risk management, process of reporting
+risk, sentinel events and quality improvement activities.
+
+Those responsible for governance shall develop clinical governance
+framework.
+
+Interpretation: Clinical governance framework shall consist of patient safety,
+medication safety, clinical audits, clinical pathways, clinical indicators, education
+and research.
+
+il CORE ty Commitment = Achievement = Excellence
+
+®
+
+
+===== PDF_IDX 242 (pdf page 243) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals 6a
+NABR.
+
+Leaders of clinical departments shall select and implement clinical practice
+guidelines, care pathways and/or clinical protocols to guide clinical care. The
+departmental leader shall encourage clinical audits, education and research.
+
+Achievement h. Those responsible for governance support the ethical management
+framework of the organisation.
+
+Interpretation: This includes the ethical management framework, resolving
+ethical issues in a defined time frame and addressing conflicts of interest. It also
+includes support for the ethical conduct of research.
+
+Commitment i. Those responsible for governance inform the public of the quality and
+performance of services.
+
+Interpretation: This could be done in the form of displays or brochures or on the
+website. This could include positive and negative feedback received from the
+stakeholders, results of surveys done by independent third parties and results of
+benchmarking done by professional bodies.
+
+Standard
+
+Those responsible for governance manage the organisation in an
+
+M.2.
+no ethical manner.
+
+Objective Elements
+
+CQRE a. The leaders establish the organisation’s ethical management framework. *
+Interpretation: The organisation shall function ethically.
+
+Transparency in its actions shall be one of its guiding principles. Handling of
+complaints, grievances, clinical care delivery and research shall be some of the
+areas to address. The framework includes codes of conduct. A good reference
+guide for minimum code of conduct for doctors is "Code of medical ethics, 2002"
+published by Medical Council of India.
+
+= CQRE = Commitment | | Achievement ed Excellence
+
+
+===== PDF_IDX 243 (pdf page 244) =====
+
+" guidebook to NABH Accreditation Standards for Hospitals
+NABH
+
+] Commitment b. The ethical management framework includes processes for managing
+issues with ethical implications, dilemmas and concerns.*
+
+| Interpretation: The issues may be clinical or non-clinical. Some examples
+include conflict of interest, breach of confidentiality, ethical behaviour, informed
+i consent, and withdrawing life-sustaining treatment. There shall be a consistent
+approach to ethical decision making throughout the organisation based on the
+guiding principle(s). Staff shall be provided with appropriate guidance with
+respect to their actions based on these principles. The approach shall include
+process for collecting, collating and analysing ethical dilemmas for taking
+corrective and preventive actions within a defined time frame. Ethical dilemma
+could arise when there are conflicting decisions regarding provision or
+withdrawal of life support or treatment. Decisions made regarding ethical issues
+shall be documented, and opportunities for improvement could be identified.
+
+Commitment c. Theorganisation discloses its ownership.
+
+Interpretation: Hospitals are governed under the provisions of Companies Act,
+Charitable Trust Act, Societies Registration Act, Limited Liability Partnership Act,
+sole proprietorship and Government of India/State Government.
+
+The ownership of the hospital shall be disclosed accordingly. The disclosure
+could be in the form ofa registration certificate.
+
+Commitment d. Theorganisation honestly portrays its affiliations and accreditations.
+
+Interpretation: \t implies that the organisation conveys its affiliations,
+accreditations for specific departments or whole hospital in an honest manner,
+wherever such exist.
+
+Standard
+
+Those responsible for governance ensure sustainability in hospitals by
+
+addressing environmental, social and economic factors from long term
+well-being of healthcare system and community.
+
+3 CORE a Commitment f= =] Achievement = Excellence
+
+
+===== PDF_IDX 244 (pdf page 245) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+
+NABH
+
+Objective Elements
+
+Commitment a.
+
+Those responsible for governance address the organisation’s sustainability
+programme in terms of Environment Social and Governance (ES@)
+responsibility.
+
+Interpretation: Environmental sustainability includes energy usage ang
+efficiency, climate change strategy, waste reduction, biodiversity loss,
+greenhouse gas emissions and carbon footprint reduction.
+
+Social sustainability includes fair pay and living wages, equal employment
+opportunity, employee benefits, workplace health and safety, community
+engagement, responsible supply chain partnerships, adhering to labour laws.
+
+Governance sustainability includes corporate governance, risk management,
+compliance, ethical business practises, avoiding conflicts of interest, accounting
+intégrity and transparency.
+
+Commitment b.
+
+The organisation takes initiatives towards an energy-efficient and
+environmentally friendly hospital. *
+
+Interpretation: This includes using the concepts of reduce, recycle and reuse in
+promoting the basic concepts of the green hospital. Energy-efficient lighting,
+rainwater harvesting, increase usage of solar power, wind energy, use of battery-
+operated or e-vehicles, recycling of STP/ETP water for gardening and flush water,
+reduction of plastic usage where possible, use of ‘green’ materials in
+construction, use of volatile organic compounds free paints are some of the
+examples. The organisation shall focus on efficient and sustainable use of energy,
+water and other utilities. The organisation shall take measures to create
+awareness among staff and patients regarding saving electricity and water.
+
+Commitment c.
+
+HM cone
+
+Those responsible for governance address the organisations social
+responsibility.
+
+Interpretation: The board of governance and leaders shall develop social
+responsibility policy and implement it. Free camps, outreach programs for below
+poverty line population are some of the examples. At a minimum all regulatory
+requirement like corporate social responsibility shall be met.
+
+= Commitment =| Achievement zi) Excellence
+
+
+===== PDF_IDX 245 (pdf page 246) =====
+
+Commitment d.
+
+Excellence e.
+
+Achievement  f.
+
+Achievement g.
+
+HM core
+
+NABH
+
+Staff well-being is promoted.
+
+Interpretation: Organisation takes proactive steps to ensure staff well-being.
+Examples of these include promoting healthy lifestyle programmes, having
+defined work hours and workload monitoring, providing scheduled breaks, stress
+management, access to dining facilities, rewards and recognition, staff
+engagement activities.
+
+Tracking absenteeism or over-time could help organisations to monitor stress and
+fatigue indirectly. The staff satisfaction survey is another tool to capture this data.
+
+The organisation shall have facilities for staff to seek support and advice when
+necessary.
+
+The organisation follows sustainable procurement practices.
+
+Interpretation: These involve sourcing products and services that have a lower
+environmental impact. Hospitals can work with suppliers to prioritize
+environmentally friendly and socially responsible products.
+
+Hospitals shall encourage employees to use common / public transportation
+to reduce the environmental impact of commuting and carbon footprint.
+
+Interpretation: Hospital shall encourage employees for carpooling, cycling and
+wherever possible use of public transport to reduce environmental impact.
+Efficient environmental friendly logistics and transportation management within
+the hospital can also contribute to sustainability.
+
+The organisation ensures financial sustainability of the hospital by balancing
+the financial aspects of healthcare delivery.
+
+Interpretation: Balancing the financial aspects of healthcare delivery is crucial for
+long-term sustainability. This involves efficient resource allocation, cost
+management, and revenue generation strategies.
+
+= Commitment i—} Achievement i— Excellence
+
+
+===== PDF_IDX 246 (pdf page 247) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+
+Standard
+
+ROM.4 The organisation is headed by a leader who shall be responsible
+
+for operating the organisation on a day-to-day basis.
+
+Objective Elements
+Commitment a. The person heading the organisation has requisite and appropriate
+administrative qualifications and experience.
+
+Interpretation: Appropriate qualification implies qualification in hospital
+management/ administration.
+
+Appropriate experience implies administrative experience in a hospital.
+
+C@RE b. The leader is responsible for and complies with the laid-down and applicable
+legislations, regulations and notifications.
+
+Interpretation: The leader is conversant with the different statutory requirements
+as per the scope of services and takes measures to adhere to the same. The
+organisation conducts its functioning as a duly permitted legal entity under the
+relevant registering authority(s). The leader could develop a mechanism which
+ensures implementation of various requirements stated in the laws and
+regulations. There shall be a mechanism to regularly update any amendments in
+the prevailing laws of the land. A tracker sheet could be developed for this
+purpose.
+
+Applications to update statutory documents must be made in accordance with the
+timelines set out in the relevant laws/registration authority requirements to ensure
+
+~ continuity of statutory compliances. Research, including clinical trials, shall be
+conducted in accordance with statutory norms.
+
+Commitment c. Theleader appoints / participates in the recruitment of department leaders of
+the organisation who will assist in the day-to-day functioning of the
+organisation.
+
+Interpretation: This includes at least the next rung of the organogram. Some
+examples of the department leaders of the organisation are Medical Director or
+Medical Superintendent, Nursing Director, Head of Human Resources. Each
+departmental/service leader shall document the services to be provided by the
+department and have an integrated approach to align these with the services of
+other departments.
+
+The leaders participate in patient safety and quality improvement activities based
+on institutional priorities.
+
+— C@RE = Commitment al Achievement a Excellence
+
+
+===== PDF_IDX 247 (pdf page 248) =====
+
+a
+
+Guidebook to NABH Accreditation Standards for Hospitals
+
+Achievement d.
+
+Achievement e.
+
+NABH
+
+The leader ensures that each organisational programme, service, site or
+department has effective leadership.
+
+Interpretation: There needs to be a minimum essential qualification and/or
+relevant experience of the leader. The respective leader shall have domain
+knowledge of that particular department. The organisation needs to develop its
+metrics for measuring the effectiveness of leaders.
+
+The performance of the organisation’s leader is reviewed for effectiveness.
+
+Interpretation: Key result areas of the person heading the organisation can be
+established, or it can be done through performance appraisal. This shall be done
+by those responsible for governance. This would be by self-evaluation in
+instances where those responsible for governance and the leader responsible for
+the day-to-day functioning of the organisation are the same.
+
+Standard
+
+ROM.5. The organisation displays professionalism in its functioning.
+
+Objective Elements
+
+Commitment a.
+
+HB core
+
+The organisation has strategic and operational plans, including long-term
+and short-term goals commensurate to the organisation’s vision, mission
+and values in consultation with the various stakeholders.
+
+Interpretation: The leader(s) shall define and develop the process for strategic
+and operational plans to achieve the organisational vision and mission statement
+and adhere to the values. It shall be discussed with all stakeholders. Stakeholders
+include the community that the organisation serves. The strategic plan
+development shall take into consideration both external and internal scan. The
+same can be done using tools like SWOT(strengths, weakness, opportunities and
+threats) analysis.
+
+Some of the inputs that shall be considered while finalising these plans shall be
+the findings of the risk management plan, patient safety goals and results of
+facility rounds. Operational plan(s) shall be done on an annual basis.
+
+The strategic and operational plan shall have defined goals and objectives which
+are measurable and have defined time frames.
+
+Refer to the glossary for “strategic plan” and operational plan”.
+
+Be Commitment =i Achievement = Excellence
+
+
+===== PDF_IDX 248 (pdf page 249) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+
+Commitment _ b.
+
+Commitment c.
+
+Achievement d.
+
+Commitment e.
+
+HM cone
+
+NABH
+
+The organisation coordinates the functioning with departments and external
+agencies and monitors the progress in achieving the defined goals and
+objectives.*
+
+Interpretation: The goals and objectives shall be drawn from the strategic plan
+and operational plan. They shall be consistent with the mission and values. They
+shall have measurable outcomes. The reasons for not achieving any particular
+goal shall be analysed and appropriate action shall be taken. This could be done
+through periodic reviews and/or formal management review meetings which shall
+be documented.
+
+The organisation plans and budgets for its activities annually.
+
+Interpretation: The planning shall be done, taking into consideration the
+strategic and operational plans of the organisation. The budget development and
+review process shall include a review of budgeted expenditure against actual.
+Responsibilities for these activities shall be clearly defined and followed.
+
+An adequate budget shall be allocated for infection prevention and control and
+quality improvement activities. This could be either done on a calendar year
+(January-December) basis or financial year (April-March) basis.
+
+Refer to IPC.2.b. and PSQ.6.d.
+
+The functioning of committees is reviewed for their effectiveness.
+
+Interpretation: The review shall be done by the leadership. The review of the
+functioning shall include whether the purpose of having the committee is being
+met, whether the committee is meeting at the prescribed frequency and whether
+the committee is suggesting remedial measures and if there is adequate
+monitoring of the corrective and preventive action suggested by the committee by
+way of risk mitigation within the scope of the particular committee.For an effective
+review, the organisation could document the scope of every committee, the roles
+and responsibilities assigned to various members and the frequency of meetings.
+Minutes of the meeting for each committee meeting will be maintained.
+
+The organisation documents the service standards that are measurable and
+monitors them.*
+
+Interpretation: The organisation shall develop benchmarks for different aspects
+of the services being provided. This could be based on the organisation's values-
+The organisation shall decide the responsibility for and frequency of monitoring.
+
+| Commitment = Achievement = Excellence
+®
+dl
+y
+
+na
+
+
+===== PDF_IDX 249 (pdf page 250) =====
+
+Yr
+
+) f Guidebook to NABH Accreditation Standards for Hospitals
+NABH
+
+Excellence f. Systems and processes are in place for change management.*
+
+Interpretation: Organisation has a written guidance in place for change
+management. Change may be operational, financial or departmental. It also
+involves succession planning and a change in leadership. This shall address
+aspects like communication, ownership, organisational culture.
+
+Standard
+
+ROM.6 Leadership ensures that patient-safety aspects and risk-management
+
+issues are an integral part of patient care and hospital management.
+
+Objective Elements
+
+C@RE a. Leadership ensures proactive risk management across the organisation.*
+
+Interpretation: Risk management shall include clinical and non-clinical
+(strategic, financial, operational and hazard) risks. It shall include risk
+identification at every level of the organisation, analysis, prioritisation and risk
+alleviation. The same shall be documented. At a minimum, analysis of potential
+risks must include the likelihood of its occurrence and the potential severity of the
+impact or consequences. The identified risks shall be documented in a risk
+register, which shall be updated at regular intervals.
+
+This shall be documented as a “risk management plan”. It shall include the
+various risks identified, the action taken for risk alleviation of each of these risks
+and the mechanism for informing staff regarding the same. Other components of
+the risk management plan include contingency plans and education and training
+of staff.
+
+Further, the risk management plan shall be monitored and reviewed for continued
+effectiveness at least annually. The results of the review shall be communicated to
+the relevant stakeholders in the organisation. This could be done using a matrix.
+Clinical-risk assessment could include:
+
+* Medication management, covering issues such as patient/service-user
+allergies, antimicrobial resistance, use of cytotoxic drugs and narcotics and
+controlled drugs management.
+
+* Equipment risks - fire/injury risks from the use of LASER, and cautery Use of
+ionising radiation, radioactive isotopes and nuclear medicine are some of the
+examples.
+
+* Risks resulting from long-term conditions.
+
+= CORE = Commitment z= Achievement z= Excellence
+
+“a
+
+
+===== PDF_IDX 250 (pdf page 251) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+
+Commitment _ b.
+
+Commitment c.
+
+Achievement d,
+
+TM core
+
+NABR.
+
+* Patientfalls
+
+* Infections
+
+* Risks related with a vulnerable patient like Deep Venous Thrombosis
+* Risk associated with clinical alarms.
+
+Leadership provides resources for proactive risk-assessment and risk-
+reduction activities.
+
+Interpretation: There shall be sufficient resources kept as a contingency to
+address the risk reduction activities as and when the leaders proactively suggest.
+These shall be directed at preventive actions wherever feasible. Refer to the
+glossary for a definition of “risk assessment” and “risk reduction”.
+
+Leadership ensures integration between quality improvement, risk-
+management and strategic planning within the organisation.
+
+Interpretation: The leadership ensures that strategic planning incorporates risk
+management aspects in its strategic plan. Further, quality improvement shall also
+incorporate risk management aspects.
+
+Refer to PSQ.2.a.
+
+Leadership ensures implementation of systems for internal and external
+reporting of system and process failures.*
+
+Interpretation: The organisation has a system in place for internal and external
+reporting of system and process failures. The contingency plan shall be in place
+to deal with the situation of system and process failure anticipated within the
+organisation. In case the MRI machine of the organisation breaks down, internal
+reporting is to be done to head of the organisation and external reporting to be
+done to the patients. In case of a radiation source, external agency reporting is to
+AERB. In case of fire incidents, strong internal and external reporting systems are
+required. The system for reporting shall be documented. The organisation has 4
+service continuity plan in case of fire and non-fire emergencies. The plan includes
+a mechanism for maintaining service continuity of the organisation’s critical
+operations. This plan shall help the organisation to improve its ability to respond
+when such incidents occur. The plan shall ensure that critical systems and
+services do not fail or that failures are recovered within minimum time frames. The
+plan shall be tested at regular intervals
+
+= Commitment a) Achievement = Excellence
+
+
+===== PDF_IDX 251 (pdf page 252) =====
+
+a
+
+Commitment e.
+
+Achievement  f.
+
+HB core
+
+NABH
+
+Leadership ensures that it has a documented agreement for all outsourced
+services that include service parameters.
+
+Interpretation: The agreement shall specify the service parameters. Examples of
+service parameters include quality, numbers, reports and timelines. The
+agreement shall include agreed dispute resolution mechanisms. Even if a
+group/affiliate firm is providing services, there shall be an agreement with that
+unit.
+
+Leadership monitors the quality of the outsourced services and
+improvements are made as required.
+
+Interpretation: The frequency of monitoring shall be determined by the
+organisation but shall not be less than once a year. This shall be done keeping in
+mind the criticality of that service towards providing patient care. It is preferable
+that the monitoring is done as per the service standards laid down by the
+organisation. Based on the results of the monitoring, the organisation shall work
+with the vendor to try and ensure that the agreed service parameters are met.
+
+In instances where the outsourcing has been done based on prescribed statutory
+norms/regulations, it is not mandatory to monitor the quality of the outsourced
+services.
+
+= Commitment = Achievement =] Excellence
+
+
+===== PDF_IDX 252 (pdf page 253) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals. 6a
+
+References
+
+1.
+
+10.
+
+11.
+12.
+13.
+
+14.
+15.
+
+16.
+17.
+
+18.
+
+NAB’
+
+McDonagh KJ. Hospital governing boards: a study of their effectiveness in relation to organizationa|
+performance. Journal of Healthcare Management. 2006 Nov 1;51 (6):377-89.
+
+Arnwine DL. Effective governance: the roles and responsibilities of board members. In Baylor University
+Medical Center Proceedings 2002 Jan 1 (Vol. 15, No. 1, pp. 19-22). Taylor & Francis
+
+Combes JR. Effective boards begin with effective board members. Trustee: the Journal for Hospita
+Governing Boards. 2009 Oct 1;62(9):26-9.
+
+Baysinger BD, Butler HN. Corporate governance and the board of directors: Performance effects of
+changes in board composition. In Corporate Governance 2019 Jul 15 (pp. 215-238)
+
+Ingersoll GL, Witzel PA, Smith TC. Using organizational mission, vision, and values to guide professional
+practice model development and measurement of nurse performance. JONA: The Journal of Nursing
+Administration. 2005 Feb 1;35(2):86-93
+
+Determining Your Core Values, Mission, and Vision. (2015). Complete Guide to Practice Management,
+3-18. doi:10.1002/9781 119204312.ch1
+
+Rego A, Aratijo B, Serrao D. The mission, vision and values in hospital management. Journal of Hospital
+Administration. 2016;5(1):62-72.
+
+Morciano C, Errico MC, Faralli C, Minghetti L. An analysis of the strategic plan development processes of
+major public organisations funding health research in nine high-income countries worldwide. Health
+Research Policy and Systems. 2020 Dec;18(1):1-6
+
+American Society of Clinical Oncology. Strategic planning: Why it makes a difference, and how to do it.
+Journal of Oncology practice. 2009 May;5(3):139-43.
+
+Domer G, Gallagher TM, Shahabzada S, Sotherland J, Paul EN, Kumar KN, Wilson B, Salpekar S, Kaur P
+Patient safety: preventing patient harm and building capacity for patient safety. InContemporary Topics
+in Patient Safety-Volume 1 2021 Oct 18.
+
+B, Kear T. Patient safety and patient safety culture: Foundations of excellent health care delivery.
+Nephrology Nursing Journal. 2014 Sep 1;41 (5):447-56.
+
+Baba WV, HakemZadeh F. Toward a theory of evidence based decision making. Management decision.
+2012 May 25;50(5):832-67
+
+Sharma AE, Rivadeneira NA, Barr-Walker J, Stern RJ, Johnson AK, Sarkar U. Patient engagement in
+health care safety: an overview of mixed-quality evidence. Health affairs. 2018 Nov 1;37(11):1813-
+
+Balding C. From quality assurance to clinical governance. Australian Health Review. 2008;32(3):383-91
+
+Biller-Andorno N, Lenk C, Leititis J. Ethics, EBM, and hospital management. Journal of Medical Ethics.
+2004 Apr 1;30(2):136-40
+
+Braithwaite J, Herkes J, Ludlow K, Testa L, Lamprell G. Association between organisational and
+workplace cultures, and patient outcomes: systematic review. BMJ open. 2017 Nov 1;7(11): e017708.
+Bruning P, Baghurst T. Improving ethical decision making in health care leadership. Bus Eco J.
+2013;4(2):1-5
+
+Chatterjee C, Srinivasan V. Ethical issues in health care sector in India. IIMB Management Review. 2013
+Mar 1;25(1):49-62.
+
+
+===== PDF_IDX 253 (pdf page 254) =====
+
+‘guidebook to NABH Accreditation Standards for Hospitals
+
+20.
+21.
+
+22.
+
+23.
+24.
+
+25.
+
+26.
+27.
+
+28.
+29.
+
+30.
+
+31,
+
+32.
+33.
+
+34.
+
+35.
+
+NABH
+
+Doran E, Fleming J, Jordens C, Stewart CL, Letts J, Kerridge IH. Managing ethical issues in patient care
+and the need for clinical ethics support. Australian Health Review. 2014 Dec 17;39(1):44-50
+
+Goodman JS, Gary MS, Wood RE. Bibliographic search training for evidence-based management
+education: A review of relevant literatures. Academy of Management Learning & Education. 2014
+Sep;13(3):322-53.
+
+Clay-Williams R, Ludlow K, Testa L, Li Z, Braithwaite J. Medical leadership, a systematic narrative review:
+do hospitals and healthcare organisations perform better when led by doctors?. BMJ open. 2017 Sep
+1;7(9): €014474
+
+Daly J, Jackson D, Mannix J, Davidson PM, Hutchinson M. The importance of clinical leadership in the
+hospital setting. Journal of Healthcare Leadership. 2014 Nov 21:75-83
+
+Govind, N. (2014). Between families and doctors. Indian Journal of Medical Ethics.
+
+McSherry R, Wadding A, Pearce P. Healthcare Governance Through Effective Leadership. Effective
+Heathcare leadership. 2008 Apr 15:58-75.
+
+Mannion R, Davies H. Understanding organisational culture for healthcare quality improvement. Bmj.
+2018 Nov 28;363.
+
+lyalomhe GB. Medical ethics and ethical dilemmas. Niger J Med. 2009 Jan 1;18(1):8-16.
+
+Kuhn AM, Youngberg BJ. The need for risk management to evolve to assure a culture of safety. BMJ
+Quality & Safety. 2002 Jun 1;1 1 (2):158-62.
+
+Alam AY. Steps in the process of risk management in healthcare. Journal of Epidemiology and
+Preventive Medicine. 2016;2(02):1-5
+
+Nutley SM, Davies HT, Mannion R. Organisational culture and quality of health care. Quality in Health
+Care. 2000:111-9
+
+Jondle, D., Maines, T. D., Burke, M. R., & Young, P. (2013). Modern risk management XE "risk
+management" through the lens of the ethical organizational culture. Risk Management, 15(1), 32-49.
+doi:10.1057/rm.2012.11
+
+Kaya GK, Ward JR, Clarkson PJ. A framework to support risk assessment in hospitals. International
+Journal for Quality in Health Care. 2019 Jun;31 (5):393
+
+Quality and Patient Safety Directorate. (n.d.). Quality and Patient Safety Clinical Governance
+Development: an assurance check for health service providers. [cited 2023 Dec 5]. Available from:
+https://www.hse.ie/eng/about/who/qid/governancequality/clinical-assurance-check.pdf
+
+Government of India. (n.d.). India Code: Home. Digital repository of all central and state acts. [cited 2023
+Dec 5]. Available from: https://services.india.gov.in/service/detail/india-code-digital-repository-of-all-
+central-and-state-acts
+
+Singh MM, Garg US. Laws applicable to medical practice and hospitals in India. International Journal of
+Research Foundation of Hospital and Healthcare Administration. 2014 Mar 1;1(1):19-24.
+
+fur Normung IO, editor. ISO 31000: 2018: Risk Management: Guidelines. ISO; 2018.
+

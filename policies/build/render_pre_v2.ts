@@ -10,11 +10,18 @@ import {
 } from "npm:docx";
 
 const REPO = new URL("../../", import.meta.url);
-const DRAFTS = new URL("policies/drafts/", REPO);
-const OUT = new URL(Deno.env.get("OUT_DIR") ?? "policies/build/preview/", REPO);
+const DRAFT_JSON = Deno.env.get("DRAFT_JSON") ?? "pre2_v2_draft.json";
+const isHcoDraft = DRAFT_JSON.startsWith("hco_");
+const DRAFTS = new URL(
+  Deno.env.get("DRAFTS_DIR") ?? (isHcoDraft ? "policies/drafts_hco/" : "policies/drafts/"),
+  REPO,
+);
+const OUT = new URL(
+  Deno.env.get("OUT_DIR") ?? (isHcoDraft ? "policies/build/preview_hco/" : "policies/build/preview/"),
+  REPO,
+);
 const OUT_SUFFIX = Deno.env.get("OUT_SUFFIX") ?? "_v2_preview";
 const HOSPITAL = Deno.env.get("HOSPITAL_PLACEHOLDER") ?? "Preview Hospital";
-const DRAFT_JSON = Deno.env.get("DRAFT_JSON") ?? "pre2_v2_draft.json";
 
 const sub = (t: string) => t.replaceAll("{{HOSPITAL_NAME}}", HOSPITAL);
 
@@ -74,8 +81,53 @@ function blocks(text: string): Paragraph[] {
   return out;
 }
 
+// Governance-section-only renderer. `d.responsibility` blocks are shaped as
+// "Role name\n- duty line\n- duty line", separated by blank lines. The
+// generic blocks() above bullets every line in a "- "-containing block,
+// including the role-name header line, so a reader sees a flat bullet list
+// with no way to tell a role from what it does. This renders the first
+// (non-"- ") line of each block as a bold, non-bulleted sub-heading and
+// only the following "- " lines as bullets. Deliberately not reused for any
+// other field — References/Distribution/Abbreviations etc. keep using the
+// generic blocks() unchanged.
+function responsibilityBlocks(text: string): Paragraph[] {
+  const normalized = text.replace(/\r\n/g, "\n").trim();
+  const out: Paragraph[] = [];
+  for (const block of normalized.split(/\n\n+/)) {
+    const trimmed = block.trim();
+    if (!trimmed) continue;
+    const lines = trimmed.split("\n").map((l) => l.trim()).filter(Boolean);
+    const dutyLines = lines.filter((l) => l.startsWith("- "));
+    const roleLines = lines.filter((l) => !l.startsWith("- "));
+    // Only treat this as a role/duty pair when the shape actually matches:
+    // exactly one role-name line followed by one or more "- " duty lines.
+    // Anything else (a block with no "- " line, or "- " lines mixed with
+    // more than one non-"- " line) falls back to the generic renderer so
+    // this never silently reshapes content it wasn't designed for.
+    if (roleLines.length === 1 && dutyLines.length >= 1) {
+      out.push(new Paragraph({
+        children: [new TextRun({ text: roleLines[0], bold: true, size: 22 })],
+        spacing: { before: 100, after: 20 },
+      }));
+      for (const line of dutyLines) {
+        out.push(new Paragraph({
+          children: [new TextRun({ text: line.replace(/^- /, ""), size: 22 })],
+          bullet: { level: 0 },
+          spacing: { after: 60 },
+        }));
+      }
+      continue;
+    }
+    out.push(...blocks(trimmed));
+  }
+  return out;
+}
+
 interface V2Draft {
   standard_code: string;
+  chapter?: string;
+  edition_label?: string;
+  render_basename?: string;
   policy_title: string;
   purpose: string;
   scope: string;
@@ -100,6 +152,15 @@ interface V2Draft {
   acknowledgement_note?: string;
   prepared_by?: string;
   control_extra_rows?: string[][];
+}
+
+/** Prefer draft.prepared_by; else parse resources_required; else neutral HCO default. */
+function resolvePreparedBy(d: V2Draft): string {
+  if (d.prepared_by && d.prepared_by.trim()) return d.prepared_by.trim();
+  const rr = d.resources_required ?? "";
+  const m = rr.match(/Prepared by \(designation\):\s*(«[^»]+»|[^\n]+?)(?:\s{2,}Name|\s*$)/);
+  if (m) return m[1].trim();
+  return "«Quality Coordinator»";
 }
 
 function sectionAfterWhatWeDo(hasStop: boolean): { n: number; title: string; key: string }[] {
@@ -128,7 +189,7 @@ function buildV2Document(d: V2Draft): Document {
     ["Document No.", docNo, "Version", d.version ?? "2.0"],
     ["Issue No.", "«01»", "Review due", "«one year from implementation»"],
     ["Date created", "«________»", "Date of implementation", "«________»"],
-    ["Prepared by", `${d.prepared_by ?? "«Patient Rights Officer»"}  Name «________»`, "Signature", "«________»"],
+    ["Prepared by", `${resolvePreparedBy(d)}  Name «________»`, "Signature", "«________»"],
     ["Reviewed by", "«Quality Coordinator»  Name «________»", "Signature", "«________»"],
     ["Approved by", "«Medical Superintendent»  Name «________»", "Signature", "«________»"],
     ...(d.control_extra_rows ?? []),
@@ -220,7 +281,7 @@ function buildV2Document(d: V2Draft): Document {
     h1("Document control"),
     new Paragraph({
       children: [new TextRun({
-        text: "« » marks an editable default a small hospital can adopt. «________» is a true blank and must be completed before issue. PRE v2 draft — not an approved master.",
+        text: "« » marks an editable default a small hospital can adopt. «________» is a true blank and must be completed before issue.",
         italics: true,
         size: 18,
       })],
@@ -261,7 +322,7 @@ function buildV2Document(d: V2Draft): Document {
     if (row.key === "stop") {
       children.push(h1(`${row.n}. ${row.title}`), ...blocks(sub(d.stop_work ?? "")));
     } else if (row.key === "gov") {
-      children.push(h1(`${row.n}. ${row.title}`), ...blocks(sub(d.responsibility)));
+      children.push(h1(`${row.n}. ${row.title}`), ...responsibilityBlocks(sub(d.responsibility)));
     } else if (row.key === "mon") {
       children.push(h1(`${row.n}. ${row.title}`), ...blocks(sub(d.monitoring_audit ?? "")));
     } else if (row.key === "train") {
@@ -294,7 +355,7 @@ function buildV2Document(d: V2Draft): Document {
   }
 
   children.push(
-    h1(`${nTrace}. Traceability to NABH SHCO 3rd Edition ${d.standard_code}`),
+    h1(`${nTrace}. Traceability to ${d.edition_label ?? "NABH SHCO 3rd Edition"} ${d.standard_code}`),
     new Paragraph({
       children: [new TextRun({
         text: "This table is an index. It is not how the policy is organised.",
@@ -356,7 +417,11 @@ function buildV2Document(d: V2Draft): Document {
 async function main() {
   await Deno.mkdir(OUT, { recursive: true });
   const d: V2Draft = JSON.parse(await Deno.readTextFile(new URL(DRAFT_JSON, DRAFTS)));
-  const outName = `${d.standard_code}${OUT_SUFFIX}.docx`;
+  const basename =
+    Deno.env.get("OUT_BASENAME") ??
+    d.render_basename ??
+    (d.chapter === "HCO" ? `HCO.${d.standard_code}` : d.standard_code);
+  const outName = `${basename}${OUT_SUFFIX}.docx`;
   const doc = buildV2Document(d);
   await Deno.writeFile(new URL(outName, OUT), await Packer.toBuffer(doc).then((b) => new Uint8Array(b)));
   const outRel = new URL(outName, OUT).pathname.replace(/^\/workspace\/?/, "");
