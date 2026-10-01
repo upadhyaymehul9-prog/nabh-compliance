@@ -3107,7 +3107,7 @@ function Dashboard({ decision, gaps, onNav, onExportPDF, pdfLoading }) {
   );
 }
 
-function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
+function ScoringScreen({ assessmentId, oes, standards, onRefresh, hospitalName }) {
   const [filter,setFilter]=useState("ALL"); const [chFilter,setChFilter]=useState("ALL");
   const [search,setSearch]=useState("");
   const [toast,setToast]=useState(null); const [saving,setSaving]=useState({});
@@ -3115,6 +3115,79 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
   const [localLinks,setLocalLinks]=useState({}); const [linkInputOpen,setLinkInputOpen]=useState({});
   const [linkUrl,setLinkUrl]=useState({}); const [linkLabel,setLinkLabel]=useState({}); const [linkBusy,setLinkBusy]=useState({});
   useEffect(()=>{const s={};const l={};oes.forEach(oe=>{s[oe.id]=oe.score||null;l[oe.id]=oe.evidenceLinks||[];});setLocalScores(s);setLocalLinks(l);},[oes]);
+
+  // HCO Full v2 Policy/SOP/Record documents — shared masters, load once.
+  const [hcoDocsByStandard,setHcoDocsByStandard]=useState({});
+  const [hcoDocDownloading,setHcoDocDownloading]=useState(null);
+  const [hcoDocToast,setHcoDocToast]=useState(null);
+  const [hcoOpenDropdown,setHcoOpenDropdown]=useState(null);
+  useEffect(()=>{
+    (async()=>{
+      let all=[];
+      let from=0;
+      const PAGE=1000;
+      while(true){
+        const {data,error}=await supabase.from("hco_documents")
+          .select("id, standard_code, document_type, record_index, title")
+          .range(from, from+PAGE-1);
+        if(error||!data)break;
+        all=all.concat(data);
+        if(data.length<PAGE)break;
+        from+=PAGE;
+      }
+      const data=all;
+      if(!data.length)return;
+      const byStd={};
+      data.forEach(d=>{
+        if(!byStd[d.standard_code])byStd[d.standard_code]={policy:null,sops:[],records:[]};
+        if(d.document_type==='policy')byStd[d.standard_code].policy=d;
+        else if(d.document_type==='sop')byStd[d.standard_code].sops.push(d);
+        else if(d.document_type==='record')byStd[d.standard_code].records.push(d);
+      });
+      Object.values(byStd).forEach(s=>{
+        s.sops.sort((a,b)=>(a.title||'').localeCompare(b.title||''));
+        s.records.sort((a,b)=>(a.record_index||0)-(b.record_index||0));
+      });
+      setHcoDocsByStandard(byStd);
+    })().catch(()=>{});
+  },[]);
+  const hcoDocToastFor=(t)=>{setHcoDocToast(t);setTimeout(()=>setHcoDocToast(null),4000);};
+  const downloadHcoDocument=async(doc)=>{
+    if(hcoDocDownloading)return;
+    const cleanHospital=(hospitalName||'Hospital').replace(/\s+(New|Trial|Active|Expired)$/i,'').trim();
+    setHcoDocDownloading(doc.id);
+    hcoDocToastFor({type:'PREPARING',sev:'HIGH',msg:`Personalising ${doc.standard_code} for ${cleanHospital}…`});
+    try{
+      const {data:{session}}=await supabase.auth.getSession();
+      if(!session)throw new Error('Your session has expired — sign in again to download documents.');
+      const res=await fetch(`${supabase.functionsUrl}/download-v2-hco-document`,{
+        method:'POST',
+        headers:{
+          'Content-Type':'application/json',
+          apikey: supabase.supabaseKey,
+          Authorization:`Bearer ${session.access_token}`,
+        },
+        body: JSON.stringify({ document_id: doc.id, hospital_name: cleanHospital }),
+      });
+      if(!res.ok){
+        let msg=`Download failed (HTTP ${res.status}).`;
+        try{const j=await res.json();if(j?.error)msg=j.error;}catch(_){}
+        throw new Error(msg);
+      }
+      const blob=await res.blob();
+      const url=URL.createObjectURL(blob);
+      const a=document.createElement('a');
+      a.href=url;
+      a.download=`${doc.standard_code}_${doc.document_type}_${cleanHospital.replace(/[^a-zA-Z0-9]/g,'_')}.docx`;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(()=>URL.revokeObjectURL(url),10000);
+      hcoDocToastFor({type:'DOWNLOADED',sev:'SUCCESS',msg:`${doc.standard_code} ${doc.document_type} saved, personalised for ${cleanHospital}.`});
+    }catch(e){
+      console.error('HCO v2 document download failed:',e);
+      hcoDocToastFor({type:'ERROR',sev:'CRITICAL',msg:e.message||'Could not download the document.'});
+    }
+    setHcoDocDownloading(null);
+  };
   const chapters=["ALL","AAC","COP","MOM","PRE","IPC","PSQ","ROM","FMS","HRM","IMS"];
   const levels=["ALL","CORE","Commitment","Achievement","Excellence"];
   const filtered=oes.filter(oe=>{const lm=filter==="ALL"||oe.level===filter;const cm=chFilter==="ALL"||oe.chapter===chFilter;const sm=!search||oe.id.toLowerCase().includes(search.toLowerCase())||(oe.text||"").toLowerCase().includes(search.toLowerCase());return lm&&cm&&sm;});
@@ -3189,6 +3262,14 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
         <div style={{fontSize:12,fontWeight:700,marginBottom:4,color:toast.sev==="CRITICAL"?T.red:toast.sev==="SUCCESS"?T.green:toast.sev==="HIGH"?T.orange:T.gold}}>{toast.sev==="CRITICAL"?"🚨":toast.sev==="SUCCESS"?"✅":toast.sev==="HIGH"?"⚠️":"📄"} {toast.type?.replace(/_/g," ")}</div>
         <div style={{fontSize:13,color:T.text,lineHeight:1.5}}>{toast.msg}</div>
       </div>}
+      {hcoDocToast&&<div style={{position:"fixed",top:150,right:16,zIndex:999,maxWidth:360,
+        background:hcoDocToast.sev==='CRITICAL'?T.redD:hcoDocToast.sev==='SUCCESS'?T.greenD:T.goldD,
+        border:`1px solid ${hcoDocToast.sev==='CRITICAL'?T.red:hcoDocToast.sev==='SUCCESS'?T.green:T.gold}50`,
+        borderRadius:10,padding:"12px 16px",boxShadow:"0 8px 32px rgba(0,0,0,0.5)"}}>
+        <div style={{fontSize:10,letterSpacing:1.5,fontWeight:700,marginBottom:3,
+          color:hcoDocToast.sev==='CRITICAL'?T.red:hcoDocToast.sev==='SUCCESS'?T.green:T.gold}}>{hcoDocToast.type}</div>
+        <div style={{fontSize:13,color:T.text,lineHeight:1.45}}>{hcoDocToast.msg}</div>
+      </div>}
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:10,padding:"12px 16px",marginBottom:12}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
           <div style={{fontSize:13,color:T.text}}>Scored: <strong style={{color:T.gold}}>{scored}</strong> / {oes.length} OEs</div>
@@ -3220,7 +3301,11 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
             if (!seen[sid]) { seen[sid] = []; groups.push({ id: sid, items: seen[sid] }); }
             seen[sid].push(oe);
           });
-          return groups.map(g => (
+          return groups.map(g => {
+            const stdCode = g.id.replace(/\.$/,"");
+            const hd = hcoDocsByStandard[stdCode] || {policy:null,sops:[],records:[]};
+            const hasDocs = hd.policy || hd.sops.length>0 || hd.records.length>0;
+            return (
             <div key={g.id}>
               {g.id !== "_unknown" && (
                 <div style={{
@@ -3232,11 +3317,79 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
                   marginTop: 14,
                   marginBottom: 6
                 }}>
-                  <div style={{ fontSize: 9, letterSpacing: 2, color: T.gold, marginBottom: 4 }}>
-                    STANDARD {g.id.replace(/\.$/,"")}
-                  </div>
-                  <div style={{ fontSize: 11, color: T.white, lineHeight: 1.5, fontWeight: 600 }}>
-                    {stdMap[g.id] || "Standard title not available"}
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:10}}>
+                    <div style={{flex:1}}>
+                      <div style={{ fontSize: 9, letterSpacing: 2, color: T.gold, marginBottom: 4 }}>
+                        STANDARD {stdCode}
+                      </div>
+                      <div style={{ fontSize: 11, color: T.white, lineHeight: 1.5, fontWeight: 600 }}>
+                        {stdMap[g.id] || "Standard title not available"}
+                      </div>
+                    </div>
+                    {hasDocs && (()=>{
+                      const btnStyle=(active)=>({marginLeft:4,padding:'3px 9px',borderRadius:6,
+                        border:`1px solid ${T.gold}40`,background:active?T.gold+'18':'transparent',color:T.gold,
+                        fontSize:10,fontWeight:700,whiteSpace:'nowrap',cursor:hcoDocDownloading?'default':'pointer',
+                        opacity:hcoDocDownloading&&hcoDocDownloading!==active?0.4:1});
+                      return (
+                        <div style={{flexShrink:0,display:'flex',flexWrap:'wrap',justifyContent:'flex-end',gap:4}}>
+                          {hd.policy && (
+                            <button onClick={()=>downloadHcoDocument(hd.policy)} disabled={!!hcoDocDownloading}
+                              title={`Download the ${stdCode} policy, personalised for your hospital`}
+                              style={btnStyle(hd.policy.id===hcoDocDownloading)}>
+                              {hcoDocDownloading===hd.policy.id?'⏳ Preparing…':'⬇ Policy'}
+                            </button>
+                          )}
+                          {hd.sops.length>0 && (
+                            <div style={{position:'relative'}}>
+                              <button onClick={()=>setHcoOpenDropdown(p=>p===`${stdCode}:sop`?null:`${stdCode}:sop`)}
+                                style={btnStyle(false)}>
+                                SOPs ({hd.sops.length}) {hcoOpenDropdown===`${stdCode}:sop`?'▲':'▼'}
+                              </button>
+                              {hcoOpenDropdown===`${stdCode}:sop` && (
+                                <div style={{position:'absolute',right:0,top:'100%',zIndex:20,marginTop:2,
+                                  background:T.panel,border:`1px solid ${T.border}`,borderRadius:8,
+                                  minWidth:220,maxWidth:320,boxShadow:'0 4px 14px rgba(0,0,0,0.25)',overflow:'hidden'}}>
+                                  {hd.sops.map(s=>(
+                                    <button key={s.id} onClick={()=>{downloadHcoDocument(s);setHcoOpenDropdown(null);}}
+                                      disabled={!!hcoDocDownloading}
+                                      style={{display:'block',width:'100%',textAlign:'left',padding:'7px 10px',
+                                        border:'none',borderBottom:`1px solid ${T.border}`,background:'transparent',
+                                        color:T.text,fontSize:11,cursor:'pointer'}}>
+                                      {hcoDocDownloading===s.id?'⏳ Preparing…':s.title}
+                                    </button>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          )}
+                          {hd.records.length>0 && (
+                            <div style={{position:'relative'}}>
+                              <button onClick={()=>setHcoOpenDropdown(p=>p===`${stdCode}:record`?null:`${stdCode}:record`)}
+                                style={btnStyle(false)}>
+                                Records ({hd.records.length}) {hcoOpenDropdown===`${stdCode}:record`?'▲':'▼'}
+                              </button>
+                              {hcoOpenDropdown===`${stdCode}:record` && (
+                                <div style={{position:'absolute',right:0,top:'100%',zIndex:20,marginTop:2,
+                                  background:T.panel,border:`1px solid ${T.border}`,borderRadius:8,
+                                  minWidth:220,maxWidth:320,maxHeight:260,overflowY:'auto',
+                                  boxShadow:'0 4px 14px rgba(0,0,0,0.25)'}}>
+                                  {hd.records.map(r=>(
+                                    <button key={r.id} onClick={()=>{downloadHcoDocument(r);setHcoOpenDropdown(null);}}
+                                      disabled={!!hcoDocDownloading}
+                                      style={{display:'block',width:'100%',textAlign:'left',padding:'7px 10px',
+                                        border:'none',borderBottom:`1px solid ${T.border}`,background:'transparent',
+                                        color:T.text,fontSize:11,cursor:'pointer'}}>
+                                      {hcoDocDownloading===r.id?'⏳ Preparing…':r.title}
+                                    </button>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })()}
                   </div>
                 </div>
               )}
@@ -3340,7 +3493,7 @@ function ScoringScreen({ assessmentId, oes, standards, onRefresh }) {
               })}
               </div>
             </div>
-          ));
+          );});
         })()}
         {filtered.length===0&&<div style={{textAlign:"center",color:T.muted,padding:"30px",fontSize:14}}>{search?"No OEs match your search. Try different keywords or clear filters.":"No OEs match this filter."}</div>}
       </div>
@@ -12549,7 +12702,7 @@ export default function App() {
 
       <div style={{maxWidth:1200,margin:"0 auto",padding:"16px"}}>
         {screen==="dashboard"&&<Dashboard decision={decision} gaps={gaps} onNav={id=>navigate({screen:id})} onExportPDF={generatePDF} pdfLoading={pdfLoading}/>}
-        {screen==="scoring"&&<ScoringScreen assessmentId={context?.assessmentId} oes={oes} standards={standards} onRefresh={()=>loadData(context)}/>}
+        {screen==="scoring"&&<ScoringScreen assessmentId={context?.assessmentId} oes={oes} standards={standards} onRefresh={()=>loadData(context)} hospitalName={context?.hospitalName}/>}
         {screen==="gaps"&&<GapFixScreen assessmentId={context?.assessmentId} gaps={gaps} onRefresh={()=>loadData(context)} onDownloadReport={generatePDF} pdfLoading={pdfLoading}/>}
         {screen==="checklist"&&<QuickChecklistTab T={T} programme="hco" hospitalId={context?.hospitalId} assessmentId={context?.assessmentId} hospitalName={context?.hospitalName} refData={QUICK_CHECKLIST_REF}/>}
         {screen==="committees"&&<CommitteesScreen hospitalId={context?.hospitalId} committeesView={committeesView} navigate={navigate} selectedProgramme={selectedProgramme}/>}
