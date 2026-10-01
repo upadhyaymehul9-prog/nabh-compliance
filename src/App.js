@@ -2300,7 +2300,7 @@ function UpgradeWall({ daysUsed, onSignOut }) {
         <div style={{fontSize:48,marginBottom:16}}>🔒</div>
         <div style={{fontSize:11,letterSpacing:3,color:"#c9a84c",marginBottom:8}}>ACCREDREADY</div>
         <div style={{fontSize:26,fontWeight:800,color:"#eef4f9",marginBottom:8}}>Your Free Trial Has Ended</div>
-        <div style={{fontSize:14,color:"#3a5870",marginBottom:28}}>Your 14-day free trial expired. Upgrade to continue accessing your NABH compliance data.</div>
+        <div style={{fontSize:14,color:"#3a5870",marginBottom:28}}>Your free trial expired. Upgrade to continue accessing your NABH compliance data.</div>
         <div style={{background:"#081525",border:"1px solid #c9a84c",borderRadius:14,padding:"24px 22px",marginBottom:20,textAlign:"center"}}>
           <div style={{fontSize:12,letterSpacing:2,color:"#c9a84c",fontWeight:700,marginBottom:8}}>ACCREDREADY</div>
           <div style={{display:"flex",alignItems:"baseline",justifyContent:"center",gap:4,marginBottom:4}}>
@@ -6193,7 +6193,7 @@ function PricingScreen() {
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"20px 24px",marginBottom:20,textAlign:"center"}}>
         <div style={{fontSize:11,letterSpacing:3,color:T.gold,marginBottom:6}}>PRICING</div>
         <div style={{fontSize:20,fontWeight:800,color:T.white,marginBottom:6}}>Simple, transparent pricing</div>
-        <div style={{fontSize:13,color:T.muted}}>14-day free trial · No credit card required · Pay via UPI</div>
+        <div style={{fontSize:13,color:T.muted}}>Special promotion — free for every hospital till Oct 31 · No credit card required · Pay via UPI</div>
       </div>
       <div style={{background:T.panel,border:`1px solid ${T.gold}`,borderRadius:14,padding:"28px 24px",marginBottom:20,textAlign:"center"}}>
         <div style={{fontSize:13,letterSpacing:2,color:T.gold,fontWeight:700,marginBottom:8}}>ACCREDREADY</div>

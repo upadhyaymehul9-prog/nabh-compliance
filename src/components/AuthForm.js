@@ -146,7 +146,7 @@ export default function AuthForm({ onLogin, initialError, variant = "page", onBa
       )}
       {!embedded && <div style={{ textAlign: "center", marginTop: 10, fontSize: 11, color: HP.subtle }}>Independent educational tool — Not affiliated with NABH/QCI</div>}
       <div style={{ textAlign: "center", marginTop: 10, paddingBottom: 4 }}>
-        <span style={{ fontSize: 12, color: HP.muted }}>14-day free trial · No credit card · </span>
+        <span style={{ fontSize: 12, color: HP.muted }}>Special promotion — free till Oct 31 · No credit card · </span>
         <button onClick={() => setShowPricing(true)} style={{ fontSize: 12, color: HP.brand, cursor: "pointer", fontWeight: 700, background: "none", border: "none", padding: 0, fontFamily: "inherit" }}>View Pricing →</button>
       </div>
       {showPricing && (
@@ -171,7 +171,7 @@ export default function AuthForm({ onLogin, initialError, variant = "page", onBa
               style={{ display: "block", padding: "13px", borderRadius: 10, background: HP.amber, color: HP.white, fontSize: 15, fontWeight: 800, textDecoration: "none", boxShadow: "0 4px 14px rgba(217,119,6,.35)", fontFamily: "Figtree,sans-serif" }}>
               Get Started — WhatsApp Us
             </a>
-            <div style={{ fontSize: 11, color: HP.subtle, marginTop: 12 }}>14-day free trial · Sign up to begin</div>
+            <div style={{ fontSize: 11, color: HP.subtle, marginTop: 12 }}>Special promotion — free till Oct 31 · Sign up to begin</div>
           </div>
         </div>
       )}
@@ -233,7 +233,7 @@ function TermsScreen({ onBack }) {
         ['1. Acceptance', 'By using AccredReady at accredready.in, you agree to these terms. If you disagree, do not use the platform.'],
         ['2. What AccredReady Is', 'AccredReady is an independent educational preparation tool for healthcare accreditation. It is not affiliated with, endorsed by, or officially connected to any accreditation body including any government authority.'],
         ['3. Your Account', 'You are responsible for keeping your login credentials secure. You agree to provide accurate information. We may suspend accounts that violate these terms.'],
-        ['4. Subscription & Payment', 'Plan: ₹499/month per hospital, all features included. 14-day free trial for new users — no payment required. Payment via UPI or bank transfer. Cancel anytime by emailing upadhyay.mehul9@gmail.com. No refunds for partial months used.'],
+        ['4. Subscription & Payment', 'Plan: ₹499/month per hospital, all features included. Special promotion: free for every hospital through October 31, 2026 — no payment required during this period. From November 1, 2026, standard pricing applies. In the document library, AAC chapter documents are always free; other chapters require a paid plan. Payment via UPI or bank transfer. Cancel anytime by emailing upadhyay.mehul9@gmail.com. No refunds for partial months used.'],
         ['5. Acceptable Use', 'You agree not to share your account, attempt to access other users data, copy or reproduce platform content, or use the platform for any unlawful purpose.'],
         ['6. Intellectual Property', 'All content, design, and code is owned by AccredReady. No reproduction without written permission.'],
         ['7. Disclaimer', 'AccredReady does not guarantee accreditation outcomes. All accreditation decisions rest with the relevant accreditation body. Always verify content against official published standards.'],

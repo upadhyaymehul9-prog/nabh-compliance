@@ -828,6 +828,7 @@ export default function HomepageScreen({ onLogin }) {
             <span className="eyebrow"><i className="ti ti-tag" aria-hidden="true"></i> Pricing</span>
             <h2>A consultant costs lakhs. <span className="amber">AccredReady costs ₹499.</span></h2>
             <p>Same readiness work — gap analysis, documentation, corrective actions — at a fraction of the price.</p>
+            <p style={{marginTop:10,fontWeight:700,color:"#b45309"}}>Special promotion: free for every hospital through October 31, 2026 — no payment required this month.</p>
           </div>
           <div className="pricing-card">
             <div className="pricing-left">
@@ -842,7 +843,7 @@ export default function HomepageScreen({ onLogin }) {
                 <button className="btn btn-amber btn-lg" onClick={()=>goToAuth("signup")}>
                   <i className="ti ti-rocket" aria-hidden="true"></i> Start Free
                 </button>
-                <p className="pricing-disclaimer">No credit card required. Email-only signup. Cancel anytime.</p>
+                <p className="pricing-disclaimer">Free through Oct 31, 2026 (special promotion) · No credit card required · Email-only signup · Cancel anytime.</p>
               </div>
             </div>
             <div className="pricing-right">
