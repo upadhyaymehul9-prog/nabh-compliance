@@ -6098,10 +6098,11 @@ function ChecklistsScreen({ hospitalId }) {
 }
 
 // ── PRICING ──────────────────────────────────────────
-function PricingScreen({ user }) {
+function PricingScreen({ user, isPaid, accessUntil }) {
   const [subBusy, setSubBusy] = useState(false);
   const [subError, setSubError] = useState(null);
   const features=["Full NABH compliance tracking","Unlimited OE scoring","KPI tracking and audit management","Committee calendar and mock drills","PDF gap reports","No setup fee. Cancel anytime."];
+  const renewalDate = accessUntil && !isNaN(accessUntil.getTime?.()) ? accessUntil.toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'}) : null;
   return (
     <div style={{maxWidth:520,margin:"0 auto",padding:16}}>
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"20px 24px",marginBottom:20,textAlign:"center"}}>
@@ -6124,15 +6125,23 @@ function PricingScreen({ user }) {
             </div>
           ))}
         </div>
-        {subError && <div style={{color:T.red||"#ff6b6b",fontSize:12,marginBottom:10}}>{subError}</div>}
-        <button onClick={()=>startRazorpaySubscription({userName:user?.user_metadata?.name,userEmail:user?.email,setBusy:setSubBusy,setError:setSubError})} disabled={subBusy}
-          style={{display:"block",width:"100%",padding:"14px",borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,color:T.bg,fontSize:15,fontWeight:800,border:"none",cursor:subBusy?"wait":"pointer",marginBottom:12,boxShadow:`0 4px 20px ${T.gold}40`,opacity:subBusy?0.7:1}}>
-          {subBusy?"Starting…":"💳 Subscribe Now — UPI/Card"}
-        </button>
-        <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20want%20to%20subscribe%20to%20AccredReady%20for%20Rs.%20499%2Fmonth" target="_blank" rel="noopener noreferrer"
-          style={{display:"block",padding:"14px",borderRadius:10,background:"transparent",border:`1px solid ${T.gold}`,color:T.gold,fontSize:14,fontWeight:700,textDecoration:"none"}}>
-          💬 Or Get Started via WhatsApp
-        </a>
+        {isPaid ? (
+          <div style={{display:"block",padding:"14px",borderRadius:10,background:T.panel2||"rgba(255,255,255,.05)",border:`1px solid ${T.green||"#2ecc71"}`,color:T.green||"#2ecc71",fontSize:15,fontWeight:800}}>
+            ✓ You're subscribed{renewalDate?` — renews ${renewalDate}`:""}
+          </div>
+        ) : (
+          <>
+            {subError && <div style={{color:T.red||"#ff6b6b",fontSize:12,marginBottom:10}}>{subError}</div>}
+            <button onClick={()=>startRazorpaySubscription({userName:user?.user_metadata?.name,userEmail:user?.email,setBusy:setSubBusy,setError:setSubError})} disabled={subBusy}
+              style={{display:"block",width:"100%",padding:"14px",borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,color:T.bg,fontSize:15,fontWeight:800,border:"none",cursor:subBusy?"wait":"pointer",marginBottom:12,boxShadow:`0 4px 20px ${T.gold}40`,opacity:subBusy?0.7:1}}>
+              {subBusy?"Starting…":"💳 Subscribe Now — UPI/Card"}
+            </button>
+            <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20want%20to%20subscribe%20to%20AccredReady%20for%20Rs.%20499%2Fmonth" target="_blank" rel="noopener noreferrer"
+              style={{display:"block",padding:"14px",borderRadius:10,background:"transparent",border:`1px solid ${T.gold}`,color:T.gold,fontSize:14,fontWeight:700,textDecoration:"none"}}>
+              💬 Or Get Started via WhatsApp
+            </a>
+          </>
+        )}
       </div>
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"16px 20px",textAlign:"center"}}>
         <div style={{fontSize:12,color:T.muted,marginBottom:6}}>Questions? We respond within 2 hours on WhatsApp</div>
@@ -12632,7 +12641,7 @@ export default function App() {
         {screen==="drills"&&<MockDrillsScreen hospitalId={context?.hospitalId} drillsView={drillsView} selectedDrill={selectedDrill} navigate={navigate} goBack={goBack} setDrillsView={setDrillsView} setSelectedDrill={setSelectedDrill}/>}
         {screen==="licenses"&&<StatutoryLicensesScreen hospitalId={context?.hospitalId} showAdd={showLicenseAdd} navigate={navigate} setShowAdd={setShowLicenseAdd}/>}
         {screen==="tracer"&&<PatientTracerScreen hospitalId={context?.hospitalId} tracerView={tracerView} tracerType={tracerType} navigate={navigate} goBack={goBack} setTracerView={setTracerView} setTracerType={setTracerType}/>}
-        {screen==="pricing"&&<PricingScreen user={user}/>}
+        {screen==="pricing"&&<PricingScreen user={user} isPaid={isPaid} accessUntil={accessUntil}/>}
         {screen==="profile"&&<ProfileScreen user={user} context={context} onContextUpdate={setContext}/>}
         {screen==="shco"&&renderSHCOTab()}
         {screen==="shco-full"&&renderSHCOFullTab()}

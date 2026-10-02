@@ -67,12 +67,18 @@ Deno.serve(async (req: Request) => {
 
     const { data: hospital, error: hospErr } = await supabase
       .from("hospitals")
-      .select("id, name")
+      .select("id, name, plan, access_until")
       .eq("id", profile.hospital_id)
       .maybeSingle();
     if (hospErr) throw new Error(`Hospital lookup: ${hospErr.message}`);
     if (!hospital) {
       return Response.json({ error: "Hospital not found." }, { status: 404, headers: CORS });
+    }
+
+    // Already an active paying subscriber — refuse rather than spin up a
+    // second, orphaned Razorpay subscription object alongside the real one.
+    if (hospital.plan === "paid" && hospital.access_until && new Date(hospital.access_until) > new Date()) {
+      return Response.json({ error: "This hospital already has an active subscription." }, { status: 409, headers: CORS });
     }
 
     // Create the subscription with Razorpay. notes.hospital_id is how the
