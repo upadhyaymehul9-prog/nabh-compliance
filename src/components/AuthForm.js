@@ -51,7 +51,7 @@ export default function AuthForm({ onLogin, initialError, variant = "page", onBa
     setError(""); setLoading(true);
     const { error: err } = await supabase.auth.signInWithOAuth({
       provider: "google",
-      options: { redirectTo: "https://accredready.in" }
+      options: { redirectTo: window.location.origin }
     });
     if (err) { setError(err.message); setLoading(false); }
   };
