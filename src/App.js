@@ -12663,6 +12663,15 @@ export default function App() {
             <div style={{fontSize:14,fontWeight:700,color:"#ffffff",whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis"}}>{context?.hospitalName||"AccredReady"}{context?.assessmentName&&<span style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted,marginLeft:6}}>{context.assessmentName}</span>}</div>
           </div>
           {loading&&<div style={{fontSize:11,color:theme==='light'?"rgba(255,255,255,0.7)":T.muted,flexShrink:0}}>Refreshing…</div>}
+          {isPaid ? (
+            <div title={accessUntil?`Renews ${accessUntil.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'})}`:undefined} style={{flexShrink:0,padding:"5px 10px",borderRadius:7,fontSize:11,fontWeight:700,display:"inline-flex",alignItems:"center",gap:5,background:theme==='light'?"rgba(255,255,255,0.15)":"rgba(46,204,113,.12)",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.4)":"#2ecc71"}`,color:theme==='light'?"#ffffff":"#2ecc71"}}>
+              ✓ Subscribed
+            </div>
+          ) : !isFree && (
+            <button onClick={()=>navigate({screen:"pricing"})} style={{flexShrink:0,padding:"5px 10px",borderRadius:7,fontSize:11,fontWeight:700,cursor:"pointer",background:"transparent",border:`1px solid ${theme==='light'?"rgba(255,255,255,0.5)":T.gold}`,color:theme==='light'?"#ffffff":T.gold}}>
+              💳 Subscribe Now
+            </button>
+          )}
           {primaryItem&&(
             <button id={primaryItem.id==="scoring"?"tour-target-score":undefined} onClick={()=>navigate({screen:primaryItem.id})} style={{flexShrink:0,padding:"7px 14px",borderRadius:8,border:"none",cursor:"pointer",display:"inline-flex",alignItems:"center",gap:6,fontSize:13,fontWeight:700,background:theme==='light'?"#ffffff":`linear-gradient(135deg,${T.gold},#f0d070)`,color:theme==='light'?"#1565c0":T.bg}}>
               <NavIcon icon={primaryItem.icon}/> {primaryItem.label}
