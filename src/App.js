@@ -2353,7 +2353,7 @@ async function startRazorpaySubscription({ userName, userEmail, setBusy, setErro
 function UpgradeWall({ daysUsed, onSignOut, user }) {
   const [subBusy, setSubBusy] = useState(false);
   const [subError, setSubError] = useState(null);
-  const features=["Full NABH compliance tracking","Unlimited OE scoring","KPI tracking and audit management","Committee calendar and mock drills","PDF gap reports","No setup fee. Cancel anytime."];
+  const features=["Full NABH compliance tracking","Unlimited OE scoring","KPI tracking and audit management","Committee calendar and mock drills","PDF gap reports","Policy, SOPs & Records document downloads","No setup fee. Cancel anytime."];
   return (
     <div style={{minHeight:"100vh",background:"#050e1a",display:"flex",alignItems:"center",justifyContent:"center",padding:20,fontFamily:"Segoe UI,system-ui,sans-serif"}}>
       <div style={{maxWidth:440,width:"100%",textAlign:"center"}}>
@@ -6101,7 +6101,7 @@ function ChecklistsScreen({ hospitalId }) {
 function PricingScreen({ user, isPaid, accessUntil }) {
   const [subBusy, setSubBusy] = useState(false);
   const [subError, setSubError] = useState(null);
-  const features=["Full NABH compliance tracking","Unlimited OE scoring","KPI tracking and audit management","Committee calendar and mock drills","PDF gap reports","No setup fee. Cancel anytime."];
+  const features=["Full NABH compliance tracking","Unlimited OE scoring","KPI tracking and audit management","Committee calendar and mock drills","PDF gap reports","Policy, SOPs & Records document downloads","No setup fee. Cancel anytime."];
   const renewalDate = accessUntil && !isNaN(accessUntil.getTime?.()) ? accessUntil.toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'}) : null;
   return (
     <div style={{maxWidth:520,margin:"0 auto",padding:16}}>
