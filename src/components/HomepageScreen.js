@@ -467,7 +467,7 @@ export default function HomepageScreen({ onLogin }) {
         onClick={() => document.querySelector('.mktech')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
         role="button" tabIndex={0} aria-label="View free tools">
         <div className="hp-ticker-inner">
-          &nbsp;&nbsp;&nbsp;🎉 New: Try our free Revenue Leakage Self-Audit and Marketing &amp; Brand Health Check — no login needed →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🎉 New: Try our free Revenue Leakage Self-Audit and Marketing &amp; Brand Health Check — no login needed →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;📄 New: Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 New: Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
       </div>
 
@@ -676,7 +676,7 @@ export default function HomepageScreen({ onLogin }) {
             <div className="bcard">
               <div className="ic" aria-hidden="true"><i className="ti ti-file-text"></i></div>
               <h3>Ready-to-use policy documents <span className="badge-live">Live</span></h3>
-              <p>Download complete, ready-to-use master policies personalised with your hospital's name. AAC chapter documents are free for every hospital; other chapters are included with a paid plan.</p>
+              <p>Open any standard in the objective element scoring section and download its Policy, SOPs, or Records — ready-to-use documents personalised with your hospital's name.</p>
             </div>
             <div className="bcard">
               <div className="ic" aria-hidden="true"><i className="ti ti-file-download"></i></div>
