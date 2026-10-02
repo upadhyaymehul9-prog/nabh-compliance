@@ -674,6 +674,11 @@ export default function HomepageScreen({ onLogin }) {
           </div>
           <div className="bgrid">
             <div className="bcard">
+              <div className="ic" aria-hidden="true"><i className="ti ti-file-text"></i></div>
+              <h3>Ready-to-use policy documents <span className="badge-live">Live</span></h3>
+              <p>Download complete, ready-to-use master policies personalised with your hospital's name. AAC chapter documents are free for every hospital; other chapters are included with a paid plan.</p>
+            </div>
+            <div className="bcard">
               <div className="ic" aria-hidden="true"><i className="ti ti-file-download"></i></div>
               <h3>PDF gap &amp; CAPA reports <span className="badge-live">Live</span></h3>
               <p>Generate a clean, survey-ready PDF after gap analysis and CAPA — overall compliance, chapter-wise scores, ranked gaps, the lot.</p>
