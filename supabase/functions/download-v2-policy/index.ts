@@ -1,15 +1,26 @@
-// v2 policy delivery — fetch pre-rendered master .docx from Storage,
+// v2 policy delivery (SHCO) — fetch pre-rendered master .docx from Storage,
 // replace «Hospital Name» with the hospital's name, stream back.
 // Does not call AI. Does not rebuild from database fields.
 // v1 generate-hospital-policy and database-rendered masters are untouched.
 //
 // Input: { standard_code: "FMS.4", hospital_name: "HMP Foundation" }
 //    or: { standard_code: "FMS.4", hospital_id: "<uuid>" }  (name looked up)
+//
+// PAYWALL: AAC-chapter documents are free for every signed-in hospital.
+// Every other chapter requires hospitals.plan = 'paid'. The plan check is
+// derived server-side from the caller's own JWT (profiles -> hospital_id),
+// never from a client-supplied hospital_id/hospital_name — those remain
+// for display/personalisation only and cannot be used to bypass the gate.
+//
+// TRACKING: every successful download is logged to document_downloads
+// (programme='shco') so we can see real usage. Logging failures never
+// block the download itself; they're just console.error'd.
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { personalizeDocx } from "../_shared/personalize-docx.ts";
 
 const BUCKET = "policy-masters-v2";
+const FREE_CHAPTER = "AAC";
 
 const PROD_ORIGIN = "https://accredready.in";
 const ALLOWED_ORIGINS = [
@@ -73,6 +84,72 @@ Deno.serve(async (req: Request) => {
       );
     }
 
+    // ── Paywall ───────────────────────────────────────────────────────────
+    const chapter = standard_code.split(".")[0];
+    let callerHospitalId: string | null = null;
+    if (chapter !== FREE_CHAPTER) {
+      const authHeader = req.headers.get("Authorization");
+      const jwt = authHeader?.replace(/^Bearer\s+/i, "");
+      if (!jwt) {
+        return Response.json(
+          { error: "Sign in required to download this document." },
+          { status: 401, headers: CORS },
+        );
+      }
+
+      const { data: userData, error: userErr } = await supabase.auth.getUser(jwt);
+      if (userErr || !userData?.user) {
+        return Response.json(
+          { error: "Your session has expired — sign in again." },
+          { status: 401, headers: CORS },
+        );
+      }
+
+      const { data: profile, error: profileErr } = await supabase
+        .from("profiles")
+        .select("hospital_id")
+        .eq("id", userData.user.id)
+        .maybeSingle();
+      if (profileErr) throw new Error(`Profile lookup: ${profileErr.message}`);
+
+      let planOk = false;
+      if (profile?.hospital_id) {
+        callerHospitalId = profile.hospital_id;
+        const { data: hospRow, error: hospPlanErr } = await supabase
+          .from("hospitals")
+          .select("plan")
+          .eq("id", profile.hospital_id)
+          .maybeSingle();
+        if (hospPlanErr) throw new Error(`Plan lookup: ${hospPlanErr.message}`);
+        planOk = hospRow?.plan === "paid";
+      }
+
+      if (!planOk) {
+        return Response.json(
+          {
+            error: `${chapter} documents need a paid plan. ${FREE_CHAPTER} chapter documents are free to try — upgrade to unlock the rest.`,
+            upgrade_required: true,
+          },
+          { status: 402, headers: CORS },
+        );
+      }
+    } else {
+      const authHeader = req.headers.get("Authorization");
+      const jwt = authHeader?.replace(/^Bearer\s+/i, "");
+      if (jwt) {
+        const { data: userData } = await supabase.auth.getUser(jwt);
+        if (userData?.user) {
+          const { data: profile } = await supabase
+            .from("profiles")
+            .select("hospital_id")
+            .eq("id", userData.user.id)
+            .maybeSingle();
+          callerHospitalId = profile?.hospital_id ?? null;
+        }
+      }
+    }
+    // ─────────────────────────────────────────────────────────────────────
+
     const { data: masterRows, error: masterErr } = await supabase
       .from("shco_policy_masters")
       .select("standard_code, policy_title, master_docx_path")
@@ -112,6 +189,20 @@ Deno.serve(async (req: Request) => {
         { error: `Master ${standard_code} had no «Hospital Name» placeholder — refusing to serve an unpersonalised document.` },
         { status: 500, headers: CORS },
       );
+    }
+
+    // Log the download — best-effort, never blocks or fails the response.
+    try {
+      await supabase.from("document_downloads").insert({
+        hospital_id: callerHospitalId,
+        hospital_name,
+        programme: "shco",
+        standard_code,
+        document_type: "policy",
+        document_id: null,
+      });
+    } catch (logErr) {
+      console.error("document_downloads insert failed:", logErr);
     }
 
     const safeTitle = String(master.policy_title ?? standard_code)
