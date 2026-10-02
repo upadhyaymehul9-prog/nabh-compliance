@@ -152,6 +152,7 @@ export default function AuthForm({ onLogin, initialError, variant = "page", onBa
       {showPricing && (
         <div onClick={() => setShowPricing(false)} style={{ position: "fixed", inset: 0, zIndex: 2000, background: "rgba(6,30,20,.55)", display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}>
           <div onClick={e => e.stopPropagation()} style={{ background: HP.white, border: HP.boxBorder, borderRadius: 16, padding: "28px 24px", maxWidth: 400, width: "100%", textAlign: "center", position: "relative", boxShadow: "0 20px 50px rgba(0,0,0,.2)" }}>
+            <span onClick={() => { setShowPricing(false); setMode("signup"); setError(""); setMsg(""); }} style={{ position: "absolute", top: 14, right: 40, color: HP.brand, fontSize: 12, fontWeight: 700, cursor: "pointer" }}>Subscribe →</span>
             <button onClick={() => setShowPricing(false)} style={{ position: "absolute", top: 12, right: 14, background: "none", border: "none", color: HP.subtle, fontSize: 18, cursor: "pointer", lineHeight: 1 }}>✕</button>
             <div style={{ fontSize: 11, letterSpacing: 3, color: HP.brand, marginBottom: 8, fontWeight: 700 }}>ACCREDREADY</div>
             <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 4, marginBottom: 4 }}>
@@ -160,7 +161,7 @@ export default function AuthForm({ onLogin, initialError, variant = "page", onBa
             </div>
             <div style={{ fontSize: 12, color: HP.muted, marginBottom: 20 }}>Per hospital · All features included</div>
             <div style={{ textAlign: "left", marginBottom: 22 }}>
-              {["Full NABH compliance tracking", "Unlimited OE scoring", "KPI tracking and audit management", "Committee calendar and mock drills", "PDF gap reports", "No setup fee. Cancel anytime."].map((f, i) => (
+              {["Full NABH compliance tracking", "Unlimited OE scoring", "KPI tracking and audit management", "Committee calendar and mock drills", "PDF gap reports", "Policy, SOPs & Records document downloads", "No setup fee. Cancel anytime."].map((f, i) => (
                 <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 9 }}>
                   <span style={{ color: HP.brand, flexShrink: 0, fontWeight: 700 }}>✓</span>
                   <span style={{ fontSize: 13, color: HP.muted, lineHeight: 1.5 }}>{f}</span>

@@ -859,6 +859,7 @@ export default function HomepageScreen({ onLogin }) {
                 <li><i className="ti ti-check" aria-hidden="true"></i> Committees, KPIs, audits, checklists &amp; drills</li>
                 <li><i className="ti ti-check" aria-hidden="true"></i> CAPA workflow with evidence links</li>
                 <li><i className="ti ti-check" aria-hidden="true"></i> PDF gap &amp; CAPA reports</li>
+                <li><i className="ti ti-check" aria-hidden="true"></i> Policy, SOPs &amp; Records document downloads</li>
                 <li><i className="ti ti-check" aria-hidden="true"></i> Full-year scheduling calendar</li>
                 <li><i className="ti ti-check" aria-hidden="true"></i> AI assistant grounded in the standards</li>
               </ul>
