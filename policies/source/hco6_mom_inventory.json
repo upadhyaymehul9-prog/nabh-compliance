@@ -1,0 +1,555 @@
+{
+  "1": {
+    "standard_code": "MOM.1",
+    "title": "Pharmacy services and medication management is done safely.",
+    "oes": [
+      {
+        "oe_code": "MOM.1.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Pharmacy services and medication management are implemented following written guidance."
+      },
+      {
+        "oe_code": "MOM.1.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "A multi-disciplinary committee guides the formulation and implementation of pharmacy services and medication management."
+      },
+      {
+        "oe_code": "MOM.1.c",
+        "letter": "c",
+        "level": "Achievement",
+        "star": false,
+        "text": "The multi-disciplinary committee updates medication management processes."
+      },
+      {
+        "oe_code": "MOM.1.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": true,
+        "text": "There is a procedure to obtain medications when the pharmacy is closed or in case of stock outs."
+      },
+      {
+        "oe_code": "MOM.1.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation has a mechanism to inform relevant staff of key changes in pharmacy services and medication management to ensure uninterrupted and safe care."
+      }
+    ],
+    "count": 5
+  },
+  "2": {
+    "standard_code": "MOM.2",
+    "title": "The organisation develops, updates and implements a hospital formulary.",
+    "oes": [
+      {
+        "oe_code": "MOM.2.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": false,
+        "text": "A list of medications appropriate for the patients and as per the scope of the organisation's clinical services is developed collaboratively by the multi-disciplinary committee."
+      },
+      {
+        "oe_code": "MOM.2.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "The list is reviewed and updated collaboratively by the multi-disciplinary committee at least annually."
+      },
+      {
+        "oe_code": "MOM.2.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The current formulary is available for clinicians to refer to."
+      },
+      {
+        "oe_code": "MOM.2.d",
+        "letter": "d",
+        "level": "Achievement",
+        "star": false,
+        "text": "The clinicians adhere to the current formulary."
+      },
+      {
+        "oe_code": "MOM.2.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation adheres to the procedure for the acquisition of formulary medications."
+      },
+      {
+        "oe_code": "MOM.2.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation adheres to the procedure to obtain medications not listed in the formulary."
+      }
+    ],
+    "count": 6
+  },
+  "3": {
+    "standard_code": "MOM.3",
+    "title": "Medications are stored appropriately and are available where required.",
+    "oes": [
+      {
+        "oe_code": "MOM.3.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": false,
+        "text": "Medications are stored in a clean, safe and secure environment while incorporating the manufacturer's recommendation(s)."
+      },
+      {
+        "oe_code": "MOM.3.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Sound inventory control practices guide the storage of medications throughout the organisation."
+      },
+      {
+        "oe_code": "MOM.3.c",
+        "letter": "c",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation defines and updates its list of high-risk medication(s)."
+      },
+      {
+        "oe_code": "MOM.3.d",
+        "letter": "d",
+        "level": "Achievement",
+        "star": false,
+        "text": "High-risk medications are stored in areas of the organisation where it is clinically necessary."
+      },
+      {
+        "oe_code": "MOM.3.e",
+        "letter": "e",
+        "level": "CORE",
+        "star": true,
+        "text": "High-risk medications including look-alike, sound-alike medications and different concentrations of the same medication are stored physically apart from each other."
+      },
+      {
+        "oe_code": "MOM.3.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": true,
+        "text": "The list of emergency medications is defined and is stored uniformly."
+      },
+      {
+        "oe_code": "MOM.3.g",
+        "letter": "g",
+        "level": "CORE",
+        "star": false,
+        "text": "Emergency medications are available all the time and are replenished promptly when used."
+      }
+    ],
+    "count": 7
+  },
+  "4": {
+    "standard_code": "MOM.4",
+    "title": "Medications are prescribed safely and rationally.",
+    "oes": [
+      {
+        "oe_code": "MOM.4.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Medication prescription is in consonance with good practices / guidelines for rational prescription of medications."
+      },
+      {
+        "oe_code": "MOM.4.b",
+        "letter": "b",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation adheres to the determined minimum requirements of a prescription."
+      },
+      {
+        "oe_code": "MOM.4.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Drug allergies and previous adverse drug reactions are ascertained before prescribing."
+      },
+      {
+        "oe_code": "MOM.4.d",
+        "letter": "d",
+        "level": "Excellence",
+        "star": false,
+        "text": "The organisation has a mechanism to assist the clinician in prescribing appropriate medication."
+      },
+      {
+        "oe_code": "MOM.4.e",
+        "letter": "e",
+        "level": "CORE",
+        "star": false,
+        "text": "Reconciliation of medications occurs at transition points of patient care."
+      },
+      {
+        "oe_code": "MOM.4.f",
+        "letter": "f",
+        "level": "CORE",
+        "star": true,
+        "text": "Verbal orders are implemented by ensuring safe medication management practices."
+      },
+      {
+        "oe_code": "MOM.4.g",
+        "letter": "g",
+        "level": "Achievement",
+        "star": false,
+        "text": "Audit of medication orders / prescription is carried out to check for safe and rational prescription of medications."
+      },
+      {
+        "oe_code": "MOM.4.h",
+        "letter": "h",
+        "level": "Achievement",
+        "star": false,
+        "text": "Corrective and / or preventive action(s) is taken based on the audit, where appropriate."
+      }
+    ],
+    "count": 8
+  },
+  "5": {
+    "standard_code": "MOM.5",
+    "title": "Medications orders are written in a uniform manner.",
+    "oes": [
+      {
+        "oe_code": "MOM.5.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation ensures that only authorised personnel write orders."
+      },
+      {
+        "oe_code": "MOM.5.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Medication orders are written in a uniform location in the medical records, which also include the patient's name and unique identification number."
+      },
+      {
+        "oe_code": "MOM.5.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Medication orders are legible, dated, timed and signed."
+      },
+      {
+        "oe_code": "MOM.5.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Medication orders contain the name of the medicine, route of administration, strength to be administered and frequency / time of administration."
+      }
+    ],
+    "count": 4
+  },
+  "6": {
+    "standard_code": "MOM.6",
+    "title": "Medications are dispensed in a safe manner.",
+    "oes": [
+      {
+        "oe_code": "MOM.6.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Dispensing of medications is done safely."
+      },
+      {
+        "oe_code": "MOM.6.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "Medication recalls are handled effectively."
+      },
+      {
+        "oe_code": "MOM.6.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": true,
+        "text": "Near-expiry medications are handled effectively."
+      },
+      {
+        "oe_code": "MOM.6.d",
+        "letter": "d",
+        "level": "CORE",
+        "star": true,
+        "text": "Dispensed medications are labelled."
+      },
+      {
+        "oe_code": "MOM.6.e",
+        "letter": "e",
+        "level": "CORE",
+        "star": false,
+        "text": "High-risk medication orders are verified before dispensing."
+      },
+      {
+        "oe_code": "MOM.6.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": true,
+        "text": "Return of medications to the pharmacy is addressed."
+      }
+    ],
+    "count": 6
+  },
+  "7": {
+    "standard_code": "MOM.7",
+    "title": "Medications are administered safely.",
+    "oes": [
+      {
+        "oe_code": "MOM.7.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "Medications are administered by those who are permitted by law to do so."
+      },
+      {
+        "oe_code": "MOM.7.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Prepared medication is labelled before preparation of a second drug."
+      },
+      {
+        "oe_code": "MOM.7.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The patient is identified before administration."
+      },
+      {
+        "oe_code": "MOM.7.d",
+        "letter": "d",
+        "level": "CORE",
+        "star": false,
+        "text": "Medication is verified from the medication order and physically inspected before administration."
+      },
+      {
+        "oe_code": "MOM.7.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Strength is verified from the order before administration."
+      },
+      {
+        "oe_code": "MOM.7.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "The route is verified from the order before administration."
+      },
+      {
+        "oe_code": "MOM.7.g",
+        "letter": "g",
+        "level": "Commitment",
+        "star": false,
+        "text": "Timing is verified from the order before administration."
+      },
+      {
+        "oe_code": "MOM.7.h",
+        "letter": "h",
+        "level": "CORE",
+        "star": true,
+        "text": "Measures to avoid catheter and tubing mis-connections during medication administration are implemented."
+      },
+      {
+        "oe_code": "MOM.7.i",
+        "letter": "i",
+        "level": "Commitment",
+        "star": false,
+        "text": "Medication administration is documented."
+      },
+      {
+        "oe_code": "MOM.7.j",
+        "letter": "j",
+        "level": "Commitment",
+        "star": true,
+        "text": "Measures to govern patient's self-administration of medications are implemented."
+      },
+      {
+        "oe_code": "MOM.7.k",
+        "letter": "k",
+        "level": "Commitment",
+        "star": true,
+        "text": "Measures to govern patient's medications brought from outside the organisation shall be implemented."
+      }
+    ],
+    "count": 11
+  },
+  "8": {
+    "standard_code": "MOM.8",
+    "title": "Patients are monitored after medication administration.",
+    "oes": [
+      {
+        "oe_code": "MOM.8.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Patients shall be monitored after medication administration."
+      },
+      {
+        "oe_code": "MOM.8.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Medications shall be changed based on the monitoring where appropriate."
+      },
+      {
+        "oe_code": "MOM.8.c",
+        "letter": "c",
+        "level": "CORE",
+        "star": true,
+        "text": "The organisation shall capture near misses, medication errors and adverse drug reactions."
+      },
+      {
+        "oe_code": "MOM.8.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": true,
+        "text": "Near misses, medication errors and adverse drug reactions shall be reported within a specified time frame."
+      },
+      {
+        "oe_code": "MOM.8.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Near misses, medication errors and adverse drug reactions are collected and analysed."
+      },
+      {
+        "oe_code": "MOM.8.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": false,
+        "text": "Corrective and / or preventive action(s) are taken based on the analysis."
+      }
+    ],
+    "count": 6
+  },
+  "9": {
+    "standard_code": "MOM.9",
+    "title": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are used in a safe manner.",
+    "oes": [
+      {
+        "oe_code": "MOM.9.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are used safely."
+      },
+      {
+        "oe_code": "MOM.9.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are prescribed by appropriate caregivers."
+      },
+      {
+        "oe_code": "MOM.9.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals drugs shall be stored securely."
+      },
+      {
+        "oe_code": "MOM.9.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Chemotherapy and radio-pharmaceuticals shall be prepared properly and safely and administered by qualified personnel."
+      },
+      {
+        "oe_code": "MOM.9.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "A proper record shall be kept of the usage, administration and disposal of narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals."
+      }
+    ],
+    "count": 5
+  },
+  "10": {
+    "standard_code": "MOM.10",
+    "title": "Implantable prosthesis and medical devices shall be used in accordance with laid down criteria.",
+    "oes": [
+      {
+        "oe_code": "MOM.10.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "Usage of implantable prosthesis and medical devices is guided by scientific criteria for each item and national / international recognised guidelines / approvals for such specific item(s)."
+      },
+      {
+        "oe_code": "MOM.10.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation implements a mechanism for the usage of the implantable prosthesis and medical devices."
+      },
+      {
+        "oe_code": "MOM.10.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Patient and his / her family are counselled for the usage of the implantable prosthesis and medical device, including precautions if any."
+      },
+      {
+        "oe_code": "MOM.10.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "The batch and the serial number of the implantable prosthesis and medical devices are recorded in the patient's medical record, the master logbook and the discharge summary."
+      },
+      {
+        "oe_code": "MOM.10.e",
+        "letter": "e",
+        "level": "Achievement",
+        "star": true,
+        "text": "Process of recall of implantable prosthesis and medical devices are handled effectively."
+      }
+    ],
+    "count": 5
+  },
+  "11": {
+    "standard_code": "MOM.11",
+    "title": "Medical supplies and consumables are stored appropriately and are available where required.",
+    "oes": [
+      {
+        "oe_code": "MOM.11.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation adheres to the defined process for the acquisition of medical supplies and consumables."
+      },
+      {
+        "oe_code": "MOM.11.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Medical supplies and consumables are used in a safe manner, where appropriate."
+      },
+      {
+        "oe_code": "MOM.11.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Medical supplies and consumables are stored in a clean, safe and secure environment; incorporating the manufacturer's recommendation(s)."
+      },
+      {
+        "oe_code": "MOM.11.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Sound inventory control practices guide storage of medical supplies and consumables."
+      },
+      {
+        "oe_code": "MOM.11.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "There is a mechanism in place to verify the condition of medical supplies and consumables."
+      }
+    ],
+    "count": 5
+  }
+}

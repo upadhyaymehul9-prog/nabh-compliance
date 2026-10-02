@@ -1,0 +1,327 @@
+PSQ.7 — Raw Source Dump
+=======================
+
+Standard text (verbatim):
+Incidents are collected and analysed to ensure continual quality improvement.
+
+OE count: 6 | COREs: a | Stars: a★, b★
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.7.a
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation implements an incident management system.*
+
+Guidebook interpretation (PDF p. 231):
+The incident management system includes:
+  * identification
+  * reporting
+  * review
+  * action on incidents
+
+This system supports factual reporting and learning and is based on the
+principle of just culture.
+
+The organisation shall have a mechanism for reporting the occurrence of
+incidents on standardised incident report forms. It is preferable that the
+reporting system is simple (a few steps), clear (what needs to be reported,
+how to report, and to whom), confidential, and focused on process improvement.
+
+While capturing the incidents, the organisation shall capture all incidents
+without going into the severity or whether harm was caused.
+
+Stop-work check: CORE — non-negotiable. Absence of an implemented incident
+management system is CORE non-compliance. Stop-work is implicated when any
+component of the system (identification, reporting, review, action) is missing
+— the four components are all mandatory elements of the system, not optional
+enhancements.
+
+Two mandatory (shall) requirements within the interpretation:
+  1. A mechanism for reporting on standardised incident report forms shall
+     exist.
+  2. All incidents shall be captured regardless of severity or whether harm
+     was caused — pre-filtering by severity or harm level before capture is
+     prohibited.
+
+The good-practice characteristics (simple, clear, confidential, focused on
+process improvement) are preferable, not mandatory. Just-culture basis is
+stated as a principle, not a shall.
+
+This OE is asterisked — documentation of the incident management system is
+required.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.7.b
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation has a mechanism to identify sentinel events.*
+
+Guidebook interpretation (PDF p. 231):
+The sentinel events relating to system or process deficiencies that are
+relevant and important to the organisation must be clearly defined. The list
+of the identified and relevant sentinel events shall be documented.
+
+Refer to the glossary for a definition of "sentinel events".
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Two mandatory requirements:
+  1. The organisation's relevant sentinel events must be clearly defined —
+     "must" is used, which carries obligatory force equivalent to shall.
+  2. The list of identified and relevant sentinel events shall be documented.
+
+CRITICAL DRAFTING NOTE — THIS IS THE ACTUAL SOURCE FOR SENTINEL-EVENT
+DEFINITIONS IN PSQ:
+
+The Guidebook at PSQ.7.b does NOT prescribe any enumerated list of sentinel
+event categories. It instructs the organisation to:
+  (a) determine which sentinel events are relevant to its own systems and
+      processes, and
+  (b) clearly define and document that self-identified list.
+
+The definition of "sentinel events" is referred to the Glossary — it is not
+reproduced within PSQ.7.b itself.
+
+An earlier ChatGPT draft for PSQ.2 included an enumerated list of sentinel
+event categories attributed to PSQ.2 source text. That list had no source in
+NABH — PSQ.2 contains no such content. PSQ.7.b is the only standard in the
+PSQ chapter that addresses sentinel-event definition requirements, and even
+here the requirement is self-identification and documentation, not adherence
+to a prescribed NABH category list.
+
+Any draft for PSQ.7 that enumerates specific sentinel event types
+(e.g., "wrong-site surgery", "retained instrument") is importing illustrative
+examples from external frameworks. The source requires definition, not
+compliance with any specific enumerated list.
+
+This OE is asterisked — documentation of the sentinel-event list is required.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.7.c
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation has established processes for analysis of incidents.
+
+Guidebook interpretation (PDF pp. 231–232):
+The safety committee (Refer to PSQ.1.a.) shall be responsible for this
+activity. This could preferably be done by identifying the root cause. Inputs
+could be sought from the units/discipline/departments concerned. Where
+possible, patients and other stakeholders could be included in analysing the
+feedback and complaint.
+
+The immediate response to a safety incident shall be to address the urgent
+care and support needs of those involved. This shall not await analysis.
+
+In case of sentinel events, correction if any shall be initiated within
+24-working hours of occurrence or reporting. The analysis of sentinel events
+shall be completed within seven working days of occurrence or reporting.
+
+Stop-work check: Commitment — no stop-work trigger as a formal NABH level.
+However, the sentinel-event timelines are mandatory (shall) and time-bound —
+they represent the strongest operational constraint in the PSQ chapter:
+
+  SENTINEL EVENT TIME-BOUND OBLIGATIONS (both mandatory — shall):
+  1. Correction, if any, shall be initiated within 24 working hours of
+     occurrence or reporting.
+  2. Analysis shall be completed within seven working days of occurrence or
+     reporting.
+
+These two frequencies are verbatim in the source and must be preserved
+exactly — do not soften to "promptly", "quickly" or "as soon as possible".
+
+Additional mandatory elements:
+  — Safety committee (PSQ.1.a) shall be responsible for incident analysis.
+  — Immediate response to address urgent care and support needs of those
+    involved shall not await analysis — care continuity is unconditional.
+
+Optional/preferred elements:
+  — Root-cause analysis is preferred (could preferably) — not mandated.
+  — Inputs from units/departments could be sought — illustrative.
+  — Patient and stakeholder inclusion could be done where possible —
+    illustrative.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.7.d
+Level: Commitment | No star
+
+Verbatim OE text:
+Corrective and preventive actions are taken based on the findings of such
+analysis.
+
+Guidebook interpretation (PDF p. 232):
+The objective of this is to improve the quality of patient-care services
+continually. All such action shall be documented. The findings and
+recommendations arrived at after the analysis shall be communicated to all
+personnel concerned to correct the systems and processes to prevent
+recurrences. Any change in the policy or procedure is reflected as an
+amendment in the organisation's documentation.
+
+Stop-work check: Commitment — no stop-work trigger. Three mandatory (shall)
+elements:
+  1. All corrective and preventive actions shall be documented.
+  2. Findings and recommendations shall be communicated to all personnel
+     concerned.
+  3. Any change in policy or procedure is reflected as an amendment in the
+     organisation's documentation — this is stated without shall but in
+     mandatory-declarative form ("is reflected").
+
+CAPA without documentation is not this OE. Communication to only the
+immediate team, not to "all personnel concerned", is not this OE.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.7.e
+Level: Achievement | No star
+
+Verbatim OE text:
+The organisation incorporates risks identified in the analysis of incidents
+into the risk management system.
+
+Guidebook interpretation (PDF p. 232):
+If the incident analysis reveals the presence of an unidentified risk, the
+same shall be subjected to risk management.
+
+Stop-work check: Achievement — no stop-work trigger. The trigger condition is
+specific: an unidentified risk surfaced by incident analysis shall be
+subjected to risk management. The OE is not about all risks — only risks that
+incident analysis reveals as previously unidentified. No frequency or
+timeframe is specified.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.7.f
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation shall have a process for informing various stakeholders in
+case of a near miss / adverse event / sentinel event.
+
+Guidebook interpretation (PDF p. 232):
+After due analysis, an incident could be termed as a near miss or adverse
+event or sentinel event. Based on the nature of the near miss or adverse
+event or sentinel event, the organisation shall inform the stakeholders
+(including patient and family where applicable) regarding the relevant
+concerns in addition to initiating the corrective and preventive action.
+
+Stop-work check: Commitment — no stop-work trigger. One mandatory (shall)
+requirement: the organisation shall inform stakeholders (including patient
+and family where applicable) regarding the relevant concerns, based on the
+nature of the classified incident.
+
+Key constraints:
+  — Stakeholder notification follows due analysis and incident classification
+    — it is not a pre-analysis obligation (unlike PSQ.7.c immediate care
+    response, which shall not await analysis).
+  — "Including patient and family where applicable" — applicability is
+    qualified; it is not unconditional.
+  — The Guidebook does not prescribe notification to external regulatory or
+    statutory authorities in PSQ.7.f. Statutory notification duties under
+    applicable law are separate from this OE and are not enumerated here.
+  — The process exists alongside CAPA, not as a replacement for it.
+
+DRAFTING NOTE: PSQ.7.f does not authorise the drafter to enumerate a list of
+event categories requiring external/regulatory reporting. Such a list would be
+importing requirements from outside the NABH source. If an organisation has
+statutory notification duties (e.g., to a state health authority for certain
+events), those arise from law — not from PSQ.7.f.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table
+
+OE   Level        Star   Stop-work   Key constraint
+a    CORE         Yes★   YES         Incident management system has four mandatory
+                                     components (identification, reporting, review,
+                                     action); standardised incident report forms
+                                     (shall); all incidents captured regardless of
+                                     severity or harm (shall); just-culture
+                                     principle; simple/clear/confidential are
+                                     preferable not mandatory; documentation required
+b    Commitment   Yes★   No          Organisation defines its own relevant sentinel
+                                     events (must — obligatory); list shall be
+                                     documented; definition in Glossary, not here;
+                                     NO NABH-prescribed category list exists —
+                                     organisation self-identifies; documentation
+                                     required; source for any sentinel-event content
+                                     in PSQ chapter — NOT PSQ.2
+c    Commitment   No     No          Safety committee (PSQ.1.a) responsible (shall);
+                                     immediate care shall not await analysis (shall);
+                                     sentinel-event correction within 24 working
+                                     hours (shall — exact, preserve); sentinel-event
+                                     analysis within seven working days (shall —
+                                     exact, preserve); RCA and stakeholder inclusion
+                                     are preferred/possible, not mandated
+d    Commitment   No     No          All CAPA shall be documented (shall); findings
+                                     and recommendations shall be communicated to all
+                                     personnel concerned (shall); policy/procedure
+                                     changes reflected as amendments (declarative
+                                     mandatory); CAPA without documentation or
+                                     narrow communication is incomplete
+e    Achievement  No     No          Incident-analysis-revealed unidentified risks
+                                     shall be subjected to risk management; trigger
+                                     is specific — only risks newly identified by
+                                     incident analysis; no frequency or timeframe
+                                     prescribed
+f    Commitment   No     No          Process shall exist to inform stakeholders
+                                     including patient and family (where applicable)
+                                     after classification; follows due analysis;
+                                     does not prescribe regulatory/statutory
+                                     notification categories — those arise from law
+                                     separately
+
+
+─────────────────────────────────────────────────────────────────────────────
+SPECIAL NOTE: PSQ.7 IS THE ACTUAL SOURCE FOR SENTINEL-EVENT CONTENT IN PSQ
+─────────────────────────────────────────────────────────────────────────────
+
+A ChatGPT draft produced for PSQ.2 included content about reporting notifiable
+and sentinel events, with what appeared to be an enumerated or appended list
+of event categories. That content was not sourced from NABH.
+
+In the HCO 6th Edition standard:
+
+  1. "Sentinel events" is defined in the Glossary (PSQ.7.b cross-references
+     this). The Glossary definition is the source; PSQ.7.b does not reproduce
+     or expand it.
+
+  2. PSQ.7.b is the ONLY OE in the PSQ chapter that requires the organisation
+     to deal with sentinel-event definitions. It requires self-identification
+     of relevant events and documentation of that self-identified list — not
+     adherence to any NABH-prescribed category enumeration.
+
+  3. PSQ.2 contains NO requirement, list, or reference relating to notifiable
+     events or sentinel-event reporting categories. The nine OEs of PSQ.2
+     (a–i) cover: QI committee, QI programme documentation, process
+     efficiency, clinical appropriateness, designated QI coordinator, periodic
+     review, annual update, internal audits, and nursing quality monitoring.
+
+  4. PSQ.7.f requires a process to inform stakeholders (including patient and
+     family where applicable) after incident classification. It does not
+     prescribe a list of events triggering external statutory notification.
+     Statutory reporting obligations arise from applicable law, not from
+     PSQ.7.f.
+
+  DRAFTING INSTRUCTION FOR ALL PSQ POLICIES: Any draft that enumerates
+  specific sentinel event categories, or references notifiable-event lists as
+  NABH requirements, is fabricating content. The correct approach is:
+    — Generic reference to the organisation's own documented sentinel-event
+      list (PSQ.7.b obligation).
+    — Generic reference to the organisation's obligation to inform
+      stakeholders after classification (PSQ.7.f obligation).
+    — No NABH-sourced enumerated list of sentinel or notifiable event
+      categories exists within the PSQ chapter standards text.
+
+
+─────────────────────────────────────────────────────────────────────────────
+
+Source files:
+  policies/source/hco6_psq_ocr.txt          (verbatim OE text)
+  policies/source/hco6_psq_guidebook_ocr.txt (Guidebook interpretations, PDF pp. 231–232)
+  policies/source/hco6_psq_inventory.json    (levels, stars, OE codes)

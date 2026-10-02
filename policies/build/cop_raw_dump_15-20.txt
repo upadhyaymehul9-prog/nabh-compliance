@@ -1,0 +1,2055 @@
+COP.15–COP.20 — Batched Raw Source Dump
+========================================
+Purpose: ChatGPT draft input for six standards in one pull.
+Each standard drafted and verified individually — same process as all prior chapters.
+
+CROSS-REFERENCE NOTE (applies throughout this file):
+The Guidebook cites specific NABH OE codes in several places (e.g., "Refer to PRE.4.d.",
+"Refer to IPC.3."). In policy drafts, these must NOT be reproduced as code citations.
+Use generic phrasing: "Those requirements are covered in the hospital's other policies."
+The specific codes are preserved here for source accuracy only.
+
+STOP-WORK STATUS BY STANDARD:
+  COP.15 — NO (not in STOP_WORK_PROPOSALS; but see statutory stop-work note below)
+  COP.16 — YES (STOP_WORK_PROPOSALS: high-risk care without identification and precautions)
+  COP.17 — NO
+  COP.18 — NO
+  COP.19 — NO
+  COP.20 — NO
+
+STATUTORY STOP-WORK NOTE — COP.15:
+  COP.15 is not in STOP_WORK_PROPOSALS and the draft omits a formal stop-work section.
+  However, COP.15.a (CORE) requires consonance with the Transplantation of Human Organs Act.
+  Operating an organ transplant programme without valid regulatory licences or without
+  complying with the Act is a statutory violation — it is a de facto stop-work condition
+  irrespective of the formal accreditation flag. This distinction must be documented clearly
+  in the COP.15 policy disclaimer and in the hospital's legal compliance register.
+  COP.15.d (CORE) — organ donation awareness — applies to ALL organisations regardless of
+  whether transplantation is performed; it does not carry a stop-work trigger.
+
+STATUTE DISCLAIMER STATUS:
+  COP.15.a — Transplantation of Human Organs Act (named verbatim in Guidebook) — statutory
+  COP.15.c — "Statutory formats" for evidence of counselling (Guidebook cross-ref)
+  COP.16.a — Statutory requirements referenced for vulnerable-patient guidance
+  COP.20.c — Statutory basis for DNR/DNI/AND decisions; ICMR guideline and Supreme Court
+             directives 2023 named in Guidebook (advisory/judicial, not delegated legislation)
+  All others — no specific statute named in Guidebook
+
+STAR NOTE:
+  Stars confirmed from hco6_cop_inventory.json cross-checked against OCR text markers.
+  COP.15 has one starred OE: b.
+  COP.16 has five starred OEs: a, b, c, d, e (all five OEs are starred).
+  COP.17 has one starred OE: a.
+  COP.18 has no starred OEs.
+  COP.19 has one starred OE: a.
+  COP.20 has one starred OE: a.
+
+LEVEL SUMMARY BY STANDARD:
+  COP.15: a CORE, b–c Commitment, d CORE | COREs: 2 | Achievement: 0 | Excellence: 0
+  COP.16: a–d CORE, e Commitment | COREs: 4 | Achievement: 0 | Excellence: 0
+  COP.17: a–d Commitment | COREs: 0 | Achievement: 0 | Excellence: 0
+  COP.18: a–f Commitment, g Excellence | COREs: 0 | Achievement: 0 | Excellence: 1
+  COP.19: a–e Commitment | COREs: 0 | Achievement: 0 | Excellence: 0
+  COP.20: a Commitment, b Achievement, c–e Commitment | COREs: 0 | Achievement: 1 | Excellence: 0
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.15 — Organ Transplant Programme
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+The organ transplant programme is carried out safely.
+
+OE count: 4 | COREs: a, d | Stars: b★
+Levels: a CORE, b–c Commitment, d CORE | Stop-work: NO (see statutory note above)
+
+Doc no: HCO/COP/POL/15
+
+SCOPE NOTE: This standard applies only to organisations that provide organ
+transplantation services. COP.15.d — organ donation awareness — is the sole OE
+that applies to ALL organisations irrespective of whether transplantation is performed.
+State this conditional scope clearly at the outset of the policy.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.15.a
+Level: CORE | No star
+
+Verbatim OE text:
+The organ transplant programme shall be in consonance with the legal requirements
+and shall be conducted ethically.
+
+Guidebook interpretation (PDF p. 135):
+The organisation shall ensure that the required regulatory licences are in place and
+adhere to the requirements of 'The Transplantation of Human Organs Act'. The
+organisation also ensures that the relevant medical professionals have been
+permitted by the appropriate authorities to participate in the organ transplant
+programme. The organisation shall have a designated transplant coordinator. The
+organisation shall ensure that the requisite reports are submitted to the appropriate
+authorities as per the defined timeframe.
+
+Stop-work check: CORE — formal stop-work flag not assigned in STOP_WORK_PROPOSALS.
+However: operating without valid regulatory licences under the Transplantation of
+Human Organs Act is a statutory violation. Any transplant activity conducted without
+required licences or without permitted professionals is an immediate statutory
+stop-work condition. This is a legal floor, not merely an accreditation requirement.
+
+STATUTE: Transplantation of Human Organs Act (named verbatim in Guidebook). All
+requirements of this Act, as amended, are binding. The policy disclaimer must
+explicitly name this statute and state that the hospital is responsible for verifying
+current statutory requirements.
+
+FIVE MANDATORY REQUIREMENTS — preserve all five:
+  1. Required regulatory licences shall be in place (shall).
+  2. Organisation shall adhere to the Transplantation of Human Organs Act (shall —
+     statutory obligation).
+  3. Relevant medical professionals shall have been permitted by appropriate
+     authorities to participate in the programme (shall — professional authorisation
+     is a pre-condition, not a post-hoc step).
+  4. Organisation shall have a designated transplant coordinator (shall — the
+     designation is mandatory, not advisory).
+  5. Requisite reports shall be submitted to appropriate authorities as per defined
+     timeframe (shall — both the submission and the timeframe are mandatory; the
+     timeframe is set by the Act, not by the organisation).
+
+Mandatory (shall):
+  — All five requirements above (shall — CORE standard; non-compliance is not
+    acceptable for accreditation).
+
+Non-mandatory:
+  — The specific form of the transplant coordinator role (full-time vs. designated
+    from existing staff) is the organisation's determination within statutory limits.
+
+DRAFTING NOTE: This OE is CORE. Unlike starred Commitment OEs, CORE failure is
+a direct accreditation disqualifier. The statutory angle makes it doubly non-negotiable.
+Do not frame this as a "best practice" element. State it as an absolute requirement
+with explicit reference to the Transplantation of Human Organs Act (without reproducing
+its text).
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.15.b
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Care of transplant patients is guided by clinical practice guidelines.
+
+Guidebook interpretation (PDF p. 135):
+Written guidance based on standard treatment guidelines/sound clinical practices
+govern the care of transplant patients, which include an indication for transplant,
+recipient fitness, donor fitness, education and consent process, organ recovery and
+ensuring organ compatibility. The organ transplant programme has documented
+organ-specific clinical practice guidelines for the pre-transplant, transplant, and
+discharge phase of transplantation. Individualised care plans are developed to guide
+the care of transplant patients. It is preferable that the organisation encourages
+departments to develop care pathways, which help guide these patients. A
+multidisciplinary team comprising of nurses, dietician, rehabilitation services,
+psychologist and/or medical social worker and infection prevention and control
+specialist is in place. It also ensures availability of other resources such as
+consumables, pharmaceutical supplies and other diagnostic requirements specifically
+required for transplant.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS. Absence of written clinical-practice
+guidance is a compliance gap for this starred Commitment OE, but does not fire a
+formal stop-work trigger in the accreditation framework.
+
+SIX MANDATORY CONTENT AREAS OF TRANSPLANT CLINICAL GUIDANCE — preserve all six:
+  1. Indication for transplant
+  2. Recipient fitness
+  3. Donor fitness
+  4. Education and consent process
+  5. Organ recovery
+  6. Ensuring organ compatibility
+
+THREE MANDATORY PHASE-SPECIFIC CPG REQUIREMENTS:
+  1. Pre-transplant phase CPGs
+  2. Transplant phase CPGs
+  3. Discharge phase CPGs
+  — All three phases require documented organ-specific CPGs (shall).
+
+Mandatory (shall):
+  — Written guidance shall be based on STG/sound clinical practices (shall).
+  — Written guidance shall include all six content areas above (shall — stated inclusions).
+  — Organ-specific CPGs shall be documented for all three phases (shall — pre-transplant,
+    transplant, discharge; all three are stated).
+  — Individualised care plans shall be developed for transplant patients (shall —
+    "are developed" in the Guidebook; care-plan development is mandatory).
+  — An MDT shall be in place comprising nurses, dietician, rehabilitation services,
+    psychologist and/or medical social worker, and IPC specialist (shall — the
+    multi-disciplinary composition is stated as a requirement).
+  — Resources for transplant shall be available: consumables, pharmaceutical supplies,
+    diagnostic requirements specifically required for transplant (shall).
+
+Non-mandatory:
+  — Care pathways: the Guidebook says the organisation "encourages departments to
+    develop care pathways" — this is advisory at the level of internal promotion;
+    care pathways themselves are "preferable" and not a shall for this OE.
+  — Whether the transplant coordinator also serves on the MDT is the organisation's
+    determination.
+
+Documentation: This OE is starred — the written clinical-practice guidance document
+(including organ-specific CPGs and care plans) is the required documentation.
+
+DRAFTING NOTE: The six content areas are stated inclusions, not examples. Do not
+reduce to "transplant guidelines generally." All six must be addressed in the
+written guidance.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.15.c
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation ensures education and counselling of recipient and donor through
+trained / qualified counsellors before organ transplantation.
+
+Guidebook interpretation (PDF p. 135–136):
+The organisation ensures that qualified/trained counsellors are available to counsel
+the recipient and donor about the proposed organ donation. Doctors and counsellors
+educate and counsel the recipient and donor on the benefits and possible risks to
+make informed decisions. The recipients are also educated about immunosuppression
+(benefits and risks) and the required monitoring and follow up. Counselling can also
+be done during the interview by the Local Authorisation Committee of the organisation.
+Evidence of counselling is recorded and maintained in the requisite statutory formats
+apart from the organisation's individual needs.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS. However, the Guidebook's requirement
+that counselling be done BEFORE organ transplantation has a clear sequence obligation —
+transplantation proceeding without completed counselling of recipient and donor would
+be a clinical governance failure.
+
+MANDATORY CONTENT AREAS OF COUNSELLING — preserve all:
+  1. Benefits of organ donation/transplantation (for both recipient and donor)
+  2. Possible risks of organ donation/transplantation (for both recipient and donor)
+  3. Immunosuppression — benefits and risks (for recipients)
+  4. Required monitoring and follow-up (for recipients)
+
+Mandatory (shall):
+  — Qualified/trained counsellors shall be available to counsel recipient and donor
+    (shall — "qualified/trained" is a double qualifier; the counsellor must satisfy both).
+  — Counselling shall cover the four content areas above (shall — all four stated).
+  — Counselling shall be done BEFORE organ transplantation (shall — timing is
+    explicit and is part of the OE text).
+  — Evidence of counselling shall be recorded and maintained in requisite statutory
+    formats AND the organisation's individual record formats (shall — both the
+    statutory format and the organisation's own format are required).
+
+Non-mandatory:
+  — Counselling during the Local Authorisation Committee interview is explicitly
+    stated as an acceptable modality — this is a permissive statement, not a
+    requirement that the LAC interview always be used.
+  — Whether counselling is done by doctors, dedicated counsellors, or a combination
+    is the organisation's determination — "qualified/trained" is the standard.
+
+DRAFTING NOTE: The BEFORE TRANSPLANTATION timing is part of the OE text itself.
+It cannot be softened or left implied. State it explicitly in the policy procedure.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.15.d
+Level: CORE | No star
+
+Verbatim OE text:
+The organisation shall take measures to create awareness regarding organ donation.
+
+Guidebook interpretation (PDF p. 136):
+This would be applicable for all organisations irrespective of whether organ
+transplantation is carried out or not. This could be in the form of standees,
+hand-outs, etc. The myths of the public regarding organ donation shall be addressed.
+Whenever a patient is declared brain dead, the family are also counselled on organ
+transplant where appropriate. They shall be educated in a very sensitive and courteous
+manner.
+
+Stop-work check: CORE — formal stop-work not assigned. Absence of any awareness
+measures is a CORE compliance gap. No real-time stop-work trigger from individual
+awareness activities.
+
+UNIVERSAL APPLICABILITY NOTE: This OE applies to ALL hospitals, including those
+that do NOT provide organ transplantation services. Even if the rest of COP.15 is
+not in scope, COP.15.d is. State this explicitly in the policy scope section.
+
+BRAIN-DEAD PATIENT PROTOCOL — preserve exact language:
+  — Whenever a patient is declared brain dead: family shall be counselled on organ
+    transplant WHERE APPROPRIATE (shall — "where appropriate" is a clinical judgment;
+    the counselling obligation fires when declared brain dead AND when it is clinically
+    appropriate; it is not waived on personal discretion).
+  — Counselling shall be done in a very sensitive and courteous manner (shall —
+    both "sensitive" and "courteous" are stated attributes of the engagement).
+
+TWO MANDATORY COMPONENTS of the awareness obligation:
+  1. Measures to create general public awareness of organ donation
+  2. Brain-dead patient family counselling (when declared brain dead, where appropriate)
+
+Mandatory (shall):
+  — Organisation shall take measures to create organ donation awareness (shall —
+    the obligation is to take measures, not to achieve a particular outcome;
+    measures must exist and be implemented).
+  — Myths of the public regarding organ donation shall be addressed (shall —
+    the myth-addressing content is a stated requirement, not advisory).
+  — Family of brain-dead patients shall be counselled on organ transplant where
+    appropriate (shall — conditional but mandatory when triggered).
+  — Brain-dead family counselling shall be done in a very sensitive and courteous
+    manner (shall — manner of engagement is mandatory, not optional).
+
+Non-mandatory:
+  — Specific awareness media (standees, hand-outs) are illustrative — the
+    organisation determines which formats are appropriate.
+  — Who conducts awareness activities (clinical, non-clinical, external) is
+    the organisation's determination.
+
+DRAFTING NOTE: This OE is CORE and universally applicable. Do not bury it in a
+scope section that implies it applies only to transplant hospitals. Write a distinct
+sub-section for brain-dead patient family counselling and address the sensitive
+manner of engagement explicitly.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table — COP.15
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    CORE         No     YES    Statutory   FIVE MANDATORY REQUIREMENTS: regulatory licences in
+                                            place (shall); adhere to Transplantation of Human
+                                            Organs Act (shall — statutory); medical professionals
+                                            permitted by appropriate authorities (shall); designated
+                                            transplant coordinator (shall); reports submitted to
+                                            authorities per defined timeframe (shall); CORE —
+                                            non-compliance not acceptable
+b    Commitment   Yes★   No     NO          Written guidance based on STG/sound clinical practices
+                                            (shall); SIX MANDATORY CONTENT AREAS: indication,
+                                            recipient fitness, donor fitness, education/consent
+                                            process, organ recovery, organ compatibility (all shall
+                                            — stated inclusions); THREE-PHASE CPGs: pre-transplant,
+                                            transplant, discharge (all documented, shall); individualised
+                                            care plans for transplant patients (shall); MDT in place:
+                                            nurses, dietician, rehabilitation, psychologist/MSW, IPC
+                                            specialist (shall); transplant resources available (shall);
+                                            care pathways "preferable" (advisory); starred doc
+c    Commitment   No     No     NO          Qualified/trained counsellors available (shall — double
+                                            qualifier); FOUR COUNSELLING CONTENT AREAS: benefits,
+                                            risks, immunosuppression, monitoring/follow-up (all shall);
+                                            counselling BEFORE transplantation (shall — timing stated
+                                            in OE text); evidence in statutory formats AND org's own
+                                            formats (shall — both required); LAC interview acceptable
+                                            modality (permissive, not prescriptive)
+d    CORE         No     YES    NO          UNIVERSAL APPLICABILITY: applies to ALL orgs including
+                                            non-transplant (CORE — stated explicitly in Guidebook);
+                                            measures to create organ donation awareness (shall);
+                                            myths of public addressed (shall); brain-dead patient
+                                            family counselled where appropriate (shall — conditional
+                                            trigger); counselling in very sensitive and courteous
+                                            manner (shall — manner requirement); specific media
+                                            (standees, hand-outs) illustrative
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES — COP.15
+─────────────────────────────────────────────────────────────────────────────
+
+1. STATUTE (COP.15.a): Name the Transplantation of Human Organs Act explicitly in the
+   policy disclaimer. State that the hospital is responsible for verifying current
+   statutory requirements, as the Act may be amended. Do not reproduce the Act's text.
+
+2. SIX CPG CONTENT AREAS (COP.15.b): indication, recipient fitness, donor fitness,
+   education/consent, organ recovery, organ compatibility — all six are stated inclusions.
+
+3. THREE CPG PHASES (COP.15.b): pre-transplant, transplant, discharge — organ-specific
+   CPGs required for all three. Do not collapse to "transplant guidelines."
+
+4. MDT COMPOSITION (COP.15.b): The MDT is a stated requirement, not an aspiration.
+   Nurses, dietician, rehabilitation services, psychologist and/or medical social worker,
+   IPC specialist — all named. Do not pare this down.
+
+5. COUNSELLING TIMING (COP.15.c): BEFORE organ transplantation — state this explicitly.
+
+6. STATUTORY FORMATS (COP.15.c): Evidence of counselling must be maintained in both
+   statutory formats and the organisation's own formats. Both are required.
+
+7. UNIVERSAL SCOPE (COP.15.d): COP.15.d is the only OE of this standard that applies
+   universally. Write the scope section of the policy so that transplant-conditional
+   OEs (a, b, c) and universally applicable OEs (d) are clearly distinguished.
+
+8. BRAIN-DEAD FAMILY COUNSELLING (COP.15.d): "Very sensitive and courteous manner" —
+   state these exact words. The manner of engagement is a compliance element, not merely
+   a style note.
+
+9. STOP-WORK AND STATUTORY BREACH (COP.15.a): Although COP.15 is not in STOP_WORK_PROPOSALS,
+   the policy should contain a clear statement that transplant activities may not proceed
+   unless regulatory licences are valid and professional permissions are current. Frame this
+   as a statutory compliance pre-condition, not merely as a NABH accreditation note.
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.16 — High-Risk Patients — Identification and Management
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+The organisation identifies and manages patients who are at high risk of morbidity
+/ mortality.
+
+OE count: 5 | COREs: a, b, c, d | Stars: a★, b★, c★, d★, e★
+Levels: a–d CORE, e Commitment | Stop-work: YES
+
+Doc no: HCO/COP/POL/16
+
+STOP-WORK PROPOSALS entry (internal):
+  16: "High-risk care (falls/pressure/DVT/restraints/vulnerable) without identification
+       and precautions"
+
+stop_work_text(16) — complete hospital-facing text:
+─────────────────────────────────────────────────────────────────────────────
+Do not leave a patient identified as vulnerable, at fall risk, at pressure-ulcer risk,
+at DVT risk, or needing restraints without the precautions and monitoring required
+by the organisation's written guidance.
+
+Do not apply or continue restraints without a documented clinical order and ongoing
+review.
+
+Stop-work applies to missing precautions / unauthorised restraint — not to emergency
+physical intervention needed to prevent immediate harm, which is followed at once by
+documentation and medical review.
+
+The person who stops tells the «treating doctor» and the «Ward / ICU In-Charge» the
+same shift. Refusing to leave high-risk patients unprotected is not a disciplinary
+matter.
+─────────────────────────────────────────────────────────────────────────────
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.16.a
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation identifies and manages vulnerable patients.
+
+Guidebook interpretation (PDF p. 136–137):
+Written guidance for identification and management of vulnerable patients is developed
+in consonance with statutory requirements, national and international guidelines.
+
+It shall include (but not limited to) elderly, children, differently-abled and/or
+mentally challenged, patient with risk of suicide, self-harm, comatose, critically ill,
+patients under sedation and anaesthesia, pregnant women, patients on dialysis, patients
+receiving chemotherapy, immunosuppressed patients, etc. The guidance shall state who
+is responsible for identifying these patients, risk management in these patients and
+monitoring of these patients (at least twice a day).
+
+The guidance shall include how informed consent is obtained from a vulnerable patient,
+and from the family or legal representative of a patient incapable of making an
+independent decision.
+
+Refer to PRE.4.d.
+The care is organised and delivered in accordance with written guidance.
+Refer to the glossary for a definition of "vulnerable patient".
+
+Stop-work check: YES — COP.16 stop-work. Leaving an identified vulnerable patient
+without required precautions and monitoring is a direct stop-work trigger.
+
+STATUTORY REQUIREMENT: Written guidance shall be developed in consonance with
+statutory requirements — the specific statutes depend on the patient category
+(e.g., Mental Healthcare Act for patients at risk of suicide/self-harm, relevant
+child protection legislation for children). The Guidebook does not name specific acts
+but the statutory consonance obligation is stated; the hospital must verify applicable
+statutes.
+
+MANDATORY MONITORING FREQUENCY — preserve verbatim:
+  — "at least twice a day" — monitoring of vulnerable patients shall occur at least
+    twice a day. Do not soften to "regularly" or "periodically."
+
+ILLUSTRATIVE VULNERABLE PATIENT CATEGORIES (not an exhaustive mandatory list —
+"but not limited to" is stated):
+  Elderly, children, differently-abled and/or mentally challenged, patients at risk of
+  suicide, patients at risk of self-harm, comatose patients, critically ill patients,
+  patients under sedation and anaesthesia, pregnant women, patients on dialysis,
+  patients receiving chemotherapy, immunosuppressed patients.
+  These are illustrative — do not enumerate them as a closed list in the policy.
+  The policy must reference the hospital's own defined list per its written guidance.
+
+FOUR MANDATORY WRITTEN-GUIDANCE CONTENT AREAS — preserve all four:
+  1. Definition and identification criteria for vulnerable patients
+  2. Who is responsible for identifying vulnerable patients
+  3. Risk management for identified vulnerable patients
+  4. Monitoring of vulnerable patients (at least twice a day)
+
+PLUS — informed consent provision:
+  — How informed consent is obtained from a vulnerable patient capable of consenting
+  — How consent is obtained from the family or legal representative when the patient
+    is incapable of making an independent decision
+
+Mandatory (shall):
+  — Written guidance shall be developed in consonance with statutory requirements and
+    national/international guidelines (shall).
+  — Written guidance shall include the four content areas above AND the consent
+    provisions (shall — stated mandatory inclusions).
+  — Monitoring of vulnerable patients shall occur at least twice a day (shall —
+    EXACT MANDATORY FREQUENCY).
+  — Care shall be organised and delivered in accordance with written guidance (shall —
+    the Guidebook states this as a compliance requirement).
+
+Non-mandatory:
+  — The specific vulnerable patient categories are a stated non-exhaustive illustrative
+    list ("but not limited to") — the hospital defines its own comprehensive list.
+  — PRE.4.d is cross-referenced for consent — not cited in the policy.
+
+Documentation: This OE is starred — the written guidance is the required documentation.
+
+DRAFTING NOTE: "At least twice a day" is the Guidebook's minimum monitoring
+frequency for vulnerable patients. State it verbatim. Do not omit it in a general
+reference to "appropriate monitoring."
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.16.b
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation identifies and manages patients who are at a risk of fall.
+
+Guidebook interpretation (PDF p. 137):
+A validated tool shall be used for the assessment of the risk of fall. Patients found
+at a risk of fall shall be managed according to written guidance. A good guide is
+'Universal fall precautions'.
+
+Stop-work check: YES — COP.16 stop-work. A patient identified at fall risk without
+precautions and monitoring in place is a direct stop-work trigger.
+
+Mandatory (shall):
+  — A validated tool shall be used for fall risk assessment (shall — "validated"
+    is the stated standard for the tool; a non-validated tool does not satisfy
+    this requirement).
+  — Patients found at fall risk shall be managed according to written guidance
+    (shall — management per written guidance is mandatory when risk is identified).
+
+Non-mandatory:
+  — 'Universal fall precautions' is described as "a good guide" — advisory reference.
+  — The choice of which validated fall-risk tool to use is the organisation's
+    clinical determination.
+  — The specific fall-prevention measures beyond "managed according to written
+    guidance" are the organisation's determination within its written guidance.
+
+Documentation: This OE is starred — the written guidance for fall risk management and
+the fall-risk assessment records are the required documentation.
+
+DRAFTING NOTE: "A validated tool shall be used" — the tool must be validated;
+the choice of tool is the organisation's. Do not allow a non-validated local
+checklist to substitute.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.16.c
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation identifies and manages patients who are at risk of developing
+/ worsening of pressure ulcers.
+
+Guidebook interpretation (PDF p. 137):
+A validated tool shall be used for assessment of the risk of pressure ulcers. For
+example, the Braden scale, the European and US National pressure ulcer advisory
+panels (EPUAP and NPUAP) staging systems to look for worsening of pressure ulcers.
+Patients found at risk of pressure ulcers shall be managed according to written
+guidance.
+
+Stop-work check: YES — COP.16 stop-work. A patient identified at risk of developing
+or worsening pressure ulcers without required precautions is a stop-work trigger.
+
+Mandatory (shall):
+  — A validated tool shall be used for pressure ulcer risk assessment (shall —
+    validated is the stated standard).
+  — The tool shall cover risk of DEVELOPMENT and risk of WORSENING (shall —
+    the OE text covers both scenarios; the assessment tool must address both).
+  — Patients found at risk shall be managed according to written guidance (shall).
+
+Non-mandatory (illustrative):
+  — Braden scale, EPUAP and NPUAP staging systems are examples — the organisation
+    selects an appropriate validated tool from this or an equivalent class.
+  — EPUAP and NPUAP staging systems are specifically useful for worsening assessment —
+    the Guidebook names them in this context; they are not mandatorily required.
+
+Documentation: This OE is starred — the written guidance and pressure-ulcer risk
+assessment records are the required documentation.
+
+DRAFTING NOTE: The OE text covers two distinct scenarios: DEVELOPING pressure ulcers
+(prevention) and WORSENING of existing pressure ulcers (monitoring and escalation).
+The written guidance must address both. Do not write prevention-only procedures.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.16.d
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation identifies and manages patients who are at risk of developing
+deep vein thrombosis.
+
+Guidebook interpretation (PDF p. 137):
+A validated tool shall be used for assessment of the risk of development of deep
+vein thrombosis. For example, Well's criteria. Patients found at risk of deep vein
+thrombosis shall be managed according to written guidance.
+
+Stop-work check: YES — COP.16 stop-work. A patient identified at DVT risk without
+required prophylaxis and monitoring is a stop-work trigger.
+
+Mandatory (shall):
+  — A validated tool shall be used for DVT risk assessment (shall).
+  — Patients found at DVT risk shall be managed according to written guidance (shall).
+
+Non-mandatory (illustrative):
+  — Well's criteria is cited as an example — the organisation selects an appropriate
+    validated DVT risk assessment tool.
+
+Documentation: This OE is starred — the written guidance and DVT risk assessment
+records are the required documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.16.e
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation identifies and manages patients who need restraints.
+
+Guidebook interpretation (PDF p. 137):
+Restraints include physical and chemical restraints. Written guidance is used to
+identify patients who need restraints and provide care to them. The organisation may
+minimise the use of restraints wherever possible keeping in view patient safety.
+The written guidance shall incorporate the suggested situations where restraints could
+be used. It shall also specify as to who can authorise the use of restraints, the
+frequency of monitoring these patients and the validity of restraint orders. The need
+for restraints is regularly reassessed, and the least invasive restraint is selected
+if required. The rationale for using restraints is explained to the family, and consent
+is obtained where appropriate (as directed by statutory requirements). These patients
+shall be monitored more frequently for the complications that the restraints may
+cause. For example, neurovascular deficit. When restraints are used, the following
+shall be documented in the medical record: the reason for using restraints and the
+time frame during which restraints were used.
+
+Stop-work check: YES — COP.16 stop-work. Applying or continuing restraints without
+a documented clinical order, or without ongoing review, is a direct stop-work trigger.
+
+SCOPE — restraint types (both are covered):
+  — Physical restraints
+  — Chemical restraints
+  Both must be addressed in the written guidance.
+
+EIGHT MANDATORY WRITTEN-GUIDANCE CONTENT AREAS — preserve all eight:
+  1. Identification criteria — which patients need restraints
+  2. Care provision for restrained patients
+  3. Suggested situations where restraints could be used
+  4. Who can authorise the use of restraints
+  5. Frequency of monitoring restrained patients
+  6. Validity of restraint orders
+  7. Process for regular reassessment of restraint need
+  8. Least-invasive-restraint selection principle
+
+MANDATORY DOCUMENTATION IN MEDICAL RECORD:
+  — Reason for using restraints
+  — Time frame during which restraints were used
+
+Mandatory (shall):
+  — Written guidance shall incorporate all eight content areas above (shall —
+    stated mandatory content).
+  — Least invasive restraint shall be selected if required (shall — when restraints
+    are used, the least invasive is selected).
+  — Restraint need shall be regularly reassessed (shall).
+  — Rationale shall be explained to family (shall).
+  — Consent shall be obtained where appropriate as directed by statutory requirements
+    (shall — the "where appropriate" qualifier is governed by statute, not by the
+    organisation's convenience).
+  — Patients on restraints shall be monitored more frequently for complications
+    (shall — "more frequently" means more than standard monitoring; the
+    organisation defines the exact frequency in its written guidance).
+  — Medical record shall document: reason for using restraints AND time frame of
+    restraint use (shall — both elements are mandatory documentation).
+
+Non-mandatory:
+  — The organisation "may" minimise use of restraints wherever possible — this is
+    a strong advisory (it reflects good clinical practice and aligns with patient
+    safety) but is not a shall. The shall obligation is to follow written guidance.
+  — Neurovascular deficit is cited as an example complication to monitor — not a
+    mandatory singular monitoring target; monitoring covers all restraint complications.
+
+Documentation: This OE is starred — the written guidance, restraint orders with
+review records, and medical record documentation are the required documentation.
+
+DRAFTING NOTE: The OE is Commitment level (not CORE), but the stop-work trigger
+applies because the standard-level STOP_WORK_PROPOSALS flag covers this OE. The stop-work
+authority fires when precautions/monitoring are missing OR when restraints are applied
+or continued without a documented order and review. Neither trigger requires CORE-level
+designation to be operationally binding.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table — COP.16
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    CORE         Yes★   YES    YES         Written guidance in consonance with statutory
+                                            requirements and national/international guidelines
+                                            (shall); FOUR MANDATORY WRITTEN-GUIDANCE AREAS:
+                                            definition/ID criteria, who is responsible, risk
+                                            management, monitoring at least twice a day (all
+                                            shall); informed consent from capable patient AND
+                                            family/legal representative for incapable patient
+                                            (shall); care delivered per written guidance (shall);
+                                            illustrative non-exhaustive list of vulnerable patients
+                                            (hospital defines own comprehensive list); EXACT
+                                            FREQUENCY: at least twice a day; PRE.4.d cross-ref
+                                            not cited; starred doc
+b    CORE         Yes★   YES    YES         VALIDATED TOOL for fall risk assessment (shall —
+                                            validated is the standard; non-validated tool does
+                                            not satisfy); patients at fall risk managed per
+                                            written guidance (shall); 'Universal fall precautions'
+                                            is advisory reference; tool choice is org's clinical
+                                            determination; starred doc
+c    CORE         Yes★   YES    YES         VALIDATED TOOL for pressure ulcer risk assessment
+                                            (shall); covers both DEVELOPMENT and WORSENING of
+                                            pressure ulcers (OE text — both scenarios mandatory);
+                                            patients at risk managed per written guidance (shall);
+                                            Braden scale / EPUAP / NPUAP illustrative examples
+                                            (org selects appropriate validated tool); starred doc
+d    CORE         Yes★   YES    YES         VALIDATED TOOL for DVT risk assessment (shall);
+                                            patients at DVT risk managed per written guidance
+                                            (shall); Well's criteria is illustrative example;
+                                            starred doc
+e    Commitment   Yes★   No     YES         EIGHT MANDATORY WRITTEN-GUIDANCE AREAS: ID criteria,
+                                            care provision, suggested situations, who can authorise,
+                                            monitoring frequency, validity of orders, reassessment
+                                            process, least-invasive-restraint selection (all shall);
+                                            MANDATORY MR DOCUMENTATION: reason for using AND time
+                                            frame of restraint use (both shall); least invasive
+                                            restraint selected (shall); need regularly reassessed
+                                            (shall); rationale explained to family (shall); consent
+                                            per statutory requirements (shall-qualified); patients
+                                            monitored more frequently for complications (shall);
+                                            restraint minimisation "may" (strong advisory); both
+                                            physical and chemical restraints covered; starred doc
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES — COP.16
+─────────────────────────────────────────────────────────────────────────────
+
+1. EXACT MONITORING FREQUENCY (COP.16.a): "at least twice a day" for vulnerable
+   patients — state this verbatim. Do not soften to "periodically."
+
+2. NON-EXHAUSTIVE VULNERABLE PATIENT LIST (COP.16.a): The Guidebook's category
+   list is illustrative ("but not limited to"). The hospital must develop its own
+   comprehensive list in written guidance. Do not reproduce the Guidebook's list
+   as an exhaustive closed list in the policy.
+
+3. BOTH RESTRAINT TYPES (COP.16.e): Physical and chemical restraints are both
+   in scope. The written guidance must address both.
+
+4. EIGHT MANDATORY CONTENT AREAS IN RESTRAINT GUIDANCE (COP.16.e): All eight
+   must be in the written guidance. Do not reduce.
+
+5. TWO MANDATORY MEDICAL RECORD DOCUMENTATION ELEMENTS (COP.16.e): Reason for
+   using restraints AND time frame — both are mandatory in the medical record.
+
+6. VALIDATED TOOLS (COP.16.b, c, d): All three screening OEs require validated
+   tools. The choice of tool is the organisation's clinical determination within
+   validated options; a non-validated local checklist does not satisfy.
+
+7. STOP-WORK (COP.16): Triggers fire when: (a) a patient identified as vulnerable,
+   at fall risk, at pressure-ulcer risk, at DVT risk, or needing restraints is left
+   without the required precautions and monitoring; (b) restraints are applied or
+   continued without a documented clinical order and ongoing review. Emergency
+   physical intervention to prevent immediate harm is an exception — followed at
+   once by documentation and medical review.
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.17 — Pain Management
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Pain management for patients is done in a consistent manner.
+
+OE count: 4 | COREs: none | Stars: a★
+All OEs: Commitment level | Stop-work: NO
+
+Doc no: HCO/COP/POL/17
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.17.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Patients in pain are effectively managed.
+
+Guidebook interpretation (PDF p. 138):
+Written guidance based on sound clinical practices govern the care of patients in pain.
+The patients in pain receive care according to pain management guidelines and according
+to patient goals for pain management. It shall include as to how patients are screened
+for pain, the mechanism to ensure that a detailed pain assessment is done (when
+necessary), pain mitigation techniques and monitoring.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS. Systematic absence of any written
+guidance for pain management is a Commitment-level compliance failure; individual
+inadequate pain management episodes are clinical governance issues.
+
+FOUR MANDATORY WRITTEN-GUIDANCE CONTENT AREAS — preserve all four:
+  1. How patients are screened for pain
+  2. Mechanism to ensure detailed pain assessment is done (when necessary)
+  3. Pain mitigation techniques
+  4. Monitoring of pain management
+
+Mandatory (shall):
+  — Written guidance shall be based on sound clinical practices (shall).
+  — Written guidance shall include the four content areas above (shall — stated
+    mandatory inclusions using "shall include").
+  — Care shall be according to pain management guidelines AND patient goals for
+    pain management (shall — both dimensions are stated).
+
+Non-mandatory:
+  — The specific pain management guidelines adopted are the organisation's clinical
+    determination.
+  — The format of written guidance (standalone policy vs. incorporated into clinical
+    protocols) is the organisation's choice.
+
+Documentation: This OE is starred — the written guidance is the required documentation.
+
+DRAFTING NOTE: The written-guidance scope for COP.17.a is explicitly stated in
+the Guidebook as covering all four areas of COP.17.b through COP.17.d. The umbrella
+document must address all subsequent OEs; the later OEs refine the detail.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.17.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Patients are screened for pain.
+
+Guidebook interpretation (PDF p. 138):
+Patients entering the hospital shall be screened for pain. Pain shall be considered the
+fifth vital sign. Screening could be done by incorporating a yes/no question for pain
+in the initial assessment. A screening for pain may consist of one or more simple
+questions that can be asked during the assessment process and documented by the doctor
+or nurse in the medical record. An OPD patient who provided positive answers to the
+organisation's pain screening questions could indicate the need for a more in-depth
+assessment of the patient's pain.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS.
+
+SCOPE OF SCREENING: "Patients entering the hospital" — screening applies at entry
+(inpatient admission and OPD patients are both included by the Guidebook's phrasing).
+
+Mandatory (shall):
+  — Patients entering the hospital shall be screened for pain (shall — universal
+    entry screening is mandatory, not discretionary).
+  — Pain shall be considered the fifth vital sign (shall — this is the stated
+    conceptual framework for integrating pain into routine clinical assessment).
+  — Screening shall be documented by the doctor or nurse in the medical record (shall —
+    documentation by named clinicians is required).
+
+Non-mandatory:
+  — The screening method (yes/no question, simple questions) is illustrative —
+    the organisation determines the specific screening format.
+  — For OPD patients with positive screening: a more in-depth assessment "could"
+    be indicated — this is a clinical trigger advisory, the further assessment
+    obligation is addressed in COP.17.c.
+
+DRAFTING NOTE: "Pain shall be considered the fifth vital sign" — state this
+explicitly in the policy. It is the Guidebook's framing for mandatory routine pain
+screening, not merely an aspirational statement.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.17.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Patients with pain undergo detailed assessment and periodic re-assessment.
+
+Guidebook interpretation (PDF p. 138–139):
+A detailed pain assessment is done when the pain is the predominant (or one of the
+main) symptom(s). For example, cancer pain, neuralgia and arthralgia. This does not
+include chest pain due to angina or where the aetiology of pain is physiological like
+labour pain. A validated tool shall be used for assessment of pain in various types
+of patients — neonates, paediatrics, adults, patients on ventilators, etc. It shall
+be done for all post-operative patients. The pain assessment shall include the
+intensity of the pain (can be done using an age-appropriate validated pain rating
+scale), pain character, frequency, location, duration and referral and/or radiation.
+The assessment shall be done in an objective manner so that it facilitates regular
+reassessment.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS.
+
+TRIGGER FOR DETAILED ASSESSMENT:
+  — Pain is the predominant symptom, OR one of the main symptoms.
+  — Examples: cancer pain, neuralgia, arthralgia.
+  — SCOPE EXCLUSIONS (stated in Guidebook — preserve verbatim):
+    — Chest pain due to angina — excluded from the detailed pain assessment trigger.
+    — Pain where the aetiology is physiological (labour pain) — excluded.
+    These exclusions narrow the detailed-assessment trigger; they do not exempt
+    these patient groups from pain screening (COP.17.b).
+
+MANDATORY POST-OP PATIENT SCOPE:
+  — Detailed pain assessment shall be done for ALL post-operative patients (shall —
+    "all post-operative patients" is an unconditional mandatory scope addition beyond
+    the symptom-trigger above).
+
+FIVE MANDATORY DETAILED PAIN ASSESSMENT CONTENT ELEMENTS — preserve all five:
+  1. Intensity of pain (using age-appropriate validated pain rating scale)
+  2. Pain character
+  3. Frequency
+  4. Location
+  5. Duration and referral and/or radiation
+
+Mandatory (shall):
+  — A validated tool shall be used for pain assessment across patient types:
+    neonates, paediatrics, adults, patients on ventilators (shall — validated is
+    the tool standard; the tool must be appropriate to the patient type).
+  — Detailed assessment shall be done for all post-operative patients (shall —
+    unconditional for this patient group).
+  — Assessment shall include all five content elements above (shall).
+  — Assessment shall be done in an objective manner to facilitate regular reassessment
+    (shall — the objectivity standard is stated to enable reassessment comparability).
+
+Non-mandatory:
+  — The specific validated pain rating scale chosen is the organisation's clinical
+    determination — it must be age-appropriate.
+
+DRAFTING NOTE: Two parallel triggers for detailed assessment: (a) pain is
+predominant/main symptom, and (b) all post-operative patients. Both are mandatory;
+neither subsumes the other. State both explicitly.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.17.d
+Level: Commitment | No star
+
+Verbatim OE text:
+Pain alleviation measures or medications are initiated and titrated according to
+the patient's need and response.
+
+Guidebook interpretation (PDF p. 139):
+Based on the assessment of pain and the underlying conditions, pain alleviation methods
+or medication are initiated for the patient. Pain management includes non-pharmacological,
+medical, surgical and anaesthetic techniques as per WHO pain ladder scale. Subsequently,
+the patient is monitored for response to pain alleviation methods. Based on the response,
+measures and medication are duly titrated. In case the hospital does not have facilities
+for further pain management, it could refer such patients to centres specialising in pain
+management.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS.
+
+FOUR MANDATORY TREATMENT METHOD CATEGORIES — preserve all four:
+  1. Non-pharmacological techniques
+  2. Medical techniques
+  3. Surgical techniques
+  4. Anaesthetic techniques
+  — All per WHO pain ladder scale.
+
+TWO-STEP MANAGEMENT CYCLE — preserve both steps:
+  1. Initiation: pain alleviation based on assessment and underlying conditions.
+  2. Titration: based on patient's response to pain alleviation — measures and
+     medication are duly titrated.
+
+Mandatory (shall):
+  — Pain alleviation methods or medication shall be initiated based on pain assessment
+    and underlying conditions (shall).
+  — Patient shall be monitored for response to pain alleviation methods (shall —
+    monitoring for response is mandatory before titration decisions).
+  — Measures and medication shall be titrated based on response (shall — titration
+    is not discretionary once monitoring data is available).
+  — Pain management shall encompass the four technique categories per WHO pain
+    ladder scale (shall — as the governing framework).
+
+Non-mandatory:
+  — Referral to centres specialising in pain management when the hospital lacks
+    facilities for further pain management "could" happen — advisory; the
+    organisation's clinical judgment governs.
+
+DRAFTING NOTE: The WHO pain ladder scale is named as the governing framework
+for pain management techniques. Reference it in the policy without reproducing
+its content. The four technique categories (non-pharmacological, medical, surgical,
+anaesthetic) are the stated scope of pain management under this standard.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table — COP.17
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    Commitment   Yes★   No     NO          Written guidance based on sound clinical practices
+                                            (shall); FOUR MANDATORY WRITTEN-GUIDANCE AREAS:
+                                            screening mechanism, detailed assessment mechanism,
+                                            mitigation techniques, monitoring (all shall); care
+                                            per pain management guidelines AND patient goals
+                                            (both dimensions, shall); starred doc
+b    Commitment   No     No     NO          ALL patients entering hospital screened for pain
+                                            (shall — at entry, universal); pain = FIFTH VITAL
+                                            SIGN (shall — stated conceptual framework);
+                                            documented by doctor or nurse in MR (shall);
+                                            screening format (yes/no, simple questions)
+                                            illustrative; OPD positive-screen triggers further
+                                            assessment (advisory trigger for COP.17.c)
+c    Commitment   No     No     NO          TRIGGER 1: pain is predominant or main symptom
+                                            (shall); EXCLUSIONS: chest pain due to angina,
+                                            physiological pain (labour) — excluded from detailed
+                                            assessment trigger (stated in Guidebook); TRIGGER 2:
+                                            ALL POST-OP PATIENTS — unconditional (shall);
+                                            VALIDATED TOOL for pain assessment — age-appropriate
+                                            (shall); FIVE ASSESSMENT CONTENT ELEMENTS: intensity,
+                                            character, frequency, location, duration and referral/
+                                            radiation (all shall); objective assessment to facilitate
+                                            reassessment (shall)
+d    Commitment   No     No     NO          Initiation: based on assessment and underlying
+                                            conditions (shall); FOUR TECHNIQUE CATEGORIES per
+                                            WHO pain ladder: non-pharmacological, medical,
+                                            surgical, anaesthetic (shall); patient monitored for
+                                            response (shall); titration based on response (shall);
+                                            referral when no further pain management facility
+                                            "could" (advisory)
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES — COP.17
+─────────────────────────────────────────────────────────────────────────────
+
+1. FOUR WRITTEN-GUIDANCE CONTENT AREAS (COP.17.a): screening, detailed assessment
+   mechanism, mitigation techniques, monitoring — all four must be in the written
+   guidance for COP.17.a. The later OEs each address one of these in depth.
+
+2. FIFTH VITAL SIGN (COP.17.b): State this explicitly — it is the Guidebook's
+   framing, not merely a style choice.
+
+3. TWO DETAILED ASSESSMENT TRIGGERS (COP.17.c): predominant/main-symptom pain AND
+   all post-operative patients — state both independently. Do not merge.
+
+4. SCOPE EXCLUSIONS (COP.17.c): chest pain from angina and physiological pain
+   (labour) are excluded from the detailed-assessment trigger. These exclusions
+   reflect the Guidebook text — do not remove them from the policy.
+
+5. VALIDATED TOOLS (COP.17.c): tools must be validated and age-appropriate.
+   Neonates, paediatrics, adults, and ventilated patients are all named patient
+   types — the policy should reference that the tool selection varies by patient type.
+
+6. WHO PAIN LADDER (COP.17.d): Name this as the governing framework. Do not
+   reproduce the ladder in the policy text.
+
+7. TWO-STEP CYCLE (COP.17.d): initiation → monitoring → titration. Both the
+   monitoring and the titration steps are mandatory. State them as a sequence.
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.18 — Rehabilitation Services
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Rehabilitation services are provided to the patients in a safe, collaborative and
+consistent manner.
+
+OE count: 7 | COREs: none | Stars: none | Excellence: g
+Levels: a–f Commitment, g Excellence | Stop-work: NO
+
+Doc no: HCO/COP/POL/18
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.18.a
+Level: Commitment | No star
+
+Verbatim OE text:
+Scope of the rehabilitation services at a minimum is commensurate to the services
+provided by the organisation.
+
+Guidebook interpretation (PDF p. 139):
+Rehabilitation services include physiotherapy, occupational therapy, speech therapy,
+clinical psychology etc. The organisation shall ensure the availability of rehabilitation
+services (at least basic) commensurate with its scope of the services. For example,
+an organisation providing neurological services shall have a neuro-rehabilitation
+service. In case the organisation does not have a facility for advanced rehabilitation,
+it could refer its patients to a centre with a relevant facility.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS.
+
+SERVICE SCOPE PRINCIPLE: "at a minimum is commensurate" — the minimum rehabilitation
+scope is set by what the organisation provides clinically. An organisation providing
+a service that requires rehabilitation must offer at least basic rehabilitation for
+that service.
+
+Mandatory (shall):
+  — Rehabilitation services (at least basic) shall be available commensurate with the
+    organisation's scope of clinical services (shall — "shall ensure the availability"
+    is explicit; scope-matching is mandatory, not aspirational).
+  — For each clinical service that necessitates rehabilitation: at least basic
+    rehabilitation for that service shall be available (e.g., neurological services
+    require neuro-rehabilitation) (shall — the example is illustrative but the
+    principle is mandatory).
+
+Non-mandatory:
+  — The types of rehabilitation services (physiotherapy, occupational therapy, speech
+    therapy, clinical psychology) are illustrative — the hospital defines its own
+    rehabilitation scope based on the clinical services it provides.
+  — Referral to a centre with advanced rehabilitation facility when the organisation
+    does not have such a facility "could" happen — advisory; referral is the
+    acceptable alternative to in-house advanced rehabilitation.
+
+DRAFTING NOTE: This OE sets the minimum scope — not a specific list of services.
+The policy must state the hospital's own rehabilitation service scope and demonstrate
+how it matches the clinical services the hospital provides. Do not enumerate a
+fixed list of rehabilitation service types.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.18.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Rehabilitation services are provided in a consistent manner.
+
+Guidebook interpretation (PDF p. 140):
+The organisation shall provide rehabilitation services as per written guidance in a
+consistent manner by adapting/adopting standard treatment guidelines/sound clinical
+practices.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS.
+
+Mandatory (shall):
+  — Written guidance shall govern rehabilitation services (shall).
+  — Rehabilitation services shall be provided consistently per written guidance (shall
+    — consistency across the organisation is mandatory).
+  — Written guidance shall be based on STG/sound clinical practices (shall —
+    "adapting/adopting" gives the organisation flexibility in form, not in standard).
+
+Non-mandatory:
+  — Whether the organisation adopts published STGs verbatim or adapts them is the
+    organisation's determination; both are acceptable approaches.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.18.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Care providers collaboratively plan rehabilitation services.
+
+Guidebook interpretation (PDF p. 140):
+Care providers include treating doctor, a rehabilitation therapist and other
+professional experts.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS.
+
+MANDATORY MDT COMPOSITION (minimum named members):
+  1. Treating doctor
+  2. Rehabilitation therapist
+  3. Other professional experts (as appropriate to the case)
+
+Mandatory (shall):
+  — Rehabilitation services shall be planned collaboratively among the named care
+    providers (shall — the collaborative planning obligation is in the OE text).
+  — At minimum: the treating doctor and a rehabilitation therapist shall be involved
+    in collaborative planning (shall — both are named in the Guidebook).
+
+Non-mandatory:
+  — "Other professional experts" is open-ended — the specific additional disciplines
+    depend on the patient's clinical needs.
+  — The form of the collaborative planning process (MDT meeting, structured clinical
+    consultation, written care plan co-authored) is the organisation's determination.
+
+DRAFTING NOTE: This OE does not prescribe a specific MDT structure, but it requires
+actual collaboration — treating doctor and rehabilitation therapist are the minimum
+named pair. The policy must describe how this collaboration occurs in practice.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.18.d
+Level: Commitment | No star
+
+Verbatim OE text:
+There are adequate space and equipment to provide rehabilitation.
+
+Guidebook interpretation (PDF p. 140):
+Space and equipment shall be as per the scope of rehabilitation services provided.
+This could be based on guidance from professional bodies/documented literature.
+Equipment for resuscitation shall be available in these areas.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS. Absence of resuscitation equipment
+in rehabilitation areas is a patient-safety gap; this should be treated as a
+compliance priority even without a formal stop-work flag.
+
+MANDATORY CONTENT:
+  — Space and equipment shall be as per the scope of rehabilitation services (shall —
+    adequacy is scope-linked; the same principle as COP.18.a).
+  — Equipment for resuscitation shall be available in rehabilitation areas (shall —
+    this is stated as a mandatory requirement, not advisory; the word "shall" is used).
+
+Non-mandatory:
+  — Professional bodies' guidance or documented literature "could" inform space and
+    equipment determination — advisory reference standard.
+  — The specific type and quantity of space and equipment beyond "adequate for scope"
+    and "resuscitation equipment" is the organisation's determination.
+
+DRAFTING NOTE: Resuscitation equipment in rehabilitation areas is an explicit shall —
+do not treat it as implied by general hospital standards. State it explicitly in this
+policy's procedure section.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.18.e
+Level: Commitment | No star
+
+Verbatim OE text:
+Care is guided by functional assessment and periodic re-assessments which are done
+and documented.
+
+Guidebook interpretation (PDF p. 140):
+The assessments can be done using relevant functional assessment scales. This shall
+be done by a qualified individual(s).
+
+Stop-work check: Not in STOP_WORK_PROPOSALS.
+
+Mandatory (shall):
+  — Care shall be guided by functional assessment (shall — the OE text uses "is
+    guided by"; in the context of a NABH policy this is a mandatory obligation).
+  — Periodic re-assessments shall be done and documented (shall — both performance
+    and documentation are mandatory; "which are done and documented" is in OE text).
+  — Assessments shall be done by a qualified individual(s) (shall — "This shall be
+    done by a qualified individual(s)" is explicit).
+
+Non-mandatory:
+  — The specific functional assessment scales used are the organisation's clinical
+    determination ("relevant functional assessment scales" — relevant to the clinical
+    context).
+  — The reassessment interval ("periodic") is the organisation's clinical determination;
+    no specific frequency is prescribed.
+
+DRAFTING NOTE: Both the initial functional assessment AND periodic re-assessments
+are mandatory. Do not state only that "initial assessment is done." State the
+re-assessment obligation and the documentation requirement explicitly.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.18.f
+Level: Commitment | No star
+
+Verbatim OE text:
+Care is provided adhering to infection prevention and control and safety practices.
+
+Guidebook interpretation (PDF p. 140):
+Staff providing rehabilitation must adhere to infection prevention and control practices
+and safety guidelines defined by the organisation. For example, safe practices include
+ensuring that when using hot wax, there are no burns to the patient.
+
+Refer to IPC.3.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS. Failure to adhere to IPC and safety
+practices is a compliance failure at the COP.18 level; the underlying IPC obligations
+are governed by the hospital's IPC standards.
+
+Mandatory (shall):
+  — Staff providing rehabilitation shall adhere to IPC practices defined by the
+    organisation (shall — "must adhere" is the Guidebook formulation; translate
+    to shall in the policy).
+  — Staff providing rehabilitation shall adhere to safety guidelines defined by
+    the organisation (shall — both IPC and safety are stated).
+
+Non-mandatory:
+  — Hot wax/burns prevention is an illustrative example of safety practice — the
+    specific safety practices applicable to the rehabilitation services provided
+    are the organisation's determination.
+  — IPC.3 is cross-referenced — not cited in the policy; "those requirements are
+    covered in the hospital's other policies."
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.18.g
+Level: Excellence | No star
+
+Verbatim OE text:
+Care pathways are developed, implemented, and reviewed periodically.
+
+Guidebook interpretation (PDF p. 141):
+Care pathways shall be based on evidence and/or sound clinical practices. These
+provide the team, detailed guidance at various stages of rehabilitation. Development
+of care pathways is a continuous process.
+
+Stop-work check: Excellence — no stop-work trigger.
+
+Mandatory (shall — at Excellence level, implementation is expected):
+  — Care pathways shall be based on evidence and/or sound clinical practices (shall).
+  — Care pathways shall be developed, implemented, and reviewed periodically (shall —
+    all three verbs from OE text are mandatory actions at Excellence tier; not just
+    development, but implementation and periodic review).
+  — Development of care pathways is acknowledged as a continuous process — meaning
+    the obligation does not end once initial pathways are created.
+
+Non-mandatory:
+  — The number, type, or clinical scope of the first set of care pathways is not
+    prescribed — the organisation determines which rehabilitation pathways to
+    prioritise initially.
+  — The review interval ("periodically") is the organisation's determination.
+
+Note: This is Excellence level. The highest tier of NABH assessment. Present it as
+the organisation's commitment to evidence-based continuous improvement in
+rehabilitation care, not merely as a documentation exercise.
+
+DRAFTING NOTE: The three obligations — develop, implement, review — are all in the
+OE text. Do not describe care pathways only as a development activity. Implementation
+evidence (that care pathways are actually used) and periodic review records are both
+needed at Excellence assessment.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table — COP.18
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    Commitment   No     No     NO          Rehabilitation scope at a minimum commensurate with
+                                            clinical services provided (shall — scope-matching
+                                            mandatory); at least basic rehabilitation available
+                                            per service scope (shall); service types
+                                            (physiotherapy, OT, speech, clinical psychology)
+                                            illustrative; referral for advanced rehabilitation
+                                            "could" (advisory alternative)
+b    Commitment   No     No     NO          Written guidance governs rehabilitation services
+                                            (shall); consistent provision per written guidance
+                                            (shall); guidance based on STG/sound clinical
+                                            practices by adapting/adopting (shall)
+c    Commitment   No     No     NO          Collaborative planning by minimum named pair:
+                                            treating doctor AND rehabilitation therapist (shall);
+                                            plus other professional experts as appropriate;
+                                            form of collaboration is org's determination
+d    Commitment   No     No     NO          Space and equipment adequate per rehabilitation scope
+                                            (shall); RESUSCITATION EQUIPMENT shall be available
+                                            in rehabilitation areas (shall — explicit requirement);
+                                            professional guidance "could" inform determination
+                                            (advisory)
+e    Commitment   No     No     NO          Functional assessment guides care (shall); periodic
+                                            RE-ASSESSMENTS done and documented (shall — both
+                                            performance and documentation stated in OE text);
+                                            shall be done by qualified individual(s) (shall);
+                                            assessment scales "relevant" — org's clinical
+                                            determination; reassessment interval not prescribed
+f    Commitment   No     No     NO          IPC practices adhered to (shall); safety guidelines
+                                            adhered to (shall); both IPC and safety stated;
+                                            hot-wax/burns example illustrative; IPC.3 cross-ref
+                                            not cited in policy
+g    Excellence   No     No     NO          Care pathways based on evidence and/or sound
+                                            clinical practices (shall); THREE OBLIGATIONS:
+                                            develop, implement, review periodically (all shall —
+                                            all three in OE text); development is a continuous
+                                            process; Excellence level; no prescribed pathway
+                                            scope or review interval
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES — COP.18
+─────────────────────────────────────────────────────────────────────────────
+
+1. SCOPE-MATCHING PRINCIPLE (COP.18.a): The minimum rehabilitation scope is set by
+   the clinical services the organisation provides. The policy scope statement must
+   list the hospital's rehabilitation services and demonstrate the alignment.
+
+2. RESUSCITATION EQUIPMENT (COP.18.d): Explicitly stated as shall — state it as a
+   separate requirement, not implied by "adequate equipment."
+
+3. BOTH ASSESSMENT AND RE-ASSESSMENT (COP.18.e): OE text explicitly includes
+   "periodic re-assessments which are done and documented." State both the initial
+   functional assessment and the periodic re-assessment obligations separately.
+
+4. QUALIFIED ASSESSOR (COP.18.e): "A qualified individual(s)" — competency is
+   mandatory for the assessor. The specific qualification is not prescribed.
+
+5. CARE PATHWAYS — THREE OBLIGATIONS (COP.18.g): develop, implement, review
+   periodically — all three are in the OE text. Evidence for assessment includes
+   all three, not just the existence of a pathway document.
+
+6. EXCELLENCE POSITIONING (COP.18.g): This OE is the highest tier. Present it
+   as a quality leadership commitment. Do not bury it among routine Commitment-level
+   obligations.
+
+7. SCOPE CONDITION: If the organisation does not provide rehabilitation services,
+   state this in the scope section of the policy. COP.18.a establishes scope
+   commensurateness — if no clinical services require rehabilitation, the standard
+   is not applicable.
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.19 — Nutritional Therapy
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Nutritional therapy is provided to patients consistently and collaboratively.
+
+OE count: 5 | COREs: none | Stars: a★
+All OEs: Commitment level | Stop-work: NO
+
+Doc no: HCO/COP/POL/19
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.19.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Patients admitted to the organisation are screened for nutritional risk.
+
+Guidebook interpretation (PDF p. 141):
+Nutritional screening is done by the caregiver (doctor or nurse). Besides clinical
+assessment, nutritional screening may also be done using a validated tool such as
+Nutritional Risk Screening (NRS malnutrition screening tool-2002), mini nutritional
+assessment-short form, malnutrition universal screening tool (MUST) for adults, The
+Global Leadership Initiative on Malnutrition (GLIM) criteria-2019, simple two-part
+tool, etc.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS.
+
+SCREENER: "By the caregiver (doctor or nurse)" — the screener must be a doctor or
+nurse; not delegated to non-clinical administrative staff.
+
+SCOPE: "Patients admitted to the organisation" — inpatient screening at admission is
+the stated scope. Not all outpatients are included in this OE (though outpatient
+nutrition care may be in scope for other standards).
+
+Mandatory (shall):
+  — Patients admitted to the organisation shall be screened for nutritional risk (shall
+    — universal at admission; no exceptions stated).
+  — Screening shall be done by the caregiver: doctor or nurse (shall — the screener
+    role is specified).
+
+Non-mandatory:
+  — Validated tools (NRS-2002, MNA-SF, MUST, GLIM criteria-2019, simple two-part
+    tool) are listed as examples of what "may" be used — use of a validated tool
+    is recommended but the Guidebook formulation is "may also be done using" —
+    clinical assessment alone is permitted, with validated tools as an enhancement.
+
+Documentation: This OE is starred — the nutritional screening record is the required
+documentation.
+
+DRAFTING NOTE: The screener must be a doctor or nurse — not a dietician acting as
+the first screener (though a dietician may conduct the subsequent nutritional assessment
+at COP.19.b). This distinction matters for workflow design.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.19.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Nutritional assessment is done for patients found at risk during nutritional screening.
+
+Guidebook interpretation (PDF p. 141):
+A dietician shall do a nutritional assessment for all patients found at risk during
+nutritional screening. It is preferable that nutritional assessment is done using a
+validated tool(s). The assessment shall include at a minimum, planning, preparation
+and distribution of diet, to the patient.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS.
+
+ASSESSOR: "A dietician shall do a nutritional assessment" — the nutritional assessment
+must be done by a dietician; not by the nurse or doctor who conducted the screening.
+
+SCOPE TRIGGER: "for all patients found at risk" — no exceptions for patients
+identified as at nutritional risk during screening.
+
+THREE MANDATORY MINIMUM ASSESSMENT CONTENT ELEMENTS — preserve all three:
+  1. Planning (of diet)
+  2. Preparation (of diet)
+  3. Distribution of diet to the patient
+
+Mandatory (shall):
+  — A dietician shall do the nutritional assessment (shall — the assessor is
+    specified as a dietician).
+  — Assessment shall be done for ALL patients found at risk during screening (shall —
+    "all" is stated; the scope trigger is the screening positive result).
+  — Assessment shall include at a minimum the three content elements above (shall —
+    "at a minimum" sets the floor; the assessment may extend beyond these three).
+
+Non-mandatory:
+  — Use of validated tool(s) for assessment is "preferable" — advisory best practice;
+    the dietician's professional judgment and clinical assessment may be used if a
+    validated tool is not available.
+
+DRAFTING NOTE: The three minimum assessment content elements (planning, preparation,
+distribution of diet) represent the output/action plan of the nutritional assessment —
+not merely a diagnostic evaluation. The assessment must result in an action (a diet plan).
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.19.c
+Level: Commitment | No star
+
+Verbatim OE text:
+The therapeutic diet is planned and provided collaboratively.
+
+Guidebook interpretation (PDF p. 141):
+The nutritional assessment shall result in the formulation of a therapeutic diet. The
+dietician shall ensure that this is planned in consultation with the treating doctor
+and the patient/patient's relative after taking into regard the patient's food allergies,
+food habits (veg/non-veg) and likes and dislikes. The process ensures that the patient
+receives food as per the diet order.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS.
+
+THREE MANDATORY COLLABORATIVE PLANNING PARTICIPANTS:
+  1. Dietician (planner and coordinator)
+  2. Treating doctor (consultation)
+  3. Patient and/or patient's relative (consultation — patient preferences are required inputs)
+
+THREE MANDATORY PATIENT FACTORS IN DIET PLANNING — preserve all three:
+  1. Food allergies
+  2. Food habits (veg/non-veg)
+  3. Likes and dislikes
+
+Mandatory (shall):
+  — Nutritional assessment shall result in the formulation of a therapeutic diet
+    (shall — the assessment has a mandatory output: a therapeutic diet plan).
+  — Dietician shall plan the therapeutic diet in consultation with the treating doctor
+    AND the patient/patient's relative (shall — the three-party collaboration is
+    mandatory; bilateral (dietician + doctor only) is not sufficient).
+  — Three patient factors shall be taken into regard: food allergies, food habits
+    (veg/non-veg), and likes and dislikes (shall — all three stated as required inputs).
+  — Patient shall receive food as per the diet order (shall — this is the compliance
+    outcome of the collaborative planning process).
+
+Non-mandatory:
+  — The specific therapeutic diet type is determined by the nutritional assessment
+    and clinical judgment — not prescribed.
+
+DRAFTING NOTE: The three patient factors (allergies, food habits, likes/dislikes) are
+mandatory inputs to the planning process. Neglecting food allergies in particular is
+a patient-safety risk. Do not reduce to "patient preferences considered."
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.19.d
+Level: Commitment | No star
+
+Verbatim OE text:
+Patients receive food according to the written order for the diet.
+
+Guidebook interpretation (PDF p. 141–142):
+Patients receive food according to their clinical needs. Written order could be either
+normal or therapeutic diet. Order shall be written in a uniform location in the medical
+record. Normal diet is provided to patients who are found to be at no risk during
+nutritional screening. In case of a therapeutic diet, dietician shall prepare this in
+the form of a diet sheet and patient shall receive food accordingly. Examples of
+therapeutic diets include diabetic diet, high protein diet, total parenteral nutrition,
+etc.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS.
+
+TWO DIET ORDER TYPES:
+  1. Normal diet — for patients found at no nutritional risk during screening.
+  2. Therapeutic diet — for patients requiring clinical dietary intervention; prepared
+     by dietician as a diet sheet.
+
+Mandatory (shall):
+  — A written diet order shall exist for every admitted patient — either normal or
+    therapeutic (shall — "written order" is the stated requirement for all patients).
+  — The written order shall be in a uniform location in the medical record (shall —
+    "uniform location" is a stated documentation standard; not in ad hoc notes).
+  — Patients shall receive food as per the written diet order (shall — compliance
+    with the order is the mandatory delivery standard).
+  — For therapeutic diet: dietician shall prepare a diet sheet and patient shall
+    receive food accordingly (shall — the diet sheet and adherent delivery are
+    both mandatory).
+
+Non-mandatory (illustrative):
+  — Examples of therapeutic diets (diabetic diet, high protein diet, total parenteral
+    nutrition) are illustrative — the organisation determines what therapeutic diets
+    are within scope.
+
+DRAFTING NOTE: "Uniform location in the medical record" is a specific documentation
+standard — state it explicitly. The order location must be consistent so that the
+kitchen/catering staff can reliably find and follow it.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.19.e
+Level: Commitment | No star
+
+Verbatim OE text:
+When families provide food, they are educated about the patient's diet limitations.
+
+Guidebook interpretation (PDF p. 142):
+The dietician/nurse shall ensure education during planning. When family provides food,
+the dietician shall monitor compliance with the prescribed diet.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS.
+
+Mandatory (shall):
+  — When families provide food: the family shall be educated about the patient's
+    diet limitations (shall — the OE text is conditional on families providing food;
+    when that condition is met, education is mandatory).
+  — The dietician/nurse shall ensure education is delivered (shall — the responsibility
+    is named: dietician or nurse).
+  — When family provides food: the dietician shall monitor compliance with the
+    prescribed diet (shall — monitoring is mandatory, not advisory, when family
+    brings food).
+
+Non-mandatory:
+  — The timing of education ("during planning" in the Guidebook) is the preferred
+    delivery point but not a hard prescribed trigger beyond "when families provide food."
+
+DRAFTING NOTE: Two distinct obligations flow from family-provided food:
+  1. Education of the family about diet limitations (mandatory when condition triggered).
+  2. Monitoring of the family's compliance with the prescribed diet (mandatory).
+Both must be stated in the policy. The monitoring obligation is often omitted —
+do not reduce to education-only.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table — COP.19
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    Commitment   Yes★   No     NO          ALL admitted patients screened for nutritional risk
+                                            (shall — universal at admission); screener: doctor
+                                            or nurse (shall — not non-clinical staff); validated
+                                            tools (NRS-2002, MNA-SF, MUST, GLIM-2019) listed
+                                            as examples of "may also be used" — clinical
+                                            assessment alone permitted; starred doc
+b    Commitment   No     No     NO          DIETICIAN shall do nutritional assessment for ALL
+                                            patients found at risk (shall — assessor specified;
+                                            scope: all at-risk patients, no exceptions); THREE
+                                            MANDATORY MINIMUM ASSESSMENT ELEMENTS: planning,
+                                            preparation, distribution of diet (all shall —
+                                            at a minimum); validated tool "preferable" (advisory)
+c    Commitment   No     No     NO          Nutritional assessment results in therapeutic diet
+                                            formulation (shall — mandatory output); THREE-PARTY
+                                            COLLABORATION: dietician + treating doctor +
+                                            patient/relative (all named, shall); THREE MANDATORY
+                                            PATIENT FACTORS: food allergies, food habits
+                                            (veg/non-veg), likes and dislikes (all shall);
+                                            patient receives food per diet order (shall)
+d    Commitment   No     No     NO          Written diet order for every admitted patient —
+                                            normal or therapeutic (shall); UNIFORM LOCATION in
+                                            medical record (shall — documentation standard);
+                                            patient receives food per written order (shall);
+                                            for therapeutic diet: dietician prepares diet sheet
+                                            (shall); patient receives food accordingly (shall);
+                                            therapeutic diet examples (diabetic, high protein,
+                                            TPN) illustrative
+e    Commitment   No     No     NO          CONDITION: when families provide food — TRIGGERED:
+                                            (1) family educated about diet limitations (shall);
+                                            (2) dietician/nurse ensures education (shall —
+                                            named responsible persons); (3) dietician monitors
+                                            family compliance with prescribed diet (shall —
+                                            monitoring is mandatory, not advisory); both
+                                            education AND monitoring obligations fire when
+                                            condition triggered
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES — COP.19
+─────────────────────────────────────────────────────────────────────────────
+
+1. SCREENER vs ASSESSOR DISTINCTION: COP.19.a — screening by doctor or nurse;
+   COP.19.b — nutritional assessment by dietician. These are distinct roles.
+   Do not collapse them. The policy workflow must show the handoff from screener
+   to dietician when screening is positive.
+
+2. THREE MINIMUM ASSESSMENT OUTPUT ELEMENTS (COP.19.b): planning, preparation,
+   distribution — the assessment must result in an action plan, not just a diagnosis.
+
+3. THREE-PARTY DIET PLANNING (COP.19.c): dietician + treating doctor + patient/relative
+   are all mandatory participants. Bilateral planning (any two parties only) is
+   not sufficient.
+
+4. THREE PATIENT FACTORS IN DIET PLANNING (COP.19.c): food allergies, food habits
+   (veg/non-veg), and likes and dislikes — all three stated. Allergies in particular
+   are a patient safety element; state them separately.
+
+5. UNIFORM LOCATION OF DIET ORDER (COP.19.d): "Uniform location in the medical
+   record" is a stated documentation standard. Identify the specific location in
+   the hospital's medical record where diet orders must be placed.
+
+6. DUAL OBLIGATION FOR FAMILY-PROVIDED FOOD (COP.19.e): education AND monitoring —
+   both are mandatory when families bring food. Do not state only the education
+   obligation.
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.20 — End-of-Life Care
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+End-of-life care is provided in a compassionate and considerate manner.
+
+OE count: 5 | COREs: none | Stars: a★ | Achievement: b
+Levels: a Commitment, b Achievement, c–e Commitment | Stop-work: NO
+
+Doc no: HCO/COP/POL/20
+
+STATUTORY NOTE: COP.20.c references decisions like DNR/DNI/AND as being governed
+only by statutory laws and within guidelines framed by the legal system. Named
+references in the Guidebook: ICMR Do Not Resuscitate Guideline and Supreme Court
+directives 2023 on Advanced Directives and Living Will. These are authoritative
+regulatory and judicial guidance instruments; the hospital is responsible for
+verifying current versions and any State-specific requirements.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.20.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+End-of-life care is provided in a consistent manner in the organisation.
+
+Guidebook interpretation (PDF p. 142–143):
+The organisation develops written guidance for End-of-Life Care based on good
+practices (national and international) and in accordance with the law of the land.
+
+End-of-life care provided by the organisation includes:
+  * providing appropriate pain, rehabilitative and palliative care according to the
+    wishes of the family and patient;
+  * sensitively addressing such issues as autopsy and organ donation;
+  * respecting the patient's values, religion, and cultural preferences;
+  * involving the patient and family in all aspects of care; and
+  * responding to the psychological, emotional, spiritual, and cultural concerns of
+    the patient and family (where possible).
+
+The written guidance shall also incorporate requirements of objective element "c" and
+shall be prepared to keep in mind objective element "b".
+
+Refer to the glossary for a definition of "end-of-life".
+
+Stop-work check: Not in STOP_WORK_PROPOSALS.
+
+FIVE MANDATORY WRITTEN-GUIDANCE CONTENT AREAS — preserve all five verbatim:
+  1. Providing appropriate pain, rehabilitative and palliative care according to the
+     wishes of the family and patient
+  2. Sensitively addressing such issues as autopsy and organ donation
+  3. Respecting the patient's values, religion, and cultural preferences
+  4. Involving the patient and family in all aspects of care
+  5. Responding to the psychological, emotional, spiritual, and cultural concerns of
+     the patient and family (where possible)
+
+CROSS-OE INTEGRATION (stated in Guidebook):
+  — The written guidance for COP.20.a shall incorporate the requirements of COP.20.c
+    (legal requirements for DNR/DNI/AND decisions) — stated as a shall.
+  — The written guidance shall be prepared keeping COP.20.b in mind (multi-professional
+    approach) — this is advisory: "keep in mind" is not "shall incorporate."
+
+Mandatory (shall):
+  — Written guidance for end-of-life care shall be developed (shall).
+  — Written guidance shall be based on good practices (national and international)
+    and in accordance with the law of the land (shall — both dimensions are mandatory).
+  — Written guidance shall incorporate all five content areas above (shall — stated
+    mandatory inclusions).
+  — Written guidance shall incorporate the legal requirements of COP.20.c (shall —
+    the DNR/DNI/AND governance framework must be embedded in the written guidance).
+
+Non-mandatory:
+  — "Where possible" in item 5 (responding to psychological/emotional/spiritual/cultural
+    concerns) — this qualifier is in the Guidebook text; it does not eliminate the
+    obligation but acknowledges operational limitations.
+  — COP.20.b (multi-professional approach) is to be "kept in mind" — advisory
+    framing; the shall is in COP.20.b's own OE, not here.
+
+Documentation: This OE is starred — the written guidance is the required documentation.
+
+DRAFTING NOTE: The five mandatory content areas must appear explicitly in the written
+guidance — not as implied practice. Autopsy and organ donation in item 2 are explicitly
+named; these conversations must be handled "sensitively" — that word is part of the
+stated obligation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.20.b
+Level: Achievement | No star
+
+Verbatim OE text:
+A multi-professional approach is used to provide end-of-life care.
+
+Guidebook interpretation (PDF p. 143):
+The team could include a doctor, nurse, clinical psychologist, rehabilitation expert etc.
+It is preferable that someone trained in palliative care heads the team.
+
+Stop-work check: Achievement — no stop-work trigger.
+
+ILLUSTRATIVE TEAM COMPOSITION (not a mandatory fixed list):
+  — Doctor
+  — Nurse
+  — Clinical psychologist
+  — Rehabilitation expert
+  — (Others as appropriate — "etc.")
+
+Mandatory (shall — at Achievement level):
+  — A multi-professional approach shall be used to provide end-of-life care (shall —
+    OE text uses "is used"; in policy drafting this is a shall at Achievement tier).
+
+Non-mandatory:
+  — The specific team composition is illustrative ("could include") — the organisation
+    defines its own MDT composition based on available expertise and patient needs.
+  — Someone trained in palliative care heading the team is "preferable" — advisory
+    best practice; not a shall.
+
+Note: Achievement level. Present this as an advanced organisational commitment —
+above the Commitment-level floor. The multi-professional MDT for end-of-life care
+is an Achievement standard that distinguishes comprehensive palliative care capability.
+
+DRAFTING NOTE: The Guidebook says "someone trained in palliative care heads the team"
+is preferable. Even though this is advisory, it is a strong clinical best-practice
+statement. Consider recommending it in the policy as a quality aspiration without
+elevating it to a shall.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.20.c
+Level: Commitment | No star
+
+Verbatim OE text:
+End-of-life care is in consonance with the legal requirements.
+
+Guidebook interpretation (PDF p. 143):
+Decisions like "Do not resuscitate/Do not intubate/Allow natural death etc." shall be
+only as per the statutory laws and within the guidelines framed by the legal system.
+For example: ICMR Do not Resuscitate Guideline, Supreme Court directives 2023 on
+Advanced Directives and Living Will.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS. However: making a DNR/DNI/AND
+decision contrary to statutory law would be a legal violation. The legal framework
+is binding independent of the accreditation stop-work flag.
+
+STATUTORY FRAMEWORK:
+  — DNR/DNI/AND decisions shall be only as per statutory laws and within guidelines
+    framed by the legal system (shall — the restriction is absolute; no DNR/DNI/AND
+    decision may be made outside this framework).
+  — Named guidance instruments (Guidebook examples — informative, not exhaustive):
+    — ICMR Do Not Resuscitate Guideline
+    — Supreme Court directives 2023 on Advanced Directives and Living Will
+  — The hospital is responsible for verifying the current version of all applicable
+    guidance and any State-specific requirements.
+
+Mandatory (shall):
+  — End-of-life care shall be in consonance with the legal requirements (shall).
+  — DNR/DNI/AND and similar decisions shall be made only as per statutory laws and
+    within the legal system's guidelines (shall — the "only" is absolute).
+
+Non-mandatory:
+  — The specific named instruments (ICMR guideline, Supreme Court directives 2023)
+    are examples in the Guidebook — the legal framework may include additional
+    instruments. The hospital must identify all applicable statutory and judicial
+    authorities.
+
+DRAFTING NOTE: The policy disclaimer must explicitly state that end-of-life decisions
+(DNR/DNI/AND) are made only within the applicable statutory and judicial framework,
+and that the hospital is responsible for verifying current requirements. Do not
+reproduce the text of the named instruments. Reference the hospital's legal compliance
+register.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.20.d
+Level: Commitment | No star
+
+Verbatim OE text:
+End-of-life care also addresses the identification of the unique needs of such
+patient and family.
+
+Guidebook interpretation (PDF p. 143):
+The psychological, emotional, cultural, religious and socio-cultural beliefs of
+patients/family shall be addressed and respected. Staff are educated about the unique
+needs of the patients and their families at the end of life.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS.
+
+FIVE MANDATORY NEED DIMENSIONS — preserve all five:
+  1. Psychological needs
+  2. Emotional needs
+  3. Cultural needs
+  4. Religious needs
+  5. Socio-cultural beliefs
+
+Mandatory (shall):
+  — All five need dimensions above shall be addressed and respected (shall — both
+    "addressed" and "respected" are stated; passive acknowledgement is not sufficient).
+  — Staff shall be educated about the unique needs of patients and their families at
+    the end of life (shall — staff education is a mandatory organisational
+    responsibility, not a personal discretionary action).
+
+Non-mandatory:
+  — The specific form of staff education (formal training, case-based discussions,
+    reflective practice) is the organisation's determination.
+
+DRAFTING NOTE: "Addressed and respected" — both verbs are stated. The policy must
+go beyond identification; the care plan must actively respond to the identified
+unique needs, not merely document them. Staff education is a separate mandatory
+obligation — include a training provision for this in the COP.20 policy.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.20.e
+Level: Commitment | No star
+
+Verbatim OE text:
+Symptomatic treatment is provided and where appropriate measures are taken for
+the alleviation of pain.
+
+Guidebook interpretation (PDF p. 143):
+The emphasis shall be on providing symptomatic treatment of such patients and to
+prevent complications to the possible extent. The patient and/or family shall be
+involved while taking all such decisions. To the extent possible (and as per the law),
+the patient and/or family's choices shall be respected.
+
+Stop-work check: Not in STOP_WORK_PROPOSALS.
+
+Mandatory (shall):
+  — The emphasis shall be on providing symptomatic treatment and preventing
+    complications to the possible extent (shall — "shall be on" is the stated emphasis;
+    not discretionary).
+  — The patient and/or family shall be involved while taking all such decisions (shall —
+    "all such decisions" — there are no exceptions to patient/family involvement in
+    end-of-life symptomatic and comfort-care decisions).
+  — To the extent possible (and as per the law): the patient and/or family's choices
+    shall be respected (shall — the "to the extent possible" and "as per the law"
+    qualifiers are in the Guidebook text; they do not eliminate the obligation).
+  — Where appropriate: measures shall be taken for the alleviation of pain (shall-
+    qualified — "where appropriate" is a clinical judgment qualifier in the OE text;
+    when appropriate, pain alleviation is a shall).
+
+Non-mandatory:
+  — The specific symptomatic treatment measures are determined by clinical judgment
+    and the patient/family's expressed choices — not prescribed.
+
+DRAFTING NOTE: The "to the extent possible (and as per the law)" qualifier is
+explicitly from the Guidebook — retain it in the policy. It acknowledges that not
+all patient/family choices can be honoured (e.g., requests that conflict with law
+or clinical ethics), but the default obligation is to respect their choices. State
+this nuance in the policy language.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table — COP.20
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    Commitment   Yes★   No     NO          Written guidance for end-of-life care (shall); based
+                                            on national and international good practices AND law
+                                            of the land (both, shall); FIVE MANDATORY CONTENT
+                                            AREAS: appropriate pain/rehabilitative/palliative care
+                                            per patient and family wishes, sensitively addressing
+                                            autopsy/organ donation, respecting values/religion/
+                                            culture, involving patient/family in all care aspects,
+                                            responding to psychological/emotional/spiritual/cultural
+                                            concerns where possible (all shall — stated inclusions);
+                                            written guidance shall incorporate COP.20.c legal
+                                            requirements (shall); COP.20.b to be kept in mind
+                                            (advisory); glossary definition of "end-of-life"
+                                            referenced; starred doc
+b    Achievement  No     No     NO          Multi-professional approach shall be used (shall —
+                                            OE text; Achievement tier); team composition
+                                            illustrative (doctor, nurse, clinical psychologist,
+                                            rehabilitation expert — "could include"); palliative-
+                                            care-trained team head "preferable" (advisory);
+                                            Achievement level
+c    Commitment   No     No     NO          End-of-life care in consonance with legal requirements
+                                            (shall); DNR/DNI/AND decisions ONLY per statutory
+                                            laws and legal-system guidelines (shall — "only" is
+                                            absolute); named instruments illustrative: ICMR DNR
+                                            Guideline, Supreme Court directives 2023 on Advanced
+                                            Directives and Living Will; hospital responsible for
+                                            verifying current applicable statutes and guidance;
+                                            statutory disclaimer required
+d    Commitment   No     No     NO          FIVE MANDATORY NEED DIMENSIONS: psychological,
+                                            emotional, cultural, religious, socio-cultural beliefs
+                                            (all shall — "addressed and respected"; both verbs
+                                            mandatory); staff educated about unique needs of
+                                            patients and families at end of life (shall — staff
+                                            education is a separate mandatory obligation)
+e    Commitment   No     No     NO          Symptomatic treatment emphasis (shall — "emphasis
+                                            shall be on"); prevention of complications to possible
+                                            extent (shall); patient and/or family involved in ALL
+                                            such decisions (shall — no exceptions stated); patient/
+                                            family choices respected to extent possible and as per
+                                            law (shall-qualified — both qualifiers from Guidebook);
+                                            pain alleviation measures where appropriate (shall-
+                                            qualified — clinical judgment trigger)
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES — COP.20
+─────────────────────────────────────────────────────────────────────────────
+
+1. FIVE MANDATORY EOL WRITTEN-GUIDANCE CONTENT AREAS (COP.20.a): pain/rehabilitative/
+   palliative care per wishes; sensitively addressing autopsy/organ donation; respecting
+   values/religion/culture; involving patient/family; responding to psycho/emotional/
+   spiritual/cultural concerns where possible — all five must be explicitly addressed
+   in the written guidance.
+
+2. COP.20.c INTEGRATION INTO COP.20.a: The Guidebook explicitly states that COP.20.a's
+   written guidance shall incorporate COP.20.c's legal requirements. The DNR/DNI/AND
+   governance framework belongs inside the COP.20 written guidance, not in a separate
+   standalone legal note.
+
+3. DNR/DNI/AND — ONLY AS PER LAW (COP.20.c): The word "only" in the Guidebook is
+   absolute. State this constraint clearly. Do not allow the policy to imply that
+   DNR/DNI/AND decisions are made at clinical discretion independent of the legal
+   framework.
+
+4. STATUTORY DISCLAIMER (COP.20.c): Name the relevant legal instruments — ICMR DNR
+   Guideline and Supreme Court directives 2023 — in the policy disclaimer. State
+   that the hospital is responsible for verifying current and State-specific requirements.
+
+5. FIVE NEED DIMENSIONS (COP.20.d): psychological, emotional, cultural, religious,
+   socio-cultural — all five stated. Do not collapse to "cultural and spiritual."
+   "Socio-cultural beliefs" is a separate stated dimension.
+
+6. BOTH VERBS (COP.20.d): "addressed and respected" — both are mandatory. Addressed
+   means identified and responded to; respected means the patient/family's framework
+   governs the care response. A policy that only identifies needs without requiring a
+   response does not satisfy this OE.
+
+7. STAFF EDUCATION (COP.20.d): A separate mandatory obligation — include a training
+   component for end-of-life unique needs in the COP.20 policy's training section.
+
+8. PATIENT/FAMILY INVOLVEMENT — "ALL SUCH DECISIONS" (COP.20.e): No exceptions are
+   stated. The involvement requirement applies to all symptomatic and comfort-care
+   decisions. Do not introduce exceptions beyond what the "possible" and "as per law"
+   qualifiers already provide.
+
+9. "AUTOPSY AND ORGAN DONATION" (COP.20.a, content area 2): These are sensitive
+   topics explicitly named. The policy must require that staff handle these conversations
+   in a sensitive manner. Cross-reference COP.15.d (brain-dead patient family counselling)
+   to maintain consistency.
+
+
+─────────────────────────────────────────────────────────────────────────────
+
+STOP_WORK_TEXT() OUTPUTS — COP.15 THROUGH COP.20
+─────────────────────────────────────────────────────────────────────────────
+
+COP.15: stop_work_text(15) → "" (empty — standard not in STOP_WORK_PROPOSALS)
+COP.16: stop_work_text(16) → (complete text reproduced below)
+COP.17: stop_work_text(17) → "" (empty — standard not in STOP_WORK_PROPOSALS)
+COP.18: stop_work_text(18) → "" (empty — standard not in STOP_WORK_PROPOSALS)
+COP.19: stop_work_text(19) → "" (empty — standard not in STOP_WORK_PROPOSALS)
+COP.20: stop_work_text(20) → "" (empty — standard not in STOP_WORK_PROPOSALS)
+
+Complete stop_work_text(16) output:
+─────────────────────────────────────────────────────────────────────────────
+Do not leave a patient identified as vulnerable, at fall risk, at pressure-ulcer risk,
+at DVT risk, or needing restraints without the precautions and monitoring required by
+the organisation's written guidance.
+
+Do not apply or continue restraints without a documented clinical order and ongoing
+review.
+
+Stop-work applies to missing precautions / unauthorised restraint — not to emergency
+physical intervention needed to prevent immediate harm, which is followed at once by
+documentation and medical review.
+
+The person who stops tells the «treating doctor» and the «Ward / ICU In-Charge» the
+same shift. Refusing to leave high-risk patients unprotected is not a disciplinary
+matter.
+─────────────────────────────────────────────────────────────────────────────
+
+Note for rewrite: When generating the COP.16 policy document, this stop-work text
+(with «D()» placeholders resolved to hospital defaults) is inserted in Section 6.
+For the other five standards (15, 17, 18, 19, 20), Section 6 Stop-work is omitted.
+
+
+─────────────────────────────────────────────────────────────────────────────
+
+Source files:
+  policies/source/hco6_cop_ocr.txt       (verbatim OE text + Guidebook, PDF pp. 135–144)
+  policies/source/hco6_cop_inventory.json (OE codes, levels, star flags for COP.15–COP.20)
+  policies/drafts_hco/hco_cop15_v2_draft.json  (draft JSON for COP.15)
+  policies/drafts_hco/hco_cop16_v2_draft.json  (draft JSON for COP.16)
+  policies/drafts_hco/hco_cop17_v2_draft.json  (draft JSON for COP.17)
+  policies/drafts_hco/hco_cop18_v2_draft.json  (draft JSON for COP.18)
+  policies/drafts_hco/hco_cop19_v2_draft.json  (draft JSON for COP.19)
+  policies/drafts_hco/hco_cop20_v2_draft.json  (draft JSON for COP.20)
+  policies/build/hco_cop_v2_common.py     (STOP_WORK_PROPOSALS dict, stop_work_text() function)
+  policies/build/cop_raw_dump_9-14.txt    (format reference for this file)

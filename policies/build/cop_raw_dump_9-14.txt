@@ -1,0 +1,2745 @@
+COP.9–COP.14 — Batched Raw Source Dump
+========================================
+Purpose: ChatGPT draft input for six standards in one pull.
+Each standard drafted and verified individually — same process as all prior chapters.
+
+CROSS-REFERENCE NOTE (applies throughout this file):
+The Guidebook cites specific NABH OE codes in several places (e.g., "Refer to IPC.3.",
+"Refer to PRE.4.e.", "Refer to IMS.3.e."). In policy drafts, these must NOT be reproduced
+as code citations. Use generic phrasing: "Those requirements are covered in the hospital's
+other policies." The specific codes are preserved here for source accuracy only.
+
+STOP-WORK STATUS BY STANDARD:
+  COP.9  — YES (STOP_WORK_PROPOSALS: ICU/HDU admission gating, bed-shortage protocol failure)
+  COP.10 — YES (STOP_WORK_PROPOSALS: unmanaged high-risk obstetric emergency, ART statutory breach)
+  COP.11 — YES (STOP_WORK_PROPOSALS: child/neonate abduction-prevention process failure)
+  COP.12 — YES (STOP_WORK_PROPOSALS: procedural sedation without consent, monitoring, or
+                qualified personnel; no equipment for deeper sedation than intended)
+  COP.13 — YES (STOP_WORK_PROPOSALS: anaesthesia without pre-anaesthesia assessment/plan [CORE],
+                intra-operative monitoring absent [CORE], consent not obtained)
+  COP.14 — YES (STOP_WORK_PROPOSALS: wrong-site/patient/surgery verification absent [CORE],
+                no pre-operative assessment, no surgical consent)
+
+STATUTE DISCLAIMER STATUS:
+  COP.10.k — YES (Assisted Reproductive Technology Act as amended — statutory compliance)
+  COP.13.b  — Guidebook references definition of "anaesthesia" in glossary (not a statute)
+  COP.15    — Transplantation of Human Organs Act (COP.15, not in scope of this file)
+  All others in this file — no specific statute P2 designation
+
+STAR NOTE:
+  Stars are confirmed from the inventory JSON (hco6_cop_inventory.json) cross-checked
+  against OCR text markers. COP.9 has five starred OEs (a, b, d, e, f).
+  COP.10 has two starred OEs (a, d). COP.11 has three starred OEs (a, b, f).
+  COP.12 has two starred OEs (a, g). COP.13 has two starred OEs (a, g).
+  COP.14 has four starred OEs (a, d, i, j).
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.9 — Intensive Care and High Dependency Units
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+The organisation provides care in intensive care and high dependency units in
+a systematic manner.
+
+OE count: 7 | COREs: none | Stars: a★, b★, d★, e★, f★
+Levels: a–e Commitment, f Achievement, g Commitment | Stop-work: YES
+
+Doc no: HCO/COP/POL/09
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.9.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Care of patients in intensive care and high dependency units is provided based
+on written guidance.
+
+Guidebook interpretation (PDF p. 120):
+The written guidance shall be based on standard treatment guidelines/sound
+clinical practices regarding intensive/critical care. At a minimum, this shall
+address all the objective elements of this standard. Where appropriate, the
+organisation could adapt care-bundles.
+
+Stop-work check: YES — COP.9 is in STOP_WORK_PROPOSALS. The written guidance
+is the foundational document for all ICU/HDU care; its absence or failure to
+address the other OEs of this standard is a systemic compliance failure.
+
+Mandatory (shall):
+  — Written guidance shall be based on standard treatment guidelines/sound
+    clinical practices for intensive/critical care (shall).
+  — At a minimum, the written guidance shall address all objective elements of
+    this standard (shall — the minimum scope is the full set of OEs below).
+
+Non-mandatory (illustrative/optional):
+  — Adopting care-bundles "where appropriate" — conditional and advisory;
+    the form of clinical bundling is the organisation's decision.
+
+Documentation: This OE is starred — the written guidance is the required
+documentation.
+
+DRAFTING NOTE: The "at a minimum, this shall address all the objective elements
+of this standard" clause means the written guidance for COP.9 must, on its face,
+cover the substance of OEs b through g. This is not common to every standard —
+it is explicitly stated here.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.9.b
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The defined admission and discharge criteria for intensive care and high
+dependency units are implemented.
+
+Guidebook interpretation (PDF p. 120):
+The organisation shall develop criteria for admission/transfer-in/discharge/
+transfer-out of patients to ICU/HDU based on physiologic parameters and/or
+diagnostic parameters, and adhere to the same. The organisation shall have a
+mechanism for "discharge against medical advice". A good starting point could
+be various national and international critical care society guidelines.
+
+Staff are trained to apply these criteria.
+
+Stop-work check: YES — COP.9 stop-work. Admitting or discharging an ICU/HDU
+patient without applying defined criteria — or the absence of defined criteria —
+is a direct patient-safety trigger.
+
+Mandatory (shall):
+  — Criteria for admission/transfer-in/discharge/transfer-out shall be developed
+    (shall) based on physiologic parameters and/or diagnostic parameters (shall).
+  — The organisation shall adhere to the defined criteria (shall — not aspirational;
+    "implemented" in the OE text means compliance is required).
+  — A mechanism for discharge against medical advice shall exist (shall).
+  — Staff shall be trained to apply these criteria (shall — "staff are trained"
+    is a stated requirement, not advisory).
+
+Non-mandatory:
+  — National and international critical care society guidelines are described as
+    "a good starting point" — advisory reference, not a mandatory source.
+  — Whether criteria are physiologic-parameter-based, diagnostic-parameter-based,
+    or both is the organisation's clinical decision.
+
+Documentation: This OE is starred — the documented admission/discharge criteria
+are the required documentation.
+
+DRAFTING NOTE: The criteria cover four directions: admission, transfer-in,
+discharge, and transfer-out. Do not collapse these to "admission and discharge
+criteria" — transfer-in and transfer-out are distinct scenarios (e.g., step-down
+from ICU to ward, transfer to another ICU).
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.9.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Adequate staff and equipment are available.
+
+Guidebook interpretation (PDF p. 120):
+Statutory requirements, wherever applicable, shall be adhered. The ICU shall be
+equipped with all necessary lifesaving and monitoring equipment as well as
+suitably handled by trained staff. The exact requirements shall be decided by
+the organisation based on the scope and complexity of its services. However,
+the organisation is expected to follow standard treatment guidelines/best
+clinical practices.
+
+Staff working in ICU/HDU shall be competent (based on qualification and/or
+training).
+
+A good reference guide for the nursing workforce is the Indian Nursing Council
+recommendations.
+
+Stop-work check: YES — COP.9 stop-work. Operating an ICU/HDU without the
+necessary lifesaving and monitoring equipment in place, or with staff who are
+not competent for ICU/HDU work, is a patient-safety trigger.
+
+Mandatory (shall):
+  — Statutory requirements applicable to ICU/HDU shall be adhered to (shall).
+  — ICU shall be equipped with all necessary lifesaving and monitoring equipment
+    (shall).
+  — ICU shall be handled by trained staff (shall).
+  — Staff working in ICU/HDU shall be competent — based on qualification and/or
+    training (shall — "qualification and/or training" is the stated basis; both are
+    acceptable paths to competence).
+  — Standard treatment guidelines/best clinical practices shall guide the
+    determination of requirements (shall — the standard, not an invented list).
+
+Non-mandatory:
+  — The exact equipment requirements are the organisation's determination based
+    on scope and complexity — not prescribed item by item in this OE.
+  — Indian Nursing Council recommendations are "a good reference guide" for
+    nursing workforce — advisory, not a mandatory compliance threshold.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.9.d
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Defined procedures for the situation of bed shortages are followed.
+
+Guidebook interpretation (PDF p. 120):
+As and when there are no vacant beds in the ICU, and there is a requirement
+of such bed, detailed policy and procedure shall be in place to address the
+situation.
+
+Stop-work check: YES — COP.9 stop-work. The absence of a defined procedure for
+ICU bed shortage, when a patient requires ICU-level care and no bed is available,
+is a patient-safety gap that triggers the stop-work obligation to escalate and
+resolve before proceeding with that patient's placement.
+
+Mandatory (shall):
+  — Detailed policy and procedure shall be in place to address ICU bed shortage
+    situations (shall — "shall be in place" is explicit; the procedure must exist
+    before the situation arises, not be improvised when it occurs).
+  — The procedures shall be followed (the OE text uses "are followed" — compliance
+    is required, not discretionary).
+
+Non-mandatory:
+  — The specific content of the bed-shortage procedure (step-down, inter-facility
+    transfer, escalation chain) is the organisation's determination.
+
+Documentation: This OE is starred — the policy and procedure document is the
+required documentation.
+
+DRAFTING NOTE: The Guidebook trigger is "as and when" — the procedure must be
+activated whenever ICU beds are full and a patient requires ICU care. It does not
+apply only to predicted or elective demand.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.9.e
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Infection prevention and control practices are followed.
+
+Guidebook interpretation (PDF p. 121):
+Written guidance for infection prevention and control could be developed
+individually or could be a part of the infection prevention and control manual.
+The organisation shall ensure that the practices are in consonance with standard
+treatment guidelines/sound clinical practices.
+
+[Guidebook cross-ref: IPC.3. — in policy draft: "those requirements are covered
+in the hospital's other policies."]
+
+Stop-work check: YES — COP.9 stop-work framework applies. Failure to follow IPC
+practices in an ICU/HDU is a direct patient-safety trigger given the vulnerability
+of critical care patients to healthcare-associated infections.
+
+Mandatory (shall):
+  — The organisation shall ensure that IPC practices in ICU/HDU are in consonance
+    with standard treatment guidelines/sound clinical practices (shall).
+
+Non-mandatory:
+  — Written guidance "could" be developed individually or as part of the IPC
+    manual — the form of documentation is the organisation's choice.
+
+Documentation: This OE is starred — the written IPC guidance applicable to
+ICU/HDU is the required documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.9.f
+Level: Achievement | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation shall implement a quality assurance programme.
+
+Guidebook interpretation (PDF p. 121):
+The written guidance for quality assurance could be developed individually, or
+it could be a part of the organisation's overall quality-improvement programme.
+The quality assurance programme shall involve all aspects of the functioning in
+the intensive care unit. The programme shall be in consonance with standard
+treatment guidelines/sound clinical practices. The organisation shall monitor
+care outcomes, like risk-adjusted standardised mortality rate, infection rates,
+re-admission rates, re-intubation rates, etc. Further, a good starting point could
+be various national and international critical care society guidelines on quality
+assurance in ICUs.
+
+Stop-work check: Achievement — no real-time stop-work trigger from the QA
+programme itself.
+
+Mandatory (shall):
+  — QA programme shall involve all aspects of ICU/HDU functioning (shall —
+    scope is comprehensive, not selective).
+  — Programme shall be in consonance with standard treatment guidelines/sound
+    clinical practices (shall).
+  — The organisation shall monitor care outcomes (shall).
+
+Stated outcome examples (illustrative, not a mandatory monitoring list):
+  risk-adjusted standardised mortality rate, infection rates, re-admission rates,
+  re-intubation rates.
+
+Non-mandatory:
+  — Written guidance form "could" be standalone or part of overall QI (advisory).
+  — National and international critical care society guidelines are "a good starting
+    point" for the QA programme — advisory reference, not a compliance bar.
+  — The specific KPIs selected are the organisation's determination based on scope.
+
+Documentation: This OE is starred — the QA programme documentation is the
+required documentation.
+
+Note: This is Achievement level. Present it as an advanced quality commitment
+in the policy, not at the same weight as Commitment-level OEs.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.9.g
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation has a mechanism to counsel the patient and/or family
+periodically.
+
+Guidebook interpretation (PDF p. 121):
+Patients and families are counselled by a doctor of the treating team at periodic
+intervals (at least once a day) and when there is a significant change in the
+condition of the patient. Significant events since the last counselling session,
+expected outcomes, and queries related to the changing condition of the patient
+shall be addressed. Counselling shall be documented and/or audio video
+recorded. It is preferable to obtain an acknowledgement for the same.
+
+Stop-work check: Commitment — no real-time stop-work trigger from individual
+counselling delays; however, systematic absence of any counselling mechanism
+is a compliance failure.
+
+EXACT MANDATORY FREQUENCY — preserve verbatim:
+  — "at least once a day" — counselling shall occur at least once a day and
+    whenever there is a significant change in the patient's condition.
+    Do not soften to "regularly" or "periodically" — the Guidebook specifies
+    the minimum.
+
+Mandatory (shall):
+  — Counselling shall be conducted by a doctor of the treating team (shall —
+    not by nursing staff or other personnel acting as the sole counsellor).
+  — Frequency: at least once a day AND on significant change in patient condition
+    (shall — both triggers are mandatory).
+  — Significant events, expected outcomes, and patient queries related to changing
+    condition shall be addressed (shall — three content obligations).
+  — Counselling shall be documented and/or audio-video recorded (shall — at least
+    one of the two modalities is required).
+
+Non-mandatory:
+  — Obtaining an acknowledgement from the family is "preferable" — advisory
+    best practice, not a shall.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table — COP.9
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    Commitment   Yes★   No     YES         Written guidance based on STG/sound clinical practices
+                                            (shall); at a minimum covers all OEs of this standard
+                                            (shall — stated minimum scope); care-bundles "where
+                                            appropriate" (conditional, advisory); starred doc
+b    Commitment   Yes★   No     YES         Criteria for admission/transfer-in/discharge/transfer-out
+                                            based on physiologic and/or diagnostic parameters (shall);
+                                            criteria shall be adhered to (shall); discharge-against-
+                                            medical-advice mechanism (shall); staff trained to apply
+                                            criteria (shall); international guidelines "good starting
+                                            point" (advisory); starred doc
+c    Commitment   No     No     YES         Statutory requirements adhered to (shall); lifesaving and
+                                            monitoring equipment in ICU (shall); trained staff (shall);
+                                            staff competent by qualification and/or training (shall);
+                                            exact requirements org-determined by scope and complexity;
+                                            INC recommendations advisory reference
+d    Commitment   Yes★   No     YES         Detailed policy and procedure for bed-shortage situations
+                                            shall be in place (shall); procedures shall be followed
+                                            (compliance required); content of procedure is
+                                            org-determined; starred doc
+e    Commitment   Yes★   No     YES         IPC practices shall be in consonance with STG/sound
+                                            clinical practices (shall); form of written guidance
+                                            "could" be standalone or part of IPC manual (advisory);
+                                            IPC.3 cross-ref — not cited in policy; starred doc
+f    Achievement  Yes★   No     NO          QA covers all aspects of ICU functioning (shall);
+                                            consonant with STG/sound clinical practices (shall);
+                                            care outcomes monitored (shall); outcome examples
+                                            (RASMR, infection rates, re-admission, re-intubation)
+                                            illustrative; form of guidance "could" be standalone
+                                            or part of QI (advisory); Achievement level
+g    Commitment   No     No     NO          EXACT FREQUENCY: "at least once a day" + on significant
+                                            change (both triggers mandatory, shall); counselled by
+                                            doctor of treating team (shall); three content obligations:
+                                            significant events, expected outcomes, patient queries
+                                            (shall); counselling documented and/or audio-video
+                                            recorded (shall); acknowledgement "preferable" (advisory)
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES — COP.9
+─────────────────────────────────────────────────────────────────────────────
+
+1. ONE EXACT FREQUENCY:
+   — COP.9.g: "at least once a day" — do not soften to "periodically" or
+     "at regular intervals."
+
+2. SCOPE OF WRITTEN GUIDANCE (COP.9.a): The mandatory minimum scope of the
+   written guidance is "all objective elements of this standard." This is
+   explicitly stated — the policy must address COP.9.a through COP.9.g on
+   its face. This is unusual language; flag it in the draft header.
+
+3. FOUR-DIRECTION CRITERIA (COP.9.b): admission, transfer-in, discharge,
+   transfer-out — all four directions are stated. Do not collapse.
+
+4. DISCHARGE AGAINST MEDICAL ADVICE (COP.9.b): A mechanism for DAMA must
+   exist as a separate stated requirement — it is not subsumed by "discharge
+   criteria."
+
+5. COUNSELLING DOCUMENTATION (COP.9.g): Either documentation in writing OR
+   audio-video recording satisfies the shall — but at least one modality is
+   mandatory. Both simultaneously is not required.
+
+6. STOP-WORK (COP.9): Primary triggers: absent or unapplied admission/discharge
+   criteria (COP.9.b), absent bed-shortage procedure (COP.9.d), inadequate ICU
+   equipment or uncompetent staff (COP.9.c), IPC practices not followed (COP.9.e).
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.10 — Obstetric Care
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Organisation provides safe obstetric care.
+
+OE count: 11 | COREs: none | Stars: a★, d★
+Levels: a–d Commitment, e Achievement, f–k Commitment | Stop-work: YES
+
+Doc no: HCO/COP/POL/10
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.10.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Obstetric services are organised and provided safely.
+
+Guidebook interpretation (PDF p. 122):
+Written guidance based on standard treatment guidelines/sound clinical
+practices govern the organisation and delivery of safe obstetric care. At a
+minimum, this shall include assessment of pregnant patients incorporating
+nutrition, immunisation and education; and ante-natal, peri-natal and post-natal
+care guidelines.
+
+The organisation shall define in its written guidance, whether care for high-risk
+obstetric cases is provided or not. The organisation shall define as to what
+constitutes a high-risk obstetric case in consonance with best clinical practices.
+
+Staff shall be trained on the management of obstetric emergencies, based on
+evidenced-based clinical practice guidelines.
+
+Care of the new-borns is in accordance with COP.11.b.
+
+Stop-work check: YES — COP.10 is in STOP_WORK_PROPOSALS. Absence of staff
+training for obstetric emergencies is a stop-work trigger for any high-risk
+obstetric care delivery.
+
+THREE MANDATORY MINIMUM CONTENT AREAS (written guidance) — preserve all three:
+  1. Assessment of pregnant patients incorporating nutrition, immunisation and
+     education
+  2. Ante-natal care guidelines
+  3. Peri-natal and post-natal care guidelines
+
+Mandatory (shall):
+  — Written guidance shall be based on STG/sound clinical practices (shall).
+  — Written guidance shall, at a minimum, include the three areas above (shall —
+    stated minimum; ante-natal, peri-natal, and post-natal are three distinct areas).
+  — Organisation shall define in written guidance whether care for high-risk
+    obstetric cases is provided or not (shall — scope declaration is mandatory).
+  — Organisation shall define what constitutes a high-risk obstetric case in
+    consonance with best clinical practices (shall).
+  — Staff shall be trained on management of obstetric emergencies based on
+    evidence-based CPGs (shall — training is mandatory, not advisory).
+
+Non-mandatory:
+  — Care of new-borns is in accordance with COP.11.b — cross-ref only; do not
+    cite the OE code in the policy.
+
+Documentation: This OE is starred — the written guidance is the required
+documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.10.b
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation identifies and, provides care to high-risk obstetric cases, and
+where needed, refers them to another appropriate centre.
+
+Guidebook interpretation (PDF p. 122):
+Ante-natal examination(s) shall guide the early identification of high-risk
+obstetric cases. High-risk obstetric cases shall have more frequent ante-natal
+check-ups, where appropriate. In case, care of high-risk obstetric cases is not
+in the scope of the organisation's obstetric services; there shall be a pro-active
+referral to the appropriate organisation.
+
+The organisation caring for high-risk obstetric cases have competent workforce
+and facilities to take care of such mothers and neonates.
+
+Stop-work check: YES — COP.10 stop-work. An organisation that provides care
+to high-risk obstetric cases without competent workforce and appropriate
+facilities is a direct patient-safety trigger.
+
+Mandatory (shall):
+  — Ante-natal examination(s) shall guide early identification of high-risk cases
+    (shall — ante-natal exams are the identification mechanism).
+  — High-risk cases shall have more frequent ante-natal check-ups, where
+    appropriate (shall — the qualifier "where appropriate" is clinical; the
+    obligation when appropriate is a shall).
+  — If high-risk obstetric care is outside scope: pro-active referral shall be made
+    to an appropriate organisation (shall — referral is mandatory when in-scope
+    care is unavailable; pro-active means before the patient presents in crisis).
+  — Organisations providing high-risk care shall have competent workforce and
+    facilities to care for such mothers and neonates (shall).
+
+Non-mandatory:
+  — The specific competency criteria for the workforce are the organisation's
+    determination within clinical practice frameworks.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.10.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Persons caring for high-risk obstetric cases are competent.
+
+Guidebook interpretation (PDF p. 122):
+These shall not just be doctors but shall include nursing staff also. The
+competency shall be based on qualification and/or experience and/or training.
+
+Stop-work check: YES — COP.10 stop-work. Allowing unqualified or
+incompetent personnel to manage high-risk obstetric cases is a direct trigger.
+
+Mandatory (shall):
+  — Competent persons shall include both doctors AND nursing staff (shall —
+    "not just doctors" is explicit; nursing staff competency is equally required).
+  — Competency shall be based on qualification and/or experience and/or training
+    (shall — the three-pathway basis; any one or combination satisfies).
+
+Non-mandatory:
+  — The specific qualifications or training programmes are for the organisation
+    to define within clinical and regulatory frameworks.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.10.d
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Ante-natal services are provided.
+
+Guidebook interpretation (PDF p. 123):
+Written guidance governs ante-natal services. The guidance shall, at a minimum
+include assessment, immunisation, diet counselling and frequency of visits.
+There shall be an ante-natal card (or equivalent) for every such patient.
+
+The antenatal card shall be complete with medical and obstetric history of the
+expectant mother.
+
+Stop-work check: YES — COP.10 stop-work. Providing ante-natal services without
+written guidance or without an ante-natal card for every patient are compliance
+gaps, but the primary stop-work trigger is the absence of written guidance that
+puts the organisation in an unguided clinical situation.
+
+FOUR MANDATORY MINIMUM CONTENT AREAS (ante-natal guidance) — preserve all four:
+  1. Assessment
+  2. Immunisation
+  3. Diet counselling
+  4. Frequency of visits
+
+Mandatory (shall):
+  — Written guidance shall govern ante-natal services (shall).
+  — Written guidance shall, at a minimum, include the four areas above (shall —
+    stated minimum; do not reduce).
+  — An ante-natal card (or equivalent) shall exist for every such patient (shall —
+    "every such patient" — no exceptions).
+  — The ante-natal card shall be complete with medical and obstetric history of
+    the expectant mother (shall).
+
+Non-mandatory:
+  — The format ("card or equivalent") is the organisation's choice — a physical
+    card, electronic record, or structured form satisfies the requirement.
+
+Documentation: This OE is starred — the written guidance and the ante-natal
+card are the required documentation.
+
+DRAFTING NOTE: "Frequency of visits" is one of the four minimum content areas
+of the written guidance. Do not omit it or fold it into "assessment."
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.10.e
+Level: Achievement | No star
+
+Verbatim OE text:
+Organisation encourages and welcomes the presence of a birth companion during
+labour.
+
+Guidebook interpretation (PDF p. 123):
+The staff shall encourage and welcome the presence of a birth companion during
+labour.
+
+[Guidebook cross-ref: MoHFW LaQshya guidelines 2017]
+
+Stop-work check: Achievement — no stop-work trigger.
+
+Mandatory:
+  — Staff shall encourage and welcome a birth companion during labour (shall —
+    both active verbs: encourage and welcome).
+
+Non-mandatory:
+  — How this is operationalised (written policy, staff briefing) is for the
+    organisation to determine.
+
+Note: This is Achievement level — present it as an organisational commitment
+above the basic Commitment-tier standard. LaQshya guidelines reference is
+advisory.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.10.f
+Level: Commitment | No star
+
+Verbatim OE text:
+Organisation treats pregnant woman and her companion cordially and respectfully,
+ensures privacy and confidentiality for pregnant woman during her stay.
+
+Guidebook interpretation (PDF p. 123):
+There are provisions for privacy in the Labour / Delivery Room (curtains /
+partition between tables and non-see-through windows etc.). Staff treat pregnant
+woman and her companion cordially and respectfully.
+
+[Guidebook cross-ref: MoHFW LaQshya guidelines 2017]
+
+Stop-work check: No stop-work trigger specific to this OE.
+
+Mandatory (shall):
+  — Physical privacy provisions shall be in place in the Labour/Delivery Room
+    (shall — the Guidebook gives examples but the privacy outcome is mandatory;
+    method is organisation's choice).
+  — Staff shall treat pregnant women and their companions cordially and
+    respectfully (shall).
+  — Confidentiality for pregnant women during their stay shall be ensured (shall).
+
+Non-mandatory:
+  — The specific privacy mechanism (curtains, partitions, windows) is illustrative;
+    the privacy outcome is mandatory.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.10.g
+Level: Commitment | No star
+
+Verbatim OE text:
+The treating doctor explains danger signs and important care activities to
+pregnant woman and her companion.
+
+Guidebook interpretation (PDF p. 123):
+The treating doctor or team member/doctor shall explain danger signs and
+important care activities to the expecting mother and her companion.
+
+[Guidebook cross-ref: MoHFW LaQshya guidelines 2017]
+
+Stop-work check: No stop-work trigger specific to this OE.
+
+Mandatory (shall):
+  — A treating doctor or team member who is a doctor shall explain danger signs
+    and important care activities to the expecting mother and her companion (shall
+    — the explainer must be a doctor or doctor team member, not non-clinical
+    staff).
+
+Non-mandatory:
+  — The specific danger signs to be explained are defined by clinical practice
+    guidelines for the relevant stage of pregnancy; they are not enumerated here.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.10.h
+Level: Commitment | No star
+
+Verbatim OE text:
+Obstetric patient's assessment also includes maternal nutrition.
+
+Guidebook interpretation (PDF p. 123):
+Obstetric patient's assessment also includes maternal nutrition and it is
+documented in the ante-natal card (or equivalent) for every such patient. It is
+preferable that the assessment of maternal nutrition is done by a dietician.
+
+Stop-work check: No stop-work trigger specific to this OE.
+
+Mandatory (shall):
+  — Maternal nutrition assessment shall be included in every obstetric patient's
+    assessment (shall — "every such patient" with no exceptions).
+  — The maternal nutrition assessment shall be documented in the ante-natal card
+    (or equivalent) for every such patient (shall — documentation in the ante-natal
+    record is mandatory, not just in a separate notes file).
+
+Non-mandatory:
+  — Assessment by a dietician is "preferable" — advisory; any qualified assessor
+    satisfies the requirement, with dietician as the recommended standard.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.10.i
+Level: Commitment | No star
+
+Verbatim OE text:
+Appropriate peri-natal and post-natal monitoring is performed.
+
+Guidebook interpretation (PDF p. 124):
+This is in context of maternal and foetal monitoring. At a minimum, this shall
+include monitoring of foetal heart rate during labour, the progression of labour
+and post-natal monitoring for post-partum haemorrhage.
+
+Stop-work check: YES — COP.10 stop-work. Absence of foetal heart rate monitoring
+during labour, or failure to monitor for post-partum haemorrhage, are direct
+patient-safety triggers.
+
+THREE MANDATORY MINIMUM MONITORING ITEMS — preserve all three verbatim:
+  1. Monitoring of foetal heart rate during labour
+  2. The progression of labour
+  3. Post-natal monitoring for post-partum haemorrhage
+
+Mandatory (shall):
+  — At a minimum, all three items above shall be monitored (shall — "at a minimum"
+    sets the floor; clinical scope may extend beyond these three).
+
+Non-mandatory:
+  — Additional monitoring parameters are for the clinical team to determine based
+    on the patient's clinical situation.
+
+DRAFTING NOTE: The three minimum monitoring items are stated as a mandatory
+floor. Do not soften to "appropriate monitoring as clinically indicated."
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.10.j
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation caring for high-risk obstetric cases have the facilities to take
+care of neonates of such cases.
+
+Guidebook interpretation (PDF p. 124):
+The organisation shall have a NICU (level I, II or III) with appropriate equipment
+and staff, including competent paediatrician/neonatologist and nurses (based on
+qualification and training).
+
+Stop-work check: YES — COP.10 stop-work. Providing high-risk obstetric care
+without the required NICU level and competent neonatal staff is a direct
+patient-safety trigger for neonates of such cases.
+
+Mandatory (shall):
+  — The organisation providing high-risk obstetric care shall have a NICU (shall —
+    level I, II, or III; the level is organisation-determined based on scope; the
+    existence of a NICU is mandatory).
+  — The NICU shall have appropriate equipment and staff (shall).
+  — Staff shall include a competent paediatrician/neonatologist and nurses (shall).
+  — Competency shall be based on qualification and training (shall — both paths
+    are stated).
+
+Non-mandatory:
+  — Which NICU level (I, II, or III) is required is determined by the scope of
+    high-risk obstetric cases the organisation undertakes.
+
+DRAFTING NOTE: This OE applies only to organisations that care for high-risk
+obstetric cases. If the organisation's scope excludes high-risk obstetric care,
+COP.10.b already requires pro-active referral; COP.10.j is then not applicable.
+State this conditional scope clearly in the policy.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.10.k
+Level: Commitment | No star
+
+Verbatim OE text:
+Organization shall adhere to legal and defined Assisted Reproductive Technology
+(ART) practices.
+
+Guidebook interpretation (PDF p. 124):
+This shall include infrastructure, ART lab, operation theatre, a competent ART
+team counsellors and counselling techniques, consent process, screening of
+patients and SOPs as defined by national guidelines, and Assisted Reproductive
+Technology Act as amended.
+
+Stop-work check: YES — COP.10 stop-work and statutory breach. ART practices
+not in consonance with the ART Act as amended are a statutory violation — the
+most direct stop-work trigger in COP.10.
+
+STATUTE: Assisted Reproductive Technology (Regulation) Act (as amended) — named
+in Guidebook. Compliance with this Act is a legal obligation.
+
+SIX MANDATORY ART SCOPE ELEMENTS — preserve all six verbatim:
+  1. Infrastructure
+  2. ART lab
+  3. Operation theatre
+  4. Competent ART team, counsellors and counselling techniques
+  5. Consent process
+  6. Screening of patients and SOPs as defined by national guidelines
+
+Mandatory (shall):
+  — All six elements above shall be in place (shall — stated as inclusions).
+  — Compliance with the Assisted Reproductive Technology Act as amended
+    (shall — statutory; the Act's provisions override any policy discretion).
+
+Non-mandatory:
+  — The specific design of the ART lab and OT is subject to the Act's and
+    national guidelines' requirements, not freely organisation-determined.
+
+DRAFTING NOTE: This OE is scope-conditional — it applies only if the
+organisation provides ART services. If ART is not in scope, the OE does not
+apply. State this clearly in the policy scope statement.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table — COP.10
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    Commitment   Yes★   No     YES         Written guidance based on STG/sound clinical practices
+                                            (shall); THREE MANDATORY MINIMUM AREAS: assessment of
+                                            pregnant patients (nutrition, immunisation, education),
+                                            ante-natal guidelines, peri-natal and post-natal guidelines
+                                            (all shall); scope declaration on high-risk cases required
+                                            (shall); define high-risk case in consonance with best
+                                            clinical practices (shall); staff trained on obstetric
+                                            emergencies per evidence-based CPGs (shall); newborn care
+                                            per COP.11.b (cross-ref, not cited); starred doc
+b    Commitment   No     No     YES         Ante-natal exams guide early ID of high-risk cases (shall);
+                                            more frequent check-ups for high-risk cases where
+                                            appropriate (shall); pro-active referral if high-risk care
+                                            not in scope (shall); organisations providing high-risk care
+                                            shall have competent workforce and facilities for mothers
+                                            and neonates (shall)
+c    Commitment   No     No     YES         Competent persons include both doctors AND nursing staff
+                                            (shall — "not just doctors" is explicit); competency by
+                                            qualification and/or experience and/or training (any one
+                                            or combination satisfies)
+d    Commitment   Yes★   No     YES         Written guidance governs ante-natal services (shall);
+                                            FOUR MANDATORY MINIMUM CONTENT AREAS: assessment,
+                                            immunisation, diet counselling, frequency of visits (all
+                                            shall); ante-natal card (or equivalent) for every patient
+                                            (shall); card complete with medical and obstetric history
+                                            (shall); format is org's choice; starred doc
+e    Achievement  No     No     NO          Staff shall encourage and welcome birth companion during
+                                            labour (shall — both verbs); LaQshya 2017 is reference
+                                            (advisory); Achievement level
+f    Commitment   No     No     NO          Physical privacy provisions in Labour/Delivery Room
+                                            (shall — method is org's choice); cordial and respectful
+                                            treatment (shall); confidentiality during stay (shall);
+                                            privacy mechanism examples illustrative
+g    Commitment   No     No     NO          Doctor or doctor-team-member explains danger signs and
+                                            important care activities to mother and companion (shall);
+                                            explainer must be medical, not non-clinical staff
+h    Commitment   No     No     NO          Maternal nutrition included in every obstetric patient's
+                                            assessment (shall); documented in ante-natal card for every
+                                            patient (shall); dietician assessment "preferable" (advisory)
+i    Commitment   No     No     YES         THREE MINIMUM MONITORING ITEMS: foetal heart rate during
+                                            labour, progression of labour, post-natal monitoring for
+                                            post-partum haemorrhage (all shall — stated minimum floor);
+                                            additional monitoring is clinical determination
+j    Commitment   No     No     YES         NICU (level I, II or III) required for high-risk obstetric
+                                            organisations (shall); appropriate equipment and staff (shall);
+                                            competent paediatrician/neonatologist and nurses (shall);
+                                            competency by qualification and training (shall); NICU level
+                                            is org-determined by scope; conditional — applies only if
+                                            high-risk obstetric care is in scope
+k    Commitment   No     No     YES         SIX MANDATORY ART ELEMENTS: infrastructure, ART lab, OT,
+                                            competent team/counsellors/counselling techniques, consent
+                                            process, screening/SOPs per national guidelines (all shall);
+                                            ART Act as amended is statutory compliance obligation
+                                            (shall); conditional — applies only if ART services in scope
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES — COP.10
+─────────────────────────────────────────────────────────────────────────────
+
+1. THREE MINIMUM WRITTEN-GUIDANCE AREAS (COP.10.a): assessment of pregnant
+   patients (nutrition + immunisation + education), ante-natal guidelines,
+   peri-natal/post-natal guidelines — all three are stated minimums.
+
+2. FOUR MINIMUM ANTE-NATAL GUIDANCE CONTENT AREAS (COP.10.d): assessment,
+   immunisation, diet counselling, frequency of visits — preserve all four.
+
+3. THREE MINIMUM MONITORING ITEMS (COP.10.i): foetal heart rate during labour,
+   progression of labour, post-natal monitoring for post-partum haemorrhage —
+   these are the floor, not the ceiling.
+
+4. SIX ART SCOPE ELEMENTS (COP.10.k): all six are stated inclusions; preserve
+   verbatim. Flag this OE as scope-conditional in the draft.
+
+5. SCOPE CONDITIONS: COP.10.j applies only to organisations providing high-risk
+   obstetric care. COP.10.k applies only to organisations providing ART services.
+   State these conditions clearly in the scope section of the policy.
+
+6. STOP-WORK (COP.10): Primary triggers — unmanaged high-risk obstetric emergency
+   without trained staff (COP.10.a, COP.10.c), absent foetal monitoring during
+   labour (COP.10.i), ART statutory breach (COP.10.k), high-risk obstetric care
+   provided without NICU (COP.10.j).
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.11 — Paediatric Services
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Organisation provides safe paediatric services.
+
+OE count: 8 | COREs: none | Stars: a★, b★, f★
+Levels: a–g Commitment, h Excellence | Stop-work: YES
+
+Doc no: HCO/COP/POL/11
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.11.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Paediatric services are organised and provided safely.
+
+Guidebook interpretation (PDF p. 124–125):
+Written guidance based on standard treatment guidelines/sound clinical
+practices govern the organisation and delivery of safe paediatric care. At a
+minimum, this shall include assessment of these patients, organisation of care,
+and addressing special needs.
+
+The written guidance shall also define the scope of its paediatric services. The
+scope shall include various paediatric sub-specialities and special clinics. For
+example, well-baby clinics, different levels of NICUs, PICU etc.
+
+Stop-work check: YES — COP.11 is in STOP_WORK_PROPOSALS.
+
+THREE MANDATORY MINIMUM CONTENT AREAS (written guidance) — preserve all three:
+  1. Assessment of paediatric patients
+  2. Organisation of care
+  3. Addressing special needs
+
+Mandatory (shall):
+  — Written guidance shall be based on STG/sound clinical practices (shall).
+  — Written guidance shall, at a minimum, include the three areas above (shall).
+  — Written guidance shall define the scope of paediatric services, including
+    paediatric sub-specialities and special clinics (shall — scope definition
+    is mandatory, not optional).
+
+Non-mandatory:
+  — The specific sub-specialities and clinic types (well-baby clinics, NICU levels,
+    PICU) are examples — the organisation defines its own scope.
+
+Documentation: This OE is starred — the written guidance is the required
+documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.11.b
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Neonatal care is in consonance with the national / international guidelines.
+
+Guidebook interpretation (PDF p. 125):
+Written guidance based on standard treatment guidelines/sound clinical practices
+govern the delivery of neonatal care. These shall be in consonance with
+guidelines laid down by national and international bodies. The hospital shall
+actively promote breastfeeding practices.
+
+Stop-work check: YES — COP.11 stop-work. Neonatal care not in consonance with
+national/international guidelines is a direct patient-safety trigger for this
+vulnerable population.
+
+Mandatory (shall):
+  — Written guidance shall govern neonatal care (shall).
+  — Written guidance shall be in consonance with guidelines from national and
+    international bodies (shall — "national and international bodies" is the
+    compliance standard; the specific guideline source is the organisation's
+    determination).
+  — The hospital shall actively promote breastfeeding practices (shall —
+    "actively promote" uses shall; this is a mandatory commitment, not advisory).
+
+Non-mandatory:
+  — The specific national/international bodies whose guidelines are adopted
+    is for the organisation to determine.
+
+Documentation: This OE is starred — the written guidance for neonatal care
+is the required documentation.
+
+DRAFTING NOTE: "Actively promote breastfeeding practices" is a shall in the
+Guidebook — do not weaken to "support" or "encourage where appropriate."
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.11.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Those who care for children have age-specific competency.
+
+Guidebook interpretation (PDF p. 125):
+Doctors and nursing staff shall have age-specific competency. The competency
+shall be based on qualification, experience, and/or training.
+
+Stop-work check: YES — COP.11 stop-work. Providing care to children with
+personnel who lack age-specific competency is a direct patient-safety trigger.
+
+Mandatory (shall):
+  — Both doctors and nursing staff shall have age-specific competency (shall —
+    both staff types are named; it is not limited to doctors).
+  — Competency shall be based on qualification, experience, and/or training
+    (shall — three paths; any one or combination satisfies).
+
+Non-mandatory:
+  — The specific competency criteria for each age group are the organisation's
+    determination within clinical and regulatory frameworks.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.11.d
+Level: Commitment | No star
+
+Verbatim OE text:
+Provisions are made for special care of children.
+
+Guidebook interpretation (PDF p. 125):
+Adequate amenities for the care of infants and children to be available in the
+hospital. For example, breastfeeding room, play area, etc.
+
+Stop-work check: No stop-work trigger specific to this OE beyond general
+adequacy of paediatric amenities.
+
+Mandatory:
+  — Adequate amenities for care of infants and children shall be available (shall —
+    "adequate" sets the functional standard; the amenity type is illustrative).
+
+Non-mandatory (illustrative):
+  — Breastfeeding room, play area — examples; the organisation determines which
+    amenities are appropriate to its paediatric population and scope.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.11.e
+Level: Commitment | No star
+
+Verbatim OE text:
+Paediatric assessment includes growth, developmental, immunisation and
+nutritional assessment.
+
+Guidebook interpretation (PDF p. 125):
+The growth, developmental, immunisation and nutritional assessment is performed
+using appropriate tools (preferably validated) and documented. The growth charts
+and immunisation records are maintained and updated as applicable.
+
+Stop-work check: No real-time stop-work trigger, but absent assessment components
+are a systematic compliance failure.
+
+FOUR MANDATORY ASSESSMENT COMPONENTS — preserve all four verbatim:
+  1. Growth assessment
+  2. Developmental assessment
+  3. Immunisation assessment
+  4. Nutritional assessment
+
+Mandatory (shall):
+  — All four assessment components shall be performed using appropriate tools
+    and documented (shall).
+  — Growth charts and immunisation records shall be maintained and updated
+    as applicable (shall).
+
+Non-mandatory:
+  — Use of validated tools is "preferable" — best practice recommendation;
+    the tools must be appropriate, with validated being the preferred standard.
+
+DRAFTING NOTE: All four assessment components are stated as mandatory. Do not
+reduce to "growth and developmental assessment" — immunisation and nutritional
+assessment are separately required.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.11.f
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation has measures in place to prevent child / neonate abduction and
+abuse.
+
+Guidebook interpretation (PDF p. 125):
+Written guidance shall direct the organisation regarding child abduction
+prevention and abuse. The organisation shall ensure that there is adequate
+security/surveillance to prevent such happenings. For example, the installation
+of CCTV cameras. There is a defined process for rapid response in case of any
+eventuality. The defined process shall be tested at pre-defined intervals, either
+through table-top exercise or mock drill. Staff are trained in prevention and rapid
+response. Staff is aware of how to handle and escalate child abuse, if any.
+
+Stop-work check: YES — COP.11 is in STOP_WORK_PROPOSALS. The absence of
+an active rapid-response process for child/neonate abduction is the primary
+stop-work trigger.
+
+Mandatory (shall):
+  — Written guidance shall direct the organisation on child abduction prevention
+    and abuse (shall).
+  — Adequate security/surveillance shall be in place (shall — CCTV is an example;
+    the adequacy outcome is mandatory).
+  — A defined process for rapid response in case of any eventuality shall exist
+    (shall).
+  — The defined process shall be tested at pre-defined intervals through table-top
+    exercise or mock drill (shall — both the testing and the pre-defined interval
+    are mandatory; the organisation sets the interval, not the Guidebook).
+  — Staff shall be trained in prevention and rapid response (shall).
+  — Staff shall be aware of how to handle and escalate child abuse (shall —
+    awareness is a mandatory outcome of training).
+
+Non-mandatory:
+  — CCTV cameras are illustrative of security/surveillance — other mechanisms
+    that achieve the same outcome are acceptable.
+  — Table-top exercise versus mock drill is the organisation's choice; testing
+    by at least one of the two methods at defined intervals is mandatory.
+
+Documentation: This OE is starred — the written guidance, testing records, and
+training records are the required documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.11.g
+Level: Commitment | No star
+
+Verbatim OE text:
+The child's family members are educated about nutrition, immunisation and safe
+parenting.
+
+Guidebook interpretation (PDF p. 125):
+The education shall be in the language that the family understands. This could
+be done using educational material. The education on nutrition shall address the
+importance of breastfeeding, weaning and various aspects of malnutrition that
+includes protein-energy malnutrition and childhood obesity. Appropriate at home
+growth monitoring information is shared with parents.
+
+Stop-work check: No stop-work trigger specific to this OE.
+
+THREE MANDATORY EDUCATION TOPICS — preserve all three:
+  1. Nutrition (including breastfeeding, weaning, and aspects of malnutrition)
+  2. Immunisation
+  3. Safe parenting
+
+Mandatory (shall):
+  — Education shall be in the language the family understands (shall — language
+    accessibility is mandatory, not aspirational).
+  — Nutrition education shall address breastfeeding, weaning, and aspects of
+    malnutrition including protein-energy malnutrition and childhood obesity
+    (shall — all four nutrition sub-topics are stated).
+  — At-home growth monitoring information shall be shared with parents (shall).
+
+Non-mandatory:
+  — Educational material "could" be used — the method of delivery is the
+    organisation's choice; the language-appropriate delivery is mandatory.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.11.h
+Level: Excellence | No star
+
+Verbatim OE text:
+The organisation provides for adolescent friendly health care services.
+
+Guidebook interpretation (PDF p. 126):
+Need-based preventive, curative and counselling services for adolescents in
+hospital setting shall be provided. Hospital staff shall adopt a respectful and
+non-judgemental attitude during the entire process of registration, reception,
+consultation, treatment etc. Confidentiality shall be maintained in consultations,
+counselling, and follow-up.
+
+The adolescent health care service may be organised as follows (illustrative list):
+  • Management of physical and mental disorders
+  • Counselling services including premarital counselling, anti-substance abuse,
+    use of helmets while driving two wheelers wherever applicable
+  • Preventive health check-ups and wellness program
+  • Immunization, for example vaccine against HPV
+  • Health education activities (information brochure, videos, website, handouts
+    etc.) on normal development, nutrition, sleep, responsible sexual behaviour,
+    safe sexual practices, substance use prevention etc.
+
+[Guidebook cross-ref: AAC.11.]
+
+Stop-work check: Excellence — no stop-work trigger.
+
+Mandatory (shall):
+  — Need-based preventive, curative and counselling services for adolescents
+    shall be provided (shall — at Excellence level, the provision is mandatory
+    for this tier).
+  — Respectful and non-judgemental staff attitude throughout registration,
+    reception, consultation and treatment (shall).
+  — Confidentiality in consultations, counselling, and follow-up (shall).
+
+Non-mandatory (illustrative):
+  — The list of service types (physical/mental disorders, counselling, preventive,
+    immunisation, health education) is illustrative ("may be organised as follows")
+    — the organisation determines the specific service mix based on need.
+
+Note: This is Excellence level — the highest tier. Present it appropriately
+in the policy. The AAC.11 cross-ref is not cited in the policy text.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table — COP.11
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    Commitment   Yes★   No     YES         Written guidance based on STG/sound clinical practices
+                                            (shall); THREE MANDATORY MINIMUM AREAS: patient
+                                            assessment, organisation of care, addressing special
+                                            needs (all shall); scope of paediatric services defined
+                                            in written guidance including sub-specialities and
+                                            special clinics (shall); examples of clinic types
+                                            (well-baby, NICU levels, PICU) are illustrative;
+                                            starred doc
+b    Commitment   Yes★   No     YES         Written guidance for neonatal care (shall); in consonance
+                                            with national and international bodies' guidelines (shall);
+                                            hospital shall ACTIVELY PROMOTE breastfeeding practices
+                                            (shall — not "encourage" or "support"); starred doc
+c    Commitment   No     No     YES         Both doctors AND nursing staff shall have age-specific
+                                            competency (shall — both named explicitly); competency
+                                            by qualification and/or experience and/or training
+d    Commitment   No     No     NO          Adequate amenities for infants and children (shall);
+                                            specific amenities are org's determination; examples
+                                            (breastfeeding room, play area) illustrative
+e    Commitment   No     No     NO          FOUR MANDATORY ASSESSMENT COMPONENTS: growth,
+                                            developmental, immunisation, nutritional (all shall);
+                                            performed using appropriate tools (shall); validated
+                                            tools "preferable" (advisory); documented (shall);
+                                            growth charts and immunisation records maintained
+                                            and updated (shall)
+f    Commitment   Yes★   No     YES         Written guidance for abduction prevention and abuse
+                                            (shall); adequate security/surveillance (shall); defined
+                                            rapid-response process (shall); process tested at
+                                            pre-defined intervals by table-top exercise or mock
+                                            drill (shall — interval is org-defined); staff trained
+                                            in prevention and rapid response (shall); staff aware of
+                                            how to handle and escalate abuse (shall); CCTV illustrative;
+                                            starred doc
+g    Commitment   No     No     NO          Education in language family understands (shall);
+                                            THREE EDUCATION TOPICS: nutrition, immunisation,
+                                            safe parenting (all mandatory); nutrition subtopics:
+                                            breastfeeding, weaning, PEM, childhood obesity (all
+                                            stated); at-home growth monitoring info shared (shall);
+                                            method (educational material) "could" be used (advisory)
+h    Excellence   No     No     NO          Need-based preventive, curative and counselling services
+                                            (shall); respectful and non-judgemental staff attitude
+                                            (shall); confidentiality in consultations, counselling,
+                                            follow-up (shall); service-type list is illustrative;
+                                            Excellence level
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES — COP.11
+─────────────────────────────────────────────────────────────────────────────
+
+1. ACTIVELY PROMOTE BREASTFEEDING (COP.11.b): "Shall actively promote" — do not
+   soften to "encourage" or "support." This is an explicit shall.
+
+2. FOUR ASSESSMENT COMPONENTS (COP.11.e): growth, developmental, immunisation,
+   nutritional — all four are stated. Do not collapse.
+
+3. ABDUCTION-PREVENTION TESTING (COP.11.f): The testing interval is
+   organisation-defined; neither the Guidebook nor this standard prescribes
+   a specific frequency. Do not invent one.
+
+4. SCOPE OF COP.11: If the organisation does not provide paediatric services,
+   this standard is not applicable — state this in the policy scope section.
+
+5. STOP-WORK (COP.11): Primary trigger — absence of an active rapid-response
+   process for child/neonate abduction (COP.11.f). Secondary triggers —
+   personnel without age-specific competency (COP.11.c), neonatal care not
+   in consonance with guidelines (COP.11.b).
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.12 — Procedural Sedation
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Procedural sedation is provided consistently and safely.
+
+OE count: 8 | COREs: none | Stars: a★, g★
+All OEs: Commitment level | Stop-work: YES
+
+Doc no: HCO/COP/POL/12
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.12.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Procedural sedation is administered in a consistent manner.
+
+Guidebook interpretation (PDF p. 126–127):
+Written guidance based on standard treatment guidelines/sound clinical practices
+govern the administration of procedural sedation. At a minimum, this shall
+include identification of areas in the organisation where procedural sedation is
+administered and procedures are performed. Written guidance also includes the
+mechanism for writing orders, the pre-procedure assessment, monitoring during
+and after the procedure and the discharge/transfer out criteria after the
+procedure. A pre-sedation assessment shall be performed and documented to
+evaluate risk and appropriateness of procedural sedation for the patient. The
+scope and content of this assessment shall be based on professional guidelines
+and are defined in written guidance.
+
+The administration of procedural sedation shall be standardised throughout the
+organisation.
+
+Stop-work check: YES — COP.12 is in STOP_WORK_PROPOSALS. Administering
+procedural sedation in an area not identified in the written guidance, or without
+a pre-sedation assessment, is a direct stop-work trigger.
+
+SIX MANDATORY WRITTEN-GUIDANCE CONTENT AREAS — preserve all six:
+  1. Identification of areas where procedural sedation is administered and
+     procedures are performed
+  2. Mechanism for writing orders
+  3. Pre-procedure assessment
+  4. Monitoring during the procedure
+  5. Monitoring after the procedure
+  6. Discharge/transfer-out criteria after the procedure
+
+Mandatory (shall):
+  — Written guidance shall be based on STG/sound clinical practices (shall).
+  — Written guidance shall, at a minimum, include the six areas above (shall).
+  — A pre-sedation assessment shall be performed and documented (shall —
+    both performance and documentation are mandatory).
+  — The assessment's scope and content shall be based on professional guidelines
+    and defined in written guidance (shall).
+  — Administration of procedural sedation shall be standardised throughout the
+    organisation (shall — consistency across all areas is mandatory).
+
+Documentation: This OE is starred — the written guidance is the required
+documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.12.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Informed consent for administration of procedural sedation is obtained.
+
+Guidebook interpretation (PDF p. 127):
+The informed consent shall be taken by the person administering sedation or a
+doctor member of the team administering sedation. The risks, benefits and
+alternatives related to procedural sedation shall be informed. The patient and
+family are educated about the post-procedural analgesia.
+
+[Guidebook cross-ref: PRE.4.e. — in policy draft: "those requirements are
+covered in the hospital's other policies."]
+
+Stop-work check: YES — COP.12 stop-work. Administering procedural sedation
+without informed consent is a direct stop-work trigger.
+
+Mandatory (shall):
+  — Consent shall be taken by the person administering sedation or a doctor
+    member of the team administering sedation (shall — the consent-taker must
+    be medically qualified and part of the sedation team).
+  — Risks, benefits and alternatives shall be informed (shall — all three must
+    be covered, not just risks).
+  — Patient and family shall be educated about post-procedural analgesia (shall —
+    post-procedural analgesia education is a stated requirement, not merely
+    a consent element).
+
+Non-mandatory:
+  — The format of informed consent is governed by PRE.4; this OE addresses
+    who takes it and the content obligations.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.12.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Competent and trained persons administer procedural sedation.
+
+Guidebook interpretation (PDF p. 127):
+Whenever a parenteral route is used, sedation may be administered by a doctor
+or a nurse under the supervision of a doctor. The technician shall not administer
+sedation.
+
+Stop-work check: YES — COP.12 stop-work. A technician administering procedural
+sedation, or a nurse administering without doctor supervision when the parenteral
+route is used, is a direct stop-work trigger.
+
+Mandatory (shall):
+  — When a parenteral route is used: sedation shall be administered by a doctor
+    or a nurse under the supervision of a doctor (shall — supervision by a doctor
+    is mandatory when a nurse administers via parenteral route).
+  — A technician shall NOT administer sedation — stated as an absolute prohibition.
+
+Non-mandatory:
+  — The specific competency criteria beyond "doctor or nurse" for non-parenteral
+    sedation routes are for the organisation to define.
+
+DRAFTING NOTE: The technician prohibition is absolute — it does not have a
+"where applicable" qualifier. State it as such in the policy.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.12.d
+Level: Commitment | No star
+
+Verbatim OE text:
+The person monitoring sedation is different from the person performing the
+procedure.
+
+Guidebook interpretation (PDF p. 127):
+The person responsible for monitoring the patient shall be trained in the
+detection of abnormalities of the monitoring parameters (Refer to COP.12.e.)
+and also in recognition of apnoea and airway obstruction.
+
+Stop-work check: YES — COP.12 stop-work. The same person performing the
+procedure and monitoring sedation is a direct stop-work trigger — role separation
+is mandatory, not advisory.
+
+Mandatory (shall):
+  — The monitoring person shall be different from the procedure-performing person
+    (shall — OE text is unconditional; no exceptions are stated).
+  — The monitoring person shall be trained in detection of monitoring parameter
+    abnormalities (shall).
+  — The monitoring person shall be trained in recognition of apnoea and airway
+    obstruction (shall — both are stated separately; both must be covered
+    in the monitoring person's training).
+
+Non-mandatory:
+  — The method of training (formal course, simulation, on-the-job) is the
+    organisation's determination.
+
+DRAFTING NOTE: Role separation (monitor ≠ procedure performer) is an absolute
+requirement. Do not introduce exceptions for low-complexity procedures.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.12.e
+Level: Commitment | No star
+
+Verbatim OE text:
+Intra-procedure monitoring includes at a minimum the heart rate, cardiac rhythm,
+respiratory rate, blood pressure, oxygen saturation, and level of sedation.
+
+Guidebook interpretation (PDF p. 127):
+The monitored parameters shall be documented. Also, certain other parameters
+may be monitored on a case-to-case basis. The cardiac rhythm may be monitored
+on a monitor during the procedure, and the same need not be documented.
+However, in the case of rhythm abnormalities, the same shall be documented.
+
+Stop-work check: YES — COP.12 stop-work. Performing procedural sedation without
+the minimum six intra-procedure monitoring parameters is a direct trigger.
+
+SIX MANDATORY INTRA-PROCEDURE MONITORING PARAMETERS — preserve all six verbatim:
+  1. Heart rate
+  2. Cardiac rhythm
+  3. Respiratory rate
+  4. Blood pressure
+  5. Oxygen saturation
+  6. Level of sedation
+
+Mandatory (shall):
+  — At a minimum, all six parameters above shall be monitored (shall — "at a
+    minimum" sets the floor; clinical scope may extend beyond).
+  — The monitored parameters shall be documented (shall — documentation of
+    parameters is mandatory).
+  — In case of cardiac rhythm abnormalities: the rhythm shall be documented
+    (shall — the abnormality documentation is mandatory even though routine
+    rhythm monitoring need not be documented).
+
+Non-mandatory:
+  — Cardiac rhythm monitoring on a monitor during the procedure (rather than
+    documented at each reading) is acceptable for routine monitoring — the
+    documentation requirement applies to detected abnormalities, not every
+    rhythm reading.
+  — Additional parameters "may" be monitored on a case-to-case basis (advisory).
+
+DRAFTING NOTE: The six intra-procedure minimum parameters are the stated floor.
+Do not reduce or paraphrase. "Level of sedation" is the sixth — do not omit it.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.12.f
+Level: Commitment | No star
+
+Verbatim OE text:
+Patients are monitored after procedural sedation, and the same is documented.
+
+Guidebook interpretation (PDF p. 127–128):
+The patient's vitals shall be monitored at regular intervals (as decided by the
+organisation) until he/she recovers completely from the sedation. At a minimum,
+the heart rate, respiratory rate, blood pressure, oxygen saturation and level of
+sedation are monitored. The extent and duration of monitoring may be tailored
+to the need based on the complexity of the procedure and the co-morbidities of
+the patient. The level of sedation can be monitored by using a checklist which
+incorporates the various components of levels of sedation (mild, moderate and
+deep).
+
+Stop-work check: YES — COP.12 stop-work. Discharging or transferring a patient
+from the sedation area before monitoring the required parameters and confirming
+recovery is a trigger.
+
+FIVE MANDATORY POST-SEDATION MONITORING PARAMETERS — preserve all five verbatim:
+  1. Heart rate
+  2. Respiratory rate
+  3. Blood pressure
+  4. Oxygen saturation
+  5. Level of sedation
+
+Mandatory (shall):
+  — Post-sedation vitals shall be monitored at regular intervals until the patient
+    recovers completely from sedation (shall — the endpoint is complete recovery,
+    not a fixed time period).
+  — At a minimum, all five parameters above shall be monitored (shall).
+  — Monitoring shall be documented (shall — stated in OE text).
+
+Non-mandatory:
+  — The interval frequency of monitoring is organisation-decided ("as decided
+    by the organisation") — not prescribed.
+  — Extent and duration may be tailored to procedure complexity and co-morbidities
+    — variation above the floor is permitted.
+  — Using a sedation-level checklist (mild/moderate/deep) is illustrative of how
+    to monitor level of sedation — not the only acceptable method.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.12.g
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Criteria are used to determine the appropriateness of discharge from the
+observation / recovery area.
+
+Guidebook interpretation (PDF p. 128):
+Criteria shall be developed and documented by the organisation in consonance
+with physiologic parameters and sound clinical practices. A qualified individual
+shall apply the criteria, and the same is documented.
+
+Stop-work check: YES — COP.12 stop-work. Discharging a patient from the
+observation/recovery area without applying documented criteria, or without
+a qualified individual applying them, is a trigger.
+
+Mandatory (shall):
+  — Discharge criteria shall be developed and documented by the organisation
+    in consonance with physiologic parameters and sound clinical practices (shall).
+  — A qualified individual shall apply the criteria (shall — not self-discharge
+    by the patient or application by unqualified personnel).
+  — The application of criteria shall be documented (shall — documentation is
+    mandatory, not optional).
+
+Non-mandatory:
+  — The specific physiologic thresholds within the criteria are the organisation's
+    clinical determination.
+
+Documentation: This OE is starred — the documented discharge criteria and their
+applied records are the required documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.12.h
+Level: Commitment | No star
+
+Verbatim OE text:
+Equipment and workforce are available to manage patients who have gone into a
+deeper level of sedation than initially intended.
+
+Guidebook interpretation (PDF p. 128):
+The room where procedural sedation is administered shall have equipment for
+emergency resuscitation, suction, advanced airway equipment, positive pressure
+ventilation and supplemental oxygen in working order. Emergency medical
+equipment and supplies are immediately available and customized to the type of
+sedation being performed and the age and medical condition of the patient.
+
+A person trained in airway management/anaesthesiologist shall be available in
+the organisation so that the person can rush to the area.
+
+Stop-work check: YES — COP.12 stop-work. Performing procedural sedation in an
+area without the required emergency equipment in working order is a direct
+patient-safety trigger.
+
+FIVE MANDATORY EQUIPMENT ITEMS (in the sedation room) — preserve all five:
+  1. Equipment for emergency resuscitation
+  2. Suction
+  3. Advanced airway equipment
+  4. Positive pressure ventilation
+  5. Supplemental oxygen
+
+Mandatory (shall):
+  — The sedation room shall have all five equipment items above in working order
+    (shall — "in working order" is the functional standard, not merely "available").
+  — Emergency equipment and supplies shall be immediately available and
+    customized to the sedation type, patient age, and medical condition (shall).
+  — A person trained in airway management or an anaesthesiologist shall be
+    available in the organisation to respond to the area (shall — the person
+    does not need to be in the room throughout, but must be able to rush to it).
+
+Non-mandatory:
+  — Whether the responding airway-management person is an anaesthesiologist
+    or another trained person is the organisation's determination.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table — COP.12
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    Commitment   Yes★   No     YES         Written guidance based on STG/sound clinical practices
+                                            (shall); SIX MANDATORY WRITTEN-GUIDANCE AREAS:
+                                            identification of sedation areas, order-writing
+                                            mechanism, pre-procedure assessment, intra-procedure
+                                            monitoring, post-procedure monitoring, discharge/
+                                            transfer-out criteria (all shall); pre-sedation
+                                            assessment performed and documented (shall);
+                                            standardised throughout org (shall); starred doc
+b    Commitment   No     No     YES         Consent by person administering sedation or doctor-
+                                            team member (shall); risks, benefits AND alternatives
+                                            informed (all three, shall); post-procedural analgesia
+                                            education (shall); PRE.4 covers format (not cited)
+c    Commitment   No     No     YES         Parenteral route: doctor or nurse under doctor supervision
+                                            (shall); ABSOLUTE PROHIBITION: technician shall not
+                                            administer sedation (no exceptions stated)
+d    Commitment   No     No     YES         Monitoring person shall be DIFFERENT from procedure
+                                            person (absolute — no exceptions stated); monitoring
+                                            person trained in abnormality detection (shall) AND
+                                            recognition of apnoea/airway obstruction (shall —
+                                            both separate training requirements)
+e    Commitment   No     No     YES         SIX MANDATORY INTRA-PROCEDURE PARAMETERS: heart rate,
+                                            cardiac rhythm, respiratory rate, blood pressure, oxygen
+                                            saturation, level of sedation (all shall — stated floor);
+                                            parameters documented (shall); cardiac rhythm
+                                            abnormalities documented (shall); routine cardiac
+                                            rhythm monitoring need not be documented continuously
+f    Commitment   No     No     YES         Post-sedation monitoring until complete recovery (shall —
+                                            endpoint is complete recovery, not fixed time); FIVE
+                                            MANDATORY POST-SEDATION PARAMETERS: heart rate,
+                                            respiratory rate, blood pressure, oxygen saturation,
+                                            level of sedation (all shall); interval is org-decided;
+                                            extent and duration may be tailored above floor;
+                                            monitoring documented (shall)
+g    Commitment   Yes★   No     YES         Discharge criteria developed and documented per
+                                            physiologic parameters and sound clinical practices
+                                            (shall); qualified individual applies criteria (shall);
+                                            application documented (shall); criteria content is
+                                            org-determined; starred doc
+h    Commitment   No     No     YES         FIVE MANDATORY EQUIPMENT ITEMS in sedation room
+                                            in working order: emergency resuscitation equipment,
+                                            suction, advanced airway equipment, positive pressure
+                                            ventilation, supplemental oxygen (all shall); equipment
+                                            customised to sedation type, patient age and condition
+                                            (shall); airway-management-trained person or
+                                            anaesthesiologist available in org to rush to area (shall)
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES — COP.12
+─────────────────────────────────────────────────────────────────────────────
+
+1. SIX WRITTEN-GUIDANCE AREAS (COP.12.a): identification of sedation areas,
+   order mechanism, pre-procedure assessment, intra-procedure monitoring,
+   post-procedure monitoring, discharge/transfer-out criteria — all six stated.
+
+2. SIX INTRA-PROCEDURE MONITORING PARAMETERS (COP.12.e): heart rate, cardiac
+   rhythm, respiratory rate, blood pressure, oxygen saturation, level of sedation.
+   "Level of sedation" is the sixth — do not omit.
+
+3. FIVE POST-SEDATION MONITORING PARAMETERS (COP.12.f): heart rate, respiratory
+   rate, blood pressure, oxygen saturation, level of sedation. Note: "cardiac
+   rhythm" is in the intra-procedure list but not named in the post-sedation list.
+
+4. FIVE SEDATION-ROOM EQUIPMENT ITEMS (COP.12.h): all must be in working order.
+
+5. TWO ABSOLUTE PROHIBITIONS:
+   — Technician shall not administer sedation (COP.12.c) — no exceptions.
+   — Monitoring person must be different from procedure person (COP.12.d) —
+     no exceptions stated.
+
+6. STOP-WORK (COP.12): Primary triggers — no consent before sedation, technician
+   administering, same person monitoring and performing, absent monitoring
+   parameters, absent equipment in working order.
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.13 — Anaesthesia Services
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Anaesthesia services are provided in a consistent and safe manner.
+
+OE count: 10 | COREs: b, e | Stars: a★, g★
+Levels: a, c–i Commitment; b, e CORE; j Achievement | Stop-work: YES
+
+Doc no: HCO/COP/POL/13
+
+IMPORTANT SCOPE NOTE: The standard is not applicable to local anaesthesia.
+State this in the policy scope section.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.13.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Anaesthesia services are provided in a consistent manner.
+
+Guidebook interpretation (PDF p. 128–129):
+Written guidance based on standard treatment guidelines/sound clinical practices
+govern anaesthesia services across the organisation. The organisation shall
+document the indications, the type of anaesthesia and procedure for the same.
+For the definition of "anaesthesia" refer to the glossary.
+
+The standard is not applicable to local anaesthesia.
+
+Stop-work check: YES — COP.13 is in STOP_WORK_PROPOSALS. Absence of written
+guidance for anaesthesia services is the foundational compliance gap.
+
+Mandatory (shall):
+  — Written guidance shall govern anaesthesia services across the organisation
+    (shall — "across the organisation" means all settings where anaesthesia
+    is administered).
+  — The organisation shall document the indications, the type of anaesthesia,
+    and the procedure for the same (shall — three documentation elements).
+
+Non-mandatory:
+  — "Anaesthesia" definition refers to the Guidebook glossary — do not reproduce
+    the definition in the policy; reference that it is as defined in NABH standards.
+
+Documentation: This OE is starred — the written guidance is the required
+documentation.
+
+DRAFTING NOTE: Scope exclusion — local anaesthesia is explicitly excluded from
+this standard's applicability. Include this scope statement in the policy.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.13.b
+Level: CORE | No star
+
+Verbatim OE text:
+The pre-anaesthesia assessment results in the formulation of an anaesthesia
+plan which is documented.
+
+Guidebook interpretation (PDF p. 129):
+Patients for anaesthesia have a pre-anaesthesia assessment by a qualified
+anaesthesiologist. This shall be done before the patient is wheeled into the OT
+complex. It shall be applicable for both routine and emergency cases. The
+pre-anaesthesia assessment may even be carried out before admission in case of
+elective surgeries or shortly before the surgical procedure, as in emergency and
+obstetric patients.
+
+The plan shall mention the pre-medications, type of anaesthesia, anaesthesia
+agent and dose, special requirements and anticipated post-anaesthesia care
+including post-operative pain management where appropriate. The
+anaesthesiologist shall review the medication the patient is currently taking.
+
+The anaesthesia plan is documented in the patient's medical record.
+
+Stop-work check: CORE — the most critical foundational OE in COP.13. Wheeling
+a patient into the OT without a completed pre-anaesthesia assessment by a
+qualified anaesthesiologist is the primary stop-work trigger for COP.13.
+
+TIMING RULE — preserve verbatim:
+  — Pre-anaesthesia assessment shall be done BEFORE the patient is wheeled
+    into the OT complex. This applies to both routine and emergency cases.
+    In elective surgeries, it may be done before admission. In emergency and
+    obstetric patients, it may be done shortly before the surgical procedure.
+
+FIVE MANDATORY ANAESTHESIA PLAN CONTENT ELEMENTS — preserve all five:
+  1. Pre-medications
+  2. Type of anaesthesia
+  3. Anaesthesia agent and dose
+  4. Special requirements
+  5. Anticipated post-anaesthesia care including post-operative pain management
+     (where appropriate)
+
+Mandatory (shall):
+  — Pre-anaesthesia assessment shall be done by a qualified anaesthesiologist
+    (shall — qualification requirement is mandatory).
+  — Assessment shall be done before wheeling into OT (shall — timing is
+    absolute for routine cases; for emergency/obstetric, "shortly before the
+    surgical procedure").
+  — Assessment applies to both routine and emergency cases (shall — no
+    exception for emergencies).
+  — The plan shall include all five content elements above (shall).
+  — Anaesthesiologist shall review the patient's current medications (shall).
+  — Anaesthesia plan shall be documented in the patient's medical record (shall).
+
+Non-mandatory:
+  — For elective surgeries: pre-anaesthesia assessment before admission is
+    permitted — this is a timing flexibility, not an exemption.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.13.c
+Level: Commitment | No star
+
+Verbatim OE text:
+A pre-induction assessment is performed and documented.
+
+Guidebook interpretation (PDF p. 129):
+A pre-induction assessment shall be done by an anaesthesiologist to re-evaluate
+patients immediately before the induction of anaesthesia. Any changes to the
+anaesthesia plan shall be documented. When anaesthesia needs to be provided
+on an urgent basis, the pre-anaesthesia assessment and pre-induction assessment
+may be performed immediately one-after-another, or simultaneously, but shall
+be documented separately in the patient's medical record.
+
+Stop-work check: YES — COP.13 stop-work. Inducing anaesthesia without a
+pre-induction assessment by an anaesthesiologist is a trigger.
+
+TIMING RULE — preserve verbatim:
+  — Pre-induction assessment shall be done "immediately before the induction
+    of anaesthesia" — it is a distinct point-in-time assessment, not a repeat
+    of the pre-anaesthesia assessment.
+
+Mandatory (shall):
+  — Pre-induction assessment shall be done by an anaesthesiologist (shall).
+  — Assessment shall be done immediately before induction (shall — timing).
+  — Any changes to the anaesthesia plan shall be documented (shall — the trigger
+    is any change identified at pre-induction; documentation is mandatory when
+    a change occurs).
+  — When urgent: both assessments may be done one-after-another or simultaneously
+    but shall be documented separately in the patient's medical record (shall —
+    even in urgent situations, separate documentation is mandatory).
+
+Non-mandatory:
+  — What constitutes "changes to the anaesthesia plan" is clinical determination.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.13.d
+Level: Commitment | No star
+
+Verbatim OE text:
+The anaesthesiologist obtains informed consent for administration of anaesthesia.
+
+Guidebook interpretation (PDF p. 129):
+Patient and/or the family are educated on the risks, benefits, and alternatives
+of anaesthesia by the anaesthesiologist. The anaesthesia consent shall be
+separate from the surgery consent.
+
+[Guidebook cross-ref: PRE.4.e. — in policy draft: "those requirements are
+covered in the hospital's other policies."]
+
+Stop-work check: YES — COP.13 stop-work. Administering anaesthesia without
+informed consent obtained by the anaesthesiologist is a direct trigger.
+
+Mandatory (shall):
+  — Informed consent shall be obtained by the anaesthesiologist (shall — not a
+    nurse or non-anaesthesiologist; the anaesthesiologist is required).
+  — The anaesthesiologist shall educate the patient and/or family on risks,
+    benefits, and alternatives (shall — all three content elements are stated).
+  — Anaesthesia consent shall be SEPARATE from the surgery consent (shall —
+    this is an explicit mandatory separation; one combined form does not satisfy).
+
+Non-mandatory:
+  — The format and language of the consent form is covered by PRE.4 (not cited
+    in policy).
+
+DRAFTING NOTE: The anaesthesia consent separation from surgery consent is an
+absolute requirement. Do not allow a single combined consent to satisfy COP.13.d.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.13.e
+Level: CORE | No star
+
+Verbatim OE text:
+During anaesthesia, monitoring includes a regular recording of temperature,
+heart rate, cardiac rhythm, respiratory rate, blood pressure, oxygen saturation
+and end-tidal carbon dioxide.
+
+Guidebook interpretation (PDF p. 129–130):
+The parameters stated in the objective element shall be monitored and
+documented.
+
+In the case of regional anaesthesia, instead of end-tidal carbon dioxide, the
+adequacy of ventilation shall be evaluated by continual observation of qualitative
+clinical signs.
+
+Also, certain other parameters may be monitored on a case-to-case basis.
+
+The cardiac rhythm is monitored on a monitor during the procedure, and the
+same need not be documented. However, in the case of rhythm abnormalities,
+the same shall be documented.
+
+Anaesthesiologist shall be present throughout the procedure.
+
+The results of monitoring are documented in the patient's medical record.
+
+Stop-work check: CORE — the most critical monitoring OE in COP.13. Administering
+anaesthesia without the required monitoring parameters is a direct stop-work
+trigger. A missing parameter (e.g., end-tidal CO2 not available for general
+anaesthesia) is a stop-work trigger unless the regional anaesthesia alternative
+applies.
+
+SEVEN MANDATORY INTRA-ANAESTHESIA MONITORING PARAMETERS — preserve all seven:
+  1. Temperature
+  2. Heart rate
+  3. Cardiac rhythm
+  4. Respiratory rate
+  5. Blood pressure
+  6. Oxygen saturation
+  7. End-tidal carbon dioxide
+     (EXCEPTION: for regional anaesthesia, end-tidal CO2 is replaced by
+     continual observation of qualitative clinical signs of ventilation adequacy)
+
+Mandatory (shall):
+  — All seven parameters shall be monitored and documented (shall — both
+    monitoring and documentation are mandatory).
+  — Anaesthesiologist shall be present throughout the procedure (shall —
+    this is an absolute presence requirement).
+  — In case of rhythm abnormalities: cardiac rhythm shall be documented (shall).
+  — Results of monitoring shall be documented in the patient's medical record
+    (shall).
+
+Non-mandatory:
+  — Routine cardiac rhythm monitoring need not be documented at each reading
+    (only abnormalities require documentation).
+  — Additional parameters "may" be monitored case-to-case (advisory).
+
+DRAFTING NOTE: Temperature is the first of the seven parameters — do not omit
+it. It is not listed in the simpler procedural sedation monitoring list and is
+specific to anaesthesia monitoring.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.13.f
+Level: Commitment | No star
+
+Verbatim OE text:
+Patient's post-anaesthesia status is monitored and documented.
+
+Guidebook interpretation (PDF p. 130):
+This shall be done in the recovery area/OT and at least include monitoring of
+vitals till the patient recovers completely from anaesthesia and shall be done
+by an anaesthesiologist. If the patient's condition is unstable, and he/she requires
+ICU care, the same shall be monitored there. When the patient is transferred
+directly from the OT to ICU, monitoring and documentation shall be the same
+as would be required in the recovery room.
+
+Stop-work check: YES — COP.13 stop-work. Transferring a patient out of the
+recovery area without meeting the monitoring requirements is a trigger.
+
+Mandatory (shall):
+  — Post-anaesthesia monitoring shall be done in the recovery area/OT (shall).
+  — Monitoring shall at least include vitals until the patient recovers completely
+    from anaesthesia (shall — complete recovery is the endpoint, not a fixed time).
+  — Post-anaesthesia monitoring shall be done by an anaesthesiologist (shall —
+    the anaesthesiologist is required for post-anaesthesia monitoring; not a nurse
+    or technician acting alone).
+  — If condition is unstable and ICU care is required: monitoring shall continue
+    in the ICU (shall — unstable transfer triggers ICU monitoring protocol).
+  — OT-to-ICU direct transfer: monitoring and documentation shall be the same
+    as recovery-room requirements (shall — no reduced standard for direct ICU
+    transfer).
+
+Non-mandatory:
+  — What constitutes "complete recovery from anaesthesia" is clinical
+    determination; the discharge criteria are governed by COP.13.g.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.13.g
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The anaesthesiologist applies defined criteria to transfer the patient from the
+recovery area.
+
+Guidebook interpretation (PDF p. 130):
+The organisation documents these criteria which shall be based on physiologic
+parameters and in consonance with sound clinical practices.
+
+Stop-work check: YES — COP.13 stop-work. Transferring a patient from the
+recovery area without the anaesthesiologist applying defined criteria is a trigger.
+
+Mandatory (shall):
+  — Criteria shall be documented by the organisation (shall).
+  — Criteria shall be based on physiologic parameters (shall).
+  — Criteria shall be in consonance with sound clinical practices (shall).
+  — The anaesthesiologist shall apply the criteria (shall — the OE text names
+    the anaesthesiologist specifically as the applicant).
+
+Non-mandatory:
+  — The specific physiologic thresholds are the organisation's clinical
+    determination.
+
+Documentation: This OE is starred — the documented transfer criteria and their
+application records are the required documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.13.h
+Level: Commitment | No star
+
+Verbatim OE text:
+The type of anaesthesia and anaesthetic medications used are documented in
+the patient record.
+
+Guidebook interpretation (PDF p. 130):
+It shall have the name of the anaesthesiologist who performed the procedure and
+also the names of individuals (with their designation) who helped in the
+procedure. The type of anaesthesia and medications used during anaesthesia shall
+be documented in the anaesthesia chart. The documentation shall have the date,
+time and signature of the author for identification of the entry.
+
+[Guidebook cross-ref: IMS.3.e. and IMS.3.f. — in policy draft: "those
+requirements are covered in the hospital's other policies."]
+
+Stop-work check: Commitment — documentation deficiency is a compliance gap;
+not a real-time action-blocking trigger.
+
+FIVE MANDATORY DOCUMENTATION ELEMENTS — preserve all five:
+  1. Name of the anaesthesiologist who performed the procedure
+  2. Names of individuals who helped (with their designation)
+  3. Type of anaesthesia used
+  4. Medications used during anaesthesia
+  5. Date, time and signature of the author
+
+Mandatory (shall):
+  — All five documentation elements shall be present in the anaesthesia chart
+    (shall — all are stated requirements, not optional fields).
+  — The type of anaesthesia and medications shall be documented in the
+    anaesthesia chart (shall — the anaesthesia chart specifically, not just the
+    general medical record).
+
+Non-mandatory:
+  — The form of the anaesthesia chart (paper or electronic) is the organisation's
+    determination.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.13.i
+Level: Commitment | No star
+
+Verbatim OE text:
+Procedures shall comply with infection prevention and control guidelines to
+prevent cross-infection between patients.
+
+Guidebook interpretation (PDF p. 131):
+The guidelines shall be documented either separately or as a part of the
+infection prevention and control manual. This could include management of
+circuits, infection prevention and control measures during administration etc.
+
+[Guidebook cross-ref: IPC.3. — in policy draft: "those requirements are covered
+in the hospital's other policies."]
+
+Stop-work check: YES — COP.13 stop-work. Administering anaesthesia in breach
+of IPC guidelines — particularly reusing circuits or equipment without proper
+decontamination — is a direct patient-safety trigger.
+
+Mandatory (shall):
+  — Anaesthesia procedures shall comply with IPC guidelines (shall — "shall
+    comply" is the OE text; compliance is non-negotiable).
+  — IPC guidelines shall be documented either separately or as part of the
+    IPC manual (shall).
+
+Non-mandatory:
+  — Circuit management and other IPC measures are examples; the specific
+    applicable measures are determined by IPC standards (not reproduced here).
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.13.j
+Level: Achievement | No star
+
+Verbatim OE text:
+Intra-operative adverse anaesthesia events are recorded and monitored.
+
+Guidebook interpretation (PDF p. 131):
+Intra-operative adverse anaesthesia events are documented and monitored to
+take corrective and preventive action. At the outset, the organisation shall
+define the various intra-operative adverse anaesthesia events. These essentially
+are adverse events following the administration of anaesthesia. For example,
+cardiac arrest, failure of anaesthesia gas, a slip of the endotracheal tube, air
+embolism etc. The hospital shall have a mechanism to ensure that all adverse
+events are captured. It could do the same by incorporating in the anaesthesia
+record a heading for the same.
+
+Stop-work check: Achievement — no real-time stop-work trigger from the recording
+programme itself; however, failure to detect a current adverse event is covered
+by CORE monitoring requirements (COP.13.e).
+
+Mandatory:
+  — The organisation shall define the various intra-operative adverse anaesthesia
+    events applicable to its scope (shall — definition is required before capture
+    can occur).
+  — A mechanism to capture all adverse events shall exist (shall — systematic
+    capture, not event-by-event discretion).
+  — Adverse events shall be documented and monitored for CAPA (shall).
+
+Non-mandatory (illustrative):
+  — The event examples (cardiac arrest, anaesthesia gas failure, ETT slip, air
+    embolism) are illustrative of the category — not a mandatory exhaustive list.
+  — Incorporating an adverse-event heading in the anaesthesia record "could" be
+    done — advisory method, not the only acceptable mechanism.
+
+Note: This is Achievement level — present it as an advanced monitoring commitment.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table — COP.13
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    Commitment   Yes★   No     YES         Written guidance across org based on STG/sound clinical
+                                            practices (shall); three documentation elements: indications,
+                                            type of anaesthesia, procedure (shall); NOT applicable to
+                                            local anaesthesia (scope exclusion); starred doc
+b    CORE         No     YES    YES         CORE + stop-work: pre-anaesthesia assessment by QUALIFIED
+                                            ANAESTHESIOLOGIST (shall); TIMING: before wheeling into
+                                            OT complex (shall); applies to both routine and emergency
+                                            cases (shall); FIVE MANDATORY PLAN CONTENT ELEMENTS:
+                                            pre-medications, type of anaesthesia, agent and dose,
+                                            special requirements, post-anaesthesia care incl.
+                                            post-op pain mgmt where appropriate (all shall);
+                                            anaesthesiologist reviews current meds (shall); plan
+                                            documented in medical record (shall); elective: before
+                                            admission permitted; emergency/obstetric: shortly before
+                                            procedure permitted
+c    Commitment   No     No     YES         Pre-induction assessment by anaesthesiologist (shall);
+                                            TIMING: immediately before induction (shall); plan changes
+                                            documented (shall); urgent cases: two assessments done
+                                            together but documented SEPARATELY in medical record
+                                            (shall)
+d    Commitment   No     No     YES         Consent by ANAESTHESIOLOGIST (shall — not a delegate);
+                                            education on risks, benefits AND alternatives (all three,
+                                            shall); anaesthesia consent SEPARATE from surgery consent
+                                            (absolute requirement, shall); PRE.4 format (not cited)
+e    CORE         No     YES    YES         CORE + stop-work: SEVEN MANDATORY MONITORING PARAMETERS:
+                                            temperature, heart rate, cardiac rhythm, respiratory rate,
+                                            blood pressure, oxygen saturation, end-tidal CO2 (all
+                                            shall — stated in OE text); regional anaesthesia exception:
+                                            end-tidal CO2 replaced by continual qualitative clinical
+                                            signs; anaesthesiologist present throughout procedure
+                                            (shall — absolute presence requirement); rhythm
+                                            abnormalities documented (shall); results documented
+                                            in medical record (shall); additional params case-to-case
+                                            (advisory)
+f    Commitment   No     No     YES         Recovery area/OT post-anaesthesia monitoring (shall);
+                                            at least includes vitals until complete recovery (shall —
+                                            endpoint is complete recovery, not fixed time); done by
+                                            ANAESTHESIOLOGIST (shall); unstable patient: monitoring
+                                            in ICU (shall); OT-to-ICU direct transfer: same monitoring
+                                            as recovery room (shall — no reduced standard)
+g    Commitment   Yes★   No     YES         Transfer criteria documented by org (shall); based on
+                                            physiologic parameters (shall); consonant with sound
+                                            clinical practices (shall); ANAESTHESIOLOGIST applies
+                                            criteria (shall — specifically named); starred doc
+h    Commitment   No     No     NO          FIVE MANDATORY DOCUMENTATION ELEMENTS in anaesthesia
+                                            chart: anaesthesiologist name, helper names and
+                                            designations, type of anaesthesia, medications used,
+                                            date/time/signature (all shall); documented in anaesthesia
+                                            chart specifically (shall — not just general medical record)
+i    Commitment   No     No     YES         Procedures comply with IPC guidelines (shall —
+                                            compliance is stated in OE text, unconditional);
+                                            IPC guidelines documented separately or in IPC manual
+                                            (shall); management of circuits and admin measures
+                                            are examples (illustrative); IPC.3 cross-ref (not cited)
+j    Achievement  No     No     NO          Organisation defines adverse anaesthesia events for its
+                                            scope (shall); capture mechanism for all events (shall);
+                                            documented and monitored for CAPA (shall); event examples
+                                            (cardiac arrest, gas failure, ETT slip, air embolism)
+                                            illustrative; incorporating heading in anaesthesia record
+                                            "could" be done (advisory); Achievement level
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES — COP.13
+─────────────────────────────────────────────────────────────────────────────
+
+1. SCOPE EXCLUSION: local anaesthesia is explicitly excluded from this standard.
+   State this in the policy scope section.
+
+2. SEVEN MANDATORY MONITORING PARAMETERS (COP.13.e):
+   temperature, heart rate, cardiac rhythm, respiratory rate, blood pressure,
+   oxygen saturation, end-tidal CO2. Temperature is the anaesthesia-specific
+   addition not in the sedation monitoring list.
+
+3. REGIONAL ANAESTHESIA EXCEPTION (COP.13.e): end-tidal CO2 is replaced by
+   continual observation of qualitative clinical signs of ventilation adequacy
+   for regional anaesthesia. Preserve this exception; do not apply it broadly.
+
+4. FIVE ANAESTHESIA PLAN CONTENT ELEMENTS (COP.13.b): pre-medications, type of
+   anaesthesia, agent and dose, special requirements, anticipated post-anaesthesia
+   care (including post-op pain management where appropriate). All five shall.
+
+5. FIVE ANAESTHESIA CHART DOCUMENTATION ELEMENTS (COP.13.h): anaesthesiologist
+   name, helper names + designations, type of anaesthesia, medications, date/
+   time/signature. Must be in the anaesthesia chart, not only the general record.
+
+6. TWO STOP-WORK COREs in this standard:
+   — COP.13.b: wheeling patient into OT without pre-anaesthesia assessment/plan.
+   — COP.13.e: absent monitoring parameters during anaesthesia.
+
+7. ANAESTHESIOLOGIST PRESENCE (COP.13.e): anaesthesiologist shall be present
+   throughout the procedure — absolute; no delegation to non-anaesthesiologist
+   for the intra-procedure monitoring period.
+
+8. ANAESTHESIA CONSENT (COP.13.d): separate from surgery consent — absolute.
+   Two consent documents are required for procedures requiring both.
+
+
+══════════════════════════════════════════════════════════════════════════════
+COP.14 — Surgical Services
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Surgical services are provided in a consistent and safe manner.
+
+OE count: 10 | COREs: d | Stars: a★, d★, i★, j★
+Levels: a–h Commitment; i, j Achievement | Stop-work: YES
+
+Doc no: HCO/COP/POL/14
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.14.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Surgical services are provided in a consistent and safe manner.
+
+Guidebook interpretation (PDF p. 131–132):
+Written guidance based on standard treatment guidelines/sound clinical practices
+govern the provision of surgical services. This shall include the list of surgical
+procedures as well as the competency level for performing these procedures.
+
+Stop-work check: YES — COP.14 is in STOP_WORK_PROPOSALS. Providing a surgical
+procedure not on the documented list, or by personnel below the competency
+level defined for that procedure, is a stop-work trigger.
+
+TWO MANDATORY WRITTEN-GUIDANCE CONTENT ELEMENTS — preserve both:
+  1. List of surgical procedures
+  2. Competency level required for performing each procedure
+
+Mandatory (shall):
+  — Written guidance shall be based on STG/sound clinical practices (shall).
+  — Written guidance shall include both content elements above (shall).
+
+Non-mandatory:
+  — The specific procedures on the list and competency criteria are the
+    organisation's clinical determination.
+
+Documentation: This OE is starred — the written guidance including the
+procedure list and competency levels is the required documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.14.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Surgical patients have a pre-operative assessment, a documented pre-operative
+diagnosis, and pre-operative instructions are provided before surgery.
+
+Guidebook interpretation (PDF p. 132):
+Patients undergoing surgery are assessed pre-operatively, a pre-operative
+diagnosis is made, and pre-operative instructions documented. The relevant
+pre-operative instructions are provided to all concerned, including patient/family.
+This shall apply to all elective cases and whenever possible, to emergency cases.
+This shall be done by the operating surgeon or a doctor member of the operating
+team.
+
+Stop-work check: YES — COP.14 stop-work. Proceeding with elective surgery
+without a pre-operative assessment and documented pre-operative diagnosis is
+a direct trigger.
+
+THREE MANDATORY PRE-OPERATIVE REQUIREMENTS — preserve all three:
+  1. Pre-operative assessment
+  2. Documented pre-operative diagnosis
+  3. Pre-operative instructions provided to all concerned (including patient/family)
+
+Mandatory (shall):
+  — All three requirements above shall be completed before surgery (shall).
+  — Applies to all elective cases (shall — no exceptions for elective surgery).
+  — Applies to emergency cases whenever possible (shall — the qualifier "whenever
+    possible" is part of the mandatory standard for emergencies, not an exemption).
+  — Shall be done by the operating surgeon or a doctor member of the operating
+    team (shall — medical qualification and team membership are required).
+
+Non-mandatory:
+  — The content of pre-operative instructions is clinically determined for each
+    procedure type.
+
+DRAFTING NOTE: "Whenever possible" for emergency cases does not exempt the
+organisation from documenting when it was NOT possible and why.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.14.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Informed consent is obtained by a surgeon before the procedure.
+
+Guidebook interpretation (PDF p. 132):
+The consent shall be taken by the operating surgeon or a doctor member of the
+operating team. In case if there is a change in clinical status/expected outcomes
+after the consent, but before the surgery, the same is explained to the
+patient/family and is documented. In case, a new and/or an additional procedure
+that was not planned or for which an explicit consent had been taken before the
+surgery, a fresh consent needs to be taken for the same except in the case of
+life-saving procedures.
+
+[Guidebook cross-ref: PRE.4.e. — in policy draft: "those requirements are
+covered in the hospital's other policies."]
+
+Stop-work check: YES — COP.14 stop-work. Proceeding with a non-life-saving
+unplanned additional procedure without fresh consent is a direct trigger.
+
+Mandatory (shall):
+  — Consent shall be taken by the operating surgeon or a doctor member of the
+    operating team (shall).
+  — Change in clinical status/expected outcomes after consent but before surgery:
+    the change shall be explained to the patient/family AND documented (shall —
+    both explanation and documentation are mandatory).
+  — New or additional unplanned procedure: a fresh consent shall be obtained
+    (shall — EXCEPTION: life-saving procedures, where fresh consent may not
+    be possible; document the clinical rationale).
+
+Non-mandatory:
+  — The consent format and content are governed by PRE.4 (not cited in policy).
+
+DRAFTING NOTE: Two distinct consent-related obligations:
+  (1) Pre-surgery consent for the planned procedure.
+  (2) Fresh consent for any new/additional unplanned procedure (except life-saving).
+  Both must be addressed in the policy.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.14.d
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+Care is taken to prevent adverse events like the wrong site, wrong patient and
+wrong surgery.
+
+Guidebook interpretation (PDF p. 132–133):
+Written guidance shall be available for preventing adverse events like the wrong
+site, wrong patient, wrong surgery by a suitable mechanism. The organisation
+shall be able to demonstrate methods to prevent these events, for example
+identification tags, badges, cross-checks, time-outs etc.
+
+Marking the surgical/invasive site involves the patient and is done with an
+instantly recognizable and unambiguous mark. The mark shall be consistent
+throughout the organisation. The site is marked in all cases involving laterality,
+multiple structures (fingers, toes, lesions), or multiple levels (spine). The
+surgical/invasive procedure site marking is done by the person or member of
+the team who will perform the procedure. This person will do the entire surgical/
+invasive procedure and remain with the patient throughout the entire procedure.
+The site marking may take place any time before the surgical/invasive procedure
+begins, as long as the patient is actively involved in the site marking whenever
+possible. The mark shall be visible in the procedural field when prepping and
+draping is complete.
+
+The time-out shall be held immediately before the start of the procedure with all
+team members present. During the time-out, the team agrees on the correct
+patient identity, correct procedure to be done, correct surgical procedure site.
+
+Stop-work check: CORE — the most critical OE in COP.14. Performing or beginning
+a surgical procedure without completing the required site marking and time-out
+verification is the primary stop-work trigger.
+
+MANDATORY SITE-MARKING TRIGGERS (all three shall apply):
+  1. Laterality — where the procedure involves one of a bilateral pair
+  2. Multiple structures — fingers, toes, lesions, etc.
+  3. Multiple levels — spine
+
+TIME-OUT MANDATORY REQUIREMENTS — preserve all three:
+  1. Held immediately before the start of the procedure
+  2. All team members present
+  3. Agreement on: correct patient identity + correct procedure + correct surgical site
+
+MANDATORY SITE-MARKING RULES:
+  — Patient involvement in site marking is mandatory "whenever possible"
+    (shall — the qualifier is part of the rule, not an exemption).
+  — Site marking is done by the person (or team member) who will perform the
+    procedure AND who will remain with the patient throughout (shall — a
+    consistent person requirement).
+  — Mark shall be instantly recognizable and unambiguous (shall).
+  — Mark shall be consistent throughout the organisation (shall).
+  — Mark shall be visible in the procedural field when prepping and draping is
+    complete (shall — a functional visibility test).
+
+Mandatory (shall):
+  — Written guidance for wrong-site/patient/surgery prevention shall be available
+    (shall).
+  — All site-marking and time-out rules above shall be complied with (shall).
+
+Non-mandatory (illustrative):
+  — Identification tags, badges, cross-checks, time-outs are examples of
+    prevention methods — the mechanism chosen by the organisation is its
+    determination, subject to the mandatory site-marking and time-out rules.
+
+Documentation: This OE is starred — the written guidance and documentation
+of the time-out are the primary documentation requirements.
+
+DRAFTING NOTE: The time-out must be held IMMEDIATELY BEFORE the start of
+the procedure — not at prep stage or on entering the OT. The exact timing is
+mandatory.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.14.e
+Level: Commitment | No star
+
+Verbatim OE text:
+An operative note is documented before transfer out of patient from recovery.
+
+Guidebook interpretation (PDF p. 133):
+This note provides information about the procedure performed, post-operative
+diagnosis and the status of the patient before shifting and shall be documented
+by the surgeon/doctor member of the operating team. If it is documented by a
+person other than the chief operating surgeon, the same shall be countersigned
+by the chief surgeon. At a minimum, it shall include the surgery performed, name
+of the surgeon(s), name of anaesthesiologist(s), post-operative diagnosis,
+peri-operative complications, amount of blood loss, salient steps of the
+procedure and the key intra-operative findings.
+
+Stop-work check: YES — COP.14 stop-work. Transferring the patient out of the
+recovery area without a completed operative note is a direct trigger.
+
+TIMING RULE — preserve verbatim:
+  — Operative note shall be completed BEFORE transfer out of the patient from
+    recovery. Transfer cannot precede the note.
+
+EIGHT MANDATORY MINIMUM OPERATIVE NOTE CONTENT ELEMENTS — preserve all eight:
+  1. Surgery performed
+  2. Name of the surgeon(s)
+  3. Name of the anaesthesiologist(s)
+  4. Post-operative diagnosis
+  5. Peri-operative complications
+  6. Amount of blood loss
+  7. Salient steps of the procedure
+  8. Key intra-operative findings
+
+Mandatory (shall):
+  — Note shall be documented by surgeon/doctor member of the operating team
+    (shall).
+  — If documented by a non-chief surgeon: shall be countersigned by the chief
+    surgeon (shall — countersignature is mandatory, not optional).
+  — At a minimum, all eight content elements above shall be present (shall).
+
+Non-mandatory:
+  — The form of documentation (paper/electronic, structured/narrative) is the
+    organisation's choice.
+
+DRAFTING NOTE: All eight minimum content elements are stated. Do not collapse
+"peri-operative complications" and "key intra-operative findings" — they are
+distinct requirements.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.14.f
+Level: Commitment | No star
+
+Verbatim OE text:
+Post-operative care is guided by a documented plan.
+
+Guidebook interpretation (PDF p. 133):
+The plan shall address, as required advice on IV fluids, medication, care of the
+wound, nursing care, observing for any complications, etc. This plan shall be
+documented by the operating surgeon or member of the operating team.
+
+Stop-work check: Commitment — no real-time stop-work trigger beyond the absence
+of the plan itself (which is a compliance gap); the plan must exist before the
+patient enters post-operative care.
+
+Mandatory (shall):
+  — A documented post-operative care plan shall exist (shall).
+  — The plan shall be documented by the operating surgeon or member of the
+    operating team (shall).
+
+Non-mandatory (illustrative):
+  — The content elements (IV fluids, medication, wound care, nursing care,
+    complication observation) are illustrative examples — "as required" means
+    the relevant elements are selected based on the procedure and patient need.
+
+DRAFTING NOTE: "As required" does not mean the plan is optional — it means
+the content is clinically tailored. The plan itself is mandatory.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.14.g
+Level: Commitment | No star
+
+Verbatim OE text:
+Patient, personnel and material flow conform to infection prevention and control
+practices.
+
+Guidebook interpretation (PDF p. 133):
+The layout/practices of the theatre shall be such that the mix of sterile and
+unsterile materials is prevented. It is preferable to have separate closed trolleys
+for sterile and unsterile goods.
+
+Stop-work check: YES — COP.14 stop-work. Mixing sterile and unsterile materials
+in the OT is a direct patient-safety trigger.
+
+Mandatory (shall):
+  — The layout and practices of the theatre shall prevent the mix of sterile and
+    unsterile materials (shall — the prevention outcome is mandatory).
+
+Non-mandatory:
+  — Separate closed trolleys for sterile and unsterile goods is "preferable" —
+    advisory; other mechanisms that achieve the outcome are acceptable.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.14.h
+Level: Commitment | No star
+
+Verbatim OE text:
+Appropriate facilities, equipment, instruments and supplies are available in the
+operating theatre.
+
+Guidebook interpretation (PDF p. 133–134):
+The organisation shall ensure that the operation theatre complex has facilities
+for pre-op holding area, changing rooms, hand-washing, operating rooms, waiting
+area for relatives, storage area, collection area for waste and linen and recovery
+room (where applicable). In addition to the equipment required for anaesthesia
+and surgery, there shall be equipment for resuscitation, radiation protection
+(where applicable) etc. Instruments shall be in a working condition. The
+organisation shall have a mechanism to verify the same. This could be obtained
+through feedback from surgeons/anaesthesiologists. The supplies to the OT are
+commensurate to the scope and complexities of the surgery.
+
+Stop-work check: YES — COP.14 stop-work. Operating an OT without resuscitation
+equipment or with instruments not in working condition is a direct trigger.
+
+SEVEN MANDATORY OT COMPLEX FACILITY AREAS — preserve all seven:
+  1. Pre-op holding area
+  2. Changing rooms
+  3. Hand-washing facilities
+  4. Operating rooms
+  5. Waiting area for relatives
+  6. Storage area
+  7. Collection area for waste and linen
+  (Plus: recovery room — where applicable)
+
+Mandatory (shall):
+  — All seven OT complex facility areas above shall be available (shall — stated
+    in the Guidebook as the minimum; "where applicable" applies only to the
+    recovery room, not to the other seven).
+  — Resuscitation equipment shall be available in addition to anaesthesia and
+    surgical equipment (shall).
+  — Radiation protection equipment where applicable (shall — conditional on scope).
+  — Instruments shall be in working condition (shall).
+  — A mechanism to verify instrument working condition shall exist (shall).
+  — Supplies shall be commensurate to the scope and complexity of surgery (shall).
+
+Non-mandatory:
+  — Feedback from surgeons/anaesthesiologists "could" be the verification
+    mechanism — illustrative; other verification methods are acceptable.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.14.i
+Level: Achievement | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation shall implement a quality assurance programme.
+
+Guidebook interpretation (PDF p. 134):
+The written guidance for quality assurance could be developed individually, or
+it could be a part of the organisation's overall quality-improvement programme.
+The organisation shall monitor care-related outcomes. For example, intra-
+operative mishaps such as cautery burns, patient fall, position related nerve
+injuries; and peri-operative events including surgical site infections, deep venous
+thrombosis, etc. The organisation's quality assurance programmes shall also
+include aspects like pre-operative preparation, antimicrobial prophylaxis,
+adherence to set procedure(s) to prevent adverse events, etc.
+
+Stop-work check: Achievement — no real-time stop-work trigger from the QA
+programme itself.
+
+Mandatory (shall):
+  — The organisation shall monitor care-related outcomes (shall).
+  — QA programme shall also include the following aspects (stated as inclusions,
+    not "for example"):
+      — Pre-operative preparation
+      — Antimicrobial prophylaxis
+      — Adherence to set procedures to prevent adverse events
+
+Non-mandatory (illustrative):
+  — Outcome examples (cautery burns, patient falls, nerve injuries, SSIs, DVT)
+    are illustrative — the organisation determines relevant outcome indicators.
+  — Written guidance form "could" be standalone or part of overall QI (advisory).
+
+Documentation: This OE is starred — the QA programme documentation is required.
+
+Note: This is Achievement level — present it as an advanced quality commitment.
+
+DRAFTING NOTE: Unlike the outcome examples (which are illustrative), the three
+QA programme aspects (pre-op preparation, antimicrobial prophylaxis, adherence
+to adverse-event prevention procedures) are stated as inclusions and shall be
+addressed in the QA programme.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.14.j
+Level: Achievement | Star ★ (documentation required)
+
+Verbatim OE text:
+The quality assurance programme includes surveillance of the operation theatre
+environment.
+
+Guidebook interpretation (PDF p. 134):
+Surveillance activities shall include the daily monitoring of humidity, pressure
+differential and temperature and at least six-monthly monitoring of the integrity
+of the filter. For air-conditioning of OT, refer to the guidelines issued by NABH.
+
+Stop-work check: Achievement — no real-time stop-work trigger from the
+surveillance programme itself; however, failure to detect critical environmental
+parameters (humidity, pressure, temperature) out of range is a patient-safety
+risk that warrants immediate action.
+
+EXACT MANDATORY FREQUENCY — preserve verbatim:
+  — DAILY monitoring: humidity, pressure differential, temperature (three
+    parameters monitored every day).
+  — AT LEAST SIX-MONTHLY monitoring: integrity of the filter.
+
+THREE MANDATORY DAILY MONITORING PARAMETERS — preserve all three:
+  1. Humidity
+  2. Pressure differential
+  3. Temperature
+
+Mandatory (shall):
+  — Daily monitoring of all three parameters above shall be conducted (shall —
+    "daily" is the exact minimum frequency; do not soften to "regularly").
+  — At least six-monthly monitoring of filter integrity shall be conducted (shall —
+    "at least six-monthly" is the exact minimum frequency).
+  — For OT air-conditioning: NABH guidelines shall be the reference (stated
+    cross-ref — in policy draft: "the hospital shall follow the applicable
+    guidelines for OT air-conditioning").
+
+Documentation: This OE is starred — the surveillance records are the required
+documentation.
+
+Note: This is Achievement level.
+
+DRAFTING NOTE: Two distinct frequencies — daily for the three environmental
+parameters and at least six-monthly for filter integrity. Do not merge these
+into a single monitoring frequency. "At least six-monthly" means every six
+months is the maximum interval; more frequent is permissible.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table — COP.14
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    Commitment   Yes★   No     YES         Written guidance based on STG/sound clinical practices
+                                            (shall); TWO MANDATORY CONTENT ELEMENTS: list of surgical
+                                            procedures, competency level for each procedure (both
+                                            shall); starred doc
+b    Commitment   No     No     YES         THREE MANDATORY PRE-OP REQUIREMENTS: pre-op assessment,
+                                            documented pre-op diagnosis, pre-op instructions to all
+                                            concerned incl. patient/family (all shall); applies to
+                                            ALL elective cases (shall — no exceptions); applies to
+                                            emergency cases WHENEVER POSSIBLE (shall-qualified);
+                                            done by operating surgeon or doctor-team member (shall)
+c    Commitment   No     No     YES         Consent by operating surgeon or doctor-team member (shall);
+                                            clinical change after consent: explained to patient/family
+                                            AND documented (shall — both); new/unplanned procedure:
+                                            FRESH CONSENT (shall — exception: life-saving procedures
+                                            only); PRE.4 covers format (not cited)
+d    CORE         Yes★   YES    YES         CORE + stop-work: written guidance for wrong-site/patient/
+                                            surgery prevention (shall); MANDATORY SITE-MARKING: in
+                                            cases of laterality, multiple structures, multiple levels
+                                            (all three triggers shall apply); mark instantly recognizable
+                                            and unambiguous (shall); mark consistent throughout org
+                                            (shall); marking done by person who will perform and
+                                            remain throughout (shall); patient actively involved
+                                            "whenever possible" (shall-qualified); mark visible in
+                                            procedural field after prep and draping (shall);
+                                            TIME-OUT: immediately before start, ALL team members
+                                            present, THREE agreements: correct patient identity +
+                                            correct procedure + correct surgical site (all shall);
+                                            starred doc
+e    Commitment   No     No     YES         TIMING: operative note completed BEFORE transfer from
+                                            recovery (shall — absolute); EIGHT MANDATORY MINIMUM
+                                            CONTENT ELEMENTS: surgery performed, surgeon name(s),
+                                            anaesthesiologist name(s), post-op diagnosis, peri-op
+                                            complications, blood loss, salient steps, key intra-op
+                                            findings (all shall); by surgeon or doctor-team member
+                                            (shall); non-chief: countersigned by chief surgeon (shall)
+f    Commitment   No     No     NO          Documented post-op care plan (shall); by operating surgeon
+                                            or team member (shall); content elements (IV fluids,
+                                            medications, wound care, nursing care, complications) are
+                                            "as required" — clinically tailored (illustrative); plan
+                                            itself is mandatory
+g    Commitment   No     No     YES         Theatre layout/practices shall prevent mix of sterile and
+                                            unsterile materials (shall — prevention outcome mandatory);
+                                            separate closed trolleys for sterile/unsterile goods
+                                            "preferable" (advisory method)
+h    Commitment   No     No     YES         SEVEN MANDATORY OT FACILITY AREAS: pre-op holding area,
+                                            changing rooms, hand-washing, operating rooms, relatives'
+                                            waiting area, storage area, waste and linen collection
+                                            area (all shall); recovery room where applicable (shall
+                                            — conditional); resuscitation equipment in addition to
+                                            anaesthesia/surgical equipment (shall); radiation
+                                            protection where applicable (shall); instruments in
+                                            working condition (shall); verification mechanism (shall);
+                                            supplies commensurate to scope and complexity (shall);
+                                            feedback mechanism "could" be used (advisory)
+i    Achievement  Yes★   No     NO          Care-related outcomes monitored (shall); THREE MANDATORY
+                                            QA PROGRAMME ASPECTS (stated inclusions, not examples):
+                                            pre-op preparation, antimicrobial prophylaxis, adherence
+                                            to adverse-event prevention procedures (all shall);
+                                            outcome examples (cautery burns, falls, nerve injuries,
+                                            SSIs, DVT) illustrative; form "could" be standalone or
+                                            part of QI (advisory); Achievement level
+j    Achievement  Yes★   No     NO          EXACT DAILY FREQUENCY: humidity, pressure differential,
+                                            temperature (three daily monitoring parameters, shall);
+                                            EXACT MINIMUM INTERVAL: at least six-monthly filter
+                                            integrity monitoring (shall); NABH OT air-conditioning
+                                            guidelines are the reference; starred doc; Achievement
+                                            level
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES — COP.14
+─────────────────────────────────────────────────────────────────────────────
+
+1. STOP-WORK TRIGGER (COP.14): The primary trigger is performing a surgical
+   procedure without completing site marking and the time-out (COP.14.d CORE).
+   Secondary triggers: no pre-operative assessment/diagnosis for elective cases
+   (COP.14.b), no surgical consent (COP.14.c), no operative note before transfer
+   from recovery (COP.14.e), OT without resuscitation equipment (COP.14.h).
+
+2. EIGHT MINIMUM OPERATIVE NOTE ELEMENTS (COP.14.e): surgery performed,
+   surgeon name(s), anaesthesiologist name(s), post-op diagnosis, peri-op
+   complications, blood loss, salient steps, key intra-op findings. All eight.
+
+3. TIME-OUT TIMING (COP.14.d): IMMEDIATELY before the start of the procedure.
+   All team members present. Three mandatory agreements (patient identity,
+   procedure, surgical site). Do not allow the time-out to be conducted at
+   a different point.
+
+4. SITE-MARKING TRIGGERS (COP.14.d): laterality, multiple structures, multiple
+   levels (spine). These are the three triggers requiring site marking — do not
+   limit to one or expand beyond these three.
+
+5. TWO DISTINCT ENVIRONMENTAL MONITORING FREQUENCIES (COP.14.j):
+   — Daily: humidity, pressure differential, temperature (three parameters).
+   — At least six-monthly: filter integrity.
+   Do not merge into a single monitoring programme statement.
+
+6. THREE QA PROGRAMME INCLUSIONS (COP.14.i): pre-op preparation, antimicrobial
+   prophylaxis, adherence to adverse-event prevention procedures — these are
+   stated inclusions, not examples. Preserve all three.
+
+7. FRESH CONSENT OBLIGATION (COP.14.c): New or additional unplanned procedure
+   requires fresh consent except for life-saving procedures. The life-saving
+   exception must be documented and the exception scope is narrow — it is not
+   a general emergency exemption.
+
+8. SCOPE OF COP.14: If the organisation does not provide surgical services,
+   this standard is not applicable. State this in the policy scope section.
+
+
+─────────────────────────────────────────────────────────────────────────────
+
+Source files:
+  policies/source/hco6_cop_ocr.txt       (verbatim OE text + Guidebook, PDF pp. 120–134)
+  policies/source/hco6_cop_inventory.json (OE codes, levels, star flags for COP.9–COP.14)
+  policies/build/cop_raw_dump_5-8.txt    (format reference for this file)

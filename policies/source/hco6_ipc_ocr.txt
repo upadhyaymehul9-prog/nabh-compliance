@@ -1,0 +1,445 @@
+                                      Infection Prevention and Control
+Chapter 5                             (IPC)
+
+     Intent of the chapter
+
+The organisation implements an effective healthcare associated infection prevention and control programme.
+The programme is documented and aims at reducing / eliminating infection risks to patients, visitors and
+providers of care. The programme is implemented across the organisation, including clinical areas and
+support services.
+The organisation provides proper facilities and adequate resources to support the infection prevention and
+control programme. The organisation measures and acts to prevent or reduce the risk of healthcare
+associated infection in patients and staff.
+The organisation has an effective antimicrobial management programme through regularly updated
+antimicrobial policy based on local data and monitors its implementation. Programme also includes
+monitoring of antimicrobials usage in the organisation.
+Surveillance activities are incorporated in the infection prevention and control programme.
+The programme includes disinfection / sterilisation activities and biomedical waste (BMW) management.
+
+
+
+                                          SUMMARY OF STANDARDS
+                The organisation has a comprehensive and coordinated Infection Prevention and Control (IPC) programme
+   IPC.1.
+                aimed at reducing / eliminating risks to patients, visitors, providers of care and community.
+
+   IPC.2.       The organisation provides adequate and appropriate resources for infection prevention and control.
+
+   IPC.3.       The organisation implements the infection prevention and control processes in clinical areas.
+
+   IPC.4.       The organisation implements the infection prevention and control processes in support services.
+
+   IPC.5.       The organisation takes actions to prevent healthcare associated Infections (HAI) in patients.
+
+   IPC.6.       The organisation performs surveillance to capture and monitor infection prevention and control data.
+
+                Infection prevention measures include sterilization and / or disinfection of instruments, equipment and
+   IPC.7.
+                devices.
+
+   IPC.8.       The organisation takes action to prevent or reduce healthcare associated infections in its staff.
+
+*This implies that the objective element requires documentation.
+
+
+
+
+                                                                   110
+NABH Accreditation Standards for Hospitals
+                                                                                                                          ®
+
+
+
+
+                                          Summary of Objective Elements
+
+
+
+                                         Standard                    8
+
+                                         Objective elements         49
+
+
+                                         CORE                       13
+
+                                         Commitment                 33
+
+                                         Achievement                 3
+
+                                         Excellence                  0
+
+
+
+
+  Objective
+                IPC.1.        IPC.2.        IPC.3.       IPC.4.       IPC.5.       IPC.6.        IPC.7.       IPC.8.
+  Element
+
+     a         CORE          CORE          CORE        Commitment   Commitment    CORE         Commitment   Commitment
+
+
+     b        Commitment    Commitment     CORE        Commitment   Commitment   Commitment     CORE        Commitment
+
+
+     c        Commitment     CORE         Commitment    CORE        Commitment   Commitment    Commitment   Achievement
+
+
+
+     d        Achievement   Commitment     CORE         CORE        Commitment    CORE         Commitment   Commitment
+
+
+     e        Commitment                  Commitment   Commitment                Achievement   Commitment   Commitment
+
+
+      f       Commitment                   CORE        Commitment                 CORE
+
+
+     g        Commitment                                                         Commitment
+
+
+     h        Commitment                                                         Commitment
+
+
+      i       Commitment                                                         Commitment
+
+
+      j       Commitment
+
+
+
+
+                                                          111
+NABH Accreditation Standards for Hospitals
+                                                                                                          ®
+
+
+
+
+                           Standards and Objective Elements
+
+
+Standard
+                 The organisation has a comprehensive and coordinated Infection
+    IPC.1.       Prevention and Control (IPC) programme aimed at reducing /
+                 eliminating risks to patients, visitors, providers of care and community.
+
+Objective Elements
+   CORE            a.    The infection prevention and control programme is documented, which aims
+                         at preventing and reducing the risk of healthcare associated infections in the
+                         hospital. *
+
+   Commitment      b.    The infection prevention and control programme identies high-risk
+                         activities and has written guidance to prevent and manage infections for
+                         these activities.*
+
+   Commitment      c.    The infection prevention and control programme is reviewed and updated at
+                         least once a year.
+
+   Achievement     d.    The infection prevention and control programme is reviewed based on
+                         infection prevention and control assessment tool.
+
+   Commitment      e.    The organisation has a multi-disciplinary infection prevention and control
+                         committee, which co-ordinates all infection prevention and control
+                         activities.*
+
+   Commitment      f.    The organisation has an infection Prevention and control team, which
+                         coordinates the implementation of all infection prevention and control
+                         activities. *
+
+   Commitment      g.    The organisation has designated infection prevention and control ofcer as
+                         part of the infection prevention and control team. *
+
+   Commitment      h.    The organisation has designated infection prevention and control nurse(s)
+                         as part of the infection prevention and control team. *
+
+   Commitment      I.    The organisation implements information, education and communication
+                         programme for infection prevention and control activities for the community.
+
+   Commitment      j.    The organisation participates in managing community outbreaks.
+
+
+
+
+                  CORE              Commitment            Achievement             Excellence
+
+
+                                                  112
+NABH Accreditation Standards for Hospitals
+                                                                                                          ®
+
+
+
+
+Standard
+
+                   The organisation provides adequate and appropriate resources for
+    IPC.2.
+                   infection prevention and control.
+
+
+Objective Elements
+   CORE            a.    The management makes available resources required for the infection
+                         prevention and control programme including allocation of adequate funds
+                         from its annual budget.
+
+   Commitment      b.    Adequate and appropriate personal protective equipment, soaps, and
+                         disinfectants are available and used correctly.
+
+   CORE            c.    Adequate and appropriate facilities for hand hygiene in all patient-care areas
+                         are accessible to healthcare providers.
+
+
+   Commitment      d.    Isolation / barrier nursing facilities are available.
+
+
+
+
+Standard
+
+                   The organisation implements the infection prevention and control
+    IPC.3.
+                   processes in clinical areas.
+
+
+Objective Elements
+   CORE            a.    The organisation adheres to standard precautions at all times. *
+
+
+   CORE            b.    The organisation adheres to hand-hygiene guidelines. *
+
+
+   Commitment      c.    The organisation adheres to transmission-based precautions. *
+
+
+   CORE            d.    The organisation adheres to safe injection and infusion practices. *
+
+
+   Commitment      e.    Appropriate antimicrobial usage policy is established and documented *
+
+
+   CORE            f.    The organisation implements the antimicrobial stewardship programme and
+                         monitors the use of antimicrobial agents.
+
+
+
+                  CORE               Commitment              Achievement          Excellence
+
+
+                                                    113
+NABH Accreditation Standards for Hospitals
+                                                                                                      ®
+
+
+
+
+Standard
+
+                   The organisation implements the infection prevention and control
+    IPC.4.
+                   processes in support services.
+
+
+Objective Elements
+   Commitment      a.    The organisation has appropriate engineering controls to prevent
+                         infections. *
+
+   Commitment      b.    The organisation designs and implements a plan to reduce the risk of
+                         infection during construction and renovation.*
+
+
+   CORE            c.    The organisation adheres to housekeeping procedures. *
+
+
+   CORE            d.    Biomedical waste (BMW) is handled appropriately and safely.
+
+
+   Commitment      e.    The organisation adheres to laundry and linen management processes. *
+
+
+   Commitment      f.    The organisation adheres to kitchen sanitation and food-handling issues. *
+
+
+
+
+Standard
+
+                   The organisation takes actions to prevent healthcare associated
+    IPC.5.
+                   infections (HAI) in patients.
+
+
+Objective Elements
+   Commitment      a.    The organisation takes action to prevent catheter-associated urinary tract
+                         Infections.
+
+
+   Commitment      b.    The organisation takes action to prevent ventilator- associated pneumonia.
+
+
+   Commitment      c.    The organisation takes action to prevent central line associated blood
+                         stream infections.
+
+
+   Commitment      d.    The organisation takes action to prevent surgical site infections.
+
+
+
+
+                  CORE              Commitment             Achievement             Excellence
+
+
+                                                   115
+NABH Accreditation Standards for Hospitals
+                                                                                                         ®
+
+
+
+
+Standard
+
+                   The organisation performs surveillance to capture and monitor
+    IPC.6.
+                   infection prevention and control data.
+
+
+Objective Elements
+   CORE            a.    The scope of surveillance incorporates tracking and analysing of infection
+                         risks, rates and trends.
+
+
+   Commitment      b.    Verication of data is done regularly by the infection prevention and control
+                         team.
+
+
+   Commitment      c.    Surveillance is directed towards the identied high-risk activities.
+
+
+   CORE            d.    Surveillance includes monitoring compliance with hand-hygiene guidelines.
+
+
+   Achievement     e.    Surveillance includes mechanisms to capture the occurrence of multi-drug-
+                         resistant organisms.
+
+   CORE            f.    Surveillance includes monitoring the effectiveness of housekeeping
+                         services.
+
+   Commitment      g.    Feedback regarding surveillance data is provided regularly to the
+                         appropriate health care provider.
+
+   Commitment      h.    The organisation identies and takes appropriate action to control outbreaks
+                         of infections. *
+
+   Commitment      I.    Surveillance data is analysed and appropriate corrective and preventive
+                         actions are taken.
+
+
+Standard
+
+                  Infection prevention measures include sterilisation and / or disinfection
+    IPC.7.
+                  of instruments, equipment and devices.
+
+
+Objective Elements
+   Commitment      a.    The organisation provides adequate space and appropriate zoning for
+                         sterilisation activities.
+
+
+
+                  CORE              Commitment             Achievement             Excellence
+
+
+                                                   116
+NABH Accreditation Standards for Hospitals
+                                                                                                            ®
+
+
+
+
+   CORE            b.    Cleaning, packing, disinfection and / or sterilisation, storing and the issue of
+                         items is done as per the written guidance. *
+
+   Commitment      c.    Reprocessing of instruments, equipment and devices are done as per
+                         written guidance. *
+
+   Commitment      d.    Regular validation tests for sterilisation are carried out and documented. *
+
+   Commitment      e.    The established recall procedure is implemented when a breakdown in the
+                         sterilisation system is identied. *
+
+
+
+Standard
+   Commitment      h.    The organisation identies and takes appropriate action to control outbreaks
+                   The organisation takes action to prevent or reduce healthcare
+    IPC.8.             of infections. *
+                   associated infections in its staff.
+
+
+Objective Elements
+   Commitment      a.    The organisation implements occupational health and safety practices as
+                         per written guidance to reduce the risk of transmitting microorganisms
+                         among health care providers. *
+
+
+   Commitment      b.    The organisation implements an immunisation policy for its staff.*
+
+
+   Achievement     c.    The organisation implements work restrictions for health care providers with
+                         transmissible infections.
+
+
+   Commitment      d.    The organisation implements measures for blood and body uid exposure
+                         prevention.
+
+
+   Commitment      e.    Appropriate post-exposure prophylaxis is provided to all staff members
+                         concerned. *
+
+
+
+
+                  CORE              Commitment             Achievement             Excellence
+
+
+                                                   117
+NABH Accreditation Standards for Hospitals
+                                                                                                                           ®
+
+
+
+
+References
+1.    Hascic A, Wolfensberger A, Clack L, Schreiber PW, Kuster SP, Sax H. Documentation of adherence to
+      infection prevention best practice in patient records: a mixed-methods investigation. Antimicrobial
+      Resistance & Infection Control. 2022 Dec;11(1):1-2.
+2.    S Stewart S, Robertson C, Kennedy S, Kavanagh K, Haahr L, Manoukian S, Mason H, Dancer S, Cook B,
+      Reilly J. Personalized infection prevention and control: identifying patients at risk of healthcare-
+      associated infection. Journal of Hospital Infection. 2021 Aug 1;114:32-42.
+3.    Infection_Prevention_and_Control_Risk_Assessment_A.pdf. [cited 2023 Nov 24]. Available from:
+      http://Infection_Prevention_and_Control_Risk_Assessment_A.pdf (not found added ref 4 in its place)
+4.    World Health Organization. Infection prevention and control assessment framework at the facility level. 6
+      November 2018. Guidance (normative). [cited 2023 Nov 24]. Available from:
+      https://iris.who.int/bitstream/handle/10665/330072/WHO-HIS-SDS-2018.9-eng.pdf?sequence=1
+5.    Centre for Disease Control and Prevention. Healthcare-Associated Infections. [cited 2023 Deccember
+      5]. Available from:     https://iris.who.int/bitstream/handle/10665/330072/WHO-HIS-SDS-2018.9-
+      eng.pdf?sequence=1
+6.    Gastaldi S, Festa MG, Nieddu A, Zavagno G, Cau E, Barbieri C, Beccaria E, D'Ancona F. Identication of
+      essential contents and a standard framework for the development of an Infection Prevention and Control
+      manual for healthcare facilities: a scoping review. American Journal of Infection Control. 2023 Sep 7.
+7.    Mugomeri E. The efcacy of infection prevention and control committees in Lesotho: A qualitative study.
+      American journal of infection control. 2018 Mar 1;46(3):e13-7.
+8.    Bartles R, Dickson A, Babade O. A systematic approach to quantifying infection prevention stafng and
+      coverage needs. American journal of infection control. 2018 May 1;46(5):487-91.
+9.    Dekker M, Mansfeld RV, Vandenbroucke-Grauls CM, Lauret TE, Schutijser BC, de Bruijne MC,
+      Jongerden IP. Role perception of infection control link nurses; a multi-centre qualitative study. Journal of
+      Infection Prevention. 2022 May;23(3):93-100.
+10. World Health Organization: Minimum requirements for infection prevention and control programmes.
+    2 0 1 9 N o v 1 8 . [ c i t e d 2 0 2 3 N o v 2 4 ] . A v a i l a b l e f r o m : h t t p s : / / w w w. w h o . i n t /
+    publications/i/item/9789241516945
+
+
+
+
+                                                            118
+

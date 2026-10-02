@@ -1,0 +1,303 @@
+{
+  "1": {
+    "standard_code": "ROM.1",
+    "title": "The organisation identifies those responsible for governance and their roles are defined.",
+    "oes": [
+      {
+        "oe_code": "ROM.1.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": true,
+        "text": "Those responsible for governance are identified and their roles and responsibilities are defined and documented."
+      },
+      {
+        "oe_code": "ROM.1.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "Those responsible for governance lay down the organisation’s vision, mission and values."
+      },
+      {
+        "oe_code": "ROM.1.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": true,
+        "text": "Those responsible for governance approve the documented strategic and operational plans and the organisation’s annual budget."
+      },
+      {
+        "oe_code": "ROM.1.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Those responsible for governance monitor and measure the performance of the organisation against the stated mission."
+      },
+      {
+        "oe_code": "ROM.1.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Those responsible for governance appoint the senior leaders in the organisation."
+      },
+      {
+        "oe_code": "ROM.1.f",
+        "letter": "f",
+        "level": "Commitment",
+        "star": true,
+        "text": "Those responsible for governance support safety initiatives, clinical governance framework and quality improvement plans."
+      },
+      {
+        "oe_code": "ROM.1.g",
+        "letter": "g",
+        "level": "Commitment",
+        "star": false,
+        "text": "Those responsible for governance shall develop clinical governance framework."
+      },
+      {
+        "oe_code": "ROM.1.h",
+        "letter": "h",
+        "level": "Achievement",
+        "star": false,
+        "text": "Those responsible for governance support the ethical management framework of the organisation."
+      },
+      {
+        "oe_code": "ROM.1.i",
+        "letter": "i",
+        "level": "Commitment",
+        "star": false,
+        "text": "Those responsible for governance inform the public of the quality and performance of services."
+      }
+    ],
+    "count": 9
+  },
+  "2": {
+    "standard_code": "ROM.2",
+    "title": "Those responsible for governance manage the organisation in an ethical manner.",
+    "oes": [
+      {
+        "oe_code": "ROM.2.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": true,
+        "text": "The leaders establish the organisation’s ethical management framework."
+      },
+      {
+        "oe_code": "ROM.2.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "The ethical management framework includes processes for managing issues with ethical implications, dilemmas and concerns."
+      },
+      {
+        "oe_code": "ROM.2.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation discloses its ownership."
+      },
+      {
+        "oe_code": "ROM.2.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation honestly portrays its affiliations and accreditations."
+      }
+    ],
+    "count": 4
+  },
+  "3": {
+    "standard_code": "ROM.3",
+    "title": "Those responsible for governance ensure sustainability in hospitals by addressing environmental, social and economic factors from long term well-being of healthcare system and community.",
+    "oes": [
+      {
+        "oe_code": "ROM.3.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "Those responsible for governance address the organisation’s sustainability programme in terms of Environment Social and Governance (ESG) responsibility."
+      },
+      {
+        "oe_code": "ROM.3.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation takes initiatives towards an energy-efficient and environmentally friendly hospital."
+      },
+      {
+        "oe_code": "ROM.3.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Those responsible for governance address the organisations social responsibility."
+      },
+      {
+        "oe_code": "ROM.3.d",
+        "letter": "d",
+        "level": "Commitment",
+        "star": false,
+        "text": "Staff well-being is promoted."
+      },
+      {
+        "oe_code": "ROM.3.e",
+        "letter": "e",
+        "level": "Excellence",
+        "star": false,
+        "text": "The organisation follows sustainable procurement practices."
+      },
+      {
+        "oe_code": "ROM.3.f",
+        "letter": "f",
+        "level": "Achievement",
+        "star": false,
+        "text": "Hospitals shall encourage employees to use common / public transportation to reduce the environmental impact of commuting and carbon footprint."
+      },
+      {
+        "oe_code": "ROM.3.g",
+        "letter": "g",
+        "level": "Achievement",
+        "star": false,
+        "text": "The organisation ensures financial sustainability of the hospital by balancing the financial aspects of healthcare delivery."
+      }
+    ],
+    "count": 7
+  },
+  "4": {
+    "standard_code": "ROM.4",
+    "title": "The organisation is headed by a leader who shall be responsible for operating the organisation on a day-to-day basis.",
+    "oes": [
+      {
+        "oe_code": "ROM.4.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "The person heading the organisation has requisite and appropriate administrative qualifications and experience."
+      },
+      {
+        "oe_code": "ROM.4.b",
+        "letter": "b",
+        "level": "CORE",
+        "star": false,
+        "text": "The leader is responsible for and complies with the laid-down and applicable legislations, regulations and notifications."
+      },
+      {
+        "oe_code": "ROM.4.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The leader appoints / participates in the recruitment of department leaders of the organisation who will assist in the day-to-day functioning of the organisation."
+      },
+      {
+        "oe_code": "ROM.4.d",
+        "letter": "d",
+        "level": "Achievement",
+        "star": false,
+        "text": "The leader ensures that each organisational programme, service, site or department has effective leadership."
+      },
+      {
+        "oe_code": "ROM.4.e",
+        "letter": "e",
+        "level": "Achievement",
+        "star": false,
+        "text": "The performance of the organisation’s leader is reviewed for effectiveness."
+      }
+    ],
+    "count": 5
+  },
+  "5": {
+    "standard_code": "ROM.5",
+    "title": "The organisation displays professionalism in its functioning.",
+    "oes": [
+      {
+        "oe_code": "ROM.5.a",
+        "letter": "a",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation has strategic and operational plans, including long-term and short-term goals commensurate to the organisation’s vision, mission and values in consultation with the various stakeholders."
+      },
+      {
+        "oe_code": "ROM.5.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation coordinates the functioning with departments and external agencies and monitors the progress in achieving the defined goals and objectives."
+      },
+      {
+        "oe_code": "ROM.5.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "The organisation plans and budgets for its activities annually."
+      },
+      {
+        "oe_code": "ROM.5.d",
+        "letter": "d",
+        "level": "Achievement",
+        "star": false,
+        "text": "The functioning of committees is reviewed for their effectiveness."
+      },
+      {
+        "oe_code": "ROM.5.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": true,
+        "text": "The organisation documents the service standards that are measurable and monitors them."
+      },
+      {
+        "oe_code": "ROM.5.f",
+        "letter": "f",
+        "level": "Excellence",
+        "star": true,
+        "text": "Systems and processes are in place for change management."
+      }
+    ],
+    "count": 6
+  },
+  "6": {
+    "standard_code": "ROM.6",
+    "title": "Leadership ensures that patient-safety aspects and risk-management issues are an integral part of patient care and hospital management.",
+    "oes": [
+      {
+        "oe_code": "ROM.6.a",
+        "letter": "a",
+        "level": "CORE",
+        "star": true,
+        "text": "Leadership ensures proactive risk management across the organisation."
+      },
+      {
+        "oe_code": "ROM.6.b",
+        "letter": "b",
+        "level": "Commitment",
+        "star": false,
+        "text": "Leadership provides resources for proactive risk-assessment and risk- reduction activities."
+      },
+      {
+        "oe_code": "ROM.6.c",
+        "letter": "c",
+        "level": "Commitment",
+        "star": false,
+        "text": "Leadership ensures integration between quality improvement, risk- management and strategic planning within the organisation."
+      },
+      {
+        "oe_code": "ROM.6.d",
+        "letter": "d",
+        "level": "Achievement",
+        "star": true,
+        "text": "Leadership ensures implementation of systems for internal and external reporting of system and process failures."
+      },
+      {
+        "oe_code": "ROM.6.e",
+        "letter": "e",
+        "level": "Commitment",
+        "star": false,
+        "text": "Leadership ensures that it has a documented agreement for all outsourced services that include service parameters."
+      },
+      {
+        "oe_code": "ROM.6.f",
+        "letter": "f",
+        "level": "Achievement",
+        "star": false,
+        "text": "Leadership monitors the quality of the outsourced services and improvements are made as required."
+      }
+    ],
+    "count": 6
+  }
+}

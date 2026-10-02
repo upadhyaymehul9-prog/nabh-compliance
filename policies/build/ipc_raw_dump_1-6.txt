@@ -1,0 +1,1702 @@
+IPC.1–IPC.6 — Batched Raw Source Dump
+======================================
+Purpose: Draft input for six standards in one pull.
+Each standard drafted and verified individually — same process as all prior chapters.
+Source: Official NABH Hospitals 6th Edition Standards PDF (OE text, levels, asterisks)
+        + NABH Guidebook (interpretations scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+
+CROSS-REFERENCE NOTE (applies throughout this file):
+The Guidebook cites specific NABH OE codes in several places (e.g., "Refer to ROM.5.c",
+"Refer to HRM.11.d", "Refer to FMS.2.f"). In policy drafts, these must NOT be reproduced
+as code citations. Use generic phrasing: "Those requirements are covered in the hospital's
+other policies." The specific codes are preserved here for source accuracy only.
+
+OCR ARTIFACT NOTICE:
+The Guidebook source PDF contains OCR artefacts. Strings such as "HEB cone", "HEEB HB ABR",
+"— ja _c,.", "HEB HEB excetience", "cc. HM core vF", "al BS Sa HB" are typographic
+artefacts from the scanned PDF's level-indicator and OE-transition formatting. They are
+preserved in interpretation transcriptions but flagged and discarded for policy drafting.
+
+STOP-WORK STATUS BY STANDARD:
+  IPC.1 — NO stop-work authority
+  IPC.2 — NO stop-work authority
+  IPC.3 — YES (STOP_WORK_PROPOSALS: start a clinical procedure without standard precautions
+                / hand hygiene / safe injection; restricted antimicrobial without the
+                stewardship path)
+  IPC.4 — YES (STOP_WORK_PROPOSALS: handle BMW without required segregation or PPE;
+                start construction/renovation without the infection-risk plan)
+  IPC.5 — YES (STOP_WORK_PROPOSALS: insert a urinary catheter, central line, or start
+                ventilation / an operation without the HAI-prevention bundle in place)
+  IPC.6 — NO stop-work authority
+
+STATUTE DISCLAIMER STATUS:
+  IPC.4 — YES (statutory P2 proposed — biomedical waste handling provisions as named in
+               NABH IPC.4, including colour-coded segregation, storage, authorised vendor
+               and monitoring as required under applicable Biomedical Waste Management
+               Rules)
+  IPC.1, IPC.2, IPC.3, IPC.5, IPC.6 — Accreditation-only disclaimer (no statute P2)
+
+POLICY TITLES AND PREPARED-BY:
+  IPC.1 — Infection Prevention and Control Programme | Prepared by: Infection Prevention and Control Officer | Doc: HCO/IPC/POL/01
+  IPC.2 — Resources for Infection Prevention and Control | Prepared by: Medical Superintendent | Doc: HCO/IPC/POL/02
+  IPC.3 — Infection Prevention and Control in Clinical Areas | Prepared by: Infection Prevention and Control Officer | Doc: HCO/IPC/POL/03
+  IPC.4 — Infection Prevention and Control in Support Services | Prepared by: Infection Prevention and Control Officer | Doc: HCO/IPC/POL/04
+  IPC.5 — Prevention of Healthcare Associated Infections in Patients | Prepared by: Infection Prevention and Control Officer | Doc: HCO/IPC/POL/05
+  IPC.6 — Infection Prevention and Control Surveillance | Prepared by: Infection Prevention and Control Officer | Doc: HCO/IPC/POL/06
+
+CHAPTER INTENT (official Standards PDF, verbatim):
+The organisation implements an effective healthcare associated infection prevention and
+control programme. The programme is documented and aims at reducing / eliminating infection
+risks to patients, visitors and providers of care. The programme is implemented across the
+organisation, including clinical areas and support services. The organisation provides proper
+facilities and adequate resources to support the infection prevention and control programme.
+The organisation measures and acts to prevent or reduce the risk of healthcare associated
+infection in patients and staff. The organisation has an effective antimicrobial management
+programme through regularly updated antimicrobial policy based on local data and monitors
+its implementation. Programme also includes monitoring of antimicrobials usage in the
+organisation. Surveillance activities are incorporated in the infection prevention and
+control programme. The programme includes disinfection / sterilisation activities and
+biomedical waste (BMW) management.
+
+
+══════════════════════════════════════════════════════════════════════════════
+IPC.1 — Infection Prevention and Control Programme
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+The organisation has a comprehensive and coordinated Infection Prevention and Control (IPC)
+programme aimed at reducing / eliminating risks to patients, visitors, providers of care
+and community.
+
+Standard is NOT starred.
+
+OE count: 10 | COREs: a | Stars: a★, b★, e★, f★, g★, h★ | Achievement: d | Excellence: none
+No stop-work authority.
+
+Prepared by: Infection Prevention and Control Officer | Doc no: HCO/IPC/POL/01
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.1.a
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+The infection prevention and control programme is documented, which aims at preventing and
+reducing the risk of healthcare associated infections in the hospital.
+
+Guidebook interpretation:
+The written guidance shall be directed at prevention and control of infection in all areas
+of the hospital and include its monitoring. The organisation shall have infection prevention
+and control manual (IPC manual) that shall incorporate the structure of the programme,
+overall aims and objectives, all processes, activities and surveillance procedures related
+to the programme. This shall be based on organisational priorities, current scientific
+knowledge, guidelines from international/national and professional bodies and statutory
+requirements, wherever applicable. The hospital implements strategies, education, and
+evidence-based activities to reduce infection risks. The periodic assessment of risk and
+the setting of risk reduction goals guide.
+
+Stop-work check: CORE and starred. Non-compliance is accreditation-blocking. IPC.1 is not
+in STOP_WORK_PROPOSALS; there is no stop-work authority section in this policy. However,
+CORE status means the written IPC programme as a documented manual must exist — a programme
+that exists only in meeting minutes is not compliant. Absence of the manual is a CORE gap
+identified at assessment.
+
+Mandatory (shall):
+  1. Written guidance shall be directed at prevention and control of infection in all areas
+     of the hospital and include its monitoring.
+  2. The organisation shall have an IPC manual incorporating: the structure of the
+     programme; overall aims and objectives; all processes, activities and surveillance
+     procedures related to the programme.
+  3. The manual shall be based on organisational priorities, current scientific knowledge,
+     guidelines from international/national and professional bodies, and statutory
+     requirements where applicable.
+
+Illustrative only:
+  — "Implements strategies, education, and evidence-based activities to reduce infection
+    risks" — describes what the programme does; not a separate standalone checklist item.
+  — "Periodic assessment of risk and the setting of risk reduction goals guide" — this
+    sentence is the basis for IPC.1.d (validated assessment tool); it is illustrative
+    context here.
+
+Documentation: OE is starred — the IPC Manual as a standing document must be on file.
+A collection of meeting minutes without a consolidated manual is not this asterisked element.
+
+CORE status: A programme that is undocumented or exists only in meeting minutes is a
+CORE gap.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.1.b
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The infection prevention and control programme identifies high-risk activities and has
+written guidance to prevent and manage infections for these activities.
+
+Guidebook interpretation:
+The high-risk activities are identified based on scientific literature, keeping in view
+the potential risk of transmission of infections to the patient, and health care provider.
+High risk areas and procedures across the hospital shall be identified. Examples of these
+activities include performing aerosol-generating procedures; handling blood and body fluids,
+spills, specimens, and sharps; and exposure to contaminated medical devices/equipment and
+bio-medical waste. Examples of high-risk areas include operation theater, ICU, bone marrow
+transplant, CSSD, Cath lab, labour room, laboratory, blood centre, IVF etc.
+
+[Note: "— ja _c,." at end of Guidebook source is an OCR artefact. Discarded.]
+
+Stop-work check: Commitment — no stop-work trigger at this OE specifically. IPC.1 is not
+in STOP_WORK_PROPOSALS.
+
+Mandatory (shall):
+  1. High-risk activities shall be identified based on scientific literature, keeping in
+     view the potential risk of transmission of infections to the patient and healthcare
+     provider.
+  2. High-risk areas and procedures across the hospital shall be identified.
+  3. Written guidance shall exist to prevent and manage infections for each identified
+     high-risk activity (from the OE text itself — "has written guidance").
+
+Illustrative only:
+  — Aerosol-generating procedures; handling blood/body fluids, spills, specimens, sharps;
+    exposure to contaminated devices/equipment/BMW — examples of high-risk activities
+    ("Examples of these activities include").
+  — OT, ICU, bone marrow transplant, CSSD, Cath lab, labour room, laboratory, blood
+    centre, IVF — examples of high-risk areas ("Examples of high-risk areas include").
+    The organisation's scope may include other areas.
+
+Documentation: OE is starred — the high-risk activity and area list, plus the written
+guidance for each, must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.1.c
+Level: Commitment | No star
+
+Verbatim OE text:
+The infection prevention and control programme is reviewed and updated at least once a year.
+
+Guidebook interpretation:
+The update shall be done based on newer literature on infection prevention and outbreak
+prevention mechanisms, infection trends and outcomes of the audit processes. In case the
+annual review does not identify any opportunities for improvement, the same shall be
+documented in the minutes of the infection prevention and control committee meeting.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. Review and update at least once a year — "at least once a year" is from the OE text
+     itself; the minimum frequency is mandatory.
+  2. If the annual review does not identify any opportunities for improvement, that finding
+     shall be documented in the committee meeting minutes — the nil-finding documentation
+     is explicitly mandatory.
+
+Illustrative only:
+  — The basis for updates (newer literature, outbreak prevention mechanisms, infection
+    trends, audit outcomes) describes what good practice looks like; the update itself is
+    the mandatory act.
+
+Documentation: No star — the review output (dated update or documented nil-finding
+minute) is the required evidence, but no separately starred document is designated.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.1.d
+Level: Achievement | No star
+
+Verbatim OE text:
+The infection prevention and control programme is reviewed based on infection prevention
+and control assessment tool.
+
+Guidebook interpretation:
+The organisation shall use any validated tool for performing infection prevention and
+control assessment tool. Examples of validated tools include WHO's Infection Prevention
+and Control Assessment Framework at the Facility Level and CDC's Infection Prevention and
+Control Assessment Tool for Acute Care Hospitals.
+
+[Note: "HEB cone." at end of Guidebook source is an OCR artefact. Discarded.]
+
+Stop-work check: Achievement — no stop-work trigger.
+
+Mandatory (shall):
+  1. The organisation shall use a validated tool for performing the IPC assessment —
+     "shall use" is explicit; the tool must be validated.
+
+Illustrative only:
+  — WHO IPCAF and CDC IPC Assessment Tool are cited as examples ("Examples of validated
+    tools include"). The organisation may use any validated equivalent.
+
+Achievement level note: Evidence of a completed tool output, with gap analysis and
+follow-up action records, is what assessors look for. An informal walk-round note is not
+this element.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.1.e
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation has a multi-disciplinary infection prevention and control committee,
+which co-ordinates all infection prevention and control activities.
+
+Guidebook interpretation:
+This shall preferably have Hospital Administrator, Microbiologist, Physician/Infection
+prevention and control specialist, Surgeon, Infection prevention and control Officer,
+Infection prevention and control Nurse(s), Nursing Manager (Nursing Supervisor), staff
+from central sterile services department (CSSD), operation theatre (OT), intensive care
+unit (ICU) and support services. It could also include invitees from various departments
+as deemed necessary. The committee shall lay down the written guidance to guide the
+implementation. The composition, frequency of meetings (at least monthly), the minimum
+quorum required, and the minutes of the meeting shall be documented. Risk-reduction goals
+and measurable objectives are established by the committee at least annually and reviewed
+monthly.
+
+Stop-work check: Commitment — no stop-work trigger at this OE. IPC.1 is not in
+STOP_WORK_PROPOSALS.
+
+Mandatory (shall):
+  1. A multi-disciplinary IPC committee shall exist.
+  2. The committee shall lay down written guidance to guide the implementation of IPC.
+  3. The following shall be documented: composition; frequency of meetings (at least
+     monthly); the minimum quorum required; and the minutes of the meeting.
+  4. Meeting frequency: at least monthly — the minimum is explicit and mandatory; do not
+     soften.
+  5. Risk-reduction goals and measurable objectives shall be established at least annually
+     and reviewed monthly — both the annual establishment and the monthly review are
+     mandatory.
+
+Illustrative only:
+  — Preferred membership (Hospital Administrator, Microbiologist, Physician/IPC specialist,
+    Surgeon, IPCO, IPCN, Nursing Manager, CSSD, OT, ICU, support services) — cited as
+    "This shall preferably have" — a strong aspiration, not a mandatory closed list.
+  — Invitees from various departments as deemed necessary — optional.
+
+Documentation: OE is starred — the committee's constitution, written terms of reference,
+documented composition and meeting-frequency record, and minutes must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.1.f
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation has an infection Prevention and control team, which coordinates the
+implementation of all infection prevention and control activities.
+
+Guidebook interpretation:
+The team is responsible for the day-to-day functioning of infection prevention and control
+programme. It shall support the surveillance process and detect outbreaks. It shall also
+participate in audit activity and infection prevention and control on a day-to-day basis.
+Infection prevention and control team shall be staffed according to the organisation's
+size, the level of risk of infection, and the programme's complexity and scope. However,
+at a minimum, the team shall at least comprise of Infection Prevention and Control Officer
+and Infection Prevention and Control Nurse(s). The team shall be represented in the
+infection prevention and control committee.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. IPC team shall be responsible for day-to-day functioning of the IPC programme.
+  2. Team shall support the surveillance process and detect outbreaks.
+  3. Team shall participate in audit activity and IPC on a day-to-day basis.
+  4. Team shall be staffed according to the organisation's size, risk level, and programme
+     complexity and scope.
+  5. At minimum, the team shall comprise the IPC Officer and IPC Nurse(s) — these two
+     are the mandatory floor; additional members scale to the hospital.
+  6. The team shall be represented in the IPC committee.
+
+Illustrative only:
+  — No "for example" or "preferable" items beyond the staffing-floor note. The mandatory
+    floor (IPCO + IPCN) is stated with "shall".
+
+Documentation: OE is starred — the IPC team's written terms of reference, role list, and
+evidence of day-to-day functioning (surveillance support, audit participation, committee
+representation) must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.1.g
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation has designated infection prevention and control officer as part of the
+infection prevention and control team.
+
+Guidebook interpretation:
+The infection prevention and control officer shall be a doctor who is knowledgeable in
+infection prevention and control practices. It is preferable that he/she is a clinical
+microbiologist/infectious disease specialist. In the absence of microbiologist, a
+surgeon/physician can be designated as an infection prevention and control officer. The
+responsibilities of the Infection prevention and control officer (IPCO) are defined in
+the manual.
+
+[Guidebook cross-ref: HRM.11.d — in policy draft: "those requirements are covered in
+the hospital's other policies." Note: "—h." at end is an OCR artefact. Discarded.]
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. The IPC officer shall be a doctor knowledgeable in infection prevention and control
+     practices — the doctor requirement is mandatory.
+  2. The IPCO's responsibilities shall be defined in the IPC manual.
+  3. The IPCO shall be part of the IPC team (from the OE text).
+
+Illustrative only:
+  — Clinical microbiologist or infectious disease specialist: "It is preferable" —
+    aspirational. The organisation may designate another doctor where a microbiologist
+    is unavailable.
+  — Surgeon/physician in the absence of a microbiologist: an example alternative, not the
+    only permissible alternative.
+
+Documentation: OE is starred — the designation letter (naming a doctor), time allocation,
+reporting line, and the responsibility definition in the IPC manual must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.1.h
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation has designated infection prevention and control nurse(s) as part of the
+infection prevention and control team.
+
+Guidebook interpretation:
+The criteria for designating shall be by qualification (registered nurse) and additional
+structured training. The responsibilities of the IPCN(s) are defined in the manual. The
+responsibilities could include surveillance of healthcare associated infections and
+healthcare-associated organisms, compliance monitoring (hand hygiene, transmission-related
+precautions, isolation, infection-specific bundles, disinfection and sterilisation
+procedures, and checklists), education, working on outbreaks and documentation. At a
+minimum, there shall be one dedicated nurse per 250 beds. They shall be supported by
+'link nurses' (trained in infection prevention and control) who actively participate in
+infection prevention and control activities in their work areas.
+
+[Guidebook cross-ref: HRM.12.d — in policy draft: "those requirements are covered in
+the hospital's other policies." Note: "HEEB HB ABR." at end is an OCR artefact. Discarded.]
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. Designation criteria shall include: registered nurse qualification AND additional
+     structured IPC training.
+  2. IPCN responsibilities shall be defined in the IPC manual.
+  3. At minimum: one dedicated nurse per 250 beds — this is the mandatory staffing floor.
+  4. IPC Nurses shall be supported by link nurses (trained in IPC) who actively
+     participate in IPC activities in their work areas.
+
+Illustrative only:
+  — Specific responsibilities (surveillance, compliance monitoring, education, outbreaks,
+    documentation) are cited as what "could include" — examples, not an exhaustive closed
+    list of every required duty.
+
+Documentation: OE is starred — designation letters with qualification and training records,
+responsibility definition in the manual, and a staffing-ratio record must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.1.i
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation implements information, education and communication programme for
+infection prevention and control activities for the community.
+
+Guidebook interpretation:
+The organisation could work with stakeholders and create information, education and
+communication messages. Examples of infection prevention and control activities include
+hand hygiene, appropriate use of antimicrobials, use of personal protective equipment etc.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. The organisation shall implement an IEC programme for infection prevention and control
+     activities directed at the community (from the OE text: "implements" carries mandatory
+     force).
+
+Illustrative only:
+  — Working with stakeholders to create IEC messages: "could work with" — optional
+    collaboration mechanism.
+  — Hand hygiene, appropriate use of antimicrobials, use of PPE — examples of IPC
+    activities the IEC programme may cover ("Examples include").
+
+Documentation: No star — evidence of community-facing IEC activity (materials, sessions,
+dates) is the required evidence.
+
+Note for policy writer: This is community-facing IEC, not staff induction training. Both
+are required; this OE covers the community-facing component only.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.1.j
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation participates in managing community outbreaks.
+
+Guidebook interpretation:
+The organisation coordinates with external agencies, including statutory, to respond
+effectively to community outbreaks. This includes communication (both internal and
+external), roles and responsibilities for staff and training of staff.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. The organisation shall coordinate with external agencies, including statutory agencies,
+     to respond effectively to community outbreaks.
+  2. Internal and external communication shall be addressed (both channels must exist).
+  3. Roles and responsibilities for staff shall be defined.
+  4. Training of staff on outbreak participation shall be provided.
+
+Illustrative only:
+  — No "for example" or "preferable" items beyond what is listed above. All four elements
+    above carry mandatory force from "This includes".
+
+Documentation: No star — written external contact path, internal role definition, staff
+briefing records, and a drill or real-event record are the expected evidence.
+
+
+══════════════════════════════════════════════════════════════════════════════
+IPC.2 — Resources for Infection Prevention and Control
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+The organisation provides adequate and appropriate resources for infection prevention
+and control.
+
+Standard is NOT starred.
+
+OE count: 4 | COREs: a, c | Stars: none | Achievement: none | Excellence: none
+No stop-work authority.
+
+Prepared by: Medical Superintendent | Doc no: HCO/IPC/POL/02
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.2.a
+Level: CORE | No star
+
+Verbatim OE text:
+The management makes available resources required for the infection prevention and control
+programme including allocation of adequate funds from its annual budget.
+
+Guidebook interpretation:
+The management shall ensure that the resources required are made available on a continual
+and sustained manner. This includes both men and materials. There shall be an allocation
+in the budget demarcated for infection prevention and control activities. This shall be
+prepared, taking into consideration the scope of the activity and previous years'
+experience.
+
+[Guidebook cross-ref: ROM.5.c — in policy draft: "those requirements are covered in the
+hospital's other policies." Note: "ial." at end is an OCR artefact. Discarded.]
+
+Stop-work check: CORE — non-compliance is accreditation-blocking. An IPC programme without
+a budget line or without resources available in a sustained manner is a CORE gap. IPC.2 is
+not in STOP_WORK_PROPOSALS; there is no stop-work authority section in this policy.
+
+Mandatory (shall):
+  1. Resources required for the IPC programme shall be made available on a continual and
+     sustained basis — both human resources (men) and materials.
+  2. There shall be a budget allocation demarcated for IPC activities — a separate IPC
+     line in the budget is explicitly required.
+  3. The budget shall be prepared taking into consideration the scope of the activity and
+     previous years' experience.
+
+Illustrative only:
+  — No "for example" or "preferable" items in this OE's interpretation. All elements
+    carry mandatory force.
+
+CORE status: Absence of a budget allocation for IPC, or consistent resource shortfalls,
+is a CORE gap.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.2.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Adequate and appropriate personal protective equipment, soaps, and disinfectants are
+available and used correctly.
+
+Guidebook interpretation:
+They shall be available at the point of use, and the organisation shall ensure that it
+maintains an adequate inventory. Personal protective equipment includes: Gloves; Protective
+eyewear (goggles); Mask; Gown; Boots/shoe covers; and Cap/hair cover. The staff use PPE
+appropriate to the risks involved and guidance available. The PPE is removed as soon as
+the purpose is served.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Starting a
+clinical procedure without the required PPE in place is a stop-work trigger under
+IPC.3 stop-work authority (see that standard). This OE governs availability and inventory.
+
+Mandatory (shall):
+  1. PPE, soaps and disinfectants shall be available at the point of use.
+  2. Adequate inventory shall be maintained (not only stocked centrally).
+  3. Staff shall use PPE appropriate to the risks involved and guidance available.
+  4. PPE shall be removed as soon as the purpose is served.
+
+Illustrative only:
+  — Specific PPE types listed (gloves, goggles, mask, gown, boots/shoe covers, cap/hair
+    cover) are examples of what "personal protective equipment" includes — not a closed
+    exhaustive list.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.2.c
+Level: CORE | No star
+
+Verbatim OE text:
+Adequate and appropriate facilities for hand hygiene in all patient-care areas are
+accessible to healthcare providers.
+
+Guidebook interpretation:
+The organisation provides at least one easily accessible washbasin with running water in
+every patient care area for health care providers. For hand wash, the organisation could
+consider providing large washbasins, hands-free tap, soap and facility for drying hands
+without contamination. Hand rub shall be available in every patient care area. Hand rub
+dispensers can be installed at convenient points and can also be carried by staff as they
+move between patients and within facilities.
+
+[Note: "HB cone Isolation / barrier nursing facilities are available." at end is an OCR
+artefact carrying over from the next OE header. Discarded.]
+
+Stop-work check: CORE — non-compliance is accreditation-blocking. A patient-care area
+without a functional hand-hygiene point (either sink with running water or hand rub) is
+a CORE gap.
+
+Mandatory (shall):
+  1. At least one easily accessible washbasin with running water shall be provided in
+     every patient-care area for healthcare providers.
+  2. Hand rub shall be available in every patient-care area — this is a separate mandatory
+     item from the washbasin; both are required.
+
+Illustrative only:
+  — Large washbasins, hands-free tap, soap, facility for drying without contamination:
+    "could consider providing" — best-practice enhancements, not mandatory additions.
+  — Hand rub dispensers at convenient points or carried by staff — examples of how hand
+    rub may be made accessible; the requirement is availability in every area.
+
+CORE status: A patient-care area without any functional, accessible hand-hygiene point
+is a CORE gap.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.2.d
+Level: Commitment | No star
+
+Verbatim OE text:
+Isolation / barrier nursing facilities are available.
+
+Guidebook interpretation:
+The organisation shall define the conditions where isolation is required, and the
+conditions wherein barrier nursing or both are required. The same shall be carried out.
+The organisation shall ensure that it provides the necessary resources to carry out the
+activity (for example clothing, masks, gloves, etc.). Ideally, patients requiring isolation
+(contact, droplet and airborne) shall be placed in isolation rooms and airborne cases be
+kept in negative pressure rooms. The door(s) to the aisle or other rooms shall be kept
+closed at all times. Appropriate signage shall be used/displayed. Organisation implements
+isolation of patients with MRSA, VRE.
+
+[Note: "Refer to the glossary for isolation/barrier nursing. HEB HEB excetience." at end
+are a cross-reference and an OCR artefact. The glossary reference is informational; the
+OCR string is discarded.]
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. The conditions where isolation is required shall be defined.
+  2. The conditions where barrier nursing (or both isolation and barrier nursing) is
+     required shall be defined.
+  3. Isolation and barrier nursing shall be carried out when the defined conditions apply.
+  4. Necessary resources shall be provided to carry out the activity.
+  5. Appropriate signage shall be used/displayed.
+
+Illustrative only:
+  — Clothing, masks, gloves — examples of resources ("for example").
+  — Isolation rooms for contact/droplet/airborne; negative pressure rooms for airborne:
+    "Ideally" — aspirational. The organisation must provide adequate facilities but the
+    specific room configuration is described as ideal, not mandatory in all settings.
+  — Doors kept closed at all times: stated as a practice under isolation; mandatory when
+    an isolation room is in use.
+  — MRSA, VRE: examples of organisms requiring isolation; not a closed list.
+
+
+══════════════════════════════════════════════════════════════════════════════
+IPC.3 — Infection Prevention and Control in Clinical Areas
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+The organisation implements the infection prevention and control processes in clinical
+areas.
+
+Standard is NOT starred.
+
+OE count: 6 | COREs: a, b, d, f | Stars: a★, b★, c★, d★, e★ | Achievement: none | Excellence: none
+STOP-WORK: YES — start a clinical procedure without standard precautions / hand hygiene /
+safe injection; restricted antimicrobial without the stewardship path.
+
+Prepared by: Infection Prevention and Control Officer | Doc no: HCO/IPC/POL/03
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.3.a
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation adheres to standard precautions at all times.
+
+Guidebook interpretation:
+Adherence to standard precautions is one of the fundamental tenets of infection prevention
+and control. In every area of the organisation, standard precautions shall be adhered.
+Refer to the glossary for "standard precautions". The components of standard precautions
+include hand hygiene, appropriate use of personal protective equipment, respiratory
+etiquettes, safe injection practices, sterile instruments and devices, clean and
+disinfected environmental surfaces, cleaning and disinfection of equipment, and needle-
+stick and sharps injury prevention. Appropriate preparation of body parts before a
+procedure and the use of disinfected/sterilised instruments is ensured. The organisation
+adheres to hand-hygiene guidelines.
+
+[Note: The last sentence is the transitional OE header for IPC.3.b — included in the
+OCR run-on. It is not part of IPC.3.a's interpretation. Discarded for this OE.]
+
+Stop-work check: CORE and starred. STOP-WORK TRIGGER: Starting a clinical procedure when
+standard precautions are not in place (PPE, sharps safety, respiratory etiquette as the
+situation requires) is a stop-work trigger. The stop-work authority in Section 6 of this
+policy applies.
+
+Mandatory (shall):
+  1. Standard precautions shall be adhered in every area of the organisation, at all times
+     — the scope is universal and unconditional.
+  2. Appropriate preparation of body parts before a procedure shall be ensured.
+  3. Disinfected/sterilised instruments shall be used.
+
+Illustrative only:
+  — Components listed (hand hygiene, PPE, respiratory etiquettes, safe injection, sterile
+    instruments, clean environment, needle-stick prevention) are the Guidebook's reference
+    definition of standard precautions — they inform the implementation but the OE
+    requirement is adherence to standard precautions as a whole.
+
+CORE status: Any patient-care area not adhering to standard precautions is a CORE gap
+and stop-work trigger.
+
+Documentation: OE is starred — written standard-precautions guidance, training records,
+and monthly audit records must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.3.b
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation adheres to hand-hygiene guidelines.
+
+Guidebook interpretation:
+The organisation shall adhere to international/national guidelines on hand hygiene. A
+good reference is the WHO guidelines on hand hygiene in health care of 2009. The
+organisation could display the necessary instructions near every hand-washing area.
+
+[Note: "The organisation adheres to transmission-based precautions." is the transitional
+OE header for IPC.3.c — OCR run-on. Discarded for this OE.]
+
+Stop-work check: CORE and starred. STOP-WORK TRIGGER: Skipping a required hand-hygiene
+moment before an invasive step is a stop-work trigger. The person who identifies the lapse
+shall halt the procedure start and inform the treating doctor and the IPC Officer the same
+shift.
+
+Mandatory (shall):
+  1. The organisation shall adhere to international/national guidelines on hand hygiene.
+
+Illustrative only:
+  — WHO guidelines on hand hygiene in health care 2009: "A good reference" —
+    informational; the organisation may adopt any nationally or internationally recognised
+    guideline. The WHO guideline is the default reference.
+  — Displaying instructions near every hand-washing area: "could display" — best practice,
+    not a standalone mandatory requirement at this OE.
+
+CORE status: No documented hand-hygiene guideline adopted, or evidence of systematic
+non-adherence, is a CORE gap and stop-work trigger.
+
+Documentation: OE is starred — the adopted hand-hygiene guideline reference, training
+records, and IPC.6.d compliance-monitoring results (cross-reference) must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.3.c
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation adheres to transmission-based precautions.
+
+Guidebook interpretation:
+This shall cover airborne, droplet and contact modes of transmission. Personal protective
+equipment (PPE) to be used in various situations of patient care are identified and used
+appropriately. This shall be applicable across the organisation. Refer to international
+guidelines like that of CDC.
+
+[Note: "HE cone = BB J = J 6." at end is an OCR artefact. Discarded. "Refer to CDC
+guidelines" — informational cross-reference, not cited as a mandatory standard.]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. An airborne
+case without the defined placement and PPE is escalated the same shift; this is captured
+in the IPC.3 stop-work (standard precautions trigger) rather than as a separate trigger.
+
+Mandatory (shall):
+  1. Airborne, droplet and contact modes of transmission shall be covered.
+  2. PPE for each mode shall be identified and used appropriately.
+  3. Transmission-based precautions shall be applicable across the organisation — no
+     areas are exempt.
+
+Illustrative only:
+  — CDC guidelines as reference: informational.
+
+Documentation: OE is starred — written transmission-based precaution guidance (by mode:
+contact, droplet, airborne, with PPE and placement for each) must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.3.d
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation adheres to safe injection and infusion practices.
+
+Guidebook interpretation:
+This shall include "One needle, One syringe, Only one time" as recommended by CDC. A
+good reference guide is "WHO best practices for injections and related procedures toolkit".
+
+Stop-work check: CORE and starred. STOP-WORK TRIGGER: Injection or infusion practice that
+would reuse a needle or syringe (one-needle-one-syringe-one-time violated) is a stop-work
+trigger. The stop-work authority in Section 6 of this policy applies.
+
+Mandatory (shall):
+  1. The organisation shall adhere to "One needle, One syringe, Only one time" as
+     recommended by CDC — this is a named mandatory practice, not merely a guideline.
+  2. Sharps go in a puncture-proof container at the point of use (from chapter practice
+     and IPC.8.d; reinforced by the injection-safety framework).
+
+Illustrative only:
+  — WHO best-practices toolkit for injections: "A good reference guide" — informational.
+
+CORE status: Reuse of a needle or syringe is a CORE gap and stop-work trigger.
+
+Documentation: OE is starred — written safe-injection and infusion guidance, point-of-use
+sharps-container placement record, and audit records must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.3.e
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Appropriate antimicrobial usage policy is established and documented.
+
+Guidebook interpretation:
+The organisation shall identify clinical conditions in which antimicrobial agents
+(antimicrobial including anti-tubercular agents, anti-fungal agents, anti-viral agents
+and anti-parasitic agents) shall be used in terms of the type of the antimicrobial agent,
+monotherapy vs combination therapy, escalation and de-escalation of therapy, dose and
+duration of antimicrobial therapy. The organisation shall develop a system of monitoring
+site-specific antibiograms / antimicrobial susceptibility (based on culture sensitivity)
+and accordingly develop its antimicrobial usage policy, which shall be reviewed at periodic
+intervals (at least every year) for its continuing applicability. The antimicrobial usage
+policy shall identify a list of restricted antimicrobial agents. The list of antibiotics
+among the restricted antimicrobials shall adhere to WHO's AWaRe classification.
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Starting a
+restricted antimicrobial without the stewardship path is the stop-work trigger at IPC.3.f;
+this OE governs the policy itself (what agents, for what conditions, on what terms).
+
+Mandatory (shall):
+  1. The policy shall identify clinical conditions for antimicrobial use in terms of:
+       a. Type of antimicrobial agent
+       b. Monotherapy vs combination therapy
+       c. Escalation and de-escalation of therapy
+       d. Dose and duration of therapy
+  2. A system of monitoring site-specific antibiograms/antimicrobial susceptibility
+     (based on culture sensitivity) shall be developed.
+  3. The policy shall be reviewed at periodic intervals, at least every year.
+  4. The policy shall identify a list of restricted antimicrobial agents.
+  5. The restricted list shall adhere to WHO's AWaRe classification — this is explicit
+     mandatory; do not treat as aspirational.
+
+Illustrative only:
+  — Anti-tubercular, anti-fungal, anti-viral, anti-parasitic: examples of the types of
+    antimicrobial agents the policy covers ("include").
+  — Ministry of Health's National Treatment Guidelines, ICMR Treatment Guidelines,
+    professional society guidelines: examples of references the policy may consider —
+    cited as "shall be considered" in the full Guidebook text; these are guidance sources,
+    not mandatory adoptions of any specific external list.
+  — Standardised methodology for antimicrobial susceptibility testing: "It is preferable"
+    — aspirational.
+
+Documentation: OE is starred — the written, dated antimicrobial usage policy (covering
+all five content elements above), the restricted list aligned with WHO AWaRe, and the
+annual review record must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.3.f
+Level: CORE | No star
+
+Verbatim OE text:
+The organisation implements the antimicrobial stewardship programme and monitors the use
+of antimicrobial agents.
+
+Guidebook interpretation:
+The antimicrobial agents shall be prescribed as per the organisation's policy. The
+organisation needs to implement a mechanism for ordering restricted antimicrobial agents.
+Deviations are brought to the notice of concerned clinicians, and corrective and preventive
+actions are taken and documented. The organisation shall have a mechanism to monitor the
+appropriate use of restricted antimicrobial agents. Antimicrobial stewardship programme
+shall be monitored by antimicrobial stewardship forum consisting of clinicians. The
+antimicrobial stewardship programme must aim to guide efforts to improve appropriate and
+necessary antimicrobial use. It shall include leadership, accountability, drug expertise,
+action, tracking, reporting and education. The organisation generates awareness amongst
+health care providers and community for AMR 2017-2021, and rational use of antimicrobials.
+
+Stop-work check: CORE. STOP-WORK TRIGGER: Starting a restricted antimicrobial without
+the organisation's antimicrobial-stewardship path (documented indication and, where
+required, approval) is a stop-work trigger. Emergency first doses that cannot wait are
+documented and regularised within 24 hours. The stop-work authority in Section 6 applies.
+
+Mandatory (shall):
+  1. Antimicrobial agents shall be prescribed as per the organisation's policy.
+  2. A mechanism for ordering restricted antimicrobial agents shall be implemented.
+  3. Deviations shall be brought to the notice of concerned clinicians; CAPA shall be
+     taken and documented.
+  4. A mechanism to monitor the appropriate use of restricted antimicrobial agents
+     shall exist.
+  5. The AMS programme shall be monitored by an antimicrobial stewardship forum
+     consisting of clinicians.
+  6. The AMS programme shall include: leadership, accountability, drug expertise, action,
+     tracking, reporting and education — these seven elements are explicitly required
+     by the Guidebook.
+
+Illustrative only:
+  — "Generate awareness among healthcare providers and community for AMR 2017-2021" —
+    the reference to the 2017-2021 AMR plan is contextual; the underlying duty is to
+    generate awareness; it is not limited to that plan period.
+
+CORE status: An IPC.3.f CORE gap means the stewardship programme is either not
+implemented or restricted agents can be ordered without the required path. Either
+condition is a stop-work trigger.
+
+
+══════════════════════════════════════════════════════════════════════════════
+IPC.4 — Infection Prevention and Control in Support Services
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+The organisation implements the infection prevention and control processes in support
+services.
+
+Standard is NOT starred.
+
+OE count: 6 | COREs: c, d | Stars: a★, b★, c★, e★, f★ | Achievement: none | Excellence: none
+STOP-WORK: YES — handle BMW without required segregation or PPE; start construction/
+renovation without the infection-risk plan.
+STATUTE DESIGNATOR: YES — IPC.4.d follows statutory BMW provisions (Biomedical Waste
+Management Rules); the policy carries a P2 statute disclaimer.
+
+Prepared by: Infection Prevention and Control Officer | Doc no: HCO/IPC/POL/04
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.4.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation has appropriate engineering controls to prevent infections.
+
+Guidebook interpretation:
+This shall include the design of patient care areas (optimum spacing between beds is
+one-two metres), operating rooms including zoning of OT, air quality and water supply.
+Refer to NABH guidelines on OT air-conditioning. Issues such as air-conditioning plant
+and equipment maintenance, cleaning of air-conditioning ducts/filters, air handling
+units, cleaning of cooling towers, cleaning/replacement of filters, prevention of fungal
+colonisation shall be included. Water-supply sources and system of supply, testing for
+water quality must be included.
+
+[Guidebook cross-refs: FMS.2.f, FMS.3.c, COP.14.g — in policy draft: "those requirements
+are covered in the hospital's other policies."]
+
+Stop-work check: Commitment — no standalone stop-work trigger at this OE. Engineering
+control failures (e.g., no HEPA filtration in OT when required) are CAPA items; they do
+not trigger the IPC.4 stop-work section directly.
+
+Mandatory (shall):
+  1. Engineering controls shall include design of patient-care areas — with attention to
+     bed spacing (the Guidebook names 1-2 metres as the optimum).
+  2. Operating room zoning and OT air quality shall be included.
+  3. Water supply: sources, system of supply, and water-quality testing must be included.
+  4. Air-conditioning plant and equipment maintenance, including duct/filter cleaning,
+     air-handling units, cooling towers, filter replacement, and fungal-colonisation
+     prevention, shall be included.
+
+Illustrative only:
+  — "Optimum spacing between beds is one-two metres" — the Guidebook names this as the
+    optimum; in practice, the organisation's configuration is the relevant evidence.
+  — NABH OT air-conditioning guidelines — a named reference, not a standalone mandatory
+    document the policy must replicate.
+
+Documentation: OE is starred — engineering-controls record (bed layout, OT zones, water
+and air systems) and annual review record must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.4.b
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation designs and implements a plan to reduce the risk of infection during
+construction and renovation.
+
+Guidebook interpretation:
+A validated tool (for example infection prevention and control risk assessment tool
+[ICRA]) shall be used to identify the risk of infection during construction and
+renovation. Facility construction/renovation could ensure that when new facilities are
+built, infection prevention and control is considered from the design stage onwards.
+Any renovation work in the hospital shall be planned with the infection prevention and
+control team concerning architectural segregation, traffic flow, use of materials, etc.
+
+[Guidebook cross-ref: FMS.1.e — in policy draft: "those requirements are covered in the
+hospital's other policies."]
+
+Stop-work check: STOP-WORK TRIGGER: Starting construction or renovation in a patient-care
+area without the infection-risk plan for that work having been completed and the IPC
+Officer having agreed the controls is a stop-work trigger. The stop-work authority in
+Section 6 of this policy applies.
+
+Mandatory (shall):
+  1. A validated tool (ICRA or equivalent) shall be used to identify the risk of infection
+     during construction and renovation — use of a validated tool is mandatory; ICRA is
+     the named example.
+  2. Any renovation work shall be planned with the IPC team concerning architectural
+     segregation, traffic flow, and use of materials.
+
+Illustrative only:
+  — Considering IPC from the design stage onwards: "could ensure" — aspirational best
+    practice for new builds; not a retroactive mandatory requirement.
+
+CORE / Stop-work boundary: IPC.4.b is Commitment-level; its stop-work trigger is the
+construction/renovation start trigger in the IPC.4 stop-work section.
+
+Documentation: OE is starred — completed ICRA or equivalent, written infection-risk plan
+(barriers, traffic, dust and water controls), and IPC Officer sign-off record must be on
+file before works start.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.4.c
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation adheres to housekeeping procedures.
+
+Guidebook interpretation:
+Housekeeping shall be addressed at all levels of the organisation, for example ward, OT,
+public areas including toilets, corridors. Regular cleaning to remove visible dirt and
+dust is mandatory. This includes the environment, fixtures, fomites, furniture,
+furnishings, equipment, etc., as applicable. The common disinfectants used are identified
+as per national/international guidelines, dilution protocols are established, and their
+usage in the appropriate situation is complied with. It shall also include procedures for
+terminal cleaning, blood and body fluid cleanup and isolation rooms. A dusting of any sort
+inside the clinical areas shall be avoided.
+
+Stop-work check: CORE and starred. Non-compliance is accreditation-blocking. IPC.4
+stop-work applies to BMW and construction triggers; housekeeping non-compliance is a
+CORE gap evidenced in rounds and records, not itself a named stop-work trigger.
+
+Mandatory (shall):
+  1. Housekeeping shall be addressed at all levels of the organisation.
+  2. Regular cleaning to remove visible dirt and dust is mandatory — the word "mandatory"
+     is used explicitly in the Guidebook.
+  3. Common disinfectants shall be identified as per national/international guidelines;
+     dilution protocols shall be established; usage in appropriate situations shall be
+     complied with.
+  4. Procedures shall exist and be followed for: terminal cleaning; blood and body-fluid
+     cleanup; isolation rooms.
+  5. A dusting of any sort inside clinical areas shall be avoided — explicitly prohibited.
+
+Illustrative only:
+  — Ward, OT, public areas, toilets, corridors: examples of organisational levels ("for
+    example") — not a closed list; all levels are covered.
+  — Risk stratification matrix to determine cleaning frequency: "may be used" — an
+    optional tool.
+  — Dividing physical environment into areas based on footfall, activity type, or body-
+    fluid exposure probability: an optional analytical approach.
+  — "It is preferable that the organisation follows a uniform policy across departments"
+    — aspirational.
+  — CDC Guideline for Disinfection and Sterilisation 2008 and Swachhta Guidelines:
+    named as "good references" — informational.
+
+CORE status: A patient-care area without any housekeeping procedure, or with procedures
+that are consistently not followed, is a CORE gap.
+
+Documentation: OE is starred — written housekeeping procedures by area (with frequency,
+product, method), terminal-clean records after isolation, and audit/monitoring records
+cross-referenced to IPC.6.f must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.4.d
+Level: CORE | No star
+
+Verbatim OE text:
+Biomedical waste (BMW) is handled appropriately and safely.
+
+Guidebook interpretation:
+Proper segregation and collection of biomedical waste from patient-care areas of the
+hospital are implemented. Wastes to be segregated and collected in different colour-coded
+bags and containers as per statutory provisions. Monitoring shall be done by members of
+the infection prevention and control committee/team. Biomedical waste shall be handled in
+the proper manner using appropriate personal protective equipment. The organisation ensures
+that biomedical waste is stored in accordance with statutory provisions. Biomedical waste
+is handed over to the authorised vendor for transport to the site of treatment and disposal.
+Monitoring of biomedical waste management programme shall be done as per statutory
+requirements.
+
+STATUTE NOTE: This OE follows statutory provisions — the Biomedical Waste Management
+Rules (BMW Rules) named in the Guidebook. The policy document carries a statute P2
+disclaimer noting these provisions. In policy drafts, statutory obligations from this OE
+are preserved verbatim but attributed to the applicable legislation.
+
+Stop-work check: CORE. STOP-WORK TRIGGER: Handling biomedical waste without the required
+colour-coded segregation, and/or without appropriate PPE, is a stop-work trigger. The
+stop-work authority in Section 6 of this policy applies.
+
+Mandatory (shall):
+  1. Proper segregation and collection of BMW from patient-care areas shall be
+     implemented.
+  2. BMW shall be segregated and collected in colour-coded bags and containers as per
+     statutory provisions.
+  3. Monitoring shall be done by members of the IPC committee/team.
+  4. BMW shall be handled with appropriate PPE.
+  5. BMW shall be stored in accordance with statutory provisions.
+  6. BMW shall be handed over to the authorised vendor for transport to the site of
+     treatment and disposal.
+  7. Monitoring of the BMW management programme shall be done as per statutory
+     requirements.
+
+Illustrative only:
+  — No "for example" or "preferable" items in this OE's interpretation. All elements
+    carry "shall" or are statutory requirements.
+
+CORE status: BMW found unsegregated, stored outside statutory requirements, or handled
+without PPE is a CORE gap and stop-work trigger.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.4.e
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation adheres to laundry and linen management processes.
+
+Guidebook interpretation:
+The laundry can be in-house or outsourced. The organisation shall implement its
+documentation regarding the change of linen. The organisation shall implement its defined
+process of handling linen in patient care units, during transport to the laundry (either
+in-house or outsourced) and inside the laundry. Process for storage and distribution of
+clean linen within the organisation shall be complied. The separation of clean linen from
+dirty linen shall be maintained at all times. If outsourced, the organisation shall ensure
+that it establishes adequate controls to ensure infection prevention and control.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. Documentation regarding the change of linen shall be implemented.
+  2. A defined process for handling linen shall be implemented covering: in patient-care
+     units; during transport to the laundry; inside the laundry.
+  3. Process for storage and distribution of clean linen shall be complied.
+  4. Separation of clean linen from dirty linen shall be maintained at all times.
+  5. If outsourced, adequate controls to ensure IPC shall be established.
+
+Illustrative only:
+  — In-house or outsourced: the organisation's choice; both require the same
+    process compliance.
+
+Documentation: OE is starred — written linen management process (covering all five
+elements above), change-of-linen documentation, and quarterly audit records must be
+on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.4.f
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation adheres to kitchen sanitation and food-handling issues.
+
+Guidebook interpretation:
+This shall be applicable even if this activity is outsourced. The organisation shall
+adhere to all statutory requirements, including screening of kitchen workers and food
+handlers. Kitchen sanitation measures are implemented to prevent the risk of
+cross-contamination. Food is prepared, handled, stored and distributed safely. The
+dietary services shall be designed in a manner that there is no criss-cross of traffic.
+All the activities shall fall in a sequence. The organisation shall ensure that hygienic
+conditions are followed throughout.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. Applicable even if outsourced — mandatory scope regardless of service model.
+  2. All statutory requirements shall be adhered to, including screening of kitchen
+     workers and food handlers.
+  3. Kitchen sanitation measures shall be implemented to prevent cross-contamination.
+  4. Food shall be prepared, handled, stored and distributed safely.
+  5. Dietary services shall be designed with no criss-cross of traffic; activities in
+     sequence.
+  6. Hygienic conditions shall be ensured throughout.
+
+Illustrative only:
+  — Specific indicative good practices (dedicated food storage/refrigeration, off-floor
+    storage, separate cleaning supplies, pest control, temperature-appropriate service
+    trolleys): "Other indicative points are" — examples of good practice, not an
+    exhaustive mandatory checklist.
+
+Documentation: OE is starred — kitchen sanitation written procedure including food-handler
+screening record, daily check record, and IPC round record that includes the kitchen must
+be on file.
+
+
+══════════════════════════════════════════════════════════════════════════════
+IPC.5 — Prevention of Healthcare Associated Infections in Patients
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+The organisation takes actions to prevent healthcare associated infections (HAI) in
+patients.
+
+Standard is NOT starred.
+
+OE count: 4 | COREs: none | Stars: none | Achievement: none | Excellence: none
+All four OEs are Commitment level.
+STOP-WORK: YES — insert a urinary catheter, central line, or start ventilation / an
+operation without the HAI-prevention bundle in place.
+
+Prepared by: Infection Prevention and Control Officer | Doc no: HCO/IPC/POL/05
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.5.a
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation takes action to prevent catheter-associated urinary tract Infections.
+
+Guidebook interpretation:
+The basic principles of infection prevention, namely standard precautions and
+transmission-based precautions, shall be adhered. The organisation shall develop,
+implement and monitor a care bundle to prevent catheter-associated urinary tract
+infections. A good reference is the CDC/WHO/SHEA guidelines.
+
+[Note: "The organisation takes action to prevent ventilator-associated pneumonia." is
+the transitional OE header for IPC.5.b — OCR run-on. Discarded for this OE.]
+
+Stop-work check: STOP-WORK TRIGGER: Inserting an indwelling urinary catheter without the
+organisation's CAUTI-prevention bundle in place for this patient is a stop-work trigger.
+Life-saving emergency catheterisation proceeds with the best available precautions; the
+bundle is completed as soon as the patient is stable. The stop-work authority in Section 6
+of this policy applies.
+
+Mandatory (shall):
+  1. Standard precautions and transmission-based precautions shall be adhered.
+  2. A care bundle to prevent CAUTI shall be developed, implemented and monitored —
+     all three verbs are mandatory (develop + implement + monitor).
+
+Illustrative only:
+  — CDC/WHO/SHEA guidelines: "A good reference" — informational. The organisation may
+    adopt any validated CAUTI-prevention bundle based on these references.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.5.b
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation takes action to prevent ventilator- associated pneumonia.
+
+Guidebook interpretation:
+The basic principles of infection prevention, namely standard precautions and
+transmission-based precautions, shall be adhered. The organisation shall develop,
+implement and monitor a care bundle to prevent ventilator-associated pneumonia. A good
+reference is the CDC/WHO/SHEA guidelines.
+
+Stop-work check: STOP-WORK TRIGGER: Starting invasive ventilation without the
+organisation's VAP-prevention bundle in place (as soon as the airway is secure) is
+a stop-work trigger for continuation of non-essential steps. Life-saving airway
+control proceeds with the best available precautions; the bundle is completed as soon
+as the patient is stable. The stop-work authority in Section 6 of this policy applies.
+
+Mandatory (shall):
+  1. Standard precautions and transmission-based precautions shall be adhered.
+  2. A care bundle to prevent VAP shall be developed, implemented and monitored.
+
+Illustrative only:
+  — CDC/WHO/SHEA guidelines: "A good reference" — informational.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.5.c
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation takes action to prevent central line associated blood stream infections.
+
+Guidebook interpretation:
+The basic principles of infection prevention, namely standard precautions and
+transmission-based precautions, shall be adhered. The organisation shall develop,
+implement and monitor the compliance to care bundle to prevent catheter linked blood
+stream infections. A good reference is the CDC/WHO/SHEA guidelines.
+
+Stop-work check: STOP-WORK TRIGGER: Inserting a central line without the organisation's
+CLABSI-prevention bundle in place for this patient is a stop-work trigger. Life-saving
+vascular access in a haemorrhage proceeds with the best available precautions; the bundle
+is completed as soon as the patient is stable. The stop-work authority in Section 6 of
+this policy applies.
+
+Mandatory (shall):
+  1. Standard precautions and transmission-based precautions shall be adhered.
+  2. A care bundle to prevent CLABSI shall be developed, implemented and monitored
+     (the Guidebook adds "the compliance to" — compliance monitoring is part of the
+     mandatory bundle implementation).
+
+Illustrative only:
+  — CDC/WHO/SHEA guidelines: "A good reference" — informational.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.5.d
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation takes action to prevent surgical site infections.
+
+Guidebook interpretation:
+The basic principles of infection prevention, namely standard precautions and
+transmission-based precautions, shall be adhered. This shall include pre-op, intra-op
+and post-op measures and develop, implement and monitor the compliance to care bundle to
+prevent surgical site infections. A good reference is the CDC/WHO/SHEA guidelines.
+
+[Note: "is =]." at end of Guidebook source is an OCR artefact. Discarded.]
+
+Stop-work check: STOP-WORK TRIGGER: Making a surgical incision without the organisation's
+SSI-prevention bundle items that must be in place before knife-to-skin is a stop-work
+trigger. The stop-work authority in Section 6 of this policy applies. Cross-reference the
+surgical-safety policy.
+
+Mandatory (shall):
+  1. Standard precautions and transmission-based precautions shall be adhered.
+  2. Pre-operative, intra-operative and post-operative measures shall be included.
+  3. A care bundle to prevent SSI shall be developed, implemented and monitored
+     (including compliance monitoring).
+
+Illustrative only:
+  — CDC/WHO/SHEA guidelines: "A good reference" — informational.
+
+Note for policy writer: The pre-op, intra-op and post-op framing means the SSI bundle
+spans all three phases — it is not limited to intra-operative technique. Antimicrobial
+prophylaxis timing, skin prep, glycaemic control, and normothermia are common bundle
+elements informed by these reference guidelines.
+
+
+══════════════════════════════════════════════════════════════════════════════
+IPC.6 — Infection Prevention and Control Surveillance
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+The organisation performs surveillance to capture and monitor infection prevention and
+control data.
+
+Standard is NOT starred.
+
+OE count: 9 | COREs: a, d, f | Stars: h★ | Achievement: e | Excellence: none
+No stop-work authority.
+
+Prepared by: Infection Prevention and Control Officer | Doc no: HCO/IPC/POL/06
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.6.a
+Level: CORE | No star
+
+Verbatim OE text:
+The scope of surveillance incorporates tracking and analysing of infection risks, rates
+and trends.
+
+Guidebook interpretation:
+The organisation shall use a judicious mix of active and passive surveillance. The
+organisation could lay down the parameters that need to be captured and the process for
+reporting. The collection of surveillance data is an on-going process and is done at
+regular intervals (may be monthly and consolidated into an annual report), and the
+organisation shall take suitable steps based on the analysis. A simple calculation of
+infected patients (numerator) provides only limited information which would be difficult
+to interpret. Risk factor analysis would require information for both infected and
+non-infected patients to calculate infection and risk-adjusted rates.
+
+Stop-work check: CORE — non-compliance is accreditation-blocking. IPC.6 is not in
+STOP_WORK_PROPOSALS. A hospital that does only counts without calculating rates or trends,
+or that does only passive surveillance, is a CORE gap at this OE.
+
+Mandatory (shall):
+  1. A judicious mix of active and passive surveillance shall be used.
+  2. Surveillance data collection shall be an on-going process at regular intervals.
+  3. The organisation shall take suitable steps based on the analysis.
+  4. Surveillance shall go beyond a simple numerator count — risk-adjusted rates (using
+     both infected and non-infected denominators) are required for meaningful analysis.
+
+Illustrative only:
+  — Monthly collection with annual consolidation: "may be monthly" — an example frequency
+    and format; the organisation defines its own schedule.
+  — Laying down parameters and the reporting process: "could lay down" — this is actually
+    good practice that should be implemented; the illustrative phrasing covers the specific
+    mechanism, not the underlying duty to track rates and trends.
+
+CORE status: Surveillance that captures only numerator counts without calculating rates
+or trends is a CORE gap.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.6.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Verification of data is done regularly by the infection prevention and control team.
+
+Guidebook interpretation:
+The data collected shall be authenticated by the infection prevention and control team by
+going through every data or by using random sampling. In case the collection of data is
+done only by the infection prevention and control team, verification is not necessary.
+
+[Note: "cc. HM core vF." at end of Guidebook source is an OCR artefact. Discarded.]
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. Data shall be authenticated by the IPC team by going through every datum or by using
+     random sampling — both methods are acceptable; at least one must be used.
+
+CARVE-OUT (mandatory):
+  — If the collection of data is done only by the IPC team, verification is not necessary
+    — this is an explicit, mandatory carve-out. Do not impose verification on a hospital
+    where the IPC team collects all data itself. The verification requirement applies only
+    when data is collected by others and authenticated by the team.
+
+Illustrative only:
+  — Going through every datum vs random sampling: examples of how authentication can be
+    done; the choice is the organisation's.
+
+Documentation: No star — a verification or authentication record (or a documented note
+that the IPC team collected all data themselves) is the required evidence.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.6.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Surveillance is directed towards the identified high-risk activities.
+
+Guidebook interpretation:
+The organisation must be able to provide evidence of conducting periodic surveillance in
+its identified high-risk activities and high-risk areas. It shall define the frequency
+and mode of surveillance. The surveillance system shall be appropriate and adhering to
+national/international guidelines. Surveillance activities include areas where demolition,
+construction or repairs are undertaken.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. Evidence of periodic surveillance in each identified high-risk activity and high-risk
+     area shall be available.
+  2. Frequency and mode of surveillance shall be defined.
+  3. The surveillance system shall be appropriate and adhere to national/international
+     guidelines.
+  4. Surveillance shall include areas where demolition, construction or repairs are
+     undertaken.
+
+Illustrative only:
+  — No "for example" or "preferable" items beyond the construction/demolition areas note.
+    All elements above are mandatory.
+
+Documentation: No star — surveillance records specific to each identified high-risk area,
+with frequency and mode defined, are the required evidence. A hospital-wide rate without
+high-risk-area breakout does not satisfy this OE.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.6.d
+Level: CORE | No star
+
+Verbatim OE text:
+Surveillance includes monitoring compliance with hand-hygiene guidelines.
+
+Guidebook interpretation:
+The monitoring shall be done at a minimum once every month. An appropriate sample size
+shall be chosen and all categories of staff (involved in direct patient care) shall be
+monitored. The compliance levels shall be shared with the relevant staff.
+
+[Note: "A good tool is the WHO's Observation Form. al BS Sa HB." — the WHO Form
+reference is informational; the OCR string "al BS Sa HB." is an artefact. Discarded.]
+
+Stop-work check: CORE — non-compliance is accreditation-blocking. IPC.6 is not in
+STOP_WORK_PROPOSALS. Absence of monthly hand-hygiene compliance monitoring is a CORE gap.
+
+Mandatory (shall):
+  1. Monitoring shall be done at a minimum once every month — the monthly minimum is
+     explicit and mandatory.
+  2. An appropriate sample size shall be chosen.
+  3. All categories of staff involved in direct patient care shall be monitored — no
+     category is exempt.
+  4. Compliance levels shall be shared with relevant staff — results must reach the units,
+     not only the IPC office.
+
+Illustrative only:
+  — WHO Observation Form: "A good tool" — informational; the organisation may use any
+    validated observation methodology.
+
+CORE status: Absence of monthly hand-hygiene compliance monitoring data is a CORE gap.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.6.e
+Level: Achievement | No star
+
+Verbatim OE text:
+Surveillance includes mechanisms to capture the occurrence of multi-drug- resistant
+organisms.
+
+Guidebook interpretation:
+The organisation shall monitor the occurrence and spread of multi-drug resistant organisms
+(MDROs) for example methicillin-resistant Staphylococcus aureus (MRSA), multi-drug
+resistant gram-negative bacteria, Vancomycin-resistant enterococci (VRE) etc.
+
+Stop-work check: Achievement — no stop-work trigger.
+
+Mandatory (shall):
+  1. The organisation shall monitor the occurrence and spread of MDROs — monitoring is
+     mandatory; the mechanism must be operational, not only documented.
+
+Illustrative only:
+  — MRSA, multi-drug resistant gram-negative bacteria, VRE: examples of MDROs ("for
+    example"). The organisation's list may be broader based on its own antibiogram data.
+  — "etc." signals the list is not exhaustive.
+
+Achievement level note: Evidence of a working capture mechanism — microbiologist alert to
+IPC team, infection vs colonisation distinction, MDRO log — is what assessors look for.
+A policy statement that the organisation monitors MDROs without supporting data does not
+satisfy this Achievement OE.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.6.f
+Level: CORE | No star
+
+Verbatim OE text:
+Surveillance includes monitoring the effectiveness of housekeeping services.
+
+Guidebook interpretation:
+Monitoring of the effectiveness of housekeeping services shall be done regularly. The
+organisation shall define the periodicity. This is applicable even if the housekeeping
+services are outsourced. It is mandatory to capture the effectiveness of the housekeeping
+activities and not just verify if the housekeeping activity has been done as per the
+defined frequency. To capture effectiveness, the organisation shall identify desired
+outcome parameters for housekeeping activities.
+
+IMPORTANT NEGATIVE REQUIREMENTS FROM GUIDEBOOK (mandatory prohibitions):
+  — "This need not mean routine environmental sampling." — routine microbiological swabs
+    and culture plates shall NOT be collected routinely from OT and other high-risk areas
+    for monitoring clean environment.
+  — "Periodic fumigation is not recommended."
+  — "Fogging is recommended only in following conditions: Commissioning of new OT;
+    Modification/renovation of OT; Significant increase in SSI with evidence of
+    evolvement of environment." — fogging is not a routine housekeeping-monitoring
+    activity.
+
+Stop-work check: CORE — non-compliance is accreditation-blocking. IPC.6 is not in
+STOP_WORK_PROPOSALS. Monitoring housekeeping frequency compliance only (without capturing
+effectiveness outcomes) is a CORE gap.
+
+Mandatory (shall):
+  1. Effectiveness monitoring of housekeeping services shall be done regularly.
+  2. Periodicity shall be defined by the organisation.
+  3. Applicable even when outsourced.
+  4. Effectiveness, not only frequency compliance, shall be captured.
+  5. Desired outcome parameters for housekeeping shall be identified.
+  6. Routine microbiological environmental sampling shall NOT be used as the routine
+     monitoring method.
+  7. Periodic fumigation shall NOT be performed.
+  8. Fogging shall be performed ONLY in the three specified conditions (new OT
+     commissioning; OT modification/renovation; significant SSI increase with environmental
+     evidence) — not routinely.
+
+Illustrative only:
+  — Cleanliness of hospital premises, patient feedback, staff feedback: examples of
+    outcome parameters ("For example") — not a mandatory closed list.
+  — Data captured using a checklist: suggested approach.
+
+CORE status: Monitoring only whether housekeeping was done on schedule, without evidence
+of outcome effectiveness, is a CORE gap.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.6.g
+Level: Commitment | No star
+
+Verbatim OE text:
+Feedback regarding surveillance data is provided regularly to the appropriate health care
+provider.
+
+Guidebook interpretation:
+The feedback shall include the adherence rates, healthcare associated infection (HAI)
+rates, trends and opportunities for improvement, including data from other surveillance
+activities. It could also provide specific inputs to reduce the HAI rate. This could be
+in the form of a bulletin/newsletter.
+
+[Note: "I —h." at end of Guidebook source is a transition marker to the next OE. Discarded.]
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. Feedback shall include: adherence rates; HAI rates; trends; and opportunities for
+     improvement, including data from other surveillance activities — all four elements
+     are mandatory feedback content.
+  2. Feedback shall be provided regularly.
+  3. Feedback shall reach the appropriate healthcare provider — not only the IPC office.
+
+Illustrative only:
+  — Specific inputs to reduce HAI rate: "could also provide" — an optional enhancement.
+  — Bulletin/newsletter format: "could be in the form of" — one option; not the only
+    acceptable format.
+
+Note for policy writer: "Appropriate healthcare provider" means unit in-charges, treating
+doctors, and others who can act on the data — not only the IPC Committee. A rate that
+sits only in the IPC office is not feedback.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.6.h
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation identifies and takes appropriate action to control outbreaks of
+infections.
+
+Guidebook interpretation:
+Surveillance shall help early identification of outbreaks. To define as to what
+constitutes an outbreak, the organisation shall have baseline rates. The organisation
+implements written guidance for handling such outbreaks.
+
+Stop-work check: Commitment — no stop-work trigger in the IPC.6 stop-work section.
+However, delay in declaring an outbreak when the defined threshold is met is escalated
+to the Medical Superintendent the same shift.
+
+Mandatory (shall):
+  1. Baseline rates shall be established (to define what constitutes an outbreak).
+  2. Written guidance for handling outbreaks shall be implemented.
+  3. Early identification of outbreaks through surveillance — "shall help" carries
+     mandatory force in the context of this NABH OE; the surveillance system must be
+     designed to detect outbreaks early.
+
+Illustrative only:
+  — No "for example" or "preferable" items in this OE's interpretation. All elements
+    carry mandatory force.
+
+Documentation: OE is starred — written outbreak definition using baseline rates, written
+outbreak-response guidance, and outbreak records (or a drill record if no real event has
+occurred) must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+IPC.6.i
+Level: Commitment | No star
+
+Verbatim OE text:
+Surveillance data is analysed and appropriate corrective and preventive actions are taken.
+
+Guidebook interpretation:
+The Infection Prevention and Control Committee analyses the surveillance data and based on
+this corrective and preventive actions are taken where necessary. This also includes taking
+appropriate corrective actions to prevent recurrence after an outbreak.
+
+[Note: "Standard. IPC.7. Infection prevention measures include sterilisation..." at end
+of Guidebook source is the IPC.7 standard header — OCR run-on. Discarded for this OE.]
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. The IPC Committee shall analyse the surveillance data.
+  2. Corrective and preventive actions shall be taken where necessary.
+  3. Corrective actions shall be taken to prevent recurrence after an outbreak — the
+     post-outbreak corrective action is explicitly required.
+
+Illustrative only:
+  — "Where necessary" qualifies when CAPA is triggered — not every analysis finding
+    mandates CAPA, but the analysis itself must happen and the decision on whether CAPA
+    is warranted must be documented.
+
+Note for policy writer: Analysis without action is not this element. The IPC Officer
+tracks closure of open actions.
+
+
+══════════════════════════════════════════════════════════════════════════════
+STOP-WORK SECTION OUTPUTS — IPC.3, IPC.4, IPC.5
+(Complete stop_work_text() function output for the three flagged standards)
+══════════════════════════════════════════════════════════════════════════════
+
+─────────────────────────────────────────────────────────────────────────────
+STOP-WORK — IPC.3 (Standard 3: Infection Prevention and Control in Clinical Areas)
+─────────────────────────────────────────────────────────────────────────────
+
+Do not start a clinical procedure when standard precautions are not in place (PPE, sharps
+safety, cough etiquette as the situation requires), when hand hygiene has not been done
+at the required moment, or when injection/infusion practice would reuse a needle or
+syringe.
+
+Do not start a restricted antimicrobial without the organisation's antimicrobial-
+stewardship path (documented indication and, where required, approval).
+
+Stop-work applies to the procedure or first dose start. Immediate life-saving care
+continues with the best available precautions and is documented.
+
+The person who stops tells the [treating doctor] and the [Infection Prevention and Control
+Officer] the same shift. Refusing an unsafe start is not a disciplinary matter.
+
+
+─────────────────────────────────────────────────────────────────────────────
+STOP-WORK — IPC.4 (Standard 4: Infection Prevention and Control in Support Services)
+─────────────────────────────────────────────────────────────────────────────
+
+Do not handle biomedical waste without the required colour-coded segregation and PPE.
+
+Do not start construction or renovation in a patient-care area until the infection-risk
+plan for that work has been completed and the [Infection Prevention and Control Officer]
+has agreed the controls.
+
+Stop-work applies to the waste-handling act and to the construction/renovation start.
+Emergency repair that cannot wait follows the documented emergency-works IPC controls and
+is recorded.
+
+The person who stops tells the [Infection Prevention and Control Officer] and the
+[Medical Superintendent] the same shift. Refusing unsafe waste handling or unplanned works
+is not a disciplinary matter.
+
+
+─────────────────────────────────────────────────────────────────────────────
+STOP-WORK — IPC.5 (Standard 5: Prevention of Healthcare Associated Infections in Patients)
+─────────────────────────────────────────────────────────────────────────────
+
+Do not insert an indwelling urinary catheter, insert a central line, start invasive
+ventilation, or make a surgical incision unless the organisation's prevention bundle for
+that HAI (CAUTI, CLABSI, VAP or SSI) is in place for this patient.
+
+Stop-work applies to the device insertion or incision. Life-saving airway or haemorrhage
+control continues with the best available precautions and the bundle is completed as soon
+as the patient is stable.
+
+The person who stops tells the [treating doctor] and the [Infection Prevention and Control
+Officer] the same shift. Refusing an insertion without the bundle is not a disciplinary
+matter.
+
+
+══════════════════════════════════════════════════════════════════════════════
+END OF IPC.1–IPC.6 RAW SOURCE DUMP
+══════════════════════════════════════════════════════════════════════════════

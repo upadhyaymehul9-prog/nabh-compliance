@@ -1,0 +1,2153 @@
+HRM RAW SOURCE DUMP — HCO 6th Edition
+Chapter: Human Resource Management (HRM)
+Standards: HRM.1–HRM.13 (13 standards, 76 OEs)
+Generated: 2026-09-04
+Sources: hco6_hrm_inventory.json, hco6_hrm_interpretations.json,
+         hco_hrm_v2_common.py, generate_hco_hrm_v2.py, hco_hrm_v2_methods.py
+
+Chapter intent (official Standards PDF):
+  The most important resource of the organisation is its human resource.
+  Human resources are an asset for the effective and efficient functioning of
+  the organisation. The management plans on identifying the right number and
+  skill mix of staff required to render safe care to the patients.
+  Recruitment of staff is accomplished by having a uniform and standardised
+  system. The organisation must orient the staff including outsourced staff,
+  volunteers, students and trainees to its environment and also orient them
+  to specific duties and responsibilities related to their position. The
+  organisation should plan to have an ongoing professional training / in-
+  service education to enhance the competencies and skills of the staff
+  continually. A systematic and structured appraisal system must be used for
+  staff development. The organisation uses this as an opportunity to discuss,
+  motivate, identify gaps in the performance of the staff. The organisation
+  promotes the physical and mental well-being of staff. A grievance handling
+  mechanism and disciplinary procedure should be in place. Credentialing and
+  privileging of health-care professionals (medical, nursing and other para-
+  clinical professional) are done to ensure patient safety. A document
+  containing all such personal information has to be maintained for all
+  staff.
+
+Prepared by: HR In-Charge / Personnel Officer (all 13 standards)
+Statute P2 : HRM.12 only — Indian Nursing Council Act, 1947
+             (HRM.8 'relevant labour laws / CCS (CCA) rules' stays a method note)
+
+═══════════════════════════════════════════════════════════════════════════════
+CHAPTER SUMMARY TABLE
+═══════════════════════════════════════════════════════════════════════════════
+Std      OEs  CORE   ★  Ach  Stop  Policy title
+───────────────────────────────────────────────────────────────────────────────
+HRM.1      7     1   2    2    NO  Human Resource Planning and Governance
+HRM.2      4     2   2    0    NO  Staff Recruitment
+HRM.3     10     1   0    0    NO  Staff Induction Training
+HRM.4      6     1   1    2    NO  Professional Training and Development
+HRM.5      6     1   0    0    NO  Job-Specific Staff Training
+HRM.6      7     2   0    0    NO  Safety and Quality-Related Staff Training
+HRM.7      5     0   1    0    NO  Staff Performance Appraisal
+HRM.8      6     1   1    0    NO  Disciplinary and Grievance Handling
+HRM.9      4     1   2    0    NO  Staff Health and Safety
+HRM.10     4     0   0    0    NO  Staff Personal Information and Records
+HRM.11     6     2   0    0   YES  Credentialing and Privileging of Medical Professionals
+HRM.12     6     2   0    0  YES★  Credentialing and Privileging of Nursing Professionals
+HRM.13     5     2   0    0   YES  Credentialing and Privileging of Para-Clinical Professionals
+───────────────────────────────────────────────────────────────────────────────
+TOTAL     76    16   9    43 stds
+═══════════════════════════════════════════════════════════════════════════════
+
+★ on stop column = Statute P2 (Indian Nursing Council Act, 1947)
+CORE OEs (16): HRM.1.b★, HRM.2.a★, HRM.2.c, HRM.3.a, HRM.4.a★, HRM.5.e,
+               HRM.6.e, HRM.6.f, HRM.8.d, HRM.9.d★, HRM.11.a, HRM.11.d,
+               HRM.12.a, HRM.12.d, HRM.13.a, HRM.13.c
+Starred OEs (9): HRM.1.b (CORE), HRM.1.f (Commit), HRM.2.a (CORE),
+                 HRM.2.d (Commit), HRM.4.a (CORE), HRM.7.a (Commit),
+                 HRM.8.a (Commit), HRM.9.a (Commit), HRM.9.d (CORE)
+Achievement OEs (4): HRM.1.c, HRM.1.g, HRM.4.e, HRM.4.f
+Excellence OEs: none
+OE-level stop-work triggers: HRM.11.a, HRM.11.d, HRM.12.a, HRM.12.d,
+                              HRM.13.a, HRM.13.c (all CORE)
+  [oe_mapping() adds '; Section 6 Stop-work' to ALL OEs in HRM.11/12/13]
+Non-negotiables: auto-generated via non_negotiables() — 'Do not skip: {OE text}'
+                 format (NOT hand-authored like FMS_NON_NEGOTIABLES)
+
+═══════════════════════════════════════════════════════════════════════════════
+HRM.1  The organisation has a documented system of human resource planning.
+═══════════════════════════════════════════════════════════════════════════════
+Policy title : Human Resource Planning and Governance
+Prepared by  : HR In-Charge / Personnel Officer
+OE count     : 7
+Stop-work    : NO
+
+Non-negotiables (auto-generated):
+  1. Do not skip: Human resource planning supports the organisation's current
+     and future ability to meet the care, treatment and service needs of the patient.
+  2. Do not skip: The organisation maintains an adequate number and mix of staff
+     to meet the care, treatment and service needs of the patient.
+  3. Do not skip: The organisation has contingency plans to manage long and
+     short-term workforce shortages, including unplanned shortages.
+  4. Do not skip: The job specification and job description are defined for each
+     category of staff.
+  5. Do not skip: The organisation performs a background check of new staff.
+  6. Do not skip: Reporting relationships are defined for each category of staff.
+  7. Do not skip: Exit interviews are conducted and used as a tool to improve
+     human resource practices.
+  8. Staff who see a HRM.1 rule broken report it the same shift to the
+     «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
+
+── HRM.1.a ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Human resource planning supports the organisation's current and future ability to meet the care, treatment and service needs of the patient."
+Guidebook interpretation:
+  Human resource planning shall be done in a structured manner for all
+  categories of staff keeping in mind the hospital's mission, volume and mix
+  of patients, services, and medical technology. This is done with the
+  involvement of various stakeholders. It shall use recognised methods for
+  determining levels of staffing to match the strategic and operational plan
+  of the organisation. Where appropriate, corrective action is taken on
+  variances found during the year and shall be incorporated in the subsequent
+  plan.
+Method body (what we do):
+  Human resource planning at «HOSPITAL» supports the organisation's current
+  and future ability to meet the care, treatment and service needs of the
+  patient. The «HR In-Charge / Personnel Officer» prepares a workforce plan
+  «annually» that compares current staff numbers and skill mix against the
+  hospital's mission, patient volume and mix, services offered and medical
+  technology in use, with input from department heads and other stakeholders.
+  Recognised methods are used to set staffing levels against the strategic
+  and operational plan. Where the year's actuals vary from plan, the «HR In-
+  Charge / Personnel Officer» records the corrective action taken and carries
+  it into the next plan.
+Mandatory vs illustrative:
+  MANDATORY   : Annual structured workforce plan covering all staff categories; corrective action on variances.
+  ILLUSTRATIVE: Recognised staffing methods (e.g. WHO WISN); involvement mechanisms for stakeholders.
+Required records:
+  1. Annual workforce plan comparing current and projected staffing against services and patient volume.
+  2. Department-head input record into the plan.
+  3. Corrective-action record for a variance found during the year.
+
+── HRM.1.b ─────────────────────────────────────────────────────────────────────
+Level: CORE  |  Star: YES  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The organisation maintains an adequate number and mix of staff to meet the care, treatment and service needs of the patient."
+Guidebook interpretation:
+  The staff shall be commensurate with the workload and the clinical
+  requirement of the patients. Staffing norms for nurses shall be as per
+  published guidelines. A good reference is the WHO's Workload Indicators of
+  Staffing Need (WISN) method. Whenever there is a shortfall of staff,
+  contingency plans to meet the workforce shortage exists. This includes
+  support staff too. Refer to HRM.1.c.
+Method body (what we do):
+  «HOSPITAL» maintains an adequate number and mix of staff to meet the care,
+  treatment and service needs of the patient, commensurate with workload and
+  clinical requirement. Nursing staffing follows published guidelines (the
+  WHO WISN method is a recognised reference). Where a shortfall exists, the
+  contingency plan at HRM.1.c is triggered, covering support staff as well as
+  clinical staff. The «HR In-Charge / Personnel Officer» compares sanctioned
+  versus actual strength «monthly» and escalates unresolved shortfalls to the
+  «Medical Superintendent».
+Mandatory vs illustrative:
+  MANDATORY   : Adequate number and mix of staff maintained; shortfalls trigger contingency plan.
+  ILLUSTRATIVE: WISN as the reference method (any published nursing guideline accepted); monthly as comparison frequency.
+Required records:
+  1. Sanctioned-versus-actual staffing comparison record by department.
+  2. Staffing-norm reference used (e.g. WHO WISN method for nursing).
+  3. Escalation record for an unresolved shortfall.
+
+── HRM.1.c ─────────────────────────────────────────────────────────────────────
+Level: Achievement  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The organisation has contingency plans to manage long and short-term workforce shortages, including unplanned shortages."
+Guidebook interpretation:
+  At various times, the mix of skills required for the organisation to
+  function at peak efficiency may not be immediately available due to
+  workforce shortages, which can occur on a shift-by-shift, short-term or
+  long-term basis. Existing staff crises can be managed using a contingency
+  plan, which may include strategies such as reprioritising tasks, allocating
+  tasks to different staff members, and relying on a pool of filler staff,
+  which may consist predominantly of previous employees and casual staff
+  sourced from agencies.
+Method body (what we do):
+  «HOSPITAL» has contingency plans to manage long- and short-term workforce
+  shortages, including unplanned shortages (a shift-by-shift gap, a short-
+  term crisis or a sustained long-term shortfall). The plan may include
+  reprioritising tasks, reallocating tasks across available staff, and
+  drawing on a pool of filler staff — previous employees and agency-sourced
+  casual staff are named by the Guidebook as a typical source. Each shortage
+  event is logged with cause, measure used and outcome. The plan is tested at
+  a defined interval (default «twice a year»).
+Mandatory vs illustrative:
+  MANDATORY   : Written contingency plans for shift-by-shift, short-term and long-term shortage exist.
+  ILLUSTRATIVE: Specific filler-staff sources (agency, previous employees); testing frequency (twice a year is default).
+Required records:
+  1. Written contingency plan for long- and short-term workforce shortages, including unplanned shortages.
+  2. Shortage-event log with cause, measure used and outcome.
+  3. Test record of the contingency plan, at least twice a year.
+
+── HRM.1.d ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The job specification and job description are defined for each category of staff."
+Guidebook interpretation:
+  The content of each job shall be defined and the qualifications, skills and
+  experience required for performing the job shall be laid down. The job
+  description shall be commensurate with the qualification. For a job which
+  requires the skills of a doctor or a nurse, the minimum qualification shall
+  be an MBBS and GNM degree respectively. The exception would be in cases
+  where exemption has been granted by government/statutory body. The
+  requirements of this objective element are applicable to all types of
+  'staff' who require job descriptions (for example, full-time, part-time,
+  employed, honorary, voluntary or temporary).
+Method body (what we do):
+  The job specification and job description are defined for each category of
+  staff at «HOSPITAL», including full-time, part-time, employed, honorary,
+  voluntary and temporary staff. Each job description lays down the content
+  of the job and the qualifications, skills and experience required,
+  commensurate with the qualification set for that role. For a role requiring
+  the skills of a doctor or a nurse, the minimum qualification is an MBBS or
+  GNM degree respectively, unless government or statutory exemption has been
+  granted. The «HR In-Charge / Personnel Officer» holds the current job-
+  description set; new hires sign that they have received and understood
+  theirs.
+Mandatory vs illustrative:
+  MANDATORY   : Job description and specification defined for every staff category; minimum doctor/nurse qualification rule applies.
+  ILLUSTRATIVE: Format of the JD; whether signed acknowledgement is at joining or within onboarding period.
+Required records:
+  1. Job description on file for each staff category, including qualification, skill and experience requirements.
+  2. Signed acknowledgement record from a new hire receiving their job description.
+  3. Minimum-qualification exemption record, where applicable.
+
+── HRM.1.e ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The organisation performs a background check of new staff."
+Guidebook interpretation:
+  The organisation shall have a suitable methodology to implement the same.
+  This shall be done either before the person joins the organisation or
+  within one month of joining.
+Method body (what we do):
+  «HOSPITAL» performs a background check of new staff, using a defined
+  methodology, either before the person joins or within one month of joining.
+  The «HR In-Charge / Personnel Officer» maintains a background-check
+  register recording the method used, date completed and outcome for each new
+  hire. A staff member with no background check on file is escalated to the
+  «Medical Superintendent»; this is not a box left for later.
+Mandatory vs illustrative:
+  MANDATORY   : Background check performed before joining or within one month; method defined.
+  ILLUSTRATIVE: Specific method used (police clearance, reference check, etc.) is hospital's choice.
+Required records:
+  1. Background-check register recording method, date and outcome per new hire.
+  2. Completion record before or within one month of joining.
+  3. Escalation record for any staff member with no background check on file.
+
+── HRM.1.f ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: YES  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Reporting relationships are defined for each category of staff."
+Guidebook interpretation:
+  The organisation shall document this as the organisation structure/chart,
+  and this shall document the hierarchy, line of control, along with the
+  functions at various levels. Organogram shall be transparent and
+  disseminated to all stakeholders. The reporting relationship at
+  department/service level shall be defined.
+Method body (what we do):
+  Reporting relationships are defined for each category of staff at
+  «HOSPITAL», documented as an organisation structure or chart showing
+  hierarchy, line of control and functions at each level. The chart is
+  transparent and disseminated to all stakeholders, and the reporting
+  relationship is also defined at department or service level. The «HR In-
+  Charge / Personnel Officer» holds the current chart; a role with no defined
+  reporting line is incomplete under this element.
+Mandatory vs illustrative:
+  MANDATORY   : Org chart with hierarchy and reporting lines documented and disseminated.
+  ILLUSTRATIVE: Format of chart (organogram vs text); granularity at department level.
+Required records:
+  1. Current organisation structure or chart showing hierarchy and reporting lines.
+  2. Department- or service-level reporting-relationship record.
+  3. Dissemination record to stakeholders.
+
+── HRM.1.g ─────────────────────────────────────────────────────────────────────
+Level: Achievement  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Exit interviews are conducted and used as a tool to improve human resource practices."
+Guidebook interpretation:
+  The organisation conducts exit interviews to obtain feedback from employees
+  leaving the organisation. This could be done through personal interview.
+  This shall be a voluntary exercise.
+Method body (what we do):
+  «HOSPITAL» conducts exit interviews and uses them as a tool to improve
+  human resource practices. A personal interview is the default method; the
+  exercise is voluntary for the departing staff member. The «HR In-Charge /
+  Personnel Officer» compiles findings at a defined interval (default
+  «quarterly») into a trend report for the «Medical Superintendent» and,
+  where the hospital has one, the «governing body», with proposed HR
+  improvements tracked to closure.
+Mandatory vs illustrative:
+  MANDATORY   : Exit interviews conducted; findings used for HR improvement.
+  ILLUSTRATIVE: Interview format (personal interview named by Guidebook; structured questionnaire also acceptable); voluntary nature.
+Required records:
+  1. Completed exit-interview record for a departing staff member.
+  2. Quarterly trend report compiled from exit interviews.
+  3. HR-improvement action record from exit-interview findings.
+
+═══════════════════════════════════════════════════════════════════════════════
+HRM.2  The organisation implements a defined process for staff recruitment.
+═══════════════════════════════════════════════════════════════════════════════
+Policy title : Staff Recruitment
+Prepared by  : HR In-Charge / Personnel Officer
+OE count     : 4
+Stop-work    : NO
+
+Non-negotiables (auto-generated):
+  1. Do not skip: Written guidance governs the process of recruitment.
+  2. Do not skip: A pre-employment medical examination is conducted on the staff.
+  3. Do not skip: The organisation defines and implements a code of conduct for its staff.
+  4. Do not skip: Administrative procedures for human resource management are documented.
+  5. Staff who see a HRM.2 rule broken report it the same shift to the
+     «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
+
+── HRM.2.a ─────────────────────────────────────────────────────────────────────
+Level: CORE  |  Star: YES  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Written guidance governs the process of recruitment."
+Guidebook interpretation:
+  Recruitment of staff shall be based on defined criteria for each category.
+  The recruitment process ensures an adequate number and skill mix of staff
+  to provide the organisation's services. The procedure shall ensure that the
+  staff has the necessary registration, qualifications, skills and experience
+  to perform its work. Recruitment is undertaken following statutory
+  requirements, where applicable. The process shall be documented and carried
+  out transparently.
+Method body (what we do):
+  Written guidance governs the process of recruitment at «HOSPITAL», based on
+  defined criteria for each staff category, ensuring an adequate number and
+  skill mix to provide the organisation's services. The procedure confirms
+  that a candidate has the necessary registration, qualifications, skills and
+  experience before appointment, and follows statutory requirements where
+  they apply. The process is documented and carried out transparently; the
+  «HR In-Charge / Personnel Officer» maintains a recruitment register logging
+  vacancy, candidates considered, selection rationale and fill date. This is
+  a CORE, asterisked element.
+Mandatory vs illustrative:
+  MANDATORY   : Written guidance for each staff category; transparent documented process.
+  ILLUSTRATIVE: Format of criteria; structure of register.
+Required records:
+  1. Written recruitment guidance document.
+  2. Recruitment register — vacancy, candidates, selection rationale, fill date.
+  3. Statutory-requirement compliance record where applicable.
+
+── HRM.2.b ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "A pre-employment medical examination is conducted on the staff."
+Guidebook interpretation:
+  The purpose of this examination is to ensure that the staff is fit to
+  provide safe care to patients. Performance of diagnostic tests could be
+  guided by the nature of the job of the staff in the organisation. However,
+  any such test done shall be in accordance with the law of the land. For
+  example, performing pre-employment HIV testing without consent is illegal.
+Method body (what we do):
+  A pre-employment medical examination is conducted on staff at «HOSPITAL» to
+  confirm fitness to provide safe care. The scope of diagnostic testing is
+  guided by the nature of the role, but any test performed follows the law of
+  the land — for example, pre-employment HIV testing without the candidate's
+  consent is illegal and is not this hospital's practice. The «HR In-Charge /
+  Personnel Officer» holds the examination record with the personnel file.
+Mandatory vs illustrative:
+  MANDATORY   : Medical examination conducted; tests must be lawful and consent-based.
+  ILLUSTRATIVE: Test panel (job-guided; hospital specifies); who performs the examination.
+Required records:
+  1. Pre-employment medical examination record on file.
+  2. Consent record for any testing performed, confirming no non-consensual testing.
+  3. Fitness-to-work determination record.
+
+── HRM.2.c ─────────────────────────────────────────────────────────────────────
+Level: CORE  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The organisation defines and implements a code of conduct for its staff."
+Guidebook interpretation:
+  The code of conduct shall outline the do's and don'ts for staff behaviour
+  at the workplace. It shall be aligned with the organisation's values and
+  ethics framework. Code of conduct shall include protection of patient
+  confidentiality. It is preferable that the staff sign the code of conduct
+  at the time of joining. The code of conduct could be part of service rules
+  of the organisation.
+Method body (what we do):
+  «HOSPITAL» defines and implements a code of conduct for its staff,
+  outlining the do's and don'ts of workplace behaviour, aligned with the
+  organisation's values and ethics framework and including protection of
+  patient confidentiality. Staff sign the code at the time of joining; it may
+  form part of the hospital's service rules. This is a CORE element. The «HR
+  In-Charge / Personnel Officer» holds signed acknowledgements with the
+  personnel file.
+Mandatory vs illustrative:
+  MANDATORY   : Code of conduct defined and implemented; includes patient confidentiality; staff sign at joining.
+  ILLUSTRATIVE: Whether integrated into service rules or separate document.
+Required records:
+  1. Written code of conduct document.
+  2. Signed staff acknowledgement at joining.
+  3. Confidentiality-protection clause record within the code.
+
+── HRM.2.d ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: YES  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Administrative procedures for human resource management are documented."
+Guidebook interpretation:
+  This shall include administrative procedures like attendance, leave,
+  conduct, replacement, etc.
+Method body (what we do):
+  Administrative procedures for human resource management are documented at
+  «HOSPITAL» — at minimum attendance, leave, conduct and replacement. The «HR
+  In-Charge / Personnel Officer» maintains the current procedure set and
+  covers it during induction (HRM.3.h). This is an asterisked element.
+Mandatory vs illustrative:
+  MANDATORY   : Administrative procedures documented — minimum: attendance, leave, conduct, replacement.
+  ILLUSTRATIVE: Additional procedures beyond the minimum (e.g. transfer, promotion).
+Required records:
+  1. Documented administrative procedures — attendance, leave, conduct, replacement.
+  2. Current-version record held by HR.
+  3. Cross-reference to induction training covering these procedures (HRM.3.h).
+
+═══════════════════════════════════════════════════════════════════════════════
+HRM.3  Staff are provided induction training at the time of joining the organisation.
+═══════════════════════════════════════════════════════════════════════════════
+Policy title : Staff Induction Training
+Prepared by  : HR In-Charge / Personnel Officer
+OE count     : 10
+Stop-work    : NO
+
+Non-negotiables (auto-generated):
+  1. Do not skip: Staff are provided with induction training.
+  2. Do not skip: The induction training includes orientation to the organisation's vision, mission and values.
+  3. Do not skip: The induction training includes awareness on staff rights and responsibilities and patient rights and responsibilities.
+  4. Do not skip: The induction training includes training on safety.
+  5. Do not skip: The induction training includes training on cardio-pulmonary resuscitation for staff.
+  6. Do not skip: The induction training includes training in hospital infection prevention and control.
+  7. Do not skip: The induction training includes orientation to the service standards of the organisation.
+  8. Do not skip: The induction training includes an orientation on administrative procedures.
+  9. Do not skip: The induction training includes an orientation on relevant department / unit / service / programme's policies and procedures.
+  10. Do not skip: Staff is trained on information systems, information security, information use and management.
+  11. Staff who see a HRM.3 rule broken report it the same shift to the
+      «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
+
+── HRM.3.a ─────────────────────────────────────────────────────────────────────
+Level: CORE  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Staff are provided with induction training."
+Guidebook interpretation:
+  The organisation's staff, including doctors, consultants (including
+  visiting) and the outsourced staff, are provided induction training.
+  Volunteers, students and trainees are also oriented to the hospital and
+  their specific assignments or responsibilities. The organisation shall
+  determine as to when induction training shall be conducted. However, it
+  shall be within a month of the staff joining. Objective elements 'b' to 'h'
+  shall be covered in this training. Similarly, all other requirements of
+  this standard could be covered. The contents of this training could be
+  provided to every staff in the form of a booklet. There can be separate
+  induction training at the organisational level and for the respective
+  departments. The records of the training shall be maintained.
+Method body (what we do):
+  «HOSPITAL» provides induction training to its staff, including doctors,
+  consultants (including visiting), outsourced staff, volunteers, students
+  and trainees, oriented to the hospital and to their specific assignment or
+  responsibilities. Induction is completed within one month of joining and
+  covers objective elements HRM.3.b–h, along with any other requirement this
+  hospital defines. The contents may be issued as a booklet; separate
+  induction may run at organisational and departmental level. The «HR In-
+  Charge / Personnel Officer» keeps the training record. This is a CORE
+  element.
+Mandatory vs illustrative:
+  MANDATORY   : Induction within one month of joining; covers b–h minimum; record maintained.
+  ILLUSTRATIVE: Booklet format vs classroom vs digital; separate org-level and department-level induction.
+Required records:
+  1. Induction-training record within one month of joining.
+  2. Attendance record covering doctors, consultants, outsourced staff, volunteers, students and trainees.
+  3. Induction-content record covering HRM.3.b–h and hospital-specific requirements.
+
+── HRM.3.b ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The induction training includes orientation to the organisation's vision, mission and values."
+Guidebook interpretation:
+  The organisation's staff, including the outsourced staff, shall be aware
+  and shall correctly interpret the vision, mission and values of the
+  organisation.
+Method body (what we do):
+  Induction training at «HOSPITAL» includes orientation to the organisation's
+  vision, mission and values, so that staff (including outsourced staff) are
+  aware of and can correctly interpret them.
+Mandatory vs illustrative:
+  MANDATORY   : Vision, mission and values orientation included in induction.
+  ILLUSTRATIVE: Depth of content; awareness-check method.
+Required records:
+  1. Vision, mission and values orientation record within induction training.
+  2. Staff-awareness confirmation record.
+  3. Outsourced-staff inclusion record.
+
+── HRM.3.c ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The induction training includes awareness on staff rights and responsibilities and patient rights and responsibilities."
+Guidebook interpretation:
+  The organisation's staff shall be able to comprehend the implications of
+  their rights and responsibilities. The staff shall be able to identify and
+  report a violation of patient rights as and when it occurs.
+Method body (what we do):
+  Induction training at «HOSPITAL» includes awareness of staff rights and
+  responsibilities and of patient rights and responsibilities, so that staff
+  can comprehend the implications of both and can identify and report a
+  violation of patient rights when it occurs.
+Mandatory vs illustrative:
+  MANDATORY   : Staff and patient rights/responsibilities included; staff can identify and report rights violations.
+  ILLUSTRATIVE: Training format; assessment method.
+Required records:
+  1. Staff-rights-and-responsibilities and patient-rights-and-responsibilities training record.
+  2. Violation-identification-and-reporting awareness confirmation.
+  3. Induction attendance record.
+
+── HRM.3.d ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The induction training includes training on safety."
+Guidebook interpretation:
+  The training shall incorporate aspects of patient, visitor and staff
+  safety. This includes training on emergency 'codes'.
+Method body (what we do):
+  Induction training at «HOSPITAL» includes training on safety — patient,
+  visitor and staff safety, including the hospital's emergency 'codes'.
+Mandatory vs illustrative:
+  MANDATORY   : Safety training (patient, visitor, staff) and emergency codes included in induction.
+  ILLUSTRATIVE: Which specific codes are covered; depth of safety content.
+Required records:
+  1. Safety training record within induction — patient, visitor and staff safety, emergency codes.
+  2. Emergency-code awareness confirmation.
+  3. Induction attendance record.
+
+── HRM.3.e ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The induction training includes training on cardio-pulmonary resuscitation for staff."
+Guidebook interpretation:
+  All staff members including doctors, nursing staff, technologists and
+  rehabilitation staff must at least be trained to provide cardio-pulmonary
+  resuscitation for example basic life support (BLS). All doctors and nurses
+  working in intensive care/high dependency units shall undergo appropriate
+  training, for example, advanced cardiac life support (ACLS), paediatric
+  advanced life support (PALS) and neonatal resuscitation program (NRP) or
+  any other equivalent/similar programme. In case the staff has a valid
+  training certificate, the same is not necessary. The training could be
+  imparted by trainers from within or outside the organisation using
+  established evidence-based protocols.
+Method body (what we do):
+  Induction training at «HOSPITAL» includes training on cardio-pulmonary
+  resuscitation for staff. At minimum, doctors, nursing staff, technologists
+  and rehabilitation staff are trained to at least basic life support (BLS);
+  doctors and nurses working in intensive-care or high-dependency units
+  undergo appropriate advanced training (for example ACLS, PALS or NRP, or an
+  equivalent programme). A staff member with a valid current training
+  certificate does not repeat the training. Trainers may be internal or
+  external, using established evidence-based protocols.
+Mandatory vs illustrative:
+  MANDATORY   : CPR training at appropriate level included in induction; ICU/HDU staff get advanced level.
+  ILLUSTRATIVE: Specific programme name (BLS, ACLS, equivalent); internal vs external trainer; retrain interval.
+Required records:
+  1. CPR/BLS training record within induction.
+  2. Advanced-training record for ICU or high-dependency-unit staff (ACLS/PALS/NRP or equivalent).
+  3. Valid-certificate exemption record, where applicable.
+
+── HRM.3.f ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The induction training includes training in hospital infection prevention and control."
+Guidebook interpretation:
+  The trainings shall include the policies, procedures and practices of the
+  infection prevention and control programme.
+Method body (what we do):
+  Induction training at «HOSPITAL» includes training in hospital infection
+  prevention and control — the policies, procedures and practices of the
+  infection prevention and control programme.
+Mandatory vs illustrative:
+  MANDATORY   : IPC programme policies, procedures and practices covered in induction.
+  ILLUSTRATIVE: Depth and format of IPC content.
+Required records:
+  1. Hospital infection prevention and control training record within induction.
+  2. Content record covering IPC programme policies and practices.
+  3. Induction attendance record.
+
+── HRM.3.g ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The induction training includes orientation to the service standards of the organisation."
+Guidebook interpretation:
+  The staff shall be trained to implement the service standards of the
+  organisation.
+Method body (what we do):
+  Induction training at «HOSPITAL» includes orientation to the organisation's
+  service standards, so that staff are trained to implement them.
+Mandatory vs illustrative:
+  MANDATORY   : Service standards orientation included; staff trained to implement them.
+  ILLUSTRATIVE: Which service standards are covered; format of orientation.
+Required records:
+  1. Service-standards orientation record within induction.
+  2. Staff-awareness confirmation.
+  3. Induction attendance record.
+
+── HRM.3.h ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The induction training includes an orientation on administrative procedures."
+Guidebook interpretation:
+  This shall include all administrative procedures like attendance, leave,
+  conduct, etc. This shall also include awareness of organisation-wide
+  policies and procedures. Refer to HRM.2.d.
+Method body (what we do):
+  Induction training at «HOSPITAL» includes an orientation on administrative
+  procedures — attendance, leave, conduct and similar matters (HRM.2.d) — and
+  awareness of organisation-wide policies and procedures.
+Mandatory vs illustrative:
+  MANDATORY   : Administrative procedures (attendance, leave, conduct) and org-wide policies covered in induction.
+  ILLUSTRATIVE: Additional administrative procedures beyond the minimum.
+Required records:
+  1. Administrative-procedures orientation record within induction — attendance, leave, conduct.
+  2. Organisation-wide policy-awareness record.
+  3. Cross-reference to HRM.2.d.
+
+── HRM.3.i ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The induction training includes an orientation on relevant department / unit / service / programme's policies and procedures."
+Guidebook interpretation:
+  The staff shall be provided training regarding policies and procedures of
+  the department/unit/service in which they are performing the requisite
+  duties. This training shall be provided at the
+  department/unit/service/programme level.
+Method body (what we do):
+  Induction training at «HOSPITAL» includes an orientation on the policies
+  and procedures of the specific department, unit, service or programme the
+  staff member will work in, delivered at that
+  department/unit/service/programme level.
+Mandatory vs illustrative:
+  MANDATORY   : Department/unit-level policy and procedure orientation delivered at that level.
+  ILLUSTRATIVE: Format of departmental induction; which departments have separate induction content.
+Required records:
+  1. Department, unit, service or programme-level policy-and-procedure orientation record.
+  2. Delivery-location record confirming it was given at that level.
+  3. Induction attendance record.
+
+── HRM.3.j ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Staff is trained on information systems, information security, information use and management."
+Guidebook interpretation:
+  Staff shall be trained on the use of information systems according to their
+  job responsibility, job descriptions and data and information needs. If the
+  organisation uses electronic health records, the staff who need to access,
+  review and/or document in the EMR shall be trained to ensure use of the
+  same.
+Method body (what we do):
+  Staff at «HOSPITAL» are trained on information systems, information
+  security, information use and management, according to their job
+  responsibility, job description and data and information needs. Where the
+  hospital uses electronic health records, staff who access, review or
+  document in the EMR are trained to ensure it is used correctly.
+Mandatory vs illustrative:
+  MANDATORY   : Information systems and security training matched to job role; EMR training where applicable.
+  ILLUSTRATIVE: Which systems are covered; whether training is part of induction or separate.
+Required records:
+  1. Information-systems, information-security and data-use training record.
+  2. Job-responsibility-matched training-content record.
+  3. EMR-access training record, where the hospital uses electronic health records.
+
+═══════════════════════════════════════════════════════════════════════════════
+HRM.4  There is an on-going programme for professional training and development of the staff.
+═══════════════════════════════════════════════════════════════════════════════
+Policy title : Professional Training and Development
+Prepared by  : HR In-Charge / Personnel Officer
+OE count     : 6
+Stop-work    : NO
+
+Non-negotiables (auto-generated):
+  1. Do not skip: Written guidance governs training and development policy for the staff.
+  2. Do not skip: The organisation maintains the training record.
+  3. Do not skip: Training also occurs when job responsibilities change/new equipment is introduced.
+  4. Do not skip: Feedback mechanisms are in place for improvement of training and development programme.
+  5. Do not skip: Evaluation of training effectiveness is done by the organisation.
+  6. Do not skip: The organisation supports continuing professional development and learning.
+  7. Staff who see a HRM.4 rule broken report it the same shift to the
+     «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
+
+── HRM.4.a ─────────────────────────────────────────────────────────────────────
+Level: CORE  |  Star: YES  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Written guidance governs training and development policy for the staff."
+Guidebook interpretation:
+  A training manual incorporating the procedure for identification of
+  training needs, the training methodology, documentation of training,
+  training assessment, the impact of training and the training calendar shall
+  be prepared. At a minimum staff shall be trained on occupational safety
+  aspects and soft skills. In addition, the staff shall be educated on
+  various aspects of patient-centred care like respecting patient
+  preferences, shared decision-making and provision of integrated care. The
+  training shall be for all categories of staff, including doctors and
+  outsourced staff (wherever applicable). Learning management systems and
+  E-learning modules could be used.
+Method body (what we do):
+  Written guidance governs training and development policy for staff at
+  «HOSPITAL»: a training manual covering identification of training needs,
+  methodology, documentation, assessment, impact evaluation and a training
+  calendar. At minimum, staff are trained on occupational safety and soft
+  skills, and educated on patient-centred care — respecting patient
+  preferences, shared decision-making and integrated care. Training covers
+  all staff categories, including doctors and outsourced staff where
+  applicable; learning-management systems or e-learning may be used. This is
+  a CORE, asterisked element.
+Mandatory vs illustrative:
+  MANDATORY   : Written guidance with TNI, methodology, documentation, assessment, impact and calendar; minimum occupational safety and soft skills; all staff categories.
+  ILLUSTRATIVE: LMS or e-learning choice; specific training topics beyond the minimum.
+Required records:
+  1. Written training and development policy or manual.
+  2. Training-needs-identification, methodology, assessment and calendar record.
+  3. Coverage record for all staff categories, including doctors and outsourced staff.
+
+── HRM.4.b ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The organisation maintains the training record."
+Guidebook interpretation:
+  The Human Resources Department shall maintain a record of all training
+  provided to staff of the organisation. At a minimum, it shall include the
+  title of the training, the trainer(s), date and duration of the training
+  list of trainees (with name and signatures). Where possible, the contents
+  of the training may also be captured. Training records could be in digital
+  format.
+Method body (what we do):
+  The «HR In-Charge / Personnel Officer» maintains the training record for
+  «HOSPITAL», covering every training session: at minimum the title,
+  trainer(s), date, duration and list of trainees with signatures. Contents
+  are captured where possible; records may be kept digitally.
+Mandatory vs illustrative:
+  MANDATORY   : Training record with title, trainer, date, duration, trainee list with signatures maintained for every session.
+  ILLUSTRATIVE: Digital vs physical format; whether content is captured.
+Required records:
+  1. Training record with title, trainer, date, duration and trainee list with signatures.
+  2. Digital or physical training-record system.
+  3. Content-capture record where possible.
+
+── HRM.4.c ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Training also occurs when job responsibilities change/new equipment is introduced."
+Guidebook interpretation:
+  The training shall focus on the revised job responsibilities as well as on
+  the newly introduced equipment and technology. In the case of new
+  equipment, the operating staff shall receive training on operational as
+  well as daily maintenance aspects.
+Method body (what we do):
+  Training at «HOSPITAL» also occurs when job responsibilities change or new
+  equipment is introduced, focused on the revised responsibilities or the
+  newly introduced equipment and technology. For new equipment, operating
+  staff are trained on both operational use and daily maintenance.
+Mandatory vs illustrative:
+  MANDATORY   : Training triggered by job-responsibility change or new equipment introduction; new equipment includes operational and maintenance training.
+  ILLUSTRATIVE: Trigger mechanism; who assesses training completion before independent use.
+Required records:
+  1. Training record triggered by a job-responsibility change or new-equipment introduction.
+  2. Operational-and-maintenance training record for new equipment.
+  3. Training-completion confirmation before independent use.
+
+── HRM.4.d ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Feedback mechanisms are in place for improvement of training and development programme."
+Guidebook interpretation:
+  This shall include both internal and external training. Feedback includes
+  collecting information on the appropriateness of course material,
+  facilities for the training programme and capability of the trainer.
+Method body (what we do):
+  Feedback mechanisms are in place at «HOSPITAL» for improving the training
+  and development programme, covering both internal and external training —
+  appropriateness of course material, training facilities and trainer
+  capability.
+Mandatory vs illustrative:
+  MANDATORY   : Feedback collected on course material, facilities, trainer capability for both internal and external training.
+  ILLUSTRATIVE: Feedback tool format; how feedback results in programme changes.
+Required records:
+  1. Feedback-mechanism record for training-programme improvement.
+  2. Feedback data on course material, facilities and trainer capability.
+  3. Both internal and external training coverage record.
+
+── HRM.4.e ─────────────────────────────────────────────────────────────────────
+Level: Achievement  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Evaluation of training effectiveness is done by the organisation."
+Guidebook interpretation:
+  The evaluation shall be done immediately after the training and after a
+  defined period has lapsed. The immediate effectiveness could be captured
+  using a pre and post-test. To ensure that that the training has resulted in
+  improvement of competency at the workplace, the effect of training shall be
+  evaluated after a defined period has lapsed. The organisation may consider
+  defining the time frame for capturing the effectiveness at the workplace
+  based on the type of training imparted. One of the tools that the
+  organisation could use is incident reports and non-conformities pointed out
+  during assessments. The evaluation shall focus on knowledge, skills and
+  attitude. Based on the evaluation, where appropriate, re training has to be
+  provided.
+Method body (what we do):
+  «HOSPITAL» evaluates training effectiveness immediately after training (for
+  example a pre- and post-test) and again after a defined period has lapsed,
+  to confirm the training improved workplace competency. The time frame for
+  the later check may vary by training type; incident reports and assessment
+  non-conformities are useful inputs. The evaluation covers knowledge, skills
+  and attitude; retraining is provided where the evaluation shows it is
+  needed.
+Mandatory vs illustrative:
+  MANDATORY   : Training effectiveness evaluated immediately and after a defined period; retraining where needed.
+  ILLUSTRATIVE: Pre/post-test format; period before workplace effectiveness check; KSA split in evaluation.
+Required records:
+  1. Immediate post-training evaluation record — pre/post-test.
+  2. Later workplace-effectiveness evaluation record.
+  3. Retraining record where the evaluation showed a need.
+
+── HRM.4.f ─────────────────────────────────────────────────────────────────────
+Level: Achievement  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The organisation supports continuing professional development and learning."
+Guidebook interpretation:
+  The purpose of this is to ensure that staff can keep up with advancements
+  in their field and develop skills and improve their skill sets and
+  competency. This includes encouraging and providing resources for staff to
+  attend courses or conferences. It can also include providing access to
+  distance learning and e-learning resources. The organisation shall specify
+  minimum mandatory hours of training that every staff must attend in a year.
+Method body (what we do):
+  «HOSPITAL» supports continuing professional development and learning, so
+  staff can keep up with advancements in their field — encouraging and
+  resourcing attendance at courses or conferences, and providing access to
+  distance learning or e-learning. The hospital specifies minimum mandatory
+  training hours every staff member attends each year.
+Mandatory vs illustrative:
+  MANDATORY   : CPD supported; minimum mandatory annual training hours specified.
+  ILLUSTRATIVE: Number of mandatory hours (hospital sets this); which CPD activities are resourced.
+Required records:
+  1. Continuing-professional-development support record — courses, conferences, e-learning access.
+  2. Minimum mandatory annual training-hours specification record.
+  3. Staff-participation record against the mandatory hours.
+
+═══════════════════════════════════════════════════════════════════════════════
+HRM.5  Staff are appropriately trained based on their specific job description.
+═══════════════════════════════════════════════════════════════════════════════
+Policy title : Job-Specific Staff Training
+Prepared by  : HR In-Charge / Personnel Officer
+OE count     : 6
+Stop-work    : NO
+
+Non-negotiables (auto-generated):
+  1. Do not skip: Staff involved in blood transfusion services are trained in the handling of blood and blood products.
+  2. Do not skip: Staff are trained in handling vulnerable patients.
+  3. Do not skip: Staff are trained in control and restraint techniques.
+  4. Do not skip: Staff are trained in healthcare communication techniques.
+  5. Do not skip: Staff involved in direct patient care are provided training on cardio-pulmonary resuscitation periodically.
+  6. Do not skip: Staff are provided training on infection prevention and control.
+  7. Staff who see a HRM.5 rule broken report it the same shift to the
+     «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
+
+── HRM.5.a ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Staff involved in blood transfusion services are trained in the handling of blood and blood products."
+Guidebook interpretation:
+  Staffs shall be trained on various aspects of transfusion services such as
+  safe transport of blood, obtaining informed consent, various documents to
+  be maintained, identification of transfusion reactions, process of handling
+  transfusion reactions and educating patient and family on donation.
+  Relevant staff shall be trained on aspects that apply to them. Relevant
+  staff include doctors, nurses, technicians and staff involved in the
+  transport of blood from the blood bank/blood storage unit. Refer to COP.8.
+Method body (what we do):
+  Staff involved in blood transfusion services at «HOSPITAL» are trained in
+  handling blood and blood products — safe transport, obtaining informed
+  consent, required documentation, identifying and handling transfusion
+  reactions, and educating the patient and family on donation. Relevant staff
+  (doctors, nurses, technicians and staff transporting blood from the blood
+  bank or storage unit) are trained on the aspects that apply to them. Cross-
+  reference: COP.8 owns blood transfusion service practice; this element is
+  the staff training layer.
+Mandatory vs illustrative:
+  MANDATORY   : Relevant staff trained on all applicable aspects of blood and blood product handling.
+  ILLUSTRATIVE: Which staff roles are included; training schedule; internal vs external trainer.
+Required records:
+  1. Blood-and-blood-product handling training record for relevant staff (doctors, nurses, technicians, transport staff).
+  2. Cross-reference to COP.8 blood transfusion service practice.
+  3. Training-content record — safe transport, informed consent, documentation, transfusion-reaction handling.
+
+── HRM.5.b ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Staff are trained in handling vulnerable patients."
+Guidebook interpretation:
+  Relevant staff shall be trained in identifying and rendering care to
+  vulnerable patients as per the written guidance. Refer to COP.16.a.
+Method body (what we do):
+  Relevant staff at «HOSPITAL» are trained in identifying and rendering care
+  to vulnerable patients, per the hospital's written guidance. Cross-
+  reference: COP.16.a owns the vulnerable-patient care process; this element
+  is the staff training layer.
+Mandatory vs illustrative:
+  MANDATORY   : Relevant staff trained in identifying and caring for vulnerable patients per written guidance.
+  ILLUSTRATIVE: Which staff are 'relevant'; training content beyond the minimum.
+Required records:
+  1. Vulnerable-patient identification-and-care training record.
+  2. Cross-reference to COP.16.a.
+  3. Relevant-staff coverage record.
+
+── HRM.5.c ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Staff are trained in control and restraint techniques."
+Guidebook interpretation:
+  Relevant staff shall be trained in the appropriate use of control and
+  restraint techniques as per written guidance. Refer to COP.16.e.
+Method body (what we do):
+  Relevant staff at «HOSPITAL» are trained in the appropriate use of control
+  and restraint techniques, per the hospital's written guidance. Cross-
+  reference: COP.16.e owns the control-and-restraint process; this element is
+  the staff training layer.
+Mandatory vs illustrative:
+  MANDATORY   : Relevant staff trained in control and restraint techniques per written guidance.
+  ILLUSTRATIVE: Which staff are 'relevant'; specific techniques covered.
+Required records:
+  1. Control-and-restraint-technique training record.
+  2. Cross-reference to COP.16.e.
+  3. Relevant-staff coverage record.
+
+── HRM.5.d ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Staff are trained in healthcare communication techniques."
+Guidebook interpretation:
+  The staff shall be trained to handle challenging situations as well as good
+  practices in health care communication. The training needs for
+  communication skills can also be identified by analysing patient
+  complaints, incident reports, appraisals and employee feedback. Refer to
+  PRE.8.e.
+Method body (what we do):
+  Staff at «HOSPITAL» are trained in healthcare communication techniques,
+  including handling challenging situations and good communication practice.
+  Training needs may be identified from patient complaints, incident reports,
+  appraisals and employee feedback. Cross-reference: PRE.8.e owns patient-
+  facing communication practice; this element is the staff training layer.
+Mandatory vs illustrative:
+  MANDATORY   : Staff trained in healthcare communication including challenging situations.
+  ILLUSTRATIVE: Training-needs identification sources; specific communication topics covered.
+Required records:
+  1. Healthcare-communication-technique training record.
+  2. Training-needs source record — complaints, incident reports, appraisals, feedback.
+  3. Cross-reference to PRE.8.e.
+
+── HRM.5.e ─────────────────────────────────────────────────────────────────────
+Level: CORE  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Staff involved in direct patient care are provided training on cardio-pulmonary resuscitation periodically."
+Guidebook interpretation:
+  The hospital identifies the level of training (basic or advanced life
+  support), appropriate to their roles in the hospital, for all staff who
+  provide patient care. The desired level of training for each individual is
+  repeated based on the requirements and/or time frames. Doctors, nurses and
+  rehabilitation staff are provided with an update on cardiopulmonary
+  resuscitation at least once in two years or earlier if there is a change in
+  protocol. All doctors and nurses working in emergency, intensive care/high
+  dependency units, shall undergo appropriate training. For example, advanced
+  cardiac life support (ACLS), advanced trauma life support (ATLS),
+  paediatric advanced life support (PALS), and neonatal resuscitation program
+  (NRP) or any other equivalent/similar programme. The training could be
+  imparted by trainers from within or outside the organisation using updated
+  evidence-based protocols.
+Method body (what we do):
+  Staff involved in direct patient care at «HOSPITAL» are provided training
+  on cardio-pulmonary resuscitation periodically, at the level (basic or
+  advanced) appropriate to their role. Doctors, nurses and rehabilitation
+  staff refresh at least once in two years, or sooner if protocol changes;
+  staff in emergency, intensive care or high-dependency units undergo
+  appropriate advanced training (for example ACLS, ATLS, PALS or NRP, or an
+  equivalent). Trainers may be internal or external, using updated evidence-
+  based protocols. This is a CORE element.
+Mandatory vs illustrative:
+  MANDATORY   : Periodic CPR training for all direct-patient-care staff at appropriate level; advanced training for ER/ICU/HDU; refresh at least every 2 years.
+  ILLUSTRATIVE: Specific programme chosen (ACLS, ATLS, PALS, NRP or equivalent); internal vs external trainer.
+Required records:
+  1. Periodic CPR-training record for direct-patient-care staff, at least once in two years or sooner after protocol change.
+  2. Advanced-training record for emergency, ICU or high-dependency staff.
+  3. Refresher-schedule tracking record.
+
+── HRM.5.f ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Staff are provided training on infection prevention and control."
+Guidebook interpretation:
+  The organisation conducts appropriate in-service training sessions for all
+  staff at least once a year. It shall include anti-microbial policy and
+  anti-microbial stewardship program for medical professionals, infection
+  prevention and control nurses and clinical pharmacist and support staff.
+Method body (what we do):
+  «HOSPITAL» provides staff training on infection prevention and control
+  through in-service sessions at least «once a year», including antimicrobial
+  policy and antimicrobial stewardship content for medical professionals,
+  infection-prevention-and-control nurses, the clinical pharmacist and
+  support staff.
+Mandatory vs illustrative:
+  MANDATORY   : IPC in-service training at least annually; AMS content for medical professionals, IPC nurses, clinical pharmacist, support staff.
+  ILLUSTRATIVE: Content beyond IPC and AMS; format of sessions; who delivers.
+Required records:
+  1. Infection-prevention-and-control training record at least annually.
+  2. Antimicrobial-stewardship-content record for medical professionals, IPC nurses, clinical pharmacist and support staff.
+  3. Attendance record.
+
+═══════════════════════════════════════════════════════════════════════════════
+HRM.6  Staff are trained in safety and quality-related aspects.
+═══════════════════════════════════════════════════════════════════════════════
+Policy title : Safety and Quality-Related Staff Training
+Prepared by  : HR In-Charge / Personnel Officer
+OE count     : 7
+Stop-work    : NO
+
+Non-negotiables (auto-generated):
+  1. Do not skip: Staff are trained in the organisation's safety programme.
+  2. Do not skip: Staff are provided training in the detection, handling, minimisation and elimination of identified risks within the organisation's environment.
+  3. Do not skip: Staff members are made aware of procedures to follow in the event of an incident.
+  4. Do not skip: Staff are trained in occupational safety aspects.
+  5. Do not skip: Staff are trained in the organisation's disaster management plan.
+  6. Do not skip: Staff are trained in handling fire and non-fire emergencies.
+  7. Do not skip: Staff are trained in the organisation's quality improvement programme.
+  8. Staff who see a HRM.6 rule broken report it the same shift to the
+     «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
+
+── HRM.6.a ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Staff are trained in the organisation's safety programme."
+Guidebook interpretation:
+  Staff are trained on identified aspects of safety including patient safety
+  in the organisation. This could be done through a regular training
+  programme or printed materials. Staff working in laboratory and imaging
+  services are trained in their respective safety programmes. Refer to
+  PSQ.1.a.
+Method body (what we do):
+  Staff at «HOSPITAL» are trained in the organisation's safety programme,
+  including patient safety, through a regular training programme or printed
+  materials. Staff working in laboratory and imaging services are
+  additionally trained in their respective safety programmes. Cross-
+  reference: PSQ.1.a owns the safety programme itself; this element is the
+  staff training layer.
+Mandatory vs illustrative:
+  MANDATORY   : Staff trained in the safety programme including patient safety; lab/imaging staff get additional domain-specific safety training.
+  ILLUSTRATIVE: Format (regular programme vs printed materials); frequency of training.
+Required records:
+  1. Safety-programme training record.
+  2. Laboratory- or imaging-specific safety-training record where applicable.
+  3. Cross-reference to PSQ.1.a.
+
+── HRM.6.b ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Staff are provided training in the detection, handling, minimisation and elimination of identified risks within the organisation's environment."
+Guidebook interpretation:
+  The organisation shall identify such risks that shall include patient,
+  visitors and staff-related risks. These risks could be physical (poor
+  lighting, slippery floors, blind corners, open electrical points, naked
+  wires etc.), chemical (improper handling, spills, aerosolisation etc.),
+  environmental (noise, smoke, dampness, heat etc.) or process-related
+  (needle-stick injury, blood and body fluid chemicals, cytotoxic drugs,
+  spills, soiled linen etc.). Further, staff shall be able to practically
+  demonstrate actions like taking care of blood spills, handling hazardous
+  materials etc.
+Method body (what we do):
+  Staff at «HOSPITAL» are trained in detecting, handling, minimising and
+  eliminating identified risks in the organisation's environment — physical
+  (poor lighting, slippery floors, blind corners, open electrical points,
+  exposed wiring), chemical (mishandling, spills, aerosolisation),
+  environmental (noise, smoke, dampness, heat) and process-related (needle-
+  stick injury, blood and body-fluid exposure, cytotoxic drugs, soiled
+  linen). Staff can practically demonstrate actions such as managing a blood
+  spill or handling hazardous materials.
+Mandatory vs illustrative:
+  MANDATORY   : Staff trained in all four risk categories (physical, chemical, environmental, process-related); practical demonstration included.
+  ILLUSTRATIVE: Which specific risks are identified; demonstration method and assessor.
+Required records:
+  1. Risk-detection-and-handling training record — physical, chemical, environmental, process-related risks.
+  2. Practical-demonstration record — blood-spill management, hazardous-material handling.
+  3. Training-content coverage record.
+
+── HRM.6.c ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Staff members are made aware of procedures to follow in the event of an incident."
+Guidebook interpretation:
+  The staff shall be able to intimate the sequence of events that they will
+  undertake in the eventuality of occurrence of any incident.
+Method body (what we do):
+  Staff at «HOSPITAL» are made aware of the procedure to follow in the event
+  of an incident, able to describe the sequence of events they will undertake
+  if one occurs.
+Mandatory vs illustrative:
+  MANDATORY   : Staff aware of and able to describe the incident-response sequence.
+  ILLUSTRATIVE: Format of awareness training; which incident types are covered.
+Required records:
+  1. Incident-procedure awareness record.
+  2. Staff confirmation of knowing the sequence of actions to take.
+  3. Training or briefing record.
+
+── HRM.6.d ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Staff are trained in occupational safety aspects."
+Guidebook interpretation:
+  The organisation shall identify the areas with potential occupational
+  hazards. Staff are made aware of the possible risks involved and the
+  preventive actions to avoid risks. For example, needle stick injury and
+  blood/body fluid exposure, radiation exposure, LASER exposure, medical
+  gases, chemotherapy exposure, noise in utility areas etc. Refer to IPC.8.a.
+Method body (what we do):
+  Staff at «HOSPITAL» are trained in occupational safety aspects for the
+  areas with identified occupational hazards — for example needle-stick
+  injury and blood/body-fluid exposure, radiation exposure, laser exposure,
+  medical-gas exposure, chemotherapy exposure and noise in utility areas —
+  and in the preventive actions to avoid each risk. Cross-reference: IPC.8.a
+  owns occupational-exposure IPC practice; this element is the staff training
+  layer.
+Mandatory vs illustrative:
+  MANDATORY   : Staff in areas with occupational hazards trained on risks and preventive actions.
+  ILLUSTRATIVE: Which areas and hazards are identified; format of training.
+Required records:
+  1. Occupational-safety-aspect training record — needle-stick, radiation, laser, medical-gas, chemotherapy, noise exposure.
+  2. Cross-reference to IPC.8.a.
+  3. Area-specific hazard-training record.
+
+── HRM.6.e ─────────────────────────────────────────────────────────────────────
+Level: CORE  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Staff are trained in the organisation's disaster management plan."
+Guidebook interpretation:
+  The training shall include the various elements of the disaster management
+  plan. They are also trained in their specific role during management of
+  external / internal disaster.
+Method body (what we do):
+  Staff at «HOSPITAL» are trained in the organisation's disaster management
+  plan, including their specific role in managing an internal or external
+  disaster. This is a CORE element.
+Mandatory vs illustrative:
+  MANDATORY   : Staff trained in disaster management plan and their specific role; covers internal and external disaster.
+  ILLUSTRATIVE: Disaster types covered; training format and frequency.
+Required records:
+  1. Disaster-management-plan training record.
+  2. Specific-role training record for an external or internal disaster.
+  3. Attendance record.
+
+── HRM.6.f ─────────────────────────────────────────────────────────────────────
+Level: CORE  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Staff are trained in handling fire and non-fire emergencies."
+Guidebook interpretation:
+  In case of fire, training shall include the various classes of fires,
+  information and demonstration on how to use fire extinguishers, evacuation
+  plans and other procedures to be followed in case of fire. Staff in the
+  organisation shall be trained on identified non-fire emergencies. They are
+  also trained on their specific role in such emergencies.
+Method body (what we do):
+  Staff at «HOSPITAL» are trained in handling fire and non-fire emergencies:
+  classes of fire, use of fire extinguishers, evacuation plans and fire
+  procedures, plus the hospital's identified non-fire emergencies and each
+  staff member's specific role in them. This is a CORE element.
+Mandatory vs illustrative:
+  MANDATORY   : Fire training (classes of fire, extinguisher use, evacuation) and non-fire emergency training with specific roles; CORE.
+  ILLUSTRATIVE: Which non-fire emergencies are identified; demonstration frequency; training records format.
+Required records:
+  1. Fire-and-non-fire-emergency training record.
+  2. Fire-extinguisher and evacuation-procedure demonstration record.
+  3. Specific-role training record for non-fire emergencies.
+
+── HRM.6.g ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Staff are trained in the organisation's quality improvement programme."
+Guidebook interpretation:
+  Staff is made aware of the structure of the quality improvement programme
+  of the organisation. The staff are also made aware of their roles in
+  contributing to the quality improvement programme. Staff working in the
+  laboratory, imaging services, emergency, intensive care units, blood centre
+  and surgical services are trained on their respective quality assurance
+  programmes.
+Method body (what we do):
+  Staff at «HOSPITAL» are trained in the organisation's quality improvement
+  programme — its structure and their own role in contributing to it. Staff
+  working in laboratory, imaging, emergency, intensive care, the blood centre
+  and surgical services are additionally trained on their respective quality
+  assurance programmes.
+Mandatory vs illustrative:
+  MANDATORY   : Staff trained in QI programme structure and their role; named departments get additional QA training.
+  ILLUSTRATIVE: Which QA programmes the named departments follow; training format.
+Required records:
+  1. Quality-improvement-programme training record.
+  2. Role-in-programme awareness record.
+  3. Department-specific quality-assurance training record where applicable (laboratory, imaging, emergency, ICU, blood centre, surgical services).
+
+═══════════════════════════════════════════════════════════════════════════════
+HRM.7  An appraisal system for evaluating the performance of staff exists as an integral part of the human resource management process.
+═══════════════════════════════════════════════════════════════════════════════
+Policy title : Staff Performance Appraisal
+Prepared by  : HR In-Charge / Personnel Officer
+OE count     : 5
+Stop-work    : NO
+
+Non-negotiables (auto-generated):
+  1. Do not skip: Performance appraisal is done for staff within the organisation.
+  2. Do not skip: The staff are made aware of the system of appraisal at the time of induction.
+  3. Do not skip: Performance is evaluated based on the pre-determined criteria.
+  4. Do not skip: The appraisal system is used as a tool for further development.
+  5. Do not skip: Performance appraisal is carried out at defined intervals and is documented.
+  6. Staff who see a HRM.7 rule broken report it the same shift to the
+     «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
+
+── HRM.7.a ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: YES  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Performance appraisal is done for staff within the organisation."
+Guidebook interpretation:
+  Performance appraisal shall be done for all categories of staff starting
+  from the person heading the organisation and including doctors. Where
+  appropriate, the performance appraisal shall include competency assessment.
+  In the case of outsourced staff, the performance appraisal could be done by
+  the contractor. For the definition of 'performance appraisal' refer to the
+  glossary.
+Method body (what we do):
+  Performance appraisal is done for all categories of staff at «HOSPITAL»,
+  starting with the person heading the organisation and including doctors,
+  and includes competency assessment where appropriate. For outsourced staff,
+  the appraisal may be done by the contractor. This is an asterisked element.
+Mandatory vs illustrative:
+  MANDATORY   : Appraisal for ALL staff categories including head and doctors; competency assessment where appropriate.
+  ILLUSTRATIVE: Whether outsourced staff are appraised by contractor or hospital; competency assessment tools.
+Required records:
+  1. Performance-appraisal record for all staff categories, including the organisation head and doctors.
+  2. Competency-assessment record where appropriate.
+  3. Contractor-conducted appraisal record for outsourced staff.
+
+── HRM.7.b ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The staff are made aware of the system of appraisal at the time of induction."
+Guidebook interpretation:
+  Awareness could be incorporated in the service booklet and included in the
+  induction training.
+Method body (what we do):
+  Staff at «HOSPITAL» are made aware of the appraisal system at the time of
+  induction — for example through the service booklet and as part of
+  induction training (HRM.3).
+Mandatory vs illustrative:
+  MANDATORY   : Appraisal system communicated at induction.
+  ILLUSTRATIVE: Format (service booklet, induction session, etc.).
+Required records:
+  1. Appraisal-system-awareness record at induction.
+  2. Service-booklet or induction-material reference.
+  3. Staff-acknowledgement record.
+
+── HRM.7.c ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Performance is evaluated based on the pre-determined criteria."
+Guidebook interpretation:
+  Criteria shall be done based on key performance indicators/key result areas
+  which are derived from the job description.
+Method body (what we do):
+  Performance is evaluated against pre-determined criteria at «HOSPITAL»,
+  based on key performance indicators or key result areas derived from the
+  job description.
+Mandatory vs illustrative:
+  MANDATORY   : Pre-determined criteria (KPIs/KRAs) from job description used for evaluation.
+  ILLUSTRATIVE: Specific KPIs/KRAs chosen; rating scale used.
+Required records:
+  1. Pre-determined-criteria document — key performance indicators or key result areas derived from the job description.
+  2. Evaluation record against those criteria.
+  3. Job-description cross-reference record.
+
+── HRM.7.d ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The appraisal system is used as a tool for further development."
+Guidebook interpretation:
+  This can be done by identifying training requirements and accordingly
+  providing for the same (wherever possible). Key result areas are identified
+  for each staff and training need assessment is also done. The organisation
+  shall have written guidance for management of underperformance effectively.
+Method body (what we do):
+  «HOSPITAL» uses the appraisal system as a tool for further development —
+  identifying training requirements and providing for them where possible,
+  with key result areas set for each staff member and a training-need
+  assessment done. Written guidance covers effective management of
+  underperformance.
+Mandatory vs illustrative:
+  MANDATORY   : Appraisal used for development (training needs, KRAs); written guidance on managing underperformance.
+  ILLUSTRATIVE: Format of training-need assessment; underperformance procedure steps.
+Required records:
+  1. Development-action record from the appraisal — training requirement identified.
+  2. Key-result-area and training-need-assessment record.
+  3. Underperformance-management written-guidance record.
+
+── HRM.7.e ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Performance appraisal is carried out at defined intervals and is documented."
+Guidebook interpretation:
+  The performance appraisal shall be done at least once a year.
+Method body (what we do):
+  Performance appraisal at «HOSPITAL» is carried out at a defined interval
+  and documented, at least «once a year».
+Mandatory vs illustrative:
+  MANDATORY   : Appraisal documented at least annually.
+  ILLUSTRATIVE: More frequent cycles (e.g. probation reviews, mid-year checks).
+Required records:
+  1. Dated performance-appraisal record, at least annually.
+  2. Documentation-completeness record.
+  3. Appraisal-cycle-tracking record confirming no missed year.
+
+═══════════════════════════════════════════════════════════════════════════════
+HRM.8  Process for disciplinary and grievance handling is defined and implemented in the organisation.
+═══════════════════════════════════════════════════════════════════════════════
+Policy title : Disciplinary and Grievance Handling
+Prepared by  : HR In-Charge / Personnel Officer
+OE count     : 6
+Stop-work    : NO
+
+Non-negotiables (auto-generated):
+  1. Do not skip: Written guidance governs disciplinary and grievance handling mechanisms.
+  2. Do not skip: The disciplinary and grievance handling mechanism is known to all categories of staff of the organisation.
+  3. Do not skip: The disciplinary policy and procedure are based on the principles of natural justice.
+  4. Do not skip: The disciplinary and grievance procedure is in consonance with the prevailing laws.
+  5. Do not skip: There is a provision for appeals in all disciplinary cases.
+  6. Do not skip: Actions are taken to redress the grievance.
+  7. Staff who see a HRM.8 rule broken report it the same shift to the
+     «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
+
+── HRM.8.a ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: YES  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Written guidance governs disciplinary and grievance handling mechanisms."
+Guidebook interpretation:
+  The documentation shall be done keeping in mind objective elements 'c, d
+  and e'. Grievances shall include workplace issues like bullying and
+  harassment. For the definition of 'disciplinary procedure' and 'grievance
+  handling' refer to the glossary.
+Method body (what we do):
+  Written guidance governs disciplinary and grievance handling mechanisms at
+  «HOSPITAL», covering HRM.8.c–e, and including workplace grievances such as
+  bullying and harassment. This is an asterisked element.
+Mandatory vs illustrative:
+  MANDATORY   : Written guidance governing disciplinary and grievance handling; covers c–e; includes bullying and harassment.
+  ILLUSTRATIVE: Whether embedded in service rules or separate document.
+Required records:
+  1. Written disciplinary and grievance handling guidance.
+  2. Coverage record for the HRM.8.c–e elements.
+  3. Workplace-issue inclusion record — bullying, harassment.
+
+── HRM.8.b ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The disciplinary and grievance handling mechanism is known to all categories of staff of the organisation."
+Guidebook interpretation:
+  All staff shall be aware of the disciplinary procedure and the process to
+  be followed in case they feel aggrieved.
+Method body (what we do):
+  The disciplinary and grievance handling mechanism at «HOSPITAL» is known to
+  all categories of staff, who are aware of the procedure to follow if they
+  feel aggrieved.
+Mandatory vs illustrative:
+  MANDATORY   : All staff categories know the mechanism and process for raising a grievance.
+  ILLUSTRATIVE: Communication channels used (induction, notice board, etc.).
+Required records:
+  1. Staff-awareness record of the disciplinary and grievance mechanism.
+  2. Communication record — induction, notice board, policy circulation.
+  3. Confirmation across all staff categories.
+
+── HRM.8.c ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The disciplinary policy and procedure are based on the principles of natural justice."
+Guidebook interpretation:
+  Principles of natural justice imply that both parties (employee and
+  employer) are allowed to present their case and decision is taken
+  accordingly.
+Method body (what we do):
+  The disciplinary policy and procedure at «HOSPITAL» are based on the
+  principles of natural justice — both parties (employee and employer) are
+  allowed to present their case before a decision is taken.
+Mandatory vs illustrative:
+  MANDATORY   : Both parties heard before decision; natural justice principle documented in policy.
+  ILLUSTRATIVE: Specific procedural steps (show-cause, inquiry, etc.) are hospital's design choice.
+Required records:
+  1. Natural-justice-principle record — both parties heard before a decision.
+  2. Disciplinary case record demonstrating the principle applied.
+  3. Policy-document reference.
+
+── HRM.8.d ─────────────────────────────────────────────────────────────────────
+Level: CORE  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The disciplinary and grievance procedure is in consonance with the prevailing laws."
+Guidebook interpretation:
+  Refer to relevant labour laws and CCS (CCA) rules. Internal Complaints
+  Committee shall be established in the organisation to handle complaints of
+  sexual harassment.
+Method body (what we do):
+  The disciplinary and grievance procedure at «HOSPITAL» is in consonance
+  with the prevailing laws — the applicable labour laws for this hospital's
+  staff. An Internal Complaints Committee is established to handle complaints
+  of sexual harassment. This is a CORE element. Method note: keep the written
+  procedure current against the labour law actually applicable to this
+  hospital's staff category; do not import Central Civil Services rules as a
+  blanket checklist unless this hospital's staff are in fact covered by them.
+Mandatory vs illustrative:
+  MANDATORY   : Procedure in consonance with applicable labour law; Internal Complaints Committee established for sexual harassment.
+  ILLUSTRATIVE: Specific labour law(s) applicable to this hospital's staff (hospital-specific; not a blanket CCS rule import).
+Required records:
+  1. Labour-law compliance record for the disciplinary and grievance procedure.
+  2. Internal Complaints Committee constitution record for sexual-harassment complaints.
+  3. Legal-currency review record of the procedure.
+
+── HRM.8.e ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "There is a provision for appeals in all disciplinary cases."
+Guidebook interpretation:
+  The organisation shall designate an appellate authority to consider appeals
+  in disciplinary cases. The appellate authority shall be higher than the
+  disciplinary authority.
+Method body (what we do):
+  «HOSPITAL» provides for appeals in all disciplinary cases, through a
+  designated appellate authority higher than the disciplinary authority that
+  issued the original decision.
+Mandatory vs illustrative:
+  MANDATORY   : Appeals provided in all disciplinary cases; appellate authority higher than disciplinary authority.
+  ILLUSTRATIVE: Who the appellate authority is (hospital designates this).
+Required records:
+  1. Appellate-authority designation record, higher than the disciplinary authority.
+  2. Appeal-case record showing the provision was used.
+  3. Policy-document reference.
+
+── HRM.8.f ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Actions are taken to redress the grievance."
+Guidebook interpretation:
+  The redress procedure addresses the grievance. Actions that are taken shall
+  be documented and communicated to the aggrieved staff member.
+Method body (what we do):
+  «HOSPITAL» takes action to redress grievances through the written redress
+  procedure; actions taken are documented and communicated to the aggrieved
+  staff member.
+Mandatory vs illustrative:
+  MANDATORY   : Actions taken to redress grievance documented and communicated to aggrieved staff.
+  ILLUSTRATIVE: Timeframes for grievance redress; escalation path if unresolved.
+Required records:
+  1. Grievance-redress action record.
+  2. Documentation and communication record to the aggrieved staff member.
+  3. Closure-tracking record.
+
+═══════════════════════════════════════════════════════════════════════════════
+HRM.9  The organisation addresses their health and safety needs of the staff.
+═══════════════════════════════════════════════════════════════════════════════
+Policy title : Staff Health and Safety
+Prepared by  : HR In-Charge / Personnel Officer
+OE count     : 4
+Stop-work    : NO
+
+Non-negotiables (auto-generated):
+  1. Do not skip: Health problems of the staff, including occupational health hazards, are taken care of in accordance with the organisation's policy.
+  2. Do not skip: Health checks of staff dealing with direct patient care are done at least once a year and the findings / results are documented.
+  3. Do not skip: Organisation provides treatment to staff who sustain workplace-related injuries.
+  4. Do not skip: The organisation has measures in place for prevention and handling workplace violence.
+  5. Staff who see a HRM.9 rule broken report it the same shift to the
+     «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
+
+── HRM.9.a ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: YES  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Health problems of the staff, including occupational health hazards, are taken care of in accordance with the organisation's policy."
+Guidebook interpretation:
+  The organisation has a written guidance on staff health and safety
+  programme that addresses staff physical and mental health and safe working
+  conditions. The organisation shall make appropriate arrangements for safety
+  of health care workers at workplace during all shifts. The organisation's
+  policy shall be in consonance with the law of the land and good work
+  practices. The organisation develops and implements a staff vaccination and
+  immunization program. Appropriate personal protective equipment is provided
+  to the staff concerned, and they are educated on how to use them. The
+  organisation shall support the staff (second victim) involved in
+  unanticipated adverse events, medical error or patients related injury. For
+  the definition of 'occupational health hazard' and 'second victim' refer to
+  the glossary.
+Method body (what we do):
+  «HOSPITAL» has written guidance on staff health and safety addressing
+  physical and mental health and safe working conditions across all shifts,
+  in consonance with the law of the land and good work practice. The hospital
+  runs a staff vaccination and immunisation programme, provides appropriate
+  personal protective equipment with training on its use, and supports staff
+  (as 'second victim') involved in unanticipated adverse events, medical
+  error or patient-related injury. This is an asterisked element.
+Mandatory vs illustrative:
+  MANDATORY   : Written staff H&S policy; vaccination programme; PPE with training; second-victim support.
+  ILLUSTRATIVE: Specific vaccines in the programme; PPE types; second-victim support mechanism.
+Required records:
+  1. Written staff health and safety policy covering physical and mental health.
+  2. Staff vaccination and immunisation programme record.
+  3. PPE-provision and second-victim-support record.
+
+── HRM.9.b ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Health checks of staff dealing with direct patient care are done at least once a year and the findings / results are documented."
+Guidebook interpretation:
+  The results of examination, investigations (if any) and outcome of the
+  evaluation shall be documented in the personal file. The organisation could
+  define the parameters, and it could be different for different categories
+  of personnel. The organisation could also identify competent individuals to
+  perform the same. The staff member shall not be charged for this health
+  check. The organisation could do health checks more frequently if required.
+Method body (what we do):
+  Health checks for staff dealing with direct patient care are done at least
+  «once a year» at «HOSPITAL», with findings and results documented in the
+  personal file. Parameters may differ by staff category; competent
+  individuals may be identified to perform the checks. The staff member is
+  not charged for the check; more frequent checks may be done where needed.
+Mandatory vs illustrative:
+  MANDATORY   : Annual health checks for direct-patient-care staff; documented in personal file; no charge to staff.
+  ILLUSTRATIVE: Which parameters are checked per staff category; who performs the checks.
+Required records:
+  1. Annual health-check record for direct-patient-care staff.
+  2. Findings and results documentation in the personal file.
+  3. No-charge-to-staff confirmation record.
+
+── HRM.9.c ─────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Organisation provides treatment to staff who sustain workplace-related injuries."
+Guidebook interpretation:
+  Examples of workplace-related injuries are needlestick injuries, back
+  injuries sustained during patient transport, hearing impairments due to
+  noise levels etc. Treatment also includes counselling where appropriate.
+  Injuries due to workplace violence are included.
+Method body (what we do):
+  «HOSPITAL» provides treatment to staff who sustain workplace-related
+  injuries — for example needle-stick injuries, back injuries from patient
+  transport, or noise-related hearing impairment — including counselling
+  where appropriate. Injuries from workplace violence are included.
+Mandatory vs illustrative:
+  MANDATORY   : Treatment (including counselling) provided for workplace injuries including workplace-violence injuries.
+  ILLUSTRATIVE: Which injuries are in scope; internal vs referral treatment pathway.
+Required records:
+  1. Workplace-injury treatment record — needlestick, patient-transport injury, noise-related, etc.
+  2. Counselling record where appropriate.
+  3. Workplace-violence-injury inclusion record.
+
+── HRM.9.d ─────────────────────────────────────────────────────────────────────
+Level: CORE  |  Star: YES  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The organisation has measures in place for prevention and handling workplace violence."
+Guidebook interpretation:
+  An integrative and participative approach is used to address this. Key
+  aspects include workplace risk assessment, including identifying situations
+  of special risk, workplace interventions including information and
+  communication, environmental interventions including signage, security and
+  restricted access and individual interventions like training. The
+  organisation shall have a mechanism in place to handle these situations,
+  including liaison with law enforcement agencies where applicable and
+  provision of counselling to affected staff. The above should be part of
+  written guidance on security. Refer FMS.3.a. Refer to the glossary for a
+  definition of 'workplace violence'.
+Method body (what we do):
+  «HOSPITAL» has measures in place for prevention and handling of workplace
+  violence, using an integrative and participative approach: workplace risk
+  assessment identifying situations of special risk, workplace interventions
+  (information and communication), environmental interventions (signage,
+  security, restricted access) and individual interventions (training). A
+  mechanism handles these situations, including liaison with law enforcement
+  where applicable and counselling for affected staff, as part of the
+  hospital's written security guidance. This is a CORE, asterisked element.
+  Cross-reference: FMS.3.a owns the extra-security-area operational planning
+  this measure sits alongside; this element is the workplace-violence
+  prevention-and-handling programme itself.
+Mandatory vs illustrative:
+  MANDATORY   : Integrative and participative approach: risk assessment, workplace/environmental/individual interventions; mechanism for handling incidents including law enforcement liaison and counselling.
+  ILLUSTRATIVE: Specific environmental interventions chosen; training topics; liaison protocol with law enforcement.
+Required records:
+  1. Workplace-violence risk-assessment record.
+  2. Written security guidance covering workplace-violence prevention and handling.
+  3. Law-enforcement-liaison and counselling record for affected staff.
+
+═══════════════════════════════════════════════════════════════════════════════
+HRM.10  There is documented personal information for each staff member.
+═══════════════════════════════════════════════════════════════════════════════
+Policy title : Staff Personal Information and Records
+Prepared by  : HR In-Charge / Personnel Officer
+OE count     : 4
+Stop-work    : NO
+
+Non-negotiables (auto-generated):
+  1. Do not skip: Personal files are maintained with respect to all staff, and their confidentiality is ensured.
+  2. Do not skip: The personal files contain personal information regarding the staff's qualification, job description, verification of credentials and health status.
+  3. Do not skip: Records of in-service training and education are maintained.
+  4. Do not skip: Personal files contain results of all evaluations and remarks.
+  5. Staff who see a HRM.10 rule broken report it the same shift to the
+     «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
+
+── HRM.10.a ────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Personal files are maintained with respect to all staff, and their confidentiality is ensured."
+Guidebook interpretation:
+  Each file must be current, updated and could be in the electronic format.
+  The organisation maintains confidentiality and access to personal files is
+  restricted.
+Method body (what we do):
+  Personal files are maintained for all staff at «HOSPITAL», kept current and
+  updated (electronic format is acceptable), with confidentiality maintained
+  and access restricted.
+Mandatory vs illustrative:
+  MANDATORY   : Personal files maintained for all staff; current and updated; confidential; access restricted.
+  ILLUSTRATIVE: Format (electronic vs physical); who has access.
+Required records:
+  1. Personal-file maintenance record for all staff, current and updated.
+  2. Confidentiality and access-restriction record.
+  3. Electronic-format record, where used.
+
+── HRM.10.b ────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The personal files contain personal information regarding the staff's qualification, job description, verification of credentials and health status."
+Guidebook interpretation:
+  The personal file shall contain these records.
+Method body (what we do):
+  Each staff member's personal file at «HOSPITAL» contains their
+  qualification, job description, verification of credentials and health
+  status.
+Mandatory vs illustrative:
+  MANDATORY   : Personal file must contain: qualification, job description, credential verification, health status.
+  ILLUSTRATIVE: Format of credential verification record; health status detail level.
+Required records:
+  1. Personal-file content record — qualification, job description, credential verification, health status.
+  2. Completeness-check record.
+  3. Update-currency record.
+
+── HRM.10.c ────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Records of in-service training and education are maintained."
+Guidebook interpretation:
+  In the case of internal training, the organisation could file a summary of
+  all trainings attended by the staff on an annual basis. However, there
+  shall be a supporting document (hard/soft copy) to verify that the staff
+  has attended the training. In case the organisation maintains training
+  records elsewhere, traceability shall be provided in the personal file to
+  ensure that the intent of the objective element is addressed. Electronic
+  training records are acceptable.
+Method body (what we do):
+  Records of in-service training and education are maintained for staff at
+  «HOSPITAL». For internal training, an annual summary may be filed, with a
+  supporting document verifying attendance. Where training records are held
+  elsewhere, the personal file carries traceability to them; electronic
+  training records are acceptable.
+Mandatory vs illustrative:
+  MANDATORY   : In-service training records maintained (in file or traceable from it); annual summary acceptable for internal training.
+  ILLUSTRATIVE: Whether centralised training records or per-file; electronic vs physical supporting documents.
+Required records:
+  1. In-service training and education record maintained in, or traceable from, the personal file.
+  2. Annual training-summary record for internal training.
+  3. Attendance-verification supporting document.
+
+── HRM.10.d ────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Personal files contain results of all evaluations and remarks."
+Guidebook interpretation:
+  Evaluations would include performance appraisals, training assessment and
+  outcome of health checks. The personal file would include records of
+  achievement/appreciation/complaint/warning/memo etc.
+Method body (what we do):
+  Personal files at «HOSPITAL» contain the results of all evaluations and
+  remarks — performance appraisals, training assessments, health-check
+  outcomes, and records of achievement, appreciation, complaint, warning or
+  memo.
+Mandatory vs illustrative:
+  MANDATORY   : Personal file contains: appraisal results, training assessment outcomes, health check outcomes, achievement/complaint/warning/memo.
+  ILLUSTRATIVE: Retention period for disciplinary remarks; access policy for sensitive content.
+Required records:
+  1. Personal-file record of evaluation results and remarks — appraisals, training assessment, health-check outcome, achievement/complaint/warning/memo.
+  2. Completeness-check record.
+  3. Confidential-handling record.
+
+═══════════════════════════════════════════════════════════════════════════════
+HRM.11  There is a process for credentialing and privileging of medical professionals, permitted to provide patient care without supervision.
+═══════════════════════════════════════════════════════════════════════════════
+Policy title : Credentialing and Privileging of Medical Professionals
+Prepared by  : HR In-Charge / Personnel Officer
+OE count     : 6
+Stop-work    : YES
+
+Non-negotiables (auto-generated):
+  1. Do not skip: Medical professionals permitted by law, regulation and the organisation provide patient care without supervision are identified.
+  2. Do not skip: The education, registration, training and experience of the identified medical professionals are documented and updated periodically.
+  3. Do not skip: The information about medical professionals is appropriately verified when possible.
+  4. Do not skip: Medical professionals are granted privileges to admit and care for patients in consonance with their qualification, training, experience and registration.
+  5. Do not skip: The requisite services to be provided by the medical professionals are known to them as well as the various departments / units of the organisation.
+  6. Do not skip: Medical professionals admit and care for patients as per their privileging.
+  7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
+  8. Staff who see a HRM.11 rule broken report it the same shift to the
+     «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
+
+── HRM.11.a ────────────────────────────────────────────────────────────────────
+Level: CORE  |  Star: no  |  Stop-work trigger: YES
+Verbatim OE text:
+  "Medical professionals permitted by law, regulation and the organisation provide patient care without supervision are identified."
+Guidebook interpretation:
+  The organisation identifies the individuals who have the required
+  qualification(s), training and experience to provide patient care in
+  consonance with the law. For the definition of 'credentialing' refer to the
+  glossary.
+Method body (what we do):
+  «HOSPITAL» identifies medical professionals permitted by law, regulation
+  and the organisation to provide patient care without supervision —
+  individuals with the required qualification(s), training and experience, in
+  consonance with the law. Providing unsupervised care outside this
+  identified list is a stop-work trigger (section 6). This is a CORE element.
+Mandatory vs illustrative:
+  MANDATORY   : List of identified medical professionals maintained; identification based on qualification, training, experience and law.
+  ILLUSTRATIVE: Format of the identified list; how 'law and regulation' compliance is documented.
+Required records:
+  1. Identified-medical-professional list permitted to provide unsupervised patient care.
+  2. Qualification, training and experience verification record.
+  3. Cross-reference to the HRM.11 stop-work trigger for unlisted practice.
+
+── HRM.11.b ────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The education, registration, training and experience of the identified medical professionals are documented and updated periodically."
+Guidebook interpretation:
+  Update is done after the acquisition of new skills and/or qualification.
+  All credentials required by organisation are documented and maintained for
+  each medical staff member in his or her personal file.
+Method body (what we do):
+  The education, registration, training and experience of identified medical
+  professionals at «HOSPITAL» are documented and updated periodically — after
+  acquisition of new skills or qualification — and maintained in each
+  professional's personal file.
+Mandatory vs illustrative:
+  MANDATORY   : Credentials documented and updated after new skills/qualifications; maintained in personal file.
+  ILLUSTRATIVE: How updates are triggered; what constitutes a 'credential' for documentation purposes.
+Required records:
+  1. Education, registration, training and experience documentation record, updated periodically.
+  2. Personal-file record of the update.
+  3. New-qualification acquisition update record.
+
+── HRM.11.c ────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The information about medical professionals is appropriately verified when possible."
+Guidebook interpretation:
+  The organisation shall do the same by verifying the credentials from the
+  organisation which has awarded the qualification/training. A good reference
+  could be National Medical Commission's website. Refer to HRM.11.b.
+Method body (what we do):
+  Information about medical professionals at «HOSPITAL» is appropriately
+  verified when possible, by checking with the organisation that awarded the
+  qualification or training. The National Medical Commission's website is a
+  useful reference for verification.
+Mandatory vs illustrative:
+  MANDATORY   : Credentials verified from awarding organisation where possible.
+  ILLUSTRATIVE: Which sources are used beyond NMC website; what 'when possible' means in practice.
+Required records:
+  1. Verification record with the awarding organisation.
+  2. National Medical Commission or equivalent reference-check record.
+  3. Verification-completeness record.
+
+── HRM.11.d ────────────────────────────────────────────────────────────────────
+Level: CORE  |  Star: no  |  Stop-work trigger: YES
+Verbatim OE text:
+  "Medical professionals are granted privileges to admit and care for patients in consonance with their qualification, training, experience and registration."
+Guidebook interpretation:
+  The organisation shall identify clinical services which each medical
+  professional is authorised to do. This shall be done based on
+  qualification, experience and any additional training received. For
+  example, radiotherapy can only be given by a radiation oncologist.
+  Privileges shall be reviewed every year and where necessary revised.
+Method body (what we do):
+  «HOSPITAL» grants medical professionals privileges to admit and care for
+  patients in consonance with their qualification, training, experience and
+  registration — identifying the clinical services each is authorised to
+  perform (for example, radiotherapy only by a radiation oncologist).
+  Privileges are reviewed at least «annually» and revised where necessary.
+  Granting or exercising privileges outside this record is a stop-work
+  trigger (section 6). This is a CORE element.
+Mandatory vs illustrative:
+  MANDATORY   : Privileges granted per professional aligned to qualification/training/experience/registration; annual review; documented.
+  ILLUSTRATIVE: Format of privilege record; who grants privileges; process for revising privileges mid-year.
+Required records:
+  1. Granted-privilege record naming the clinical services each professional is authorised for.
+  2. Annual privilege-review record.
+  3. Cross-reference to the HRM.11 stop-work trigger for privileging outside this record.
+
+── HRM.11.e ────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The requisite services to be provided by the medical professionals are known to them as well as the various departments / units of the organisation."
+Guidebook interpretation:
+  This could be done through internal communication. The communication to the
+  medical professionals shall include aspects like OP consultation rights,
+  admission rights and rights to certain procedures and/or surgeries (either
+  by inclusion or exclusion). Concerned departments are informed of the
+  relevant privileging rights of medical professionals. For example, front
+  desk shall be informed of the admission rights; the operation theatre shall
+  be informed of the surgical rights.
+Method body (what we do):
+  The requisite services a medical professional at «HOSPITAL» is authorised
+  to provide are known to that professional and to the relevant departments —
+  for example OP consultation rights, admission rights and rights to specific
+  procedures or surgeries (inclusion or exclusion). Concerned departments
+  (for example, front desk for admission rights, the operation theatre for
+  surgical rights) are informed of the relevant privileging.
+Mandatory vs illustrative:
+  MANDATORY   : Professional and relevant departments know the scope of services authorised.
+  ILLUSTRATIVE: Format of internal communication; which departments receive which privilege information.
+Required records:
+  1. Communicated-service record to the professional and to relevant departments.
+  2. Admission-rights or surgical-rights notification record (front desk, OT, etc.).
+  3. Internal-communication record.
+
+── HRM.11.f ────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Medical professionals admit and care for patients as per their privileging."
+Guidebook interpretation:
+  A standardised format can be used for each faculty, and a norm for
+  providing privilege shall be practised uniformly. New faculty members can
+  be under proctorship till independent privileges are provided. The
+  organisation could evolve a mechanism to ensure that medical professionals
+  are providing only those services that they have been privileged to offer.
+Method body (what we do):
+  Medical professionals at «HOSPITAL» admit and care for patients as per
+  their privileging, using a standardised format applied uniformly. New
+  faculty may work under proctorship until independent privileges are
+  granted; the hospital maintains a mechanism confirming professionals
+  provide only the services they are privileged for.
+Mandatory vs illustrative:
+  MANDATORY   : Professionals admit and care as per privileging; standardised format; mechanism to confirm compliance.
+  ILLUSTRATIVE: Proctorship duration; mechanism design (spot-checks, IT controls, etc.).
+Required records:
+  1. Standardised privileging-format record.
+  2. Proctorship record for new faculty until independent privileges are granted.
+  3. Mechanism-confirmation record that professionals provide only privileged services.
+
+───────────────────────────────────────────────────────────────────────────────
+VERBATIM STOP-WORK TEXT — HRM.11
+───────────────────────────────────────────────────────────────────────────────
+Do not let a medical professional provide patient care without supervision unless the «HR In-Charge / Personnel Officer» and the credentialing file show that professional identified and privileged for that care under HRM.11.
+
+Stop-work applies to starting or continuing unsupervised care by that professional. Care already under way is handed to a privileged professional or brought under supervision; immediate life-saving care is not withdrawn while that handover happens.
+
+The person who stops tells the «HR In-Charge / Personnel Officer» and the «Medical Superintendent» the same shift. Refusing to let an uncredentialed or unprivileged professional practise unsupervised is not a disciplinary matter.
+───────────────────────────────────────────────────────────────────────────────
+
+═══════════════════════════════════════════════════════════════════════════════
+HRM.12  There is a process for credentialing and privileging of nursing professionals, permitted to provide patient care without supervision.
+═══════════════════════════════════════════════════════════════════════════════
+Policy title : Credentialing and Privileging of Nursing Professionals
+Prepared by  : HR In-Charge / Personnel Officer
+OE count     : 6
+Stop-work    : YES  (Statute: Indian Nursing Council Act, 1947)
+
+Non-negotiables (auto-generated):
+  1. Do not skip: Nursing staff permitted by law, regulation and the organisation to provide patient care without supervision are identified.
+  2. Do not skip: The education, registration, training and experience of nursing staff are documented and updated periodically.
+  3. Do not skip: The information about the nursing staff is appropriately verified when possible.
+  4. Do not skip: Nursing staff are granted privileges in consonance with their qualification, training, experience and registration.
+  5. Do not skip: The requisite services to be provided by the nursing staff are known to them as well as the concerned departments / units of the organisation.
+  6. Do not skip: Nursing professionals care for patients as per their privileging.
+  7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
+  8. Staff who see a HRM.12 rule broken report it the same shift to the
+     «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
+
+── HRM.12.a ────────────────────────────────────────────────────────────────────
+Level: CORE  |  Star: no  |  Stop-work trigger: YES
+Verbatim OE text:
+  "Nursing staff permitted by law, regulation and the organisation to provide patient care without supervision are identified."
+Guidebook interpretation:
+  The organisation identifies the individuals who have the required
+  qualification(s), training and experience to provide patient care in
+  consonance with the law. Refer to the Indian Nursing Council Act, 1947.
+Method body (what we do):
+  «HOSPITAL» identifies nursing staff permitted by law, regulation and the
+  organisation to provide patient care without supervision — individuals with
+  the required qualification(s), training and experience, in consonance with
+  the law (Indian Nursing Council Act, 1947). Providing unsupervised care
+  outside this identified list is a stop-work trigger (section 6). This is a
+  CORE element.
+Mandatory vs illustrative:
+  MANDATORY   : Identified nursing list maintained; consonant with Indian Nursing Council Act, 1947.
+  ILLUSTRATIVE: How state NMC registration is documented; format of the identified list.
+Required records:
+  1. Identified-nursing-professional list permitted to provide unsupervised patient care.
+  2. Qualification, training and experience verification record, referencing the Indian Nursing Council Act, 1947.
+  3. Cross-reference to the HRM.12 stop-work trigger for unlisted practice.
+
+── HRM.12.b ────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The education, registration, training and experience of nursing staff are documented and updated periodically."
+Guidebook interpretation:
+  Update is done after the acquisition of new skills and/or qualification.
+Method body (what we do):
+  The education, registration, training and experience of nursing staff at
+  «HOSPITAL» are documented and updated periodically, after acquisition of
+  new skills or qualification.
+Mandatory vs illustrative:
+  MANDATORY   : Nursing credentials documented and updated after new skills/qualifications.
+  ILLUSTRATIVE: How updates are triggered; cross-reference to HRM.12.c for verification.
+Required records:
+  1. Education, registration, training and experience documentation record, updated periodically.
+  2. Personal-file record of the update.
+  3. New-qualification acquisition update record.
+
+── HRM.12.c ────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The information about the nursing staff is appropriately verified when possible."
+Guidebook interpretation:
+  The organisation shall do the same by verifying the credentials from the
+  organisation which has awarded the qualification/training. Refer to
+  HRM.12.b.
+Method body (what we do):
+  Information about nursing staff at «HOSPITAL» is appropriately verified
+  when possible, by checking with the organisation that awarded the
+  qualification or training.
+Mandatory vs illustrative:
+  MANDATORY   : Nursing credentials verified from awarding organisation where possible.
+  ILLUSTRATIVE: What constitutes 'when possible'; verification sources used.
+Required records:
+  1. Verification record with the awarding organisation.
+  2. Verification-completeness record.
+  3. Cross-reference to HRM.12.b.
+
+── HRM.12.d ────────────────────────────────────────────────────────────────────
+Level: CORE  |  Star: no  |  Stop-work trigger: YES
+Verbatim OE text:
+  "Nursing staff are granted privileges in consonance with their qualification, training, experience and registration."
+Guidebook interpretation:
+  The organisation shall identify as to what each nurse is authorised to do.
+  For example, an Infection prevention and control Nurse shall have requisite
+  in-house/external training and experience and the aptitude and knowledge to
+  perform the tasks required of him/her. Privileges have to be reviewed every
+  year and where necessary revised.
+Method body (what we do):
+  «HOSPITAL» grants nursing staff privileges in consonance with their
+  qualification, training, experience and registration — identifying what
+  each nurse is authorised to do (for example, an infection-prevention-and-
+  control nurse needs the requisite in-house or external training,
+  experience, aptitude and knowledge for that role). Privileges are reviewed
+  at least «annually» and revised where necessary. Granting or exercising
+  privileges outside this record is a stop-work trigger (section 6). This is
+  a CORE element.
+Mandatory vs illustrative:
+  MANDATORY   : Privileges per nurse aligned to qualification/training/experience/registration; annual review; documented.
+  ILLUSTRATIVE: Format of privilege record; who grants privileges; examples beyond the IPC nurse example.
+Required records:
+  1. Granted-privilege record naming what each nurse is authorised to do.
+  2. Annual privilege-review record.
+  3. Cross-reference to the HRM.12 stop-work trigger for privileging outside this record.
+
+── HRM.12.e ────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The requisite services to be provided by the nursing staff are known to them as well as the concerned departments / units of the organisation."
+Guidebook interpretation:
+  This could be done by internal communication to the nurse, to the nursing
+  services and the concerned departments.
+Method body (what we do):
+  The requisite services a nursing professional at «HOSPITAL» is authorised
+  to provide are known to that professional, to nursing services and to the
+  concerned departments, communicated internally.
+Mandatory vs illustrative:
+  MANDATORY   : Nurse and relevant departments/nursing services know the scope of authorised services.
+  ILLUSTRATIVE: Format of internal communication; which departments receive which privilege information.
+Required records:
+  1. Communicated-service record to the nurse and to nursing services and concerned departments.
+  2. Internal-communication record.
+  3. Confirmation record of awareness.
+
+── HRM.12.f ────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Nursing professionals care for patients as per their privileging."
+Guidebook interpretation:
+  New staff members can be under supervision until independent privileges are
+  provided for each staff. The organisation could evolve a mechanism to
+  ensure that nursing professionals are providing only those services that
+  they have been privileged to offer.
+Method body (what we do):
+  Nursing professionals at «HOSPITAL» care for patients as per their
+  privileging. New staff may work under supervision until independent
+  privileges are granted; the hospital maintains a mechanism confirming
+  nursing professionals provide only the services they are privileged for.
+Mandatory vs illustrative:
+  MANDATORY   : Nursing professionals care as per privileging; supervision for new staff; mechanism to confirm compliance.
+  ILLUSTRATIVE: Duration of supervision period; mechanism design for compliance confirmation.
+Required records:
+  1. Supervision record for new staff until independent privileges are granted.
+  2. Mechanism-confirmation record that nurses provide only privileged services.
+  3. Privileging-compliance spot-check record.
+
+───────────────────────────────────────────────────────────────────────────────
+VERBATIM STOP-WORK TEXT — HRM.12
+───────────────────────────────────────────────────────────────────────────────
+Do not let a nursing professional provide patient care without supervision unless the «HR In-Charge / Personnel Officer» and the credentialing file show that professional identified and privileged for that care under HRM.12.
+
+Stop-work applies to starting or continuing unsupervised care by that professional. Care already under way is handed to a privileged professional or brought under supervision; immediate life-saving care is not withdrawn while that handover happens.
+
+The person who stops tells the «HR In-Charge / Personnel Officer» and the «Medical Superintendent» the same shift. Refusing to let an uncredentialed or unprivileged professional practise unsupervised is not a disciplinary matter.
+───────────────────────────────────────────────────────────────────────────────
+
+═══════════════════════════════════════════════════════════════════════════════
+HRM.13  There is a process for credentialing and privileging of para-clinical professionals, permitted to provide patient care without supervision.
+═══════════════════════════════════════════════════════════════════════════════
+Policy title : Credentialing and Privileging of Para-Clinical Professionals
+Prepared by  : HR In-Charge / Personnel Officer
+OE count     : 5
+Stop-work    : YES
+
+Non-negotiables (auto-generated):
+  1. Do not skip: Para-clinical professionals permitted by law, regulation and the organisation to provide patient care without supervision are identified.
+  2. Do not skip: The education, registration, training and experience of para-clinical professionals are appropriately verified, documented and updated periodically.
+  3. Do not skip: Para-clinical professionals are granted privileges in consonance with their qualification, training, experience and registration.
+  4. Do not skip: The requisite services to be provided by the para-clinical professionals are known to them as well as the concerned departments/units of the organisation.
+  5. Do not skip: Para-clinical professionals care for patients as per their privileging.
+  6. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.
+  7. Staff who see a HRM.13 rule broken report it the same shift to the
+     «HR In-Charge / Personnel Officer» or the «Medical Superintendent».
+
+── HRM.13.a ────────────────────────────────────────────────────────────────────
+Level: CORE  |  Star: no  |  Stop-work trigger: YES
+Verbatim OE text:
+  "Para-clinical professionals permitted by law, regulation and the organisation to provide patient care without supervision are identified."
+Guidebook interpretation:
+  The organisation identifies other clinical professionals such as a
+  physiotherapist, rehabilitation therapist, dietician, pharmacist, clinical
+  pharmacist, technologist who have the required qualification(s), training
+  and experience to provide patient care in consonance with the law.
+Method body (what we do):
+  «HOSPITAL» identifies para-clinical professionals (for example
+  physiotherapist, rehabilitation therapist, dietician, pharmacist, clinical
+  pharmacist, technologist) permitted by law, regulation and the organisation
+  to provide patient care without supervision — individuals with the required
+  qualification(s), training and experience, in consonance with the law.
+  Providing unsupervised care outside this identified list is a stop-work
+  trigger (section 6). This is a CORE element.
+Mandatory vs illustrative:
+  MANDATORY   : Identified para-clinical list maintained; based on qualification, training, experience and law.
+  ILLUSTRATIVE: Which para-clinical categories exist in this hospital; registration/licence requirement by category.
+Required records:
+  1. Identified-para-clinical-professional list permitted to provide unsupervised patient care.
+  2. Qualification, training and experience verification record.
+  3. Cross-reference to the HRM.13 stop-work trigger for unlisted practice.
+
+── HRM.13.b ────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The education, registration, training and experience of para-clinical professionals are appropriately verified, documented and updated periodically."
+Guidebook interpretation:
+  Updating is done after the acquisition of new skills and/or qualification.
+  The organisation shall do the same by verifying the credentials from the
+  organisation which has awarded the qualification/training.
+Method body (what we do):
+  The education, registration, training and experience of para-clinical
+  professionals at «HOSPITAL» are appropriately verified, documented and
+  updated periodically, after acquisition of new skills or qualification, by
+  checking with the organisation that awarded the qualification or training.
+Mandatory vs illustrative:
+  MANDATORY   : Para-clinical credentials verified from awarding organisation, documented and updated after new skills/qualifications.
+  ILLUSTRATIVE: Which registrations/licences require periodic renewal; verification sources per para-clinical category.
+Required records:
+  1. Education, registration, training and experience verification and documentation record, updated periodically.
+  2. Personal-file record of the update.
+  3. Verification-with-awarding-organisation record.
+
+── HRM.13.c ────────────────────────────────────────────────────────────────────
+Level: CORE  |  Star: no  |  Stop-work trigger: YES
+Verbatim OE text:
+  "Para-clinical professionals are granted privileges in consonance with their qualification, training, experience and registration."
+Guidebook interpretation:
+  The organisation shall specify as to what each para-clinical professional
+  is authorised to do. Where applicable, the para-clinical professional shall
+  have the requisite registration/license.
+Method body (what we do):
+  «HOSPITAL» grants para-clinical professionals privileges in consonance with
+  their qualification, training, experience and registration — specifying
+  what each is authorised to do, with the requisite registration or licence
+  held where applicable. Granting or exercising privileges outside this
+  record is a stop-work trigger (section 6). This is a CORE element.
+Mandatory vs illustrative:
+  MANDATORY   : Privileges per para-clinical professional aligned to qualification/training/experience/registration; licence/registration held where applicable; documented.
+  ILLUSTRATIVE: Format of privilege record; which para-clinical roles require statutory licence/registration.
+Required records:
+  1. Granted-privilege record naming what each para-clinical professional is authorised to do.
+  2. Registration or licence-on-file record, where applicable.
+  3. Cross-reference to the HRM.13 stop-work trigger for privileging outside this record.
+
+── HRM.13.d ────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "The requisite services to be provided by the para-clinical professionals are known to them as well as the concerned departments/units of the organisation."
+Guidebook interpretation:
+  This could be done through internal communication.
+Method body (what we do):
+  The requisite services a para-clinical professional at «HOSPITAL» is
+  authorised to provide are known to that professional and to the concerned
+  departments, communicated internally.
+Mandatory vs illustrative:
+  MANDATORY   : Para-clinical professional and relevant departments know the scope of authorised services.
+  ILLUSTRATIVE: Format of internal communication.
+Required records:
+  1. Communicated-service record to the professional and to concerned departments.
+  2. Internal-communication record.
+  3. Confirmation record of awareness.
+
+── HRM.13.e ────────────────────────────────────────────────────────────────────
+Level: Commitment  |  Star: no  |  Stop-work trigger: NO
+Verbatim OE text:
+  "Para-clinical professionals care for patients as per their privileging."
+Guidebook interpretation:
+  New staff members can be under supervision until independent privilege is
+  provided for each staff. The organisation could evolve a mechanism to
+  ensure that para-clinical professionals are providing only those services
+  that they have been privileged to offer.
+Method body (what we do):
+  Para-clinical professionals at «HOSPITAL» care for patients as per their
+  privileging. New staff may work under supervision until independent
+  privileges are granted; the hospital maintains a mechanism confirming para-
+  clinical professionals provide only the services they are privileged for.
+Mandatory vs illustrative:
+  MANDATORY   : Para-clinical professionals care as per privileging; supervision for new staff; mechanism to confirm compliance.
+  ILLUSTRATIVE: Duration of supervision period; mechanism design.
+Required records:
+  1. Supervision record for new staff until independent privileges are granted.
+  2. Mechanism-confirmation record that para-clinical professionals provide only privileged services.
+  3. Privileging-compliance spot-check record.
+
+───────────────────────────────────────────────────────────────────────────────
+VERBATIM STOP-WORK TEXT — HRM.13
+───────────────────────────────────────────────────────────────────────────────
+Do not let a para-clinical professional provide patient care without supervision unless the «HR In-Charge / Personnel Officer» and the credentialing file show that professional identified and privileged for that care under HRM.13.
+
+Stop-work applies to starting or continuing unsupervised care by that professional. Care already under way is handed to a privileged professional or brought under supervision; immediate life-saving care is not withdrawn while that handover happens.
+
+The person who stops tells the «HR In-Charge / Personnel Officer» and the «Medical Superintendent» the same shift. Refusing to let an uncredentialed or unprivileged professional practise unsupervised is not a disciplinary matter.
+───────────────────────────────────────────────────────────────────────────────
+
+═══════════════════════════════════════════════════════════════════════════════
+END OF HRM RAW SOURCE DUMP
+Total standards: 13  |  Total OEs: 76  |  CORE: 16  |  Starred: 9
+Achievement: 4  |  Excellence: 0  |  Stop-work standards: 3 (HRM.11, 12, 13)
+OE-level stop-work triggers: HRM.11.a, HRM.11.d, HRM.12.a, HRM.12.d, HRM.13.a, HRM.13.c
+Statute P2: HRM.12 only (Indian Nursing Council Act, 1947)
+═══════════════════════════════════════════════════════════════════════════════

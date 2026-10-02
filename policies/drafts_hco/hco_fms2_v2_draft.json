@@ -1,0 +1,121 @@
+{
+  "standard_code": "FMS.2",
+  "chapter": "HCO",
+  "oe_codes": [
+    "FMS.2.a",
+    "FMS.2.b",
+    "FMS.2.c",
+    "FMS.2.d",
+    "FMS.2.e",
+    "FMS.2.f"
+  ],
+  "policy_title": "Policy on Planned Facilities and Environment-Friendly Measures",
+  "purpose": "This policy defines how {{HOSPITAL_NAME}} ensures facilities and space match services, keeps as-built drawings current, maintains comprehensible signage, provides potable water and electricity around the clock, and provides and regularly tests backup sources for both.\n\nThis policy covers planned facilities and environment-friendly measures specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards have their own policies too.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to engineering, biomedical, nursing and departmental leaders, and staff who run facilities, utilities, medical gases, fire and non-fire emergencies at {{HOSPITAL_NAME}}, including the «Engineering In-Charge», the «Medical Superintendent», departmental leaders and the Quality Coordinator.\n\nThis policy covers planned facilities and environment-friendly measures specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, or hospital governance — are covered in the hospital's other policies, not repeated here. Other FMS standards have their own policies too.",
+  "policy_statement": "Facilities and space at {{HOSPITAL_NAME}} match the services offered. As-built and updated drawings are maintained by a named custodian. Internal and external signage is in a form patients, families and the community can understand, and meets statutory posting requirements. Potable water and electricity are available round the clock with tested backup sources for any failure.\n\nStaff follow written guidance and keep the records listed in the traceability table.",
+  "procedure_steps": [
+    "5.1 Facilities and space provisions are appropriate to the scope of services\n\nFacilities and space provisions match the scope of services this hospital actually offers, using national or international guidance (including Atomic Energy Regulatory Board guidance where radiation services are in scope).\n\nThe «Engineering In-Charge» and «Medical Superintendent» keep the current space-vs-services map. A service listed without a matching space is escalated.",
+    "5.2 As built and updated drawings are maintained as per statutory...\n\nAs-built and updated drawings are maintained as required by the applicable registering authority for this site: site layout, floor plans, floor-wise fire-evacuation plans, and separate civil, electrical, extra-low-voltage, plumbing, heating-ventilation-air-conditioning, piped medical-gas and information-technology drawings.\n\nA named person under the «Engineering In-Charge» holds the current set. This element does not import a named Act as a checklist for the whole standard.",
+    "5.3 There are internal and external sign postings in the organisation in a...\n\nInternal and external sign posting is in a manner patients, families and the community understand (language and/or pictorial; bilingual where this hospital defines). Signs meet applicable statutory posting rules for this site.\n\nThe «Engineering In-Charge» walks the signs «quarterly».",
+    "5.4 Potable water and electricity are available round the clock\n\nPotable water and electricity are available round the clock. Potable-water quality is tested at the tap: biochemical at least once in three months and microbiological at least once a month, against the current IS 10500. Dialysis reverse-osmosis inlet water is tested for endotoxin every month where dialysis is in scope.\n\nA care area without water or power is a stop-work trigger (section 6).",
+    "5.5 Alternate sources for electricity and water are provided as a backup...\n\nAlternate sources for electricity and water are provided as backup for any failure or shortage (diesel generator, solar, uninterruptible power supply; bore or tanker or extra tanks as this hospital names). Electric load matches demand. National Building Code is a reference for water quantity, not a paste of every clause.\n\nThe «Engineering In-Charge» owns the backup list. Critical areas have a named continuity action when supply fails.",
+    "5.6 The organisation tests the functioning of these alternate sources at a...\n\nThe organisation tests these alternate sources at a predefined frequency (default «monthly» for the diesel generator and a documented water-acceptance test when an emergency source is used). Results are recorded. Refer to FMS.2.d for water quality.\n\nA backup that is never tested does not satisfy this element."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that FMS.2 is resourced and followed.\n\nEngineering In-Charge\n- Owns day-to-day implementation and records for this standard.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.\n\ndepartmental leaders\n- Run the department-level duties this standard names.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Facility Management and Safety, standard FMS.2.\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — FMS.2 interpretations.\n- Internal documents of {{HOSPITAL_NAME}}: facility-inspection records, as-built drawings, utility and medical-equipment logs, medical-gas records, fire and non-fire plans named for FMS.2.",
+  "distribution": "Medical Superintendent; Engineering In-Charge; Quality Coordinator; departmental leaders; staff covered by FMS.2",
+  "abbreviations": "AHU — Air Handling Unit\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nDG — Diesel Generator\nELV — Extra Low Voltage\nFMS — Facility Management and Safety (NABH Hospitals 6th Edition chapter)\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nHVAC — Heating, Ventilation and Air Conditioning\nMSDS — Material Safety Data Sheet\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element\nPPE — Personal Protective Equipment\nRO — Reverse Osmosis\nSTP — Sewage Treatment Plant",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "FMS.2.a",
+      "requirement": "Facilities and space provisions are appropriate to the scope of services.",
+      "steps": "Section 3; 5.1",
+      "responsible": "Engineering In-Charge",
+      "records": [
+        "Current space-versus-services map for each department.",
+        "National or international guidance reference used (for example AERB guidance for a radiation area).",
+        "Escalation record for any service listed without matching space."
+      ]
+    },
+    {
+      "oe_code": "FMS.2.b",
+      "requirement": "As built and updated drawings are maintained as per statutory requirements.",
+      "steps": "Section 3; 5.2",
+      "responsible": "Engineering In-Charge",
+      "records": [
+        "Current as-built and updated drawing set: site layout, floor plans, floor-wise evacuation plans, and separate civil, electrical, ELV, plumbing, HVAC, medical-gas and IT drawings.",
+        "Named custodian record for the drawing set.",
+        "Date of last update against a facility change."
+      ]
+    },
+    {
+      "oe_code": "FMS.2.c",
+      "requirement": "There are internal and external sign postings in the organisation in a manner understood by the patient, families and community.",
+      "steps": "Section 3; 5.3",
+      "responsible": "Engineering In-Charge",
+      "records": [
+        "Signage inventory or walk log by area, noting language and/or pictorial form and bilingual coverage.",
+        "Statutory posting-requirement reference applicable to this site.",
+        "Quarterly signage-walk record."
+      ]
+    },
+    {
+      "oe_code": "FMS.2.d",
+      "requirement": "Potable water and electricity are available round the clock.",
+      "steps": "Section 3; 5.4; Section 6 Stop-work",
+      "responsible": "Engineering In-Charge",
+      "records": [
+        "Potable-water test results: biochemical at least quarterly and microbiological at least monthly, against IS 10500.",
+        "Dialysis reverse-osmosis inlet-water endotoxin test record, where dialysis is in scope.",
+        "Continuity log confirming no unplanned water or power outage in a care area without the FMS.7 continuity plan activating."
+      ]
+    },
+    {
+      "oe_code": "FMS.2.e",
+      "requirement": "Alternate sources for electricity and water are provided as a backup for any failure / shortage.",
+      "steps": "Section 3; 5.5",
+      "responsible": "Engineering In-Charge",
+      "records": [
+        "Backup-source inventory: diesel generator, solar, uninterruptible power supply, bore/tanker/extra tanks as named.",
+        "Electric-load calculation matching demand.",
+        "Continuity-action record naming each critical area's backup path."
+      ]
+    },
+    {
+      "oe_code": "FMS.2.f",
+      "requirement": "The organisation tests the functioning of these alternate sources at a predefined frequency.",
+      "steps": "Section 3; 5.6",
+      "responsible": "Engineering In-Charge",
+      "records": [
+        "Diesel-generator test log at the defined frequency (default monthly).",
+        "Water-acceptance test record for any occasion an emergency water source was used.",
+        "Corrective-action record for any failed alternate-source test."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO FMS.2 v2 (2026-08-21). Official Standards PDF OE count 6; levels and asterisks from portal body text (matrix agrees on levels). Asterisked: none. CORE: cd. Achievement: none. Excellence: none.\nStop-work: YES — proposed: Start or continue clinical care in an area without potable water or electricity (unless the FMS.7 emergency continuity plan is running).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/FMS/POL/02.\nOfficial chapter is 7 standards / 43 OEs (confirmed against portal summary). Guidebook interpretations from scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. Statute P2 proposed on FMS.5 (Medical Devices Rules as cited) and FMS.6 (Explosives Act / Gas Cylinder Rules / SMPV).\nDo not touch AAC, COP, MOM, PRE, IPC, PSQ or ROM.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition FMS.2 v2 draft: portal PDF OE data + Guidebook interpretations."
+    }
+  ],
+  "status": "draft",
+  "definitions": "The organisation’s environment and facilities operate in a planned manner and promotes environment-friendly measures.",
+  "exceptions": "1. Do not operate a clinical service without matching facility space; any service without a corresponding documented space is not available from this hospital for accreditation purposes.\n2. Do not let the as-built and updated drawing set become incomplete or without a named custodian; a drawing that does not reflect the current facility is not an as-built drawing.\n3. Do not allow signage that cannot be understood by patients, families or the community, or that does not meet applicable statutory posting requirements.\n4. Do not leave a care area without potable water or electricity; test potable-water quality biochemically at least once in three months and microbiologically at least once a month, collected at the tap.\n5. Do not operate without identified backup electricity and water sources available for every critical area.\n6. Do not count an alternate source as available if it has not been tested at the defined frequency with documented results.\n7. Do not bypass the stop-work authority in section 6 when the trigger conditions are met.\n8. Staff who see a FMS.2 rule broken report it the same shift to the Engineering In-Charge or the Medical Superintendent.",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related facility change, utility failure, equipment recall or fire-plan change.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read the Policy on Planned Facilities and Environment-Friendly Measures of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/FMS/POL/02»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Engineering In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Engineering In-Charge»",
+  "template_test": "hco_fms_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — planned facilities and environment-friendly measures.",
+  "doc_no": "«HCO/FMS/POL/02»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "Do not start or continue clinical care in an area that has no potable water or no electricity, unless the organisation has declared a FMS.7 emergency and the written service-continuity plan for that failure is running.\n\nStop-work applies to starting or continuing routine care in that area. Immediate life-saving care continues while water or power is restored or the patient is moved.\n\nThe person who stops tells the «Engineering In-Charge» and the «Medical Superintendent» the same shift. Refusing to run care without water or power is not a disciplinary matter.",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.FMS.2",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

@@ -1,0 +1,121 @@
+{
+  "standard_code": "HRM.4",
+  "chapter": "HCO",
+  "oe_codes": [
+    "HRM.4.a",
+    "HRM.4.b",
+    "HRM.4.c",
+    "HRM.4.d",
+    "HRM.4.e",
+    "HRM.4.f"
+  ],
+  "policy_title": "Professional Training and Development",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard HRM.4: There is an on-going programme for professional training and development of the staff.\n\nThis policy covers all 6 requirements under this standard, listed in detail below.\n\nChapter intent (official Standards PDF): The most important resource of the organisation is its human resource. Human resources are an asset for the effective and efficient functioning of the organisation. The management plans on identifying the right number and skill mix of staff required to render safe care to the patients. Recruitment of staff is accomplished by having a uniform and standardised system. The organisation must orient the staff including outsourced staff, volunteers, students and trainees to its environment and also orient them to specific duties and responsibilities related to their position. The organisation should plan to have an ongoing professional training / in-service education to enhance the competencies and skills of the staff continually. A systematic and structured appraisal system must be used for staff development. The organisation uses this as an opportunity to discuss, motivate, identify gaps in the performance of the staff. The organisation promotes the physical and mental well-being of staff. A grievance handling mechanism and disciplinary procedure should be in place. Credentialing and privileging of health-care professionals (medical, nursing and other para-clinical professional) are done to ensure patient safety. A document containing all such personal information has to be maintained for all staff.\n\nThis policy covers professional training and development specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, hospital governance, or facility safety — are covered in the hospital's other policies, not repeated here. Other HRM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to human resources, nursing, medical, and departmental leaders, and all staff of {{HOSPITAL_NAME}}, including the «HR In-Charge / Personnel Officer», the «Medical Superintendent», departmental leaders and the Quality Coordinator.\n\nThis policy covers all 6 requirements under this standard, listed in detail below.\n\nThis policy covers professional training and development specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, hospital governance, or facility safety — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).",
+  "policy_statement": "{{HOSPITAL_NAME}} implements HRM.4 so that there is an on-going programme for professional training and development of the staff.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Written guidance governs training and development policy for the staff\n\nWritten guidance governs training and development policy for staff at {{HOSPITAL_NAME}}: a training manual covering identification of training needs, methodology, documentation, assessment, impact evaluation and a training calendar. At minimum, staff are trained on occupational safety and soft skills, and educated on patient-centred care — respecting patient preferences, shared decision-making and integrated care.\n\nTraining covers all staff categories, including doctors and outsourced staff where applicable; learning-management systems or e-learning may be used. This is a CORE, asterisked element.\n\nMethod note (from guidebook interpretation): A training manual incorporating the procedure for identification of training needs, the training methodology, documentation of training, training assessment, the impact of training and the training calendar shall be prepared. At a minimum staff shall be trained on occupational safety aspects and soft skills. In addition, the staff shall be educated on various aspects of patient-centred care like respecting patient preferences, shared decision-making and provision of integrated care. The training shall be for all categories of staff, including doctors and outsourced staff (wherever applicable). Learning management systems and E-learning modules could be used.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.2 The organisation maintains the training record\n\nThe «HR In-Charge / Personnel Officer» maintains the training record for {{HOSPITAL_NAME}}, covering every training session: at minimum the title, trainer(s), date, duration and list of trainees with signatures. Contents are captured where possible; records may be kept digitally.\n\nMethod note (from guidebook interpretation): The Human Resources Department shall maintain a record of all training provided to staff of the organisation. At a minimum, it shall include the title of the training, the trainer(s), date and duration of the training list of trainees (with name and signatures). Where possible, the contents of the training may also be captured. Training records could be in digital format.",
+    "5.3 Training also occurs when job responsibilities change/new equipment is...\n\nTraining at {{HOSPITAL_NAME}} also occurs when job responsibilities change or new equipment is introduced, focused on the revised responsibilities or the newly introduced equipment and technology. For new equipment, operating staff are trained on both operational use and daily maintenance.\n\nMethod note (from guidebook interpretation): The training shall focus on the revised job responsibilities as well as on the newly introduced equipment and technology. In the case of new equipment, the operating staff shall receive training on operational as well as daily maintenance aspects.",
+    "5.4 Feedback mechanisms are in place for improvement of training and...\n\nFeedback mechanisms are in place at {{HOSPITAL_NAME}} for improving the training and development programme, covering both internal and external training — appropriateness of course material, training facilities and trainer capability.\n\nMethod note (from guidebook interpretation): This shall include both internal and external training. Feedback includes collecting information on the appropriateness of course material, facilities for the training programme and capability of the trainer.",
+    "5.5 Evaluation of training effectiveness is done by the organisation\n\n{{HOSPITAL_NAME}} evaluates training effectiveness immediately after training (for example a pre- and post-test) and again after a defined period has lapsed, to confirm the training improved workplace competency. The time frame for the later check may vary by training type; incident reports and assessment non-conformities are useful inputs.\n\nThe evaluation covers knowledge, skills and attitude; retraining is provided where the evaluation shows it is needed.\n\nMethod note (from guidebook interpretation): The evaluation shall be done immediately after the training and after a defined period has lapsed. The immediate effectiveness could be captured using a pre and post-test. To ensure that that the training has resulted in improvement of competency at the workplace, the effect of training shall be evaluated after a defined period has lapsed. The organisation may consider defining the time frame for capturing the effectiveness at the workplace based on the type of training imparted. One of the tools that the organisation could use is incident reports and non-conformities pointed out during assessments. The evaluation shall focus on knowledge, skills and attitude. Based on the evaluation, where appropriate, re training has to be provided.",
+    "5.6 The organisation supports continuing professional development and...\n\n{{HOSPITAL_NAME}} supports continuing professional development and learning, so staff can keep up with advancements in their field — encouraging and resourcing attendance at courses or conferences, and providing access to distance learning or e-learning. The hospital specifies minimum mandatory training hours every staff member attends each year.\n\nMethod note (from guidebook interpretation): The purpose of this is to ensure that staff can keep up with advancements in their field and develop skills and improve their skill sets and competency. This includes encouraging and providing resources for staff to attend courses or conferences. It can also include providing access to distance learning and e-learning resources. The organisation shall specify minimum mandatory hours of training that every staff must attend in a year."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that HRM.4 is resourced and followed.\n\nHR In-Charge / Personnel Officer\n- Owns day-to-day implementation and records for this standard.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.\n\ndepartmental leaders\n- Run the department-level duties this standard names.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Human Resource Management, standard HRM.4. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — HRM.4 interpretations (source PDF has no text layer; transcribed and verified against rendered page images — policies/source/hco6_hrm_guidebook_ocr.txt).\n- Internal documents of {{HOSPITAL_NAME}}: workforce plan, recruitment and induction records, training records, appraisal records, disciplinary and grievance registers, staff health records, personal files, and credentialing/privileging files named for HRM.4.",
+  "distribution": "Medical Superintendent; HR In-Charge / Personnel Officer; Quality Coordinator; departmental leaders; staff covered by HRM.4",
+  "abbreviations": "ACLS — Advanced Cardiac Life Support\nBLS — Basic Life Support\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nCPR — Cardio-Pulmonary Resuscitation\nEMR — Electronic Medical Record\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nHR — Human Resource(s)\nHRM — Human Resource Management (NABH Hospitals 6th Edition chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nNRP — Neonatal Resuscitation Program\nOE — Objective Element\nPALS — Paediatric Advanced Life Support\nPPE — Personal Protective Equipment\nWISN — Workload Indicators of Staffing Need (WHO method)",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "HRM.4.a",
+      "requirement": "Written guidance governs training and development policy for the staff.",
+      "steps": "Section 3; 5.1",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Written training and development policy or manual.",
+        "Training-needs-identification, methodology, assessment and calendar record.",
+        "Coverage record for all staff categories, including doctors and outsourced staff."
+      ]
+    },
+    {
+      "oe_code": "HRM.4.b",
+      "requirement": "The organisation maintains the training record.",
+      "steps": "Section 3; 5.2",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Training record with title, trainer, date, duration and trainee list with signatures.",
+        "Digital or physical training-record system.",
+        "Content-capture record where possible."
+      ]
+    },
+    {
+      "oe_code": "HRM.4.c",
+      "requirement": "Training also occurs when job responsibilities change/new equipment is introduced.",
+      "steps": "Section 3; 5.3",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Training record triggered by a job-responsibility change or new-equipment introduction.",
+        "Operational-and-maintenance training record for new equipment.",
+        "Training-completion confirmation before independent use."
+      ]
+    },
+    {
+      "oe_code": "HRM.4.d",
+      "requirement": "Feedback mechanisms are in place for improvement of training and development programme.",
+      "steps": "Section 3; 5.4",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Feedback-mechanism record for training-programme improvement.",
+        "Feedback data on course material, facilities and trainer capability.",
+        "Both internal and external training coverage record."
+      ]
+    },
+    {
+      "oe_code": "HRM.4.e",
+      "requirement": "Evaluation of training effectiveness is done by the organisation.",
+      "steps": "Section 3; 5.5",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Immediate post-training evaluation record — pre/post-test.",
+        "Later workplace-effectiveness evaluation record.",
+        "Retraining record where the evaluation showed a need."
+      ]
+    },
+    {
+      "oe_code": "HRM.4.f",
+      "requirement": "The organisation supports continuing professional development and learning.",
+      "steps": "Section 3; 5.6",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Continuing-professional-development support record — courses, conferences, e-learning access.",
+        "Minimum mandatory annual training-hours specification record.",
+        "Staff-participation record against the mandatory hours."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO HRM.4 v2 (2026-08-21). Official Standards PDF OE count 6; levels and asterisks from portal body text (Guidebook's own copy of the OE matrix agrees on every letter). Asterisked: a. CORE: a. Achievement: ef. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/HRM/POL/04.\nOfficial chapter is 13 standards / 76 OEs (confirmed against portal summary and against the Guidebook's own copy of the same matrix). Guidebook interpretations transcribed from a scanned PDF with no text layer — verified against rendered page images (no tesseract/pdftoppm available on this machine), not run through a mechanical OCR pass; see policies/source/hco6_hrm_chapter_notes.md. Statute P2 proposed on HRM.12 only (Indian Nursing Council Act, 1947).\nNot the same as the already-deployed SHCO 3rd Edition HRM chapter (build_hrm1_v2.py..build_hrm9_v2.py, policies/drafts/hrm*_v2_draft.json) — separate programme and edition, not touched. Do not touch AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition HRM.4 v2 draft: portal PDF OE data + Guidebook interpretations (verified visual transcription, no text layer in source PDF); draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "There is an on-going programme for professional training and development of the staff.",
+  "exceptions": "1. Do not skip: Written guidance governs training and development policy for the staff.\n2. Do not skip: The organisation maintains the training record.\n3. Do not skip: Training also occurs when job responsibilities change/new equipment is introduced.\n4. Do not skip: Feedback mechanisms are in place for improvement of training and development programme.\n5. Do not skip: Evaluation of training effectiveness is done by the organisation.\n6. Do not skip: The organisation supports continuing professional development and learning.\n7. Staff who see a HRM.4 rule broken report it the same shift to the «HR In-Charge / Personnel Officer» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Professional Training and Development policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/HRM/POL/04»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «HR In-Charge / Personnel Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«HR In-Charge / Personnel Officer»",
+  "template_test": "hco_hrm_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — HRM.4.",
+  "doc_no": "«HCO/HRM/POL/04»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.HRM.4",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

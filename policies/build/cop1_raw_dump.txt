@@ -1,0 +1,378 @@
+COP.1 — Raw Source Dump
+=======================
+
+Standard text (verbatim):
+Uniform care to patients is provided in all settings of the organisation and is guided by
+written guidance.
+
+Standard is starred (★).
+
+OE count: 6 | COREs: b | Stars: a★, f★
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.1.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Uniform care is provided to patients following written guidance.*
+
+Guidebook interpretation (PDF p. 100):
+The organisation needs to implement mechanisms to ensure that the care, the patient
+receives in out-patient/day care/in-patient/emergency is uniform. Uniform patient care
+is linked to access, appropriateness of care and treatment. It does not depend on the
+patient's ability to pay or the source of payment. The level of care provided to patients
+shall be the same throughout the organisation.
+
+Care delivery is uniform for a given clinical condition when similar care is provided in
+more than one setting. When similar treatment/care is provided in various settings such
+as out-patients, day care, in-patients, and different categories of wards, the
+organisation shall ensure that patients with the same clinical condition and care needs
+receive the same quality of health care throughout the organisation. Care delivery shall
+be applicable irrespective of the setting and category of the ward, and whether the
+patient is paying or non-paying, and/or is supported from a governmental/private
+insurance scheme or not. For example, the decision to offer any form of intervention or
+medication, frequency of consultant visit, nature of support care, decision to discharge
+is not influenced by the class or category of the patient but is decided by the clinical
+needs of the patient. Further, in case the organisation has separate OPDs for different
+category of patients, the methodology for care delivery shall be uniform in all OPDs.
+
+Refer to AAC.4., AAC.5. and PRE.4.
+
+Stop-work check: Commitment — no stop-work trigger. COP.1 is not in
+STOP_WORK_PROPOSALS (those are COP.2, 3, 5, 7, 8, 9, 12, 13, 14, 16).
+
+Mandatory elements:
+  — The level of care provided to patients shall be the same throughout the organisation
+    (shall).
+  — Care delivery shall be applicable irrespective of setting, ward category, and
+    payment status (shall).
+  — Where the same clinical condition is treated in multiple settings, uniformity across
+    those settings is required (shall).
+
+Non-mandatory (illustrative):
+  — The specific examples (OPD categories, consultant visit frequency, discharge
+    decision basis, intervention/medication offers) illustrate what uniformity means —
+    they are not a mandatory enumerated checklist.
+  — The mechanism for ensuring uniformity is for the organisation to determine.
+
+Documentation:
+  This OE is starred — the written guidance that ensures uniform care must be documented.
+  The star is on the OE, not on any specific mechanism; the organisation documents whatever
+  guidance it uses to operationalise uniform care.
+
+Cross-references: AAC.4 (care planning), AAC.5 (care planning documentation),
+PRE.4 (equitable patient rights).
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.1.b
+Level: CORE | No star
+
+Verbatim OE text:
+The organisation has a uniform process for identification of patients and uses at least
+two identifiers.
+
+Guidebook interpretation (PDF p. 100):
+The mechanism for identification of patients shall be uniform across the organisation.
+For example, the use of ID bands with the patient's name and unique identification
+number. The same shall be used in imaging, diagnostic and therapeutic procedures,
+blood transfusion, day care and nutrition/diet. For any care related aspect, at a
+minimum, two identifiers shall be used. One of the identifiers shall be the unique
+identification number generated at the time of registration.
+
+Refer to AAC.2.b.
+
+Stop-work check: CORE — absence of a uniform patient identification process with a
+minimum of two identifiers is CORE non-compliance and accreditation-blocking. However,
+COP.1 has no designated stop-work authority section (stop-work authority exists for
+COP.2, 3, 5, 7, 8, 9, 12, 13, 14, 16 only). The CORE status means it must be present
+and functional — not that a stop-work trigger exists in the policy.
+
+Three mandatory (shall) elements:
+  1. The identification mechanism shall be uniform across the organisation.
+  2. At a minimum, two identifiers shall be used for any care-related aspect — this is
+     an exact minimum (two), not advisory.
+  3. One of the identifiers shall be the unique identification number generated at
+     the time of registration — mandatory (shall); which identifier is assigned to
+     registration-number is specified.
+  4. The same process shall be used in imaging, diagnostic and therapeutic procedures,
+     blood transfusion, day care and nutrition/diet — mandatory scope breadth.
+
+Non-mandatory (illustrative):
+  — ID bands with name and unique ID number are given as an example — the specific
+    mechanism (wristband, card, sticker) is the organisation's choice.
+  — The second identifier (beyond registration number) is for the organisation to
+    select, provided it is consistent and reliable.
+
+Cross-reference: AAC.2.b.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.1.c
+Level: Commitment | No star
+
+Verbatim OE text:
+The organisation implements evidence-based clinical practice guidelines and/or clinical
+protocols to guide uniform patient care.
+
+Guidebook interpretation (PDF p. 101):
+Clinical practice guidelines brought out by National and International professional
+organisations may be used. Standard treatment guidelines (STGs) brought out by the
+Government of India are a good starting point. In the absence of evidence-based clinical
+practice guidelines or where adapting the clinical practice guidelines are not feasible,
+sound clinical practices shall guide the delivery of care.
+
+For definitions of "evidence-based medicine" and "clinical practice guidelines", refer
+to the glossary.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory element:
+  — Where evidence-based CPGs are unavailable or adaptation is not feasible, sound
+    clinical practices shall guide care — this establishes a mandatory fallback (shall).
+  — The OE itself uses "implements" — adoption and use of CPGs and/or protocols is
+    required, not optional.
+
+Non-mandatory (illustrative):
+  — National and International professional organisation CPGs may be used — the
+    source uses "may", meaning these are permissible but not the exclusive source.
+  — Government of India STGs are described as "a good starting point" — recommended,
+    not prescribed.
+  — The organisation selects appropriate CPGs for its own scope of services; no specific
+    CPG titles or clinical topics are mandated by the OE or Guidebook.
+
+Definitions: "evidence-based medicine" and "clinical practice guidelines" are in the
+Glossary — do not fabricate or paraphrase these in the policy body.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.1.d
+Level: Excellence | No star
+
+Verbatim OE text:
+Clinical care pathways are developed, consistently followed across all settings of care,
+and reviewed periodically.
+
+Guidebook interpretation (PDF p. 101):
+Clinical care pathways shall be multidisciplinary, and based on the evidence and/or
+best clinical practices which provides detailed guidance at various stages of care. At
+a minimum the organisation shall develop two clinical care pathways every year. The
+clinical care pathways shall be reviewed and updated annually.
+
+Stop-work check: Excellence — no stop-work trigger.
+
+Mandatory (shall) elements:
+  1. Pathways shall be multidisciplinary.
+  2. Pathways shall be based on evidence and/or best clinical practices.
+  3. At a minimum, two clinical care pathways shall be developed every year — exact
+     minimum quantity: two per year. Preserve this verbatim; do not soften to "some"
+     or "a number of".
+  4. Pathways shall be reviewed and updated annually — exact mandatory frequency.
+
+Non-mandatory:
+  — The specific clinical topics for the pathways are for the organisation to select.
+  — "Detailed guidance at various stages of care" describes the required depth of a
+    pathway, not a mandatory template format.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.1.e
+Level: Excellence | No star
+
+Verbatim OE text:
+Multi-disciplinary and multi-speciality care, where appropriate, is planned based on
+best clinical practices / clinical practice guidelines and delivered in a uniform manner
+across the organisation.
+
+Guidebook interpretation (PDF p. 101):
+Whenever the patient's clinical condition warrants care from multiple disciplines for
+example doctors, nurses, rehabilitation specialist, dietician, psychologist, etc and/or
+multiple specialties for example cardiology, endocrinology, surgery, internal medicine;
+multidisciplinary and multi-speciality care plan shall be charted out based on
+established best clinical practices/clinical practice guidelines for the specific
+clinical condition. An integrated care plan, including medical professional, nursing,
+nutritional, supportive care professionals, shall be developed and implemented
+appropriately by the representatives of various disciplines and specialities.
+
+Some examples of scenarios where multidisciplinary care plan is required are care of
+a cancer patient to be determined by a multi-disciplinary tumour board; care of
+transplant patients; diabetes patient to be cared for by multiple specialists to prevent
+and manage end-organ damage; palliative/end-of-life care to be provided to terminally
+ill patients; long-stay patients.
+
+Refer to PRE.3.e.
+
+Stop-work check: Excellence — no stop-work trigger.
+
+Mandatory (shall) elements, triggered by clinical need:
+  — When clinical condition warrants multi-disciplinary/multi-speciality involvement,
+    the care plan shall be charted out based on established best clinical
+    practices/CPGs — mandatory (shall).
+  — An integrated care plan shall be developed and implemented by representatives of
+    the relevant disciplines and specialities — mandatory (shall).
+
+Trigger condition: "where appropriate" / "whenever the patient's clinical condition
+warrants" — the OE is clinically triggered, not blanket. The policy must reflect this
+conditionality — not state that all patients get multi-disciplinary plans regardless
+of clinical need.
+
+Non-mandatory (illustrative):
+  — The examples of disciplines (doctors, nurses, rehabilitation, dietician,
+    psychologist) and specialties (cardiology, endocrinology, surgery, internal
+    medicine) are illustrative, not an exhaustive or mandatory composition list.
+  — The clinical scenarios (cancer patient, transplant, diabetes, palliative, long-stay)
+    are examples of when multi-disciplinary planning is triggered — not a closed list
+    of the only situations requiring it.
+
+Cross-reference: PRE.3.e.
+
+
+─────────────────────────────────────────────────────────────────────────────
+COP.1.f
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Telemedicine facility is provided safely and securely based on written guidance.*
+
+Guidebook interpretation (PDF p. 102):
+Whenever the telemedicine facility is provided, the organisation shall develop written
+guidance in consonance with prevailing laws and guidelines and implement the same. The
+written guidance shall include protection of the patient's identity and confidentiality.
+The limitations of information and communication technologies shall be explicitly
+addressed. The organisation shall have a mechanism for appropriate data storage and
+retrieval.
+
+The organisation shall have an MoU for its telemedicine services if outsourced.
+
+Reference: Telemedicine Practice ICMR Guidelines, 2020, MoHFW.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+CONDITIONAL OE: This OE applies only where the organisation provides telemedicine
+services. The Guidebook uses "whenever the telemedicine facility is provided" as the
+applicability condition. If the organisation does not offer telemedicine, this OE does
+not generate requirements, but the policy must state the applicability condition
+explicitly rather than omitting the OE entirely.
+
+Mandatory (shall) elements where telemedicine is provided:
+  1. Written guidance shall be developed in consonance with prevailing laws and
+     guidelines and implemented — mandatory (shall); guidance must be active, not
+     merely drafted.
+  2. Written guidance shall include protection of patient identity and confidentiality —
+     mandatory content element (shall).
+  3. ICT limitations shall be explicitly addressed in the written guidance — mandatory
+     (shall); "explicitly" is the source word, meaning a general statement of
+     confidentiality does not satisfy this.
+  4. A mechanism for appropriate data storage and retrieval shall exist — mandatory
+     (shall).
+  5. An MoU shall exist if telemedicine services are outsourced — mandatory where
+     applicable.
+
+Non-mandatory:
+  — The Telemedicine Practice ICMR Guidelines, 2020, MoHFW, are referenced as an
+    external source — the organisation is guided by them but the OE does not
+    explicitly mandate compliance with any specific clause of that document. The policy
+    may reference the guidelines but should not enumerate specific clauses as
+    mandatory NABH requirements.
+
+Documentation: This OE is starred — the written guidance is the required documentation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table
+
+OE   Level        Star   CORE   Stop-work   Key constraint
+a    Commitment   Yes★   No     No          Uniform care across all settings and patient
+                                            categories (shall); not payment-dependent; written
+                                            guidance required; examples are illustrative not
+                                            a mandatory checklist; cross-ref AAC.4/5, PRE.4
+b    CORE         No     Yes    No*         Uniform identification process across organisation
+                                            (shall); at least two identifiers for any care
+                                            aspect (shall — exact minimum); one identifier
+                                            shall be registration-number (shall); applies in
+                                            imaging, diagnostics, therapeutic, transfusion,
+                                            day care, nutrition; specific mechanism is
+                                            organisation's choice; cross-ref AAC.2.b
+                                            * CORE non-compliance, but no stop-work authority
+                                            section (COP.1 is not in STOP_WORK_PROPOSALS)
+c    Commitment   No     No     No          Organisation implements CPGs and/or protocols;
+                                            where unavailable/not feasible, sound clinical
+                                            practices shall guide care (shall — fallback);
+                                            national/international CPGs and GoI STGs are
+                                            permissible sources (may/starting point), not
+                                            prescribed; no specific CPG titles mandated;
+                                            glossary defines key terms
+d    Excellence   No     No     No          Pathways shall be multidisciplinary (shall);
+                                            evidence/best-practice based (shall); minimum
+                                            two per year (shall — exact minimum, preserve);
+                                            reviewed and updated annually (shall — exact
+                                            frequency); topics are organisation's choice
+e    Excellence   No     No     No          Multi-disciplinary care plan shall be charted
+                                            when clinical condition warrants (shall —
+                                            clinically triggered, not blanket); integrated
+                                            plan by relevant disciplines/specialities (shall);
+                                            examples of disciplines and scenarios are
+                                            illustrative not exhaustive; conditionality
+                                            "where appropriate" must appear in policy;
+                                            cross-ref PRE.3.e
+f    Commitment   Yes★   No     No          CONDITIONAL — applies only where telemedicine
+                                            is provided; written guidance shall be developed
+                                            and implemented (shall); guidance shall include
+                                            patient identity/confidentiality protection and
+                                            explicit ICT-limitation addressing (shall);
+                                            data storage/retrieval mechanism (shall); MoU
+                                            if outsourced (shall where applicable);
+                                            ICMR Telemedicine Guidelines 2020 are reference
+                                            not prescribed-clause list; written guidance is
+                                            starred documentation
+
+
+─────────────────────────────────────────────────────────────────────────────
+DRAFTING NOTES
+─────────────────────────────────────────────────────────────────────────────
+
+1. TWO EXACT QUANTITIES TO PRESERVE VERBATIM:
+   — COP.1.b: "at least two identifiers" — do not weaken to "multiple" or "adequate"
+   — COP.1.d: "at least two clinical care pathways every year" — do not weaken to
+     "a number of" or "some"
+
+2. TWO EXACT FREQUENCIES TO PRESERVE VERBATIM:
+   — COP.1.d: "reviewed and updated annually"
+   (No other mandatory frequency in this standard)
+
+3. CONDITIONAL OE (COP.1.f): The policy must include an applicability statement for
+   COP.1.f: "This section applies where [Hospital Name] provides telemedicine services."
+   Do not write COP.1.f requirements as unconditional obligations applying to all
+   hospitals.
+
+4. ILLUSTRATION vs. OBLIGATION:
+   — COP.1.a: the examples of uniformity (OPD categories, discharge decisions, etc.)
+     are "for example" illustrations, not a mandatory audit checklist.
+   — COP.1.c: no specific CPG titles are mandated; the organisation selects appropriate
+     ones for its scope.
+   — COP.1.e: the lists of disciplines and clinical scenarios are illustrative, not
+     exhaustive or mandatory compositions.
+   — COP.1.f: Telemedicine Practice ICMR Guidelines, 2020, are a reference source —
+     do not enumerate specific clauses as mandatory NABH requirements.
+
+5. EXCELLENCE LEVEL (COP.1.d, COP.1.e): These OEs are Excellence level — the highest
+   tier. The policy should cover them but should not present them as basic NABH
+   compliance elements at the same weight as CORE or Commitment OEs. The traceability
+   table and checklist should note the Excellence level.
+
+6. CROSS-REFERENCES in the Guidebook:
+   — AAC.4 and AAC.5: care planning (COP.1.a)
+   — PRE.4: patient rights, equitable care (COP.1.a)
+   — AAC.2.b: patient identification (COP.1.b)
+   — PRE.3.e: multi-disciplinary care (COP.1.e)
+   These should appear as cross-references in traceability or scope, not reproduced
+   as COP.1 obligations.
+
+
+─────────────────────────────────────────────────────────────────────────────
+
+Source files:
+  policies/source/hco6_cop_ocr.txt          (verbatim OE text + Guidebook, PDF pp. 100–102)
+  policies/source/hco6_cop_inventory.json    (levels, stars, OE codes)
+  policies/build/hco_cop_v2_common.py        (STOP_WORK_PROPOSALS — confirms COP.1 absent)

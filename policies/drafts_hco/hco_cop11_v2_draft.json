@@ -1,0 +1,147 @@
+{
+  "standard_code": "COP.11",
+  "chapter": "HCO",
+  "oe_codes": [
+    "COP.11.a",
+    "COP.11.b",
+    "COP.11.c",
+    "COP.11.d",
+    "COP.11.e",
+    "COP.11.f",
+    "COP.11.g",
+    "COP.11.h"
+  ],
+  "policy_title": "Safe Paediatric Services",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard COP.11: Organisation provides safe paediatric services.\n\nThis policy covers all 8 requirements under this standard, listed in detail below.\n\nThis policy covers safe paediatric services specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to staff who deliver or oversee the care described in COP.11 at {{HOSPITAL_NAME}}, including the «Paediatric In-Charge», treating doctors, nurses and the Quality Coordinator.\n\nThis policy covers all 8 requirements under this standard, listed in detail below.\n\nThis policy covers safe paediatric services specifically. Related duties — like patient assessment, patient rights, infection control, staffing, or medication management — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials.",
+  "policy_statement": "{{HOSPITAL_NAME}} implements COP.11 so that organisation provides safe paediatric services..\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work triggers fire (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Paediatric services are organised and provided safely\n\nPaediatric services are organised and provided safely.\n\nMethod note (from guidebook interpretation): Ante-natal examination(s) shall guide the early identification of",
+    "5.2 Neonatal care is in consonance with the national / international..\n\nNeonatal care is in consonance with the national / international guidelines.\n\nMethod note (from guidebook interpretation): These shall not just be doctors but shall include nursing staff also.",
+    "5.3 Those who care for children have age-specific competency\n\nThose who care for children have age-specific competency.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.4 Provisions are made for special care of children\n\nProvisions are made for special care of children.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.5 Paediatric assessment includes growth, developmental, immunisation and..\n\nPaediatric assessment includes growth, developmental, immunisation and nutritional assessment.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.6 The organisation has measures in place to prevent child / neonate..\n\nThe organisation has measures in place to prevent child / neonate abduction and abuse.\n\nMethod note (from guidebook interpretation): The treating doctor or team member/ doctor shall explain danger",
+    "5.7 The child’s family members are educated about nutrition, immunisation..\n\nThe child’s family members are educated about nutrition, immunisation and safe parenting.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element.",
+    "5.8 The organisation provides for adolescent friendly health care services\n\nThe organisation provides for adolescent friendly health care services.\n\nStaff follow the written guidance and record the action in the medical record or the department register named for this element."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that COP.11 is resourced and followed.\n\nPaediatric In-Charge\n- Owns day-to-day implementation and records for this standard.\n\nTreating doctors / nurses / technicians (as applicable)\n- Deliver care as written; escalate stop-work triggers without delay.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Care of Patients, standard COP.11.\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — COP.11 interpretations (source PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).\n- Internal documents of {{HOSPITAL_NAME}}: written guidance and registers named for COP.11.",
+  "distribution": "Medical Superintendent; Paediatric In-Charge; Quality Coordinator; department clinical staff covered by COP.11",
+  "abbreviations": "COP — Care of Patients (NABH Hospitals chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — Objective Element\nCORE — Core objective element (NABH)\nRCA — Root Cause Analysis\nCAPA — Corrective and Preventive Action",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "COP.11.a",
+      "requirement": "Paediatric services are organised and provided safely.",
+      "steps": "Section 3; 5.1",
+      "responsible": "Paediatric In-Charge",
+      "records": [
+        "Written paediatric-service organisation document.",
+        "Safety-protocol compliance record.",
+        "Staff-competency record."
+      ]
+    },
+    {
+      "oe_code": "COP.11.b",
+      "requirement": "Neonatal care is in consonance with the national / international guidelines.",
+      "steps": "Section 3; 5.2",
+      "responsible": "Paediatric In-Charge",
+      "records": [
+        "National or international neonatal-care guideline reference.",
+        "Neonatal-care protocol compliance record.",
+        "Staff-training record on the guidelines."
+      ]
+    },
+    {
+      "oe_code": "COP.11.c",
+      "requirement": "Those who care for children have age-specific competency.",
+      "steps": "Section 3; 5.3",
+      "responsible": "Paediatric In-Charge",
+      "records": [
+        "Age-specific competency-training record for staff caring for children.",
+        "Competency-verification record.",
+        "Training-currency record."
+      ]
+    },
+    {
+      "oe_code": "COP.11.d",
+      "requirement": "Provisions are made for special care of children.",
+      "steps": "Section 3; 5.4",
+      "responsible": "Paediatric In-Charge",
+      "records": [
+        "Special-care facility or equipment record for children.",
+        "Provision-adequacy check.",
+        "Age-appropriate-care record."
+      ]
+    },
+    {
+      "oe_code": "COP.11.e",
+      "requirement": "Paediatric assessment includes growth, developmental, immunisation and nutritional assessment.",
+      "steps": "Section 3; 5.5",
+      "responsible": "Paediatric In-Charge",
+      "records": [
+        "Paediatric assessment record covering growth, development, immunisation and nutrition.",
+        "Assessment-completeness check.",
+        "Growth-chart documentation."
+      ]
+    },
+    {
+      "oe_code": "COP.11.f",
+      "requirement": "The organisation has measures in place to prevent child / neonate abduction and abuse.",
+      "steps": "Section 3; 5.6",
+      "responsible": "Paediatric In-Charge",
+      "records": [
+        "Written child or neonate security measures — access control, identification bands, alarm systems.",
+        "Abduction-drill record.",
+        "Abuse-identification and reporting record."
+      ]
+    },
+    {
+      "oe_code": "COP.11.g",
+      "requirement": "The child’s family members are educated about nutrition, immunisation and safe parenting.",
+      "steps": "Section 3; 5.7",
+      "responsible": "Paediatric In-Charge",
+      "records": [
+        "Family-education record on nutrition, immunisation and safe parenting.",
+        "Education-material record.",
+        "Documentation of education delivered."
+      ]
+    },
+    {
+      "oe_code": "COP.11.h",
+      "requirement": "The organisation provides for adolescent friendly health care services.",
+      "steps": "Section 3; 5.8",
+      "responsible": "Paediatric In-Charge",
+      "records": [
+        "Adolescent-friendly service provision record.",
+        "Dedicated space or counselling record for adolescents.",
+        "Staff-training record on adolescent-friendly care."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO COP.11 v2 (2026-08-20). Official Standards PDF OE count 8; levels from portal text-layer matrix (COP.13.b/c corrected to body: b=CORE, c=Commitment). Asterisked: abf. CORE: none. Achievement: none. Excellence: h.\nStop-work: omitted.\ndraft_label='HCO Full v2 draft' via hco_document_control (no 'not an approved master' leftover). chapter=HCO. doc_no HCO/COP/POL/11.\nDo not touch AAC.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "HCO Full 6th Edition COP.11 v2 draft from official Standards PDF + guidebook OCR; draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Organisation provides safe paediatric services.",
+  "exceptions": "1. Do not skip: Paediatric services are organised and provided safely.\n2. Do not skip: Neonatal care is in consonance with the national / international guidelines.\n3. Do not skip: Those who care for children have age-specific competency.\n4. Do not skip: Provisions are made for special care of children.\n5. Do not skip: Paediatric assessment includes growth, developmental, immunisation and nutritional assessment.\n6. Do not skip: The organisation has measures in place to prevent child / neonate abduction and abuse.\n7. Do not skip: The child’s family members are educated about nutrition, immunisation and safe parenting.\n8. Do not skip: The organisation provides for adolescent friendly health care services.\n9. Staff who see a COP.11 rule broken report it the same shift to the «department in-charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related adverse event.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Safe Paediatric Services policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/COP/POL/11»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Paediatric In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«Paediatric In-Charge»",
+  "template_test": "hco_cop_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — COP.11.",
+  "doc_no": "«HCO/COP/POL/11»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.COP.11",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

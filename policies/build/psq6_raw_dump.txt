@@ -1,0 +1,196 @@
+PSQ.6 — Raw Source Dump
+=======================
+
+Standard text (verbatim):
+The patient safety and quality improvement programme are supported by the
+management.
+
+OE count: 6 | COREs: none | Stars: none
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.6.a
+Level: Achievement | No star
+
+Verbatim OE text:
+The management creates a culture of safety.
+
+Guidebook interpretation (PDF pp. 229–230):
+The management needs to ensure the adoption of behaviours that promote patient
+safety. Some of the key features required for a culture of safety are sharing
+information, reporting occurrences of incidents, learning from safety incident
+analysis, blame-free culture and encouragement of collaboration across
+disciplines and departments. The key components of patient safety culture are
+informed culture, reporting culture, learning culture, just culture and flexible
+culture.
+
+The management needs to measure its safety culture regularly (at least once a
+year). This shall be measured using validated surveys. For example, the
+Manchester Patient Safety Framework (MaPSaF), Safety Attitudes Questionnaire,
+AHRQ Surveys on Patient Safety Culture (SOPS™). The management shall act on
+their patient safety culture assessment results.
+
+Stop-work check: Achievement — no stop-work trigger. Two mandatory (shall)
+actions: measure safety culture at least once a year using validated surveys,
+and act on the assessment results. The survey instruments (MaPSaF, SAQ, AHRQ
+SOPS) are illustrative examples — the organisation selects a validated survey
+appropriate to it. The five culture components (informed, reporting, learning,
+just, flexible) and the five safety-culture features (sharing information,
+reporting incidents, learning from analysis, blame-free culture, collaboration)
+describe the target state — they are not a mandatory enumerated checklist.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.6.b
+Level: Commitment | No star
+
+Verbatim OE text:
+The leaders at all levels in the organisation are aware of the intent of the
+patient safety and quality improvement programme and the approach to its
+implementation.
+
+Guidebook interpretation (PDF p. 229):
+The organisation and departmental leaders are aware of the patient safety and
+quality improvement programme, its intent and applicability to the respective
+areas and how it contributes to the organisation as a whole.
+
+Stop-work check: Commitment — no stop-work trigger. Awareness is required; no
+specific mechanism for ensuring awareness is mandated. Any draft describing
+mandatory awareness briefings, signed acknowledgements or documented
+orientation must treat these as examples of how awareness may be achieved, not
+as source-prescribed requirements.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.6.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Departmental leaders are involved in patient safety and quality improvement.
+
+Guidebook interpretation (PDF p. 229):
+To effectively implement this, each department could have its department
+objectives/key performance indicators including clinical indicators, and the
+responsibility of achieving them could be that of the leader/designated person.
+This could be discussed during departmental meeting.
+
+Stop-work check: Commitment — no stop-work trigger. All three mechanisms
+(department KPIs, leader/designated-person responsibility, departmental-meeting
+discussion) are illustrative (could) — none is mandated. The requirement is
+that departmental leaders are involved; the form of that involvement is for the
+organisation to determine.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.6.d
+Level: Commitment | No star
+
+Verbatim OE text:
+Organisation earmarks adequate funds from its annual budget in this regard.
+
+Guidebook interpretation (PDF p. 230):
+Appropriate fund allocation is done by the organisation for the smooth
+functioning of the patient safety and quality improvement programme. The budget
+could be earmarked based on previous year's spending. If no data is available,
+the organisation could make a beginning by earmarking a budget but reviewing it
+at the end of six months to make any necessary modifications. The management
+makes available adequate resources required for patient safety and quality
+improvement programme. Resources shall include men, material, machine, money,
+milieu, measurement and method. These shall be in steady supply to ensure that
+the programme functions smoothly.
+
+Stop-work check: Commitment — no stop-work trigger. Two mandatory (shall)
+elements: resources shall include the seven categories (men, material, machine,
+money, milieu, measurement and method), and these shall be in steady supply.
+The previous-year-spending basis and the six-month-review mechanism are
+advisory (could). The seven-M resource list is verbatim in the source and must
+be preserved — it is not an invention.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.6.e
+Level: Achievement | No star
+
+Verbatim OE text:
+The management identifies organisational performance improvement targets.
+
+Guidebook interpretation (PDF p. 230):
+The management shall identify the organisation and department level quality
+objectives, set targets, monitor them (at least once in three months) and
+modify the target (at least annually). The targets shall be shared with the
+faculty and staff and regular feedback taken.
+
+Stop-work check: Achievement — no stop-work trigger. Four mandatory (shall)
+actions: identify objectives, set targets, monitor them (at least once in three
+months), and modify them (at least annually). Sharing with faculty and staff is
+also mandatory (shall). Two exact frequencies — "at least once in three months"
+and "at least annually" — are verbatim in the source and must be preserved
+without softening.
+
+
+─────────────────────────────────────────────────────────────────────────────
+PSQ.6.f
+Level: Excellence | No star
+
+Verbatim OE text:
+The management uses the feedback obtained from the work force to improve
+patient safety and quality improvement programme.
+
+Guidebook interpretation (PDF p. 230):
+The feedback shall be obtained from the staff on their understanding and use of
+the safety and quality systems. Feedback may be obtained once a year through
+staff surveys, but it is also important that staff workforce feel able to raise
+concerns whenever they occur. These inputs shall be used to improve patient
+safety and quality improvement programmes.
+
+Stop-work check: Excellence — no stop-work trigger. Two mandatory (shall)
+elements: obtain feedback from staff on their understanding and use of safety
+and quality systems, and use those inputs to improve the programmes. The annual
+staff survey is described with "may be obtained" — it is a recommended
+frequency/mechanism, not a mandatory prescription. Enabling staff to raise
+concerns at any time is described as important but not with shall — it is an
+additional good-practice pointer.
+
+
+─────────────────────────────────────────────────────────────────────────────
+Summary Table
+
+OE   Level        Star   Stop-work   Key constraint
+a    Achievement  No     No          Safety culture measured at least once a year
+                                     (shall) using validated surveys (instrument is
+                                     organisation's choice); management shall act on
+                                     results; culture features/components are
+                                     descriptive, not a mandatory enumerated list
+b    Commitment   No     No          Leaders at all levels aware of programme intent
+                                     and applicability; mechanism for ensuring
+                                     awareness is not prescribed — organisation
+                                     decides how
+c    Commitment   No     No          Departmental leaders involved; all three
+                                     guidebook mechanisms (KPIs, leader
+                                     responsibility, department meeting) are
+                                     illustrative (could) — form of involvement is
+                                     organisation's choice
+d    Commitment   No     No          Resources shall include the seven Ms (men,
+                                     material, machine, money, milieu, measurement,
+                                     method) and shall be in steady supply — seven-M
+                                     list is verbatim source, not invented; budget
+                                     basis and six-month review are advisory (could)
+e    Achievement  No     No          Identify objectives, set targets, monitor at
+                                     least once in three months (shall — preserve
+                                     exact frequency), modify at least annually
+                                     (shall — preserve exact frequency); share with
+                                     faculty/staff (shall)
+f    Excellence   No     No          Obtain staff feedback on safety/quality system
+                                     understanding and use (shall); use inputs to
+                                     improve programmes (shall); annual survey is
+                                     recommended (may be) not mandated; staff
+                                     raising concerns at any time is good practice,
+                                     not a shall
+
+
+─────────────────────────────────────────────────────────────────────────────
+
+Source files:
+  policies/source/hco6_psq_ocr.txt          (verbatim OE text)
+  policies/source/hco6_psq_guidebook_ocr.txt (Guidebook interpretations, PDF pp. 229–230)
+  policies/source/hco6_psq_inventory.json    (levels, stars, OE codes)

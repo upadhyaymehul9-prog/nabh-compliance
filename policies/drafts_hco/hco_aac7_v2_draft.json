@@ -1,0 +1,132 @@
+{
+  "standard_code": "AAC.7",
+  "chapter": "HCO",
+  "oe_codes": [
+    "AAC.7.a",
+    "AAC.7.b",
+    "AAC.7.c",
+    "AAC.7.d",
+    "AAC.7.e",
+    "AAC.7.f",
+    "AAC.7.g"
+  ],
+  "policy_title": "Laboratory Quality Assurance and Safety Programme",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} implements a laboratory quality assurance programme covering point-of-care testing (POCT), pre-analytic, analytic and post-analytic phases, internal quality control (IQC), external quality assurance (EQA) / proficiency testing (PT), calibration, corrective and preventive action (CAPA), clinico-pathological meetings, and a laboratory safety programme with Material Safety Data Sheets (MSDS), training and appropriate safety measures including personal protective equipment (PPE) and immunisation.\n\nThe chapter intent is that laboratory services are quality-assured and safe for staff and patients.\n\nThis policy owns laboratory QA and laboratory safety (AAC.7). AAC.6 owns laboratory service scope, specimen journey, TAT, critical results, reporting and outsourcing. Organisation-wide safety and infection-control programmes own hospital-level alignment; this policy aligns the laboratory programme with them.\n\nIQC — internal quality control. EQA — external quality assurance. PT — proficiency testing. POCT — point-of-care testing. MSDS — Material Safety Data Sheet. PPE — personal protective equipment. Words marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to the laboratory in-charge, pathologist, microbiologist, biochemist, laboratory technologists, POCT operators outside the central laboratory where laboratory QA covers them, and the Quality Coordinator at {{HOSPITAL_NAME}}.\n\nIt covers the seven objective elements AAC.7.a–g: QA programme implementation; IQC; PT/EQA participation; clinico-pathological meetings; laboratory safety programme; training in safe practices; appropriate safety measures.\n\nBoundaries:\n\n- AAC.6 owns service delivery (menu, specimen process, TAT, critical intimation, reporting, outsourcing). Quality failures discovered under this policy feed AAC.6 recall/amendment when a released report is wrong.\n- Organisation safety / occupational health documents own hospital-wide safety governance; this laboratory safety programme is aligned with them and does not replace them.\n- HIC owns hospital infection-control and biomedical-waste streams; laboratory PPE and standard precautions here are the laboratory application of those duties.\n- ISO 15189:2022 and NABL 112 are guidance references for the QA programme, not this policy’s disclaimer statutes.\n- Spell out: internal quality control (IQC), external quality assurance (EQA), proficiency testing (PT), point-of-care testing (POCT), Material Safety Data Sheet (MSDS), personal protective equipment (PPE), corrective and preventive action (CAPA).",
+  "policy_statement": "{{HOSPITAL_NAME}} implements a documented laboratory quality assurance programme that covers POCT and the pre-analytic, analytic and post-analytic phases; uses IQC to ensure quality of test results; participates in PT/EQA or documented alternate approaches where formal PT is unavailable; documents CAPA for deviations; conducts clinico-pathological meetings at defined intervals; and implements a laboratory safety programme with MSDS, staff training and appropriate safety measures including PPE, immunisation and standard precautions, aligned with the organisation’s safety programme.\n\n{{HOSPITAL_NAME}} does not release patient results from a measuring system that has failed IQC without documented override and CAPA, and does not leave laboratory staff without required PPE and safety training for the work they perform.",
+  "procedure_steps": [
+    "5.1 Laboratory quality assurance programme\n\nThe laboratory quality assurance programme is implemented. The organisation has a documented programme to ensure accuracy and precision. The programme includes point-of-care testing (POCT).\n\nWritten guidance covers pre-analytic, analytic and post-analytic phases of the testing cycle. The programme includes test standardisation, internal quality control and external quality assurance or inter-laboratory testing as applicable. There is a mechanism to obtain feedback from stakeholders to evaluate laboratory services at least once a year.\n\nThe programme addresses verification and/or validation of test methods. It includes periodic calibration and maintenance of equipment. It includes documentation of corrective and preventive actions whenever deviations are observed.\n\nISO 15189:2022 and NABL 112 are good reference guides for designing and reviewing this programme; they are guidance, not a substitute for this hospital’s documented SOPs.\n\nThe laboratory in-charge owns the programme document; the Quality Coordinator reviews it «annually».",
+    "5.2 Internal quality control\n\nThe programme ensures the quality of test results through internal quality control.\n\nEnsuring quality includes performing IQC to ensure precision and repeatability for all test parameters (quantitative and qualitative) and peer review where relevant. The programme includes comparability of results when more than one measuring system is used.\n\nNABL 112 is a good reference guide. Corrective and preventive actions are taken to address deviations. Patient results for a parameter with failed IQC are not released until IQC is acceptable or a documented override authorised by the «Laboratory In-Charge or supervising Pathologist/Biochemist/Microbiologist» is recorded with CAPA.\n\nIQC schedules and acceptance criteria are defined per analyte in the QA manual. IQC records are retained «for the period defined in the laboratory record-retention schedule».",
+    "5.3 Proficiency testing and external quality assurance\n\nThe laboratory participates in proficiency testing / external quality assurance schemes. Based on the EQA/PT evaluation report, the laboratory implements and documents corrective actions for outliers.\n\nWhere formal EQA/PT is not a practical option — for example non-availability of a formal national PT programme for the analyte; only few laboratories performing the test; unstable analyte (for example blood gases, ammonia, G6PD); or control material of the same matrix not available — the laboratory adopts alternate approaches to validate performance. Alternate approaches may include replicate testing, examination of split samples within the laboratory, use of reference methods and materials where available, and exchange of samples with other accredited laboratories for inter-laboratory comparisons.\n\nNABL 112 is a good reference guide. The laboratory in-charge keeps an enrolment matrix showing which analytes use formal PT and which use alternate approaches.",
+    "5.4 Clinico-pathological meetings\n\nThe programme addresses clinico-pathological meeting(s). The organisation conducts clinico-pathological meetings at pre-defined intervals for correlating histopathology reports with referring clinicians and uses them as a tool for improving quality.\n\nMeetings are scheduled «at least quarterly» unless the Medical Superintendent defines a different interval suited to case volume. Minutes record cases discussed, correlations, discrepancies and actions. Actions feed CAPA under section 5.1 where quality-system change is required.",
+    "5.5 Laboratory safety programme\n\nThe laboratory safety programme is implemented. A laboratory safety manual is available in the laboratory. It addresses safety of the workforce and of equipment, in consonance with identified risks and hazards. The manual incorporates appropriate Material Safety Data Sheets (MSDS).\n\nThe safety programme includes safe handling of equipment and accessories including their disinfection. The programme may follow an Occupational Health and Safety Management System approach. It is aligned with the organisation’s safety programme.\n\nThe laboratory in-charge reviews the safety manual «annually» and after any significant incident or new hazardous reagent introduction.",
+    "5.6 Training in safe practices\n\nLaboratory personnel are appropriately trained in safe practices. All laboratory staff undergo training regarding safe practices in the laboratory and in the relevant MSDS. Training-need identification is commensurate with the job description of the staff.\n\nTraining is provided at induction and «annually», and when new hazards or equipment are introduced. Training records are held by the laboratory in-charge.",
+    "5.7 Appropriate safety measures\n\nLaboratory personnel are provided with appropriate safety measures. Adequate safety measures are available in the laboratory — for example PPE, dressing materials, disinfectants, fire extinguishers — addressing safety issues at all levels.\n\nAll laboratory personnel always adhere to standard precautions. All laboratory staff are appropriately immunised («hepatitis B at minimum; other immunisations as per the organisation occupational-health schedule»).\n\nPPE for routine work includes «gloves, laboratory coat, eye protection, and face shield where splash risk exists». Spill kits are available and staff are trained in their use."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that laboratory QA and safety programmes are resourced and aligned with organisation safety.\n\nLaboratory In-Charge\n- Authors and keeps current the QA programme, IQC/EQA matrix, safety manual, MSDS set, training records and CAPA log.\n\nPathologist / Microbiologist / Biochemist\n- Supervise technical quality in their disciplines; authorise IQC overrides; contribute to clinico-pathological meetings.\n\nLaboratory technologists and POCT operators\n- Perform IQC as scheduled; follow safety manual and PPE rules; report deviations the same shift.\n\nQuality Coordinator\n- Audits this policy «quarterly»; tracks CAPA to closure; reviews annual stakeholder feedback on laboratory services.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Guidebook to Accreditation Standards for Hospitals, 6th Edition — Access, Assessment and Continuity of Care chapter, standard AAC.7 (PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).\n- ISO 15189:2022 — Medical laboratories — Requirements for quality and competence (guidance).\n- NABL 112 — Specific criteria for accreditation of medical laboratories (guidance).\n- Internal documents of {{HOSPITAL_NAME}}: laboratory QA manual; IQC/EQA records; calibration and maintenance logs; laboratory safety manual and MSDS file; clinico-pathological meeting minutes; organisation safety programme; occupational-health immunisation records.",
+  "distribution": "Official master copy: office of the Medical Superintendent, {{HOSPITAL_NAME}}, with the Quality Coordinator.\n\nCopies issued to: laboratory; POCT locations covered by this programme; nursing administration for ward-based POCT operators.\n\nThe current version is available to all staff at the «front-office policy file» and, if the hospital keeps an intranet, at «staff intranet / policies».\n\nWhen a new version is issued, take old copies out of use.",
+  "abbreviations": "AAC — Access, Assessment and Continuity of Care (NABH HCO chapter)\nCAPA — corrective and preventive action\nEQA — external quality assurance\nHCO — Hospital (Full Accreditation programme)\nIQC — internal quality control\nMSDS — Material Safety Data Sheet\nNABL — National Accreditation Board for Testing and Calibration Laboratories\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nOE — objective element\nPOCT — point-of-care testing\nPPE — personal protective equipment\nPT — proficiency testing\nQA — quality assurance",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "AAC.7.a",
+      "requirement": "The laboratory quality assurance programme is implemented.",
+      "steps": "Section 3; 5.1 Laboratory quality assurance programme; Section 4 items 1–2",
+      "responsible": "Laboratory In-Charge (own programme); Quality Coordinator (annual review)",
+      "records": [
+        "Documented QA programme covering POCT and pre-/analytic/post-analytic phases.",
+        "Method verification/validation records; calibration and maintenance schedule.",
+        "Annual stakeholder feedback on laboratory services; CAPA for deviations."
+      ]
+    },
+    {
+      "oe_code": "AAC.7.b",
+      "requirement": "The programme ensures the quality of test results through Internal quality control.",
+      "steps": "Section 3; 5.2 Internal quality control; Section 4 item 2",
+      "responsible": "Laboratory technologists (perform IQC); Laboratory In-Charge (CAPA); supervising Pathologist/Biochemist/Microbiologist (overrides)",
+      "records": [
+        "IQC schedules and results for quantitative and qualitative parameters.",
+        "Comparability records when more than one measuring system is used.",
+        "CAPA and documented overrides for IQC failures."
+      ]
+    },
+    {
+      "oe_code": "AAC.7.c",
+      "requirement": "Laboratory participates in proficiency testing / external quality assurance scheme.",
+      "steps": "Section 3; 5.3 Proficiency testing and external quality assurance",
+      "responsible": "Laboratory In-Charge (enrolment and alternate approaches); Quality Coordinator (audit)",
+      "records": [
+        "PT/EQA enrolment matrix by analyte.",
+        "EQA/PT evaluation reports with corrective actions for outliers.",
+        "Documented alternate approaches where formal PT is unavailable."
+      ]
+    },
+    {
+      "oe_code": "AAC.7.d",
+      "requirement": "The programme addresses the clinico-pathological meeting(s).",
+      "steps": "Section 3; 5.4 Clinico-pathological meetings",
+      "responsible": "Pathologist (convene); referring clinicians (participate); Laboratory In-Charge (minutes)",
+      "records": [
+        "Meeting schedule at pre-defined intervals.",
+        "Minutes with cases, correlations and discrepancies.",
+        "Follow-up actions linked to quality improvement or CAPA."
+      ]
+    },
+    {
+      "oe_code": "AAC.7.e",
+      "requirement": "The laboratory safety programme is implemented.",
+      "steps": "Section 3; 5.5 Laboratory safety programme; Section 4 item 4",
+      "responsible": "Laboratory In-Charge (safety manual); Medical Superintendent (alignment with organisation safety)",
+      "records": [
+        "Laboratory safety manual available in the laboratory.",
+        "MSDS set for reagents in use.",
+        "Annual review record and alignment note with organisation safety programme."
+      ]
+    },
+    {
+      "oe_code": "AAC.7.f",
+      "requirement": "Laboratory personnel are appropriately trained in safe practices.",
+      "steps": "Section 3; 5.6 Training in safe practices; Section 4 item 5",
+      "responsible": "Laboratory In-Charge (training); staff (attend)",
+      "records": [
+        "Training-need identification by job description.",
+        "Induction and annual safe-practice training records.",
+        "MSDS training records for reagents handled by each role."
+      ]
+    },
+    {
+      "oe_code": "AAC.7.g",
+      "requirement": "Laboratory personnel are provided with appropriate safety measures.",
+      "steps": "Section 3; 5.7 Appropriate safety measures; Section 4 item 6",
+      "responsible": "Laboratory In-Charge (provide measures); staff (use PPE and standard precautions)",
+      "records": [
+        "PPE and safety-equipment inventory (including spill kit and extinguishers).",
+        "Immunisation records for laboratory staff.",
+        "Observation or audit notes on adherence to standard precautions."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO AAC.7 v2 (2026-08-20). PDF md5 2c4489ee98de4ae9b49cba168ea9f42a. Asterisked: a,b,e. Seven OEs, seven What-we-do subsections. Stop-work omitted. P2 accreditation-only. ISO 15189/NABL 112 as guidance only.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "20-08-2026",
+      "description": "HCO AAC.7 v2: lab QA and safety a–g from 6th Edition OCR; accreditation-only P2; no stop-work."
+    }
+  ],
+  "status": "draft",
+  "definitions": "There is an established laboratory quality assurance and safety programme — so that test results are accurate and precise, and laboratory staff work under documented safety controls aligned with the organisation’s safety programme.",
+  "exceptions": "1. Do not operate a test method without verification or validation as required by the QA programme.\n2. Do not ignore an IQC failure: stop patient reporting for the affected parameter until IQC is restored or a documented clinical override with CAPA is recorded.\n3. Do not skip scheduled PT/EQA enrolment for analytes where a formal programme exists and this hospital performs the test.\n4. Do not leave laboratory chemicals or hazards without accessible MSDS for the reagents in use.\n5. Do not allow laboratory personnel to work without induction training in safe practices and the relevant MSDS for their job.\n6. Do not work without required PPE or without documented immunisation status as required for laboratory staff.\n7. Staff who see a laboratory QA or safety rule broken report it the same shift to the «Laboratory In-Charge» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly».\n\nWhat is monitored each quarter:\n\n- QA programme document current; POCT included; method verification/validation records present.\n- IQC performance and CAPA for failures; multi-instrument comparability where applicable.\n- PT/EQA enrolment and outlier CAPA; alternate-approach records where PT unavailable.\n- Clinico-pathological meeting minutes and follow-up actions.\n- Laboratory safety manual and MSDS current; alignment with organisation safety.\n- Training and immunisation records complete.\n- PPE and safety equipment available and used.\n\nRoot-cause analysis is required when the same IQC failure mode or safety incident recurs within six months.\n\nThis policy is reviewed «annually», and sooner after a serious laboratory incident or major method change.",
+  "training_competency": "All laboratory staff and POCT operators covered by this programme are trained on this policy at induction and «once a year» after that. Training covers QA phases, IQC, PT/EQA, CAPA, the safety manual, MSDS relevant to their job, PPE and standard precautions.\n\nStaff acknowledgement\n\nI have read this Laboratory Quality Assurance and Safety Programme policy of {{HOSPITAL_NAME}}. I will follow the IQC, EQA, safety and PPE processes described.\n\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/AAC/POL/07»\nIssue number: «01»\nVersion: 2.0 (HCO AAC v2 draft — not an approved master)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «Laboratory In-Charge»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "stop_work": "",
+  "template_test": "hco_aac_v2_adoptable_shape",
+  "subtitle": "Laboratory quality assurance, IQC/EQA and safety.",
+  "doc_no": "«HCO/AAC/POL/07»",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.AAC.7",
+  "prepared_by": "«Laboratory In-Charge»"
+}

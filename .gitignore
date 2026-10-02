@@ -37,3 +37,9 @@ marketing/linkedin/post-log.json
 # Local agent skill plugins (vendored, contains contact PII in data/)
 .agents/
 AGENTS.md
+
+# Scanned NABH source PDFs (do not commit)
+policies/source/*.pdf
+
+# Copyrighted NABH source PDFs — do not commit
+policies/source/NABH-HCO-6th-Edition-Standards-Guidebook.pdf

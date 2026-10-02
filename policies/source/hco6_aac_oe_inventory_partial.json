@@ -1,0 +1,182 @@
+[
+  {
+    "code": "AAC.1",
+    "title": "The organisation defines and displays the healthcare services that it provides.",
+    "oes": [
+      {
+        "letter": "a",
+        "asterisk": false,
+        "level": "Commitment",
+        "text": "The healthcare services being provided are defined and are in consonance with the needs of the community."
+      },
+      {
+        "letter": "b",
+        "asterisk": false,
+        "level": "Commitment",
+        "text": "Each defined clinical service shall have diagnostic and treatment services with suitably qualified personnel who provide out-patient, in-patient, daycare and emergency cover."
+      },
+      {
+        "letter": "c",
+        "asterisk": true,
+        "level": "Commitment",
+        "text": "Scope of the clinical services of each department is defined."
+      },
+      {
+        "letter": "d",
+        "asterisk": false,
+        "level": "Commitment",
+        "text": "The organisation's defined clinical services are prominently displayed."
+      }
+    ]
+  },
+  {
+    "code": "AAC.2",
+    "title": "The organisation has a well-defined registration and admission process.",
+    "oes": [
+      {
+        "letter": "a",
+        "asterisk": true,
+        "level": "Commitment",
+        "text": "The organisation uses written guidance for registering and admitting patients."
+      },
+      {
+        "letter": "b",
+        "asterisk": false,
+        "level": "Core",
+        "text": "A unique identification number is generated at the end of the registration."
+      },
+      {
+        "letter": "c",
+        "asterisk": false,
+        "level": "Commitment",
+        "text": "Patients are accepted only if the organisation can provide the required service."
+      },
+      {
+        "letter": "d",
+        "asterisk": true,
+        "level": "Commitment",
+        "text": "The written guidance also addresses managing patients during non-availability of beds."
+      },
+      {
+        "letter": "e",
+        "asterisk": true,
+        "level": "Achievement",
+        "text": "Access to the healthcare services in the organisation is prioritised according to the clinical needs of the patient."
+      }
+    ]
+  },
+  {
+    "code": "AAC.3",
+    "title": "There is an appropriate mechanism for transfer (in and out) or referral of patients.",
+    "oes": [
+      {
+        "letter": "a",
+        "asterisk": true,
+        "level": "Commitment",
+        "text": "Transfer-in of patients to the organisation is done appropriately."
+      },
+      {
+        "letter": "b",
+        "asterisk": true,
+        "level": "Commitment",
+        "text": "Transfer-out / referral of patients to another facility is done appropriately."
+      },
+      {
+        "letter": "c",
+        "asterisk": false,
+        "level": "Commitment",
+        "text": "During transfer or referral, accompanying staff are appropriate to the clinical condition of the patient."
+      },
+      {
+        "letter": "d",
+        "asterisk": false,
+        "level": "Commitment",
+        "text": "The organisation gives a summary of the patient's condition and the treatment given."
+      }
+    ]
+  },
+  {
+    "code": "AAC.4",
+    "title": "Patients cared for by the organisation undergo an established initial assessment.",
+    "oes": [
+      {
+        "letter": "a",
+        "asterisk": true,
+        "level": "Core",
+        "text": "The initial assessment of the out-patients, daycare, in-patients and emergency patients is done in a standardised manner."
+      },
+      {
+        "letter": "b",
+        "asterisk": true,
+        "level": "Commitment",
+        "text": "The initial assessment is performed by qualified personnel."
+      },
+      {
+        "letter": "c",
+        "asterisk": true,
+        "level": "Commitment",
+        "text": "The initial assessment is performed within a time frame based on the needs of the patient."
+      },
+      {
+        "letter": "d",
+        "asterisk": false,
+        "level": "Commitment",
+        "text": "Initial assessment of daycare and in-patients includes nursing assessment, which is done at the time of admission and documented."
+      },
+      {
+        "letter": "e",
+        "asterisk": false,
+        "level": "Core",
+        "text": "The initial assessment for in-patients results in a documented care plan."
+      },
+      {
+        "letter": "f",
+        "asterisk": false,
+        "level": "Achievement",
+        "text": "The care plan is countersigned by the clinician in-charge of the patient within 24 hours."
+      },
+      {
+        "letter": "g",
+        "asterisk": false,
+        "level": "Excellence",
+        "text": "The care plan includes the identification of special needs regarding care following discharge."
+      }
+    ]
+  },
+  {
+    "code": "AAC.5",
+    "title": "Patients cared for by the organisation undergo a regular re-assessment.",
+    "oes": [
+      {
+        "letter": "a",
+        "asterisk": false,
+        "level": "Core",
+        "text": "Patients are re-assessed at appropriate intervals to determine their response to treatment and to plan further treatment or discharge."
+      },
+      {
+        "letter": "b",
+        "asterisk": false,
+        "level": "Commitment",
+        "text": "Out-patients are informed of their next follow-up, where appropriate."
+      },
+      {
+        "letter": "c",
+        "asterisk": false,
+        "level": "Commitment",
+        "text": "For in-patients during re-assessment, the care plan is monitored and modified, where found necessary."
+      },
+      {
+        "letter": "d",
+        "asterisk": false,
+        "level": "Commitment",
+        "text": "Staff involved in direct clinical care document re-assessments."
+      },
+      {
+        "letter": "e",
+        "asterisk": true,
+        "level": "Commitment",
+        "text": "The organisation lays down guidelines and implements processes to identify early warning signs of change or deterioration in clinical conditions for initiating prompt intervention."
+      }
+    ]
+  }
+]

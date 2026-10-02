@@ -1,0 +1,1351 @@
+MOM.7–MOM.11 — Batched Raw Source Dump
+=======================================
+Purpose: Draft input for five standards in one pull.
+Each standard drafted and verified individually — same process as all prior chapters.
+Source: Official NABH Hospitals 6th Edition Standards PDF (OE text, levels, asterisks)
+        + NABH Guidebook (interpretations scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a).
+
+CROSS-REFERENCE NOTE (applies throughout this file):
+The Guidebook cites specific NABH OE codes in several places (e.g., "Refer COP.1.b,
+MOM.7.d, MOM.1.e, FMS.5.g"). In policy drafts, these must NOT be reproduced as code
+citations. Use generic phrasing: "Those requirements are covered in the hospital's
+other policies." The specific codes are preserved here for source accuracy only.
+
+STOP-WORK STATUS BY STANDARD:
+  MOM.7  — YES (STOP_WORK_PROPOSALS: administer without patient identification or without
+                 verifying medication/strength/route/timing against the order; tubing
+                 mis-connection; person not permitted by law)
+  MOM.8  — NO stop-work authority (confirmed in code: "MOM.8 confirmed: no stop-work")
+  MOM.9  — YES (STOP_WORK_PROPOSALS: chemo/radiopharmaceutical preparation without
+                 qualified personnel; unsecured narcotics/psychotropics)
+  MOM.10 — NO stop-work authority
+  MOM.11 — NO stop-work authority
+
+STATUTE DISCLAIMER STATUS:
+  MOM.7  — YES (P2 statute: applicable laws governing who may administer medications,
+                as named in NABH MOM.7.a — Guidebook explicitly cites "registered nurse
+                or doctor… legislation or government order")
+  MOM.8  — NO (accreditation-only disclaimer)
+  MOM.9  — YES (P2 statute: Narcotic Drugs and Psychotropic Substances Act, 1985, and
+                applicable rules for chemotherapeutic agents and radio-pharmaceuticals,
+                as referenced for NABH MOM.9 — NDPS Act, AERB rules, Biomedical Waste
+                Management Rules cited in Guidebook for MOM.9.c and MOM.9.e)
+  MOM.10 — NO (accreditation-only disclaimer)
+  MOM.11 — NO (accreditation-only disclaimer)
+
+POLICY TITLES AND PREPARED-BY:
+  MOM.7  — Safe Administration of Medications | Prepared by: Nursing Superintendent
+            | Doc: HCO/MOM/POL/07
+  MOM.8  — Monitoring after Medication Administration | Prepared by: Medication Safety
+            Officer | Doc: HCO/MOM/POL/08
+  MOM.9  — Narcotics, Psychotropics, Chemotherapy and Radio-pharmaceuticals
+            | Prepared by: Pharmacy In-Charge | Doc: HCO/MOM/POL/09
+  MOM.10 — Implantable Prosthesis and Medical Devices | Prepared by: OT In-Charge
+            | Doc: HCO/MOM/POL/10
+  MOM.11 — Storage and Availability of Medical Supplies and Consumables
+            | Prepared by: Stores In-Charge | Doc: HCO/MOM/POL/11
+
+CHAPTER OE TOTALS (verification):
+  MOM.1–MOM.6: 5+6+7+8+4+6 = 36 OEs
+  MOM.7–MOM.11: 11+6+5+5+5 = 32 OEs
+  Chapter total: 68 OEs — matches official portal PDF.
+
+CHAPTER INTENT (official Standards PDF, verbatim):
+The organisation has a safe and organised medication management process. Availability,
+safe storage, prescription, dispensing and administration of medications are governed by
+written guidance. A medication safety officer is designated. The hospital formulary is
+developed, implemented and updated. Pharmacy has oversight of medications stocked out of
+the pharmacy. Reconciliation occurs at transition points. Patients are monitored after
+administration. Near misses, medication errors and adverse drug reactions are reported and
+analysed. Medications also include blood, implants and devices. Medical supplies and
+consumables are available for use.
+
+
+══════════════════════════════════════════════════════════════════════════════
+MOM.7 — Safe Administration of Medications
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Medications are administered safely.
+
+Standard is NOT starred.
+
+OE count: 11 | COREs: d, h | Stars: h★, j★, k★ | Achievement: none | Excellence: none
+Stop-work: YES (section 7 of the policy).
+Statute: YES (P2 — applicable laws governing who may administer medications).
+
+Prepared by: Nursing Superintendent | Doc no: HCO/MOM/POL/07
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.7.a
+Level: Commitment | No star
+
+Verbatim OE text:
+Medications are administered by those who are permitted by law to do so.
+
+Guidebook interpretation:
+Only a registered nurse or doctor with a minimum of MBBS qualification shall administer
+medication. In case there is any other category of staff authorised to administer
+medication, a legislation or government order shall back the same.
+
+Stop-work check: Commitment. STOP-WORK TRIGGER: A person who is not on the
+organisation's authorised list (or who does not meet the statutory minimum qualification)
+must not administer medication. This OE is explicitly named in the MOM.7 stop-work
+section ("person not permitted by law"). Immediate life-saving administration in a crash
+continues with the best available permitted staff and is documented afterward.
+
+Mandatory (shall):
+  1. Only a registered nurse or doctor (minimum MBBS) shall administer medication —
+     this is the statutory floor stated in the Guidebook.
+  2. Any other category of staff authorised to administer medication shall be backed by
+     a legislation or government order — the backing must be documentary, not informal.
+
+Illustrative only:
+  — No "for example" or "preferable" clauses in this OE's interpretation.
+    Both elements above carry "shall".
+
+Statute note: This OE names applicable law. The policy's Statute P2 disclaimer covers it.
+Do not reproduce in the policy draft as a legal opinion or specific statutory reference —
+state that staff must comply with applicable professional and drugs legislation.
+
+Documentation: No star — the authorised personnel list (held by Nursing Superintendent
+and Medical Superintendent) and any supervised-student record are the principal records,
+not a separate starred artifact. The list itself is an explicit practical requirement.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.7.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Prepared medication is labelled before preparation of a second drug.
+
+Guidebook interpretation:
+Labelling is required when more than one drug is prepared and loaded. Examples of these
+are anaesthetic drug preparation in OTs, chemotherapy drugs etc.
+
+Stop-work check: Commitment. Named in the MOM.7 stop-work section as a variant of the
+"verifying medication against the order" cluster. Two unlabelled syringes on the same tray
+is a stop-work condition anywhere in the organisation (OT, ICU, emergency, wards).
+
+Mandatory (shall):
+  1. A prepared medication shall be labelled before a second drug is prepared and loaded —
+     the sequence is mandatory: label first drug, then prepare next.
+
+Illustrative only:
+  — OTs (anaesthetic drugs) and chemotherapy drugs are examples. The requirement is
+    general: any location where more than one drug is prepared and loaded simultaneously.
+
+Documentation: No star — the process is the requirement. Evidence is the observable
+absence of unlabelled syringes on observation rounds and training records.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.7.c
+Level: Commitment | No star
+
+Verbatim OE text:
+The patient is identified before administration.
+
+Guidebook interpretation:
+At a minimum, two identifiers shall be used for patient identification, with one of them
+being the unique identification number (for example hospital number/IP number, etc.) and
+full name of the patient. Refer to COP.1.b.
+
+[Guidebook cross-ref: COP.1.b — in policy draft: "those requirements are covered in the
+hospital's other policies."]
+
+Stop-work check: Commitment. STOP-WORK TRIGGER: Administration without completing
+two-identifier patient identification is explicitly named in the MOM.7 stop-work section.
+If identity cannot be confirmed, administration stops.
+
+Mandatory (shall):
+  1. At least two identifiers shall be used — the minimum is two; the organisation may
+     require more.
+  2. One identifier shall be the unique identification number (hospital number / IP number
+     or equivalent).
+  3. One identifier shall be the full name of the patient.
+
+Illustrative only:
+  — Hospital number and IP number are examples of acceptable unique identification numbers;
+    other unique identifiers that meet the requirement are permissible.
+  — Asking an attendant or matching by bed number alone does not satisfy the requirement
+    (this is an implicit exclusion from the two-identifier standard, confirmed by the
+    method_bodies commentary).
+
+Documentation: No star — identification is evidenced by the administration record entry
+and by observation. No separate starred artifact.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.7.d
+Level: CORE | No star
+
+Verbatim OE text:
+Medication is verified from the medication order and physically inspected before
+administration.
+
+Guidebook interpretation:
+Staff administering medications shall verify the medication order and ensure that
+medications are administered appropriately. The general appearance of the medication
+(for example melting, clumping, etc.) and the expiry dates shall be checked before
+administration. If any of the parameters concerning an order, such as name, strength,
+route or frequency or time are missing/incomplete, the medication administration shall be
+deferred, pending early verification by the treating team. In case the confirmation is
+obtained verbally, it shall be considered a verbal order and the procedure for verbal
+orders shall be adhered to. In case of high-risk medication(s), the verification shall be
+done by at least two staff (nurse-nurse or nurse-doctor), independently and documented.
+The nurses shall be knowledgeable regarding high-risk medications and shall be empowered
+to highlight prescription errors noted while verifying the orders.
+
+Stop-work check: CORE. STOP-WORK TRIGGER: The MOM.7 stop-work section fires when
+administration proceeds without verifying medication/strength/route/timing against the
+order, or when the product fails physical inspection. A missing or incomplete parameter
+(name, strength, route, frequency, time) requires deferral, not a workaround.
+
+Mandatory (shall):
+  1. Staff shall verify the medication order before administration.
+  2. General appearance (melting, clumping, etc.) and expiry date shall be checked before
+     administration.
+  3. If any parameter (name, strength, route, frequency or time) is missing or incomplete,
+     administration shall be deferred pending early verification by the treating team.
+  4. If verbal confirmation is obtained, it shall be treated as a verbal order and the
+     MOM.4.f verbal-order process (read-back, countersignature within 24 hours) shall apply.
+  5. For high-risk medications, verification shall be done by at least two staff
+     (nurse-nurse or nurse-doctor), independently and documented.
+  6. Nurses shall be knowledgeable about high-risk medications and empowered to highlight
+     prescription errors during verification.
+
+Illustrative only:
+  — "Melting, clumping" are examples of general-appearance defects; the check is
+    for any physical abnormality, not only those two.
+
+CORE status: Administering without verifying the order or without physical inspection is
+a CORE gap and a stop-work trigger.
+
+Documentation: No star — evidence is the administration record, the verification
+annotation for high-risk medication checks, and training records.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.7.e
+Level: Commitment | No star
+
+Verbatim OE text:
+Strength is verified from the order before administration.
+
+Guidebook interpretation:
+The person administering the drug shall verify the strength from the medication order
+before administration. In case of discrepancy, medication administration shall be
+deferred. Refer to MOM.7.d.
+
+[Guidebook cross-ref: MOM.7.d — in policy draft: "those requirements are covered in the
+hospital's other policies."]
+
+Stop-work check: Commitment. Named in the MOM.7 stop-work section ("without verifying
+medication / strength / route / timing against the order"). A strength discrepancy
+requires deferral, not a bedside conversion.
+
+Mandatory (shall):
+  1. Strength shall be verified from the medication order before administration.
+  2. If a discrepancy is found, administration shall be deferred.
+
+Illustrative only:
+  — No "for example" or "preferable" items. Both elements carry "shall".
+
+Documentation: No star — evidenced by the administration record. No separate starred
+artifact.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.7.f
+Level: Commitment | No star
+
+Verbatim OE text:
+The route is verified from the order before administration.
+
+Guidebook interpretation:
+Where applicable, the site / route of administration shall also be verified.
+Refer to MOM.7.d.
+
+[Guidebook cross-ref: MOM.7.d — in policy draft: "those requirements are covered in the
+hospital's other policies."]
+
+Stop-work check: Commitment. Named in the MOM.7 stop-work section ("without verifying
+medication / strength / route / timing against the order"). Route mismatch stops
+administration.
+
+Mandatory (shall):
+  1. Where applicable, the site / route of administration shall be verified from the order
+     before administration — "where applicable" acknowledges that not every route type
+     requires a site (e.g., oral vs. IV to a named vein); the verification is mandatory
+     where the route/site is clinically relevant to the safety of administration.
+
+Illustrative only:
+  — No "for example" or "preferable" items.
+
+Documentation: No star — evidenced by the administration record and observation.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.7.g
+Level: Commitment | No star
+
+Verbatim OE text:
+Timing is verified from the order before administration.
+
+Guidebook interpretation:
+The organisation shall have documentation to support the time of administration of drugs
+for which the time has not been written. For example, 1-1-1, BD etc. The suggested
+timings for these medicines have to be adhered to. "ISMP Acute Care Guidelines for Timely
+Administration of Scheduled Medications" provide guidance on scheduling medications and
+classifies them into time-critical and non-time-critical. The organisation could adopt /
+adapt the same.
+
+Stop-work check: Commitment. Named in the MOM.7 stop-work section ("without verifying
+medication / strength / route / timing against the order"). Giving a dose outside the
+organisation's allowed window without prescriber review (except documented emergency use)
+is a stop-work condition.
+
+Mandatory (shall):
+  1. The organisation shall have documentation to support the time of administration for
+     drugs where the time has not been explicitly written on the order (e.g., standard
+     frequency codes such as 1-1-1, BD).
+  2. Suggested timings for such medicines shall be adhered to.
+
+Illustrative only:
+  — ISMP Acute Care Guidelines: the organisation "could adopt / adapt" — permissive;
+    these are a good reference but adoption is not mandatory.
+  — 1-1-1 and BD are examples of frequency codes that require a timing lookup;
+    not an exhaustive list of the types that need it.
+
+Documentation: No star — evidenced by the timing-documentation record (e.g., pharmacy
+or nursing-defined drug timing schedule) and the administration chart entries showing
+actual time of administration.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.7.h
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+Measures to avoid catheter and tubing mis-connections during medication administration
+are implemented.
+
+Guidebook interpretation:
+The organisation ensures that inadvertent administration of a drug through the wrong
+route is avoided. This could be done by using design features that prevent misconnections
+and prompt the user to take the correct action. Intravenous (IV) extension tubes shall
+not be used for epidurals, irrigation, drains, and central lines or to extend enteric
+feeding tubes. Care shall be taken to position functionally dissimilar tubes used in
+patient care away from one another. Staff administering medications shall trace all lines
+from their origin to the connection port to verify attachments before making any
+connections or reconnections, or administering medications, solutions, or other products.
+
+[Note: The Guidebook JSON for MOM.7.h ends with "Medication administration is
+documented." — this is an OCR-transcription artefact from MOM.7.i bleeding into the
+MOM.7.h block. That sentence belongs to MOM.7.i and is not an additional requirement
+under MOM.7.h.]
+
+Stop-work check: CORE and starred. STOP-WORK TRIGGER: The MOM.7 stop-work section
+explicitly names "tubing mis-connection" as a stop-work condition. Connecting a catheter
+or tubing for medication administration without tracing the line from the patient to the
+source is the trigger. Untreated mis-connection risk must be resolved before
+administration proceeds.
+
+Mandatory (shall):
+  1. The organisation shall ensure that inadvertent wrong-route administration is avoided —
+     this is an outcome-level mandatory obligation; the organisation chooses its means.
+  2. IV extension tubes shall not be used for epidurals, irrigation, drains, central lines,
+     or to extend enteric feeding tubes — explicit prohibition; no exceptions stated.
+  3. Care shall be taken to position functionally dissimilar tubes away from one another.
+  4. Staff shall trace all lines from their origin to the connection port before making any
+     connections, reconnections, or before administering medications/solutions/products —
+     explicit line-tracing requirement; mandatory, not advisory.
+
+Illustrative only:
+  — Design features preventing misconnections "could be done" — this is one means of
+    compliance, not the only means. The obligation is the outcome (wrong-route avoided),
+    not a specific engineering solution. ISO NRFit / colour-coded connectors are good
+    practice but are not stated as mandatory here.
+
+CORE status: Failure to implement measures against tubing mis-connection is a CORE gap
+and a stop-work trigger.
+
+Documentation: OE is starred — written measures (SOP, training records for ICU/OT/
+emergency/ward staff on line tracing) must be on file and demonstrably in use.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.7.i
+Level: Commitment | No star
+
+Verbatim OE text:
+Medication administration is documented.
+
+Guidebook interpretation:
+The organisation shall ensure that documentation of medication administration is done in
+a uniform location. It shall include the name of the medication, strength, route of
+administration, timing and the name/employee ID number and signature of the person who
+has administered the medication. Medicines administered shall be documented each time for
+each dose of the same medication separately. The records shall reflect the actual
+administration. For example, if brand Y was given in place of brand X (same generically),
+the documentation shall be of brand Y. Similarly, if the order was for a tablet of 250 mg
+but the administration was ½ a tablet of 500 mg, the latter shall be documented. In the
+case of infusions, it shall capture the start time, the rate / volume of infusion and end
+time. In case of continuous infusion, the drop rate / volume shall be documented and the
+total volume infused shall be calculated for each shift.
+
+[Portal PDF note: The official PDF prints this objective element as "I." (uppercase i
+or Roman numeral I) rather than "i" in some printings. The policy treats it as MOM.7.i
+consistently, as the inventory JSON confirms.]
+
+Stop-work check: Commitment — documentation failure is not itself a stop-work trigger in
+the MOM.7 stop-work section, which fires on administration safety conditions. However,
+absent or shift-end-batch documentation is an audit finding.
+
+Mandatory (shall):
+  1. Documentation shall be in a uniform location.
+  2. Documentation shall include: medication name, strength, route of administration,
+     timing, and the name / employee ID / signature of the administrator.
+  3. Each dose shall be documented separately — one documentation entry per dose of
+     each medication; batch charting at shift-end is not compliant.
+  4. Documentation shall reflect the actual administration, not the order as written.
+     (If brand Y was administered in place of brand X of the same generic, document Y.
+     If ½ × 500 mg was given instead of 250 mg tablet, document the actual form given.)
+  5. For infusions: start time, rate / volume of infusion, and end time shall be captured.
+  6. For continuous infusions: drop rate / volume shall be documented, and total volume
+     infused shall be calculated for each shift.
+
+Illustrative only:
+  — Brand Y / brand X substitution and ½-tablet examples are illustrative of the
+    "actual administration" documentation principle; not the only scenarios where
+    actual-vs-ordered divergence must be documented.
+
+Documentation: No star — the medication chart is itself the record; a separate starred
+artifact is not required by this OE. However, the chart must comply with the six
+elements listed above.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.7.j
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Measures to govern patient's self-administration of medications are implemented.
+
+Guidebook interpretation:
+At the outset, the organisation could define if it would permit the self-administration
+of medications. In case the organisation permits the same, the written guidance shall
+define the medications which the patient can self-administer. It is preferable that the
+organisation also incorporates a method for assisting self-administration of medications.
+The organisation shall ensure that the patient is reminded to take the medication
+(before every dose) and document the same. For example, self-administration of insulin.
+
+Stop-work check: Starred Commitment — not a direct stop-work trigger. However, uncontrolled
+bedside hoarding of hospital stock (informal self-administration without written measures)
+is an implied serious finding against this OE.
+
+Mandatory (shall):
+  1. A decision shall be made (and documented) on whether the organisation permits
+     patient self-administration — the Guidebook's "could define" signals that the
+     choice is the organisation's, but a written decision either way is required because
+     the OE mandates "measures to govern."
+  2. If self-administration is permitted, written guidance shall define which medications
+     the patient may self-administer.
+  3. If self-administration is permitted, the organisation shall ensure the patient is
+     reminded to take the medication before every dose.
+  4. Reminders shall be documented.
+
+Illustrative only:
+  — Assisting self-administration is "preferable" — aspiration; not a mandatory
+    programme element.
+  — Insulin is an example of a self-administered medication; not the only permitted type.
+
+Documentation: OE is starred — the written self-administration measures (or the written
+decision that self-administration is not permitted and staff instructions to that effect)
+must be on file. Reminder and dose-documentation records are also explicit.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.7.k
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Measures to govern patient's medications brought from outside the organisation shall be
+implemented.
+
+[Note: OE text itself contains "shall" — the measures are mandatory.]
+
+Guidebook interpretation:
+At the outset, the organisation could define if it would permit the patient getting his /
+her medications. In case of the organisation permitting the same, written guidance shall
+include the pre-requisites for such a medication (for example, clear label with mention
+of the name, strength, expiry date, batch number etc.)
+
+Stop-work check: Starred Commitment — not a direct stop-work trigger. However, giving an
+unidentified home tablet from a loose strip is an implied critical finding against this OE
+and potentially against MOM.7.d (physical inspection) and MOM.7.a (not administered by
+a staff member without prior identification of the item).
+
+Mandatory (shall):
+  1. The OE text: measures shall be implemented. A written decision either way (permit or
+     not permit outside medications) is required — "could define" in the Guidebook means
+     the policy choice is the organisation's; but measures must be implemented regardless.
+  2. If outside medications are permitted, written guidance shall include the pre-requisites
+     for such medications.
+
+Illustrative only:
+  — Clear label with name, strength, expiry date, batch number are examples of
+    pre-requisites ("for example, …etc.") — the organisation may set additional or
+    different pre-requisites.
+
+Documentation: OE is starred — the written outside-medication measures (or the written
+decision that outside medications are not permitted) must be on file and demonstrably
+communicated to staff.
+
+
+══════════════════════════════════════════════════════════════════════════════
+MOM.7 — stop_work_text() output (verbatim from hco_mom_v2_common.py)
+══════════════════════════════════════════════════════════════════════════════
+
+Do not administer a medication when the patient has not been identified with the
+organisation's identifiers, when the medication / strength / route / timing has not been
+verified against the order, when the product fails physical inspection, or when you are
+not on the list of persons permitted by law and by [hospital name] to administer that
+medication.
+
+Do not connect a catheter or tubing for medication administration until the line has been
+traced from the patient to the source.
+
+Stop-work applies to the administration start. Immediate life-saving administration in
+a crash continues with the best available permitted staff and is documented afterward.
+
+The person who stops tells the [Nurse In-Charge] and the [treating doctor] the same
+shift. Refusing an unsafe administration is not a disciplinary matter.
+
+[Note: [hospital name], [Nurse In-Charge] and [treating doctor] are D()-placeholder
+values rendered from the Python builder. Replace with the hospital name and role names
+when the policy is issued.]
+
+
+══════════════════════════════════════════════════════════════════════════════
+MOM.8 — Monitoring after Medication Administration
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Patients are monitored after medication administration.
+
+Standard is NOT starred.
+
+OE count: 6 | COREs: c | Stars: a★, c★, d★ | Achievement: none | Excellence: none
+No stop-work authority (confirmed in generate_hco_mom_v2.py and hco_mom_v2_common.py).
+
+Prepared by: Medication Safety Officer | Doc no: HCO/MOM/POL/08
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.8.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Patients shall be monitored after medication administration.
+
+Guidebook interpretation:
+Relevant monitoring shall be done collaboratively to verify that the medicine is having
+its intended effect. It could also include monitoring the effects of medications
+(beneficial or adverse) through laboratory results. Besides, this shall help identify
+near misses, medication errors and adverse drug reactions. The organisation shall define
+those situations and medications where more frequent monitoring is required. For example,
+administration of high-risk medicines. The effect of medication in high risk patients like
+those on dialysis, in the ICU and elderly group shall be monitored on a regular basis.
+
+Stop-work check: Starred Commitment — no standalone stop-work trigger. MOM.8 has no
+stop-work authority. Monitoring failure is an audit finding and, if it leads to harm, an
+incident that triggers MOM.8.c–f capture and analysis.
+
+Mandatory (shall):
+  1. Relevant monitoring shall be done collaboratively to verify the medicine is having
+     its intended effect.
+  2. The organisation shall define situations and medications where more frequent
+     monitoring is required.
+  3. The effect of medication in high-risk patients (those on dialysis, in the ICU,
+     and elderly group) shall be monitored on a regular basis — these specific categories
+     are stated with "shall" and represent the floor, not a ceiling.
+
+Illustrative only:
+  — Monitoring through laboratory results is listed as something monitoring "could also
+    include" — permissive; labs are one method, not the only required method.
+  — High-risk medicines are given as an example of situations requiring more frequent
+    monitoring; the organisation's own definition of which situations qualify is the
+    mandatory act.
+  — Dialysis, ICU and elderly are named as high-risk patient groups requiring regular
+    monitoring; the Guidebook's "like" signals these are examples, not an exhaustive list.
+
+Documentation: OE is starred — written guidance naming what to monitor and when to
+escalate, and recorded monitoring evidence for sampled cases, must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.8.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Medications shall be changed based on the monitoring where appropriate.
+
+Guidebook interpretation:
+Medication changes are based on clinical response and adverse drug reactions, if any.
+
+Stop-work check: Commitment — no stop-work trigger. MOM.8 has no stop-work authority.
+
+Mandatory (shall):
+  1. Medication changes shall be based on monitoring findings (clinical response and
+     adverse drug reactions) where appropriate — "where appropriate" qualifies the
+     obligation by clinical judgement, but the monitoring-driven change process is the
+     mandatory act.
+
+Illustrative only:
+  — No "for example" or "preferable" items in the Guidebook interpretation for this OE.
+
+Documentation: No star — the medication-change (revised medication order under MOM.5)
+record and the clinical notes showing monitoring triggered the change are the evidential
+records.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.8.c
+Level: CORE | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation shall capture near misses, medication errors and adverse drug reactions.
+
+Guidebook interpretation:
+Near misses, medication errors and adverse drug reactions shall be defined. This shall be
+in consonance with best practices. The organisation shall have a written guidance on the
+process to capture near misses, medication errors and adverse drug reactions. This shall
+incorporate identifying, documenting, reporting, analysing and action taken regarding.
+
+Stop-work check: CORE and starred. Failure to have a working capture route (i.e., no
+written guidance, no definitions, no functional reporting mechanism) is a CORE gap.
+MOM.8 has no stop-work section, but the CORE designation means this is accreditation-
+blocking.
+
+Mandatory (shall):
+  1. Near misses, medication errors and ADRs shall be defined — definitions are mandatory,
+     and they shall be in consonance with best practices.
+  2. The organisation shall have written guidance on the process to capture near misses,
+     medication errors and ADRs.
+  3. The written guidance shall incorporate: identifying, documenting, reporting, analysing
+     and action taken — all five steps are mandatory components of the written guidance;
+     not a list from which the organisation may select.
+
+Illustrative only:
+  — No illustrative-only items in this OE's interpretation. All elements carry "shall".
+
+CORE status: Absence of definitions, written guidance, or a functional reporting system
+is a CORE gap.
+
+Documentation: OE is starred — the written guidance (definitions + capture process) and
+a sample of captured reports must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.8.d
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Near misses, medication errors and adverse drug reactions shall be reported within a
+specified time frame.
+
+Guidebook interpretation:
+The organisation shall define the timeframe for reporting once any of this has occurred
+and adhere to the same.
+
+Stop-work check: Starred Commitment — no stop-work trigger. MOM.8 has no stop-work
+authority.
+
+Mandatory (shall):
+  1. The organisation shall define the timeframe for reporting — the definition is
+     mandatory; the specific timeframes chosen are the organisation's (not specified in
+     this OE).
+  2. The organisation shall adhere to the defined timeframe — adherence is mandatory.
+
+Illustrative only:
+  — No "for example" or "preferable" items. Both elements carry "shall".
+
+Documentation: OE is starred — the defined timeframes (in written guidance or the
+Medication Management Manual) and evidence of adherence (dated incident reports compared
+to event-occurrence records) must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.8.e
+Level: Commitment | No star
+
+Verbatim OE text:
+Near misses, medication errors and adverse drug reactions are collected and analysed.
+
+Guidebook interpretation:
+Details of the near misses, medication errors and adverse drug reactions are collected
+and analysed by the multidisciplinary committee. The analysis shall be completed in a
+defined time frame. It is preferable that a clinical pharmacologist / clinical pharmacist
+be a part of this exercise.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. Details shall be collected and analysed by the multidisciplinary committee (DTC) —
+     committee-level analysis is mandatory, not only individual staff review.
+  2. Analysis shall be completed in a defined time frame.
+
+Illustrative only:
+  — Clinical pharmacologist / clinical pharmacist involvement is "preferable" — aspiration;
+    absence of this specialist does not create non-compliance if the committee conducts
+    the analysis.
+
+Documentation: No star — the DTC analysis record (quarterly or sooner as per MOM.8.d
+timeframe) and the collected reports file are the evidential records.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.8.f
+Level: Commitment | No star
+
+Verbatim OE text:
+Corrective and / or preventive action(s) are taken based on the analysis.
+
+Guidebook interpretation:
+Where appropriate, corrective and/or preventive action are taken. The records of the
+same shall be maintained. It is preferable that corrective and/or preventive action(s)
+be taken based on the root-cause analysis.
+
+Stop-work check: Commitment — no stop-work trigger.
+
+Mandatory (shall):
+  1. Records of corrective and / or preventive actions shall be maintained — record-keeping
+     is the explicit "shall".
+  2. Actions shall be taken where appropriate — "where appropriate" qualifies the trigger
+     (not every analysis mandates CAPA, but when warranted it shall be taken and recorded).
+
+Illustrative only:
+  — Root-cause analysis as the basis for CAPA is "preferable" — aspiration; the mandatory
+    floor is that CAPA records exist when actions are taken.
+
+Documentation: No star — the CAPA record (with owner and due date) and the DTC follow-up
+record are the evidential records.
+
+
+══════════════════════════════════════════════════════════════════════════════
+MOM.9 — Narcotics, Psychotropics, Chemotherapy and Radio-pharmaceuticals
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-
+pharmaceuticals are used in a safe manner.
+
+Standard is NOT starred.
+
+OE count: 5 | COREs: none | Stars: a★ | Achievement: none | Excellence: none
+Stop-work: YES (section 6 of the policy).
+Statute: YES (P2 — NDPS Act 1985; applicable rules for chemotherapeutic agents and
+radio-pharmaceuticals including AERB guidelines and Biomedical Waste Management Rules
+as referenced in NABH MOM.9).
+
+Prepared by: Pharmacy In-Charge | Doc no: HCO/MOM/POL/09
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.9.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-
+pharmaceuticals are used safely.
+
+Guidebook interpretation:
+Written guidance, developed in consonance with local and national regulations /
+guidelines shall be implemented. The written guidance could address all the objective
+elements of this standard. Examples of regulations / guidelines are Narcotic Drugs and
+Psychotropic Substances Act and AERB guidelines.
+
+Stop-work check: Starred Commitment. This is the umbrella OE for MOM.9. The specific
+stop-work triggers are in MOM.9.c (unsecured narcotics/psychotropics) and MOM.9.d
+(preparation without qualified personnel). The stop-work section fires on either of those
+conditions. Absence of written guidance at all is a starred-Commitment gap.
+
+Mandatory (shall):
+  1. Written guidance, developed in consonance with local and national regulations /
+     guidelines, shall be implemented.
+
+Illustrative only:
+  — The written guidance "could address all the objective elements of this standard" —
+    consolidating all MOM.9 elements into one document is a good approach but is not
+    stated as mandatory here; what is mandatory is that the guidance exists and is implemented.
+  — NDPS Act and AERB guidelines are examples of relevant regulations/guidelines.
+    The statute P2 disclaimer covers the applicable legislative obligations; the policy
+    does not enumerate specific sections of those Acts.
+
+Documentation: OE is starred — the written guidance implementing MOM.9 (covering at a
+minimum narcotic/psychotropic storage, prescribing, preparation and records for all three
+classes in scope) must be on file and demonstrably implemented.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.9.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-
+pharmaceuticals are prescribed by appropriate caregivers.
+
+Guidebook interpretation:
+For narcotic drugs, it shall be the designated / privileged medical officer(s).
+Chemotherapy shall be prescribed by those who have the knowledge to monitor and treat
+the adverse effect of chemotherapy. This is preferably a medical oncologist or a doctor
+who has been trained and has achieved competency in the same. Radio-pharmaceuticals shall
+be prescribed only by a caregiver authorised by the statutory body.
+
+Stop-work check: Commitment. Dispensing against an unauthorised prescriber's signature
+for these three classes is listed as a stop-work condition under MOM.9 ("unsecured
+narcotics / psychotropics" encompasses unauthorised issue). Pharmacy must not dispense
+against an unauthorised signature.
+
+Mandatory (shall):
+  1. Narcotic drugs shall be prescribed by the designated / privileged medical officer(s).
+  2. Chemotherapy shall be prescribed by those with the knowledge to monitor and treat
+     its adverse effects — knowledge and competency is the mandatory threshold.
+  3. Radio-pharmaceuticals shall be prescribed only by a caregiver authorised by the
+     statutory body — statutory authorisation is an absolute requirement.
+
+Illustrative only:
+  — Medical oncologist is "preferably" the chemotherapy prescriber — aspiration; the
+    mandatory floor is demonstrated competency, which may include other specialists
+    trained in chemotherapy.
+
+Documentation: No star — the authorised-prescriber list by class (held by Pharmacy
+In-Charge and Medical Superintendent) and any pharmacy dispensing-refusal records are
+the evidential records.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.9.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-
+pharmaceuticals drugs shall be stored securely.
+
+[Note: The OE text itself includes "drugs" after "radio-pharmaceuticals drugs" — this
+appears to be a verbatim transcription artefact in the official Standards PDF; it is
+preserved here as printed. Policy drafts normalise to "radio-pharmaceuticals" for clarity.]
+
+Guidebook interpretation:
+Narcotic drugs shall be stored securely in consonance with statutory requirements. The
+security measures shall ensure that these medications are not diverted and abused.
+Chemotherapeutic agents shall be accessible only to authorised personnel.
+Radio-pharmaceuticals shall be labeled and stored as per AERB guidelines. It is preferable
+that these medications are stored separately from other medications.
+
+Stop-work check: Commitment. STOP-WORK TRIGGER: Unsecured narcotic drugs or psychotropic
+substances is explicitly named in the MOM.9 stop-work section ("do not leave narcotic
+drugs or psychotropic substances unsecured, or issue them without the required register
+entry and authorised prescriber"). Immediate life-saving analgesia/anaesthesia using a
+controlled drug follows the documented emergency-controlled-drug rules and is entered in
+the register the same shift.
+
+Mandatory (shall):
+  1. Narcotic drugs shall be stored securely per statutory requirements.
+  2. Security measures shall ensure medications are not diverted and abused.
+  3. Chemotherapeutic agents shall be accessible only to authorised personnel.
+  4. Radio-pharmaceuticals shall be labeled and stored per AERB guidelines.
+
+Illustrative only:
+  — Storing these medications separately from other medications is "preferable" —
+    aspiration; the mandatory requirement is secure storage per class-specific rules,
+    not physical separation from general stock (though separation is strongly encouraged).
+
+Documentation: No star — the locked storage record with access-control and register
+(for narcotics/psychotropics), access-restriction record (for chemo), and AERB-compliant
+storage record (for radio-pharmaceuticals) are the evidential records. Named key /
+access-rights list is an explicit practical requirement.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.9.d
+Level: Commitment | No star
+
+Verbatim OE text:
+Chemotherapy and radio-pharmaceuticals shall be prepared properly and safely and
+administered by qualified personnel.
+
+Guidebook interpretation:
+It is required that qualified personnel have received special training in the preparation
+and administration of chemotherapeutic drugs. A bio-safety cabinet of class II
+(preferably IIA) with appropriate personal protective equipment shall be used for
+preparing / mixing chemotherapeutic drugs. Radio-pharmaceuticals shall be prepared and
+administered by an authorised caregiver.
+
+Stop-work check: Commitment. STOP-WORK TRIGGER: Chemotherapy / radio-pharmaceutical
+preparation without qualified personnel is named in the MOM.9 stop-work section.
+Preparation by an unqualified person, or on an open ward bench without a bio-safety
+cabinet, is a stop-work condition for that preparation.
+
+Mandatory (shall):
+  1. Qualified personnel shall have received special training in the preparation and
+     administration of chemotherapeutic drugs — "it is required" is a mandatory statement
+     in the Guidebook; training is not optional.
+  2. A bio-safety cabinet of class II with appropriate PPE shall be used for preparing /
+     mixing chemotherapeutic drugs.
+  3. Radio-pharmaceuticals shall be prepared and administered by an authorised caregiver.
+
+Illustrative only:
+  — Bio-safety cabinet "preferably IIA" — class II is the mandatory minimum; class IIA
+    is the preferred sub-type within class II.
+
+Documentation: No star — the qualified-personnel record (training certificates), the
+bio-safety cabinet readiness record (PPE, spill-kit check), and the contracted-provider
+receipt check record (where preparation is off-site) are the evidential records.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.9.e
+Level: Commitment | No star
+
+Verbatim OE text:
+A proper record shall be kept of the usage, administration and disposal of narcotic drugs
+and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals.
+
+Guidebook interpretation:
+A strict inventory control shall be kept for narcotic drugs and psychotropic substances,
+chemotherapeutic agents and radiopharmaceuticals. Record of usage, administration, wastage
+and disposal of narcotic drugs shall be kept following statutory requirements. These shall
+be disposed of according to existing statutory requirements (including Narcotic Drugs and
+Psychotropic Substances Act, AERB rules and Biomedical waste management rules) and the
+manufacturer's recommendation (where applicable).
+
+Stop-work check: Commitment. A missing register entry is listed in the stop-work section:
+"do not leave narcotic drugs or psychotropic substances unsecured, or issue them without
+the required register entry and authorised prescriber." Missing a register line is
+investigated the same shift; it does not itself halt clinical care but does trigger an
+immediate investigation.
+
+Mandatory (shall):
+  1. Strict inventory control shall be kept for all three classes.
+  2. Records of usage, administration, wastage and disposal of narcotic drugs shall be
+     kept following statutory requirements.
+  3. Disposal shall follow existing statutory requirements — NDPS Act, AERB rules,
+     Biomedical waste management rules — and the manufacturer's recommendation where
+     applicable.
+
+Illustrative only:
+  — No "for example" or "preferable" items. All elements carry "shall" or "strict" (which
+    signals the highest standard of inventory discipline).
+
+Statute note: NDPS Act, AERB rules, and Biomedical Waste Management Rules are cited here
+in the Guidebook. The statute P2 disclaimer covers these; the policy does not reproduce
+specific statutory section references.
+
+Documentation: No star — the narcotic/psychotropic register (receipt, issue,
+administration, wastage, balance), the chemotherapy administration record (protocol, dose,
+batch, given-by), and the radio-pharmaceutical log and disposal/AERB record are the
+explicit mandatory records.
+
+
+══════════════════════════════════════════════════════════════════════════════
+MOM.9 — stop_work_text() output (verbatim from hco_mom_v2_common.py)
+══════════════════════════════════════════════════════════════════════════════
+
+Do not prepare or administer chemotherapeutic agents or radio-pharmaceuticals without
+qualified personnel and the required preparation conditions.
+
+Do not leave narcotic drugs or psychotropic substances unsecured, or issue them without
+the required register entry and authorised prescriber.
+
+Stop-work applies to preparation, issue and administration of these classes. Immediate
+life-saving analgesia / anaesthesia using a controlled drug follows the documented
+emergency-controlled-drug rules and is entered in the register the same shift.
+
+The person who stops tells the [Pharmacy In-Charge] and the [Medical Superintendent]
+the same shift. Refusing unsafe handling of these agents is not a disciplinary matter.
+
+[Note: [Pharmacy In-Charge] and [Medical Superintendent] are D()-placeholder values
+rendered from the Python builder. Replace with role names when the policy is issued.]
+
+
+══════════════════════════════════════════════════════════════════════════════
+MOM.10 — Implantable Prosthesis and Medical Devices
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Implantable prosthesis and medical devices shall be used in accordance with laid down
+criteria.
+
+Standard is NOT starred.
+
+OE count: 5 | COREs: none | Stars: b★, e★ | Achievement: e | Excellence: none
+No stop-work authority.
+Statute: NO (accreditation-only disclaimer).
+
+Prepared by: OT In-Charge | Doc no: HCO/MOM/POL/10
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.10.a
+Level: Commitment | No star
+
+Verbatim OE text:
+Usage of implantable prosthesis and medical devices is guided by scientific criteria for
+each item and national / international recognised guidelines / approvals for such specific
+item(s).
+
+Guidebook interpretation:
+The organisation shall ensure that relevant and sufficient scientific data are available
+before selection. It shall also look for any international (for example US-FDA) or
+national notification or applicable regulations (Central Drugs Standard Control
+Organisation notification based on the Drugs and Cosmetics Act) for approval of the
+particular product. The multidisciplinary committee shall be responsible for approving
+the use of a particular implant.
+
+Stop-work check: Commitment — no stop-work authority for MOM.10. An implant without
+recognised approval is a serious finding against this OE; the method_bodies note that it
+is not used except under a documented trial / compassionate pathway.
+
+Mandatory (shall):
+  1. The organisation shall ensure relevant and sufficient scientific data are available
+     before selection of each implant / device.
+  2. The organisation shall look for applicable national / international approvals and
+     regulations before selection.
+  3. The multidisciplinary committee shall be responsible for approving the use of each
+     particular implant.
+
+Illustrative only:
+  — US-FDA and CDSCO notification (under Drugs and Cosmetics Act) are examples of
+    regulatory approvals to check; not a mandatory exclusive list — other relevant
+    national or international body approvals also satisfy the requirement.
+
+Documentation: No star — the approved-item list (held by OT / cath-lab and Biomedical),
+the committee approval record for each implant type, and any trial/compassionate-pathway
+approval record are the evidential records.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.10.b
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation implements a mechanism for the usage of the implantable prosthesis and
+medical devices.
+
+Guidebook interpretation:
+The organisation shall have written guidance to direct procurement, storage / stocking,
+issuing and usage of implantable prosthesis and medical devices. Infection prevention and
+control requirement related to use of prosthesis and medical devices is implemented. This
+shall address statutory regulations / guidelines and manufacturer's recommendation(s).
+
+Stop-work check: Starred Commitment — no stop-work authority for MOM.10.
+
+Mandatory (shall):
+  1. Written guidance shall cover: procurement, storage / stocking, issuing and usage of
+     implantable prosthesis and medical devices — all four lifecycle stages are mandatory
+     components of the written guidance.
+  2. IPC requirements related to prosthesis / medical devices shall be implemented.
+  3. The guidance shall address statutory regulations / guidelines and manufacturer's
+     recommendations.
+
+Illustrative only:
+  — No "for example" or "preferable" items. All elements carry "shall".
+
+Documentation: OE is starred — the written guidance (procurement through usage) and
+the IPC implementation records must be on file.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.10.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Patient and his / her family are counselled for the usage of the implantable prosthesis
+and medical device, including precautions if any.
+
+Guidebook interpretation:
+Precautions could include non-usage of specific drugs and reporting to the hospital if
+a particular symptom occurs. The organisation shall document the details of counselling
+provided to the patient / his or her family in informed consent.
+
+Stop-work check: Commitment — no stop-work authority for MOM.10.
+
+Mandatory (shall):
+  1. The organisation shall document the details of counselling provided to the patient /
+     family in informed consent — documentation is the explicit "shall".
+
+Illustrative only:
+  — Non-usage of specific drugs and symptom-reporting back to the hospital are examples
+    of precautions ("could include") — the mandatory act is that counselling on precautions
+    occurs and is documented; specific precaution content is determined by the clinical
+    situation and the implant.
+
+Documentation: No star — the medical record entry confirming counselling (which may sit
+within the consent form managed under PRE) is the principal evidential record. The
+MOM.10 policy owns the implant-specific content; the consent process is cross-referenced.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.10.d
+Level: Commitment | No star
+
+Verbatim OE text:
+The batch and the serial number of the implantable prosthesis and medical devices are
+recorded in the patient's medical record, the master logbook and the discharge summary.
+
+Guidebook interpretation:
+In case where implantable prosthesis do not have pre-labelled stickers, the organisation
+shall have suitable mechanisms in place for identifying the implant (manufacturer, type,
+size, batch number, serial number and any other important detail).
+
+Stop-work check: Commitment — no stop-work authority for MOM.10. Missing identifiers
+are a reportable gap (method_bodies: "Missing identifiers are a reportable gap").
+
+Mandatory (shall):
+  1. OE text: batch and serial number shall be recorded in all three locations:
+     (a) patient's medical record, (b) master logbook, (c) discharge summary — all three
+     are mandatory; recording in only two of three is non-compliance.
+  2. Where pre-labelled stickers are absent, the organisation shall have mechanisms to
+     identify the implant (manufacturer, type, size, batch number, serial number and any
+     other important detail).
+
+Illustrative only:
+  — Manufacturer, type, size are examples of the additional identifying details beyond
+    batch and serial number that the Guidebook recommends capturing — "any other important
+    detail" signals the list is not closed.
+
+Documentation: No star — the three-location batch/serial recording is itself the
+evidential record. The implant-pack sticker is the usual source; if lost, stores/
+pharmacy must trace the batch before discharge.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.10.e
+Level: Achievement | Star ★ (documentation required)
+
+Verbatim OE text:
+Process of recall of implantable prosthesis and medical devices are handled effectively.
+
+Guidebook interpretation:
+Process of recall may be based on communication from regulatory authorities, manufacturer
+or internal feedback. Recall procedure in response to internal feedback also includes
+providing information to appropriate regulatory authority and the manufacturer. The record
+shall be maintained on occurrence. Refer to MOM.1.e. and FMS.5.g.
+
+[Guidebook cross-refs: MOM.1.e and FMS.5.g — in policy draft: "those requirements are
+covered in the hospital's other policies."]
+
+Stop-work check: Starred Achievement — no stop-work authority for MOM.10.
+
+Mandatory (shall):
+  1. Records shall be maintained on occurrence of a recall event.
+  2. Recall procedure in response to internal feedback shall include providing information
+     to the appropriate regulatory authority and the manufacturer — internal recall
+     triggers an outbound reporting obligation.
+
+Illustrative only:
+  — Recall sources (regulatory authorities, manufacturer, internal feedback) are listed
+    as possible origins, not a mandatory exhaustive set requiring a different procedure
+    for each.
+
+Achievement level note: This OE is Achievement — evidence of a working recall process
+(a real recall file, or a drill record) is what assessors look for, not only a policy
+sentence that says the organisation will handle recalls.
+
+Documentation: OE is starred — the recall file (notice, master-logbook trace for
+affected batches, patients identified, actions taken, regulatory/manufacturer notification,
+closure record) must be on file.
+
+
+══════════════════════════════════════════════════════════════════════════════
+MOM.11 — Storage and Availability of Medical Supplies and Consumables
+══════════════════════════════════════════════════════════════════════════════
+
+Standard text (verbatim):
+Medical supplies and consumables are stored appropriately and are available where
+required.
+
+Standard is NOT starred.
+
+OE count: 5 | COREs: none | Stars: a★ | Achievement: none | Excellence: none
+No stop-work authority.
+Statute: NO (accreditation-only disclaimer).
+
+Prepared by: Stores In-Charge | Doc no: HCO/MOM/POL/11
+
+Scope note (from Guidebook MOM.11.a): "Medical supplies and consumables" in the context
+of MOM.11 refers to items used in patient care excluding medications and implants. Blood,
+implants and devices are covered under MOM.10 and chapter intent. This standard governs
+sterile consumables, equipment supplies, and related patient-care items held by stores
+and user departments.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.11.a
+Level: Commitment | Star ★ (documentation required)
+
+Verbatim OE text:
+The organisation adheres to the defined process for the acquisition of medical supplies
+and consumables.
+
+Guidebook interpretation:
+In this context, medication supplies and consumables refer to items which are used in
+patient care excluding medications and implants. The process shall address the issues of
+vendor selection, vendor evaluation, indenting process, generation of the purchase order
+and receipt of goods.
+
+Stop-work check: Starred Commitment — no stop-work authority for MOM.11.
+
+Mandatory (shall):
+  1. The acquisition process shall address: vendor selection, vendor evaluation, indenting
+     process, purchase order generation, and receipt of goods — all five stages are
+     explicit mandatory components of the process.
+
+Illustrative only:
+  — No "for example" or "preferable" items in this OE's interpretation. All elements
+    carry "shall address".
+
+Documentation: OE is starred — the written acquisition process must be on file and
+demonstrably in use. The Stores In-Charge owns it. Next-working-day entry record for any
+documented emergency purchase is an additional practical evidential record.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.11.b
+Level: Commitment | No star
+
+Verbatim OE text:
+Medical supplies and consumables are used in a safe manner, where appropriate.
+
+Guidebook interpretation:
+The items shall be opened and used using relevant precautions to maintain sterility and
+integrity.
+
+Stop-work check: Commitment — no stop-work authority.
+
+Mandatory (shall):
+  1. Items shall be opened and used using relevant precautions to maintain sterility and
+     integrity.
+
+Illustrative only:
+  — No "for example" or "preferable" items.
+
+Documentation: No star — evidenced by staff practice (observation), training records,
+and incident records for any unsafe-use event.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.11.c
+Level: Commitment | No star
+
+Verbatim OE text:
+Medical supplies and consumables are stored in a clean, safe and secure environment;
+incorporating the manufacturer's recommendation(s).
+
+Guidebook interpretation:
+The organisation shall ensure that the storage requirements specified by the manufacturer
+are adhered to. This shall apply to all areas where these are stored, including wards.
+They shall be protected from loss or theft. Overall cleanliness of the storage area shall
+be maintained. Hazardous materials shall be identified and kept safely.
+
+Stop-work check: Commitment — no stop-work authority.
+
+Mandatory (shall):
+  1. Manufacturer storage requirements shall be adhered to — mandatory and applies to
+     all areas where supplies are stored, including wards (not only a central stores).
+  2. Supplies and consumables shall be protected from loss or theft.
+  3. Overall cleanliness of the storage area shall be maintained.
+  4. Hazardous materials shall be identified and kept safely.
+
+Illustrative only:
+  — No "for example" or "preferable" items. All four elements carry "shall".
+
+Documentation: No star — storage-condition records, access-control records, and a
+confirmed sterile-store / dirty-utility physical-separation record are the evidential
+records (the last confirmed by the method_bodies: sterile stores are physically separate
+from dirty utility).
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.11.d
+Level: Commitment | No star
+
+Verbatim OE text:
+Sound inventory control practices guide storage of medical supplies and consumables.
+
+Guidebook interpretation:
+The organisation shall follow or demonstrate ABC, VED, FSN, First Expiry First Out,
+lead time analysis, etc.
+
+Stop-work check: Commitment — no stop-work authority.
+
+Mandatory (shall):
+  1. The organisation shall follow or demonstrate sound inventory control practices —
+     "follow or demonstrate" means the practices must be active and evidenced, not only
+     stated in a document.
+
+Illustrative only:
+  — ABC analysis, VED (vital/essential/desirable), FSN (fast/slow/non-moving), FEFO
+    (first expiry, first out) and lead time analysis are examples of valid inventory
+    control practices ("etc." confirms the list is not closed); the organisation may use
+    any combination that it can demonstrate.
+
+Documentation: No star — the documented inventory-control method, monthly stores-round
+expiry/damaged-stock removal record, and traceability record from receipt to issue for
+sampled items are the evidential records.
+
+
+─────────────────────────────────────────────────────────────────────────────
+MOM.11.e
+Level: Commitment | No star
+
+Verbatim OE text:
+There is a mechanism in place to verify the condition of medical supplies and consumables.
+
+Guidebook interpretation:
+Medical supplies and consumables shall be in a condition suitable for safe usage. The
+condition of these materials shall be checked before dispensing and usage. For example,
+opened up package, damp cotton roll, physical damage, and discolouration.
+
+Stop-work check: Commitment — no stop-work authority.
+
+Mandatory (shall):
+  1. Supplies and consumables shall be in a condition suitable for safe usage.
+  2. The condition shall be checked before dispensing and usage.
+
+Illustrative only:
+  — Opened package, damp cotton roll, physical damage and discolouration are examples of
+    defects to check for ("For example") — not an exhaustive closed list.
+
+Documentation: No star — the pre-issue / pre-use condition-verification record (covering
+package integrity, sterility indicator, expiry and cold-chain logger where applicable),
+the quarantine record for any failed item, and the user-department return-with-note record
+for a failed pack are the evidential records.
+
+
+══════════════════════════════════════════════════════════════════════════════
+END OF MOM.7–MOM.11 RAW SOURCE DUMP
+══════════════════════════════════════════════════════════════════════════════
+
+Summary of stop-work standards in this batch:
+  MOM.7 — YES: patient-ID check, medication/strength/route/timing verification, physical
+               inspection, authorised-person check, tubing line-trace.
+  MOM.9 — YES: chemo/radio-pharma preparation conditions; narcotic/psychotropic security
+               and register.
+  MOM.8, MOM.10, MOM.11 — NO stop-work authority.
+
+Summary of statute (P2) standards in this batch:
+  MOM.7 — YES: applicable laws governing who may administer (MOM.7.a Guidebook).
+  MOM.9 — YES: NDPS Act 1985, AERB guidelines, Biomedical Waste Management Rules
+               (Guidebook MOM.9.a, MOM.9.c, MOM.9.e).
+  MOM.8, MOM.10, MOM.11 — NO statute designation; accreditation-only disclaimer applies.
+
+Guidebook source: scanned PDF md5 2c4489ee98de4ae9b49cba168ea9f42a
+OE source: Official NABH Hospitals 6th Edition Standards portal PDF (January 2025)
+Inventory: policies/source/hco6_mom_inventory.json (32 OEs for standards 7–11 confirmed)
+Interpretations: policies/source/hco6_mom_interpretations.json (all 32 OE keys present)

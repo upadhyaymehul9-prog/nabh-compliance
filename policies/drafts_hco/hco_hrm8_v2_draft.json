@@ -1,0 +1,121 @@
+{
+  "standard_code": "HRM.8",
+  "chapter": "HCO",
+  "oe_codes": [
+    "HRM.8.a",
+    "HRM.8.b",
+    "HRM.8.c",
+    "HRM.8.d",
+    "HRM.8.e",
+    "HRM.8.f"
+  ],
+  "policy_title": "Disciplinary and Grievance Handling",
+  "purpose": "This policy says how {{HOSPITAL_NAME}} meets NABH Hospitals 6th Edition standard HRM.8: Process for disciplinary and grievance handling is defined and implemented in the organisation.\n\nThis policy covers all 6 requirements under this standard, listed in detail below.\n\nChapter intent (official Standards PDF): The most important resource of the organisation is its human resource. Human resources are an asset for the effective and efficient functioning of the organisation. The management plans on identifying the right number and skill mix of staff required to render safe care to the patients. Recruitment of staff is accomplished by having a uniform and standardised system. The organisation must orient the staff including outsourced staff, volunteers, students and trainees to its environment and also orient them to specific duties and responsibilities related to their position. The organisation should plan to have an ongoing professional training / in-service education to enhance the competencies and skills of the staff continually. A systematic and structured appraisal system must be used for staff development. The organisation uses this as an opportunity to discuss, motivate, identify gaps in the performance of the staff. The organisation promotes the physical and mental well-being of staff. A grievance handling mechanism and disciplinary procedure should be in place. Credentialing and privileging of health-care professionals (medical, nursing and other para-clinical professional) are done to ensure patient safety. A document containing all such personal information has to be maintained for all staff.\n\nThis policy covers disciplinary and grievance handling specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, hospital governance, or facility safety — are covered in the hospital's other policies, not repeated here. Other HRM standards stay with their own policies.\n\nWords marked «like this» are defaults. A blank marked «________» must be filled before issue.",
+  "scope": "This policy applies to human resources, nursing, medical, and departmental leaders, and all staff of {{HOSPITAL_NAME}}, including the «HR In-Charge / Personnel Officer», the «Medical Superintendent», departmental leaders and the Quality Coordinator.\n\nThis policy covers all 6 requirements under this standard, listed in detail below.\n\nThis policy covers disciplinary and grievance handling specifically. Related duties — like patient assessment, clinical care, medication management, patient rights, infection control, quality and safety monitoring, hospital governance, or facility safety — are covered in the hospital's other policies, not repeated here. Spell out abbreviations on first use in training materials. OE counts/levels/asterisks stay with the official portal Standards PDF. Method notes come from the Guidebook Interpretation paragraphs (scanned PDF; no text layer, transcribed and verified against rendered page images — see policies/source/hco6_hrm_chapter_notes.md).",
+  "policy_statement": "{{HOSPITAL_NAME}} implements HRM.8 so that process for disciplinary and grievance handling is defined and implemented in the organisation.\n\nStaff follow written guidance, keep the records listed in the OE table, and escalate when stop-work conditions are met (if this policy includes a stop-work section).",
+  "procedure_steps": [
+    "5.1 Written guidance governs disciplinary and grievance handling mechanisms\n\nWritten guidance governs disciplinary and grievance handling mechanisms at {{HOSPITAL_NAME}}, covering HRM.8.c–e, and including workplace grievances such as bullying and harassment. This is an asterisked element.\n\nMethod note (from guidebook interpretation): The documentation shall be done keeping in mind objective elements \"c, d and e\". Grievances shall include workplace issues like bullying and harassment. For the definition of \"disciplinary procedure\" and \"grievance handling\" refer to the glossary.\n\nThis objective element is asterisked in the official Standards PDF — documentation of the process is required.",
+    "5.2 The disciplinary and grievance handling mechanism is known to all...\n\nThe disciplinary and grievance handling mechanism at {{HOSPITAL_NAME}} is known to all categories of staff, who are aware of the procedure to follow if they feel aggrieved.\n\nMethod note (from guidebook interpretation): All staff shall be aware of the disciplinary procedure and the process to be followed in case they feel aggrieved.",
+    "5.3 The disciplinary policy and procedure are based on the principles of...\n\nThe disciplinary policy and procedure at {{HOSPITAL_NAME}} are based on the principles of natural justice — both parties (employee and employer) are allowed to present their case before a decision is taken.\n\nMethod note (from guidebook interpretation): Principles of natural justice imply that both parties (employee and employer) are allowed to present their case and decision is taken accordingly.",
+    "5.4 The disciplinary and grievance procedure is in consonance with the...\n\nThe disciplinary and grievance procedure at {{HOSPITAL_NAME}} is in consonance with the prevailing laws — the applicable labour laws for this hospital's staff. An Internal Complaints Committee is established to handle complaints of sexual harassment. This is a CORE element.\n\nMethod note: keep the written procedure current against the labour law actually applicable to this hospital's staff category; do not import Central Civil Services rules as a blanket checklist unless this hospital's staff are in fact covered by them.\n\nMethod note (from guidebook interpretation): Refer to relevant labour laws and CCS (CCA) rules. Internal Complaints Committee shall be established in the organisation to handle complaints of sexual harassment.\n\nThis is a CORE objective element — non-compliance is not acceptable for accreditation.",
+    "5.5 There is a provision for appeals in all disciplinary cases\n\n{{HOSPITAL_NAME}} provides for appeals in all disciplinary cases, through a designated appellate authority higher than the disciplinary authority that issued the original decision.\n\nMethod note (from guidebook interpretation): The organisation shall designate an appellate authority to consider appeals in disciplinary cases. The appellate authority shall be higher than the disciplinary authority.",
+    "5.6 Actions are taken to redress the grievance\n\n{{HOSPITAL_NAME}} takes action to redress grievances through the written redress procedure; actions taken are documented and communicated to the aggrieved staff member.\n\nMethod note (from guidebook interpretation): The redress procedure addresses the grievance. Actions that are taken shall be documented and communicated to the aggrieved staff."
+  ],
+  "responsibility": "Medical Superintendent\n- Accountable that HRM.8 is resourced and followed.\n\nHR In-Charge / Personnel Officer\n- Owns day-to-day implementation and records for this standard.\n\nQuality Coordinator\n- Audits this policy «quarterly»; holds training acknowledgements.\n\ndepartmental leaders\n- Run the department-level duties this standard names.",
+  "references_text": "- National Accreditation Board for Hospitals and Healthcare Providers (NABH), Accreditation Standards for Hospitals, 6th Edition (January 2025) — Human Resource Management, standard HRM.8. Official portal PDF (OE text, counts, levels, asterisks).\n- NABH Guidebook to Accreditation Standards for Hospitals, 6th Edition — HRM.8 interpretations (source PDF has no text layer; transcribed and verified against rendered page images — policies/source/hco6_hrm_guidebook_ocr.txt).\n- Internal documents of {{HOSPITAL_NAME}}: workforce plan, recruitment and induction records, training records, appraisal records, disciplinary and grievance registers, staff health records, personal files, and credentialing/privileging files named for HRM.8.",
+  "distribution": "Medical Superintendent; HR In-Charge / Personnel Officer; Quality Coordinator; departmental leaders; staff covered by HRM.8",
+  "abbreviations": "ACLS — Advanced Cardiac Life Support\nBLS — Basic Life Support\nCAPA — Corrective and Preventive Action\nCORE — Core objective element (NABH)\nCPR — Cardio-Pulmonary Resuscitation\nEMR — Electronic Medical Record\nHCO — Hospital (Full Accreditation programme under NABH Hospitals 6th Edition)\nHR — Human Resource(s)\nHRM — Human Resource Management (NABH Hospitals 6th Edition chapter)\nNABH — National Accreditation Board for Hospitals and Healthcare Providers\nNRP — Neonatal Resuscitation Program\nOE — Objective Element\nPALS — Paediatric Advanced Life Support\nPPE — Personal Protective Equipment\nWISN — Workload Indicators of Staffing Need (WHO method)",
+  "disclaimer": "This document is a template prepared for the guidance of {{HOSPITAL_NAME}} and must be reviewed, adapted and formally approved by {{HOSPITAL_NAME}} before use. Every entry marked [Hospital to define] must be replaced with the hospital's own decision; a document issued with those markers left in place is not an approved policy.\n\nThe requirements in this document are accreditation requirements of the NABH Full Accreditation Standards for Hospitals, 6th Edition, not duties under a named Act of Parliament. This policy does not import the Consumer Protection Act, 2019, the Clinical Establishments Act, 2010, or the Mental Healthcare Act, 2017 as a checklist. Statutory duties that arise under other documents of {{HOSPITAL_NAME}} remain those documents. {{HOSPITAL_NAME}} is responsible for verifying any statutory duty that applies to it; this document does not constitute legal advice.\n\nThe clinical and technical content reflects recognised national and international guidance current at the date of preparation. {{HOSPITAL_NAME}} remains responsible for verifying that it is current and consistent with the edition of the accreditation standard against which it is being assessed.\n\nThis document is not issued by, endorsed by, or affiliated with NABH, the World Health Organization, the National Centre for Disease Control, the Food Safety and Standards Authority of India, any Pollution Control Board, or any other body named in it. Wording is original; no text has been reproduced from the standards, rules or guidelines referenced.",
+  "oe_mapping": [
+    {
+      "oe_code": "HRM.8.a",
+      "requirement": "Written guidance governs disciplinary and grievance handling mechanisms.",
+      "steps": "Section 3; 5.1",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Written disciplinary and grievance handling guidance.",
+        "Coverage record for the HRM.8.c–e elements.",
+        "Workplace-issue inclusion record — bullying, harassment."
+      ]
+    },
+    {
+      "oe_code": "HRM.8.b",
+      "requirement": "The disciplinary and grievance handling mechanism is known to all categories of staff of the organisation.",
+      "steps": "Section 3; 5.2",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Staff-awareness record of the disciplinary and grievance mechanism.",
+        "Communication record — induction, notice board, policy circulation.",
+        "Confirmation across all staff categories."
+      ]
+    },
+    {
+      "oe_code": "HRM.8.c",
+      "requirement": "The disciplinary policy and procedure are based on the principles of natural justice.",
+      "steps": "Section 3; 5.3",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Natural-justice-principle record — both parties heard before a decision.",
+        "Disciplinary case record demonstrating the principle applied.",
+        "Policy-document reference."
+      ]
+    },
+    {
+      "oe_code": "HRM.8.d",
+      "requirement": "The disciplinary and grievance procedure is in consonance with the prevailing laws.",
+      "steps": "Section 3; 5.4",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Labour-law compliance record for the disciplinary and grievance procedure.",
+        "Internal Complaints Committee constitution record for sexual-harassment complaints.",
+        "Legal-currency review record of the procedure."
+      ]
+    },
+    {
+      "oe_code": "HRM.8.e",
+      "requirement": "There is a provision for appeals in all disciplinary cases.",
+      "steps": "Section 3; 5.5",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Appellate-authority designation record, higher than the disciplinary authority.",
+        "Appeal-case record showing the provision was used.",
+        "Policy-document reference."
+      ]
+    },
+    {
+      "oe_code": "HRM.8.f",
+      "requirement": "Actions are taken to redress the grievance.",
+      "steps": "Section 3; 5.6",
+      "responsible": "HR In-Charge / Personnel Officer",
+      "records": [
+        "Grievance-redress action record.",
+        "Documentation and communication record to the aggrieved staff member.",
+        "Closure-tracking record."
+      ]
+    }
+  ],
+  "universal_facts_checklist": "HCO HRM.8 v2 (2026-08-21). Official Standards PDF OE count 6; levels and asterisks from portal body text (Guidebook's own copy of the OE matrix agrees on every letter). Asterisked: a. CORE: d. Achievement: none. Excellence: none.\nStop-work: omitted (proposed default: no stop-work on this standard).\ndraft_label='HCO Full v2 draft' via hco_document_control. chapter=HCO. doc_no HCO/HRM/POL/08.\nOfficial chapter is 13 standards / 76 OEs (confirmed against portal summary and against the Guidebook's own copy of the same matrix). Guidebook interpretations transcribed from a scanned PDF with no text layer — verified against rendered page images (no tesseract/pdftoppm available on this machine), not run through a mechanical OCR pass; see policies/source/hco6_hrm_chapter_notes.md. Statute P2 proposed on HRM.12 only (Indian Nursing Council Act, 1947).\nNot the same as the already-deployed SHCO 3rd Edition HRM chapter (build_hrm1_v2.py..build_hrm9_v2.py, policies/drafts/hrm*_v2_draft.json) — separate programme and edition, not touched. Do not touch AAC, COP, MOM, PRE, IPC, PSQ, ROM or FMS.",
+  "version": "2.0",
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "21-08-2026",
+      "description": "HCO Full 6th Edition HRM.8 v2 draft: portal PDF OE data + Guidebook interpretations (verified visual transcription, no text layer in source PDF); draft_label=HCO Full v2 draft."
+    }
+  ],
+  "status": "draft",
+  "definitions": "Process for disciplinary and grievance handling is defined and implemented in the organisation.",
+  "exceptions": "1. Do not skip: Written guidance governs disciplinary and grievance handling mechanisms.\n2. Do not skip: The disciplinary and grievance handling mechanism is known to all categories of staff of the organisation.\n3. Do not skip: The disciplinary policy and procedure are based on the principles of natural justice.\n4. Do not skip: The disciplinary and grievance procedure is in consonance with the prevailing laws.\n5. Do not skip: There is a provision for appeals in all disciplinary cases.\n6. Do not skip: Actions are taken to redress the grievance.\n7. Staff who see a HRM.8 rule broken report it the same shift to the «HR In-Charge / Personnel Officer» or the «Medical Superintendent».",
+  "monitoring_audit": "The Quality Coordinator audits this policy «quarterly». The audit reviews:\n\n- Records for a sample of this standard's objective elements, checked against the What-we-do steps.\n- Documentary evidence is on file for each asterisked objective element in the sample.\n- CORE objective elements show no critical gaps in the sample.\n- Stop-work events (if any) are logged with outcome.\n\nRoot-cause analysis is required when a gap found in this audit remains open beyond «90 days».\n\nThis policy is reviewed «annually», and sooner after a related credentialing, staffing or disciplinary-process change.",
+  "training_competency": "Staff covered by this policy are trained at induction and «once a year» after that. Training covers the What-we-do steps, non-negotiables and stop-work (if present).\n\nStaff acknowledgement\n\nI have read this Disciplinary and Grievance Handling policy of {{HOSPITAL_NAME}}. I will follow the processes described.\n\nName: ___________________________    Designation: ___________________________\n\nDepartment / floor: ____________________    Date: ____________\n\nSignature: ___________________________\n\n(One row per staff member. The Quality Coordinator holds signed acknowledgements with the induction record.)",
+  "resources_required": "Document number: «HCO/HRM/POL/08»\nIssue number: «01»\nVersion: 2.0 (HCO Full v2 draft)\nDate created: «________»\nDate of implementation: «________»\nReview due: «one year from implementation»\n\nPrepared by (designation): «HR In-Charge / Personnel Officer»    Name: «________»    Signature: «________»\nReviewed by (designation): «Quality Coordinator»    Name: «________»    Signature: «________»\nApproved by (designation): «Medical Superintendent»    Name: «________»    Signature: «________»\n\nAmendment sheet (add a line for each change after issue)\n\nSr | Section | Change | Reason | Prepared | Approved\n1. |  |  |  |  | ",
+  "prepared_by": "«HR In-Charge / Personnel Officer»",
+  "template_test": "hco_hrm_v2_adoptable_shape",
+  "subtitle": "HCO Full Accreditation, 6th Edition — HRM.8.",
+  "doc_no": "«HCO/HRM/POL/08»",
+  "acknowledgement_note": "The Quality Coordinator holds signed acknowledgements with the induction record.",
+  "stop_work": "",
+  "edition_label": "NABH HCO Full Accreditation 6th Edition",
+  "render_basename": "HCO.HRM.8",
+  "programme": "HCO Full Accreditation, 6th Edition"
+}

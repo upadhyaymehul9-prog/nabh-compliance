@@ -1,0 +1,1532 @@
+# HCO 6th Edition Guidebook OCR — Management of Medication (MOM)
+# Source: policies/source/NABH 6th Edition Standards & Guidebook-1.pdf
+# md5 2c4489ee98de4ae9b49cba168ea9f42a; scanned, no text layer.
+# pytesseract + pypdfium2 scale=2.2; 0-based indices 148-174 (PDF pages 149-175).
+# Do not commit the PDF (policies/source/*.pdf is gitignored).
+
+
+===== PDF_IDX 148 (pdf page 149) =====
+
+Management of Medication
+(MOM)
+
+Intent of the chapter
+
+The organisation has a safe and organised medication management process. The availability, safe storage,
+prescription, dispensing and administration of medications is governed by written guidance. The organisation
+designates a medication safety officer.
+
+The organisation develops, implements and updates the hospital formulary. The pharmacy shall have
+oversight of all medications stocked out of the pharmacy. The pharmacy shall ensure correct storage (as
+regards to temperature, light; high-risk medications including look-alike, sound-alike, etc.), expiry dates and
+maintenance of documentation.
+
+The availability of emergency medication is stressed upon. The organisation shall have a mechanism to
+ensure that the emergency medications are standardised throughout the organisation, readily available and
+replenished promptly. There shall be a monitoring mechanism to ensure that the required medications are
+always stocked and well within expiry dates.
+Every high-risk medication order shall be verified by an appropriate person to ensure accuracy of the dose,
+frequency and route of administration. Safety is paramount when using narcotics, chemotherapeutic agents
+and radiopharmaceuticals. Reconciliation of medications occurs at transition points of patient care as part of
+patient safety.
+The medication management process also includes monitoring of patients after administration and
+procedures for reporting and analysing near-misses, medication errors and adverse drug reactions.
+
+Medications also include blood, implants and devices.
+
+Medical supplies and consumables are available for use.
+
+MMARY OF STANDARDS
+
+MOM.1. Pharmacy services and medication management is done safely.
+
+MOM.2. The organisation develops, updates and implements a hospital formulary.
+
+MOM.3. Medications are stored appropriately and are available where required.
+
+MOM.4. Medications are prescribed safely and rationally.
+
+MOM.5. Medication orders are written in a uniform manner.
+
+MOM.6. Medications are dispensed in a safe manner.
+
+MOM.7. Medications are administered safely.
+
+MOM.8. Patients are monitored after medication administration.
+
+Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are
+
+oIIe used safely.
+
+MOM.10. Implantable prosthesis and medical devices are used in accordance with laid down criteria.
+=
+
+MOM.11. Medical supplies and consumables are stored appropriately and are available where required.
+
+*This implies that the objective element requires documentation.
+
+
+
+===== PDF_IDX 149 (pdf page 150) =====
+
+pook to NABH Accreditation Standards for Hospitals
+
+NABH
+
+ide!
+
+Summary of Objective Elements
+
+Standard ah
+
+Objective elements 68
+
+CQRE 13
+Commitment 48
+Achievement 6
+Excellence 1
+
+Objectivé  omt.  MoM.2,  MOM.3. MOM.5. | MOM.6. MOM7. MOMs.  MOM.9.  MOM.10, | MOM.11
+
+Element
+
+a Commitment | CQRE CQRE | Commtment Commitment | Commitment | Commitment | Commitment | Commitment | Commitment Commitment |
+
+b Commitment | Commitment | Commitment | C@RE | Commitment | Commitment | Commitment Commitment | Commitment | Commitment | Commitment
+| |
+
+c Achievement | Commitment | C@RE | Commitment | Commitmont | Commitment | Commitment) C@RE | Commitment | Commitment | Commitment
+al |
+
+1 | T |
+d Commitment | Achievement | Achievement | Excellence | Commitment| C@QRE | C@RE | Commitment | Commitment | Commitment | Commitment
+
+e Commitment | Commitment| CRRE | CQRE CQRE | commitment | Commitment | Commitment | Achievement | Commitment
+
+|
+
+f Commitment | Commitment! CORE Commitment Commitment | Commitment
+|
+| | __t ———E =
+9 C@RE_ | Achievement Commitment
+| |
+h Achlevement CQRE |
+= = 4 —_
+i Commitment
+i Commitment
+—_ — = }+—— ——
+k | Commttment | |
+
+
+
+===== PDF_IDX 150 (pdf page 151) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+—_ q
+NABH
+
+Standards and Objective Elements
+
+Standard
+
+MOM.1. Pharmacy services and medication management is done safely.
+
+Objective Elements
+
+Commitment a. Pharmacy services and medication management are implemented following
+written guidance. *
+
+Interpretation: The written guidance shall address aspects related to the
+formulary, procurement, storage, prescription, dispensing, administration and
+monitoring the use of medications. A qualified individual shall supervise all the
+activities of the Pharmacy services. Medication management shall cover all
+patient care area across the organisation. All required procedures under this
+chapter shall be documented as a ‘Medication Management Manual’.
+
+Commitment b. A multi-disciplinary committee guides the formulation and implementation of
+pharmacy services and medication management.
+
+Interpretation: The multidisciplinary committee shall have defined roles and
+responsibilities for the management of medications. Where applicable, these are
+in line with legislation and applicable regulations. Some of the responsibilities of
+the committee include developing medication management processes;
+developing and revising the organisation's formulary; and evaluating medication
+use, and patient safety incidents involving medications. The committee shall
+include representatives of major clinical departments, administration, a
+pharmacist/clinical pharmacologist and medication safety officer. It shall also
+have representation from nurses and Quality department. The objectives of this
+committee, terms of reference like its composition, frequency of meetings, the
+quorum required shall be defined. Ata minimum, the committee shall meet once
+inthree months. The minutes of the meeting shall be documented.
+
+Achievement c. The multi-disciplinary committee updates medication management
+processes.
+
+Interpretation: This includes information on rational use, medication errors,
+medication management, adverse drug reactions, patient safety and high-risk
+
+|| CRE = Commitment a Achievement = Excellence
+
+
+===== PDF_IDX 151 (pdf page 152) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals _ Tt)
+I 2 NABH
+
+medications. The multidisciplinary committee shall conduct Medication
+Management system review on an annual basis. The organization designates a
+medication safety officer, this job responsibility could be handled by the patient
+safety officer for example monitoring and analysis of medication related adverse
+events.
+
+Refer PSQ.1.d. and PSQ.7.c.
+
+Commitment d. There is a procedure to obtain medications when the pharmacy is closed or
+in case of stock outs. *
+
+Interpretation: When the pharmacy is closed or in case of stock outs there shall
+be a standard operating procedure to procure the drugs. It is preferable that the
+organisation has a 24-hour pharmacy.
+
+Commitment e. The organisation has a mechanism to inform relevant staff of key changes in
+pharmacy services and medication management to ensure uninterrupted
+and safe care.
+
+Interpretation: The organisation shall have a process to communicate
+medication shortages, including stockouts to relevant staff (clinicians and
+nurses). The relevant staff shall also be informed of the recall of a drug within 24
+hours, any serious adverse events and patient safety incidents associated with
+medication usage. The Pharmacy-in-charge or a designated authority shall be
+responsible for communicating the same. This Communication shall be
+documented.
+
+Refer to MOM.2., MOM.5.b. and MOM.9.e.
+
+Standard
+
+The organisation develops, updates and implements a hospital
+
+MOM.2.
+formulary.
+
+Objective Elements
+SORE a. Alist of medications appropriate for the patients and as per the scope of the
+
+organisation’s clinical services is developed collaboratively by the mullti-
+disciplinary committee.
+
+HM cone HB commitment HE Achievement HEEB excetience
+
+
+
+===== PDF_IDX 152 (pdf page 153) =====
+
+NABH.
+
+Interpretation: The multidisciplinary committee shall prepare the organisation's
+formulary. The formulary shall include medications necessary to meet the
+organisation’s mission, patient needs and scope of services. The formulary could
+be prepared keeping in view the “National List of Essential Medicines” and “WHO
+Model List of Essential Medicines”. It could also take into consideration the harm
+potential of the medication, interactions with other medications and likelihood of
+patient safety incidents. The organisation could look at the possibility of having
+system-wise/speciality wise formulary.
+
+Ata minimum, the formulary shall include the name of the molecule, formulation
+and strength(s). The organisation shall endeavour to limit the number of drug
+concentrations of a particular drug in the formulary.
+
+Implants and devices are included in drugs and shall be included in the formulary.
+
+Commitment b.
+
+Commitment c.
+
+The list is reviewed and updated collaboratively by the multi-disciplinary
+committee at least annually.
+
+Interpretation: The committee may review and update all medications or only
+certain medication categories. The review may be done speciality wise. Non-
+formulary drugs, which were procured in the previous year regularly, may be
+included in the revised list. Aspects of patient safety, including adverse drug
+reactions, changing disease pattern, changing resistance pattern, and cost,
+could be taken into consideration during the review.
+
+The current formulary is available for clinicians to refer to.
+
+Interpretation: The current formulary shall be made available to all treating
+doctors of the organisation. The organisation needs to ensure that clinicians have
+access to the current version of the formulary. The formulary could be made
+available in either physical or electronic form.
+
+Achievement d.
+
+GM core
+
+The clinicians adhere to the current formulary.
+
+Interpretation: The organisation shall ensure that prescriptions are as per the
+formulary. It shall monitor the frequency of prescriptions being rejected/local
+purchase done because it contained non-formulary drugs.
+
+= Commitment = Achievement || Excellence
+
+
+
+===== PDF_IDX 153 (pdf page 154) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals 69
+NABH
+
+Commitment e. The organisation adheres to the procedure for the acquisition of formulary
+medications. *
+
+Interpretation: The procedure shall address the issues of vendor selection,
+vendor evaluation, reorder levels, indenting process, generation of the purchase
+order, and receipt of goods. The procedure also addresses managing stock-outs
+due to various reasons.
+
+Commitment f. The organisation adheres to the procedure to obtain medications not listed
+in the formulary. *
+
+Interpretation: Local purchase/hotline, which takes care of the immediate
+requirement are examples of the procedure to obtain medications not listed in the
+formulary. Whenever there is the local purchase of a medication thats not listed in
+the formulary, the organisation shall have a process of evaluation, authorisation
+and ratification and decision-making on its subsequent inclusion in the formulary
+ifnecessary.
+
+Standard
+
+Medications are stored appropriately and are available where
+
+MOM.3. -
+required.
+
+Objective Elements
+
+C@RE a. Medications are stored in a clean, safe and secure environment while
+incorporating the manufacturer’s recommendation(s).
+
+Interpretation: The medication storage space shall be clean, safe and secure.
+The organisation shall adhere to the storage requirements of drugs as specified
+by the manufacturer. In the absence of manufacturer's instructions, the
+organisation shall develop and implement storage requirements. Storage
+requirements shall apply to all areas where medications are stored, including
+clinical areas.
+
+Medications shall be protected from loss or theft throughout the organization.
+Some of the ways of ensuring this is to limit access to medication storage areas to
+authorised team members, locking medication carts and never leaving them
+unattended, or storing medications in an area that is continuously staffed. It is
+preferable that the medication storage area is organised. Overall cleanliness of
+the storage area shall be maintained.
+
+if C@RE = Commitment = Achievement = Excellence
+
+
+
+===== PDF_IDX 154 (pdf page 155) =====
+
+4
+NABH
+
+Vaccines shall be stored at the required temperature as per manufacturers
+recommendations. Where appropriate, temperature monitoring of the room, the
+cold storage area/refrigerator shall be done at least once a day. In case of areas
+which are not open all days, it shall be done on all working days.
+
+Beyond expiry date drugs (before disposal), shall be stored separately and away
+from drugs which are intended for patient use.
+
+Commitment _ b.
+
+Sound inventory control practices guide the storage of medications
+throughout the organisation.
+
+Interpretation: The Organisation shall follow inventory control practices like
+ABC, VED, FSN, First Expiry First Out, lead time analysis, etc. or a combination of
+these. The medicines could be stored in an alphabetical order of generic name.
+
+To check for loss or theft, the organisation could conduct stock verification audits
+at regular intervals (as defined by the organisation) to verify the inventory and
+detect instances of loss or theft.
+
+The organisation also has a mechanism for handling medications which are not
+part of the regular inventory. For example, not for sale medications including
+physician’s samples.
+
+CQ@RE c.
+
+The organisation defines and updates its list of high-risk medication(s). *
+
+Interpretation: The organisation shall define and update its list of high risk
+medications periodically. High risk/high alert medications carry a heightened risk
+for adverse outcomes and catastrophic harm whenever there is an error. High-risk
+medications/high alert medications include medicines with low therapeutic
+window, controlled substances, psychotherapeutic medications, look-alike and
+sound-alike medications, and concentrated electrolytes. The list shall be
+available in the pharmacy and all clinical areas where high-risk medications are
+stored.
+
+Achievement d.
+
+HM core
+
+High-risk medications are stored in areas of the organisation where it is
+Clinically necessary.
+
+Interpretation: High-risk medications are stored in pre-determined areas of the
+organisation for example, certain wards, OT, ICU. Clinical needs shall determine
+the availability of relevant high-risk drugs in such areas. Where applicable,
+(narcotics), it shall be guided by regulations. In all such areas, safeguards shall be
+in place to prevent inadvertent administration.
+
+a Commitment SS Achievement = Excellence
+
+
+
+===== PDF_IDX 155 (pdf page 156) =====
+
+C@RE
+
+e.
+
+@
+
+NABH
+
+High-risk medications including look-alike, sound-alike medications and
+different concentrations of the same medication are stored physically apart
+from each other. *
+
+Interpretation: Many drugs in ampoules, vials or tablets may look-alike or sound-
+alike. These are identified periodically, and the Look-alike Sound-alike
+medications (LASA) list shall be made available in all units where drugs are
+stored. Different concentrations of the same drug need to be identified. The list
+shall be developed from the hospital formulary. The list will have to be revised at
+regular intervals depending on the changes in the formulary and changes in the
+packaging (in case of look-alike).
+
+A good practice is to store the two identified look-alike/sound-alike drugs and/or
+different concentrations of the same drugs as far apart physically as is possible. .
+This is in addition to regular storage practices. In addition to the pharmacy, these
+storage practices shall be followed in patient care areas.
+
+Commitment f.
+
+The list of emergency medications is defined and is stored uniformly. *
+
+Interpretation: The list of emergency medications shall be prepared in
+consonance with sound clinical practices and documented. The list of drugs
+could be modified according to the needs of the clinical department for example
+ICU, physiotherapy, emergency, CATH lab etc. A crash cart would help the
+organisation to store these medications, i.e. the rows and drawers have defined
+medicines.
+
+No other drug shall be kept stored with emergency medications.
+
+CQRE
+
+HB core
+
+Emergency medications are available all the time and are replenished
+promptly when used.
+
+Interpretation: Adequate quantity of emergency medicines shall be stocked at all
+times. An inventory check shall be done at least daily to ensure this. In case the
+organisation follows a system of sealing the emergency cart, then the check shall
+be carried out after each use of the cart/once every month.
+
+Refer to COP5.c.
+
+lame Commitment = Achievement = Excellence
+
+
+
+===== PDF_IDX 156 (pdf page 157) =====
+
+Standard
+
+MOM.4.
+
+NABH.
+
+Medications are prescribed safely and rationally.
+
+Objective Elements
+
+Commitment a.
+
+Medication prescription is in consonance with good practices / guidelines
+for rational prescription of medications. *
+
+Interpretation: This shall address both outpatient and in-patient prescription.
+
+The organisation shall ensure that clinicians are trained/sensitised on the rational
+prescription of medications.
+
+WHO states: “Rational use of medicines requires that patients receive
+medications appropriate to their clinical needs, in doses that meet their own
+individual requirements, for an adequate period of time, and at the lowest cost to
+them and their community."
+
+Code of Medical Ethics-2002" published by Medical Council of India erstwhile
+National Medical Commission shall be followed.
+
+Refer to the glossary for a definition of “prescription”.
+
+CQRE
+
+HM core
+
+The organisation adheres to the determined minimum requirements of a
+prescription. *
+
+Interpretation: Prescriptions generated within the organisation (IPD, OPD and
+emergency) shall be in accordance with national/international guidelines and
+regulatory bodies. At a minimum, the prescription shall have the name of the
+patient; unique hospital number; name of the drug (generic composition is
+mandatory except in the case of combinations of vitamins and/or minerals),
+strength, dosage instruction, duration and total quantity of the medicine; name,
+signature and registration number of the prescribing doctor. Error-prone
+abbreviations shall not be used. All prescriptions shall be written in capital letters.
+Itis preferable to use digital prescription system to reduce errors.
+
+Prescription errors or illegible prescriptions will be initialled after a single
+strikethrough and rewritten.
+
+Good references are the Drugs and Cosmetics Act and the Code of Medical
+Ethics and Institution for Safe Medication Practices guidelines.
+
+=| Commitment HEE Achievement ee! Excellence
+
+
+
+===== PDF_IDX 157 (pdf page 158) =====
+
+7
+
+Commitment.
+
+NABH
+
+Drug allergies and previous adverse drug reactions are ascertained before
+prescribing.
+
+Interpretation: Dug allergy and previous adverse drug reaction shall be
+ascertained during the initial consultation, before prescribing or at any point of
+time during care. It is a good practice to document drug allergies prominently in
+the medical record, both in OP and IP.
+
+Excellence d.
+
+The organisation has a mechanism to assist the clinician in prescribing
+appropriate medication.
+
+Interpretation: The organisation needs to provide its clinicians with a
+mechanism(s) to help identify drug interactions, food-drug interactions, alcohol-
+drug interactions, therapeutic duplication, dose adjustments etc. This could
+either be in electronic or in the physical form.
+
+CQRE e.
+
+Reconciliation of medications occurs at transition points of patient care.
+
+Interpretation: The purpose of medication reconciliation is to ensure that the list
+of medications that a patient has to receive is complete and up to date with past
+clinical conditions and present care plan.
+
+The prescribed medications shall be checked for accuracy at the transition points,
+such as the time of admission, either direct or after admission from the
+emergency, transfer of the patient from one ward setting/department to another,
+or at the time of discharge. It is preferable that medication reconciliation also
+occurs after cross-consultation. Medication reconciliation shall be documented.
+There is a system for effective communication during handover regarding the
+reconciliation of medications.
+
+CORE f.
+
+HB cone
+
+Verbal orders are implemented by ensuring safe medication management
+practices. *
+
+Interpretation: The organisation shall ensure safe medication management
+practices through written guidance and implementation of the same. The written
+guidance shall mention who can give a verbal order, when can it be given and how
+the order will be authenticated. Verbal orders shall be limited to urgent situations
+where immediate written or electronic communication is not practical. To the
+extent possible, their usage shall be limited. The organisation shall have an
+approved list of formulary drugs which can be ordered verbally. This list can be
+defined either by inclusion or exclusion.
+
+= Commitment iL Achievement =i Excellence
+
+
+
+===== PDF_IDX 158 (pdf page 159) =====
+
+NAB’
+
+It shall ensure that the procedure incorporates good practices like “repeat
+back/read back”.
+
+A verbal order shall be counter-signed by the doctor who ordered it within 24
+hours of ordering.
+
+For the definition of ‘verbal order’, refer to the glossary.
+
+Achievement g.
+
+Audit of medication orders / prescription is carried out to check for safe and
+rational prescription of medications.
+
+Interpretation: The scope of the audit shall include:
+
+* legibility, use of capitals in written orders;
+
+* the appropriateness of the drug, dose, frequency, and route of administration;
+* the presence of therapeutic duplication;
+
+* the possibility of drug interaction and measures taken to avoid the same;
+
+* the possibility of food-drug interaction and measures taken to avoid the same.
+* scope for dosage adjustment in renal and hepatic impairment.
+
+* the possibility of intravenous incompatibility.
+
+* presence of inappropriate dilutions and duration of medications Infusions.
+
+* the requirements of this standard (MOM 4b, e-h).
+
+This shall be done at least once a month using a representative sample size.
+
+It could preferably be done by a clinical pharmacologist/clinical pharmacist. In
+case there is no clinical pharmacologist/clinical pharmacist, it could be done by a
+multidisciplinary committee/team, who is trained in audit of medication orders/
+prescriptions. It is preferable that this is done for all prescriptions as ‘live audit’
+before the medicines are dispensed.
+
+Achievement h.
+
+[core
+
+Corrective and / or preventive action(s) is taken based on the audit, where
+appropriate.
+
+Interpretation: Where appropriate, a corrective and/or preventive action(s) is
+taken based on the root-cause analysis. The records of the same shall be
+maintained.
+
+| | Commitment = Achievement = Excellence
+
+
+
+===== PDF_IDX 159 (pdf page 160) =====
+
+jebook to NABH Accreditation Standards for Hospitals
+
+4
+NABH
+
+MOM.5. Medications orders are written in a uniform manner.
+
+Objective Elements
+
+Commitment a.
+
+The organisation ensures that only authorised personnel write orders. *
+
+Interpretation: Medication orders shall be written by a doctor who at a minimum,
+holds an MBBS qualification. In case there is any other category of staff
+authorised to write medication orders, the same shall be backed by a legislation
+or government order. The medication order card in the IP shall have the orders
+written by a doctor, even if it is the case of transcribing orders of the treating
+consultant from an OP record or an admission note. In facilities which use
+Electronic Medical Record (EMR), the doctor shall directly enter the prescription
+in the Hospital Information System (HIS) using his or her unique login. In case the
+HIS entry is made by an assistant, the same shall be verified and authorised by the
+doctor.
+
+Commitment _b.
+
+HM cone
+
+Medication orders are written in a uniform location in the medical records,
+which also include the patient’s name and unique identification number.
+
+Interpretation: All the orders for medicines shall be recorded on a uniform
+location of the medical record. Only medications written in this location shall be
+administered to the patient. It is imperative that medication orders that are written
+in any other location of the medical record be moved to this location, electronic
+orders, when typed, shall again follow the same principles. It is preferable that the
+prescription and the administration record is on the same sheet. This would help
+minimise medication errors. A drug ‘Kardex’ could be used for this purpose. The
+treatment orders are written daily or authorised daily in a ‘Kardex’ like format.
+Phrases like “CST”/“ continue same treatment”/“repeat all”/“repeat 1,4,5,8” shall
+not be accepted.
+
+Whenever there is a modification in the medication order in the existing order fora
+particular drug, a fresh order will have to be written for that drug for example, Tab.
+Paracetamol 500 mg QID changed to Tab. Paracetamol 500 mg BD - this shall
+warrant the first order to be discontinued and a fresh medication order to be
+written. A strike-through or over-writing of the previous order is not acceptable.
+
+== Commitment —_ Achievement - | Excellence
+
+
+
+===== PDF_IDX 160 (pdf page 161) =====
+
+a
+
+Commitment c. Medication orders are legible, dated, timed and signed.
+
+NABR
+
+Interpretation: All hand-written medication orders shall be written in capital
+letters. In case abbreviations are used, a list of approved standardiseq
+abbreviations for medication orders shall be used throughout the organisation,
+Error-prone abbreviations shall not be used. A good reference is the Institution for
+Safe Medication Practices guidelines.
+
+The identity of the person who has written the medication order shall be traceable,
+This could be done by either writing the name against every order or by having a
+‘master signature list’ in the medical record which has the name of the person
+against the signature or by stating the employee code number against every
+medication order.
+
+Commitment d. Medication orders contain the name of the medicine, route of administration,
+strength to be administered and frequency / time of administration.
+
+Interpretation: |n case of medication orders which have two or more drugs
+(tablet/capsule/injection) the strength of all the individual drugs shall be written.
+This may not be applicable for preparations having a combination of vitamins
+and/or minerals. Medication orders shall be recorded separately if the strength
+differs for each time of administration.
+
+There shall be a mechanism for taking action when medications orders are
+incomplete with respect to any of the above parameters.
+
+Refer to MOM.7.d
+
+Standard
+
+MOM.6. Medications are dispensed in a safe manner.
+
+Objective Elements
+
+Commitment a. Dispensing of medications is done safely. *
+
+Interpretation: Written guidance shall be laid down for the safe dispensing of
+medication. Medications shall be dispensed only against a valid prescription or
+medication order (except for over-the-counter drugs). Medication shall be
+
+— CORE _ Commitment t—} Achievement — Excellence
+
+
+
+===== PDF_IDX 161 (pdf page 162) =====
+
+NABH
+
+checked before dispensing and include a check of the generic composition,
+formulation, expiry date, and where applicable, the strength.
+
+This shall include both bulk and retail pharmacy.
+
+Physicians’ samples shall not be sold.
+
+Commitment b. Medication recalls are handled effectively. *
+
+Interpretation: The organization shall have an established system for medication
+recalls. Recall may be based on communication from regulatory authorities,
+manufacturer or internal feedback (for example, visible contaminant in IV fluid
+bottle). The recall procedure in response to internal feedback also includes
+providing information to the appropriate regulatory authority. A record ofthe same
+shall be maintained on occurrence.
+
+Refer to MOM.1.e.
+
+Commitment c. Near-expiry medications are handled effectively. *
+
+Interpretation: The organisation could define as to what constitutes “near expiry”
+medications, for example, three months before the expiry date. The
+organisation’s mechanism shall ensure that near expiry medications are
+withdrawn and that no beyond expiry date medication is available.
+
+C@RE d. Dispensed medications are labelled. *
+
+Interpretation: At a minimum, the label shall include the dosage instruction ina
+manner that the patient understands. Labelling is applicable only for out-patients.
+In instances when medicines are dispensed either as cut strips or from bulk
+containers, the label must include the drug name, strength, dosage instruction (in
+a manner that the patient understands) and expiry date. The organisation could
+consider using technology (for example, QR codes on individual medicines) to
+optimise the process. This shall be applicable for both in-patients and out-
+patients. It shall also be applicable where drugs are reconstituted for example
+Chemotherapy drugs.
+
+| | CQ@RE z= Commitment = Achievement Fas] Excellence
+
+kL ©
+
+
+
+===== PDF_IDX 162 (pdf page 163) =====
+
+Guidebook to NABH Accreditation Standards for Hospitals
+NABH
+
+C@RE e. High-risk medication orders are verified before dispensing.
+
+Interpretation: High-risk medications shall be given only after written orders, and
+it shall be verified by the staff before dispensing. This shall adhere to statutory
+requirements, where applicable.
+
+Commitment f. Return of medications to the pharmacy is addressed. *
+
+Interpretation: The organisation shall have written guidance to direct the return of
+medications to the pharmacy. At a minimum, the written guidance shall address
+the list of medications which would be accepted for return (either by inclusion or
+exclusion) and minimum conditions to be met for return of medications. It is
+preferable that any drug which has a specific temperature storage requirement
+not be accepted for return once it has gone out of the organisation’s premises,
+The minimum conditions to be met for return of medications could include the
+drug name, strength, batch number and expiry date matching the bill; no visible
+damage etc. It is preferable that the organisation creates awareness regarding
+the return of medications. Some ways of doing this are having a signage stating
+the salient points mentioned above, putting up this information on the website,
+printing the information on the receipt etc.
+
+Standard
+
+MOM.7. Medications are administered safely.
+
+Objective Elements
+
+Commitment a. Medications are administered by those who are permitted by law to do so.
+
+Interpretation: Only a registered nurse or doctor with a minimum of MBBS
+qualification shall administer medication. In case there is any other category of
+staff authorised to administer medication, a legislation or government order shall
+back the same.
+
+Hi CORE == Commitment _ Achievement Hl Excellence
+
+
+
+===== PDF_IDX 163 (pdf page 164) =====
+
+'*
+
+Commitment b.
+
+NABH
+
+Prepared medication is labelled before preparation of a second drug.
+
+Interpretation: Labelling is required when more than one drug is prepared and
+loaded. Examples of these are anaesthetic drug preparation in OTs,
+chemotherapy drugs etc.
+
+Commitment c.
+
+The patient is identified before administration.
+
+Interpretation: At a minimum, two identifiers shall be used for patient
+identification, with one of them being the unique identification number (for
+example hospital number/IP number, etc.) and full name of the patient.
+
+Refer to COP1.b.
+
+C@RE d.
+
+Medication is verified from the medication order and physically inspected
+before administration.
+
+Interpretation: Staff administering medications shall verify the medication order
+and ensure that medications are administered appropriately. The general
+appearance of the medication (for example melting, clumping, etc.) and the
+expiry dates shall be checked before administration. If any of the parameters
+concerning an order, such as name, strength, route or frequency or time are
+missing/incomplete, the medication administration shall be deferred, pending
+early verification by the treating team. In case the confirmation is obtained
+verbally, it shall be considered a verbal order and the procedure for verbal orders
+shall be adhered to.
+
+In case of high-risk medication(s), the verification shall be done by at least two
+staff (nurse-nurse or nurse-doctor), independently and documented.
+
+The nurses shall be knowledgeable regarding high-risk medications and shall be
+empowered to highlight prescription errors noted while verifying the orders.
+
+Commitment e.
+
+HB core
+
+Strength is verified from the order before administration.
+
+Interpretation: The person administering the drug shall verify the strength from
+the medication order before administration. In case of discrepancy, medication
+administration shall be deferred.
+
+Refer to MOM.7.d
+
+HEE Commitment HEEB Achievement HEB excetience
+
+
+
+===== PDF_IDX 164 (pdf page 165) =====
+
+Commitment f.
+
+The route is verified from the order before administration.
+
+Interpretation: Where applicable, the site/ route of administration shall also be
+verified.
+
+Refer to MOM.7.d
+
+Commitment g.
+
+CQRE h.
+
+Commitment i.
+
+HB core
+
+Timing is verified from the order before administration.
+
+Interpretation: The organisation shall have documentation to support the time of
+administration of drugs for which the time has not been written. For example, 1-1-
+1, BD etc. The suggested timings for these medicines have to be adhered. “ISMP
+Acute Care Guidelines for Timely Administration of Scheduled Medications”
+provide guidance on scheduling medications and classifies them into time-critical
+and non-time-critical. The organisation could adopt/adapt the same.
+
+Measures to avoid catheter and tubing mis-connections during medication
+administration are implemented. *
+
+Interpretation: The organisation ensures that inadvertent administration of a
+drug through the wrong route is avoided. This could be done by using design
+features that prevent misconnections and prompt the user to take the correct
+action. Intravenous (IV) extension tubes shall not be used for epidurals, irrigation,
+drains, and central lines or to extend enteric feeding tubes. Care shall be taken to
+position functionally dissimilar tubes used in patient care away from one another.
+Staff administering medications shall trace all lines from their origin to the
+connection port to verify attachments before making any connections or
+reconnections, or administering medications, solutions, or other products.
+
+Medication administration is documented.
+
+Interpretation: The organisation shall ensure that documentation of medication
+administration is done in a uniform location. It shall include the name of the
+medication, strength, route of administration, timing and the name/employee ID
+number and signature of the person who has administered the medication.
+Medicines administered shall be documented each time for each dose of the
+same medication separately. The records shall reflect the actual administration.
+For example, if brand Y was given in place of brand X (same generically), the
+documentation shall be of brand Y. Similarly, if the order was for a tablet of 250 mg,
+but the administration was /2a tablet of 500 mg, the latter shall be documented. In
+the case of infusions, it shall capture the start time, the rate/volume of infusion and
+end time. In case of continuous infusion, the drop rate/volume shall be
+documented and the total volume infused shall be calculated for each shift.
+
+= Commitment = Achievement = Excellence
+
+
+
+===== PDF_IDX 165 (pdf page 166) =====
+
+Commitment j.
+
+NABH
+
+Measures to govern patient’s self-administration of medications are
+implemented. *
+
+Interpretation: At the outset, the organisation could define if it would permit the
+self-administration of medications. In case the organisation permits the same, the
+written guidance shall define the medications which the patient can self-
+administer. It is preferable that the organisation also incorporates a method for
+assisting self-administration of medications. The organization shall ensure that
+the patient is reminded to take the medication (before every dose) and document
+the same. For example, self-administration of insulin.
+
+Commitment _ k.
+
+Measures to govern patient’s medications brought from outside the
+organisation shall be implemented. *
+
+Interpretation: At the outset, the organisation could define if it would permit the
+patient getting his/her medications. In case of the organisation permitting the
+same, written guidance shall include the pre-requisites for such a medication (for
+example, clear label with mention of the name, strength, expiry date, batch
+number etc.).
+
+Standard
+
+MOM.8. Pati
+
+ents are monitored after medication administration.
+
+Objective Elements
+
+Commitment a.
+
+HM core
+
+Patients shall be monitored after medication administration. *
+
+Interpretation: Relevant monitoring shall be done collaboratively to verify that the
+medicine is having its intended effect. It could also include monitoring the effects
+of medications (beneficial or adverse) through laboratory results. Besides, this
+shall help identify near misses, medication errors and adverse drug reactions.
+
+The organisation shall define those situations and medications where more
+frequent monitoring is required. For example, administration of high-risk
+medicines. The effect of medication in high risk patients like those on dialysis, in
+the ICU and elderly group shall be monitored ona regular basis.
+
+|| Commitment = Achievement lie Excellence
+
+
+
+===== PDF_IDX 166 (pdf page 167) =====
+
+Commitment _ b.
+
+NABH.
+
+Medications shall be changed based on the monitoring where appropriate.
+
+Interpretation: Medication changes are based on clinical response and adverse
+drug reactions, ifany.
+
+CQRE c.
+
+The organisation shall capture near misses, medication errors and adverse
+drug reactions. *
+
+Interpretation: Near misses, medication errors and adverse drug reactions shall
+be defined. This shall be in consonance with best practices. The organization
+shall have a written guidance on the process to capture near misses, medication
+errors and adverse drug reactions. This shall incorporate identifying,
+documenting, reporting, analysing and action taken regarding near misses,
+medication errors and adverse drug reactions.
+
+Refer to the glossary for “near miss”, “medication error” and “adverse drug
+reaction”.
+
+Commitment d.
+
+Near misses, medication errors and adverse drug reactions shall be
+reported within a specified time frame. *
+
+Interpretation: The organisation shall define the timeframe for reporting once any
+ofthis has occurred and adhere to the same.
+
+Commitment e.
+
+Near misses, medication errors and adverse drug reactions are collected
+and analysed.
+
+Interpretation: Details of the near misses, medication errors and adverse drug
+reactions are collected and analysed by the multidisciplinary committee. The
+analysis shall be completed in a defined time frame. It is preferable that a clinical
+pharmacologist/clinical pharmacist be a part of this exercise.
+
+Commitment f.
+
+HM core
+
+Corrective and / or preventive action(s) are taken based on the analysis.
+
+Interpretation: Where appropriate, corrective and/or preventive action are taken.
+The records of the same shall be maintained. It is preferable that corrective and/or
+preventive action(s) be taken based on the root-cause analysis.
+
+| | Commitment SS Achievement i. | Excellence
+
+
+===== PDF_IDX 167 (pdf page 168) =====
+
+Narcotic drugs and psychotropic substances, chemotherapeutic
+agents and radio-pharmaceuticals are used in a safe manner.
+
+Objective Elements
+
+Commitment a.
+
+Narcotic drugs and psychotropic substances, chemotherapeutic agents and
+radio-pharmaceuticals are used safely. *
+
+Interpretation: Written guidance, developed in consonance with local and
+national regulations/guidelines shall be implemented. The written guidance
+could address all the objective elements of this standard. Examples of
+regulations/guidelines are Narcotic Drugs and Psychotropic Substances Act and
+AERB guidelines.
+
+Commitment b.
+
+Narcotic drugs and psychotropic substances, chemotherapeutic agents and
+radio-pharmaceuticals are prescribed by appropriate caregivers.
+
+Interpretation: For narcotic drugs, it shall be the designated/ privileged medical
+officer(s).
+
+Chemotherapy shall be prescribed by those who have the knowledge to monitor
+and treat the adverse effect of chemotherapy. This is preferably a medical
+oncologist or a doctor who has been trained and has achieved competency in the
+same.
+
+Radiopharmaceuticals shall be prescribed only by a caregiver authorised by the
+statutory body.
+
+Commitment c.
+
+HE cone
+
+Narcotic drugs and psychotropic substances, chemotherapeutic agents and
+radio-pharmaceuticals drugs shall be stored securely.
+
+Interpretation: Narcotic drugs shall be stored securely in consonance with
+statutory requirements. The security measures shall ensure that these
+medications are not diverted and abused.
+
+Chemotherapeutic agents shall be accessible only to authorised personnel.
+Radiopharmaceuticals shall be labeled and stored as per AERB guidelines.
+
+It is preferable that these medications are stored separately from other
+medications.
+
+Hl Commitment Ee Achievement | | Excellence
+
+
+
+===== PDF_IDX 168 (pdf page 169) =====
+
+Commitment d.
+
+Chemotherapy and radio-pharmaceuticals shall be prepared properly and
+safely and administered by qualified personnel.
+
+Interpretation: It is required that qualified personnel have received special
+training in the preparation and administration of chemotherapeutic drugs.
+
+Abio-safety cabinet of class Il (preferably IIA) with appropriate personal protective
+equipment shall be used for preparing/mixing chemotherapeutic drugs.
+
+Radio-pharmaceuticals shall be prepared and administered by an authorised
+caregiver.
+
+Commitment e.
+
+A proper record shall be kept of the usage, administration and disposal of
+narcotic drugs and psychotropic substances, chemotherapeutic agents and
+radio-pharmaceuticals.
+
+Interpretation: A strict inventory control shall be kept for narcotic drugs and
+psychotropic substances, chemotherapeutic agents and radiopharmaceuticals .
+Record of usage, administration, wastage and disposal of narcotic drugs shall
+be kept following statutory requirements. These shall be disposed off according
+to existing statutory requirements (including Narcotic Drugs and Psychotropic
+Substances Act, AERB rules and Biomedical waste management rules) and the
+manufacturer's recommendation (where applicable).
+
+Standard
+
+MOM.10.
+
+Implantable prosthesis and medical devices shall be used in
+
+accordance with laid down criteria.
+
+Objective Elements
+
+Commitment a.
+
+HB core
+
+Usage of implantable prosthesis and medical devices is guided by scientific
+criteria for each item and national / international recognised guidelines /
+approvals for such specific item(s).
+
+Interpretation: The organisation shall ensure that relevant and sufficient scientific
+data are available before selection. It shall also look for any international (for
+example US-FDA) or national notification or applicable regulations (Central Drugs
+Standard Controi Organization notification based on the Drugs and Cosmetics
+Act) for approval of the particular product. The multidisciplinary committee shall
+be responsible for approving the use of a particular implant.
+
+ky Commitment Peo Achievement || Excellence
+
+
+
+===== PDF_IDX 169 (pdf page 170) =====
+
+Commitment b.
+
+G
+NABH
+
+The organisation implements a mechanism for the usage of the implantable
+prosthesis and medical devices. *
+
+Interpretation: The organisation shall have written guidance to direct
+procurement, storage/stocking, issuing and usage of implantable prosthesis and
+medical devices. Infection prevention and control requirement related to use of
+prosthesis and medical devices is implemented. This shall address statutory
+regulations/guidelines and manufacturer’s recommendation(s).
+
+Commitment c.
+
+Patient and his / her family are counselled for the usage of the implantable
+prosthesis and medical device, including precautions if any.
+
+Interpretation: Precautions could include non-usage of specific drugs and
+reporting to the hospital if a particular symptom occurs. The organization shall
+document the details of counselling provided to the patient/ his or her family in
+informed consent.
+
+Commitment d.
+
+The batch and the serial number of the implantable prosthesis and medical
+devices are recorded in the patient’s medical record, the master logbook and
+the discharge summary.
+
+Interpretation: \n case where implantable prosthesis do not have pre-labelled
+stickers, the organisation shall have suitable mechanisms in place for identifying
+the implant (manufacturer, type, size, batch number, serial number and any other
+important detail).
+
+Achievement e.
+
+HB cone
+
+Process of recall of implantable prosthesis and medical devices are handled
+effectively. *
+
+Interpretation: Process of recall may be based on communication from
+regulatory authorities, manufacturer or internal feedback. Recall procedure in
+response to internal feedback also includes providing information to appropriate
+regulatory authority and the manufacturer. The record shall be maintained on
+occurrence.
+
+Refer to MOM.1.e. and FMS.5.g.
+
+—) Commitment al Achievement 4 Excellence
+
+
+
+===== PDF_IDX 170 (pdf page 171) =====
+
+| Guidebook to NABH Accreditation Standards for Hospitals
+— , : NABH
+
+Standard
+
+Medical supplies and consumables are stored appropriately and are
+
+MOM.11. 2 .
+available where required.
+
+Objective Elements
+
+Commitment a. The organisation adheres to the defined process for the acquisition of
+medical supplies and consumables. *
+
+Interpretation: |n this context, medication supplies and consumables refer to
+items which are used in patient care excluding medications and implants. The
+process shall address the issues of vendor selection, vendor evaluation,
+indenting process, generation of the purchase order and receipt of goods.
+
+Commitment b. Medical supplies and consumables are used in a safe manner, where
+appropriate.
+
+Interpretation: The items shall be opened and used using relevant precautions to
+maintain sterility and integrity.
+
+Commitment c. Medical supplies and consumables are stored in a clean, safe and secure
+environment; incorporating the manufacturer’s recommendation(s).
+
+Interpretation: The organisation shall ensure that the storage requirements
+specified by the manufacturer are adhered to. This shall apply to all areas where
+these are stored, including wards. They shall be protected from loss or theft.
+Overall cleanliness of the storage area shall be maintained. Hazardous materials
+shall be identified and kept safely.
+
+Commitment d. Sound inventory control practices guide storage of medical supplies and
+consumables.
+
+Interpretation: The organisation shall follow or demonstrate ABC, VED, FSN,
+First Expiry First Out, lead time analysis, etc.
+
+MB cone = i commitment = I Achievement «= Excelence
+
+
+
+===== PDF_IDX 171 (pdf page 172) =====
+
+.
+NABH
+
+Commitment e. Thereisamechanism in place to verify the condition of medical supplies and
+consumables.
+
+Interpretation: Medical supplies and consumables shall be in a condition
+suitable for safe usage. The condition of these materials shall be checked before
+dispensing and usage. For example, opened up package, damp cotton roll,
+physical damage, and discolouration.
+
+HE cone = commitment «= Achievement = Excolionce
+
+kh ©
+
+
+
+===== PDF_IDX 172 (pdf page 173) =====
+
+References
+
+1.
+
+10.
+
+11.
+
+12.
+
+13.
+
+US Department of Health and Human Services. Agency for Healthcare Research and Quality. Patient
+Safety Network. Patient safety primer: never events. 2011. [cited 2023 Dec 5] Available on:
+https://psnet.ahrq.gov/issue/serious-reportable-events-healthcare-201 1-update.
+
+Kalaiselvan V, Srivastava S, Singh A, Gupta SK. Pharmacovigilance in India: present scenario and future
+challenges. Drug safety. 2019 Mar 7;42:339-46.
+
+Whaley C. Perspectives from pharmacists, prescribers and patients on sharing medication reason for
+use (Master's thesis, University of Waterloo). [cited 2023 Dec 5] Available from :
+https://uwspace.uwaterloo.ca/handle/10012/15817.
+
+MacMaster HW, Gonzalez S, Maruoka A, San Luis C, Stannard D, Rushakoff JA, Rushakoff Ru.
+Development and implementation of a subcutaneous insulin pen label bar code scanning protocol to
+prevent wrong-patient insulin pen errors. The Joint Commission Journal on Quality and Patient Safety.
+2019 May 1;45(5):380-6.
+
+Institute for Safe Medication Practices. FDA and ISMP lists of look-alike drug names with recommended
+tall man letters. [cited 2023 Dec 5] Available from: https://www.ismp.org/sites/
+default/files/attachments/201 7-11 /tallmanletters.pdf.
+
+Jungreithmayr V, Meid AD, Haefeli WE, Seidling HM. The impact of a computerized physician order entry
+system implementation on 20 different criteria of medication documentation—a before-and-after study.
+BMC Medical Informatics and Decision Making. 2021 Dec;21:1-2.
+
+Schepel L, Lehtonen L, Airaksinen M, Lapatto-Reiniluoto O. How to identify organizational high-alert
+medications. Journal of patient safety. 2021 Dec 1;17(8):e1358-63.
+
+Jayasinghe M, Srilal TL, Subasinghe S, Zawahir S. Identification of Confusing Medicine Proprietary
+Names: Toward Safe Medicine Use—A Cross-Sectional Study in Sri Lanka. Therapeutic Innovation &
+Regulatory Science. 2023 Nov;57(6):1248-59.
+
+Kahn S, Abramson EL. What is new in paediatric medication safety. Archives of Disease in Childhood.
+2019 Jun 1;104(6):596-9.
+
+National Coordinating Council for Medication Error Reporting and Prevention. (2015, January
+29). Recommendations to Enhance Accuracy of Prescription/Medication Order Writing. [cited 2023
+Dec 5] Available from: https://www.nccmerp.org/recommendations-enhance-accuracy-prescription-
+writing
+
+National Coordinating Council for Medication Error Reporting and Prevention. (2015, September
+2). Recommendations to Reduce Medication Errors Associated with Verbal Medication Orders and
+Prescriptions. [cited 2023 Dec 5]. Available from: https://www.nccmerp.org/recommendations-reduce-
+medication-errors-associated-verbal-medication-orders-and-prescriptions.
+
+National Coordinating Council for Medication Error Reporting and Prevention. (2015, September
+1). Recommendations to Enhance Accuracy of Dispensing Medications. Recommendations to
+Enhance Accuracy of Dispensing Medications. [cited 2023 Dec 5]. Available from :
+https://www.nccmerp.org/recommendations-enhance-accuracy-dispensing-medications.
+
+National Coordinating Council for Medication Error Reporting and Prevention. (2015, January
+29). Recommendations to Enhance Accuracy of Prescription/Medication Order Writing. Avaialable
+from: https://www.necmerp.org/recommendations-enhance-accuracy-prescription-writing [cited 2023
+Dec 5].
+
+©
+
+
+
+===== PDF_IDX 173 (pdf page 174) =====
+
+14.
+
+15.
+
+16.
+
+17.
+
+18.
+
+19.
+
+20.
+
+21.
+
+22.
+
+23.
+
+24,
+
+25.
+
+26.
+
+27.
+
+28.
+
+29.
+
+30.
+
+NABH
+
+National Coordinating Council for Medication Error Reporting and Prevention. (2015, September
+2). Recommendations to Enhance Accuracy of Administration of Medications.
+https://www.nccmerp.org/search/site?search_api_fulltext= Recommendations +to+Enhance+Accura
+cy+of+ Prescription%2FMedication+Order+Writing. + Retrieved. [cited 2023 Dec 5].
+
+National Coordinating Council for Medication Error Reporting and Prevention. (2015, January
+30). About Medication Errors. About Medication Errors. [cited 2023 Dec 5]. Available from:
+https:/Awww.nccmerp.org/search/site?search_api_fulltext=About+ Medication + Errors.
+
+Tully AR Hammond DA, LiC, Jarrell AS, Kruer RM. Evaluation of medication errors at the transition of care
+from an ICU to non-ICU location. Critical care medicine. 2019 Apr 1;47(4):543-9.
+
+Nyabuti AO. Core Indicators Of Appropriate Drug Use At Public Primary Healthcare Centers In Kisii
+County, Kenya (Doctoral dissertation, University of Nairobi). [cited 2023 Dec 5].Available from :
+http://erepository.uonbi.ac.ke/handle/11295/152925.
+
+World Health Organization. (n.d.). Improving Medication safety. Available from :
+https://www.who.int/patientsafety/solutions/patientsafety/PS-Solution7.pdf?ua=1. [cited 2023 Dec 5].
+
+World Health Organization. (n.d.). Look-Alike, Sound-Alike Medication Names. [cited 2023 Dec 5].
+Available from: https://www.who.int/patientsafety/solutions/patientsafety/PS-Solution1 .pdf?ua=1
+
+World Health Organization. (n.d.). Rational use of medicines. Available from:
+https://www.who.int/medicines/areas/rational[cited 2023 Dec 5].
+
+World Health Organization. (n.d.). The High 5s Project -Standard Operating Protocol Assuring
+Medication Accuracy at Transitions in Care: Medication Reconciliation. [cited 2023 Dec 5]. Available
+from: https://www.who. int/patientsafety/implementation/solutions/high5s/h5s-sop.pdf.
+
+World Health Organization. (n.d.). WHO Model Lists of Essential Medicines. [cited 2023 Dec 5] Available
+from: https://www.who.int/medicines/publications/essentialmedicines/en/.
+
+Bryan R, Aronson JK, Williams A, Jordan S. The problem of look-alike, sound-alike name errors: Drivers
+and solutions. British Journal of Clinical Pharmacology. 2021 Feb;87(2):386-94.
+
+Barnsteiner JH. Medication Reconciliation. Agency for Healthcare Research and Quality, AHRQ, 08,
+1-1403.
+
+Wilson L. Administration of Medications in Wisconsin Schools. Wisconsin Department of Public
+Instruction. 2022 Apr. .
+
+Mirza M, Verma M, Sahoo SS, Roy §, Kakkar R, Singh DK. India’s Multi-Sectoral Response to Oxygen
+Surge Demand during COVID-19 Pandemic: A Scoping Review. Indian Journal of Community Medicine:
+Official Publication of Indian Association of Preventive & Social Medicine. 2023 Jan;48(1):31.
+
+Singh P, Vaishnav Y, Verma S. Development of pharmacovigilance system in India and paradigm of
+pharmacovigilance research: an overview. Current Drug Safety. 2023 Nov 1;18(4):448-64.
+
+World Health Organization. The world health report 2002: reducing risks, promoting healthy life. World
+Health Organization; 2002. [cited 2023 Dec 5]. Available from:
+Seden K, Kirkham JJ, Kennedy T, Lloyd M, James S, Mcmanus A, Ritchings A, Simpson J, Thornton D,
+
+Gill A, Coleman C. Cross-sectional study of prescribing errors in patients admitted to nine hospitals
+across North West England. BMJ open. 2013 Jan 1;3(1):e002036.
+
+Stark HE, Graudins LV, McGuire TM, Lee CY, Duguid MJ. Implementing a sustainable medication
+reconciliation process in Australian hospitals: The World Health Organization High 5s project. Research
+in Social and Administrative Pharmacy. 2020 Mar 1;16(3):290-8.
+
+©
+
+
+
+===== PDF_IDX 174 (pdf page 175) =====
+
+31.
+
+32.
+
+33.
+
+34,
+
+35.
+
+36.
+
+37.
+
+38.
+
+39.
+
+40.
+
+41.
+
+-.[cited 2023 Dec 5]. Available from: https://pharmaceuticals.gov.in/sites/
+
+Q
+
+ABR.
+
+Tully AR Hammond DA, LiC, Jarrell AS, Kruer RM. Evaluation of medication errors at the transition of care
+from an ICU to non-ICU location. Critical care medicine. 2019 Apr 1;47(4):543-9.
+
+Bourges JL, Bloquel C, Thomas A, Froussart F, Bochot A, Azan F, Gurny R, BenEzra D, Behar-Cohen F
+Intraocular implants for extended drug delivery: therapeutic applications. Advanced drug delivery
+reviews. 2006 Nov 15;58(11):1182-202.
+
+Lee SS, Hughes P, Ross AD, Robinson MR. Biodegradable implants for sustained drug release in the
+eye. Pharmaceutical research. 2010 Oct;27:2043-53.
+
+Zilberman M, Kraitzer A, Grinberg O, Elsner JJ. Drug-eluting medical implants. Drug Delivery. 2010:299-
+341.
+
+Khanna M, Garg S. Narcotic drugs and psychotropic substances act (ndps 1985): a critical analysis,
+Nimitmai Review Journal. 2020 Jun 24;3(1):28-32.
+
+Singhal K, Jain R, Bhardwaj C. Enforcement of the Narcotics Drugs and Psychotropic Substances Act:
+Reality Far from Ideal?. Indian JL & Legal Rsch.. 2021;2:1.
+
+Kalura R. Narcotic Drugs and Psychotropic Substances (NDPS) Act, 1985. Issue 4 Intl JL Mgmt. &
+Human.. 2021;4:2177.
+
+Gazette Notification: Ministry of Revenue (Department of Revenue) New Delhi 25th March 2015. Narcotic
+Drugs and Psychotropic Substances(Second Amendment Rules), 2015. [cited 2023 Dec 5]. Available
+from: https://www.cbn.nic.in/pdf/GSR426E01 -07-201 4.pdf.
+
+Gazette Notification: Ministry of Revenue (Department of Revenue) New Delhi 1st July 2014, The
+narcotic drugs and psychotropic substances (amendment) act, 2014. [cited 2023 Dec 5]. Available
+from: https://dor.gov.in/sites/default/files/NDPS-Amendment%20Act%20-%20201 4.pdf.
+
+Gazette Notification: Ministry of Finance (Department of Revenue) New Delhi 23rd December
+2022. Medical devices rules, 2017. [cited 2023 Dec 5]. Available from:
+https://cdsco.gov.in/opencms/resources/UploadCDSCOW eb/2022/m_device/Medical%20Devices%2
+ORules,%202017.pdf.
+
+Government of India, Ministry of Chemicals and Fertilizers, Department of Pharmaceuticals(Public
+Notice dated: 01.02.2022) List of available standards of Bureau of Indian Standards for Medical Devices.
+
+default/files/Public%20Notice_BIS%20Standards.pdf
+

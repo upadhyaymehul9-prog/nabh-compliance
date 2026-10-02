@@ -1,0 +1,805 @@
+                                      Management of Medication
+Chapter 3                             (MOM)
+
+     Intent of the chapter
+
+The organisation has a safe and organised medication management process. The availability, safe storage,
+prescription, dispensing and administration of medications is governed by written guidance. The organisation
+designates a medication safety ofcer.
+The organisation develops, implements and updates the hospital formulary. The pharmacy shall have
+oversight of all medications stocked out of the pharmacy. The pharmacy shall ensure correct storage (as
+regards to temperature, light; high-risk medications including look-alike, sound-alike, etc.), expiry dates and
+maintenance of documentation.
+The availability of emergency medication is stressed upon. The organisation shall have a mechanism to
+ensure that the emergency medications are standardised throughout the organisation, readily available and
+replenished promptly. There shall be a monitoring mechanism to ensure that the required medications are
+always stocked and well within expiry dates.
+Every high-risk medication order shall be veried by an appropriate person to ensure accuracy of the dose,
+frequency and route of administration. Safety is paramount when using narcotics, chemotherapeutic agents
+and radiopharmaceuticals. Reconciliation of medications occurs at transition points of patient care as part of
+patient safety.
+The medication management process also includes monitoring of patients after administration and
+procedures for reporting and analysing near-misses, medication errors and adverse drug reactions.
+Medications also include blood, implants and devices.
+Medical supplies and consumables are available for use.
+
+                                          SUMMARY OF STANDARDS
+  MOM.1.        Pharmacy services and medication management is done safely.
+
+  MOM.2.        The organisation develops, updates and implements a hospital formulary.
+
+  MOM.3.        Medications are stored appropriately and are available where required.
+
+  MOM.4.        Medications are prescribed safely and rationally.
+
+  MOM.5.        Medication orders are written in a uniform manner.
+
+  MOM.6.        Medications are dispensed in a safe manner.
+
+  MOM.7.        Medications are administered safely.
+
+  MOM.8.        Patients are monitored after medication administration.
+
+                Narcotic drugs and psychotropic substances, chemotherapeutic agents and radio-pharmaceuticals are
+  MOM.9.
+                used safely.
+
+  MOM.10.       Implantable prosthesis and medical devices are used in accordance with laid down criteria.
+
+  MOM.11.       Medical supplies and consumables are stored appropriately and are available where required.
+
+*This implies that the objective element requires documentation.
+
+                                                                   89
+NABH Accreditation Standards for Hospitals
+                                                                                                                                                         ®
+
+
+
+
+                                                        Summary of Objective Elements
+
+
+
+                                                       Standard                              11
+
+                                                       Objective elements                    68
+
+
+                                                       CORE                                  13
+
+                                                       Commitment                            48
+
+                                                       Achievement                           6
+
+                                                       Excellence                            1
+
+
+
+
+ Objective
+              MOM.1.        MOM.2.        MOM.3.        MOM.4.        MOM.5.        MOM.6.       MOM.7.     MOM.8.     MOM.9.     MOM.10.      MOM.11.
+ Element
+
+    a        Commitment    CORE           CORE         Commitment Commitment Commitment Commitment Commitment Commitment Commitment Commitment
+
+
+    b        Commitment Commitment Commitment           CORE         Commitment Commitment Commitment Commitment Commitment Commitment Commitment
+
+
+    c        Achievement   Commitment     CORE         Commitment Commitment Commitment Commitment          CORE      Commitment Commitment Commitment
+
+
+    d        Commitment    Achievement   Achievement    Excellence   Commitment     CORE          CORE     Commitment Commitment Commitment Commitment
+
+
+    e        Commitment Commitment        CORE          CORE                        CORE      Commitment Commitment Commitment   Achievement   Commitment
+
+
+     f                     Commitment Commitment        CORE                      Commitment Commitment Commitment
+
+
+    g                                     CORE         Achievement                            Commitment
+
+
+    h                                                  Achievement                                CORE
+
+     i                                                                                        Commitment
+
+
+     j                                                                                        Commitment
+
+
+    k                                                                                         Commitment
+
+
+
+
+                                                                               90
+NABH Accreditation Standards for Hospitals
+                                                                                                          ®
+
+
+
+
+                            Standards and Objective Elements
+
+Standard
+
+    MOM.1.         Pharmacy services and medication management is done safely.
+
+
+Objective Elements
+   Commitment      a.    Pharmacy services and medication management are implemented following
+                         written guidance. *
+
+
+   Commitment      b.    A multi-disciplinary committee guides the formulation and implementation of
+                         pharmacy services and medication management.
+
+
+   Achievement     c.    The multi-disciplinary committee updates medication management
+                         processes.
+
+
+   Commitment      d.    There is a procedure to obtain medications when the pharmacy is closed or
+                         in case of stock outs. *
+
+
+   Commitment      e.    The organisation has a mechanism to inform relevant staff of key changes in
+                         pharmacy services and medication management to ensure uninterrupted
+                         and safe care.
+
+
+Standard
+                   The organisation develops, updates and implements a hospital
+    MOM.2.
+                   formulary.
+
+
+Objective Elements
+
+   CORE            a.    A list of medications appropriate for the patients and as per the scope of the
+                         organisation’s clinical services is developed collaboratively by the multi-
+                         disciplinary committee.
+
+
+   Commitment      b.    The list is reviewed and updated collaboratively by the multi-disciplinary
+                         committee at least annually.
+
+
+   Commitment      c.    The current formulary is available for clinicians to refer to.
+
+
+                  CORE              Commitment               Achievement             Excellence
+
+
+                                                    91
+NABH Accreditation Standards for Hospitals
+                                                                                                       ®
+
+
+
+
+   Achievement     d.    The clinicians adhere to the current formulary.
+
+
+   Commitment      e.    The organisation adheres to the procedure for the acquisition of formulary
+                         medications. *
+
+
+   Commitment      f.    The organisation adheres to the procedure to obtain medications not listed
+                         in the formulary. *
+
+
+Standard
+
+                   Medications are stored appropriately and are available where
+    MOM.3.
+                   required.
+
+
+Objective Elements
+
+   CORE            a.    Medications are stored in a clean, safe and secure environment while
+                         incorporating the manufacturer’s recommendation(s).
+
+   Commitment      b.    Sound inventory control practices guide the storage of medications
+                         throughout the organisation.
+
+
+   CORE            c.    The organisation denes and updates its list of high-risk medication(s). *
+
+
+   Achievement     d.    High-risk medications are stored in areas of the organisation where it is
+                         clinically necessary.
+
+
+   CORE            e.    High-risk medications including look-alike, sound-alike medications and
+                         different concentrations of the same medication are stored physically apart
+                         from each other. *
+
+
+   Commitment      f.    The list of emergency medications is dened and is stored uniformly. *
+
+
+   CORE            g.    Emergency medications are available all the time and are replenished
+                         promptly when used.
+
+
+Standard
+
+    MOM.4.         Medications are prescribed safely and rationally.
+
+
+
+
+                  CORE              Commitment             Achievement            Excellence
+
+
+                                                   92
+NABH Accreditation Standards for Hospitals
+                                                                                                          ®
+
+
+
+
+Objective Elements
+
+   Commitment      a.    Medication prescription is in consonance with good practices / guidelines
+                         for rational prescription of medications. *
+
+
+   CORE            b.    The organisation adheres to the determined minimum requirements of a
+                         prescription. *
+
+   Commitment      c.    Drug allergies and previous adverse drug reactions are ascertained before
+                         prescribing.
+
+
+   Excellence      d.    The organisation has a mechanism to assist the clinician in prescribing
+                         appropriate medication.
+
+
+   CORE            e.    Reconciliation of medications occurs at transition points of patient care.
+
+
+   CORE            f.    Verbal orders are implemented by ensuring safe medication management
+                         practices. *
+
+   Achievement     g.    Audit of medication orders / prescription is carried out to check for safe and
+                         rational prescription of medications.
+
+   Achievement     h.    Corrective and / or preventive action(s) is taken based on the audit, where
+                         appropriate.
+
+
+Standard
+
+    MOM.5.         Medications orders are written in a uniform manner.
+
+
+
+Objective Elements
+
+   Commitment      a.    The organisation ensures that only authorised personnel write orders. *
+
+
+   Commitment      b.    Medication orders are written in a uniform location in the medical records,
+                         which also include the patient’s name and unique identication number.
+
+
+   Commitment      c.    Medication orders are legible, dated, timed and signed.
+
+
+   Commitment      d.    Medication orders contain the name of the medicine, route of administration,
+                         strength to be administered and frequency / time of administration.
+
+
+                  CORE              Commitment             Achievement             Excellence
+
+
+                                                   93
+NABH Accreditation Standards for Hospitals
+                                                                                                    ®
+
+
+
+
+Standard
+
+    MOM.6.         Medications are dispensed in a safe manner.
+
+
+
+Objective Elements
+
+   Commitment      a.    Dispensing of medications is done safely. *
+
+
+   Commitment      b.    Medication recalls are handled effectively. *
+
+
+   Commitment      c.    Near-expiry medications are handled effectively. *
+
+
+   CORE            d.    Dispensed medications are labelled. *
+
+
+   CORE            e.    High-risk medication orders are veried before dispensing.
+
+
+   Commitment      f.    Return of medications to the pharmacy is addressed. *
+
+
+
+Standard
+
+    MOM.7.         Medications are administered safely.
+
+
+
+Objective Elements
+
+   Commitment      a.    Medications are administered by those who are permitted by law to do so.
+
+
+
+   Commitment      b.    Prepared medication is labelled before preparation of a second drug.
+
+
+   Commitment      c.    The patient is identied before administration.
+
+
+   CORE            d.    Medication is veried from the medication order and physically inspected
+                         before administration.
+
+   Commitment      e.    Strength is veried from the order before administration.
+
+
+
+                  CORE              Commitment             Achievement           Excellence
+
+
+                                                   94
+NABH Accreditation Standards for Hospitals
+                                                                                                     ®
+
+
+
+
+   Commitment      f.    The route is veried from the order before administration.
+
+
+   Commitment      g.    Timing is veried from the order before administration.
+
+
+   CORE            h.    Measures to avoid catheter and tubing mis-connections during medication
+                         administration are implemented. *
+
+
+   Commitment      I.    Medication administration is documented.
+
+
+   Commitment      j.    Measures to govern patient’s self-administration of medications are
+                         implemented. *
+
+
+   Commitment      k.    Measures to govern patient’s medications brought from outside the
+                         organisation shall be implemented. *
+
+
+
+Standard
+
+    MOM.8.         Patients are monitored after medication administration.
+
+
+
+Objective Elements
+
+   Commitment      a.    Patients shall be monitored after medication administration. *
+
+
+   Commitment      b.    Medications shall be changed based on the monitoring where appropriate.
+
+
+   CORE            c.    The organisation shall capture near misses, medication errors and adverse
+                         drug reactions. *
+
+
+   Commitment      d.    Near misses, medication errors and adverse drug reactions shall be
+                         reported within a specied time frame. *
+
+
+   Commitment      e.    Near misses, medication errors and adverse drug reactions are collected
+                         and analysed.
+
+
+   Commitment      f.    Corrective and / or preventive action(s) are taken based on the analysis.
+
+
+
+
+                  CORE              Commitment             Achievement             Excellence
+
+
+                                                   95
+NABH Accreditation Standards for Hospitals
+                                                                                                        ®
+
+
+
+
+Standard
+
+                   Narcotic drugs and psychotropic substances, chemotherapeutic
+    MOM.9.
+                   agents and radio-pharmaceuticals are used in a safe manner.
+
+
+Objective Elements
+
+   Commitment      a.    Narcotic drugs and psychotropic substances, chemotherapeutic agents and
+                         radio-pharmaceuticals are used safely. *
+
+   Commitment      b.    Narcotic drugs and psychotropic substances, chemotherapeutic agents and
+                         radio-pharmaceuticals are prescribed by appropriate caregivers.
+
+
+   Commitment      c.    Narcotic drugs and psychotropic substances, chemotherapeutic agents and
+                         radio-pharmaceuticals drugs shall be stored securely.
+
+   Commitment      d.    Chemotherapy and radio-pharmaceuticals shall be prepared properly and
+                         safely and administered by qualied personnel.
+
+   Commitment      e.    A proper record shall be kept of the usage, administration and disposal of
+                         narcotic drugs and psychotropic substances, chemotherapeutic agents and
+                         radio-pharmaceuticals.
+
+
+
+Standard
+
+                   Implantable prosthesis and medical devices shall be used in
+    MOM.10.
+                   accordance with laid down criteria.
+
+
+Objective Elements
+
+   Commitment      a.    Usage of implantable prosthesis and medical devices is guided by scientic
+                         criteria for each item and national / international recognised guidelines /
+                         approvals for such specic item(s).
+
+   Commitment      b.    The organisation implements a mechanism for the usage of the implantable
+                         prosthesis and medical devices. *
+
+
+   Commitment      c.    Patient and his / her family are counselled for the usage of the implantable
+                         prosthesis and medical device, including precautions if any.
+
+
+
+
+                  CORE             Commitment             Achievement           Excellence
+
+
+                                                  96
+NABH Accreditation Standards for Hospitals
+                                                                                                         ®
+
+
+
+
+   Commitment      d.    The batch and the serial number of the implantable prosthesis and medical
+                         devices are recorded in the patient’s medical record, the master logbook and
+                         the discharge summary.
+
+
+   Achievement     e.    Process of recall of implantable prosthesis and medical devices are handled
+                         effectively. *
+
+
+Standard
+
+                   Medical supplies and consumables are stored appropriately and are
+    MOM.11.
+                   available where required.
+
+
+Objective Elements
+
+   Commitment      a.    The organisation adheres to the dened process for the acquisition of
+                         medical supplies and consumables. *
+
+
+   Commitment      b.    Medical supplies and consumables are used in a safe manner, where
+                         appropriate.
+
+   Commitment      c.    Medical supplies and consumables are stored in a clean, safe and secure
+                         environment; incorporating the manufacturer’s recommendation(s).
+
+
+   Commitment      d.    Sound inventory control practices guide storage of medical supplies and
+                         consumables.
+
+   Commitment      e.    There is a mechanism in place to verify the condition of medical supplies and
+                         consumables.
+
+
+
+
+                  CORE              Commitment            Achievement            Excellence
+
+
+                                                  97
+NABH Accreditation Standards for Hospitals
+                                                                                                                                               ®
+
+
+
+
+References
+1.   US Department of Health and Human Services. Agency for Healthcare Research and Quality. Patient
+     Safety Network. Patient safety primer: never events. 2011. [cited 2023 Dec 5] Available on:
+     https://psnet.ahrq.gov/issue/serious-reportable-events-healthcare-2011-update.
+2.   Kalaiselvan V, Srivastava S, Singh A, Gupta SK. Pharmacovigilance in India: present scenario and future
+     challenges. Drug safety. 2019 Mar 7;42:339-46.
+3.   Whaley C. Perspectives from pharmacists, prescribers and patients on sharing medication reason for
+     use (Master's thesis, University of Waterloo). [cited 2023 Dec 5] Available from :
+     https://uwspace.uwaterloo.ca/handle/10012/15817.
+4.   MacMaster HW, Gonzalez S, Maruoka A, San Luis C, Stannard D, Rushakoff JA, Rushakoff RJ.
+     Development and implementation of a subcutaneous insulin pen label bar code scanning protocol to
+     prevent wrong-patient insulin pen errors. The Joint Commission Journal on Quality and Patient Safety.
+     2019 May 1;45(5):380-6.
+5.   Institute for Safe Medication Practices. FDA and ISMP lists of look-alike drug names with recommended
+     t a l l m a n l e t t e r s . [ c i t e d 2 0 2 3 D e c 5 ] Av a i l a b l e f r o m : h t t p s : / / w w w. i s m p . o r g / s i t e s /
+     default/les/attachments/2017-11/tallmanletters.pdf.
+6.   Jungreithmayr V, Meid AD, Haefeli WE, Seidling HM. The impact of a computerized physician order entry
+     system implementation on 20 different criteria of medication documentation—a before-and-after study.
+     BMC Medical Informatics and Decision Making. 2021 Dec;21:1-2.
+7.   Schepel L, Lehtonen L, Airaksinen M, Lapatto-Reiniluoto O. How to identify organizational high-alert
+     medications. Journal of patient safety. 2021 Dec 1;17(8):e1358-63.
+8.   Jayasinghe M, Srilal TL, Subasinghe S, Zawahir S. Identication of Confusing Medicine Proprietary
+     Names: Toward Safe Medicine Use—A Cross-Sectional Study in Sri Lanka. Therapeutic Innovation &
+     Regulatory Science. 2023 Nov;57(6):1248-59.
+9.   Kahn S, Abramson EL. What is new in paediatric medication safety. Archives of Disease in Childhood.
+     2019 Jun 1;104(6):596-9.
+10. National Coordinating Council for Medication Error Reporting and Prevention. (2015, January
+    29). Recommendations to Enhance Accuracy of Prescription/Medication Order Writing. [cited 2023
+    Dec 5] Available from: https://www.nccmerp.org/recommendations-enhance-accuracy-prescription-
+    writing
+11. National Coordinating Council for Medication Error Reporting and Prevention. (2015, September
+    2). Recommendations to Reduce Medication Errors Associated with Verbal Medication Orders and
+    Prescriptions. [cited 2023 Dec 5]. Available from: https://www.nccmerp.org/recommendations-reduce-
+    medication-errors-associated-verbal-medication-orders-and-prescriptions.
+12. National Coordinating Council for Medication Error Reporting and Prevention. (2015, September
+    1). Recommendations to Enhance Accuracy of Dispensing Medications. Recommendations to
+    Enhance Accuracy of Dispensing Medications. [cited 2023 Dec 5]. Available from :
+    https://www.nccmerp.org/recommendations-enhance-accuracy-dispensing-medications.
+13. National Coordinating Council for Medication Error Reporting and Prevention. (2015, January
+    29). Recommendations to Enhance Accuracy of Prescription/Medication Order Writing. Avaialable
+    from: https://www.nccmerp.org/recommendations-enhance-accuracy-prescription-writing [cited 2023
+    Dec 5].
+
+
+
+
+                                                                     98
+NABH Accreditation Standards for Hospitals
+                                                                                                                                             ®
+
+
+
+
+14. National Coordinating Council for Medication Error Reporting and Prevention. (2015, September
+    2). Recommendations to Enhance Accuracy of Administration of Medications.
+    https://www.nccmerp.org/search/site?search_api_fulltext=Recommendations+to+Enhance+Accura
+    cy+of+Prescription%2FMedication+Order+Writing.+Retrieved. [cited 2023 Dec 5].
+15. National Coordinating Council for Medication Error Reporting and Prevention. (2015, January
+    30). About Medication Errors. About Medication Errors. [cited 2023 Dec 5]. Available from:
+    https://www.nccmerp.org/search/site?search_api_fulltext=About+Medication+Errors.
+16. Tully AP, Hammond DA, Li C, Jarrell AS, Kruer RM. Evaluation of medication errors at the transition of care
+    from an ICU to non-ICU location. Critical care medicine. 2019 Apr 1;47(4):543-9.
+17. Nyabuti AO. Core Indicators Of Appropriate Drug Use At Public Primary Healthcare Centers In Kisii
+    County, Kenya (Doctoral dissertation, University of Nairobi). [cited 2023 Dec 5].Available from :
+    http://erepository.uonbi.ac.ke/handle/11295/152925.
+18. Wo r l d H e a l t h O r g a n i z a t i o n . ( n . d . ) . I m p r o v i n g M e d i c a t i o n s a f e t y. Av a i l a b l e f r o m :
+    https://www.who.int/patientsafety/solutions/patientsafety/PS-Solution7.pdf?ua=1. [cited 2023 Dec 5].
+19. World Health Organization. (n.d.). Look-Alike, Sound-Alike Medication Names. [cited 2023 Dec 5].
+    Available from: https://www.who.int/patientsafety/solutions/patientsafety/PS-Solution1.pdf?ua=1
+20. W o r l d H e a l t h O r g a n i z a t i o n . ( n . d . ) . R a t i o n a l u s e o f m e d i c i n e s . A v a i l a b l e f r o m :
+    https://www.who.int/medicines/areas/rational[cited 2023 Dec 5].
+21. World Health Organization. (n.d.). The High 5s Project –Standard Operating Protocol Assuring
+    Medication Accuracy at Transitions in Care: Medication Reconciliation. [cited 2023 Dec 5]. Available
+    from: https://www.who.int/patientsafety/implementation/solutions/high5s/h5s-sop.pdf.
+22. World Health Organization. (n.d.). WHO Model Lists of Essential Medicines. [cited 2023 Dec 5] Available
+    from: https://www.who.int/medicines/publications/essentialmedicines/en/.
+23. Bryan R, Aronson JK, Williams A, Jordan S. The problem of look-alike, sound-alike name errors: Drivers
+    and solutions. British Journal of Clinical Pharmacology. 2021 Feb;87(2):386-94.
+24. Barnsteiner JH. Medication Reconciliation. Agency for Healthcare Research and Quality, AHRQ, 08,
+    1–1403.
+25. Wilson L. Administration of Medications in Wisconsin Schools. Wisconsin Department of Public
+    Instruction. 2022 Apr.
+26. Mirza M, Verma M, Sahoo SS, Roy S, Kakkar R, Singh DK. India’s Multi-Sectoral Response to Oxygen
+    Surge Demand during COVID-19 Pandemic: A Scoping Review. Indian Journal of Community Medicine:
+    Ofcial Publication of Indian Association of Preventive & Social Medicine. 2023 Jan;48(1):31.
+27. Singh P, Vaishnav Y, Verma S. Development of pharmacovigilance system in India and paradigm of
+    pharmacovigilance research: an overview. Current Drug Safety. 2023 Nov 1;18(4):448-64.
+28. World Health Organization. The world health report 2002: reducing risks, promoting healthy life. World
+    Health Organization; 2002. [cited 2023 Dec 5]. Available from:
+29. Seden K, Kirkham JJ, Kennedy T, Lloyd M, James S, Mcmanus A, Ritchings A, Simpson J, Thornton D,
+    Gill A, Coleman C. Cross-sectional study of prescribing errors in patients admitted to nine hospitals
+    across North West England. BMJ open. 2013 Jan 1;3(1):e002036.
+30. Stark HE, Graudins LV, McGuire TM, Lee CY, Duguid MJ. Implementing a sustainable medication
+    reconciliation process in Australian hospitals: The World Health Organization High 5s project. Research
+    in Social and Administrative Pharmacy. 2020 Mar 1;16(3):290-8.
+
+
+
+
+                                                                      99
+NABH Accreditation Standards for Hospitals
+                                                                                                                                         ®
+
+
+
+
+31. Tully AP, Hammond DA, Li C, Jarrell AS, Kruer RM. Evaluation of medication errors at the transition of care
+    from an ICU to non-ICU location. Critical care medicine. 2019 Apr 1;47(4):543-9.
+32. Bourges JL, Bloquel C, Thomas A, Froussart F, Bochot A, Azan F, Gurny R, BenEzra D, Behar-Cohen F.
+    Intraocular implants for extended drug delivery: therapeutic applications. Advanced drug delivery
+    reviews. 2006 Nov 15;58(11):1182-202.
+33. Lee SS, Hughes P, Ross AD, Robinson MR. Biodegradable implants for sustained drug release in the
+    eye. Pharmaceutical research. 2010 Oct;27:2043-53.
+34. Zilberman M, Kraitzer A, Grinberg O, Elsner JJ. Drug-eluting medical implants. Drug Delivery. 2010:299-
+    341.
+35. Khanna M, Garg S. Narcotic drugs and psychotropic substances act (ndps 1985): a critical analysis.
+    Nimitmai Review Journal. 2020 Jun 24;3(1):28-32.
+36. Singhal K, Jain R, Bhardwaj C. Enforcement of the Narcotics Drugs and Psychotropic Substances Act:
+    Reality Far from Ideal?. Indian JL & Legal Rsch.. 2021;2:1.
+37. Kalura R. Narcotic Drugs and Psychotropic Substances (NDPS) Act, 1985. Issue 4 Int'l JL Mgmt. &
+    Human.. 2021;4:2177.
+38. Gazette Notication: Ministry of Revenue (Department of Revenue) New Delhi 25th March 2015. Narcotic
+    Drugs and Psychotropic Substances(Second Amendment Rules), 2015. [cited 2023 Dec 5]. Available
+    from: https://www.cbn.nic.in/pdf/GSR426E01-07-2014.pdf.
+39. Gazette Notication: Ministry of Revenue (Department of Revenue) New Delhi 1st July 2014. The
+    narcotic drugs and psychotropic substances (amendment) act, 2014. [cited 2023 Dec 5]. Available
+    from: https://dor.gov.in/sites/default/les/NDPS-Amendment%20Act%20-%202014.pdf.
+40. Gazette Notication: Ministry of Finance (Department of Revenue) New Delhi 23rd December
+    2022. Medical devices rules, 2017. [cited 2023 Dec 5]. Available from:
+    https://cdsco.gov.in/opencms/resources/UploadCDSCOWeb/2022/m_device/Medical%20Devices%2
+    0Rules,%202017.pdf.
+41. Government of India, Ministry of Chemicals and Fertilizers, Department of Pharmaceuticals(Public
+    Notice dated: 01.02.2022) List of available standards of Bureau of Indian Standards for Medical Devices.
+    . [ c i t e d 2 0 2 3 D e c 5 ] . A v a i l a b l e f r o m : h t t p s : / / p h a r m a c e u t i c a l s . g o v. i n / s i t e s /
+    default/les/Public%20Notice_BIS%20Standards.pdf
+
+
+
+
+                                                                   100
+                                      Patient Rights and Education
+Chapter 4                             (PRE)
+
+     Intent of the chapter
+
+The organisation denes, protects and promotes the patient and family’s rights and responsibilities. The staff
+is aware of these rights and is trained to protect them. Patients are informed of their rights and educated about
+their responsibilities at the time of entering the organisation.
+The expected costs of treatment and care are explained clearly to the patient and / or family.
+The organisation encourages patient engagement to enhance clinical outcomes, safety and quality.
+Patients are educated about the mechanisms available for addressing grievances.
+Informed consent is obtained from the patient or family for specied procedures / care. The key components
+of information shall include risks, benets and alternatives.
+Patients and families have a right to get information and education about their healthcare needs in a language
+and manner that is understood by them.
+The organisation has a mechanism to capture the patient experience including patient reported experience
+measures. (PREM).
+The organisation develops effective patient-centred communication.
+
+
+                                          SUMMARY OF STANDARDS
+                The organisation protects and promotes patient and family rights and informs them about their
+   PRE.1.
+                responsibilities during care.
+
+                Patient and family rights support individual beliefs, values and involve the patient and family in decision-
+   PRE.2.
+                making processes.
+
+                The patient and / or family members are educated to make informed decisions and are involved in the care
+   PRE.3.
+                planning and delivery process.
+
+   PRE.4.       Informed consent is obtained from the patient or family about their care.
+
+   PRE.5.       Patient and families have a right to information and education about their healthcare needs.
+
+   PRE.6.       Patients and families have a right to information on expected costs.
+
+   PRE.7.       The organisation has a mechanism to capture patient’s feedback and to redress complaints.
+
+   PRE.8.       The organisation has a system for effective communication with patients and / or families.
+
+
+*This implies that the objective element requires documentation.
+
+
+
+
+                                                                   101
+NABH Accreditation Standards for Hospitals
+                                                                                                                             ®
+
+
+
+
+                                           Summary of Objective Elements
+
+
+
+                                          Standard                     8
+
+                                          Objective elements          52
+
+
+                                          CORE                        12
+
+                                          Commitment                  32
+
+                                          Achievement                  7
+
+                                          Excellence                   1
+
+
+
+
+  Objective
+                PRE.1.        PRE.2.         PRE.3.        PRE.4.       PRE.5.        PRE.6.       PRE.7.        PRE.8.
+  Element
+
+     a        Commitment    Commitment      CORE          CORE         CORE          CORE        Commitment    Commitment
+
+
+     b        Achievement   Commitment     Achievement   Commitment   Commitment    Commitment   Achievement   Commitment
+
+
+     c         CORE         Commitment     Commitment     CORE        Commitment    Commitment    CORE         Commitment
+
+
+     d         CORE          CORE          Commitment    Commitment   Commitment    Commitment   Commitment    Commitment
+
+
+     e         CORE         Commitment     Achievement    CORE        Commitment                 Commitment    Achievement
+
+
+
+      f                     Commitment                                Commitment                 Commitment
+
+
+     g                       CORE                                     Commitment
+
+
+     h                      Commitment                                Commitment
+
+
+      i                     Commitment                                Achievement
+
+
+
+      j                     Commitment                                 Excellence
+
+
+
+     k                      Commitment
+
+
+      l                     Achievement
+
+
+
+
+                                                            102
+
