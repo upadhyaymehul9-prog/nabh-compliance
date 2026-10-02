@@ -2292,7 +2292,67 @@ function AuditComplianceChart({ records }) {
   return(<div style={{background:T.panel2,border:`1px solid ${T.border}`,borderRadius:8,padding:"12px 8px 8px 0",marginBottom:12}}><div style={{fontSize:11,color:T.gold,letterSpacing:1,marginBottom:8,paddingLeft:12,display:"flex",gap:12}}><span>COMPLIANCE TREND — last {chartData.length} audits</span><span style={{color:T.green}}>Target: 80%</span></div><ResponsiveContainer width="100%" height={150}><BarChart data={chartData} margin={{top:4,right:16,left:0,bottom:0}}><CartesianGrid strokeDasharray="2 4" stroke={T.border} vertical={false}/><XAxis dataKey="name" tick={{fontSize:8,fill:T.muted}} axisLine={false} tickLine={false}/><YAxis domain={[0,100]} tick={{fontSize:8,fill:T.muted}} axisLine={false} tickLine={false} width={30} tickFormatter={v=>`${v}%`}/><Tooltip content={<TT/>}/><ReferenceLine y={80} stroke={T.green} strokeDasharray="4 3" strokeWidth={1.5}/><Bar dataKey="pct" radius={[3,3,0,0]} shape={(props)=>{const{x,y,width,height,value}=props;return <rect x={x} y={y} width={Math.max(width,4)} height={Math.max(height,1)} rx={3} fill={getBarColor(value)} fillOpacity={0.85}/>;}} /></BarChart></ResponsiveContainer><div style={{display:"flex",gap:14,paddingLeft:12,marginTop:6,fontSize:8,color:T.muted}}><span style={{color:T.green}}>Good (80%+)</span><span style={{color:T.orange}}>Fair (60-79%)</span><span style={{color:T.red}}>Critical</span></div></div>);
 }
 
-function UpgradeWall({ daysUsed, onSignOut }) {
+// Loads the Razorpay Checkout script once, reused by every subscribe button.
+function loadRazorpayScript(){
+  return new Promise((resolve)=>{
+    if(window.Razorpay){resolve(true);return;}
+    const existing=document.querySelector('script[data-razorpay-checkout]');
+    if(existing){existing.addEventListener('load',()=>resolve(true));existing.addEventListener('error',()=>resolve(false));return;}
+    const script=document.createElement('script');
+    script.src='https://checkout.razorpay.com/v1/checkout.js';
+    script.setAttribute('data-razorpay-checkout','1');
+    script.onload=()=>resolve(true);
+    script.onerror=()=>resolve(false);
+    document.body.appendChild(script);
+  });
+}
+
+// Starts a ₹499/month Razorpay subscription (UPI Autopay or card mandate) for
+// the signed-in hospital. Does NOT mark the hospital paid itself — that only
+// happens when Razorpay's webhook confirms an actual charge, a few seconds
+// after the mandate is set up, which is why this reloads the page shortly
+// after a successful Checkout close rather than updating state directly.
+async function startRazorpaySubscription({ userName, userEmail, setBusy, setError }){
+  setError && setError(null);
+  setBusy(true);
+  try{
+    const scriptOk = await loadRazorpayScript();
+    if(!scriptOk) throw new Error('Could not load the payment form. Check your connection and try again.');
+    const { data, error } = await supabase.functions.invoke('create-razorpay-subscription',{body:{}});
+    if(error) throw new Error(error.message||'Could not start the subscription.');
+    if(data?.error) throw new Error(data.error);
+    if(!data?.subscription_id || !data?.key_id) throw new Error('Unexpected response starting the subscription.');
+
+    const rzp = new window.Razorpay({
+      key: data.key_id,
+      subscription_id: data.subscription_id,
+      name: 'AccredReady',
+      description: '₹499/month — NABH compliance platform',
+      theme: { color: '#c9a84c' },
+      prefill: { name: userName||'', email: userEmail||'' },
+      handler: function(){
+        alert('Payment authorised! Refreshing your account — this can take a few seconds to reflect.');
+        setTimeout(()=>window.location.reload(), 2500);
+      },
+      modal: {
+        ondismiss: function(){ setBusy(false); },
+      },
+    });
+    rzp.on('payment.failed', function(resp){
+      setError && setError(resp?.error?.description || 'Payment failed. You can try again.');
+      setBusy(false);
+    });
+    rzp.open();
+  }catch(e){
+    console.error('Razorpay subscription start failed:', e);
+    setError && setError(e.message||'Could not start the subscription. Please try again or use WhatsApp.');
+    setBusy(false);
+  }
+}
+
+function UpgradeWall({ daysUsed, onSignOut, user }) {
+  const [subBusy, setSubBusy] = useState(false);
+  const [subError, setSubError] = useState(null);
   const features=["Full NABH compliance tracking","Unlimited OE scoring","KPI tracking and audit management","Committee calendar and mock drills","PDF gap reports","No setup fee. Cancel anytime."];
   return (
     <div style={{minHeight:"100vh",background:"#050e1a",display:"flex",alignItems:"center",justifyContent:"center",padding:20,fontFamily:"Segoe UI,system-ui,sans-serif"}}>
@@ -2317,9 +2377,14 @@ function UpgradeWall({ daysUsed, onSignOut }) {
             ))}
           </div>
         </div>
+        {subError && <div style={{color:"#ff6b6b",fontSize:12,marginBottom:10}}>{subError}</div>}
+        <button onClick={()=>startRazorpaySubscription({userName:user?.user_metadata?.name,userEmail:user?.email,setBusy:setSubBusy,setError:setSubError})} disabled={subBusy}
+          style={{display:"block",width:"100%",padding:"14px",borderRadius:12,background:"linear-gradient(135deg,#c9a84c,#f0d070)",color:"#050e1a",fontSize:16,fontWeight:800,border:"none",cursor:subBusy?"wait":"pointer",marginBottom:12,boxShadow:"0 4px 20px rgba(201,168,76,0.4)",opacity:subBusy?0.7:1}}>
+          {subBusy?"Starting…":"💳 Subscribe Now — UPI/Card"}
+        </button>
         <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20want%20to%20subscribe%20to%20AccredReady%20for%20Rs.%20499%2Fmonth" target="_blank" rel="noopener noreferrer"
-          style={{display:"block",padding:"14px",borderRadius:12,background:"linear-gradient(135deg,#c9a84c,#f0d070)",color:"#050e1a",fontSize:16,fontWeight:800,textDecoration:"none",marginBottom:12,boxShadow:"0 4px 20px rgba(201,168,76,0.4)"}}>
-          💬 Get Started — WhatsApp Us
+          style={{display:"block",padding:"14px",borderRadius:12,background:"transparent",border:"1px solid #c9a84c",color:"#c9a84c",fontSize:14,fontWeight:700,textDecoration:"none",marginBottom:12}}>
+          💬 Or Get Started via WhatsApp
         </a>
         <button onClick={onSignOut} style={{background:"transparent",border:"none",color:"#3a5870",fontSize:12,cursor:"pointer"}}>Sign out</button>
       </div>
@@ -6186,7 +6251,9 @@ function ChecklistsScreen({ hospitalId }) {
 }
 
 // ── PRICING ──────────────────────────────────────────
-function PricingScreen() {
+function PricingScreen({ user }) {
+  const [subBusy, setSubBusy] = useState(false);
+  const [subError, setSubError] = useState(null);
   const features=["Full NABH compliance tracking","Unlimited OE scoring","KPI tracking and audit management","Committee calendar and mock drills","PDF gap reports","No setup fee. Cancel anytime."];
   return (
     <div style={{maxWidth:520,margin:"0 auto",padding:16}}>
@@ -6210,9 +6277,14 @@ function PricingScreen() {
             </div>
           ))}
         </div>
+        {subError && <div style={{color:T.red||"#ff6b6b",fontSize:12,marginBottom:10}}>{subError}</div>}
+        <button onClick={()=>startRazorpaySubscription({userName:user?.user_metadata?.name,userEmail:user?.email,setBusy:setSubBusy,setError:setSubError})} disabled={subBusy}
+          style={{display:"block",width:"100%",padding:"14px",borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,color:T.bg,fontSize:15,fontWeight:800,border:"none",cursor:subBusy?"wait":"pointer",marginBottom:12,boxShadow:`0 4px 20px ${T.gold}40`,opacity:subBusy?0.7:1}}>
+          {subBusy?"Starting…":"💳 Subscribe Now — UPI/Card"}
+        </button>
         <a href="https://wa.me/918511180957?text=Hi%20Dr.%20Mehul%2C%20I%20want%20to%20subscribe%20to%20AccredReady%20for%20Rs.%20499%2Fmonth" target="_blank" rel="noopener noreferrer"
-          style={{display:"block",padding:"14px",borderRadius:10,background:`linear-gradient(135deg,${T.gold},#f0d070)`,color:T.bg,fontSize:15,fontWeight:800,textDecoration:"none",boxShadow:`0 4px 20px ${T.gold}40`}}>
-          💬 Get Started — WhatsApp Us
+          style={{display:"block",padding:"14px",borderRadius:10,background:"transparent",border:`1px solid ${T.gold}`,color:T.gold,fontSize:14,fontWeight:700,textDecoration:"none"}}>
+          💬 Or Get Started via WhatsApp
         </a>
       </div>
       <div style={{background:T.panel,border:`1px solid ${T.border}`,borderRadius:12,padding:"16px 20px",textAlign:"center"}}>
@@ -8947,7 +9019,7 @@ export default function App() {
   const trialExpired = !hasAccess;
   const isTrialActive = hasAccess && !isFree && !isPaid;
 
-  if(trialExpired) return <UpgradeWall onSignOut={handleSignOut}/>;
+  if(trialExpired) return <UpgradeWall onSignOut={handleSignOut} user={user}/>;
 
   const readinessColor=decision.readiness==="NOT READY"?T.red:decision.readiness==="RISKY"?T.orange:T.green;
   const verdictColor=decision.verdict==="FAIL"?T.red:decision.verdict==="PASS"?T.green:decision.verdict==="PARTIAL"?T.orange:T.blue;
@@ -12713,7 +12785,7 @@ export default function App() {
         {screen==="drills"&&<MockDrillsScreen hospitalId={context?.hospitalId} drillsView={drillsView} selectedDrill={selectedDrill} navigate={navigate} goBack={goBack} setDrillsView={setDrillsView} setSelectedDrill={setSelectedDrill}/>}
         {screen==="licenses"&&<StatutoryLicensesScreen hospitalId={context?.hospitalId} showAdd={showLicenseAdd} navigate={navigate} setShowAdd={setShowLicenseAdd}/>}
         {screen==="tracer"&&<PatientTracerScreen hospitalId={context?.hospitalId} tracerView={tracerView} tracerType={tracerType} navigate={navigate} goBack={goBack} setTracerView={setTracerView} setTracerType={setTracerType}/>}
-        {screen==="pricing"&&<PricingScreen/>}
+        {screen==="pricing"&&<PricingScreen user={user}/>}
         {screen==="profile"&&<ProfileScreen user={user} context={context} onContextUpdate={setContext}/>}
         {screen==="shco"&&renderSHCOTab()}
         {screen==="shco-full"&&renderSHCOFullTab()}
