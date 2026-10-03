@@ -2,11 +2,14 @@
 
 ## Session Start Rule
 
-At the start of every session, always run:
+At the start of every session, first check the current branch:
 
 ```
-git pull origin master
+git branch --show-current
 ```
+
+- If it says `master`: run `git pull origin master` as before.
+- If it says anything else (a feature branch): do NOT run `git pull origin master` — that merges master straight into the feature branch and causes conflicts. Instead run `git fetch origin master` only, and tell Mk if master has moved ahead, without merging it in.
 
 ## Workflow Rule — Local-First, Always
 
