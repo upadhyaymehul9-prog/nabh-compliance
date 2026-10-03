@@ -2360,7 +2360,7 @@ function UpgradeWall({ daysUsed, onSignOut, user }) {
         <div style={{fontSize:48,marginBottom:16}}>🔒</div>
         <div style={{fontSize:11,letterSpacing:3,color:"#c9a84c",marginBottom:8}}>ACCREDREADY</div>
         <div style={{fontSize:26,fontWeight:800,color:"#eef4f9",marginBottom:8}}>Your Free Trial Has Ended</div>
-        <div style={{fontSize:14,color:"#3a5870",marginBottom:28}}>Your free trial expired. Upgrade to continue accessing your NABH compliance data.</div>
+        <div style={{fontSize:14,color:"#3a5870",marginBottom:28}}>Your free trial has expired. Upgrade to continue accessing your NABH compliance data.</div>
         <div style={{background:"#081525",border:"1px solid #c9a84c",borderRadius:14,padding:"24px 22px",marginBottom:20,textAlign:"center"}}>
           <div style={{fontSize:12,letterSpacing:2,color:"#c9a84c",fontWeight:700,marginBottom:8}}>ACCREDREADY</div>
           <div style={{display:"flex",alignItems:"baseline",justifyContent:"center",gap:4,marginBottom:4}}>
