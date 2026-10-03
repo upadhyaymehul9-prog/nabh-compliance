@@ -539,7 +539,7 @@ export default function HomepageScreen({ onLogin }) {
             </p>
             <p className="hero-note">
               <i className="ti ti-lock" aria-hidden="true"></i>
-              No card required &nbsp;·&nbsp; Secured by Supabase &nbsp;·&nbsp; Email-only signup
+              Secured by Supabase &nbsp;·&nbsp; Email-only signup
             </p>
             <div className="hero-stats">
               <div className="hstat">
@@ -843,7 +843,7 @@ export default function HomepageScreen({ onLogin }) {
                 <button className="btn btn-amber btn-lg" onClick={()=>goToAuth("signup")}>
                   <i className="ti ti-rocket" aria-hidden="true"></i> Start Free
                 </button>
-                <p className="pricing-disclaimer">Free through Oct 31, 2026 (special promotion) · No credit card required · Email-only signup · Cancel anytime.</p>
+                <p className="pricing-disclaimer">Free through Oct 31, 2026 (special promotion) · Email-only signup · Cancel anytime.</p>
               </div>
             </div>
             <div className="pricing-right">

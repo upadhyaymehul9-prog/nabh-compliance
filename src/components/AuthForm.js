@@ -146,7 +146,7 @@ export default function AuthForm({ onLogin, initialError, variant = "page", onBa
       )}
       {!embedded && <div style={{ textAlign: "center", marginTop: 10, fontSize: 11, color: HP.subtle }}>Independent educational tool — Not affiliated with NABH/QCI</div>}
       <div style={{ textAlign: "center", marginTop: 10, paddingBottom: 4 }}>
-        <span style={{ fontSize: 12, color: HP.muted }}>Special promotion — free till Oct 31 · No credit card · </span>
+        <span style={{ fontSize: 12, color: HP.muted }}>Special promotion — free till Oct 31 · </span>
         <button onClick={() => setShowPricing(true)} style={{ fontSize: 12, color: HP.brand, cursor: "pointer", fontWeight: 700, background: "none", border: "none", padding: 0, fontFamily: "inherit" }}>View Pricing →</button>
       </div>
       {showPricing && (
