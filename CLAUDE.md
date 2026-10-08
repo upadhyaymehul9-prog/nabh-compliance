@@ -35,6 +35,24 @@ Never use `git add .` in auto-sync — it can stage secrets from `.claude/settin
 
 Before drafting ANY SHCO master policy, read the standing rules at the top of `scripts/master-policy-todos.md` — in particular **"STANDING RULE: Two-tier depth (added 2026-08-10)"**, which sets how much depth each objective element gets (Tier 1 full treatment only for asterisked OEs, Tier 2 for the rest). That file is also where deferred content and open reconciliation items are logged. Read it first; do not start drafting from memory of how a previous standard was built.
 
+## Records/SOPs/Policy Delivery Rule — Git ≠ Live
+
+Editing a Records, SOP, or Policy .docx under `policies/build/` and pushing to git does **NOT** update what accredready.in actually serves for download. The live app delivers these files from **Supabase Storage** (`policy-masters-v2` and `policy-masters-hco-v2` buckets), read by the `download-v2-policy` / `download-v2-hco-document` edge functions — never by reading the git repo directly.
+
+After fixing any file under `policies/build/`, find its storage path first:
+
+```sql
+SELECT name, bucket_id, updated_at FROM storage.objects WHERE name ILIKE '%<filename or code>%';
+```
+
+Then re-upload it to that exact path with `policies/build/upload_storage_file.py` (needs `SUPABASE_SERVICE_ROLE_KEY` set):
+
+```
+python policies\build\upload_storage_file.py --bucket <bucket> --path "<storage path>" --file "<local corrected file>"
+```
+
+Git push + Storage upload are two separate steps — always do both, or the fix never reaches a live download. This was missed once (Oct 2026, SOP_Emergency_Triage.docx) before being caught by Mk downloading the live file and finding it still old.
+
 ## NABH DATA ACCURACY RULES
 
 - Never mention specific OE counts in any public SEO page or marketing content
