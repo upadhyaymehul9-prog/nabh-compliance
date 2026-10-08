@@ -2705,6 +2705,15 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
           &nbsp;&nbsp;&nbsp;🎉 New: Try our free Revenue Leakage Self-Audit and Marketing &amp; Brand Health Check — no login needed →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🎉 New: Try our free Revenue Leakage Self-Audit and Marketing &amp; Brand Health Check — no login needed →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </span>
       </div>
+      <div style={{overflow:"hidden", whiteSpace:"nowrap", cursor:"pointer", background:"#047857", transition:"background .15s"}}
+        onClick={() => { window.location.href = "mailto:doctor@accredready.in?subject=" + encodeURIComponent("Customised Policy/SOP/Record documents") + "&body=" + encodeURIComponent("Hi, I would like my Policy, SOP, Manual and Record documents customised for my hospital. My hospital / organisation is: "); }}
+        onMouseEnter={e => e.currentTarget.style.background="#065F46"}
+        onMouseLeave={e => e.currentTarget.style.background="#047857"}
+        role="button" tabIndex={0} aria-label="Contact us for customised documents">
+        <span style={{display:"inline-block", animation:"ps-ticker 30s linear infinite", padding:"9px 0", fontSize:13, fontWeight:600, color:"#fff", fontFamily:"Figtree,sans-serif", letterSpacing:".01em"}}>
+          &nbsp;&nbsp;&nbsp;📄 New: Try our document download — Policy, SOPs &amp; Records. Want it customised for your hospital? Contact us →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 New: Try our document download — Policy, SOPs &amp; Records. Want it customised for your hospital? Contact us →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+      </div>
       <div style={{ minHeight: "100vh", background: `linear-gradient(180deg,${HP.brandBg} 0%,${HP.white} 45%)`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Inter,system-ui,sans-serif", padding: 24 }}>
       <div style={{ width: "100%", maxWidth: 920 }}>
         <div style={{ textAlign: "center", marginBottom: 36 }}>
