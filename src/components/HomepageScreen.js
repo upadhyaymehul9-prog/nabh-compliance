@@ -464,10 +464,10 @@ export default function HomepageScreen({ onLogin }) {
 
       {/* TICKER */}
       <div className="hp-ticker-bar"
-        onClick={() => document.querySelector('.mktech')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
-        role="button" tabIndex={0} aria-label="View free tools">
+        onClick={() => { window.location.href = "mailto:doctor@accredready.in?subject=" + encodeURIComponent("Customised Policy/SOP/Record documents") + "&body=" + encodeURIComponent("Hi, I would like my Policy, SOP, Manual and Record documents customised for my hospital. My hospital / organisation is: "); }}
+        role="button" tabIndex={0} aria-label="Contact us for customised documents">
         <div className="hp-ticker-inner">
-          &nbsp;&nbsp;&nbsp;📄 New: Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 New: Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;📄 New: Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download. Want it customised for your hospital? Contact us →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 New: Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download. Want it customised for your hospital? Contact us →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
       </div>
 
@@ -676,7 +676,7 @@ export default function HomepageScreen({ onLogin }) {
             <div className="bcard">
               <div className="ic" aria-hidden="true"><i className="ti ti-file-text"></i></div>
               <h3>Ready-to-use policy documents <span className="badge-live">Live</span></h3>
-              <p>Open any standard in the objective element scoring section and download its Policy, SOPs, or Records — ready-to-use documents personalised with your hospital's name.</p>
+              <p>Open any standard in the objective element scoring section and download its Policy, SOPs, or Records — ready-to-use documents personalised with your hospital's name. Need a Policy, SOP, Manual, or Record document customised further for your hospital? <a href="mailto:doctor@accredready.in?subject=Customised%20Policy%2FSOP%2FRecord%20documents" style={{color:"#2563EB", textDecoration:"underline"}}>Contact us</a>.</p>
             </div>
             <div className="bcard">
               <div className="ic" aria-hidden="true"><i className="ti ti-file-download"></i></div>
@@ -687,11 +687,6 @@ export default function HomepageScreen({ onLogin }) {
               <div className="ic" aria-hidden="true"><i className="ti ti-calendar-check"></i></div>
               <h3>Full-year scheduling <span className="badge-live">Live</span></h3>
               <p>Set your entire year of committee meetings and mock drills on a date calendar — planned, tracked, and ready to show the assessor.</p>
-            </div>
-            <div className="bcard">
-              <div className="ic" aria-hidden="true"><i className="ti ti-wand"></i></div>
-              <h3>AI document generation <span className="badge-soon">Coming soon</span></h3>
-              <p>Generate the required NABH documents right from your dashboard — drafted for you, ready to adapt.</p>
             </div>
           </div>
         </div>
