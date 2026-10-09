@@ -30,6 +30,7 @@ import json
 import os
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -97,21 +98,84 @@ def upsert_row(row: dict) -> None:
     print(f"  db row -> {row['standard_code']} {row['document_type']} \"{row['title']}\"")
 
 
+def existing_storage_paths(chapter: str) -> set[str]:
+    """Every storage_path currently registered in shco_documents for this
+    chapter, regardless of whether it's still in the manifest."""
+    key = service_key()
+    pattern = urllib.parse.quote(f"{chapter}/%", safe="")
+    url = f"{base_url()}/rest/v1/shco_documents?select=storage_path&storage_path=like.{pattern}"
+    headers = {"apikey": key, "Authorization": f"Bearer {key}"}
+    req = urllib.request.Request(url, headers=headers, method="GET")
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            status, raw = resp.status, resp.read()
+    except urllib.error.HTTPError as e:
+        status, raw = e.code, e.read()
+    if status != 200:
+        raise SystemExit(f"listing existing rows failed for {chapter}: HTTP {status}: {raw[:400]!r}")
+    return {row["storage_path"] for row in json.loads(raw)}
+
+
+def delete_orphan_rows(storage_paths: list[str]) -> None:
+    if not storage_paths:
+        return
+    key = service_key()
+    in_list = ",".join(urllib.parse.quote(p, safe="") for p in storage_paths)
+    url = f"{base_url()}/rest/v1/shco_documents?storage_path=in.({in_list})"
+    headers = {
+        "apikey": key,
+        "Authorization": f"Bearer {key}",
+        "Prefer": "return=minimal",
+    }
+    req = urllib.request.Request(url, headers=headers, method="DELETE")
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            status, raw = resp.status, resp.read()
+    except urllib.error.HTTPError as e:
+        status, raw = e.code, e.read()
+    if status not in (200, 204):
+        raise SystemExit(f"orphan row delete failed: HTTP {status}: {raw[:400]!r}")
+
+
+def delete_orphan_objects(storage_paths: list[str]) -> None:
+    if not storage_paths:
+        return
+    key = service_key()
+    url = f"{base_url()}/storage/v1/object/{BUCKET}"
+    headers = {
+        "apikey": key,
+        "Authorization": f"Bearer {key}",
+        "Content-Type": "application/json",
+    }
+    body = json.dumps({"prefixes": storage_paths}).encode("utf-8")
+    req = urllib.request.Request(url, data=body, headers=headers, method="DELETE")
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            status, raw = resp.status, resp.read()
+    except urllib.error.HTTPError as e:
+        status, raw = e.code, e.read()
+    if status not in (200, 204):
+        raise SystemExit(f"orphan storage-object delete failed: HTTP {status}: {raw[:400]!r}")
+
+
 def main() -> int:
     manifests = sorted(ROOT.glob("*/manifest.json"))
     if not manifests:
         raise SystemExit(f"no manifest.json files found under {ROOT}")
 
     total = 0
+    total_orphans = 0
     for manifest_path in manifests:
         chapter = manifest_path.parent.name
         entries = json.loads(manifest_path.read_text(encoding="utf-8"))
         print(f"\n{chapter}: {len(entries)} document(s)")
+        current_paths: set[str] = set()
         for entry in entries:
             local_file = manifest_path.parent / entry["file"]
             if not local_file.exists():
                 raise SystemExit(f"manifest references missing file: {local_file}")
             storage_path = f"{chapter}/{entry['file']}"
+            current_paths.add(storage_path)
             upload_file(storage_path, local_file)
             row = {
                 "standard_code": entry["standard_code"],
@@ -125,7 +189,22 @@ def main() -> int:
             upsert_row(row)
             total += 1
 
+        # Clean up anything still registered for this chapter that is no
+        # longer in its manifest -- a renamed or renumbered file otherwise
+        # leaves a stale duplicate row (and a stale blob in Storage) behind
+        # forever, since the upsert above only ever adds/updates, never
+        # removes.
+        orphans = sorted(existing_storage_paths(chapter) - current_paths)
+        if orphans:
+            for path in orphans:
+                print(f"  removing orphan -> {BUCKET}/{path}")
+            delete_orphan_rows(orphans)
+            delete_orphan_objects(orphans)
+            total_orphans += len(orphans)
+
     print(f"\nDone. {total} document(s) uploaded and registered across {len(manifests)} chapter(s).")
+    if total_orphans:
+        print(f"Cleaned up {total_orphans} orphaned row(s)/file(s) left over from earlier renames.")
     return 0
 
 
