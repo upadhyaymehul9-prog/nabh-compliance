@@ -3,13 +3,13 @@
     "file": "SOP_ROM.1.a_governance_roles.docx",
     "document_type": "sop",
     "standard_code": "ROM.1",
-    "title": "SOP — Governance Structure and Roles (ROM.1.a)"
+    "title": "SOP — Identification of Governance Roles and Responsibilities (ROM.1.a)"
   },
   {
     "file": "SOP_ROM.1.b_vision_mission_values.docx",
     "document_type": "sop",
     "standard_code": "ROM.1",
-    "title": "SOP — Vision, Mission and Values (ROM.1.b)"
+    "title": "SOP — Vision, Mission, Values and Public Display (ROM.1.b)"
   },
   {
     "file": "SOP_ROM.1.e_ethical_management_framework.docx",
@@ -27,62 +27,90 @@
     "file": "SOP_ROM.4.a_risk_management.docx",
     "document_type": "sop",
     "standard_code": "ROM.4",
-    "title": "SOP — Risk Management (ROM.4.a)"
+    "title": "SOP — Proactive Risk Management (ROM.4.a)"
   },
   {
     "file": "SOP_ROM.4.c_failure_reporting.docx",
     "document_type": "sop",
     "standard_code": "ROM.4",
-    "title": "SOP — Failure Mode Identification and Reporting (ROM.4.c)"
+    "title": "SOP — Internal and External Reporting of System and Process Failures (ROM.4.c)"
   },
   {
     "file": "Records/ROM.1_Record_01_governance_register.docx",
     "document_type": "record",
     "standard_code": "ROM.1",
     "record_index": 1,
-    "title": "Record 1 — Governance structure and roles register"
+    "title": "Record 1 — Governance register"
   },
   {
-    "file": "Records/ROM.1_Record_02_vmv_approval.docx",
+    "file": "Records/ROM.1_Record_02_governance_vacancy_succession_log.docx",
     "document_type": "record",
     "standard_code": "ROM.1",
     "record_index": 2,
-    "title": "Record 2 — Vision, mission and values approval"
+    "title": "Record 2 — Governance role vacancy and succession log"
   },
   {
-    "file": "Records/ROM.1_Record_03_vmv_display_and_awareness.docx",
+    "file": "Records/ROM.1_Record_03_vmv_approval.docx",
     "document_type": "record",
     "standard_code": "ROM.1",
     "record_index": 3,
-    "title": "Record 3 — Vision, mission and values display and staff awareness log"
+    "title": "Record 3 — Vision, mission and values approval log"
   },
   {
-    "file": "Records/ROM.1_Record_04_ethical_framework_approval.docx",
+    "file": "Records/ROM.1_Record_04_vmv_display_and_awareness.docx",
     "document_type": "record",
     "standard_code": "ROM.1",
     "record_index": 4,
-    "title": "Record 4 — Ethical management framework approval"
+    "title": "Record 4 — Display confirmation and staff awareness log"
   },
   {
-    "file": "Records/ROM.1_Record_05_ethical_concerns_register.docx",
+    "file": "Records/ROM.1_Record_05_vmv_remedial_coaching_log.docx",
     "document_type": "record",
     "standard_code": "ROM.1",
     "record_index": 5,
-    "title": "Record 5 — Ethical concerns register"
+    "title": "Record 5 — Vision, mission and values remedial coaching log"
+  },
+  {
+    "file": "Records/ROM.1_Record_06_ethical_framework_approval.docx",
+    "document_type": "record",
+    "standard_code": "ROM.1",
+    "record_index": 6,
+    "title": "Record 6 — Ethical management framework approval and annual review log"
+  },
+  {
+    "file": "Records/ROM.1_Record_07_conflict_of_interest_declaration_register.docx",
+    "document_type": "record",
+    "standard_code": "ROM.1",
+    "record_index": 7,
+    "title": "Record 7 — Conflict-of-interest declaration register"
+  },
+  {
+    "file": "Records/ROM.1_Record_08_ethical_concerns_register.docx",
+    "document_type": "record",
+    "standard_code": "ROM.1",
+    "record_index": 8,
+    "title": "Record 8 — Ethical concerns register (including anonymous reports and retaliation checks)"
   },
   {
     "file": "Records/ROM.3_Record_01_service_standard_register.docx",
     "document_type": "record",
     "standard_code": "ROM.3",
     "record_index": 1,
-    "title": "Record 1 — Measurable service standards register"
+    "title": "Record 1 — Service-standard register"
   },
   {
     "file": "Records/ROM.3_Record_02_service_standard_monitoring.docx",
     "document_type": "record",
     "standard_code": "ROM.3",
     "record_index": 2,
-    "title": "Record 2 — Service standard monitoring log"
+    "title": "Record 2 — Quarterly service-standard monitoring and CAPA log"
+  },
+  {
+    "file": "Records/ROM.3_Record_03_repeated_miss_escalation_log.docx",
+    "document_type": "record",
+    "standard_code": "ROM.3",
+    "record_index": 3,
+    "title": "Record 3 — Repeated-miss escalation log"
   },
   {
     "file": "Records/ROM.4_Record_01_risk_register.docx",
@@ -92,10 +120,24 @@
     "title": "Record 1 — Risk register"
   },
   {
-    "file": "Records/ROM.4_Record_02_failure_reporting_register.docx",
+    "file": "Records/ROM.4_Record_02_high_severity_risk_escalation_log.docx",
     "document_type": "record",
     "standard_code": "ROM.4",
     "record_index": 2,
-    "title": "Record 2 — Failure reporting register"
+    "title": "Record 2 — High-severity risk immediate-escalation log"
+  },
+  {
+    "file": "Records/ROM.4_Record_03_failure_reporting_register.docx",
+    "document_type": "record",
+    "standard_code": "ROM.4",
+    "record_index": 3,
+    "title": "Record 3 — Failure-reporting register"
+  },
+  {
+    "file": "Records/ROM.4_Record_04_trend_analysis_systemic_capa_log.docx",
+    "document_type": "record",
+    "standard_code": "ROM.4",
+    "record_index": 4,
+    "title": "Record 4 — Trend analysis and systemic CAPA log"
   }
 ]
