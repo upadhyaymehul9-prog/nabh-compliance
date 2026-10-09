@@ -10404,7 +10404,7 @@ export default function App() {
         ) : Object.keys(byStandard).length===0 ? (
           <div style={{textAlign:'center',padding:40,color:T.muted}}>No OEs match the current filter.</div>
         ) : (
-          Object.entries(byStandard).map(([stdCode,{std,oes:stdOes}])=>{
+          Object.entries(byStandard).sort(([a],[b])=>a.localeCompare(b,undefined,{numeric:true,sensitivity:"base"})).map(([stdCode,{std,oes:stdOes}])=>{
             const stdScoredOes=stdOes.filter(oe=>shcoFullScores[oe.oe_code]);
             const stdAvg=stdScoredOes.length>0?stdScoredOes.reduce((a,oe)=>a+shcoFullScores[oe.oe_code],0)/stdScoredOes.length:null;
             const stdLowCount=stdOes.filter(oe=>shcoFullScores[oe.oe_code]&&shcoFullScores[oe.oe_code]<=2).length;
@@ -11003,7 +11003,7 @@ export default function App() {
         ) : Object.keys(byStandard).length===0 ? (
           <div style={{textAlign:'center',padding:40,color:T.muted}}>No OEs match the current filter.</div>
         ) : (
-          Object.entries(byStandard).map(([stdCode,{std,oes:stdOes}])=>{
+          Object.entries(byStandard).sort(([a],[b])=>a.localeCompare(b,undefined,{numeric:true,sensitivity:"base"})).map(([stdCode,{std,oes:stdOes}])=>{
             const stdScoredOes=stdOes.filter(oe=>ecoFullScores[oe.oe_code]);
             const stdAvg=stdScoredOes.length>0?stdScoredOes.reduce((a,oe)=>a+ecoFullScores[oe.oe_code],0)/stdScoredOes.length:null;
             const stdLowCount=stdOes.filter(oe=>ecoFullScores[oe.oe_code]&&ecoFullScores[oe.oe_code]<=2).length;
