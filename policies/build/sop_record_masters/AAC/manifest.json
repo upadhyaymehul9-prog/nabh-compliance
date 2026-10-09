@@ -9,7 +9,7 @@
     "file": "SOP_AAC.2.a_registration_admission.docx",
     "document_type": "sop",
     "standard_code": "AAC.2",
-    "title": "SOP — Patient Registration and Admission (AAC.2.a)"
+    "title": "SOP — Patient Registration, Identification and Admission (AAC.2.a)"
   },
   {
     "file": "SOP_AAC.2.d_e_bed_availability_and_prioritization.docx",
@@ -61,6 +61,13 @@
     "title": "Record 1 — Department scope-of-service register"
   },
   {
+    "file": "Records/AAC.1_Record_02_out_of_scope_presentation_log.docx",
+    "document_type": "record",
+    "standard_code": "AAC.1",
+    "record_index": 2,
+    "title": "Record 2 — Out-of-scope presentation log"
+  },
+  {
     "file": "Records/AAC.2_Record_01_registration_admission_log.docx",
     "document_type": "record",
     "standard_code": "AAC.2",
@@ -68,25 +75,46 @@
     "title": "Record 1 — Registration and admission log"
   },
   {
-    "file": "Records/AAC.2_Record_02_bed_non_availability_log.docx",
+    "file": "Records/AAC.2_Record_02_unidentified_patient_registration_log.docx",
     "document_type": "record",
     "standard_code": "AAC.2",
     "record_index": 2,
-    "title": "Record 2 — Bed non-availability log"
+    "title": "Record 2 — Unidentified patient registration and identity-reconciliation log"
   },
   {
-    "file": "Records/AAC.2_Record_03_clinical_prioritization_log.docx",
+    "file": "Records/AAC.2_Record_03_duplicate_number_audit_log.docx",
     "document_type": "record",
     "standard_code": "AAC.2",
     "record_index": 3,
-    "title": "Record 3 — Clinical prioritization log"
+    "title": "Record 3 — Duplicate unique-number audit log"
   },
   {
-    "file": "Records/AAC.2_Record_04_transfer_referral_log.docx",
+    "file": "Records/AAC.2_Record_04_non_accepted_presentation_log.docx",
     "document_type": "record",
     "standard_code": "AAC.2",
     "record_index": 4,
-    "title": "Record 4 — Transfer and referral log"
+    "title": "Record 4 — Non-accepted (service-unavailable) presentation log"
+  },
+  {
+    "file": "Records/AAC.2_Record_05_bed_non_availability_log.docx",
+    "document_type": "record",
+    "standard_code": "AAC.2",
+    "record_index": 5,
+    "title": "Record 5 — Bed non-availability and escalation log"
+  },
+  {
+    "file": "Records/AAC.2_Record_06_clinical_prioritization_log.docx",
+    "document_type": "record",
+    "standard_code": "AAC.2",
+    "record_index": 6,
+    "title": "Record 6 — Clinical prioritization log"
+  },
+  {
+    "file": "Records/AAC.2_Record_07_transfer_referral_log.docx",
+    "document_type": "record",
+    "standard_code": "AAC.2",
+    "record_index": 7,
+    "title": "Record 7 — Transfer and referral log"
   },
   {
     "file": "Records/AAC.3_Record_01_initial_assessment_audit_log.docx",
@@ -96,11 +124,11 @@
     "title": "Record 1 — Initial assessment compliance audit log"
   },
   {
-    "file": "Records/AAC.3_Record_02_initial_assessment_gap_capa.docx",
+    "file": "Records/AAC.3_Record_02_assessment_gap_refusal_capa.docx",
     "document_type": "record",
     "standard_code": "AAC.3",
     "record_index": 2,
-    "title": "Record 2 — Initial assessment gap and corrective-action log"
+    "title": "Record 2 — Initial assessment gap, refusal and corrective-action log"
   },
   {
     "file": "Records/AAC.4_Record_01_specimen_handling_log.docx",
@@ -110,74 +138,88 @@
     "title": "Record 1 — Specimen handling and disposal log"
   },
   {
-    "file": "Records/AAC.4_Record_02_lab_tat_tracking.docx",
+    "file": "Records/AAC.4_Record_02_specimen_rejection_log.docx",
     "document_type": "record",
     "standard_code": "AAC.4",
     "record_index": 2,
-    "title": "Record 2 — Laboratory turnaround-time tracking log"
+    "title": "Record 2 — Specimen rejection and recollection log"
   },
   {
-    "file": "Records/AAC.4_Record_03_critical_result_notification_log.docx",
+    "file": "Records/AAC.4_Record_03_lab_tat_tracking.docx",
     "document_type": "record",
     "standard_code": "AAC.4",
     "record_index": 3,
-    "title": "Record 3 — Critical laboratory result notification log"
+    "title": "Record 3 — Laboratory turnaround-time tracking log"
   },
   {
-    "file": "Records/AAC.4_Record_04_outsourced_lab_register.docx",
+    "file": "Records/AAC.4_Record_04_critical_result_notification_log.docx",
     "document_type": "record",
     "standard_code": "AAC.4",
     "record_index": 4,
-    "title": "Record 4 — Outsourced laboratory register"
+    "title": "Record 4 — Critical laboratory result notification and escalation log"
   },
   {
-    "file": "Records/AAC.4_Record_05_lab_qa_programme_log.docx",
+    "file": "Records/AAC.4_Record_05_outsourced_lab_register.docx",
     "document_type": "record",
     "standard_code": "AAC.4",
     "record_index": 5,
-    "title": "Record 5 — Laboratory internal/external quality assurance log"
+    "title": "Record 5 — Outsourced laboratory register"
   },
   {
-    "file": "Records/AAC.4_Record_06_equipment_calibration_log.docx",
+    "file": "Records/AAC.4_Record_06_lab_qa_programme_log.docx",
     "document_type": "record",
     "standard_code": "AAC.4",
     "record_index": 6,
-    "title": "Record 6 — Laboratory equipment calibration and maintenance log"
+    "title": "Record 6 — Laboratory internal/external quality assurance log"
   },
   {
-    "file": "Records/AAC.5_Record_01_imaging_tat_tracking.docx",
+    "file": "Records/AAC.4_Record_07_equipment_calibration_downtime_log.docx",
+    "document_type": "record",
+    "standard_code": "AAC.4",
+    "record_index": 7,
+    "title": "Record 7 — Laboratory equipment calibration, maintenance and downtime-contingency log"
+  },
+  {
+    "file": "Records/AAC.5_Record_01_pre_imaging_safety_screening_log.docx",
     "document_type": "record",
     "standard_code": "AAC.5",
     "record_index": 1,
-    "title": "Record 1 — Imaging turnaround-time tracking log"
+    "title": "Record 1 — Pre-imaging safety screening log"
   },
   {
-    "file": "Records/AAC.5_Record_02_critical_imaging_notification_log.docx",
+    "file": "Records/AAC.5_Record_02_imaging_tat_tracking.docx",
     "document_type": "record",
     "standard_code": "AAC.5",
     "record_index": 2,
-    "title": "Record 2 — Critical imaging finding notification log"
+    "title": "Record 2 — Imaging turnaround-time tracking log"
   },
   {
-    "file": "Records/AAC.5_Record_03_outsourced_imaging_register.docx",
+    "file": "Records/AAC.5_Record_03_critical_imaging_notification_log.docx",
     "document_type": "record",
     "standard_code": "AAC.5",
     "record_index": 3,
-    "title": "Record 3 — Outsourced imaging provider register"
+    "title": "Record 3 — Critical imaging finding notification and escalation log"
   },
   {
-    "file": "Records/AAC.5_Record_04_imaging_qa_programme_log.docx",
+    "file": "Records/AAC.5_Record_04_outsourced_imaging_register.docx",
     "document_type": "record",
     "standard_code": "AAC.5",
     "record_index": 4,
-    "title": "Record 4 — Imaging quality assurance log"
+    "title": "Record 4 — Outsourced imaging provider register"
   },
   {
-    "file": "Records/AAC.5_Record_05_imaging_equipment_calibration_radiation_safety_log.docx",
+    "file": "Records/AAC.5_Record_05_imaging_qa_programme_log.docx",
     "document_type": "record",
     "standard_code": "AAC.5",
     "record_index": 5,
-    "title": "Record 5 — Imaging equipment calibration, maintenance and radiation-safety compliance log"
+    "title": "Record 5 — Imaging quality assurance log"
+  },
+  {
+    "file": "Records/AAC.5_Record_06_imaging_equipment_calibration_radiation_safety_downtime_log.docx",
+    "document_type": "record",
+    "standard_code": "AAC.5",
+    "record_index": 6,
+    "title": "Record 6 — Imaging equipment calibration, maintenance, radiation-safety and downtime-contingency log"
   },
   {
     "file": "Records/AAC.6_Record_01_laboratory_safety_incident_log.docx",
@@ -185,5 +227,12 @@
     "standard_code": "AAC.6",
     "record_index": 1,
     "title": "Record 1 — Laboratory safety programme and incident log"
+  },
+  {
+    "file": "Records/AAC.6_Record_02_staff_immunisation_log.docx",
+    "document_type": "record",
+    "standard_code": "AAC.6",
+    "record_index": 2,
+    "title": "Record 2 — Laboratory staff occupational immunisation log"
   }
 ]
