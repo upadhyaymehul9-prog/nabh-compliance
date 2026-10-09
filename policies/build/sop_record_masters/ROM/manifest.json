@@ -1,0 +1,101 @@
+[
+  {
+    "file": "SOP_ROM.1.a_governance_roles.docx",
+    "document_type": "sop",
+    "standard_code": "ROM.1",
+    "title": "SOP — Governance Structure and Roles (ROM.1.a)"
+  },
+  {
+    "file": "SOP_ROM.1.b_vision_mission_values.docx",
+    "document_type": "sop",
+    "standard_code": "ROM.1",
+    "title": "SOP — Vision, Mission and Values (ROM.1.b)"
+  },
+  {
+    "file": "SOP_ROM.1.e_ethical_management_framework.docx",
+    "document_type": "sop",
+    "standard_code": "ROM.1",
+    "title": "SOP — Ethical Management Framework (ROM.1.e)"
+  },
+  {
+    "file": "SOP_ROM.3.d_measurable_service_standards.docx",
+    "document_type": "sop",
+    "standard_code": "ROM.3",
+    "title": "SOP — Measurable Service Standards (ROM.3.d)"
+  },
+  {
+    "file": "SOP_ROM.4.a_risk_management.docx",
+    "document_type": "sop",
+    "standard_code": "ROM.4",
+    "title": "SOP — Risk Management (ROM.4.a)"
+  },
+  {
+    "file": "SOP_ROM.4.c_failure_reporting.docx",
+    "document_type": "sop",
+    "standard_code": "ROM.4",
+    "title": "SOP — Failure Mode Identification and Reporting (ROM.4.c)"
+  },
+  {
+    "file": "Records/ROM.1_Record_01_governance_register.docx",
+    "document_type": "record",
+    "standard_code": "ROM.1",
+    "record_index": 1,
+    "title": "Record 1 — Governance structure and roles register"
+  },
+  {
+    "file": "Records/ROM.1_Record_02_vmv_approval.docx",
+    "document_type": "record",
+    "standard_code": "ROM.1",
+    "record_index": 2,
+    "title": "Record 2 — Vision, mission and values approval"
+  },
+  {
+    "file": "Records/ROM.1_Record_03_vmv_display_and_awareness.docx",
+    "document_type": "record",
+    "standard_code": "ROM.1",
+    "record_index": 3,
+    "title": "Record 3 — Vision, mission and values display and staff awareness log"
+  },
+  {
+    "file": "Records/ROM.1_Record_04_ethical_framework_approval.docx",
+    "document_type": "record",
+    "standard_code": "ROM.1",
+    "record_index": 4,
+    "title": "Record 4 — Ethical management framework approval"
+  },
+  {
+    "file": "Records/ROM.1_Record_05_ethical_concerns_register.docx",
+    "document_type": "record",
+    "standard_code": "ROM.1",
+    "record_index": 5,
+    "title": "Record 5 — Ethical concerns register"
+  },
+  {
+    "file": "Records/ROM.3_Record_01_service_standard_register.docx",
+    "document_type": "record",
+    "standard_code": "ROM.3",
+    "record_index": 1,
+    "title": "Record 1 — Measurable service standards register"
+  },
+  {
+    "file": "Records/ROM.3_Record_02_service_standard_monitoring.docx",
+    "document_type": "record",
+    "standard_code": "ROM.3",
+    "record_index": 2,
+    "title": "Record 2 — Service standard monitoring log"
+  },
+  {
+    "file": "Records/ROM.4_Record_01_risk_register.docx",
+    "document_type": "record",
+    "standard_code": "ROM.4",
+    "record_index": 1,
+    "title": "Record 1 — Risk register"
+  },
+  {
+    "file": "Records/ROM.4_Record_02_failure_reporting_register.docx",
+    "document_type": "record",
+    "standard_code": "ROM.4",
+    "record_index": 2,
+    "title": "Record 2 — Failure reporting register"
+  }
+]
