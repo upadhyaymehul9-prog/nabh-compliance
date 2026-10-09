@@ -6732,6 +6732,66 @@ export default function App() {
   const [shcoFullPdfLoading, setShcoFullPdfLoading] = useState(false);
   const [shcoPolicyDownloading, setShcoPolicyDownloading] = useState(null); // stdCode currently downloading
   const [shcoPolicyToast, setShcoPolicyToast] = useState(null);
+  // SHCO Full v2 SOP/Record documents — shared masters, load once. Policy
+  // masters stay on the existing downloadShcoV2Policy path above; this is
+  // additive, for the sop/record library in shco_documents.
+  const [shcoDocsByStandard, setShcoDocsByStandard] = useState({});
+  const [shcoDocDownloading, setShcoDocDownloading] = useState(null);
+  const [shcoDocOpenDropdown, setShcoDocOpenDropdown] = useState(null);
+  useEffect(()=>{
+    (async()=>{
+      const {data,error}=await supabase.from("shco_documents")
+        .select("id, standard_code, document_type, record_index, title");
+      if(error||!data||!data.length)return;
+      const byStd={};
+      data.forEach(d=>{
+        if(!byStd[d.standard_code])byStd[d.standard_code]={sops:[],records:[]};
+        if(d.document_type==='sop')byStd[d.standard_code].sops.push(d);
+        else if(d.document_type==='record')byStd[d.standard_code].records.push(d);
+      });
+      Object.values(byStd).forEach(s=>{
+        s.sops.sort((a,b)=>(a.title||'').localeCompare(b.title||''));
+        s.records.sort((a,b)=>(a.record_index||0)-(b.record_index||0));
+      });
+      setShcoDocsByStandard(byStd);
+    })().catch(()=>{});
+  },[]);
+  const downloadShcoDocument=async(doc)=>{
+    if(shcoDocDownloading)return;
+    const cleanHospital=(context?.hospitalName||'Hospital').replace(/\s+(New|Trial|Active|Expired)$/i,'').trim();
+    setShcoDocDownloading(doc.id);
+    shcoPolicyToastFor({type:'PREPARING',sev:'HIGH',msg:`Personalising ${doc.standard_code} for ${cleanHospital}…`});
+    try{
+      const {data:{session}}=await supabase.auth.getSession();
+      if(!session)throw new Error('Your session has expired — sign in again to download documents.');
+      const res=await fetch(`${supabase.functionsUrl}/download-v2-shco-document`,{
+        method:'POST',
+        headers:{
+          'Content-Type':'application/json',
+          apikey: supabase.supabaseKey,
+          Authorization:`Bearer ${session.access_token}`,
+        },
+        body: JSON.stringify({ document_id: doc.id, hospital_name: cleanHospital }),
+      });
+      if(!res.ok){
+        let msg=`Download failed (HTTP ${res.status}).`;
+        try{const j=await res.json();if(j?.error)msg=j.error;}catch(_){}
+        throw new Error(msg);
+      }
+      const blob=await res.blob();
+      const url=URL.createObjectURL(blob);
+      const a=document.createElement('a');
+      a.href=url;
+      a.download=`${doc.standard_code}_${doc.document_type}_${cleanHospital.replace(/[^a-zA-Z0-9]/g,'_')}.docx`;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(()=>URL.revokeObjectURL(url),10000);
+      shcoPolicyToastFor({type:'DOWNLOADED',sev:'SUCCESS',msg:`${doc.standard_code} ${doc.document_type} saved, personalised for ${cleanHospital}.`});
+    }catch(e){
+      console.error('SHCO v2 document download failed:',e);
+      shcoPolicyToastFor({type:'ERROR',sev:'CRITICAL',msg:e.message||'Could not download the document.'});
+    }
+    setShcoDocDownloading(null);
+  };
   const [shcoFullShowTip, setShcoFullShowTip] = useState({});
   const [shcoFullGapFilter, setShcoFullGapFilter] = useState('ALL');
   const [shcoFullGapSearch, setShcoFullGapSearch] = useState('');
@@ -10430,6 +10490,64 @@ export default function App() {
                         opacity:shcoPolicyDownloading&&shcoPolicyDownloading!==stdCode?0.4:shcoPolicyDownloading===stdCode?0.6:1}}>
                       {shcoPolicyDownloading===stdCode?'⏳ Preparing…':'⬇ Download Policy'}
                     </button>
+                    {(()=>{
+                      const sd=shcoDocsByStandard[stdCode]||{sops:[],records:[]};
+                      const dBtnStyle=(active)=>({marginTop:6,marginLeft:4,padding:'3px 9px',borderRadius:6,
+                        border:`1px solid ${T.gold}40`,background:active?T.gold+'18':'transparent',color:T.gold,
+                        fontSize:10,fontWeight:700,whiteSpace:'nowrap',cursor:shcoDocDownloading?'default':'pointer',
+                        opacity:shcoDocDownloading&&shcoDocDownloading!==active?0.4:1});
+                      return (
+                        <>
+                          {sd.sops.length>0 && (
+                            <div style={{position:'relative',display:'inline-block'}}>
+                              <button onClick={()=>setShcoDocOpenDropdown(p=>p===`${stdCode}:sop`?null:`${stdCode}:sop`)}
+                                style={dBtnStyle(false)}>
+                                SOPs ({sd.sops.length}) {shcoDocOpenDropdown===`${stdCode}:sop`?'▲':'▼'}
+                              </button>
+                              {shcoDocOpenDropdown===`${stdCode}:sop` && (
+                                <div style={{position:'absolute',right:0,top:'100%',zIndex:20,marginTop:2,
+                                  background:T.panel,border:`1px solid ${T.border}`,borderRadius:8,
+                                  minWidth:220,maxWidth:320,boxShadow:'0 4px 14px rgba(0,0,0,0.25)',overflow:'hidden'}}>
+                                  {sd.sops.map(s=>(
+                                    <button key={s.id} onClick={()=>{downloadShcoDocument(s);setShcoDocOpenDropdown(null);}}
+                                      disabled={!!shcoDocDownloading}
+                                      style={{display:'block',width:'100%',textAlign:'left',padding:'7px 10px',
+                                        border:'none',borderBottom:`1px solid ${T.border}`,background:'transparent',
+                                        color:T.text,fontSize:11,cursor:'pointer'}}>
+                                      {shcoDocDownloading===s.id?'⏳ Preparing…':s.title}
+                                    </button>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          )}
+                          {sd.records.length>0 && (
+                            <div style={{position:'relative',display:'inline-block'}}>
+                              <button onClick={()=>setShcoDocOpenDropdown(p=>p===`${stdCode}:record`?null:`${stdCode}:record`)}
+                                style={dBtnStyle(false)}>
+                                Records ({sd.records.length}) {shcoDocOpenDropdown===`${stdCode}:record`?'▲':'▼'}
+                              </button>
+                              {shcoDocOpenDropdown===`${stdCode}:record` && (
+                                <div style={{position:'absolute',right:0,top:'100%',zIndex:20,marginTop:2,
+                                  background:T.panel,border:`1px solid ${T.border}`,borderRadius:8,
+                                  minWidth:220,maxWidth:320,maxHeight:260,overflowY:'auto',
+                                  boxShadow:'0 4px 14px rgba(0,0,0,0.25)'}}>
+                                  {sd.records.map(r=>(
+                                    <button key={r.id} onClick={()=>{downloadShcoDocument(r);setShcoDocOpenDropdown(null);}}
+                                      disabled={!!shcoDocDownloading}
+                                      style={{display:'block',width:'100%',textAlign:'left',padding:'7px 10px',
+                                        border:'none',borderBottom:`1px solid ${T.border}`,background:'transparent',
+                                        color:T.text,fontSize:11,cursor:'pointer'}}>
+                                      {shcoDocDownloading===r.id?'⏳ Preparing…':r.title}
+                                    </button>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          )}
+                        </>
+                      );
+                    })()}
                   </div>
                 </div>
                 {stdOes.map(oe=>{

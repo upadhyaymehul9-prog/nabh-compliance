@@ -1,0 +1,82 @@
+[
+  {
+    "file": "SOP_HRM.1.b_recruitment.docx",
+    "document_type": "sop",
+    "standard_code": "HRM.1",
+    "title": "SOP — Staff Recruitment (HRM.1.b)"
+  },
+  {
+    "file": "SOP_HRM.1.e_job_description.docx",
+    "document_type": "sop",
+    "standard_code": "HRM.1",
+    "title": "SOP — Reporting Relationships, Job Specification and Job Description (HRM.1.e)"
+  },
+  {
+    "file": "SOP_HRM.1.i_disciplinary_grievance.docx",
+    "document_type": "sop",
+    "standard_code": "HRM.1",
+    "title": "SOP — Disciplinary and Grievance Handling (HRM.1.i)"
+  },
+  {
+    "file": "SOP_HRM.4.a_performance_appraisal.docx",
+    "document_type": "sop",
+    "standard_code": "HRM.4",
+    "title": "SOP — Performance Appraisal (HRM.4.a)"
+  },
+  {
+    "file": "Records/HRM.1_Record_01_recruitment_register.docx",
+    "document_type": "record",
+    "standard_code": "HRM.1",
+    "record_index": 1,
+    "title": "Record 1 — Recruitment register"
+  },
+  {
+    "file": "Records/HRM.1_Record_02_job_description_template.docx",
+    "document_type": "record",
+    "standard_code": "HRM.1",
+    "record_index": 2,
+    "title": "Record 2 — Job description template register"
+  },
+  {
+    "file": "Records/HRM.1_Record_03_signed_job_descriptions.docx",
+    "document_type": "record",
+    "standard_code": "HRM.1",
+    "record_index": 3,
+    "title": "Record 3 — Signed job description log"
+  },
+  {
+    "file": "Records/HRM.1_Record_04_grievance_register.docx",
+    "document_type": "record",
+    "standard_code": "HRM.1",
+    "record_index": 4,
+    "title": "Record 4 — Grievance register"
+  },
+  {
+    "file": "Records/HRM.1_Record_05_disciplinary_proceedings_register.docx",
+    "document_type": "record",
+    "standard_code": "HRM.1",
+    "record_index": 5,
+    "title": "Record 5 — Disciplinary proceedings register"
+  },
+  {
+    "file": "Records/HRM.4_Record_01_induction_appraisal_awareness.docx",
+    "document_type": "record",
+    "standard_code": "HRM.4",
+    "record_index": 1,
+    "title": "Record 1 — Induction appraisal-awareness acknowledgement log"
+  },
+  {
+    "file": "Records/HRM.4_Record_02_appraisal_criteria_schedule.docx",
+    "document_type": "record",
+    "standard_code": "HRM.4",
+    "record_index": 2,
+    "title": "Record 2 — Appraisal criteria sign-off"
+  },
+  {
+    "file": "Records/HRM.4_Record_03_completed_appraisal_schedule.docx",
+    "document_type": "record",
+    "standard_code": "HRM.4",
+    "record_index": 3,
+    "title": "Record 3 — Appraisal schedule and completion tracker"
+  }
+]
