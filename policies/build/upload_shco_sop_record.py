@@ -42,12 +42,28 @@ BUCKET = "shco-sop-record-v2"
 ROOT = Path(__file__).parent / "sop_record_masters"
 
 
-def service_key() -> str:
+def storage_key() -> str:
+    """Storage still accepts the legacy service_role JWT on this project even
+    though legacy keys were disabled for the Data API -- prefer it, fall
+    back to the new secret key if that's all that's set."""
     key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY") or os.environ.get("SUPABASE_SECRET_KEY")
     if not key:
         raise SystemExit(
             "SUPABASE_SERVICE_ROLE_KEY (or SUPABASE_SECRET_KEY) is not set. "
-            "Required for storage upload and the table upsert."
+            "Required for storage upload."
+        )
+    return key
+
+
+def data_key() -> str:
+    """The Data API (PostgREST / shco_documents) rejects legacy keys now --
+    prefer the new secret key, fall back to the legacy key if that's all
+    that's set."""
+    key = os.environ.get("SUPABASE_SECRET_KEY") or os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+    if not key:
+        raise SystemExit(
+            "SUPABASE_SECRET_KEY (or SUPABASE_SERVICE_ROLE_KEY) is not set. "
+            "Required for the shco_documents table upsert."
         )
     return key
 
@@ -57,11 +73,12 @@ def base_url() -> str:
 
 
 def upload_file(storage_path: str, local_file: Path) -> None:
-    key = service_key()
+    key = storage_key()
     body = local_file.read_bytes()
     url = f"{base_url()}/storage/v1/object/{BUCKET}/{storage_path}"
     headers = {
         "apikey": key,
+        "Authorization": f"Bearer {key}",
         "Content-Type": DOCX_CONTENT_TYPE,
         "x-upsert": "true",
     }
@@ -77,7 +94,7 @@ def upload_file(storage_path: str, local_file: Path) -> None:
 
 
 def upsert_row(row: dict) -> None:
-    key = service_key()
+    key = data_key()
     url = f"{base_url()}/rest/v1/shco_documents?on_conflict=storage_path"
     headers = {
         "apikey": key,
@@ -99,7 +116,7 @@ def upsert_row(row: dict) -> None:
 def existing_storage_paths(chapter: str) -> set[str]:
     """Every storage_path currently registered in shco_documents for this
     chapter, regardless of whether it's still in the manifest."""
-    key = service_key()
+    key = data_key()
     pattern = urllib.parse.quote(f"{chapter}/%", safe="")
     url = f"{base_url()}/rest/v1/shco_documents?select=storage_path&storage_path=like.{pattern}"
     headers = {"apikey": key}
@@ -117,7 +134,7 @@ def existing_storage_paths(chapter: str) -> set[str]:
 def delete_orphan_rows(storage_paths: list[str]) -> None:
     if not storage_paths:
         return
-    key = service_key()
+    key = data_key()
     in_list = ",".join(urllib.parse.quote(p, safe="") for p in storage_paths)
     url = f"{base_url()}/rest/v1/shco_documents?storage_path=in.({in_list})"
     headers = {
@@ -137,10 +154,11 @@ def delete_orphan_rows(storage_paths: list[str]) -> None:
 def delete_orphan_objects(storage_paths: list[str]) -> None:
     if not storage_paths:
         return
-    key = service_key()
+    key = storage_key()
     url = f"{base_url()}/storage/v1/object/{BUCKET}"
     headers = {
         "apikey": key,
+        "Authorization": f"Bearer {key}",
         "Content-Type": "application/json",
     }
     body = json.dumps({"prefixes": storage_paths}).encode("utf-8")
