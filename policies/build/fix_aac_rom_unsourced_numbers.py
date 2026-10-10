@@ -45,6 +45,11 @@ FIXES = [
         "old": "1. When a governance role becomes vacant, the Medical Superintendent notifies the governing body within a defined period (e.g. 7 days).",
         "new": "1. When a governance role becomes vacant, the Medical Superintendent notifies the governing body within «the hospital-defined notification period» -- the hospital states this as a specific number of days in its own SOP; no external body prescribes it.",
     },
+    {
+        "path": Path(__file__).parent / "sop_record_masters" / "HRM" / "SOP_HRM.4.a_performance_appraisal.docx",
+        "old": "1. Where an appraisal finds performance unsatisfactory against the stated criteria, the department head opens a performance improvement plan the same day, naming the specific gaps, the support or training to be provided, and a follow-up review date within a defined period (e.g. 60 days).",
+        "new": "1. Where an appraisal finds performance unsatisfactory against the stated criteria, the department head opens a performance improvement plan the same day, naming the specific gaps, the support or training to be provided, and a follow-up review date within «the hospital-defined review period» -- the hospital states this as a specific number of days in its own SOP; no external body prescribes it.",
+    },
 ]
 
 
@@ -52,6 +57,7 @@ def main() -> None:
     for fix in FIXES:
         doc = Document(str(fix["path"]))
         found = False
+        already_done = False
         for p in doc.paragraphs:
             if p.text == fix["old"]:
                 p.runs[0].text = fix["new"]
@@ -59,8 +65,13 @@ def main() -> None:
                     r.text = ""
                 found = True
                 break
+            if p.text == fix["new"]:
+                already_done = True
+        if already_done:
+            print(f"already fixed, skipping: {fix['path'].name}")
+            continue
         if not found:
-            raise SystemExit(f"EXPECTED TEXT NOT FOUND in {fix['path'].name} (file changed under this script?):\n{fix['old']!r}")
+            raise SystemExit(f"EXPECTED TEXT NOT FOUND in {fix['path'].name} (file changed under this script, or already fixed and not caught above?):\n{fix['old']!r}")
         doc.save(str(fix["path"]))
         print(f"fixed {fix['path'].name}")
 
