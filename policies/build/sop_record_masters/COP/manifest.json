@@ -231,5 +231,53 @@
     "standard_code": "COP.5",
     "record_index": 6,
     "title": "Post-transfusion form collection and reaction analysis log"
+  },
+  {
+    "file": "SOP_COP.6.a_to_f_icu_hdu_care.docx",
+    "document_type": "sop",
+    "standard_code": "COP.6",
+    "title": "SOP — Care in Intensive Care and High Dependency Units (COP.6.a-f)"
+  },
+  {
+    "file": "Records/COP.6_Record_01_admission_discharge_bed_shortage_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.6",
+    "record_index": 1,
+    "title": "ICU/HDU admission, discharge and bed-shortage log"
+  },
+  {
+    "file": "Records/COP.6_Record_02_staffing_equipment_adequacy_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.6",
+    "record_index": 2,
+    "title": "ICU/HDU staffing and equipment adequacy log"
+  },
+  {
+    "file": "Records/COP.6_Record_03_infection_control_practice_compliance_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.6",
+    "record_index": 3,
+    "title": "ICU/HDU infection-control practice compliance log"
+  },
+  {
+    "file": "Records/COP.6_Record_04_qa_programme_indicator_review_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.6",
+    "record_index": 4,
+    "title": "ICU/HDU quality-assurance indicator and review log"
+  },
+  {
+    "file": "Records/COP.6_Record_05_periodic_counselling_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.6",
+    "record_index": 5,
+    "title": "ICU/HDU periodic counselling log"
+  },
+  {
+    "file": "Records/COP.6_Record_06_end_of_life_decision_record.docx",
+    "document_type": "record",
+    "standard_code": "COP.6",
+    "record_index": 6,
+    "title": "End-of-life decision and brain-stem death declaration record"
   }
 ]
