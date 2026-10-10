@@ -1,0 +1,43 @@
+[
+  {
+    "file": "SOP_COP.1.a_to_e_uniform_care_telemedicine.docx",
+    "document_type": "sop",
+    "standard_code": "COP.1",
+    "title": "SOP — Uniform Care Across Settings and Telemedicine (COP.1.a-e)"
+  },
+  {
+    "file": "Records/COP.1_Record_01_two_identifier_confirmation_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.1",
+    "record_index": 1,
+    "title": "Two-identifier confirmation log"
+  },
+  {
+    "file": "Records/COP.1_Record_02_applicable_law_list_review_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.1",
+    "record_index": 2,
+    "title": "Applicable-law list and review log"
+  },
+  {
+    "file": "Records/COP.1_Record_03_clinical_protocol_register.docx",
+    "document_type": "record",
+    "standard_code": "COP.1",
+    "record_index": 3,
+    "title": "Clinical protocol register"
+  },
+  {
+    "file": "Records/COP.1_Record_04_cross_setting_consistency_audit.docx",
+    "document_type": "record",
+    "standard_code": "COP.1",
+    "record_index": 4,
+    "title": "Cross-setting protocol consistency audit log"
+  },
+  {
+    "file": "Records/COP.1_Record_05_telemedicine_consultation_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.1",
+    "record_index": 5,
+    "title": "Telemedicine consultation log (or written decision record)"
+  }
+]
