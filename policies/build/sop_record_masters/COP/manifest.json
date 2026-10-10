@@ -39,5 +39,81 @@
     "standard_code": "COP.1",
     "record_index": 5,
     "title": "Telemedicine consultation log (or written decision record)"
+  },
+  {
+    "file": "SOP_COP.2.a_to_k_emergency_ambulance_disaster.docx",
+    "document_type": "sop",
+    "standard_code": "COP.2",
+    "title": "SOP — Emergency Services, Ambulance and Management of Disasters (COP.2.a-k)"
+  },
+  {
+    "file": "Records/COP.2_Record_01_emergency_area_signage_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.2",
+    "record_index": 1,
+    "title": "Emergency area identification and signage check log"
+  },
+  {
+    "file": "Records/COP.2_Record_02_mlc_register.docx",
+    "document_type": "record",
+    "standard_code": "COP.2",
+    "record_index": 2,
+    "title": "Medico-legal case (MLC) register"
+  },
+  {
+    "file": "Records/COP.2_Record_03_triage_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.2",
+    "record_index": 3,
+    "title": "Triage log"
+  },
+  {
+    "file": "Records/COP.2_Record_04_waiting_reassessment_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.2",
+    "record_index": 4,
+    "title": "Waiting-patient reassessment log"
+  },
+  {
+    "file": "Records/COP.2_Record_05_disposition_discharge_note_register.docx",
+    "document_type": "record",
+    "standard_code": "COP.2",
+    "record_index": 5,
+    "title": "Emergency disposition and discharge note register"
+  },
+  {
+    "file": "Records/COP.2_Record_06_emergency_qa_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.2",
+    "record_index": 6,
+    "title": "Emergency-care quality indicator and review log"
+  },
+  {
+    "file": "Records/COP.2_Record_07_brought_dead_death_within_minutes_register.docx",
+    "document_type": "record",
+    "standard_code": "COP.2",
+    "record_index": 7,
+    "title": "Brought-dead and death-within-minutes register"
+  },
+  {
+    "file": "Records/COP.2_Record_08_ambulance_readiness_checklist.docx",
+    "document_type": "record",
+    "standard_code": "COP.2",
+    "record_index": 8,
+    "title": "Ambulance readiness checklist (access, fitness, equipment and medications)"
+  },
+  {
+    "file": "Records/COP.2_Record_09_ambulance_transit_treatment_run_sheet.docx",
+    "document_type": "record",
+    "standard_code": "COP.2",
+    "record_index": 9,
+    "title": "Ambulance transit/run sheet"
+  },
+  {
+    "file": "Records/COP.2_Record_10_disaster_epidemic_plan_drill_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.2",
+    "record_index": 10,
+    "title": "Disaster/epidemic/community-emergency plan review and drill log"
   }
 ]
