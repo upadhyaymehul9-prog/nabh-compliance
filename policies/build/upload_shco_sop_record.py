@@ -62,7 +62,6 @@ def upload_file(storage_path: str, local_file: Path) -> None:
     url = f"{base_url()}/storage/v1/object/{BUCKET}/{storage_path}"
     headers = {
         "apikey": key,
-        "Authorization": f"Bearer {key}",
         "Content-Type": DOCX_CONTENT_TYPE,
         "x-upsert": "true",
     }
@@ -82,7 +81,6 @@ def upsert_row(row: dict) -> None:
     url = f"{base_url()}/rest/v1/shco_documents?on_conflict=storage_path"
     headers = {
         "apikey": key,
-        "Authorization": f"Bearer {key}",
         "Content-Type": "application/json",
         "Prefer": "resolution=merge-duplicates,return=minimal",
     }
@@ -104,7 +102,7 @@ def existing_storage_paths(chapter: str) -> set[str]:
     key = service_key()
     pattern = urllib.parse.quote(f"{chapter}/%", safe="")
     url = f"{base_url()}/rest/v1/shco_documents?select=storage_path&storage_path=like.{pattern}"
-    headers = {"apikey": key, "Authorization": f"Bearer {key}"}
+    headers = {"apikey": key}
     req = urllib.request.Request(url, headers=headers, method="GET")
     try:
         with urllib.request.urlopen(req, timeout=60) as resp:
@@ -124,7 +122,6 @@ def delete_orphan_rows(storage_paths: list[str]) -> None:
     url = f"{base_url()}/rest/v1/shco_documents?storage_path=in.({in_list})"
     headers = {
         "apikey": key,
-        "Authorization": f"Bearer {key}",
         "Prefer": "return=minimal",
     }
     req = urllib.request.Request(url, headers=headers, method="DELETE")
@@ -144,7 +141,6 @@ def delete_orphan_objects(storage_paths: list[str]) -> None:
     url = f"{base_url()}/storage/v1/object/{BUCKET}"
     headers = {
         "apikey": key,
-        "Authorization": f"Bearer {key}",
         "Content-Type": "application/json",
     }
     body = json.dumps({"prefixes": storage_paths}).encode("utf-8")
