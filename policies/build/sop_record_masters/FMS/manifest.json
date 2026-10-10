@@ -156,5 +156,39 @@
     "standard_code": "FMS.3",
     "record_index": 7,
     "title": "Critical-equipment downtime log"
+  },
+  {
+    "file": "SOP_FMS.4.a_to_d_medical_gases_vacuum_compressed_air.docx",
+    "document_type": "sop",
+    "standard_code": "FMS.4",
+    "title": "Medical Gases, Vacuum and Compressed Air"
+  },
+  {
+    "file": "Records/FMS.4_Record_01_medical-gas_written-guidance_implementation_log.docx",
+    "document_type": "record",
+    "standard_code": "FMS.4",
+    "record_index": 1,
+    "title": "Medical-gas written-guidance implementation log"
+  },
+  {
+    "file": "Records/FMS.4_Record_02_gas_store_and_identity-check_record.docx",
+    "document_type": "record",
+    "standard_code": "FMS.4",
+    "record_index": 2,
+    "title": "Gas store and identity-check record"
+  },
+  {
+    "file": "Records/FMS.4_Record_03_alternate_gas_and_vacuum_source_functioning-test_record.docx",
+    "document_type": "record",
+    "standard_code": "FMS.4",
+    "record_index": 3,
+    "title": "Alternate gas and vacuum source functioning-test record"
+  },
+  {
+    "file": "Records/FMS.4_Record_04_piped_mgps_operational_inspection_testing_and_maintenance_fi.docx",
+    "document_type": "record",
+    "standard_code": "FMS.4",
+    "record_index": 4,
+    "title": "Piped MGPS operational, inspection, testing and maintenance file (or recorded absence)"
   }
 ]
