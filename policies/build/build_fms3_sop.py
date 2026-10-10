@@ -28,17 +28,21 @@ OUT_ROOT = Path(__file__).parent / "sop_record_masters" / "FMS"
 
 FMS3_REFS = [
     "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
-    "Standards for Small Healthcare Organisations (3rd ed.). NABH SHCO Accreditation "
-    "Programme page. Facility Management and Safety chapter, standard FMS.3.",
-    "National Health Mission. Biomedical Equipment Management and Maintenance "
-    "Programme (BEMMP). PPM/inventory/criticality framework, not a named-contract "
+    "Standards for Small Healthcare Organisations (3rd ed.). [NABH SHCO Accreditation "
+    "Programme page](https://nabh.co/programmes/small-healthcare-organisation-shco-accreditation-programme/). Facility Management and Safety chapter, standard FMS.3.",
+    "Ministry of Health & Family Welfare, Government of India. "
+    "[Biomedical Equipment Management and Maintenance "
+    "Programme (BMMP)](https://mohfw.gov.in/sites/default/files/BMMP%20Technical%20Manual.pdf). PPM/inventory/criticality framework, not a named-contract "
     "mandate.",
-    "Central Drugs Standard Control Organisation. Medical Devices and Diagnostics.",
-    "Government of India. (2017). Medical Devices Rules, 2017, read with the Drugs "
+    "Central Drugs Standard Control Organisation. "
+    "[Medical Devices and Diagnostics](https://cdsco.gov.in/opencms/opencms/en/Medical-Device-Diagnostics/).",
+    "Government of India. (2017). [Medical Devices Rules, 2017]"
+    "(https://cdsco.gov.in/opencms/resources/UploadCDSCOWeb/2022/m_device/mdr,%202017%20(1).pdf), read with the Drugs "
     "and Cosmetics Act, 1940. Indian regulatory instrument for device adverse events "
     "and recalls insofar as they apply to devices this hospital uses; this hospital "
     "is not a manufacturer.",
-    "National Health Mission. (2022). Indian Public Health Standards. Planning "
+    "National Health Mission. (2022). [Indian Public Health Standards]"
+    "(https://nhsrcindia.org/sites/default/files/CHC%20IPHS%202022%20Guidelines%20pdf.pdf). Planning "
     "framework, not a NABH equipment-list mandate.",
 ]
 
@@ -119,9 +123,9 @@ SOP = SOPSpec(
                 "planned under this step.",
             ],
             technical_sources=[
-                "National Health Mission. Biomedical Equipment Management and "
-                "Maintenance Programme (BEMMP).",
-                "National Health Mission. (2022). Indian Public Health Standards.",
+                "Ministry of Health & Family Welfare, Government of India. [Biomedical Equipment Management and "
+                "Maintenance Programme (BMMP)](https://mohfw.gov.in/sites/default/files/BMMP%20Technical%20Manual.pdf).",
+                "National Health Mission. (2022). [Indian Public Health Standards](https://nhsrcindia.org/sites/default/files/CHC%20IPHS%202022%20Guidelines%20pdf.pdf).",
             ],
         ),
         ProcedureBlock(
@@ -176,8 +180,8 @@ SOP = SOPSpec(
                 "does not restate either.",
             ],
             technical_sources=[
-                "National Health Mission. Biomedical Equipment Management and "
-                "Maintenance Programme (BEMMP).",
+                "Ministry of Health & Family Welfare, Government of India. [Biomedical Equipment Management and "
+                "Maintenance Programme (BMMP)](https://mohfw.gov.in/sites/default/files/BMMP%20Technical%20Manual.pdf).",
             ],
         ),
         ProcedureBlock(
@@ -258,9 +262,9 @@ SOP = SOPSpec(
                 "run when a notice named a type this hospital holds.",
             ],
             technical_sources=[
-                "Central Drugs Standard Control Organisation. Medical Devices and "
-                "Diagnostics.",
-                "Government of India. (2017). Medical Devices Rules, 2017, read with "
+                "Central Drugs Standard Control Organisation. [Medical Devices and "
+                "Diagnostics](https://cdsco.gov.in/opencms/opencms/en/Medical-Device-Diagnostics/).",
+                "Government of India. (2017). [Medical Devices Rules, 2017](https://cdsco.gov.in/opencms/resources/UploadCDSCOWeb/2022/m_device/mdr,%202017%20(1).pdf), read with "
                 "the Drugs and Cosmetics Act, 1940.",
             ],
         ),
@@ -341,7 +345,8 @@ RECORDS = [
         ],
         verified_sources=[
             "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
-            "Standards for Small Healthcare Organisations (3rd ed.). Facility Management "
+            "Standards for Small Healthcare Organisations (3rd ed.). [NABH SHCO Accreditation "
+            "Programme page](https://nabh.co/programmes/small-healthcare-organisation-shco-accreditation-programme/). Facility Management "
             "and Safety chapter, standard FMS.3.",
         ],
         column_headers=["Date", "Service (per AAC.1)", "Equipment Planned",
@@ -378,7 +383,8 @@ RECORDS = [
         ],
         verified_sources=[
             "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
-            "Standards for Small Healthcare Organisations (3rd ed.). Facility Management "
+            "Standards for Small Healthcare Organisations (3rd ed.). [NABH SHCO Accreditation "
+            "Programme page](https://nabh.co/programmes/small-healthcare-organisation-shco-accreditation-programme/). Facility Management "
             "and Safety chapter, standard FMS.3.",
         ],
         column_headers=["Unique Identifier", "Item/Description", "Location/Owner Department",
@@ -416,8 +422,8 @@ RECORDS = [
             ("Confirmed By", "Named technician or biomedical lead."),
         ],
         verified_sources=[
-            "National Health Mission. Biomedical Equipment Management and "
-            "Maintenance Programme (BEMMP).",
+            "Ministry of Health & Family Welfare, Government of India. [Biomedical Equipment Management and "
+            "Maintenance Programme (BMMP)](https://mohfw.gov.in/sites/default/files/BMMP%20Technical%20Manual.pdf).",
         ],
         column_headers=["Date", "Equipment (Unique Identifier)", "Type", "Task/Fault",
                          "Time-to-Attend / Spare Used", "Confirmed By"],
@@ -454,8 +460,8 @@ RECORDS = [
             ("Confirmed By", "Named biomedical lead or vendor."),
         ],
         verified_sources=[
-            "National Health Mission. Biomedical Equipment Management and "
-            "Maintenance Programme (BEMMP).",
+            "Ministry of Health & Family Welfare, Government of India. [Biomedical Equipment Management and "
+            "Maintenance Programme (BMMP)](https://mohfw.gov.in/sites/default/files/BMMP%20Technical%20Manual.pdf).",
         ],
         column_headers=["Date", "Equipment (Unique Identifier)", "Inspection or Calibration",
                          "Result", "Withdrawn Until Passed? (Y/N)", "Confirmed By"],
@@ -492,7 +498,8 @@ RECORDS = [
         ],
         verified_sources=[
             "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
-            "Standards for Small Healthcare Organisations (3rd ed.). Facility Management "
+            "Standards for Small Healthcare Organisations (3rd ed.). [NABH SHCO Accreditation "
+            "Programme page](https://nabh.co/programmes/small-healthcare-organisation-shco-accreditation-programme/). Facility Management "
             "and Safety chapter, standard FMS.3.",
         ],
         column_headers=["Staff Name/Role", "Equipment Class", "Operate or Maintain",
@@ -529,9 +536,9 @@ RECORDS = [
             ("Compliance Signed By", "Named person who signed compliance."),
         ],
         verified_sources=[
-            "Central Drugs Standard Control Organisation. Medical Devices and "
-            "Diagnostics.",
-            "Government of India. (2017). Medical Devices Rules, 2017, read with "
+            "Central Drugs Standard Control Organisation. [Medical Devices and "
+            "Diagnostics](https://cdsco.gov.in/opencms/opencms/en/Medical-Device-Diagnostics/).",
+            "Government of India. (2017). [Medical Devices Rules, 2017](https://cdsco.gov.in/opencms/resources/UploadCDSCOWeb/2022/m_device/mdr,%202017%20(1).pdf), read with "
             "the Drugs and Cosmetics Act, 1940.",
         ],
         column_headers=["Date", "Source", "Device/Batch Affected", "Inventory Searched? (Y/N)",
@@ -571,7 +578,8 @@ RECORDS = [
         ],
         verified_sources=[
             "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
-            "Standards for Small Healthcare Organisations (3rd ed.). Facility Management "
+            "Standards for Small Healthcare Organisations (3rd ed.). [NABH SHCO Accreditation "
+            "Programme page](https://nabh.co/programmes/small-healthcare-organisation-shco-accreditation-programme/). Facility Management "
             "and Safety chapter, standard FMS.3.",
         ],
         column_headers=["Equipment (Unique Identifier)", "Date/Time Reported",

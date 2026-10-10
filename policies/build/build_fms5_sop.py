@@ -28,16 +28,18 @@ OUT_ROOT = Path(__file__).parent / "sop_record_masters" / "FMS"
 
 FMS5_REFS = [
     "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
-    "Standards for Small Healthcare Organisations (3rd ed.). NABH SHCO Accreditation "
-    "Programme page. Facility Management and Safety chapter, standard FMS.5.",
-    "Bureau of Indian Standards. (2016). National Building Code of India, 2016. "
+    "Standards for Small Healthcare Organisations (3rd ed.). [NABH SHCO Accreditation "
+    "Programme page](https://nabh.co/programmes/small-healthcare-organisation-shco-accreditation-programme/). Facility Management and Safety chapter, standard FMS.5.",
+    "Bureau of Indian Standards. (2016). [National Building Code of India, 2016]"
+    "(https://bis.gov.in/others/national-building-code/). "
     "Fire and life-safety framework as the local fire authority has applied it to "
     "this occupancy; not a universal sprinkler or occupancy-subdivision mandate. "
     "IS 2190 is NBC-pointed portable-extinguisher practice, not an extra statute.",
-    "National Disaster Management Authority. (2016). National Disaster Management "
-    "Guidelines: Hospital Safety. Non-fire and hospital-continuity framework, not "
+    "National Disaster Management Authority. (2016). [National Disaster Management "
+    "Guidelines: Hospital Safety](https://nhsrcindia.org/sites/default/files/2021-05/Guidelines-Hospital-Safety.pdf). Non-fire and hospital-continuity framework, not "
     "an Act of Parliament.",
-    "World Health Organization. (2015). Hospital Safety Index: Guide for Evaluators "
+    "World Health Organization. (2015). [Hospital Safety Index: Guide for Evaluators]"
+    "(https://www.who.int/publications/i/item/9789241548984) "
     "(2nd ed.). Evaluator framework, not a mandated score.",
 ]
 
@@ -140,10 +142,10 @@ SOP = SOPSpec(
                 "it.",
             ],
             technical_sources=[
-                "Bureau of Indian Standards. (2016). National Building Code of "
-                "India, 2016.",
-                "National Disaster Management Authority. (2016). National "
-                "Disaster Management Guidelines: Hospital Safety.",
+                "Bureau of Indian Standards. (2016). [National Building Code of "
+                "India, 2016](https://bis.gov.in/others/national-building-code/).",
+                "National Disaster Management Authority. (2016). [National "
+                "Disaster Management Guidelines: Hospital Safety](https://nhsrcindia.org/sites/default/files/2021-05/Guidelines-Hospital-Safety.pdf).",
             ],
         ),
         ProcedureBlock(
@@ -252,8 +254,8 @@ SOP = SOPSpec(
                 "continuity annex.",
             ],
             technical_sources=[
-                "National Disaster Management Authority. (2016). National "
-                "Disaster Management Guidelines: Hospital Safety.",
+                "National Disaster Management Authority. (2016). [National "
+                "Disaster Management Guidelines: Hospital Safety](https://nhsrcindia.org/sites/default/files/2021-05/Guidelines-Hospital-Safety.pdf).",
             ],
         ),
     ],
@@ -306,7 +308,7 @@ RECORDS = [
             ("Confirmed By", "Named fire/facilities lead."),
         ],
         verified_sources=[
-            "Bureau of Indian Standards. (2016). National Building Code of India, 2016.",
+            "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/).",
         ],
         column_headers=["Date of Check", "Area/Compartment", "Provision Type",
                          "Present and Matches Plan? (Y/N)", "Fire or Named Non-Fire Event", "Confirmed By"],
@@ -343,7 +345,8 @@ RECORDS = [
         ],
         verified_sources=[
             "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
-            "Standards for Small Healthcare Organisations (3rd ed.). Facility Management "
+            "Standards for Small Healthcare Organisations (3rd ed.). [NABH SHCO Accreditation "
+            "Programme page](https://nabh.co/programmes/small-healthcare-organisation-shco-accreditation-programme/). Facility Management "
             "and Safety chapter, standard FMS.5.",
         ],
         column_headers=["Date of Inspection", "Location", "Matches Current FMS.1.b Drawings? (Y/N)",
@@ -381,7 +384,8 @@ RECORDS = [
         ],
         verified_sources=[
             "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
-            "Standards for Small Healthcare Organisations (3rd ed.). Facility Management "
+            "Standards for Small Healthcare Organisations (3rd ed.). [NABH SHCO Accreditation "
+            "Programme page](https://nabh.co/programmes/small-healthcare-organisation-shco-accreditation-programme/). Facility Management "
             "and Safety chapter, standard FMS.5.",
         ],
         column_headers=["Date of Drill", "Fire or Named Non-Fire Event", "Shift/Staff Involved",
@@ -421,8 +425,8 @@ RECORDS = [
             ("Confirmed By", "Named in-house or AMC attendee."),
         ],
         verified_sources=[
-            "Bureau of Indian Standards. (2016). National Building Code of India, "
-            "2016 (IS 2190 portable-extinguisher practice).",
+            "Bureau of Indian Standards. (2016). [National Building Code of India, "
+            "2016](https://bis.gov.in/others/national-building-code/) (IS 2190 portable-extinguisher practice).",
         ],
         column_headers=["Date", "Equipment/Infrastructure", "Task", "Result",
                          "Isolated/Compensating Provision Until Restored? (Y/N)", "Confirmed By"],
@@ -461,8 +465,8 @@ RECORDS = [
             ("Confirmed By", "Named clinical head or fire/facilities lead."),
         ],
         verified_sources=[
-            "National Disaster Management Authority. (2016). National Disaster "
-            "Management Guidelines: Hospital Safety.",
+            "National Disaster Management Authority. (2016). [National Disaster "
+            "Management Guidelines: Hospital Safety](https://nhsrcindia.org/sites/default/files/2021-05/Guidelines-Hospital-Safety.pdf).",
         ],
         column_headers=["Service (per AAC.1)", "Continue/Pause/Divert Plan", "Backup Dependency",
                          "Decision-Maker", "Activated? (Y/N) and Date", "Confirmed By"],

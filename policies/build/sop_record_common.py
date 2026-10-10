@@ -16,14 +16,74 @@ them -- see policies/build/verify_sop_record_template.py.
 """
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
 from docx import Document
+from docx.opc.constants import RELATIONSHIP_TYPE as RT
 from docx.oxml.ns import qn
+from docx.oxml.shared import OxmlElement
 from docx.shared import Pt
 
 WORKED_EXAMPLE_FILL = "FFF2CC"
+
+# Source strings may embed a real, verified URL as a Markdown-style link:
+#   "...(2016). [National Building Code of India, 2016](https://example.gov.in/...)."
+# _render_source_text() below turns the bracketed span into an actual
+# clickable w:hyperlink run (same OOXML AAC/COP/ROM/HRM already use) and
+# leaves the rest of the string as plain text. A source with no [..](..)
+# renders as plain text, same as before -- this is additive, not a format
+# change to every existing call site.
+_LINK_RE = re.compile(r"\[([^\]]+)\]\((https?://[^\s)]+)\)")
+
+
+def add_hyperlink(paragraph, text: str, url: str):
+    """Append a real, clickable external hyperlink run to `paragraph`.
+
+    Mirrors the w:hyperlink + externally-related r:id structure already
+    present in every AAC/COP/ROM/HRM source citation (verified by
+    inspecting their word/_rels/document.xml.rels) -- this is not a new
+    format, just the first time this shared module does it.
+    """
+    part = paragraph.part
+    r_id = part.relate_to(url, RT.HYPERLINK, is_external=True)
+
+    hyperlink = OxmlElement("w:hyperlink")
+    hyperlink.set(qn("r:id"), r_id)
+
+    new_run = OxmlElement("w:r")
+    rPr = OxmlElement("w:rPr")
+    color = OxmlElement("w:color")
+    color.set(qn("w:val"), "0563C1")
+    rPr.append(color)
+    u = OxmlElement("w:u")
+    u.set(qn("w:val"), "single")
+    rPr.append(u)
+    new_run.append(rPr)
+
+    t = OxmlElement("w:t")
+    t.text = text
+    new_run.append(t)
+    hyperlink.append(new_run)
+
+    paragraph._p.append(hyperlink)
+    return hyperlink
+
+
+def _render_source_text(paragraph, raw_text: str) -> None:
+    """Write raw_text into paragraph, converting any [label](url) span into
+    a real clickable hyperlink run and everything else into plain text."""
+    pos = 0
+    for m in _LINK_RE.finditer(raw_text):
+        before = raw_text[pos:m.start()]
+        if before:
+            paragraph.add_run(before)
+        add_hyperlink(paragraph, m.group(1), m.group(2))
+        pos = m.end()
+    tail = raw_text[pos:]
+    if tail or pos == 0:
+        paragraph.add_run(tail)
 
 
 def _shade_row(row, fill: str = WORKED_EXAMPLE_FILL) -> None:
@@ -119,7 +179,9 @@ def build_sop(spec: SOPSpec, out_path: Path) -> None:
         if block.technical_sources:
             doc.add_paragraph("Technical source(s) for these steps: ")
             for src in block.technical_sources:
-                doc.add_paragraph(f"• {src}", style="List Paragraph")
+                p = doc.add_paragraph(style="List Paragraph")
+                p.add_run("• ")
+                _render_source_text(p, src)
 
     doc.add_heading("5. Records", level=1)
     doc.add_paragraph(spec.records_note)
@@ -130,7 +192,9 @@ def build_sop(spec: SOPSpec, out_path: Path) -> None:
 
     doc.add_heading("7. Where This SOP's Requirements Come From (Verified Sources)", level=1)
     for src in spec.verified_sources:
-        doc.add_paragraph(f"• {src}", style="List Paragraph")
+        p = doc.add_paragraph(style="List Paragraph")
+        p.add_run("• ")
+        _render_source_text(p, src)
 
     doc.add_heading("8. Review", level=1)
     doc.add_paragraph(spec.review_text)
@@ -183,7 +247,9 @@ def build_record(spec: RecordSpec, out_path: Path) -> None:
 
     doc.add_paragraph("Where this requirement comes from (verified, clickable sources)")
     for src in spec.verified_sources:
-        doc.add_paragraph(f"• {src}", style="List Paragraph")
+        p = doc.add_paragraph(style="List Paragraph")
+        p.add_run("• ")
+        _render_source_text(p, src)
     doc.add_paragraph("")
     doc.add_paragraph("")
     doc.add_paragraph("")

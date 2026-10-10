@@ -31,27 +31,31 @@ OUT_ROOT = Path(__file__).parent / "sop_record_masters" / "FMS"
 
 FMS2_REFS = [
     "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
-    "Standards for Small Healthcare Organisations (3rd ed.). NABH SHCO Accreditation "
-    "Programme page. Facility Management and Safety chapter, standard FMS.2.",
-    "Bureau of Indian Standards. (2016). National Building Code of India, 2016. "
+    "Standards for Small Healthcare Organisations (3rd ed.). [NABH SHCO Accreditation "
+    "Programme page](https://nabh.co/programmes/small-healthcare-organisation-shco-accreditation-programme/). Facility Management and Safety chapter, standard FMS.2.",
+    "Bureau of Indian Standards. (2016). [National Building Code of India, 2016]"
+    "(https://bis.gov.in/others/national-building-code/). "
     "Building, access and electrical-installation framework as the local authority "
     "has applied it; IS 732, IS 3043 and IS 2190 are NBC-pointed practice, not extra "
     "statutes.",
-    "Gudlavalleti, V. S. (2018). Challenges in Accessing Health Care for People with "
-    "Disability in the South Asian Context: A Review. International Journal of "
+    "Gudlavalleti, V. S. (2018). [Challenges in Accessing Health Care for People with "
+    "Disability in the South Asian Context: A Review](https://www.mdpi.com/1660-4601/15/11/2366). International Journal of "
     "Environmental Research and Public Health, 15(11), 2366. Disability-access "
     "framework.",
-    "World Health Organization. (2014). Safe Management of Wastes from Health-Care "
-    "Activities (2nd ed.). Waste framework only; BMW colour-coding and SPCB handover "
+    "World Health Organization. (2014). [Safe Management of Wastes from Health-Care "
+    "Activities](https://www.who.int/publications-detail-redirect/9789241548564) (2nd ed.). Waste framework only; BMW colour-coding and SPCB handover "
     "remain HIC.3.",
-    "World Health Organization. (2015). Hospital Safety Index: Guide for Evaluators "
+    "World Health Organization. (2015). [Hospital Safety Index: Guide for Evaluators]"
+    "(https://www.who.int/publications/i/item/9789241548984) "
     "(2nd ed.). Evaluator framework, not a mandated score.",
     "Aggarwal, R., Mytton, O. T., Derbrew, M., Hananel, D., Heydenburg, M., Issenberg, "
     "B., MacAulay, C., Mancini, M. E., Morimoto, T., Soper, N., Ziv, A., & Reznick, R. "
-    "(2010). Training and simulation for patient safety. Quality and Safety in Health "
+    "(2010). [Training and simulation for patient safety](https://qualitysafety.bmj.com/content/19/Suppl_2/i34). Quality and Safety in Health "
     "Care, 19(Suppl 2), i34-i43. Infrastructure-and-safety framework.",
-    "Infrastructures to improve patient safety. (2015). Health Facilities Management. "
-    "Framework reference only.",
+    "American Society for Health Care Engineering. (2015). "
+    "[Infrastructures to improve patient safety]"
+    "(https://www.hfmmagazine.com/articles/1827-infrastructures-to-improve-patient-safety). "
+    "Health Facilities Management. Framework reference only.",
 ]
 
 SOP = SOPSpec(
@@ -142,10 +146,10 @@ SOP = SOPSpec(
                 "at the bedside; this step owns that the hardware exists and works.",
             ],
             technical_sources=[
-                "Bureau of Indian Standards. (2016). National Building Code of India, 2016.",
-                "Aggarwal, R., et al. (2010). Training and simulation for patient safety. "
+                "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/).",
+                "Aggarwal, R., et al. (2010). [Training and simulation for patient safety](https://qualitysafety.bmj.com/content/19/Suppl_2/i34). "
                 "Quality and Safety in Health Care, 19(Suppl 2), i34-i43.",
-                "Infrastructures to improve patient safety. (2015). Health Facilities "
+                "American Society for Health Care Engineering. (2015). [Infrastructures to improve patient safety](https://www.hfmmagazine.com/articles/1827-infrastructures-to-improve-patient-safety). Health Facilities "
                 "Management.",
             ],
         ),
@@ -169,11 +173,11 @@ SOP = SOPSpec(
                 "universal door-width or gradient figure for every SHCO.",
             ],
             technical_sources=[
-                "Gudlavalleti, V. S. (2018). Challenges in Accessing Health Care for "
-                "People with Disability in the South Asian Context: A Review. "
+                "Gudlavalleti, V. S. (2018). [Challenges in Accessing Health Care for "
+                "People with Disability in the South Asian Context: A Review](https://www.mdpi.com/1660-4601/15/11/2366). "
                 "International Journal of Environmental Research and Public Health, "
                 "15(11), 2366.",
-                "Bureau of Indian Standards. (2016). National Building Code of India, 2016.",
+                "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/).",
             ],
         ),
         ProcedureBlock(
@@ -248,8 +252,8 @@ SOP = SOPSpec(
                 "circuit is this audit's concern.",
             ],
             technical_sources=[
-                "Bureau of Indian Standards. (2016). National Building Code of India, "
-                "2016 (as the framework pointing to IS 732 wiring practice and IS 3043 "
+                "Bureau of Indian Standards. (2016). [National Building Code of India, "
+                "2016](https://bis.gov.in/others/national-building-code/) (as the framework pointing to IS 732 wiring practice and IS 3043 "
                 "earthing).",
             ],
         ),
@@ -283,8 +287,8 @@ SOP = SOPSpec(
                 "OE, not a work-in-progress.",
             ],
             technical_sources=[
-                "World Health Organization. (2014). Safe Management of Wastes from "
-                "Health-Care Activities (2nd ed.). Waste framework only; BMW colour-"
+                "World Health Organization. (2014). [Safe Management of Wastes from "
+                "Health-Care Activities](https://www.who.int/publications-detail-redirect/9789241548564) (2nd ed.). Waste framework only; BMW colour-"
                 "coding and SPCB handover remain HIC.3.",
             ],
         ),
@@ -318,7 +322,7 @@ SOP = SOPSpec(
                 "chemical list counted twice.",
             ],
             technical_sources=[
-                "Bureau of Indian Standards. (2016). National Building Code of India, 2016.",
+                "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/).",
             ],
         ),
     ],
@@ -372,7 +376,8 @@ RECORDS = [
         ],
         verified_sources=[
             "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
-            "Standards for Small Healthcare Organisations (3rd ed.). Facility Management "
+            "Standards for Small Healthcare Organisations (3rd ed.). [NABH SHCO Accreditation "
+            "Programme page](https://nabh.co/programmes/small-healthcare-organisation-shco-accreditation-programme/). Facility Management "
             "and Safety chapter, standard FMS.2.",
         ],
         column_headers=["Date of Inspection", "Device/Area", "Working? (Y/N)",
@@ -409,8 +414,8 @@ RECORDS = [
             ("Confirmed By", "Named facilities lead."),
         ],
         verified_sources=[
-            "Gudlavalleti, V. S. (2018). Challenges in Accessing Health Care for "
-            "People with Disability in the South Asian Context: A Review. "
+            "Gudlavalleti, V. S. (2018). [Challenges in Accessing Health Care for "
+            "People with Disability in the South Asian Context: A Review](https://www.mdpi.com/1660-4601/15/11/2366). "
             "International Journal of Environmental Research and Public Health, "
             "15(11), 2366.",
         ],
@@ -454,7 +459,8 @@ RECORDS = [
         ],
         verified_sources=[
             "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
-            "Standards for Small Healthcare Organisations (3rd ed.). Facility Management "
+            "Standards for Small Healthcare Organisations (3rd ed.). [NABH SHCO Accreditation "
+            "Programme page](https://nabh.co/programmes/small-healthcare-organisation-shco-accreditation-programme/). Facility Management "
             "and Safety chapter, standard FMS.2.",
         ],
         column_headers=["Area", "Access Control", "Who May Enter", "Last Reviewed",
@@ -492,7 +498,8 @@ RECORDS = [
         ],
         verified_sources=[
             "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
-            "Standards for Small Healthcare Organisations (3rd ed.). Facility Management "
+            "Standards for Small Healthcare Organisations (3rd ed.). [NABH SHCO Accreditation "
+            "Programme page](https://nabh.co/programmes/small-healthcare-organisation-shco-accreditation-programme/). Facility Management "
             "and Safety chapter, standard FMS.2.",
         ],
         column_headers=["Month/Date of Round", "Areas Walked (Circuit)", "Findings",
@@ -532,8 +539,8 @@ RECORDS = [
             ("Confirmed By", "Named facilities lead."),
         ],
         verified_sources=[
-            "Bureau of Indian Standards. (2016). National Building Code of India, "
-            "2016 (as the framework pointing to IS 732 wiring practice and IS 3043 "
+            "Bureau of Indian Standards. (2016). [National Building Code of India, "
+            "2016](https://bis.gov.in/others/national-building-code/) (as the framework pointing to IS 732 wiring practice and IS 3043 "
             "earthing).",
         ],
         column_headers=["Date of Audit", "Auditor", "Scope Covered", "Fault Found",
@@ -574,8 +581,8 @@ RECORDS = [
             ("Confirmed By", "Named facilities lead."),
         ],
         verified_sources=[
-            "World Health Organization. (2014). Safe Management of Wastes from "
-            "Health-Care Activities (2nd ed.). Waste framework only; BMW colour-"
+            "World Health Organization. (2014). [Safe Management of Wastes from "
+            "Health-Care Activities](https://www.who.int/publications-detail-redirect/9789241548564) (2nd ed.). Waste framework only; BMW colour-"
             "coding and SPCB handover remain HIC.3.",
         ],
         column_headers=["Date Identified", "Item", "Tag/Location/Owner",
@@ -618,7 +625,7 @@ RECORDS = [
             ("Confirmed By", "Named facilities lead."),
         ],
         verified_sources=[
-            "Bureau of Indian Standards. (2016). National Building Code of India, 2016.",
+            "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/).",
         ],
         column_headers=["Material", "Location", "Labelled and Segregated? (Y/N)",
                          "PPE Required", "Spill Method Reference", "Confirmed By"],

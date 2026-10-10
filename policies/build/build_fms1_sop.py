@@ -15,7 +15,7 @@ language: the approved FMS.1 master policy's procedure_steps / references_text
 staff-facing restatement of what the hospital's own approved policy already
 says, which is the same relationship SOP_COP.13 has to the approved COP.13
 master. No new citation is introduced here beyond what FMS.1 already cites:
-NBC 2016, WHO GDWQ 4th ed., Coulliette & Arduino (2015), Dhillon (2015),
+NBC 2016, WHO GDWQ 4th ed., Coulliette & Arduino (2013), Dhillon & Kaur (2015),
 IPHS 2022.
 """
 from __future__ import annotations
@@ -28,20 +28,20 @@ OUT_ROOT = Path(__file__).parent / "sop_record_masters" / "FMS"
 
 FMS1_REFS = [
     "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
-    "Standards for Small Healthcare Organisations (3rd ed.). NABH SHCO Accreditation "
-    "Programme page. Facility Management and Safety chapter, standard FMS.1.",
-    "Bureau of Indian Standards. (2016). National Building Code of India, 2016. "
+    "Standards for Small Healthcare Organisations (3rd ed.). [NABH SHCO Accreditation "
+    "Programme page](https://nabh.co/programmes/small-healthcare-organisation-shco-accreditation-programme/). Facility Management and Safety chapter, standard FMS.1.",
+    "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/). "
     "Occupancy, means-of-egress and services-drawing framework as applied by the "
     "local building and fire authority; not a universal mandate.",
-    "World Health Organization. (2011). Guidelines for Drinking-water Quality (4th ed.). "
+    "World Health Organization. (2011). [Guidelines for Drinking-water Quality (4th ed.)](https://www.who.int/publications/i/item/9789241548151). "
     "Potable-water quality-testing framework, not a pasted protocol or a NABH interval.",
-    "Coulliette, A. D., & Arduino, M. J. (2015). Hemodialysis and water quality. "
+    "Coulliette, A. D., & Arduino, M. J. (2013). [Hemodialysis and water quality](https://stacks.cdc.gov/view/cdc/34845/cdc_34845_DS1.pdf). "
     "Seminars in Dialysis, 26(4), 427-438. Dialysis-water framework, used only where "
     "dialysis is a service this hospital provides.",
-    "Dhillon, V. S. (2015). Green hospital and climate change: Their interrelationship "
-    "and the way forward. Journal of Clinical and Diagnostic Research. Energy-efficiency "
+    "Dhillon, V. S., & Kaur, D. (2015). [Green hospital and climate change: Their interrelationship "
+    "and the way forward](https://www.jcdr.net/ReadXMLFile.aspx?id=6942). Journal of Clinical and Diagnostic Research. Energy-efficiency "
     "framework, not a named green-building rating mandate.",
-    "National Health Mission. (2022). Indian Public Health Standards. Space-planning "
+    "National Health Mission. (2022). [Indian Public Health Standards](https://nhsrcindia.org/sites/default/files/CHC%20IPHS%202022%20Guidelines%20pdf.pdf). Space-planning "
     "framework, not a NABH bed-count mandate.",
 ]
 
@@ -130,8 +130,8 @@ SOP = SOPSpec(
                 "as step 2.",
             ],
             technical_sources=[
-                "National Health Mission. (2022). Indian Public Health Standards.",
-                "Bureau of Indian Standards. (2016). National Building Code of India, 2016.",
+                "National Health Mission. (2022). [Indian Public Health Standards](https://nhsrcindia.org/sites/default/files/CHC%20IPHS%202022%20Guidelines%20pdf.pdf).",
+                "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/).",
             ],
         ),
         ProcedureBlock(
@@ -155,7 +155,7 @@ SOP = SOPSpec(
                 "of specific sheets, not second masters of this record.",
             ],
             technical_sources=[
-                "Bureau of Indian Standards. (2016). National Building Code of India, 2016.",
+                "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/).",
             ],
         ),
         ProcedureBlock(
@@ -193,7 +193,7 @@ SOP = SOPSpec(
                 "points and interval», using WHO GDWQ 4th edition as the testing framework "
                 "-- never as a pasted protocol or an invented NABH interval.",
                 "3. Dialysis water, only where dialysis is in the AAC.1 directory, follows "
-                "«Hospital to define» using Coulliette & Arduino (2015) as the haemodialysis-"
+                "«Hospital to define» using Coulliette & Arduino (2013) as the haemodialysis-"
                 "water framework; where dialysis is not provided, that is a recorded absence.",
                 "4. Essential clinical and life-safety circuits -- at minimum emergency, OT, "
                 "labour, ICU/HDU, nursery and blood bank where present, ventilators and their "
@@ -204,8 +204,8 @@ SOP = SOPSpec(
                 "daytime checks.",
             ],
             technical_sources=[
-                "World Health Organization. (2011). Guidelines for Drinking-water Quality (4th ed.).",
-                "Coulliette, A. D., & Arduino, M. J. (2015). Hemodialysis and water quality. "
+                "World Health Organization. (2011). [Guidelines for Drinking-water Quality (4th ed.)](https://www.who.int/publications/i/item/9789241548151).",
+                "Coulliette, A. D., & Arduino, M. J. (2013). [Hemodialysis and water quality](https://stacks.cdc.gov/view/cdc/34845/cdc_34845_DS1.pdf). "
                 "Seminars in Dialysis, 26(4), 427-438.",
             ],
         ),
@@ -238,7 +238,7 @@ SOP = SOPSpec(
                 "response itself.",
             ],
             technical_sources=[
-                "Bureau of Indian Standards. (2016). National Building Code of India, 2016 "
+                "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/) "
                 "(as the framework pointing to IS 732 wiring practice and IS 3043 earthing).",
             ],
         ),
@@ -272,8 +272,8 @@ SOP = SOPSpec(
                 "result is what the audit at step 7 of this SOP looks for.",
             ],
             technical_sources=[
-                "Dhillon, V. S. (2015). Green hospital and climate change: Their "
-                "interrelationship and the way forward. Journal of Clinical and "
+                "Dhillon, V. S., & Kaur, D. (2015). [Green hospital and climate change: Their "
+                "interrelationship and the way forward](https://www.jcdr.net/ReadXMLFile.aspx?id=6942). Journal of Clinical and "
                 "Diagnostic Research.",
             ],
         ),
@@ -329,7 +329,8 @@ RECORDS = [
         ],
         verified_sources=[
             "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
-            "Standards for Small Healthcare Organisations (3rd ed.). Facility Management "
+            "Standards for Small Healthcare Organisations (3rd ed.). [NABH SHCO Accreditation "
+            "Programme page](https://nabh.co/programmes/small-healthcare-organisation-shco-accreditation-programme/). Facility Management "
             "and Safety chapter, standard FMS.1.",
         ],
         column_headers=["Date of Review", "Service (per AAC.1)", "Matching Built Space",
@@ -366,7 +367,7 @@ RECORDS = [
             ("Confirmed By", "Named facilities lead holding the controlled set."),
         ],
         verified_sources=[
-            "Bureau of Indian Standards. (2016). National Building Code of India, 2016.",
+            "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/).",
         ],
         column_headers=["Date of Change", "Drawing Type", "Change Described",
                          "Updated to As-Built? (Y/N)", "Date Drawing Updated", "Confirmed By"],
@@ -406,7 +407,8 @@ RECORDS = [
         ],
         verified_sources=[
             "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
-            "Standards for Small Healthcare Organisations (3rd ed.). Facility Management "
+            "Standards for Small Healthcare Organisations (3rd ed.). [NABH SHCO Accreditation "
+            "Programme page](https://nabh.co/programmes/small-healthcare-organisation-shco-accreditation-programme/). Facility Management "
             "and Safety chapter, standard FMS.1.",
         ],
         column_headers=["Date of Inspection", "Area/Sign Inspected", "Legible and Understood? (Y/N)",
@@ -444,8 +446,8 @@ RECORDS = [
             ("Confirmed By", "Named engineering lead."),
         ],
         verified_sources=[
-            "World Health Organization. (2011). Guidelines for Drinking-water Quality (4th ed.).",
-            "Coulliette, A. D., & Arduino, M. J. (2015). Hemodialysis and water quality. "
+            "World Health Organization. (2011). [Guidelines for Drinking-water Quality (4th ed.)](https://www.who.int/publications/i/item/9789241548151).",
+            "Coulliette, A. D., & Arduino, M. J. (2013). [Hemodialysis and water quality](https://stacks.cdc.gov/view/cdc/34845/cdc_34845_DS1.pdf). "
             "Seminars in Dialysis, 26(4), 427-438.",
         ],
         column_headers=["Date/Time of Check", "Point of Use/Circuit", "Available? (Y/N)",
@@ -486,7 +488,7 @@ RECORDS = [
             ("Confirmed By", "Named engineering lead present at the test."),
         ],
         verified_sources=[
-            "Bureau of Indian Standards. (2016). National Building Code of India, 2016.",
+            "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/).",
         ],
         column_headers=["Date of Test", "Source Tested", "Test Type", "Result (Pass/Fail)",
                          "Fault/Observation", "Confirmed By"],
@@ -525,8 +527,8 @@ RECORDS = [
             ("Confirmed By", "Quality/Accreditation Coordinator or named owner."),
         ],
         verified_sources=[
-            "Dhillon, V. S. (2015). Green hospital and climate change: Their "
-            "interrelationship and the way forward. Journal of Clinical and "
+            "Dhillon, V. S., & Kaur, D. (2015). [Green hospital and climate change: Their "
+            "interrelationship and the way forward](https://www.jcdr.net/ReadXMLFile.aspx?id=6942). Journal of Clinical and "
             "Diagnostic Research.",
         ],
         column_headers=["Initiative", "Named Owner", "Baseline", "Result", "Review Date", "Confirmed By"],

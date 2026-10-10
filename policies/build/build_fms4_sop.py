@@ -30,27 +30,31 @@ OUT_ROOT = Path(__file__).parent / "sop_record_masters" / "FMS"
 
 FMS4_REFS = [
     "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
-    "Standards for Small Healthcare Organisations (3rd ed.). NABH SHCO Accreditation "
-    "Programme page. Facility Management and Safety chapter, standard FMS.4.",
-    "British Compressed Gases Association. Medical Gases. Handling framework.",
-    "British Standards Institution. (2014). Respiratory equipment — Compressed "
-    "gases for breathing apparatus (BS EN 12021:2014). Medical-air quality "
+    "Standards for Small Healthcare Organisations (3rd ed.). [NABH SHCO Accreditation "
+    "Programme page](https://nabh.co/programmes/small-healthcare-organisation-shco-accreditation-programme/). Facility Management and Safety chapter, standard FMS.4.",
+    "British Compressed Gases Association. [Medical Gases guidance notes]"
+    "(https://bcga.co.uk/pubcat/guidance-notes/). Handling framework.",
+    "British Standards Institution. (2014). [Respiratory equipment — Compressed "
+    "gases for breathing apparatus (BS EN 12021:2014)]"
+    "(https://knowledge.bsigroup.com/products/respiratory-equipment-compressed-gases-for-breathing-apparatus-2). Medical-air quality "
     "framework where medical air is supplied.",
-    "Department of Health, Estates and Facilities Division. (2006). Medical Gas "
-    "Pipeline Systems (HTM). Piped-system inspection/test/maintenance framework, "
+    "Department of Health, Estates and Facilities Division. (2006). [Medical Gas "
+    "Pipeline Systems (HTM 02-01)]"
+    "(https://www.england.nhs.uk/wp-content/uploads/2021/05/HTM_02-01_Part_A.pdf). Piped-system inspection/test/maintenance framework, "
     "not a UK certificate mandate.",
-    "International Organization for Standardization. (2018-2019). Pressure "
-    "regulators for use with medical gases (ISO 10524-1:2018, ISO 10524-2:2018, "
+    "International Organization for Standardization. (2018-2019). [Pressure "
+    "regulators for use with medical gases]"
+    "(https://www.iso.org/standard/67190.html) (ISO 10524-1:2018, ISO 10524-2:2018, "
     "ISO 10524-3:2019). Regulator frameworks.",
-    "Hart, J. R. (2018). Medical Gas and Vacuum Systems Handbook. National Fire "
-    "Protection Association. Framework reference.",
-    "National Fire Protection Association. (2018). Medical Gas Cylinder Storage. "
-    "Cylinder-storage framework, not a NABH cubic-metre mandate.",
-    "Sarangi, S., Babbar, S., & Taneja, D. (2018). Safety of the medical gas "
-    "pipeline system. Journal of Anaesthesiology Clinical Pharmacology, 34(1), "
+    "National Fire Protection Association. Medical Gas and Vacuum Systems "
+    "Installation Handbook. Framework reference; author not independently "
+    "verifiable, cited to the publisher only.",
+    "Chrisman, M. (ASHE Management Monograph). [Medical Gas Cylinder and Bulk "
+    "Tank Storage](https://ashe.org/tankstorage?page=45), summarizing NFPA 99/101 "
+    "cylinder-storage requirements, not a NABH cubic-metre mandate.",
+    "Sarangi, S., Babbar, S., & Taneja, D. (2018). [Safety of the medical gas "
+    "pipeline system](https://doi.org/10.4103/joacp.JOACP_274_16). Journal of Anaesthesiology Clinical Pharmacology, 34(1), "
     "99-102.",
-    "BOC. (2017). Handle Medical Gases Safely. Handling framework, not this "
-    "hospital's SOP.",
 ]
 
 SOP = SOPSpec(
@@ -141,10 +145,11 @@ SOP = SOPSpec(
                 "both.",
             ],
             technical_sources=[
-                "British Compressed Gases Association. Medical Gases.",
-                "BOC. (2017). Handle Medical Gases Safely.",
-                "National Fire Protection Association. (2018). Medical Gas "
-                "Cylinder Storage.",
+                "British Compressed Gases Association. [Medical Gases guidance notes]"
+                "(https://bcga.co.uk/pubcat/guidance-notes/).",
+                "Chrisman, M. (ASHE Management Monograph). [Medical Gas Cylinder and "
+                "Bulk Tank Storage](https://ashe.org/tankstorage?page=45), "
+                "summarizing NFPA 99/101 requirements.",
             ],
         ),
         ProcedureBlock(
@@ -207,9 +212,9 @@ SOP = SOPSpec(
             ],
             technical_sources=[
                 "Department of Health, Estates and Facilities Division. (2006). "
-                "Medical Gas Pipeline Systems (HTM).",
-                "Sarangi, S., Babbar, S., & Taneja, D. (2018). Safety of the "
-                "medical gas pipeline system. Journal of Anaesthesiology Clinical "
+                "[Medical Gas Pipeline Systems (HTM 02-01)](https://www.england.nhs.uk/wp-content/uploads/2021/05/HTM_02-01_Part_A.pdf).",
+                "Sarangi, S., Babbar, S., & Taneja, D. (2018). [Safety of the "
+                "medical gas pipeline system](https://doi.org/10.4103/joacp.JOACP_274_16). Journal of Anaesthesiology Clinical "
                 "Pharmacology, 34(1), 99-102.",
             ],
         ),
@@ -243,13 +248,13 @@ SOP = SOPSpec(
             ],
             technical_sources=[
                 "Department of Health, Estates and Facilities Division. (2006). "
-                "Medical Gas Pipeline Systems (HTM).",
-                "British Standards Institution. (2014). Respiratory equipment — "
-                "Compressed gases for breathing apparatus (BS EN 12021:2014).",
-                "International Organization for Standardization. (2018). Pressure "
-                "regulators for use with medical gases (ISO 10524-2:2018).",
-                "Hart, J. R. (2018). Medical Gas and Vacuum Systems Handbook. "
-                "National Fire Protection Association.",
+                "[Medical Gas Pipeline Systems (HTM 02-01)](https://www.england.nhs.uk/wp-content/uploads/2021/05/HTM_02-01_Part_A.pdf).",
+                "British Standards Institution. (2014). [Respiratory equipment — "
+                "Compressed gases for breathing apparatus (BS EN 12021:2014)](https://knowledge.bsigroup.com/products/respiratory-equipment-compressed-gases-for-breathing-apparatus-2).",
+                "International Organization for Standardization. (2018). [Pressure "
+                "regulators for use with medical gases (ISO 10524-2:2018)](https://www.iso.org/standard/67190.html).",
+                "National Fire Protection Association. Medical Gas and Vacuum Systems "
+                "Installation Handbook.",
             ],
         ),
     ],
@@ -302,7 +307,7 @@ RECORDS = [
             ("Confirmed By", "Named engineering/gas-plant lead."),
         ],
         verified_sources=[
-            "British Compressed Gases Association. Medical Gases.",
+            "British Compressed Gases Association. [Medical Gases guidance notes](https://bcga.co.uk/pubcat/guidance-notes/).",
         ],
         column_headers=["Date", "Gas", "Act Covered", "Guidance Followed? (Y/N)",
                          "Checks Performed", "Confirmed By"],
@@ -337,8 +342,9 @@ RECORDS = [
             ("Confirmed By", "Named engineering lead or clinical user."),
         ],
         verified_sources=[
-            "National Fire Protection Association. (2018). Medical Gas Cylinder "
-            "Storage.",
+            "Chrisman, M. (ASHE Management Monograph). [Medical Gas Cylinder and "
+            "Bulk Tank Storage](https://ashe.org/tankstorage?page=45), "
+            "summarizing NFPA 99/101 requirements.",
         ],
         column_headers=["Date of Check", "Location", "Full/Empty Segregated? (Y/N)",
                          "Identity Check at Use Performed? (Y/N)", "Defect Found", "Confirmed By"],
@@ -375,7 +381,7 @@ RECORDS = [
         ],
         verified_sources=[
             "Department of Health, Estates and Facilities Division. (2006). "
-            "Medical Gas Pipeline Systems (HTM).",
+            "[Medical Gas Pipeline Systems (HTM 02-01)](https://www.england.nhs.uk/wp-content/uploads/2021/05/HTM_02-01_Part_A.pdf).",
         ],
         column_headers=["Date of Test", "Source Tested", "Point of Use Tested",
                          "Result (Pass/Fail)", "Fault/Observation", "Confirmed By"],
@@ -414,9 +420,9 @@ RECORDS = [
         ],
         verified_sources=[
             "Department of Health, Estates and Facilities Division. (2006). "
-            "Medical Gas Pipeline Systems (HTM).",
-            "International Organization for Standardization. (2018). Pressure "
-            "regulators for use with medical gases (ISO 10524-2:2018).",
+            "[Medical Gas Pipeline Systems (HTM 02-01)](https://www.england.nhs.uk/wp-content/uploads/2021/05/HTM_02-01_Part_A.pdf).",
+            "International Organization for Standardization. (2018). [Pressure "
+            "regulators for use with medical gases (ISO 10524-2:2018)](https://www.iso.org/standard/67190.html).",
         ],
         column_headers=["Date", "Piped MGPS Present? (Y/N)", "Activity", "Area/Plant Covered",
                          "Result", "Confirmed By"],
