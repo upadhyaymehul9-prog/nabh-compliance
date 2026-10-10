@@ -216,5 +216,39 @@
     "standard_code": "HRM.3",
     "record_index": 7,
     "title": "Record 7 — QI programme training and participation record"
+  },
+  {
+    "file": "SOP_HRM.5.a_to_d_staff_wellbeing_occupational_health.docx",
+    "document_type": "sop",
+    "standard_code": "HRM.5",
+    "title": "SOP — Staff Well-Being and Occupational Health (HRM.5.a-d)"
+  },
+  {
+    "file": "Records/HRM.5_Record_01_occupational_health_hazard_register.docx",
+    "document_type": "record",
+    "standard_code": "HRM.5",
+    "record_index": 1,
+    "title": "Record 1 — Occupational health hazard register"
+  },
+  {
+    "file": "Records/HRM.5_Record_02_annual_health_check_form.docx",
+    "document_type": "record",
+    "standard_code": "HRM.5",
+    "record_index": 2,
+    "title": "Record 2 — Annual health check form and schedule"
+  },
+  {
+    "file": "Records/HRM.5_Record_03_workplace_injury_treatment_log.docx",
+    "document_type": "record",
+    "standard_code": "HRM.5",
+    "record_index": 3,
+    "title": "Record 3 — Workplace injury treatment log"
+  },
+  {
+    "file": "Records/HRM.5_Record_04_workplace_violence_incident_review.docx",
+    "document_type": "record",
+    "standard_code": "HRM.5",
+    "record_index": 4,
+    "title": "Record 4 — Workplace violence incident and post-event review record"
   }
 ]
