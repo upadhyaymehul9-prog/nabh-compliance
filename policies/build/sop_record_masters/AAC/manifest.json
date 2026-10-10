@@ -234,5 +234,80 @@
     "standard_code": "AAC.6",
     "record_index": 2,
     "title": "Record 2 — Laboratory staff occupational immunisation log"
+  },
+  {
+    "file": "SOP_AAC.7.a_b_c_d_continuity_multidisciplinary_care.docx",
+    "document_type": "sop",
+    "standard_code": "AAC.7",
+    "title": "SOP — Continuity and Multidisciplinary Care (AAC.7.a, AAC.7.b, AAC.7.c, AAC.7.d)"
+  },
+  {
+    "file": "SOP_AAC.8.a_to_g_discharge_process_summary.docx",
+    "document_type": "sop",
+    "standard_code": "AAC.8",
+    "title": "SOP — Discharge Process and Discharge Summary (AAC.8.a-g)"
+  },
+  {
+    "file": "Records/AAC.7_Record_01_responsible_clinician_log.docx",
+    "document_type": "record",
+    "standard_code": "AAC.7",
+    "record_index": 1,
+    "title": "Record 1 — Responsible-clinician identification and covering-doctor log"
+  },
+  {
+    "file": "Records/AAC.7_Record_02_referral_information_sharing_log.docx",
+    "document_type": "record",
+    "standard_code": "AAC.7",
+    "record_index": 2,
+    "title": "Record 2 — Referral and verbal-order documentation log"
+  },
+  {
+    "file": "Records/AAC.7_Record_03_shift_handover_register.docx",
+    "document_type": "record",
+    "standard_code": "AAC.7",
+    "record_index": 3,
+    "title": "Record 3 — Standardised shift-handover register"
+  },
+  {
+    "file": "Records/AAC.7_Record_04_internal_transfer_log.docx",
+    "document_type": "record",
+    "standard_code": "AAC.7",
+    "record_index": 4,
+    "title": "Record 4 — Internal patient-transfer log"
+  },
+  {
+    "file": "Records/AAC.8_Record_01_discharge_summary_issuance_lama_log.docx",
+    "document_type": "record",
+    "standard_code": "AAC.8",
+    "record_index": 1,
+    "title": "Record 1 — Discharge-summary issuance and LAMA log"
+  },
+  {
+    "file": "Records/AAC.8_Record_02_discharge_summary_content_audit.docx",
+    "document_type": "record",
+    "standard_code": "AAC.8",
+    "record_index": 2,
+    "title": "Record 2 — Discharge-summary content completeness audit"
+  },
+  {
+    "file": "Records/AAC.8_Record_03_followup_urgent_care_instruction_log.docx",
+    "document_type": "record",
+    "standard_code": "AAC.8",
+    "record_index": 3,
+    "title": "Record 3 — Follow-up and urgent-care instruction log"
+  },
+  {
+    "file": "Records/AAC.8_Record_04_death_summary_register.docx",
+    "document_type": "record",
+    "standard_code": "AAC.8",
+    "record_index": 4,
+    "title": "Record 4 — Death summary and cause-of-death register"
+  },
+  {
+    "file": "Records/AAC.8_Record_05_planned_discharge_special_needs_log.docx",
+    "document_type": "record",
+    "standard_code": "AAC.8",
+    "record_index": 5,
+    "title": "Record 5 — Planned-discharge and special-needs log"
   }
 ]
