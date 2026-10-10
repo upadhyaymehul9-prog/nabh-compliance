@@ -3,354 +3,388 @@
     "file": "SOP_HRM.1.b_recruitment.docx",
     "document_type": "sop",
     "standard_code": "HRM.1",
-    "title": "SOP — Staff Recruitment (HRM.1.b)"
+    "title": "SOP \u2014 Staff Recruitment (HRM.1.b)"
   },
   {
     "file": "SOP_HRM.1.e_job_description.docx",
     "document_type": "sop",
     "standard_code": "HRM.1",
-    "title": "SOP — Reporting Relationships, Job Specification and Job Description (HRM.1.e)"
+    "title": "SOP \u2014 Reporting Relationships, Job Specification and Job Description (HRM.1.e)"
   },
   {
     "file": "SOP_HRM.1.i_disciplinary_grievance.docx",
     "document_type": "sop",
     "standard_code": "HRM.1",
-    "title": "SOP — Disciplinary and Grievance Handling (HRM.1.i)"
+    "title": "SOP \u2014 Disciplinary and Grievance Handling (HRM.1.i)"
   },
   {
     "file": "SOP_HRM.4.a_performance_appraisal.docx",
     "document_type": "sop",
     "standard_code": "HRM.4",
-    "title": "SOP — Performance Appraisal (HRM.4.a)"
+    "title": "SOP \u2014 Performance Appraisal (HRM.4.a)"
   },
   {
     "file": "Records/HRM.1_Record_01_recruitment_register.docx",
     "document_type": "record",
     "standard_code": "HRM.1",
     "record_index": 1,
-    "title": "Record 1 — Recruitment register"
+    "title": "Record 1 \u2014 Recruitment register"
   },
   {
     "file": "Records/HRM.1_Record_02_clinical_registration_verification_log.docx",
     "document_type": "record",
     "standard_code": "HRM.1",
     "record_index": 2,
-    "title": "Record 2 — Clinical staff professional-registration verification log"
+    "title": "Record 2 \u2014 Clinical staff professional-registration verification log"
   },
   {
     "file": "Records/HRM.1_Record_03_urgent_interim_appointment_log.docx",
     "document_type": "record",
     "standard_code": "HRM.1",
     "record_index": 3,
-    "title": "Record 3 — Urgent vacancy, interim appointment log"
+    "title": "Record 3 \u2014 Urgent vacancy, interim appointment log"
   },
   {
     "file": "Records/HRM.1_Record_04_job_description_template.docx",
     "document_type": "record",
     "standard_code": "HRM.1",
     "record_index": 4,
-    "title": "Record 4 — Job description template register"
+    "title": "Record 4 \u2014 Job description template register"
   },
   {
     "file": "Records/HRM.1_Record_05_signed_job_descriptions.docx",
     "document_type": "record",
     "standard_code": "HRM.1",
     "record_index": 5,
-    "title": "Record 5 — Signed job description log"
+    "title": "Record 5 \u2014 Signed job description log"
   },
   {
     "file": "Records/HRM.1_Record_06_job_description_refusal_and_reporting_line_change_log.docx",
     "document_type": "record",
     "standard_code": "HRM.1",
     "record_index": 6,
-    "title": "Record 6 — Job description refusal and reporting-line change log"
+    "title": "Record 6 \u2014 Job description refusal and reporting-line change log"
   },
   {
     "file": "Records/HRM.1_Record_07_grievance_register.docx",
     "document_type": "record",
     "standard_code": "HRM.1",
     "record_index": 7,
-    "title": "Record 7 — Grievance register"
+    "title": "Record 7 \u2014 Grievance register"
   },
   {
     "file": "Records/HRM.1_Record_08_disciplinary_proceedings_register.docx",
     "document_type": "record",
     "standard_code": "HRM.1",
     "record_index": 8,
-    "title": "Record 8 — Disciplinary proceedings register"
+    "title": "Record 8 \u2014 Disciplinary proceedings register"
   },
   {
     "file": "Records/HRM.1_Record_09_interim_action_and_retaliation_log.docx",
     "document_type": "record",
     "standard_code": "HRM.1",
     "record_index": 9,
-    "title": "Record 9 — Interim action and retaliation-protection log"
+    "title": "Record 9 \u2014 Interim action and retaliation-protection log"
   },
   {
     "file": "Records/HRM.1_Record_10_timeline_breach_escalation_log.docx",
     "document_type": "record",
     "standard_code": "HRM.1",
     "record_index": 10,
-    "title": "Record 10 — Investigation timeline-breach escalation log"
+    "title": "Record 10 \u2014 Investigation timeline-breach escalation log"
   },
   {
     "file": "Records/HRM.4_Record_01_induction_appraisal_awareness.docx",
     "document_type": "record",
     "standard_code": "HRM.4",
     "record_index": 1,
-    "title": "Record 1 — Induction appraisal-awareness acknowledgement log"
+    "title": "Record 1 \u2014 Induction appraisal-awareness acknowledgement log"
   },
   {
     "file": "Records/HRM.4_Record_02_appraisal_criteria_schedule.docx",
     "document_type": "record",
     "standard_code": "HRM.4",
     "record_index": 2,
-    "title": "Record 2 — Appraisal criteria sign-off"
+    "title": "Record 2 \u2014 Appraisal criteria sign-off"
   },
   {
     "file": "Records/HRM.4_Record_03_completed_appraisal_schedule.docx",
     "document_type": "record",
     "standard_code": "HRM.4",
     "record_index": 3,
-    "title": "Record 3 — Appraisal schedule and completion tracker"
+    "title": "Record 3 \u2014 Appraisal schedule and completion tracker"
   },
   {
     "file": "Records/HRM.4_Record_04_performance_improvement_plan_log.docx",
     "document_type": "record",
     "standard_code": "HRM.4",
     "record_index": 4,
-    "title": "Record 4 — Performance improvement plan (PIP) log"
+    "title": "Record 4 \u2014 Performance improvement plan (PIP) log"
   },
   {
     "file": "SOP_HRM.2.a_to_e_induction_training_development.docx",
     "document_type": "sop",
     "standard_code": "HRM.2",
-    "title": "SOP — Induction, Training and Development (HRM.2.a-e)"
+    "title": "SOP \u2014 Induction, Training and Development (HRM.2.a-e)"
   },
   {
     "file": "Records/HRM.2_Record_01_induction_completion_log.docx",
     "document_type": "record",
     "standard_code": "HRM.2",
     "record_index": 1,
-    "title": "Record 1 — Induction completion log"
+    "title": "Record 1 \u2014 Induction completion log"
   },
   {
     "file": "Records/HRM.2_Record_02_training_calendar_policy_review.docx",
     "document_type": "record",
     "standard_code": "HRM.2",
     "record_index": 2,
-    "title": "Record 2 — Annual training calendar and policy review log"
+    "title": "Record 2 \u2014 Annual training calendar and policy review log"
   },
   {
     "file": "Records/HRM.2_Record_03_job_description_training_matrix.docx",
     "document_type": "record",
     "standard_code": "HRM.2",
     "record_index": 3,
-    "title": "Record 3 — Job-description training matrix and gap tracker"
+    "title": "Record 3 \u2014 Job-description training matrix and gap tracker"
   },
   {
     "file": "Records/HRM.2_Record_04_cpr_competency_register.docx",
     "document_type": "record",
     "standard_code": "HRM.2",
     "record_index": 4,
-    "title": "Record 4 — Master CPR competency register"
+    "title": "Record 4 \u2014 Master CPR competency register"
   },
   {
     "file": "Records/HRM.2_Record_05_training_effectiveness_report.docx",
     "document_type": "record",
     "standard_code": "HRM.2",
     "record_index": 5,
-    "title": "Record 5 — Annual training effectiveness report"
+    "title": "Record 5 \u2014 Annual training effectiveness report"
   },
   {
     "file": "SOP_HRM.3.a_to_g_safety_disaster_fire_qi_training.docx",
     "document_type": "sop",
     "standard_code": "HRM.3",
-    "title": "SOP — Safety, Disaster, Fire and Quality-Improvement Training (HRM.3.a-g)"
+    "title": "SOP \u2014 Safety, Disaster, Fire and Quality-Improvement Training (HRM.3.a-g)"
   },
   {
     "file": "Records/HRM.3_Record_01_safety_programme_training_attendance.docx",
     "document_type": "record",
     "standard_code": "HRM.3",
     "record_index": 1,
-    "title": "Record 1 — Safety-programme training attendance record"
+    "title": "Record 1 \u2014 Safety-programme training attendance record"
   },
   {
     "file": "Records/HRM.3_Record_02_risk_handling_training_record.docx",
     "document_type": "record",
     "standard_code": "HRM.3",
     "record_index": 2,
-    "title": "Record 2 — Risk-handling training record"
+    "title": "Record 2 \u2014 Risk-handling training record"
   },
   {
     "file": "Records/HRM.3_Record_03_incident_awareness_training_log.docx",
     "document_type": "record",
     "standard_code": "HRM.3",
     "record_index": 3,
-    "title": "Record 3 — Incident-awareness training log"
+    "title": "Record 3 \u2014 Incident-awareness training log"
   },
   {
     "file": "Records/HRM.3_Record_04_occupational_safety_training_record.docx",
     "document_type": "record",
     "standard_code": "HRM.3",
     "record_index": 4,
-    "title": "Record 4 — Occupational safety training record"
+    "title": "Record 4 \u2014 Occupational safety training record"
   },
   {
     "file": "Records/HRM.3_Record_05_disaster_training_and_drill_record.docx",
     "document_type": "record",
     "standard_code": "HRM.3",
     "record_index": 5,
-    "title": "Record 5 — Disaster management training and drill record"
+    "title": "Record 5 \u2014 Disaster management training and drill record"
   },
   {
     "file": "Records/HRM.3_Record_06_fire_nonfire_emergency_training_record.docx",
     "document_type": "record",
     "standard_code": "HRM.3",
     "record_index": 6,
-    "title": "Record 6 — Fire and non-fire emergency training record"
+    "title": "Record 6 \u2014 Fire and non-fire emergency training record"
   },
   {
     "file": "Records/HRM.3_Record_07_qi_programme_training_participation.docx",
     "document_type": "record",
     "standard_code": "HRM.3",
     "record_index": 7,
-    "title": "Record 7 — QI programme training and participation record"
+    "title": "Record 7 \u2014 QI programme training and participation record"
   },
   {
     "file": "SOP_HRM.5.a_to_d_staff_wellbeing_occupational_health.docx",
     "document_type": "sop",
     "standard_code": "HRM.5",
-    "title": "SOP — Staff Well-Being and Occupational Health (HRM.5.a-d)"
+    "title": "SOP \u2014 Staff Well-Being and Occupational Health (HRM.5.a-d)"
   },
   {
     "file": "Records/HRM.5_Record_01_occupational_health_hazard_register.docx",
     "document_type": "record",
     "standard_code": "HRM.5",
     "record_index": 1,
-    "title": "Record 1 — Occupational health hazard register"
+    "title": "Record 1 \u2014 Occupational health hazard register"
   },
   {
     "file": "Records/HRM.5_Record_02_annual_health_check_form.docx",
     "document_type": "record",
     "standard_code": "HRM.5",
     "record_index": 2,
-    "title": "Record 2 — Annual health check form and schedule"
+    "title": "Record 2 \u2014 Annual health check form and schedule"
   },
   {
     "file": "Records/HRM.5_Record_03_workplace_injury_treatment_log.docx",
     "document_type": "record",
     "standard_code": "HRM.5",
     "record_index": 3,
-    "title": "Record 3 — Workplace injury treatment log"
+    "title": "Record 3 \u2014 Workplace injury treatment log"
   },
   {
     "file": "Records/HRM.5_Record_04_workplace_violence_incident_review.docx",
     "document_type": "record",
     "standard_code": "HRM.5",
     "record_index": 4,
-    "title": "Record 4 — Workplace violence incident and post-event review record"
+    "title": "Record 4 \u2014 Workplace violence incident and post-event review record"
   },
   {
     "file": "SOP_HRM.6.a_to_d_personal_files.docx",
     "document_type": "sop",
     "standard_code": "HRM.6",
-    "title": "SOP — Documented Personal Information for Each Staff Member (HRM.6.a-d)"
+    "title": "SOP \u2014 Documented Personal Information for Each Staff Member (HRM.6.a-d)"
   },
   {
     "file": "Records/HRM.6_Record_01_personal_file_master_register_access_log.docx",
     "document_type": "record",
     "standard_code": "HRM.6",
     "record_index": 1,
-    "title": "Record 1 — Personal file master register and access log"
+    "title": "Record 1 \u2014 Personal file master register and access log"
   },
   {
     "file": "Records/HRM.6_Record_02_personnel_file_content_index.docx",
     "document_type": "record",
     "standard_code": "HRM.6",
     "record_index": 2,
-    "title": "Record 2 — Personnel file content index"
+    "title": "Record 2 \u2014 Personnel file content index"
   },
   {
     "file": "Records/HRM.6_Record_03_central_training_register.docx",
     "document_type": "record",
     "standard_code": "HRM.6",
     "record_index": 3,
-    "title": "Record 3 — Central training register (mirrors individual personal files)"
+    "title": "Record 3 \u2014 Central training register (mirrors individual personal files)"
   },
   {
     "file": "Records/HRM.6_Record_04_evaluation_summary_sheet.docx",
     "document_type": "record",
     "standard_code": "HRM.6",
     "record_index": 4,
-    "title": "Record 4 — Evaluation summary sheet (per personal file)"
+    "title": "Record 4 \u2014 Evaluation summary sheet (per personal file)"
   },
   {
     "file": "SOP_HRM.7.a_to_d_medical_credentialing_privileging.docx",
     "document_type": "sop",
     "standard_code": "HRM.7",
-    "title": "SOP — Credentialing and Privileging of Medical Professionals (HRM.7.a-d)"
+    "title": "SOP \u2014 Credentialing and Privileging of Medical Professionals (HRM.7.a-d)"
   },
   {
     "file": "Records/HRM.7_Record_01_medical_privileging_register.docx",
     "document_type": "record",
     "standard_code": "HRM.7",
     "record_index": 1,
-    "title": "Record 1 — Medical privileging register"
+    "title": "Record 1 \u2014 Medical privileging register"
   },
   {
     "file": "Records/HRM.7_Record_02_credentialing_verification_file.docx",
     "document_type": "record",
     "standard_code": "HRM.7",
     "record_index": 2,
-    "title": "Record 2 — Credentialing verification file log"
+    "title": "Record 2 \u2014 Credentialing verification file log"
   },
   {
     "file": "Records/HRM.7_Record_03_privilege_letters_and_committee_minutes.docx",
     "document_type": "record",
     "standard_code": "HRM.7",
     "record_index": 3,
-    "title": "Record 3 — Privilege letters and Credentialing Committee minutes"
+    "title": "Record 3 \u2014 Privilege letters and Credentialing Committee minutes"
   },
   {
     "file": "Records/HRM.7_Record_04_service_briefing_and_unit_list_reconciliation.docx",
     "document_type": "record",
     "standard_code": "HRM.7",
     "record_index": 4,
-    "title": "Record 4 — Department service briefing and unit doctor list reconciliation"
+    "title": "Record 4 \u2014 Department service briefing and unit doctor list reconciliation"
   },
   {
     "file": "SOP_HRM.8.a_to_d_nursing_credentialing_privileging.docx",
     "document_type": "sop",
     "standard_code": "HRM.8",
-    "title": "SOP — Credentialing and Privileging of Nursing Professionals (HRM.8.a-d)"
+    "title": "SOP \u2014 Credentialing and Privileging of Nursing Professionals (HRM.8.a-d)"
   },
   {
     "file": "Records/HRM.8_Record_01_nursing_privileging_register.docx",
     "document_type": "record",
     "standard_code": "HRM.8",
     "record_index": 1,
-    "title": "Record 1 — Nursing privileging register"
+    "title": "Record 1 \u2014 Nursing privileging register"
   },
   {
     "file": "Records/HRM.8_Record_02_nursing_credentialing_verification_file.docx",
     "document_type": "record",
     "standard_code": "HRM.8",
     "record_index": 2,
-    "title": "Record 2 — Nursing credentialing verification file log"
+    "title": "Record 2 \u2014 Nursing credentialing verification file log"
   },
   {
     "file": "Records/HRM.8_Record_03_nursing_privilege_letters_and_committee_minutes.docx",
     "document_type": "record",
     "standard_code": "HRM.8",
     "record_index": 3,
-    "title": "Record 3 — Nursing privilege letters and Credentialing Committee minutes"
+    "title": "Record 3 \u2014 Nursing privilege letters and Credentialing Committee minutes"
   },
   {
     "file": "Records/HRM.8_Record_04_nursing_service_briefing_and_unit_list_reconciliation.docx",
     "document_type": "record",
     "standard_code": "HRM.8",
     "record_index": 4,
-    "title": "Record 4 — Unit service briefing and nurse list reconciliation"
+    "title": "Record 4 \u2014 Unit service briefing and nurse list reconciliation"
+  },
+  {
+    "file": "SOP_HRM.9.a_to_d_paraclinical_credentialing_privileging.docx",
+    "document_type": "sop",
+    "standard_code": "HRM.9",
+    "title": "Credentialing and Privileging of Para-Clinical Professionals Permitted to Provide Patient Care Without Supervision"
+  },
+  {
+    "file": "Records/HRM.9_Record_01_paraclinical_privileging_register.docx",
+    "document_type": "record",
+    "standard_code": "HRM.9",
+    "record_index": 1,
+    "title": "Para-clinical privileging register"
+  },
+  {
+    "file": "Records/HRM.9_Record_02_paraclinical_credentialing_verification_file.docx",
+    "document_type": "record",
+    "standard_code": "HRM.9",
+    "record_index": 2,
+    "title": "Para-clinical credentialing verification file log"
+  },
+  {
+    "file": "Records/HRM.9_Record_03_paraclinical_privilege_letters_and_committee_minutes.docx",
+    "document_type": "record",
+    "standard_code": "HRM.9",
+    "record_index": 3,
+    "title": "Para-clinical privilege letters and Credentialing Committee minutes"
+  },
+  {
+    "file": "Records/HRM.9_Record_04_paraclinical_service_briefing_and_unit_list_reconciliation.docx",
+    "document_type": "record",
+    "standard_code": "HRM.9",
+    "record_index": 4,
+    "title": "Department service briefing and unit staff list reconciliation"
   }
 ]
