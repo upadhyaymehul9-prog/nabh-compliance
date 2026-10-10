@@ -46,5 +46,60 @@
     "standard_code": "FMS.1",
     "record_index": 6,
     "title": "Energy-efficient and environment-friendly initiative record"
+  },
+  {
+    "file": "SOP_FMS.2.a_to_g_patient_family_staff_visitor_safety.docx",
+    "document_type": "sop",
+    "standard_code": "FMS.2",
+    "title": "Safety of Patients, Families, Staff and Visitors"
+  },
+  {
+    "file": "Records/FMS.2_Record_01_patient-safety_device_inspection_record.docx",
+    "document_type": "record",
+    "standard_code": "FMS.2",
+    "record_index": 1,
+    "title": "Patient-safety device inspection record"
+  },
+  {
+    "file": "Records/FMS.2_Record_02_differently-abled_facility_usability_record.docx",
+    "document_type": "record",
+    "standard_code": "FMS.2",
+    "record_index": 2,
+    "title": "Differently-abled facility usability record"
+  },
+  {
+    "file": "Records/FMS.2_Record_03_extra-security_area_and_access_register.docx",
+    "document_type": "record",
+    "standard_code": "FMS.2",
+    "record_index": 3,
+    "title": "Extra-security area and access register"
+  },
+  {
+    "file": "Records/FMS.2_Record_04_monthly_facility_safety_round_report.docx",
+    "document_type": "record",
+    "standard_code": "FMS.2",
+    "record_index": 4,
+    "title": "Monthly facility safety round report"
+  },
+  {
+    "file": "Records/FMS.2_Record_05_electrical_safety_audit_report.docx",
+    "document_type": "record",
+    "standard_code": "FMS.2",
+    "record_index": 5,
+    "title": "Electrical safety audit report"
+  },
+  {
+    "file": "Records/FMS.2_Record_06_material-not-in-use_identification_and_disposal_log.docx",
+    "document_type": "record",
+    "standard_code": "FMS.2",
+    "record_index": 6,
+    "title": "Material-not-in-use identification and disposal log"
+  },
+  {
+    "file": "Records/FMS.2_Record_07_hazardous-material_inventory_and_safe-use_record.docx",
+    "document_type": "record",
+    "standard_code": "FMS.2",
+    "record_index": 7,
+    "title": "Hazardous-material inventory and safe-use record"
   }
 ]
