@@ -120,5 +120,46 @@
     "standard_code": "HRM.4",
     "record_index": 4,
     "title": "Record 4 — Performance improvement plan (PIP) log"
+  },
+  {
+    "file": "SOP_HRM.2.a_to_e_induction_training_development.docx",
+    "document_type": "sop",
+    "standard_code": "HRM.2",
+    "title": "SOP — Induction, Training and Development (HRM.2.a-e)"
+  },
+  {
+    "file": "Records/HRM.2_Record_01_induction_completion_log.docx",
+    "document_type": "record",
+    "standard_code": "HRM.2",
+    "record_index": 1,
+    "title": "Record 1 — Induction completion log"
+  },
+  {
+    "file": "Records/HRM.2_Record_02_training_calendar_policy_review.docx",
+    "document_type": "record",
+    "standard_code": "HRM.2",
+    "record_index": 2,
+    "title": "Record 2 — Annual training calendar and policy review log"
+  },
+  {
+    "file": "Records/HRM.2_Record_03_job_description_training_matrix.docx",
+    "document_type": "record",
+    "standard_code": "HRM.2",
+    "record_index": 3,
+    "title": "Record 3 — Job-description training matrix and gap tracker"
+  },
+  {
+    "file": "Records/HRM.2_Record_04_cpr_competency_register.docx",
+    "document_type": "record",
+    "standard_code": "HRM.2",
+    "record_index": 4,
+    "title": "Record 4 — Master CPR competency register"
+  },
+  {
+    "file": "Records/HRM.2_Record_05_training_effectiveness_report.docx",
+    "document_type": "record",
+    "standard_code": "HRM.2",
+    "record_index": 5,
+    "title": "Record 5 — Annual training effectiveness report"
   }
 ]
