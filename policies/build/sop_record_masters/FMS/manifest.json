@@ -1,0 +1,50 @@
+[
+  {
+    "file": "SOP_FMS.1.a_to_f_planned_facilities_utilities_environment.docx",
+    "document_type": "sop",
+    "standard_code": "FMS.1",
+    "title": "Planned Facilities, Utilities and Environment-Friendly Measures"
+  },
+  {
+    "file": "Records/FMS.1_Record_01_space-to-service-directory_alignment_record.docx",
+    "document_type": "record",
+    "standard_code": "FMS.1",
+    "record_index": 1,
+    "title": "Space-to-service-directory alignment record"
+  },
+  {
+    "file": "Records/FMS.1_Record_02_as-built_drawing_set_and_update_log.docx",
+    "document_type": "record",
+    "standard_code": "FMS.1",
+    "record_index": 2,
+    "title": "As-built drawing set and update log"
+  },
+  {
+    "file": "Records/FMS.1_Record_03_wayfinding_and_signage_inspection_record.docx",
+    "document_type": "record",
+    "standard_code": "FMS.1",
+    "record_index": 3,
+    "title": "Wayfinding and signage inspection record"
+  },
+  {
+    "file": "Records/FMS.1_Record_04_potable_water_and_electricity_round-the-clock_availability_a.docx",
+    "document_type": "record",
+    "standard_code": "FMS.1",
+    "record_index": 4,
+    "title": "Potable water and electricity round-the-clock availability and quality-test record"
+  },
+  {
+    "file": "Records/FMS.1_Record_05_alternate_source_loaded_backup-test_record.docx",
+    "document_type": "record",
+    "standard_code": "FMS.1",
+    "record_index": 5,
+    "title": "Alternate source loaded backup-test record"
+  },
+  {
+    "file": "Records/FMS.1_Record_06_energy-efficient_and_environment-friendly_initiative_record.docx",
+    "document_type": "record",
+    "standard_code": "FMS.1",
+    "record_index": 6,
+    "title": "Energy-efficient and environment-friendly initiative record"
+  }
+]
