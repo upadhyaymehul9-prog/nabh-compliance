@@ -554,5 +554,53 @@
     "standard_code": "COP.11",
     "record_index": 10,
     "title": "Organ-donation awareness record"
+  },
+  {
+    "file": "SOP_COP.12.a_to_f_higher_risk_patients.docx",
+    "document_type": "sop",
+    "standard_code": "COP.12",
+    "title": "Identification and Management of Patients at Higher Risk of Morbidity and Mortality"
+  },
+  {
+    "file": "Records/COP.12_Record_01_vulnerable_patient_identification_register.docx",
+    "document_type": "record",
+    "standard_code": "COP.12",
+    "record_index": 1,
+    "title": "Vulnerable-patient identification and management register"
+  },
+  {
+    "file": "Records/COP.12_Record_02_care_environment_measures_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.12",
+    "record_index": 2,
+    "title": "Care-environment measures log"
+  },
+  {
+    "file": "Records/COP.12_Record_03_falls_risk_identification_management_record.docx",
+    "document_type": "record",
+    "standard_code": "COP.12",
+    "record_index": 3,
+    "title": "Falls-risk identification and management record"
+  },
+  {
+    "file": "Records/COP.12_Record_04_pressure_ulcer_risk_identification_management_record.docx",
+    "document_type": "record",
+    "standard_code": "COP.12",
+    "record_index": 4,
+    "title": "Pressure-ulcer risk identification and management record"
+  },
+  {
+    "file": "Records/COP.12_Record_05_dvt_vte_risk_identification_management_record.docx",
+    "document_type": "record",
+    "standard_code": "COP.12",
+    "record_index": 5,
+    "title": "DVT/VTE risk identification and management record"
+  },
+  {
+    "file": "Records/COP.12_Record_06_restraint_order_episode_record.docx",
+    "document_type": "record",
+    "standard_code": "COP.12",
+    "record_index": 6,
+    "title": "Restraint order and episode record"
   }
 ]
