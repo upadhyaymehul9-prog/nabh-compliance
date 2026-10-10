@@ -279,5 +279,46 @@
     "standard_code": "COP.6",
     "record_index": 6,
     "title": "End-of-life decision and brain-stem death declaration record"
+  },
+  {
+    "file": "SOP_COP.7.a_to_e_safe_obstetric_care.docx",
+    "document_type": "sop",
+    "standard_code": "COP.7",
+    "title": "SOP — Safe Obstetric Care (COP.7.a-e)"
+  },
+  {
+    "file": "Records/COP.7_Record_01_obstetric_scope_sex_determination_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.7",
+    "record_index": 1,
+    "title": "Obstetric scope compliance and sex-determination-prohibition log"
+  },
+  {
+    "file": "Records/COP.7_Record_02_high_risk_identification_referral_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.7",
+    "record_index": 2,
+    "title": "High-risk obstetric case identification and referral log"
+  },
+  {
+    "file": "Records/COP.7_Record_03_antenatal_maternal_nutrition_record.docx",
+    "document_type": "record",
+    "standard_code": "COP.7",
+    "record_index": 3,
+    "title": "Antenatal maternal-nutrition assessment record"
+  },
+  {
+    "file": "Records/COP.7_Record_04_perinatal_postnatal_monitoring_record.docx",
+    "document_type": "record",
+    "standard_code": "COP.7",
+    "record_index": 4,
+    "title": "Peri-natal and post-natal monitoring record"
+  },
+  {
+    "file": "Records/COP.7_Record_05_neonatal_backup_birth_registration_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.7",
+    "record_index": 5,
+    "title": "Neonatal-backup attendance and birth/stillbirth registration log"
   }
 ]
