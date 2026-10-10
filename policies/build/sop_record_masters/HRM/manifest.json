@@ -250,5 +250,39 @@
     "standard_code": "HRM.5",
     "record_index": 4,
     "title": "Record 4 — Workplace violence incident and post-event review record"
+  },
+  {
+    "file": "SOP_HRM.6.a_to_d_personal_files.docx",
+    "document_type": "sop",
+    "standard_code": "HRM.6",
+    "title": "SOP — Documented Personal Information for Each Staff Member (HRM.6.a-d)"
+  },
+  {
+    "file": "Records/HRM.6_Record_01_personal_file_master_register_access_log.docx",
+    "document_type": "record",
+    "standard_code": "HRM.6",
+    "record_index": 1,
+    "title": "Record 1 — Personal file master register and access log"
+  },
+  {
+    "file": "Records/HRM.6_Record_02_personnel_file_content_index.docx",
+    "document_type": "record",
+    "standard_code": "HRM.6",
+    "record_index": 2,
+    "title": "Record 2 — Personnel file content index"
+  },
+  {
+    "file": "Records/HRM.6_Record_03_central_training_register.docx",
+    "document_type": "record",
+    "standard_code": "HRM.6",
+    "record_index": 3,
+    "title": "Record 3 — Central training register (mirrors individual personal files)"
+  },
+  {
+    "file": "Records/HRM.6_Record_04_evaluation_summary_sheet.docx",
+    "document_type": "record",
+    "standard_code": "HRM.6",
+    "record_index": 4,
+    "title": "Record 4 — Evaluation summary sheet (per personal file)"
   }
 ]
