@@ -149,5 +149,39 @@
     "standard_code": "COP.3",
     "record_index": 4,
     "title": "Post-event resuscitation analysis and CAPA log"
+  },
+  {
+    "file": "SOP_COP.4.a_to_d_nursing_care.docx",
+    "document_type": "sop",
+    "standard_code": "COP.4",
+    "title": "SOP — Nursing Care (COP.4.a-d)"
+  },
+  {
+    "file": "Records/COP.4_Record_01_nursing_entry_audit_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.4",
+    "record_index": 1,
+    "title": "Nursing entry documentation audit log"
+  },
+  {
+    "file": "Records/COP.4_Record_02_nursing_assignment_record.docx",
+    "document_type": "record",
+    "standard_code": "COP.4",
+    "record_index": 2,
+    "title": "Nursing assignment record"
+  },
+  {
+    "file": "Records/COP.4_Record_03_nursing_equipment_shortfall_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.4",
+    "record_index": 3,
+    "title": "Nursing equipment availability and shortfall log"
+  },
+  {
+    "file": "Records/COP.4_Record_04_nursing_cpg_register.docx",
+    "document_type": "record",
+    "standard_code": "COP.4",
+    "record_index": 4,
+    "title": "Nursing clinical practice guideline (CPG) register and implementation log"
   }
 ]
