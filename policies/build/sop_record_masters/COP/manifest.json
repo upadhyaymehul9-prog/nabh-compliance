@@ -183,5 +183,53 @@
     "standard_code": "COP.4",
     "record_index": 4,
     "title": "Nursing clinical practice guideline (CPG) register and implementation log"
+  },
+  {
+    "file": "SOP_COP.5.a_to_f_transfusion_blood_blood_components.docx",
+    "document_type": "sop",
+    "standard_code": "COP.5",
+    "title": "SOP — Transfusion of Blood and Blood Components (COP.5.a-f)"
+  },
+  {
+    "file": "Records/COP.5_Record_01_transfusion_scope_licence_register.docx",
+    "document_type": "record",
+    "standard_code": "COP.5",
+    "record_index": 1,
+    "title": "Transfusion scope of services and blood bank licence register"
+  },
+  {
+    "file": "Records/COP.5_Record_02_bedside_identity_administration_record.docx",
+    "document_type": "record",
+    "standard_code": "COP.5",
+    "record_index": 2,
+    "title": "Transfusion bedside identity-check and administration record"
+  },
+  {
+    "file": "Records/COP.5_Record_03_rational_use_indication_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.5",
+    "record_index": 3,
+    "title": "Rational-use clinical indication log"
+  },
+  {
+    "file": "Records/COP.5_Record_04_transfusion_donation_consent_record.docx",
+    "document_type": "record",
+    "standard_code": "COP.5",
+    "record_index": 4,
+    "title": "Transfusion and donation consent record"
+  },
+  {
+    "file": "Records/COP.5_Record_05_emergency_availability_time_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.5",
+    "record_index": 5,
+    "title": "Emergency blood availability time-measurement log"
+  },
+  {
+    "file": "Records/COP.5_Record_06_post_transfusion_reaction_analysis_log.docx",
+    "document_type": "record",
+    "standard_code": "COP.5",
+    "record_index": 6,
+    "title": "Post-transfusion form collection and reaction analysis log"
   }
 ]
