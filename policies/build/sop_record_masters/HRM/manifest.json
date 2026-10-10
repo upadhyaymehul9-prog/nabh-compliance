@@ -318,5 +318,39 @@
     "standard_code": "HRM.7",
     "record_index": 4,
     "title": "Record 4 — Department service briefing and unit doctor list reconciliation"
+  },
+  {
+    "file": "SOP_HRM.8.a_to_d_nursing_credentialing_privileging.docx",
+    "document_type": "sop",
+    "standard_code": "HRM.8",
+    "title": "SOP — Credentialing and Privileging of Nursing Professionals (HRM.8.a-d)"
+  },
+  {
+    "file": "Records/HRM.8_Record_01_nursing_privileging_register.docx",
+    "document_type": "record",
+    "standard_code": "HRM.8",
+    "record_index": 1,
+    "title": "Record 1 — Nursing privileging register"
+  },
+  {
+    "file": "Records/HRM.8_Record_02_nursing_credentialing_verification_file.docx",
+    "document_type": "record",
+    "standard_code": "HRM.8",
+    "record_index": 2,
+    "title": "Record 2 — Nursing credentialing verification file log"
+  },
+  {
+    "file": "Records/HRM.8_Record_03_nursing_privilege_letters_and_committee_minutes.docx",
+    "document_type": "record",
+    "standard_code": "HRM.8",
+    "record_index": 3,
+    "title": "Record 3 — Nursing privilege letters and Credentialing Committee minutes"
+  },
+  {
+    "file": "Records/HRM.8_Record_04_nursing_service_briefing_and_unit_list_reconciliation.docx",
+    "document_type": "record",
+    "standard_code": "HRM.8",
+    "record_index": 4,
+    "title": "Record 4 — Unit service briefing and nurse list reconciliation"
   }
 ]
