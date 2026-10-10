@@ -190,5 +190,46 @@
     "standard_code": "FMS.4",
     "record_index": 4,
     "title": "Piped MGPS operational, inspection, testing and maintenance file (or recorded absence)"
+  },
+  {
+    "file": "SOP_FMS.5.a_to_e_fire_non_fire_emergencies.docx",
+    "document_type": "sop",
+    "standard_code": "FMS.5",
+    "title": "Fire and Non-Fire Emergencies"
+  },
+  {
+    "file": "Records/FMS.5_Record_01_fire_and_non-fire_detection_abatement_and_containment_provis.docx",
+    "document_type": "record",
+    "standard_code": "FMS.5",
+    "record_index": 1,
+    "title": "Fire and non-fire detection, abatement and containment provisions record"
+  },
+  {
+    "file": "Records/FMS.5_Record_02_exit_plan_display_inspection_record.docx",
+    "document_type": "record",
+    "standard_code": "FMS.5",
+    "record_index": 2,
+    "title": "Exit plan display inspection record"
+  },
+  {
+    "file": "Records/FMS.5_Record_03_mock_drill_record.docx",
+    "document_type": "record",
+    "standard_code": "FMS.5",
+    "record_index": 3,
+    "title": "Mock drill record"
+  },
+  {
+    "file": "Records/FMS.5_Record_04_fire-equipment_and_infrastructure_maintenance_job-card_log.docx",
+    "document_type": "record",
+    "standard_code": "FMS.5",
+    "record_index": 4,
+    "title": "Fire-equipment and infrastructure maintenance job-card log"
+  },
+  {
+    "file": "Records/FMS.5_Record_05_service_continuity_plan_activation_record.docx",
+    "document_type": "record",
+    "standard_code": "FMS.5",
+    "record_index": 5,
+    "title": "Service continuity plan activation record"
   }
 ]
