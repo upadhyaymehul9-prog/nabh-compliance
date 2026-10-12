@@ -25,7 +25,16 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from sop_record_common import ProcedureBlock, RecordSpec, SOPSpec, build_record, build_sop
+from sop_record_common import (
+    PlainItem,
+    ProcedureBlock,
+    RecordSpec,
+    SOPSpec,
+    SOPSpecV2,
+    build_record,
+    build_sop,
+    build_sop_v2,
+)
 
 OUT_ROOT = Path(__file__).parent / "sop_record_masters" / "FMS"
 
@@ -346,6 +355,324 @@ SOP = SOPSpec(
 )
 
 
+#  ------------------------------------------------------------------ v2 ----
+# Plain-language body + audit appendix, approved by Mk 2026-10-12 after
+# four sample iterations (FMS.2_Combined_SOP_SAMPLE v1-v4). Every boundary
+# line and citation below is the same fact already in SOP/FMS2_REFS above --
+# this just splits where each fact lives: patient-safety reasoning and
+# plain steps in the body, OE codes/boundary/citations in the appendix.
+SOP_V2 = SOPSpecV2(
+    sop_no="SOP-FMS.2",
+    title="Safety of Patients, Families, Staff and Visitors",
+    purpose_plain=(
+        "This SOP tells facilities, security, engineering and quality staff, in one "
+        "place, how this hospital keeps the building itself safe: the grab rails and "
+        "call bells that actually work, access for the differently-abled, which areas "
+        "need extra security, the monthly walk that finds what a register alone "
+        "cannot, the electrical audit that is not just a DG test, how condemned items "
+        "actually leave the clinical floor, and how hazardous materials are tracked "
+        "and used safely. If you walk a round, hold a key, sign off an audit, or tag "
+        "a condemned bed, this SOP is for you."
+    ),
+    purpose_trigger=(
+        "A monthly facility round finds a grab rail pulled out of a wet-wall fixing "
+        "in a ground-floor toilet. This SOP is what tells the rounding staff member "
+        "which record to log it in, who closes the finding, and by when -- rather "
+        "than the defect sitting unaddressed until the next round finds it again."
+    ),
+    purpose_why=(
+        "We do this because a hospital's job is to keep the people inside it safe, "
+        "not just treat the illness they came in for. The devices, the monthly "
+        "round, the electrical audits, how we remove broken items, and how we "
+        "handle hazardous materials are the ways the building itself stays on the "
+        "patient's side, not a risk to them."
+    ),
+    purpose_text=(
+        "To define how «Hospital Name» keeps patients, families, staff and visitors "
+        "safe from the building itself: installed safety devices, access for the "
+        "differently-abled, extra-security areas, the monthly facility round, "
+        "electrical safety audits, disposal of material not in use, and the safe "
+        "identification and use of hazardous materials."
+    ),
+    scope_why=(
+        "so whoever spots a problem -- staff, contractor or visitor -- knows "
+        "exactly where to take it, and nothing falls through the gap between two "
+        "SOPs while someone is waiting for it to be fixed."
+    ),
+    scope_text=(
+        "Applies to every area of «Hospital Name» that patients, families, staff or "
+        "visitors use. Does not cover fire detection, alarms, extinguishers or "
+        "suppression, medical-device calibration, biomedical-waste colour coding "
+        "and transport, blood/body-fluid spill response, cytotoxic spill response, "
+        "or laboratory bench chemical hygiene -- those remain their own SOPs. See "
+        "Related SOPs."
+    ),
+    responsibility_why=(
+        "a hazard with one person's name on it gets fixed. A hazard that's "
+        "\"everyone's job\" sits there until someone gets hurt."
+    ),
+    responsibilities=[
+        ("Head of the Institution",
+         "Is accountable that the facility actually operates safely, not just on "
+         "paper."),
+        ("Named Facilities/Engineering Lead",
+         "Carries out device inspections, the monthly round, electrical audits, "
+         "the unused-material log and the hazardous-material inventory."),
+        ("Security/Administration",
+         "Looks after the extra-security and access description, where this is "
+         "not the facilities lead."),
+        ("Quality/Accreditation Coordinator",
+         "Spot-checks a sample of the records this SOP produces, at «Hospital to "
+         "define» frequency, and owns the Appendix during assessment."),
+        ("All Staff",
+         "Report a blocked exit, an unlabelled chemical, a condemned bed left in "
+         "a patient bay, or a missed monthly round, as defects -- not someone "
+         "else's problem."),
+    ],
+    items=[
+        PlainItem(
+            heading="Keeping patient-safety devices working",
+            why=(
+                "A patient or family member trusts that a grab rail or call bell "
+                "will work the moment they actually need it -- not that one was "
+                "purchased once. We check the devices, not the paperwork, because "
+                "that's the only check that protects anyone."
+            ),
+            body=[
+                "Grab rails in toilets and wet areas, anti-skid flooring, window "
+                "restrictors on upper floors, bumper guards on trolley routes, "
+                "nurse-call buttons and bed rails -- all of it gets checked that it "
+                "actually works, not just that it's installed.",
+                "«Hospital to define: which devices are checked, how often, and by "
+                "whom.» A real check means testing the device, not reading the "
+                "purchase record.",
+                "Fire equipment is covered separately in the monthly walk-through "
+                "below. Whether to actually use a bed rail or call bell for a "
+                "specific patient is a clinical decision made by the care team, "
+                "not part of this check.",
+            ],
+            oe_code="FMS.2.a",
+            boundary=[
+                "Fire detection, alarms, extinguishers and suppression are FMS.5 "
+                "provisions, inspected under FMS.5.d; listed on the monthly round, "
+                "not counted twice as this OE's own install-and-inspect programme.",
+                "COP.12 owns the clinical decision to use a bed rail or call bell "
+                "at the bedside; this step owns that the hardware exists and "
+                "works.",
+            ],
+            technical_sources=[
+                "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/).",
+                "Aggarwal, R., et al. (2010). [Training and simulation for patient safety](https://qualitysafety.bmj.com/content/19/Suppl_2/i34). Quality and Safety in Health Care, 19(Suppl 2), i34-i43.",
+                "American Society for Health Care Engineering. (2015). [Infrastructures to improve patient safety](https://www.hfmmagazine.com/articles/1827-infrastructures-to-improve-patient-safety). Health Facilities Management.",
+            ],
+        ),
+        PlainItem(
+            heading="Access for people with disabilities",
+            why=(
+                "Every patient and family member deserves to reach the care they "
+                "need, whatever their mobility. Keeping ramps and accessible "
+                "toilets clear isn't a courtesy -- it's the difference between a "
+                "hospital that works for everyone and one that only looks like it "
+                "does."
+            ),
+            body=[
+                "Wheelchair users and people with mobility difficulties need to "
+                "actually reach the floors and services they need.",
+                "«Hospital to define: what access facilities exist (ramps, a "
+                "working lift, accessible toilets) and how they're kept usable.»",
+                "A ramp or accessible toilet that exists on paper but is blocked "
+                "by a trolley or used for storage is a failure, not a "
+                "technicality.",
+            ],
+            oe_code="FMS.2.b",
+            boundary=[
+                "NBC 2016 access provisions apply insofar as the local authority "
+                "applied them to this building's occupancy; this step does not "
+                "invent a universal door-width or gradient figure for every "
+                "SHCO.",
+            ],
+            technical_sources=[
+                "Gudlavalleti, V. S. (2018). [Challenges in Accessing Health Care for People with Disability in the South Asian Context: A Review](https://www.mdpi.com/1660-4601/15/11/2366). International Journal of Environmental Research and Public Health, 15(11), 2366.",
+                "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/).",
+            ],
+        ),
+        PlainItem(
+            heading="Extra-security areas",
+            why=(
+                "A locked door is sometimes the only thing between a newborn and "
+                "someone who shouldn't be near her, or between a controlled drug "
+                "and someone who shouldn't have it. We control these areas "
+                "because the harm from getting it wrong can be serious and "
+                "immediate."
+            ),
+            body=[
+                "Some areas need to be harder to get into than a normal corridor: "
+                "the pharmacy store, medical records (if kept on-site), the "
+                "newborn nursery and labour area, server/plant rooms, and the "
+                "medical gas store.",
+                "«Hospital to define: which areas count, who can access them, and "
+                "how (locks, access control, CCTV).» A camera nobody watches is "
+                "not security.",
+                "Looking after a newborn or a vulnerable patient at the bedside is "
+                "a separate clinical responsibility -- this is only about the "
+                "physical security of the area. If a security breach is also a "
+                "safety incident, report it through the incident system too.",
+            ],
+            oe_code="FMS.2.c",
+            boundary=[
+                "COP.8.f owns the care process of matching and handing over a "
+                "neonate and the missing-child response; COP.12.b owns bedside "
+                "observation of a vulnerable adult -- this step owns the locks, "
+                "access control and written description, not those care "
+                "processes.",
+                "A breach that is also an incident is dual-entered in PSQ.5.",
+            ],
+        ),
+        PlainItem(
+            heading="Monthly safety walk-through",
+            why=(
+                "A hazard that sits unnoticed for weeks is a hazard waiting for "
+                "someone to get hurt by it. The monthly round exists to find it "
+                "before a patient, staff member or visitor does -- every month, "
+                "without exception, because risk doesn't wait for a convenient "
+                "quarter."
+            ),
+            body=[
+                "Walk every ward and support area at least once a month -- this "
+                "interval is fixed, not something the hospital can change.",
+                "Look for: blocked exits, broken grab rails, wet floors with no "
+                "warning sign, unlabelled chemicals, old items left lying around, "
+                "open electrical panels. (A missing fire extinguisher is reported "
+                "through the Fire Safety SOP instead.)",
+                "«Hospital to define: who does the walk-through, which route they "
+                "take, and how findings get fixed.» If a month is missed, that's a "
+                "defect to report -- not something to quietly catch up on later.",
+            ],
+            oe_code="FMS.2.d (Core)",
+            boundary=[
+                "The monthly interval is set by the objective element itself and "
+                "is not hospital-optional.",
+                "A finding that is also an incident is dual-entered in PSQ.5; "
+                "ROM.4.a may use round findings as risk inputs without this step "
+                "ceasing to be the facility method of record.",
+            ],
+        ),
+        PlainItem(
+            heading="Electrical safety audit",
+            why=(
+                "Faulty wiring next to people who can't evacuate quickly on their "
+                "own isn't an inconvenience -- it's a fire risk. The audit repeats "
+                "because a building's wiring doesn't stay safe forever just "
+                "because it was safe on the day it was built."
+            ),
+            body=[
+                "Check: earthing, earth-leakage protection in wet areas and "
+                "patient-care areas, overloaded circuits, damaged cords, sockets "
+                "in wet areas, panel labelling and locks, and backup power in the "
+                "operating theatre if the hospital runs one.",
+                "«Hospital to define: who audits (in-house or contractor), how "
+                "often, and the rule for isolating a failed circuit until it's "
+                "fixed.» A faulty medical device is a different process -- this is "
+                "only about the building wiring.",
+            ],
+            oe_code="FMS.2.e",
+            boundary=[
+                "This is not the FMS.1.e loaded DG test and not FMS.3's "
+                "calibration of a medical device.",
+                "A failed medical device remains FMS.3's concern; a failed "
+                "building circuit is this audit's concern.",
+            ],
+            technical_sources=[
+                "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/) (as the framework pointing to IS 732 wiring practice and IS 3043 earthing).",
+            ],
+        ),
+        PlainItem(
+            heading="Tagging and removing items no longer in use",
+            why=(
+                "An untagged, broken item left in a corner is an injury waiting "
+                "to happen -- to a patient who leans on it, or a staff member who "
+                "trusts it's still in service. Tagging it the same day it's taken "
+                "out of use removes that risk immediately, not eventually."
+            ),
+            body=[
+                "Any item no longer in use -- a broken bed, an old monitor, "
+                "leftover construction material, expired non-medical stock -- "
+                "gets a tag the same day it's taken out of use. The tag shows "
+                "what it is, where it is, the date, and who condemned it.",
+                "Do not reuse a tagged item on a patient. Store it somewhere it "
+                "can't be picked up by mistake, until it's collected or sold.",
+                "This is for equipment and furniture -- not clinical waste like "
+                "used dressings or needles, which has its own separate process.",
+                "«Hospital to define: who is allowed to condemn an item, and how "
+                "often tagged items are checked and cleared.»",
+            ],
+            oe_code="FMS.2.f (Commitment, ASTERISKED)",
+            boundary=[
+                "Distinct from HIC.3's biomedical-waste stream: HIC.3 owns "
+                "colour, internal transport, SPCB and common-facility handover. "
+                "This step is material not in use, not the four-colour clinical "
+                "waste stream pointed at as the answer.",
+                "Who authorises condemnation includes FMS.3 strike-off when the "
+                "item is equipment.",
+            ],
+            technical_sources=[
+                "World Health Organization. (2014). [Safe Management of Wastes from Health-Care Activities](https://www.who.int/publications-detail-redirect/9789241548564) (2nd ed.). Waste framework only; BMW colour-coding and SPCB handover remain HIC.3.",
+            ],
+        ),
+        PlainItem(
+            heading="Hazardous chemicals -- list, label, protect",
+            why=(
+                "An unlabelled chemical is a guess waiting to go wrong -- the "
+                "wrong product on the wrong surface, or on someone's bare skin. "
+                "The list and the labels exist so nobody handling them ever has "
+                "to guess."
+            ),
+            body=[
+                "Keep one list of every hazardous chemical in the building -- "
+                "cleaning chemicals, water-treatment chemicals, diesel and other "
+                "fuel, mercury (if any old thermometers or BP machines are still "
+                "in use), engineering solvents.",
+                "Every container must be labelled. Store and separate chemicals "
+                "by type. Staff who handle them get the right protective gear.",
+                "«Hospital to define: who checks this list, how often, and what "
+                "to do if a spill happens.»",
+                "If a chemical spills, don't treat it like a blood spill or a lab "
+                "chemical spill -- those have their own separate SOPs.",
+            ],
+            oe_code="FMS.2.g (Core, ASTERISKED)",
+            boundary=[
+                "Not HIC.2's blood/body-fluid spill SOP, not MOM.8's cytotoxic "
+                "bench spill SOP, not HIC.3's BMW colours, and not AAC.6's "
+                "laboratory chemical-hygiene programme counted as the whole "
+                "hospital list -- dual entry applies when a spill meets two "
+                "definitions.",
+                "NBC 2016 storage provisions apply as the local authority applied "
+                "them; PESO/explosives rules for gas cylinders remain FMS.4, not "
+                "this chemical list counted twice.",
+            ],
+            technical_sources=[
+                "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/).",
+            ],
+        ),
+    ],
+    records_note="This SOP produces and maintains Records 1-7 (see the FMS.2 Records folder).",
+    related_documents=[
+        "Fire Safety SOP (FMS.5)",
+        "Medical Equipment Maintenance SOP (FMS.3)",
+        "Biomedical Waste SOP (HIC.3)",
+        "Blood/Body-Fluid Spill SOP (HIC.2)",
+        "Chemotherapy Spill SOP (MOM.8)",
+        "Laboratory Safety SOP (AAC.6)",
+    ],
+    review_text=(
+        "This SOP is reviewed at «Hospital to define the review interval», and "
+        "sooner when a monthly round was missed, or when a related SOP listed "
+        "above is updated."
+    ),
+    full_reference_list=FMS2_REFS,
+)
+
+
 RECORDS = [
     RecordSpec(
         oe_code="FMS.2.a",
@@ -639,8 +966,8 @@ RECORDS = [
 
 def main() -> None:
     sop_path = OUT_ROOT / "SOP_FMS.2.a_to_g_patient_family_staff_visitor_safety.docx"
-    build_sop(SOP, sop_path)
-    print(f"built {sop_path}")
+    build_sop_v2(SOP_V2, sop_path)
+    print(f"built {sop_path} (v2: plain body + audit appendix)")
 
     manifest_entries = [{
         "file": sop_path.name,

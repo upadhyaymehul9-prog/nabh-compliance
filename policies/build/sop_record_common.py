@@ -203,6 +203,162 @@ def build_sop(spec: SOPSpec, out_path: Path) -> None:
     doc.save(str(out_path))
 
 
+# ------------------------------------------------------- SOP, v2 format -----
+# Added Oct 2026 per Mk's explicit sign-off (sample iterated FMS.2_Combined_
+# SOP_SAMPLE v1-v4, approved): one controlled document, two parts.
+#   - Body: plain language, no NABH standard codes, no "NABH requires"
+#     framing. Each section gets one short "Why:" line, patient/family/
+#     staff-safety framed, never compliance-framed -- the only exception is
+#     the Purpose section, which keeps the original three boxes (plain
+#     summary / real trigger scenario / why-it-matters) because that's what
+#     Mk reviewed and approved as the document's front matter.
+#   - Appendix (after a page break): OE codes, boundary/disambiguation
+#     against neighbouring standards, and verified hyperlinked citations,
+#     ending in one consolidated reference list. For the Quality Coordinator
+#     and NABH assessment use -- staff never need to read past "7. Review".
+#
+# This is intentionally a separate dataclass/function pair from SOPSpec/
+# build_sop above, not a parameter bolted onto it: every other built chapter
+# (AAC/COP/ROM/HRM, and FMS.1/.3/.4/.5 until each is separately approved in
+# this new format) keeps using build_sop() unchanged. Nothing here is wired
+# into that path.
+
+def _box(doc: Document, text: str) -> None:
+    _add_single_cell_table(doc, text)
+
+
+def _three_boxes(doc: Document, plain: str, trigger: str, why: str) -> None:
+    _box(doc, plain)
+    _box(doc, trigger)
+    _box(doc, why)
+
+
+@dataclass
+class PlainItem:
+    heading: str                 # plain, no code, e.g. "Keeping patient-safety devices working"
+    why: str                     # one line, patient/family/staff-safety framed, no NABH/codes
+    body: list[str]              # plain-language paragraphs, codes/jargon stripped
+    oe_code: str                 # appendix only, e.g. "FMS.2.a" or "FMS.2.f (Commitment, ASTERISKED)"
+    boundary: list[str] = field(default_factory=list)   # appendix only
+    technical_sources: list[str] | None = None          # appendix only
+
+
+@dataclass
+class SOPSpecV2:
+    sop_no: str
+    title: str
+    purpose_plain: str                 # box 1 under Purpose
+    purpose_trigger: str                # box 2
+    purpose_why: str                    # box 3 -- patient-safety framed, not "NABH requires"
+    purpose_text: str                   # the actual Purpose paragraph
+    scope_why: str
+    scope_text: str
+    responsibility_why: str
+    responsibilities: list[tuple[str, str]]
+    items: list[PlainItem]
+    records_note: str
+    related_documents: list[str]
+    review_text: str
+    full_reference_list: list[str]
+    effective_date_placeholder: str = "«________»"
+    version: str = "1.0"
+
+
+def build_sop_v2(spec: SOPSpecV2, out_path: Path) -> None:
+    doc = Document()
+
+    doc.add_paragraph("Standard Operating Procedure")
+    doc.add_paragraph(spec.title)
+    doc.add_paragraph(f"«Hospital Name» — {spec.sop_no} — Version {spec.version}")
+    doc.add_paragraph("")
+
+    ctrl = doc.add_table(rows=2, cols=4)
+    ctrl.style = "Table Grid"
+    ctrl.rows[0].cells[0].text = "SOP No."
+    ctrl.rows[0].cells[1].text = spec.sop_no
+    ctrl.rows[0].cells[2].text = "Version"
+    ctrl.rows[0].cells[3].text = spec.version
+    ctrl.rows[1].cells[0].text = "Effective Date"
+    ctrl.rows[1].cells[1].text = spec.effective_date_placeholder
+    ctrl.rows[1].cells[2].text = "Review Frequency"
+    ctrl.rows[1].cells[3].text = "Annual, or on change"
+    doc.add_paragraph("")
+
+    # ---- Body ----
+    doc.add_heading("1. Purpose", level=1)
+    _three_boxes(doc, spec.purpose_plain, spec.purpose_trigger, spec.purpose_why)
+    doc.add_paragraph(spec.purpose_text)
+
+    doc.add_heading("2. Scope", level=1)
+    p = doc.add_paragraph()
+    p.add_run("Why: ").italic = True
+    p.add_run(spec.scope_why)
+    doc.add_paragraph(spec.scope_text)
+
+    doc.add_heading("3. Responsibility", level=1)
+    p = doc.add_paragraph()
+    p.add_run("Why: ").italic = True
+    p.add_run(spec.responsibility_why)
+    for role, text in spec.responsibilities:
+        rp = doc.add_paragraph()
+        rp.add_run(f"{role}: ").bold = True
+        rp.add_run(text)
+
+    doc.add_heading("4. What to do", level=1)
+    for item in spec.items:
+        doc.add_heading(item.heading, level=2)
+        p = doc.add_paragraph()
+        p.add_run("Why: ").italic = True
+        p.add_run(item.why)
+        for para in item.body:
+            doc.add_paragraph(para)
+
+    doc.add_heading("5. Records", level=1)
+    doc.add_paragraph(spec.records_note)
+
+    doc.add_heading("6. Related SOPs", level=1)
+    for rd in spec.related_documents:
+        doc.add_paragraph(rd, style="List Paragraph")
+
+    doc.add_heading("7. Review", level=1)
+    doc.add_paragraph(spec.review_text)
+
+    # ---- Appendix ----
+    doc.add_page_break()
+    doc.add_heading("Appendix — NABH Standard Cross-Reference and Evidence Basis", level=1)
+    doc.add_paragraph(
+        "For the Quality Coordinator and NABH assessment use only. The reasoning "
+        "and real-world triggers for each requirement are already in the body "
+        "above -- this appendix adds only what the body deliberately leaves out: "
+        "the exact objective-element code, how this SOP's scope is kept separate "
+        "from neighbouring standards, and the verified technical source for "
+        "anything cited."
+    )
+    for item in spec.items:
+        doc.add_heading(f"{item.heading} — {item.oe_code}", level=2)
+        if item.boundary:
+            bp = doc.add_paragraph()
+            bp.add_run("Boundary with other standards:").italic = True
+            for b in item.boundary:
+                doc.add_paragraph(f"• {b}", style="List Paragraph")
+        if item.technical_sources:
+            sp = doc.add_paragraph()
+            sp.add_run("Verified source(s):").italic = True
+            for src in item.technical_sources:
+                dp = doc.add_paragraph(style="List Paragraph")
+                dp.add_run("• ")
+                _render_source_text(dp, src)
+
+    doc.add_heading("Full reference list", level=2)
+    for src in spec.full_reference_list:
+        dp = doc.add_paragraph(style="List Paragraph")
+        dp.add_run("• ")
+        _render_source_text(dp, src)
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    doc.save(str(out_path))
+
+
 # -------------------------------------------------------------- Record -----
 
 @dataclass
