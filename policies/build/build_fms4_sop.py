@@ -24,7 +24,16 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from sop_record_common import ProcedureBlock, RecordSpec, SOPSpec, build_record, build_sop
+from sop_record_common import (
+    PlainItem,
+    ProcedureBlock,
+    RecordSpec,
+    SOPSpec,
+    SOPSpecV2,
+    build_record,
+    build_sop,
+    build_sop_v2,
+)
 
 OUT_ROOT = Path(__file__).parent / "sop_record_masters" / "FMS"
 
@@ -276,6 +285,223 @@ SOP = SOPSpec(
 )
 
 
+#  ------------------------------------------------------------------ v2 ----
+SOP_V2 = SOPSpecV2(
+    sop_no="SOP-FMS.4",
+    title="Medical Gases, Vacuum and Compressed Air",
+    purpose_plain=(
+        "This SOP tells engineering, theatre, ICU and quality staff, in one "
+        "place, how this hospital procures, stores, handles, distributes, "
+        "uses and replenishes medical gases; how it keeps alternate sources "
+        "ready and actually tested; and -- where a piped system exists -- how "
+        "that pipeline is inspected, tested and maintained. If you change a "
+        "cylinder, open a plant room, or check gas identity at a workstation, "
+        "this SOP is for you."
+    ),
+    purpose_trigger=(
+        "A theatre nurse is about to open a new oxygen cylinder at 2am. This "
+        "SOP is what tells her to check the cylinder identity and connector "
+        "before fitting it, who else must be present for that check, and "
+        "which record to log it in -- not to assume the label on the rack is "
+        "correct."
+    ),
+    purpose_why=(
+        "We do this because the wrong gas, or no gas, at the point where a "
+        "patient needs it is one of the fastest ways a hospital can cause "
+        "real harm. Checking identity before use, keeping backups genuinely "
+        "tested, and maintaining the pipeline properly are what keep that "
+        "from happening."
+    ),
+    purpose_text=(
+        "To define how «Hospital Name» procures, handles, stores, "
+        "distributes, uses and replenishes the medical gases it actually "
+        "uses; keeps alternate sources ready and functioning-tested; and -- "
+        "where a piped medical-gas pipeline system exists -- operates, "
+        "inspects, tests and maintains it."
+    ),
+    scope_why=(
+        "so a gas-related problem always has one clear place to be handled -- "
+        "and so a gas this hospital doesn't use is simply recorded as absent, "
+        "not left as an unanswered question."
+    ),
+    scope_text=(
+        "Applies to every medical gas, vacuum and compressed-air system "
+        "«Hospital Name» actually uses. A gas this hospital doesn't use is a "
+        "recorded absence, not a gap. Does not cover electrical backup of "
+        "the plant, a gas leak treated as a declared emergency, or "
+        "biomedical-waste cylinder disposal -- those remain their own SOPs. "
+        "See Related SOPs."
+    ),
+    responsibility_why=(
+        "mixed full/empty cylinders, an untested reserve, or a forced "
+        "connector are exactly the moments a patient can be given the wrong "
+        "gas, or none at all. Naming who checks identity and who holds the "
+        "guidance is what catches that before it reaches a patient."
+    ),
+    responsibilities=[
+        ("Head of the Institution",
+         "Is accountable that medical gases, vacuum and compressed air are "
+         "managed as this SOP requires."),
+        ("Named Engineering/Gas-Plant Lead",
+         "Holds the written guidance, store checks, backup tests and piped-"
+         "system file (or recorded absence)."),
+        ("Clinical Users",
+         "Check gas identity at the point of use and never force a "
+         "mismatched connector."),
+        ("Quality/Accreditation Coordinator",
+         "Audits a sample of the records this SOP produces, at «Hospital to "
+         "define» frequency."),
+        ("All Staff",
+         "Treat mixed full/empty cylinders, an untested reserve, a forced "
+         "connector, or an unlabelled piped terminal, as defects to "
+         "report."),
+    ],
+    items=[
+        PlainItem(
+            heading="Written guidance covering the whole gas lifecycle",
+            why=(
+                "A hospital can use oxygen correctly at the theatre table "
+                "and still store it against a heater, or buy it correctly "
+                "and never replenish the reserve. One lapse anywhere in the "
+                "chain is enough to put a patient at risk -- the guidance "
+                "has to cover every step, not just the one an inspector "
+                "happens to ask about."
+            ),
+            body=[
+                "Written guidance covers procurement, handling, storage, "
+                "distribution, usage and replenishment of medical gases -- "
+                "all six, not a supplier brochure or a pocket guide offered "
+                "as the hospital SOP.",
+                "«Hospital to define: which gases this hospital actually "
+                "uses, who may procure from which licensed source, how a "
+                "delivery is accepted (identity, pressure, connector, "
+                "expiry/batch), and how storage, distribution, use and "
+                "replenishment are each governed.»",
+                "A gas we don't use is a recorded absence, not a gap to be "
+                "explained away. Guidance that covers cylinders in stores "
+                "but says nothing about who changes a cylinder at 2am "
+                "doesn't satisfy this.",
+            ],
+            oe_code="FMS.4.a (Commitment, ASTERISKED)",
+            boundary=[
+                "Equipment maintenance (FMS.3) is not this step's gas "
+                "procurement -- the two remain separate documents even "
+                "where the same lead holds both.",
+            ],
+            technical_sources=[
+                "British Compressed Gases Association. [Medical Gases guidance notes](https://bcga.co.uk/pubcat/guidance-notes/).",
+                "Chrisman, M. (ASHE Management Monograph). [Medical Gas Cylinder and Bulk Tank Storage](https://ashe.org/tankstorage?page=45), summarizing NFPA 99/101 requirements.",
+            ],
+        ),
+        PlainItem(
+            heading="Handling gas safely, every time",
+            why=(
+                "A \"full\" rack that actually contains empties, or a "
+                "theatre opening a new cylinder with no second person "
+                "checking gas identity, fails in exactly the moment it "
+                "matters most -- at the point a patient is relying on it, "
+                "not in the store where there's time to notice."
+            ),
+            body=[
+                "Full and empty cylinders are segregated; cylinders are "
+                "chained or nested, upright, away from oil, grease, heaters "
+                "and electrical panels; connections are never forced.",
+                "Oxygen-enriched areas aren't where a sparking tool is "
+                "used; portable cylinders in transit are capped and not "
+                "rolled on their side down a stair.",
+                "«Hospital to define: how staff handle, store, distribute "
+                "and use medical gases, including full/empty segregation "
+                "and identity check at use» -- the check that the gas at "
+                "the workstation is the gas intended.",
+            ],
+            oe_code="FMS.4.b (Core)",
+        ),
+        PlainItem(
+            heading="Backup gas and vacuum that are actually tested",
+            why=(
+                "A reserve bank that's never been opened on test, or a "
+                "changeover that's manual at 3am with no one trained to run "
+                "it, isn't a backup -- it's a single point of failure that "
+                "looks like a backup on paper."
+            ),
+            body=[
+                "Alternate oxygen is the reserve that supplies points of "
+                "use when the primary source fails: a second manifold "
+                "bank, a reserve cylinder set, or a documented diversion.",
+                "Alternate vacuum is portable suction at every critical "
+                "point of use, or a second pump. Alternate compressed/"
+                "medical air is whatever this hospital has defined, or a "
+                "recorded absence if we don't use that gas.",
+                "The test is a functioning test: gas actually flows from "
+                "the alternate source, vacuum actually aspirates, alarms "
+                "actually sound. A paper changeover checklist with no flow "
+                "isn't a test.",
+                "«Hospital to define: which alternate source exists for "
+                "each gas/vacuum/air we use, the functioning-test method, "
+                "and the test frequency.»",
+            ],
+            oe_code="FMS.4.c (Core)",
+            boundary=[
+                "Electrical backup of the plant is FMS.1.e's; this step is "
+                "the gas path specifically.",
+            ],
+            technical_sources=[
+                "Department of Health, Estates and Facilities Division. (2006). [Medical Gas Pipeline Systems (HTM 02-01)](https://www.england.nhs.uk/wp-content/uploads/2021/05/HTM_02-01_Part_A.pdf).",
+                "Sarangi, S., Babbar, S., & Taneja, D. (2018). [Safety of the medical gas pipeline system](https://doi.org/10.4103/joacp.JOACP_274_16). Journal of Anaesthesiology Clinical Pharmacology, 34(1), 99-102.",
+            ],
+        ),
+        PlainItem(
+            heading="Maintaining the piped gas system, where we have one",
+            why=(
+                "A terminal unit that delivers the wrong gas after a repair "
+                "can be fatal, immediately. A commissioning certificate "
+                "from the year the pipe was laid proves nothing about "
+                "whether it's safe today."
+            ),
+            body=[
+                "If this hospital has no piped medical-gas pipeline system "
+                "(MGPS), that's a recorded absence, signed by the named "
+                "lead -- not a pipeline SOP written just for assessment.",
+                "If a piped system exists, «Hospital to define: the "
+                "operational plan (who may isolate a zone, who may open a "
+                "plant room), the inspection plan (plant, alarms, "
+                "terminals, labelling), the testing plan (pressure, "
+                "identity after work, alarm function), and the maintenance "
+                "plan (filters, dryers, pumps, manifolds).»",
+                "Work on a live oxygen pipe is a planned isolation with "
+                "clinical notice -- not an ad hoc repair during a live "
+                "case.",
+            ],
+            oe_code="FMS.4.d (Commitment, ASTERISKED)",
+            boundary=[
+                "A terminal unit delivering the wrong gas after a repair, "
+                "with patients on the line, is both a failure of this step "
+                "and a declared FMS.5 emergency.",
+            ],
+            technical_sources=[
+                "Department of Health, Estates and Facilities Division. (2006). [Medical Gas Pipeline Systems (HTM 02-01)](https://www.england.nhs.uk/wp-content/uploads/2021/05/HTM_02-01_Part_A.pdf).",
+                "British Standards Institution. (2014). [Respiratory equipment — Compressed gases for breathing apparatus (BS EN 12021:2014)](https://knowledge.bsigroup.com/products/respiratory-equipment-compressed-gases-for-breathing-apparatus-2).",
+                "International Organization for Standardization. (2018). [Pressure regulators for use with medical gases (ISO 10524-2:2018)](https://www.iso.org/standard/67190.html).",
+                "National Fire Protection Association. Medical Gas and Vacuum Systems Installation Handbook.",
+            ],
+        ),
+    ],
+    records_note="This SOP produces and maintains Records 1-4 (see the FMS.4 Records folder).",
+    related_documents=[
+        "Hospital's Service Directory (AAC.1)",
+        "Alternate Electricity/Water Backup SOP (FMS.1.e)",
+        "Fire and Non-Fire Emergencies SOP (FMS.5)",
+        "Applicable-Legislation Register (ROM.2.c)",
+    ],
+    review_text=(
+        "This SOP is reviewed at «Hospital to define the review interval», "
+        "and sooner when a wrong-gas or empty-reserve event occurred, or "
+        "when a related SOP listed above is updated."
+    ),
+    full_reference_list=FMS4_REFS,
+)
+
+
 RECORDS = [
     RecordSpec(
         oe_code="FMS.4.a",
@@ -434,8 +660,8 @@ RECORDS = [
 
 def main() -> None:
     sop_path = OUT_ROOT / "SOP_FMS.4.a_to_d_medical_gases_vacuum_compressed_air.docx"
-    build_sop(SOP, sop_path)
-    print(f"built {sop_path}")
+    build_sop_v2(SOP_V2, sop_path)
+    print(f"built {sop_path} (v2: plain body + audit appendix)")
 
     manifest_entries = [{
         "file": sop_path.name,

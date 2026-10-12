@@ -22,7 +22,16 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from sop_record_common import ProcedureBlock, RecordSpec, SOPSpec, build_record, build_sop
+from sop_record_common import (
+    PlainItem,
+    ProcedureBlock,
+    RecordSpec,
+    SOPSpec,
+    SOPSpecV2,
+    build_record,
+    build_sop,
+    build_sop_v2,
+)
 
 OUT_ROOT = Path(__file__).parent / "sop_record_masters" / "FMS"
 
@@ -315,6 +324,284 @@ SOP = SOPSpec(
 )
 
 
+#  ------------------------------------------------------------------ v2 ----
+SOP_V2 = SOPSpecV2(
+    sop_no="SOP-FMS.3",
+    title="Medical and Support-Service Equipment Programme",
+    purpose_plain=(
+        "This SOP tells biomedical, engineering, clinical and quality staff, "
+        "in one place, how this hospital plans, inventories, maintains, "
+        "calibrates, staffs, monitors for recalls, and tracks downtime of "
+        "every piece of medical and support-service equipment it runs. If you "
+        "operate a device, maintain one, sign off a maintenance job card, or "
+        "hold the inventory, this SOP is for you."
+    ),
+    purpose_trigger=(
+        "A ward nurse reports an infusion pump alarming erratically at 11pm. "
+        "This SOP is what tells them which log to report it in, who attends, "
+        "whether a loaner is available while it's down, and that the downtime "
+        "clock runs from the report, not from when the engineer happens to "
+        "arrive."
+    ),
+    purpose_why=(
+        "We do this because a device that fails silently, or sits broken "
+        "while nobody's clock is running, puts the next patient who needs it "
+        "at risk. Planning, inventorying, maintaining and tracking every "
+        "piece of equipment is what makes sure the device works when someone "
+        "actually needs it."
+    ),
+    purpose_text=(
+        "To define how «Hospital Name» plans, inventories, maintains, "
+        "calibrates, staffs, and monitors recalls and downtime for every "
+        "piece of medical and support-service equipment it runs, matched to "
+        "the services it actually offers and its strategic plan."
+    ),
+    scope_why=(
+        "so every piece of equipment in use -- owned, loaned, consigned or "
+        "outsourced -- has one clear owner and one clear process, instead of "
+        "falling through a gap between \"that's not really ours\" and nobody's "
+        "maintenance schedule."
+    ),
+    scope_text=(
+        "Applies to every medical and support-service equipment item at "
+        "«Hospital Name», owned, loaned, consigned or outsourced. Does not "
+        "cover steriliser process validation, laboratory/imaging calibration "
+        "no-report rules, implant traceability, or the crash-cart checklist "
+        "-- those remain their own SOPs. See Related SOPs."
+    ),
+    responsibility_why=(
+        "an uninventoried device in clinical use can't be maintained, "
+        "calibrated or recalled against -- naming who holds each record is "
+        "what makes the rest of this SOP actually work."
+    ),
+    responsibilities=[
+        ("Head of the Institution",
+         "Is accountable that the equipment programme runs as this SOP "
+         "requires."),
+        ("Named Biomedical/Engineering Lead",
+         "Holds the inventory, maintenance, calibration, recall and "
+         "downtime records."),
+        ("Clinical Heads",
+         "Don't let staff operate a device they aren't trained for, and "
+         "don't issue a lab or imaging report from an overdue calibrator."),
+        ("Quality/Accreditation Coordinator",
+         "Audits a sample of the records this SOP produces, at «Hospital to "
+         "define» frequency."),
+        ("All Staff",
+         "Treat an uninventoried device in use, an overdue calibrator still "
+         "in service, or a recall that didn't reach the ward, as defects to "
+         "report."),
+    ],
+    items=[
+        PlainItem(
+            heading="Planning equipment against what we actually treat",
+            why=(
+                "Equipment bought without reference to what we actually "
+                "treat is how a hospital ends up with devices for services "
+                "it doesn't run, and no plan for the ones it does -- and a "
+                "patient needing a device the hospital never planned for."
+            ),
+            body=[
+                "Our service directory and strategic plan are the single "
+                "source of what equipment we need, including replacement of "
+                "condemned items.",
+                "«Hospital to define: how equipment is planned against "
+                "services actually offered» -- who signs that a new service "
+                "has the equipment it needs before it's offered, and how a "
+                "gap is recorded.",
+                "Equipment for a service not in our directory isn't planned "
+                "under this step.",
+            ],
+            oe_code="FMS.3.a",
+            boundary=[
+                "Planning is matched against the AAC.1 service directory "
+                "and ROM.3.a strategic plan/budget approval; replacement of "
+                "a condemned item traces to FMS.2.f.",
+            ],
+            technical_sources=[
+                "Ministry of Health & Family Welfare, Government of India. [Biomedical Equipment Management and Maintenance Programme (BMMP)](https://mohfw.gov.in/sites/default/files/BMMP%20Technical%20Manual.pdf).",
+                "National Health Mission. (2022). [Indian Public Health Standards](https://nhsrcindia.org/sites/default/files/CHC%20IPHS%202022%20Guidelines%20pdf.pdf).",
+            ],
+        ),
+        PlainItem(
+            heading="Keeping one inventory and logs for every device",
+            why=(
+                "A device in clinical use that isn't on the inventory can't "
+                "be maintained, calibrated or recalled against -- it's "
+                "invisible to every safety check we run, until it fails on "
+                "a patient."
+            ),
+            body=[
+                "Medical and support-service equipment are inventoried, and "
+                "proper logs are kept, identifying each item that can harm "
+                "a patient if it fails or is missing: unique identifier, "
+                "location, owner department, criticality, and whether it's "
+                "owned, loaned, consigned or outsourced.",
+                "«Hospital to define: what's on the inventory, what a log "
+                "contains, and how a loaner or outsourced device is still "
+                "listed» -- an item in use that isn't on the inventory is a "
+                "defect.",
+            ],
+            oe_code="FMS.3.b",
+            boundary=[
+                "Specialty department registers and a crash-cart checklist "
+                "don't replace this hospital-wide inventory or a "
+                "defibrillator's own equipment file.",
+            ],
+        ),
+        PlainItem(
+            heading="Keeping the maintenance plan actually running",
+            why=(
+                "A binder of manufacturer manuals, or a sticker with no job "
+                "card, protects nobody. A device that was supposed to be "
+                "serviced but wasn't is a device that can fail exactly when "
+                "a patient is relying on it."
+            ),
+            body=[
+                "Our documented maintenance (preventive and breakdown) plan "
+                "is implemented -- not merely written.",
+                "Manufacturer instructions inform the task list; they don't "
+                "substitute for a hospital plan naming who does the work.",
+                "«Hospital to define: the maintenance plan and how "
+                "implementation is evidenced» -- who may operate which "
+                "class, the preventive plan (task, interval by criticality, "
+                "who attends, what's recorded), the breakdown plan (how a "
+                "user reports, who attends, loaner rule), and proof of "
+                "implementation on a sample of critical items.",
+            ],
+            oe_code="FMS.3.c (Core, ASTERISKED)",
+            boundary=[
+                "Steriliser process validation and the no-report-from-"
+                "overdue-calibrator rules for lab/imaging devices remain "
+                "separate SOPs; this step doesn't restate either.",
+            ],
+            technical_sources=[
+                "Ministry of Health & Family Welfare, Government of India. [Biomedical Equipment Management and Maintenance Programme (BMMP)](https://mohfw.gov.in/sites/default/files/BMMP%20Technical%20Manual.pdf).",
+            ],
+        ),
+        PlainItem(
+            heading="Inspecting and calibrating equipment",
+            why=(
+                "Inspection confirms a device is safe to use; calibration "
+                "confirms it measures correctly. A device that looks fine "
+                "but silently measures wrong can lead to a wrong dose, a "
+                "wrong reading, or a wrong decision about a patient."
+            ),
+            body=[
+                "Inspection is the in-service check that an item is safe to "
+                "use (housing, leads, alarms, accessories). Calibration is "
+                "the measurement check against a traceable standard, for "
+                "items that measure or deliver a quantity.",
+                "«Hospital to define: which items need calibration versus "
+                "inspection-only, the interval, the traceable standard or "
+                "vendor, and the rule that an overdue measuring device is "
+                "withdrawn from service until it passes.»",
+            ],
+            oe_code="FMS.3.d",
+            boundary=[
+                "The no-report rules for overdue lab or imaging calibrators "
+                "live on their own SOPs; this step is that those due dates "
+                "sit on one hospital-wide programme.",
+            ],
+        ),
+        PlainItem(
+            heading="Making sure only trained people use or fix equipment",
+            why=(
+                "A nurse using an infusion pump she was never shown, or a "
+                "technician without a job card working on a device, means "
+                "the device being present and working isn't enough -- the "
+                "person touching it has to actually know what they're "
+                "doing."
+            ),
+            body=[
+                "Qualified and trained people operate and maintain our "
+                "equipment. Operators are the clinical or technical users; "
+                "maintainers are biomedical/engineering or the contracted "
+                "workshop.",
+                "«Hospital to define: which roles may operate which class, "
+                "which roles may maintain which class, and how training is "
+                "recorded.»",
+            ],
+            oe_code="FMS.3.e",
+        ),
+        PlainItem(
+            heading="Acting on recalls and hazard notices",
+            why=(
+                "A recall letter that sits in the quality office without "
+                "reaching the ward does nothing to protect the next patient "
+                "who's given that device. Acting on it, not just filing it, "
+                "is what actually keeps someone safe."
+            ),
+            body=[
+                "We monitor our medical equipment and devices for adverse "
+                "events, and comply with hazard notices and recalls -- the "
+                "after-market safety net, separate from planned "
+                "maintenance.",
+                "«Hospital to define: how a device-related adverse event is "
+                "captured, how hazard notices and recalls are received, how "
+                "the inventory is searched, how affected items are "
+                "quarantined and returned or destroyed, and who signs "
+                "compliance.»",
+                "A recall filed against a serial number not on our "
+                "inventory, or a recalled item left in the ward because "
+                "\"stores will collect it,\" is a failure of this step.",
+            ],
+            oe_code="FMS.3.f (Achievement, ASTERISKED)",
+            boundary=[
+                "A device adverse event that harmed a patient is dual-"
+                "entered with PSQ.5; one that's also a medication-delivery "
+                "event is dual-entered with MOM.7.",
+            ],
+            technical_sources=[
+                "Central Drugs Standard Control Organisation. [Medical Devices and Diagnostics](https://cdsco.gov.in/opencms/opencms/en/Medical-Device-Diagnostics/).",
+                "Government of India. (2017). [Medical Devices Rules, 2017](https://cdsco.gov.in/opencms/resources/UploadCDSCOWeb/2022/m_device/mdr,%202017%20(1).pdf), read with the Drugs and Cosmetics Act, 1940.",
+            ],
+        ),
+        PlainItem(
+            heading="Timing equipment breakdowns, not just logging them",
+            why=(
+                "A breakdown register that records only the engineer's "
+                "arrival, not the hours a procedure list was stopped, "
+                "misses what actually matters: how long a patient went "
+                "without the equipment they needed."
+            ),
+            body=[
+                "We monitor downtime for critical equipment from the "
+                "moment it's reported to inspection and corrective action. "
+                "Critical equipment is the subset of our inventory whose "
+                "failure stops a defined service.",
+                "Downtime starts when the user reports and ends when the "
+                "item is inspected and corrective action has restored it, "
+                "or a defined alternative is in place (loaner, diversion, "
+                "recorded service pause).",
+                "«Hospital to define: the critical-equipment list and "
+                "downtime monitoring from report to corrective action.»",
+            ],
+            oe_code="FMS.3.g",
+            boundary=[
+                "A diverted service remains an AAC.1/AAC.2 matter -- this "
+                "downtime clock still runs while it's diverted.",
+            ],
+        ),
+    ],
+    records_note="This SOP produces and maintains Records 1-7 (see the FMS.3 Records folder).",
+    related_documents=[
+        "Hospital's Service Directory (AAC.1)",
+        "Strategic Plan and Budget Approval (ROM.3.a)",
+        "Steriliser Process Validation SOP (HIC.6)",
+        "Laboratory and Imaging Calibration No-Report Rules (AAC.4.h, AAC.5.i)",
+        "Implant Traceability SOP (MOM.9)",
+        "Crash-Cart Checklist (COP.3)",
+    ],
+    review_text=(
+        "This SOP is reviewed at «Hospital to define the review interval», "
+        "and sooner when a recall was missed, or when a related SOP listed "
+        "above is updated."
+    ),
+    full_reference_list=FMS3_REFS,
+)
+
+
 RECORDS = [
     RecordSpec(
         oe_code="FMS.3.a",
@@ -594,8 +881,8 @@ RECORDS = [
 
 def main() -> None:
     sop_path = OUT_ROOT / "SOP_FMS.3.a_to_g_medical_support_equipment_programme.docx"
-    build_sop(SOP, sop_path)
-    print(f"built {sop_path}")
+    build_sop_v2(SOP_V2, sop_path)
+    print(f"built {sop_path} (v2: plain body + audit appendix)")
 
     manifest_entries = [{
         "file": sop_path.name,

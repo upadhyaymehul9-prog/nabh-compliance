@@ -22,7 +22,16 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from sop_record_common import ProcedureBlock, RecordSpec, SOPSpec, build_record, build_sop
+from sop_record_common import (
+    PlainItem,
+    ProcedureBlock,
+    RecordSpec,
+    SOPSpec,
+    SOPSpecV2,
+    build_record,
+    build_sop,
+    build_sop_v2,
+)
 
 OUT_ROOT = Path(__file__).parent / "sop_record_masters" / "FMS"
 
@@ -297,6 +306,292 @@ SOP = SOPSpec(
 )
 
 
+#  ------------------------------------------------------------------ v2 ----
+# Plain-language body + audit appendix, same format approved for FMS.2
+# (2026-10-12). Every boundary line and citation is the same fact already
+# in SOP/FMS1_REFS above -- only where each fact lives changes.
+SOP_V2 = SOPSpecV2(
+    sop_no="SOP-FMS.1",
+    title="Planned Facilities, Utilities and Environment-Friendly Measures",
+    purpose_plain=(
+        "This SOP tells facilities, engineering, clinical and quality staff, in "
+        "one place, how this hospital keeps its built space matched to what it "
+        "actually treats; keeps potable water and electricity live around the "
+        "clock, including at night; proves its backup sources actually carry "
+        "load rather than just crank once a week; and records real energy and "
+        "environment initiatives instead of a green-hospital poster. If you "
+        "hold drawings, watch utilities, run a backup test, or own the energy "
+        "file, this SOP is for you."
+    ),
+    purpose_trigger=(
+        "A night-shift engineer finds the OT scrub sink dry at 2am. This SOP is "
+        "what tells them which record to check, what counts as a failure "
+        "(a dry point of use, whatever the roof tank shows on paper), and which "
+        "alternate source should have carried it -- and that the alternate "
+        "source's last loaded test, not just its last no-load crank, is what "
+        "proves it should have worked."
+    ),
+    purpose_why=(
+        "We do this because a building that looks fine on a drawing can still "
+        "fail a patient at 2am. Matching space to what we actually treat, "
+        "keeping water and power live through the night, and proving backups "
+        "really carry load under pressure -- these are what stand between a "
+        "patient and a building that quietly stopped working for them."
+    ),
+    purpose_text=(
+        "To define how «Hospital Name» keeps its physical facilities, drawings, "
+        "wayfinding, potable water, electricity and their backups matched to "
+        "the services it actually runs, available round the clock, and "
+        "genuinely tested -- and how it records real initiatives toward an "
+        "energy-efficient and environment-friendly hospital, rather than a "
+        "certificate on a wall."
+    ),
+    scope_why=(
+        "so everyone knows which building failure belongs here and which "
+        "belongs to a different SOP -- that's what gets the right person "
+        "responding fast, instead of a dry tap or a dark corridor being "
+        "nobody's problem for an hour."
+    ),
+    scope_text=(
+        "Applies to every area of «Hospital Name» that depends on built space, "
+        "potable water or electricity: clinical, diagnostic, utility, storage "
+        "and staff areas alike. Does not cover medical and support-service "
+        "equipment, medical gases, fire and non-fire emergency response, "
+        "radiation signage, or biomedical-waste handling -- those remain their "
+        "own SOPs. See Related SOPs."
+    ),
+    responsibility_why=(
+        "a dark essential circuit or a dry clinical tap left unowned stays "
+        "broken. Naming exactly who holds drawings, who watches utilities and "
+        "who owns the backup tests is what gets it fixed before a patient is "
+        "affected, not after."
+    ),
+    responsibilities=[
+        ("Head of the Institution",
+         "Is accountable that facilities actually operate as this SOP "
+         "requires."),
+        ("Named Facilities/Engineering Lead",
+         "Holds drawings, utility availability and quality-test records, "
+         "loaded backup-test records, and the energy-initiative file."),
+        ("Clinical Heads",
+         "Confirm that built space still matches the services their "
+         "department actually runs."),
+        ("Quality/Accreditation Coordinator",
+         "Audits a sample of the records this SOP produces, at «Hospital to "
+         "define» frequency, and flags a mismatch rather than filing it."),
+        ("All Staff",
+         "Treat a dark essential circuit, a dry clinical tap, a drawing that "
+         "doesn't match the floor, or a green poster with no initiative "
+         "behind it, as defects to report."),
+    ],
+    items=[
+        PlainItem(
+            heading="Keeping built space matched to what we actually treat",
+            why=(
+                "A corridor pressed into service as a ward, or a sluice used "
+                "as a sterile store, puts patients in a space that was never "
+                "built to keep them safe. Matching the building to what we "
+                "actually treat is what prevents that."
+            ),
+            body=[
+                "Our service directory is the single source of what this "
+                "hospital actually provides; this step is the built match to "
+                "it -- waiting, clinical, diagnostic, utility, storage and "
+                "staff space that can physically hold those services.",
+                "«Hospital to define: how facilities and space are shown to "
+                "be appropriate to the services actually offered.»",
+                "A service not in the directory is a recorded absence here, "
+                "not a gap to be explained away.",
+            ],
+            oe_code="FMS.1.a",
+            boundary=[
+                "The AAC.1 service directory is the single source of truth "
+                "this step is matched against.",
+            ],
+            technical_sources=[
+                "National Health Mission. (2022). [Indian Public Health Standards](https://nhsrcindia.org/sites/default/files/CHC%20IPHS%202022%20Guidelines%20pdf.pdf).",
+                "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/).",
+            ],
+        ),
+        PlainItem(
+            heading="Keeping building drawings current",
+            why=(
+                "If a fire crew or a contractor is working from a drawing "
+                "that doesn't match what was actually built, they can open "
+                "the wrong panel or miss a wall that's no longer there. "
+                "Current drawings are what keep that from happening."
+            ),
+            body=[
+                "We keep one controlled, as-built set covering architectural, "
+                "structural, electrical, plumbing, fire/detection and "
+                "medical-gas drawings.",
+                "«Hospital to define: how as-built drawings are kept current "
+                "and who holds the controlled set.»",
+                "The set is updated whenever the building or a major service "
+                "run changes -- an update log, not a one-time filing.",
+            ],
+            oe_code="FMS.1.b",
+            boundary=[
+                "Named facilities lead holds the controlled set; FMS.4 and "
+                "FMS.5 are users of specific sheets, not second masters of "
+                "this record.",
+            ],
+            technical_sources=[
+                "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/).",
+            ],
+        ),
+        PlainItem(
+            heading="Signs people can actually read and follow",
+            why=(
+                "A first-time family that can't find the entrance, "
+                "registration, toilets or an exit -- in a language they "
+                "actually read -- is lost in a building when they're already "
+                "stressed. A sign nobody can read is a sign that was never "
+                "posted."
+            ),
+            body=[
+                "«Hospital to define: internal and external signage in the "
+                "languages and scripts our actual patients need.»",
+                "Signage is checked for faded, missing or contradictory "
+                "signs on a set schedule.",
+            ],
+            oe_code="FMS.1.c",
+            boundary=[
+                "Radiation/PC-PNDT signage and emergency exit displays are "
+                "separate documents; this step must be consistent with both "
+                "but doesn't duplicate or replace either.",
+            ],
+        ),
+        PlainItem(
+            heading="Water and power that stay on, day and night",
+            why=(
+                "A roof tank that looks full on paper while the OT scrub "
+                "sink is dry because a valve is shut, or a theatre going "
+                "dark because a changeover never closed, is a patient-safety "
+                "failure that happens at the exact moment someone needs "
+                "water or power most -- often at 3am, not during the morning "
+                "check."
+            ),
+            body=[
+                "Points of use for drinking, clinical wash, kitchen, CSSD "
+                "and dialysis (where we offer it) must actually deliver "
+                "water on demand, day and night.",
+                "«Hospital to define: potable-water quality-testing "
+                "parameters, sample points and interval.» Where dialysis "
+                "isn't offered, that's a recorded absence, not a gap.",
+                "Essential clinical and life-safety circuits -- at minimum "
+                "emergency, OT, labour, ICU/HDU, nursery and blood bank "
+                "where present, ventilators and their compressors, "
+                "emergency lighting, fire detection, and medical-gas plant "
+                "alarms -- stay energised at all times.",
+                "«Hospital to define: how round-the-clock availability is "
+                "watched, recorded and restored,» covering night and "
+                "holiday coverage, not only daytime checks.",
+            ],
+            oe_code="FMS.1.d (Core)",
+            boundary=[
+                "Kitchen water is owned by HIC.3 and used here only as a "
+                "utility point; dialysis water follows the haemodialysis-"
+                "water framework.",
+                "Fire detection (FMS.5) and medical-gas plant/manifold "
+                "alarms (FMS.4) are named here as essential circuits, not "
+                "restated as this step's own programme.",
+            ],
+            technical_sources=[
+                "World Health Organization. (2011). [Guidelines for Drinking-water Quality (4th ed.)](https://www.who.int/publications/i/item/9789241548151).",
+                "Coulliette, A. D., & Arduino, M. J. (2013). [Hemodialysis and water quality](https://stacks.cdc.gov/view/cdc/34845/cdc_34845_DS1.pdf). Seminars in Dialysis, 26(4), 427-438.",
+            ],
+        ),
+        PlainItem(
+            heading="Backup power and water that are actually tested",
+            why=(
+                "A weekly no-load crank proves the starter motor works, not "
+                "that the generator will carry theatre, ICU and emergency "
+                "lighting together when it's actually needed. A sealed "
+                "tanker contract nobody has called at night is not a "
+                "backup -- it's a promise."
+            ),
+            body=[
+                "Alternate electricity is the source that carries our "
+                "essential circuits when incoming supply fails: diesel "
+                "generator, UPS/inverter for circuits that can't tolerate a "
+                "start delay, and any automatic mains-failure changeover.",
+                "«Hospital to define: the alternate-electricity source, "
+                "essential-circuit list, loaded-test method and test "
+                "frequency» -- a loaded test under the essential-circuit "
+                "load, not the workshop socket.",
+                "Alternate water is the source that actually moves water to "
+                "points of use when the main supply fails: reserve tanks "
+                "with working float valves, a second borewell if available, "
+                "a tanker contract that can deliver at night, pumps that "
+                "auto-start.",
+                "«Hospital to define: the alternate-water source, the test "
+                "that proves water actually moves, and the test "
+                "frequency» -- a tank-to-tap movement record, not a sealed "
+                "contract.",
+            ],
+            oe_code="FMS.1.e",
+            boundary=[
+                "A utility failure that becomes a declared emergency is "
+                "handed to FMS.5; this step is the test that happens before "
+                "that night, not the emergency response itself.",
+            ],
+            technical_sources=[
+                "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/) (as the framework pointing to IS 732 wiring practice and IS 3043 earthing).",
+            ],
+        ),
+        PlainItem(
+            heading="Real energy and environment initiatives",
+            why=(
+                "A filed electricity bill or a single LED retrofit offered "
+                "as the whole programme doesn't actually reduce what this "
+                "hospital consumes or throws away. A real initiative with a "
+                "measured result is what makes this more than a poster on a "
+                "wall."
+            ),
+            body=[
+                "«Hospital to define: the energy-efficient and "
+                "environment-friendly initiatives this hospital actually "
+                "runs this year,» each with a named owner, a baseline, and a "
+                "recorded result -- not a poster.",
+                "Eligible initiatives include measured electricity or fuel "
+                "use, lighting or HVAC set-back in non-clinical hours, "
+                "solar if installed, rainwater or condensate reuse if "
+                "installed, segregation of municipal (non-biomedical) "
+                "waste, and reduction of single-use non-clinical materials.",
+                "Shutting HVAC in clinical areas in the name of efficiency "
+                "is not this -- that's the water-and-power item above "
+                "failing instead.",
+            ],
+            oe_code="FMS.1.f (Excellence, ASTERISKED)",
+            boundary=[
+                "Biomedical-waste colour coding, transport and SPCB "
+                "compliance remain HIC.3's; this step doesn't restate or "
+                "duplicate that SOP.",
+            ],
+            technical_sources=[
+                "Dhillon, V. S., & Kaur, D. (2015). [Green hospital and climate change: Their interrelationship and the way forward](https://www.jcdr.net/ReadXMLFile.aspx?id=6942). Journal of Clinical and Diagnostic Research.",
+            ],
+        ),
+    ],
+    records_note="This SOP produces and maintains Records 1-6 (see the FMS.1 Records folder).",
+    related_documents=[
+        "Hospital's Service Directory (AAC.1)",
+        "Radiation/PC-PNDT Signage Policy (AAC.6.e)",
+        "Medical and Support-Service Equipment Programme (FMS.3)",
+        "Medical Gases, Vacuum and Compressed Air SOP (FMS.4)",
+        "Fire and Non-Fire Emergencies SOP (FMS.5)",
+        "Support-Services Infection-Control Policy (HIC.3)",
+    ],
+    review_text=(
+        "This SOP is reviewed annually, or sooner if a loaded backup test "
+        "fails, if the service directory changes, or if a related SOP listed "
+        "above is updated."
+    ),
+    full_reference_list=FMS1_REFS,
+)
+
+
 RECORDS = [
     RecordSpec(
         oe_code="FMS.1.a",
@@ -542,8 +837,8 @@ RECORDS = [
 
 def main() -> None:
     sop_path = OUT_ROOT / "SOP_FMS.1.a_to_f_planned_facilities_utilities_environment.docx"
-    build_sop(SOP, sop_path)
-    print(f"built {sop_path}")
+    build_sop_v2(SOP_V2, sop_path)
+    print(f"built {sop_path} (v2: plain body + audit appendix)")
 
     manifest_entries = [{
         "file": sop_path.name,

@@ -22,7 +22,16 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from sop_record_common import ProcedureBlock, RecordSpec, SOPSpec, build_record, build_sop
+from sop_record_common import (
+    PlainItem,
+    ProcedureBlock,
+    RecordSpec,
+    SOPSpec,
+    SOPSpecV2,
+    build_record,
+    build_sop,
+    build_sop_v2,
+)
 
 OUT_ROOT = Path(__file__).parent / "sop_record_masters" / "FMS"
 
@@ -278,6 +287,235 @@ SOP = SOPSpec(
 )
 
 
+#  ------------------------------------------------------------------ v2 ----
+SOP_V2 = SOPSpecV2(
+    sop_no="SOP-FMS.5",
+    title="Fire and Non-Fire Emergencies",
+    purpose_plain=(
+        "This SOP tells fire wardens, facilities, clinical heads and quality "
+        "staff, in one place, how this hospital detects, abates and contains "
+        "fire and the non-fire emergencies it has named; how the exit plan is "
+        "documented and displayed; how mock drills meet the twice-a-year "
+        "floor; how fire equipment is maintained; and how essential services "
+        "continue when a ward, OT or plant is lost. If you are a fire warden, "
+        "hold the drill file, or run a service this hospital offers, this SOP "
+        "is for you."
+    ),
+    purpose_trigger=(
+        "A smoke detector trips at 3am in a ward corridor. This SOP is what "
+        "tells the night-duty lead who to notify, how the exit plan evacuates "
+        "that ward's dependent patients, and which record logs the event -- "
+        "not an improvised response because the plan was never actually "
+        "drilled at night."
+    ),
+    purpose_why=(
+        "We do this because a fire or a disaster doesn't wait for daytime "
+        "staffing or a convenient moment. Patients who can't walk, can't "
+        "hear an alarm, or can't move themselves depend entirely on a plan "
+        "that was actually tested with the people who'd really be on duty -- "
+        "not one that only looks good on paper."
+    ),
+    purpose_text=(
+        "To define how «Hospital Name» detects, abates and contains fire and "
+        "non-fire emergencies; documents and displays its exit plan; runs "
+        "mock drills meeting the twice-a-year floor; maintains fire-related "
+        "equipment and infrastructure; and continues essential services when "
+        "a ward, OT or plant is lost."
+    ),
+    scope_why=(
+        "so every area and every emergency this hospital could actually face "
+        "has a named plan -- and so staff aren't improvising a response to "
+        "something that was never thought through in advance."
+    ),
+    scope_text=(
+        "Applies to every occupied area of «Hospital Name» and every non-"
+        "fire emergency this occupancy actually faces. Does not cover "
+        "laboratory bench chemical hygiene, medical-gas leak handling at "
+        "source, electrical backup testing, or outsourced-service quality "
+        "monitoring -- those remain their own SOPs. See Related SOPs."
+    ),
+    responsibility_why=(
+        "a blocked exit, a wedged-open fire door, or a year with fewer than "
+        "two drills is how a plan that looks fine on paper fails the people "
+        "who actually need it. Naming who holds the plan and who executes it "
+        "is what keeps that from happening."
+    ),
+    responsibilities=[
+        ("Head of the Institution",
+         "Is accountable that fire and non-fire emergency plans exist and "
+         "are provisioned as this SOP requires."),
+        ("Named Fire/Facilities Lead",
+         "Holds the plans, exit display, drill records and fire-equipment "
+         "maintenance."),
+        ("Fire Wardens and Night-Duty Leads", "Execute the exit plan."),
+        ("Clinical Heads", "Execute continuity for the services they run."),
+        ("Quality/Accreditation Coordinator",
+         "Audits a sample of the records this SOP produces, at «Hospital to "
+         "define» frequency."),
+        ("All Staff",
+         "Treat a blocked exit, a discharged extinguisher left in place, a "
+         "fire door wedged open, or a year with fewer than two drills, as "
+         "defects to report."),
+    ],
+    items=[
+        PlainItem(
+            heading="Detecting, stopping and containing fire and other emergencies",
+            why=(
+                "What actually detects a fire at 3am, stops it before the "
+                "stair is lost, and contains it so patients in another ward "
+                "can keep being cared for -- that's what this item is "
+                "about. A municipal fire certificate proves a plan was once "
+                "inspected; it isn't the plan itself."
+            ),
+            body=[
+                "We have plans and provisions for early detection, "
+                "abatement and containment of fire and non-fire "
+                "emergencies: detection (smoke/heat/manual call points), "
+                "abatement (extinguishers, and hose reels/hydrant/sprinkler "
+                "only where our occupancy requires them), containment "
+                "(fire doors, shutters, compartments as built).",
+                "«Hospital to define: the fire plan (detection, abatement, "
+                "containment, who is fire warden, how a dependent patient "
+                "is moved), the non-fire plans for events this occupancy "
+                "actually faces, and the provisions installed.» An event "
+                "this occupancy doesn't face -- say, a basement flood in a "
+                "single-storey building with no basement -- is a recorded "
+                "absence, not a gap.",
+            ],
+            oe_code="FMS.5.a (Core, ASTERISKED)",
+            boundary=[
+                "A laboratory's own fire-related sentence in its safety "
+                "programme uses this hospital plan; it doesn't replace it.",
+            ],
+            technical_sources=[
+                "Bureau of Indian Standards. (2016). [National Building Code of India, 2016](https://bis.gov.in/others/national-building-code/).",
+                "National Disaster Management Authority. (2016). [National Disaster Management Guidelines: Hospital Safety](https://nhsrcindia.org/sites/default/files/2021-05/Guidelines-Hospital-Safety.pdf).",
+            ],
+        ),
+        PlainItem(
+            heading="An exit plan people can actually find and follow",
+            why=(
+                "A framed plan in the board room, or an exit arrow pointing "
+                "at a locked grilled window, does nothing for a first-time "
+                "family or a night nurse trying to get patients out safely. "
+                "The plan only protects anyone if it's where people can "
+                "actually see and follow it."
+            ),
+            body=[
+                "We document and display an exit plan: how each occupied "
+                "floor leaves, the assembly point, who sweeps -- displayed "
+                "where it can actually be seen.",
+                "«Hospital to define: how the exit plan is documented, "
+                "where it's displayed, and how a change in a fire door or a "
+                "ward move updates the display.»",
+            ],
+            oe_code="FMS.5.b",
+        ),
+        PlainItem(
+            heading="Running real mock drills, twice a year",
+            why=(
+                "A drill photograph of day-shift administration while the "
+                "OT continues unaware doesn't prepare anyone for a real "
+                "event. A drill only counts when the people who'd actually "
+                "be on duty are the ones who respond -- including the "
+                "night shift, and including moving a patient who can't "
+                "move themselves."
+            ),
+            body=[
+                "We hold mock drills at least twice a year -- that interval "
+                "isn't something the hospital can shorten or skip.",
+                "A drill tests detection-to-evacuation (or shelter-in-place) "
+                "with the people who'd actually be on duty, including a "
+                "night or weekend sample over the year, and includes a "
+                "dependent-patient move.",
+                "Fire and non-fire drills don't need to be separate events "
+                "eight times over -- they need to cover, across the year, "
+                "fire and at least one named non-fire emergency.",
+                "«Hospital to define: how drills are scheduled so the "
+                "twice-a-year floor is met, who observes, and how a failed "
+                "objective is recorded and re-drilled.»",
+            ],
+            oe_code="FMS.5.c (Commitment)",
+            boundary=[
+                "A drill that harmed someone is also a PSQ.5 incident.",
+            ],
+        ),
+        PlainItem(
+            heading="Keeping fire equipment actually working",
+            why=(
+                "A plan to contain fire fails the moment the door closer is "
+                "disconnected and the extinguisher gauge sits in the red. "
+                "A vendor contract with no job card protects nobody -- only "
+                "equipment that's actually been checked does."
+            ),
+            body=[
+                "We maintain fire-related equipment and infrastructure -- "
+                "detectors, alarms, extinguishers, hose reels, fire doors, "
+                "emergency lighting, and any pump or sprinkler this "
+                "occupancy actually has.",
+                "«Hospital to define: which fire-related equipment this "
+                "occupancy actually has, the maintenance task and interval "
+                "for each, who attends, and the rule that a failed detector "
+                "zone or a discharged extinguisher is replaced or isolated "
+                "until restored.»",
+            ],
+            oe_code="FMS.5.d (Commitment, ASTERISKED)",
+            boundary=[
+                "The monthly facility safety round may find a fire door or "
+                "lighting failed; this plan is what repairs it -- a repair "
+                "programme, not a second round.",
+            ],
+            technical_sources=[
+                "Bureau of Indian Standards. (2016). National Building Code of India, 2016 (IS 2190 portable-extinguisher practice).",
+            ],
+        ),
+        PlainItem(
+            heading="Keeping essential services running when something's lost",
+            why=(
+                "\"Patients will be shifted to a nearby hospital\" with no "
+                "named hospital and no list of who can't safely be moved "
+                "isn't a plan -- it's a sentence that sounds like one, and "
+                "it fails exactly when it's needed most."
+            ),
+            body=[
+                "We have a service continuity plan: how our essential "
+                "services continue, pause, divert or move internally when "
+                "a ward, OT or plant is lost.",
+                "«Hospital to define: how each essential service continues "
+                "or is paused, the named receiving arrangement if diversion "
+                "is the plan, how medical-gas and electrical backups are "
+                "used in that hour, and who declares continuity versus full "
+                "evacuation.» Services we don't offer don't need a "
+                "continuity annex.",
+            ],
+            oe_code="FMS.5.e (Achievement)",
+            boundary=[
+                "This depends on, but is separate from, the electrical "
+                "backup test (FMS.1.e) and outsourced-service quality "
+                "monitoring (ROM.4.e).",
+            ],
+            technical_sources=[
+                "National Disaster Management Authority. (2016). [National Disaster Management Guidelines: Hospital Safety](https://nhsrcindia.org/sites/default/files/2021-05/Guidelines-Hospital-Safety.pdf).",
+            ],
+        ),
+    ],
+    records_note="This SOP produces and maintains Records 1-5 (see the FMS.5 Records folder).",
+    related_documents=[
+        "As-Built Drawing Set (FMS.1.b)",
+        "Monthly Facility Safety Round (FMS.2.d)",
+        "Medical Gases, Vacuum and Compressed Air SOP (FMS.4)",
+        "Laboratory Safety Programme (AAC.6)",
+        "Hospital's Service Directory (AAC.1)",
+    ],
+    review_text=(
+        "This SOP is reviewed at «Hospital to define the review interval», "
+        "and sooner when a drill failed or a fire-door closer was found "
+        "disconnected, or when a related SOP listed above is updated."
+    ),
+    full_reference_list=FMS5_REFS,
+)
+
+
 RECORDS = [
     RecordSpec(
         oe_code="FMS.5.a",
@@ -479,8 +717,8 @@ RECORDS = [
 
 def main() -> None:
     sop_path = OUT_ROOT / "SOP_FMS.5.a_to_e_fire_non_fire_emergencies.docx"
-    build_sop(SOP, sop_path)
-    print(f"built {sop_path}")
+    build_sop_v2(SOP_V2, sop_path)
+    print(f"built {sop_path} (v2: plain body + audit appendix)")
 
     manifest_entries = [{
         "file": sop_path.name,
