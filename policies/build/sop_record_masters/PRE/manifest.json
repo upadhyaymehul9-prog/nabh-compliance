@@ -1,0 +1,318 @@
+[
+  {
+    "file": "SOP_PRE.1.a_to_e_patient_family_rights_responsibilities.docx",
+    "document_type": "sop",
+    "standard_code": "PRE.1",
+    "title": "SOP \u2014 Patient and Family Rights and Responsibilities (PRE.1)"
+  },
+  {
+    "file": "Records/PRE.1_Record_01_awareness_at_entry_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.1",
+    "record_index": 1,
+    "title": "Awareness-at-entry record"
+  },
+  {
+    "file": "Records/PRE.1_Record_02_staff_induction_annual_briefing_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.1",
+    "record_index": 2,
+    "title": "Staff induction and annual rights-briefing record"
+  },
+  {
+    "file": "Records/PRE.1_Record_03_bedside_rights_protection_audit_sample.docx",
+    "document_type": "record",
+    "standard_code": "PRE.1",
+    "record_index": 3,
+    "title": "Bedside rights-protection audit sample"
+  },
+  {
+    "file": "Records/PRE.1_Record_04_rights_violation_log.docx",
+    "document_type": "record",
+    "standard_code": "PRE.1",
+    "record_index": 4,
+    "title": "Rights-violation log"
+  },
+  {
+    "file": "Records/PRE.1_Record_05_quarterly_leadership_violation_review_capa_log.docx",
+    "document_type": "record",
+    "standard_code": "PRE.1",
+    "record_index": 5,
+    "title": "Quarterly leadership violation review and CAPA log"
+  },
+  {
+    "file": "SOP_PRE.2.a_to_p_beliefs_values_decision_making.docx",
+    "document_type": "sop",
+    "standard_code": "PRE.2",
+    "title": "SOP \u2014 Beliefs, Values and Involvement in Decision-Making (PRE.2)"
+  },
+  {
+    "file": "Records/PRE.2_Record_01_values_beliefs_spiritual_needs_response_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.2",
+    "record_index": 1,
+    "title": "Values, beliefs and spiritual-needs response record"
+  },
+  {
+    "file": "Records/PRE.2_Record_02_dignity_privacy_audit_sample.docx",
+    "document_type": "record",
+    "standard_code": "PRE.2",
+    "record_index": 2,
+    "title": "Dignity and privacy audit sample"
+  },
+  {
+    "file": "Records/PRE.2_Record_03_neglect_abuse_suspicion_report_log.docx",
+    "document_type": "record",
+    "standard_code": "PRE.2",
+    "record_index": 3,
+    "title": "Neglect/abuse suspicion report log"
+  },
+  {
+    "file": "Records/PRE.2_Record_04_confidentiality_defect_correction_log.docx",
+    "document_type": "record",
+    "standard_code": "PRE.2",
+    "record_index": 4,
+    "title": "Confidentiality defect and correction log"
+  },
+  {
+    "file": "Records/PRE.2_Record_05_treatment_refusal_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.2",
+    "record_index": 5,
+    "title": "Treatment refusal record"
+  },
+  {
+    "file": "Records/PRE.2_Record_06_additional_opinion_facilitation_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.2",
+    "record_index": 6,
+    "title": "Additional-opinion facilitation record"
+  },
+  {
+    "file": "Records/PRE.2_Record_07_consent_right_awareness_pointer_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.2",
+    "record_index": 7,
+    "title": "Consent-right awareness pointer record"
+  },
+  {
+    "file": "Records/PRE.2_Record_08_complaint_right_awareness_pointer_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.2",
+    "record_index": 8,
+    "title": "Complaint-right awareness pointer record"
+  },
+  {
+    "file": "Records/PRE.2_Record_09_cost_right_awareness_non_withholding_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.2",
+    "record_index": 9,
+    "title": "Cost-right awareness and non-withholding record"
+  },
+  {
+    "file": "Records/PRE.2_Record_10_clinical_record_access_log.docx",
+    "document_type": "record",
+    "standard_code": "PRE.2",
+    "record_index": 10,
+    "title": "Clinical-record access log"
+  },
+  {
+    "file": "Records/PRE.2_Record_11_treating_doctor_progress_information_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.2",
+    "record_index": 11,
+    "title": "Treating-doctor and progress information record"
+  },
+  {
+    "file": "Records/PRE.2_Record_12_patient_information_disclosure_determination_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.2",
+    "record_index": 12,
+    "title": "Patient information-disclosure determination record"
+  },
+  {
+    "file": "Records/PRE.2_Record_13_proposed_care_explanation_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.2",
+    "record_index": 13,
+    "title": "Proposed-care explanation record"
+  },
+  {
+    "file": "Records/PRE.2_Record_14_expected_results_complications_explanation_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.2",
+    "record_index": 14,
+    "title": "Expected results and complications explanation record"
+  },
+  {
+    "file": "Records/PRE.2_Record_15_care_plan_consultation_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.2",
+    "record_index": 15,
+    "title": "Care-plan consultation record"
+  },
+  {
+    "file": "Records/PRE.2_Record_16_multidisciplinary_counselling_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.2",
+    "record_index": 16,
+    "title": "Multidisciplinary counselling record"
+  },
+  {
+    "file": "SOP_PRE.3.a_to_d_informed_consent.docx",
+    "document_type": "sop",
+    "standard_code": "PRE.3",
+    "title": "SOP \u2014 Informed Consent (PRE.3)"
+  },
+  {
+    "file": "Records/PRE.3_Record_01_consent_situations_process_audit_sample.docx",
+    "document_type": "record",
+    "standard_code": "PRE.3",
+    "record_index": 1,
+    "title": "Consent situations list and process audit sample"
+  },
+  {
+    "file": "Records/PRE.3_Record_02_consent_content_completeness_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.3",
+    "record_index": 2,
+    "title": "Consent content completeness record"
+  },
+  {
+    "file": "Records/PRE.3_Record_03_incapacity_consent_signer_verification_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.3",
+    "record_index": 3,
+    "title": "Incapacity-consent signer verification record"
+  },
+  {
+    "file": "Records/PRE.3_Record_04_performer_took_consent_verification_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.3",
+    "record_index": 4,
+    "title": "Performer-took-consent verification record"
+  },
+  {
+    "file": "Records/PRE.3_Record_05_consent_stop_work_emergency_exception_log.docx",
+    "document_type": "record",
+    "standard_code": "PRE.3",
+    "record_index": 5,
+    "title": "Consent stop-work and emergency-exception log"
+  },
+  {
+    "file": "SOP_PRE.4.a_to_f_information_education_communication.docx",
+    "document_type": "sop",
+    "standard_code": "PRE.4",
+    "title": "SOP \u2014 Information, Education and Communication about Healthcare Needs (PRE.4)"
+  },
+  {
+    "file": "Records/PRE.4_Record_01_language_format_education_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.4",
+    "record_index": 1,
+    "title": "Language and format education record"
+  },
+  {
+    "file": "Records/PRE.4_Record_02_medication_side_effect_education_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.4",
+    "record_index": 2,
+    "title": "Medication and side-effect education record"
+  },
+  {
+    "file": "Records/PRE.4_Record_03_food_drug_diet_nutrition_immunisation_education_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.4",
+    "record_index": 3,
+    "title": "Food-drug, diet, nutrition and immunisation education record"
+  },
+  {
+    "file": "Records/PRE.4_Record_04_disease_process_education_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.4",
+    "record_index": 4,
+    "title": "Disease-process education record"
+  },
+  {
+    "file": "Records/PRE.4_Record_05_hai_prevention_education_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.4",
+    "record_index": 5,
+    "title": "HAI-prevention education record"
+  },
+  {
+    "file": "Records/PRE.4_Record_06_communication_effectiveness_check_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.4",
+    "record_index": 6,
+    "title": "Communication effectiveness check record"
+  },
+  {
+    "file": "SOP_PRE.5.a_to_d_information_expected_costs.docx",
+    "document_type": "sop",
+    "standard_code": "PRE.5",
+    "title": "SOP \u2014 Information on Expected Costs (PRE.5)"
+  },
+  {
+    "file": "Records/PRE.5_Record_01_pricing_policy_awareness_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.5",
+    "record_index": 1,
+    "title": "Pricing-policy awareness record"
+  },
+  {
+    "file": "Records/PRE.5_Record_02_tariff_availability_verification_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.5",
+    "record_index": 2,
+    "title": "Tariff availability verification record"
+  },
+  {
+    "file": "Records/PRE.5_Record_03_expected_cost_explanation_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.5",
+    "record_index": 3,
+    "title": "Expected-cost explanation record"
+  },
+  {
+    "file": "Records/PRE.5_Record_04_care_plan_change_financial_implication_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.5",
+    "record_index": 4,
+    "title": "Care-plan-change financial implication record"
+  },
+  {
+    "file": "SOP_PRE.6.a_to_d_patient_feedback_complaint_redressal.docx",
+    "document_type": "sop",
+    "standard_code": "PRE.6",
+    "title": "SOP \u2014 Patient Feedback and Complaint Redressal (PRE.6)"
+  },
+  {
+    "file": "Records/PRE.6_Record_01_patient_feedback_satisfaction_capture_log.docx",
+    "document_type": "record",
+    "standard_code": "PRE.6",
+    "record_index": 1,
+    "title": "Patient feedback and satisfaction capture log"
+  },
+  {
+    "file": "Records/PRE.6_Record_02_patient_experience_capture_record.docx",
+    "document_type": "record",
+    "standard_code": "PRE.6",
+    "record_index": 2,
+    "title": "Patient experience capture record"
+  },
+  {
+    "file": "Records/PRE.6_Record_03_complaint_redressal_awareness_log.docx",
+    "document_type": "record",
+    "standard_code": "PRE.6",
+    "record_index": 3,
+    "title": "Complaint redressal and awareness log"
+  },
+  {
+    "file": "Records/PRE.6_Record_04_monthly_feedback_complaint_review_capa_log.docx",
+    "document_type": "record",
+    "standard_code": "PRE.6",
+    "record_index": 4,
+    "title": "Monthly feedback and complaint review and CAPA log"
+  }
+]
