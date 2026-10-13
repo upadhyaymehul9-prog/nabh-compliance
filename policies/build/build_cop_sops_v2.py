@@ -340,18 +340,23 @@ COP1 = SOPSpecV2(
                 "provided, that decision is written and displayed at "
                 "points of contact, and informal remote advice is "
                 "explicitly not treated as a telemedicine consultation.",
-                "If a facility is provided, written guidance covers who "
-                "may provide a consultation (a Registered Medical "
-                "Practitioner only), how practitioner and patient "
-                "identity are confirmed, how informed consent is "
-                "obtained and recorded, which modes and platform are "
-                "used, which services may and may not be provided "
-                "remotely, how a prescription is produced, transmitted "
-                "and filed, how an emergency presenting remotely is "
-                "given first-aid advice and directed to in-person care "
-                "rather than completed on the call, and how the "
-                "consultation is filed against the patient's unique "
-                "identification number.",
+                "If a facility is provided, written guidance covers "
+                "eight things:",
+                "1. Who may provide a consultation (a Registered "
+                "Medical Practitioner only).",
+                "2. How practitioner and patient identity are "
+                "confirmed.",
+                "3. How informed consent is obtained and recorded.",
+                "4. Which modes and platform are used.",
+                "5. Which services may and may not be provided "
+                "remotely.",
+                "6. How a prescription is produced, transmitted and "
+                "filed.",
+                "7. How an emergency presenting remotely is given "
+                "first-aid advice and directed to in-person care "
+                "rather than completed on the call.",
+                "8. How the consultation is filed against the "
+                "patient's unique identification number.",
                 "Every telemedicine consultation, or the absence of one "
                 "under the written decision, is logged.",
             ],
@@ -519,9 +524,12 @@ COP2 = SOPSpecV2(
                 "advice / absconded / brought dead) for every emergency "
                 "patient.",
                 "A discharged patient receives a written emergency "
-                "discharge note covering diagnosis, treatment given, "
-                "condition at discharge, and follow-up or red-flag "
-                "instructions in a language the patient understands.",
+                "discharge note, in a language the patient "
+                "understands, covering four things:",
+                "1. The diagnosis.",
+                "2. The treatment given.",
+                "3. The condition at discharge.",
+                "4. Follow-up or red-flag instructions.",
                 "A referred-out patient's note additionally states the "
                 "reason for referral and the receiving facility.",
             ],
@@ -740,10 +748,15 @@ COP3 = SOPSpecV2(
                 "a specific person are followed at every resuscitation.",
                 "The event is recorded against the patient's unique "
                 "identification number as it happens or immediately "
-                "after: time the event was recognised, time the team was "
-                "summoned, time the team arrived, roles filled, "
-                "interventions performed, medications given (as given, "
-                "not as a printed dose table), and the outcome.",
+                "after, covering seven things:",
+                "1. The time the event was recognised.",
+                "2. The time the team was summoned.",
+                "3. The time the team arrived.",
+                "4. Roles filled.",
+                "5. Interventions performed.",
+                "6. Medications given (as given, not as a printed dose "
+                "table).",
+                "7. The outcome.",
                 "The completed event record is filed within the same "
                 "shift.",
             ],
@@ -1020,11 +1033,15 @@ COP5 = SOPSpecV2(
             heading="Safe transfusion — the bedside identity check",
             why="A correctly grouped unit given to the wrong patient is, in every way that matters, an incompatible transfusion -- the blood bank cannot see the vein; only the person at the bedside can, and that is why this check is non-negotiable.",
             body=[
-                "A transfusion request carries the patient's unique "
-                "identification number, name, component requested, "
-                "recorded indication, date/time, and requesting "
-                "clinician; a unit is not issued against a nameless "
-                "verbal request except through the documented emergency "
+                "A transfusion request carries six things:",
+                "1. The patient's unique identification number.",
+                "2. The patient's name.",
+                "3. The component requested.",
+                "4. The recorded indication.",
+                "5. The date/time.",
+                "6. The requesting clinician.",
+                "A unit is not issued against a nameless verbal "
+                "request except through the documented emergency "
                 "pathway.",
                 "The pre-transfusion sample is collected and identified "
                 "with the unique identification number on the sample "
@@ -1240,13 +1257,16 @@ COP6 = SOPSpecV2(
             why="A hospital can have excellent infection-control policies and still infect its ventilated patients if the ICU's own guidance never actually names and applies them -- this step closes that gap without creating a second, drifting bundle book.",
             body=[
                 "The unit's written guidance contains an infection-"
-                "control section that names -- and does not reprint -- "
-                "the hospital's existing hand hygiene, standard and "
-                "transmission-based precautions and PPE requirements, "
-                "the device bundles that apply to patients in this unit "
-                "(ventilator, central-line, urinary-catheter, and "
-                "surgical-site where relevant), and the surveillance the "
-                "unit cooperates with.",
+                "control section that names -- and does not reprint "
+                "-- the hospital's existing requirements. It covers "
+                "three things:",
+                "1. Hand hygiene, standard and transmission-based "
+                "precautions and PPE requirements.",
+                "2. The device bundles that apply to patients in "
+                "this unit (ventilator, central-line, "
+                "urinary-catheter, and surgical-site where "
+                "relevant).",
+                "3. The surveillance the unit cooperates with.",
                 "Those practices are actually followed in this unit -- "
                 "hand hygiene at the required moments, transmission-"
                 "based precautions when assigned, every eligible "
@@ -1596,14 +1616,18 @@ COP8 = SOPSpecV2(
             heading="Organisation of paediatric services",
             why="A paediatric service that never says what it can't do forces a duty doctor to improvise at 2 a.m. instead of following a written plan.",
             body=[
-                "The hospital's defined paediatric and neonatal scope of "
-                "services -- the age range accepted, whether and at what "
-                "level neonates are cared for, hours of availability, "
-                "conditions/procedures provided, and conditions "
-                "stabilised and referred, with the destination -- is "
-                "kept aligned with the hospital's service directory; a "
-                "service not provided is named as not provided, with the "
-                "referral destination.",
+                "The hospital's defined paediatric and neonatal scope "
+                "of services names five things:",
+                "1. The age range accepted.",
+                "2. Whether, and at what level, neonates are cared "
+                "for.",
+                "3. Hours of availability.",
+                "4. Conditions/procedures provided.",
+                "5. Conditions stabilised and referred, with the "
+                "destination.",
+                "This scope is kept aligned with the hospital's "
+                "service directory; a service not provided is named "
+                "as not provided, with the referral destination.",
                 "The hospital's defined paediatric and neonatal care "
                 "areas and backing equipment are followed; adult "
                 "equipment used on a child because the paediatric size "
@@ -1658,10 +1682,15 @@ COP8 = SOPSpecV2(
             why="A child left in an unmodified adult ward, with no family presence and no age-appropriate equipment, is being treated as a small adult -- which is exactly what this step exists to prevent.",
             body=[
                 "The hospital's defined provisions for special care of "
-                "children -- environment, family presence, feeding, play "
-                "or occupation, privacy, and any other age-appropriate "
-                "arrangement -- is actually provided, not just written "
-                "down.",
+                "children are actually provided, not just written "
+                "down. These cover at least five things:",
+                "1. The environment.",
+                "2. Family presence.",
+                "3. Feeding.",
+                "4. Play or occupation.",
+                "5. Privacy.",
+                "Plus any other age-appropriate arrangement the "
+                "hospital has defined.",
                 "Where a child is placed in an adult ward because no "
                 "dedicated paediatric ward exists, the provisions that "
                 "still apply -- identification, family presence, "
@@ -1821,11 +1850,15 @@ COP9 = SOPSpecV2(
             heading="Room readiness before sedation starts",
             why="A pulse oximeter that is required in theatre and forgotten in the endoscopy room is the same drug given in a less safe room.",
             body=[
-                "The hospital's defined room-readiness list -- airway "
-                "equipment, oxygen, suction, monitoring able to produce "
-                "the six parameters, resuscitation medicines, and a "
-                "means of calling help -- is checked before the "
-                "sedative is given.",
+                "The hospital's defined room-readiness list is "
+                "checked before the sedative is given. It covers six "
+                "things:",
+                "1. Airway equipment.",
+                "2. Oxygen.",
+                "3. Suction.",
+                "4. Monitoring able to produce the six parameters.",
+                "5. Resuscitation medicines.",
+                "6. A means of calling help.",
                 "A room missing any item on that list does not start "
                 "sedation until the gap is corrected.",
                 "The readiness check is logged against the room and the "
@@ -1875,10 +1908,15 @@ COP9 = SOPSpecV2(
             heading="Intra-procedure monitoring of the six required parameters",
             why="A pulse-oximetry trace with no recorded level of sedation, or a blood pressure taken once and never again, is an incomplete monitoring record even if it looks busy.",
             body=[
-                "Heart rate, cardiac rhythm, respiratory rate, blood "
-                "pressure, oxygen saturation and level of sedation are "
-                "monitored throughout the procedure, and all six are "
-                "recorded -- not a subset.",
+                "Six parameters are monitored throughout the "
+                "procedure, and all six are recorded -- not a "
+                "subset:",
+                "1. Heart rate.",
+                "2. Cardiac rhythm.",
+                "3. Respiratory rate.",
+                "4. Blood pressure.",
+                "5. Oxygen saturation.",
+                "6. Level of sedation.",
                 "If any parameter cannot be obtained, the reason is "
                 "recorded; sedation does not continue as if a missing "
                 "parameter were present without a documented clinical "
@@ -2010,17 +2048,20 @@ COP10 = SOPSpecV2(
             why="A note that says 'fit for anaesthesia' with nothing under a heading titled 'plan' is an opinion, not the plan this step requires.",
             body=[
                 "The hospital's defined process for who performs the "
-                "pre-anaesthesia assessment and when, covering at least "
-                "identity against the two identifiers, the planned "
-                "procedure so far as known, relevant history and "
-                "examination, airway and fasting information, relevant "
-                "investigation findings, and the risks that shape the "
-                "plan, is followed.",
-                "The assessment produces a documented plan -- the "
-                "intended type, the intended airway or regional "
-                "strategy, the planned monitoring, and the fallback if "
-                "that strategy cannot be used -- written before "
-                "anaesthesia is given.",
+                "pre-anaesthesia assessment and when is followed. The "
+                "assessment covers at least six things:",
+                "1. Identity against the two identifiers.",
+                "2. The planned procedure so far as known.",
+                "3. Relevant history and examination.",
+                "4. Airway and fasting information.",
+                "5. Relevant investigation findings.",
+                "6. The risks that shape the plan.",
+                "The assessment produces a documented plan, written "
+                "before anaesthesia is given, stating four things:",
+                "1. The intended type.",
+                "2. The intended airway or regional strategy.",
+                "3. The planned monitoring.",
+                "4. The fallback if that strategy cannot be used.",
                 "Where the anaesthetic is an emergency, the assessment "
                 "that was possible and the plan for that emergency are "
                 "recorded before induction so far as the emergency "
@@ -2328,19 +2369,26 @@ COP11 = SOPSpecV2(
             why="A post-operative plan that exists only as a verbal instruction to the receiving nurse is not documented -- and it is the plan most likely to be followed inconsistently on the next shift.",
             body=[
                 "The hospital's defined person writes the operation or "
-                "procedure note, covering at least the procedure "
-                "actually performed, the side, findings, implants or "
-                "specimens with identification, estimated blood loss, "
-                "intra-operative complications, and the names of the "
-                "surgeon and assistants, by the hospital-defined "
-                "deadline.",
+                "procedure note by the hospital-defined deadline, "
+                "covering at least seven things:",
+                "1. The procedure actually performed.",
+                "2. The side.",
+                "3. Findings.",
+                "4. Implants or specimens with identification.",
+                "5. Estimated blood loss.",
+                "6. Intra-operative complications.",
+                "7. The names of the surgeon and assistants.",
                 "Post-procedure surgical observations continued in "
                 "recovery are recorded, distinct from the anaesthesia "
                 "policy's recovery criteria.",
-                "The post-operative care plan -- wound, drains, "
-                "mobilisation, diet and review -- is written before the "
+                "The post-operative care plan is written before the "
                 "patient leaves recovery, against the unique "
-                "identification number.",
+                "identification number, covering five things:",
+                "1. Wound.",
+                "2. Drains.",
+                "3. Mobilisation.",
+                "4. Diet.",
+                "5. Review.",
             ],
             oe_code="COP.11.f",
         ),
@@ -2370,12 +2418,15 @@ COP11 = SOPSpecV2(
                 "The hospital's named theatre quality lead is "
                 "accountable for a programme that measures use of the "
                 "pause -- not possession of the checklist form -- "
-                "including checklist completion in real time, consent "
-                "before incision, a documented pre-operative diagnosis, "
-                "operation notes within the stated time, postponements "
-                "and cancellations after arrival with reason, and "
-                "near-misses or actual wrong-site, wrong-patient or "
-                "wrong-procedure events.",
+                "covering six things:",
+                "1. Checklist completion in real time.",
+                "2. Consent before incision.",
+                "3. A documented pre-operative diagnosis.",
+                "4. Operation notes within the stated time.",
+                "5. Postponements and cancellations after arrival, "
+                "with reason.",
+                "6. Near-misses or actual wrong-site, wrong-patient "
+                "or wrong-procedure events.",
                 "Findings that require change produce a corrective and "
                 "preventive action with an owner and a due date -- never "
                 "only a reminder to be careful -- reviewed at the "
@@ -2522,11 +2573,13 @@ COP12 = SOPSpecV2(
             why="A vulnerable patient left on an unattended trolley in a corridor as a holding pattern is exactly the ordinary-hospital-day harm this step exists to prevent.",
             body=[
                 "The hospital's defined care-environment measures for "
-                "vulnerable patients -- a call method the patient can "
-                "use, accompaniment when leaving the unit, and lighting/"
-                "toileting access matched to ability, and how a missing "
-                "vulnerable patient is noticed and who is called -- is "
-                "in force at the bedside.",
+                "vulnerable patients are in force at the bedside, "
+                "covering four things:",
+                "1. A call method the patient can use.",
+                "2. Accompaniment when leaving the unit.",
+                "3. Lighting/toileting access matched to ability.",
+                "4. How a missing vulnerable patient is noticed and "
+                "who is called.",
                 "A vulnerable patient is never left in a public "
                 "corridor, an unlocked bathroom, or an unattended "
                 "trolley as a holding pattern.",
@@ -2612,13 +2665,18 @@ COP12 = SOPSpecV2(
                 "stating the reason, the type, the start time and the "
                 "latest review time.",
                 "Every episode -- for either group -- is recorded "
-                "against the unique identification number with "
-                "indication, less-restrictive measures tried, type, "
-                "start and stop times, continuous observations, the "
-                "ordering/authorising clinician, the nominated "
-                "representative or family informed, and any injury, and "
-                "is reviewed at the hospital's defined forum and "
-                "interval.",
+                "against the unique identification number, covering "
+                "eight things:",
+                "1. The indication.",
+                "2. Less-restrictive measures tried.",
+                "3. The type.",
+                "4. Start and stop times.",
+                "5. Continuous observations.",
+                "6. The ordering/authorising clinician.",
+                "7. The nominated representative or family informed.",
+                "8. Any injury.",
+                "The episode is then reviewed at the hospital's "
+                "defined forum and interval.",
             ],
             oe_code="COP.12.f",
             technical_sources=[MHA_SRC],
@@ -2784,9 +2842,12 @@ COP13 = SOPSpecV2(
                 "it, and by when after admission -- never a meal-order "
                 "slip treated as a screen.",
                 "A patient flagged by the screen is assessed by the "
-                "hospital's defined assessor, recording intake, "
-                "nutritional findings, swallowing concern if present, "
-                "and the problem the therapeutic diet must address.",
+                "hospital's defined assessor, who records four "
+                "things:",
+                "1. Intake.",
+                "2. Nutritional findings.",
+                "3. Swallowing concern, if present.",
+                "4. The problem the therapeutic diet must address.",
                 "This admission screen is distinct from antenatal "
                 "maternal nutrition and paediatric growth/nutrition "
                 "assessment -- both still run on their own patients, "
