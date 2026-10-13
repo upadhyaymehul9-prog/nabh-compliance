@@ -384,11 +384,13 @@ ROM1E = SOPSpecV2(
                 "anything."
             ),
             body=[
-                "The framework includes a code of ethics, a conflict-of-"
-                "interest declaration for governance members, a mechanism "
-                "for reporting ethical concerns -- including an option to "
-                "report anonymously -- and a review of ethical "
-                "compliance.",
+                "The framework has four required parts:",
+                "1. A written code of ethics.",
+                "2. A conflict-of-interest declaration process for every "
+                "governance member.",
+                "3. A mechanism for reporting ethical concerns, including "
+                "an option to report anonymously.",
+                "4. A review of ethical compliance, at least annually.",
                 "The governing body approves the framework in writing.",
             ],
             oe_code="ROM.1.e",
@@ -540,9 +542,12 @@ ROM3D = SOPSpecV2(
                 "often it's checked before it counts as measurable."
             ),
             body=[
-                "Each department or service defines its service "
-                "standards, stating the indicator, the target, the data "
-                "source, and the monitoring frequency.",
+                "Each department or service defines its service standards. "
+                "Each standard states four things:",
+                "1. The indicator being measured.",
+                "2. The target.",
+                "3. The data source.",
+                "4. How often it is monitored.",
                 "A standard that cannot be measured is replaced with one "
                 "that can, rather than kept on the books unmeasured.",
             ],
@@ -699,9 +704,13 @@ ROM4A = SOPSpecV2(
                 "Department and service heads identify and escalate "
                 "risks across clinical, operational, financial and "
                 "compliance domains.",
-                "Each risk entry states the risk, the likelihood, the "
-                "impact, the mitigation action, the responsible person "
-                "and the review date.",
+                "Each risk entry records six things:",
+                "1. The risk itself, in plain words.",
+                "2. Its likelihood.",
+                "3. Its impact.",
+                "4. The mitigation action.",
+                "5. The person responsible for it.",
+                "6. The review date.",
             ],
             oe_code="ROM.4.a",
             technical_sources=[
