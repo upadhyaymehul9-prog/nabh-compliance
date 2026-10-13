@@ -1,0 +1,304 @@
+[
+  {
+    "file": "SOP_HIC.1.a_to_f_hospital_infection_prevention_control_programme.docx",
+    "document_type": "sop",
+    "standard_code": "HIC.1",
+    "title": "SOP \u2014 Hospital Infection Prevention and Control Programme (HIC.1)"
+  },
+  {
+    "file": "Records/HIC.1_Record_01_hic_programme_document_approval_register.docx",
+    "document_type": "record",
+    "standard_code": "HIC.1",
+    "record_index": 1,
+    "title": "HIC programme document and approval register"
+  },
+  {
+    "file": "Records/HIC.1_Record_02_annual_infection_control_assessment_gap_closure_tracker.docx",
+    "document_type": "record",
+    "standard_code": "HIC.1",
+    "record_index": 2,
+    "title": "Annual infection control assessment and gap-closure tracker"
+  },
+  {
+    "file": "Records/HIC.1_Record_03_icc_constitution_meeting_minutes.docx",
+    "document_type": "record",
+    "standard_code": "HIC.1",
+    "record_index": 3,
+    "title": "ICC constitution and meeting minutes"
+  },
+  {
+    "file": "Records/HIC.1_Record_04_community_iec_outbreak_participation_log.docx",
+    "document_type": "record",
+    "standard_code": "HIC.1",
+    "record_index": 4,
+    "title": "Community IEC and outbreak-participation log"
+  },
+  {
+    "file": "Records/HIC.1_Record_05_annual_resource_plan_shortfall_escalation_record.docx",
+    "document_type": "record",
+    "standard_code": "HIC.1",
+    "record_index": 5,
+    "title": "Annual resource plan and shortfall-escalation record"
+  },
+  {
+    "file": "Records/HIC.1_Record_06_isolation_facility_readiness_staff_training_record.docx",
+    "document_type": "record",
+    "standard_code": "HIC.1",
+    "record_index": 6,
+    "title": "Isolation facility readiness and staff-training record"
+  },
+  {
+    "file": "SOP_HIC.2.a_to_g_infection_prevention_control_clinical_areas.docx",
+    "document_type": "sop",
+    "standard_code": "HIC.2",
+    "title": "SOP \u2014 Infection Prevention and Control in Clinical Areas (HIC.2)"
+  },
+  {
+    "file": "Records/HIC.2_Record_01_standard_precaution_ppe_availability_compliance_observation_record.docx",
+    "document_type": "record",
+    "standard_code": "HIC.2",
+    "record_index": 1,
+    "title": "Standard-precaution PPE availability and compliance observation record"
+  },
+  {
+    "file": "Records/HIC.2_Record_02_hand_hygiene_supply_signage_verification_record.docx",
+    "document_type": "record",
+    "standard_code": "HIC.2",
+    "record_index": 2,
+    "title": "Hand-hygiene supply and signage verification record"
+  },
+  {
+    "file": "Records/HIC.2_Record_03_transmission_based_precaution_assignment_de_escalation_record.docx",
+    "document_type": "record",
+    "standard_code": "HIC.2",
+    "record_index": 3,
+    "title": "Transmission-based-precaution assignment and de-escalation record"
+  },
+  {
+    "file": "Records/HIC.2_Record_04_safe_injection_infusion_practice_audit.docx",
+    "document_type": "record",
+    "standard_code": "HIC.2",
+    "record_index": 4,
+    "title": "Safe injection and infusion practice audit"
+  },
+  {
+    "file": "Records/HIC.2_Record_05_antimicrobial_usage_policy_local_antibiogram_record.docx",
+    "document_type": "record",
+    "standard_code": "HIC.2",
+    "record_index": 5,
+    "title": "Antimicrobial usage policy and local antibiogram record"
+  },
+  {
+    "file": "Records/HIC.2_Record_06_monthly_antimicrobial_prescription_audit_report.docx",
+    "document_type": "record",
+    "standard_code": "HIC.2",
+    "record_index": 6,
+    "title": "Monthly antimicrobial-prescription audit report"
+  },
+  {
+    "file": "Records/HIC.2_Record_07_antibiotic_stewardship_round_annual_outcome_report.docx",
+    "document_type": "record",
+    "standard_code": "HIC.2",
+    "record_index": 7,
+    "title": "Antibiotic stewardship round and annual outcome report"
+  },
+  {
+    "file": "SOP_HIC.3.a_to_f_infection_prevention_control_support_services.docx",
+    "document_type": "sop",
+    "standard_code": "HIC.3",
+    "title": "SOP \u2014 Infection Prevention and Control in Support Services (HIC.3)"
+  },
+  {
+    "file": "Records/HIC.3_Record_01_engineering_control_joint_verification_round.docx",
+    "document_type": "record",
+    "standard_code": "HIC.3",
+    "record_index": 1,
+    "title": "Engineering-control joint verification round"
+  },
+  {
+    "file": "Records/HIC.3_Record_02_icra_construction_renovation.docx",
+    "document_type": "record",
+    "standard_code": "HIC.3",
+    "record_index": 2,
+    "title": "Infection-control risk assessment (ICRA) for construction/renovation"
+  },
+  {
+    "file": "Records/HIC.3_Record_03_area_wise_cleaning_schedule_spill_terminal_cleaning_log.docx",
+    "document_type": "record",
+    "standard_code": "HIC.3",
+    "record_index": 3,
+    "title": "Area-wise cleaning schedule and spill/terminal-cleaning log"
+  },
+  {
+    "file": "Records/HIC.3_Record_04_daily_biomedical_waste_segregation_log_cbwtf_handover.docx",
+    "document_type": "record",
+    "standard_code": "HIC.3",
+    "record_index": 4,
+    "title": "Daily biomedical-waste segregation log and CBWTF handover"
+  },
+  {
+    "file": "Records/HIC.3_Record_05_laundry_wash_cycle_temperature_log.docx",
+    "document_type": "record",
+    "standard_code": "HIC.3",
+    "record_index": 5,
+    "title": "Laundry wash-cycle temperature log"
+  },
+  {
+    "file": "Records/HIC.3_Record_06_food_handler_medical_clearance_daily_temperature_log.docx",
+    "document_type": "record",
+    "standard_code": "HIC.3",
+    "record_index": 6,
+    "title": "Food-handler medical clearance and daily temperature log"
+  },
+  {
+    "file": "SOP_HIC.4.a_to_f_prevention_healthcare_associated_infections_patients_staff.docx",
+    "document_type": "sop",
+    "standard_code": "HIC.4",
+    "title": "SOP \u2014 Prevention of Healthcare Associated Infections in Patients and Staff (HIC.4)"
+  },
+  {
+    "file": "Records/HIC.4_Record_01_cauti_bundle_insertion_checklist_daily_reassessment_record.docx",
+    "document_type": "record",
+    "standard_code": "HIC.4",
+    "record_index": 1,
+    "title": "CAUTI bundle insertion checklist and daily reassessment record"
+  },
+  {
+    "file": "Records/HIC.4_Record_02_vap_prevention_bundle_compliance_checklist.docx",
+    "document_type": "record",
+    "standard_code": "HIC.4",
+    "record_index": 2,
+    "title": "VAP-prevention bundle compliance checklist"
+  },
+  {
+    "file": "Records/HIC.4_Record_03_clabsi_bundle_insertion_checklist_line_necessity_review.docx",
+    "document_type": "record",
+    "standard_code": "HIC.4",
+    "record_index": 3,
+    "title": "CLABSI bundle insertion checklist and line-necessity review"
+  },
+  {
+    "file": "Records/HIC.4_Record_04_ssi_prevention_bundle_checklist_surveillance_record.docx",
+    "document_type": "record",
+    "standard_code": "HIC.4",
+    "record_index": 4,
+    "title": "SSI-prevention bundle checklist and 30/90-day surveillance record"
+  },
+  {
+    "file": "Records/HIC.4_Record_05_staff_immunisation_sharps_injury_register.docx",
+    "document_type": "record",
+    "standard_code": "HIC.4",
+    "record_index": 5,
+    "title": "Staff immunisation and sharps-injury register"
+  },
+  {
+    "file": "Records/HIC.4_Record_06_exposure_incident_post_exposure_prophylaxis_record.docx",
+    "document_type": "record",
+    "standard_code": "HIC.4",
+    "record_index": 6,
+    "title": "Exposure incident and post-exposure-prophylaxis record"
+  },
+  {
+    "file": "Records/HIC.4_Record_07_exposure_stop_work_log.docx",
+    "document_type": "record",
+    "standard_code": "HIC.4",
+    "record_index": 7,
+    "title": "Exposure stop-work log"
+  },
+  {
+    "file": "SOP_HIC.5.a_to_f_infection_prevention_control_surveillance.docx",
+    "document_type": "sop",
+    "standard_code": "HIC.5",
+    "title": "SOP \u2014 Infection Prevention and Control Surveillance (HIC.5)"
+  },
+  {
+    "file": "Records/HIC.5_Record_01_monthly_infection_rate_calculation_trend_report.docx",
+    "document_type": "record",
+    "standard_code": "HIC.5",
+    "record_index": 1,
+    "title": "Monthly infection-rate calculation and trend report"
+  },
+  {
+    "file": "Records/HIC.5_Record_02_hand_hygiene_observation_audit_feedback_record.docx",
+    "document_type": "record",
+    "standard_code": "HIC.5",
+    "record_index": 2,
+    "title": "Hand-hygiene observation audit and feedback record"
+  },
+  {
+    "file": "Records/HIC.5_Record_03_mdro_line_list_same_day_notification_record.docx",
+    "document_type": "record",
+    "standard_code": "HIC.5",
+    "record_index": 3,
+    "title": "MDRO line-list and same-day notification record"
+  },
+  {
+    "file": "Records/HIC.5_Record_04_outbreak_log_post_outbreak_report.docx",
+    "document_type": "record",
+    "standard_code": "HIC.5",
+    "record_index": 4,
+    "title": "Outbreak log and post-outbreak report"
+  },
+  {
+    "file": "Records/HIC.5_Record_05_objective_housekeeping_effectiveness_monitoring_record.docx",
+    "document_type": "record",
+    "standard_code": "HIC.5",
+    "record_index": 5,
+    "title": "Objective housekeeping-effectiveness monitoring record"
+  },
+  {
+    "file": "Records/HIC.5_Record_06_monthly_surveillance_analysis_capa_feedback_register.docx",
+    "document_type": "record",
+    "standard_code": "HIC.5",
+    "record_index": 6,
+    "title": "Monthly surveillance analysis, CAPA and feedback register"
+  },
+  {
+    "file": "SOP_HIC.6.a_to_e_sterilisation_disinfection_instruments_equipment_devices.docx",
+    "document_type": "sop",
+    "standard_code": "HIC.6",
+    "title": "SOP \u2014 Sterilisation and Disinfection of Instruments, Equipment and Devices (HIC.6)"
+  },
+  {
+    "file": "Records/HIC.6_Record_01_cssd_zoning_environmental_monitoring_record.docx",
+    "document_type": "record",
+    "standard_code": "HIC.6",
+    "record_index": 1,
+    "title": "CSSD zoning and environmental-monitoring record"
+  },
+  {
+    "file": "Records/HIC.6_Record_02_sterilisation_load_record.docx",
+    "document_type": "record",
+    "standard_code": "HIC.6",
+    "record_index": 2,
+    "title": "Sterilisation load record"
+  },
+  {
+    "file": "Records/HIC.6_Record_03_approved_reprocessing_list_cycle_count_tracking_record.docx",
+    "document_type": "record",
+    "standard_code": "HIC.6",
+    "record_index": 3,
+    "title": "Approved-for-reprocessing list and cycle-count tracking record"
+  },
+  {
+    "file": "Records/HIC.6_Record_04_biological_indicator_bowie_dick_validation_log.docx",
+    "document_type": "record",
+    "standard_code": "HIC.6",
+    "record_index": 4,
+    "title": "Biological-indicator and Bowie-Dick validation log"
+  },
+  {
+    "file": "Records/HIC.6_Record_05_sterilisation_recall_requalification_log.docx",
+    "document_type": "record",
+    "standard_code": "HIC.6",
+    "record_index": 5,
+    "title": "Sterilisation recall and re-qualification log"
+  },
+  {
+    "file": "Records/HIC.6_Record_06_instrument_stop_work_refusal_log.docx",
+    "document_type": "record",
+    "standard_code": "HIC.6",
+    "record_index": 6,
+    "title": "Instrument stop-work and refusal log"
+  }
+]
