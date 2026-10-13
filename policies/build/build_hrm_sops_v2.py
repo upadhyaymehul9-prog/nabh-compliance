@@ -342,10 +342,14 @@ HRM1E = SOPSpecV2(
             heading="Define the template",
             why="A job description that is missing the reporting line, qualifications, or performance indicators cannot be used to settle a dispute about who is accountable for what -- the template has to carry all of it, every time.",
             body=[
-                "The HR In-Charge maintains one job description template "
-                "covering: designation, department, reporting line, key "
-                "responsibilities, qualifications required, and "
-                "performance indicators.",
+                "The HR In-Charge maintains one job description "
+                "template covering six things:",
+                "1. Designation.",
+                "2. Department.",
+                "3. Reporting line.",
+                "4. Key responsibilities.",
+                "5. Qualifications required.",
+                "6. Performance indicators.",
                 "The Medical Superintendent approves the template and "
                 "any structural change to it.",
             ],
@@ -611,11 +615,14 @@ HRM2 = SOPSpecV2(
             heading="Induct every new staff member within the stated period",
             why="A staff member who starts working before induction is complete has had no structured introduction to hospital policy, infection control, patient rights or safety reporting -- induction has to close before unsupervised work starts, not run alongside it.",
             body=[
-                "The induction checklist covers hospital mission and "
-                "policies (including the code of conduct and grievance "
-                "mechanism), department orientation, role-specific "
-                "briefing, infection-control basics, patient rights, and "
-                "safety reporting.",
+                "The induction checklist covers six things:",
+                "1. Hospital mission and policies, including the code "
+                "of conduct and grievance mechanism.",
+                "2. Department orientation.",
+                "3. Role-specific briefing.",
+                "4. Infection-control basics.",
+                "5. Patient rights.",
+                "6. Safety reporting.",
                 "Induction is completed within the first week of "
                 "joining, before the new hire works unsupervised.",
                 "The new hire and their supervisor sign an induction "
@@ -627,11 +634,14 @@ HRM2 = SOPSpecV2(
             heading="Run training and development against written, approved guidance",
             why="Training delivered only as ad-hoc sessions when a problem has already occurred is reactive, not a programme -- written guidance and a published annual calendar are what make training something staff can plan around rather than something sprung on them.",
             body=[
-                "A written training and development policy covers "
-                "training needs assessment, mandatory training "
-                "frequencies, nomination and approval, budget provision, "
-                "documentation requirements, and external training "
-                "approval.",
+                "A written training and development policy covers six "
+                "things:",
+                "1. Training needs assessment.",
+                "2. Mandatory training frequencies.",
+                "3. Nomination and approval.",
+                "4. Budget provision.",
+                "5. Documentation requirements.",
+                "6. External training approval.",
                 "The Training Coordinator maintains an annual training "
                 "calendar -- topics, target groups, trainers, dates and "
                 "venues -- shared with every department.",
@@ -782,10 +792,12 @@ HRM3 = SOPSpecV2(
             heading="Make every staff member aware of incident procedures",
             why="An incident reporting system that only department heads understand misses the person most likely to actually witness the incident -- the front-line staff member.",
             body=[
-                "Induction training covers incident definition, the "
-                "reporting form or channel, immediate patient-safety "
-                "actions, preservation of evidence, and non-retaliation "
-                "for reporting.",
+                "Induction training covers five things:",
+                "1. Incident definition.",
+                "2. The reporting form or channel.",
+                "3. Immediate patient-safety actions.",
+                "4. Preservation of evidence.",
+                "5. Non-retaliation for reporting.",
                 "Refresher training is conducted annually.",
                 "Incident reporting posters are displayed in clinical "
                 "areas, as a standing reminder between training "
@@ -797,10 +809,14 @@ HRM3 = SOPSpecV2(
             heading="Train staff in occupational safety aspects relevant to their role",
             why="A generic safety lecture that never mentions manual handling, chemical exposure, electrical hazards or workplace violence leaves staff unprepared for the hazards they will actually encounter in a healthcare setting.",
             body=[
-                "Training covers hazards relevant to healthcare workers: "
-                "manual handling and ergonomics, chemical exposure, "
-                "electrical safety, workplace violence, and infection-"
-                "control occupational practices (exposure response).",
+                "Training covers five hazards relevant to healthcare "
+                "workers:",
+                "1. Manual handling and ergonomics.",
+                "2. Chemical exposure.",
+                "3. Electrical safety.",
+                "4. Workplace violence.",
+                "5. Infection-control occupational practices (exposure "
+                "response).",
                 "The Training Coordinator maintains role-specific "
                 "occupational safety modules, and department heads "
                 "confirm unit hazards are actually covered.",
@@ -826,10 +842,13 @@ HRM3 = SOPSpecV2(
             heading="Train staff in fire and non-fire emergency response",
             why="Staff who do not know the alarm signal, the evacuation route or the assembly point cannot respond safely in the first minutes of a fire, when those minutes matter most.",
             body=[
-                "Training covers alarm signals, evacuation routes, "
-                "assembly points, use of fire extinguishers where "
-                "trained, and non-fire emergency responses such as "
-                "utility failure or gas leak.",
+                "Training covers five things:",
+                "1. Alarm signals.",
+                "2. Evacuation routes.",
+                "3. Assembly points.",
+                "4. Use of fire extinguishers, where trained.",
+                "5. Non-fire emergency responses, such as utility "
+                "failure or gas leak.",
                 "Training is conducted at induction and refreshed after "
                 "each fire/non-fire drill or annually, whichever is "
                 "sooner.",
@@ -1071,11 +1090,14 @@ HRM5 = SOPSpecV2(
             why="A health check that happens once at hiring and never again cannot catch a condition that develops on the job -- the annual cycle is what makes this a genuine ongoing safeguard rather than a one-time formality.",
             body=[
                 "Every active staff member receives an annual health "
-                "check: general physical examination, vision and "
-                "hearing screening where the role requires it, chest "
-                "X-ray or PPD for high-risk roles, vaccination status "
-                "review, and any role-specific test defined in the "
-                "hazard register.",
+                "check covering five things:",
+                "1. A general physical examination.",
+                "2. Vision and hearing screening, where the role "
+                "requires it.",
+                "3. Chest X-ray or PPD for high-risk roles.",
+                "4. Vaccination status review.",
+                "5. Any role-specific test defined in the hazard "
+                "register.",
                 "Results are recorded on a standard health-check form "
                 "and filed in the personnel file.",
                 "Abnormal findings are referred for follow-up treatment; "
@@ -1092,10 +1114,13 @@ HRM5 = SOPSpecV2(
                 "Workplace injuries covered include slips and falls, "
                 "manual handling injuries, chemical exposure "
                 "(non-infection), and injuries from workplace violence.",
-                "The procedure runs immediate first aid, medical "
-                "assessment, treatment at the hospital's own emergency "
-                "service or a designated panel doctor, documentation of "
-                "the injury, and a return-to-work assessment.",
+                "The procedure runs five steps:",
+                "1. Immediate first aid.",
+                "2. Medical assessment.",
+                "3. Treatment at the hospital's own emergency service "
+                "or a designated panel doctor.",
+                "4. Documentation of the injury.",
+                "5. A return-to-work assessment.",
                 "Injury records are filed in the personnel file and "
                 "reported to the Medical Superintendent; a repeat injury "
                 "in the same area triggers a review of the hazard "
@@ -1108,16 +1133,20 @@ HRM5 = SOPSpecV2(
             heading="Prevent and handle workplace violence",
             why="Waiting for a violent incident to happen before deciding how to respond to it means the response is improvised in the moment it matters most -- prevention and handling measures have to be decided and communicated in advance.",
             body=[
-                "Prevention measures include staff training on "
-                "de-escalation, visible security measures, restricted "
-                "access to high-risk areas, and a zero-tolerance policy "
-                "communicated to patients and visitors.",
-                "Handling measures cover an immediate safety response, "
-                "reporting to the Medical Superintendent and local "
-                "police where applicable, medical treatment for the "
-                "injured staff member, incident documentation, support "
-                "and counselling for affected staff, and a review of "
-                "prevention measures after every event.",
+                "Prevention measures include four things:",
+                "1. Staff training on de-escalation.",
+                "2. Visible security measures.",
+                "3. Restricted access to high-risk areas.",
+                "4. A zero-tolerance policy communicated to patients "
+                "and visitors.",
+                "Handling measures cover six things:",
+                "1. An immediate safety response.",
+                "2. Reporting to the Medical Superintendent and local "
+                "police where applicable.",
+                "3. Medical treatment for the injured staff member.",
+                "4. Incident documentation.",
+                "5. Support and counselling for affected staff.",
+                "6. A review of prevention measures after every event.",
             ],
             oe_code="HRM.5.d",
             technical_sources=[WHO_VIOLENCE_SRC],
@@ -1210,14 +1239,15 @@ HRM6 = SOPSpecV2(
             heading="File the mandatory contents in every personal file",
             why="An appointment letter alone is not a personal file -- without qualification proof, a signed job description, credential verification and a health status record, the file cannot actually answer the question of whether this person is who, and what, the hospital believes them to be.",
             body=[
-                "Each personal file contains certified copies of "
-                "qualification, degree, diploma, registration and "
-                "licence documents; the signed job description for the "
-                "current role; proof of formal engagement (appointment "
-                "letter or contract, joining date, renewals); evidence "
-                "that credentials were verified with the issuing body or "
-                "council; and pre-employment and periodic health check "
-                "reports.",
+                "Each personal file contains five mandatory items:",
+                "1. Certified copies of qualification, degree, "
+                "diploma, registration and licence documents.",
+                "2. The signed job description for the current role.",
+                "3. Proof of formal engagement -- appointment letter "
+                "or contract, joining date, renewals.",
+                "4. Evidence that credentials were verified with the "
+                "issuing body or council.",
+                "5. Pre-employment and periodic health check reports.",
                 "A personnel file index at the front of each file lists "
                 "every mandatory document and its date of filing, used "
                 "by the HR Manager during file audits.",
@@ -1230,10 +1260,13 @@ HRM6 = SOPSpecV2(
             body=[
                 "For every training event -- induction, mandatory "
                 "refresher, skill update, external course -- the "
-                "personal file holds the topic, date, duration, trainer "
-                "or institution, the attendance register entry or "
-                "completion certificate, and any competency assessment "
-                "result.",
+                "personal file holds five things:",
+                "1. The topic.",
+                "2. The date and duration.",
+                "3. The trainer or institution.",
+                "4. The attendance register entry or completion "
+                "certificate.",
+                "5. Any competency assessment result.",
                 "A dedicated training section within each file holds "
                 "these records in chronological order, mirrored in the "
                 "HR Manager's central training register, which can "
@@ -1334,11 +1367,14 @@ HRM7 = SOPSpecV2(
             body=[
                 "The HR Manager, in consultation with the Medical "
                 "Superintendent, maintains the medical privileging "
-                "register listing every independently practising medical "
-                "professional, with name and employee/consultant ID, "
-                "National Medical Commission and State Medical Council "
-                "registration numbers, qualification, dates of initial "
-                "and last re-credentialing, and privileges granted.",
+                "register. Each entry lists six things:",
+                "1. Name and employee/consultant ID.",
+                "2. National Medical Commission and State Medical "
+                "Council registration numbers.",
+                "3. Qualification.",
+                "4. Date of initial credentialing.",
+                "5. Date of last re-credentialing.",
+                "6. Privileges granted.",
                 "The register is available to department heads and "
                 "nursing supervisors, with a current extract displayed "
                 "in each clinical department and at the nursing station "
@@ -1353,12 +1389,15 @@ HRM7 = SOPSpecV2(
             why="A registration number copied from a candidate's CV, never actually checked against the issuing council, is not verification -- it is a claim the hospital took on faith, and the law does not accept faith as a substitute for a current, confirmed registration.",
             body=[
                 "At credentialing or privilege renewal, the HR Manager "
-                "collects and verifies medical degree and speciality "
-                "qualification certificates, National Medical Commission "
-                "and State Medical Council registration, post-graduate "
-                "and continuing medical education records, experience "
-                "letters, and any disclosed malpractice or disciplinary "
-                "history.",
+                "collects and verifies five things:",
+                "1. Medical degree and speciality qualification "
+                "certificates.",
+                "2. National Medical Commission and State Medical "
+                "Council registration.",
+                "3. Post-graduate and continuing medical education "
+                "records.",
+                "4. Experience letters.",
+                "5. Any disclosed malpractice or disciplinary history.",
                 "Verification is documented with the date, the source "
                 "contacted, and the verifying officer. Registration "
                 "renewal dates are tracked, and re-verification begins "
@@ -1377,11 +1416,14 @@ HRM7 = SOPSpecV2(
                 "The Credentialing Committee -- chaired by the Medical "
                 "Superintendent with the HR Manager and the relevant "
                 "department head -- reviews each application and grants "
-                "privileges by written privilege letter stating "
-                "procedures and services the doctor may perform "
-                "independently, patient categories where applicable, "
-                "admission authority if granted, any restrictions, and a "
-                "validity period of maximum two years.",
+                "privileges by written privilege letter stating five "
+                "things:",
+                "1. Procedures and services the doctor may perform "
+                "independently.",
+                "2. Patient categories, where applicable.",
+                "3. Admission authority, if granted.",
+                "4. Any restrictions.",
+                "5. A validity period of maximum two years.",
                 "Privileges not supported by verified credentials are "
                 "not granted; a doctor whose registration lapses is "
                 "suspended from the register pending renewal "
@@ -1400,10 +1442,12 @@ HRM7 = SOPSpecV2(
                 "the department head confirms the doctor's privileges "
                 "match the services the department claims to provide.",
                 "At department induction or when a new doctor joins a "
-                "unit, the department head briefs the doctor on the "
-                "department's services and procedures, referral "
-                "pathways, on-call and emergency cover expectations, and "
-                "documentation requirements.",
+                "unit, the department head briefs the doctor on four "
+                "things:",
+                "1. The department's services and procedures.",
+                "2. Referral pathways.",
+                "3. On-call and emergency cover expectations.",
+                "4. Documentation requirements.",
                 "The briefing is recorded and filed in the credentialing "
                 "file; department heads match their unit doctor list to "
                 "the central privileging register quarterly.",
@@ -1513,12 +1557,15 @@ HRM8 = SOPSpecV2(
             body=[
                 "The HR Manager, in consultation with the Nursing "
                 "Superintendent, maintains the nursing privileging "
-                "register listing every independently practising nurse, "
-                "with name and employee ID, Indian Nursing Council and "
-                "State Nursing Council registration numbers, "
-                "qualification (GNM, B.Sc. Nursing, Post Basic B.Sc. "
-                "Nursing or equivalent), dates of initial and last "
-                "re-credentialing, and privileges granted.",
+                "register. Each entry lists six things:",
+                "1. Name and employee ID.",
+                "2. Indian Nursing Council and State Nursing Council "
+                "registration numbers.",
+                "3. Qualification -- GNM, B.Sc. Nursing, Post Basic "
+                "B.Sc. Nursing or equivalent.",
+                "4. Date of initial credentialing.",
+                "5. Date of last re-credentialing.",
+                "6. Privileges granted.",
                 "The register is available to ward in-charges and "
                 "department heads, with a current extract displayed at "
                 "each nursing station so staff know who is authorised "
@@ -1532,11 +1579,14 @@ HRM8 = SOPSpecV2(
             why="A registration number copied from a candidate's file, never actually checked against the issuing council, is not verification -- it is a claim the hospital took on faith.",
             body=[
                 "At credentialing or privilege renewal, the HR Manager "
-                "collects and verifies nursing diploma or degree "
-                "certificates, Indian Nursing Council and State Nursing "
-                "Council registration, post-basic speciality training "
-                "certificates where applicable, experience letters, and "
-                "continuing nursing education records.",
+                "collects and verifies five things:",
+                "1. Nursing diploma or degree certificates.",
+                "2. Indian Nursing Council and State Nursing Council "
+                "registration.",
+                "3. Post-basic speciality training certificates, where "
+                "applicable.",
+                "4. Experience letters.",
+                "5. Continuing nursing education records.",
                 "Verification is documented with the date, the source "
                 "contacted, and the verifying officer. Registration "
                 "renewal dates are tracked, and re-verification begins "
@@ -1555,12 +1605,14 @@ HRM8 = SOPSpecV2(
                 "The Credentialing Committee -- chaired by the Nursing "
                 "Superintendent with the HR Manager and Medical "
                 "Superintendent -- reviews each application and grants "
-                "privileges by written privilege letter stating nursing "
-                "procedures and care activities the nurse may perform "
-                "independently, patient categories where applicable, "
-                "ward or unit assignment authority if granted, any "
-                "restrictions, and a validity period of maximum two "
-                "years.",
+                "privileges by written privilege letter stating five "
+                "things:",
+                "1. Nursing procedures and care activities the nurse "
+                "may perform independently.",
+                "2. Patient categories, where applicable.",
+                "3. Ward or unit assignment authority, if granted.",
+                "4. Any restrictions.",
+                "5. A validity period of maximum two years.",
                 "Privileges not supported by verified credentials are "
                 "not granted; a nurse whose registration lapses is "
                 "suspended from the register pending renewal "
@@ -1578,13 +1630,15 @@ HRM8 = SOPSpecV2(
                 "service directory and the ward or unit scope; the ward "
                 "in-charge confirms the nurse's privileges match the "
                 "services the unit provides.",
-                "At unit induction or when a new nurse joins a ward, the "
-                "ward in-charge briefs the nurse on nursing care "
-                "standards and procedures, medication administration and "
-                "documentation requirements, escalation pathways to the "
-                "treating doctor, handover and shift-reporting "
-                "requirements, and infection-control and safety "
-                "practices for the unit.",
+                "At unit induction or when a new nurse joins a ward, "
+                "the ward in-charge briefs the nurse on five things:",
+                "1. Nursing care standards and procedures.",
+                "2. Medication administration and documentation "
+                "requirements.",
+                "3. Escalation pathways to the treating doctor.",
+                "4. Handover and shift-reporting requirements.",
+                "5. Infection-control and safety practices for the "
+                "unit.",
                 "The briefing is recorded and filed in the credentialing "
                 "file; ward in-charges match their unit nurse list to "
                 "the central privileging register quarterly.",
@@ -1696,11 +1750,13 @@ HRM9 = SOPSpecV2(
             body=[
                 "The HR Manager, in consultation with relevant "
                 "department heads, maintains the para-clinical "
-                "privileging register listing every independently "
-                "practising professional, with name and employee ID, "
-                "profession category, statutory registration number and "
-                "issuing body, qualification, dates of initial and last "
-                "re-credentialing, and privileges granted.",
+                "privileging register. Each entry lists six things:",
+                "1. Name and employee ID.",
+                "2. Profession category.",
+                "3. Statutory registration number and issuing body.",
+                "4. Qualification.",
+                "5. Dates of initial and last re-credentialing.",
+                "6. Privileges granted.",
                 "The register is available to department heads, with a "
                 "current extract displayed in each para-clinical "
                 "department (laboratory, radiology, pharmacy, "
@@ -1714,14 +1770,17 @@ HRM9 = SOPSpecV2(
             body=[
                 "At credentialing or privilege renewal, the HR Manager "
                 "collects and verifies credentials specific to each "
-                "profession: pharmacy degree/diploma and State Pharmacy "
-                "Council registration for pharmacists; DMLT/B.Sc. MLT or "
+                "profession:",
+                "1. Pharmacists: pharmacy degree/diploma and State "
+                "Pharmacy Council registration.",
+                "2. Laboratory technicians: DMLT/B.Sc. MLT or "
                 "equivalent and State Medical Faculty or board "
-                "registration for laboratory technicians; radiography "
-                "qualification and AERB authorisation for radiographers "
-                "operating radiation-generating equipment; and BPT/MPT "
-                "and State Council of Physiotherapy registration for "
-                "physiotherapists.",
+                "registration.",
+                "3. Radiographers operating radiation-generating "
+                "equipment: radiography qualification and AERB "
+                "authorisation.",
+                "4. Physiotherapists: BPT/MPT and State Council of "
+                "Physiotherapy registration.",
                 "Verification is documented with the date, the source "
                 "contacted, and the verifying officer. Registration "
                 "renewal dates are tracked, and re-verification begins "
@@ -1740,17 +1799,21 @@ HRM9 = SOPSpecV2(
                 "The Credentialing Committee -- chaired by the Medical "
                 "Superintendent with the HR Manager and the relevant "
                 "department head -- reviews each application and grants "
-                "privileges by written privilege letter stating the "
-                "tests, procedures, equipment or services the "
-                "professional may perform independently, patient "
-                "categories where applicable, any restrictions, and a "
-                "validity period of maximum two years.",
-                "Profession-specific privileges are named explicitly: "
-                "dispensing categories for a pharmacist; test panels and "
-                "analyser categories for a laboratory technician; "
-                "AERB-authorised modalities and equipment for a "
-                "radiographer; treatment modalities and patient "
-                "categories for a physiotherapist.",
+                "privileges by written privilege letter stating four "
+                "things:",
+                "1. The tests, procedures, equipment or services the "
+                "professional may perform independently.",
+                "2. Patient categories, where applicable.",
+                "3. Any restrictions.",
+                "4. A validity period of maximum two years.",
+                "Profession-specific privileges are named explicitly:",
+                "1. Pharmacist: dispensing categories.",
+                "2. Laboratory technician: test panels and analyser "
+                "categories.",
+                "3. Radiographer: AERB-authorised modalities and "
+                "equipment.",
+                "4. Physiotherapist: treatment modalities and patient "
+                "categories.",
                 "Privileges not supported by verified credentials are "
                 "not granted; a professional whose registration lapses "
                 "is suspended from the register pending renewal "
@@ -1768,13 +1831,14 @@ HRM9 = SOPSpecV2(
                 "privileges match the services the department claims to "
                 "provide.",
                 "At department induction or when a new professional "
-                "joins, the department head briefs the person on "
-                "services, tests, procedures or treatments the "
-                "department provides and those referred elsewhere, "
-                "quality standards and turnaround times, safety "
-                "requirements (radiation safety, biosafety, cytotoxic "
-                "handling as applicable), and escalation pathways to the "
-                "treating doctor.",
+                "joins, the department head briefs the person on four "
+                "things:",
+                "1. Services, tests, procedures or treatments the "
+                "department provides and those referred elsewhere.",
+                "2. Quality standards and turnaround times.",
+                "3. Safety requirements -- radiation safety, "
+                "biosafety, cytotoxic handling as applicable.",
+                "4. Escalation pathways to the treating doctor.",
                 "The briefing is recorded and filed in the credentialing "
                 "file; department heads match their unit staff list to "
                 "the central privileging register quarterly.",
