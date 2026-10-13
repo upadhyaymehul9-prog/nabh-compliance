@@ -588,10 +588,13 @@ AAC3A = SOPSpecV2(
             heading="Perform the initial assessment",
             why="An initial assessment that exists only in the clinician's memory cannot be handed over, reviewed, or checked -- writing it down, with every required element present, is what makes it a clinical record rather than an impression.",
             body=[
-                "The initial assessment covers, at minimum: presenting "
-                "complaint, relevant history, vital signs, physical "
-                "examination findings, known allergies, and a provisional "
-                "diagnosis or working impression.",
+                "The initial assessment covers, at minimum, six things:",
+                "1. The presenting complaint.",
+                "2. Relevant history.",
+                "3. Vital signs.",
+                "4. Physical examination findings.",
+                "5. Known allergies.",
+                "6. A provisional diagnosis or working impression.",
                 "For emergency patients, initial assessment includes a "
                 "documented triage category reflecting urgency, recorded "
                 "concurrently with the clinical picture.",
@@ -1197,10 +1200,12 @@ AAC7 = SOPSpecV2(
                 "(for example SBAR -- Situation, Background, Assessment, "
                 "Recommendation) at every shift change and at every "
                 "transfer between units or departments.",
-                "Cover, for each patient: identification, current "
-                "diagnosis and condition, key events since the last "
-                "handover, pending tasks and follow-up required, and any "
-                "safety concern or early-warning-score trigger.",
+                "Cover five things for each patient:",
+                "1. Identification.",
+                "2. Current diagnosis and condition.",
+                "3. Key events since the last handover.",
+                "4. Pending tasks and follow-up required.",
+                "5. Any safety concern or early-warning-score trigger.",
                 "Document the handover in the handover register, "
                 "patient file or electronic system, and have the "
                 "receiving team acknowledge receipt before the outgoing "
@@ -1319,15 +1324,23 @@ AAC8 = SOPSpecV2(
             heading="Complete identification, dates and clinical content",
             why="A discharge summary missing a date of admission, a diagnosis, or the results of a key investigation is not a summary the next treating doctor can actually rely on.",
             body=[
-                "Enter the patient's name, unique identification number, "
-                "date of admission and date of discharge on every "
-                "discharge summary; have the registration/front-office "
-                "team verify these four fields before release.",
-                "Enter the reasons for admission, significant findings, "
-                "provisional and/or final diagnosis, the patient's "
-                "condition at discharge, investigation results, any "
-                "procedure performed, medication administered and other "
-                "treatment given.",
+                "Enter these four identification fields on every "
+                "discharge summary:",
+                "1. The patient's name.",
+                "2. The unique identification number.",
+                "3. The date of admission.",
+                "4. The date of discharge.",
+                "The registration/front-office team verifies these four "
+                "fields before release.",
+                "Enter these eight clinical-content items:",
+                "1. The reasons for admission.",
+                "2. Significant findings.",
+                "3. The provisional and/or final diagnosis.",
+                "4. The patient's condition at discharge.",
+                "5. Investigation results.",
+                "6. Any procedure performed.",
+                "7. Medication administered.",
+                "8. Other treatment given.",
                 "Write the clinical content in language the patient or "
                 "family can understand, using plain-language explanation "
                 "alongside any medical terminology.",
@@ -1339,12 +1352,14 @@ AAC8 = SOPSpecV2(
             heading="Give follow-up, medication and urgent-care instructions",
             why="A patient discharged with medicines but no explanation of warning signs or who to call is a readmission waiting to happen.",
             body=[
-                "Include in the discharge summary the follow-up date or "
-                "timeframe, medications prescribed at discharge with "
-                "dose, frequency, route and duration, diet/activity/"
-                "wound-care instructions where applicable, warning signs "
-                "that should prompt an earlier visit, and a contact "
-                "number for queries.",
+                "Include five things in the discharge summary:",
+                "1. The follow-up date or timeframe.",
+                "2. Medications prescribed at discharge, with dose, "
+                "frequency, route and duration.",
+                "3. Diet/activity/wound-care instructions where "
+                "applicable.",
+                "4. Warning signs that should prompt an earlier visit.",
+                "5. A contact number for queries.",
                 "Include instructions on when and how to obtain urgent "
                 "care: symptoms requiring immediate return, how to reach "
                 "«Hospital Name»'s emergency department, and an "
