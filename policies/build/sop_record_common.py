@@ -290,15 +290,11 @@ def build_sop_v2(spec: SOPSpecV2, out_path: Path) -> None:
     doc.add_paragraph(spec.purpose_text)
 
     doc.add_heading("2. Scope", level=1)
-    p = doc.add_paragraph()
-    p.add_run("Why: ").italic = True
-    p.add_run(spec.scope_why)
+    doc.add_paragraph(spec.scope_why)
     doc.add_paragraph(spec.scope_text)
 
     doc.add_heading("3. Responsibility", level=1)
-    p = doc.add_paragraph()
-    p.add_run("Why: ").italic = True
-    p.add_run(spec.responsibility_why)
+    doc.add_paragraph(spec.responsibility_why)
     for role, text in spec.responsibilities:
         rp = doc.add_paragraph()
         rp.add_run(f"{role}: ").bold = True
@@ -307,9 +303,7 @@ def build_sop_v2(spec: SOPSpecV2, out_path: Path) -> None:
     doc.add_heading("4. What to do", level=1)
     for item in spec.items:
         doc.add_heading(item.heading, level=2)
-        p = doc.add_paragraph()
-        p.add_run("Why: ").italic = True
-        p.add_run(item.why)
+        doc.add_paragraph(item.why)
         for para in item.body:
             doc.add_paragraph(para)
 
