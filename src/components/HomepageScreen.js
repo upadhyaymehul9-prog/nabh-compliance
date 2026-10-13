@@ -467,7 +467,7 @@ export default function HomepageScreen({ onLogin }) {
         onClick={() => document.querySelector('.mktech')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
         role="button" tabIndex={0} aria-label="View free tools">
         <div className="hp-ticker-inner">
-          &nbsp;&nbsp;&nbsp;🎉 New: Try our free Revenue Leakage Self-Audit and Marketing &amp; Brand Health Check — no login needed →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🎉 New: Try our free Revenue Leakage Self-Audit and Marketing &amp; Brand Health Check — no login needed →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;📄 New: Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 New: Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
       </div>
 
@@ -674,6 +674,11 @@ export default function HomepageScreen({ onLogin }) {
           </div>
           <div className="bgrid">
             <div className="bcard">
+              <div className="ic" aria-hidden="true"><i className="ti ti-file-text"></i></div>
+              <h3>Ready-to-use policy documents <span className="badge-live">Live</span></h3>
+              <p>Open any standard in the objective element scoring section and download its Policy, SOPs, or Records — ready-to-use documents personalised with your hospital's name.</p>
+            </div>
+            <div className="bcard">
               <div className="ic" aria-hidden="true"><i className="ti ti-file-download"></i></div>
               <h3>PDF gap &amp; CAPA reports <span className="badge-live">Live</span></h3>
               <p>Generate a clean, survey-ready PDF after gap analysis and CAPA — overall compliance, chapter-wise scores, ranked gaps, the lot.</p>
@@ -854,6 +859,7 @@ export default function HomepageScreen({ onLogin }) {
                 <li><i className="ti ti-check" aria-hidden="true"></i> Committees, KPIs, audits, checklists &amp; drills</li>
                 <li><i className="ti ti-check" aria-hidden="true"></i> CAPA workflow with evidence links</li>
                 <li><i className="ti ti-check" aria-hidden="true"></i> PDF gap &amp; CAPA reports</li>
+                <li><i className="ti ti-check" aria-hidden="true"></i> Policy, SOPs &amp; Records document downloads</li>
                 <li><i className="ti ti-check" aria-hidden="true"></i> Full-year scheduling calendar</li>
                 <li><i className="ti ti-check" aria-hidden="true"></i> AI assistant grounded in the standards</li>
               </ul>
