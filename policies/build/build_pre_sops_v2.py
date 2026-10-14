@@ -291,9 +291,13 @@ PRE1 = SOPSpecV2(
                 "Reports are received by the Patient Rights Officer. If "
                 "the alleged violator is that officer, the report goes "
                 "to the Medical Superintendent instead.",
-                "Each report is logged with date, reporter (name or "
-                "\"anonymous\"), the right said to be violated, a short "
-                "statement, and who received it. A complaint that "
+                "Each report is logged with five pieces of information:",
+                "1. Date.",
+                "2. Reporter (name or \"anonymous\").",
+                "3. The right said to be violated.",
+                "4. A short statement.",
+                "5. Who received it.",
+                "A complaint that "
                 "alleges a rights violation, wherever it is first "
                 "lodged, also enters this violation log so the same "
                 "facts reach leadership review.",
@@ -1112,12 +1116,16 @@ PRE3 = SOPSpecV2(
                 "patient or family for situations where it is required, "
                 "and the process adheres to statutory norms.",
                 "Situations where informed consent is required at "
-                "«Hospital Name» include at least: transfusion of blood "
-                "and blood components; anaesthesia; surgery; initiation "
-                "of any research protocol this hospital actually runs; "
-                "and any other invasive or high-risk procedure or "
+                "«Hospital Name» include at least these five:",
+                "1. Transfusion of blood and blood components.",
+                "2. Anaesthesia.",
+                "3. Surgery.",
+                "4. Initiation of any research protocol this hospital "
+                "actually runs.",
+                "5. Any other invasive or high-risk procedure or "
                 "treatment named in the consent situations list held by "
-                "the Patient Rights Officer. A class the service "
+                "the Patient Rights Officer.",
+                "A class the service "
                 "directory does not provide is a recorded absence, not "
                 "a copied consent procedure.",
                 "The consent process -- when it is obtained, how it is "
@@ -1140,10 +1148,13 @@ PRE3 = SOPSpecV2(
             heading="Include the procedure, risks, benefits, alternatives and performer in a language they understand",
             why="A form that lists only \"surgery\" with nothing about who will perform it or what could go wrong gives the patient nothing real to agree to.",
             body=[
-                "Informed consent includes information regarding the "
-                "procedure, its risks, benefits, alternatives, and as to "
-                "who will perform the procedure, in a language that "
-                "they can understand.",
+                "Informed consent includes information on five things, "
+                "in a language that they can understand:",
+                "1. The procedure.",
+                "2. Its risks.",
+                "3. Benefits.",
+                "4. Alternatives.",
+                "5. Who will perform the procedure.",
                 "The consent form and conversation cover those elements "
                 "in «Hindi and English» or the language the patient or "
                 "family can understand. A form that lists only "
@@ -1162,9 +1173,12 @@ PRE3 = SOPSpecV2(
                 "The organisation describes who can give consent when a "
                 "patient is incapable of independent decision-making, "
                 "and implements that description.",
-                "The description distinguishes a child, an unconscious "
-                "or otherwise non-communicating adult, a documented "
-                "emergency, and a person with mental illness as defined "
+                "The description distinguishes four categories:",
+                "1. A child.",
+                "2. An unconscious or otherwise non-communicating "
+                "adult.",
+                "3. A documented emergency.",
+                "4. A person with mental illness as defined "
                 "in national mental healthcare law where that law "
                 "applies. For that specific legal category, the "
                 "nominated representative and advance directive "
@@ -1395,11 +1409,14 @@ PRE4 = SOPSpecV2(
             body=[
                 "Patient and/or family are educated in a language and "
                 "format that they can understand.",
-                "Language and format -- spoken language, written "
-                "material, interpreter use, an accompanying family "
-                "member as translator, and what is done when the "
-                "patient cannot read -- are chosen and recorded in "
-                "«Hindi and English» or the patient's own language.",
+                "Language and format are chosen from five options and "
+                "recorded in «Hindi and English» or the patient's own "
+                "language:",
+                "1. Spoken language.",
+                "2. Written material.",
+                "3. Interpreter use.",
+                "4. An accompanying family member as translator.",
+                "5. What is done when the patient cannot read.",
             ],
             oe_code="PRE.4.a",
             boundary=[
@@ -1896,10 +1913,15 @@ PRE6 = SOPSpecV2(
             why="A patient can be satisfied overall and still have waited three hours in pain -- a satisfaction score alone hides exactly the detail this hospital needs to fix.",
             body=[
                 "The organisation has a mechanism to capture the patient "
-                "experience -- what actually happened to this patient: "
-                "«wait time, dignity, communication, pain control» -- "
-                "not only whether they would recommend the hospital. "
-                "This is distinct from the satisfaction score above.",
+                "experience -- what actually happened to this patient, "
+                "covering four things:",
+                "1. Wait time.",
+                "2. Dignity.",
+                "3. Communication.",
+                "4. Pain control.",
+                "This is not only whether they would recommend the "
+                "hospital, and is distinct from the satisfaction score "
+                "above.",
             ],
             oe_code="PRE.6.b",
         ),
