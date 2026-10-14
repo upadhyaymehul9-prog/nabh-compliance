@@ -16,14 +16,30 @@ are its own internal procedural steps (4.1-4.4), not separate objective
 elements -- all four carry the same OE code in the appendix.
 
 Writes over the existing committed paths in place; does not touch Records.
+
+ROM.2 (added 2026-10-14) closes a real gap found by Mk live on the site:
+the whole standard (OEs a-d -- administrative head qualifications,
+experience, applicable-legislation compliance, and performance review)
+had a master policy drafted back on 2026-08-17 but no SOP/Record pair was
+ever built for it -- the only ROM standard left with nothing. Unlike
+ROM.1, this is written as one combined SOP covering all four OEs (the
+newer convention used by COP/HRM/MOM/PRE), since all four OEs concern the
+same person and a single appointment-to-review cycle, not four
+independent procedures. Three Records close it out: qualification/
+experience verification at appointment, the applicable-legislation
+register, and the leader performance-review record. This script now also
+builds those records and rewrites manifest.json (merging, not replacing,
+the existing ROM.1/3/4 entries already in it).
 """
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
-from sop_record_common import PlainItem, SOPSpecV2, build_sop_v2
+from sop_record_common import PlainItem, RecordSpec, SOPSpecV2, build_record, build_sop_v2
 
 OUT_ROOT = Path(__file__).parent / "sop_record_masters" / "ROM"
+RECORDS_ROOT = OUT_ROOT / "Records"
 
 NABH_ROM_CITE = (
     "National Accreditation Board for Hospitals and Healthcare Providers. (2022). "
@@ -953,6 +969,211 @@ ROM4C = SOPSpecV2(
     ],
 )
 
+# --------------------------------------------------------------- ROM.2 -----
+ROM2 = SOPSpecV2(
+    sop_no="SOP-ROM.2",
+    title="Administrative Head — Qualifications, Experience, Legal Compliance and Performance Review",
+    purpose_plain=(
+        "This SOP sets out how «Hospital Name» verifies, before "
+        "appointment, that the person heading day-to-day operations has "
+        "the requisite administrative qualifications and experience; "
+        "keeps a current register of the legislations, regulations and "
+        "notifications that leader is responsible for complying with; and "
+        "reviews that leader's performance for effectiveness on a defined "
+        "cycle -- so headship rests on verified fitness and ongoing "
+        "accountability, not an unchecked appointment."
+    ),
+    purpose_trigger=(
+        "A new administrative head takes charge, and six months later an "
+        "assessor asks to see the qualification check that was done before "
+        "appointment, the legislation register this head is accountable "
+        "for, and the record of the first performance review. This SOP is "
+        "what makes sure all three already exist, rather than being "
+        "assembled the week before the visit."
+    ),
+    purpose_why=(
+        "We do this because a hospital run day to day by someone whose "
+        "qualifications were never checked, who doesn't know which laws "
+        "apply to the services this hospital actually runs, or whose "
+        "performance nobody ever reviews, is a hospital where day-to-day "
+        "operating authority rests on an assumption instead of a verified "
+        "fact."
+    ),
+    purpose_text=(
+        "To define how «Hospital Name» verifies the administrative head's "
+        "qualifications and experience before appointment, maintains a "
+        "current applicable-legislation register for that role, and "
+        "reviews the administrative head's performance for effectiveness "
+        "on a defined cycle."
+    ),
+    scope_why=(
+        "so this applies to whoever actually holds day-to-day operating "
+        "authority -- by whatever title «Hospital Name» gives the role -- "
+        "not only to a title that happens to say 'administrator.'"
+    ),
+    scope_text=(
+        "Applies to the person heading «Hospital Name» on a day-to-day "
+        "basis -- however that role is titled locally (Administrator, "
+        "Medical Superintendent, CEO, or equivalent) -- and to the "
+        "governing body that appoints, verifies and reviews that person."
+    ),
+    responsibility_why=(
+        "qualifications nobody checked, a legislation list nobody keeps "
+        "current, and a review nobody schedules are each a gap that only "
+        "surfaces when something has already gone wrong under this "
+        "person's authority."
+    ),
+    responsibilities=[
+        ("Governing Body",
+         "Verifies the administrative head's qualifications and "
+         "experience before appointment, reviews that head's performance "
+         "on the defined cycle, and signs off both."),
+        ("Administrative Head",
+         "Keeps the applicable-legislation register current against the "
+         "hospital's actual services, and complies with every "
+         "legislation, regulation and notification named in it."),
+        ("Quality Coordinator",
+         "Confirms, at the quarterly audit, that the legislation "
+         "register is current and that the next performance review is "
+         "scheduled, not overdue."),
+    ],
+    items=[
+        PlainItem(
+            heading="Verify qualifications and experience before appointment",
+            why=(
+                "An administrative head whose qualifications and "
+                "experience were taken on trust, never checked against "
+                "the role's own requirements, is running the hospital on "
+                "an assumption the governing body never actually tested."
+            ),
+            body=[
+                "Before appointment, the governing body checks the "
+                "candidate's administrative qualifications and "
+                "experience against the requirements this hospital has "
+                "defined for the role.",
+                "The verification is recorded, with the documents "
+                "checked and the outcome, before the appointment is "
+                "confirmed.",
+                "Where the role changes hands, the same verification is "
+                "repeated for the new appointee -- a transfer or "
+                "promotion is never assumed to carry the check forward "
+                "from a different role.",
+                "The underlying qualification and registration documents "
+                "themselves are filed in the administrative head's "
+                "personal file under the hospital's human-resource "
+                "credentialing process; this record is the governance-"
+                "level verification that the check was done, not a "
+                "second copy of the certificates.",
+            ],
+            oe_code="ROM.2.a",
+            boundary=[
+                "ROM.1.d covers the governing body's appointment of "
+                "senior leaders generally; this step owns only the "
+                "qualifications/experience check for the administrative "
+                "head specifically.",
+                "The personal file holding the actual certificates is "
+                "HRM's credentialing process, not this SOP.",
+            ],
+        ),
+        PlainItem(
+            heading="Keep the applicable-legislation register current",
+            why=(
+                "An applicable-law list copied from another hospital, or "
+                "one nobody updates when a service changes, tells the "
+                "administrative head they are compliant with laws that "
+                "may no longer be the ones that actually govern what this "
+                "hospital does."
+            ),
+            body=[
+                "The administrative head maintains a written register of "
+                "the legislations, regulations and notifications this "
+                "hospital is actually subject to, drawn from the "
+                "hospital's defined service directory -- not a generic "
+                "list of statutes the hospital's own services never "
+                "trigger.",
+                "When a service is added, suspended or withdrawn, the "
+                "register is reviewed for that service and updated if "
+                "needed.",
+                "A statute already owned by another document -- "
+                "biomedical waste rules under the infection-control "
+                "policy, the Narcotic Drugs and Psychotropic Substances "
+                "Act under medication management, PC-PNDT under imaging, "
+                "for example -- stays in that owning document; this "
+                "register records that the administrative head is "
+                "responsible for the applicable set as a whole, not a "
+                "duplicate copy of each one.",
+                "The register is reviewed, and its currency confirmed, at "
+                "least annually.",
+            ],
+            oe_code="ROM.2.c",
+            boundary=[
+                "A statute already owned by a specific chapter (HIC.3 "
+                "biomedical waste, MOM.8 narcotics, AAC.5 PC-PNDT) stays "
+                "there; this step owns the administrative head's overall "
+                "accountability for the applicable set, not a second "
+                "register of the same statutes.",
+            ],
+        ),
+        PlainItem(
+            heading="Review performance for effectiveness",
+            why=(
+                "An administrative head whose performance is never "
+                "formally reviewed has, in practice, unaccountable "
+                "day-to-day authority over the hospital -- a review that "
+                "only happens informally, in conversation, leaves no "
+                "record an assessor -- or the governing body itself -- can "
+                "actually check."
+            ),
+            body=[
+                "The governing body reviews the administrative head's "
+                "performance for effectiveness at least annually, against "
+                "criteria the governing body has defined for the role "
+                "(such as achievement of operational plans, service "
+                "standards and statutory compliance).",
+                "The review is recorded, signed by the governing body, "
+                "and shared with the administrative head.",
+                "Where the review finds a performance gap, the governing "
+                "body records the corrective step agreed and follows up "
+                "at the next review.",
+            ],
+            oe_code="ROM.2.d",
+            technical_sources=[
+                "International Organization for Standardization. (2026). "
+                "[ISO 9001:2026, Quality management systems — "
+                "Requirements](https://www.iso.org/standard/88464.html), "
+                "clause 5.3 (Organizational roles, responsibilities and "
+                "authorities). External benchmark for defining and "
+                "reviewing a leadership role's accountability; SHCO "
+                "accreditation does not itself require ISO 9001 "
+                "certification.",
+            ],
+            boundary=[
+                "ROM.1.c (organisation's performance against its mission) "
+                "and ROM.3.d (service-standard monitoring) are "
+                "organisation-level measures this review may draw on; "
+                "this step owns only the review of the person, not those "
+                "underlying measures themselves.",
+            ],
+        ),
+    ],
+    records_note="This SOP produces and maintains Records 1-3 (see the ROM.2 Records folder).",
+    related_documents=[
+        "Policy on the Administrative Head of the Organisation (ROM.2)",
+        "Policy on Governance — Roles, Responsibilities and Ethical Management (ROM.1)",
+    ],
+    review_text=(
+        "This SOP is reviewed at least annually by the Quality Coordinator "
+        "together with the governing body, and sooner if the role changes "
+        "hands, the service directory changes in a way that alters the "
+        "applicable-legislation register, or a performance review finds a "
+        "gap this SOP did not anticipate."
+    ),
+    full_reference_list=[
+        NABH_ROM_CITE.format(code="ROM.2"),
+        "International Organization for Standardization. (2026). [ISO 9001:2026, Quality management systems — Requirements](https://www.iso.org/standard/88464.html), clause 5.3.",
+    ],
+)
+
 SOPS = [
     ("SOP_ROM.1.a_governance_roles.docx", ROM1A),
     ("SOP_ROM.1.b_vision_mission_values.docx", ROM1B),
@@ -960,6 +1181,148 @@ SOPS = [
     ("SOP_ROM.3.d_measurable_service_standards.docx", ROM3D),
     ("SOP_ROM.4.a_risk_management.docx", ROM4A),
     ("SOP_ROM.4.c_failure_reporting.docx", ROM4C),
+    ("SOP_ROM.2.a_to_d_administrative_head.docx", ROM2),
+]
+
+# --------------------------------------------------------- ROM.2 Records ---
+ROM2_RECORDS: list[tuple[int, str, RecordSpec]] = [
+    (1, "qualification_experience_verification", RecordSpec(
+        oe_code="ROM.2.a / ROM.2.b",
+        oe_requirement=(
+            "The person heading the organisation has requisite and "
+            "appropriate administrative qualifications and experience."
+        ),
+        record_title="ROM.2 Record 1 — Administrative head qualification and experience verification record",
+        what_is_this=(
+            "This record is the proof the governing body actually "
+            "checked the administrative head's qualifications and "
+            "experience against the role's own defined requirements "
+            "before appointment -- not a copy of the certificates "
+            "themselves, which stay in the personal file."
+        ),
+        real_example=(
+            "Before confirming a new Administrator, the governing body "
+            "checks the candidate's postgraduate hospital-administration "
+            "qualification and nine years of administrative experience "
+            "against the role's defined requirement of a postgraduate "
+            "qualification and five years' experience, records the check "
+            "as met, and signs off the appointment."
+        ),
+        why_nabh_asks=(
+            "An administrative head whose qualifications were taken on "
+            "trust, never checked against what the role actually "
+            "requires, is running the hospital on an assumption the "
+            "governing body never tested -- this record is the proof "
+            "that assumption was replaced with a check."
+        ),
+        how_to_fill=[
+            ("Appointee Name / Role", "Who is being verified, and the title this hospital uses for the role."),
+            ("Qualification Required / Held", "The role's defined requirement, and what the candidate actually holds."),
+            ("Experience Required / Held", "The role's defined requirement, and what the candidate actually has."),
+            ("Documents Checked", "Degree certificate, registration, prior-employment proof, etc."),
+            ("Outcome / Governing Body Sign-Off", "Met / Not Met, with the signing member and date."),
+        ],
+        verified_sources=[NABH_ROM_CITE.format(code="ROM.2")],
+        column_headers=["Appointee Name / Role", "Qualification Required / Held", "Experience Required / Held", "Documents Checked", "Outcome / Governing Body Sign-Off"],
+        worked_example_row=[
+            "WORKED EXAMPLE — Dr. A. Rao / Administrator",
+            "PG Diploma in Hospital Administration required / held",
+            "5 years required / 9 years held",
+            "Degree certificate, NMC registration, prior-employer letter",
+            "Met — Chairperson, Governing Body / 03-Jan-2026",
+        ],
+    )),
+    (2, "applicable_legislation_register", RecordSpec(
+        oe_code="ROM.2.c (Core)",
+        oe_requirement=(
+            "The leader is responsible for and complies with the "
+            "laid-down and applicable legislations, regulations and "
+            "notifications."
+        ),
+        record_title="ROM.2 Record 2 — Administrative head applicable-legislation register",
+        what_is_this=(
+            "This record is the written list of which legislations, "
+            "regulations and notifications actually apply to this "
+            "hospital's services, kept current, with the administrative "
+            "head's responsibility for each one on record."
+        ),
+        real_example=(
+            "The register lists the Clinical Establishments Act "
+            "registration, Biomedical Waste Management Rules, the "
+            "Pre-Conception and Pre-Natal Diagnostic Techniques Act (this "
+            "hospital runs an imaging service), each with its renewal or "
+            "review date and the administrative head named as "
+            "responsible."
+        ),
+        why_nabh_asks=(
+            "A law list copied from another hospital, or one nobody "
+            "updates when a service changes, tells the administrative "
+            "head they are compliant with laws that may no longer be the "
+            "ones that actually govern what this hospital does."
+        ),
+        how_to_fill=[
+            ("Legislation / Regulation / Notification", "Name and year."),
+            ("Why It Applies", "Which of this hospital's actual services triggers it."),
+            ("Owning Document (If Any)", "Where the detailed compliance process already lives, e.g. HIC.3."),
+            ("Renewal / Review Date", "When this entry is next checked."),
+            ("Reviewed By / Date", "Administrative head sign-off."),
+        ],
+        verified_sources=[NABH_ROM_CITE.format(code="ROM.2")],
+        column_headers=["Legislation / Regulation / Notification", "Why It Applies", "Owning Document (If Any)", "Renewal / Review Date", "Reviewed By / Date"],
+        worked_example_row=[
+            "WORKED EXAMPLE — Biomedical Waste Management Rules, 2016",
+            "Hospital generates biomedical waste from clinical services",
+            "HIC.3 Support-Services Infection-Control Policy",
+            "Annual authorisation renewal — 15-Apr-2026",
+            "Dr. A. Rao, Administrator / 10-Jan-2026",
+        ],
+    )),
+    (3, "performance_review_record", RecordSpec(
+        oe_code="ROM.2.d (Achievement)",
+        oe_requirement=(
+            "The performance of the organisation's leader is reviewed "
+            "for effectiveness."
+        ),
+        record_title="ROM.2 Record 3 — Administrative head performance review record",
+        what_is_this=(
+            "This record is the proof the governing body actually held a "
+            "formal performance review of the administrative head, "
+            "against defined criteria, with a signed outcome -- not an "
+            "informal conversation nobody wrote down."
+        ),
+        real_example=(
+            "At the annual review, the governing body assesses the "
+            "Administrator against the year's operational-plan targets, "
+            "service-standard performance and statutory-compliance "
+            "record, finds two targets missed, agrees a corrective step "
+            "with a follow-up date, and signs the outcome."
+        ),
+        why_nabh_asks=(
+            "An administrative head whose performance is never formally "
+            "reviewed has, in practice, unaccountable day-to-day "
+            "authority over the hospital -- this record is what makes "
+            "that review checkable instead of assumed to have happened."
+        ),
+        how_to_fill=[
+            ("Review Period", "The cycle being assessed, e.g. calendar or financial year."),
+            ("Criteria Assessed", "What the governing body measured the head against."),
+            ("Outcome", "Met / Partially Met / Not Met, in the governing body's own words."),
+            ("Corrective Step Agreed (If Any)", "What changes, and by when."),
+            ("Governing Body Sign-Off / Date", "Who conducted the review and signed it."),
+        ],
+        verified_sources=[
+            NABH_ROM_CITE.format(code="ROM.2"),
+            "International Organization for Standardization. (2026). [ISO 9001:2026, Quality management systems — Requirements](https://www.iso.org/standard/88464.html), clause 5.3.",
+        ],
+        column_headers=["Review Period", "Criteria Assessed", "Outcome", "Corrective Step Agreed (If Any)", "Governing Body Sign-Off / Date"],
+        worked_example_row=[
+            "WORKED EXAMPLE — Calendar Year 2026",
+            "Operational-plan targets, service standards, statutory compliance",
+            "Partially Met — 2 of 10 targets missed",
+            "Monthly interim review of the 2 missed targets; Chairperson / next review 15-Jan-2027",
+            "Chairperson, Governing Body / 10-Jan-2027",
+        ],
+    )),
 ]
 
 
@@ -968,6 +1331,40 @@ def main() -> None:
         out_path = OUT_ROOT / fname
         build_sop_v2(spec, out_path)
         print(f"built {out_path} (v2: plain body + audit appendix)")
+
+    for idx, slug, rspec in ROM2_RECORDS:
+        rel_name = f"ROM.2_Record_{idx:02d}_{slug}.docx"
+        out_path = RECORDS_ROOT / rel_name
+        build_record(rspec, out_path)
+        print(f"built {out_path}")
+
+    manifest_path = OUT_ROOT / "manifest.json"
+    manifest: list[dict] = json.loads(manifest_path.read_text(encoding="utf-8"))
+    existing_files = {e["file"] for e in manifest}
+
+    new_entries = [{
+        "file": "SOP_ROM.2.a_to_d_administrative_head.docx",
+        "document_type": "sop",
+        "standard_code": "ROM.2",
+        "title": "SOP — Administrative Head — Qualifications, Experience, Legal Compliance and Performance Review (ROM.2)",
+    }]
+    for idx, slug, rspec in ROM2_RECORDS:
+        new_entries.append({
+            "file": f"Records/ROM.2_Record_{idx:02d}_{slug}.docx",
+            "document_type": "record",
+            "standard_code": "ROM.2",
+            "record_index": idx,
+            "title": rspec.record_title.split("—", 1)[-1].strip(),
+        })
+
+    added = 0
+    for entry in new_entries:
+        if entry["file"] not in existing_files:
+            manifest.append(entry)
+            added += 1
+
+    manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    print(f"wrote {manifest_path} ({len(manifest)} entries, {added} new)")
 
 
 if __name__ == "__main__":
