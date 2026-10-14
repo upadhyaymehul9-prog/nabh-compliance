@@ -197,11 +197,13 @@ MOM1 = SOPSpecV2(
                 "the Multidisciplinary Medication Committee -- never by "
                 "an individual prescriber or pharmacist acting alone on "
                 "a hospital-wide practice.",
-                "The committee meets at least «quarterly» and includes "
-                "at minimum «the Medical Superintendent (or delegate), a "
-                "treating doctor, the Pharmacy In-Charge, and a nursing "
-                "representative». Minutes record decisions, action "
-                "items and deadlines.",
+                "The committee meets at least «quarterly» and includes, "
+                "at minimum, these four members:",
+                "1. The Medical Superintendent (or delegate).",
+                "2. A treating doctor.",
+                "3. The Pharmacy In-Charge.",
+                "4. A nursing representative.",
+                "Minutes record decisions, action items and deadlines.",
                 "The committee reviews medication-usage data, adverse "
                 "drug reactions, medication errors and near-miss trends "
                 "reported under the monitoring SOP, and recommends "
@@ -253,8 +255,11 @@ MOM1 = SOPSpecV2(
             body=[
                 "The committee defines which implantable prostheses and "
                 "medical devices are approved for use at «Hospital "
-                "Name». Criteria include clinical indication, supplier "
-                "qualification, batch traceability and cost disclosure.",
+                "Name». Procurement criteria cover four things:",
+                "1. Clinical indication.",
+                "2. Supplier qualification.",
+                "3. Batch traceability.",
+                "4. Cost disclosure.",
                 "Detailed guidance on procurement, patient and family "
                 "counselling, and traceability of implants is held in "
                 "the implants SOP. This step is the committee's "
@@ -357,12 +362,14 @@ MOM2 = SOPSpecV2(
             why="A refrigerator that silently drifted out of range overnight, or an unlocked cupboard a visitor could reach into, turns a correctly-dispensed medication into an unsafe one before it ever reaches the patient.",
             body=[
                 "The pharmacy and every satellite storage area -- ward "
-                "cupboard, refrigerator, night cupboard -- is kept within "
-                "the manufacturer's temperature range (monitored «twice "
-                "daily» with a min-max thermometer or data logger), "
-                "protected from light where the label requires it, "
-                "locked when unattended, and kept clean and free of "
-                "spillage.",
+                "cupboard, refrigerator, night cupboard -- meets four "
+                "conditions at once:",
+                "1. Kept within the manufacturer's temperature range "
+                "(monitored «twice daily» with a min-max thermometer or "
+                "data logger).",
+                "2. Protected from light where the label requires it.",
+                "3. Locked when unattended.",
+                "4. Kept clean and free of spillage.",
                 "The Pharmacy In-Charge inspects every satellite storage "
                 "area «monthly». A temperature excursion triggers "
                 "quarantine and a pharmacist's assessment before that "
@@ -394,10 +401,13 @@ MOM2 = SOPSpecV2(
                 "high-risk medication list at least «annually», "
                 "including the look-alike/sound-alike pairs found in "
                 "this hospital's own formulary.",
-                "Storage safeguards include tall-man lettering on shelf "
-                "labels, colour-coded bin cards, physical separation of "
-                "look-alike pairs where feasible, and alert stickers on "
-                "high-risk bins. The Pharmacy In-Charge verifies these "
+                "Storage safeguards include:",
+                "1. Tall-man lettering on shelf labels.",
+                "2. Colour-coded bin cards.",
+                "3. Physical separation of look-alike pairs where "
+                "feasible.",
+                "4. Alert stickers on high-risk bins.",
+                "The Pharmacy In-Charge verifies these "
                 "safeguards are actually in place during the «monthly» "
                 "inspection, not just listed on paper.",
             ],
@@ -565,13 +575,21 @@ MOM3 = SOPSpecV2(
             heading="Meet the minimum requirements of a prescription, every time",
             why="A prescription missing the route or the duration forces the pharmacist or nurse to guess what was meant -- and a guess at the point of dispensing is exactly the moment this step exists to remove.",
             body=[
-                "Every prescription includes the patient's name, unique "
-                "identification number, date, the prescriber's name, "
-                "signature and registration number, the drug name "
-                "(generic preferred), strength, dose, route, frequency "
-                "or timing, duration, and quantity where relevant. An "
-                "incomplete prescription is returned to the prescriber "
-                "before dispensing.",
+                "Every prescription includes all of the following:",
+                "1. The patient's name.",
+                "2. Unique identification number.",
+                "3. Date.",
+                "4. The prescriber's name, signature and registration "
+                "number.",
+                "5. Drug name (generic preferred).",
+                "6. Strength.",
+                "7. Dose.",
+                "8. Route.",
+                "9. Frequency or timing.",
+                "10. Duration.",
+                "11. Quantity, where relevant.",
+                "An incomplete prescription is returned to the "
+                "prescriber before dispensing.",
                 "The Pharmacy In-Charge verifies these minimum "
                 "requirements at the point of dispensing.",
             ],
@@ -598,10 +616,14 @@ MOM3 = SOPSpecV2(
             heading="Give prescribers a real mechanism for clinical decision support",
             why="A prescriber working alone, with no interaction reference and no allergy alert, is asked to hold the whole risk picture in their head for every single order -- decision support exists because no one should have to.",
             body=[
-                "Decision support available to prescribers includes «the "
-                "current formulary with indications and dosing guidance; "
-                "drug-interaction references available at the pharmacy "
-                "counter; and allergy alerts». Where «Hospital Name» "
+                "Decision support available to prescribers includes "
+                "three resources:",
+                "1. The current formulary with indications and dosing "
+                "guidance.",
+                "2. Drug-interaction references available at the "
+                "pharmacy counter.",
+                "3. Allergy alerts.",
+                "Where «Hospital Name» "
                 "uses an electronic prescribing system, automated "
                 "interaction and allergy alerts are switched on.",
                 "The committee reviews the adequacy of this decision "
@@ -635,10 +657,13 @@ MOM3 = SOPSpecV2(
                 "prescription audit at least «quarterly», drawing a "
                 "sample of «at least 30 prescriptions per quarter» from "
                 "in-patient, out-patient and emergency prescriptions.",
-                "The audit checks the minimum requirements, allergy "
-                "documentation, rational-prescribing markers (generic "
-                "name, polypharmacy, off-formulary use), verbal-order "
-                "compliance, and reconciliation at transitions.",
+                "The audit checks five things:",
+                "1. The minimum prescription requirements.",
+                "2. Allergy documentation.",
+                "3. Rational-prescribing markers (generic name, "
+                "polypharmacy, off-formulary use).",
+                "4. Verbal-order compliance.",
+                "5. Reconciliation at transitions.",
             ],
             oe_code="MOM.3.f",
         ),
@@ -747,8 +772,12 @@ MOM4 = SOPSpecV2(
             body=[
                 "The Medical Superintendent maintains a list of "
                 "personnel authorised to write medication orders, "
-                "including name, designation, registration number and "
-                "specimen signature. The list is kept at the pharmacy "
+                "recording four details for each person:",
+                "1. Name.",
+                "2. Designation.",
+                "3. Registration number.",
+                "4. Specimen signature.",
+                "The list is kept at the pharmacy "
                 "and at each nursing station.",
                 "A person not on the list does not write medication "
                 "orders. A verbal order received from an authorised "
@@ -791,10 +820,13 @@ MOM4 = SOPSpecV2(
             heading="State the medicine, route, strength and frequency without exception",
             why="An order that names the drug but not the route, or the dose but not how often, is not a partial order -- it is one the pharmacist or nurse cannot safely act on at all.",
             body=[
-                "Every medication order contains the name of the "
-                "medicine, the route of administration, the strength to "
-                "be administered, and the frequency or time of "
-                "administration. Abbreviations for route and frequency "
+                "Every medication order contains these four mandatory "
+                "elements:",
+                "1. The name of the medicine.",
+                "2. The route of administration.",
+                "3. The strength to be administered.",
+                "4. The frequency or time of administration.",
+                "Abbreviations for route and frequency "
                 "follow the «approved abbreviation list maintained by "
                 "the Pharmacy In-Charge»; an unapproved or ambiguous "
                 "abbreviation is flagged and the order is returned.",
@@ -894,12 +926,16 @@ MOM5 = SOPSpecV2(
             heading="Dispense every medication through the same safety sequence",
             why="The pharmacist is the last person standing between a prescription and the patient -- a check skipped here is not caught anywhere downstream.",
             body=[
-                "The pharmacist receives the prescription, verifies it "
-                "meets the order-writing requirements (authorised, "
-                "legible, complete), checks the patient's allergy "
-                "record, selects the correct medication, checks expiry "
-                "and physical integrity, counts or measures the "
-                "quantity, and labels the dispensed item.",
+                "The pharmacist works through the same six steps every "
+                "time:",
+                "1. Receives the prescription and verifies it meets the "
+                "order-writing requirements (authorised, legible, "
+                "complete).",
+                "2. Checks the patient's allergy record.",
+                "3. Selects the correct medication.",
+                "4. Checks expiry and physical integrity.",
+                "5. Counts or measures the quantity.",
+                "6. Labels the dispensed item.",
                 "A final check is performed before handing the "
                 "medication to the patient or nurse: right patient, "
                 "right drug, right strength, right quantity. For "
@@ -914,15 +950,19 @@ MOM5 = SOPSpecV2(
             body=[
                 "On receiving a recall notice -- from the manufacturer, "
                 "distributor, or regulatory authority -- the Pharmacy "
-                "In-Charge identifies every affected batch in the "
-                "pharmacy and satellite storage, removes it within «24 "
-                "hours» and quarantines it with a recall label, notifies "
-                "the committee and the Medical Superintendent, checks "
-                "dispensing records to find any patient who may have "
-                "received an affected batch and notifies their treating "
-                "doctor, logs the recall in the recall register, and "
-                "returns or destroys the stock per the manufacturer's or "
-                "regulator's instructions.",
+                "In-Charge works through six steps:",
+                "1. Identifies every affected batch in the pharmacy and "
+                "satellite storage.",
+                "2. Removes it within «24 hours» and quarantines it "
+                "with a recall label.",
+                "3. Notifies the committee and the Medical "
+                "Superintendent.",
+                "4. Checks dispensing records to find any patient who "
+                "may have received an affected batch and notifies their "
+                "treating doctor.",
+                "5. Logs the recall in the recall register.",
+                "6. Returns or destroys the stock per the "
+                "manufacturer's or regulator's instructions.",
             ],
             oe_code="MOM.5.b",
         ),
@@ -945,10 +985,14 @@ MOM5 = SOPSpecV2(
             heading="Label every dispensed medication",
             why="An unlabelled dose handed to a ward is a dose the next person has to take on trust -- labelling is what lets anyone downstream verify it themselves rather than just believe it.",
             body=[
-                "Every dispensed medication carries a label with the "
-                "patient's name, drug name (generic and brand where "
-                "applicable), strength, dose, route of administration, "
-                "frequency or time of administration, and expiry date. "
+                "Every dispensed medication carries a label with:",
+                "1. The patient's name.",
+                "2. Drug name (generic and brand where applicable).",
+                "3. Strength.",
+                "4. Dose.",
+                "5. Route of administration.",
+                "6. Frequency or time of administration.",
+                "7. Expiry date.",
                 "For in-patient unit-dose dispensing, each unit is "
                 "labelled.",
                 "Labels are printed or written legibly. The pharmacist "
@@ -966,8 +1010,12 @@ MOM5 = SOPSpecV2(
                 "pharmacist prepares the medication; a second pharmacist "
                 "-- or, where only one pharmacist is on duty, a «senior "
                 "nurse trained in medication verification» -- "
-                "independently checks drug name, strength, dose, "
-                "patient identity and expiry.",
+                "independently checks five things:",
+                "1. Drug name.",
+                "2. Strength.",
+                "3. Dose.",
+                "4. Patient identity.",
+                "5. Expiry.",
                 "The verification is documented with the verifier's "
                 "initials, date and time on the prescription or "
                 "dispensing log.",
@@ -1083,9 +1131,13 @@ MOM6 = SOPSpecV2(
             heading="Administer every medication against the five rights",
             why="The five rights are not a formality recited before administration -- they are the last point at which a wrong patient, wrong drug, wrong dose, wrong route or wrong time can still be caught before it becomes something that already happened.",
             body=[
-                "The administering nurse follows the «five rights: "
-                "right patient, right drug, right dose, right route, "
-                "right time». Hands are washed, the medication is "
+                "The administering nurse follows the five rights:",
+                "1. Right patient.",
+                "2. Right drug.",
+                "3. Right dose.",
+                "4. Right route.",
+                "5. Right time.",
+                "Hands are washed, the medication is "
                 "prepared at the bedside or medication preparation "
                 "area, and it is administered while the patient is "
                 "identified and the order is open in front of the "
@@ -1128,9 +1180,11 @@ MOM6 = SOPSpecV2(
             body=[
                 "The nurse checks the medication against the written "
                 "order -- drug name, strength, dose, route, frequency -- "
-                "and physically inspects it for expiry date, "
-                "discolouration, particulate matter, and packaging "
-                "integrity.",
+                "and physically inspects it for four things:",
+                "1. Expiry date.",
+                "2. Discolouration.",
+                "3. Particulate matter.",
+                "4. Packaging integrity.",
                 "Any discrepancy or defect means the medication is not "
                 "administered. The nurse contacts the prescriber for an "
                 "order discrepancy, or the Pharmacy In-Charge for a "
@@ -1170,10 +1224,14 @@ MOM6 = SOPSpecV2(
             heading="Document every administration",
             why="An administration that happened but was never written down is, to the next nurse or doctor who looks at the chart, indistinguishable from one that never happened at all.",
             body=[
-                "The administering nurse records the drug name, dose, "
-                "route, time of administration, and their initials or "
-                "signature in the «medication administration record "
-                "(MAR)». For a withheld or omitted dose, the reason is "
+                "The administering nurse records five things in the "
+                "«medication administration record (MAR)»:",
+                "1. Drug name.",
+                "2. Dose.",
+                "3. Route.",
+                "4. Time of administration.",
+                "5. Their initials or signature.",
+                "For a withheld or omitted dose, the reason is "
                 "documented.",
                 "Documentation happens immediately after administration "
                 "-- never written in advance of giving the dose.",
@@ -1345,10 +1403,14 @@ MOM7 = SOPSpecV2(
                 "is an unwanted or harmful reaction to a medication at "
                 "normal doses.",
                 "Every event is documented on the «medication incident "
-                "form», covering patient name and ID, date and time, "
-                "medication involved, description of the event, "
-                "severity assessment, and immediate action taken. The "
-                "form goes to the Pharmacy In-Charge, with a copy "
+                "form», covering six things:",
+                "1. Patient name and ID.",
+                "2. Date and time.",
+                "3. Medication involved.",
+                "4. Description of the event.",
+                "5. Severity assessment.",
+                "6. Immediate action taken.",
+                "The form goes to the Pharmacy In-Charge, with a copy "
                 "entered into the hospital's incident-reporting system.",
             ],
             oe_code="MOM.7.c",
@@ -1539,11 +1601,18 @@ MOM8 = SOPSpecV2(
             heading="Keep a complete record from procurement through to disposal",
             why="A gap anywhere in the chain -- procurement, issue, administration, disposal -- for a controlled substance is exactly the kind of gap a licensing inspection exists to find, and exactly the kind of gap that invites suspicion whether or not anything was actually wrong.",
             body=[
-                "For narcotics and psychotropics: the NDPS register "
-                "records procurement, receipt, batch, issue to ward, "
-                "administration to the patient (with patient name and "
-                "prescription reference), balance, and disposal, "
-                "available for inspection by the licensing authority.",
+                "For narcotics and psychotropics, the NDPS register "
+                "records seven things:",
+                "1. Procurement.",
+                "2. Receipt.",
+                "3. Batch.",
+                "4. Issue to ward.",
+                "5. Administration to the patient (with patient name "
+                "and prescription reference).",
+                "6. Balance.",
+                "7. Disposal.",
+                "The register is available for inspection by the "
+                "licensing authority.",
                 "For chemotherapeutic agents: the cytotoxic medication "
                 "log records receipt, batch, preparation, administration "
                 "and waste disposal through the cytotoxic waste stream "
@@ -1679,12 +1748,13 @@ MOM9 = SOPSpecV2(
             why="A patient who wakes up with an implant they were never told about the precautions for is left to discover the restrictions on their own activity, their own MRI compatibility, or their own follow-up schedule the hard way.",
             body=[
                 "Before the procedure, the treating doctor -- or a "
-                "«trained counsellor or nurse» -- explains to the "
-                "patient and family the nature and purpose of the "
-                "implant or device, the expected outcome, precautions "
-                "after implantation (activity restrictions, MRI "
-                "compatibility, follow-up schedule), and potential "
-                "complications.",
+                "«trained counsellor or nurse» -- explains four things "
+                "to the patient and family:",
+                "1. The nature and purpose of the implant or device.",
+                "2. The expected outcome.",
+                "3. Precautions after implantation (activity "
+                "restrictions, MRI compatibility, follow-up schedule).",
+                "4. Potential complications.",
                 "Counselling is documented in the medical record, with "
                 "a signed acknowledgement from the patient or "
                 "authorised representative. Informed consent for the "
@@ -1698,9 +1768,13 @@ MOM9 = SOPSpecV2(
             why="An implant recalled by its manufacturer years later is useless to trace if the batch and serial number were never written down anywhere that survives -- the traceability has to be right the first time, because there is no second chance.",
             body=[
                 "Immediately after implantation, the operating team "
-                "records the implant name, manufacturer, batch number, "
-                "serial number, date of implantation, and the "
-                "implanting surgeon in the patient's medical record.",
+                "records six details in the patient's medical record:",
+                "1. Implant name.",
+                "2. Manufacturer.",
+                "3. Batch number.",
+                "4. Serial number.",
+                "5. Date of implantation.",
+                "6. The implanting surgeon.",
                 "The same details, plus the patient's name and unique "
                 "identification number, go into the master logbook "
                 "maintained by the Pharmacy In-Charge or store officer. "
