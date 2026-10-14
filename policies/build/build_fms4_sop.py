@@ -368,10 +368,14 @@ SOP_V2 = SOPSpecV2(
                 "happens to ask about."
             ),
             body=[
-                "Written guidance covers procurement, handling, storage, "
-                "distribution, usage and replenishment of medical gases -- "
-                "all six, not a supplier brochure or a pocket guide offered "
-                "as the hospital SOP.",
+                "Written guidance covers all six acts, not a supplier "
+                "brochure or a pocket guide offered as the hospital SOP:",
+                "1. Procurement.",
+                "2. Handling.",
+                "3. Storage.",
+                "4. Distribution.",
+                "5. Usage.",
+                "6. Replenishment of medical gases.",
                 "«Hospital to define: which gases this hospital actually "
                 "uses, who may procure from which licensed source, how a "
                 "delivery is accepted (identity, pressure, connector, "

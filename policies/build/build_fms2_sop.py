@@ -439,10 +439,14 @@ SOP_V2 = SOPSpecV2(
                 "that's the only check that protects anyone."
             ),
             body=[
-                "Grab rails in toilets and wet areas, anti-skid flooring, window "
-                "restrictors on upper floors, bumper guards on trolley routes, "
-                "nurse-call buttons and bed rails -- all of it gets checked that it "
-                "actually works, not just that it's installed.",
+                "All of it gets checked that it actually works, not just "
+                "that it's installed:",
+                "1. Grab rails in toilets and wet areas.",
+                "2. Anti-skid flooring.",
+                "3. Window restrictors on upper floors.",
+                "4. Bumper guards on trolley routes.",
+                "5. Nurse-call buttons.",
+                "6. Bed rails.",
                 "«Hospital to define: which devices are checked, how often, and by "
                 "whom.» A real check means testing the device, not reading the "
                 "purchase record.",
@@ -506,10 +510,13 @@ SOP_V2 = SOPSpecV2(
                 "immediate."
             ),
             body=[
-                "Some areas need to be harder to get into than a normal corridor: "
-                "the pharmacy store, medical records (if kept on-site), the "
-                "newborn nursery and labour area, server/plant rooms, and the "
-                "medical gas store.",
+                "Some areas need to be harder to get into than a normal "
+                "corridor:",
+                "1. The pharmacy store.",
+                "2. Medical records, if kept on-site.",
+                "3. The newborn nursery and labour area.",
+                "4. Server/plant rooms.",
+                "5. The medical gas store.",
                 "«Hospital to define: which areas count, who can access them, and "
                 "how (locks, access control, CCTV).» A camera nobody watches is "
                 "not security.",
@@ -540,10 +547,14 @@ SOP_V2 = SOPSpecV2(
             body=[
                 "Walk every ward and support area at least once a month -- this "
                 "interval is fixed, not something the hospital can change.",
-                "Look for: blocked exits, broken grab rails, wet floors with no "
-                "warning sign, unlabelled chemicals, old items left lying around, "
-                "open electrical panels. (A missing fire extinguisher is reported "
-                "through the Fire Safety SOP instead.)",
+                "Look for six things (a missing fire extinguisher is "
+                "reported through the Fire Safety SOP instead):",
+                "1. Blocked exits.",
+                "2. Broken grab rails.",
+                "3. Wet floors with no warning sign.",
+                "4. Unlabelled chemicals.",
+                "5. Old items left lying around.",
+                "6. Open electrical panels.",
                 "«Hospital to define: who does the walk-through, which route they "
                 "take, and how findings get fixed.» If a month is missed, that's a "
                 "defect to report -- not something to quietly catch up on later.",
@@ -566,10 +577,16 @@ SOP_V2 = SOPSpecV2(
                 "because it was safe on the day it was built."
             ),
             body=[
-                "Check: earthing, earth-leakage protection in wet areas and "
-                "patient-care areas, overloaded circuits, damaged cords, sockets "
-                "in wet areas, panel labelling and locks, and backup power in the "
-                "operating theatre if the hospital runs one.",
+                "Check seven things:",
+                "1. Earthing.",
+                "2. Earth-leakage protection in wet areas and "
+                "patient-care areas.",
+                "3. Overloaded circuits.",
+                "4. Damaged cords.",
+                "5. Sockets in wet areas.",
+                "6. Panel labelling and locks.",
+                "7. Backup power in the operating theatre, if the "
+                "hospital runs one.",
                 "«Hospital to define: who audits (in-house or contractor), how "
                 "often, and the rule for isolating a failed circuit until it's "
                 "fixed.» A faulty medical device is a different process -- this is "
@@ -628,10 +645,14 @@ SOP_V2 = SOPSpecV2(
                 "to guess."
             ),
             body=[
-                "Keep one list of every hazardous chemical in the building -- "
-                "cleaning chemicals, water-treatment chemicals, diesel and other "
-                "fuel, mercury (if any old thermometers or BP machines are still "
-                "in use), engineering solvents.",
+                "Keep one list of every hazardous chemical in the "
+                "building. This covers five kinds:",
+                "1. Cleaning chemicals.",
+                "2. Water-treatment chemicals.",
+                "3. Diesel and other fuel.",
+                "4. Mercury, if any old thermometers or BP machines are "
+                "still in use.",
+                "5. Engineering solvents.",
                 "Every container must be labelled. Store and separate chemicals "
                 "by type. Staff who handle them get the right protective gear.",
                 "«Hospital to define: who checks this list, how often, and what "

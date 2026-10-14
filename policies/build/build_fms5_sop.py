@@ -449,10 +449,15 @@ SOP_V2 = SOPSpecV2(
                 "equipment that's actually been checked does."
             ),
             body=[
-                "We maintain fire-related equipment and infrastructure -- "
-                "detectors, alarms, extinguishers, hose reels, fire doors, "
-                "emergency lighting, and any pump or sprinkler this "
-                "occupancy actually has.",
+                "We maintain fire-related equipment and infrastructure. "
+                "This covers:",
+                "1. Detectors.",
+                "2. Alarms.",
+                "3. Extinguishers.",
+                "4. Hose reels.",
+                "5. Fire doors.",
+                "6. Emergency lighting.",
+                "7. Any pump or sprinkler this occupancy actually has.",
                 "«Hospital to define: which fire-related equipment this "
                 "occupancy actually has, the maintenance task and interval "
                 "for each, who attends, and the rule that a failed detector "

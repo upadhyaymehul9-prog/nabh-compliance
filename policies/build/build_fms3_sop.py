@@ -432,11 +432,15 @@ SOP_V2 = SOPSpecV2(
                 "a patient."
             ),
             body=[
-                "Medical and support-service equipment are inventoried, and "
-                "proper logs are kept, identifying each item that can harm "
-                "a patient if it fails or is missing: unique identifier, "
-                "location, owner department, criticality, and whether it's "
-                "owned, loaned, consigned or outsourced.",
+                "Medical and support-service equipment are inventoried, "
+                "and proper logs are kept, identifying each item that can "
+                "harm a patient if it fails or is missing. Each entry "
+                "records five things:",
+                "1. Unique identifier.",
+                "2. Location.",
+                "3. Owner department.",
+                "4. Criticality.",
+                "5. Whether it's owned, loaned, consigned or outsourced.",
                 "«Hospital to define: what's on the inventory, what a log "
                 "contains, and how a loaner or outsourced device is still "
                 "listed» -- an item in use that isn't on the inventory is a "

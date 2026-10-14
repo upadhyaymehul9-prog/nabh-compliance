@@ -479,11 +479,14 @@ SOP_V2 = SOPSpecV2(
                 "«Hospital to define: potable-water quality-testing "
                 "parameters, sample points and interval.» Where dialysis "
                 "isn't offered, that's a recorded absence, not a gap.",
-                "Essential clinical and life-safety circuits -- at minimum "
-                "emergency, OT, labour, ICU/HDU, nursery and blood bank "
-                "where present, ventilators and their compressors, "
-                "emergency lighting, fire detection, and medical-gas plant "
-                "alarms -- stay energised at all times.",
+                "Essential clinical and life-safety circuits stay "
+                "energised at all times. At minimum, this covers:",
+                "1. Emergency, OT, labour, ICU/HDU, nursery and blood "
+                "bank, where present.",
+                "2. Ventilators and their compressors.",
+                "3. Emergency lighting.",
+                "4. Fire detection.",
+                "5. Medical-gas plant alarms.",
                 "«Hospital to define: how round-the-clock availability is "
                 "watched, recorded and restored,» covering night and "
                 "holiday coverage, not only daytime checks.",
@@ -554,11 +557,13 @@ SOP_V2 = SOPSpecV2(
                 "environment-friendly initiatives this hospital actually "
                 "runs this year,» each with a named owner, a baseline, and a "
                 "recorded result -- not a poster.",
-                "Eligible initiatives include measured electricity or fuel "
-                "use, lighting or HVAC set-back in non-clinical hours, "
-                "solar if installed, rainwater or condensate reuse if "
-                "installed, segregation of municipal (non-biomedical) "
-                "waste, and reduction of single-use non-clinical materials.",
+                "Eligible initiatives include six kinds:",
+                "1. Measured electricity or fuel use.",
+                "2. Lighting or HVAC set-back in non-clinical hours.",
+                "3. Solar, if installed.",
+                "4. Rainwater or condensate reuse, if installed.",
+                "5. Segregation of municipal (non-biomedical) waste.",
+                "6. Reduction of single-use non-clinical materials.",
                 "Shutting HVAC in clinical areas in the name of efficiency "
                 "is not this -- that's the water-and-power item above "
                 "failing instead.",
