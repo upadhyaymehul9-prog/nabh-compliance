@@ -10,6 +10,7 @@ export default function HomepageScreen({ onLogin }) {
   const [openPersons, setOpenPersons] = useState([false, false, false]);
   const [menuOpen, setMenuOpen] = useState(false);
   const [authCardMode, setAuthCardMode] = useState("signup");
+  const [showAnnounce, setShowAnnounce] = useState(false);
 
   const goToAuth = (mode) => {
     setMenuOpen(false);
@@ -37,6 +38,20 @@ export default function HomepageScreen({ onLogin }) {
       document.head.appendChild(link);
     }
     document.documentElement.style.scrollBehavior = 'smooth';
+    try {
+      if (!localStorage.getItem('hp_clinical_audit_announce_seen')) {
+        const t = setTimeout(() => setShowAnnounce(true), 900);
+        return () => clearTimeout(t);
+      }
+    } catch (e) { /* localStorage unavailable — skip the announcement, don't block the page */ }
+  }, []);
+
+  const dismissAnnounce = () => {
+    setShowAnnounce(false);
+    try { localStorage.setItem('hp_clinical_audit_announce_seen', '1'); } catch (e) { /* ignore */ }
+  };
+
+  useEffect(() => {
     const header = document.getElementById('hp-header');
     if (!header) return;
     const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
@@ -462,12 +477,44 @@ export default function HomepageScreen({ onLogin }) {
         .hp-ticker-inner { display: inline-block; animation: hp-ticker 30s linear infinite; padding: 9px 0; font-size: 13px; font-weight: 600; color: #fff; font-family: 'Figtree', sans-serif; letter-spacing: .01em; }
       `}</style>
 
+      {/* ANNOUNCEMENT POPUP — Clinical Audit module launch, shown once per visitor */}
+      {showAnnounce && (
+        <div role="dialog" aria-modal="true" aria-label="New: Clinical Audit module"
+          style={{ position: "fixed", inset: 0, background: "rgba(6,30,20,.55)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 2000, padding: 20 }}
+          onClick={dismissAnnounce}>
+          <div onClick={(e) => e.stopPropagation()}
+            style={{ background: "#fff", border: "1px solid #d8e4dc", borderRadius: 16, padding: "32px", width: 420, maxWidth: "100%", boxShadow: "0 20px 50px rgba(0,0,0,.25)", position: "relative", textAlign: "center", fontFamily: "Inter,system-ui,sans-serif" }}>
+            <button onClick={dismissAnnounce} aria-label="Close"
+              style={{ position: "absolute", top: 14, right: 14, width: 28, height: 28, borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", color: "#64748b", cursor: "pointer", fontSize: 14, lineHeight: "26px" }}>
+              ✕
+            </button>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, color: "#16a34a", background: "#dcfce7", display: "inline-block", padding: "4px 12px", borderRadius: 100, marginBottom: 14 }}>
+              🆕 NEW MODULE
+            </div>
+            <div style={{ fontSize: 22, fontWeight: 800, color: "#0d1f16", fontFamily: "Figtree,sans-serif", marginBottom: 10, lineHeight: 1.3 }}>
+              Clinical Audit is now live
+            </div>
+            <div style={{ fontSize: 13.5, color: "#4b5563", lineHeight: 1.7, marginBottom: 22 }}>
+              Learn the clinical audit method from scratch, see fully worked examples, and track your own hospital's audits — right alongside your other NABH modules once you sign in.
+            </div>
+            <button onClick={() => { dismissAnnounce(); goToAuth('signup'); }}
+              style={{ width: "100%", padding: "13px", borderRadius: 10, background: "#0f5132", border: "none", color: "#fff", fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: "Figtree,sans-serif", marginBottom: 10 }}>
+              Get Started Free →
+            </button>
+            <button onClick={dismissAnnounce}
+              style={{ width: "100%", padding: "10px", borderRadius: 10, background: "transparent", border: "none", color: "#94a3b8", fontSize: 12.5, cursor: "pointer" }}>
+              Maybe later
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* TICKER */}
       <div className="hp-ticker-bar"
-        onClick={() => document.querySelector('.mktech')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
-        role="button" tabIndex={0} aria-label="View free tools">
+        onClick={() => goToAuth('signup')}
+        role="button" tabIndex={0} aria-label="Sign up to try Clinical Audit">
         <div className="hp-ticker-inner">
-          &nbsp;&nbsp;&nbsp;📄 New: Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 New: Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;🆕 New: Clinical Audit module is now live — available alongside your other NABH modules once you sign in. →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🆕 New: Clinical Audit module is now live — available alongside your other NABH modules once you sign in. →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 Try our document download — Policy, SOPs &amp; Records. Open any standard and click Policy, SOPs, or Records document to download →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
       </div>
 
@@ -692,6 +739,11 @@ export default function HomepageScreen({ onLogin }) {
               <div className="ic" aria-hidden="true"><i className="ti ti-wand"></i></div>
               <h3>AI document generation <span className="badge-soon">Coming soon</span></h3>
               <p>Generate the required NABH documents right from your dashboard — drafted for you, ready to adapt.</p>
+            </div>
+            <div className="bcard">
+              <div className="ic" aria-hidden="true"><i className="ti ti-clipboard-check"></i></div>
+              <h3>Clinical Audit module <span className="badge-live">New</span></h3>
+              <p>Learn the clinical audit method from scratch, work through fully explained examples, and track your own hospital's audits — a standalone module available alongside HCO, SHCO and ELC once you sign in.</p>
             </div>
           </div>
         </div>
