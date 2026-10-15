@@ -2585,7 +2585,7 @@ function OnboardingScreen({ hospitalName, onDone }) {
 }
 
 // ── PROGRAMME SELECTOR ────────────────────────────────────────────────────
-function ProgrammeSelector({ user, ctx, onSelect }) {
+function ProgrammeSelector({ user, ctx, onSelect, onSignOut }) {
   const [comingSoonModal, setComingSoonModal] = useState(null);
   const [notifyDone, setNotifyDone] = useState({});
   const [notifyLoading, setNotifyLoading] = useState(false);
@@ -2716,7 +2716,13 @@ function ProgrammeSelector({ user, ctx, onSelect }) {
           &nbsp;&nbsp;&nbsp;🆕 New: Clinical Audit module is now live — open its dashboard below to get started →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🎉 Try our free Revenue Leakage Self-Audit and Marketing &amp; Brand Health Check — no login needed →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🆕 New: Clinical Audit module is now live — open its dashboard below to get started →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🎉 Try our free Revenue Leakage Self-Audit and Marketing &amp; Brand Health Check — no login needed →&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </span>
       </div>
-      <div style={{ minHeight: "100vh", background: `linear-gradient(180deg,${HP.brandBg} 0%,${HP.white} 45%)`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Inter,system-ui,sans-serif", padding: 24 }}>
+      <div style={{ minHeight: "100vh", background: `linear-gradient(180deg,${HP.brandBg} 0%,${HP.white} 45%)`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Inter,system-ui,sans-serif", padding: 24, position: "relative" }}>
+      {onSignOut && (
+        <button onClick={onSignOut}
+          style={{ position: "absolute", top: 20, right: 24, padding: "8px 16px", borderRadius: 8, background: HP.white, border: HP.boxBorder, color: HP.muted, fontSize: 12.5, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", gap: 6 }}>
+          ⏻ Log out
+        </button>
+      )}
       <div style={{ width: "100%", maxWidth: 920 }}>
         <div style={{ textAlign: "center", marginBottom: 36 }}>
           <div style={{ width: 46, height: 46, borderRadius: 11, background: HP.brand, border: HP.boxBorder, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Figtree,sans-serif", fontWeight: 800, fontSize: 22, color: HP.white, margin: "0 auto 16px" }}>A</div>
@@ -9995,6 +10001,17 @@ export default function App() {
     return()=>{document.body.style.overflow="";};
   },[drawerOpen]);
 
+  // Safety net: leaving the authenticated app shell (logout, trial expiry, etc.) never
+  // goes through the drawer's own close handlers, so drawerOpen could stay stuck "true"
+  // forever if it happened to be open — which left the scroll-lock effect above with no
+  // dependency change to clean up on, leaving the page unscrollable on the homepage/login
+  // screen afterward. Force both back to a known-good state whenever we're not in "app".
+  useEffect(()=>{
+    if(authState==="app")return;
+    setDrawerOpen(false);
+    document.body.style.overflow="";
+  },[authState]);
+
   // NavStack refs — kept in sync via effects so goBack/navigate closures always read current values
   const currentNavStateRef = useRef(null);
   const navStackRef = useRef([]);
@@ -10091,7 +10108,7 @@ export default function App() {
   if(authState==="recovery") return <RecoveryScreen user={user} onDone={()=>{setUser(null);setAuthState("login");setContext(null);}}/>;
   if(authState==="login") return <LoginScreen onLogin={u=>{setUser(u);setAuthState("setup");}} onBackToHomepage={()=>{window.history.pushState({screen:"homepage"},"",window.location.pathname);setAuthState("homepage");}} initialError={authErrorMsg}/>;
   if(authState==="setup") return <SetupScreen user={user} onReady={handleReady}/>;
-  if(authState==="programme") return <ProgrammeSelector user={user} ctx={context} onSelect={handleProgrammeSelect}/>;
+  if(authState==="programme") return <ProgrammeSelector user={user} ctx={context} onSelect={handleProgrammeSelect} onSignOut={handleSignOut}/>;
 
   const isFree = context?.plan === 'free';
   const isPaid = context?.plan === 'paid';
